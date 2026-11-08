@@ -1,6 +1,8 @@
 # Agent Loom API reference
 
-&gt; **Specification only.** City Library has no implemented public APIs yet. The signatures and examples below define the phase-one target; they cannot currently be run against this repository.
+This reference defines how the Agent Loom API should behave: inputs, results, mutations, validation and errors. Use it when writing or extending a model.
+
+> **Target specification.** The signatures and examples define the required core API. Only the subsets recorded in [PLAN](../../PLAN.md) and the [coverage inventory](../development/coverage.md) are implemented. Check public exports and runnable examples before using an operation.
 
 [Overview](README.md) · [API inventory](api-table.md)
 

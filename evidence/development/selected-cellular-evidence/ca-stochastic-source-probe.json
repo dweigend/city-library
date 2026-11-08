@@ -1,0 +1,59 @@
+{
+  "slug": "ca-stochastic",
+  "command": "set density 0 set OOO 100 setup-random go",
+  "execution": "Original NetLogo Command Center, editor population followed by native Enter",
+  "observed": {
+    "file": "CA Stochastic.nlogox",
+    "sha": "f4f22acee911ef5ae9e95f2a95f47dfda743f5887ac34a664e45356cb8e3b169",
+    "tick": 1,
+    "patches": 25921,
+    "values": {
+      "on?": {
+        "unique": [
+          false,
+          true,
+          0
+        ],
+        "trueCount": 161
+      }
+    },
+    "row": 79,
+    "rowOn": [
+      -80,
+      -79,
+      -78,
+      -77,
+      -76,
+      -75,
+      -74,
+      -73,
+      -72,
+      -71,
+      -70,
+      -69
+    ],
+    "rowOnCount": 161,
+    "turtles": 0,
+    "visibleTurtles": 0,
+    "heads": [],
+    "probabilities": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "console": " powered by NetLogo\nCA Stochastic\nFile:\nNew\nRevert to Original\nExport:\nNetLogo\nHTML\nMode: Interactive\nCommands and Code: Bottom\nModel Speed\n-\n+\nticks: 1\n?\nfor shortcuts\nGo\nIII\n %\nIIO\n %\nIOI\n %\nIOO\n %\nOII\n %\nOIO\n %\nOOI\n %\nOOO\n %\nSetup Random\nProbability Cell Turns On:\noff-color\non-color\nColors:\nSetup Example\nauto-clear?\ndensity\n %\nexample\nauto-continue?\nplot?\ntime\nentropy\nentropy-plot\ntopologic\nmetric\n0\n100\n200\n300\n0\n1\nCommand Center\nobserver> set density 0 set OOO 100 setup-random go\n\nobserver\nturtles\npatches\nlinks\n \n​\nClear\nNetLogo Code\nModel Info\nAgent Inspection"
+  }
+}

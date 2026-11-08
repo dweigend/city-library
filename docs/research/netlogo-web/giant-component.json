@@ -1,0 +1,102 @@
+{
+  "slug": "giant-component",
+  "name": "Giant Component",
+  "catalogPath": "Sample Models/Networks/Giant Component",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Networks/Giant%20Component.nlogox",
+  "deliveryBatch": "B01",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "The scientific question is whether random edge addition creates a sharp change in large-scale reachability. In NetLogo's Giant Component model, initially isolated nodes receive uniformly selected new edges, and connected components merge as the graph becomes denser. The selected literature connects this mechanism to random-network connectivity: finite random graphs exhibit the birth of a giant component [1]; network structure determines component and reachability properties [2]; rewired local networks offer a contrasting connectivity mechanism [3]. Finite-size fluctuations, undirected edges and uniform mixing restrict extrapolation to structured human contacts. The original NetLogo behavior is the baseline for reimplementation. This simulation offers a controlled thought experiment, and agreement with its output does not establish empirical validation.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Networks/Giant%20Component.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Networks/Giant%20Component.nlogox",
+    "revision": "Served NetLogo Web snapshot retrieved 2026-11-05; {'version': 'NetLogo 7.0.4', 'snapToGrid': 'false'}",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served model XML, Procedures and Info retained locally; Info read for mechanism and attribution.",
+    "evidencePath": "evidence/social-urban/giant-component.nlogox",
+    "sha256": "07c1ac7dfa1fb61fadbc452dbbeafcac19f82e476b9890a0bdfb034781285b69",
+    "citation": "For the model itself: * Wilensky, U. (2005). NetLogo Giant Component model. http://ccl.northwestern.edu/netlogo/models/GiantComponent. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "scientificOrigin": "This model is adapted from: Duncan J. Watts. Six Degrees: The Science of a Connected Age (W.W. Norton & Company, New York, 2003), pages 43-47. The work Watts describes was originally published in: P. Erdos and A. Renyi. On random graphs. Publ. Math. Debrecen, 6:290-297, 1959. This paper has some additional analysis: S. Janson, D.E. Knuth, T. Luczak, and B. Pittel. The birth of the giant component. Random Structures & Algorithms 4, 3 (1993), pages 233-358.",
+    "notes": "This is source research, not runtime execution or approval of the City Library reimplementation. Original model notices remain in the retained source.",
+    "evidenceFile": "evidence/social-urban/giant-component.nlogox"
+  },
+  "publications": [
+    {
+      "id": "giant",
+      "creatorRole": "author",
+      "authors": [
+        "Svante Janson",
+        "Donald E. Knuth",
+        "Tomasz Łuczak",
+        "Boris Pittel"
+      ],
+      "title": "The birth of the giant component",
+      "year": 1993,
+      "venue": "Random Structures & Algorithms",
+      "doi": "10.1002/rsa.3240040303",
+      "url": "https://doi.org/10.1002/rsa.3240040303",
+      "relevance": "finite random graphs exhibit the birth of a giant component",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1002%2Frsa.3240040303",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "abstract",
+        "access": "Public Crossref registrant metadata; publisher-deposited abstract available",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/giant-crossref.json",
+        "evidenceSummary": "AbstractLimiting distributions are derived for the sparse connected components that are present when a random graph on n vertices has approximately 1/2n edges. In particular, we show that such a graph consists entirely of trees, unicyclic components, and bicyclic components with probability approaching √2/3 cosh √5/18 ≈ 0.9325 as n→∞. The limiting probability that it is consists of trees, unicyclic components, and at most one another component is approximately 0.9957; the limiting probability that it is planar lies between 0.987 and 0.9998. When a random graph evolves and the number of edges passes 1/2n, its components grow in cyclic complexity according to an interesting Markov process whose asymptotic structure is derived. The probability that there never is more than a single component with more edges than vertices, throughout the veolution, approaches 5 π/18 ≈ 0.8727. A “uniform” mod",
+        "evidenceFile": "evidence/social-urban/giant-crossref.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "newman",
+      "creatorRole": "author",
+      "authors": [
+        "M. E. J. Newman"
+      ],
+      "title": "The Structure and Function of Complex Networks",
+      "year": 2003,
+      "venue": "SIAM Review",
+      "doi": "10.1137/s003614450342480",
+      "url": "https://doi.org/10.1137/s003614450342480",
+      "relevance": "network structure determines component and reachability properties",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1137%2FS003614450342480",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "abstract",
+        "access": "Public Crossref registrant metadata; publisher-deposited abstract available",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/newman-crossref.json",
+        "evidenceSummary": "Abstract. Inspired by empirical studies of networked systems such as the Internet, social networks, and biological networks, researchers have in recent years developed a variety of techniques and models to help us understand or predict the behavior of these systems. Here we review developments in this field, including such concepts as the small-world effect, degree distributions, clustering, network correlations, random graph models, models of network growth and preferential attachment, and dynamical processes taking place on networks.",
+        "evidenceFile": "evidence/social-urban/newman-crossref.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "ws",
+      "creatorRole": "author",
+      "authors": [
+        "Duncan J. Watts",
+        "Steven H. Strogatz"
+      ],
+      "title": "Collective dynamics of ‘small-world’ networks",
+      "year": 1998,
+      "venue": "Nature",
+      "doi": "10.1038/30918",
+      "url": "https://doi.org/10.1038/30918",
+      "relevance": "rewired local networks offer a contrasting connectivity mechanism",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1038%2F30918",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; full-text access not established",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/ws-crossref.json",
+        "evidenceSummary": "Bibliographic metadata only; relevance is a bounded theoretical comparison, not a claim to have read inaccessible full text.",
+        "evidenceFile": "evidence/social-urban/ws-crossref.json"
+      },
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

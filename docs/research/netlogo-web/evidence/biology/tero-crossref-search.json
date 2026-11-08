@@ -1,0 +1,1622 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=Rules+for+biologically+inspired+adaptive+network+design+Tero+2010&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 3820305,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                11,
+                4
+              ]
+            ],
+            "date-time": "2026-11-04T23:01:42Z",
+            "timestamp": 1793833302039,
+            "version": "4.6.1"
+          },
+          "reference-count": 24,
+          "publisher": "American Association for the Advancement of Science (AAAS)",
+          "issue": "5964",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Science"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2010,
+                1,
+                22
+              ]
+            ]
+          },
+          "abstract": "<jats:title>Miniature Transport Engineers</jats:title>\n                  <jats:p>\n                    In its vegetative phase, the slime mold\n                    <jats:italic>Physarum polycephalum</jats:italic>\n                    \u201cslimes\u201d its way through the world seeking food. As it explores, it links previously found food sources with tubular structures.\n                    <jats:bold>\n                      Tero\n                      <jats:italic>et al.</jats:italic>\n                    </jats:bold>\n                    (p.\n                    <jats:related-article xmlns:xlink=\"http://www.w3.org/1999/xlink\" ext-link-type=\"doi\" page=\"439\" related-article-type=\"in-this-issue\" vol=\"327\" xlink:href=\"10.1126/science.1177894\">439</jats:related-article>\n                    ) report that if food sources are deposited on a plate in a pattern corresponding in miniature to the positions of the cities that surround Tokyo, the resulting network of\n                    <jats:italic>Physarum</jats:italic>\n                    tubules that develops is rather similar in structure to the railroad network that connects the Japanese cities. A model was produced that describes the adaptive network development displayed by the slime mold. This biologically inspired model might provide insight into how to implement properties like resistance of transport systems to local failures into similar human-designed systems.\n                  </jats:p>",
+          "DOI": "10.1126/science.1177894",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2010,
+                1,
+                21
+              ]
+            ],
+            "date-time": "2010-01-21T14:51:43Z",
+            "timestamp": 1264085503000
+          },
+          "page": "439-442",
+          "source": "Crossref",
+          "is-referenced-by-count": 778,
+          "title": [
+            "Rules for Biologically Inspired Adaptive Network Design"
+          ],
+          "prefix": "10.1126",
+          "volume": "327",
+          "author": [
+            {
+              "given": "Atsushi",
+              "family": "Tero",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Research Institute for Electronic Science, Hokkaido University, Sapporo 060-0812, Japan."
+                },
+                {
+                  "name": "PRESTO, JST, 4-1-8 Honcho, Kawaguchi, Saitama, Japan."
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Seiji",
+              "family": "Takagi",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Research Institute for Electronic Science, Hokkaido University, Sapporo 060-0812, Japan."
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Tetsu",
+              "family": "Saigusa",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Graduate School of Engineering, Hokkaido University, Sapporo 060-8628, Japan."
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Kentaro",
+              "family": "Ito",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Research Institute for Electronic Science, Hokkaido University, Sapporo 060-0812, Japan."
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Dan P.",
+              "family": "Bebber",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Department of Plant Sciences, University of Oxford, Oxford OX1 3RB, UK."
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Mark D.",
+              "family": "Fricker",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Department of Plant Sciences, University of Oxford, Oxford OX1 3RB, UK."
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Kenji",
+              "family": "Yumiki",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Department of Mathematical and Life Sciences, Hiroshima University, Higashi-Hiroshima 739-8526, Japan."
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Ryo",
+              "family": "Kobayashi",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Department of Mathematical and Life Sciences, Hiroshima University, Higashi-Hiroshima 739-8526, Japan."
+                },
+                {
+                  "name": "JST, CREST, 5 Sanbancho, Chiyoda-ku, Tokyo, 102-0075, Japan."
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Toshiyuki",
+              "family": "Nakagaki",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Research Institute for Electronic Science, Hokkaido University, Sapporo 060-0812, Japan."
+                },
+                {
+                  "name": "JST, CREST, 5 Sanbancho, Chiyoda-ku, Tokyo, 102-0075, Japan."
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "221",
+          "reference": [
+            {
+              "key": "e_1_3_2_2_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1103/PhysRevE.69.025103"
+            },
+            {
+              "key": "e_1_3_2_3_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1103/PhysRevE.77.026102"
+            },
+            {
+              "key": "e_1_3_2_4_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/451893a"
+            },
+            {
+              "key": "e_1_3_2_5_2",
+              "first-page": "1",
+              "volume": "13",
+              "author": "Kambhu J.",
+              "year": "2007",
+              "unstructured": "Kambhu J., Weidman S., Krishnan N., Econ. Policy Rev. 13, 1 (2007).",
+              "journal-title": "Econ. Policy Rev."
+            },
+            {
+              "key": "e_1_3_2_6_2",
+              "unstructured": "House of Commons Transport Committee The Opening of Heathrow Terminal 5 HC 543 (Stationery Office London 2008)."
+            },
+            {
+              "key": "e_1_3_2_7_2",
+              "unstructured": "Train Derailment at Hatfield (Independent Investigation Board Office of Rail Regulation London 2006)."
+            },
+            {
+              "key": "e_1_3_2_8_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/35019019"
+            },
+            {
+              "key": "e_1_3_2_9_2",
+              "unstructured": "R. Carvalho et al . http://arxiv.org/abs/0903.0195 (2009)."
+            },
+            {
+              "key": "e_1_3_2_10_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rspb.2007.0459"
+            },
+            {
+              "key": "e_1_3_2_11_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s00265-008-0680-7"
+            },
+            {
+              "key": "e_1_3_2_12_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0301-4622(03)00189-3"
+            },
+            {
+              "key": "e_1_3_2_13_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rspb.2004.2856"
+            },
+            {
+              "key": "e_1_3_2_14_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1475-3995.1996.tb00032.x"
+            },
+            {
+              "key": "e_1_3_2_15_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.jtbi.2008.09.010"
+            },
+            {
+              "key": "e_1_3_2_16_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/35035159"
+            },
+            {
+              "key": "e_1_3_2_17_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1103/PhysRevLett.99.068104"
+            },
+            {
+              "key": "e_1_3_2_18_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0301-4622(01)00179-X"
+            },
+            {
+              "key": "e_1_3_2_19_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s12064-008-0037-9"
+            },
+            {
+              "key": "e_1_3_2_20_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1039/b706317m"
+            },
+            {
+              "key": "e_1_3_2_21_2",
+              "doi-asserted-by": "crossref",
+              "unstructured": "T. Nakagaki T. Saigusa A. Tero R. Kobayashi in Topological Aspects of Critical Systems and Networks: Proceedings of the International Symposium K. Yakubo et al. Eds. (World Scientific Singapore 2007) pp. 94\u2013100.",
+              "DOI": "10.1142/9789812708687_0012"
+            },
+            {
+              "key": "e_1_3_2_22_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.jtbi.2006.07.015"
+            },
+            {
+              "key": "e_1_3_2_23_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.physa.2006.01.053"
+            },
+            {
+              "key": "e_1_3_2_24_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0301-4622(00)00108-3"
+            },
+            {
+              "key": "e_1_3_2_25_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.comnet.2005.01.002"
+            }
+          ],
+          "container-title": [
+            "Science"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://www.science.org/doi/pdf/10.1126/science.1177894",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2025,
+                2,
+                16
+              ]
+            ],
+            "date-time": "2025-02-16T17:33:36Z",
+            "timestamp": 1739727216000
+          },
+          "score": 46.74151,
+          "resource": {
+            "primary": {
+              "URL": "https://www.science.org/doi/10.1126/science.1177894"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2010,
+                1,
+                22
+              ]
+            ]
+          },
+          "references-count": 24,
+          "journal-issue": {
+            "issue": "5964",
+            "published-print": {
+              "date-parts": [
+                [
+                  2010,
+                  1,
+                  22
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1126/science.1177894"
+          ],
+          "URL": "https://doi.org/10.1126/science.1177894",
+          "ISSN": [
+            "0036-8075",
+            "1095-9203"
+          ],
+          "issn-type": [
+            {
+              "value": "0036-8075",
+              "type": "print"
+            },
+            {
+              "value": "1095-9203",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2010,
+                1,
+                22
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                5
+              ]
+            ],
+            "date-time": "2026-09-05T09:43:40Z",
+            "timestamp": 1788601420871,
+            "version": "build-2803163510"
+          },
+          "reference-count": 66,
+          "publisher": "Springer Science and Business Media LLC",
+          "issue": "1",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2015,
+                    6,
+                    4
+                  ]
+                ],
+                "date-time": "2015-06-04T00:00:00Z",
+                "timestamp": 1433376000000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://creativecommons.org/licenses/by/4.0"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2015,
+                    6,
+                    4
+                  ]
+                ],
+                "date-time": "2015-06-04T00:00:00Z",
+                "timestamp": 1433376000000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "https://creativecommons.org/licenses/by/4.0"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "link.springer.com"
+            ],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Sci Rep"
+          ],
+          "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:p>\n                    A network design problem is to select a subset of links in a transport network that satisfy passengers or cargo transportation demands while minimizing the overall costs of the transportation. We propose a mathematical model of the foraging behaviour of slime mould\n                    <jats:italic>P. polycephalum</jats:italic>\n                    to solve the network design problem and construct optimal transport networks. In our algorithm, a traffic flow between any two cities is estimated using a gravity model. The flow is imitated by the model of the slime mould. The algorithm model converges to a steady state, which represents a solution of the problem. We validate our approach on examples of major transport networks in Mexico and China. By comparing networks developed in our approach with the man-made highways, networks developed by the slime mould and a cellular automata model inspired by slime mould, we demonstrate the flexibility and efficiency of our approach.\n                  </jats:p>",
+          "DOI": "10.1038/srep10794",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2015,
+                6,
+                4
+              ]
+            ],
+            "date-time": "2015-06-04T07:20:17Z",
+            "timestamp": 1433402417000
+          },
+          "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 29,
+          "title": [
+            "A Biologically Inspired Network Design Model"
+          ],
+          "prefix": "10.1038",
+          "volume": "5",
+          "author": [
+            {
+              "given": "Xiaoge",
+              "family": "Zhang",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Andrew",
+              "family": "Adamatzky",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Felix T.S.",
+              "family": "Chan",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Yong",
+              "family": "Deng",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Hai",
+              "family": "Yang",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Xin-She",
+              "family": "Yang",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Michail-Antisthenis I.",
+              "family": "Tsompanas",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Georgios Ch.",
+              "family": "Sirakoulis",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Sankaran",
+              "family": "Mahadevan",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "published-online": {
+            "date-parts": [
+              [
+                2015,
+                6,
+                4
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "BFsrep10794_CR1",
+              "doi-asserted-by": "publisher",
+              "first-page": "933",
+              "DOI": "10.1016/j.trb.2012.03.001",
+              "volume": "46",
+              "author": "L Chen",
+              "year": "2012",
+              "unstructured": "Chen, L., & Yang, H. Managing congestion and emissions in road networks with tolls and rebates. Transp. Res. Part B: Methodological 46, 933\u2013948 (2012).",
+              "journal-title": "Transp. Res. Part B: Methodological"
+            },
+            {
+              "key": "BFsrep10794_CR2",
+              "doi-asserted-by": "publisher",
+              "first-page": "245",
+              "DOI": "10.1080/0144164042000292597",
+              "volume": "25",
+              "author": "A Baublys",
+              "year": "2005",
+              "unstructured": "Baublys, A., & I\u0161orait\u0117, M. Improvement of external transport cost evaluation in the context of Lithuanias integration into the European Union. Transport Reviews 25, 245\u2013259 (2005).",
+              "journal-title": "Transport Reviews"
+            },
+            {
+              "key": "BFsrep10794_CR3",
+              "doi-asserted-by": "publisher",
+              "first-page": "580",
+              "DOI": "10.1016/j.trb.2010.10.002",
+              "volume": "45",
+              "author": "H Yang",
+              "year": "2011",
+              "unstructured": "Yang, H., & Wang, X. Managing network mobility with tradable credits. Transp. Res. Part B: Methodological 45, 580\u2013594 (2011).",
+              "journal-title": "Transp. Res. Part B: Methodological"
+            },
+            {
+              "key": "BFsrep10794_CR4",
+              "doi-asserted-by": "publisher",
+              "first-page": "1018",
+              "DOI": "10.1016/j.trb.2011.05.003",
+              "volume": "45",
+              "author": "X Zhang",
+              "year": "2011",
+              "unstructured": "Zhang, X., Yang, H., & Huang, H. J. Improving travel efficiency by parking permits distribution and trading. Transp. Res. Part B: Methodological 45, 1018\u20131034 (2011).",
+              "journal-title": "Transp. Res. Part B: Methodological"
+            },
+            {
+              "key": "BFsrep10794_CR5",
+              "doi-asserted-by": "publisher",
+              "first-page": "189",
+              "DOI": "10.1016/j.trb.2011.10.002",
+              "volume": "46",
+              "author": "YM Nie",
+              "year": "2012",
+              "unstructured": "Nie, Y. M. Transaction costs and tradable mobility credits. Transp. Res. Part B: Methodological 46, 189\u2013203 (2012).",
+              "journal-title": "Transp. Res. Part B: Methodological"
+            },
+            {
+              "key": "BFsrep10794_CR6",
+              "doi-asserted-by": "publisher",
+              "first-page": "1",
+              "DOI": "10.1016/j.trb.2013.06.016",
+              "volume": "56",
+              "author": "F Xiao",
+              "year": "2013",
+              "unstructured": "Xiao, F., Qian, Z. S., & Zhang, H. M. Managing bottleneck congestion with tradable credits. Transp. Res. Part B: Methodological 56, 1\u201314 (2013).",
+              "journal-title": "Transp. Res. Part B: Methodological"
+            },
+            {
+              "key": "BFsrep10794_CR7",
+              "doi-asserted-by": "publisher",
+              "first-page": "1085",
+              "DOI": "10.1016/j.trb.2012.04.002",
+              "volume": "46",
+              "author": "X Wang",
+              "year": "2012",
+              "unstructured": "Wang, X., & Yang H. Bisection-based trial-and-error implementation of marginal cost pricing and tradable credit scheme. Transp. Res. Part B: Methodological 46, 1085\u20131096 (2012).",
+              "journal-title": "Transp. Res. Part B: Methodological"
+            },
+            {
+              "key": "BFsrep10794_CR8",
+              "doi-asserted-by": "publisher",
+              "first-page": "309",
+              "DOI": "10.1287/mnsc.1030.0161",
+              "volume": "50",
+              "author": "RT Berger",
+              "year": "2004",
+              "unstructured": "Berger, R. T., & Raghavan, S. Long-distance access network design. Manage. Sci. 50, 309\u2013325 (2004).",
+              "journal-title": "Manage. Sci."
+            },
+            {
+              "key": "BFsrep10794_CR9",
+              "doi-asserted-by": "publisher",
+              "first-page": "567",
+              "DOI": "10.1287/mnsc.40.5.567",
+              "volume": "40",
+              "author": "A Balakrishnan",
+              "year": "1994",
+              "unstructured": "Balakrishnan, A., Magnanti, T. L., & Mirchandani, P. A dual-based algorithm for multi-level network design. Manage. Sci. 40, 567\u2013581 (1994).",
+              "journal-title": "Manage. Sci."
+            },
+            {
+              "key": "BFsrep10794_CR10",
+              "doi-asserted-by": "publisher",
+              "first-page": "142",
+              "DOI": "10.1287/mnsc.1120.1571",
+              "volume": "59",
+              "author": "F D\u2019Andreagiovanni",
+              "year": "2013",
+              "unstructured": "D\u2019Andreagiovanni, F., Carlo M., & Antonio S. Gub covers and power-indexed formulations for wireless network design. Manage. Sci. 59, 142\u2013156 (2013).",
+              "journal-title": "Manage. Sci."
+            },
+            {
+              "key": "BFsrep10794_CR11",
+              "doi-asserted-by": "publisher",
+              "first-page": "1100",
+              "DOI": "10.1016/j.cor.2009.09.018",
+              "volume": "37",
+              "author": "MS Pishvaee",
+              "year": "2010",
+              "unstructured": "Pishvaee, M. S., Farahani, R. Z., & Dullaert, W. A memetic algorithm for bi-objective integrated forward/reverse logistics network design. Comput. Oper. Res. 37, 1100\u20131112 (2010).",
+              "journal-title": "Comput. Oper. Res."
+            },
+            {
+              "key": "BFsrep10794_CR12",
+              "doi-asserted-by": "publisher",
+              "first-page": "272",
+              "DOI": "10.1016/S0377-2217(99)00233-7",
+              "volume": "122",
+              "author": "TG Crainic",
+              "year": "2000",
+              "unstructured": "Crainic, T. G. Service network design in freight transportation. Eur. J. Oper. Res. 122, 272\u2013288 (2000).",
+              "journal-title": "Eur. J. Oper. Res."
+            },
+            {
+              "key": "BFsrep10794_CR13",
+              "doi-asserted-by": "publisher",
+              "first-page": "29",
+              "DOI": "10.1287/mnsc.1070.0763",
+              "volume": "54",
+              "author": "V Verter",
+              "year": "2008",
+              "unstructured": "Verter, V., & Kara, B. Y. A path-based approach for hazmat transport network design. Manage. Sci. 54, 29\u201340 (2008).",
+              "journal-title": "Manage. Sci."
+            },
+            {
+              "key": "BFsrep10794_CR14",
+              "doi-asserted-by": "publisher",
+              "first-page": "2440",
+              "DOI": "10.1016/j.cor.2008.09.014",
+              "volume": "36",
+              "author": "A Mauttone",
+              "year": "2009",
+              "unstructured": "Mauttone, A., & Urquhart, M. E. A route set construction algorithm for the transit network design problem. Comput. Oper. Res. 36, 2440\u20132449 (2009).",
+              "journal-title": "Comput. Oper. Res."
+            },
+            {
+              "key": "BFsrep10794_CR15",
+              "doi-asserted-by": "publisher",
+              "first-page": "37",
+              "DOI": "10.1002/net.3230090104",
+              "volume": "9",
+              "author": "R Dionne",
+              "year": "1979",
+              "unstructured": "Dionne, R., & Florian, M. Exact and approximate algorithms for optimal network design. Networks 9, 37\u201359 (1979).",
+              "journal-title": "Networks"
+            },
+            {
+              "key": "BFsrep10794_CR16",
+              "doi-asserted-by": "publisher",
+              "first-page": "15",
+              "DOI": "10.1016/S0167-6377(99)00020-6",
+              "volume": "25",
+              "author": "V Gabrel",
+              "year": "1999",
+              "unstructured": "Gabrel, V., Knippel, A., & Minoux, M. Exact solution of multicommodity network optimization problems with general step cost functions. Oper. Res. Lett. 25, 15\u201323 (1999).",
+              "journal-title": "Oper. Res. Lett."
+            },
+            {
+              "key": "BFsrep10794_CR17",
+              "doi-asserted-by": "publisher",
+              "first-page": "61",
+              "DOI": "10.1016/0191-2615(94)90031-0",
+              "volume": "28",
+              "author": "GA Davis",
+              "year": "1994",
+              "unstructured": "Davis, G. A. Exact local solution of the continuous network design problem via stochastic user equilibrium assignment. Transp. Res. Part B: Methodological 28, 61\u201375 (1994).",
+              "journal-title": "Transp. Res. Part B: Methodological"
+            },
+            {
+              "key": "BFsrep10794_CR18",
+              "doi-asserted-by": "publisher",
+              "first-page": "176",
+              "DOI": "10.1109/MCOM.2010.5621985",
+              "volume": "48",
+              "author": "F Dressler",
+              "year": "2010",
+              "unstructured": "Dressler, F., & Akan, O. B. Bio-inspired networking: from theory to practice. IEEE Commun. Mag. 48, 176\u2013183 (2010).",
+              "journal-title": "IEEE Commun. Mag."
+            },
+            {
+              "key": "BFsrep10794_CR19",
+              "doi-asserted-by": "publisher",
+              "first-page": "997",
+              "DOI": "10.1109/TSMCB.2003.818557",
+              "volume": "34",
+              "author": "CF Juang",
+              "year": "2004",
+              "unstructured": "Juang, C. F. A hybrid of genetic algorithm and particle swarm optimization for recurrent network design. IEEE Trans. on Cybern. 34, 997\u20131006 (2004).",
+              "journal-title": "IEEE Trans. on Cybern"
+            },
+            {
+              "key": "BFsrep10794_CR20",
+              "doi-asserted-by": "publisher",
+              "first-page": "40",
+              "DOI": "10.1061/(ASCE)0733-947X(2006)132:1(40)",
+              "volume": "132",
+              "author": "W Fan",
+              "year": "2006",
+              "unstructured": "Fan, W., & Machemehl, R. B. Optimal transit route network design problem with variable transit demand: genetic algorithm approach. J. Transp. Eng. 132, 40\u201351 (2006).",
+              "journal-title": "J. Transp. Eng."
+            },
+            {
+              "key": "BFsrep10794_CR21",
+              "doi-asserted-by": "publisher",
+              "first-page": "461",
+              "DOI": "10.1109/3477.846234",
+              "volume": "30",
+              "author": "CC Lo",
+              "year": "2000",
+              "unstructured": "Lo, C. C., & Chang, W. H. A multiobjective hybrid genetic algorithm for the capacitated multipoint network design problem. IEEE Trans. on Cybern. 30, 461\u2013470 (2000).",
+              "journal-title": "IEEE Trans. on Cybern"
+            },
+            {
+              "key": "BFsrep10794_CR22",
+              "doi-asserted-by": "publisher",
+              "first-page": "26",
+              "DOI": "10.1109/MSP.2007.361599",
+              "volume": "24",
+              "author": "S Barbarossa",
+              "year": "2007",
+              "unstructured": "Barbarossa, S., & Scutari, G. Bio-inspired sensor network design. Signal Processing Mag. 24, 26\u201335 (2007).",
+              "journal-title": "Signal Processing Mag."
+            },
+            {
+              "key": "BFsrep10794_CR23",
+              "doi-asserted-by": "publisher",
+              "first-page": "1445",
+              "DOI": "10.1109/TIA.2008.2002171",
+              "volume": "44",
+              "author": "TK Das",
+              "year": "2008",
+              "unstructured": "Das, T. K., Venayagamoorthy, G. K., & Aliyu, U. O. Bio-inspired algorithms for the design of multiple optimal power system stabilizers: SPPSO and BFA. IEEE Trans. Ind. Appl. 44, 1445\u20131457 (2008).",
+              "journal-title": "IEEE Trans. Ind. Appl."
+            },
+            {
+              "key": "BFsrep10794_CR24",
+              "doi-asserted-by": "publisher",
+              "first-page": "148",
+              "DOI": "10.1287/mnsc.46.1.148.15134",
+              "volume": "46",
+              "author": "WJ Wolfe",
+              "year": "2000",
+              "unstructured": "Wolfe, W. J., & Sorensen, S. E. Three scheduling algorithms applied to the earth observing systems domain. Manage. Sci. 46, 148\u2013166 (2000).",
+              "journal-title": "Manage. Sci."
+            },
+            {
+              "key": "BFsrep10794_CR25",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Singh, P., Sreenivasan, S., Szymanski, B. K., & Korniss, G. Threshold-limited spreading in social networks with multiple initiators. Sci. Rep. 3, 10.1038/srep02330, (2013).",
+              "DOI": "10.1038/srep02330"
+            },
+            {
+              "key": "BFsrep10794_CR26",
+              "doi-asserted-by": "crossref",
+              "unstructured": "H\u00e9bert-Dufresne, L., Allard, A., Young, J. G., & Dub\u00e9, L. J. Global efficiency of local immunization on complex. Sci. Rep. 3, 10.1038/srep02171, (2013).",
+              "DOI": "10.1038/srep02171"
+            },
+            {
+              "key": "BFsrep10794_CR27",
+              "doi-asserted-by": "publisher",
+              "first-page": "138",
+              "DOI": "10.1109/TFUZZ.2009.2038150",
+              "volume": "18",
+              "author": "CF Juang",
+              "year": "2010",
+              "unstructured": "Juang, C. F., & Chang, P. H. Designing fuzzy-rule-based systems using continuous ant-colony optimization. IEEE Trans. Fuzzy Syst. 18, 138\u2013149 (2010).",
+              "journal-title": "IEEE Trans. Fuzzy Syst."
+            },
+            {
+              "key": "BFsrep10794_CR28",
+              "doi-asserted-by": "publisher",
+              "first-page": "578",
+              "DOI": "10.1016/j.ejor.2006.07.038",
+              "volume": "182",
+              "author": "H Poorzahedy",
+              "year": "2007",
+              "unstructured": "Poorzahedy, H., & Rouhani, O. M. Hybrid meta-heuristic algorithms for solving network design problem. Eur. J. Oper. Res. 182, 578\u2013596 (2007).",
+              "journal-title": "Eur. J. Oper. Res."
+            },
+            {
+              "key": "BFsrep10794_CR29",
+              "doi-asserted-by": "publisher",
+              "first-page": "186",
+              "DOI": "10.1061/(ASCE)0733-947X(2003)129:2(186)",
+              "volume": "129",
+              "author": "VM Tom",
+              "year": "2003",
+              "unstructured": "Tom, V. M., & Mohan, S. Transit route network design using frequency coded genetic algorithm. J. Transp. Eng. 129, 186\u2013195 (2003).",
+              "journal-title": "J. Transp. Eng."
+            },
+            {
+              "key": "BFsrep10794_CR30",
+              "doi-asserted-by": "publisher",
+              "first-page": "5100",
+              "DOI": "10.1080/00207543.2013.793425",
+              "volume": "51",
+              "author": "X Zhang",
+              "year": "2013",
+              "unstructured": "Zhang, X. et al. IFSJSP: a novel methodology for the job-shop scheduling problem based on intuitionistic fuzzy sets. Int. J. Prod. Res. 51, 5100\u20135119 (2013).",
+              "journal-title": "Int. J. Prod. Res."
+            },
+            {
+              "key": "BFsrep10794_CR31",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Wang, C., Yu, S., Chen, W., & Sun, C. Highly efficient light-trapping structure design inspired by natural evolution. Sci. Rep. 3, 10.1038/srep01025, (2013).",
+              "DOI": "10.1038/srep01025"
+            },
+            {
+              "key": "BFsrep10794_CR32",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Su, Z. et al. Robustness of interrelated traffic networks to cascading failures. Sci. Rep. 4, 10.1038/srep05413, (2014).",
+              "DOI": "10.1038/srep05413"
+            },
+            {
+              "key": "BFsrep10794_CR33",
+              "doi-asserted-by": "publisher",
+              "first-page": "198701",
+              "DOI": "10.1103/PhysRevLett.87.198701",
+              "volume": "87",
+              "author": "V Latora",
+              "year": "2001",
+              "unstructured": "Latora, V., & Marchiori, M. Efficient behavior of small-world networks. Phys. Rev. Lett. 87, 198701 (2001).",
+              "journal-title": "Phys. Rev. Lett."
+            },
+            {
+              "key": "BFsrep10794_CR34",
+              "doi-asserted-by": "publisher",
+              "first-page": "221",
+              "DOI": "10.1109/6979.898228",
+              "volume": "1",
+              "author": "A Bicchi",
+              "year": "2000",
+              "unstructured": "Bicchi, A., & Pallottino, L. On optimal cooperative conflict resolution for air traffic management systems. IEEE Trans. Intell. Transp. Syst. 1, 221\u2013231 (2000).",
+              "journal-title": "IEEE Trans. Intell. Transp. Syst."
+            },
+            {
+              "key": "BFsrep10794_CR35",
+              "doi-asserted-by": "publisher",
+              "first-page": "100",
+              "DOI": "10.1126/science.288.5463.100",
+              "volume": "288",
+              "author": "MH Dickinson",
+              "year": "2000",
+              "unstructured": "Dickinson, M. H. et al. How animals move: an integrative view. Science 288, 100\u2013106 (2000).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BFsrep10794_CR36",
+              "doi-asserted-by": "publisher",
+              "first-page": "470",
+              "DOI": "10.1038/35035159",
+              "volume": "407",
+              "author": "T Nakagaki",
+              "year": "2000",
+              "unstructured": "Nakagaki, T., Yamada, H., & \u00c1gota T\u00f3th, A. Intelligence: Maze-solving by an amoeboid organism. Nature 407, 470\u2013470 (2000).",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFsrep10794_CR37",
+              "doi-asserted-by": "publisher",
+              "first-page": "347",
+              "DOI": "10.1109/TEVC.2002.802449",
+              "volume": "6",
+              "author": "C Solnon",
+              "year": "2002",
+              "unstructured": "Solnon, C. Ants can solve constraint satisfaction problems. IEEE Trans. Evol. Comput. 6, 347\u2013357 (2002).",
+              "journal-title": "IEEE Trans. Evol. Comput."
+            },
+            {
+              "key": "BFsrep10794_CR38",
+              "doi-asserted-by": "publisher",
+              "first-page": "171",
+              "DOI": "10.1007/s001140100217",
+              "volume": "88",
+              "author": "C Detrain",
+              "year": "2001",
+              "unstructured": "Detrain, C., Natan, C., Deneubourg, J. L. The influence of the physical environment on the self-organised foraging patterns of ants. Naturwissenschaften 88, 171\u2013174 (2001).",
+              "journal-title": "Naturwissenschaften"
+            },
+            {
+              "key": "BFsrep10794_CR39",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Krasnogor, N., Giuseppe, N., Mario, P., & David, P. Nature inspired cooperative strategies for optimization (nicso 2007), Springer, (2008)",
+              "DOI": "10.1007/978-3-540-78987-1"
+            },
+            {
+              "key": "BFsrep10794_CR40",
+              "unstructured": "Stephenson, S. L., Stempen, H., & Hall, I. Myxomycetes: a handbook of slime molds (Timber Press, Oregon, 1994)."
+            },
+            {
+              "key": "BFsrep10794_CR41",
+              "doi-asserted-by": "publisher",
+              "first-page": "195",
+              "DOI": "10.1016/S0301-4622(00)00108-3",
+              "volume": "84",
+              "author": "T Nakagaki",
+              "year": "2000",
+              "unstructured": "Nakagaki, T., Yamada, H., & Ueda, T. Interaction between cell shape and contraction pattern in the physarum plasmodium. Biophys. Chem. 84, 195\u2013204 (2000).",
+              "journal-title": "Biophys. Chem."
+            },
+            {
+              "key": "BFsrep10794_CR42",
+              "doi-asserted-by": "publisher",
+              "first-page": "47",
+              "DOI": "10.1016/S0301-4622(01)00179-X",
+              "volume": "92",
+              "author": "T Nakagaki",
+              "year": "2001",
+              "unstructured": "Nakagaki, T., Yamada, H., & Toth, A. Path finding by tube morphogenesis in an amoeboid organism. Biophys. Chem. 92, 47\u201352 (2001).",
+              "journal-title": "Biophys. Chem."
+            },
+            {
+              "key": "BFsrep10794_CR43",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Adamatzky, A. Physarum machines: computers from slime mould (World Scientific, Singapore, 2010).",
+              "DOI": "10.1142/7968"
+            },
+            {
+              "key": "BFsrep10794_CR44",
+              "doi-asserted-by": "publisher",
+              "first-page": "439",
+              "DOI": "10.1126/science.1177894",
+              "volume": "327",
+              "author": "A Tero",
+              "year": "2010",
+              "unstructured": "Tero, A. et al. Rules for biologically inspired adaptive network design. Science 327, 439\u2013442 (2010).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BFsrep10794_CR45",
+              "doi-asserted-by": "publisher",
+              "first-page": "455",
+              "DOI": "10.1142/S0129626407003150",
+              "volume": "17",
+              "author": "A Adamatzky",
+              "year": "2007",
+              "unstructured": "Adamatzky, A. Physarum machine: implementation of a kolmogorov-uspensky machine on a biological substrate. Parallel Processing Lett. 17, 455\u2013467 (2007).",
+              "journal-title": "Parallel Processing Lett."
+            },
+            {
+              "key": "BFsrep10794_CR46",
+              "doi-asserted-by": "publisher",
+              "first-page": "3109",
+              "DOI": "10.1142/S0218127409024682",
+              "volume": "19",
+              "author": "T Shirakawa",
+              "year": "2009",
+              "unstructured": "Shirakawa, T., Adamatzky, A., Gunji, Y. P., & Miyake, Y. On simultaneous construction of voronoi diagram and delaunay triangulation by physarum polycephalum. Int. J. Bifurcation Chaos 19, 3109\u20133117 (2009).",
+              "journal-title": "Int. J. Bifurcation Chaos"
+            },
+            {
+              "key": "BFsrep10794_CR47",
+              "doi-asserted-by": "publisher",
+              "first-page": "45",
+              "DOI": "10.1016/j.biosystems.2003.08.001",
+              "volume": "73",
+              "author": "S Tsuda",
+              "year": "2004",
+              "unstructured": "Tsuda, S., Aono, M., & Gunji, Y. P. Robust and emergent physarum logical-computing. Biosystems 73, 45\u201355 (2004).",
+              "journal-title": "Biosystems"
+            },
+            {
+              "key": "BFsrep10794_CR48",
+              "doi-asserted-by": "publisher",
+              "first-page": "483",
+              "DOI": "10.1142/S1793005711002037",
+              "volume": "7",
+              "author": "A Schumann",
+              "year": "2011",
+              "unstructured": "Schumann, A., & Adamatzky, A. Physarum spatial logic. New Mathematics and Natural Computation 7, 483\u2013498 (2011).",
+              "journal-title": "New Mathematics and Natural Computation"
+            },
+            {
+              "key": "BFsrep10794_CR49",
+              "doi-asserted-by": "publisher",
+              "first-page": "553",
+              "DOI": "10.1016/j.jtbi.2006.07.015",
+              "volume": "244",
+              "author": "A Tero",
+              "year": "2007",
+              "unstructured": "Tero, A., Kobayashi, R., & Nakagaki, T. A mathematical model for adaptive transport network in path finding by true slime mold. J. Theor. Biol. 244, 553\u2013564 (2007).",
+              "journal-title": "J. Theor. Biol."
+            },
+            {
+              "key": "BFsrep10794_CR50",
+              "doi-asserted-by": "publisher",
+              "first-page": "121",
+              "DOI": "10.1016/j.jtbi.2012.06.017",
+              "volume": "309",
+              "author": "V Bonifaci",
+              "year": "2012",
+              "unstructured": "Bonifaci, V., Mehlhorn, K., & Varma, G. Physarum can compute shortest paths. J. Theor. Biol. 309, 121\u2013133 (2012).",
+              "journal-title": "J. Theor. Biol."
+            },
+            {
+              "key": "BFsrep10794_CR51",
+              "unstructured": "Erlander, S., & Stewart, N. F. The gravity model in transportation analysis: theory and extensions, Vol. 3 (VSP, Netherlands, 1990)."
+            },
+            {
+              "key": "BFsrep10794_CR52",
+              "doi-asserted-by": "publisher",
+              "first-page": "1195",
+              "DOI": "10.1007/s11047-011-9255-z",
+              "volume": "10",
+              "author": "A Adamatzky",
+              "year": "2011",
+              "unstructured": "Adamatzky, A., Martinez, G. J., Chapa-Vergara, S. V., Asomoza-Palacio, R., & Stephens, C. R. Approximating mexican highways with slime mould. Natural Computing 10, 1195\u20131214 (2011).",
+              "journal-title": "Natural Computing"
+            },
+            {
+              "key": "BFsrep10794_CR53",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Tsompanas, M. A., Sirakoulis, G., & Adamatzky, A. Evolving transport networks with cellular automata models inspired by slime mould. IEEE Trans. on Cybern. 10.1109/TCYB.2014.2361731, (2014).",
+              "DOI": "10.1109/TCYB.2014.2361731"
+            },
+            {
+              "key": "BFsrep10794_CR54",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Tsompanas, M. A., Sirakoulis, G., & Adamatzky, A. Physarum in silicon: the Greek motorways study. Nat. Comput. 10.1007/s11047-014-9459-0, (2014).",
+              "DOI": "10.1007/s11047-014-9459-0"
+            },
+            {
+              "key": "BFsrep10794_CR55",
+              "unstructured": "China Population. National Bureau of Statistics of China. http://data.stats.gov.cn/datamap/index?m=fsnd, (2011) (Date of access: 20/08/2014)."
+            },
+            {
+              "key": "BFsrep10794_CR56",
+              "doi-asserted-by": "publisher",
+              "first-page": "279",
+              "DOI": "10.1002/net.3230080402",
+              "volume": "8",
+              "author": "DS Johnson",
+              "year": "1978",
+              "unstructured": "Johnson, D. S., Lenstra, J. K., & Kan, A. H. G. The complexity of the network design problem. Networks 8, 279\u2013285 (1978).",
+              "journal-title": "Networks"
+            },
+            {
+              "key": "BFsrep10794_CR57",
+              "doi-asserted-by": "publisher",
+              "first-page": "39",
+              "DOI": "10.1016/0041-1647(73)90005-1",
+              "volume": "7",
+              "author": "SP Evans",
+              "year": "1973",
+              "unstructured": "Evans, S. P. A relationship between the gravity model for trip distribution and the transportation problem in linear programming. Transp. Res. 7, 39\u201361 (1973).",
+              "journal-title": "Transp. Res."
+            },
+            {
+              "key": "BFsrep10794_CR58",
+              "doi-asserted-by": "publisher",
+              "first-page": "223",
+              "DOI": "10.1016/j.euroecorev.2004.06.001",
+              "volume": "50",
+              "author": "C Carrere",
+              "year": "2006",
+              "unstructured": "Carrere, C. Revisiting the effects of regional trade agreements on trade flows with proper specification of the gravity model. Eur. Econ. Rev. 50, 223\u2013247 (2006).",
+              "journal-title": "Eur. Econ. Rev."
+            },
+            {
+              "key": "BFsrep10794_CR59",
+              "doi-asserted-by": "publisher",
+              "first-page": "4261",
+              "DOI": "10.1016/j.physa.2012.03.031",
+              "volume": "391",
+              "author": "O Kwon",
+              "year": "2012",
+              "unstructured": "Kwon, O., & Jung, W. S. Intercity express bus flow in korea and its network analysis. Physica A 391, 4261\u20134265 (2012).",
+              "journal-title": "Physica A"
+            },
+            {
+              "key": "BFsrep10794_CR60",
+              "doi-asserted-by": "publisher",
+              "first-page": "96",
+              "DOI": "10.1038/nature10856",
+              "volume": "484",
+              "author": "F Simini",
+              "year": "2012",
+              "unstructured": "Simini, F., Gonz\u00e1lez, M. C., Maritan, A., & Barab\u00e1si, A. L. A universal model for mobility and migration patterns. Nature 484, 96\u2013100 (2012).",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFsrep10794_CR61",
+              "doi-asserted-by": "publisher",
+              "first-page": "e60069",
+              "DOI": "10.1371/journal.pone.0060069",
+              "volume": "8",
+              "author": "F Simini",
+              "year": "2013",
+              "unstructured": "Simini, F., Maritan, A. & N\u00e9da, Z. Human mobility in a continuum approach. Plos one 8, e60069 (2013).",
+              "journal-title": "Plos one"
+            },
+            {
+              "key": "BFsrep10794_CR62",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Ren, Y., Ercsey-Ravasz, M., Wang, P., Gonz\u00e1lez, M. C., & Toroczkai, Z. Predicting commuter flows in spatial networks using a radiation model based on temporal ranges. Nat. Commun. 5 10.1038/ncomms6347, (2014).",
+              "DOI": "10.1038/ncomms6347"
+            },
+            {
+              "key": "BFsrep10794_CR63",
+              "doi-asserted-by": "publisher",
+              "first-page": "11",
+              "DOI": "10.1016/S0969-6997(97)00012-4",
+              "volume": "4",
+              "author": "RC Cline",
+              "year": "1998",
+              "unstructured": "Cline, R. C., Ruhl, T. A., Gosling, G. D., & Gillen, D. W. Air transportation demand forecasts in emerging market economies: a case study of the Kyrgyz Republic in the former Soviet Union. J. Air Transport Manage. 4, 11\u201323 (1998).",
+              "journal-title": "J. Air Transport Manage"
+            },
+            {
+              "key": "BFsrep10794_CR64",
+              "first-page": "1",
+              "volume": "25",
+              "author": "Z Zhang",
+              "year": "2007",
+              "unstructured": "Zhang, Z., & Guo, S. Gray interval prediction of air traffic flow of capital airport. J. Civil Aviat. Univ. of China 25, 1\u20134 (2007).",
+              "journal-title": "J. Civil Aviat. Univ. of China"
+            },
+            {
+              "key": "BFsrep10794_CR65",
+              "first-page": "1157",
+              "volume": "29",
+              "author": "V Marimoutou",
+              "year": "2009",
+              "unstructured": "Marimoutou, V., Peguin, D., & Peguin-Feissolle, A. The\u201d distance-varying\u201d gravity model in international economics: is the distance an obstacle to trade? Economics Bulletin 29, 1157\u20131173 (2009).",
+              "journal-title": "Economics Bulletin"
+            },
+            {
+              "key": "BFsrep10794_CR66",
+              "doi-asserted-by": "publisher",
+              "first-page": "232",
+              "DOI": "10.1108/IJICC-02-2013-0005",
+              "volume": "6",
+              "author": "A Adamatzky",
+              "year": "2013",
+              "unstructured": "Adamatzky, A., Yang, X. S., & Zhao, Y. X. Slime mould imitates transport networks in China. Int. J. Intell. Comput. and Cybern. 6, 232\u2013251 (2013).",
+              "journal-title": "Int. J. Intell. Comput. and Cybern"
+            }
+          ],
+          "container-title": [
+            "Scientific Reports"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://www.nature.com/articles/srep10794",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://www.nature.com/articles/srep10794.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://www.nature.com/articles/srep10794.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2023,
+                1,
+                5
+              ]
+            ],
+            "date-time": "2023-01-05T18:24:28Z",
+            "timestamp": 1672943068000
+          },
+          "score": 32.34129,
+          "resource": {
+            "primary": {
+              "URL": "https://www.nature.com/articles/srep10794"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2015,
+                6,
+                4
+              ]
+            ]
+          },
+          "references-count": 66,
+          "journal-issue": {
+            "issue": "1",
+            "published-online": {
+              "date-parts": [
+                [
+                  2015,
+                  9,
+                  1
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "BFsrep10794"
+          ],
+          "URL": "https://doi.org/10.1038/srep10794",
+          "ISSN": [
+            "2045-2322"
+          ],
+          "issn-type": [
+            {
+              "value": "2045-2322",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2015,
+                6,
+                4
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "23 October 2014",
+              "order": 1,
+              "name": "received",
+              "label": "Received",
+              "group": {
+                "name": "ArticleHistory",
+                "label": "Article History"
+              }
+            },
+            {
+              "value": "28 April 2015",
+              "order": 2,
+              "name": "accepted",
+              "label": "Accepted",
+              "group": {
+                "name": "ArticleHistory",
+                "label": "Article History"
+              }
+            },
+            {
+              "value": "4 June 2015",
+              "order": 3,
+              "name": "first_online",
+              "label": "First Online",
+              "group": {
+                "name": "ArticleHistory",
+                "label": "Article History"
+              }
+            },
+            {
+              "value": "The authors declare no competing financial interests.",
+              "order": 1,
+              "name": "Ethics",
+              "group": {
+                "name": "EthicsHeading",
+                "label": "Competing interests"
+              }
+            }
+          ],
+          "article-number": "10794"
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                6,
+                10
+              ]
+            ],
+            "date-time": "2026-06-10T03:17:05Z",
+            "timestamp": 1781061425727,
+            "version": "3.54.1"
+          },
+          "publisher-location": "Cham",
+          "reference-count": 0,
+          "publisher": "Springer International Publishing",
+          "isbn-type": [
+            {
+              "value": "9783031009631",
+              "type": "print"
+            },
+            {
+              "value": "9783031020919",
+              "type": "electronic"
+            }
+          ],
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2021,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2021-01-01T00:00:00Z",
+                "timestamp": 1609459200000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.springer.com/tdm"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2021,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2021-01-01T00:00:00Z",
+                "timestamp": 1609459200000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "https://www.springer.com/tdm"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2021
+              ]
+            ]
+          },
+          "DOI": "10.1007/978-3-031-02091-9",
+          "type": "book",
+          "created": {
+            "date-parts": [
+              [
+                2022,
+                6,
+                9
+              ]
+            ],
+            "date-time": "2022-06-09T04:56:16Z",
+            "timestamp": 1654750576000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 6,
+          "title": [
+            "Biologically Inspired Design"
+          ],
+          "prefix": "10.1007",
+          "author": [
+            {
+              "given": "Torben A.",
+              "family": "Lenau",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Akhlesh",
+              "family": "Lakhtakia",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "published-online": {
+            "date-parts": [
+              [
+                2022,
+                2,
+                28
+              ]
+            ]
+          },
+          "container-title": [
+            "Synthesis Lectures on Engineering, Science, and Technology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://link.springer.com/content/pdf/10.1007/978-3-031-02091-9.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://link.springer.com/content/pdf/10.1007/978-3-031-02091-9",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2022,
+                10,
+                3
+              ]
+            ],
+            "date-time": "2022-10-03T20:02:19Z",
+            "timestamp": 1664827339000
+          },
+          "score": 30.156384,
+          "resource": {
+            "primary": {
+              "URL": "https://link.springer.com/10.1007/978-3-031-02091-9"
+            }
+          },
+          "subtitle": [
+            "A Primer"
+          ],
+          "issued": {
+            "date-parts": [
+              [
+                2021
+              ]
+            ]
+          },
+          "ISBN": [
+            "9783031009631",
+            "9783031020919"
+          ],
+          "references-count": 0,
+          "aliases": [
+            "10.2200/s01064ed1v01y202012est014"
+          ],
+          "URL": "https://doi.org/10.1007/978-3-031-02091-9",
+          "ISSN": [
+            "2690-0300",
+            "2690-0327"
+          ],
+          "issn-type": [
+            {
+              "value": "2690-0300",
+              "type": "print"
+            },
+            {
+              "value": "2690-0327",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2021
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

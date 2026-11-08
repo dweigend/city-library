@@ -1,0 +1,117 @@
+{
+  "slug": "disease-solo",
+  "name": "Disease Solo",
+  "catalogPath": "Sample Models/Biology/Disease Solo",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Disease%20Solo.nlogox",
+  "deliveryBatch": "B09",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "How does movement behavior alter opportunities for infectious contact? NetLogo Disease Solo combines one user-controlled person with computer-controlled agents, and infection spreads through encounters. Options for avoidance and pursuit let users explore how behavior changes exposure. Classical epidemic dynamics [1], awareness–disease feedback [2], and intervention modeling [3] provide scientific context. This is a one-player derivative of the HubNet Disease activity, not a fitted surveillance model. Its android strategies and simplified infection rule deliberately isolate contact effects without reconstructing an actual population's social network or pathogen biology. Different outbreak patterns illustrate consequences of movement choices within the simulation. They do not establish real intervention effectiveness or predict infection risk for an individual.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Disease%20Solo.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Disease%20Solo.nlogox",
+    "revision": "Best available served NetLogo Web artifact retrieved on 2026-11-05; SHA-256 f3d15df285ed35bcba2a6b3a718acf63de1589c8be099b44c2b6f1743b701a97",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served .nlogox downloaded; Info mechanism descriptions, credits and reference sections inspected. Procedures are not independently audited by this literature task. Source provenance is separate from City Library reimplementation and target-runtime verification.",
+    "evidenceFile": "evidence/biology/disease-solo.nlogox",
+    "infoFile": "evidence/biology/disease-solo-info.txt",
+    "originalModelCitation": "* Wilensky, U. (2005).  NetLogo Disease Solo model.  http://ccl.northwestern.edu/netlogo/models/DiseaseSolo.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "notes": "Original/served model is the behavioral baseline. This research does not claim implementation or browser acceptance."
+  },
+  "publications": [
+    {
+      "id": "kermack",
+      "authors": [
+        "William Ogilvy Kermack",
+        "A. G. McKendrick"
+      ],
+      "title": "A contribution to the mathematical theory of epidemics",
+      "year": 1927,
+      "venue": "Proceedings of the Royal Society of London. Series A, Containing Papers of a Mathematical and Physical Character",
+      "doi": "10.1098/rspa.1927.0118",
+      "url": "https://doi.org/10.1098/rspa.1927.0118",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1098%2Frspa.1927.0118",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-abstract-and-metadata",
+        "access": "Publisher-deposited abstract and metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/kermack-crossref-direct.json"
+      },
+      "verified": true,
+      "volume": "115",
+      "issue": "772",
+      "pages": "700-721",
+      "relevance": "Foundational epidemic dynamics contextualize transmission through susceptible contacts."
+    },
+    {
+      "id": "funk",
+      "authors": [
+        "Sebastian Funk",
+        "Erez Gilad",
+        "Chris Watkins",
+        "Vincent A. A. Jansen"
+      ],
+      "title": "The spread of awareness and its impact on epidemic outbreaks",
+      "year": 2009,
+      "venue": "Proceedings of the National Academy of Sciences",
+      "doi": "10.1073/pnas.0810762106",
+      "url": "https://doi.org/10.1073/pnas.0810762106",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=The+spread+of+awareness+and+its+impact+on+epidemic+outbreaks+Funk+Gilad+Watkins+Jansen+2009&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/funk-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1073%2Fpnas.0810762106%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/funk-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "106",
+      "issue": "16",
+      "pages": "6872-6877",
+      "relevance": "Behavioral awareness research is relevant to the model’s avoid/chase strategies and user-controlled movement."
+    },
+    {
+      "id": "ferguson",
+      "authors": [
+        "Neil M. Ferguson",
+        "Derek A. T. Cummings",
+        "Christophe Fraser",
+        "James C. Cajka",
+        "Philip C. Cooley",
+        "Donald S. Burke"
+      ],
+      "title": "Strategies for mitigating an influenza pandemic",
+      "year": 2006,
+      "venue": "Nature",
+      "doi": "10.1038/nature04795",
+      "url": "https://doi.org/10.1038/nature04795",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Strategies+for+mitigating+an+influenza+pandemic+Ferguson+2006&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/ferguson-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fnature04795%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/ferguson-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "442",
+      "issue": "7101",
+      "pages": "448-452",
+      "relevance": "Intervention modeling demonstrates why movement and contact assumptions matter when interpreting reduced epidemic experiments."
+    }
+  ],
+  "gaps": []
+}

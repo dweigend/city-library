@@ -1,0 +1,1525 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=Paradoxical+dependencies+of+tumor+dormancy+and+progression+on+basic+cell+kinetics&rows=4",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 3328683,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                28
+              ]
+            ],
+            "date-time": "2026-10-28T23:35:12Z",
+            "timestamp": 1793230512571,
+            "version": "4.5.0"
+          },
+          "reference-count": 60,
+          "publisher": "American Association for Cancer Research (AACR)",
+          "issue": "22",
+          "content-domain": {
+            "domain": [
+              "aacrjournals.org"
+            ],
+            "crossmark-restriction": true
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2009,
+                11,
+                15
+              ]
+            ]
+          },
+          "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:p>Even after a tumor is established, it can early on enter a state of dormancy marked by balanced cell proliferation and cell death. Disturbances to this equilibrium may affect cancer risk, as they may cause the eventual lifetime clinical presentation of a tumor that might otherwise have remained asymptomatic. Previously, we showed that cell death, proliferation, and migration can play a role in shifting this dynamic, making the understanding of their combined influence on tumor development essential. We developed an individual cell-based computer model of the interaction of cancer stem cells and their nonstem progeny to study early tumor dynamics. Simulations of tumor growth show that three basic components of tumor growth\u2014cell proliferation, migration, and death\u2014combine in unexpected ways to control tumor progression and, thus, clinical cancer risk. We show that increased proliferation capacity in nonstem tumor cells and limited cell migration overall lead to space constraints that inhibit proliferation and tumor growth. By contrast, increasing the rate of cell death produces the expected tumor size reduction in the short term, but results ultimately in paradoxical accelerated long-term growth owing to the liberation of cancer stem cells and formation of self-metastases.[Cancer Res 2009;69(22):8814\u201321]</jats:p>",
+          "DOI": "10.1158/0008-5472.can-09-2115",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2009,
+                11,
+                4
+              ]
+            ],
+            "date-time": "2009-11-04T00:19:34Z",
+            "timestamp": 1257293974000
+          },
+          "page": "8814-8821",
+          "update-policy": "https://doi.org/10.1158/crossmark_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 167,
+          "title": [
+            "Paradoxical Dependencies of Tumor Dormancy and Progression on Basic Cell Kinetics"
+          ],
+          "prefix": "10.1158",
+          "volume": "69",
+          "author": [
+            {
+              "given": "Heiko",
+              "family": "Enderling",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "1Center of Cancer Systems Biology, Caritas St. Elizabeth's Medical Center, Tufts University School of Medicine, Boston, Massachusetts; 2Integrated Mathematical Oncology, H. Lee Moffitt Cancer Center and Research Institute, Tampa, Florida; and 3Division of Mathematics, University of Dundee, Dundee, United Kingdom"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Alexander R.A.",
+              "family": "Anderson",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "1Center of Cancer Systems Biology, Caritas St. Elizabeth's Medical Center, Tufts University School of Medicine, Boston, Massachusetts; 2Integrated Mathematical Oncology, H. Lee Moffitt Cancer Center and Research Institute, Tampa, Florida; and 3Division of Mathematics, University of Dundee, Dundee, United Kingdom"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Mark A.J.",
+              "family": "Chaplain",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "1Center of Cancer Systems Biology, Caritas St. Elizabeth's Medical Center, Tufts University School of Medicine, Boston, Massachusetts; 2Integrated Mathematical Oncology, H. Lee Moffitt Cancer Center and Research Institute, Tampa, Florida; and 3Division of Mathematics, University of Dundee, Dundee, United Kingdom"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Afshin",
+              "family": "Beheshti",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "1Center of Cancer Systems Biology, Caritas St. Elizabeth's Medical Center, Tufts University School of Medicine, Boston, Massachusetts; 2Integrated Mathematical Oncology, H. Lee Moffitt Cancer Center and Research Institute, Tampa, Florida; and 3Division of Mathematics, University of Dundee, Dundee, United Kingdom"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Lynn",
+              "family": "Hlatky",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "1Center of Cancer Systems Biology, Caritas St. Elizabeth's Medical Center, Tufts University School of Medicine, Boston, Massachusetts; 2Integrated Mathematical Oncology, H. Lee Moffitt Cancer Center and Research Institute, Tampa, Florida; and 3Division of Mathematics, University of Dundee, Dundee, United Kingdom"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Philip",
+              "family": "Hahnfeldt",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "1Center of Cancer Systems Biology, Caritas St. Elizabeth's Medical Center, Tufts University School of Medicine, Boston, Massachusetts; 2Integrated Mathematical Oncology, H. Lee Moffitt Cancer Center and Research Institute, Tampa, Florida; and 3Division of Mathematics, University of Dundee, Dundee, United Kingdom"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "1086",
+          "published-online": {
+            "date-parts": [
+              [
+                2009,
+                11,
+                11
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "2022061701331177300_bib1",
+              "doi-asserted-by": "crossref",
+              "first-page": "1182",
+              "DOI": "10.1056/NEJM197111182852108",
+              "article-title": "Tumor angiogenesis: therapeutic implications",
+              "volume": "285",
+              "author": "Folkman",
+              "year": "1971",
+              "journal-title": "N Engl J Med"
+            },
+            {
+              "key": "2022061701331177300_bib2",
+              "first-page": "4770",
+              "article-title": "Tumor development under angiogenic signaling: a dynamical theory of tumor growth, treatment response, and postvascular dormancy",
+              "volume": "59",
+              "author": "Hahnfeldt",
+              "year": "1999",
+              "journal-title": "Cancer Res"
+            },
+            {
+              "key": "2022061701331177300_bib3",
+              "doi-asserted-by": "crossref",
+              "first-page": "1237",
+              "DOI": "10.1056/NEJM199304293281706",
+              "article-title": "Advances in diagnostic imaging and overestimations of disease prevalence and the benefits of therapy",
+              "volume": "328",
+              "author": "Black",
+              "year": "1993",
+              "journal-title": "N Engl J Med"
+            },
+            {
+              "key": "2022061701331177300_bib4",
+              "doi-asserted-by": "crossref",
+              "first-page": "691",
+              "DOI": "10.1016/0046-8177(95)90180-9",
+              "article-title": "Dormant cells in columnar cell carcinoma of the thyroid",
+              "volume": "26",
+              "author": "Sweeney",
+              "year": "1995",
+              "journal-title": "Hum Pathol"
+            },
+            {
+              "key": "2022061701331177300_bib5",
+              "doi-asserted-by": "crossref",
+              "first-page": "190",
+              "DOI": "10.1080/09513590600624374",
+              "article-title": "Why do some breast cancer cells remain dormant?",
+              "volume": "22",
+              "author": "Neves-E-Castro",
+              "year": "2006",
+              "journal-title": "Gynecol Endocrinol"
+            },
+            {
+              "key": "2022061701331177300_bib6",
+              "doi-asserted-by": "crossref",
+              "first-page": "787",
+              "DOI": "10.1038/427787a",
+              "article-title": "Cancer without disease",
+              "volume": "427",
+              "author": "Folkman",
+              "year": "2004",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "2022061701331177300_bib7",
+              "doi-asserted-by": "crossref",
+              "first-page": "12890",
+              "DOI": "10.1073/pnas.0705505104",
+              "article-title": "Transcriptional network governing the angiogenic switch in human pancreatic cancer",
+              "volume": "104",
+              "author": "Abdollahi",
+              "year": "2007",
+              "journal-title": "Proc Natl Acad Sci U S A"
+            },
+            {
+              "key": "2022061701331177300_bib8",
+              "doi-asserted-by": "crossref",
+              "first-page": "232",
+              "DOI": "10.1016/j.tig.2007.03.005",
+              "article-title": "Can loss of apoptosis protect against cancer",
+              "volume": "23",
+              "author": "Wodarz",
+              "year": "2007",
+              "journal-title": "Trends Genet"
+            },
+            {
+              "key": "2022061701331177300_bib9",
+              "doi-asserted-by": "crossref",
+              "first-page": "128",
+              "DOI": "10.1002/jcb.10382",
+              "article-title": "Paradoxical role of apoptosis in tumor progression",
+              "volume": "88",
+              "author": "Gurova",
+              "year": "2003",
+              "journal-title": "J Cell Biochem"
+            },
+            {
+              "key": "2022061701331177300_bib10",
+              "doi-asserted-by": "crossref",
+              "first-page": "57",
+              "DOI": "10.1016/S0092-8674(00)81683-9",
+              "article-title": "The hallmarks of cancer",
+              "volume": "100",
+              "author": "Hanahan",
+              "year": "2000",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "2022061701331177300_bib11",
+              "doi-asserted-by": "crossref",
+              "first-page": "3983",
+              "DOI": "10.1073/pnas.0530291100",
+              "article-title": "Prospective identification of tumorigenic breast cancer cells",
+              "volume": "100",
+              "author": "Al-Hajj",
+              "year": "2003",
+              "journal-title": "Proc Natl Acad Sci U S A"
+            },
+            {
+              "key": "2022061701331177300_bib12",
+              "doi-asserted-by": "crossref",
+              "first-page": "545",
+              "DOI": "10.1038/nrc2419",
+              "article-title": "Exploring the role of cancer stem cells in radioresistance",
+              "volume": "8",
+              "author": "Baumann",
+              "year": "2008",
+              "journal-title": "Nat Rev Cancer"
+            },
+            {
+              "key": "2022061701331177300_bib13",
+              "doi-asserted-by": "crossref",
+              "first-page": "97",
+              "DOI": "10.1111/j.1582-4934.2007.00151.x",
+              "article-title": "Systems biology and cancer stem cells",
+              "volume": "12",
+              "author": "Price",
+              "year": "2008",
+              "journal-title": "J Cell Mol Med"
+            },
+            {
+              "key": "2022061701331177300_bib14",
+              "doi-asserted-by": "crossref",
+              "first-page": "47",
+              "DOI": "10.1016/j.ccr.2008.05.015",
+              "article-title": "In childhood acute lymphoblastic leukemia, blasts at different stages of immunophenotypic maturation have stem cell properties",
+              "volume": "14",
+              "author": "le Viseur",
+              "year": "2008",
+              "journal-title": "Cancer Cell"
+            },
+            {
+              "key": "2022061701331177300_bib15",
+              "doi-asserted-by": "crossref",
+              "first-page": "2911",
+              "DOI": "10.1200/JCO.2008.17.5745",
+              "article-title": "Chronic myeloid leukemia stem cells",
+              "volume": "26",
+              "author": "Kavalerchik",
+              "year": "2008",
+              "journal-title": "J Clin Oncol"
+            },
+            {
+              "key": "2022061701331177300_bib16",
+              "doi-asserted-by": "crossref",
+              "first-page": "2828",
+              "DOI": "10.1200/JCO.2008.17.6941",
+              "article-title": "Human colon cancer stem cells: a new paradigm in gastrointestinal oncology",
+              "volume": "26",
+              "author": "Boman",
+              "year": "2008",
+              "journal-title": "J Clin Oncol"
+            },
+            {
+              "key": "2022061701331177300_bib17",
+              "doi-asserted-by": "crossref",
+              "first-page": "92",
+              "DOI": "10.3816/CCC.2008.n.012",
+              "article-title": "Stem cells in colon cancer",
+              "volume": "7",
+              "author": "Pohl",
+              "year": "2008",
+              "journal-title": "Clin Colorectal Cancer"
+            },
+            {
+              "key": "2022061701331177300_bib18",
+              "doi-asserted-by": "crossref",
+              "first-page": "2813",
+              "DOI": "10.1200/JCO.2008.16.3931",
+              "article-title": "Implications of the cancer stem-cell hypothesis for breast cancer prevention and therapy",
+              "volume": "26",
+              "author": "Kakarala",
+              "year": "2008",
+              "journal-title": "J Clin Oncol"
+            },
+            {
+              "key": "2022061701331177300_bib19",
+              "doi-asserted-by": "crossref",
+              "first-page": "11",
+              "DOI": "10.1016/j.ejogrb.2008.02.015",
+              "article-title": "\u201cStem cell like\u201d breast cancers-A model for the identification of new prognostic/predictive markers in endocrine responsive breast cancer exemplified by Plexin B1",
+              "volume": "139",
+              "author": "Rody",
+              "year": "2008",
+              "journal-title": "Eur J Obstet Gynecol Reprod Biol"
+            },
+            {
+              "key": "2022061701331177300_bib20",
+              "doi-asserted-by": "crossref",
+              "first-page": "2862",
+              "DOI": "10.1200/JCO.2007.15.1472",
+              "article-title": "Prostate cancer stem cells: a new target for therapy",
+              "volume": "26",
+              "author": "Maitland",
+              "year": "2008",
+              "journal-title": "J Clin Oncol"
+            },
+            {
+              "key": "2022061701331177300_bib21",
+              "doi-asserted-by": "crossref",
+              "first-page": "528",
+              "DOI": "10.1038/cr.2008.50",
+              "article-title": "Prostate cancer and metastasis initiating stem cells",
+              "volume": "18",
+              "author": "Kelly",
+              "year": "2008",
+              "journal-title": "Cell Res"
+            },
+            {
+              "key": "2022061701331177300_bib22",
+              "doi-asserted-by": "crossref",
+              "first-page": "1114",
+              "DOI": "10.1634/stemcells.2006-0638",
+              "article-title": "Chronic myeloid leukemia blast crisis arises from progenitors",
+              "volume": "25",
+              "author": "Michor",
+              "year": "2007",
+              "journal-title": "Stem Cells"
+            },
+            {
+              "key": "2022061701331177300_bib23",
+              "doi-asserted-by": "crossref",
+              "first-page": "257",
+              "DOI": "10.1016/S0022-5193(03)00244-3",
+              "article-title": "A cellular automaton model for tumour growth in inhomogeneous environment",
+              "volume": "225",
+              "author": "Alarcon",
+              "year": "2003",
+              "journal-title": "J Theor Biol"
+            },
+            {
+              "key": "2022061701331177300_bib24",
+              "doi-asserted-by": "crossref",
+              "first-page": "163",
+              "DOI": "10.1093/imammb/dqi005",
+              "article-title": "A hybrid mathematical model of solid tumour invasion: the importance of cell adhesion",
+              "volume": "22",
+              "author": "Anderson",
+              "year": "2005",
+              "journal-title": "Math Med Biol"
+            },
+            {
+              "key": "2022061701331177300_bib25",
+              "doi-asserted-by": "crossref",
+              "first-page": "905",
+              "DOI": "10.1016/j.cell.2006.09.042",
+              "article-title": "Tumor morphology and phenotypic evolution driven by selective pressure from the microenvironment",
+              "volume": "127",
+              "author": "Anderson",
+              "year": "2006",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "2022061701331177300_bib26",
+              "doi-asserted-by": "crossref",
+              "first-page": "515",
+              "DOI": "10.3934/nhm.2006.1.515",
+              "article-title": "The impact of cell crowding and active cell movement on vascular tumour growth",
+              "volume": "1",
+              "author": "Betteridge",
+              "year": "2006",
+              "journal-title": "Networks and heterogeneous media"
+            },
+            {
+              "key": "2022061701331177300_bib27",
+              "doi-asserted-by": "crossref",
+              "first-page": "1219",
+              "DOI": "10.1142/S0218202506001522",
+              "article-title": "Modelling the response of vascular tumours to chemotherapy: a multiscale approach",
+              "volume": "16",
+              "author": "Byrne",
+              "year": "2006",
+              "journal-title": "Math Model Meth Appl Sci"
+            },
+            {
+              "key": "2022061701331177300_bib28",
+              "doi-asserted-by": "crossref",
+              "first-page": "197",
+              "DOI": "10.1093/imammb/dql009",
+              "article-title": "Mathematical modelling of the loss of tissue compression responsiveness and its role in solid tumour development",
+              "volume": "23",
+              "author": "Chaplain",
+              "year": "2006",
+              "journal-title": "Math Med Biol"
+            },
+            {
+              "key": "2022061701331177300_bib29",
+              "doi-asserted-by": "crossref",
+              "first-page": "2203",
+              "DOI": "10.1529/biophysj.108.133199",
+              "article-title": "Dependence of invadopodia function on collagen fiber spacing and crosslinking: computational modeling and experimental evidence",
+              "volume": "95",
+              "author": "Enderling",
+              "year": "2008",
+              "journal-title": "Biophys J"
+            },
+            {
+              "key": "2022061701331177300_bib30",
+              "doi-asserted-by": "crossref",
+              "first-page": "117",
+              "DOI": "10.1051/mmnp/20094305",
+              "article-title": "The importance of spatial distribution of stemness and proliferation state in determining tumor radioresponse",
+              "volume": "4",
+              "author": "Enderling",
+              "year": "2009",
+              "journal-title": "Math Model Nat Phenom"
+            },
+            {
+              "key": "2022061701331177300_bib31",
+              "doi-asserted-by": "crossref",
+              "first-page": "583",
+              "DOI": "10.1016/j.jtbi.2007.01.027",
+              "article-title": "An evolutionary hybrid cellular automaton model of solid tumour growth",
+              "volume": "246",
+              "author": "Gerlee",
+              "year": "2007",
+              "journal-title": "J Theor Biol"
+            },
+            {
+              "key": "2022061701331177300_bib32",
+              "doi-asserted-by": "crossref",
+              "first-page": "343",
+              "DOI": "10.1006/jtbi.2002.3131",
+              "article-title": "Emerging patterns in tumor systems: simulating the dynamics of multicellular clusters with an agent-based spatial agglomeration model",
+              "volume": "219",
+              "author": "Mansury",
+              "year": "2002",
+              "journal-title": "J Theor Biol"
+            },
+            {
+              "key": "2022061701331177300_bib33",
+              "doi-asserted-by": "crossref",
+              "first-page": "146",
+              "DOI": "10.1016/j.jtbi.2005.05.027",
+              "article-title": "Evolutionary game theory in an agent-based brain tumor model: exploring the 'Genotype-Phenotype' link",
+              "volume": "238",
+              "author": "Mansury",
+              "year": "2006",
+              "journal-title": "J Theor Biol"
+            },
+            {
+              "key": "2022061701331177300_bib34",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1007/978-3-7643-8123-3",
+              "volume-title": "Single-cell-based models in biology and medicine",
+              "author": "Anderson",
+              "year": "2007"
+            },
+            {
+              "key": "2022061701331177300_bib35",
+              "doi-asserted-by": "crossref",
+              "first-page": "475",
+              "DOI": "10.1089/107632704323061834",
+              "article-title": "Traveling wave model to interpret a wound-healing cell migration assay for human peritoneal mesothelial cells",
+              "volume": "10",
+              "author": "Maini",
+              "year": "2004",
+              "journal-title": "Tissue Eng"
+            },
+            {
+              "key": "2022061701331177300_bib36",
+              "doi-asserted-by": "crossref",
+              "first-page": "15034",
+              "DOI": "10.1073/pnas.0802211105",
+              "article-title": "Preneoplastic lesion growth driven by the death of adjacent normal stem cells",
+              "volume": "105",
+              "author": "Chao",
+              "year": "2008",
+              "journal-title": "Proc Natl Acad Sci U S A"
+            },
+            {
+              "key": "2022061701331177300_bib37",
+              "doi-asserted-by": "crossref",
+              "first-page": "261",
+              "DOI": "10.1007/s00285-008-0172-4",
+              "article-title": "From single cells to tissue architecture-a bottom-up approach to modelling the spatio-temporal organisation of complex multi-cellularsystems",
+              "volume": "58",
+              "author": "Galle",
+              "year": "2009",
+              "journal-title": "J Math Biol"
+            },
+            {
+              "key": "2022061701331177300_bib38",
+              "doi-asserted-by": "crossref",
+              "first-page": "2948",
+              "DOI": "10.1016/S0006-3495(03)74715-8",
+              "article-title": "The universal dynamics of tumor growth",
+              "volume": "85",
+              "author": "Br\u00fa",
+              "year": "2003",
+              "journal-title": "Biophys J"
+            },
+            {
+              "key": "2022061701331177300_bib39",
+              "doi-asserted-by": "crossref",
+              "first-page": "171",
+              "DOI": "10.1016/j.jtbi.2006.05.020",
+              "article-title": "The effect of pressure on the growth of tumour cell colonies",
+              "volume": "243",
+              "author": "Br\u00fa",
+              "year": "2006",
+              "journal-title": "J Theor Biol"
+            },
+            {
+              "key": "2022061701331177300_bib40",
+              "doi-asserted-by": "crossref",
+              "first-page": "204",
+              "DOI": "10.1016/S0026-2862(03)00057-8",
+              "article-title": "Solid stress generated by spheroid growth estimated using a linear poroelasticity model",
+              "volume": "66",
+              "author": "Roose",
+              "year": "2003",
+              "journal-title": "Microvasc Res"
+            },
+            {
+              "key": "2022061701331177300_bib41",
+              "doi-asserted-by": "crossref",
+              "first-page": "787",
+              "DOI": "10.1016/S0959-8049(97)00062-2",
+              "article-title": "A survey of telomerase activity in human cancer",
+              "volume": "33",
+              "author": "Shay",
+              "year": "1997",
+              "journal-title": "Eur J Cancer"
+            },
+            {
+              "key": "2022061701331177300_bib42",
+              "doi-asserted-by": "crossref",
+              "first-page": "248",
+              "DOI": "10.1016/j.semcancer.2006.04.005",
+              "article-title": "Neuroblastoma as an experimental model for neuronal differentiation and hypoxia-induced tumor cell dedifferentiation",
+              "volume": "17",
+              "author": "Edsj\u00f6",
+              "year": "2007",
+              "journal-title": "Semin Cancer Biol"
+            },
+            {
+              "key": "2022061701331177300_bib43",
+              "first-page": "283",
+              "article-title": "Cancer initiation and progression: involvement of stem cells and the microenvironment",
+              "volume": "1775",
+              "author": "Tysnes",
+              "year": "2007",
+              "journal-title": "Biochim Biophys Acta"
+            },
+            {
+              "key": "2022061701331177300_bib44",
+              "doi-asserted-by": "crossref",
+              "first-page": "893",
+              "DOI": "10.1038/sj.clpt.6100202",
+              "article-title": "Symmetric division of cancer stem cells\u2014a key mechanism in tumor growth that should be targeted in future therapeutic approaches",
+              "volume": "81",
+              "author": "Boman",
+              "year": "2007",
+              "journal-title": "Clin Pharmacol Ther"
+            },
+            {
+              "key": "2022061701331177300_bib45",
+              "doi-asserted-by": "crossref",
+              "first-page": "1068",
+              "DOI": "10.1038/nature04956",
+              "article-title": "Asymmetric and symmetric stem-cell divisions in development and cancer",
+              "volume": "441",
+              "author": "Morrison",
+              "year": "2006",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "2022061701331177300_bib46",
+              "doi-asserted-by": "crossref",
+              "first-page": "755",
+              "DOI": "10.1038/nrc2499",
+              "article-title": "Cancer stem cells in solid tumours: accumulating evidence and unresolved questions",
+              "volume": "8",
+              "author": "Visvader",
+              "year": "2008",
+              "journal-title": "Nat Rev Cancer"
+            },
+            {
+              "key": "2022061701331177300_bib47",
+              "doi-asserted-by": "crossref",
+              "first-page": "370",
+              "DOI": "10.1634/theoncologist.10-6-370",
+              "article-title": "Conceptual and practical implications of breast tissue geometry: toward a more effective, less toxic therapy",
+              "volume": "10",
+              "author": "Norton",
+              "year": "2005",
+              "journal-title": "Oncologist"
+            },
+            {
+              "key": "2022061701331177300_bib48",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1038/sj.bjc.6605071",
+              "article-title": "Migration Rules - tumours are conglomerates of self-metastases",
+              "author": "Enderling",
+              "year": "2009",
+              "journal-title": "Br J Cancer"
+            },
+            {
+              "key": "2022061701331177300_bib49",
+              "first-page": "2",
+              "article-title": "The inhibition of tumor growth by tumor mass",
+              "volume": "51",
+              "author": "Prehn",
+              "year": "1991",
+              "journal-title": "Cancer Res"
+            },
+            {
+              "key": "2022061701331177300_bib50",
+              "doi-asserted-by": "crossref",
+              "first-page": "125",
+              "DOI": "10.1016/S0304-3835(03)00054-5",
+              "article-title": "Flow cytometric detection of spontaneous apoptosis in human breast cancer using the TUNEL-technique",
+              "volume": "194",
+              "author": "Ehemann",
+              "year": "2003",
+              "journal-title": "Cancer Lett"
+            },
+            {
+              "key": "2022061701331177300_bib51",
+              "doi-asserted-by": "crossref",
+              "first-page": "117",
+              "DOI": "10.1097/00006676-200003000-00002",
+              "article-title": "Spontaneous apoptosis and proliferation in human pancreatic cancer",
+              "volume": "20",
+              "author": "Meggiato",
+              "year": "2000",
+              "journal-title": "Pancreas"
+            },
+            {
+              "key": "2022061701331177300_bib52",
+              "doi-asserted-by": "crossref",
+              "first-page": "347",
+              "DOI": "10.1111/j.1365-2184.2005.00355.x",
+              "article-title": "Retention of stem cell patterns in malignant cell lines",
+              "volume": "38",
+              "author": "Mackenzie",
+              "year": "2005",
+              "journal-title": "Cell Prolif"
+            },
+            {
+              "key": "2022061701331177300_bib53",
+              "doi-asserted-by": "crossref",
+              "first-page": "191",
+              "DOI": "10.1196/annals.1297.030",
+              "article-title": "The role of cellular senescence may be to prevent proliferation of neighboring cells within stem cell niches",
+              "volume": "1019",
+              "author": "Lynch",
+              "year": "2004",
+              "journal-title": "Ann N Y Acad Sci"
+            },
+            {
+              "key": "2022061701331177300_bib54",
+              "doi-asserted-by": "crossref",
+              "first-page": "780",
+              "DOI": "10.1038/nature07733",
+              "article-title": "Association of reactive oxygen species levels and radioresistance in cancer stem cells",
+              "volume": "458",
+              "author": "Diehn",
+              "year": "2009",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "2022061701331177300_bib55",
+              "doi-asserted-by": "crossref",
+              "first-page": "1688",
+              "DOI": "10.2174/092986709788186147",
+              "article-title": "Cancer stem cells: a new paradigm for understanding tumor growth and progression and drug resistance",
+              "volume": "16",
+              "author": "Gangemi",
+              "year": "2009",
+              "journal-title": "Curr Med Chem"
+            },
+            {
+              "key": "2022061701331177300_bib56",
+              "doi-asserted-by": "crossref",
+              "first-page": "1267",
+              "DOI": "10.1038/nature03669",
+              "article-title": "Dynamics of chronic myeloid leukemia",
+              "volume": "435",
+              "author": "Michor",
+              "year": "2005",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "2022061701331177300_bib57",
+              "doi-asserted-by": "crossref",
+              "first-page": "313",
+              "DOI": "10.1016/j.stem.2007.06.002",
+              "article-title": "Distinct populations of cancer stem cells determine tumor growth and metastatic activity in human pancreatic cancer",
+              "volume": "1",
+              "author": "Hermann",
+              "year": "2007",
+              "journal-title": "Cell Stem Cell"
+            },
+            {
+              "key": "2022061701331177300_bib58",
+              "doi-asserted-by": "crossref",
+              "first-page": "35",
+              "DOI": "10.1111/j.1464-410X.2005.05945.x",
+              "article-title": "New strategies for the medical treatment of prostate cancer",
+              "volume": "96",
+              "author": "Isaacs",
+              "year": "2005",
+              "journal-title": "BJU Int"
+            },
+            {
+              "key": "2022061701331177300_bib59",
+              "first-page": "1876",
+              "article-title": "DNA damage is able to induce senescence in tumor cells in vitro and in vivo",
+              "volume": "62",
+              "author": "te Poele",
+              "year": "2002",
+              "journal-title": "Cancer Res"
+            },
+            {
+              "key": "2022061701331177300_bib60",
+              "doi-asserted-by": "crossref",
+              "first-page": "4493",
+              "DOI": "10.1158/0008-5472.CAN-08-3834",
+              "article-title": "Multiparameter computational modeling of tumor invasion",
+              "volume": "69",
+              "author": "Bearer",
+              "year": "2009",
+              "journal-title": "Cancer Res"
+            }
+          ],
+          "container-title": [
+            "Cancer Research"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://aacrjournals.org/cancerres/article-pdf/69/22/8814/2619373/8814.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "syndication"
+            },
+            {
+              "URL": "https://aacrjournals.org/cancerres/article-pdf/69/22/8814/2619373/8814.pdf",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2022,
+                6,
+                17
+              ]
+            ],
+            "date-time": "2022-06-17T03:00:51Z",
+            "timestamp": 1655434851000
+          },
+          "score": 59.672398,
+          "resource": {
+            "primary": {
+              "URL": "https://aacrjournals.org/cancerres/article/69/22/8814/552117/Paradoxical-Dependencies-of-Tumor-Dormancy-and"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2009,
+                11,
+                11
+              ]
+            ]
+          },
+          "references-count": 60,
+          "journal-issue": {
+            "issue": "22",
+            "published-online": {
+              "date-parts": [
+                [
+                  2009,
+                  11,
+                  11
+                ]
+              ]
+            },
+            "published-print": {
+              "date-parts": [
+                [
+                  2009,
+                  11,
+                  15
+                ]
+              ]
+            }
+          },
+          "URL": "https://doi.org/10.1158/0008-5472.can-09-2115",
+          "relation": {
+            "has-preprint": [
+              {
+                "id-type": "doi",
+                "id": "10.1158/0008-5472.c.6500517.v1",
+                "asserted-by": "object"
+              },
+              {
+                "id-type": "doi",
+                "id": "10.1158/0008-5472.22383387.v1",
+                "asserted-by": "object"
+              },
+              {
+                "id-type": "doi",
+                "id": "10.1158/0008-5472.c.6500517",
+                "asserted-by": "object"
+              },
+              {
+                "id-type": "doi",
+                "id": "10.1158/0008-5472.22383387",
+                "asserted-by": "object"
+              }
+            ]
+          },
+          "ISSN": [
+            "0008-5472",
+            "1538-7445"
+          ],
+          "issn-type": [
+            {
+              "value": "0008-5472",
+              "type": "print"
+            },
+            {
+              "value": "1538-7445",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2009,
+                11,
+                11
+              ]
+            ]
+          }
+        },
+        {
+          "institution": [
+            {
+              "name": "American Association for Cancer Research"
+            }
+          ],
+          "indexed": {
+            "date-parts": [
+              [
+                2024,
+                3,
+                2
+              ]
+            ],
+            "date-time": "2024-03-02T11:17:28Z",
+            "timestamp": 1709378248851
+          },
+          "posted": {
+            "date-parts": [
+              [
+                2023,
+                3,
+                30
+              ]
+            ]
+          },
+          "reference-count": 0,
+          "publisher": "American Association for Cancer Research (AACR)",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2023,
+                    3,
+                    30
+                  ]
+                ],
+                "date-time": "2023-03-30T00:00:00Z",
+                "timestamp": 1680134400000
+              },
+              "content-version": "unspecified",
+              "delay-in-days": 0,
+              "URL": "https://creativecommons.org/licenses/by/4.0/"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "abstract": "<jats:p>&lt;div&gt;Abstract&lt;p&gt;Even after a tumor is established, it can early on enter a state of dormancy marked by balanced cell proliferation and cell death. Disturbances to this equilibrium may affect cancer risk, as they may cause the eventual lifetime clinical presentation of a tumor that might otherwise have remained asymptomatic. Previously, we showed that cell death, proliferation, and migration can play a role in shifting this dynamic, making the understanding of their combined influence on tumor development essential. We developed an individual cell-based computer model of the interaction of cancer stem cells and their nonstem progeny to study early tumor dynamics. Simulations of tumor growth show that three basic components of tumor growth\u2014cell proliferation, migration, and death\u2014combine in unexpected ways to control tumor progression and, thus, clinical cancer risk. We show that increased proliferation capacity in nonstem tumor cells and limited cell migration overall lead to space constraints that inhibit proliferation and tumor growth. By contrast, increasing the rate of cell death produces the expected tumor size reduction in the short term, but results ultimately in paradoxical accelerated long-term growth owing to the liberation of cancer stem cells and formation of self-metastases.[Cancer Res 2009;69(22):8814\u201321]&lt;/p&gt;&lt;/div&gt;</jats:p>",
+          "DOI": "10.1158/0008-5472.c.6500517",
+          "type": "posted-content",
+          "created": {
+            "date-parts": [
+              [
+                2023,
+                3,
+                31
+              ]
+            ],
+            "date-time": "2023-03-31T23:22:30Z",
+            "timestamp": 1680304950000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Data from Paradoxical Dependencies of Tumor Dormancy and Progression on Basic Cell Kinetics"
+          ],
+          "prefix": "10.1158",
+          "author": [
+            {
+              "given": "Heiko",
+              "family": "Enderling",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Alexander R.A.",
+              "family": "Anderson",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Mark A.J.",
+              "family": "Chaplain",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Afshin",
+              "family": "Beheshti",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Lynn",
+              "family": "Hlatky",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Philip",
+              "family": "Hahnfeldt",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "1086",
+          "deposited": {
+            "date-parts": [
+              [
+                2023,
+                3,
+                31
+              ]
+            ],
+            "date-time": "2023-03-31T23:22:30Z",
+            "timestamp": 1680304950000
+          },
+          "score": 55.79718,
+          "resource": {
+            "primary": {
+              "URL": "https://aacr.figshare.com/collections/Data_from_Paradoxical_Dependencies_of_Tumor_Dormancy_and_Progression_on_Basic_Cell_Kinetics/6500517"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2023,
+                3,
+                30
+              ]
+            ]
+          },
+          "references-count": 0,
+          "URL": "https://doi.org/10.1158/0008-5472.c.6500517",
+          "relation": {
+            "is-preprint-of": [
+              {
+                "id-type": "doi",
+                "id": "10.1158/0008-5472.CAN-09-2115",
+                "asserted-by": "subject"
+              }
+            ]
+          },
+          "published": {
+            "date-parts": [
+              [
+                2023,
+                3,
+                30
+              ]
+            ]
+          },
+          "subtype": "other"
+        },
+        {
+          "institution": [
+            {
+              "name": "American Association for Cancer Research"
+            }
+          ],
+          "indexed": {
+            "date-parts": [
+              [
+                2024,
+                3,
+                13
+              ]
+            ],
+            "date-time": "2024-03-13T13:53:28Z",
+            "timestamp": 1710338008805
+          },
+          "posted": {
+            "date-parts": [
+              [
+                2023,
+                3,
+                30
+              ]
+            ]
+          },
+          "reference-count": 0,
+          "publisher": "American Association for Cancer Research (AACR)",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2023,
+                    3,
+                    30
+                  ]
+                ],
+                "date-time": "2023-03-30T00:00:00Z",
+                "timestamp": 1680134400000
+              },
+              "content-version": "unspecified",
+              "delay-in-days": 0,
+              "URL": "https://creativecommons.org/licenses/by/4.0/"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "abstract": "<jats:p>&lt;div&gt;Abstract&lt;p&gt;Even after a tumor is established, it can early on enter a state of dormancy marked by balanced cell proliferation and cell death. Disturbances to this equilibrium may affect cancer risk, as they may cause the eventual lifetime clinical presentation of a tumor that might otherwise have remained asymptomatic. Previously, we showed that cell death, proliferation, and migration can play a role in shifting this dynamic, making the understanding of their combined influence on tumor development essential. We developed an individual cell-based computer model of the interaction of cancer stem cells and their nonstem progeny to study early tumor dynamics. Simulations of tumor growth show that three basic components of tumor growth\u2014cell proliferation, migration, and death\u2014combine in unexpected ways to control tumor progression and, thus, clinical cancer risk. We show that increased proliferation capacity in nonstem tumor cells and limited cell migration overall lead to space constraints that inhibit proliferation and tumor growth. By contrast, increasing the rate of cell death produces the expected tumor size reduction in the short term, but results ultimately in paradoxical accelerated long-term growth owing to the liberation of cancer stem cells and formation of self-metastases.[Cancer Res 2009;69(22):8814\u201321]&lt;/p&gt;&lt;/div&gt;</jats:p>",
+          "DOI": "10.1158/0008-5472.c.6500517.v1",
+          "type": "posted-content",
+          "created": {
+            "date-parts": [
+              [
+                2024,
+                3,
+                12
+              ]
+            ],
+            "date-time": "2024-03-12T19:22:42Z",
+            "timestamp": 1710271362000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Data from Paradoxical Dependencies of Tumor Dormancy and Progression on Basic Cell Kinetics"
+          ],
+          "prefix": "10.1158",
+          "author": [
+            {
+              "given": "Heiko",
+              "family": "Enderling",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Alexander R.A.",
+              "family": "Anderson",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Mark A.J.",
+              "family": "Chaplain",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Afshin",
+              "family": "Beheshti",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Lynn",
+              "family": "Hlatky",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Philip",
+              "family": "Hahnfeldt",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "1086",
+          "deposited": {
+            "date-parts": [
+              [
+                2024,
+                3,
+                12
+              ]
+            ],
+            "date-time": "2024-03-12T19:22:42Z",
+            "timestamp": 1710271362000
+          },
+          "score": 55.732212,
+          "resource": {
+            "primary": {
+              "URL": "https://aacr.figshare.com/collections/Data_from_Paradoxical_Dependencies_of_Tumor_Dormancy_and_Progression_on_Basic_Cell_Kinetics/6500517/1"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2023,
+                3,
+                30
+              ]
+            ]
+          },
+          "references-count": 0,
+          "URL": "https://doi.org/10.1158/0008-5472.c.6500517.v1",
+          "relation": {
+            "is-preprint-of": [
+              {
+                "id-type": "doi",
+                "id": "10.1158/0008-5472.CAN-09-2115",
+                "asserted-by": "subject"
+              }
+            ]
+          },
+          "published": {
+            "date-parts": [
+              [
+                2023,
+                3,
+                30
+              ]
+            ]
+          },
+          "subtype": "other"
+        },
+        {
+          "institution": [
+            {
+              "name": "American Association for Cancer Research"
+            }
+          ],
+          "indexed": {
+            "date-parts": [
+              [
+                2024,
+                3,
+                2
+              ]
+            ],
+            "date-time": "2024-03-02T10:05:38Z",
+            "timestamp": 1709373938369
+          },
+          "posted": {
+            "date-parts": [
+              [
+                2023,
+                3,
+                30
+              ]
+            ]
+          },
+          "reference-count": 0,
+          "publisher": "American Association for Cancer Research (AACR)",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2023,
+                    3,
+                    30
+                  ]
+                ],
+                "date-time": "2023-03-30T00:00:00Z",
+                "timestamp": 1680134400000
+              },
+              "content-version": "unspecified",
+              "delay-in-days": 0,
+              "URL": "https://creativecommons.org/licenses/by/4.0/"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "abstract": "<jats:p>Free Article from Paradoxical Dependencies of Tumor Dormancy and Progression on Basic Cell Kinetics</jats:p>",
+          "DOI": "10.1158/0008-5472.22383387",
+          "type": "posted-content",
+          "created": {
+            "date-parts": [
+              [
+                2023,
+                3,
+                31
+              ]
+            ],
+            "date-time": "2023-03-31T11:57:50Z",
+            "timestamp": 1680263870000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Free Article from Paradoxical Dependencies of Tumor Dormancy and Progression on Basic Cell Kinetics"
+          ],
+          "prefix": "10.1158",
+          "author": [
+            {
+              "given": "Heiko",
+              "family": "Enderling",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Alexander R.A.",
+              "family": "Anderson",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Mark A.J.",
+              "family": "Chaplain",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Afshin",
+              "family": "Beheshti",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Lynn",
+              "family": "Hlatky",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Philip",
+              "family": "Hahnfeldt",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "1086",
+          "deposited": {
+            "date-parts": [
+              [
+                2023,
+                3,
+                31
+              ]
+            ],
+            "date-time": "2023-03-31T11:57:51Z",
+            "timestamp": 1680263871000
+          },
+          "score": 53.83095,
+          "resource": {
+            "primary": {
+              "URL": "https://aacr.figshare.com/articles/dataset/Free_Article_from_Paradoxical_Dependencies_of_Tumor_Dormancy_and_Progression_on_Basic_Cell_Kinetics/22383387"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2023,
+                3,
+                30
+              ]
+            ]
+          },
+          "references-count": 0,
+          "URL": "https://doi.org/10.1158/0008-5472.22383387",
+          "relation": {
+            "is-preprint-of": [
+              {
+                "id-type": "doi",
+                "id": "10.1158/0008-5472.CAN-09-2115",
+                "asserted-by": "subject"
+              }
+            ]
+          },
+          "published": {
+            "date-parts": [
+              [
+                2023,
+                3,
+                30
+              ]
+            ]
+          },
+          "subtype": "other"
+        }
+      ],
+      "items-per-page": 4,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

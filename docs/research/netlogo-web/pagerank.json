@@ -1,0 +1,111 @@
+{
+  "slug": "pagerank",
+  "name": "PageRank",
+  "catalogPath": "Sample Models/Computer Science/PageRank",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/PageRank.nlogox",
+  "deliveryBatch": "B18",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "How can hyperlink structure define a page's relative importance? NetLogo PageRank compares two agent-based ways to distribute rank over directed links, making mass flow and random-surfer behavior visible. Brin and Page [1] give the search-engine context, Bianchini and colleagues [2] analyze PageRank mathematically, and Kleinberg [3] supplies a related but distinct link-authority approach. Damping changes the balance between following links and redistributing visits, while graph structure controls which nodes collect rank. The model illustrates a ranking measure rather than answering a content query. Direction, dangling nodes, normalization, and the chosen update procedure are essential assumptions. Rank need not measure factual quality, fairness, or relevance to a particular user. Agreement between two numerical procedures can corroborate their shared mathematical target, but it does not empirically validate the assumption that incoming links indicate usefulness.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/PageRank.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/PageRank.nlogox",
+    "revision": "NetLogo 7.0.4 served 2026-11-05; SHA-256 6a4ec440d110460a3af4bbca59212bf14dc0db11378eeee1691d910a5d362703",
+    "checkedAt": "2026-11-05",
+    "evidence": "Full original served XML source, Procedures and Info retained in evidence/computing/pagerank.nlogox; extracted Info retained alongside.",
+    "notes": " This dossier describes scientific connections to the original NetLogo teaching model; it does not certify a City Library reimplementation or empirical validity.",
+    "originalCitation": "Stonedahl, F. and Wilensky, U. (2009).  NetLogo PageRank model.  http://ccl.northwestern.edu/netlogo/models/PageRank.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "sourceSnapshot": "evidence/computing/pagerank.nlogox",
+    "evidenceFile": "evidence/computing/pagerank.nlogox"
+  },
+  "publications": [
+    {
+      "id": "10.1016/s0169-7552(98)00110-x",
+      "authors": [
+        "Sergey Brin",
+        "Lawrence Page"
+      ],
+      "title": "The anatomy of a large-scale hypertextual Web search engine",
+      "year": 1998,
+      "venue": "Computer Networks and ISDN Systems",
+      "doi": "10.1016/s0169-7552(98)00110-x",
+      "url": "https://doi.org/10.1016/s0169-7552(98)00110-x",
+      "relevance": "Original scientific account of the Google prototype establishes the hyperlink-ranking context.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1016%2FS0169-7552%2898%2900110-X",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1016_s0169_7552_98_00110_x.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1016_s0169_7552_98_00110_x.json"
+      },
+      "publisher": "Elsevier BV",
+      "volume": "30",
+      "issue": "1-7",
+      "pages": "107-117",
+      "verified": true
+    },
+    {
+      "id": "10.1145/1052934.1052938",
+      "authors": [
+        "Monica Bianchini",
+        "Marco Gori",
+        "Franco Scarselli"
+      ],
+      "title": "Inside PageRank",
+      "year": 2005,
+      "venue": "ACM Transactions on Internet Technology",
+      "doi": "10.1145/1052934.1052938",
+      "url": "https://doi.org/10.1145/1052934.1052938",
+      "relevance": "Direct mathematical analysis of PageRank supports damping, convergence and structural interpretation.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1145%2F1052934.1052938",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1145_1052934_1052938.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1145_1052934_1052938.json"
+      },
+      "publisher": "Association for Computing Machinery (ACM)",
+      "volume": "5",
+      "issue": "1",
+      "pages": "92-128",
+      "verified": true
+    },
+    {
+      "id": "10.1145/324133.324140",
+      "authors": [
+        "Jon M. Kleinberg"
+      ],
+      "title": "Authoritative sources in a hyperlinked environment",
+      "year": 1999,
+      "venue": "Journal of the ACM",
+      "doi": "10.1145/324133.324140",
+      "url": "https://doi.org/10.1145/324133.324140",
+      "relevance": "HITS provides a relevant alternative notion of authority, clarifying that link-based importance is a modeling choice.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1145%2F324133.324140",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1145_324133_324140.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1145_324133_324140.json"
+      },
+      "publisher": "Association for Computing Machinery (ACM)",
+      "volume": "46",
+      "issue": "5",
+      "pages": "604-632",
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

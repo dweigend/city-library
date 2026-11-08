@@ -1,0 +1,218 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fs0092-8674%2805%2980067-4%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1016/s0092-8674(05)80067-4\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "1473152",
+          "source": "MED",
+          "pmid": "1473152",
+          "doi": "10.1016/s0092-8674(05)80067-4",
+          "title": "Molecular characterization of the mouse agouti locus.",
+          "authorString": "Bultman SJ, Michaud EJ, Woychik RP.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Bultman SJ",
+                "lastName": "Bultman",
+                "firstName": "S J",
+                "initials": "SJ",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Biology Division, Oak Ridge National Laboratory, University of Tennessee School of Biomedical Sciences."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Michaud EJ",
+                "lastName": "Michaud",
+                "firstName": "E J",
+                "initials": "EJ"
+              },
+              {
+                "fullName": "Woychik RP",
+                "lastName": "Woychik",
+                "firstName": "R P",
+                "initials": "RP",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-8196-1732"
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0001-8196-1732"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "related_data",
+              "wikipedia"
+            ]
+          },
+          "journalInfo": {
+            "issue": "7",
+            "volume": "71",
+            "journalIssueId": 650624,
+            "dateOfPublication": "1992 Dec",
+            "monthOfPublication": 12,
+            "yearOfPublication": 1992,
+            "journal": {
+              "medlineAbbreviation": "Cell",
+              "title": "Cell",
+              "essn": "1097-4172",
+              "issn": "0092-8674",
+              "nlmid": "0413066",
+              "isoabbreviation": "Cell"
+            },
+            "printPublicationDate": "1992-12-01"
+          },
+          "pubYear": "1992",
+          "pageInfo": "1195-1204",
+          "abstractText": "The agouti (a) locus acts within the microenvironment of the hair follicle to regulate coat color pigmentation in the mouse. We have characterized a gene encoding a novel 131 amino acid protein that we propose is the one gene associated with the agouti locus. This gene is normally expressed in a manner consistent with a locus function, and, more importantly, its structure and expression are affected by a number of representative alleles in the agouti dominance hierarchy. In addition, we found that the pleiotropic effects associated with the lethal yellow (Ay) mutation, which include pronounced obesity, diabetes, and the development of neoplasms, are accompanied by deregulated overexpression of the agouti gene in numerous tissues of the adult animal.",
+          "affiliation": "Biology Division, Oak Ridge National Laboratory, University of Tennessee School of Biomedical Sciences.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, U.S. Gov't, P.H.S.",
+              "Research Support, Non-U.S. Gov't",
+              "Research Support, U.S. Gov't, Non-P.H.S.",
+              "Journal Article"
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "agency": "NIEHS NIH HHS",
+                "acronym": "ES",
+                "grantId": "IAG 222Y01-ES-10067",
+                "orderIn": 0
+              }
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Animals"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Mice, Inbred Strains"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Mice"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Hair Color",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Amino Acid Sequence"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Base Sequence"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Phenotype"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Introns"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Exons"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Molecular Sequence Data"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1016/s0092-8674(05)80067-4"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "citedByCount": 554,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "Y",
+          "dbCrossReferenceList": {
+            "dbName": [
+              "EMBL",
+              "UNIPROT"
+            ]
+          },
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "Y",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "1993-02-03",
+          "dateOfCreation": "1992-12-24",
+          "dateOfRevision": "2025-10-30",
+          "firstPublicationDate": "1992-12-01",
+          "firstIndexDate": "2008-01-29",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

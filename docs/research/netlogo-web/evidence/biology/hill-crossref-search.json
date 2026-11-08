@@ -1,0 +1,2029 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=Oxygen+evolved+by+isolated+chloroplasts+Hill+1937&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 805001,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                7
+              ]
+            ],
+            "date-time": "2026-10-07T05:09:29Z",
+            "timestamp": 1791349769257,
+            "version": "4.3.1"
+          },
+          "reference-count": 2,
+          "publisher": "Springer Science and Business Media LLC",
+          "issue": "3525",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    1937,
+                    5,
+                    1
+                  ]
+                ],
+                "date-time": "1937-05-01T00:00:00Z",
+                "timestamp": -1031011200000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "http://www.springer.com/tdm"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Nature"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1937,
+                5
+              ]
+            ]
+          },
+          "DOI": "10.1038/139881a0",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2008,
+                1,
+                3
+              ]
+            ],
+            "date-time": "2008-01-03T03:58:34Z",
+            "timestamp": 1199332714000
+          },
+          "page": "881-882",
+          "source": "Crossref",
+          "is-referenced-by-count": 187,
+          "title": [
+            "Oxygen Evolved by Isolated Chloroplasts"
+          ],
+          "prefix": "10.1038",
+          "volume": "139",
+          "author": [
+            {
+              "given": "R.",
+              "family": "HILL",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "reference": [
+            {
+              "key": "BF139881a0_CR1",
+              "first-page": "472",
+              "volume": "120",
+              "author": "R Hill",
+              "year": "1936",
+              "unstructured": "Hill, R., Proc. Roy. Soc., B, 120, 472 (1936).",
+              "journal-title": "Proc. Roy. Soc."
+            },
+            {
+              "key": "BF139881a0_CR2",
+              "first-page": "1093",
+              "volume": "133",
+              "author": "E Rabinowitch",
+              "year": "1933",
+              "unstructured": "Rabinowitch, E., and Weiss, J., NATURE, 133, 1093 (1933).",
+              "journal-title": "NATURE"
+            }
+          ],
+          "container-title": [
+            "Nature"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://www.nature.com/articles/139881a0.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://www.nature.com/articles/139881a0",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://www.nature.com/articles/139881a0.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2021,
+                12,
+                2
+              ]
+            ],
+            "date-time": "2021-12-02T00:36:30Z",
+            "timestamp": 1638405390000
+          },
+          "score": 41.54004,
+          "resource": {
+            "primary": {
+              "URL": "https://www.nature.com/articles/139881a0"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1937,
+                5
+              ]
+            ]
+          },
+          "references-count": 2,
+          "journal-issue": {
+            "issue": "3525",
+            "published-print": {
+              "date-parts": [
+                [
+                  1937,
+                  5
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "BF139881a0"
+          ],
+          "URL": "https://doi.org/10.1038/139881a0",
+          "ISSN": [
+            "0028-0836",
+            "1476-4687"
+          ],
+          "issn-type": [
+            {
+              "value": "0028-0836",
+              "type": "print"
+            },
+            {
+              "value": "1476-4687",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1937,
+                5
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2022,
+                4,
+                3
+              ]
+            ],
+            "date-time": "2022-04-03T15:41:19Z",
+            "timestamp": 1649000479777
+          },
+          "reference-count": 0,
+          "publisher": "Oxford University Press (OUP)",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "DOI": "10.1093/oxfordjournals.pcp.a074652",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2017,
+                2,
+                1
+              ]
+            ],
+            "date-time": "2017-02-01T20:15:18Z",
+            "timestamp": 1485980118000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "The Hill reaction and oxygen uptake in isolated pine chloroplasts"
+          ],
+          "prefix": "10.1093",
+          "member": "286",
+          "published-online": {
+            "date-parts": [
+              [
+                1971,
+                8
+              ]
+            ]
+          },
+          "container-title": [
+            "Plant and Cell Physiology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://academic.oup.com/pcp/article-pdf/12/4/559/5330205/12-4-559.pdf",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2017,
+                8,
+                24
+              ]
+            ],
+            "date-time": "2017-08-24T07:26:36Z",
+            "timestamp": 1503559596000
+          },
+          "score": 32.27122,
+          "resource": {
+            "primary": {
+              "URL": "https://academic.oup.com/pcp/article/12/4/559/1886263/The-Hill-reaction-and-oxygen-uptake-in-isolated"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1971,
+                8
+              ]
+            ]
+          },
+          "references-count": 0,
+          "URL": "https://doi.org/10.1093/oxfordjournals.pcp.a074652",
+          "ISSN": [
+            "1471-9053"
+          ],
+          "issn-type": [
+            {
+              "value": "1471-9053",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1971,
+                8
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2024,
+                9,
+                7
+              ]
+            ],
+            "date-time": "2024-09-07T20:42:14Z",
+            "timestamp": 1725741734784
+          },
+          "publisher-location": "Berlin, Heidelberg",
+          "reference-count": 173,
+          "publisher": "Springer Berlin Heidelberg",
+          "isbn-type": [
+            {
+              "type": "print",
+              "value": "9783642947995"
+            },
+            {
+              "type": "electronic",
+              "value": "9783642947988"
+            }
+          ],
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    1960,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "1960-01-01T00:00:00Z",
+                "timestamp": -315619200000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "http://www.springer.com/tdm"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                1960
+              ]
+            ]
+          },
+          "DOI": "10.1007/978-3-642-94798-8_27",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2013,
+                7,
+                18
+              ]
+            ],
+            "date-time": "2013-07-18T18:55:20Z",
+            "timestamp": 1374173720000
+          },
+          "page": "736-772",
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Photochemical activity of isolated chloroplasts (Hill reactions)"
+          ],
+          "prefix": "10.1007",
+          "author": [
+            {
+              "given": "K. A.",
+              "family": "Clendenning",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "reference": [
+            {
+              "key": "27_CR1",
+              "doi-asserted-by": "publisher",
+              "first-page": "833",
+              "DOI": "10.1104/pp.12.3.833",
+              "volume": "12",
+              "author": "VM Albers",
+              "year": "1937",
+              "unstructured": "Albers, V. M. and H. V. Knorr: The absorption spectra of single chloroplasts in living cells in the region from 664 m\u03bc to 704 m\u03bc. Plant Physiol. 12, 833\u2013843 (1937).",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "27_CR2",
+              "doi-asserted-by": "publisher",
+              "first-page": "124",
+              "DOI": "10.1016/0003-9861(55)90100-4",
+              "volume": "58",
+              "author": "FL Allen",
+              "year": "1955",
+              "unstructured": "Allen, F. L., and J. Franck: Photosynthetic evolution of oxygen by flashes of light. Arch. Biochem. 58, 124\u2013143 (1955).",
+              "journal-title": "Arch. Biochem."
+            },
+            {
+              "key": "27_CR3",
+              "doi-asserted-by": "publisher",
+              "first-page": "135",
+              "DOI": "10.1085/jgp.17.2.135",
+              "volume": "17",
+              "author": "WA Arnold",
+              "year": "1933",
+              "unstructured": "Arnold, W. A.: The effect of ultraviolet light on photosynthesis. J. gen. Physiol. 17, 135\u2013143 (1933).",
+              "journal-title": "J. gen. Physiol."
+            },
+            {
+              "key": "27_CR4",
+              "unstructured": "Arnon, D. I.: Some recent advances in the study of essential micronutrients for green plants. Proc. 8th Internat. Congr. of Botany, Sect. 11, pp. 73\u201380. Paris 1954."
+            },
+            {
+              "key": "27_CR5",
+              "doi-asserted-by": "crossref",
+              "unstructured": "The chloroplast as a complete photosynthetic unit. Science 122, 9\u201316 (1955).",
+              "DOI": "10.1126/science.122.3157.9"
+            },
+            {
+              "key": "27_CR6",
+              "first-page": "141",
+              "volume": "23",
+              "author": "DI Arnon",
+              "year": "1949",
+              "unstructured": "Arnon, D. I., and F. R. Whatley: [1] Factors influencing oxygen production by illuminated chloroplast fragments. Arch. Biochem. 23, 141\u2013156 (1949).",
+              "journal-title": "Arch. Biochem."
+            },
+            {
+              "key": "27_CR7",
+              "doi-asserted-by": "crossref",
+              "unstructured": "[2] Is chloride a coenzyme of photosynthesis? Science 110, 554\u2013556 (1949).",
+              "DOI": "10.1126/science.110.2865.554"
+            },
+            {
+              "key": "27_CR8",
+              "doi-asserted-by": "publisher",
+              "first-page": "393",
+              "DOI": "10.1104/pp.21.4.393",
+              "volume": "21",
+              "author": "S Aronoff",
+              "year": "1946",
+              "unstructured": "Aronoff, S.: [1] Photochemical reduction of chloroplast grana. Plant Physiol. 21, 393\u2013409 (1946).",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "27_CR9",
+              "doi-asserted-by": "crossref",
+              "unstructured": "[2] Redox potentials and photoreduction by chloroplast granules. Science 104, 503\u2013505 (1946).",
+              "DOI": "10.1126/science.104.2709.503"
+            },
+            {
+              "key": "27_CR10",
+              "first-page": "45",
+              "volume": "4",
+              "author": "MW Beijerinck",
+              "year": "1901",
+              "unstructured": "Beijerinck, M. W.: Photobacteria as a reactive in the investigation of the chlorophyll function. Amsterdam. Proc. kon. ned. Akad. Wet. Sect. Sci. 4, 45\u201349 (1901).",
+              "journal-title": "Amsterdam. Proc. kon. ned. Akad. Wet. Sect. Sci."
+            },
+            {
+              "key": "27_CR11",
+              "first-page": "493",
+              "volume": "142",
+              "author": "L Bergmann",
+              "year": "1955",
+              "unstructured": "Bergmann, L.: Stoffwechsel und Mineralsalzern\u00e4hrung einzelliger Gr\u00fcnalgen. II. Vergleichende Untersuchungen \u00fcber den Einflu\u00df mineralischer Faktoren bei heterotropher und mixotropher Ern\u00e4hrung. Flora (Jena) 142, 493\u2013539 (1955).",
+              "journal-title": "Flora (Jena)"
+            },
+            {
+              "key": "27_CR12",
+              "doi-asserted-by": "publisher",
+              "first-page": "205",
+              "DOI": "10.1016/0006-3002(58)90313-5",
+              "volume": "27",
+              "author": "NI Bishop",
+              "year": "1958",
+              "unstructured": "Bishop, N. I.: The influence of the herbicide, DCMU, on the oxygen-evolving system of photosynthesis. Biochim. biophys. Acta 27, 205\u2013206 (1958).",
+              "journal-title": "Biochim. biophys. Acta"
+            },
+            {
+              "key": "27_CR13",
+              "unstructured": "The role of certain petroleum ether-soluble compounds in the Hill reaction. Plant Physiol. 33, Suppl. XXVII (1958)."
+            },
+            {
+              "key": "27_CR14",
+              "first-page": "332",
+              "volume": "11",
+              "author": "Role of Vitamin K in the Hill reaction",
+              "year": "1959",
+              "unstructured": "Role of Vitamin K in the Hill reaction. Brook-haven Symp. Biol. 11, 332\u2013338 (1959).",
+              "journal-title": "Brook-haven Symp. Biol."
+            },
+            {
+              "key": "27_CR15",
+              "doi-asserted-by": "publisher",
+              "first-page": "1",
+              "DOI": "10.1016/0003-9861(55)90087-4",
+              "volume": "58",
+              "author": "NL Bishop",
+              "year": "1955",
+              "unstructured": "Bishop, N. L, R. Lumry and J. D. Spikes: The mechanism of the photochemical activity of isolated chloroplasts. I. Effect of temperature. Arch. Biochem. 58, 1\u201318 (1955).",
+              "journal-title": "Arch. Biochem."
+            },
+            {
+              "key": "27_CR16",
+              "doi-asserted-by": "publisher",
+              "first-page": "307",
+              "DOI": "10.1038/176307a0",
+              "volume": "176",
+              "author": "NL Bishop",
+              "year": "1955",
+              "unstructured": "Bishop, N. L, and J. D. Spikes: Inhibition by cyanide of the photochemical activity of isolated chloroplasts. Nature (Lond.) 176, 307\u2013310 (1955).",
+              "journal-title": "Nature (Lond.)"
+            },
+            {
+              "key": "27_CR17",
+              "doi-asserted-by": "publisher",
+              "first-page": "99",
+              "DOI": "10.1016/0003-9861(54)90238-6",
+              "volume": "53",
+              "author": "DF Bradley",
+              "year": "1954",
+              "unstructured": "Bradley, D. F., and M. Calvin: The effect of thioctic acid on the quantum efficiency of the Hill reaction. Arch. Biochem. 53, 99\u2013118 (1954).",
+              "journal-title": "Arch. Biochem."
+            },
+            {
+              "key": "27_CR18",
+              "doi-asserted-by": "crossref",
+              "unstructured": "The effect of thioctic acid on the quantum efficiency of the Hill reaction in intermittent light. Proc. nat. Acad. Sci. (Wash.) 41, 563\u2013571 (1955).",
+              "DOI": "10.1073/pnas.41.8.563"
+            },
+            {
+              "key": "27_CR19",
+              "doi-asserted-by": "publisher",
+              "first-page": "249",
+              "DOI": "10.1098/rspb.1920.0015",
+              "volume": "91",
+              "author": "GE Briggs",
+              "year": "1920",
+              "unstructured": "Briggs, G. E.: Experimental researches on vegetable assimilation and respiration. XIII. The development of photosynthetic activity during germination. Proc. roy. Soc. B 91, 249\u2013268 (1920).",
+              "journal-title": "Proc. roy. Soc. B"
+            },
+            {
+              "key": "27_CR20",
+              "doi-asserted-by": "publisher",
+              "first-page": "340",
+              "DOI": "10.1016/0003-9861(55)90297-6",
+              "volume": "57",
+              "author": "AH Brown",
+              "year": "1955",
+              "unstructured": "Brown, A. H., and N. Good: Photochemical reduction of oxygen in chloroplast preparations and in green plant cells. Arch. Biochem. 57, 340 to 354 (1955).",
+              "journal-title": "Arch. Biochem."
+            },
+            {
+              "key": "27_CR21",
+              "series-title": "Ph. D. thesis",
+              "volume-title": "Comparative studies of photosynthesis and the Hill reaction in Nostoc muscorum and Chlorella pyrenoidosa",
+              "author": "TE Brown",
+              "year": "1954",
+              "unstructured": "Brown, T. E.: Comparative studies of photosynthesis and the Hill reaction in Nostoc muscorum and Chlorella pyrenoidosa. Ph. D. thesis, Ohio State University, Columbus, Ohio 1954."
+            },
+            {
+              "key": "27_CR22",
+              "doi-asserted-by": "publisher",
+              "first-page": "526",
+              "DOI": "10.1104/pp.29.6.526",
+              "volume": "29",
+              "author": "TC Broyer",
+              "year": "1954",
+              "unstructured": "Broyer, T. C., A. B. Charlton, C. M. Johnson and P. R. Stout: Chlorine \u2014 a micronutrient element for higher plants. Plant Physiol. 29, 526\u2013532 (1954).",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "27_CR23",
+              "first-page": "109",
+              "volume": "31",
+              "author": "BF Burnham",
+              "year": "1954",
+              "unstructured": "Burnham, B. F., and J. D. Spikes: Plant environment conditions and the properties of isolated chloroplasts. Utah Acad. Sci., Arts and Letters, Proc. 31, 109\u2013111 (1954).",
+              "journal-title": "Utah Acad. Sci., Arts and Letters, Proc."
+            },
+            {
+              "key": "27_CR24",
+              "doi-asserted-by": "publisher",
+              "first-page": "35",
+              "DOI": "10.1104/pp.27.1.35",
+              "volume": "27",
+              "author": "SL Chen",
+              "year": "1952",
+              "unstructured": "Chen, S. L.: The action spectrum for the photochemical evolution of oxygen by isolated chloroplasts. Plant Physiol. 27, 35\u201348 (1952).",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "27_CR25",
+              "first-page": "21",
+              "volume": "11",
+              "author": "KA Clendenning",
+              "year": "1954",
+              "unstructured": "Clendenning, K. A.: Recent investigations of photosynthesis and the Hill reaction. Proc. 8th Internat. Congr. Bot. Paris, Sect. 11, 21\u201335 (1954).",
+              "journal-title": "Bot. Paris, Sect."
+            },
+            {
+              "key": "27_CR26",
+              "doi-asserted-by": "crossref",
+              "first-page": "137",
+              "DOI": "10.1146/annurev.pp.08.060157.001033",
+              "volume": "8",
+              "author": "Biochemistry of chloroplasts in relation to the Hill reaction",
+              "year": "1957",
+              "unstructured": "Biochemistry of chloroplasts in relation to the Hill reaction. Ann. Rev. Plant Physiol. 8, 137\u2013152 (1957).",
+              "journal-title": "Ann. Rev. Plant Physiol."
+            },
+            {
+              "key": "27_CR27",
+              "doi-asserted-by": "publisher",
+              "first-page": "943",
+              "DOI": "10.1139/b56-074",
+              "volume": "34",
+              "author": "KA Clendenning",
+              "year": "1956",
+              "unstructured": "Clendenning, K. A., T.E. Brown and H. C. Eyster: Comparative studies of photosynthesis in Nostoc muscorum and Chlorella pyrenoidosa. Canad. J. Bot. 34, 943\u2013966 (1956).",
+              "journal-title": "Canad. J. Bot."
+            },
+            {
+              "key": "27_CR28",
+              "first-page": "274",
+              "volume-title": "Research in Photosynthesis",
+              "author": "KA Clendenning",
+              "year": "1957",
+              "unstructured": "Clendenning, K. A., T. E. Brown and E. E. Walldov: Natural inhibitors of the Hill reaction. Research in Photosynthesis, edit, by H. Gaffron, pp. 274\u2013284. New York: Interscience Press 1957."
+            },
+            {
+              "key": "27_CR29",
+              "doi-asserted-by": "crossref",
+              "first-page": "519",
+              "DOI": "10.1111/j.1399-3054.1956.tb07816.x",
+              "volume": "9",
+              "author": "Causes of increased and stabilized Hill reaction rates in polyethylene glycol solutions",
+              "year": "1956",
+              "unstructured": "Causes of increased and stabilized Hill reaction rates in polyethylene glycol solutions. Physiol. Plantarum (Copenh.) 9, 519\u2013532 (1956).",
+              "journal-title": "Physiol. Plantarum (Copenh.)"
+            },
+            {
+              "key": "27_CR30",
+              "first-page": "387",
+              "volume": "29",
+              "author": "KA Clendenning",
+              "year": "1950",
+              "unstructured": "Clendenning, K. A., and H. C. Ehrmantraut: Photosynthesis and Hill reactions by whole Chlorella cells in continuous and flashing light. Arch. Biochem. 29, 387\u2013403 (1950).",
+              "journal-title": "Arch. Biochem."
+            },
+            {
+              "key": "27_CR31",
+              "doi-asserted-by": "publisher",
+              "first-page": "78",
+              "DOI": "10.1139/cjr50c-004",
+              "volume": "28",
+              "author": "KA Clendenning",
+              "year": "1950",
+              "unstructured": "Clendenning, K. A., and P. R. Gobham: [1] Photochemical activity of isolated chloroplasts in relation to reaction conditions. Canad. J. Res., C 28, 78\u2013101 (1950).",
+              "journal-title": "Canad. J. Res., C"
+            },
+            {
+              "key": "27_CR32",
+              "doi-asserted-by": "crossref",
+              "unstructured": "[2] Photochemical activity of isolated chloroplasts in relation to their source and previous history. Canad. J. Res., C 28, 114\u2013139 (1950).",
+              "DOI": "10.1139/cjr50c-006"
+            },
+            {
+              "key": "27_CR33",
+              "first-page": "285",
+              "volume": "2",
+              "author": "H Dam",
+              "year": "1942",
+              "unstructured": "Dam, H.: Vitamin K, its chemistry and physiology. Advanc. Enzymol. 2, 285\u2013324 (1942).",
+              "journal-title": "Advanc. Enzymol."
+            },
+            {
+              "key": "27_CR34",
+              "doi-asserted-by": "publisher",
+              "first-page": "1112",
+              "DOI": "10.1038/1701112b0",
+              "volume": "170",
+              "author": "HE Davenport",
+              "year": "1952",
+              "unstructured": "Davenport, H. E.: Cytochrome components in chloroplasts. Nature (Lond.) 170, 1112 (1952).",
+              "journal-title": "Nature (Lond.)"
+            },
+            {
+              "key": "27_CR35",
+              "doi-asserted-by": "publisher",
+              "first-page": "327",
+              "DOI": "10.1098/rspb.1952.0016",
+              "volume": "139",
+              "author": "HE Davenport",
+              "year": "1952",
+              "unstructured": "Davenport, H. E., and R. Hill: The preparation and properties of cytochrome f. Proc. roy. Soc. B 139, 327\u2013345 (1952).",
+              "journal-title": "Proc. roy. Soc. B"
+            },
+            {
+              "key": "27_CR36",
+              "first-page": "627",
+              "volume-title": "Encyclopedia of Plant Physioldgy",
+              "author": "H Drawert",
+              "year": "1955",
+              "unstructured": "Drawert, H.: Der pH-Wert des Zellsaftes. In Encyclopedia of Plant Physioldgy, edit. by W. Ruhland, Vol. I, pp. 627\u2013648. Berlin-G\u00f6ttingen-Heidelberg: Springer 1955."
+            },
+            {
+              "key": "27_CR37",
+              "doi-asserted-by": "publisher",
+              "first-page": "548",
+              "DOI": "10.1038/168548a0",
+              "volume": "168",
+              "author": "LNM Duysens",
+              "year": "1951",
+              "unstructured": "Duysens, L. N. M.: Transfer of light energy within the pigment systems present in photosynthesizing cells. Nature (Lond.) 168, 548\u2013550 (1951).",
+              "journal-title": "Nature (Lond.)"
+            },
+            {
+              "key": "27_CR38",
+              "unstructured": "Transfer of excitation energy in photosynthesis. Ph. D. thesis, Utrecht 1951."
+            },
+            {
+              "key": "27_CR39",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Role of cytochrome and pyridine nucleotide in algal photosynthesis. Science 121, 210\u2013211 (1955).",
+              "DOI": "10.1126/science.121.3137.210"
+            },
+            {
+              "key": "27_CR40",
+              "doi-asserted-by": "publisher",
+              "first-page": "19",
+              "DOI": "10.1016/0006-3002(57)90141-5",
+              "volume": "24",
+              "author": "LNM Duysens",
+              "year": "1957",
+              "unstructured": "Duysens, L. N. M., and J. Amesz: Fluorescence spectrophotometry of reduced pyridine nucleotide in intact cells in the near ultraviolet and visible region. Biochim. bio-phys. Acta 24, 19\u201326 (1957).",
+              "journal-title": "Biochim. bio-phys. Acta"
+            },
+            {
+              "key": "27_CR41",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Quantum requirement for phosphopyridine nucleotid reaction in photosynthesis. Plant Physiol. 34, 210\u2013213 (1959).",
+              "DOI": "10.1104/pp.34.3.210"
+            },
+            {
+              "key": "27_CR42",
+              "doi-asserted-by": "publisher",
+              "first-page": "13",
+              "DOI": "10.1016/0006-3002(57)90409-2",
+              "volume": "25",
+              "author": "LNM Duysens",
+              "year": "1957",
+              "unstructured": "Duysens, L. N. M., and G. Sweep: Fluorescence spectrophotometry of pyridine nucleotide in photosynthesizing cells. Biochim. biophys. Acta 25, 13\u201316 (1957).",
+              "journal-title": "Biochim. biophys. Acta"
+            },
+            {
+              "key": "27_CR43",
+              "doi-asserted-by": "publisher",
+              "first-page": "67",
+              "DOI": "10.1016/0003-9861(52)90010-6",
+              "volume": "38",
+              "author": "HC Ehrmantraut",
+              "year": "1952",
+              "unstructured": "Ehrmantraut, H. C., and E. I. Rabinowitch: Kinetics of the Hill reaction. Arch. Biochem. 38, 67\u201384 (1952).",
+              "journal-title": "Arch. Biochem."
+            },
+            {
+              "key": "27_CR44",
+              "doi-asserted-by": "publisher",
+              "first-page": "391",
+              "DOI": "10.1085/jgp.15.4.391",
+              "volume": "15",
+              "author": "R Emerson",
+              "year": "1932",
+              "unstructured": "Emerson, R., and W. A. Arnold: [1] A separation of the reactions in photosynthesis by means of intermittent light. J. gen. Physiol. 15, 391\u2013420 (1932).",
+              "journal-title": "J. gen. Physiol."
+            },
+            {
+              "key": "27_CR45",
+              "doi-asserted-by": "crossref",
+              "unstructured": "[2] The photochemical reaction in photosynthesis. J. gen. Physiol. 16, 191\u2013205 (1932).",
+              "DOI": "10.1085/jgp.16.2.191"
+            },
+            {
+              "key": "27_CR46",
+              "doi-asserted-by": "publisher",
+              "first-page": "808",
+              "DOI": "10.2307/2436774",
+              "volume": "26",
+              "author": "R Emerson",
+              "year": "1939",
+              "unstructured": "Emerson, R., and C. M. Lewis: Factors influencing the efficiency of photosynthesis. Amer. J. Bot. 26, 808\u2013822 (1939).",
+              "journal-title": "Amer. J. Bot."
+            },
+            {
+              "key": "27_CR47",
+              "doi-asserted-by": "crossref",
+              "first-page": "165",
+              "DOI": "10.1002/j.1537-2197.1943.tb14744.x",
+              "volume": "30",
+              "author": "The dependence of the quantum yield of Chlorella photosynthesis on wavelenght of light",
+              "year": "1943",
+              "unstructured": "The dependence of the quantum yield of Chlorella photosynthesis on wavelenght of light. Amer. J. Bot. 30, 165\u2013178 (1943).",
+              "journal-title": "Amer. J. Bot."
+            },
+            {
+              "key": "27_CR48",
+              "first-page": "441",
+              "volume": "39",
+              "author": "TW Engelmann",
+              "year": "1881",
+              "unstructured": "Engelmann, T. W.: Neue Methode zur Untersuchung der Sauerstoffausscheidung pflanzlicher und thierischer Organismen. Bot. Ztg 39, 441\u2013447 (1881).",
+              "journal-title": "Bot. Ztg"
+            },
+            {
+              "key": "27_CR49",
+              "first-page": "364",
+              "volume": "31",
+              "author": "AJ Ewart",
+              "year": "1896",
+              "unstructured": "Ewart, A. J.: On assimilatory inhibition in plants. J. Linnean Soc. London 31, 364\u2013443 (1896).",
+              "journal-title": "J. Linnean Soc. London"
+            },
+            {
+              "issue": "Suppl.",
+              "key": "27_CR50",
+              "first-page": "XVII",
+              "volume": "31",
+              "author": "HC Eyster",
+              "year": "1956",
+              "unstructured": "Eyster, H. C., T. E. Brown, S. L. Hood and H. A. Tanner: The role of manganese in growth, photosynthesis, respiration and the Hill reaction, using Chlorella pyrenoidosa and spinach chloroplasts. Plant Physiol. 31 (Suppl.) XVII (1956).",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "27_CR51",
+              "doi-asserted-by": "publisher",
+              "first-page": "240",
+              "DOI": "10.1016/0003-9861(56)90256-9",
+              "volume": "64",
+              "author": "HC Eyster",
+              "year": "1956",
+              "unstructured": "Eyster, H. C., T. E. Brown and H. A. Tanner: Manganese requirement with respect to respiration and the Hill reaction in Chlorella pyrenoidosa. Arch. Biochem. 64, 240\u2013241 (1956).",
+              "journal-title": "Arch. Biochem."
+            },
+            {
+              "key": "27_CR52",
+              "doi-asserted-by": "publisher",
+              "first-page": "15",
+              "DOI": "10.1085/jgp.27.1.15",
+              "volume": "27",
+              "author": "CS Fan",
+              "year": "1943",
+              "unstructured": "Fan, C. S., J. F. Stauffer and W. W. Umbreit: An experimental separation of oxygen liberation from carbon dioxide fixation in photosynthesis by Chlorella. J. gen. Physiol. 27, 15\u201328 (1943).",
+              "journal-title": "J. gen. Physiol."
+            },
+            {
+              "key": "27_CR53",
+              "doi-asserted-by": "publisher",
+              "first-page": "309",
+              "DOI": "10.1085/jgp.25.2.309",
+              "volume": "25",
+              "author": "J Franck",
+              "year": "1941",
+              "unstructured": "Franck, J., and C. S. French: Photoxidation processes in plants. J. gen. Physiol. 25, 309\u2013324 (1941).",
+              "journal-title": "J. gen. Physiol."
+            },
+            {
+              "key": "27_CR54",
+              "unstructured": "French, C. S., and M. L. Anson: Paper read at the A.A.A.S. meetings, Dallas, Texas, December, 1941."
+            },
+            {
+              "key": "27_CR55",
+              "first-page": "9s",
+              "volume": "31",
+              "author": "The oxygen evolution activity of chloroplast suspensions after being frozen, dried or disintegrated",
+              "year": "1944",
+              "unstructured": "The oxygen evolution activity of chloroplast suspensions after being frozen, dried or disintegrated. (Abstract.) Amer. J. Bot. 31, 9s (1944).",
+              "journal-title": "(Abstract.) Amer. J. Bot."
+            },
+            {
+              "key": "27_CR56",
+              "doi-asserted-by": "publisher",
+              "first-page": "505",
+              "DOI": "10.1126/science.103.2678.505",
+              "volume": "103",
+              "author": "CS French",
+              "year": "1946",
+              "unstructured": "French, C. S., A. S. Holt, R. D. Powell and M. L. Anson: The evolution of oxygen from illuminated suspensions of frozen, dried and homogenized chloroplasts. Science 103, 505\u2013506 (1946).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "27_CR57",
+              "first-page": "8s",
+              "volume": "29",
+              "author": "CS French",
+              "year": "1942",
+              "unstructured": "French, C. S., E. Newcomb and M. L. Anson: The evolution of oxygen from illuminated suspensions of chloroplasts (abstract). Amer. J. Bot. 29, 8s (1942).",
+              "journal-title": "Amer. J. Bot."
+            },
+            {
+              "key": "27_CR58",
+              "doi-asserted-by": "publisher",
+              "first-page": "329",
+              "DOI": "10.1085/jgp.28.4.329",
+              "volume": "28",
+              "author": "CS French",
+              "year": "1945",
+              "unstructured": "French, C. S., and G. S. Rabideau: The quantum yield of oxygen production by chloroplasts suspended in solutions containing ferric oxalate. J. gen. Physiol. 28, 329\u2013342 (1945).",
+              "journal-title": "J. gen. Physiol."
+            },
+            {
+              "key": "27_CR59",
+              "unstructured": "French, C. S., R. W. Smith and F. D. H. Mac Dowall: Dye reduction by chloroplast suspensions as a means of measuring their activity for photosynthetic oxygen evolution. (Abstract.) Fed. Proc. 6, No. 1 (1947)."
+            },
+            {
+              "key": "27_CR60",
+              "first-page": "18",
+              "volume": "7",
+              "author": "K Fujimura",
+              "year": "1954",
+              "unstructured": "Fujimura, K., I. Aikawa and Y. Inada: The activities of isolated chloroplasts of the leaves of sweet potato on the Hill reaction. Mem. Res. Inst. Food. Sci., Kyoto Univ. 7, 18\u201333 (1954).",
+              "journal-title": "Mem. Res. Inst. Food. Sci., Kyoto Univ."
+            },
+            {
+              "key": "27_CR61",
+              "first-page": "77",
+              "volume": "5",
+              "author": "K Fujimura",
+              "year": "1953",
+              "unstructured": "Fujimura, K., I. Aikawa, Y. Inada and H. Hiras: The activities of isolated chloroplasts of the leaves of several crops for the photolysis of water. Mem. Res. Inst. Food Sci., Kyoto Univ. 5, 77\u2013106 (1953).",
+              "journal-title": "Mem. Res. Inst. Food Sci., Kyoto Univ."
+            },
+            {
+              "key": "27_CR62",
+              "doi-asserted-by": "publisher",
+              "first-page": "2659",
+              "DOI": "10.1021/ja01614a104",
+              "volume": "77",
+              "author": "RC Fuller",
+              "year": "1955",
+              "unstructured": "Fuller, R. C., H. Grisebach and M. Calvin: The metabolism of thioctic acid in algae. J. Amer. chem. Soc. 77, 2659 (1955).",
+              "journal-title": "J. Amer. chem. Soc."
+            },
+            {
+              "key": "27_CR63",
+              "doi-asserted-by": "publisher",
+              "first-page": "195",
+              "DOI": "10.1085/jgp.26.2.195",
+              "volume": "26",
+              "author": "H Gaffron",
+              "year": "1942",
+              "unstructured": "Gaffron, H.: The effect of specific poisons upon the photoreduction with hydrogen in green algae. J. gen. Physiol. 26, 195\u2013217 (1942).",
+              "journal-title": "J. gen. Physiol."
+            },
+            {
+              "key": "27_CR64",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Photosynthesis, Photoreduction and dark reduction of carbon dioxide in certain algae. Biol Rev. 19, 1\u201320 (1944).",
+              "DOI": "10.1111/j.1469-185X.1944.tb00298.x"
+            },
+            {
+              "key": "27_CR65",
+              "doi-asserted-by": "publisher",
+              "first-page": "159",
+              "DOI": "10.1007/BF01852348",
+              "volume": "2",
+              "author": "FC Gerretsen",
+              "year": "1950",
+              "unstructured": "Gerretsen, F. C: Manganese in relation to photosynthesis. II. Redox potentials of illuminated crude chloroplast suspensions. Plant and Soil 2, 159\u2013193 (1950).",
+              "journal-title": "Plant and Soil"
+            },
+            {
+              "key": "27_CR66",
+              "series-title": "Ph. D. thesis",
+              "volume-title": "Studies on the Hill reaction",
+              "author": "HSA Gilmour",
+              "year": "1953",
+              "unstructured": "Gilmour, H. S. A.: Studies on the Hill reaction. Ph. D. thesis, University of Utah, Salt Lake City, Utah 1953."
+            },
+            {
+              "key": "27_CR67",
+              "doi-asserted-by": "publisher",
+              "first-page": "89",
+              "DOI": "10.1104/pp.28.1.89",
+              "volume": "28",
+              "author": "HSA Gilmour",
+              "year": "1953",
+              "unstructured": "Gilmour, H. S. A., R. Lumby and J. D. Spikes: Electrode reactions of isolated chloroplast fragments. Plant Physiol. 28, 89\u201398 (1953).",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "27_CR68",
+              "first-page": "31",
+              "volume": "173",
+              "author": "Kinetic evidence for new participants in the Hill reaction",
+              "year": "1954",
+              "unstructured": "Kinetic evidence for new participants in the Hill reaction. Nature (Lond.) 173, 31\u201332 (1954).",
+              "journal-title": "Nature (Lond.)"
+            },
+            {
+              "key": "27_CR69",
+              "series-title": "A. E. C. Technical Rep.",
+              "volume-title": "Kinetics of the Hill reaction of isolated chloroplasts in flashing light",
+              "author": "HSA Gilmour",
+              "year": "1953",
+              "unstructured": "Gilmour, H. S. A., R. Lumry, J. D. Spikes and H. Eyring: Kinetics of the Hill reaction of isolated chloroplasts in flashing light. A. E. C. Technical Rep. No. XI, July 1, 1953, Institute for the study of rate processes, University of Utah, Salt Lake City, Utah."
+            },
+            {
+              "key": "27_CR70",
+              "doi-asserted-by": "publisher",
+              "first-page": "513",
+              "DOI": "10.1139/cjr50c-030",
+              "volume": "28",
+              "author": "PR Gorham",
+              "year": "1950",
+              "unstructured": "Gorham, P. R., and K. A. Clendenning: Storage of isolated chloroplasts without loss of photochemical activity. Canad. J. Res., C 28, 513\u2013524 (1950).",
+              "journal-title": "Canad. J. Res., C"
+            },
+            {
+              "key": "27_CR71",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Anionic stimulation of the Hill reaction in isolated chloroplasts. Arch. Biochem. 37, 199\u2013223 (1952).",
+              "DOI": "10.1016/0003-9861(52)90179-3"
+            },
+            {
+              "key": "27_CR72",
+              "doi-asserted-by": "publisher",
+              "first-page": "558",
+              "DOI": "10.2307/2436513",
+              "volume": "25",
+              "author": "S Granick",
+              "year": "1938",
+              "unstructured": "Granick, S.: Quantitative isolation of chloroplasts from higher plants. Amer. J. Bot. 25, 558\u2013561 (1938).",
+              "journal-title": "Amer. J. Bot."
+            },
+            {
+              "key": "27_CR73",
+              "unstructured": "Plastid structure, development and inheritance. In Encyclopedia of Plant Physiology, edit. by W. Ruhland, Vol. 1, pp. 507\u2013564. Berlin-G\u00f6ttingen-Heidelberg: Springer 1955."
+            },
+            {
+              "key": "27_CR74",
+              "doi-asserted-by": "publisher",
+              "first-page": "1211",
+              "DOI": "10.1038/1761211a0",
+              "volume": "176",
+              "author": "M Griffiths",
+              "year": "1955",
+              "unstructured": "Griffiths, M., W. R. Sistrom, G. Cohen-Bazire and R. Y. Stanier: Function of carotenoids in photosynthesis. Nature (Lond.) 176, 1211\u20131214 (1955).",
+              "journal-title": "Nature (Lond.)"
+            },
+            {
+              "key": "27_CR75",
+              "volume-title": "Funktion und Lage des Zellkerns",
+              "author": "GFG Haberlandt",
+              "year": "1887",
+              "unstructured": "Haberlandt, G. F. G.: Funktion und Lage des Zellkerns. Jena: Gustav Fischer 1887."
+            },
+            {
+              "key": "27_CR76",
+              "doi-asserted-by": "publisher",
+              "first-page": "242",
+              "DOI": "10.1104/pp.33.4.242",
+              "volume": "33",
+              "author": "HM Habermann",
+              "year": "1958",
+              "unstructured": "Habermann, H. M.: Light-dependent oxygen metabolism of chloroplast preparations. I. Stimulation following quinone reduction. Plant Physiol. 33, 242\u2013245 (1958).",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "27_CR77",
+              "doi-asserted-by": "crossref",
+              "first-page": "307",
+              "DOI": "10.1104/pp.35.3.307",
+              "volume": "35",
+              "author": "Light dependent oxygen metabolism of chloroplast preparations. II",
+              "year": "1960",
+              "unstructured": "Light dependent oxygen metabolism of chloroplast preparations. II. Stimulation by manganous ions. Plant Physiol. 35, 307\u2013312 (1960).",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "27_CR78",
+              "doi-asserted-by": "publisher",
+              "first-page": "389",
+              "DOI": "10.1085/jgp.33.4.389",
+              "volume": "33",
+              "author": "FT Haxo",
+              "year": "1950",
+              "unstructured": "Haxo, F. T., and L. R. Blinks: Photosynthetic action spectra of marine algae. J. gen. Physiol. 33, 389\u2013422 (1950).",
+              "journal-title": "J. gen. Physiol."
+            },
+            {
+              "key": "27_CR79",
+              "doi-asserted-by": "publisher",
+              "first-page": "472",
+              "DOI": "10.1098/rspb.1936.0046",
+              "volume": "120",
+              "author": "R Hill",
+              "year": "1936",
+              "unstructured": "Hill, R.: Oxygen dissociation curves of muscle hemoglobin. Proc. roy. Soc. B 120, 472\u2013483 (1936).",
+              "journal-title": "Proc. roy. Soc. B"
+            },
+            {
+              "key": "27_CR80",
+              "doi-asserted-by": "crossref",
+              "first-page": "881",
+              "DOI": "10.1038/139881a0",
+              "volume": "139",
+              "author": "Oxygen production by isolated chloroplasts",
+              "year": "1937",
+              "unstructured": "Oxygen production by isolated chloroplasts. Nature (Lond.) 139, 881\u2013882 (1937).",
+              "journal-title": "Nature (Lond.)"
+            },
+            {
+              "key": "27_CR81",
+              "doi-asserted-by": "crossref",
+              "first-page": "192",
+              "DOI": "10.1098/rspb.1939.0017",
+              "volume": "127",
+              "author": "Oxygen production by isolated chloroplasts",
+              "year": "1939",
+              "unstructured": "Oxygen production by isolated chloroplasts. Proc. roy. Soc. B 127, 192\u2013210 (1939).",
+              "journal-title": "Proc. roy. Soc. B"
+            },
+            {
+              "key": "27_CR82",
+              "first-page": "1",
+              "volume": "12",
+              "author": "Oxido-reduction in chloroplasts",
+              "year": "1951",
+              "unstructured": "Oxido-reduction in chloroplasts. Advanc. Enzymol. 12, 1\u201339 (1951).",
+              "journal-title": "Advanc. Enzymol."
+            },
+            {
+              "key": "27_CR83",
+              "unstructured": "Reduction by chloroplasts. Symposia of the Soc. for Experimental Biology, No V, Carbon dioxide fixation and photosynthesis, pp. 222\u2013231. 1951."
+            },
+            {
+              "key": "27_CR84",
+              "doi-asserted-by": "publisher",
+              "first-page": "238",
+              "DOI": "10.1098/rspb.1940.0038",
+              "volume": "129",
+              "author": "R Hill",
+              "year": "1940",
+              "unstructured": "Hill, R., and R. Scarisbrick: [1] Reduction of ferric oxalate by isolated chloroplasts. Proc. Roy. Soc. B 129, 238\u2013255 (1940).",
+              "journal-title": "Proc. Roy. Soc. B"
+            },
+            {
+              "key": "27_CR85",
+              "doi-asserted-by": "crossref",
+              "unstructured": "[2] Oxygen production by isolated chloroplasts. Nature (Lond.) 146, 61\u201362 (1940).",
+              "DOI": "10.1038/146061a0"
+            },
+            {
+              "key": "27_CR86",
+              "doi-asserted-by": "crossref",
+              "first-page": "98",
+              "DOI": "10.1111/j.1469-8137.1951.tb05172.x",
+              "volume": "50",
+              "author": "The hematin compounds of leaves",
+              "year": "1951",
+              "unstructured": "The hematin compounds of leaves. New Phytologist 50, 98\u2013111 (1951).",
+              "journal-title": "New Phytologist"
+            },
+            {
+              "key": "27_CR87",
+              "doi-asserted-by": "publisher",
+              "first-page": "627",
+              "DOI": "10.1085/jgp.34.5.627",
+              "volume": "34",
+              "author": "AS Holt",
+              "year": "1951",
+              "unstructured": "Holt, A. S., I. A. Brooks and W. A. Arnold: Some effects of 2537 \u00c5 on green algae and chloroplast preparations. J. gen. Physiol. 34, 627\u2013645 (1951).",
+              "journal-title": "J. gen. Physiol."
+            },
+            {
+              "key": "27_CR88",
+              "first-page": "25",
+              "volume": "9",
+              "author": "AS Holt",
+              "year": "1946",
+              "unstructured": "Holt, A. S., and C. S. French: The photochemical production of oxygen and hydrogen ion by isolated chloroplasts. Arch. Biochem. 9, 25\u201343 (1946).",
+              "journal-title": "Arch. Biochem."
+            },
+            {
+              "key": "27_CR89",
+              "unstructured": "Oxygen production by illuminated chloroplasts suspended in solutions of oxidants. Arch. Biochem. 19, 368\u2013378 (1948)."
+            },
+            {
+              "key": "27_CR90",
+              "unstructured": "Isotopic analysis of the oxygen evolved by chloroplasts in normal water and in water enriched with O18. Arch. Biochem. 19, 429\u2013435 (1948)."
+            },
+            {
+              "key": "27_CR91",
+              "unstructured": "The photochemical liberation of oxygen from water by isolated chloroplasts. In J. Franck and W. E. Loomis, Photosynthesis in Plants, pp. 277\u2013285. Ames, Iowa: Iowa State College Press 1949."
+            },
+            {
+              "key": "27_CR92",
+              "doi-asserted-by": "publisher",
+              "first-page": "164",
+              "DOI": "10.1104/pp.26.1.164",
+              "volume": "26",
+              "author": "AS Holt",
+              "year": "1951",
+              "unstructured": "Holt, A. S., R. F. Smith and C. S. French: Dye reduction by illuminated chloroplast fragments. Plant Physiol. 26, 164\u2013173 (1951).",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "27_CR93",
+              "first-page": "45",
+              "volume": "16",
+              "author": "L Horwttz",
+              "year": "1954",
+              "unstructured": "Horwttz, L.: Some theoretical considerations relating to the meaning and measurement of chloroplast reducing potential. Bull. math. Physics 16, 45\u201353 (1954).",
+              "journal-title": "Bull. math. Physics"
+            },
+            {
+              "key": "27_CR94",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Effects of D2O on the quinone Hill reaction of Chlorella pyrenoidosa. Plant Physiol. 29, 215\u2013219 (1954).",
+              "DOI": "10.1104/pp.29.3.215"
+            },
+            {
+              "key": "27_CR95",
+              "doi-asserted-by": "publisher",
+              "first-page": "184",
+              "DOI": "10.1101/SQB.1935.003.01.022",
+              "volume": "3",
+              "author": "OL Inman",
+              "year": "1935",
+              "unstructured": "Inman, O. L.: The evolution of oxygen in the process of photosynthesis. Cold Spr. Harb-Symp. quant. Biol. 3, 184\u2013190 (1935).",
+              "journal-title": "Cold Spr. Harb-Symp. quant. Biol."
+            },
+            {
+              "key": "27_CR96",
+              "doi-asserted-by": "crossref",
+              "unstructured": "[1] Photosynthesis and the living state. Science 88, 544\u2013545 (1938).",
+              "DOI": "10.1126/science.88.2293.544"
+            },
+            {
+              "key": "27_CR97",
+              "doi-asserted-by": "crossref",
+              "unstructured": "[2] The Mirsky-Pauling theory of the structure of native, denatured and coagulated proteins, and some theoretical aspects of the evolution of oxygen from the irradiated green cell. Plant Physiol. 13, 859\u2013862 (1938).",
+              "DOI": "10.1104/pp.13.4.859"
+            },
+            {
+              "key": "27_CR98",
+              "doi-asserted-by": "crossref",
+              "first-page": "805",
+              "DOI": "10.1093/oxfordjournals.aob.a089305",
+              "volume": "24",
+              "author": "AA Irving",
+              "year": "1910",
+              "unstructured": "Irving, A. A.: The beginning of photosynthesis and the development of chlorophyll. Ann. Bot. 24, 805\u2013818 (1910).",
+              "journal-title": "Ann. Bot."
+            },
+            {
+              "key": "27_CR99",
+              "unstructured": "Kamen, M. D.: Hematin compounds in the metabolism of photosynthetic tissues. Research in Photosynthesis, edit. by H. Gaffron, pp. 149\u2013163. New York 1957."
+            },
+            {
+              "key": "27_CR100",
+              "doi-asserted-by": "publisher",
+              "first-page": "14",
+              "DOI": "10.1007/BF01807010",
+              "volume": "26",
+              "author": "H Kautsky",
+              "year": "1938",
+              "unstructured": "Kautsky, H.: Zur Frage der photochemischen Sauerstoffentwicklung aus isolierten Chlorophyllk\u00f6rnern. Naturwissenschaften 26, 14 (1938).",
+              "journal-title": "Naturwissenschaften"
+            },
+            {
+              "key": "27_CR101",
+              "doi-asserted-by": "publisher",
+              "first-page": "74",
+              "DOI": "10.1016/0006-3002(56)90387-0",
+              "volume": "19",
+              "author": "B Ke",
+              "year": "1956",
+              "unstructured": "Ke, B., and K. A. Clendenning: Properties of chloroplast dispersions in the presence of detergents. Biochim. biophys. Acta 19, 74\u201383 (1956).",
+              "journal-title": "Biochim. biophys. Acta"
+            },
+            {
+              "key": "27_CR102",
+              "doi-asserted-by": "crossref",
+              "first-page": "279",
+              "DOI": "10.1042/bj0610279",
+              "volume": "61",
+              "author": "RH Kenten",
+              "year": "1955",
+              "unstructured": "Kenten, R. H., and P. J. G. Mann: Oxidation of manganese by illuminated chloroplast preparations. Biochem. J. 61, 279\u2013286 (1955).",
+              "journal-title": "Biochem. J."
+            },
+            {
+              "key": "27_CR103",
+              "doi-asserted-by": "publisher",
+              "first-page": "527",
+              "DOI": "10.1016/0003-9861(55)90519-1",
+              "volume": "59",
+              "author": "E Kessler",
+              "year": "1955",
+              "unstructured": "Kessler, E.: On the role of manganese in the oxygen-evolving system of photosynthesis. Arch. Biochem. 59, 527\u2013529 (1955).",
+              "journal-title": "Arch. Biochem."
+            },
+            {
+              "key": "27_CR104",
+              "doi-asserted-by": "publisher",
+              "first-page": "835",
+              "DOI": "10.1111/j.1399-3054.1954.tb07742.x",
+              "volume": "7",
+              "author": "H Kinzel",
+              "year": "1954",
+              "unstructured": "Kinzel, H., u. W. Url: Katalasebestimmung an gr\u00fcnen Bl\u00e4ttern unter Ber\u00fccksichtigung des S\u00e4urefehlers. Physiol. Plantarum (Copenh.) 7, 835\u2013850 (1954).",
+              "journal-title": "Physiol. Plantarum (Copenh.)"
+            },
+            {
+              "key": "27_CR105",
+              "doi-asserted-by": "publisher",
+              "first-page": "583",
+              "DOI": "10.1038/179583a0",
+              "volume": "179",
+              "author": "B Kok",
+              "year": "1957",
+              "unstructured": "Kok, B.: Absorption changes induced by the photochemical reaction of photosynthesis. Nature (Lond.) 179, 583\u2013584 (1957).",
+              "journal-title": "Nature (Lond.)"
+            },
+            {
+              "key": "27_CR106",
+              "doi-asserted-by": "crossref",
+              "first-page": "316",
+              "DOI": "10.1111/j.1438-8677.1957.tb00578.x",
+              "volume": "6",
+              "author": "Light induced absorption changes in photosynthetic organisms",
+              "year": "1957",
+              "unstructured": "Light induced absorption changes in photosynthetic organisms. Acta bot. n\u00e9erl. 6, 316\u2013336 (1957).",
+              "journal-title": "Acta bot. n\u00e9erl."
+            },
+            {
+              "key": "27_CR107",
+              "unstructured": "Changes of absorption spectrum induced by illumination and their bearing on the nature of the photoreceptor in photosynthesis. Proc. 2nd Internat. Congr. Photobiol. Turin 1957, p. 369\u2013383."
+            },
+            {
+              "key": "27_CR108",
+              "doi-asserted-by": "publisher",
+              "first-page": "275",
+              "DOI": "10.1104/pp.30.3.275",
+              "volume": "30",
+              "author": "WA Kratz",
+              "year": "1955",
+              "unstructured": "Kratz, W. A., and J. Myers: Photosynthesis and respiration of three blue-green algae. Plant Physiol. 30, 275\u2013280 (1955).",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "27_CR109",
+              "doi-asserted-by": "publisher",
+              "first-page": "291",
+              "DOI": "10.2307/2437160",
+              "volume": "32",
+              "author": "J Kumm",
+              "year": "1945",
+              "unstructured": "Kumm, J., and C. S. French: The evolution of oxygen from suspensions of chloroplasts; the activity of various species and the effects of previous illumination of the leaves. Amer. J. Bot. 32, 291\u2013295 (1945).",
+              "journal-title": "Amer. J. Bot."
+            },
+            {
+              "key": "27_CR110",
+              "unstructured": "Lumby, R., and J. D. Spikes: Chemical kinetic studies of the Hill reaction. Research in Photosynthesis, edit. by H. Gaffron, pp. 373\u2013391. New York 1957."
+            },
+            {
+              "key": "27_CR111",
+              "doi-asserted-by": "publisher",
+              "first-page": "375",
+              "DOI": "10.1111/j.1399-3054.1954.tb07585.x",
+              "volume": "7",
+              "author": "H Lundeg\u00e5bdh",
+              "year": "1954",
+              "unstructured": "Lundeg\u00e5bdh, H.: On the oxidation of cytochrome f by light. Physiol. Plantarum (Copenh.) 7, 375\u2013382 (1954).",
+              "journal-title": "Physiol. Plantarum (Copenh.)"
+            },
+            {
+              "key": "27_CR112",
+              "doi-asserted-by": "publisher",
+              "first-page": "382",
+              "DOI": "10.1016/0003-9861(57)90125-X",
+              "volume": "70",
+              "author": "VH Lynch",
+              "year": "1957",
+              "unstructured": "Lynch, V. H., and C. S. French: \u03b2-Carotene, an active component of chloroplasts. Arch. Biochem. 70, 382\u2013391 (1957).",
+              "journal-title": "Arch. Biochem."
+            },
+            {
+              "key": "27_CR113",
+              "doi-asserted-by": "publisher",
+              "first-page": "462",
+              "DOI": "10.1104/pp.24.3.462",
+              "volume": "24",
+              "author": "FDH MacDowall",
+              "year": "1949",
+              "unstructured": "Mac Dowall, F. D. H.: The effects of some inhibitors of photosynthesis upon the photochemical reduction of a dye by isolated chloroplasts. Plant Physiol. 24, 462\u2013480 (1949).",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "27_CR114",
+              "doi-asserted-by": "crossref",
+              "unstructured": "The reducing potential of illuminated chloroplasts. Science 116, 398\u2013399 (1952).",
+              "DOI": "10.1126/science.116.3015.398"
+            },
+            {
+              "key": "27_CR115",
+              "doi-asserted-by": "publisher",
+              "first-page": "448",
+              "DOI": "10.1104/pp.29.5.448",
+              "volume": "29",
+              "author": "JH McClendon",
+              "year": "1954",
+              "unstructured": "Mc Clendon, J. H.: The physical environment of chloroplasts as related to their morphology and activity in vitro. Plant Physiol. 29, 448\u2013458 (1954).",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "27_CR116",
+              "doi-asserted-by": "publisher",
+              "first-page": "557",
+              "DOI": "10.1038/170577a0",
+              "volume": "170",
+              "author": "JH McClendon",
+              "year": "1952",
+              "unstructured": "Mc Clendon, J. H., and L. R. Blinks: Use of high molecular weight solutes in the study of isolated intracellular structures. Nature (Lond.) 170, 557\u2013558 (1952).",
+              "journal-title": "Nature (Lond.)"
+            },
+            {
+              "key": "27_CR117",
+              "doi-asserted-by": "publisher",
+              "first-page": "65",
+              "DOI": "10.1016/0003-9861(51)90082-3",
+              "volume": "33",
+              "author": "AH Mehler",
+              "year": "1951",
+              "unstructured": "Mehler, A. H.: Studies on reactions of illuminated chloroplasts. 1. Mechanism of the reduction of oxygen and other Hill reagents. Arch. Biochem. 33, 65\u201377 (1951).",
+              "journal-title": "Arch. Biochem."
+            },
+            {
+              "key": "27_CR118",
+              "doi-asserted-by": "crossref",
+              "unstructured": "2. Stimulation and inhibition of the reaction with molecular oxygen. Arch. Biochem. 34, 339\u2013351 (1951).",
+              "DOI": "10.1016/0003-9861(51)90012-4"
+            },
+            {
+              "key": "27_CR119",
+              "doi-asserted-by": "publisher",
+              "first-page": "365",
+              "DOI": "10.1016/0003-9861(52)90042-8",
+              "volume": "38",
+              "author": "AH Mehler",
+              "year": "1952",
+              "unstructured": "Mehler, A. H., and A. H. Brown: Studies on reactions of illuminated chloroplasts. III. Simultaneous photoproduction and consumption of oxygen studied with oxygen isotopes. Arch. Biochem. 38, 365\u2013370 (1952).",
+              "journal-title": "Arch. Biochem."
+            },
+            {
+              "key": "27_CR120",
+              "first-page": "193",
+              "volume": "28",
+              "author": "HW Milner",
+              "year": "1950",
+              "unstructured": "Milner, H. W., C. S. French, M. L. G. Koenig and N. S. Lawrence: Measurement and stabilization of activity of chloroplast material. Arch. Biochem. 28, 193\u2013200 (1950).",
+              "journal-title": "Arch. Biochem."
+            },
+            {
+              "key": "27_CR121",
+              "first-page": "185",
+              "volume": "28",
+              "author": "HW Milner",
+              "year": "1950",
+              "unstructured": "Milner, H. W., M. L. G. Koenig and N. S. Lawrence: Reactivation of dispersed chloroplast material by reaggregation. Arch. Biochem. 28, 185\u2013192 (1950).",
+              "journal-title": "Arch. Biochem."
+            },
+            {
+              "key": "27_CR122",
+              "doi-asserted-by": "publisher",
+              "first-page": "633",
+              "DOI": "10.1126/science.111.2893.633",
+              "volume": "111",
+              "author": "HW Milner",
+              "year": "1950",
+              "unstructured": "Milner, H. W., N. S. Lawrence and C. S. French: Colloidal dispersion of chloroplast material. Science 111, 633\u2013634 (1950).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "27_CR123",
+              "doi-asserted-by": "publisher",
+              "first-page": "367",
+              "DOI": "10.1104/pp.33.5.367",
+              "volume": "33",
+              "author": "M Milner",
+              "year": "1958",
+              "unstructured": "Milner, M., C. S. French and H. W. Milner: Effect of petroleum ether extraction and readdition of various compounds on the photochemical activity of isolated chloroplasts. Plant Physiol. 33, 367\u2013372 (1958).",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "27_CR124",
+              "first-page": "1",
+              "volume": "62",
+              "author": "H Molisch",
+              "year": "1904",
+              "unstructured": "Molisch, H.: \u00dcber Kohlens\u00e4ureassimilation-Versuche mittelst der Leuchtbakterienmethode. Bot. Z., Abt. 1, 62, 1\u201310 (1904).",
+              "journal-title": "Bot. Z., Abt. 1"
+            },
+            {
+              "key": "27_CR125",
+              "first-page": "577",
+              "volume": "17",
+              "author": "\u00dcber Kohlen-s\u00e4ureassimilatipn toter Bl\u00e4tter",
+              "year": "1925",
+              "unstructured": "\u00dcber Kohlen-s\u00e4ureassimilatipn toter Bl\u00e4tter. Z. Bot. 17, 577\u2013593 (1925).",
+              "journal-title": "Z. Bot."
+            },
+            {
+              "key": "27_CR126",
+              "doi-asserted-by": "publisher",
+              "first-page": "645",
+              "DOI": "10.1007/BF01495167",
+              "volume": "27",
+              "author": "K Noack",
+              "year": "1939",
+              "unstructured": "Noack, K., A. Pirson u. H.Michels: Zur Kenntnis der Assimilationshemmung nach Sauerstoffentzug bei Gr\u00fcnalgen. Naturwissenschaften 27, 645 (1939).",
+              "journal-title": "Naturwissenschaften"
+            },
+            {
+              "key": "27_CR127",
+              "unstructured": "Pirson, A.: Paper read at 8th Internat. Congr. of Botany, Paris, July, 1954."
+            },
+            {
+              "key": "27_CR128",
+              "doi-asserted-by": "publisher",
+              "first-page": "209",
+              "DOI": "10.1038/176209a0",
+              "volume": "176",
+              "author": "A Pirson",
+              "year": "1955",
+              "unstructured": "Pirson, A., and L. Bergmann: Manganese requirement and carbon source in Chlorella. Nature (Lond.) 176, 209 (1955).",
+              "journal-title": "Nature (Lond.)"
+            },
+            {
+              "key": "27_CR129",
+              "doi-asserted-by": "publisher",
+              "first-page": "199",
+              "DOI": "10.1007/BF01914856",
+              "volume": "40",
+              "author": "A Pirson",
+              "year": "1952",
+              "unstructured": "Pirson, A., C. Tichy u. G. Wilhelmi: Stoffwechsel und Mineralsalzern\u00e4hrung einzelliger Gr\u00fcnalgen. I. Vergleichende Untersuchungen an Mangelkulturen von Ankistrodesmus. Planta (Berl.) 40, 199\u2013253 (1952).",
+              "journal-title": "Planta (Berl.)"
+            },
+            {
+              "key": "27_CR130",
+              "doi-asserted-by": "publisher",
+              "first-page": "4816",
+              "DOI": "10.1021/ja01574a068",
+              "volume": "79",
+              "author": "T Punnett",
+              "year": "1957",
+              "unstructured": "Punnett, T.: The PH optimum of the Hill reaction. J. Amer. chem. Soc. 79, 4816 (1957).",
+              "journal-title": "J. Amer. chem. Soc."
+            },
+            {
+              "key": "27_CR131",
+              "doi-asserted-by": "crossref",
+              "first-page": "283",
+              "DOI": "10.1104/pp.34.3.283",
+              "volume": "34",
+              "author": "Stability of isolated chloroplast preparations and its effect on Hill reaction measurements",
+              "year": "1959",
+              "unstructured": "Stability of isolated chloroplast preparations and its effect on Hill reaction measurements. Plant Physiol. 34, 283\u2013289 (1959).",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "27_CR132",
+              "doi-asserted-by": "publisher",
+              "first-page": "769",
+              "DOI": "10.2307/2437271",
+              "volume": "33",
+              "author": "GS Rabideau",
+              "year": "1946",
+              "unstructured": "Rabideau, G. S., C. S. French and A. S. Holt: The absorption and reflection spectra of leaves, chloroplast suspensions and chloroplast fragments as measured in an Ulbricht sphere. Amer. J. Bot. 33, 769\u2013777 (1946).",
+              "journal-title": "Amer. J. Bot."
+            },
+            {
+              "key": "27_CR133",
+              "volume-title": "Doctoral thesis",
+              "author": "JS Rieske",
+              "year": "1956",
+              "unstructured": "Rieske, J. S.: Doctoral thesis, University of Utah, Salt Lake City, Utah, 1956."
+            },
+            {
+              "key": "27_CR134",
+              "unstructured": "Rodrigo, F. A.: Experiments concerning the state of chlorophyll in the plant. Ph. D. Thesis. Utrecht 1955."
+            },
+            {
+              "key": "27_CR135",
+              "doi-asserted-by": "publisher",
+              "first-page": "98",
+              "DOI": "10.1038/182098a0",
+              "volume": "182",
+              "author": "R Sager",
+              "year": "1958",
+              "unstructured": "Sager, R., and M. Zalokar: Pigments and photosynthesis in a carotenoid-deficient mutant of Chlamydomonas. Nature (Lond.) 182, 98\u2013100 (1958).",
+              "journal-title": "Nature (Lond.)"
+            },
+            {
+              "key": "27_CR136",
+              "doi-asserted-by": "publisher",
+              "first-page": "845",
+              "DOI": "10.1126/science.128.3328.845",
+              "volume": "128",
+              "author": "A San Pietro",
+              "year": "1958",
+              "unstructured": "San Pietro, A., S. B. Hendricks, J. Giovanelli and F. E. Stolzenbach: Action spectrum for triphospho-pyridine nucleotide reduction by illuminated chloroplasts. Science 128, 845 (1958).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "27_CR137",
+              "doi-asserted-by": "publisher",
+              "first-page": "118",
+              "DOI": "10.1126/science.124.3212.118",
+              "volume": "124",
+              "author": "A San Pietro",
+              "year": "1956",
+              "unstructured": "San Pietro, A., and H. M. Lang: Accumulation of reduced pyridine nucleoides by illuminated grana. Science 124, 118\u2013119 (1956).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "27_CR138",
+              "doi-asserted-by": "publisher",
+              "first-page": "245",
+              "DOI": "10.1016/0003-9861(52)90029-5",
+              "volume": "38",
+              "author": "HK Schachman",
+              "year": "1952",
+              "unstructured": "Schachman, H. K., A. B. Pardee and R. Y. Stanier: Studies on the macromolecular organization of microbial cells. Arch. Biochem. 38, 245\u2013260 (1952).",
+              "journal-title": "Arch. Biochem."
+            },
+            {
+              "key": "27_CR139",
+              "unstructured": "Schwartz, F.: Die morphologische und chemische Zusammensetzung des Protoplasmas. Breslau 1887. Cited by J. H. Mc Clendon 1954."
+            },
+            {
+              "key": "27_CR140",
+              "doi-asserted-by": "publisher",
+              "first-page": "5",
+              "DOI": "10.1016/0003-9861(55)90457-4",
+              "volume": "59",
+              "author": "M Schwartz",
+              "year": "1955",
+              "unstructured": "Schwartz, M.: The quantum efficiency of the photochemical reduction of quinone and ferricyanide by lyophilized and whole Chlorella cells. Arch. Biochem. 59, 5\u201316 (1955).",
+              "journal-title": "Arch. Biochem."
+            },
+            {
+              "key": "27_CR141",
+              "doi-asserted-by": "publisher",
+              "first-page": "52",
+              "DOI": "10.1104/pp.19.1.52",
+              "volume": "19",
+              "author": "CP Sidebis",
+              "year": "1944",
+              "unstructured": "Sidebis, C. P., and H. Y. Young: Effects of iron on chlorophyllous pigments, ascorbic acid, acidity and carbohydrates of Ananus Comosus. Plant Physiol. 19, 52\u201375 (1944).",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "27_CR142",
+              "volume-title": "PH and plants",
+              "author": "J Small",
+              "year": "1946",
+              "unstructured": "Small, J.: PH and plants. New York: D. van Nostrand, Inc. 1946."
+            },
+            {
+              "key": "27_CR143",
+              "doi-asserted-by": "publisher",
+              "first-page": "143",
+              "DOI": "10.1104/pp.29.2.143",
+              "volume": "29",
+              "author": "JHC Smith",
+              "year": "1954",
+              "unstructured": "Smith, J. H. C: The development of chlorophyll and oxygen-evolving power in etiolated barley leaves when illuminated. Plant Physiol. 29, 143\u2013148 (1954).",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "27_CR144",
+              "doi-asserted-by": "publisher",
+              "first-page": "101",
+              "DOI": "10.1016/S0003-9861(52)80054-2",
+              "volume": "35",
+              "author": "JD Spikes",
+              "year": "1952",
+              "unstructured": "Spikes, J. D.: Stoichiometry of the photolysis of water by illuminated chloroplast fragments. Arch. Biochem. 35, 101\u2013109 (1952).",
+              "journal-title": "Arch. Biochem."
+            },
+            {
+              "key": "27_CR145",
+              "first-page": "48",
+              "volume": "28",
+              "author": "JD Spikes",
+              "year": "1950",
+              "unstructured": "Spikes, J. D., R. Lumry, H. Eyring and R. E. Wayrynen: Potential changes in suspensions of chloroplasts on illumination. Arch. Biochem. 28, 48\u201367 (1950).",
+              "journal-title": "Arch. Biochem."
+            },
+            {
+              "key": "27_CR146",
+              "doi-asserted-by": "publisher",
+              "first-page": "375",
+              "DOI": "10.1126/science.122.3165.375-a",
+              "volume": "122",
+              "author": "JD Spikes",
+              "year": "1955",
+              "unstructured": "Spikes, J. D., and M. Stout: Photochemical activity of chloroplasts isolated from sugar beet infected with virus yellows. Science 122, 375\u2013376 (1955).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "27_CR147",
+              "doi-asserted-by": "publisher",
+              "first-page": "182",
+              "DOI": "10.1038/169182a0",
+              "volume": "169",
+              "author": "S Takashima",
+              "year": "1952",
+              "unstructured": "Takashima, S.: Chlorophyll-Lipoprotein obtained in crystals. Nature (Lond.) 169, 182\u2013183 (1952).",
+              "journal-title": "Nature (Lond.)"
+            },
+            {
+              "key": "27_CR148",
+              "first-page": "1",
+              "volume": "6",
+              "author": "HR Tamiya",
+              "year": "1949",
+              "unstructured": "Tamiya, H.R Analysis of photosynthetic mechanism by the method of intermittent illumination. Stud. Tokugawa Inst. 6, 1\u2013129 (1949).",
+              "journal-title": "Stud. Tokugawa Inst."
+            },
+            {
+              "key": "27_CR149",
+              "first-page": "207",
+              "volume": "55",
+              "author": "JB Thomas",
+              "year": "1952",
+              "unstructured": "Thomas, J. B.: A note on the occurrence of grana in algae and in photosynthesizing bacteria. Proc. kon. ned. Akad. Wet., Ser. C 55, 207\u2013209 (1952).",
+              "journal-title": "Proc. kon. ned. Akad. Wet., Ser. C"
+            },
+            {
+              "key": "27_CR150",
+              "doi-asserted-by": "publisher",
+              "first-page": "230",
+              "DOI": "10.1016/0006-3002(53)90247-9",
+              "volume": "10",
+              "author": "JB Thomas",
+              "year": "1953",
+              "unstructured": "Thomas, J. B., O. H. Blaauw and L. N. M. Duysens: On the relation between size and photochemical activity of fragments of spinach grana. Biochim. biophys. Acta 10, 230\u2013240 (1953).",
+              "journal-title": "Biochim. biophys. Acta"
+            },
+            {
+              "key": "27_CR151",
+              "doi-asserted-by": "publisher",
+              "first-page": "391",
+              "DOI": "10.1016/0006-3002(55)90243-2",
+              "volume": "16",
+              "author": "JB Thomas",
+              "year": "1955",
+              "unstructured": "Thomas, J. B., and W. De Rover: On phyco-cyanin participation in the Hill reaction of the blue-green alga Synechococcus cedrorum. Biochim. biophys. Acta 16, 391\u2013395 (1955).",
+              "journal-title": "Biochim. biophys. Acta"
+            },
+            {
+              "key": "27_CR152",
+              "doi-asserted-by": "publisher",
+              "first-page": "810",
+              "DOI": "10.1111/j.1399-3054.1954.tb07741.x",
+              "volume": "7",
+              "author": "V Tullin",
+              "year": "1954",
+              "unstructured": "Tullin, V.: Response of the sugar beet to common salt. Physiol. Plantarum (Copenh.) 7, 810\u2013834 (1954).",
+              "journal-title": "Physiol. Plantarum (Copenh.)"
+            },
+            {
+              "key": "27_CR153",
+              "unstructured": "Vishniac, W.: Light-dependent reductions in a cell-free system. Research in Photosynthesis, edit. by H. Gaffron, p. 285\u2013287. New York 1957."
+            },
+            {
+              "key": "27_CR154",
+              "doi-asserted-by": "crossref",
+              "first-page": "75",
+              "DOI": "10.1016/S0021-9258(19)50876-6",
+              "volume": "195",
+              "author": "W Vishniac",
+              "year": "1952",
+              "unstructured": "Vishniac, W., and S. Ochoa: Fixation of carbon dioxide coupled to photochemical reduction of pyridine nucleotides by chloroplast preparations. J. biol. Chem. 195, 75\u201393 (1952).",
+              "journal-title": "J. biol. Chem."
+            },
+            {
+              "key": "27_CR155",
+              "doi-asserted-by": "publisher",
+              "first-page": "1089",
+              "DOI": "10.1038/1821089a0",
+              "volume": "182",
+              "author": "W Vishniac",
+              "year": "1958",
+              "unstructured": "Vishniac, W., and I. A. Rose: Mechanism of chlorophyll action in photosynthesis. Nature (Lond.) 182, 1089\u20131090 (1958).",
+              "journal-title": "Nature (Lond.)"
+            },
+            {
+              "key": "27_CR156",
+              "first-page": "386",
+              "volume": "166",
+              "author": "O Warburg",
+              "year": "1925",
+              "unstructured": "Warburg, O.: Versuche \u00fcber die Assimilation der Kohlens\u00e4ure. Biochem. Z. 166, 386\u2013406 (1925).",
+              "journal-title": "Biochem. Z."
+            },
+            {
+              "key": "27_CR157",
+              "unstructured": "Schwermetalle als Wirkungsgruppen von Fermenten, 2. Aufl. Berlin: W. Saenger 1948."
+            },
+            {
+              "key": "27_CR158",
+              "unstructured": "Heavy metal prosthetic groups and enzyme action. Oxford: Clarendon Press 1949."
+            },
+            {
+              "key": "27_CR159",
+              "first-page": "443",
+              "volume": "76",
+              "author": "\u00dcber den Einflu\u00df der Wellenl\u00e4nge auf die Chinonreduction in gr\u00fcnen Grana",
+              "year": "1952",
+              "unstructured": "\u00dcber den Einflu\u00df der Wellenl\u00e4nge auf die Chinonreduction in gr\u00fcnen Grana. Z. Naturforsch. 76, 443\u2013446 (1952).",
+              "journal-title": "Z. Naturforsch."
+            },
+            {
+              "key": "27_CR160",
+              "unstructured": "Photosynthese. Angew. Chem. 69, 627\u2013634 (1957)."
+            },
+            {
+              "key": "27_CR161",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Photosynthesis. Experiments at the Max Planck Institute for Cell Physiology, Berlin-Dahlem, 1950\u20131957. Science 128, 68\u201373 (1958).",
+              "DOI": "10.1126/science.128.3315.68"
+            },
+            {
+              "key": "27_CR162",
+              "doi-asserted-by": "crossref",
+              "first-page": "509",
+              "DOI": "10.1515/znb-1958-0805",
+              "volume": "13b",
+              "author": "O Warburg",
+              "year": "1958",
+              "unstructured": "Warburg, O., u. G.Krippahl: Hill-Reaktionen. Z. Natur-forsch. 13b, 509\u2013514 (1958).",
+              "journal-title": "Z. Natur-forsch."
+            },
+            {
+              "key": "27_CR163",
+              "doi-asserted-by": "publisher",
+              "first-page": "161",
+              "DOI": "10.1007/BF01467896",
+              "volume": "32",
+              "author": "O Warburg",
+              "year": "1944",
+              "unstructured": "Warburg, O., u. W. L\u00fcttgens: Experiment zur Assimilation der Kohlens\u00e4ure. Naturwissenschaften 32, 161, 301 (1944).",
+              "journal-title": "Naturwissenschaften"
+            },
+            {
+              "key": "27_CR164",
+              "first-page": "303",
+              "volume": "11",
+              "author": "Photochemical reduction of quinone in green granules",
+              "year": "1946",
+              "unstructured": "Photochemical reduction of quinone in green granules. [Russian.] Biokhimiya 11, 303\u2013322 (1946).",
+              "journal-title": "[Russian.] Biokhimiya"
+            },
+            {
+              "key": "27_CR165",
+              "series-title": "Ph. D. thesis",
+              "volume-title": "The quantum yield of the photoreduction reaction in photosynthesis",
+              "author": "RE Wayrynen",
+              "year": "1952",
+              "unstructured": "Wayrynen. R. E.: The quantum yield of the photoreduction reaction in photosynthesis. Ph. D. thesis, University of Utah, Salt Lake City, Utah, 1952."
+            },
+            {
+              "key": "27_CR166",
+              "series-title": "A. E. C. Technical Rep.",
+              "volume-title": "The mechanism of the photochemical activity of isolated chloroplasts. I. Quantum yield",
+              "author": "RE Wayrynen",
+              "year": "1952",
+              "unstructured": "Wayrynen, R. E., R. Lumry, J. D. Spikes and J. Rieske: The mechanism of the photochemical activity of isolated chloroplasts. I. Quantum yield. A. E. C. Technical Rep. No. VII, Sept. 30, 1952. Institute for the study of Rate Processes, University of Utah, Salt Lake City."
+            },
+            {
+              "key": "27_CR167",
+              "unstructured": "Wessels, J. S. C.: Investigation into some aspects of the Hill reaction. Ph. D. thesis, Leyden, 1954."
+            },
+            {
+              "key": "27_CR168",
+              "doi-asserted-by": "crossref",
+              "first-page": "529",
+              "DOI": "10.1002/recl.19540730702",
+              "volume": "73",
+              "author": "A possible function of vitamin K in photosynthesis. Rec. Trav. chim",
+              "year": "1954",
+              "unstructured": "A possible function of vitamin K in photosynthesis. Rec. Trav. chim. Pays-Bas. 73, 529\u2013536 (1954).",
+              "journal-title": "Pays-Bas."
+            },
+            {
+              "key": "27_CR169",
+              "doi-asserted-by": "publisher",
+              "first-page": "548",
+              "DOI": "10.1016/0006-3002(56)90481-4",
+              "volume": "19",
+              "author": "JSC Wessels",
+              "year": "1956",
+              "unstructured": "Wessels, J. S. C., and R. van der Veen: The action of some derivatives of phenylurethane and of 3-phenyl-1, 1 -dimethyl urea on the Hill reaction. Biochim. biophys. Acta 19, 548\u2013549 (1956).",
+              "journal-title": "Biochim. biophys. Acta"
+            },
+            {
+              "key": "27_CR170",
+              "doi-asserted-by": "publisher",
+              "first-page": "462",
+              "DOI": "10.1016/0006-3002(56)90340-7",
+              "volume": "20",
+              "author": "FR Whatley",
+              "year": "1956",
+              "unstructured": "Whatley, F. R., M. B. Allen, L. L. Rosenberg, J. B. Capindale and D. I. Arnon: Photosynthesis by isolated chloroplasts. V. Phosphorylation and carbon dioxide fixation by broken chloroplasts. Biochim. biophys. Acta 20, 462\u2013468 (1956).",
+              "journal-title": "Biochim. biophys. Acta"
+            },
+            {
+              "key": "27_CR171",
+              "doi-asserted-by": "publisher",
+              "first-page": "414",
+              "DOI": "10.1104/pp.26.2.414",
+              "volume": "26",
+              "author": "FR Whatley",
+              "year": "1951",
+              "unstructured": "Whatley, F. R., L. Ordin and D. I. Arnon: Distribution of micronutrient metals in leaves and chloroplast fragments. Plant Physiol. 26, 414\u2013418 (1951).",
+              "journal-title": "Plant Physiol."
+            },
+            {
+              "key": "27_CR172",
+              "unstructured": "Whittingham, C. P.: Some features of the chloroplast reaction. Research in Photosynthesis, edit. by H. Gaffron, p. 263\u2013273. New York 1957."
+            },
+            {
+              "key": "27_CR173",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/978-3-642-98947-6",
+              "volume-title": "Untersuchungen \u00fcber die Assimilation der Kohlens\u00e4ure",
+              "author": "R Willst\u00e4tter",
+              "year": "1918",
+              "unstructured": "Willst\u00e4tter, R., u. A. Stoll: Untersuchungen \u00fcber die Assimilation der Kohlens\u00e4ure. Berlin: Springer 1918."
+            }
+          ],
+          "container-title": [
+            "Die CO2-Assimilation / The Assimilation of Carbon Dioxide"
+          ],
+          "language": "de",
+          "link": [
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/978-3-642-94798-8_27",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2022,
+                3,
+                1
+              ]
+            ],
+            "date-time": "2022-03-01T14:20:08Z",
+            "timestamp": 1646144408000
+          },
+          "score": 29.35201,
+          "resource": {
+            "primary": {
+              "URL": "http://link.springer.com/10.1007/978-3-642-94798-8_27"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1960
+              ]
+            ]
+          },
+          "ISBN": [
+            "9783642947995",
+            "9783642947988"
+          ],
+          "references-count": 173,
+          "URL": "https://doi.org/10.1007/978-3-642-94798-8_27",
+          "published": {
+            "date-parts": [
+              [
+                1960
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

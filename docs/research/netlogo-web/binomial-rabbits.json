@@ -1,0 +1,109 @@
+{
+  "slug": "binomial-rabbits",
+  "name": "Binomial Rabbits",
+  "catalogPath": "Sample Models/Mathematics/Probability/Binomial Rabbits",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/Binomial%20Rabbits.nlogox",
+  "deliveryBatch": "B17",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "Why can repeated random steps produce a stable population-level distribution? NetLogo Binomial Rabbits moves agents according to weighted hop patterns and plots accumulated displacements and averages. Wilensky's original educational study [1] is especially relevant: the model preserves a student's construction developed while reasoning about normality. Durrett [2] supplies probability foundations for sums of independent increments, and Berry [3] identifies conditions affecting normal approximation error. The model allows more than two hop patterns, so not every setting is literally a binomial experiment. Step magnitudes, relative weights, and hop count determine the distribution. Finite populations and discrete supports remain visible, and correlations or altered rules can invalidate simple limiting arguments. The rabbits represent repeated sampling rather than organisms with heredity or growth; a familiar-looking histogram does not explain human height without additional biological assumptions.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/Binomial%20Rabbits.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/Binomial%20Rabbits.nlogox",
+    "revision": "NetLogo 7.0.4 served 2026-11-05; SHA-256 e40418be852b206f11c8dec06eabd1923b384ef113f61e6612d813b27f480e17",
+    "checkedAt": "2026-11-05",
+    "evidence": "Full original served XML source, Procedures and Info retained in evidence/computing/binomial-rabbits.nlogox; extracted Info retained alongside.",
+    "notes": " This dossier describes scientific connections to the original NetLogo teaching model; it does not certify a City Library reimplementation or empirical validity.",
+    "originalCitation": "Wilensky, U. (1997).  NetLogo Binomial Rabbits model.  http://ccl.northwestern.edu/netlogo/models/BinomialRabbits.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "sourceSnapshot": "evidence/computing/binomial-rabbits.nlogox",
+    "evidenceFile": "evidence/computing/binomial-rabbits.nlogox"
+  },
+  "publications": [
+    {
+      "id": "10.1023/a:1002935313957",
+      "authors": [
+        "Uri Wilensky"
+      ],
+      "title": "What is Normal Anyway? Therapy for Epistemological Anxiety",
+      "year": 1997,
+      "venue": "Educational Studies in Mathematics",
+      "doi": "10.1023/a:1002935313957",
+      "url": "https://doi.org/10.1023/a:1002935313957",
+      "relevance": "Direct research provenance: the original educational case discusses the student reasoning behind this model.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1023%2FA%3A1002935313957",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1023_a_1002935313957.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1023_a_1002935313957.json"
+      },
+      "publisher": "Springer Science and Business Media LLC",
+      "volume": "33",
+      "issue": "2",
+      "pages": "171-202",
+      "verified": true
+    },
+    {
+      "id": "10.1017/9781108591034",
+      "authors": [
+        "Rick Durrett"
+      ],
+      "title": "Probability: Theory and Examples",
+      "year": 2019,
+      "venue": "Cambridge University Press",
+      "doi": "10.1017/9781108591034",
+      "url": "https://doi.org/10.1017/9781108591034",
+      "relevance": "Random-walk sums, expectations and limiting distributions support the hop mechanism.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1017%2F9781108591034",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1017_9781108591034.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1017_9781108591034.json"
+      },
+      "publisher": "Cambridge University Press",
+      "isbn": [
+        "9781108591034",
+        "9781108473682"
+      ],
+      "verified": true
+    },
+    {
+      "id": "10.1090/s0002-9947-1941-0003498-3",
+      "authors": [
+        "Andrew C. Berry"
+      ],
+      "title": "The accuracy of the Gaussian approximation to the sum of independent variates",
+      "year": 1941,
+      "venue": "Transactions of the American Mathematical Society",
+      "doi": "10.1090/s0002-9947-1941-0003498-3",
+      "url": "https://doi.org/10.1090/s0002-9947-1941-0003498-3",
+      "relevance": "Finite-sample Gaussian approximation provides a precise limit on interpreting bell-shaped displacement distributions.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1090%2FS0002-9947-1941-0003498-3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1090_s0002_9947_1941_0003498_3.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1090_s0002_9947_1941_0003498_3.json"
+      },
+      "publisher": "American Mathematical Society (AMS)",
+      "volume": "49",
+      "issue": "1",
+      "pages": "122-136",
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

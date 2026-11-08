@@ -1,0 +1,123 @@
+{
+  "model": "crispr-bacterium",
+  "setup": {
+    "monitors": "Tick\n0\nRNAP\n25\nCas9\n23\nGuides\n107\nViruses\n0\nEvent",
+    "status": "Model initialized.",
+    "errors": [],
+    "console": []
+  },
+  "progress": {
+    "monitors": "Tick\n15\nRNAP\n25\nCas9\n22\nGuides\n107\nViruses\n1\nEvent\nVirus 29 invaded the cell.",
+    "status": "Steps completed.",
+    "statusState": "success",
+    "errors": [],
+    "console": [],
+    "canvas": [
+      {
+        "width": 1344,
+        "height": 692,
+        "rect": {
+          "x": 312,
+          "y": 115,
+          "width": 672,
+          "height": 346.1796875,
+          "top": 115,
+          "right": 984,
+          "bottom": 461.1796875,
+          "left": 312
+        }
+      }
+    ],
+    "charts": [
+      {
+        "label": "Guides: x 0, y 20; x 1, y 0; x 2, y 0; x 3, y 0; x 4, y 1; x 5, y 0; x 6, y 0; x 7, y 0; x 8, y 7; x 9, y 0; x 10, y 0; x 11, y 0; x 12, y 5; x 13, y 1; x 14, y 1; x 15, y 16; x 16, y 0; x 17, y 0; x 18, y 29; x 19, y 0; x 20, y 0; x 21, y 6; x 22, y 0; x 23, y 0; x 24, y 0; x 25, y 0; x 26, y 0; x 27, y 0; x 28, y 0; x 29, y 21; Array: x 0, y 1; x 1, y 0; x 2, y 0; x 3, y 0; x 4, y 1; x 5, y 0; x 6, y 0; x 7, y 1; x 8, y 1; x 9, y 0; x 10, y 0; x 11, y 0; x 12, y 2; x 13, y 1; x 14, y 1; x 15, y 1; x 16, y 0; x 17, y 0; x 18, y 2; x 19, y 0; x 20, y 0; x 21, y 1; x 22, y 0; x 23, y 0; x 24, y 0; x 25, y 0; x 26, y 0; x 27, y 0; x 28, y 0; x 29, y 3",
+        "paths": 1
+      },
+      {
+        "label": "Cas9: 22; Guides: 107; Cas1/2: 2; Viruses: 1",
+        "paths": 5
+      }
+    ],
+    "overflow": false
+  },
+  "interactions": {
+    "runPause": true,
+    "reset": {
+      "monitors": "Tick\n0\nRNAP\n25\nCas9\n23\nGuides\n107\nViruses\n0\nEvent",
+      "status": "Model initialized.",
+      "errors": [],
+      "console": []
+    }
+  },
+  "immutable": {
+    "buildVersion": "1793972277740",
+    "entryPath": "./chunks/ui-cvnk32yd.js",
+    "modelChunkSHA256": "abc914448abeec2f4b823a97ed50047179fc205023d4d37baa1262f5e5cb3317",
+    "modelChunkBytes": 17570,
+    "sharedChunks": [
+      {
+        "url": "http://localhost:3149/chunks/app-sb7h8whr.js",
+        "sha256": "1f8f6827af1ab753a43b29435d40f5ae716071103930bc3de67ad53ede358d05",
+        "bytes": 1112387
+      }
+    ],
+    "sourceMarker": "selected-disease-gene-b09:crispr-bacterium:e87977797048bf809aa58a41d6dc746c59d6d5e0ba94957db2996815725f4813",
+    "defaultBrowserHeadless": {
+      "tick": 3,
+      "agents": 157,
+      "stopped": false
+    },
+    "appSHA256": "b940b34e8ad4b411cdf542525fe25a49be126707acc89fb427d41d98a4d3bada"
+  },
+  "mobileLayout": {
+    "viewport": [
+      390,
+      844
+    ],
+    "scroll": [
+      0,
+      626.5
+    ],
+    "documentWidth": 390,
+    "canvas": {
+      "x": 16,
+      "y": 0.078125,
+      "width": 358,
+      "height": 184.421875,
+      "top": 0.078125,
+      "right": 374,
+      "bottom": 184.5,
+      "left": 16
+    },
+    "errors": [],
+    "console": []
+  },
+  "settings": {
+    "seed": 1,
+    "progressSteps": 15,
+    "sourceCase": {
+      "slug": "crispr-bacterium",
+      "name": "CRISPR Bacterium",
+      "path": "Sample Models/Biology/CRISPR/CRISPR Bacterium",
+      "setup": "setup",
+      "steps": 15,
+      "action": "common-infection",
+      "reports": [
+        "ticks",
+        "count RNAPs",
+        "count cas9s",
+        "count guide-RNAs",
+        "count viruses",
+        "infected?",
+        "array"
+      ]
+    }
+  },
+  "screenshots": [
+    "crispr-bacterium-target-setup.png",
+    "crispr-bacterium-target-progress.png",
+    "crispr-bacterium-target-desktop-dark.png",
+    "crispr-bacterium-target-mobile-light.png",
+    "crispr-bacterium-target-mobile-dark.png"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "model": "dna-protein-synthesis",
+  "command": "set initial-dna-string \"1 short gene\" setup set event-1-triggered? true reset-completed-events go set event-2-triggered? true reset-completed-events repeat 40 [go] set event-3-triggered? true reset-completed-events go set event-4-triggered? true reset-completed-events go",
+  "title": "DNA Protein Synthesis",
+  "reports": {
+    "ticks": {
+      "success": true,
+      "value": 43
+    },
+    "[code] of genes": {
+      "success": true,
+      "value": [
+        "ATGTGG"
+      ]
+    },
+    "[value] of proteins": {
+      "success": true,
+      "value": [
+        "-Met-Trp"
+      ]
+    },
+    "count proteins": {
+      "success": true,
+      "value": 1
+    }
+  },
+  "errors": [],
+  "text": " powered by NetLogo\nDNA Protein Synthesis\nFile:\nNew\nRevert to Original\nExport:\nNetLogo\nHTML\nMode: Interactive\nCommands and Code: Bottom\nModel Speed\n-\n+\nticks:\n?\nfor shortcuts\nsetup\ngo / stop\ninitial-dna-string\nfrom user-created-code\nno genes (short strand)\nno genes (long strand)\n1 short gene\n1 long gene\n2 sequential genes\n2 nested genes\n3 sequential genes\nrandom (short strand)\nrandom (long strand)\nuser-created-code\n#-nucleotides-affected\n3. trans"
+}

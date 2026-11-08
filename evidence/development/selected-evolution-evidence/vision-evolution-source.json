@@ -1,0 +1,257 @@
+{
+  "sourceSha256": "95001998d3949c25ff56f4ef1b993acc993b56eaea1cf75badbf6e7cda5d86a8",
+  "slug": "vision-evolution",
+  "setupControl": "native setup DOM click",
+  "settings": [
+    {
+      "variable": "initial-number-food",
+      "value": {
+        "success": true,
+        "value": 80
+      }
+    },
+    {
+      "variable": "initial-number-fish",
+      "value": {
+        "success": true,
+        "value": 50
+      }
+    },
+    {
+      "variable": "energy-gain-from-food",
+      "value": {
+        "success": true,
+        "value": 100
+      }
+    },
+    {
+      "variable": "food-replenish-rate",
+      "value": {
+        "success": true,
+        "value": 65
+      }
+    },
+    {
+      "variable": "mutation-rate",
+      "value": {
+        "success": true,
+        "value": 0.1
+      }
+    },
+    {
+      "variable": "reproduction-rate",
+      "value": {
+        "success": true,
+        "value": 35
+      }
+    },
+    {
+      "variable": "eye-cost",
+      "value": {
+        "success": true,
+        "value": 9
+      }
+    },
+    {
+      "variable": "show-vision?",
+      "value": {
+        "success": true,
+        "value": true
+      }
+    },
+    {
+      "variable": "max-eye-size",
+      "value": {
+        "success": true,
+        "value": 5
+      }
+    }
+  ],
+  "setup": {
+    "tick": {
+      "success": true,
+      "value": 0
+    },
+    "turtles": {
+      "success": true,
+      "value": 180
+    },
+    "globals": {
+      "linkDirectedness": "directed",
+      "maxPxcor": 50,
+      "maxPycor": 50,
+      "minPxcor": -50,
+      "minPycor": -50,
+      "nextWhoNumber": 180,
+      "perspective": "observe",
+      "subject": {
+        "referenceType": "nobody"
+      },
+      "ticks": 0,
+      "codeGlobals": {
+        "energy-gain-from-food": 100,
+        "eye-cost": 9,
+        "food-replenish-rate": 65,
+        "initial-number-fish": 50,
+        "initial-number-food": 80,
+        "max-eye-size": 5,
+        "mutation-rate": 0.1,
+        "reproduction-rate": 35,
+        "show-vision?": true
+      }
+    },
+    "monitors": []
+  },
+  "errors": [],
+  "runPause": {
+    "runningThen": true,
+    "pausedNow": true,
+    "after": {
+      "tick": {
+        "success": true,
+        "value": 4
+      },
+      "turtles": {
+        "success": true,
+        "value": 167
+      },
+      "globals": {
+        "linkDirectedness": "directed",
+        "maxPxcor": 50,
+        "maxPycor": 50,
+        "minPxcor": -50,
+        "minPycor": -50,
+        "nextWhoNumber": 182,
+        "perspective": "observe",
+        "subject": {
+          "referenceType": "nobody"
+        },
+        "ticks": 4,
+        "codeGlobals": {
+          "energy-gain-from-food": 100,
+          "eye-cost": 9,
+          "food-replenish-rate": 65,
+          "initial-number-fish": 50,
+          "initial-number-food": 80,
+          "max-eye-size": 5,
+          "mutation-rate": 0.1,
+          "reproduction-rate": 35,
+          "show-vision?": true
+        }
+      },
+      "monitors": []
+    }
+  },
+  "reset": {
+    "command": "random-seed 1 setup",
+    "success": true
+  },
+  "step": {
+    "command": "go",
+    "success": true
+  },
+  "stepState": {
+    "tick": {
+      "success": true,
+      "value": 1
+    },
+    "turtles": {
+      "success": true,
+      "value": 178
+    },
+    "globals": {
+      "linkDirectedness": "directed",
+      "maxPxcor": 50,
+      "maxPycor": 50,
+      "minPxcor": -50,
+      "minPycor": -50,
+      "nextWhoNumber": 181,
+      "perspective": "observe",
+      "subject": {
+        "referenceType": "nobody"
+      },
+      "ticks": 1,
+      "codeGlobals": {
+        "energy-gain-from-food": 100,
+        "eye-cost": 9,
+        "food-replenish-rate": 65,
+        "initial-number-fish": 50,
+        "initial-number-food": 80,
+        "max-eye-size": 5,
+        "mutation-rate": 0.1,
+        "reproduction-rate": 35,
+        "show-vision?": true
+      }
+    },
+    "monitors": []
+  },
+  "progressCommand": {
+    "command": "repeat 9 [ go ]",
+    "success": true
+  },
+  "progress": {
+    "tick": {
+      "success": true,
+      "value": 10
+    },
+    "turtles": {
+      "success": true,
+      "value": 173
+    },
+    "globals": {
+      "linkDirectedness": "directed",
+      "maxPxcor": 50,
+      "maxPycor": 50,
+      "minPxcor": -50,
+      "minPycor": -50,
+      "nextWhoNumber": 193,
+      "perspective": "observe",
+      "subject": {
+        "referenceType": "nobody"
+      },
+      "ticks": 10,
+      "codeGlobals": {
+        "energy-gain-from-food": 100,
+        "eye-cost": 9,
+        "food-replenish-rate": 65,
+        "initial-number-fish": 50,
+        "initial-number-food": 80,
+        "max-eye-size": 5,
+        "mutation-rate": 0.1,
+        "reproduction-rate": 35,
+        "show-vision?": true
+      }
+    },
+    "monitors": []
+  },
+  "probes": {
+    "fixture": {
+      "command": "ask one-of fish [set eye-size 2 set ycor -1]",
+      "success": true
+    },
+    "water": {
+      "success": true,
+      "value": 3.4
+    },
+    "landFixture": {
+      "command": "ask fish with [eye-size = 2] [set ycor 0]",
+      "success": true
+    },
+    "land": {
+      "success": true,
+      "value": 7
+    },
+    "empty": {
+      "command": "clear-turtles go",
+      "success": true
+    },
+    "emptyTick": {
+      "success": true,
+      "value": 10
+    },
+    "emptyEye": {
+      "success": true,
+      "value": 1
+    }
+  }
+}

@@ -1,0 +1,763 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.bibliographic=Quantitative+estimation+of+insulin+sensitivity+Bergman+Ider+Bowden+Cobelli+1979&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 2427753,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                11,
+                5
+              ]
+            ],
+            "date-time": "2026-11-05T17:51:02Z",
+            "timestamp": 1793901062286,
+            "version": "4.8.0"
+          },
+          "reference-count": 25,
+          "publisher": "American Physiological Society",
+          "issue": "6",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "American Journal of Physiology-Endocrinology and Metabolism"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1979,
+                6,
+                1
+              ]
+            ]
+          },
+          "abstract": "<jats:p>We have evaluated the feasibility of using a mathematical model of glucose disappearance to estimate insulin sensitivity. Glucose was injected into conscious dogs at 100, 200, or 300 mg/kg. The measured time course of insulin was regarded as the \"input,\" and the falling glucose concentration as the \"output\" of the physiological system storing and using glucose. Seven mathematical models of glucose uptake were compared to identify the representation most capable of simulating glucose disappearance. One specific nonlinear model was superior in that it 1) predicted the time course of glucose after glucose injection, 2) had four parameters that could be precisely estimated, and 3) described individual experiments with similar parameter values. Insulin sensitivity index (SI), defined as the dependence of fractional glucose disappearance on plasma insulin, was the ratio of two parameters of the chosen model and could be estimated with good reproducibility from the 300 mg/kg injection experiments (SI = 7.00 X 10(-4) +/- 24% (coefficient of variation) min-1/(microU/ml) (n = 8)). Thus, from a single glucose injection it is possible to obtain a quantitative index of insulin sensitivity that may have clinical applicability.</jats:p>",
+          "DOI": "10.1152/ajpendo.1979.236.6.e667",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2017,
+                12,
+                24
+              ]
+            ],
+            "date-time": "2017-12-24T12:13:21Z",
+            "timestamp": 1514117601000
+          },
+          "page": "E667",
+          "source": "Crossref",
+          "is-referenced-by-count": 611,
+          "title": [
+            "Quantitative estimation of insulin sensitivity."
+          ],
+          "prefix": "10.1152",
+          "volume": "236",
+          "author": [
+            {
+              "given": "R N",
+              "family": "Bergman",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Y Z",
+              "family": "Ider",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "C R",
+              "family": "Bowden",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "C",
+              "family": "Cobelli",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "24",
+          "reference": [
+            {
+              "key": "p_1",
+              "first-page": "21",
+              "volume": "27",
+              "author": "ACKERMAN E,, L",
+              "year": "1965",
+              "journal-title": "Biophys."
+            },
+            {
+              "key": "p_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1088/0031-9155/9/2/307"
+            },
+            {
+              "key": "p_4",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1109/TAC.1974.1100705"
+            },
+            {
+              "key": "p_5",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0022-5193(71)90152-4"
+            },
+            {
+              "key": "p_8",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1172/JCI107011"
+            },
+            {
+              "key": "p_9",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1210/jcem-25-10-1375"
+            },
+            {
+              "key": "p_10",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1172/JCI108565"
+            },
+            {
+              "key": "p_11",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1115/1.3426718"
+            },
+            {
+              "key": "p_12",
+              "doi-asserted-by": "crossref",
+              "first-page": "1314",
+              "DOI": "10.1152/ajplegacy.1974.227.6.1314",
+              "volume": "227",
+              "author": "BERGMAN R, N",
+              "year": "1974",
+              "journal-title": "Am. J. Physiol."
+            },
+            {
+              "key": "p_13",
+              "first-page": "583",
+              "volume": "27",
+              "author": "BERGMAN R. N.",
+              "year": "1971",
+              "journal-title": "Recent Prog. Horm. Res."
+            },
+            {
+              "key": "p_14",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1152/jappl.1961.16.5.783"
+            },
+            {
+              "key": "p_16",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1210/endo-83-3-572"
+            },
+            {
+              "key": "p_18",
+              "first-page": "1841",
+              "volume": "33",
+              "author": "HETENYI G",
+              "year": "1974",
+              "journal-title": "Federation Proc."
+            },
+            {
+              "key": "p_19",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1172/JCI108006"
+            },
+            {
+              "key": "p_20",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0025-5564(75)90110-8"
+            },
+            {
+              "key": "p_21",
+              "first-page": "431",
+              "volume": "11",
+              "author": "MARQUARDT D. W",
+              "year": "1963",
+              "journal-title": "Math"
+            },
+            {
+              "key": "p_22",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2337/diab.22.7.507"
+            },
+            {
+              "key": "p_23",
+              "first-page": "1855",
+              "volume": "33",
+              "author": "RADZIUK J., K",
+              "year": "1974",
+              "journal-title": "Federation Proc."
+            },
+            {
+              "key": "p_24",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF01234496"
+            },
+            {
+              "key": "p_25",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2337/diab.22.2.94"
+            },
+            {
+              "key": "p_26",
+              "first-page": "63",
+              "volume": "19",
+              "author": "SHANNON J. A",
+              "year": "1939",
+              "journal-title": "Rev."
+            },
+            {
+              "key": "p_27",
+              "first-page": "2X",
+              "volume": "49",
+              "author": "SHEN S.-W.",
+              "year": "1970",
+              "journal-title": "J. Clin. Inuest."
+            },
+            {
+              "key": "p_28",
+              "first-page": "1481",
+              "volume": "53",
+              "author": "SHERWIN R. S.",
+              "year": "1974",
+              "journal-title": "J. CZin. Inu~t."
+            },
+            {
+              "key": "p_29",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1172/JCI108275"
+            },
+            {
+              "key": "p_30",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1172/JCI109054"
+            }
+          ],
+          "container-title": [
+            "American Journal of Physiology-Endocrinology and Metabolism"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://www.physiology.org/doi/pdf/10.1152/ajpendo.1979.236.6.E667",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2019,
+                9,
+                8
+              ]
+            ],
+            "date-time": "2019-09-08T21:39:54Z",
+            "timestamp": 1567978794000
+          },
+          "score": 68.840965,
+          "resource": {
+            "primary": {
+              "URL": "https://www.physiology.org/doi/10.1152/ajpendo.1979.236.6.E667"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1979,
+                6,
+                1
+              ]
+            ]
+          },
+          "references-count": 25,
+          "journal-issue": {
+            "issue": "6",
+            "published-print": {
+              "date-parts": [
+                [
+                  1979,
+                  6,
+                  1
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1152/ajpendo.1979.236.6.E667"
+          ],
+          "URL": "https://doi.org/10.1152/ajpendo.1979.236.6.e667",
+          "ISSN": [
+            "0193-1849",
+            "1522-1555"
+          ],
+          "issn-type": [
+            {
+              "value": "0193-1849",
+              "type": "print"
+            },
+            {
+              "value": "1522-1555",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1979,
+                6,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                5
+              ]
+            ],
+            "date-time": "2026-10-05T08:04:10Z",
+            "timestamp": 1791187450706,
+            "version": "4.1.0"
+          },
+          "reference-count": 0,
+          "publisher": "American Diabetes Association",
+          "issue": "12",
+          "content-domain": {
+            "domain": [
+              "diabetesjournals.org"
+            ],
+            "crossmark-restriction": true
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                1980,
+                12,
+                1
+              ]
+            ]
+          },
+          "abstract": "<jats:p>We propose an approach to quantifying the sensitivity of B cells to glucose in the intact organism, whereby we interpret the complex dynamic plasma insulin response to glucose injection in terms of a minimal mathematical model of posthepatic insulin delivery and insulin clearance. The best model for this purpose was chosen by comparing the ability of a series of proposed models to account precisely for plasma insulin dynamics. Intravenous glucose tolerance tests (IVGTT) (300 mg/kg) were performed on conscious dogs, and blood was sampled frequently until the basal steady state was reestablished. Glucose injection produced variable plasma insulin responses, which were characterized by an early peak (76 \u03bcU/ml above basal), a plateau with occasional additional peaks, and by an abrupt return of plasma insulin to basal by 37 min. A set of eight models was examined; one emerged as superior, in that it was able to account for insulin dynamics with the smallest number of physiologically meaningful parameters (N = 4). The chosen (minimal) model assumes that (1) clearance of insulin is of the first order, (2) the initial peak represents a bolus of insulin loaded into the plasma after the glucose injection, and (3) the rate of the secondary rise in insulin is determined by the concentration of glucose in plasma above a specific threshold value. The sensitivity of first phase insulin delivery to glucose (\u03c61; 1.28 \u00b1 0.15 \u03bcU/ml per min per mg/dl), the sensitivity of the secondary phase to glucose concentration [\u03c62; 0.038 \u00b1 0.005 (\u03bcU/mg) \u00b7 min\u22122], and the threshold for glucose stimulation of second phase secretion (h; 125 \u00b1 8 mg/100 ml) were all precisely estimated from the dynamic insulin responses.These three parameters of insulin kinetics (\u03c61,\u03c62, and h) can be calculated from a single IVGTT, and theycharacterize the insulin responsivity of a single individual. Estimating these characteristic parameters of insulin kinetics from IVGTT data has potential for quantitating the individual factors contributing to glucose-stimulated insulin secretion in intact animal models, and it may be applicable to man.</jats:p>",
+          "DOI": "10.2337/diab.29.12.979",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2013,
+                9,
+                19
+              ]
+            ],
+            "date-time": "2013-09-19T17:16:02Z",
+            "timestamp": 1379610962000
+          },
+          "page": "979-990",
+          "update-policy": "https://doi.org/10.2337/ada-journal-policies",
+          "source": "Crossref",
+          "is-referenced-by-count": 157,
+          "title": [
+            "Quantitative Estimation of Beta Cell Sensitivity to Glucose in the Intact Organism: A Minimal Model of Insulin Kinetics in the Dog"
+          ],
+          "prefix": "10.2337",
+          "volume": "29",
+          "author": [
+            {
+              "given": "Gianna",
+              "family": "Toffolo",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Department of Physiology and Biophysics, USC School of Medicine\u2008Los Angeles, CA 90033\u2008Istituto of Elettrotecnica e di Elettronic\u00e0, Universita di Padova\u200835100 Padova, Italy"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Richard N",
+              "family": "Bergman",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Department of Physiology and Biophysics, USC School of Medicine\u2008Los Angeles, CA 90033\u2008Istituto of Elettrotecnica e di Elettronic\u00e0, Universita di Padova\u200835100 Padova, Italy"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Diane T",
+              "family": "Finegood",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Department of Physiology and Biophysics, USC School of Medicine\u2008Los Angeles, CA 90033\u2008Istituto of Elettrotecnica e di Elettronic\u00e0, Universita di Padova\u200835100 Padova, Italy"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Charles R",
+              "family": "Bowden",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Department of Physiology and Biophysics, USC School of Medicine\u2008Los Angeles, CA 90033\u2008Istituto of Elettrotecnica e di Elettronic\u00e0, Universita di Padova\u200835100 Padova, Italy"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Claudio",
+              "family": "Cobelli",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Department of Physiology and Biophysics, USC School of Medicine\u2008Los Angeles, CA 90033\u2008Istituto of Elettrotecnica e di Elettronic\u00e0, Universita di Padova\u200835100 Padova, Italy"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "1167",
+          "container-title": [
+            "Diabetes"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://journals.org/diabetes/diabetes/article-pdf/29/12/979/350856/29-12-979.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "syndication"
+            },
+            {
+              "URL": "https://diabetesjournals.org/diabetes/article-pdf/29/12/979/350856/29-12-979.pdf",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2022,
+                11,
+                2
+              ]
+            ],
+            "date-time": "2022-11-02T16:33:16Z",
+            "timestamp": 1667406796000
+          },
+          "score": 47.184486,
+          "resource": {
+            "primary": {
+              "URL": "https://diabetesjournals.org/diabetes/article/29/12/979/5869/Quantitative-Estimation-of-Beta-Cell-Sensitivity"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1980,
+                12,
+                1
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "12",
+            "published-print": {
+              "date-parts": [
+                [
+                  1980,
+                  12,
+                  1
+                ]
+              ]
+            }
+          },
+          "URL": "https://doi.org/10.2337/diab.29.12.979",
+          "ISSN": [
+            "0012-1797",
+            "1939-327X"
+          ],
+          "issn-type": [
+            {
+              "value": "0012-1797",
+              "type": "print"
+            },
+            {
+              "value": "1939-327X",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1980,
+                12,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                5,
+                9
+              ]
+            ],
+            "date-time": "2026-05-09T03:51:47Z",
+            "timestamp": 1778298707681,
+            "version": "3.51.4"
+          },
+          "reference-count": 0,
+          "publisher": "American Diabetes Association",
+          "issue": "12",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Diabetes"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1980,
+                12,
+                1
+              ]
+            ]
+          },
+          "DOI": "10.2337/diabetes.29.12.979",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2007,
+                3,
+                6
+              ]
+            ],
+            "date-time": "2007-03-06T19:04:22Z",
+            "timestamp": 1173207862000
+          },
+          "page": "979-990",
+          "source": "Crossref",
+          "is-referenced-by-count": 68,
+          "title": [
+            "Quantitative estimation of beta cell sensitivity to glucose in the intact organism: a minimal model of insulin kinetics in the dog"
+          ],
+          "prefix": "10.2337",
+          "volume": "29",
+          "author": [
+            {
+              "given": "G.",
+              "family": "Toffolo",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "R. N.",
+              "family": "Bergman",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "D. T.",
+              "family": "Finegood",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "C. R.",
+              "family": "Bowden",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "C.",
+              "family": "Cobelli",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "1167",
+          "container-title": [
+            "Diabetes"
+          ],
+          "language": "en",
+          "deposited": {
+            "date-parts": [
+              [
+                2011,
+                6,
+                4
+              ]
+            ],
+            "date-time": "2011-06-04T06:37:41Z",
+            "timestamp": 1307169461000
+          },
+          "score": 45.996815,
+          "resource": {
+            "primary": {
+              "URL": "http://diabetes.diabetesjournals.org/cgi/doi/10.2337/diabetes.29.12.979"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1980,
+                12,
+                1
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "12",
+            "published-print": {
+              "date-parts": [
+                [
+                  1980,
+                  12,
+                  1
+                ]
+              ]
+            }
+          },
+          "URL": "https://doi.org/10.2337/diabetes.29.12.979",
+          "ISSN": [
+            "0012-1797",
+            "0012-1797"
+          ],
+          "issn-type": [
+            {
+              "value": "0012-1797",
+              "type": "print"
+            },
+            {
+              "value": "0012-1797",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1980,
+                12,
+                1
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

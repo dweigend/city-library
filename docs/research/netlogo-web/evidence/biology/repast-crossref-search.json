@@ -1,0 +1,1517 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=Experiences+creating+three+implementations+of+the+repast+agent+modeling+toolkit+North+Collier+Vos+2006&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 2949099,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                11,
+                4
+              ]
+            ],
+            "date-time": "2026-11-04T22:24:43Z",
+            "timestamp": 1793831083676,
+            "version": "4.6.1"
+          },
+          "reference-count": 67,
+          "publisher": "Association for Computing Machinery (ACM)",
+          "issue": "1",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2006,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2006-01-01T00:00:00Z",
+                "timestamp": 1136073600000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "https://www.acm.org/publications/policies/copyright_policy#Background"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "dl.acm.org"
+            ],
+            "crossmark-restriction": true
+          },
+          "short-container-title": [
+            "ACM Trans. Model. Comput. Simul."
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2006,
+                1
+              ]
+            ]
+          },
+          "abstract": "<jats:p>Many agent-based modeling and simulation researchers and practitioners have called for varying levels of simulation interoperability ranging from shared software architectures to common agent communications languages. These calls have been at least partially answered by several specifications and technologies. In fact, Tanenbaum [1988] has remarked that the \u201cnice thing about standards is that there are so many to choose from.\u201d Tanenbaum goes on to say that \u201cif you do not like any of them, you can just wait for next year's model.\u201d This article does not seek to introduce next year's model. Rather, the goal is to contribute to the larger simulation community the authors' accumulated experiences from developing several implementations of an agent-based simulation toolkit. As such, this article focuses on the implementation of simulation architectures rather than agent communications languages. It is hoped that ongoing architecture standards efforts will benefit from this new knowledge and use it to produce architecture standards with increased robustness.</jats:p>",
+          "DOI": "10.1145/1122012.1122013",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2006,
+                5,
+                8
+              ]
+            ],
+            "date-time": "2006-05-08T16:09:20Z",
+            "timestamp": 1147104560000
+          },
+          "page": "1-25",
+          "update-policy": "https://doi.org/10.1145/crossmark-policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 441,
+          "title": [
+            "Experiences creating three implementations of the repast agent modeling toolkit"
+          ],
+          "prefix": "10.1145",
+          "volume": "16",
+          "author": [
+            {
+              "given": "Michael J.",
+              "family": "North",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Argonne National Laboratory, Argonne, IL"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Nicholson T.",
+              "family": "Collier",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Argonne National Laboratory, Argonne, IL"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Jerry R.",
+              "family": "Vos",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Argonne National Laboratory, Argonne, IL"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "320",
+          "published-online": {
+            "date-parts": [
+              [
+                2006,
+                1
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "e_1_2_1_1_1",
+              "unstructured": "Archer T. 2001. Inside C&num;. Microsoft Press Redmond WA.]]   Archer T. 2001. Inside C&num;. Microsoft Press Redmond WA.]]"
+            },
+            {
+              "key": "e_1_2_1_2_1",
+              "volume-title": "Proceedings of the Simulation Interoperability Standards Organization Spring Simulation Interoperability Workshop, IEEE Kisimmee, FL USA.]]",
+              "author": "Aronson J.",
+              "unstructured": "Aronson , J. , Manikonda , V. , Peng , W. , Levy , R. , and Roth , K . 2003. An HLA compliant agent-based fast-time simulation architecture for analysis of civil aviation concepts . In Proceedings of the Simulation Interoperability Standards Organization Spring Simulation Interoperability Workshop, IEEE Kisimmee, FL USA.]] Aronson, J., Manikonda, V., Peng, W., Levy, R., and Roth, K. 2003. An HLA compliant agent-based fast-time simulation architecture for analysis of civil aviation concepts. In Proceedings of the Simulation Interoperability Standards Organization Spring Simulation Interoperability Workshop, IEEE Kisimmee, FL USA.]]"
+            },
+            {
+              "key": "e_1_2_1_3_1",
+              "volume-title": "Proceedings of the Simulation Interoperability Standards Organization Spring Simulation Interoperability Workshop, IEEE",
+              "author": "Bachinsky S. T.",
+              "unstructured": "Bachinsky , S. T. , Mellon , L. , Tarbox , G. H. , and Fujimoto , R . 1998. RTI 2.0 architecture . In Proceedings of the Simulation Interoperability Standards Organization Spring Simulation Interoperability Workshop, IEEE , Orlando, FL.]] Bachinsky, S. T., Mellon, L., Tarbox, G. H., and Fujimoto, R. 1998. RTI 2.0 architecture. In Proceedings of the Simulation Interoperability Standards Organization Spring Simulation Interoperability Workshop, IEEE, Orlando, FL.]]"
+            },
+            {
+              "key": "e_1_2_1_4_1",
+              "unstructured": "Baird D. G. Gertner R. H. and Picker R. C. 1998. Game Theory and the Law. Harvard University Press Cambridge MA USA.]]  Baird D. G. Gertner R. H. and Picker R. C. 1998. Game Theory and the Law. Harvard University Press Cambridge MA USA.]]"
+            },
+            {
+              "key": "e_1_2_1_5_1",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Bauer B. M\u00fcller J. P. and Odell J. 2001. Agent UML: A formalism for specifying multiagent interaction. In Agent-Oriented Software Engineering Ciancarini P. and Wooldridge M. Eds. Springer-Verlag Berlin Germany 91--103.]]   Bauer B. M\u00fcller J. P. and Odell J. 2001. Agent UML: A formalism for specifying multiagent interaction. In Agent-Oriented Software Engineering Ciancarini P. and Wooldridge M. Eds. Springer-Verlag Berlin Germany 91--103.]]",
+              "DOI": "10.1007/3-540-44564-1_6"
+            },
+            {
+              "key": "e_1_2_1_6_1",
+              "volume-title": "Proceedings of the 1996 Knowledge Acquisition Workshop",
+              "author": "Bradshaw J.",
+              "year": "1996",
+              "unstructured": "Bradshaw , J. 1996 . KAoS: An open agent architecture supporting reuse, interoperability, and extensibility . In Proceedings of the 1996 Knowledge Acquisition Workshop , Banff, Alberta, Canada, University of Calgary.]] Bradshaw, J. 1996. KAoS: An open agent architecture supporting reuse, interoperability, and extensibility. In Proceedings of the 1996 Knowledge Acquisition Workshop, Banff, Alberta, Canada, University of Calgary.]]"
+            },
+            {
+              "key": "e_1_2_1_7_1",
+              "volume-title": "An introduction to software agents",
+              "author": "Bradshaw J.",
+              "unstructured": "Bradshaw , J. 1997. An introduction to software agents . In Software Agents. J. Bradshaw, Ed. AAAI Press, Menlo Park, CA .]] Bradshaw, J. 1997. An introduction to software agents. In Software Agents. J. Bradshaw, Ed. AAAI Press, Menlo Park, CA.]]"
+            },
+            {
+              "key": "e_1_2_1_8_1",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Brantingham P. 2003. A neutral model of stone raw material procurement. American Antiquity 487--509.]]  Brantingham P. 2003. A neutral model of stone raw material procurement. American Antiquity 487--509.]]",
+              "DOI": "10.2307/3557105"
+            },
+            {
+              "key": "e_1_2_1_9_1",
+              "article-title": "Spatial process and data models: Toward integration of agent-based models and GIS",
+              "author": "Brown D. G.",
+              "year": "2005",
+              "unstructured": "Brown , D. G. , Riolo , R. , Robinson , D. T. , North , M. J. , and Rand , W. 2005 . Spatial process and data models: Toward integration of agent-based models and GIS . Journal of Geological Society.]] Brown, D. G., Riolo, R., Robinson, D. T., North, M. J., and Rand, W. 2005. Spatial process and data models: Toward integration of agent-based models and GIS. Journal of Geological Society.]]",
+              "journal-title": "Journal of Geological Society.]]"
+            },
+            {
+              "key": "e_1_2_1_10_1",
+              "unstructured": "Burkhart R. Askenazi M. and Minar N. 2000. Swarm release documentation. www.santafe.edu/projects/swarm/swarmdocs/set/set.html.]]  Burkhart R. Askenazi M. and Minar N. 2000. Swarm release documentation. www.santafe.edu/projects/swarm/swarmdocs/set/set.html.]]"
+            },
+            {
+              "key": "e_1_2_1_11_1",
+              "volume-title": "Proceedings of the 1997 Winter Simulation Conference, ACM",
+              "author": "Cavitt D. B.",
+              "unstructured": "Cavitt , D. B. , Overstreet , C. M. , and Maly , K. J . 1997. A performance monitoring application for distributed interactive simulations (DIS) . In Proceedings of the 1997 Winter Simulation Conference, ACM , Atlanta, GA, USA.]] 10.1145/268437.268519 Cavitt, D. B., Overstreet, C. M., and Maly, K. J. 1997. A performance monitoring application for distributed interactive simulations (DIS). In Proceedings of the 1997 Winter Simulation Conference, ACM, Atlanta, GA, USA.]] 10.1145/268437.268519"
+            },
+            {
+              "key": "e_1_2_1_12_1",
+              "volume-title": "Workshop on Simulation of Social Agents: Architectures and Institutions",
+              "author": "Cederman L.-E.",
+              "year": "2001",
+              "unstructured": "Cederman , L.-E. 2001 . Modeling the co-evolution of states and nations . In Workshop on Simulation of Social Agents: Architectures and Institutions , Chicago, IL, Oct. 4--6 , 1997, Argonne National Laboratory.]] Cederman, L.-E. 2001. Modeling the co-evolution of states and nations. In Workshop on Simulation of Social Agents: Architectures and Institutions, Chicago, IL, Oct. 4--6, 1997, Argonne National Laboratory.]]"
+            },
+            {
+              "issue": "90003",
+              "key": "e_1_2_1_13_1",
+              "doi-asserted-by": "crossref",
+              "first-page": "7296",
+              "DOI": "10.1073/pnas.082081099",
+              "article-title": "Endogenizing geopolitical boundaries with agent-based modeling",
+              "volume": "99",
+              "author": "Cederman L.-E.",
+              "year": "2002",
+              "unstructured": "Cederman , L.-E. 2002 . Endogenizing geopolitical boundaries with agent-based modeling . In Proceedings National Academy of Sciences 99 ( 90003 ), 7296 -- 7303 .]] Cederman, L.-E. 2002. Endogenizing geopolitical boundaries with agent-based modeling. In Proceedings National Academy of Sciences 99(90003), 7296--7303.]]",
+              "journal-title": "Proceedings National Academy of Sciences"
+            },
+            {
+              "key": "e_1_2_1_14_1",
+              "volume-title": "First Annual North American Association for Computational Social and Organizational Science Conference.",
+              "author": "Collier N.",
+              "unstructured": "Collier , N. , Howe , T. , and North , M. J . 2003. Onward and upward: The transition to Repast 2.0 . In First Annual North American Association for Computational Social and Organizational Science Conference. ( Pittsburgh, PA USA), North American Association for Computational Social and Organizational Science.]] Collier, N., Howe, T., and North, M. J. 2003. Onward and upward: The transition to Repast 2.0. In First Annual North American Association for Computational Social and Organizational Science Conference. (Pittsburgh, PA USA), North American Association for Computational Social and Organizational Science.]]"
+            },
+            {
+              "key": "e_1_2_1_15_1",
+              "unstructured": "Coplien J. O. 2001. Software Patterns Page. www.hillside.net/patterns/.]]  Coplien J. O. 2001. Software Patterns Page. www.hillside.net/patterns/.]]"
+            },
+            {
+              "key": "e_1_2_1_16_1",
+              "unstructured": "DMSO. 2005. High Level Architecture Home Page. U.S. Defense Modeling and Simulation Office www.dmso.mil/public/transition/hla.]]  DMSO. 2005. High Level Architecture Home Page. U.S. Defense Modeling and Simulation Office www.dmso.mil/public/transition/hla.]]"
+            },
+            {
+              "key": "e_1_2_1_17_1",
+              "unstructured": "DMSO. 2004. HLA RTI Verification Status Board. Defense Modeling and Simulation Office www.dmso.mil/public/transition/hla/statusboard.]]  DMSO. 2004. HLA RTI Verification Status Board. Defense Modeling and Simulation Office www.dmso.mil/public/transition/hla/statusboard.]]"
+            },
+            {
+              "key": "e_1_2_1_18_1",
+              "unstructured": "ECLIPSE. 2004. Eclipse Home Page. The Eclipse Project www.eclipse.org/.]]  ECLIPSE. 2004. Eclipse Home Page. The Eclipse Project www.eclipse.org/.]]"
+            },
+            {
+              "key": "e_1_2_1_19_1",
+              "volume-title": "Foundation for Intelligent Physical Agents Publicly Available Agent Platform Implementations",
+              "unstructured": "FIPA. 2003. Foundation for Intelligent Physical Agents Publicly Available Agent Platform Implementations . Alameda, CA , FIPA. http://www.fipa.org/resources/livesystems.html]] FIPA. 2003. Foundation for Intelligent Physical Agents Publicly Available Agent Platform Implementations. Alameda, CA, FIPA. http://www.fipa.org/resources/livesystems.html]]"
+            },
+            {
+              "key": "e_1_2_1_20_1",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Flores-Mendez R. A. 1999. Towards a standardization of multi-agent system frameworks. ACM Crossroads 5.]] 10.1145/331648.331659   Flores-Mendez R. A. 1999. Towards a standardization of multi-agent system frameworks. ACM Crossroads 5.]] 10.1145/331648.331659",
+              "DOI": "10.1145/331648.331659"
+            },
+            {
+              "key": "e_1_2_1_21_1",
+              "volume-title": "Refactoring: Improving the Design of Existing Code",
+              "author": "Fowler M.",
+              "year": "1999",
+              "unstructured": "Fowler , M. , Beck , K. , Brant , J. , Opdyke , W. , and Roberts , D . 1999 . Refactoring: Improving the Design of Existing Code . Addison-Wesley , Redwood City, CA .]] Fowler, M., Beck, K., Brant, J., Opdyke, W., and Roberts, D. 1999. Refactoring: Improving the Design of Existing Code. Addison-Wesley, Redwood City, CA.]]"
+            },
+            {
+              "key": "e_1_2_1_22_1",
+              "unstructured": "Foxwell H. 1999. Java 2 software development kit. Linux Journal.]]   Foxwell H. 1999. Java 2 software development kit. Linux Journal.]]"
+            },
+            {
+              "key": "e_1_2_1_23_1",
+              "volume-title": "Design Patterns: Elements of Reusable Object-Oriented Software",
+              "author": "Gamma E.",
+              "year": "1994",
+              "unstructured": "Gamma , E. , Helm , R. , Johnson , R. , and Vlissides . J. 1994 . Design Patterns: Elements of Reusable Object-Oriented Software . Addison-Wesley , Wokingham, UK .]] Gamma, E., Helm, R., Johnson, R., and Vlissides. J. 1994. Design Patterns: Elements of Reusable Object-Oriented Software. Addison-Wesley, Wokingham, UK.]]"
+            },
+            {
+              "key": "e_1_2_1_24_1",
+              "volume-title": "MASON Home Page",
+              "author": "George Mason University",
+              "unstructured": "George Mason University . 2004. MASON Home Page . George Mason University , Fairfax, VA , http://cs.gmu.edu/~eclab/projects/mason/.]] George Mason University. 2004. MASON Home Page. George Mason University, Fairfax, VA, http://cs.gmu.edu/~eclab/projects/mason/.]]"
+            },
+            {
+              "issue": "3",
+              "key": "e_1_2_1_25_1",
+              "doi-asserted-by": "crossref",
+              "first-page": "7197",
+              "DOI": "10.1073/pnas.072079499",
+              "article-title": "Platforms and Methods for Agent-based Modeling",
+              "volume": "99",
+              "author": "Gilbert N.",
+              "year": "2002",
+              "unstructured": "Gilbert , N. and Bankes , S. 2002 . Platforms and Methods for Agent-based Modeling . In Proceedings of the National Academy of Sciences of the USA , 99 ( 3 ), 7197 -- 7198 .]] Gilbert, N. and Bankes, S. 2002. Platforms and Methods for Agent-based Modeling. In Proceedings of the National Academy of Sciences of the USA, 99 (3), 7197--7198.]]",
+              "journal-title": "Proceedings of the National Academy of Sciences of the USA"
+            },
+            {
+              "key": "e_1_2_1_26_1",
+              "volume-title": "Essentials of Artificial Intelligence",
+              "author": "Ginsberg M. L.",
+              "unstructured": "Ginsberg , M. L. 1993. Essentials of Artificial Intelligence , Morgan Kaufmann Publishers .]] Ginsberg, M. L. 1993. Essentials of Artificial Intelligence, Morgan Kaufmann Publishers.]]"
+            },
+            {
+              "key": "e_1_2_1_27_1",
+              "volume-title": "Genetic Algorithms in Search, Optimization, and Machine Learning",
+              "author": "Goldberg D. E.",
+              "unstructured": "Goldberg , D. E. 1989. Genetic Algorithms in Search, Optimization, and Machine Learning . Addison-Wesley , Redwood City, CA .]] Goldberg, D. E. 1989. Genetic Algorithms in Search, Optimization, and Machine Learning. Addison-Wesley, Redwood City, CA.]]"
+            },
+            {
+              "key": "e_1_2_1_28_1",
+              "volume-title": "Computer Science Logo Style",
+              "author": "Harvey B.",
+              "unstructured": "Harvey , B. 1997. Computer Science Logo Style . MIT Press , Boston, MA ,]] Harvey, B. 1997. Computer Science Logo Style. MIT Press, Boston, MA,]]"
+            },
+            {
+              "key": "e_1_2_1_29_1",
+              "first-page": "1",
+              "article-title": "IEEE Standard for Distributed Interactive Simulation---Application Protocols",
+              "volume": "1278",
+              "author": "IEEE.",
+              "year": "1995",
+              "unstructured": "IEEE. 1995 a. IEEE Standard for Distributed Interactive Simulation---Application Protocols , Institute of Electrical and Electronics Engineers , 1278 . 1 - 1995 .]] IEEE. 1995a. IEEE Standard for Distributed Interactive Simulation---Application Protocols, Institute of Electrical and Electronics Engineers, 1278.1-1995.]]",
+              "journal-title": "Institute of Electrical and Electronics Engineers"
+            },
+            {
+              "key": "e_1_2_1_30_1",
+              "first-page": "2",
+              "article-title": "IEEE Standard for Distributed Interactive Simulation---Communication Services",
+              "volume": "1278",
+              "author": "IEEE.",
+              "year": "1995",
+              "unstructured": "IEEE. 1995 b. IEEE Standard for Distributed Interactive Simulation---Communication Services , Institute of Electrical and Electronics Engineers , 1278 . 2 - 1995 .]] IEEE. 1995b. IEEE Standard for Distributed Interactive Simulation---Communication Services, Institute of Electrical and Electronics Engineers, 1278.2-1995.]]",
+              "journal-title": "Institute of Electrical and Electronics Engineers"
+            },
+            {
+              "key": "e_1_2_1_31_1",
+              "volume-title": "IEEE Standard for Modeling and Simulation (M&S) High Level Architecture (HLA)---Framework and Rules",
+              "unstructured": "IEEE. 2001a. IEEE Standard for Modeling and Simulation (M&S) High Level Architecture (HLA)---Framework and Rules , Institute of Electrical and Electronics Engineers , P1516.]] IEEE. 2001a. IEEE Standard for Modeling and Simulation (M&S) High Level Architecture (HLA)---Framework and Rules, Institute of Electrical and Electronics Engineers, P1516.]]"
+            },
+            {
+              "key": "e_1_2_1_32_1",
+              "volume-title": "IEEE Standard for Modeling and Simulation (M&S) High Level Architecture (HLA)---Federate Interface Specification",
+              "unstructured": "IEEE. 2001b. IEEE Standard for Modeling and Simulation (M&S) High Level Architecture (HLA)---Federate Interface Specification , Institute of Electrical and Electronics Engineers , P1516.1.]] IEEE. 2001b. IEEE Standard for Modeling and Simulation (M&S) High Level Architecture (HLA)---Federate Interface Specification, Institute of Electrical and Electronics Engineers, P1516.1.]]"
+            },
+            {
+              "key": "e_1_2_1_33_1",
+              "volume-title": "IEEE Standard for Modeling and Simulation (M&S) High Level Architecture (HLA)---Object Model Template (OMT) Specification",
+              "unstructured": "IEEE. 2001c. IEEE Standard for Modeling and Simulation (M&S) High Level Architecture (HLA)---Object Model Template (OMT) Specification , Institute of Electrical and Electronics Engineers , P1516.2.]] IEEE. 2001c. IEEE Standard for Modeling and Simulation (M&S) High Level Architecture (HLA)---Object Model Template (OMT) Specification, Institute of Electrical and Electronics Engineers, P1516.2.]]"
+            },
+            {
+              "issue": "3",
+              "key": "e_1_2_1_34_1",
+              "doi-asserted-by": "crossref",
+              "first-page": "7304",
+              "DOI": "10.1073/pnas.082081199",
+              "article-title": "Overcoming design and development challenges in agent-based modeling using ASCAPE",
+              "volume": "99",
+              "author": "Inchiosa M. E.",
+              "year": "2002",
+              "unstructured": "Inchiosa , M. E. and Parker , M. T. 2002 . Overcoming design and development challenges in agent-based modeling using ASCAPE . In Proceedings National Academy of Sciences , 99 ( 3 ), 7304 -- 7308 .]] Inchiosa, M. E. and Parker, M. T. 2002. Overcoming design and development challenges in agent-based modeling using ASCAPE. In Proceedings National Academy of Sciences, 99 (3), 7304--7308.]]",
+              "journal-title": "Proceedings National Academy of Sciences"
+            },
+            {
+              "key": "e_1_2_1_35_1",
+              "volume-title": "Proceedings of the 4th Asia-Pacific Conference on Simulated Evolution and Learning",
+              "author": "Kampis G.",
+              "year": "2002",
+              "unstructured": "Kampis , G. 2002 . A causal model of evolution . In Proceedings of the 4th Asia-Pacific Conference on Simulated Evolution and Learning , Singapore.]] Kampis, G. 2002. A causal model of evolution. In Proceedings of the 4th Asia-Pacific Conference on Simulated Evolution and Learning, Singapore.]]"
+            },
+            {
+              "key": "e_1_2_1_36_1",
+              "unstructured": "Kampis G. and Gulyas L. 2003. Causal structures in embodied systems. The European Research Consortium for Informatics and Mathematics News 53.]]  Kampis G. and Gulyas L. 2003. Causal structures in embodied systems. The European Research Consortium for Informatics and Mathematics News 53.]]"
+            },
+            {
+              "key": "e_1_2_1_37_1",
+              "volume-title": "5th International Workshop on Emergent Synthesis.]]",
+              "author": "Kampis G.",
+              "unstructured": "Kampis , G. and Gulyas , L . 2004. Out of interaction: A phenotype based model of species evolution . Accepted for the 5th International Workshop on Emergent Synthesis.]] Kampis, G. and Gulyas, L. 2004. Out of interaction: A phenotype based model of species evolution. Accepted for the 5th International Workshop on Emergent Synthesis.]]"
+            },
+            {
+              "key": "e_1_2_1_38_1",
+              "volume-title": "Proceedings of the 1999 Hawaii International Conference on System Sciences, IEEE",
+              "author": "Labrou Y.",
+              "unstructured": "Labrou , Y. , Finin , T. , and Peng , Y . 1999. The interoperability problem: Bringing together mobile agents and agent communication languages . In Proceedings of the 1999 Hawaii International Conference on System Sciences, IEEE , Maui, Hawaii, USA.]] Labrou, Y., Finin, T., and Peng, Y. 1999. The interoperability problem: Bringing together mobile agents and agent communication languages. In Proceedings of the 1999 Hawaii International Conference on System Sciences, IEEE, Maui, Hawaii, USA.]]"
+            },
+            {
+              "key": "e_1_2_1_39_1",
+              "unstructured": "Law A. M. and Kelton W. D. 2000. Simulation Modeling and Analysis 3rd Ed. McGraw-Hill New York NY.]]   Law A. M. and Kelton W. D. 2000. Simulation Modeling and Analysis 3rd Ed. McGraw-Hill New York NY.]]"
+            },
+            {
+              "key": "e_1_2_1_40_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1145/361026.361034"
+            },
+            {
+              "key": "e_1_2_1_41_1",
+              "unstructured": "Lutz M. and Ascher D. 1999. Learning Python. O'Reilly Sebastopol CA.]]   Lutz M. and Ascher D. 1999. Learning Python. O'Reilly Sebastopol CA.]]"
+            },
+            {
+              "key": "e_1_2_1_42_1",
+              "unstructured": "Mcclave J. T. and Benson P. G. 1994. Statistics for Business and Economics. Prentice Hall Englewood Cliffs NJ.]]  Mcclave J. T. and Benson P. G. 1994. Statistics for Business and Economics. Prentice Hall Englewood Cliffs NJ.]]"
+            },
+            {
+              "key": "e_1_2_1_43_1",
+              "unstructured": "Minar N. Burkhart R. Langton C. and Askenazi M. 1996. The Swarm Simulation System A Toolkit for Building Multi-Agent Simulations.]]  Minar N. Burkhart R. Langton C. and Askenazi M. 1996. The Swarm Simulation System A Toolkit for Building Multi-Agent Simulations.]]"
+            },
+            {
+              "key": "e_1_2_1_44_1",
+              "volume-title": "An Introduction to Genetic Algorithms (Complex Adaptive Systems)",
+              "author": "Mitchell M.",
+              "unstructured": "Mitchell , M. 1996. An Introduction to Genetic Algorithms (Complex Adaptive Systems) . MIT Press , Cambridge, MA .]] Mitchell, M. 1996. An Introduction to Genetic Algorithms (Complex Adaptive Systems). MIT Press, Cambridge, MA.]]"
+            },
+            {
+              "key": "e_1_2_1_45_1",
+              "volume-title": "Proceedings of the Simulation Interoperability Standards Organization Spring Simulation Interoperability Workshop, IEEE.]]",
+              "author": "Myjak M.",
+              "unstructured": "Myjak , M. , Sharp , S. , Lake , T. , and Briggs , K . 1999. Object Transfer in HLA . In Proceedings of the Simulation Interoperability Standards Organization Spring Simulation Interoperability Workshop, IEEE.]] Myjak, M., Sharp, S., Lake, T., and Briggs, K. 1999. Object Transfer in HLA. In Proceedings of the Simulation Interoperability Standards Organization Spring Simulation Interoperability Workshop, IEEE.]]"
+            },
+            {
+              "key": "e_1_2_1_46_1",
+              "doi-asserted-by": "crossref",
+              "unstructured": "North M. J. and Masal C. M. 2005. Escaping the accidents of history: An overview of artificial life modeling with Repast. In Artificial Life Models in Software A. Adamatzky and M. Komosinski Eds. Springer Heidelberg Germany. 115--141.]]  North M. J. and Masal C. M. 2005. Escaping the accidents of history: An overview of artificial life modeling with Repast. In Artificial Life Models in Software A. Adamatzky and M. Komosinski Eds. Springer Heidelberg Germany. 115--141.]]",
+              "DOI": "10.1007/1-84628-214-4_6"
+            },
+            {
+              "key": "e_1_2_1_47_1",
+              "volume-title": "EMCAS: An agent-based tool for modeling electricity markets. In Agent 2003: Challenges in Social Simulation",
+              "author": "North M.",
+              "year": "2003",
+              "unstructured": "North , M. , Thimmapuram , P. , Cirillo , R. , Macal , C. , Conzelmann , G. , Koritarov , V. , and Veselka , T . 2003 . EMCAS: An agent-based tool for modeling electricity markets. In Agent 2003: Challenges in Social Simulation , ( University of Chicago , Chicago, IL USA ), Argonne National Laboratory.]] North, M., Thimmapuram, P., Cirillo, R., Macal, C., Conzelmann, G., Koritarov, V., and Veselka, T. 2003. EMCAS: An agent-based tool for modeling electricity markets. In Agent 2003: Challenges in Social Simulation, (University of Chicago, Chicago, IL USA), Argonne National Laboratory.]]"
+            },
+            {
+              "key": "e_1_2_1_48_1",
+              "volume-title": "OMG Agent Platform Special Interest Group Mission Statement",
+              "unstructured": "OMG. 2000. OMG Agent Platform Special Interest Group Mission Statement . Object Management Group , Needham, MA , www.omg.org/.]] OMG. 2000. OMG Agent Platform Special Interest Group Mission Statement. Object Management Group, Needham, MA, www.omg.org/.]]"
+            },
+            {
+              "key": "e_1_2_1_49_1",
+              "volume-title": "OMG Unified Modeling Language Specification Version 1.5",
+              "unstructured": "OMG. 2001. OMG Unified Modeling Language Specification Version 1.5 . Object Management Group Needham , MA , http://www.uml.org/#UML1.5.]] OMG. 2001. OMG Unified Modeling Language Specification Version 1.5. Object Management Group Needham, MA, http://www.uml.org/#UML1.5.]]"
+            },
+            {
+              "key": "e_1_2_1_50_1",
+              "doi-asserted-by": "crossref",
+              "first-page": "1259",
+              "DOI": "10.1086/230190",
+              "article-title": "Robust action and the rise of the Medici, 1400--1434",
+              "volume": "98",
+              "author": "Padgett J. F.",
+              "year": "1993",
+              "unstructured": "Padgett , J. F. and Ansell , C. K. 1993 . Robust action and the rise of the Medici, 1400--1434 . American Journal of Sociology 98 , 1259 -- 1319 .]] Padgett, J. F. and Ansell, C. K. 1993. Robust action and the rise of the Medici, 1400--1434. American Journal of Sociology 98, 1259--1319.]]",
+              "journal-title": "American Journal of Sociology"
+            },
+            {
+              "issue": "4",
+              "key": "e_1_2_1_51_1",
+              "doi-asserted-by": "crossref",
+              "first-page": "843",
+              "DOI": "10.1093/icc/12.4.843",
+              "article-title": "Economic production as chemistry",
+              "volume": "12",
+              "author": "Padgett J. F.",
+              "year": "2003",
+              "unstructured": "Padgett , J. F. , Lee , D. , and Collier , N. 2003 . Economic production as chemistry . Industrial and Corporate Change 12 ( 4 ), 843 -- 877 .]] Padgett, J. F., Lee, D., and Collier, N. 2003. Economic production as chemistry. Industrial and Corporate Change 12 (4), 843--877.]]",
+              "journal-title": "Industrial and Corporate Change"
+            },
+            {
+              "key": "e_1_2_1_52_1",
+              "volume-title": "Proceedings of the 5th International Conference and Exhibition on the Practical Application of Intelligent Agents and Multi-Agents",
+              "author": "Poslad S.",
+              "unstructured": "Poslad , S. , Buckle , P. , and Hadingham , R . 2000. The FIPA-OS Agent Platform: Open Source for Open Standards . In Proceedings of the 5th International Conference and Exhibition on the Practical Application of Intelligent Agents and Multi-Agents . Manchester, UK.]] Poslad, S., Buckle, P., and Hadingham, R. 2000. The FIPA-OS Agent Platform: Open Source for Open Standards. In Proceedings of the 5th International Conference and Exhibition on the Practical Application of Intelligent Agents and Multi-Agents. Manchester, UK.]]"
+            },
+            {
+              "key": "e_1_2_1_53_1",
+              "unstructured": "Rich E. and Knight K. 1991. Artificial Intelligence McGraw-Hill New York NY.]]   Rich E. and Knight K. 1991. Artificial Intelligence McGraw-Hill New York NY.]]"
+            },
+            {
+              "key": "e_1_2_1_54_1",
+              "volume-title": "Repast Home Page",
+              "author": "Road",
+              "unstructured": "Road . 2004. Repast Home Page . Repast Organization for Architecture and Design , Chicago, IL , repast.sourceforge.net/.]] Road. 2004. Repast Home Page. Repast Organization for Architecture and Design, Chicago, IL, repast.sourceforge.net/.]]"
+            },
+            {
+              "key": "e_1_2_1_55_1",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Sallach D. L. 2003. Social theory and agent architectures: Prospective issues in rapid discovery social science. Social Science Computer Review 21(Summer).]] 10.1177/0894439303251558   Sallach D. L. 2003. Social theory and agent architectures: Prospective issues in rapid discovery social science. Social Science Computer Review 21(Summer).]] 10.1177/0894439303251558",
+              "DOI": "10.1177/0894439303021002004"
+            },
+            {
+              "key": "e_1_2_1_56_1",
+              "volume-title": "Repast for Oz/Mozart. M",
+              "author": "Sallach D. L.",
+              "unstructured": "Sallach , D. L. 2004. Repast for Oz/Mozart. M . North . Argonne, IL .]] Sallach, D. L. 2004. Repast for Oz/Mozart. M. North. Argonne, IL.]]"
+            },
+            {
+              "key": "e_1_2_1_57_1",
+              "volume-title": "Swarm Home Page",
+              "unstructured": "SDG. 2004. Swarm Home Page . Swarm Development Group , Santa Fe, NM , www.swarm.org/wiki/Main_Page.]] SDG. 2004. Swarm Home Page. Swarm Development Group, Santa Fe, NM, www.swarm.org/wiki/Main_Page.]]"
+            },
+            {
+              "key": "e_1_2_1_58_1",
+              "series-title": "Working Paper 455",
+              "volume-title": "Agent Toolkits: A General Overview of the Market and an Assessment of Instructor Satisfaction with Utilizing Toolkits in the Classroom",
+              "author": "Serenko A.",
+              "year": "2002",
+              "unstructured": "Serenko , A. and Detlor , B . 2002 . Agent Toolkits: A General Overview of the Market and an Assessment of Instructor Satisfaction with Utilizing Toolkits in the Classroom ( Working Paper 455 ) , McMaster University , Hamilton, Ontario , Canada.]] Serenko, A. and Detlor, B. 2002. Agent Toolkits: A General Overview of the Market and an Assessment of Instructor Satisfaction with Utilizing Toolkits in the Classroom (Working Paper 455), McMaster University, Hamilton, Ontario, Canada.]]"
+            },
+            {
+              "key": "e_1_2_1_59_1",
+              "volume-title": "Proceedings of the Agent 2004 Conference on Social Dynamics: Interaction, Reflexivity and Emergence",
+              "author": "Stephan C.",
+              "unstructured": "Stephan , C. and Sullivan , J . 2004. Growth of a hydrogen transportation infrastructure . In Proceedings of the Agent 2004 Conference on Social Dynamics: Interaction, Reflexivity and Emergence , Chicago, IL, University of Chicago and Argonne National Laboratory.]] Stephan, C. and Sullivan, J. 2004. Growth of a hydrogen transportation infrastructure. In Proceedings of the Agent 2004 Conference on Social Dynamics: Interaction, Reflexivity and Emergence, Chicago, IL, University of Chicago and Argonne National Laboratory.]]"
+            },
+            {
+              "key": "e_1_2_1_60_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1145/966221.966242"
+            },
+            {
+              "key": "e_1_2_1_61_1",
+              "volume-title": "J2SE Code Names",
+              "author": "Sun Microsystems",
+              "unstructured": "Sun Microsystems . 2005. J2SE Code Names , Santa Clara, CA , java.sun.com/j2se/codenames. html.]] Sun Microsystems. 2005. J2SE Code Names, Santa Clara, CA, java.sun.com/j2se/codenames. html.]]"
+            },
+            {
+              "key": "e_1_2_1_62_1",
+              "volume-title": "Computer Networks",
+              "author": "Tanenbaum A.",
+              "unstructured": "Tanenbaum , A. 1988. Computer Networks . Prentice Hall , Englewood Cliffs, NJ ,.]] Tanenbaum, A. 1988. Computer Networks. Prentice Hall, Englewood Cliffs, NJ,.]]"
+            },
+            {
+              "key": "e_1_2_1_63_1",
+              "unstructured": "Tisue S. and Wilensky U. 2004. NetLogo: Design and implementation of a multi-agent modeling environment. In SwarmFest 2004 Ann Arbor MI Swarm Development Group.]]  Tisue S. and Wilensky U. 2004. NetLogo: Design and implementation of a multi-agent modeling environment. In SwarmFest 2004 Ann Arbor MI Swarm Development Group.]]"
+            },
+            {
+              "key": "e_1_2_1_64_1",
+              "article-title": "Evaluation of free Java-libraries for social-scientific agent based simulation",
+              "author": "Tobias R.",
+              "year": "2004",
+              "unstructured": "Tobias , R. and Hofmann , C. 2004 . Evaluation of free Java-libraries for social-scientific agent based simulation . Journal of Artificial Societies and Social Simulation 7(1).]] Tobias, R. and Hofmann, C. 2004. Evaluation of free Java-libraries for social-scientific agent based simulation. Journal of Artificial Societies and Social Simulation 7(1).]]",
+              "journal-title": "Journal of Artificial Societies and Social Simulation 7(1).]]"
+            },
+            {
+              "key": "e_1_2_1_65_1",
+              "volume-title": "Center for Connected Learning and Computer-Based Modeling",
+              "author": "Wilensky U.",
+              "unstructured": "Wilensky , U. 1999. NetLogo . Center for Connected Learning and Computer-Based Modeling , Northwestern University , Evanston, IL .]] Wilensky, U. 1999. NetLogo. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.]]"
+            },
+            {
+              "key": "e_1_2_1_66_1",
+              "unstructured": "Wilensky U. and Stroup W. 1999. HubNet. Center for Connected Learning and Computer-Based Modeling Northwestern University Evanston IL.]]  Wilensky U. and Stroup W. 1999. HubNet. Center for Connected Learning and Computer-Based Modeling Northwestern University Evanston IL.]]"
+            },
+            {
+              "key": "e_1_2_1_67_1",
+              "volume-title": "Proceedings of the 1994 Workshop on Agent Theories, Architectures & Languages",
+              "author": "Wooldridge M.",
+              "unstructured": "Wooldridge , M. and Jennings , N. R . 1994. Agent theories, architectures, and languages: A survey . In Proceedings of the 1994 Workshop on Agent Theories, Architectures & Languages . Amsterdam, The Netherlands, Springer-Verlag.]] Wooldridge, M. and Jennings, N. R. 1994. Agent theories, architectures, and languages: A survey. In Proceedings of the 1994 Workshop on Agent Theories, Architectures & Languages. Amsterdam, The Netherlands, Springer-Verlag.]]"
+            }
+          ],
+          "container-title": [
+            "ACM Transactions on Modeling and Computer Simulation"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://dl.acm.org/doi/10.1145/1122012.1122013",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://dl.acm.org/doi/pdf/10.1145/1122012.1122013",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2025,
+                6,
+                18
+              ]
+            ],
+            "date-time": "2025-06-18T16:08:36Z",
+            "timestamp": 1750262916000
+          },
+          "score": 67.55663,
+          "resource": {
+            "primary": {
+              "URL": "https://dl.acm.org/doi/10.1145/1122012.1122013"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2006,
+                1
+              ]
+            ]
+          },
+          "references-count": 67,
+          "journal-issue": {
+            "issue": "1",
+            "published-print": {
+              "date-parts": [
+                [
+                  2006,
+                  1
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1145/1122012.1122013"
+          ],
+          "URL": "https://doi.org/10.1145/1122012.1122013",
+          "ISSN": [
+            "1049-3301",
+            "1558-1195"
+          ],
+          "issn-type": [
+            {
+              "value": "1049-3301",
+              "type": "print"
+            },
+            {
+              "value": "1558-1195",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2006,
+                1
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "2006-01-01",
+              "order": 2,
+              "name": "published",
+              "label": "Published",
+              "group": {
+                "name": "publication_history",
+                "label": "Publication History"
+              }
+            }
+          ]
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2025,
+                12,
+                4
+              ]
+            ],
+            "date-time": "2025-12-04T06:13:47Z",
+            "timestamp": 1764828827645,
+            "version": "3.28.0"
+          },
+          "reference-count": 46,
+          "publisher": "IEEE",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2020,
+                    11,
+                    1
+                  ]
+                ],
+                "date-time": "2020-11-01T00:00:00Z",
+                "timestamp": 1604188800000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2020,
+                    11,
+                    1
+                  ]
+                ],
+                "date-time": "2020-11-01T00:00:00Z",
+                "timestamp": 1604188800000
+              },
+              "content-version": "stm-asf",
+              "delay-in-days": 0,
+              "URL": "https://doi.org/10.15223/policy-029"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2020,
+                    11,
+                    1
+                  ]
+                ],
+                "date-time": "2020-11-01T00:00:00Z",
+                "timestamp": 1604188800000
+              },
+              "content-version": "stm-asf",
+              "delay-in-days": 0,
+              "URL": "https://doi.org/10.15223/policy-037"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2020,
+                11
+              ]
+            ]
+          },
+          "DOI": "10.1109/pyhpc51966.2020.00006",
+          "type": "proceedings-article",
+          "created": {
+            "date-parts": [
+              [
+                2020,
+                12,
+                30
+              ]
+            ],
+            "date-time": "2020-12-30T21:52:21Z",
+            "timestamp": 1609365141000
+          },
+          "page": "1-12",
+          "source": "Crossref",
+          "is-referenced-by-count": 11,
+          "title": [
+            "Experiences in Developing a Distributed Agent-based Modeling Toolkit with Python"
+          ],
+          "prefix": "10.1109",
+          "author": [
+            {
+              "given": "Nicholson T.",
+              "family": "Collier",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Argonne National Laboratory,Decision and Infrastructure Sciences,Lemont,IL,USA"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Jonathan",
+              "family": "Ozik",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Argonne National Laboratory,Decision and Infrastructure Sciences,Lemont,IL,USA"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Eric R.",
+              "family": "Tatara",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Argonne National Laboratory,Decision and Infrastructure Sciences,Lemont,IL,USA"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "263",
+          "reference": [
+            {
+              "key": "ref39",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1109/WSC.2013.6721539"
+            },
+            {
+              "key": "ref38",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.18564/jasss.2840"
+            },
+            {
+              "key": "ref33",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1145/2833157.2833162",
+              "article-title": "Numba: A llvm-based python jit compiler",
+              "author": "lam",
+              "year": "2015",
+              "journal-title": "Proceedings of the Second Workshop on the LLVM Compiler Infrastructure in HPC ser LLVM &#x2018;15"
+            },
+            {
+              "journal-title": "Numpy a guide to numpy",
+              "year": "2006",
+              "author": "oliphant",
+              "key": "ref32"
+            },
+            {
+              "key": "ref31",
+              "article-title": "Parallel agent-based simulation with Repast for High Performance Computing",
+              "author": "collier",
+              "year": "2012",
+              "journal-title": "Simulation"
+            },
+            {
+              "key": "ref30",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1109/WSC.1990.129512"
+            },
+            {
+              "key": "ref37",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1186/2194-3206-1-3"
+            },
+            {
+              "key": "ref36",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1145/1122012.1122013"
+            },
+            {
+              "key": "ref35",
+              "article-title": "Onward and Upward: The Transition to RePast 2.0",
+              "author": "collier",
+              "year": "2003",
+              "journal-title": "First Annual North American Association for Computational Social and Organizational Science Conference"
+            },
+            {
+              "key": "ref34",
+              "first-page": "8024",
+              "article-title": "Pytorch: An imperative style, high-performance deep learning library",
+              "volume": "32",
+              "author": "paszke",
+              "year": "2019",
+              "journal-title": "Advances in neural information processing systems"
+            },
+            {
+              "key": "ref10",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1186/1471-2458-13-940"
+            },
+            {
+              "key": "ref40",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1186/1479-5876-12-124"
+            },
+            {
+              "key": "ref11",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1177/0037549713489594"
+            },
+            {
+              "key": "ref12",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1177/0037549705058073"
+            },
+            {
+              "key": "ref13",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/978-3-642-54420-0_52"
+            },
+            {
+              "key": "ref14",
+              "first-page": "29",
+              "article-title": "Pandora: A versatile agent-based modelling platform for social simulation",
+              "author": "rubio-campillo",
+              "year": "2014",
+              "journal-title": "SIMUL 2014 The Sixth International Conference on Advances in System Simulation"
+            },
+            {
+              "key": "ref15",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.future.2016.08.015"
+            },
+            {
+              "key": "ref16",
+              "article-title": "Flame-ii: a redesign of the flexible large-scale agent-based modelling environment",
+              "author": "chin",
+              "year": "2012",
+              "journal-title": "Tech Rep RAL-TR-2012-019"
+            },
+            {
+              "key": "ref17",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1109/HPCS.2017.12"
+            },
+            {
+              "key": "ref18",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1145/84537.84545"
+            },
+            {
+              "journal-title": "Parallel and Distributed Simulation Systems",
+              "year": "2000",
+              "author": "fujimoto",
+              "key": "ref19"
+            },
+            {
+              "key": "ref28",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1109/WSC.1990.129513"
+            },
+            {
+              "key": "ref4",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1109/WSC.2018.8632525"
+            },
+            {
+              "key": "ref27",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1145/195291.182480"
+            },
+            {
+              "key": "ref3",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1109/TCSS.2018.2859189"
+            },
+            {
+              "key": "ref6",
+              "doi-asserted-by": "crossref",
+              "first-page": "747",
+              "DOI": "10.1039/C9ME00036D",
+              "article-title": "Learning-accelerated discovery of immune-tumour interactions",
+              "volume": "4",
+              "author": "ozik",
+              "year": "2019",
+              "journal-title": "Molecular Systems Design & Engineering"
+            },
+            {
+              "key": "ref29",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1109/WSC.1990.129514"
+            },
+            {
+              "key": "ref5",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1186/s12859-018-2510-x"
+            },
+            {
+              "key": "ref8",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1109/WSC.2016.7822090"
+            },
+            {
+              "journal-title": "Doe national laboratory program announcement Artificial intelligence and decision support for complex systems",
+              "year": "0",
+              "key": "ref7"
+            },
+            {
+              "key": "ref2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1109/WSC.2018.8632409"
+            },
+            {
+              "key": "ref9",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/femspd/fty059"
+            },
+            {
+              "key": "ref1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1057/jos.2016.7"
+            },
+            {
+              "key": "ref46",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1109/CCGrid.2013.99"
+            },
+            {
+              "key": "ref20",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1145/1242531.1242543"
+            },
+            {
+              "journal-title": "line profiler and kernprof",
+              "year": "2020",
+              "author": "kern",
+              "key": "ref45"
+            },
+            {
+              "key": "ref22",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1145/358598.358613"
+            },
+            {
+              "key": "ref21",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1109/WSC.2006.323041"
+            },
+            {
+              "key": "ref42",
+              "doi-asserted-by": "crossref",
+              "first-page": "655",
+              "DOI": "10.1016/j.jpdc.2007.09.005",
+              "article-title": "Mpi for python: Performance improvements and mpi-2 extensions",
+              "volume": "68",
+              "author": "dalcin",
+              "year": "2008",
+              "journal-title": "Journal of Parallel and Distributed Computing"
+            },
+            {
+              "key": "ref24",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1145/37499.37508"
+            },
+            {
+              "key": "ref41",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1109/ITSC.2018.8569232"
+            },
+            {
+              "key": "ref23",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1109/TSE.1979.230182"
+            },
+            {
+              "key": "ref44",
+              "first-page": "454",
+              "article-title": "Large-scale agent-based modeling with repast HPC: A case study in parallelizing an agent-based model",
+              "author": "collier",
+              "year": "2015",
+              "journal-title": "Euro-Par 2015 Parallel Processing Workshops - Euro-Par 2015 International Workshops Vienna Austria August 24&#x2013;25 2015 Revised Selected Papers"
+            },
+            {
+              "key": "ref26",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1109/PADS.2005.1"
+            },
+            {
+              "key": "ref43",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1186/s12859-018-2508-4"
+            },
+            {
+              "key": "ref25",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1145/3916.3988"
+            }
+          ],
+          "event": {
+            "name": "2020 IEEE/ACM 9th Workshop on Python for High-Performance and Scientific Computing (PyHPC)",
+            "start": {
+              "date-parts": [
+                [
+                  2020,
+                  11,
+                  13
+                ]
+              ]
+            },
+            "location": "GA, USA",
+            "end": {
+              "date-parts": [
+                [
+                  2020,
+                  11,
+                  13
+                ]
+              ]
+            }
+          },
+          "container-title": [
+            "2020 IEEE/ACM 9th Workshop on Python for High-Performance and Scientific Computing (PyHPC)"
+          ],
+          "link": [
+            {
+              "URL": "http://xplorestaging.ieee.org/ielx7/9307610/9307929/09307948.pdf?arnumber=9307948",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2022,
+                7,
+                9
+              ]
+            ],
+            "date-time": "2022-07-09T02:21:20Z",
+            "timestamp": 1657333280000
+          },
+          "score": 28.022606,
+          "resource": {
+            "primary": {
+              "URL": "https://ieeexplore.ieee.org/document/9307948/"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2020,
+                11
+              ]
+            ]
+          },
+          "references-count": 46,
+          "URL": "https://doi.org/10.1109/pyhpc51966.2020.00006",
+          "published": {
+            "date-parts": [
+              [
+                2020,
+                11
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                17
+              ]
+            ],
+            "date-time": "2026-10-17T16:29:49Z",
+            "timestamp": 1792254589065,
+            "version": "4.4.0"
+          },
+          "edition-number": "1",
+          "reference-count": 36,
+          "publisher": "Wiley",
+          "isbn-type": [
+            {
+              "value": "9780470592441",
+              "type": "print"
+            },
+            {
+              "value": "9781118130506",
+              "type": "electronic"
+            }
+          ],
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2011,
+                    11,
+                    11
+                  ]
+                ],
+                "date-time": "2011-11-11T00:00:00Z",
+                "timestamp": 1320969600000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "http://doi.wiley.com/10.1002/tdm_license_1.1"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2011,
+                11,
+                11
+              ]
+            ]
+          },
+          "DOI": "10.1002/9781118130506.ch5",
+          "type": "other",
+          "created": {
+            "date-parts": [
+              [
+                2012,
+                4,
+                11
+              ]
+            ],
+            "date-time": "2012-04-11T12:42:50Z",
+            "timestamp": 1334148170000
+          },
+          "page": "81-109",
+          "source": "Crossref",
+          "is-referenced-by-count": 65,
+          "title": [
+            "Repast HPC: A Platform for Large\u2010Scale Agent\u2010Based Modeling"
+          ],
+          "prefix": "10.1002",
+          "author": [
+            {
+              "given": "Nicholson",
+              "family": "Collier",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Michael",
+              "family": "North",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "311",
+          "published-online": {
+            "date-parts": [
+              [
+                2012,
+                4,
+                11
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "e_1_2_1_2_1",
+              "doi-asserted-by": "crossref",
+              "unstructured": "R. L.BagrodiaandW.Liao.Parallel simulation of the Sharks World problem. InProc. of the 22nd Winter Simulation Conference pp.191\u2013198 1990.",
+              "DOI": "10.1109/WSC.1990.129513"
+            },
+            {
+              "issue": "5439",
+              "key": "e_1_2_1_3_1",
+              "doi-asserted-by": "crossref",
+              "first-page": "412",
+              "DOI": "10.1126/science.286.5439.509",
+              "article-title": "Emergence of scaling in random networks",
+              "volume": "286",
+              "author": "Barab\u00e1si A.",
+              "year": "1999",
+              "journal-title": "Science"
+            },
+            {
+              "key": "e_1_2_1_4_1",
+              "doi-asserted-by": "crossref",
+              "unstructured": "D. W.Bauer C. D.Carothers andA.Holder.Scalable time warp on Blue Gene supercomputers. In2009 ACM/IEEE/SCS 23rd Workshop on Principles of Advanced and Distributed Simulation pp.35\u201344 2009.",
+              "DOI": "10.1109/PADS.2009.21"
+            },
+            {
+              "key": "e_1_2_1_5_1",
+              "unstructured": "J.Bradshaw.KAoS: An open agent architecture supporting reuse interoperability and extensibility. InProc. of the 1996 Knowledge Aquisition Workshop 1996."
+            },
+            {
+              "key": "e_1_2_1_6_1",
+              "doi-asserted-by": "crossref",
+              "unstructured": "L.Briesemeister P.Lincoln andP.Porras.Epidemic profiles and defense of scale\u2010free networks. InProc. of the 2003 ACM Workshop on Rapid Malcode 1998.",
+              "DOI": "10.1145/948187.948200"
+            },
+            {
+              "key": "e_1_2_1_7_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0743-7315(02)00004-7"
+            },
+            {
+              "key": "e_1_2_1_8_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1109/TSE.1979.230182"
+            },
+            {
+              "key": "e_1_2_1_9_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1145/358598.358613"
+            },
+            {
+              "key": "e_1_2_1_10_1",
+              "unstructured": "R. M.D'Souza M.Lysenko andK.Rahmani.SugarScape on steroids: Simulating over a million agents at interactive rates. InProc. of the Agent 2007 Conference on Complex Interaction and Social Emergence 2007."
+            },
+            {
+              "key": "e_1_2_1_11_1",
+              "unstructured": "S.DeissenbergandH.van der Hoog. EURACE: A massively parallel agent\u2010based model of the European economy. Technical report Universites d'Aix\u2010Marseille 2009.halshs.archives\u2010ouvertes.fr/docs/00/33/97/56/PDF/DT2008\u201039.pdf."
+            },
+            {
+              "key": "e_1_2_1_12_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1145/84537.84545"
+            },
+            {
+              "key": "e_1_2_1_13_1",
+              "volume-title": "Parallel and Distributed Simulation Systems",
+              "author": "Fujimoto R. M.",
+              "year": "2000"
+            },
+            {
+              "key": "e_1_2_1_14_1",
+              "unstructured": "N.HouariandB. H.Far.Building collaborative intelligent agents: Revealing main pillars. InProc. of the Canadian Conference on Electrical and Computer Engineering 2005."
+            },
+            {
+              "key": "e_1_2_1_15_1",
+              "unstructured": "T. R.Howe N. T.Collier M. J.North et al.Containing agents: Contexts projections and agents. InProc. of the Agent 2006 conference on social agents: Results and prospects 2006."
+            },
+            {
+              "key": "e_1_2_1_16_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1145/72551.72554"
+            },
+            {
+              "key": "e_1_2_1_17_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1145/3916.3988"
+            },
+            {
+              "key": "e_1_2_1_18_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1145/37499.37508"
+            },
+            {
+              "key": "e_1_2_1_19_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1145/195291.182480"
+            },
+            {
+              "key": "e_1_2_1_20_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/11558958_68"
+            },
+            {
+              "issue": "036123",
+              "key": "e_1_2_1_21_1",
+              "first-page": "1",
+              "article-title": "Highly clustered scale free networks",
+              "volume": "65",
+              "author": "Klemm K.",
+              "year": "2002",
+              "journal-title": "Physical Review E"
+            },
+            {
+              "key": "e_1_2_1_22_1",
+              "unstructured": "M. T.KoehlerandB. F.Tivnan.Clustered computing with NetLogo and Repast J: Beyond chewing gum and duct tape. InProc. of the Agent 2005 Conference on Generative Social Processes Models and Mechanisms pp.43\u201354 2005."
+            },
+            {
+              "key": "e_1_2_1_23_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1109/TPDS.2002.1028436"
+            },
+            {
+              "key": "e_1_2_1_24_1",
+              "unstructured": "G.Laycock. The theory and practice of specification based software testing. PhD thesis University of Sheffield 1993."
+            },
+            {
+              "issue": "4",
+              "key": "e_1_2_1_25_1",
+              "article-title": "A framework for meagascale agent\u2010based model simulations on graphical processing units",
+              "volume": "11",
+              "author": "Lysenko M.",
+              "year": "2008",
+              "journal-title": "Journal of Artificial Societies and Social Simulation"
+            },
+            {
+              "key": "e_1_2_1_26_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.parco.2005.03.012"
+            },
+            {
+              "key": "e_1_2_1_27_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1145/272991.272995"
+            },
+            {
+              "key": "e_1_2_1_28_1",
+              "unstructured": "D. M.NicolandS. E.Riffe.A \u201cconservative\u201d approach to parallelizing the Sharks World simulation. InProc. of the 22nd Winter Simulation Conference 1990."
+            },
+            {
+              "key": "e_1_2_1_29_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/acprof:oso/9780195172119.001.0001"
+            },
+            {
+              "key": "e_1_2_1_30_1",
+              "unstructured": "M. J.North E.Tatara N. T.Collier et al.Visual agent\u2010based model development with Repast Simphony. InProc. of the Agent 2007 Conference on Complex Interaction and Social Emergence 2007."
+            },
+            {
+              "key": "e_1_2_1_31_1",
+              "doi-asserted-by": "crossref",
+              "unstructured": "T.Oguara D.Chen G.Theodoropoulos et al.An adaptive load management mechanism for distribution simulation of multi\u2010agent systems. InProc. of the 9th IEEE Int 'l Symposium on Distributed Simulation and Real\u2010Time Applications 2006.",
+              "DOI": "10.1109/DISTRA.2005.9"
+            },
+            {
+              "key": "e_1_2_1_32_1",
+              "unstructured": "K. S.Perumulla.\u00b5sik \u2014 a micro\u2010kernel for parallel/distributed simulation systems. InWorkshop on Principles of Advanced and Distributed Simulations 2005."
+            },
+            {
+              "key": "e_1_2_1_33_1",
+              "doi-asserted-by": "crossref",
+              "unstructured": "K. S.Perumulla.Parallel and distributed simulation: Traditional techniques and recent advances. InProc. of the Winter Simulation Conference (WSC) 2006.",
+              "DOI": "10.1109/WSC.2006.323041"
+            },
+            {
+              "key": "e_1_2_1_34_1",
+              "doi-asserted-by": "crossref",
+              "unstructured": "K. S.Perumulla.Scaling time warp\u2010based discrete event execution to 10 4 processors on a Blue Gene supercomputer. InProc. of the 4th Int 'l Conference on Computing Frontiers pp.69\u201376 2007.",
+              "DOI": "10.1145/1242531.1242543"
+            },
+            {
+              "key": "e_1_2_1_35_1",
+              "doi-asserted-by": "crossref",
+              "unstructured": "M. T.Presley P. L.Reiher andS. F.Bellenot.A time warp implementation of the Sharks World. InProc. of the 22nd Winter Simulation Conference pp.199\u2013203 1990.",
+              "DOI": "10.1109/WSC.1990.129514"
+            },
+            {
+              "key": "e_1_2_1_36_1",
+              "unstructured": "M.Scheutz P.Schermerhorn R.Connaughaton et al.SWAGES: An extendable distributed experimentation system for large\u2010scale agent\u2010based a life simulations. InProc. of the 10th Int 'l Conference on the Simulation and Synthesis of Living Systems 2006."
+            },
+            {
+              "key": "e_1_2_1_37_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1600-0706.2009.18284.x"
+            }
+          ],
+          "container-title": [
+            "Large\u2010Scale Computing"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781118130506.ch5",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2025,
+                3,
+                25
+              ]
+            ],
+            "date-time": "2025-03-25T19:04:09Z",
+            "timestamp": 1742929449000
+          },
+          "score": 27.650454,
+          "resource": {
+            "primary": {
+              "URL": "https://onlinelibrary.wiley.com/doi/10.1002/9781118130506.ch5"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2011,
+                11,
+                11
+              ]
+            ]
+          },
+          "ISBN": [
+            "9780470592441",
+            "9781118130506"
+          ],
+          "references-count": 36,
+          "alternative-id": [
+            "10.1002/9781118130506.ch5",
+            "10.1002/9781118130506"
+          ],
+          "URL": "https://doi.org/10.1002/9781118130506.ch5",
+          "archive": [
+            "Portico"
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2011,
+                11,
+                11
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "slug": "stochastic-patchwork",
+  "name": "Stochastic Patchwork",
+  "catalogPath": "Sample Models/Mathematics/Probability/ProbLab/Stochastic Patchwork",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/ProbLab/Stochastic%20Patchwork.nlogox",
+  "deliveryBatch": "B17",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "How is the variability of a sample proportion related to the number of independent trials? NetLogo Stochastic Patchwork repeatedly recolors a selected block of patches using the same target probability, then accumulates the fraction in the target color. Durrett [1] grounds the resulting Bernoulli sum and its mean, Berry [2] frames finite-sample Gaussian approximation, and Wilensky [3] connects constructive simulation with understanding distributional regularity. Larger blocks average more local random decisions, while changing the target probability changes both the mean and variability. Spatial adjacency is visual organization: the baseline color draws do not copy neighboring colors. Repeated histograms therefore illustrate sampling distributions rather than spatial contagion. Finite samples, discrete proportions, and probabilities close to zero or one limit bell-curve intuition. The experiment provides no evidence that a real spatial population has independent observations.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/ProbLab/Stochastic%20Patchwork.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/ProbLab/Stochastic%20Patchwork.nlogox",
+    "revision": "NetLogo 7.0.4 served 2026-11-05; SHA-256 17ed2522164bcf7e92ffb5665b3c9a427640fbf7908ef332e985f8b06db99b2f",
+    "checkedAt": "2026-11-05",
+    "evidence": "Full original served XML source, Procedures and Info retained in evidence/computing/stochastic-patchwork.nlogox; extracted Info retained alongside.",
+    "notes": " This dossier describes scientific connections to the original NetLogo teaching model; it does not certify a City Library reimplementation or empirical validity.",
+    "originalCitation": "Abrahamson, D. and Wilensky, U. (2004).  NetLogo Stochastic Patchwork model.  http://ccl.northwestern.edu/netlogo/models/StochasticPatchwork.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "sourceSnapshot": "evidence/computing/stochastic-patchwork.nlogox",
+    "evidenceFile": "evidence/computing/stochastic-patchwork.nlogox"
+  },
+  "publications": [
+    {
+      "id": "10.1017/9781108591034",
+      "authors": [
+        "Rick Durrett"
+      ],
+      "title": "Probability: Theory and Examples",
+      "year": 2019,
+      "venue": "Cambridge University Press",
+      "doi": "10.1017/9781108591034",
+      "url": "https://doi.org/10.1017/9781108591034",
+      "relevance": "Independent Bernoulli sums determine the block’s sample proportion and variance.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1017%2F9781108591034",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1017_9781108591034.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1017_9781108591034.json"
+      },
+      "publisher": "Cambridge University Press",
+      "isbn": [
+        "9781108591034",
+        "9781108473682"
+      ],
+      "verified": true
+    },
+    {
+      "id": "10.1090/s0002-9947-1941-0003498-3",
+      "authors": [
+        "Andrew C. Berry"
+      ],
+      "title": "The accuracy of the Gaussian approximation to the sum of independent variates",
+      "year": 1941,
+      "venue": "Transactions of the American Mathematical Society",
+      "doi": "10.1090/s0002-9947-1941-0003498-3",
+      "url": "https://doi.org/10.1090/s0002-9947-1941-0003498-3",
+      "relevance": "Approximation error clarifies when a finite-sample proportion histogram can look Gaussian.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1090%2FS0002-9947-1941-0003498-3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1090_s0002_9947_1941_0003498_3.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1090_s0002_9947_1941_0003498_3.json"
+      },
+      "publisher": "American Mathematical Society (AMS)",
+      "volume": "49",
+      "issue": "1",
+      "pages": "122-136",
+      "verified": true
+    },
+    {
+      "id": "10.1023/a:1002935313957",
+      "authors": [
+        "Uri Wilensky"
+      ],
+      "title": "What is Normal Anyway? Therapy for Epistemological Anxiety",
+      "year": 1997,
+      "venue": "Educational Studies in Mathematics",
+      "doi": "10.1023/a:1002935313957",
+      "url": "https://doi.org/10.1023/a:1002935313957",
+      "relevance": "Constructive educational research supports interpreting global regularity through repeated local random events.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1023%2FA%3A1002935313957",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1023_a_1002935313957.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1023_a_1002935313957.json"
+      },
+      "publisher": "Springer Science and Business Media LLC",
+      "volume": "33",
+      "issue": "2",
+      "pages": "171-202",
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

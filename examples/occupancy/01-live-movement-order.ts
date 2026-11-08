@@ -1,0 +1,17 @@
+import assert from "node:assert/strict";
+import { Agent, Grid, World } from "city-library";
+const world=World.add({x:5,y:5,boundary:"wrap"});
+const grid=world.add(Grid.add({x:5,y:5,boundary:"wrap"}));
+const a=world.add(Agent.add({name:"first"}));
+const b=world.add(Agent.add({name:"second"}));
+const home=grid.fieldAt(a)!;
+assert.deepEqual(grid.agentsAt(home),[a,b]);
+a.move({to:{x:1,y:0}});
+assert.deepEqual(grid.agentsAt(home),[b]);
+assert.deepEqual(grid.agentsAt(grid.fieldAt(a)!),[a]);
+a.move({to:home});
+world.add(a);
+assert.deepEqual(grid.agentsAt(home),[a,b]);
+world.delete(a);
+world.add(a);
+assert.deepEqual(grid.agentsAt(home),[b,a]);

@@ -1,0 +1,109 @@
+{
+  "slug": "k-means-clustering",
+  "name": "K-Means Clustering",
+  "catalogPath": "Sample Models/Computer Science/K-Means Clustering",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/K-Means%20Clustering.nlogox",
+  "deliveryBatch": "B18",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "How can repeated assignment and averaging divide observations into groups? NetLogo K-Means Clustering creates points, initializes centroids, assigns points to their closest centroid, and relocates centroids toward the means of their assigned groups. Lloyd [1] supplies the least-squares quantization method, Hartigan and Wong [2] develop a major k-means algorithm, and Jain [3] reviews the assumptions and limitations of clustering. The model distinguishes the number of generating groups from the number of centroids requested by the user. Initialization, Euclidean distance, outliers, and the chosen value of k affect the result. Different runs can settle on different partitions, and visually plausible groups need not recover a unique underlying truth. The experiment illustrates optimization of a geometric within-group criterion, rather than proving that every dataset contains spherical clusters or that convergence identifies the global minimum.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/K-Means%20Clustering.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/K-Means%20Clustering.nlogox",
+    "revision": "NetLogo 7.0.4 served 2026-11-05; SHA-256 fdffc0ac8c8d8b25286039bb9ec53648bb7c12d8829600e5d56185980ba572c6",
+    "checkedAt": "2026-11-05",
+    "evidence": "Full original served XML source, Procedures and Info retained in evidence/computing/k-means-clustering.nlogox; extracted Info retained alongside.",
+    "notes": " This dossier describes scientific connections to the original NetLogo teaching model; it does not certify a City Library reimplementation or empirical validity.",
+    "originalCitation": "Hjorth, A., Head, B. and Wilensky, U. (2014).  NetLogo K-Means Clustering model.  http://ccl.northwestern.edu/netlogo/models/K-MeansClustering.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "sourceSnapshot": "evidence/computing/k-means-clustering.nlogox",
+    "evidenceFile": "evidence/computing/k-means-clustering.nlogox"
+  },
+  "publications": [
+    {
+      "id": "10.1109/tit.1982.1056489",
+      "authors": [
+        "S. Lloyd"
+      ],
+      "title": "Least squares quantization in PCM",
+      "year": 1982,
+      "venue": "IEEE Transactions on Information Theory",
+      "doi": "10.1109/tit.1982.1056489",
+      "url": "https://doi.org/10.1109/tit.1982.1056489",
+      "relevance": "Foundational least-squares quantization explains alternating assignment and centroid adjustment.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1109%2FTIT.1982.1056489",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1109_tit_1982_1056489.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1109_tit_1982_1056489.json"
+      },
+      "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+      "volume": "28",
+      "issue": "2",
+      "pages": "129-137",
+      "verified": true
+    },
+    {
+      "id": "10.2307/2346830",
+      "authors": [
+        "J. A. Hartigan",
+        "M. A. Wong"
+      ],
+      "title": "Algorithm AS 136: A K-Means Clustering Algorithm",
+      "year": 1979,
+      "venue": "Applied Statistics",
+      "doi": "10.2307/2346830",
+      "url": "https://doi.org/10.2307/2346830",
+      "relevance": "A central k-means algorithm provides methodological context; NetLogo’s teaching update need not duplicate every optimization step.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.2307%2F2346830",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_2307_2346830.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_2307_2346830.json"
+      },
+      "publisher": "JSTOR",
+      "volume": "28",
+      "issue": "1",
+      "pages": "100",
+      "verified": true
+    },
+    {
+      "id": "10.1016/j.patrec.2009.09.011",
+      "authors": [
+        "Anil K. Jain"
+      ],
+      "title": "Data clustering: 50 years beyond K-means",
+      "year": 2010,
+      "venue": "Pattern Recognition Letters",
+      "doi": "10.1016/j.patrec.2009.09.011",
+      "url": "https://doi.org/10.1016/j.patrec.2009.09.011",
+      "relevance": "Field review supplies limitations concerning cluster shape, initialization and interpreting partitions as discovered truth.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1016%2Fj.patrec.2009.09.011",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1016_j_patrec_2009_09_011.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1016_j_patrec_2009_09_011.json"
+      },
+      "publisher": "Elsevier BV",
+      "volume": "31",
+      "issue": "8",
+      "pages": "651-666",
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

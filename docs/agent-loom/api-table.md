@@ -1,6 +1,8 @@
 # Agent Loom API inventory
 
-&gt; **Specification only.** These 309 operation/type entries define the phase-one target across 16 areas. City Library currently exports none of them.
+Use this inventory to find an operation, read its signature and follow the link to its full contract.
+
+> **Target specification.** These 309 operation/type entries define the required core API across 16 areas. Implementation status is tracked in [PLAN](../../PLAN.md) and the [coverage inventory](../development/coverage.md). An entry here does not mean the operation is available.
 
 [Overview](README.md) · [Detailed reference and examples](api-reference.md)
 

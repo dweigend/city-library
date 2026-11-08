@@ -1,0 +1,109 @@
+{
+  "slug": "simple-genetic-algorithm",
+  "name": "Simple Genetic Algorithm",
+  "catalogPath": "Sample Models/Computer Science/Simple Genetic Algorithm",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Simple%20Genetic%20Algorithm.nlogox",
+  "deliveryBatch": "B18",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "How do selection and variation search a space of binary strings? NetLogo Simple Genetic Algorithm evolves a population toward the all-ones string, using fitness based on the number of ones, reproduction, crossover, and mutation. Holland [1] supplies the foundational adaptation framework, Mitchell [2] explains representation and genetic operators, and Wolpert and Macready [3] limit claims that any optimizer is universally superior. The display follows the current best string while the population changes between generations. Population size and variation rates alter progress and diversity. The all-ones landscape is intentionally simple and separable; success here does not establish performance on deceptive, noisy, or constrained objectives. Stochastic runs can differ, and selecting a good parent does not guarantee a better child. The model illustrates fitness-driven search under a chosen encoding rather than a complete account of biological evolution.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Simple%20Genetic%20Algorithm.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Computer%20Science/Simple%20Genetic%20Algorithm.nlogox",
+    "revision": "NetLogo 7.0.4 served 2026-11-05; SHA-256 aa1d94df44a71c7cbe8b02d11a0ac1e027fa19294a0726c1a03913786175c67e",
+    "checkedAt": "2026-11-05",
+    "evidence": "Full original served XML source, Procedures and Info retained in evidence/computing/simple-genetic-algorithm.nlogox; extracted Info retained alongside.",
+    "notes": " This dossier describes scientific connections to the original NetLogo teaching model; it does not certify a City Library reimplementation or empirical validity.",
+    "originalCitation": "Stonedahl, F. and Wilensky, U. (2008).  NetLogo Simple Genetic Algorithm model.  http://ccl.northwestern.edu/netlogo/models/SimpleGeneticAlgorithm.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "sourceSnapshot": "evidence/computing/simple-genetic-algorithm.nlogox",
+    "evidenceFile": "evidence/computing/simple-genetic-algorithm.nlogox"
+  },
+  "publications": [
+    {
+      "id": "10.7551/mitpress/1090.001.0001",
+      "authors": [
+        "John H. Holland"
+      ],
+      "title": "Adaptation in Natural and Artificial Systems: An Introductory Analysis with Applications to Biology, Control, and Artificial Intelligence",
+      "year": 1992,
+      "venue": "The MIT Press",
+      "doi": "10.7551/mitpress/1090.001.0001",
+      "url": "https://doi.org/10.7551/mitpress/1090.001.0001",
+      "relevance": "Foundational genetic adaptation theory supports the population, fitness and variation mechanism.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.7551%2Fmitpress%2F1090.001.0001",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_7551_mitpress_1090_001_0001.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_7551_mitpress_1090_001_0001.json"
+      },
+      "publisher": "The MIT Press",
+      "isbn": [
+        "9780262275552"
+      ],
+      "verified": true
+    },
+    {
+      "id": "10.7551/mitpress/3927.001.0001",
+      "authors": [
+        "Melanie Mitchell"
+      ],
+      "title": "An Introduction to Genetic Algorithms",
+      "year": 1996,
+      "venue": "The MIT Press",
+      "doi": "10.7551/mitpress/3927.001.0001",
+      "url": "https://doi.org/10.7551/mitpress/3927.001.0001",
+      "relevance": "Scientific monograph explains algorithmic choices and how representation affects search.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.7551%2Fmitpress%2F3927.001.0001",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_7551_mitpress_3927_001_0001.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_7551_mitpress_3927_001_0001.json"
+      },
+      "publisher": "The MIT Press",
+      "isbn": [
+        "9780262280013"
+      ],
+      "verified": true
+    },
+    {
+      "id": "10.1109/4235.585893",
+      "authors": [
+        "D.H. Wolpert",
+        "W.G. Macready"
+      ],
+      "title": "No free lunch theorems for optimization",
+      "year": 1997,
+      "venue": "IEEE Transactions on Evolutionary Computation",
+      "doi": "10.1109/4235.585893",
+      "url": "https://doi.org/10.1109/4235.585893",
+      "relevance": "Optimization limits directly qualify extrapolation from the easy all-ones objective to arbitrary problems.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1109%2F4235.585893",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1109_4235_585893.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1109_4235_585893.json"
+      },
+      "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+      "volume": "1",
+      "issue": "1",
+      "pages": "67-82",
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

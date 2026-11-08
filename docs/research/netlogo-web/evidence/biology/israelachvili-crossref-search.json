@@ -1,0 +1,818 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.bibliographic=Theory+of+self-assembly+of+hydrocarbon+amphiphiles+into+micelles+and+bilayers+Israelachvili+Mitchell+Ninham+1976&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 106816,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                11,
+                5
+              ]
+            ],
+            "date-time": "2026-11-05T20:53:22Z",
+            "timestamp": 1793912002357,
+            "version": "4.8.0"
+          },
+          "reference-count": 0,
+          "publisher": "Royal Society of Chemistry (RSC)",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "J. Chem. Soc., Faraday Trans. 2"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1976
+              ]
+            ]
+          },
+          "DOI": "10.1039/f29767201525",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2004,
+                4,
+                13
+              ]
+            ],
+            "date-time": "2004-04-13T11:22:10Z",
+            "timestamp": 1081855330000
+          },
+          "page": "1525",
+          "source": "Crossref",
+          "is-referenced-by-count": 4909,
+          "title": [
+            "Theory of self-assembly of hydrocarbon amphiphiles into micelles and bilayers"
+          ],
+          "prefix": "10.1039",
+          "volume": "72",
+          "author": [
+            {
+              "given": "Jacob N.",
+              "family": "Israelachvili",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "D. John",
+              "family": "Mitchell",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Barry W.",
+              "family": "Ninham",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "292",
+          "container-title": [
+            "Journal of the Chemical Society, Faraday Transactions 2"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://pubs.rsc.org/en/content/articlepdf/1976/F2/F29767201525",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2026,
+                7,
+                7
+              ]
+            ],
+            "date-time": "2026-07-07T18:20:50Z",
+            "timestamp": 1783448450000
+          },
+          "score": 84.67605,
+          "resource": {
+            "primary": {
+              "URL": "https://pubs.rsc.org/f2/article/233201"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1976
+              ]
+            ]
+          },
+          "references-count": 0,
+          "URL": "https://doi.org/10.1039/f29767201525",
+          "ISSN": [
+            "0300-9238"
+          ],
+          "issn-type": [
+            {
+              "value": "0300-9238",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1976
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                27
+              ]
+            ],
+            "date-time": "2026-10-27T22:35:41Z",
+            "timestamp": 1793140541095,
+            "version": "4.5.0"
+          },
+          "reference-count": 43,
+          "publisher": "Elsevier BV",
+          "issue": "2",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    1977,
+                    10,
+                    1
+                  ]
+                ],
+                "date-time": "1977-10-01T00:00:00Z",
+                "timestamp": 244512000000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Biochimica et Biophysica Acta (BBA) - Biomembranes"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1977,
+                10
+              ]
+            ]
+          },
+          "DOI": "10.1016/0005-2736(77)90099-2",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2003,
+                2,
+                10
+              ]
+            ],
+            "date-time": "2003-02-10T23:17:05Z",
+            "timestamp": 1044919025000
+          },
+          "page": "185-201",
+          "source": "Crossref",
+          "is-referenced-by-count": 880,
+          "title": [
+            "Theory of self-assembly of lipid bilayers and vesicles"
+          ],
+          "prefix": "10.1016",
+          "volume": "470",
+          "author": [
+            {
+              "given": "Jacob N.",
+              "family": "Israelachvili",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "D.John",
+              "family": "Mitchell",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Barry W.",
+              "family": "Ninham",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "78",
+          "reference": [
+            {
+              "key": "10.1016/0005-2736(77)90099-2_BIB1",
+              "author": "Hall",
+              "year": "1967"
+            },
+            {
+              "key": "10.1016/0005-2736(77)90099-2_BIB2",
+              "volume": "Vol. 2",
+              "author": "Hill",
+              "year": "1964"
+            },
+            {
+              "key": "10.1016/0005-2736(77)90099-2_BIB3",
+              "series-title": "The Hydrophobic Effect",
+              "author": "Tanford",
+              "year": "1973"
+            },
+            {
+              "key": "10.1016/0005-2736(77)90099-2_BIB4",
+              "doi-asserted-by": "crossref",
+              "first-page": "1525",
+              "DOI": "10.1039/f29767201525",
+              "volume": "72",
+              "author": "Israelachvili",
+              "year": "1976",
+              "journal-title": "J. Chem. Soc. Faraday Trans. II"
+            },
+            {
+              "key": "10.1016/0005-2736(77)90099-2_BIB5",
+              "first-page": "4457",
+              "volume": "72",
+              "author": "Sheetz",
+              "year": "1974"
+            },
+            {
+              "key": "10.1016/0005-2736(77)90099-2_BIB6",
+              "doi-asserted-by": "crossref",
+              "first-page": "13",
+              "DOI": "10.1016/0005-2736(75)90381-8",
+              "volume": "389",
+              "author": "Israelachvili",
+              "year": "1975",
+              "journal-title": "Biochim. Biophys. Acta"
+            },
+            {
+              "key": "10.1016/0005-2736(77)90099-2_BIB7",
+              "doi-asserted-by": "crossref",
+              "first-page": "720",
+              "DOI": "10.1126/science.175.4023.720",
+              "volume": "175",
+              "author": "Singer",
+              "year": "1972",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/0005-2736(77)90099-2_BIB8_1",
+              "doi-asserted-by": "crossref",
+              "first-page": "510",
+              "DOI": "10.1515/znc-1974-9-1010",
+              "volume": "29c",
+              "author": "Helfrich",
+              "year": "1974",
+              "journal-title": "Z. Naturforsch."
+            },
+            {
+              "key": "10.1016/0005-2736(77)90099-2_BIB8_2",
+              "first-page": "693",
+              "volume": "28c",
+              "author": "Helfrich",
+              "year": "1974",
+              "journal-title": "Z. Naturfosch."
+            },
+            {
+              "key": "10.1016/0005-2736(77)90099-2_BIB9",
+              "doi-asserted-by": "crossref",
+              "first-page": "923",
+              "DOI": "10.1016/S0006-3495(74)85959-X",
+              "volume": "14",
+              "author": "Evans",
+              "year": "1974",
+              "journal-title": "Biophys. J."
+            },
+            {
+              "key": "10.1016/0005-2736(77)90099-2_BIB10",
+              "doi-asserted-by": "crossref",
+              "first-page": "266",
+              "DOI": "10.1016/0021-9797(75)90112-5",
+              "volume": "51",
+              "author": "Evans",
+              "year": "1975",
+              "journal-title": "J. Coll. Interface Sci."
+            },
+            {
+              "key": "10.1016/0005-2736(77)90099-2_BIB11",
+              "doi-asserted-by": "crossref",
+              "first-page": "432",
+              "DOI": "10.1016/0005-2736(74)90171-0",
+              "volume": "339",
+              "author": "Verkleij",
+              "year": "1974",
+              "journal-title": "Biochim. Biophys. Acta"
+            },
+            {
+              "key": "10.1016/0005-2736(77)90099-2_BIB12",
+              "doi-asserted-by": "crossref",
+              "first-page": "3915",
+              "DOI": "10.1021/ja00847a008",
+              "volume": "97",
+              "author": "Kalyanasundaram",
+              "year": "1975",
+              "journal-title": "J. Amer. Chem. Soc."
+            },
+            {
+              "key": "10.1016/0005-2736(77)90099-2_BIB13",
+              "doi-asserted-by": "crossref",
+              "first-page": "644",
+              "DOI": "10.1021/j150488a003",
+              "volume": "55",
+              "author": "Debye",
+              "year": "1951",
+              "journal-title": "J. Phys. Colloid Chem."
+            },
+            {
+              "key": "10.1016/0005-2736(77)90099-2_BIB14",
+              "first-page": "383",
+              "volume": "66",
+              "author": "Mingins",
+              "year": "1973"
+            },
+            {
+              "key": "10.1016/0005-2736(77)90099-2_BIB15",
+              "first-page": "3",
+              "volume": "11",
+              "author": "Williams",
+              "year": "1970",
+              "journal-title": "Prog. Chem. Fats Other Lipids"
+            },
+            {
+              "key": "10.1016/0005-2736(77)90099-2_BIB16",
+              "doi-asserted-by": "crossref",
+              "first-page": "551",
+              "DOI": "10.1016/S0022-2275(20)38874-X",
+              "volume": "8",
+              "author": "Small",
+              "year": "1967",
+              "journal-title": "J. Lipid Res."
+            },
+            {
+              "key": "10.1016/0005-2736(77)90099-2_BIB17",
+              "doi-asserted-by": "crossref",
+              "first-page": "363",
+              "DOI": "10.1016/0022-2836(67)90192-1",
+              "volume": "25",
+              "author": "Reiss-Husson",
+              "year": "1967",
+              "journal-title": "J. Mol. Biol."
+            },
+            {
+              "key": "10.1016/0005-2736(77)90099-2_BIB18",
+              "doi-asserted-by": "crossref",
+              "first-page": "333",
+              "DOI": "10.1016/0009-3084(71)90045-4",
+              "volume": "6",
+              "author": "Rand",
+              "year": "1971",
+              "journal-title": "Chem. Phys. Lipids"
+            },
+            {
+              "key": "10.1016/0005-2736(77)90099-2_BIB19",
+              "doi-asserted-by": "crossref",
+              "first-page": "207",
+              "DOI": "10.1083/jcb.12.2.207",
+              "volume": "12",
+              "author": "Luzzati",
+              "year": "1962",
+              "journal-title": "J. Cell Biol."
+            },
+            {
+              "key": "10.1016/0005-2736(77)90099-2_BIB20",
+              "doi-asserted-by": "crossref",
+              "first-page": "848",
+              "DOI": "10.1039/tf9666200848",
+              "volume": "62",
+              "author": "Parsegian",
+              "year": "1966",
+              "journal-title": "Trans. Faraday Soc."
+            },
+            {
+              "key": "10.1016/0005-2736(77)90099-2_BIB21",
+              "series-title": "The Cell Surface in Development",
+              "author": "Thompson",
+              "year": "1974"
+            },
+            {
+              "key": "10.1016/0005-2736(77)90099-2_BIB22",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Atkinson D., Hauser, H., Shipley, G.G. and Stubbs J.M. (1974) 339, 10\u201329",
+              "DOI": "10.1016/0005-2736(74)90329-0"
+            },
+            {
+              "key": "10.1016/0005-2736(77)90099-2_BIB23",
+              "doi-asserted-by": "crossref",
+              "first-page": "6",
+              "DOI": "10.1016/0005-2736(75)90038-3",
+              "volume": "406",
+              "author": "de Kruijff",
+              "year": "1975",
+              "journal-title": "Biochim. Biophys. Acta"
+            },
+            {
+              "key": "10.1016/0005-2736(77)90099-2_BIB24",
+              "doi-asserted-by": "crossref",
+              "first-page": "399",
+              "DOI": "10.1016/0006-291X(73)90675-X",
+              "volume": "53",
+              "author": "Hauser",
+              "year": "1973",
+              "journal-title": "Biochem. Biophys. Res. Commun."
+            },
+            {
+              "key": "10.1016/0005-2736(77)90099-2_BIB25",
+              "doi-asserted-by": "crossref",
+              "first-page": "385",
+              "DOI": "10.1016/0021-9797(71)90010-5",
+              "volume": "36",
+              "author": "Wobschall",
+              "year": "1971",
+              "journal-title": "J. Coll. Interface Sci."
+            },
+            {
+              "key": "10.1016/0005-2736(77)90099-2_BIB26",
+              "doi-asserted-by": "crossref",
+              "first-page": "303",
+              "DOI": "10.1016/S0006-3495(64)86784-9",
+              "volume": "4",
+              "author": "Rand",
+              "year": "1964",
+              "journal-title": "Biophys.J."
+            },
+            {
+              "key": "10.1016/0005-2736(77)90099-2_BIB27",
+              "doi-asserted-by": "crossref",
+              "first-page": "49",
+              "DOI": "10.1016/0005-2760(72)90073-2",
+              "volume": "260",
+              "author": "Finer",
+              "year": "1972",
+              "journal-title": "Biochim. Biophys. Acta"
+            },
+            {
+              "key": "10.1016/0005-2736(77)90099-2_BIB28",
+              "doi-asserted-by": "crossref",
+              "first-page": "27",
+              "DOI": "10.1016/0005-2736(73)90022-9",
+              "volume": "307",
+              "author": "Johnson",
+              "year": "1973",
+              "journal-title": "Biochim. Biophys. Acta"
+            },
+            {
+              "key": "10.1016/0005-2736(77)90099-2_BIB29",
+              "first-page": "2716",
+              "volume": "73",
+              "author": "Longmuir",
+              "year": "1976"
+            },
+            {
+              "key": "10.1016/0005-2736(77)90099-2_BIB30",
+              "doi-asserted-by": "crossref",
+              "first-page": "186",
+              "DOI": "10.1016/0005-2736(75)90188-1",
+              "volume": "375",
+              "author": "Berden",
+              "year": "1975",
+              "journal-title": "Biochim. Biophys. Acta"
+            },
+            {
+              "key": "10.1016/0005-2736(77)90099-2_BIB31",
+              "doi-asserted-by": "crossref",
+              "first-page": "4027",
+              "DOI": "10.1021/bi00716a033",
+              "volume": "13",
+              "author": "Gent",
+              "year": "1974",
+              "journal-title": "Biochemistry"
+            },
+            {
+              "key": "10.1016/0005-2736(77)90099-2_BIB32",
+              "first-page": "359",
+              "volume": "71",
+              "author": "Huang",
+              "year": "1974"
+            },
+            {
+              "key": "10.1016/0005-2736(77)90099-2_BIB33",
+              "doi-asserted-by": "crossref",
+              "first-page": "729",
+              "DOI": "10.1016/0005-2736(76)90402-8",
+              "volume": "436",
+              "author": "de Kruijff",
+              "year": "1976",
+              "journal-title": "Biochim. Biophys. Acta"
+            },
+            {
+              "key": "10.1016/0005-2736(77)90099-2_BIB34",
+              "doi-asserted-by": "crossref",
+              "first-page": "157",
+              "DOI": "10.1016/0005-2736(75)90100-5",
+              "volume": "413",
+              "author": "Litman",
+              "year": "1975",
+              "journal-title": "Biochim. Biophys. Acta"
+            },
+            {
+              "key": "10.1016/0005-2736(77)90099-2_BIB35",
+              "doi-asserted-by": "crossref",
+              "first-page": "397",
+              "DOI": "10.1016/0005-2736(72)90084-3",
+              "volume": "290",
+              "author": "Phillips",
+              "year": "1972",
+              "journal-title": "Biochim. Biophys. Acta"
+            },
+            {
+              "key": "10.1016/0005-2736(77)90099-2_BIB36",
+              "doi-asserted-by": "crossref",
+              "first-page": "1015",
+              "DOI": "10.1016/0005-2736(73)90408-2",
+              "volume": "298",
+              "author": "Batzri",
+              "year": "1973",
+              "journal-title": "Biochim. Biophys. Acta"
+            },
+            {
+              "key": "10.1016/0005-2736(77)90099-2_BIB37",
+              "doi-asserted-by": "crossref",
+              "first-page": "322",
+              "DOI": "10.1016/0005-2736(76)90308-4",
+              "volume": "465",
+              "author": "Brunner",
+              "year": "1976",
+              "journal-title": "Biochim. Biophys. Acta"
+            },
+            {
+              "key": "10.1016/0005-2736(77)90099-2_BIB38",
+              "doi-asserted-by": "crossref",
+              "first-page": "78",
+              "DOI": "10.1038/266078a0",
+              "volume": "266",
+              "author": "Hargreaves",
+              "year": "1977",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/0005-2736(77)90099-2_BIB39_1",
+              "doi-asserted-by": "crossref",
+              "first-page": "285",
+              "DOI": "10.1085/jgp.60.3.285",
+              "volume": "60",
+              "author": "Muller",
+              "year": "1972",
+              "journal-title": "J. Gen. Physiol."
+            },
+            {
+              "key": "10.1016/0005-2736(77)90099-2_BIB39_2",
+              "first-page": "923",
+              "volume": "71",
+              "author": "Muller",
+              "year": "1974"
+            },
+            {
+              "key": "10.1016/0005-2736(77)90099-2_BIB40",
+              "doi-asserted-by": "crossref",
+              "first-page": "667",
+              "DOI": "10.1085/jgp.58.6.667",
+              "volume": "58",
+              "author": "McLaughlin",
+              "year": "1971",
+              "journal-title": "J. Gen. Physiol."
+            },
+            {
+              "key": "10.1016/0005-2736(77)90099-2_BIB41",
+              "doi-asserted-by": "crossref",
+              "first-page": "200",
+              "DOI": "10.1016/S0006-3495(74)85907-2",
+              "volume": "14",
+              "author": "McLaughlin",
+              "year": "1974",
+              "journal-title": "Biophys.J."
+            }
+          ],
+          "container-title": [
+            "Biochimica et Biophysica Acta (BBA) - Biomembranes"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:0005273677900992?httpAccept=text/xml",
+              "content-type": "text/xml",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:0005273677900992?httpAccept=text/plain",
+              "content-type": "text/plain",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2021,
+                6,
+                3
+              ]
+            ],
+            "date-time": "2021-06-03T16:41:46Z",
+            "timestamp": 1622738506000
+          },
+          "score": 54.362297,
+          "resource": {
+            "primary": {
+              "URL": "https://linkinghub.elsevier.com/retrieve/pii/0005273677900992"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1977,
+                10
+              ]
+            ]
+          },
+          "references-count": 43,
+          "journal-issue": {
+            "issue": "2",
+            "published-print": {
+              "date-parts": [
+                [
+                  1977,
+                  10
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "0005273677900992"
+          ],
+          "URL": "https://doi.org/10.1016/0005-2736(77)90099-2",
+          "ISSN": [
+            "0005-2736"
+          ],
+          "issn-type": [
+            {
+              "value": "0005-2736",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1977,
+                10
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                8,
+                28
+              ]
+            ],
+            "date-time": "2026-08-28T06:17:26Z",
+            "timestamp": 1787897846340,
+            "version": "build-2784847793"
+          },
+          "description": "Supplemental Information for 10.1021/nl503221p",
+          "reference-count": 0,
+          "publisher": "American Chemical Society (ACS)",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "DOI": "10.1021/nl503221p.s001",
+          "type": "component",
+          "created": {
+            "date-parts": [
+              [
+                2026,
+                8,
+                28
+              ]
+            ],
+            "date-time": "2026-08-28T05:26:52Z",
+            "timestamp": 1787894812000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Noncanonical Self-Assembly of Highly Asymmetric Genetically Encoded Polypeptide Amphiphiles into Cylindrical Micelles"
+          ],
+          "prefix": "10.1021",
+          "member": "316",
+          "deposited": {
+            "date-parts": [
+              [
+                2026,
+                8,
+                28
+              ]
+            ],
+            "date-time": "2026-08-28T05:26:52Z",
+            "timestamp": 1787894812000
+          },
+          "score": 41.08493,
+          "resource": {
+            "primary": {
+              "URL": "https://pubs.acs.org/doi/suppl/10.1021/nl503221p/suppl_file/nl503221p_si_001.pdf"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                null
+              ]
+            ]
+          },
+          "references-count": 0,
+          "URL": "https://doi.org/10.1021/nl503221p.s001",
+          "relation": {
+            "is-component-of": [
+              {
+                "id-type": "doi",
+                "id": "10.1021/nl503221p",
+                "asserted-by": "object"
+              }
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

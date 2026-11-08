@@ -1,0 +1,181 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1098%2Frspb.1994.0048%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1098/rspb.1994.0048\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "8008757",
+          "source": "MED",
+          "pmid": "8008757",
+          "doi": "10.1098/rspb.1994.0048",
+          "title": "A pessimistic estimate of the time required for an eye to evolve.",
+          "authorString": "Nilsson DE, Pelger S.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Nilsson DE",
+                "lastName": "Nilsson",
+                "firstName": "D E",
+                "initials": "DE",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Zoology, Lund University, Sweden."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Pelger S",
+                "lastName": "Pelger",
+                "firstName": "S",
+                "initials": "S",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-7051-0116"
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0002-7051-0116"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "wikipedia"
+            ]
+          },
+          "journalInfo": {
+            "issue": "1345",
+            "volume": "256",
+            "journalIssueId": 785457,
+            "dateOfPublication": "1994 Apr",
+            "monthOfPublication": 4,
+            "yearOfPublication": 1994,
+            "journal": {
+              "medlineAbbreviation": "Proc Biol Sci",
+              "title": "Proceedings. Biological sciences",
+              "essn": "1471-2954",
+              "issn": "0962-8452",
+              "nlmid": "101245157",
+              "isoabbreviation": "Proc Biol Sci"
+            },
+            "printPublicationDate": "1994-04-01"
+          },
+          "pubYear": "1994",
+          "pageInfo": "53-58",
+          "abstractText": "Theoretical considerations of eye design allow us to find routes along which the optical structures of eyes may have evolved. If selection constantly favours an increase in the amount of detectable spatial information, a light-sensitive patch will gradually turn into a focused lens eye through continuous small improvements of design. An upper limit for the number of generations required for the complete transformation can be calculated with a minimum of assumptions. Even with a consistently pessimistic approach the time required becomes amazingly short: only a few hundred thousand years.",
+          "affiliation": "Department of Zoology, Lund University, Sweden.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, Non-U.S. Gov't",
+              "Journal Article"
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Eye",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "AH",
+                      "qualifierName": "anatomy & histology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Animals"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Models, Genetic"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Time Factors"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Models, Anatomic"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Ocular Physiological Phenomena"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Biological Evolution"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1098/rspb.1994.0048"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "citedByCount": 106,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "1994-07-15",
+          "dateOfCreation": "1994-04-22",
+          "dateOfRevision": "2016-10-18",
+          "firstPublicationDate": "1994-04-01",
+          "firstIndexDate": "2008-12-23",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

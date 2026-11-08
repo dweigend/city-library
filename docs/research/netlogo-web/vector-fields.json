@@ -1,0 +1,120 @@
+{
+  "slug": "vector-fields",
+  "name": "Vector Fields",
+  "catalogPath": "Sample Models/Mathematics/Vector Fields",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Vector%20Fields.nlogox",
+  "deliveryBatch": "B16",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "What does a local direction field imply about a particle's trajectory? NetLogo Vector Fields displays arrows tangent to circles around the origin, with magnitude increasing with distance, and moves particles through finite direction-following steps. Differential geometry [1] supplies the language of curves and tangent directions; computer graphics [2] explains arrows and spatial encoding; Cabral and Leedom [3] provide a related field-visualization method using line integral convolution. The original Info identifies an important numerical artifact: trajectories slowly spiral outward because particles travel before recalculating their headings. Changing step size changes this approximation. The baseline illustrates an abstract vector field rather than identifying a particular gravitational or electromagnetic law. A circular-looking vector plot alone cannot establish force-based orbital motion, since velocity fields and acceleration fields imply different differential equations.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Vector%20Fields.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Vector%20Fields.nlogox",
+    "revision": "NetLogo 7.0.4 served 2026-11-05; SHA-256 0b712de04bcda60594291a6d9764a15d5c42711235a8193b3d2fe767d65839d0",
+    "checkedAt": "2026-11-05",
+    "evidence": "Full original served XML source, Procedures and Info retained in evidence/computing/vector-fields.nlogox; extracted Info retained alongside.",
+    "notes": " This dossier describes scientific connections to the original NetLogo teaching model; it does not certify a City Library reimplementation or empirical validity.",
+    "originalCitation": "Wilensky, U. (1998).  NetLogo Vector Fields model.  http://ccl.northwestern.edu/netlogo/models/VectorFields.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "sourceSnapshot": "evidence/computing/vector-fields.nlogox",
+    "evidenceFile": "evidence/computing/vector-fields.nlogox"
+  },
+  "publications": [
+    {
+      "id": "10.1007/978-1-84882-891-9",
+      "authors": [
+        "Andrew Pressley"
+      ],
+      "title": "Elementary Differential Geometry",
+      "year": 2010,
+      "venue": "Springer Undergraduate Mathematics Series",
+      "doi": "10.1007/978-1-84882-891-9",
+      "url": "https://doi.org/10.1007/978-1-84882-891-9",
+      "relevance": "Curves and tangents provide the mathematical setting for integral paths.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1007%2F978-1-84882-891-9",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1007_978_1_84882_891_9.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1007_978_1_84882_891_9.json"
+      },
+      "publisher": "Springer London",
+      "isbn": [
+        "9781848828902",
+        "9781848828919"
+      ],
+      "verified": true
+    },
+    {
+      "id": "10.1201/9781439865521",
+      "authors": [
+        "Peter Shirley",
+        "Michael Ashikhmin",
+        "Steve Marschner"
+      ],
+      "title": "Fundamentals of Computer Graphics",
+      "year": 2009,
+      "venue": "A K Peters/CRC Press",
+      "doi": "10.1201/9781439865521",
+      "url": "https://doi.org/10.1201/9781439865521",
+      "relevance": "Vector glyphs and spatial transformations ground the visual encoding of magnitude and direction.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1201%2F9781439865521",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1201_9781439865521.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1201_9781439865521.json"
+      },
+      "publisher": "A K Peters/CRC Press",
+      "isbn": [
+        "9781439865521"
+      ],
+      "verified": true
+    },
+    {
+      "id": "10.1145/166117.166151",
+      "authors": [
+        "Brian Cabral",
+        "Leith Casey Leedom"
+      ],
+      "title": "Imaging vector fields using line integral convolution",
+      "year": 1993,
+      "venue": "Proceedings of the 20th annual conference on Computer graphics and interactive techniques",
+      "doi": "10.1145/166117.166151",
+      "url": "https://doi.org/10.1145/166117.166151",
+      "relevance": "Original vector-field visualization research supplies a direct scientific comparison to NetLogo’s arrow glyphs and particle paths; NetLogo does not implement line integral convolution.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1145%2F166117.166151",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata and selected full-text sections",
+        "access": "Open institutional/author repository copy; selected sections read. Full-text access via publisher not established.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Abstract and sections 1–2: vector-field imaging, glyphs, streamlines and particle-trace limitations. Line integral convolution is a contrasting visualization method. The original NetLogo baseline uses arrows and particle trajectories, not LIC.",
+        "snapshot": "evidence/computing/doi-10_1145_166117_166151.json",
+        "fullTextEvidence": {
+          "doi": "10.1145/166117.166151",
+          "consultedUrl": "https://web.mit.edu/viz/EM/visualizations/resources/cabral.pdf",
+          "checkedAt": "2026-11-05",
+          "evidenceType": "selected full-text sections",
+          "sectionsRead": "Abstract and sections 1–2: vector-field imaging, glyphs, streamlines and particle-trace limitations.",
+          "finding": "Line integral convolution is a contrasting visualization method. The original NetLogo baseline uses arrows and particle trajectories, not LIC.",
+          "retrievedSha256": "25ba52c10e83f9812dd192912a226bbb8b50ef1d1c3ef064cdad7bf094e47462",
+          "retention": "Bibliographic metadata, content-specific reading notes and retrieval hash retained; full article/book copies are not redistributed in this research package."
+        },
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1145_166117_166151.json"
+      },
+      "publisher": "ACM",
+      "pages": "263-270",
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

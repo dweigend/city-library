@@ -1,0 +1,583 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.bibliographic=The+mechanisms+of+humidity+reactions+of+terrestrial+isopods&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 1487111,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                19
+              ]
+            ],
+            "date-time": "2026-09-19T09:51:08Z",
+            "timestamp": 1789811468868,
+            "version": "4.0.1"
+          },
+          "reference-count": 13,
+          "publisher": "The Company of Biologists",
+          "issue": "2",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    1941,
+                    8,
+                    1
+                  ]
+                ],
+                "date-time": "1941-08-01T00:00:00Z",
+                "timestamp": -896832000000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "http://www.biologists.com/user-licence-1-1/"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                1941,
+                8,
+                1
+              ]
+            ]
+          },
+          "abstract": "<jats:title>ABSTRACT</jats:title>\n               <jats:p>The humidity reactions of Oniscus asellus, Porcellio scaber and Armadillidium vulgare have been analysed and compared. The mechanism whereby the three species collect in moist air is twofold, Consisting of (a) hygrokinesis, or decrease in activity and speed in moist air, and (b) of more frequent turnings in space, retaining them in the areas of greater humidity. These mechanisms are most clearly expressed in Oniscus asellus and least in Armadillidium vulgare. This sequence may be correlated with the resistance to desiccation of the three species, which is greatest in Armadillidium vulgare, and greater in Porcellio scaber than in Oniscus asellus. It is suggested that the humidity reactions of isopods are controlled by water loss by evaporation from the whole body. A correlation between hygrokinesis and thigmokinesis was observed in Porcellio scaber. There appears to be a reversal from negative to positive phototaxis in Oniscus asellus, correlated with the water loss by evaporation. The humidity reactions, low thigmokinesis and negative phototaxis combine to retain the isopods in damp, dark habitats.</jats:p>",
+          "DOI": "10.1242/jeb.18.2.115",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2021,
+                4,
+                25
+              ]
+            ],
+            "date-time": "2021-04-25T02:02:38Z",
+            "timestamp": 1619316158000
+          },
+          "page": "115-135",
+          "source": "Crossref",
+          "is-referenced-by-count": 52,
+          "title": [
+            "The Mechanisms of Humidity Reactions of Terrestrial Isopods"
+          ],
+          "prefix": "10.1242",
+          "volume": "18",
+          "author": [
+            {
+              "given": "Nadejda",
+              "family": "Waloff",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Birkbeck College, University of London"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "237",
+          "published-online": {
+            "date-parts": [
+              [
+                1941,
+                8,
+                1
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "2023092719415711500_JEXBIO_18_2_115C1",
+              "doi-asserted-by": "publisher",
+              "first-page": "193",
+              "DOI": "10.1002/jez.1400270204",
+              "volume": "27",
+              "author": "Abbott",
+              "year": "1918",
+              "journal-title": "J. exp. Zool"
+            },
+            {
+              "key": "2023092719415711500_JEXBIO_18_2_115C2",
+              "doi-asserted-by": "publisher",
+              "first-page": "255",
+              "DOI": "10.1002/jez.1400450108",
+              "volume": "45",
+              "author": "Allee",
+              "year": "1926",
+              "journal-title": "J. exp. Zool"
+            },
+            {
+              "key": "2023092719415711500_JEXBIO_18_2_115C3",
+              "volume-title": "The Orientation of Animals",
+              "author": "Fraenkel",
+              "year": "1940"
+            },
+            {
+              "key": "2023092719415711500_JEXBIO_18_2_115C4",
+              "doi-asserted-by": "publisher",
+              "first-page": "178",
+              "DOI": "10.1242/jeb.14.2.178",
+              "volume": "14",
+              "author": "Gunn",
+              "year": "1937",
+              "journal-title": "J. exp. Biol"
+            },
+            {
+              "key": "2023092719415711500_JEXBIO_18_2_115C5",
+              "doi-asserted-by": "publisher",
+              "first-page": "450",
+              "DOI": "10.1242/jeb.13.4.450",
+              "volume": "13",
+              "author": "Gunn",
+              "year": "1936",
+              "journal-title": "J. exp. Biol"
+            },
+            {
+              "key": "2023092719415711500_JEXBIO_18_2_115C6",
+              "doi-asserted-by": "publisher",
+              "first-page": "307",
+              "DOI": "10.1242/jeb.17.3.307",
+              "volume": "17",
+              "author": "Gunn",
+              "year": "1940",
+              "journal-title": "J. exp. Biol"
+            },
+            {
+              "key": "2023092719415711500_JEXBIO_18_2_115C7",
+              "volume-title": "Vergleichende Anatomie des Nervensystems der wirbellosen Tiere",
+              "author": "Hanstr\u00f6m",
+              "year": "1928"
+            },
+            {
+              "key": "2023092719415711500_JEXBIO_18_2_115C8",
+              "doi-asserted-by": "publisher",
+              "first-page": "545",
+              "DOI": "10.1085/jgp.1.5.545",
+              "volume": "1",
+              "author": "Hecht",
+              "year": "1919",
+              "journal-title": "J. gen. Physiol"
+            },
+            {
+              "key": "2023092719415711500_JEXBIO_18_2_115C9",
+              "doi-asserted-by": "publisher",
+              "first-page": "534",
+              "DOI": "10.1007/BF00338173",
+              "volume": "13",
+              "author": "Henke",
+              "year": "1930",
+              "journal-title": "Z. vergl. Physiol"
+            },
+            {
+              "key": "2023092719415711500_JEXBIO_18_2_115C10",
+              "doi-asserted-by": "publisher",
+              "first-page": "186",
+              "DOI": "10.1111/j.1469-185X.1938.tb00514.x",
+              "volume": "13",
+              "author": "Mast",
+              "year": "1938",
+              "journal-title": "Biol. Rev"
+            },
+            {
+              "key": "2023092719415711500_JEXBIO_18_2_115C11",
+              "first-page": "113",
+              "volume": "43",
+              "author": "Miller",
+              "year": "1938",
+              "journal-title": "Univ. Calif. Publ. Zool"
+            },
+            {
+              "key": "2023092719415711500_JEXBIO_18_2_115C12",
+              "doi-asserted-by": "publisher",
+              "first-page": "265",
+              "DOI": "10.1242/jeb.13.3.265",
+              "volume": "13",
+              "author": "Ullyott",
+              "year": "1936",
+              "journal-title": "J. exp. Biol"
+            },
+            {
+              "key": "2023092719415711500_JEXBIO_18_2_115C13",
+              "first-page": "366",
+              "volume": "118",
+              "author": "Verhoeff",
+              "year": "1920",
+              "journal-title": "Z. wiss. Zool"
+            }
+          ],
+          "container-title": [
+            "Journal of Experimental Biology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://journals.biologists.com/jeb/article-pdf/18/2/115/3173019/jexbio_18_2_115.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "syndication"
+            },
+            {
+              "URL": "https://journals.biologists.com/jeb/article-pdf/18/2/115/3173019/jexbio_18_2_115.pdf",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2023,
+                9,
+                27
+              ]
+            ],
+            "date-time": "2023-09-27T20:08:19Z",
+            "timestamp": 1695845299000
+          },
+          "score": 43.27443,
+          "resource": {
+            "primary": {
+              "URL": "https://journals.biologists.com/jeb/article/18/2/115/4667/The-Mechanisms-of-Humidity-Reactions-of"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1941,
+                8,
+                1
+              ]
+            ]
+          },
+          "references-count": 13,
+          "journal-issue": {
+            "issue": "2",
+            "published-print": {
+              "date-parts": [
+                [
+                  1941,
+                  8,
+                  1
+                ]
+              ]
+            }
+          },
+          "URL": "https://doi.org/10.1242/jeb.18.2.115",
+          "ISSN": [
+            "0022-0949",
+            "1477-9145"
+          ],
+          "issn-type": [
+            {
+              "value": "0022-0949",
+              "type": "print"
+            },
+            {
+              "value": "1477-9145",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1941,
+                8,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2025,
+                11,
+                12
+              ]
+            ],
+            "date-time": "2025-11-12T03:31:30Z",
+            "timestamp": 1762918290483,
+            "version": "build-2065373602"
+          },
+          "reference-count": 0,
+          "publisher": "BRILL",
+          "isbn-type": [
+            {
+              "type": "electronic",
+              "value": "9789047412854"
+            },
+            {
+              "type": "print",
+              "value": "9789004124967"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2003,
+                1,
+                1
+              ]
+            ]
+          },
+          "DOI": "10.1163/9789047412854_022",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2021,
+                11,
+                28
+              ]
+            ],
+            "date-time": "2021-11-28T21:02:37Z",
+            "timestamp": 1638133357000
+          },
+          "page": "300-309",
+          "source": "Crossref",
+          "is-referenced-by-count": 7,
+          "title": [
+            "Variations of Calcium Deposition in Terrestrial Isopods"
+          ],
+          "prefix": "10.1163",
+          "author": [
+            {
+              "given": "Andreas",
+              "family": "Ziegler",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "374",
+          "container-title": [
+            "The Biology of Terrestrial Isopods"
+          ],
+          "link": [
+            {
+              "URL": "https://brill.com/view/book/9789047412854/B9789047412854_s022.xml",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://brill.com/downloadpdf/title/8729",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "syndication"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2025,
+                8,
+                21
+              ]
+            ],
+            "date-time": "2025-08-21T02:18:19Z",
+            "timestamp": 1755742699000
+          },
+          "score": 30.504438,
+          "resource": {
+            "primary": {
+              "URL": "https://brill.com/view/book/9789047412854/B9789047412854_s022.xml"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2003,
+                1,
+                1
+              ]
+            ]
+          },
+          "ISBN": [
+            "9789047412854",
+            "9789004124967"
+          ],
+          "references-count": 0,
+          "URL": "https://doi.org/10.1163/9789047412854_022",
+          "published": {
+            "date-parts": [
+              [
+                2003,
+                1,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                7,
+                2
+              ]
+            ],
+            "date-time": "2026-07-02T08:09:54Z",
+            "timestamp": 1782979794434,
+            "version": "3.54.5"
+          },
+          "reference-count": 0,
+          "publisher": "BRILL",
+          "isbn-type": [
+            {
+              "value": "9789047412854",
+              "type": "electronic"
+            },
+            {
+              "value": "9789004124967",
+              "type": "print"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2003,
+                1,
+                1
+              ]
+            ]
+          },
+          "DOI": "10.1163/9789047412854_019",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2021,
+                11,
+                28
+              ]
+            ],
+            "date-time": "2021-11-28T21:02:37Z",
+            "timestamp": 1638133357000
+          },
+          "page": "243-261",
+          "source": "Crossref",
+          "is-referenced-by-count": 12,
+          "title": [
+            "Habitat and Resource Use by Terrestrial Isopods (Isopoda, Oniscidea)"
+          ],
+          "prefix": "10.1163",
+          "author": [
+            {
+              "given": "Martin",
+              "family": "Zimmer",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "374",
+          "container-title": [
+            "The Biology of Terrestrial Isopods"
+          ],
+          "link": [
+            {
+              "URL": "https://brill.com/view/book/9789047412854/B9789047412854_s019.xml",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://brill.com/downloadpdf/title/8729",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "syndication"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2025,
+                8,
+                21
+              ]
+            ],
+            "date-time": "2025-08-21T02:18:18Z",
+            "timestamp": 1755742698000
+          },
+          "score": 29.705906,
+          "resource": {
+            "primary": {
+              "URL": "https://brill.com/view/book/9789047412854/B9789047412854_s019.xml"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2003,
+                1,
+                1
+              ]
+            ]
+          },
+          "ISBN": [
+            "9789047412854",
+            "9789004124967"
+          ],
+          "references-count": 0,
+          "URL": "https://doi.org/10.1163/9789047412854_019",
+          "published": {
+            "date-parts": [
+              [
+                2003,
+                1,
+                1
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

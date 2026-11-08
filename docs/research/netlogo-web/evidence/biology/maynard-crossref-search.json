@@ -1,0 +1,901 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=When+learning+guides+evolution+Maynard+Smith+1987&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 3386834,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                3
+              ]
+            ],
+            "date-time": "2026-10-03T18:42:14Z",
+            "timestamp": 1791052934354,
+            "version": "4.1.0"
+          },
+          "reference-count": 0,
+          "publisher": "Springer Science and Business Media LLC",
+          "issue": "6142",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    1987,
+                    10,
+                    1
+                  ]
+                ],
+                "date-time": "1987-10-01T00:00:00Z",
+                "timestamp": 560044800000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "http://www.springer.com/tdm"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Nature"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1987,
+                10
+              ]
+            ]
+          },
+          "DOI": "10.1038/329761a0",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2003,
+                6,
+                12
+              ]
+            ],
+            "date-time": "2003-06-12T21:35:10Z",
+            "timestamp": 1055453710000
+          },
+          "page": "761-762",
+          "source": "Crossref",
+          "is-referenced-by-count": 78,
+          "title": [
+            "When learning guides evolution"
+          ],
+          "prefix": "10.1038",
+          "volume": "329",
+          "author": [
+            {
+              "given": "John Maynard",
+              "family": "Smith",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "container-title": [
+            "Nature"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://www.nature.com/articles/329761a0",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://www.nature.com/articles/329761a0.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://www.nature.com/articles/329761a0.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2023,
+                5,
+                17
+              ]
+            ],
+            "date-time": "2023-05-17T01:27:47Z",
+            "timestamp": 1684286867000
+          },
+          "score": 34.760464,
+          "resource": {
+            "primary": {
+              "URL": "https://www.nature.com/articles/329761a0"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1987,
+                10
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "6142",
+            "published-print": {
+              "date-parts": [
+                [
+                  1987,
+                  10
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "BF329761a0"
+          ],
+          "URL": "https://doi.org/10.1038/329761a0",
+          "ISSN": [
+            "0028-0836",
+            "1476-4687"
+          ],
+          "issn-type": [
+            {
+              "value": "0028-0836",
+              "type": "print"
+            },
+            {
+              "value": "1476-4687",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1987,
+                10
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2023,
+                5,
+                6
+              ]
+            ],
+            "date-time": "2023-05-06T19:10:40Z",
+            "timestamp": 1683400240910
+          },
+          "reference-count": 42,
+          "publisher": "Springer Science and Business Media LLC",
+          "issue": "5",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2006,
+                    3,
+                    14
+                  ]
+                ],
+                "date-time": "2006-03-14T00:00:00Z",
+                "timestamp": 1142294400000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "http://www.springer.com/tdm"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Biol Philos"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2006,
+                3,
+                28
+              ]
+            ]
+          },
+          "DOI": "10.1007/s10539-005-9017-3",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2006,
+                3,
+                13
+              ]
+            ],
+            "date-time": "2006-03-13T14:39:23Z",
+            "timestamp": 1142260763000
+          },
+          "page": "951-966",
+          "source": "Crossref",
+          "is-referenced-by-count": 1,
+          "title": [
+            "Maynard Smith, optimization, and evolution"
+          ],
+          "prefix": "10.1007",
+          "volume": "20",
+          "author": [
+            {
+              "given": "Sahotra",
+              "family": "Sarkar",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "published-online": {
+            "date-parts": [
+              [
+                2006,
+                3,
+                14
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "9017_CR1",
+              "doi-asserted-by": "crossref",
+              "first-page": "85",
+              "DOI": "10.1016/0022-5193(78)90304-1",
+              "volume": "70",
+              "author": "D.T. Bishop",
+              "year": "1978",
+              "unstructured": "Bishop D.T. and Cannings C. (1978). A generalized war of attrition. J. Theor. Biol. 70: 85\u2013124",
+              "journal-title": "J. Theor. Biol."
+            },
+            {
+              "key": "9017_CR2",
+              "doi-asserted-by": "crossref",
+              "first-page": "175",
+              "DOI": "10.1007/BF02458287",
+              "volume": "58",
+              "author": "N. Behera",
+              "year": "1996",
+              "unstructured": "Behera N. (1996). Variational principles in evolution. Bull. Math. Biol. 58: 175\u2013202",
+              "journal-title": "Bull. Math. Biol."
+            },
+            {
+              "key": "9017_CR3",
+              "volume-title": "An Introduction to Population Genetics Theory",
+              "author": "J.F. Crow",
+              "year": "1970",
+              "unstructured": "Crow J.F. and Kimura M. (1970). An Introduction to Population Genetics Theory. Minneapolis, Burgess"
+            },
+            {
+              "key": "9017_CR4",
+              "volume-title": "Climbing Mount Improbable",
+              "author": "R. Dawkins",
+              "year": "1996",
+              "unstructured": "Dawkins R. (1996). Climbing Mount Improbable. London, Viking/Penguin"
+            },
+            {
+              "key": "9017_CR5",
+              "first-page": "5",
+              "volume-title": "Foundations of Genetic Algorithms",
+              "author": "K. Jong de",
+              "year": "1993",
+              "unstructured": "de Jong K. (1993). Genetic algorithms are NOT function optimizers. In: Whitley L.D., (eds). Foundations of Genetic Algorithms. San Mateo, CA, Morgan Kaufmann, pp. 5\u201317"
+            },
+            {
+              "key": "9017_CR6",
+              "volume-title": "No Free Lunch: Why Specified Complexity Cannot be Purchased without Intelligence",
+              "author": "W.A. Dembski",
+              "year": "2002",
+              "unstructured": "Dembski W.A. (2002). No Free Lunch: Why Specified Complexity Cannot be Purchased without Intelligence. Lanham, MD, Rowman and Littlefield"
+            },
+            {
+              "key": "9017_CR7",
+              "doi-asserted-by": "crossref",
+              "first-page": "161",
+              "DOI": "10.1017/CBO9780511609084.006",
+              "volume-title": "Adaptationism and Optimality",
+              "author": "I. Eshel",
+              "year": "2001",
+              "unstructured": "Eshel I. and Feldman M.W. (2001). Optimality and evolutionary stability under short-term and long-term selection. In: Orzack S.H. and Sober E. (eds), Adaptationism and Optimality. Cambridge UK, Cambridge University Press, pp. 161\u2013190"
+            },
+            {
+              "key": "9017_CR8",
+              "doi-asserted-by": "crossref",
+              "first-page": "1076",
+              "DOI": "10.1038/2211076a0",
+              "volume": "221",
+              "author": "W.J. Ewens",
+              "year": "1969",
+              "unstructured": "Ewens W.J.(1969). With additive fitness, the mean fitness increases. Nature 221: 1076",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "9017_CR9",
+              "doi-asserted-by": "crossref",
+              "first-page": "167",
+              "DOI": "10.1016/0040-5809(89)90028-2",
+              "volume": "36",
+              "author": "W.J. Ewens",
+              "year": "1989",
+              "unstructured": "Ewens W.J. (1989). An interpretation and proof of the fundamental theorem of natural selection. Theor. Popul. Biol. 36: 167\u2013180",
+              "journal-title": "Theor. Popul. Biol."
+            },
+            {
+              "key": "9017_CR10",
+              "doi-asserted-by": "crossref",
+              "first-page": "333",
+              "DOI": "10.1016/0040-5809(92)90019-P",
+              "volume": "42",
+              "author": "W.J. Ewens",
+              "year": "1992",
+              "unstructured": "Ewens W.J. (1992). An optimizing principle of natural selection in evolutionary population genetics. Theor. Popul. Biol. 42: 333\u2013346",
+              "journal-title": "Theor. Popul. Biol."
+            },
+            {
+              "key": "9017_CR11",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.5962/bhl.title.27468",
+              "volume-title": "The Genetical Theory of Natural Selection",
+              "author": "R.A. Fisher",
+              "year": "1930",
+              "unstructured": "Fisher R.A. (1930). The Genetical Theory of Natural Selection. Oxford, Clarendon Press"
+            },
+            {
+              "key": "9017_CR12",
+              "unstructured": "Forster M.R. 1999. Notice: No Free Lunches for Anyone, Bayesians Included. < http://www.no-free-lunch.org/Fors99.pdf> . Accessed: 14 February 2005"
+            },
+            {
+              "key": "9017_CR13",
+              "doi-asserted-by": "crossref",
+              "first-page": "335",
+              "DOI": "10.1017/CBO9780511609084.012",
+              "volume-title": "Adaptationism and Optimality",
+              "author": "P. Godfrey-Smith",
+              "year": "2001",
+              "unstructured": "Godfrey-Smith P. (2001). Three kinds of adaptationism. In: Orzack S.H. and Sober E. (eds). Adaptationism and Optimality. Cambridge, UK, Cambridge University Press, pp. 335\u2013357"
+            },
+            {
+              "key": "9017_CR14",
+              "doi-asserted-by": "crossref",
+              "first-page": "581",
+              "DOI": "10.1098/rspb.1979.0086",
+              "volume": "205",
+              "author": "S.J. Gould",
+              "year": "1979",
+              "unstructured": "Gould S.J. and Lewontin R.C. (1979). The Spandrels of San Marco and the Panglossian paradigm. Proc. R. Soc. Lond. B 205: 581\u2013598",
+              "journal-title": "Proc. R. Soc. Lond. B"
+            },
+            {
+              "key": "9017_CR15",
+              "volume-title": "Possible Worlds and Other Papers",
+              "author": "J.B.S. Haldane",
+              "year": "1928",
+              "unstructured": "Haldane J.B.S. (1928). Possible Worlds and Other Papers. New York, Harper"
+            },
+            {
+              "key": "9017_CR16",
+              "volume-title": "Adaptation in Natural and Artificial Systems: An Introductory Analysis with Applications to Biology, Control, and Artificial Intelligence",
+              "author": "J. Holland",
+              "year": "1975",
+              "unstructured": "Holland J. (1975). Adaptation in Natural and Artificial Systems: An Introductory Analysis with Applications to Biology, Control, and Artificial Intelligence. Ann Arbor, University of Michigan Press"
+            },
+            {
+              "key": "9017_CR17",
+              "doi-asserted-by": "crossref",
+              "first-page": "364",
+              "DOI": "10.1016/0040-5809(75)90025-8",
+              "volume": "7",
+              "author": "S. Karlin",
+              "year": "1975",
+              "unstructured": "Karlin S. (1975). General two locus selection models: some objectives, rules and interpretations. Theor. Popul. Biol. 7: 364\u2013398",
+              "journal-title": "Theor. Popul. Biol."
+            },
+            {
+              "key": "9017_CR18",
+              "volume-title": "The Variational Principles of Mechanics",
+              "author": "C. Lanczos",
+              "year": "1959",
+              "unstructured": "Lanczos C. (1959). The Variational Principles of Mechanics. Toronto, University of Toronto Press"
+            },
+            {
+              "key": "9017_CR19",
+              "doi-asserted-by": "crossref",
+              "first-page": "383",
+              "DOI": "10.1016/0022-5193(61)90038-8",
+              "volume": "1",
+              "author": "R.C. Lewontin",
+              "year": "1961",
+              "unstructured": "Lewontin R.C. (1961). Evolution and the theory of games. J. Theor. Biol. 1: 383\u2013403",
+              "journal-title": "J. Theor. Biol."
+            },
+            {
+              "key": "9017_CR20",
+              "volume-title": "The Genetic Basis of Evolutionary Change",
+              "author": "R.C. Lewontin",
+              "year": "1974",
+              "unstructured": "Lewontin R.C. (1974). The Genetic Basis of Evolutionary Change. New York, Columbia University Press"
+            },
+            {
+              "key": "9017_CR21",
+              "first-page": "198",
+              "volume": "1",
+              "author": "R.C. Lewontin",
+              "year": "1977",
+              "unstructured": "Lewontin R.C.(1977). \u201cAdaptation\u201d. Encyclopedia Einaudi Turin 1: 198 \u2013214",
+              "journal-title": "Encyclopedia Einaudi Turin"
+            },
+            {
+              "key": "9017_CR22",
+              "doi-asserted-by": "crossref",
+              "first-page": "212",
+              "DOI": "10.1038/scientificamerican0978-212",
+              "volume": "239",
+              "author": "R.C. Lewontin",
+              "year": "1978",
+              "unstructured": "Lewontin R.C. (1978). Adaptation. Sci. Am. 239: 212\u2013230",
+              "journal-title": "Sci. Am."
+            },
+            {
+              "key": "9017_CR23",
+              "first-page": "3",
+              "volume-title": "Analysis of Ecological Systems",
+              "author": "R.C. Lewontin",
+              "year": "1979",
+              "unstructured": "Lewontin R.C. (1979). Fitness, survival, and optimality. In: Horn D.J., Mitchell R. and Stairs G.R. (eds) Analysis of Ecological Systems. Columbus, Ohio State University Press, pp. 3\u201321"
+            },
+            {
+              "key": "9017_CR24",
+              "doi-asserted-by": "crossref",
+              "first-page": "140",
+              "DOI": "10.1086/448627",
+              "volume": "18",
+              "author": "R.C. Lewontin",
+              "year": "1991",
+              "unstructured": "Lewontin R.C. (1991). Facts and the factitious in natural sciences. Crit. Inq. 18: 140\u2013153",
+              "journal-title": "Crit. Inq."
+            },
+            {
+              "key": "9017_CR25",
+              "doi-asserted-by": "crossref",
+              "first-page": "31",
+              "DOI": "10.1146/annurev.es.09.110178.000335",
+              "volume": "9",
+              "author": "J. Maynard Smith",
+              "year": "1978",
+              "unstructured": "Maynard Smith J. (1978). Optimization theory in evolution. Annu. Rev. Ecol. Syst. 9: 31\u201356",
+              "journal-title": "Annu. Rev. Ecol. Syst."
+            },
+            {
+              "key": "9017_CR26",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1017/CBO9780511806292",
+              "volume-title": "Evolution and the Theory of Games",
+              "author": "J. Maynard Smith",
+              "year": "1982",
+              "unstructured": "Maynard Smith J. (1982). Evolution and the Theory of Games. Cambridge, UK, Cambridge University Press"
+            },
+            {
+              "key": "9017_CR27",
+              "volume-title": "The Major Transitions in Evolution",
+              "author": "J. Maynard Smith",
+              "year": "1995",
+              "unstructured": "Maynard Smith J. and Szathm\u00e1ry E. (1995). The Major Transitions in Evolution. Oxford, Oxford University Press"
+            },
+            {
+              "key": "9017_CR28",
+              "doi-asserted-by": "crossref",
+              "first-page": "324",
+              "DOI": "10.1086/284064",
+              "volume": "121",
+              "author": "E. Mayr",
+              "year": "1983",
+              "unstructured": "Mayr E. (1983). How to carry out the adaptationist program. Am. Nat. 121: 324\u2013334",
+              "journal-title": "Am. Nat."
+            },
+            {
+              "key": "9017_CR29",
+              "volume-title": "Darwinian Dynamics: Evolutionary Transitions in Fitness and Individuality",
+              "author": "R.E. Michod",
+              "year": "1999",
+              "unstructured": "Michod R.E. (1999). Darwinian Dynamics: Evolutionary Transitions in Fitness and Individuality. Princeton, Princeton University Press"
+            },
+            {
+              "key": "9017_CR30",
+              "doi-asserted-by": "crossref",
+              "first-page": "383",
+              "DOI": "10.1111/j.1469-1809.1963.tb01535.x",
+              "volume": "27",
+              "author": "P.A.P. Moran",
+              "year": "1964",
+              "unstructured": "Moran P.A.P. (1964). On the nonexistence of adaptive topographies. Ann. Hum. Genet. 27: 383\u2013393",
+              "journal-title": "Ann. Hum. Genet."
+            },
+            {
+              "key": "9017_CR31",
+              "doi-asserted-by": "crossref",
+              "first-page": "27",
+              "DOI": "10.1038/348027a0",
+              "volume": "348",
+              "author": "G.A. Parker",
+              "year": "1990",
+              "unstructured": "Parker G.A. and Maynard Smith J.(1990). Optimality theory in evolutionary biology. Nature 348: 27\u201333",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "9017_CR32",
+              "unstructured": "Perakh M. 2003. The No Free Lunch Theorems and Their Applications to Evolutionary Algorithms. < http://www.nctimes.net/\u223c \u223cmark/bibl_science/orr_demb_NFL.htm>. Accessed: 13 February 2005."
+            },
+            {
+              "key": "9017_CR33",
+              "first-page": "153",
+              "volume-title": "Why Intelligent Design Fails: A Scientific Critique of the New Creationism",
+              "author": "M. Perakh",
+              "year": "2004",
+              "unstructured": "Perakh M. (2004). Why there is a free lunch after all: William Dembski\u2019s wrong answer to irrelevant questions. In: Young M. and Edis T. (eds) Why Intelligent Design Fails: A Scientific Critique of the New Creationism. New Brunswick, Rutgers University Press, pp. 153\u2013171"
+            },
+            {
+              "key": "9017_CR34",
+              "doi-asserted-by": "crossref",
+              "first-page": "381",
+              "DOI": "10.1016/S0022-5193(05)80684-8",
+              "volume": "159",
+              "author": "P.-Y. Quenette",
+              "year": "1992",
+              "unstructured": "Quenette P.-Y. and Gerard J.-F. (1992). Does frequency-dependent selection optimize fitness?. J. Theor. Biol. 159: 381\u2013385",
+              "journal-title": "J.\u2423Theor. Biol."
+            },
+            {
+              "key": "9017_CR35",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Reeve H.K. and Sherman P.W. 1999. Adaptations: Meanings. In: Nature Encyclopedia of Life Sciences. John Wiley, Chichester. http://www.els.net/ [doi:10.1038/npg.els.0001707].",
+              "DOI": "10.1038/npg.els.0001707"
+            },
+            {
+              "key": "9017_CR36",
+              "doi-asserted-by": "crossref",
+              "first-page": "519",
+              "DOI": "10.1038/hdy.1959.52",
+              "volume": "31",
+              "author": "P.A.G. Scheuer",
+              "year": "1959",
+              "unstructured": "Scheuer P.A.G. and Mandel S.P.H. (1959). An inequality in population genetics. Heredity 31: 519\u2013524",
+              "journal-title": "Heredity"
+            },
+            {
+              "key": "9017_CR37",
+              "first-page": "86",
+              "volume-title": "Studies on Theoretical Genetics",
+              "author": "Y.M. Svirezhev",
+              "year": "1972",
+              "unstructured": "Svirezhev Y.M. (1972). Optimum principles in population genetics. In: Ratner V.A. (ed) Studies on Theoretical Genetics. Novosibirsk, USSR Academy of Science, pp. 86\u2013102"
+            },
+            {
+              "key": "9017_CR38",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Shahshahani S. 1979. A new mathematical framework for the study of linkage and selection. Memoirs Am. Math. Soc. 17: 211",
+              "DOI": "10.1090/memo/0211"
+            },
+            {
+              "key": "9017_CR39",
+              "doi-asserted-by": "crossref",
+              "first-page": "67",
+              "DOI": "10.1109/4235.585893",
+              "volume": "1",
+              "author": "D.H. Wolpert",
+              "year": "1997",
+              "unstructured": "Wolpert D.H. and Macready W.G. (1997). No free lunch theorems for optimization. IEEE Trans. Evol. Comput. 1: 67\u201382",
+              "journal-title": "IEEE Trans. Evol. Comput."
+            },
+            {
+              "key": "9017_CR40",
+              "first-page": "356",
+              "volume-title": "Proceedings of the Sixth International Congress of Genetics",
+              "author": "S. Wright",
+              "year": "1932",
+              "unstructured": "Wright S. (1932). The roles of mutation, inbreeding, crossbreeding and selection in evolution. In: Jones D.F., (ed), Proceedings of the Sixth International Congress of Genetics. I. Monisha, WI, Brooklyn Botanic Garden, pp. 356\u2013366"
+            },
+            {
+              "key": "9017_CR41",
+              "doi-asserted-by": "crossref",
+              "first-page": "165",
+              "DOI": "10.1073/pnas.58.1.165",
+              "volume": "58",
+              "author": "S. Wright",
+              "year": "1967",
+              "unstructured": "Wright S. (1967). Surfaces\u2019 of selective value. Proc. Natl. Acad. Sci. USA 58: 165\u2013172",
+              "journal-title": "Proc. Natl. Acad. Sci. USA"
+            },
+            {
+              "key": "9017_CR42",
+              "doi-asserted-by": "crossref",
+              "first-page": "249",
+              "DOI": "10.1016/0022-5193(81)90311-8",
+              "volume": "89",
+              "author": "E.C. Zeeman",
+              "year": "1981",
+              "unstructured": "Zeeman E.C. (1981). Dynamics of the evolution of animal conflicts. J. Theor. Biol. 89: 249\u2013270",
+              "journal-title": "J. Theor. Biol."
+            }
+          ],
+          "container-title": [
+            "Biology &amp; Philosophy"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/s10539-005-9017-3.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://link.springer.com/article/10.1007/s10539-005-9017-3/fulltext.html",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/s10539-005-9017-3",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2023,
+                5,
+                6
+              ]
+            ],
+            "date-time": "2023-05-06T18:46:06Z",
+            "timestamp": 1683398766000
+          },
+          "score": 32.74462,
+          "resource": {
+            "primary": {
+              "URL": "http://link.springer.com/10.1007/s10539-005-9017-3"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2006,
+                3,
+                14
+              ]
+            ]
+          },
+          "references-count": 42,
+          "journal-issue": {
+            "issue": "5",
+            "published-print": {
+              "date-parts": [
+                [
+                  2006,
+                  3,
+                  28
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "9017"
+          ],
+          "URL": "https://doi.org/10.1007/s10539-005-9017-3",
+          "ISSN": [
+            "0169-3867",
+            "1572-8404"
+          ],
+          "issn-type": [
+            {
+              "value": "0169-3867",
+              "type": "print"
+            },
+            {
+              "value": "1572-8404",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2006,
+                3,
+                14
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2022,
+                3,
+                30
+              ]
+            ],
+            "date-time": "2022-03-30T13:47:26Z",
+            "timestamp": 1648648046988
+          },
+          "reference-count": 0,
+          "publisher": "University of Chicago Press",
+          "issue": "1, Part 1",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "The Quarterly Review of Biology"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1973,
+                3
+              ]
+            ]
+          },
+          "DOI": "10.1086/407509",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2004,
+                3,
+                1
+              ]
+            ],
+            "date-time": "2004-03-01T16:22:14Z",
+            "timestamp": 1078158134000
+          },
+          "page": "29-29",
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "<i>On Evolution.</i>John Maynard Smith"
+          ],
+          "prefix": "10.1086",
+          "volume": "48",
+          "author": [
+            {
+              "given": "Douglas J.",
+              "family": "Futuyma",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "200",
+          "container-title": [
+            "The Quarterly Review of Biology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://www.journals.uchicago.edu/doi/pdf/10.1086/407509",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2018,
+                4,
+                7
+              ]
+            ],
+            "date-time": "2018-04-07T07:23:38Z",
+            "timestamp": 1523085818000
+          },
+          "score": 30.221878,
+          "resource": {
+            "primary": {
+              "URL": "https://www.journals.uchicago.edu/doi/10.1086/407509"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1973,
+                3
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "1, Part 1",
+            "published-print": {
+              "date-parts": [
+                [
+                  1973,
+                  3
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1086/407509"
+          ],
+          "URL": "https://doi.org/10.1086/407509",
+          "ISSN": [
+            "0033-5770",
+            "1539-7718"
+          ],
+          "issn-type": [
+            {
+              "value": "0033-5770",
+              "type": "print"
+            },
+            {
+              "value": "1539-7718",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1973,
+                3
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

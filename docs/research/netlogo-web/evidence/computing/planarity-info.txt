@@ -1,0 +1,81 @@
+## WHAT IS IT?
+
+This is a puzzle game where you try to untangle a graph. (A graph is a collection of nodes connected by lines.) Try to reposition the nodes so that no two lines cross. The more nodes, the harder it gets!
+
+## HOW IT WORKS
+
+The game knows how to generate solvable graphs, and it also knows how to detect whether any lines intersect. The details are in the Code tab.
+
+## HOW TO USE IT
+
+Use the STARTING-LEVEL slider to choose the initial difficulty level. If you're a beginner, start at 1. Press SETUP to set up a new board, then press GO to play. Once the GO button is pressed, you can use your mouse to drag the nodes around.
+
+Every level is solvable. One you find a solution, you will automatically be taken to the next level.
+
+## THINGS TO NOTICE
+
+The game only gives you solvable graphs. How might the game be able to guarantee this? (One answer is in the Code tab.)
+
+Can you draw an example of an unsolvable graph on a piece of paper? How many nodes are in the smallest unsolvable graph?
+
+On early levels, you can usually untangle the nodes without too much thought. On later levels, you'll probably need to develop some conscious strategies. What strategies do you find most effective? When your friends play, do they use the same strategies you do? Use the MOVES counter to keep track of how many moves it takes you to untangle the graph.
+
+## THINGS TO TRY
+
+See how high a level you can solve.
+
+Try to solve each level in the fewest number of MOVES.
+
+## EXTENDING THE MODEL
+
+Are there any other ways of generating solvable graphs besides the SETUP-LEVEL? Does it matter what method is used? The more links you can make, the harder the level will be, but if you make too many links, the level might not be solvable at all!
+
+Wherever two links intersect, add a small, brightly colored turtle to mark the intersection. (You'll need two breeds of turtle, one for the nodes, one for the markers. Intersecting Links Example has code for locating the intersection points.)
+
+Make it possible to select multiple nodes and move them together.
+
+## NETLOGO FEATURES
+
+The nodes are turtles; the lines connecting them are links. The code does not make use of patches (other than to make a plain white background).
+
+NetLogo does not have a primitive which detects whether two links intersect. To do the detection, the code uses the `subtract-headings` primitive and some math.
+
+## RELATED MODELS
+
+Intersecting Links Example -- has sample code for finding the point where two links intersect (unlike this model, which only determines whether that point exists or not)
+
+## CREDITS AND REFERENCES
+
+Thanks to Josh Unterman and Seth Tisue for their work on this model and to Jim Lyons for coding advice.
+
+Original version created by John Tantalo, from an original concept by Mary Radcliffe. Tantalo's site is here: http://planarity.net/.
+
+Solvable graphs are called "planar graphs" by mathematicians. See https://en.wikipedia.org/wiki/Planar_graph.
+
+Thanks to Connor Bain for updating this model to work in NetLogo Web in 2021.
+
+## HOW TO CITE
+
+If you mention this model or the NetLogo software in a publication, we ask that you include the citations below.
+
+For the model itself:
+
+* Wilensky, U. (2007).  NetLogo Planarity model.  http://ccl.northwestern.edu/netlogo/models/Planarity.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
+
+Please cite the NetLogo software as:
+
+* Wilensky, U. (1999). NetLogo. http://ccl.northwestern.edu/netlogo/. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
+
+## COPYRIGHT AND LICENSE
+
+Copyright 2007 Uri Wilensky.
+
+![CC BY-NC-SA 3.0](http://ccl.northwestern.edu/images/creativecommons/byncsa.png)
+
+This model is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License.  To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
+
+NetLogo itself is free software for non-commercial use under the terms of the GNU General Public License ([see full license information here](https://ccl.northwestern.edu/netlogo/docs/copyright.html)).
+
+To inquire about commercial licenses for either NetLogo or specific models from the models library, please contact netlogo-commercial-admin@ccl.northwestern.edu.
+
+<!-- 2007 -->

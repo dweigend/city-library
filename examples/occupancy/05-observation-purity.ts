@@ -1,0 +1,17 @@
+import assert from "node:assert/strict";
+import { Agent, Grid, Random, World } from "city-library";
+const random=Random.add({seed:42});
+const world=World.add({x:3,y:3},{random});
+const grid=world.add(Grid.add({x:3,y:3}));
+const a=world.add(Agent.add());
+const rng=random.state;
+const cell=grid.fieldAt(a)!;
+for(let i=0;i<100;i++) assert.deepEqual(grid.agentsAt(cell),[a]);
+assert.deepEqual(random.state,rng);
+assert.equal(world.tick.value,0);
+assert.deepEqual([a.x,a.y],[0,0]);
+assert.throws(()=>a.move({to:{x:NaN,y:0}}));
+assert.deepEqual(grid.agentsAt(cell),[a]);
+const foreign=World.add().add(Agent.add());
+assert.throws(()=>world.add([Agent.add(),foreign]));
+assert.deepEqual(grid.agentsAt(cell),[a]);

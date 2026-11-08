@@ -1,0 +1,176 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fs0531-5565%2800%2900081-4%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1016/s0531-5565(00)00081-4\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "10767575",
+          "source": "MED",
+          "pmid": "10767575",
+          "doi": "10.1016/s0531-5565(00)00081-4",
+          "title": "Biochemistry of Indian summer: physiology of autumnal leaf coloration.",
+          "authorString": "Matile P.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Matile P",
+                "lastName": "Matile",
+                "firstName": "P",
+                "initials": "P",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Institute of Plant Biology, University of Z\u00fcrich, Zollikerstrasse 107, CH 8008, Z\u00fcrich, Switzerland. phibus@botinst.unizh.ch"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics"
+            ]
+          },
+          "journalInfo": {
+            "issue": "2",
+            "volume": "35",
+            "journalIssueId": 1019173,
+            "dateOfPublication": "2000 Mar",
+            "monthOfPublication": 3,
+            "yearOfPublication": 2000,
+            "journal": {
+              "medlineAbbreviation": "Exp Gerontol",
+              "title": "Experimental gerontology",
+              "essn": "1873-6815",
+              "issn": "0531-5565",
+              "isoabbreviation": "Exp Gerontol",
+              "nlmid": "0047061"
+            },
+            "printPublicationDate": "2000-03-01"
+          },
+          "pubYear": "2000",
+          "pageInfo": "145-158",
+          "abstractText": "The autumnal coloration of foliage in deciduous trees represents a most spectacular phytogerontological phenomenon. It is primarily due to the progressive loss of chlorophyll coinciding with the partial retention of carotenoids. Leaf senescence is a developmental process that is aimed at the recycling of nutrients to perennial parts of the tree for reuse upon the production of new foliage in spring. The remobilization of protein in senescing chloroplasts requires the dismantling of pigment-protein complexes and concomitant photodynamic inactivation of chlorophyll. Detoxification of chlorophyll is achieved by enzymic opening of the porphyrin macrocycle followed by modifications of the resulting linear tetrapyrrole and storage of colorless final catabolites in the vacuoles of degreening leaf cells. The polychromatic beauty of autumnal trees is due to species-specific variations of the degree of carotenoid retention, new synthesis of red anthocyanins and, upon cell death, the formation of dark oxidation products of phenolics.",
+          "affiliation": "Institute of Plant Biology, University of Z\u00fcrich, Zollikerstrasse 107, CH 8008, Z\u00fcrich, Switzerland. phibus@botinst.unizh.ch",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Review",
+              "Journal Article"
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Trees"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Chlorophyll",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Biochemistry",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "MT",
+                      "qualifierName": "methods"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Seasons"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Color"
+              }
+            ]
+          },
+          "chemicalList": {
+            "chemical": [
+              {
+                "name": "Chlorophyll",
+                "registryNumber": "1406-65-1"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1016/s0531-5565(00)00081-4"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "citedByCount": 85,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2000-06-13",
+          "dateOfCreation": "2000-04-18",
+          "dateOfRevision": "2024-01-09",
+          "firstPublicationDate": "2000-03-01",
+          "firstIndexDate": "2008-01-29",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

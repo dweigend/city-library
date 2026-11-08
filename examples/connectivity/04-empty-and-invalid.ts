@@ -1,0 +1,15 @@
+import assert from "node:assert/strict";
+import { Graph } from "city-library";
+const graph=Graph.add();
+for(const mode of ["weak","strong","biconnected"] as const)assert.deepEqual(graph.components({mode}),[]);
+assert.equal(graph.connected(),true);
+assert.equal(graph.connected({mode:"strong"}),true);
+const a=graph.nodes.add({}),b=graph.nodes.add({});
+graph.edges.add({from:a,to:b,directed:true});
+assert.throws(()=>graph.components({mode:"biconnected"}));
+assert.throws(()=>graph.components({mode:"unknown" as never}));
+assert.throws(()=>graph.connected({mode:"biconnected" as never}));
+assert.throws(()=>graph.components(null as never));
+assert.throws(()=>graph.components({other:true} as never));
+assert.deepEqual(graph.components(undefined),[[a,b]]);
+assert.deepEqual(graph.components({mode:"strong"}),[[a],[b]]);

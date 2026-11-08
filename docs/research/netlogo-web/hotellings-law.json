@@ -1,0 +1,100 @@
+{
+  "slug": "hotellings-law",
+  "name": "Hotelling's Law",
+  "catalogPath": "Sample Models/Social Science/Economics/Hotelling's Law",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Economics/Hotelling's%20Law.nlogox",
+  "deliveryBatch": "B03",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "The scientific question is whether location and price competition produce clustering or differentiation. In NetLogo's Hotelling's Law model, stores consider moves and price changes while consumers choose the minimum combined travel and purchase cost on a line or plane. The selected literature connects this mechanism to spatial competition and equilibrium qualifications: the explicitly acknowledged original model links location to competition [1]; the classical correction identifies limits to Hotellings equilibrium claims [2]; equilibrium is a strategic benchmark rather than guaranteed heuristic convergence [3]. Discrete local search, planar extension and competitor ignorance differ from analytical equilibrium assumptions; transport costs can alter the original clustering result. The original NetLogo behavior is the baseline for reimplementation. This simulation offers a controlled thought experiment, and agreement with its output does not establish empirical validation.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Economics/Hotelling's%20Law.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Economics/Hotelling's%20Law.nlogox",
+    "revision": "Served NetLogo Web snapshot retrieved 2026-11-05; {'version': 'NetLogo 7.0.4', 'snapToGrid': 'true'}",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served model XML, Procedures and Info retained locally; Info read for mechanism and attribution.",
+    "evidencePath": "evidence/social-urban/hotellings-law.nlogox",
+    "sha256": "6241899fa70ee6ab961fb8d183321c662e12f011246684fbd99ea403f6a259ad",
+    "citation": "For the model itself: * Ottino, B., Stonedahl, F. and Wilensky, U. (2009). NetLogo Hotelling's Law model. http://ccl.northwestern.edu/netlogo/models/Hotelling'sLaw. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "scientificOrigin": "Hotelling, Harold. (1929). \"Stability in Competition.\" The Economic Journal 39.153: 41 -57. (Stable URL: https://www.jstor.org/stable/2224214).",
+    "notes": "This is source research, not runtime execution or approval of the City Library reimplementation. Original model notices remain in the retained source.",
+    "evidenceFile": "evidence/social-urban/hotellings-law.nlogox"
+  },
+  "publications": [
+    {
+      "id": "hotelling",
+      "creatorRole": "author",
+      "authors": [
+        "Harold Hotelling"
+      ],
+      "title": "Stability in Competition",
+      "year": 1929,
+      "venue": "The Economic Journal",
+      "doi": "10.2307/2224214",
+      "url": "https://doi.org/10.2307/2224214",
+      "relevance": "the explicitly acknowledged original model links location to competition",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.2307%2F2224214",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; full-text access not established",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/hotelling-crossref.json",
+        "evidenceSummary": "Bibliographic metadata only; relevance is a bounded theoretical comparison, not a claim to have read inaccessible full text.",
+        "evidenceFile": "evidence/social-urban/hotelling-crossref.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "daspremont",
+      "creatorRole": "author",
+      "authors": [
+        "C. d'Aspremont",
+        "J. Jaskold Gabszewicz",
+        "J.-F. Thisse"
+      ],
+      "title": "On Hotelling's \"Stability in Competition\"",
+      "year": 1979,
+      "venue": "Econometrica",
+      "doi": "10.2307/1911955",
+      "url": "https://doi.org/10.2307/1911955",
+      "relevance": "the classical correction identifies limits to Hotellings equilibrium claims",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.2307%2F1911955",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; full-text access not established",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/daspremont-crossref.json",
+        "evidenceSummary": "Bibliographic metadata only; relevance is a bounded theoretical comparison, not a claim to have read inaccessible full text.",
+        "evidenceFile": "evidence/social-urban/daspremont-crossref.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "nash",
+      "creatorRole": "author",
+      "authors": [
+        "John F. Nash"
+      ],
+      "title": "Equilibrium points in n-person games",
+      "year": 1950,
+      "venue": "Proceedings of the National Academy of Sciences",
+      "doi": "10.1073/pnas.36.1.48",
+      "url": "https://doi.org/10.1073/pnas.36.1.48",
+      "relevance": "equilibrium is a strategic benchmark rather than guaranteed heuristic convergence",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1073%2Fpnas.36.1.48",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; full-text access not established",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/nash-crossref.json",
+        "evidenceSummary": "Bibliographic metadata only; relevance is a bounded theoretical comparison, not a claim to have read inaccessible full text.",
+        "evidenceFile": "evidence/social-urban/nash-crossref.json"
+      },
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

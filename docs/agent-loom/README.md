@@ -1,15 +1,18 @@
 # Agent Loom specification
 
-Agent Loom defines City Library's general modeling core: agents, worlds, spatial operations, graphs, randomness, events, experiments and storage. It is part of City Library, not a separate engine.
+Agent Loom defines City Library's modeling core: agents, worlds, spatial operations, graphs, randomness, events, experiments and storage.
 
-**Status:** specification only. The repository has a Bun/TypeScript scaffold and prepared source directories, but no implemented public APIs or published package. All signatures and examples describe the phase-one target.
+Describe individuals, their space and their interactions without choosing a renderer. Use the parts separately: a graph does not need a World, and an agent model does not need a grid.
+
+The specification defines the required core API. Implemented subsets cover agents, randomness, spatial operations, grids, graphs, geometry and statistics. Use the [work plan](../../PLAN.md), public exports and runnable examples to check availability. The package is not published.
 
 ## Read the API
 
 - [API inventory](api-table.md): all 309 operation/type entries in 16 areas, with exact signatures and compact contracts.
 - [API reference](api-reference.md): detailed behavior, defaults, validation, errors and examples.
-- [Architecture](../DESIGN.md): state ownership, dependencies, domain layout and extension rules.
-- [Work plan](../../PLAN.md): delivery order and acceptance criteria.
+- [Architecture](../ARCHITECTURE.md): state ownership, dependencies, domain layout and extension rules.
+- [Work plan](../../PLAN.md): next goals and acceptance criteria.
+- [Binding terminology](terminology.md): shared names and semantic distinctions across the system.
 
 ## Scope
 
@@ -28,12 +31,12 @@ Agent Loom defines City Library's general modeling core: agents, worlds, spatial
 | limits | Resource ceilings for named operations and adapters |
 | Exports and shared types | Public entry contracts and structural TypeScript types |
 
-These groups cover all 16 inventory areas; Field, Node and Edge have individual inventory sections. Advanced algorithms, compatibility profiles, codecs and continuation are included in phase one. Hexagonal grids are a future extension.
+These groups cover all 16 inventory areas; Field, Node and Edge have individual inventory sections. Advanced algorithms, compatibility profiles, codecs and continuation are included in the required core scope. Hexagonal grids are a future extension.
 
 ## Reading conventions
 
-The inventory and reference jointly define the required signatures and behavior. Implementation proceeds in small working slices; an entry remains planned until its public API, example and behavior checks are delivered. Conflicting or unspecified contracts must be resolved explicitly before implementation.
+The inventory and reference define the required signatures and behavior. An entry remains planned until its public API, example and behavior checks are delivered. Conflicting or unspecified contracts must be resolved explicitly before implementation.
 
-Examples retain the specification's `agent-loom`, `agent-loom/storage` and `agent-loom/experiments/node` import paths. Their mapping to City Library package entries is unresolved. They are not installation instructions. Serialization identifiers and compatibility versions are also part of the specified contracts.
+Examples retain the specification's `agent-loom`, `agent-loom/storage` and `agent-loom/experiments/node` import paths. The current root package is `city-library`; storage and Node experiment subpath mappings remain unresolved. They are not installation instructions. Serialization identifiers and compatibility versions are also part of the specified contracts.
 
-The specification originates from [city_game at revision 08b3efb](https://github.com/dweigend/city_game/tree/08b3efb66d0f93d023f0b1deb762578552f7b819/docs/agent-loom). It is maintained here as Markdown; the original HTML is available in Git history.
+The specification originates from [city_game at revision 08b3efb](https://github.com/dweigend/city_game/tree/08b3efb66d0f93d023f0b1deb762578552f7b819/docs/agent-loom). This Markdown specification is the maintained source.

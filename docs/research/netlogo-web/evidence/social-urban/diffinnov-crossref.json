@@ -1,0 +1,572 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.bibliographic=Diffusion+of+Innovations+Rogers+2003&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 2987346,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                18
+              ]
+            ],
+            "date-time": "2026-10-18T00:49:03Z",
+            "timestamp": 1792284543065,
+            "version": "4.4.0"
+          },
+          "publisher-location": "Dordrecht",
+          "reference-count": 26,
+          "publisher": "Springer Netherlands",
+          "isbn-type": [
+            {
+              "value": "9789401047784",
+              "type": "print"
+            },
+            {
+              "value": "9789401117715",
+              "type": "electronic"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                1993
+              ]
+            ]
+          },
+          "DOI": "10.1007/978-94-011-1771-5_2",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2012,
+                7,
+                28
+              ]
+            ],
+            "date-time": "2012-07-28T20:37:39Z",
+            "timestamp": 1343507859000
+          },
+          "page": "9-24",
+          "source": "Crossref",
+          "is-referenced-by-count": 43,
+          "title": [
+            "The Diffusion of Innovations Model"
+          ],
+          "prefix": "10.1007",
+          "author": [
+            {
+              "given": "Everett M.",
+              "family": "Rogers",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "reference": [
+            {
+              "key": "2_CR1",
+              "volume-title": "Social Learning Theory",
+              "author": "A Bandura",
+              "year": "1977",
+              "unstructured": "Bandura, Albert (1977) Social Learning Theory, Prentice\u2013Hall, Englewood Cliffs, New Jersey."
+            },
+            {
+              "key": "2_CR2",
+              "volume-title": "Social Foundations of Thought and Action: A Social Cognitive Theory",
+              "author": "A Bandura",
+              "year": "1986",
+              "unstructured": "Bandura, A. (1986) Social Foundations of Thought and Action: A Social Cognitive Theory, Prentice\u2013Hall, Englewood Giffs, New Jersey."
+            },
+            {
+              "key": "2_CR3",
+              "volume-title": "Innovation Diffusion: A New Perspective",
+              "author": "LA Brown",
+              "year": "1981",
+              "unstructured": "Brown, Lawrence A.(1981) Innovation Diffusion: A New Perspective, Methuen, New York."
+            },
+            {
+              "key": "2_CR4",
+              "volume-title": "Medical Innovation: A Diffusion Study",
+              "author": "J Coleman",
+              "year": "1966",
+              "unstructured": "Coleman, James, Menzel, Herbert, and Katz, Elihu (1966) Medical Innovation: A Diffusion Study, Bobbs\u2013Merrill, New York."
+            },
+            {
+              "key": "2_CR5",
+              "volume-title": "Spatial Diffusion: An Historical Geography of Epidemics in an Island Community",
+              "author": "AD Cliff",
+              "year": "1981",
+              "unstructured": "Cliff, A. D., Haggett, P., Ord, J. K., and Versey, G. R. (1981) Spatial Diffusion: An Historical Geography of Epidemics in an Island Community, Cambridge University Press, New York."
+            },
+            {
+              "key": "2_CR6",
+              "volume-title": "Invisible Colleges",
+              "author": "D Crane",
+              "year": "1972",
+              "unstructured": "Crane, Diana (1972) Invisible Colleges, University of Chicago Press."
+            },
+            {
+              "key": "2_CR7",
+              "doi-asserted-by": "publisher",
+              "first-page": "700",
+              "DOI": "10.2307/2391725",
+              "volume": "21",
+              "author": "GW Downs",
+              "year": "1976",
+              "unstructured": "Downs, George W., and Mohr, Lawrence B. (1976) Conceptual issues in the study of innovations, Administrative Science Quarterly 21: 700\u2013714.",
+              "journal-title": "Administrative Science Quarterly"
+            },
+            {
+              "key": "2_CR8",
+              "doi-asserted-by": "publisher",
+              "first-page": "849",
+              "DOI": "10.1086/209021",
+              "volume": "11",
+              "author": "H Gatignon",
+              "year": "1985",
+              "unstructured": "Gatignon, Hubert, and Robertson, Thomas S. (1985) A propositional inventory for new diffusion research, Journal of Consumer Research 11: 849\u2013867.",
+              "journal-title": "Journal of Consumer Research"
+            },
+            {
+              "key": "2_CR9",
+              "doi-asserted-by": "publisher",
+              "first-page": "1360",
+              "DOI": "10.1086/225469",
+              "volume": "78",
+              "author": "MS Granovetter",
+              "year": "1973",
+              "unstructured": "Granovetter, Mark S. (1973) The strength of weak ties, American Journal of Sociology 78: 1360\u20131380.",
+              "journal-title": "American Journal of Sociology"
+            },
+            {
+              "key": "2_CR10",
+              "doi-asserted-by": "publisher",
+              "first-page": "1174",
+              "DOI": "10.2307/1956539",
+              "volume": "67",
+              "author": "V Gray",
+              "year": "1973",
+              "unstructured": "Gray, Virginia (1973) Innovation in the states: A diffusion study, American Political Science Review 67: 1174\u20131185.",
+              "journal-title": "American Political Science Review"
+            },
+            {
+              "key": "2_CR11",
+              "doi-asserted-by": "publisher",
+              "first-page": "501",
+              "DOI": "10.2307/1905380",
+              "volume": "25",
+              "author": "Z Griliches",
+              "year": "1957",
+              "unstructured": "Griliches, Zvi (1957) Hybrid corn: An exploration in the economics of technological change, Econometrica 25: 501\u2013522.",
+              "journal-title": "Econometrica"
+            },
+            {
+              "key": "2_CR12",
+              "volume-title": "The Propagation of Innovation Waves",
+              "author": "T H\u00e4gerstrand",
+              "year": "1952",
+              "unstructured": "H\u00e4gerstrand, Torsten (1952) The Propagation of Innovation Waves, Lund, Sweden, University of Lund, Lund Studies in Geography 4."
+            },
+            {
+              "key": "2_CR13",
+              "volume-title": "Innovation Diffusion as a Spatial Process",
+              "author": "T H\u00e4gerstrand",
+              "year": "1969",
+              "unstructured": "H\u00e4gerstrand, Torsten (1969) Innovation Diffusion as a Spatial Process, University of Chicago Press."
+            },
+            {
+              "key": "2_CR14",
+              "volume-title": "The Structure of Scientific Revolutions",
+              "author": "TS Kuhn",
+              "year": "1970",
+              "unstructured": "Kuhn, Thomas S. (1970) The Structure of Scientific Revolutions, University of Chicago Press."
+            },
+            {
+              "key": "2_CR15",
+              "doi-asserted-by": "publisher",
+              "first-page": "439",
+              "DOI": "10.1080/15295038409360053",
+              "volume": "1",
+              "author": "EG McAnany",
+              "year": "1984",
+              "unstructured": "McAnany, Emile G. (1984) The diffusion of innovation: Why does it endure? Critical Studies in Mass Communication 1: 439\u2013442.",
+              "journal-title": "Critical Studies in Mass Communication"
+            },
+            {
+              "key": "2_CR16",
+              "volume-title": "Progress in the Communication Sciences",
+              "author": "W Paisley",
+              "year": "1984",
+              "unstructured": "Paisley, William (1984) Communication in the communication sciences, In B. Dervin and M.J. Voigt (eds.), Progress in the Communication Sciences, Ablex, Norwood, New Jersey."
+            },
+            {
+              "key": "2_CR17",
+              "volume-title": "The Snowmobile Revolution: Technology and Social Change in the Arctic",
+              "author": "PJ Pelto",
+              "year": "1973",
+              "unstructured": "Pelto, Pertti J. (1973) The Snowmobile Revolution: Technology and Social Change in the Arctic, Cummings, Menlo Park, California."
+            },
+            {
+              "key": "2_CR18",
+              "volume-title": "Innovative Behavior and Communication, Holt",
+              "author": "TS Robertson",
+              "year": "1971",
+              "unstructured": "Robertson, Thomas S. (1971) Innovative Behavior and Communication, Holt, Rinehart and Winston, New York."
+            },
+            {
+              "key": "2_CR19",
+              "volume-title": "Diffusion of Innovations",
+              "author": "EM Rogers",
+              "year": "1962",
+              "unstructured": "Rogers, Everett M. (1962) Diffusion of Innovations, Free Press, New York."
+            },
+            {
+              "key": "2_CR20",
+              "volume-title": "Communication Technology",
+              "author": "EM Rogers",
+              "year": "1986",
+              "unstructured": "Rogers, Everett M. (1986) Communication Technology, Free Press, New York."
+            },
+            {
+              "key": "2_CR21",
+              "first-page": "245",
+              "volume": "3",
+              "author": "EM Rogers",
+              "year": "1991",
+              "unstructured": "Rogers, Everett M. (1991) The\u201ccritical mass\u201din the diffusion of interactive technologies in organizations, In Kraemer, K. L. (ed.), The Information Systems Research Challenge: Survey Research Methods, Harvard Business School Press, Boston, 3: 245\u2013263.",
+              "journal-title": "The Information Systems Research Challenge: Survey Research Methods"
+            },
+            {
+              "key": "2_CR22",
+              "volume-title": "Communication Networks: Toward a New Paradigm for Research",
+              "author": "EM Rogers",
+              "year": "1981",
+              "unstructured": "Rogers, Everett M., and Kincaid, D. Lawrence (1981) Communication Networks: Toward a New Paradigm for Research, Free Press, New York."
+            },
+            {
+              "key": "2_CR23",
+              "volume-title": "Communication of Innovations: A Cross\u2013Cultural Approach",
+              "author": "EM Rogers",
+              "year": "1971",
+              "unstructured": "Rogers, Everett M., and Shoemaker, F. Floyd (1971) Communication of Innovations: A Cross\u2013Cultural Approach, Free Press, New York."
+            },
+            {
+              "key": "2_CR24",
+              "first-page": "15",
+              "volume": "8",
+              "author": "B Ryan",
+              "year": "1943",
+              "unstructured": "Ryan, Bryce, and Gross, Neal C. (1943) The diffusion of hybrid seed corn in two Iowa communities, Rural Sociology 8: 15\u201324.",
+              "journal-title": "Rural Sociology"
+            },
+            {
+              "key": "2_CR25",
+              "doi-asserted-by": "publisher",
+              "first-page": "880",
+              "DOI": "10.2307/1954434",
+              "volume": "63",
+              "author": "JL Walker",
+              "year": "1966",
+              "unstructured": "Walker, Jack L. (1966) The diffusion of innovations among the American states, American Political Science Review 63: 880\u2013899.",
+              "journal-title": "American Political Science Review"
+            },
+            {
+              "key": "2_CR26",
+              "volume-title": "Innovations and Organizations",
+              "author": "G Zaltman",
+              "year": "1973",
+              "unstructured": "Zaltman, Gerald, Duncan, Robert, and Holbek, Jonny (1973) Innovations and Organizations, Wiley, New York."
+            }
+          ],
+          "container-title": [
+            "Diffusion and Use of Geographic Information Technologies"
+          ],
+          "link": [
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/978-94-011-1771-5_2",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2019,
+                3,
+                31
+              ]
+            ],
+            "date-time": "2019-03-31T13:56:23Z",
+            "timestamp": 1554040583000
+          },
+          "score": 25.88889,
+          "resource": {
+            "primary": {
+              "URL": "http://link.springer.com/10.1007/978-94-011-1771-5_2"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1993
+              ]
+            ]
+          },
+          "ISBN": [
+            "9789401047784",
+            "9789401117715"
+          ],
+          "references-count": 26,
+          "URL": "https://doi.org/10.1007/978-94-011-1771-5_2",
+          "published": {
+            "date-parts": [
+              [
+                1993
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                4
+              ]
+            ],
+            "date-time": "2026-10-04T05:50:10Z",
+            "timestamp": 1791093010335,
+            "version": "4.1.0"
+          },
+          "publisher-location": "B-42, Panchsheel Enclave,\u00a0New Delhi\u00a0110 017\u00a0India\u00a0",
+          "reference-count": 0,
+          "publisher": "SAGE Publications India Pvt Ltd",
+          "isbn-type": [
+            {
+              "value": "9780761934776",
+              "type": "print"
+            },
+            {
+              "value": "9788132113775",
+              "type": "electronic"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2006
+              ]
+            ]
+          },
+          "DOI": "10.4135/9788132113775.n3",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2014,
+                3,
+                3
+              ]
+            ],
+            "date-time": "2014-03-03T22:31:23Z",
+            "timestamp": 1393885883000
+          },
+          "page": "61-82",
+          "source": "Crossref",
+          "is-referenced-by-count": 13,
+          "title": [
+            "Communication Network Analysis and the Diffusion of Innovations"
+          ],
+          "prefix": "10.4135",
+          "author": [
+            {
+              "given": "Thomas W.",
+              "family": "Valente",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "179",
+          "container-title": [
+            "Communication of Innovations: A Journey with Ev Rogers"
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2022,
+                4,
+                21
+              ]
+            ],
+            "date-time": "2022-04-21T14:13:43Z",
+            "timestamp": 1650550423000
+          },
+          "score": 25.254025,
+          "resource": {
+            "primary": {
+              "URL": "https://sk.sagepub.com/books/communication-of-innovations/n3.xml"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2006
+              ]
+            ]
+          },
+          "ISBN": [
+            "9780761934776",
+            "9788132113775"
+          ],
+          "references-count": 0,
+          "alternative-id": [
+            "10.4135/9788132113775"
+          ],
+          "URL": "https://doi.org/10.4135/9788132113775.n3",
+          "published": {
+            "date-parts": [
+              [
+                2006
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                6,
+                6
+              ]
+            ],
+            "date-time": "2026-06-06T07:02:23Z",
+            "timestamp": 1780729343631,
+            "version": "3.54.1"
+          },
+          "posted": {
+            "date-parts": [
+              [
+                2026
+              ]
+            ]
+          },
+          "group-title": "SSRN",
+          "reference-count": 0,
+          "publisher": "Elsevier BV",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "abstract": "<jats:p>&lt;p&gt;The change management field has operated with a binary diagnostic framework for six decades: willing versus resistant. Populations that fail to adopt evidence-based improvement methodologies are assessed for motivation and treated accordingly \u2014 with communication campaigns, incentive structures, champion networks, and leadership commitment protocols. This paper argues that this diagnostic framework fails for a specific and consequential class of innovations: those whose adoption requires a metacognitive register that the adopting population does not yet inhabit. Where this condition obtains, what presents as resistance is more precisely described as architectural imperception \u2014 the genuine inability to perceive the innovation rather than the unwillingness to adopt it. Standard change management interventions applied to this condition fail systematically because they address motivation in the presence of a perceptual development problem.&lt;/p&gt;\n&lt;p&gt;The paper names this condition the Perceptual Threshold Problem and develops its theoretical architecture across three moves. First, it traces the structural assumption Rogers' Innovation Diffusion Curve did not examine \u2014 that the population capable of perceiving an innovation is equivalent to the population exposed to it \u2014 and identifies the conditions under which that assumption fails. Second, it documents a regional natural experiment across five Alaska Native organizations spanning two decades \u2014 Mt. Edgecumbe High School, the Chugach School District, Chugachmiut, the Alaska Native Tribal Health Consortium, and Sealaska Corporation \u2014 that produces a pattern of success and failure consistent with the Perceptual Threshold Problem as the primary causal mechanism. Third, it proposes twelve falsifiable propositions that distinguish architectural imperception from attitudinal resistance and generate a prospective research agenda capable of confirming or disconfirming the theoretical claims.&lt;/p&gt;\n&lt;p&gt;The paper grounds its argument in W. Edwards Deming's foundational but undertheorized insight \u2014 that individual transformation is discontinuous, arriving as a threshold event rather than accumulating through training and incentive \u2014 and asks what the conditions are that make that discontinuity possible, what the guide must do to prepare the ground, and what genuine threshold crossing looks like when it arrives. It concludes by proposing the Shaman's Trail visual system \u2014 integrating the Russell affect circumflex, the dynamic body budget graph, and a sequential illustrated pedagogy in the tradition of Shook and Rother's Learning to See \u2014 as the structured first encounter with the relational field that makes threshold crossing possible in community healing contexts. The construct of Relational Tacit Knowledge is introduced to name the perceptual attunement the crossed threshold produces and that the apprenticeship architecture transmits.&lt;/p&gt;\n&lt;p&gt;The paper's implications extend across lean and organizational excellence practice, Indigenous health and governance implementation, and change management theory. Its central diagnostic contribution \u2014 the distinction between attitudinal resistance and architectural imperception \u2014 is offered as a prior category that the change management field requires before motivation-targeted interventions can be responsibly deployed.&lt;/p&gt;\n&lt;p&gt;&amp;nbsp;&lt;/p&gt;</jats:p>",
+          "DOI": "10.2139/ssrn.6823200",
+          "type": "posted-content",
+          "created": {
+            "date-parts": [
+              [
+                2026,
+                6,
+                6
+              ]
+            ],
+            "date-time": "2026-06-06T06:48:22Z",
+            "timestamp": 1780728502000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "The Perceptual Threshold Problem: Why Rogers' Diffusion Curve Fails for Metacognitively Complex Innovations"
+          ],
+          "prefix": "10.2139",
+          "author": [
+            {
+              "ORCID": "https://orcid.org/0009-0006-1751-6283",
+              "authenticated-orcid": true,
+              "given": "Patrick",
+              "family": "Anderson",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "78",
+          "deposited": {
+            "date-parts": [
+              [
+                2026,
+                6,
+                6
+              ]
+            ],
+            "date-time": "2026-06-06T06:48:22Z",
+            "timestamp": 1780728502000
+          },
+          "score": 25.20503,
+          "resource": {
+            "primary": {
+              "URL": "https://www.ssrn.com/abstract=6823200"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2026
+              ]
+            ]
+          },
+          "references-count": 0,
+          "URL": "https://doi.org/10.2139/ssrn.6823200",
+          "published": {
+            "date-parts": [
+              [
+                2026
+              ]
+            ]
+          },
+          "subtype": "preprint"
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

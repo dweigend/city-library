@@ -1,0 +1,12 @@
+import assert from "node:assert/strict";
+import { create } from "../../experiments/giant-component/model.ts";
+const model=create({numberOfNodes:3});
+model.advance(2);
+assert.equal(model.read().giantSize,3);
+assert.equal(model.read().edgeCount,2);
+assert.equal(model.read().done,false);
+model.advance();
+assert.equal(model.read().tick,3);
+assert.equal(model.read().edgeCount,3);
+assert.equal(model.read().done,true);
+assert.equal(new Set(model.read().edges.map(edge=>[edge.from,edge.to].sort().join("|"))).size,3);

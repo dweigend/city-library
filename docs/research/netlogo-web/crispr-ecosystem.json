@@ -1,0 +1,128 @@
+{
+  "slug": "crispr-ecosystem",
+  "name": "CRISPR Ecosystem",
+  "catalogPath": "Sample Models/Biology/CRISPR/CRISPR Ecosystem",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/CRISPR/CRISPR%20Ecosystem.nlogox",
+  "deliveryBatch": "B09",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "How does adaptive bacterial immunity reshape competition between bacteria and viruses? NetLogo CRISPR Ecosystem models interacting populations with innate and CRISPR-mediated protection, allowing comparison of ecological and evolutionary consequences. Ecological CRISPR theory [1] and empirical studies of phage evolution [2,3] provide mechanism-specific context. The served model describes a tiny seawater-like setting, but uses simplified encounters, growth, resistance, and viral change rather than a calibrated microbial community. The simulation illustrates feedback between host defense and viral pressure, and how population outcomes differ when adaptive memory is available. It does not demonstrate a universal coexistence rule, quantify real marine abundances, or validate all of the molecular and ecological assumptions through visual agreement alone.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/CRISPR/CRISPR%20Ecosystem.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/CRISPR/CRISPR%20Ecosystem.nlogox",
+    "revision": "Best available served NetLogo Web artifact retrieved on 2026-11-05; SHA-256 9414dea313e5f6f7c4496014ef1638d42d020ce84220e4c0a00ea8b1bf1bdec9",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served .nlogox downloaded; Info mechanism descriptions, credits and reference sections inspected. Procedures are not independently audited by this literature task. Source provenance is separate from City Library reimplementation and target-runtime verification.",
+    "evidenceFile": "evidence/biology/crispr-ecosystem.nlogox",
+    "infoFile": "evidence/biology/crispr-ecosystem-info.txt",
+    "originalModelCitation": "* Woods, P. and Wilensky, U. (2019).  NetLogo CRISPR Ecosystem model.  http://ccl.northwestern.edu/netlogo/models/CRISPREcosystem.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "notes": "Original/served model is the behavioral baseline. This research does not claim implementation or browser acceptance."
+  },
+  "publications": [
+    {
+      "id": "iranzo",
+      "authors": [
+        "Jaime Iranzo",
+        "Alexander E. Lobkovsky",
+        "Yuri I. Wolf",
+        "Eugene V. Koonin"
+      ],
+      "title": "Evolutionary Dynamics of the Prokaryotic Adaptive Immunity System CRISPR-Cas in an Explicit Ecological Context",
+      "year": 2013,
+      "venue": "Journal of Bacteriology",
+      "doi": "10.1128/jb.00412-13",
+      "url": "https://doi.org/10.1128/jb.00412-13",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Evolutionary+dynamics+of+the+prokaryotic+adaptive+immunity+system+CRISPR-Cas+in+an+explicit+ecological+context+Iranzo+2013&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/iranzo-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1128%2Fjb.00412-13%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/iranzo-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "195",
+      "issue": "17",
+      "pages": "3834-3844",
+      "relevance": "An explicit ecological CRISPR–Cas model directly addresses the population-level feedback represented here."
+    },
+    {
+      "id": "paez",
+      "authors": [
+        "David Paez-Espino",
+        "Itai Sharon",
+        "Wesley Morovic",
+        "Buffy Stahl",
+        "Brian C. Thomas",
+        "Rodolphe Barrangou",
+        "Jillian F. Banfield"
+      ],
+      "title": "CRISPR Immunity Drives Rapid Phage Genome Evolution in Streptococcus thermophilus",
+      "year": 2015,
+      "venue": "mBio",
+      "doi": "10.1128/mbio.00262-15",
+      "url": "https://doi.org/10.1128/mbio.00262-15",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=CRISPR+immunity+drives+rapid+phage+genome+evolution+in+Streptococcus+thermophilus+Paez-Espino+2015&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/paez-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1128%2Fmbio.00262-15%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/paez-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "6",
+      "issue": "2",
+      "pages": null,
+      "relevance": "Empirical phage-genome evolution under CRISPR pressure grounds the coevolution question."
+    },
+    {
+      "id": "sun",
+      "authors": [
+        "Christine L. Sun",
+        "Rodolphe Barrangou",
+        "Brian C. Thomas",
+        "Philippe Horvath",
+        "Christophe Fremaux",
+        "Jillian F. Banfield"
+      ],
+      "title": "Phage mutations in response to CRISPR diversification in a bacterial population",
+      "year": 2013,
+      "venue": "Environmental Microbiology",
+      "doi": "10.1111/j.1462-2920.2012.02879.x",
+      "url": "https://doi.org/10.1111/j.1462-2920.2012.02879.x",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Phage+mutations+in+response+to+CRISPR+diversification+in+a+bacterial+population+Sun+2013&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/sun-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1111%2Fj.1462-2920.2012.02879.x%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/sun-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "15",
+      "issue": "2",
+      "pages": "463-470",
+      "relevance": "Studies phage mutations during bacterial CRISPR diversification, supporting a dynamic rather than static immunity interpretation."
+    }
+  ],
+  "gaps": []
+}

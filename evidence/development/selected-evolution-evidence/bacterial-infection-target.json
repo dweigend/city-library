@@ -1,0 +1,1999 @@
+{
+  "slug": "bacterial-infection",
+  "url": "http://127.0.0.1:3148/?experiment=bacterial-infection",
+  "errors": [],
+  "loadedAt": "2026-11-06T13:05:36.586Z",
+  "setup": {
+    "monitors": {
+      "Minutes": "0",
+      "Hours": "0",
+      "Days": "0",
+      "Doses A": "0",
+      "Doses B": "0"
+    },
+    "status": "Model initialized.",
+    "statusState": "success",
+    "controls": [
+      {
+        "id": "setup-seed",
+        "name": "seed",
+        "type": "number",
+        "value": "1",
+        "checked": false,
+        "label": "Seed"
+      },
+      {
+        "id": "setup-init3PoresA",
+        "name": "init3PoresA",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init3Pores A"
+      },
+      {
+        "id": "setup-init4PoresA",
+        "name": "init4PoresA",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init4Pores A"
+      },
+      {
+        "id": "setup-init5PoresA",
+        "name": "init5PoresA",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init5Pores A"
+      },
+      {
+        "id": "setup-init6PoresA",
+        "name": "init6PoresA",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init6Pores A"
+      },
+      {
+        "id": "setup-init3PoresB",
+        "name": "init3PoresB",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init3Pores B"
+      },
+      {
+        "id": "setup-init4PoresB",
+        "name": "init4PoresB",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init4Pores B"
+      },
+      {
+        "id": "setup-init5PoresB",
+        "name": "init5PoresB",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init5Pores B"
+      },
+      {
+        "id": "setup-init6PoresB",
+        "name": "init6PoresB",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init6Pores B"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "range",
+        "value": "5",
+        "checked": false,
+        "label": "Speed"
+      },
+      {
+        "id": "",
+        "name": "live-reproduce",
+        "type": "checkbox",
+        "value": "on",
+        "checked": true,
+        "label": "Reproduce"
+      },
+      {
+        "id": "",
+        "name": "live-reproduceEvery",
+        "type": "number",
+        "value": "2",
+        "checked": false,
+        "label": "Reproduce Every"
+      },
+      {
+        "id": "",
+        "name": "live-autoDoseA",
+        "type": "select-one",
+        "value": "yes, but skip dose 4",
+        "label": "Auto Dose Ano, skip all dosingyes, skip no dosesyes, but skip dose 2yes, but skip dose 3yes, but skip dose 4"
+      },
+      {
+        "id": "",
+        "name": "live-autoDoseB",
+        "type": "select-one",
+        "value": "yes, but skip dose 4",
+        "label": "Auto Dose Bno, skip all dosingyes, skip no dosesyes, but skip dose 2yes, but skip dose 3yes, but skip dose 4"
+      },
+      {
+        "id": "",
+        "name": "live-aDosage",
+        "type": "number",
+        "value": "50",
+        "checked": false,
+        "label": "A Dosage"
+      },
+      {
+        "id": "",
+        "name": "live-bDosage",
+        "type": "number",
+        "value": "50",
+        "checked": false,
+        "label": "B Dosage"
+      },
+      {
+        "id": "",
+        "name": "live-doseAEvery",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Dose AEvery"
+      },
+      {
+        "id": "",
+        "name": "live-doseBEvery",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Dose BEvery"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "label": "Labels"
+      }
+    ],
+    "figures": [
+      "Selected bacterium",
+      "Patients A and B",
+      "Patient A pore counts",
+      "Patient B pore counts",
+      "Population in A",
+      "Population in B"
+    ],
+    "overflow": false,
+    "viewport": [
+      1440,
+      1050
+    ],
+    "scroll": [
+      0,
+      0
+    ]
+  },
+  "step": {
+    "monitors": {
+      "Minutes": "1",
+      "Hours": "0",
+      "Days": "0",
+      "Doses A": "1",
+      "Doses B": "1"
+    },
+    "status": "Steps completed.",
+    "statusState": "success",
+    "controls": [
+      {
+        "id": "setup-seed",
+        "name": "seed",
+        "type": "number",
+        "value": "1",
+        "checked": false,
+        "label": "Seed"
+      },
+      {
+        "id": "setup-init3PoresA",
+        "name": "init3PoresA",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init3Pores A"
+      },
+      {
+        "id": "setup-init4PoresA",
+        "name": "init4PoresA",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init4Pores A"
+      },
+      {
+        "id": "setup-init5PoresA",
+        "name": "init5PoresA",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init5Pores A"
+      },
+      {
+        "id": "setup-init6PoresA",
+        "name": "init6PoresA",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init6Pores A"
+      },
+      {
+        "id": "setup-init3PoresB",
+        "name": "init3PoresB",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init3Pores B"
+      },
+      {
+        "id": "setup-init4PoresB",
+        "name": "init4PoresB",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init4Pores B"
+      },
+      {
+        "id": "setup-init5PoresB",
+        "name": "init5PoresB",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init5Pores B"
+      },
+      {
+        "id": "setup-init6PoresB",
+        "name": "init6PoresB",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init6Pores B"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "range",
+        "value": "5",
+        "checked": false,
+        "label": "Speed"
+      },
+      {
+        "id": "",
+        "name": "live-reproduce",
+        "type": "checkbox",
+        "value": "on",
+        "checked": true,
+        "label": "Reproduce"
+      },
+      {
+        "id": "",
+        "name": "live-reproduceEvery",
+        "type": "number",
+        "value": "2",
+        "checked": false,
+        "label": "Reproduce Every"
+      },
+      {
+        "id": "",
+        "name": "live-autoDoseA",
+        "type": "select-one",
+        "value": "yes, but skip dose 4",
+        "label": "Auto Dose Ano, skip all dosingyes, skip no dosesyes, but skip dose 2yes, but skip dose 3yes, but skip dose 4"
+      },
+      {
+        "id": "",
+        "name": "live-autoDoseB",
+        "type": "select-one",
+        "value": "yes, but skip dose 4",
+        "label": "Auto Dose Bno, skip all dosingyes, skip no dosesyes, but skip dose 2yes, but skip dose 3yes, but skip dose 4"
+      },
+      {
+        "id": "",
+        "name": "live-aDosage",
+        "type": "number",
+        "value": "50",
+        "checked": false,
+        "label": "A Dosage"
+      },
+      {
+        "id": "",
+        "name": "live-bDosage",
+        "type": "number",
+        "value": "50",
+        "checked": false,
+        "label": "B Dosage"
+      },
+      {
+        "id": "",
+        "name": "live-doseAEvery",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Dose AEvery"
+      },
+      {
+        "id": "",
+        "name": "live-doseBEvery",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Dose BEvery"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "label": "Labels"
+      }
+    ],
+    "figures": [
+      "Selected bacterium",
+      "Patients A and B",
+      "Patient A pore counts",
+      "Patient B pore counts",
+      "Population in A",
+      "Population in B"
+    ],
+    "overflow": false,
+    "viewport": [
+      1440,
+      1050
+    ],
+    "scroll": [
+      0,
+      0
+    ]
+  },
+  "running": {
+    "monitors": {
+      "Minutes": "3",
+      "Hours": "0",
+      "Days": "0",
+      "Doses A": "1",
+      "Doses B": "1"
+    },
+    "status": "Running.",
+    "statusState": "success",
+    "controls": [
+      {
+        "id": "setup-seed",
+        "name": "seed",
+        "type": "number",
+        "value": "1",
+        "checked": false,
+        "label": "Seed"
+      },
+      {
+        "id": "setup-init3PoresA",
+        "name": "init3PoresA",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init3Pores A"
+      },
+      {
+        "id": "setup-init4PoresA",
+        "name": "init4PoresA",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init4Pores A"
+      },
+      {
+        "id": "setup-init5PoresA",
+        "name": "init5PoresA",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init5Pores A"
+      },
+      {
+        "id": "setup-init6PoresA",
+        "name": "init6PoresA",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init6Pores A"
+      },
+      {
+        "id": "setup-init3PoresB",
+        "name": "init3PoresB",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init3Pores B"
+      },
+      {
+        "id": "setup-init4PoresB",
+        "name": "init4PoresB",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init4Pores B"
+      },
+      {
+        "id": "setup-init5PoresB",
+        "name": "init5PoresB",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init5Pores B"
+      },
+      {
+        "id": "setup-init6PoresB",
+        "name": "init6PoresB",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init6Pores B"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "range",
+        "value": "5",
+        "checked": false,
+        "label": "Speed"
+      },
+      {
+        "id": "",
+        "name": "live-reproduce",
+        "type": "checkbox",
+        "value": "on",
+        "checked": true,
+        "label": "Reproduce"
+      },
+      {
+        "id": "",
+        "name": "live-reproduceEvery",
+        "type": "number",
+        "value": "2",
+        "checked": false,
+        "label": "Reproduce Every"
+      },
+      {
+        "id": "",
+        "name": "live-autoDoseA",
+        "type": "select-one",
+        "value": "yes, but skip dose 4",
+        "label": "Auto Dose Ano, skip all dosingyes, skip no dosesyes, but skip dose 2yes, but skip dose 3yes, but skip dose 4"
+      },
+      {
+        "id": "",
+        "name": "live-autoDoseB",
+        "type": "select-one",
+        "value": "yes, but skip dose 4",
+        "label": "Auto Dose Bno, skip all dosingyes, skip no dosesyes, but skip dose 2yes, but skip dose 3yes, but skip dose 4"
+      },
+      {
+        "id": "",
+        "name": "live-aDosage",
+        "type": "number",
+        "value": "50",
+        "checked": false,
+        "label": "A Dosage"
+      },
+      {
+        "id": "",
+        "name": "live-bDosage",
+        "type": "number",
+        "value": "50",
+        "checked": false,
+        "label": "B Dosage"
+      },
+      {
+        "id": "",
+        "name": "live-doseAEvery",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Dose AEvery"
+      },
+      {
+        "id": "",
+        "name": "live-doseBEvery",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Dose BEvery"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "label": "Labels"
+      }
+    ],
+    "figures": [
+      "Selected bacterium",
+      "Patients A and B",
+      "Patient A pore counts",
+      "Patient B pore counts",
+      "Population in A",
+      "Population in B"
+    ],
+    "overflow": false,
+    "viewport": [
+      1440,
+      1050
+    ],
+    "scroll": [
+      0,
+      0
+    ]
+  },
+  "paused": {
+    "monitors": {
+      "Minutes": "3",
+      "Hours": "0",
+      "Days": "0",
+      "Doses A": "1",
+      "Doses B": "1"
+    },
+    "status": "Paused.",
+    "statusState": "success",
+    "controls": [
+      {
+        "id": "setup-seed",
+        "name": "seed",
+        "type": "number",
+        "value": "1",
+        "checked": false,
+        "label": "Seed"
+      },
+      {
+        "id": "setup-init3PoresA",
+        "name": "init3PoresA",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init3Pores A"
+      },
+      {
+        "id": "setup-init4PoresA",
+        "name": "init4PoresA",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init4Pores A"
+      },
+      {
+        "id": "setup-init5PoresA",
+        "name": "init5PoresA",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init5Pores A"
+      },
+      {
+        "id": "setup-init6PoresA",
+        "name": "init6PoresA",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init6Pores A"
+      },
+      {
+        "id": "setup-init3PoresB",
+        "name": "init3PoresB",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init3Pores B"
+      },
+      {
+        "id": "setup-init4PoresB",
+        "name": "init4PoresB",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init4Pores B"
+      },
+      {
+        "id": "setup-init5PoresB",
+        "name": "init5PoresB",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init5Pores B"
+      },
+      {
+        "id": "setup-init6PoresB",
+        "name": "init6PoresB",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init6Pores B"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "range",
+        "value": "5",
+        "checked": false,
+        "label": "Speed"
+      },
+      {
+        "id": "",
+        "name": "live-reproduce",
+        "type": "checkbox",
+        "value": "on",
+        "checked": true,
+        "label": "Reproduce"
+      },
+      {
+        "id": "",
+        "name": "live-reproduceEvery",
+        "type": "number",
+        "value": "2",
+        "checked": false,
+        "label": "Reproduce Every"
+      },
+      {
+        "id": "",
+        "name": "live-autoDoseA",
+        "type": "select-one",
+        "value": "yes, but skip dose 4",
+        "label": "Auto Dose Ano, skip all dosingyes, skip no dosesyes, but skip dose 2yes, but skip dose 3yes, but skip dose 4"
+      },
+      {
+        "id": "",
+        "name": "live-autoDoseB",
+        "type": "select-one",
+        "value": "yes, but skip dose 4",
+        "label": "Auto Dose Bno, skip all dosingyes, skip no dosesyes, but skip dose 2yes, but skip dose 3yes, but skip dose 4"
+      },
+      {
+        "id": "",
+        "name": "live-aDosage",
+        "type": "number",
+        "value": "50",
+        "checked": false,
+        "label": "A Dosage"
+      },
+      {
+        "id": "",
+        "name": "live-bDosage",
+        "type": "number",
+        "value": "50",
+        "checked": false,
+        "label": "B Dosage"
+      },
+      {
+        "id": "",
+        "name": "live-doseAEvery",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Dose AEvery"
+      },
+      {
+        "id": "",
+        "name": "live-doseBEvery",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Dose BEvery"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "label": "Labels"
+      }
+    ],
+    "figures": [
+      "Selected bacterium",
+      "Patients A and B",
+      "Patient A pore counts",
+      "Patient B pore counts",
+      "Population in A",
+      "Population in B"
+    ],
+    "overflow": false,
+    "viewport": [
+      1440,
+      1050
+    ],
+    "scroll": [
+      0,
+      0
+    ]
+  },
+  "reset": {
+    "monitors": {
+      "Minutes": "0",
+      "Hours": "0",
+      "Days": "0",
+      "Doses A": "0",
+      "Doses B": "0"
+    },
+    "status": "Model initialized.",
+    "statusState": "success",
+    "controls": [
+      {
+        "id": "setup-seed",
+        "name": "seed",
+        "type": "number",
+        "value": "1",
+        "checked": false,
+        "label": "Seed"
+      },
+      {
+        "id": "setup-init3PoresA",
+        "name": "init3PoresA",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init3Pores A"
+      },
+      {
+        "id": "setup-init4PoresA",
+        "name": "init4PoresA",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init4Pores A"
+      },
+      {
+        "id": "setup-init5PoresA",
+        "name": "init5PoresA",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init5Pores A"
+      },
+      {
+        "id": "setup-init6PoresA",
+        "name": "init6PoresA",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init6Pores A"
+      },
+      {
+        "id": "setup-init3PoresB",
+        "name": "init3PoresB",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init3Pores B"
+      },
+      {
+        "id": "setup-init4PoresB",
+        "name": "init4PoresB",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init4Pores B"
+      },
+      {
+        "id": "setup-init5PoresB",
+        "name": "init5PoresB",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init5Pores B"
+      },
+      {
+        "id": "setup-init6PoresB",
+        "name": "init6PoresB",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init6Pores B"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "range",
+        "value": "5",
+        "checked": false,
+        "label": "Speed"
+      },
+      {
+        "id": "",
+        "name": "live-reproduce",
+        "type": "checkbox",
+        "value": "on",
+        "checked": true,
+        "label": "Reproduce"
+      },
+      {
+        "id": "",
+        "name": "live-reproduceEvery",
+        "type": "number",
+        "value": "2",
+        "checked": false,
+        "label": "Reproduce Every"
+      },
+      {
+        "id": "",
+        "name": "live-autoDoseA",
+        "type": "select-one",
+        "value": "yes, but skip dose 4",
+        "label": "Auto Dose Ano, skip all dosingyes, skip no dosesyes, but skip dose 2yes, but skip dose 3yes, but skip dose 4"
+      },
+      {
+        "id": "",
+        "name": "live-autoDoseB",
+        "type": "select-one",
+        "value": "yes, but skip dose 4",
+        "label": "Auto Dose Bno, skip all dosingyes, skip no dosesyes, but skip dose 2yes, but skip dose 3yes, but skip dose 4"
+      },
+      {
+        "id": "",
+        "name": "live-aDosage",
+        "type": "number",
+        "value": "50",
+        "checked": false,
+        "label": "A Dosage"
+      },
+      {
+        "id": "",
+        "name": "live-bDosage",
+        "type": "number",
+        "value": "50",
+        "checked": false,
+        "label": "B Dosage"
+      },
+      {
+        "id": "",
+        "name": "live-doseAEvery",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Dose AEvery"
+      },
+      {
+        "id": "",
+        "name": "live-doseBEvery",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Dose BEvery"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "label": "Labels"
+      }
+    ],
+    "figures": [
+      "Selected bacterium",
+      "Patients A and B",
+      "Patient A pore counts",
+      "Patient B pore counts",
+      "Population in A",
+      "Population in B"
+    ],
+    "overflow": false,
+    "viewport": [
+      1440,
+      1050
+    ],
+    "scroll": [
+      0,
+      0
+    ]
+  },
+  "progress": {
+    "monitors": {
+      "Minutes": "10",
+      "Hours": "0",
+      "Days": "0",
+      "Doses A": "1",
+      "Doses B": "1"
+    },
+    "status": "Steps completed.",
+    "statusState": "success",
+    "controls": [
+      {
+        "id": "setup-seed",
+        "name": "seed",
+        "type": "number",
+        "value": "1",
+        "checked": false,
+        "label": "Seed"
+      },
+      {
+        "id": "setup-init3PoresA",
+        "name": "init3PoresA",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init3Pores A"
+      },
+      {
+        "id": "setup-init4PoresA",
+        "name": "init4PoresA",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init4Pores A"
+      },
+      {
+        "id": "setup-init5PoresA",
+        "name": "init5PoresA",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init5Pores A"
+      },
+      {
+        "id": "setup-init6PoresA",
+        "name": "init6PoresA",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init6Pores A"
+      },
+      {
+        "id": "setup-init3PoresB",
+        "name": "init3PoresB",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init3Pores B"
+      },
+      {
+        "id": "setup-init4PoresB",
+        "name": "init4PoresB",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init4Pores B"
+      },
+      {
+        "id": "setup-init5PoresB",
+        "name": "init5PoresB",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init5Pores B"
+      },
+      {
+        "id": "setup-init6PoresB",
+        "name": "init6PoresB",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init6Pores B"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "range",
+        "value": "5",
+        "checked": false,
+        "label": "Speed"
+      },
+      {
+        "id": "",
+        "name": "live-reproduce",
+        "type": "checkbox",
+        "value": "on",
+        "checked": true,
+        "label": "Reproduce"
+      },
+      {
+        "id": "",
+        "name": "live-reproduceEvery",
+        "type": "number",
+        "value": "2",
+        "checked": false,
+        "label": "Reproduce Every"
+      },
+      {
+        "id": "",
+        "name": "live-autoDoseA",
+        "type": "select-one",
+        "value": "yes, but skip dose 4",
+        "label": "Auto Dose Ano, skip all dosingyes, skip no dosesyes, but skip dose 2yes, but skip dose 3yes, but skip dose 4"
+      },
+      {
+        "id": "",
+        "name": "live-autoDoseB",
+        "type": "select-one",
+        "value": "yes, but skip dose 4",
+        "label": "Auto Dose Bno, skip all dosingyes, skip no dosesyes, but skip dose 2yes, but skip dose 3yes, but skip dose 4"
+      },
+      {
+        "id": "",
+        "name": "live-aDosage",
+        "type": "number",
+        "value": "50",
+        "checked": false,
+        "label": "A Dosage"
+      },
+      {
+        "id": "",
+        "name": "live-bDosage",
+        "type": "number",
+        "value": "50",
+        "checked": false,
+        "label": "B Dosage"
+      },
+      {
+        "id": "",
+        "name": "live-doseAEvery",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Dose AEvery"
+      },
+      {
+        "id": "",
+        "name": "live-doseBEvery",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Dose BEvery"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "label": "Labels"
+      }
+    ],
+    "figures": [
+      "Selected bacterium",
+      "Patients A and B",
+      "Patient A pore counts",
+      "Patient B pore counts",
+      "Population in A",
+      "Population in B"
+    ],
+    "overflow": false,
+    "viewport": [
+      1440,
+      1050
+    ],
+    "scroll": [
+      0,
+      0
+    ]
+  },
+  "mobileDark": {
+    "monitors": {
+      "Minutes": "10",
+      "Hours": "0",
+      "Days": "0",
+      "Doses A": "1",
+      "Doses B": "1"
+    },
+    "status": "Steps completed.",
+    "statusState": "success",
+    "controls": [
+      {
+        "id": "setup-seed",
+        "name": "seed",
+        "type": "number",
+        "value": "1",
+        "checked": false,
+        "label": "Seed"
+      },
+      {
+        "id": "setup-init3PoresA",
+        "name": "init3PoresA",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init3Pores A"
+      },
+      {
+        "id": "setup-init4PoresA",
+        "name": "init4PoresA",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init4Pores A"
+      },
+      {
+        "id": "setup-init5PoresA",
+        "name": "init5PoresA",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init5Pores A"
+      },
+      {
+        "id": "setup-init6PoresA",
+        "name": "init6PoresA",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init6Pores A"
+      },
+      {
+        "id": "setup-init3PoresB",
+        "name": "init3PoresB",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init3Pores B"
+      },
+      {
+        "id": "setup-init4PoresB",
+        "name": "init4PoresB",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init4Pores B"
+      },
+      {
+        "id": "setup-init5PoresB",
+        "name": "init5PoresB",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init5Pores B"
+      },
+      {
+        "id": "setup-init6PoresB",
+        "name": "init6PoresB",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init6Pores B"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "range",
+        "value": "5",
+        "checked": false,
+        "label": "Speed"
+      },
+      {
+        "id": "",
+        "name": "live-reproduce",
+        "type": "checkbox",
+        "value": "on",
+        "checked": true,
+        "label": "Reproduce"
+      },
+      {
+        "id": "",
+        "name": "live-reproduceEvery",
+        "type": "number",
+        "value": "2",
+        "checked": false,
+        "label": "Reproduce Every"
+      },
+      {
+        "id": "",
+        "name": "live-autoDoseA",
+        "type": "select-one",
+        "value": "yes, but skip dose 4",
+        "label": "Auto Dose Ano, skip all dosingyes, skip no dosesyes, but skip dose 2yes, but skip dose 3yes, but skip dose 4"
+      },
+      {
+        "id": "",
+        "name": "live-autoDoseB",
+        "type": "select-one",
+        "value": "yes, but skip dose 4",
+        "label": "Auto Dose Bno, skip all dosingyes, skip no dosesyes, but skip dose 2yes, but skip dose 3yes, but skip dose 4"
+      },
+      {
+        "id": "",
+        "name": "live-aDosage",
+        "type": "number",
+        "value": "50",
+        "checked": false,
+        "label": "A Dosage"
+      },
+      {
+        "id": "",
+        "name": "live-bDosage",
+        "type": "number",
+        "value": "50",
+        "checked": false,
+        "label": "B Dosage"
+      },
+      {
+        "id": "",
+        "name": "live-doseAEvery",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Dose AEvery"
+      },
+      {
+        "id": "",
+        "name": "live-doseBEvery",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Dose BEvery"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "label": "Labels"
+      }
+    ],
+    "figures": [
+      "Selected bacterium",
+      "Patients A and B",
+      "Patient A pore counts",
+      "Patient B pore counts",
+      "Population in A",
+      "Population in B"
+    ],
+    "overflow": false,
+    "viewport": [
+      390,
+      844
+    ],
+    "scroll": [
+      0,
+      859
+    ]
+  },
+  "mobileLight": {
+    "monitors": {
+      "Minutes": "10",
+      "Hours": "0",
+      "Days": "0",
+      "Doses A": "1",
+      "Doses B": "1"
+    },
+    "status": "Steps completed.",
+    "statusState": "success",
+    "controls": [
+      {
+        "id": "setup-seed",
+        "name": "seed",
+        "type": "number",
+        "value": "1",
+        "checked": false,
+        "label": "Seed"
+      },
+      {
+        "id": "setup-init3PoresA",
+        "name": "init3PoresA",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init3Pores A"
+      },
+      {
+        "id": "setup-init4PoresA",
+        "name": "init4PoresA",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init4Pores A"
+      },
+      {
+        "id": "setup-init5PoresA",
+        "name": "init5PoresA",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init5Pores A"
+      },
+      {
+        "id": "setup-init6PoresA",
+        "name": "init6PoresA",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init6Pores A"
+      },
+      {
+        "id": "setup-init3PoresB",
+        "name": "init3PoresB",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init3Pores B"
+      },
+      {
+        "id": "setup-init4PoresB",
+        "name": "init4PoresB",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init4Pores B"
+      },
+      {
+        "id": "setup-init5PoresB",
+        "name": "init5PoresB",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init5Pores B"
+      },
+      {
+        "id": "setup-init6PoresB",
+        "name": "init6PoresB",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init6Pores B"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "range",
+        "value": "5",
+        "checked": false,
+        "label": "Speed"
+      },
+      {
+        "id": "",
+        "name": "live-reproduce",
+        "type": "checkbox",
+        "value": "on",
+        "checked": true,
+        "label": "Reproduce"
+      },
+      {
+        "id": "",
+        "name": "live-reproduceEvery",
+        "type": "number",
+        "value": "2",
+        "checked": false,
+        "label": "Reproduce Every"
+      },
+      {
+        "id": "",
+        "name": "live-autoDoseA",
+        "type": "select-one",
+        "value": "yes, but skip dose 4",
+        "label": "Auto Dose Ano, skip all dosingyes, skip no dosesyes, but skip dose 2yes, but skip dose 3yes, but skip dose 4"
+      },
+      {
+        "id": "",
+        "name": "live-autoDoseB",
+        "type": "select-one",
+        "value": "yes, but skip dose 4",
+        "label": "Auto Dose Bno, skip all dosingyes, skip no dosesyes, but skip dose 2yes, but skip dose 3yes, but skip dose 4"
+      },
+      {
+        "id": "",
+        "name": "live-aDosage",
+        "type": "number",
+        "value": "50",
+        "checked": false,
+        "label": "A Dosage"
+      },
+      {
+        "id": "",
+        "name": "live-bDosage",
+        "type": "number",
+        "value": "50",
+        "checked": false,
+        "label": "B Dosage"
+      },
+      {
+        "id": "",
+        "name": "live-doseAEvery",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Dose AEvery"
+      },
+      {
+        "id": "",
+        "name": "live-doseBEvery",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Dose BEvery"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "label": "Labels"
+      }
+    ],
+    "figures": [
+      "Selected bacterium",
+      "Patients A and B",
+      "Patient A pore counts",
+      "Patient B pore counts",
+      "Population in A",
+      "Population in B"
+    ],
+    "overflow": false,
+    "viewport": [
+      390,
+      844
+    ],
+    "scroll": [
+      0,
+      859
+    ]
+  },
+  "parameterWrites": [
+    {
+      "id": "live-reproduce",
+      "value": "on",
+      "checked": false,
+      "status": "Rule updated."
+    },
+    {
+      "id": "live-autoDoseA",
+      "value": "no, skip all dosing",
+      "status": "Rule updated."
+    }
+  ],
+  "manualA": {
+    "monitors": {
+      "Minutes": "10",
+      "Hours": "0",
+      "Days": "0",
+      "Doses A": "2",
+      "Doses B": "1"
+    },
+    "status": "Action completed.",
+    "statusState": "success",
+    "controls": [
+      {
+        "id": "setup-seed",
+        "name": "seed",
+        "type": "number",
+        "value": "1",
+        "checked": false,
+        "label": "Seed"
+      },
+      {
+        "id": "setup-init3PoresA",
+        "name": "init3PoresA",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init3Pores A"
+      },
+      {
+        "id": "setup-init4PoresA",
+        "name": "init4PoresA",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init4Pores A"
+      },
+      {
+        "id": "setup-init5PoresA",
+        "name": "init5PoresA",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init5Pores A"
+      },
+      {
+        "id": "setup-init6PoresA",
+        "name": "init6PoresA",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init6Pores A"
+      },
+      {
+        "id": "setup-init3PoresB",
+        "name": "init3PoresB",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init3Pores B"
+      },
+      {
+        "id": "setup-init4PoresB",
+        "name": "init4PoresB",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init4Pores B"
+      },
+      {
+        "id": "setup-init5PoresB",
+        "name": "init5PoresB",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init5Pores B"
+      },
+      {
+        "id": "setup-init6PoresB",
+        "name": "init6PoresB",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init6Pores B"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "range",
+        "value": "5",
+        "checked": false,
+        "label": "Speed"
+      },
+      {
+        "id": "",
+        "name": "live-reproduce",
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "label": "Reproduce"
+      },
+      {
+        "id": "",
+        "name": "live-reproduceEvery",
+        "type": "number",
+        "value": "2",
+        "checked": false,
+        "label": "Reproduce Every"
+      },
+      {
+        "id": "",
+        "name": "live-autoDoseA",
+        "type": "select-one",
+        "value": "no, skip all dosing",
+        "label": "Auto Dose Ano, skip all dosingyes, skip no dosesyes, but skip dose 2yes, but skip dose 3yes, but skip dose 4"
+      },
+      {
+        "id": "",
+        "name": "live-autoDoseB",
+        "type": "select-one",
+        "value": "yes, but skip dose 4",
+        "label": "Auto Dose Bno, skip all dosingyes, skip no dosesyes, but skip dose 2yes, but skip dose 3yes, but skip dose 4"
+      },
+      {
+        "id": "",
+        "name": "live-aDosage",
+        "type": "number",
+        "value": "50",
+        "checked": false,
+        "label": "A Dosage"
+      },
+      {
+        "id": "",
+        "name": "live-bDosage",
+        "type": "number",
+        "value": "50",
+        "checked": false,
+        "label": "B Dosage"
+      },
+      {
+        "id": "",
+        "name": "live-doseAEvery",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Dose AEvery"
+      },
+      {
+        "id": "",
+        "name": "live-doseBEvery",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Dose BEvery"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "label": "Labels"
+      }
+    ],
+    "figures": [
+      "Selected bacterium",
+      "Patients A and B",
+      "Patient A pore counts",
+      "Patient B pore counts",
+      "Population in A",
+      "Population in B"
+    ],
+    "overflow": false,
+    "viewport": [
+      390,
+      844
+    ],
+    "scroll": [
+      0,
+      859
+    ]
+  },
+  "manualB": {
+    "monitors": {
+      "Minutes": "10",
+      "Hours": "0",
+      "Days": "0",
+      "Doses A": "2",
+      "Doses B": "2"
+    },
+    "status": "Action completed.",
+    "statusState": "success",
+    "controls": [
+      {
+        "id": "setup-seed",
+        "name": "seed",
+        "type": "number",
+        "value": "1",
+        "checked": false,
+        "label": "Seed"
+      },
+      {
+        "id": "setup-init3PoresA",
+        "name": "init3PoresA",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init3Pores A"
+      },
+      {
+        "id": "setup-init4PoresA",
+        "name": "init4PoresA",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init4Pores A"
+      },
+      {
+        "id": "setup-init5PoresA",
+        "name": "init5PoresA",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init5Pores A"
+      },
+      {
+        "id": "setup-init6PoresA",
+        "name": "init6PoresA",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init6Pores A"
+      },
+      {
+        "id": "setup-init3PoresB",
+        "name": "init3PoresB",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init3Pores B"
+      },
+      {
+        "id": "setup-init4PoresB",
+        "name": "init4PoresB",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init4Pores B"
+      },
+      {
+        "id": "setup-init5PoresB",
+        "name": "init5PoresB",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init5Pores B"
+      },
+      {
+        "id": "setup-init6PoresB",
+        "name": "init6PoresB",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init6Pores B"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "range",
+        "value": "5",
+        "checked": false,
+        "label": "Speed"
+      },
+      {
+        "id": "",
+        "name": "live-reproduce",
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "label": "Reproduce"
+      },
+      {
+        "id": "",
+        "name": "live-reproduceEvery",
+        "type": "number",
+        "value": "2",
+        "checked": false,
+        "label": "Reproduce Every"
+      },
+      {
+        "id": "",
+        "name": "live-autoDoseA",
+        "type": "select-one",
+        "value": "no, skip all dosing",
+        "label": "Auto Dose Ano, skip all dosingyes, skip no dosesyes, but skip dose 2yes, but skip dose 3yes, but skip dose 4"
+      },
+      {
+        "id": "",
+        "name": "live-autoDoseB",
+        "type": "select-one",
+        "value": "yes, but skip dose 4",
+        "label": "Auto Dose Bno, skip all dosingyes, skip no dosesyes, but skip dose 2yes, but skip dose 3yes, but skip dose 4"
+      },
+      {
+        "id": "",
+        "name": "live-aDosage",
+        "type": "number",
+        "value": "50",
+        "checked": false,
+        "label": "A Dosage"
+      },
+      {
+        "id": "",
+        "name": "live-bDosage",
+        "type": "number",
+        "value": "50",
+        "checked": false,
+        "label": "B Dosage"
+      },
+      {
+        "id": "",
+        "name": "live-doseAEvery",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Dose AEvery"
+      },
+      {
+        "id": "",
+        "name": "live-doseBEvery",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Dose BEvery"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "label": "Labels"
+      }
+    ],
+    "figures": [
+      "Selected bacterium",
+      "Patients A and B",
+      "Patient A pore counts",
+      "Patient B pore counts",
+      "Population in A",
+      "Population in B"
+    ],
+    "overflow": false,
+    "viewport": [
+      390,
+      844
+    ],
+    "scroll": [
+      0,
+      859
+    ]
+  },
+  "afterParameters": {
+    "monitors": {
+      "Minutes": "11",
+      "Hours": "0",
+      "Days": "0",
+      "Doses A": "2",
+      "Doses B": "2"
+    },
+    "status": "Steps completed.",
+    "statusState": "success",
+    "controls": [
+      {
+        "id": "setup-seed",
+        "name": "seed",
+        "type": "number",
+        "value": "1",
+        "checked": false,
+        "label": "Seed"
+      },
+      {
+        "id": "setup-init3PoresA",
+        "name": "init3PoresA",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init3Pores A"
+      },
+      {
+        "id": "setup-init4PoresA",
+        "name": "init4PoresA",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init4Pores A"
+      },
+      {
+        "id": "setup-init5PoresA",
+        "name": "init5PoresA",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init5Pores A"
+      },
+      {
+        "id": "setup-init6PoresA",
+        "name": "init6PoresA",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init6Pores A"
+      },
+      {
+        "id": "setup-init3PoresB",
+        "name": "init3PoresB",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init3Pores B"
+      },
+      {
+        "id": "setup-init4PoresB",
+        "name": "init4PoresB",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init4Pores B"
+      },
+      {
+        "id": "setup-init5PoresB",
+        "name": "init5PoresB",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init5Pores B"
+      },
+      {
+        "id": "setup-init6PoresB",
+        "name": "init6PoresB",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Init6Pores B"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "range",
+        "value": "5",
+        "checked": false,
+        "label": "Speed"
+      },
+      {
+        "id": "",
+        "name": "live-reproduce",
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "label": "Reproduce"
+      },
+      {
+        "id": "",
+        "name": "live-reproduceEvery",
+        "type": "number",
+        "value": "2",
+        "checked": false,
+        "label": "Reproduce Every"
+      },
+      {
+        "id": "",
+        "name": "live-autoDoseA",
+        "type": "select-one",
+        "value": "no, skip all dosing",
+        "label": "Auto Dose Ano, skip all dosingyes, skip no dosesyes, but skip dose 2yes, but skip dose 3yes, but skip dose 4"
+      },
+      {
+        "id": "",
+        "name": "live-autoDoseB",
+        "type": "select-one",
+        "value": "yes, but skip dose 4",
+        "label": "Auto Dose Bno, skip all dosingyes, skip no dosesyes, but skip dose 2yes, but skip dose 3yes, but skip dose 4"
+      },
+      {
+        "id": "",
+        "name": "live-aDosage",
+        "type": "number",
+        "value": "50",
+        "checked": false,
+        "label": "A Dosage"
+      },
+      {
+        "id": "",
+        "name": "live-bDosage",
+        "type": "number",
+        "value": "50",
+        "checked": false,
+        "label": "B Dosage"
+      },
+      {
+        "id": "",
+        "name": "live-doseAEvery",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Dose AEvery"
+      },
+      {
+        "id": "",
+        "name": "live-doseBEvery",
+        "type": "number",
+        "value": "4",
+        "checked": false,
+        "label": "Dose BEvery"
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "label": "Labels"
+      }
+    ],
+    "figures": [
+      "Selected bacterium",
+      "Patients A and B",
+      "Patient A pore counts",
+      "Patient B pore counts",
+      "Population in A",
+      "Population in B"
+    ],
+    "overflow": false,
+    "viewport": [
+      390,
+      844
+    ],
+    "scroll": [
+      0,
+      859
+    ]
+  }
+}

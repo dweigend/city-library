@@ -1,0 +1,112 @@
+{
+  "slug": "mandelbrot",
+  "name": "Mandelbrot",
+  "catalogPath": "Sample Models/Mathematics/Fractals/Mandelbrot",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Fractals/Mandelbrot.nlogox",
+  "deliveryBatch": "B17",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "How can repeatedly applying a simple complex map generate an intricate boundary? NetLogo Mandelbrot evaluates the iteration z squared plus c at grid locations, using moving agents to distribute computation and color patches according to their accumulated iterations and escape behavior. Mandelbrot [1] provides an original study of complex quadratic iteration, Milnor [2] supplies the mathematical dynamics, and Peitgen and colleagues [3] connect iterative maps with fractal geometry and computation. The model distinguishes bounded-looking orbits from escaping ones through finite work. A maximum iteration count cannot prove that a point belongs to the infinite mathematical set, especially near its boundary. Grid resolution and allocation of agent visits affect the developing image. The simulation illustrates numerical exploration of deterministic dynamics, rather than stochastic creation of the set or empirical evidence for a physical process.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Fractals/Mandelbrot.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Fractals/Mandelbrot.nlogox",
+    "revision": "NetLogo 7.0.4 served 2026-11-05; SHA-256 0ea8fa62224aaa01c5462a7e7351ce0e7d28a8843d1a3b8004af36a20848bac5",
+    "checkedAt": "2026-11-05",
+    "evidence": "Full original served XML source, Procedures and Info retained in evidence/computing/mandelbrot.nlogox; extracted Info retained alongside.",
+    "notes": " This dossier describes scientific connections to the original NetLogo teaching model; it does not certify a City Library reimplementation or empirical validity.",
+    "originalCitation": "Wilensky, U. (1997).  NetLogo Mandelbrot model.  http://ccl.northwestern.edu/netlogo/models/Mandelbrot.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "sourceSnapshot": "evidence/computing/mandelbrot.nlogox",
+    "evidenceFile": "evidence/computing/mandelbrot.nlogox"
+  },
+  "publications": [
+    {
+      "id": "10.1111/j.1749-6632.1980.tb29690.x",
+      "authors": [
+        "Benoit B. Mandelbrot"
+      ],
+      "title": "FRACTAL ASPECTS OF THE ITERATION OF z →Λz(1‐ z) FOR COMPLEX Λ AND z",
+      "year": 1980,
+      "venue": "Annals of the New York Academy of Sciences",
+      "doi": "10.1111/j.1749-6632.1980.tb29690.x",
+      "url": "https://doi.org/10.1111/j.1749-6632.1980.tb29690.x",
+      "relevance": "Original research on complex quadratic iteration supplies the historical mathematical connection.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1111%2Fj.1749-6632.1980.tb29690.x",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1111_j_1749_6632_1980_tb29690_x.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1111_j_1749_6632_1980_tb29690_x.json"
+      },
+      "publisher": "Wiley",
+      "volume": "357",
+      "issue": "1",
+      "pages": "249-259",
+      "verified": true
+    },
+    {
+      "id": "10.1007/978-3-663-08092-3",
+      "authors": [
+        "John Milnor"
+      ],
+      "title": "Dynamics in One Complex Variable",
+      "year": 2000,
+      "venue": "Vieweg+Teubner Verlag",
+      "doi": "10.1007/978-3-663-08092-3",
+      "url": "https://doi.org/10.1007/978-3-663-08092-3",
+      "relevance": "Complex dynamics explains bounded orbits and the difference between numerical evidence and membership proofs.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1007%2F978-3-663-08092-3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1007_978_3_663_08092_3.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1007_978_3_663_08092_3.json"
+      },
+      "publisher": "Vieweg+Teubner Verlag",
+      "isbn": [
+        "9783528131302",
+        "9783663080923"
+      ],
+      "verified": true
+    },
+    {
+      "id": "10.1007/978-1-4757-4740-9",
+      "authors": [
+        "Heinz-Otto Peitgen",
+        "Hartmut Jürgens",
+        "Dietmar Saupe"
+      ],
+      "title": "Chaos and Fractals: New Frontiers of Science",
+      "year": 1992,
+      "venue": "Springer New York",
+      "doi": "10.1007/978-1-4757-4740-9",
+      "url": "https://doi.org/10.1007/978-1-4757-4740-9",
+      "relevance": "Fractal computation and scaling frame finite-resolution escape-time visualization.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1007%2F978-1-4757-4740-9",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1007_978_1_4757_4740_9.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1007_978_1_4757_4740_9.json"
+      },
+      "publisher": "Springer New York",
+      "isbn": [
+        "9781475747423",
+        "9781475747409"
+      ],
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

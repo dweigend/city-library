@@ -4,6 +4,7 @@ node_modules
 # output
 out
 dist
+agent-lab-output
 *.tgz
 
 # code coverage
@@ -32,3 +33,7 @@ report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
 
 # Finder (MacOS) folder config
 .DS_Store
+
+# Local development logs and browser captures
+/.local/development-archive/
+/docs/development/agent-lab-screenshots/

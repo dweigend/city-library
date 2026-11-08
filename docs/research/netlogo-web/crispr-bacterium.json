@@ -1,0 +1,132 @@
+{
+  "slug": "crispr-bacterium",
+  "name": "CRISPR Bacterium",
+  "catalogPath": "Sample Models/Biology/CRISPR/CRISPR Bacterium",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/CRISPR/CRISPR%20Bacterium.nlogox",
+  "deliveryBatch": "B09",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "How can a bacterium acquire sequence-specific memory of viral exposure? NetLogo CRISPR Bacterium follows a single cell confronted by viruses and represents recognition through stored sequence information. Original resistance experiments [1], small-RNA defense research [2], and work on viral-DNA-driven acquisition [3] supply direct scientific context. The served model distinguishes adaptive from innate protection while compressing molecular machinery into visible events. It omits many biochemical constraints, diverse CRISPR–Cas architectures, and the environmental variation surrounding real cells. Survival after previous exposure illustrates the logic of acquired specificity under the chosen rules. It does not establish a measured immune efficiency, reproduce the complete molecular pathway, or imply that all bacteria possess the same defense system.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/CRISPR/CRISPR%20Bacterium.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/CRISPR/CRISPR%20Bacterium.nlogox",
+    "revision": "Best available served NetLogo Web artifact retrieved on 2026-11-05; SHA-256 e87977797048bf809aa58a41d6dc746c59d6d5e0ba94957db2996815725f4813",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served .nlogox downloaded; Info mechanism descriptions, credits and reference sections inspected. Procedures are not independently audited by this literature task. Source provenance is separate from City Library reimplementation and target-runtime verification.",
+    "evidenceFile": "evidence/biology/crispr-bacterium.nlogox",
+    "infoFile": "evidence/biology/crispr-bacterium-info.txt",
+    "originalModelCitation": "* Woods, P. and Wilensky, U. (2019).  NetLogo CRISPR Bacterium model.  http://ccl.northwestern.edu/netlogo/models/CRISPRBacterium.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "notes": "Original/served model is the behavioral baseline. This research does not claim implementation or browser acceptance."
+  },
+  "publications": [
+    {
+      "id": "barrangou",
+      "authors": [
+        "Rodolphe Barrangou",
+        "Christophe Fremaux",
+        "Hélène Deveau",
+        "Melissa Richards",
+        "Patrick Boyaval",
+        "Sylvain Moineau",
+        "Dennis A. Romero",
+        "Philippe Horvath"
+      ],
+      "title": "CRISPR Provides Acquired Resistance Against Viruses in Prokaryotes",
+      "year": 2007,
+      "venue": "Science",
+      "doi": "10.1126/science.1138140",
+      "url": "https://doi.org/10.1126/science.1138140",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=CRISPR+provides+acquired+resistance+against+viruses+in+prokaryotes+Barrangou+2007&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/barrangou-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1126%2Fscience.1138140%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/barrangou-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "315",
+      "issue": "5819",
+      "pages": "1709-1712",
+      "relevance": "Original experimental evidence connects acquired CRISPR sequences to antiviral resistance."
+    },
+    {
+      "id": "brouns",
+      "authors": [
+        "Stan J. J. Brouns",
+        "Matthijs M. Jore",
+        "Magnus Lundgren",
+        "Edze R. Westra",
+        "Rik J. H. Slijkhuis",
+        "Ambrosius P. L. Snijders",
+        "Mark J. Dickman",
+        "Kira S. Makarova",
+        "Eugene V. Koonin",
+        "John van der Oost"
+      ],
+      "title": "Small CRISPR RNAs Guide Antiviral Defense in Prokaryotes",
+      "year": 2008,
+      "venue": "Science",
+      "doi": "10.1126/science.1159689",
+      "url": "https://doi.org/10.1126/science.1159689",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Small+CRISPR+RNAs+guide+antiviral+defense+in+prokaryotes+Brouns+2008&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/brouns-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1126%2Fscience.1159689%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/brouns-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "321",
+      "issue": "5891",
+      "pages": "960-964",
+      "relevance": "Identifies small CRISPR RNAs in antiviral defense, directly supporting sequence-specific recognition."
+    },
+    {
+      "id": "moddell",
+      "authors": [
+        "Joshua W. Modell",
+        "Wenyan Jiang",
+        "Luciano A. Marraffini"
+      ],
+      "title": "CRISPR–Cas systems exploit viral DNA injection to establish and maintain adaptive immunity",
+      "year": 2017,
+      "venue": "Nature",
+      "doi": "10.1038/nature21719",
+      "url": "https://doi.org/10.1038/nature21719",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=CRISPR+Cas+systems+exploit+viral+DNA+injection+to+establish+and+maintain+adaptive+immunity+Modell+2017&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/moddell-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fnature21719%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/moddell-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "544",
+      "issue": "7648",
+      "pages": "101-104",
+      "relevance": "Studies acquisition during viral DNA injection, relevant to extending the model’s memory-formation mechanism."
+    }
+  ],
+  "gaps": []
+}

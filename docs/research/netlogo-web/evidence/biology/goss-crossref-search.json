@@ -1,0 +1,988 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=Self-organized+shortcuts+in+the+Argentine+ant+Goss+1989&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 1310544,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                24
+              ]
+            ],
+            "date-time": "2026-10-24T00:33:27Z",
+            "timestamp": 1792802007238,
+            "version": "4.5.0"
+          },
+          "reference-count": 14,
+          "publisher": "Springer Science and Business Media LLC",
+          "issue": "12",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    1989,
+                    12,
+                    1
+                  ]
+                ],
+                "date-time": "1989-12-01T00:00:00Z",
+                "timestamp": 628473600000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "http://www.springer.com/tdm"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Naturwissenschaften"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1989,
+                12
+              ]
+            ]
+          },
+          "DOI": "10.1007/bf00462870",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2004,
+                11,
+                16
+              ]
+            ],
+            "date-time": "2004-11-16T11:36:45Z",
+            "timestamp": 1100605005000
+          },
+          "page": "579-581",
+          "source": "Crossref",
+          "is-referenced-by-count": 676,
+          "title": [
+            "Self-organized shortcuts in the Argentine ant"
+          ],
+          "prefix": "10.1007",
+          "volume": "76",
+          "author": [
+            {
+              "given": "S.",
+              "family": "Goss",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "S.",
+              "family": "Aron",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "J. L.",
+              "family": "Deneubourg",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "J. M.",
+              "family": "Pasteels",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "reference": [
+            {
+              "key": "CR1",
+              "volume-title": "L'Organisation Sociale des Fourmis",
+              "author": "L. Passera",
+              "year": "1984",
+              "unstructured": "Passera, L.: L'Organisation Sociale des Fourmis. Toulouse: Priv\u00e1t 1984"
+            },
+            {
+              "key": "CR2",
+              "unstructured": "Aron, S, Pasteels, J. M., Deneubourg, J. L.: Biol. Behav. (in press)"
+            },
+            {
+              "key": "CR3",
+              "doi-asserted-by": "crossref",
+              "first-page": "283",
+              "DOI": "10.1093/aesa/79.2.283",
+              "volume": "79",
+              "author": "S. E. Vorhis Key Van",
+              "year": "1986",
+              "unstructured": "Van Vorhis Key, S. E., Baker, T. C.: Ann. Entomol. Soc. Am. 79, 283 (1986)",
+              "journal-title": "Ann. Entomol. Soc. Am."
+            },
+            {
+              "key": "CR4",
+              "doi-asserted-by": "crossref",
+              "first-page": "3",
+              "DOI": "10.1007/BF00984000",
+              "volume": "8",
+              "author": "S. E. Vorhis Key Van",
+              "year": "1982",
+              "unstructured": "Van Vorhis Key, S. E., Baker, T. C.: J. Chem. Ecol. 8, 3 (1982)",
+              "journal-title": "J. Chem. Ecol."
+            },
+            {
+              "key": "CR5",
+              "unstructured": "Deneubourg, J. L., Aron, S., Goss, S., Pasteels, J. M.: J. Ins. Behav. (in press)"
+            },
+            {
+              "key": "CR6",
+              "doi-asserted-by": "crossref",
+              "first-page": "237",
+              "DOI": "10.1007/BF02223667",
+              "volume": "27",
+              "author": "B. H\u00f6lldobler",
+              "year": "1980",
+              "unstructured": "H\u00f6lldobler, B., M\u00f6glich, M.: Ins. Soc. 27, 237 (1980)",
+              "journal-title": "Ins. Soc."
+            },
+            {
+              "key": "CR7",
+              "unstructured": "H\u00f6lldobler, B., Wilson, E. O.: personal communication by H\u00f6lldobler, B."
+            },
+            {
+              "key": "CR8",
+              "unstructured": "H\u00f6lldobler, B.: personal communication"
+            },
+            {
+              "key": "CR9",
+              "first-page": "267",
+              "volume": "15",
+              "author": "T. C. Schneirla",
+              "year": "1933",
+              "unstructured": "Schneirla, T. C.: J. Comp. Physiol. 15, 267 (1933); 29, 401 (1940)",
+              "journal-title": "J. Comp. Physiol."
+            },
+            {
+              "key": "CR10",
+              "doi-asserted-by": "crossref",
+              "first-page": "545",
+              "DOI": "10.5962/bhl.part.79534",
+              "volume": "94",
+              "author": "M. Rickli",
+              "year": "1987",
+              "unstructured": "Rickli, M., Leuthold, R. H.: Rev. Suisse Zool. 94, 545 (1987)",
+              "journal-title": "Rev. Suisse Zool."
+            },
+            {
+              "key": "CR11",
+              "doi-asserted-by": "crossref",
+              "first-page": "1149",
+              "DOI": "10.1126/science.171.3976.1149",
+              "volume": "171",
+              "author": "B. H\u00f6lldobler",
+              "year": "1971",
+              "unstructured": "H\u00f6lldobler, B.: Science 171, 1149 (1971)",
+              "journal-title": "Science"
+            },
+            {
+              "key": "CR12",
+              "doi-asserted-by": "crossref",
+              "first-page": "65",
+              "DOI": "10.1007/BF00364322",
+              "volume": "20",
+              "author": "U. Maschwitz",
+              "year": "1975",
+              "unstructured": "Maschwitz, U., M\u00fchlenberg, M.: Oecologia (Berl.) 20, 65 (1975)",
+              "journal-title": "Oecologia (Berl.)"
+            },
+            {
+              "key": "CR13",
+              "first-page": "189",
+              "volume": "5",
+              "author": "S. Aron",
+              "year": "1989",
+              "unstructured": "Aron, S., Pasteels, J. M.: Actes Coll. Ins. Soc., UTEIS, section fran\u00e7ais 5, 189 (1989)",
+              "journal-title": "Actes Coll. Ins. Soc., UTEIS, section fran\u00e7ais"
+            },
+            {
+              "key": "CR14",
+              "doi-asserted-by": "crossref",
+              "first-page": "719",
+              "DOI": "10.1007/BF01065789",
+              "volume": "2",
+              "author": "J. L. Deneubourg",
+              "year": "1989",
+              "unstructured": "Deneubourg, J. L., Goss, S., Franks, N., Pasteels, J. M.: J. Ins. Behav. 2, 719 (1989)",
+              "journal-title": "J. Ins. Behav."
+            }
+          ],
+          "container-title": [
+            "Naturwissenschaften"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/BF00462870.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://link.springer.com/article/10.1007/BF00462870/fulltext.html",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/BF00462870",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2019,
+                4,
+                3
+              ]
+            ],
+            "date-time": "2019-04-03T22:48:17Z",
+            "timestamp": 1554331697000
+          },
+          "score": 51.68931,
+          "resource": {
+            "primary": {
+              "URL": "http://link.springer.com/10.1007/BF00462870"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1989,
+                12
+              ]
+            ]
+          },
+          "references-count": 14,
+          "journal-issue": {
+            "issue": "12",
+            "published-print": {
+              "date-parts": [
+                [
+                  1989,
+                  12
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "BF00462870"
+          ],
+          "URL": "https://doi.org/10.1007/bf00462870",
+          "ISSN": [
+            "0028-1042",
+            "1432-1904"
+          ],
+          "issn-type": [
+            {
+              "value": "0028-1042",
+              "type": "print"
+            },
+            {
+              "value": "1432-1904",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1989,
+                12
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2022,
+                4,
+                5
+              ]
+            ],
+            "date-time": "2022-04-05T21:22:14Z",
+            "timestamp": 1649193734893
+          },
+          "reference-count": 29,
+          "publisher": "Elsevier BV",
+          "issue": "3",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2012,
+                    2,
+                    1
+                  ]
+                ],
+                "date-time": "2012-02-01T00:00:00Z",
+                "timestamp": 1328054400000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+            }
+          ],
+          "funder": [
+            {
+              "name": "Grant-in-Aid for Scientific Research in Japan",
+              "award": [
+                "21500072"
+              ],
+              "award-info": [
+                {
+                  "award-number": [
+                    "21500072"
+                  ]
+                }
+              ]
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Physica A: Statistical Mechanics and its Applications"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2012,
+                2
+              ]
+            ]
+          },
+          "DOI": "10.1016/j.physa.2011.08.047",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2011,
+                9,
+                2
+              ]
+            ],
+            "date-time": "2011-09-02T09:15:58Z",
+            "timestamp": 1314954958000
+          },
+          "page": "872-879",
+          "source": "Crossref",
+          "is-referenced-by-count": 3,
+          "title": [
+            "Self-organized network design by link survivals and shortcuts"
+          ],
+          "prefix": "10.1016",
+          "volume": "391",
+          "author": [
+            {
+              "given": "Yukio",
+              "family": "Hayashi",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Yuki",
+              "family": "Meguro",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "78",
+          "reference": [
+            {
+              "key": "10.1016/j.physa.2011.08.047_br000005",
+              "doi-asserted-by": "crossref",
+              "first-page": "439",
+              "DOI": "10.1126/science.1177894",
+              "volume": "327",
+              "author": "Tero",
+              "year": "2010",
+              "journal-title": "Science"
+            },
+            {
+              "issue": "3",
+              "key": "10.1016/j.physa.2011.08.047_br000010",
+              "doi-asserted-by": "crossref",
+              "first-page": "702",
+              "DOI": "10.1145/1073204.1073251",
+              "volume": "24",
+              "author": "Runions",
+              "year": "2005",
+              "journal-title": "ACM Trans. Graph."
+            },
+            {
+              "issue": "7",
+              "key": "10.1016/j.physa.2011.08.047_br000015",
+              "doi-asserted-by": "crossref",
+              "first-page": "3879",
+              "DOI": "10.1073/pnas.061535198",
+              "volume": "98",
+              "author": "Mar\u00e9e",
+              "year": "2001",
+              "journal-title": "PNAS"
+            },
+            {
+              "key": "10.1016/j.physa.2011.08.047_br000020",
+              "doi-asserted-by": "crossref",
+              "first-page": "327",
+              "DOI": "10.1006/bulm.2001.0277",
+              "volume": "64",
+              "author": "Mar\u00e9e",
+              "year": "2002",
+              "journal-title": "Bulletin of Math. Bio."
+            },
+            {
+              "key": "10.1016/j.physa.2011.08.047_br000025",
+              "doi-asserted-by": "crossref",
+              "first-page": "47",
+              "DOI": "10.1038/40353",
+              "volume": "388",
+              "author": "Helbing",
+              "year": "1997",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/j.physa.2011.08.047_br000030",
+              "doi-asserted-by": "crossref",
+              "first-page": "100",
+              "DOI": "10.1016/j.tre.2006.09.001",
+              "volume": "44",
+              "author": "Xie",
+              "year": "2008",
+              "journal-title": "Transport. Res. Part E"
+            },
+            {
+              "key": "10.1016/j.physa.2011.08.047_br000035",
+              "doi-asserted-by": "crossref",
+              "first-page": "056108",
+              "DOI": "10.1103/PhysRevE.74.056108",
+              "volume": "74",
+              "author": "Holme",
+              "year": "2006",
+              "journal-title": "Phys. Rev. E"
+            },
+            {
+              "key": "10.1016/j.physa.2011.08.047_br000040",
+              "first-page": "89",
+              "volume": "356",
+              "author": "Gil",
+              "year": "2006",
+              "journal-title": "Physica A"
+            },
+            {
+              "key": "10.1016/j.physa.2011.08.047_br000045",
+              "doi-asserted-by": "crossref",
+              "first-page": "118702",
+              "DOI": "10.1103/PhysRevLett.100.118702",
+              "volume": "100",
+              "author": "Kim",
+              "year": "2008",
+              "journal-title": "Phys. Rev. Lett."
+            },
+            {
+              "key": "10.1016/j.physa.2011.08.047_br000050",
+              "doi-asserted-by": "crossref",
+              "first-page": "026119",
+              "DOI": "10.1103/PhysRevE.80.026119",
+              "volume": "80",
+              "author": "Kim",
+              "year": "2009",
+              "journal-title": "Phys. Rev. E"
+            },
+            {
+              "key": "10.1016/j.physa.2011.08.047_br000055",
+              "doi-asserted-by": "crossref",
+              "first-page": "701",
+              "DOI": "10.1016/j.physa.2007.01.006",
+              "volume": "379",
+              "author": "Ikeda",
+              "year": "2007",
+              "journal-title": "Physica A"
+            },
+            {
+              "key": "10.1016/j.physa.2011.08.047_br000060",
+              "doi-asserted-by": "crossref",
+              "first-page": "235005",
+              "DOI": "10.1088/1751-8113/41/23/235005",
+              "volume": "41",
+              "author": "Ikeda",
+              "year": "2008",
+              "journal-title": "J. Phys. A: Math. Theor."
+            },
+            {
+              "key": "10.1016/j.physa.2011.08.047_br000065",
+              "doi-asserted-by": "crossref",
+              "first-page": "379",
+              "DOI": "10.1038/35019019",
+              "volume": "406",
+              "author": "Albert",
+              "year": "2000",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/j.physa.2011.08.047_br000070",
+              "doi-asserted-by": "crossref",
+              "first-page": "138702",
+              "DOI": "10.1103/PhysRevLett.100.138702",
+              "volume": "100",
+              "author": "Barth\u00e9lemy",
+              "year": "2008",
+              "journal-title": "Phys. Rev. Lett."
+            },
+            {
+              "key": "10.1016/j.physa.2011.08.047_br000075",
+              "doi-asserted-by": "crossref",
+              "first-page": "046116",
+              "DOI": "10.1103/PhysRevE.82.046116",
+              "volume": "82",
+              "author": "Xuan",
+              "year": "2010",
+              "journal-title": "Phys. Rev. E"
+            },
+            {
+              "key": "10.1016/j.physa.2011.08.047_br000080",
+              "first-page": "465",
+              "author": "Rajan",
+              "year": "2008",
+              "journal-title": "Int. J. of Computers, Communications & Control",
+              "ISSN": "http://id.crossref.org/issn/1841-9836",
+              "issn-type": "print"
+            },
+            {
+              "key": "10.1016/j.physa.2011.08.047_br000085",
+              "doi-asserted-by": "crossref",
+              "first-page": "707",
+              "DOI": "10.1016/j.physa.2005.06.085",
+              "volume": "361",
+              "author": "Krause",
+              "year": "2006",
+              "journal-title": "Physica A"
+            },
+            {
+              "key": "10.1016/j.physa.2011.08.047_br000090",
+              "doi-asserted-by": "crossref",
+              "first-page": "016121",
+              "DOI": "10.1103/PhysRevE.66.016121",
+              "volume": "66",
+              "author": "Dall",
+              "year": "2002",
+              "journal-title": "Phys. Rev. E"
+            },
+            {
+              "key": "10.1016/j.physa.2011.08.047_br000095",
+              "doi-asserted-by": "crossref",
+              "first-page": "597",
+              "DOI": "10.1016/j.pmcj.2008.04.011",
+              "volume": "4",
+              "author": "Onat",
+              "year": "2008",
+              "journal-title": "Pervasive and Mobile Comput."
+            },
+            {
+              "key": "10.1016/j.physa.2011.08.047_br000100",
+              "series-title": "Handbook of Algorithms for Wireless Networking and Mobile Computing",
+              "article-title": "Ad Hoc routing protocols",
+              "author": "Fan",
+              "year": "2006"
+            },
+            {
+              "key": "10.1016/j.physa.2011.08.047_br000105",
+              "doi-asserted-by": "crossref",
+              "first-page": "552",
+              "DOI": "10.1016/j.physa.2007.02.080",
+              "volume": "380",
+              "author": "Hayashi",
+              "year": "2007",
+              "journal-title": "Physica A"
+            },
+            {
+              "key": "10.1016/j.physa.2011.08.047_br000110",
+              "doi-asserted-by": "crossref",
+              "first-page": "991",
+              "DOI": "10.1016/j.physa.2008.11.027",
+              "volume": "388",
+              "author": "Hayashi",
+              "year": "2009",
+              "journal-title": "Physica A"
+            },
+            {
+              "issue": "21",
+              "key": "10.1016/j.physa.2011.08.047_br000115",
+              "doi-asserted-by": "crossref",
+              "first-page": "13382",
+              "DOI": "10.1073/pnas.172501399",
+              "volume": "99",
+              "author": "Yook",
+              "year": "2002",
+              "journal-title": "PNAS"
+            },
+            {
+              "key": "10.1016/j.physa.2011.08.047_br000120",
+              "doi-asserted-by": "crossref",
+              "first-page": "440",
+              "DOI": "10.1038/30918",
+              "volume": "393",
+              "author": "Watts",
+              "year": "1998",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/j.physa.2011.08.047_br000125",
+              "doi-asserted-by": "crossref",
+              "first-page": "130",
+              "DOI": "10.1038/43601",
+              "volume": "401",
+              "author": "Albert",
+              "year": "1999",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/j.physa.2011.08.047_br000130",
+              "doi-asserted-by": "crossref",
+              "first-page": "3180",
+              "DOI": "10.1103/PhysRevLett.82.3180",
+              "volume": "82",
+              "author": "Barth\u00e9lemy",
+              "year": "1999",
+              "journal-title": "Phys. Rev. Lett."
+            },
+            {
+              "key": "10.1016/j.physa.2011.08.047_br000135",
+              "doi-asserted-by": "crossref",
+              "first-page": "037102",
+              "DOI": "10.1103/PhysRevE.66.037102",
+              "volume": "66",
+              "author": "Sen",
+              "year": "2002",
+              "journal-title": "Phys. Rev. E"
+            },
+            {
+              "key": "10.1016/j.physa.2011.08.047_br000140",
+              "doi-asserted-by": "crossref",
+              "unstructured": "J. Kleinberg, Nature, 406, 845, 2000. Proc. 32nd ACM Symposium on Theory of Computing, 2000. Cornell Computer Science Technical Report 99\u20131776 October 1999. http://www.cs.cornell.edu/home/kleinber/swn.pdf.",
+              "DOI": "10.1038/35022643"
+            },
+            {
+              "key": "10.1016/j.physa.2011.08.047_br000145",
+              "doi-asserted-by": "crossref",
+              "first-page": "016125",
+              "DOI": "10.1103/PhysRevE.74.016125",
+              "volume": "74",
+              "author": "Tanizawa",
+              "year": "2006",
+              "journal-title": "Phys. Rev. E"
+            }
+          ],
+          "container-title": [
+            "Physica A: Statistical Mechanics and its Applications"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:S0378437111006753?httpAccept=text/xml",
+              "content-type": "text/xml",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:S0378437111006753?httpAccept=text/plain",
+              "content-type": "text/plain",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2018,
+                11,
+                30
+              ]
+            ],
+            "date-time": "2018-11-30T04:23:00Z",
+            "timestamp": 1543551780000
+          },
+          "score": 27.86081,
+          "resource": {
+            "primary": {
+              "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0378437111006753"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2012,
+                2
+              ]
+            ]
+          },
+          "references-count": 29,
+          "journal-issue": {
+            "issue": "3",
+            "published-print": {
+              "date-parts": [
+                [
+                  2012,
+                  2
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "S0378437111006753"
+          ],
+          "URL": "https://doi.org/10.1016/j.physa.2011.08.047",
+          "ISSN": [
+            "0378-4371"
+          ],
+          "issn-type": [
+            {
+              "value": "0378-4371",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2012,
+                2
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                12
+              ]
+            ],
+            "date-time": "2026-10-12T15:48:37Z",
+            "timestamp": 1791820117607,
+            "version": "4.3.4"
+          },
+          "publisher-location": "Cham",
+          "reference-count": 0,
+          "publisher": "Springer International Publishing",
+          "isbn-type": [
+            {
+              "value": "9783030281014",
+              "type": "print"
+            },
+            {
+              "value": "9783030281021",
+              "type": "electronic"
+            }
+          ],
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2021,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2021-01-01T00:00:00Z",
+                "timestamp": 1609459200000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "http://www.springer.com/tdm"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2021,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2021-01-01T00:00:00Z",
+                "timestamp": 1609459200000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "http://www.springer.com/tdm"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "link.springer.com"
+            ],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2021
+              ]
+            ]
+          },
+          "DOI": "10.1007/978-3-030-28102-1_300018",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2021,
+                1,
+                30
+              ]
+            ],
+            "date-time": "2021-01-30T01:02:49Z",
+            "timestamp": 1611968569000
+          },
+          "page": "80-80",
+          "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Argentine Ant"
+          ],
+          "prefix": "10.1007",
+          "member": "297",
+          "published-online": {
+            "date-parts": [
+              [
+                2021,
+                1,
+                31
+              ]
+            ]
+          },
+          "container-title": [
+            "Encyclopedia of Social Insects"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://link.springer.com/content/pdf/10.1007/978-3-030-28102-1_300018",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                12
+              ]
+            ],
+            "date-time": "2026-10-12T15:03:57Z",
+            "timestamp": 1791817437000
+          },
+          "score": 26.88123,
+          "resource": {
+            "primary": {
+              "URL": "https://link.springer.com/10.1007/978-3-030-28102-1_300018"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2021
+              ]
+            ]
+          },
+          "ISBN": [
+            "9783030281014",
+            "9783030281021"
+          ],
+          "references-count": 0,
+          "URL": "https://doi.org/10.1007/978-3-030-28102-1_300018",
+          "published": {
+            "date-parts": [
+              [
+                2021
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "31 January 2021",
+              "order": 1,
+              "name": "first_online",
+              "label": "First Online",
+              "group": {
+                "name": "ChapterHistory",
+                "label": "Chapter History"
+              }
+            }
+          ]
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

@@ -1,0 +1,374 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1152%2Fphysrev.00008.2017%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1152/physrev.00008.2017\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "29212789",
+          "source": "MED",
+          "pmid": "29212789",
+          "pmcid": "PMC5866358",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC5866358"
+            ]
+          },
+          "doi": "10.1152/physrev.00008.2017",
+          "title": "Pancreatic \u03b2-Cell Electrical Activity and Insulin Secretion: Of Mice and Men.",
+          "authorString": "Rorsman P, Ashcroft FM.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Rorsman P",
+                "lastName": "Rorsman",
+                "firstName": "Patrik",
+                "initials": "P",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-7578-0767"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Oxford Centre for Diabetes, Endocrinology and Metabolism, University of Oxford, Churchill Hospital, Oxford, United Kingdom; Department of Neuroscience and Physiology, Metabolic Research Unit, G\u00f6teborg, Sweden; and Department of Physiology, Anatomy and Genetics, University of Oxford, Oxford, United Kingdom."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Ashcroft FM",
+                "lastName": "Ashcroft",
+                "firstName": "Frances M",
+                "initials": "FM",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-6970-1767"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Oxford Centre for Diabetes, Endocrinology and Metabolism, University of Oxford, Churchill Hospital, Oxford, United Kingdom; Department of Neuroscience and Physiology, Metabolic Research Unit, G\u00f6teborg, Sweden; and Department of Physiology, Anatomy and Genetics, University of Oxford, Oxford, United Kingdom."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0001-7578-0767"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-6970-1767"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "supporting_data"
+            ]
+          },
+          "journalInfo": {
+            "issue": "1",
+            "volume": "98",
+            "journalIssueId": 2621551,
+            "dateOfPublication": "2018 Jan",
+            "monthOfPublication": 1,
+            "yearOfPublication": 2018,
+            "journal": {
+              "medlineAbbreviation": "Physiol Rev",
+              "title": "Physiological reviews",
+              "essn": "1522-1210",
+              "issn": "0031-9333",
+              "nlmid": "0231714",
+              "isoabbreviation": "Physiol Rev"
+            },
+            "printPublicationDate": "2018-01-01"
+          },
+          "pubYear": "2018",
+          "pageInfo": "117-214",
+          "abstractText": "The pancreatic \u03b2-cell plays a key role in glucose homeostasis by secreting insulin, the only hormone capable of lowering the blood glucose concentration. Impaired insulin secretion results in the chronic hyperglycemia that characterizes type 2 diabetes (T2DM), which currently afflicts >450 million people worldwide. The healthy \u03b2-cell acts as a glucose sensor matching its output to the circulating glucose concentration. It does so via metabolically induced changes in electrical activity, which culminate in an increase in the cytoplasmic Ca<sup>2+</sup> concentration and initiation of Ca<sup>2+</sup>-dependent exocytosis of insulin-containing secretory granules. Here, we review recent advances in our understanding of the \u03b2-cell transcriptome, electrical activity, and insulin exocytosis. We highlight salient differences between mouse and human \u03b2-cells, provide models of how the different ion channels contribute to their electrical activity and insulin secretion, and conclude by discussing how these processes become perturbed in T2DM.",
+          "affiliation": "Oxford Centre for Diabetes, Endocrinology and Metabolism, University of Oxford, Churchill Hospital, Oxford, United Kingdom; Department of Neuroscience and Physiology, Metabolic Research Unit, G\u00f6teborg, Sweden; and Department of Physiology, Anatomy and Genetics, University of Oxford, Oxford, United Kingdom.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, Non-U.S. Gov't",
+              "research-article",
+              "Review",
+              "Journal Article"
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "agency": "Wellcome Trust",
+                "acronym": "WT_",
+                "grantId": "095531/Z/11/Z",
+                "orderIn": 0
+              },
+              {
+                "agency": "Medical Research Council",
+                "acronym": "MRC_",
+                "grantId": "G0801995",
+                "orderIn": 0
+              },
+              {
+                "agency": "Wellcome Trust",
+                "acronym": "WT_",
+                "grantId": "095551",
+                "orderIn": 0
+              },
+              {
+                "agency": "Wellcome Trust",
+                "acronym": "WT",
+                "grantId": "95531",
+                "orderIn": 0
+              },
+              {
+                "agency": "Wellcome Trust",
+                "acronym": "WT",
+                "grantId": "89795",
+                "orderIn": 0
+              },
+              {
+                "agency": "Medical Research Council",
+                "acronym": "MRC_",
+                "grantId": "G0901521",
+                "orderIn": 0
+              },
+              {
+                "agency": "Wellcome Trust",
+                "acronym": "WT_",
+                "grantId": "084655",
+                "orderIn": 0
+              },
+              {
+                "agency": "Wellecome Trust",
+                "grantId": "84655",
+                "orderIn": 0
+              },
+              {
+                "agency": "Biotechnology and Biological Sciences Research Council",
+                "acronym": "BB_",
+                "grantId": "BB/R017220/1",
+                "orderIn": 0
+              },
+              {
+                "agency": "Biotechnology and Biological Sciences Research Council",
+                "acronym": "BB_",
+                "grantId": "BB/R002517/1",
+                "orderIn": 0
+              },
+              {
+                "agency": "Wellcome Trust",
+                "acronym": "WT_",
+                "grantId": "089795",
+                "orderIn": 0
+              },
+              {
+                "agency": "European Research Council",
+                "acronym": "ERC_",
+                "grantId": "322620",
+                "orderIn": 0
+              }
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Animals"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Humans"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Mice"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Diabetes Mellitus, Type 2",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Insulin",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Calcium Channels",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Exocytosis",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Homeostasis",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Insulin-Secreting Cells",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "chemicalList": {
+            "chemical": [
+              {
+                "name": "Calcium Channels",
+                "registryNumber": "0"
+              },
+              {
+                "name": "Insulin",
+                "registryNumber": "0"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1152/physrev.00008.2017"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC5866358"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC5866358?pdf=render"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1152/physrev.00008.2017"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "citedByCount": 664,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "Y",
+          "hasLabsLinks": "Y",
+          "hasData": "Y",
+          "authMan": "Y",
+          "epmcAuthMan": "Y",
+          "nihAuthMan": "N",
+          "manuscriptId": "EMS76872",
+          "hasTMAccessionNumbers": "Y",
+          "tmAccessionTypeList": {
+            "accessionType": [
+              "gen",
+              "refsnp"
+            ]
+          },
+          "dateOfCompletion": "2017-12-14",
+          "dateOfCreation": "2017-12-08",
+          "dateOfRevision": "2025-05-30",
+          "firstPublicationDate": "2018-01-01",
+          "firstIndexDate": "2017-12-08",
+          "fullTextReceivedDate": "2025-11-26",
+          "embargoDate": "2019-01-01",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

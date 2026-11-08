@@ -1,0 +1,318 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1098%2Frsif.2014.0719%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1098/rsif.2014.0719\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "25165603",
+          "source": "MED",
+          "pmid": "25165603",
+          "pmcid": "PMC4191104",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC4191104"
+            ]
+          },
+          "doi": "10.1098/rsif.2014.0719",
+          "title": "Solving the shepherding problem: heuristics for herding autonomous, interacting agents.",
+          "authorString": "Str\u00f6mbom D, Mann RP, Wilson AM, Hailes S, Morton AJ, Sumpter DJ, King AJ.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Str\u00f6mbom D",
+                "lastName": "Str\u00f6mbom",
+                "firstName": "Daniel",
+                "initials": "D",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-9564-2529"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Mathematics, Uppsala University, Uppsala 75106, Sweden strombom@math.uu.se."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Mann RP",
+                "lastName": "Mann",
+                "firstName": "Richard P",
+                "initials": "RP",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-0701-1274"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Mathematics, Uppsala University, Uppsala 75106, Sweden."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Wilson AM",
+                "lastName": "Wilson",
+                "firstName": "Alan M",
+                "initials": "AM",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-9914-3455"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Structure and Motion Laboratory, The Royal Veterinary College, University of London, Hatfield, Hertfordshire AL9 7TA, UK."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Hailes S",
+                "lastName": "Hailes",
+                "firstName": "Stephen",
+                "initials": "S",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Computer Science, University College of London, Gower Street, London WC1E 6BT, UK."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Morton AJ",
+                "lastName": "Morton",
+                "firstName": "A Jennifer",
+                "initials": "AJ",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Physiology, Development and Neuroscience, University of Cambridge, Downing Street, Cambridge CB2 3DY, UK."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Sumpter DJ",
+                "lastName": "Sumpter",
+                "firstName": "David J T",
+                "initials": "DJ",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Mathematics, Uppsala University, Uppsala 75106, Sweden."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "King AJ",
+                "lastName": "King",
+                "firstName": "Andrew J",
+                "initials": "AJ",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-6870-9767"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Biosciences, College of Science, Swansea University, Swansea SA2 8PP, UK."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0001-9914-3455"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-6870-9767"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-9564-2529"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-0701-1274"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "supporting_data"
+            ]
+          },
+          "journalInfo": {
+            "issue": "100",
+            "volume": "11",
+            "journalIssueId": 2194499,
+            "dateOfPublication": "2014 Nov",
+            "monthOfPublication": 11,
+            "yearOfPublication": 2014,
+            "journal": {
+              "medlineAbbreviation": "J R Soc Interface",
+              "title": "Journal of the Royal Society, Interface",
+              "essn": "1742-5662",
+              "issn": "1742-5689",
+              "isoabbreviation": "J R Soc Interface",
+              "nlmid": "101217269"
+            },
+            "printPublicationDate": "2014-11-01"
+          },
+          "pubYear": "2014",
+          "pageInfo": "20140719",
+          "abstractText": "Herding of sheep by dogs is a powerful example of one individual causing many unwilling individuals to move in the same direction. Similar phenomena are central to crowd control, cleaning the environment and other engineering problems. Despite single dogs solving this 'shepherding problem' every day, it remains unknown which algorithm they employ or whether a general algorithm exists for shepherding. Here, we demonstrate such an algorithm, based on adaptive switching between collecting the agents when they are too dispersed and driving them once they are aggregated. Our algorithm reproduces key features of empirical data collected from sheep-dog interactions and suggests new ways in which robots can be designed to influence movements of living and artificial agents.",
+          "affiliation": "Department of Mathematics, Uppsala University, Uppsala 75106, Sweden strombom@math.uu.se.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, Non-U.S. Gov't",
+              "research-article",
+              "Journal Article"
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "agency": "Engineering and Physical Sciences Research Council",
+                "grantId": "EP/H013016/1",
+                "orderIn": 0
+              },
+              {
+                "agency": "Natural Environment Research Council",
+                "grantId": "NE/H016600/3",
+                "orderIn": 0
+              }
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Animals"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Sheep"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Dogs"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Behavior, Animal",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Algorithms"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Models, Biological"
+              }
+            ]
+          },
+          "keywordList": {
+            "keyword": [
+              "Sheep",
+              "Agent-based Model",
+              "Collective Motion",
+              "Sheepdog"
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1098/rsif.2014.0719"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC4191104"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC4191104?pdf=render"
+              }
+            ]
+          },
+          "isOpenAccess": "Y",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "citedByCount": 42,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "Y",
+          "hasLabsLinks": "Y",
+          "hasData": "Y",
+          "license": "cc by",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2015-05-12",
+          "dateOfCreation": "2014-08-29",
+          "dateOfRevision": "2021-10-21",
+          "firstPublicationDate": "2014-11-01",
+          "firstIndexDate": "2014-08-29",
+          "fullTextReceivedDate": "2020-07-09",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

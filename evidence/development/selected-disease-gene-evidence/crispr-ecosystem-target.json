@@ -1,0 +1,132 @@
+{
+  "model": "crispr-ecosystem",
+  "setup": {
+    "monitors": "Mean array length\n0\nArray standard deviation\n0\nFocal virus %\n1.6\nFocal array %\n0\nTick\n0\nBacteria\n50\nViruses\n250",
+    "status": "Model initialized.",
+    "errors": [],
+    "console": []
+  },
+  "progress": {
+    "monitors": "Mean array length\n0.07692307692307693\nArray standard deviation\n0.26906911759852487\nFocal virus %\n1.6326530612244898\nFocal array %\n0\nTick\n20\nBacteria\n52\nViruses\n245",
+    "status": "Steps completed.",
+    "statusState": "success",
+    "errors": [],
+    "console": [],
+    "canvas": [
+      {
+        "width": 1344,
+        "height": 1344,
+        "rect": {
+          "x": 312,
+          "y": 115,
+          "width": 672,
+          "height": 672,
+          "top": 115,
+          "right": 984,
+          "bottom": 787,
+          "left": 312
+        }
+      }
+    ],
+    "charts": [
+      {
+        "label": "Virus %: 1.6326530612244898; Array %: 0",
+        "paths": 3
+      },
+      {
+        "label": "Viruses: x 0, y 5; x 1, y 9; x 2, y 5; x 3, y 4; x 4, y 4; x 5, y 2; x 6, y 5; x 7, y 4; x 8, y 7; x 9, y 1; x 10, y 2; x 11, y 25; x 12, y 2; x 13, y 4; x 14, y 3; x 15, y 3; x 16, y 2; x 17, y 3; x 18, y 4; x 19, y 23; x 20, y 5; x 21, y 1; x 22, y 7; x 23, y 4; x 24, y 4; x 25, y 7; x 26, y 2; x 27, y 6; x 28, y 2; x 29, y 2; x 30, y 7; x 31, y 7; x 32, y 6; x 33, y 2; x 34, y 3; x 35, y 4; x 36, y 2; x 37, y 8; x 38, y 3; x 39, y 3; x 40, y 3; x 41, y 18; x 42, y 5; x 43, y 4; x 44, y 3; x 45, y 2; x 46, y 3; x 47, y 1; x 48, y 1; x 49, y 3; Arrays: x 0, y 0; x 1, y 0; x 2, y 0; x 3, y 0; x 4, y 0; x 5, y 1; x 6, y 0; x 7, y 0; x 8, y 0; x 9, y 1; x 10, y 0; x 11, y 0; x 12, y 0; x 13, y 0; x 14, y 0; x 15, y 0; x 16, y 0; x 17, y 0; x 18, y 0; x 19, y 0; x 20, y 0; x 21, y 0; x 22, y 0; x 23, y 0; x 24, y 0; x 25, y 0; x 26, y 0; x 27, y 0; x 28, y 1; x 29, y 0; x 30, y 0; x 31, y 0; x 32, y 0; x 33, y 0; x 34, y 0; x 35, y 0; x 36, y 0; x 37, y 0; x 38, y 0; x 39, y 0; x 40, y 0; x 41, y 0; x 42, y 0; x 43, y 0; x 44, y 0; x 45, y 1; x 46, y 0; x 47, y 0; x 48, y 0; x 49, y 0",
+        "paths": 1
+      },
+      {
+        "label": "Arrays: x 0, y 48; x 1, y 4",
+        "paths": 1
+      },
+      {
+        "label": "Virus 32: 2.4489795918367347; Virus 43: 1.6326530612244898; Virus 27: 2.4489795918367347; Virus 4: 1.6326530612244898; Virus 25: 2.857142857142857; Virus 24: 1.6326530612244898; Virus 36: 0.8163265306122449; Virus 40: 1.2244897959183674; Virus 42: 2.0408163265306123; Virus 21: 0.40816326530612246; Virus 7: 1.6326530612244898; Virus 0: 2.0408163265306123; Virus 31: 2.857142857142857; Virus 1: 3.673469387755102; Virus 20: 2.0408163265306123; Virus 12: 0.8163265306122449; Virus 47: 0.40816326530612246; Virus 5: 0.8163265306122449; Virus 6: 2.0408163265306123; Virus 11: 10.204081632653061; Virus 15: 1.2244897959183674; Virus 45: 0.8163265306122449; Virus 18: 1.6326530612244898; Virus 39: 1.2244897959183674; Virus 28: 0.8163265306122449; Virus 3: 1.6326530612244898; Virus 26: 0.8163265306122449; Virus 19: 9.387755102040817; Virus 46: 1.2244897959183674; Virus 16: 0.8163265306122449; Virus 41: 7.346938775510204; Virus 44: 1.2244897959183674; Virus 14: 1.2244897959183674; Virus 34: 1.2244897959183674; Virus 33: 0.8163265306122449; Virus 49: 1.2244897959183674; Virus 2: 2.0408163265306123; Virus 38: 1.2244897959183674; Virus 30: 2.857142857142857; Virus 9: 0.40816326530612246; Virus 8: 2.857142857142857; Virus 23: 1.6326530612244898; Virus 35: 1.6326530612244898; Virus 17: 1.2244897959183674; Virus 37: 3.2653061224489797; Virus 10: 0.8163265306122449; Virus 22: 2.857142857142857; Virus 13: 1.6326530612244898; Virus 29: 0.8163265306122449; Virus 48: 0.40816326530612246",
+        "paths": 51
+      },
+      {
+        "label": "Bacteria: 52; Viruses: 245",
+        "paths": 3
+      }
+    ],
+    "overflow": false
+  },
+  "interactions": {
+    "runPause": true,
+    "reset": {
+      "monitors": "Mean array length\n0\nArray standard deviation\n0\nFocal virus %\n1.6\nFocal array %\n0\nTick\n0\nBacteria\n50\nViruses\n250",
+      "status": "Model initialized.",
+      "errors": [],
+      "console": []
+    }
+  },
+  "immutable": {
+    "buildVersion": "1793972277740",
+    "entryPath": "./chunks/ui-cpvv56wx.js",
+    "modelChunkSHA256": "c17b0345fd9a910aff33b3cf0061bb391202f2039be0105c3f433449c8419c69",
+    "modelChunkBytes": 15067,
+    "sharedChunks": [
+      {
+        "url": "http://localhost:3149/chunks/app-sb7h8whr.js",
+        "sha256": "1f8f6827af1ab753a43b29435d40f5ae716071103930bc3de67ad53ede358d05",
+        "bytes": 1112387
+      }
+    ],
+    "sourceMarker": "selected-disease-gene-b09:crispr-ecosystem:9414dea313e5f6f7c4496014ef1638d42d020ce84220e4c0a00ea8b1bf1bdec9",
+    "defaultBrowserHeadless": {
+      "tick": 3,
+      "agents": 287,
+      "stopped": false
+    },
+    "appSHA256": "b940b34e8ad4b411cdf542525fe25a49be126707acc89fb427d41d98a4d3bada"
+  },
+  "mobileLayout": {
+    "viewport": [
+      390,
+      844
+    ],
+    "scroll": [
+      0,
+      725.5
+    ],
+    "documentWidth": 390,
+    "canvas": {
+      "x": 16,
+      "y": -0.125,
+      "width": 358,
+      "height": 358,
+      "top": -0.125,
+      "right": 374,
+      "bottom": 357.875,
+      "left": 16
+    },
+    "errors": [],
+    "console": []
+  },
+  "settings": {
+    "seed": 1,
+    "progressSteps": 20,
+    "sourceCase": {
+      "slug": "crispr-ecosystem",
+      "name": "CRISPR Ecosystem",
+      "path": "Sample Models/Biology/CRISPR/CRISPR Ecosystem",
+      "setup": "setup",
+      "steps": 20,
+      "reports": [
+        "ticks",
+        "count bacteria",
+        "count viruses",
+        "sum [food-energy] of patches",
+        "length virus-history"
+      ]
+    }
+  },
+  "screenshots": [
+    "crispr-ecosystem-target-setup.png",
+    "crispr-ecosystem-target-progress.png",
+    "crispr-ecosystem-target-desktop-dark.png",
+    "crispr-ecosystem-target-mobile-light.png",
+    "crispr-ecosystem-target-mobile-dark.png"
+  ]
+}

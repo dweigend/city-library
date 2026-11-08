@@ -1,0 +1,1685 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=Outer+membrane+permeability+and+antibiotic+resistance+Nikaido+2003&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 1446394,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                11,
+                4
+              ]
+            ],
+            "date-time": "2026-11-04T22:30:22Z",
+            "timestamp": 1793831422750,
+            "version": "4.6.1"
+          },
+          "reference-count": 111,
+          "publisher": "Elsevier BV",
+          "issue": "5",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2009,
+                    5,
+                    1
+                  ]
+                ],
+                "date-time": "2009-05-01T00:00:00Z",
+                "timestamp": 1241136000000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Biochimica et Biophysica Acta (BBA) - Proteins and Proteomics"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2009,
+                5
+              ]
+            ]
+          },
+          "DOI": "10.1016/j.bbapap.2008.11.005",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2008,
+                11,
+                28
+              ]
+            ],
+            "date-time": "2008-11-28T06:05:18Z",
+            "timestamp": 1227852318000
+          },
+          "page": "808-816",
+          "source": "Crossref",
+          "is-referenced-by-count": 1642,
+          "title": [
+            "Outer membrane permeability and antibiotic resistance"
+          ],
+          "prefix": "10.1016",
+          "volume": "1794",
+          "author": [
+            {
+              "given": "Anne H.",
+              "family": "Delcour",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "78",
+          "reference": [
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib1",
+              "doi-asserted-by": "crossref",
+              "first-page": "635",
+              "DOI": "10.1146/annurev.biochem.71.110601.135414",
+              "article-title": "Lipopolysaccharide endotoxins",
+              "volume": "71",
+              "author": "Raetz",
+              "year": "2002",
+              "journal-title": "Annu. Rev. Biochem."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib2",
+              "series-title": "Escherichia coli and Salmonella, Cellular and Molecular Biology",
+              "first-page": "58",
+              "author": "Kadner",
+              "year": "1996"
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib3",
+              "doi-asserted-by": "crossref",
+              "first-page": "2561",
+              "DOI": "10.1021/bi00657a012",
+              "article-title": "Outer membrane of Salmonella typhimurium: accessibility of phospholipid head groups to phospholipase C and cyanogen bromide activated dextran in the external medium",
+              "volume": "15",
+              "author": "Kamio",
+              "year": "1976",
+              "journal-title": "Biochemistry"
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib4",
+              "series-title": "Escherichia coli and Salmonella, Cellular and Molecular Biology",
+              "first-page": "29",
+              "author": "Nikaido",
+              "year": "1996"
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib5",
+              "doi-asserted-by": "crossref",
+              "first-page": "1417",
+              "DOI": "10.1073/pnas.74.4.1417",
+              "article-title": "On the process of cellular division in Escherichia coli: a mutant of E. coli lacking a murein-lipoprotein",
+              "volume": "74",
+              "author": "Hirota",
+              "year": "1977",
+              "journal-title": "Proc. Natl. Acad. Sci. U. S. A."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib6",
+              "doi-asserted-by": "crossref",
+              "first-page": "280",
+              "DOI": "10.1128/JB.136.1.280-285.1978",
+              "article-title": "Cell envelope and shape of Escherichia coli: multiple mutants missing the outer membrane lipoprotein and other major outer membrane proteins",
+              "volume": "136",
+              "author": "Sonntag",
+              "year": "1978",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib7",
+              "doi-asserted-by": "crossref",
+              "first-page": "16220",
+              "DOI": "10.1074/jbc.M600680200",
+              "article-title": "Pseudomonas aeruginosa porin OprF exists in two different conformations",
+              "volume": "281",
+              "author": "Sugawara",
+              "year": "2006",
+              "journal-title": "J. Biol. Chem."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib8",
+              "doi-asserted-by": "crossref",
+              "first-page": "2507",
+              "DOI": "10.1016/S0021-9258(18)45908-X",
+              "article-title": "Pore-forming activity of OmpA protein of Escherichia coli",
+              "volume": "267",
+              "author": "Sugawara",
+              "year": "1992",
+              "journal-title": "J. Biol. Chem."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib9",
+              "doi-asserted-by": "crossref",
+              "first-page": "401",
+              "DOI": "10.1016/j.ijmm.2007.03.017",
+              "article-title": "Protein secretion systems and adhesins: the molecular armory of gram-negative pathogens",
+              "volume": "297",
+              "author": "Gerlach",
+              "year": "2007",
+              "journal-title": "Int. J. Med. Microbiol."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib10",
+              "doi-asserted-by": "crossref",
+              "first-page": "4306",
+              "DOI": "10.1128/JB.187.13.4306-4314.2005",
+              "article-title": "Mechanisms of protein export across the bacterial outer membrane",
+              "volume": "187",
+              "author": "Kostakioti",
+              "year": "2005",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib11",
+              "doi-asserted-by": "crossref",
+              "first-page": "593",
+              "DOI": "10.1128/MMBR.67.4.593-656.2003",
+              "article-title": "Molecular basis of bacterial outer membrane permeability revisited",
+              "volume": "67",
+              "author": "Nikaido",
+              "year": "2003",
+              "journal-title": "Microbiol. Mol. Biol. Rev."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib12",
+              "doi-asserted-by": "crossref",
+              "first-page": "57",
+              "DOI": "10.1038/nrmicro1322",
+              "article-title": "Advances in understanding bacterial outer-membrane biogenesis",
+              "volume": "4",
+              "author": "Ruiz",
+              "year": "2006",
+              "journal-title": "Nat. Rev. Microbiol."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib13",
+              "series-title": "Escherichia coli and Salmonella, Cellular and Molecular Biology",
+              "first-page": "1035",
+              "author": "Raetz",
+              "year": "1996"
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib14",
+              "doi-asserted-by": "crossref",
+              "first-page": "395",
+              "DOI": "10.1128/MMBR.56.3.395-411.1992",
+              "article-title": "Agents that increase the permeability of the outer membrane",
+              "volume": "56",
+              "author": "Vaara",
+              "year": "1992",
+              "journal-title": "Microbiol. Rev."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib15",
+              "doi-asserted-by": "crossref",
+              "first-page": "961",
+              "DOI": "10.1128/JB.127.2.961-972.1976",
+              "article-title": "Use of polymyxin B, levallorphan, and tetracaine to isolate novel envelope mutants of Escherichia coli",
+              "volume": "127",
+              "author": "Dame",
+              "year": "1976",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib16",
+              "doi-asserted-by": "crossref",
+              "first-page": "323",
+              "DOI": "10.1111/j.1574-6968.1978.tb01963.x",
+              "article-title": "Isolation and genetic characterization of polymyxin-resistant mutants of Salmonella",
+              "volume": "3",
+              "author": "M\u00e4kel\u00e4",
+              "year": "1978",
+              "journal-title": "FEMS Microbiol. Lett."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib17",
+              "doi-asserted-by": "crossref",
+              "first-page": "664",
+              "DOI": "10.1128/JB.139.2.664-667.1979",
+              "article-title": "Decreased binding of polymyxin by polymyxin-resistant mutants of Salmonella typhimurium",
+              "volume": "139",
+              "author": "Vaara",
+              "year": "1979",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib18",
+              "doi-asserted-by": "crossref",
+              "first-page": "145",
+              "DOI": "10.1016/0014-5793(81)80777-6",
+              "article-title": "Characterization of the lipopolysaccharide from the polymyxin-resistant pmrA mutants of Salmonella typhimurium",
+              "volume": "129",
+              "author": "Vaara",
+              "year": "1981",
+              "journal-title": "FEBS Lett."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib19",
+              "doi-asserted-by": "crossref",
+              "first-page": "230",
+              "DOI": "10.1128/AAC.31.2.230",
+              "article-title": "Decreased binding of antibiotics to lipopolysaccharides from polymyxin-resistant strains of Escherichia coli and Salmonella typhimurium",
+              "volume": "31",
+              "author": "Peterson",
+              "year": "1987",
+              "journal-title": "Antimicrob. Agents Chemother."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib20",
+              "doi-asserted-by": "crossref",
+              "first-page": "43111",
+              "DOI": "10.1074/jbc.M106960200",
+              "article-title": "Lipid A modifications in polymyxin-resistant Salmonella typhimurium: PMRA-dependent 4-amino-4-deoxy-l-arabinose, and phosphoethanolamine incorporation",
+              "volume": "276",
+              "author": "Zhou",
+              "year": "2001",
+              "journal-title": "J. Biol. Chem."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib21",
+              "doi-asserted-by": "crossref",
+              "first-page": "6857",
+              "DOI": "10.1128/jb.178.23.6857-6864.1996",
+              "article-title": "PhoP\u2013PhoQ activates transcription of pmrAB, encoding a two-component regulatory system involved in Salmonella typhimurium antimicrobial peptide resistance",
+              "volume": "178",
+              "author": "Gunn",
+              "year": "1996",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib22",
+              "doi-asserted-by": "crossref",
+              "first-page": "4154",
+              "DOI": "10.1128/jb.175.13.4154-4164.1993",
+              "article-title": "Spontaneous pmrA mutants of Salmonella typhimurium LT2 define a new two-component regulatory system with a possible role in virulence",
+              "volume": "175",
+              "author": "Roland",
+              "year": "1993",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib23",
+              "doi-asserted-by": "crossref",
+              "first-page": "1171",
+              "DOI": "10.1046/j.1365-2958.1998.00757.x",
+              "article-title": "PmrA\u2013PmrB-regulated genes necessary for 4-aminoarabinose lipid A modification and polymyxin resistance",
+              "volume": "27",
+              "author": "Gunn",
+              "year": "1998",
+              "journal-title": "Mol. Microbiol."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib24",
+              "doi-asserted-by": "crossref",
+              "first-page": "55",
+              "DOI": "10.1111/j.1600-065X.2007.00557.x",
+              "article-title": "Salmonella sensing of anti-microbial mechanisms to promote survival within macrophages",
+              "volume": "219",
+              "author": "Prost",
+              "year": "2007",
+              "journal-title": "Immunol. Rev."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib25",
+              "doi-asserted-by": "crossref",
+              "first-page": "461",
+              "DOI": "10.1016/j.cell.2005.05.030",
+              "article-title": "Recognition of antimicrobial peptides by a bacterial sensor kinase",
+              "volume": "122",
+              "author": "Bader",
+              "year": "2005",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib26",
+              "doi-asserted-by": "crossref",
+              "first-page": "189",
+              "DOI": "10.1016/S0092-8674(00)81750-X",
+              "article-title": "Lipid A acylation and bacterial resistance against vertebrate antimicrobial peptides",
+              "volume": "95",
+              "author": "Guo",
+              "year": "1998",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib27",
+              "doi-asserted-by": "crossref",
+              "first-page": "1309",
+              "DOI": "10.1128/AAC.35.7.1309",
+              "article-title": "Interaction of aminoglycosides with the outer membranes and purified lipopolysaccharide and OmpF porin of Escherichia coli",
+              "volume": "35",
+              "author": "Hancock",
+              "year": "1991",
+              "journal-title": "Antimicrob. Agents Chemother."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib28",
+              "doi-asserted-by": "crossref",
+              "first-page": "713",
+              "DOI": "10.1007/BF01975036",
+              "article-title": "Antibiotic uptake into gram-negative bacteria",
+              "volume": "7",
+              "author": "Hancock",
+              "year": "1988",
+              "journal-title": "Eur. J. Clin. Microbiol. Infect. Dis."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib29",
+              "doi-asserted-by": "crossref",
+              "first-page": "107",
+              "DOI": "10.1128/AAC.24.1.107",
+              "article-title": "Polycations sensitize enteric bacteria to antibiotics",
+              "volume": "24",
+              "author": "Vaara",
+              "year": "1983",
+              "journal-title": "Antimicrob. Agents Chemother."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib30",
+              "doi-asserted-by": "crossref",
+              "first-page": "226",
+              "DOI": "10.1038/nature05267",
+              "article-title": "Wza the translocon for E. coli capsular polysaccharides defines a new class of membrane protein",
+              "volume": "444",
+              "author": "Dong",
+              "year": "2006",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib31",
+              "doi-asserted-by": "crossref",
+              "first-page": "933",
+              "DOI": "10.1016/j.jmb.2006.08.002",
+              "article-title": "Crystal structure of osmoporin OmpC from E. coli at 2.0 A",
+              "volume": "362",
+              "author": "Basle",
+              "year": "2006",
+              "journal-title": "J. Mol. Biol."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib32",
+              "doi-asserted-by": "crossref",
+              "first-page": "727",
+              "DOI": "10.1038/358727a0",
+              "article-title": "Crystal structures explain functional properties of two E. coli porins",
+              "volume": "358",
+              "author": "Cowan",
+              "year": "1992",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib33",
+              "doi-asserted-by": "crossref",
+              "first-page": "56",
+              "DOI": "10.1038/4931",
+              "article-title": "Crystal structure of the outer membrane active transporter FepA from Escherichia coli",
+              "volume": "6",
+              "author": "Buchanan",
+              "year": "1999",
+              "journal-title": "Nat. Struct. Biol."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib34",
+              "doi-asserted-by": "crossref",
+              "first-page": "957",
+              "DOI": "10.1126/science.1143860",
+              "article-title": "Structure of the membrane protein FhaC: a member of the Omp85-TpsB transporter superfamily",
+              "volume": "317",
+              "author": "Clantin",
+              "year": "2007",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib35",
+              "doi-asserted-by": "crossref",
+              "first-page": "241",
+              "DOI": "10.1128/JB.153.1.241-252.1983",
+              "article-title": "Porin channels in Escherichia coli: studies with liposomes reconstituted from purified proteins",
+              "volume": "153",
+              "author": "Nikaido",
+              "year": "1983",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib36",
+              "doi-asserted-by": "crossref",
+              "first-page": "1224",
+              "DOI": "10.1016/0006-291X(75)90823-2",
+              "article-title": "Outer membrane of Salmonella typhimurium: Reconstitution of sucrose-permeable membrane vesicles",
+              "volume": "64",
+              "author": "Nakae",
+              "year": "1975",
+              "journal-title": "Biochem. Biophys. Res. Commun."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib37",
+              "doi-asserted-by": "crossref",
+              "first-page": "121",
+              "DOI": "10.1085/jgp.77.2.121",
+              "article-title": "Effect on solute size on diffusion rates through the transmembrane pores of the outer membrane of Escherichia coli",
+              "volume": "77",
+              "author": "Nikaido",
+              "year": "1981",
+              "journal-title": "J. Gen. Physiol."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib38",
+              "doi-asserted-by": "crossref",
+              "first-page": "305",
+              "DOI": "10.1016/0005-2736(78)90269-9",
+              "article-title": "Formation of large, ion-permeable membrane channels by the matrix protein (porin) of Escherichia coli",
+              "volume": "511",
+              "author": "Benz",
+              "year": "1978",
+              "journal-title": "Biochim. Biophys. Acta"
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib39",
+              "doi-asserted-by": "crossref",
+              "first-page": "238",
+              "DOI": "10.1016/0005-2736(89)90002-3",
+              "article-title": "Ionic selectivity of pores formed by the matrix protein (porin) of Escherichia coli",
+              "volume": "551",
+              "author": "Benz",
+              "year": "1979",
+              "journal-title": "Biochim. Biophys. Acta"
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib40",
+              "doi-asserted-by": "crossref",
+              "first-page": "722",
+              "DOI": "10.1128/JB.162.2.722-727.1985",
+              "article-title": "Ion selectivity of gram-negative bacterial porins",
+              "volume": "162",
+              "author": "Benz",
+              "year": "1985",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib41",
+              "doi-asserted-by": "crossref",
+              "first-page": "3751",
+              "DOI": "10.1073/pnas.75.8.3751",
+              "article-title": "Matrix protein from Escherichia coli outer membranes forms voltage-controlled channels in lipid bilayers",
+              "volume": "75",
+              "author": "Schindler",
+              "year": "1978",
+              "journal-title": "Proc. Natl. Acad. Sci. U. S. A."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib42",
+              "doi-asserted-by": "crossref",
+              "first-page": "1177",
+              "DOI": "10.1016/S0022-2836(02)00380-7",
+              "article-title": "Ions and counterions in a biological channel: a molecular dynamics simulation of OmpF porin from Escherichia coli in an explicit membrane with 1 M KCl aqueous salt solution",
+              "volume": "319",
+              "author": "Im",
+              "year": "2002",
+              "journal-title": "J. Mol. Biol."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib43",
+              "doi-asserted-by": "crossref",
+              "first-page": "943",
+              "DOI": "10.1529/biophysj.104/043414",
+              "article-title": "Salting out the ionic selectivity of a wide channel: the asymmetry of OmpF",
+              "volume": "87",
+              "author": "Alcaraz",
+              "year": "2004",
+              "journal-title": "Biophys. J."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib44",
+              "doi-asserted-by": "crossref",
+              "first-page": "521",
+              "DOI": "10.1042/0264-6021:3630521",
+              "article-title": "Alteration of pore properties of Escherichia coli OmpF induced by mutation of key residues in anti-loop 3 region",
+              "volume": "363",
+              "author": "Bredin",
+              "year": "2002",
+              "journal-title": "Biochem. J."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib45",
+              "doi-asserted-by": "crossref",
+              "unstructured": "B. Lauman, M. Pagel, A.H. Delcour, Altered pore properties and kinetic changes in mutants of the Vibrio cholerae porin OmpU, Mol. Membr. Biol. 25 (2008) 489\u2013505.",
+              "DOI": "10.1080/09687680802454637"
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib46",
+              "unstructured": "N. Liu, Structure\u2013function relationships of E. coli OmpC porin \u2014 the effects of site-directed mutations on the porin channel function. Ph.D. Thesis., University of Houston 1999."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib47",
+              "doi-asserted-by": "crossref",
+              "first-page": "6319",
+              "DOI": "10.1021/bi010046k",
+              "article-title": "Role of charged residues at the OmpF porin channel constriction probed by mutagenesis and simulation",
+              "volume": "40",
+              "author": "Phale",
+              "year": "2001",
+              "journal-title": "Biochemistry"
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib48",
+              "doi-asserted-by": "crossref",
+              "first-page": "20676",
+              "DOI": "10.1074/jbc.271.34.20669",
+              "article-title": "Structural and functional characterization of OmpF porin mutants selected for larger pore size. II. Functional characterization",
+              "volume": "271",
+              "author": "Saint",
+              "year": "1996",
+              "journal-title": "J. Biol. Chem."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib49",
+              "doi-asserted-by": "crossref",
+              "first-page": "d1055",
+              "DOI": "10.2741/1132",
+              "article-title": "Solute uptake through general porins",
+              "volume": "8",
+              "author": "Delcour",
+              "year": "2003",
+              "journal-title": "Front. Biosci."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib50",
+              "doi-asserted-by": "crossref",
+              "first-page": "3905",
+              "DOI": "10.1016/S0021-9258(17)41716-9",
+              "article-title": "Porins and specific diffusion channels in bacterial outer membranes",
+              "volume": "269",
+              "author": "Nikaido",
+              "year": "1994",
+              "journal-title": "J. Biol. Chem."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib51",
+              "doi-asserted-by": "crossref",
+              "first-page": "185",
+              "DOI": "10.1007/s002320010026",
+              "article-title": "Charged residues in surface-located loops influence voltage gating of porin from Haemophilus sinfluenzae type b",
+              "volume": "178",
+              "author": "Arbing",
+              "year": "2000",
+              "journal-title": "J. Membr. Biol."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib52",
+              "series-title": "Structure and Function of Bacterial and Eukaryotic Porins",
+              "first-page": "79",
+              "author": "Basl\u00e9",
+              "year": "2004"
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib53",
+              "doi-asserted-by": "crossref",
+              "first-page": "295",
+              "DOI": "10.1016/0014-5793(95)01535-3",
+              "article-title": "Altered voltage sensitivity of mutant OmpC porin channels",
+              "volume": "379",
+              "author": "Bishop",
+              "year": "1996",
+              "journal-title": "FEBS Lett."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib54",
+              "doi-asserted-by": "crossref",
+              "first-page": "267",
+              "DOI": "10.1007/BF01868731",
+              "article-title": "A single amino acid substitution alters conductance and gating of OmpC porin of Escherichia coli",
+              "volume": "119",
+              "author": "Delcour",
+              "year": "1991",
+              "journal-title": "J. Membr. Biol."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib55",
+              "doi-asserted-by": "crossref",
+              "first-page": "31",
+              "DOI": "10.1016/0014-5793(91)80076-F",
+              "article-title": "OmpC mutants which allow growth on maltodextrins show increased channel size and greater voltage sensitivity",
+              "volume": "278",
+              "author": "Lakey",
+              "year": "1991",
+              "journal-title": "FEBS Lett."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib56",
+              "doi-asserted-by": "crossref",
+              "first-page": "6741",
+              "DOI": "10.1073/pnas.94.13.6741",
+              "article-title": "Voltage gating of Escherichia coli porin channels: role of the constriction loop",
+              "volume": "94",
+              "author": "Phale",
+              "year": "1997",
+              "journal-title": "Proc. Natl. Acad. Sci. U. S. A."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib57",
+              "doi-asserted-by": "crossref",
+              "first-page": "17539",
+              "DOI": "10.1074/jbc.M301202200",
+              "article-title": "The Vibrio cholerae porins OmpU and OmpT have distinct channel properties",
+              "volume": "278",
+              "author": "Simonet",
+              "year": "2003",
+              "journal-title": "J. Biol. Chem."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib58",
+              "doi-asserted-by": "crossref",
+              "first-page": "468",
+              "DOI": "10.1006/jmbi.1997.1063",
+              "article-title": "Voltage sensing in the PhoE and OmpF outer membrane porins of Escherichia coli: role of charged residues",
+              "volume": "269",
+              "author": "Van Gelder",
+              "year": "1997",
+              "journal-title": "J. Mol. Biol."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib59",
+              "doi-asserted-by": "crossref",
+              "first-page": "1182",
+              "DOI": "10.1016/S0021-9258(19)57283-0",
+              "article-title": "Porin channels in intact cells of Escherichia coli are not affected by Donnan potentials across the outer membrane",
+              "volume": "263",
+              "author": "Sen",
+              "year": "1988",
+              "journal-title": "J. Biol. Chem."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib60",
+              "doi-asserted-by": "crossref",
+              "first-page": "93",
+              "DOI": "10.1093/emboj/17.1.93",
+              "article-title": "E.coli PhoE porin has an opposite voltage-dependence to the homologous OmpF",
+              "volume": "17",
+              "author": "Samartzidou",
+              "year": "1998",
+              "journal-title": "EMBO J."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib61",
+              "doi-asserted-by": "crossref",
+              "first-page": "3718",
+              "DOI": "10.1016/S0006-3495(03)74788-2",
+              "article-title": "Residue ionization and ion transport through OmpF channels",
+              "volume": "85",
+              "author": "Nestorovich",
+              "year": "2003",
+              "journal-title": "Biophys. J."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib62",
+              "doi-asserted-by": "crossref",
+              "first-page": "665",
+              "DOI": "10.1093/protein/gzh078",
+              "article-title": "Deletions of single extracellular loops affect pH-sensitivity, but not voltage-dependence, of the E. coli porin OmpF",
+              "volume": "17",
+              "author": "Basl\u00e9",
+              "year": "2004",
+              "journal-title": "Protein Eng. Des. Sel."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib63",
+              "doi-asserted-by": "crossref",
+              "first-page": "10471",
+              "DOI": "10.1021/bi00158a009",
+              "article-title": "Effects of pH on bacterial porin function",
+              "volume": "31",
+              "author": "Todt",
+              "year": "1992",
+              "journal-title": "Biochemistry"
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib64",
+              "doi-asserted-by": "crossref",
+              "first-page": "70",
+              "DOI": "10.4161/chan.3983",
+              "article-title": "Modulation of Vibrio cholerae porin function by acidic pH",
+              "volume": "1",
+              "author": "Duret",
+              "year": "2007",
+              "journal-title": "Channels"
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib65",
+              "doi-asserted-by": "crossref",
+              "first-page": "1347",
+              "DOI": "10.1006/jmbi.1998.2359",
+              "article-title": "Voltage and pH-induced channel closure of porin OmpF visualized by atomic force microscopy",
+              "volume": "285",
+              "author": "M\u00fcller",
+              "year": "1999",
+              "journal-title": "J. Mol. Biol."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib66",
+              "doi-asserted-by": "crossref",
+              "first-page": "6058",
+              "DOI": "10.1002/j.1460-2075.1995.tb00294.x",
+              "article-title": "Cadaverine induces closing of E. coli porins",
+              "volume": "14",
+              "author": "delaVega",
+              "year": "1995",
+              "journal-title": "EMBO J."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib67",
+              "doi-asserted-by": "crossref",
+              "first-page": "18595",
+              "DOI": "10.1074/jbc.272.30.18595",
+              "article-title": "Complex inhibition of OmpF and OmpC bacterial porins by polyamines",
+              "volume": "272",
+              "author": "Iyer",
+              "year": "1997",
+              "journal-title": "J. Biol. Chem."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib68",
+              "doi-asserted-by": "crossref",
+              "first-page": "100",
+              "DOI": "10.1016/j.bbamem.2004.04.009",
+              "article-title": "Subconductance states in OmpF gating",
+              "volume": "1664",
+              "author": "Basl\u00e9",
+              "year": "2004",
+              "journal-title": "Biochim. Biophys. Acta"
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib69",
+              "doi-asserted-by": "crossref",
+              "first-page": "933",
+              "DOI": "10.1006/jmbi.2000.3599",
+              "article-title": "Molecular basis for the polyamine-OmpF porin interactions: inhibitor and mutant studies",
+              "volume": "297",
+              "author": "Iyer",
+              "year": "2000",
+              "journal-title": "J. Mol. Biol."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib70",
+              "doi-asserted-by": "crossref",
+              "first-page": "3715",
+              "DOI": "10.1128/jb.178.13.3715-3721.1996",
+              "article-title": "Polyamines decrease Escherichia coli outer membrane permeability",
+              "volume": "178",
+              "author": "delaVega",
+              "year": "1996",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib71",
+              "doi-asserted-by": "crossref",
+              "first-page": "65",
+              "DOI": "10.1016/S0014-5793(99)00030-7",
+              "article-title": "Distinct sensitivities of OmpF and PhoE porins to charged modulators",
+              "volume": "444",
+              "author": "Samartzidou",
+              "year": "1999",
+              "journal-title": "FEBS Lett."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib72",
+              "doi-asserted-by": "crossref",
+              "first-page": "13",
+              "DOI": "10.1128/JB.185.1.13-19.2003",
+              "article-title": "Cadaverine inhibition of porin plays a role in cell survival at acidic pH",
+              "volume": "185",
+              "author": "Samartzidou",
+              "year": "2003",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib73",
+              "doi-asserted-by": "crossref",
+              "first-page": "775",
+              "DOI": "10.1128/AAC.22.5.775",
+              "article-title": "Diffusion of beta-lactam antibiotics through liposome membranes containing purified porins",
+              "volume": "22",
+              "author": "Kobayashi",
+              "year": "1982",
+              "journal-title": "Antimicrob. Agents Chemother."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib74",
+              "doi-asserted-by": "crossref",
+              "first-page": "368",
+              "DOI": "10.1128/AAC.12.3.368",
+              "article-title": "Function of the outer membrane of Escherichia coli as a permeability barrier to beta-lactam antibiotics",
+              "volume": "12",
+              "author": "Zimmermann",
+              "year": "1977",
+              "journal-title": "Antimicrob. Agents Chemother."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib75",
+              "doi-asserted-by": "crossref",
+              "first-page": "232",
+              "DOI": "10.1128/JB.153.1.232-240.1983",
+              "article-title": "Porin channels in Escherichia coli: studies with beta-lactams in intact cells",
+              "volume": "153",
+              "author": "Nikaido",
+              "year": "1983",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib76",
+              "doi-asserted-by": "crossref",
+              "first-page": "9789",
+              "DOI": "10.1073/pnas.152206799",
+              "article-title": "Designed to penetrate: time-resolved interaction of single antibiotic molecules with bacterial pores",
+              "volume": "99",
+              "author": "Nestorovich",
+              "year": "2002",
+              "journal-title": "Proc. Natl. Acad. Sci. U. S. A."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib77",
+              "doi-asserted-by": "crossref",
+              "first-page": "1617",
+              "DOI": "10.1529/biophysj.105.075192",
+              "article-title": "Interaction of zwitterionic penicillins with the OmpF channel facilitates their translocation",
+              "volume": "90",
+              "author": "Danelon",
+              "year": "2006",
+              "journal-title": "Biophys. J."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib78",
+              "doi-asserted-by": "crossref",
+              "first-page": "84",
+              "DOI": "10.1128/AAC.27.1.84",
+              "article-title": "Diffusion of beta-lactam antibiotics through the porin channels of Escherichia coli K-12",
+              "volume": "27",
+              "author": "Yoshimura",
+              "year": "1985",
+              "journal-title": "Antimicrob. Agents Chemother."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib79",
+              "doi-asserted-by": "crossref",
+              "first-page": "1395",
+              "DOI": "10.1021/jm049652e",
+              "article-title": "Beta-lactam screening by specific residues of the OmpF eyelet",
+              "volume": "48",
+              "author": "Vidal",
+              "year": "2005",
+              "journal-title": "J. Med. Chem."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib80",
+              "doi-asserted-by": "crossref",
+              "first-page": "961",
+              "DOI": "10.1016/0022-2836(88)90121-0",
+              "article-title": "Mutations that alter the pore function of the OmpF porin of Escherichia coli K12",
+              "volume": "203",
+              "author": "Benson",
+              "year": "1988",
+              "journal-title": "J. Mol. Biol."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib81",
+              "doi-asserted-by": "crossref",
+              "first-page": "528",
+              "DOI": "10.1128/jb.170.2.528-533.1988",
+              "article-title": "Isolation and characterization of OmpC porin mutants with altered pore properties",
+              "volume": "170",
+              "author": "Misra",
+              "year": "1988",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib82",
+              "doi-asserted-by": "crossref",
+              "first-page": "3611",
+              "DOI": "10.1128/jb.170.8.3611-3617.1988",
+              "article-title": "Genetic identification of the pore domain of the OmpC porin of Escherichia coli K-12",
+              "volume": "170",
+              "author": "Misra",
+              "year": "1988",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib83",
+              "doi-asserted-by": "crossref",
+              "first-page": "311",
+              "DOI": "10.1128/AAC.44.2.311-315.2000",
+              "article-title": "Substitutions in the eyelet region disrupt cefepime diffusion through the Escherichia coli OmpF channel",
+              "volume": "44",
+              "author": "Simonet",
+              "year": "2000",
+              "journal-title": "Antimicrob. Agents Chemother."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib84",
+              "doi-asserted-by": "crossref",
+              "first-page": "10675",
+              "DOI": "10.1073/pnas.91.22.10675",
+              "article-title": "Structural and functional alterations of a colicin-resistant mutant of OmpF porin from Escherichia coli",
+              "volume": "91",
+              "author": "Jeanteur",
+              "year": "1994",
+              "journal-title": "Proc. Natl. Acad. Sci. U. S. A."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib85",
+              "doi-asserted-by": "crossref",
+              "first-page": "20669",
+              "DOI": "10.1074/jbc.271.34.20676",
+              "article-title": "Structural and functional characterization of OmpF porin mutants selected for larger pore size. I. Crystallographic analysis",
+              "volume": "271",
+              "author": "Lou",
+              "year": "1996",
+              "journal-title": "J. Biol. Chem."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib86",
+              "doi-asserted-by": "crossref",
+              "first-page": "1202",
+              "DOI": "10.1128/AAC.33.8.1202",
+              "article-title": "Decreased outer membrane permeability in imipenem-resistant mutants of Pseudomonas aeruginosa",
+              "volume": "33",
+              "author": "Trias",
+              "year": "1989",
+              "journal-title": "Antimicrob. Agents Chemother."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib87",
+              "doi-asserted-by": "crossref",
+              "first-page": "52",
+              "DOI": "10.1128/AAC.34.1.52",
+              "article-title": "Outer membrane protein D2 catalyzes facilitated diffusion of carbapenems and penems through the outer membrane of Pseudomonas aeruginosa",
+              "volume": "34",
+              "author": "Trias",
+              "year": "1990",
+              "journal-title": "Antimicrob. Agents Chemother."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib88",
+              "doi-asserted-by": "crossref",
+              "first-page": "3085",
+              "DOI": "10.1128/jb.178.11.3085-3090.1996",
+              "article-title": "The role of specific surface loop regions in determining the function of the imipenem-specific pore protein OprD of Pseudomonas aeruginosa",
+              "volume": "178",
+              "author": "Huang",
+              "year": "1996",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib89",
+              "doi-asserted-by": "crossref",
+              "first-page": "15680",
+              "DOI": "10.1016/S0021-9258(18)55452-1",
+              "article-title": "Protein D2 channel of the Pseudomonas aeruginosa outer membrane has a binding site for basic amino acids and peptides",
+              "volume": "265",
+              "author": "Trias",
+              "year": "1990",
+              "journal-title": "J. Biol. Chem."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib90",
+              "doi-asserted-by": "crossref",
+              "first-page": "438",
+              "DOI": "10.1128/AAC.32.4.438",
+              "article-title": "Routes of quinolone permeation in Escherichia coli",
+              "volume": "32",
+              "author": "Chapman",
+              "year": "1988",
+              "journal-title": "Antimicrob. Agents Chemother."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib91",
+              "doi-asserted-by": "crossref",
+              "first-page": "535",
+              "DOI": "10.1128/AAC.29.3.535",
+              "article-title": "Differences in susceptibility to quinolones of outer membrane mutants of Salmonella typhimurium and Escherichia coli",
+              "volume": "29",
+              "author": "Hirai",
+              "year": "1986",
+              "journal-title": "Antimicrob. Agents Chemother."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib92",
+              "doi-asserted-by": "crossref",
+              "first-page": "1187",
+              "DOI": "10.1128/AAC.32.8.1187",
+              "article-title": "Endogenous active efflux of norfloxacin in susceptible Escherichia coli",
+              "volume": "32",
+              "author": "Cohen",
+              "year": "1988",
+              "journal-title": "Antimicrob. Agents Chemother."
+            },
+            {
+              "issue": "Pt 1",
+              "key": "10.1016/j.bbapap.2008.11.005_bib93",
+              "doi-asserted-by": "crossref",
+              "first-page": "223",
+              "DOI": "10.1042/0264-6021:3480223",
+              "article-title": "Comparative aspects of the diffusion of norfloxacin, cefepime and spermine through the F porin channel of Enterobacter cloacae",
+              "volume": "348",
+              "author": "Chevalier",
+              "year": "2000",
+              "journal-title": "Biochem. J."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib94",
+              "doi-asserted-by": "crossref",
+              "first-page": "1393",
+              "DOI": "10.1128/AAC.37.7.1393",
+              "article-title": "Penetration of lipophilic agents with multiple protonation sites into bacterial cells: tetracyclines and fluoroquinolones as examples",
+              "volume": "37",
+              "author": "Nikaido",
+              "year": "1993",
+              "journal-title": "Antimicrob. Agents Chemother."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib95",
+              "doi-asserted-by": "crossref",
+              "first-page": "998",
+              "DOI": "10.1128/jb.177.4.998-1007.1995",
+              "article-title": "Role of outer membrane barrier in efflux-mediated tetracycline resistance of Escherichia coli",
+              "volume": "177",
+              "author": "Thanassi",
+              "year": "1995",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib96",
+              "doi-asserted-by": "crossref",
+              "first-page": "5416",
+              "DOI": "10.1128/jb.170.12.5416-5422.1988",
+              "article-title": "marA locus causes decreased expression of OmpF porin in multiple-antibiotic-resistant (Mar) mutants of Escherichia coli",
+              "volume": "170",
+              "author": "Cohen",
+              "year": "1988",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib97",
+              "doi-asserted-by": "crossref",
+              "first-page": "1",
+              "DOI": "10.1111/j.1574-6968.2001.tb10642.x",
+              "article-title": "Multiple facets of bacterial porins",
+              "volume": "199",
+              "author": "Achouak",
+              "year": "2001",
+              "journal-title": "FEMS Microbiol. Lett."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib98",
+              "doi-asserted-by": "crossref",
+              "first-page": "77",
+              "DOI": "10.2174/1389201023378454",
+              "article-title": "Outer membranes and efflux: the path to multidrug resistance in gram-negative bacteria",
+              "volume": "3",
+              "author": "Poole",
+              "year": "2002",
+              "journal-title": "Curr. Pharm. Biotechnol."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib99",
+              "doi-asserted-by": "crossref",
+              "first-page": "2200",
+              "DOI": "10.1007/s00018-004-4060-9",
+              "article-title": "Resistance to beta-lactam antibiotics",
+              "volume": "61",
+              "author": "Poole",
+              "year": "2004",
+              "journal-title": "Cell. Mol. Life Sci."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib100",
+              "doi-asserted-by": "crossref",
+              "first-page": "195",
+              "DOI": "10.1093/jac/32.2.195",
+              "article-title": "The accumulation of five antibacterial agents in porin-deficient mutants of Escherichia coli",
+              "volume": "32",
+              "author": "Mortimer",
+              "year": "1993",
+              "journal-title": "J. Antimicrob. Chemother."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib101",
+              "doi-asserted-by": "crossref",
+              "first-page": "2854",
+              "DOI": "10.1128/AAC.40.12.2854",
+              "article-title": "Prevalence of outer membrane porin alteration in beta-lactam-antibiotic-resistant Enterobacter aerogenes",
+              "volume": "40",
+              "author": "Charrel",
+              "year": "1996",
+              "journal-title": "Antimicrob. Agents Chemother."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib102",
+              "doi-asserted-by": "crossref",
+              "first-page": "531",
+              "DOI": "10.1128/JB.155.2.531-540.1983",
+              "article-title": "Amplifiable resistance to tetracycline, chloramphenicol, and other antibiotics in Escherichia coli: involvement of a non-plasmid-determined efflux of tetracycline",
+              "volume": "155",
+              "author": "George",
+              "year": "1983",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib103",
+              "doi-asserted-by": "crossref",
+              "first-page": "541",
+              "DOI": "10.1128/JB.155.2.541-548.1983",
+              "article-title": "Gene in the major cotransduction gap of the Escherichia coli K-12 linkage map required for the expression of chromosomal resistance to tetracycline and other antibiotics",
+              "volume": "155",
+              "author": "George",
+              "year": "1983",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib104",
+              "doi-asserted-by": "crossref",
+              "first-page": "e365",
+              "DOI": "10.1371/journal.pone.0000365",
+              "article-title": "Antibiotic stress, genetic response and altered permeability of E. coli",
+              "volume": "2",
+              "author": "Viveiros",
+              "year": "2007",
+              "journal-title": "PLoS ONE"
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib105",
+              "doi-asserted-by": "crossref",
+              "first-page": "205",
+              "DOI": "10.1089/fpd.2007.0062",
+              "article-title": "Evaluation of gene expression in a single antibiotic exposure-derived isolate of Salmonella enterica typhimurium 14028 possessing resistance to multiple antibiotics",
+              "volume": "5",
+              "author": "Dowd",
+              "year": "2008",
+              "journal-title": "Foodborne Pathog. Dis."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib106",
+              "doi-asserted-by": "crossref",
+              "first-page": "2726",
+              "DOI": "10.1128/JB.181.9.2726-2732.1999",
+              "article-title": "Identification and characterization of a new porin gene of Klebsiella pneumoniae: its role in beta-lactam antibiotic resistance",
+              "volume": "181",
+              "author": "Domenech-Sanchez",
+              "year": "1999",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib107",
+              "doi-asserted-by": "crossref",
+              "first-page": "189",
+              "DOI": "10.1046/j.1365-2958.2001.02501.x",
+              "article-title": "A new mechanism of antibiotic resistance in Enterobacteriaceae induced by a structural modification of the major porin",
+              "volume": "41",
+              "author": "De",
+              "year": "2001",
+              "journal-title": "Mol. Microbiol."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib108",
+              "doi-asserted-by": "crossref",
+              "first-page": "851",
+              "DOI": "10.1016/j.bbrc.2004.03.130",
+              "article-title": "Resistance to imipenem, cefepime, and cefpirome associated with mutation in Omp36 osmoporin of Enterobacter aerogenes",
+              "volume": "317",
+              "author": "Thiolas",
+              "year": "2004",
+              "journal-title": "Biochem. Biophys. Res. Commun."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib109",
+              "doi-asserted-by": "crossref",
+              "first-page": "2799",
+              "DOI": "10.1128/AAC.42.11.2799",
+              "article-title": "Gonococcal resistance to beta-lactams and tetracycline involves mutation in loop 3 of the porin encoded at the penB locus",
+              "volume": "42",
+              "author": "Gill",
+              "year": "1998",
+              "journal-title": "Antimicrob. Agents Chemother."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib110",
+              "doi-asserted-by": "crossref",
+              "first-page": "247",
+              "DOI": "10.1093/jac/47.3.247",
+              "article-title": "Of Pseudomonas, porins, pumps and carbapenems",
+              "volume": "47",
+              "author": "Livermore",
+              "year": "2001",
+              "journal-title": "J. Antimicrob. Chemother."
+            },
+            {
+              "key": "10.1016/j.bbapap.2008.11.005_bib111",
+              "doi-asserted-by": "crossref",
+              "first-page": "809",
+              "DOI": "10.1099/jmm.0.47019-0",
+              "article-title": "Role of AmpD, OprF and penicillin-binding proteins in beta-lactam resistance in clinical isolates of Pseudomonas aeruginosa",
+              "volume": "56",
+              "author": "Bratu",
+              "year": "2007",
+              "journal-title": "J. Med. Microbiol."
+            }
+          ],
+          "container-title": [
+            "Biochimica et Biophysica Acta (BBA) - Proteins and Proteomics"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:S1570963908003592?httpAccept=text/xml",
+              "content-type": "text/xml",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:S1570963908003592?httpAccept=text/plain",
+              "content-type": "text/plain",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2021,
+                9,
+                24
+              ]
+            ],
+            "date-time": "2021-09-24T07:41:02Z",
+            "timestamp": 1632469262000
+          },
+          "score": 42.33171,
+          "resource": {
+            "primary": {
+              "URL": "https://linkinghub.elsevier.com/retrieve/pii/S1570963908003592"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2009,
+                5
+              ]
+            ]
+          },
+          "references-count": 111,
+          "journal-issue": {
+            "issue": "5",
+            "published-print": {
+              "date-parts": [
+                [
+                  2009,
+                  5
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "S1570963908003592"
+          ],
+          "URL": "https://doi.org/10.1016/j.bbapap.2008.11.005",
+          "ISSN": [
+            "1570-9639"
+          ],
+          "issn-type": [
+            {
+              "value": "1570-9639",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2009,
+                5
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                11,
+                4
+              ]
+            ],
+            "date-time": "2026-11-04T02:34:14Z",
+            "timestamp": 1793759654549,
+            "version": "4.6.1"
+          },
+          "reference-count": 0,
+          "publisher": "Informa UK Limited",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2018,
+                    4,
+                    1
+                  ]
+                ],
+                "date-time": "2018-04-01T00:00:00Z",
+                "timestamp": 1522540800000
+              },
+              "content-version": "unspecified",
+              "delay-in-days": 0,
+              "URL": "http://creativecommons.org/licenses/by-nc/3.0/"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "IDR"
+          ],
+          "DOI": "10.2147/idr.s156995",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2018,
+                4,
+                10
+              ]
+            ],
+            "date-time": "2018-04-10T23:32:30Z",
+            "timestamp": 1523403150000
+          },
+          "page": "523-530",
+          "source": "Crossref",
+          "is-referenced-by-count": 202,
+          "title": [
+            "Understanding antibiotic resistance via outer membrane permeability"
+          ],
+          "prefix": "10.2147",
+          "volume": "Volume 11",
+          "author": [
+            {
+              "given": "Ishan",
+              "family": "Ghai",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Shashank",
+              "family": "Ghai",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "301",
+          "published-online": {
+            "date-parts": [
+              [
+                2018,
+                4
+              ]
+            ]
+          },
+          "container-title": [
+            "Infection and Drug Resistance"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://www.dovepress.com/getfile.php?fileID=41466",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://www.dovepress.com/getfile.php?fileID=41466",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2018,
+                4,
+                10
+              ]
+            ],
+            "date-time": "2018-04-10T23:32:32Z",
+            "timestamp": 1523403152000
+          },
+          "score": 40.563942,
+          "resource": {
+            "primary": {
+              "URL": "https://www.dovepress.com/understanding-antibiotic-resistance-via-outer-membrane-permeability-peer-reviewed-article-IDR"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2018,
+                4
+              ]
+            ]
+          },
+          "references-count": 0,
+          "URL": "https://doi.org/10.2147/idr.s156995",
+          "ISSN": [
+            "1178-6973"
+          ],
+          "issn-type": [
+            {
+              "value": "1178-6973",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2018,
+                4
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                21
+              ]
+            ],
+            "date-time": "2026-09-21T02:09:28Z",
+            "timestamp": 1789956568651,
+            "version": "4.0.1"
+          },
+          "reference-count": 0,
+          "publisher": "Oxford University Press (OUP)",
+          "issue": "1",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "J Antimicrob Chemother"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1991
+              ]
+            ]
+          },
+          "DOI": "10.1093/jac/28.1.35",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2007,
+                1,
+                4
+              ]
+            ],
+            "date-time": "2007-01-04T13:10:06Z",
+            "timestamp": 1167916206000
+          },
+          "page": "35-45",
+          "source": "Crossref",
+          "is-referenced-by-count": 87,
+          "title": [
+            "Outer membrane permeability of <i>Acinetobacter calcoaceticus</i> and its implication in antibiotic resistance"
+          ],
+          "prefix": "10.1093",
+          "volume": "28",
+          "author": [
+            {
+              "given": "Kazuhito",
+              "family": "Sato",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Taiji",
+              "family": "Nakae",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "286",
+          "container-title": [
+            "Journal of Antimicrobial Chemotherapy"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://academic.oup.com/jac/article-pdf/28/1/35/1856721/28-1-35.pdf",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2017,
+                8,
+                23
+              ]
+            ],
+            "date-time": "2017-08-23T03:58:51Z",
+            "timestamp": 1503460731000
+          },
+          "score": 31.409222,
+          "resource": {
+            "primary": {
+              "URL": "https://academic.oup.com/jac/article-lookup/doi/10.1093/jac/28.1.35"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1991
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "1",
+            "published-print": {
+              "date-parts": [
+                [
+                  1991
+                ]
+              ]
+            }
+          },
+          "URL": "https://doi.org/10.1093/jac/28.1.35",
+          "ISSN": [
+            "0305-7453",
+            "1460-2091"
+          ],
+          "issn-type": [
+            {
+              "value": "0305-7453",
+              "type": "print"
+            },
+            {
+              "value": "1460-2091",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1991
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

@@ -1,0 +1,1800 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.bibliographic=Cities+and+Complexity+Batty+2005&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 3090562,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2025,
+                8,
+                2
+              ]
+            ],
+            "date-time": "2025-08-02T16:57:01Z",
+            "timestamp": 1754153821301,
+            "version": "3.41.2"
+          },
+          "reference-count": 0,
+          "publisher": "Edward Elgar Publishing",
+          "isbn-type": [
+            {
+              "type": "electronic",
+              "value": "9781789900125"
+            },
+            {
+              "type": "print",
+              "value": "9781789900118"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2021,
+                9,
+                23
+              ]
+            ]
+          },
+          "DOI": "10.4337/9781789900125.00010",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2021,
+                9,
+                30
+              ]
+            ],
+            "date-time": "2021-09-30T11:17:33Z",
+            "timestamp": 1633000653000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 2,
+          "title": [
+            "City systems and complexity"
+          ],
+          "prefix": "10.4337",
+          "author": [
+            {
+              "given": "Michael",
+              "family": "Batty",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "2918",
+          "container-title": [
+            "Handbook on Cities and Complexity"
+          ],
+          "link": [
+            {
+              "URL": "https://china.elgaronline.com/view/edcoll/9781789900118/9781789900118.00010.xml",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://china.elgaronline.com/view/edcoll/9781789900118/9781789900118.xml",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "syndication"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2025,
+                7,
+                23
+              ]
+            ],
+            "date-time": "2025-07-23T14:39:34Z",
+            "timestamp": 1753281574000
+          },
+          "score": 33.69157,
+          "resource": {
+            "primary": {
+              "URL": "https://www.elgaronline.com/edcollchap/edcoll/9781789900118/9781789900118.00010.xml"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2021,
+                9,
+                23
+              ]
+            ]
+          },
+          "ISBN": [
+            "9781789900125",
+            "9781789900118"
+          ],
+          "references-count": 0,
+          "URL": "https://doi.org/10.4337/9781789900125.00010",
+          "published": {
+            "date-parts": [
+              [
+                2021,
+                9,
+                23
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                15
+              ]
+            ],
+            "date-time": "2026-10-15T01:42:22Z",
+            "timestamp": 1792028542348,
+            "version": "4.4.0"
+          },
+          "publisher-location": "Berlin, Heidelberg",
+          "reference-count": 57,
+          "publisher": "Springer Berlin Heidelberg",
+          "isbn-type": [
+            {
+              "value": "9783642245435",
+              "type": "print"
+            },
+            {
+              "value": "9783642245442",
+              "type": "electronic"
+            }
+          ],
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2011,
+                    12,
+                    5
+                  ]
+                ],
+                "date-time": "2011-12-05T00:00:00Z",
+                "timestamp": 1323043200000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2011,
+                    12,
+                    5
+                  ]
+                ],
+                "date-time": "2011-12-05T00:00:00Z",
+                "timestamp": 1323043200000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "link.springer.com"
+            ],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2012
+              ]
+            ]
+          },
+          "DOI": "10.1007/978-3-642-24544-2_3",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2012,
+                2,
+                3
+              ]
+            ],
+            "date-time": "2012-02-03T09:53:34Z",
+            "timestamp": 1328262814000
+          },
+          "page": "21-45",
+          "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 67,
+          "title": [
+            "The Origins of Complexity Theory in Cities and Planning"
+          ],
+          "prefix": "10.1007",
+          "author": [
+            {
+              "given": "Michael",
+              "family": "Batty",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Stephen",
+              "family": "Marshall",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "published-online": {
+            "date-parts": [
+              [
+                2011,
+                12,
+                5
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "3_CR1_3",
+              "volume-title": "Planning in Town and Country: Difficulties and Possibilities (An Inaugural Lecture)",
+              "author": "P Abercrombie",
+              "year": "1937",
+              "unstructured": "Abercrombie, P.: Planning in Town and Country: Difficulties and Possibilities (An Inaugural Lecture). Hodder and Stoughton, London (1937)"
+            },
+            {
+              "key": "3_CR2_3",
+              "unstructured": "Acevedo, W., Gaydos, L., Tilley, Mladinich, C., Buchanan, J., Blauer, S., Kruger, K., Schubert, J.: Urban land use change in the Las Vegas Valley. US geological survey, Washington, DC http://geochange.er.usgs.gov/sw/changes/anthropogenic/population/las_vegas/ (1997). Accessed 14 Sep 2010."
+            },
+            {
+              "key": "3_CR6_3",
+              "volume-title": "Notes on the Synthesis of Form",
+              "author": "C Alexander",
+              "year": "1964",
+              "unstructured": "Alexander, C.: Notes on the Synthesis of Form. Harvard University Press, Cambridge, MA (1964)"
+            },
+            {
+              "issue": "1",
+              "key": "3_CR7_3",
+              "first-page": "58",
+              "volume": "122",
+              "author": "C. Alexander",
+              "year": "1965",
+              "unstructured": "Alexander, C.: A city is not a tree. Archit. Forum. 122(1), 58\u201362 (1965) (Part I), 122(2), 58\u201362 (Part II). See also in Design. 206, 46\u201355 (1966); and in: Kaplan, S., Kaplan, R.: Humanscape\u2013environments for people. Ulrich\u2019s Books, Ann Arbor (1982)",
+              "journal-title": "Archit. Forum."
+            },
+            {
+              "key": "3_CR8_3",
+              "volume-title": "The Timeless Way of Building",
+              "author": "C Alexander",
+              "year": "1979",
+              "unstructured": "Alexander, C.: The Timeless Way of Building. Oxford University Press, New York (1979)"
+            },
+            {
+              "key": "#cr-split#-3_CR9_3.1",
+              "unstructured": "Alexander, C.: The Nature of Order. Books 1-4, Center for Environmental Structure, Berkeley, California (2001-2005). Book 1: The Phenomenon of Life. (2001)"
+            },
+            {
+              "key": "#cr-split#-3_CR9_3.2",
+              "unstructured": "Book 2: The Process of Creating Life. (2002)"
+            },
+            {
+              "key": "#cr-split#-3_CR9_3.3",
+              "unstructured": "Book 3: A Vision of a Living World. (2005)"
+            },
+            {
+              "key": "#cr-split#-3_CR9_3.4",
+              "unstructured": "Book 4: The Luminous Ground. (2004)"
+            },
+            {
+              "key": "3_CR12_3",
+              "volume-title": "A Pattern Language: Towns, Buildings, Construction",
+              "author": "C Alexander",
+              "year": "1977",
+              "unstructured": "Alexander, C., Ishikawa, S., Silverstein, M., Jacobson, M., Fiksdahl-King, I., Angel, S.: A Pattern Language: Towns, Buildings, Construction. Oxford University Press, New York (1977)"
+            },
+            {
+              "issue": "4047",
+              "key": "3_CR31_3",
+              "doi-asserted-by": "publisher",
+              "first-page": "393",
+              "DOI": "10.1126/science.177.4047.393",
+              "volume": "177",
+              "author": "PW Anderson",
+              "year": "1972",
+              "unstructured": "Anderson, P.W.: More is different. Science 177(4047), 393\u2013396 (1972)",
+              "journal-title": "Science"
+            },
+            {
+              "key": "3_CR56_3",
+              "doi-asserted-by": "crossref",
+              "first-page": "17",
+              "DOI": "10.1016/B978-0-08-023710-7.50014-3",
+              "volume-title": "Resources and Planning",
+              "author": "M Batty",
+              "year": "1979",
+              "unstructured": "Batty, M.: On Planning Processes. In: Goodall, B.G., Kirby, A.M. (eds.) Resources and Planning, pp. 17\u201345. Pergamon, Oxford (1979)"
+            },
+            {
+              "key": "3_CR57_3",
+              "doi-asserted-by": "publisher",
+              "first-page": "153",
+              "DOI": "10.1016/0142-694X(80)90022-8",
+              "volume": "1",
+              "author": "M Batty",
+              "year": "1980",
+              "unstructured": "Batty, M.: Limits to prediction in science and design science. Design Studies 1, 153\u2013159 (1980)",
+              "journal-title": "Design Studies"
+            },
+            {
+              "key": "3_CR61_3",
+              "volume-title": "Systems Analysis in Urban Policy-Making and Planning",
+              "year": "1983",
+              "unstructured": "Batty, M., Hutchinson, B.G. (eds.): Systems Analysis in Urban Policy-Making and Planning. Plenum, New York (1983)"
+            },
+            {
+              "key": "3_CR62_3",
+              "volume-title": "Fractal Cities: A Geometry of Form and Function",
+              "author": "M Batty",
+              "year": "1994",
+              "unstructured": "Batty, M., Longley, P.A.: Fractal Cities: A Geometry of Form and Function. Academic, London & San Diego, CA (1994)"
+            },
+            {
+              "issue": "6",
+              "key": "3_CR63_3",
+              "doi-asserted-by": "publisher",
+              "first-page": "551",
+              "DOI": "10.3828/tpr.2009.12",
+              "volume": "80",
+              "author": "M Batty",
+              "year": "2009",
+              "unstructured": "Batty, M., Marshall, S.: The evolution of cities: Geddes, Abercrombie and the New Physicalism. Town Planning Review 80(6), 551\u2013574 (2009)",
+              "journal-title": "Town Planning Review"
+            },
+            {
+              "key": "3_CR83_3",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.56021/9780801829321",
+              "volume-title": "The Eclipse of Darwinism: Anti-Darwinian Evolution Theories in the Decades Around 1900",
+              "author": "PJ Bowler",
+              "year": "1983",
+              "unstructured": "Bowler, P.J.: The Eclipse of Darwinism: Anti-Darwinian Evolution Theories in the Decades Around 1900. Johns Hopkins University Press, Baltimore (1983)"
+            },
+            {
+              "key": "3_CR110_3",
+              "volume-title": "A Systems View of Planning: Towards a Theory of the Urban and Regional Planning Process",
+              "author": "GF Chadwick",
+              "year": "1971",
+              "unstructured": "Chadwick, G.F.: A Systems View of Planning: Towards a Theory of the Urban and Regional Planning Process. Pergamon, Oxford (1971)"
+            },
+            {
+              "key": "3_CR127_3",
+              "series-title": "A Proceedings Volume in the Santa Fe Institute Studies in the Science of Complexity",
+              "first-page": "1",
+              "volume-title": "Complexity: Metaphors, Models, and Reality",
+              "author": "GA Cowan",
+              "year": "1994",
+              "unstructured": "Cowan, G.A.: Introduction. In: Cowan, G.A., Pines, D., Meltzer, D.E. (eds.) Complexity: Metaphors, Models, and Reality. A Proceedings Volume in the Santa Fe Institute Studies in the Science of Complexity, vol. XIX, pp. 1\u20134. Addison-Wesley, Reading (1994)"
+            },
+            {
+              "key": "3_CR155_3",
+              "volume-title": "The Nerves of Government: Models of Political Communication and Control",
+              "author": "K Deutsch",
+              "year": "1963",
+              "unstructured": "Deutsch, K.: The Nerves of Government: Models of Political Communication and Control. Free Press, New York (1963)"
+            },
+            {
+              "key": "3_CR166_3",
+              "volume-title": "A Systems Analysis of Political Life",
+              "author": "D Easton",
+              "year": "1965",
+              "unstructured": "Easton, D.: A Systems Analysis of Political Life. Wiley, New York (1965)"
+            },
+            {
+              "key": "3_CR185_3",
+              "volume-title": "Urban Dynamics",
+              "author": "J Forester",
+              "year": "1969",
+              "unstructured": "Forester, J.: Urban Dynamics. MIT Press, Cambridge, MA (1969)"
+            },
+            {
+              "key": "3_CR186_3",
+              "volume-title": "The Deliberative Practitioner: Encouraging Participatory Planning Processes",
+              "author": "J Forester",
+              "year": "1999",
+              "unstructured": "Forester, J.: The Deliberative Practitioner: Encouraging Participatory Planning Processes. MIT Press, Cambridge, MA (1999)"
+            },
+            {
+              "key": "3_CR193_3",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.7551/mitpress/6389.001.0001",
+              "volume-title": "The Spatial Economy",
+              "author": "M Fujita",
+              "year": "1999",
+              "unstructured": "Fujita, M., Krugman, P., Venables, A.J.: The Spatial Economy. MIT Press, Cambridge, MA (1999)"
+            },
+            {
+              "key": "3_CR199_3",
+              "volume-title": "An Analysis of the Principles of Economics",
+              "author": "P Geddes",
+              "year": "1885",
+              "unstructured": "Geddes, P.: An Analysis of the Principles of Economics. Williams & Norgate, London/Edinburgh (1885)"
+            },
+            {
+              "key": "3_CR200_3",
+              "volume-title": "1949) Cities in Evolution: An Introduction to the Town Planning Movement and to the Study of Civics",
+              "author": "P Geddes",
+              "year": "1915",
+              "unstructured": "Geddes, P.: 1949) Cities in Evolution: An Introduction to the Town Planning Movement and to the Study of Civics. Williams & Norgate, London (1915)"
+            },
+            {
+              "key": "3_CR203_3",
+              "volume-title": "Cities in Evolution: An Introduction to the Town Planning Movement and to the Study of Civics",
+              "author": "P Geddes",
+              "year": "1915/1949",
+              "unstructured": "Geddes, P.: Cities in Evolution: An Introduction to the Town Planning Movement and to the Study of Civics. Williams & Norgate, London (1915/1949)"
+            },
+            {
+              "key": "3_CR246_3",
+              "unstructured": "Harris, B.: Change and equilibrium in the urban system. Report number 322, Highway Research Record, Highway Research Board, Washington, DC (1970)"
+            },
+            {
+              "key": "3_CR250_3",
+              "volume-title": "Urban Complexity and Spatial Strategies: Towards a Relational Planning for Our Times",
+              "author": "P Healey",
+              "year": "2007",
+              "unstructured": "Healey, P.: Urban Complexity and Spatial Strategies: Towards a Relational Planning for Our Times. Routledge, London (2007)"
+            },
+            {
+              "key": "3_CR277_3",
+              "volume-title": "Adaptation in Natural and Artificial Systems",
+              "author": "JH Holland",
+              "year": "1975/1992",
+              "unstructured": "Holland, J.H.: Adaptation in Natural and Artificial Systems. University of Michigan, Ann Arbor (1975/1992), (1975) re-issued 1992 by the MIT Press, Cambridge, MA"
+            },
+            {
+              "issue": "1",
+              "key": "3_CR278_3",
+              "first-page": "17",
+              "volume": "121",
+              "author": "JH Holland",
+              "year": "1992",
+              "unstructured": "Holland, J.H.: Complex adaptive systems \u2013 a new era in computation (Winter). Daedalus 121(1), 17\u201330 (1992)",
+              "journal-title": "Daedalus"
+            },
+            {
+              "key": "3_CR282_3",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1525/9780520378650",
+              "volume-title": "Systems Analysis in Public Policy: A Critique",
+              "author": "IR Hoos",
+              "year": "1972",
+              "unstructured": "Hoos, I.R.: Systems Analysis in Public Policy: A Critique. University of California Press, Berkeley (1972)"
+            },
+            {
+              "key": "3_CR297_3",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.4324/9780203864302",
+              "volume-title": "Planning with Complexity: An Introduction to Collaborative Rationality for Public Policy",
+              "author": "JE Innes",
+              "year": "2010",
+              "unstructured": "Innes, J.E., Booher, D.E.: Planning with Complexity: An Introduction to Collaborative Rationality for Public Policy. Routledge, London (2010)"
+            },
+            {
+              "key": "3_CR298_3",
+              "volume-title": "The Death and Life of Great American Cities",
+              "author": "J Jacobs",
+              "year": "1961",
+              "unstructured": "Jacobs, J.: The Death and Life of Great American Cities. Random House, New York (1961)"
+            },
+            {
+              "key": "3_CR299_3",
+              "volume-title": "The Economy of Cities",
+              "author": "J Jacobs",
+              "year": "1969/1970",
+              "unstructured": "Jacobs, J.: The Economy of Cities. Vintage Books, New York (1969/1970)"
+            },
+            {
+              "key": "3_CR309_3",
+              "volume-title": "The Social Psychology of Organizations",
+              "author": "D Katz",
+              "year": "1966",
+              "unstructured": "Katz, D., Kahn, R.: The Social Psychology of Organizations. Wiley, New York (1966)"
+            },
+            {
+              "issue": "3",
+              "key": "3_CR330_3",
+              "doi-asserted-by": "publisher",
+              "first-page": "163",
+              "DOI": "10.1080/01944367308977851",
+              "volume": "39",
+              "author": "DB Lee",
+              "year": "1973",
+              "unstructured": "Lee, D.B.: Requiem for large scale models. Journal of the American Planning Association 39(3), 163\u2013178 (1973)",
+              "journal-title": "Journal of the American Planning Association"
+            },
+            {
+              "issue": "12",
+              "key": "3_CR338_3",
+              "first-page": "317",
+              "volume": "16",
+              "author": "AJ Lotka",
+              "year": "1926",
+              "unstructured": "Lotka, A.J.: The frequency distribution of scientific productivity. Journal of the Washington Academy of Sciences 16(12), 317\u2013324 (1926)",
+              "journal-title": "Journal of the Washington Academy of Sciences"
+            },
+            {
+              "key": "3_CR353_3",
+              "volume-title": "Cities, Design and Evolution",
+              "author": "S Marshall",
+              "year": "2009",
+              "unstructured": "Marshall, S.: Cities, Design and Evolution. Routledge, London/New York (2009)"
+            },
+            {
+              "issue": "11",
+              "key": "3_CR356_3",
+              "first-page": "462",
+              "volume": "78",
+              "author": "S Marshall",
+              "year": "2009",
+              "unstructured": "Marshall, S., Batty, M.: From Darwinism to planning \u2013 through Geddes and Back. Town and Country Planning 78(11), 462\u2013464 (2009)",
+              "journal-title": "Town and Country Planning"
+            },
+            {
+              "key": "3_CR365_3",
+              "volume-title": "Urban and Regional Planning: A Systems Approach",
+              "author": "JB McLoughlin",
+              "year": "1969",
+              "unstructured": "McLoughlin, J.B.: Urban and Regional Planning: A Systems Approach. Faber and Faber, London (1969)"
+            },
+            {
+              "key": "3_CR366_3",
+              "volume-title": "Control and Urban Planning",
+              "author": "JB McLouglin",
+              "year": "1973",
+              "unstructured": "McLouglin, J.B.: Control and Urban Planning. Faber and Faber, London (1973)"
+            },
+            {
+              "key": "3_CR380_3",
+              "volume-title": "Exploring Complexity: An Introduction",
+              "author": "G Nicolis",
+              "year": "1989",
+              "unstructured": "Nicolis, G., Prigogine, I.: Exploring Complexity: An Introduction. W.H. Freeman, San Francisco (1989)"
+            },
+            {
+              "key": "3_CR396_3",
+              "volume-title": "The Poverty of Historicism",
+              "author": "KR Popper",
+              "year": "1957",
+              "unstructured": "Popper, K.R.: The Poverty of Historicism. Routledge, London (1957)"
+            },
+            {
+              "key": "3_CR431_3",
+              "volume-title": "Mathematical Theory of Human Relations: An Approach to Mathematical Biology of Social Phenomena",
+              "author": "N Rashevsky",
+              "year": "1947",
+              "unstructured": "Rashevsky, N.: Mathematical Theory of Human Relations: An Approach to Mathematical Biology of Social Phenomena. Principia Press, Bloomington (1947)"
+            },
+            {
+              "key": "3_CR452_3",
+              "first-page": "488",
+              "volume": "58",
+              "author": "TC Schelling",
+              "year": "1969",
+              "unstructured": "Schelling, T.C.: Models of segregation. American Economic Review, Papers and Proceedings 58, 488\u201393 (1969)",
+              "journal-title": "American Economic Review, Papers and Proceedings"
+            },
+            {
+              "issue": "6",
+              "key": "3_CR466_3",
+              "first-page": "467",
+              "volume": "106",
+              "author": "HA Simon",
+              "year": "1962",
+              "unstructured": "Simon, H.A.: The architecture of complexity. Proceedings of the American Philosophical Society 106(6), 467\u2013482 (1962)",
+              "journal-title": "Proceedings of the American Philosophical Society"
+            },
+            {
+              "key": "3_CR473_3",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Smith, A.: An Inquiry into the Nature and Causes of the Wealth of Nations. 5th edn. 1904, Methuen and Co. Ltd., London (1776)",
+              "DOI": "10.1093/oseo/instance.00043218"
+            },
+            {
+              "key": "3_CR475_3",
+              "unstructured": "Soria, Y., Mata, A.: The linear city. In: LeGates, R., Stout, F. (eds.) (1892) Trans. Gonzalez, M.D., Selected Essays. Routledge/Thoemmes Press, London (1998)"
+            },
+            {
+              "key": "3_CR501_3",
+              "unstructured": "Tyrwhitt, J.: (1949) Introduction. In: Geddes, P. (1915) Cities in Evolution. Williams & Norgate, London"
+            },
+            {
+              "key": "3_CR511_3",
+              "volume-title": "General System Theory: Foundations, Development, Applications",
+              "author": "L von Bertalanffy",
+              "year": "1968",
+              "unstructured": "von Bertalanffy, L.: General System Theory: Foundations, Development, Applications. George Braziller, New York (1968)"
+            },
+            {
+              "key": "3_CR532_3",
+              "volume-title": "Science and the Modern World",
+              "author": "AN Whitehead",
+              "year": "1924",
+              "unstructured": "Whitehead, A.N.: Science and the Modern World. Cambridge University Press, Cambridge (1924)"
+            },
+            {
+              "key": "3_CR533_3",
+              "volume-title": "Cybernetics: Control and Communication in the Animal and the Machine",
+              "author": "N Wiener",
+              "year": "1948",
+              "unstructured": "Wiener, N.: Cybernetics: Control and Communication in the Animal and the Machine. MIT Press, Cambridge, MA (1948)"
+            },
+            {
+              "key": "3_CR535_3",
+              "volume-title": "Catastrophe Theory and Bifurcation: Applications in Urban and Regional Modelling",
+              "author": "AG Wilson",
+              "year": "1981",
+              "unstructured": "Wilson, A.G.: Catastrophe Theory and Bifurcation: Applications in Urban and Regional Modelling. University of California Press, Berkeley (1981)"
+            },
+            {
+              "key": "3_CR25_3",
+              "first-page": "103",
+              "volume": "4",
+              "author": "PM Allen",
+              "year": "1997",
+              "unstructured": "Allen, P.M.: Cities and regions as evolutionary complex systems. Geogr. Syst. 4, 103\u2013130 (1997a)",
+              "journal-title": "Geogr. Syst."
+            },
+            {
+              "key": "3_CR59_3",
+              "doi-asserted-by": "publisher",
+              "first-page": "1",
+              "DOI": "10.1007/978-3-7908-1937-3_1",
+              "volume-title": "The Dynamics of Complex Urban Systems: An Interdisciplinary Approach",
+              "author": "M Batty",
+              "year": "2008",
+              "unstructured": "Batty, M.: Fifty years of urban modelling: Macro statics to micro dynamics. In: Albeverio, S., Andrey, D., Giordano, P., Vancheri, A. (eds.) The Dynamics of Complex Urban Systems: An Interdisciplinary Approach, pp. 1\u201320. Physica, Heidelberg (2008a)"
+            },
+            {
+              "key": "3_CR359_3",
+              "unstructured": "Marshall, S.: Sustainability in Transition, In: Proceedings of the Institution of Civil Engineers: Urban Design and Planning (2010)"
+            }
+          ],
+          "container-title": [
+            "Complexity Theories of Cities Have Come of Age"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://link.springer.com/content/pdf/10.1007/978-3-642-24544-2_3",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2025,
+                3,
+                19
+              ]
+            ],
+            "date-time": "2025-03-19T20:22:45Z",
+            "timestamp": 1742415765000
+          },
+          "score": 28.335836,
+          "resource": {
+            "primary": {
+              "URL": "https://link.springer.com/10.1007/978-3-642-24544-2_3"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2011,
+                12,
+                5
+              ]
+            ]
+          },
+          "ISBN": [
+            "9783642245435",
+            "9783642245442"
+          ],
+          "references-count": 57,
+          "URL": "https://doi.org/10.1007/978-3-642-24544-2_3",
+          "published": {
+            "date-parts": [
+              [
+                2011,
+                12,
+                5
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "5 December 2011",
+              "order": 1,
+              "name": "first_online",
+              "label": "First Online",
+              "group": {
+                "name": "ChapterHistory",
+                "label": "Chapter History"
+              }
+            }
+          ]
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                15
+              ]
+            ],
+            "date-time": "2026-10-15T14:28:26Z",
+            "timestamp": 1792074506871,
+            "version": "4.4.0"
+          },
+          "publisher-location": "New York, NY",
+          "reference-count": 102,
+          "publisher": "Springer New York",
+          "isbn-type": [
+            {
+              "value": "9780387758886",
+              "type": "print"
+            },
+            {
+              "value": "9780387304403",
+              "type": "electronic"
+            }
+          ],
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2009,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2009-01-01T00:00:00Z",
+                "timestamp": 1230768000000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2009,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2009-01-01T00:00:00Z",
+                "timestamp": 1230768000000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2009
+              ]
+            ]
+          },
+          "DOI": "10.1007/978-0-387-30440-3_69",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2009,
+                6,
+                17
+              ]
+            ],
+            "date-time": "2009-06-17T12:41:24Z",
+            "timestamp": 1245242484000
+          },
+          "page": "1041-1071",
+          "source": "Crossref",
+          "is-referenced-by-count": 155,
+          "title": [
+            "Cities as Complex Systems: Scaling, Interaction, Networks, Dynamics and Urban Morphologies"
+          ],
+          "prefix": "10.1007",
+          "author": [
+            {
+              "given": "Michael",
+              "family": "Batty",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "reference": [
+            {
+              "key": "69_CR1_69",
+              "volume-title": "Urban land use change in the Las Vegas valley",
+              "author": "W Acevedo",
+              "year": "1997",
+              "unstructured": "Acevedo W, Gaydos L, Tilley J, Mladinich C, Buchanan J, Blauer S, Kruger K, Schubert J (1997) Urban land use change in the Las Vegas valley. US Geological Survey, Washington"
+            },
+            {
+              "key": "69_CR2_69",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Albert R, Jeong H, Barab\u00e1si A-L (1999) Diameter of the world wide web. Nature 401:130\u2013131",
+              "DOI": "10.1038/43601"
+            },
+            {
+              "key": "69_CR3_69",
+              "doi-asserted-by": "crossref",
+              "first-page": "95",
+              "DOI": "10.1068/b090095",
+              "volume": "9",
+              "author": "PM Allen",
+              "year": "1982",
+              "unstructured": "Allen PM (1982) Evolution, modelling, and design in a\u00a0complex world. Environ Plan B 9:95\u2013111",
+              "journal-title": "Environ Plan B"
+            },
+            {
+              "key": "69_CR4_69",
+              "volume-title": "Cities and regions as self\u2010organizing systems: models of complexity",
+              "author": "PM Allen",
+              "year": "1998",
+              "unstructured": "Allen PM (1998) Cities and regions as self\u2010organizing systems: models of complexity. Taylor and Francis, London"
+            },
+            {
+              "key": "69_CR5_69",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.4159/harvard.9780674730854",
+              "volume-title": "Location and land use",
+              "author": "W Alonso",
+              "year": "1964",
+              "unstructured": "Alonso W (1964) Location and land use. Harvard University Press, Cambridge"
+            },
+            {
+              "key": "69_CR6_69",
+              "doi-asserted-by": "crossref",
+              "first-page": "13",
+              "DOI": "10.1016/0191-2615(83)90023-1",
+              "volume": "17B",
+              "author": "A Anas",
+              "year": "1983",
+              "unstructured": "Anas A (1983) Discrete choice theory, information theory and the multinomial logit and gravity models. Transp Res B 17B:13\u201323",
+              "journal-title": "Transp Res B"
+            },
+            {
+              "key": "69_CR7_69",
+              "doi-asserted-by": "crossref",
+              "first-page": "841",
+              "DOI": "10.1068/b12813",
+              "volume": "29",
+              "author": "C Andersson",
+              "year": "2002",
+              "unstructured": "Andersson C, Rasmussen S, White R (2002) Urban settlements transition. Environ Plan B 29:841\u2013865",
+              "journal-title": "Environ Plan B"
+            },
+            {
+              "key": "69_CR8_69",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Barab\u00e1si A-L, Albert R (1999) Emergence of scaling in random networks. Science 286:509\u2013512",
+              "DOI": "10.1126/science.286.5439.509"
+            },
+            {
+              "key": "69_CR9_69",
+              "doi-asserted-by": "crossref",
+              "first-page": "145",
+              "DOI": "10.1016/S0169-2046(02)00218-9",
+              "volume": "64",
+              "author": "JI Barredo",
+              "year": "2003",
+              "unstructured": "Barredo JI, Kasanko M, McCormick N, Lavalle C (2003) Modeling dynamic spatial processes: simulation of urban future scenarios through cellular automata. Landscape Urban Plan 64:145\u2013160",
+              "journal-title": "Landscape Urban Plan"
+            },
+            {
+              "key": "69_CR10_69",
+              "doi-asserted-by": "crossref",
+              "first-page": "1",
+              "DOI": "10.1111/j.1538-4632.1974.tb01014.x",
+              "volume": "6",
+              "author": "M Batty",
+              "year": "1974",
+              "unstructured": "Batty M (1974) Spatial entropy. Geograph Anal 6:1\u201331",
+              "journal-title": "Geograph Anal"
+            },
+            {
+              "key": "69_CR11_69",
+              "volume-title": "Urban modelling: algorithms, calibration, predictions",
+              "author": "M Batty",
+              "year": "1976",
+              "unstructured": "Batty M (1976) Urban modelling: algorithms, calibration, predictions. Cambridge University Press, Cambridge"
+            },
+            {
+              "issue": "8",
+              "key": "69_CR12_69",
+              "doi-asserted-by": "crossref",
+              "first-page": "1373",
+              "DOI": "10.1068/a3784",
+              "volume": "37",
+              "author": "M Batty",
+              "year": "2005",
+              "unstructured": "Batty M (2005) Agents, cells, and cities: new representational models for simulating multiscale urban dynamics. Environ Plan A\u00a037(8):1373\u20131394",
+              "journal-title": "Environ Plan A"
+            },
+            {
+              "key": "69_CR13_69",
+              "volume-title": "Cities and complexity: understanding cities with cellular automata, agent\u2010based models, and fractals",
+              "author": "M Batty",
+              "year": "2005",
+              "unstructured": "Batty M (2005) Cities and complexity: understanding cities with cellular automata, agent\u2010based models, and fractals. MIT Press, Cambridge"
+            },
+            {
+              "key": "69_CR14_69",
+              "doi-asserted-by": "crossref",
+              "first-page": "592",
+              "DOI": "10.1038/nature05302",
+              "volume": "444",
+              "author": "M Batty",
+              "year": "2006",
+              "unstructured": "Batty M (2006) Rank clocks. Nature 444:592\u2013596",
+              "journal-title": "Nature"
+            },
+            {
+              "issue": "5864",
+              "key": "69_CR15_69",
+              "doi-asserted-by": "crossref",
+              "first-page": "769",
+              "DOI": "10.1126/science.1151419",
+              "volume": "319",
+              "author": "M Batty",
+              "year": "2008",
+              "unstructured": "Batty M (2008) The size, scale, and shape of cities. Science 319(5864):769\u2013771",
+              "journal-title": "Science"
+            },
+            {
+              "key": "69_CR16_69",
+              "volume-title": "Fractal cities: a geometry of form and function",
+              "author": "M Batty",
+              "year": "1994",
+              "unstructured": "Batty M, Longley PA (1994) Fractal cities: a\u00a0geometry of form and function. Academic Press, San Diego"
+            },
+            {
+              "issue": "7",
+              "key": "69_CR17_69",
+              "doi-asserted-by": "crossref",
+              "first-page": "745",
+              "DOI": "10.1016/j.futures.2004.11.003",
+              "volume": "37",
+              "author": "M Batty",
+              "year": "2005",
+              "unstructured": "Batty M, Torrens PM (2005) Modelling and prediction in a\u00a0complex world. Futures 37(7):745\u2013766",
+              "journal-title": "Futures"
+            },
+            {
+              "key": "69_CR18_69",
+              "doi-asserted-by": "crossref",
+              "first-page": "s31",
+              "DOI": "10.1068/b21S031",
+              "volume": "21",
+              "author": "M Batty",
+              "year": "1994",
+              "unstructured": "Batty M, Xie Y (1994) From cells to cities. Environ Plan B 21:s31\u2013s48",
+              "journal-title": "Environ Plan B"
+            },
+            {
+              "key": "69_CR19_69",
+              "doi-asserted-by": "crossref",
+              "first-page": "205",
+              "DOI": "10.1016/S0198-9715(99)00015-0",
+              "volume": "23",
+              "author": "M Batty",
+              "year": "1999",
+              "unstructured": "Batty M, Xie Y, Sun Z (1999) Modeling urban dynamics through GIS\u2010based cellular automata. Comput Environ Urban Syst 23:205\u2013233",
+              "journal-title": "Comput Environ Urban Syst"
+            },
+            {
+              "key": "69_CR20_69",
+              "volume-title": "Discrete choice analysis",
+              "author": "M Ben Akiva",
+              "year": "1985",
+              "unstructured": "Ben Akiva M, Lerman S (1985) Discrete choice analysis. MIT Press, Cambridge"
+            },
+            {
+              "key": "69_CR21_69",
+              "doi-asserted-by": "crossref",
+              "first-page": "147",
+              "DOI": "10.1111/j.1435-5597.1964.tb01283.x",
+              "volume": "13",
+              "author": "BJL Berry",
+              "year": "1964",
+              "unstructured": "Berry BJL (1964) Cities as systems within systems of cities. Papers Proc Region Sci Assoc 13:147\u2013164",
+              "journal-title": "Papers Proc Region Sci Assoc"
+            },
+            {
+              "key": "69_CR22_69",
+              "doi-asserted-by": "crossref",
+              "first-page": "497",
+              "DOI": "10.1016/S0198-9715(98)00022-2",
+              "volume": "22",
+              "author": "E Besussi",
+              "year": "1998",
+              "unstructured": "Besussi E, Cecchini A, Rinaldi E (1998) The diffused city of the italian north\u2010east: identification of urban dynamics using cellular automata urban models. Comp Environ Urban Syst 22:497\u2013523",
+              "journal-title": "Comp Environ Urban Syst"
+            },
+            {
+              "key": "69_CR23_69",
+              "doi-asserted-by": "crossref",
+              "first-page": "279",
+              "DOI": "10.1016/S0378-4371(00)00464-7",
+              "volume": "287",
+              "author": "A Blank",
+              "year": "2000",
+              "unstructured": "Blank A, Solomon S (2000) Power laws in cities population, financial markets and internet sites: scaling and systems with a\u00a0variable number of components. Physica A\u00a0287:279\u2013288",
+              "journal-title": "Physica A"
+            },
+            {
+              "key": "69_CR24_69",
+              "doi-asserted-by": "crossref",
+              "first-page": "066107-1",
+              "DOI": "10.1103/PhysRevE.73.066107",
+              "volume": "73",
+              "author": "A Cardillo",
+              "year": "2006",
+              "unstructured": "Cardillo A, Scellato S, Latora V, Porta S (2006) Structural properties of planar graphs of urban street patterns. Phys Rev E 73:066107-1\u20138",
+              "journal-title": "Phys Rev E"
+            },
+            {
+              "key": "69_CR25_69",
+              "volume-title": "Principles and concepts of agent\u2010based modelling for developing geospatial simulations. Working Paper 110",
+              "author": "CJE Castle",
+              "year": "2006",
+              "unstructured": "Castle CJE, Crooks AT (2006) Principles and concepts of agent\u2010based modelling for developing geospatial simulations. Working Paper 110. Centre for Advanced Spatial Analysis, University College London, London"
+            },
+            {
+              "key": "69_CR26_69",
+              "volume-title": "A systems view of planning",
+              "author": "GF Chadwick",
+              "year": "1971",
+              "unstructured": "Chadwick GF (1971) A\u00a0systems view of planning. Pergamon Press, Oxford"
+            },
+            {
+              "key": "69_CR27_69",
+              "doi-asserted-by": "crossref",
+              "first-page": "375",
+              "DOI": "10.1016/0041-1647(68)90103-2",
+              "volume": "2",
+              "author": "FS Chapin",
+              "year": "1968",
+              "unstructured": "Chapin FS, Weiss SF (1968) A\u00a0probabilistic model for residential growth. Transp Res 2:375\u2013390",
+              "journal-title": "Transp Res"
+            },
+            {
+              "key": "69_CR28_69",
+              "unstructured": "Cheng J (2003) Modelling spatial and temporal urban growth. Ph\u202fD Thesis, ITC Dissertation 99, ITC, Enschede, Netherlands"
+            },
+            {
+              "key": "69_CR29_69",
+              "doi-asserted-by": "crossref",
+              "first-page": "490",
+              "DOI": "10.2307/2981088",
+              "volume": "114",
+              "author": "C Clark",
+              "year": "1951",
+              "unstructured": "Clark C (1951) Urban population densities. J\u00a0Royal Stat Soc Ser A\u00a0114:490\u2013496",
+              "journal-title": "J Royal Stat Soc Ser A"
+            },
+            {
+              "key": "69_CR30_69",
+              "volume-title": "Microsimulation for urban and regional policy analysis",
+              "year": "1996",
+              "unstructured": "Clarke G (ed) (1996) Microsimulation for urban and regional policy analysis. Pion Press, London"
+            },
+            {
+              "key": "69_CR31_69",
+              "doi-asserted-by": "crossref",
+              "first-page": "699",
+              "DOI": "10.1080/136588198241617",
+              "volume": "12",
+              "author": "KC Clarke",
+              "year": "1998",
+              "unstructured": "Clarke KC, Gaydos LJ (1998) Loose coupling a\u00a0cellular automaton model and GIS: long\u2010term growth prediction for San Francisco and Washington/Baltimore. Int J Geograph Inform Sci 12:699\u2013714",
+              "journal-title": "Int J Geograph Inform Sci"
+            },
+            {
+              "key": "69_CR32_69",
+              "doi-asserted-by": "crossref",
+              "first-page": "585",
+              "DOI": "10.1068/a170585",
+              "volume": "17",
+              "author": "H Couclelis",
+              "year": "1985",
+              "unstructured": "Couclelis H (1985) Cellular worlds: a\u00a0framework for modeling micro\u2010macro dynamics. Environ Plan A\u00a017:585\u2013596",
+              "journal-title": "Environ Plan A"
+            },
+            {
+              "key": "69_CR33_69",
+              "doi-asserted-by": "crossref",
+              "first-page": "036125",
+              "DOI": "10.1103/PhysRevE.73.036125",
+              "volume": "73",
+              "author": "P Crucitti",
+              "year": "2006",
+              "unstructured": "Crucitti P, Latora V, Porta S (2006) Centrality measures in spatial networks of urban streets. Phys Rev E 73:036125-1-5",
+              "journal-title": "Phys Rev E"
+            },
+            {
+              "key": "69_CR34_69",
+              "doi-asserted-by": "crossref",
+              "first-page": "138",
+              "DOI": "10.1111/j.1467-8306.1964.tb00479.x",
+              "volume": "54",
+              "author": "L Curry",
+              "year": "1964",
+              "unstructured": "Curry L (1964) The random spatial economy: an exploration in settlement theory. Ann Assoc Amer Geograph 54:138\u2013146",
+              "journal-title": "Ann Assoc Amer Geograph"
+            },
+            {
+              "key": "69_CR35_69",
+              "doi-asserted-by": "crossref",
+              "unstructured": "de Almeida CM, Batty M, C\u00e2mara G, Cerqueira GC, Monteiro AMV, Pennachin CP, Soares-Filho BS (2003) Stochastic cellular automata modeling of urban land use dynamics: empirical development and estimation. Comput Environ Urban Syst 27:481\u2013509",
+              "DOI": "10.1016/S0198-9715(02)00042-X"
+            },
+            {
+              "key": "69_CR36_69",
+              "volume-title": "Urban evolution: studies in the mathematical ecology of cities",
+              "author": "DS Dendrinos",
+              "year": "1985",
+              "unstructured": "Dendrinos DS, Mullally H (1985) Urban evolution: studies in the mathematical ecology of cities. Oxford University Press, Oxford"
+            },
+            {
+              "key": "69_CR37_69",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.7551/mitpress/3374.001.0001",
+              "volume-title": "Growing artificial societies: social science from the bottom up",
+              "author": "JM Epstein",
+              "year": "1996",
+              "unstructured": "Epstein JM, Axtell RL (1996) Growing artificial societies: social science from the bottom up. MIT Press, Cambridge"
+            },
+            {
+              "key": "69_CR38_69",
+              "doi-asserted-by": "crossref",
+              "first-page": "330",
+              "DOI": "10.1111/j.1749-6632.1980.tb29699.x",
+              "volume": "357",
+              "author": "MJ Feigenbaum",
+              "year": "1980",
+              "unstructured": "Feigenbaum MJ (1980) The metric universal properties of period doubling bifurcations and the spectrum for a\u00a0route to turbulence. Ann New York Acad Sci 357:330\u2013336",
+              "journal-title": "Ann New York Acad Sci"
+            },
+            {
+              "key": "69_CR39_69",
+              "volume-title": "Urban dynamics",
+              "author": "JW Forrester",
+              "year": "1969",
+              "unstructured": "Forrester JW (1969) Urban dynamics. MIT Press, Cambridge"
+            },
+            {
+              "key": "69_CR40_69",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.7551/mitpress/6389.001.0001",
+              "volume-title": "The spatial economy: cities, regions, and international trade",
+              "author": "M Fujita",
+              "year": "1999",
+              "unstructured": "Fujita M, Krugman P, Venables AJ (1999) The spatial economy: cities, regions, and international trade. MIT Press, Cambridge"
+            },
+            {
+              "key": "69_CR41_69",
+              "doi-asserted-by": "crossref",
+              "first-page": "739",
+              "DOI": "10.1162/003355399556133",
+              "volume": "114",
+              "author": "X Gabaix",
+              "year": "1999",
+              "unstructured": "Gabaix X (1999) Zipf\u2019s law for cities: an explanation. Quart J Econom 114:739\u2013767",
+              "journal-title": "Quart J Econom"
+            },
+            {
+              "key": "69_CR42_69",
+              "volume-title": "The quark and the jaguar: adventures in the simple and the complex",
+              "author": "M Gell-Man",
+              "year": "1994",
+              "unstructured": "Gell-Man M (1994) The quark and the jaguar: adventures in the simple and the complex. Freeman and Company, New York"
+            },
+            {
+              "key": "69_CR43_69",
+              "volume-title": "Les in\u00e9galit\u00e9s \u00e9conomiques",
+              "author": "R Gibrat",
+              "year": "1931",
+              "unstructured": "Gibrat R (1931) Les in\u00e9galit\u00e9s \u00e9conomiques. Librarie du Recueil Sirey, Paris"
+            },
+            {
+              "key": "69_CR44_69",
+              "volume-title": "Agent\u2010based models",
+              "author": "N Gilbert",
+              "year": "2007",
+              "unstructured": "Gilbert N (2007) Agent\u2010based models. Sage Inc., Thousand Oaks"
+            },
+            {
+              "key": "69_CR45_69",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1007/978-94-009-0939-7",
+              "volume-title": "Dynamic decision theory: applications to urban and regional topics",
+              "author": "G Haag",
+              "year": "1989",
+              "unstructured": "Haag G (1989) Dynamic decision theory: applications to urban and regional topics. Kluwer, Dordrecht"
+            },
+            {
+              "key": "69_CR46_69",
+              "doi-asserted-by": "crossref",
+              "first-page": "405",
+              "DOI": "10.1080/00107510410001715944",
+              "volume": "45",
+              "author": "D Helbing",
+              "year": "2004",
+              "unstructured": "Helbing D, Nagel K (2004) The physics of traffic and regional development. Contemp Phys 45:405\u2013426",
+              "journal-title": "Contemp Phys"
+            },
+            {
+              "key": "69_CR47_69",
+              "volume-title": "Space is the machine",
+              "author": "B Hillier",
+              "year": "1996",
+              "unstructured": "Hillier B (1996) Space is the machine. Cambridge University Press, Cambridge"
+            },
+            {
+              "key": "69_CR48_69",
+              "doi-asserted-by": "crossref",
+              "first-page": "647",
+              "DOI": "10.1016/j.physa.2007.05.064",
+              "volume": "384",
+              "author": "B Jiang",
+              "year": "2007",
+              "unstructured": "Jiang B (2007) A\u00a0topological pattern of urban street networks: universality and peculiarity. Physica A\u00a0384:647\u2013655",
+              "journal-title": "Physica A"
+            },
+            {
+              "key": "69_CR49_69",
+              "doi-asserted-by": "crossref",
+              "first-page": "95",
+              "DOI": "10.1080/01944366508978150",
+              "volume": "31",
+              "author": "GT Lathrop",
+              "year": "1965",
+              "unstructured": "Lathrop GT, Hamburg JR (1965) An opportunity\u2010accessibility model for allocating regional growth. J\u00a0Amer Inst Plan 31:95\u2013103",
+              "journal-title": "J Amer Inst Plan"
+            },
+            {
+              "key": "69_CR50_69",
+              "volume-title": "Model of metropolis. Memorandum RM-4035-RC",
+              "author": "IS Lowry",
+              "year": "1964",
+              "unstructured": "Lowry IS (1964) Model of metropolis. Memorandum RM-4035-RC. Rand Corporation, Santa Monica"
+            },
+            {
+              "key": "69_CR51_69",
+              "volume-title": "The fractal geometry of nature",
+              "author": "BB Mandelbot",
+              "year": "1983",
+              "unstructured": "Mandelbot BB (1983) The fractal geometry of nature. Freeman, New York"
+            },
+            {
+              "key": "69_CR52_69",
+              "doi-asserted-by": "crossref",
+              "first-page": "459",
+              "DOI": "10.1038/261459a0",
+              "volume": "261",
+              "author": "RM May",
+              "year": "1976",
+              "unstructured": "May RM (1976) Simple mathematical models with very complicated dynamics. Nature 261:459\u2013467",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "69_CR53_69",
+              "volume-title": "Urban and regional planning: a systems approach",
+              "author": "JB McLoughlin",
+              "year": "1969",
+              "unstructured": "McLoughlin JB (1969) Urban and regional planning: a\u00a0systems approach. Faber and Faber, London"
+            },
+            {
+              "key": "69_CR54_69",
+              "volume-title": "Complex adaptive systems: an introduction to computational models of social life",
+              "author": "JH Miller",
+              "year": "2007",
+              "unstructured": "Miller JH, Page SE (2007) Complex adaptive systems: an introduction to computational models of social life. Princeton University Press, Princeton"
+            },
+            {
+              "key": "69_CR55_69",
+              "volume-title": "TRANSIMS for urban planning. LA-UR 984389",
+              "author": "K Nagel",
+              "year": "1999",
+              "unstructured": "Nagel K, Beckman RJ, Barrett CL (1999) TRANSIMS for urban planning. LA-UR 984389. Los Alamos National Laboratory, Los Alamos"
+            },
+            {
+              "key": "69_CR56_69",
+              "unstructured": "Newman M, Barab\u00e1si A-L, Watts DJ (2006) The structure and dynamics of networks. Princeton University Press, Princeton"
+            },
+            {
+              "key": "69_CR57_69",
+              "volume-title": "Interaction, evolution and chaos in space",
+              "author": "P Nijkamp",
+              "year": "1992",
+              "unstructured": "Nijkamp P, Reggiani A (1992) Interaction, evolution and chaos in space. Springer, Berlin"
+            },
+            {
+              "key": "69_CR58_69",
+              "first-page": "165",
+              "volume-title": "Cellular automata: research towards industry: ACRI\u201996. Proc of the 3rd Conference on cellular automata for research and industry",
+              "author": "L Papini",
+              "year": "1998",
+              "unstructured": "Papini L, Rabino GA, Colonna A, Di Stefano V, Lombardo S (1998) Learning cellular automata in a\u00a0real world: the case study of the rome metropolitan area. In: Bandini S, Serra R, Suggi Liverani F (eds) Cellular automata: research towards industry: ACRI\u201996. Proc of the 3rd Conference on cellular automata for research and industry. Springer, London, pp\u00a0165\u2013183"
+            },
+            {
+              "key": "69_CR59_69",
+              "first-page": "537",
+              "volume-title": "Self\u2010organization of complex structures: from individual to collective dynamics",
+              "author": "J Portugali",
+              "year": "1996",
+              "unstructured": "Portugali J, Benenson I (1996) Human agents between local and global forces in a\u00a0self\u2010organizing city. In: Schweitzer F (ed) Self\u2010organization of complex structures: from individual to collective dynamics. Gordon and Breach, London, pp\u00a0537\u2013545"
+            },
+            {
+              "key": "69_CR60_69",
+              "unstructured": "Propolis (2004) PROPOLIS (policies and research of policies for land use and transport for increasing urban sustainability). Final report for the Commission of the European Communities. LT Consultants Ltd, Helsinki"
+            },
+            {
+              "issue": "2",
+              "key": "69_CR61_69",
+              "first-page": "488",
+              "volume": "58",
+              "author": "TC Schelling",
+              "year": "1969",
+              "unstructured": "Schelling TC (1969) Models of segregation. Amer Econom Rev Papers Proc 58(2):488\u2013493",
+              "journal-title": "Amer Econom Rev Papers Proc"
+            },
+            {
+              "key": "69_CR62_69",
+              "volume-title": "Micromotives and macrobehavior",
+              "author": "TC Schelling",
+              "year": "1978",
+              "unstructured": "Schelling TC (1978) Micromotives and macrobehavior. Norton and Company, New York"
+            },
+            {
+              "key": "69_CR63_69",
+              "first-page": "501",
+              "volume-title": "Self\u2010organization of complex structures: from individual to collective dynamics",
+              "author": "F Schweitzer",
+              "year": "1997",
+              "unstructured": "Schweitzer F, Steinbrink J (1997) urban cluster growth: analysis and computer simulation of urban aggregations. In: Schweitzer F (ed) Self\u2010organization of complex structures: from individual to collective dynamics. Gordon and Breach, London, pp\u00a0501\u2013518"
+            },
+            {
+              "key": "69_CR64_69",
+              "doi-asserted-by": "crossref",
+              "first-page": "549",
+              "DOI": "10.1068/b2673",
+              "volume": "27",
+              "author": "F Semboloni",
+              "year": "2000",
+              "unstructured": "Semboloni F (2000) The growth of an urban cluster into a\u00a0dynamic self\u2010modifying spatial pattern. Environ Plan B 27:549\u2013564",
+              "journal-title": "Environ Plan B"
+            },
+            {
+              "key": "69_CR65_69",
+              "doi-asserted-by": "crossref",
+              "first-page": "234",
+              "DOI": "10.2307/143141",
+              "volume": "42",
+              "author": "WR Tobler",
+              "year": "1970",
+              "unstructured": "Tobler WR (1970) A\u00a0computer movie simulating population growth in the detroit region. Econom Geograph 42:234\u2013240",
+              "journal-title": "Econom Geograph"
+            },
+            {
+              "key": "69_CR66_69",
+              "volume-title": "Rational, descriptions, decisions and designs",
+              "author": "M Tribus",
+              "year": "1969",
+              "unstructured": "Tribus M (1969) Rational, descriptions, decisions and designs. Pergamon Press, New York"
+            },
+            {
+              "key": "69_CR67_69",
+              "volume-title": "General system theory: foundations, development, applications",
+              "author": "L von Bertalanffy",
+              "year": "1969",
+              "unstructured": "von Bertalanffy L (1969) General system theory: foundations, development, applications. George Braziller, New York. Revised Edition (1976)"
+            },
+            {
+              "key": "69_CR68_69",
+              "unstructured": "von Th\u00fcnen JH (1826) Von Thunen\u2019s isolated state. Pergamon, Oxford. (1966 translation from the 1826 German Edition Der isolierte Staat in Beziehung auf Landwirtschaft und Nationaloekonomie by P. G. Hall)"
+            },
+            {
+              "key": "69_CR69_69",
+              "doi-asserted-by": "crossref",
+              "first-page": "297",
+              "DOI": "10.1080/01944360208976274",
+              "volume": "68",
+              "author": "P Waddell",
+              "year": "2002",
+              "unstructured": "Waddell P (2002) UrbanSim: modeling urban development for land use, transportation and environmental planning. J\u00a0Amer Plan Assoc 68:297\u2013314",
+              "journal-title": "J Amer Plan Assoc"
+            },
+            {
+              "key": "69_CR70_69",
+              "doi-asserted-by": "crossref",
+              "first-page": "539",
+              "DOI": "10.1016/S0198-9715(00)00008-9",
+              "volume": "24",
+              "author": "DP Ward",
+              "year": "2000",
+              "unstructured": "Ward DP, Murray AT, Phinn SR (2000) A\u00a0stochastically constrained cellular model of urban growth. Comput Environ Urban Syst 24:539\u2013558",
+              "journal-title": "Comput Environ Urban Syst"
+            },
+            {
+              "key": "69_CR71_69",
+              "first-page": "203",
+              "volume-title": "GIS, spatial analysis, and modeling",
+              "author": "M Wegener",
+              "year": "2005",
+              "unstructured": "Wegener M (2005) Urban land\u2010use transportation models. In: Maguire DJ, Batty M, Goodchild MF (eds) GIS, spatial analysis, and modeling. ESRI Press, Redlands, pp\u00a0203\u2013220"
+            },
+            {
+              "key": "69_CR72_69",
+              "doi-asserted-by": "crossref",
+              "first-page": "1175",
+              "DOI": "10.1068/a251175",
+              "volume": "25",
+              "author": "RW White",
+              "year": "1993",
+              "unstructured": "White RW, Engelen G (1993) Cellular automata and fractal urban form: a\u00a0cellular modelling approach to the evolution of urban land use patterns. Environ Plan A\u00a025:1175\u20131193",
+              "journal-title": "Environ Plan A"
+            },
+            {
+              "key": "69_CR73_69",
+              "volume-title": "Cybernetics: or the control and communication in the animal and the machine",
+              "author": "N Wiener",
+              "year": "1965",
+              "unstructured": "Wiener N (1965) Cybernetics: or the control and communication in the animal and the machine, 2nd edn. MIT Press, Cambridge",
+              "edition": "2"
+            },
+            {
+              "key": "69_CR74_69",
+              "volume-title": "Entropy in urban and regional modelling",
+              "author": "AG Wilson",
+              "year": "1970",
+              "unstructured": "Wilson AG (1970) Entropy in urban and regional modelling. Pion Press, London"
+            },
+            {
+              "key": "69_CR75_69",
+              "volume-title": "Catastrophe theory and bifurcation; applications to urban and regional systems",
+              "author": "AG Wilson",
+              "year": "1981",
+              "unstructured": "Wilson AG (1981) Catastrophe theory and bifurcation; applications to urban and regional systems. University of California Press, Berkeley"
+            },
+            {
+              "key": "69_CR76_69",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Wilson AG (2007) Boltzmann, Lotka, and Volterra and spatial structural evolution: a\u00a0integrated methodology for some dynamical systems. J\u00a0Royal Soc Interface 1\u20137. doi:10.1098/rsif.2007.1288",
+              "DOI": "10.1098/rsif.2007.1288"
+            },
+            {
+              "key": "69_CR77_69",
+              "doi-asserted-by": "crossref",
+              "first-page": "103",
+              "DOI": "10.1068/b250103",
+              "volume": "25",
+              "author": "F Wu",
+              "year": "1998",
+              "unstructured": "Wu F, Webster CJ (1998) Simulation of land development through the integration of cellular automata and multicriteria evaluation. Environ Plan B 25:103\u2013126",
+              "journal-title": "Environ Plan B"
+            },
+            {
+              "key": "69_CR78_69",
+              "unstructured": "Xie Y (1994) Analytical models and algorithms for cellular urban dynamics. Unpublished Ph\u202fD dissertation, State University of New York at Buffalo, Buffalo"
+            },
+            {
+              "key": "69_CR79_69",
+              "first-page": "273",
+              "volume-title": "Geodynamics",
+              "author": "Y Xie",
+              "year": "2005",
+              "unstructured": "Xie Y, Batty M (2005) Integrated urban evolutionary modeling. In: Atkinson PM, Foody GM, Darby SE, Wu F (eds) Geodynamics. CRC Press, Boca Raton, pp\u00a0273\u2013293"
+            },
+            {
+              "key": "69_CR80_69",
+              "unstructured": "Yeh A\u00a0G-O, Li X (2000) A\u00a0\u2018Grey\u2010Cell\u2019 constrained ca model for the simulation of urban forms and developments in the planning of sustainable cities using GIS. Centre of Urban Planning and Environmental Management. University of Hong Kong, Pokfulam"
+            },
+            {
+              "key": "69_CR81_69",
+              "volume-title": "Human behavior and the principle of least effort",
+              "author": "GK Zipf",
+              "year": "1949",
+              "unstructured": "Zipf GK (1949) Human behavior and the principle of least effort. Addison-Wesley, Cambridge"
+            },
+            {
+              "key": "69_CR82_69",
+              "unstructured": "Barab\u00e1si A (2002) Linked: the new science of networks. Perseus Publishing, New York"
+            },
+            {
+              "key": "69_CR83_69",
+              "doi-asserted-by": "crossref",
+              "first-page": "159",
+              "DOI": "10.1068/b240159",
+              "volume": "24",
+              "author": "M Batty",
+              "year": "1997",
+              "unstructured": "Batty M, Couclelis H, Eichen M (1997) Urban systems as cellular automata. Environ Plan B 24:159\u2013164",
+              "journal-title": "Environ Plan B"
+            },
+            {
+              "key": "69_CR84_69",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1002/0470020997",
+              "volume-title": "Geosimulation: automata\u2010based modeling of urban phenomena",
+              "author": "I Benenson",
+              "year": "2004",
+              "unstructured": "Benenson I, Torrens PM (2004) Geosimulation: automata\u2010based modeling of urban phenomena. Wiley, London"
+            },
+            {
+              "key": "69_CR85_69",
+              "first-page": "1",
+              "volume": "21",
+              "author": "M Clarke",
+              "year": "1993",
+              "unstructured": "Clarke M, Wilson AG (1993) Dynamics of urban spatial structure: progress and problems. J\u00a0Region Sci 21:1\u201318",
+              "journal-title": "J Region Sci"
+            },
+            {
+              "key": "69_CR86_69",
+              "doi-asserted-by": "crossref",
+              "first-page": "165",
+              "DOI": "10.1068/b240165",
+              "volume": "24",
+              "author": "H Couclelis",
+              "year": "1997",
+              "unstructured": "Couclelis H (1997) From cellular automata models to urban models: new principles for model development and implementation. Environ Plan B 24:165\u2013174",
+              "journal-title": "Environ Plan B"
+            },
+            {
+              "key": "69_CR87_69",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1007/978-1-4612-0991-1",
+              "volume-title": "Chaos and socio\u2010spatial dynamics",
+              "author": "DS Dendrinos",
+              "year": "1990",
+              "unstructured": "Dendrinos DS, Sonis M (1990) Chaos and socio\u2010spatial dynamics. Springer, New York"
+            },
+            {
+              "key": "69_CR88_69",
+              "volume-title": "Network analysis in geography",
+              "author": "P Haggett",
+              "year": "1969",
+              "unstructured": "Haggett P, Chorley R (1969) Network analysis in geography. Edward Arnold, London"
+            },
+            {
+              "key": "69_CR89_69",
+              "doi-asserted-by": "crossref",
+              "first-page": "361",
+              "DOI": "10.1068/b2697",
+              "volume": "28",
+              "author": "D Helbing",
+              "year": "2001",
+              "unstructured": "Helbing D, Molnar P Farkas IJ, Bolay K (2001) Self\u2010organizing pedestrian movement. Environ Plan B 28:361\u2013383",
+              "journal-title": "Environ Plan B"
+            },
+            {
+              "key": "69_CR90_69",
+              "volume-title": "Hidden order: how adaptation builds complexity",
+              "author": "JH Holland",
+              "year": "1995",
+              "unstructured": "Holland JH (1995) Hidden order: how adaptation builds complexity. Addison-Wesley, Reading"
+            },
+            {
+              "key": "69_CR91_69",
+              "volume-title": "Location and space\u2010economy: a general theory relating to industrial location, market areas, land use, trade and urban structure",
+              "author": "W Isard",
+              "year": "1956",
+              "unstructured": "Isard W (1956) Location and space\u2010economy: a\u00a0general theory relating to industrial location, market areas, land use, trade and urban structure. MIT Press, Cambridge"
+            },
+            {
+              "key": "69_CR92_69",
+              "volume-title": "The death and life of great american cities",
+              "author": "J Jacobs",
+              "year": "1961",
+              "unstructured": "Jacobs J (1961) The death and life of great american cities. Vintage Books, Random House"
+            },
+            {
+              "key": "69_CR93_69",
+              "volume-title": "The self\u2010organizing economy",
+              "author": "PR Krugman",
+              "year": "1996",
+              "unstructured": "Krugman PR (1996) The self\u2010organizing economy. Blackwell, Cambridge"
+            },
+            {
+              "key": "69_CR94_69",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1007/978-3-662-04099-7",
+              "volume-title": "Self\u2010organization and the city",
+              "author": "J Portugali",
+              "year": "2000",
+              "unstructured": "Portugali J (2000) Self\u2010organization and the city. Springer, Berlin"
+            },
+            {
+              "key": "69_CR95_69",
+              "volume-title": "Termites, turtles and traffic jams: explorations in massively parallel micro\u2010worlds",
+              "author": "M Resnick",
+              "year": "1994",
+              "unstructured": "Resnick M (1994) Termites, turtles and traffic jams: explorations in massively parallel micro\u2010worlds. MIT Press, Cambridge"
+            },
+            {
+              "key": "69_CR96_69",
+              "doi-asserted-by": "crossref",
+              "first-page": "287",
+              "DOI": "10.1068/b240287",
+              "volume": "24",
+              "author": "L Sanders",
+              "year": "1997",
+              "unstructured": "Sanders L, Pumain D, Mathian H, Guerin-Pace F, Bura S (1997) SIMPOP: a\u00a0multiagent system for the study of urbanism. Environ Plan B 24:287\u2013305",
+              "journal-title": "Environ Plan B"
+            },
+            {
+              "key": "69_CR97_69",
+              "unstructured": "Simon HA (1969, 1996) Sciences of the artificial. MIT Press, Cambridge"
+            },
+            {
+              "key": "69_CR98_69",
+              "doi-asserted-by": "crossref",
+              "first-page": "99",
+              "DOI": "10.1111/j.1467-9787.1958.tb01366.x",
+              "volume": "1",
+              "author": "JQ Stewart",
+              "year": "1958",
+              "unstructured": "Stewart JQ, Warntz W (1958) Physics of population distribution. J\u00a0Region Sci 1:99\u2013123",
+              "journal-title": "J Region Sci"
+            },
+            {
+              "key": "69_CR99_69",
+              "doi-asserted-by": "crossref",
+              "first-page": "111",
+              "DOI": "10.1155/S1026022698000090",
+              "volume": "2",
+              "author": "RW White",
+              "year": "1998",
+              "unstructured": "White RW (1998) Cities and cellular automata. Discrete Dyn Nature Soc 2:111\u2013125",
+              "journal-title": "Discrete Dyn Nature Soc"
+            },
+            {
+              "key": "69_CR100_69",
+              "volume-title": "Modelling transport",
+              "author": "LG Willumsen",
+              "year": "1990",
+              "unstructured": "Willumsen LG, de Ortuzar JD (1990) Modelling transport. Wiley, Chichester"
+            },
+            {
+              "key": "69_CR101_69",
+              "volume-title": "Complex spatial systems: the modelling foundations of urban and regional analysis",
+              "author": "AG Wilson",
+              "year": "2000",
+              "unstructured": "Wilson AG (2000) Complex spatial systems: the modelling foundations of urban and regional analysis. Pearson Education, Harlow"
+            },
+            {
+              "key": "69_CR102_69",
+              "volume-title": "Urban and regional models in geography and planning",
+              "author": "AG Wilson",
+              "year": "1974",
+              "unstructured": "Wilson AG (1974) Urban and regional models in geography and planning. Wiley, Chichester"
+            }
+          ],
+          "container-title": [
+            "Encyclopedia of Complexity and Systems Science"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://link.springer.com/content/pdf/10.1007/978-0-387-30440-3_69",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                14
+              ]
+            ],
+            "date-time": "2026-10-14T17:33:59Z",
+            "timestamp": 1791999239000
+          },
+          "score": 26.938898,
+          "resource": {
+            "primary": {
+              "URL": "https://link.springer.com/10.1007/978-0-387-30440-3_69"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2009
+              ]
+            ]
+          },
+          "ISBN": [
+            "9780387758886",
+            "9780387304403"
+          ],
+          "references-count": 102,
+          "URL": "https://doi.org/10.1007/978-0-387-30440-3_69",
+          "published": {
+            "date-parts": [
+              [
+                2009
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

@@ -1,0 +1,111 @@
+[
+  {
+    "command": [
+      "bun",
+      "run",
+      "typecheck"
+    ],
+    "exitCode": 0,
+    "log": "final-check-00.log"
+  },
+  {
+    "command": [
+      "bunx",
+      "--no-install",
+      "tsc",
+      "-p",
+      "docs/development/selected-biology-source-types.json"
+    ],
+    "exitCode": 0,
+    "log": "final-check-01.log"
+  },
+  {
+    "command": [
+      "bunx",
+      "--no-install",
+      "tsc",
+      "-p",
+      "docs/development/selected-biology-frozen-types.json"
+    ],
+    "exitCode": 0,
+    "log": "final-check-02.log"
+  },
+  {
+    "command": [
+      "bun",
+      "test",
+      "tests/selected-biology-a.test.ts",
+      "tests/selected-biology-b.test.ts",
+      "tests/random-exponential-poisson.test.ts"
+    ],
+    "exitCode": 0,
+    "log": "final-check-03.log"
+  },
+  {
+    "command": [
+      "sha256sum",
+      "-c",
+      "docs/development/selected-biology-examples.sha256"
+    ],
+    "exitCode": 0,
+    "log": "final-check-04.log"
+  },
+  {
+    "command": [
+      "bun",
+      "examples/selected-biology/01-photosynthesis-and-signaling.ts"
+    ],
+    "exitCode": 0,
+    "log": "final-check-05.log"
+  },
+  {
+    "command": [
+      "bun",
+      "examples/selected-biology/02-patterns-and-construction.ts"
+    ],
+    "exitCode": 0,
+    "log": "final-check-06.log"
+  },
+  {
+    "command": [
+      "bun",
+      "examples/selected-biology/03-homeostasis-and-exercise.ts"
+    ],
+    "exitCode": 1,
+    "log": "final-check-07.log"
+  },
+  {
+    "command": [
+      "bun",
+      "examples/selected-biology/04-season-and-self-assembly.ts"
+    ],
+    "exitCode": 0,
+    "log": "final-check-08.log"
+  },
+  {
+    "command": [
+      "bun",
+      "examples/selected-biology/05-phyllotaxis-and-turnover.ts"
+    ],
+    "exitCode": 0,
+    "log": "final-check-09.log"
+  },
+  {
+    "command": [
+      "bun",
+      "run",
+      "build"
+    ],
+    "exitCode": 0,
+    "log": "final-check-10.log"
+  },
+  {
+    "command": [
+      "bun",
+      "run",
+      "consumer"
+    ],
+    "exitCode": 0,
+    "log": "final-check-11.log"
+  }
+]

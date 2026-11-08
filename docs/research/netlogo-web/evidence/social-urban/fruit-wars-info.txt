@@ -1,0 +1,144 @@
+## WHAT IS IT?
+
+The Fruit Wars model is intended to demonstrate how non-zero-sum economic environments can encourage cooperation and discourage violence. The foragers wander the map looking for fruit bushes. When they arrive at a fruit bush they gain energy through foraging until the fruit bush is exhausted of resources. These animals reproduce and pass on their characteristics to their offspring after gathering a certain amount of energy. They also make decisions based on heritable parameters about how to interact with other foraging animals. The foragers can choose to cooperate, threaten, fight or flee under different circumcstances.
+
+In the model, foragers can either cooperate or fight based on heritable aggression attributes. The COLLABORATION-BONUS parameter in the model controls how beneficial cooperation is in terms of foraging and so one should expect to see the evolutionary equilbrium of the system move toward foragers with less violent tendencies when the model is run with higher COLLABORATION-BONUS settings.
+
+## HOW IT WORKS
+
+__Foragers__ in the model have 240-bit binary genomes:
+
+- The sum of the first 120 bits determines the __strength__, __speed__ and __intelligence__ of the __foragers__. These three stats can have any values between 0 and 60, but their sum must always be 60.
+
+- The sum of bits 120 to 180 determine the __forager__'s __reactive-aggression__, which determines the tendency to threaten when arriving at a bush and the tendency to threaten new arrivals when already at a bush. The sum of bits 180 to 240 determine the forager's __proactive-aggression__, which determines the tendency to fight back when threatened.
+
+__Each Tick in the Model:__
+
+_For each Forager:_
+
+- If no bushes are very nearby or my status is __fleeing__, move randomly based on the __speed__ attribute. Consume 1 energy.
+
+- If there is a bush nearby, move toward it a distance based on the __speed__ attribute. Consume 1 energy.
+
+- If I am very close to a bush, do the __arrival__ procedure.
+
+- If my status is __foraging__, gain some energy and take that energy away from the bush. If the bush runs out of energy, make it die, and remove the __foraging__ status from all other __foragers__ at that bush.
+
+- If my energy is above 200, reproduce, lose 100 energy.
+
+- If out of energy or older than the max-age parameter, die.
+
+_The arrival procedure:_
+
+- If there are no other __foragers__ at the fruit bush, set status to __foraging__.
+
+- If there are other __foragers__ at the bush, the arriving __forager__ chooses to threaten or collaborate probabalistically based on its __reactive-aggression__ value.
+
+- If my choice is __threaten__, other __foragers__ at the bush choose to __flee__ or __fight back__ according to their __proactive-aggression__ parameter.
+
+    - If any __fight back__, the arriving __forager__ wins with a probability based on the difference of the arriving __forager__'s __strength__ and the aggregate __strength__ of all the other __foragers__ choosing to __fight back__. If the arriving forager wins all of the __foragers__ choosing to __fight back die__, otherwise the arriving __forager__ dies.
+
+    - If all the other __foragers__ __flee__, the arriving __forager__ sets its status to __foraging__.
+
+- If the arriving __forager__ chooses to __collaborate__ and there is one other present __forager__, that __forager__ chooses to either allow the arriving __forager__ to join or to __threaten__ causing the arriving __forager__ to flee.
+
+    - If there is only one __forager__ present and it doesn't __threaten__, or there are multiple __foragers__ present, the status of the arriving __forager__ is set to __foraging__.
+
+
+_Reproduction_:
+
+Each __forager__ has a binary genome which encodes the values of its parameters. When the __foragers__ reproduce (asexually), the genome is passed on to the offspring and each position in the genome has a __rate-of-mutation__ chance to flip values.
+
+## HOW TO USE IT
+
+1. Set the __parameters__ as desired.
+
+2. Click SETUP.
+
+3. Click GO.
+
+__Setup Parameters:__
+
+- INITIAL-FRUIT-BUSHES - The number of fruit bushes at the start.
+
+- INITIAL-FORAGERS - The number of foragers at the start.
+
+__Visualization Parameters:__
+
+- SHOW-ENERGY? - displays the current energy of each individual forager in the view if enabled.
+
+- VISUALIZATION - scales the color of the agent depending on the selection based on the value of that parameter with lighter colors representing a higher value.
+
+__Runtime Parameters:__
+
+- BUSH-GROWTH-CHANCE - The chance for a new fruit bush to grow at each turn.
+
+- TICKS-TO-FLEE - When a forager flees, this is the number of ticks it must move randomly before it can seek a new fruit bush.
+
+- RATE-OF-MUTATION - The probability that an individual bit will flip during the passage of bit genome from parent to offspring.
+
+- COLLABORATION-BONUS - A factor used to determine the collaborative rate of foraging. Higher collaboration bonus means higher foraging rates for multiple foragers at a single bush.
+
+- MAX-AGE - The maximum number of ticks an individual forager can live.
+
+## THINGS TO NOTICE
+
+Observe the behavior of the foraging animals as they move around the map. Do you notice any of them fleeing from the fruit bushes? Do you notice many fatalities due to violent encounters (marked in the view by a red X?) How large of population can be sustained by the environment?
+
+The model also has many graphs to observe:
+
+- A histogram of different forager attributes at each tick.
+
+- A standard line graph of the forager attributes at each tick.
+
+- A graph of the ratio of homicides to other deaths.
+
+- A graph of the average foraging rate per tick.
+
+## THINGS TO TRY
+
+Try the different VISUALIZATION modes and observe the changes in the agent population at different model speeds and parameter settings. What sorts of patterns emerge?
+
+Try adjusting the COLLABORATION-BONUS parameter. Oberve the behaviors and graphs discussed in the previous section. How do they vary with the COLLABORATION-BONUS parameter? How long does it generally take the model to reach a somewhat stable state, if ever?
+
+## EXTENDING THE MODEL
+
+Extend the model such that foragers can fight, but not necessarily die. Also, add a mechanic so that if a forager is defeated in a fight, the victorious forager can take all or most of its resources. Additionally, one might incorporate some mechanism such that the foragers' likelihood to fight is determined by some function of their hunger.
+
+## NETLOGO FEATURES
+
+This model makes extensive use of [mutable] (https://en.wikipedia.org/wiki/Immutable_object) NetLogo lists to implement bit genomes for agent evolution. It also uses custom turtle shapes designed in the *Turtle Shapes Editor*.
+
+## RELATED MODELS
+
+* Altriusm
+
+* Cooperation
+
+* Braess' Paradox
+
+## HOW TO CITE
+
+If you mention this model or the NetLogo software in a publication, we ask that you include the citations below.
+
+For the model itself:
+
+* Rasmussen, L. and Wilensky, U. (2019).  NetLogo Fruit Wars model.  http://ccl.northwestern.edu/netlogo/models/FruitWars.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
+
+Please cite the NetLogo software as:
+
+* Wilensky, U. (1999). NetLogo. http://ccl.northwestern.edu/netlogo/. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
+
+## COPYRIGHT AND LICENSE
+
+Copyright 2019 Uri Wilensky.
+
+![CC BY-NC-SA 3.0](http://ccl.northwestern.edu/images/creativecommons/byncsa.png)
+
+This model is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License.  To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
+
+NetLogo itself is free software for non-commercial use under the terms of the GNU General Public License ([see full license information here](https://ccl.northwestern.edu/netlogo/docs/copyright.html)).
+
+To inquire about commercial licenses for either NetLogo or specific models from the models library, please contact netlogo-commercial-admin@ccl.northwestern.edu.
+
+<!-- 2019 Cite: Rasmussen, L. -->

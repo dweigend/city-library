@@ -1,0 +1,28 @@
+import assert from "node:assert/strict";
+import { create as createFire } from "../../experiments/fire/model.ts";
+import { create as createLife } from "../../experiments/life/model.ts";
+import { create as createPercolation } from "../../experiments/percolation/model.ts";
+
+const fire = createFire({ width: 5, height: 5 });
+const fireBefore = fire.read();
+assert.throws(() => fire.setForest([true]));
+assert.deepEqual(fire.read(), fireBefore);
+const life = createLife({ width: 5, height: 5, initialization: "blank" });
+const lifeBefore = life.read();
+assert.throws(() => life.setCells([true]));
+assert.throws(() => life.setCell({ x: 0.2, y: 0 }, true));
+assert.deepEqual(life.read(), lifeBefore);
+life.setCell({ x: 0, y: 0 }, true);
+assert.equal(life.read().counts.living, 1);
+assert.equal(life.read().tick, 0);
+assert.equal(life.read().history.length, 1);
+assert.deepEqual(life.read().randomState, lifeBefore.randomState);
+const oil = createPercolation({ width: 5, height: 5 });
+const oilBefore = oil.read();
+assert.throws(() => oil.setFront([1, 1]));
+assert.throws(() => oil.setFront([0]));
+assert.throws(() => oil.setFront([5]));
+assert.throws(() => oil.setRules({ porosity: 100 }));
+assert.throws(() => oil.advance(-1));
+assert.deepEqual(oil.read(), oilBefore);
+assert.throws(() => createPercolation({ height: 4 }));

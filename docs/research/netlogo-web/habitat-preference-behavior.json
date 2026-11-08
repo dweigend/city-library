@@ -1,0 +1,96 @@
+{
+  "slug": "habitat-preference-behavior",
+  "name": "Habitat Preference Behavior",
+  "catalogPath": "Curricular Models/CT-STEM/Habitat Preference Behavior",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/CT-STEM/Habitat%20Preference%20Behavior.nlogox",
+  "deliveryBatch": "B10",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "Can different rates of random movement produce an apparent habitat preference? NetLogo Habitat Preference Behavior recreates a two-chamber pillbug experiment with moist or dry conditions. Agents move randomly, but in their preferred environment they move only half the time. Original humidity-response experiments [1], mechanistic isopod research [2], and terrestrial-isopod biology [3] provide direct scientific context. The model therefore illustrates retention through changed activity rather than requiring agents to navigate toward a known destination. Its binary conditions and fixed activity probability simplify sensory responses, water balance, and species differences. Unequal chamber occupancy is an outcome of these rules, not evidence of conscious choice, a complete behavioral mechanism, or validation against measured pillbug movement.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/CT-STEM/Habitat%20Preference%20Behavior.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/CT-STEM/Habitat%20Preference%20Behavior.nlogox",
+    "revision": "Best available served NetLogo Web artifact retrieved on 2026-11-05; SHA-256 1b83e6cb1762591e5068c0359234dfa6b871eefb726f76203a55ab80e867abad",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served .nlogox downloaded; Info mechanism descriptions, credits and reference sections inspected. Procedures are not independently audited by this literature task. Source provenance is separate from City Library reimplementation and target-runtime verification.",
+    "evidenceFile": "evidence/biology/habitat-preference-behavior.nlogox",
+    "infoFile": "evidence/biology/habitat-preference-behavior-info.txt",
+    "originalModelCitation": "* Dabholkar, S., Granito, T. and Wilensky, U. (2020).  NetLogo Habitat Preference Behavior model.  http://ccl.northwestern.edu/netlogo/models/HabitatPreferenceBehavior.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "notes": "Original/served model is the behavioral baseline. This research does not claim implementation or browser acceptance."
+  },
+  "publications": [
+    {
+      "id": "gunn",
+      "authors": [
+        "D. L. Gunn"
+      ],
+      "title": "The Humidity Reactions of the Wood-Louse,Porcellio Scaber(Latreille)",
+      "year": 1937,
+      "venue": "Journal of Experimental Biology",
+      "doi": "10.1242/jeb.14.2.178",
+      "url": "https://doi.org/10.1242/jeb.14.2.178",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1242%2Fjeb.14.2.178",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-abstract-and-metadata",
+        "access": "Publisher-deposited abstract and metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/gunn-crossref-direct.json"
+      },
+      "verified": true,
+      "volume": "14",
+      "issue": "2",
+      "pages": "178-186",
+      "relevance": "Original humidity-response experiments relate directly to the model’s chamber comparison and reduced activity in preferred conditions."
+    },
+    {
+      "id": "waloff",
+      "authors": [
+        "Nadejda Waloff"
+      ],
+      "title": "The Mechanisms of Humidity Reactions of Terrestrial Isopods",
+      "year": 1941,
+      "venue": "Journal of Experimental Biology",
+      "doi": "10.1242/jeb.18.2.115",
+      "url": "https://doi.org/10.1242/jeb.18.2.115",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.bibliographic=The+mechanisms+of+humidity+reactions+of+terrestrial+isopods&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-abstract-and-metadata",
+        "access": "Publisher-deposited abstract and metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/waloff-crossref-refined.json"
+      },
+      "verified": true,
+      "volume": "18",
+      "issue": "2",
+      "pages": "115-135",
+      "relevance": "Analyzes the mechanisms retaining terrestrial isopods in damper zones, supporting the kinesis interpretation."
+    },
+    {
+      "id": "isopod",
+      "authors": [
+        "A.M. Alikhan"
+      ],
+      "title": "Terrestrial Isopod Biology",
+      "year": 2018,
+      "venue": "Routledge",
+      "doi": "10.1201/9780203737262",
+      "url": "https://doi.org/10.1201/9780203737262",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.bibliographic=Aggregation+and+sheltering+behaviour+in+a+terrestrial+isopod&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-metadata",
+        "access": "Crossref publisher-deposited metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/isopod-crossref-refined.json"
+      },
+      "verified": true,
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "relevance": "A specialist scientific monograph provides terrestrial-isopod biology and environmental-response context beyond the simplified chamber rules."
+    }
+  ],
+  "gaps": []
+}

@@ -1,0 +1,106 @@
+{
+  "slug": "diffusion-on-a-directed-network",
+  "name": "Diffusion on a Directed Network",
+  "catalogPath": "Sample Models/Networks/Diffusion on a Directed Network",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Networks/Diffusion%20on%20a%20Directed%20Network.nlogox",
+  "deliveryBatch": "B01",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "The scientific question is whether directed links concentrate an initially uniform conserved quantity into unequal node holdings. In NetLogo's Diffusion on a Directed Network model, each node sends a fixed fraction of its value equally through outgoing links, with topology constraining subsequent transfers. The selected literature connects this mechanism to directed transport and mixing: network random walks and diffusion contextualize directional transport [1]; agreement depends on interaction structure and communication assumptions [2]; directed normalized transfers connect to ranking methods with additional teleportation assumptions [3]. Outgoing-degree normalization, sinks and update timing must be specified; quantity transfer is different from independent disease transmission. The original NetLogo behavior is the baseline for reimplementation. This simulation offers a controlled thought experiment, and agreement with its output does not establish empirical validation.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Networks/Diffusion%20on%20a%20Directed%20Network.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Networks/Diffusion%20on%20a%20Directed%20Network.nlogox",
+    "revision": "Served NetLogo Web snapshot retrieved 2026-11-05; {'version': 'NetLogo 7.0.4', 'snapToGrid': 'false'}",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served model XML, Procedures and Info retained locally; Info read for mechanism and attribution.",
+    "evidencePath": "evidence/social-urban/diffusion-on-a-directed-network.nlogox",
+    "sha256": "731a225787d49ee04663897eb563a09b8ab3bb19ac0f6ce0df9c36a3d09d0389",
+    "citation": "For the model itself: * Stonedahl, F. and Wilensky, U. (2008). NetLogo Diffusion on a Directed Network model. http://ccl.northwestern.edu/netlogo/models/DiffusiononaDirectedNetwork. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "scientificOrigin": "Info does not identify a scientific original; related publications below are contextual comparisons, not asserted source derivations.",
+    "notes": "This is source research, not runtime execution or approval of the City Library reimplementation. Original model notices remain in the retained source.",
+    "evidenceFile": "evidence/social-urban/diffusion-on-a-directed-network.nlogox"
+  },
+  "publications": [
+    {
+      "id": "masuda",
+      "creatorRole": "author",
+      "authors": [
+        "Naoki Masuda",
+        "Mason A. Porter",
+        "Renaud Lambiotte"
+      ],
+      "title": "Random walks and diffusion on networks",
+      "year": 2017,
+      "venue": "Physics Reports",
+      "doi": "10.1016/j.physrep.2017.07.007",
+      "url": "https://doi.org/10.1016/j.physrep.2017.07.007",
+      "relevance": "network random walks and diffusion contextualize directional transport",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1016%2Fj.physrep.2017.07.007",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; full-text access not established",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/masuda-crossref.json",
+        "evidenceSummary": "Bibliographic metadata only; relevance is a bounded theoretical comparison, not a claim to have read inaccessible full text.",
+        "evidenceFile": "evidence/social-urban/masuda-crossref.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "consensus",
+      "creatorRole": "author",
+      "authors": [
+        "Reza Olfati-Saber",
+        "J. Alex Fax",
+        "Richard M. Murray"
+      ],
+      "title": "Consensus and Cooperation in Networked Multi-Agent Systems",
+      "year": 2007,
+      "venue": "Proceedings of the IEEE",
+      "doi": "10.1109/jproc.2006.887293",
+      "url": "https://doi.org/10.1109/jproc.2006.887293",
+      "relevance": "agreement depends on interaction structure and communication assumptions",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1109%2FJPROC.2006.887293",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; full-text access not established",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/consensus-crossref.json",
+        "evidenceSummary": "Bibliographic metadata only; relevance is a bounded theoretical comparison, not a claim to have read inaccessible full text.",
+        "evidenceFile": "evidence/social-urban/consensus-crossref.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "pagerank",
+      "creatorRole": "author",
+      "authors": [
+        "Sergey Brin",
+        "Lawrence Page"
+      ],
+      "title": "The anatomy of a large-scale hypertextual Web search engine",
+      "year": 1998,
+      "venue": "Computer Networks and ISDN Systems",
+      "doi": "10.1016/s0169-7552(98)00110-x",
+      "url": "https://doi.org/10.1016/s0169-7552(98)00110-x",
+      "relevance": "directed normalized transfers connect to ranking methods with additional teleportation assumptions",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1016%2FS0169-7552%2898%2900110-X",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; full-text access not established",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/pagerank-crossref.json",
+        "evidenceSummary": "Bibliographic metadata only; relevance is a bounded theoretical comparison, not a claim to have read inaccessible full text.",
+        "evidenceFile": "evidence/social-urban/pagerank-crossref.json"
+      },
+      "verified": true
+    }
+  ],
+  "gaps": [],
+  "integrationNotes": [
+    "Coordinator source check: setup assigns value1 to every node; revised the framing from initially uneven to initially uniform. Publication membership and access/verification tiers unchanged."
+  ]
+}

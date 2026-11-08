@@ -1,0 +1,501 @@
+{
+  "consultedUrl": "https://api.crossref.org/works/10.1002%2Fetc.5620180819",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work",
+    "message-version": "1.0.0",
+    "message": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            10,
+            15
+          ]
+        ],
+        "date-time": "2026-10-15T20:32:54Z",
+        "timestamp": 1792096374763,
+        "version": "4.4.0"
+      },
+      "reference-count": 21,
+      "publisher": "Oxford University Press (OUP)",
+      "issue": "8",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                1999,
+                8,
+                1
+              ]
+            ],
+            "date-time": "1999-08-01T00:00:00Z",
+            "timestamp": 933465600000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "https://academic.oup.com/pages/standard-publication-reuse-rights"
+        },
+        {
+          "start": {
+            "date-parts": [
+              [
+                2009,
+                11,
+                2
+              ]
+            ],
+            "date-time": "2009-11-02T00:00:00Z",
+            "timestamp": 1257120000000
+          },
+          "content-version": "vor",
+          "delay-in-days": 3746,
+          "URL": "http://onlinelibrary.wiley.com/termsAndConditions#vor"
+        }
+      ],
+      "content-domain": {
+        "domain": [
+          "setac.onlinelibrary.wiley.com"
+        ],
+        "crossmark-restriction": true
+      },
+      "short-container-title": [],
+      "published-print": {
+        "date-parts": [
+          [
+            1999,
+            8,
+            1
+          ]
+        ]
+      },
+      "abstract": "<jats:title>Abstract</jats:title><jats:p>The rate of biodegradation of pollutants in soil can be limited by the pollutant's availability to microorganisms. We have developed a bioassay for the availability of phenanthrene to bacteria that degrade phenanthrene in soil. The assay uses a soil in which phenanthrene is degraded very slowly. The rate of phenanthrene mineralization in this soil may be increased substantially through bioaugmentation with a bacterial inoculum. By delaying inoculation, it is possible to manipulate the time phenanthrene is present in soil before accelerated biodegradation begins. A phenanthrene concentration much lower than the affinity constant of the inoculum is added; thus, biodegradation kinetics approach first order. Because the phenanthrene first-order rate constant for the inoculum is the same regardless of the phenanthrene residence time in soil, the change in phenanthrene availability to the inoculum can be measured over time. The availability of phenanthrene to bacteria declined in a biphasic double exponential pattern with time. The initial rapid decline in availability resembled the change in amount of phenanthrene extracted from soil with hexane-water. However, after phenanthrene had been present in the soil longer than 300 h, the fraction extracted with hexane-water declined faster than the substrate available to the bacterial inoculum, suggesting that the bacteria are able to access a pool of phenanthrene unavailable to hexane.</jats:p>",
+      "DOI": "10.1002/etc.5620180819",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2010,
+            3,
+            17
+          ]
+        ],
+        "date-time": "2010-03-17T21:19:32Z",
+        "timestamp": 1268860772000
+      },
+      "page": "1742-1746",
+      "update-policy": "https://doi.org/10.1002/crossmark_policy",
+      "source": "Crossref",
+      "is-referenced-by-count": 18,
+      "title": [
+        "Using biodegradation kinetics to measure availability of aged phenanthrene to bacteria inoculated into soil"
+      ],
+      "prefix": "10.1093",
+      "volume": "18",
+      "author": [
+        {
+          "given": "Egbert",
+          "family": "Schwartz",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Graduate Group in Ecology and Department of Land, Air and Water Resources, One Shields Avenue, University of California at Davis, Davis, California 95616-8627, USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Kate M",
+          "family": "Scow",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Graduate Group in Ecology and Department of Land, Air and Water Resources, One Shields Avenue, University of California at Davis, Davis, California 95616-8627, USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "286",
+      "published-online": {
+        "date-parts": [
+          [
+            1999,
+            8,
+            1
+          ]
+        ]
+      },
+      "reference": [
+        {
+          "key": "2025010612592378700_bib1",
+          "doi-asserted-by": "crossref",
+          "first-page": "537",
+          "DOI": "10.1021/es00002a033",
+          "article-title": "Effect of aging of chemicals in soil on their biodegradability and extractability",
+          "volume": "29",
+          "author": "Hatzinger",
+          "year": "1995",
+          "journal-title": "Environ Sci Technol"
+        },
+        {
+          "key": "2025010612592378700_bib2",
+          "doi-asserted-by": "crossref",
+          "first-page": "1",
+          "DOI": "10.1021/es940683g",
+          "article-title": "Mechanisms of slow sorption of organic chemicals to natural particles",
+          "volume": "30",
+          "author": "Pignatello",
+          "year": "1996",
+          "journal-title": "Environ Sci Technol"
+        },
+        {
+          "key": "2025010612592378700_bib3",
+          "first-page": "1",
+          "volume-title": "Advances in Agronomy",
+          "author": "Scow",
+          "year": "1997"
+        },
+        {
+          "key": "2025010612592378700_bib4",
+          "doi-asserted-by": "crossref",
+          "first-page": "1686",
+          "DOI": "10.1021/es9605681",
+          "article-title": "A distributed reactivity model for sorption by soils and sediments. 6. Mechanistic implications of desorption under supercritical fluid conditions",
+          "volume": "31",
+          "author": "Weber",
+          "year": "1997",
+          "journal-title": "Environ Sci Technol"
+        },
+        {
+          "key": "2025010612592378700_bib5",
+          "doi-asserted-by": "crossref",
+          "first-page": "1876",
+          "DOI": "10.1002/etc.5620151104",
+          "article-title": "Oxygen limitations and aging as explanations for the field persistence of naphthalene in coal tar-contaminated surface sediments",
+          "volume": "15",
+          "author": "Madsen",
+          "year": "1996",
+          "journal-title": "Environ Toxicol Chem"
+        },
+        {
+          "key": "2025010612592378700_bib6",
+          "doi-asserted-by": "crossref",
+          "first-page": "206",
+          "DOI": "10.2134/jeq1997.00472425002600010030x",
+          "article-title": "Atrazine mineralization in laboratory-aged soil microcosms inoculated with s-triazine- degrading bacteria",
+          "volume": "26",
+          "author": "Radosevich",
+          "year": "1997",
+          "journal-title": "J Environ Qual"
+        },
+        {
+          "key": "2025010612592378700_bib7",
+          "doi-asserted-by": "crossref",
+          "first-page": "1201",
+          "DOI": "10.1021/es00165a007",
+          "article-title": "Persistence of 1,2-dibromoethane in soils: Entrapment in intraparticle micropores",
+          "volume": "21",
+          "author": "Steinburg",
+          "year": "1987",
+          "journal-title": "Environ Sci Technol"
+        },
+        {
+          "key": "2025010612592378700_bib8",
+          "doi-asserted-by": "crossref",
+          "first-page": "582",
+          "DOI": "10.1002/etc.5620160327",
+          "article-title": "Declining bioavailability and inappropriate estimation of risk of persistent compounds",
+          "volume": "16",
+          "author": "Kelsey",
+          "year": "1997",
+          "journal-title": "Environ Toxicol Chem"
+        },
+        {
+          "key": "2025010612592378700_bib9",
+          "first-page": "93",
+          "article-title": "Biodegradation of sorbed chemicals in soil",
+          "volume": "103",
+          "author": "Scow",
+          "year": "1994",
+          "journal-title": "Environ Health Perspect"
+        },
+        {
+          "key": "2025010612592378700_bib10",
+          "volume-title": "Effect of nitrogen and phosphorus addition on phenanthrene biodegradation in four soils",
+          "author": "Johnson",
+          "year": "1999"
+        },
+        {
+          "key": "2025010612592378700_bib11",
+          "doi-asserted-by": "crossref",
+          "first-page": "1299",
+          "DOI": "10.1128/aem.47.6.1299-1306.1984",
+          "article-title": "Models for mineralization kinetics with the variables of substrate concentration and population density",
+          "volume": "47",
+          "author": "Simkins",
+          "year": "1984",
+          "journal-title": "Appl Environ Microbiol"
+        },
+        {
+          "key": "2025010612592378700_bib12",
+          "doi-asserted-by": "crossref",
+          "first-page": "1028",
+          "DOI": "10.1128/aem.51.5.1028-1035.1986",
+          "article-title": "Kinetics of mineralization of organic compounds at low concentrations in soil",
+          "volume": "51",
+          "author": "Scow",
+          "year": "1986",
+          "journal-title": "Appl Environ Microbiol"
+        },
+        {
+          "key": "2025010612592378700_bib13",
+          "doi-asserted-by": "crossref",
+          "first-page": "219",
+          "DOI": "10.1021/bk-1976-0029.ch017",
+          "volume-title": "Bound and Conjugated Pesticide Residues",
+          "author": "Hamaker",
+          "year": "1976"
+        },
+        {
+          "key": "2025010612592378700_bib14",
+          "doi-asserted-by": "crossref",
+          "first-page": "1351",
+          "DOI": "10.1002/etc.5620160703",
+          "article-title": "Desorption kinetics of chlorobenzenes, polycyclic aromatic hydrocarbons, and polychlorinated biphenyls: Sediment extraction with tenax and effects of contact time and solute hydrophobicity",
+          "volume": "16",
+          "author": "Cornelissen",
+          "year": "1997",
+          "journal-title": "Environ Toxicol Chem"
+        },
+        {
+          "key": "2025010612592378700_bib15",
+          "doi-asserted-by": "crossref",
+          "first-page": "1955",
+          "DOI": "10.1021/es00034a012",
+          "article-title": "A distributed reactivity model for sorption by soils and sediments. 1. Conceptual basis and equilibrium assessments",
+          "volume": "26",
+          "author": "Weber",
+          "year": "1992",
+          "journal-title": "Environ Sci Technol"
+        },
+        {
+          "key": "2025010612592378700_bib16",
+          "doi-asserted-by": "crossref",
+          "first-page": "881",
+          "DOI": "10.1021/es950329y",
+          "article-title": "A distributed reactivity model for sorption by soils and sediments. 4. Intraparticle heterogeneity and phase-distribution relationships under nonequilibrium conditions",
+          "volume": "30",
+          "author": "Weber",
+          "year": "1996",
+          "journal-title": "Environ Sci Technol"
+        },
+        {
+          "key": "2025010612592378700_bib17",
+          "doi-asserted-by": "crossref",
+          "first-page": "1282",
+          "DOI": "10.1002/etc.5620150805",
+          "article-title": "Time-dependent isotherm shape of organic compounds in soil organic matter: Implications for sorption mechanism",
+          "volume": "15",
+          "author": "Xing",
+          "year": "1996",
+          "journal-title": "Environ Toxicol Chem"
+        },
+        {
+          "key": "2025010612592378700_bib18",
+          "doi-asserted-by": "crossref",
+          "first-page": "214",
+          "DOI": "10.1021/es960354j",
+          "article-title": "Selective chemical extractants to predict bioavailability of soil-aged organic chemicals",
+          "volume": "31",
+          "author": "Kelsey",
+          "year": "1997",
+          "journal-title": "Environ Sci Technol"
+        },
+        {
+          "key": "2025010612592378700_bib19",
+          "first-page": "193",
+          "volume-title": "Contaminants and Sediments",
+          "author": "Karickhoff",
+          "year": "1980"
+        },
+        {
+          "key": "2025010612592378700_bib20",
+          "doi-asserted-by": "crossref",
+          "first-page": "1619",
+          "DOI": "10.1080/00021369.1969.10859515",
+          "article-title": "Trehalose lipid and \u03b1-branched-\u03b2-hydroxy fatty acid formed by bacteria grown on n-alkanes",
+          "volume": "33",
+          "author": "Suzuki",
+          "year": "1969",
+          "journal-title": "Agric Biol Chem"
+        },
+        {
+          "key": "2025010612592378700_bib21",
+          "doi-asserted-by": "crossref",
+          "first-page": "1142",
+          "DOI": "10.1128/aem.58.4.1142-1152.1992",
+          "article-title": "Differential bioavailability of soilsorbed naphthalene to two bacterial species",
+          "volume": "58",
+          "author": "Guerin",
+          "year": "1992",
+          "journal-title": "Appl Environ Microbiol"
+        }
+      ],
+      "container-title": [
+        "Environmental Toxicology and Chemistry"
+      ],
+      "original-title": [],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1002%2Fetc.5620180819",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://academic.oup.com/etc/article-pdf/18/8/1742/60144104/5620180819.pdf",
+          "content-type": "application/pdf",
+          "content-version": "vor",
+          "intended-application": "syndication"
+        },
+        {
+          "URL": "https://academic.oup.com/etc/article-pdf/18/8/1742/60144104/5620180819.pdf",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2025,
+            2,
+            19
+          ]
+        ],
+        "date-time": "2025-02-19T14:52:33Z",
+        "timestamp": 1739976753000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://academic.oup.com/etc/article/18/8/1742/7830072"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            1999,
+            8,
+            1
+          ]
+        ]
+      },
+      "references-count": 21,
+      "journal-issue": {
+        "issue": "8",
+        "published-online": {
+          "date-parts": [
+            [
+              1999,
+              8,
+              1
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              1999,
+              8,
+              1
+            ]
+          ]
+        }
+      },
+      "URL": "https://doi.org/10.1002/etc.5620180819",
+      "relation": {},
+      "ISSN": [
+        "0730-7268",
+        "1552-8618"
+      ],
+      "issn-type": [
+        {
+          "value": "0730-7268",
+          "type": "print"
+        },
+        {
+          "value": "1552-8618",
+          "type": "electronic"
+        }
+      ],
+      "subject": [],
+      "published-other": {
+        "date-parts": [
+          [
+            1999,
+            8,
+            1
+          ]
+        ]
+      },
+      "published": {
+        "date-parts": [
+          [
+            1999,
+            8,
+            1
+          ]
+        ]
+      },
+      "assertion": [
+        {
+          "value": "1998-04-14",
+          "order": 0,
+          "name": "received",
+          "label": "Received",
+          "group": {
+            "name": "publication_history",
+            "label": "Publication History"
+          }
+        },
+        {
+          "value": "1998-08-10",
+          "order": 1,
+          "name": "accepted",
+          "label": "Accepted",
+          "group": {
+            "name": "publication_history",
+            "label": "Publication History"
+          }
+        },
+        {
+          "value": "2009-11-02",
+          "order": 2,
+          "name": "published",
+          "label": "Published",
+          "group": {
+            "name": "publication_history",
+            "label": "Publication History"
+          }
+        }
+      ]
+    }
+  }
+}

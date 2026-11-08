@@ -1,0 +1,1950 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=Massive+increase+in+visual+range+preceded+the+origin+of+terrestrial+vertebrates+MacIver+2017&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 1407341,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                11,
+                4
+              ]
+            ],
+            "date-time": "2026-11-04T08:28:58Z",
+            "timestamp": 1793780938181,
+            "version": "4.6.1"
+          },
+          "reference-count": 88,
+          "publisher": "National Academy of Sciences",
+          "issue": "12",
+          "content-domain": {
+            "domain": [
+              "www.pnas.org"
+            ],
+            "crossmark-restriction": true
+          },
+          "short-container-title": [
+            "Proc. Natl. Acad. Sci. U.S.A."
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2017,
+                3,
+                21
+              ]
+            ]
+          },
+          "abstract": "<jats:title>Significance</jats:title>\n                  <jats:p>Starting 385 million years ago, certain fish slowly evolved into legged animals living on land. We show that eyes tripled in size and shifted from the sides to the top of the head long before fish modified their fins into limbs for land. Before permanent life on land, these animals probably hunted like crocodiles, looking at prey from just above the water line, where the vastly higher transparency of air enabled long-distance vision and selected for larger eyes. The \u201cbuena vista\u201d hypothesis that our study forwards is that seeing opportunities far away provided an informational zip line to the bounty of invertebrate prey on land, aiding selection for limbs\u2014first for brief forays onto land and eventually, for life there.</jats:p>",
+          "DOI": "10.1073/pnas.1615563114",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2017,
+                3,
+                7
+              ]
+            ],
+            "date-time": "2017-03-07T21:10:33Z",
+            "timestamp": 1488921033000
+          },
+          "update-policy": "https://doi.org/10.1073/pnas.cm10313",
+          "source": "Crossref",
+          "is-referenced-by-count": 95,
+          "title": [
+            "Massive increase in visual range preceded the origin of terrestrial vertebrates"
+          ],
+          "prefix": "10.1073",
+          "volume": "114",
+          "author": [
+            {
+              "given": "Malcolm A.",
+              "family": "MacIver",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "The Neuroscience and Robotics Laboratory, Northwestern University, Evanston, IL 60208;"
+                },
+                {
+                  "name": "Department of Mechanical Engineering, Northwestern University, Evanston, IL 60208;"
+                },
+                {
+                  "name": "Department of Biomedical Engineering, Northwestern University, Evanston, IL 60208;"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Lars",
+              "family": "Schmitz",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "W. M. Keck Science Department, Claremont McKenna, Pitzer, and Scripps Colleges, Claremont, CA 91711;"
+                },
+                {
+                  "name": "Dinosaur Institute, Natural History Museum of Los Angeles County, Los Angeles, CA 90007;"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Ugurcan",
+              "family": "Mugan",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Department of Biomedical Engineering, Northwestern University, Evanston, IL 60208;"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Todd D.",
+              "family": "Murphey",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Department of Mechanical Engineering, Northwestern University, Evanston, IL 60208;"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Curtis D.",
+              "family": "Mobley",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Section for Optical Oceanography, Sequoia Scientific, Inc., Bellevue, WA 98005"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "341",
+          "published-online": {
+            "date-parts": [
+              [
+                2017,
+                3,
+                7
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "e_1_3_4_1_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "1",
+              "DOI": "10.1086/284325",
+              "article-title": "Phylogenies and the comparative method",
+              "volume": "125",
+              "author": "Felsenstein J",
+              "year": "1985",
+              "unstructured": "J Felsenstein, Phylogenies and the comparative method. Am Nat 125, 1\u201315 (1985).",
+              "journal-title": "Am Nat"
+            },
+            {
+              "key": "e_1_3_4_2_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "346",
+              "DOI": "10.1086/303327",
+              "article-title": "Using the past to predict the present: Confidence intervals for regression equations in phylogenetic comparative methods",
+              "volume": "155",
+              "author": "Garland T",
+              "year": "2000",
+              "unstructured": "T Garland, AR Ives, Using the past to predict the present: Confidence intervals for regression equations in phylogenetic comparative methods. Am Nat 155, 346\u2013364 (2000).",
+              "journal-title": "Am Nat"
+            },
+            {
+              "key": "e_1_3_4_3_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "1341",
+              "DOI": "10.1111/j.1558-5646.1997.tb01457.x",
+              "article-title": "Stabilizing selection and the comparative analysis of adaptation",
+              "volume": "51",
+              "author": "Hansen TF",
+              "year": "1997",
+              "unstructured": "TF Hansen, Stabilizing selection and the comparative analysis of adaptation. Evolution 51, 1341\u20131351 (1997).",
+              "journal-title": "Evolution"
+            },
+            {
+              "key": "e_1_3_4_4_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "683",
+              "DOI": "10.1086/426002",
+              "article-title": "Phylogenetic comparative analysis: A modeling approach for adaptive evolution",
+              "volume": "164",
+              "author": "Butler MA",
+              "year": "2004",
+              "unstructured": "MA Butler, AA King, Phylogenetic comparative analysis: A modeling approach for adaptive evolution. Am Nat 164, 683\u2013695 (2004).",
+              "journal-title": "Am Nat"
+            },
+            {
+              "key": "e_1_3_4_5_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "902",
+              "DOI": "10.1093/sysbio/syu057",
+              "article-title": "A novel Bayesian method for inferring and interpreting the dynamics of adaptive landscapes from phylogenetic comparative data",
+              "volume": "63",
+              "author": "Uyeda JC",
+              "year": "2014",
+              "unstructured": "JC Uyeda, LJ Harmon, A novel Bayesian method for inferring and interpreting the dynamics of adaptive landscapes from phylogenetic comparative data. Syst Biol 63, 902\u2013918 (2014).",
+              "journal-title": "Syst Biol"
+            },
+            {
+              "key": "e_1_3_4_6_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "1160",
+              "DOI": "10.1038/ncomms2170",
+              "article-title": "The earliest known stem-tetrapod from the Lower Devonian of China",
+              "volume": "3",
+              "author": "Lu J",
+              "year": "2012",
+              "unstructured": "J Lu, , The earliest known stem-tetrapod from the Lower Devonian of China. Nat Commun 3, 1160 (2012).",
+              "journal-title": "Nat Commun"
+            },
+            {
+              "key": "e_1_3_4_7_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "31",
+              "DOI": "10.1017/S0263593300001395",
+              "article-title": "A review of Silvanerpeton miripedes, a stem amniote from the Lower Carboniferous of East Kirkton, West Lothian, Scotland",
+              "volume": "97",
+              "author": "Ruta M",
+              "year": "2006",
+              "unstructured": "M Ruta, JA Clack, A review of Silvanerpeton miripedes, a stem amniote from the Lower Carboniferous of East Kirkton, West Lothian, Scotland. Trans R Soc Edinb Earth Sci 97, 31\u201363 (2006).",
+              "journal-title": "Trans R Soc Edinb Earth Sci"
+            },
+            {
+              "key": "e_1_3_4_8_2",
+              "unstructured": "JA Clack Gaining Ground: The Origin and Evolution of Tetrapods (Indiana Univ Press Bloomington IN). (2012)."
+            },
+            {
+              "key": "e_1_3_4_9_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "757",
+              "DOI": "10.1038/nature04639",
+              "article-title": "A Devonian tetrapod-like fish and the evolution of the tetrapod body plan",
+              "volume": "440",
+              "author": "Daeschler EB",
+              "year": "2006",
+              "unstructured": "EB Daeschler, NH Shubin, FA Jenkins, A Devonian tetrapod-like fish and the evolution of the tetrapod body plan. Nature 440, 757\u2013763 (2006).",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "e_1_3_4_10_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "893",
+              "DOI": "10.1073/pnas.1322559111",
+              "article-title": "Pelvic girdle and fin of Tiktaalik roseae",
+              "volume": "111",
+              "author": "Shubin NH",
+              "year": "2014",
+              "unstructured": "NH Shubin, EB Daeschler, FA Jenkins, Pelvic girdle and fin of Tiktaalik roseae. Proc Natl Acad Sci USA 111, 893\u2013899 (2014).",
+              "journal-title": "Proc Natl Acad Sci USA"
+            },
+            {
+              "key": "e_1_3_4_11_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "523",
+              "DOI": "10.1038/nature11124",
+              "article-title": "Three-dimensional limb joint mobility in the early tetrapod Ichthyostega",
+              "volume": "486",
+              "author": "Pierce SE",
+              "year": "2012",
+              "unstructured": "SE Pierce, JA Clack, JR Hutchinson, Three-dimensional limb joint mobility in the early tetrapod Ichthyostega. Nature 486, 523\u2013526 (2012).",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "e_1_3_4_12_2",
+              "unstructured": "E Vorobyeva HP Schultze Description and Systematics of Panderichthyid Fishes with Comments on Their Relationship to Tetrapods (Comstock Publishing Associates Ithaca NY) pp 68\u2013109. (1991)."
+            },
+            {
+              "key": "e_1_3_4_13_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "700",
+              "DOI": "10.1086/425183",
+              "article-title": "The greatest step in vertebrate history: A paleobiological review of the fish-tetrapod transition",
+              "volume": "77",
+              "author": "Long JA",
+              "year": "2004",
+              "unstructured": "JA Long, MS Gordon, The greatest step in vertebrate history: A paleobiological review of the fish-tetrapod transition. Physiol Biochem Zool 77, 700\u2013719 (2004).",
+              "journal-title": "Physiol Biochem Zool"
+            },
+            {
+              "key": "e_1_3_4_14_2",
+              "first-page": "293",
+              "article-title": "The Panderichthyid fish Elpistostege\u2014A close relative of Tetrapods?",
+              "volume": "28",
+              "author": "Schultze H",
+              "year": "1985",
+              "unstructured": "H Schultze, M Arsenault, The Panderichthyid fish Elpistostege\u2014A close relative of Tetrapods? Palaeontology 28, 293\u2013309 (1985).",
+              "journal-title": "Palaeontology"
+            },
+            {
+              "key": "e_1_3_4_15_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "798",
+              "DOI": "10.1002/ar.20889",
+              "article-title": "The relationship between the lizard eye and associated bony features: A cautionary note for interpreting fossil activity patterns",
+              "volume": "292",
+              "author": "Hall MI",
+              "year": "2009",
+              "unstructured": "MI Hall, The relationship between the lizard eye and associated bony features: A cautionary note for interpreting fossil activity patterns. Anat Rec (Hoboken) 292, 798\u2013812 (2009).",
+              "journal-title": "Anat Rec (Hoboken)"
+            },
+            {
+              "key": "e_1_3_4_16_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "759",
+              "DOI": "10.1002/jmor.10720",
+              "article-title": "Quantitative estimates of visual performance features in fossil birds",
+              "volume": "270",
+              "author": "Schmitz L",
+              "year": "2009",
+              "unstructured": "L Schmitz, Quantitative estimates of visual performance features in fossil birds. J Morphol 270, 759\u2013773 (2009).",
+              "journal-title": "J Morphol"
+            },
+            {
+              "key": "e_1_3_4_17_2",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1098/rspb.2014.1642",
+              "article-title": "Nocturnality in synapsids predates the origin of mammals by over 100 million years",
+              "volume": "281",
+              "author": "Angielczyk KD",
+              "year": "2014",
+              "unstructured": "KD Angielczyk, L Schmitz, Nocturnality in synapsids predates the origin of mammals by over 100 million years. Proc R Soc B 281 (2014).",
+              "journal-title": "Proc R Soc B"
+            },
+            {
+              "key": "e_1_3_4_18_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "20130038",
+              "DOI": "10.1098/rstb.2013.0038",
+              "article-title": "Computational visual ecology in the pelagic realm",
+              "volume": "369",
+              "author": "Nilsson DE",
+              "year": "2014",
+              "unstructured": "DE Nilsson, E Warrant, S Johnsen, Computational visual ecology in the pelagic realm. Philos Trans R Soc Lond B Biol Sci 369, 20130038 (2014).",
+              "journal-title": "Philos Trans R Soc Lond B Biol Sci"
+            },
+            {
+              "key": "e_1_3_4_19_2",
+              "unstructured": "JTO Kirk Light and Photosynthesis in Aquatic Ecosystems (Cambridge Univ Press Cambridge UK). (1983)."
+            },
+            {
+              "key": "e_1_3_4_20_2",
+              "unstructured": "CD Mobley The optical properties of water. Handbook of Optics ed Bass M (McGraw-Hill New York) 2nd Ed Vol 1 pp 43.3\u201343.56. (1995)."
+            },
+            {
+              "key": "e_1_3_4_21_2",
+              "first-page": "1",
+              "article-title": "Predicting light penetration into river waters",
+              "volume": "113",
+              "author": "Davies-Colley RJ",
+              "year": "2008",
+              "unstructured": "RJ Davies-Colley, JW Nagels, Predicting light penetration into river waters. J Geophys Res Biogeosci 113, 1\u20139 (2008).",
+              "journal-title": "J Geophys Res Biogeosci"
+            },
+            {
+              "key": "e_1_3_4_22_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "616",
+              "DOI": "10.4319/lo.1988.33.4.0616",
+              "article-title": "Measuring water clarity with a black disk",
+              "volume": "33",
+              "author": "Davies-Colley RJ",
+              "year": "1988",
+              "unstructured": "RJ Davies-Colley, Measuring water clarity with a black disk. Limnol Oceanogr 33, 616\u2013623 (1988).",
+              "journal-title": "Limnol Oceanogr"
+            },
+            {
+              "key": "e_1_3_4_23_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "91",
+              "DOI": "10.4319/lo.1991.36.1.0091",
+              "article-title": "Secchi disk and photometer estimates of light regimes in Alaskan lakes: Effects of yellow color and turbidity",
+              "volume": "36",
+              "author": "Koenings J",
+              "year": "1991",
+              "unstructured": "J Koenings, J Edmundson, Secchi disk and photometer estimates of light regimes in Alaskan lakes: Effects of yellow color and turbidity. Limnol Oceanogr 36, 91\u2013105 (1991).",
+              "journal-title": "Limnol Oceanogr"
+            },
+            {
+              "key": "e_1_3_4_24_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "173",
+              "DOI": "10.1016/j.palaeo.2014.12.013",
+              "article-title": "Palaeoenvironments of the Eifelian dolomites with earliest tetrapod trackways (Holy Cross Mountains, Poland)",
+              "volume": "420",
+              "author": "Narkiewicz M",
+              "year": "2015",
+              "unstructured": "M Narkiewicz, , Palaeoenvironments of the Eifelian dolomites with earliest tetrapod trackways (Holy Cross Mountains, Poland). Palaeogeogr Palaeoclimatol Palaeoecol 420, 173\u2013192 (2015).",
+              "journal-title": "Palaeogeogr Palaeoclimatol Palaeoecol"
+            },
+            {
+              "key": "e_1_3_4_25_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "235",
+              "DOI": "10.1086/659144",
+              "article-title": "Woodland hypothesis for Devonian tetrapod evolution",
+              "volume": "119",
+              "author": "Retallack GJ",
+              "year": "2011",
+              "unstructured": "GJ Retallack, Woodland hypothesis for Devonian tetrapod evolution. J Geol 119, 235\u2013258 (2011).",
+              "journal-title": "J Geol"
+            },
+            {
+              "key": "e_1_3_4_26_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "510",
+              "DOI": "10.1093/icb/icm055",
+              "article-title": "Devonian climate change, breathing, and the origin of the tetrapod stem group",
+              "volume": "47",
+              "author": "Clack JA",
+              "year": "2007",
+              "unstructured": "JA Clack, Devonian climate change, breathing, and the origin of the tetrapod stem group. Integr Comp Biol 47, 510\u2013523 (2007).",
+              "journal-title": "Integr Comp Biol"
+            },
+            {
+              "key": "e_1_3_4_27_2",
+              "unstructured": "D Killinger J Churnside L Rothman Atmospheric optics. Handbook of Optics ed Bass M (McGraw-Hill New York) 2nd Ed Vol 1 44.1\u201344.49. (1995)."
+            },
+            {
+              "key": "e_1_3_4_28_2",
+              "doi-asserted-by": "crossref",
+              "unstructured": "WEK Middleton Vision Through the Atmosphere (Univ of Toronto Press Toronto). (1952).",
+              "DOI": "10.3138/9781487586140"
+            },
+            {
+              "key": "e_1_3_4_29_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "2671",
+              "DOI": "10.1371/journal.pbio.0050301",
+              "article-title": "Omnidirectional sensory and motor volumes in an electric fish",
+              "volume": "5",
+              "author": "Snyder JB",
+              "year": "2007",
+              "unstructured": "JB Snyder, ME Nelson, JW Burdick, MA MacIver, Omnidirectional sensory and motor volumes in an electric fish. PLoS Biol 5, 2671\u20132683 (2007).",
+              "journal-title": "PLoS Biol"
+            },
+            {
+              "key": "e_1_3_4_30_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "e1000769",
+              "DOI": "10.1371/journal.pcbi.1000769",
+              "article-title": "Energy-information trade-offs between movement and sensing",
+              "volume": "6",
+              "author": "MacIver MA",
+              "year": "2010",
+              "unstructured": "MA MacIver, AA Shirgaonkar, NA Patankar, Energy-information trade-offs between movement and sensing. PLoS Comput Biol 6, e1000769 (2010).",
+              "journal-title": "PLoS Comput Biol"
+            },
+            {
+              "key": "e_1_3_4_31_2",
+              "doi-asserted-by": "crossref",
+              "unstructured": "TW Cronin S Johnsen NJ Marshall EJ Warrant Visual Ecology (Princeton UnivPress Princeton). (2014).",
+              "DOI": "10.23943/princeton/9780691151847.001.0001"
+            },
+            {
+              "key": "e_1_3_4_32_2",
+              "unstructured": "C Mobley E Boss C Roesier Ocean Optics Light and Radiometry Visualizing Radiances . Available at www.oceanopticsbook.info. Accessed September 17 2016. (2016)."
+            },
+            {
+              "key": "e_1_3_4_33_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "174",
+              "DOI": "10.1016/j.asd.2009.11.002",
+              "article-title": "The geological record and phylogeny of the Myriapoda",
+              "volume": "39",
+              "author": "Shear WA",
+              "year": "2010",
+              "unstructured": "WA Shear, GD Edgecombe, The geological record and phylogeny of the Myriapoda. Arthropod Struct Dev 39, 174\u2013190 (2010).",
+              "journal-title": "Arthropod Struct Dev"
+            },
+            {
+              "key": "e_1_3_4_34_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "53",
+              "DOI": "10.1098/rspb.1994.0048",
+              "article-title": "A pessimistic estimate of the time required for an eye to evolve",
+              "volume": "256",
+              "author": "Nilsson DE",
+              "year": "1994",
+              "unstructured": "DE Nilsson, S Pelger, A pessimistic estimate of the time required for an eye to evolve. Proc Biol Sci 256, 53\u201358 (1994).",
+              "journal-title": "Proc Biol Sci"
+            },
+            {
+              "key": "e_1_3_4_35_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "683",
+              "DOI": "10.1016/j.cub.2012.02.031",
+              "article-title": "A unique advantage for giant eyes in giant squid",
+              "volume": "22",
+              "author": "Nilsson DE",
+              "year": "2012",
+              "unstructured": "DE Nilsson, EJ Warrant, S Johnsen, R Hanlon, N Shashar, A unique advantage for giant eyes in giant squid. Curr Biol 22, 683\u2013688 (2012).",
+              "journal-title": "Curr Biol"
+            },
+            {
+              "key": "e_1_3_4_36_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "475",
+              "DOI": "10.1016/S0959-4388(00)00237-3",
+              "article-title": "Energy as a constraint on the coding and processing of sensory information",
+              "volume": "11",
+              "author": "Laughlin SB",
+              "year": "2001",
+              "unstructured": "SB Laughlin, Energy as a constraint on the coding and processing of sensory information. Curr Opin Neurobiol 11, 475\u2013480 (2001).",
+              "journal-title": "Curr Opin Neurobiol"
+            },
+            {
+              "key": "e_1_3_4_37_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "1792",
+              "DOI": "10.1242/jeb.017574",
+              "article-title": "Energy limitation as a selective pressure on the evolution of sensory systems",
+              "volume": "211",
+              "author": "Niven JE",
+              "year": "2008",
+              "unstructured": "JE Niven, SB Laughlin, Energy limitation as a selective pressure on the evolution of sensory systems. J Exp Biol 211, 1792\u20131804 (2008).",
+              "journal-title": "J Exp Biol"
+            },
+            {
+              "key": "e_1_3_4_38_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "e1500363",
+              "DOI": "10.1126/sciadv.1500363",
+              "article-title": "The energetic cost of vision and the evolution of eyeless Mexican cavefish",
+              "volume": "1",
+              "author": "Moran D",
+              "year": "2015",
+              "unstructured": "D Moran, R Softley, EJ Warrant, The energetic cost of vision and the evolution of eyeless Mexican cavefish. Sci Adv 1, e1500363 (2015).",
+              "journal-title": "Sci Adv"
+            },
+            {
+              "key": "e_1_3_4_39_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "197",
+              "DOI": "10.1523/JNEUROSCI.3180-13.2014",
+              "article-title": "Action potential energetics at the organismal level reveal a trade-off in efficiency at high firing rates",
+              "volume": "34",
+              "author": "Lewis JE",
+              "year": "2014",
+              "unstructured": "JE Lewis, KM Gilmour, MJ Moorhead, SF Perry, MR Markham, Action potential energetics at the organismal level reveal a trade-off in efficiency at high firing rates. J Neurosci 34, 197\u2013201 (2014).",
+              "journal-title": "J Neurosci"
+            },
+            {
+              "key": "e_1_3_4_40_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "3022",
+              "DOI": "10.1038/ncomms4022",
+              "article-title": "Spiracular air breathing in polypterid fishes and its implications for aerial respiration in stem tetrapods",
+              "volume": "5",
+              "author": "Graham JB",
+              "year": "2014",
+              "unstructured": "JB Graham, , Spiracular air breathing in polypterid fishes and its implications for aerial respiration in stem tetrapods. Nat Commun 5, 3022 (2014).",
+              "journal-title": "Nat Commun"
+            },
+            {
+              "key": "e_1_3_4_41_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "1259",
+              "DOI": "10.2475/09.2014.01",
+              "article-title": "Error analysis of CO2 and O2 estimates from the long-term geochemical model GEOCARBSULF",
+              "volume": "314",
+              "author": "Royer DL",
+              "year": "2014",
+              "unstructured": "DL Royer, Y Donnadieu, J Park, J Kowalczyk, Y Godd\u00e9ris, Error analysis of CO2 and O2 estimates from the long-term geochemical model GEOCARBSULF. Am J Sci 314, 1259\u20131283 (2014).",
+              "journal-title": "Am J Sci"
+            },
+            {
+              "key": "e_1_3_4_42_2",
+              "doi-asserted-by": "crossref",
+              "unstructured": "ML Glass FT Rantin Gas Exchange and Control of Respiration in Air-Breathing Teleost Fish eds Glass LM Wood CS (Springer Berlin) pp 99\u2013119. (2009).",
+              "DOI": "10.1007/978-3-540-93985-6_5"
+            },
+            {
+              "key": "e_1_3_4_43_2",
+              "doi-asserted-by": "crossref",
+              "unstructured": "ML Glass Physiological Evidence Indicates Lungfish as a Sister Group to the Land Vertebrates eds Glass LM Wood CS (Springer Berlin) pp 161\u2013177. (2009).",
+              "DOI": "10.1007/978-3-540-93985-6_7"
+            },
+            {
+              "key": "e_1_3_4_44_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "638",
+              "DOI": "10.1666/0022-3360(2006)80[638:JMFTLD]2.0.CO;2",
+              "article-title": "Juliformian millipedes from the lower Devonian of Euramerica: Implications for the timing of millipede cladogenesis in the Paleozoic",
+              "volume": "80",
+              "author": "Wilson HM",
+              "year": "2006",
+              "unstructured": "HM Wilson, Juliformian millipedes from the lower Devonian of Euramerica: Implications for the timing of millipede cladogenesis in the Paleozoic. J Paleontol 80, 638\u2013649 (2006).",
+              "journal-title": "J Paleontol"
+            },
+            {
+              "key": "e_1_3_4_45_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "78",
+              "DOI": "10.1016/j.bse.2015.04.033",
+              "article-title": "The chemical defenses of millipedes (diplopoda): Biochemistry, physiology and ecology",
+              "volume": "61",
+              "author": "Shear WA",
+              "year": "2015",
+              "unstructured": "WA Shear, The chemical defenses of millipedes (diplopoda): Biochemistry, physiology and ecology. Biochem Syst Ecol 61, 78\u2013117 (2015).",
+              "journal-title": "Biochem Syst Ecol"
+            },
+            {
+              "key": "e_1_3_4_46_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "154",
+              "DOI": "10.1126/science.aaf0984",
+              "article-title": "Tail use improves performance on soft substrates in models of early vertebrate land locomotors",
+              "volume": "353",
+              "author": "McInroe B",
+              "year": "2016",
+              "unstructured": "B McInroe, , Tail use improves performance on soft substrates in models of early vertebrate land locomotors. Science 353, 154\u2013158 (2016).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "e_1_3_4_47_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "18",
+              "DOI": "10.1016/j.palaeo.2012.09.005",
+              "article-title": "The first half of tetrapod evolution, sampling proxies, and fossil record quality",
+              "volume": "372",
+              "author": "Benton MJ",
+              "year": "2013",
+              "unstructured": "MJ Benton, M Ruta, AM Dunhill, M Sakamoto, The first half of tetrapod evolution, sampling proxies, and fossil record quality. Palaeogeogr Palaeoclimatol Palaeoecol 372, 18\u201341 (2013).",
+              "journal-title": "Palaeogeogr Palaeoclimatol Palaeoecol"
+            },
+            {
+              "key": "e_1_3_4_48_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "1135",
+              "DOI": "10.1666/10-020.1",
+              "article-title": "Deltaherpeton hiemstrae, a new colosteid tetrapod from the Mississippian of Iowa",
+              "volume": "84",
+              "author": "Bolt JR",
+              "year": "2010",
+              "unstructured": "JR Bolt, RE Lombard, Deltaherpeton hiemstrae, a new colosteid tetrapod from the Mississippian of Iowa. J Paleontol 84, 1135\u20131151 (2010).",
+              "journal-title": "J Paleontol"
+            },
+            {
+              "key": "e_1_3_4_49_2",
+              "first-page": "537",
+              "article-title": "A new family of Carboniferous amphibians",
+              "volume": "12",
+              "author": "Carroll R",
+              "year": "1969",
+              "unstructured": "R Carroll, A new family of Carboniferous amphibians. Palaeontology 12, 537\u2013548 (1969).",
+              "journal-title": "Palaeontology"
+            },
+            {
+              "key": "e_1_3_4_50_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "1",
+              "DOI": "10.1139/z67-001",
+              "article-title": "An adelogyrinid lepospondyl amphibian from the Upper Carboniferous",
+              "volume": "45",
+              "author": "Carroll RL",
+              "year": "1967",
+              "unstructured": "RL Carroll, An adelogyrinid lepospondyl amphibian from the Upper Carboniferous. Can J Zool 45, 1\u201316 (1967).",
+              "journal-title": "Can J Zool"
+            },
+            {
+              "key": "e_1_3_4_51_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "3615",
+              "DOI": "10.1242/jeb.105502",
+              "article-title": "Enhanced sensory sampling precedes self-initiated locomotion in an electric fish",
+              "volume": "217",
+              "author": "Jun JJ",
+              "year": "2014",
+              "unstructured": "JJ Jun, A Longtin, L Maler, Enhanced sensory sampling precedes self-initiated locomotion in an electric fish. J Exp Biol 217, 3615\u20133628 (2014).",
+              "journal-title": "J Exp Biol"
+            },
+            {
+              "key": "e_1_3_4_52_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "934",
+              "DOI": "10.1038/nrn2497",
+              "article-title": "Human volition: Towards a neuroscience of will",
+              "volume": "9",
+              "author": "Haggard P",
+              "year": "2008",
+              "unstructured": "P Haggard, Human volition: Towards a neuroscience of will. Nat Rev Neurosci 9, 934\u2013946 (2008).",
+              "journal-title": "Nat Rev Neurosci"
+            },
+            {
+              "key": "e_1_3_4_53_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "147",
+              "DOI": "10.1038/nrn.2015.30",
+              "article-title": "Vicarious trial and error",
+              "volume": "17",
+              "author": "Redish AD",
+              "year": "2016",
+              "unstructured": "AD Redish, Vicarious trial and error. Nat Rev Neurosci 17, 147\u2013159 (2016).",
+              "journal-title": "Nat Rev Neurosci"
+            },
+            {
+              "key": "e_1_3_4_54_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "525",
+              "DOI": "10.1016/j.humov.2007.04.001",
+              "article-title": "The problem of serial order in behavior: Lashley\u2019s legacy",
+              "volume": "26",
+              "author": "Rosenbaum DA",
+              "year": "2007",
+              "unstructured": "DA Rosenbaum, RG Cohen, SA Jax, DJ Weiss, R van der Wel, The problem of serial order in behavior: Lashley\u2019s legacy. Hum Mov Sci 26, 525\u2013554 (2007).",
+              "journal-title": "Hum Mov Sci"
+            },
+            {
+              "key": "e_1_3_4_55_2",
+              "doi-asserted-by": "crossref",
+              "unstructured": "MA MacIver Neuroethology: From morphological computation to planning. The Cambridge Handbook of Situated Cognition eds Robbins P Aydede M (Cambridge Univ Press New York) pp 480\u2013504. (2009).",
+              "DOI": "10.1017/CBO9780511816826.026"
+            },
+            {
+              "key": "e_1_3_4_56_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "78",
+              "DOI": "10.1038/nature10819",
+              "article-title": "Surprisingly complex community discovered in the mid-Devonian fossil forest at Gilboa",
+              "volume": "483",
+              "author": "Stein WE",
+              "year": "2012",
+              "unstructured": "WE Stein, CM Berry, LV Hernick, F Mannolini, Surprisingly complex community discovered in the mid-Devonian fossil forest at Gilboa. Nature 483, 78\u201381 (2012).",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "e_1_3_4_57_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "10641",
+              "DOI": "10.1523/JNEUROSCI.1435-08.2008",
+              "article-title": "Initiation of Mauthner- or non-Mauthner-mediated fast escape evoked by different modes of sensory input",
+              "volume": "28",
+              "author": "Kohashi T",
+              "year": "2008",
+              "unstructured": "T Kohashi, Y Oda, Initiation of Mauthner- or non-Mauthner-mediated fast escape evoked by different modes of sensory input. J Neurosci 28, 10641\u201310653 (2008).",
+              "journal-title": "J Neurosci"
+            },
+            {
+              "key": "e_1_3_4_58_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "26",
+              "DOI": "10.1177/107385840000600111",
+              "article-title": "The Mauthner cell: What has it taught us?",
+              "volume": "6",
+              "author": "Zottoli SJ",
+              "year": "2000",
+              "unstructured": "SJ Zottoli, DS Faber, The Mauthner cell: What has it taught us? Neuroscientist 6, 26\u201338 (2000).",
+              "journal-title": "Neuroscientist"
+            },
+            {
+              "key": "e_1_3_4_59_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "3454",
+              "DOI": "10.1523/JNEUROSCI.5259-05.2006",
+              "article-title": "Neural representation of object approach in a decision-making motor circuit",
+              "volume": "26",
+              "author": "Preuss T",
+              "year": "2006",
+              "unstructured": "T Preuss, PE Osei-Bonsu, SA Weiss, C Wang, DS Faber, Neural representation of object approach in a decision-making motor circuit. J Neurosci 26, 3454\u20133464 (2006).",
+              "journal-title": "J Neurosci"
+            },
+            {
+              "key": "e_1_3_4_60_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "11183",
+              "DOI": "10.1073/pnas.0905183106",
+              "article-title": "Tentacled snakes turn C-starts to their advantage and predict future prey behavior",
+              "volume": "106",
+              "author": "Catania KC",
+              "year": "2009",
+              "unstructured": "KC Catania, Tentacled snakes turn C-starts to their advantage and predict future prey behavior. Proc Natl Acad Sci USA 106, 11183\u201311187 (2009).",
+              "journal-title": "Proc Natl Acad Sci USA"
+            },
+            {
+              "key": "e_1_3_4_61_2",
+              "unstructured": "KD Bhattacharyya D McLean MA MacIver Trade-offs between speed and variability in responses to looming visual stimuli. Proceedings of the 46th Annual Meeting of the Society for Neuroscience (SfN) (San Diego). (2016)."
+            },
+            {
+              "key": "e_1_3_4_62_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "174",
+              "DOI": "10.1159/000222562",
+              "article-title": "Evolution of the Mauthner axon cap",
+              "volume": "73",
+              "author": "Bierman HS",
+              "year": "2009",
+              "unstructured": "HS Bierman, SJ Zottoli, ME Hale, Evolution of the Mauthner axon cap. Brain Behav Evol 73, 174\u2013187 (2009).",
+              "journal-title": "Brain Behav Evol"
+            },
+            {
+              "key": "e_1_3_4_63_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "317",
+              "DOI": "10.1159/000114368",
+              "article-title": "Amphibian Mauthner cells",
+              "volume": "37",
+              "author": "Will U",
+              "year": "1991",
+              "unstructured": "U Will, Amphibian Mauthner cells. Brain Behav Evol 37, 317\u2013332 (1991).",
+              "journal-title": "Brain Behav Evol"
+            },
+            {
+              "key": "e_1_3_4_64_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "318",
+              "DOI": "10.1037/h0057054",
+              "article-title": "Prediction of vicarious trial and error by means of the schematic sowbug",
+              "volume": "46",
+              "author": "Tolman E",
+              "year": "1939",
+              "unstructured": "E Tolman, Prediction of vicarious trial and error by means of the schematic sowbug. Psychol Rev 46, 318\u2013336 (1939).",
+              "journal-title": "Psychol Rev"
+            },
+            {
+              "key": "e_1_3_4_65_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "10379",
+              "DOI": "10.1073/pnas.1301199110",
+              "article-title": "The evolution of episodic memory",
+              "volume": "110",
+              "author": "Allen TA",
+              "year": "2013",
+              "unstructured": "TA Allen, NJ Fortin, The evolution of episodic memory. Proc Natl Acad Sci USA 110, 10379\u201310386 (2013).",
+              "journal-title": "Proc Natl Acad Sci USA"
+            },
+            {
+              "key": "e_1_3_4_66_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "1330",
+              "DOI": "10.1016/j.neuron.2015.04.024",
+              "article-title": "Avian models for human cognitive neuroscience: A proposal",
+              "volume": "86",
+              "author": "Clayton NS",
+              "year": "2015",
+              "unstructured": "NS Clayton, NJ Emery, Avian models for human cognitive neuroscience: A proposal. Neuron 86, 1330\u20131342 (2015).",
+              "journal-title": "Neuron"
+            },
+            {
+              "key": "e_1_3_4_67_2",
+              "doi-asserted-by": "crossref",
+              "unstructured": "A Wilkinson L Huber Cold-blooded cognition: Reptilian cognitive abilities. Oxford Handbook of Comparative Evolutionary Psychology eds Vonk J Shackleford K (Oxford Univ Press Oxford). (2012).",
+              "DOI": "10.1093/oxfordhb/9780199738182.013.0008"
+            },
+            {
+              "key": "e_1_3_4_68_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "363",
+              "DOI": "10.1017/S0263593300006787",
+              "article-title": "The Devonian tetrapod Acanthostega gunnari Jarvik: Postcranial anatomy, basal tetrapod interrelationships and patterns of skeletal evolution",
+              "volume": "87",
+              "author": "Coates M",
+              "year": "1996",
+              "unstructured": "M Coates, The Devonian tetrapod Acanthostega gunnari Jarvik: Postcranial anatomy, basal tetrapod interrelationships and patterns of skeletal evolution. Trans R Soc Edinb Earth Sci 87, 363\u2013421 (1996).",
+              "journal-title": "Trans R Soc Edinb Earth Sci"
+            },
+            {
+              "key": "e_1_3_4_69_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "495",
+              "DOI": "10.1126/science.123.3195.495",
+              "article-title": "Origin of the tetrapod limb",
+              "volume": "123",
+              "author": "Gunter G",
+              "year": "1956",
+              "unstructured": "G Gunter, Origin of the tetrapod limb. Science 123, 495\u2013496 (1956).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "e_1_3_4_70_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "e33683",
+              "DOI": "10.1371/journal.pone.0033683",
+              "article-title": "A marine stem-tetrapod from the Devonian of western North America",
+              "volume": "7",
+              "author": "Swartz B",
+              "year": "2012",
+              "unstructured": "B Swartz, A marine stem-tetrapod from the Devonian of western North America. PLoS One 7, e33683 (2012).",
+              "journal-title": "PLoS One"
+            },
+            {
+              "key": "e_1_3_4_71_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "197",
+              "DOI": "10.1093/icb/ict006",
+              "article-title": "Late to the table: Diversification of tetrapod mandibular biomechanics lagged behind the evolution of terrestriality",
+              "volume": "53",
+              "author": "Anderson PSL",
+              "year": "2013",
+              "unstructured": "PSL Anderson, M Friedman, M Ruta, Late to the table: Diversification of tetrapod mandibular biomechanics lagged behind the evolution of terrestriality. Integr Comp Biol 53, 197\u2013208 (2013).",
+              "journal-title": "Integr Comp Biol"
+            },
+            {
+              "key": "e_1_3_4_72_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "69",
+              "DOI": "10.1017/S1477201906002008",
+              "article-title": "Dates, nodes and character conflict: Addressing the lissamphibian origin problem",
+              "volume": "5",
+              "author": "Ruta M",
+              "year": "2007",
+              "unstructured": "M Ruta, MI Coates, Dates, nodes and character conflict: Addressing the lissamphibian origin problem. J Syst Palaeontol 5, 69\u2013122 (2007).",
+              "journal-title": "J Syst Palaeontol"
+            },
+            {
+              "key": "e_1_3_4_73_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "318",
+              "DOI": "10.1111/j.1463-6395.2008.00340.x",
+              "article-title": "A new specimen of Baphetes from N\u00fd\u0159any, Czech Republic and the intrinsic relationships of the Baphetidae",
+              "volume": "90",
+              "author": "Milner AC",
+              "year": "2009",
+              "unstructured": "AC Milner, AR Milner, SA Walsh, A new specimen of Baphetes from N\u00fd\u0159any, Czech Republic and the intrinsic relationships of the Baphetidae. Acta Zool 90, 318\u2013334 (2009).",
+              "journal-title": "Acta Zool"
+            },
+            {
+              "key": "e_1_3_4_74_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "673",
+              "DOI": "10.1080/14772019.2012.699006",
+              "article-title": "The evolution of major temnospondyl clades: An inclusive phylogenetic analysis",
+              "volume": "11",
+              "author": "Schoch RR",
+              "year": "2013",
+              "unstructured": "RR Schoch, The evolution of major temnospondyl clades: An inclusive phylogenetic analysis. J Syst Palaeontol 11, 673\u2013705 (2013).",
+              "journal-title": "J Syst Palaeontol"
+            },
+            {
+              "key": "e_1_3_4_75_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "803",
+              "DOI": "10.1111/j.2041-210X.2012.00223.x",
+              "article-title": "paleotree: An R package for paleontological and phylogenetic analyses of evolution",
+              "volume": "3",
+              "author": "Bapst DW",
+              "year": "2012",
+              "unstructured": "DW Bapst, paleotree: An R package for paleontological and phylogenetic analyses of evolution. Methods Ecol Evol 3, 803\u2013807 (2012).",
+              "journal-title": "Methods Ecol Evol"
+            },
+            {
+              "key": "e_1_3_4_76_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "199",
+              "DOI": "10.18814/epiiugs/2013/v36i3/002",
+              "article-title": "The ICS International Chronostratigraphic Chart, update v2015/01",
+              "volume": "36",
+              "author": "Cohen KM",
+              "year": "2013",
+              "unstructured": "KM Cohen, SC Finney, PL Gibbard, JX Fan, The ICS International Chronostratigraphic Chart, update v2015/01. Episodes 36, 199\u2013204 (2013).",
+              "journal-title": "Episodes"
+            },
+            {
+              "key": "e_1_3_4_77_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "1485",
+              "DOI": "10.1126/science.1161833",
+              "article-title": "Superiority, competition, and opportunism in the evolutionary radiation of dinosaurs",
+              "volume": "321",
+              "author": "Brusatte SL",
+              "year": "2008",
+              "unstructured": "SL Brusatte, MJ Benton, M Ruta, GT Lloyd, Superiority, competition, and opportunism in the evolutionary radiation of dinosaurs. Science 321, 1485\u20131488 (2008).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "e_1_3_4_78_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "330",
+              "DOI": "10.1111/j.1558-5646.2011.01460.x",
+              "article-title": "Identifying heterogeneity in rates of morphological evolution: Discrete character change in the evolution of lungfish (Sarcopterygii; Dipnoi)",
+              "volume": "66",
+              "author": "Lloyd GT",
+              "year": "2012",
+              "unstructured": "GT Lloyd, SC Wang, SL Brusatte, Identifying heterogeneity in rates of morphological evolution: Discrete character change in the evolution of lungfish (Sarcopterygii; Dipnoi). Evolution 66, 330\u2013348 (2012).",
+              "journal-title": "Evolution"
+            },
+            {
+              "key": "e_1_3_4_79_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "64",
+              "DOI": "10.1111/bij.12701",
+              "article-title": "A cautionary note on the use of Ornstein Uhlenbeck models in macroevolutionary studies",
+              "volume": "118",
+              "author": "Cooper N",
+              "year": "2016",
+              "unstructured": "N Cooper, GH Thomas, C Venditti, A Meade, RP Freckleton, A cautionary note on the use of Ornstein Uhlenbeck models in macroevolutionary studies. Biol J Linn Soc Lond 118, 64\u201377 (2016).",
+              "journal-title": "Biol J Linn Soc Lond"
+            },
+            {
+              "key": "e_1_3_4_80_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "237",
+              "DOI": "10.1364/JOSA.38.000237",
+              "article-title": "The visibility of distant objects",
+              "volume": "38",
+              "author": "Duntley SQ",
+              "year": "1948",
+              "unstructured": "SQ Duntley, The visibility of distant objects. J Opt Soc Am 38, 237\u2013249 (1948).",
+              "journal-title": "J Opt Soc Am"
+            },
+            {
+              "key": "e_1_3_4_81_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "624",
+              "DOI": "10.1364/JOSA.36.000624",
+              "article-title": "Contrast thresholds of the human eye",
+              "volume": "36",
+              "author": "Blackwell HR",
+              "year": "1946",
+              "unstructured": "HR Blackwell, Contrast thresholds of the human eye. J Opt Soc Am 36, 624\u2013643 (1946).",
+              "journal-title": "J Opt Soc Am"
+            },
+            {
+              "key": "e_1_3_4_82_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "573",
+              "DOI": "10.1007/s00359-006-0099-4",
+              "article-title": "Sensory acquisition in active sensing systems",
+              "volume": "192",
+              "author": "Nelson ME",
+              "year": "2006",
+              "unstructured": "ME Nelson, MA MacIver, Sensory acquisition in active sensing systems. J Comp Physiol A 192, 573\u2013586 (2006).",
+              "journal-title": "J Comp Physiol A"
+            },
+            {
+              "key": "e_1_3_4_83_2",
+              "doi-asserted-by": "crossref",
+              "unstructured": "MF Land DE Nilsson Animal Eyes Oxford Animal Biology Series (Oxford Univ Press Oxford) 2nd Ed. (2012).",
+              "DOI": "10.1093/acprof:oso/9780199581139.001.0001"
+            },
+            {
+              "key": "e_1_3_4_84_2",
+              "unstructured": "GL Walls The Vertebrate Eye and Its Adaptive Radiation (Hafner Publishing Company New York) 2nd Ed. (1963)."
+            },
+            {
+              "key": "e_1_3_4_85_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "1394",
+              "DOI": "10.1242/jeb.135673",
+              "article-title": "Spatial resolving power and spectral sensitivity of the saltwater crocodile, Crocodylus porosus, and the freshwater crocodile, Crocodylus johnstoni",
+              "volume": "219",
+              "author": "Nagloo N",
+              "year": "2016",
+              "unstructured": "N Nagloo, SP Collin, JM Hemmi, NS Hart, Spatial resolving power and spectral sensitivity of the saltwater crocodile, Crocodylus porosus, and the freshwater crocodile, Crocodylus johnstoni. J Exp Biol 219, 1394\u20131404 (2016).",
+              "journal-title": "J Exp Biol"
+            },
+            {
+              "key": "e_1_3_4_86_2",
+              "unstructured": "M Steen Spectrum of Moonlight www.olino.org/us/articles/2015/10/05/spectrum-of-moon-light. Accessed July 11 2016. (2014)."
+            },
+            {
+              "key": "e_1_3_4_87_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "668",
+              "DOI": "10.1089/ast.2006.6.668",
+              "article-title": "Influence on photosynthesis of starlight, moonlight, planetlight, and light pollution (reflections on photosynthetically active radiation in the universe)",
+              "volume": "6",
+              "author": "Raven J",
+              "year": "2006",
+              "unstructured": "J Raven, C Cockell, Influence on photosynthesis of starlight, moonlight, planetlight, and light pollution (reflections on photosynthetically active radiation in the universe). Astrobiology 6, 668\u2013675 (2006).",
+              "journal-title": "Astrobiology"
+            },
+            {
+              "key": "e_1_3_4_88_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "1315",
+              "DOI": "10.1016/0042-6989(68)90053-9",
+              "article-title": "Visual contrast thresholds of goldfish (Carassius auratus)",
+              "volume": "8",
+              "author": "Hester FJ",
+              "year": "1968",
+              "unstructured": "FJ Hester, Visual contrast thresholds of goldfish (Carassius auratus). Vision Res 8, 1315\u20131335 (1968).",
+              "journal-title": "Vision Res"
+            }
+          ],
+          "container-title": [
+            "Proceedings of the National Academy of Sciences"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://pnas.org/doi/pdf/10.1073/pnas.1615563114",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2022,
+                6,
+                7
+              ]
+            ],
+            "date-time": "2022-06-07T11:52:01Z",
+            "timestamp": 1654602721000
+          },
+          "score": 63.648613,
+          "resource": {
+            "primary": {
+              "URL": "https://pnas.org/doi/full/10.1073/pnas.1615563114"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2017,
+                3,
+                7
+              ]
+            ]
+          },
+          "references-count": 88,
+          "journal-issue": {
+            "issue": "12",
+            "published-print": {
+              "date-parts": [
+                [
+                  2017,
+                  3,
+                  21
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1073/pnas.1615563114"
+          ],
+          "URL": "https://doi.org/10.1073/pnas.1615563114",
+          "ISSN": [
+            "0027-8424",
+            "1091-6490"
+          ],
+          "issn-type": [
+            {
+              "value": "0027-8424",
+              "type": "print"
+            },
+            {
+              "value": "1091-6490",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2017,
+                3,
+                7
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "2017-03-07",
+              "order": 2,
+              "name": "published",
+              "label": "Published",
+              "group": {
+                "name": "publication_history",
+                "label": "Publication History"
+              }
+            }
+          ]
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                3,
+                18
+              ]
+            ],
+            "date-time": "2026-03-18T08:56:23Z",
+            "timestamp": 1773824183699,
+            "version": "3.50.1"
+          },
+          "reference-count": 0,
+          "publisher": "JSTOR",
+          "issue": "4",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Copeia"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1971,
+                12,
+                1
+              ]
+            ]
+          },
+          "DOI": "10.2307/1442661",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2006,
+                4,
+                26
+              ]
+            ],
+            "date-time": "2006-04-26T07:22:37Z",
+            "timestamp": 1146036157000
+          },
+          "page": "762",
+          "source": "Crossref",
+          "is-referenced-by-count": 2,
+          "title": [
+            "The Origin of Terrestrial Vertebrates"
+          ],
+          "prefix": "10.2307",
+          "volume": "1971",
+          "author": [
+            {
+              "given": "David B.",
+              "family": "Wake",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "I. I.",
+              "family": "Schmalhausen",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Leon",
+              "family": "Kelso",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "1121",
+          "container-title": [
+            "Copeia"
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2018,
+                4,
+                17
+              ]
+            ],
+            "date-time": "2018-04-17T19:46:53Z",
+            "timestamp": 1523994413000
+          },
+          "score": 31.690542,
+          "resource": {
+            "primary": {
+              "URL": "https://www.jstor.org/stable/1442661?origin=crossref"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1971,
+                12,
+                1
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "4",
+            "published-print": {
+              "date-parts": [
+                [
+                  1971,
+                  12,
+                  1
+                ]
+              ]
+            }
+          },
+          "URL": "https://doi.org/10.2307/1442661",
+          "ISSN": [
+            "0045-8511"
+          ],
+          "issn-type": [
+            {
+              "value": "0045-8511",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1971,
+                12,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                30
+              ]
+            ],
+            "date-time": "2026-10-30T18:36:16Z",
+            "timestamp": 1793385376800,
+            "version": "4.5.0"
+          },
+          "reference-count": 39,
+          "publisher": "Cambridge University Press (CUP)",
+          "issue": "6",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Journal of Paleontology"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2001,
+                11
+              ]
+            ]
+          },
+          "DOI": "10.1666/0022-3360(2001)075<1202:toaero>2.0.co;2",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2006,
+                7,
+                16
+              ]
+            ],
+            "date-time": "2006-07-16T17:49:19Z",
+            "timestamp": 1153072159000
+          },
+          "page": "1202-1213",
+          "source": "Crossref",
+          "is-referenced-by-count": 34,
+          "title": [
+            "THE ORIGIN AND EARLY RADIATION OF TERRESTRIAL VERTEBRATES"
+          ],
+          "prefix": "10.1017",
+          "volume": "75",
+          "author": [
+            {
+              "given": "ROBERT L.",
+              "family": "CARROLL",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "56",
+          "reference": [
+            {
+              "key": "I0022-3360-75-6-1202-AHLBERG1",
+              "doi-asserted-by": "crossref",
+              "first-page": "298",
+              "DOI": "10.1038/354298a0",
+              "volume": "345",
+              "author": "Ahlberg",
+              "year": "1991",
+              "journal-title": "Nature",
+              "ISSN": "https://id.crossref.org/issn/0028-0836",
+              "issn-type": "print"
+            },
+            {
+              "key": "I0022-3360-75-6-1202-AHLBERG2",
+              "doi-asserted-by": "crossref",
+              "first-page": "420",
+              "DOI": "10.1038/373420a0",
+              "volume": "373",
+              "author": "Ahlberg",
+              "year": "1995",
+              "journal-title": "Nature",
+              "ISSN": "https://id.crossref.org/issn/0028-0836",
+              "issn-type": "print"
+            },
+            {
+              "key": "I0022-3360-75-6-1202-AHLBERG3",
+              "doi-asserted-by": "crossref",
+              "first-page": "99",
+              "DOI": "10.1111/j.1096-3642.1998.tb02526.x",
+              "volume": "122",
+              "author": "Ahlberg",
+              "year": "1998",
+              "journal-title": "Zoological Journal Linnean Society, London",
+              "ISSN": "https://id.crossref.org/issn/0368-2935",
+              "issn-type": "print"
+            },
+            {
+              "key": "I0022-3360-75-6-1202-AHLBERG4",
+              "doi-asserted-by": "crossref",
+              "first-page": "792",
+              "DOI": "10.1038/27421",
+              "volume": "395",
+              "author": "Ahlberg",
+              "year": "1998",
+              "journal-title": "Nature",
+              "ISSN": "https://id.crossref.org/issn/0028-0836",
+              "issn-type": "print"
+            },
+            {
+              "key": "I0022-3360-75-6-1202-AHLBERG5",
+              "doi-asserted-by": "crossref",
+              "first-page": "303",
+              "DOI": "10.1098/rstb.1994.0027",
+              "volume": "343",
+              "author": "Ahlberg",
+              "year": "1994",
+              "journal-title": "Philosophical Transactions Royal Society London, B",
+              "ISSN": "https://id.crossref.org/issn/0962-8436",
+              "issn-type": "print"
+            },
+            {
+              "key": "I0022-3360-75-6-1202-ANDERSON1",
+              "doi-asserted-by": "crossref",
+              "first-page": "170",
+              "DOI": "10.1080/10635150119889",
+              "volume": "50",
+              "author": "Anderson",
+              "year": "2001",
+              "journal-title": "Systematic Biology",
+              "ISSN": "https://id.crossref.org/issn/1063-5157",
+              "issn-type": "print"
+            },
+            {
+              "key": "I0022-3360-75-6-1202-BOLT1",
+              "doi-asserted-by": "crossref",
+              "first-page": "888",
+              "DOI": "10.1126/science.166.3907.888",
+              "volume": "166",
+              "author": "Bolt",
+              "year": "1969",
+              "journal-title": "Science",
+              "ISSN": "https://id.crossref.org/issn/0036-8075",
+              "issn-type": "print"
+            },
+            {
+              "key": "I0022-3360-75-6-1202-CAMPBELL1",
+              "doi-asserted-by": "crossref",
+              "first-page": "369",
+              "DOI": "10.1080/03115517708527771",
+              "volume": "1",
+              "author": "Campbell",
+              "year": "1977",
+              "journal-title": "Alcheringa",
+              "ISSN": "https://id.crossref.org/issn/0311-5518",
+              "issn-type": "print"
+            },
+            {
+              "key": "I0022-3360-75-6-1202-CARROLL1",
+              "doi-asserted-by": "crossref",
+              "first-page": "61",
+              "DOI": "10.1111/j.1096-3642.1964.tb00488.x",
+              "volume": "45",
+              "author": "Carroll",
+              "year": "1964",
+              "journal-title": "Zoological Journal Linnean Society",
+              "ISSN": "https://id.crossref.org/issn/0024-4082",
+              "issn-type": "print"
+            },
+            {
+              "key": "I0022-3360-75-6-1202-CARROLL2",
+              "first-page": "141",
+              "volume": "43",
+              "author": "Carroll",
+              "year": "1969",
+              "journal-title": "Journal of Paleontology",
+              "ISSN": "https://id.crossref.org/issn/0022-3360",
+              "issn-type": "print"
+            },
+            {
+              "key": "I0022-3360-75-6-1202-CARROLL3",
+              "doi-asserted-by": "crossref",
+              "first-page": "87",
+              "DOI": "10.1146/annurev.es.13.110182.000511",
+              "volume": "13",
+              "author": "Carroll",
+              "year": "1982",
+              "journal-title": "Annual Review of Ecology and Systematics",
+              "ISSN": "https://id.crossref.org/issn/0066-4162",
+              "issn-type": "print"
+            },
+            {
+              "key": "I0022-3360-75-6-1202-CARROLL5",
+              "doi-asserted-by": "crossref",
+              "first-page": "427",
+              "DOI": "10.1017/S0263593300006222",
+              "volume": "84",
+              "author": "Carroll",
+              "year": "1994",
+              "journal-title": "Transactions of the Royal Society of Edinburgh: Earth Sciences",
+              "ISSN": "https://id.crossref.org/issn/0263-5933",
+              "issn-type": "print"
+            },
+            {
+              "key": "I0022-3360-75-6-1202-CARROLL6",
+              "first-page": "389",
+              "volume": "17",
+              "author": "Carroll",
+              "year": "1995",
+              "journal-title": "Bulletin du Mus\u00e9um national d'historie naturelle",
+              "ISSN": "https://id.crossref.org/issn/1148-8425",
+              "issn-type": "print"
+            },
+            {
+              "key": "I0022-3360-75-6-1202-CARROLL7",
+              "doi-asserted-by": "crossref",
+              "first-page": "19",
+              "DOI": "10.1038/381019a0",
+              "volume": "381",
+              "author": "Carroll",
+              "year": "1996",
+              "journal-title": "Nature",
+              "ISSN": "https://id.crossref.org/issn/0028-0836",
+              "issn-type": "print"
+            },
+            {
+              "key": "I0022-3360-75-6-1202-CARROLL11",
+              "doi-asserted-by": "crossref",
+              "first-page": "37",
+              "DOI": "10.1080/02724634.1995.10011206",
+              "volume": "15",
+              "author": "Carroll",
+              "year": "1995",
+              "journal-title": "Journal of Vertebrate Paleontology",
+              "ISSN": "https://id.crossref.org/issn/0272-4634",
+              "issn-type": "print"
+            },
+            {
+              "key": "I0022-3360-75-6-1202-CARROLL12",
+              "first-page": "1",
+              "volume": "126",
+              "author": "Carroll",
+              "year": "1978",
+              "journal-title": "Memoirs of the American Philosophical Society",
+              "ISSN": "https://id.crossref.org/issn/0065-9738",
+              "issn-type": "print"
+            },
+            {
+              "key": "I0022-3360-75-6-1202-CARROLL13",
+              "doi-asserted-by": "crossref",
+              "first-page": "36",
+              "DOI": "10.1046/j.1525-142x.1999.99002.x",
+              "volume": "1",
+              "author": "Carroll",
+              "year": "1999",
+              "journal-title": "Evolution & Development",
+              "ISSN": "https://id.crossref.org/issn/1520-541X",
+              "issn-type": "print"
+            },
+            {
+              "key": "I0022-3360-75-6-1202-CLACK3",
+              "first-page": "359",
+              "volume": "17",
+              "author": "Clack",
+              "year": "1995",
+              "journal-title": "Bulletin du Mus\u00e9um national d'historie naturelle",
+              "ISSN": "https://id.crossref.org/issn/1148-8425",
+              "issn-type": "print"
+            },
+            {
+              "key": "I0022-3360-75-6-1202-CLARKSON1",
+              "doi-asserted-by": "crossref",
+              "first-page": "417",
+              "DOI": "10.1017/S0263593300006210",
+              "volume": "84",
+              "author": "Clarkson",
+              "year": "1994",
+              "journal-title": "Transactions of the Royal Society of Edinburgh",
+              "ISSN": "https://id.crossref.org/issn/0263-5933",
+              "issn-type": "print"
+            },
+            {
+              "key": "I0022-3360-75-6-1202-COATES1",
+              "doi-asserted-by": "crossref",
+              "first-page": "363",
+              "DOI": "10.1017/S0263593300006787",
+              "volume": "87",
+              "author": "Coates",
+              "year": "1996",
+              "journal-title": "Transactions of the Royal Society of Edinbugh: Earth Science",
+              "ISSN": "https://id.crossref.org/issn/0263-5933",
+              "issn-type": "print"
+            },
+            {
+              "key": "I0022-3360-75-6-1202-COATES2",
+              "first-page": "373",
+              "volume": "17",
+              "author": "Coates",
+              "year": "1995",
+              "journal-title": "Bulletin du Mus\u00e9um National d'Historie Naturelle",
+              "ISSN": "https://id.crossref.org/issn/1148-8425",
+              "issn-type": "print"
+            },
+            {
+              "key": "I0022-3360-75-6-1202-DAESCHLER1",
+              "doi-asserted-by": "crossref",
+              "first-page": "639",
+              "DOI": "10.1126/science.265.5172.639",
+              "volume": "265",
+              "author": "Daeschler",
+              "year": "1994",
+              "journal-title": "Science",
+              "ISSN": "https://id.crossref.org/issn/0036-8075",
+              "issn-type": "print"
+            },
+            {
+              "key": "I0022-3360-75-6-1202-GAO1",
+              "doi-asserted-by": "crossref",
+              "first-page": "574",
+              "DOI": "10.1038/35069051",
+              "volume": "410",
+              "author": "Gao",
+              "year": "2001",
+              "journal-title": "Nature",
+              "ISSN": "https://id.crossref.org/issn/0028-0836",
+              "issn-type": "print"
+            },
+            {
+              "key": "I0022-3360-75-6-1202-GINGERICH1",
+              "doi-asserted-by": "crossref",
+              "first-page": "453",
+              "DOI": "10.2475/ajs.293.A.453",
+              "volume": "293A",
+              "author": "Gingerich",
+              "year": "1993",
+              "journal-title": "American Journal of Science",
+              "ISSN": "https://id.crossref.org/issn/0002-9599",
+              "issn-type": "print"
+            },
+            {
+              "key": "I0022-3360-75-6-1202-HANKEN1",
+              "doi-asserted-by": "crossref",
+              "first-page": "55",
+              "DOI": "10.1111/j.1095-8312.1984.tb00806.x",
+              "volume": "23",
+              "author": "Hanken",
+              "year": "1984",
+              "journal-title": "Biological Journal, Linnean Society",
+              "ISSN": "https://id.crossref.org/issn/0024-4066",
+              "issn-type": "print"
+            },
+            {
+              "key": "I0022-3360-75-6-1202-JARVIK1",
+              "doi-asserted-by": "crossref",
+              "first-page": "1",
+              "DOI": "10.18261/8200376605-1996-01",
+              "volume": "40",
+              "author": "Jarvik",
+              "year": "1996",
+              "journal-title": "Fossils & Strata",
+              "ISSN": "https://id.crossref.org/issn/0300-9491",
+              "issn-type": "print"
+            },
+            {
+              "key": "I0022-3360-75-6-1202-JENKINS1",
+              "doi-asserted-by": "crossref",
+              "first-page": "495",
+              "DOI": "10.1080/02724634.1998.10011077",
+              "volume": "18",
+              "author": "Jenkins",
+              "year": "1998",
+              "journal-title": "Journal of Vertebrate Paleontology",
+              "ISSN": "https://id.crossref.org/issn/0272-4634",
+              "issn-type": "print"
+            },
+            {
+              "key": "I0022-3360-75-6-1202-JENKINS2",
+              "doi-asserted-by": "crossref",
+              "first-page": "246",
+              "DOI": "10.1038/365246a0",
+              "volume": "365",
+              "author": "Jenkins",
+              "year": "1993",
+              "journal-title": "Nature",
+              "ISSN": "https://id.crossref.org/issn/0028-0836",
+              "issn-type": "print"
+            },
+            {
+              "key": "I0022-3360-75-6-1202-LAUDER1",
+              "doi-asserted-by": "crossref",
+              "first-page": "297",
+              "DOI": "10.1002/jmor.1051850304",
+              "volume": "185",
+              "author": "Lauder",
+              "year": "1985",
+              "journal-title": "Journal of Morphology",
+              "ISSN": "https://id.crossref.org/issn/0362-2525",
+              "issn-type": "print"
+            },
+            {
+              "key": "I0022-3360-75-6-1202-LEBEDEV1",
+              "doi-asserted-by": "crossref",
+              "first-page": "307",
+              "DOI": "10.1111/j.1096-3642.1995.tb00119.x",
+              "volume": "114",
+              "author": "Lebedev",
+              "year": "1995",
+              "journal-title": "Zoological Journal Linnean Society, London",
+              "ISSN": "https://id.crossref.org/issn/0368-2935",
+              "issn-type": "print"
+            },
+            {
+              "key": "I0022-3360-75-6-1202-LOFSVOLD1",
+              "first-page": "54",
+              "volume": "42",
+              "author": "Lofsvold",
+              "year": "1988",
+              "journal-title": "Evolution",
+              "ISSN": "https://id.crossref.org/issn/0014-3820",
+              "issn-type": "print"
+            },
+            {
+              "key": "I0022-3360-75-6-1202-MILNER1",
+              "doi-asserted-by": "crossref",
+              "first-page": "363",
+              "DOI": "10.1017/S0263593300006167",
+              "volume": "84",
+              "author": "Milner",
+              "year": "1994",
+              "journal-title": "Transactions of the Royal Society of Edinburgh",
+              "ISSN": "https://id.crossref.org/issn/0263-5933",
+              "issn-type": "print"
+            },
+            {
+              "key": "I0022-3360-75-6-1202-MILNER2",
+              "first-page": "635",
+              "volume": "25",
+              "author": "Milner",
+              "year": "1982",
+              "journal-title": "Palaeontology",
+              "ISSN": "https://id.crossref.org/issn/0031-0239",
+              "issn-type": "print"
+            },
+            {
+              "key": "I0022-3360-75-6-1202-MILNER5",
+              "doi-asserted-by": "crossref",
+              "first-page": "331",
+              "DOI": "10.1017/S0263593300006155",
+              "volume": "84",
+              "author": "Milner",
+              "year": "1994",
+              "journal-title": "Transactions of the Royal Society of Edinburgh",
+              "ISSN": "https://id.crossref.org/issn/0263-5933",
+              "issn-type": "print"
+            },
+            {
+              "key": "I0022-3360-75-6-1202-PATON1",
+              "doi-asserted-by": "crossref",
+              "first-page": "508",
+              "DOI": "10.1038/19071",
+              "volume": "398",
+              "author": "Paton",
+              "year": "1999",
+              "journal-title": "Nature",
+              "ISSN": "https://id.crossref.org/issn/0028-0836",
+              "issn-type": "print"
+            },
+            {
+              "key": "I0022-3360-75-6-1202-ROLFE1",
+              "doi-asserted-by": "crossref",
+              "first-page": "175",
+              "DOI": "10.1017/S0263593300005976",
+              "volume": "84",
+              "author": "Rolfe",
+              "year": "1994",
+              "journal-title": "Transactions of the Royal Society of Edinburgh, Earth Sciences",
+              "ISSN": "https://id.crossref.org/issn/0263-5933",
+              "issn-type": "print"
+            },
+            {
+              "key": "I0022-3360-75-6-1202-SHUBIN1",
+              "doi-asserted-by": "crossref",
+              "first-page": "639",
+              "DOI": "10.1038/41710",
+              "volume": "388",
+              "author": "Shubin",
+              "year": "1997",
+              "journal-title": "Nature",
+              "ISSN": "https://id.crossref.org/issn/0028-0836",
+              "issn-type": "print"
+            },
+            {
+              "key": "I0022-3360-75-6-1202-SMITHSON1",
+              "doi-asserted-by": "crossref",
+              "first-page": "383",
+              "DOI": "10.1017/S0263593300006192",
+              "volume": "84",
+              "author": "Smithson",
+              "year": "1994",
+              "journal-title": "Transactions of the Royal Society of Edinburgh, Earth Sciences",
+              "ISSN": "https://id.crossref.org/issn/0263-5933",
+              "issn-type": "print"
+            },
+            {
+              "key": "I0022-3360-75-6-1202-WAKE1",
+              "doi-asserted-by": "crossref",
+              "first-page": "2058",
+              "DOI": "10.1139/z98-143",
+              "volume": "76",
+              "author": "Wake",
+              "year": "1997",
+              "journal-title": "Canadian Journal of Zoology",
+              "ISSN": "https://id.crossref.org/issn/0008-4301",
+              "issn-type": "print"
+            }
+          ],
+          "container-title": [
+            "Journal of Paleontology"
+          ],
+          "language": "en",
+          "deposited": {
+            "date-parts": [
+              [
+                2024,
+                2,
+                5
+              ]
+            ],
+            "date-time": "2024-02-05T09:46:38Z",
+            "timestamp": 1707126398000
+          },
+          "score": 27.71787,
+          "resource": {
+            "primary": {
+              "URL": "https://www.cambridge.org/core/journals/journal-of-paleontology/article/abs/origin-and-early-radiation-of-terrestrial-vertebrates/B4274A54EE95F439007F0D5AC059DA88"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2001,
+                11
+              ]
+            ]
+          },
+          "references-count": 39,
+          "journal-issue": {
+            "issue": "6",
+            "published-print": {
+              "date-parts": [
+                [
+                  2001,
+                  11
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1666/0022-3360(2001)075<1202:TOAERO>2.0.CO;2"
+          ],
+          "URL": "https://doi.org/10.1666/0022-3360(2001)075<1202:toaero>2.0.co;2",
+          "ISSN": [
+            "0022-3360",
+            "1937-2337"
+          ],
+          "issn-type": [
+            {
+              "value": "0022-3360",
+              "type": "print"
+            },
+            {
+              "value": "1937-2337",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2001,
+                11
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

@@ -1,0 +1,391 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1113%2Fjphysiol.2009.177220%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1113/jphysiol.2009.177220\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "19736298",
+          "source": "MED",
+          "pmid": "19736298",
+          "doi": "10.1113/jphysiol.2009.177220",
+          "title": "Resistance exercise-induced increases in putative anabolic hormones do not enhance muscle protein synthesis or intracellular signalling in young men.",
+          "authorString": "West DW, Kujbida GW, Moore DR, Atherton P, Burd NA, Padzik JP, De Lisio M, Tang JE, Parise G, Rennie MJ, Baker SK, Phillips SM.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "West DW",
+                "lastName": "West",
+                "firstName": "Daniel W D",
+                "initials": "DW",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Exercise Metabolism Research Group, Department of Kinesiology, McMaster University, 1280 Main Street West, Hamilton, ON L8S 4K1, Canada."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Kujbida GW",
+                "lastName": "Kujbida",
+                "firstName": "Gregory W",
+                "initials": "GW"
+              },
+              {
+                "fullName": "Moore DR",
+                "lastName": "Moore",
+                "firstName": "Daniel R",
+                "initials": "DR",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-5865-4398"
+                }
+              },
+              {
+                "fullName": "Atherton P",
+                "lastName": "Atherton",
+                "firstName": "Philip",
+                "initials": "P",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-7286-046X"
+                }
+              },
+              {
+                "fullName": "Burd NA",
+                "lastName": "Burd",
+                "firstName": "Nicholas A",
+                "initials": "NA",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-5581-3154"
+                }
+              },
+              {
+                "fullName": "Padzik JP",
+                "lastName": "Padzik",
+                "firstName": "Jan P",
+                "initials": "JP"
+              },
+              {
+                "fullName": "De Lisio M",
+                "lastName": "De Lisio",
+                "firstName": "Michael",
+                "initials": "M"
+              },
+              {
+                "fullName": "Tang JE",
+                "lastName": "Tang",
+                "firstName": "Jason E",
+                "initials": "JE"
+              },
+              {
+                "fullName": "Parise G",
+                "lastName": "Parise",
+                "firstName": "Gianni",
+                "initials": "G"
+              },
+              {
+                "fullName": "Rennie MJ",
+                "lastName": "Rennie",
+                "firstName": "Michael J",
+                "initials": "MJ"
+              },
+              {
+                "fullName": "Baker SK",
+                "lastName": "Baker",
+                "firstName": "Steven K",
+                "initials": "SK"
+              },
+              {
+                "fullName": "Phillips SM",
+                "lastName": "Phillips",
+                "firstName": "Stuart M",
+                "initials": "SM",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-1956-4098"
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0001-5581-3154"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0001-5865-4398"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-1956-4098"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-7286-046X"
+              }
+            ]
+          },
+          "journalInfo": {
+            "issue": "Pt 21",
+            "volume": "587",
+            "journalIssueId": 1661985,
+            "dateOfPublication": "2009 Nov",
+            "monthOfPublication": 11,
+            "yearOfPublication": 2009,
+            "journal": {
+              "medlineAbbreviation": "J Physiol",
+              "title": "The Journal of physiology",
+              "essn": "1469-7793",
+              "issn": "0022-3751",
+              "nlmid": "0266262",
+              "isoabbreviation": "J Physiol"
+            },
+            "printPublicationDate": "2009-11-01"
+          },
+          "pubYear": "2009",
+          "pageInfo": "5239-5247",
+          "abstractText": "We aimed to determine whether exercise-induced elevations in systemic concentration of testosterone, growth hormone (GH) and insulin-like growth factor-1 (IGF-1) enhanced post-exercise myofibrillar protein synthesis (MPS) and phosphorylation of signalling proteins important in regulating mRNA translation. Eight young men (20 +/- 1.1 years, BMI = 26 +/- 3.5 kg m(-2)) completed two exercise protocols designed to maintain basal hormone concentrations (low hormone, LH) or elicit increases in endogenous hormones (high hormone, HH). In the LH protocol, participants performed a bout of unilateral resistance exercise with the elbow flexors. The HH protocol consisted of the same elbow flexor exercise with the contralateral arm followed immediately by high-volume leg resistance exercise. Participants consumed 25 g of protein after arm exercise to maximize MPS. Muscle biopsies and blood samples were taken as appropriate. There were no changes in serum testosterone, GH or IGF-1 after the LH protocol, whereas there were marked elevations after HH (testosterone, P < 0.001; GH, P < 0.001; IGF-1, P < 0.05). Exercise stimulated a rise in MPS in the biceps brachii (rest = 0.040 +/- 0.007, LH = 0.071 +/- 0.008, HH = 0.064 +/- 0.014% h(-1); P < 0.05) with no effect of elevated hormones (P = 0.72). Phosphorylation of the 70 kDa S6 protein kinase (p70S6K) also increased post-exercise (P < 0.05) with no differences between conditions. We conclude that the transient increases in endogenous purportedly anabolic hormones do not enhance fed-state anabolic signalling or MPS following resistance exercise. Local mechanisms are likely to be of predominant importance for the post-exercise increase in MPS.",
+          "affiliation": "Exercise Metabolism Research Group, Department of Kinesiology, McMaster University, 1280 Main Street West, Hamilton, ON L8S 4K1, Canada.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print-Electronic",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, Non-U.S. Gov't",
+              "Journal Article"
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "agency": "Biotechnology and Biological Sciences Research Council",
+                "grantId": "BB/X510697/1",
+                "orderIn": 0
+              },
+              {
+                "agency": "Biotechnology and Biological Sciences Research Council",
+                "grantId": "BB/O516779/1",
+                "orderIn": 0
+              }
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Muscle, Skeletal",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Humans"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Testosterone",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "BL",
+                      "qualifierName": "blood"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Growth Hormone",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "BL",
+                      "qualifierName": "blood"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Insulin-Like Growth Factor I",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Muscle Proteins",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "BI",
+                      "qualifierName": "biosynthesis"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Anabolic Agents",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "BL",
+                      "qualifierName": "blood"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Signal Transduction",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Male"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Resistance Training",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "MT",
+                      "qualifierName": "methods"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Young Adult"
+              }
+            ]
+          },
+          "chemicalList": {
+            "chemical": [
+              {
+                "name": "Anabolic Agents",
+                "registryNumber": "0"
+              },
+              {
+                "name": "Growth Hormone",
+                "registryNumber": "9002-72-6"
+              },
+              {
+                "name": "Muscle Proteins",
+                "registryNumber": "0"
+              },
+              {
+                "name": "Insulin-Like Growth Factor I",
+                "registryNumber": "67763-96-6"
+              },
+              {
+                "name": "Testosterone",
+                "registryNumber": "3XMK78S47O"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "abs",
+                "site": "jp.physoc.org",
+                "url": "http://jp.physoc.org/cgi/content/abstract/587/21/5239"
+              },
+              {
+                "availability": "Free after 12 months",
+                "availabilityCode": "F12",
+                "documentStyle": "html",
+                "site": "jp.physoc.org",
+                "url": "http://jp.physoc.org/cgi/content/full/587/21/5239"
+              },
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1113/jphysiol.2009.177220"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "citedByCount": 196,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "N",
+          "hasData": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2010-01-06",
+          "dateOfCreation": "2009-09-09",
+          "dateOfRevision": "2021-10-20",
+          "electronicPublicationDate": "2009-09-07",
+          "firstPublicationDate": "2009-09-07",
+          "firstIndexDate": "2010-11-04",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

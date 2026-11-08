@@ -1,0 +1,114 @@
+{
+  "slug": "vision-evolution",
+  "name": "Vision Evolution",
+  "catalogPath": "Sample Models/Biology/Evolution/Vision Evolution",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Evolution/Vision%20Evolution.nlogox",
+  "deliveryBatch": "B08",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "Can changes in visual opportunity interact with a transition between water and land? NetLogo Vision Evolution represents vertebrate-like agents whose eye size affects perception across two environments, alongside changes relevant to terrestrial movement. The motivating hypothesis is explicitly attributed to MacIver and colleagues [1]. Eye-evolution modeling [2] and research on animal visual systems [3] provide comparisons for its assumptions. The simulation reduces optics, morphology, food detection, and inheritance to selected traits and rules. It illustrates how a hypothesized ecological opportunity could alter selection within that constructed setting. It does not reconstruct a fossil lineage, establish a unique causal sequence for terrestrial evolution, or show that larger eyes alone caused the origin of limbs.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Evolution/Vision%20Evolution.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Evolution/Vision%20Evolution.nlogox",
+    "revision": "Best available served NetLogo Web artifact retrieved on 2026-11-05; SHA-256 95001998d3949c25ff56f4ef1b993acc993b56eaea1cf75badbf6e7cda5d86a8",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served .nlogox downloaded; Info mechanism descriptions, credits and reference sections inspected. Procedures are not independently audited by this literature task. Source provenance is separate from City Library reimplementation and target-runtime verification.",
+    "evidenceFile": "evidence/biology/vision-evolution.nlogox",
+    "infoFile": "evidence/biology/vision-evolution-info.txt",
+    "originalModelCitation": "* Gurkan, C., Head, B., Woods, P. and Wilensky, U. (2018).  NetLogo Vision Evolution model.  http://ccl.northwestern.edu/netlogo/models/VisionEvolution.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "notes": "Original/served model is the behavioral baseline. This research does not claim implementation or browser acceptance."
+  },
+  "publications": [
+    {
+      "id": "maciver",
+      "authors": [
+        "Malcolm A. MacIver",
+        "Lars Schmitz",
+        "Ugurcan Mugan",
+        "Todd D. Murphey",
+        "Curtis D. Mobley"
+      ],
+      "title": "Massive increase in visual range preceded the origin of terrestrial vertebrates",
+      "year": 2017,
+      "venue": "Proceedings of the National Academy of Sciences",
+      "doi": "10.1073/pnas.1615563114",
+      "url": "https://doi.org/10.1073/pnas.1615563114",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Massive+increase+in+visual+range+preceded+the+origin+of+terrestrial+vertebrates+MacIver+2017&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/maciver-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1073%2Fpnas.1615563114%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/maciver-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "114",
+      "issue": "12",
+      "pages": null,
+      "relevance": "The model explicitly derives its motivating eye-size and water-to-land hypothesis from this paper."
+    },
+    {
+      "id": "nilsson",
+      "authors": [
+        "D E Nilsson",
+        "S Pelger"
+      ],
+      "title": "A pessimistic estimate of the time required for an eye to evolve",
+      "year": 1994,
+      "venue": "Proceedings of the Royal Society of London. Series B: Biological Sciences",
+      "doi": "10.1098/rspb.1994.0048",
+      "url": "https://doi.org/10.1098/rspb.1994.0048",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=A+pessimistic+estimate+of+the+time+required+for+an+eye+to+evolve+Nilsson+Pelger+1994&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading. Author list supplied by Europe PMC because Crossref omits it.",
+        "evidenceFile": "evidence/biology/nilsson-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1098%2Frspb.1994.0048%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/nilsson-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "256",
+      "issue": "1345",
+      "pages": "53-58",
+      "relevance": "A quantitative eye-evolution thought experiment provides a relevant comparison for gradual changes in vision."
+    },
+    {
+      "id": "land",
+      "authors": [
+        "Michael F. Land",
+        "Dan-Eric Nilsson"
+      ],
+      "title": "Animal Eyes",
+      "year": 2012,
+      "venue": "Oxford University Press",
+      "doi": "10.1093/acprof:oso/9780199581139.001.0001",
+      "url": "https://doi.org/10.1093/acprof:oso/9780199581139.001.0001",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1093%2Facprof%3Aoso%2F9780199581139.001.0001",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-metadata",
+        "access": "Crossref publisher-deposited metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/land-crossref-direct.json"
+      },
+      "verified": true,
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "relevance": "Specialist visual-system research emphasizes structural and optical constraints absent from the simplified perception radius."
+    }
+  ],
+  "gaps": []
+}

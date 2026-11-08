@@ -1,0 +1,117 @@
+{
+  "slug": "autumn",
+  "name": "Autumn",
+  "catalogPath": "Sample Models/Biology/Autumn",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Autumn.nlogox",
+  "deliveryBatch": "B07",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "How do changing environmental conditions produce visible autumn leaf colors? NetLogo Autumn represents the production and loss of pigments, then connects their relative presence to leaf appearance and falling. Research on senescent-leaf anthocyanins [1], seasonal pigment biochemistry [2], and vegetative anthocyanins [3] supplies the relevant biological context. The served model combines effects of sunlight, temperature, and water through simplified rules. Its colors summarize underlying chemistry rather than resolve optical spectra, species-specific pigment pathways, or measured weather responses. Varying the conditions illustrates how several processes can contribute to a seasonal pattern. A plausible display is not validation of pigment concentrations, an explanation of every species' autumn colors, or a forecast of the timing of leaf fall.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Autumn.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Autumn.nlogox",
+    "revision": "Best available served NetLogo Web artifact retrieved on 2026-11-05; SHA-256 54c2fa97ac3e235b27d603dbaf7a66234ea4ab507c5643a8df95ee5ef89b5087",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served .nlogox downloaded; Info mechanism descriptions, credits and reference sections inspected. Procedures are not independently audited by this literature task. Source provenance is separate from City Library reimplementation and target-runtime verification.",
+    "evidenceFile": "evidence/biology/autumn.nlogox",
+    "infoFile": "evidence/biology/autumn-info.txt",
+    "originalModelCitation": "* Wilensky, U. (2005).  NetLogo Autumn model.  http://ccl.northwestern.edu/netlogo/models/Autumn.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "notes": "Original/served model is the behavioral baseline. This research does not claim implementation or browser acceptance."
+  },
+  "publications": [
+    {
+      "id": "hoch",
+      "authors": [
+        "W. A. Hoch",
+        "E. L. Zeldin",
+        "B. H. McCown"
+      ],
+      "title": "Physiological significance of anthocyanins during autumnal leaf senescence",
+      "year": 2001,
+      "venue": "Tree Physiology",
+      "doi": "10.1093/treephys/21.1.1",
+      "url": "https://doi.org/10.1093/treephys/21.1.1",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.bibliographic=Physiological+significance+of+anthocyanins+during+autumnal+leaf+senescence+Hoch+Zeldin+McCown+2001&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/hoch-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1093%2Ftreephys%2F21.1.1%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/hoch-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "21",
+      "issue": "1",
+      "pages": "1-8",
+      "relevance": "Investigates the physiological significance of anthocyanins during leaf senescence."
+    },
+    {
+      "id": "matile",
+      "authors": [
+        "Philippe Matile"
+      ],
+      "title": "Biochemistry of Indian summer: physiology of autumnal leaf coloration",
+      "year": 2000,
+      "venue": "Experimental Gerontology",
+      "doi": "10.1016/s0531-5565(00)00081-4",
+      "url": "https://doi.org/10.1016/s0531-5565(00)00081-4",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.bibliographic=Biochemistry+of+Indian+summer+physiology+of+autumnal+leaf+coloration+Matile+2000&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/matile-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fs0531-5565%2800%2900081-4%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/matile-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "35",
+      "issue": "2",
+      "pages": "145-158",
+      "relevance": "Explains pigment and senescence processes behind autumn coloration."
+    },
+    {
+      "id": "lee",
+      "authors": [
+        "David W. Lee",
+        "Kevin S. Gould"
+      ],
+      "title": "Anthocyanins in leaves and other vegetative organs: An introduction",
+      "year": 2002,
+      "venue": "Advances in Botanical Research",
+      "doi": "10.1016/s0065-2296(02)37040-x",
+      "url": "https://doi.org/10.1016/s0065-2296(02)37040-x",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Anthocyanins+in+leaves+and+other+vegetative+organs+an+introduction+Lee+Gould+2002&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-metadata",
+        "access": "Crossref publisher-deposited metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/lee-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fs0065-2296%2802%2937040-x%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/lee-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": null,
+      "issue": null,
+      "pages": "1-16",
+      "relevance": "Provides scientific context for anthocyanins beyond a single visible color variable."
+    }
+  ],
+  "gaps": []
+}

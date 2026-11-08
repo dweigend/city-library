@@ -1,0 +1,1336 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=A+synthetic+oscillatory+network+of+transcriptional+regulators+Elowitz+Leibler+2000&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 1673031,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                11,
+                4
+              ]
+            ],
+            "date-time": "2026-11-04T12:47:40Z",
+            "timestamp": 1793796460143,
+            "version": "4.6.1"
+          },
+          "reference-count": 20,
+          "publisher": "Springer Science and Business Media LLC",
+          "issue": "6767",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2000,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2000-01-01T00:00:00Z",
+                "timestamp": 946684800000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "http://www.springer.com/tdm"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Nature"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2000,
+                1
+              ]
+            ]
+          },
+          "DOI": "10.1038/35002125",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2002,
+                7,
+                26
+              ]
+            ],
+            "date-time": "2002-07-26T04:41:25Z",
+            "timestamp": 1027658485000
+          },
+          "page": "335-338",
+          "source": "Crossref",
+          "is-referenced-by-count": 4134,
+          "title": [
+            "A synthetic oscillatory network of transcriptional regulators"
+          ],
+          "prefix": "10.1038",
+          "volume": "403",
+          "author": [
+            {
+              "given": "Michael B.",
+              "family": "Elowitz",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Stanislas",
+              "family": "Leibler",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "reference": [
+            {
+              "key": "BF35002125_CR1",
+              "doi-asserted-by": "publisher",
+              "first-page": "307",
+              "DOI": "10.1038/376307a0",
+              "volume": "376",
+              "author": "D Bray",
+              "year": "1995",
+              "unstructured": "Bray, D. Protein moelcules as computational elements in living cells. Nature 376, 307\u2013312 (1995).",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BF35002125_CR2",
+              "doi-asserted-by": "publisher",
+              "first-page": "852",
+              "DOI": "10.1126/science.280.5365.852",
+              "volume": "280",
+              "author": "DE Koshland Jr",
+              "year": "1998",
+              "unstructured": "Koshland, D. E. Jr The era of pathway quantification. Science 280, 852\u2013853 ( 1998).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BF35002125_CR3",
+              "volume-title": "The Geometry of Biological Time",
+              "author": "AT Winfree",
+              "year": "1990",
+              "unstructured": "Winfree, A. T. The Geometry of Biological Time (Springer, Berlin, 1990)."
+            },
+            {
+              "key": "BF35002125_CR4",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1017/CBO9780511608193",
+              "volume-title": "Biochemical Oscillations and Cellular Rhythms",
+              "author": "A Goldbeter",
+              "year": "1996",
+              "unstructured": "Goldbeter, A. Biochemical Oscillations and Cellular Rhythms (Cambridge Univ. Press, 1996)."
+            },
+            {
+              "key": "BF35002125_CR5",
+              "volume-title": "Biological Feedback",
+              "author": "R Thomas",
+              "year": "1990",
+              "unstructured": "Thomas, R. & D'Ari, R. Biological Feedback (CRC Press, Boca Raton, 1990)."
+            },
+            {
+              "key": "BF35002125_CR6",
+              "doi-asserted-by": "publisher",
+              "first-page": "1203",
+              "DOI": "10.1093/nar/25.6.1203",
+              "volume": "25",
+              "author": "R Lutz",
+              "year": "1997",
+              "unstructured": "Lutz, R. & Bujard, H. Independent and tight regulation of transcriptional units in Escherichia coli via the LacR/O, the TetR/O and AraC/I1-I2 regulatory elements. Nucleic Acids Res. 25, 1203\u20131210 (1997).",
+              "journal-title": "Nucleic Acids Res."
+            },
+            {
+              "key": "BF35002125_CR7",
+              "volume-title": "Escherichia Coli and Salmonella: Cellular and Molecular Biology",
+              "author": "SR Kushner",
+              "year": "1996",
+              "unstructured": "Kushner, S. R. in Escherichia Coli and Salmonella: Cellular and Molecular Biology (ed. Neidhardt, F. C.) (ASM, Washington DC, 1996)."
+            },
+            {
+              "key": "BF35002125_CR8",
+              "doi-asserted-by": "publisher",
+              "first-page": "990",
+              "DOI": "10.1126/science.271.5251.990",
+              "volume": "271",
+              "author": "KC Keiler",
+              "year": "1996",
+              "unstructured": "Keiler, K. C., Waller, P. R. & Sauer, R. T. Role of a peptide tagging system in degradation of proteins synthesized from damaged messenger RNA. Science 271, 990\u2013993 (1996).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BF35002125_CR9",
+              "doi-asserted-by": "publisher",
+              "first-page": "1338",
+              "DOI": "10.1101/gad.12.9.1338",
+              "volume": "12",
+              "author": "S Gottesman",
+              "year": "1998",
+              "unstructured": "Gottesman, S., Roche, E., Zhou, Y. & Sauer, R. T. The ClpXP and ClpAP proteases degrade proteins with carboxy-terminal peptide tails added by the SsrA-tagging system. Genes Dev. 12, 1338\u20131347 (1998).",
+              "journal-title": "Genes Dev."
+            },
+            {
+              "key": "BF35002125_CR10",
+              "doi-asserted-by": "publisher",
+              "first-page": "1348",
+              "DOI": "10.1101/gad.12.9.1348",
+              "volume": "12",
+              "author": "C Herman",
+              "year": "1998",
+              "unstructured": "Herman, C., Thevenet, D., Bouloc, P., Walker, G. C. & D'Ari, R. Degradation of carboxy-terminal-tagged cytoplasmic proteins by the Escherichia coli protease HflB (FtsH). Genes Dev. 12, 1348\u20131355 ( 1998).",
+              "journal-title": "Genes Dev."
+            },
+            {
+              "key": "BF35002125_CR11",
+              "doi-asserted-by": "crossref",
+              "first-page": "2240",
+              "DOI": "10.1128/AEM.64.6.2240-2246.1998",
+              "volume": "64",
+              "author": "JB Andersen",
+              "year": "1998",
+              "unstructured": "Andersen, J. B. et al. New unstable variants of green fluorescent protein for studies of transient gene expression in bacteria. Appl. Environ. Microbiol. 64, 2240\u20132246 ( 1998).",
+              "journal-title": "Appl. Environ. Microbiol."
+            },
+            {
+              "key": "BF35002125_CR12",
+              "doi-asserted-by": "publisher",
+              "first-page": "65",
+              "DOI": "10.1016/S0168-9525(98)01659-X",
+              "volume": "15",
+              "author": "HH McAdams",
+              "year": "1999",
+              "unstructured": "McAdams, H. H. & Arkin, A. It's a noisy business! Genetic regulation at the nanomolar scale. Trends Genet. 15, 65\u201369 (1999).",
+              "journal-title": "Trends Genet."
+            },
+            {
+              "key": "BF35002125_CR13",
+              "doi-asserted-by": "publisher",
+              "first-page": "935",
+              "DOI": "10.1126/science.270.5238.935",
+              "volume": "270",
+              "author": "JW Bryson",
+              "year": "1995",
+              "unstructured": "Bryson, J. W. et al. Protein design: a hierarchic approach. Science 270, 935\u2013941 ( 1995).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BF35002125_CR14",
+              "doi-asserted-by": "publisher",
+              "first-page": "271",
+              "DOI": "10.1016/S0092-8674(00)80566-8",
+              "volume": "96",
+              "author": "JC Dunlap",
+              "year": "1999",
+              "unstructured": "Dunlap, J. C. Molecular bases for circadian clocks. Cell 96, 271\u2013290 (1999).",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "BF35002125_CR15",
+              "doi-asserted-by": "publisher",
+              "first-page": "224",
+              "DOI": "10.1126/science.275.5297.224",
+              "volume": "275",
+              "author": "T Kondo",
+              "year": "1997",
+              "unstructured": "Kondo, T. et al. Circadian rhythms in rapidly dividing cyanobacteria. Science 275, 224\u2013227 ( 1997).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BF35002125_CR16",
+              "unstructured": "Barkai, N. & Leibler, S. Circadian clocks limited by noise. Nature (submitted????). (Eds to update)"
+            },
+            {
+              "key": "BF35002125_CR17",
+              "doi-asserted-by": "publisher",
+              "first-page": "509",
+              "DOI": "10.1146/annurev.biochem.67.1.509",
+              "volume": "67",
+              "author": "RY Tsien",
+              "year": "1998",
+              "unstructured": "Tsien, R. Y. The green fluorescent protein. Annu. Rev. Biochem. 67, 509\u2013544 (1998).",
+              "journal-title": "Annu. Rev. Biochem."
+            },
+            {
+              "key": "BF35002125_CR18",
+              "doi-asserted-by": "publisher",
+              "first-page": "221",
+              "DOI": "10.1016/S0378-1119(98)00240-6",
+              "volume": "223",
+              "author": "CB Glascock",
+              "year": "1998",
+              "unstructured": "Glascock, C. B. & Weickert, M. J. Using chromosomal lacIQ1 to control expression of genes on high-copy-number plasmids in Escherichia coli. Gene 223, 221\u2013 231 (1998).",
+              "journal-title": "Gene"
+            },
+            {
+              "key": "BF35002125_CR19",
+              "volume-title": "Transport, Assembly, and Dynamics in Systems of Interacting Proteins.",
+              "author": "MB Elowitz",
+              "year": "1999",
+              "unstructured": "Elowitz, M. B. Transport, Assembly, and Dynamics in Systems of Interacting Proteins. Thesis, Princeton Univ., Princeton (1999)."
+            },
+            {
+              "key": "BF35002125_CR20",
+              "doi-asserted-by": "publisher",
+              "first-page": "2340",
+              "DOI": "10.1021/j100540a008",
+              "volume": "81",
+              "author": "DT Gillespie",
+              "year": "1977",
+              "unstructured": "Gillespie, D. T. Exact stochastic simulation of coupled chemical reactions. J. Phys. Chem. 81, 2340\u20132361 ( 1977).",
+              "journal-title": "J. Phys. Chem."
+            }
+          ],
+          "container-title": [
+            "Nature"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://www.nature.com/articles/35002125.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://www.nature.com/articles/35002125",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://www.nature.com/doifinder/10.1038/35002125",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            },
+            {
+              "URL": "http://www.nature.com/articles/35002125.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2023,
+                5,
+                16
+              ]
+            ],
+            "date-time": "2023-05-16T21:48:56Z",
+            "timestamp": 1684273736000
+          },
+          "score": 43.007957,
+          "resource": {
+            "primary": {
+              "URL": "https://www.nature.com/articles/35002125"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2000,
+                1
+              ]
+            ]
+          },
+          "references-count": 20,
+          "journal-issue": {
+            "issue": "6767",
+            "published-print": {
+              "date-parts": [
+                [
+                  2000,
+                  1
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "BF35002125"
+          ],
+          "URL": "https://doi.org/10.1038/35002125",
+          "ISSN": [
+            "0028-0836",
+            "1476-4687"
+          ],
+          "issn-type": [
+            {
+              "value": "0028-0836",
+              "type": "print"
+            },
+            {
+              "value": "1476-4687",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2000,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                2,
+                1
+              ]
+            ],
+            "date-time": "2026-02-01T07:29:50Z",
+            "timestamp": 1769930990798,
+            "version": "3.49.0"
+          },
+          "reference-count": 121,
+          "publisher": "Informa UK Limited",
+          "issue": "4",
+          "funder": [
+            {
+              "DOI": "10.13039/501100004052",
+              "name": "King Abdullah University of Science and Technology",
+              "doi-asserted-by": "crossref",
+              "award": [
+                "CRG4"
+              ],
+              "award-info": [
+                {
+                  "award-number": [
+                    "CRG4"
+                  ]
+                }
+              ],
+              "id": [
+                {
+                  "id": "10.13039/501100004052",
+                  "id-type": "DOI",
+                  "asserted-by": "crossref"
+                }
+              ]
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "www.tandfonline.com"
+            ],
+            "crossmark-restriction": true
+          },
+          "short-container-title": [
+            "Critical Reviews in Biotechnology"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2017,
+                5,
+                19
+              ]
+            ]
+          },
+          "DOI": "10.3109/07388551.2016.1165180",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2016,
+                4,
+                19
+              ]
+            ],
+            "date-time": "2016-04-19T11:47:40Z",
+            "timestamp": 1461066460000
+          },
+          "page": "429-440",
+          "update-policy": "https://doi.org/10.1080/tandf_crossmark_01",
+          "source": "Crossref",
+          "is-referenced-by-count": 21,
+          "title": [
+            "Targeted genome regulation via synthetic programmable transcriptional regulators"
+          ],
+          "prefix": "10.3109",
+          "volume": "37",
+          "author": [
+            {
+              "given": "Agnieszka",
+              "family": "Piatek",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Magdy M.",
+              "family": "Mahfouz",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "301",
+          "published-online": {
+            "date-parts": [
+              [
+                2016,
+                4,
+                19
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "b1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1534/genetics.111.136911"
+            },
+            {
+              "key": "b2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0960-9822(06)00407-6"
+            },
+            {
+              "key": "b3",
+              "first-page": "4784",
+              "volume": "7",
+              "author": "Kabir MH",
+              "year": "2008",
+              "journal-title": "Afr J Biotechnol"
+            },
+            {
+              "key": "b4",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/978-1-61779-882-5_1"
+            },
+            {
+              "key": "b5",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.12703/P5-47"
+            },
+            {
+              "key": "b6",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.mib.2014.02.007"
+            },
+            {
+              "key": "b7",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.ymeth.2014.06.014"
+            },
+            {
+              "key": "b8",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1101/gad.892001"
+            },
+            {
+              "key": "b9",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.89.12.5547"
+            },
+            {
+              "key": "b10",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nm1202-795"
+            },
+            {
+              "key": "b11",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1634/stemcells.21-6-632"
+            },
+            {
+              "key": "b12",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/febs.13251"
+            },
+            {
+              "key": "b13",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.1225829"
+            },
+            {
+              "key": "b14",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.cell.2014.05.010"
+            },
+            {
+              "key": "b15",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.molp.2015.04.007"
+            },
+            {
+              "key": "b16",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/pbi.12256"
+            },
+            {
+              "key": "b17",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nbt.2842"
+            },
+            {
+              "key": "b18",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.cell.2013.02.022"
+            },
+            {
+              "key": "b19",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.cell.2013.06.044"
+            },
+            {
+              "key": "b20",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/nar/gkt520"
+            },
+            {
+              "key": "b21",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nmeth.2598"
+            },
+            {
+              "key": "b22",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nmeth.2600"
+            },
+            {
+              "key": "b23",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pone.0019537"
+            },
+            {
+              "key": "b24",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.addr.2009.03.012"
+            },
+            {
+              "key": "b25",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1006/mthe.2002.0610"
+            },
+            {
+              "key": "b26",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0006-2952(02)01150-4"
+            },
+            {
+              "key": "b27",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1128/MCB.12.6.2784"
+            },
+            {
+              "key": "b28",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/372642a0"
+            },
+            {
+              "key": "b29",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.95.25.14628"
+            },
+            {
+              "key": "b30",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.040552697"
+            },
+            {
+              "key": "b31",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/nar/gkt071"
+            },
+            {
+              "key": "b32",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1021/ar500039w"
+            },
+            {
+              "key": "b33",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.jmb.2005.06.082"
+            },
+            {
+              "key": "b34",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1006/jmbi.1999.3007"
+            },
+            {
+              "key": "b35",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/pcp/pcf186"
+            },
+            {
+              "key": "b36",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1467-7652.2005.00161.x"
+            },
+            {
+              "key": "b37",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/nar/gkf501"
+            },
+            {
+              "key": "b38",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/nar/gkp1126"
+            },
+            {
+              "key": "b39",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/mt.2008.114"
+            },
+            {
+              "key": "b40",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nmeth.1670"
+            },
+            {
+              "key": "b41",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nbt1125"
+            },
+            {
+              "key": "b42",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1146/annurev-phyto-080508-081936"
+            },
+            {
+              "key": "b43",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1128/AEM.00367-07"
+            },
+            {
+              "key": "b44",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.1178811"
+            },
+            {
+              "key": "b45",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.1178817"
+            },
+            {
+              "key": "b46",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.1183604"
+            },
+            {
+              "key": "b47",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.jbiosc.2015.02.017"
+            },
+            {
+              "key": "b48",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/nar/gkr218"
+            },
+            {
+              "key": "b49",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nbt.1939"
+            },
+            {
+              "key": "b50",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s11103-012-9875-4"
+            },
+            {
+              "key": "b51",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/nar/gkr188"
+            },
+            {
+              "key": "b52",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nbt.2199"
+            },
+            {
+              "key": "b53",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.1019533108"
+            },
+            {
+              "key": "b54",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nbt.1755"
+            },
+            {
+              "key": "b55",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nbt.1940"
+            },
+            {
+              "key": "b56",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1104/pp.109.139931"
+            },
+            {
+              "key": "b57",
+              "doi-asserted-by": "crossref",
+              "first-page": "472",
+              "DOI": "10.1038/nature12466",
+              "volume": "500",
+              "author": "Konermann S",
+              "year": "2013",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "b58",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/mp/sst006"
+            },
+            {
+              "key": "b59",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.bbrc.2013.12.111"
+            },
+            {
+              "key": "b60",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1089/aid.2014.0121"
+            },
+            {
+              "key": "b61",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/ncomms1962"
+            },
+            {
+              "key": "b62",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s11103-011-9866-x"
+            },
+            {
+              "key": "b63",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/nar/gks404"
+            },
+            {
+              "key": "b64",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/nar/gks199"
+            },
+            {
+              "key": "b65",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/mtna.2013.41"
+            },
+            {
+              "key": "b66",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.stemcr.2013.06.002"
+            },
+            {
+              "key": "b67",
+              "volume": "71",
+              "author": "Geissler R",
+              "year": "2011",
+              "journal-title": "PLos One"
+            },
+            {
+              "key": "b68",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/nar/gku109"
+            },
+            {
+              "key": "b69",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nmeth.2366"
+            },
+            {
+              "key": "b70",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nmeth.2361"
+            },
+            {
+              "key": "b71",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1089/hum.2012.034"
+            },
+            {
+              "key": "b72",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nbt.1775"
+            },
+            {
+              "key": "b73",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s00294-013-0412-z"
+            },
+            {
+              "key": "b74",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.1138140"
+            },
+            {
+              "key": "b75",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.1179555"
+            },
+            {
+              "key": "b76",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s00018-013-1438-6"
+            },
+            {
+              "key": "b77",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.1232033"
+            },
+            {
+              "key": "b78",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pone.0133373"
+            },
+            {
+              "key": "b79",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1101/gr.162339.113"
+            },
+            {
+              "key": "b80",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.1231143"
+            },
+            {
+              "key": "b81",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/nar/gkt135"
+            },
+            {
+              "key": "b82",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nmeth.2532"
+            },
+            {
+              "key": "b83",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nbt.2501"
+            },
+            {
+              "key": "b84",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nbt.2508"
+            },
+            {
+              "key": "b85",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.7554/eLife.00471"
+            },
+            {
+              "key": "b86",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/nar/gku749"
+            },
+            {
+              "key": "b87",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1080/15592324.2015.1044191"
+            },
+            {
+              "key": "b88",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1080/15592324.2015.1044191"
+            },
+            {
+              "key": "b89",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1186/s13059-015-0799-6"
+            },
+            {
+              "key": "b90",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/cr.2013.114"
+            },
+            {
+              "key": "b91",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.1402295111"
+            },
+            {
+              "key": "b92",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/nar/gkt780"
+            },
+            {
+              "key": "b93",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nbt.2476"
+            },
+            {
+              "key": "b94",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/cr.2013.123"
+            },
+            {
+              "key": "b95",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nbt.2655"
+            },
+            {
+              "key": "b96",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nbt.2650"
+            },
+            {
+              "key": "b97",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nbt.2647"
+            },
+            {
+              "key": "b98",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nprot.2013.132"
+            },
+            {
+              "key": "b99",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1021/sb400081r"
+            },
+            {
+              "key": "b100",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1242/dev.103341"
+            },
+            {
+              "key": "b101",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/cr.2013.122"
+            },
+            {
+              "key": "b102",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nbt.2675"
+            },
+            {
+              "key": "b103",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nmeth.3312"
+            },
+            {
+              "key": "b104",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.cell.2014.09.029"
+            },
+            {
+              "key": "b105",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nature14136"
+            },
+            {
+              "key": "b106",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.cell.2014.09.039"
+            },
+            {
+              "key": "b107",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1104/pp.15.00636"
+            },
+            {
+              "key": "b108",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/pbi.12284"
+            },
+            {
+              "key": "b109",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nmeth.2681"
+            },
+            {
+              "key": "b110",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nbt.2623"
+            },
+            {
+              "key": "b111",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nbt.2673"
+            },
+            {
+              "key": "b112",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nbt.2808"
+            },
+            {
+              "key": "b113",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.cell.2013.12.001"
+            },
+            {
+              "key": "b114",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nchembio.1753"
+            },
+            {
+              "key": "b115",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1186/s13072-015-0023-7"
+            },
+            {
+              "key": "b116",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nbt.3199"
+            },
+            {
+              "key": "b117",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.4161/epi.29919"
+            },
+            {
+              "key": "b118",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nrg3899"
+            },
+            {
+              "key": "b119",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.cell.2014.11.052"
+            },
+            {
+              "key": "b120",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nmeth.2969"
+            },
+            {
+              "key": "b121",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.molcel.2014.04.022"
+            }
+          ],
+          "container-title": [
+            "Critical Reviews in Biotechnology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://www.tandfonline.com/doi/pdf/10.3109/07388551.2016.1165180",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2019,
+                9,
+                6
+              ]
+            ],
+            "date-time": "2019-09-06T17:18:08Z",
+            "timestamp": 1567790288000
+          },
+          "score": 25.754364,
+          "resource": {
+            "primary": {
+              "URL": "https://www.tandfonline.com/doi/full/10.3109/07388551.2016.1165180"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2016,
+                4,
+                19
+              ]
+            ]
+          },
+          "references-count": 121,
+          "journal-issue": {
+            "issue": "4",
+            "published-online": {
+              "date-parts": [
+                [
+                  2016,
+                  4,
+                  19
+                ]
+              ]
+            },
+            "published-print": {
+              "date-parts": [
+                [
+                  2017,
+                  5,
+                  19
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.3109/07388551.2016.1165180"
+          ],
+          "URL": "https://doi.org/10.3109/07388551.2016.1165180",
+          "ISSN": [
+            "0738-8551",
+            "1549-7801"
+          ],
+          "issn-type": [
+            {
+              "value": "0738-8551",
+              "type": "print"
+            },
+            {
+              "value": "1549-7801",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2016,
+                4,
+                19
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "The publishing and review policy for this title is described in its Aims & Scope.",
+              "order": 1,
+              "name": "peerreview_statement",
+              "label": "Peer Review Statement"
+            },
+            {
+              "value": "http://www.tandfonline.com/action/journalInformation?show=aimsScope&journalCode=ibty20",
+              "URL": "http://www.tandfonline.com/action/journalInformation?show=aimsScope&journalCode=ibty20",
+              "order": 2,
+              "name": "aims_and_scope_url",
+              "label": "Aim & Scope"
+            }
+          ]
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2024,
+                2,
+                11
+              ]
+            ],
+            "date-time": "2024-02-11T12:17:26Z",
+            "timestamp": 1707653846833
+          },
+          "reference-count": 0,
+          "publisher": "Institute of Cytology and Genetics, the Siberian Branch of the Russian Academy of Sciences",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "DOI": "10.18699/sbb-2022-656",
+          "type": "proceedings-article",
+          "created": {
+            "date-parts": [
+              [
+                2022,
+                7,
+                13
+              ]
+            ],
+            "date-time": "2022-07-13T06:30:46Z",
+            "timestamp": 1657693846000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Uniqueness and stability of a cycle in the Elowitz\u2013Leibler type dynamical system"
+          ],
+          "prefix": "10.18699",
+          "member": "7950",
+          "published-online": {
+            "date-parts": [
+              [
+                2022,
+                7,
+                6
+              ]
+            ]
+          },
+          "event": {
+            "name": "Bioinformatics of Genome Regulation and Structure/Systems Biology (BGRS/SB-2022) :",
+            "acronym": "BGRS/SB-2022"
+          },
+          "container-title": [
+            "The Thirteenth International Multiconference"
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2022,
+                7,
+                13
+              ]
+            ],
+            "date-time": "2022-07-13T06:30:50Z",
+            "timestamp": 1657693850000
+          },
+          "score": 25.628294,
+          "resource": {
+            "primary": {
+              "URL": "https://publ.icgbio.ru/wp-content/uploads/2022/07/1095.pdf"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2022,
+                7,
+                6
+              ]
+            ]
+          },
+          "references-count": 0,
+          "URL": "https://doi.org/10.18699/sbb-2022-656",
+          "published": {
+            "date-parts": [
+              [
+                2022,
+                7,
+                6
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "slug": "central-limit-theorem",
+  "name": "Central Limit Theorem",
+  "catalogPath": "Sample Models/Mathematics/Probability/ProbLab/Unverified/Central Limit Theorem",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/ProbLab/Unverified/Central%20Limit%20Theorem.nlogox",
+  "deliveryBatch": "B17",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "Why can repeated sample means look more regular than the population they summarize? NetLogo Central Limit Theorem builds a bounded population, repeatedly selects groups, and records their sums and means. Lindeberg [1] supplies an original limit-theorem contribution, Durrett [2] presents the probability framework and assumptions, and Berry [3] addresses finite-sample approximation error. Changing the population shape and sample size makes the distinction between individual values and distributions of averages visible. The simulation uses a finite population and an explicit selection procedure; replacement rules and dependence must be considered before applying an independent-sample theorem literally. A larger sample does not make the original population normal. The experiment illustrates convergence ideas and sampling variability under controlled assumptions, while finite histograms alone cannot prove a limiting theorem or establish its applicability to arbitrary real datasets.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/ProbLab/Unverified/Central%20Limit%20Theorem.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/ProbLab/Unverified/Central%20Limit%20Theorem.nlogox",
+    "revision": "NetLogo 7.0.4 served 2026-11-05; SHA-256 0b28357e33b60122cadc80abdc4826cd000f8fbcdf18a67eed9c75053cced92c",
+    "checkedAt": "2026-11-05",
+    "evidence": "Full original served XML source, Procedures and Info retained in evidence/computing/central-limit-theorem.nlogox; extracted Info retained alongside.",
+    "notes": " This dossier describes scientific connections to the original NetLogo teaching model; it does not certify a City Library reimplementation or empirical validity.",
+    "originalCitation": "Abrahamson, D. and Wilensky, U. (2005).  NetLogo Central Limit Theorem model.  http://ccl.northwestern.edu/netlogo/models/CentralLimitTheorem.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "sourceSnapshot": "evidence/computing/central-limit-theorem.nlogox",
+    "evidenceFile": "evidence/computing/central-limit-theorem.nlogox"
+  },
+  "publications": [
+    {
+      "id": "10.1007/bf01494395",
+      "authors": [
+        "J. W. Lindeberg"
+      ],
+      "title": "Eine neue Herleitung des Exponentialgesetzes in der Wahrscheinlichkeitsrechnung",
+      "year": 1922,
+      "venue": "Mathematische Zeitschrift",
+      "doi": "10.1007/bf01494395",
+      "url": "https://doi.org/10.1007/bf01494395",
+      "relevance": "Original mathematical limit-theorem work anchors the theoretical concept illustrated.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1007%2FBF01494395",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1007_bf01494395.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1007_bf01494395.json"
+      },
+      "publisher": "Springer Science and Business Media LLC",
+      "volume": "15",
+      "issue": "1",
+      "pages": "211-225",
+      "verified": true
+    },
+    {
+      "id": "10.1017/9781108591034",
+      "authors": [
+        "Rick Durrett"
+      ],
+      "title": "Probability: Theory and Examples",
+      "year": 2019,
+      "venue": "Cambridge University Press",
+      "doi": "10.1017/9781108591034",
+      "url": "https://doi.org/10.1017/9781108591034",
+      "relevance": "Modern treatment distinguishes population distributions, sample means, independence and finite-population sampling.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1017%2F9781108591034",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1017_9781108591034.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1017_9781108591034.json"
+      },
+      "publisher": "Cambridge University Press",
+      "isbn": [
+        "9781108591034",
+        "9781108473682"
+      ],
+      "verified": true
+    },
+    {
+      "id": "10.1090/s0002-9947-1941-0003498-3",
+      "authors": [
+        "Andrew C. Berry"
+      ],
+      "title": "The accuracy of the Gaussian approximation to the sum of independent variates",
+      "year": 1941,
+      "venue": "Transactions of the American Mathematical Society",
+      "doi": "10.1090/s0002-9947-1941-0003498-3",
+      "url": "https://doi.org/10.1090/s0002-9947-1941-0003498-3",
+      "relevance": "Finite-sample error bounds explain why apparent normality depends on more than increasing repetitions.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1090%2FS0002-9947-1941-0003498-3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1090_s0002_9947_1941_0003498_3.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1090_s0002_9947_1941_0003498_3.json"
+      },
+      "publisher": "American Mathematical Society (AMS)",
+      "volume": "49",
+      "issue": "1",
+      "pages": "122-136",
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

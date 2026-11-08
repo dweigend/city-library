@@ -1,0 +1,112 @@
+{
+  "slug": "random-combinations-and-permutations",
+  "name": "Random Combinations and Permutations",
+  "catalogPath": "Sample Models/Mathematics/Probability/ProbLab/Unverified/Random Combinations and Permutations",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/ProbLab/Unverified/Random%20Combinations%20and%20Permutations.nlogox",
+  "deliveryBatch": "B17",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "How do ordering and repeated symbols change the probability of a match? NetLogo Random Combinations and Permutations lets a user select a target configuration, then generates guesses and separately counts exact ordered matches and matches after disregarding order. Durrett [1] supplies finite probability spaces, Jaynes [2] grounds the explicit assignment of probabilities, and Stanley [3] develops enumerative combinatorics, directly grounding the multiplicities created when order is disregarded. The model's own terminology should therefore be interpreted from its comparison rules rather than assumed to match every textbook convention. The number of positions, available symbols, and repeated target symbols determine multiplicities and waiting times. Random search assumes the configured generator, not intelligent inference. Finite success counts fluctuate, and treating all unordered outcomes as equally likely can misrepresent the experiment.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/ProbLab/Unverified/Random%20Combinations%20and%20Permutations.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/ProbLab/Unverified/Random%20Combinations%20and%20Permutations.nlogox",
+    "revision": "NetLogo 7.0.4 served 2026-11-05; SHA-256 a5c22544e455bb150941529bab9e2c3798fe73adf1fdeae92dc868c9e3ecef38",
+    "checkedAt": "2026-11-05",
+    "evidence": "Full original served XML source, Procedures and Info retained in evidence/computing/random-combinations-and-permutations.nlogox; extracted Info retained alongside.",
+    "notes": " This dossier describes scientific connections to the original NetLogo teaching model; it does not certify a City Library reimplementation or empirical validity.",
+    "originalCitation": "Abrahamson, D. and Wilensky, U. (2004).  NetLogo Random Combinations and Permutations model.  http://ccl.northwestern.edu/netlogo/models/RandomCombinationsandPermutations.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "sourceSnapshot": "evidence/computing/random-combinations-and-permutations.nlogox",
+    "evidenceFile": "evidence/computing/random-combinations-and-permutations.nlogox"
+  },
+  "publications": [
+    {
+      "id": "10.1017/9781108591034",
+      "authors": [
+        "Rick Durrett"
+      ],
+      "title": "Probability: Theory and Examples",
+      "year": 2019,
+      "venue": "Cambridge University Press",
+      "doi": "10.1017/9781108591034",
+      "url": "https://doi.org/10.1017/9781108591034",
+      "relevance": "Finite sample spaces and counting probabilities directly support ordered versus unordered matching.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1017%2F9781108591034",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1017_9781108591034.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1017_9781108591034.json"
+      },
+      "publisher": "Cambridge University Press",
+      "isbn": [
+        "9781108591034",
+        "9781108473682"
+      ],
+      "verified": true
+    },
+    {
+      "id": "10.1017/cbo9780511790423",
+      "authors": [
+        "E. T. Jaynes"
+      ],
+      "title": "Probability Theory: The Logic of Science",
+      "year": 2003,
+      "venue": "Cambridge University Press",
+      "doi": "10.1017/cbo9780511790423",
+      "url": "https://doi.org/10.1017/cbo9780511790423",
+      "relevance": "Explicit probability assignments prevent confusing equally likely ordered guesses with equally likely outcome classes.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1017%2FCBO9780511790423",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1017_cbo9780511790423.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1017_cbo9780511790423.json"
+      },
+      "publisher": "Cambridge University Press",
+      "isbn": [
+        "9780521592710",
+        "9780511790423"
+      ],
+      "verified": true
+    },
+    {
+      "id": "10.1017/cbo9781139058520",
+      "authors": [
+        "Richard P. Stanley"
+      ],
+      "title": "Enumerative Combinatorics",
+      "year": 2011,
+      "venue": "Cambridge University Press",
+      "doi": "10.1017/cbo9781139058520",
+      "url": "https://doi.org/10.1017/cbo9781139058520",
+      "relevance": "Enumerative combinatorics supplies the direct counting framework for arrangements, repeated symbols and equivalence under permutation.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1017%2FCBO9781139058520",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1017_cbo9781139058520.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1017_cbo9781139058520.json"
+      },
+      "publisher": "Cambridge University Press",
+      "isbn": [
+        "9781107015425",
+        "9781107602625",
+        "9781139058520"
+      ],
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

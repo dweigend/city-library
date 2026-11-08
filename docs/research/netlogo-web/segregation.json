@@ -1,0 +1,99 @@
+{
+  "slug": "segregation",
+  "name": "Segregation",
+  "catalogPath": "Sample Models/Social Science/Segregation",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Segregation.nlogox",
+  "deliveryBatch": "B01",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "The scientific question is whether mild local similarity preferences can produce strong residential separation. In NetLogo's Segregation model, two agent types relocate when their neighboring same-type share falls below a specified satisfaction threshold. The selected literature connects this mechanism to micro-to-macro residential sorting: local preferences generate aggregate segregation without central coordination [1]; economic extensions test how additional incentives change segregation dynamics [2]; social context limits interpretation of physically similar spatial patterns [3]. Binary types and unrestricted relocation omit discrimination, housing costs and institutional constraints; local satisfaction is a stipulated rule rather than a measured universal preference. The original NetLogo behavior is the baseline for reimplementation. This simulation offers a controlled thought experiment, and agreement with its output does not establish empirical validation.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Segregation.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Segregation.nlogox",
+    "revision": "Served NetLogo Web snapshot retrieved 2026-11-05; {'version': 'NetLogo 7.0.4', 'snapToGrid': 'true'}",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served model XML, Procedures and Info retained locally; Info read for mechanism and attribution.",
+    "evidencePath": "evidence/social-urban/segregation.nlogox",
+    "sha256": "b8d983db7d7aa68e4a1ac847ef69620e7e2bc017ccaaff472a9c1f881e89eb8a",
+    "citation": "For the model itself: * Wilensky, U. (1997). NetLogo Segregation model. http://ccl.northwestern.edu/netlogo/models/Segregation. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "scientificOrigin": "Schelling, T. (1978). Micromotives and Macrobehavior. New York: Norton. See also: Rauch, J. (2002). Seeing Around Corners; The Atlantic Monthly; April 2002;Volume 289, No. 4; 35-48. https://www.theatlantic.com/magazine/archive/2002/04/seeing-around-corners/302471/",
+    "notes": "This is source research, not runtime execution or approval of the City Library reimplementation. Original model notices remain in the retained source.",
+    "evidenceFile": "evidence/social-urban/segregation.nlogox"
+  },
+  "publications": [
+    {
+      "id": "schelling",
+      "creatorRole": "author",
+      "authors": [
+        "Thomas C. Schelling"
+      ],
+      "title": "Dynamic models of segregation",
+      "year": 1971,
+      "venue": "The Journal of Mathematical Sociology",
+      "doi": "10.1080/0022250x.1971.9989794",
+      "url": "https://doi.org/10.1080/0022250x.1971.9989794",
+      "relevance": "local preferences generate aggregate segregation without central coordination",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1080%2F0022250X.1971.9989794",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; full-text access not established",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/schelling-crossref.json",
+        "evidenceSummary": "Bibliographic metadata only; relevance is a bounded theoretical comparison, not a claim to have read inaccessible full text.",
+        "evidenceFile": "evidence/social-urban/schelling-crossref.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "zhang",
+      "creatorRole": "author",
+      "authors": [
+        "Junfu Zhang"
+      ],
+      "title": "A DYNAMIC MODEL OF RESIDENTIAL SEGREGATION",
+      "year": 2004,
+      "venue": "The Journal of Mathematical Sociology",
+      "doi": "10.1080/00222500490480202",
+      "url": "https://doi.org/10.1080/00222500490480202",
+      "relevance": "economic extensions test how additional incentives change segregation dynamics",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1080%2F00222500490480202",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; full-text access not established",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/zhang-verified.json",
+        "evidenceSummary": "Bibliographic metadata only; relevance is a bounded theoretical comparison, not a claim to have read inaccessible full text.",
+        "evidenceFile": "evidence/social-urban/zhang-verified.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "clark",
+      "creatorRole": "author",
+      "authors": [
+        "William A. V. Clark",
+        "Mark Fossett"
+      ],
+      "title": "Understanding the social context of the Schelling segregation model",
+      "year": 2008,
+      "venue": "Proceedings of the National Academy of Sciences",
+      "doi": "10.1073/pnas.0708155105",
+      "url": "https://doi.org/10.1073/pnas.0708155105",
+      "relevance": "social context limits interpretation of physically similar spatial patterns",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1073%2Fpnas.0708155105",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "abstract",
+        "access": "Public Crossref registrant metadata; publisher-deposited abstract available",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/clark-verified.json",
+        "evidenceSummary": "A recent article [Vinkovic D, Kirman A (2006) Proc Natl Acad Sci USA 103:19261–19265] showing that the Schelling model has a physical analogue extends our understanding of the model. However, prior research has already outlined a mathematical basis for the Schelling model and simulations based on it have already enhanced our understanding of the social dynamics that underlie the model, something that the physical analogue does not address. Research in social science has provided a formal basis for the segregative outcomes resulting from the residential selection process and simulations have replicated relevant spatial outcomes under different specifications of the residential dynamics. New and increasingly detailed survey data on preferences demonstrates the embeddedness of the Schelling selection process in the social behaviors of choosing alternative residential compositions. It also d",
+        "evidenceFile": "evidence/social-urban/clark-verified.json"
+      },
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

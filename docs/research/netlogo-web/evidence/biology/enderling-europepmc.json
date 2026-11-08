@@ -1,0 +1,290 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1158%2F0008-5472.can-09-2115%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1158/0008-5472.can-09-2115\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "19887613",
+          "source": "MED",
+          "pmid": "19887613",
+          "doi": "10.1158/0008-5472.can-09-2115",
+          "title": "Paradoxical dependencies of tumor dormancy and progression on basic cell kinetics.",
+          "authorString": "Enderling H, Anderson AR, Chaplain MA, Beheshti A, Hlatky L, Hahnfeldt P.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Enderling H",
+                "lastName": "Enderling",
+                "firstName": "Heiko",
+                "initials": "H",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-9696-6410"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Center of Cancer Systems Biology, Caritas St. Elizabeth's Medical Center, Tufts University School of Medicine, Boston, Massachusetts 02135, USA."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Anderson AR",
+                "lastName": "Anderson",
+                "firstName": "Alexander R A",
+                "initials": "AR",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-2536-4383"
+                }
+              },
+              {
+                "fullName": "Chaplain MA",
+                "lastName": "Chaplain",
+                "firstName": "Mark A J",
+                "initials": "MA",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-5727-2160"
+                }
+              },
+              {
+                "fullName": "Beheshti A",
+                "lastName": "Beheshti",
+                "firstName": "Afshin",
+                "initials": "A",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-4643-531X"
+                }
+              },
+              {
+                "fullName": "Hlatky L",
+                "lastName": "Hlatky",
+                "firstName": "Lynn",
+                "initials": "L"
+              },
+              {
+                "fullName": "Hahnfeldt P",
+                "lastName": "Hahnfeldt",
+                "firstName": "Philip",
+                "initials": "P"
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0001-5727-2160"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-2536-4383"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-9696-6410"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-4643-531X"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics"
+            ]
+          },
+          "journalInfo": {
+            "issue": "22",
+            "volume": "69",
+            "journalIssueId": 1665444,
+            "dateOfPublication": "2009 Nov",
+            "monthOfPublication": 11,
+            "yearOfPublication": 2009,
+            "journal": {
+              "medlineAbbreviation": "Cancer Res",
+              "title": "Cancer research",
+              "essn": "1538-7445",
+              "issn": "0008-5472",
+              "isoabbreviation": "Cancer Res",
+              "nlmid": "2984705R"
+            },
+            "printPublicationDate": "2009-11-01"
+          },
+          "pubYear": "2009",
+          "pageInfo": "8814-8821",
+          "abstractText": "Even after a tumor is established, it can early on enter a state of dormancy marked by balanced cell proliferation and cell death. Disturbances to this equilibrium may affect cancer risk, as they may cause the eventual lifetime clinical presentation of a tumor that might otherwise have remained asymptomatic. Previously, we showed that cell death, proliferation, and migration can play a role in shifting this dynamic, making the understanding of their combined influence on tumor development essential. We developed an individual cell-based computer model of the interaction of cancer stem cells and their nonstem progeny to study early tumor dynamics. Simulations of tumor growth show that three basic components of tumor growth--cell proliferation, migration, and death--combine in unexpected ways to control tumor progression and, thus, clinical cancer risk. We show that increased proliferation capacity in nonstem tumor cells and limited cell migration overall lead to space constraints that inhibit proliferation and tumor growth. By contrast, increasing the rate of cell death produces the expected tumor size reduction in the short term, but results ultimately in paradoxical accelerated long-term growth owing to the liberation of cancer stem cells and formation of self-metastases.",
+          "affiliation": "Center of Cancer Systems Biology, Caritas St. Elizabeth's Medical Center, Tufts University School of Medicine, Boston, Massachusetts 02135, USA.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print-Electronic",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, Non-U.S. Gov't",
+              "Research Support, U.S. Gov't, Non-P.H.S.",
+              "Journal Article"
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Animals"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Humans"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Neoplasms",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PA",
+                      "qualifierName": "pathology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Disease Progression"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Apoptosis",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Cell Proliferation"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Cell Movement",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Kinetics"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Computer Simulation"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Neoplastic Stem Cells",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PA",
+                      "qualifierName": "pathology"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "doi",
+                "site": "Unpaywall",
+                "url": "https://doi.org/10.1158/0008-5472.22383387"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "abs",
+                "site": "cancerres.aacrjournals.org",
+                "url": "http://cancerres.aacrjournals.org/cgi/content/abstract/69/22/8814"
+              },
+              {
+                "availability": "Free after 12 months",
+                "availabilityCode": "F12",
+                "documentStyle": "html",
+                "site": "cancerres.aacrjournals.org",
+                "url": "http://cancerres.aacrjournals.org/cgi/content/full/69/22/8814"
+              },
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1158/0008-5472.CAN-09-2115"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "citedByCount": 122,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2009-12-15",
+          "dateOfCreation": "2009-11-06",
+          "dateOfRevision": "2022-03-30",
+          "electronicPublicationDate": "2009-11-03",
+          "firstPublicationDate": "2009-11-03",
+          "firstIndexDate": "2009-12-26",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

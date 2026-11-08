@@ -1,0 +1,120 @@
+{
+  "slug": "l-system-fractals",
+  "name": "L-System Fractals",
+  "catalogPath": "Sample Models/Mathematics/Fractals/L-System Fractals",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Fractals/L-System%20Fractals.nlogox",
+  "deliveryBatch": "B16",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "How does symbolic rewriting become geometric form? NetLogo L-System Fractals expands a string using production rules and interprets the symbols as turtle movement and turning. Repeated rewriting generates increasingly elaborate figures from short descriptions. Lindenmayer's original paper [1] establishes the developmental grammar approach, its companion paper [2] extends the treatment to branching filaments, and the Algorithmic Beauty of Plants [3] connects these formalisms to geometric turtle interpretation. The model illustrates recursion, rule composition, and the relationship between a symbolic description and its spatial realization. Chosen angles, step scales, production rules, and iteration depth determine the result. A finite rendering cannot realize an infinite fractal, and a plant-like drawing does not model physiology or establish a biological developmental explanation without additional measured assumptions.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Fractals/L-System%20Fractals.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Fractals/L-System%20Fractals.nlogox",
+    "revision": "NetLogo 7.0.4 served 2026-11-05; SHA-256 d0dd3ec7971a4ff78c0e13646cb581acd0f0c3bb63cfd80458831923462118b2",
+    "checkedAt": "2026-11-05",
+    "evidence": "Full original served XML source, Procedures and Info retained in evidence/computing/l-system-fractals.nlogox; extracted Info retained alongside.",
+    "notes": " This dossier describes scientific connections to the original NetLogo teaching model; it does not certify a City Library reimplementation or empirical validity.",
+    "originalCitation": "Wilensky, U. (2001).  NetLogo L-System Fractals model.  http://ccl.northwestern.edu/netlogo/models/L-SystemFractals.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "sourceSnapshot": "evidence/computing/l-system-fractals.nlogox",
+    "evidenceFile": "evidence/computing/l-system-fractals.nlogox"
+  },
+  "publications": [
+    {
+      "id": "10.1016/0022-5193(68)90079-9",
+      "authors": [
+        "Aristid Lindenmayer"
+      ],
+      "title": "Mathematical models for cellular interactions in development I. Filaments with one-sided inputs",
+      "year": 1968,
+      "venue": "Journal of Theoretical Biology",
+      "doi": "10.1016/0022-5193(68)90079-9",
+      "url": "https://doi.org/10.1016/0022-5193(68)90079-9",
+      "relevance": "Original production-rule approach to cellular development supplies the foundational formalism.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1016%2F0022-5193%2868%2990079-9",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1016_0022_5193_68_90079_9.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1016_0022_5193_68_90079_9.json"
+      },
+      "publisher": "Elsevier BV",
+      "volume": "18",
+      "issue": "3",
+      "pages": "280-299",
+      "verified": true
+    },
+    {
+      "id": "10.1016/0022-5193(68)90080-5",
+      "authors": [
+        "Aristid Lindenmayer"
+      ],
+      "title": "Mathematical models for cellular interactions in development II. Simple and branching filaments with two-sided inputs",
+      "year": 1968,
+      "venue": "Journal of Theoretical Biology",
+      "doi": "10.1016/0022-5193(68)90080-5",
+      "url": "https://doi.org/10.1016/0022-5193(68)90080-5",
+      "relevance": "The companion original study develops branching filament interactions relevant to branching structures.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1016%2F0022-5193%2868%2990080-5",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1016_0022_5193_68_90080_5.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1016_0022_5193_68_90080_5.json"
+      },
+      "publisher": "Elsevier BV",
+      "volume": "18",
+      "issue": "3",
+      "pages": "300-315",
+      "verified": true
+    },
+    {
+      "id": "10.1007/978-1-4613-8476-2",
+      "authors": [
+        "Przemyslaw Prusinkiewicz",
+        "Aristid Lindenmayer"
+      ],
+      "title": "The Algorithmic Beauty of Plants",
+      "year": 1990,
+      "venue": "The Virtual Laboratory",
+      "doi": "10.1007/978-1-4613-8476-2",
+      "url": "https://doi.org/10.1007/978-1-4613-8476-2",
+      "relevance": "Directly develops turtle interpretation and geometric applications of L-systems.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1007%2F978-1-4613-8476-2",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata and selected full-text sections",
+        "access": "Open institutional/author repository copy; selected sections read. Full-text access via publisher not established.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Chapter 1, pp. 1–7: Koch replacement, parallel rewriting, DOL systems and turtle interpretation. Selected chapter sections support the grammar-to-geometry mechanism; the entire book was not read.",
+        "snapshot": "evidence/computing/doi-10_1007_978_1_4613_8476_2.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "fullTextEvidence": {
+          "doi": "10.1007/978-1-4613-8476-2",
+          "consultedUrl": "https://algorithmicbotany.org/papers/abop/abop.pdf",
+          "checkedAt": "2026-11-05",
+          "evidenceType": "selected full-text sections",
+          "sectionsRead": "Chapter 1, pp. 1–7: Koch replacement, parallel rewriting, DOL systems and turtle interpretation.",
+          "finding": "Selected chapter sections support the grammar-to-geometry mechanism; the entire book was not read.",
+          "retrievedSha256": "4ac9203216a2767ef721b8c5940da96943a2cdab6c35a1e5777999cf9106cc8b",
+          "retention": "Bibliographic metadata, content-specific reading notes and retrieval hash retained; full article/book copies are not redistributed in this research package."
+        },
+        "evidenceFile": "evidence/computing/doi-10_1007_978_1_4613_8476_2.json"
+      },
+      "publisher": "Springer New York",
+      "isbn": [
+        "9780387946764",
+        "9781461384762"
+      ],
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

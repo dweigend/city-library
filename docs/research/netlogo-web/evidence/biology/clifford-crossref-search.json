@@ -1,0 +1,493 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=A+model+for+spatial+conflict+Clifford+Sudbury+1973&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 3730513,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2024,
+                2,
+                21
+              ]
+            ],
+            "date-time": "2024-02-21T00:22:51Z",
+            "timestamp": 1708474971895
+          },
+          "reference-count": 0,
+          "publisher": "Wilfrid Laurier Press",
+          "isbn-type": [
+            {
+              "value": "9781554588749",
+              "type": "electronic"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2013,
+                6,
+                15
+              ]
+            ]
+          },
+          "DOI": "10.51644/9781554588749-015",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2024,
+                2,
+                20
+              ]
+            ],
+            "date-time": "2024-02-20T09:39:05Z",
+            "timestamp": 1708421945000
+          },
+          "page": "211-234",
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "From Regional Constellation to Greater Sudbury (1973\u20132001+)"
+          ],
+          "prefix": "10.51644",
+          "member": "14106",
+          "container-title": [
+            "From Meteorite Impact to Constellation City"
+          ],
+          "link": [
+            {
+              "URL": "https://www.degruyter.com/document/doi/10.51644/9781554588749-015/xml",
+              "content-type": "application/xml",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://www.degruyter.com/document/doi/10.51644/9781554588749-015/pdf",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2024,
+                2,
+                20
+              ]
+            ],
+            "date-time": "2024-02-20T09:39:31Z",
+            "timestamp": 1708421971000
+          },
+          "score": 22.842701,
+          "resource": {
+            "primary": {
+              "URL": "https://www.degruyter.com/document/doi/10.51644/9781554588749-015/html"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2013,
+                6,
+                15
+              ]
+            ]
+          },
+          "ISBN": [
+            "9781554588749"
+          ],
+          "references-count": 0,
+          "alternative-id": [
+            "10.51644/9781554588749-015",
+            "10.51644/9781554588749"
+          ],
+          "URL": "https://doi.org/10.51644/9781554588749-015",
+          "published": {
+            "date-parts": [
+              [
+                2013,
+                6,
+                15
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2023,
+                11,
+                4
+              ]
+            ],
+            "date-time": "2023-11-04T18:10:22Z",
+            "timestamp": 1699121422100
+          },
+          "reference-count": 0,
+          "publisher": "Wiley",
+          "issue": "4",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2007,
+                    8,
+                    9
+                  ]
+                ],
+                "date-time": "2007-08-09T00:00:00Z",
+                "timestamp": 1186617600000
+              },
+              "content-version": "vor",
+              "delay-in-days": 12730,
+              "URL": "http://onlinelibrary.wiley.com/termsAndConditions#vor"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "onlinelibrary.wiley.com"
+            ],
+            "crossmark-restriction": true
+          },
+          "short-container-title": [
+            "Int J of Dairy Tech"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1972,
+                10
+              ]
+            ]
+          },
+          "DOI": "10.1111/j.1471-0307.1972.tb02112.x",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2007,
+                8,
+                9
+              ]
+            ],
+            "date-time": "2007-08-09T09:56:19Z",
+            "timestamp": 1186653379000
+          },
+          "page": "217-217",
+          "update-policy": "http://dx.doi.org/10.1002/crossmark_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "THE 1973 STANLEY CLIFFORD MILK INDUSTRY AWARD"
+          ],
+          "prefix": "10.1111",
+          "volume": "25",
+          "member": "311",
+          "published-online": {
+            "date-parts": [
+              [
+                2007,
+                8,
+                9
+              ]
+            ]
+          },
+          "container-title": [
+            "International Journal of Dairy Technology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1111%2Fj.1471-0307.1972.tb02112.x",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1471-0307.1972.tb02112.x",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2023,
+                11,
+                4
+              ]
+            ],
+            "date-time": "2023-11-04T17:44:54Z",
+            "timestamp": 1699119894000
+          },
+          "score": 22.470215,
+          "resource": {
+            "primary": {
+              "URL": "https://onlinelibrary.wiley.com/doi/10.1111/j.1471-0307.1972.tb02112.x"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1972,
+                10
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "4",
+            "published-print": {
+              "date-parts": [
+                [
+                  1972,
+                  10
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1111/j.1471-0307.1972.tb02112.x"
+          ],
+          "URL": "https://doi.org/10.1111/j.1471-0307.1972.tb02112.x",
+          "archive": [
+            "Portico"
+          ],
+          "ISSN": [
+            "1364-727X",
+            "1471-0307"
+          ],
+          "issn-type": [
+            {
+              "value": "1364-727X",
+              "type": "print"
+            },
+            {
+              "value": "1471-0307",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1972,
+                10
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "2007-08-09",
+              "order": 2,
+              "name": "published",
+              "label": "Published",
+              "group": {
+                "name": "publication_history",
+                "label": "Publication History"
+              }
+            }
+          ]
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2024,
+                5,
+                7
+              ]
+            ],
+            "date-time": "2024-05-07T09:22:45Z",
+            "timestamp": 1715073765555
+          },
+          "reference-count": 4,
+          "publisher": "Elsevier",
+          "isbn-type": [
+            {
+              "value": "9780128092651",
+              "type": "print"
+            }
+          ],
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2017,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2017-01-01T00:00:00Z",
+                "timestamp": 1483228800000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2017
+              ]
+            ]
+          },
+          "DOI": "10.1016/b978-0-12-809265-1.00041-1",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2017,
+                2,
+                4
+              ]
+            ],
+            "date-time": "2017-02-04T15:59:12Z",
+            "timestamp": 1486223952000
+          },
+          "page": "127-129",
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "1973 Animal Conflict"
+          ],
+          "prefix": "10.1016",
+          "author": [
+            {
+              "given": "Michael D.",
+              "family": "Breed",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "78",
+          "reference": [
+            {
+              "key": "10.1016/B978-0-12-809265-1.00041-1_fur1",
+              "doi-asserted-by": "crossref",
+              "first-page": "15",
+              "DOI": "10.1038/246015a0",
+              "article-title": "The logic of animal conflict",
+              "volume": "24",
+              "author": "Maynard Smith",
+              "year": "1973",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/B978-0-12-809265-1.00041-1_fur4",
+              "doi-asserted-by": "crossref",
+              "first-page": "159",
+              "DOI": "10.1016/S0003-3472(76)80110-8",
+              "article-title": "The logic of asymmetric contests Anim",
+              "volume": "24",
+              "author": "Maynard Smith",
+              "year": "1976",
+              "journal-title": "Behav"
+            },
+            {
+              "key": "10.1016/B978-0-12-809265-1.00041-1_fur2",
+              "unstructured": "Prestwich K.N., 1999. A simple game: Hawks versus Doves. <http://college.holycross.edu/faculty/kprestwi/behavior/ESS/HvD_intro.html>."
+            },
+            {
+              "key": "10.1016/B978-0-12-809265-1.00041-1_fur3",
+              "doi-asserted-by": "crossref",
+              "first-page": "3",
+              "DOI": "10.1016/j.anbehav.2013.04.013",
+              "article-title": "Maynard Smith & Parker\u2019s (1976) rule book for animal contests, mostly",
+              "volume": "86",
+              "author": "Riechert",
+              "year": "2013",
+              "journal-title": "Anim. Behav."
+            }
+          ],
+          "container-title": [
+            "Conceptual Breakthroughs in Ethology and Animal Behavior"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:B9780128092651000411?httpAccept=text/xml",
+              "content-type": "text/xml",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:B9780128092651000411?httpAccept=text/plain",
+              "content-type": "text/plain",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2018,
+                9,
+                4
+              ]
+            ],
+            "date-time": "2018-09-04T10:54:20Z",
+            "timestamp": 1536058460000
+          },
+          "score": 22.036915,
+          "resource": {
+            "primary": {
+              "URL": "https://linkinghub.elsevier.com/retrieve/pii/B9780128092651000411"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2017
+              ]
+            ]
+          },
+          "ISBN": [
+            "9780128092651"
+          ],
+          "references-count": 4,
+          "URL": "https://doi.org/10.1016/b978-0-12-809265-1.00041-1",
+          "published": {
+            "date-parts": [
+              [
+                2017
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

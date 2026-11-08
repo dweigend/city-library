@@ -1,0 +1,112 @@
+{
+  "slug": "partition-permutation-distribution",
+  "name": "Partition Permutation Distribution",
+  "catalogPath": "Sample Models/Mathematics/Probability/ProbLab/Unverified/Partition Permutation Distribution",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/ProbLab/Unverified/Partition%20Permutation%20Distribution.nlogox",
+  "deliveryBatch": "B17",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "Does randomly building an integer total sample its mathematical partitions uniformly? NetLogo Partition Permutation Distribution repeatedly draws positive addends, retaining those that fit until the target sum is reached, then accumulates addend frequencies. A switch changes whether candidate values come from the remaining gap or the original range. Andrews [1] defines integer partitions, Hardy and Ramanujan [2] develop partition-count asymptotics, and Durrett [3] supplies the probability framework for analyzing the actual sampling procedure. These sources expose a crucial distinction: the baseline generates ordered construction histories with unequal probabilities, rather than enumerating unordered partitions uniformly. Histogram shape therefore reflects the stochastic algorithm as well as arithmetic constraints. The model illustrates how a shrinking sample space changes observed frequencies; it does not estimate the partition function merely by plotting successful addends.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/ProbLab/Unverified/Partition%20Permutation%20Distribution.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/ProbLab/Unverified/Partition%20Permutation%20Distribution.nlogox",
+    "revision": "NetLogo 7.0.4 served 2026-11-05; SHA-256 d19201a4109c7314ad2dd2bf26c00ea4631a6ee5a3ce4d096a4d7a4680815aa3",
+    "checkedAt": "2026-11-05",
+    "evidence": "Full original served XML source, Procedures and Info retained in evidence/computing/partition-permutation-distribution.nlogox; extracted Info retained alongside.",
+    "notes": " This dossier describes scientific connections to the original NetLogo teaching model; it does not certify a City Library reimplementation or empirical validity.",
+    "originalCitation": "Abrahamson, D. and Wilensky, U. (2004).  NetLogo Partition Permutation Distribution model.  http://ccl.northwestern.edu/netlogo/models/PartitionPermutationDistribution.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "sourceSnapshot": "evidence/computing/partition-permutation-distribution.nlogox",
+    "evidenceFile": "evidence/computing/partition-permutation-distribution.nlogox"
+  },
+  "publications": [
+    {
+      "id": "10.1017/cbo9780511608650",
+      "authors": [
+        "George E. Andrews"
+      ],
+      "title": "The Theory of Partitions",
+      "year": 1984,
+      "venue": "Cambridge University Press",
+      "doi": "10.1017/cbo9780511608650",
+      "url": "https://doi.org/10.1017/cbo9780511608650",
+      "relevance": "Defines unordered integer partitions, clarifying what the teaching sampler does not enumerate uniformly.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1017%2FCBO9780511608650",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1017_cbo9780511608650.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1017_cbo9780511608650.json"
+      },
+      "publisher": "Cambridge University Press",
+      "isbn": [
+        "9780521302227",
+        "9780521637664",
+        "9780511608650"
+      ],
+      "verified": true
+    },
+    {
+      "id": "10.1112/plms/s2-17.1.75",
+      "authors": [
+        "G. H. Hardy",
+        "S. Ramanujan"
+      ],
+      "title": "Asymptotic Formulaae in Combinatory Analysis",
+      "year": 1918,
+      "venue": "Proceedings of the London Mathematical Society",
+      "doi": "10.1112/plms/s2-17.1.75",
+      "url": "https://doi.org/10.1112/plms/s2-17.1.75",
+      "relevance": "Original partition asymptotics provide a theoretical comparison to exact counting, rather than validation of the sampling algorithm.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1112%2Fplms%2Fs2-17.1.75",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1112_plms_s2_17_1_75.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1112_plms_s2_17_1_75.json"
+      },
+      "publisher": "Wiley",
+      "volume": "s2-17",
+      "issue": "1",
+      "pages": "75-115",
+      "verified": true
+    },
+    {
+      "id": "10.1017/9781108591034",
+      "authors": [
+        "Rick Durrett"
+      ],
+      "title": "Probability: Theory and Examples",
+      "year": 2019,
+      "venue": "Cambridge University Press",
+      "doi": "10.1017/9781108591034",
+      "url": "https://doi.org/10.1017/9781108591034",
+      "relevance": "Conditional draws and induced sampling distributions explain bias from the diminishing remainder rule.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1017%2F9781108591034",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1017_9781108591034.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1017_9781108591034.json"
+      },
+      "publisher": "Cambridge University Press",
+      "isbn": [
+        "9781108591034",
+        "9781108473682"
+      ],
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

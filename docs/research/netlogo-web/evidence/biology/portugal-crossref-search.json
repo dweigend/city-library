@@ -1,0 +1,1352 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=Upwash+exploitation+and+downwash+avoidance+by+flap+phasing+in+ibis+formation+flight+Portugal+2014&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 1386595,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                11,
+                5
+              ]
+            ],
+            "date-time": "2026-11-05T20:51:58Z",
+            "timestamp": 1793911918527,
+            "version": "4.8.0"
+          },
+          "reference-count": 42,
+          "publisher": "Springer Science and Business Media LLC",
+          "issue": "7483",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2014,
+                    1,
+                    15
+                  ]
+                ],
+                "date-time": "2014-01-15T00:00:00Z",
+                "timestamp": 1389744000000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.springer.com/tdm"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2014,
+                    1,
+                    15
+                  ]
+                ],
+                "date-time": "2014-01-15T00:00:00Z",
+                "timestamp": 1389744000000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "https://www.springer.com/tdm"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "link.springer.com"
+            ],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Nature"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2014,
+                1,
+                16
+              ]
+            ]
+          },
+          "DOI": "10.1038/nature12939",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2014,
+                1,
+                14
+              ]
+            ],
+            "date-time": "2014-01-14T08:51:21Z",
+            "timestamp": 1389689481000
+          },
+          "page": "399-402",
+          "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 369,
+          "title": [
+            "Upwash exploitation and downwash avoidance by flap phasing in ibis formation flight"
+          ],
+          "prefix": "10.1038",
+          "volume": "505",
+          "author": [
+            {
+              "given": "Steven J.",
+              "family": "Portugal",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Tatjana Y.",
+              "family": "Hubel",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Johannes",
+              "family": "Fritz",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Stefanie",
+              "family": "Heese",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Daniela",
+              "family": "Trobe",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Bernhard",
+              "family": "Voelkl",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Stephen",
+              "family": "Hailes",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Alan M.",
+              "family": "Wilson",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "James R.",
+              "family": "Usherwood",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "published-online": {
+            "date-parts": [
+              [
+                2014,
+                1,
+                15
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "BFnature12939_CR1",
+              "doi-asserted-by": "publisher",
+              "first-page": "513",
+              "DOI": "10.1038/nature03236",
+              "volume": "433",
+              "author": "ID Couzin",
+              "year": "2004",
+              "unstructured": "Couzin, I. D., Krause, J., Franks, N. R. & Levin, S. A. Effective leadership and decision-making in animal groups on the move. Nature 433, 513\u2013516 (2004)",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnature12939_CR2",
+              "doi-asserted-by": "publisher",
+              "first-page": "890",
+              "DOI": "10.1038/nature08891",
+              "volume": "464",
+              "author": "M Nagy",
+              "year": "2010",
+              "unstructured": "Nagy, M., Akos, Z., Biro, D. & Vicsek, T. Hierarchical group dynamics in pigeon flocks. Nature 464, 890\u2013894 (2010)",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnature12939_CR3",
+              "doi-asserted-by": "publisher",
+              "first-page": "778",
+              "DOI": "10.1038/282778a0",
+              "volume": "282",
+              "author": "RM May",
+              "year": "1979",
+              "unstructured": "May, R. M. Flight formations in geese and other birds. Nature 282, 778\u2013780 (1979)",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnature12939_CR4",
+              "doi-asserted-by": "publisher",
+              "first-page": "1003",
+              "DOI": "10.1126/science.168.3934.1003",
+              "volume": "168",
+              "author": "PB Lissaman",
+              "year": "1970",
+              "unstructured": "Lissaman, P. B. & Schollenberger, C. A. Formation flight of birds. Science 168, 1003\u20131005 (1970)",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BFnature12939_CR5",
+              "doi-asserted-by": "publisher",
+              "first-page": "1566",
+              "DOI": "10.1126/science.1088295",
+              "volume": "302",
+              "author": "JC Liao",
+              "year": "2003",
+              "unstructured": "Liao, J. C., Beal, D. N., Lauder, G. V. & Triantafyllou, M. S. Fish exploiting vortices decrease muscle activity. Science 302, 1566\u20131569 (2003)",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BFnature12939_CR6",
+              "doi-asserted-by": "publisher",
+              "first-page": "1146",
+              "DOI": "10.1126/science.193.4258.1146",
+              "volume": "193",
+              "author": "RG Bill",
+              "year": "1976",
+              "unstructured": "Bill, R. G. & Hernnkind, W. F. Drag reduction by formation movement in spiny lobsters. Science 193, 1146\u20131148 (1976)",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BFnature12939_CR7",
+              "doi-asserted-by": "publisher",
+              "first-page": "697",
+              "DOI": "10.1038/35099670",
+              "volume": "413",
+              "author": "H Weimerskirch",
+              "year": "2001",
+              "unstructured": "Weimerskirch, H., Martin, J., Clerquin, Y., Alexandre, P. & Jiraskova, S. Energy saving in flight formation. Nature 413, 697\u2013698 (2001)",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnature12939_CR8",
+              "doi-asserted-by": "publisher",
+              "first-page": "1",
+              "DOI": "10.1002/jez.1402730102",
+              "volume": "273",
+              "author": "FE Fish",
+              "year": "1995",
+              "unstructured": "Fish, F. E. Kinematics of ducklings swimming in formation: consequence of position. J. Exp. Zool. 273, 1\u201311 (1995)",
+              "journal-title": "J. Exp. Zool."
+            },
+            {
+              "key": "BFnature12939_CR9",
+              "doi-asserted-by": "publisher",
+              "first-page": "41",
+              "DOI": "10.1016/0022-5193(81)90055-2",
+              "volume": "93",
+              "author": "JP Badgerow",
+              "year": "1981",
+              "unstructured": "Badgerow, J. P. & Hainsworth, F. R. Energy savings through formation flight? A re-examination of the vee formation. J. Theor. Biol. 93, 41\u201352 (1981)",
+              "journal-title": "J. Theor. Biol."
+            },
+            {
+              "key": "BFnature12939_CR10",
+              "doi-asserted-by": "publisher",
+              "first-page": "251",
+              "DOI": "10.1242/jeb.189.1.251",
+              "volume": "189",
+              "author": "CJ Cutts",
+              "year": "1994",
+              "unstructured": "Cutts, C. J. & Speakman, J. R. Energy savings in formation flight of pink-footed geese. J. Exp. Biol. 189, 251\u2013261 (1994)",
+              "journal-title": "J. Exp. Biol."
+            },
+            {
+              "key": "BFnature12939_CR11",
+              "doi-asserted-by": "publisher",
+              "first-page": "321",
+              "DOI": "10.1016/0022-5193(83)90110-8",
+              "volume": "104",
+              "author": "D Hummel",
+              "year": "1983",
+              "unstructured": "Hummel, D. Aerodynamic aspects of formation flight in birds. J. Theor. Biol. 104, 321\u2013347 (1983)",
+              "journal-title": "J. Theor. Biol."
+            },
+            {
+              "key": "BFnature12939_CR12",
+              "doi-asserted-by": "publisher",
+              "unstructured": "Willis, D. J., Peraire, J. & Breuer, K. S. in Proc. 25th American Institute of Aeronautics and Astronautics Appl. Aerodynam. Conf.http://doi.org/10.2514/6.2007-4182. (2007)",
+              "DOI": "10.2514/6.2007-4182"
+            },
+            {
+              "key": "BFnature12939_CR13",
+              "doi-asserted-by": "publisher",
+              "first-page": "445",
+              "DOI": "10.1242/jeb.128.1.445",
+              "volume": "128",
+              "author": "FR Hainsworth",
+              "year": "1987",
+              "unstructured": "Hainsworth, F. R. Precision and dynamics of positioning by Canada geese flying in formation. J. Exp. Biol. 128, 445\u2013462 (1987)",
+              "journal-title": "J. Exp. Biol."
+            },
+            {
+              "key": "BFnature12939_CR14",
+              "doi-asserted-by": "publisher",
+              "first-page": "76",
+              "DOI": "10.1016/j.jtbi.2012.11.032",
+              "volume": "320",
+              "author": "JS Maeng",
+              "year": "2013",
+              "unstructured": "Maeng, J. S. et al. A modelling approach to energy savings of flying Canada geese using computational fluid dynamics. J. Theor. Biol. 320, 76\u201385 (2013)",
+              "journal-title": "J. Theor. Biol."
+            },
+            {
+              "key": "BFnature12939_CR15",
+              "doi-asserted-by": "publisher",
+              "first-page": "494",
+              "DOI": "10.1038/nature10164",
+              "volume": "474",
+              "author": "JR Usherwood",
+              "year": "2011",
+              "unstructured": "Usherwood, J. R., Stavrou, M., Lowe, J. C., Roskilly, K. & Wilson, A. M. Flying in a flock comes at a cost in pigeons. Nature 474, 494\u2013497 (2011)",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnature12939_CR16",
+              "doi-asserted-by": "publisher",
+              "first-page": "185",
+              "DOI": "10.1038/nature12295",
+              "volume": "498",
+              "author": "AM Wilson",
+              "year": "2013",
+              "unstructured": "Wilson, A. M. et al. Locomotion dynamics of hunting in wild cheetahs. Nature 498, 185\u2013189 (2013)",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnature12939_CR17",
+              "doi-asserted-by": "publisher",
+              "first-page": "59",
+              "DOI": "10.1017/CBO9780511564345",
+              "volume-title": "Statistical Analysis of Circular Data",
+              "author": "NI Fisher",
+              "year": "1993",
+              "unstructured": "Fisher, N. I. Statistical Analysis of Circular Data Ch. 4, 59\u2013102 (Cambridge Univ. Press, 1993)"
+            },
+            {
+              "key": "BFnature12939_CR18",
+              "first-page": "37",
+              "volume-title": "Bird Flight Performance: A Practical Calculation Manual",
+              "author": "CJ Pennycuick",
+              "year": "1989",
+              "unstructured": "Pennycuick, C. J. Bird Flight Performance: A Practical Calculation Manual Ch. 3, 37\u201378 (Oxford Univ. Press, 1989)"
+            },
+            {
+              "key": "BFnature12939_CR19",
+              "doi-asserted-by": "publisher",
+              "first-page": "678",
+              "DOI": "10.1098/rsbl.2011.1120",
+              "volume": "8",
+              "author": "AJ Spence",
+              "year": "2012",
+              "unstructured": "Spence, A. J., Thurman, A. S., Maher, M. J. & Wilson, A. M. Speed, pacing and aerodynamic drafting in thoroughbred horse racing. Biol. Lett. 8, 678\u2013681 (2012)",
+              "journal-title": "Biol. Lett."
+            },
+            {
+              "key": "BFnature12939_CR20",
+              "doi-asserted-by": "publisher",
+              "first-page": "1176",
+              "DOI": "10.1249/01.MSS.0000074564.06106.1F",
+              "volume": "35",
+              "author": "J-C Chatard",
+              "year": "2003",
+              "unstructured": "Chatard, J.-C. & Wilson, B. Drafting distance in swimming. Med. Sci. Sports Exerc. 35, 1176\u20131181 (2003)",
+              "journal-title": "Med. Sci. Sports Exerc."
+            },
+            {
+              "key": "BFnature12939_CR21",
+              "doi-asserted-by": "publisher",
+              "first-page": "1612",
+              "DOI": "10.1249/01.MSS.0000084422.49491.2C",
+              "volume": "35",
+              "author": "A Delextrat",
+              "year": "2003",
+              "unstructured": "Delextrat, A. et al. Drafting during swimming improves efficiency during subsequent cycling. Med. Sci. Sports Exerc. 35, 1612\u20131619 (2003)",
+              "journal-title": "Med. Sci. Sports Exerc."
+            },
+            {
+              "key": "BFnature12939_CR22",
+              "doi-asserted-by": "publisher",
+              "first-page": "643",
+              "DOI": "10.1007/BF00217385",
+              "volume": "174",
+              "author": "W Kutsch",
+              "year": "1994",
+              "unstructured": "Kutsch, W., Camhi, J. & Sumbre, G. Close encounters among flying locusts produce wing-beat coupling. J. Comp. Physiol. A 174, 643\u2013649 (1994)",
+              "journal-title": "J. Comp. Physiol. A"
+            },
+            {
+              "key": "BFnature12939_CR23",
+              "doi-asserted-by": "publisher",
+              "first-page": "1051",
+              "DOI": "10.1242/jeb.198.4.1051",
+              "volume": "198",
+              "author": "JM Camhi",
+              "year": "1995",
+              "unstructured": "Camhi, J. M., Sumbre, G. & Wendler, G. Wing-beat coupling between flying locusts pairs: preferred phase and life enhancement. J. Exp. Biol. 198, 1051\u20131063 (1995)",
+              "journal-title": "J. Exp. Biol."
+            },
+            {
+              "key": "BFnature12939_CR24",
+              "doi-asserted-by": "publisher",
+              "first-page": "1303",
+              "DOI": "10.1098/rsif.2008.0124",
+              "volume": "5",
+              "author": "JR Usherwood",
+              "year": "2008",
+              "unstructured": "Usherwood, J. R. & Lehmann, F. Phasing of dragonfly wings can improve efficiency by removing swirl. J. R. Soc. Interface 5, 1303\u20131307 (2008)",
+              "journal-title": "J. R. Soc. Interface"
+            },
+            {
+              "key": "BFnature12939_CR25",
+              "doi-asserted-by": "publisher",
+              "first-page": "537",
+              "DOI": "10.1242/jeb.087189",
+              "volume": "216",
+              "author": "CR White",
+              "year": "2013",
+              "unstructured": "White, C. R. et al. Implantation reduces the negative effects of bio-logging on birds. J. Exp. Biol. 216, 537\u2013542 (2013)",
+              "journal-title": "J. Exp. Biol."
+            },
+            {
+              "key": "BFnature12939_CR26",
+              "doi-asserted-by": "publisher",
+              "first-page": "R561",
+              "DOI": "10.1016/j.cub.2012.05.008",
+              "volume": "22",
+              "author": "AJ King",
+              "year": "2012",
+              "unstructured": "King, A. J. et al. Selfish-herd behaviour of sheep under threat. Curr. Biol. 22, R561\u2013R562 (2012)",
+              "journal-title": "Curr. Biol."
+            },
+            {
+              "key": "BFnature12939_CR27",
+              "doi-asserted-by": "publisher",
+              "first-page": "180",
+              "DOI": "10.1111/j.2041-210X.2010.00013.x",
+              "volume": "1",
+              "author": "DG Barron",
+              "year": "2010",
+              "unstructured": "Barron, D. G., Brawn, J. D. & Weatherhead, P. J. Meta-analysis of transmitter effects on avian behaviour and ecology. Methods Ecol. Evol. 1, 180\u2013187 (2010)",
+              "journal-title": "Methods Ecol. Evol."
+            },
+            {
+              "key": "BFnature12939_CR28",
+              "first-page": "118",
+              "volume-title": "Vertebrate Flight: Mechanics, Physiology, Morphology, Ecology and Evolution",
+              "author": "UM Norberg",
+              "year": "2011",
+              "unstructured": "Norberg, U. M. Vertebrate Flight: Mechanics, Physiology, Morphology, Ecology and Evolution Ch. 9, 118\u2013132 (Springer, 2011)"
+            },
+            {
+              "key": "BFnature12939_CR29",
+              "volume-title": "Understanding GPS: Principles and Applications",
+              "author": "E Kaplan",
+              "year": "2005",
+              "unstructured": "Kaplan, E. & Hegarty, C. Understanding GPS: Principles and Applications Ch. 7, 304\u2013334 (Artech House, 2005)"
+            },
+            {
+              "key": "BFnature12939_CR30",
+              "doi-asserted-by": "publisher",
+              "first-page": "158",
+              "DOI": "10.1093/beheco/arg109",
+              "volume": "15",
+              "author": "M Andersson",
+              "year": "2003",
+              "unstructured": "Andersson, M. & Wallander, J. Kin selection and reciprocity in flight formation? Behav. Ecol. 15, 158\u2013162 (2003)",
+              "journal-title": "Behav. Ecol."
+            },
+            {
+              "key": "BFnature12939_CR31",
+              "first-page": "244",
+              "volume": "103",
+              "author": "DR Petit",
+              "year": "1986",
+              "unstructured": "Petit, D. R. & Bildstein, K. L. Development of formation flying in juvenile white ibises (Eudocimus albus). Auk 103, 244\u2013246 (1986)",
+              "journal-title": "Auk"
+            },
+            {
+              "key": "BFnature12939_CR32",
+              "doi-asserted-by": "publisher",
+              "first-page": "432",
+              "DOI": "10.1038/nature01630",
+              "volume": "423",
+              "author": "SA Rands",
+              "year": "2003",
+              "unstructured": "Rands, S. A., Cowlishaw, G., Pettifor, R. A., Rowcliffe, J. M. & Johnstone, R. A. Spontaneous emergence of leaders and followers in foraging pairs. Nature 423, 432\u2013434 (2003)",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnature12939_CR33",
+              "doi-asserted-by": "publisher",
+              "first-page": "2123",
+              "DOI": "10.1016/j.cub.2006.08.087",
+              "volume": "16",
+              "author": "D Biro",
+              "year": "2006",
+              "unstructured": "Biro, D., Sumpter, D. J. T., Meade, J. & Guilford, T. From compromise to leadership in pigeon homing. Curr. Biol. 16, 2123\u20132128 (2006)",
+              "journal-title": "Curr. Biol."
+            },
+            {
+              "key": "BFnature12939_CR34",
+              "doi-asserted-by": "publisher",
+              "first-page": "94",
+              "DOI": "10.1002/9780470316979",
+              "volume-title": "Directional Statistics",
+              "author": "K Mardia",
+              "year": "1999",
+              "unstructured": "Mardia, K. & Jupp, P. Directional Statistics Ch. 6, 94\u2013110 (Wiley, 1999)"
+            },
+            {
+              "key": "BFnature12939_CR35",
+              "first-page": "83",
+              "volume-title": "Applied Nonparametric Statistical Methods",
+              "author": "P Sprent",
+              "year": "2007",
+              "unstructured": "Sprent, P. & Smeeton, N. C. Applied Nonparametric Statistical Methods Ch. 4, 83\u2013122 (Taylor & Francis, 2007)"
+            },
+            {
+              "key": "BFnature12939_CR36",
+              "first-page": "15",
+              "volume-title": "Circular Statistics in Biology",
+              "author": "E Batschelet",
+              "year": "1981",
+              "unstructured": "Batschelet, E. Circular Statistics in Biology Chs 9, 15 (Academic, 1981)"
+            },
+            {
+              "key": "BFnature12939_CR37",
+              "doi-asserted-by": "publisher",
+              "first-page": "467",
+              "DOI": "10.1038/nature00958",
+              "volume": "419",
+              "author": "W Wiltschko",
+              "year": "2002",
+              "unstructured": "Wiltschko, W. et al. Lateralisation of magnetic compass orientation in a migratory bird. Nature 419, 467\u2013470 (2002)",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnature12939_CR38",
+              "doi-asserted-by": "publisher",
+              "first-page": "4065",
+              "DOI": "10.1242/jeb.034504",
+              "volume": "212",
+              "author": "RA Holland",
+              "year": "2009",
+              "unstructured": "Holland, R. A. et al. Testing the role of sensory systems in the migrating heading of a songbird. J. Exp. Biol. 212, 4065\u20134071 (2009)",
+              "journal-title": "J. Exp. Biol."
+            },
+            {
+              "key": "BFnature12939_CR39",
+              "doi-asserted-by": "publisher",
+              "first-page": "3427",
+              "DOI": "10.1242/jeb.043257",
+              "volume": "213",
+              "author": "TY Hubel",
+              "year": "2010",
+              "unstructured": "Hubel, T. Y. et al. Wake structure and wing kinematics: the flight of the lesser dog-faced fruit bat, Cynopterus brachyotis. J. Exp. Biol. 213, 3427\u20133440 (2010)",
+              "journal-title": "J. Exp. Biol."
+            },
+            {
+              "key": "BFnature12939_CR40",
+              "doi-asserted-by": "publisher",
+              "first-page": "1120",
+              "DOI": "10.1098/rsif.2011.0838",
+              "volume": "9",
+              "author": "TY Hubel",
+              "year": "2012",
+              "unstructured": "Hubel, T. Y. et al. Changes in kinematics and aerodynamics over a range of speeds in Tadarida brasiliensis, the Brazilian free-tailed bat. J. R. Soc. Interface 9, 1120\u20131130 (2012)",
+              "journal-title": "J. R. Soc. Interface"
+            },
+            {
+              "key": "BFnature12939_CR41",
+              "doi-asserted-by": "publisher",
+              "first-page": "53",
+              "DOI": "10.1088/0370-1298/68/1/111",
+              "volume": "68",
+              "author": "E Kroner",
+              "year": "1955",
+              "unstructured": "Kroner, E. Dislocations and the Biot-Savart law. Proc. Phys. Soc. A 68, 53\u201355 (1955)",
+              "journal-title": "Proc. Phys. Soc. A"
+            },
+            {
+              "key": "BFnature12939_CR42",
+              "first-page": "215",
+              "volume-title": "Introduction to Electrodynamics",
+              "author": "DJ Griffiths",
+              "year": "1998",
+              "unstructured": "Griffiths, D. J. Introduction to Electrodynamics Ch. 5, 215 (Prentice Hall, 1998)"
+            }
+          ],
+          "container-title": [
+            "Nature"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://www.nature.com/articles/nature12939.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://www.nature.com/articles/nature12939",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://www.nature.com/articles/nature12939.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2022,
+                4,
+                16
+              ]
+            ],
+            "date-time": "2022-04-16T21:09:58Z",
+            "timestamp": 1650143398000
+          },
+          "score": 85.67888,
+          "resource": {
+            "primary": {
+              "URL": "https://www.nature.com/articles/nature12939"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2014,
+                1,
+                15
+              ]
+            ]
+          },
+          "references-count": 42,
+          "journal-issue": {
+            "issue": "7483",
+            "published-print": {
+              "date-parts": [
+                [
+                  2014,
+                  1,
+                  16
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "BFnature12939"
+          ],
+          "URL": "https://doi.org/10.1038/nature12939",
+          "ISSN": [
+            "0028-0836",
+            "1476-4687"
+          ],
+          "issn-type": [
+            {
+              "value": "0028-0836",
+              "type": "print"
+            },
+            {
+              "value": "1476-4687",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2014,
+                1,
+                15
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "30 May 2013",
+              "order": 1,
+              "name": "received",
+              "label": "Received",
+              "group": {
+                "name": "ArticleHistory",
+                "label": "Article History"
+              }
+            },
+            {
+              "value": "3 December 2013",
+              "order": 2,
+              "name": "accepted",
+              "label": "Accepted",
+              "group": {
+                "name": "ArticleHistory",
+                "label": "Article History"
+              }
+            },
+            {
+              "value": "15 January 2014",
+              "order": 3,
+              "name": "first_online",
+              "label": "First Online",
+              "group": {
+                "name": "ArticleHistory",
+                "label": "Article History"
+              }
+            },
+            {
+              "value": "The authors declare no competing financial interests.",
+              "order": 1,
+              "name": "Ethics",
+              "group": {
+                "name": "EthicsHeading",
+                "label": "Competing interests"
+              }
+            }
+          ]
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2025,
+                2,
+                21
+              ]
+            ],
+            "date-time": "2025-02-21T01:57:58Z",
+            "timestamp": 1740103078867,
+            "version": "3.37.3"
+          },
+          "reference-count": 17,
+          "publisher": "IEEE",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2024,
+                    6,
+                    3
+                  ]
+                ],
+                "date-time": "2024-06-03T00:00:00Z",
+                "timestamp": 1717372800000
+              },
+              "content-version": "stm-asf",
+              "delay-in-days": 0,
+              "URL": "https://doi.org/10.15223/policy-029"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2024,
+                    6,
+                    3
+                  ]
+                ],
+                "date-time": "2024-06-03T00:00:00Z",
+                "timestamp": 1717372800000
+              },
+              "content-version": "stm-asf",
+              "delay-in-days": 0,
+              "URL": "https://doi.org/10.15223/policy-037"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2024,
+                6,
+                3
+              ]
+            ]
+          },
+          "DOI": "10.1109/metroaerospace61015.2024.10591568",
+          "type": "proceedings-article",
+          "created": {
+            "date-parts": [
+              [
+                2024,
+                7,
+                23
+              ]
+            ],
+            "date-time": "2024-07-23T17:26:19Z",
+            "timestamp": 1721755579000
+          },
+          "page": "100-105",
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Downwash and Upwash Prediction Model for Unconventional Lifting Configuration"
+          ],
+          "prefix": "10.1109",
+          "author": [
+            {
+              "ORCID": "https://orcid.org/0009-0000-8024-3157",
+              "authenticated-orcid": false,
+              "given": "Giorgio Antonio",
+              "family": "Orlando",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Politecnico di Torino,Department of Mechanical and Aerospace Engineering,Torino,Italy"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0001-9068-4714",
+              "authenticated-orcid": false,
+              "given": "Angelo",
+              "family": "Lerro",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Politecnico di Torino,Department of Mechanical and Aerospace Engineering,Torino,Italy"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0003-1251-4802",
+              "authenticated-orcid": false,
+              "given": "Gioacchino",
+              "family": "Cafiero",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Politecnico di Torino,Department of Mechanical and Aerospace Engineering,Torino,Italy"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "263",
+          "reference": [
+            {
+              "key": "ref1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1063/1.3060977"
+            },
+            {
+              "key": "ref2",
+              "first-page": "2",
+              "volume-title": "Airplane Flight Dynamics and Automatic Flight Controls, ser. Airplane Flight Dynamics and Automatic Flight Controls",
+              "author": "Roskam",
+              "year": "1998"
+            },
+            {
+              "volume-title": "USAF Stability and Control DATCOM, AFWAL-TR-83\u20133048",
+              "year": "1978",
+              "author": "Finck",
+              "key": "ref3"
+            },
+            {
+              "issue": "6",
+              "key": "ref4",
+              "doi-asserted-by": "crossref",
+              "first-page": "161",
+              "DOI": "10.1016/j.cja.2023.03.035",
+              "article-title": "Downwash modelling for three-lifting-surface aircraft configuration design",
+              "volume": "36",
+              "author": "Corcione",
+              "year": "2023",
+              "journal-title": "Chinese Journal of Aeronautics"
+            },
+            {
+              "volume-title": "Downwash and wake behind plain and flapped airfoils",
+              "year": "1939",
+              "author": "Silverstein",
+              "key": "ref5"
+            },
+            {
+              "key": "ref6",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2514/6.1992-284"
+            },
+            {
+              "volume-title": "The effect of a canard surface on the total lift of an unswept wing in subsonic flow",
+              "year": "1959",
+              "author": "Rasmussen",
+              "key": "ref7"
+            },
+            {
+              "key": "ref8",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1109/ICMAE59650.2023.10424511"
+            },
+            {
+              "key": "ref9",
+              "first-page": "137",
+              "article-title": "A new approach for the estimation of longitudinal damping derivatives: Cfd validation on naca 0012",
+              "volume": "10",
+              "author": "Gili",
+              "year": "2015",
+              "journal-title": "WSEAS Transactions on Fluid Mechanics"
+            },
+            {
+              "volume-title": "Tornado, a Vortex Lattice method implemented in MATLAB",
+              "year": "2024",
+              "key": "ref10"
+            },
+            {
+              "key": "ref11",
+              "article-title": "A vortex lattice matlab implementation for linear aerodynamic wing applications",
+              "volume": "208",
+              "author": "Melin",
+              "year": "2000",
+              "journal-title": "Royal Institute of Technology, Sweden"
+            },
+            {
+              "key": "ref12",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1162/neco.1991.3.2.246"
+            },
+            {
+              "key": "ref13",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1155/2021/9982722"
+            },
+            {
+              "volume-title": "General Aviation Aircraft Design: Applied Methods and Procedures",
+              "year": "2013",
+              "author": "Gudmundsson",
+              "key": "ref14"
+            },
+            {
+              "volume-title": "Theory of Wing Sections: Including a Summary of Airfoil Data, ser. Dover Books on Aeronautical Engineering",
+              "year": "1959",
+              "author": "Abbott",
+              "key": "ref15"
+            },
+            {
+              "key": "ref16",
+              "article-title": "A Critical Assessment of Wind Tunnel Results for the NACA 0012 Airfoil, ser. AVSCOM technical report",
+              "volume-title": "Defense Technical Information Center",
+              "author": "McCroskey",
+              "year": "1987"
+            },
+            {
+              "key": "ref17",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2514/6.2020-2623"
+            }
+          ],
+          "event": {
+            "name": "2024 11th International Workshop on Metrology for AeroSpace (MetroAeroSpace)",
+            "start": {
+              "date-parts": [
+                [
+                  2024,
+                  6,
+                  3
+                ]
+              ]
+            },
+            "location": "Lublin, Poland",
+            "end": {
+              "date-parts": [
+                [
+                  2024,
+                  6,
+                  5
+                ]
+              ]
+            }
+          },
+          "container-title": [
+            "2024 11th International Workshop on Metrology for AeroSpace (MetroAeroSpace)"
+          ],
+          "link": [
+            {
+              "URL": "http://xplorestaging.ieee.org/ielx8/10591476/10591509/10591568.pdf?arnumber=10591568",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2024,
+                7,
+                24
+              ]
+            ],
+            "date-time": "2024-07-24T06:49:50Z",
+            "timestamp": 1721803790000
+          },
+          "score": 31.33913,
+          "resource": {
+            "primary": {
+              "URL": "https://ieeexplore.ieee.org/document/10591568/"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2024,
+                6,
+                3
+              ]
+            ]
+          },
+          "references-count": 17,
+          "URL": "https://doi.org/10.1109/metroaerospace61015.2024.10591568",
+          "published": {
+            "date-parts": [
+              [
+                2024,
+                6,
+                3
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                7,
+                31
+              ]
+            ],
+            "date-time": "2026-07-31T20:02:39Z",
+            "timestamp": 1785528159296,
+            "version": "3.56.0"
+          },
+          "reference-count": 9,
+          "publisher": "American Institute of Aeronautics and Astronautics (AIAA)",
+          "issue": "4",
+          "content-domain": {
+            "domain": [
+              "arc.aiaa.org"
+            ],
+            "crossmark-restriction": true
+          },
+          "short-container-title": [
+            "Journal of Aircraft"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2003,
+                7
+              ]
+            ]
+          },
+          "DOI": "10.2514/2.3162",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2008,
+                8,
+                13
+              ]
+            ],
+            "date-time": "2008-08-13T02:32:51Z",
+            "timestamp": 1218594771000
+          },
+          "page": "799-803",
+          "update-policy": "https://doi.org/10.2514/aiaa_crossmarkpolicy",
+          "source": "Crossref",
+          "is-referenced-by-count": 20,
+          "title": [
+            "Optimum Downwash Behind Wings in Formation Flight"
+          ],
+          "prefix": "10.2514",
+          "volume": "40",
+          "author": [
+            {
+              "given": "James W.",
+              "family": "Frazier",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "North Carolina State University, Raleigh, North Carolina 27695"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Ashok",
+              "family": "Gopalarathnam",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "North Carolina State University, Raleigh, North Carolina 27695"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "1387",
+          "reference": [
+            {
+              "key": "p_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.168.3934.1003"
+            },
+            {
+              "key": "p_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/35099670"
+            },
+            {
+              "key": "p_3",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2514/6.2002-4491"
+            },
+            {
+              "key": "p_4",
+              "volume-title": "AIAA Paper",
+              "author": "Iglesias S.",
+              "year": "2002"
+            },
+            {
+              "key": "p_5",
+              "first-page": "121",
+              "author": "Munk M. M.",
+              "year": "1921",
+              "journal-title": "NACA Rept."
+            },
+            {
+              "key": "p_6",
+              "volume-title": "NACA TN",
+              "author": "Jones R. T.",
+              "year": "1950"
+            },
+            {
+              "key": "p_7",
+              "volume-title": "NASA TM",
+              "author": "Jones R. T.",
+              "year": "1980"
+            },
+            {
+              "key": "p_8",
+              "volume-title": "NASA SP",
+              "author": "Blackwell J. A., Jr.",
+              "year": "1976"
+            },
+            {
+              "key": "p_9",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0376-0421(99)00006-8"
+            }
+          ],
+          "container-title": [
+            "Journal of Aircraft"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://arc.aiaa.org/doi/pdf/10.2514/2.3162",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2021,
+                2,
+                25
+              ]
+            ],
+            "date-time": "2021-02-25T15:38:30Z",
+            "timestamp": 1614267510000
+          },
+          "score": 30.618587,
+          "resource": {
+            "primary": {
+              "URL": "https://arc.aiaa.org/doi/10.2514/2.3162"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2003,
+                7
+              ]
+            ]
+          },
+          "references-count": 9,
+          "aliases": [
+            "10.2514/1.20"
+          ],
+          "journal-issue": {
+            "issue": "4",
+            "published-print": {
+              "date-parts": [
+                [
+                  2003,
+                  7
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.2514/2.3162"
+          ],
+          "URL": "https://doi.org/10.2514/2.3162",
+          "ISSN": [
+            "0021-8669",
+            "1533-3868"
+          ],
+          "issn-type": [
+            {
+              "value": "0021-8669",
+              "type": "print"
+            },
+            {
+              "value": "1533-3868",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2003,
+                7
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "2012-05-22",
+              "order": 3,
+              "name": "published",
+              "label": "Published",
+              "group": {
+                "name": "publication_history",
+                "label": "Publication History"
+              }
+            }
+          ]
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

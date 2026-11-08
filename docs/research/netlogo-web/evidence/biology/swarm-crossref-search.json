@@ -1,0 +1,905 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=The+Swarm+simulation+system+a+toolkit+for+building+multi-agent+simulations+Minar+Burkhart+Langton+Askenazi&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 5897544,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2024,
+                5,
+                11
+              ]
+            ],
+            "date-time": "2024-05-11T11:53:20Z",
+            "timestamp": 1715428400145
+          },
+          "edition-number": "0",
+          "reference-count": 0,
+          "publisher": "Chapman and Hall/CRC",
+          "isbn-type": [
+            {
+              "value": "9780429100468",
+              "type": "electronic"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2013,
+                6,
+                24
+              ]
+            ]
+          },
+          "DOI": "10.1201/b15024-7",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2020,
+                7,
+                9
+              ]
+            ],
+            "date-time": "2020-07-09T17:31:15Z",
+            "timestamp": 1594315875000
+          },
+          "page": "65-92",
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Multi-Agent Simulation Based on Swarm"
+          ],
+          "prefix": "10.1201",
+          "member": "301",
+          "container-title": [
+            "Agent-Based Modeling and Simulation with Swarm"
+          ],
+          "language": "en",
+          "deposited": {
+            "date-parts": [
+              [
+                2021,
+                4,
+                10
+              ]
+            ],
+            "date-time": "2021-04-10T23:16:48Z",
+            "timestamp": 1618096608000
+          },
+          "score": 30.777386,
+          "resource": {
+            "primary": {
+              "URL": "https://www.taylorfrancis.com/books/9781466562400/chapters/10.1201/b15024-7"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2013,
+                6,
+                24
+              ]
+            ]
+          },
+          "ISBN": [
+            "9780429100468"
+          ],
+          "references-count": 0,
+          "URL": "https://doi.org/10.1201/b15024-7",
+          "published": {
+            "date-parts": [
+              [
+                2013,
+                6,
+                24
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2025,
+                3,
+                27
+              ]
+            ],
+            "date-time": "2025-03-27T07:25:18Z",
+            "timestamp": 1743060318439,
+            "version": "3.40.3"
+          },
+          "publisher-location": "Cham",
+          "reference-count": 18,
+          "publisher": "Springer International Publishing",
+          "isbn-type": [
+            {
+              "type": "print",
+              "value": "9783319590592"
+            },
+            {
+              "type": "electronic",
+              "value": "9783319590608"
+            }
+          ],
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2017,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2017-01-01T00:00:00Z",
+                "timestamp": 1483228800000
+              },
+              "content-version": "unspecified",
+              "delay-in-days": 0,
+              "URL": "http://www.springer.com/tdm"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "link.springer.com"
+            ],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2017
+              ]
+            ]
+          },
+          "DOI": "10.1007/978-3-319-59060-8_54",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2017,
+                5,
+                23
+              ]
+            ],
+            "date-time": "2017-05-23T08:42:30Z",
+            "timestamp": 1495528950000
+          },
+          "page": "599-608",
+          "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 2,
+          "title": [
+            "Simulation of Multi-agent Systems with Alvis Toolkit"
+          ],
+          "prefix": "10.1007",
+          "author": [
+            {
+              "given": "Marcin",
+              "family": "Szpyrka",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Piotr",
+              "family": "Matyasik",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "\u0141ukasz",
+              "family": "Podolski",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Micha\u0142",
+              "family": "Wypych",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "published-online": {
+            "date-parts": [
+              [
+                2017,
+                5,
+                24
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "issue": "1\u20132",
+              "key": "54_CR1",
+              "doi-asserted-by": "publisher",
+              "first-page": "10",
+              "DOI": "10.1016/j.infsof.2007.10.008",
+              "volume": "50",
+              "author": "F Bellifemine",
+              "year": "2008",
+              "unstructured": "Bellifemine, F., Caire, G., Poggi, A., Rimassa, G.: Jade: a software framework for developing multi-agent applications. lessons learned. Inf. Softw. Technol. 50(1\u20132), 10\u201321 (2008)",
+              "journal-title": "Inf. Softw. Technol."
+            },
+            {
+              "issue": "12",
+              "key": "54_CR2",
+              "doi-asserted-by": "publisher",
+              "first-page": "118",
+              "DOI": "10.1145/2096148.2034690",
+              "volume": "46",
+              "author": "J Epstein",
+              "year": "2011",
+              "unstructured": "Epstein, J., Black, A., Peyton-Jones, S.: Towards haskell in the cloud. SIGPLAN Not. 46(12), 118\u2013129 (2011)",
+              "journal-title": "SIGPLAN Not."
+            },
+            {
+              "key": "54_CR3",
+              "series-title": "Lecture Notes in Computer Science",
+              "doi-asserted-by": "publisher",
+              "first-page": "48",
+              "DOI": "10.1007/3-540-47772-1_5",
+              "volume-title": "Infrastructure for Agents, Multi-Agent Systems, and Scalable Multi-Agent Systems",
+              "author": "O Gutknecht",
+              "year": "2001",
+              "unstructured": "Gutknecht, O., Ferber, J.: The MadKit agent platform architecture. In: Wagner, T., Rana, O.F. (eds.) AGENTS 2000. LNCS, vol. 1887, pp. 48\u201355. Springer, Heidelberg (2001). doi:10.1007/3-540-47772-1_5"
+            },
+            {
+              "key": "54_CR4",
+              "unstructured": "Idris, I.: Python Data Analysis. Packt Publishing Ltd. (2014)"
+            },
+            {
+              "key": "54_CR5",
+              "doi-asserted-by": "publisher",
+              "unstructured": "Jasiul, B., \u015aliwa, J., Gleba, K., Szpyrka, M.: Identification of malware activities with rules. In: Ganzha, M., Maciaszek, L., Paprzycki, M. (eds.) Proceedings of the 2014 Federated Conference on Computer Science and Information Systems. Annals of Computer Science and Information Systems, vol. 2, pp. 101\u2013110. IEEE (2014). http://dx.doi.org/10.15439/2014F265",
+              "DOI": "10.15439/2014F265"
+            },
+            {
+              "key": "54_CR6",
+              "doi-asserted-by": "publisher",
+              "first-page": "390",
+              "DOI": "10.1016/j.future.2014.02.002",
+              "volume": "37",
+              "author": "D Krzywicki",
+              "year": "2014",
+              "unstructured": "Krzywicki, D., Faber, L., Byrski, A., Kisiel-Dorohinicki, M.: Computing agents for decision support systems. Future Gener. Comput. Syst. 37, 390\u2013400 (2014)",
+              "journal-title": "Future Gener. Comput. Syst."
+            },
+            {
+              "key": "54_CR7",
+              "series-title": "Lecture Notes in Computer Science",
+              "doi-asserted-by": "publisher",
+              "first-page": "205",
+              "DOI": "10.1007/978-3-540-30578-1_14",
+              "volume-title": "Agent-Oriented Software Engineering V",
+              "author": "GB Laleci",
+              "year": "2005",
+              "unstructured": "Laleci, G.B., Kabak, Y., Dogac, A., Cingil, I., Kirbas, S., Yildiz, A., Sinir, S., Ozdikis, O., Ozturk, O.: A platform for agent behavior design and multi agent orchestration. In: Odell, J., Giorgini, P., M\u00fcller, J.P. (eds.) AOSE 2004. LNCS, vol. 3382, pp. 205\u2013220. Springer, Heidelberg (2005). doi:10.1007/978-3-540-30578-1_14"
+            },
+            {
+              "key": "54_CR8",
+              "unstructured": "Lee, A., Ihaka, R., Triggs, C.: Advanced Statistical Modelling. Course notes for University of Auckland Paper STATS 330 (2012)"
+            },
+            {
+              "key": "54_CR9",
+              "series-title": "Lecture Notes in Computer Science",
+              "doi-asserted-by": "publisher",
+              "first-page": "339",
+              "DOI": "10.1007/978-3-642-32096-5_7",
+              "volume-title": "Central European Functional Programming School",
+              "author": "S Marlow",
+              "year": "2012",
+              "unstructured": "Marlow, S.: Parallel and concurrent programming in haskell. In: Zs\u00f3k, V., Horv\u00e1th, Z., Plasmeijer, R. (eds.) CEFP 2011. LNCS, vol. 7241, pp. 339\u2013401. Springer, Heidelberg (2012). doi:10.1007/978-3-642-32096-5_7"
+            },
+            {
+              "key": "54_CR10",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Marlow, S., Newton, R., Peyton Jones, S.: A monad for deterministic parallelism. In: Haskell 2011: Proceedings of the Fourth ACM SIGPLAN Symposium on Haskell. ACM (2011). http://simonmar.github.io/bib/papers/monad-par.pdf",
+              "DOI": "10.1145/2034675.2034685"
+            },
+            {
+              "issue": "1",
+              "key": "54_CR11",
+              "doi-asserted-by": "publisher",
+              "first-page": "3",
+              "DOI": "10.1186/2194-3206-1-3",
+              "volume": "1",
+              "author": "M North",
+              "year": "2013",
+              "unstructured": "North, M., Collier, N., Ozik, J., Tatara, E., Macal, C., Bragen, M., Sydelko, P.: Complex adaptive systems modeling with Repast Simphony. Complex Adapt. Syst. Model. 1(1), 3 (2013)",
+              "journal-title": "Complex Adapt. Syst. Model."
+            },
+            {
+              "key": "54_CR12",
+              "volume-title": "Real World Haskell",
+              "author": "B O\u2019Sullivan",
+              "year": "2008",
+              "unstructured": "O\u2019Sullivan, B., Goerzen, J., Stewart, D.: Real World Haskell. O\u2019Reilly Media, Sebastopol (2008)"
+            },
+            {
+              "key": "54_CR13",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Szpyrka, M.: Modelling and analysis of real-time systems with RTCP-nets. In: Kordic, V. (ed.) Petri Net, Theory and Applications, chap. 2, pp. 17\u201340. I-Tech Education and Publishing, Vienna (2008)",
+              "DOI": "10.5772/5311"
+            },
+            {
+              "issue": "1",
+              "key": "54_CR14",
+              "first-page": "55",
+              "volume": "35",
+              "author": "M Szpyrka",
+              "year": "2016",
+              "unstructured": "Szpyrka, M., Matyasik, P., Biernacki, J., Biernacka, A., Wypych, M., Kotulski, L.: Hierarchical communication diagrams. Comput. Inf. 35(1), 55\u201383 (2016)",
+              "journal-title": "Comput. Inf."
+            },
+            {
+              "key": "54_CR15",
+              "series-title": "Studies in Computational Intelligence",
+              "doi-asserted-by": "publisher",
+              "first-page": "315",
+              "DOI": "10.1007/978-3-642-21271-0_15",
+              "volume-title": "Intelligent Decision Systems in Large-Scale Distributed Environments",
+              "author": "M Szpyrka",
+              "year": "2011",
+              "unstructured": "Szpyrka, M., Matyasik, P., Mr\u00f3wka, R.: Alvis - modelling language for concurrent systems. In: Bouvry, P., Gonzalez-Velez, H., Ko\u0142odziej, J. (eds.) Intelligent Decision Systems in Large-Scale Distributed Environments. SCI, vol. 362, pp. 315\u2013341. Springer, Heidelberg (2011). doi:10.1007/978-3-642-21271-0_15"
+            },
+            {
+              "issue": "1\u20132",
+              "key": "54_CR16",
+              "doi-asserted-by": "crossref",
+              "first-page": "161",
+              "DOI": "10.3233/FI-2014-967",
+              "volume": "129",
+              "author": "M Szpyrka",
+              "year": "2014",
+              "unstructured": "Szpyrka, M., Matyasik, P., Mr\u00f3wka, R., Kotulski, L.: Formal description of Alvis language with $$\\alpha ^0$$ system layer. Fundamenta Informaticae 129(1\u20132), 161\u2013176 (2014)",
+              "journal-title": "Fundamenta Informaticae"
+            },
+            {
+              "volume-title": "Multiagent Systems: A Modern Approach to Distributed Artificial Intelligence",
+              "year": "1999",
+              "key": "54_CR17",
+              "unstructured": "Weiss, G. (ed.): Multiagent Systems: A Modern Approach to Distributed Artificial Intelligence. MIT Press, Cambridge (1999)"
+            },
+            {
+              "key": "54_CR18",
+              "volume-title": "An Introduction to MultiAgent Systems",
+              "author": "M Wooldridge",
+              "year": "2009",
+              "unstructured": "Wooldridge, M.: An Introduction to MultiAgent Systems, 2nd edn. Wiley Publishing, Chichester (2009)",
+              "edition": "2"
+            }
+          ],
+          "container-title": [
+            "Lecture Notes in Computer Science",
+            "Artificial Intelligence and Soft Computing"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://link.springer.com/content/pdf/10.1007/978-3-319-59060-8_54",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2024,
+                3,
+                13
+              ]
+            ],
+            "date-time": "2024-03-13T15:21:47Z",
+            "timestamp": 1710343307000
+          },
+          "score": 29.782656,
+          "resource": {
+            "primary": {
+              "URL": "https://link.springer.com/10.1007/978-3-319-59060-8_54"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2017
+              ]
+            ]
+          },
+          "ISBN": [
+            "9783319590592",
+            "9783319590608"
+          ],
+          "references-count": 18,
+          "URL": "https://doi.org/10.1007/978-3-319-59060-8_54",
+          "ISSN": [
+            "0302-9743",
+            "1611-3349"
+          ],
+          "issn-type": [
+            {
+              "type": "print",
+              "value": "0302-9743"
+            },
+            {
+              "type": "electronic",
+              "value": "1611-3349"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2017
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "24 May 2017",
+              "order": 1,
+              "name": "first_online",
+              "label": "First Online",
+              "group": {
+                "name": "ChapterHistory",
+                "label": "Chapter History"
+              }
+            },
+            {
+              "value": "ICAISC",
+              "order": 1,
+              "name": "conference_acronym",
+              "label": "Conference Acronym",
+              "group": {
+                "name": "ConferenceInfo",
+                "label": "Conference Information"
+              }
+            },
+            {
+              "value": "International Conference on Artificial Intelligence and Soft Computing",
+              "order": 2,
+              "name": "conference_name",
+              "label": "Conference Name",
+              "group": {
+                "name": "ConferenceInfo",
+                "label": "Conference Information"
+              }
+            },
+            {
+              "value": "Zakopane",
+              "order": 3,
+              "name": "conference_city",
+              "label": "Conference City",
+              "group": {
+                "name": "ConferenceInfo",
+                "label": "Conference Information"
+              }
+            },
+            {
+              "value": "Poland",
+              "order": 4,
+              "name": "conference_country",
+              "label": "Conference Country",
+              "group": {
+                "name": "ConferenceInfo",
+                "label": "Conference Information"
+              }
+            },
+            {
+              "value": "2017",
+              "order": 5,
+              "name": "conference_year",
+              "label": "Conference Year",
+              "group": {
+                "name": "ConferenceInfo",
+                "label": "Conference Information"
+              }
+            },
+            {
+              "value": "11 June 2017",
+              "order": 7,
+              "name": "conference_start_date",
+              "label": "Conference Start Date",
+              "group": {
+                "name": "ConferenceInfo",
+                "label": "Conference Information"
+              }
+            },
+            {
+              "value": "15 June 2017",
+              "order": 8,
+              "name": "conference_end_date",
+              "label": "Conference End Date",
+              "group": {
+                "name": "ConferenceInfo",
+                "label": "Conference Information"
+              }
+            },
+            {
+              "value": "16",
+              "order": 9,
+              "name": "conference_number",
+              "label": "Conference Number",
+              "group": {
+                "name": "ConferenceInfo",
+                "label": "Conference Information"
+              }
+            },
+            {
+              "value": "icaisc2017",
+              "order": 10,
+              "name": "conference_id",
+              "label": "Conference ID",
+              "group": {
+                "name": "ConferenceInfo",
+                "label": "Conference Information"
+              }
+            },
+            {
+              "value": "http://www.icaisc.eu/",
+              "order": 11,
+              "name": "conference_url",
+              "label": "Conference URL",
+              "group": {
+                "name": "ConferenceInfo",
+                "label": "Conference Information"
+              }
+            }
+          ]
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2025,
+                6,
+                19
+              ]
+            ],
+            "date-time": "2025-06-19T04:19:55Z",
+            "timestamp": 1750306795487,
+            "version": "3.41.0"
+          },
+          "publisher-location": "New York, NY, USA",
+          "reference-count": 19,
+          "publisher": "ACM",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2013,
+                    9,
+                    19
+                  ]
+                ],
+                "date-time": "2013-09-19T00:00:00Z",
+                "timestamp": 1379548800000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "https://www.acm.org/publications/policies/copyright_policy#Background"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "dl.acm.org"
+            ],
+            "crossmark-restriction": true
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2013,
+                9,
+                19
+              ]
+            ]
+          },
+          "DOI": "10.1145/2490257.2490293",
+          "type": "proceedings-article",
+          "created": {
+            "date-parts": [
+              [
+                2013,
+                8,
+                13
+              ]
+            ],
+            "date-time": "2013-08-13T12:31:21Z",
+            "timestamp": 1376397081000
+          },
+          "page": "66-70",
+          "update-policy": "https://doi.org/10.1145/crossmark-policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 7,
+          "title": [
+            "Building a social multi-agent system simulation management toolbox"
+          ],
+          "prefix": "10.1145",
+          "author": [
+            {
+              "given": "Chairi",
+              "family": "Kiourt",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Hellenic Open University, Patras, Greece"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Dimitris",
+              "family": "Kalles",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Hellenic Open University, Patras, Greece"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "320",
+          "published-online": {
+            "date-parts": [
+              [
+                2013,
+                9,
+                19
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "e_1_3_2_1_1_1",
+              "unstructured": "Gilbert N. and Troitzsch K. G.. 2005. \"Simulation for the Social Scientist\" Open University Press 2nd ed. February.   Gilbert N. and Troitzsch K. G.. 2005. \"Simulation for the Social Scientist\" Open University Press 2nd ed . February."
+            },
+            {
+              "volume-title": "An Introduction to Distributed Artificial Intelligence",
+              "author": "Ferber J.",
+              "key": "e_1_3_2_1_2_1",
+              "unstructured": "Ferber J. 1999. \" Multi-Agent Systems : An Introduction to Distributed Artificial Intelligence \", MA : Addison-Wesley . Ferber J. 1999. \"Multi-Agent Systems: An Introduction to Distributed Artificial Intelligence\", MA: Addison-Wesley."
+            },
+            {
+              "key": "e_1_3_2_1_3_1",
+              "first-page": "323",
+              "volume-title": "IEEE Symposium",
+              "author": "Marivate V. N.",
+              "year": "2008",
+              "unstructured": "Marivate V. N. 2008 . \" Social Learning methods in board game agents\", Computational Intelligence and Games, (CIG '08) , IEEE Symposium ( Perth, Australia. 2008), p.p. 323 -- 328 . Marivate V. N. 2008. \"Social Learning methods in board game agents\", Computational Intelligence and Games, (CIG '08), IEEE Symposium (Perth, Australia. 2008), p.p. 323--328."
+            },
+            {
+              "key": "e_1_3_2_1_4_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1109/ICTAI.2012.51"
+            },
+            {
+              "key": "e_1_3_2_1_5_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.engappai.2011.06.006"
+            },
+            {
+              "key": "e_1_3_2_1_6_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1109/DeSE.2011.10"
+            },
+            {
+              "key": "e_1_3_2_1_7_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1145/372202.372204"
+            },
+            {
+              "key": "e_1_3_2_1_8_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1145/1122012.1122013"
+            },
+            {
+              "volume-title": "International Symposium on Robotics Research (ISRR).",
+              "author": "Thomaz A. L.",
+              "key": "e_1_3_2_1_9_1",
+              "unstructured": "Thomaz A. L. and Cakmak M . 2009. \"Social Learning Mechanisms for Robots \". International Symposium on Robotics Research (ISRR). Thomaz A. L. and Cakmak M. 2009. \"Social Learning Mechanisms for Robots\". International Symposium on Robotics Research (ISRR)."
+            },
+            {
+              "key": "e_1_3_2_1_10_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s10514-010-9197-9"
+            },
+            {
+              "key": "e_1_3_2_1_11_1",
+              "first-page": "477",
+              "volume-title": "9th IEEE International Conference on Industrial Informatics (INDIN) (Portugal",
+              "author": "Barbosa J.",
+              "year": "2011",
+              "unstructured": "Barbosa J. and Leitao P . 2011. \"Simulation of multi-agent manufacturing systems using Agent-Based Modelling platforms .\", 9th IEEE International Conference on Industrial Informatics (INDIN) (Portugal , Jul. 26-29, 2011 ), p.p. 477 -- 482 . Barbosa J. and Leitao P. 2011. \"Simulation of multi-agent manufacturing systems using Agent-Based Modelling platforms.\", 9th IEEE International Conference on Industrial Informatics (INDIN) (Portugal, Jul. 26-29, 2011), p.p.477--482."
+            },
+            {
+              "key": "e_1_3_2_1_12_1",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Sutton R. and Barto A. 1998. \"Reinforcement Learning - An Introduction\" MIT Press Cambridge MA.   Sutton R. and Barto A. 1998. \"Reinforcement Learning - An Introduction\" MIT Press Cambridge MA.",
+              "DOI": "10.1109/TNN.1998.712192"
+            },
+            {
+              "key": "e_1_3_2_1_13_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1023/A:1022633531479"
+            },
+            {
+              "volume-title": "Proceedings of IEEE International Conference on Tools with Artificial Intelligence, Washington D.C.",
+              "author": "Kalles D.",
+              "key": "e_1_3_2_1_14_1",
+              "unstructured": "Kalles D. and Ntoutsi E . 2002. \"Interactive Verification of Game Design and Playing Strategies \", Proceedings of IEEE International Conference on Tools with Artificial Intelligence, Washington D.C. Kalles D. and Ntoutsi E. 2002. \"Interactive Verification of Game Design and Playing Strategies\", Proceedings of IEEE International Conference on Tools with Artificial Intelligence, Washington D.C."
+            },
+            {
+              "key": "e_1_3_2_1_15_1",
+              "unstructured": "Simon H. A. 1996. \"The sciences of the artificial\" MIT Press Cmbridge MA London.   Simon H. A. 1996. \"The sciences of the artificial\" MIT Press Cmbridge MA London."
+            },
+            {
+              "key": "e_1_3_2_1_16_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1177/0037549705058073"
+            },
+            {
+              "key": "e_1_3_2_1_17_1",
+              "first-page": "451",
+              "volume-title": "New York",
+              "author": "Bordini H. R.",
+              "year": "2009",
+              "unstructured": "Bordini H. R. and Hubner J. F . 2009 . \"Agent-based simulation using BDI programming in Jason\". In W. D. Uhrmacher A. M., ed. Multi-Agent Systems: Simulation and Applications. London , New York : CRC Press Inc ., pp. 451 -- 476 . Bordini H. R. and Hubner J. F. 2009. \"Agent-based simulation using BDI programming in Jason\". In W. D. Uhrmacher A. M., ed. Multi-Agent Systems: Simulation and Applications. London, New York: CRC Press Inc., pp.451--476."
+            },
+            {
+              "key": "e_1_3_2_1_18_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.5555/1809744"
+            },
+            {
+              "key": "e_1_3_2_1_19_1",
+              "volume-title": "Multiagent Systems: Algorithmic, Game-Theoretic, and Logical Foundations\"",
+              "author": "Shoham Y.",
+              "year": "2009",
+              "unstructured": "Shoham Y. and Leyton B. K . 2009 .\" Multiagent Systems: Algorithmic, Game-Theoretic, and Logical Foundations\" , Cambridge University Press . Shoham Y. and Leyton B. K. 2009.\" Multiagent Systems: Algorithmic, Game-Theoretic, and Logical Foundations\", Cambridge University Press."
+            }
+          ],
+          "event": {
+            "name": "BCI '13: Balkan Conference in Informatics",
+            "sponsor": [
+              "University of Macedonia",
+              "Aristotle University of Thessaloniki",
+              "The University of Sheffield The University of Sheffield",
+              "Greek Com Soc Greek Computer Society",
+              "SEERC South-East European Research Centre",
+              "Alexander TEI of Thessaloniki"
+            ],
+            "location": "Thessaloniki Greece",
+            "acronym": "BCI '13"
+          },
+          "container-title": [
+            "Proceedings of the 6th Balkan Conference in Informatics"
+          ],
+          "link": [
+            {
+              "URL": "https://dl.acm.org/doi/10.1145/2490257.2490293",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://dl.acm.org/doi/pdf/10.1145/2490257.2490293",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2025,
+                6,
+                18
+              ]
+            ],
+            "date-time": "2025-06-18T07:34:34Z",
+            "timestamp": 1750232074000
+          },
+          "score": 29.609606,
+          "resource": {
+            "primary": {
+              "URL": "https://dl.acm.org/doi/10.1145/2490257.2490293"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2013,
+                9,
+                19
+              ]
+            ]
+          },
+          "references-count": 19,
+          "alternative-id": [
+            "10.1145/2490257.2490293",
+            "10.1145/2490257"
+          ],
+          "URL": "https://doi.org/10.1145/2490257.2490293",
+          "published": {
+            "date-parts": [
+              [
+                2013,
+                9,
+                19
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "2013-09-19",
+              "order": 2,
+              "name": "published",
+              "label": "Published",
+              "group": {
+                "name": "publication_history",
+                "label": "Publication History"
+              }
+            }
+          ]
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

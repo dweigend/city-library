@@ -1,0 +1,82 @@
+## WHAT IS IT?
+
+This model demonstrates the concept of "structure from randomness".  In particular, it is an implementation of the model described in the book "Cities and Complexity" by Michael Batty, on pages 43-45.  For analysis and discussion beyond that provided with this model, the reader is encouraged to refer to this text.
+
+The basic idea here is demonstrating how structured formations can easily emerge from completely random initial data, through a simple process.
+
+## HOW IT WORKS
+
+Each grid cell is initialized to have an activity value of either 1 or -1, at random.
+Each tick of the model, the cell takes on a new activity value, which is the average of the activity values from its Von Neumann neighborhood (that is, itself and its 4 neighbors) from the previous step.
+
+If KEEP-ADDING-RANDOMNESS? is switched on, then randomness is continually added to the model.
+
+## HOW TO USE IT
+
+Press the SETUP button to initialize the grid squares.
+
+Press the GO button to run the model.  Press the GO ONCE button to run the model just a single tick.
+
+If KEEP-ADDING-RANDOMNESS? is switched on, then at each time step either -1 or 1 is added to the value of each grid cell.
+
+The ACTIVITY DISTRIBUTION shows the distribution of different activity levels present in the set of all grid cells.
+
+## THINGS TO NOTICE
+
+First, with KEEP-ADDING-RANDOMNESS? switched OFF, notice how structural formations grow and shrink, when starting from the pure random noise.  If you run the model long enough, it will converge to a steady equilibrium state (somewhere quite close to zero).  However, in between the time of random noise and converged uniformity, there are structures that remain stable for considerable time periods.
+
+When KEEP-ADDING-RANDOMNESS? is switched ON, it is slightly more difficult to discern stable structural patterns, though they are still evident.  Some areas tend to stay darker, and some areas tend to stay lighter.
+
+## THINGS TO TRY
+
+Let the model run for a while with KEEP-ADDING-RANDOMNESS? switched ON, then turn it off and watch the ACTIVITY DISTRIBUTION plot as the model continues to run.  What happens to the left and right tail?  Then turn the KEEP-ADDING-RANDOMNESS? switch back on, and watch the plot.  Can you explain the changes in shape of the distribution?
+
+## EXTENDING THE MODEL
+
+Extend the model by adding agents that move around on the grid, searching for high activity cells.  Have them leave trails behind them using the PEN-DOWN NetLogo primitive.  How does the structure of their movement patterns relate to the underlying structure of cell activity?
+
+## NETLOGO FEATURES
+
+Notice how simple it is to create a distribution plot in NetLogo, using lists.  Look at the UPDATE-PLOT procedure in the Code tab.  It simply resets the plot pen (to clear the plot), and then sorts the activity values of each of the patches from greatest to least, and then plots them each.
+
+## RELATED MODELS
+
+This model is related to all of the other models in the "Urban Suite".
+
+In particular, it is related to "Urban Suite - Structure from Randomness 2", which is another model demonstrating the same concept.
+
+## CREDITS AND REFERENCES
+
+This model is based on pages 43-45 of the book "Cities and Complexity" by Michael Batty.
+
+Thanks to Seth Tisue and Forrest Stonedahl for their work on this model.
+
+The Urban Suite models were developed as part of the Procedural Modeling of Cities project, under the sponsorship of NSF ITR award 0326542, Electronic Arts & Maxis.
+
+Please see the project web site ( http://ccl.northwestern.edu/cities/ ) for more information.
+
+## HOW TO CITE
+
+If you mention this model or the NetLogo software in a publication, we ask that you include the citations below.
+
+For the model itself:
+
+* Wilensky, U. (2007).  NetLogo Urban Suite - Structure from Randomness 1 model.  http://ccl.northwestern.edu/netlogo/models/UrbanSuite-StructurefromRandomness1.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
+
+Please cite the NetLogo software as:
+
+* Wilensky, U. (1999). NetLogo. http://ccl.northwestern.edu/netlogo/. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
+
+## COPYRIGHT AND LICENSE
+
+Copyright 2007 Uri Wilensky.
+
+![CC BY-NC-SA 3.0](http://ccl.northwestern.edu/images/creativecommons/byncsa.png)
+
+This model is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License.  To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
+
+NetLogo itself is free software for non-commercial use under the terms of the GNU General Public License ([see full license information here](https://ccl.northwestern.edu/netlogo/docs/copyright.html)).
+
+To inquire about commercial licenses for either NetLogo or specific models from the models library, please contact netlogo-commercial-admin@ccl.northwestern.edu.
+
+<!-- 2007 -->

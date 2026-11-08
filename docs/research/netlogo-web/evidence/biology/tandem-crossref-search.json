@@ -1,0 +1,1171 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=Teaching+in+tandem-running+ants+Franks+Richardson+2006&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 818715,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                18
+              ]
+            ],
+            "date-time": "2026-10-18T01:50:15Z",
+            "timestamp": 1792288215881,
+            "version": "4.4.0"
+          },
+          "reference-count": 10,
+          "publisher": "Springer Science and Business Media LLC",
+          "issue": "7073",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2006,
+                    1,
+                    11
+                  ]
+                ],
+                "date-time": "2006-01-11T00:00:00Z",
+                "timestamp": 1136937600000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2006,
+                    1,
+                    11
+                  ]
+                ],
+                "date-time": "2006-01-11T00:00:00Z",
+                "timestamp": 1136937600000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "link.springer.com"
+            ],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Nature"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2006,
+                1,
+                12
+              ]
+            ]
+          },
+          "DOI": "10.1038/439153a",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2006,
+                1,
+                23
+              ]
+            ],
+            "date-time": "2006-01-23T10:09:06Z",
+            "timestamp": 1138010946000
+          },
+          "page": "153-153",
+          "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 355,
+          "title": [
+            "Teaching in tandem-running ants"
+          ],
+          "prefix": "10.1038",
+          "volume": "439",
+          "author": [
+            {
+              "given": "Nigel R.",
+              "family": "Franks",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Tom",
+              "family": "Richardson",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "published-online": {
+            "date-parts": [
+              [
+                2006,
+                1,
+                11
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "BF439153a_CR1",
+              "doi-asserted-by": "publisher",
+              "first-page": "151",
+              "DOI": "10.1086/417553",
+              "volume": "67",
+              "author": "TM Caro",
+              "year": "1992",
+              "unstructured": "Caro, T. M. & Hauser, M. D. Q. Rev. Biol. 67, 151\u2013174 (1992).",
+              "journal-title": "Q. Rev. Biol."
+            },
+            {
+              "key": "BF439153a_CR2",
+              "first-page": "475",
+              "volume-title": "Cognition, Evolution and Behaviour",
+              "author": "SJ Shettleworth",
+              "year": "1998",
+              "unstructured": "Shettleworth, S. J. Cognition, Evolution and Behaviour 475\u2013522 (Oxford Univ. Press, 1998)."
+            },
+            {
+              "key": "BF439153a_CR3",
+              "doi-asserted-by": "publisher",
+              "first-page": "91",
+              "DOI": "10.1016/j.anbehav.2004.12.004",
+              "volume": "70",
+              "author": "BG Galef Jr",
+              "year": "2005",
+              "unstructured": "Galef, B. G. Jr, Whiskin, E. E. & Dewar, G. Anim. Behav. 70, 91\u201396 (2005).",
+              "journal-title": "Anim. Behav."
+            },
+            {
+              "key": "BF439153a_CR4",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/978-3-662-10306-7",
+              "volume-title": "The Ants",
+              "author": "B H\u00f6lldobler",
+              "year": "1990",
+              "unstructured": "H\u00f6lldobler, B. & Wilson, E. O. The Ants (Harvard Univ. Press, Cambridge, Massachusetts, 1990)."
+            },
+            {
+              "key": "BF439153a_CR5",
+              "doi-asserted-by": "publisher",
+              "first-page": "1046",
+              "DOI": "10.1126/science.186.4168.1046",
+              "volume": "186",
+              "author": "M M\u00f6glich",
+              "year": "1974",
+              "unstructured": "M\u00f6glich, M. & Maschwitz, U. & H\u00f6lldobler, B. Science 186, 1046\u20131047 (1974).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BF439153a_CR6",
+              "doi-asserted-by": "publisher",
+              "first-page": "1125",
+              "DOI": "10.1046/j.1439-0310.2001.00749.x",
+              "volume": "107",
+              "author": "SC Pratt",
+              "year": "2001",
+              "unstructured": "Pratt, S. C., Brooks, S. E. & Franks, N. R. Ethology 107, 1125\u20131136 (2001).",
+              "journal-title": "Ethology"
+            },
+            {
+              "key": "BF439153a_CR7",
+              "doi-asserted-by": "publisher",
+              "first-page": "203",
+              "DOI": "10.1007/s00040-002-8302-2",
+              "volume": "49",
+              "author": "MA Mcleman",
+              "year": "2002",
+              "unstructured": "Mcleman, M. A., Pratt, S. C. & Franks, N. R. Insectes Soc. 49, 203\u2013208 (2002).",
+              "journal-title": "Insectes Soc."
+            },
+            {
+              "key": "BF439153a_CR8",
+              "doi-asserted-by": "publisher",
+              "first-page": "205",
+              "DOI": "10.1007/BF02224742",
+              "volume": "25",
+              "author": "M M\u00f6glich",
+              "year": "1978",
+              "unstructured": "M\u00f6glich, M. Insectes Soc. 25, 205\u2013225 (1978).",
+              "journal-title": "Insectes Soc."
+            },
+            {
+              "key": "BF439153a_CR9",
+              "doi-asserted-by": "publisher",
+              "first-page": "117",
+              "DOI": "10.1007/s00265-002-0487-x",
+              "volume": "52",
+              "author": "SC Pratt",
+              "year": "2002",
+              "unstructured": "Pratt, S. C., Mallon, E. B., Sumpter, D. J. T. & Franks, N. R. Behav. Ecol. Sociobiol. 52, 117\u2013127 (2002).",
+              "journal-title": "Behav. Ecol. Sociobiol."
+            },
+            {
+              "key": "BF439153a_CR10",
+              "doi-asserted-by": "publisher",
+              "first-page": "219",
+              "DOI": "10.1155/1974/25763",
+              "volume": "81",
+              "author": "M M\u00f6glich",
+              "year": "1974",
+              "unstructured": "M\u00f6glich, M. & H\u00f6lldobler, B. Psyche 81, 219\u2013236 (1974).",
+              "journal-title": "Psyche"
+            }
+          ],
+          "container-title": [
+            "Nature"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://www.nature.com/articles/439153a.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://www.nature.com/articles/439153a",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://www.nature.com/articles/439153a.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2025,
+                4,
+                3
+              ]
+            ],
+            "date-time": "2025-04-03T23:15:43Z",
+            "timestamp": 1743722143000
+          },
+          "score": 40.323418,
+          "resource": {
+            "primary": {
+              "URL": "https://www.nature.com/articles/439153a"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2006,
+                1,
+                11
+              ]
+            ]
+          },
+          "references-count": 10,
+          "journal-issue": {
+            "issue": "7073",
+            "published-print": {
+              "date-parts": [
+                [
+                  2006,
+                  1,
+                  12
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "BF439153a"
+          ],
+          "URL": "https://doi.org/10.1038/439153a",
+          "ISSN": [
+            "0028-0836",
+            "1476-4687"
+          ],
+          "issn-type": [
+            {
+              "value": "0028-0836",
+              "type": "print"
+            },
+            {
+              "value": "1476-4687",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2006,
+                1,
+                11
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "11 January 2006",
+              "order": 1,
+              "name": "first_online",
+              "label": "First Online",
+              "group": {
+                "name": "ArticleHistory",
+                "label": "Article History"
+              }
+            },
+            {
+              "value": "The authors declare no competing financial interests.",
+              "order": 1,
+              "name": "Ethics",
+              "group": {
+                "name": "EthicsHeading",
+                "label": "Competing interests"
+              }
+            }
+          ]
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2025,
+                12,
+                17
+              ]
+            ],
+            "date-time": "2025-12-17T22:51:04Z",
+            "timestamp": 1766011864887
+          },
+          "reference-count": 28,
+          "publisher": "Springer Science and Business Media LLC",
+          "issue": "4",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2010,
+                    9,
+                    10
+                  ]
+                ],
+                "date-time": "2010-09-10T00:00:00Z",
+                "timestamp": 1284076800000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "http://www.springer.com/tdm"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Behav Ecol Sociobiol"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2011,
+                4
+              ]
+            ]
+          },
+          "DOI": "10.1007/s00265-010-1057-2",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2010,
+                9,
+                9
+              ]
+            ],
+            "date-time": "2010-09-09T10:31:57Z",
+            "timestamp": 1284028317000
+          },
+          "page": "569-579",
+          "source": "Crossref",
+          "is-referenced-by-count": 30,
+          "title": [
+            "Blinkered teaching: tandem running by visually impaired ants"
+          ],
+          "prefix": "10.1007",
+          "volume": "65",
+          "author": [
+            {
+              "given": "Elizabeth L.",
+              "family": "Franklin",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Thomas O.",
+              "family": "Richardson",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Ana B.",
+              "family": "Sendova-Franks",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Elva J. H.",
+              "family": "Robinson",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Nigel R.",
+              "family": "Franks",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "published-online": {
+            "date-parts": [
+              [
+                2010,
+                9,
+                10
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "1057_CR1",
+              "doi-asserted-by": "crossref",
+              "first-page": "355",
+              "DOI": "10.1007/BF02225811",
+              "volume": "35",
+              "author": "S Aron",
+              "year": "1988",
+              "unstructured": "Aron S, Deneubourg JL, Pasteels JM (1988) Visual cues and trail-following idiosyncrasy in Leptothorax unifasciatus: an orientation process during foraging. Insect Soc 35:355\u2013366",
+              "journal-title": "Insect Soc"
+            },
+            {
+              "key": "1057_CR2",
+              "doi-asserted-by": "crossref",
+              "first-page": "209",
+              "DOI": "10.1016/j.jtbi.2004.03.016",
+              "volume": "229",
+              "author": "S Benhamou",
+              "year": "2004",
+              "unstructured": "Benhamou S (2004) How to reliably estimate the tortuosity of an animal's path: straightness, sinuosity, or fractal dimension? J Theol Biol 229:209\u2013220",
+              "journal-title": "J Theol Biol"
+            },
+            {
+              "key": "1057_CR3",
+              "volume-title": "Extending the linear model with R: generalized linear, mixed effects and nonparametric regression models",
+              "author": "JJ Faraway",
+              "year": "2006",
+              "unstructured": "Faraway JJ (2006) Extending the linear model with R: generalized linear, mixed effects and nonparametric regression models. Chapman & Hall/CRC, London"
+            },
+            {
+              "key": "1057_CR4",
+              "doi-asserted-by": "crossref",
+              "first-page": "192",
+              "DOI": "10.1126/science.228.4696.192",
+              "volume": "228",
+              "author": "K Fent",
+              "year": "1985",
+              "unstructured": "Fent K, Wehner R (1985) Ocelli: a celestial compass in the desert ant cataglyphis. Science 228:192\u2013194. doi: 10.1126/science.228.4696.192",
+              "journal-title": "Science"
+            },
+            {
+              "key": "1057_CR5",
+              "volume-title": "The orientation of animals",
+              "author": "G Fraenkel",
+              "year": "1961",
+              "unstructured": "Fraenkel G, Gunn DL (1961) The orientation of animals. Dover Publications, New York"
+            },
+            {
+              "key": "1057_CR6",
+              "doi-asserted-by": "crossref",
+              "first-page": "153",
+              "DOI": "10.1038/439153a",
+              "volume": "439",
+              "author": "NR Franks",
+              "year": "2006",
+              "unstructured": "Franks NR, Richardson T (2006) Teaching in tandem-running ants. Nature 439:153",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "1057_CR7",
+              "doi-asserted-by": "crossref",
+              "first-page": "215",
+              "DOI": "10.1006/anbe.2002.2032",
+              "volume": "65",
+              "author": "NR Franks",
+              "year": "2003",
+              "unstructured": "Franks NR, Mallon EB, Bray HE, Hamilton MJ, Mischler TC (2003) Strategies for choosing between alternatives with different attributes: exemplified by house-hunting ants. Anim Behav 65:215\u2013223. doi: 10.1006/anbe.2002.2032",
+              "journal-title": "Anim Behav"
+            },
+            {
+              "key": "1057_CR8",
+              "doi-asserted-by": "crossref",
+              "first-page": "611",
+              "DOI": "10.1016/j.anbehav.2005.11.019",
+              "volume": "72",
+              "author": "NR Franks",
+              "year": "2006",
+              "unstructured": "Franks NR, Dornhaus A, Best CS, Jones EL (2006) Decision-making by small and large house-hunting ant colonies: one size fits all. Anim Behav 72:611\u2013616. doi: 10.1016/j.anbehav.2005.11.019",
+              "journal-title": "Anim Behav"
+            },
+            {
+              "key": "1057_CR9",
+              "doi-asserted-by": "crossref",
+              "first-page": "1697",
+              "DOI": "10.1242/jeb.031880",
+              "volume": "213",
+              "author": "NR Franks",
+              "year": "2010",
+              "unstructured": "Franks NR, Richardson TO, Keir S, Inge SJ, Bartumeus F, Sendova-Franks AB (2010) Ant search strategies after interrupted tandem runs. J Exp Biol 213:1697\u20131708",
+              "journal-title": "J Exp Biol"
+            },
+            {
+              "key": "1057_CR10",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1007/978-3-662-10306-7",
+              "volume-title": "The ants",
+              "author": "B H\u00f6lldobler",
+              "year": "1990",
+              "unstructured": "H\u00f6lldobler B, Wilson E (1990) The ants. Springer, Berlin"
+            },
+            {
+              "key": "1057_CR11",
+              "volume-title": "Data analysis and graphics using R \u2013 an example-based approach",
+              "author": "J Maindonald",
+              "year": "2007",
+              "unstructured": "Maindonald J, Braun WJ (2007) Data analysis and graphics using R \u2013 an example-based approach. Cambridge University Press, Cambridge"
+            },
+            {
+              "key": "1057_CR12",
+              "doi-asserted-by": "crossref",
+              "first-page": "765",
+              "DOI": "10.1098/rspb.2000.1069",
+              "volume": "267",
+              "author": "E Mallon",
+              "year": "2000",
+              "unstructured": "Mallon E, Franks NR (2000) Ants estimate area using Buffon's needle. Proc R Soc Lond B Biol Sci 267:765\u2013770",
+              "journal-title": "Proc R Soc Lond B Biol Sci"
+            },
+            {
+              "key": "1057_CR13",
+              "doi-asserted-by": "crossref",
+              "first-page": "1173",
+              "DOI": "10.1007/BF01941298",
+              "volume": "42",
+              "author": "U Maschwitz",
+              "year": "1986",
+              "unstructured": "Maschwitz U, Lenz S, Buschinger A (1986) Individual specific trails in the ant Leptothorax affinis (Formicidae: Myrmicinae). Cell Mol Life Sci 42:1173\u20131174",
+              "journal-title": "Cell Mol Life Sci"
+            },
+            {
+              "key": "1057_CR14",
+              "doi-asserted-by": "crossref",
+              "first-page": "203",
+              "DOI": "10.1007/s00040-002-8302-2",
+              "volume": "49",
+              "author": "MA Mcleman",
+              "year": "2002",
+              "unstructured": "Mcleman MA, Pratt SC, Franks NR (2002) Navigation using visual landmarks by the ant Leptothorax albipennis. Insect Soc 49:203\u2013208",
+              "journal-title": "Insect Soc"
+            },
+            {
+              "key": "1057_CR15",
+              "doi-asserted-by": "crossref",
+              "first-page": "205",
+              "DOI": "10.1007/BF02224742",
+              "volume": "25",
+              "author": "M M\u00f6glich",
+              "year": "1978",
+              "unstructured": "M\u00f6glich M (1978) Social organization of nest emigration in Leptothorax. Insect Soc 25:205\u2013225",
+              "journal-title": "Insect Soc"
+            },
+            {
+              "key": "1057_CR16",
+              "doi-asserted-by": "crossref",
+              "first-page": "1046",
+              "DOI": "10.1126/science.186.4168.1046",
+              "volume": "186",
+              "author": "M M\u00f6glich",
+              "year": "1974",
+              "unstructured": "M\u00f6glich M, Maschwitz U, H\u00f6lldobler B (1974) Tandem calling: a new kind of signal in ant communication. Science 186:1046\u20131047",
+              "journal-title": "Science"
+            },
+            {
+              "key": "1057_CR17",
+              "doi-asserted-by": "crossref",
+              "first-page": "5287",
+              "DOI": "10.1073/pnas.85.14.5287",
+              "volume": "85",
+              "author": "M M\u00fcller",
+              "year": "1988",
+              "unstructured": "M\u00fcller M, Wehner R (1988) Path integration in desert ants, Cataglyphis fortis. Proc Natl Acad Sci USA 85:5287\u20135590",
+              "journal-title": "Proc Natl Acad Sci USA"
+            },
+            {
+              "key": "1057_CR18",
+              "doi-asserted-by": "crossref",
+              "first-page": "1369",
+              "DOI": "10.1007/s00265-008-0565-9",
+              "volume": "62",
+              "author": "SC Pratt",
+              "year": "2008",
+              "unstructured": "Pratt SC (2008) Efficiency and regulation of recruitment during colony emigration by the ant Temnothorax. Behav Ecol Sociobiol 62:1369\u20131376. doi: 10.1007/s00265-008-0565-9",
+              "journal-title": "Behav Ecol Sociobiol"
+            },
+            {
+              "key": "1057_CR19",
+              "doi-asserted-by": "crossref",
+              "first-page": "1125",
+              "DOI": "10.1046/j.1439-0310.2001.00749.x",
+              "volume": "107",
+              "author": "SC Pratt",
+              "year": "2001",
+              "unstructured": "Pratt SC, Brooks SE, Franks NR (2001) The use of edges in visual navigation by the ant Leptothorax albipennis. Ethology 107:1125\u20131136",
+              "journal-title": "Ethology"
+            },
+            {
+              "key": "1057_CR20",
+              "doi-asserted-by": "crossref",
+              "first-page": "117",
+              "DOI": "10.1007/s00265-002-0487-x",
+              "volume": "52",
+              "author": "SC Pratt",
+              "year": "2002",
+              "unstructured": "Pratt SC, Mallon EB, Sumpter DJT, Franks NR (2002) Quorum sensing, recruitment, and collective decision-making during colony emigration by the ant Leptothorax albipennis. Behav Ecol Sociobiol 52:117\u2013127. doi: 10.1007/s00265-002-0487-x",
+              "journal-title": "Behav Ecol Sociobiol"
+            },
+            {
+              "key": "1057_CR21",
+              "doi-asserted-by": "crossref",
+              "first-page": "1520",
+              "DOI": "10.1016/j.cub.2007.08.032",
+              "volume": "17",
+              "author": "TO Richardson",
+              "year": "2007",
+              "unstructured": "Richardson TO, Sleeman PA, McNamara JM, Houston AI, Franks NR (2007) Teaching with evaluation in ants. Curr Biol 17:1520\u20131526. doi: 10.1016/j.cub.2007.08.032",
+              "journal-title": "Curr Biol"
+            },
+            {
+              "key": "1057_CR22",
+              "doi-asserted-by": "crossref",
+              "first-page": "75",
+              "DOI": "10.1007/BF02460295",
+              "volume": "55",
+              "author": "AB Sendova-Franks",
+              "year": "1993",
+              "unstructured": "Sendova-Franks AB, Franks NR (1993) Task allocation in ant colonies within variable environments. (A study of temporal polyethism: experimental). Bull Math Biol 55:75\u201396",
+              "journal-title": "Bull Math Biol"
+            },
+            {
+              "key": "1057_CR23",
+              "doi-asserted-by": "crossref",
+              "first-page": "222",
+              "DOI": "10.1111/j.1365-2656.2006.01208.x",
+              "volume": "76",
+              "author": "DW Sims",
+              "year": "2007",
+              "unstructured": "Sims DW, Righton D, Pitchford JW (2007) Minimizing errors in identifying L\u00e9vy flight behaviour of organisms. J Anim Ecol 76:222\u2013229",
+              "journal-title": "J Anim Ecol"
+            },
+            {
+              "key": "1057_CR24",
+              "doi-asserted-by": "crossref",
+              "first-page": "574",
+              "DOI": "10.1093/icb/45.3.574",
+              "volume": "45",
+              "author": "C Walcott",
+              "year": "2005",
+              "unstructured": "Walcott C (2005) Multi-modal orientation cues in homing pigeons. Integr Comp Biol 45:574\u2013581",
+              "journal-title": "Integr Comp Biol"
+            },
+            {
+              "key": "1057_CR25",
+              "doi-asserted-by": "crossref",
+              "first-page": "12575",
+              "DOI": "10.1073/pnas.0604430103",
+              "volume": "103",
+              "author": "R Wehner",
+              "year": "2006",
+              "unstructured": "Wehner R, M\u00fcller M (2006) The significance of direct sunlight and polarized skylight in the ant's celestial system of navigation. PNAS 103:12575\u201312579",
+              "journal-title": "PNAS"
+            },
+            {
+              "key": "1057_CR26",
+              "first-page": "11",
+              "volume-title": "Experimental behavioural ecology and socio-biology",
+              "author": "R Wehner",
+              "year": "1985",
+              "unstructured": "Wehner R, Rossel S (1985) The bee's celestial compass: a case study in behavioural neurobiology. In: H\u00f6lldobler B, Lindaur M (eds) Experimental behavioural ecology and socio-biology. Germany Gustav Fischer Verlag, Stuttgart, pp 11\u201353"
+            },
+            {
+              "key": "1057_CR27",
+              "doi-asserted-by": "crossref",
+              "first-page": "129",
+              "DOI": "10.1242/jeb.199.1.129",
+              "volume": "199",
+              "author": "R Wehner",
+              "year": "1996",
+              "unstructured": "Wehner R, Michel B, Antonsen P (1996) Visual navigation in insects: coupling of egocentric and geocentric information. J Exp Biol 199:129\u2013140",
+              "journal-title": "J Exp Biol"
+            },
+            {
+              "key": "1057_CR28",
+              "doi-asserted-by": "crossref",
+              "first-page": "1965",
+              "DOI": "10.1126/science.1126912",
+              "volume": "312",
+              "author": "M Wittlinger",
+              "year": "2006",
+              "unstructured": "Wittlinger M, Wehner R, Wolf H (2006) The ant odometer: stepping on stilts and stumps. Science 312:1965\u20131967. doi: 10.1126/science.1126912",
+              "journal-title": "Science"
+            }
+          ],
+          "container-title": [
+            "Behavioral Ecology and Sociobiology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/s00265-010-1057-2.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://link.springer.com/article/10.1007/s00265-010-1057-2/fulltext.html",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/s00265-010-1057-2",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2021,
+                11,
+                9
+              ]
+            ],
+            "date-time": "2021-11-09T08:28:17Z",
+            "timestamp": 1636446497000
+          },
+          "score": 35.51535,
+          "resource": {
+            "primary": {
+              "URL": "http://link.springer.com/10.1007/s00265-010-1057-2"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2010,
+                9,
+                10
+              ]
+            ]
+          },
+          "references-count": 28,
+          "journal-issue": {
+            "issue": "4",
+            "published-print": {
+              "date-parts": [
+                [
+                  2011,
+                  4
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "1057"
+          ],
+          "URL": "https://doi.org/10.1007/s00265-010-1057-2",
+          "ISSN": [
+            "0340-5443",
+            "1432-0762"
+          ],
+          "issn-type": [
+            {
+              "value": "0340-5443",
+              "type": "print"
+            },
+            {
+              "value": "1432-0762",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2010,
+                9,
+                10
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2025,
+                6,
+                30
+              ]
+            ],
+            "date-time": "2025-06-30T13:07:06Z",
+            "timestamp": 1751288826894
+          },
+          "reference-count": 10,
+          "publisher": "Springer Science and Business Media LLC",
+          "issue": "7",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    1980,
+                    7,
+                    1
+                  ]
+                ],
+                "date-time": "1980-07-01T00:00:00Z",
+                "timestamp": 331257600000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "http://www.springer.com/tdm"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Naturwissenschaften"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1980,
+                7
+              ]
+            ]
+          },
+          "DOI": "10.1007/bf01106596",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2005,
+                2,
+                6
+              ]
+            ],
+            "date-time": "2005-02-06T09:21:01Z",
+            "timestamp": 1107681661000
+          },
+          "page": "360-360",
+          "source": "Crossref",
+          "is-referenced-by-count": 34,
+          "title": [
+            "Tandem running pheromone in ponerine ants"
+          ],
+          "prefix": "10.1007",
+          "volume": "67",
+          "author": [
+            {
+              "given": "B.",
+              "family": "H\ufffdlldobler",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "J.",
+              "family": "Traniello",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "reference": [
+            {
+              "key": "CR1",
+              "doi-asserted-by": "crossref",
+              "first-page": "75",
+              "DOI": "10.1016/S0065-3454(08)60132-1",
+              "volume": "8",
+              "author": "B. H\u00f6lldobler",
+              "year": "1978",
+              "unstructured": "H\u00f6lldobler, B.: Adv. Study Behav.8, 75 (1978)",
+              "journal-title": "Adv. Study Behav."
+            },
+            {
+              "key": "CR2",
+              "unstructured": "H\u00f6lldobler, B.: Nova Acta Leopoldina (in press)"
+            },
+            {
+              "key": "CR3",
+              "doi-asserted-by": "crossref",
+              "first-page": "113",
+              "DOI": "10.1111/j.1439-0310.1974.tb00437.x",
+              "volume": "35",
+              "author": "U. Maschwitz",
+              "year": "1974",
+              "unstructured": "Maschwitz, U., et al.: Z. Tierpsychol.35, 113 (1974)",
+              "journal-title": "Z. Tierpsychol."
+            },
+            {
+              "key": "CR4",
+              "doi-asserted-by": "crossref",
+              "first-page": "793",
+              "DOI": "10.1126/science.836590",
+              "volume": "195",
+              "author": "B. H\u00f6lldobler",
+              "year": "1977",
+              "unstructured": "H\u00f6lldobler, B., Haskins, C.P.: Science195, 793 (1977)",
+              "journal-title": "Science"
+            },
+            {
+              "key": "CR5",
+              "doi-asserted-by": "crossref",
+              "first-page": "285",
+              "DOI": "10.1155/1978/23867",
+              "volume": "85",
+              "author": "B. H\u00f6lldobler",
+              "year": "1978",
+              "unstructured": "H\u00f6lldobler, B., Engel, H.: Psyche (Cambridge)85, 285 (1978)",
+              "journal-title": "Psyche (Cambridge)"
+            },
+            {
+              "key": "CR6",
+              "doi-asserted-by": "crossref",
+              "first-page": "49",
+              "DOI": "10.1007/BF00994056",
+              "volume": "94",
+              "author": "K. Jessen",
+              "year": "1979",
+              "unstructured": "Jessen, K., et al.: Zoomorphologie94, 49 (1979)",
+              "journal-title": "Zoomorphologie"
+            },
+            {
+              "key": "CR7",
+              "doi-asserted-by": "crossref",
+              "first-page": "267",
+              "DOI": "10.1007/BF02224746",
+              "volume": "25",
+              "author": "Ch. Kugler",
+              "year": "1978",
+              "unstructured": "Kugler, Ch.: Insectes Sociaux25, 267 (1978)",
+              "journal-title": "Insectes Sociaux"
+            },
+            {
+              "key": "CR8",
+              "doi-asserted-by": "crossref",
+              "first-page": "589",
+              "DOI": "10.1007/BF00450650",
+              "volume": "64",
+              "author": "U. Maschwitz",
+              "year": "1977",
+              "unstructured": "Maschwitz, U., Sch\u00f6negge, P.: Naturwissenschaften64, 589 (1977)",
+              "journal-title": "Naturwissenschaften"
+            },
+            {
+              "key": "CR9",
+              "unstructured": "H\u00f6lldobler, B., Traniello, J.: J. Chem. Ecol. (in press)"
+            },
+            {
+              "key": "CR10",
+              "doi-asserted-by": "crossref",
+              "first-page": "1046",
+              "DOI": "10.1126/science.186.4168.1046",
+              "volume": "186",
+              "author": "M. M\u00f6glich",
+              "year": "1974",
+              "unstructured": "M\u00f6glich, M., et al.: Science186, 1046 (1974)",
+              "journal-title": "Science"
+            }
+          ],
+          "container-title": [
+            "Naturwissenschaften"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/BF01106596.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://link.springer.com/article/10.1007/BF01106596/fulltext.html",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/BF01106596",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2019,
+                5,
+                1
+              ]
+            ],
+            "date-time": "2019-05-01T13:23:52Z",
+            "timestamp": 1556717032000
+          },
+          "score": 31.287388,
+          "resource": {
+            "primary": {
+              "URL": "http://link.springer.com/10.1007/BF01106596"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1980,
+                7
+              ]
+            ]
+          },
+          "references-count": 10,
+          "journal-issue": {
+            "issue": "7",
+            "published-print": {
+              "date-parts": [
+                [
+                  1980,
+                  7
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "BF01106596"
+          ],
+          "URL": "https://doi.org/10.1007/bf01106596",
+          "ISSN": [
+            "0028-1042",
+            "1432-1904"
+          ],
+          "issn-type": [
+            {
+              "value": "0028-1042",
+              "type": "print"
+            },
+            {
+              "value": "1432-1904",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1980,
+                7
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

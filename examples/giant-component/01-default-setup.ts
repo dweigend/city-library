@@ -1,0 +1,12 @@
+import assert from "node:assert/strict";
+import { create } from "../../experiments/giant-component/model.ts";
+const state=create().read();
+assert.equal(state.parameters.numberOfNodes,80);
+assert.equal(state.nodeCount,80);
+assert.equal(state.edgeCount,0);
+assert.equal(state.giantSize,1);
+assert.equal(state.giantFraction,1/80);
+assert.equal(state.meanDegree,0);
+assert.equal(state.tick,0);
+assert.equal(state.done,false);
+assert.equal(state.nodes.filter(node=>node.highlighted).length,1);

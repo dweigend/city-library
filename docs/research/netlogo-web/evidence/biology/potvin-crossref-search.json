@@ -1,0 +1,1180 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=Synchronous+long-term+oscillations+in+a+synthetic+gene+circuit+Potvin-Trottier+2016&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 2709307,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                28
+              ]
+            ],
+            "date-time": "2026-10-28T23:35:33Z",
+            "timestamp": 1793230533795,
+            "version": "4.5.0"
+          },
+          "reference-count": 36,
+          "publisher": "Springer Science and Business Media LLC",
+          "issue": "7626",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2016,
+                    10,
+                    1
+                  ]
+                ],
+                "date-time": "2016-10-01T00:00:00Z",
+                "timestamp": 1475280000000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "http://www.springer.com/tdm"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "link.springer.com"
+            ],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Nature"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2016,
+                10
+              ]
+            ]
+          },
+          "DOI": "10.1038/nature19841",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2016,
+                10,
+                12
+              ]
+            ],
+            "date-time": "2016-10-12T16:17:48Z",
+            "timestamp": 1476289068000
+          },
+          "page": "514-517",
+          "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 341,
+          "title": [
+            "Synchronous long-term oscillations in a synthetic gene circuit"
+          ],
+          "prefix": "10.1038",
+          "volume": "538",
+          "author": [
+            {
+              "given": "Laurent",
+              "family": "Potvin-Trottier",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Nathan D.",
+              "family": "Lord",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Glenn",
+              "family": "Vinnicombe",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Johan",
+              "family": "Paulsson",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "published-online": {
+            "date-parts": [
+              [
+                2016,
+                10,
+                12
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "BFnature19841_CR1",
+              "doi-asserted-by": "publisher",
+              "first-page": "335",
+              "DOI": "10.1038/35002125",
+              "volume": "403",
+              "author": "MB Elowitz",
+              "year": "2000",
+              "unstructured": "Elowitz, M. B. & Leibler, S. A synthetic oscillatory network of transcriptional regulators. Nature 403, 335\u2013338 (2000)",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnature19841_CR2",
+              "doi-asserted-by": "publisher",
+              "first-page": "414",
+              "DOI": "10.1126/science.1108451",
+              "volume": "308",
+              "author": "M Nakajima",
+              "year": "2005",
+              "unstructured": "Nakajima, M. et al. Reconstitution of circadian oscillation of cyanobacterial KaiC phosphorylation in vitro. Science 308, 414\u2013415 (2005)",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BFnature19841_CR3",
+              "doi-asserted-by": "publisher",
+              "first-page": "737",
+              "DOI": "10.1126/science.1230996",
+              "volume": "340",
+              "author": "S-W Teng",
+              "year": "2013",
+              "unstructured": "Teng, S.-W., Mukherji, S., Moffitt, J. R., de Buyl, S. & O\u2019Shea, E. K. Robust circadian oscillations in growing cyanobacteria require transcriptional feedback. Science 340, 737\u2013740 (2013)",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BFnature19841_CR4",
+              "doi-asserted-by": "publisher",
+              "first-page": "81",
+              "DOI": "10.1038/nature02533",
+              "volume": "430",
+              "author": "I Mihalcescu",
+              "year": "2004",
+              "unstructured": "Mihalcescu, I., Hsing, W. & Leibler, S. Resilient circadian oscillator revealed in individual cyanobacteria. Nature 430, 81\u201385 (2004)",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnature19841_CR5",
+              "doi-asserted-by": "publisher",
+              "first-page": "1249",
+              "DOI": "10.1038/nature06395",
+              "volume": "450",
+              "author": "JR Chabot",
+              "year": "2007",
+              "unstructured": "Chabot, J. R., Pedraza, J. M., Luitel, P. & van Oudenaarden, A. Stochastic gene expression out-of-steady-state in the cyanobacterial circadian clock. Nature 450, 1249\u20131252 (2007)",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnature19841_CR6",
+              "doi-asserted-by": "publisher",
+              "first-page": "1199",
+              "DOI": "10.1126/science.1172005",
+              "volume": "324",
+              "author": "AE Friedland",
+              "year": "2009",
+              "unstructured": "Friedland, A. E. et al. Synthetic gene networks that count. Science 324, 1199\u20131202 (2009)",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BFnature19841_CR7",
+              "doi-asserted-by": "publisher",
+              "first-page": "619",
+              "DOI": "10.1038/nature12148",
+              "volume": "497",
+              "author": "R Daniel",
+              "year": "2013",
+              "unstructured": "Daniel, R., Rubens, J. R., Sarpeshkar, R. & Lu, T. K. Synthetic analog computation in living cells. Nature 497, 619\u2013623 (2013)",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnature19841_CR8",
+              "doi-asserted-by": "publisher",
+              "first-page": "118",
+              "DOI": "10.1038/nature03508",
+              "volume": "435",
+              "author": "E Fung",
+              "year": "2005",
+              "unstructured": "Fung, E. et al. A synthetic gene-metabolic oscillator. Nature 435, 118\u2013122 (2005)",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnature19841_CR9",
+              "doi-asserted-by": "publisher",
+              "first-page": "516",
+              "DOI": "10.1038/nature07389",
+              "volume": "456",
+              "author": "J Stricker",
+              "year": "2008",
+              "unstructured": "Stricker, J. et al. A fast, robust and tunable synthetic gene oscillator. Nature 456, 516\u2013519 (2008)",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnature19841_CR10",
+              "doi-asserted-by": "publisher",
+              "first-page": "309",
+              "DOI": "10.1038/nature07616",
+              "volume": "457",
+              "author": "M Tigges",
+              "year": "2009",
+              "unstructured": "Tigges, M., Marquez-Lago, T. T., Stelling, J. & Fussenegger, M. A tunable synthetic mammalian oscillator. Nature 457, 309\u2013312 (2009)",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnature19841_CR11",
+              "doi-asserted-by": "publisher",
+              "first-page": "326",
+              "DOI": "10.1038/nature08753",
+              "volume": "463",
+              "author": "T Danino",
+              "year": "2010",
+              "unstructured": "Danino, T., Mondrag\u00f3n-Palomino, O., Tsimring, L. & Hasty, J. A synchronized quorum of genetic clocks. Nature 463, 326\u2013330 (2010)",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnature19841_CR12",
+              "doi-asserted-by": "publisher",
+              "first-page": "1315",
+              "DOI": "10.1126/science.1205369",
+              "volume": "333",
+              "author": "O Mondrag\u00f3n-Palomino",
+              "year": "2011",
+              "unstructured": "Mondrag\u00f3n-Palomino, O., Danino, T., Selimkhanov, J., Tsimring, L. & Hasty, J. Entrainment of a population of synthetic genetic oscillators. Science 333, 1315\u20131319 (2011)",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BFnature19841_CR13",
+              "doi-asserted-by": "publisher",
+              "first-page": "387",
+              "DOI": "10.1038/nature13238",
+              "volume": "508",
+              "author": "A Prindle",
+              "year": "2014",
+              "unstructured": "Prindle, A. et al. Rapid and tunable post-translational coupling of genetic circuits. Nature 508, 387\u2013391 (2014)",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnature19841_CR14",
+              "doi-asserted-by": "publisher",
+              "first-page": "599",
+              "DOI": "10.1126/science.1232758",
+              "volume": "340",
+              "author": "J Bonnet",
+              "year": "2013",
+              "unstructured": "Bonnet, J., Yin, P., Ortiz, M. E., Subsoontorn, P. & Endy, D. Amplifying genetic logic gates. Science 340, 599\u2013603 (2013)",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BFnature19841_CR15",
+              "doi-asserted-by": "publisher",
+              "first-page": "1272",
+              "DOI": "10.1016/j.cell.2009.04.048",
+              "volume": "137",
+              "author": "JJ Tabor",
+              "year": "2009",
+              "unstructured": "Tabor, J. J. et al. A synthetic genetic edge detection program. Cell 137, 1272\u20131281 (2009)",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "BFnature19841_CR16",
+              "doi-asserted-by": "publisher",
+              "first-page": "7148",
+              "DOI": "10.1073/pnas.110057697",
+              "volume": "97",
+              "author": "J Paulsson",
+              "year": "2000",
+              "unstructured": "Paulsson, J., Berg, O. G. & Ehrenberg, M. Stochastic focusing: fluctuation-enhanced sensitivity of intracellular regulation. Proc. Natl Acad. Sci. USA 97, 7148\u20137153 (2000)",
+              "journal-title": "Proc. Natl Acad. Sci. USA"
+            },
+            {
+              "key": "BFnature19841_CR17",
+              "doi-asserted-by": "publisher",
+              "first-page": "5988",
+              "DOI": "10.1073/pnas.092133899",
+              "volume": "99",
+              "author": "JMG Vilar",
+              "year": "2002",
+              "unstructured": "Vilar, J. M. G., Kueh, H. Y., Barkai, N. & Leibler, S. Mechanisms of noise-resistance in genetic oscillators. Proc. Natl Acad. Sci. USA 99, 5988\u20135992 (2002)",
+              "journal-title": "Proc. Natl Acad. Sci. USA"
+            },
+            {
+              "key": "BFnature19841_CR18",
+              "doi-asserted-by": "publisher",
+              "first-page": "218102",
+              "DOI": "10.1103/PhysRevLett.94.218102",
+              "volume": "94",
+              "author": "AJ McKane",
+              "year": "2005",
+              "unstructured": "McKane, A. J. & Newman, T. J. Predator-prey cycles from resonant amplification of demographic stochasticity. Phys. Rev. Lett. 94, 218102 (2005)",
+              "journal-title": "Phys. Rev. Lett."
+            },
+            {
+              "key": "BFnature19841_CR19",
+              "doi-asserted-by": "publisher",
+              "first-page": "174",
+              "DOI": "10.1038/nature09333",
+              "volume": "467",
+              "author": "I Lestas",
+              "year": "2010",
+              "unstructured": "Lestas, I., Vinnicombe, G. & Paulsson, J. Fundamental limits on the suppression of molecular fluctuations. Nature 467, 174\u2013178 (2010)",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnature19841_CR20",
+              "doi-asserted-by": "publisher",
+              "first-page": "990",
+              "DOI": "10.1126/science.271.5251.990",
+              "volume": "271",
+              "author": "KC Keiler",
+              "year": "1996",
+              "unstructured": "Keiler, K. C., Waller, P. R. & Sauer, R. T. Role of a peptide tagging system in degradation of proteins synthesized from damaged messenger RNA. Science 271, 990\u2013993 (1996)",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BFnature19841_CR21",
+              "doi-asserted-by": "crossref",
+              "first-page": "2240",
+              "DOI": "10.1128/AEM.64.6.2240-2246.1998",
+              "volume": "64",
+              "author": "JB Andersen",
+              "year": "1998",
+              "unstructured": "Andersen, J. B. et al. New unstable variants of green fluorescent protein for studies of transient gene expression in bacteria. Appl. Environ. Microbiol. 64, 2240\u20132246 (1998)",
+              "journal-title": "Appl. Environ. Microbiol."
+            },
+            {
+              "key": "BFnature19841_CR22",
+              "doi-asserted-by": "publisher",
+              "first-page": "1099",
+              "DOI": "10.1016/j.cub.2010.04.045",
+              "volume": "20",
+              "author": "P Wang",
+              "year": "2010",
+              "unstructured": "Wang, P. et al. Robust growth of Escherichia coli. Curr. Biol. 20, 1099\u20131103 (2010)",
+              "journal-title": "Curr. Biol."
+            },
+            {
+              "key": "BFnature19841_CR23",
+              "doi-asserted-by": "publisher",
+              "first-page": "481",
+              "DOI": "10.1038/nature12804",
+              "volume": "503",
+              "author": "TM Norman",
+              "year": "2013",
+              "unstructured": "Norman, T. M., Lord, N. D., Paulsson, J. & Losick, R. Memory and modularity in cell-fate decision making. Nature 503, 481\u2013486 (2013)",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnature19841_CR24",
+              "doi-asserted-by": "publisher",
+              "first-page": "1",
+              "DOI": "10.1017/S0033583501003663",
+              "volume": "34",
+              "author": "J Paulsson",
+              "year": "2001",
+              "unstructured": "Paulsson, J. & Ehrenberg, M. Noise in a minimal regulatory network: plasmid copy number control. Q. Rev. Biophys. 34, 1\u201359 (2001)",
+              "journal-title": "Q. Rev. Biophys."
+            },
+            {
+              "key": "BFnature19841_CR25",
+              "doi-asserted-by": "publisher",
+              "first-page": "S4",
+              "DOI": "10.1186/1752-0509-8-S4-S4",
+              "volume": "8",
+              "author": "T Moriya",
+              "year": "2014",
+              "unstructured": "Moriya, T., Yamamura, M. & Kiga, D. Effects of downstream genes on synthetic genetic circuits. BMC Syst. Biol. 8 (suppl. 4), S4 (2014)",
+              "journal-title": "BMC Syst. Biol."
+            },
+            {
+              "key": "BFnature19841_CR26",
+              "doi-asserted-by": "publisher",
+              "first-page": "1228",
+              "DOI": "10.1016/S0006-3495(00)76377-6",
+              "volume": "79",
+              "author": "OG Berg",
+              "year": "2000",
+              "unstructured": "Berg, O. G., Paulsson, J. & Ehrenberg, M. Fluctuations and quality of control in biological cells: zero-order ultrasensitivity reinvestigated. Biophys. J. 79, 1228\u20131236 (2000)",
+              "journal-title": "Biophys. J."
+            },
+            {
+              "key": "BFnature19841_CR27",
+              "doi-asserted-by": "publisher",
+              "first-page": "e09771",
+              "DOI": "10.7554/eLife.09771",
+              "volume": "4",
+              "author": "H Niederholtmeyer",
+              "year": "2015",
+              "unstructured": "Niederholtmeyer, H. et al. Rapid cell-free forward engineering of novel genetic ring oscillators. eLife 4, e09771 (2015)",
+              "journal-title": "eLife"
+            },
+            {
+              "key": "BFnature19841_CR28",
+              "doi-asserted-by": "publisher",
+              "first-page": "978",
+              "DOI": "10.1080/14786442608564127",
+              "volume": "2",
+              "author": "B van der Pol",
+              "year": "1926",
+              "unstructured": "van der Pol, B. On relaxation-oscillations. Phil. Mag. 2, 978\u2013992 (1926)",
+              "journal-title": "Phil. Mag."
+            },
+            {
+              "key": "BFnature19841_CR29",
+              "doi-asserted-by": "publisher",
+              "first-page": "1312",
+              "DOI": "10.1016/j.cell.2014.02.022",
+              "volume": "156",
+              "author": "RC Brewster",
+              "year": "2014",
+              "unstructured": "Brewster, R. C. et al. The transcription factor titration effect dictates level of gene expression. Cell 156, 1312\u20131323 (2014)",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "BFnature19841_CR30",
+              "unstructured": "Verd\u00fa, S. Poisson communication theory; invited talk. The International Technion Communication Day in honor of Israel Bar-David, Haifa, Israel (25 March 1999)"
+            },
+            {
+              "key": "BFnature19841_CR31",
+              "first-page": "Unit14.20",
+              "volume": "14",
+              "author": "A Edelstein",
+              "year": "2010",
+              "unstructured": "Edelstein, A., Amodaj, N., Hoover, K., Vale, R. & Stuurman, N. Computer control of microscopes using \u03bcManager. Curr. Protoc. Mol. Biol. Chapter 14, Unit14.20 (2010)",
+              "journal-title": "Curr. Protoc. Mol. Biol."
+            },
+            {
+              "key": "BFnature19841_CR32",
+              "doi-asserted-by": "publisher",
+              "first-page": "1320",
+              "DOI": "10.2307/2006360",
+              "volume": "32",
+              "author": "AN Tikhonov",
+              "year": "1978",
+              "unstructured": "Tikhonov, A. N. & Arsenin, V. Y. Solutions of Ill-posed problems. Math. Comput. 32, 1320\u20131322 (1978)",
+              "journal-title": "Math. Comput."
+            },
+            {
+              "key": "BFnature19841_CR33",
+              "unstructured": "Blackman, R. B. & Tukey, J. W. The Measurement of Power Spectra (Dover Publications, 1958)"
+            },
+            {
+              "key": "BFnature19841_CR34",
+              "unstructured": "Oppenheim, A. V. & Schafer, R. W. Discrete-Time Signal Processing 3rd edn (Prentice Hall, 1989)"
+            },
+            {
+              "key": "BFnature19841_CR35",
+              "unstructured": "Jenkins, G. M. & Watts, D. G. Spectral Analysis and Its Applications (Holden-Day, 1968)"
+            },
+            {
+              "key": "BFnature19841_CR36",
+              "doi-asserted-by": "publisher",
+              "first-page": "e15179",
+              "DOI": "10.1371/journal.pone.0015179",
+              "volume": "5",
+              "author": "R Chait",
+              "year": "2010",
+              "unstructured": "Chait, R., Shrestha, S., Shah, A. K., Michel, J.-B. & Kishony, R. A differential drug screen for compounds that select against antibiotic resistance. PLoS One 5, e15179 (2010)",
+              "journal-title": "PLoS One"
+            }
+          ],
+          "container-title": [
+            "Nature"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://www.nature.com/articles/nature19841.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://www.nature.com/articles/nature19841",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://www.nature.com/articles/nature19841.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2023,
+                5,
+                18
+              ]
+            ],
+            "date-time": "2023-05-18T13:56:24Z",
+            "timestamp": 1684418184000
+          },
+          "score": 49.536186,
+          "resource": {
+            "primary": {
+              "URL": "https://www.nature.com/articles/nature19841"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2016,
+                10
+              ]
+            ]
+          },
+          "references-count": 36,
+          "journal-issue": {
+            "issue": "7626",
+            "published-print": {
+              "date-parts": [
+                [
+                  2016,
+                  10
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "BFnature19841"
+          ],
+          "URL": "https://doi.org/10.1038/nature19841",
+          "ISSN": [
+            "0028-0836",
+            "1476-4687"
+          ],
+          "issn-type": [
+            {
+              "value": "0028-0836",
+              "type": "print"
+            },
+            {
+              "value": "1476-4687",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2016,
+                10
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "20 March 2015",
+              "order": 1,
+              "name": "received",
+              "label": "Received",
+              "group": {
+                "name": "ArticleHistory",
+                "label": "Article History"
+              }
+            },
+            {
+              "value": "13 September 2016",
+              "order": 2,
+              "name": "accepted",
+              "label": "Accepted",
+              "group": {
+                "name": "ArticleHistory",
+                "label": "Article History"
+              }
+            },
+            {
+              "value": "12 October 2016",
+              "order": 3,
+              "name": "first_online",
+              "label": "First Online",
+              "group": {
+                "name": "ArticleHistory",
+                "label": "Article History"
+              }
+            },
+            {
+              "value": "The authors declare no competing financial interests.",
+              "order": 1,
+              "name": "Ethics",
+              "group": {
+                "name": "EthicsHeading",
+                "label": "Competing interests"
+              }
+            }
+          ]
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2022,
+                3,
+                30
+              ]
+            ],
+            "date-time": "2022-03-30T10:28:00Z",
+            "timestamp": 1648636080519
+          },
+          "reference-count": 8,
+          "publisher": "Biophysical Society of Japan",
+          "issue": "4",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Biophysics",
+            "Seibutsu Butsuri"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2016
+              ]
+            ]
+          },
+          "DOI": "10.2142/biophys.56.227",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2016,
+                7,
+                24
+              ]
+            ],
+            "date-time": "2016-07-24T22:12:41Z",
+            "timestamp": 1469398361000
+          },
+          "page": "227-229",
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Long-term Oscillations in Cell Size and Gene Expression in Bacteria"
+          ],
+          "prefix": "10.2142",
+          "volume": "56",
+          "author": [
+            {
+              "given": "Yu",
+              "family": "TANOUCHI",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Department of Bioengineering, Stanford University"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "909",
+          "reference": [
+            {
+              "key": "1",
+              "doi-asserted-by": "publisher",
+              "unstructured": "1) Chien, A.-C. <i>et al.</i> (2012) Curr. Biol. 22, R340-349. DOI: 10.1016/j.cub.2012.02.032.",
+              "DOI": "10.1016/j.cub.2012.02.032"
+            },
+            {
+              "key": "2",
+              "doi-asserted-by": "publisher",
+              "unstructured": "2) Tanouchi, Y. <i>et al.</i> (2015) Nature 523, 357-360. DOI: 10.1038/nature14562.",
+              "DOI": "10.1038/nature14562"
+            },
+            {
+              "key": "3",
+              "doi-asserted-by": "publisher",
+              "unstructured": "3) Wang, P.<i> et al.</i> (2010) Curr. Biol. 20, 1099-1103. DOI: 10.1016/j.cub.2010.04.045.",
+              "DOI": "10.1016/j.cub.2010.04.045"
+            },
+            {
+              "key": "4",
+              "doi-asserted-by": "publisher",
+              "unstructured": "4) Moffitt, J. <i>et al.</i> (2012) Lab Chip 12, 1487-1494. DOI: 10.1039/c2lc00009a.",
+              "DOI": "10.1039/c2lc00009a"
+            },
+            {
+              "key": "5",
+              "doi-asserted-by": "crossref",
+              "unstructured": "5) Amir, A. (2014) Phys. Rev. Lett. 112, 208102. DOI: 10.1103/PhysRevLett.112.208102.",
+              "DOI": "10.1103/PhysRevLett.112.208102"
+            },
+            {
+              "key": "6",
+              "doi-asserted-by": "publisher",
+              "unstructured": "6) Taheri-Araghi, S. <i>et al.</i> (2015) Curr. Biol. 25, 385-391. DOI: 10.1016/j.cub.2014.12.009.",
+              "DOI": "10.1016/j.cub.2014.12.009"
+            },
+            {
+              "key": "7",
+              "doi-asserted-by": "publisher",
+              "unstructured": "7) Campos, M. <i>et al.</i> (2014) Cell 159, 1433-1446. DOI: 10.1016/j.cell.2014.11.022.",
+              "DOI": "10.1016/j.cell.2014.11.022"
+            },
+            {
+              "key": "8",
+              "doi-asserted-by": "publisher",
+              "unstructured": "8) Levine, J. H. <i>et al.</i> (2013) Science 342, 1193-1200. DOI: 10.1126/science.1239999.",
+              "DOI": "10.1126/science.1239999"
+            }
+          ],
+          "container-title": [
+            "Seibutsu Butsuri"
+          ],
+          "original-title": [
+            "\u30d0\u30af\u30c6\u30ea\u30a2\u306b\u304a\u3051\u308b\u7d30\u80de\u30b5\u30a4\u30ba\u3068\u907a\u4f1d\u5b50\u767a\u73fe\u306e\u9577\u671f\u7684\u306a\u632f\u52d5"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://www.jstage.jst.go.jp/article/biophys/56/4/56_227/_pdf",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2017,
+                6,
+                24
+              ]
+            ],
+            "date-time": "2017-06-24T19:04:58Z",
+            "timestamp": 1498331098000
+          },
+          "score": 24.183737,
+          "resource": {
+            "primary": {
+              "URL": "https://www.jstage.jst.go.jp/article/biophys/56/4/56_227/_article/-char/ja/"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2016
+              ]
+            ]
+          },
+          "references-count": 8,
+          "journal-issue": {
+            "issue": "4",
+            "published-print": {
+              "date-parts": [
+                [
+                  2016
+                ]
+              ]
+            }
+          },
+          "URL": "https://doi.org/10.2142/biophys.56.227",
+          "ISSN": [
+            "0582-4052",
+            "1347-4219"
+          ],
+          "issn-type": [
+            {
+              "value": "0582-4052",
+              "type": "print"
+            },
+            {
+              "value": "1347-4219",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2016
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                3,
+                23
+              ]
+            ],
+            "date-time": "2026-03-23T03:01:00Z",
+            "timestamp": 1774234860160,
+            "version": "3.50.1"
+          },
+          "reference-count": 34,
+          "publisher": "Scientific Research Publishing, Inc.",
+          "issue": "08",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2021,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2021-01-01T00:00:00Z",
+                "timestamp": 1609459200000
+              },
+              "content-version": "unspecified",
+              "delay-in-days": 0,
+              "URL": "http://creativecommons.org/licenses/by/4.0/"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2021,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2021-01-01T00:00:00Z",
+                "timestamp": 1609459200000
+              },
+              "content-version": "unspecified",
+              "delay-in-days": 0,
+              "URL": "http://creativecommons.org/licenses/by/4.0/"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "www.scirp.org"
+            ],
+            "crossmark-restriction": true
+          },
+          "short-container-title": [
+            "NS"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2021
+              ]
+            ]
+          },
+          "DOI": "10.4236/ns.2021.138028",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2021,
+                8,
+                11
+              ]
+            ],
+            "date-time": "2021-08-11T04:09:15Z",
+            "timestamp": 1628654955000
+          },
+          "page": "354-371",
+          "update-policy": "https://doi.org/10.4236/scirp.2020.crossmarkpolicy",
+          "source": "Crossref",
+          "is-referenced-by-count": 2,
+          "title": [
+            "New Long-Term Climate Oscillations"
+          ],
+          "prefix": "10.4236",
+          "volume": "13",
+          "author": [
+            {
+              "given": "Joseph J.",
+              "family": "Smulsky",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "2751",
+          "reference": [
+            {
+              "key": "ref1",
+              "unstructured": "Milankovitch, M. (1930) Mathematische Klimalhre und Astronomische Theorie der Klimaschwankungen (Mathematical Climatology and the Astronomical Theory of Climate Change). Gebruder Borntraeger, Berlin."
+            },
+            {
+              "key": "ref2",
+              "unstructured": "Brouwer, D. and Van Woerkom, A.J.J. (1950) The Secular Variation of the Orbital Elements of the Principal Planets. Astronomical Papers for American Ephemeris and Nautical Almanac, 13, 81-107."
+            },
+            {
+              "key": "ref3",
+              "unstructured": "Sharaf, Sh.G. and Budnikova, N.A. (1969) The Secular Variation of the Orbital Elements of the Earth and the Astronomic Theory of Climate Change. Transactions, No. 14, 48-109. (In Russian)"
+            },
+            {
+              "key": "ref4",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0277-3791(91)90033-Q"
+            },
+            {
+              "key": "ref5",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1051/0004-6361:20020029"
+            },
+            {
+              "key": "ref6",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1051/0004-6361:20041335"
+            },
+            {
+              "key": "ref7",
+              "unstructured": "Smulsky, J.J. (2014) Basic Positions and New Results of the Astronomical Theory of Climate Change. VINITI, Tyumen, No. 258-V2014, 30 p. (In Russian) http://www.ikz.ru/~smulski/Papers/OsPoATLP3.pdf"
+            },
+            {
+              "key": "ref8",
+              "unstructured": "Smulsky, J.J. (2004) The Theory of Interaction. Cultural Information Bank, Ekaterinburg, 304 p. http://www.ikz.ru/~smulski/TVEnA5_2.pdf"
+            },
+            {
+              "key": "ref9",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.5539/apr.v4n2p110"
+            },
+            {
+              "key": "ref10",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.5815/ijmecs.2012.11.01"
+            },
+            {
+              "key": "ref11",
+              "unstructured": "Smulsky, J.J. (2018) Future Space Problems and Their Solutions. Nova Science Publishers, New York, 269 p. http://www.ikz.ru/~smulski/Papers/InfFSPS.pdf"
+            },
+            {
+              "key": "ref12",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.4236/ijaa.2011.13017"
+            },
+            {
+              "key": "ref13",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.22606/adap.2016.11001"
+            },
+            {
+              "key": "ref14",
+              "unstructured": "Smulsky, J.J. (2020) The Evolution of the Earth\u2019s Rotational Movement for Millions Years. The Complex Systems, 1, 3-42. http://www.ikz.ru/~smulski/Papers/EVDZ03_1EnJc.pdf"
+            },
+            {
+              "key": "ref15",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.5539/apr.v6n4p56"
+            },
+            {
+              "key": "ref16",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1086/102176"
+            },
+            {
+              "key": "ref17",
+              "unstructured": "Simon, J.L., Bretagnon, P., Chapront, J., Chapront-Touze, M., Francou, G. and Laskar, J. (1994) Numerical Expression for Precession Formulae and Mean Elements for the Moon and the Planets. Astronomy & Astrophysics, 282, 663-683."
+            },
+            {
+              "key": "ref18",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.4236/oalib.1104250"
+            },
+            {
+              "key": "ref19",
+              "unstructured": "Smulsky, J.J. (2018) New Astronomical Theory of Ice Ages. LAP Lambert Academic Publishing, Riga, 132 p. (In Russian) http://www.ikz.ru/~smulski/Papers/InfNwATLPEn.pdf"
+            },
+            {
+              "key": "ref20",
+              "unstructured": "Melnikov, V.P. and Smulsky, J.J. (2009) Astronomical Theory of Ice Ages: New Approximations. Solutions and Challenges. Academic Publishing House, Novosibirsk. http://www.ikz.ru/~smulski/Papers/AsThAnE.pdf"
+            },
+            {
+              "key": "ref21",
+              "unstructured": "Smulsky, J.J. (2016) Evolution of the Earth\u2019s Axis and Paleoclimate for 200,000 Years. LAP Lambert Academic Publishing, Saarbrucken, 228 p. (In Russian) http://www.ikz.ru/~smulski/Papers/InfEvEAPC02MEn.pdf"
+            },
+            {
+              "key": "ref22",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.rgg.2016.06.009"
+            },
+            {
+              "key": "ref23",
+              "unstructured": "Grebenikov, E.A. and Smulsky, J.J. (2007) Evolution of the Mars Orbit on Time Span in Hundred Millions Years. Reports on Applied Mathematics. Russian Academy of Sciences: A. A. Dorodnitsyn Computing Center, Moscow, 63 p. (In Russian) http://www.ikz.ru/~smulski/Papers/EvMa100m4t2.pdf"
+            },
+            {
+              "key": "ref24",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1017/S0074180900127160"
+            },
+            {
+              "key": "ref25",
+              "unstructured": "Bretagnon, P., Rocher, P. and Simon, J.L. (1997) Theory of the Rotation of the Rigid Earth. Astronomy and Astrophysics, 319, 305-317."
+            },
+            {
+              "key": "ref26",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1134/S1019331613010073"
+            },
+            {
+              "key": "ref27",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.rgg.2008.04.003"
+            },
+            {
+              "key": "ref28",
+              "unstructured": "Krutko, P.D., Maksimov, A.I. and Skvortsov, L.M. (1988) Automated System Engineering Algorithms and Programs. Radio and Communication, Moscow, 298 p. (In Russian)."
+            },
+            {
+              "key": "ref29",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/978-3-662-09947-6"
+            },
+            {
+              "key": "ref30",
+              "unstructured": "Smulsky, J.J. (2007) A Mathematical Model of the Solar System. In: Theoretical and Applied Problems in Nonlinear Analysis, Russian Academy of Sciences: A.A. Dorodnitsyn Computing Center, Moscow, 119-138. (In Russian) http://www.ikz.ru/~smulski/Papers/MatMdSS5.pdf"
+            },
+            {
+              "key": "ref31",
+              "unstructured": "Smulsky, J.J. and Ivanova, A.A. (2018) Experience of Paleoclimate Reconstruction on Insolation Change on Example of Western Siberia in the Late Pleistocene. Climate and Nature, 1, 3-21. (In Russian)http://www.ikz.ru/~smulski/Papers/OpRcnPClmt6J.pdf"
+            },
+            {
+              "key": "ref32",
+              "unstructured": "Smulsky, J.J. (2019) The Upcoming Tasks of Fundamental Science. Sputnik + Publishing House, Moscow, 134 p. (In Russian) http://www.ikz.ru/~smulski/Papers/InfPrZaFN.pdf"
+            },
+            {
+              "key": "ref33",
+              "unstructured": "Smulsky, J.J. (2017) Cosmic Impacts on the Earth and Their Influence on the Arctic. The Complex Systems, 4, 27-42. (In Russian) http://www.ikz.ru/~smulski/Papers/CsmAcEIA.pdf"
+            },
+            {
+              "key": "ref34",
+              "unstructured": "M&ouml;rner, N.-A. (2016) Planetary Influence on the Sun and the Earth, and a Modern Book-Burning. Nova Science Publishers, New York, 196 p."
+            }
+          ],
+          "container-title": [
+            "Natural Science"
+          ],
+          "link": [
+            {
+              "URL": "https://www.scirp.org/journal/paperinformation?paperid=111242",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://www.scirp.org/xml/111242.xml",
+              "content-type": "application/xml",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://www.scirp.org/journal/paperinformation?paperid=111242",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2026,
+                3,
+                23
+              ]
+            ],
+            "date-time": "2026-03-23T02:28:46Z",
+            "timestamp": 1774232926000
+          },
+          "score": 23.943895,
+          "resource": {
+            "primary": {
+              "URL": "https://www.scirp.org/journal/paperinformation?paperid=111242"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2021
+              ]
+            ]
+          },
+          "references-count": 34,
+          "journal-issue": {
+            "issue": "08",
+            "published-print": {
+              "date-parts": [
+                [
+                  2021
+                ]
+              ]
+            }
+          },
+          "URL": "https://doi.org/10.4236/ns.2021.138028",
+          "ISSN": [
+            "2150-4091",
+            "2150-4105"
+          ],
+          "issn-type": [
+            {
+              "value": "2150-4091",
+              "type": "print"
+            },
+            {
+              "value": "2150-4105",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2021
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

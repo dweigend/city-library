@@ -1,0 +1,108 @@
+{
+  "slug": "traffic-basic",
+  "name": "Traffic Basic",
+  "catalogPath": "Sample Models/Social Science/Traffic Basic",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Traffic%20Basic.nlogox",
+  "deliveryBatch": "B04",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "The scientific question is whether stop-and-go waves can emerge without an external road obstruction. In NetLogo's Traffic Basic model, cars circulate on a single road loop, accelerating into free space and braking when a car is close ahead. The selected literature connects this mechanism to endogenous congestion waves: minimal local vehicle rules generate congestion in freeway models [1]; a circular-road experiment observes jam formation without bottlenecks [2]; empirical traffic-state analysis gives a richer microscopic comparison [3]. A closed homogeneous road and simplified following rule omit merging and driver diversity; the simulation is distinct from a fitted empirical traffic model. The original NetLogo behavior is the baseline for reimplementation. This simulation offers a controlled thought experiment, and agreement with its output does not establish empirical validation.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Traffic%20Basic.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Traffic%20Basic.nlogox",
+    "revision": "Served NetLogo Web snapshot retrieved 2026-11-05; {'version': 'NetLogo 7.0.4', 'snapToGrid': 'true'}",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served model XML, Procedures and Info retained locally; Info read for mechanism and attribution.",
+    "evidencePath": "evidence/social-urban/traffic-basic.nlogox",
+    "sha256": "77495cbc72df4370fe07d37ca59241585fdc63b8fec36a13c70da7ba65a6a7c3",
+    "citation": "For the model itself: * Wilensky, U. (1997). NetLogo Traffic Basic model. http://ccl.northwestern.edu/netlogo/models/TrafficBasic. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "scientificOrigin": "Info does not identify a scientific original; related publications below are contextual comparisons, not asserted source derivations.",
+    "notes": "This is source research, not runtime execution or approval of the City Library reimplementation. Original model notices remain in the retained source.",
+    "evidenceFile": "evidence/social-urban/traffic-basic.nlogox"
+  },
+  "publications": [
+    {
+      "id": "nagel",
+      "creatorRole": "author",
+      "authors": [
+        "Kai Nagel",
+        "Michael Schreckenberg"
+      ],
+      "title": "A cellular automaton model for freeway traffic",
+      "year": 1992,
+      "venue": "Journal de Physique I",
+      "doi": "10.1051/jp1:1992277",
+      "url": "https://doi.org/10.1051/jp1:1992277",
+      "relevance": "minimal local vehicle rules generate congestion in freeway models",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1051%2Fjp1%3A1992277",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; full-text access not established",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/nagel-crossref.json",
+        "evidenceSummary": "Bibliographic metadata only; relevance is a bounded theoretical comparison, not a claim to have read inaccessible full text.",
+        "evidenceFile": "evidence/social-urban/nagel-crossref.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "sugiyama",
+      "creatorRole": "author",
+      "authors": [
+        "Yuki Sugiyama",
+        "Minoru Fukui",
+        "Macoto Kikuchi",
+        "Katsuya Hasebe",
+        "Akihiro Nakayama",
+        "Katsuhiro Nishinari",
+        "Shin-ichi Tadaki",
+        "Satoshi Yukawa"
+      ],
+      "title": "Traffic jams without bottlenecks—experimental evidence for the physical mechanism of the formation of a jam",
+      "year": 2008,
+      "venue": "New Journal of Physics",
+      "doi": "10.1088/1367-2630/10/3/033001",
+      "url": "https://doi.org/10.1088/1367-2630/10/3/033001",
+      "relevance": "a circular-road experiment observes jam formation without bottlenecks",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1088%2F1367-2630%2F10%2F3%2F033001",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; full-text access not established",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/sugiyama-crossref.json",
+        "evidenceSummary": "Bibliographic metadata only; relevance is a bounded theoretical comparison, not a claim to have read inaccessible full text.",
+        "evidenceFile": "evidence/social-urban/sugiyama-crossref.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "treiber",
+      "creatorRole": "author",
+      "authors": [
+        "Martin Treiber",
+        "Ansgar Hennecke",
+        "Dirk Helbing"
+      ],
+      "title": "Congested traffic states in empirical observations and microscopic simulations",
+      "year": 2000,
+      "venue": "Physical Review E",
+      "doi": "10.1103/physreve.62.1805",
+      "url": "https://doi.org/10.1103/physreve.62.1805",
+      "relevance": "empirical traffic-state analysis gives a richer microscopic comparison",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1103%2FPhysRevE.62.1805",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; full-text access not established",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/treiber-crossref.json",
+        "evidenceSummary": "Bibliographic metadata only; relevance is a bounded theoretical comparison, not a claim to have read inaccessible full text.",
+        "evidenceFile": "evidence/social-urban/treiber-crossref.json"
+      },
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

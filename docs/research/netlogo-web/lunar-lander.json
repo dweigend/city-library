@@ -1,0 +1,109 @@
+{
+  "slug": "lunar-lander",
+  "name": "Lunar Lander",
+  "catalogPath": "Sample Models/Games/Lunar Lander",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Games/Lunar%20Lander.nlogox",
+  "deliveryBatch": "B20",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "How does directing thrust trade off position correction against a safe descent? NetLogo Lunar Lander lets a player rotate a module and fire a thruster while gravity accelerates it toward generated terrain. A successful landing requires reaching the pad with sufficiently gentle motion. Acikmese and Ploen [1] develop constrained powered-descent guidance, Betts [2] surveys trajectory optimization methods, and Yang and Liu [3] examine fuel-optimal descent with path constraints. These are relevant scientific comparisons, not algorithms claimed to run inside the arcade baseline. The NetLogo model simplifies vehicle dynamics, terrain, and collision geometry; its Info explicitly notes omitted edge collisions. Thrust, attitude, and landing thresholds are discrete teaching rules without mission-calibrated parameters. The simulation illustrates feedback control and competing constraints, while success in the game does not validate a spacecraft guidance system.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Games/Lunar%20Lander.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Games/Lunar%20Lander.nlogox",
+    "revision": "NetLogo 7.0.4 served 2026-11-05; SHA-256 16d4c632d0964fea98612f3aa2154094ca785e3fc4748075f8f95f42196f75c0",
+    "checkedAt": "2026-11-05",
+    "evidence": "Full original served XML source, Procedures and Info retained in evidence/computing/lunar-lander.nlogox; extracted Info retained alongside.",
+    "notes": " This dossier describes scientific connections to the original NetLogo teaching model; it does not certify a City Library reimplementation or empirical validity.",
+    "originalCitation": "Wilensky, U. (2005).  NetLogo Lunar Lander model.  http://ccl.northwestern.edu/netlogo/models/LunarLander.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "sourceSnapshot": "evidence/computing/lunar-lander.nlogox",
+    "evidenceFile": "evidence/computing/lunar-lander.nlogox"
+  },
+  "publications": [
+    {
+      "id": "10.2514/1.27553",
+      "authors": [
+        "Behcet Acikmese",
+        "Scott R. Ploen"
+      ],
+      "title": "Convex Programming Approach to Powered Descent Guidance for Mars Landing",
+      "year": 2007,
+      "venue": "Journal of Guidance, Control, and Dynamics",
+      "doi": "10.2514/1.27553",
+      "url": "https://doi.org/10.2514/1.27553",
+      "relevance": "Powered-descent optimization provides the direct aerospace comparison for thrust and landing constraints.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.2514%2F1.27553",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_2514_1_27553.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_2514_1_27553.json"
+      },
+      "publisher": "American Institute of Aeronautics and Astronautics (AIAA)",
+      "volume": "30",
+      "issue": "5",
+      "pages": "1353-1366",
+      "verified": true
+    },
+    {
+      "id": "10.2514/2.4231",
+      "authors": [
+        "John T. Betts"
+      ],
+      "title": "Survey of Numerical Methods for Trajectory Optimization",
+      "year": 1998,
+      "venue": "Journal of Guidance, Control, and Dynamics",
+      "doi": "10.2514/2.4231",
+      "url": "https://doi.org/10.2514/2.4231",
+      "relevance": "Trajectory optimization methods clarify what a formally optimized guidance solution would require beyond manual control.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.2514%2F2.4231",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_2514_2_4231.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_2514_2_4231.json"
+      },
+      "publisher": "American Institute of Aeronautics and Astronautics (AIAA)",
+      "volume": "21",
+      "issue": "2",
+      "pages": "193-207",
+      "verified": true
+    },
+    {
+      "id": "10.1016/j.actaastro.2020.03.025",
+      "authors": [
+        "Runqiu Yang",
+        "Xinfu Liu"
+      ],
+      "title": "Fuel-optimal powered descent guidance with free final-time and path constraints",
+      "year": 2020,
+      "venue": "Acta Astronautica",
+      "doi": "10.1016/j.actaastro.2020.03.025",
+      "url": "https://doi.org/10.1016/j.actaastro.2020.03.025",
+      "relevance": "Free-final-time and path-constraint research highlights assumptions absent from the simplified arcade dynamics.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1016%2Fj.actaastro.2020.03.025",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1016_j_actaastro_2020_03_025.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1016_j_actaastro_2020_03_025.json"
+      },
+      "publisher": "Elsevier BV",
+      "volume": "172",
+      "pages": "70-81",
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

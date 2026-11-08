@@ -1,0 +1,112 @@
+{
+  "slug": "ising",
+  "name": "Ising",
+  "catalogPath": "Sample Models/Chemistry & Physics/Ising",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Chemistry%20&%20Physics/Ising.nlogox",
+  "deliveryBatch": "B11",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "NetLogo Ising investigates how thermal noise competes with local spin alignment. Binary spins occupy a square lattice and selected spins flip according to their four-neighbor energy difference and a Metropolis acceptance probability. Introduces the spin-interaction problem underlying this model family [1]. Supplies the energy-dependent sampling mechanism used explicitly by the NetLogo Procedures [2]. Provides the two-dimensional equilibrium benchmark rather than a fit to this finite simulation [3]. The simulation assumes nearest-neighbor interactions, idealized spins and finite lattice size; update counts are computational time, not calibrated magnetic relaxation time. The simulation illustrates ordering, fluctuations and temperature-dependent magnetization. Reproducing these patterns establishes rule fidelity, not empirical validation.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Chemistry%20&%20Physics/Ising.nlogox",
+    "checkedAt": "2026-11-05",
+    "revision": "NetLogo 7.0.4; SHA-256 41727ee27957e2c797362ed3387742bc1c2038eabf5e2fa54df8e1152185b8d2",
+    "evidence": "Full served model XML, Procedures and Info downloaded and consulted; retained at evidence/physics/ising.nlogox",
+    "notes": "This dossier describes the original NetLogo baseline; it does not establish reimplementation behavior or empirical validation.",
+    "citation": "* Wilensky, U. (2003).  NetLogo Ising model.  http://ccl.northwestern.edu/netlogo/models/Ising.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "infoEvidenceFile": "evidence/physics/ising-source.json",
+    "evidenceFile": "evidence/physics/ising.nlogox"
+  },
+  "publications": [
+    {
+      "id": "1",
+      "authors": [
+        "Ernst Ising"
+      ],
+      "title": "Beitrag zur Theorie des Ferromagnetismus",
+      "year": 1925,
+      "venue": "Zeitschrift für Physik",
+      "doi": "10.1007/bf02980577",
+      "url": "https://doi.org/10.1007/bf02980577",
+      "relevance": "Introduces the spin-interaction problem underlying this model family; relevant here to ordering, fluctuations and temperature-dependent magnetization.",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1007/BF02980577",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Open DOI-registrant metadata; full publication access not assessed",
+        "notes": "Title, complete listed author sequence, publication date and DOI checked against live primary DOI registration metadata. Given names retain registered initials where supplied; no invented expansion. No abstract/full text was returned; mechanism interpretation is bounded by model Info and the bibliographic subject.",
+        "evidenceFile": "evidence/physics/publication-isingoriginal.json",
+        "verified": true
+      },
+      "verified": true,
+      "volume": "31",
+      "issue": "1",
+      "pages": "253-258",
+      "publisher": "Springer Science and Business Media LLC"
+    },
+    {
+      "id": "2",
+      "authors": [
+        "Nicholas Metropolis",
+        "Arianna W. Rosenbluth",
+        "Marshall N. Rosenbluth",
+        "Augusta H. Teller",
+        "Edward Teller"
+      ],
+      "title": "Equation of State Calculations by Fast Computing Machines",
+      "year": 1953,
+      "venue": "The Journal of Chemical Physics",
+      "doi": "10.1063/1.1699114",
+      "url": "https://doi.org/10.1063/1.1699114",
+      "relevance": "Supplies the energy-dependent sampling mechanism used explicitly by the NetLogo Procedures; relevant here to ordering, fluctuations and temperature-dependent magnetization.",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1063/1.1699114",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata and abstract",
+        "access": "Open DOI-registrant metadata; full publication access not assessed",
+        "notes": "Title, complete listed author sequence, publication date and DOI checked against live primary DOI registration metadata. Given names retain registered initials where supplied; no invented expansion. Registrant abstract consulted: A general method, suitable for fast computing machines, for investigating such properties as equations of state for substances consisting of interacting individual molecules is described. The method consists of a modified Monte Carlo integration over configuration space. Results for the two-dimensional rigid-sphere system have been obtained on the Los Alamos MANIAC and are presented here. These results are compared to the free volume equation of state and to a four-term virial coefficient expansion.",
+        "evidenceFile": "evidence/physics/publication-metropolis.json",
+        "verified": true
+      },
+      "verified": true,
+      "volume": "21",
+      "issue": "6",
+      "pages": "1087-1092",
+      "publisher": "AIP Publishing"
+    },
+    {
+      "id": "3",
+      "authors": [
+        "Lars Onsager"
+      ],
+      "title": "Crystal Statistics. I. A Two-Dimensional Model with an Order-Disorder Transition",
+      "year": 1944,
+      "venue": "Physical Review",
+      "doi": "10.1103/physrev.65.117",
+      "url": "https://doi.org/10.1103/physrev.65.117",
+      "relevance": "Provides the two-dimensional equilibrium benchmark rather than a fit to this finite simulation; relevant here to ordering, fluctuations and temperature-dependent magnetization.",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1103/PhysRev.65.117",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata and abstract",
+        "access": "Open publisher abstract; full article access not established",
+        "notes": "Title, complete listed author sequence, publication date and DOI checked against live primary DOI registration metadata. Given names retain registered initials where supplied; no invented expansion. No abstract/full text was returned; mechanism interpretation is bounded by model Info and the bibliographic subject.",
+        "evidenceFile": "evidence/physics/publication-onsager.json",
+        "verified": true,
+        "additionalConsultedUrls": [
+          "https://journals.aps.org/pr/abstract/10.1103/PhysRev.65.117"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/physics/abstracts-02.json"
+        ],
+        "primaryReadingNotes": "Abstract specifies a two-dimensional zero-field Ising solution and finite-strip limitations, supporting the benchmark caveat."
+      },
+      "verified": true,
+      "volume": "65",
+      "issue": "3-4",
+      "pages": "117-149",
+      "publisher": "American Physical Society (APS)"
+    }
+  ],
+  "gaps": []
+}
