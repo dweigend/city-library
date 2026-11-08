@@ -1,5 +1,9 @@
 # City Library work plan
 
+## Accepted example-first city scripts — 8 November 2026
+
+The user accepted three flat city-simulation scripts as authoring references: household budget, neighborhood heat and generative quarter. [The extension plan](docs/development/example-first/PLAN.md) owns their executable acceptance and staged capability work. The first two use delivered APIs and join the standard examples/typecheck gates. The third is an explicitly unmet target: its dedicated execution and typecheck commands must remain red until corridor, subtract and bounded subdivision are delivered. No mocks, placeholder exports, skipped assertions or retrospective weakening of these scripts. This addition does not claim completion of the wider runtime catalogue or authorize a main merge.
+
 ## Grid and parcel foundations — locally completed phase
 
 The authorized headless first phase is tracked in [the scoped phase plan](docs/grid-parcels/PHASE-PLAN.md), with the full [saved target catalogue](docs/grid-parcels/API.md) and explicit [implementation/backlog ledger](docs/grid-parcels/STATUS.md). Five public scripts were frozen in `158b803` before runtime commits `aa824df`, `49ff219` and `c92289a`; their checksums remain unchanged. Square/hex/authored layouts, queries, area, bounded merge/split and typed layout Fields are implemented. [Verification](docs/grid-parcels/VERIFICATION.md) records the passing complete project check, packed consumer, additional conservation tests and independent Gemini scoped approval at `1fda843`. The user subsequently authorized pushing `feat/grid-parcel-foundations` and opening a detailed PR against `experiment/netlogo-web-catalog`. Package publication and main merge remain unauthorized. This additive phase preserves the existing regular Grid contract.

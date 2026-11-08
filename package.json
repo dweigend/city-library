@@ -47,7 +47,11 @@
     "check:ui:svelte": "bun run --cwd ui/agent-lab check",
     "dev:ui:svelte": "bun --bun run vite --config vite.config.ts",
     "build:ui:svelte": "bun --bun run vite build --config vite.config.ts",
-    "preview:ui:svelte": "bun --bun run vite preview --config vite.config.ts"
+    "preview:ui:svelte": "bun --bun run vite preview --config vite.config.ts",
+    "examples:city": "bun scripts/city-examples.ts",
+    "examples:city:targets": "bun scripts/city-examples.ts --targets",
+    "typecheck:city": "tsc -p tsconfig.city-examples.json",
+    "typecheck:city:targets": "tsc -p tsconfig.city-targets.json"
   },
   "workspaces": [
     "ui/agent-lab"
