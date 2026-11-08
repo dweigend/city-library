@@ -2,7 +2,7 @@
 export function createPlayback(
   step: () => boolean,
   changed: (running: boolean) => void,
-  schedule: (tick: () => void) => () => void,
+  schedule: (frame: () => void) => () => void,
 ) {
   let cancel: (() => void) | undefined;
   function stop() {
