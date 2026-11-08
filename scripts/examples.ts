@@ -1,6 +1,6 @@
 const phases = {
   "townscaper-grid": ["01-finite-hex-refinement", "02-square-target-first-step", "03-validation-and-failure", "04-continuation-and-revisions", "05-explicit-grid-state-copy"],
-  "city-simulation": ["01-household-budget", "02-neighborhood-heat"],
+  "city-simulation": ["01-household-budget", "02-neighborhood-heat", "04-scarce-resource", "05-shared-machine"],
   "grid-parcels": ["01-regular-regression-and-tiny-wraps", "02-square-and-hex-field-rule", "03-irregular-lookup-ties-and-occupancy", "04-merge-and-source-provenance", "05-convex-split-and-rejections"],
   "ui-authoring-next": ["01-typed-monitor-formatters", "02-readable-observation-projections", "03-namespaced-selection", "04-formatter-errors-and-recovery", "05-independent-mounts-and-legacy"],
   "ui-authoring": ["01-defaults-and-inert-entry", "02-ordered-setup-and-numeric-live", "03-alternate-observation", "04-groups-format-and-categories", "05-independent-actions-and-legacy"],

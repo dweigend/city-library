@@ -4,6 +4,8 @@
 
 The user accepted three flat city-simulation scripts as authoring references: household budget, neighborhood heat and generative quarter. [The extension plan](docs/development/example-first/PLAN.md) owns their executable acceptance and staged capability work. The first two use delivered APIs and join the standard examples/typecheck gates. The third is an explicitly unmet target: its dedicated execution and typecheck commands must remain red until corridor, subtract and bounded subdivision are delivered. No mocks, placeholder exports, skipped assertions or retrospective weakening of these scripts. This addition does not claim completion of the wider runtime catalogue or authorize a main merge.
 
+The same example-first plan now incorporates cross-domain research through two model-local integration probes: one scarce unit and a shared machine lifecycle. They use existing public APIs and explicit priorities/transitions, not a new resource framework. Geometry remains an independent track. Original three script contracts are unchanged; new probes and research alignment have their own verification/review record.
+
 ## Finite quad topology — independent E3 track
 
 The [integrated source receipt](docs/grid-parcels/TOWNSCAPER-RECEIPT.md) preserves

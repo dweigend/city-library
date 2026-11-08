@@ -2,7 +2,7 @@
 
 The author script is the product contract. Start with the user's readable task, establish its observable outcomes, freeze the public script, and implement the smallest library capabilities that satisfy it. Do not retrofit awkward calls, private imports or weakened assertions after implementation.
 
-This plan records the three accepted examples and sequences the broader grid/parcel and Townscaper work. It adds no new runtime API. Source baseline: `feat/grid-parcel-foundations`, `2a7f3eb`. Current primary-checkout AGENTS.md and CODING_STANDARDS.md remain guidance even where concurrent and not committed to that baseline. Preserve existing accepted scripts and all primary-checkout work.
+This plan preserves the three accepted reference examples, adds two contrasting integration probes, and sequences the broader grid/parcel and Townscaper work. It adds no new runtime API. Source baseline: `feat/grid-parcel-foundations`, `2a7f3eb`. Current primary-checkout AGENTS.md and CODING_STANDARDS.md remain guidance even where concurrent and not committed to that baseline. Preserve existing accepted scripts and all primary-checkout work.
 
 ## Accepted authoring contract
 
@@ -10,21 +10,60 @@ Use ordinary TypeScript and existing public root imports from `city-library`. Re
 
 Keep state effects, RNG streams, units and update order explicit. Scripts own their city policy and generated street-line data; the library owns reusable geometry and simulation mechanisms. Rendering must not change ticks, randomness or model state. Numeric keys, Field identity and source correspondence keep their existing meanings.
 
-The three [city scripts](../../../examples/city-simulation/README.md) are accepted author workflows. Their appended assertions define independent analytical outcomes. They are not comprehensive scientific models or a general European-city generator. Freeze their file hashes at this checkpoint. Any substantive later syntax or expectation change needs a recorded design reason and user agreement; implementation difficulty is not a reason. More assertions may be added without weakening the accepted task.
+The original three [city scripts](../../../examples/city-simulation/README.md) are accepted author workflows; their files and checkpoint hashes remain unchanged. Two new probes, scarce resource and shared machine, test interaction semantics with the existing public API. Their execution/review status is recorded separately from the original checkpoint. Their appended assertions define independent analytical outcomes. They are not comprehensive scientific models or a general European-city generator. Freeze their file hashes at this checkpoint. Any substantive later syntax or expectation change needs a recorded design reason and user agreement; implementation difficulty is not a reason. More assertions may be added without weakening the accepted task.
 
 ## Current gates
 
 | Command | Scope | Current required result |
 | --- | --- | --- |
-| `bun run examples:city` | The household and regular heat scripts, with assertions | Pass |
+| `bun run examples:city` | Household, regular heat, scarce resource and shared machine, with assertions | Pass; record the two new probes' actual verification before delivery |
 | `bun run typecheck:city` | The same public scripts under strict TypeScript | Pass |
-| `bun run examples:city:targets` | Those scripts plus the actual quarter target | Fail until missing APIs are delivered; then pass permanently |
-| `bun run typecheck:city:targets` | All three source files, no fake declarations | Fail until public exports/types exist; then pass permanently |
-| `bun run examples` / `bun run typecheck` | Existing regular gates plus the two ready scripts | Preserve passing baseline; record unrelated failures honestly |
+| `bun run examples:city:targets` | All four ready scripts plus the actual quarter target | Fail until missing APIs are delivered; then pass permanently |
+| `bun run typecheck:city:targets` | All five source files, no fake declarations | Fail until public exports/types exist; then pass permanently |
+| `bun run examples` / `bun run typecheck` | Existing regular gates plus the four ready scripts | Preserve passing baseline; record unrelated failures honestly |
 
 The quarter remains visible in the capability ledger and dedicated red gates. Do not treat current regular-suite success as quarter acceptance. When a phase introduces its package entry or public types, verify a packed downstream consumer as well as checkout imports. CI work must preserve this delivered-versus-target distinction and make complete-phase acceptance depend on the target gates turning green, rather than adding an always-green expected-failure test.
 
-## Delivery sequence
+## Shared modeling rules
+
+Give each fact one authoritative owner and declare its unit and system boundary. An inventory, a reservation, a reusable service slot and a throughput limit are different facts. Derive availability from inventory and reservations rather than maintaining a second writable stock. A booking occupies a machine without transferring its ownership or creating material.
+
+State activation and conflict rules separately. Sequential order may decide a winner; decisions based on the same old state still require a jointly feasible allocation. Synchrony is not an allocation policy. Read/decide/resolve/apply can help explain a model, but it is not a compulsory execution pipeline or reason to add a framework.
+
+Distinguish commitment, consumption and completion. A reservation holds capacity; starting may consume inputs; successful completion supplies output. Cancellation before consumption can release a reservation. Cancellation or failure after consumption needs an explicit loss/recovery rule, not an automatic refund. Existing `run` preserves earlier mutations when a step throws, does not advance that failed step's tick, and is not a transaction. Expected rejection should be established before mutation; retries must not consume twice.
+
+Keep observation inert. Repeated measurement does not change state, identities, time or simulation RNG. Sample at declared points; UI invokes model actions and never runs a separate repair clock. Compare independent instances with prescribed demand and failure sequences before relying on matching seeds: different rules can consume the same stream differently.
+
+Retain domain distinctions even when names resemble each other. Power is a rate and energy is a quantity; multiplying power by duration gives energy. Geometric adjacency is not transport access, graph reachability is not a legal entrance, and a supply graph is not electrical load-flow physics. Sharing, repair and recycling preserve different combinations of service, product identity and material. Measure unmet service separately from successful demand reduction. A common class or universal score would not settle these semantics.
+
+## Parallel work tracks
+
+Geometry is needed when shape changes the question, routing when travel or disruption changes it. Neither is a prerequisite for a stock balance, scarce allocation or machine lifecycle. Keep the following integration track independent of E1–E5 below; it does not replace or restart their accepted gates.
+
+| Probe | Concrete contract | What remains model code |
+| --- | --- | --- |
+| [Last resource unit](../../../examples/city-simulation/04-scarce-resource.ts) | Inventory 1; A and B each request 1. Priority A yields inventory 0, A 1, B 0 and unmet demand 1. Reversing priority changes the winner. An invalidated request has no effect, and the model declares whether the next request is considered. Preserve total 1, nonnegative amounts and at most one accepted claim. | Eligibility, priority, rejection and quantity ownership. No allocation manager is required by this case. |
+| [Shared machine](../../../examples/city-simulation/05-shared-machine.ts) | Inventory 2. Reserving one unit leaves physical inventory 2 and availability 1. Starting consumes one unit. Failure releases occupancy but does not restore consumed material. Repair-before-request at time 2 permits a start; reverse ordering rejects that definitive request. Cancellation before start only releases the reservation. Preserve canonical machine identity and exclusive occupancy. | Booking, start/failure/repair/cancellation policy, same-time order and service accounting. No reservation, process or clock framework is required by this case. |
+| Later production/return and component contrasts | Add delayed return, explicit residue and conserved material first; later compare compatible recovered components and fulfilled service. Supply expected traces before writing a new script. | Recipes, quality classes, prices, demand, repair effects, component compatibility and recycling yields. Routing and geometry remain optional. |
+
+For each new probe, include an altered rule, repeated inert observation and independent interleaved instances. The prescribed outcomes are test obligations; consult verification evidence for which assertions have actually executed. Do not call these probes new library capabilities. Four ready city scripts plus one red geometry target are not a substitute for four or five complete public examples before any new API expansion.
+
+## Generalization gate
+
+Use the six research responsibilities—state/balances, transformation, choice/allocation/settlement, connections/transport, time/execution and observation/comparison—as questions for a script. They are not six packages, classes or managers.
+
+Before extracting any public operation:
+
+1. Show a concrete need in at least two contrasting author tasks. Repeated lines or similar domain names alone do not establish a common mechanism.
+2. Compare the existing public API and ordinary typed data/functions first. Keep recipes, priorities, cancellation, repair and other policy in the model until a repeated semantic contract is demonstrated.
+3. Match ownership, units, identity, timing, mutation and failure behavior across the cases. Do not unify stocks, occupancy slots and flows by erasing their differences.
+4. State the exact burden the extraction removes. Prefer one small composable operation over a new manager, universal change object, registry or required lifecycle.
+5. Express the candidate through public scripts with independent expected results and contrasting failure cases. Keep the smallest supported contract; mark unsupported cases honestly.
+6. Apply the existing example-first freeze, behavior/type/consumer checks and independent review before adding a runtime export. Retain earlier scripts unchanged.
+
+The current scarcity and machine probes do not yet demonstrate a missing public function. They sharpen how existing Agent identity, state, World execution and ordinary model functions fit together. No new allocation, transfer, reservation or circularity vocabulary is frozen by this integration.
+
+## Geometry and topology delivery sequence
 
 | Stage | Work | Public evidence before runtime | Completion gate |
 | --- | --- | --- | --- |
@@ -37,6 +76,25 @@ The quarter remains visible in the capability ledger and dedicated red gates. Do
 | E6 | Broader city generation and live models | Distinct scripts for a historical core, later extension and peripheral district; separate network/legal access, occupancy and replacement tasks | Meaningful outputs and declared assumptions; technical tests and visual judgement remain separate |
 
 Stages describe dependency order, not a promise to ship the entire catalogue in one PR. E3 is algorithmically independent and may proceed in its existing thread once its own examples are agreed; it must not hold E1/E2 hostage or overtake their authoring decisions. The approved three scripts do not automatically approve that thread's earlier five unreviewed draft scripts. Resolve numerical constants and exact RNG consumption through the phase's example-first review before runtime. Do not ask the user to approve every routine internal choice; preserve their agreed public contracts.
+
+## Research-to-test trace
+
+| Research lesson | Executable or documentation owner | Evidence boundary |
+| --- | --- | --- |
+| Shared reading cannot allocate the last unit twice | Scarce-resource script: priority variation, invalid request, conservation and one accepted claim | Ordinary model policy; no generic resolver inferred. |
+| Reservation, use, consumption and completion are distinct | Shared-machine script: stock/availability snapshots, failure, repair order, cancellation and identity | Consumed material is not automatically refunded; no transactional `run` claim. |
+| Observations and comparisons must be controlled | Repeated-read and independent-instance assertions in the two new probes | A seed alone is not a controlled external demand/failure sequence. |
+| R strategies preserve different things | Later production, shared-service and recovered-component briefs | No function per R, universal resource container or environmental ranking. |
+| Teach one executable source at a time | The learning sequence below, with links to canonical scripts | No documentation website or visual redesign is delivered. |
+| Spatial tools remain independent | Existing E1–E5 geometry/topology sequence and unchanged quarter target | Geometry is not mandatory for every economy, energy or transport model. |
+
+The research source records remain in city_game: `docs/GLOBAL-ARCHITECTURE-BRAINSTORM.md` and `docs/MESA-DESIGN-RESEARCH.md`. This plan continues to own implementation order and acceptance; the source documents preserve research and desk scenarios rather than competing runtime contracts.
+
+## Documentation learning sequence
+
+Start with the executable household model, then observe its balance, vary a decision/order, understand an explicit failure boundary and compare independent instances. Introduce scarce allocation and machine lifecycle as short contrasting lessons. Add Graph or Grid only where the question needs it; connect a separate view after the headless behavior is understood.
+
+Each lesson links one canonical source file and states its assumptions, run command, expected result, availability and a useful rule variation. Tutorials teach a path; task guides solve a problem; concept pages explain semantics; API reference preserves exact signatures and contracts. Do not copy the script into competing documentation implementations. This changes documentation content and sequence, not a rendered website or theme.
 
 ## Independent expectations
 
@@ -57,6 +115,8 @@ Stages describe dependency order, not a promise to ship the entire catalogue in 
 
 ## Ownership and handoff
 
-The source concept package was integrated in city_game at `5583c030`; it is research/design evidence, not target delivery. The existing Townscaper preparation branch is `feat/townscaper-grid`, based on `2a7f3eb`; its concurrent untracked documentation/drafts must remain untouched. This example contract checkpoint uses its own `docs/example-first-contracts` branch. Integrate the explicit checkpoint commit into the implementation branch after review, then continue against this accepted authoring contract. Preserve all 49 source catalogue rows and the integrated 58 operation/property entries as the roadmap; availability remains independently tracked.
+A separate `docs/model-research-integration` worktree committed documentation-only integration at `13d934a`, based on `cf9baea`, including changes to this plan and the example README. Preserve that work. When integrating into an implementation branch, reconcile the overlapping plan/README changes semantically rather than blindly cherry-picking competing versions. Its draft research guide does not replace this plan's acceptance authority. No edits to that worktree or source research records belong to this checkpoint.
 
-Read the [verification and script hashes](VERIFICATION.md) for actual execution results. This plan does not itself claim corridor, subtraction, subdivision, Townscaper generation or a completed PR.
+The source concept package was integrated in city_game at `5583c030`; it is research/design evidence, not target delivery. The independent `feat/townscaper-grid` branch builds on `2a7f3eb`; its separately owned work remains untouched. At this checkpoint it has advanced to `8359723`, including finite-topology runtime commit `6726d7e` and its own evidence. That delivery does not fulfill the quarter target or approve these model probes. This example contract checkpoint uses its own `docs/example-first-contracts` branch. Integrate the explicit checkpoint commit into the implementation branch after review, then continue against this accepted authoring contract. Preserve all 49 source catalogue rows and the integrated 58 operation/property entries as the roadmap; availability remains independently tracked.
+
+Read the [verification and script hashes](VERIFICATION.md) for actual execution results. This plan does not itself claim corridor, subtraction, subdivision, Townscaper generation or a completed PR. The two added integration probes have separate [execution and integrity evidence](INTEGRATION-VERIFICATION.md); earlier E0 approval does not automatically approve these additions. Consult that record for the latest independent review status.
