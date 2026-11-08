@@ -1,7 +1,5 @@
 # Fire, Life and Percolation composition contracts
 
-Prepared 2026-11-05 for the next bounded catalog batch. **Pre-runtime proposal and source audit only:** no model implementation, target behavior, browser acceptance or independent approval is claimed here. The coordinator must review and freeze these five asserted public model scripts before delegating runtime. No new core API is proposed.
-
 ## Canonical sources and provenance
 
 Each exact basename has one match in the pinned 550-row served catalog. Variants such as Fire Simple, Life Turtle-Based and Percolation 3D are separate rows and are not covered by this batch.
@@ -60,7 +58,7 @@ After percolation, if current-row has reached the bottom row, copy the entire bo
 
 `setRules({porosity})` validates against the canonical live descriptor, preserves tick/RNG and does not create oil or resurrect an empty front. `setFront(columns: readonly number[])` is a deterministic setup fixture: require unique, in-range odd integer columns, reset soil/rocks, top front, totalOil, tick and history, preserving settings/RNG. It allows an empty initial front. Read exposes `currentRow` in source 0-based indices, `totalOil`, `counts: {front}`, and cells with `column`, `row`, `kind: "soil" | "rock" | "oil" | "saturated"` plus canonical x/y. `done` means the current row has no oil; final successful extinction go still contributes one tick. History records totalOil and front count after completed steps/wrap.
 
-## Five pre-runtime public scripts
+## Public examples
 
 1. `01-life-synchronous-blinker.ts`: three-cell blinker rotates synchronously and returns in two ticks, with observation/RNG purity; empty Life still ticks.
 2. `02-fire-front-and-embers.ts`: a two-tree corridor advances one column per tick, excludes setup ignitions from counters, and stops at tick 14 only after the final ember expires.
@@ -69,5 +67,3 @@ After percolation, if current-row has reached the bottom row, copy the entire bo
 5. `05-defaults-and-isolation.ts`: exact source dimensions/defaults/topology-dependent setup counts, repeatability without IDs, independent model instances and detached observations.
 
 The tiny Percolation wrap fixture uses seed 42: an executed probe of public Mulberry Random confirmed its first 50 draws are all below 0.99 (maximum 0.8820588334929198). Source setup has no scientifically effective randomness; target fixture preserves seed continuation. The two tiny steps need fewer than 50 draws under the specified phase shuffles. This establishes a deterministic target example without promising NetLogo trajectory identity.
-
-Executed preparation evidence: exact immutable downloads and SHA-256 checks for all three sources; read Procedures/Widgets/Info and license sections. Public Random seed probe above executed. The first public example is expected to fail with a missing model module before implementation. Source archives do not establish browser behavior or runtime acceptance. No extension/include/asset dependency appears in these three archived models; Life's drawing/recolor host behavior remains explicit UI work.

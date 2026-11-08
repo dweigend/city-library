@@ -22,4 +22,4 @@ This model was created as part of the projects: PARTICIPATORY SIMULATIONS: NETWO
 
 TypeScript composition uses City Library public APIs and independent RNG; no cross-RNG trajectory equivalence or empirical validation is claimed. Research context: [existing dossier](../../docs/research/netlogo-web/minority-game.md).
 
-Executed rules, adaptations and original/target Chromium evidence: [B02 comparison report](../../docs/development/selected-social-report.md#minority-game).
+Source comparisons and adaptation details: [Comparison report](../../evidence/development/selected-social-report.md#minority-game).

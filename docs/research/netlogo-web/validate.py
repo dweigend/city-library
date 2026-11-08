@@ -114,11 +114,13 @@ result['uniquePublications'] = len({str(p.get('doi') or p.get('url')).lower() fo
 result['miniTextWordRange'] = [min(e['wordCount'] for e in entries), max(e['wordCount'] for e in entries)]
 result['batchCounts'] = {batch: dict(Counter(e['status'] for e in entries if e['deliveryBatch'] == batch)) for batch in sorted({e['deliveryBatch'] for e in entries})}
 (ROOT / 'status.json').write_text(json.dumps(result, indent=2)+'\n')
-lines = ['# Research index', '', f"Complete: {counts['complete']}/200. Open: {200-counts['complete']}/200.", '',
-         'Literature research status only; no runtime or independent implementation acceptance is implied.', '',
-         '| Model | Batch | Research status | Words | Publications |', '| --- | --- | --- | ---: | ---: |']
-for e in entries:
-    lines.append(f"| [{e['name']}]({e['slug']}.md) · [JSON]({e['slug']}.json) | {e['deliveryBatch']} | {e['status']} | {e['wordCount']} | {e['publicationCount']} |")
+lines = ['# Model source index', '',
+         'Scientific questions, original sources and relevant publications for the selected models.', '',
+         f"Complete literature records: {counts['complete']}/200. Unresolved: {200-counts['complete']}/200.", '',
+         'Literature status does not establish runtime or scientific acceptance.', '',
+         '| Model | Literature record | Publications |', '| --- | --- | ---: |']
+for e in sorted(entries, key=lambda entry: entry['name'].casefold()):
+    lines.append(f"| [{e['name']}]({e['slug']}.md) · [JSON]({e['slug']}.json) | {e['status']} | {e['publicationCount']} |")
 (ROOT / 'INDEX.md').write_text('\n'.join(lines)+'\n')
 print(json.dumps({'total': 200, 'complete': counts['complete'], 'open': 200-counts['complete'], 'validationErrors': errors}, indent=2))
 raise SystemExit(bool(errors))

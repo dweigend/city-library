@@ -1,6 +1,6 @@
 # NetLogo reference snapshots
 
-These source artifacts are retained for the authorized research/reference ports. They are not runtime experiment entrypoints. Discovery must require model.ts AND ui.ts rather than treat this directory as a runnable experiment.
+These source artifacts are retained for source comparison and model adaptation. They are not runtime experiment entrypoints. Discovery must require model.ts AND ui.ts rather than treat this directory as a runnable experiment.
 
 - pinned/: exact upstream model bytes at NetLogo/models commit bf0626a89358b48494066862843a91f36f2556cf; Git blob hashes match upstream.
 - web/: exact files fetched from netlogoweb.org on 2026-11-05, each declaring NetLogo 7.0.4.

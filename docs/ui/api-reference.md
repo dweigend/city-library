@@ -1,8 +1,10 @@
 # UI API reference
 
+Use `defineUI` to describe what an experiment shows and which model actions its controls call. The model remains responsible for state, validation and time. This reference covers each part of that declaration.
+
 ## Status
 
-This reference and the [API table](api-table.md) define the repository UI contract. The [readable-authoring slice](../development/ui-authoring-syntax.md) is implemented in both the legacy and Svelte adapters, with passing public examples and real-browser checks. Final review scope and remaining tasks are in [PLAN](../../PLAN.md). Existing array declarations remain compatibility syntax. The forms below describe the accepted target for this slice, not a package release.
+This reference and the [API table](api-table.md) define the repository UI contract supported by both the legacy and Svelte adapters. Array declarations remain compatibility syntax. [PLAN](../../PLAN.md) identifies remaining acceptance work. The package has not been published.
 
 ## Principles
 
@@ -41,7 +43,7 @@ export const ui = defineUI(model, {
 
 ## Setup
 
-`setup` is an ordered readonly array of parameter-key strings or `{ field, label?, widget? }` overrides. Use strings for ordinary fields and an override only where needed. Explicit `[]` hides setup controls. With keyed live bindings, omission lists descriptor fields in declaration order except live fields; with legacy arrays or no live declaration, omission retains the historical all-input behavior. Hidden values retain descriptor defaults unless a live control supplies them.
+`setup` is an ordered readonly array of parameter-key strings or `{ field, label?, widget? }` overrides. Use strings for ordinary fields and an override only where needed. Explicit `[]` hides setup controls. With keyed live bindings, omission lists descriptor fields in declaration order except live fields; with legacy arrays or no live declaration, omission lists all descriptor inputs. Hidden values retain descriptor defaults unless a live control supplies them.
 
 The descriptor chooses checkbox, select, number or text and supplies bounds and choices. A range override changes numeric presentation, not the field's meaning. Numeric step defaults to 1 for integers and `any` otherwise. Labels split camel case and capitalize the initial letter.
 
@@ -156,7 +158,7 @@ The host reports caught model-action and rendering errors and stops playback; ea
 
 <a id="target-syntax"></a>
 
-The ordinary setup-string and keyed-live forms above are now frozen authoring contracts, with legacy arrays preserved for compatibility. The [slice specification](../development/ui-authoring-syntax.md) owns exact ordering, decoding, grouping and chart edge cases. This does not authorize builder chains, custom mount hooks or arbitrary layout configuration.
+Setup-string and keyed-live forms are supported, with legacy arrays preserved for compatibility. The [authoring contract](../development/ui-authoring-contract.md) defines exact ordering, decoding, grouping and chart edge cases. This does not authorize builder chains, custom mount hooks or arbitrary layout configuration.
 
 ## Author examples
 
@@ -166,4 +168,4 @@ The [five public author examples](../../examples/ui-authoring/README.md) cover d
 
 Use short inline callbacks for obvious bindings; extract longer projections into named local functions below the description. Explain units, assumptions, unusual transforms and compatibility decisions in comments. Do not narrate obvious property access, repeat types or leave obsolete alternatives in comments. Keep scientific calculations in public headless model functions.
 
-A custom UI element may eventually be local to `ui.ts` or promoted into a reusable UI library element when a concrete second consumer justifies it. Flat live-control groups are part of the authoring slice; no custom-element authoring signature is frozen. Direct queries into host DOM, private Svelte components and monkey-patching renderer internals are not public extension contracts. A future extension must define typed observations/actions, ownership, accessibility, cleanup and defaults through its own example-first slice.
+A custom UI element may eventually be local to `ui.ts` or promoted into a reusable UI library element when a concrete second consumer justifies it. Flat live-control groups are supported; no custom-element authoring signature is defined. Direct queries into host DOM, private Svelte components and monkey-patching renderer internals are not public extension contracts. A future extension must define typed observations/actions, ownership, accessibility, cleanup and defaults through its own example-first slice.

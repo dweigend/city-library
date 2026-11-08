@@ -29,7 +29,7 @@ interface Probe {
 }
 const slugs = ["smoothlife", "hex-cell-aggregation", "vants", "turing-machine-2d", "ca-1d-elementary", "ca-continuous", "brians-brain", "cyclic-ca", "ca-stochastic"] as const;
 function source(slug: (typeof slugs)[number]): Probe["observed"] {
-  const path = new URL(`../docs/development/selected-cellular-evidence/${slug}-source-probe.json`, import.meta.url);
+  const path = new URL(`../evidence/development/selected-cellular-evidence/${slug}-source-probe.json`, import.meta.url);
   return (JSON.parse(readFileSync(path, "utf8")) as Probe).observed;
 }
 

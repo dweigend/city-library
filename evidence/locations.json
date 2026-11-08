@@ -1,0 +1,998 @@
+{
+  "purpose": "Location metadata for source and acceptance records kept outside active documentation. Relative artifact paths and hashes inside original records describe their recorded checkout. This map locates retained files; absent historical artifacts resolve through development/archive-paths.json. No acceptance stage is changed by relocation.",
+  "originalRevision": "dc7b164abd23c8e7b7f11c902195ab030c5f1c4b",
+  "paths": {
+    "docs/development/agent-lab-browser-evidence.md": {
+      "current": "evidence/development/agent-lab-browser-evidence.md",
+      "sha256BeforeRelocation": "2d707201f3c260e99a9bc637acbc8515d4bcec03f2062e20c6a83b7079023f88"
+    },
+    "docs/development/agent-lab-evidence.md": {
+      "current": "evidence/development/agent-lab-evidence.md",
+      "sha256BeforeRelocation": "4fc173d2fdf03f6c58229cd63fdd6ac89dfb65ee11b0e2122b66eff7fcf967b1"
+    },
+    "docs/development/agent-lab-examples.md": {
+      "current": "evidence/development/agent-lab-examples.md",
+      "sha256BeforeRelocation": "152d1e70e84ad3209a8c8bf3b93c2995737d05e2df13e35da05b15c2d475f149"
+    },
+    "docs/development/archive-paths.json": {
+      "current": "evidence/development/archive-paths.json",
+      "sha256BeforeRelocation": "40654e19df72738e12d3e35d0b2b51818adbb0603f74258e01f75acfbfaa07ba"
+    },
+    "docs/development/directed-diffusion-browser-report.md": {
+      "current": "evidence/development/directed-diffusion-browser-report.md",
+      "sha256BeforeRelocation": "2fde999fde1b375f682b75cf07edb22875587607aee8840f7e2fc09d4c34b16a"
+    },
+    "docs/development/indexed-occupancy-review.md": {
+      "current": "evidence/development/indexed-occupancy-review.md",
+      "sha256BeforeRelocation": "14b432b5cd4f096b5e7b92341b6ffa42a960aa780f8f40715bec3c0b3e1350b9"
+    },
+    "docs/development/materials-canvas-diagnosis.md": {
+      "current": "evidence/development/materials-canvas-diagnosis.md",
+      "sha256BeforeRelocation": "d37cd19e4a07edaa3089022ed3be344056e10825107597a1ed647449e4413e01"
+    },
+    "docs/development/netlogo-catalog-evidence/segregation-integrated-tick10.png": {
+      "current": "evidence/development/netlogo-catalog-evidence/segregation-integrated-tick10.png",
+      "sha256BeforeRelocation": "9bf6cc0fd69daf50746e11d39236552e2044f8cff0737f7788b9f5fd22933694"
+    },
+    "docs/development/netlogo-catalog-evidence/segregation-mobile-dark-final.png": {
+      "current": "evidence/development/netlogo-catalog-evidence/segregation-mobile-dark-final.png",
+      "sha256BeforeRelocation": "fb527f7c35591390deb6d3f616f0bf25ccf942c6aaa29670080712e818d4db4f"
+    },
+    "docs/development/netlogo-catalog-evidence/segregation-reference-setup.png": {
+      "current": "evidence/development/netlogo-catalog-evidence/segregation-reference-setup.png",
+      "sha256BeforeRelocation": "9d97b91555f761b502ca6d83ec94b094ee12a3949333e48f140f4ee1eb397dce"
+    },
+    "docs/development/netlogo-catalog-evidence/segregation-reference-tick10.png": {
+      "current": "evidence/development/netlogo-catalog-evidence/segregation-reference-tick10.png",
+      "sha256BeforeRelocation": "5c370d312946bb040a2b131b4a3ce6e80857d97b90a14120ecff9632653bb4b5"
+    },
+    "docs/development/netlogo-catalog-evidence/segregation-target-setup.png": {
+      "current": "evidence/development/netlogo-catalog-evidence/segregation-target-setup.png",
+      "sha256BeforeRelocation": "e4dee31c2621db6a0b0cd9d201fb52e70c2c8e4271676ce60ff4a544ec310be5"
+    },
+    "docs/development/netlogo-catalog-evidence/segregation-target-tick10.png": {
+      "current": "evidence/development/netlogo-catalog-evidence/segregation-target-tick10.png",
+      "sha256BeforeRelocation": "ee6eb6c0b6091e8240050f2eebbef0c30eba074514d4cbfe639876b5d556e468"
+    },
+    "docs/development/netlogo-web-catalog-evidence.md": {
+      "current": "evidence/development/netlogo-web-catalog-evidence.md",
+      "sha256BeforeRelocation": "e4c25c67212e61c6d9340260c3f06b90aec290a4eb6874a8adfe403d7a36c45b"
+    },
+    "docs/development/netlogo-web-catalog-review.md": {
+      "current": "evidence/development/netlogo-web-catalog-review.md",
+      "sha256BeforeRelocation": "5f3fbdf6a6cd73787ac736dd727e5a521d8c649fe9247820d4478bf23b62c151"
+    },
+    "docs/development/reference-refresh-browser.md": {
+      "current": "evidence/development/reference-refresh-browser.md",
+      "sha256BeforeRelocation": "63020b3f56d4cbd82ba857b10de4ca813d1e175ece482f748472dc7ed2b496ed"
+    },
+    "docs/development/reference-refresh-evidence/manifest.json": {
+      "current": "evidence/development/reference-refresh-evidence/manifest.json",
+      "sha256BeforeRelocation": "33c39ad8369f7a9e2349ab3e1a093f256319af71cb72001df9f7e3dc3922a18b"
+    },
+    "docs/development/reference-ui-followup.md": {
+      "current": "evidence/development/reference-ui-followup.md",
+      "sha256BeforeRelocation": "b61615b75d1d16c165ed14d6db036071aefad8e3d2bb616859efeb7200839235"
+    },
+    "docs/development/research-integration.md": {
+      "current": "evidence/development/research-integration.md",
+      "sha256BeforeRelocation": "2a03cb0b230a6946692908b68e2f390d3ef6cf732eceab10535f8c7e7c4b09b7"
+    },
+    "docs/development/segregation-browser-report.md": {
+      "current": "evidence/development/segregation-browser-report.md",
+      "sha256BeforeRelocation": "2c90e74434c8363ab39578944919c045accba8e197440c9c5fad6239c82879ed"
+    },
+    "docs/development/selected-105-integration-evidence/checks.json": {
+      "current": "evidence/development/selected-105-integration-evidence/checks.json",
+      "sha256BeforeRelocation": "9d3f6456a9835031a9d6055648e50d8ce037054fc38008736ba43a8299d2a912"
+    },
+    "docs/development/selected-95-integration-evidence/checks.json": {
+      "current": "evidence/development/selected-95-integration-evidence/checks.json",
+      "sha256BeforeRelocation": "2b71cc3a5e0ab3ebc92246fecbadbae6e61e5909cd2746e993a9694cb1b57762"
+    },
+    "docs/development/selected-biology-autumn.md": {
+      "current": "evidence/development/selected-biology-autumn.md",
+      "sha256BeforeRelocation": "babcc133c524054a9a65ec75ae1f1bfd90689ea784a7a645ad3b5f980c274199"
+    },
+    "docs/development/selected-biology-blood-sugar-regulation.md": {
+      "current": "evidence/development/selected-biology-blood-sugar-regulation.md",
+      "sha256BeforeRelocation": "fc3ff1741cf6546f2d296f8c6519ec9d90bf0fb6ad27b09476198c8eb4adfa2e"
+    },
+    "docs/development/selected-biology-chloroplasts-and-food.md": {
+      "current": "evidence/development/selected-biology-chloroplasts-and-food.md",
+      "sha256BeforeRelocation": "0eef7747df11e99f16ee095eab5aa667e64e1a0eaca1737051cde3e21fd7b836"
+    },
+    "docs/development/selected-biology-evidence/browser-observations.json": {
+      "current": "evidence/development/selected-biology-evidence/browser-observations.json",
+      "sha256BeforeRelocation": "43944e979176688731ad3f6fb7b34c35f1309c97c49dad3263835c32c7338bdb"
+    },
+    "docs/development/selected-biology-evidence/final-check-03.log": {
+      "current": "evidence/development/selected-biology-evidence/final-check-03.log",
+      "sha256BeforeRelocation": "a310b7908352e3c439fb25cb0d71c8b1a42ad002e1c6b07f675aa7f5870fcba4"
+    },
+    "docs/development/selected-biology-evidence/final-checks.json": {
+      "current": "evidence/development/selected-biology-evidence/final-checks.json",
+      "sha256BeforeRelocation": "f8602a76b0c08293b2ee6cd38d66d2acda342980d290185fed8820975483e404"
+    },
+    "docs/development/selected-biology-evidence/images.sha256": {
+      "current": "evidence/development/selected-biology-evidence/images.sha256",
+      "sha256BeforeRelocation": "bcf3059481ae12f9abaf78e3d3ad6e01f60efbf74c48bb3560a328c1b3e7ebe1"
+    },
+    "docs/development/selected-biology-evidence/status-fix.json": {
+      "current": "evidence/development/selected-biology-evidence/status-fix.json",
+      "sha256BeforeRelocation": "3c6d5bb51fe5bf857119855e2f8d37ebdf6bd30f187bff2b1c2c53bd538e7604"
+    },
+    "docs/development/selected-biology-examples.sha256": {
+      "current": "evidence/development/selected-biology-examples.sha256",
+      "sha256BeforeRelocation": "6c7b54d79dd7c55b9a517350227ad89a776d691c38af555a2783a1afd93ad836"
+    },
+    "docs/development/selected-biology-fur.md": {
+      "current": "evidence/development/selected-biology-fur.md",
+      "sha256BeforeRelocation": "cf6973aef74f9517245dadfaea2e64be3e5426d1eedf4b38a023ce0cdfbde466"
+    },
+    "docs/development/selected-biology-handoff.md": {
+      "current": "evidence/development/selected-biology-handoff.md",
+      "sha256BeforeRelocation": "4c96a43e187ac25813f7078a0116f8631f96e7f798aa7d53943bce278c1e510b"
+    },
+    "docs/development/selected-biology-honeycomb.md": {
+      "current": "evidence/development/selected-biology-honeycomb.md",
+      "sha256BeforeRelocation": "161c2a3849bb25075b35e60329709610b324f91fd398a3c86f1c55272b447a2f"
+    },
+    "docs/development/selected-biology-integration-evidence/verify-muscle-tail.ts": {
+      "current": "evidence/development/selected-biology-integration-evidence/verify-muscle-tail.ts",
+      "sha256BeforeRelocation": "ed4c9a52ace736272ecf581ba00b1ad097bd12957a480e8a7598571931452cbd"
+    },
+    "docs/development/selected-biology-membrane-formation.md": {
+      "current": "evidence/development/selected-biology-membrane-formation.md",
+      "sha256BeforeRelocation": "7af0c3a577d79a57675c938e971a3a0d49097fa3ac4ebeacc5d28da3cd5befd7"
+    },
+    "docs/development/selected-biology-muscle-development.md": {
+      "current": "evidence/development/selected-biology-muscle-development.md",
+      "sha256BeforeRelocation": "9ae719a4c806cf2bc7bd341b960242f959b3448ac5e06fb456d021b08318ed2a"
+    },
+    "docs/development/selected-biology-slime.md": {
+      "current": "evidence/development/selected-biology-slime.md",
+      "sha256BeforeRelocation": "be95723fae04ad2a5781b8279faea062b69059a65ed06a95d3e02e724dfe88b4"
+    },
+    "docs/development/selected-biology-source-audit.json": {
+      "current": "evidence/development/selected-biology-source-audit.json",
+      "sha256BeforeRelocation": "e4347091cd16fb76c959fc2d53e40b63fff62357e3b5ce162a8c409159a4ffc0"
+    },
+    "docs/development/selected-biology-source-audit.md": {
+      "current": "evidence/development/selected-biology-source-audit.md",
+      "sha256BeforeRelocation": "4c5395f3afeac009fded9a1799f0d589e2ed55db17fcab83b7d22367d87a1bcb"
+    },
+    "docs/development/selected-biology-sunflower-emergent.md": {
+      "current": "evidence/development/selected-biology-sunflower-emergent.md",
+      "sha256BeforeRelocation": "af810ea27757dc6bd5a03d2990155c9b72e36f1c4aa7729c76cdac59e6e94156"
+    },
+    "docs/development/selected-biology-tumor.md": {
+      "current": "evidence/development/selected-biology-tumor.md",
+      "sha256BeforeRelocation": "a6de56891fcecb9daab8bc96018823bb408ccea1699d8859e5749c59fcc381f8"
+    },
+    "docs/development/selected-cellular-evidence/brians-brain-source-probe.json": {
+      "current": "evidence/development/selected-cellular-evidence/brians-brain-source-probe.json",
+      "sha256BeforeRelocation": "b522c8469dbc67b8727f0e73bf43dd74421ad43e4b31f5cded40c57a0a07c944"
+    },
+    "docs/development/selected-cellular-evidence/ca-1d-elementary-source-probe.json": {
+      "current": "evidence/development/selected-cellular-evidence/ca-1d-elementary-source-probe.json",
+      "sha256BeforeRelocation": "af0141dcaf0272de056f3cda0575305898a3697f4af673a3c9d2811afa2678b9"
+    },
+    "docs/development/selected-cellular-evidence/ca-continuous-source-probe.json": {
+      "current": "evidence/development/selected-cellular-evidence/ca-continuous-source-probe.json",
+      "sha256BeforeRelocation": "d3a8cea4fece14dc6d7eafea31fa96475501f953e7eec2c9e2d36f7d739f8760"
+    },
+    "docs/development/selected-cellular-evidence/ca-stochastic-source-probe.json": {
+      "current": "evidence/development/selected-cellular-evidence/ca-stochastic-source-probe.json",
+      "sha256BeforeRelocation": "4cea3048dab474e31e484f92b1bfbff0a747c1f87a035ba9e4d46fbade28af8e"
+    },
+    "docs/development/selected-cellular-evidence/cyclic-ca-source-probe.json": {
+      "current": "evidence/development/selected-cellular-evidence/cyclic-ca-source-probe.json",
+      "sha256BeforeRelocation": "c1a13e861f5213bf32498eb608a5ff9e0e836dbec94622d2a296566c9f25f8a4"
+    },
+    "docs/development/selected-cellular-evidence/hex-cell-aggregation-source-probe.json": {
+      "current": "evidence/development/selected-cellular-evidence/hex-cell-aggregation-source-probe.json",
+      "sha256BeforeRelocation": "d01cfd450381824657a427224b7fd05e7ef3530c504cb9d3a81d27b759de5d04"
+    },
+    "docs/development/selected-cellular-evidence/smoothlife-source-probe.json": {
+      "current": "evidence/development/selected-cellular-evidence/smoothlife-source-probe.json",
+      "sha256BeforeRelocation": "c690fa9f1c5463fac7e06144750fc654aa45cdca763c7e4a0c8c772d25d99380"
+    },
+    "docs/development/selected-cellular-evidence/turing-machine-2d-source-probe.json": {
+      "current": "evidence/development/selected-cellular-evidence/turing-machine-2d-source-probe.json",
+      "sha256BeforeRelocation": "d1081c2d87492d70f3fbfb394c5d2d2de1a492bda6fdfcc248aa7a209b916fab"
+    },
+    "docs/development/selected-cellular-evidence/vants-source-probe.json": {
+      "current": "evidence/development/selected-cellular-evidence/vants-source-probe.json",
+      "sha256BeforeRelocation": "6b2d80725e8dec7f99d93fc23b6ef11139331833be2a82ef6772b883b523937a"
+    },
+    "docs/development/selected-cellular-integration.md": {
+      "current": "evidence/development/selected-cellular-integration.md",
+      "sha256BeforeRelocation": "515b4e3b93ae45f8622a1fb5cfde8ad7ed978de550595e109afc0efdaed6e814"
+    },
+    "docs/development/selected-cellular-plan.md": {
+      "current": "evidence/development/selected-cellular-plan.md",
+      "sha256BeforeRelocation": "f52a59d0254ea2b993db4ac6e511d1f130067f225784fb7f51b8e6f148084535"
+    },
+    "docs/development/selected-cellular-report.md": {
+      "current": "evidence/development/selected-cellular-report.md",
+      "sha256BeforeRelocation": "2a7b2f1d821a366cef094dcaf20faf3c5423eb567d8088970d6d31b345c682c8"
+    },
+    "docs/development/selected-computing-evidence.md": {
+      "current": "evidence/development/selected-computing-evidence.md",
+      "sha256BeforeRelocation": "c8f44a1611c6c819b72cec1bff54322f65552d3ee9853f685ef7880c2d9ede4e"
+    },
+    "docs/development/selected-computing-freeze.md": {
+      "current": "evidence/development/selected-computing-freeze.md",
+      "sha256BeforeRelocation": "8c5094374fcd78a030a1d1398be05f6a7917c0da4ef86a0e7068ab1b987e27a2"
+    },
+    "docs/development/selected-computing-headless-evidence/checks.json": {
+      "current": "evidence/development/selected-computing-headless-evidence/checks.json",
+      "sha256BeforeRelocation": "958451e1af059af18537de0c0e68c4dd6d73da5f83657dbb7b0f119164b9a350"
+    },
+    "docs/development/selected-computing-headless-integration.md": {
+      "current": "evidence/development/selected-computing-headless-integration.md",
+      "sha256BeforeRelocation": "d688b3687b8e4bc61891bb909c6afa415ea8e7561d32eae67efeef50ffc08ab3"
+    },
+    "docs/development/selected-computing-integration.md": {
+      "current": "evidence/development/selected-computing-integration.md",
+      "sha256BeforeRelocation": "159031111d4555c38156d7709f0edbf3eb1c7127d9d529b847e33e80c7304a23"
+    },
+    "docs/development/selected-computing-root-followup.md": {
+      "current": "evidence/development/selected-computing-root-followup.md",
+      "sha256BeforeRelocation": "edb5071dfa915c4d0e7864edf032a4248d34b91baafeb61ac812ec33f9ac7458"
+    },
+    "docs/development/selected-computing-source-integration.md": {
+      "current": "evidence/development/selected-computing-source-integration.md",
+      "sha256BeforeRelocation": "b435013b5980d1a93db33f710364703ae769c4bde725194ace1698a432624f94"
+    },
+    "docs/development/selected-computing/artificial-neural-net-multilayer-acceptance.md": {
+      "current": "evidence/development/selected-computing/artificial-neural-net-multilayer-acceptance.md",
+      "sha256BeforeRelocation": "cb2163428d270bef8366a55dd30d2e335681d97934448f2f22a1ccdb04989ab8"
+    },
+    "docs/development/selected-computing/artificial-neural-net-multilayer-source.md": {
+      "current": "evidence/development/selected-computing/artificial-neural-net-multilayer-source.md",
+      "sha256BeforeRelocation": "fcaa9b7ee7fbe2bd1a1215d32275b4f0c8847f0711685149e1fbc820397aa7df"
+    },
+    "docs/development/selected-computing/artificial-neural-net-perceptron-acceptance.md": {
+      "current": "evidence/development/selected-computing/artificial-neural-net-perceptron-acceptance.md",
+      "sha256BeforeRelocation": "7a1eb1abe1b03af4c47a29611528416970346148099ccd19f4d048914449344b"
+    },
+    "docs/development/selected-computing/artificial-neural-net-perceptron-source.md": {
+      "current": "evidence/development/selected-computing/artificial-neural-net-perceptron-source.md",
+      "sha256BeforeRelocation": "2089b25bae0ae3f03389d900bbd10601494b97bdae477e03cb4e0ea866092c3a"
+    },
+    "docs/development/selected-computing/dining-philosophers-acceptance.md": {
+      "current": "evidence/development/selected-computing/dining-philosophers-acceptance.md",
+      "sha256BeforeRelocation": "3a000d80711ee84d5df09c41c3fdac59a81eddff38a777e35ff9f2448944a3c8"
+    },
+    "docs/development/selected-computing/dining-philosophers-source.md": {
+      "current": "evidence/development/selected-computing/dining-philosophers-source.md",
+      "sha256BeforeRelocation": "0f0d442fd883d19f121c3ec5b06a29d0256a26255cd206cceb0f14c6125f6b63"
+    },
+    "docs/development/selected-computing/k-means-clustering-acceptance.md": {
+      "current": "evidence/development/selected-computing/k-means-clustering-acceptance.md",
+      "sha256BeforeRelocation": "68d346b2804879ffaff437537f885b80ddb1cba4b17eb9f2a045c97169fed2f7"
+    },
+    "docs/development/selected-computing/k-means-clustering-source.md": {
+      "current": "evidence/development/selected-computing/k-means-clustering-source.md",
+      "sha256BeforeRelocation": "a7141f3f65df62f3fb297f03c19cc18b4380e4d81371b91dfc98699f4b46af69"
+    },
+    "docs/development/selected-computing/pagerank-acceptance.md": {
+      "current": "evidence/development/selected-computing/pagerank-acceptance.md",
+      "sha256BeforeRelocation": "ecdd5fff00343581ff2e34f16e76abaf7c43966cad7f33b2a36ffb66c8d1340b"
+    },
+    "docs/development/selected-computing/pagerank-source.md": {
+      "current": "evidence/development/selected-computing/pagerank-source.md",
+      "sha256BeforeRelocation": "d84ef5297eb4dc78b9bf03399f497cc100cbc57a2a1a4da94314286f44abf98c"
+    },
+    "docs/development/selected-computing/particle-swarm-optimization-acceptance.md": {
+      "current": "evidence/development/selected-computing/particle-swarm-optimization-acceptance.md",
+      "sha256BeforeRelocation": "e6a582395661a6d7c81a5e8ad6c571995cf9011c7bb06a87f34f5dae9f9d71f4"
+    },
+    "docs/development/selected-computing/particle-swarm-optimization-source.md": {
+      "current": "evidence/development/selected-computing/particle-swarm-optimization-source.md",
+      "sha256BeforeRelocation": "adf688d94a3157936da7998b86074688f2cf89c486621ff7acb696ec76f5c6fd"
+    },
+    "docs/development/selected-computing/robby-the-robot-acceptance.md": {
+      "current": "evidence/development/selected-computing/robby-the-robot-acceptance.md",
+      "sha256BeforeRelocation": "855eadf7ae9d6977fc364bab01e61a25a0ebabfe42dfae1ae6416aeefe0b9849"
+    },
+    "docs/development/selected-computing/robby-the-robot-source.md": {
+      "current": "evidence/development/selected-computing/robby-the-robot-source.md",
+      "sha256BeforeRelocation": "22dc89f52e6a33cc81e03f653c90033df6ee31af99ba277546439ed08ff2a18e"
+    },
+    "docs/development/selected-computing/robotic-factory-acceptance.md": {
+      "current": "evidence/development/selected-computing/robotic-factory-acceptance.md",
+      "sha256BeforeRelocation": "9cf46aeaedd44b0a11ab87e3f7414ac07990d36978dc7e31f1588e88c60d3970"
+    },
+    "docs/development/selected-computing/robotic-factory-source.md": {
+      "current": "evidence/development/selected-computing/robotic-factory-source.md",
+      "sha256BeforeRelocation": "5e4b27f0df190e123befcad3f6281cdc46bec728d316fcea76405851e16c3f27"
+    },
+    "docs/development/selected-computing/simple-genetic-algorithm-acceptance.md": {
+      "current": "evidence/development/selected-computing/simple-genetic-algorithm-acceptance.md",
+      "sha256BeforeRelocation": "021d5149d6ef3ebe76253f5d317f36a662d70d6c3374ba77b85a7eaf90484a51"
+    },
+    "docs/development/selected-computing/simple-genetic-algorithm-source.md": {
+      "current": "evidence/development/selected-computing/simple-genetic-algorithm-source.md",
+      "sha256BeforeRelocation": "195b58b6ff12a06ffa0b9617193dfa74e2f060dfe24cdc7ea24be1957ba30494"
+    },
+    "docs/development/selected-computing/simulated-annealing-acceptance.md": {
+      "current": "evidence/development/selected-computing/simulated-annealing-acceptance.md",
+      "sha256BeforeRelocation": "4f42800b61e378a52756d8148e948ae3e52dacc0db045eaff786529772941773"
+    },
+    "docs/development/selected-computing/simulated-annealing-source.md": {
+      "current": "evidence/development/selected-computing/simulated-annealing-source.md",
+      "sha256BeforeRelocation": "e502eafe9f790f7cceefe1bd12896f9a496f03d7681c77ac3e5b3e02444620d2"
+    },
+    "docs/development/selected-computing/sources.json": {
+      "current": "evidence/development/selected-computing/sources.json",
+      "sha256BeforeRelocation": "ffb580cf4acbd94f8c007d04b52925c9dad2cd864ed3800b086e8fe0a56038e8"
+    },
+    "docs/development/selected-ecology-integration-evidence/checks.json": {
+      "current": "evidence/development/selected-ecology-integration-evidence/checks.json",
+      "sha256BeforeRelocation": "1f40929b1819f446969c73eeff2dd4b62887dfd54b6489daab6a75a8f7b06d31"
+    },
+    "docs/development/selected-ecology-integration.md": {
+      "current": "evidence/development/selected-ecology-integration.md",
+      "sha256BeforeRelocation": "9db2016399f51ff488fee091b8b646e0a035e9194f180fe93013155f541d274d"
+    },
+    "docs/development/selected-ecology-report.md": {
+      "current": "evidence/development/selected-ecology-report.md",
+      "sha256BeforeRelocation": "1f20e18cf78c6517ec62f2b1ee96d98b5835f3b8b9a261f613dc1cbb71e339e4"
+    },
+    "docs/development/selected-ecology-source-audit.md": {
+      "current": "evidence/development/selected-ecology-source-audit.md",
+      "sha256BeforeRelocation": "54790e57c3b30ee15cd887b012b54a183af0dfa87e9ca1df6ce4349879b75426"
+    },
+    "docs/development/selected-ecology-source-integration.md": {
+      "current": "evidence/development/selected-ecology-source-integration.md",
+      "sha256BeforeRelocation": "ab7cb2319f0ecad8251d5ab747def837ab11da00ace42e1a54e929401cb2b62f"
+    },
+    "docs/development/selected-ecology-sources.json": {
+      "current": "evidence/development/selected-ecology-sources.json",
+      "sha256BeforeRelocation": "711433cd10f7d9c9103e9f5da84577db69416ad7d7f2443be3506ef0ef9d0095"
+    },
+    "docs/development/selected-economics-browser.md": {
+      "current": "evidence/development/selected-economics-browser.md",
+      "sha256BeforeRelocation": "d0029064bb8f6dc8ae70735a494390be3cf06cb4947f8aa894624164cfcfb492"
+    },
+    "docs/development/selected-economics-evidence/final-bundle-confirmations.json": {
+      "current": "evidence/development/selected-economics-evidence/final-bundle-confirmations.json",
+      "sha256BeforeRelocation": "8f768a4f00873cf0e9757b8828e54e2607b93a189967bd354354da28e27c4614"
+    },
+    "docs/development/selected-economics-evidence/focused-tests.log": {
+      "current": "evidence/development/selected-economics-evidence/focused-tests.log",
+      "sha256BeforeRelocation": "ee08a056452115dd6f07f4f0c4454261ef2f28003bad177267be2351984d7fa6"
+    },
+    "docs/development/selected-economics-evidence/original-final-observations.json": {
+      "current": "evidence/development/selected-economics-evidence/original-final-observations.json",
+      "sha256BeforeRelocation": "e8e9d94d9f2b241108d7db21ee73f529cf83f670a947e0df928fcbbed9381cd8"
+    },
+    "docs/development/selected-economics-evidence/screenshots.json": {
+      "current": "evidence/development/selected-economics-evidence/screenshots.json",
+      "sha256BeforeRelocation": "d005c7011f8b7ecc7ebe9bbb5ef7555936473bde9e566101a5ad965099ab0574"
+    },
+    "docs/development/selected-economics-examples.sha256": {
+      "current": "evidence/development/selected-economics-examples.sha256",
+      "sha256BeforeRelocation": "74fb75eda43cc03ec3369dfe84703372fe6d6344df79ff8a299fb89399fbce41"
+    },
+    "docs/development/selected-economics-source-audit.md": {
+      "current": "evidence/development/selected-economics-source-audit.md",
+      "sha256BeforeRelocation": "d82a128a60f0ae936b714b611dc9b8488e43073f9f93b7f8ed1cfea02a020ea3"
+    },
+    "docs/development/selected-economics-validation.md": {
+      "current": "evidence/development/selected-economics-validation.md",
+      "sha256BeforeRelocation": "b426e2b6b4ecfb054cdc729d98434a8c3893c9f10d5dd27dc7f0dd614e353114"
+    },
+    "docs/development/selected-evolution-evidence/mammoths-full-native-colors.json": {
+      "current": "evidence/development/selected-evolution-evidence/mammoths-full-native-colors.json",
+      "sha256BeforeRelocation": "422013bd91b510a9cf975ab39ce8b3f57f548f00312a79d28e4bd688a2469728"
+    },
+    "docs/development/selected-grid-batch-evidence/fire-reference-progress.png": {
+      "current": "evidence/development/selected-grid-batch-evidence/fire-reference-progress.png",
+      "sha256BeforeRelocation": "ed6a85a19e29e4e23f2b9587758abca6b56dfcd191d08fe166989289436cd778"
+    },
+    "docs/development/selected-grid-batch-evidence/fire-reference-setup.png": {
+      "current": "evidence/development/selected-grid-batch-evidence/fire-reference-setup.png",
+      "sha256BeforeRelocation": "eb367c22c1d6b4137f92fc43a30709ee30fdbde28ce17fd0a196f72cc10fa0c7"
+    },
+    "docs/development/selected-grid-batch-evidence/fire-target-progress.png": {
+      "current": "evidence/development/selected-grid-batch-evidence/fire-target-progress.png",
+      "sha256BeforeRelocation": "9ca0b7579e0fd82375b63693d63fb93b26aadeff9ed240b6826ecb57676b6241"
+    },
+    "docs/development/selected-grid-batch-evidence/fire-target-setup.png": {
+      "current": "evidence/development/selected-grid-batch-evidence/fire-target-setup.png",
+      "sha256BeforeRelocation": "65a1bad0bbc3f3bd4270c3d073d770b1a8681a37040d6b0a4469c950ee4faee8"
+    },
+    "docs/development/selected-grid-batch-evidence/life-reference-progress.png": {
+      "current": "evidence/development/selected-grid-batch-evidence/life-reference-progress.png",
+      "sha256BeforeRelocation": "4000807302f671c4620a2501ce31d82479efe0250cc195613cf2be85475e8f40"
+    },
+    "docs/development/selected-grid-batch-evidence/life-reference-setup.png": {
+      "current": "evidence/development/selected-grid-batch-evidence/life-reference-setup.png",
+      "sha256BeforeRelocation": "fd4468748067b8d42bc4ccd16affadff5284cae009e038fcfef44e4044e53e69"
+    },
+    "docs/development/selected-grid-batch-evidence/life-target-progress.png": {
+      "current": "evidence/development/selected-grid-batch-evidence/life-target-progress.png",
+      "sha256BeforeRelocation": "a4d050faf1860193d01fba2835c76510b6bec17b15098eca2e69ff177c99d8c5"
+    },
+    "docs/development/selected-grid-batch-evidence/life-target-setup.png": {
+      "current": "evidence/development/selected-grid-batch-evidence/life-target-setup.png",
+      "sha256BeforeRelocation": "09e4e24831911f1e3c0a5d47dcbc1541c0052759294c9d3edfb24c338cb2a780"
+    },
+    "docs/development/selected-grid-batch-evidence/percolation-reference-progress.png": {
+      "current": "evidence/development/selected-grid-batch-evidence/percolation-reference-progress.png",
+      "sha256BeforeRelocation": "3b50873a709641726cd6c19a9af066ff8c7f9c299fd7665ae42a66329556a08d"
+    },
+    "docs/development/selected-grid-batch-evidence/percolation-reference-setup.png": {
+      "current": "evidence/development/selected-grid-batch-evidence/percolation-reference-setup.png",
+      "sha256BeforeRelocation": "323601cc547d97d36894102000ddbcc717e9ae9b3e7853be11c21431bb689c95"
+    },
+    "docs/development/selected-grid-batch-evidence/percolation-target-progress.png": {
+      "current": "evidence/development/selected-grid-batch-evidence/percolation-target-progress.png",
+      "sha256BeforeRelocation": "fbf8694bd282de38d5d44bb172796b84aecf674845849a4520f2a719872e1ff1"
+    },
+    "docs/development/selected-grid-batch-evidence/percolation-target-setup.png": {
+      "current": "evidence/development/selected-grid-batch-evidence/percolation-target-setup.png",
+      "sha256BeforeRelocation": "4eb5e31d5f7bfa4ca38be3151cfe3c9cda81253606599cbb76df4b39efd3c1e8"
+    },
+    "docs/development/selected-grid-batch-report.md": {
+      "current": "evidence/development/selected-grid-batch-report.md",
+      "sha256BeforeRelocation": "66ee83884cd6a48443c6c96539644f4a54431b7232114e8272919a7e8d350222"
+    },
+    "docs/development/selected-grid-batch-source-audit.md": {
+      "current": "evidence/development/selected-grid-batch-source-audit.md",
+      "sha256BeforeRelocation": "78b353e5ce2fff378c49736e728c1000864e7d1a4bd8cf90443d9b3b10e10049"
+    },
+    "docs/development/selected-host-capabilities-evidence/SHA256SUMS": {
+      "current": "evidence/development/selected-host-capabilities-evidence/SHA256SUMS",
+      "sha256BeforeRelocation": "abf58daa3df16a7a93e50b54e1d5cafebc0c33ddf95c1edd19f09f4b9770146a"
+    },
+    "docs/development/selected-host-capabilities-evidence/gis-general-examples-source-audit.json": {
+      "current": "evidence/development/selected-host-capabilities-evidence/gis-general-examples-source-audit.json",
+      "sha256BeforeRelocation": "7595b01d59b9996afcb3546b6b1ac9e08df2a55a4432715d2d853ba03487a416"
+    },
+    "docs/development/selected-host-capabilities-evidence/nw-general-examples-source-audit.json": {
+      "current": "evidence/development/selected-host-capabilities-evidence/nw-general-examples-source-audit.json",
+      "sha256BeforeRelocation": "52f939b7f5999d76c23d1f96ad9eb36c9f122d688e9a9a52bdeb442f9f109dfd"
+    },
+    "docs/development/selected-host-capabilities.md": {
+      "current": "evidence/development/selected-host-capabilities.md",
+      "sha256BeforeRelocation": "fed0eb04cd2b67bed991c8d74bd9f07be6e9777e538bbacf9a64ba795486f757"
+    },
+    "docs/development/selected-materials-browser.md": {
+      "current": "evidence/development/selected-materials-browser.md",
+      "sha256BeforeRelocation": "860d0ebd66fbf622b4a449423c708b8d154226667ced0faf99b29b8052268c90"
+    },
+    "docs/development/selected-materials-examples.sha256": {
+      "current": "evidence/development/selected-materials-examples.sha256",
+      "sha256BeforeRelocation": "5d50e77434b2f8967c2dc8831bc2403f99a7afc0772cf94b8d4f70f8e0ee9476"
+    },
+    "docs/development/selected-materials-integration.md": {
+      "current": "evidence/development/selected-materials-integration.md",
+      "sha256BeforeRelocation": "95ad058dcacd000674f6acef95560cb34205bac3b0bc0aea2b412da50bd26544"
+    },
+    "docs/development/selected-materials-source-audit.md": {
+      "current": "evidence/development/selected-materials-source-audit.md",
+      "sha256BeforeRelocation": "ad6074e55f4994083caeb534237343fb0cac6f41f99cb500f521ba74a5becaf8"
+    },
+    "docs/development/selected-network-evidence/SHA256SUMS.json": {
+      "current": "evidence/development/selected-network-evidence/SHA256SUMS.json",
+      "sha256BeforeRelocation": "3d4fde8083d7f3300da0fa2f427a9626036f9bd7ce8d4ba88d9b5ce6d6b893cd"
+    },
+    "docs/development/selected-probability-evidence.md": {
+      "current": "evidence/development/selected-probability-evidence.md",
+      "sha256BeforeRelocation": "53a786522c40d8dfbd05e41c2b71085e4cc3e9fadd1a352b8d343781655dfbf6"
+    },
+    "docs/development/selected-probability-geometry-remediation.md": {
+      "current": "evidence/development/selected-probability-geometry-remediation.md",
+      "sha256BeforeRelocation": "792ff5f6ac8b3b6cf58de9c53a669e7f210cdc4ff963f4e64959a80b06540163"
+    },
+    "docs/development/selected-probability-integration.md": {
+      "current": "evidence/development/selected-probability-integration.md",
+      "sha256BeforeRelocation": "dc973627674d9c314cb2ba1016a07c41043cb6c0ca684778a7a03e8c3b1201bb"
+    },
+    "docs/development/selected-probability-remediation.md": {
+      "current": "evidence/development/selected-probability-remediation.md",
+      "sha256BeforeRelocation": "a06ddde0051a475696e4ab556439116c60d3c958f5f938502326fe59def00ce1"
+    },
+    "docs/development/selected-social-evidence/consumer-choice-original.json": {
+      "current": "evidence/development/selected-social-evidence/consumer-choice-original.json",
+      "sha256BeforeRelocation": "16631bdb9e10a65de003549d5d58155ebe40a64e0be502d9a814ef5a48fc2628"
+    },
+    "docs/development/selected-social-evidence/consumer-choice-target.json": {
+      "current": "evidence/development/selected-social-evidence/consumer-choice-target.json",
+      "sha256BeforeRelocation": "e110bdafe19f5a604c32e0f47566362efc51e74f064aa0736234903db55c2a81"
+    },
+    "docs/development/selected-social-evidence/ethnocentrism-original.json": {
+      "current": "evidence/development/selected-social-evidence/ethnocentrism-original.json",
+      "sha256BeforeRelocation": "165083decd623105d5eb34bfc73cee1600f53c9b9ff710456a6785f0f3fa93c3"
+    },
+    "docs/development/selected-social-evidence/ethnocentrism-target.json": {
+      "current": "evidence/development/selected-social-evidence/ethnocentrism-target.json",
+      "sha256BeforeRelocation": "28d69fc9d472405905215ddb5c8c19d49b108cdae8afca2317e263876359107f"
+    },
+    "docs/development/selected-social-evidence/frozen-examples.log": {
+      "current": "evidence/development/selected-social-evidence/frozen-examples.log",
+      "sha256BeforeRelocation": "e67a05e41fa7309c048b3d079a217fa6708be454e40f0c3d268402a4b5d036de"
+    },
+    "docs/development/selected-social-evidence/heroes-and-cowards-original.json": {
+      "current": "evidence/development/selected-social-evidence/heroes-and-cowards-original.json",
+      "sha256BeforeRelocation": "2b8ac6a89c84415bb97278b6e0bcebd37f4157d077aea6bf32d7ab121bcdc5ea"
+    },
+    "docs/development/selected-social-evidence/heroes-and-cowards-target.json": {
+      "current": "evidence/development/selected-social-evidence/heroes-and-cowards-target.json",
+      "sha256BeforeRelocation": "e5f6d6aa248bb4e20ba48ba117c2e0a0037e9e610ee96dd1911ceb749669bdfd"
+    },
+    "docs/development/selected-social-evidence/language-change-original.json": {
+      "current": "evidence/development/selected-social-evidence/language-change-original.json",
+      "sha256BeforeRelocation": "80d00f205aab794cec003e7ae27ff7828a7e8f3f4c570598b17a6a22862e8feb"
+    },
+    "docs/development/selected-social-evidence/language-change-target.json": {
+      "current": "evidence/development/selected-social-evidence/language-change-target.json",
+      "sha256BeforeRelocation": "14c510e0cb4cfd1cb77fa5247fef91e250ef6ca58e04e98952ff83d06bb9588f"
+    },
+    "docs/development/selected-social-evidence/minority-game-original.json": {
+      "current": "evidence/development/selected-social-evidence/minority-game-original.json",
+      "sha256BeforeRelocation": "36252a1b728a9230040afc9c09a61c7d7ef46a53201cb5f8035e0b0bbc0bf850"
+    },
+    "docs/development/selected-social-evidence/minority-game-target.json": {
+      "current": "evidence/development/selected-social-evidence/minority-game-target.json",
+      "sha256BeforeRelocation": "ce907db0d959cf93b986a705c6afa6961dafcbb1d854a177ec0167d18b302138"
+    },
+    "docs/development/selected-social-evidence/party-original.json": {
+      "current": "evidence/development/selected-social-evidence/party-original.json",
+      "sha256BeforeRelocation": "8ad5b13977551e39b3cb1124ab8759794cf3cd084b96ea112efb3060e15d4b25"
+    },
+    "docs/development/selected-social-evidence/party-target.json": {
+      "current": "evidence/development/selected-social-evidence/party-target.json",
+      "sha256BeforeRelocation": "43f71d2449221fe6228cc1bd0a99546e175f132bd22d37a73a373cbc400c2c2b"
+    },
+    "docs/development/selected-social-evidence/piaget-vygotsky-game-original.json": {
+      "current": "evidence/development/selected-social-evidence/piaget-vygotsky-game-original.json",
+      "sha256BeforeRelocation": "e77b6bd5d7f0afc8b60c3da904eb869dc0821c478bfa7ba9b33329d07341eb8b"
+    },
+    "docs/development/selected-social-evidence/piaget-vygotsky-game-target.json": {
+      "current": "evidence/development/selected-social-evidence/piaget-vygotsky-game-target.json",
+      "sha256BeforeRelocation": "d27489355f6a7694bc3b3358e51b1fff53e7ed7c6691dad698cdbf750875c4d6"
+    },
+    "docs/development/selected-social-evidence/rebellion-original.json": {
+      "current": "evidence/development/selected-social-evidence/rebellion-original.json",
+      "sha256BeforeRelocation": "30d30a90b1da959bb85b905c7d028e5760c10a14da01c046321e9bec40ae1657"
+    },
+    "docs/development/selected-social-evidence/rebellion-target.json": {
+      "current": "evidence/development/selected-social-evidence/rebellion-target.json",
+      "sha256BeforeRelocation": "95694ac8e1751aec4c4a39a4197c00fd05a0b24e25887aa9f8ff54943979e13a"
+    },
+    "docs/development/selected-social-evidence/rumor-mill-original.json": {
+      "current": "evidence/development/selected-social-evidence/rumor-mill-original.json",
+      "sha256BeforeRelocation": "008f2eba2f372c9e6c6492e563b320aa381f4d10a0a03c6cdfcda2d65242988a"
+    },
+    "docs/development/selected-social-evidence/rumor-mill-target.json": {
+      "current": "evidence/development/selected-social-evidence/rumor-mill-target.json",
+      "sha256BeforeRelocation": "b71668e9c41f8d5221825e51ef4b5a294355e6a2a25637af6206e6b6838de60c"
+    },
+    "docs/development/selected-social-evidence/signaling-game-original.json": {
+      "current": "evidence/development/selected-social-evidence/signaling-game-original.json",
+      "sha256BeforeRelocation": "f192a5d3df87677e1e70616c5c7663b3dadfaf4e2a6336152755b9018bc05914"
+    },
+    "docs/development/selected-social-evidence/signaling-game-target.json": {
+      "current": "evidence/development/selected-social-evidence/signaling-game-target.json",
+      "sha256BeforeRelocation": "ad566e0af087923a7e4376d9e3ea1633a93a18f5f7b1af1e8efc4636c7453b3a"
+    },
+    "docs/development/selected-social-example-SHA256SUMS": {
+      "current": "evidence/development/selected-social-example-SHA256SUMS",
+      "sha256BeforeRelocation": "9f6dd5d415e1eacc087f29c167a251c450222e0a7cc1fd5d6895504dbec6f13a"
+    },
+    "docs/development/selected-social-format-report.md": {
+      "current": "evidence/development/selected-social-format-report.md",
+      "sha256BeforeRelocation": "180adfa6ee033fbb177728c99a4c33d2fbb4366b79f26286ababf8cae4a8717c"
+    },
+    "docs/development/selected-social-integration.md": {
+      "current": "evidence/development/selected-social-integration.md",
+      "sha256BeforeRelocation": "9d82f1e3e0a7c68ef5226d1571d34a06a4849a2f19205eb0243aaf54cd367ced"
+    },
+    "docs/development/selected-social-report.md": {
+      "current": "evidence/development/selected-social-report.md",
+      "sha256BeforeRelocation": "d309d18225f1177fb37d414dacece785805227c88e933bcbd24e5d4b4d52120e"
+    },
+    "docs/development/selected-social-source-audit.md": {
+      "current": "evidence/development/selected-social-source-audit.md",
+      "sha256BeforeRelocation": "db45ea0b4a1bd40b72b1dac1efd1e7a6dc0161efd0a5e3b2ccb7aa946294d4c1"
+    },
+    "docs/development/selected-social-sources.json": {
+      "current": "evidence/development/selected-social-sources.json",
+      "sha256BeforeRelocation": "89346ef9b526eedaeb71a2f21f97625499f0d500810bffea9f335fe7170b2a59"
+    },
+    "docs/development/selected-transport-browser-report.md": {
+      "current": "evidence/development/selected-transport-browser-report.md",
+      "sha256BeforeRelocation": "0071b419d3592b3a572664904bab800fc8e90d4ae7e1b1fb56636f4f1dc198c5"
+    },
+    "docs/development/selected-transport-grid-goal-remediation.md": {
+      "current": "evidence/development/selected-transport-grid-goal-remediation.md",
+      "sha256BeforeRelocation": "4f247017a7d41f5b81a02d66a780330402360ac00d86300e401084582aff4cdd"
+    },
+    "docs/development/selected-transport-integration.md": {
+      "current": "evidence/development/selected-transport-integration.md",
+      "sha256BeforeRelocation": "db9531ebcf9a19c5897bb136a0cb0b8f5210d507f70a9c8c61f435fc4819ebf9"
+    },
+    "docs/development/selected-transport-source-audit.md": {
+      "current": "evidence/development/selected-transport-source-audit.md",
+      "sha256BeforeRelocation": "4f03b64d21e2b3793f029eda46db29115a46f73bd95dd51166792669955c9298"
+    },
+    "docs/development/selected-transport/frozen-SHA256SUMS": {
+      "current": "evidence/development/selected-transport/frozen-SHA256SUMS",
+      "sha256BeforeRelocation": "fa6f86e511bebad3310b58e027ea6bd6f756e5783ff5a2658544a5fe124f72b1"
+    },
+    "docs/development/selected-transport/original-observations.json": {
+      "current": "evidence/development/selected-transport/original-observations.json",
+      "sha256BeforeRelocation": "9126490ab8d8d58ea0bbf35eea58766c951e2686cc5d4a86ce424f469882d489"
+    },
+    "docs/development/selected-transport/target-observations.json": {
+      "current": "evidence/development/selected-transport/target-observations.json",
+      "sha256BeforeRelocation": "3b47fce707b74cd57d4e3390ba150e5b8fae703c6b66bd699117811962a27d3e"
+    },
+    "docs/development/tijuana-integration.md": {
+      "current": "evidence/development/tijuana-integration.md",
+      "sha256BeforeRelocation": "fa7e0234118a3a3d589b69309bb0597a3196b9b0b211518b6f9d629785ec689d"
+    },
+    "docs/development/tijuana-reference-browser.md": {
+      "current": "evidence/development/tijuana-reference-browser.md",
+      "sha256BeforeRelocation": "4b28b38ab3e24193407b3604b1dfc65cfc82a13c6e2a65800ad10e3b29106879"
+    },
+    "docs/development/tijuana-target-browser.md": {
+      "current": "evidence/development/tijuana-target-browser.md",
+      "sha256BeforeRelocation": "2e4a1972cbf85b25766063f4e926bad0325c0477d15c1d99904b29915b3c1fd9"
+    },
+    "docs/development/urban-awareness-recycling-browser-report.md": {
+      "current": "evidence/development/urban-awareness-recycling-browser-report.md",
+      "sha256BeforeRelocation": "50be40dabe83e3195bb9f537c7f8f759f9eaee1b35e5eb6554a9a393c2cb1ae4"
+    },
+    "docs/development/urban-cells-browser-report.md": {
+      "current": "evidence/development/urban-cells-browser-report.md",
+      "sha256BeforeRelocation": "1e53ed880e58e13bf99548f2c108ad4751c719f0805800ad0ef5b667513da469"
+    },
+    "docs/development/urban-feedback-path-browser-report.md": {
+      "current": "evidence/development/urban-feedback-path-browser-report.md",
+      "sha256BeforeRelocation": "c6cb35b236bfd31e2fd3f2fafab578b3e78c0df7764db4a9d64f299ddd7b649a"
+    },
+    "docs/development/urban-feedback-reference-browser.md": {
+      "current": "evidence/development/urban-feedback-reference-browser.md",
+      "sha256BeforeRelocation": "caed45288687c575a3da314c9b910b2ffc9d602237f6acc7d968277d65e99107"
+    },
+    "docs/development/urban-feedback-reference-evidence/color-bindings.json": {
+      "current": "evidence/development/urban-feedback-reference-evidence/color-bindings.json",
+      "sha256BeforeRelocation": "fcd885d8308a1d5bba66bac162de39bef83eee9e776c449c840a5fbf03a31e01"
+    },
+    "docs/development/urban-landscape-integration.md": {
+      "current": "evidence/development/urban-landscape-integration.md",
+      "sha256BeforeRelocation": "39f118872afd802534f54b4d775f278b305a0b63d6499809b1905a9df5f45014"
+    },
+    "docs/development/urban-landscape-target-browser.md": {
+      "current": "evidence/development/urban-landscape-target-browser.md",
+      "sha256BeforeRelocation": "bd995973ec750b2ad8b28fe116ec86f881d324b6ba580b3a8e1b6eb5cbb2a162"
+    },
+    "docs/development/urban-pollution-browser-report.md": {
+      "current": "evidence/development/urban-pollution-browser-report.md",
+      "sha256BeforeRelocation": "0ddda5730249aea27c8e7ab6bbedc33a06e64942089efae2a32c1d3fc04838bc"
+    },
+    "docs/development/urban-pollution-evidence/SHA256SUMS.json": {
+      "current": "evidence/development/urban-pollution-evidence/SHA256SUMS.json",
+      "sha256BeforeRelocation": "267f7c9e7c4e9f0e6db429267dc64eea64c79347345e33f13b44756ba414e07f"
+    },
+    "docs/development/urban-reference-browser.md": {
+      "current": "evidence/development/urban-reference-browser.md",
+      "sha256BeforeRelocation": "0c9dd9b7f4d930b3fb503faebb14d07db83d45e7e2335ca0ea5a8d1bea6dfc75"
+    },
+    "docs/development/urban-reference-evidence/SHA256SUMS.json": {
+      "current": "evidence/development/urban-reference-evidence/SHA256SUMS.json",
+      "sha256BeforeRelocation": "41693cb3b7b8fed8cc0e095627be9a9b97c42c2c29068362c9f70c75f4833d39"
+    },
+    "docs/development/urban-remaining-four-reference-browser.md": {
+      "current": "evidence/development/urban-remaining-four-reference-browser.md",
+      "sha256BeforeRelocation": "d31b36db896fc8ef81efe2586becb681fa08d5c949725b665bb00631f532bde4"
+    },
+    "docs/development/urban-target-evidence/SHA256SUMS.json": {
+      "current": "evidence/development/urban-target-evidence/SHA256SUMS.json",
+      "sha256BeforeRelocation": "05320dae06dbfd71aeb72883e305957521ed774a0b60ef8faafcfafd0c40217e"
+    },
+    "docs/development/virus-network-browser-report.md": {
+      "current": "evidence/development/virus-network-browser-report.md",
+      "sha256BeforeRelocation": "21922b90be7b8559ec34e2127f10f06b63e7f80959752e2102b8e55ed959af20"
+    },
+    "docs/research/netlogo-web/REPORT.md": {
+      "current": "evidence/research/netlogo-web/REPORT.md",
+      "sha256BeforeRelocation": "90cf1a9258a88f06c3a346cc8b52c67661236eec0ad0606777d1c87a9d20fa00"
+    },
+    "docs/research/netlogo-web/batches/biology/README.md": {
+      "current": "evidence/research/netlogo-web/batches/biology/README.md",
+      "sha256BeforeRelocation": "b36fce0376339b035174e34b060ca7e735faa41ec4543dcd1a57d5ff1f92b20d"
+    },
+    "docs/research/netlogo-web/batches/biology/build-output.json": {
+      "current": "evidence/research/netlogo-web/batches/biology/build-output.json",
+      "sha256BeforeRelocation": "a007c5901827bf670ef02260be3acd4548c43fab78c9b26f7f30b0bac58c0fb5"
+    },
+    "docs/research/netlogo-web/batches/biology/build.py": {
+      "current": "evidence/research/netlogo-web/batches/biology/build.py",
+      "sha256BeforeRelocation": "9f70fec36bd97c0cccd3a4aa5878b567a47581ea9f8927b585ce66671e8389f5"
+    },
+    "docs/research/netlogo-web/batches/biology/enrich.py": {
+      "current": "evidence/research/netlogo-web/batches/biology/enrich.py",
+      "sha256BeforeRelocation": "1a4a3cebcd719077ac8069571e1313f6627babee8a44f50fa7930d8048d2e64f"
+    },
+    "docs/research/netlogo-web/batches/biology/fetch.py": {
+      "current": "evidence/research/netlogo-web/batches/biology/fetch.py",
+      "sha256BeforeRelocation": "d2884fdceb8d3158cd93cc4d0f325de9d60eb880410e049c005eea9bfd341346"
+    },
+    "docs/research/netlogo-web/batches/biology/lastrefs.py": {
+      "current": "evidence/research/netlogo-web/batches/biology/lastrefs.py",
+      "sha256BeforeRelocation": "3673d3b7afcf7b0146bd036fa945fc204e4456632720464db8452b44e801f040"
+    },
+    "docs/research/netlogo-web/batches/biology/queries.json": {
+      "current": "evidence/research/netlogo-web/batches/biology/queries.json",
+      "sha256BeforeRelocation": "987493f0154b762d67aef62024bd14fc265bc50cf5f46b3104c4b4439935f23b"
+    },
+    "docs/research/netlogo-web/batches/biology/refine.py": {
+      "current": "evidence/research/netlogo-web/batches/biology/refine.py",
+      "sha256BeforeRelocation": "d21ffffa42dcc643401365ce0621aad40798168f8a7c4c6a179630a76ce60e44"
+    },
+    "docs/research/netlogo-web/batches/biology/report.json": {
+      "current": "evidence/research/netlogo-web/batches/biology/report.json",
+      "sha256BeforeRelocation": "a007c5901827bf670ef02260be3acd4548c43fab78c9b26f7f30b0bac58c0fb5"
+    },
+    "docs/research/netlogo-web/batches/biology/source-download.json": {
+      "current": "evidence/research/netlogo-web/batches/biology/source-download.json",
+      "sha256BeforeRelocation": "0c0be5efa5aa0f01dce41b787c8b9037009a4a78872ab6029234c63b97fd61ec"
+    },
+    "docs/research/netlogo-web/batches/biology/specs.py": {
+      "current": "evidence/research/netlogo-web/batches/biology/specs.py",
+      "sha256BeforeRelocation": "3f3855f10da6c4258d4a43964fcabdac1312b9b3bdee4ee3eaf065111780d801"
+    },
+    "docs/research/netlogo-web/batches/biology/validate.py": {
+      "current": "evidence/research/netlogo-web/batches/biology/validate.py",
+      "sha256BeforeRelocation": "06187fe106699e83a7d77d0c35a66959dd0259fb52403bf3ff9bdfa80b4c4b9d"
+    },
+    "docs/research/netlogo-web/batches/biology/validation.json": {
+      "current": "evidence/research/netlogo-web/batches/biology/validation.json",
+      "sha256BeforeRelocation": "580e53f08ae7ea5233b8f4fba49eee247fdec239f31df99ecddc1470683a72de"
+    },
+    "docs/research/netlogo-web/batches/computing/REPORT.md": {
+      "current": "evidence/research/netlogo-web/batches/computing/REPORT.md",
+      "sha256BeforeRelocation": "9cb93cec188c5c549acf7003009b64049703b5093bebafdc308970cfaff42f09"
+    },
+    "docs/research/netlogo-web/batches/computing/deliver.py": {
+      "current": "evidence/research/netlogo-web/batches/computing/deliver.py",
+      "sha256BeforeRelocation": "530b5a40eb01cb2058f7189aef9b3e4ace9a56eee7578294c28fe81acd5cccf9"
+    },
+    "docs/research/netlogo-web/batches/computing/deliver_automata.py": {
+      "current": "evidence/research/netlogo-web/batches/computing/deliver_automata.py",
+      "sha256BeforeRelocation": "e6fb26119ac94a231b5b23b45a126091a4f40279d00274facefe943ca5dac495"
+    },
+    "docs/research/netlogo-web/batches/computing/deliver_interactive.py": {
+      "current": "evidence/research/netlogo-web/batches/computing/deliver_interactive.py",
+      "sha256BeforeRelocation": "b6ea425018deffe82ab111c265a52e477aa9ce729c9a61ed213dde454afaacd7"
+    },
+    "docs/research/netlogo-web/batches/computing/deliver_learning.py": {
+      "current": "evidence/research/netlogo-web/batches/computing/deliver_learning.py",
+      "sha256BeforeRelocation": "036ebb82072f8fffe70079322338968e74cf09d1142a174d5ce39f3d6eaf8ae4"
+    },
+    "docs/research/netlogo-web/batches/computing/deliver_probability.py": {
+      "current": "evidence/research/netlogo-web/batches/computing/deliver_probability.py",
+      "sha256BeforeRelocation": "247bf0b6efef80a750a02f658c1b22bdc8e7c4695d131d987e619ce44c2619dd"
+    },
+    "docs/research/netlogo-web/batches/computing/extra-results.txt": {
+      "current": "evidence/research/netlogo-web/batches/computing/extra-results.txt",
+      "sha256BeforeRelocation": "00e6bda21fff5291d31b95b7051af0410ed38caadcc1e3e31d376bb01a2e9cfa"
+    },
+    "docs/research/netlogo-web/batches/computing/extras.py": {
+      "current": "evidence/research/netlogo-web/batches/computing/extras.py",
+      "sha256BeforeRelocation": "bdd9587014708ef0e3ab16fed79bef927105051215bd0b173154d35444e78294"
+    },
+    "docs/research/netlogo-web/batches/computing/fetch_models.py": {
+      "current": "evidence/research/netlogo-web/batches/computing/fetch_models.py",
+      "sha256BeforeRelocation": "e2a97e7ecd21d247715ea909549d5de01aab0718ab78bca85e0cf4e5ab218780"
+    },
+    "docs/research/netlogo-web/batches/computing/finalize_reading.py": {
+      "current": "evidence/research/netlogo-web/batches/computing/finalize_reading.py",
+      "sha256BeforeRelocation": "c98f73b010dbe3893b7e205991a6ab1366ad8448828d0aecc3a49d93b046bc45"
+    },
+    "docs/research/netlogo-web/batches/computing/known-results.txt": {
+      "current": "evidence/research/netlogo-web/batches/computing/known-results.txt",
+      "sha256BeforeRelocation": "8578b5f17601cb955e9051d2e63dbba01aca0d38877a3f9f50398c5c05037342"
+    },
+    "docs/research/netlogo-web/batches/computing/known.py": {
+      "current": "evidence/research/netlogo-web/batches/computing/known.py",
+      "sha256BeforeRelocation": "ded1895e37334762fd1f4a4280176d9984ed55b97e2e1d6b50f996e0007126a7"
+    },
+    "docs/research/netlogo-web/batches/computing/library.py": {
+      "current": "evidence/research/netlogo-web/batches/computing/library.py",
+      "sha256BeforeRelocation": "bea6cb781863b576a67de8c13f05394251e07b718a4127d3b5076c66439bdf8d"
+    },
+    "docs/research/netlogo-web/batches/computing/model-sources.json": {
+      "current": "evidence/research/netlogo-web/batches/computing/model-sources.json",
+      "sha256BeforeRelocation": "15880f123a121800a5e77e2d5241e0c793e810234784ca0142a3336585275076"
+    },
+    "docs/research/netlogo-web/batches/computing/noncrossref.py": {
+      "current": "evidence/research/netlogo-web/batches/computing/noncrossref.py",
+      "sha256BeforeRelocation": "51b342d8bfa405e08b5b1d8770f28486e462ac7ba5646792ee731a771da75781"
+    },
+    "docs/research/netlogo-web/batches/computing/original-reading-access.json": {
+      "current": "evidence/research/netlogo-web/batches/computing/original-reading-access.json",
+      "sha256BeforeRelocation": "3ae7a29b410291af780a351407465faa85ac6547cd9843a1ad42f8a7e69d8fd2"
+    },
+    "docs/research/netlogo-web/batches/computing/original-reading-notes.json": {
+      "current": "evidence/research/netlogo-web/batches/computing/original-reading-notes.json",
+      "sha256BeforeRelocation": "e413412288b05a42f97953242a95de6927e2722c4d7f6f324aed478c046f3ab0"
+    },
+    "docs/research/netlogo-web/batches/computing/qa.py": {
+      "current": "evidence/research/netlogo-web/batches/computing/qa.py",
+      "sha256BeforeRelocation": "83807118a8d1afb2492cf14a7df729c4e499e66da9139411690bdca21ca24c4f"
+    },
+    "docs/research/netlogo-web/batches/computing/read_originals.py": {
+      "current": "evidence/research/netlogo-web/batches/computing/read_originals.py",
+      "sha256BeforeRelocation": "4d97d9fcb3285f714263ec5f1e293283a2c9bd249ac57604a12270484cb4bd39"
+    },
+    "docs/research/netlogo-web/batches/computing/search-results.txt": {
+      "current": "evidence/research/netlogo-web/batches/computing/search-results.txt",
+      "sha256BeforeRelocation": "a04770a422cfc11491d2470dacfab5975060604e253ffa84be76adf1953ace96"
+    },
+    "docs/research/netlogo-web/batches/computing/search_refs.py": {
+      "current": "evidence/research/netlogo-web/batches/computing/search_refs.py",
+      "sha256BeforeRelocation": "9c34fffd3d4b47e674bce605851dd2236d1f57cb5c49cf2b723674dab5189b93"
+    },
+    "docs/research/netlogo-web/batches/computing/validation.json": {
+      "current": "evidence/research/netlogo-web/batches/computing/validation.json",
+      "sha256BeforeRelocation": "c64e681457f05b11e0fd6458b2154f3940a86e8da698c2359f7bf6e1c111ba42"
+    },
+    "docs/research/netlogo-web/batches/physics/REPORT.md": {
+      "current": "evidence/research/netlogo-web/batches/physics/REPORT.md",
+      "sha256BeforeRelocation": "2a6414833881b7fadc5dfe5bf1e3cdf9952c9d1d8864b7e84c2758fdcc5abd89"
+    },
+    "docs/research/netlogo-web/batches/physics/additional-results.txt": {
+      "current": "evidence/research/netlogo-web/batches/physics/additional-results.txt",
+      "sha256BeforeRelocation": "058a03496517b71f497ed86567b75664add26f2fd3ba614093ca6cffebd7b78c"
+    },
+    "docs/research/netlogo-web/batches/physics/additional_bibliography.py": {
+      "current": "evidence/research/netlogo-web/batches/physics/additional_bibliography.py",
+      "sha256BeforeRelocation": "0be52b493d9999108b1f570b1105b03fb66470a370c10cb0038a0808f29eef56"
+    },
+    "docs/research/netlogo-web/batches/physics/dossier_content.py": {
+      "current": "evidence/research/netlogo-web/batches/physics/dossier_content.py",
+      "sha256BeforeRelocation": "cfc3927ac6ef11e0c3c2950600bc2a37d89b9498f769365e445356f47614e228"
+    },
+    "docs/research/netlogo-web/batches/physics/dossier_content_rest.py": {
+      "current": "evidence/research/netlogo-web/batches/physics/dossier_content_rest.py",
+      "sha256BeforeRelocation": "07fa067b25ca6f7345bf54103d5872e220513cbbb1f5d24ac9f91bd0eb17ad66"
+    },
+    "docs/research/netlogo-web/batches/physics/fetch_bibliography.py": {
+      "current": "evidence/research/netlogo-web/batches/physics/fetch_bibliography.py",
+      "sha256BeforeRelocation": "4561fd2b06c560d08c78f23cab4ff09cbc28aac5a569ad9d1551e754f7771d2e"
+    },
+    "docs/research/netlogo-web/batches/physics/final-results.txt": {
+      "current": "evidence/research/netlogo-web/batches/physics/final-results.txt",
+      "sha256BeforeRelocation": "84c8bfc4d0b5b20bd1508d333b2d65932b28921e7c343db4f1fe8d0baac5278e"
+    },
+    "docs/research/netlogo-web/batches/physics/final_bibliography.py": {
+      "current": "evidence/research/netlogo-web/batches/physics/final_bibliography.py",
+      "sha256BeforeRelocation": "6de81be05d993cbff2fdb18d9ad278cd07d2516d62f15db1417a19d37928016d"
+    },
+    "docs/research/netlogo-web/batches/physics/finalize_physics.py": {
+      "current": "evidence/research/netlogo-web/batches/physics/finalize_physics.py",
+      "sha256BeforeRelocation": "ffee4888ef0a603d71da8c209e84efb0fcad97c4bb154eb167767c63bc341554"
+    },
+    "docs/research/netlogo-web/batches/physics/retry-results.txt": {
+      "current": "evidence/research/netlogo-web/batches/physics/retry-results.txt",
+      "sha256BeforeRelocation": "75f3028af3078c7020f12f636d30318dd65c67c611e4dbe2459398bad6b61408"
+    },
+    "docs/research/netlogo-web/batches/physics/retry_bibliography.py": {
+      "current": "evidence/research/netlogo-web/batches/physics/retry_bibliography.py",
+      "sha256BeforeRelocation": "079c1926786bb919db2f81bcdc1e96f001dda81bb177074d730fee5e4dde635e"
+    },
+    "docs/research/netlogo-web/batches/physics/search-results.txt": {
+      "current": "evidence/research/netlogo-web/batches/physics/search-results.txt",
+      "sha256BeforeRelocation": "da4e5aecf30d262cb855018e38c7ef016b570634e21762ec1cb5cff5ed41105d"
+    },
+    "docs/research/netlogo-web/batches/physics/validation.json": {
+      "current": "evidence/research/netlogo-web/batches/physics/validation.json",
+      "sha256BeforeRelocation": "34ac381978b98a9c8ea95288a745b67d76803382fe0d049b0bca7ae0f6203564"
+    },
+    "docs/research/netlogo-web/batches/physics/write_dossiers.py": {
+      "current": "evidence/research/netlogo-web/batches/physics/write_dossiers.py",
+      "sha256BeforeRelocation": "6102ea9ee46ee1b0432080bd430e0ba48a7c1c3bb2469febd4869f970d96973f"
+    },
+    "docs/research/netlogo-web/batches/social-urban/REPORT.md": {
+      "current": "evidence/research/netlogo-web/batches/social-urban/REPORT.md",
+      "sha256BeforeRelocation": "19c10645f360ee5e722a76b0ab2a2fee31eb1d49816db173980a1f6e521e0db2"
+    },
+    "docs/research/netlogo-web/batches/social-urban/add-economic-traffic.py": {
+      "current": "evidence/research/netlogo-web/batches/social-urban/add-economic-traffic.py",
+      "sha256BeforeRelocation": "8de38a372564449700f9f1613e7d251dcf9d3db6c243fe574a497ad6e90539e8"
+    },
+    "docs/research/netlogo-web/batches/social-urban/add-specs.py": {
+      "current": "evidence/research/netlogo-web/batches/social-urban/add-specs.py",
+      "sha256BeforeRelocation": "6b906dec18068c0ee0b61a7aaf9f67451b842b3d6bb3e97037771941ea7d3c90"
+    },
+    "docs/research/netlogo-web/batches/social-urban/add-urban.py": {
+      "current": "evidence/research/netlogo-web/batches/social-urban/add-urban.py",
+      "sha256BeforeRelocation": "0f8e558e2b6cbfba6677c9d32a3626560dfa6ae272d70e6d39b9ff398a1a9862"
+    },
+    "docs/research/netlogo-web/batches/social-urban/build-results.txt": {
+      "current": "evidence/research/netlogo-web/batches/social-urban/build-results.txt",
+      "sha256BeforeRelocation": "5eb0cc7a13ec30b303e63d2972da6cf7c97203957b48a8bd231fd731cef49b33"
+    },
+    "docs/research/netlogo-web/batches/social-urban/build.py": {
+      "current": "evidence/research/netlogo-web/batches/social-urban/build.py",
+      "sha256BeforeRelocation": "330ba64756f4dbfcbaf95583e79f80820b6a70dd385c5b7977ab3ac91affb2e4"
+    },
+    "docs/research/netlogo-web/batches/social-urban/custom.json": {
+      "current": "evidence/research/netlogo-web/batches/social-urban/custom.json",
+      "sha256BeforeRelocation": "bd1f9c1365159b089c9f171a6eba8b6598c7b48f70c773ac5153d541b87d9c9a"
+    },
+    "docs/research/netlogo-web/batches/social-urban/doi-followup.json": {
+      "current": "evidence/research/netlogo-web/batches/social-urban/doi-followup.json",
+      "sha256BeforeRelocation": "1736b644855dce076e5162534ba9383680492aecc459939df6e4c157261caeeb"
+    },
+    "docs/research/netlogo-web/batches/social-urban/extra-results.txt": {
+      "current": "evidence/research/netlogo-web/batches/social-urban/extra-results.txt",
+      "sha256BeforeRelocation": "4e70598ea543032e747227b78e75e131047276c04845051c8d917efd84f653eb"
+    },
+    "docs/research/netlogo-web/batches/social-urban/extra.py": {
+      "current": "evidence/research/netlogo-web/batches/social-urban/extra.py",
+      "sha256BeforeRelocation": "7a79b41a1f7fb30a8ecf7b5e744d3bd4e66aa338706a6b4ab233cf36b2cf3673"
+    },
+    "docs/research/netlogo-web/batches/social-urban/finalize.py": {
+      "current": "evidence/research/netlogo-web/batches/social-urban/finalize.py",
+      "sha256BeforeRelocation": "0cdf16faa8436bbb0f3ace04fb926bf451c29849e1a9c48157b7da224d178086"
+    },
+    "docs/research/netlogo-web/batches/social-urban/fix-results.txt": {
+      "current": "evidence/research/netlogo-web/batches/social-urban/fix-results.txt",
+      "sha256BeforeRelocation": "d139228f30709eb5989487090cf592551b55a9cbe703b46765087fbb8fa4a737"
+    },
+    "docs/research/netlogo-web/batches/social-urban/fixrefs.py": {
+      "current": "evidence/research/netlogo-web/batches/social-urban/fixrefs.py",
+      "sha256BeforeRelocation": "325363acf9614dfab0e643b51c2257c10fce301f179697b887fa066526e45760"
+    },
+    "docs/research/netlogo-web/batches/social-urban/physics-qa.md": {
+      "current": "evidence/research/netlogo-web/batches/social-urban/physics-qa.md",
+      "sha256BeforeRelocation": "293b267f78c3c21b8da364750e0c863fca7436f81ecbf77a7c0fc95d8d0630c7"
+    },
+    "docs/research/netlogo-web/batches/social-urban/reference-results.txt": {
+      "current": "evidence/research/netlogo-web/batches/social-urban/reference-results.txt",
+      "sha256BeforeRelocation": "ddc210acdb7e5798513d71ee08ef3cde6540ea9549db8b1759f387cb8e42b855"
+    },
+    "docs/research/netlogo-web/batches/social-urban/references.py": {
+      "current": "evidence/research/netlogo-web/batches/social-urban/references.py",
+      "sha256BeforeRelocation": "aff7b5f957930f068358e5af7f2aac3e117bcbe95d17173b5bbe855225219e68"
+    },
+    "docs/research/netlogo-web/batches/social-urban/specs.json": {
+      "current": "evidence/research/netlogo-web/batches/social-urban/specs.json",
+      "sha256BeforeRelocation": "594be8e2e48ca773745c4f85969906faa4fadd54116398078e31cfacd3c2c97b"
+    },
+    "docs/research/netlogo-web/batches/social-urban/used-publications.json": {
+      "current": "evidence/research/netlogo-web/batches/social-urban/used-publications.json",
+      "sha256BeforeRelocation": "caae643e71b6a1bb41aad7cf74d1d207f21304738ae9a86c21c78136f4150f32"
+    },
+    "docs/research/netlogo-web/batches/social-urban/validation.json": {
+      "current": "evidence/research/netlogo-web/batches/social-urban/validation.json",
+      "sha256BeforeRelocation": "35b9b439fef81dcb1faa0492006ff93266c3b43adba950ab1b7318769955ed29"
+    },
+    "docs/research/netlogo-web/batches/social-urban/verified-repairs.py": {
+      "current": "evidence/research/netlogo-web/batches/social-urban/verified-repairs.py",
+      "sha256BeforeRelocation": "14374cf9418fb572446e9f76fd55a7bc0b530d886ed967bd77a1931b4f6ded98"
+    },
+    "docs/research/netlogo-web/batches/social-urban/verified-results.txt": {
+      "current": "evidence/research/netlogo-web/batches/social-urban/verified-results.txt",
+      "sha256BeforeRelocation": "52eb15560cdcc30335e2a2b9dac4555e98a071eb5c3555ec93fca66e1abd6269"
+    },
+    "experiments/catalog/selection/selection.md": {
+      "current": "evidence/catalog/selection/selection.md",
+      "sha256BeforeRelocation": "1cc50fdb366589bebd601eeae49e1221a19b62af71c4ad4a497b58f7d9580ee5"
+    },
+    "experiments/catalog/selection/SHA256SUMS": {
+      "current": "evidence/catalog/selection/SHA256SUMS",
+      "sha256BeforeRelocation": "4897d3a4f68861366760cf4fa6ddb73324b19d8a46ab57915db6ce2b3ded3153"
+    }
+  }
+}

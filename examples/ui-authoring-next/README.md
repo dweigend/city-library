@@ -1,6 +1,8 @@
 # Typed formatters and readable projections
 
-These five public tasks were authored before the new runtime/type implementation. They extend the previous accepted UI examples, which remain unchanged. The coordinator must commit this example checkpoint before handing off runtime work. The [contract](../../docs/development/ui-authoring-next.md) records the design boundaries.
+Five examples exercise the UI contract with typed formatting, named projections, selection identity, error recovery and independent mounts.
+
+The [UI reference](../../docs/ui/api-reference.md) defines the supported API; [PLAN](../../PLAN.md) tracks remaining work.
 
 ## Public tasks
 
@@ -14,7 +16,7 @@ These five public tasks were authored before the new runtime/type implementation
 
 `authoring.types.ts` is compile-only. It checks incorrect scalar/union formatters, both hosts, extracted specs, invalid observation inputs, concrete observation members and compatible string/null selection. `assertions.ts` only reuses accessible real-DOM queries and assertions, plus a monitor query. It never supplies a replacement DOM, simulation or runtime introspection API.
 
-## Formatter decision
+## Typed formatting
 
 The accepted concise form is:
 
@@ -26,16 +28,9 @@ The accepted concise form is:
 }
 ```
 
-The model observation remains inferred. The formatter's explicit scalar annotation establishes the compatibility requirement against the getter; it is not full inference of the formatter parameter. A text formatter uses `value: string`; a genuinely union-valued getter still requires narrowing. Existing unannotated guarded formatters keep the `string | number` compatibility context. Compiler experiments did not establish a general safe direct-inference solution for heterogeneous context-sensitive callback arrays. Fixed-length overloads, `any`, callback casts and a new builder dialect were rejected. Do not report automatic per-monitor formatter inference as delivered.
+The model observation remains inferred. The formatter's explicit scalar annotation checks compatibility with the getter; the formatter parameter is not inferred. A text formatter uses `value: string`; a genuinely union-valued getter still requires narrowing. Existing unannotated guarded formatters keep the `string | number` compatibility context. Automatic per-monitor scalar inference, fixed-length overloads, `any`, callback casts and a separate builder dialect are not part of this contract.
 
-## Initial executed evidence
-
-At baseline `11d697f`, before runtime implementation of this extension:
-
-- All five scripts ran with Bun and exited **0**. These passes cover only their headless assertions and inert entry construction; they do not establish typed acceptance or browser behavior.
-- `bun x tsc -p examples/ui-authoring-next/tsconfig.json` exited **1**, as expected: public `Observation` is absent and scalar-only formatter callbacks are rejected by the existing broad formatter signature. The typecheck includes the negative contracts; no assertion is disabled or widened to hide the missing capabilities.
-- Session-local outputs: `/tmp/city-library-ui-authoring-next-initial-typecheck.log` and `/tmp/city-library-ui-authoring-next-initial-results.json`.
-- The real-browser checks have not been run at this authoring checkpoint. Runtime delivery must run all five in both hosts, record page/console failures, desktop/narrow light/dark screenshots and independent pixel inspection.
+## Run the examples
 
 Run the public tasks:
 
@@ -49,10 +44,6 @@ bun x tsc -p examples/ui-authoring-next/tsconfig.json
 sha256sum -c examples/ui-authoring-next/SHA256SUMS
 ```
 
-The manifest uses repository-relative paths and freezes the five scripts, assertion helper, browser harness, compile-only type contracts and focused tsconfig. README and runtime documentation are outside the manifest so later truthful evidence/status updates do not change the executable contract. Register this phase in the normal runner/typecheck during runtime delivery; it is not registered as an already passing phase at this initial checkpoint.
+`SHA256SUMS` protects the five scripts, assertion helper, browser harness, type contracts and focused tsconfig. Implementations must preserve their asserted expectations.
 
-Pre-freeze Argon review approved the design and identified four harness/coverage gaps; all were corrected before this first committed freeze. The response is in the phase contract. Corrected scripts pass Bun; the corrected pre-runtime TypeScript run still fails on the absent public contracts as expected (`/tmp/city-library-syntax-prefreeze-typecheck.log`).
-
-## Delivery
-
-Runtime `aa58643` and catalog refactor `1f48e05` implement this unchanged freeze. Both authoring typechecks and the five scripts pass. The independent real-browser matrix passed all forty host/size/theme example flows and inspected twelve PNGs. The [delivery report](../../docs/development/syntax-refactor-report.md) records the complete source checks, catalog comparisons, actual screenshot dimensions and independent review limits. Earlier initial-failure records above remain historical evidence.
+The browser checks need both hosts, desktop/narrow light/dark states, captured page/console failures and independent inspection of screenshots. Headless assertions and typechecks do not establish browser behavior or scientific equivalence.

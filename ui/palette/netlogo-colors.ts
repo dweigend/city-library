@@ -1,5 +1,5 @@
 /** Factual RGB outputs observed from the official NetLogo Web engine, not copied engine code.
- * Source record: docs/development/urban-feedback-reference-evidence/color-bindings.json
+ * Source record: evidence/development/urban-feedback-reference-evidence/color-bindings.json
  * Model SHA256: 6bcdecbd9481862b3068de6aa1a4440cf7eb253466688226e2fb1fde4f8f7ec2
  * Compact RGB-table SHA256: dd6b11aff79adac02a0d6c933b450b143a451d0c13cfb727ea9c35fc0e6364eb
  * Index i corresponds to floor(10 * wrapped numeric color). No interpolation.

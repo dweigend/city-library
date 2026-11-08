@@ -1,21 +1,26 @@
 # Documentation
 
-Start with the task you want to do. [PLAN](../PLAN.md) owns current progress and acceptance; historical reports describe their recorded checkpoint, not every later change.
+Start with an experiment, change something and see what happens. These guides take you from running a model to writing your own with City Library’s modular parts.
 
-| Task | Start here |
+## Find your way
+
+| What you want to do | Read this |
 | --- | --- |
+| Understand the project | [City Library](../README.md) |
 | Run an experiment | [Agent Lab](../ui/agent-lab/README.md) |
-| Write or understand a model | [Model authoring](development/model-authoring.md) |
-| Bind controls and views | [UI specification](ui/README.md), [API table](ui/api-table.md), [reference](ui/api-reference.md) |
-| Understand ownership and dependencies | [System architecture](ARCHITECTURE.md) |
-| Change UI components or styling | [UI design](DESIGN.md) |
-| Look up domain contracts | [Agent Loom](agent-loom/README.md), [API reference](agent-loom/api-reference.md), [terminology](agent-loom/terminology.md) |
-| Generate finite quad layouts | [Topology contract](grid-parcels/TOWNSCAPER-CONTRACT.md), [public examples](../examples/townscaper-grid/README.md), [catalogue status](grid-parcels/STATUS.md) |
-| Review delivered work | [Consolidation report](development/consolidation-report.md), [coverage inventory](development/coverage.md) |
-| Review model comparison requirements | [Model acceptance](development/netlogo-model-acceptance.md), [catalog progress](../experiments/catalog/progress-summary.json) |
+| Write a model and connect its UI | [Model authoring](development/model-authoring.md) |
+| Look up UI bindings | [UI API](ui/README.md) |
+| Understand ownership and dependencies | [Architecture](ARCHITECTURE.md) |
+| Work on the interface | [UI design](DESIGN.md) |
+| Look up the headless target API | [Agent Loom](agent-loom/README.md) |
+| Check delivery scope and remaining work | [Work plan](../PLAN.md) |
 
-## Evidence and history
+## Contracts and sources
 
-The consolidation report links integration checks, donor records and unresolved acceptance gates. Per-model evidence must distinguish headless behavior, source comparison, browser behavior and independent review. A screenshot or a passing build establishes only the behavior it actually checks.
+The API specifications include planned operations. Check their status notes, current public exports and runnable examples before using them.
 
-The original four-model Lab replacement is recorded in [refactor evidence](development/agent-lab-evidence.md); its source adaptations are described in [reference provenance](development/netlogo-reference-sources.md). Older slice assignments remain useful historical records. Use current commands and priorities from the Lab guide and PLAN rather than treating old status prose as today's defaults.
+Adapted models retain their [reference sources](development/netlogo-reference-sources.md). The [model acceptance rules](development/netlogo-model-acceptance.md) distinguish headless tests, source comparisons, browser behavior and independent review.
+
+[Source records](research/netlogo-web/README.md) describe model assumptions and provenance. [Acceptance evidence](../evidence/) supports model-level verification. Use these records to inspect a source or validate a claim; the guides and specifications describe the current system and its next goals.
+
+For [planar layouts and parcels](grid-parcels/API.md), consult the [implementation ledger](grid-parcels/STATUS.md) and [finite quad contract](grid-parcels/TOWNSCAPER-CONTRACT.md). The [city authoring plan](development/example-first/PLAN.md) separates working scripts from unmet targets.

@@ -1,14 +1,14 @@
 # Model procedures and state ownership
 
-This change makes the execution story visible at the start of the Taxi Cabs, Traffic Grid, Traffic Grid Goal and Tijuana factories. Existing step/procedure bodies are moved without changing statement order. Each factory retains one domain-state owner; no controller, registry or second clock is introduced. Source notices and existing public action names remain unchanged.
+A model should reveal its execution order before asking the reader to work through its implementation. Taxi Cabs, Traffic Grid, Traffic Grid Goal and Tijuana place that flow at the start of their factories. Each factory owns its domain state and exposes actions for callers. Source notices and public action names remain part of the model contracts.
 
 Taxi and both Traffic factories show `go` and `step` first. Their callers use `step`/`advance` for World execution and post-success history recording. Existing low-level public procedures remain available; calling `go` directly retains its existing no-clock behavior. Tijuana shows its guarded action dispatcher first. Its source-specific Tick-before-procedure behavior, including failure effects, is deliberately preserved. Pure Tijuana rule-shape validation is outside the factory; it reads only the shared input descriptors and supplied record.
 
 ## Taxi observations
 
-`read`/`snapshot` add `occupiedCabs` and `totalIncome`. These derive from canonical cab vacancy/completed-income values using the existing UI aggregation equations. They are not separately stored counters, predictions or new income rules. UI migration is separate; this change does not edit UI files.
+`read`/`snapshot` expose `occupiedCabs` and `totalIncome`. These derive from canonical cab vacancy/completed-income values using the existing UI aggregation equations. They are not separately stored counters, predictions or new income rules. UI monitors consume these reporters.
 
-The four [public model-consumer examples](../../examples/model-authoring/README.md) and their hashes were frozen in `44efd4c` before runtime changes. They initially failed because the observations were absent. They cover consistency with cab/history records, observation purity and detachment, rule-edit/instance isolation and replay/accounting. Earlier frozen examples and hashes are unchanged.
+[Public model-consumer examples](../../examples/model-authoring/README.md) assert consistency with cab/history records, observation purity, detachment, rule edits, instance isolation and replay/accounting.
 
 ## Tijuana procedure matrix
 
@@ -37,8 +37,4 @@ The binding architecture requires domain behavior to be callable without UI thro
 | `earn-spend` | Inline migrant savings update in `go` | Simulation accounting phase |
 | `get-costs` | `getCosts` | Migrant initialization, economics and movement callers |
 
-Public intervention actions `clear`, `setRules`, `addNode` and `setScenario` retain their existing contracts. Private procedures depend on live canonical agents, current setup phase and factory-owned globals. Publishing them separately would require explicit decisions about valid phase, agent admission, clock/history behavior and failure effects. No current accepted author example requires that additional standalone syntax. Whether the architecture's function-access rule requires direct procedure-level APIs beyond these public action paths remains an explicit contract question; this refactor does not silently settle it or invent exports. Any such expansion needs its own four or five frozen public examples before implementation.
-
-## Verification scope
-
-Executed after this change: `bun test tests/selected-transport-city.test.ts tests/selected-transport-roads.test.ts tests/tijuana.test.ts` passed 34 tests / 322 assertions; all four new public scripts passed unchanged and `sha256sum -c examples/model-authoring/SHA256SUMS` passed; `bun run typecheck` passed, including Svelte checking with zero errors/warnings; `git diff --check` passed. A deterministic before/after snapshot comparison was byte-identical (SHA-256 `326d845c42a28c2b3cc8ab413cd3cb7e836f31548b8872b3d621a0cdaaa60c67` for both files). The comparison uses seed 42, 15 steps for Taxi and both Traffic models, and three cityscape calls for Tijuana; it excludes only the two intentionally added Taxi observation properties. Its equality is a bounded regression check, not proof of all possible trajectories. No UI files change and no new browser or independent review acceptance is claimed here.
+Public intervention actions `clear`, `setRules`, `addNode` and `setScenario` retain their existing contracts. Private procedures depend on live canonical agents, current setup phase and factory-owned globals. Publishing them separately would require explicit decisions about valid phase, agent admission, clock/history behavior and failure effects. No current accepted author example requires that additional standalone syntax. Whether the architecture's function-access rule requires direct procedure-level APIs beyond these public action paths remains an explicit contract question; it requires an explicit API decision. Any such expansion needs its own four or five frozen public examples before implementation.

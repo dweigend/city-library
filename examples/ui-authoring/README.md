@@ -1,6 +1,6 @@
-# Readable UI authoring acceptance examples
+# Readable UI authoring examples
 
-Status: authored before runtime changes. The coordinator must commit this frozen contract before runtime handoff. Existing public examples remain untouched. See [the slice contract](../../docs/development/ui-authoring-syntax.md).
+These five examples bind model inputs, actions, observations and charts without host-specific code. Bun runs the headless assertions; the browser harness checks controls and rendering. The [UI reference](../../docs/ui/api-reference.md) defines the supported API.
 
 ## Five public tasks
 
@@ -12,14 +12,9 @@ Status: authored before runtime changes. The coordinator must commit this frozen
 | `04-groups-format-and-categories.ts` | Wealth: numeric Gini stays numeric; separate formatting; named class bars preserve class total and RNG | Accessible flat groups; nonadjacent same-group fields; formatted monitor; category and axis/unit text |
 | `05-independent-actions-and-legacy.ts` | Wealth: explicit one-step action and rule change leave second instance/RNG unchanged; legacy setter remains accepted | Two independent mounts; explicit empty setup; legacy duplicate setup/live behavior; disposed action isolation |
 
-`assertions.ts` contains only assertions and queries/actions against a real DOM. There are no fake models, fake DOMs, private runtime imports or test-only public introspection APIs. All model actions use existing real factories. `authoring.types.ts` adds negative compile-only cases, not a sixth example. Setup/normalization/grouping assertions are in exported `browserChecks(container)` functions and are NOT executed by Bun.
+`assertions.ts` queries and acts on a real DOM using real model factories, without private runtime imports or test-only public introspection APIs. `authoring.types.ts` adds negative compile-only cases. Exported `browserChecks(container)` functions check setup, normalization and grouping; Bun does not execute them.
 
-## Commands and initial evidence
-
-At authoring checkpoint `0747555` before this runtime slice:
-
-- `bun x tsc -p examples/ui-authoring/tsconfig.json` exited 1. The existing public UI contract rejects string setup entries, keyed live bindings, monitor formatters and categorical bar coordinates. Setter contextual types are consequently absent and negative field-type directives are initially unused. This is the expected missing-public-capability state, not an accepted typecheck. Raw initial output: `/tmp/ui-authoring-initial-typecheck.log` (session-local).
-- Each of the following five scripts executed with Bun and exited 0. They check real model actions/projections; `defineUI` stays inert, so these passes do not establish support for new control syntax at mount.
+## Run the examples
 
 ```sh
 bun examples/ui-authoring/01-defaults-and-inert-entry.ts
@@ -30,85 +25,10 @@ bun examples/ui-authoring/05-independent-actions-and-legacy.ts
 sha256sum -c examples/ui-authoring/SHA256SUMS
 ```
 
-The SHA manifest uses repository-relative paths. It freezes the five task scripts, their assertion helper, compile-only negative contracts and focused tsconfig. No disabled assertions or expected runtime exception wrappers conceal missing implementation. Runtime implementation must make the focused typecheck pass and preserve these asserted expectations. These files are not yet registered in the global example runner; registration belongs to runtime delivery.
+Run `bun x tsc -p examples/ui-authoring/tsconfig.json` for the positive and negative type contracts. `SHA256SUMS` protects the executable examples; implementations must satisfy their assertions rather than weaken them.
 
-## Browser acceptance remains open
+## Browser checks
 
-Invoke all five exported `browserChecks` functions in an actual browser against each supported public host adapter, using fresh attached containers and avoiding an application-specific test API. The helper only queries actual labels, form controls, fieldsets, monitors and chart accessibility content. It does not mutate the model directly during browser checks. The ordinary scripts may be bundled by the existing host tooling for a test harness; their import-time headless assertions also execute.
+Invoke all five exported `browserChecks` functions in a real browser against each supported public host adapter, using fresh attached containers. The helpers query actual labels, controls, fieldsets, monitors and chart accessibility content. They do not supply a substitute DOM or change model state directly.
 
-These functions have not been executed at this freeze. Their current unsupported mount behavior has not been relabeled as verified failure. Runtime owners must record real execution, interactions and appropriate desktop/narrow light/dark screenshots and independent review separately. Broader invalid data/format errors, both legacy/keyed defaults, explicit value precedence, choice setter inference and optional/incompatible observation rejection need focused implementation tests as defined by the slice contract; the five examples are not exhaustive edge-case coverage.
-
-## First freeze retained before review remediation
-
-Coordinator commit `b7a972c` froze the original examples before runtime. The following original manifest is preserved verbatim; it describes historical bytes, not the revised examples. Astra design findings prompted stronger type/overlap/disposal/category contracts and corrections to real-browser query helpers. No accepted syntax or scientific expectation is weakened. Runtime remains blocked until a separate coordinator refreeze commit.
-
-```text
-3c319caf83492ce0416aa54cae4fa19abe21927a61559ca9718b9a4096816199  examples/ui-authoring/01-defaults-and-inert-entry.ts
-265d9f19d5c3c9518fe0f9f3ce82e27c752d2ad766eb879679afe3c8e8fcac96  examples/ui-authoring/02-ordered-setup-and-numeric-live.ts
-acdf46ae444dd5c924db82d71077a8ba1ae0f7b2ad4c0fd446b488f3c003975e  examples/ui-authoring/03-alternate-observation.ts
-2d4c3438bf7924b00a34696516e9c656c2b66e22eee439e723a37b568342e240  examples/ui-authoring/04-groups-format-and-categories.ts
-e5c670eeb73339ffedf5b5b570b25907d461748d12124c8aa212a66b958aaf09  examples/ui-authoring/05-independent-actions-and-legacy.ts
-0870fad00548cddc30437063328329fb28557aa75b6d2de0f0c73947d0cd3c2f  examples/ui-authoring/assertions.ts
-05c0aa54dcbd31d6ed335f72b6ea14169ca9664e6d67eaa5c5f814bdccedd107  examples/ui-authoring/authoring.types.ts
-3c7f154284e32ac9549571a3e043ea0b1796aa29d037afc615baac2f76630549  examples/ui-authoring/tsconfig.json
-```
-
-## Review remediation: second freeze
-
-The first manifest above remains historical. Before runtime, the design review required additive getter/union/choice/inference cases, explicit-getter precedence, both setup/live edit orders before and after initialization, and checking the disposed original model itself. Helpers now accept associated OR nested labels, include legacy controls outside forms, filter descriptor names rather than Speed, and select chart images rather than decorative SVG icons. Default camel-case labels are asserted with their actual capitalization. Categorical bars now specify grouped series, rejection of duplicate categories within a series, empty/zero data and signed baselines; a real Grid coordinate projection exercises shared categories, zero and negative values.
-
-The five Bun scripts were rerun successfully; [refreeze-headless.log](refreeze-headless.log) records exact commands/exits. The focused TypeScript check still exits 1 against the old runtime, recorded in [refreeze-initial-typecheck.log](refreeze-initial-typecheck.log). No browser check has been run for this revision. No old expectation was weakened; these are harness correctness fixes and stronger acceptance coverage. Separate runtime handoff is still forbidden until the coordinator's refreeze commit.
-
-### Explicit execution route for both hosts
-
-Use the existing Vite dev host (with its existing Svelte plugin and aliases), not the Bun static host, to compile the harness and Svelte adapter. From that host's real browser page, import the harness through Vite's project-file route and invoke it for each adapter:
-
-```ts
-const { runBrowserChecks } = await import('/@fs/home/david/.t3/worktrees/city-library/experiment-netlogo-web-catalog/examples/ui-authoring/browser-harness.ts');
-const fixture = document.createElement('section');
-document.body.append(fixture);
-try {
-  await runBrowserChecks(fixture, 'legacy');
-  await runBrowserChecks(fixture, 'svelte');
-} finally { fixture.remove(); }
-```
-
-Replace the absolute worktree prefix if the checkout moves. This is an explicit test-harness invocation, not a public application API or production route change. `browser-harness.ts` directly imports the chosen adapter and passes its public `defineUI` into the examples; it does not rely on experiment-only import redirection. It executes the five browser functions plus the full overlap matrix and explicit-precedence check. The harness creates only actual DOM containers and real model instances. Browser execution remains a required follow-up and must report concrete host/module-loading blockers rather than claiming coverage from these instructions.
-
-The revised SHA manifest additionally includes this harness and the two initial-result logs. Global example registration and TypeScript-project inclusion belong to runtime delivery after the frozen failing checkpoint, as does reconciliation of PLAN/docs/ui candidate status. Independent source/design responses and eventual browser/visual approval must remain separate.
-
-## Scheduling correction after second freeze
-
-Coordinator commit `ce42cc3` preserved the second freeze. Its manifest remains below before changing the asynchronous test harness. Browser assertions must await host rendering after events; no public synchronous-DOM guarantee exists. The next revision only waits for a microtask, an actual browser animation frame and its following microtask. Scientific values, event order and asserted expectations remain unchanged. The harness awaits every check before removing its container. No runtime change or browser acceptance is claimed.
-
-```text
-eec8d251d60f6e65e2aaf9d5730d6c0de419c86f5532dc1584d5187263f41b08  examples/ui-authoring/01-defaults-and-inert-entry.ts
-c46904f2a9cad391cf51ceac0c08498665cd886ed8cc4135a6ac347d1e503f6a  examples/ui-authoring/02-ordered-setup-and-numeric-live.ts
-084da6c7c864e50381b69f66355a18aced872ec578a7d16c7ef5fc77ea8f892e  examples/ui-authoring/03-alternate-observation.ts
-604c6465f32353ac60427a911201842fbe79e608be57d7499b9dace2b3f6883c  examples/ui-authoring/04-groups-format-and-categories.ts
-5d29669a60cacf4e87656e448f44a5828bb8e033c0e30a6378606d505b50786c  examples/ui-authoring/05-independent-actions-and-legacy.ts
-34ef69cefbe6f195f8d558c879bf5b84eeb5e77e33968f71d5549e85a69f5d22  examples/ui-authoring/assertions.ts
-159de1b9c13722d398825bf18b2e864a32a9b45abdfc4cd8b2f3451675bfdc37  examples/ui-authoring/authoring.types.ts
-3c7f154284e32ac9549571a3e043ea0b1796aa29d037afc615baac2f76630549  examples/ui-authoring/tsconfig.json
-10c710eef2ae67625792b2849514d2e58bc14cc01bfb1903ddbd9d69ea75a970  examples/ui-authoring/browser-harness.ts
-5392c802645b73cc32d14de4365049d9acc2f3e143a021870a554c6c77e1184e  examples/ui-authoring/refreeze-headless.log
-91404f66a38c693ea6be8256c0572771e80fafc28a9e400a51e6a5241ee31d7f  examples/ui-authoring/refreeze-initial-typecheck.log
-```
-
-## Compiler diagnostic location correction during runtime
-
-Coordinator authorized a mechanical relocation of negative-test `@ts-expect-error` comments to TypeScript's actual call-site diagnostic line. Rejected calls, callback types and expected rejections are unchanged; no cast, disabled assertion or removed negative case is introduced. The pre-correction manifest (freeze `e03d731`) follows verbatim. This is a test-comment correction, not a changed public contract.
-
-```text
-3af4f39bc939e145c9a092c0ed4038f7aa2ffcf50995a33de7c3ed4dd368d75a  examples/ui-authoring/01-defaults-and-inert-entry.ts
-b2ad3adcb93bdfeba3bfa8589ca5d7e1793cee22591cebb4c8b66fd17f4294dd  examples/ui-authoring/02-ordered-setup-and-numeric-live.ts
-7ffbd63380f80ae49b7ea36e284316ca93969a6728dc0c06c312182864dbae97  examples/ui-authoring/03-alternate-observation.ts
-4f0530613aafb496c9de6b9e144a4fa007a6c0b4a3498dbc2bc91b948ed7e945  examples/ui-authoring/04-groups-format-and-categories.ts
-cf0411dcba1a86c50186831de2f63d374819680b6cd859286e09f1212564ce0a  examples/ui-authoring/05-independent-actions-and-legacy.ts
-0eff67ed97fd44529b50422bbc27db16eb61c6fb8d236898f59dbef3d3da34f1  examples/ui-authoring/assertions.ts
-159de1b9c13722d398825bf18b2e864a32a9b45abdfc4cd8b2f3451675bfdc37  examples/ui-authoring/authoring.types.ts
-3c7f154284e32ac9549571a3e043ea0b1796aa29d037afc615baac2f76630549  examples/ui-authoring/tsconfig.json
-2bbe10579c2e804c250a1fb003cd483611ad2c14f5cdb947206732cdd0ec3225  examples/ui-authoring/browser-harness.ts
-5392c802645b73cc32d14de4365049d9acc2f3e143a021870a554c6c77e1184e  examples/ui-authoring/refreeze-headless.log
-c0d2fe22c0f323b4a4d6769d13d015e6cc3bac7c7a29780fdbd6d2e072625b68  examples/ui-authoring/refreeze-initial-typecheck.log
-```
+Browser acceptance requires desktop/narrow light/dark interaction checks and independent screenshot review. The five examples complement focused tests for invalid data, formatter errors, getter precedence, setup/live defaults, choice setter inference and invalid observations. Follow the [authoring contract](../../docs/development/ui-authoring-contract.md) and [UI design rules](../../docs/DESIGN.md).

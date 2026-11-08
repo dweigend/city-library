@@ -1,6 +1,6 @@
 # Indexed canonical occupancy queries
 
-This performance slice implements the existing `grid.agentsAt(field)` contract efficiently for World-owned grids. There is no new public API, new positional state or writable occupancy collection. The binding reference requires canonical references, duplicate-free first-source ordering, validation of the complete source and position-derived occupancy. Existing explicit-source and detached behavior remains unchanged.
+Occupancy queries should stay fast without creating another owner for agent positions. `grid.agentsAt(field)` uses canonical World membership and agent coordinates to find occupants. The index described here is derived internal data; explicit-source queries, detached grids and public iteration order keep their existing behavior.
 
 ## Ownership and lifecycle
 
@@ -8,7 +8,7 @@ Agent spatial coordinates remain the only position authority; World remains the 
 
 Implicit queries use current World insertion order. An Agent moving away and back cannot reorder it. Reattaching an already attached member cannot reorder it. Detach and re-add places it at the new World insertion position. Returned arrays are frozen snapshots of live canonical references. An explicit source always overrides World membership, including source-order, duplicates, foreign agents and invalid-input semantics. Grid boundaries/cell sizes/2D and 3D behavior remain as specified. A World without Space may contain mixed dimensions: implicit queries must still reject any dimension mismatch, even if that Agent is outside the requested cell or deleted only after a previously failed query.
 
-Five asserted scripts below are frozen before runtime handoff. They cover movement/order, admission/deletion/copy, Grid detachment/reattachment, source override/boundaries/dimensional failure, and observation/RNG purity. They exercise only existing public contracts. Relevant pre-existing spatial and Grid examples remain accepted unchanged.
+Public examples in `examples/occupancy/` cover movement/order, admission/deletion/copy, Grid detachment/reattachment, source override/boundaries/dimensional failure, and observation/RNG purity. They exercise only existing public contracts. Spatial and Grid examples remain regression requirements.
 
 ## Performance and model application
 

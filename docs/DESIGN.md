@@ -1,15 +1,15 @@
 # UI design
 
-This document owns the binding UI design and implementation rules for Agent Lab. [System architecture](ARCHITECTURE.md) owns module boundaries, dependency direction, state ownership, headless contracts and domain layout. [PLAN](../PLAN.md) owns sequencing and acceptance status.
+Agent Lab should help you ask a question, change a parameter and see what happened. The interface should leave room for the model, while keeping controls and scientific meaning clear.
 
-The [coding standards](CODING_STANDARDS.md) govern readability, TypeScript and refactoring. The [UI specification](ui/README.md), [API table](ui/api-table.md) and [reference](ui/api-reference.md) define authoring contracts; availability remains separate from acceptance.
+Shared components and defaults keep each experiment declaration short. [Architecture](ARCHITECTURE.md) covers ownership and dependencies; [PLAN](../PLAN.md) tracks unfinished work.
 
 ## Binding UI system rules
 
-The user-defined rules below govern the Svelte UI migration and every subsequent UI slice. They are mandatory without per-model, per-screen or per-component exceptions. Recording them does not establish migration completion or authorize additional product features.
+Use this system across all Svelte components, experiments and screens. [PLAN](../PLAN.md) tracks remaining UI work.
 
-- **Minimal UI:** critically justify every visible element, text, button, heading and container against an actual user task. Remove anything unnecessary. Preserve accessible names, essential labels, actionable errors and required attribution. Prefer a smaller surface over additional explanation or decoration.
-- **Shared stack and component precedence:** use Svelte, strict TypeScript, Tailwind and shadcn-svelte for the migrated UI. Use standard shadcn-svelte components first. Create a custom component only when a concrete requirement cannot be met by their composition; use Bits UI for the required interaction primitives. Do not introduce a parallel component system.
+- **Minimal UI:** give every visible element a clear purpose in a user task; remove anything unnecessary. Preserve accessible names, essential labels, actionable errors and required attribution. Prefer a smaller surface over additional explanation or decoration.
+- **Shared stack and component precedence:** use Svelte, strict TypeScript, Tailwind and shadcn-svelte for the Svelte UI. Use standard shadcn-svelte components first. Create a custom component only when a concrete requirement cannot be met by their composition; use Bits UI for the required interaction primitives. Do not introduce a parallel component system.
 - **Encapsulated styling:** no CSS declarations, inline styles or style blocks in HTML or `.svelte` files. Keep required custom CSS in separate component-owned stylesheet files. Keep styling and layout encapsulated in shared components; experiment scripts and application consumers select their public properties and variants rather than styling their internals. Standard component markup and Tailwind classes remain part of the shared component implementation.
 - **Small global stylesheet:** `app.css` has at most 100 physical lines, including comments, imports and blank lines. It contains only required framework imports, system tokens and essential global defaults. Do not evade the limit through minification or additional global override stylesheets. Component-specific rules belong to their owning components.
 - **One fixed visual system:** define system-wide colors, font families, typography sizes/weights, spacing, radii and control sizes once. Components consume semantic tokens and shared variants. No local literal colors, arbitrary typography, model-specific UI themes or one-off overrides. Supported light/dark palettes belong to the same fixed system. Scientific data colors use a centrally defined palette, separate from UI chrome.
@@ -19,11 +19,11 @@ The user-defined rules below govern the Svelte UI migration and every subsequent
 - **YAGNI:** add only capabilities required by the current working slice. No speculative extension systems, unused components, future settings or empty scaffolding. Add components when used, rather than installing the complete catalog.
 - **Browser and independent screenshot gate:** every UI implementation change requires real-browser interaction checks and captured, visually inspected screenshots of affected states at desktop (at least 1366×768) and narrow (390×844) sizes, including supported light/dark themes. An independent subagent must inspect the actual screenshots and review them against these rules; the implementing agent's self-review is insufficient. Record screenshot paths, checked flows, findings and responses separately from independent approval. Fix findings and repeat affected browser checks and screenshot review before acceptance. A browser or reviewer blocker leaves acceptance open; source inspection cannot substitute. Existing requirements for Antigravity `gemini-3.8-flash` review of substantial design/transfer work remain in force.
 
-Compliance is recorded per delivered slice in [PLAN](../PLAN.md). Historical screenshots and source checks alone do not establish acceptance of a changed implementation.
+Every affected UI flow needs current browser evidence and independent screenshot review. Source inspection alone does not establish visual acceptance.
 
 ## Binding UI authoring rules
 
-The following user-defined rules are mandatory for public UI API design, documentation and subsequent implementation, including the Svelte migration. Readability takes priority over brevity. The shared UI provides opinionated design defaults for rapid prototyping; authors customize only when needed.
+Use these rules for public UI APIs, documentation and implementation. Readability takes priority over brevity. The shared UI provides opinionated design defaults for rapid prototyping; authors customize only when needed.
 
 - **Default first:** omission means defined, useful default behavior. Prepare shared defaults before requiring experiment-specific configuration.
 - **Flat first:** ordinary experiments use no builder chains, additional configuration layers or nested layout trees.
@@ -31,20 +31,12 @@ The following user-defined rules are mandatory for public UI API design, documen
 - **Customize at the affected entry:** a special label or presentation belongs directly beside its binding.
 - **Place functions for readability:** keep short projections inline; give longer functions descriptive names and place them below the UI description.
 
-These rules govern the implemented readable-authoring contract in the [UI reference](ui/api-reference.md). Legacy declarations remain compatibility syntax. Future extensions still need the example-first gate; preserve accepted examples, headless contracts and the single domain-state owner. UI changes state only through public model actions.
+The [UI reference](ui/api-reference.md) defines the implemented readable-authoring contract. Legacy declarations remain compatibility syntax. Future extensions still need the example-first gate; preserve accepted examples, headless contracts and the single domain-state owner. UI changes state only through public model actions.
 
 ## Binding UI API documentation
 
-The [UI specification](ui/README.md), [API table](ui/api-table.md) and [API reference](ui/api-reference.md) jointly define the shared UI authoring contract, subject to the binding authoring rules above. Source availability and unfrozen design candidates are explicitly distinguished; documentation introduces no runtime change. Later Gemini 3.8 Flash high and Astra high feedback, corrections and scoped approvals are recorded in the [authoring evidence](development/readable-authoring-evidence.md). The original quota failure remains historical evidence, not approval.
+The [UI specification](ui/README.md), [API table](ui/api-table.md) and [API reference](ui/api-reference.md) define the shared authoring contract. Planned operations must be labelled as planned. Current acceptance and review limits belong in [PLAN](../PLAN.md).
 
 ## Binding UI authoring rules
 
-The following user-defined rules are mandatory for public UI API design, documentation and subsequent implementation, including the Svelte migration. Readability takes priority over brevity. The shared UI provides opinionated design defaults for rapid prototyping; authors customize only when needed.
-
-- **Default first:** omission means defined, useful default behavior. Prepare shared defaults before requiring experiment-specific configuration.
-- **Flat first:** ordinary experiments use no builder chains, additional configuration layers or nested layout trees.
-- **One normal syntax:** provide one ordinary authoring form, not a collection of competing shorthand forms.
-- **Customize at the affected entry:** a special label or presentation belongs directly beside its binding.
-- **Place functions for readability:** keep short projections inline; give longer functions descriptive names and place them below the UI description.
-
-These are binding design rules, not a declaration that proposed syntax is available or frozen. Concrete simplified syntax remains a design candidate until explicitly agreed and frozen through the example-first gate. Preserve existing accepted examples and headless model contracts; domain state has one owner and UI changes it only through public model actions. Recording these rules does not authorize runtime changes or establish migration acceptance.
+Follow the [coding standards](CODING_STANDARDS.md). Readability takes priority over brevity. Provide useful defaults first, one flat ordinary authoring syntax, customization beside its affected binding, short projections inline and descriptively named longer functions below the declaration. Preserve accepted examples and headless state ownership; new syntax requires explicit agreement and the example-first gate. These rules do not establish runtime or browser acceptance.

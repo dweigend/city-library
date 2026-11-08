@@ -1,8 +1,6 @@
-# Frozen selected materials public contracts
+# Materials model contracts
 
-Current amendment: the explicit user-approved single counter correction and successful five-script run are recorded in [materials-approved-correction.md](materials-approved-correction.md). Earlier pending/failure statements below are historical checkpoints, not current gate status. Model/UI/runtime and old capture bytes remain unchanged.
-
-Five complete asserted scripts under examples/selected-materials are frozen before runtime. The adjacent SHA-256 manifest is binding. No shared library expansion is currently needed: source-specific equations compose public Grid neighborhoods/lookup, World/Agent occupancy/movement, Random and statistics. Generic traversal/diffusion duplicates are forbidden. Heat's random sequential equation is not public Grid.diffuse's simultaneous operator.
+Public examples under `examples/selected-materials/` define required behavior. The adjacent SHA-256 manifest is binding. No shared library expansion is currently needed: source-specific equations compose public Grid neighborhoods/lookup, World/Agent occupancy/movement, Random and statistics. Generic traversal/diffusion duplicates are forbidden. Heat's random sequential equation is not public Grid.diffuse's simultaneous operator.
 
 All factories expose create(options), read() detached observations and advance(count=1). World owns time; canonical Grid Fields or World Agents own physical state. read is pure. Dimensions are cell counts; odd centered cells map to native integer patches. Interstitial native coordinates translate its asymmetric domain to centered Grid coordinates; profile order is increasing x, drawColumn accepts a column index. Crystallization width/height denote the source metal shape within fixed native 33×33 space. Defaults otherwise match exact widgets; seed is an explicit host extension. Numeric parameter validation uses existing parameters/stepCount helpers. Extra deterministic scenario actions setSpins/setSand/setAtoms/setProfile/setTemperatures reset time and observation history where the scripts assert it and validate the complete input before mutation; they do not replace natural setup or go.
 
@@ -10,6 +8,4 @@ Source-specific public named procedure actions and readback spellings are fixed 
 
 Frozen scenarios cover open-boundary avalanches and unique-site/lifetime counts; signed Metropolis energy and attempted-flip time; old/next sand phase barrier and tick-zero spout; vacancy conservation and canonical occupancy; interstitial blocked hops, reservoirs, profile editing and stop; thermal equation/material action; self-inclusive crystallization cooling and terminal barrier; DLA radial motion, birth throttle, natural growth and stop. Stochastic checks assert mechanisms/invariants only.
 
-Independent approval: pending, Argon quota blocker 8194e842, no retry/substitution. No source/browser milestone is inferred from this freeze.
-
-Authorized source-counter correction: the user approved example04 `numFrozen`1→0. Commit08d38c6 changed only that expectation, recorded old/new hashes and refroze it before the complete five-script rerun. All five now pass; see [refreeze decision](selected-materials-example-refreeze.md). API syntax, setup inputs, physics and every other assertion remain as originally frozen.
+Crystallization example 04 expects `numFrozen = 0` after its one-atom cooling step, even though the observed temperature is below the melting point. Preserve the source counter timing rather than deriving this reporter from the current temperature.

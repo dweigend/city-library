@@ -1,7 +1,0 @@
-$ bun run typecheck && bun run test && bun run examples && bun run build && bun run consumer
-$ tsc --noEmit && tsc -p tsconfig.dev.json && tsc -p tsconfig.ui.json && tsc -p tsconfig.ui-examples.json
-error TS2688: Cannot find type definition file for 'bun'.
-  The file is in the program because:
-    Entry point of type library 'bun' specified in compilerOptions
-error: script "typecheck" exited with code 1
-error: script "check" exited with code 1

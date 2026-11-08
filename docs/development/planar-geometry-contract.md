@@ -1,10 +1,10 @@
-# Pure planar contains/bounds: accepted closure and freeze
+# Planar containment and bounds
 
-Root decision, 6 November 2026, before runtime delegation. The coordinator read the five complete revised proposals, existing pure-spatial definitions and budget scope, completed Astra numeric advice and exact country grouping audit. [Post-advisory proposal](planar-geometry-post-advisory.md) and original advisories remain historical. Exactly five public scripts are frozen by planar-geometry-examples.sha256 at this commit, including the explicit closure witnesses appended by Root. These scripts had never previously been accepted/frozen. Existing five affine-map scripts and runtime stay unchanged.
+Containment and bounds queries let a model use planar shapes without a renderer or GIS runtime. This contract defines `geometry.contains`, `geometry.bounds` and the six existing Planar types. Public examples in `examples/planar-geometry-proposal/` assert edge cases and budgets; affine mapping is separate.
 
-Deliver only existing geometry.contains, geometry.bounds and six existing Planar type definitions through public root exports. Bounds already exists. No parser/codec, CRS, geographic normalization, Polygon repair/boolean operations, dataset validity certificate, new convenience API, public caps option or stub. This is pure headless geometry; it grants no GIS model/browser/rights/independent acceptance.
+This contract covers geometry.contains, geometry.bounds and six existing Planar type definitions through public root exports. Bounds already exists. No parser/codec, CRS, geographic normalization, Polygon repair/boolean operations, dataset validity certificate, new convenience API, public caps option or stub. This is pure headless geometry; it grants no GIS model/browser/rights/independent acceptance.
 
-## U1/U3/U4/U6/U10: query scope and counts
+## query scope and counts
 
 **contains** validates one complete Polygon, even for an outside point. Its existing containment profile has coordinateMagnitude1e9 and polygonPositions2048. Count all coordinate tuples across exterior and every hole, INCLUDING every repeated closing tuple. Both polygon coordinates and query XY obey the magnitude bound. Reject overflow with RangeError. No full dataset/text/property budget is relevant to this signature. MultiPolygon is not accepted by contains.
 
@@ -12,9 +12,9 @@ Deliver only existing geometry.contains, geometry.bounds and six existing Planar
 
 The binding's adapter scope names parsing, writing and containment, not bounds. Therefore DO NOT transfer coordinateMagnitude, polygonPositions, feature-count, aggregate-position or property budgets to bounds. Every finite binary64 XY coordinate is valid numerically for bounds, including Number.MAX_VALUE. GeometryCollection traversal is iterative/cycle-safe with no invented numeric depth/node cap. Acyclic shared geometry objects are allowed; per-call completed-validation memoization is permitted, cross-call identity validity caches are not. Pure bounds may therefore have larger input/work than the capped containment query; document actual algorithmic costs, not an invented rejection limit. Invalid polygons still reject; no fast bbox result may bypass validation.
 
-U4 propertyDepth/propertyNodes accounting belongs to a future actual codec/property-validation slice and is NOT delivered or silently resolved here. textBytes/features/positions budgets likewise remain in their existing adapter scopes. This avoids pretending these pure methods implement a dataset validator.
+Property-depth and property-node accounting belongs to a future actual codec/property-validation slice and is NOT delivered or silently resolved here. textBytes/features/positions budgets likewise remain in their existing adapter scopes. This avoids pretending these pure methods implement a dataset validator.
 
-## U2/U5/U7: shapes and ignored foreign members
+## shapes and ignored foreign members
 
 Inspect supported fields as own data descriptors without invoking getters. Geometry and wrapper records use Object/null prototypes; coordinates/collections are dense arrays with own data indices and no extra array keys/accessors/symbols. Array.isArray plus descriptor checks suffice; no new array-subclass prototype restriction. Known option keys are closed/descriptor-safe as existing validateOptions; recognized undefined means omission. Unknown foreign members on Geometry/Feature/Dataset records are ignored without reading/traversing their values. This is not foreign-value preservation or a JSON import contract.
 
@@ -22,7 +22,7 @@ Strict tuple XY means exactly two finite numeric entries. Points/lines/multis/co
 
 Query points reuse existing position(value,2), preserving canonical Agent/Field access and the already accepted treatment of z:undefined, while rejecting actual XYZ points. No new plain-record restriction may exclude canonical positions. Supplied boundary options validate first; query/polygon validation may reject before classification, but any otherwise-valid outside query must still validate the whole polygon.
 
-## U8/U9: exact topology and boundary
+## exact topology and boundary
 
 Default boundary is **include**. Explicit include/exclude applies uniformly to exterior AND hole edges/vertices. A strict hole interior is always outside. Winding is irrelevant. Returned Bounds is a detached frozen minX,maxX,minY,maxY tuple, including degenerate point/line envelopes; no positions returns undefined. Observation consumes no Random, World tick, Agent IDs or live domain objects and does not mutate inputs.
 
@@ -31,9 +31,3 @@ All topology decisions concern the ORIGINAL finite binary64 coordinates. Use exa
 Require exact numerical closure, no zero-length edge, noncollinearity, no forbidden self-contact/crossing. Adjacent shared endpoints are allowed only at that endpoint; adjacent collinear backtracking/overlap rejects, straight forward subdivision is valid. Validate all hole/shell contacts before using strict interior witnesses; validate hole pairs for contacts and mutual containment, rejecting nested/overlapping holes. U-shaped shell/hole bridges must reject even when every hole vertex is internal. Use boundary-first, half-open crossing without division or an equivalently exact classification. MultiPolygon members and separate features each validate, but overlapping members/features do not acquire an invented global prohibition.
 
 Revalidate mutable inputs every call. Exact Number.MIN_VALUE, 2^-104 cancellation and1e9 tiny-square fixtures, actual1282-position Russia/WestBank-hole/Canada126-member examples, count/magnitude limits and invalid/recovered mutations must pass unchanged. Verify independent small integer/rational fixtures and a separately implemented classification oracle. Initial quadratic Polygon validation is acceptable with explicit worst-case cost and measured source/cap cases; no hidden cap/simplification/repair.
-
-Astra was deep design consultation, not Argon approval. Required independent Argon/high review remains quota-blocked; no retry or substitute. Source GIS Setup still fails its coordinate-system operation before datasets. These pure operations do not close that original/browser comparison or any selected model stage.
-
-## Editorial fixture typing correction after integration
-
-The strict post-export typecheck exposed two TS2352 diagnostics in script03's existing external-JSON-to-fixed-XY assertions. Root made only the compiler-required intermediate unknown assertion. Public method syntax, arguments, data, control flow and every expected value remain unchanged; emitted JavaScript is byte-identical, as independently fingerprinted in planar-geometry-integration-evidence/type-only-correction.json. This is a type-annotation repair, not a new API or a weakened tuple contract. Original freeze hashes remain in planar-geometry-examples-original.sha256 and at3a60a47; the current manifest records the corrected TypeScript bytes. All five current scripts now pass runtime and strict source typing. This does not authorize either pending scientific counter correction.

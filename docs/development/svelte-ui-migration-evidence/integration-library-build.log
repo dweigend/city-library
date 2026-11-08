@@ -1,8 +1,0 @@
-2026-11-06T14:42:50.157892+00:00
-Command: ['bun', 'run', 'build']
-Task environment: {}
-$ bun build index.ts --target browser --format esm --outdir dist && tsc -p tsconfig.build.json
-Bundled 53 modules in 4ms
-
-  index.js  136.55 KB  (entry point)
-

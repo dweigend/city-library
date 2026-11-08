@@ -1,6 +1,6 @@
 # Directed network presentation and repeated actions
 
-This shared UI extension closes two observed gaps in the real Directed Diffusion baseline. Existing headless actions and scientific state remain unchanged. The UI owns timers, camera and appearance; it must not own domain flow/topology/tick or introduce a hidden model clock.
+A network view needs to show flow direction and let an author repeat a public action independently of model stepping. Directed Diffusion supplies both use cases. This contract defines the shared presentation fields and repeat behavior. Timers, camera and appearance belong to the UI; topology, scientific values and model time belong to the model.
 
 ## Public author contract
 
@@ -10,4 +10,4 @@ An action may add `repeat: {label: string, intervalMs: number}`. It supplies an 
 
 Directed Diffusion uses `Keep rewiring` with a 200 ms interval and a separate `Rewire a link` action. Rewiring while scientific Run is paused preserves tick, values/history and edge flows; concurrent go and rewire use the actual host invocation sequence. Record actions if exact replay is needed. Direction arrows and flow-dependent width improve observability; numeric endpoints/flow remain inspectable. Source grayscale brightness versus target width is a declared presentation adaptation. The table is an inspection aid, not a substitute for directed network glyphs.
 
-Four compile-only public author tasks in ui/network-action-authoring.types.ts precede runtime: backward compatibility; directed styled positioned graph; typed independent repeating action; compile rejection of invalid action/model data. Keep all reusable implementation in ui/, no scientific equations in renderers and no dependencies. Apply frontend-design and web-design-guidelines. Real Chromium checks must cover arrow/flow appearance, independent repeat start/stop, unchanged paused tick, simultaneous Run, timer cleanup on Setup/catalog switch/disposal, and desktop/mobile themes. No adapter is fully accepted until those checks and the paired NetLogo comparison execute.
+Compile-only cases in `ui/network-action-authoring.types.ts` cover: backward compatibility; directed styled positioned graph; typed independent repeating action; compile rejection of invalid action/model data. Keep all reusable implementation in ui/, no scientific equations in renderers and no dependencies. Apply frontend-design and web-design-guidelines. Real Chromium checks must cover arrow/flow appearance, independent repeat start/stop, unchanged paused tick, simultaneous Run, timer cleanup on Setup/catalog switch/disposal, and desktop/mobile themes. No adapter is fully accepted until those checks and the paired NetLogo comparison execute.

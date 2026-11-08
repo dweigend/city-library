@@ -1,5 +1,0 @@
-$ bun build index.ts --target browser --format esm --outdir dist && tsc -p tsconfig.build.json
-Bundled 37 modules in 3ms
-
-  index.js  83.65 KB  (entry point)
-

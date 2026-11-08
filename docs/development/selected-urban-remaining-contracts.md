@@ -1,6 +1,4 @@
-# Remaining five Urban Suite sources and proposed delivery contracts
-
-Prepared2026-11-06. This is a source/API/asset audit and **proposed** public-example handoff for five already-selected paths. The coordinator has not frozen these scripts. No runtime, real-browser baseline/target execution, scientific review or independent implementation approval is claimed here. No selected model is excluded or replaced. Existing scientific dossiers are read only for source provenance; no duplicate literature research is performed.
+# Structure, Sprawl and Economic Disparity model contracts
 
 ## Identity, immutable archives and assets
 
@@ -16,26 +14,24 @@ All canonical paths begin `Curricular Models/Urban Suite/Urban Suite - `. Their 
 
 Each experiment folder contains unchanged source.nlogox and NOTICE.md, including retained original credits/citation/license and immutable source URL. All carry Copyright2007 Uri Wilensky and CC BY-NC-SA3.0, separate from NetLogo software's license. Structure1/2 cite Wilensky2007 and thank Seth Tisue/Forrest Stonedahl; Economic/Sprawl cite Felsen and Wilensky2007; Tijuana cites De Leon,Felsen and Wilensky2007. Student and predecessor-model credits remain in notices, not reduced to the current port author's credit.
 
-Complete Procedures, Widgets and Info were read. **No extensions, includes, file/network/import/export primitive or required external dataset/image occurs in these five Procedures or widget commands.** Tijuana's terrain/city is generated procedurally, not loaded from a map. Shapes (factory,loop,house,etc.) are retained inside XML; Info hyperlinks and the Creative Commons badge are documentation references, not simulation assets. No additional source-assets files or network downloads were necessary. Source pen drawing is a host presentation requirement for Tijuana, not an external city file. It must be represented or explicitly adapted in later browser reports.
+Procedures, Widgets and Info define the source baseline. **No extensions, includes, file/network/import/export primitive or required external dataset/image occurs in these five Procedures or widget commands.** Tijuana's terrain/city is generated procedurally, not loaded from a map. Shapes (factory,loop,house,etc.) are retained inside XML; Info hyperlinks and the Creative Commons badge are documentation references, not simulation assets. No additional runtime assets or network downloads are required. Source pen drawing is a host presentation requirement for Tijuana, not an external city file. It must be represented or explicitly adapted in later browser reports.
 
-## Public closure and genuine gaps
+## Shared core capabilities
 
 Use one World, attached Grid and Random per model; Agent owns each mobile individual's coordinates/kind/state, Fields own all land/potential/utility caches. World.tick is the only scientific clock. Kind changes preserve Agent identity. Temporary activation snapshots/staged arrays/canonical-neighbor projections do not own a competing population or topology. Reads return deeply frozen detached records and consume no RNG; IDs are opaque.
 
 Existing public closure: Grid.fields/neighbors/fieldAt/agentsAt/diffuse; Agent.add/move/rotate/distanceTo/copy/delete; World.add/agents/tick; run; Random.number uniform and sample; stats.histogram. Toroidal centers and hard geometry come from public Grid/Space, not a private offset/distance engine. Structure averaging should stage the explicit `(self+sumFaces)/5` expression to preserve its equation/grouping; it is not global normalization. Generic diffuse(rate0.8) is mathematically related but has a different floating operation schedule.
 
-| Actual requirement | Binding contract and current implementation | Decision before dependent runtime |
+The shared normal sampler, statistical summary and pure spatial probes supply the reusable operations these models need:
+
+| Requirement | Public API | Model responsibility |
 | --- | --- | --- |
-| Tijuana's many Gaussian samples | `random.number({distribution:"normal",mean,deviation})` and Gaussian continuation are specified in the Random reference; runtime currently accepts uniform only | Real reusable Random expansion, with four/five asserted public examples and cache/copy/state/local/zero-deviation/error tests, before Tijuana runtime. No private Box-Muller, fabricated uniform normal or clamp. Coordinate with B17 to avoid duplicate library work. |
-| Economic Travel Distance **median** | `stats.describe(values).median` is specified; runtime stats exports only histogram/gini | Deliver the public Summary contract, not a model-private median library. Empty/default/report errors need explicit source/browser decisions. |
-| Sprawl's unchanged-position three-direction probes; Tijuana patch-ahead | `geometry.direction`/`geometry.normalize` are specified but not publicly delivered | Coordinator must choose a real minimal public spatial phase or explicitly accept composing public temporary Agent copies/rotate/move. Do not hide a generic trigonometry/normalization engine in models. Temporary probe Agents have identity/allocation costs; this audit does not freeze that workaround. |
-| Tijuana tick-before-phase and setup clock reset | Public `world.tick.advance()` and `reset()` already exist outside run | **Not a missing clock kernel.** Explicitly advance the single World clock before the source phase; never also call run and double-count. Preserve advanced tick on subsequent errors. Reset at completed cityscape and begin a new history segment explicitly. |
+| Tijuana Gaussian samples | `random.number({distribution:"normal",mean,deviation})` | Preserve source tail/error behavior; never truncate or substitute a uniform draw. |
+| Economic travel median | `stats.describe(values).median` | Select the exact source quantity and declare empty-report behavior. |
+| Sprawl/Tijuana direction probes | `geometry.direction`, `geometry.normalize`, `geometry.distance` | Compose source predicates without temporary agents or a private geometry engine. |
+| Tijuana preincrement and reset | `world.tick.advance()` and `reset()` | Advance before procedures, retain partial-error time, reset on completed cityscape. |
 
-The first two Structure models need no new generic kernel. Sprawl's model rules otherwise fit existing closure; Economic's movement/choice/impact fit existing closure. Missing distribution/summary/spatial capabilities remain selected-model dependencies, never grounds for scope reduction. Prepared directories are not delivered capabilities. No API invention or runtime implementation is supplied by this audit.
-
-For each actual library expansion the coordinator must freeze four/five separate public library examples first. Suitable bound tasks: Summary odd/even medians and empty/sample spread/one-pass rejection/pure finite results; Normal mean/deviation/error boundaries plus cache/copy/local/reseed/state continuation; geometry cardinal/diagonal probes, hard half-open rejection, wrap and dimension/error cases. These are **briefs**, not already-frozen examples or implemented exports.
-
-## Shared proposed model conventions
+## Shared model conventions
 
 Future modules export inputs,create(options={}),model following current Definition/parameters patterns. Seed1 is explicit target Mulberry replay, not NetLogo seed identity. Inputs/rules/fixtures validate completely before writes, reject unknown/accessor/nonplain/nonfinite/out-of-step data, and preserve tick/RNG/history on validation failure. Runtime errors retain their actual earlier committed phase effects; do not promise blanket rollback.
 
@@ -67,7 +63,7 @@ Go snapshots seekers and randomly activates each full procedure. wantToBuild is 
 
 Then snapshot houses **after** conversion: newly built houses act immediately. Each sequentially adds0.05 if current attraction<=2*currentmaxAttraction; otherwise resets field0. Test is <=, so one addition may exceed the threshold before the next actor resets it. Decrement stayCounter; <=0 converts to seeker, resets patience from current setting and keeps identity/heading. New seekers from this house phase do not move until next go. Multiple houses share/update the same field sequentially; do not batch the field increment or impose one-house-per-cell. Recolor then tick; no scientific terminal rule/population turnover.
 
-Live setRules accepts maxAttraction,seekerSearchAngle,seekerPatience,waitBetweenSeeking. maxAttraction changes the house degradation cap immediately on its next phase, **not cached buildThreshold**; existing counters do not reset. smoothness/population apply only next setup. Read agents kind/x/y/heading/patienceCounter/stayCounter,counts.seekers/houses,totalAttraction,buildThreshold,cells.attraction/colorNumber. Proposed setAttractions(exact1225 finite nonnegative values) and setAgents(typed seeker/house states), same-tick/no-RNG fixtures. Negative counters may be permitted intentionally only after explicit fixture validation policy; do not accidentally broaden normal input bounds. Headless probe closure remains pending coordinator decision above.
+Live setRules accepts maxAttraction,seekerSearchAngle,seekerPatience,waitBetweenSeeking. maxAttraction changes the house degradation cap immediately on its next phase, **not cached buildThreshold**; existing counters do not reset. smoothness/population apply only next setup. Read agents kind/x/y/heading/patienceCounter/stayCounter,counts.seekers/houses,totalAttraction,buildThreshold,cells.attraction/colorNumber. Proposed setAttractions(exact1225 finite nonnegative values) and setAgents(typed seeker/house states), same-tick/no-RNG fixtures. Negative counters may be permitted intentionally only after explicit fixture validation policy; do not accidentally broaden normal input bounds. Use the shared pure spatial probes above.
 
 ### Economic Disparity
 
@@ -109,30 +105,22 @@ Preserve the procedure-specific details: migrate-static hatches a child at newco
 
 Unresolved **source-browser and binding boundaries**, not convenient repairs: negative normal tails for counts/radii/energy; rounded-normal period0 and modulo errors; n-of fractional/insufficient counts; no workplace/service/migrant and empty means/max; hard patch-ahead and exact endpoint rules; string-valued infrastructure arithmetic; provisional zero globals before setup; unchanged/side-effecting display timing; interrupted cityscape/clear/restart/RNG continuity. Do not clamp counts/radii,replace normals with uniforms,skip phases,or declare setup complete early. The model remains selected while its public Normal/spatial dependencies and actual source baseline are resolved.
 
-## Five proposed model examples and gate limits
+## Public model examples
 
-examples/selected-urban-remaining contains five asserted scripts with SHA256SUMS. They are proposals for coordinator review,not frozen approval. Script01: Structure1 exact toroidal impulse/unchanged scientific RNG;02: Structure2 sticky activation versus current threshold;03: Sprawl same-tick house phase and cached buildThreshold;04: Economic oldest-removal/threshold and median reports;05: defaults/isolation/validation plus Tijuana cleared/preflight/clear clock. Tijuana's last script is deliberately not full cityscape/go acceptance. No model is fulfilled by these contracts alone.
+Public scripts in `examples/selected-urban-remaining/` cover Structure1's toroidal impulse, Structure2's sticky activation, Sprawl's same-tick house phase and cached threshold, and Economic Disparity's removal/threshold/median rules. Preserve their assertions and SHA256SUMS. Tijuana uses its own lifecycle examples in `examples/selected-tijuana/`.
 
-Library-dependent examples intentionally remain non-executable until their actual public kernels and model modules exist. Do not add mocks/stubs or weaken assertions. The normal/summary/spatial phases need their own four/five public library scripts before runtime. Further model tests must cover all source phase boundaries above,especially interrupted setup/error effects,empty search STOP,source integer coercions,house order/counters,threshold stickiness and stochastic draw schedules. Factory/fixture API proposals can be refined before coordinator freeze based on actual bindings and original-browser observations.
+Further tests must cover interrupted setup and error effects, empty-search stopping, integer coercions, house order/counters, threshold stickiness and stochastic draw schedules.
 
-## Mandatory browser evidence still to execute
+## Required browser acceptance
 
 For each of all five,launch the exact pinned served original in real Chromium,hash its actually loaded source,and record defaults/source version/actual ticks/settings. Capture original and target Setup/progress images,appropriate target desktop/mobile light/dark and native Setup/Reset/Step/Run-Pause/model actions. Inspect console/model errors and retain compact Git evidence. Target source audit is not a browser substitute.
 
 Structure1: native noise toggle,rank plot,conservation impulse and all-zero recolor error/zero-field decision. Structure2: current threshold count versus sticky white count,threshold changes/strict ties,plots'×10 units. Sprawl: maxAttraction0/fractional random-bound probe,patience0/1,wait countdown,newhouse same tick/livecachedthreshold,right/left ties,hard-independent torus. Economic: all controls/view modes,numberOfTests0/no candidates and exact STOP continuation,counter strictness/jobs cap+0.01cache refresh/oldest deletion,actual median plots and empty/utility-color boundaries. Tijuana: native CLEAR→CITYSCAPE completion→GO,phase/tick reset and interruption,normal-tail/error/coercion examples where practical,add-node/inspect/update-now/colonias state effect,actual available population/jobs and all growth/migration/crossing/cost controls. No RNG trajectory equivalence or empirical validation is inferred from a port.
 
-Independent Argon review remains required and currently quota-blocked; this audit performs no substitute review. Root owns final evidence reconciliation,commits/GitHub and stage changes.
+## Source boundary rules
 
-## Executed preparation checks
+Structure1 all-zero recoloring fails after activity commit and before tick. The target fixture rejects all-zero input atomically; a naturally reached zero-scale step retains committed fields and throws before tick. Structure2 activation is persistent and its mean plot is scaled by ten.
 
-Read complete local Procedures/Widgets/Info for all five; checked actual public root exports and implementation/binding references. Five unchanged XMLs parsed and matched selection,served catalog and existing research SHA; notices preserve provenance/license. The code/widget-command file/import/extension scan and manual asset inspection found no external simulation files; no network retrieval was necessary. Five proposal SHA checks passed. `bun examples/selected-urban-remaining/01-structure-one-impulse-and-noise.ts` failed as expected with missing future model module; no mock or successful model run is claimed. `bun run typecheck` passed for all four currently configured projects; these new proposals are not included in those configurations,so this does not claim their absent model imports typecheck. `git diff --check` passed. No source/target browser session, scientific publication verification, runtime,commit/push or independent review was performed.
+Sprawl integer random uses ceiling for positive bounds. Exact zero returns zero without a draw; positive fractional bounds below one consume a draw. Search angle zero is invalid. Economic Disparity's helper stop returns from evaluation only: land impacts continue even with `numberOfTests = 0`. Job-cap removal at `>= maxJobs` applies without new jobs; counter creation uses strict `>`. Travel plots use agent-weighted nearest-job distance medians rather than the cached distance with its .01 offset.
 
-## Coordinator freeze: four landscape models (2026-11-06)
-
-The five scripts under examples/selected-urban-remaining are now frozen for Structure1, Structure2, Sprawl and Economic only. The earlier Tijuana CLEAR-only proposal was removed before freeze; Tijuana requires its own five substantive lifecycle/scenario scripts after native boundary probes. Its source remains selected and audited, not delivered. SHA256SUMS records the accepted scripts; no runtime module exists at freeze.
-
-The executed original-browser report resolves the pending source questions above. Structure1 all-zero recoloring fails after activity commit and before tick; target fixture rejection is an explicit atomic input restriction, while a naturally reached zero-scale step must retain committed fields and throw before tick. Structure2 activation is persistent and its mean plot is scaled by ten. Sprawl integer random uses ceil for positive bounds; exact zero returns zero without a draw, positive fractional bounds below one consume a draw. Compose the source zero branch with public integer uniform for positive bounds; no private generator. Search angle0 is invalid. Economic helper STOP returns from evaluation only: caller land impacts continue even with numberOfTests0. Job-cap removal at >=maxJobs applies even without new jobs; counter creation is strict >. Travel plots use Agent-weighted actual nearest-job distance medians, not the cached +.01 distance.
-
-Public dependencies are now delivered: stats.describe fd513c6, normal b8ec2a0, and geometry.direction/normalize/distance 9771404. These replace the earlier gap assessments; none has independent Argon approval yet. Runtime may compose these tested APIs but must not claim final approval. Source-only asks with no scientific order effects may be omitted with an explicit target RNG-schedule declaration. No cross-engine seed parity is promised.
-
-Runtime ownership will be delegated only after this commit. Implement full source procedures, canonical Field/Agent/World state, closed validated fixtures/rules and pure frozen reports. Keep UI, ledger, shared kernels and research outside runtime workers' writes. Browser acceptance remains pending until paired target evidence exists.
+Tijuana requires its own [full model contract](selected-tijuana-contract.md) and substantive lifecycle examples; its cleared-state checks here do not replace that acceptance.

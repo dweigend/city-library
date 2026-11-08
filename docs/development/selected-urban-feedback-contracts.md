@@ -1,20 +1,14 @@
-# Urban feedback, path dependence and cells: source and proposed contracts
+# Positive Feedback, Path Dependence and Cells contracts
 
-Prepared2026-11-05 for the binding selected200. The coordinator read all three Procedures and five proposed public scripts. Subsequent actual original-browser observations resolve the source boundaries below; the amended five scripts are now frozen before runtime. No target runtime/browser or independent technical approval follows. Scientific dossiers were already completed by the dedicated strand; no new literature research or selection is made.
+## Boundary and color rules
 
-## Coordinator resolutions before runtime
+Positive Feedback: original all-zero with alpha0 yields441 ones and tick1 (`0^0=1`); alpha1.1 all-zero stages/commits zeros then throws Division by zero before tick. Fixture rule: all-zero activities allowed when current alpha0; otherwise reject that fixture atomically. A subsequent live change to positive alpha is allowed but advance of an all-zero state throws a normalization error without a successful tick/history insertion. Target fields remain zero and RNG unchanged because irrelevant ask shuffles are omitted; do not claim original RNG equivalence on errors. Public example01 covers these cases.
 
-The scoped original-browser agent verified actually loaded source hashes and executed native controls plus explicitly injected Command Center fixtures. Its forthcoming `urban-feedback-reference-browser.md` retains exact observations/commands/images; these statements are executed source evidence, not yet target implementation.
+Path Dependence: original zero firms/birthtrue throws ASK/NOBODY at unchangedtick0 and exported state/RNG. Target advance throws a RangeError identifying a missing parent before any tick/RNG/history write; it is not a scientific terminal state. Advance0 remains a no-op; birthfalse/empty go still ticks. Distribution 200 produces 121 firms and distribution 100 produces zero firms. A quality-1 single firm with three attempts still traverses three cells despite certain settlement on the first attempt. Public example 03 checks empty-birth error and recovery.
 
-Positive Feedback: original all-zero with alpha0 yields441 ones and tick1 (`0^0=1`); alpha1.1 all-zero stages/commits zeros then throws Division by zero before tick. Amend fixture contract: all-zero activities allowed when current alpha0; otherwise reject that fixture atomically. A subsequent live change to positive alpha is allowed but advance of an all-zero state throws a normalization error without a successful tick/history insertion. Target fields remain zero and RNG unchanged because irrelevant ask shuffles are omitted; do not claim original RNG equivalence on errors. Public example01 covers these cases.
-
-Path Dependence: original zero firms/birthtrue throws ASK/NOBODY at unchangedtick0 and exported state/RNG. Target advance throws a RangeError identifying a missing parent before any tick/RNG/history write; it is not a scientific terminal state. Advance0 remains a no-op; birthfalse/empty go still ticks. Original distribute200→121 and100→0 plus native confirm were observed. Quality1/single firm/attempts3 traversed three cells despite certain settlement on the first attempt. Public example03 now includes empty-birth error/recovery.
-
-Cells color contract: canonical Fields additionally own numeric `colorNumber` in[0,140). Setup and random seeding use white9.9; off uses0. `recolorCells` stages no alternate scientific state: for currently on nonseed cells, let lo=min onTime and hi=max onTime+5 over all on cells, then store min(109.9999,100+10*clamp((onTime-lo)/(hi-lo),0,1)). Source starting-color is109; original scale-color109 at −1/0/1/5/6 for bounds0..5 returned100/100/102/109.9999/109.9999. Seed markers skip normal recolor, retain color memory after cycling, and survive turn-off as markers; ordinary reactivation can therefore remain black. read exposes colorNumber and startingColor109. setCells additionally accepts optional finite colorNumber0<=value<140; when omitted use9.9 for an on seed and0 otherwise. This deterministic fixture sets supplied colors directly without automatic recolor; the next source go applies its own recolor phase.
+Cells color contract: canonical Fields additionally own numeric `colorNumber` in[0,140). Setup and random seeding use white9.9; off uses0. `recolorCells` stages no alternate scientific state: for currently on nonseed cells, let lo=min onTime and hi=max onTime+5 over all on cells, then store min(109.9999,100+10*clamp((onTime-lo)/(hi-lo),0,1)). Source starting-color is109; original scale-color109 at −1/0/1/5/6 for bounds0..5 yields100/100/102/109.9999/109.9999. Seed markers skip normal recolor, retain color memory after cycling, and survive turn-off as markers; ordinary reactivation can therefore remain black. read exposes colorNumber and startingColor109. setCells additionally accepts optional finite colorNumber0<=value<140; when omitted use9.9 for an on seed and0 otherwise. This deterministic fixture sets supplied colors directly without automatic recolor; the next source go applies its own recolor phase.
 
 Public cycleColors() subtracts0.01 from every currently on field, wrapping negative results by adding140; no tick/history measurement is fabricated. The original native five-iteration cycle changed9.9→9.850000000000001 and nonseed108.913043…→108.863043… at unchangedtick42. Its visual ask DOES change the original main RNG (export checked), so target omission of display-only shuffle is an explicit adaptation, not a claim that the original consumed no draws. Target cycleColors is deterministic/no-RNG, preserving seeded scientific replay under presentation cadence. Example04 freezes memory/wrap/no-tick behavior. Generic numeric-color-to-CSS projection belongs in reusable ui/,not a private model helper. Host cycle repeats the same public action independently of go, using the existing repeat contract. Exact color RGB/pixel cloning is unnecessary; numeric phase/memory semantics and visual action remain required.
-
-These resolutions define the frozen runtime contract. No new generic domain library operation is needed. Five amended scripts and regenerated SHA256SUMS precede scoped runtime. Remaining UI and paired target/independent review gates are not waived.
 
 ## Source provenance and retained licenses
 
@@ -28,7 +22,7 @@ Canonical selected paths all begin `Curricular Models/Urban Suite/`. Source byte
 
 Each experiment folder contains `source.nlogox` and `NOTICE.md`, preserving complete original Procedures, Widgets, Info, shape definitions, credits/citation and copyright/license notice. Copyright2007 Uri Wilensky, **CC BY-NC-SA3.0**. Positive Feedback and Cells cite Wilensky(2007), with thanks to Seth Tisue and Craig Brozefsky respectively; Path Dependence cites Rand and Wilensky(2007) and thanks Bill Rand. The model license is separate from NetLogo's software license and the library's code license. No include or extension declaration occurs in the three sources. Cells uses bounded dynamic `runresult` strings from closed chooser values; that does not authorize a target code-evaluation runtime.
 
-## Actual public closure and ownership
+## Shared core capabilities and ownership
 
 Read the current root exports, Grid, Agent spatial/perception, Random sampling and World/run implementations, relevant API reference and binding architecture. Existing public closure supports the scientific mechanisms:
 
@@ -44,9 +38,9 @@ Read the current root exports, Grid, Agent spatial/perception, Random sampling a
 
 One World/attached Grid/Random per model. Only Path Dependence adds Agent firms; the other two use canonical field state. Named procedures must make the source update order legible. Model-specific equations remain ordinary headless compositions. `read()` consumes no draws, advances no time and returns detached deeply frozen records; source monitors that randomly break ties cannot consume the simulation stream during target reads. Setup replaces the model instance, with no second reset clock. Histories retain setup plus latest1000 successful ticks by existing convention, recording after `run` advances World.tick. Same-tick interventions replace the current sample rather than fabricating ticks.
 
-No new generic domain-library API is justified by this audit. The previously open source/host boundaries are now explicitly resolved by the coordinator above: Path empty birth, Feedback zero powers/divisor and Cells color memory. These are not reasons to omit the selected models or add a hidden replacement runtime.
+Path empty birth, Feedback zero powers/divisor and Cells color memory follow the boundary rules above. These are not reasons to omit the selected models or add a hidden replacement runtime.
 
-## Shared proposed author surface
+## Shared author surface
 
 The `experiments/<slug>/model.ts` exports `inputs`, `create(options={})`, `model` using the existing Definition/parameters conventions. Instances expose `read()`, `advance(count=1)`, model-specific `setRules` and the named interventions below. Fixed dimensions are not user parameters. Seed1 is a target replay key, integer−2147483648..4294967295, explicitly Mulberry rather than NetLogo's RNG.
 
@@ -113,11 +107,11 @@ Frozen `setRules` accepts the four controls above. `setCells(readonly {on,onTime
 
 The source cycle-colors forever button independently applies pcolor−0.01 to every currently-on field and display, without tick but with display-only ask-shuffle RNG consumption. This visual state has memory: go overwrites nonseed on-cell colors using onTime, but skips seed markers; turn-off writes black while retaining seed-p, so a later ordinary reactivation of an expired seed may remain black. Source setup's starting-color=blue+4 and scale-color age mapping, and its persistent seed/cycle behavior, must be distinguished from generic age coloring.
 
-The coordinator follows the existing headless/source-timed Life approach: canonical Field numeric colorNumber, public cycleColors and optional fixture colors are frozen above; reusable numeric-to-CSS conversion belongs in ui/. Original numeric phase and memory behavior have been browser verified. No undisclosed palette logic in scientific equations, no fake source command, and no omission of the actual cycle action. A pixel clone is unnecessary, but preserved/changed functional visual interactions must be explicit and browser tested. The frozen contract remains unimplemented until scoped runtime and target browser evidence are integrated.
+Use the shared headless/source-timed approach: canonical Field numeric colorNumber, public cycleColors and optional fixture colors are frozen above; reusable numeric-to-CSS conversion belongs in ui/. Original numeric phase and memory behavior have been browser verified. No undisclosed palette logic in scientific equations, no fake source command, and no omission of the actual cycle action. A pixel clone is unnecessary, but preserved/changed functional visual interactions must be explicit and browser tested. The same rules apply to headless and browser use.
 
-## Five frozen asserted scripts
+## Public examples
 
-The five scripts under `examples/selected-urban-feedback/`, with SHA256SUMS, were coordinator-reviewed and frozen atee77056 before runtime. They use only public future model entries, ordinary assertions and detached observations; no private imports, stubs, mocks or disabled tests.
+Public examples under `examples/selected-urban-feedback/` use public model entries, assertions and detached observations.
 
 1. Positive powers/global normalization: exact .25²,.5²,1² with max normalization; descending distribution; alpha1 stable state still ticks; no runtime scientific RNG.
 2. Moore wrap: single corner impulse spreads into exactlynine normalized unit cells across both toroidal boundaries; total9 demonstrates nonconserved normalization.
@@ -127,7 +121,7 @@ The five scripts under `examples/selected-urban-feedback/`, with SHA256SUMS, wer
 
 These are deliberately not exhaustive. Additional behavior checks must cover Path consecutive search attempts after successful move-in, live region-radius counts at wrap, cached max versus dynamic search positions, source birth order/newborns, empty-birth decision, and randomized winning-area adaptation. Cells needs all neighborhoods/rules, simultaneous probability eligibility, seed reactivation/color-cycle memory, strict lifetime/live limit changes and all-zero empty field continuation. Positive Feedback needs exact alpha0/zero boundary, independent nonlinear smoothing then normalization and all-zero source error observation.
 
-## Required original/target browser acceptance — planned only
+## Required browser acceptance
 
 For **each** model execute the concrete official served original and target in real Chromium; hash the actually loaded source against the archive, record version/defaults/settings/actual ticks/RNG policy. Retain paired Setup/progress screenshots and appropriate target desktop/mobile light/dark screenshots, native controls, inspection and console/runtime diagnostics. No scientific metadata/structure check or source analysis replaces this baseline.
 
@@ -137,14 +131,4 @@ Path Dependence: default200 setup and actual progressed ticks; birth/live radius
 
 Cells: native Setup/step/go40/go-pause/randomseed/cyclecolors, all chooser/rate/lifetime controls and pointer/keyboard/UI equivalents. Widget says **go *40** and actually repeats40; Info incorrectly says go*80/80ticks. Verify first counts1→5→9, pre-step onTime/strict expiry and cycle while go is paused. Capture seed-marker color memory/ordinary reactivation as a source-specific visual case before claiming the host contract implemented. No terminal rule at empty field.
 
-The source/host boundaries above are resolved; target implementation/browser and independent technical approval remain pending. Independent Argon technical approval remains separately required; the existing provider-quota blocker is not waived or replaced here. This phase performs no browser work and makes no implementation status changes.
-
-
-## Executed preparation checks and limits
-
-- Read each complete local XML Procedures/Widgets/Info and original notices, selected-path identity, relevant binding architecture/example-first requirements and actual public Grid/Agent/World/Random implementations. No network retrieval or literature verification was performed.
-- Copied all three XMLs unchanged from the committed research evidence and confirmed SHA-256 against both dossier and independently captured served inventory. Parsed each XML as NetLogo7.0.4; exact selected identities confirmed.
-- `sha256sum -c examples/selected-urban-feedback/SHA256SUMS` passed5/5. `bun examples/selected-urban-feedback/01-positive-powers-and-normalization.ts` failed as expected at its absent future public model module. No runtime stub/mock was added. Other future-model scripts were not executed.
-- `bun run typecheck` passed for the current configured project. The new proposed example directory is not yet included by tsconfig.dev.json, and future model modules do not exist, so this does not claim those proposed imports typecheck. Runtime integration must add the real scripts to configured gates after coordinator freeze.
-- A separate ephemeral public-API probe passed: canonical Grid neighborhood union produced13 fields, H6 and displaced4; public Agent.distanceTo over all World agents included the querying firm while Agent.neighbors excluded it. An initial probe incorrectly used variadic `world.add(a,b)` instead of the specified iterable `world.add([a,b])`, causing its population assertion to fail; the corrected public-syntax probe passed. This was a probe-authoring mistake, not a source/model regression.
-- `git diff --check` passed. No runtime, UI, core, configuration, research, Git or implementation-ledger mutation was made. No browser, build/consumer re-run or independent review is claimed by this source-contract task. The coordinator separately commissioned actual original-browser clarification; its forthcoming observations are not inferred here.
+Model acceptance requires paired browser comparison and independent review.
