@@ -36,9 +36,13 @@ expected-failure success or skipped assertion hides that target.
 
 ## Example-first E3 checkpoint
 
-Pending: independently reviewed phase scripts, exact numeric/RNG decisions and
-source hashes committed before runtime implementation. Earlier drafts were
-unagreed and were never used to claim approval.
+Fresh Gemini 4 Argon design/archive/example review approved the freeze without
+P0–P2 blockers. Its two P3 implementation notes concern explicit undefined/extra
+arguments and canonical fresh zero/stationary revisions; author responses are
+recorded separately. The five public scripts and their SHA-256 manifest were
+committed in `9fca840` before runtime implementation. Earlier drafts were
+unagreed and were never used to claim approval. The dedicated E3 runner and
+typecheck reported actual missing-export failures at this checkpoint.
 
 ## Runtime and delivery
 

@@ -168,6 +168,13 @@ describe("finite quadrilateral public contract", () => {
     }
   });
 
+  test("rounded source coordinates beyond the existing magnitude cap reject before pairing", () => {
+    const random = Random.add({ seed: 7 }), before = random.state;
+    expect(7 * (1e6 / 7)).toBeGreaterThan(1e6);
+    expect(() => topology.quadrilaterals({ rings: 7, edgeLength: 1e6 / 7, random })).toThrow(RangeError);
+    expect(random.state).toEqual(before);
+  });
+
   test("continuation includes advanced streams and cached Gaussian state; relaxation draws nothing", () => {
     const random = Random.add({ seed: 11 });
     random.number({ distribution: "normal" });

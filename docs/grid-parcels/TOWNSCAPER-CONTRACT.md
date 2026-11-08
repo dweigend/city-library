@@ -41,7 +41,11 @@ public APIs and frozen examples remain unchanged.
   squared source lengths remain at least `2 ** -800`, safely above normal-number
   underflow even after finite refinement. It avoids allowing subnormal source
   geometry and does not impose a display-unit floor. The upper bound keeps every
-  source coordinate within the existing magnitude cap. These are City Library
+  mathematical source coordinate within the existing magnitude cap. Binary64
+  construction must also pass the source-coordinate preflight: at `rings: 7`,
+  `edgeLength: 1e6 / 7` evaluates the corner to `1000000.0000000001` and throws
+  before drawing. The options interval does not override the coordinate cap or
+  permit snapping that corner. These are City Library
   decisions, not recovered original Townscaper constants.
 - Use integer axial coordinates `(q,r)` with
   `max(abs(q),abs(r),abs(q+r)) <= rings`. Evaluate each source vertex once at

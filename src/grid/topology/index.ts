@@ -2,6 +2,8 @@ import { validateOptions } from "../../agent/state.ts";
 import { array } from "../../geometry/planar/validation.ts";
 import type { PlanarPolygon, PlanarXY } from "../../geometry/planar/types.ts";
 import { createLayout, generationOptions, type Layout } from "./layout.ts";
+import { quadrilaterals } from "./quadrilaterals.ts";
+import { relax } from "./relax.ts";
 export type { Layout, BoundarySegment } from "./layout.ts";
 
 function square(options: { columns: number; rows: number; cellSize?: number }): Layout {
@@ -43,4 +45,4 @@ function fromPolygons(options: { polygons: readonly PlanarPolygon[] }): Layout {
   return createLayout(array(values.polygons, 1) as PlanarPolygon[], true);
 }
 /** Immutable topology generation and authored conforming polygon import. */
-export const topology = Object.freeze({ square, hex, fromPolygons });
+export const topology = Object.freeze({ square, hex, fromPolygons, quadrilaterals, relax });

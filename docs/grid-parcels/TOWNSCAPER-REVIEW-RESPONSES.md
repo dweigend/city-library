@@ -21,3 +21,10 @@ contract or any accepted script. All E0/foundation/archive hashes still match.
 ## Runtime
 
 Pending fresh independent runtime review after implementation and target checks.
+
+Author boundary finding: at radius seven, binary64 `7 * (1e6 / 7)` exceeds the
+existing coordinate cap by one representable step. The frozen source formula
+and pre-draw coordinate validation already require rejection. A contract note
+and focused no-draw regression make that boundary explicit without changing
+any frozen script, numerical limit or output coordinate. Fresh runtime review
+will inspect this case; no separate independent approval is claimed here.
