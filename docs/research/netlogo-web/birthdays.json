@@ -1,0 +1,109 @@
+{
+  "slug": "birthdays",
+  "name": "Birthdays",
+  "catalogPath": "Sample Models/Mathematics/Probability/Birthdays",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/Birthdays.nlogox",
+  "deliveryBatch": "B17",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "Why do shared birthdays become common in surprisingly small groups? NetLogo Birthdays independently assigns each agent a day in a 365-day year and highlights agents sharing a birthday. Durrett's probability text [1] supplies the occupancy and collision framework, while Nunnikhoven [2] and Hurley [3] analyze the important extension to nonuniform birth frequencies. The model illustrates the difference between matching one specified person's birthday and finding any matching pair among many possible pairs. Repeated groups reveal sampling variation around theoretical probabilities. Uniform birthdays, independent assignments, and omission of leap day simplify the experiment. Real birth frequencies vary across dates and populations, so the classroom model is a controlled probability example rather than a demographic estimate. Agreement with its analytical collision probability tests the stated assumptions, not their empirical realism.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/Birthdays.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Probability/Birthdays.nlogox",
+    "revision": "NetLogo 7.0.4 served 2026-11-05; SHA-256 f2e65811be0efbf4da935af5d9dae0f74ebf6b02cfa31a0db874e87fe8c66009",
+    "checkedAt": "2026-11-05",
+    "evidence": "Full original served XML source, Procedures and Info retained in evidence/computing/birthdays.nlogox; extracted Info retained alongside.",
+    "notes": " This dossier describes scientific connections to the original NetLogo teaching model; it does not certify a City Library reimplementation or empirical validity.",
+    "originalCitation": "Wilensky, U. (2004).  NetLogo Birthdays model.  http://ccl.northwestern.edu/netlogo/models/Birthdays.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "sourceSnapshot": "evidence/computing/birthdays.nlogox",
+    "evidenceFile": "evidence/computing/birthdays.nlogox"
+  },
+  "publications": [
+    {
+      "id": "10.1017/9781108591034",
+      "authors": [
+        "Rick Durrett"
+      ],
+      "title": "Probability: Theory and Examples",
+      "year": 2019,
+      "venue": "Cambridge University Press",
+      "doi": "10.1017/9781108591034",
+      "url": "https://doi.org/10.1017/9781108591034",
+      "relevance": "Occupancy probabilities and independent sampling give the mathematical framework for birthday collisions.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1017%2F9781108591034",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1017_9781108591034.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1017_9781108591034.json"
+      },
+      "publisher": "Cambridge University Press",
+      "isbn": [
+        "9781108591034",
+        "9781108473682"
+      ],
+      "verified": true
+    },
+    {
+      "id": "10.1080/00031305.1992.10475901",
+      "authors": [
+        "Thomas S. Nunnikhoven"
+      ],
+      "title": "A Birthday Problem Solution for Nonuniform Birth Frequencies",
+      "year": 1992,
+      "venue": "The American Statistician",
+      "doi": "10.1080/00031305.1992.10475901",
+      "url": "https://doi.org/10.1080/00031305.1992.10475901",
+      "relevance": "Directly analyzes how nonuniform birth frequencies change the classic birthday problem.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1080%2F00031305.1992.10475901",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1080_00031305_1992_10475901.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1080_00031305_1992_10475901.json"
+      },
+      "publisher": "Informa UK Limited",
+      "volume": "46",
+      "issue": "4",
+      "pages": "270-274",
+      "verified": true
+    },
+    {
+      "id": "10.1080/09332480.2008.10722928",
+      "authors": [
+        "W. J. Hurley"
+      ],
+      "title": "The Birthday Matching Problem When the Distribution of Birthdays Is Nonuniform",
+      "year": 2008,
+      "venue": "CHANCE",
+      "doi": "10.1080/09332480.2008.10722928",
+      "url": "https://doi.org/10.1080/09332480.2008.10722928",
+      "relevance": "A second model-specific treatment examines the sensitivity of birthday matching to nonuniform distributions.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1080%2F09332480.2008.10722928",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1080_09332480_2008_10722928.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1080_09332480_2008_10722928.json"
+      },
+      "publisher": "Informa UK Limited",
+      "volume": "21",
+      "issue": "4",
+      "pages": "20-24",
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

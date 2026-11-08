@@ -1,0 +1,82 @@
+[
+  {
+    "doi": "10.1038/scientificamerican1070-120",
+    "consultedUrl": "https://web.stanford.edu/class/sts145/Library/life.pdf",
+    "checkedAt": "2026-11-05",
+    "evidenceType": "selected full-text sections",
+    "sectionsRead": "Original exposition, pp. 120–123: rules and simultaneous generations.",
+    "finding": "The original exposition uses an infinite checkerboard; NetLogo uses a finite wrapping lattice. Rule agreement therefore does not imply identical long-term boundary behavior.",
+    "retrievedSha256": "9b8027e3556f8f7066d4bc31f0f8f034a6be7425876f99043e41f19d49eb6f2c",
+    "retention": "Bibliographic metadata, content-specific reading notes and retrieval hash retained; full article/book copies are not redistributed in this research package."
+  },
+  {
+    "doi": "10.48550/arxiv.1111.1567",
+    "consultedUrl": "https://arxiv.org/pdf/1111.1567",
+    "checkedAt": "2026-11-05",
+    "evidenceType": "selected full-text sections",
+    "sectionsRead": "Abstract and sections 2–4: inner disk, annulus, sigmoid transition and optional continuous time.",
+    "finding": "The article explicitly separates the discrete-time update from a continuous-time variant. The served PDF bears the arXiv v2 label and a regenerated date of 27 November 2024; the repository publication year is 2011.",
+    "retrievedSha256": "44108ed3dd56ffaf99928de777c190f7a421f491127ebd7473d030ec9c8fde6d",
+    "retention": "Bibliographic metadata, content-specific reading notes and retrieval hash retained; full article/book copies are not redistributed in this research package."
+  },
+  {
+    "doi": "10.1007/978-1-4613-8476-2",
+    "consultedUrl": "https://algorithmicbotany.org/papers/abop/abop.pdf",
+    "checkedAt": "2026-11-05",
+    "evidenceType": "selected full-text sections",
+    "sectionsRead": "Chapter 1, pp. 1–7: Koch replacement, parallel rewriting, DOL systems and turtle interpretation.",
+    "finding": "Selected chapter sections support the grammar-to-geometry mechanism; the entire book was not read.",
+    "retrievedSha256": "4ac9203216a2767ef721b8c5940da96943a2cdab6c35a1e5777999cf9106cc8b",
+    "retention": "Bibliographic metadata, content-specific reading notes and retrieval hash retained; full article/book copies are not redistributed in this research package."
+  },
+  {
+    "doi": "10.1007/bf01890834",
+    "consultedUrl": "https://www.math.ucdavis.edu/~gravner/papers/fgg.pdf",
+    "checkedAt": "2026-11-05",
+    "evidenceType": "selected full-text sections",
+    "sectionsRead": "Abstract and section 1: state cycle, threshold, interaction range, synchronous update, and GH versus CCA.",
+    "finding": "Contact-driven cycling in every state differs from the automatic refractory progression in Greenberg–Hastings-type systems. Pattern resemblance does not erase this rule distinction.",
+    "retrievedSha256": "c650616ae90f0c1a638682b8958e3c2582aec704889db8b96e21b237ae9da36f",
+    "retention": "Bibliographic metadata, content-specific reading notes and retrieval hash retained; full article/book copies are not redistributed in this research package."
+  },
+  {
+    "doi": null,
+    "consultedUrl": "https://www.math.ucdavis.edu/~gravner/papers/cca.pdf",
+    "checkedAt": "2026-11-05",
+    "evidenceType": "selected full-text sections",
+    "sectionsRead": "Abstract and sections 1–2: cyclic successor replacement and stages of organization.",
+    "finding": "Additional background read, not counted as a fourth publication in any dossier.",
+    "retrievedSha256": "c2da5b2d7a28fc1e217895d15b217afc509d972d2b346c8ef7a375a2653d93fc",
+    "retention": "Bibliographic metadata, content-specific reading notes and retrieval hash retained; full article/book copies are not redistributed in this research package."
+  },
+  {
+    "doi": "10.1112/plms/s2-42.1.230",
+    "consultedUrl": "https://www.cs.virginia.edu/~robins/Turing_Paper_1936.pdf",
+    "checkedAt": "2026-11-05",
+    "evidenceType": "selected full-text sections",
+    "sectionsRead": "Introduction and section 1, pp. 230–231: machine state, scanned symbol, write/erase and tape movement.",
+    "finding": "The original single-head tape formalism is distinct from the finite multihead two-dimensional teaching variant. The manuscript was received/read in 1936; the DOI record dates publication 1937.",
+    "retrievedSha256": "a126650c315e998ba96ea8248a60bde0afe60fec3e810acfc2b6c70d3b0e9f36",
+    "retention": "Bibliographic metadata, content-specific reading notes and retrieval hash retained; full article/book copies are not redistributed in this research package."
+  },
+  {
+    "doi": "10.1142/s0218195904001354",
+    "consultedUrl": "https://people.csail.mit.edu/dln/papers/tetris/tetris.pdf",
+    "checkedAt": "2026-11-05",
+    "evidenceType": "selected full-text sections",
+    "sectionsRead": "Abstract and introduction: offline information, scalable board, objectives and rule variants.",
+    "finding": "The hardness results concern generalized offline tasks, and should not be described as a complexity proof for this fixed interactive NetLogo implementation.",
+    "retrievedSha256": "a690a13102cd13c39cf728f1f1f8d3f9f86763131f4a789506bb8e2f3ddd4436",
+    "retention": "Bibliographic metadata, content-specific reading notes and retrieval hash retained; full article/book copies are not redistributed in this research package."
+  },
+  {
+    "doi": "10.1145/166117.166151",
+    "consultedUrl": "https://web.mit.edu/viz/EM/visualizations/resources/cabral.pdf",
+    "checkedAt": "2026-11-05",
+    "evidenceType": "selected full-text sections",
+    "sectionsRead": "Abstract and sections 1–2: vector-field imaging, glyphs, streamlines and particle-trace limitations.",
+    "finding": "Line integral convolution is a contrasting visualization method. The original NetLogo baseline uses arrows and particle trajectories, not LIC.",
+    "retrievedSha256": "25ba52c10e83f9812dd192912a226bbb8b50ef1d1c3ef064cdad7bf094e47462",
+    "retention": "Bibliographic metadata, content-specific reading notes and retrieval hash retained; full article/book copies are not redistributed in this research package."
+  }
+]

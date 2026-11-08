@@ -1,3 +1,6 @@
+import type { MonitorSpec, RuntimeSpec } from "./authoring.ts";
+import type { LegacyLiveField } from "./definition.ts";
+import { normalizeAuthoring, groupLive, decodeControl } from "./authoring.ts";
 import type { Definition } from "../experiments/definition.ts";
 import type {
   BoundEntry,
@@ -10,16 +13,46 @@ import { mountNetwork } from "./views/network.ts";
 import { mountCanvas } from "./views/canvas.ts";
 import { mountChart } from "./views/chart.ts";
 import { createPlayback } from "./playback.ts";
+import { createRepeatedAction } from "./actions/repeat.ts";
 
 /** Concrete model types stay here; only the bound mounted handle enters the catalog. */
+export function defineUI<P extends object, M>(
+  definition: Definition<P, M> & { readonly create: (options?: Partial<P>) => ModelInstance },
+  spec: Omit<UISpec<NoInfer<P>, Extract<NoInfer<M>, ModelInstance>>, 'live'> & {
+    readonly live?: readonly LegacyLiveField<NoInfer<P>, Extract<NoInfer<M>, ModelInstance>>[];
+  },
+): BoundEntry;
+export function defineUI<P extends object, M>(
+  definition: Definition<P, M> & { readonly create: (options?: Partial<P>) => ModelInstance },
+  spec: UISpec<NoInfer<P>, Extract<NoInfer<M>, ModelInstance>>,
+): BoundEntry;
+export function defineUI<
+  P extends object,
+  M,
+  const T extends NonNullable<RuntimeSpec<NoInfer<P>, Extract<NoInfer<M>, ModelInstance>>['monitors']>,
+>(
+  definition: Definition<P, M> & { readonly create: (options?: Partial<P>) => ModelInstance },
+  spec: Omit<MonitorSpec<NoInfer<P>, Extract<NoInfer<M>, ModelInstance>, T>, 'live'> & {
+    readonly live?: readonly LegacyLiveField<NoInfer<P>, Extract<NoInfer<M>, ModelInstance>>[];
+  },
+): BoundEntry;
+export function defineUI<
+  P extends object,
+  M,
+  const T extends NonNullable<RuntimeSpec<NoInfer<P>, Extract<NoInfer<M>, ModelInstance>>['monitors']>,
+>(
+  definition: Definition<P, M> & { readonly create: (options?: Partial<P>) => ModelInstance },
+  spec: MonitorSpec<NoInfer<P>, Extract<NoInfer<M>, ModelInstance>, T>,
+): BoundEntry;
 export function defineUI<P extends object, M extends ModelInstance>(
   definition: Definition<P, M>,
-  spec: UISpec<P, M>,
+  sourceSpec: RuntimeSpec<P, M>,
 ): BoundEntry {
   return {
     title: definition.title,
     description: definition.description,
     mount(container) {
+      const spec = normalizeAuthoring(definition, sourceSpec);
       const events = new AbortController();
       const setup = createForm(definition, spec);
       const controls = document.createElement("aside");
@@ -47,9 +80,14 @@ export function defineUI<P extends object, M extends ModelInstance>(
       let selected: string | null = null;
       let disposed = false;
       let speed = 100;
+      let drawingRequested = false;
+      let drawingToggle: HTMLButtonElement | undefined;
+      const repeats: { stop(): void; sync(): void }[] = [];
+      function stopRepeats() { for (const repeat of repeats) repeat.stop(); }
       const views: {
         render: (state: Snapshot<M>) => void;
         dispose: () => void;
+        stopDrawing?: () => void;
       }[] = [];
       const buttons: {
         element: HTMLButtonElement;
@@ -68,8 +106,15 @@ export function defineUI<P extends object, M extends ModelInstance>(
       function errorMessage(error: unknown) {
         return error instanceof Error ? error.message : String(error);
       }
+      function resetDrawing() {
+        drawingRequested = false;
+        drawingToggle?.setAttribute("aria-pressed", "false");
+        for (const view of views) view.stopDrawing?.();
+      }
       function fail(error: unknown) {
         playback.stop();
+        stopRepeats();
+        resetDrawing();
         status.textContent = errorMessage(error);
         status.dataset.state = "error";
       }
@@ -83,7 +128,8 @@ export function defineUI<P extends object, M extends ModelInstance>(
           const title = document.createElement("dt");
           title.textContent = monitor.label;
           const value = document.createElement("dd");
-          value.textContent = String(monitor.value(state));
+          const observed = monitor.value(state);
+          value.textContent = monitor.format ? monitor.format(observed) : String(observed);
           monitors.append(title, value);
         }
         for (const button of buttons) {
@@ -107,15 +153,21 @@ export function defineUI<P extends object, M extends ModelInstance>(
           else live.control.value = String(value);
           live.control.disabled = !(live.enabled?.(state) ?? true);
         }
+        if (spec.drawing && !spec.drawing.enabled(state)) {
+          drawingRequested = false;
+          drawingToggle?.setAttribute("aria-pressed", "false");
+        }
         for (const view of views) view.render(state);
+        for (const repeat of repeats) repeat.sync();
       }
       function act(action: (model: M) => void, message: string) {
         if (!instance || disposed) return false;
         try {
           action(instance);
-          status.textContent = message;
+          const state = read(instance);
+          status.textContent = completed(state) ? "Completed." : message;
           status.dataset.state = "success";
-          render();
+          render(state);
           return true;
         } catch (error) {
           fail(error);
@@ -163,7 +215,11 @@ export function defineUI<P extends object, M extends ModelInstance>(
           status.textContent = "Paused.";
           return;
         }
-        if (instance && !completed(read(instance))) playback.start();
+        try {
+          if (instance && !completed(read(instance))) playback.start();
+        } catch (error) {
+          fail(error);
+        }
       });
       buttons.push({ element: run, stepping: true });
       for (const count of [1, 10, 100]) {
@@ -203,16 +259,62 @@ export function defineUI<P extends object, M extends ModelInstance>(
           enabled: action.enabled,
           pressed: action.pressed,
         });
+        if (action.repeat) {
+          const toggle = button(action.repeat.label, () => {
+            if (repeat.running) repeat.stop();
+            else repeat.start();
+          });
+          toggle.setAttribute("aria-pressed", "false");
+          const repeat = createRepeatedAction({
+            current: () => disposed ? undefined : instance,
+            enabled: (model: M) => action.enabled?.(read(model), selected) ?? true,
+            perform: (model: M) => {
+              action.run(model, selected);
+              render();
+              status.textContent = "Action repeated.";
+              status.dataset.state = "success";
+            },
+            changed: running => toggle.setAttribute("aria-pressed", String(running)),
+            failed: fail,
+            intervalMs: action.repeat.intervalMs,
+            schedule: (tick, intervalMs) => {
+              const id = window.setInterval(tick, intervalMs);
+              return () => window.clearInterval(id);
+            },
+          });
+          repeats.push(repeat);
+          buttons.push({ element: toggle, enabled: action.enabled });
+        }
+      }
+      if (spec.drawing?.toggleLabel) {
+        drawingToggle = button(spec.drawing.toggleLabel, () => {
+          drawingRequested = !drawingRequested;
+          try { render(); } catch (error) { fail(error); }
+        });
+        drawingToggle.setAttribute("aria-pressed", "false");
+        buttons.push({
+          element: drawingToggle,
+          enabled: state => spec.drawing!.enabled(state),
+          pressed: () => drawingRequested,
+        });
       }
       if (spec.live?.length) {
         const group = document.createElement("div");
         group.className = "live-controls";
-        controls.insertBefore(group, monitors);
+        controls.insertBefore(group, status);
         const inputs = Object.entries(definition.inputs) as [
           string,
           Descriptor,
         ][];
-        for (const live of spec.live) {
+        for (const liveGroup of groupLive(spec.live)) {
+          let target: HTMLElement = group;
+          if (liveGroup.label !== undefined) {
+            const fieldset = document.createElement("fieldset");
+            const legend = document.createElement("legend");
+            legend.textContent = liveGroup.label;
+            fieldset.append(legend); group.append(fieldset); target = fieldset;
+          }
+          for (const live of liveGroup.fields) {
           const descriptor = inputs.find(([key]) => key === live.field)?.[1];
           if (!descriptor) throw new Error(`Unknown live input: ${live.field}`);
           const label = document.createElement("label");
@@ -230,11 +332,13 @@ export function defineUI<P extends object, M extends ModelInstance>(
           } else {
             const input = document.createElement("input");
             input.type =
-              descriptor.kind === "boolean"
-                ? "checkbox"
-                : descriptor.kind === "number"
-                  ? "number"
-                  : "text";
+              live.widget === "color"
+                ? "color"
+                : descriptor.kind === "boolean"
+                  ? "checkbox"
+                  : descriptor.kind === "number"
+                    ? "number"
+                    : "text";
             if (descriptor.min !== undefined)
               input.min = String(descriptor.min);
             if (descriptor.max !== undefined)
@@ -254,12 +358,12 @@ export function defineUI<P extends object, M extends ModelInstance>(
             control.checked = Boolean(descriptor.default);
           else control.value = String(descriptor.default);
           control.name = `live-${live.field}`;
-          const readControl = () =>
+          const readControl = () => decodeControl(descriptor,
             descriptor.kind === "boolean"
               ? (control as HTMLInputElement).checked
               : descriptor.kind === "number"
-                ? Number(control.value)
-                : control.value;
+                ? (control as HTMLInputElement).valueAsNumber
+                : control.value);
           setup.registerReader(live.field, readControl);
           control.addEventListener(
             "change",
@@ -267,7 +371,8 @@ export function defineUI<P extends object, M extends ModelInstance>(
               playback.stop();
               if (!control.reportValidity()) return;
               if (!instance) {
-                status.textContent = "Setup values updated.";
+                try { readControl(); status.textContent = "Setup values updated."; }
+                catch (error) { fail(error); }
                 return;
               }
               act((model) => live.set(model, readControl()), "Rule updated.");
@@ -275,12 +380,13 @@ export function defineUI<P extends object, M extends ModelInstance>(
             { signal: events.signal },
           );
           label.append(control);
-          group.append(label);
+          target.append(label);
           liveControls.push({
             control,
             value: live.value,
             enabled: live.enabled,
           });
+          }
         }
       }
       function disposeViews() {
@@ -313,17 +419,36 @@ export function defineUI<P extends object, M extends ModelInstance>(
               dispose: () => adapter.dispose(),
             });
           } else if (view.type === "grid" || view.type === "spatial") {
-            const adapter = mountCanvas(figure, pick);
+            const adapter = mountCanvas(
+              figure,
+              pick,
+              spec.drawing
+                ? (intent) => {
+                    playback.stop();
+                    act(
+                      (model) => spec.drawing!.intent(model, intent),
+                      "Drawing updated.",
+                    );
+                  }
+                : undefined,
+            );
             views.push({
-              render: (state) => adapter.update(view.data(state), selected),
+              render: (state) =>
+                adapter.update(
+                  view.data(state),
+                  selected,
+                  Boolean(spec.drawing?.enabled(state)) &&
+                    (!spec.drawing?.toggleLabel || drawingRequested),
+                ),
               dispose: () => adapter.dispose(),
+              stopDrawing: () => adapter.stopDrawing(),
             });
           } else if (
             view.type === "line" ||
             view.type === "bar" ||
             view.type === "scatter"
           ) {
-            const adapter = mountChart(figure, view.type);
+            const adapter = mountChart(figure, view.type, { xAxis: view.xAxis, yAxis: view.yAxis });
             views.push({
               render: (state) => adapter.update(view.series(state)),
               dispose: () => adapter.dispose(),
@@ -390,6 +515,8 @@ export function defineUI<P extends object, M extends ModelInstance>(
         (event) => {
           event.preventDefault();
           playback.stop();
+          stopRepeats();
+          resetDrawing();
           if (!setup.form.reportValidity()) return;
           let next: M | undefined;
           try {
@@ -449,11 +576,14 @@ export function defineUI<P extends object, M extends ModelInstance>(
       return {
         pause() {
           playback.stop();
+          stopRepeats();
         },
         dispose() {
           if (disposed) return;
+          resetDrawing();
           disposed = true;
           playback.stop();
+          stopRepeats();
           events.abort();
           disposeViews();
           instance?.dispose?.();

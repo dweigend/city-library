@@ -1,6 +1,8 @@
 # Agent Loom API reference
 
-&gt; **Binding target reference.** The signatures and examples below define the phase-one target. Only the bounded subsets recorded in PLAN.md and the delivery inventory are implemented; do not infer availability from a signature here.
+This reference defines how the Agent Loom API should behave: inputs, results, mutations, validation and errors. Use it when writing or extending a model.
+
+> **Target specification.** The signatures and examples define the required core API. Only the subsets recorded in [PLAN](../../PLAN.md) and the [coverage inventory](../development/coverage.md) are implemented. Check public exports and runnable examples before using an operation.
 
 [Overview](README.md) · [API inventory](api-table.md)
 

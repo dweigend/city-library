@@ -1,0 +1,121 @@
+## WHAT IS IT?
+
+This is a model of a "signaling game", in which players try to use different signals to communicate about the current state of the world.
+
+Signaling games were discussed by the philosopher David Lewis in his book _Convention_. Lewis uses the example of Paul Revere, who during the American Revolution, asked the custodian of the Old North church to use the following signals to warn the American patriots about the movements of the British army:
+
+- If the British troops are coming by sea, hang two lanterns in the church steeple;
+- If the British troops are coming by land, hang one lantern in the church steeple;
+- If the British troop are not coming, don't hang any lantern.
+
+This is just one example. Signals are everywhere. Airport marshallers use hand signals to direct planes on a runway. Boats use flags to warn the crew of other boats about certain situations ("there has been a mutiny on board", "we're carrying explosives", etc.)
+
+Communication systems work even if the signals used to represent world states have nothing in common with the state they represent. You don't need something that looks like a boat to represent the fact that the British troops are coming by boat. All that is needed is for everyone involved to agree that a particular signal represents a particular state of the world: when that happens, we say that everyone shares the same "convention".
+
+David Lewis' signaling game assumes that agents already have an agreed upon convention and that they are rational enough to follow it. Another philosopher, Brian Skyrms showed that it was possible for a convention to emerge even if agents have not agreed in advance about which signal to use for which state.
+
+Skyrms used a very simple version of the signaling game, with only two states and two signals. The players start by using random signals to represent different world states. Sometimes communication fails: the "receiver" interprets the signal to mean a different state than what the "sender" meant. But sometimes communication succeeds, and when it succeeds, the association between the state and the signal is reinforced. With time, it is possible for both players to converge on a convention.
+
+Our version of the signaling game allows you to experiment with up to eight possible states and eight signals.
+
+## HOW IT WORKS
+
+Blue circles at the top of the view represent different possible world states. They are labeled with letters.
+
+Pink squares at the bottom represent possible signals. They are labeled with numbers. (You can think of those as the number of lanterns to hang if you want to.)
+
+In the middle of the view, there is a "sender" and a "receiver".
+
+The sender perceives the active world state and is trying to communicate it to the receiver (who cannot perceive the world state directly) using one of the possible signals.
+
+If the communication is successful, then both players are happy and the connection between that state and that signal is reinforced for the both the sender and the receiver.
+
+Here is the detailed sequence of actions happening in the model at each tick:
+
+1. First, a random world state is selected. The corresponding circle becomes highlighted.
+
+2. The sender perceives that world state. That’s represented by the thin gray arrow between the highlighted world state and the sender.
+
+3. The sender chooses a signal to communicate that world state to the receiver. That’s represented by the thick white arrow between the sender and the signal.
+
+4. The receiver perceives the chosen signal. That’s the thin gray arrow between signal and receiver.
+
+5. The receiver chooses an action appropriate for the world state that he thinks the signal represents. That’s the thick arrow between receiver and world state. If the receiver selected the correct state, that arrow turns green and the players are happy. When the choice is not correct, the arrow turns red and the players are sad.
+
+## HOW TO USE IT
+
+There are only two parameters for this models: the NUMBER-OF-STATES and the NUMBER-OF-SIGNALS. Once you have chosen the values that you want for these two sliders, click SETUP to initialize the model and then GO (or GO ONCE) to run it.
+
+The PROBABILITY OF SUCCESS plot (and the monitor by the same name) show how likely it is that a round of communication will be successful.
+
+The TIMES WRONG, TIMES CORRECT and SUCCESS RATE monitors show what happened so far in the simulation.
+
+The OUTPUT WINDOW to the right of the view displays two probability tables: one for the sender and one for the receiver. For the sender, those are the probabilities of using a particular signal when observing a given state. For the receiver, those are the probabilities of interpreting a given signal to mean a particular state. Those probabilities are rounded to the nearest integer, so it's possible that a column or a row doesn't add up to exactly 100.
+
+The display of probabilities in the OUTPUT WINDOW can be switched on and off using the PRINT-PROBABILITIES? slider.
+
+## THINGS TO NOTICE
+
+Slow down the model using the speed slider: this will make the sequence of actions more explicit.
+
+When there are two possible world states, the probability of successful communication starts at 50%. If there are four possible states, it starts at 25%. Changing the number of possible signals does not affect the initial probability of success. Can you explain why?
+
+As time go by, the SUCCESS RATE should get closer to the PROBABILITY OF SUCCESS, but it may not ever reach 100%. Can you explain why?
+
+When more than one state map to the same signal, we call this a "bottleneck". When more than one signal map to the same world state, we call those signals "synonyms". Bottlenecks happen when there are more possible states than signals. Synonyms can happen when there are more signals than states. Can you use the probability tables displayed in the OUTPUT WINDOW to identify bottlenecks and synonyms?
+
+## THINGS TO TRY
+
+In the paper that inspired this model, Brian Skyrms (2006) asks: "Suppose there are too many signals. Do synonyms persist, or do some signals fall out of use until only the number required to identify the states remain in use?"
+
+Another question is: "Suppose there are too few signals. Then there is, of necessity, an information bottleneck. Does efficient signaling evolve; do the players learn to do as well as possible?"
+
+Can you use the model to answer these two questions?
+
+## EXTENDING THE MODEL
+
+What if both players could take turns acting as senders and receivers? Would it converge faster?
+
+Can you change the model to accommodate more than two players? Each player could be paired with another at each tick and send a signal to that partner. If that was the case, do you think that a consensual signaling system would emerge in the community?
+
+## NETLOGO FEATURES
+
+The model makes an extensive use of links to represent associations between the entities in the model. Urns, for example, play a very important role in the model even if they don't appear in the view.
+
+The various reporters called by the `print-probabilities` procedure use higher-order list functions ([`map`](http://ccl.northwestern.edu/netlogo/docs/dictionary.html#map) and [`reduce`](http://ccl.northwestern.edu/netlogo/docs/dictionary.html#map)) to nicely format probability tables of varying height and width. This is advanced NetLogo code, but it shows that NetLogo can be very flexible in the way it displays information.
+
+## CREDITS AND REFERENCES
+
+- Skyrms, B. (2006). [Signals](www.socsci.uci.edu/~bskyrms/bio/other/Presidential%20Address.pdf). Presidential Address, Philosophy of Science Association, for PSA 2006.
+
+- Lewis, D. (1969). Convention. Cambridge, MA: Harvard University Press.
+
+- https://en.wikipedia.org/wiki/Signaling_game
+
+Thanks to Ryan Muldoon for his help with this model.
+
+## HOW TO CITE
+
+If you mention this model or the NetLogo software in a publication, we ask that you include the citations below.
+
+For the model itself:
+
+* Wilensky, U. (2016).  NetLogo Signaling Game model.  http://ccl.northwestern.edu/netlogo/models/SignalingGame.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
+
+Please cite the NetLogo software as:
+
+* Wilensky, U. (1999). NetLogo. http://ccl.northwestern.edu/netlogo/. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
+
+## COPYRIGHT AND LICENSE
+
+Copyright 2016 Uri Wilensky.
+
+![CC BY-NC-SA 3.0](http://ccl.northwestern.edu/images/creativecommons/byncsa.png)
+
+This model is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License.  To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
+
+NetLogo itself is free software for non-commercial use under the terms of the GNU General Public License ([see full license information here](https://ccl.northwestern.edu/netlogo/docs/copyright.html)).
+
+To inquire about commercial licenses for either NetLogo or specific models from the models library, please contact netlogo-commercial-admin@ccl.northwestern.edu.
+
+<!-- 2016 -->

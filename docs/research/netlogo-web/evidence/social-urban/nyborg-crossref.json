@@ -1,0 +1,749 @@
+{
+  "consultedUrl": "https://api.crossref.org/works/10.1126%2Fscience.aaf8317",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work",
+    "message-version": "1.0.0",
+    "message": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            11,
+            5
+          ]
+        ],
+        "date-time": "2026-11-05T21:57:08Z",
+        "timestamp": 1793915828431,
+        "version": "4.8.0"
+      },
+      "reference-count": 15,
+      "publisher": "American Association for the Advancement of Science (AAAS)",
+      "issue": "6308",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2017,
+                10,
+                7
+              ]
+            ],
+            "date-time": "2017-10-07T00:00:00Z",
+            "timestamp": 1507334400000
+          },
+          "content-version": "vor",
+          "delay-in-days": 365,
+          "URL": "http://www.sciencemag.org/about/science-licenses-journal-article-reuse"
+        }
+      ],
+      "funder": [
+        {
+          "DOI": "10.13039/501100001725",
+          "name": "Beijer Institute of Ecological Economics of the Royal Swedish Academy of Sciences",
+          "doi-asserted-by": "publisher",
+          "id": [
+            {
+              "id": "10.13039/501100001725",
+              "id-type": "DOI",
+              "asserted-by": "publisher"
+            }
+          ]
+        }
+      ],
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [
+        "Science"
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            2016,
+            10,
+            7
+          ]
+        ]
+      },
+      "abstract": "<jats:p>Policies may influence large-scale behavioral tipping</jats:p>",
+      "DOI": "10.1126/science.aaf8317",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2016,
+            10,
+            6
+          ]
+        ],
+        "date-time": "2016-10-06T14:13:31Z",
+        "timestamp": 1475763211000
+      },
+      "page": "42-43",
+      "source": "Crossref",
+      "is-referenced-by-count": 664,
+      "title": [
+        "Social norms as solutions"
+      ],
+      "prefix": "10.1126",
+      "volume": "354",
+      "author": [
+        {
+          "given": "Karine",
+          "family": "Nyborg",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "See supplementary materials for author affiliations."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "John M.",
+          "family": "Anderies",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "See supplementary materials for author affiliations."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Astrid",
+          "family": "Dannenberg",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "See supplementary materials for author affiliations."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Therese",
+          "family": "Lindahl",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "See supplementary materials for author affiliations."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Caroline",
+          "family": "Schill",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "See supplementary materials for author affiliations."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Maja",
+          "family": "Schl\u00fcter",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "See supplementary materials for author affiliations."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "W. Neil",
+          "family": "Adger",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "See supplementary materials for author affiliations."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Kenneth J.",
+          "family": "Arrow",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "See supplementary materials for author affiliations."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Scott",
+          "family": "Barrett",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "See supplementary materials for author affiliations."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Stephen",
+          "family": "Carpenter",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "See supplementary materials for author affiliations."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "suffix": "III",
+          "given": "F. Stuart",
+          "family": "Chapin",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "See supplementary materials for author affiliations."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Anne-Sophie",
+          "family": "Cr\u00e9pin",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "See supplementary materials for author affiliations."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Gretchen",
+          "family": "Daily",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "See supplementary materials for author affiliations."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Paul",
+          "family": "Ehrlich",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "See supplementary materials for author affiliations."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Carl",
+          "family": "Folke",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "See supplementary materials for author affiliations."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Wander",
+          "family": "Jager",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "See supplementary materials for author affiliations."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Nils",
+          "family": "Kautsky",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "See supplementary materials for author affiliations."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Simon A.",
+          "family": "Levin",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "See supplementary materials for author affiliations."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Ole Jacob",
+          "family": "Madsen",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "See supplementary materials for author affiliations."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Stephen",
+          "family": "Polasky",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "See supplementary materials for author affiliations."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Marten",
+          "family": "Scheffer",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "See supplementary materials for author affiliations."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Brian",
+          "family": "Walker",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "See supplementary materials for author affiliations."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Elke U.",
+          "family": "Weber",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "See supplementary materials for author affiliations."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "James",
+          "family": "Wilen",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "See supplementary materials for author affiliations."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Anastasios",
+          "family": "Xepapadeas",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "See supplementary materials for author affiliations."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Aart",
+          "family": "de Zeeuw",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "See supplementary materials for author affiliations."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "221",
+      "reference": [
+        {
+          "key": "e_1_3_3_2_2",
+          "doi-asserted-by": "crossref",
+          "first-page": "137",
+          "DOI": "10.1257/jep.14.3.137",
+          "volume": "14",
+          "author": "Ostrom E.",
+          "year": "2000",
+          "unstructured": "Ostrom E., J. Econ. Perspect. 14, 137 (2000).",
+          "journal-title": "J. Econ. Perspect."
+        },
+        {
+          "key": "e_1_3_3_3_2",
+          "doi-asserted-by": "crossref",
+          "first-page": "323",
+          "DOI": "10.1016/S0167-2681(03)00031-3",
+          "volume": "52",
+          "author": "Nyborg K.",
+          "year": "2003",
+          "unstructured": "Nyborg K., Rege M., J. Econ. Behav. Organ. 52, 323 (2003).",
+          "journal-title": "J. Econ. Behav. Organ."
+        },
+        {
+          "key": "e_1_3_3_4_2",
+          "doi-asserted-by": "crossref",
+          "first-page": "e72945",
+          "DOI": "10.1371/journal.pone.0072945",
+          "volume": "8",
+          "author": "Vardavas C. I.",
+          "year": "2013",
+          "unstructured": "Vardavas C. I., et al.., PLOS ONE 8, e72945 (2013).",
+          "journal-title": "PLOS ONE"
+        },
+        {
+          "key": "e_1_3_3_5_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1146/annurev-economics-080614-115322"
+        },
+        {
+          "key": "e_1_3_3_6_2",
+          "doi-asserted-by": "crossref",
+          "first-page": "591",
+          "DOI": "10.1146/annurev.psych.55.090902.142015",
+          "volume": "55",
+          "author": "Cialdini R. B.",
+          "year": "2004",
+          "unstructured": "Cialdini R. B., Goldstein N. J., Annu. Rev. Psychol. 55, 591 (2004).",
+          "journal-title": "Annu. Rev. Psychol."
+        },
+        {
+          "key": "e_1_3_3_7_2",
+          "doi-asserted-by": "crossref",
+          "DOI": "10.1515/9781400833276",
+          "volume-title": "Critical Transitions in Nature and Society",
+          "author": "Scheffer M.",
+          "year": "2009",
+          "unstructured": "Scheffer M., Critical Transitions in Nature and Society (Princeton Univ. Press, Princeton, NJ, 2009)."
+        },
+        {
+          "key": "e_1_3_3_8_2",
+          "doi-asserted-by": "crossref",
+          "first-page": "832",
+          "DOI": "10.1257/aer.104.3.832",
+          "volume": "104",
+          "author": "Dubois P.",
+          "year": "2014",
+          "unstructured": "Dubois P., Griffith R., Nevo A., Am. Econ. Rev. 104, 832 (2014).",
+          "journal-title": "Am. Econ. Rev."
+        },
+        {
+          "key": "e_1_3_3_9_2",
+          "doi-asserted-by": "crossref",
+          "first-page": "47",
+          "DOI": "10.1007/s10683-010-9257-1",
+          "volume": "14",
+          "author": "Chaudhuri A.",
+          "year": "2011",
+          "unstructured": "Chaudhuri A., Exp. Econ. 14, 47 (2011).",
+          "journal-title": "Exp. Econ."
+        },
+        {
+          "key": "e_1_3_3_10_2",
+          "doi-asserted-by": "crossref",
+          "first-page": "766",
+          "DOI": "10.3368/le.86.4.766",
+          "volume": "86",
+          "author": "Brekke K. A.",
+          "year": "2010",
+          "unstructured": "Brekke K. A., Kipperberg G., Nyborg K., Land Econ. 86, 766 (2010).",
+          "journal-title": "Land Econ."
+        },
+        {
+          "key": "e_1_3_3_11_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/0470024747"
+        },
+        {
+          "key": "e_1_3_3_12_2",
+          "doi-asserted-by": "crossref",
+          "first-page": "10424",
+          "DOI": "10.1073/pnas.1301210110",
+          "volume": "110",
+          "author": "Yoeli E.",
+          "year": "2013",
+          "unstructured": "Yoeli E., Hoffman M., Rand D. G., Nowak M. A., Proc. Natl. Acad. Sci. U.S.A. 110 (suppl. 2), 10424 (2013).",
+          "journal-title": "Proc. Natl. Acad. Sci. U.S.A."
+        },
+        {
+          "key": "e_1_3_3_13_2",
+          "doi-asserted-by": "crossref",
+          "first-page": "34",
+          "DOI": "10.1007/s12544-015-0182-4",
+          "volume": "7",
+          "author": "Aasness M. A.",
+          "year": "2015",
+          "unstructured": "Aasness M. A., Odeck J., Eur. Transp. Res. Rev. 7, 34 (2015).",
+          "journal-title": "Eur. Transp. Res. Rev."
+        },
+        {
+          "key": "e_1_3_3_14_2",
+          "volume-title": "Diffusion of Innovations",
+          "author": "Rogers E. M.",
+          "year": "2003",
+          "unstructured": "Rogers E. M., Diffusion of Innovations (Free Press, New York, ed. 5, 2003).",
+          "edition": "5"
+        },
+        {
+          "key": "e_1_3_3_15_2",
+          "doi-asserted-by": "crossref",
+          "first-page": "566",
+          "DOI": "10.1073/pnas.1514483113",
+          "volume": "113",
+          "author": "Paluck E. L.",
+          "year": "2016",
+          "unstructured": "Paluck E. L., Shepherd H., Aronow P. M., Proc. Natl. Acad. Sci. U.S.A. 113, 566 (2016).",
+          "journal-title": "Proc. Natl. Acad. Sci. U.S.A."
+        },
+        {
+          "key": "e_1_3_3_16_2",
+          "doi-asserted-by": "crossref",
+          "first-page": "429",
+          "DOI": "10.1111/j.1467-9280.2007.01917.x",
+          "volume": "18",
+          "author": "Schultz P. W.",
+          "year": "2007",
+          "unstructured": "Schultz P. W., Nolan J. M., Cialdini R. B., Goldstein N. J., Griskevicius V., Psychol. Sci. 18, 429 (2007).",
+          "journal-title": "Psychol. Sci."
+        }
+      ],
+      "container-title": [
+        "Science"
+      ],
+      "original-title": [],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://www.science.org/doi/pdf/10.1126/science.aaf8317",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2024,
+            1,
+            15
+          ]
+        ],
+        "date-time": "2024-01-15T11:31:59Z",
+        "timestamp": 1705318319000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://www.science.org/doi/10.1126/science.aaf8317"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            2016,
+            10,
+            7
+          ]
+        ]
+      },
+      "references-count": 15,
+      "journal-issue": {
+        "issue": "6308",
+        "published-print": {
+          "date-parts": [
+            [
+              2016,
+              10,
+              7
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "10.1126/science.aaf8317"
+      ],
+      "URL": "https://doi.org/10.1126/science.aaf8317",
+      "relation": {},
+      "ISSN": [
+        "0036-8075",
+        "1095-9203"
+      ],
+      "issn-type": [
+        {
+          "value": "0036-8075",
+          "type": "print"
+        },
+        {
+          "value": "1095-9203",
+          "type": "electronic"
+        }
+      ],
+      "subject": [],
+      "published": {
+        "date-parts": [
+          [
+            2016,
+            10,
+            7
+          ]
+        ]
+      }
+    }
+  }
+}

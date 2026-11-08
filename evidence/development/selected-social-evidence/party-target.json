@@ -1,0 +1,141 @@
+{
+  "marker": "selected-social-b02:party:a86f4b7e1d631f69bf9db2a4ff54d77387a8de802487d536c3f0c1f984ebf272",
+  "chunk": "http://localhost:3112/chunks/ui-xsbrepg3.js",
+  "chunks": [
+    {
+      "url": "http://localhost:3112/chunks/app-cakyt1j7.js",
+      "sha256": "97a2f893efa8c3e92a3bfe5c5cf6ec5967996ce836f64e0c5cae4050a4d58470"
+    },
+    {
+      "url": "http://localhost:3112/chunks/ui-xsbrepg3.js",
+      "sha256": "3c9bca0eefd3aafe2b5162e56bfedc2634c266f0cb3be0352f98d58ba9f4930e"
+    }
+  ],
+  "buildVersion": "1793961065493",
+  "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+  "defaults": {
+    "seed": 1,
+    "number": 70,
+    "numGroups": 10,
+    "tolerance": 25
+  },
+  "setupTick": 0,
+  "setupMonitors": {
+    "Tick": "0",
+    "Happy": "11",
+    "Single-sex groups": "0"
+  },
+  "setupStatus": "Model initialized.",
+  "setupRaster": [
+    {
+      "width": 1344,
+      "height": 1587,
+      "sampledColors": 24
+    }
+  ],
+  "duplicateFields": [],
+  "errors": [],
+  "targetProbeTick": 10,
+  "progressMonitors": {
+    "Tick": "10",
+    "Happy": "38",
+    "Single-sex groups": "4"
+  },
+  "status": "Steps completed.",
+  "historyLength": 11,
+  "diagnostic": null,
+  "raster": [
+    {
+      "width": 1344,
+      "height": 1587,
+      "sampledColors": 32
+    }
+  ],
+  "mobileLight": {
+    "viewport": [
+      390,
+      844
+    ],
+    "scrollWidth": 390,
+    "overflow": false,
+    "background": "rgb(255, 255, 255)",
+    "raster": [
+      {
+        "width": 716,
+        "height": 845,
+        "sampledColors": 45
+      }
+    ]
+  },
+  "uiChecks": {
+    "run": true,
+    "paused": true,
+    "running": {
+      "Tick": "16",
+      "Happy": "63",
+      "Single-sex groups": "8"
+    },
+    "pause": {
+      "Tick": "16",
+      "Happy": "63",
+      "Single-sex groups": "8"
+    },
+    "stable": {
+      "Tick": "16",
+      "Happy": "63",
+      "Single-sex groups": "8"
+    },
+    "actions": [],
+    "liveTest": {
+      "name": "live-tolerance",
+      "before": "25",
+      "changed": "99",
+      "afterSetup": "99",
+      "status": "Model initialized.",
+      "resetMonitors": {
+        "Tick": "0",
+        "Happy": "70",
+        "Single-sex groups": "0"
+      }
+    },
+    "resetMonitors": {
+      "Tick": "0",
+      "Happy": "70",
+      "Single-sex groups": "0"
+    },
+    "infoHasOriginal": true,
+    "inspector": null,
+    "errors": [],
+    "unlabeled": [],
+    "overflow": false
+  },
+  "publicBrowserProbe": {
+    "slug": "party",
+    "assertions": 3,
+    "evidence": {
+      "tick": 2,
+      "groups": [
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "stopped": true
+    }
+  },
+  "keyboardFocus": {
+    "tag": "BUTTON",
+    "text": "Run",
+    "outlineStyle": "solid",
+    "outlineWidth": "2px",
+    "focusedVisible": true
+  },
+  "images": {
+    "setup-light": "party-target-setup-light.png",
+    "progress-light": "party-target-progress-light.png",
+    "desktop-dark": "party-target-desktop-dark.png",
+    "mobile-light": "party-target-mobile-light.png",
+    "mobile-dark": "party-target-mobile-dark.png"
+  }
+}

@@ -1,0 +1,69 @@
+## WHAT IS IT?
+
+This model is an example of random selection. It shows that turtles that randomly exchange colors converge on a single color.  The idea, explained in more detail in Dennett's "Darwin's Dangerous Idea", is that trait drifts can occur without any particular purpose or "selective pressure".
+
+## HOW IT WORKS
+
+The model starts with a random distribution of colored agents.  Turtles move by wiggling randomly across the world. When two turtles are next to each other, one turtle changes its color to the color of the other one.  Note that if a color dies out, it can never come back.
+
+## HOW TO USE IT
+
+The NUMBER slider sets the number of turtles. The COLORS slider selects the number of competing colors, up to ten.
+
+The SETUP button initializes the model, and GO runs the model.
+
+A monitor shows the percentage of turtles sharing the most common color.  When this reaches 100%, the model stops.
+
+After pressing PLACE-WALLS, the user can "draw" walls in the world at the location where the user clicks with the mouse.  By pressing REMOVE-WALLS, the user can remove added walls.  The REMOVE-ALL-WALLS button removes all walls including the border.  (The SETUP button does not remove walls.)
+
+## THINGS TO NOTICE
+
+Gradually a color will gain a slight dominance. By statistical advantage, a dominant color becomes more likely to have more colors like it.  However, because the process is random, there will usually be a series of dominant colors before one color finally wins.
+
+## THINGS TO TRY
+
+Experiment with adding walls.
+
+When walls are added, groups of individuals can be geographically isolated so that they can not interact with their neighbors on the other side of the wall. Groups that are geographically isolated with walls will often end up with a different dominant color than the larger population.  A group of individuals that is walled off becomes a "founding group".  The founding group of individuals has a different genetic variability and distribution than the main population, so the frequency of certain traits may end up drifting in a different direction compared with the much larger population.
+
+## EXTENDING THE MODEL
+
+In this model, a turtle looks one patch to its right.  If there's another turtle there, the "looking" turtle changes to that turtle's color.  Since the turtles move randomly about the world, it's a matter of chance which turtle will change to the color of its neighbor.
+
+Think of other rules for turtle interactions, random or otherwise, by which a turtle color might "take over".
+
+## RELATED MODELS
+
+* GenDrift (P Global)
+* GenDrift (P local)
+* GenDrift (T reproduce)
+
+## HOW TO CITE
+
+If you mention this model or the NetLogo software in a publication, we ask that you include the citations below.
+
+For the model itself:
+
+* Wilensky, U. (1997).  NetLogo GenDrift T interact model.  http://ccl.northwestern.edu/netlogo/models/GenDriftTinteract.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
+
+Please cite the NetLogo software as:
+
+* Wilensky, U. (1999). NetLogo. http://ccl.northwestern.edu/netlogo/. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
+
+## COPYRIGHT AND LICENSE
+
+Copyright 1997 Uri Wilensky.
+
+![CC BY-NC-SA 3.0](http://ccl.northwestern.edu/images/creativecommons/byncsa.png)
+
+This model is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License.  To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
+
+NetLogo itself is free software for non-commercial use under the terms of the GNU General Public License ([see full license information here](https://ccl.northwestern.edu/netlogo/docs/copyright.html)).
+
+To inquire about commercial licenses for either NetLogo or specific models from the models library, please contact netlogo-commercial-admin@ccl.northwestern.edu.
+
+This model was created as part of the project: CONNECTED MATHEMATICS: MAKING SENSE OF COMPLEX PHENOMENA THROUGH BUILDING OBJECT-BASED PARALLEL MODELS (OBPML).  The project gratefully acknowledges the support of the National Science Foundation (Applications of Advanced Technologies Program) -- grant numbers RED #9552950 and REC #9632612.
+
+This model was converted to NetLogo as part of the projects: PARTICIPATORY SIMULATIONS: NETWORK-BASED DESIGN FOR SYSTEMS LEARNING IN CLASSROOMS and/or INTEGRATED SIMULATION AND MODELING ENVIRONMENT. The project gratefully acknowledges the support of the National Science Foundation (REPP & ROLE programs) -- grant numbers REC #9814682 and REC-0126227. Converted from StarLogoT to NetLogo, 2001.
+
+<!-- 1997 2001 -->

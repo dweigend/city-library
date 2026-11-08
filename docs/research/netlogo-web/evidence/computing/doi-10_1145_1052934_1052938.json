@@ -1,0 +1,395 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          24
+        ]
+      ],
+      "date-time": "2026-10-24T17:43:22Z",
+      "timestamp": 1792863802029,
+      "version": "4.5.0"
+    },
+    "reference-count": 27,
+    "publisher": "Association for Computing Machinery (ACM)",
+    "issue": "1",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2005,
+              2,
+              1
+            ]
+          ],
+          "date-time": "2005-02-01T00:00:00Z",
+          "timestamp": 1107216000000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://www.acm.org/publications/policies/copyright_policy#Background"
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "dl.acm.org"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "ACM Trans. Internet Technol."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2005,
+          2
+        ]
+      ]
+    },
+    "abstract": "<jats:p>Although the interest of a Web page is strictly related to its content and to the subjective readers' cultural background, a measure of the page authority can be provided that only depends on the topological structure of the Web. PageRank is a noticeable way to attach a score to Web pages on the basis of the Web connectivity. In this article, we look inside PageRank to disclose its fundamental properties concerning stability, complexity of computational scheme, and critical role of parameters involved in the computation. Moreover, we introduce a circuit analysis that allows us to understand the distribution of the page score, the way different Web communities interact each other, the role of dangling pages (pages with no outlinks), and the secrets for promotion of Web pages.</jats:p>",
+    "DOI": "10.1145/1052934.1052938",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2005,
+          8,
+          3
+        ]
+      ],
+      "date-time": "2005-08-03T04:30:55Z",
+      "timestamp": 1123043455000
+    },
+    "page": "92-128",
+    "update-policy": "https://doi.org/10.1145/crossmark-policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 388,
+    "title": [
+      "Inside PageRank"
+    ],
+    "prefix": "10.1145",
+    "volume": "5",
+    "author": [
+      {
+        "given": "Monica",
+        "family": "Bianchini",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "University of Siena, Siena, Italy"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Marco",
+        "family": "Gori",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Siena, Siena, Italy"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Franco",
+        "family": "Scarselli",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Siena, Siena, Italy"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "320",
+    "published-online": {
+      "date-parts": [
+        [
+          2005,
+          2
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "e_1_2_1_1_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/290941.290972"
+      },
+      {
+        "key": "e_1_2_1_2_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/12.936235"
+      },
+      {
+        "key": "e_1_2_1_3_1",
+        "volume-title": "Numerical Methods for Least Squares Problems",
+        "author": "Bj\u00f6rck A.",
+        "unstructured": "Bj\u00f6rck , A. 1996. Numerical Methods for Least Squares Problems . Society for Industrial and Applied Mathematics . Bj\u00f6rck, A. 1996. Numerical Methods for Least Squares Problems. Society for Industrial and Applied Mathematics."
+      },
+      {
+        "key": "e_1_2_1_4_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/0096-3003(94)90138-4"
+      },
+      {
+        "key": "e_1_2_1_5_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/BF01101972"
+      },
+      {
+        "key": "e_1_2_1_6_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/371920.372096"
+      },
+      {
+        "key": "e_1_2_1_7_1",
+        "first-page": "37",
+        "article-title": "What can you do with a web in your pocket? IEEE Bulle",
+        "volume": "21",
+        "author": "Brin S.",
+        "year": "1998",
+        "unstructured": "Brin , S. , Motwani , R. , Page , L. , and Winograd , T. 1998 . What can you do with a web in your pocket? IEEE Bulle . Techn. Comm. Data Eng., IEEE Comput. Soc. 21 , 2, 37 -- 47 . Brin, S., Motwani, R., Page, L., and Winograd, T. 1998. What can you do with a web in your pocket? IEEE Bulle. Techn. Comm. Data Eng., IEEE Comput. Soc. 21, 2, 37--47.",
+        "journal-title": "Techn. Comm. Data Eng., IEEE Comput. Soc."
+      },
+      {
+        "key": "e_1_2_1_8_1",
+        "volume-title": "Proceedings of the 7th World Wide Web Conference (WWW7).",
+        "author": "Brin S.",
+        "unstructured": "Brin , S. and Page , L . 1998. The anatomy of a large--scale hypertextual Web search engine . In Proceedings of the 7th World Wide Web Conference (WWW7). Brin, S. and Page, L. 1998. The anatomy of a large--scale hypertextual Web search engine. In Proceedings of the 7th World Wide Web Conference (WWW7)."
+      },
+      {
+        "key": "e_1_2_1_9_1",
+        "volume-title": "Tech. Rep. 1999-66",
+        "author": "Brin S.",
+        "year": "1999",
+        "unstructured": "Brin , S. , Page , L. , Motwani , R. , and Winograd , T . 1999 . The PageRank citation ranking: Bringing order to the Web . Tech. Rep. 1999-66 , Stanford University . Available on the Internet at http://dbpubs.stanford.edu:8090/pub/1999-66. Brin, S., Page, L., Motwani, R., and Winograd, T. 1999. The PageRank citation ranking: Bringing order to the Web. Tech. Rep. 1999-66, Stanford University. Available on the Internet at http://dbpubs.stanford.edu:8090/pub/1999-66."
+      },
+      {
+        "key": "e_1_2_1_10_1",
+        "volume-title": "Proceedings of 17th International Conference on Machine Learning. Morgan Kaufmann",
+        "author": "Cohn D.",
+        "unstructured": "Cohn , D. and Chang , H . 2000. Learning to probabilistically identify authoritative documents . In Proceedings of 17th International Conference on Machine Learning. Morgan Kaufmann , San Francisco, Calif., 167--174. Cohn, D. and Chang, H. 2000. Learning to probabilistically identify authoritative documents. In Proceedings of 17th International Conference on Machine Learning. Morgan Kaufmann, San Francisco, Calif., 167--174."
+      },
+      {
+        "key": "e_1_2_1_11_1",
+        "volume-title": "Proc. Syst. 13",
+        "author": "Cohn D.",
+        "unstructured": "Cohn , D. and Hofmann , T . 2001. The missing link---A probabilistic model of document content and hypertext connectivity. In Neural Inf . Proc. Syst. 13 . Cohn, D. and Hofmann, T. 2001. The missing link---A probabilistic model of document content and hypertext connectivity. In Neural Inf. Proc. Syst. 13."
+      },
+      {
+        "key": "e_1_2_1_12_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/511446.511512"
+      },
+      {
+        "key": "e_1_2_1_13_1",
+        "volume-title": "Matrix computation",
+        "author": "Golub G. H.",
+        "unstructured": "Golub , G. H. and Van Loan , C. F. 1993. Matrix computation . The Johns Hopkins University Press . Golub, G. H. and Van Loan, C. F. 1993. Matrix computation. The Johns Hopkins University Press."
+      },
+      {
+        "key": "e_1_2_1_15_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/511446.511513"
+      },
+      {
+        "key": "e_1_2_1_16_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/4236.895141"
+      },
+      {
+        "key": "e_1_2_1_17_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/324133.324140"
+      },
+      {
+        "key": "e_1_2_1_18_1",
+        "volume-title": "Proceedings of the 9th World Wide Web Conference (WWW9). Elsevier Science, 387--401",
+        "author": "Lempel R.",
+        "unstructured": "Lempel , R. and Moran , S . 2000. The stochatic approach for link--structure analysis (SALSA) and the TKC effect . In Proceedings of the 9th World Wide Web Conference (WWW9). Elsevier Science, 387--401 . Lempel, R. and Moran, S. 2000. The stochatic approach for link--structure analysis (SALSA) and the TKC effect. In Proceedings of the 9th World Wide Web Conference (WWW9). Elsevier Science, 387--401."
+      },
+      {
+        "key": "e_1_2_1_19_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/S0169-7552(97)00036-6"
+      },
+      {
+        "key": "e_1_2_1_20_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Motwani R. and Raghavan P. 1995. Randomized algorithms. Cambridge University Press.   Motwani R. and Raghavan P. 1995. Randomized algorithms. Cambridge University Press.",
+        "DOI": "10.1017/CBO9780511814075"
+      },
+      {
+        "key": "e_1_2_1_21_1",
+        "volume-title": "Proceedings of International Conference on Research and Development in Information Retrieval (SIGIR",
+        "author": "Ng A. Y.",
+        "year": "2001",
+        "unstructured": "Ng , A. Y. , Zheng , A. X. , and Jordan , M. I . 2001a. Link analysis, eigenvectors and stability . In Proceedings of International Conference on Research and Development in Information Retrieval (SIGIR 2001 ). ACM, New York. Ng, A. Y., Zheng, A. X., and Jordan, M. I. 2001a. Link analysis, eigenvectors and stability. In Proceedings of International Conference on Research and Development in Information Retrieval (SIGIR 2001). ACM, New York."
+      },
+      {
+        "key": "e_1_2_1_22_1",
+        "volume-title": "Proceedings of International Joint Conference on Artificial Intelligence (IJCAI'2001)",
+        "author": "Ng A. Y.",
+        "unstructured": "Ng , A. Y. , Zheng , A. X. , and Jordan , M. I . 2001b. Stable algorithms for link analysis . In Proceedings of International Joint Conference on Artificial Intelligence (IJCAI'2001) . Ng, A. Y., Zheng, A. X., and Jordan, M. I. 2001b. Stable algorithms for link analysis. In Proceedings of International Joint Conference on Artificial Intelligence (IJCAI'2001)."
+      },
+      {
+        "key": "e_1_2_1_23_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/S0169-7552(98)00061-0"
+      },
+      {
+        "key": "e_1_2_1_24_1",
+        "unstructured": "Richardson M. and Domingos P. 2002. The intellingent surfer: probabilistic combination of link and content information in pagerank. In Advances in Neural Information Processing Systems 14. MIT Press Cambridge Mass.  Richardson M. and Domingos P. 2002. The intellingent surfer: probabilistic combination of link and content information in pagerank. In Advances in Neural Information Processing Systems 14. MIT Press Cambridge Mass."
+      },
+      {
+        "key": "e_1_2_1_25_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/323533a0"
+      },
+      {
+        "key": "e_1_2_1_26_1",
+        "first-page": "112",
+        "article-title": "Non-negative matrices and Markov chains. Springer-Verlag, New York",
+        "volume": "4",
+        "author": "Seneta E.",
+        "year": "1981",
+        "unstructured": "Seneta , E. 1981 . Non-negative matrices and Markov chains. Springer-Verlag, New York , Chap. 4 , pp. 112 -- 158 . Seneta, E. 1981. Non-negative matrices and Markov chains. Springer-Verlag, New York, Chap. 4, pp. 112--158.",
+        "journal-title": "Chap."
+      },
+      {
+        "key": "e_1_2_1_27_1",
+        "unstructured": "Varga R. S. 1962. Matrix Iterative Analysis. Prentice--Hall Englewood Cliffs N.J.  Varga R. S. 1962. Matrix Iterative Analysis. Prentice--Hall Englewood Cliffs N.J."
+      },
+      {
+        "key": "e_1_2_1_28_1",
+        "volume-title": "Proceedings of the 9th International World Wide Web Conference (WWW9). Elsevier Science",
+        "author": "Zhang D.",
+        "unstructured": "Zhang , D. and Dong , Y . 2000. An efficient algorithm to rank web resources . In Proceedings of the 9th International World Wide Web Conference (WWW9). Elsevier Science , Amsterdam, The Netherlands. Zhang, D. and Dong, Y. 2000. An efficient algorithm to rank web resources. In Proceedings of the 9th International World Wide Web Conference (WWW9). Elsevier Science, Amsterdam, The Netherlands."
+      }
+    ],
+    "container-title": [
+      "ACM Transactions on Internet Technology"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://dl.acm.org/doi/10.1145/1052934.1052938",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://dl.acm.org/doi/pdf/10.1145/1052934.1052938",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2025,
+          6,
+          18
+        ]
+      ],
+      "date-time": "2025-06-18T18:43:27Z",
+      "timestamp": 1750272207000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://dl.acm.org/doi/10.1145/1052934.1052938"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2005,
+          2
+        ]
+      ]
+    },
+    "references-count": 27,
+    "journal-issue": {
+      "issue": "1",
+      "published-print": {
+        "date-parts": [
+          [
+            2005,
+            2
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "10.1145/1052934.1052938"
+    ],
+    "URL": "https://doi.org/10.1145/1052934.1052938",
+    "relation": {},
+    "ISSN": [
+      "1533-5399",
+      "1557-6051"
+    ],
+    "issn-type": [
+      {
+        "value": "1533-5399",
+        "type": "print"
+      },
+      {
+        "value": "1557-6051",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2005,
+          2
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "2005-02-01",
+        "order": 2,
+        "name": "published",
+        "label": "Published",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      }
+    ]
+  }
+}

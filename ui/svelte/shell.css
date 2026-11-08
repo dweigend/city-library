@@ -1,0 +1,14 @@
+.lab-shell { max-width: 96rem; margin-inline: auto; padding: 1rem 1.5rem; }
+.lab-header { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; margin-bottom: .5rem; }
+.lab-header h1 { font-size: 1rem; font-weight: 600; white-space: nowrap; }
+.lab-chooser { display: flex; align-items: center; gap: .5rem; min-width: 0; flex: 1; }
+.lab-chooser > input { max-width: 14rem; }
+.lab-chooser > button { width: min(100%, 26rem); min-width: 0; }
+.lab-skip { position: fixed; top: .5rem; left: .5rem; transform: translateY(-200%); background: var(--background); padding: .5rem; }
+.lab-skip:focus { transform: translateY(0); z-index: 20; }
+@media (max-width: 760px) {
+  .lab-shell { padding: .75rem; }
+  .lab-header { gap: .5rem; }
+  .lab-chooser { flex-wrap: wrap; flex-basis: 100%; }
+  .lab-chooser > input, .lab-chooser > button { max-width: none; width: 100%; }
+}

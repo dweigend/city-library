@@ -1,0 +1,318 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fnature20801%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1038/nature20801\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "28102267",
+          "source": "MED",
+          "pmid": "28102267",
+          "doi": "10.1038/nature20801",
+          "title": "A theoretical foundation for multi-scale regular vegetation patterns.",
+          "authorString": "Tarnita CE, Bonachela JA, Sheffer E, Guyton JA, Coverdale TC, Long RA, Pringle RM.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Tarnita CE",
+                "lastName": "Tarnita",
+                "firstName": "Corina E",
+                "initials": "CE",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-4476-0012"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Ecology and Evolutionary Biology, Princeton University, Princeton, New Jersey 08544, USA."
+                    },
+                    {
+                      "affiliation": "Mpala Research Center, PO Box 555, Nanyuki, Kenya."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Bonachela JA",
+                "lastName": "Bonachela",
+                "firstName": "Juan A",
+                "initials": "JA",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-3316-8120"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Marine Population Modelling Group, Department of Mathematics and Statistics, University of Strathclyde, Glasgow G1 1XH, Scotland, UK."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Sheffer E",
+                "lastName": "Sheffer",
+                "firstName": "Efrat",
+                "initials": "E",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "The Robert H. Smith Institute for Plant Sciences and Genetics in Agriculture, The Faculty of Agriculture, Hebrew University of Jerusalem, Rehovot 7610001, Israel."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Guyton JA",
+                "lastName": "Guyton",
+                "firstName": "Jennifer A",
+                "initials": "JA",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Ecology and Evolutionary Biology, Princeton University, Princeton, New Jersey 08544, USA."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Coverdale TC",
+                "lastName": "Coverdale",
+                "firstName": "Tyler C",
+                "initials": "TC",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-0910-9187"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Ecology and Evolutionary Biology, Princeton University, Princeton, New Jersey 08544, USA."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Long RA",
+                "lastName": "Long",
+                "firstName": "Ryan A",
+                "initials": "RA",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Fish and Wildlife Services, University of Idaho, Moscow, Idaho 83844, USA."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Pringle RM",
+                "lastName": "Pringle",
+                "firstName": "Robert M",
+                "initials": "RM",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-7487-5393"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Ecology and Evolutionary Biology, Princeton University, Princeton, New Jersey 08544, USA."
+                    },
+                    {
+                      "affiliation": "Mpala Research Center, PO Box 555, Nanyuki, Kenya."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0001-7487-5393"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-3316-8120"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-0910-9187"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-4476-0012"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "related_data",
+              "wikipedia"
+            ]
+          },
+          "journalInfo": {
+            "issue": "7637",
+            "volume": "541",
+            "journalIssueId": 2516723,
+            "dateOfPublication": "2017 Jan",
+            "monthOfPublication": 1,
+            "yearOfPublication": 2017,
+            "journal": {
+              "medlineAbbreviation": "Nature",
+              "title": "Nature",
+              "essn": "1476-4687",
+              "issn": "0028-0836",
+              "nlmid": "0410462",
+              "isoabbreviation": "Nature"
+            },
+            "printPublicationDate": "2017-01-01"
+          },
+          "pubYear": "2017",
+          "pageInfo": "398-401",
+          "abstractText": "Self-organized regular vegetation patterns are widespread and thought to mediate ecosystem functions such as productivity and robustness, but the mechanisms underlying their origin and maintenance remain disputed. Particularly controversial are landscapes of overdispersed (evenly spaced) elements, such as North American Mima mounds, Brazilian murundus, South African heuweltjies, and, famously, Namibian fairy circles. Two competing hypotheses are currently debated. On the one hand, models of scale-dependent feedbacks, whereby plants facilitate neighbours while competing with distant individuals, can reproduce various regular patterns identified in satellite imagery. Owing to deep theoretical roots and apparent generality, scale-dependent feedbacks are widely viewed as a unifying and near-universal principle of regular-pattern formation despite scant empirical evidence. On the other hand, many overdispersed vegetation patterns worldwide have been attributed to subterranean ecosystem engineers such as termites, ants, and rodents. Although potentially consistent with territorial competition, this interpretation has been challenged theoretically and empirically and (unlike scale-dependent feedbacks) lacks a unifying dynamical theory, fuelling scepticism about its plausibility and generality. Here we provide a general theoretical foundation for self-organization of social-insect colonies, validated using data from four continents, which demonstrates that intraspecific competition between territorial animals can generate the large-scale hexagonal regularity of these patterns. However, this mechanism is not mutually exclusive with scale-dependent feedbacks. Using Namib Desert fairy circles as a case study, we present field data showing that these landscapes exhibit multi-scale patterning-previously undocumented in this system-that cannot be explained by either mechanism in isolation. These multi-scale patterns and other emergent properties, such as enhanced resistance to and recovery from drought, instead arise from dynamic interactions in our theoretical framework, which couples both mechanisms. The potentially global extent of animal-induced regularity in vegetation-which can modulate other patterning processes in functionally important ways-emphasizes the need to integrate multiple mechanisms of ecological self-organization.",
+          "affiliation": "Department of Ecology and Evolutionary Biology, Princeton University, Princeton, New Jersey 08544, USA.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, Non-U.S. Gov't",
+              "Research Support, U.S. Gov't, Non-P.H.S.",
+              "Journal Article"
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Animals"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Isoptera",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Plants"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Reproducibility of Results"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Competitive Behavior"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Models, Biological"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Namibia"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Droughts"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Feedback, Physiological"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Grassland"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "pdf",
+                "site": "Unpaywall",
+                "url": "https://strathprints.strath.ac.uk/59574/1/Tarnita_et_al_Nature2017_theoretical_foundation_for_multi_scale_regular_vegetation.pdf"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "pdf",
+                "site": "Unpaywall",
+                "url": "https://strathprints.strath.ac.uk/59574/1/Tarnita_et_al_Nature2017_theoretical_foundation_for_multi_scale_regular_vegetation.pdf"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "pdf",
+                "site": "Unpaywall",
+                "url": "https://strathprints.strath.ac.uk/59574/1/Tarnita_et_al_Nature2017_theoretical_foundation_for_multi_scale_regular_vegetation.pdf"
+              },
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1038/nature20801"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "citedByCount": 85,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "Y",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2017-04-21",
+          "dateOfCreation": "2017-01-20",
+          "dateOfRevision": "2026-10-10",
+          "firstPublicationDate": "2017-01-01",
+          "firstIndexDate": "2017-01-19",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

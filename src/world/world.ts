@@ -12,6 +12,7 @@ import {
   registerFramework,
   requireAgent,
   requireLivingAgent,
+  notifyMembership,
 } from "../agent/lifecycle.ts";
 import { validateOptions } from "../agent/state.ts";
 import { Random, isRandom } from "../random/random.ts";
@@ -158,13 +159,16 @@ function add(
         const record = frameworkRecord(agent);
         if (!record || !["agent", "grid"].includes(record.kind))
           throw new TypeError("Expected Agent or Grid.");
+        if (members.has(agent)) continue;
         members.add(agent);
         record.world = world;
         record.detach = () => {
           members.delete(agent);
           record.world = undefined;
           record.detach = undefined;
+          notifyMembership(world, agent, false);
         };
+        notifyMembership(world, agent, true);
       }
       return (single ? entries[0] : Object.freeze(entries)) as T & readonly T[];
     },

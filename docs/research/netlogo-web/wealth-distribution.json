@@ -1,0 +1,102 @@
+{
+  "slug": "wealth-distribution",
+  "name": "Wealth Distribution",
+  "catalogPath": "Sample Models/Social Science/Economics/Wealth Distribution",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Economics/Wealth%20Distribution.nlogox",
+  "deliveryBatch": "B01",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "The scientific question is whether heterogeneous resource gathering can generate unequal wealth without explicit inheritance. In NetLogo's Wealth Distribution model, agents seek grain, consume it at individual metabolic rates and are replaced after starvation or age-related death. The selected literature connects this mechanism to resource-mediated inequality and distributional inference: Sugarscape supplies the explicitly acknowledged resource-gathering ancestry [1]; wealth-distribution mechanisms offer a contrasting statistical-physics account [2]; tail-fitting methods constrain claims about emergent Pareto behavior [3]. Grain wealth, replacement endowments and spatial access abstract away wages, financial institutions and inherited capital; apparent distributional similarity does not identify the real cause of inequality. The original NetLogo behavior is the baseline for reimplementation. This simulation offers a controlled thought experiment, and agreement with its output does not establish empirical validation.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Economics/Wealth%20Distribution.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Economics/Wealth%20Distribution.nlogox",
+    "revision": "Served NetLogo Web snapshot retrieved 2026-11-05; {'version': 'NetLogo 7.0.4', 'snapToGrid': 'true'}",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served model XML, Procedures and Info retained locally; Info read for mechanism and attribution.",
+    "evidencePath": "evidence/social-urban/wealth-distribution.nlogox",
+    "sha256": "494d5eb5e323f2c88eabd726fecbf88a1e8e6eed3e3bcd6e6ec8f623c8b346fa",
+    "citation": "For the model itself: * Wilensky, U. (1998). NetLogo Wealth Distribution model. http://ccl.northwestern.edu/netlogo/models/WealthDistribution. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "scientificOrigin": "This model is based on a model described in Epstein, J. & Axtell R. (1996). Growing Artificial Societies: Social Science from the Bottom Up. Washington, DC: Brookings Institution Press. For an explanation of Pareto's Law, see https://en.wikipedia.org/wiki/Pareto_principle. For more on the calculation of the Gini index see: * Deltas, George (2003). The Small-Sample Bias of the Gini Coefficient: Results and Implications for Empirical Research. The Review of Economics and Statistics, February 2003, 85(1): 226-234. In particular, note that if one is calculating the Gini index of a sample for the purpose of estimating the value for a larger population, a small correction factor to the method used here may be needed for small samples.",
+    "notes": "This is source research, not runtime execution or approval of the City Library reimplementation. Original model notices remain in the retained source.",
+    "evidenceFile": "evidence/social-urban/wealth-distribution.nlogox"
+  },
+  "publications": [
+    {
+      "id": "sugarscape",
+      "creatorRole": "author",
+      "authors": [
+        "Joshua M. Epstein",
+        "Robert L. Axtell"
+      ],
+      "title": "Growing Artificial Societies: Social Science from the Bottom Up",
+      "year": 1996,
+      "venue": "The MIT Press",
+      "doi": "10.7551/mitpress/3374.001.0001",
+      "url": "https://doi.org/10.7551/mitpress/3374.001.0001",
+      "relevance": "Sugarscape supplies the explicitly acknowledged resource-gathering ancestry",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.bibliographic=Growing+Artificial+Societies+Epstein+Axtell+1996&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "abstract",
+        "access": "Public Crossref registrant metadata; publisher-deposited abstract available",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/sugarscape-crossref.json",
+        "evidenceSummary": "How do social structures and group behaviors arise from the interaction of individuals? Growing Artificial Societies approaches this question with cutting-edge computer simulation techniques. Fundamental collective behaviors such as group formation, cultural transmission, combat, and trade are seen to \"emerge\" from the interaction of individual agents following a few simple rules. In their program, named Sugarscape, Epstein and Axtell begin the development of a \"bottom up\" social science that is capturing the attention of researchers and commentators alike. The study is part of the 2050 Project, a joint venture of the Santa Fe Institute, the World Resources Institute, and the Brookings Institution. The project is an international effort to identify conditions for a sustainable global system in the next century and to design policies to help achieve such a system. Copublished with the Bro",
+        "evidenceFile": "evidence/social-urban/sugarscape-crossref.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "yakovenko",
+      "creatorRole": "author",
+      "authors": [
+        "Victor M. Yakovenko",
+        "J. Barkley Rosser"
+      ],
+      "title": "Colloquium : Statistical mechanics of money, wealth, and income",
+      "year": 2009,
+      "venue": "Reviews of Modern Physics",
+      "doi": "10.1103/revmodphys.81.1703",
+      "url": "https://doi.org/10.1103/revmodphys.81.1703",
+      "relevance": "wealth-distribution mechanisms offer a contrasting statistical-physics account",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1103%2FRevModPhys.81.1703",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; full-text access not established",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/yakovenko-crossref.json",
+        "evidenceSummary": "Bibliographic metadata only; relevance is a bounded theoretical comparison, not a claim to have read inaccessible full text.",
+        "evidenceFile": "evidence/social-urban/yakovenko-crossref.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "clauset",
+      "creatorRole": "author",
+      "authors": [
+        "Aaron Clauset",
+        "Cosma Rohilla Shalizi",
+        "M. E. J. Newman"
+      ],
+      "title": "Power-Law Distributions in Empirical Data",
+      "year": 2009,
+      "venue": "SIAM Review",
+      "doi": "10.1137/070710111",
+      "url": "https://doi.org/10.1137/070710111",
+      "relevance": "tail-fitting methods constrain claims about emergent Pareto behavior",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1137%2F070710111",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "abstract",
+        "access": "Public Crossref registrant metadata; publisher-deposited abstract available",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/clauset-crossref.json",
+        "evidenceSummary": "Power-law distributions occur in many situations of scientific interest and have significant consequences for our understanding of natural and man-made phenomena. Unfortunately, the detection and characterization of power laws is complicated by the large fluctuations that occur in the tail of the distribution—the part of the distribution representing large but rare events—and by the difficulty of identifying the range over which power-law behavior holds. Commonly used methods for analyzing power-law data, such as least-squares fitting, can produce substantially inaccurate estimates of parameters for power-law distributions, and even in cases where such methods return accurate answers they are still unsatisfactory because they give no indication of whether the data obey a power law at all. Here we present a principled statistical framework for discerning and quantifying power-law behavior",
+        "evidenceFile": "evidence/social-urban/clauset-crossref.json"
+      },
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

@@ -1,0 +1,2073 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=A+theoretical+foundation+for+multi-scale+regular+vegetation+patterns+Tarnita+2017&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 3141616,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                24
+              ]
+            ],
+            "date-time": "2026-10-24T21:30:51Z",
+            "timestamp": 1792877451217,
+            "version": "4.5.0"
+          },
+          "reference-count": 60,
+          "publisher": "Springer Science and Business Media LLC",
+          "issue": "7637",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2017,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2017-01-01T00:00:00Z",
+                "timestamp": 1483228800000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "http://www.springer.com/tdm"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "link.springer.com"
+            ],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Nature"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2017,
+                1
+              ]
+            ]
+          },
+          "DOI": "10.1038/nature20801",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2017,
+                1,
+                17
+              ]
+            ],
+            "date-time": "2017-01-17T18:17:52Z",
+            "timestamp": 1484677072000
+          },
+          "page": "398-401",
+          "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 190,
+          "title": [
+            "A theoretical foundation for multi-scale regular vegetation patterns"
+          ],
+          "prefix": "10.1038",
+          "volume": "541",
+          "author": [
+            {
+              "given": "Corina E.",
+              "family": "Tarnita",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Juan A.",
+              "family": "Bonachela",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Efrat",
+              "family": "Sheffer",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Jennifer A.",
+              "family": "Guyton",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Tyler C.",
+              "family": "Coverdale",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Ryan A.",
+              "family": "Long",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Robert M.",
+              "family": "Pringle",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "published-online": {
+            "date-parts": [
+              [
+                2017,
+                1,
+                19
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "BFnature20801_CR1",
+              "doi-asserted-by": "publisher",
+              "first-page": "169",
+              "DOI": "10.1016/j.tree.2007.10.013",
+              "volume": "23",
+              "author": "M Rietkerk",
+              "year": "2008",
+              "unstructured": "Rietkerk, M. & van de Koppel, J. Regular pattern formation in real ecosystems. Trends Ecol. Evol. 23, 169\u2013175 (2008)",
+              "journal-title": "Trends Ecol. Evol."
+            },
+            {
+              "key": "BFnature20801_CR2",
+              "doi-asserted-by": "crossref",
+              "first-page": "53",
+              "DOI": "10.1038/nature08227",
+              "volume": "461",
+              "author": "M Scheffer",
+              "year": "2009",
+              "unstructured": "Scheffer, M. et al. Early-warning signals for critical transitions. Nature 461, 53\u201359 (2009)",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnature20801_CR3",
+              "doi-asserted-by": "publisher",
+              "first-page": "e1000377",
+              "DOI": "10.1371/journal.pbio.1000377",
+              "volume": "8",
+              "author": "RM Pringle",
+              "year": "2010",
+              "unstructured": "Pringle, R. M., Doak, D. F., Brody, A. K., Jocqu\u00e9, R. & Palmer, T. M. Spatial pattern enhances ecosystem functioning in an African savanna. PLoS Biol. 8, e1000377 (2010)",
+              "journal-title": "PLoS Biol."
+            },
+            {
+              "key": "BFnature20801_CR4",
+              "doi-asserted-by": "publisher",
+              "first-page": "651",
+              "DOI": "10.1126/science.1261487",
+              "volume": "347",
+              "author": "JA Bonachela",
+              "year": "2015",
+              "unstructured": "Bonachela, J. A. et al. Termite mounds can increase the robustness of dryland ecosystems to climatic change. Science 347, 651\u2013655 (2015)",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BFnature20801_CR5",
+              "doi-asserted-by": "publisher",
+              "first-page": "72",
+              "DOI": "10.1016/j.palaeo.2014.04.026",
+              "volume": "409",
+              "author": "MD Cramer",
+              "year": "2014",
+              "unstructured": "Cramer, M. D. & Barger, N. N. Are mima-like mounds the consequence of long-term stability of vegetation spatial patterning? Palaeogeogr. Palaeoclimatol. Palaeoecol. 409, 72\u201383 (2014)",
+              "journal-title": "Palaeogeogr. Palaeoclimatol. Palaeoecol."
+            },
+            {
+              "key": "BFnature20801_CR6",
+              "doi-asserted-by": "publisher",
+              "first-page": "e38056",
+              "DOI": "10.1371/journal.pone.0038056",
+              "volume": "7",
+              "author": "WR Tschinkel",
+              "year": "2012",
+              "unstructured": "Tschinkel, W. R. The life cycle and life span of Namibian fairy circles. PLoS ONE 7, e38056 (2012)",
+              "journal-title": "PLoS ONE"
+            },
+            {
+              "key": "BFnature20801_CR7",
+              "doi-asserted-by": "publisher",
+              "first-page": "1618",
+              "DOI": "10.1126/science.1222999",
+              "volume": "339",
+              "author": "N Juergens",
+              "year": "2013",
+              "unstructured": "Juergens, N. The biological underpinnings of Namib Desert fairy circles. Science 339, 1618\u20131621 (2013)",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BFnature20801_CR8",
+              "doi-asserted-by": "publisher",
+              "first-page": "42",
+              "DOI": "10.1111/een.12157",
+              "volume": "40",
+              "author": "K Vlieghe",
+              "year": "2015",
+              "unstructured": "Vlieghe, K., Picker, M., Ross-Gillespie, V. & Erni, B. Herbivory by subterranean termite colonies and the development of fairy circles in SW Namibia. Ecol. Entomol. 40, 42\u201349 (2015)",
+              "journal-title": "Ecol. Entomol."
+            },
+            {
+              "key": "BFnature20801_CR9",
+              "doi-asserted-by": "publisher",
+              "first-page": "12327",
+              "DOI": "10.1073/pnas.1504289112",
+              "volume": "112",
+              "author": "YR Zelnik",
+              "year": "2015",
+              "unstructured": "Zelnik, Y. R., Meron, E. & Bel, G. Gradual regime shifts in fairy circles. Proc. Natl Acad. Sci. USA 112, 12327\u201312331 (2015)",
+              "journal-title": "Proc. Natl Acad. Sci. USA"
+            },
+            {
+              "key": "BFnature20801_CR10",
+              "doi-asserted-by": "publisher",
+              "first-page": "1",
+              "DOI": "10.1111/ecog.00911",
+              "volume": "38",
+              "author": "S Getzin",
+              "year": "2015",
+              "unstructured": "Getzin, S. et al. Adopting a spatially explicit perspective to study the mysterious fairy circles of Namibia. Ecography 38, 1\u201311 (2015)",
+              "journal-title": "Ecography"
+            },
+            {
+              "key": "BFnature20801_CR11",
+              "doi-asserted-by": "publisher",
+              "first-page": "3551",
+              "DOI": "10.1073/pnas.1522130113",
+              "volume": "113",
+              "author": "S Getzin",
+              "year": "2016",
+              "unstructured": "Getzin, S. et al. Discovery of fairy circles in Australia supports self-organization theory. Proc. Natl Acad. Sci. USA 113, 3551\u20133556 (2016)",
+              "journal-title": "Proc. Natl Acad. Sci. USA"
+            },
+            {
+              "key": "BFnature20801_CR12",
+              "doi-asserted-by": "publisher",
+              "first-page": "e70876",
+              "DOI": "10.1371/journal.pone.0070876",
+              "volume": "8",
+              "author": "MD Cramer",
+              "year": "2013",
+              "unstructured": "Cramer, M. D. & Barger, N. N. Are Namibian \u201cfairy circles\u201d the consequence of self-organizing spatial vegetation patterning? PLoS ONE 8, e70876 (2013)",
+              "journal-title": "PLoS ONE"
+            },
+            {
+              "key": "BFnature20801_CR13",
+              "doi-asserted-by": "publisher",
+              "first-page": "20140009",
+              "DOI": "10.1098/rsta.2014.0009",
+              "volume": "372",
+              "author": "C Fernandez-Oto",
+              "year": "2014",
+              "unstructured": "Fernandez-Oto, C., Tlidi, M., Escaff, D. & Clerc, M. G. Strong interaction between plants induces circular barren patches: fairy circles. Phil. Trans. R. Soc. A 372, 20140009 (2014)",
+              "journal-title": "Phil. Trans. R. Soc. A"
+            },
+            {
+              "key": "BFnature20801_CR14",
+              "doi-asserted-by": "publisher",
+              "first-page": "163",
+              "DOI": "10.1051/mmnp/20116109",
+              "volume": "6",
+              "author": "E Meron",
+              "year": "2011",
+              "unstructured": "Meron, E. Modeling dryland landscapes. Math. Model. Nat. Phenom. 6, 163\u2013187 (2011)",
+              "journal-title": "Math. Model. Nat. Phenom."
+            },
+            {
+              "key": "BFnature20801_CR15",
+              "doi-asserted-by": "publisher",
+              "first-page": "680",
+              "DOI": "10.1016/j.jtbi.2006.08.006",
+              "volume": "244",
+              "author": "E Gilad",
+              "year": "2007",
+              "unstructured": "Gilad, E., von Hardenberg, J., Provenzale, A., Shachak, M. & Meron, E. A mathematical model of plants as ecosystem engineers. J. Theor. Biol. 244, 680\u2013691 (2007)",
+              "journal-title": "J. Theor. Biol."
+            },
+            {
+              "key": "BFnature20801_CR16",
+              "doi-asserted-by": "publisher",
+              "first-page": "990",
+              "DOI": "10.1111/j.1600-0587.2010.06694.x",
+              "volume": "34",
+              "author": "V Deblauwe",
+              "year": "2011",
+              "unstructured": "Deblauwe, V., Couteron, P., Lejeune, O., Bogaert, J. & Barbier, N. Environmental modulation of self-organized periodic vegetation patterns in Sudan. Ecography 34, 990\u20131001 (2011)",
+              "journal-title": "Ecography"
+            },
+            {
+              "key": "BFnature20801_CR17",
+              "doi-asserted-by": "publisher",
+              "first-page": "669",
+              "DOI": "10.1111/een.12267",
+              "volume": "40",
+              "author": "S Getzin",
+              "year": "2015",
+              "unstructured": "Getzin, S. et al. Clarifying misunderstandings regarding vegetation self-organisation and spatial patterns of fairy circles in Namibia: a response to recent termite hypotheses. Ecol. Entomol. 40, 669\u2013675 (2015)",
+              "journal-title": "Ecol. Entomol."
+            },
+            {
+              "key": "BFnature20801_CR18",
+              "doi-asserted-by": "publisher",
+              "first-page": "e0140099",
+              "DOI": "10.1371/journal.pone.0140099",
+              "volume": "10",
+              "author": "WR Tschinkel",
+              "year": "2015",
+              "unstructured": "Tschinkel, W. R. Experiments testing the causes of Namibian fairy circles. PLoS ONE 10, e0140099 (2015)",
+              "journal-title": "PLoS ONE"
+            },
+            {
+              "key": "BFnature20801_CR19",
+              "doi-asserted-by": "publisher",
+              "first-page": "265",
+              "DOI": "10.1155/1981/20795",
+              "volume": "88",
+              "author": "SC Levings",
+              "year": "1981",
+              "unstructured": "Levings, S. C. & Traniello, J. Territoriality, nest dispersion, and community structure in ants. Psyche (Stuttg.) 88, 265\u2013319 (1981)",
+              "journal-title": "Psyche (Stuttg.)"
+            },
+            {
+              "key": "BFnature20801_CR20",
+              "doi-asserted-by": "publisher",
+              "first-page": "324",
+              "DOI": "10.1007/s004420000597",
+              "volume": "127",
+              "author": "J Korb",
+              "year": "2001",
+              "unstructured": "Korb, J. & Linsenmair, K. E. The causes of spatial patterning of mounds of a fungus-cultivating termite: results from nearest-neighbour analysis and ecological studies. Oecologia 127, 324\u2013333 (2001)",
+              "journal-title": "Oecologia"
+            },
+            {
+              "key": "BFnature20801_CR21",
+              "doi-asserted-by": "publisher",
+              "first-page": "477",
+              "DOI": "10.1007/s00040-010-0107-0",
+              "volume": "57",
+              "author": "C Grohmann",
+              "year": "2010",
+              "unstructured": "Grohmann, C., Oldeland, J., Stoyan, D. & Linsenmair, K. E. Multi-scale pattern analysis of a mound-building termite species. Insectes Soc. 57, 477\u2013486 (2010)",
+              "journal-title": "Insectes Soc."
+            },
+            {
+              "key": "BFnature20801_CR22",
+              "doi-asserted-by": "publisher",
+              "first-page": "661",
+              "DOI": "10.1111/een.12266",
+              "volume": "40",
+              "author": "N Juergens",
+              "year": "2015",
+              "unstructured": "Juergens, N. et al. Weaknesses in the plant competition hypothesis for fairy circle formation and evidence supporting the sand termite hypothesis. Ecol. Entomol. 40, 661\u2013668 (2015)",
+              "journal-title": "Ecol. Entomol."
+            },
+            {
+              "key": "BFnature20801_CR23",
+              "first-page": "141",
+              "volume": "98",
+              "author": "H Laurie",
+              "year": "2002",
+              "unstructured": "Laurie, H. Optimal transport in central place foraging, with an application to the overdispersion of heuweltjies. S. Afr. J. Sci. 98, 141\u2013146 (2002)",
+              "journal-title": "S. Afr. J. Sci."
+            },
+            {
+              "key": "BFnature20801_CR24",
+              "doi-asserted-by": "publisher",
+              "first-page": "355",
+              "DOI": "10.1086/285331",
+              "volume": "139",
+              "author": "RT Ryti",
+              "year": "1992",
+              "unstructured": "Ryti, R. T. & Case, T. J. The role of neighborhood competition in the spacing and diversity of ant communities. Am. Nat. 139, 355\u2013374 (1992)",
+              "journal-title": "Am. Nat."
+            },
+            {
+              "key": "BFnature20801_CR25",
+              "doi-asserted-by": "publisher",
+              "first-page": "39",
+              "DOI": "10.1017/S0266467400010233",
+              "volume": "13",
+              "author": "G Schuurman",
+              "year": "1997",
+              "unstructured": "Schuurman, G. & Dangerfield, J. M. Dispersion and abundance of Macrotermes michaelseni colonies: a limited role for intraspecific competition. J. Trop. Ecol. 13, 39\u201349 (1997)",
+              "journal-title": "J. Trop. Ecol."
+            },
+            {
+              "key": "BFnature20801_CR26",
+              "doi-asserted-by": "publisher",
+              "first-page": "156",
+              "DOI": "10.1007/BF00333246",
+              "volume": "102",
+              "author": "ES Adams",
+              "year": "1995",
+              "unstructured": "Adams, E. S. & Tschinkel, W. R. Spatial dynamics of colony interactions in young populations of the fire ant Solenopsis invicta. Oecologia 102, 156\u2013163 (1995)",
+              "journal-title": "Oecologia"
+            },
+            {
+              "key": "BFnature20801_CR27",
+              "doi-asserted-by": "publisher",
+              "first-page": "359",
+              "DOI": "10.1146/annurev-ento-031616-035413",
+              "volume": "62",
+              "author": "RM Pringle",
+              "year": "2017",
+              "unstructured": "Pringle, R. M. & Tarnita, C. E. Spatial self-organization of ecosystems: integrating multiple mechanisms of regular-pattern formation. Annu. Rev. Entomol. 62, 359\u2013377 (2017)",
+              "journal-title": "Annu. Rev. Entomol."
+            },
+            {
+              "key": "BFnature20801_CR28",
+              "doi-asserted-by": "publisher",
+              "first-page": "12",
+              "DOI": "10.1111/ecog.01232",
+              "volume": "38",
+              "author": "N Juergens",
+              "year": "2015",
+              "unstructured": "Juergens, N. Exploring common ground for different hypotheses on Namib fairy circles. Ecography 38, 12\u201314 (2015)",
+              "journal-title": "Ecography"
+            },
+            {
+              "key": "BFnature20801_CR29",
+              "first-page": "115",
+              "volume": "19",
+              "author": "BL Thorne",
+              "year": "1991",
+              "unstructured": "Thorne, B. L. & Haverty, M. I. A review of intracolony, intraspecific, and interspecific agonism in termites. Sociobiology 19, 115\u2013145 (1991)",
+              "journal-title": "Sociobiology"
+            },
+            {
+              "key": "BFnature20801_CR30",
+              "doi-asserted-by": "publisher",
+              "first-page": "5234",
+              "DOI": "10.1038/ncomms6234",
+              "volume": "5",
+              "author": "Q-X Liu",
+              "year": "2014",
+              "unstructured": "Liu, Q.-X. et al. Pattern formation at multiple spatial scales drives the resilience of mussel bed ecosystems. Nature Commun. 5, 5234 (2014)",
+              "journal-title": "Nature Commun."
+            },
+            {
+              "key": "BFnature20801_CR31",
+              "doi-asserted-by": "publisher",
+              "first-page": "293",
+              "DOI": "10.2307/4046",
+              "volume": "50",
+              "author": "NM Collins",
+              "year": "1981",
+              "unstructured": "Collins, N. M. Populations, age structure and survivorship of colonies of Macrotermes bellicosus (Isoptera: Macrotermitinae). J. Anim. Ecol. 50, 293\u2013311 (1981)",
+              "journal-title": "J. Anim. Ecol."
+            },
+            {
+              "key": "BFnature20801_CR32",
+              "first-page": "211",
+              "volume": "123",
+              "author": "B Holldobler",
+              "year": "1979",
+              "unstructured": "Holldobler, B. Territoriality in ants. Proc. Am. Phil. Soc. 123, 211\u2013218 (1979)",
+              "journal-title": "Proc. Am. Phil. Soc."
+            },
+            {
+              "key": "BFnature20801_CR33",
+              "doi-asserted-by": "publisher",
+              "first-page": "1125",
+              "DOI": "10.1890/0012-9658(1998)079[1125:TSASIF]2.0.CO;2",
+              "volume": "79",
+              "author": "ES Adams",
+              "year": "1998",
+              "unstructured": "Adams, E. S. Territory size and shape in fire ants: a model based on neighborhood interactions. Ecology 79, 1125\u20131134 (1998)",
+              "journal-title": "Ecology"
+            },
+            {
+              "key": "BFnature20801_CR34",
+              "doi-asserted-by": "publisher",
+              "first-page": "237",
+              "DOI": "10.1111/j.1469-7998.1982.tb02073.x",
+              "volume": "198",
+              "author": "JP Darlington",
+              "year": "1982",
+              "unstructured": "Darlington, J. P. The underground passages and storage pits used in foraging by a nest of the termite Macrotermes michaelseni in Kajiado, Kenya. J. Zool. 198, 237\u2013247 (1982)",
+              "journal-title": "J. Zool."
+            },
+            {
+              "key": "BFnature20801_CR35",
+              "doi-asserted-by": "publisher",
+              "first-page": "993",
+              "DOI": "10.1016/j.anbehav.2004.02.005",
+              "volume": "68",
+              "author": "TM Palmer",
+              "year": "2004",
+              "unstructured": "Palmer, T. M. Wars of attrition: colony size determines competitive outcomes in a guild of African acacia ants. Anim. Behav. 68, 993\u20131004 (2004)",
+              "journal-title": "Anim. Behav."
+            },
+            {
+              "key": "BFnature20801_CR36",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Abe, T., Bignell, D. E. & Higashi, M. Termites: Evolution, Sociality, Symbioses, Ecology (Springer, 2000)",
+              "DOI": "10.1007/978-94-017-3223-9"
+            },
+            {
+              "key": "BFnature20801_CR37",
+              "doi-asserted-by": "publisher",
+              "first-page": "235",
+              "DOI": "10.1007/s000400050084",
+              "volume": "45",
+              "author": "L Keller",
+              "year": "1998",
+              "unstructured": "Keller, L. Queen lifespan and colony characteristics in ants and termites. Insectes Soc. 45, 235\u2013246 (1998)",
+              "journal-title": "Insectes Soc."
+            },
+            {
+              "key": "BFnature20801_CR38",
+              "doi-asserted-by": "publisher",
+              "first-page": "326",
+              "DOI": "10.1016/j.jcp.2005.12.003",
+              "volume": "216",
+              "author": "E Gilad",
+              "year": "2006",
+              "unstructured": "Gilad, E. & von Hardenberg, J. A fast algorithm for convolution integrals with space and time variant kernels. J. Comput. Phys. 216, 326\u2013336 (2006)",
+              "journal-title": "J. Comput. Phys."
+            },
+            {
+              "key": "BFnature20801_CR39",
+              "doi-asserted-by": "publisher",
+              "first-page": "257",
+              "DOI": "10.1007/s11104-014-2361-9",
+              "volume": "389",
+              "author": "A Guevara",
+              "year": "2015",
+              "unstructured": "Guevara, A. & Giordano, C. V. Hydrotropism in lateral but not in pivotal roots of desert plant species under simulated natural conditions. Plant Soil 389, 257\u2013272 (2015)",
+              "journal-title": "Plant Soil"
+            },
+            {
+              "key": "BFnature20801_CR40",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Illian, J., Penttinen, A., Stoyan, H. & Stoyan, D. Statistical Analysis and Modelling of Spatial Point Patterns (John Wiley, 2008)",
+              "DOI": "10.1002/9780470725160"
+            },
+            {
+              "key": "BFnature20801_CR41",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Baddeley, A., Rubak, E. & Turner, R. Spatial Point Patterns: Methodology and Applications with R (Chapman and Hall/CRC, 2015)",
+              "DOI": "10.1201/b19708"
+            },
+            {
+              "key": "BFnature20801_CR42",
+              "doi-asserted-by": "publisher",
+              "first-page": "771",
+              "DOI": "10.1016/S0098-3004(98)00065-X",
+              "volume": "24",
+              "author": "MA Mugglestone",
+              "year": "1998",
+              "unstructured": "Mugglestone, M. A. & Renshaw, E. Detection of geological lineation on aerial photographs using two-dimensional spectral analysis. Comput. Geosci. 24, 771\u2013784 (1998)",
+              "journal-title": "Comput. Geosci."
+            },
+            {
+              "key": "BFnature20801_CR43",
+              "doi-asserted-by": "publisher",
+              "first-page": "616",
+              "DOI": "10.1046/j.0022-0477.2001.00588.x",
+              "volume": "89",
+              "author": "P Couteron",
+              "year": "2001",
+              "unstructured": "Couteron, P. & Lejeune, O. Periodic spotted patterns in semi-arid vegetation explained by a propagation-inhibition model. J. Ecol. 89, 616\u2013628 (2001)",
+              "journal-title": "J. Ecol."
+            },
+            {
+              "key": "BFnature20801_CR44",
+              "first-page": "65",
+              "volume": "10",
+              "author": "WR Tschinkel",
+              "year": "2010",
+              "unstructured": "Tschinkel, W. R. The foraging tunnel system of the Namibian desert termite, Baucaliotermes hainesi. J. Insect Sci. 10, 65 (2010)",
+              "journal-title": "J. Insect Sci."
+            },
+            {
+              "key": "BFnature20801_CR45",
+              "doi-asserted-by": "publisher",
+              "first-page": "1381",
+              "DOI": "10.1093/jee/100.4.1381",
+              "volume": "100",
+              "author": "PB Baker",
+              "year": "2007",
+              "unstructured": "Baker, P. B. & Haverty, M. I. Foraging populations and distances of the desert subterranean termite, Heterotermes aureus (Isoptera: Rhinotermitidae), associated with structures in southern Arizona. J. Econ. Entomol. 100, 1381\u20131390 (2007)",
+              "journal-title": "J. Econ. Entomol."
+            },
+            {
+              "key": "BFnature20801_CR46",
+              "doi-asserted-by": "publisher",
+              "first-page": "285",
+              "DOI": "10.2307/3671941",
+              "volume": "35",
+              "author": "SC Jones",
+              "year": "1990",
+              "unstructured": "Jones, S. C. Colony size of the desert subterranean termite Heterotermes aureus (Isoptera: Rhinotermitidae). Southwest. Nat. 35, 285\u2013291 (1990)",
+              "journal-title": "Southwest. Nat."
+            },
+            {
+              "key": "BFnature20801_CR47",
+              "doi-asserted-by": "publisher",
+              "first-page": "1520",
+              "DOI": "10.1093/ee/24.6.1520",
+              "volume": "24",
+              "author": "KA Haagsma",
+              "year": "1995",
+              "unstructured": "Haagsma, K. A. & Rust, M. K. Colony size estimates, foraging trends, and physiological characteristics of the western subterranean termite (Isoptera: Rhinotermitidae). Environ. Entomol. 24, 1520\u20131528 (1995)",
+              "journal-title": "Environ. Entomol."
+            },
+            {
+              "key": "BFnature20801_CR48",
+              "doi-asserted-by": "publisher",
+              "first-page": "551",
+              "DOI": "10.4039/Ent121551-7",
+              "volume": "121",
+              "author": "JK Grace",
+              "year": "1989",
+              "unstructured": "Grace, J. K., Abdallay, A. & Farr, K. R. Eastern subterranean termite (Isoptera: Rhinotermitidae) foraging territories and populations in Toronto. Can. Entomol. 121, 551\u2013556 (1989)",
+              "journal-title": "Can. Entomol."
+            },
+            {
+              "key": "BFnature20801_CR49",
+              "doi-asserted-by": "publisher",
+              "first-page": "400",
+              "DOI": "10.1093/ee/37.2.400",
+              "volume": "37",
+              "author": "C Husseneder",
+              "year": "2008",
+              "unstructured": "Husseneder, C., Powell, J. E., Grace, J. K., Vargo, E. L. & Matsuura, K. Worker size in the formosan subterranean termite in relation to colony breeding structure as inferred from molecular markers. Environ. Entomol. 37, 400\u2013408 (2008)",
+              "journal-title": "Environ. Entomol."
+            },
+            {
+              "key": "BFnature20801_CR50",
+              "unstructured": "Wood, T. G. & Sands, W. A. in Production Ecology of Ants and Termites (ed. Brian, M. V. ) 245\u2013292 (Cambridge Univ. Press, 1978)"
+            },
+            {
+              "key": "BFnature20801_CR51",
+              "doi-asserted-by": "publisher",
+              "first-page": "172",
+              "DOI": "10.1007/s00265-001-0426-2",
+              "volume": "51",
+              "author": "K Matsuura",
+              "year": "2002",
+              "unstructured": "Matsuura, K. Colony-level stabilization of soldier head width for head-plug defense in the termite Reticulitermes speratus (Isoptera: Rhinotermitidae). Behav. Ecol. Sociobiol. 51, 172\u2013179 (2002)",
+              "journal-title": "Behav. Ecol. Sociobiol."
+            },
+            {
+              "key": "BFnature20801_CR52",
+              "doi-asserted-by": "publisher",
+              "first-page": "251",
+              "DOI": "10.1007/BF01314911",
+              "volume": "38",
+              "author": "JPEC Darlington",
+              "year": "1991",
+              "unstructured": "Darlington, J. P. E. C. Turnover in the populations within mature nests of the termite Macrotermes michaelseni in Kenya. Insectes Soc. 38, 251\u2013262 (1991)",
+              "journal-title": "Insectes Soc."
+            },
+            {
+              "key": "BFnature20801_CR53",
+              "doi-asserted-by": "publisher",
+              "first-page": "747",
+              "DOI": "10.2307/1308782",
+              "volume": "31",
+              "author": "NF Hadley",
+              "year": "1981",
+              "unstructured": "Hadley, N. F. & Szarek, S. R. Productivity of desert ecosystems. Bioscience 31, 747\u2013753 (1981)",
+              "journal-title": "Bioscience"
+            },
+            {
+              "key": "BFnature20801_CR54",
+              "doi-asserted-by": "publisher",
+              "first-page": "12808",
+              "DOI": "10.1073/pnas.2133530100",
+              "volume": "100",
+              "author": "BL Thorne",
+              "year": "2003",
+              "unstructured": "Thorne, B. L., Breisch, N. L. & Muscedere, M. L. Evolution of eusociality and the soldier caste in termites: influence of intraspecific competition and accelerated inheritance. Proc. Natl Acad. Sci. USA 100, 12808\u201312813 (2003)",
+              "journal-title": "Proc. Natl Acad. Sci. USA"
+            },
+            {
+              "key": "BFnature20801_CR55",
+              "doi-asserted-by": "publisher",
+              "first-page": "971",
+              "DOI": "10.1007/s00442-015-3234-5",
+              "volume": "177",
+              "author": "C Golodets",
+              "year": "2015",
+              "unstructured": "Golodets, C. et al. Climate change scenarios of herbaceous production along an aridity gradient: vulnerability increases with aridity. Oecologia 177, 971\u2013979 (2015)",
+              "journal-title": "Oecologia"
+            },
+            {
+              "key": "BFnature20801_CR56",
+              "doi-asserted-by": "publisher",
+              "first-page": "883",
+              "DOI": "10.2307/2960609",
+              "volume": "85",
+              "author": "ML Cain",
+              "year": "1997",
+              "unstructured": "Cain, M. L. & Damman, H. Clonal growth and ramet performance in the woodland herb, Asarum canadense. J. Ecol. 85, 883\u2013897 (1997)",
+              "journal-title": "J. Ecol."
+            },
+            {
+              "key": "BFnature20801_CR57",
+              "doi-asserted-by": "publisher",
+              "first-page": "37",
+              "DOI": "10.1023/A:1026585211708",
+              "volume": "150",
+              "author": "SJ Milton",
+              "year": "2000",
+              "unstructured": "Milton, S. J. & Dean, W. Disturbance, drought and dynamics of desert dune grassland, South Africa. Plant Ecol. 150, 37\u201351 (2000)",
+              "journal-title": "Plant Ecol."
+            },
+            {
+              "key": "BFnature20801_CR58",
+              "doi-asserted-by": "publisher",
+              "first-page": "118",
+              "DOI": "10.1097/SS.0b013e3181d53bb6",
+              "volume": "175",
+              "author": "C Evangelides",
+              "year": "2010",
+              "unstructured": "Evangelides, C., Arampatzis, G. & Tzimopoulos, C. Estimation of soil moisture profile and diffusivity using simple laboratory procedures. Soil Sci. 175, 118\u2013127 (2010)",
+              "journal-title": "Soil Sci."
+            },
+            {
+              "key": "BFnature20801_CR59",
+              "unstructured": "Danin, A. Plants of Desert Dunes (Springer, 2012)"
+            },
+            {
+              "key": "BFnature20801_CR60",
+              "doi-asserted-by": "publisher",
+              "first-page": "138",
+              "DOI": "10.1016/j.jtbi.2010.12.028",
+              "volume": "273",
+              "author": "E Sheffer",
+              "year": "2011",
+              "unstructured": "Sheffer, E., Yizhaq, H., Shachak, M. & Meron, E. Mechanisms of vegetation-ring formation in water-limited systems. J. Theor. Biol. 273, 138\u2013146 (2011)",
+              "journal-title": "J. Theor. Biol."
+            }
+          ],
+          "container-title": [
+            "Nature"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://www.nature.com/articles/nature20801.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://www.nature.com/articles/nature20801",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://www.nature.com/articles/nature20801.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2023,
+                5,
+                18
+              ]
+            ],
+            "date-time": "2023-05-18T17:58:28Z",
+            "timestamp": 1684432708000
+          },
+          "score": 49.948547,
+          "resource": {
+            "primary": {
+              "URL": "https://www.nature.com/articles/nature20801"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2017,
+                1
+              ]
+            ]
+          },
+          "references-count": 60,
+          "journal-issue": {
+            "issue": "7637",
+            "published-print": {
+              "date-parts": [
+                [
+                  2017,
+                  1
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "BFnature20801"
+          ],
+          "URL": "https://doi.org/10.1038/nature20801",
+          "ISSN": [
+            "0028-0836",
+            "1476-4687"
+          ],
+          "issn-type": [
+            {
+              "value": "0028-0836",
+              "type": "print"
+            },
+            {
+              "value": "1476-4687",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2017,
+                1
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "20 May 2016",
+              "order": 1,
+              "name": "received",
+              "label": "Received",
+              "group": {
+                "name": "ArticleHistory",
+                "label": "Article History"
+              }
+            },
+            {
+              "value": "15 November 2016",
+              "order": 2,
+              "name": "accepted",
+              "label": "Accepted",
+              "group": {
+                "name": "ArticleHistory",
+                "label": "Article History"
+              }
+            },
+            {
+              "value": "19 January 2017",
+              "order": 3,
+              "name": "first_online",
+              "label": "First Online",
+              "group": {
+                "name": "ArticleHistory",
+                "label": "Article History"
+              }
+            },
+            {
+              "value": "The authors declare no competing financial interests.",
+              "order": 1,
+              "name": "Ethics",
+              "group": {
+                "name": "EthicsHeading",
+                "label": "Competing interests"
+              }
+            }
+          ]
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                11,
+                2
+              ]
+            ],
+            "date-time": "2026-11-02T22:54:33Z",
+            "timestamp": 1793660073122,
+            "version": "4.5.1"
+          },
+          "reference-count": 30,
+          "publisher": "American Association for the Advancement of Science (AAAS)",
+          "issue": "5421",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Science"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1999,
+                6,
+                11
+              ]
+            ]
+          },
+          "abstract": "<jats:p>Vegetation in many semiarid regions is strikingly patterned, forming regular stripes on hillsides and irregular mosaics on flat ground. A simple model of plant and water dynamics based on ecologically realistic assumptions and with reasonable parameter values captures both of these types of patterns. The regular patterns result from a Turing-like instability; the irregular patterns arise when the ecological dynamics amplify slight small-scale topographic variability. Because of the close agreement between observations and these theoretical results, this system provides a clear example of how nonlinear mechanisms can be important in determining the spatial structure of plant communities.</jats:p>",
+          "DOI": "10.1126/science.284.5421.1826",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2002,
+                7,
+                27
+              ]
+            ],
+            "date-time": "2002-07-27T05:49:42Z",
+            "timestamp": 1027748982000
+          },
+          "page": "1826-1828",
+          "source": "Crossref",
+          "is-referenced-by-count": 916,
+          "title": [
+            "Regular and Irregular Patterns in Semiarid Vegetation"
+          ],
+          "prefix": "10.1126",
+          "volume": "284",
+          "author": [
+            {
+              "given": "Christopher A.",
+              "family": "Klausmeier",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Department of Ecology, Evolution and Behavior, University of Minnesota, St. Paul, MN 55108, USA."
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "221",
+          "reference": [
+            {
+              "key": "e_1_3_1_2_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rstb.1952.0012"
+            },
+            {
+              "key": "e_1_3_1_2_3",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0022-5193(72)90090-2"
+            },
+            {
+              "key": "e_1_3_1_3_2",
+              "unstructured": "A. Okubo Diffusion and Ecological Problems: Mathematical Models (Springer-Verlag New York 1980); J. D. Murray Mathematical Biology (Springer-Verlag New York 1989)."
+            },
+            {
+              "key": "e_1_3_1_4_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2256497"
+            },
+            {
+              "key": "e_1_3_1_5_2",
+              "first-page": "755",
+              "volume": "67",
+              "author": "Greig-Smith P.",
+              "year": "1979",
+              "unstructured": "Greig-Smith P., ibid. 67, 755 (1979).",
+              "journal-title": "ibid."
+            },
+            {
+              "key": "e_1_3_1_6_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.278.5343.1619"
+            },
+            {
+              "key": "#cr-split#-e_1_3_1_7_2.1",
+              "doi-asserted-by": "crossref",
+              "unstructured": "E. K. Steinberg and P. M. Kareiva in Spatial Ecology: The Role of Space in Population Dynamics and Interspecific Interactions D. Tilman and P. Kareiva Eds. (Princeton Univ. Press Princeton NJ 1997) pp. 318-332",
+              "DOI": "10.1515/9780691188362-018"
+            },
+            {
+              "key": "#cr-split#-e_1_3_1_7_2.2",
+              "unstructured": "P. Turchin J. D. Reeve J. T. Cronin R. T. Wilkens in Modeling Spatiotemporal Dynamics in Ecology J. Bascompte and R. V. Sol\u00e9 Eds. (Springer-Verlag New York 1998) pp. 199-213."
+            },
+            {
+              "key": "e_1_3_1_8_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1365-2389.1959.tb00664.x"
+            },
+            {
+              "key": "e_1_3_1_9_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2258290"
+            },
+            {
+              "key": "e_1_3_1_10_2",
+              "first-page": "615",
+              "volume": "59",
+              "author": "___",
+              "year": "1971",
+              "unstructured": "___, ibid. 59, 615 (1971).",
+              "journal-title": "ibid."
+            },
+            {
+              "key": "e_1_3_1_11_2",
+              "doi-asserted-by": "crossref",
+              "unstructured": "A. J. Belsky ibid.. 74 841 (1986).",
+              "DOI": "10.2307/2260402"
+            },
+            {
+              "key": "e_1_3_1_12_2",
+              "first-page": "57",
+              "volume": "53",
+              "author": "Hemming C. F.",
+              "year": "1965",
+              "unstructured": "Hemming C. F., ibid. 53, 57 (1965).",
+              "journal-title": "ibid."
+            },
+            {
+              "key": "e_1_3_1_13_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "41",
+              "DOI": "10.1016/S0140-1963(18)31198-4",
+              "volume": "12",
+              "author": "Mabbutt J. A.",
+              "year": "1987",
+              "unstructured": "Mabbutt J. A., Fanning F. C., J. Arid Environ. 12, 41 (1987).",
+              "journal-title": "J. Arid Environ."
+            },
+            {
+              "key": "e_1_3_1_14_2",
+              "unstructured": "D. J. Tongway and J. A. Ludwig in Landscape Ecology Function and Management: Principles from Australia's Rangelands J. Ludwig D. Tongway D. Freudenberger J. Noble K. Hodgkinson Eds. (CSIRO Collingwood Australia 1997) pp. 49\u201361."
+            },
+            {
+              "key": "e_1_3_1_15_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2260899"
+            },
+            {
+              "key": "e_1_3_1_15_3",
+              "first-page": "315",
+              "volume": "80",
+              "author": "Monta\u00f1a C.",
+              "year": "1992",
+              "unstructured": "Monta\u00f1a C., ibid. 80, 315 (1992).",
+              "journal-title": "ibid."
+            },
+            {
+              "key": "e_1_3_1_16_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0016-7061(71)90050-4"
+            },
+            {
+              "key": "e_1_3_1_17_2",
+              "unstructured": "J. M. Thi\u00e9ry J.-M. D'Herb\u00e8s"
+            },
+            {
+              "key": "e_1_3_1_17_3",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2261602"
+            },
+            {
+              "key": "e_1_3_1_17_4",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF02462004"
+            },
+            {
+              "key": "e_1_3_1_18_2",
+              "unstructured": "Let w = R 1/2 L \u22121/2 JW n = R 1/2 L \u22121/2 N x = L 1/2 D \u22121/2 X y = L 1/2 D \u22121/2 Y t = LT a = AR 1/2 L \u22123/2 J m = ML \u22121 and v = VL \u22121/2 D \u22121/2 ."
+            },
+            {
+              "key": "e_1_3_1_19_2",
+              "unstructured": "For some parameter values there exist limit cycles in which plants and water oscillate; for others the trivial equilibrium is excitable. The parameters I estimated (21) are far from those that lead to limit cycles and excitability. Both of these behaviors require plants and water to be on similar time scales. Because water changes on a much faster time scale than plant biomass such parameters are ecologically unrealistic and will not be considered here."
+            },
+            {
+              "key": "e_1_3_1_20_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/3546091"
+            },
+            {
+              "key": "e_1_3_1_21_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0022-5193(74)80067-6"
+            },
+            {
+              "key": "e_1_3_1_21_3",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1103/PhysRevLett.69.1193"
+            },
+            {
+              "key": "e_1_3_1_22_2",
+              "unstructured": "Rainfall in semiarid regions A = 250 to 750 kg H 2 O m \u22122 year \u22121 . I assume that \u0174 noveg = 75 kg H 2 O m \u22122 when A = 300 kg H 2 O m \u22122 year \u22121 . Because \u0174 noveg = A / L this implies that the evaporation rate L = 4 year \u22121 . From A. Mauchamp S. Rambal and J. Lepart [ Ecol. Model. 71 107 (1994)]. I obtained the following four parameters: J tree = 0.002 kg dry mass (kg H 2 O) \u22121 J grass = 0.003 kg dry mass (kg H 2 O) \u22121 M tree = 0.18 year \u22121 and M grass = 1.8 year \u22121 . I set D = 1 m 2 year \u22121 and V increases from 0 m year \u22121 ; in examples I let V = 365 m year \u22121 . I obtained values for R from the expression for the equilibrium plant biomass \u2227N^=AJ\u20022M+AJ2M2\u2212LRassuming N\u0302 tree = 2.0 kg m \u22122 and N\u0302 grass = 0.4 kg m \u22122 when A = 300 kg H 2 O m \u22122 year \u22121 . This gives R tree = 1.5 kg H 2 O m \u22122 year \u22121 (kg dry mass) \u22122 and R grass = 100 kg H 2 O m \u22122 year \u22121 (kg dry mass) \u22122 ."
+            },
+            {
+              "key": "e_1_3_1_23_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1103/RevModPhys.65.851"
+            },
+            {
+              "key": "e_1_3_1_23_3",
+              "unstructured": "; R. M. May in Frontiers in Mathematical Biology S. A. Levin Ed. (Springer-Verlag New York 1994) pp. 326-344."
+            },
+            {
+              "key": "e_1_3_1_24_2",
+              "unstructured": "I thank P. Abrams D. Aronson B. Foster S. Geritz C. Lehman E. Litchman S. Naeem C. Neuhauser M. Pascual M. Rietkerk E. Siemann and D. Tilman for helpful discussion and comments. Photographs supplied by S. Prince (Geography Department University of Maryland) whose work with HAPEX-Sahel was partly supported by NASA grant NAGW1967. This work was supported by the various fellowships from the University of Minnesota."
+            }
+          ],
+          "container-title": [
+            "Science"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://www.science.org/doi/pdf/10.1126/science.284.5421.1826",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2024,
+                1,
+                13
+              ]
+            ],
+            "date-time": "2024-01-13T04:08:34Z",
+            "timestamp": 1705118914000
+          },
+          "score": 25.3148,
+          "resource": {
+            "primary": {
+              "URL": "https://www.science.org/doi/10.1126/science.284.5421.1826"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1999,
+                6,
+                11
+              ]
+            ]
+          },
+          "references-count": 30,
+          "journal-issue": {
+            "issue": "5421",
+            "published-print": {
+              "date-parts": [
+                [
+                  1999,
+                  6,
+                  11
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1126/science.284.5421.1826"
+          ],
+          "URL": "https://doi.org/10.1126/science.284.5421.1826",
+          "ISSN": [
+            "0036-8075",
+            "1095-9203"
+          ],
+          "issn-type": [
+            {
+              "value": "0036-8075",
+              "type": "print"
+            },
+            {
+              "value": "1095-9203",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1999,
+                6,
+                11
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                6,
+                18
+              ]
+            ],
+            "date-time": "2026-06-18T13:51:28Z",
+            "timestamp": 1781790688459,
+            "version": "3.54.5"
+          },
+          "reference-count": 58,
+          "publisher": "AIP Publishing",
+          "issue": "6",
+          "funder": [
+            {
+              "DOI": "10.13039/501100010426",
+              "name": "UGC-DAE Consortium for Scientific Research, University Grants Commission",
+              "doi-asserted-by": "publisher",
+              "award": [
+                "09/0096 (11578)/2021-EMR-I"
+              ],
+              "award-info": [
+                {
+                  "award-number": [
+                    "09/0096 (11578)/2021-EMR-I"
+                  ]
+                }
+              ],
+              "id": [
+                {
+                  "id": "10.13039/501100010426",
+                  "id-type": "DOI",
+                  "asserted-by": "publisher"
+                }
+              ]
+            },
+            {
+              "DOI": "10.13039/100009589",
+              "name": "Jadavpur University",
+              "doi-asserted-by": "publisher",
+              "award": [
+                "R-11/743/19"
+              ],
+              "award-info": [
+                {
+                  "award-number": [
+                    "R-11/743/19"
+                  ]
+                }
+              ],
+              "id": [
+                {
+                  "id": "10.13039/100009589",
+                  "id-type": "DOI",
+                  "asserted-by": "publisher"
+                }
+              ]
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "pubs.aip.org"
+            ],
+            "crossmark-restriction": true
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2026,
+                6,
+                1
+              ]
+            ]
+          },
+          "abstract": "<jats:p>Dryland ecosystems often exhibit striking vegetation patterns across multiple spatial scales, reflecting strong feedbacks between plants, soil water, and climate. We develop a two-layer vegetation model that explicitly incorporates vertical soil heterogeneity and phenotypic plasticity in rooting depth to investigate the ecological origins of multiscale pattern formation. Shallow-rooted plants primarily exploit transient topsoil moisture and generate large-scale spatial patterns, whereas deep-rooted plants access more stable subsoil water and persist as fine-scale vegetation clusters. The interaction of these contrasting strategies produces nested spatial structures that remain robust across a wide range of precipitation regimes. By comparing idealized and biologically realistic inter-layer coupling, we show that multiscale organization emerges from ecologically meaningful processes such as water infiltration, evaporation, and irreversible investment in deeper roots. The model provides a mechanistic realization of Walter\u2019s two-layer hypothesis and demonstrates how variations in spatial scale separation can give rise to complex vegetation structures. Our findings suggest that multiscale vegetation patterns may emerge as adaptive responses to water limitation in dryland ecosystems.</jats:p>",
+          "DOI": "10.1063/5.0331645",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2026,
+                6,
+                18
+              ]
+            ],
+            "date-time": "2026-06-18T12:59:11Z",
+            "timestamp": 1781787551000
+          },
+          "update-policy": "https://doi.org/10.1063/aip-crossmark-policy-page",
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "From single-scale to multi-scale Turing patterns: A two-layer vegetation model"
+          ],
+          "prefix": "10.1063",
+          "volume": "36",
+          "author": [
+            {
+              "ORCID": "https://orcid.org/0009-0003-6684-4409",
+              "authenticated-orcid": false,
+              "given": "Sounov",
+              "family": "Marick",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Centre for Mathematical Biology and Ecology, Department of Mathematics, Jadavpur University , Kolkata 700032,",
+                  "place": [
+                    "India"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0001-8867-7996",
+              "authenticated-orcid": false,
+              "given": "Nandadulal",
+              "family": "Bairagi",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Centre for Mathematical Biology and Ecology, Department of Mathematics, Jadavpur University , Kolkata 700032,",
+                  "place": [
+                    "India"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "317",
+          "published-online": {
+            "date-parts": [
+              [
+                2026,
+                6,
+                18
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "2026061808590675200_c1",
+              "doi-asserted-by": "publisher",
+              "first-page": "524",
+              "DOI": "10.1086/342078",
+              "article-title": "Self-organization of vegetation in arid ecosystems",
+              "volume": "160",
+              "year": "2002",
+              "journal-title": "Am. Nat."
+            },
+            {
+              "key": "2026061808590675200_c2",
+              "doi-asserted-by": "publisher",
+              "first-page": "1",
+              "DOI": "10.2307/2680085",
+              "article-title": "Vegetation pattern formation in semi-arid grazing systems",
+              "volume": "89",
+              "year": "2001",
+              "journal-title": "J. Ecol."
+            },
+            {
+              "key": "2026061808590675200_c3",
+              "doi-asserted-by": "publisher",
+              "first-page": "1",
+              "DOI": "10.1016/S0341-8162(99)00053-3",
+              "article-title": "Soil and water components of banded vegetation patterns",
+              "volume": "37",
+              "year": "1999",
+              "journal-title": "Catena"
+            },
+            {
+              "key": "2026061808590675200_c4",
+              "doi-asserted-by": "publisher",
+              "first-page": "715",
+              "DOI": "10.1111/j.1466-8238.2008.00413.x",
+              "article-title": "The global biogeography of semi-arid periodic vegetation patterns",
+              "volume": "17",
+              "year": "2008",
+              "journal-title": "Glob. Ecol. Biogeogr."
+            },
+            {
+              "key": "2026061808590675200_c5",
+              "doi-asserted-by": "publisher",
+              "first-page": "355",
+              "DOI": "10.1073/pnas.1522130113",
+              "article-title": "Discovery of fairy circles in Australia supports self-organization theory",
+              "volume": "113",
+              "year": "2016",
+              "journal-title": "Proc. Natl. Acad. Sci. U.S.A."
+            },
+            {
+              "key": "2026061808590675200_c6",
+              "doi-asserted-by": "publisher",
+              "first-page": "169",
+              "DOI": "10.1016/j.tree.2007.10.013",
+              "article-title": "Regular pattern formation in real ecosystems",
+              "volume": "23",
+              "year": "2008",
+              "journal-title": "Trends Ecol. Evol."
+            },
+            {
+              "key": "2026061808590675200_c7",
+              "doi-asserted-by": "publisher",
+              "first-page": "239",
+              "DOI": "10.1016/j.plrev.2022.09.005",
+              "article-title": "Impacts of climate change on vegetation pattern: Mathematical modeling and data analysis",
+              "volume": "43",
+              "year": "2022",
+              "journal-title": "Phys. Life Rev."
+            },
+            {
+              "key": "2026061808590675200_c8",
+              "doi-asserted-by": "publisher",
+              "first-page": "37",
+              "DOI": "10.1098/rstb.1952.0012",
+              "article-title": "The chemical basis of morphogenesis",
+              "volume": "237",
+              "year": "1952",
+              "journal-title": "Philos. Trans. R. Soc. B"
+            },
+            {
+              "key": "2026061808590675200_c9",
+              "doi-asserted-by": "publisher",
+              "first-page": "1826",
+              "DOI": "10.1126/science.284.5421.1826",
+              "article-title": "Regular and irregular patterns in semiarid vegetation",
+              "volume": "284",
+              "year": "1999",
+              "journal-title": "Science"
+            },
+            {
+              "key": "2026061808590675200_c10",
+              "doi-asserted-by": "publisher",
+              "first-page": "198101",
+              "DOI": "10.1103/PhysRevLett.87.198101",
+              "article-title": "Diversity of vegetation patterns and desertification",
+              "volume": "87",
+              "year": "2001",
+              "journal-title": "Phys. Rev. Lett."
+            },
+            {
+              "key": "2026061808590675200_c11",
+              "doi-asserted-by": "publisher",
+              "first-page": "1677",
+              "DOI": "10.1007/s11071-021-06314-5",
+              "article-title": "Mathematical modeling and mechanisms of pattern formation in ecological systems: A review",
+              "volume": "104",
+              "year": "2021",
+              "journal-title": "Nonlinear Dyn."
+            },
+            {
+              "key": "2026061808590675200_c12",
+              "doi-asserted-by": "publisher",
+              "first-page": "1",
+              "DOI": "10.1016/j.physrep.2025.09.003",
+              "article-title": "Vegetation dynamics: Modeling, mechanisms, and emergent properties",
+              "volume": "1145",
+              "year": "2025",
+              "journal-title": "Phys. Rep."
+            },
+            {
+              "key": "2026061808590675200_c13",
+              "doi-asserted-by": "publisher",
+              "first-page": "1234",
+              "DOI": "10.1111/j.1600-0587.2010.06694.x",
+              "article-title": "Fine-scale and broad-scale coexistence of vegetation patterns",
+              "volume": "23",
+              "year": "2020",
+              "journal-title": "Ecol. Lett."
+            },
+            {
+              "key": "2026061808590675200_c14",
+              "doi-asserted-by": "publisher",
+              "first-page": "032203",
+              "DOI": "10.1063/1.2214167",
+              "article-title": "Superlattice patterns from contrasts in diffusion rates",
+              "volume": "96",
+              "year": "2017",
+              "journal-title": "Phys. Rev. E"
+            },
+            {
+              "key": "2026061808590675200_c15",
+              "doi-asserted-by": "publisher",
+              "first-page": "64",
+              "DOI": "10.1016/j.cnsns.2023.107804",
+              "article-title": "Multiscale plankton distributions in stratified aquatic systems",
+              "volume": "469",
+              "year": "2019",
+              "journal-title": "J. Theor. Biol."
+            },
+            {
+              "key": "2026061808590675200_c16",
+              "doi-asserted-by": "publisher",
+              "first-page": "263",
+              "DOI": "10.1007/BF02462004",
+              "article-title": "On the origin of tiger bush",
+              "volume": "59",
+              "year": "1997",
+              "journal-title": "Bull. Math. Biol."
+            },
+            {
+              "key": "2026061808590675200_c17",
+              "doi-asserted-by": "publisher",
+              "first-page": "RG1005",
+              "DOI": "10.1029/2007RG000256",
+              "article-title": "Mathematical models of vegetation pattern formation in ecohydrology",
+              "volume": "47",
+              "year": "2009",
+              "journal-title": "Rev. Geophys."
+            },
+            {
+              "key": "2026061808590675200_c18",
+              "doi-asserted-by": "publisher",
+              "first-page": "398",
+              "DOI": "10.1038/nature20801",
+              "article-title": "A theoretical foundation for multi-scale regular vegetation patterns",
+              "volume": "541",
+              "year": "2017",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "2026061808590675200_c19",
+              "doi-asserted-by": "publisher",
+              "first-page": "30",
+              "DOI": "10.1063/PT.3.4340",
+              "article-title": "Vegetation pattern formation: The mechanisms behind the forms",
+              "volume": "72",
+              "year": "2019",
+              "journal-title": "Phys. Today"
+            },
+            {
+              "key": "2026061808590675200_c20",
+              "doi-asserted-by": "publisher",
+              "first-page": "174101",
+              "DOI": "10.1103/PhysRevLett.110.174101",
+              "article-title": "Strong nonlocal coupling stabilizes localized structures: An analysis based on front dynamics",
+              "volume": "110",
+              "year": "2013",
+              "journal-title": "Phys. Rev. Lett."
+            },
+            {
+              "key": "2026061808590675200_c21",
+              "doi-asserted-by": "publisher",
+              "first-page": "5740",
+              "DOI": "10.1038/s41598-020-62677-6",
+              "article-title": "On the repulsive interaction between localised vegetation patches in scarce environments",
+              "volume": "10",
+              "year": "2020",
+              "journal-title": "Sci. Rep."
+            },
+            {
+              "key": "2026061808590675200_c22",
+              "doi-asserted-by": "publisher",
+              "first-page": "18331",
+              "DOI": "10.1038/s41598-021-97472-4",
+              "article-title": "Localised labyrinthine patterns in ecosystems",
+              "volume": "11",
+              "year": "2021",
+              "journal-title": "Sci. Rep."
+            },
+            {
+              "key": "2026061808590675200_c23",
+              "doi-asserted-by": "publisher",
+              "first-page": "132708",
+              "DOI": "10.1016/j.physd.2020.132708",
+              "article-title": "Interaction between vegetation patches and gaps: A self-organized response to water scarcity",
+              "volume": "414",
+              "year": "2020",
+              "journal-title": "Phys. D: Nonlinear Phenom."
+            },
+            {
+              "key": "2026061808590675200_c24",
+              "doi-asserted-by": "publisher",
+              "first-page": "20180026",
+              "DOI": "10.1098/rsta.2018.0026",
+              "article-title": "Observation and modelling of vegetation spirals and arcs in isotropic environmental conditions: Dissipative structures in arid landscapes",
+              "volume": "376",
+              "year": "2018",
+              "journal-title": "Philos. Trans. R. Soc. A: Math., Phys. Eng. Sci."
+            },
+            {
+              "key": "2026061808590675200_c25",
+              "volume-title": "Plant Root Systems: Their Function and Interaction with the Soil",
+              "year": "1971"
+            },
+            {
+              "key": "2026061808590675200_c26",
+              "doi-asserted-by": "publisher",
+              "first-page": "367",
+              "DOI": "10.1016/S0960-0779(03)00049-3",
+              "article-title": "Vegetation patterns along a rainfall gradient",
+              "volume": "19",
+              "year": "2004",
+              "journal-title": "Chaos, Solitons Fractals"
+            },
+            {
+              "key": "2026061808590675200_c27",
+              "doi-asserted-by": "publisher",
+              "first-page": "113996",
+              "DOI": "10.1016/j.chaos.2023.113996",
+              "article-title": "Dynamic properties of a reaction\u2013diffusion predator\u2013prey model with nonlinear harvesting: A linear and weakly nonlinear analysis",
+              "volume": "175",
+              "year": "2023",
+              "journal-title": "Chaos, Solitons Fractals"
+            },
+            {
+              "key": "2026061808590675200_c28",
+              "doi-asserted-by": "publisher",
+              "first-page": "2802",
+              "DOI": "10.1103/PhysRevE.50.2802",
+              "article-title": "Pattern formation in the presence of symmetries",
+              "volume": "50",
+              "year": "1994",
+              "journal-title": "Phys. Rev. E"
+            },
+            {
+              "key": "2026061808590675200_c29",
+              "doi-asserted-by": "publisher",
+              "first-page": "12290",
+              "DOI": "10.1021/la052099z",
+              "article-title": "Electric-field-induced patterns in thin polymer films: Weakly nonlinear and fully nonlinear evolution",
+              "volume": "21",
+              "year": "2005",
+              "journal-title": "Langmuir"
+            },
+            {
+              "key": "2026061808590675200_c30",
+              "doi-asserted-by": "publisher",
+              "first-page": "208303",
+              "DOI": "10.1103/PhysRevLett.88.208303",
+              "article-title": "Spatial resonances and superposition patterns in a reaction-diffusion model with interacting turing modes",
+              "volume": "88",
+              "year": "2002",
+              "journal-title": "Phys. Rev. Lett."
+            },
+            {
+              "key": "2026061808590675200_c31",
+              "doi-asserted-by": "publisher",
+              "first-page": "44",
+              "DOI": "10.1016/j.tplants.2004.11.004",
+              "article-title": "Hydrotropism: Root growth responses to water",
+              "volume": "10",
+              "year": "2005",
+              "journal-title": "Trends Plant Sci."
+            },
+            {
+              "key": "2026061808590675200_c32",
+              "doi-asserted-by": "publisher",
+              "first-page": "486",
+              "DOI": "10.1007/BF00379405",
+              "article-title": "Hydraulic lift: Substantial nocturnal water transport between soil layers by artemisia tridentata roots",
+              "volume": "73",
+              "year": "1987",
+              "journal-title": "Oecologia"
+            },
+            {
+              "key": "2026061808590675200_c33",
+              "volume-title": "Reaction-Transport Systems: Mesoscopic Foundations, Fronts, and Spatial Instabilities",
+              "year": "2010"
+            },
+            {
+              "key": "2026061808590675200_c34",
+              "doi-asserted-by": "publisher",
+              "first-page": "856",
+              "DOI": "10.1016/j.tplants.2024.01.003",
+              "article-title": "Root plasticity versus elasticity\u2013when are responses acclimative?",
+              "volume": "29",
+              "year": "2024",
+              "journal-title": "Trends Plant Sci."
+            },
+            {
+              "key": "2026061808590675200_c35",
+              "doi-asserted-by": "publisher",
+              "first-page": "1140",
+              "DOI": "10.1111/nph.14710",
+              "article-title": "Diverse belowground resource strategies underlie plant species coexistence and spatial distribution in three grasslands along a precipitation gradient",
+              "volume": "216",
+              "year": "2017",
+              "journal-title": "New Phytol."
+            },
+            {
+              "key": "2026061808590675200_c36",
+              "doi-asserted-by": "publisher",
+              "first-page": "337",
+              "DOI": "10.1111/j.1469-8137.2012.04088.x",
+              "article-title": "The magnitude of hydraulic redistribution by plant roots: A review and synthesis of empirical and modeling studies",
+              "volume": "194",
+              "year": "2012",
+              "journal-title": "New Phytol."
+            },
+            {
+              "key": "2026061808590675200_c37",
+              "doi-asserted-by": "publisher",
+              "first-page": "326",
+              "DOI": "10.1016/j.jhydrol.2014.11.042",
+              "article-title": "Spatio-temporal soil moisture patterns\u2013a meta-analysis using plot to catchment scale data",
+              "volume": "520",
+              "year": "2015",
+              "journal-title": "J. Hydrol."
+            },
+            {
+              "key": "2026061808590675200_c38",
+              "doi-asserted-by": "publisher",
+              "first-page": "20220149",
+              "DOI": "10.1098/rstb.2022.0149",
+              "article-title": "Evolution at the arid extreme: The influence of climate on sand termite colonies and fairy circles of the Namib desert",
+              "volume": "378",
+              "year": "2023",
+              "journal-title": "Philos. Trans. R. Soc. B"
+            },
+            {
+              "key": "2026061808590675200_c39",
+              "volume-title": "Introduction to Environmental Soil Physics",
+              "year": "2003"
+            },
+            {
+              "key": "2026061808590675200_c40",
+              "doi-asserted-by": "publisher",
+              "first-page": "1309",
+              "DOI": "10.1098/rstb.1996.0114",
+              "article-title": "Comparative ecology of seed size and dispersal",
+              "volume": "351",
+              "year": "1996",
+              "journal-title": "Philos. Trans. R. Soc. Lond. Ser. B: Biol. Sci."
+            },
+            {
+              "key": "2026061808590675200_c41",
+              "doi-asserted-by": "publisher",
+              "first-page": "1549801",
+              "DOI": "10.3389/fpls.2025.1549801",
+              "article-title": "Nitrogen allocation among leaves and roots mediates the interaction between plant life history trade-off and density dependence",
+              "volume": "16",
+              "year": "2025",
+              "journal-title": "Front. Plant Sci."
+            },
+            {
+              "key": "2026061808590675200_c42",
+              "doi-asserted-by": "publisher",
+              "first-page": "172",
+              "DOI": "10.1016/j.still.2014.02.006",
+              "article-title": "A study on the effect of compaction on transport properties of soil gas and water I: Relative gas diffusivity, air permeability, and saturated hydraulic conductivity",
+              "volume": "143",
+              "year": "2014",
+              "journal-title": "Soil Tillage Res."
+            },
+            {
+              "key": "2026061808590675200_c43",
+              "doi-asserted-by": "publisher",
+              "first-page": "291",
+              "DOI": "10.1007/s13593-011-0071-8",
+              "article-title": "Soil compaction impact and modelling. A review",
+              "volume": "33",
+              "year": "2013",
+              "journal-title": "Agron. Sustain. Dev."
+            },
+            {
+              "key": "2026061808590675200_c44",
+              "doi-asserted-by": "publisher",
+              "first-page": "e2311528120",
+              "DOI": "10.1073/pnas.2311528120",
+              "article-title": "Phenotypic plasticity: A missing element in the theory of vegetation pattern formation",
+              "volume": "120",
+              "year": "2023",
+              "journal-title": "Proc. Natl. Acad. Sci. U.S.A."
+            },
+            {
+              "key": "2026061808590675200_c45",
+              "doi-asserted-by": "publisher",
+              "first-page": "617",
+              "DOI": "10.1007/s00442-012-2538-y",
+              "article-title": "Walter\u2019s two-layer hypothesis revisited: Back to the roots!",
+              "volume": "172",
+              "year": "2013",
+              "journal-title": "Oecologia"
+            },
+            {
+              "key": "2026061808590675200_c46",
+              "doi-asserted-by": "publisher",
+              "first-page": "115790",
+              "DOI": "10.1016/j.chaos.2024.115790",
+              "article-title": "Evolution of turing patterns of a predator\u2013prey system with variable carrying capacity and harvesting",
+              "volume": "191",
+              "year": "2025",
+              "journal-title": "Chaos, Solitons Fractals"
+            },
+            {
+              "key": "2026061808590675200_c47",
+              "doi-asserted-by": "publisher",
+              "first-page": "113967",
+              "DOI": "10.1016/j.chaos.2023.113967",
+              "article-title": "A study of a spatiotemporal delayed predator\u2013prey model with prey harvesting: Constant and periodic diffusion",
+              "volume": "175",
+              "year": "2023",
+              "journal-title": "Chaos, Solitons Fractals"
+            },
+            {
+              "key": "2026061808590675200_c48",
+              "doi-asserted-by": "publisher",
+              "first-page": "320",
+              "DOI": "10.1016/j.amc.2013.10.005",
+              "article-title": "Existence of spatial patterns in a predator\u2013prey model with self-and cross-diffusion",
+              "volume": "226",
+              "year": "2014",
+              "journal-title": "Appl. Math. Comput."
+            },
+            {
+              "key": "2026061808590675200_c49",
+              "doi-asserted-by": "publisher",
+              "first-page": "70",
+              "DOI": "10.1007/s11071-025-11926-2",
+              "article-title": "Turing-Hopf interactions and climate-mediated pattern formation and species extinction in spatial predator\u2013prey systems",
+              "volume": "114",
+              "year": "2026",
+              "journal-title": "Nonlinear Dyn."
+            },
+            {
+              "key": "2026061808590675200_c50",
+              "doi-asserted-by": "publisher",
+              "first-page": "111856",
+              "DOI": "10.1016/j.jtbi.2024.111856",
+              "article-title": "How do productivity gradient and diffusion shape patterns in a plant\u2013herbivore grazing system?",
+              "volume": "590",
+              "year": "2024",
+              "journal-title": "J. Theor. Biol."
+            },
+            {
+              "key": "2026061808590675200_c51",
+              "doi-asserted-by": "publisher",
+              "first-page": "107804",
+              "DOI": "10.1016/j.cnsns.2023.107804",
+              "article-title": "Self-organization of nested patterns in a coupled spatiotemporal phytoplankton-zooplankton system",
+              "volume": "130",
+              "year": "2024",
+              "journal-title": "Commun. Nonlinear Sci. Numer. Simul."
+            },
+            {
+              "key": "2026061808590675200_c52",
+              "doi-asserted-by": "publisher",
+              "first-page": "e2305153121",
+              "DOI": "10.1073/pnas.2305153121",
+              "article-title": "Self-organization as a mechanism of resilience in dryland ecosystems",
+              "volume": "121",
+              "year": "2024",
+              "journal-title": "Proc. Natl. Acad. Sci. U.S.A."
+            },
+            {
+              "key": "2026061808590675200_c53",
+              "doi-asserted-by": "publisher",
+              "first-page": "465",
+              "DOI": "10.1007/s004420100737",
+              "article-title": "The effect of grazing on the spatial heterogeneity of vegetation",
+              "volume": "128",
+              "year": "2001",
+              "journal-title": "Oecologia"
+            },
+            {
+              "key": "2026061808590675200_c54",
+              "doi-asserted-by": "publisher",
+              "first-page": "276",
+              "DOI": "10.1038/s43017-024-00534-0",
+              "article-title": "Plant responses to changing rainfall frequency and intensity",
+              "volume": "5",
+              "year": "2024",
+              "journal-title": "Nat. Rev. Earth Environ."
+            },
+            {
+              "key": "2026061808590675200_c55",
+              "doi-asserted-by": "publisher",
+              "first-page": "127061",
+              "DOI": "10.1016/j.amc.2022.127061",
+              "article-title": "Nonlocal interactions between vegetation induce spatial patterning",
+              "volume": "428",
+              "year": "2022",
+              "journal-title": "Appl. Math. Comput."
+            },
+            {
+              "key": "2026061808590675200_c56",
+              "doi-asserted-by": "publisher",
+              "first-page": "eabj0359",
+              "DOI": "10.1126/science.abj0359",
+              "article-title": "Evasion of tipping in complex systems through spatial pattern formation",
+              "volume": "374",
+              "year": "2021",
+              "journal-title": "Science"
+            },
+            {
+              "key": "2026061808590675200_c57",
+              "doi-asserted-by": "publisher",
+              "first-page": "829",
+              "DOI": "10.1007/s10980-021-01358-9",
+              "article-title": "High-resolution images and drone-based LiDAR reveal striking patterns of vegetation gaps in a wooded spinifex grassland of Western Australia",
+              "volume": "37",
+              "year": "2022",
+              "journal-title": "Landsc. Ecol."
+            },
+            {
+              "key": "2026061808590675200_c58",
+              "doi-asserted-by": "publisher",
+              "first-page": "021924",
+              "DOI": "10.1103/PhysRevE.85.021924",
+              "article-title": "Spatial dynamics in a predator-prey model with Beddington\u2013DeAngelis functional response",
+              "volume": "85",
+              "year": "2012",
+              "journal-title": "Phys. Rev. E"
+            }
+          ],
+          "container-title": [
+            "Chaos: An Interdisciplinary Journal of Nonlinear Science"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://pubs.aip.org/aip/cha/article-pdf/doi/10.1063/5.0331645/21048663/063135_1_5.0331645.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "syndication"
+            },
+            {
+              "URL": "https://pubs.aip.org/aip/cha/article-pdf/doi/10.1063/5.0331645/21048663/063135_1_5.0331645.pdf",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2026,
+                6,
+                18
+              ]
+            ],
+            "date-time": "2026-06-18T12:59:12Z",
+            "timestamp": 1781787552000
+          },
+          "score": 24.512434,
+          "resource": {
+            "primary": {
+              "URL": "https://pubs.aip.org/cha/article/36/6/063135/3395907/From-single-scale-to-multi-scale-Turing-patterns-A"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2026,
+                6,
+                1
+              ]
+            ]
+          },
+          "references-count": 58,
+          "journal-issue": {
+            "issue": "6",
+            "published-print": {
+              "date-parts": [
+                [
+                  2026,
+                  6,
+                  1
+                ]
+              ]
+            }
+          },
+          "URL": "https://doi.org/10.1063/5.0331645",
+          "ISSN": [
+            "1054-1500",
+            "1089-7682"
+          ],
+          "issn-type": [
+            {
+              "value": "1054-1500",
+              "type": "print"
+            },
+            {
+              "value": "1089-7682",
+              "type": "electronic"
+            }
+          ],
+          "published-other": {
+            "date-parts": [
+              [
+                2026,
+                6
+              ]
+            ]
+          },
+          "published": {
+            "date-parts": [
+              [
+                2026,
+                6,
+                1
+              ]
+            ]
+          },
+          "article-number": "063135"
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

@@ -1,0 +1,294 @@
+{
+  "query": "10.1016/0021-9991(76)90041-3",
+  "consultedUrl": "https://api.crossref.org/works/10.1016/0021-9991%2876%2990041-3",
+  "checkedAt": "2026-11-05",
+  "items": [
+    {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            11,
+            3
+          ]
+        ],
+        "date-time": "2026-11-03T05:05:25Z",
+        "timestamp": 1793682325188,
+        "version": "4.5.1"
+      },
+      "reference-count": 13,
+      "publisher": "Elsevier BV",
+      "issue": "4",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                1976,
+                12,
+                1
+              ]
+            ],
+            "date-time": "1976-12-01T00:00:00Z",
+            "timestamp": 218246400000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+        }
+      ],
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [
+        "Journal of Computational Physics"
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            1976,
+            12
+          ]
+        ]
+      },
+      "DOI": "10.1016/0021-9991(76)90041-3",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2004,
+            9,
+            25
+          ]
+        ],
+        "date-time": "2004-09-25T11:07:18Z",
+        "timestamp": 1096110438000
+      },
+      "page": "403-434",
+      "source": "Crossref",
+      "is-referenced-by-count": 5430,
+      "title": [
+        "A general method for numerically simulating the stochastic time evolution of coupled chemical reactions"
+      ],
+      "prefix": "10.1016",
+      "volume": "22",
+      "author": [
+        {
+          "given": "Daniel T",
+          "family": "Gillespie",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "78",
+      "reference": [
+        {
+          "key": "10.1016/0021-9991(76)90041-3_BIB1",
+          "doi-asserted-by": "crossref",
+          "first-page": "413",
+          "DOI": "10.2307/3212214",
+          "volume": "4",
+          "author": "McQuarrie",
+          "year": "1967",
+          "journal-title": "J. Appl. Probability"
+        },
+        {
+          "key": "10.1016/0021-9991(76)90041-3_BIB2",
+          "doi-asserted-by": "crossref",
+          "first-page": "460",
+          "DOI": "10.1063/1.1670820",
+          "volume": "50",
+          "author": "Oppenheim",
+          "year": "1969",
+          "journal-title": "J. Chem. Phys."
+        },
+        {
+          "key": "10.1016/0021-9991(76)90041-3_BIB3",
+          "doi-asserted-by": "crossref",
+          "first-page": "2976",
+          "DOI": "10.1063/1.1678692",
+          "volume": "57",
+          "author": "Kurtz",
+          "year": "1972",
+          "journal-title": "J. Chem. Phys."
+        },
+        {
+          "key": "10.1016/0021-9991(76)90041-3_BIB4",
+          "series-title": "Kinetic Theory of Gases",
+          "author": "Present",
+          "year": "1958"
+        },
+        {
+          "key": "10.1016/0021-9991(76)90041-3_BIB5",
+          "doi-asserted-by": "crossref",
+          "first-page": "375",
+          "DOI": "10.1007/BF01012884",
+          "volume": "12",
+          "author": "Gibbs",
+          "year": "1975",
+          "journal-title": "J. Statist. Phys."
+        },
+        {
+          "key": "10.1016/0021-9991(76)90041-3_BIB6",
+          "doi-asserted-by": "crossref",
+          "first-page": "439",
+          "DOI": "10.1007/BF01020400",
+          "volume": "10",
+          "author": "McNeil",
+          "year": "1974",
+          "journal-title": "J. Statist. Phys."
+        },
+        {
+          "key": "10.1016/0021-9991(76)90041-3_BIB7",
+          "doi-asserted-by": "crossref",
+          "first-page": "1056",
+          "DOI": "10.1063/1.1681974",
+          "volume": "61",
+          "author": "Nitzan",
+          "year": "1974",
+          "journal-title": "J. Chem. Phys."
+        },
+        {
+          "key": "10.1016/0021-9991(76)90041-3_BIB8",
+          "doi-asserted-by": "crossref",
+          "first-page": "21",
+          "DOI": "10.1007/BF01024182",
+          "volume": "12",
+          "author": "Matheson",
+          "year": "1975",
+          "journal-title": "J. Statist. Phys."
+        },
+        {
+          "key": "10.1016/0021-9991(76)90041-3_BIB9",
+          "series-title": "Monte Carlo Methods",
+          "author": "Hammersley",
+          "year": "1964"
+        },
+        {
+          "key": "10.1016/0021-9991(76)90041-3_BIB10",
+          "article-title": "NWC TP 5714 \u201c The Monte Carlo Method of Evaluating Integrals\u201d",
+          "author": "Gillespie",
+          "year": "1975"
+        },
+        {
+          "key": "10.1016/0021-9991(76)90041-3_BIB11",
+          "doi-asserted-by": "crossref",
+          "first-page": "48",
+          "DOI": "10.1109/MSPEC.1967.5216203",
+          "volume": "4",
+          "author": "Chambers",
+          "year": "1967",
+          "journal-title": "IEEE Spectrum"
+        },
+        {
+          "key": "10.1016/0021-9991(76)90041-3_BIB12",
+          "doi-asserted-by": "crossref",
+          "first-page": "757",
+          "DOI": "10.1145/364139.364158",
+          "volume": "11",
+          "author": "Marsaglia",
+          "year": "1968",
+          "journal-title": "Comm. ACM"
+        },
+        {
+          "key": "10.1016/0021-9991(76)90041-3_BIB13",
+          "doi-asserted-by": "crossref",
+          "first-page": "373",
+          "DOI": "10.1016/0010-2180(74)90120-5",
+          "volume": "23",
+          "author": "Bunker",
+          "year": "1974",
+          "journal-title": "Combust. Flame"
+        }
+      ],
+      "container-title": [
+        "Journal of Computational Physics"
+      ],
+      "original-title": [],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://api.elsevier.com/content/article/PII:0021999176900413?httpAccept=text/xml",
+          "content-type": "text/xml",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://api.elsevier.com/content/article/PII:0021999176900413?httpAccept=text/plain",
+          "content-type": "text/plain",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2019,
+            2,
+            3
+          ]
+        ],
+        "date-time": "2019-02-03T11:24:03Z",
+        "timestamp": 1549193043000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://linkinghub.elsevier.com/retrieve/pii/0021999176900413"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            1976,
+            12
+          ]
+        ]
+      },
+      "references-count": 13,
+      "journal-issue": {
+        "issue": "4",
+        "published-print": {
+          "date-parts": [
+            [
+              1976,
+              12
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "0021999176900413"
+      ],
+      "URL": "https://doi.org/10.1016/0021-9991(76)90041-3",
+      "relation": {},
+      "ISSN": [
+        "0021-9991"
+      ],
+      "issn-type": [
+        {
+          "value": "0021-9991",
+          "type": "print"
+        }
+      ],
+      "subject": [],
+      "published": {
+        "date-parts": [
+          [
+            1976,
+            12
+          ]
+        ]
+      }
+    }
+  ]
+}

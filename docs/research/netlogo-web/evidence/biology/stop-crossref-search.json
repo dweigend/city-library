@@ -1,0 +1,1375 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=Stop+signals+provide+cross+inhibition+in+collective+decision-making+by+honeybee+swarms+Seeley+2012&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 2581924,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                11,
+                4
+              ]
+            ],
+            "date-time": "2026-11-04T03:29:54Z",
+            "timestamp": 1793762994204,
+            "version": "4.6.1"
+          },
+          "reference-count": 43,
+          "publisher": "American Association for the Advancement of Science (AAAS)",
+          "issue": "6064",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Science"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2012,
+                1,
+                6
+              ]
+            ]
+          },
+          "abstract": "<jats:title>Stop, Don't Go There</jats:title>\n                  <jats:p>\n                    Decision-making in complex brains requires the reaching of a consensus based on information relayed by multiple neurons. A similar situation occurs in the decision-making process of swarming bees, where multiple individuals relay information about suitable hive sites, but a single site is chosen by the swarm.\n                    <jats:bold>\n                      Seeley\n                      <jats:italic>et al.</jats:italic>\n                    </jats:bold>\n                    (p.\n                    <jats:related-article xmlns:xlink=\"http://www.w3.org/1999/xlink\" ext-link-type=\"doi\" page=\"108\" related-article-type=\"in-this-issue\" vol=\"335\" xlink:href=\"10.1126/science.1210361\">108</jats:related-article>\n                    , published online 8 December; see the Perspective by\n                    <jats:related-article xmlns:xlink=\"http://www.w3.org/1999/xlink\" ext-link-type=\"doi\" page=\"43\" related-article-type=\"in-this-issue\" vol=\"335\" xlink:href=\"10.1126/science.1216563\">\n                      <jats:bold>Niven</jats:bold>\n                    </jats:related-article>\n                    ) show that consensus in this system is reached as information from scouting bees accumulates within the hive. Stop signals were given by scout bees from a particular site to those scout bees signaling from other sites. As the signals accumulate, scouting ceases and the bees prepare to swarm to the site that was best represented among the scouts. When this process was simulated, the results indicated that cross-inhibition among the bees functions similarly to that which occurs among neurons within complex brains. In both cases, such cross-inhibition prevents the overall system from coming to an impasse.\n                  </jats:p>",
+          "DOI": "10.1126/science.1210361",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2011,
+                12,
+                9
+              ]
+            ],
+            "date-time": "2011-12-09T00:54:42Z",
+            "timestamp": 1323392082000
+          },
+          "page": "108-111",
+          "source": "Crossref",
+          "is-referenced-by-count": 295,
+          "title": [
+            "Stop Signals Provide Cross Inhibition in Collective Decision-Making by Honeybee Swarms"
+          ],
+          "prefix": "10.1126",
+          "volume": "335",
+          "author": [
+            {
+              "given": "Thomas D.",
+              "family": "Seeley",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Department of Neurobiology and Behavior, Cornell University, Ithaca, NY 14853, USA."
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "P. Kirk",
+              "family": "Visscher",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Department of Entomology, University of California Riverside, Riverside, CA 92521, USA."
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Thomas",
+              "family": "Schlegel",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "School of Biological Sciences, University of Bristol, Bristol BS8 1UG, UK."
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Patrick M.",
+              "family": "Hogan",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Department of Computer Science and Kroto Research Institute, University of Sheffield, Sheffield S1 4DP, UK."
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Nigel R.",
+              "family": "Franks",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "School of Biological Sciences, University of Bristol, Bristol BS8 1UG, UK."
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "James A. R.",
+              "family": "Marshall",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Department of Computer Science and Kroto Research Institute, University of Sheffield, Sheffield S1 4DP, UK."
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "221",
+          "reference": [
+            {
+              "key": "e_1_3_2_2_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s00265-007-0468-1"
+            },
+            {
+              "key": "e_1_3_2_3_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.tics.2008.10.002"
+            },
+            {
+              "key": "e_1_3_2_4_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rsif.2008.0511"
+            },
+            {
+              "key": "e_1_3_2_5_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s00265-002-0487-x"
+            },
+            {
+              "key": "e_1_3_2_6_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1146/annurev.neuro.26.010302.081134"
+            },
+            {
+              "key": "e_1_3_2_7_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s00265-004-0814-5"
+            },
+            {
+              "key": "e_1_3_2_8_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1146/annurev.neuro.29.051605.113038"
+            },
+            {
+              "key": "e_1_3_2_9_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1037/0033-295X.108.3.550"
+            },
+            {
+              "key": "e_1_3_2_10_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0896-6273(02)01092-9"
+            },
+            {
+              "key": "e_1_3_2_11_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1037/0033-295X.113.4.700"
+            },
+            {
+              "key": "e_1_3_2_12_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1511/2006.59.220"
+            },
+            {
+              "key": "e_1_3_2_13_2",
+              "unstructured": "T. D. Seeley Honeybee Democracy (Princeton Univ. Press Princeton NJ 2010)."
+            },
+            {
+              "key": "e_1_3_2_14_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00164346"
+            },
+            {
+              "key": "e_1_3_2_15_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00216597"
+            },
+            {
+              "key": "e_1_3_2_16_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1439-0310.2005.01116.x"
+            },
+            {
+              "key": "e_1_3_2_17_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.cub.2009.12.060"
+            },
+            {
+              "key": "e_1_3_2_18_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00290824"
+            },
+            {
+              "key": "e_1_3_2_20_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s00359-001-0243-0"
+            },
+            {
+              "key": "e_1_3_2_21_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s00265-003-0598-z"
+            },
+            {
+              "key": "e_1_3_2_22_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1242/jeb.021071"
+            },
+            {
+              "key": "e_1_3_2_23_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s00265-003-0664-6"
+            },
+            {
+              "key": "e_1_3_2_24_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00303153"
+            },
+            {
+              "key": "e_1_3_2_25_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.tics.2006.12.006"
+            },
+            {
+              "key": "e_1_3_2_26_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1080/00218839.1972.11099711"
+            },
+            {
+              "key": "e_1_3_2_27_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0022-1910(95)00106-9"
+            },
+            {
+              "key": "e_1_3_2_28_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s002650050536"
+            },
+            {
+              "key": "e_1_3_2_29_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.anbehav.2005.04.009"
+            },
+            {
+              "key": "e_1_3_2_30_2",
+              "first-page": "468",
+              "article-title": "Weights of workers and drones",
+              "volume": "110",
+              "author": "Mitchell C.",
+              "year": "1970",
+              "unstructured": "Mitchell C., Weights of workers and drones. Am. Bee J. 110, 468 (1970).",
+              "journal-title": "Am. Bee J."
+            },
+            {
+              "key": "e_1_3_2_31_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s002650000299"
+            },
+            {
+              "key": "e_1_3_2_32_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s00265-007-0393-3"
+            },
+            {
+              "key": "e_1_3_2_33_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1037/0033-295X.85.2.59"
+            },
+            {
+              "key": "e_1_3_2_34_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.neunet.2006.05.042"
+            },
+            {
+              "key": "e_1_3_2_35_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1140/epjb/e2006-00232-8"
+            },
+            {
+              "key": "e_1_3_2_36_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.jtbi.2009.09.007"
+            },
+            {
+              "key": "e_1_3_2_37_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/beheco/arr007"
+            },
+            {
+              "key": "e_1_3_2_38_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1017/S0952523800010269"
+            },
+            {
+              "key": "e_1_3_2_39_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1523/JNEUROSCI.4684-04.2005"
+            },
+            {
+              "key": "e_1_3_2_40_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nn1683"
+            },
+            {
+              "key": "e_1_3_2_41_2",
+              "doi-asserted-by": "crossref",
+              "unstructured": "N. G. van Kampen Stochastic Processes in Physics and Chemistry (North-Holland Amsterdam ed. 3 2007).",
+              "DOI": "10.1016/B978-044452965-7/50006-4"
+            },
+            {
+              "key": "e_1_3_2_42_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/35049054"
+            },
+            {
+              "key": "e_1_3_2_43_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1152/jn.2001.86.4.1916"
+            },
+            {
+              "key": "e_1_3_2_44_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1523/JNEUROSCI.22-21-09475.2002"
+            },
+            {
+              "key": "e_1_3_2_45_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1088/1478-3967/1/4/002"
+            }
+          ],
+          "container-title": [
+            "Science"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://www.science.org/doi/pdf/10.1126/science.1210361",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2024,
+                1,
+                10
+              ]
+            ],
+            "date-time": "2024-01-10T10:30:47Z",
+            "timestamp": 1704882647000
+          },
+          "score": 73.3347,
+          "resource": {
+            "primary": {
+              "URL": "https://www.science.org/doi/10.1126/science.1210361"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2012,
+                1,
+                6
+              ]
+            ]
+          },
+          "references-count": 43,
+          "journal-issue": {
+            "issue": "6064",
+            "published-print": {
+              "date-parts": [
+                [
+                  2012,
+                  1,
+                  6
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1126/science.1210361"
+          ],
+          "URL": "https://doi.org/10.1126/science.1210361",
+          "relation": {
+            "has-review": [
+              {
+                "id-type": "doi",
+                "id": "10.3410/f.717954114.793459820",
+                "asserted-by": "object"
+              }
+            ]
+          },
+          "ISSN": [
+            "0036-8075",
+            "1095-9203"
+          ],
+          "issn-type": [
+            {
+              "value": "0036-8075",
+              "type": "print"
+            },
+            {
+              "value": "1095-9203",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2012,
+                1,
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2025,
+                5,
+                14
+              ]
+            ],
+            "date-time": "2025-05-14T10:51:06Z",
+            "timestamp": 1747219866074,
+            "version": "3.40.5"
+          },
+          "reference-count": 0,
+          "publisher": "H1 Connect",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2012,
+                9,
+                12
+              ]
+            ]
+          },
+          "DOI": "10.3410/f.717954114.793459820",
+          "type": "dataset",
+          "created": {
+            "date-parts": [
+              [
+                2012,
+                9,
+                17
+              ]
+            ],
+            "date-time": "2012-09-17T06:41:16Z",
+            "timestamp": 1347864076000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Faculty Opinions recommendation of Stop signals provide cross inhibition in collective decision-making by honeybee swarms."
+          ],
+          "prefix": "10.3410",
+          "author": [
+            {
+              "ORCID": "https://orcid.org/0000-0001-7173-769X",
+              "authenticated-orcid": true,
+              "given": "Martin",
+              "family": "Giurfa",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Research Center on Animal Cognition, Centre National de la Recherche Scientifique (CNRS), France"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "4950",
+          "content-created": {
+            "date-parts": [
+              [
+                2012,
+                9,
+                4
+              ]
+            ]
+          },
+          "container-title": [
+            "Faculty Opinions \u2013 Post-Publication Peer Review of the Biomedical Literature"
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2020,
+                4,
+                20
+              ]
+            ],
+            "date-time": "2020-04-20T21:05:39Z",
+            "timestamp": 1587416739000
+          },
+          "score": 64.35137,
+          "resource": {
+            "primary": {
+              "URL": "https://facultyopinions.com/prime/717954114#eval793459820"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2012,
+                9,
+                4
+              ]
+            ]
+          },
+          "references-count": 0,
+          "URL": "https://doi.org/10.3410/f.717954114.793459820",
+          "relation": {
+            "is-review-of": [
+              {
+                "id-type": "doi",
+                "id": "10.1126/science.1210361",
+                "asserted-by": "subject"
+              }
+            ]
+          },
+          "published": {
+            "date-parts": [
+              [
+                2012,
+                9,
+                4
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                11,
+                3
+              ]
+            ],
+            "date-time": "2026-11-03T06:20:55Z",
+            "timestamp": 1793686855121,
+            "version": "4.5.1"
+          },
+          "publisher-location": "Cham",
+          "reference-count": 36,
+          "publisher": "Springer International Publishing",
+          "isbn-type": [
+            {
+              "value": "9783031201752",
+              "type": "print"
+            },
+            {
+              "value": "9783031201769",
+              "type": "electronic"
+            }
+          ],
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2022,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2022-01-01T00:00:00Z",
+                "timestamp": 1640995200000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.springer.com/tdm"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2022,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2022-01-01T00:00:00Z",
+                "timestamp": 1640995200000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "https://www.springer.com/tdm"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "link.springer.com"
+            ],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2022
+              ]
+            ]
+          },
+          "DOI": "10.1007/978-3-031-20176-9_17",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2022,
+                10,
+                28
+              ]
+            ],
+            "date-time": "2022-10-28T16:03:45Z",
+            "timestamp": 1666973025000
+          },
+          "page": "209-221",
+          "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 18,
+          "title": [
+            "Robot Swarms Break Decision Deadlocks in\u00a0Collective Perception Through Cross-Inhibition"
+          ],
+          "prefix": "10.1007",
+          "author": [
+            {
+              "ORCID": "https://orcid.org/0000-0002-2419-3789",
+              "authenticated-orcid": false,
+              "given": "Raina",
+              "family": "Zakir",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0002-3971-0507",
+              "authenticated-orcid": false,
+              "given": "Marco",
+              "family": "Dorigo",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0003-4745-992X",
+              "authenticated-orcid": false,
+              "given": "Andreagiovanni",
+              "family": "Reina",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "published-online": {
+            "date-parts": [
+              [
+                2022,
+                10,
+                29
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "17_CR1",
+              "doi-asserted-by": "publisher",
+              "unstructured": "Antoun, A., Valentini, G., Hocquard, E., Wiandt, B., Trianni, V., Dorigo, M.: Kilogrid: a modular virtualization environment for the Kilobot robot. In: 2016 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), pp. 3809\u20133814 (2016). https://doi.org/10.1109/IROS.2016.7759560",
+              "DOI": "10.1109/IROS.2016.7759560"
+            },
+            {
+              "key": "17_CR2",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Aust, T., Talamali, M., Dorigo, M., Hamann, H., Reina, A.: The hidden benefits of limited communication and slow sensing in collective monitoring of dynamic environments. In: Dorigo, M., et al. (eds.) Swarm Intelligence (ANTS 2022). LNCS, vol. 13491. Springer, Cham (2022)",
+              "DOI": "10.1007/978-3-031-20176-9_19"
+            },
+            {
+              "issue": "1",
+              "key": "17_CR3",
+              "doi-asserted-by": "publisher",
+              "first-page": "201",
+              "DOI": "10.1016/j.anbehav.2008.02.004",
+              "volume": "76",
+              "author": "M Ballerini",
+              "year": "2008",
+              "unstructured": "Ballerini, M., et al.: Empirical investigation of starling flocks: a benchmark study in collective animal behaviour. Anim. Behav. 76(1), 201\u2013215 (2008). https://doi.org/10.1016/j.anbehav.2008.02.004",
+              "journal-title": "Anim. Behav."
+            },
+            {
+              "key": "17_CR4",
+              "doi-asserted-by": "publisher",
+              "first-page": "83",
+              "DOI": "10.1007/s11721-021-00192-8",
+              "volume": "15",
+              "author": "P Bartashevich",
+              "year": "2021",
+              "unstructured": "Bartashevich, P., Mostaghim, S.: Multi-featured collective perception with evidence theory: tackling spatial correlations. Swarm Intell. 15, 83\u2013110 (2021). https://doi.org/10.1007/s11721-021-00192-8",
+              "journal-title": "Swarm Intell."
+            },
+            {
+              "key": "17_CR5",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/oso/9780195131581.001.0001",
+              "volume-title": "Swarm Intelligence: From Natural to Artificial Systems",
+              "author": "E Bonabeau",
+              "year": "1999",
+              "unstructured": "Bonabeau, E., Dorigo, M., Theraulaz, G.: Swarm Intelligence: From Natural to Artificial Systems. Oxford University Press, New York (1999)"
+            },
+            {
+              "key": "17_CR6",
+              "doi-asserted-by": "publisher",
+              "first-page": "30",
+              "DOI": "10.1016/j.cobeha.2017.03.004",
+              "volume": "6",
+              "author": "T Bose",
+              "year": "2017",
+              "unstructured": "Bose, T., Reina, A., Marshall, J.A.R.: Collective decision-making. Curr. Opin. Behav. Sci. 6, 30\u201334 (2017). https://doi.org/10.1016/j.cobeha.2017.03.004",
+              "journal-title": "Curr. Opin. Behav. Sci."
+            },
+            {
+              "key": "17_CR7",
+              "series-title": "Lecture Notes in Computer Science",
+              "doi-asserted-by": "publisher",
+              "first-page": "191",
+              "DOI": "10.1007/11839088_17",
+              "volume-title": "Ant Colony Optimization and Swarm Intelligence",
+              "author": "A Campo",
+              "year": "2006",
+              "unstructured": "Campo, A., Nouyan, S., Birattari, M., Gro\u00df, R., Dorigo, M.: Negotiation of goal direction for cooperative transport. In: Dorigo, M., Gambardella, L.M., Birattari, M., Martinoli, A., Poli, R., St\u00fctzle, T. (eds.) ANTS 2006. LNCS, vol. 4150, pp. 191\u2013202. Springer, Heidelberg (2006). https://doi.org/10.1007/11839088_17"
+            },
+            {
+              "issue": "1",
+              "key": "17_CR8",
+              "doi-asserted-by": "publisher",
+              "first-page": "1463",
+              "DOI": "10.4249/scholarpedia.1463",
+              "volume": "9",
+              "author": "M Dorigo",
+              "year": "2014",
+              "unstructured": "Dorigo, M., Birattari, M., Brambilla, M.: Swarm robotics. Scholarpedia 9(1), 1463 (2014)",
+              "journal-title": "Scholarpedia"
+            },
+            {
+              "issue": "6",
+              "key": "17_CR9",
+              "doi-asserted-by": "publisher",
+              "first-page": "460",
+              "DOI": "10.1177/1059712312462248",
+              "volume": "20",
+              "author": "E Ferrante",
+              "year": "2012",
+              "unstructured": "Ferrante, E., Turgut, A.E., Huepe, C., Stranieri, A., Pinciroli, C., Dorigo, M.: Self-organized flocking with a mobile robot swarm: a novel motion control method. Adapt. Behav. 20(6), 460\u2013477 (2012). https://doi.org/10.1177/1059712312462248",
+              "journal-title": "Adapt. Behav."
+            },
+            {
+              "key": "17_CR10",
+              "doi-asserted-by": "publisher",
+              "first-page": "579",
+              "DOI": "10.1007/BF00462870",
+              "volume": "76",
+              "author": "S Goss",
+              "year": "1989",
+              "unstructured": "Goss, S., Aron, S., Deneubourg, J.L., Pasteels, J.: Self-organized shortcuts in the argentine ant. Naturwissenschaften 76, 579 (1989). https://doi.org/10.1007/BF00462870",
+              "journal-title": "Naturwissenschaften"
+            },
+            {
+              "key": "17_CR11",
+              "doi-asserted-by": "publisher",
+              "unstructured": "Khalil, N., Miguel, M.S., Toral, R.: Zealots in the mean-field noisy voter model. Phys. Rev. E 97(1), 012310 (2018). https://doi.org/10.1103/physreve.97.012310",
+              "DOI": "10.1103/physreve.97.012310"
+            },
+            {
+              "issue": "2",
+              "key": "17_CR12",
+              "doi-asserted-by": "publisher",
+              "first-page": "155",
+              "DOI": "10.1007/s11721-017-0137-6",
+              "volume": "11",
+              "author": "Y Khaluf",
+              "year": "2017",
+              "unstructured": "Khaluf, Y., Pinciroli, C., Valentini, G., Hamann, H.: The impact of agent density on scalability in collective systems: noise-induced versus majority-based bistability. Swarm Intell. 11(2), 155\u2013179 (2017). https://doi.org/10.1007/s11721-017-0137-6",
+              "journal-title": "Swarm Intell."
+            },
+            {
+              "key": "17_CR13",
+              "doi-asserted-by": "publisher",
+              "unstructured": "Lee, C., Lawry, J., Winfield, A.F.T.: Negative updating applied to the best-of-n problem with noisy qualities. Swarm Intell. (2), 111\u2013143 (2021). https://doi.org/10.1007/s11721-021-00188-4",
+              "DOI": "10.1007/s11721-021-00188-4"
+            },
+            {
+              "issue": "08",
+              "key": "17_CR14",
+              "doi-asserted-by": "publisher",
+              "first-page": "P08029",
+              "DOI": "10.1088/1742-5468/2007/08/p08029",
+              "volume": "2007",
+              "author": "M Mobilia",
+              "year": "2007",
+              "unstructured": "Mobilia, M., Petersen, A., Redner, S.: On the role of zealotry in the voter model. J. Stat. Mech. Theory Exp. 2007(08), P08029 (2007). https://doi.org/10.1088/1742-5468/2007/08/p08029",
+              "journal-title": "J. Stat. Mech. Theory Exp."
+            },
+            {
+              "key": "17_CR15",
+              "doi-asserted-by": "publisher",
+              "unstructured": "Mobilia, M.: Does a single zealot affect an infinite group of voters? Phys. Rev. Lett. 91(2), 028701 (2003). https://doi.org/10.1103/physrevlett.91.028701",
+              "DOI": "10.1103/physrevlett.91.028701"
+            },
+            {
+              "key": "17_CR16",
+              "doi-asserted-by": "publisher",
+              "unstructured": "Mobilia, M.: Nonlinear q-voter model with inflexible zealots. Phys. Rev. E 92(1), 012803 (2015). https://doi.org/10.1103/physreve.92.012803",
+              "DOI": "10.1103/physreve.92.012803"
+            },
+            {
+              "issue": "1",
+              "key": "17_CR17",
+              "doi-asserted-by": "publisher",
+              "first-page": "1",
+              "DOI": "10.1007/s11721-007-0009-6",
+              "volume": "2",
+              "author": "S Nouyan",
+              "year": "2008",
+              "unstructured": "Nouyan, S., Campo, A., Dorigo, M.: Path formation in a robot swarm: self-organized strategies to find your way home. Swarm Intell. 2(1), 1\u201323 (2008). https://doi.org/10.1007/s11721-007-0009-6",
+              "journal-title": "Swarm Intell."
+            },
+            {
+              "issue": "9",
+              "key": "17_CR18",
+              "doi-asserted-by": "publisher",
+              "first-page": "1",
+              "DOI": "10.1371/journal.pone.0073216",
+              "volume": "8",
+              "author": "D Pais",
+              "year": "2013",
+              "unstructured": "Pais, D., Hogan, P.M., Schlegel, T., Franks, N.R., Leonard, N.E., Marshall, J.A.R.: A mechanism for value-sensitive decision-making. PLoS ONE 8(9), 1\u20139 (2013). https://doi.org/10.1371/journal.pone.0073216",
+              "journal-title": "PLoS ONE"
+            },
+            {
+              "key": "17_CR19",
+              "series-title": "Lecture Notes in Computer Science",
+              "doi-asserted-by": "publisher",
+              "first-page": "176",
+              "DOI": "10.1007/978-3-030-00533-7_14",
+              "volume-title": "Swarm Intelligence",
+              "author": "C Pinciroli",
+              "year": "2018",
+              "unstructured": "Pinciroli, C., Talamali, M.S., Reina, A., Marshall, J.A.R., Trianni, V.: Simulating Kilobots within ARGoS: models and experimental validation. In: Dorigo, M., Birattari, M., Blum, C., Christensen, A.L., Reina, A., Trianni, V. (eds.) ANTS 2018. LNCS, vol. 11172, pp. 176\u2013187. Springer, Cham (2018). https://doi.org/10.1007/978-3-030-00533-7_14"
+            },
+            {
+              "issue": "4",
+              "key": "17_CR20",
+              "doi-asserted-by": "publisher",
+              "first-page": "271",
+              "DOI": "10.1007/s11721-012-0072-5",
+              "volume": "6",
+              "author": "C Pinciroli",
+              "year": "2012",
+              "unstructured": "Pinciroli, C., et al.: ARGoS: a modular, parallel, multi-engine simulator for multi-robot systems. Swarm Intell. 6(4), 271\u2013295 (2012). https://doi.org/10.1007/s11721-012-0072-5",
+              "journal-title": "Swarm Intell."
+            },
+            {
+              "key": "17_CR21",
+              "doi-asserted-by": "publisher",
+              "unstructured": "Rausch, I., Reina, A., Simoens, P., Khaluf, Y.: Coherent collective behaviour emerging from decentralised balancing of social feedback and noise. Swarm Intell. (2), 321\u2013345 (2019). https://doi.org/10.1007/s11721-019-00173-y",
+              "DOI": "10.1007/s11721-019-00173-y"
+            },
+            {
+              "issue": "5",
+              "key": "17_CR22",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1103/PhysRevE.95.052411",
+              "volume": "95",
+              "author": "A Reina",
+              "year": "2017",
+              "unstructured": "Reina, A., Marshall, J.A.R., Trianni, V., Bose, T.: Model of the best-of-N nest-site selection process in honeybees. Phys. Rev. E 95(5), 052411 (2017). https://doi.org/10.1103/PhysRevE.95.052411",
+              "journal-title": "Phys. Rev. E"
+            },
+            {
+              "issue": "10",
+              "key": "17_CR23",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pone.0140950",
+              "volume": "10",
+              "author": "A Reina",
+              "year": "2015",
+              "unstructured": "Reina, A., Valentini, G., Fern\u00e1ndez-Oto, C., Dorigo, M., Trianni, V.: A design pattern for decentralised decision making. PLoS ONE 10(10), e0140950 (2015). https://doi.org/10.1371/journal.pone.0140950",
+              "journal-title": "PLoS ONE"
+            },
+            {
+              "key": "17_CR24",
+              "doi-asserted-by": "publisher",
+              "unstructured": "Rubenstein, M., Ahler, C., Nagpal, R.: Kilobot: A low cost scalable robot system for collective behaviors. In: 2012 IEEE International Conference on Robotics and Automation. IEEE Press, Piscataway (2012). https://doi.org/10.1109/ICRA.2012.6224638",
+              "DOI": "10.1109/ICRA.2012.6224638"
+            },
+            {
+              "key": "17_CR25",
+              "doi-asserted-by": "publisher",
+              "first-page": "1175",
+              "DOI": "10.1109/TCYB.2015.2429118",
+              "volume": "46",
+              "author": "A Scheidler",
+              "year": "2016",
+              "unstructured": "Scheidler, A., Brutschy, A., Ferrante, E., Dorigo, M.: The k-unanimity rule for self-organized decision making in swarms of robots. IEEE Trans. Cybern. 46, 1175 (2016). https://doi.org/10.1109/TCYB.2015.2429118",
+              "journal-title": "IEEE Trans. Cybern."
+            },
+            {
+              "issue": "6064",
+              "key": "17_CR26",
+              "doi-asserted-by": "publisher",
+              "first-page": "108",
+              "DOI": "10.1126/science.1210361",
+              "volume": "335",
+              "author": "TD Seeley",
+              "year": "2012",
+              "unstructured": "Seeley, T.D., Visscher, P.K., Schlegel, T., Hogan, P.M., Franks, N.R., Marshall, J.A.R.: Stop signals provide cross inhibition in collective decision-making by honeybee swarms. Science 335(6064), 108\u2013111 (2012). https://doi.org/10.1126/science.1210361",
+              "journal-title": "Science"
+            },
+            {
+              "key": "17_CR27",
+              "doi-asserted-by": "publisher",
+              "unstructured": "Sion, A., Reina, A., Birattari, M., Tuci, E.: Controlling robot swarm aggregation through a minority of informed robots. In: Dorigo, M., et al. (eds.) Swarm Intelligence (ANTS 2022). LNCS, vol. 13491. Springer, Cham (2022). https://doi.org/10.48550/arXiv.2205.03192",
+              "DOI": "10.48550/arXiv.2205.03192"
+            },
+            {
+              "key": "17_CR28",
+              "doi-asserted-by": "publisher",
+              "first-page": "1",
+              "DOI": "10.1038/srep31834",
+              "volume": "6",
+              "author": "M Starnini",
+              "year": "2016",
+              "unstructured": "Starnini, M., Frasca, M., Baronchelli, A.: Emergence of metapopulations and echo chambers in mobile agents. Sci. Rep. 6, 1\u20138 (2016). https://doi.org/10.1038/srep31834",
+              "journal-title": "Sci. Rep."
+            },
+            {
+              "issue": "1",
+              "key": "17_CR29",
+              "doi-asserted-by": "publisher",
+              "first-page": "25",
+              "DOI": "10.1007/s11721-019-00176-9",
+              "volume": "14",
+              "author": "MS Talamali",
+              "year": "2019",
+              "unstructured": "Talamali, M.S., Bose, T., Haire, M., Xu, X., Marshall, J.A.R., Reina, A.: Sophisticated collective foraging with minimalist agents: a swarm robotics test. Swarm Intell. 14(1), 25\u201356 (2019). https://doi.org/10.1007/s11721-019-00176-9",
+              "journal-title": "Swarm Intell."
+            },
+            {
+              "key": "17_CR30",
+              "doi-asserted-by": "publisher",
+              "unstructured": "Talamali, M.S., Saha, A., Marshall, J.A.R., Reina, A.: When less is more: robot swarms adapt better to changes with constrained communication. Sci. Robot. 6(56), eabf1416 (2021). https://doi.org/10.1126/scirobotics.abf1416",
+              "DOI": "10.1126/scirobotics.abf1416"
+            },
+            {
+              "key": "17_CR31",
+              "doi-asserted-by": "publisher",
+              "unstructured": "Tsimring, L.S.: Noise in biology. Reports on progress in physics. Phys. Soc. 77(2), 026601 (2014). https://doi.org/10.1088/0034-4885/77/2/026601",
+              "DOI": "10.1088/0034-4885/77/2/026601"
+            },
+            {
+              "issue": "3",
+              "key": "17_CR32",
+              "doi-asserted-by": "publisher",
+              "first-page": "245",
+              "DOI": "10.1007/s11721-018-0155-z",
+              "volume": "12",
+              "author": "G Valentini",
+              "year": "2018",
+              "unstructured": "Valentini, G., et al.: Kilogrid: a novel experimental environment for the kilobot robot. Swarm Intell. 12(3), 245\u2013266 (2018)",
+              "journal-title": "Swarm Intell."
+            },
+            {
+              "key": "17_CR33",
+              "series-title": "Lecture Notes in Computer Science",
+              "doi-asserted-by": "publisher",
+              "first-page": "65",
+              "DOI": "10.1007/978-3-319-44427-7_6",
+              "volume-title": "Swarm Intelligence",
+              "author": "G Valentini",
+              "year": "2016",
+              "unstructured": "Valentini, G., Brambilla, D., Hamann, H., Dorigo, M.: Collective perception of environmental features in a robot swarm. In: Dorigo, M., et al. (eds.) ANTS 2016. LNCS, vol. 9882, pp. 65\u201376. Springer, Cham (2016). https://doi.org/10.1007/978-3-319-44427-7_6"
+            },
+            {
+              "key": "17_CR34",
+              "doi-asserted-by": "publisher",
+              "first-page": "9",
+              "DOI": "10.3389/frobt.2017.00009",
+              "volume": "4",
+              "author": "G Valentini",
+              "year": "2017",
+              "unstructured": "Valentini, G., Ferrante, E., Dorigo, M.: The best-of-n problem in robot swarms: Formalization, state of the art, and novel perspectives. Front. Robot. AI 4, 9 (2017). https://doi.org/10.3389/frobt.2017.00009",
+              "journal-title": "Front. Robot. AI"
+            },
+            {
+              "key": "17_CR35",
+              "unstructured": "Valentini, G., Hamann, H., Dorigo, M.: Self-organized collective decision making: the weighted voter model. In: Proceedings of the 13th International Conference on Autonomous Agents and Multiagent Systems, AAMAS 2014, pp. 45\u201352. IFAAMAS, Richland (2014)"
+            },
+            {
+              "key": "17_CR36",
+              "doi-asserted-by": "publisher",
+              "unstructured": "Wahby, M., Petzold, J., Eschke, C., Schmickl, T., Hamann, H.: Collective change detection: adaptivity to dynamic swarm densities and light conditions in robot swarms. In: Artificial Life Conference Proceedings, pp. 642\u2013649. MIT Press, Cambridge (2019). https://doi.org/10.1162/isal_00233",
+              "DOI": "10.1162/isal_00233"
+            }
+          ],
+          "container-title": [
+            "Lecture Notes in Computer Science",
+            "Swarm Intelligence"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://link.springer.com/content/pdf/10.1007/978-3-031-20176-9_17",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2023,
+                9,
+                26
+              ]
+            ],
+            "date-time": "2023-09-26T16:33:30Z",
+            "timestamp": 1695746010000
+          },
+          "score": 35.412666,
+          "resource": {
+            "primary": {
+              "URL": "https://link.springer.com/10.1007/978-3-031-20176-9_17"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2022
+              ]
+            ]
+          },
+          "ISBN": [
+            "9783031201752",
+            "9783031201769"
+          ],
+          "references-count": 36,
+          "URL": "https://doi.org/10.1007/978-3-031-20176-9_17",
+          "ISSN": [
+            "0302-9743",
+            "1611-3349"
+          ],
+          "issn-type": [
+            {
+              "value": "0302-9743",
+              "type": "print"
+            },
+            {
+              "value": "1611-3349",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2022
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "29 October 2022",
+              "order": 1,
+              "name": "first_online",
+              "label": "First Online",
+              "group": {
+                "name": "ChapterHistory",
+                "label": "Chapter History"
+              }
+            },
+            {
+              "value": "ANTS",
+              "order": 1,
+              "name": "conference_acronym",
+              "label": "Conference Acronym",
+              "group": {
+                "name": "ConferenceInfo",
+                "label": "Conference Information"
+              }
+            },
+            {
+              "value": "International Conference on Swarm Intelligence",
+              "order": 2,
+              "name": "conference_name",
+              "label": "Conference Name",
+              "group": {
+                "name": "ConferenceInfo",
+                "label": "Conference Information"
+              }
+            },
+            {
+              "value": "Malaga",
+              "order": 3,
+              "name": "conference_city",
+              "label": "Conference City",
+              "group": {
+                "name": "ConferenceInfo",
+                "label": "Conference Information"
+              }
+            },
+            {
+              "value": "Spain",
+              "order": 4,
+              "name": "conference_country",
+              "label": "Conference Country",
+              "group": {
+                "name": "ConferenceInfo",
+                "label": "Conference Information"
+              }
+            },
+            {
+              "value": "2022",
+              "order": 5,
+              "name": "conference_year",
+              "label": "Conference Year",
+              "group": {
+                "name": "ConferenceInfo",
+                "label": "Conference Information"
+              }
+            },
+            {
+              "value": "2 November 2022",
+              "order": 7,
+              "name": "conference_start_date",
+              "label": "Conference Start Date",
+              "group": {
+                "name": "ConferenceInfo",
+                "label": "Conference Information"
+              }
+            },
+            {
+              "value": "4 November 2022",
+              "order": 8,
+              "name": "conference_end_date",
+              "label": "Conference End Date",
+              "group": {
+                "name": "ConferenceInfo",
+                "label": "Conference Information"
+              }
+            },
+            {
+              "value": "13",
+              "order": 9,
+              "name": "conference_number",
+              "label": "Conference Number",
+              "group": {
+                "name": "ConferenceInfo",
+                "label": "Conference Information"
+              }
+            },
+            {
+              "value": "antsw2022",
+              "order": 10,
+              "name": "conference_id",
+              "label": "Conference ID",
+              "group": {
+                "name": "ConferenceInfo",
+                "label": "Conference Information"
+              }
+            },
+            {
+              "value": "https://ants2022.uma.es/",
+              "order": 11,
+              "name": "conference_url",
+              "label": "Conference URL",
+              "group": {
+                "name": "ConferenceInfo",
+                "label": "Conference Information"
+              }
+            },
+            {
+              "value": "Single-blind",
+              "order": 1,
+              "name": "type",
+              "label": "Type",
+              "group": {
+                "name": "ConfEventPeerReviewInformation",
+                "label": "Peer Review Information (provided by the conference organizers)"
+              }
+            },
+            {
+              "value": "Easy chair",
+              "order": 2,
+              "name": "conference_management_system",
+              "label": "Conference Management System",
+              "group": {
+                "name": "ConfEventPeerReviewInformation",
+                "label": "Peer Review Information (provided by the conference organizers)"
+              }
+            },
+            {
+              "value": "45",
+              "order": 3,
+              "name": "number_of_submissions_sent_for_review",
+              "label": "Number of Submissions Sent for Review",
+              "group": {
+                "name": "ConfEventPeerReviewInformation",
+                "label": "Peer Review Information (provided by the conference organizers)"
+              }
+            },
+            {
+              "value": "19",
+              "order": 4,
+              "name": "number_of_full_papers_accepted",
+              "label": "Number of Full Papers Accepted",
+              "group": {
+                "name": "ConfEventPeerReviewInformation",
+                "label": "Peer Review Information (provided by the conference organizers)"
+              }
+            },
+            {
+              "value": "14",
+              "order": 5,
+              "name": "number_of_short_papers_accepted",
+              "label": "Number of Short Papers Accepted",
+              "group": {
+                "name": "ConfEventPeerReviewInformation",
+                "label": "Peer Review Information (provided by the conference organizers)"
+              }
+            },
+            {
+              "value": "42% - The value is computed by the equation \"Number of Full Papers Accepted / Number of Submissions Sent for Review * 100\" and then rounded to a whole number.",
+              "order": 6,
+              "name": "acceptance_rate_of_full_papers",
+              "label": "Acceptance Rate of Full Papers",
+              "group": {
+                "name": "ConfEventPeerReviewInformation",
+                "label": "Peer Review Information (provided by the conference organizers)"
+              }
+            },
+            {
+              "value": "3,0222",
+              "order": 7,
+              "name": "average_number_of_reviews_per_paper",
+              "label": "Average Number of Reviews per Paper",
+              "group": {
+                "name": "ConfEventPeerReviewInformation",
+                "label": "Peer Review Information (provided by the conference organizers)"
+              }
+            },
+            {
+              "value": "2,3076",
+              "order": 8,
+              "name": "average_number_of_papers_per_reviewer",
+              "label": "Average Number of Papers per Reviewer",
+              "group": {
+                "name": "ConfEventPeerReviewInformation",
+                "label": "Peer Review Information (provided by the conference organizers)"
+              }
+            },
+            {
+              "value": "Yes",
+              "order": 9,
+              "name": "external_reviewers_involved",
+              "label": "External Reviewers Involved",
+              "group": {
+                "name": "ConfEventPeerReviewInformation",
+                "label": "Peer Review Information (provided by the conference organizers)"
+              }
+            },
+            {
+              "value": "4 extended abstracts",
+              "order": 10,
+              "name": "additional_info_on_review_process",
+              "label": "Additional Info on Review Process",
+              "group": {
+                "name": "ConfEventPeerReviewInformation",
+                "label": "Peer Review Information (provided by the conference organizers)"
+              }
+            }
+          ]
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

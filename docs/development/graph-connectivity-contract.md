@@ -1,0 +1,15 @@
+# Graph connectivity
+
+Connectivity queries let a model ask which nodes belong together without maintaining a second topology. `graph.components` returns component memberships and `graph.connected` answers whether the graph is connected. Both work with ordinary object nodes and leave graph state, model time and random streams unchanged. The exact target contracts are in [the API reference](../agent-loom/api-reference.md#graph-components).
+
+## Behavior
+
+`graph.components({mode?})` returns frozen arrays of frozen component arrays containing original node references. Modes: weak (default), strong, biconnected. Weak treats every edge as undirected and includes isolated nodes. Strong follows directed arcs; undirected edges supply both directions. Within each part, nodes retain Graph insertion order. Parts sort by their first inserted node; for biconnected parts tied on that first node, lexicographic insertion-index sequence is a deterministic refinement of the binding's otherwise unspecified tie. Empty graph yields [].
+
+Biconnected accepts only all-undirected edges, including opt-in parallel edges and loops. Directed/mixed input throws before producing results. Maximal vertex blocks overlap at articulation nodes; an isolated vertex is a singleton, a bridge endpoint pair is a two-node part. Self-loops do not add nonmaximal singleton parts to a larger block. Parallel edges must not create spurious splits. This API does not export graph.bridges or articulations without separate working contracts/examples.
+
+`graph.connected({mode?})` accepts weak (default) or strong only. Empty and singleton graphs are connected. Other graphs are connected iff the chosen decomposition has one part. Unknown keys, invalid mode, null/foreign/accessor option records reject via existing option validation; omitted options and explicit undefined follow the existing Graph query convention. These pure snapshot queries change neither node/edge state or membership nor World tick/RNG. They remain valid for ordinary nonspatial object nodes.
+
+Capture graph structure once per operation; no user predicate or callback is introduced. Query results are detached membership snapshots of canonical mutable node identities. Removing an Agent through its existing lifecycle updates Graph membership and later results, without rewriting old snapshot arrays. No hidden cache or state authority is needed. Implement algorithms under src/graph/algorithms, expose methods through existing Graph and root public Graph export. Preserve acyclic imports and existing kernel behavior.
+
+Public examples in `examples/connectivity/` cover weak/merge lifecycle, directed strong/weak behavior, overlapping biconnected blocks with parallel/loop cases, empty/error conventions, and canonical observations/purity. Algorithms must avoid recursion-depth dependence for ordinary large chains; no undocumented universal node ceiling may be invented. Meaningful regressions should use brute-force connectivity/cut fixtures and larger chains to catch algorithm errors, not mirror implementation.

@@ -1,0 +1,466 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=Flash+Communication+in+Fireflies+Carlson+Copeland+1985&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 657488,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                11,
+                2
+              ]
+            ],
+            "date-time": "2026-11-02T22:19:46Z",
+            "timestamp": 1793657986124,
+            "version": "4.5.1"
+          },
+          "reference-count": 0,
+          "publisher": "University of Chicago Press",
+          "issue": "4",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "The Quarterly Review of Biology"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1985,
+                12
+              ]
+            ]
+          },
+          "DOI": "10.1086/414564",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2004,
+                3,
+                1
+              ]
+            ],
+            "date-time": "2004-03-01T23:04:10Z",
+            "timestamp": 1078182250000
+          },
+          "page": "415-436",
+          "source": "Crossref",
+          "is-referenced-by-count": 87,
+          "title": [
+            "Flash Communication in Fireflies"
+          ],
+          "prefix": "10.1086",
+          "volume": "60",
+          "author": [
+            {
+              "given": "Albert D.",
+              "family": "Carlson",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Jonathan",
+              "family": "Copeland",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "200",
+          "container-title": [
+            "The Quarterly Review of Biology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://www.journals.uchicago.edu/doi/pdf/10.1086/414564",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2018,
+                4,
+                7
+              ]
+            ],
+            "date-time": "2018-04-07T12:28:27Z",
+            "timestamp": 1523104107000
+          },
+          "score": 35.04837,
+          "resource": {
+            "primary": {
+              "URL": "https://www.journals.uchicago.edu/doi/10.1086/414564"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1985,
+                12
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "4",
+            "published-print": {
+              "date-parts": [
+                [
+                  1985,
+                  12
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1086/414564"
+          ],
+          "URL": "https://doi.org/10.1086/414564",
+          "ISSN": [
+            "0033-5770",
+            "1539-7718"
+          ],
+          "issn-type": [
+            {
+              "value": "0033-5770",
+              "type": "print"
+            },
+            {
+              "value": "1539-7718",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1985,
+                12
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                11,
+                5
+              ]
+            ],
+            "date-time": "2026-11-05T10:57:58Z",
+            "timestamp": 1793876278403,
+            "version": "4.7.0"
+          },
+          "reference-count": 0,
+          "publisher": "Oxford University Press (OUP)",
+          "issue": "3",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Integrative and Comparative Biology"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2004,
+                6,
+                1
+              ]
+            ]
+          },
+          "DOI": "10.1093/icb/44.3.225",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2006,
+                3,
+                13
+              ]
+            ],
+            "date-time": "2006-03-13T18:44:02Z",
+            "timestamp": 1142275442000
+          },
+          "page": "225-233",
+          "source": "Crossref",
+          "is-referenced-by-count": 67,
+          "title": [
+            "Flash Communication Systems of Japanese Fireflies"
+          ],
+          "prefix": "10.1093",
+          "volume": "44",
+          "author": [
+            {
+              "given": "N.",
+              "family": "Ohba",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "286",
+          "container-title": [
+            "Integrative and Comparative Biology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://academic.oup.com/icb/article-pdf/44/3/225/1638292/i1540-7063-044-03-0225.pdf",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2017,
+                8,
+                23
+              ]
+            ],
+            "date-time": "2017-08-23T10:01:24Z",
+            "timestamp": 1503482484000
+          },
+          "score": 32.59553,
+          "resource": {
+            "primary": {
+              "URL": "https://academic.oup.com/icb/article-lookup/doi/10.1093/icb/44.3.225"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2004,
+                6,
+                1
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "3",
+            "published-print": {
+              "date-parts": [
+                [
+                  2004,
+                  6,
+                  1
+                ]
+              ]
+            }
+          },
+          "URL": "https://doi.org/10.1093/icb/44.3.225",
+          "ISSN": [
+            "1540-7063",
+            "1557-7023"
+          ],
+          "issn-type": [
+            {
+              "value": "1540-7063",
+              "type": "print"
+            },
+            {
+              "value": "1557-7023",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2004,
+                6,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2022,
+                4,
+                1
+              ]
+            ],
+            "date-time": "2022-04-01T21:30:50Z",
+            "timestamp": 1648848650340
+          },
+          "reference-count": 0,
+          "publisher": "Wiley",
+          "issue": "9",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2015,
+                    9,
+                    1
+                  ]
+                ],
+                "date-time": "2015-09-01T00:00:00Z",
+                "timestamp": 1441065600000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 17902,
+              "URL": "http://doi.wiley.com/10.1002/tdm_license_1"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Science News"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1966,
+                8,
+                27
+              ]
+            ]
+          },
+          "DOI": "10.2307/3950530",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2007,
+                11,
+                27
+              ]
+            ],
+            "date-time": "2007-11-27T12:14:36Z",
+            "timestamp": 1196165676000
+          },
+          "page": "130",
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Fireflies Flash in Unison"
+          ],
+          "prefix": "10.1002",
+          "volume": "90",
+          "member": "311",
+          "container-title": [
+            "Science News"
+          ],
+          "link": [
+            {
+              "URL": "http://api.wiley.com/onlinelibrary/tdm/v1/articles/10.2307%2F3950530",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://onlinelibrary.wiley.com/doi/full/10.2307/3950530",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2018,
+                8,
+                5
+              ]
+            ],
+            "date-time": "2018-08-05T06:23:33Z",
+            "timestamp": 1533450213000
+          },
+          "score": 28.07144,
+          "resource": {
+            "primary": {
+              "URL": "http://www.jstor.org/stable/3950530?origin=crossref"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1966,
+                8,
+                27
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "9",
+            "published-print": {
+              "date-parts": [
+                [
+                  1966,
+                  8,
+                  27
+                ]
+              ]
+            }
+          },
+          "URL": "https://doi.org/10.2307/3950530",
+          "ISSN": [
+            "0036-8423"
+          ],
+          "issn-type": [
+            {
+              "value": "0036-8423",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1966,
+                8,
+                27
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

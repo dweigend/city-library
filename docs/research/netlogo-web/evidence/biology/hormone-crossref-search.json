@@ -1,0 +1,1608 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=Resistance+exercise-induced+increases+in+putative+anabolic+hormones+do+not+enhance+muscle+protein+synthesis+or+intracellular+signalling+West+2009&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 7827711,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                19
+              ]
+            ],
+            "date-time": "2026-10-19T23:10:55Z",
+            "timestamp": 1792451455117,
+            "version": "4.5.0"
+          },
+          "reference-count": 26,
+          "publisher": "Wiley",
+          "issue": "21",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2009,
+                    10,
+                    30
+                  ]
+                ],
+                "date-time": "2009-10-30T00:00:00Z",
+                "timestamp": 1256860800000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "http://onlinelibrary.wiley.com/termsAndConditions#vor"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "The Journal of Physiology"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2009,
+                11
+              ]
+            ]
+          },
+          "abstract": "<jats:p>We aimed to determine whether exercise\u2010induced elevations in systemic concentration of testosterone, growth hormone (GH) and insulin\u2010like growth factor\u20101 (IGF\u20101) enhanced post\u2010exercise myofibrillar protein synthesis (MPS) and phosphorylation of signalling proteins important in regulating mRNA translation. Eight young men (20 \u00b1 1.1 years, BMI = 26 \u00b1 3.5 kg m<jats:sup>\u22122</jats:sup>) completed two exercise protocols designed to maintain basal hormone concentrations (low hormone, LH) or elicit increases in endogenous hormones (high hormone, HH). In the LH protocol, participants performed a bout of unilateral resistance exercise with the elbow flexors. The HH protocol consisted of the same elbow flexor exercise with the contralateral arm followed immediately by high\u2010volume leg resistance exercise. Participants consumed 25 g of protein after arm exercise to maximize MPS. Muscle biopsies and blood samples were taken as appropriate. There were no changes in serum testosterone, GH or IGF\u20101 after the LH protocol, whereas there were marked elevations after HH (testosterone, <jats:italic>P</jats:italic> &lt; 0.001; GH, <jats:italic>P</jats:italic> &lt; 0.001; IGF\u20101, <jats:italic>P</jats:italic> &lt; 0.05). Exercise stimulated a rise in MPS in the biceps brachii (rest = 0.040 \u00b1 0.007, LH = 0.071 \u00b1 0.008, HH = 0.064 \u00b1 0.014% h<jats:sup>\u22121</jats:sup>; <jats:italic>P</jats:italic> &lt; 0.05) with no effect of elevated hormones (<jats:italic>P</jats:italic>= 0.72). Phosphorylation of the 70 kDa S6 protein kinase (p70S6K) also increased post\u2010exercise (<jats:italic>P</jats:italic> &lt; 0.05) with no differences between conditions. We conclude that the transient increases in endogenous purportedly anabolic hormones do not enhance fed\u2010state anabolic signalling or MPS following resistance exercise. Local mechanisms are likely to be of predominant importance for the post\u2010exercise increase in MPS.</jats:p>",
+          "DOI": "10.1113/jphysiol.2009.177220",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2009,
+                9,
+                8
+              ]
+            ],
+            "date-time": "2009-09-08T01:08:56Z",
+            "timestamp": 1252372136000
+          },
+          "page": "5239-5247",
+          "source": "Crossref",
+          "is-referenced-by-count": 223,
+          "title": [
+            "Resistance exercise\u2010induced increases in putative anabolic hormones do not enhance muscle protein synthesis or intracellular signalling in young men"
+          ],
+          "prefix": "10.1113",
+          "volume": "587",
+          "author": [
+            {
+              "given": "Daniel W. D.",
+              "family": "West",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Gregory W.",
+              "family": "Kujbida",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Daniel R.",
+              "family": "Moore",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Philip",
+              "family": "Atherton",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Nicholas A.",
+              "family": "Burd",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Jan P.",
+              "family": "Padzik",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Michael",
+              "family": "De Lisio",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Jason E.",
+              "family": "Tang",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Gianni",
+              "family": "Parise",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Michael J.",
+              "family": "Rennie",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Steven K.",
+              "family": "Baker",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Stuart M.",
+              "family": "Phillips",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "311",
+          "published-online": {
+            "date-parts": [
+              [
+                2009,
+                10,
+                30
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "e_1_2_6_2_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1152/ajpcell.1999.276.1.C120"
+            },
+            {
+              "key": "e_1_2_6_3_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1152/ajpendo.1997.273.1.E122"
+            },
+            {
+              "key": "e_1_2_6_4_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2165/00007256-200333080-00005"
+            },
+            {
+              "key": "e_1_2_6_5_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1139/h97-016"
+            },
+            {
+              "key": "e_1_2_6_6_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1152/ajpendo.90411.2008"
+            },
+            {
+              "key": "e_1_2_6_7_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/ajcn/86.2.373"
+            },
+            {
+              "key": "e_1_2_6_8_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1152/japplphysiol.00221.2002"
+            },
+            {
+              "key": "e_1_2_6_9_1",
+              "first-page": "91",
+              "volume-title": "Essentials of Strength and Conditioning",
+              "author": "Kraemer WJ",
+              "year": "2000"
+            },
+            {
+              "key": "e_1_2_6_10_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1152/jappl.1990.69.4.1442"
+            },
+            {
+              "key": "e_1_2_6_11_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1055/s-2008-1025663"
+            },
+            {
+              "key": "e_1_2_6_12_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2165/00007256-200535040-00004"
+            },
+            {
+              "key": "e_1_2_6_13_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1113/jphysiol.2008.164483"
+            },
+            {
+              "key": "e_1_2_6_14_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1097/00005768-199708000-00010"
+            },
+            {
+              "key": "e_1_2_6_15_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0889-8529(05)70200-0"
+            },
+            {
+              "key": "e_1_2_6_16_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1152/ajpendo.00387.2004"
+            },
+            {
+              "key": "e_1_2_6_17_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.3945/ajcn.2008.26401"
+            },
+            {
+              "key": "e_1_2_6_18_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1113/jphysiol.2008.164087"
+            },
+            {
+              "key": "e_1_2_6_19_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1210/jc.2007-2414"
+            },
+            {
+              "key": "e_1_2_6_20_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.nut.2004.04.009"
+            },
+            {
+              "key": "e_1_2_6_21_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1152/ajpendo.1997.273.1.E99"
+            },
+            {
+              "key": "e_1_2_6_22_1",
+              "doi-asserted-by": "crossref",
+              "first-page": "R536",
+              "DOI": "10.1152/ajpregu.1995.269.3.R536",
+              "article-title": "Resistance exercise\u2010induced fluid shifts: change in active muscle size and plasma volume",
+              "volume": "269",
+              "author": "Ploutz\u2010Snyder LL",
+              "year": "1995",
+              "journal-title": "Am J Physiol Regul Integr Comp Physiol"
+            },
+            {
+              "key": "e_1_2_6_23_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1146/annurev.physiol.66.052102.134444"
+            },
+            {
+              "key": "e_1_2_6_24_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1139/H07-076"
+            },
+            {
+              "key": "e_1_2_6_25_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s00421-007-0564-y"
+            },
+            {
+              "key": "e_1_2_6_26_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s00421-006-0300-z"
+            },
+            {
+              "key": "e_1_2_6_27_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/ajcn/85.4.1031"
+            }
+          ],
+          "container-title": [
+            "The Journal of Physiology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1113%2Fjphysiol.2009.177220",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://physoc.onlinelibrary.wiley.com/doi/pdf/10.1113/jphysiol.2009.177220",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2023,
+                10,
+                14
+              ]
+            ],
+            "date-time": "2023-10-14T18:30:10Z",
+            "timestamp": 1697308210000
+          },
+          "score": 72.2093,
+          "resource": {
+            "primary": {
+              "URL": "https://physoc.onlinelibrary.wiley.com/doi/10.1113/jphysiol.2009.177220"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2009,
+                10,
+                30
+              ]
+            ]
+          },
+          "references-count": 26,
+          "journal-issue": {
+            "issue": "21",
+            "published-print": {
+              "date-parts": [
+                [
+                  2009,
+                  11
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1113/jphysiol.2009.177220"
+          ],
+          "URL": "https://doi.org/10.1113/jphysiol.2009.177220",
+          "archive": [
+            "Portico"
+          ],
+          "ISSN": [
+            "0022-3751",
+            "1469-7793"
+          ],
+          "issn-type": [
+            {
+              "value": "0022-3751",
+              "type": "print"
+            },
+            {
+              "value": "1469-7793",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2009,
+                10,
+                30
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                2
+              ]
+            ],
+            "date-time": "2026-10-02T13:58:42Z",
+            "timestamp": 1790949522177,
+            "version": "4.1.0"
+          },
+          "reference-count": 32,
+          "publisher": "Wiley",
+          "issue": "1",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2010,
+                    1,
+                    12
+                  ]
+                ],
+                "date-time": "2010-01-12T00:00:00Z",
+                "timestamp": 1263254400000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "http://onlinelibrary.wiley.com/termsAndConditions#vor"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Acta Physiologica"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2010,
+                5
+              ]
+            ]
+          },
+          "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:p>\n                    <jats:bold>Aim:\u2002</jats:bold>\n                    Sex differences are evident in human skeletal muscle as the cross\u2010sectional area of individual muscle fibres is greater in men than in women. We have recently shown that resistance exercise stimulates mammalian target of rapamycin (mTOR) signalling and muscle protein synthesis in humans during early post\u2010exercise recovery. Therefore, the aim of this study was to determine if sex influences the muscle protein synthesis response during recovery from resistance exercise.\n                  </jats:p>\n                  <jats:p>\n                    <jats:bold>Methods:\u2002</jats:bold>\n                    Seventeen subjects, nine male and eight female, were studied in the fasted state before, during and for 2\u2003h following a bout of high\u2010intensity leg resistance exercise. Mixed muscle protein fractional synthetic rate was measured using stable isotope techniques and mTOR signalling was assessed by immunoblotting from repeated vastus lateralis muscle biopsy samples.\n                  </jats:p>\n                  <jats:p>\n                    <jats:bold>Results:\u2002</jats:bold>\n                    Post\u2010exercise muscle protein synthesis increased by 52% in the men and by 47% in the women (\n                    <jats:italic>P\u2003</jats:italic>\n                    &lt;\u20030.05) and was not different between groups (\n                    <jats:italic>P\u2003</jats:italic>\n                    &gt;\u20030.05). Akt phosphorylation increased in both groups at 1\u2003h post\u2010exercise (\n                    <jats:italic>P\u2003</jats:italic>\n                    &lt;\u20030.05) and returned to baseline during 2\u2003h post\u2010exercise with no differences between groups (\n                    <jats:italic>P\u2003</jats:italic>\n                    &gt;\u20030.05). Phosphorylation of mTOR and its downstream effector S6K1 increased significantly and similarly between groups during post\u2010exercise recovery (\n                    <jats:italic>P\u2003</jats:italic>\n                    &lt;\u20030.05). eEF2 phosphorylation decreased at 1\u2010 and 2\u2003h post\u2010exercise (\n                    <jats:italic>P\u2003</jats:italic>\n                    &lt;\u20030.05) to a similar extent in both groups.\n                  </jats:p>\n                  <jats:p>\n                    <jats:bold>Conclusion:\u2002</jats:bold>\n                    The contraction\u2010induced increase in early post\u2010exercise mTOR signalling and muscle protein synthesis is independent of sex and appears to not play a role in the sexual dimorphism of leg skeletal muscle in young men and women.\n                  </jats:p>",
+          "DOI": "10.1111/j.1748-1716.2010.02074.x",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2010,
+                1,
+                12
+              ]
+            ],
+            "date-time": "2010-01-12T01:59:53Z",
+            "timestamp": 1263261593000
+          },
+          "page": "71-81",
+          "source": "Crossref",
+          "is-referenced-by-count": 124,
+          "title": [
+            "Resistance exercise increases leg muscle protein synthesis and mTOR signalling independent of sex"
+          ],
+          "prefix": "10.1111",
+          "volume": "199",
+          "author": [
+            {
+              "given": "H. C.",
+              "family": "Dreyer",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "S.",
+              "family": "Fujita",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "E. L.",
+              "family": "Glynn",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "M. J.",
+              "family": "Drummond",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "E.",
+              "family": "Volpi",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "B. B.",
+              "family": "Rasmussen",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "311",
+          "published-online": {
+            "date-parts": [
+              [
+                2010,
+                4,
+                12
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "e_1_2_7_2_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s004210050027"
+            },
+            {
+              "key": "e_1_2_7_3_1",
+              "first-page": "790",
+              "article-title": "Effects of aging on in vivo synthesis of skeletal muscle myosin heavy\u2010chain and sarcoplasmic protein in humans",
+              "volume": "273",
+              "author": "Balagopal P.",
+              "year": "1997",
+              "journal-title": "Am J Physiol"
+            },
+            {
+              "key": "e_1_2_7_4_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1152/ajpendo.2001.281.6.E1172"
+            },
+            {
+              "key": "e_1_2_7_5_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1152/ajpendo.1995.268.3.E514"
+            },
+            {
+              "key": "e_1_2_7_6_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/ncb1101-1014"
+            },
+            {
+              "key": "e_1_2_7_7_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/rcm.1290060704"
+            },
+            {
+              "key": "e_1_2_7_8_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s00421-008-0786-7"
+            },
+            {
+              "key": "e_1_2_7_9_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1113/jphysiol.2006.113175"
+            },
+            {
+              "key": "e_1_2_7_10_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1152/ajpendo.00582.2007"
+            },
+            {
+              "key": "e_1_2_7_11_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1113/jphysiol.2008.163816"
+            },
+            {
+              "key": "e_1_2_7_12_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1152/ajpendo.00141.2006"
+            },
+            {
+              "key": "e_1_2_7_13_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1152/ajpendo.00173.2006"
+            },
+            {
+              "key": "e_1_2_7_14_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1152/japplphysiol.90395.2008"
+            },
+            {
+              "key": "e_1_2_7_15_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1096/fj.08-117200"
+            },
+            {
+              "key": "e_1_2_7_16_1",
+              "first-page": "964",
+              "article-title": "Variability in muscle size and strength gain after unilateral resistance training",
+              "volume": "37",
+              "author": "Hubal M.J.",
+              "year": "2005",
+              "journal-title": "Med Sci Sports Exerc"
+            },
+            {
+              "key": "e_1_2_7_17_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1152/japplphysiol.00087.2009"
+            },
+            {
+              "key": "e_1_2_7_18_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1210/jc.84.3.1007"
+            },
+            {
+              "key": "e_1_2_7_19_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1042/cs0410459"
+            },
+            {
+              "key": "e_1_2_7_20_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1152/japplphysiol.01474.2005"
+            },
+            {
+              "key": "e_1_2_7_21_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1139/h95-038"
+            },
+            {
+              "key": "e_1_2_7_22_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1113/jphysiol.2005.093690"
+            },
+            {
+              "key": "e_1_2_7_23_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1113/jphysiol.2009.173609"
+            },
+            {
+              "key": "e_1_2_7_24_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1152/jappl.2001.91.3.1041"
+            },
+            {
+              "key": "e_1_2_7_25_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1152/ajpendo.1997.273.1.E99"
+            },
+            {
+              "key": "e_1_2_7_26_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1152/jappl.2000.88.2.386"
+            },
+            {
+              "key": "e_1_2_7_27_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1152/ajpendo.00366.2003"
+            },
+            {
+              "key": "e_1_2_7_28_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pone.0001875"
+            },
+            {
+              "key": "e_1_2_7_29_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1152/japplphysiol.00348.2009"
+            },
+            {
+              "key": "e_1_2_7_30_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1152/ajpendo.1995.269.5.E820"
+            },
+            {
+              "key": "e_1_2_7_31_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1210/jc.83.12.4363"
+            },
+            {
+              "key": "e_1_2_7_32_1",
+              "volume-title": "Radioactive and Stable Isotope Tracers in Biomedicine: Principles and Practice of Kinetic Analysis",
+              "author": "Wolfe R.R.",
+              "year": "1992"
+            },
+            {
+              "key": "e_1_2_7_33_1",
+              "first-page": "118",
+              "article-title": "Resistance exercise training increases mixed muscle protein synthesis rate in frail women and men >/=76\u2003yr old",
+              "volume": "277",
+              "author": "Yarasheski K.E.",
+              "year": "1999",
+              "journal-title": "Am J Physiol"
+            }
+          ],
+          "container-title": [
+            "Acta Physiologica"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1111%2Fj.1748-1716.2010.02074.x",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1748-1716.2010.02074.x",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2023,
+                10,
+                16
+              ]
+            ],
+            "date-time": "2023-10-16T07:39:03Z",
+            "timestamp": 1697441943000
+          },
+          "score": 40.671276,
+          "resource": {
+            "primary": {
+              "URL": "https://onlinelibrary.wiley.com/doi/10.1111/j.1748-1716.2010.02074.x"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2010,
+                4,
+                12
+              ]
+            ]
+          },
+          "references-count": 32,
+          "journal-issue": {
+            "issue": "1",
+            "published-print": {
+              "date-parts": [
+                [
+                  2010,
+                  5
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1111/j.1748-1716.2010.02074.x"
+          ],
+          "URL": "https://doi.org/10.1111/j.1748-1716.2010.02074.x",
+          "archive": [
+            "Portico"
+          ],
+          "ISSN": [
+            "1748-1708",
+            "1748-1716"
+          ],
+          "issn-type": [
+            {
+              "value": "1748-1708",
+              "type": "print"
+            },
+            {
+              "value": "1748-1716",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2010,
+                4,
+                12
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                8
+              ]
+            ],
+            "date-time": "2026-09-08T02:51:42Z",
+            "timestamp": 1788835902428,
+            "version": "build-2803163510"
+          },
+          "reference-count": 67,
+          "publisher": "Wiley",
+          "issue": "7",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2016,
+                    6,
+                    2
+                  ]
+                ],
+                "date-time": "2016-06-02T00:00:00Z",
+                "timestamp": 1464825600000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "http://onlinelibrary.wiley.com/termsAndConditions#vor"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Experimental Physiology"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2016,
+                7
+              ]
+            ]
+          },
+          "abstract": "<jats:title>New Findings</jats:title><jats:sec><jats:label/><jats:p><jats:list list-type=\"bullet\">\n<jats:list-item><jats:p><jats:bold>What is the central question of this study?</jats:bold></jats:p>\n<jats:p>Does shorter rest between sets of resistance exercise promote a superior circulating hormonal and acute muscle anabolic response compared with longer rest periods?</jats:p></jats:list-item>\n<jats:list-item><jats:p><jats:bold>What is the main finding and its importance?</jats:bold></jats:p>\n<jats:p>We demonstrate that short rest (1\u00a0min) between sets of moderate\u2010intensity, high\u2010volume resistance exercise blunts the acute muscle anabolic response compared with a longer rest period (5\u00a0min), despite a superior circulating hormonal milieu. These data have important implications for the development of training regimens to maximize muscle hypertrophy.</jats:p></jats:list-item>\n</jats:list></jats:p></jats:sec><jats:sec><jats:label/><jats:p>Manipulating the rest\u2010recovery interval between sets of resistance exercise may influence training\u2010induced muscle remodelling. The aim of this study was to determine the acute muscle anabolic response to resistance exercise performed with short or long inter\u2010set rest intervals. In a study with a parallel\u2010group design, 16 males completed four sets of bilateral leg\u2010press and knee\u2010extension exercise at 75% of one\u2010repetition maximum to momentary muscular failure, followed by ingestion of 25\u00a0g of whey protein. Resistance exercise sets were interspersed by 1\u00a0min (<jats:italic>n</jats:italic>\u00a0=\u00a08) or 5\u00a0min of passive rest (<jats:italic>n</jats:italic>\u00a0=\u00a08). Muscle biopsies were obtained at rest, 0, 4, 24 and 28\u00a0h postexercise during a primed continuous infusion of <jats:sc>l</jats:sc>\u2010[<jats:italic>ring</jats:italic>\u2010<jats:sup>13</jats:sup>C<jats:sub>6</jats:sub>]phenylalanine to determine myofibrillar protein synthesis and intracellular signalling. We found that the rate of myofibrillar protein synthesis increased above resting values from 0 to 4\u00a0h postexercise with 1 (76%; <jats:italic>P</jats:italic>\u00a0=\u00a00.047) and 5\u00a0min inter\u2010set rest (152%; <jats:italic>P</jats:italic>\u00a0&lt;\u00a00.001) and was significantly greater in the 5\u00a0min inter\u2010set rest group (<jats:italic>P</jats:italic>\u00a0=\u00a00.001). Myofibrillar protein synthesis rates at 24\u201328\u00a0h postexercise remained elevated above resting values (<jats:italic>P</jats:italic>\u00a0&lt;\u00a00.05) and were indistinguishable between groups. Postexercise p70S6K<jats:sup>Thr389</jats:sup> and rpS6<jats:sup>Ser240/244</jats:sup> phosphorylation were reduced with 1 compared with 5\u00a0min inter\u2010set rest, whereas phosphorylation of eEF2<jats:sup>Thr56</jats:sup>, TSC2<jats:sup>Thr1462</jats:sup>, AMPK<jats:sup>Thr172</jats:sup> and REDD1 protein were greater for 1 compared with 5\u00a0min inter\u2010set rest. Serum testosterone was greater at 20\u201340\u00a0min postexercise and plasma lactate greater immediately postexercise for 1 <jats:italic>versus</jats:italic> 5\u00a0min inter\u2010set rest. Resistance exercise with short (1\u00a0min) inter\u2010set rest duration attenuated myofibrillar protein synthesis during the early postexercise recovery period compared with longer (5\u00a0min) rest duration, potentially through compromised activation of intracellular signalling.</jats:p></jats:sec>",
+          "DOI": "10.1113/ep085647",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2016,
+                4,
+                30
+              ]
+            ],
+            "date-time": "2016-04-30T16:00:02Z",
+            "timestamp": 1462032002000
+          },
+          "page": "866-882",
+          "source": "Crossref",
+          "is-referenced-by-count": 53,
+          "title": [
+            "Short inter\u2010set rest blunts resistance exercise\u2010induced increases in myofibrillar protein synthesis and intracellular signalling in young males"
+          ],
+          "prefix": "10.1113",
+          "volume": "101",
+          "author": [
+            {
+              "given": "James",
+              "family": "McKendry",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "School of Sport, Exercise and Rehabilitation Sciences University of Birmingham  UK"
+                },
+                {
+                  "name": "MRC\u2010ARUK Centre for Musculoskeletal Ageing Research University of Birmingham  UK"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Alberto",
+              "family": "P\u00e9rez\u2010L\u00f3pez",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "School of Sport, Exercise and Rehabilitation Sciences University of Birmingham  UK"
+                },
+                {
+                  "name": "Departamento de Medicina Universidad de Alcal\u00e1  Spain"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Michael",
+              "family": "McLeod",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "School of Sport, Exercise and Rehabilitation Sciences University of Birmingham  UK"
+                },
+                {
+                  "name": "MRC\u2010ARUK Centre for Musculoskeletal Ageing Research University of Birmingham  UK"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Dan",
+              "family": "Luo",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "School of Sport, Exercise and Rehabilitation Sciences University of Birmingham  UK"
+                },
+                {
+                  "name": "MRC\u2010ARUK Centre for Musculoskeletal Ageing Research University of Birmingham  UK"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Jessica R.",
+              "family": "Dent",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "School of Sport, Exercise and Rehabilitation Sciences University of Birmingham  UK"
+                },
+                {
+                  "name": "MRC\u2010ARUK Centre for Musculoskeletal Ageing Research University of Birmingham  UK"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Benoit",
+              "family": "Smeuninx",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "School of Sport, Exercise and Rehabilitation Sciences University of Birmingham  UK"
+                },
+                {
+                  "name": "MRC\u2010ARUK Centre for Musculoskeletal Ageing Research University of Birmingham  UK"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Jinglei",
+              "family": "Yu",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "School of Sport, Exercise and Rehabilitation Sciences University of Birmingham  UK"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Angela E.",
+              "family": "Taylor",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "School of Clinical and Experimental Medicine University of Birmingham  UK"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Andrew",
+              "family": "Philp",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "School of Sport, Exercise and Rehabilitation Sciences University of Birmingham  UK"
+                },
+                {
+                  "name": "MRC\u2010ARUK Centre for Musculoskeletal Ageing Research University of Birmingham  UK"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Leigh",
+              "family": "Breen",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "School of Sport, Exercise and Rehabilitation Sciences University of Birmingham  UK"
+                },
+                {
+                  "name": "MRC\u2010ARUK Centre for Musculoskeletal Ageing Research University of Birmingham  UK"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "311",
+          "published-online": {
+            "date-parts": [
+              [
+                2016,
+                6,
+                2
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "e_1_2_5_2_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0026-0495(81)90074-3"
+            },
+            {
+              "key": "e_1_2_5_3_1",
+              "first-page": "572",
+              "article-title": "Short vs. long rest period between the sets in hypertrophic resistance training: influence on muscle strength, size, and hormonal adaptations in trained men",
+              "volume": "19",
+              "author": "Ahtiainen JP",
+              "year": "2005",
+              "journal-title": "J Strength Cond Res"
+            },
+            {
+              "key": "e_1_2_5_4_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1249/MSS.0b013e3181915670"
+            },
+            {
+              "key": "e_1_2_5_5_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1152/ajpendo.2001.280.3.E383"
+            },
+            {
+              "key": "e_1_2_5_6_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.3109/00365517509095787"
+            },
+            {
+              "key": "e_1_2_5_7_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.jsams.2007.10.013"
+            },
+            {
+              "key": "e_1_2_5_8_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1113/jphysiol.2011.211888"
+            },
+            {
+              "key": "e_1_2_5_9_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1096/fj.15-273755"
+            },
+            {
+              "key": "e_1_2_5_10_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1139/h11-078"
+            },
+            {
+              "key": "e_1_2_5_11_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1113/jphysiol.2010.192856"
+            },
+            {
+              "key": "e_1_2_5_12_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.3945/jn.110.135038"
+            },
+            {
+              "key": "e_1_2_5_13_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1186/1743-7075-8-15"
+            },
+            {
+              "key": "e_1_2_5_14_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pone.0012033"
+            },
+            {
+              "key": "e_1_2_5_15_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1519/JSC.0b013e318185f14a"
+            },
+            {
+              "key": "e_1_2_5_16_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1432-1033.1990.tb19169.x"
+            },
+            {
+              "key": "e_1_2_5_17_1",
+              "first-page": "353",
+              "article-title": "Monitoring exercise intensity during resistance training using the session RPE scale",
+              "volume": "18",
+              "author": "Day ML",
+              "year": "2004",
+              "journal-title": "J Strength Cond Res"
+            },
+            {
+              "key": "e_1_2_5_18_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2165/11315230-000000000-00000"
+            },
+            {
+              "key": "e_1_2_5_19_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1519/JSC.0b013e3181ddae4a"
+            },
+            {
+              "key": "e_1_2_5_20_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.3945/jn.111.139485"
+            },
+            {
+              "key": "e_1_2_5_21_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1113/jphysiol.2009.179325"
+            },
+            {
+              "key": "e_1_2_5_22_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1113/jphysiol.2008.163816"
+            },
+            {
+              "key": "e_1_2_5_23_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1249/MSS.0b013e318160ff84"
+            },
+            {
+              "key": "e_1_2_5_24_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1519/R-13603.1"
+            },
+            {
+              "key": "e_1_2_5_25_1",
+              "first-page": "243",
+              "article-title": "A single set of low intensity resistance exercise immediately following high intensity resistance exercise stimulates growth hormone secretion in men",
+              "volume": "43",
+              "author": "Goto K",
+              "year": "2003",
+              "journal-title": "J Sports Med Phys Fitness"
+            },
+            {
+              "key": "e_1_2_5_26_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1152/ajpendo.90411.2008"
+            },
+            {
+              "key": "e_1_2_5_27_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1210/jc.2015-1516"
+            },
+            {
+              "key": "e_1_2_5_28_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0092-8674(03)00929-2"
+            },
+            {
+              "key": "e_1_2_5_29_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1074/jbc.M706643200"
+            },
+            {
+              "key": "e_1_2_5_30_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1053/ajkd.2001.29215"
+            },
+            {
+              "key": "e_1_2_5_31_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1249/JSR.0b013e3181e976df"
+            },
+            {
+              "key": "e_1_2_5_32_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1152/jappl.1990.69.4.1442"
+            },
+            {
+              "key": "e_1_2_5_33_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2165/00007256-200535040-00004"
+            },
+            {
+              "key": "e_1_2_5_34_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1519/JSC.0b013e3181d4d436"
+            },
+            {
+              "key": "e_1_2_5_35_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1113/jphysiol.2008.164483"
+            },
+            {
+              "key": "e_1_2_5_36_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1530/eje.1.01844"
+            },
+            {
+              "key": "e_1_2_5_37_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s00421-008-0951-z"
+            },
+            {
+              "key": "e_1_2_5_38_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S1097-2765(02)00568-3"
+            },
+            {
+              "key": "e_1_2_5_39_1",
+              "first-page": "200",
+              "article-title": "Relative muscular endurance as a predictor of bench press in college men and women",
+              "volume": "6",
+              "author": "Mayhew JL",
+              "year": "1992",
+              "journal-title": "J Appl Sports Sci Res"
+            },
+            {
+              "key": "e_1_2_5_40_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1113/jphysiol.2005.093690"
+            },
+            {
+              "key": "e_1_2_5_41_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pone.0078636"
+            },
+            {
+              "key": "e_1_2_5_42_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pone.0089431"
+            },
+            {
+              "key": "e_1_2_5_43_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1152/japplphysiol.00307.2012"
+            },
+            {
+              "key": "e_1_2_5_44_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1113/jphysiol.2008.164087"
+            },
+            {
+              "key": "e_1_2_5_45_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.bbrc.2011.01.078"
+            },
+            {
+              "key": "e_1_2_5_46_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1210/jc.2014-3556"
+            },
+            {
+              "key": "e_1_2_5_47_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1139/h00-014"
+            },
+            {
+              "key": "e_1_2_5_48_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1152/ajpendo.1997.273.1.E99"
+            },
+            {
+              "key": "e_1_2_5_49_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1113/JP271219"
+            },
+            {
+              "key": "e_1_2_5_50_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/ijc.23515"
+            },
+            {
+              "key": "e_1_2_5_51_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1519/JSC.0b013e3181ddb265"
+            },
+            {
+              "key": "e_1_2_5_52_1",
+              "first-page": "846",
+              "article-title": "The effects of varied rest periods between sets to failure using the bench press in recreationally trained men",
+              "volume": "18",
+              "author": "Richmond SR",
+              "year": "2004",
+              "journal-title": "J Strength Cond Res"
+            },
+            {
+              "key": "e_1_2_5_53_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s00421-011-1860-0"
+            },
+            {
+              "key": "e_1_2_5_54_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.molcel.2007.03.003"
+            },
+            {
+              "key": "e_1_2_5_55_1",
+              "article-title": "Longer inter\u2010set rest periods enhance muscle strength and hypertrophy in resistance\u2010trained men",
+              "author": "Schoenfeld BJ",
+              "year": "2015",
+              "journal-title": "J Strength Cond Res"
+            },
+            {
+              "key": "e_1_2_5_56_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1249/01.MSS.0000058366.04460.5F"
+            },
+            {
+              "key": "e_1_2_5_57_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1128/MCB.25.14.5834-5845.2005"
+            },
+            {
+              "key": "e_1_2_5_58_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1152/ajpregu.00636.2007"
+            },
+            {
+              "key": "e_1_2_5_59_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1152/ajpendo.1999.276.4.E628"
+            },
+            {
+              "key": "e_1_2_5_60_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s00421-014-3014-7"
+            },
+            {
+              "key": "e_1_2_5_61_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.biocel.2010.05.012"
+            },
+            {
+              "key": "e_1_2_5_62_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1152/japplphysiol.01147.2009"
+            },
+            {
+              "key": "e_1_2_5_63_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1113/jphysiol.2009.177220"
+            },
+            {
+              "key": "e_1_2_5_64_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1113/JP270737"
+            },
+            {
+              "key": "e_1_2_5_65_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s00421-011-2246-z"
+            },
+            {
+              "key": "e_1_2_5_66_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s00421-006-0300-z"
+            },
+            {
+              "key": "e_1_2_5_67_1",
+              "first-page": "23",
+              "article-title": "A comparison of 3 different rest intervals on the exercise volume completed during a workout",
+              "volume": "19",
+              "author": "Willardson JM",
+              "year": "2005",
+              "journal-title": "J Strength Cond Res"
+            },
+            {
+              "key": "e_1_2_5_68_1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.3945/ajcn.112.055517"
+            }
+          ],
+          "container-title": [
+            "Experimental Physiology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1113%2FEP085647",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://physoc.onlinelibrary.wiley.com/doi/pdf/10.1113/EP085647",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2023,
+                10,
+                1
+              ]
+            ],
+            "date-time": "2023-10-01T09:11:18Z",
+            "timestamp": 1696151478000
+          },
+          "score": 38.652718,
+          "resource": {
+            "primary": {
+              "URL": "https://physoc.onlinelibrary.wiley.com/doi/10.1113/EP085647"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2016,
+                6,
+                2
+              ]
+            ]
+          },
+          "references-count": 67,
+          "journal-issue": {
+            "issue": "7",
+            "published-print": {
+              "date-parts": [
+                [
+                  2016,
+                  7
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1113/EP085647"
+          ],
+          "URL": "https://doi.org/10.1113/ep085647",
+          "archive": [
+            "Portico"
+          ],
+          "ISSN": [
+            "0958-0670",
+            "1469-445X"
+          ],
+          "issn-type": [
+            {
+              "value": "0958-0670",
+              "type": "print"
+            },
+            {
+              "value": "1469-445X",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2016,
+                6,
+                2
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

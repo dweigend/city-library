@@ -1,0 +1,21 @@
+## WHAT IS IT?
+
+This shows how to make your turtles into "state machines" using a turtle variable and the RUN command.   A state machine consists of a collection of states with a different action associated with each state.  The model itself is an alternate version of the Termites model located in the Biology section of Sample Models.
+
+Termites is an unusual model in that it uses a turtle forever button; each turtle runs its code, out of synch with all the others.  This version of the model uses an observer forever button instead.  The state machine technique is necessary in order to code this model using an observer forever button.  (For more on turtle forever buttons see the Programming Guide in the NetLogo User Manual.)
+
+## THINGS TO NOTICE
+
+Compare the code to the code in the main Termites model.  Which way of coding the model do you prefer...?
+
+Note that the behavior of this version of the model isn't absolutely identical to the behavior of the original model.  In this version, note that all the turtles begin white, then all turn red, then all turn back to white, and so forth.  Gradually the turtles drift out of synch with each other until the coordinated flashing no longer happens.  The main model exhibits the same effect, but in the main model, the turtles get out of synch with each other somewhat faster.  That's because the way time passes in the two models is a little different.  In this version, a turtle's "turn" consists of moving a step or changing tasks.  In the original version, a turtle's "turn" is smaller, and consists only of executing a single NetLogo command.
+
+## NETLOGO FEATURES
+
+Note the use of the `task` primitive to create a command task to be run later with the `run` primitive.
+
+## RELATED MODELS
+
+Termites
+
+<!-- 2007 -->

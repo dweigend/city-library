@@ -1,0 +1,616 @@
+{
+  "consultedUrl": "https://api.crossref.org/works/10.1002%2Frsa.3240040303",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work",
+    "message-version": "1.0.0",
+    "message": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            10,
+            10
+          ]
+        ],
+        "date-time": "2026-10-10T13:47:36Z",
+        "timestamp": 1791640056568,
+        "version": "4.3.4"
+      },
+      "reference-count": 57,
+      "publisher": "Wiley",
+      "issue": "3",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2006,
+                10,
+                11
+              ]
+            ],
+            "date-time": "2006-10-11T00:00:00Z",
+            "timestamp": 1160524800000
+          },
+          "content-version": "vor",
+          "delay-in-days": 5031,
+          "URL": "http://onlinelibrary.wiley.com/termsAndConditions#vor"
+        }
+      ],
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [
+        "Random Struct Algorithms"
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            1993,
+            1
+          ]
+        ]
+      },
+      "abstract": "<jats:title>Abstract</jats:title><jats:p>Limiting distributions are derived for the sparse connected components that are present when a random graph on <jats:italic>n</jats:italic> vertices has approximately 1/2<jats:italic>n</jats:italic> edges. In particular, we show that such a graph consists entirely of trees, unicyclic components, and bicyclic components with probability approaching \u221a2/3 cosh \u221a5/18 \u2248 0.9325 as <jats:italic>n</jats:italic>\u2192\u221e. The limiting probability that it is consists of trees, unicyclic components, and at most one another component is approximately 0.9957; the limiting probability that it is planar lies between 0.987 and 0.9998. When a random graph evolves and the number of edges passes 1/2<jats:italic>n</jats:italic>, its components grow in cyclic complexity according to an interesting Markov process whose asymptotic structure is derived. The probability that there never is more than a single component with more edges than vertices, throughout the veolution, approaches 5 \u03c0/18 \u2248 0.8727. A \u201cuniform\u201d model of random graphs, which allows self\u2010loops and multiple edges, is shown to lead to formulas that are substanitially simpler than the analogous formulas for the classical random graphs of Erd\u00f5s and R\u00e9nyi. The notions of \u201cexcess\u201d and \u201cdeficiency,\u201d which are significant characteristics of the generating function as well as of the graphs themselves, lead to a mathematically attractive structural theory for the uniform model. A general approach to the study of stopping configurations makes it possible to sharpen previously obtained estimates in a uniform manner and often to obtain closed forms for the constants of interest. Empirical results are presented to complement the analysis, indicating the typical behavior when n is near 2oooO. \u00a9 1993 John Wiley &amp; Sons, Inc.</jats:p>",
+      "DOI": "10.1002/rsa.3240040303",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2007,
+            6,
+            1
+          ]
+        ],
+        "date-time": "2007-06-01T18:48:51Z",
+        "timestamp": 1180723731000
+      },
+      "page": "233-358",
+      "source": "Crossref",
+      "is-referenced-by-count": 224,
+      "title": [
+        "The birth of the giant component"
+      ],
+      "prefix": "10.1002",
+      "volume": "4",
+      "author": [
+        {
+          "given": "Svante",
+          "family": "Janson",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Donald E.",
+          "family": "Knuth",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Tomasz",
+          "family": "\u0141uczak",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Boris",
+          "family": "Pittel",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "311",
+      "published-online": {
+        "date-parts": [
+          [
+            2006,
+            10,
+            11
+          ]
+        ]
+      },
+      "reference": [
+        {
+          "key": "e_1_2_1_2_2",
+          "first-page": "3",
+          "article-title": "Slucha\u01d0nye grafy so stepen'iu sviaznosti 2",
+          "volume": "22",
+          "author": "Bagaev G. N.",
+          "year": "1973",
+          "journal-title": "Diskretny\u01d0 Analiz"
+        },
+        {
+          "key": "e_1_2_1_3_2",
+          "first-page": "1061",
+          "article-title": "Perechislenie sviaznykh otmechennykh dvyudol'nykh grafov",
+          "volume": "28",
+          "author": "Bagaev G. N.",
+          "year": "1984",
+          "journal-title": "Dokl. Akad. Nauk. BSSR"
+        },
+        {
+          "key": "e_1_2_1_4_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/rsa.3240010202"
+        },
+        {
+          "key": "e_1_2_1_5_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0195-6698(80)80030-8"
+        },
+        {
+          "key": "e_1_2_1_6_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/1999405"
+        },
+        {
+          "key": "e_1_2_1_7_2",
+          "volume-title": "Random Graphs",
+          "author": "Bollob\u00e1s B.",
+          "year": "1985"
+        },
+        {
+          "key": "e_1_2_1_8_2",
+          "series-title": "Ann. Discrete Math., 28",
+          "first-page": "23",
+          "volume-title": "Random Graphs '83",
+          "author": "Bollob\u00e1s B.",
+          "year": "1985"
+        },
+        {
+          "key": "e_1_2_1_9_2",
+          "first-page": "111",
+          "article-title": "Ueber eine der Interpolation entsprechende Darstellung der Eliminations\u2010Resultante",
+          "volume": "57",
+          "author": "Borchardt C. W.",
+          "year": "1860",
+          "journal-title": "J. reine angewandte Math."
+        },
+        {
+          "issue": "3",
+          "key": "e_1_2_1_10_2",
+          "first-page": "121",
+          "article-title": "O strukture slucha\u01d0nogo grafa vblizi kritichesko\u01d0 tochki",
+          "volume": "1",
+          "author": "Britikov V. E.",
+          "year": "1989",
+          "journal-title": "Diskretnaia Matematika"
+        },
+        {
+          "issue": "3",
+          "key": "e_1_2_1_10_3",
+          "first-page": "301",
+          "article-title": "On the random graphy structure near the critical point",
+          "volume": "1",
+          "year": "1991",
+          "journal-title": "Discrete Math. Appl."
+        },
+        {
+          "key": "e_1_2_1_11_2",
+          "first-page": "376",
+          "article-title": "A theorem on trees",
+          "volume": "23",
+          "author": "Cayley A.",
+          "year": "1889",
+          "journal-title": "Q. J. Pure Appl. Math."
+        },
+        {
+          "key": "e_1_2_1_11_3",
+          "first-page": "26",
+          "volume": "13",
+          "journal-title": "Math. Papers"
+        },
+        {
+          "key": "e_1_2_1_12_2",
+          "first-page": "49",
+          "article-title": "Entwicklung von \u03b1\u03b1",
+          "volume": "28",
+          "author": "Eisenstein G.",
+          "year": "1844",
+          "journal-title": "J. reine angewandte Math."
+        },
+        {
+          "key": "e_1_2_1_13_2",
+          "doi-asserted-by": "crossref",
+          "first-page": "290",
+          "DOI": "10.5486/PMD.1959.6.3-4.12",
+          "article-title": "On random graphs I",
+          "volume": "6",
+          "author": "Erd\u00f5s P.",
+          "year": "1959",
+          "journal-title": "Publ. Math., (Debrecen)"
+        },
+        {
+          "key": "e_1_2_1_13_3",
+          "first-page": "561",
+          "volume-title": "The Art of Counting",
+          "author": "Erd\u00f5s P.",
+          "year": "1973"
+        },
+        {
+          "key": "e_1_2_1_13_4",
+          "unstructured": "and in Selected Papers of Alfr\u00e9d R\u00e9nyi Akad\u00e9miai Kiad\u00f3 1976 pp.308\u2013315."
+        },
+        {
+          "key": "e_1_2_1_14_2",
+          "first-page": "17",
+          "article-title": "On the evolution of random graphs",
+          "volume": "5",
+          "author": "Erd\u00f5s P.",
+          "year": "1960",
+          "journal-title": "Magy. Tud. Akad. Mat. Kut. Int\u00e9z. K\u00f6zl."
+        },
+        {
+          "key": "e_1_2_1_14_3",
+          "first-page": "574",
+          "volume-title": "The Art of Counting",
+          "author": "Erd\u00f5s P.",
+          "year": "1973"
+        },
+        {
+          "key": "e_1_2_1_14_4",
+          "first-page": "482",
+          "volume-title": "Seclected Papers of Alfr\u00e9d R\u00e9nyi",
+          "year": "1976"
+        },
+        {
+          "key": "e_1_2_1_15_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/0012-365X(89)90087-3"
+        },
+        {
+          "key": "e_1_2_1_16_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/BF01651330"
+        },
+        {
+          "key": "e_1_2_1_17_2",
+          "volume-title": "Combinatorial Enumeration",
+          "author": "Goulden I. P.",
+          "year": "1983"
+        },
+        {
+          "key": "e_1_2_1_18_2",
+          "volume-title": "Concrete Mathematics",
+          "author": "Graham R. L.",
+          "year": "1989"
+        },
+        {
+          "key": "e_1_2_1_19_2",
+          "volume-title": "Applied and Computational Complex Analysis",
+          "author": "Henrici P.",
+          "year": "1977"
+        },
+        {
+          "key": "e_1_2_1_20_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/rsa.3240040105"
+        },
+        {
+          "key": "e_1_2_1_21_2",
+          "first-page": "354",
+          "article-title": "The size of the last cycle in the random graph process",
+          "volume": "13",
+          "author": "Janson S.",
+          "year": "1992",
+          "journal-title": "Abstr. Am. Math. Soc."
+        },
+        {
+          "key": "e_1_2_1_22_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/rsa.3240010106"
+        },
+        {
+          "key": "e_1_2_1_23_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/0196-6774(85)90037-9"
+        },
+        {
+          "issue": "4",
+          "key": "e_1_2_1_24_2",
+          "first-page": "67",
+          "article-title": "Convolution polynomials",
+          "volume": "2",
+          "author": "Knuth D. E.",
+          "year": "1992",
+          "journal-title": "Mathematica J."
+        },
+        {
+          "key": "e_1_2_1_25_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/2046947"
+        },
+        {
+          "key": "e_1_2_1_26_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/rsa.3240010305"
+        },
+        {
+          "key": "e_1_2_1_27_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/rsa.3240020405"
+        },
+        {
+          "key": "e_1_2_1_28_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/BF02122682"
+        },
+        {
+          "key": "e_1_2_1_29_2",
+          "article-title": "The structure of a random graph at the point of phase transition",
+          "author": "\u0141uczak T.",
+          "journal-title": "Trans. Am. Math. Soc."
+        },
+        {
+          "key": "e_1_2_1_30_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/978-3-642-99970-3"
+        },
+        {
+          "key": "e_1_2_1_31_2",
+          "first-page": "128",
+          "article-title": "Questions for solution, number 294",
+          "volume": "3",
+          "author": "Ramanujan S.",
+          "year": "1911",
+          "journal-title": "J. Indian Math. Soc."
+        },
+        {
+          "key": "e_1_2_1_31_3",
+          "first-page": "151",
+          "volume": "4",
+          "year": "1912",
+          "journal-title": "J. Indian Math. Soc."
+        },
+        {
+          "key": "e_1_2_1_32_2",
+          "first-page": "73",
+          "article-title": "Some remarks on the theory of trees",
+          "volume": "4",
+          "author": "R\u00e9nyi A.",
+          "year": "1959",
+          "journal-title": "Magy. Tud. Akad. Mat. Kut. Int\u00e9z. K\u00f6zl."
+        },
+        {
+          "key": "e_1_2_1_32_3",
+          "first-page": "363",
+          "volume": "2",
+          "journal-title": "Selected Papers of Alfr\u00e9d R\u00e9nyi"
+        },
+        {
+          "key": "e_1_2_1_33_2",
+          "unstructured": "R. J.Riddell Jr. Contributions to the Theory of Condensation Dissertation University of Michigan 1951."
+        },
+        {
+          "key": "e_1_2_1_33_3",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1063/1.1698742"
+        },
+        {
+          "key": "e_1_2_1_34_2",
+          "first-page": "167",
+          "article-title": "Une remarque aux in\u00e9galit\u00e9s",
+          "volume": "6",
+          "author": "Seitz G.",
+          "year": "1936",
+          "journal-title": "Aktuarsk\u00e9 V\u011bdy"
+        },
+        {
+          "key": "e_1_2_1_35_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1017/S0305004100029765"
+        },
+        {
+          "key": "e_1_2_1_36_2",
+          "unstructured": "V. E.Stepanov \u201cNelskol'ko teorem otnositel'no slucha\u01d0nykh grafov \u201dVeroiatnostnye metody v diskretno\u01d0 matematike(Karel'ski\u01d0 filial Akad. Nauk SSSR Petrozavodsk 1983) pp.90\u201392."
+        },
+        {
+          "key": "e_1_2_1_37_2",
+          "first-page": "633",
+          "article-title": "O nekotorykh osobennostiakh stroeniia slucha\u01d0nogo grafa vbilizi kritichesko\u01d0 tochki",
+          "volume": "32",
+          "author": "Stepanov V. E.",
+          "year": "1988",
+          "journal-title": "Teor. Veroyatn. Ee Primen."
+        },
+        {
+          "key": "e_1_2_1_37_3",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1137/1132091"
+        },
+        {
+          "key": "e_1_2_1_38_2",
+          "first-page": "42",
+          "article-title": "On the change of systems of independent variables",
+          "volume": "1",
+          "author": "Sylvester J. J.",
+          "year": "1857",
+          "journal-title": "Q. J. Pure Appl. Math."
+        },
+        {
+          "key": "e_1_2_1_38_3",
+          "first-page": "65",
+          "volume": "2",
+          "journal-title": "Math. Papers"
+        },
+        {
+          "key": "e_1_2_1_39_2",
+          "first-page": "854",
+          "article-title": "O koeffitsientakh Ra\u01d0ta i Stepanova\u2010Ra\u01d0ta",
+          "volume": "42",
+          "author": "Vobly\u01d0 V. A.",
+          "year": "1987",
+          "journal-title": "Mat. Zametki"
+        },
+        {
+          "key": "e_1_2_1_39_3",
+          "doi-asserted-by": "crossref",
+          "first-page": "969",
+          "DOI": "10.1007/BF01137454",
+          "article-title": "Wright and Stepanov\u2010Wright coefficients",
+          "volume": "42",
+          "author": "Voblyi V. A.",
+          "year": "1987",
+          "journal-title": "Math. Notes"
+        },
+        {
+          "key": "e_1_2_1_40_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1112/plms/s3-17.2.296"
+        },
+        {
+          "key": "e_1_2_1_41_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1112/blms/3.3.348"
+        },
+        {
+          "key": "e_1_2_1_42_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/jgt.3190010407"
+        },
+        {
+          "key": "e_1_2_1_43_2",
+          "doi-asserted-by": "crossref",
+          "first-page": "363",
+          "DOI": "10.1093/qmath/28.3.363",
+          "article-title": "Formulae for the number of sparsely\u2010edged strong labelled digraphs",
+          "volume": "28",
+          "author": "Wright E. M.",
+          "year": "1977",
+          "journal-title": "Q. J. Math."
+        },
+        {
+          "key": "e_1_2_1_44_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/jgt.3190020403"
+        },
+        {
+          "key": "e_1_2_1_45_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/jgt.3190040409"
+        },
+        {
+          "key": "e_1_2_1_46_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/jgt.3190070211"
+        }
+      ],
+      "container-title": [
+        "Random Structures &amp; Algorithms"
+      ],
+      "original-title": [],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1002%2Frsa.3240040303",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/rsa.3240040303",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2023,
+            10,
+            25
+          ]
+        ],
+        "date-time": "2023-10-25T16:54:25Z",
+        "timestamp": 1698252865000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://onlinelibrary.wiley.com/doi/10.1002/rsa.3240040303"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            1993,
+            1
+          ]
+        ]
+      },
+      "references-count": 57,
+      "journal-issue": {
+        "issue": "3",
+        "published-print": {
+          "date-parts": [
+            [
+              1993,
+              1
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "10.1002/rsa.3240040303"
+      ],
+      "URL": "https://doi.org/10.1002/rsa.3240040303",
+      "archive": [
+        "Portico"
+      ],
+      "relation": {},
+      "ISSN": [
+        "1042-9832",
+        "1098-2418"
+      ],
+      "issn-type": [
+        {
+          "value": "1042-9832",
+          "type": "print"
+        },
+        {
+          "value": "1098-2418",
+          "type": "electronic"
+        }
+      ],
+      "subject": [],
+      "published": {
+        "date-parts": [
+          [
+            1993,
+            1
+          ]
+        ]
+      }
+    }
+  }
+}

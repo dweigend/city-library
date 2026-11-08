@@ -1,0 +1,100 @@
+{
+  "slug": "ethnocentrism",
+  "name": "Ethnocentrism",
+  "catalogPath": "Sample Models/Social Science/Ethnocentrism",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Ethnocentrism.nlogox",
+  "deliveryBatch": "B02",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "The scientific question is whether in-group favoritism can evolve through local competition and inheritance. In NetLogo's Ethnocentrism model, agents inherit group tags and separate cooperation decisions for same-tag and other-tag neighbors, with payoffs affecting reproduction. The selected literature connects this mechanism to conditional cooperation and evolutionary selection: the acknowledged ethnocentrism model directly specifies tag-conditioned cooperation [1]; reciprocity offers a contrasting route to cooperative behavior [2]; multiple evolutionary mechanisms delimit claims of one universal cooperation explanation [3]. Tags, mutation and local occupancy are stipulated; evolving favoritism in this environment does not explain every real ethnic conflict. The original NetLogo behavior is the baseline for reimplementation. This simulation offers a controlled thought experiment, and agreement with its output does not establish empirical validation.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Ethnocentrism.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Ethnocentrism.nlogox",
+    "revision": "Served NetLogo Web snapshot retrieved 2026-11-05; {'version': 'NetLogo 7.0.4', 'snapToGrid': 'false'}",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served model XML, Procedures and Info retained locally; Info read for mechanism and attribution.",
+    "evidencePath": "evidence/social-urban/ethnocentrism.nlogox",
+    "sha256": "366bca9cfe1417bf6ff6c456581573d91bcf9e252dd8f6a0afa80954edd3dc81",
+    "citation": "For the model itself: * Wilensky, U. (2003). NetLogo Ethnocentrism model. http://ccl.northwestern.edu/netlogo/models/Ethnocentrism. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "scientificOrigin": "This model is a NetLogo version of the ethnocentrism model presented by Robert Axelrod at Northwestern University at the NICO (Northwestern Institute on Complex Systems) conference on October 25th, 2003. See also Ross A. Hammond and Robert Axelrod, The Evolution of Ethnocentrism, http://www-personal.umich.edu/~axe/research/AxHamm_Ethno.pdf",
+    "notes": "This is source research, not runtime execution or approval of the City Library reimplementation. Original model notices remain in the retained source.",
+    "evidenceFile": "evidence/social-urban/ethnocentrism.nlogox"
+  },
+  "publications": [
+    {
+      "id": "hammond",
+      "creatorRole": "author",
+      "authors": [
+        "Ross A. Hammond",
+        "Robert Axelrod"
+      ],
+      "title": "The Evolution of Ethnocentrism",
+      "year": 2006,
+      "venue": "Journal of Conflict Resolution",
+      "doi": "10.1177/0022002706293470",
+      "url": "https://doi.org/10.1177/0022002706293470",
+      "relevance": "the acknowledged ethnocentrism model directly specifies tag-conditioned cooperation",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1177%2F0022002706293470",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "abstract",
+        "access": "Public Crossref registrant metadata; publisher-deposited abstract available",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/hammond-crossref.json",
+        "evidenceSummary": "Ethnocentrism is a nearly universal syndrome of attitudes and behaviors, typically including in-group favoritism. Empirical evidence suggests that a predisposition to favor in-groups can be easily triggered by even arbitrary group distinctions and that preferential cooperation within groups occurs even when it is individually costly. The authors study the emergence and robustness of ethnocentric behaviors of in-group favoritism, using an agent-based evolutionary model. They show that such behaviors can become widespread under a broad range of conditions and can support very high levels of cooperation, even in one-move prisoner’s dilemma games. When cooperation is especially costly to individuals, the authors show how ethnocentrism itself can be necessary to sustain cooperation.",
+        "evidenceFile": "evidence/social-urban/hammond-crossref.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "axelrodcoop",
+      "creatorRole": "author",
+      "authors": [
+        "Robert Axelrod",
+        "William D. Hamilton"
+      ],
+      "title": "The Evolution of Cooperation",
+      "year": 1981,
+      "venue": "Science",
+      "doi": "10.1126/science.7466396",
+      "url": "https://doi.org/10.1126/science.7466396",
+      "relevance": "reciprocity offers a contrasting route to cooperative behavior",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1126%2Fscience.7466396",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "abstract",
+        "access": "Public Crossref registrant metadata; publisher-deposited abstract available",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/axelrodcoop-crossref.json",
+        "evidenceSummary": "Cooperation in organisms, whether bacteria or primates, has been a difficulty for evolutionary theory since Darwin. On the assumption that interactions between pairs of individuals occur on a probabilistic basis, a model is developed based on the concept of an evolutionarily stable strategy in the context of the Prisoner's Dilemma game. Deductions from the model, and the results of a computer tournament show how cooperation based on reciprocity can get started in an asocial world, can thrive while interacting with a wide range of other strategies, and can resist invasion once fully established. Potential applications include specific aspects of territoriality, mating, and disease.",
+        "evidenceFile": "evidence/social-urban/axelrodcoop-crossref.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "nowak",
+      "creatorRole": "author",
+      "authors": [
+        "Martin A. Nowak"
+      ],
+      "title": "Five Rules for the Evolution of Cooperation",
+      "year": 2006,
+      "venue": "Science",
+      "doi": "10.1126/science.1133755",
+      "url": "https://doi.org/10.1126/science.1133755",
+      "relevance": "multiple evolutionary mechanisms delimit claims of one universal cooperation explanation",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1126%2Fscience.1133755",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "abstract",
+        "access": "Public Crossref registrant metadata; publisher-deposited abstract available",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/nowak-crossref.json",
+        "evidenceSummary": "Cooperation is needed for evolution to construct new levels of organization. Genomes, cells, multicellular organisms, social insects, and human society are all based on cooperation. Cooperation means that selfish replicators forgo some of their reproductive potential to help one another. But natural selection implies competition and therefore opposes cooperation unless a specific mechanism is at work. Here I discuss five mechanisms for the evolution of cooperation: kin selection, direct reciprocity, indirect reciprocity, network reciprocity, and group selection. For each mechanism, a simple rule is derived that specifies whether natural selection can lead to cooperation.",
+        "evidenceFile": "evidence/social-urban/nowak-crossref.json"
+      },
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

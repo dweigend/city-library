@@ -1,0 +1,280 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2F352581a0%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1038/352581a0\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "1865922",
+          "source": "MED",
+          "pmid": "1865922",
+          "doi": "10.1038/352581a0",
+          "title": "The spread of HIV-1 in Africa: sexual contact patterns and the predicted demographic impact of AIDS.",
+          "authorString": "Anderson RM, May RM, Boily MC, Garnett GP, Rowley JT.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Anderson RM",
+                "lastName": "Anderson",
+                "firstName": "R M",
+                "initials": "RM",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-9528-3175"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Biology, Imperial College, London University, UK."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "May RM",
+                "lastName": "May",
+                "firstName": "R M",
+                "initials": "RM"
+              },
+              {
+                "fullName": "Boily MC",
+                "lastName": "Boily",
+                "firstName": "M C",
+                "initials": "MC"
+              },
+              {
+                "fullName": "Garnett GP",
+                "lastName": "Garnett",
+                "firstName": "G P",
+                "initials": "GP",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-7495-1958"
+                }
+              },
+              {
+                "fullName": "Rowley JT",
+                "lastName": "Rowley",
+                "firstName": "J T",
+                "initials": "JT"
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0001-7495-1958"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-9528-3175"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics"
+            ]
+          },
+          "journalInfo": {
+            "issue": "6336",
+            "volume": "352",
+            "journalIssueId": 858394,
+            "dateOfPublication": "1991 Aug",
+            "monthOfPublication": 8,
+            "yearOfPublication": 1991,
+            "journal": {
+              "medlineAbbreviation": "Nature",
+              "title": "Nature",
+              "essn": "1476-4687",
+              "issn": "0028-0836",
+              "nlmid": "0410462",
+              "isoabbreviation": "Nature"
+            },
+            "printPublicationDate": "1991-08-01"
+          },
+          "pubYear": "1991",
+          "pageInfo": "581-589",
+          "abstractText": "The spread of HIV-1 in Africa is examined here in the light of recent information on the main epidemiological and behavioural determinants of transmission. Mathematical models incorporating demographic, epidemiological and behavioural processes are used to assess the potential demographic impact of the disease AIDS. These analyses highlight the significance of patterns of sexual behaviour, and in particular networks of sexual contact, on the predicted spread of infection. Current data reveal substantial variations in the degree of spread between and in countries, but new analyses support earlier predictions that in the worst-afflicted areas AIDS is likely to change population growth rates from positive to negative values in a few decades.",
+          "affiliation": "Department of Biology, Imperial College, London University, UK.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, Non-U.S. Gov't",
+              "Journal Article"
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Humans"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "HIV-1",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "GD",
+                      "qualifierName": "growth & development"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "IM",
+                      "qualifierName": "immunology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "HIV-2",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "GD",
+                      "qualifierName": "growth & development"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "IM",
+                      "qualifierName": "immunology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Acquired Immunodeficiency Syndrome",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "EP",
+                      "qualifierName": "epidemiology"
+                    },
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "TM",
+                      "qualifierName": "transmission"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "HIV Seropositivity",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "EP",
+                      "qualifierName": "epidemiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Likelihood Functions"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Sexual Behavior"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Demography"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Pregnancy"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Maternal-Fetal Exchange"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Mathematics"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Models, Theoretical"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Blood Donors"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Africa"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Female"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1038/352581a0"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "citedByCount": 71,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "1991-09-12",
+          "dateOfCreation": "1991-08-15",
+          "dateOfRevision": "2006-11-15",
+          "firstPublicationDate": "1991-08-01",
+          "firstIndexDate": "2008-01-29",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1152%2Fajpendo.1979.236.6.e667%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1152/ajpendo.1979.236.6.e667\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "443421",
+          "source": "MED",
+          "pmid": "443421",
+          "doi": "10.1152/ajpendo.1979.236.6.e667",
+          "title": "Quantitative estimation of insulin sensitivity.",
+          "authorString": "Bergman RN, Ider YZ, Bowden CR, Cobelli C.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Bergman RN",
+                "lastName": "Bergman",
+                "firstName": "R N",
+                "initials": "RN",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-1539-4471"
+                }
+              },
+              {
+                "fullName": "Ider YZ",
+                "lastName": "Ider",
+                "firstName": "Y Z",
+                "initials": "YZ"
+              },
+              {
+                "fullName": "Bowden CR",
+                "lastName": "Bowden",
+                "firstName": "C R",
+                "initials": "CR"
+              },
+              {
+                "fullName": "Cobelli C",
+                "lastName": "Cobelli",
+                "firstName": "C",
+                "initials": "C"
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0003-1539-4471"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics"
+            ]
+          },
+          "journalInfo": {
+            "issue": "6",
+            "volume": "236",
+            "journalIssueId": 186225,
+            "dateOfPublication": "1979 Jun",
+            "monthOfPublication": 6,
+            "yearOfPublication": 1979,
+            "journal": {
+              "medlineAbbreviation": "Am J Physiol",
+              "title": "The American journal of physiology",
+              "essn": "2163-5773",
+              "issn": "0002-9513",
+              "isoabbreviation": "Am J Physiol",
+              "nlmid": "0370511"
+            },
+            "printPublicationDate": "1979-06-01"
+          },
+          "pubYear": "1979",
+          "pageInfo": "E667-77",
+          "abstractText": "We have evaluated the feasibility of using a mathematical model of glucose disappearance to estimate insulin sensitivity. Glucose was injected into conscious dogs at 100, 200, or 300 mg/kg. The measured time course of insulin was regarded as the \"input,\" and the falling glucose concentration as the \"output\" of the physiological system storing and using glucose. Seven mathematical models of glucose uptake were compared to identify the representation most capable of simulating glucose disappearance. One specific nonlinear model was superior in that it 1) predicted the time course of glucose after glucose injection, 2) had four parameters that could be precisely estimated, and 3) described individual experiments with similar parameter values. Insulin sensitivity index (SI), defined as the dependence of fractional glucose disappearance on plasma insulin, was the ratio of two parameters of the chosen model and could be estimated with good reproducibility from the 300 mg/kg injection experiments (SI = 7.00 X 10(-4) +/- 24% (coefficient of variation) min-1/(microU/ml) (n = 8)). Thus, from a single glucose injection it is possible to obtain a quantitative index of insulin sensitivity that may have clinical applicability.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, U.S. Gov't, P.H.S.",
+              "Research Support, U.S. Gov't, Non-P.H.S.",
+              "Journal Article"
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Animals"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Dogs"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Insulin",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PD",
+                      "qualifierName": "pharmacology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Blood Glucose",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Mathematics"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Models, Biological"
+              }
+            ]
+          },
+          "chemicalList": {
+            "chemical": [
+              {
+                "name": "Blood Glucose",
+                "registryNumber": "0"
+              },
+              {
+                "name": "Insulin",
+                "registryNumber": "0"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1152/ajpendo.1979.236.6.E667"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "citedByCount": 921,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "1979-07-28",
+          "dateOfCreation": "1979-06-01",
+          "dateOfRevision": "2022-04-08",
+          "firstPublicationDate": "1979-06-01",
+          "firstIndexDate": "2008-01-29",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

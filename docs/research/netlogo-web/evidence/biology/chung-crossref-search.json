@@ -1,0 +1,1783 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=Transcriptional+and+translational+regulation+of+Escherichia+coli+lac+operon+Choi+2008&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 1042391,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                2
+              ]
+            ],
+            "date-time": "2026-10-02T21:28:13Z",
+            "timestamp": 1790976493796,
+            "version": "4.1.0"
+          },
+          "reference-count": 26,
+          "publisher": "American Society for Microbiology",
+          "issue": "2",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    1986,
+                    2,
+                    1
+                  ]
+                ],
+                "date-time": "1986-02-01T00:00:00Z",
+                "timestamp": 507600000000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://journals.asm.org/non-commercial-tdm-license"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "journals.asm.org"
+            ],
+            "crossmark-restriction": true
+          },
+          "short-container-title": [
+            "J Bacteriol"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1986,
+                2
+              ]
+            ]
+          },
+          "abstract": "<jats:p>The transcriptional regulation of the Escherichia coli trp-linked opp operon that encodes the oligopeptide permease was investigated by using lambda plac Mu51-generated lac operon fusions. Synthesis of beta-galactosidase by strains harboring oppA-lac, oppB-lac, and oppD-lac fusions occurred at a basal level when the fusion-containing strains were grown in minimal medium. The addition of L-leucine or L-alanine to exponentially growing, aerobic cultures or shifting the aerobic fusion-containing strains to anaerobic growth medium increased the synthesis of beta-galactosidase from all opp-lac fusions. When transcription of the opp operon was induced by L-leucine, the differential rate of beta-galactosidase synthesis from each opp-lac fusion increased 8- to 10-fold; this increased rate of lacZ expression from the opp-lac fusions resulted in a 5- to 6-fold increase in total beta-galactosidase activity after maximum expression was achieved. Importantly, when F'123 derivatives harboring independently isolated E. coli opp-lac operon fusions were introduced into E. coli and Salmonella typhimurium, the data clearly demonstrated that the E. coli opp operon was expressed identically and responded to the same transcriptional regulatory signals in both E. coli and S. typhimurium. A comparison of beta-galactosidase synthesis by E. coli strains harboring an opp-lac operon fusion and either an oppE+ locus or an oppE mutation demonstrated that the reduction in peptide transport produced by the oppE mutation does not result from a decrease in the level of opp operon transcription.</jats:p>",
+          "DOI": "10.1128/jb.165.2.434-442.1986",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2016,
+                11,
+                2
+              ]
+            ],
+            "date-time": "2016-11-02T20:57:18Z",
+            "timestamp": 1478120238000
+          },
+          "page": "434-442",
+          "update-policy": "https://doi.org/10.1128/asmj-crossmark-policy-page",
+          "source": "Crossref",
+          "is-referenced-by-count": 46,
+          "title": [
+            "opp-lac Operon fusions and transcriptional regulation of the Escherichia coli trp-linked oligopeptide permease"
+          ],
+          "prefix": "10.1128",
+          "volume": "165",
+          "author": [
+            {
+              "given": "J C",
+              "family": "Andrews",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "S A",
+              "family": "Short",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "235",
+          "reference": [
+            {
+              "key": "p_1",
+              "unstructured": "Ames G. F.-L. 1984. Histidine transport system of Salmonella typhimurium p. 13-16. In L. Leive and D. Schlessinger (ed.) Microbiology-1984. American Society for Microbiology Washington D.C."
+            },
+            {
+              "key": "p_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "384",
+              "DOI": "10.1128/jb.130.1.384-392.1977",
+              "article-title": "Escherichia coli transport mutants lacking binding proteins and other components of the branched-chain amino acid transport system",
+              "volume": "130",
+              "author": "Anderson J. J.",
+              "year": "1977",
+              "unstructured": "Anderson , J. J. , and D. L. Oxender . 1977 . Escherichia coli transport mutants lacking binding proteins and other components of the branched-chain amino acid transport system . J. Bacteriol. 130 : 384 - 392 .",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "p_3",
+              "doi-asserted-by": "crossref",
+              "first-page": "428",
+              "DOI": "10.1128/jb.165.2.428-433.1986",
+              "article-title": "Regulation of peptide transport in Escherichia coli: induction of the trplinked operon encoding the oligopeptide permease",
+              "volume": "165",
+              "author": "Andrews J. C.",
+              "year": "1986",
+              "unstructured": "Andrews , J. C. , T. C. Blevins , and S. A. Short . 1986 . Regulation of peptide transport in Escherichia coli: induction of the trplinked operon encoding the oligopeptide permease . J. Bacteriol. 165 : 428 - 433 .",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "p_4",
+              "doi-asserted-by": "crossref",
+              "first-page": "484",
+              "DOI": "10.1128/jb.161.2.484-492.1985",
+              "article-title": "Genetic analysis of Escherichia coli oligopeptide transport mutants",
+              "volume": "161",
+              "author": "Andrews J. C.",
+              "year": "1985",
+              "unstructured": "Andrews , J. C. , and S. A. Short . 1985 . Genetic analysis of Escherichia coli oligopeptide transport mutants . J. Bacteriol. 161 : 484 - 492 .",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "p_5",
+              "doi-asserted-by": "crossref",
+              "first-page": "525",
+              "DOI": "10.1128/br.36.4.525-557.1972",
+              "article-title": "Pedigrees of some mutant strains of Escherichia coli K-12",
+              "volume": "36",
+              "author": "Bachman B. J.",
+              "year": "1972",
+              "unstructured": "Bachman , B. J. 1972 . Pedigrees of some mutant strains of Escherichia coli K-12 . Bacteriol. Rev. 36 : 525 - 557 .",
+              "journal-title": "Bacteriol. Rev."
+            },
+            {
+              "key": "p_6",
+              "doi-asserted-by": "crossref",
+              "first-page": "970",
+              "DOI": "10.1128/jb.156.2.970-974.1983",
+              "article-title": "Mu dX, a derivative of Mu dl (lac Apr) which makes stable lacZ fusions at high temperatures",
+              "volume": "156",
+              "author": "Baker T. A.",
+              "year": "1983",
+              "unstructured": "Baker , T. A. , M. M. Howe , and C. A. Gross . 1983 . Mu dX, a derivative of Mu dl (lac Apr) which makes stable lacZ fusions at high temperatures . J. Bacteriol. 156 : 970 - 974 .",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "p_7",
+              "doi-asserted-by": "crossref",
+              "first-page": "1092",
+              "DOI": "10.1128/jb.162.3.1092-1099.1985",
+              "article-title": "Transposable A placMu bacteriophages for creating lacZ operon fusions and kanamycin resistance insertions in Escherichia coli",
+              "volume": "162",
+              "author": "Bremer E.",
+              "year": "1985",
+              "unstructured": "Bremer , E. , T. J. Silhavy , and G. M. Weinstock . 1985 . Transposable A placMu bacteriophages for creating lacZ operon fusions and kanamycin resistance insertions in Escherichia coli . J. Bacteriol. 162 : 1092 - 1099 .",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "p_8",
+              "doi-asserted-by": "crossref",
+              "first-page": "1084",
+              "DOI": "10.1128/jb.158.3.1084-1093.1984",
+              "article-title": "A placMu: a transposable derivative of bacteriophage lambda for creating lacZ protein fusions in a single step",
+              "volume": "158",
+              "author": "Bremer E.",
+              "year": "1984",
+              "unstructured": "Bremer , E. , T. J. Silhavy , J. M. Weisemann , and G. M. Weinstock . 1984 . A placMu: a transposable derivative of bacteriophage lambda for creating lacZ protein fusions in a single step . J. Bacteriol. 158 : 1084 - 1093 .",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "p_9",
+              "doi-asserted-by": "crossref",
+              "first-page": "920",
+              "DOI": "10.1128/jb.147.3.920-924.1981",
+              "article-title": "High-affinity arabinose transport mutants of Escherichia coli: isolation and gene location",
+              "volume": "147",
+              "author": "Clark A. F.",
+              "year": "1981",
+              "unstructured": "Clark , A. F. , and R. W. Hogg . 1981 . High-affinity arabinose transport mutants of Escherichia coli: isolation and gene location . J. Bacteriol. 147 : 920 - 924 .",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "p_10",
+              "unstructured": "Duplay P. H. Bedouelle A. Charbit J. M. Clement E. Dassa E. Gibson W. Saurin and M. Hofnung. 1984. The malB region in Escherichia coli K-12: gene structure and expression p. 29-33. In L. Leive and D. Schlessinger (ed.) Microbiology-1984. American Society for Microbiology Washington D.C."
+            },
+            {
+              "key": "p_11",
+              "doi-asserted-by": "crossref",
+              "first-page": "1548",
+              "DOI": "10.1128/jb.153.3.1548-1551.1983",
+              "article-title": "Genetic organization of the oligopeptide permease (opp) locus of Salmonella typhimurium and Escherichia coli",
+              "volume": "153",
+              "author": "Hogarth B. G.",
+              "year": "1983",
+              "unstructured": "Hogarth , B. G. , and C. F. Higgins . 1983 . Genetic organization of the oligopeptide permease (opp) locus of Salmonella typhimurium and Escherichia coli . J. Bacteriol. 153 : 1548 - 1551 .",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "p_12",
+              "unstructured": "Holdeman L. V. E. P. Cato and W. E. C. Moore. 1977. Anaerobic laboratory manual 4th ed. Virginia Polytechnic Institute and State University Blacksburg."
+            },
+            {
+              "key": "p_13",
+              "doi-asserted-by": "crossref",
+              "first-page": "131",
+              "DOI": "10.1128/jb.160.1.131-136.1984",
+              "article-title": "Anaerobic and leucinedependent expression of a peptide transport gene in Salmonella typhimurium",
+              "volume": "160",
+              "author": "Jamieson D.",
+              "year": "1984",
+              "unstructured": "Jamieson , D. , and C. F. Higgins . 1984 . Anaerobic and leucinedependent expression of a peptide transport gene in Salmonella typhimurium . J. Bacteriol. 160 : 131 - 136 .",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "p_14",
+              "doi-asserted-by": "crossref",
+              "first-page": "472",
+              "DOI": "10.1128/jb.148.2.472-479.1981",
+              "article-title": "L-Arabinose transport systems in Escherichia coli K-12",
+              "volume": "148",
+              "author": "Kolodrubetz D.",
+              "year": "1981",
+              "unstructured": "Kolodrubetz , D. , and R. Schleif . 1981 . L-Arabinose transport systems in Escherichia coli K-12 . J. Bacteriol. 148 : 472 - 479 .",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "p_15",
+              "doi-asserted-by": "crossref",
+              "first-page": "665",
+              "DOI": "10.1128/jb.158.2.665-673.1984",
+              "article-title": "D-Ribose metabolism in Escherichia coli K-12: genetics, regulation, and transport",
+              "volume": "158",
+              "author": "Lopilato J. E.",
+              "year": "1984",
+              "unstructured": "Lopilato , J. E. , J. L. Garwin , S. D. Emr , T. J. Silhavy , and J. R. Beckwith . 1984 . D-Ribose metabolism in Escherichia coli K-12: genetics, regulation, and transport . J. Bacteriol. 158 : 665 - 673 .",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "p_16",
+              "doi-asserted-by": "crossref",
+              "first-page": "1110",
+              "DOI": "10.1128/jb.145.2.1110-1111.1981",
+              "article-title": "Selection for loss of tetracycline resistance by Escherichia coli",
+              "volume": "145",
+              "author": "Maloy S. R.",
+              "year": "1981",
+              "unstructured": "Maloy , S. R. , and W. D. Nunn . 1981 . Selection for loss of tetracycline resistance by Escherichia coli . J. Bacteriol. 145 : 1110 - 1112 .",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "p_17",
+              "unstructured": "MUler J. H. 1972. Experiments in molecular genetics. Cold Spring Harbor Laboratory Cold Spring Harbor N.Y."
+            },
+            {
+              "key": "p_18",
+              "doi-asserted-by": "crossref",
+              "first-page": "37",
+              "DOI": "10.1128/jb.163.1.37-45.1985",
+              "article-title": "Characterization of the Salmonella typhimurium mgl operon and its gene products",
+              "volume": "163",
+              "author": "Muller N.",
+              "year": "1985",
+              "unstructured": "Muller , N. , H. -G. Heine , and W. Boos . 1985 . Characterization of the Salmonella typhimurium mgl operon and its gene products . J. Bacteriol. 163 : 37 - 45 .",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "p_19",
+              "doi-asserted-by": "crossref",
+              "first-page": "509",
+              "DOI": "10.1128/jb.117.2.509-516.1974",
+              "article-title": "Isolation and complementation of mutants in galactose taxis and transport",
+              "volume": "117",
+              "author": "Ordal G. W.",
+              "year": "1974",
+              "unstructured": "Ordal , G. W. , and J. Adler . 1974 . Isolation and complementation of mutants in galactose taxis and transport . J. Bacteriol. 117 : 509 - 516 .",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "p_20",
+              "doi-asserted-by": "crossref",
+              "first-page": "1412",
+              "DOI": "10.1073/pnas.77.3.1412",
+              "article-title": "Structural and functional analysis of cloned DNA containing genes responsible for branched-chain amino acid transport in Escherichia coli",
+              "volume": "77",
+              "author": "Oxender D. L.",
+              "year": "1980",
+              "unstructured": "Oxender , D. L. , J. J. Anderson , C. J. Daniels , R. Landick , R. P. Gunsalus , G. Zurawski , E. Selker , and C. Yanofsky . 1980 . Structural and functional analysis of cloned DNA containing genes responsible for branched-chain amino acid transport in Escherichia coli . Proc. Natl. Acad. Sci. USA 77 : 1412 - 1416 .",
+              "journal-title": "Proc. Natl. Acad. Sci. USA"
+            },
+            {
+              "key": "p_21",
+              "unstructured": "Payne J. W. 1980. Transport and utilization of peptides by bacteria p. 211-256. In J. W. Payne (ed.) Microorganisms and nitrogen sources. John Wiley & Sons Inc. New York."
+            },
+            {
+              "key": "p_22",
+              "doi-asserted-by": "crossref",
+              "first-page": "679",
+              "DOI": "10.1016/0042-6822(72)90152-3",
+              "article-title": "Formation, induction, and curing of bacteriophage P1 Iysogens",
+              "volume": "49",
+              "author": "Rosner J. L.",
+              "year": "1972",
+              "unstructured": "Rosner , J. L. 1972 . Formation, induction, and curing of bacteriophage P1 Iysogens . Virology 49 : 679 - 689 .",
+              "journal-title": "Virology"
+            },
+            {
+              "key": "p_23",
+              "doi-asserted-by": "crossref",
+              "first-page": "1320",
+              "DOI": "10.1128/jb.151.3.1320-1325.1982",
+              "article-title": "Requirement of Fnr and NarL functions for nitrate reductase expression in Escherichia coli K-12",
+              "volume": "151",
+              "author": "Stewart V.",
+              "year": "1982",
+              "unstructured": "Stewart , V. 1982 . Requirement of Fnr and NarL functions for nitrate reductase expression in Escherichia coli K-12 . J. Bacteriol. 151 : 1320 - 1325 .",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "p_24",
+              "doi-asserted-by": "crossref",
+              "first-page": "673",
+              "DOI": "10.1128/jb.161.2.673-680.1985",
+              "article-title": "Oxygen regulation in Salmonella typhimurium",
+              "volume": "161",
+              "author": "Strauch K. L.",
+              "year": "1985",
+              "unstructured": "Strauch , K. L. , J. B. Lenk , B. L. Gamble , and C. G. Miller . 1985 . Oxygen regulation in Salmonella typhimurium . J. Bacteriol. 161 : 673 - 680 .",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "p_25",
+              "doi-asserted-by": "crossref",
+              "first-page": "97",
+              "DOI": "10.1016/S0021-9258(18)65874-0",
+              "article-title": "Acetylornithinase of Escherichia coli: partial purification and some properties",
+              "volume": "218",
+              "author": "Vogel H. J.",
+              "year": "1956",
+              "unstructured": "Vogel , H. J. , and D. M. Bonner . 1956 . Acetylornithinase of Escherichia coli: partial purification and some properties . J. Biol. Chem. 218 : 97 - 106 .",
+              "journal-title": "J. Biol. Chem."
+            },
+            {
+              "key": "p_26",
+              "doi-asserted-by": "crossref",
+              "first-page": "112",
+              "DOI": "10.1128/jb.160.1.112-121.1984",
+              "article-title": "Measurement of in vivo expression of the recA gene of Escherichia coli by using lacZ gene fusions",
+              "volume": "160",
+              "author": "Weisemann J. M.",
+              "year": "1984",
+              "unstructured": "Weisemann , J. M. , C. Funk , and G. M. Weinstock . 1984 . Measurement of in vivo expression of the recA gene of Escherichia coli by using lacZ gene fusions . J. Bacteriol. 160 : 112 - 121 .",
+              "journal-title": "J. Bacteriol."
+            }
+          ],
+          "container-title": [
+            "Journal of Bacteriology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://journals.asm.org/doi/pdf/10.1128/jb.165.2.434-442.1986",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://journals.asm.org/doi/pdf/10.1128/jb.165.2.434-442.1986",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2021,
+                7,
+                29
+              ]
+            ],
+            "date-time": "2021-07-29T17:29:54Z",
+            "timestamp": 1627579794000
+          },
+          "score": 41.56788,
+          "resource": {
+            "primary": {
+              "URL": "https://journals.asm.org/doi/10.1128/jb.165.2.434-442.1986"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1986,
+                2
+              ]
+            ]
+          },
+          "references-count": 26,
+          "journal-issue": {
+            "issue": "2",
+            "published-print": {
+              "date-parts": [
+                [
+                  1986,
+                  2
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1128/jb.165.2.434-442.1986"
+          ],
+          "URL": "https://doi.org/10.1128/jb.165.2.434-442.1986",
+          "ISSN": [
+            "0021-9193",
+            "1098-5530"
+          ],
+          "issn-type": [
+            {
+              "value": "0021-9193",
+              "type": "print"
+            },
+            {
+              "value": "1098-5530",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1986,
+                2
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "2021-02-02",
+              "order": 2,
+              "name": "published",
+              "label": "Published",
+              "group": {
+                "name": "publication_history",
+                "label": "Publication History"
+              }
+            }
+          ]
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                22
+              ]
+            ],
+            "date-time": "2026-10-22T14:01:43Z",
+            "timestamp": 1792677703168,
+            "version": "4.5.0"
+          },
+          "reference-count": 59,
+          "publisher": "Elsevier BV",
+          "issue": "2",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    1988,
+                    11,
+                    1
+                  ]
+                ],
+                "date-time": "1988-11-01T00:00:00Z",
+                "timestamp": 594345600000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Journal of Molecular Biology"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1988,
+                11
+              ]
+            ]
+          },
+          "DOI": "10.1016/0022-2836(88)90578-5",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2005,
+                2,
+                10
+              ]
+            ],
+            "date-time": "2005-02-10T18:06:55Z",
+            "timestamp": 1108058815000
+          },
+          "page": "309-325",
+          "source": "Crossref",
+          "is-referenced-by-count": 68,
+          "title": [
+            "Translational regulation of the spc operon in Escherichia coli"
+          ],
+          "prefix": "10.1016",
+          "volume": "204",
+          "author": [
+            {
+              "given": "Douglas Pat",
+              "family": "Cerretti",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Larry C.",
+              "family": "Mattheakis",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Kevin R.",
+              "family": "Kearney",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Loan",
+              "family": "Vu",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Masayasu",
+              "family": "Nomura",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "78",
+          "reference": [
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB1",
+              "doi-asserted-by": "crossref",
+              "first-page": "979",
+              "DOI": "10.1016/0092-8674(83)90555-X",
+              "volume": "34",
+              "author": "Baughman",
+              "year": "1983",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB2",
+              "first-page": "5389",
+              "volume": "81",
+              "author": "Baughman",
+              "year": "1984"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB3",
+              "doi-asserted-by": "crossref",
+              "first-page": "95",
+              "DOI": "10.1016/0378-1119(77)90000-2",
+              "volume": "2",
+              "author": "Bolivar",
+              "year": "1977",
+              "journal-title": "Gene"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB4",
+              "doi-asserted-by": "crossref",
+              "first-page": "293",
+              "DOI": "10.1093/nar/9.2.293",
+              "volume": "9",
+              "author": "Branlant",
+              "year": "1981",
+              "journal-title": "Nucl. Acids Res"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB5",
+              "doi-asserted-by": "crossref",
+              "first-page": "2325",
+              "DOI": "10.1093/nar/9.10.2325",
+              "volume": "9",
+              "author": "Carbon",
+              "year": "1981",
+              "journal-title": "Nucl. Acids Res"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB6",
+              "doi-asserted-by": "crossref",
+              "first-page": "2599",
+              "DOI": "10.1093/nar/11.9.2599",
+              "volume": "11",
+              "author": "Cerretti",
+              "year": "1983",
+              "journal-title": "Nucl. Acids Res"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB7",
+              "doi-asserted-by": "crossref",
+              "first-page": "99",
+              "DOI": "10.1016/S0022-2836(67)80070-6",
+              "volume": "23",
+              "author": "Clark",
+              "year": "1967",
+              "journal-title": "J. Mol. Biol"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB8",
+              "doi-asserted-by": "crossref",
+              "first-page": "525",
+              "DOI": "10.1016/0022-2836(77)90056-0",
+              "volume": "117",
+              "author": "Coulondre",
+              "year": "1977",
+              "journal-title": "J. Mol. Biol"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB9",
+              "first-page": "3590",
+              "volume": "77",
+              "author": "Dean",
+              "year": "1980"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB10",
+              "doi-asserted-by": "crossref",
+              "first-page": "89",
+              "DOI": "10.1038/289089a0",
+              "volume": "289",
+              "author": "Dean",
+              "year": "1981",
+              "journal-title": "Nature (London)"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB11",
+              "doi-asserted-by": "crossref",
+              "first-page": "323",
+              "DOI": "10.1016/0022-2836(87)90693-0",
+              "volume": "196",
+              "author": "Deckman",
+              "year": "1987",
+              "journal-title": "J. Mol. Biol"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB12",
+              "first-page": "3411",
+              "volume": "76",
+              "author": "Fallon",
+              "year": "1979"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB13",
+              "doi-asserted-by": "crossref",
+              "first-page": "5157",
+              "DOI": "10.1021/bi00291a015",
+              "volume": "22",
+              "author": "Gehrke",
+              "year": "1983",
+              "journal-title": "Biochemistry"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB14",
+              "first-page": "2722",
+              "volume": "78",
+              "author": "Gourse",
+              "year": "1981"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB15",
+              "doi-asserted-by": "crossref",
+              "first-page": "287",
+              "DOI": "10.1016/0022-2836(84)90145-1",
+              "volume": "178",
+              "author": "Gregory",
+              "year": "1984",
+              "journal-title": "J. Mol. Biol"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB16",
+              "doi-asserted-by": "crossref",
+              "first-page": "295",
+              "DOI": "10.1016/0022-2836(88)90577-3",
+              "volume": "204",
+              "author": "Gregory",
+              "year": "1988",
+              "journal-title": "J. Mol. Biol"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB17",
+              "doi-asserted-by": "crossref",
+              "first-page": "155",
+              "DOI": "10.1016/S0079-6603(08)60348-7",
+              "volume": "32",
+              "author": "Gutell",
+              "year": "1985",
+              "journal-title": "Progr. Nucl. Acids Res. Mol. Biol"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB18",
+              "doi-asserted-by": "crossref",
+              "first-page": "789",
+              "DOI": "10.1016/0092-8674(83)90065-X",
+              "volume": "32",
+              "author": "Ito",
+              "year": "1983",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB19",
+              "series-title": "Escherichia coli and Salmonella typhimurium",
+              "first-page": "1358",
+              "author": "Jinks-Robertson",
+              "year": "1987"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB20",
+              "doi-asserted-by": "crossref",
+              "first-page": "60",
+              "DOI": "10.1007/BF00337759",
+              "volume": "210",
+              "author": "Kearney",
+              "year": "1987",
+              "journal-title": "Mol. Gen. Genet"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB21",
+              "doi-asserted-by": "crossref",
+              "first-page": "4457",
+              "DOI": "10.1021/bi00665a019",
+              "volume": "15",
+              "author": "Kowalski",
+              "year": "1976",
+              "journal-title": "Biochemistry"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB22",
+              "doi-asserted-by": "crossref",
+              "first-page": "263",
+              "DOI": "10.1016/S0076-6879(80)65036-8",
+              "volume": "65",
+              "author": "Laskowski",
+              "year": "1980",
+              "journal-title": "Methods Enzymol"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB23",
+              "doi-asserted-by": "crossref",
+              "first-page": "297",
+              "DOI": "10.1146/annurev.ge.20.120186.001501",
+              "volume": "20",
+              "author": "Lindahl",
+              "year": "1986",
+              "journal-title": "Annu. Rev. Genet"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB24",
+              "author": "Mattheakis",
+              "year": "1988",
+              "journal-title": "J. Bacteriol"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB25",
+              "doi-asserted-by": "crossref",
+              "first-page": "7035",
+              "DOI": "10.1093/nar/12.18.7035",
+              "volume": "12",
+              "author": "Melton",
+              "year": "1984",
+              "journal-title": "Nucl. Acids"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB26",
+              "doi-asserted-by": "crossref",
+              "first-page": "269",
+              "DOI": "10.1016/0378-1119(82)90016-6",
+              "volume": "19",
+              "author": "Messing",
+              "year": "1982",
+              "journal-title": "Gene"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB27",
+              "doi-asserted-by": "crossref",
+              "first-page": "309",
+              "DOI": "10.1093/nar/9.2.309",
+              "volume": "9",
+              "author": "Messing",
+              "year": "1981",
+              "journal-title": "Nucl. Acids Res"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB28",
+              "doi-asserted-by": "crossref",
+              "first-page": "91",
+              "DOI": "10.1016/0022-2836(87)90460-8",
+              "volume": "198",
+              "author": "Mougel",
+              "year": "1987",
+              "journal-title": "J. Mol. Biol"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB29",
+              "doi-asserted-by": "crossref",
+              "first-page": "503",
+              "DOI": "10.1016/0022-2836(80)90260-0",
+              "volume": "142",
+              "author": "Nichols",
+              "year": "1980",
+              "journal-title": "J. Mol. Biol"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB30",
+              "doi-asserted-by": "crossref",
+              "first-page": "119",
+              "DOI": "10.1146/annurev.bi.53.070184.001003",
+              "volume": "53",
+              "author": "Noller",
+              "year": "1984",
+              "journal-title": "Annu. Rev. Biochem"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB31",
+              "doi-asserted-by": "crossref",
+              "first-page": "6167",
+              "DOI": "10.1093/nar/9.22.6167",
+              "volume": "9",
+              "author": "Noller",
+              "year": "1981",
+              "journal-title": "Nucl. Acids Res"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB32",
+              "doi-asserted-by": "crossref",
+              "first-page": "75",
+              "DOI": "10.1146/annurev.bi.53.070184.000451",
+              "volume": "53",
+              "author": "Nomura",
+              "year": "1984",
+              "journal-title": "Annu. Rev. Biochem"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB33",
+              "first-page": "658",
+              "volume": "52",
+              "author": "Nomura",
+              "year": "1988"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB34",
+              "doi-asserted-by": "crossref",
+              "first-page": "1757",
+              "DOI": "10.1093/nar/9.7.1757",
+              "volume": "9",
+              "author": "Olins",
+              "year": "1981",
+              "journal-title": "Nucl. Acids Res"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB35",
+              "doi-asserted-by": "crossref",
+              "first-page": "91",
+              "DOI": "10.1016/0092-8674(80)90391-8",
+              "volume": "19",
+              "author": "Pavalakis",
+              "year": "1980",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB36",
+              "first-page": "7331",
+              "volume": "78",
+              "author": "Peattie",
+              "year": "1981"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB37",
+              "doi-asserted-by": "crossref",
+              "first-page": "215",
+              "DOI": "10.1016/0092-8674(78)90096-X",
+              "volume": "15",
+              "author": "Post",
+              "year": "1978",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB38",
+              "doi-asserted-by": "crossref",
+              "first-page": "1563",
+              "DOI": "10.1021/bi00380a011",
+              "volume": "26",
+              "author": "Romaniuk",
+              "year": "1987",
+              "journal-title": "Biochemistry"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB39",
+              "doi-asserted-by": "crossref",
+              "first-page": "161",
+              "DOI": "10.1016/0022-2836(80)90196-5",
+              "volume": "143",
+              "author": "Sanger",
+              "year": "1980",
+              "journal-title": "J. Mol. Biol"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB40",
+              "doi-asserted-by": "crossref",
+              "first-page": "82",
+              "DOI": "10.1128/JB.115.1.82-87.1973",
+              "volume": "115",
+              "author": "Schaup",
+              "year": "1973",
+              "journal-title": "J. Bacteriol"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB41",
+              "doi-asserted-by": "crossref",
+              "first-page": "227",
+              "DOI": "10.1016/0092-8674(82)90422-6",
+              "volume": "31",
+              "author": "Shultz",
+              "year": "1982",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB42",
+              "doi-asserted-by": "crossref",
+              "first-page": "275",
+              "DOI": "10.1016/0378-1119(81)90083-4",
+              "volume": "16",
+              "author": "Sninsky",
+              "year": "1981",
+              "journal-title": "Gene"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB43",
+              "doi-asserted-by": "crossref",
+              "first-page": "52",
+              "DOI": "10.1007/BF00337758",
+              "volume": "210",
+              "author": "Sor",
+              "year": "1987",
+              "journal-title": "Mol. Gen. Genet"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB44",
+              "doi-asserted-by": "crossref",
+              "first-page": "3085",
+              "DOI": "10.1093/nar/15.7.3085",
+              "volume": "15",
+              "author": "Thomas",
+              "year": "1987",
+              "journal-title": "Nucl. Acids Res"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB45",
+              "doi-asserted-by": "crossref",
+              "first-page": "333",
+              "DOI": "10.1016/0022-2836(87)90694-2",
+              "volume": "196",
+              "author": "Thomas",
+              "year": "1987",
+              "journal-title": "J. Mol. Biol"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB46",
+              "doi-asserted-by": "crossref",
+              "first-page": "6787",
+              "DOI": "10.1093/nar/11.19.6787",
+              "volume": "11",
+              "author": "Thurlow",
+              "year": "1983",
+              "journal-title": "Nucl. Acids Res"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB47",
+              "doi-asserted-by": "crossref",
+              "first-page": "46",
+              "DOI": "10.1007/BF00330888",
+              "volume": "191",
+              "author": "Tomioka",
+              "year": "1983",
+              "journal-title": "Mol. Gen. Genet"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB48",
+              "doi-asserted-by": "crossref",
+              "first-page": "165",
+              "DOI": "10.1111/j.1432-1033.1975.tb03917.x",
+              "volume": "51",
+              "author": "Ungewickell",
+              "year": "1975",
+              "journal-title": "Eur. J. Biochem"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB49",
+              "doi-asserted-by": "crossref",
+              "first-page": "259",
+              "DOI": "10.1016/0378-1119(82)90015-4",
+              "volume": "19",
+              "author": "Vieira",
+              "year": "1982",
+              "journal-title": "Gene"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB50",
+              "first-page": "267",
+              "volume": "vol. 2",
+              "author": "Vournakis",
+              "year": "1981"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB51",
+              "doi-asserted-by": "crossref",
+              "first-page": "1583",
+              "DOI": "10.1093/oxfordjournals.jbchem.a121866",
+              "volume": "100",
+              "author": "Wada",
+              "year": "1986",
+              "journal-title": "J. Biochem"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB52",
+              "doi-asserted-by": "crossref",
+              "first-page": "1595",
+              "DOI": "10.1093/oxfordjournals.jbchem.a121867",
+              "volume": "100",
+              "author": "Wada",
+              "year": "1986",
+              "journal-title": "J. Biochem"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB53",
+              "doi-asserted-by": "crossref",
+              "first-page": "1419",
+              "DOI": "10.1093/nar/11.5.1419",
+              "volume": "11",
+              "author": "Wower",
+              "year": "1983",
+              "journal-title": "Nucl. Acids Res"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB54",
+              "doi-asserted-by": "crossref",
+              "first-page": "621",
+              "DOI": "10.1128/MMBR.47.4.621-669.1983",
+              "volume": "47",
+              "author": "Woese",
+              "year": "1983",
+              "journal-title": "Microbiol. Rev"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB55",
+              "doi-asserted-by": "crossref",
+              "first-page": "9608",
+              "DOI": "10.1016/S0021-9258(19)83559-7",
+              "volume": "254",
+              "author": "Wrede",
+              "year": "1979",
+              "journal-title": "J. Biol. Chem"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB56",
+              "first-page": "1837",
+              "volume": "77",
+              "author": "Yates",
+              "year": "1980"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB57",
+              "doi-asserted-by": "crossref",
+              "first-page": "279",
+              "DOI": "10.1093/nar/2.2.279",
+              "volume": "2",
+              "author": "Zimmermann",
+              "year": "1975",
+              "journal-title": "Nucl. Acids Res"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB58",
+              "doi-asserted-by": "crossref",
+              "first-page": "468",
+              "DOI": "10.1016/0076-6879(83)00074-9",
+              "volume": "100",
+              "author": "Zoller",
+              "year": "1983",
+              "journal-title": "Methods Enzymol"
+            },
+            {
+              "key": "10.1016/0022-2836(88)90578-5_BIB59",
+              "doi-asserted-by": "crossref",
+              "first-page": "133",
+              "DOI": "10.1093/nar/9.1.133",
+              "volume": "9",
+              "author": "Zuker",
+              "year": "1981",
+              "journal-title": "Nucl. Acids Res"
+            }
+          ],
+          "container-title": [
+            "Journal of Molecular Biology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:0022283688905785?httpAccept=text/xml",
+              "content-type": "text/xml",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:0022283688905785?httpAccept=text/plain",
+              "content-type": "text/plain",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2021,
+                7,
+                5
+              ]
+            ],
+            "date-time": "2021-07-05T00:40:07Z",
+            "timestamp": 1625445607000
+          },
+          "score": 40.98777,
+          "resource": {
+            "primary": {
+              "URL": "https://linkinghub.elsevier.com/retrieve/pii/0022283688905785"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1988,
+                11
+              ]
+            ]
+          },
+          "references-count": 59,
+          "journal-issue": {
+            "issue": "2",
+            "published-print": {
+              "date-parts": [
+                [
+                  1988,
+                  11
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "0022283688905785"
+          ],
+          "URL": "https://doi.org/10.1016/0022-2836(88)90578-5",
+          "ISSN": [
+            "0022-2836"
+          ],
+          "issn-type": [
+            {
+              "value": "0022-2836",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1988,
+                11
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2025,
+                12,
+                2
+              ]
+            ],
+            "date-time": "2025-12-02T15:12:21Z",
+            "timestamp": 1764688341857
+          },
+          "reference-count": 35,
+          "publisher": "Elsevier BV",
+          "issue": "1",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    1992,
+                    2,
+                    1
+                  ]
+                ],
+                "date-time": "1992-02-01T00:00:00Z",
+                "timestamp": 696902400000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Biochimica et Biophysica Acta (BBA) - Gene Structure and Expression"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1992,
+                2
+              ]
+            ]
+          },
+          "DOI": "10.1016/0167-4781(92)90463-a",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2003,
+                4,
+                7
+              ]
+            ],
+            "date-time": "2003-04-07T16:12:17Z",
+            "timestamp": 1049731937000
+          },
+          "page": "68-74",
+          "source": "Crossref",
+          "is-referenced-by-count": 5,
+          "title": [
+            "Regulation of the Escherichia coli lac operon expressed in human cells"
+          ],
+          "prefix": "10.1016",
+          "volume": "1130",
+          "author": [
+            {
+              "given": "Denis S.F.",
+              "family": "Biard",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Michael R.",
+              "family": "James",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Andr\u00e9",
+              "family": "Cordier",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Alain",
+              "family": "Sarasin",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "78",
+          "reference": [
+            {
+              "key": "10.1016/0167-4781(92)90463-A_bib1",
+              "doi-asserted-by": "crossref",
+              "first-page": "157",
+              "DOI": "10.1007/BF01311089",
+              "volume": "103",
+              "author": "Julanko",
+              "year": "1988",
+              "journal-title": "Arch. Virol."
+            },
+            {
+              "key": "10.1016/0167-4781(92)90463-A_bib2",
+              "doi-asserted-by": "crossref",
+              "first-page": "27",
+              "DOI": "10.1016/0378-1119(89)90005-X",
+              "volume": "76",
+              "author": "Lutfalla",
+              "year": "1989",
+              "journal-title": "Gene"
+            },
+            {
+              "key": "10.1016/0167-4781(92)90463-A_bib3",
+              "doi-asserted-by": "crossref",
+              "first-page": "355",
+              "DOI": "10.1002/j.1460-2075.1987.tb04762.x",
+              "volume": "6",
+              "author": "Kioussis",
+              "year": "1987",
+              "journal-title": "EMBO J."
+            },
+            {
+              "key": "10.1016/0167-4781(92)90463-A_bib4",
+              "doi-asserted-by": "crossref",
+              "first-page": "5708",
+              "DOI": "10.1016/S0021-9258(19)39421-9",
+              "volume": "265",
+              "author": "Heller",
+              "year": "1990",
+              "journal-title": "J. Biol. Chem."
+            },
+            {
+              "key": "10.1016/0167-4781(92)90463-A_bib5",
+              "doi-asserted-by": "crossref",
+              "first-page": "1367",
+              "DOI": "10.1128/MCB.10.4.1367",
+              "volume": "10",
+              "author": "Canfield",
+              "year": "1990",
+              "journal-title": "Mol. Cell. Biol."
+            },
+            {
+              "key": "10.1016/0167-4781(92)90463-A_bib6",
+              "doi-asserted-by": "crossref",
+              "first-page": "171",
+              "DOI": "10.1016/0378-1119(88)90556-2",
+              "volume": "62",
+              "author": "Young",
+              "year": "1988",
+              "journal-title": "Gene"
+            },
+            {
+              "key": "10.1016/0167-4781(92)90463-A_bib7",
+              "doi-asserted-by": "crossref",
+              "first-page": "169",
+              "DOI": "10.1016/0165-1110(89)90023-7",
+              "volume": "202",
+              "author": "James",
+              "year": "1989",
+              "journal-title": "Mut. Res."
+            },
+            {
+              "key": "10.1016/0167-4781(92)90463-A_bib8",
+              "doi-asserted-by": "crossref",
+              "first-page": "2837",
+              "DOI": "10.1128/MCB.8.7.2837",
+              "volume": "8",
+              "author": "Margolskee",
+              "year": "1988",
+              "journal-title": "Mol. Cell. Biol."
+            },
+            {
+              "key": "10.1016/0167-4781(92)90463-A_bib9",
+              "doi-asserted-by": "crossref",
+              "first-page": "285",
+              "DOI": "10.1016/0378-1119(89)90189-3",
+              "volume": "81",
+              "author": "Groger",
+              "year": "1989",
+              "journal-title": "Gene"
+            },
+            {
+              "key": "10.1016/0167-4781(92)90463-A_bib10",
+              "doi-asserted-by": "crossref",
+              "first-page": "1",
+              "DOI": "10.1093/mutage/3.1.1",
+              "volume": "3",
+              "author": "DuBridge",
+              "year": "1988",
+              "journal-title": "Mutagenesis"
+            },
+            {
+              "key": "10.1016/0167-4781(92)90463-A_bib11",
+              "doi-asserted-by": "crossref",
+              "first-page": "251",
+              "DOI": "10.1016/0167-4781(89)90110-3",
+              "volume": "1009",
+              "author": "Palombo",
+              "year": "1989",
+              "journal-title": "Biochim. Biophys. Acta"
+            },
+            {
+              "key": "10.1016/0167-4781(92)90463-A_bib12",
+              "doi-asserted-by": "crossref",
+              "first-page": "3837",
+              "DOI": "10.1128/JVI.63.9.3837-3843.1989",
+              "volume": "63",
+              "author": "Stary",
+              "year": "1989",
+              "journal-title": "J. Virol."
+            },
+            {
+              "key": "10.1016/0167-4781(92)90463-A_bib13",
+              "series-title": "The operon",
+              "author": "Miller",
+              "year": "1980"
+            },
+            {
+              "key": "10.1016/0167-4781(92)90463-A_bib14",
+              "doi-asserted-by": "crossref",
+              "first-page": "555",
+              "DOI": "10.1016/0092-8674(87)90234-0",
+              "volume": "48",
+              "author": "Hu",
+              "year": "1987",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "10.1016/0167-4781(92)90463-A_bib15",
+              "doi-asserted-by": "crossref",
+              "first-page": "6141",
+              "DOI": "10.1128/MCB.10.12.6141",
+              "volume": "10",
+              "author": "Hu",
+              "year": "1990",
+              "journal-title": "Mol. Cell. Biol."
+            },
+            {
+              "key": "10.1016/0167-4781(92)90463-A_bib16",
+              "doi-asserted-by": "crossref",
+              "first-page": "603",
+              "DOI": "10.1016/0092-8674(87)90536-8",
+              "volume": "49",
+              "author": "Brown",
+              "year": "1987",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "10.1016/0167-4781(92)90463-A_bib17",
+              "first-page": "9951",
+              "volume": "86",
+              "author": "Liu",
+              "year": "1989"
+            },
+            {
+              "key": "10.1016/0167-4781(92)90463-A_bib18",
+              "doi-asserted-by": "crossref",
+              "first-page": "713",
+              "DOI": "10.1016/0092-8674(88)90409-6",
+              "volume": "52",
+              "author": "Figge",
+              "year": "1988",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "10.1016/0167-4781(92)90463-A_bib19",
+              "first-page": "2549",
+              "volume": "86",
+              "author": "Fuerst",
+              "year": "1989"
+            },
+            {
+              "key": "10.1016/0167-4781(92)90463-A_bib20",
+              "doi-asserted-by": "crossref",
+              "first-page": "5712",
+              "DOI": "10.1016/S0021-9258(19)69264-1",
+              "volume": "256",
+              "author": "Durnam",
+              "year": "1981",
+              "journal-title": "J. Biol. Chem."
+            },
+            {
+              "key": "10.1016/0167-4781(92)90463-A_bib21",
+              "doi-asserted-by": "crossref",
+              "first-page": "233",
+              "DOI": "10.1016/0378-1119(90)90284-X",
+              "volume": "86",
+              "author": "James",
+              "year": "1990",
+              "journal-title": "Gene"
+            },
+            {
+              "key": "10.1016/0167-4781(92)90463-A_bib22",
+              "author": "Maniatis",
+              "year": "1982"
+            },
+            {
+              "key": "10.1016/0167-4781(92)90463-A_bib23",
+              "doi-asserted-by": "crossref",
+              "first-page": "1822",
+              "DOI": "10.1128/MCB.5.8.1822",
+              "volume": "5",
+              "author": "Reisman",
+              "year": "1985",
+              "journal-title": "Mol. Cell. Biol."
+            },
+            {
+              "key": "10.1016/0167-4781(92)90463-A_bib24",
+              "doi-asserted-by": "crossref",
+              "first-page": "3016",
+              "DOI": "10.1128/JVI.63.7.3016-3025.1989",
+              "volume": "63",
+              "author": "Chittenden",
+              "year": "1989",
+              "journal-title": "J. Virol."
+            },
+            {
+              "key": "10.1016/0167-4781(92)90463-A_bib25",
+              "doi-asserted-by": "crossref",
+              "first-page": "521",
+              "DOI": "10.1016/S0092-8674(85)80025-8",
+              "volume": "41",
+              "author": "Boshart",
+              "year": "1985",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "10.1016/0167-4781(92)90463-A_bib26",
+              "first-page": "6785",
+              "volume": "80",
+              "author": "Sadler",
+              "year": "1983"
+            },
+            {
+              "key": "10.1016/0167-4781(92)90463-A_bib27",
+              "doi-asserted-by": "crossref",
+              "first-page": "501",
+              "DOI": "10.1016/0022-2836(89)90221-0",
+              "volume": "205",
+              "author": "Madzak",
+              "year": "1989",
+              "journal-title": "J. Mol. Biol."
+            },
+            {
+              "key": "10.1016/0167-4781(92)90463-A_bib28",
+              "doi-asserted-by": "crossref",
+              "first-page": "725",
+              "DOI": "10.1016/0092-8674(78)90254-4",
+              "volume": "14",
+              "author": "Wigler",
+              "year": "1978",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "10.1016/0167-4781(92)90463-A_bib29",
+              "first-page": "5198",
+              "volume": "80",
+              "author": "Nielsen",
+              "year": "1986"
+            },
+            {
+              "key": "10.1016/0167-4781(92)90463-A_bib30",
+              "doi-asserted-by": "crossref",
+              "first-page": "248",
+              "DOI": "10.1016/0003-2697(76)90527-3",
+              "volume": "72",
+              "author": "Bradford",
+              "year": "1976",
+              "journal-title": "Anal. Biochem."
+            },
+            {
+              "key": "10.1016/0167-4781(92)90463-A_bib31",
+              "doi-asserted-by": "crossref",
+              "first-page": "251",
+              "DOI": "10.1016/0003-2697(86)90180-6",
+              "volume": "156",
+              "author": "Sleigh",
+              "year": "1986",
+              "journal-title": "Anal. Biochem."
+            },
+            {
+              "key": "10.1016/0167-4781(92)90463-A_bib32",
+              "first-page": "707",
+              "volume": "4",
+              "author": "Velcich",
+              "year": "1989",
+              "journal-title": "Oncogene"
+            },
+            {
+              "key": "10.1016/0167-4781(92)90463-A_bib33",
+              "doi-asserted-by": "crossref",
+              "first-page": "377",
+              "DOI": "10.1016/0042-6822(89)90605-3",
+              "volume": "171",
+              "author": "Gorman",
+              "year": "1989",
+              "journal-title": "Virology"
+            },
+            {
+              "key": "10.1016/0167-4781(92)90463-A_bib34",
+              "doi-asserted-by": "crossref",
+              "first-page": "608",
+              "DOI": "10.1038/312608a0",
+              "volume": "312",
+              "author": "Borrelli",
+              "year": "1984",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/0167-4781(92)90463-A_bib35",
+              "first-page": "1624",
+              "volume": "81",
+              "author": "Simons",
+              "year": "1984"
+            }
+          ],
+          "container-title": [
+            "Biochimica et Biophysica Acta (BBA) - Gene Structure and Expression"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:016747819290463A?httpAccept=text/xml",
+              "content-type": "text/xml",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:016747819290463A?httpAccept=text/plain",
+              "content-type": "text/plain",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2021,
+                6,
+                6
+              ]
+            ],
+            "date-time": "2021-06-06T04:49:28Z",
+            "timestamp": 1622954968000
+          },
+          "score": 40.00087,
+          "resource": {
+            "primary": {
+              "URL": "https://linkinghub.elsevier.com/retrieve/pii/016747819290463A"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1992,
+                2
+              ]
+            ]
+          },
+          "references-count": 35,
+          "journal-issue": {
+            "issue": "1",
+            "published-print": {
+              "date-parts": [
+                [
+                  1992,
+                  2
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "016747819290463A"
+          ],
+          "URL": "https://doi.org/10.1016/0167-4781(92)90463-a",
+          "ISSN": [
+            "0167-4781"
+          ],
+          "issn-type": [
+            {
+              "value": "0167-4781",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1992,
+                2
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

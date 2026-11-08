@@ -1,0 +1,98 @@
+{
+  "slug": "signaling-game",
+  "name": "Signaling Game",
+  "catalogPath": "Sample Models/Philosophy/Signaling Game",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Philosophy/Signaling%20Game.nlogox",
+  "deliveryBatch": "B02",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "The scientific question is whether successful reinforcement can establish shared meanings without preassigned signal semantics. In NetLogo's Signaling Game model, senders select signals for world states, receivers choose responses, and rewarded pairings become more likely in subsequent interactions. The selected literature connects this mechanism to coordination through learned signaling conventions: conventions solve recurrent coordination problems without explicit agreement [1]; evolution and learning explain emergence and failure of signaling systems [2]; equilibrium provides a benchmark distinct from the simulated learning process [3]. Aligned payoffs, finite vocabularies and simple learning restrict claims about natural language, deception and unequal interests. The original NetLogo behavior is the baseline for reimplementation. This simulation offers a controlled thought experiment, and agreement with its output does not establish empirical validation.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Philosophy/Signaling%20Game.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Philosophy/Signaling%20Game.nlogox",
+    "revision": "Served NetLogo Web snapshot retrieved 2026-11-05; {'version': 'NetLogo 7.0.4', 'snapToGrid': 'true'}",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served model XML, Procedures and Info retained locally; Info read for mechanism and attribution.",
+    "evidencePath": "evidence/social-urban/signaling-game.nlogox",
+    "sha256": "399be72f527afb3d0e9ba27969d1a25e8a94364358aca2e707f0b01f24009bf5",
+    "citation": "For the model itself: * Wilensky, U. (2016). NetLogo Signaling Game model. http://ccl.northwestern.edu/netlogo/models/SignalingGame. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "scientificOrigin": "- Skyrms, B. (2006). [Signals](www.socsci.uci.edu/~bskyrms/bio/other/Presidential%20Address.pdf). Presidential Address, Philosophy of Science Association, for PSA 2006. - Lewis, D. (1969). Convention. Cambridge, MA: Harvard University Press. - https://en.wikipedia.org/wiki/Signaling_game Thanks to Ryan Muldoon for his help with this model.",
+    "notes": "This is source research, not runtime execution or approval of the City Library reimplementation. Original model notices remain in the retained source.",
+    "evidenceFile": "evidence/social-urban/signaling-game.nlogox"
+  },
+  "publications": [
+    {
+      "id": "lewis",
+      "creatorRole": "author",
+      "authors": [
+        "David Lewis"
+      ],
+      "title": "Convention: A Philosophical Study",
+      "year": 2002,
+      "venue": "Wiley",
+      "doi": "10.1002/9780470693711",
+      "url": "https://doi.org/10.1002/9780470693711",
+      "relevance": "conventions solve recurrent coordination problems without explicit agreement",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1002%2F9780470693711",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; full-text access not established",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/lewis-verified.json",
+        "evidenceSummary": "Bibliographic metadata only; relevance is a bounded theoretical comparison, not a claim to have read inaccessible full text.",
+        "evidenceFile": "evidence/social-urban/lewis-verified.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "skyrms",
+      "creatorRole": "author",
+      "authors": [
+        "Brian Skyrms"
+      ],
+      "title": "Signals: Evolution, Learning, and Information",
+      "year": 2010,
+      "venue": "Oxford University Press",
+      "doi": "10.1093/acprof:oso/9780199580828.001.0001",
+      "url": "https://doi.org/10.1093/acprof:oso/9780199580828.001.0001",
+      "relevance": "evolution and learning explain emergence and failure of signaling systems",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1093%2Facprof%3Aoso%2F9780199580828.001.0001",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "abstract",
+        "access": "Public Crossref registrant metadata; publisher-deposited abstract available",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/skyrms-verified.json",
+        "evidenceSummary": "Abstract This book presents an exploration of how fundamental signals are to our world. It uses a variety of tools — theories of signaling games, information, evolution, and learning — to investigate how meaning and communication develop. The book shows how signaling games themselves evolve, and introduces a new model of learning with invention. The juxtaposition of atomic signals leads to complex signals, as the natural product of gradual process. Signals operate in networks of senders and receivers at all levels of life. Information is transmitted, but it is also processed in various ways. That is how we think — signals run around a very complicated signaling network. Signaling is a key ingredient in the evolution of teamwork, in the human but also in the animal world, even in micro-organisms. Communication and co-ordination of action are different aspects of the flow of information, a",
+        "evidenceFile": "evidence/social-urban/skyrms-verified.json"
+      },
+      "verified": true
+    },
+    {
+      "id": "nash",
+      "creatorRole": "author",
+      "authors": [
+        "John F. Nash"
+      ],
+      "title": "Equilibrium points in n-person games",
+      "year": 1950,
+      "venue": "Proceedings of the National Academy of Sciences",
+      "doi": "10.1073/pnas.36.1.48",
+      "url": "https://doi.org/10.1073/pnas.36.1.48",
+      "relevance": "equilibrium provides a benchmark distinct from the simulated learning process",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1073%2Fpnas.36.1.48",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; full-text access not established",
+        "notes": "Exact title, complete author list, year, venue and DOI checked against the saved DOI-registrant record. Initials are retained where the primary record supplies initials; no names expanded by guesswork. Full text not claimed.",
+        "evidencePath": "evidence/social-urban/nash-crossref.json",
+        "evidenceSummary": "Bibliographic metadata only; relevance is a bounded theoretical comparison, not a claim to have read inaccessible full text.",
+        "evidenceFile": "evidence/social-urban/nash-crossref.json"
+      },
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

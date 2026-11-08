@@ -6,17 +6,37 @@ export interface ModelInstance {
   dispose?(): void;
 }
 export type Snapshot<M extends ModelInstance> = ReturnType<M["read"]>;
+
+/** Detached observations inferred from either a model definition or its instance. */
+export type Observation<T extends ModelInstance | { readonly create: (...args: never[]) => ModelInstance }> =
+  T extends ModelInstance ? Snapshot<T>
+    : T extends { readonly create: (...args: never[]) => infer M extends ModelInstance }
+      ? Snapshot<M> : never;
+
+/** A formatter consumes only the scalar produced by its paired getter. */
+export interface Monitor<S, V extends string | number = string | number> {
+  readonly label: string;
+  readonly value: (state: S) => V;
+  readonly format?: (value: V) => string;
+}
+
 export interface NetworkNode {
   readonly id: string;
   readonly label?: string;
   readonly color?: string;
   /** Symbol diameter in CSS pixels; never a physical collision radius. */
   readonly size?: number;
+  /** Initial view coordinates only; later dragging/layout is presentation-owned. */
+  readonly position?: { readonly x: number; readonly y: number };
 }
 export interface NetworkEdge {
   readonly id: string;
   readonly from: string;
   readonly to: string;
+  readonly directed?: boolean;
+  readonly color?: string;
+  /** Positive finite stroke width in CSS pixels. */
+  readonly width?: number;
 }
 export interface Cell {
   readonly id: string;
@@ -37,16 +57,38 @@ export interface SpatialAgent extends NetworkNode {
   readonly heading?: number;
   readonly shape?: "circle" | "triangle";
 }
+export interface SpatialSegment {
+  /** Detached endpoints in finite, centered two-dimensional world coordinates. */
+  readonly from: { readonly x: number; readonly y: number };
+  readonly to: { readonly x: number; readonly y: number };
+  /** Stroke color; defaults to white. */
+  readonly color?: string;
+  /** Nonnegative finite stroke width in CSS pixels; defaults to 1, zero omits it. */
+  readonly width?: number;
+}
 export interface SpatialData {
+  /** Controlled label visibility; omit to retain the host Labels checkbox. */
+  readonly showLabels?: boolean;
   readonly width: number;
   readonly height: number;
   readonly cells?: readonly Cell[];
+  /** Ordered strokes drawn over cells and beneath agents, selection and labels. */
+  readonly segments?: readonly SpatialSegment[];
   readonly agents: readonly SpatialAgent[];
 }
 export interface Series {
   readonly label: string;
   readonly color?: string;
   readonly points: readonly { readonly x: number; readonly y: number }[];
+}
+export interface AxisSpec {
+  readonly label?: string;
+  readonly unit?: string;
+}
+export interface BarSeries {
+  readonly label: string;
+  readonly color?: string;
+  readonly points: readonly { readonly x: string | number; readonly y: number }[];
 }
 export type View<S> =
   | {
@@ -66,9 +108,18 @@ export type View<S> =
       readonly data: (state: S) => SpatialData;
     }
   | {
-      readonly type: "line" | "bar" | "scatter";
+      readonly type: "line" | "scatter";
+      readonly xAxis?: AxisSpec;
+      readonly yAxis?: AxisSpec;
       readonly label: string;
       readonly series: (state: S) => readonly Series[];
+    }
+  | {
+      readonly type: "bar";
+      readonly label: string;
+      readonly xAxis?: AxisSpec;
+      readonly yAxis?: AxisSpec;
+      readonly series: (state: S) => readonly BarSeries[];
     }
   | {
       readonly type: "table";
@@ -85,29 +136,58 @@ export interface Inspector<S> {
     selected: string | null,
   ) => Readonly<Record<string, string | number | boolean>> | undefined;
 }
+export type DrawingIntent =
+  | {
+      readonly phase: "begin" | "move";
+      readonly position: { readonly x: number; readonly y: number };
+    }
+  | { readonly phase: "end"; readonly position?: never };
+
+export interface SetupField<P extends object> {
+  readonly field: Extract<keyof P, string>;
+  readonly label?: string;
+  readonly widget?: "number" | "range" | "select" | "checkbox" | "text";
+}
+export interface LegacyLiveField<P extends object, M extends ModelInstance> {
+  readonly field: Extract<keyof P, string>;
+  readonly label?: string;
+  readonly widget?: "color";
+  readonly group?: string;
+  readonly value: (state: Snapshot<M>) => string | number | boolean;
+  readonly set: (model: M, value: string | number | boolean) => void;
+  readonly enabled?: (state: Snapshot<M>) => boolean;
+}
+type KeyedField<P extends object, M extends ModelInstance, K extends keyof P> = {
+  readonly label?: string;
+  readonly widget?: "color";
+  readonly group?: string;
+  readonly set: (model: M, value: P[K]) => void;
+  readonly enabled?: (state: Snapshot<M>) => boolean;
+} & ([Snapshot<M>] extends [{ readonly parameters: { readonly [F in K]-?: P[F] } }]
+  ? { readonly value?: (state: Snapshot<M>) => P[K] }
+  : { readonly value: (state: Snapshot<M>) => P[K] });
+export type KeyedLive<P extends object, M extends ModelInstance> = {
+  readonly [K in Extract<keyof P, string>]?: KeyedField<P, M, K>;
+};
+
 export interface UISpec<P extends object, M extends ModelInstance> {
-  readonly setup?: readonly {
-    readonly field: Extract<keyof P, string>;
-    readonly label?: string;
-    readonly widget?: "number" | "range" | "select" | "checkbox" | "text";
-  }[];
+  readonly drawing?: {
+    /** Optional host-owned mode toggle, initially off for each mounted instance. */
+    readonly toggleLabel?: string;
+    readonly enabled: (state: Snapshot<M>) => boolean;
+    readonly intent: (model: M, intent: DrawingIntent) => void;
+  };
+  readonly setup?: readonly (Extract<keyof P, string> | SetupField<P>)[];
   readonly actions?: readonly {
     readonly label: string;
     readonly run: (model: M, selected: string | null) => void;
     readonly enabled?: (state: Snapshot<M>, selected: string | null) => boolean;
     readonly pressed?: (state: Snapshot<M>) => boolean;
+    /** Independent host cadence; never scientific model time. */
+    readonly repeat?: { readonly label: string; readonly intervalMs: number };
   }[];
-  readonly live?: readonly {
-    readonly field: Extract<keyof P, string>;
-    readonly label?: string;
-    readonly value: (state: Snapshot<M>) => string | number | boolean;
-    readonly set: (model: M, value: string | number | boolean) => void;
-    readonly enabled?: (state: Snapshot<M>) => boolean;
-  }[];
-  readonly monitors?: readonly {
-    readonly label: string;
-    readonly value: (state: Snapshot<M>) => string | number;
-  }[];
+  readonly live?: readonly LegacyLiveField<P, M>[] | KeyedLive<P, M>;
+  readonly monitors?: readonly Monitor<Snapshot<M>>[];
   readonly complete?: (state: Snapshot<M>) => boolean;
   readonly source?: { readonly url: string; readonly label: string };
   readonly views: readonly (View<Snapshot<M>> | Inspector<Snapshot<M>>)[];

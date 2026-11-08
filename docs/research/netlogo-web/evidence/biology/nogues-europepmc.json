@@ -1,0 +1,277 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1371%2Fjournal.pbio.0060079%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1371/journal.pbio.0060079\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "18384234",
+          "source": "MED",
+          "pmid": "18384234",
+          "pmcid": "PMC2276529",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC2276529"
+            ]
+          },
+          "doi": "10.1371/journal.pbio.0060079",
+          "title": "Climate change, humans, and the extinction of the woolly mammoth.",
+          "authorString": "Nogu\u00e9s-Bravo D, Rodr\u00edguez J, Hortal J, Batra P, Ara\u00fajo MB.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Nogu\u00e9s-Bravo D",
+                "lastName": "Nogu\u00e9s-Bravo",
+                "firstName": "David",
+                "initials": "D",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-4060-0153"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Biodiversity and Evolutionary Biology, National Museum of Natural Sciences, Consejo Superior de Investigaciones Cient\u00edficas, Madrid, Spain. davidnogues@mncn.csic.es"
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Rodr\u00edguez J",
+                "lastName": "Rodr\u00edguez",
+                "firstName": "Jes\u00fas",
+                "initials": "J",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-2834-0694"
+                }
+              },
+              {
+                "fullName": "Hortal J",
+                "lastName": "Hortal",
+                "firstName": "Joaqu\u00edn",
+                "initials": "J",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-8370-8877"
+                }
+              },
+              {
+                "fullName": "Batra P",
+                "lastName": "Batra",
+                "firstName": "Persaram",
+                "initials": "P"
+              },
+              {
+                "fullName": "Ara\u00fajo MB",
+                "lastName": "Ara\u00fajo",
+                "firstName": "Miguel B",
+                "initials": "MB"
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0002-2834-0694"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-4060-0153"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-5107-7265"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-8370-8877"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "supporting_data",
+              "recommended_reviews",
+              "wikipedia"
+            ]
+          },
+          "journalInfo": {
+            "issue": "4",
+            "volume": "6",
+            "journalIssueId": 1518530,
+            "dateOfPublication": "2008 Apr",
+            "monthOfPublication": 4,
+            "yearOfPublication": 2008,
+            "journal": {
+              "medlineAbbreviation": "PLoS Biol",
+              "title": "PLoS biology",
+              "essn": "1545-7885",
+              "issn": "1544-9173",
+              "nlmid": "101183755",
+              "isoabbreviation": "PLoS Biol"
+            },
+            "printPublicationDate": "2008-04-01"
+          },
+          "pubYear": "2008",
+          "pageInfo": "e79",
+          "abstractText": "Woolly mammoths inhabited Eurasia and North America from late Middle Pleistocene (300 ky BP [300,000 years before present]), surviving through different climatic cycles until they vanished in the Holocene (3.6 ky BP). The debate about why the Late Quaternary extinctions occurred has centred upon environmental and human-induced effects, or a combination of both. However, testing these two hypotheses-climatic and anthropogenic-has been hampered by the difficulty of generating quantitative estimates of the relationship between the contraction of the mammoth's geographical range and each of the two hypotheses. We combined climate envelope models and a population model with explicit treatment of woolly mammoth-human interactions to measure the extent to which a combination of climate changes and increased human pressures might have led to the extinction of the species in Eurasia. Climate conditions for woolly mammoths were measured across different time periods: 126 ky BP, 42 ky BP, 30 ky BP, 21 ky BP, and 6 ky BP. We show that suitable climate conditions for the mammoth reduced drastically between the Late Pleistocene and the Holocene, and 90% of its geographical range disappeared between 42 ky BP and 6 ky BP, with the remaining suitable areas in the mid-Holocene being mainly restricted to Arctic Siberia, which is where the latest records of woolly mammoths in continental Asia have been found. Results of the population models also show that the collapse of the climatic niche of the mammoth caused a significant drop in their population size, making woolly mammoths more vulnerable to the increasing hunting pressure from human populations. The coincidence of the disappearance of climatically suitable areas for woolly mammoths and the increase in anthropogenic impacts in the Holocene, the coup de gr\u00e2ce, likely set the place and time for the extinction of the woolly mammoth.",
+          "affiliation": "Department of Biodiversity and Evolutionary Biology, National Museum of Natural Sciences, Consejo Superior de Investigaciones Cient\u00edficas, Madrid, Spain. davidnogues@mncn.csic.es",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Historical Article",
+              "Research Support, Non-U.S. Gov't",
+              "research-article",
+              "Journal Article"
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "agency": "Natural Environment Research Council",
+                "grantId": "cpb010001",
+                "orderIn": 0
+              }
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Animals"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Elephants",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Humans"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Computational Biology"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Climate"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Population Dynamics"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Time Factors"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Human Activities"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "History, Ancient"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Extinction, Biological"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1371/journal.pbio.0060079"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC2276529"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC2276529?pdf=render"
+              }
+            ]
+          },
+          "commentCorrectionList": {
+            "commentCorrection": [
+              {
+                "source": "MED",
+                "id": "20076709",
+                "reference": "PLoS Biol. 2008 Apr;6(4):e99. doi: 10.1371/journal.pbio.0060099",
+                "type": "Comment in",
+                "orderIn": 1
+              }
+            ]
+          },
+          "isOpenAccess": "Y",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "citedByCount": 88,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "Y",
+          "hasLabsLinks": "Y",
+          "hasData": "Y",
+          "license": "cc by",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2008-06-16",
+          "dateOfCreation": "2008-04-04",
+          "dateOfRevision": "2021-10-20",
+          "firstPublicationDate": "2008-04-01",
+          "firstIndexDate": "2010-09-23",
+          "fullTextReceivedDate": "2025-02-05",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

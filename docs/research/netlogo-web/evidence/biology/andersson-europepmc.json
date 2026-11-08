@@ -1,0 +1,222 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fnrmicro2319%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1038/nrmicro2319\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "20208551",
+          "source": "MED",
+          "pmid": "20208551",
+          "doi": "10.1038/nrmicro2319",
+          "title": "Antibiotic resistance and its cost: is it possible to reverse resistance?",
+          "authorString": "Andersson DI, Hughes D.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Andersson DI",
+                "lastName": "Andersson",
+                "firstName": "Dan I",
+                "initials": "DI",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-6640-2174"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Medical Biochemistry and Microbiology, Uppsala University, BOX 582, SE-751 23, Uppsala, Sweden. dan.andersson@imbim.uu.se"
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Hughes D",
+                "lastName": "Hughes",
+                "firstName": "Diarmaid",
+                "initials": "D",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-7456-9182"
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0001-6640-2174"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-7456-9182"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "recommended_reviews"
+            ]
+          },
+          "journalInfo": {
+            "issue": "4",
+            "volume": "8",
+            "journalIssueId": 1707589,
+            "dateOfPublication": "2010 Apr",
+            "monthOfPublication": 4,
+            "yearOfPublication": 2010,
+            "journal": {
+              "medlineAbbreviation": "Nat Rev Microbiol",
+              "title": "Nature reviews. Microbiology",
+              "essn": "1740-1534",
+              "issn": "1740-1526",
+              "nlmid": "101190261",
+              "isoabbreviation": "Nat Rev Microbiol"
+            },
+            "printPublicationDate": "2010-04-01"
+          },
+          "pubYear": "2010",
+          "pageInfo": "260-271",
+          "abstractText": "Most antibiotic resistance mechanisms are associated with a fitness cost that is typically observed as a reduced bacterial growth rate. The magnitude of this cost is the main biological parameter that influences the rate of development of resistance, the stability of the resistance and the rate at which the resistance might decrease if antibiotic use were reduced. These findings suggest that the fitness costs of resistance will allow susceptible bacteria to outcompete resistant bacteria if the selective pressure from antibiotics is reduced. Unfortunately, the available data suggest that the rate of reversibility will be slow at the community level. Here, we review the factors that influence the fitness costs of antibiotic resistance, the ways by which bacteria can reduce these costs and the possibility of exploiting them.",
+          "affiliation": "Department of Medical Biochemistry and Microbiology, Uppsala University, BOX 582, SE-751 23, Uppsala, Sweden. dan.andersson@imbim.uu.se",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print-Electronic",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, Non-U.S. Gov't",
+              "Review",
+              "Journal Article"
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Humans"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Bacterial Infections",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "DT",
+                      "qualifierName": "drug therapy"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Anti-Bacterial Agents",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "TU",
+                      "qualifierName": "therapeutic use"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Drug Resistance, Bacterial",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Genetic Fitness",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "DE",
+                      "qualifierName": "drug effects"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Biological Evolution"
+              }
+            ]
+          },
+          "chemicalList": {
+            "chemical": [
+              {
+                "name": "Anti-Bacterial Agents",
+                "registryNumber": "0"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1038/nrmicro2319"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "citedByCount": 1698,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2010-04-07",
+          "dateOfCreation": "2010-03-09",
+          "dateOfRevision": "2026-10-10",
+          "electronicPublicationDate": "2010-03-08",
+          "firstPublicationDate": "2010-03-08",
+          "firstIndexDate": "2010-04-08",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

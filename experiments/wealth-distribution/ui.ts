@@ -1,58 +1,52 @@
-import { defineUI } from "../../ui/index.ts";
+import {
+  defineUI,
+  type Observation,
+  type SpatialData,
+  type SpatialAgent,
+  type BarSeries,
+} from "../../ui/index.ts";
+
 import { model } from "./model.ts";
 const colors = { low: "#d94838", middle: "#60ad2c", high: "#355fa5" };
 export const ui = defineUI(model, {
-  setup: [{ field: "seed" }, { field: "people" }, { field: "bestLand" }],
+  setup: ["seed", "people", "bestLand"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/WealthDistribution",
     label: "Original NetLogo model · Uri Wilensky · CC BY-NC-SA 3.0",
   },
-  live: [
-    {
-      field: "growthInterval",
-      label: "Growth interval",
-      value: (state) => state.parameters.growthInterval,
-      set: (instance, value) =>
-        instance.setRules({ growthInterval: Number(value) }),
+  live: {
+    growthInterval: {
+      set: (instance, value) => instance.setRules({ growthInterval: value }),
     },
-    {
-      field: "growthAmount",
-      label: "Growth amount",
-      value: (state) => state.parameters.growthAmount,
-      set: (instance, value) =>
-        instance.setRules({ growthAmount: Number(value) }),
+    growthAmount: {
+      set: (instance, value) => instance.setRules({ growthAmount: value }),
     },
-    {
-      field: "maxVision",
+    maxVision: {
       label: "Maximum vision",
-      value: (state) => state.parameters.maxVision,
-      set: (instance, value) => instance.setRules({ maxVision: Number(value) }),
+      set: (instance, value) => instance.setRules({ maxVision: value }),
     },
-    {
-      field: "metabolismMax",
+    metabolismMax: {
       label: "Maximum metabolism",
-      value: (state) => state.parameters.metabolismMax,
-      set: (instance, value) =>
-        instance.setRules({ metabolismMax: Number(value) }),
+      set: (instance, value) => instance.setRules({ metabolismMax: value }),
     },
-    {
-      field: "minLife",
+    minLife: {
       label: "Minimum life",
-      value: (state) => state.parameters.minLife,
-      set: (instance, value) => instance.setRules({ minLife: Number(value) }),
+      set: (instance, value) => instance.setRules({ minLife: value }),
     },
-    {
-      field: "maxLife",
+    maxLife: {
       label: "Maximum life",
-      value: (state) => state.parameters.maxLife,
-      set: (instance, value) => instance.setRules({ maxLife: Number(value) }),
+      set: (instance, value) => instance.setRules({ maxLife: value }),
     },
-  ],
+  },
   monitors: [
     { label: "Tick", value: (state) => state.tick },
     { label: "People", value: (state) => state.peopleCount },
     { label: "Total wealth", value: (state) => state.totalWealth },
-    { label: "Gini", value: (state) => state.gini.toFixed(3) },
+    {
+      label: "Gini",
+      value: (state) => state.gini,
+      format: (value: number) => value.toFixed(3),
+    },
   ],
   views: [
     {
@@ -65,40 +59,14 @@ export const ui = defineUI(model, {
     {
       type: "spatial",
       label: "Resources and wealth classes",
-      data: (state) => ({
-        width: state.width,
-        height: state.height,
-        cells: state.cells.map((cell) => ({
-          id: cell.id,
-          x: cell.x,
-          y: cell.y,
-          color: `rgb(${Math.round((cell.grain / 50) * 255)},${Math.round((cell.grain / 50) * 255)},0)`,
-        })),
-        agents: state.agents.map((agent) => ({
-          id: agent.id,
-          x: agent.x,
-          y: agent.y,
-          heading: agent.heading,
-          color: colors[agent.class],
-          shape: "triangle" as const,
-          size: 8,
-        })),
-      }),
+      data: resourcesAndWealthClassesData,
     },
     {
       type: "bar",
       label: "Current wealth classes",
-      series: (state) => [
-        {
-          label: "People · low / middle / high",
-          color: "#355fa5",
-          points: [
-            { x: 0, y: state.classes.low },
-            { x: 1, y: state.classes.middle },
-            { x: 2, y: state.classes.high },
-          ],
-        },
-      ],
+      xAxis: { label: "Wealth class" },
+      yAxis: { label: "People" },
+      series: wealthClassSeries,
     },
     {
       type: "line",
@@ -144,3 +112,46 @@ export const ui = defineUI(model, {
     },
   ],
 });
+
+type UIObservation = Observation<typeof model>;
+
+function resourcesAndWealthClassesData(state: UIObservation): SpatialData {
+  return {
+    width: state.width,
+    height: state.height,
+    cells: state.cells.map((cell) => ({
+      id: cell.id,
+      x: cell.x,
+      y: cell.y,
+      color: grainColor(cell.grain),
+    })),
+    agents: state.agents.map((agent): SpatialAgent => ({
+      id: agent.id,
+      x: agent.x,
+      y: agent.y,
+      heading: agent.heading,
+      color: colors[agent.class],
+      shape: "triangle",
+      size: 8,
+    })),
+  };
+}
+
+function wealthClassSeries(state: UIObservation): readonly BarSeries[] {
+  return [
+    {
+      label: "People",
+      color: "#355fa5",
+      points: [
+        { x: "Low", y: state.classes.low },
+        { x: "Middle", y: state.classes.middle },
+        { x: "High", y: state.classes.high },
+      ],
+    },
+  ];
+}
+
+function grainColor(grain: number): string {
+  const channel = Math.round((grain / 50) * 255);
+  return `rgb(${channel},${channel},0)`;
+}

@@ -1,0 +1,154 @@
+{
+  "slug": "hiv",
+  "name": "HIV",
+  "catalogPath": "Sample Models/Biology/HIV",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/HIV.nlogox",
+  "deliveryBatch": "B09",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "How do partnership duration, testing, and safer-sex assumptions change transmission opportunities? NetLogo HIV forms and dissolves couples in an isolated population and distinguishes unknown from known infection. The served model assumes that people who know they are infected consistently practice safer sex. Research on sexual-contact structure [1], condom effectiveness [2], and early antiretroviral treatment [3] frames both its mechanisms and omissions. Testing behavior is represented through simple tendencies, and the model does not reconstruct contemporary treatment access, adherence, or all transmission routes. It illustrates how local partnerships and information can affect population patterns. It does not provide a calibrated estimate of HIV risk or demonstrate the effectiveness of an actual public-health program.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/HIV.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/HIV.nlogox",
+    "revision": "Best available served NetLogo Web artifact retrieved on 2026-11-05; SHA-256 ed3e832a9fadd101ff65eb20a313ee0941496db02d6d3cf15371568745f997d5",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served .nlogox downloaded; Info mechanism descriptions, credits and reference sections inspected. Procedures are not independently audited by this literature task. Source provenance is separate from City Library reimplementation and target-runtime verification.",
+    "evidenceFile": "evidence/biology/hiv.nlogox",
+    "infoFile": "evidence/biology/hiv-info.txt",
+    "originalModelCitation": "* Wilensky, U. (1997).  NetLogo HIV model.  http://ccl.northwestern.edu/netlogo/models/HIV.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "notes": "Original/served model is the behavioral baseline. This research does not claim implementation or browser acceptance."
+  },
+  "publications": [
+    {
+      "id": "andersonhiv",
+      "authors": [
+        "R. M. Anderson",
+        "R. M. May",
+        "M. C. Boily",
+        "G. P. Garnett",
+        "J. T. Rowley"
+      ],
+      "title": "The spread of HIV-1 in Africa: sexual contact patterns and the predicted demographic impact of AIDS",
+      "year": 1991,
+      "venue": "Nature",
+      "doi": "10.1038/352581a0",
+      "url": "https://doi.org/10.1038/352581a0",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=The+spread+of+HIV-1+in+Africa+sexual+contact+patterns+and+the+predicted+demographic+impact+of+AIDS+Anderson+1991&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading. Duplicate R. M. May in Crossref removed after comparison with Europe PMC/PubMed five-author record.",
+        "evidenceFile": "evidence/biology/andersonhiv-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2F352581a0%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/andersonhiv-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "352",
+      "issue": "6336",
+      "pages": "581-589",
+      "relevance": "Relates sexual contact patterns to HIV population dynamics, directly relevant to coupling assumptions."
+    },
+    {
+      "id": "weller",
+      "authors": [
+        "Susan C Weller",
+        "Karen Davis-Beaty"
+      ],
+      "title": "Condom effectiveness in reducing heterosexual HIV transmission",
+      "year": 2002,
+      "venue": "Cochrane Database of Systematic Reviews",
+      "doi": "10.1002/14651858.cd003255",
+      "url": "https://doi.org/10.1002/14651858.cd003255",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Condom+effectiveness+in+reducing+heterosexual+HIV+transmission+Weller+Davis+2002&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/weller-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1002%2F14651858.cd003255%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/weller-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "2012",
+      "issue": "3",
+      "pages": null,
+      "relevance": "Systematically assesses condom effectiveness, grounding one modeled prevention mechanism."
+    },
+    {
+      "id": "cohen",
+      "authors": [
+        "Myron S. Cohen",
+        "Ying Q. Chen",
+        "Marybeth McCauley",
+        "Theresa Gamble",
+        "Mina C. Hosseinipour",
+        "Nagalingeswaran Kumarasamy",
+        "James G. Hakim",
+        "Johnstone Kumwenda",
+        "Beatriz Grinsztejn",
+        "Jose H.S. Pilotto",
+        "Sheela V. Godbole",
+        "Sanjay Mehendale",
+        "Suwat Chariyalertsak",
+        "Breno R. Santos",
+        "Kenneth H. Mayer",
+        "Irving F. Hoffman",
+        "Susan H. Eshleman",
+        "Estelle Piwowar-Manning",
+        "Lei Wang",
+        "Joseph Makhema",
+        "Lisa A. Mills",
+        "Guy de Bruyn",
+        "Ian Sanne",
+        "Joseph Eron",
+        "Joel Gallant",
+        "Diane Havlir",
+        "Susan Swindells",
+        "Heather Ribaudo",
+        "Vanessa Elharrar",
+        "David Burns",
+        "Taha E. Taha",
+        "Karin Nielsen-Saines",
+        "David Celentano",
+        "Max Essex",
+        "Thomas R. Fleming",
+        "HPTN 052 Study Team"
+      ],
+      "title": "Prevention of HIV-1 Infection with Early Antiretroviral Therapy",
+      "year": 2011,
+      "venue": "New England Journal of Medicine",
+      "doi": "10.1056/nejmoa1105243",
+      "url": "https://doi.org/10.1056/nejmoa1105243",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Prevention+of+HIV-1+infection+with+early+antiretroviral+therapy+Cohen+2011&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/cohen-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1056%2Fnejmoa1105243%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/cohen-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "365",
+      "issue": "6",
+      "pages": "493-505",
+      "relevance": "Early-treatment evidence highlights a major modern prevention pathway omitted by the simplified model."
+    }
+  ],
+  "gaps": []
+}

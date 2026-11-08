@@ -1,0 +1,3134 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=CRISPR+Cas+systems+exploit+viral+DNA+injection+to+establish+and+maintain+adaptive+immunity+Modell+2017&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 3905007,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                22
+              ]
+            ],
+            "date-time": "2026-10-22T06:02:57Z",
+            "timestamp": 1792648977937,
+            "version": "4.5.0"
+          },
+          "reference-count": 43,
+          "publisher": "Springer Science and Business Media LLC",
+          "issue": "7648",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2017,
+                    3,
+                    29
+                  ]
+                ],
+                "date-time": "2017-03-29T00:00:00Z",
+                "timestamp": 1490745600000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "http://www.springer.com/tdm"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "link.springer.com"
+            ],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Nature"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2017,
+                4
+              ]
+            ]
+          },
+          "DOI": "10.1038/nature21719",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2017,
+                3,
+                28
+              ]
+            ],
+            "date-time": "2017-03-28T16:34:16Z",
+            "timestamp": 1490718856000
+          },
+          "page": "101-104",
+          "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 160,
+          "title": [
+            "CRISPR\u2013Cas systems exploit viral DNA injection to establish and maintain adaptive immunity"
+          ],
+          "prefix": "10.1038",
+          "volume": "544",
+          "author": [
+            {
+              "given": "Joshua W.",
+              "family": "Modell",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Wenyan",
+              "family": "Jiang",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Luciano A.",
+              "family": "Marraffini",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "published-online": {
+            "date-parts": [
+              [
+                2017,
+                3,
+                29
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "BFnature21719_CR1",
+              "doi-asserted-by": "publisher",
+              "first-page": "1709",
+              "DOI": "10.1126/science.1138140",
+              "volume": "315",
+              "author": "R Barrangou",
+              "year": "2007",
+              "unstructured": "Barrangou, R. et al. CRISPR provides acquired resistance against viruses in prokaryotes. Science 315, 1709\u20131712 (2007)",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BFnature21719_CR2",
+              "doi-asserted-by": "publisher",
+              "first-page": "1843",
+              "DOI": "10.1126/science.1165771",
+              "volume": "322",
+              "author": "LA Marraffini",
+              "year": "2008",
+              "unstructured": "Marraffini, L. A. & Sontheimer, E. J. CRISPR interference limits horizontal gene transfer in staphylococci by targeting DNA. Science 322, 1843\u20131845 (2008)",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BFnature21719_CR3",
+              "doi-asserted-by": "publisher",
+              "first-page": "960",
+              "DOI": "10.1126/science.1159689",
+              "volume": "321",
+              "author": "SJ Brouns",
+              "year": "2008",
+              "unstructured": "Brouns, S. J. et al. Small CRISPR RNAs guide antiviral defense in prokaryotes. Science 321, 960\u2013964 (2008)",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BFnature21719_CR4",
+              "doi-asserted-by": "publisher",
+              "first-page": "3489",
+              "DOI": "10.1101/gad.1742908",
+              "volume": "22",
+              "author": "J Carte",
+              "year": "2008",
+              "unstructured": "Carte, J., Wang, R., Li, H., Terns, R. M. & Terns, M. P. Cas6 is an endoribonuclease that generates guide RNAs for invader defense in prokaryotes. Genes Dev. 22, 3489\u20133496 (2008)",
+              "journal-title": "Genes Dev."
+            },
+            {
+              "key": "BFnature21719_CR5",
+              "doi-asserted-by": "publisher",
+              "first-page": "602",
+              "DOI": "10.1038/nature09886",
+              "volume": "471",
+              "author": "E Deltcheva",
+              "year": "2011",
+              "unstructured": "Deltcheva, E. et al. CRISPR RNA maturation by trans-encoded small RNA and host factor RNase III. Nature 471, 602\u2013607 (2011)",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnature21719_CR6",
+              "doi-asserted-by": "publisher",
+              "first-page": "67",
+              "DOI": "10.1038/nature09523",
+              "volume": "468",
+              "author": "JE Garneau",
+              "year": "2010",
+              "unstructured": "Garneau, J. E. et al. The CRISPR/Cas bacterial immune system cleaves bacteriophage and plasmid DNA. Nature 468, 67\u201371 (2010)",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnature21719_CR7",
+              "doi-asserted-by": "publisher",
+              "first-page": "529",
+              "DOI": "10.1038/nsmb.2019",
+              "volume": "18",
+              "author": "MM Jore",
+              "year": "2011",
+              "unstructured": "Jore, M. M. et al. Structural basis for CRISPR RNA-guided DNA recognition by Cascade. Nat. Struct. Mol. Biol. 18, 529\u2013536 (2011)",
+              "journal-title": "Nat. Struct. Mol. Biol."
+            },
+            {
+              "key": "BFnature21719_CR8",
+              "doi-asserted-by": "publisher",
+              "first-page": "1164",
+              "DOI": "10.1016/j.cell.2015.04.027",
+              "volume": "161",
+              "author": "P Samai",
+              "year": "2015",
+              "unstructured": "Samai, P. et al. Co-transcriptional DNA and RNA cleavage during type III CRISPR\u2013Cas immunity. Cell 161, 1164\u20131174 (2015)",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "BFnature21719_CR9",
+              "doi-asserted-by": "publisher",
+              "first-page": "722",
+              "DOI": "10.1038/nrmicro3569",
+              "volume": "13",
+              "author": "KS Makarova",
+              "year": "2015",
+              "unstructured": "Makarova, K. S. et al. An updated evolutionary classification of CRISPR\u2013Cas systems. Nat. Rev. Microbiol. 13, 722\u2013736 (2015)",
+              "journal-title": "Nat. Rev. Microbiol."
+            },
+            {
+              "key": "BFnature21719_CR10",
+              "doi-asserted-by": "publisher",
+              "first-page": "505",
+              "DOI": "10.1038/nature14302",
+              "volume": "520",
+              "author": "A Levy",
+              "year": "2015",
+              "unstructured": "Levy, A. et al. CRISPR adaptation biases explain preference for acquisition of foreign DNA. Nature 520, 505\u2013510 (2015)",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnature21719_CR11",
+              "doi-asserted-by": "publisher",
+              "first-page": "9",
+              "DOI": "10.1038/nrmicro2917",
+              "volume": "11",
+              "author": "DB Wigley",
+              "year": "2013",
+              "unstructured": "Wigley, D. B. Bacterial DNA repair: recent insights into the mechanism of RecBCD, AddAB and AdnAB. Nat. Rev. Microbiol. 11, 9\u201313 (2013)",
+              "journal-title": "Nat. Rev. Microbiol."
+            },
+            {
+              "key": "BFnature21719_CR12",
+              "doi-asserted-by": "publisher",
+              "first-page": "199",
+              "DOI": "10.1038/nature14245",
+              "volume": "519",
+              "author": "R Heler",
+              "year": "2015",
+              "unstructured": "Heler, R. et al. Cas9 specifies functional viral targets during CRISPR\u2013Cas adaptation. Nature 519, 199\u2013202 (2015)",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnature21719_CR13",
+              "doi-asserted-by": "publisher",
+              "first-page": "816",
+              "DOI": "10.1126/science.1225829",
+              "volume": "337",
+              "author": "M Jinek",
+              "year": "2012",
+              "unstructured": "Jinek, M. et al. A programmable dual-RNA-guided DNA endonuclease in adaptive bacterial immunity. Science 337, 816\u2013821 (2012)",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BFnature21719_CR14",
+              "doi-asserted-by": "publisher",
+              "first-page": "9275",
+              "DOI": "10.1093/nar/gkr606",
+              "volume": "39",
+              "author": "R Sapranauskas",
+              "year": "2011",
+              "unstructured": "Sapranauskas, R. et al. The Streptococcus thermophilus CRISPR/Cas system provides immunity in Escherichia coli. Nucleic Acids Res. 39, 9275\u20139282 (2011)",
+              "journal-title": "Nucleic Acids Res."
+            },
+            {
+              "key": "BFnature21719_CR15",
+              "doi-asserted-by": "publisher",
+              "first-page": "733",
+              "DOI": "10.1099/mic.0.023960-0",
+              "volume": "155",
+              "author": "FJ Mojica",
+              "year": "2009",
+              "unstructured": "Mojica, F. J., Diez-Villasenor, C., Garcia-Martinez, J. & Almendros, C. Short motif sequences determine the targets of the prokaryotic CRISPR defence system. Microbiology 155, 733\u2013740 (2009)",
+              "journal-title": "Microbiology"
+            },
+            {
+              "key": "BFnature21719_CR16",
+              "doi-asserted-by": "publisher",
+              "first-page": "945",
+              "DOI": "10.1038/ncomms1937",
+              "volume": "3",
+              "author": "KA Datsenko",
+              "year": "2012",
+              "unstructured": "Datsenko, K. A. et al. Molecular memory of prior infections activates the CRISPR/Cas adaptive bacterial immunity system. Nat. Commun. 3, 945 (2012)",
+              "journal-title": "Nat. Commun."
+            },
+            {
+              "key": "BFnature21719_CR17",
+              "doi-asserted-by": "publisher",
+              "first-page": "168",
+              "DOI": "10.1016/j.molcel.2016.11.031",
+              "volume": "65",
+              "author": "R Heler",
+              "year": "2017",
+              "unstructured": "Heler, R. et al. Mutations in Cas9 enhance the rate of acquisition of viral spacer sequences during the CRISPR\u2013Cas immune response. Mol. Cell 65, 168\u2013175 (2017)",
+              "journal-title": "Mol. Cell"
+            },
+            {
+              "key": "BFnature21719_CR18",
+              "doi-asserted-by": "publisher",
+              "first-page": "1614",
+              "DOI": "10.1371/journal.pgen.0030153",
+              "volume": "3",
+              "author": "D Halpern",
+              "year": "2007",
+              "unstructured": "Halpern, D. et al. Identification of DNA motifs implicated in maintenance of bacterial core genomes by predictive modeling. PLoS Genet. 3, 1614\u20131621 (2007)",
+              "journal-title": "PLoS Genet."
+            },
+            {
+              "key": "BFnature21719_CR19",
+              "doi-asserted-by": "publisher",
+              "first-page": "521",
+              "DOI": "10.1016/0092-8674(86)90262-X",
+              "volume": "44",
+              "author": "L Colleaux",
+              "year": "1986",
+              "unstructured": "Colleaux, L. et al. Universal code equivalent of a yeast mitochondrial intron reading frame is expressed into E. coli as a specific double strand endonuclease. Cell 44, 521\u2013533 (1986)",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "BFnature21719_CR20",
+              "doi-asserted-by": "publisher",
+              "first-page": "155",
+              "DOI": "10.1016/B978-0-12-394621-8.00016-9",
+              "volume": "82",
+              "author": "G We\u02dbgrzyn",
+              "year": "2012",
+              "unstructured": "We\u02dbgrzyn, G., Licznerska, K. & We\u02dbgrzyn, A. Phage \u03bb\u2014new insights into regulatory circuits. Adv. Virus Res. 82, 155\u2013178 (2012)",
+              "journal-title": "Adv. Virus Res."
+            },
+            {
+              "key": "BFnature21719_CR21",
+              "doi-asserted-by": "publisher",
+              "first-page": "155",
+              "DOI": "10.1016/0042-6822(67)90105-5",
+              "volume": "33",
+              "author": "R Novick",
+              "year": "1967",
+              "unstructured": "Novick, R. Properties of a cryptic high-frequency transducing phage in Staphylococcus aureus. Virology 33, 155\u2013166 (1967)",
+              "journal-title": "Virology"
+            },
+            {
+              "key": "BFnature21719_CR22",
+              "doi-asserted-by": "publisher",
+              "first-page": "748",
+              "DOI": "10.1073/pnas.49.5.748",
+              "volume": "49",
+              "author": "AD Hershey",
+              "year": "1963",
+              "unstructured": "Hershey, A. D., Burgi, E. & Ingraham, L. Cohesion of DNA molecules isolated from phage lambda. Proc. Natl Acad. Sci. USA 49, 748\u2013755 (1963)",
+              "journal-title": "Proc. Natl Acad. Sci. USA"
+            },
+            {
+              "key": "BFnature21719_CR23",
+              "doi-asserted-by": "publisher",
+              "first-page": "6016",
+              "DOI": "10.1073/pnas.1320538111",
+              "volume": "111",
+              "author": "N Quiles-Puchalt",
+              "year": "2014",
+              "unstructured": "Quiles-Puchalt, N. et al. Staphylococcal pathogenicity island DNA packaging system involving cos-site packaging and phage-encoded HNH endonucleases. Proc. Natl Acad. Sci. USA 111, 6016\u20136021 (2014)",
+              "journal-title": "Proc. Natl Acad. Sci. USA"
+            },
+            {
+              "key": "BFnature21719_CR24",
+              "doi-asserted-by": "publisher",
+              "first-page": "393",
+              "DOI": "10.1016/j.mib.2008.09.012",
+              "volume": "11",
+              "author": "VA Fischetti",
+              "year": "2008",
+              "unstructured": "Fischetti, V. A. Bacteriophage lysins as effective antibacterials. Curr. Opin. Microbiol. 11, 393\u2013400 (2008)",
+              "journal-title": "Curr. Opin. Microbiol."
+            },
+            {
+              "key": "BFnature21719_CR25",
+              "doi-asserted-by": "publisher",
+              "first-page": "616",
+              "DOI": "10.1016/j.molcel.2016.08.038",
+              "volume": "64",
+              "author": "J McGinn",
+              "year": "2016",
+              "unstructured": "McGinn, J. & Marraffini, L. A. CRISPR\u2013Cas systems optimize their immune response by specifying the site of spacer integration. Mol. Cell 64, 616\u2013623 (2016)",
+              "journal-title": "Mol. Cell"
+            },
+            {
+              "key": "BFnature21719_CR26",
+              "doi-asserted-by": "publisher",
+              "first-page": "e1003825",
+              "DOI": "10.1371/journal.pgen.1003825",
+              "volume": "9",
+              "author": "LM Bobay",
+              "year": "2013",
+              "unstructured": "Bobay, L. M., Touchon, M. & Rocha, E. P. Manipulating or superseding host recombination functions: a dilemma that shapes phage evolvability. PLoS Genet. 9, e1003825 (2013)",
+              "journal-title": "PLoS Genet."
+            },
+            {
+              "key": "BFnature21719_CR27",
+              "doi-asserted-by": "publisher",
+              "first-page": "1339",
+              "DOI": "10.1016/j.cub.2012.05.023",
+              "volume": "22",
+              "author": "D Van Valen",
+              "year": "2012",
+              "unstructured": "Van Valen, D. et al. A single-molecule Hershey-Chase experiment. Curr. Biol. 22, 1339\u20131343 (2012)",
+              "journal-title": "Curr. Biol."
+            },
+            {
+              "key": "BFnature21719_CR28",
+              "doi-asserted-by": "publisher",
+              "first-page": "431",
+              "DOI": "10.1016/0022-2836(85)90414-0",
+              "volume": "185",
+              "author": "AF Taylor",
+              "year": "1985",
+              "unstructured": "Taylor, A. F. & Smith, G. R. Substrate specificity of the DNA unwinding activity of the RecBC enzyme of Escherichia coli. J. Mol. Biol. 185, 431\u2013443 (1985)",
+              "journal-title": "J. Mol. Biol."
+            },
+            {
+              "key": "BFnature21719_CR29",
+              "doi-asserted-by": "publisher",
+              "first-page": "709",
+              "DOI": "10.1038/305709a0",
+              "volume": "305",
+              "author": "BN Kreiswirth",
+              "year": "1983",
+              "unstructured": "Kreiswirth, B. N. et al. The toxic shock syndrome exotoxin structural gene is not detectably transmitted by a prophage. Nature 305, 709\u2013712 (1983)",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnature21719_CR30",
+              "doi-asserted-by": "publisher",
+              "first-page": "1754",
+              "DOI": "10.1093/bioinformatics/btp324",
+              "volume": "25",
+              "author": "H Li",
+              "year": "2009",
+              "unstructured": "Li, H. & Durbin, R. Fast and accurate short read alignment with Burrows-Wheeler transform. Bioinformatics 25, 1754\u20131760 (2009)",
+              "journal-title": "Bioinformatics"
+            },
+            {
+              "key": "BFnature21719_CR31",
+              "doi-asserted-by": "publisher",
+              "first-page": "9504",
+              "DOI": "10.1093/nar/gku628",
+              "volume": "42",
+              "author": "B Martel",
+              "year": "2014",
+              "unstructured": "Martel, B. & Moineau, S. CRISPR\u2013Cas: an efficient tool for genome engineering of virulent bacteriophages. Nucleic Acids Res. 42, 9504\u20139513 (2014)",
+              "journal-title": "Nucleic Acids Res."
+            },
+            {
+              "key": "BFnature21719_CR32",
+              "doi-asserted-by": "publisher",
+              "first-page": "e00277",
+              "DOI": "10.1128/mBio.00277-11",
+              "volume": "3",
+              "author": "IR Monk",
+              "year": "2012",
+              "unstructured": "Monk, I. R., Shah, I. M., Xu, M., Tan, M. W. & Foster, T. J. Transforming the untransformable: application of direct transformation to manipulate genetically Staphylococcus aureus and Staphylococcus epidermidis. MBio 3, e00277\u2013e01100 (2012)",
+              "journal-title": "MBio"
+            },
+            {
+              "key": "BFnature21719_CR33",
+              "doi-asserted-by": "publisher",
+              "first-page": "6887",
+              "DOI": "10.1128/AEM.70.11.6887-6891.2004",
+              "volume": "70",
+              "author": "M Arnaud",
+              "year": "2004",
+              "unstructured": "Arnaud, M., Chastanet, A. & D\u00e9barbouill\u00e9, M. New vector for efficient allelic replacement in naturally nontransformable, low-GC-content, Gram-positive bacteria. Appl. Environ. Microbiol. 70, 6887\u20136891 (2004)",
+              "journal-title": "Appl. Environ. Microbiol."
+            },
+            {
+              "key": "BFnature21719_CR34",
+              "doi-asserted-by": "publisher",
+              "first-page": "98",
+              "DOI": "10.1111/j.1365-2958.2009.06634.x",
+              "volume": "72",
+              "author": "C Ubeda",
+              "year": "2009",
+              "unstructured": "Ubeda, C. et al. Specificity of staphylococcal phage and SaPI DNA packaging as revealed by integrase and terminase mutations. Mol. Microbiol. 72, 98\u2013108 (2009)",
+              "journal-title": "Mol. Microbiol."
+            },
+            {
+              "key": "BFnature21719_CR35",
+              "doi-asserted-by": "publisher",
+              "first-page": "710",
+              "DOI": "10.1016/j.cell.2015.12.053",
+              "volume": "164",
+              "author": "W Jiang",
+              "year": "2016",
+              "unstructured": "Jiang, W., Samai, P. & Marraffini, L. A. Degradation of phage transcripts by CRISPR\u2013associated RNases enables type III CRISPR\u2013Cas immunity. Cell 164, 710\u2013721 (2016)",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "BFnature21719_CR36",
+              "doi-asserted-by": "publisher",
+              "first-page": "633",
+              "DOI": "10.1038/nature13637",
+              "volume": "514",
+              "author": "GW Goldberg",
+              "year": "2014",
+              "unstructured": "Goldberg, G. W., Jiang, W., Bikard, D. & Marraffini, L. A. Conditional tolerance of temperate phages via transcription-dependent CRISPR\u2013Cas targeting. Nature 514, 633\u2013637 (2014)",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnature21719_CR37",
+              "doi-asserted-by": "publisher",
+              "first-page": "343",
+              "DOI": "10.1038/nmeth.1318",
+              "volume": "6",
+              "author": "DG Gibson",
+              "year": "2009",
+              "unstructured": "Gibson, D. G. et al. Enzymatic assembly of DNA molecules up to several hundred kilobases. Nat. Methods 6, 343\u2013345 (2009)",
+              "journal-title": "Nat. Methods"
+            },
+            {
+              "key": "BFnature21719_CR38",
+              "doi-asserted-by": "publisher",
+              "first-page": "1146",
+              "DOI": "10.1038/nbt.3043",
+              "volume": "32",
+              "author": "D Bikard",
+              "year": "2014",
+              "unstructured": "Bikard, D. et al. Exploiting CRISPR\u2013Cas nucleases to produce sequence-specific antimicrobials. Nat. Biotechnol. 32, 1146\u20131150 (2014)",
+              "journal-title": "Nat. Biotechnol."
+            },
+            {
+              "key": "BFnature21719_CR39",
+              "doi-asserted-by": "publisher",
+              "first-page": "58",
+              "DOI": "10.1016/j.plasmid.2005.05.005",
+              "volume": "55",
+              "author": "T Bae",
+              "year": "2006",
+              "unstructured": "Bae, T. & Schneewind, O. Allelic replacement in Staphylococcus aureus with inducible counter-selection. Plasmid 55, 58\u201363 (2006)",
+              "journal-title": "Plasmid"
+            },
+            {
+              "key": "BFnature21719_CR40",
+              "doi-asserted-by": "crossref",
+              "first-page": "804",
+              "DOI": "10.1128/JB.150.2.804-814.1982",
+              "volume": "150",
+              "author": "S Horinouchi",
+              "year": "1982",
+              "unstructured": "Horinouchi, S. & Weisblum, B. Nucleotide sequence and functional map of pE194, a plasmid that specifies inducible resistance to macrolide, lincosamide, and streptogramin type B antibodies. J. Bacteriol. 150, 804\u2013814 (1982)",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "BFnature21719_CR41",
+              "doi-asserted-by": "publisher",
+              "first-page": "1035",
+              "DOI": "10.1111/j.1365-2958.2006.05441.x",
+              "volume": "62",
+              "author": "T Bae",
+              "year": "2006",
+              "unstructured": "Bae, T., Baba, T., Hiramatsu, K. & Schneewind, O. Prophages of Staphylococcus aureus Newman and their contribution to virulence. Mol. Microbiol. 62, 1035\u20131047 (2006)",
+              "journal-title": "Mol. Microbiol."
+            },
+            {
+              "key": "BFnature21719_CR42",
+              "doi-asserted-by": "publisher",
+              "first-page": "207",
+              "DOI": "10.1007/s10096-012-1733-4",
+              "volume": "32",
+              "author": "R Louwen",
+              "year": "2013",
+              "unstructured": "Louwen, R. et al. A novel link between Campylobacter jejuni bacteriophage defence, virulence and Guillain-Barr\u00e9 syndrome. Eur. J. Clin. Microbiol. Infect. Dis. 32, 207\u2013226 (2013)",
+              "journal-title": "Eur. J. Clin. Microbiol. Infect. Dis."
+            },
+            {
+              "key": "BFnature21719_CR43",
+              "doi-asserted-by": "publisher",
+              "first-page": "251",
+              "DOI": "10.1016/0147-619X(83)90039-2",
+              "volume": "10",
+              "author": "SA Khan",
+              "year": "1983",
+              "unstructured": "Khan, S. A. & Novick, R. P. Complete nucleotide sequence of pT181, a tetracycline-resistance plasmid from Staphylococcus aureus. Plasmid 10, 251\u2013259 (1983)",
+              "journal-title": "Plasmid"
+            }
+          ],
+          "container-title": [
+            "Nature"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://www.nature.com/articles/nature21719.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://www.nature.com/articles/nature21719",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://www.nature.com/doifinder/10.1038/nature21719",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            },
+            {
+              "URL": "http://www.nature.com/articles/nature21719.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2023,
+                5,
+                18
+              ]
+            ],
+            "date-time": "2023-05-18T18:00:41Z",
+            "timestamp": 1684432841000
+          },
+          "score": 77.851326,
+          "resource": {
+            "primary": {
+              "URL": "https://www.nature.com/articles/nature21719"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2017,
+                3,
+                29
+              ]
+            ]
+          },
+          "references-count": 43,
+          "journal-issue": {
+            "issue": "7648",
+            "published-print": {
+              "date-parts": [
+                [
+                  2017,
+                  4
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "BFnature21719"
+          ],
+          "URL": "https://doi.org/10.1038/nature21719",
+          "ISSN": [
+            "0028-0836",
+            "1476-4687"
+          ],
+          "issn-type": [
+            {
+              "value": "0028-0836",
+              "type": "print"
+            },
+            {
+              "value": "1476-4687",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2017,
+                3,
+                29
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "13 December 2016",
+              "order": 1,
+              "name": "received",
+              "label": "Received",
+              "group": {
+                "name": "ArticleHistory",
+                "label": "Article History"
+              }
+            },
+            {
+              "value": "22 February 2017",
+              "order": 2,
+              "name": "accepted",
+              "label": "Accepted",
+              "group": {
+                "name": "ArticleHistory",
+                "label": "Article History"
+              }
+            },
+            {
+              "value": "29 March 2017",
+              "order": 3,
+              "name": "first_online",
+              "label": "First Online",
+              "group": {
+                "name": "ArticleHistory",
+                "label": "Article History"
+              }
+            },
+            {
+              "value": "The authors declare no competing financial interests.",
+              "order": 1,
+              "name": "Ethics",
+              "group": {
+                "name": "EthicsHeading",
+                "label": "Competing interests"
+              }
+            }
+          ]
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                22
+              ]
+            ],
+            "date-time": "2026-10-22T06:02:08Z",
+            "timestamp": 1792648928467,
+            "version": "4.5.0"
+          },
+          "reference-count": 61,
+          "publisher": "Elsevier BV",
+          "issue": "3",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2025,
+                    3,
+                    1
+                  ]
+                ],
+                "date-time": "2025-03-01T00:00:00Z",
+                "timestamp": 1740787200000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2025,
+                    3,
+                    1
+                  ]
+                ],
+                "date-time": "2025-03-01T00:00:00Z",
+                "timestamp": 1740787200000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://www.elsevier.com/legal/tdmrep-license"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2026,
+                    3,
+                    12
+                  ]
+                ],
+                "date-time": "2026-03-12T00:00:00Z",
+                "timestamp": 1773273600000
+              },
+              "content-version": "vor",
+              "delay-in-days": 376,
+              "URL": "http://www.elsevier.com/open-access/userlicense/1.0/"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2025,
+                    3,
+                    1
+                  ]
+                ],
+                "date-time": "2025-03-01T00:00:00Z",
+                "timestamp": 1740787200000
+              },
+              "content-version": "stm-asf",
+              "delay-in-days": 0,
+              "URL": "https://doi.org/10.15223/policy-017"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2025,
+                    3,
+                    1
+                  ]
+                ],
+                "date-time": "2025-03-01T00:00:00Z",
+                "timestamp": 1740787200000
+              },
+              "content-version": "stm-asf",
+              "delay-in-days": 0,
+              "URL": "https://doi.org/10.15223/policy-037"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2025,
+                    3,
+                    1
+                  ]
+                ],
+                "date-time": "2025-03-01T00:00:00Z",
+                "timestamp": 1740787200000
+              },
+              "content-version": "stm-asf",
+              "delay-in-days": 0,
+              "URL": "https://doi.org/10.15223/policy-012"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2025,
+                    3,
+                    1
+                  ]
+                ],
+                "date-time": "2025-03-01T00:00:00Z",
+                "timestamp": 1740787200000
+              },
+              "content-version": "stm-asf",
+              "delay-in-days": 0,
+              "URL": "https://doi.org/10.15223/policy-029"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2025,
+                    3,
+                    1
+                  ]
+                ],
+                "date-time": "2025-03-01T00:00:00Z",
+                "timestamp": 1740787200000
+              },
+              "content-version": "stm-asf",
+              "delay-in-days": 0,
+              "URL": "https://doi.org/10.15223/policy-004"
+            }
+          ],
+          "funder": [
+            {
+              "DOI": "10.13039/100000057",
+              "name": "NIH NIGMS",
+              "doi-asserted-by": "publisher",
+              "award": [
+                "R35GM142731"
+              ],
+              "award-info": [
+                {
+                  "award-number": [
+                    "R35GM142731"
+                  ]
+                }
+              ],
+              "id": [
+                {
+                  "id": "10.13039/100000057",
+                  "id-type": "DOI",
+                  "asserted-by": "publisher"
+                }
+              ]
+            },
+            {
+              "DOI": "10.13039/100001447",
+              "name": "Rita Allen Foundation",
+              "doi-asserted-by": "publisher",
+              "award": [
+                "90094894"
+              ],
+              "award-info": [
+                {
+                  "award-number": [
+                    "90094894"
+                  ]
+                }
+              ],
+              "id": [
+                {
+                  "id": "10.13039/100001447",
+                  "id-type": "DOI",
+                  "asserted-by": "publisher"
+                }
+              ]
+            },
+            {
+              "DOI": "10.13039/100000001",
+              "name": "National Science Foundation",
+              "doi-asserted-by": "publisher",
+              "id": [
+                {
+                  "id": "10.13039/100000001",
+                  "id-type": "DOI",
+                  "asserted-by": "publisher"
+                }
+              ]
+            },
+            {
+              "DOI": "10.13039/100012304",
+              "name": "School of Medicine, Johns Hopkins University",
+              "doi-asserted-by": "publisher",
+              "id": [
+                {
+                  "id": "10.13039/100012304",
+                  "id-type": "DOI",
+                  "asserted-by": "publisher"
+                }
+              ]
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "cell.com",
+              "elsevier.com",
+              "sciencedirect.com"
+            ],
+            "crossmark-restriction": true
+          },
+          "short-container-title": [
+            "Cell Host &amp; Microbe"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2025,
+                3
+              ]
+            ]
+          },
+          "DOI": "10.1016/j.chom.2025.02.001",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2025,
+                2,
+                25
+              ]
+            ],
+            "date-time": "2025-02-25T10:55:56Z",
+            "timestamp": 1740480956000
+          },
+          "page": "330-340.e6",
+          "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 13,
+          "title": [
+            "Bacteria exploit viral dormancy to establish CRISPR-Cas immunity"
+          ],
+          "prefix": "10.1016",
+          "volume": "33",
+          "author": [
+            {
+              "given": "Nicholas C.",
+              "family": "Keith",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Rhett A.",
+              "family": "Snyder",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Chad W.",
+              "family": "Euler",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0001-7733-1252",
+              "authenticated-orcid": false,
+              "given": "Joshua W.",
+              "family": "Modell",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "78",
+          "reference": [
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib1",
+              "doi-asserted-by": "crossref",
+              "first-page": "174",
+              "DOI": "10.1007/s00239-004-0046-3",
+              "article-title": "Intervening sequences of regularly spaced prokaryotic repeats derive from foreign genetic elements",
+              "volume": "60",
+              "author": "Mojica",
+              "year": "2005",
+              "journal-title": "J.\u00a0Mol. Evol."
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib2",
+              "doi-asserted-by": "crossref",
+              "first-page": "1709",
+              "DOI": "10.1126/science.1138140",
+              "article-title": "CRISPR provides acquired resistance against viruses in prokaryotes",
+              "volume": "315",
+              "author": "Barrangou",
+              "year": "2007",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib3",
+              "doi-asserted-by": "crossref",
+              "first-page": "960",
+              "DOI": "10.1126/science.1159689",
+              "article-title": "Small CRISPR RNAs guide antiviral defense in prokaryotes",
+              "volume": "321",
+              "author": "Brouns",
+              "year": "2008",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib4",
+              "doi-asserted-by": "crossref",
+              "first-page": "3489",
+              "DOI": "10.1101/gad.1742908",
+              "article-title": "Cas6 is an\u00a0endoribonuclease that generates guide RNAs for invader defense in prokaryotes",
+              "volume": "22",
+              "author": "Carte",
+              "year": "2008",
+              "journal-title": "Genes Dev."
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib5",
+              "doi-asserted-by": "crossref",
+              "first-page": "602",
+              "DOI": "10.1038/nature09886",
+              "article-title": "CRISPR RNA maturation by trans-encoded small RNA and host factor RNase III",
+              "volume": "471",
+              "author": "Deltcheva",
+              "year": "2011",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib6",
+              "doi-asserted-by": "crossref",
+              "first-page": "1",
+              "DOI": "10.1139/cjm-2020-0212",
+              "article-title": "A short overview of the CRISPR-Cas adaptation stage",
+              "volume": "67",
+              "author": "Mosterd",
+              "year": "2021",
+              "journal-title": "Can. J. Microbiol."
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib7",
+              "doi-asserted-by": "crossref",
+              "first-page": "4399",
+              "DOI": "10.1038/ncomms5399",
+              "article-title": "Adaptation in bacterial CRISPR-Cas immunity can be driven by defective phages",
+              "volume": "5",
+              "author": "Hynes",
+              "year": "2014",
+              "journal-title": "Nat. Commun."
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib8",
+              "doi-asserted-by": "crossref",
+              "first-page": "907",
+              "DOI": "10.1016/j.molcel.2022.01.012",
+              "article-title": "Cleavage of viral DNA by restriction endonucleases stimulates the type II CRISPR-Cas immune response",
+              "volume": "82",
+              "author": "Maguin",
+              "year": "2022",
+              "journal-title": "Mol. Cell"
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib9",
+              "doi-asserted-by": "crossref",
+              "first-page": "101",
+              "DOI": "10.1038/nature21719",
+              "article-title": "CRISPR-Cas systems exploit viral DNA injection to establish and maintain adaptive immunity",
+              "volume": "544",
+              "author": "Modell",
+              "year": "2017",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib10",
+              "doi-asserted-by": "crossref",
+              "first-page": "515",
+              "DOI": "10.1016/j.chom.2019.09.002",
+              "article-title": "Cas9 Cleavage of Viral Genomes Primes the Acquisition of New Immunological Memories",
+              "volume": "26",
+              "author": "Nussenzweig",
+              "year": "2019",
+              "journal-title": "Cell Host Microbe"
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib11",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1128/mBio.01397-17",
+              "article-title": "The CRISPR Spacer Space Is Dominated by Sequences from Species-Specific Mobilomes",
+              "volume": "8",
+              "author": "Shmakov",
+              "year": "2017",
+              "journal-title": "mBio"
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib12",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1093/ismejo/wrae005",
+              "article-title": "Escherichia coli CRISPR arrays from early life fecal samples preferentially target prophages",
+              "volume": "18",
+              "author": "Dion",
+              "year": "2024",
+              "journal-title": "ISME J."
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib13",
+              "doi-asserted-by": "crossref",
+              "first-page": "409",
+              "DOI": "10.1146/annurev.genet.39.073003.113656",
+              "article-title": "Switches in bacteriophage lambda development",
+              "volume": "39",
+              "author": "Oppenheim",
+              "year": "2005",
+              "journal-title": "Annu. Rev. Genet."
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib14",
+              "doi-asserted-by": "crossref",
+              "first-page": "410",
+              "DOI": "10.1128/JB.02230-14",
+              "article-title": "Impact of spontaneous prophage induction on the fitness of bacterial populations and host-microbe interactions",
+              "volume": "197",
+              "author": "Nanda",
+              "year": "2015",
+              "journal-title": "J.\u00a0Bacteriol."
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib15",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1128/mBio.00262-15",
+              "article-title": "CRISPR immunity drives rapid phage genome evolution in Streptococcus thermophilus",
+              "volume": "6",
+              "author": "Paez-Espino",
+              "year": "2015",
+              "journal-title": "mBio"
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib16",
+              "first-page": "744",
+              "article-title": "Campylobacter jejuni acquire new host-derived CRISPR spacers when in association with bacteriophages harboring a CRISPR-like Cas4 protein",
+              "volume": "5",
+              "author": "Hooton",
+              "year": "2014",
+              "journal-title": "Front. Microbiol."
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib17",
+              "doi-asserted-by": "crossref",
+              "first-page": "1043",
+              "DOI": "10.1016/j.cub.2015.01.065",
+              "article-title": "Parasite Exposure Drives Selective Evolution of Constitutive versus Inducible Defense",
+              "volume": "25",
+              "author": "Westra",
+              "year": "2015",
+              "journal-title": "Curr. Biol."
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib18",
+              "doi-asserted-by": "crossref",
+              "first-page": "199",
+              "DOI": "10.1038/nature14245",
+              "article-title": "Cas9 specifies functional viral targets during CRISPR-Cas adaptation",
+              "volume": "519",
+              "author": "Heler",
+              "year": "2015",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib19",
+              "doi-asserted-by": "crossref",
+              "first-page": "9787",
+              "DOI": "10.1093/nar/gkaa685",
+              "article-title": "Spacer acquisition by Type III CRISPR-Cas system during bacteriophage infection of Thermus thermophilus",
+              "volume": "48",
+              "author": "Artamonova",
+              "year": "2020",
+              "journal-title": "Nucleic Acids Res."
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib20",
+              "doi-asserted-by": "crossref",
+              "first-page": "27777",
+              "DOI": "10.1073/pnas.1915966117",
+              "article-title": "It is unclear how important CRISPR-Cas systems are for protecting natural populations of bacteria against infections by mobile genetic elements",
+              "volume": "117",
+              "author": "Westra",
+              "year": "2020",
+              "journal-title": "Proc. Natl. Acad. Sci. USA"
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib21",
+              "doi-asserted-by": "crossref",
+              "first-page": "233",
+              "DOI": "10.1038/nbt.2508",
+              "article-title": "RNA-guided editing of bacterial genomes using CRISPR-Cas systems",
+              "volume": "31",
+              "author": "Jiang",
+              "year": "2013",
+              "journal-title": "Nat. Biotechnol."
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib22",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1371/journal.pgen.1003454",
+              "article-title": "Cytotoxic chromosomal targeting by CRISPR/Cas systems can reshape bacterial genomes and expel or remodel pathogenicity islands",
+              "volume": "9",
+              "author": "Vercoe",
+              "year": "2013",
+              "journal-title": "PLoS Genet."
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib23",
+              "doi-asserted-by": "crossref",
+              "first-page": "1146",
+              "DOI": "10.1038/nbt.3043",
+              "article-title": "Exploiting CRISPR-Cas nucleases to produce sequence-specific antimicrobials",
+              "volume": "32",
+              "author": "Bikard",
+              "year": "2014",
+              "journal-title": "Nat. Biotechnol."
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib24",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1093/femsle/fnz105",
+              "article-title": "Outcomes and characterization of chromosomal self-targeting by native CRISPR-Cas systems in Streptococcus thermophilus",
+              "volume": "366",
+              "author": "Ca\u00f1ez",
+              "year": "2019",
+              "journal-title": "FEMS Microbiol. Lett."
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib25",
+              "doi-asserted-by": "crossref",
+              "first-page": "4243",
+              "DOI": "10.1093/nar/gkw223",
+              "article-title": "Consequences of Cas9 cleavage in the chromosome of Escherichia coli",
+              "volume": "44",
+              "author": "Cui",
+              "year": "2016",
+              "journal-title": "Nucleic Acids Res."
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib26",
+              "doi-asserted-by": "crossref",
+              "first-page": "1401",
+              "DOI": "10.1128/JB.01415-07",
+              "article-title": "Diversity, activity, and evolution of CRISPR loci in Streptococcus thermophilus",
+              "volume": "190",
+              "author": "Horvath",
+              "year": "2008",
+              "journal-title": "J.\u00a0Bacteriol."
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib27",
+              "doi-asserted-by": "crossref",
+              "first-page": "62",
+              "DOI": "10.1016/j.ijfoodmicro.2008.05.030",
+              "article-title": "Comparative analysis of CRISPR loci in lactic acid bacteria genomes",
+              "volume": "131",
+              "author": "Horvath",
+              "year": "2009",
+              "journal-title": "Int. J. Food Microbiol."
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib28",
+              "doi-asserted-by": "crossref",
+              "first-page": "335",
+              "DOI": "10.1016/j.tig.2010.05.008",
+              "article-title": "Self-targeting by CRISPR: gene regulation or autoimmunity?",
+              "volume": "26",
+              "author": "Stern",
+              "year": "2010",
+              "journal-title": "Trends Genet."
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib29",
+              "doi-asserted-by": "crossref",
+              "first-page": "3078",
+              "DOI": "10.3389/fmicb.2019.03078",
+              "article-title": "CRISPR-Cas Systems and the Paradox of Self-Targeting Spacers",
+              "volume": "10",
+              "author": "Wimmer",
+              "year": "2019",
+              "journal-title": "Front. Microbiol."
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib30",
+              "doi-asserted-by": "crossref",
+              "first-page": "240",
+              "DOI": "10.1126/science.aau5174",
+              "article-title": "Discovery of widespread type I and type V CRISPR-Cas inhibitors",
+              "volume": "362",
+              "author": "Marino",
+              "year": "2018",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib31",
+              "doi-asserted-by": "crossref",
+              "first-page": "236",
+              "DOI": "10.1126/science.aau5138",
+              "article-title": "Systematic discovery of natural CRISPR-Cas12a inhibitors",
+              "volume": "362",
+              "author": "Watters",
+              "year": "2018",
+              "journal-title": "Science"
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib32",
+              "doi-asserted-by": "crossref",
+              "first-page": "12074",
+              "DOI": "10.1093/nar/gkaa1071",
+              "article-title": "Prophages are associated with extensive CRISPR-Cas auto-immunity",
+              "volume": "48",
+              "author": "Nobrega",
+              "year": "2020",
+              "journal-title": "Nucleic Acids Res."
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib33",
+              "doi-asserted-by": "crossref",
+              "first-page": "149",
+              "DOI": "10.1038/s41586-020-1936-2",
+              "article-title": "Targeting of temperate phages drives loss of type I CRISPR-Cas systems",
+              "volume": "578",
+              "author": "Rollie",
+              "year": "2020",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib34",
+              "doi-asserted-by": "crossref",
+              "first-page": "771",
+              "DOI": "10.1038/s41396-019-0566-x",
+              "article-title": "The enemy from within: a prophage of Roseburia intestinalis systematically turns lytic in the mouse gut, driving bacterial adaptation by CRISPR spacer acquisition",
+              "volume": "14",
+              "author": "Cornuault",
+              "year": "2020",
+              "journal-title": "ISME J."
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib35",
+              "doi-asserted-by": "crossref",
+              "first-page": "2410",
+              "DOI": "10.1038/s41564-024-01748-0",
+              "article-title": "A\u00a0dynamic subpopulation of CRISPR-Cas overexpressers allows Streptococcus pyogenes to rapidly respond to phage",
+              "volume": "9",
+              "author": "Stoltzfus",
+              "year": "2024",
+              "journal-title": "Nat. Microbiol."
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib36",
+              "doi-asserted-by": "crossref",
+              "first-page": "612",
+              "DOI": "10.3390/v13040612",
+              "article-title": "Survival Strategies of Streptococcus pyogenes in Response to Phage Infection",
+              "volume": "13",
+              "author": "Beerens",
+              "year": "2021",
+              "journal-title": "Viruses"
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib37",
+              "first-page": "3546",
+              "article-title": "A CRISPR-Cas9-integrase complex generates precise DNA fragments for genome integration",
+              "volume": "49",
+              "author": "Jakhanwal",
+              "year": "2021",
+              "journal-title": "Nucleic Acids Res."
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib38",
+              "doi-asserted-by": "crossref",
+              "first-page": "1516",
+              "DOI": "10.1038/s41564-021-00996-8",
+              "article-title": "Prophage integration into CRISPR loci enables evasion of antiviral immunity in Streptococcus pyogenes",
+              "volume": "6",
+              "author": "Varble",
+              "year": "2021",
+              "journal-title": "Nat. Microbiol."
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib39",
+              "doi-asserted-by": "crossref",
+              "first-page": "616",
+              "DOI": "10.1016/j.molcel.2016.08.038",
+              "article-title": "CRISPR-Cas Systems Optimize Their Immune Response by Specifying the Site of Spacer Integration",
+              "volume": "64",
+              "author": "McGinn",
+              "year": "2016",
+              "journal-title": "Mol. Cell"
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib40",
+              "doi-asserted-by": "crossref",
+              "first-page": "343",
+              "DOI": "10.1016/j.chom.2017.07.016",
+              "article-title": "Broad Targeting Specificity during Bacterial Type III CRISPR-Cas Immunity Constrains Viral Escape",
+              "volume": "22",
+              "author": "Pyenson",
+              "year": "2017",
+              "journal-title": "Cell Host Microbe"
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib41",
+              "doi-asserted-by": "crossref",
+              "first-page": "675",
+              "DOI": "10.1016/j.cell.2020.12.017",
+              "article-title": "A natural single-guide RNA repurposes Cas9 to autoregulate CRISPR-Cas expression",
+              "volume": "184",
+              "author": "Workman",
+              "year": "2021",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib42",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1016/j.celrep.2024.113849",
+              "article-title": "Anti-CRISPR proteins trigger a burst of CRISPR-Cas9 expression that enhances phage defense",
+              "volume": "43",
+              "author": "Workman",
+              "year": "2024",
+              "journal-title": "Cell Rep."
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib43",
+              "doi-asserted-by": "crossref",
+              "first-page": "572",
+              "DOI": "10.1099/mic.0.000791",
+              "article-title": "Use of the counter selectable marker PheS\u2217 for genome engineering in Staphylococcus aureus",
+              "volume": "165",
+              "author": "Schuster",
+              "year": "2019",
+              "journal-title": "Microbiology (Reading)"
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib44",
+              "doi-asserted-by": "crossref",
+              "first-page": "245",
+              "DOI": "10.1006/viro.2002.1570",
+              "article-title": "Genome analysis of an inducible prophage and prophage remnants integrated in the Streptococcus pyogenes strain SF370",
+              "volume": "302",
+              "author": "Canchaya",
+              "year": "2002",
+              "journal-title": "Virology"
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib45",
+              "doi-asserted-by": "crossref",
+              "first-page": "1035",
+              "DOI": "10.1111/j.1365-2958.2006.05441.x",
+              "article-title": "Prophages of\u00a0Staphylococcus aureus Newman and their contribution to virulence",
+              "volume": "62",
+              "author": "Bae",
+              "year": "2006",
+              "journal-title": "Mol. Microbiol."
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib46",
+              "doi-asserted-by": "crossref",
+              "first-page": "505",
+              "DOI": "10.1038/nature14302",
+              "article-title": "CRISPR adaptation biases explain preference for acquisition of foreign DNA",
+              "volume": "520",
+              "author": "Levy",
+              "year": "2015",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib47",
+              "doi-asserted-by": "crossref",
+              "first-page": "269",
+              "DOI": "10.1128/br.17.4.269-337.1953",
+              "article-title": "Lysogeny",
+              "volume": "17",
+              "author": "Lwoff",
+              "year": "1953",
+              "journal-title": "Bacteriol. Rev."
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib48",
+              "doi-asserted-by": "crossref",
+              "first-page": "636",
+              "DOI": "10.1111/mmi.13147",
+              "article-title": "Live cell imaging of SOS and prophage dynamics in isogenic bacterial populations",
+              "volume": "98",
+              "author": "Helfrich",
+              "year": "2015",
+              "journal-title": "Mol. Microbiol."
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib49",
+              "doi-asserted-by": "crossref",
+              "first-page": "673",
+              "DOI": "10.1099/00221287-5-4-673",
+              "article-title": "The role of certain electrolytes in the adsorption of staphylococcal bacteriophages",
+              "volume": "5",
+              "author": "Rountree",
+              "year": "1951",
+              "journal-title": "J.\u00a0Gen. Microbiol."
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib50",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1371/journal.pone.0146408",
+              "article-title": "Targeted Curing of All Lysogenic Bacteriophage from Streptococcus pyogenes Using a Novel Counter-selection Technique",
+              "volume": "11",
+              "author": "Euler",
+              "year": "2016",
+              "journal-title": "PLoS One"
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib51",
+              "doi-asserted-by": "crossref",
+              "first-page": "3987",
+              "DOI": "10.1073/pnas.84.12.3987",
+              "article-title": "Lysine-156 and serine-119 are required for LexA repressor cleavage: a possible mechanism",
+              "volume": "84",
+              "author": "Slilaty",
+              "year": "1987",
+              "journal-title": "Proc. Natl. Acad. Sci. USA"
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib60",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Dimitriu T, Kurilovich E, \u0141api\u0144ska U, Severinov K, Pagliara S, Szczelkun MD, Westra ER. Bacteriostatic antibiotics promote CRISPR-Cas adaptive immunity by enabling increased spacer acquisition. Cell Host Microbe. 2022; Jan 12;30(1):31-40.e5.",
+              "DOI": "10.1016/j.chom.2021.11.014"
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib61",
+              "doi-asserted-by": "crossref",
+              "unstructured": "H\u00f8yland-Kroghsbo NM, Mu\u00f1oz KA, Bassler BL. Temperature, by controlling growth rate, regulates CRISPR-Cas activity in Pseudomonas aeruginosa. MBio. 2018; Nov 13;9(6):e02184-18.",
+              "DOI": "10.1128/mBio.02184-18"
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib52",
+              "doi-asserted-by": "crossref",
+              "first-page": "1932",
+              "DOI": "10.3389/fmicb.2019.01932",
+              "article-title": "Highly Efficient Genome Engineering in Bacillus anthracis and Bacillus cereus Using the CRISPR/Cas9 System",
+              "volume": "10",
+              "author": "Wang",
+              "year": "2019",
+              "journal-title": "Front. Microbiol."
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib53",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1128/aem.00095-24",
+              "article-title": "Combining CRISPR/Cas9 and natural excision for the precise and complete removal of mobile genetic elements in bacteria",
+              "volume": "90",
+              "author": "Wang",
+              "year": "2024",
+              "journal-title": "Appl. Environ. Microbiol."
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib54",
+              "doi-asserted-by": "crossref",
+              "first-page": "8076",
+              "DOI": "10.1073/pnas.1508525112",
+              "article-title": "CRISPR-based screening of genomic island excision events in bacteria",
+              "volume": "112",
+              "author": "Selle",
+              "year": "2015",
+              "journal-title": "Proc. Natl. Acad. Sci. USA"
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib55",
+              "doi-asserted-by": "crossref",
+              "first-page": "371",
+              "DOI": "10.1111/j.1365-2672.2011.05056.x",
+              "article-title": "Isolation and phenotypic characterization of Lactobacillus casei and Lactobacillus paracasei bacteriophage-resistant mutants",
+              "volume": "111",
+              "author": "Capra",
+              "year": "2011",
+              "journal-title": "J.\u00a0Appl. Microbiol."
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib56",
+              "doi-asserted-by": "crossref",
+              "first-page": "503",
+              "DOI": "10.1016/j.ijfoodmicro.2010.11.009",
+              "article-title": "Widely distributed lysogeny in probiotic lactobacilli represents a potentially high risk for the fermentative dairy industry",
+              "volume": "144",
+              "author": "Mercanti",
+              "year": "2011",
+              "journal-title": "Int. J. Food Microbiol."
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib57",
+              "doi-asserted-by": "crossref",
+              "first-page": "1420",
+              "DOI": "10.1038/s41396-020-00860-3",
+              "article-title": "CRISPR-Cas systems restrict horizontal gene transfer in Pseudomonas aeruginosa",
+              "volume": "15",
+              "author": "Wheatley",
+              "year": "2021",
+              "journal-title": "ISME J."
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib58",
+              "doi-asserted-by": "crossref",
+              "first-page": "40206",
+              "DOI": "10.1038/srep40206",
+              "article-title": "The driving force of prophages and CRISPR-Cas system in the evolution of Cronobacter sakazakii",
+              "volume": "7",
+              "author": "Zeng",
+              "year": "2017",
+              "journal-title": "Sci. Rep."
+            },
+            {
+              "key": "10.1016/j.chom.2025.02.001_bib59",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Li H, Durbin R. Fast and accurate short read alignment with Burrows-Wheeler transform. Bioinformatics. 2009 Jul 15;25(14):1754-60. doi: 10.1093/bioinformatics/btp324. Epub 2009 May 18. PMID: 19451168; PMCID: PMC2705234.",
+              "DOI": "10.1093/bioinformatics/btp324"
+            }
+          ],
+          "container-title": [
+            "Cell Host &amp; Microbe"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:S1931312825000290?httpAccept=text/xml",
+              "content-type": "text/xml",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://api.elsevier.com/content/article/PII:S1931312825000290?httpAccept=text/plain",
+              "content-type": "text/plain",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2026,
+                3,
+                12
+              ]
+            ],
+            "date-time": "2026-03-12T03:43:08Z",
+            "timestamp": 1773286988000
+          },
+          "score": 54.98292,
+          "resource": {
+            "primary": {
+              "URL": "https://linkinghub.elsevier.com/retrieve/pii/S1931312825000290"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2025,
+                3
+              ]
+            ]
+          },
+          "references-count": 61,
+          "journal-issue": {
+            "issue": "3",
+            "published-print": {
+              "date-parts": [
+                [
+                  2025,
+                  3
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "S1931312825000290"
+          ],
+          "URL": "https://doi.org/10.1016/j.chom.2025.02.001",
+          "ISSN": [
+            "1931-3128"
+          ],
+          "issn-type": [
+            {
+              "value": "1931-3128",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2025,
+                3
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "Elsevier",
+              "name": "publisher",
+              "label": "This article is maintained by"
+            },
+            {
+              "value": "Bacteria exploit viral dormancy to establish CRISPR-Cas immunity",
+              "name": "articletitle",
+              "label": "Article Title"
+            },
+            {
+              "value": "Cell Host & Microbe",
+              "name": "journaltitle",
+              "label": "Journal Title"
+            },
+            {
+              "value": "https://doi.org/10.1016/j.chom.2025.02.001",
+              "name": "articlelink",
+              "label": "CrossRef DOI link to publisher maintained version"
+            },
+            {
+              "value": "article",
+              "name": "content_type",
+              "label": "Content Type"
+            },
+            {
+              "value": "\u00a9 2025 Elsevier Inc.",
+              "name": "copyright",
+              "label": "Copyright"
+            }
+          ]
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                11,
+                4
+              ]
+            ],
+            "date-time": "2026-11-04T10:49:55Z",
+            "timestamp": 1793789395384,
+            "version": "4.6.1"
+          },
+          "reference-count": 101,
+          "publisher": "Springer Science and Business Media LLC",
+          "issue": "5",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2014,
+                    4,
+                    7
+                  ]
+                ],
+                "date-time": "2014-04-07T00:00:00Z",
+                "timestamp": 1396828800000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "http://www.springer.com/tdm"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Nat Rev Microbiol"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2014,
+                5
+              ]
+            ]
+          },
+          "DOI": "10.1038/nrmicro3241",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2014,
+                4,
+                7
+              ]
+            ],
+            "date-time": "2014-04-07T06:51:35Z",
+            "timestamp": 1396853495000
+          },
+          "page": "317-326",
+          "source": "Crossref",
+          "is-referenced-by-count": 311,
+          "title": [
+            "CRISPR\u2013Cas systems: beyond adaptive immunity"
+          ],
+          "prefix": "10.1038",
+          "volume": "12",
+          "author": [
+            {
+              "given": "Edze R.",
+              "family": "Westra",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Angus",
+              "family": "Buckling",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Peter C.",
+              "family": "Fineran",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "published-online": {
+            "date-parts": [
+              [
+                2014,
+                4,
+                7
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "BFnrmicro3241_CR1",
+              "doi-asserted-by": "crossref",
+              "first-page": "311",
+              "DOI": "10.1146/annurev-genet-110711-155447",
+              "volume": "46",
+              "author": "ER Westra",
+              "year": "2012",
+              "unstructured": "Westra, E. R. et al. The CRISPRs, they are a-changin': how prokaryotes generate adaptive immunity. Annu. Rev. Genet. 46, 311\u2013339 (2012).",
+              "journal-title": "Annu. Rev. Genet."
+            },
+            {
+              "key": "BFnrmicro3241_CR2",
+              "doi-asserted-by": "crossref",
+              "first-page": "317",
+              "DOI": "10.1038/nrmicro2315",
+              "volume": "8",
+              "author": "SJ Labrie",
+              "year": "2010",
+              "unstructured": "Labrie, S. J., Samson, J. E. & Moineau, S. Bacteriophage resistance mechanisms. Nature Rev. Microbiol. 8, 317\u2013327 (2010).",
+              "journal-title": "Nature Rev. Microbiol."
+            },
+            {
+              "key": "BFnrmicro3241_CR3",
+              "doi-asserted-by": "crossref",
+              "first-page": "331",
+              "DOI": "10.1038/nature10886",
+              "volume": "482",
+              "author": "B Wiedenheft",
+              "year": "2012",
+              "unstructured": "Wiedenheft, B., Sternberg, S. H. & Doudna, J. A. RNA-guided genetic silencing systems in bacteria and archaea. Nature 482, 331\u2013338 (2012).",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnrmicro3241_CR4",
+              "doi-asserted-by": "crossref",
+              "first-page": "467",
+              "DOI": "10.1038/nrmicro2577",
+              "volume": "9",
+              "author": "KS Makarova",
+              "year": "2011",
+              "unstructured": "Makarova, K. S. et al. Evolution and classification of the CRISPR\u2013Cas systems. Nature Rev. Microbiol. 9, 467\u2013477 (2011).",
+              "journal-title": "Nature Rev. Microbiol."
+            },
+            {
+              "key": "BFnrmicro3241_CR5",
+              "doi-asserted-by": "crossref",
+              "first-page": "1709",
+              "DOI": "10.1126/science.1138140",
+              "volume": "315",
+              "author": "R Barrangou",
+              "year": "2007",
+              "unstructured": "Barrangou, R. et al. CRISPR provides acquired resistance against viruses in prokaryotes. Science 315, 1709\u20131712 (2007).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BFnrmicro3241_CR6",
+              "doi-asserted-by": "crossref",
+              "first-page": "1047",
+              "DOI": "10.1126/science.1157358",
+              "volume": "320",
+              "author": "AF Andersson",
+              "year": "2008",
+              "unstructured": "Andersson, A. F. & Banfield, J. F. Virus population dynamics and acquired virus resistance in natural microbial communities. Science 320, 1047\u20131050 (2008).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BFnrmicro3241_CR7",
+              "doi-asserted-by": "crossref",
+              "first-page": "200",
+              "DOI": "10.1111/j.1462-2920.2007.01444.x",
+              "volume": "10",
+              "author": "GW Tyson",
+              "year": "2008",
+              "unstructured": "Tyson, G. W. & Banfield, J. F. Rapidly evolving CRISPRs implicated in acquired resistance of microorganisms to viruses. Environ. Microbiol. 10, 200\u2013207 (2008).",
+              "journal-title": "Environ. Microbiol."
+            },
+            {
+              "key": "BFnrmicro3241_CR8",
+              "doi-asserted-by": "crossref",
+              "first-page": "370871",
+              "DOI": "10.1155/2013/370871",
+              "volume": "2013",
+              "author": "JB Emerson",
+              "year": "2013",
+              "unstructured": "Emerson, J. B. et al. Virus\u2013host and CRISPR dynamics in archaea-dominated hypersaline Lake Tyrrell, Victoria, Australia. Archaea 2013, 370871 (2013).",
+              "journal-title": "Archaea"
+            },
+            {
+              "key": "BFnrmicro3241_CR9",
+              "doi-asserted-by": "crossref",
+              "first-page": "e1002511",
+              "DOI": "10.1371/journal.pgen.1002511",
+              "volume": "8",
+              "author": "NF Delaney",
+              "year": "2012",
+              "unstructured": "Delaney, N. F. et al. Ultrafast evolution and loss of CRISPRs following a host shift in a novel wildlife pathogen, Mycoplasma gallisepticum. PLoS Genet. 8, e1002511 (2012).",
+              "journal-title": "PLoS Genet."
+            },
+            {
+              "key": "BFnrmicro3241_CR10",
+              "doi-asserted-by": "crossref",
+              "first-page": "1351",
+              "DOI": "10.1099/mic.0.036046-0",
+              "volume": "156",
+              "author": "C Diez-Villasenor",
+              "year": "2010",
+              "unstructured": "Diez-Villasenor, C., Almendros, C., Garcia-Martinez, J. & Mojica, F. J. Diversity of CRISPR loci in Escherichia coli. Microbiology 156, 1351\u20131361 (2010).",
+              "journal-title": "Microbiology"
+            },
+            {
+              "key": "BFnrmicro3241_CR11",
+              "doi-asserted-by": "crossref",
+              "first-page": "1367",
+              "DOI": "10.1111/j.1365-2958.2010.07265.x",
+              "volume": "77",
+              "author": "K Pougach",
+              "year": "2010",
+              "unstructured": "Pougach, K. et al. Transcription, processing and function of CRISPR cassettes in Escherichia coli. Mol. Microbiol. 77, 1367\u20131379 (2010).",
+              "journal-title": "Mol. Microbiol."
+            },
+            {
+              "key": "BFnrmicro3241_CR12",
+              "doi-asserted-by": "crossref",
+              "first-page": "1380",
+              "DOI": "10.1111/j.1365-2958.2010.07315.x",
+              "volume": "77",
+              "author": "ER Westra",
+              "year": "2010",
+              "unstructured": "Westra, E. R. et al. H-NS-mediated repression of CRISPR-based immunity in Escherichia coli K12 can be relieved by the transcription activator LeuO. Mol. Microbiol. 77, 1380\u20131393 (2010).",
+              "journal-title": "Mol. Microbiol."
+            },
+            {
+              "key": "BFnrmicro3241_CR13",
+              "doi-asserted-by": "crossref",
+              "first-page": "1495",
+              "DOI": "10.1111/j.1365-2958.2010.07073.x",
+              "volume": "75",
+              "author": "U Pul",
+              "year": "2010",
+              "unstructured": "Pul, U. et al. Identification and characterization of E. coli CRISPR\u2013Cas promoters and their silencing by H-NS. Mol. Microbiol. 75, 1495\u20131512 (2010).",
+              "journal-title": "Mol. Microbiol."
+            },
+            {
+              "key": "BFnrmicro3241_CR14",
+              "doi-asserted-by": "crossref",
+              "first-page": "960",
+              "DOI": "10.1126/science.1159689",
+              "volume": "321",
+              "author": "SJ Brouns",
+              "year": "2008",
+              "unstructured": "Brouns, S. J. et al. Small CRISPR RNAs guide antiviral defense in prokaryotes. Science 321, 960\u2013964 (2008).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BFnrmicro3241_CR15",
+              "doi-asserted-by": "crossref",
+              "first-page": "2460",
+              "DOI": "10.1128/JB.01307-10",
+              "volume": "193",
+              "author": "M Touchon",
+              "year": "2011",
+              "unstructured": "Touchon, M. et al. CRISPR distribution within the Escherichia coli species is not suggestive of immunity-associated diversifying selection. J. Bacteriol. 193, 2460\u20132467 (2011).",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "BFnrmicro3241_CR16",
+              "doi-asserted-by": "crossref",
+              "first-page": "e11126",
+              "DOI": "10.1371/journal.pone.0011126",
+              "volume": "5",
+              "author": "M Touchon",
+              "year": "2010",
+              "unstructured": "Touchon, M. & Rocha, E. P. The small, slow and specialized CRISPR and anti-CRISPR of Escherichia and Salmonella. PLoS ONE 5, e11126 (2010).",
+              "journal-title": "PLoS ONE"
+            },
+            {
+              "key": "BFnrmicro3241_CR17",
+              "doi-asserted-by": "crossref",
+              "first-page": "2997",
+              "DOI": "10.1099/mic.0.060814-0",
+              "volume": "158",
+              "author": "M Touchon",
+              "year": "2012",
+              "unstructured": "Touchon, M. et al. Antibiotic resistance plasmids spread among natural isolates of Escherichia coli in spite of CRISPR elements. Microbiology 158, 2997\u20133004 (2012).",
+              "journal-title": "Microbiology"
+            },
+            {
+              "key": "BFnrmicro3241_CR18",
+              "doi-asserted-by": "crossref",
+              "first-page": "148",
+              "DOI": "10.1016/j.devcel.2011.01.012",
+              "volume": "20",
+              "author": "RF Ketting",
+              "year": "2011",
+              "unstructured": "Ketting, R. F. The many faces of RNAi. Dev. Cell 20, 148\u2013161 (2011).",
+              "journal-title": "Dev. Cell"
+            },
+            {
+              "key": "BFnrmicro3241_CR19",
+              "doi-asserted-by": "crossref",
+              "first-page": "a000380",
+              "DOI": "10.1101/cshperspect.a000380",
+              "volume": "2",
+              "author": "D Kaiser",
+              "year": "2010",
+              "unstructured": "Kaiser, D., Robinson, M. & Kroos, L. Myxobacteria, polarity, and multicellular morphogenesis. Cold Spring Harb. Perspect. Biol. 2, a000380 (2010).",
+              "journal-title": "Cold Spring Harb. Perspect. Biol."
+            },
+            {
+              "key": "BFnrmicro3241_CR20",
+              "doi-asserted-by": "crossref",
+              "first-page": "7450",
+              "DOI": "10.1128/jb.175.22.7450-7462.1993",
+              "volume": "175",
+              "author": "L Thony-Meyer",
+              "year": "1993",
+              "unstructured": "Thony-Meyer, L. & Kaiser, D. devRS, an autoregulated and essential genetic locus for fruiting body development in Myxococcus xanthus. J. Bacteriol. 175, 7450\u20137462 (1993).",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "BFnrmicro3241_CR21",
+              "doi-asserted-by": "crossref",
+              "first-page": "1540",
+              "DOI": "10.1128/JB.184.6.1540-1546.2002",
+              "volume": "184",
+              "author": "A Boysen",
+              "year": "2002",
+              "unstructured": "Boysen, A., Ellehauge, E., Julien, B. & Sogaard-Andersen, L. The DevT protein stimulates synthesis of FruA, a signal transduction protein required for fruiting body morphogenesis in Myxococcus xanthus. J. Bacteriol. 184, 1540\u20131546 (2002).",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "BFnrmicro3241_CR22",
+              "doi-asserted-by": "crossref",
+              "first-page": "3738",
+              "DOI": "10.1128/JB.00187-07",
+              "volume": "189",
+              "author": "P Viswanathan",
+              "year": "2007",
+              "unstructured": "Viswanathan, P., Murphy, K., Julien, B., Garza, A. G. & Kroos, L. Regulation of dev, an operon that includes genes essential for Myxococcus xanthus development and CRISPR-associated genes and repeats. J. Bacteriol. 189, 3738\u20133750 (2007).",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "BFnrmicro3241_CR23",
+              "doi-asserted-by": "crossref",
+              "first-page": "840",
+              "DOI": "10.1101/gad.1.8.840",
+              "volume": "1",
+              "author": "L Kroos",
+              "year": "1987",
+              "unstructured": "Kroos, L. & Kaiser, D. Expression of many developmentally regulated genes in Myxococcus depends on a sequence of cell interactions. Genes Dev. 1, 840\u2013854 (1987).",
+              "journal-title": "Genes Dev."
+            },
+            {
+              "key": "BFnrmicro3241_CR24",
+              "doi-asserted-by": "crossref",
+              "first-page": "252",
+              "DOI": "10.1016/0012-1606(86)90368-4",
+              "volume": "117",
+              "author": "L Kroos",
+              "year": "1986",
+              "unstructured": "Kroos, L., Kuspa, A. & Kaiser, D. A global analysis of developmentally regulated genes in Myxococcus xanthus. Dev. Biol. 117, 252\u2013266 (1986).",
+              "journal-title": "Dev. Biol."
+            },
+            {
+              "key": "BFnrmicro3241_CR25",
+              "doi-asserted-by": "crossref",
+              "first-page": "8194",
+              "DOI": "10.1073/pnas.90.17.8194",
+              "volume": "90",
+              "author": "F Russo-Marie",
+              "year": "1993",
+              "unstructured": "Russo-Marie, F., Roederer, M., Sager, B., Herzenberg, L. A. & Kaiser, D. Beta-galactosidase activity in single differentiating bacterial cells. Proc. Natl Acad. Sci. USA 90, 8194\u20138198 (1993).",
+              "journal-title": "Proc. Natl Acad. Sci. USA"
+            },
+            {
+              "key": "BFnrmicro3241_CR26",
+              "doi-asserted-by": "crossref",
+              "first-page": "9098",
+              "DOI": "10.1073/pnas.97.16.9098",
+              "volume": "97",
+              "author": "B Julien",
+              "year": "2000",
+              "unstructured": "Julien, B., Kaiser, A.D. & Garza, A. Spatial control of cell differentiation in Myxococcus xanthus. Proc. Natl Acad. Sci. USA 97, 9098\u20139103 (2000).",
+              "journal-title": "Proc. Natl Acad. Sci. USA"
+            },
+            {
+              "key": "BFnrmicro3241_CR27",
+              "doi-asserted-by": "crossref",
+              "first-page": "207",
+              "DOI": "10.1007/s10096-012-1733-4",
+              "volume": "32",
+              "author": "R Louwen",
+              "year": "2013",
+              "unstructured": "Louwen, R. et al. A novel link between Campylobacter jejuni bacteriophage defence, virulence and Guillain-Barre syndrome. Eur. J. Clin. Microbiol. Infect. Dis. 32, 207\u2013226 (2013).",
+              "journal-title": "Eur. J. Clin. Microbiol. Infect. Dis."
+            },
+            {
+              "key": "BFnrmicro3241_CR28",
+              "doi-asserted-by": "crossref",
+              "first-page": "254",
+              "DOI": "10.1038/nature12048",
+              "volume": "497",
+              "author": "TR Sampson",
+              "year": "2013",
+              "unstructured": "Sampson, T. R., Saroj, S. D., Llewellyn, A. C., Tzeng, Y. L. & Weiss, D. S. A. CRISPR/Cas system mediates bacterial innate immune evasion and virulence. Nature 497, 254\u2013257 (2013).",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnrmicro3241_CR29",
+              "doi-asserted-by": "crossref",
+              "first-page": "602",
+              "DOI": "10.1038/nature09886",
+              "volume": "471",
+              "author": "E Deltcheva",
+              "year": "2011",
+              "unstructured": "Deltcheva, E. et al. CRISPR RNA maturation by trans-encoded small RNA and host factor RNase III. Nature 471, 602\u2013607 (2011).",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnrmicro3241_CR30",
+              "doi-asserted-by": "crossref",
+              "first-page": "726",
+              "DOI": "10.4161/rna.24321",
+              "volume": "10",
+              "author": "K Chylinski",
+              "year": "2013",
+              "unstructured": "Chylinski, K., Le Rhun, A. & Charpentier, E. The tracrRNA and Cas9 families of type II CRISPR\u2013Cas immunity systems. RNA Biol. 10, 726\u2013737 (2013).",
+              "journal-title": "RNA Biol."
+            },
+            {
+              "key": "BFnrmicro3241_CR31",
+              "doi-asserted-by": "crossref",
+              "first-page": "e00074",
+              "DOI": "10.1128/mBio.00074-13",
+              "volume": "4",
+              "author": "FF Gunderson",
+              "year": "2013",
+              "unstructured": "Gunderson, F. F. & Cianciotto, N. P. The CRISPR-associated gene cas2 of Legionella pneumophila is required for intracellular infection of amoebae. mBio 4, e00074\u201313 (2013).",
+              "journal-title": "mBio"
+            },
+            {
+              "key": "BFnrmicro3241_CR32",
+              "doi-asserted-by": "crossref",
+              "first-page": "20361",
+              "DOI": "10.1074/jbc.M803225200",
+              "volume": "283",
+              "author": "N Beloglazova",
+              "year": "2008",
+              "unstructured": "Beloglazova, N. et al. A novel family of sequence-specific endoribonucleases associated with the clustered regularly interspaced short palindromic repeats. J. Biol. Chem. 283, 20361\u201320371 (2008).",
+              "journal-title": "J. Biol. Chem."
+            },
+            {
+              "key": "BFnrmicro3241_CR33",
+              "doi-asserted-by": "crossref",
+              "first-page": "950",
+              "DOI": "10.1038/nature08080",
+              "volume": "459",
+              "author": "A Toledo-Arana",
+              "year": "2009",
+              "unstructured": "Toledo-Arana, A. et al. The Listeria transcriptional landscape from saprophytism to virulence. Nature 459, 950\u2013956 (2009).",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnrmicro3241_CR34",
+              "doi-asserted-by": "crossref",
+              "first-page": "962",
+              "DOI": "10.1093/nar/gkl1096",
+              "volume": "35",
+              "author": "P Mandin",
+              "year": "2007",
+              "unstructured": "Mandin, P., Repoila, F., Vergassola, M., Geissmann, T. & Cossart, P. Identification of new noncoding RNAs in Listeria monocytogenes and prediction of mRNA targets. Nucleic Acids Res. 35, 962\u2013974 (2007).",
+              "journal-title": "Nucleic Acids Res."
+            },
+            {
+              "key": "BFnrmicro3241_CR35",
+              "doi-asserted-by": "crossref",
+              "first-page": "e1004065",
+              "DOI": "10.1371/journal.pgen.1004065",
+              "volume": "10",
+              "author": "N Sesto",
+              "year": "2014",
+              "unstructured": "Sesto, N. et al. A PNPase dependent CRISPR system in Listeria. PLoS Genet. 10, e1004065 (2014).",
+              "journal-title": "PLoS Genet."
+            },
+            {
+              "key": "BFnrmicro3241_CR36",
+              "doi-asserted-by": "crossref",
+              "first-page": "e1003454",
+              "DOI": "10.1371/journal.pgen.1003454",
+              "volume": "9",
+              "author": "RB Vercoe",
+              "year": "2013",
+              "unstructured": "Vercoe, R. B. et al. Cytotoxic chromosomal targeting by CRISPR/Cas systems can reshape bacterial genomes and expel or remodel pathogenicity islands. PLoS Genet. 9, e1003454 (2013).",
+              "journal-title": "PLoS Genet."
+            },
+            {
+              "key": "BFnrmicro3241_CR37",
+              "doi-asserted-by": "crossref",
+              "first-page": "6291",
+              "DOI": "10.1128/JB.00644-10",
+              "volume": "192",
+              "author": "R Edgar",
+              "year": "2010",
+              "unstructured": "Edgar, R. & Qimron, U. The Escherichia coli CRISPR system protects from \u03bb lysogenization, lysogens, and prophage induction. J. Bacteriol. 192, 6291\u20136294 (2010).",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "BFnrmicro3241_CR38",
+              "doi-asserted-by": "crossref",
+              "first-page": "10098",
+              "DOI": "10.1073/pnas.1104144108",
+              "volume": "108",
+              "author": "E Semenova",
+              "year": "2011",
+              "unstructured": "Semenova, E. et al. Interference by clustered regularly interspaced short palindromic repeat (CRISPR) RNA is governed by a seed sequence. Proc. Natl Acad. Sci. USA 108, 10098\u201310103 (2011).",
+              "journal-title": "Proc. Natl Acad. Sci. USA"
+            },
+            {
+              "key": "BFnrmicro3241_CR39",
+              "doi-asserted-by": "crossref",
+              "first-page": "816",
+              "DOI": "10.1126/science.1225829",
+              "volume": "337",
+              "author": "M Jinek",
+              "year": "2012",
+              "unstructured": "Jinek, M. et al. A programmable dual-RNA-guided DNA endonuclease in adaptive bacterial immunity. Science 337, 816\u2013821 (2012).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BFnrmicro3241_CR40",
+              "doi-asserted-by": "crossref",
+              "first-page": "3433",
+              "DOI": "10.1128/JB.01411-10",
+              "volume": "193",
+              "author": "KC Cady",
+              "year": "2011",
+              "unstructured": "Cady, K. C. & O'Toole, G. A. Non-identity-mediated CRISPR\u2013bacteriophage interaction mediated via the Csy and Cas3 proteins. J. Bacteriol. 193, 3433\u20133445 (2011).",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "BFnrmicro3241_CR41",
+              "doi-asserted-by": "crossref",
+              "first-page": "210",
+              "DOI": "10.1128/JB.00797-08",
+              "volume": "191",
+              "author": "ME Zegans",
+              "year": "2009",
+              "unstructured": "Zegans, M. E. et al. Interaction between bacteriophage DMS3 and host CRISPR region inhibits group behaviors of Pseudomonas aeruginosa. J. Bacteriol. 191, 210\u2013219 (2009).",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "BFnrmicro3241_CR42",
+              "doi-asserted-by": "crossref",
+              "first-page": "5728",
+              "DOI": "10.1128/JB.01184-12",
+              "volume": "194",
+              "author": "KC Cady",
+              "year": "2012",
+              "unstructured": "Cady, K. C., Bondy-Denomy, J., Heussler, G. E., Davidson, A. R. & O'Toole, G. A. The CRISPR/Cas adaptive immune system of Pseudomonas aeruginosa mediates resistance to naturally occurring and engineered phages. J. Bacteriol. 194, 5728\u20135738 (2012).",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "BFnrmicro3241_CR43",
+              "doi-asserted-by": "crossref",
+              "first-page": "945",
+              "DOI": "10.1016/j.cell.2009.07.040",
+              "volume": "139",
+              "author": "CR Hale",
+              "year": "2009",
+              "unstructured": "Hale, C. R. et al. RNA-guided RNA cleavage by a CRISPR RNA\u2013Cas protein complex. Cell 139, 945\u2013956 (2009).",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "BFnrmicro3241_CR44",
+              "doi-asserted-by": "crossref",
+              "first-page": "135",
+              "DOI": "10.1016/j.molcel.2013.09.013",
+              "volume": "52",
+              "author": "RH Staals",
+              "year": "2013",
+              "unstructured": "Staals, R. H. et al. Structure and activity of the RNA-targeting type III-B CRISPR\u2013Cas complex of Thermus thermophilus. Mol. Cell 52, 135\u2013145 (2013).",
+              "journal-title": "Mol. Cell"
+            },
+            {
+              "key": "BFnrmicro3241_CR45",
+              "doi-asserted-by": "crossref",
+              "first-page": "303",
+              "DOI": "10.1016/j.molcel.2011.12.013",
+              "volume": "45",
+              "author": "J Zhang",
+              "year": "2012",
+              "unstructured": "Zhang, J. et al. Structure and mechanism of the CMR complex for CRISPR-mediated antiviral immunity. Mol. Cell 45, 303\u2013313 (2012).",
+              "journal-title": "Mol. Cell"
+            },
+            {
+              "key": "BFnrmicro3241_CR46",
+              "doi-asserted-by": "crossref",
+              "first-page": "292",
+              "DOI": "10.1016/j.molcel.2011.10.023",
+              "volume": "45",
+              "author": "CR Hale",
+              "year": "2012",
+              "unstructured": "Hale, C. R. et al. Essential features and rational design of CRISPR RNAs that function with the Cas RAMP module complex to cleave RNAs. Mol. Cell 45, 292\u2013302 (2012).",
+              "journal-title": "Mol. Cell"
+            },
+            {
+              "key": "BFnrmicro3241_CR47",
+              "doi-asserted-by": "publisher",
+              "unstructured": "Zebec, Z., Manica, A., Zhang, J., White, M.F. & Schleper, C. CRISPR-mediated targeted mRNA degradation in the archaeon Sulfolobus solfataricus. Nucleic Acids Res. http://dx.doi.org/10.1093/nar/gku161 (2014).",
+              "DOI": "10.1093/nar/gku161"
+            },
+            {
+              "key": "BFnrmicro3241_CR48",
+              "doi-asserted-by": "crossref",
+              "first-page": "335",
+              "DOI": "10.1016/j.tig.2010.05.008",
+              "volume": "26",
+              "author": "A Stern",
+              "year": "2010",
+              "unstructured": "Stern, A., Keren, L., Wurtzel, O., Amitai, G. & Sorek, R. Self-targeting by CRISPR: gene regulation or autoimmunity? Trends Genet. 26, 335\u2013340 (2010).",
+              "journal-title": "Trends Genet."
+            },
+            {
+              "key": "BFnrmicro3241_CR49",
+              "doi-asserted-by": "crossref",
+              "first-page": "568",
+              "DOI": "10.1038/nature08703",
+              "volume": "463",
+              "author": "LA Marraffini",
+              "year": "2010",
+              "unstructured": "Marraffini, L. A. & Sontheimer, E. J. Self versus non-self discrimination during CRISPR RNA-directed immunity. Nature 463, 568\u2013571 (2010).",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnrmicro3241_CR50",
+              "doi-asserted-by": "crossref",
+              "first-page": "606",
+              "DOI": "10.1016/j.molcel.2012.03.020",
+              "volume": "46",
+              "author": "DG Sashital",
+              "year": "2012",
+              "unstructured": "Sashital, D. G., Wiedenheft, B. & Doudna, J. A. Mechanism of foreign DNA selection in a bacterial adaptive immune system. Mol. Cell 46, 606\u2013615 (2012).",
+              "journal-title": "Mol. Cell"
+            },
+            {
+              "key": "BFnrmicro3241_CR51",
+              "doi-asserted-by": "crossref",
+              "first-page": "e1003742",
+              "DOI": "10.1371/journal.pgen.1003742",
+              "volume": "9",
+              "author": "ER Westra",
+              "year": "2013",
+              "unstructured": "Westra, E. R. et al. Type I-E CRISPR\u2013Cas systems discriminate target from non-target DNA through base pairing-independent PAM recognition. PLoS Genet. 9, e1003742 (2013).",
+              "journal-title": "PLoS Genet."
+            },
+            {
+              "key": "BFnrmicro3241_CR52",
+              "doi-asserted-by": "crossref",
+              "first-page": "65",
+              "DOI": "10.1186/1745-6150-6-65",
+              "volume": "6",
+              "author": "A Brodt",
+              "year": "2011",
+              "unstructured": "Brodt, A., Lurie-Weinberger, M. N. & Gophna, U. CRISPR loci reveal networks of gene exchange in archaea. Biol. Direct 6, 65 (2011).",
+              "journal-title": "Biol. Direct"
+            },
+            {
+              "key": "BFnrmicro3241_CR53",
+              "doi-asserted-by": "crossref",
+              "first-page": "301",
+              "DOI": "10.1186/1471-2180-12-301",
+              "volume": "12",
+              "author": "M Pleckaityte",
+              "year": "2012",
+              "unstructured": "Pleckaityte, M., Zilnyte, M. & Zvirbliene, A. Insights into the CRISPR/Cas system of Gardnerella vaginalis. BMC Microbiol. 12, 301 (2012).",
+              "journal-title": "BMC Microbiol."
+            },
+            {
+              "key": "BFnrmicro3241_CR54",
+              "doi-asserted-by": "crossref",
+              "first-page": "5569",
+              "DOI": "10.1093/nar/gks216",
+              "volume": "40",
+              "author": "I Yosef",
+              "year": "2012",
+              "unstructured": "Yosef, I., Goren, M. G. & Qimron, U. Proteins and DNA elements essential for the CRISPR adaptation process in Escherichia coli. Nucleic Acids Res. 40, 5569\u20135576 (2012).",
+              "journal-title": "Nucleic Acids Res."
+            },
+            {
+              "key": "BFnrmicro3241_CR55",
+              "doi-asserted-by": "crossref",
+              "first-page": "2364",
+              "DOI": "10.1128/JB.188.7.2364-2374.2006",
+              "volume": "188",
+              "author": "RT DeBoy",
+              "year": "2006",
+              "unstructured": "DeBoy, R. T., Mongodin, E. F., Emerson, J. B. & Nelson, K. E. Chromosome evolution in the Thermotogales: large-scale inversions and strain diversification of CRISPR sequences. J. Bacteriol. 188, 2364\u20132374 (2006).",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "BFnrmicro3241_CR56",
+              "doi-asserted-by": "crossref",
+              "first-page": "525",
+              "DOI": "10.1073/pnas.98.2.525",
+              "volume": "98",
+              "author": "MM Riehle",
+              "year": "2001",
+              "unstructured": "Riehle, M. M., Bennett, A. F. & Long, A. D. Genetic architecture of thermal adaptation in Escherichia coli. Proc. Natl Acad. Sci. USA 98, 525\u2013530 (2001).",
+              "journal-title": "Proc. Natl Acad. Sci. USA"
+            },
+            {
+              "key": "BFnrmicro3241_CR57",
+              "doi-asserted-by": "crossref",
+              "first-page": "230",
+              "DOI": "10.1186/1471-2148-10-230",
+              "volume": "10",
+              "author": "M Aklujkar",
+              "year": "2010",
+              "unstructured": "Aklujkar, M. & Lovley, D. R. Interference with histidyl-tRNA synthetase by a CRISPR spacer sequence as a factor in the evolution of Pelobacter carbinolicus. BMC Evol. Biol. 10, 230 (2010).",
+              "journal-title": "BMC Evol. Biol."
+            },
+            {
+              "key": "BFnrmicro3241_CR58",
+              "doi-asserted-by": "crossref",
+              "first-page": "e00309",
+              "DOI": "10.1128/mBio.00309-12",
+              "volume": "3",
+              "author": "P Jorth",
+              "year": "2012",
+              "unstructured": "Jorth, P. & Whiteley, M. An evolutionary link between natural transformation and CRISPR adaptive immunity. mBio 3, e00309\u201312 (2012).",
+              "journal-title": "mBio"
+            },
+            {
+              "key": "BFnrmicro3241_CR59",
+              "doi-asserted-by": "crossref",
+              "first-page": "484",
+              "DOI": "10.1111/j.1365-2958.2010.07465.x",
+              "volume": "79",
+              "author": "M Babu",
+              "year": "2011",
+              "unstructured": "Babu, M. et al. A dual function of the CRISPR\u2013Cas system in bacterial antivirus immunity and DNA repair. Mol. Microbiol. 79, 484\u2013502 (2011).",
+              "journal-title": "Mol. Microbiol."
+            },
+            {
+              "key": "BFnrmicro3241_CR60",
+              "doi-asserted-by": "crossref",
+              "first-page": "904",
+              "DOI": "10.1016/j.str.2009.03.019",
+              "volume": "17",
+              "author": "B Wiedenheft",
+              "year": "2009",
+              "unstructured": "Wiedenheft, B. et al. Structural basis for DNase activity of a conserved protein implicated in CRISPR-mediated genome defense. Structure 17, 904\u2013912 (2009).",
+              "journal-title": "Structure"
+            },
+            {
+              "key": "BFnrmicro3241_CR61",
+              "doi-asserted-by": "crossref",
+              "first-page": "85",
+              "DOI": "10.1111/j.1365-2958.1995.mmi_17010085.x",
+              "volume": "17",
+              "author": "FJ Mojica",
+              "year": "1995",
+              "unstructured": "Mojica, F. J., Ferrer, C., Juez, G. & Rodriguez-Valera, F. Long stretches of short tandem repeats are present in the largest replicons of the Archaea Haloferax mediterranei and Haloferax volcanii and could be involved in replicon partitioning. Mol. Microbiol. 17, 85\u201393 (1995).",
+              "journal-title": "Mol. Microbiol."
+            },
+            {
+              "key": "BFnrmicro3241_CR62",
+              "doi-asserted-by": "crossref",
+              "first-page": "482",
+              "DOI": "10.1093/nar/30.2.482",
+              "volume": "30",
+              "author": "KS Makarova",
+              "year": "2002",
+              "unstructured": "Makarova, K. S., Aravind, L., Grishin, N. V., Rogozin, I. B. & Koonin, E. V. A. DNA repair system specific for thermophilic archaea and bacteria predicted by genomic context analysis. Nucleic Acids Res. 30, 482\u2013496 (2002).",
+              "journal-title": "Nucleic Acids Res."
+            },
+            {
+              "key": "BFnrmicro3241_CR63",
+              "doi-asserted-by": "crossref",
+              "first-page": "19",
+              "DOI": "10.1007/s00792-006-0002-9",
+              "volume": "11",
+              "author": "E Williams",
+              "year": "2007",
+              "unstructured": "Williams, E., Lowe, T. M., Savas, J. & DiRuggiero, J. Microarray analysis of the hyperthermophilic archaeon Pyrococcus furiosus exposed to gamma irradiation. Extremophiles 11, 19\u201329 (2007).",
+              "journal-title": "Extremophiles"
+            },
+            {
+              "key": "BFnrmicro3241_CR64",
+              "doi-asserted-by": "crossref",
+              "first-page": "718",
+              "DOI": "10.1007/s00239-005-0223-z",
+              "volume": "62",
+              "author": "JS Godde",
+              "year": "2006",
+              "unstructured": "Godde, J. S. & Bickerton, A. The repetitive DNA elements called CRISPRs and their associated genes: evidence of horizontal transfer among prokaryotes. J. Mol. Evol. 62, 718\u2013729 (2006).",
+              "journal-title": "J. Mol. Evol."
+            },
+            {
+              "key": "BFnrmicro3241_CR65",
+              "doi-asserted-by": "crossref",
+              "first-page": "12450",
+              "DOI": "10.1073/pnas.1300833110",
+              "volume": "110",
+              "author": "S Minot",
+              "year": "2013",
+              "unstructured": "Minot, S. et al. Rapid evolution of the human gut virome. Proc. Natl Acad. Sci. USA 110, 12450\u201312455 (2013).",
+              "journal-title": "Proc. Natl Acad. Sci. USA"
+            },
+            {
+              "key": "BFnrmicro3241_CR66",
+              "doi-asserted-by": "crossref",
+              "first-page": "1616",
+              "DOI": "10.1101/gr.122705.111",
+              "volume": "21",
+              "author": "S Minot",
+              "year": "2011",
+              "unstructured": "Minot, S. et al. The human gut virome: inter-individual variation and dynamic response to diet. Genome Res. 21, 1616\u20131625 (2011).",
+              "journal-title": "Genome Res."
+            },
+            {
+              "key": "BFnrmicro3241_CR67",
+              "doi-asserted-by": "crossref",
+              "first-page": "779",
+              "DOI": "10.1038/ng1830",
+              "volume": "38",
+              "author": "M Sebaihia",
+              "year": "2006",
+              "unstructured": "Sebaihia, M. et al. The multidrug-resistant human pathogen Clostridium difficile has a highly mobile, mosaic genome. Nature Genet. 38, 779\u2013786 (2006).",
+              "journal-title": "Nature Genet."
+            },
+            {
+              "key": "BFnrmicro3241_CR68",
+              "doi-asserted-by": "crossref",
+              "first-page": "489",
+              "DOI": "10.1038/nature11927",
+              "volume": "494",
+              "author": "KD Seed",
+              "year": "2013",
+              "unstructured": "Seed, K. D., Lazinski, D. W., Calderwood, S. B. & Camilli, A. A bacteriophage encodes its own CRISPR/Cas adaptive response to evade host innate immunity. Nature 494, 489\u2013491 (2013).",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnrmicro3241_CR69",
+              "doi-asserted-by": "crossref",
+              "first-page": "541",
+              "DOI": "10.1038/nrmicro2393",
+              "volume": "8",
+              "author": "RP Novick",
+              "year": "2010",
+              "unstructured": "Novick, R. P., Christie, G. E. & Penades, J. R. The phage-related chromosomal islands of Gram-positive bacteria. Nature Rev. Microbiol. 8, 541\u2013551 (2010).",
+              "journal-title": "Nature Rev. Microbiol."
+            },
+            {
+              "key": "BFnrmicro3241_CR70",
+              "doi-asserted-by": "crossref",
+              "first-page": "40",
+              "DOI": "10.1186/1745-6150-7-40",
+              "volume": "7",
+              "author": "KS Makarova",
+              "year": "2012",
+              "unstructured": "Makarova, K. S., Anantharaman, V., Aravind, L. & Koonin, E. V. Live virus-free or die: coupling of antivirus immunity and programmed suicide or dormancy in prokaryotes. Biol. Direct 7, 40 (2012).",
+              "journal-title": "Biol. Direct"
+            },
+            {
+              "key": "BFnrmicro3241_CR71",
+              "doi-asserted-by": "crossref",
+              "first-page": "523",
+              "DOI": "10.1016/j.bbagrm.2013.02.007",
+              "volume": "1829",
+              "author": "GM Cook",
+              "year": "2013",
+              "unstructured": "Cook, G. M. et al. Ribonucleases in bacterial toxin\u2013antitoxin systems. Biochim. Biophys. Acta 1829, 523\u2013531 (2013).",
+              "journal-title": "Biochim. Biophys. Acta"
+            },
+            {
+              "key": "BFnrmicro3241_CR72",
+              "doi-asserted-by": "crossref",
+              "first-page": "894",
+              "DOI": "10.1073/pnas.0808832106",
+              "volume": "106",
+              "author": "PC Fineran",
+              "year": "2009",
+              "unstructured": "Fineran, P. C. et al. The phage abortive infection system, ToxIN, functions as a protein\u2013RNA toxin\u2013antitoxin pair. Proc. Natl Acad. Sci. USA 106, 894\u2013899 (2009).",
+              "journal-title": "Proc. Natl Acad. Sci. USA"
+            },
+            {
+              "key": "BFnrmicro3241_CR73",
+              "doi-asserted-by": "crossref",
+              "first-page": "185",
+              "DOI": "10.1038/nsmb.1981",
+              "volume": "18",
+              "author": "TR Blower",
+              "year": "2011",
+              "unstructured": "Blower, T. R. et al. A processed noncoding RNA regulates an altruistic bacterial antiviral system. Nature Struct. Mol. Biol. 18, 185\u2013190 (2011).",
+              "journal-title": "Nature Struct. Mol. Biol."
+            },
+            {
+              "key": "BFnrmicro3241_CR74",
+              "doi-asserted-by": "crossref",
+              "first-page": "4216",
+              "DOI": "10.1093/nar/gkr1305",
+              "volume": "40",
+              "author": "AR Kwon",
+              "year": "2012",
+              "unstructured": "Kwon, A. R. et al. Structural and biochemical characterization of HP0315 from Helicobacter pylori as a VapD protein with an endoribonuclease activity. Nucleic Acids Res. 40, 4216\u20134228 (2012).",
+              "journal-title": "Nucleic Acids Res."
+            },
+            {
+              "key": "BFnrmicro3241_CR75",
+              "doi-asserted-by": "crossref",
+              "first-page": "30",
+              "DOI": "10.1186/1471-2180-4-30",
+              "volume": "4",
+              "author": "DA Daines",
+              "year": "2004",
+              "unstructured": "Daines, D. A., Jarisch, J. & Smith, A. L. Identification and characterization of a nontypeable Haemophilus influenzae putative toxin\u2013antitoxin locus. BMC Microbiol. 4, 30 (2004).",
+              "journal-title": "BMC Microbiol."
+            },
+            {
+              "key": "BFnrmicro3241_CR76",
+              "doi-asserted-by": "crossref",
+              "first-page": "e49549",
+              "DOI": "10.1371/journal.pone.0049549",
+              "volume": "7",
+              "author": "C Richter",
+              "year": "2012",
+              "unstructured": "Richter, C., Gristwood, T., Clulow, J. S. & Fineran, P. C. In vivo protein interactions and complex formation in the Pectobacterium atrosepticum subtype I-F CRISPR/Cas system. PLoS ONE 7, e49549 (2012).",
+              "journal-title": "PLoS ONE"
+            },
+            {
+              "key": "BFnrmicro3241_CR77",
+              "doi-asserted-by": "crossref",
+              "first-page": "35943",
+              "DOI": "10.1074/jbc.M112.382598",
+              "volume": "287",
+              "author": "KH Nam",
+              "year": "2012",
+              "unstructured": "Nam, K. H. et al. Double-stranded endonuclease activity in Bacillus halodurans clustered regularly interspaced short palindromic repeats (CRISPR)-associated Cas2 protein. J. Biol. Chem. 287, 35943\u201335952 (2012).",
+              "journal-title": "J. Biol. Chem."
+            },
+            {
+              "key": "BFnrmicro3241_CR78",
+              "doi-asserted-by": "crossref",
+              "first-page": "1552",
+              "DOI": "10.1107/S1744309110039801",
+              "volume": "66",
+              "author": "P Samai",
+              "year": "2010",
+              "unstructured": "Samai, P., Smith, P. & Shuman, S. Structure of a CRISPR-associated protein Cas2 from Desulfovibrio vulgaris. Acta Crystallogr. Sect. F Struct. Biol. Cryst. Commun. 66, 1552\u20131556 (2010).",
+              "journal-title": "Acta Crystallogr. Sect. F Struct. Biol. Cryst. Commun."
+            },
+            {
+              "key": "BFnrmicro3241_CR79",
+              "doi-asserted-by": "crossref",
+              "first-page": "861",
+              "DOI": "10.1098/rsbl.2009.0674",
+              "volume": "5",
+              "author": "A Gardner",
+              "year": "2009",
+              "unstructured": "Gardner, A. Adaptation as organism design. Biol. Lett. 5, 861\u2013864 (2009).",
+              "journal-title": "Biol. Lett."
+            },
+            {
+              "key": "BFnrmicro3241_CR80",
+              "doi-asserted-by": "crossref",
+              "first-page": "1527",
+              "DOI": "10.1098/rspb.2003.2387",
+              "volume": "270",
+              "author": "F Fiegna",
+              "year": "2003",
+              "unstructured": "Fiegna, F. & Velicer, G. J. Competitive fates of bacterial social parasites: persistence and self-induced extinction of Myxococcus xanthus cheaters. Proc. Biol. Sci. 270, 1527\u20131534 (2003).",
+              "journal-title": "Proc. Biol. Sci."
+            },
+            {
+              "key": "BFnrmicro3241_CR81",
+              "doi-asserted-by": "crossref",
+              "first-page": "1618",
+              "DOI": "10.4161/rna.26423",
+              "volume": "10",
+              "author": "TR Sampson",
+              "year": "2013",
+              "unstructured": "Sampson, T. R. & Weiss, D. S. Degeneration of a CRISPR/Cas system and its regulatory target during the evolution of a pathogen. RNA Biol. 10, 1618\u20131622 (2013).",
+              "journal-title": "RNA Biol."
+            },
+            {
+              "key": "BFnrmicro3241_CR82",
+              "doi-asserted-by": "crossref",
+              "first-page": "51",
+              "DOI": "10.1016/j.ijmm.2012.11.004",
+              "volume": "303",
+              "author": "E Schunder",
+              "year": "2013",
+              "unstructured": "Schunder, E., Rydzewski, K., Grunow, R. & Heuner, K. First indication for a functional CRISPR/Cas system in Francisella tularensis. Int. J. Med. Microbiol. 303, 51\u201360 (2013).",
+              "journal-title": "Int. J. Med. Microbiol."
+            },
+            {
+              "key": "BFnrmicro3241_CR83",
+              "doi-asserted-by": "crossref",
+              "first-page": "e60",
+              "DOI": "10.1371/journal.pcbi.0010060",
+              "volume": "1",
+              "author": "DH Haft",
+              "year": "2005",
+              "unstructured": "Haft, D. H., Selengut, J., Mongodin, E. F. & Nelson, K. E. A guild of 45 CRISPR-associated (Cas) protein families and multiple CRISPR/Cas subtypes exist in prokaryotic genomes. PLoS Comput. Biol. 1, e60 (2005).",
+              "journal-title": "PLoS Comput. Biol."
+            },
+            {
+              "key": "BFnrmicro3241_CR84",
+              "doi-asserted-by": "crossref",
+              "first-page": "310",
+              "DOI": "10.1128/MMBR.00041-08",
+              "volume": "73",
+              "author": "E Karatan",
+              "year": "2009",
+              "unstructured": "Karatan, E. & Watnick, P. Signals, regulatory networks, and materials that build and break bacterial biofilms. Microbiol. Mol. Biol. Rev. 73, 310\u2013347 (2009).",
+              "journal-title": "Microbiol. Mol. Biol. Rev."
+            },
+            {
+              "key": "BFnrmicro3241_CR85",
+              "doi-asserted-by": "crossref",
+              "first-page": "1666",
+              "DOI": "10.1111/j.1462-2920.2011.02495.x",
+              "volume": "13",
+              "author": "H Mikkelsen",
+              "year": "2011",
+              "unstructured": "Mikkelsen, H., Sivaneson, M. & Filloux, A. Key two-component regulatory systems that control biofilm formation in Pseudomonas aeruginosa. Environ. Microbiol. 13, 1666\u20131681 (2011).",
+              "journal-title": "Environ. Microbiol."
+            },
+            {
+              "key": "BFnrmicro3241_CR86",
+              "doi-asserted-by": "crossref",
+              "first-page": "429",
+              "DOI": "10.1038/nature11723",
+              "volume": "493",
+              "author": "J Bondy-Denomy",
+              "year": "2013",
+              "unstructured": "Bondy-Denomy, J., Pawluk, A., Maxwell, K. L. & Davidson, A. R. Bacteriophage genes that inactivate the CRISPR/Cas bacterial immune system. Nature 493, 429\u2013432 (2013).",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnrmicro3241_CR87",
+              "doi-asserted-by": "crossref",
+              "first-page": "146",
+              "DOI": "10.1016/j.plrev.2013.12.001",
+              "volume": "11",
+              "author": "K Severinov",
+              "year": "2013",
+              "unstructured": "Severinov, K. CRISPR\u2013Cas: outstanding questions remain: comment on \u201cDiversity, evolution & therapeutic applications of small RNAs in prokaryotic and eukaryotic immune systems\u201d by Edwin L. Cooper and Nicola Overstreet. Phys. Life Rev. 11, 146\u2013148 (2013).",
+              "journal-title": "Phys. Life Rev."
+            },
+            {
+              "key": "BFnrmicro3241_CR88",
+              "doi-asserted-by": "crossref",
+              "first-page": "226",
+              "DOI": "10.1016/j.tim.2009.03.001",
+              "volume": "17",
+              "author": "M Vos",
+              "year": "2009",
+              "unstructured": "Vos, M. Why do bacteria engage in homologous recombination? Trends Microbiol. 17, 226\u2013232 (2009).",
+              "journal-title": "Trends Microbiol."
+            },
+            {
+              "key": "BFnrmicro3241_CR89",
+              "doi-asserted-by": "crossref",
+              "first-page": "177",
+              "DOI": "10.1016/j.chom.2012.06.003",
+              "volume": "12",
+              "author": "D Bikard",
+              "year": "2012",
+              "unstructured": "Bikard, D., Hatoum-Aslan, A., Mucida, D. & Marraffini, L. A. CRISPR interference can prevent natural transformation and virulence acquisition during in vivo bacterial infection. Cell Host Microbe 12, 177\u2013186 (2012).",
+              "journal-title": "Cell Host Microbe"
+            },
+            {
+              "key": "BFnrmicro3241_CR90",
+              "doi-asserted-by": "crossref",
+              "first-page": "e00227",
+              "DOI": "10.1128/mBio.00227-10",
+              "volume": "1",
+              "author": "KL Palmer",
+              "year": "2010",
+              "unstructured": "Palmer, K. L. & Gilmore, M. S. Multidrug-resistant enterococci lack CRISPR\u2013Cas. mBio 1, e00227\u201310 (2010).",
+              "journal-title": "mBio"
+            },
+            {
+              "key": "BFnrmicro3241_CR91",
+              "doi-asserted-by": "crossref",
+              "first-page": "3489",
+              "DOI": "10.1101/gad.1742908",
+              "volume": "22",
+              "author": "J Carte",
+              "year": "2008",
+              "unstructured": "Carte, J., Wang, R., Li, H., Terns, R. M. & Terns, M. P. Cas6 is an endoribonuclease that generates guide RNAs for invader defense in prokaryotes. Genes Dev. 22, 3489\u20133496 (2008).",
+              "journal-title": "Genes Dev."
+            },
+            {
+              "key": "BFnrmicro3241_CR92",
+              "doi-asserted-by": "crossref",
+              "first-page": "2572",
+              "DOI": "10.1261/rna.1246808",
+              "volume": "14",
+              "author": "C Hale",
+              "year": "2008",
+              "unstructured": "Hale, C., Kleppe, K., Terns, R. M. & Terns, M. P. Prokaryotic silencing (psi)RNAs in Pyrococcus furiosus. RNA 14, 2572\u20132579 (2008).",
+              "journal-title": "RNA"
+            },
+            {
+              "key": "BFnrmicro3241_CR93",
+              "doi-asserted-by": "crossref",
+              "first-page": "1843",
+              "DOI": "10.1126/science.1165771",
+              "volume": "322",
+              "author": "LA Marraffini",
+              "year": "2008",
+              "unstructured": "Marraffini, L. A. & Sontheimer, E. J. CRISPR interference limits horizontal gene transfer in staphylococci by targeting DNA. Science 322, 1843\u20131845 (2008).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BFnrmicro3241_CR94",
+              "doi-asserted-by": "crossref",
+              "first-page": "67",
+              "DOI": "10.1038/nature09523",
+              "volume": "468",
+              "author": "JE Garneau",
+              "year": "2010",
+              "unstructured": "Garneau, J. E. et al. The CRISPR/Cas bacterial immune system cleaves bacteriophage and plasmid DNA. Nature 468, 67\u201371 (2010).",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BFnrmicro3241_CR95",
+              "doi-asserted-by": "crossref",
+              "first-page": "595",
+              "DOI": "10.1016/j.molcel.2012.03.018",
+              "volume": "46",
+              "author": "ER Westra",
+              "year": "2012",
+              "unstructured": "Westra, E. R. et al. CRISPR immunity relies on the consecutive binding and degradation of negatively supercoiled invader DNA by Cascade and Cas3. Mol. Cell 46, 595\u2013605 (2012).",
+              "journal-title": "Mol. Cell"
+            },
+            {
+              "key": "BFnrmicro3241_CR96",
+              "doi-asserted-by": "crossref",
+              "first-page": "155",
+              "DOI": "10.1042/BJ20130316",
+              "volume": "453",
+              "author": "J Reeks",
+              "year": "2013",
+              "unstructured": "Reeks, J., Naismith, J. H. & White, M. F. CRISPR interference: a structural perspective. Biochem. J. 453, 155\u2013166 (2013).",
+              "journal-title": "Biochem. J."
+            },
+            {
+              "key": "BFnrmicro3241_CR97",
+              "doi-asserted-by": "crossref",
+              "first-page": "529",
+              "DOI": "10.1038/nsmb.2019",
+              "volume": "18",
+              "author": "MM Jore",
+              "year": "2011",
+              "unstructured": "Jore, M. M. et al. Structural basis for CRISPR RNA-guided DNA recognition by Cascade. Nature Struct. Mol. Biol. 18, 529\u2013536 (2011).",
+              "journal-title": "Nature Struct. Mol. Biol."
+            },
+            {
+              "key": "BFnrmicro3241_CR98",
+              "doi-asserted-by": "crossref",
+              "first-page": "124",
+              "DOI": "10.1016/j.molcel.2013.08.020",
+              "volume": "52",
+              "author": "C Rouillon",
+              "year": "2013",
+              "unstructured": "Rouillon, C. et al. Structure of the CRISPR interference complex CSM reveals key similarities with Cascade. Mol. Cell 52, 124\u2013134 (2013).",
+              "journal-title": "Mol. Cell"
+            },
+            {
+              "key": "BFnrmicro3241_CR99",
+              "doi-asserted-by": "crossref",
+              "first-page": "310",
+              "DOI": "10.1128/JB.01130-13",
+              "volume": "196",
+              "author": "A Hatoum-Aslan",
+              "year": "2013",
+              "unstructured": "Hatoum-Aslan, A., Maniv, I., Samai, P. & Marraffini, L. A. Genetic characterization of anti-plasmid immunity by a type III-A CRISPR\u2013Cas system. J. Bacteriol. 196, 310\u2013317 (2013).",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "BFnrmicro3241_CR100",
+              "doi-asserted-by": "crossref",
+              "first-page": "237",
+              "DOI": "10.1146/annurev-biochem-072911-172315",
+              "volume": "82",
+              "author": "R Sorek",
+              "year": "2013",
+              "unstructured": "Sorek, R., Lawrence, C. M. & Wiedenheft, B. CRISPR-mediated adaptive immune systems in bacteria and archaea. Annu. Rev. Biochem. 82, 237\u2013266 (2013).",
+              "journal-title": "Annu. Rev. Biochem."
+            },
+            {
+              "key": "BFnrmicro3241_CR101",
+              "doi-asserted-by": "crossref",
+              "first-page": "862",
+              "DOI": "10.1038/nrmicro1770",
+              "volume": "5",
+              "author": "DR Zusman",
+              "year": "2007",
+              "unstructured": "Zusman, D. R., Scott, A. E., Yang, Z. & Kirby, J. R. Chemosensory pathways, motility and development in Myxococcus xanthus. Nature Rev. Microbiol. 5, 862\u2013872 (2007).",
+              "journal-title": "Nature Rev. Microbiol."
+            }
+          ],
+          "container-title": [
+            "Nature Reviews Microbiology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://www.nature.com/articles/nrmicro3241.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://www.nature.com/articles/nrmicro3241",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://www.nature.com/articles/nrmicro3241.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2024,
+                5,
+                25
+              ]
+            ],
+            "date-time": "2024-05-25T18:37:46Z",
+            "timestamp": 1716662266000
+          },
+          "score": 41.351223,
+          "resource": {
+            "primary": {
+              "URL": "https://www.nature.com/articles/nrmicro3241"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2014,
+                4,
+                7
+              ]
+            ]
+          },
+          "references-count": 101,
+          "journal-issue": {
+            "issue": "5",
+            "published-print": {
+              "date-parts": [
+                [
+                  2014,
+                  5
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "BFnrmicro3241"
+          ],
+          "URL": "https://doi.org/10.1038/nrmicro3241",
+          "ISSN": [
+            "1740-1526",
+            "1740-1534"
+          ],
+          "issn-type": [
+            {
+              "value": "1740-1526",
+              "type": "print"
+            },
+            {
+              "value": "1740-1534",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2014,
+                4,
+                7
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

@@ -1,0 +1,377 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fnature21719%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1038/nature21719\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "28355179",
+          "source": "MED",
+          "pmid": "28355179",
+          "pmcid": "PMC5540373",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC5540373"
+            ]
+          },
+          "doi": "10.1038/nature21719",
+          "title": "CRISPR-Cas systems exploit viral DNA injection to establish and maintain adaptive immunity.",
+          "authorString": "Modell JW, Jiang W, Marraffini LA.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Modell JW",
+                "lastName": "Modell",
+                "firstName": "Joshua W",
+                "initials": "JW",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-7733-1252"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Laboratory of Bacteriology, The Rockefeller University, 1230 York Avenue, New York, NY 10065, USA."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Jiang W",
+                "lastName": "Jiang",
+                "firstName": "Wenyan",
+                "initials": "W",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Laboratory of Bacteriology, The Rockefeller University, 1230 York Avenue, New York, NY 10065, USA."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Marraffini LA",
+                "lastName": "Marraffini",
+                "firstName": "Luciano A",
+                "initials": "LA",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Laboratory of Bacteriology, The Rockefeller University, 1230 York Avenue, New York, NY 10065, USA."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0001-7733-1252"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "supporting_data"
+            ]
+          },
+          "journalInfo": {
+            "issue": "7648",
+            "volume": "544",
+            "journalIssueId": 2544630,
+            "dateOfPublication": "2017 Apr",
+            "monthOfPublication": 4,
+            "yearOfPublication": 2017,
+            "journal": {
+              "medlineAbbreviation": "Nature",
+              "title": "Nature",
+              "essn": "1476-4687",
+              "issn": "0028-0836",
+              "isoabbreviation": "Nature",
+              "nlmid": "0410462"
+            },
+            "printPublicationDate": "2017-04-01"
+          },
+          "pubYear": "2017",
+          "pageInfo": "101-104",
+          "abstractText": "Clustered regularly interspaced short palindromic repeats (CRISPR)-Cas systems provide protection against viral and plasmid infection by capturing short DNA sequences from these invaders and integrating them into the CRISPR locus of the prokaryotic host. These sequences, known as spacers, are transcribed into short CRISPR RNA guides that specify the cleavage site of Cas nucleases in the genome of the invader. It is not known when spacer sequences are acquired during viral infection. Here, to investigate this, we tracked spacer acquisition in Staphylococcus aureus cells harbouring a type II CRISPR-Cas9 system after infection with the staphylococcal bacteriophage \u03d512. We found that new spacers were acquired immediately after infection preferentially from the cos site, the viral free DNA end that is first injected into the cell. Analysis of spacer acquisition after infection with mutant phages demonstrated that most spacers are acquired during DNA injection, but not during other stages of the viral cycle that produce free DNA ends, such as DNA replication or packaging. Finally, we showed that spacers acquired from early-injected genomic regions, which direct Cas9 cleavage of the viral DNA immediately after infection, provide better immunity than spacers acquired from late-injected regions. Our results reveal that CRISPR-Cas systems exploit the phage life cycle to generate a pattern of spacer acquisition that ensures a successful CRISPR immune response.",
+          "affiliation": "Laboratory of Bacteriology, The Rockefeller University, 1230 York Avenue, New York, NY 10065, USA.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print-Electronic",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, Non-U.S. Gov't",
+              "research-article",
+              "Journal Article",
+              "Research Support, N.I.H., Extramural"
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "agency": "NIAID NIH HHS",
+                "acronym": "AI",
+                "grantId": "DP2 AI104556",
+                "orderIn": 0
+              }
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Staphylococcus aureus",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    },
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "IM",
+                      "qualifierName": "immunology"
+                    },
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "VI",
+                      "qualifierName": "virology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Bacillus Phages",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "GD",
+                      "qualifierName": "growth & development"
+                    },
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "IM",
+                      "qualifierName": "immunology"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "DNA, Viral",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "IM",
+                      "qualifierName": "immunology"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Transfection"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Mutation"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Time Factors"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Attachment Sites, Microbiological",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "CRISPR-Cas Systems",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "IM",
+                      "qualifierName": "immunology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Clustered Regularly Interspaced Short Palindromic Repeats",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "IM",
+                      "qualifierName": "immunology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "CRISPR-Associated Proteins",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "chemicalList": {
+            "chemical": [
+              {
+                "name": "DNA, Viral",
+                "registryNumber": "0"
+              },
+              {
+                "name": "CRISPR-Associated Proteins",
+                "registryNumber": "0"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "pdf",
+                "site": "Unpaywall",
+                "url": "https://europepmc.org/articles/pmc5540373?pdf=render"
+              },
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1038/nature21719"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC5540373"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC5540373?pdf=render"
+              }
+            ]
+          },
+          "commentCorrectionList": {
+            "commentCorrection": [
+              {
+                "source": "MED",
+                "id": "28392559",
+                "reference": "Nat Rev Microbiol. 2017 Apr 10;15(5):255. doi: 10.1038/nrmicro.2017.39",
+                "type": "Comment in",
+                "orderIn": 1
+              }
+            ]
+          },
+          "isOpenAccess": "Y",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "citedByCount": 137,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "Y",
+          "hasLabsLinks": "Y",
+          "hasData": "Y",
+          "authMan": "Y",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "Y",
+          "manuscriptId": "NIHMS855043",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2017-08-17",
+          "dateOfCreation": "2017-03-30",
+          "dateOfRevision": "2018-11-13",
+          "electronicPublicationDate": "2017-03-29",
+          "firstPublicationDate": "2017-03-29",
+          "firstIndexDate": "2017-03-30",
+          "fullTextReceivedDate": "2025-02-05",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

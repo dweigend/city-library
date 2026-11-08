@@ -1,0 +1,159 @@
+{
+  "marker": "selected-social-b02:piaget-vygotsky-game:f0020ad932d3667cc9e5b710018366515484172bd10814aa4b1f2575f2db84c1",
+  "chunk": "http://localhost:3112/chunks/ui-m8ecsa0j.js",
+  "chunks": [
+    {
+      "url": "http://localhost:3112/chunks/app-cakyt1j7.js",
+      "sha256": "97a2f893efa8c3e92a3bfe5c5cf6ec5967996ce836f64e0c5cae4050a4d58470"
+    },
+    {
+      "url": "http://localhost:3112/chunks/ui-m8ecsa0j.js",
+      "sha256": "4b9083eb2ec564af944f0708cef052efbb37d335b6dd16d215f23d860d98aa77"
+    }
+  ],
+  "buildVersion": "1793960930389",
+  "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+  "defaults": {
+    "seed": 1,
+    "numberOfPlayers": 30,
+    "attemptsPerRun": 30,
+    "strategy": "P-V",
+    "randomizeStrategyEachRun": true,
+    "stopAfterEachRun": false,
+    "trails": true,
+    "zpd": 15,
+    "vygotskiianNeighbors": 4,
+    "moveError": 4
+  },
+  "setupTick": 0,
+  "setupMonitors": {
+    "Tick": "0",
+    "Attempt": "0",
+    "Strategy": "P-V",
+    "Mean distance": "122.000"
+  },
+  "setupStatus": "Model initialized.",
+  "setupRaster": [
+    {
+      "width": 1344,
+      "height": 566,
+      "sampledColors": 28
+    }
+  ],
+  "duplicateFields": [],
+  "errors": [],
+  "targetProbeTick": 10,
+  "progressMonitors": {
+    "Tick": "10",
+    "Attempt": "10",
+    "Strategy": "P-V",
+    "Mean distance": "19.533"
+  },
+  "status": "Steps completed.",
+  "historyLength": 11,
+  "diagnostic": null,
+  "raster": [
+    {
+      "width": 1344,
+      "height": 566,
+      "sampledColors": 1462
+    }
+  ],
+  "mobileLight": {
+    "viewport": [
+      390,
+      844
+    ],
+    "scrollWidth": 390,
+    "overflow": false,
+    "background": "rgb(255, 255, 255)",
+    "raster": [
+      {
+        "width": 716,
+        "height": 302,
+        "sampledColors": 1898
+      }
+    ]
+  },
+  "uiChecks": {
+    "run": true,
+    "paused": true,
+    "running": {
+      "Tick": "16",
+      "Attempt": "16",
+      "Strategy": "P-V",
+      "Mean distance": "15.767"
+    },
+    "pause": {
+      "Tick": "16",
+      "Attempt": "16",
+      "Strategy": "P-V",
+      "Mean distance": "15.767"
+    },
+    "stable": {
+      "Tick": "16",
+      "Attempt": "16",
+      "Strategy": "P-V",
+      "Mean distance": "15.767"
+    },
+    "actions": [],
+    "liveTest": {
+      "name": "live-strategy",
+      "before": "P-V",
+      "changed": "Random",
+      "afterSetup": "P-V",
+      "status": "Model initialized.",
+      "resetMonitors": {
+        "Tick": "0",
+        "Attempt": "0",
+        "Strategy": "P-V",
+        "Mean distance": "122.000"
+      }
+    },
+    "resetMonitors": {
+      "Tick": "0",
+      "Attempt": "0",
+      "Strategy": "P-V",
+      "Mean distance": "122.000"
+    },
+    "infoHasOriginal": true,
+    "inspector": null,
+    "errors": [],
+    "unlabeled": [],
+    "overflow": false
+  },
+  "publicBrowserProbe": {
+    "slug": "piaget-vygotsky-game",
+    "assertions": 14,
+    "evidence": {
+      "tick": 3,
+      "attempt": 1,
+      "fractionalScores": [
+        9,
+        25,
+        34,
+        33,
+        19,
+        54,
+        25,
+        11,
+        39,
+        35
+      ]
+    }
+  },
+  "keyboardFocus": {
+    "tag": "BUTTON",
+    "text": "Run",
+    "outlineStyle": "solid",
+    "outlineWidth": "2px",
+    "focusedVisible": true
+  },
+  "images": {
+    "setup-light": "piaget-vygotsky-game-target-setup-light.png",
+    "progress-light": "piaget-vygotsky-game-target-progress-light.png",
+    "desktop-dark": "piaget-vygotsky-game-target-desktop-dark.png",
+    "mobile-light": "piaget-vygotsky-game-target-mobile-light.png",
+    "mobile-dark": "piaget-vygotsky-game-target-mobile-dark.png"
+  }
+}

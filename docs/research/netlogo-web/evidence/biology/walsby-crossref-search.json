@@ -1,0 +1,525 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=Gas+vesicles+Walsby+1994&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 855018,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2025,
+                10,
+                28
+              ]
+            ],
+            "date-time": "2025-10-28T07:03:16Z",
+            "timestamp": 1761634996069,
+            "version": "build-2065373602"
+          },
+          "reference-count": 0,
+          "publisher": "Wiley",
+          "issue": "13",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2012,
+                    9,
+                    29
+                  ]
+                ],
+                "date-time": "2012-09-29T00:00:00Z",
+                "timestamp": 1348876800000
+              },
+              "content-version": "vor",
+              "delay-in-days": 28,
+              "URL": "http://onlinelibrary.wiley.com/termsAndConditions#vor"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "bmj.com"
+            ],
+            "crossmark-restriction": true
+          },
+          "short-container-title": [
+            "Veterinary Record"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2012,
+                9
+              ]
+            ]
+          },
+          "DOI": "10.1136/vr.e6367",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2012,
+                9,
+                30
+              ]
+            ],
+            "date-time": "2012-09-30T09:56:05Z",
+            "timestamp": 1348998965000
+          },
+          "page": "329-329",
+          "update-policy": "https://doi.org/10.1136/crossmarkpolicy",
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "J. B. Walsby"
+          ],
+          "prefix": "10.1002",
+          "volume": "171",
+          "member": "311",
+          "published-online": {
+            "date-parts": [
+              [
+                2012,
+                9,
+                29
+              ]
+            ]
+          },
+          "container-title": [
+            "Veterinary Record"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1136%2Fvr.e6367",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://bvajournals.onlinelibrary.wiley.com/doi/pdf/10.1136/vr.e6367",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2025,
+                10,
+                28
+              ]
+            ],
+            "date-time": "2025-10-28T06:56:09Z",
+            "timestamp": 1761634569000
+          },
+          "score": 21.153297,
+          "resource": {
+            "primary": {
+              "URL": "https://bvajournals.onlinelibrary.wiley.com/doi/10.1136/vr.e6367"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2012,
+                9
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "13",
+            "published-print": {
+              "date-parts": [
+                [
+                  2012,
+                  9
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1136/vr.e6367"
+          ],
+          "URL": "https://doi.org/10.1136/vr.e6367",
+          "archive": [
+            "Portico"
+          ],
+          "ISSN": [
+            "0042-4900",
+            "2042-7670"
+          ],
+          "issn-type": [
+            {
+              "type": "print",
+              "value": "0042-4900"
+            },
+            {
+              "type": "electronic",
+              "value": "2042-7670"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2012,
+                9
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                27
+              ]
+            ],
+            "date-time": "2026-09-27T04:51:24Z",
+            "timestamp": 1790484684788,
+            "version": "4.1.0"
+          },
+          "reference-count": 0,
+          "publisher": "Annual Reviews",
+          "issue": "1",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Annu. Rev. Plant. Physiol."
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1975,
+                6
+              ]
+            ]
+          },
+          "DOI": "10.1146/annurev.pp.26.060175.002235",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2003,
+                7,
+                2
+              ]
+            ],
+            "date-time": "2003-07-02T05:25:22Z",
+            "timestamp": 1057123522000
+          },
+          "page": "427-439",
+          "source": "Crossref",
+          "is-referenced-by-count": 68,
+          "title": [
+            "Gas Vesicles"
+          ],
+          "prefix": "10.1146",
+          "volume": "26",
+          "author": [
+            {
+              "given": "A E",
+              "family": "Walsby",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "22",
+          "container-title": [
+            "Annual Review of Plant Physiology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://www.annualreviews.org/doi/pdf/10.1146/annurev.pp.26.060175.002235",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2021,
+                10,
+                7
+              ]
+            ],
+            "date-time": "2021-10-07T21:47:30Z",
+            "timestamp": 1633643250000
+          },
+          "score": 19.951672,
+          "resource": {
+            "primary": {
+              "URL": "https://www.annualreviews.org/doi/10.1146/annurev.pp.26.060175.002235"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1975,
+                6
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "1",
+            "published-print": {
+              "date-parts": [
+                [
+                  1975,
+                  6
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1146/annurev.pp.26.060175.002235"
+          ],
+          "URL": "https://doi.org/10.1146/annurev.pp.26.060175.002235",
+          "ISSN": [
+            "0066-4294"
+          ],
+          "issn-type": [
+            {
+              "value": "0066-4294",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1975,
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2025,
+                10,
+                31
+              ]
+            ],
+            "date-time": "2025-10-31T04:48:22Z",
+            "timestamp": 1761886102957,
+            "version": "build-2065373602"
+          },
+          "reference-count": 0,
+          "publisher": "Wiley",
+          "issue": "1",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2005,
+                    12,
+                    6
+                  ]
+                ],
+                "date-time": "2005-12-06T00:00:00Z",
+                "timestamp": 1133827200000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "http://onlinelibrary.wiley.com/termsAndConditions#vor"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "enviromicro-journals.onlinelibrary.wiley.com"
+            ],
+            "crossmark-restriction": true
+          },
+          "short-container-title": [
+            "Environmental Microbiology"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2006,
+                1
+              ]
+            ]
+          },
+          "DOI": "10.1111/j.1462-2920.2005.00976.x",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2005,
+                12,
+                6
+              ]
+            ],
+            "date-time": "2005-12-06T10:52:41Z",
+            "timestamp": 1133866361000
+          },
+          "page": "183-184",
+          "update-policy": "https://doi.org/10.1002/crossmark_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Gas vesicles"
+          ],
+          "prefix": "10.1111",
+          "volume": "8",
+          "author": [
+            {
+              "given": "Lawrence P.",
+              "family": "Wackett",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "311",
+          "published-online": {
+            "date-parts": [
+              [
+                2005,
+                12,
+                6
+              ]
+            ]
+          },
+          "container-title": [
+            "Environmental Microbiology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1111%2Fj.1462-2920.2005.00976.x",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://sfamjournals.onlinelibrary.wiley.com/doi/pdf/10.1111/j.1462-2920.2005.00976.x",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2025,
+                10,
+                31
+              ]
+            ],
+            "date-time": "2025-10-31T03:21:49Z",
+            "timestamp": 1761880909000
+          },
+          "score": 19.914936,
+          "resource": {
+            "primary": {
+              "URL": "https://sfamjournals.onlinelibrary.wiley.com/doi/10.1111/j.1462-2920.2005.00976.x"
+            }
+          },
+          "subtitle": [
+            "An annotated selection of World Wide Web sites relevant to the topics in\n                    <i>Environmental Microbiology</i>"
+          ],
+          "issued": {
+            "date-parts": [
+              [
+                2005,
+                12,
+                6
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "1",
+            "published-print": {
+              "date-parts": [
+                [
+                  2006,
+                  1
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1111/j.1462-2920.2005.00976.x"
+          ],
+          "URL": "https://doi.org/10.1111/j.1462-2920.2005.00976.x",
+          "archive": [
+            "Portico"
+          ],
+          "ISSN": [
+            "1462-2912",
+            "1462-2920"
+          ],
+          "issn-type": [
+            {
+              "type": "print",
+              "value": "1462-2912"
+            },
+            {
+              "type": "electronic",
+              "value": "1462-2920"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2005,
+                12,
+                6
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "2005-12-06",
+              "order": 3,
+              "name": "published",
+              "label": "Published",
+              "group": {
+                "name": "publication_history",
+                "label": "Publication History"
+              }
+            }
+          ]
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

@@ -1,0 +1,1419 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=A+plausible+model+of+phyllotaxis+Smith+2006&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 3212063,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                18
+              ]
+            ],
+            "date-time": "2026-10-18T03:00:23Z",
+            "timestamp": 1792292423820,
+            "version": "4.4.0"
+          },
+          "reference-count": 34,
+          "publisher": "National Academy of Sciences",
+          "issue": "5",
+          "content-domain": {
+            "domain": [
+              "www.pnas.org"
+            ],
+            "crossmark-restriction": true
+          },
+          "short-container-title": [
+            "Proc. Natl. Acad. Sci. U.S.A."
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2006,
+                1,
+                31
+              ]
+            ]
+          },
+          "abstract": "<jats:p>\n                    A striking phenomenon unique to the kingdom of plants is the regular arrangement of lateral organs around a central axis, known as phyllotaxis. Recent molecular-genetic experiments indicate that active transport of the plant hormone auxin is the key process regulating phyllotaxis. A conceptual model based on these experiments, introduced by Reinhardt\n                    <jats:italic>et al.</jats:italic>\n                    [Reinhardt, D., Pesce, E. R., Stieger, P., Mandel, T., Baltensperger, K.,\n                    <jats:italic>et al.</jats:italic>\n                    (2003)\n                    <jats:italic>Nature</jats:italic>\n                    426, 255\u2013260], provides an intuitively plausible interpretation of the data, but raises questions of whether the proposed mechanism is, in fact, capable of producing the observed temporal and spatial patterns, is robust, can start\n                    <jats:italic>de novo</jats:italic>\n                    , and can account for phyllotactic transitions, such as the frequently observed transition from decussate to spiral phyllotaxis. To answer these questions, we created a computer simulation model based on data described previously or in this paper and reasonable hypotheses. The model reproduces, within the standard error, the divergence angles measured in\n                    <jats:italic>Arabidopsis</jats:italic>\n                    seedlings and the effects of selected experimental manipulations. It also reproduces distichous, decussate, and tricussate patterns. The model thus offers a plausible link between molecular mechanisms of morphogenesis and the geometry of phyllotaxis.\n                  </jats:p>",
+          "DOI": "10.1073/pnas.0510457103",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2006,
+                1,
+                23
+              ]
+            ],
+            "date-time": "2006-01-23T20:53:41Z",
+            "timestamp": 1138049621000
+          },
+          "page": "1301-1306",
+          "update-policy": "https://doi.org/10.1073/pnas.cm10313",
+          "source": "Crossref",
+          "is-referenced-by-count": 562,
+          "title": [
+            "A plausible model of phyllotaxis"
+          ],
+          "prefix": "10.1073",
+          "volume": "103",
+          "author": [
+            {
+              "given": "Richard S.",
+              "family": "Smith",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Department of Computer Science, University of Calgary, 2500 University Drive NW, Calgary, AB, Canada T2N 1N4; andInstitute of Plant Sciences, University of Berne, CH-3013 Berne, Switzerland"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Soazig",
+              "family": "Guyomarc'h",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Department of Computer Science, University of Calgary, 2500 University Drive NW, Calgary, AB, Canada T2N 1N4; andInstitute of Plant Sciences, University of Berne, CH-3013 Berne, Switzerland"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Therese",
+              "family": "Mandel",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Department of Computer Science, University of Calgary, 2500 University Drive NW, Calgary, AB, Canada T2N 1N4; andInstitute of Plant Sciences, University of Berne, CH-3013 Berne, Switzerland"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Didier",
+              "family": "Reinhardt",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Department of Computer Science, University of Calgary, 2500 University Drive NW, Calgary, AB, Canada T2N 1N4; andInstitute of Plant Sciences, University of Berne, CH-3013 Berne, Switzerland"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Cris",
+              "family": "Kuhlemeier",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Department of Computer Science, University of Calgary, 2500 University Drive NW, Calgary, AB, Canada T2N 1N4; andInstitute of Plant Sciences, University of Berne, CH-3013 Berne, Switzerland"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Przemyslaw",
+              "family": "Prusinkiewicz",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Department of Computer Science, University of Calgary, 2500 University Drive NW, Calgary, AB, Canada T2N 1N4; andInstitute of Plant Sciences, University of Berne, CH-3013 Berne, Switzerland"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "341",
+          "published-online": {
+            "date-parts": [
+              [
+                2006,
+                1,
+                23
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "e_1_3_2_1_2",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Steeves T. A. & Sussex I. M. (1989) Patterns in Plant Development (Cambridge Univ. Press Cambridge U.K.).",
+              "DOI": "10.1017/CBO9780511626227"
+            },
+            {
+              "key": "e_1_3_2_2_2",
+              "unstructured": "Hofmeister W. (1868) in Handbuch der Physiologischen Botanik eds. Bary A. d. Irmisch T. H. & Sachs J. (Engelmann Leipzig Germany) pp. 405\u2013664."
+            },
+            {
+              "key": "e_1_3_2_3_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rstb.1932.0001"
+            },
+            {
+              "key": "e_1_3_2_4_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rstb.1951.0007"
+            },
+            {
+              "key": "e_1_3_2_5_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1006/anbo.1996.0062"
+            },
+            {
+              "key": "e_1_3_2_6_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1006/jtbi.1996.0024"
+            },
+            {
+              "key": "e_1_3_2_7_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1104/pp.60.1.127"
+            },
+            {
+              "key": "e_1_3_2_8_2",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Meinhardt H. Koch A.-J. & Bernasconi G. (1998) in Symmetry in Plants eds. Barabe D. & Jean R. V. (World Scientific Singapore) pp. 723\u2013758.",
+              "DOI": "10.1142/9789814261074_0027"
+            },
+            {
+              "key": "e_1_3_2_9_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1105/tpc.12.4.507"
+            },
+            {
+              "key": "e_1_3_2_10_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nature02081"
+            },
+            {
+              "key": "e_1_3_2_11_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1365-313X.2002.01448.x"
+            },
+            {
+              "key": "e_1_3_2_12_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0092-8674(03)00924-3"
+            },
+            {
+              "key": "e_1_3_2_13_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1105/tpc.13.4.843"
+            },
+            {
+              "key": "e_1_3_2_14_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1365-313X.2005.02581.x"
+            },
+            {
+              "key": "e_1_3_2_15_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.0500185102"
+            },
+            {
+              "key": "e_1_3_2_16_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/aob/mci083"
+            },
+            {
+              "key": "e_1_3_2_17_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1365-313X.2001.01173.x"
+            },
+            {
+              "key": "e_1_3_2_18_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1105/tpc.105.034637"
+            },
+            {
+              "key": "e_1_3_2_19_2",
+              "first-page": "4521",
+              "volume": "132",
+              "year": "2005",
+              "unstructured": "Vieten, A., Vanneste, S., Wisniewska, J., Benkov\u00e1, E., Benjamins, R., Beeckman, T., Luschnig, C. & Friml, J. (2005) Development (Cambridge, U.K.) 132, 4521\u20134531.",
+              "journal-title": "Development (Cambridge, U.K.)"
+            },
+            {
+              "key": "e_1_3_2_20_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nature03633"
+            },
+            {
+              "key": "e_1_3_2_21_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1104/pp.013623"
+            },
+            {
+              "key": "e_1_3_2_22_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s00425-002-0847-9"
+            },
+            {
+              "key": "e_1_3_2_23_2",
+              "first-page": "155",
+              "volume": "8",
+              "year": "1996",
+              "unstructured": "Elliott, R. C., Betzner, A. S., Huttner, E., Oakes, M. P., Tucker, W. Q., Gerentes, D., Perez, P. & Smyth, D. R. (1996) Plant Cell 8, 155\u2013168.8742707",
+              "journal-title": "Plant Cell"
+            },
+            {
+              "key": "e_1_3_2_24_2",
+              "first-page": "5",
+              "volume": "237",
+              "year": "1952",
+              "unstructured": "Turing, A. (1952) Philos. Trans. R. Soc. London B 237, 5\u201372.",
+              "journal-title": "Philos. Trans. R. Soc. London B"
+            },
+            {
+              "key": "e_1_3_2_25_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S1360-1385(01)01894-5"
+            },
+            {
+              "key": "e_1_3_2_26_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1104/pp.105.060483"
+            },
+            {
+              "key": "e_1_3_2_27_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1365-313X.1994.6010001.x"
+            },
+            {
+              "key": "e_1_3_2_28_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/3869249"
+            },
+            {
+              "key": "e_1_3_2_29_2",
+              "first-page": "15",
+              "volume": "132",
+              "year": "2005",
+              "unstructured": "Reinhardt, D., Frenz, M., Mandel, T. & Kuhlemeier, C. (2005) Development (Cambridge, U.K.) 132, 15\u201326.",
+              "journal-title": "Development (Cambridge, U.K.)"
+            },
+            {
+              "key": "e_1_3_2_30_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rstb.1981.0154"
+            },
+            {
+              "key": "e_1_3_2_31_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.jtbi.2005.03.017"
+            },
+            {
+              "key": "e_1_3_2_32_2",
+              "first-page": "79",
+              "volume": "207",
+              "year": "1980",
+              "unstructured": "Mitchison, G. J. (1980) Philos. Trans. R. Soc. London B 207, 79\u2013109.",
+              "journal-title": "Philos. Trans. R. Soc. London B"
+            },
+            {
+              "key": "e_1_3_2_33_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0065-2296(08)60351-1"
+            },
+            {
+              "key": "e_1_3_2_34_2",
+              "first-page": "313",
+              "volume": "3062",
+              "year": "2003",
+              "unstructured": "Smith, C., Prusinkiewicz, P. & Samavati, F. (2003) Lecture Notes in Computer Science (Springer, Berlin) Vol. 3062, pp. 313\u2013327.",
+              "journal-title": "Lecture Notes in Computer Science"
+            }
+          ],
+          "container-title": [
+            "Proceedings of the National Academy of Sciences"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://pnas.org/doi/pdf/10.1073/pnas.0510457103",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2022,
+                4,
+                12
+              ]
+            ],
+            "date-time": "2022-04-12T13:49:00Z",
+            "timestamp": 1649771340000
+          },
+          "score": 35.089348,
+          "resource": {
+            "primary": {
+              "URL": "https://pnas.org/doi/full/10.1073/pnas.0510457103"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2006,
+                1,
+                23
+              ]
+            ]
+          },
+          "references-count": 34,
+          "journal-issue": {
+            "issue": "5",
+            "published-print": {
+              "date-parts": [
+                [
+                  2006,
+                  1,
+                  31
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1073/pnas.0510457103"
+          ],
+          "URL": "https://doi.org/10.1073/pnas.0510457103",
+          "ISSN": [
+            "0027-8424",
+            "1091-6490"
+          ],
+          "issn-type": [
+            {
+              "value": "0027-8424",
+              "type": "print"
+            },
+            {
+              "value": "1091-6490",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2006,
+                1,
+                23
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "2005-10-22",
+              "order": 0,
+              "name": "received",
+              "label": "Received",
+              "group": {
+                "name": "publication_history",
+                "label": "Publication History"
+              }
+            },
+            {
+              "value": "2006-01-23",
+              "order": 2,
+              "name": "published",
+              "label": "Published",
+              "group": {
+                "name": "publication_history",
+                "label": "Publication History"
+              }
+            }
+          ]
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2025,
+                11,
+                25
+              ]
+            ],
+            "date-time": "2025-11-25T05:10:05Z",
+            "timestamp": 1764047405997,
+            "version": "3.41.2"
+          },
+          "posted": {
+            "date-parts": [
+              [
+                2025
+              ]
+            ]
+          },
+          "group-title": "SSRN",
+          "reference-count": 42,
+          "publisher": "Elsevier BV",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "DOI": "10.2139/ssrn.5374572",
+          "type": "posted-content",
+          "created": {
+            "date-parts": [
+              [
+                2025,
+                8,
+                1
+              ]
+            ],
+            "date-time": "2025-08-01T18:20:10Z",
+            "timestamp": 1754072410000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 1,
+          "title": [
+            "A Plausible Model of Phyllotaxis Patterning from a Single Apical Cell"
+          ],
+          "prefix": "10.2139",
+          "author": [
+            {
+              "given": "Joseph",
+              "family": "Cammarata",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "S\u00f6ren",
+              "family": "Strauss",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Brendan",
+              "family": "Lane",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Robert",
+              "family": "Kelly-Bellow",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Laure",
+              "family": "Mancini",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Teva",
+              "family": "Vernoux",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Yoan",
+              "family": "Coudert",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Adrienne  H. K.",
+              "family": "Roeder",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Richard S.",
+              "family": "Smith",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "78",
+          "reference": [
+            {
+              "issue": "4",
+              "key": "ref1",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1016/j.tplants.2023.11.003",
+              "article-title": "Re-examining meristems through the lens of evo-devo",
+              "volume": "29",
+              "author": "M Arnoux-Courseaux",
+              "year": "2024",
+              "journal-title": "Trends in Plant Science"
+            },
+            {
+              "key": "ref2",
+              "author": "P Barbier De Reuille",
+              "year": "2015",
+              "journal-title": "MorphoGraphX: A platform for quantifying"
+            },
+            {
+              "issue": "23",
+              "key": "ref3",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1016/j.cub.2014.09.054",
+              "article-title": "Plasma Membrane-Targeted PIN Proteins Drive Shoot Development in a Moss",
+              "volume": "24",
+              "author": "T A Bennett",
+              "year": "2014",
+              "journal-title": "Current Biology"
+            },
+            {
+              "issue": "7483",
+              "key": "ref4",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1038/nature12791",
+              "article-title": "Cytokinin signalling inhibitory fields provide robustness to phyllotaxis",
+              "author": "F Besnard",
+              "year": "2014",
+              "journal-title": "Nature"
+            },
+            {
+              "issue": "15",
+              "key": "ref5",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1073/pnas.1011866108",
+              "article-title": "Universal rule for the symmetric division of plant cells",
+              "volume": "108",
+              "author": "S Besson",
+              "year": "2011",
+              "journal-title": "Proceedings of the National Academy of Sciences"
+            },
+            {
+              "issue": "21",
+              "key": "ref6",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1093/jxb/erad299",
+              "article-title": "The ratio of auxin to cytokinin controls leaf development and meristem initiation in Physcomitrium patens",
+              "volume": "74",
+              "author": "J Cammarata",
+              "year": "2023",
+              "journal-title": "Journal of Experimental Botany"
+            },
+            {
+              "issue": "7",
+              "key": "ref7",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1016/j.cell.2009.04.018",
+              "article-title": "BASL Controls Asymmetric Cell Division in Arabidopsis",
+              "volume": "137",
+              "author": "J Dong",
+              "year": "2009",
+              "journal-title": "Cell"
+            },
+            {
+              "issue": "3",
+              "key": "ref8",
+              "article-title": "Phyllotaxis as a Dynamical Self Organizing Process Part I: The Spiral Modes Resulting from Time-Periodic Iterations",
+              "volume": "178",
+              "author": "S Douady",
+              "year": "1996",
+              "journal-title": "Journal of Theoretical Biology"
+            },
+            {
+              "key": "ref9",
+              "first-page": "395",
+              "article-title": "Uber Zellformen und Seifenblasen",
+              "volume": "34",
+              "author": "L Errera",
+              "year": "1888",
+              "journal-title": "Bot. Centralbl"
+            },
+            {
+              "key": "ref10",
+              "doi-asserted-by": "crossref",
+              "first-page": "223",
+              "DOI": "10.1109/ISBI.2019.8759242",
+              "article-title": "CNN-Based Preprocessing to Optimize Watershed-Based Cell Segmentation in 3D Confocal Microscopy Images",
+              "author": "D Eschweiler",
+              "year": "2019",
+              "journal-title": "IEEE 16th International Symposium on Biomedical Imaging (ISBI 2019)"
+            },
+            {
+              "key": "ref11",
+              "first-page": "9",
+              "author": "C S Galvan-Ampudia",
+              "year": "2020",
+              "journal-title": "Temporal integration of auxin information for the regulation of patterning. eLife"
+            },
+            {
+              "issue": "4",
+              "key": "ref12",
+              "article-title": "Diversity of phyllotaxis in land plants in reference to the shoot apical meristem structure",
+              "volume": "85",
+              "author": "E M Gola",
+              "year": "2016",
+              "journal-title": "Acta Societatis Botanicorum Poloniae"
+            },
+            {
+              "issue": "6",
+              "key": "ref13",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1016/j.cub.2009.02.050",
+              "article-title": "Local Cues and Asymmetric Cell Divisions Underpin Body Plan Transitions in the Moss Physcomitrella patens",
+              "volume": "19",
+              "author": "C J Harrison",
+              "year": "2009",
+              "journal-title": "Current Biology"
+            },
+            {
+              "key": "ref14",
+              "article-title": "Nuclear positioning and cell division site specification in plants",
+              "author": "O S Hazelwood",
+              "year": "2025",
+              "journal-title": "Journal of Experimental Botany"
+            },
+            {
+              "issue": "1",
+              "key": "ref15",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.5586/asbp.1984.004",
+              "article-title": "Trajectories of principal directions of growth, natural coordinate system in growing plant organ",
+              "volume": "53",
+              "author": "Z Hejnowicz",
+              "year": "1984",
+              "journal-title": "Acta Societatis Botanicorum Poloniae"
+            },
+            {
+              "key": "ref16",
+              "first-page": "259",
+              "article-title": "Zusatze und Berichtigungen zu den 1851 veroffentlichen Untersuchungen der Entwicklung hoherer Kryptogamen",
+              "volume": "3",
+              "author": "W Hofmeister",
+              "year": "1863",
+              "journal-title": "Jahrb. Wiss. Bot"
+            },
+            {
+              "key": "ref17",
+              "author": "W Hofmeister",
+              "year": "1865",
+              "journal-title": "Handbuch der physiologischen Botanik"
+            },
+            {
+              "issue": "5",
+              "key": "ref18",
+              "article-title": "An auxin-driven polarized transport model for phyllotaxis",
+              "volume": "103",
+              "author": "H J\ufffdnsson",
+              "year": "2006",
+              "journal-title": "Proceedings of the National Academy of Sciences"
+            },
+            {
+              "issue": "3",
+              "key": "ref19",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1007/s10265-021-01298-0",
+              "article-title": "Rotation angle of stem cell division plane controls spiral phyllotaxis in mosses",
+              "volume": "134",
+              "author": "N Kamamoto",
+              "year": "2021",
+              "journal-title": "Journal of Plant Research"
+            },
+            {
+              "issue": "5",
+              "key": "ref20",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1093/jxb/eru482",
+              "article-title": "Meristem size contributes to the robustness of phyllotaxis in Arabidopsis",
+              "volume": "66",
+              "author": "B Landrein",
+              "year": "2015",
+              "journal-title": "Journal of Experimental Botany"
+            },
+            {
+              "key": "ref21",
+              "first-page": "11",
+              "author": "E Laruelle",
+              "year": "2022",
+              "journal-title": "Large-scale analysis and computer modeling reveal hidden regularities behind variability of cell division patterns in Arabidopsis thaliana embryogenesis"
+            },
+            {
+              "issue": "5949",
+              "key": "ref22",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1038/307363a0",
+              "article-title": "Stress-induced alignment of division plane in plant tissues grown in vitro",
+              "volume": "307",
+              "author": "P M Lintilhac",
+              "year": "1984",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "ref23",
+              "article-title": "How does the cytoskeleton read the laws of geometry in aligning the division plane of plant cells?",
+              "volume": "113",
+              "author": "C W Lloyd",
+              "year": "1991",
+              "journal-title": "Article Supplement_1"
+            },
+            {
+              "issue": "30",
+              "key": "ref24",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1073/pnas.1600677113",
+              "article-title": "Cell division plane orientation based on tensile stress in Arabidopsis thaliana",
+              "volume": "113",
+              "author": "M Louveaux",
+              "year": "2016",
+              "journal-title": "Proceedings of the National Academy of Sciences"
+            },
+            {
+              "issue": "10",
+              "key": "ref25",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1105/tpc.18.00401",
+              "article-title": "Predicting Division Planes of Three-Dimensional Cells by Soap-Film Minimization",
+              "volume": "30",
+              "author": "P Martinez",
+              "year": "2018",
+              "journal-title": "The Plant Cell"
+            },
+            {
+              "issue": "1",
+              "key": "ref26",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1088/1478-3975/aa5698",
+              "article-title": "On the micro-indentation of plant cells in a tissue context",
+              "volume": "14",
+              "author": "G Mosca",
+              "year": "2017",
+              "journal-title": "Physical Biology"
+            },
+            {
+              "issue": "2",
+              "key": "ref27",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1371/journal.pcbi.1006771",
+              "article-title": "Cell geometry determines symmetric and asymmetric division plane selection in Arabidopsis early embryos",
+              "volume": "15",
+              "author": "J Moukhtar",
+              "year": "2019",
+              "journal-title": "PLOS Computational Biology"
+            },
+            {
+              "issue": "22",
+              "key": "ref28",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1016/j.cub.2020.09.087",
+              "article-title": "Opposing, Polarity-Driven Nuclear Migrations Underpin Asymmetric Divisions to Pattern Arabidopsis Stomata",
+              "volume": "30",
+              "author": "A Muroyama",
+              "year": "2020",
+              "journal-title": "Current Biology"
+            },
+            {
+              "issue": "1",
+              "key": "ref29",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1093/plcell/koab218",
+              "article-title": "The bryophytes Physcomitrium patens and Marchantia polymorpha as model systems for studying evolutionary cell and developmental biology in plants",
+              "volume": "34",
+              "author": "S Naramoto",
+              "year": "2022",
+              "journal-title": "The Plant Cell"
+            },
+            {
+              "issue": "2",
+              "key": "ref30",
+              "article-title": "Evolution of polarity protein BASL and the capacity for stomatal lineage asymmetric divisions",
+              "volume": "32",
+              "author": "I Nir",
+              "year": "2022",
+              "journal-title": "Current Biology"
+            },
+            {
+              "issue": "2",
+              "key": "ref31",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1111/nph.15183",
+              "article-title": "An overview of plant division-plane orientation",
+              "volume": "219",
+              "author": "C G Rasmussen",
+              "year": "2018",
+              "journal-title": "New Phytologist"
+            },
+            {
+              "issue": "6964",
+              "key": "ref32",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1038/nature02081",
+              "article-title": "Regulation of phyllotaxis by polar auxin transport",
+              "volume": "426",
+              "author": "D Reinhardt",
+              "year": "2003",
+              "journal-title": "Nature"
+            },
+            {
+              "issue": "6048",
+              "key": "ref33",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1126/science.1202185",
+              "article-title": "Generation of Spatial Patterns Through Cell Polarity Switching",
+              "volume": "333",
+              "author": "S Robinson",
+              "year": "2011",
+              "journal-title": "Science"
+            },
+            {
+              "key": "ref34",
+              "author": "M H Rowe",
+              "year": "2019",
+              "journal-title": "A Plant-Specific Polarity Module Establishes Cell Fate Asymmetry in the Arabidopsis Stomatal Lineage"
+            },
+            {
+              "issue": "1",
+              "key": "ref35",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1007/s12229-023-09287-9",
+              "article-title": "Phylogenetic, Developmental and Functional Aspects of Stomatal Patterning: Lessons from Magnoliids",
+              "volume": "89",
+              "author": "P J Rudall",
+              "year": "2023",
+              "journal-title": "The Botanical Review"
+            },
+            {
+              "key": "ref36",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1038/35048050",
+              "article-title": "Plant cell division: Building walls in the right places",
+              "author": "Smith",
+              "year": "2001",
+              "journal-title": "Nature Reviews Molecular Cell Biology"
+            },
+            {
+              "issue": "5",
+              "key": "ref37",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1073/pnas.0510457103",
+              "article-title": "A plausible model of phyllotaxis",
+              "volume": "103",
+              "author": "R S Smith",
+              "year": "2006",
+              "journal-title": "Proceedings of the National Academy of Sciences"
+            },
+            {
+              "key": "ref38",
+              "author": "S Strauss",
+              "year": "2022",
+              "journal-title": "Using positional information to provide context for biological image analysis"
+            },
+            {
+              "issue": "2",
+              "key": "ref39",
+              "article-title": "Phyllotaxis from a Single Apical Cell",
+              "volume": "26",
+              "author": "E V\ufffdron",
+              "year": "2021",
+              "journal-title": "Trends in Plant Science"
+            },
+            {
+              "key": "ref40",
+              "first-page": "9",
+              "author": "A Wolny",
+              "year": "2020",
+              "journal-title": "Accurate and versatile 3D segmentation of plant tissues at cellular resolution. eLife"
+            },
+            {
+              "issue": "1",
+              "key": "ref41",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1016/j.devcel.2014.02.002",
+              "article-title": "Genetic Control of Plant Development by Overriding a Geometric Division Rule",
+              "volume": "29",
+              "author": "S Yoshida",
+              "year": "2014",
+              "journal-title": "Developmental Cell"
+            },
+            {
+              "issue": "12",
+              "key": "ref42",
+              "article-title": "Chiral events in developing gametophores of Physcomitrella patens and other moss species are driven by an unknown, universal direction-sensing mechanism",
+              "volume": "105",
+              "author": "B Zag\ufffdrska-Marek",
+              "year": "2018",
+              "journal-title": "American Journal of Botany"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2025,
+                8,
+                1
+              ]
+            ],
+            "date-time": "2025-08-01T18:33:28Z",
+            "timestamp": 1754073208000
+          },
+          "score": 28.477177,
+          "resource": {
+            "primary": {
+              "URL": "https://www.ssrn.com/abstract=5374572"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2025
+              ]
+            ]
+          },
+          "references-count": 42,
+          "URL": "https://doi.org/10.2139/ssrn.5374572",
+          "published": {
+            "date-parts": [
+              [
+                2025
+              ]
+            ]
+          },
+          "subtype": "preprint"
+        },
+        {
+          "institution": [
+            {
+              "name": "bioRxiv"
+            }
+          ],
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                1,
+                15
+              ]
+            ],
+            "date-time": "2026-01-15T12:39:05Z",
+            "timestamp": 1768480745134,
+            "version": "3.49.0"
+          },
+          "posted": {
+            "date-parts": [
+              [
+                2018,
+                8,
+                23
+              ]
+            ]
+          },
+          "group-title": "Plant Biology",
+          "reference-count": 34,
+          "publisher": "openRxiv",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "accepted": {
+            "date-parts": [
+              [
+                2018,
+                8,
+                23
+              ]
+            ]
+          },
+          "abstract": "<jats:title>Abstract</jats:title>\n                <jats:p>Polar auxin transport lies at the core of many self-organizing phenomena sustaining continuous plant organogenesis. In angiosperms, the shoot apical meristem is a potentially unique system in which the two main modes of auxin-driven patterning\u2014 convergence and canalization\u2014co-occur in a coordinated manner and in a fully three-dimensional geometry. In the epidermal layer, convergence points form, from which auxin is canalized towards inner tissue. Each of these two patterning processes has been extensively investigated separately, but the integration of both in the shoot apical meristem remains poorly understood. We present here a first attempt of a three-dimensional model of auxin-driven patterning during phyllotaxis. We base our simulations on a biochemically plausible mechanism of auxin transport proposed by Cieslak et al. (2015) which generates both convergence and canalization patterns. We are able to reproduce most of the dynamics of PIN1 polarization in the meristem, and we explore how the epidermal and inner cell layers act in concert during phyllotaxis. In addition, we discuss the mechanism by which initiating veins connect to the already existing vascular system.</jats:p>\n                <jats:sec>\n                  <jats:title>Author summary</jats:title>\n                  <jats:p>The regularity of leaf arrangement around stems has long puzzled scientists. The key role played by the plant hormone auxin is now well established. On the surface of the tissue responsible for leaf formation, auxin accumulates at several points, from which new leaves eventually emerge. Auxin also guides the progression of new veins from the nascent leaves to the vascular system of the plant. Models of auxin transport have been developed to explain either auxin accumulation or auxin-driven venation. We propose the first three-dimensional model embracing both phenomena using a unifying mechanism of auxin transport. This integrative approach allows an assessment of our present knowledge on how auxin contributes to the early development of leaves. Our model reproduces many observations of auxin dynamics. It highlights how the inner and epidermal tissues act together to position new leaves. We also show that an additional, yet unknown, mechanism is required to attract new developing veins towards the main vasculature of the plant.</jats:p>\n                </jats:sec>",
+          "DOI": "10.1101/398628",
+          "type": "posted-content",
+          "created": {
+            "date-parts": [
+              [
+                2018,
+                8,
+                23
+              ]
+            ],
+            "date-time": "2018-08-23T09:55:30Z",
+            "timestamp": 1535018130000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Toward a 3D model of phyllotaxis based on a biochemically plausible auxin-transport mechanism"
+          ],
+          "prefix": "10.64898",
+          "author": [
+            {
+              "ORCID": "https://orcid.org/0000-0001-6225-1268",
+              "authenticated-orcid": false,
+              "given": "F\u00e9lix P.",
+              "family": "Hartmann",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0002-9970-765X",
+              "authenticated-orcid": false,
+              "given": "Pierre Barbier de",
+              "family": "Reuille",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0003-2440-5937",
+              "authenticated-orcid": false,
+              "given": "Cris",
+              "family": "Kuhlemeier",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "54368",
+          "reference": [
+            {
+              "key": "2019072204355134000_398628v1.1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.0510130103"
+            },
+            {
+              "key": "2019072204355134000_398628v1.2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.0509839103"
+            },
+            {
+              "key": "2019072204355134000_398628v1.3",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.0510457103"
+            },
+            {
+              "key": "2019072204355134000_398628v1.4",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pcbi.1000207"
+            },
+            {
+              "key": "2019072204355134000_398628v1.5",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nature02081"
+            },
+            {
+              "key": "2019072204355134000_398628v1.6",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s00425-010-1280-0"
+            },
+            {
+              "key": "2019072204355134000_398628v1.7",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.devcel.2013.08.017"
+            },
+            {
+              "key": "2019072204355134000_398628v1.8",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1101/gad.497009"
+            },
+            {
+              "key": "2019072204355134000_398628v1.9",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Runions A , Smith RS , Prusinkiewicz P. In: Za\u017e\u0131\u0131malov\u00e1 E , Petr\u00e1\u0161ek J , Benkov\u00e1 E , editors. Computational Models of Auxin-Driven Development. Vienna: Springer Vienna; 2014. p. 315\u2013357.",
+              "DOI": "10.1007/978-3-7091-1526-8_15"
+            },
+            {
+              "key": "2019072204355134000_398628v1.10",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/sciadv.1500989"
+            },
+            {
+              "key": "2019072204355134000_398628v1.11",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Prusinkiewicz P , Lane B. In: Capasso V , Gromov M , Harel-Bellan A , Morozova N , Pritchard LL , editors. Modeling Morphogenesis in Multicellular Structures with Cell Complexes and L-systems. Berlin, Heidelberg: Springer Berlin Heidelberg; 2013. p. 137\u2013151.",
+              "DOI": "10.1007/978-3-642-20164-6_12"
+            },
+            {
+              "key": "2019072204355134000_398628v1.12",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.devcel.2014.02.002"
+            },
+            {
+              "key": "2019072204355134000_398628v1.13",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.tplants.2007.08.004"
+            },
+            {
+              "key": "2019072204355134000_398628v1.14",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.tig.2013.11.001"
+            },
+            {
+              "key": "2019072204355134000_398628v1.15",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pcbi.1003447"
+            },
+            {
+              "key": "2019072204355134000_398628v1.16",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/msb.2010.103"
+            },
+            {
+              "key": "2019072204355134000_398628v1.17",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1242/dev.062984"
+            },
+            {
+              "key": "2019072204355134000_398628v1.18",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.7554/eLife.18165"
+            },
+            {
+              "key": "2019072204355134000_398628v1.19",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s00344-006-0066-x"
+            },
+            {
+              "key": "2019072204355134000_398628v1.20",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.0306308101"
+            },
+            {
+              "key": "2019072204355134000_398628v1.21",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/jxb/erv262"
+            },
+            {
+              "key": "2019072204355134000_398628v1.22",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rspb.1980.0015"
+            },
+            {
+              "key": "2019072204355134000_398628v1.23",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rstb.1981.0154"
+            },
+            {
+              "key": "2019072204355134000_398628v1.24",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1365-313X.2005.02581.x"
+            },
+            {
+              "key": "2019072204355134000_398628v1.25",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1242/dev.02027"
+            },
+            {
+              "key": "2019072204355134000_398628v1.26",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Smith C , Prusinkiewicz P , Samavati F. In: Pfaltz JL , Nagl M , B\u00f6hlen B , editors. Local Specification of Surface Subdivision Algorithms. Berlin, Heidelberg: Springer Berlin Heidelberg; 2004. p. 313\u2013327.",
+              "DOI": "10.1007/978-3-540-25959-6_23"
+            },
+            {
+              "key": "2019072204355134000_398628v1.27",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF02189330"
+            },
+            {
+              "key": "2019072204355134000_398628v1.28",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/msb.2011.39"
+            },
+            {
+              "key": "2019072204355134000_398628v1.29",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1101/gad.462608"
+            },
+            {
+              "key": "2019072204355134000_398628v1.30",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1365-3040.2009.01997.x"
+            },
+            {
+              "key": "2019072204355134000_398628v1.31",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.1202040109"
+            },
+            {
+              "key": "2019072204355134000_398628v1.32",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/msb.2011.72"
+            },
+            {
+              "issue": "8",
+              "key": "2019072204355134000_398628v1.33",
+              "doi-asserted-by": "crossref",
+              "first-page": "1477",
+              "DOI": "10.1242/dev.125.8.1477",
+              "article-title": "Symplasmic fields in the tunica of the shoot apical meristem coordinate morphogenetic events",
+              "volume": "125",
+              "year": "1998",
+              "journal-title": "Development."
+            },
+            {
+              "key": "2019072204355134000_398628v1.34",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1105/tpc.112.097766"
+            }
+          ],
+          "link": [
+            {
+              "URL": "https://syndication.highwire.org/content/doi/10.1101/398628",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2026,
+                1,
+                14
+              ]
+            ],
+            "date-time": "2026-01-14T22:52:13Z",
+            "timestamp": 1768431133000
+          },
+          "score": 24.925968,
+          "resource": {
+            "primary": {
+              "URL": "http://biorxiv.org/lookup/doi/10.1101/398628"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2018,
+                8,
+                23
+              ]
+            ]
+          },
+          "references-count": 34,
+          "URL": "https://doi.org/10.1101/398628",
+          "relation": {
+            "is-preprint-of": [
+              {
+                "id-type": "doi",
+                "id": "10.1371/journal.pcbi.1006896",
+                "asserted-by": "subject"
+              }
+            ]
+          },
+          "published": {
+            "date-parts": [
+              [
+                2018,
+                8,
+                23
+              ]
+            ]
+          },
+          "subtype": "preprint"
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

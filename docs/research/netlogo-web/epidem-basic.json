@@ -1,0 +1,97 @@
+{
+  "slug": "epidem-basic",
+  "name": "epiDEM Basic",
+  "catalogPath": "Curricular Models/epiDEM/epiDEM Basic",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/epiDEM/epiDEM%20Basic.nlogox",
+  "deliveryBatch": "B09",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "How does an initially rare infection spread through a susceptible population? NetLogo epiDEM Basic is explicitly based on the Kermack–McKendrick epidemic framework [1], but makes individual movement and infection events visible. Susceptible, infectious, and recovered states evolve in a closed population with no births, deaths, or travel. Community-size research [2] and stochastic reaction methods [3] help distinguish finite random realizations from deterministic aggregate equations. These references contextualize the model; they do not imply that its stepping algorithm is Gillespie's method. The simulation illustrates depletion of susceptible individuals and outbreak variability. Its stylized contacts, fixed biological assumptions, and uncalibrated parameters do not establish a forecast for any named disease or community.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/epiDEM/epiDEM%20Basic.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/epiDEM/epiDEM%20Basic.nlogox",
+    "revision": "Best available served NetLogo Web artifact retrieved on 2026-11-05; SHA-256 049c5556e76cf22b7ec76e801c09134d02cf29619ea46c8c9578e9862be2c07a",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served .nlogox downloaded; Info mechanism descriptions, credits and reference sections inspected. Procedures are not independently audited by this literature task. Source provenance is separate from City Library reimplementation and target-runtime verification.",
+    "evidenceFile": "evidence/biology/epidem-basic.nlogox",
+    "infoFile": "evidence/biology/epidem-basic-info.txt",
+    "originalModelCitation": "* Yang, C. and Wilensky, U. (2011).  NetLogo epiDEM Basic model.  http://ccl.northwestern.edu/netlogo/models/epiDEMBasic.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "notes": "Original/served model is the behavioral baseline. This research does not claim implementation or browser acceptance."
+  },
+  "publications": [
+    {
+      "id": "kermack",
+      "authors": [
+        "William Ogilvy Kermack",
+        "A. G. McKendrick"
+      ],
+      "title": "A contribution to the mathematical theory of epidemics",
+      "year": 1927,
+      "venue": "Proceedings of the Royal Society of London. Series A, Containing Papers of a Mathematical and Physical Character",
+      "doi": "10.1098/rspa.1927.0118",
+      "url": "https://doi.org/10.1098/rspa.1927.0118",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1098%2Frspa.1927.0118",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-abstract-and-metadata",
+        "access": "Publisher-deposited abstract and metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/kermack-crossref-direct.json"
+      },
+      "verified": true,
+      "volume": "115",
+      "issue": "772",
+      "pages": "700-721",
+      "relevance": "The Info explicitly identifies the Kermack–McKendrick model as the mathematical basis."
+    },
+    {
+      "id": "bartlett",
+      "authors": [
+        "M. S. Bartlett"
+      ],
+      "title": "Measles Periodicity and Community Size",
+      "year": 1957,
+      "venue": "Journal of the Royal Statistical Society. Series A (General)",
+      "doi": "10.2307/2342553",
+      "url": "https://doi.org/10.2307/2342553",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Measles+periodicity+and+community+size+Bartlett+1957&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-metadata",
+        "access": "Crossref publisher-deposited metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/bartlett-crossref-search.json"
+      },
+      "verified": true,
+      "volume": "120",
+      "issue": "1",
+      "pages": "48",
+      "relevance": "Community-size evidence emphasizes finite-population effects absent from deterministic compartment equations."
+    },
+    {
+      "id": "gillespie",
+      "authors": [
+        "Daniel T. Gillespie"
+      ],
+      "title": "Exact stochastic simulation of coupled chemical reactions",
+      "year": 1977,
+      "venue": "The Journal of Physical Chemistry",
+      "doi": "10.1021/j100540a008",
+      "url": "https://doi.org/10.1021/j100540a008",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Exact+stochastic+simulation+of+coupled+chemical+reactions+Gillespie+1977&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-metadata",
+        "access": "Crossref publisher-deposited metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/gillespie-crossref-search.json"
+      },
+      "verified": true,
+      "volume": "81",
+      "issue": "25",
+      "pages": "2340-2361",
+      "relevance": "Provides a formal stochastic-event comparison for interpreting agent-level randomness without asserting algorithmic equivalence."
+    }
+  ],
+  "gaps": []
+}

@@ -1,0 +1,522 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          3
+        ]
+      ],
+      "date-time": "2026-10-03T23:59:37Z",
+      "timestamp": 1791071977265,
+      "version": "4.1.0"
+    },
+    "reference-count": 36,
+    "publisher": "Elsevier BV",
+    "issue": "1-3",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              1990,
+              9,
+              1
+            ]
+          ],
+          "date-time": "1990-09-01T00:00:00Z",
+          "timestamp": 652147200000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "Physica D: Nonlinear Phenomena"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          1990,
+          9
+        ]
+      ]
+    },
+    "DOI": "10.1016/0167-2789(90)90178-r",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2002,
+          10,
+          17
+        ]
+      ],
+      "date-time": "2002-10-17T15:58:10Z",
+      "timestamp": 1034870290000
+    },
+    "page": "122-135",
+    "source": "Crossref",
+    "is-referenced-by-count": 21,
+    "title": [
+      "Criticality in cellular automata"
+    ],
+    "prefix": "10.1016",
+    "volume": "45",
+    "author": [
+      {
+        "given": "Hugues",
+        "family": "Chat\u00e9",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Paul",
+        "family": "Manneville",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "78",
+    "reference": [
+      {
+        "key": "10.1016/0167-2789(90)90178-R_BIB1_1",
+        "series-title": "Problems in quantifying self-generated complexity",
+        "author": "Grassberger",
+        "year": "1989"
+      },
+      {
+        "key": "10.1016/0167-2789(90)90178-R_BIB1_2",
+        "doi-asserted-by": "crossref",
+        "first-page": "585",
+        "DOI": "10.1007/BF01886523",
+        "article-title": "On the nature and origin of complexity in discrete, homogeneous, locally interacting systems",
+        "volume": "16",
+        "author": "Bennett",
+        "year": "1986",
+        "journal-title": "Found. Phys."
+      },
+      {
+        "key": "10.1016/0167-2789(90)90178-R_BIB1_3",
+        "first-page": "409",
+        "article-title": "Complexity measures and cellular automata",
+        "volume": "2",
+        "author": "Lindgren",
+        "year": "1988",
+        "journal-title": "Complex Systems"
+      },
+      {
+        "key": "10.1016/0167-2789(90)90178-R_BIB2_1",
+        "series-title": "Percolation Structures and Processes",
+        "first-page": "425",
+        "article-title": "Directed percolation",
+        "volume": "5",
+        "author": "Kinzel",
+        "year": "1983"
+      },
+      {
+        "key": "10.1016/0167-2789(90)90178-R_BIB2_2",
+        "doi-asserted-by": "crossref",
+        "first-page": "229",
+        "DOI": "10.1007/BF01309255",
+        "volume": "58",
+        "year": "1985",
+        "journal-title": "Z. Phys. B"
+      },
+      {
+        "key": "10.1016/0167-2789(90)90178-R_BIB3",
+        "doi-asserted-by": "crossref",
+        "first-page": "1",
+        "DOI": "10.1016/0167-2789(84)90245-8",
+        "article-title": "Universality and complexity in cellular automata",
+        "volume": "10",
+        "author": "Wolfram",
+        "year": "1984",
+        "journal-title": "Physica D"
+      },
+      {
+        "key": "10.1016/0167-2789(90)90178-R_BIB4",
+        "first-page": "177",
+        "article-title": "Undecidability in classification schemes",
+        "volume": "2",
+        "author": "Culik",
+        "year": "1988",
+        "journal-title": "Complex Systems"
+      },
+      {
+        "key": "10.1016/0167-2789(90)90178-R_BIB5_1",
+        "series-title": "The structure of the elementary cellular automata rule space",
+        "author": "Li",
+        "year": "1989"
+      },
+      {
+        "key": "10.1016/0167-2789(90)90178-R_BIB5_2",
+        "doi-asserted-by": "crossref",
+        "first-page": "77",
+        "DOI": "10.1016/0167-2789(90)90175-O",
+        "article-title": "Transition phenomena in cellular automata rule space",
+        "volume": "45",
+        "author": "Li",
+        "year": "1990",
+        "journal-title": "Physica D"
+      },
+      {
+        "key": "10.1016/0167-2789(90)90178-R_BIB6_1",
+        "doi-asserted-by": "crossref",
+        "first-page": "187",
+        "DOI": "10.1016/0378-4371(90)90437-W",
+        "article-title": "Classification of three-dimensional cellular automata",
+        "volume": "162",
+        "author": "Gerling",
+        "year": "1989",
+        "journal-title": "Physica A"
+      },
+      {
+        "key": "10.1016/0167-2789(90)90178-R_BIB6_2",
+        "doi-asserted-by": "crossref",
+        "first-page": "176",
+        "DOI": "10.1016/0378-4371(90)90436-V",
+        "article-title": "Systematics of transitions of square-lattice cellular automata",
+        "volume": "162",
+        "author": "Manna",
+        "year": "1990",
+        "journal-title": "Physica A"
+      },
+      {
+        "key": "10.1016/0167-2789(90)90178-R_BIB7",
+        "article-title": "Transition vers la turbulence via intermittence spatiotemporelle",
+        "author": "Chat\u00e9",
+        "year": "1989",
+        "journal-title": "Th\u00e8se de l'Universit\u00e9 Pierre et Marie Curie"
+      },
+      {
+        "key": "10.1016/0167-2789(90)90178-R_BIB8",
+        "doi-asserted-by": "crossref",
+        "first-page": "3",
+        "DOI": "10.1016/0167-2789(86)90104-1",
+        "article-title": "Front motion, metastability and subcritical bifurcations in hydrodynamics",
+        "volume": "23",
+        "author": "Pomeau",
+        "year": "1986",
+        "journal-title": "Physica D"
+      },
+      {
+        "key": "10.1016/0167-2789(90)90178-R_BIB9",
+        "series-title": "Physical Fluid Dynamics",
+        "author": "Tritton",
+        "year": "1977"
+      },
+      {
+        "key": "10.1016/0167-2789(90)90178-R_BIB10",
+        "doi-asserted-by": "crossref",
+        "first-page": "112",
+        "DOI": "10.1103/PhysRevLett.58.112",
+        "article-title": "Transition to turbulence via spatiotemporal intermittency",
+        "volume": "58",
+        "author": "Chat\u00e9",
+        "year": "1987",
+        "journal-title": "Phys. Rev. Lett."
+      },
+      {
+        "key": "10.1016/0167-2789(90)90178-R_BIB11",
+        "doi-asserted-by": "crossref",
+        "first-page": "409",
+        "DOI": "10.1016/0167-2789(88)90065-6",
+        "article-title": "Spatiotemporal intermittency in coupled map lattices",
+        "volume": "32",
+        "author": "Chat\u00e9",
+        "year": "1988",
+        "journal-title": "Physica D"
+      },
+      {
+        "key": "10.1016/0167-2789(90)90178-R_BIB12",
+        "doi-asserted-by": "crossref",
+        "first-page": "591",
+        "DOI": "10.1209/0295-5075/6/7/004",
+        "article-title": "Continuous and discontinuous transition to spatiotemporal intermittency in two-dimensional coupled map lattices",
+        "volume": "6",
+        "author": "Chat\u00e9",
+        "year": "1988",
+        "journal-title": "Europhys. Lett."
+      },
+      {
+        "key": "10.1016/0167-2789(90)90178-R_BIB13",
+        "doi-asserted-by": "crossref",
+        "first-page": "33",
+        "DOI": "10.1016/0167-2789(89)90115-2",
+        "article-title": "Role of defects in the transition to turbulence via spatiotemporal intermittency",
+        "volume": "37",
+        "author": "Chat\u00e9",
+        "year": "1989",
+        "journal-title": "Physica D"
+      },
+      {
+        "key": "10.1016/0167-2789(90)90178-R_BIB14",
+        "doi-asserted-by": "crossref",
+        "first-page": "2161",
+        "DOI": "10.1103/PhysRevLett.63.2161",
+        "article-title": "Size dependence, coherence and scaling in turbulent coupled map lattices",
+        "volume": "63",
+        "author": "Bohr",
+        "year": "1989",
+        "journal-title": "Phys. Rev. Lett."
+      },
+      {
+        "key": "10.1016/0167-2789(90)90178-R_BIB15",
+        "doi-asserted-by": "crossref",
+        "first-page": "357",
+        "DOI": "10.1007/BF01044441",
+        "article-title": "Coupled map lattices as cellular automata",
+        "volume": "56",
+        "author": "Chat\u00e9",
+        "year": "1989",
+        "journal-title": "J. Stat. Phys."
+      },
+      {
+        "key": "10.1016/0167-2789(90)90178-R_BIB16",
+        "series-title": "Cellular Automata and Modeling of Complex Physical Systems",
+        "article-title": "Using coupled map lattices to unveil structures in the space of cellular automata",
+        "volume": "Vol. 46",
+        "author": "Chat\u00e9",
+        "year": "1989"
+      },
+      {
+        "key": "10.1016/0167-2789(90)90178-R_BIB17_1",
+        "doi-asserted-by": "crossref",
+        "first-page": "601",
+        "DOI": "10.1103/RevModPhys.55.601",
+        "article-title": "Statistical mechanics of cellular automata",
+        "volume": "55",
+        "author": "Wolfram",
+        "year": "1983",
+        "journal-title": "Rev. Mod. Phys."
+      },
+      {
+        "key": "10.1016/0167-2789(90)90178-R_BIB17_2",
+        "series-title": "Theory and Applications of Cellular Automata",
+        "year": "1986"
+      },
+      {
+        "key": "10.1016/0167-2789(90)90178-R_BIB18",
+        "series-title": "Long-time Prediction in Dynamics",
+        "article-title": "How random is a coin toss?",
+        "author": "Ford",
+        "year": "1983"
+      },
+      {
+        "key": "10.1016/0167-2789(90)90178-R_BIB19",
+        "unstructured": "H. Chat\u00e9 and P. Manneville, unpublished."
+      },
+      {
+        "key": "10.1016/0167-2789(90)90178-R_BIB20_1",
+        "doi-asserted-by": "crossref",
+        "first-page": "18",
+        "DOI": "10.1016/0167-2789(87)90120-5",
+        "article-title": "Local structure theory of cellular automata",
+        "volume": "28",
+        "author": "Gutowitz",
+        "year": "1987",
+        "journal-title": "Physica D"
+      },
+      {
+        "key": "10.1016/0167-2789(90)90178-R_BIB20_2",
+        "first-page": "57",
+        "volume": "1",
+        "year": "1987",
+        "journal-title": "Complex Systems"
+      },
+      {
+        "key": "10.1016/0167-2789(90)90178-R_BIB20_3",
+        "doi-asserted-by": "crossref",
+        "first-page": "495",
+        "DOI": "10.1007/BF01023491",
+        "volume": "54",
+        "year": "1989",
+        "journal-title": "J. Stat. Phys."
+      },
+      {
+        "key": "10.1016/0167-2789(90)90178-R_BIB20_4",
+        "doi-asserted-by": "crossref",
+        "first-page": "136",
+        "DOI": "10.1016/0167-2789(90)90179-S",
+        "article-title": "A hierarchical classification of cellular automata",
+        "volume": "45",
+        "author": "Gutowitz",
+        "year": "1990",
+        "journal-title": "Physica D"
+      },
+      {
+        "key": "10.1016/0167-2789(90)90178-R_BIB21",
+        "doi-asserted-by": "crossref",
+        "first-page": "345",
+        "DOI": "10.1016/0167-2789(90)90193-S",
+        "article-title": "Critical dynamics of one-dimensional irreversible systems",
+        "volume": "45",
+        "author": "Martin",
+        "year": "1990",
+        "journal-title": "Physica D"
+      },
+      {
+        "key": "10.1016/0167-2789(90)90178-R_BIB22",
+        "doi-asserted-by": "crossref",
+        "first-page": "170",
+        "DOI": "10.1088/0031-8949/1985/T9/029",
+        "article-title": "Twenty problems in the theory of cellular automata",
+        "volume": "T9",
+        "author": "Wolfram",
+        "year": "1985",
+        "journal-title": "Physica Scripta"
+      },
+      {
+        "key": "10.1016/0167-2789(90)90178-R_BIB23",
+        "doi-asserted-by": "crossref",
+        "first-page": "95",
+        "DOI": "10.1016/0167-2789(90)90176-P",
+        "article-title": "Is there a sharp phase transition for deterministic cellular automata?",
+        "volume": "45",
+        "author": "Wootters",
+        "year": "1990",
+        "journal-title": "Physica D"
+      },
+      {
+        "key": "10.1016/0167-2789(90)90178-R_BIB24",
+        "doi-asserted-by": "crossref",
+        "first-page": "381",
+        "DOI": "10.1103/PhysRevLett.59.381",
+        "article-title": "Self-organized criticality: an explanation of 1f noise",
+        "volume": "59",
+        "author": "Bak",
+        "year": "1987",
+        "journal-title": "Phys. Rev. Lett."
+      },
+      {
+        "key": "10.1016/0167-2789(90)90178-R_BIB25",
+        "unstructured": "H.A. Gutowitz, in preparation."
+      },
+      {
+        "key": "10.1016/0167-2789(90)90178-R_BIB26",
+        "doi-asserted-by": "crossref",
+        "first-page": "105",
+        "DOI": "10.1016/0167-2789(90)90177-Q",
+        "article-title": "Wolfram's class IV automata and a good life",
+        "volume": "45",
+        "author": "McIntosh",
+        "year": "1990",
+        "journal-title": "Physica D"
+      },
+      {
+        "key": "10.1016/0167-2789(90)90178-R_BIB27",
+        "doi-asserted-by": "crossref",
+        "first-page": "3094",
+        "DOI": "10.1103/PhysRevA.39.3094",
+        "article-title": "Order of transition vs space dimension for a family of cellular automata",
+        "volume": "39",
+        "author": "Bidaux",
+        "year": "1989",
+        "journal-title": "Phys. Rev. A"
+      }
+    ],
+    "container-title": [
+      "Physica D: Nonlinear Phenomena"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:016727899090178R?httpAccept=text/xml",
+        "content-type": "text/xml",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:016727899090178R?httpAccept=text/plain",
+        "content-type": "text/plain",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2019,
+          4,
+          6
+        ]
+      ],
+      "date-time": "2019-04-06T15:50:58Z",
+      "timestamp": 1554565858000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://linkinghub.elsevier.com/retrieve/pii/016727899090178R"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          1990,
+          9
+        ]
+      ]
+    },
+    "references-count": 36,
+    "journal-issue": {
+      "issue": "1-3",
+      "published-print": {
+        "date-parts": [
+          [
+            1990,
+            9
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "016727899090178R"
+    ],
+    "URL": "https://doi.org/10.1016/0167-2789(90)90178-r",
+    "relation": {},
+    "ISSN": [
+      "0167-2789"
+    ],
+    "issn-type": [
+      {
+        "value": "0167-2789",
+        "type": "print"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          1990,
+          9
+        ]
+      ]
+    }
+  }
+}

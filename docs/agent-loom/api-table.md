@@ -1,6 +1,8 @@
 # Agent Loom API inventory
 
-&gt; **Binding target inventory.** These 309 operation/type entries define the phase-one target across 16 areas. Only the bounded subsets tracked in PLAN.md and the delivery inventory are implemented; this table is not a runtime availability list.
+Use this inventory to find an operation, read its signature and follow the link to its full contract.
+
+> **Target specification.** These 309 operation/type entries define the required core API across 16 areas. Implementation status is tracked in [PLAN](../../PLAN.md) and the [coverage inventory](../development/coverage.md). An entry here does not mean the operation is available.
 
 [Overview](README.md) · [Detailed reference and examples](api-reference.md)
 

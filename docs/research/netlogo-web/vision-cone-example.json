@@ -1,0 +1,112 @@
+{
+  "slug": "vision-cone-example",
+  "name": "Vision Cone Example",
+  "catalogPath": "Code Examples/Vision Cone Example",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Code%20Examples/Vision%20Cone%20Example.nlogox",
+  "deliveryBatch": "B20",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "What information is available to an agent that can only perceive objects ahead? NetLogo Vision Cone Example uses the in-cone primitive to filter nearby turtles or patches according to distance, heading, and angular extent. Reynolds [1] develops autonomous-agent steering with local perception, Couzin and colleagues [2] study collective motion with directional interactions, and Couzin and colleagues [3] examine leadership under local information. These papers supply scientific settings in which the demonstrated geometric filter matters; the example itself does not implement their complete behavioral models. Changing heading rotates the eligible region, while radius and angle independently limit perception. Occlusion, sensory errors, and species-specific detection are additional assumptions absent from a simple cone query. The simulation illustrates a perception boundary that can be reused in models, rather than evidence that real agents perceive every object inside an ideal geometric sector.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Code%20Examples/Vision%20Cone%20Example.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Code%20Examples/Vision%20Cone%20Example.nlogox",
+    "revision": "NetLogo 7.0.4 served 2026-11-05; SHA-256 bb99819068cd011287038aaf552b263c330463ba1d913bc18dea3f6ad288bb64",
+    "checkedAt": "2026-11-05",
+    "evidence": "Full original served XML source, Procedures and Info retained in evidence/computing/vision-cone-example.nlogox; extracted Info retained alongside.",
+    "notes": " This dossier describes scientific connections to the original NetLogo teaching model; it does not certify a City Library reimplementation or empirical validity.",
+    "sourceSnapshot": "evidence/computing/vision-cone-example.nlogox",
+    "evidenceFile": "evidence/computing/vision-cone-example.nlogox"
+  },
+  "publications": [
+    {
+      "id": "10.1145/37401.37406",
+      "authors": [
+        "Craig W. Reynolds"
+      ],
+      "title": "Flocks, herds and schools: A distributed behavioral model",
+      "year": 1987,
+      "venue": "Proceedings of the 14th annual conference on Computer graphics and interactive techniques",
+      "doi": "10.1145/37401.37406",
+      "url": "https://doi.org/10.1145/37401.37406",
+      "relevance": "Foundational flocking work directly motivates local directional perception for steering agents.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1145%2F37401.37406",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1145_37401_37406.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1145_37401_37406.json"
+      },
+      "publisher": "ACM",
+      "pages": "25-34",
+      "verified": true
+    },
+    {
+      "id": "10.1006/jtbi.2002.3065",
+      "authors": [
+        "IAIN D. COUZIN",
+        "JENS KRAUSE",
+        "RICHARD JAMES",
+        "GRAEME D. RUXTON",
+        "NIGEL R. FRANKS"
+      ],
+      "title": "Collective Memory and Spatial Sorting in Animal Groups",
+      "year": 2002,
+      "venue": "Journal of Theoretical Biology",
+      "doi": "10.1006/jtbi.2002.3065",
+      "url": "https://doi.org/10.1006/jtbi.2002.3065",
+      "relevance": "Collective-motion theory connects perception geometry and spatial organization.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1006%2Fjtbi.2002.3065",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1006_jtbi_2002_3065.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1006_jtbi_2002_3065.json"
+      },
+      "publisher": "Elsevier BV",
+      "volume": "218",
+      "issue": "1",
+      "pages": "1-11",
+      "verified": true
+    },
+    {
+      "id": "10.1038/nature03236",
+      "authors": [
+        "Iain D. Couzin",
+        "Jens Krause",
+        "Nigel R. Franks",
+        "Simon A. Levin"
+      ],
+      "title": "Effective leadership and decision-making in animal groups on the move",
+      "year": 2005,
+      "venue": "Nature",
+      "doi": "10.1038/nature03236",
+      "url": "https://doi.org/10.1038/nature03236",
+      "relevance": "Leadership and decision-making research provides a concrete application of limited local information, without validating the teaching cone as animal vision.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1038%2Fnature03236",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1038_nature03236.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1038_nature03236.json"
+      },
+      "publisher": "Springer Science and Business Media LLC",
+      "volume": "433",
+      "issue": "7025",
+      "pages": "513-516",
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

@@ -1,0 +1,1021 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=Why+the+ant+trails+look+so+straight+and+nice+Bruckstein+1993&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 568893,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                28
+              ]
+            ],
+            "date-time": "2026-09-28T22:50:46Z",
+            "timestamp": 1790635846292,
+            "version": "4.1.0"
+          },
+          "reference-count": 13,
+          "publisher": "Springer Science and Business Media LLC",
+          "issue": "2",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    1993,
+                    3,
+                    1
+                  ]
+                ],
+                "date-time": "1993-03-01T00:00:00Z",
+                "timestamp": 730944000000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "http://www.springer.com/tdm"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "The Mathematical Intelligencer"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1993,
+                3
+              ]
+            ]
+          },
+          "DOI": "10.1007/bf03024195",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2009,
+                1,
+                8
+              ]
+            ],
+            "date-time": "2009-01-08T19:12:00Z",
+            "timestamp": 1231441920000
+          },
+          "page": "59-62",
+          "source": "Crossref",
+          "is-referenced-by-count": 65,
+          "title": [
+            "Why the ant trails look so straight and nice"
+          ],
+          "prefix": "10.1007",
+          "volume": "15",
+          "author": [
+            {
+              "given": "Alfred M.",
+              "family": "Bruckstein",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "published-online": {
+            "date-parts": [
+              [
+                2009,
+                1,
+                9
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "BF03024195_CR1",
+              "volume-title": "Surely You\u2019re Joking, Mr. Feynman!",
+              "author": "R. P. Feynman",
+              "year": "1985",
+              "unstructured": "R. P. Feynman,Surely You\u2019re Joking, Mr. Feynman!, Toronto: Bantam Books (1985)."
+            },
+            {
+              "key": "BF03024195_CR2",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1007/978-94-009-3123-7",
+              "volume-title": "The Behavioral Ecology of Ants",
+              "author": "J. H. Sudd",
+              "year": "1987",
+              "unstructured": "J. H. Sudd and N. R. Franks,The Behavioral Ecology of Ants, New York: Chapman and Hall (1987)."
+            },
+            {
+              "key": "BF03024195_CR3",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1007/978-3-662-10306-7",
+              "volume-title": "The Ants",
+              "author": "B. Holldobler",
+              "year": "1990",
+              "unstructured": "B. Holldobler and E. O. Wilson,The Ants, New York: Springer-Verlag (1990)."
+            },
+            {
+              "key": "BF03024195_CR4",
+              "volume-title": "Ordinary Differential Equations",
+              "author": "V. I. Arnold",
+              "year": "1973",
+              "unstructured": "V. I. Arnold,Ordinary Differential Equations, Boston: M.I.T. Press (1973)."
+            },
+            {
+              "key": "BF03024195_CR5",
+              "unstructured": "G. Boole,A Treatise on Differential Equations, 5th ed., London (1859), or H. T. Davis,Introduction to Nonlinear Differential and Integral Equations, New York: Dover (1962)."
+            },
+            {
+              "key": "BF03024195_CR6",
+              "doi-asserted-by": "crossref",
+              "first-page": "54",
+              "DOI": "10.2307/2973034",
+              "volume": "28",
+              "author": "F. V. Morley",
+              "year": "1921",
+              "unstructured": "F. V. Morley, A curve of pursuit,Amer. Math. Monthly 28 (1921), 54\u201361.",
+              "journal-title": "Amer. Math. Monthly"
+            },
+            {
+              "key": "BF03024195_CR7",
+              "volume-title": "Pursuit Games: An Introduction to the Theory and Applications of Differential Games of Pursuit and Evasion",
+              "author": "O. Hajek",
+              "year": "1975",
+              "unstructured": "O. Hajek,Pursuit Games: An Introduction to the Theory and Applications of Differential Games of Pursuit and Evasion, New York: Academic Press (1975)."
+            },
+            {
+              "key": "BF03024195_CR8",
+              "volume-title": "Littlewood\u2019s Miscellany",
+              "author": "J. E. Littlewood",
+              "year": "1986",
+              "unstructured": "J. E. Littlewood,Littlewood\u2019s Miscellany, (B. Bollobas, ed.), Cambridge: Cambridge University Press (1986)."
+            },
+            {
+              "key": "BF03024195_CR9",
+              "doi-asserted-by": "crossref",
+              "first-page": "385",
+              "DOI": "10.1112/jlms/s1-39.1.385",
+              "volume": "39",
+              "author": "H. T. Croft",
+              "year": "1964",
+              "unstructured": "H. T. Croft, Lion and man: A postscript,J. London Math. Soc. 39 (1964), 385\u2013390; and I. Stewart, All paths lead away from Rome,Scientific American (April 1992).",
+              "journal-title": "J. London Math. Soc."
+            },
+            {
+              "key": "BF03024195_CR10",
+              "first-page": "136",
+              "volume-title": "Mathematical Snapshots",
+              "author": "H. Steinhaus",
+              "year": "1969",
+              "unstructured": "H. Steinhaus,Mathematical Snapshots, Third American Edition, New York: Oxford University Press (1969), 136.",
+              "edition": "Third American"
+            },
+            {
+              "key": "BF03024195_CR11",
+              "volume-title": "Turtle Geometry",
+              "author": "H. Abelson",
+              "year": "1980",
+              "unstructured": "H. Abelson and A. A. diSessa,Turtle Geometry, Cambridge, MA: M.I.T. Press (1980)."
+            },
+            {
+              "key": "BF03024195_CR12",
+              "volume-title": "\u201cVehicles,\u201d Experiments in Synthetic Psychology",
+              "author": "V. Braitenberg",
+              "year": "1984",
+              "unstructured": "V. Braitenberg,\u201cVehicles,\u201d Experiments in Synthetic Psychology, Cambridge, MA: M.I.T. Press (1984)."
+            },
+            {
+              "key": "BF03024195_CR13",
+              "unstructured": "The Bible, Proverbs, vi, 6."
+            }
+          ],
+          "container-title": [
+            "The Mathematical Intelligencer"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/BF03024195.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://link.springer.com/article/10.1007/BF03024195/fulltext.html",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/BF03024195",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2019,
+                5,
+                22
+              ]
+            ],
+            "date-time": "2019-05-22T20:18:58Z",
+            "timestamp": 1558556338000
+          },
+          "score": 65.05071,
+          "resource": {
+            "primary": {
+              "URL": "http://link.springer.com/10.1007/BF03024195"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1993,
+                3
+              ]
+            ]
+          },
+          "references-count": 13,
+          "journal-issue": {
+            "issue": "2",
+            "published-print": {
+              "date-parts": [
+                [
+                  1993,
+                  3
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "BF03024195"
+          ],
+          "URL": "https://doi.org/10.1007/bf03024195",
+          "ISSN": [
+            "0343-6993"
+          ],
+          "issn-type": [
+            {
+              "value": "0343-6993",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1993,
+                3
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2022,
+                5,
+                21
+              ]
+            ],
+            "date-time": "2022-05-21T04:41:13Z",
+            "timestamp": 1653108073889
+          },
+          "reference-count": 3,
+          "publisher": "University of California Press",
+          "issue": "8",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                1981,
+                11,
+                1
+              ]
+            ]
+          },
+          "DOI": "10.2307/4447349",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2012,
+                9,
+                6
+              ]
+            ],
+            "date-time": "2012-09-06T19:33:58Z",
+            "timestamp": 1346960038000
+          },
+          "page": "452-453",
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Ant Trails"
+          ],
+          "prefix": "10.1525",
+          "volume": "43",
+          "author": [
+            {
+              "given": "Dwight",
+              "family": "Moody",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "408",
+          "reference": [
+            {
+              "key": "2022052100304257000_r113",
+              "volume-title": "Biology of insects",
+              "author": "Horn",
+              "year": "1976"
+            },
+            {
+              "key": "2022052100304257000_r114",
+              "doi-asserted-by": "crossref",
+              "DOI": "10.1016/B978-0-12-379350-8.50017-X",
+              "volume-title": "Insect sex pheromones",
+              "author": "Jacobson",
+              "year": "1972"
+            },
+            {
+              "key": "2022052100304257000_r115",
+              "volume-title": "Scientific American",
+              "author": "Wilson",
+              "year": "1963"
+            }
+          ],
+          "container-title": [
+            "The American Biology Teacher"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://online.ucpress.edu/abt/article-pdf/43/8/452/697679/4447349.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "syndication"
+            },
+            {
+              "URL": "https://online.ucpress.edu/abt/article-pdf/43/8/452/697679/4447349.pdf",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2022,
+                5,
+                21
+              ]
+            ],
+            "date-time": "2022-05-21T00:30:48Z",
+            "timestamp": 1653093048000
+          },
+          "score": 28.489681,
+          "resource": {
+            "primary": {
+              "URL": "https://online.ucpress.edu/abt/article/43/8/452/12827/Ant-Trails"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1981,
+                11,
+                1
+              ]
+            ]
+          },
+          "references-count": 3,
+          "journal-issue": {
+            "issue": "8",
+            "published-print": {
+              "date-parts": [
+                [
+                  1981,
+                  11,
+                  1
+                ]
+              ]
+            }
+          },
+          "URL": "https://doi.org/10.2307/4447349",
+          "ISSN": [
+            "0002-7685"
+          ],
+          "issn-type": [
+            {
+              "value": "0002-7685",
+              "type": "print"
+            }
+          ],
+          "published-other": {
+            "date-parts": [
+              [
+                1981,
+                11
+              ]
+            ]
+          },
+          "published": {
+            "date-parts": [
+              [
+                1981,
+                11,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                7,
+                30
+              ]
+            ],
+            "date-time": "2026-07-30T14:03:17Z",
+            "timestamp": 1785420197102,
+            "version": "3.56.0"
+          },
+          "publisher-location": "Earth, Milky Way",
+          "edition-number": "1",
+          "reference-count": 80,
+          "publisher": "punctum books",
+          "isbn-type": [
+            {
+              "value": "9781953035578",
+              "type": "print"
+            },
+            {
+              "value": "9781953035585",
+              "type": "electronic"
+            }
+          ],
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2021,
+                    6,
+                    24
+                  ]
+                ],
+                "date-time": "2021-06-24T00:00:00Z",
+                "timestamp": 1624492800000
+              },
+              "content-version": "unspecified",
+              "delay-in-days": 0,
+              "URL": "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2021,
+                6,
+                24
+              ]
+            ]
+          },
+          "DOI": "10.53288/0274.1.08",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2022,
+                10,
+                4
+              ]
+            ],
+            "date-time": "2022-10-04T08:03:02Z",
+            "timestamp": 1664870582000
+          },
+          "page": "203-241",
+          "source": "Crossref",
+          "is-referenced-by-count": 1,
+          "title": [
+            "Why Are the Digital Humanities So Straight?"
+          ],
+          "prefix": "10.53288",
+          "author": [
+            {
+              "given": "Edmond Y.",
+              "family": "Chang",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "id": [
+                    {
+                      "id": "https://ror.org/01jr3y717",
+                      "id-type": "ROR",
+                      "asserted-by": "publisher"
+                    }
+                  ],
+                  "name": "Ohio University"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "31179",
+          "reference": [
+            {
+              "key": "ref1",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1386/macp.5.1-2.39_1"
+            },
+            {
+              "key": "ref2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1177/1536504218766547"
+            },
+            {
+              "key": "ref3",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1632/pmla.2008.123.5.1673"
+            },
+            {
+              "key": "ref4",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/lic3.12544"
+            },
+            {
+              "key": "ref5",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1017/S1479244317000129"
+            },
+            {
+              "key": "ref6",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.22148/001c.18509"
+            },
+            {
+              "key": "ref7",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1086/702594"
+            },
+            {
+              "key": "ref8",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/gec3.12438"
+            },
+            {
+              "key": "ref9",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1177/2332649220922577"
+            },
+            {
+              "key": "ref10",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1080/00141844.2015.1105838"
+            },
+            {
+              "key": "ref11",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/1341787"
+            },
+            {
+              "key": "ref12",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1525/fq.2019.72.3.19"
+            },
+            {
+              "key": "ref13",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1080/14623520601056240"
+            },
+            {
+              "key": "ref14",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1177/016344378000200106"
+            },
+            {
+              "key": "ref15",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.5749/vergstudglobasia.1.1.0100"
+            },
+            {
+              "key": "ref16",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1215/10407391-2420015"
+            },
+            {
+              "key": "ref17",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/mind/LIX.236.433"
+            },
+            {
+              "key": "ref18",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1086/694236"
+            },
+            {
+              "key": "ref19",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1109/MAHC.2003.1226652"
+            },
+            {
+              "key": "ref20",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1109/MAHC.1994.298418"
+            },
+            {
+              "key": "ref21",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0019-8501(92)90030-W"
+            },
+            {
+              "key": "ref22",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1109/ISTAS.2010.5514603"
+            },
+            {
+              "key": "ref23",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/978-3-319-32001-4_22-1"
+            },
+            {
+              "key": "ref24",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1017/S1467222700014294"
+            },
+            {
+              "key": "ref25",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1086/691682"
+            },
+            {
+              "key": "ref26",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1215/10407391-2420015"
+            },
+            {
+              "key": "ref27",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1080/13504630.2012.692896"
+            },
+            {
+              "key": "ref28",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/1576511"
+            },
+            {
+              "key": "ref29",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/s10676-018-9493-1"
+            },
+            {
+              "key": "ref30",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.5749/j.ctttv8hq.12"
+            },
+            {
+              "key": "ref31",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1215/00141801-4260638"
+            },
+            {
+              "key": "ref32",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/1512132"
+            },
+            {
+              "key": "ref33",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/3178066"
+            },
+            {
+              "key": "ref34",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1057/9781137310491_3"
+            },
+            {
+              "key": "ref35",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1177/1555412018786652"
+            },
+            {
+              "key": "ref36",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.4324/9780203418659"
+            },
+            {
+              "key": "ref37",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1177/1555412017737637"
+            },
+            {
+              "key": "ref38",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1349/PS1.1938-6060.A.425"
+            },
+            {
+              "key": "ref39",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1145/3235765.3235778"
+            },
+            {
+              "key": "ref40",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1089/1094931041291295"
+            },
+            {
+              "key": "ref41",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1215/10407391-2419985"
+            },
+            {
+              "key": "ref42",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1080/14623528.2017.1393945"
+            },
+            {
+              "key": "ref43",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1215/00029831-2367310"
+            },
+            {
+              "key": "ref44",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1525/fq.2014.67.2.44"
+            },
+            {
+              "key": "ref45",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pmed.1001772.70"
+            },
+            {
+              "key": "ref46",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rspb.2014.1574"
+            },
+            {
+              "key": "ref47",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pmed.1001772"
+            },
+            {
+              "key": "ref48",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1215/10407391-2419985"
+            },
+            {
+              "key": "ref49",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.16995/dscn.41"
+            },
+            {
+              "key": "ref50",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.7390/15097"
+            },
+            {
+              "key": "ref51",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.7390/15097"
+            },
+            {
+              "key": "ref52",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/llc/fqu005"
+            },
+            {
+              "key": "ref53",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1515/ijsl-2012-0043"
+            },
+            {
+              "key": "ref54",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1080/14664208.2014.947016"
+            },
+            {
+              "key": "ref55",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pone.0077056"
+            },
+            {
+              "key": "ref56",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1080/01434639708666317"
+            },
+            {
+              "key": "ref57",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1080/21639159.2014.949439"
+            },
+            {
+              "key": "ref58",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.16995/dscn.284"
+            },
+            {
+              "key": "ref59",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1215/22011919-3615505"
+            },
+            {
+              "key": "ref60",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1525/001c.10136"
+            },
+            {
+              "key": "ref61",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1215/22011919-3609940"
+            },
+            {
+              "key": "ref62",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1525/bio.2012.62.9.2"
+            },
+            {
+              "key": "ref63",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1177/1354856508097016"
+            },
+            {
+              "key": "ref64",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.17723/aarc.74.1.4233nv6nv6428521"
+            },
+            {
+              "key": "ref65",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1353/ail.2008.0005"
+            },
+            {
+              "key": "ref66",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1215/10407391-2420015"
+            },
+            {
+              "key": "ref67",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1215/10407391-1218274"
+            },
+            {
+              "key": "ref68",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1080/03626784.2014.995060"
+            },
+            {
+              "key": "ref69",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1215/00382876-6942183"
+            },
+            {
+              "key": "ref70",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.5250/studamerindilite.26.2.0055"
+            },
+            {
+              "key": "ref71",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1177/0022022118793528"
+            },
+            {
+              "key": "ref72",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/1341787"
+            },
+            {
+              "key": "ref73",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1145/2695577.2695582"
+            },
+            {
+              "key": "ref74",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1080/14623520601056240"
+            },
+            {
+              "key": "ref75",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1215/01642472-7145658"
+            },
+            {
+              "key": "ref76",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1177/1077800414530265"
+            },
+            {
+              "key": "ref77",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/llc/fqx034"
+            },
+            {
+              "key": "ref78",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1353/afa.2018.0045"
+            },
+            {
+              "key": "ref79",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.17953/aicrj.39.4.gaertner"
+            },
+            {
+              "key": "ref80",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.5195/contemp.2016.170"
+            }
+          ],
+          "container-title": [
+            "Alternative Historiographies of the Digital Humanities"
+          ],
+          "language": "en",
+          "deposited": {
+            "date-parts": [
+              [
+                2026,
+                7,
+                1
+              ]
+            ],
+            "date-time": "2026-07-01T11:44:15Z",
+            "timestamp": 1782906255000
+          },
+          "score": 27.388456,
+          "resource": {
+            "primary": {
+              "URL": "https://punctumbooks.com/titles/alternative-historiographies-of-the-digital-humanities/"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2021,
+                6,
+                24
+              ]
+            ]
+          },
+          "ISBN": [
+            "9781953035578",
+            "9781953035585"
+          ],
+          "references-count": 80,
+          "URL": "https://doi.org/10.53288/0274.1.08",
+          "published": {
+            "date-parts": [
+              [
+                2021,
+                6,
+                24
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

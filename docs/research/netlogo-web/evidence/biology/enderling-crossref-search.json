@@ -1,0 +1,1462 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=The+importance+of+spatial+growth+constraints+for+understanding+tumor+development+Enderling+2009&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 5858966,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                8,
+                12
+              ]
+            ],
+            "date-time": "2026-08-12T09:38:15Z",
+            "timestamp": 1786527495797,
+            "version": "build-2736575974"
+          },
+          "posted": {
+            "date-parts": [
+              [
+                2012
+              ]
+            ]
+          },
+          "group-title": "SSRN",
+          "reference-count": 0,
+          "publisher": "Elsevier BV",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "abstract": "<jats:p>This paper analyzes the effects of financial liberalization on the allocation of capital across firms and aggregate productivity in ten transition economies. We exploit cross-sectoral differences in financial constraints (measured by either external financial dependence or asset tangibility) and find that liberalization increases productivity disproportionately in financially constrained industries. To analyze the forces driving the productivity gains, we decompose industry productivity into an average-productivity term and an allocation term, measured by the size-productivity covariance. We find that productivity gains are driven primarily by a reduction in misallocation across firms. We also document that the policy reduces both the covariance between firm productivity and the marginal product of capital and the within-industry variance of the marginal product of capital. Finally, we find that liberalization increases the market share of domestically-owned firms, which ex-ante are more financially constrained. The effect is particularly strong in financially constrained industries.</jats:p>",
+          "DOI": "10.2139/ssrn.2121820",
+          "type": "posted-content",
+          "created": {
+            "date-parts": [
+              [
+                2012,
+                8,
+                8
+              ]
+            ],
+            "date-time": "2012-08-08T11:08:31Z",
+            "timestamp": 1344424111000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Understanding Misallocation: The Importance of Financial Constraints"
+          ],
+          "prefix": "10.2139",
+          "author": [
+            {
+              "ORCID": "https://orcid.org/0000-0003-0408-1410",
+              "authenticated-orcid": true,
+              "given": "Mauricio",
+              "family": "Larrain",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Sebastian",
+              "family": "Stumpner",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "78",
+          "deposited": {
+            "date-parts": [
+              [
+                2026,
+                8,
+                12
+              ]
+            ],
+            "date-time": "2026-08-12T09:10:21Z",
+            "timestamp": 1786525821000
+          },
+          "score": 23.31313,
+          "resource": {
+            "primary": {
+              "URL": "https://www.ssrn.com/abstract=2121820"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2012
+              ]
+            ]
+          },
+          "references-count": 0,
+          "URL": "https://doi.org/10.2139/ssrn.2121820",
+          "published": {
+            "date-parts": [
+              [
+                2012
+              ]
+            ]
+          },
+          "subtype": "preprint"
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                28
+              ]
+            ],
+            "date-time": "2026-10-28T23:35:17Z",
+            "timestamp": 1793230517109,
+            "version": "4.5.0"
+          },
+          "reference-count": 69,
+          "publisher": "Springer Science and Business Media LLC",
+          "issue": "1",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2024,
+                    2,
+                    21
+                  ]
+                ],
+                "date-time": "2024-02-21T00:00:00Z",
+                "timestamp": 1708473600000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://creativecommons.org/licenses/by/4.0"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2024,
+                    2,
+                    21
+                  ]
+                ],
+                "date-time": "2024-02-21T00:00:00Z",
+                "timestamp": 1708473600000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "https://creativecommons.org/licenses/by/4.0"
+            }
+          ],
+          "funder": [
+            {
+              "DOI": "10.13039/501100021821",
+              "name": "Oncode Institute",
+              "doi-asserted-by": "crossref",
+              "id": [
+                {
+                  "id": "10.13039/501100021821",
+                  "id-type": "DOI",
+                  "asserted-by": "crossref"
+                }
+              ]
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "link.springer.com"
+            ],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "npj Syst Biol Appl"
+          ],
+          "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:p>Inhibiting androgen receptor (AR) signaling through androgen deprivation therapy (ADT) reduces prostate cancer (PCa) growth in virtually all patients, but response may be temporary, in which case resistance develops, ultimately leading to lethal castration-resistant prostate cancer (CRPC). The tumor microenvironment (TME) plays an important role in the development and progression of PCa. In addition to tumor cells, TME-resident macrophages and fibroblasts express AR and are therefore also affected by ADT. However, the interplay of different TME cell types in the development of CRPC remains largely unexplored. To understand the complex stochastic nature of cell-cell interactions, we created a PCa-specific agent-based model (PCABM) based on in vitro cell proliferation data. PCa cells, fibroblasts, \u201cpro-inflammatory\u201d M1-like and \u201cpro-tumor\u201d M2-like polarized macrophages are modeled as agents from a simple set of validated base assumptions. PCABM allows us to simulate the effect of ADT on the interplay between various prostate TME cell types. The resulting in vitro growth patterns mimic human PCa. Our PCABM can effectively model hormonal perturbations by ADT, in which PCABM suggests that CRPC arises in clusters of resistant cells, as is observed in multifocal PCa. In addition, fibroblasts compete for cellular space in the TME while simultaneously creating niches for tumor cells to proliferate in. Finally, PCABM predicts that ADT has immunomodulatory effects on macrophages that may enhance tumor survival. Taken together, these results suggest that AR plays a critical role in the cellular interplay and stochastic interactions in the TME that influence tumor cell behavior and CRPC development.</jats:p>",
+          "DOI": "10.1038/s41540-024-00344-6",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2024,
+                2,
+                21
+              ]
+            ],
+            "date-time": "2024-02-21T04:04:04Z",
+            "timestamp": 1708488244000
+          },
+          "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 21,
+          "title": [
+            "Agent-based modeling of the prostate tumor microenvironment uncovers spatial tumor growth constraints and immunomodulatory properties"
+          ],
+          "prefix": "10.1038",
+          "volume": "10",
+          "author": [
+            {
+              "ORCID": "https://orcid.org/0000-0002-7394-9888",
+              "authenticated-orcid": false,
+              "given": "Maisa N. G.",
+              "family": "van Genderen",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Jeroen",
+              "family": "Kneppers",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Anniek",
+              "family": "Zaalberg",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Elise M.",
+              "family": "Bekers",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0001-5223-2549",
+              "authenticated-orcid": false,
+              "given": "Andries M.",
+              "family": "Bergman",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0002-9823-7289",
+              "authenticated-orcid": false,
+              "given": "Wilbert",
+              "family": "Zwart",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0002-7822-3867",
+              "authenticated-orcid": false,
+              "given": "Federica",
+              "family": "Eduati",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "published-online": {
+            "date-parts": [
+              [
+                2024,
+                2,
+                21
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "344_CR1",
+              "doi-asserted-by": "publisher",
+              "first-page": "209",
+              "DOI": "10.3322/caac.21660",
+              "volume": "71",
+              "author": "H Sung",
+              "year": "2021",
+              "unstructured": "Sung, H. et al. Global cancer statistics 2020: GLOBOCAN estimates of incidence and mortality worldwide for 36 cancers in 185 countries. CA Cancer J. Clin. 71, 209\u2013249 (2021).",
+              "journal-title": "CA Cancer J. Clin."
+            },
+            {
+              "key": "344_CR2",
+              "doi-asserted-by": "publisher",
+              "first-page": "3001",
+              "DOI": "10.1200/JCO.2002.10.018",
+              "volume": "20",
+              "author": "EP Gelmann",
+              "year": "2002",
+              "unstructured": "Gelmann, E. P. Molecular biology of the androgen receptor. J. Clin. Oncol. 20, 3001\u20133015 (2002).",
+              "journal-title": "J. Clin. Oncol."
+            },
+            {
+              "key": "344_CR3",
+              "doi-asserted-by": "publisher",
+              "first-page": "276",
+              "DOI": "10.1210/er.2002-0032",
+              "volume": "25",
+              "author": "CA Heinlein",
+              "year": "2004",
+              "unstructured": "Heinlein, C. A. & Chang, C. Androgen receptor in prostate cancer. Endocr. Rev. 25, 276\u2013308 (2004).",
+              "journal-title": "Endocr. Rev."
+            },
+            {
+              "key": "344_CR4",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1186/1475-2867-5-8",
+              "volume": "5",
+              "author": "Q Yang",
+              "year": "2005",
+              "unstructured": "Yang, Q., Fung, K.-M., Day, W. V., Kropp, B. P. & Lin, H.-K. Androgen receptor signaling is required for androgen-sensitive human prostate cancer cell proliferation and survival. Cancer Cell Int. 5, 8 (2005).",
+              "journal-title": "Cancer Cell Int."
+            },
+            {
+              "key": "344_CR5",
+              "doi-asserted-by": "publisher",
+              "first-page": "1665",
+              "DOI": "10.1158/1078-0432.CCR-06-0067",
+              "volume": "12",
+              "author": "KJ Pienta",
+              "year": "2006",
+              "unstructured": "Pienta, K. J. & Bradley, D. Mechanisms Underlying the Development of Androgen-Independent Prostate Cancer. Clin. Cancer Res. 12, 1665\u20131671 (2006).",
+              "journal-title": "Clin. Cancer Res."
+            },
+            {
+              "key": "344_CR6",
+              "doi-asserted-by": "publisher",
+              "first-page": "298",
+              "DOI": "10.1038/nrc3245",
+              "volume": "12",
+              "author": "WH Fridman",
+              "year": "2012",
+              "unstructured": "Fridman, W. H., Pag\u00e8s, F., Saut\u00e8s-Fridman, C. & Galon, J. The immune contexture in human tumours: impact on clinical outcome. Nat. Rev. Cancer 12, 298\u2013306 (2012).",
+              "journal-title": "Nat. Rev. Cancer"
+            },
+            {
+              "key": "344_CR7",
+              "first-page": "569",
+              "volume": "5",
+              "author": "EO Olapade-Olaopa",
+              "year": "1999",
+              "unstructured": "Olapade-Olaopa, E. O. et al. Malignant transformation of human prostatic epithelium is associated with the loss of androgen receptor immunoreactivity in the surrounding stroma. Clin. Cancer Res. 5, 569\u2013576 (1999).",
+              "journal-title": "Clin. Cancer Res."
+            },
+            {
+              "key": "344_CR8",
+              "doi-asserted-by": "publisher",
+              "first-page": "799",
+              "DOI": "10.1002/pros.20927",
+              "volume": "69",
+              "author": "P Wikstr\u00f6m",
+              "year": "2009",
+              "unstructured": "Wikstr\u00f6m, P., Marusic, J., Stattin, P. & Bergh, A. Low stroma androgen receptor level in normal and tumor prostate tissue is related to poor outcome in prostate cancer patients. Prostate 69, 799\u2013809 (2009).",
+              "journal-title": "Prostate"
+            },
+            {
+              "key": "344_CR9",
+              "doi-asserted-by": "publisher",
+              "first-page": "4612",
+              "DOI": "10.1158/1078-0432.CCR-18-0461",
+              "volume": "24",
+              "author": "H Huang",
+              "year": "2018",
+              "unstructured": "Huang, H. et al. Reciprocal Network between Cancer Stem-Like Cells and Macrophages Facilitates the Progression and Androgen Deprivation Therapy Resistance of Prostate Cancer. Clin. Cancer Res. 24, 4612\u20134626 (2018).",
+              "journal-title": "Clin. Cancer Res."
+            },
+            {
+              "key": "344_CR10",
+              "doi-asserted-by": "publisher",
+              "first-page": "4923",
+              "DOI": "10.3390/cancers14194923",
+              "volume": "14",
+              "author": "V Kumar",
+              "year": "2022",
+              "unstructured": "Kumar, V. et al. Spatial Profiling of the Prostate Cancer Tumor Microenvironment Reveals Multiple Differences in Gene Expression and Correlation with Recurrence Risk. Cancers 14, 4923 (2022).",
+              "journal-title": "Cancers"
+            },
+            {
+              "key": "344_CR11",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/s41467-022-33780-1",
+              "volume": "13",
+              "author": "HY Wong",
+              "year": "2022",
+              "unstructured": "Wong, H. Y. et al. Single cell analysis of cribriform prostate cancer reveals cell intrinsic and tumor microenvironmental pathways of aggressive disease. Nat. Commun. 13, 6036 (2022).",
+              "journal-title": "Nat. Commun."
+            },
+            {
+              "key": "344_CR12",
+              "first-page": "5002",
+              "volume": "59",
+              "author": "AF Olumi",
+              "year": "1999",
+              "unstructured": "Olumi, A. F. et al. Carcinoma-associated Fibroblasts Direct Tumor Progression of Initiated Human Prostatic Epithelium. Cancer Res. 59, 5002\u20135011 (1999).",
+              "journal-title": "Cancer Res."
+            },
+            {
+              "key": "344_CR13",
+              "doi-asserted-by": "publisher",
+              "first-page": "1918",
+              "DOI": "10.1111/j.1464-410X.2010.09804.x",
+              "volume": "107",
+              "author": "N Nonomura",
+              "year": "2011",
+              "unstructured": "Nonomura, N. et al. Infiltration of tumour-associated macrophages in prostate biopsy specimens is predictive of disease progression after hormonal therapy for prostate cancer. BJU Int. 107, 1918\u20131922 (2011).",
+              "journal-title": "BJU Int."
+            },
+            {
+              "key": "344_CR14",
+              "doi-asserted-by": "publisher",
+              "first-page": "1972",
+              "DOI": "10.1016/j.cell.2018.11.021",
+              "volume": "175",
+              "author": "JT Neal",
+              "year": "2018",
+              "unstructured": "Neal, J. T. et al. Organoid Modeling of the Tumor Immune Microenvironment. Cell 175, 1972\u20131988.e16 (2018).",
+              "journal-title": "Cell"
+            },
+            {
+              "key": "344_CR15",
+              "doi-asserted-by": "publisher",
+              "first-page": "1464",
+              "DOI": "10.1016/j.ccell.2021.09.005",
+              "volume": "39",
+              "author": "Y Kfoury",
+              "year": "2021",
+              "unstructured": "Kfoury, Y. et al. Human prostate cancer bone metastases have an actionable immunosuppressive microenvironment. Cancer Cell 39, 1464\u20131478.e8 (2021).",
+              "journal-title": "Cancer Cell"
+            },
+            {
+              "key": "344_CR16",
+              "doi-asserted-by": "publisher",
+              "first-page": "469",
+              "DOI": "10.1038/bjc.2013.748",
+              "volume": "110",
+              "author": "T Nagasaki",
+              "year": "2014",
+              "unstructured": "Nagasaki, T. et al. Interleukin-6 released by colon cancer-associated fibroblasts is critical for tumour angiogenesis: anti-interleukin-6 receptor antibody suppressed angiogenesis and inhibited tumour-stroma interaction. Br. J. Cancer 110, 469\u2013478 (2014).",
+              "journal-title": "Br. J. Cancer"
+            },
+            {
+              "key": "344_CR17",
+              "doi-asserted-by": "publisher",
+              "first-page": "1687",
+              "DOI": "10.1007/s00262-007-0343-y",
+              "volume": "56",
+              "author": "DO Croci",
+              "year": "2007",
+              "unstructured": "Croci, D. O. et al. Dynamic cross-talk between tumor and immune cells in orchestrating the immunosuppressive network at the tumor microenvironment. Cancer Immunol. Immunother. 56, 1687\u20131700 (2007).",
+              "journal-title": "Cancer Immunol. Immunother."
+            },
+            {
+              "key": "344_CR18",
+              "doi-asserted-by": "publisher",
+              "first-page": "279",
+              "DOI": "10.1016/j.ccell.2020.06.005",
+              "volume": "38",
+              "author": "Z Zhang",
+              "year": "2020",
+              "unstructured": "Zhang, Z. et al. Tumor Microenvironment-Derived NRG1 Promotes Antiandrogen Resistance in Prostate Cancer. Cancer Cell 38, 279\u2013296.e9 (2020).",
+              "journal-title": "Cancer Cell"
+            },
+            {
+              "key": "344_CR19",
+              "doi-asserted-by": "publisher",
+              "first-page": "5339",
+              "DOI": "10.1038/s41388-019-0805-7",
+              "volume": "38",
+              "author": "L Ippolito",
+              "year": "2019",
+              "unstructured": "Ippolito, L. et al. Cancer-associated fibroblasts promote prostate cancer malignancy via metabolic rewiring and mitochondrial transfer. Oncogene 38, 5339\u20135355 (2019).",
+              "journal-title": "Oncogene"
+            },
+            {
+              "key": "344_CR20",
+              "doi-asserted-by": "publisher",
+              "first-page": "116791",
+              "DOI": "10.1016/j.lfs.2019.116791",
+              "volume": "235",
+              "author": "D-Y Sun",
+              "year": "2019",
+              "unstructured": "Sun, D.-Y., Wu, J.-Q., He, Z.-H., He, M.-F. & Sun, H.-B. Cancer-associated fibroblast regulate proliferation and migration of prostate cancer cells through TGF-\u03b2 signaling pathway. Life Sci. 235, 116791 (2019).",
+              "journal-title": "Life Sci."
+            },
+            {
+              "key": "344_CR21",
+              "doi-asserted-by": "publisher",
+              "first-page": "349",
+              "DOI": "10.1016/j.semcancer.2008.03.004",
+              "volume": "18",
+              "author": "A Sica",
+              "year": "2008",
+              "unstructured": "Sica, A. et al. Macrophage polarization in tumour progression. Semin. Cancer Biol. 18, 349\u2013355 (2008).",
+              "journal-title": "Semin. Cancer Biol."
+            },
+            {
+              "key": "344_CR22",
+              "doi-asserted-by": "publisher",
+              "first-page": "R331",
+              "DOI": "10.1530/ERC-18-0042",
+              "volume": "25",
+              "author": "B Cioni",
+              "year": "2018",
+              "unstructured": "Cioni, B., Zwart, W. & Bergman, A. M. Androgen receptor moonlighting in the prostate cancer microenvironment. Endocr. Rel. Cancer 25, R331\u2013R349 (2018).",
+              "journal-title": "Endocr. Rel. Cancer"
+            },
+            {
+              "key": "344_CR23",
+              "doi-asserted-by": "publisher",
+              "first-page": "e47045",
+              "DOI": "10.1371/journal.pone.0047045",
+              "volume": "7",
+              "author": "S Edin",
+              "year": "2012",
+              "unstructured": "Edin, S. et al. The distribution of macrophages with a M1 or M2 phenotype in relation to prognosis and the molecular characteristics of colorectal cancer. PLoS One 7, e47045 (2012).",
+              "journal-title": "PLoS One"
+            },
+            {
+              "key": "344_CR24",
+              "doi-asserted-by": "publisher",
+              "first-page": "1778",
+              "DOI": "10.1158/1541-7786.MCR-20-0740",
+              "volume": "19",
+              "author": "JC Siefert",
+              "year": "2021",
+              "unstructured": "Siefert, J. C. et al. The Prognostic Potential of Human Prostate Cancer-Associated Macrophage Subtypes as Revealed by Single-Cell Transcriptomics. Mol. Cancer Res. 19, 1778\u20131791 (2021).",
+              "journal-title": "Mol. Cancer Res."
+            },
+            {
+              "key": "344_CR25",
+              "first-page": "423",
+              "volume": "61",
+              "author": "SM Henshall",
+              "year": "2001",
+              "unstructured": "Henshall, S. M. et al. Altered Expression of Androgen Receptor in the Malignant Epithelium and Adjacent Stroma Is Associated with Early Relapse in Prostate Cancer. Cancer Res. 61, 423\u2013427 (2001).",
+              "journal-title": "Cancer Res."
+            },
+            {
+              "key": "344_CR26",
+              "doi-asserted-by": "publisher",
+              "first-page": "1308",
+              "DOI": "10.1002/1878-0261.12327",
+              "volume": "12",
+              "author": "B Cioni",
+              "year": "2018",
+              "unstructured": "Cioni, B. et al. Loss of androgen receptor signaling in prostate cancer\u2010associated fibroblasts (CAFs) promotes CCL2\u2010 and CXCL8\u2010mediated cancer cell migration. Mol. Oncol. 12, 1308\u20131323 (2018).",
+              "journal-title": "Mol. Oncol."
+            },
+            {
+              "key": "344_CR27",
+              "doi-asserted-by": "publisher",
+              "first-page": "5633",
+              "DOI": "10.1158/0008-5472.CAN-12-3228",
+              "volume": "73",
+              "author": "L-Y Fang",
+              "year": "2013",
+              "unstructured": "Fang, L.-Y. et al. Infiltrating macrophages promote prostate tumorigenesis via modulating androgen receptor-mediated CCL4-STAT3 signaling. Cancer Res. 73, 5633\u20135646 (2013).",
+              "journal-title": "Cancer Res."
+            },
+            {
+              "key": "344_CR28",
+              "first-page": "445",
+              "volume": "17",
+              "author": "IF Lissbrant",
+              "year": "2000",
+              "unstructured": "Lissbrant, I. F. et al. Tumor associated macrophages in human prostate cancer: relation to clinicopathological variables and survival. Int. J. Oncol. 17, 445\u2013451 (2000).",
+              "journal-title": "Int. J. Oncol."
+            },
+            {
+              "key": "344_CR29",
+              "doi-asserted-by": "publisher",
+              "first-page": "1",
+              "DOI": "10.1200/CCI.18.00057",
+              "volume": "3",
+              "author": "JA Rohrs",
+              "year": "2019",
+              "unstructured": "Rohrs, J. A., Wang, P. & Finley, S. D. Understanding the Dynamics of T-Cell Activation in Health and Disease Through the Lens of Computational Modeling. JCO Clin. Cancer Inform. 3, 1\u20138 (2019).",
+              "journal-title": "JCO Clin. Cancer Inform."
+            },
+            {
+              "key": "344_CR30",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/s41467-020-18313-y",
+              "volume": "11",
+              "author": "B Cioni",
+              "year": "2020",
+              "unstructured": "Cioni, B. et al. Androgen receptor signalling in macrophages promotes TREM-1-mediated prostate cancer cell line migration and invasion. Nat. Commun. 11, 4498 (2020).",
+              "journal-title": "Nat. Commun."
+            },
+            {
+              "key": "344_CR31",
+              "doi-asserted-by": "publisher",
+              "first-page": "2923",
+              "DOI": "10.4049/jimmunol.1800352",
+              "volume": "201",
+              "author": "M Becerra-D\u00edaz",
+              "year": "2018",
+              "unstructured": "Becerra-D\u00edaz, M., Strickland, A. B., Keselman, A. & Heller, N. M. Androgen and Androgen Receptor as Enhancers of M2 Macrophage Polarization in Allergic Lung Inflammation. J. Immunol. 201, 2923\u20132933 (2018).",
+              "journal-title": "J. Immunol."
+            },
+            {
+              "key": "344_CR32",
+              "doi-asserted-by": "publisher",
+              "first-page": "519383",
+              "DOI": "10.3389/fimmu.2020.519383",
+              "volume": "11",
+              "author": "CR Consiglio",
+              "year": "2020",
+              "unstructured": "Consiglio, C. R. & Gollnick, S. O. Androgen Receptor Signaling Positively Regulates Monocytic Development. Front. Immunol. 11, 519383 (2020).",
+              "journal-title": "Front. Immunol."
+            },
+            {
+              "key": "344_CR33",
+              "doi-asserted-by": "publisher",
+              "first-page": "1152",
+              "DOI": "10.1073/pnas.1815735116",
+              "volume": "116",
+              "author": "G Lorenzo",
+              "year": "2019",
+              "unstructured": "Lorenzo, G., Hughes, T. J. R., Dominguez-Frojan, P., Reali, A. & Gomez, H. Computer simulations suggest that prostate enlargement due to benign prostatic hyperplasia mechanically impedes prostate cancer growth. Proc. Natl Acad. Sci. 116, 1152\u20131161 (2019).",
+              "journal-title": "Proc. Natl Acad. Sci."
+            },
+            {
+              "key": "344_CR34",
+              "doi-asserted-by": "publisher",
+              "first-page": "e76284",
+              "DOI": "10.7554/eLife.76284",
+              "volume": "11",
+              "author": "J Zhang",
+              "year": "2022",
+              "unstructured": "Zhang, J., Cunningham, J., Brown, J. & Gatenby, R. Evolution-based mathematical models significantly prolong response to abiraterone in metastatic castrate-resistant prostate cancer and identify strategies to further improve outcomes. eLife 11, e76284 (2022).",
+              "journal-title": "eLife"
+            },
+            {
+              "key": "344_CR35",
+              "doi-asserted-by": "publisher",
+              "first-page": "517",
+              "DOI": "10.1016/j.jtbi.2010.02.027",
+              "volume": "264",
+              "author": "Y Hirata",
+              "year": "2010",
+              "unstructured": "Hirata, Y., Bruchovsky, N. & Aihara, K. Development of a mathematical model that predicts the outcome of hormone therapy for prostate cancer. J. Theor. Biol. 264, 517\u2013527 (2010).",
+              "journal-title": "J. Theor. Biol."
+            },
+            {
+              "key": "344_CR36",
+              "doi-asserted-by": "publisher",
+              "first-page": "011002",
+              "DOI": "10.1063/1.3697848",
+              "volume": "2",
+              "author": "T Portz",
+              "year": "2012",
+              "unstructured": "Portz, T., Kuang, Y. & Nagy, J. D. A clinical data validated mathematical model of prostate cancer growth under intermittent androgen suppression therapy. AIP Adv. 2, 011002 (2012).",
+              "journal-title": "AIP Adv."
+            },
+            {
+              "key": "344_CR37",
+              "doi-asserted-by": "publisher",
+              "first-page": "593",
+              "DOI": "10.1007/s00332-008-9031-0",
+              "volume": "18",
+              "author": "AM Ideta",
+              "year": "2008",
+              "unstructured": "Ideta, A. M., Tanaka, G., Takeuchi, T. & Aihara, K. A Mathematical Model of Intermittent Androgen Suppression for Prostate Cancer. J. Nonlinear Sci. 18, 593 (2008).",
+              "journal-title": "J. Nonlinear Sci."
+            },
+            {
+              "key": "344_CR38",
+              "first-page": "5029",
+              "volume": "368",
+              "author": "G Tanaka",
+              "year": "2010",
+              "unstructured": "Tanaka, G., Hirata, Y., Goldenberg, S. L., Bruchovsky, N. & Aihara, K. Mathematical modelling of prostate cancer growth and its application to hormone therapy. Philosophical Transactions of the Royal Society A: Mathematical. Phys. Eng. Sci. 368, 5029\u20135044 (2010).",
+              "journal-title": "Phys. Eng. Sci."
+            },
+            {
+              "key": "344_CR39",
+              "doi-asserted-by": "publisher",
+              "first-page": "19701",
+              "DOI": "10.1073/pnas.1115750108",
+              "volume": "108",
+              "author": "HV Jain",
+              "year": "2011",
+              "unstructured": "Jain, H. V., Clinton, S. K., Bhinder, A. & Friedman, A. Mathematical modeling of prostate cancer progression in response to androgen ablation therapy. Proc. Natl Acad. Sci. 108, 19701\u201319706 (2011).",
+              "journal-title": "Proc. Natl Acad. Sci."
+            },
+            {
+              "key": "344_CR40",
+              "doi-asserted-by": "publisher",
+              "first-page": "300",
+              "DOI": "10.1016/j.tcb.2022.10.006",
+              "volume": "33",
+              "author": "J West",
+              "year": "2023",
+              "unstructured": "West, J., Robertson-Tessi, M. & Anderson, A. R. A. Agent-based methods facilitate integrative science in cancer. Trends Cell Biol. 33, 300\u2013311 (2023).",
+              "journal-title": "Trends Cell Biol."
+            },
+            {
+              "key": "344_CR41",
+              "doi-asserted-by": "publisher",
+              "first-page": "e1004025",
+              "DOI": "10.1371/journal.pcbi.1004025",
+              "volume": "11",
+              "author": "J Poleszczuk",
+              "year": "2015",
+              "unstructured": "Poleszczuk, J., Hahnfeldt, P. & Enderling, H. Evolution and Phenotypic Selection of Cancer Stem Cells. PLOS Comput. Biol. 11, e1004025 (2015).",
+              "journal-title": "PLOS Comput. Biol."
+            },
+            {
+              "key": "344_CR42",
+              "doi-asserted-by": "publisher",
+              "first-page": "335",
+              "DOI": "10.1007/7651_2016_346",
+              "volume": "1516",
+              "author": "J Poleszczuk",
+              "year": "2016",
+              "unstructured": "Poleszczuk, J., Macklin, P. & Enderling, H. Agent-Based Modeling of Cancer Stem Cell Driven Solid Tumor Growth. Methods Mol. Biol. 1516, 335\u2013346 (2016).",
+              "journal-title": "Methods Mol. Biol."
+            },
+            {
+              "key": "344_CR43",
+              "first-page": "215",
+              "volume": "34",
+              "author": "F Frascoli",
+              "year": "2017",
+              "unstructured": "Frascoli, F., Flood, E. & Kim, P. S. A model of the effects of cancer cell motility and cellular adhesion properties on tumour-immune dynamics. Math. Med. Biol. 34, 215\u2013240 (2017).",
+              "journal-title": "Math. Med. Biol."
+            },
+            {
+              "key": "344_CR44",
+              "doi-asserted-by": "publisher",
+              "first-page": "641",
+              "DOI": "10.1177/0037549717699072",
+              "volume": "93",
+              "author": "F Pourhasanzade",
+              "year": "2017",
+              "unstructured": "Pourhasanzade, F., Sabzpoushan, S. H., Alizadeh, A. M. & Esmati, E. An agent-based model of avascular tumor growth: Immune response tendency to prevent cancer development. Simulation 93, 641\u2013657 (2017).",
+              "journal-title": "Simulation"
+            },
+            {
+              "key": "344_CR45",
+              "doi-asserted-by": "publisher",
+              "first-page": "235",
+              "DOI": "10.1016/j.matcom.2016.05.008",
+              "volume": "133",
+              "author": "A Jalalimanesh",
+              "year": "2017",
+              "unstructured": "Jalalimanesh, A., Haghighi, H.S., Ahmadi, A. & Soltani, M. Simulation-based optimization of radiotherapy: Agent-based modeling and reinforcement learning. Math. Comput. Simul. 133, 235\u2013248 (2017).",
+              "journal-title": "Math. Comput. Simul."
+            },
+            {
+              "key": "344_CR46",
+              "doi-asserted-by": "publisher",
+              "first-page": "6442",
+              "DOI": "10.1158/0008-5472.CAN-17-2006",
+              "volume": "77",
+              "author": "JN Kather",
+              "year": "2017",
+              "unstructured": "Kather, J. N. et al. In Silico Modeling of Immunotherapy and Stroma-Targeting Therapies in Human Colorectal Cancer. Cancer Res. 77, 6442\u20136452 (2017).",
+              "journal-title": "Cancer Res."
+            },
+            {
+              "key": "344_CR47",
+              "doi-asserted-by": "publisher",
+              "first-page": "5155",
+              "DOI": "10.1158/0008-5472.CAN-18-1126",
+              "volume": "78",
+              "author": "JN Kather",
+              "year": "2018",
+              "unstructured": "Kather, J. N. et al. High-Throughput Screening of Combinatorial Immunotherapies with Patient-Specific In Silico Models of Metastatic Colorectal Cancer.Cancer Res. 78, 5155\u20135163 (2018).",
+              "journal-title": "Cancer Res."
+            },
+            {
+              "key": "344_CR48",
+              "doi-asserted-by": "publisher",
+              "first-page": "1473",
+              "DOI": "10.1158/2767-9764.CRC-23-0097",
+              "volume": "3",
+              "author": "M Passier",
+              "year": "2023",
+              "unstructured": "Passier, M. et al. Exploring the Onset and Progression of Prostate Cancer through a Multicellular Agent-based Model. Cancer Res. Commun. 3, 1473\u20131485 (2023).",
+              "journal-title": "Cancer Res. Commun."
+            },
+            {
+              "key": "344_CR49",
+              "doi-asserted-by": "publisher",
+              "first-page": "2423",
+              "DOI": "10.1038/onc.2013.191",
+              "volume": "33",
+              "author": "G Comito",
+              "year": "2014",
+              "unstructured": "Comito, G. et al. Cancer-associated fibroblasts and M2-polarized macrophages synergize during prostate carcinoma progression. Oncogene 33, 2423\u20132431 (2014).",
+              "journal-title": "Oncogene"
+            },
+            {
+              "key": "344_CR50",
+              "doi-asserted-by": "publisher",
+              "first-page": "363",
+              "DOI": "10.1002/pros.23742",
+              "volume": "79",
+              "author": "A Erlandsson",
+              "year": "2019",
+              "unstructured": "Erlandsson, A. et al. M2 macrophages and regulatory T cells in lethal prostate cancer. The Prostate 79, 363\u2013369 (2019).",
+              "journal-title": "The Prostate"
+            },
+            {
+              "key": "344_CR51",
+              "doi-asserted-by": "publisher",
+              "first-page": "831",
+              "DOI": "10.1002/cbin.11528",
+              "volume": "45",
+              "author": "D Tu",
+              "year": "2021",
+              "unstructured": "Tu, D., Dou, J., Wang, M., Zhuang, H. & Zhang, X. M2 macrophages contribute to cell proliferation and migration of breast cancer. Cell Biol. Int. 45, 831\u2013838 (2021).",
+              "journal-title": "Cell Biol. Int."
+            },
+            {
+              "key": "344_CR52",
+              "doi-asserted-by": "publisher",
+              "first-page": "8580043",
+              "DOI": "10.1155/2022/8580043",
+              "volume": "2022",
+              "author": "C Han",
+              "year": "2022",
+              "unstructured": "Han, C. et al. The Roles of Tumor-Associated Macrophages in Prostate Cancer. J. Oncol. 2022, 8580043 (2022).",
+              "journal-title": "J. Oncol."
+            },
+            {
+              "key": "344_CR53",
+              "doi-asserted-by": "crossref",
+              "first-page": "71",
+              "DOI": "10.1080/10446670310001626580",
+              "volume": "10",
+              "author": "AB Geldhof",
+              "year": "2003",
+              "unstructured": "Geldhof, A. B., van Ginderachter, J. A., Liu, Y., No\u00ebl, W. & de Baetselier, P. Ablation of NK Cell Function During Tumor Growth Favors Type 2-Associated Macrophages, Leading to Suppressed CTL Generation. J. Immunol. Res. 10, 71\u201381 (2003).",
+              "journal-title": "J. Immunol. Res."
+            },
+            {
+              "key": "344_CR54",
+              "doi-asserted-by": "publisher",
+              "first-page": "1065",
+              "DOI": "10.1189/jlb.0609385",
+              "volume": "86",
+              "author": "G Solinas",
+              "year": "2009",
+              "unstructured": "Solinas, G., Germano, G., Mantovani, A. & Allavena, P. Tumor-associated macrophages (TAM) as major players of the cancer-related inflammation. J. Leukocyte Biol. 86, 1065\u20131073 (2009).",
+              "journal-title": "J. Leukocyte Biol."
+            },
+            {
+              "key": "344_CR55",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1186/s12943-019-0976-4",
+              "volume": "18",
+              "author": "C Wei",
+              "year": "2019",
+              "unstructured": "Wei, C. et al. Crosstalk between cancer cells and tumor associated macrophages is required for mesenchymal circulating tumor cell-mediated colorectal cancer metastasis. Mol. Cancer 18, 64 (2019).",
+              "journal-title": "Mol. Cancer"
+            },
+            {
+              "key": "344_CR56",
+              "doi-asserted-by": "publisher",
+              "first-page": "1628",
+              "DOI": "10.1038/bjc.2011.385",
+              "volume": "105",
+              "author": "H Payne",
+              "year": "2011",
+              "unstructured": "Payne, H. & Mason, M. Androgen deprivation therapy as adjuvant/neoadjuvant to radiotherapy for high-risk localised and locally advanced prostate cancer: recent developments. Br. J. Cancer 105, 1628\u20131634 (2011).",
+              "journal-title": "Br. J. Cancer"
+            },
+            {
+              "key": "344_CR57",
+              "doi-asserted-by": "publisher",
+              "first-page": "1180",
+              "DOI": "10.1111/j.1742-1241.2011.02799.x",
+              "volume": "65",
+              "author": "M Kirby",
+              "year": "2011",
+              "unstructured": "Kirby, M., Hirst, C. & Crawford, E. D. Characterising the castration-resistant prostate cancer population: a systematic review. Int. J. Clin. Pract. 65, 1180\u20131192 (2011).",
+              "journal-title": "Int. J. Clin. Pract."
+            },
+            {
+              "key": "344_CR58",
+              "doi-asserted-by": "publisher",
+              "first-page": "781",
+              "DOI": "10.1016/j.humpath.2010.02.011",
+              "volume": "41",
+              "author": "M Andreoiu",
+              "year": "2010",
+              "unstructured": "Andreoiu, M. & Cheng, L. Multifocal prostate cancer: biologic, prognostic, and therapeutic implications. Hum. Pathol. 41, 781\u2013793 (2010).",
+              "journal-title": "Hum. Pathol."
+            },
+            {
+              "key": "344_CR59",
+              "doi-asserted-by": "publisher",
+              "unstructured": "Zaalberg, A. et al. A genome-wide CRISPR screen in human prostate cancer cells reveals drivers of macrophage-mediated cell killing and positions AR as a tumor-intrinsic immunomodulator. bioRxiv, https://doi.org/10.1101/2023.06.06.543873 (2023).",
+              "DOI": "10.1101/2023.06.06.543873"
+            },
+            {
+              "key": "344_CR60",
+              "first-page": "4792",
+              "volume": "9",
+              "author": "G Ayala",
+              "year": "2003",
+              "unstructured": "Ayala, G. et al. Reactive Stroma as a Predictor of Biochemical-Free Recurrence in Prostate Cancer. Clin. Cancer Res. 9, 4792\u20134801 (2003).",
+              "journal-title": "Clin. Cancer Res."
+            },
+            {
+              "key": "344_CR61",
+              "doi-asserted-by": "publisher",
+              "first-page": "e60562",
+              "DOI": "10.1371/journal.pone.0060562",
+              "volume": "8",
+              "author": "E Singer",
+              "year": "2013",
+              "unstructured": "Singer, E. et al. Stromal Response to Prostate Cancer: Nanotechnology-Based Detection of Thioredoxin-Interacting Protein Partners Distinguishes Prostate Cancer Associated Stroma from That of Benign Prostatic Hyperplasia. PLoS One 8, e60562 (2013).",
+              "journal-title": "PLoS One"
+            },
+            {
+              "key": "344_CR62",
+              "doi-asserted-by": "publisher",
+              "first-page": "267",
+              "DOI": "10.1053/j.seminoncol.2014.03.004",
+              "volume": "41",
+              "author": "P Chiarugi",
+              "year": "2014",
+              "unstructured": "Chiarugi, P., Paoli, P. & Cirri, P. Tumor microenvironment and metabolism in prostate cancer. Semin. Oncol. 41, 267\u2013280 (2014).",
+              "journal-title": "Semin. Oncol."
+            },
+            {
+              "key": "344_CR63",
+              "doi-asserted-by": "publisher",
+              "first-page": "2337",
+              "DOI": "10.1038/s41388-018-0583-7",
+              "volume": "38",
+              "author": "Y He",
+              "year": "2019",
+              "unstructured": "He, Y. et al. Androgen Signaling is Essential for Development of Prostate Cancer Initiated From Prostatic Basal Cells. Oncogene 38, 2337\u20132350 (2019).",
+              "journal-title": "Oncogene"
+            },
+            {
+              "key": "344_CR64",
+              "doi-asserted-by": "publisher",
+              "first-page": "016002",
+              "DOI": "10.1088/1478-3975/9/1/016002",
+              "volume": "9",
+              "author": "DC Lazar",
+              "year": "2012",
+              "unstructured": "Lazar, D. C. et al. Cytometric comparisons between circulating tumor cells from prostate cancer patients and the prostate-tumor-derived LNCaP cell line. Phys. Biol. 9, 016002 (2012).",
+              "journal-title": "Phys. Biol."
+            },
+            {
+              "key": "344_CR65",
+              "unstructured": "Kennedy, J. & Eberhart, R. Particle Swarm Optimization. Proceedings of IEEE international conference on neural networks 95, 7 (1995)."
+            },
+            {
+              "key": "344_CR66",
+              "doi-asserted-by": "publisher",
+              "first-page": "e0122827",
+              "DOI": "10.1371/journal.pone.0122827",
+              "volume": "10",
+              "author": "MN Ab Wahab",
+              "year": "2015",
+              "unstructured": "Ab Wahab, M. N., Nefti-Meziani, S. & Atyabi, A. A comprehensive review of swarm optimization algorithms. PLoS One 10, e0122827 (2015).",
+              "journal-title": "PLoS One"
+            },
+            {
+              "key": "344_CR67",
+              "doi-asserted-by": "publisher",
+              "first-page": "1542",
+              "DOI": "10.1016/j.ces.2007.11.024",
+              "volume": "63",
+              "author": "M Schwaab",
+              "year": "2008",
+              "unstructured": "Schwaab, M., Biscaia, E. C. Jr, Monteiro, J. L. & Pinto, J. C. Nonlinear parameter estimation through particle swarm optimization. Chem. Eng. Sci. 63, 1542\u20131552 (2008).",
+              "journal-title": "Chem. Eng. Sci."
+            },
+            {
+              "key": "344_CR68",
+              "first-page": "1314",
+              "volume": "11",
+              "author": "RK Tan",
+              "year": "2017",
+              "unstructured": "Tan, R. K. & Bora, \u015e. Parameter Tuning of Complex Systems Modeled in Agent Based Modeling and Simulation. Int. J. Comput. Inf. Eng. 11, 1314\u20131323 (2017).",
+              "journal-title": "Int. J. Comput. Inf. Eng."
+            },
+            {
+              "key": "344_CR69",
+              "doi-asserted-by": "publisher",
+              "first-page": "e1462431",
+              "DOI": "10.1080/2162402X.2018.1462431",
+              "volume": "7",
+              "author": "DP Enot",
+              "year": "2018",
+              "unstructured": "Enot, D. P., Vacchelli, E., Jacquelot, N., Zitvogel, L. & Kroemer, G. TumGrowth: An open-access web tool for the statistical analysis of tumor growth curves. Oncoimmunology 7, e1462431 (2018).",
+              "journal-title": "Oncoimmunology"
+            }
+          ],
+          "container-title": [
+            "npj Systems Biology and Applications"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://www.nature.com/articles/s41540-024-00344-6.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://www.nature.com/articles/s41540-024-00344-6",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://www.nature.com/articles/s41540-024-00344-6.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2024,
+                11,
+                11
+              ]
+            ],
+            "date-time": "2024-11-11T21:06:23Z",
+            "timestamp": 1731359183000
+          },
+          "score": 22.253109,
+          "resource": {
+            "primary": {
+              "URL": "https://www.nature.com/articles/s41540-024-00344-6"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2024,
+                2,
+                21
+              ]
+            ]
+          },
+          "references-count": 69,
+          "journal-issue": {
+            "issue": "1",
+            "published-online": {
+              "date-parts": [
+                [
+                  2024,
+                  12
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "344"
+          ],
+          "URL": "https://doi.org/10.1038/s41540-024-00344-6",
+          "relation": {
+            "has-preprint": [
+              {
+                "id-type": "doi",
+                "id": "10.1101/2023.07.27.550792",
+                "asserted-by": "object"
+              },
+              {
+                "id-type": "doi",
+                "id": "10.21203/rs.3.rs-3265572/v1",
+                "asserted-by": "object"
+              }
+            ]
+          },
+          "ISSN": [
+            "2056-7189"
+          ],
+          "issn-type": [
+            {
+              "value": "2056-7189",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2024,
+                2,
+                21
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "15 August 2023",
+              "order": 1,
+              "name": "received",
+              "label": "Received",
+              "group": {
+                "name": "ArticleHistory",
+                "label": "Article History"
+              }
+            },
+            {
+              "value": "25 January 2024",
+              "order": 2,
+              "name": "accepted",
+              "label": "Accepted",
+              "group": {
+                "name": "ArticleHistory",
+                "label": "Article History"
+              }
+            },
+            {
+              "value": "21 February 2024",
+              "order": 3,
+              "name": "first_online",
+              "label": "First Online",
+              "group": {
+                "name": "ArticleHistory",
+                "label": "Article History"
+              }
+            },
+            {
+              "value": "The authors declare no competing interests.",
+              "order": 1,
+              "name": "Ethics",
+              "group": {
+                "name": "EthicsHeading",
+                "label": "Competing interests"
+              }
+            }
+          ],
+          "article-number": "20"
+        },
+        {
+          "institution": [
+            {
+              "name": "Research Square"
+            }
+          ],
+          "indexed": {
+            "date-parts": [
+              [
+                2025,
+                5,
+                14
+              ]
+            ],
+            "date-time": "2025-05-14T06:39:55Z",
+            "timestamp": 1747204795860,
+            "version": "3.40.5"
+          },
+          "posted": {
+            "date-parts": [
+              [
+                2023,
+                8,
+                31
+              ]
+            ]
+          },
+          "group-title": "In Review",
+          "reference-count": 0,
+          "publisher": "Springer Science and Business Media LLC",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2023,
+                    8,
+                    31
+                  ]
+                ],
+                "date-time": "2023-08-31T00:00:00Z",
+                "timestamp": 1693440000000
+              },
+              "content-version": "unspecified",
+              "delay-in-days": 0,
+              "URL": "https://creativecommons.org/licenses/by/4.0/"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "accepted": {
+            "date-parts": [
+              [
+                2023,
+                8,
+                15
+              ]
+            ]
+          },
+          "abstract": "<title>Abstract</title>\n        <p>Inhibiting androgen receptor (AR) signaling through androgen deprivation therapy (ADT) reduces prostate cancer (PCa) growth in virtually all patients, but response is temporary, and resistance inevitably develops, ultimately leading to lethal castration-resistant prostate cancer (CRPC). The tumor microenvironment (TME) plays an important role in the development and progression of PCa. In addition to tumor cells, TME-resident macrophages and fibroblasts express AR and are therefore also affected by ADT. However, the interplay of different TME cell types in the development of CRPC remains largely unexplored.\nTo understand the complex stochastic nature of cell-cell interactions, we created a PCa-specific agent-based model (PCABM) based on in vitro cell proliferation data. PCa cells, fibroblasts, \u201cpro-inflammatory\u201d M1-like and \u201cpro-tumor\u201d M2-like polarized macrophages are modeled as agents from a simple set of validated base assumptions. PCABM allows us to simulate the effect of ADT on the interplay between various prostate TME cell types. The resulting in vitro growth patterns mimic human PCa.\nOur PCABM can effectively model hormonal perturbations by ADT, in which PCABM suggests that CRPC arises in clusters of resistant cells, as is observed in multifocal PCa. In addition, fibroblasts compete for cellular space in the TME while simultaneously creating niches for tumor cells to proliferate in. Finally, PCABM predicts that ADT has immunomodulatory effects on macrophages that may enhance tumor survival. Taken together, these results suggest that AR plays a critical role in the cellular interplay and stochastic interactions in the TME that influence tumor cell behavior and CRPC development.</p>",
+          "DOI": "10.21203/rs.3.rs-3265572/v1",
+          "type": "posted-content",
+          "created": {
+            "date-parts": [
+              [
+                2023,
+                8,
+                31
+              ]
+            ],
+            "date-time": "2023-08-31T07:31:26Z",
+            "timestamp": 1693467086000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Agent-based modeling of the prostate tumor microenvironment uncovers spatial tumor growth constraints and immunomodulatory properties"
+          ],
+          "prefix": "10.21203",
+          "author": [
+            {
+              "ORCID": "https://orcid.org/0000-0002-7822-3867",
+              "authenticated-orcid": false,
+              "given": "Federica",
+              "family": "Eduati",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Eindhoven University of Technology"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0002-7394-9888",
+              "authenticated-orcid": false,
+              "given": "Maisa van",
+              "family": "Genderen",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Amsterdam UMC - Location VUmc"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Jeroen",
+              "family": "Kneppers",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "The Netherlands Cancer Institue"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Anniek",
+              "family": "Zaalberg",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "The Netherlands Cancer Institue"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Elise",
+              "family": "Bekers",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "The Netherlands Cancer Institue"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Andries",
+              "family": "Bergman",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "The Netherlands Cancer Institue"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Wilbert",
+              "family": "Zwart",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "The Netherlands Cancer Institue"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "link": [
+            {
+              "URL": "https://www.researchsquare.com/article/rs-3265572/v1",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://www.researchsquare.com/article/rs-3265572/v1.html",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2024,
+                2,
+                22
+              ]
+            ],
+            "date-time": "2024-02-22T08:26:39Z",
+            "timestamp": 1708590399000
+          },
+          "score": 22.27422,
+          "resource": {
+            "primary": {
+              "URL": "https://www.researchsquare.com/article/rs-3265572/v1"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2023,
+                8,
+                31
+              ]
+            ]
+          },
+          "references-count": 0,
+          "URL": "https://doi.org/10.21203/rs.3.rs-3265572/v1",
+          "relation": {
+            "is-preprint-of": [
+              {
+                "id-type": "doi",
+                "id": "10.1038/s41540-024-00344-6",
+                "asserted-by": "subject"
+              }
+            ]
+          },
+          "published": {
+            "date-parts": [
+              [
+                2023,
+                8,
+                31
+              ]
+            ]
+          },
+          "subtype": "preprint"
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

@@ -1,0 +1,4279 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1056%2Fnejmoa1105243%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1056/nejmoa1105243\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "21767103",
+          "source": "MED",
+          "pmid": "21767103",
+          "pmcid": "PMC3200068",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC3200068"
+            ]
+          },
+          "doi": "10.1056/nejmoa1105243",
+          "title": "Prevention of HIV-1 infection with early antiretroviral therapy.",
+          "authorString": "Cohen MS, Chen YQ, McCauley M, Gamble T, Hosseinipour MC, Kumarasamy N, Hakim JG, Kumwenda J, Grinsztejn B, Pilotto JH, Godbole SV, Mehendale S, Chariyalertsak S, Santos BR, Mayer KH, Hoffman IF, Eshleman SH, Piwowar-Manning E, Wang L, Makhema J, Mills LA, de Bruyn G, Sanne I, Eron J, Gallant J, Havlir D, Swindells S, Ribaudo H, Elharrar V, Burns D, Taha TE, Nielsen-Saines K, Celentano D, Essex M, Fleming TR, HPTN 052 Study Team.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Cohen MS",
+                "lastName": "Cohen",
+                "firstName": "Myron S",
+                "initials": "MS",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "University of North Carolina at Chapel Hill, Institute for Global Health and Infectious Diseases, Suite 2115, Bioinformatics Bldg., 130 Mason Farm Rd., CB 7030, Chapel Hill, NC 27599, USA. mscohen@med.unc.edu"
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Chen YQ",
+                "lastName": "Chen",
+                "firstName": "Ying Q",
+                "initials": "YQ"
+              },
+              {
+                "fullName": "McCauley M",
+                "lastName": "McCauley",
+                "firstName": "Marybeth",
+                "initials": "M"
+              },
+              {
+                "fullName": "Gamble T",
+                "lastName": "Gamble",
+                "firstName": "Theresa",
+                "initials": "T"
+              },
+              {
+                "fullName": "Hosseinipour MC",
+                "lastName": "Hosseinipour",
+                "firstName": "Mina C",
+                "initials": "MC"
+              },
+              {
+                "fullName": "Kumarasamy N",
+                "lastName": "Kumarasamy",
+                "firstName": "Nagalingeswaran",
+                "initials": "N"
+              },
+              {
+                "fullName": "Hakim JG",
+                "lastName": "Hakim",
+                "firstName": "James G",
+                "initials": "JG"
+              },
+              {
+                "fullName": "Kumwenda J",
+                "lastName": "Kumwenda",
+                "firstName": "Johnstone",
+                "initials": "J"
+              },
+              {
+                "fullName": "Grinsztejn B",
+                "lastName": "Grinsztejn",
+                "firstName": "Beatriz",
+                "initials": "B"
+              },
+              {
+                "fullName": "Pilotto JH",
+                "lastName": "Pilotto",
+                "firstName": "Jose H S",
+                "initials": "JH"
+              },
+              {
+                "fullName": "Godbole SV",
+                "lastName": "Godbole",
+                "firstName": "Sheela V",
+                "initials": "SV",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-6537-9064"
+                }
+              },
+              {
+                "fullName": "Mehendale S",
+                "lastName": "Mehendale",
+                "firstName": "Sanjay",
+                "initials": "S"
+              },
+              {
+                "fullName": "Chariyalertsak S",
+                "lastName": "Chariyalertsak",
+                "firstName": "Suwat",
+                "initials": "S"
+              },
+              {
+                "fullName": "Santos BR",
+                "lastName": "Santos",
+                "firstName": "Breno R",
+                "initials": "BR"
+              },
+              {
+                "fullName": "Mayer KH",
+                "lastName": "Mayer",
+                "firstName": "Kenneth H",
+                "initials": "KH"
+              },
+              {
+                "fullName": "Hoffman IF",
+                "lastName": "Hoffman",
+                "firstName": "Irving F",
+                "initials": "IF"
+              },
+              {
+                "fullName": "Eshleman SH",
+                "lastName": "Eshleman",
+                "firstName": "Susan H",
+                "initials": "SH"
+              },
+              {
+                "fullName": "Piwowar-Manning E",
+                "lastName": "Piwowar-Manning",
+                "firstName": "Estelle",
+                "initials": "E"
+              },
+              {
+                "fullName": "Wang L",
+                "lastName": "Wang",
+                "firstName": "Lei",
+                "initials": "L"
+              },
+              {
+                "fullName": "Makhema J",
+                "lastName": "Makhema",
+                "firstName": "Joseph",
+                "initials": "J"
+              },
+              {
+                "fullName": "Mills LA",
+                "lastName": "Mills",
+                "firstName": "Lisa A",
+                "initials": "LA",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-5674-9166"
+                }
+              },
+              {
+                "fullName": "de Bruyn G",
+                "lastName": "de Bruyn",
+                "firstName": "Guy",
+                "initials": "G",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-8028-4474"
+                }
+              },
+              {
+                "fullName": "Sanne I",
+                "lastName": "Sanne",
+                "firstName": "Ian",
+                "initials": "I"
+              },
+              {
+                "fullName": "Eron J",
+                "lastName": "Eron",
+                "firstName": "Joseph",
+                "initials": "J"
+              },
+              {
+                "fullName": "Gallant J",
+                "lastName": "Gallant",
+                "firstName": "Joel",
+                "initials": "J"
+              },
+              {
+                "fullName": "Havlir D",
+                "lastName": "Havlir",
+                "firstName": "Diane",
+                "initials": "D"
+              },
+              {
+                "fullName": "Swindells S",
+                "lastName": "Swindells",
+                "firstName": "Susan",
+                "initials": "S"
+              },
+              {
+                "fullName": "Ribaudo H",
+                "lastName": "Ribaudo",
+                "firstName": "Heather",
+                "initials": "H"
+              },
+              {
+                "fullName": "Elharrar V",
+                "lastName": "Elharrar",
+                "firstName": "Vanessa",
+                "initials": "V"
+              },
+              {
+                "fullName": "Burns D",
+                "lastName": "Burns",
+                "firstName": "David",
+                "initials": "D"
+              },
+              {
+                "fullName": "Taha TE",
+                "lastName": "Taha",
+                "firstName": "Taha E",
+                "initials": "TE",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-9814-4894"
+                }
+              },
+              {
+                "fullName": "Nielsen-Saines K",
+                "lastName": "Nielsen-Saines",
+                "firstName": "Karin",
+                "initials": "K"
+              },
+              {
+                "fullName": "Celentano D",
+                "lastName": "Celentano",
+                "firstName": "David",
+                "initials": "D"
+              },
+              {
+                "fullName": "Essex M",
+                "lastName": "Essex",
+                "firstName": "Max",
+                "initials": "M"
+              },
+              {
+                "fullName": "Fleming TR",
+                "lastName": "Fleming",
+                "firstName": "Thomas R",
+                "initials": "TR"
+              },
+              {
+                "collectiveName": "HPTN 052 Study Team"
+              }
+            ]
+          },
+          "investigatorList": {
+            "investigator": [
+              {
+                "fullName": "Veloso VG",
+                "lastName": "Veloso",
+                "firstName": "Valdilea Goncalves",
+                "initials": "VG"
+              },
+              {
+                "fullName": "Friedman RK",
+                "lastName": "Friedman",
+                "firstName": "Ruth Khalili",
+                "initials": "RK"
+              },
+              {
+                "fullName": "Cardoso SW",
+                "lastName": "Cardoso",
+                "firstName": "Sandra Wagner",
+                "initials": "SW"
+              },
+              {
+                "fullName": "Calvet GA",
+                "lastName": "Calvet",
+                "firstName": "Guilherme Amaral",
+                "initials": "GA",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-3545-5238"
+                }
+              },
+              {
+                "fullName": "Ribeiro MP",
+                "lastName": "Ribeiro",
+                "firstName": "Maria Pia Diniz",
+                "initials": "MP"
+              },
+              {
+                "fullName": "Tavares IC",
+                "lastName": "Tavares",
+                "firstName": "Isabel C",
+                "initials": "IC"
+              },
+              {
+                "fullName": "Rocha MR",
+                "lastName": "Rocha",
+                "firstName": "Maria R",
+                "initials": "MR"
+              },
+              {
+                "fullName": "Fernandes NM",
+                "lastName": "Fernandes",
+                "firstName": "Nilo Martinez",
+                "initials": "NM"
+              },
+              {
+                "fullName": "Moreira RI",
+                "lastName": "Moreira",
+                "firstName": "Ronaldo Ismerio",
+                "initials": "RI"
+              },
+              {
+                "fullName": "Paiva M",
+                "lastName": "Paiva",
+                "firstName": "Margarete",
+                "initials": "M"
+              },
+              {
+                "fullName": "Filgueiras S",
+                "lastName": "Filgueiras",
+                "firstName": "Sandra",
+                "initials": "S"
+              },
+              {
+                "fullName": "Waite D",
+                "lastName": "Waite",
+                "firstName": "Daniel",
+                "initials": "D"
+              },
+              {
+                "fullName": "Morgado MG",
+                "lastName": "Morgado",
+                "firstName": "Mariza Goncalves",
+                "initials": "MG"
+              },
+              {
+                "fullName": "Tuler L",
+                "lastName": "Tuler",
+                "firstName": "Lidiane",
+                "initials": "L"
+              },
+              {
+                "fullName": "Georg I",
+                "lastName": "Georg",
+                "firstName": "Ingeborg",
+                "initials": "I"
+              },
+              {
+                "fullName": "Neves I Jr",
+                "lastName": "Neves",
+                "firstName": "Ivan",
+                "initials": "I"
+              },
+              {
+                "fullName": "Andrade AC",
+                "lastName": "Andrade",
+                "firstName": "Angela C",
+                "initials": "AC"
+              },
+              {
+                "fullName": "Sena L",
+                "lastName": "Sena",
+                "firstName": "Lucia",
+                "initials": "L"
+              },
+              {
+                "fullName": "Torres T",
+                "lastName": "Torres",
+                "firstName": "Thiago",
+                "initials": "T"
+              },
+              {
+                "fullName": "de Oliveira MS",
+                "lastName": "de Oliveira",
+                "firstName": "Marilia Santini",
+                "initials": "MS"
+              },
+              {
+                "fullName": "Hoagland B",
+                "lastName": "Hoagland",
+                "firstName": "Brenda",
+                "initials": "B"
+              },
+              {
+                "fullName": "Raxach JC",
+                "lastName": "Raxach",
+                "firstName": "Juan C",
+                "initials": "JC"
+              },
+              {
+                "fullName": "Pimenta C",
+                "lastName": "Pimenta",
+                "firstName": "Cristina",
+                "initials": "C"
+              },
+              {
+                "fullName": "Ribeiro V",
+                "lastName": "Ribeiro",
+                "firstName": "Valeria",
+                "initials": "V"
+              },
+              {
+                "fullName": "Nunes J",
+                "lastName": "Nunes",
+                "firstName": "Jorge",
+                "initials": "J"
+              },
+              {
+                "fullName": "Alves Lda S",
+                "lastName": "Alves",
+                "firstName": "Ludmila da Silva",
+                "initials": "Lda S"
+              },
+              {
+                "fullName": "Freitas RH",
+                "lastName": "Freitas",
+                "firstName": "Ricardo H",
+                "initials": "RH"
+              },
+              {
+                "fullName": "de Souza LH",
+                "lastName": "de Souza",
+                "firstName": "Lucia H Cardoso",
+                "initials": "LH"
+              },
+              {
+                "fullName": "Brum T",
+                "lastName": "Brum",
+                "firstName": "Tania",
+                "initials": "T"
+              },
+              {
+                "fullName": "Bustorff F",
+                "lastName": "Bustorff",
+                "firstName": "Flavio",
+                "initials": "F"
+              },
+              {
+                "fullName": "do Nascimento MI",
+                "lastName": "do Nascimento",
+                "firstName": "Maria Isabel",
+                "initials": "MI"
+              },
+              {
+                "fullName": "Portela LS",
+                "lastName": "Portela",
+                "firstName": "Lara Somma",
+                "initials": "LS"
+              },
+              {
+                "fullName": "Ramalho A",
+                "lastName": "Ramalho",
+                "firstName": "Aline",
+                "initials": "A"
+              },
+              {
+                "fullName": "Rodrigues AC",
+                "lastName": "Rodrigues",
+                "firstName": "Ana Claudia",
+                "initials": "AC"
+              },
+              {
+                "fullName": "da Silva CL",
+                "lastName": "da Silva",
+                "firstName": "Cintia Lopes",
+                "initials": "CL"
+              },
+              {
+                "fullName": "de Ch\u00e3 TM",
+                "lastName": "de Ch\u00e3",
+                "firstName": "Tatiana Muniz",
+                "initials": "TM"
+              },
+              {
+                "fullName": "Joao EC",
+                "lastName": "Joao",
+                "firstName": "Esau C",
+                "initials": "EC"
+              },
+              {
+                "fullName": "Sidi LC",
+                "lastName": "Sidi",
+                "firstName": "Leon Claude",
+                "initials": "LC"
+              },
+              {
+                "fullName": "de Melo MG",
+                "lastName": "de Melo",
+                "firstName": "Marineide G",
+                "initials": "MG"
+              },
+              {
+                "fullName": "Lira RA",
+                "lastName": "Lira",
+                "firstName": "Rita A",
+                "initials": "RA"
+              },
+              {
+                "fullName": "Zabtoski KR",
+                "lastName": "Zabtoski",
+                "firstName": "Kelin R",
+                "initials": "KR"
+              },
+              {
+                "fullName": "Castro AC",
+                "lastName": "Castro",
+                "firstName": "Andr\u00e9a C",
+                "initials": "AC"
+              },
+              {
+                "fullName": "Flores R",
+                "lastName": "Flores",
+                "firstName": "Rui",
+                "initials": "R"
+              },
+              {
+                "fullName": "Grudzinski M",
+                "lastName": "Grudzinski",
+                "firstName": "Melina",
+                "initials": "M"
+              },
+              {
+                "fullName": "da Silva AL",
+                "lastName": "da Silva",
+                "firstName": "Andr\u00e9 L",
+                "initials": "AL"
+              },
+              {
+                "fullName": "Kliemann DA",
+                "lastName": "Kliemann",
+                "firstName": "Dimas A",
+                "initials": "DA"
+              },
+              {
+                "fullName": "Campello CM",
+                "lastName": "Campello",
+                "firstName": "Cl\u00e1udio M",
+                "initials": "CM"
+              },
+              {
+                "fullName": "Canti IC",
+                "lastName": "Canti",
+                "firstName": "Ivete C",
+                "initials": "IC"
+              },
+              {
+                "fullName": "Magalh\u00e3es ES",
+                "lastName": "Magalh\u00e3es",
+                "firstName": "Elizabeth S",
+                "initials": "ES"
+              },
+              {
+                "fullName": "Perez CF",
+                "lastName": "Perez",
+                "firstName": "Consuelo F",
+                "initials": "CF"
+              },
+              {
+                "fullName": "Silveira ML",
+                "lastName": "Silveira",
+                "firstName": "Mara L",
+                "initials": "ML"
+              },
+              {
+                "fullName": "Barris J",
+                "lastName": "Barris",
+                "firstName": "Julio",
+                "initials": "J"
+              },
+              {
+                "fullName": "Almeida ME",
+                "lastName": "Almeida",
+                "firstName": "Marcelo E",
+                "initials": "ME"
+              },
+              {
+                "fullName": "Seter MC",
+                "lastName": "Seter",
+                "firstName": "Maria C",
+                "initials": "MC"
+              },
+              {
+                "fullName": "Turella ML",
+                "lastName": "Turella",
+                "firstName": "Maria L",
+                "initials": "ML"
+              },
+              {
+                "fullName": "Fernandes CL",
+                "lastName": "Fernandes",
+                "firstName": "Carmen L",
+                "initials": "CL"
+              },
+              {
+                "fullName": "Curra L",
+                "lastName": "Curra",
+                "firstName": "Leda",
+                "initials": "L"
+              },
+              {
+                "fullName": "Simon MR",
+                "lastName": "Simon",
+                "firstName": "Mariana R",
+                "initials": "MR"
+              },
+              {
+                "fullName": "Zabtoski SM",
+                "lastName": "Zabtoski",
+                "firstName": "Salete M",
+                "initials": "SM"
+              },
+              {
+                "fullName": "Miotto I",
+                "lastName": "Miotto",
+                "firstName": "Inelva",
+                "initials": "I"
+              },
+              {
+                "fullName": "Chiarani F",
+                "lastName": "Chiarani",
+                "firstName": "Fabria",
+                "initials": "F"
+              },
+              {
+                "fullName": "Ramos DT",
+                "lastName": "Ramos",
+                "firstName": "Deise T",
+                "initials": "DT"
+              },
+              {
+                "fullName": "Gottert CC",
+                "lastName": "Gottert",
+                "firstName": "Claudia C",
+                "initials": "CC"
+              },
+              {
+                "fullName": "de Melo MC",
+                "lastName": "de Melo",
+                "firstName": "Magnus C",
+                "initials": "MC"
+              },
+              {
+                "fullName": "dos Santos RF",
+                "lastName": "dos Santos",
+                "firstName": "Roberta F",
+                "initials": "RF"
+              },
+              {
+                "fullName": "Gelman M",
+                "lastName": "Gelman",
+                "firstName": "Marcy",
+                "initials": "M"
+              },
+              {
+                "fullName": "Maldonado A",
+                "lastName": "Maldonado",
+                "firstName": "Ana",
+                "initials": "A"
+              },
+              {
+                "fullName": "Singal R",
+                "lastName": "Singal",
+                "firstName": "Robbie",
+                "initials": "R"
+              },
+              {
+                "fullName": "Safren S",
+                "lastName": "Safren",
+                "firstName": "Steven",
+                "initials": "S"
+              },
+              {
+                "fullName": "Vanderwarker R",
+                "lastName": "Vanderwarker",
+                "firstName": "Rodney",
+                "initials": "R"
+              },
+              {
+                "fullName": "Srikrishnan AK",
+                "lastName": "Srikrishnan",
+                "firstName": "Aylur Kailasom",
+                "initials": "AK"
+              },
+              {
+                "fullName": "Sharma J",
+                "lastName": "Sharma",
+                "firstName": "Jabin",
+                "initials": "J"
+              },
+              {
+                "fullName": "Thamburaj E",
+                "lastName": "Thamburaj",
+                "firstName": "Easter",
+                "initials": "E"
+              },
+              {
+                "fullName": "Arumugham J",
+                "lastName": "Arumugham",
+                "firstName": "Jeeva",
+                "initials": "J"
+              },
+              {
+                "fullName": "Govindarajan N",
+                "lastName": "Govindarajan",
+                "firstName": "Narayanan",
+                "initials": "N"
+              },
+              {
+                "fullName": "Selvamuthu P",
+                "lastName": "Selvamuthu",
+                "firstName": "Poongulalli",
+                "initials": "P"
+              },
+              {
+                "fullName": "Paranjape R",
+                "lastName": "Paranjape",
+                "firstName": "Ramesh",
+                "initials": "R"
+              },
+              {
+                "fullName": "Risbud A",
+                "lastName": "Risbud",
+                "firstName": "Arun",
+                "initials": "A"
+              },
+              {
+                "fullName": "Tripathy S",
+                "lastName": "Tripathy",
+                "firstName": "Srikanth",
+                "initials": "S"
+              },
+              {
+                "fullName": "Gangakhedkar R",
+                "lastName": "Gangakhedkar",
+                "firstName": "Raman",
+                "initials": "R"
+              },
+              {
+                "fullName": "Sahay S",
+                "lastName": "Sahay",
+                "firstName": "Seema",
+                "initials": "S",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-6064-827X"
+                }
+              },
+              {
+                "fullName": "Kulkarni S",
+                "lastName": "Kulkarni",
+                "firstName": "Smita",
+                "initials": "S"
+              },
+              {
+                "fullName": "Ghate M",
+                "lastName": "Ghate",
+                "firstName": "Manisha",
+                "initials": "M"
+              },
+              {
+                "fullName": "Thakar M",
+                "lastName": "Thakar",
+                "firstName": "Madhuri",
+                "initials": "M"
+              },
+              {
+                "fullName": "Dhayarkar S",
+                "lastName": "Dhayarkar",
+                "firstName": "Sampada",
+                "initials": "S"
+              },
+              {
+                "fullName": "Mane A",
+                "lastName": "Mane",
+                "firstName": "Arati",
+                "initials": "A"
+              },
+              {
+                "fullName": "Kale V",
+                "lastName": "Kale",
+                "firstName": "Varsha",
+                "initials": "V"
+              },
+              {
+                "fullName": "Kulkarni S",
+                "lastName": "Kulkarni",
+                "firstName": "Sangita",
+                "initials": "S"
+              },
+              {
+                "fullName": "Mahajan B",
+                "lastName": "Mahajan",
+                "firstName": "Bharati",
+                "initials": "B"
+              },
+              {
+                "fullName": "Brahme R",
+                "lastName": "Brahme",
+                "firstName": "Radhika",
+                "initials": "R"
+              },
+              {
+                "fullName": "Joglekar N",
+                "lastName": "Joglekar",
+                "firstName": "Neelam",
+                "initials": "N"
+              },
+              {
+                "fullName": "Pradhan N",
+                "lastName": "Pradhan",
+                "firstName": "Neeta",
+                "initials": "N"
+              },
+              {
+                "fullName": "Krishnan S",
+                "lastName": "Krishnan",
+                "firstName": "Sumitra",
+                "initials": "S"
+              },
+              {
+                "fullName": "Kanitkar S",
+                "lastName": "Kanitkar",
+                "firstName": "Swapna",
+                "initials": "S"
+              },
+              {
+                "fullName": "Deshmukh R",
+                "lastName": "Deshmukh",
+                "firstName": "Rajeshwari",
+                "initials": "R"
+              },
+              {
+                "fullName": "Beri A",
+                "lastName": "Beri",
+                "firstName": "Archana",
+                "initials": "A"
+              },
+              {
+                "fullName": "Katti U",
+                "lastName": "Katti",
+                "firstName": "Usha",
+                "initials": "U"
+              },
+              {
+                "fullName": "Koli A",
+                "lastName": "Koli",
+                "firstName": "Anuradha",
+                "initials": "A"
+              },
+              {
+                "fullName": "Alexander M",
+                "lastName": "Alexander",
+                "firstName": "Mallika",
+                "initials": "M"
+              },
+              {
+                "fullName": "Kohli R",
+                "lastName": "Kohli",
+                "firstName": "Rewa",
+                "initials": "R"
+              },
+              {
+                "fullName": "Deshpande S",
+                "lastName": "Deshpande",
+                "firstName": "Swapna",
+                "initials": "S"
+              },
+              {
+                "fullName": "Gaikwad A",
+                "lastName": "Gaikwad",
+                "firstName": "Asmita",
+                "initials": "A"
+              },
+              {
+                "fullName": "Pawar J",
+                "lastName": "Pawar",
+                "firstName": "Jyoti",
+                "initials": "J"
+              },
+              {
+                "fullName": "Patil P",
+                "lastName": "Patil",
+                "firstName": "Prafulla",
+                "initials": "P"
+              },
+              {
+                "fullName": "Kokil A",
+                "lastName": "Kokil",
+                "firstName": "Ashwini",
+                "initials": "A"
+              },
+              {
+                "fullName": "Nehete Y",
+                "lastName": "Nehete",
+                "firstName": "Yogesh",
+                "initials": "Y"
+              },
+              {
+                "fullName": "Sheth P",
+                "lastName": "Sheth",
+                "firstName": "Pratima",
+                "initials": "P"
+              },
+              {
+                "fullName": "Tupekar P",
+                "lastName": "Tupekar",
+                "firstName": "Priyanka",
+                "initials": "P"
+              },
+              {
+                "fullName": "Patil P",
+                "lastName": "Patil",
+                "firstName": "Prajakta",
+                "initials": "P"
+              },
+              {
+                "fullName": "Kulkarni P",
+                "lastName": "Kulkarni",
+                "firstName": "Prasad",
+                "initials": "P"
+              },
+              {
+                "fullName": "Wagh Y",
+                "lastName": "Wagh",
+                "firstName": "Yogesh",
+                "initials": "Y"
+              },
+              {
+                "fullName": "Mawal S",
+                "lastName": "Mawal",
+                "firstName": "Savita",
+                "initials": "S"
+              },
+              {
+                "fullName": "Dhamne P",
+                "lastName": "Dhamne",
+                "firstName": "Prajakta",
+                "initials": "P"
+              },
+              {
+                "fullName": "Kharat M",
+                "lastName": "Kharat",
+                "firstName": "Mahesh",
+                "initials": "M"
+              },
+              {
+                "fullName": "Parkhe A",
+                "lastName": "Parkhe",
+                "firstName": "Aparna",
+                "initials": "A"
+              },
+              {
+                "fullName": "Momin A",
+                "lastName": "Momin",
+                "firstName": "Ayesha",
+                "initials": "A"
+              },
+              {
+                "fullName": "Jadhav S",
+                "lastName": "Jadhav",
+                "firstName": "Sachin",
+                "initials": "S"
+              },
+              {
+                "fullName": "Baig M",
+                "lastName": "Baig",
+                "firstName": "Mufid",
+                "initials": "M"
+              },
+              {
+                "fullName": "Solas V",
+                "lastName": "Solas",
+                "firstName": "Vikram",
+                "initials": "V"
+              },
+              {
+                "fullName": "Birhade R",
+                "lastName": "Birhade",
+                "firstName": "Ratnaprabha",
+                "initials": "R"
+              },
+              {
+                "fullName": "Karve L",
+                "lastName": "Karve",
+                "firstName": "Latika",
+                "initials": "L"
+              },
+              {
+                "fullName": "Gade K",
+                "lastName": "Gade",
+                "firstName": "Keshav",
+                "initials": "K"
+              },
+              {
+                "fullName": "Panchal N",
+                "lastName": "Panchal",
+                "firstName": "Narayan",
+                "initials": "N"
+              },
+              {
+                "fullName": "Ghodke U",
+                "lastName": "Ghodke",
+                "firstName": "Urmila",
+                "initials": "U"
+              },
+              {
+                "fullName": "Nalgirkar H",
+                "lastName": "Nalgirkar",
+                "firstName": "Harshad",
+                "initials": "H"
+              },
+              {
+                "fullName": "Gaikwad S",
+                "lastName": "Gaikwad",
+                "firstName": "Sunil",
+                "initials": "S"
+              },
+              {
+                "fullName": "Patil L",
+                "lastName": "Patil",
+                "firstName": "Lalit",
+                "initials": "L"
+              },
+              {
+                "fullName": "Jivane S",
+                "lastName": "Jivane",
+                "firstName": "Swati",
+                "initials": "S"
+              },
+              {
+                "fullName": "Mamulwar M",
+                "lastName": "Mamulwar",
+                "firstName": "Megha",
+                "initials": "M"
+              },
+              {
+                "fullName": "Bangar D",
+                "lastName": "Bangar",
+                "firstName": "Deepak",
+                "initials": "D"
+              },
+              {
+                "fullName": "Yadav R",
+                "lastName": "Yadav",
+                "firstName": "Rajesh",
+                "initials": "R"
+              },
+              {
+                "fullName": "Gorade M",
+                "lastName": "Gorade",
+                "firstName": "Manoj",
+                "initials": "M"
+              },
+              {
+                "fullName": "Kad V",
+                "lastName": "Kad",
+                "firstName": "Vijay",
+                "initials": "V"
+              },
+              {
+                "fullName": "Palhade G",
+                "lastName": "Palhade",
+                "firstName": "Ganesh",
+                "initials": "G"
+              },
+              {
+                "fullName": "Bangale B",
+                "lastName": "Bangale",
+                "firstName": "Bipin",
+                "initials": "B"
+              },
+              {
+                "fullName": "Shindekar S",
+                "lastName": "Shindekar",
+                "firstName": "Sonal",
+                "initials": "S"
+              },
+              {
+                "fullName": "Bankar V",
+                "lastName": "Bankar",
+                "firstName": "Vandana",
+                "initials": "V"
+              },
+              {
+                "fullName": "Lakhwani K",
+                "lastName": "Lakhwani",
+                "firstName": "Kiran",
+                "initials": "K"
+              },
+              {
+                "fullName": "Ganeshacharya S",
+                "lastName": "Ganeshacharya",
+                "firstName": "Suchitra",
+                "initials": "S"
+              },
+              {
+                "fullName": "Patil C",
+                "lastName": "Patil",
+                "firstName": "Chaitrali",
+                "initials": "C"
+              },
+              {
+                "fullName": "Jagdale A",
+                "lastName": "Jagdale",
+                "firstName": "Ashwini",
+                "initials": "A"
+              },
+              {
+                "fullName": "Satyanna N",
+                "lastName": "Satyanna",
+                "firstName": "Naveen",
+                "initials": "N"
+              },
+              {
+                "fullName": "Patil A",
+                "lastName": "Patil",
+                "firstName": "Ashwini",
+                "initials": "A"
+              },
+              {
+                "fullName": "Francis A",
+                "lastName": "Francis",
+                "firstName": "Asha",
+                "initials": "A"
+              },
+              {
+                "fullName": "Chauware V",
+                "lastName": "Chauware",
+                "firstName": "Vijay",
+                "initials": "V"
+              },
+              {
+                "fullName": "Kale S",
+                "lastName": "Kale",
+                "firstName": "Sachin",
+                "initials": "S"
+              },
+              {
+                "fullName": "Sharif N",
+                "lastName": "Sharif",
+                "firstName": "Navaz",
+                "initials": "N"
+              },
+              {
+                "fullName": "Bingewar R",
+                "lastName": "Bingewar",
+                "firstName": "Rohini",
+                "initials": "R"
+              },
+              {
+                "fullName": "Gujar R",
+                "lastName": "Gujar",
+                "firstName": "Ruparani",
+                "initials": "R"
+              },
+              {
+                "fullName": "Malav V",
+                "lastName": "Malav",
+                "firstName": "Vikas",
+                "initials": "V"
+              },
+              {
+                "fullName": "Bhandarkar M",
+                "lastName": "Bhandarkar",
+                "firstName": "Manisha",
+                "initials": "M"
+              },
+              {
+                "fullName": "Chimanpure V",
+                "lastName": "Chimanpure",
+                "firstName": "Vaishali",
+                "initials": "V"
+              },
+              {
+                "fullName": "Chandane M",
+                "lastName": "Chandane",
+                "firstName": "Madhuri",
+                "initials": "M"
+              },
+              {
+                "fullName": "Hingankar N",
+                "lastName": "Hingankar",
+                "firstName": "Nitin",
+                "initials": "N"
+              },
+              {
+                "fullName": "Thorat S",
+                "lastName": "Thorat",
+                "firstName": "Smita",
+                "initials": "S"
+              },
+              {
+                "fullName": "Mankar S",
+                "lastName": "Mankar",
+                "firstName": "Shubhada",
+                "initials": "S"
+              },
+              {
+                "fullName": "Deshpande S",
+                "lastName": "Deshpande",
+                "firstName": "Shubhada",
+                "initials": "S"
+              },
+              {
+                "fullName": "Nair S",
+                "lastName": "Nair",
+                "firstName": "Seema",
+                "initials": "S"
+              },
+              {
+                "fullName": "Vaidya G",
+                "lastName": "Vaidya",
+                "firstName": "Gauri",
+                "initials": "G"
+              },
+              {
+                "fullName": "More D",
+                "lastName": "More",
+                "firstName": "Deepak",
+                "initials": "D"
+              },
+              {
+                "fullName": "Panchanadikar A",
+                "lastName": "Panchanadikar",
+                "firstName": "Anjali",
+                "initials": "A"
+              },
+              {
+                "fullName": "Pardeshi K",
+                "lastName": "Pardeshi",
+                "firstName": "Kavita",
+                "initials": "K"
+              },
+              {
+                "fullName": "More C",
+                "lastName": "More",
+                "firstName": "Chetan",
+                "initials": "C"
+              },
+              {
+                "fullName": "Kumar K",
+                "lastName": "Kumar",
+                "firstName": "Kishore",
+                "initials": "K"
+              },
+              {
+                "fullName": "Navlakha S",
+                "lastName": "Navlakha",
+                "firstName": "Shubhangi",
+                "initials": "S"
+              },
+              {
+                "fullName": "Kulkarni V",
+                "lastName": "Kulkarni",
+                "firstName": "Vijaya",
+                "initials": "V"
+              },
+              {
+                "fullName": "Wankhede S",
+                "lastName": "Wankhede",
+                "firstName": "Sudhakar",
+                "initials": "S"
+              },
+              {
+                "fullName": "Dadke D",
+                "lastName": "Dadke",
+                "firstName": "Dhananjay",
+                "initials": "D"
+              },
+              {
+                "fullName": "Nene M",
+                "lastName": "Nene",
+                "firstName": "Madhura",
+                "initials": "M"
+              },
+              {
+                "fullName": "Kulkarni S",
+                "lastName": "Kulkarni",
+                "firstName": "Sanjay",
+                "initials": "S"
+              },
+              {
+                "fullName": "Suwanvanichkij V",
+                "lastName": "Suwanvanichkij",
+                "firstName": "Voravit",
+                "initials": "V"
+              },
+              {
+                "fullName": "Ruangyuttikarn C",
+                "lastName": "Ruangyuttikarn",
+                "firstName": "Cholticha",
+                "initials": "C"
+              },
+              {
+                "fullName": "Chotirosniramit N",
+                "lastName": "Chotirosniramit",
+                "firstName": "Nuntisa",
+                "initials": "N"
+              },
+              {
+                "fullName": "Walshe L",
+                "lastName": "Walshe",
+                "firstName": "Louise",
+                "initials": "L"
+              },
+              {
+                "fullName": "Simmons N",
+                "lastName": "Simmons",
+                "firstName": "Nicole",
+                "initials": "N"
+              },
+              {
+                "fullName": "Johnson L",
+                "lastName": "Johnson",
+                "firstName": "Lara",
+                "initials": "L"
+              },
+              {
+                "fullName": "Guptarak M",
+                "lastName": "Guptarak",
+                "firstName": "Marisa",
+                "initials": "M"
+              },
+              {
+                "fullName": "Chandler C",
+                "lastName": "Chandler",
+                "firstName": "Clevetta",
+                "initials": "C"
+              },
+              {
+                "fullName": "Lange HP",
+                "lastName": "Lange",
+                "firstName": "H Peter",
+                "initials": "HP"
+              },
+              {
+                "fullName": "Prasarakee C",
+                "lastName": "Prasarakee",
+                "firstName": "Chanidapa",
+                "initials": "C"
+              },
+              {
+                "fullName": "Sirisanthana T",
+                "lastName": "Sirisanthana",
+                "firstName": "Thira",
+                "initials": "T"
+              },
+              {
+                "fullName": "Srithanaviboonchai K",
+                "lastName": "Srithanaviboonchai",
+                "firstName": "Kriengkrai",
+                "initials": "K"
+              },
+              {
+                "fullName": "Suwanvanichkij V",
+                "lastName": "Suwanvanichkij",
+                "firstName": "Voravit",
+                "initials": "V"
+              },
+              {
+                "fullName": "Kosashunhanan N",
+                "lastName": "Kosashunhanan",
+                "firstName": "Natthapol",
+                "initials": "N"
+              },
+              {
+                "fullName": "Thetket S",
+                "lastName": "Thetket",
+                "firstName": "Sunida",
+                "initials": "S"
+              },
+              {
+                "fullName": "Sugandhavesa P",
+                "lastName": "Sugandhavesa",
+                "firstName": "Patcharaphan",
+                "initials": "P"
+              },
+              {
+                "fullName": "Supindham T",
+                "lastName": "Supindham",
+                "firstName": "Taweewat",
+                "initials": "T"
+              },
+              {
+                "fullName": "Chaiklang K",
+                "lastName": "Chaiklang",
+                "firstName": "Kanokporn",
+                "initials": "K"
+              },
+              {
+                "fullName": "Nimsakul S",
+                "lastName": "Nimsakul",
+                "firstName": "Sineenart",
+                "initials": "S"
+              },
+              {
+                "fullName": "Chaikan W",
+                "lastName": "Chaikan",
+                "firstName": "Wilawan",
+                "initials": "W"
+              },
+              {
+                "fullName": "Thongphan T",
+                "lastName": "Thongphan",
+                "firstName": "Thanyalak",
+                "initials": "T"
+              },
+              {
+                "fullName": "Sarachai S",
+                "lastName": "Sarachai",
+                "firstName": "Saowalak",
+                "initials": "S"
+              },
+              {
+                "fullName": "Mueanapai S",
+                "lastName": "Mueanapai",
+                "firstName": "Sontiya",
+                "initials": "S"
+              },
+              {
+                "fullName": "Panyo N",
+                "lastName": "Panyo",
+                "firstName": "Napha",
+                "initials": "N"
+              },
+              {
+                "fullName": "Pookmanee S",
+                "lastName": "Pookmanee",
+                "firstName": "Supatra",
+                "initials": "S"
+              },
+              {
+                "fullName": "Pruenglampoo B",
+                "lastName": "Pruenglampoo",
+                "firstName": "Boonlure",
+                "initials": "B"
+              },
+              {
+                "fullName": "Cheewawat W",
+                "lastName": "Cheewawat",
+                "firstName": "Wipada",
+                "initials": "W"
+              },
+              {
+                "fullName": "Wongthanee A",
+                "lastName": "Wongthanee",
+                "firstName": "Antika",
+                "initials": "A"
+              },
+              {
+                "fullName": "Rungruengthanakit K",
+                "lastName": "Rungruengthanakit",
+                "firstName": "Kittipong",
+                "initials": "K"
+              },
+              {
+                "fullName": "Keawvichit R",
+                "lastName": "Keawvichit",
+                "firstName": "Rassamee",
+                "initials": "R"
+              },
+              {
+                "fullName": "Wongworapat K",
+                "lastName": "Wongworapat",
+                "firstName": "Kanlaya",
+                "initials": "K"
+              },
+              {
+                "fullName": "Sroysuwan P",
+                "lastName": "Sroysuwan",
+                "firstName": "Piyathida",
+                "initials": "P"
+              },
+              {
+                "fullName": "Srichan R",
+                "lastName": "Srichan",
+                "firstName": "Rojana",
+                "initials": "R"
+              },
+              {
+                "fullName": "Puisaeng B",
+                "lastName": "Puisaeng",
+                "firstName": "Boonyarat",
+                "initials": "B"
+              },
+              {
+                "fullName": "Kosachunhanan N",
+                "lastName": "Kosachunhanan",
+                "firstName": "Nataporn",
+                "initials": "N"
+              },
+              {
+                "fullName": "Manoyos V",
+                "lastName": "Manoyos",
+                "firstName": "Veruree",
+                "initials": "V"
+              },
+              {
+                "fullName": "Sirikunpun S",
+                "lastName": "Sirikunpun",
+                "firstName": "Supaporn",
+                "initials": "S"
+              },
+              {
+                "fullName": "Chuenchop N",
+                "lastName": "Chuenchop",
+                "firstName": "Nittaya",
+                "initials": "N"
+              },
+              {
+                "fullName": "Puisaeng B",
+                "lastName": "Puisaeng",
+                "firstName": "Boonyarat",
+                "initials": "B"
+              },
+              {
+                "fullName": "Jaikuar N",
+                "lastName": "Jaikuar",
+                "firstName": "Niranporn",
+                "initials": "N"
+              },
+              {
+                "fullName": "Suriyasorgpi P",
+                "lastName": "Suriyasorgpi",
+                "firstName": "Praphapin",
+                "initials": "P"
+              },
+              {
+                "fullName": "Dachapratoomwan K",
+                "lastName": "Dachapratoomwan",
+                "firstName": "Kantaphat",
+                "initials": "K"
+              },
+              {
+                "fullName": "Chanchai W",
+                "lastName": "Chanchai",
+                "firstName": "Wasun",
+                "initials": "W"
+              },
+              {
+                "fullName": "Chittpramodya D",
+                "lastName": "Chittpramodya",
+                "firstName": "Darika",
+                "initials": "D"
+              },
+              {
+                "fullName": "Wongsrithep S",
+                "lastName": "Wongsrithep",
+                "firstName": "Suthathip",
+                "initials": "S"
+              },
+              {
+                "fullName": "Chairungsri K",
+                "lastName": "Chairungsri",
+                "firstName": "Karnjana",
+                "initials": "K"
+              },
+              {
+                "fullName": "Puangpotha P",
+                "lastName": "Puangpotha",
+                "firstName": "Pimpaka",
+                "initials": "P"
+              },
+              {
+                "fullName": "Petthed T",
+                "lastName": "Petthed",
+                "firstName": "Tipawal",
+                "initials": "T"
+              },
+              {
+                "fullName": "Jungsathit K",
+                "lastName": "Jungsathit",
+                "firstName": "Kunnika",
+                "initials": "K"
+              },
+              {
+                "fullName": "Chaikul K",
+                "lastName": "Chaikul",
+                "firstName": "Kulthida",
+                "initials": "K"
+              },
+              {
+                "fullName": "Pasawad W",
+                "lastName": "Pasawad",
+                "firstName": "Waraporn",
+                "initials": "W"
+              },
+              {
+                "fullName": "Yamano J",
+                "lastName": "Yamano",
+                "firstName": "Jiraporn",
+                "initials": "J"
+              },
+              {
+                "fullName": "Leelasuksaree N",
+                "lastName": "Leelasuksaree",
+                "firstName": "Nattanicha",
+                "initials": "N"
+              },
+              {
+                "fullName": "Kaewkosaba C",
+                "lastName": "Kaewkosaba",
+                "firstName": "Chiraphorn",
+                "initials": "C"
+              },
+              {
+                "fullName": "Suwannamas N",
+                "lastName": "Suwannamas",
+                "firstName": "Nattanun",
+                "initials": "N"
+              },
+              {
+                "fullName": "Naprom C",
+                "lastName": "Naprom",
+                "firstName": "Chamaiporn",
+                "initials": "C"
+              },
+              {
+                "fullName": "Yodkeeree P",
+                "lastName": "Yodkeeree",
+                "firstName": "Panida",
+                "initials": "P"
+              },
+              {
+                "fullName": "Chandee L",
+                "lastName": "Chandee",
+                "firstName": "Lar",
+                "initials": "L"
+              },
+              {
+                "fullName": "Dokuta S",
+                "lastName": "Dokuta",
+                "firstName": "Sirikwan",
+                "initials": "S"
+              },
+              {
+                "fullName": "Pantip C",
+                "lastName": "Pantip",
+                "firstName": "Chansom",
+                "initials": "C"
+              },
+              {
+                "fullName": "Sothanapaisan P",
+                "lastName": "Sothanapaisan",
+                "firstName": "Panudda",
+                "initials": "P"
+              },
+              {
+                "fullName": "Keitkarn J",
+                "lastName": "Keitkarn",
+                "firstName": "Jeitsada",
+                "initials": "J"
+              },
+              {
+                "fullName": "Jit-Aree W",
+                "lastName": "Jit-Aree",
+                "firstName": "Warunee",
+                "initials": "W"
+              },
+              {
+                "fullName": "Maneechai C",
+                "lastName": "Maneechai",
+                "firstName": "Chayanid",
+                "initials": "C"
+              },
+              {
+                "fullName": "Boursuk K",
+                "lastName": "Boursuk",
+                "firstName": "Kannika",
+                "initials": "K"
+              },
+              {
+                "fullName": "Niwatananun W",
+                "lastName": "Niwatananun",
+                "firstName": "Wirat",
+                "initials": "W"
+              },
+              {
+                "fullName": "Khad-Umong P",
+                "lastName": "Khad-Umong",
+                "firstName": "Pranee",
+                "initials": "P"
+              },
+              {
+                "fullName": "Sakkhachornphop S",
+                "lastName": "Sakkhachornphop",
+                "firstName": "Supachai",
+                "initials": "S"
+              },
+              {
+                "fullName": "Jongpaijitsakul P",
+                "lastName": "Jongpaijitsakul",
+                "firstName": "Parinya",
+                "initials": "P"
+              },
+              {
+                "fullName": "Kabyoy N",
+                "lastName": "Kabyoy",
+                "firstName": "Nongluck",
+                "initials": "N"
+              },
+              {
+                "fullName": "Vannarit T",
+                "lastName": "Vannarit",
+                "firstName": "Taweeluk",
+                "initials": "T"
+              },
+              {
+                "fullName": "Bunthi C",
+                "lastName": "Bunthi",
+                "firstName": "Charatdao",
+                "initials": "C"
+              },
+              {
+                "fullName": "Angkurawaranon C",
+                "lastName": "Angkurawaranon",
+                "firstName": "Chaisiri",
+                "initials": "C"
+              },
+              {
+                "fullName": "Sakkhachornphop P",
+                "lastName": "Sakkhachornphop",
+                "firstName": "Pranee",
+                "initials": "P"
+              },
+              {
+                "fullName": "Kaewpoowat Q",
+                "lastName": "Kaewpoowat",
+                "firstName": "Quanhathai",
+                "initials": "Q"
+              },
+              {
+                "fullName": "Palanan P",
+                "lastName": "Palanan",
+                "firstName": "Prachern",
+                "initials": "P"
+              },
+              {
+                "fullName": "Chaipin E",
+                "lastName": "Chaipin",
+                "firstName": "Eaksit",
+                "initials": "E"
+              },
+              {
+                "fullName": "Sompong M",
+                "lastName": "Sompong",
+                "firstName": "Metaporn",
+                "initials": "M"
+              },
+              {
+                "fullName": "Wongphu-nga P",
+                "lastName": "Wongphu-nga",
+                "firstName": "Patcharaporn",
+                "initials": "P"
+              },
+              {
+                "fullName": "Saenrak N",
+                "lastName": "Saenrak",
+                "firstName": "Nunthakarn",
+                "initials": "N"
+              },
+              {
+                "fullName": "Manop P",
+                "lastName": "Manop",
+                "firstName": "Pannachart",
+                "initials": "P"
+              },
+              {
+                "fullName": "Chaiban R",
+                "lastName": "Chaiban",
+                "firstName": "Ratchanit",
+                "initials": "R"
+              },
+              {
+                "fullName": "Sirinam S",
+                "lastName": "Sirinam",
+                "firstName": "Saitong",
+                "initials": "S"
+              },
+              {
+                "fullName": "Khudcum A",
+                "lastName": "Khudcum",
+                "firstName": "Atthawit",
+                "initials": "A"
+              },
+              {
+                "fullName": "Jannim A",
+                "lastName": "Jannim",
+                "firstName": "Aonsutee",
+                "initials": "A"
+              },
+              {
+                "fullName": "Kunnapa R",
+                "lastName": "Kunnapa",
+                "firstName": "Rattana",
+                "initials": "R"
+              },
+              {
+                "fullName": "Tammachai Y",
+                "lastName": "Tammachai",
+                "firstName": "Yuttapong",
+                "initials": "Y"
+              },
+              {
+                "fullName": "Butphet S",
+                "lastName": "Butphet",
+                "firstName": "Sunisa",
+                "initials": "S"
+              },
+              {
+                "fullName": "Panyathep A",
+                "lastName": "Panyathep",
+                "firstName": "Atita",
+                "initials": "A"
+              },
+              {
+                "fullName": "Putsyainunt P",
+                "lastName": "Putsyainunt",
+                "firstName": "Pachern",
+                "initials": "P"
+              },
+              {
+                "fullName": "Nunjai S",
+                "lastName": "Nunjai",
+                "firstName": "Satitpong",
+                "initials": "S"
+              },
+              {
+                "fullName": "Ontakrai J",
+                "lastName": "Ontakrai",
+                "firstName": "Jarun",
+                "initials": "J"
+              },
+              {
+                "fullName": "Khamdam P",
+                "lastName": "Khamdam",
+                "firstName": "Paweena",
+                "initials": "P"
+              },
+              {
+                "fullName": "Panyamang M",
+                "lastName": "Panyamang",
+                "firstName": "Manoo",
+                "initials": "M"
+              },
+              {
+                "fullName": "Chantan K",
+                "lastName": "Chantan",
+                "firstName": "Kadsarin",
+                "initials": "K"
+              },
+              {
+                "fullName": "Auchieng C",
+                "lastName": "Auchieng",
+                "firstName": "Chatsuda",
+                "initials": "C"
+              },
+              {
+                "fullName": "Hanterdsith W",
+                "lastName": "Hanterdsith",
+                "firstName": "Walailuk",
+                "initials": "W"
+              },
+              {
+                "fullName": "Prasertwitayakij W",
+                "lastName": "Prasertwitayakij",
+                "firstName": "Wonpen",
+                "initials": "W"
+              },
+              {
+                "fullName": "Treamrangsee K",
+                "lastName": "Treamrangsee",
+                "firstName": "Kesinee",
+                "initials": "K"
+              },
+              {
+                "fullName": "Dusara P",
+                "lastName": "Dusara",
+                "firstName": "Priti",
+                "initials": "P"
+              },
+              {
+                "fullName": "Bunga A",
+                "lastName": "Bunga",
+                "firstName": "Antonia",
+                "initials": "A"
+              },
+              {
+                "fullName": "Makunike E",
+                "lastName": "Makunike",
+                "firstName": "Emily",
+                "initials": "E"
+              },
+              {
+                "fullName": "Salawu AO",
+                "lastName": "Salawu",
+                "firstName": "Akeem O",
+                "initials": "AO"
+              },
+              {
+                "fullName": "Moyo S",
+                "lastName": "Moyo",
+                "firstName": "Sikhulile",
+                "initials": "S",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-3821-4592"
+                }
+              },
+              {
+                "fullName": "Mangwendeza P",
+                "lastName": "Mangwendeza",
+                "firstName": "Phibieon",
+                "initials": "P"
+              },
+              {
+                "fullName": "Mudenyanga C",
+                "lastName": "Mudenyanga",
+                "firstName": "Chishamiso",
+                "initials": "C"
+              },
+              {
+                "fullName": "Anderson M",
+                "lastName": "Anderson",
+                "firstName": "Motswedi",
+                "initials": "M"
+              },
+              {
+                "fullName": "Dzoro S",
+                "lastName": "Dzoro",
+                "firstName": "Sheron",
+                "initials": "S"
+              },
+              {
+                "fullName": "Mawoko N",
+                "lastName": "Mawoko",
+                "firstName": "Norah",
+                "initials": "N"
+              },
+              {
+                "fullName": "Molebedi B",
+                "lastName": "Molebedi",
+                "firstName": "Botshelo",
+                "initials": "B"
+              },
+              {
+                "fullName": "Oikantswe T",
+                "lastName": "Oikantswe",
+                "firstName": "Toro",
+                "initials": "T"
+              },
+              {
+                "fullName": "Moorad B",
+                "lastName": "Moorad",
+                "firstName": "Banno",
+                "initials": "B"
+              },
+              {
+                "fullName": "Malamba M",
+                "lastName": "Malamba",
+                "firstName": "Maitseo",
+                "initials": "M"
+              },
+              {
+                "fullName": "Mogaetsho E",
+                "lastName": "Mogaetsho",
+                "firstName": "Edwin",
+                "initials": "E"
+              },
+              {
+                "fullName": "Modise G",
+                "lastName": "Modise",
+                "firstName": "Georginah",
+                "initials": "G"
+              },
+              {
+                "fullName": "Mmolawa T",
+                "lastName": "Mmolawa",
+                "firstName": "Thapelo",
+                "initials": "T"
+              },
+              {
+                "fullName": "Retshabile G",
+                "lastName": "Retshabile",
+                "firstName": "Gaone",
+                "initials": "G"
+              },
+              {
+                "fullName": "Widenfelt E",
+                "lastName": "Widenfelt",
+                "firstName": "Erik",
+                "initials": "E"
+              },
+              {
+                "fullName": "Motsisi K",
+                "lastName": "Motsisi",
+                "firstName": "Karabo",
+                "initials": "K"
+              },
+              {
+                "fullName": "Tsomele T",
+                "lastName": "Tsomele",
+                "firstName": "Tsholofelo",
+                "initials": "T"
+              },
+              {
+                "fullName": "Moseki E",
+                "lastName": "Moseki",
+                "firstName": "Ernest",
+                "initials": "E"
+              },
+              {
+                "fullName": "Mongwa W",
+                "lastName": "Mongwa",
+                "firstName": "Willington",
+                "initials": "W"
+              },
+              {
+                "fullName": "Kgafela M",
+                "lastName": "Kgafela",
+                "firstName": "Masego",
+                "initials": "M"
+              },
+              {
+                "fullName": "Motsamai C",
+                "lastName": "Motsamai",
+                "firstName": "Chandapiwa",
+                "initials": "C"
+              },
+              {
+                "fullName": "Masole S",
+                "lastName": "Masole",
+                "firstName": "Sarah",
+                "initials": "S"
+              },
+              {
+                "fullName": "Moiforay M",
+                "lastName": "Moiforay",
+                "firstName": "Martha",
+                "initials": "M"
+              },
+              {
+                "fullName": "Madome K",
+                "lastName": "Madome",
+                "firstName": "Kgomotsego",
+                "initials": "K"
+              },
+              {
+                "fullName": "Masopa S",
+                "lastName": "Masopa",
+                "firstName": "Simon",
+                "initials": "S"
+              },
+              {
+                "fullName": "Sifiwa N",
+                "lastName": "Sifiwa",
+                "firstName": "Nonvula",
+                "initials": "N"
+              },
+              {
+                "fullName": "Molapisi G",
+                "lastName": "Molapisi",
+                "firstName": "Galetlwaelwe",
+                "initials": "G"
+              },
+              {
+                "fullName": "Akelo V",
+                "lastName": "Akelo",
+                "firstName": "Victor",
+                "initials": "V"
+              },
+              {
+                "fullName": "Chen B",
+                "lastName": "Chen",
+                "firstName": "Bob",
+                "initials": "B"
+              },
+              {
+                "fullName": "Gust D",
+                "lastName": "Gust",
+                "firstName": "Debra",
+                "initials": "D"
+              },
+              {
+                "fullName": "Lando R",
+                "lastName": "Lando",
+                "firstName": "Richard",
+                "initials": "R"
+              },
+              {
+                "fullName": "Laserson K",
+                "lastName": "Laserson",
+                "firstName": "Kayla",
+                "initials": "K"
+              },
+              {
+                "fullName": "Lebaron C",
+                "lastName": "Lebaron",
+                "firstName": "Charles",
+                "initials": "C"
+              },
+              {
+                "fullName": "Nyagol B",
+                "lastName": "Nyagol",
+                "firstName": "Beatrice",
+                "initials": "B"
+              },
+              {
+                "fullName": "Ondieki E",
+                "lastName": "Ondieki",
+                "firstName": "Erick",
+                "initials": "E"
+              },
+              {
+                "fullName": "Zeh C",
+                "lastName": "Zeh",
+                "firstName": "Clement",
+                "initials": "C"
+              },
+              {
+                "fullName": "Ogendo A",
+                "lastName": "Ogendo",
+                "firstName": "Arthur",
+                "initials": "A"
+              },
+              {
+                "fullName": "Goldstine R",
+                "lastName": "Goldstine",
+                "firstName": "Raymond",
+                "initials": "R"
+              },
+              {
+                "fullName": "Vulule J",
+                "lastName": "Vulule",
+                "firstName": "John",
+                "initials": "J"
+              },
+              {
+                "fullName": "Mudhune V",
+                "lastName": "Mudhune",
+                "firstName": "Victor",
+                "initials": "V"
+              },
+              {
+                "fullName": "Ayuo E",
+                "lastName": "Ayuo",
+                "firstName": "Elizabeth",
+                "initials": "E"
+              },
+              {
+                "fullName": "Gumbe A",
+                "lastName": "Gumbe",
+                "firstName": "Anne",
+                "initials": "A"
+              },
+              {
+                "fullName": "Sewe V",
+                "lastName": "Sewe",
+                "firstName": "Vitalis",
+                "initials": "V"
+              },
+              {
+                "fullName": "Oyaro B",
+                "lastName": "Oyaro",
+                "firstName": "Boaz",
+                "initials": "B"
+              },
+              {
+                "fullName": "Chege W",
+                "lastName": "Chege",
+                "firstName": "Wairimu",
+                "initials": "W"
+              },
+              {
+                "fullName": "Kretsinger K",
+                "lastName": "Kretsinger",
+                "firstName": "Katrina",
+                "initials": "K"
+              },
+              {
+                "fullName": "Adhiambo J",
+                "lastName": "Adhiambo",
+                "firstName": "Janet",
+                "initials": "J"
+              },
+              {
+                "fullName": "Achola K",
+                "lastName": "Achola",
+                "firstName": "Kevin",
+                "initials": "K"
+              },
+              {
+                "fullName": "Anyiego E",
+                "lastName": "Anyiego",
+                "firstName": "Eunice",
+                "initials": "E"
+              },
+              {
+                "fullName": "Awuonda E",
+                "lastName": "Awuonda",
+                "firstName": "Eucabeth",
+                "initials": "E"
+              },
+              {
+                "fullName": "Kerubo E",
+                "lastName": "Kerubo",
+                "firstName": "Emily",
+                "initials": "E"
+              },
+              {
+                "fullName": "Mimba E",
+                "lastName": "Mimba",
+                "firstName": "Erica",
+                "initials": "E"
+              },
+              {
+                "fullName": "Muhanji J",
+                "lastName": "Muhanji",
+                "firstName": "Jean",
+                "initials": "J"
+              },
+              {
+                "fullName": "Ndivo R",
+                "lastName": "Ndivo",
+                "firstName": "Richard",
+                "initials": "R"
+              },
+              {
+                "fullName": "Ngeno H",
+                "lastName": "Ngeno",
+                "firstName": "Hilary",
+                "initials": "H"
+              },
+              {
+                "fullName": "Nyamao G",
+                "lastName": "Nyamao",
+                "firstName": "George",
+                "initials": "G"
+              },
+              {
+                "fullName": "Nyikuri M",
+                "lastName": "Nyikuri",
+                "firstName": "Mary",
+                "initials": "M"
+              },
+              {
+                "fullName": "Ochieng L",
+                "lastName": "Ochieng",
+                "firstName": "Lucy",
+                "initials": "L"
+              },
+              {
+                "fullName": "Odhiambo S",
+                "lastName": "Odhiambo",
+                "firstName": "Sylvia",
+                "initials": "S"
+              },
+              {
+                "fullName": "Odipo E",
+                "lastName": "Odipo",
+                "firstName": "Evans",
+                "initials": "E"
+              },
+              {
+                "fullName": "Odum E",
+                "lastName": "Odum",
+                "firstName": "Eudia",
+                "initials": "E"
+              },
+              {
+                "fullName": "Okola P",
+                "lastName": "Okola",
+                "firstName": "Phoebe",
+                "initials": "P"
+              },
+              {
+                "fullName": "Okomo B",
+                "lastName": "Okomo",
+                "firstName": "Benard",
+                "initials": "B"
+              },
+              {
+                "fullName": "Ondenge K",
+                "lastName": "Ondenge",
+                "firstName": "Kenneth",
+                "initials": "K"
+              },
+              {
+                "fullName": "Ouma GO",
+                "lastName": "Ouma",
+                "firstName": "George O",
+                "initials": "GO"
+              },
+              {
+                "fullName": "Ouma W",
+                "lastName": "Ouma",
+                "firstName": "Winnie",
+                "initials": "W"
+              },
+              {
+                "fullName": "Rambara E",
+                "lastName": "Rambara",
+                "firstName": "Elizabeth",
+                "initials": "E"
+              },
+              {
+                "fullName": "Were A",
+                "lastName": "Were",
+                "firstName": "Alice",
+                "initials": "A"
+              },
+              {
+                "fullName": "Adega A",
+                "lastName": "Adega",
+                "firstName": "Anne",
+                "initials": "A"
+              },
+              {
+                "fullName": "Angira F",
+                "lastName": "Angira",
+                "firstName": "Frank",
+                "initials": "F"
+              },
+              {
+                "fullName": "Atieno N",
+                "lastName": "Atieno",
+                "firstName": "Nancy",
+                "initials": "N"
+              },
+              {
+                "fullName": "Ogutu E",
+                "lastName": "Ogutu",
+                "firstName": "Elizabeth",
+                "initials": "E"
+              },
+              {
+                "fullName": "Imbuki K",
+                "lastName": "Imbuki",
+                "firstName": "Kennedy",
+                "initials": "K"
+              },
+              {
+                "fullName": "Katana A",
+                "lastName": "Katana",
+                "firstName": "Abraham",
+                "initials": "A"
+              },
+              {
+                "fullName": "Mboi P",
+                "lastName": "Mboi",
+                "firstName": "Phylis",
+                "initials": "P"
+              },
+              {
+                "fullName": "McLellan-Lemal E",
+                "lastName": "McLellan-Lemal",
+                "firstName": "Eleanor",
+                "initials": "E"
+              },
+              {
+                "fullName": "Okal D",
+                "lastName": "Okal",
+                "firstName": "Dancun",
+                "initials": "D"
+              },
+              {
+                "fullName": "Okanda J",
+                "lastName": "Okanda",
+                "firstName": "John",
+                "initials": "J"
+              },
+              {
+                "fullName": "Okello I",
+                "lastName": "Okello",
+                "firstName": "Isaiah",
+                "initials": "I"
+              },
+              {
+                "fullName": "Omondi F",
+                "lastName": "Omondi",
+                "firstName": "Fred",
+                "initials": "F"
+              },
+              {
+                "fullName": "Omoro T",
+                "lastName": "Omoro",
+                "firstName": "Tereza",
+                "initials": "T"
+              },
+              {
+                "fullName": "Ongwena P",
+                "lastName": "Ongwena",
+                "firstName": "Pauline",
+                "initials": "P"
+              },
+              {
+                "fullName": "Onyango K",
+                "lastName": "Onyango",
+                "firstName": "Kenneth",
+                "initials": "K"
+              },
+              {
+                "fullName": "Opollo V",
+                "lastName": "Opollo",
+                "firstName": "Valarie",
+                "initials": "V"
+              },
+              {
+                "fullName": "Opuro R",
+                "lastName": "Opuro",
+                "firstName": "Ruth",
+                "initials": "R"
+              },
+              {
+                "fullName": "Orimba G",
+                "lastName": "Orimba",
+                "firstName": "Gloria",
+                "initials": "G"
+              },
+              {
+                "fullName": "Oruko J",
+                "lastName": "Oruko",
+                "firstName": "Jecinter",
+                "initials": "J"
+              },
+              {
+                "fullName": "Osoga J",
+                "lastName": "Osoga",
+                "firstName": "Joseph",
+                "initials": "J"
+              },
+              {
+                "fullName": "Otieno F",
+                "lastName": "Otieno",
+                "firstName": "Fredrick",
+                "initials": "F"
+              },
+              {
+                "fullName": "Oyaa R",
+                "lastName": "Oyaa",
+                "firstName": "Risper",
+                "initials": "R"
+              },
+              {
+                "fullName": "Akombi W",
+                "lastName": "Akombi",
+                "firstName": "Wycliff",
+                "initials": "W"
+              },
+              {
+                "fullName": "Kesa B",
+                "lastName": "Kesa",
+                "firstName": "Benson",
+                "initials": "B"
+              },
+              {
+                "fullName": "Obonyo N",
+                "lastName": "Obonyo",
+                "firstName": "Nick",
+                "initials": "N"
+              },
+              {
+                "fullName": "Ochieng W",
+                "lastName": "Ochieng",
+                "firstName": "Wycliff",
+                "initials": "W"
+              },
+              {
+                "fullName": "Odhiambo C",
+                "lastName": "Odhiambo",
+                "firstName": "Caleb",
+                "initials": "C"
+              },
+              {
+                "fullName": "Odongo M",
+                "lastName": "Odongo",
+                "firstName": "Morris",
+                "initials": "M"
+              },
+              {
+                "fullName": "Oremo W",
+                "lastName": "Oremo",
+                "firstName": "William",
+                "initials": "W"
+              },
+              {
+                "fullName": "Ouma W",
+                "lastName": "Ouma",
+                "firstName": "Wycliff",
+                "initials": "W"
+              },
+              {
+                "fullName": "Owoko S",
+                "lastName": "Owoko",
+                "firstName": "Steve",
+                "initials": "S"
+              },
+              {
+                "fullName": "Matchere F",
+                "lastName": "Matchere",
+                "firstName": "Faustine",
+                "initials": "F"
+              },
+              {
+                "fullName": "Carpenetti N",
+                "lastName": "Carpenetti",
+                "firstName": "Nicole",
+                "initials": "N"
+              },
+              {
+                "fullName": "Kumwenda N",
+                "lastName": "Kumwenda",
+                "firstName": "Newton",
+                "initials": "N"
+              },
+              {
+                "fullName": "Nyirenda M",
+                "lastName": "Nyirenda",
+                "firstName": "Mulinda",
+                "initials": "M",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-2037-7449"
+                }
+              },
+              {
+                "fullName": "Zulu F",
+                "lastName": "Zulu",
+                "firstName": "Fatima",
+                "initials": "F"
+              },
+              {
+                "fullName": "Seyama L",
+                "lastName": "Seyama",
+                "firstName": "Linley",
+                "initials": "L"
+              },
+              {
+                "fullName": "Kalonga B",
+                "lastName": "Kalonga",
+                "firstName": "Ben",
+                "initials": "B"
+              },
+              {
+                "fullName": "Maliwichi M",
+                "lastName": "Maliwichi",
+                "firstName": "Madalitso",
+                "initials": "M"
+              },
+              {
+                "fullName": "Maseko B",
+                "lastName": "Maseko",
+                "firstName": "Bertha",
+                "initials": "B"
+              },
+              {
+                "fullName": "Namalueso F",
+                "lastName": "Namalueso",
+                "firstName": "Felix",
+                "initials": "F"
+              },
+              {
+                "fullName": "Kumwenda W",
+                "lastName": "Kumwenda",
+                "firstName": "Wiza",
+                "initials": "W"
+              },
+              {
+                "fullName": "Mkandawire EM",
+                "lastName": "Mkandawire",
+                "firstName": "Esnath Msowoya",
+                "initials": "EM"
+              },
+              {
+                "fullName": "Kamalizeni L",
+                "lastName": "Kamalizeni",
+                "firstName": "Lucy",
+                "initials": "L"
+              },
+              {
+                "fullName": "Shumba I",
+                "lastName": "Shumba",
+                "firstName": "Ida",
+                "initials": "I"
+              },
+              {
+                "fullName": "Martinson F",
+                "lastName": "Martinson",
+                "firstName": "Francis",
+                "initials": "F"
+              },
+              {
+                "fullName": "Krysiak R",
+                "lastName": "Krysiak",
+                "firstName": "Robert",
+                "initials": "R"
+              },
+              {
+                "fullName": "Sichali D",
+                "lastName": "Sichali",
+                "firstName": "Dorothy",
+                "initials": "D"
+              },
+              {
+                "fullName": "Joaki G",
+                "lastName": "Joaki",
+                "firstName": "George",
+                "initials": "G"
+              },
+              {
+                "fullName": "Nkhalamba T",
+                "lastName": "Nkhalamba",
+                "firstName": "Thokozani",
+                "initials": "T"
+              },
+              {
+                "fullName": "Mumba N",
+                "lastName": "Mumba",
+                "firstName": "Noel",
+                "initials": "N"
+              },
+              {
+                "fullName": "Kamwendo D",
+                "lastName": "Kamwendo",
+                "firstName": "Debbie",
+                "initials": "D"
+              },
+              {
+                "fullName": "Tauzie J",
+                "lastName": "Tauzie",
+                "firstName": "Jean",
+                "initials": "J"
+              },
+              {
+                "fullName": "Kilembe F",
+                "lastName": "Kilembe",
+                "firstName": "Franklin",
+                "initials": "F"
+              },
+              {
+                "fullName": "Saukila N",
+                "lastName": "Saukila",
+                "firstName": "Nasi",
+                "initials": "N"
+              },
+              {
+                "fullName": "Kanyama C",
+                "lastName": "Kanyama",
+                "firstName": "Cecilia",
+                "initials": "C"
+              },
+              {
+                "fullName": "Phiri G",
+                "lastName": "Phiri",
+                "firstName": "Gladys",
+                "initials": "G"
+              },
+              {
+                "fullName": "Lugalia L",
+                "lastName": "Lugalia",
+                "firstName": "Lebah",
+                "initials": "L"
+              },
+              {
+                "fullName": "Mponda S",
+                "lastName": "Mponda",
+                "firstName": "Steve",
+                "initials": "S"
+              },
+              {
+                "fullName": "Moses A",
+                "lastName": "Moses",
+                "firstName": "Agnes",
+                "initials": "A"
+              },
+              {
+                "fullName": "Tegha G",
+                "lastName": "Tegha",
+                "firstName": "Gerald",
+                "initials": "G"
+              },
+              {
+                "fullName": "Mkandawire N",
+                "lastName": "Mkandawire",
+                "firstName": "Nkhafwire",
+                "initials": "N"
+              },
+              {
+                "fullName": "Chinula L",
+                "lastName": "Chinula",
+                "firstName": "Lameck",
+                "initials": "L"
+              },
+              {
+                "fullName": "Kandikole L",
+                "lastName": "Kandikole",
+                "firstName": "Lydda",
+                "initials": "L"
+              },
+              {
+                "fullName": "Singini G",
+                "lastName": "Singini",
+                "firstName": "Geoffrey",
+                "initials": "G",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-7111-3000"
+                }
+              },
+              {
+                "fullName": "Kumwenda T",
+                "lastName": "Kumwenda",
+                "firstName": "Tiwonge",
+                "initials": "T"
+              },
+              {
+                "fullName": "Chimzimu F",
+                "lastName": "Chimzimu",
+                "firstName": "Fred",
+                "initials": "F"
+              },
+              {
+                "fullName": "Mindiera L",
+                "lastName": "Mindiera",
+                "firstName": "Limbanazo",
+                "initials": "L"
+              },
+              {
+                "fullName": "Kachipapa E",
+                "lastName": "Kachipapa",
+                "firstName": "Emma",
+                "initials": "E"
+              },
+              {
+                "fullName": "Mhango W",
+                "lastName": "Mhango",
+                "firstName": "Wilberforce",
+                "initials": "W"
+              },
+              {
+                "fullName": "Tembo T",
+                "lastName": "Tembo",
+                "firstName": "Tchangani",
+                "initials": "T"
+              },
+              {
+                "fullName": "Dzama L",
+                "lastName": "Dzama",
+                "firstName": "Lucy",
+                "initials": "L"
+              },
+              {
+                "fullName": "Mofolo I",
+                "lastName": "Mofolo",
+                "firstName": "Innocent",
+                "initials": "I"
+              },
+              {
+                "fullName": "Kharodia S",
+                "lastName": "Kharodia",
+                "firstName": "Shireen",
+                "initials": "S"
+              },
+              {
+                "fullName": "Gamah E",
+                "lastName": "Gamah",
+                "firstName": "Enock",
+                "initials": "E"
+              },
+              {
+                "fullName": "Sungitsa A",
+                "lastName": "Sungitsa",
+                "firstName": "Arthur",
+                "initials": "A"
+              },
+              {
+                "fullName": "Mphande C",
+                "lastName": "Mphande",
+                "firstName": "Chimwemwe",
+                "initials": "C"
+              },
+              {
+                "fullName": "Potani C",
+                "lastName": "Potani",
+                "firstName": "Charity",
+                "initials": "C"
+              },
+              {
+                "fullName": "Mshali I",
+                "lastName": "Mshali",
+                "firstName": "Idah",
+                "initials": "I"
+              },
+              {
+                "fullName": "Eliya H",
+                "lastName": "Eliya",
+                "firstName": "Henry",
+                "initials": "H"
+              },
+              {
+                "fullName": "Chinyama S",
+                "lastName": "Chinyama",
+                "firstName": "Sarah",
+                "initials": "S"
+              },
+              {
+                "fullName": "Katengeza E",
+                "lastName": "Katengeza",
+                "firstName": "Egnat",
+                "initials": "E"
+              },
+              {
+                "fullName": "Knhawazi L",
+                "lastName": "Knhawazi",
+                "firstName": "Lawrence",
+                "initials": "L"
+              },
+              {
+                "fullName": "Kanyika D",
+                "lastName": "Kanyika",
+                "firstName": "Doreen",
+                "initials": "D"
+              },
+              {
+                "fullName": "Kabudula C",
+                "lastName": "Kabudula",
+                "firstName": "Chodziwadzwiwa",
+                "initials": "C"
+              },
+              {
+                "fullName": "Kamvaunamwali T",
+                "lastName": "Kamvaunamwali",
+                "firstName": "Tionge",
+                "initials": "T"
+              },
+              {
+                "fullName": "Chafuwa C",
+                "lastName": "Chafuwa",
+                "firstName": "Chiyembekezo",
+                "initials": "C"
+              },
+              {
+                "fullName": "Chipeta M",
+                "lastName": "Chipeta",
+                "firstName": "Mwai",
+                "initials": "M"
+              },
+              {
+                "fullName": "Jumbe A",
+                "lastName": "Jumbe",
+                "firstName": "Allan",
+                "initials": "A"
+              },
+              {
+                "fullName": "Mwanyimbo A",
+                "lastName": "Mwanyimbo",
+                "firstName": "Alfred",
+                "initials": "A"
+              },
+              {
+                "fullName": "Mita K",
+                "lastName": "Mita",
+                "firstName": "Khama",
+                "initials": "K"
+              },
+              {
+                "fullName": "Kulapani S",
+                "lastName": "Kulapani",
+                "firstName": "Stanley",
+                "initials": "S"
+              },
+              {
+                "fullName": "Mtanthira K",
+                "lastName": "Mtanthira",
+                "firstName": "Kamnkhwani",
+                "initials": "K"
+              },
+              {
+                "fullName": "Mzinganjira D",
+                "lastName": "Mzinganjira",
+                "firstName": "Dalitso",
+                "initials": "D"
+              },
+              {
+                "fullName": "Kumbanga F",
+                "lastName": "Kumbanga",
+                "firstName": "Frank",
+                "initials": "F"
+              },
+              {
+                "fullName": "Gondwe L",
+                "lastName": "Gondwe",
+                "firstName": "Lameck",
+                "initials": "L"
+              },
+              {
+                "fullName": "Lwanda F",
+                "lastName": "Lwanda",
+                "firstName": "Florence",
+                "initials": "F"
+              },
+              {
+                "fullName": "Banda O",
+                "lastName": "Banda",
+                "firstName": "Omega",
+                "initials": "O"
+              },
+              {
+                "fullName": "Dzowela T",
+                "lastName": "Dzowela",
+                "firstName": "Titha",
+                "initials": "T"
+              },
+              {
+                "fullName": "Tembo T",
+                "lastName": "Tembo",
+                "firstName": "Tapiwa",
+                "initials": "T"
+              },
+              {
+                "fullName": "Namarika D",
+                "lastName": "Namarika",
+                "firstName": "Dan",
+                "initials": "D"
+              },
+              {
+                "fullName": "Kachiponde F",
+                "lastName": "Kachiponde",
+                "firstName": "Fredreck",
+                "initials": "F"
+              },
+              {
+                "fullName": "Juma M",
+                "lastName": "Juma",
+                "firstName": "Martha",
+                "initials": "M"
+              },
+              {
+                "fullName": "Chindebvu M",
+                "lastName": "Chindebvu",
+                "firstName": "Mary",
+                "initials": "M"
+              },
+              {
+                "fullName": "Kazembe R",
+                "lastName": "Kazembe",
+                "firstName": "Roseby",
+                "initials": "R"
+              },
+              {
+                "fullName": "Mathiya E",
+                "lastName": "Mathiya",
+                "firstName": "Esther",
+                "initials": "E"
+              },
+              {
+                "fullName": "Yamba P",
+                "lastName": "Yamba",
+                "firstName": "Patience",
+                "initials": "P"
+              },
+              {
+                "fullName": "Chabwera C",
+                "lastName": "Chabwera",
+                "firstName": "Christine",
+                "initials": "C"
+              },
+              {
+                "fullName": "Chauwa F",
+                "lastName": "Chauwa",
+                "firstName": "Felluna",
+                "initials": "F"
+              },
+              {
+                "fullName": "Mtika E",
+                "lastName": "Mtika",
+                "firstName": "Esnath",
+                "initials": "E"
+              },
+              {
+                "fullName": "Mbeye N",
+                "lastName": "Mbeye",
+                "firstName": "Nyanyiwe",
+                "initials": "N"
+              },
+              {
+                "fullName": "Fiacco L",
+                "lastName": "Fiacco",
+                "firstName": "Louisa",
+                "initials": "L"
+              },
+              {
+                "fullName": "Kamanga S",
+                "lastName": "Kamanga",
+                "firstName": "Samuel",
+                "initials": "S"
+              },
+              {
+                "fullName": "Chilongozi D",
+                "lastName": "Chilongozi",
+                "firstName": "David",
+                "initials": "D"
+              },
+              {
+                "fullName": "Chanza H",
+                "lastName": "Chanza",
+                "firstName": "Harriet",
+                "initials": "H"
+              },
+              {
+                "fullName": "Jumbe A",
+                "lastName": "Jumbe",
+                "firstName": "Allan",
+                "initials": "A"
+              },
+              {
+                "fullName": "Chikhungu N",
+                "lastName": "Chikhungu",
+                "firstName": "Norah",
+                "initials": "N"
+              },
+              {
+                "fullName": "Ramdas Z",
+                "lastName": "Ramdas",
+                "firstName": "Zane",
+                "initials": "Z"
+              },
+              {
+                "fullName": "Munthali L",
+                "lastName": "Munthali",
+                "firstName": "Linga",
+                "initials": "L"
+              },
+              {
+                "fullName": "Limburo B",
+                "lastName": "Limburo",
+                "firstName": "Bertha",
+                "initials": "B"
+              },
+              {
+                "fullName": "Mwausegha R",
+                "lastName": "Mwausegha",
+                "firstName": "Regina",
+                "initials": "R"
+              },
+              {
+                "fullName": "Mtombosola S",
+                "lastName": "Mtombosola",
+                "firstName": "Sophie",
+                "initials": "S"
+              },
+              {
+                "fullName": "Gadi C",
+                "lastName": "Gadi",
+                "firstName": "Chitsanzi",
+                "initials": "C"
+              },
+              {
+                "fullName": "Majawa M",
+                "lastName": "Majawa",
+                "firstName": "Maganizo",
+                "initials": "M"
+              },
+              {
+                "fullName": "Phulusa J",
+                "lastName": "Phulusa",
+                "firstName": "Jacob",
+                "initials": "J"
+              },
+              {
+                "fullName": "Bandawe B",
+                "lastName": "Bandawe",
+                "firstName": "Bessings",
+                "initials": "B"
+              },
+              {
+                "fullName": "Gumbo A",
+                "lastName": "Gumbo",
+                "firstName": "Agnes",
+                "initials": "A"
+              },
+              {
+                "fullName": "Mwaipape A",
+                "lastName": "Mwaipape",
+                "firstName": "Angella",
+                "initials": "A"
+              },
+              {
+                "fullName": "Stambuli H",
+                "lastName": "Stambuli",
+                "firstName": "Hanna",
+                "initials": "H"
+              },
+              {
+                "fullName": "Msumba L",
+                "lastName": "Msumba",
+                "firstName": "Lusungu",
+                "initials": "L"
+              },
+              {
+                "fullName": "Mapanje C",
+                "lastName": "Mapanje",
+                "firstName": "Clement",
+                "initials": "C"
+              },
+              {
+                "fullName": "Kasanbana K",
+                "lastName": "Kasanbana",
+                "firstName": "Kenneth",
+                "initials": "K"
+              },
+              {
+                "fullName": "Kayuni L",
+                "lastName": "Kayuni",
+                "firstName": "Laston",
+                "initials": "L"
+              },
+              {
+                "fullName": "Badal-Faesen S",
+                "lastName": "Badal-Faesen",
+                "firstName": "Sharlaa",
+                "initials": "S",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-7306-5732"
+                }
+              },
+              {
+                "fullName": "Conradie F",
+                "lastName": "Conradie",
+                "firstName": "Francesca",
+                "initials": "F"
+              },
+              {
+                "fullName": "Graham V",
+                "lastName": "Graham",
+                "firstName": "Veronica",
+                "initials": "V"
+              },
+              {
+                "fullName": "Thebe JP",
+                "lastName": "Thebe",
+                "firstName": "Jemina Pinkie",
+                "initials": "JP"
+              },
+              {
+                "fullName": "Ntshakala M",
+                "lastName": "Ntshakala",
+                "firstName": "Martha",
+                "initials": "M"
+              },
+              {
+                "fullName": "Manamathela M",
+                "lastName": "Manamathela",
+                "firstName": "Mirriam",
+                "initials": "M"
+              },
+              {
+                "fullName": "Masimula J",
+                "lastName": "Masimula",
+                "firstName": "Jabulane",
+                "initials": "J"
+              },
+              {
+                "fullName": "Phakathi F",
+                "lastName": "Phakathi",
+                "firstName": "Fred",
+                "initials": "F"
+              },
+              {
+                "fullName": "Komane K",
+                "lastName": "Komane",
+                "firstName": "Keagile",
+                "initials": "K"
+              },
+              {
+                "fullName": "Kubheka T",
+                "lastName": "Kubheka",
+                "firstName": "Thembi",
+                "initials": "T"
+              },
+              {
+                "fullName": "Knight M",
+                "lastName": "Knight",
+                "firstName": "Marlene",
+                "initials": "M"
+              },
+              {
+                "fullName": "Baines J",
+                "lastName": "Baines",
+                "firstName": "Jenny",
+                "initials": "J"
+              },
+              {
+                "fullName": "Rassool M",
+                "lastName": "Rassool",
+                "firstName": "Mohammed",
+                "initials": "M"
+              },
+              {
+                "fullName": "Ive P",
+                "lastName": "Ive",
+                "firstName": "Prudence",
+                "initials": "P"
+              },
+              {
+                "fullName": "Mwelase T",
+                "lastName": "Mwelase",
+                "firstName": "Thando",
+                "initials": "T",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-8189-6149"
+                }
+              },
+              {
+                "fullName": "Mashabane N",
+                "lastName": "Mashabane",
+                "firstName": "Nkuli",
+                "initials": "N"
+              },
+              {
+                "fullName": "Govender S",
+                "lastName": "Govender",
+                "firstName": "Sarishen",
+                "initials": "S"
+              },
+              {
+                "fullName": "Dhlamini P",
+                "lastName": "Dhlamini",
+                "firstName": "Puleng",
+                "initials": "P"
+              },
+              {
+                "fullName": "Radebe N",
+                "lastName": "Radebe",
+                "firstName": "Ntombiyenkosi",
+                "initials": "N"
+              },
+              {
+                "fullName": "Lenkokile R",
+                "lastName": "Lenkokile",
+                "firstName": "Rebecca",
+                "initials": "R"
+              },
+              {
+                "fullName": "Nana A",
+                "lastName": "Nana",
+                "firstName": "Anusha",
+                "initials": "A"
+              },
+              {
+                "fullName": "Marx C",
+                "lastName": "Marx",
+                "firstName": "Carita",
+                "initials": "C"
+              },
+              {
+                "fullName": "Conradie C",
+                "lastName": "Conradie",
+                "firstName": "Charlene",
+                "initials": "C"
+              },
+              {
+                "fullName": "Tshabalala G",
+                "lastName": "Tshabalala",
+                "firstName": "Gugulethu",
+                "initials": "G"
+              },
+              {
+                "fullName": "Montso M",
+                "lastName": "Montso",
+                "firstName": "Meriam",
+                "initials": "M"
+              },
+              {
+                "fullName": "Motlamelle M",
+                "lastName": "Motlamelle",
+                "firstName": "Mpho",
+                "initials": "M"
+              },
+              {
+                "fullName": "Dyalom N",
+                "lastName": "Dyalom",
+                "firstName": "Noxolo",
+                "initials": "N"
+              },
+              {
+                "fullName": "Mafela P",
+                "lastName": "Mafela",
+                "firstName": "Peter",
+                "initials": "P"
+              },
+              {
+                "fullName": "Essien T",
+                "lastName": "Essien",
+                "firstName": "Thandekile",
+                "initials": "T"
+              },
+              {
+                "fullName": "Nshimiyimana T",
+                "lastName": "Nshimiyimana",
+                "firstName": "Theogene",
+                "initials": "T"
+              },
+              {
+                "fullName": "Nhando N",
+                "lastName": "Nhando",
+                "firstName": "Nehemiah",
+                "initials": "N"
+              },
+              {
+                "fullName": "Batani J",
+                "lastName": "Batani",
+                "firstName": "Jimijika",
+                "initials": "J"
+              },
+              {
+                "fullName": "Njaya M",
+                "lastName": "Njaya",
+                "firstName": "Miriam",
+                "initials": "M"
+              },
+              {
+                "fullName": "Hukuimwe M",
+                "lastName": "Hukuimwe",
+                "firstName": "Misai",
+                "initials": "M"
+              },
+              {
+                "fullName": "Mandima PF",
+                "lastName": "Mandima",
+                "firstName": "Patricia F",
+                "initials": "PF"
+              },
+              {
+                "fullName": "Murenje VT",
+                "lastName": "Murenje",
+                "firstName": "Vernon T",
+                "initials": "VT"
+              },
+              {
+                "fullName": "Mutungamiri TD",
+                "lastName": "Mutungamiri",
+                "firstName": "Tendayi D",
+                "initials": "TD"
+              },
+              {
+                "fullName": "Matanhike LT",
+                "lastName": "Matanhike",
+                "firstName": "Lawrence T",
+                "initials": "LT"
+              },
+              {
+                "fullName": "Chirongoma L",
+                "lastName": "Chirongoma",
+                "firstName": "Lucia",
+                "initials": "L"
+              },
+              {
+                "fullName": "Ruwende PN",
+                "lastName": "Ruwende",
+                "firstName": "Patience N",
+                "initials": "PN"
+              },
+              {
+                "fullName": "Tichareva MN",
+                "lastName": "Tichareva",
+                "firstName": "Mary N",
+                "initials": "MN"
+              },
+              {
+                "fullName": "Muhwati BS",
+                "lastName": "Muhwati",
+                "firstName": "Bevelyn S",
+                "initials": "BS"
+              },
+              {
+                "fullName": "Chirenda TH",
+                "lastName": "Chirenda",
+                "firstName": "Thandiwe H",
+                "initials": "TH"
+              },
+              {
+                "fullName": "Mhangami F",
+                "lastName": "Mhangami",
+                "firstName": "Felina",
+                "initials": "F"
+              },
+              {
+                "fullName": "Magada ES",
+                "lastName": "Magada",
+                "firstName": "Elizabeth S",
+                "initials": "ES"
+              },
+              {
+                "fullName": "Nyamhuka M",
+                "lastName": "Nyamhuka",
+                "firstName": "Monica",
+                "initials": "M"
+              },
+              {
+                "fullName": "Makwara J",
+                "lastName": "Makwara",
+                "firstName": "Jester",
+                "initials": "J"
+              },
+              {
+                "fullName": "Nyamayaro B",
+                "lastName": "Nyamayaro",
+                "firstName": "Beauty",
+                "initials": "B"
+              },
+              {
+                "fullName": "Mugari L",
+                "lastName": "Mugari",
+                "firstName": "Loveness",
+                "initials": "L"
+              },
+              {
+                "fullName": "Manyara M",
+                "lastName": "Manyara",
+                "firstName": "Mary",
+                "initials": "M"
+              },
+              {
+                "fullName": "Chimuka E",
+                "lastName": "Chimuka",
+                "firstName": "Ernest",
+                "initials": "E"
+              },
+              {
+                "fullName": "Jokonya N",
+                "lastName": "Jokonya",
+                "firstName": "Nancy",
+                "initials": "N"
+              },
+              {
+                "fullName": "Musundire J",
+                "lastName": "Musundire",
+                "firstName": "Jessie",
+                "initials": "J"
+              },
+              {
+                "fullName": "Matimba G",
+                "lastName": "Matimba",
+                "firstName": "Godfrey",
+                "initials": "G"
+              },
+              {
+                "fullName": "Mutsinze A",
+                "lastName": "Mutsinze",
+                "firstName": "Abigail",
+                "initials": "A"
+              },
+              {
+                "fullName": "Kadziyanike G",
+                "lastName": "Kadziyanike",
+                "firstName": "Gilton",
+                "initials": "G"
+              },
+              {
+                "fullName": "Manomano S",
+                "lastName": "Manomano",
+                "firstName": "Slyvia",
+                "initials": "S"
+              },
+              {
+                "fullName": "Langa C",
+                "lastName": "Langa",
+                "firstName": "Cleopatra",
+                "initials": "C"
+              },
+              {
+                "fullName": "Maluwa C",
+                "lastName": "Maluwa",
+                "firstName": "Christina",
+                "initials": "C"
+              },
+              {
+                "fullName": "Gurupira WT",
+                "lastName": "Gurupira",
+                "firstName": "Wilfred T",
+                "initials": "WT"
+              },
+              {
+                "fullName": "Bafana T",
+                "lastName": "Bafana",
+                "firstName": "Thembelihle",
+                "initials": "T"
+              },
+              {
+                "fullName": "Ncube E",
+                "lastName": "Ncube",
+                "firstName": "Evah",
+                "initials": "E"
+              },
+              {
+                "fullName": "Gomo A",
+                "lastName": "Gomo",
+                "firstName": "Alfred",
+                "initials": "A"
+              },
+              {
+                "fullName": "Munjoma M",
+                "lastName": "Munjoma",
+                "firstName": "Marshall",
+                "initials": "M"
+              },
+              {
+                "fullName": "Makanza N",
+                "lastName": "Makanza",
+                "firstName": "Natsai",
+                "initials": "N"
+              },
+              {
+                "fullName": "Mtisis F",
+                "lastName": "Mtisis",
+                "firstName": "Fiona",
+                "initials": "F"
+              },
+              {
+                "fullName": "Pamire C",
+                "lastName": "Pamire",
+                "firstName": "Collen",
+                "initials": "C"
+              },
+              {
+                "fullName": "Mashinga S",
+                "lastName": "Mashinga",
+                "firstName": "Solomon",
+                "initials": "S"
+              },
+              {
+                "fullName": "Kagona JB",
+                "lastName": "Kagona",
+                "firstName": "Jacob B",
+                "initials": "JB"
+              },
+              {
+                "fullName": "Chahwanda M",
+                "lastName": "Chahwanda",
+                "firstName": "Mugove",
+                "initials": "M"
+              },
+              {
+                "fullName": "Maguramhinga F",
+                "lastName": "Maguramhinga",
+                "firstName": "Fungai",
+                "initials": "F"
+              },
+              {
+                "fullName": "Chikosha M",
+                "lastName": "Chikosha",
+                "firstName": "Memory",
+                "initials": "M"
+              },
+              {
+                "fullName": "Mandioma V",
+                "lastName": "Mandioma",
+                "firstName": "Violet",
+                "initials": "V"
+              },
+              {
+                "fullName": "Talley J",
+                "lastName": "Talley",
+                "firstName": "Jacqueline",
+                "initials": "J"
+              },
+              {
+                "fullName": "Watkins P",
+                "lastName": "Watkins",
+                "firstName": "Phaedrea",
+                "initials": "P"
+              },
+              {
+                "fullName": "Lucas J",
+                "lastName": "Lucas",
+                "firstName": "Jonathan",
+                "initials": "J"
+              },
+              {
+                "fullName": "White R",
+                "lastName": "White",
+                "firstName": "Rhonda",
+                "initials": "R"
+              },
+              {
+                "fullName": "Cokley C",
+                "lastName": "Cokley",
+                "firstName": "Cheryl",
+                "initials": "C"
+              },
+              {
+                "fullName": "Sista N",
+                "lastName": "Sista",
+                "firstName": "Nirupama",
+                "initials": "N"
+              },
+              {
+                "fullName": "Allen M",
+                "lastName": "Allen",
+                "firstName": "Melissa",
+                "initials": "M"
+              },
+              {
+                "fullName": "Hinson K",
+                "lastName": "Hinson",
+                "firstName": "Kathy",
+                "initials": "K"
+              },
+              {
+                "fullName": "Cates W",
+                "lastName": "Cates",
+                "firstName": "Ward",
+                "initials": "W"
+              },
+              {
+                "fullName": "Mastro T",
+                "lastName": "Mastro",
+                "firstName": "Timothy",
+                "initials": "T"
+              },
+              {
+                "fullName": "Lamson N",
+                "lastName": "Lamson",
+                "firstName": "Nancy",
+                "initials": "N"
+              },
+              {
+                "fullName": "Davis G",
+                "lastName": "Davis",
+                "firstName": "Gray",
+                "initials": "G"
+              },
+              {
+                "fullName": "Yanavich C",
+                "lastName": "Yanavich",
+                "firstName": "Carolyn",
+                "initials": "C"
+              },
+              {
+                "fullName": "Cottle L",
+                "lastName": "Cottle",
+                "firstName": "Leslie",
+                "initials": "L"
+              },
+              {
+                "fullName": "Moksness J",
+                "lastName": "Moksness",
+                "firstName": "Jami",
+                "initials": "J"
+              },
+              {
+                "fullName": "Anderson M",
+                "lastName": "Anderson",
+                "firstName": "Maija",
+                "initials": "M"
+              },
+              {
+                "fullName": "Tracy-Waisanen S",
+                "lastName": "Tracy-Waisanen",
+                "firstName": "Sue",
+                "initials": "S"
+              },
+              {
+                "fullName": "Lands D",
+                "lastName": "Lands",
+                "firstName": "Debbie",
+                "initials": "D"
+              },
+              {
+                "fullName": "Kentop S",
+                "lastName": "Kentop",
+                "firstName": "Stacie",
+                "initials": "S"
+              },
+              {
+                "fullName": "Robins-Morris L",
+                "lastName": "Robins-Morris",
+                "firstName": "Laura",
+                "initials": "L"
+              },
+              {
+                "fullName": "Ou SS",
+                "lastName": "Ou",
+                "firstName": "San-San",
+                "initials": "SS"
+              },
+              {
+                "fullName": "Li X",
+                "lastName": "Li",
+                "firstName": "Xin",
+                "initials": "X"
+              },
+              {
+                "fullName": "Masse B",
+                "lastName": "Masse",
+                "firstName": "Ben",
+                "initials": "B"
+              },
+              {
+                "fullName": "Donnell D",
+                "lastName": "Donnell",
+                "firstName": "Deborah",
+                "initials": "D"
+              },
+              {
+                "fullName": "Hudelson S",
+                "lastName": "Hudelson",
+                "firstName": "Sarah",
+                "initials": "S"
+              },
+              {
+                "fullName": "Hendrix C",
+                "lastName": "Hendrix",
+                "firstName": "Craig",
+                "initials": "C",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-5696-8665"
+                }
+              },
+              {
+                "fullName": "Gaydos C",
+                "lastName": "Gaydos",
+                "firstName": "Charlotte",
+                "initials": "C"
+              },
+              {
+                "fullName": "Quinn TC",
+                "lastName": "Quinn",
+                "firstName": "Thomas C",
+                "initials": "TC"
+              },
+              {
+                "fullName": "Redd A",
+                "lastName": "Redd",
+                "firstName": "Andrew",
+                "initials": "A"
+              },
+              {
+                "fullName": "Porcella S",
+                "lastName": "Porcella",
+                "firstName": "Stephen",
+                "initials": "S"
+              },
+              {
+                "fullName": "Gupta A",
+                "lastName": "Gupta",
+                "firstName": "Amita",
+                "initials": "A"
+              },
+              {
+                "fullName": "Bollinger R",
+                "lastName": "Bollinger",
+                "firstName": "Robert",
+                "initials": "R",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-6798-6834"
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0001-5674-9166"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0001-6064-827X"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0001-6537-9064"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0001-7111-3000"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0001-9288-7881"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0001-9814-4894"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0001-9974-9684"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-2726-3391"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-3545-5238"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-5023-0336"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-5696-8665"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-6798-6834"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-7306-5732"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-8028-4474"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-8189-6149"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-0521-8597"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-2037-7449"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-3821-4592"
+              },
+              {
+                "type": "ORCID",
+                "value": "0009-0002-7463-8077"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "supporting_data",
+              "recommended_reviews",
+              "wikipedia"
+            ]
+          },
+          "journalInfo": {
+            "issue": "6",
+            "volume": "365",
+            "journalIssueId": 1856027,
+            "dateOfPublication": "2011 Aug",
+            "monthOfPublication": 8,
+            "yearOfPublication": 2011,
+            "journal": {
+              "medlineAbbreviation": "N Engl J Med",
+              "title": "The New England journal of medicine",
+              "essn": "1533-4406",
+              "issn": "0028-4793",
+              "isoabbreviation": "N Engl J Med",
+              "nlmid": "0255562"
+            },
+            "printPublicationDate": "2011-08-01"
+          },
+          "pubYear": "2011",
+          "pageInfo": "493-505",
+          "abstractText": "<h4>Background</h4>Antiretroviral therapy that reduces viral replication could limit the transmission of human immunodeficiency virus type 1 (HIV-1) in serodiscordant couples.<h4>Methods</h4>In nine countries, we enrolled 1763 couples in which one partner was HIV-1-positive and the other was HIV-1-negative; 54% of the subjects were from Africa, and 50% of infected partners were men. HIV-1-infected subjects with CD4 counts between 350 and 550 cells per cubic millimeter were randomly assigned in a 1:1 ratio to receive antiretroviral therapy either immediately (early therapy) or after a decline in the CD4 count or the onset of HIV-1-related symptoms (delayed therapy). The primary prevention end point was linked HIV-1 transmission in HIV-1-negative partners. The primary clinical end point was the earliest occurrence of pulmonary tuberculosis, severe bacterial infection, a World Health Organization stage 4 event, or death.<h4>Results</h4>As of February 21, 2011, a total of 39 HIV-1 transmissions were observed (incidence rate, 1.2 per 100 person-years; 95% confidence interval [CI], 0.9 to 1.7); of these, 28 were virologically linked to the infected partner (incidence rate, 0.9 per 100 person-years, 95% CI, 0.6 to 1.3). Of the 28 linked transmissions, only 1 occurred in the early-therapy group (hazard ratio, 0.04; 95% CI, 0.01 to 0.27; P<0.001). Subjects receiving early therapy had fewer treatment end points (hazard ratio, 0.59; 95% CI, 0.40 to 0.88; P=0.01).<h4>Conclusions</h4>The early initiation of antiretroviral therapy reduced rates of sexual transmission of HIV-1 and clinical events, indicating both personal and public health benefits from such therapy. (Funded by the National Institute of Allergy and Infectious Diseases and others; HPTN 052 ClinicalTrials.gov number, NCT00074581.).",
+          "affiliation": "University of North Carolina at Chapel Hill, Institute for Global Health and Infectious Diseases, Suite 2115, Bioinformatics Bldg., 130 Mason Farm Rd., CB 7030, Chapel Hill, NC 27599, USA. mscohen@med.unc.edu",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print-Electronic",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, Non-U.S. Gov't",
+              "research-article",
+              "Multicenter Study",
+              "Randomized Controlled Trial",
+              "Journal Article",
+              "Research Support, N.I.H., Extramural"
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "agency": "NIAID NIH HHS",
+                "acronym": "AI",
+                "grantId": "U01 AI068619",
+                "orderIn": 0
+              },
+              {
+                "agency": "NIAID NIH HHS",
+                "acronym": "AI",
+                "grantId": "UM1-AI068619",
+                "orderIn": 0
+              },
+              {
+                "agency": "NIAID NIH HHS",
+                "acronym": "AI",
+                "grantId": "U01 AI068613",
+                "orderIn": 0
+              },
+              {
+                "agency": "NIAID NIH HHS",
+                "acronym": "AI",
+                "grantId": "U01-AI068613",
+                "orderIn": 0
+              },
+              {
+                "agency": "NIAID NIH HHS",
+                "acronym": "AI",
+                "grantId": "U01-AI068619",
+                "orderIn": 0
+              },
+              {
+                "agency": "NIAID NIH HHS",
+                "acronym": "AI",
+                "grantId": "UM1 AI068617",
+                "orderIn": 0
+              },
+              {
+                "agency": "NIAID NIH HHS",
+                "acronym": "AI",
+                "grantId": "UM1-AI068613",
+                "orderIn": 0
+              },
+              {
+                "agency": "NIAID NIH HHS",
+                "acronym": "AI",
+                "grantId": "P30 AI050410",
+                "orderIn": 0
+              },
+              {
+                "agency": "NIAID NIH HHS",
+                "acronym": "AI",
+                "grantId": "UM1 AI069418",
+                "orderIn": 0
+              },
+              {
+                "agency": "NIAID NIH HHS",
+                "acronym": "AI",
+                "grantId": "K24 AI051982",
+                "orderIn": 0
+              },
+              {
+                "agency": "NICHD NIH HHS",
+                "acronym": "HD",
+                "grantId": "R24 HD042854",
+                "orderIn": 0
+              },
+              {
+                "agency": "NIAID NIH HHS",
+                "acronym": "AI",
+                "grantId": "U01 AI068617",
+                "orderIn": 0
+              },
+              {
+                "agency": "NIAID NIH HHS",
+                "acronym": "AI",
+                "grantId": "UM1 AI068619",
+                "orderIn": 0
+              },
+              {
+                "agency": "NIAID NIH HHS",
+                "acronym": "AI",
+                "grantId": "UM1-AI068617",
+                "orderIn": 0
+              },
+              {
+                "agency": "NIAID NIH HHS",
+                "acronym": "AI",
+                "grantId": "P30 AI027763",
+                "orderIn": 0
+              },
+              {
+                "agency": "NIAID NIH HHS",
+                "acronym": "AI",
+                "grantId": "U01-AI068617",
+                "orderIn": 0
+              },
+              {
+                "agency": "NIAID NIH HHS",
+                "acronym": "AI",
+                "grantId": "UM1 AI068613",
+                "orderIn": 0
+              }
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Humans"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "HIV-1"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "HIV Infections",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "DT",
+                      "qualifierName": "drug therapy"
+                    },
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PC",
+                      "qualifierName": "prevention & control"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "TM",
+                      "qualifierName": "transmission"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "HIV Seropositivity"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Disease Progression"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Anti-Retroviral Agents",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "AE",
+                      "qualifierName": "adverse effects"
+                    },
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "TU",
+                      "qualifierName": "therapeutic use"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Treatment Outcome"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Drug Therapy, Combination"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Proportional Hazards Models"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Spouses"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Adolescent"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Adult"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Sexual Partners"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Female"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Male"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Disease Transmission, Infectious",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PC",
+                      "qualifierName": "prevention & control"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Young Adult"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Kaplan-Meier Estimate"
+              }
+            ]
+          },
+          "chemicalList": {
+            "chemical": [
+              {
+                "name": "Anti-Retroviral Agents",
+                "registryNumber": "0"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "pdf",
+                "site": "Unpaywall",
+                "url": "https://www.nejm.org/doi/pdf/10.1056/NEJMoa1105243?articleTools=true"
+              },
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1056/NEJMoa1105243"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC3200068"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC3200068?pdf=render"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1056/nejmoa1105243"
+              }
+            ]
+          },
+          "commentCorrectionList": {
+            "commentCorrection": [
+              {
+                "source": "MED",
+                "id": "21767102",
+                "reference": "N Engl J Med. 2011 Aug 11;365(6):561-2. doi: 10.1056/NEJMe1107487.",
+                "type": "Comment in",
+                "orderIn": 1
+              },
+              {
+                "source": "MED",
+                "id": "22087688",
+                "reference": "N Engl J Med. 2011 Nov 17;365(20):1934; author reply 1935. doi: 10.1056/NEJMc1110588.",
+                "type": "Comment in",
+                "orderIn": 2
+              },
+              {
+                "source": "MED",
+                "id": "22087689",
+                "reference": "N Engl J Med. 2011 Nov 17;365(20):1934-5; author reply 1935. doi: 10.1056/NEJMc1110588.",
+                "type": "Comment in",
+                "orderIn": 3
+              },
+              {
+                "source": "MED",
+                "id": "22108078",
+                "reference": "Evid Based Med. 2012 Jun;17(3):95-6. doi: 10.1136/ebmed.2011.100278.",
+                "type": "Comment in",
+                "orderIn": 4
+              },
+              {
+                "source": "MED",
+                "id": "22184709",
+                "reference": "Ann Intern Med. 2011 Dec 20;155(12):JC6-8. doi: 10.7326/0003-4819-155-12-201112200-02008.",
+                "type": "Comment in",
+                "orderIn": 5
+              },
+              {
+                "source": "MED",
+                "id": "22532981",
+                "reference": "Rev Clin Esp. 2012 Mar;212(3):149-50. doi: 10.1016/j.rce.2011.10.003.",
+                "type": "Comment in",
+                "orderIn": 6
+              },
+              {
+                "source": "MED",
+                "id": "22686717",
+                "reference": "Natl Med J India. 2012 Mar-Apr;25(2):91-3.",
+                "type": "Comment in",
+                "orderIn": 7
+              },
+              {
+                "source": "MED",
+                "id": "24129466",
+                "reference": "JAMA. 2013 Oct 16;310(15):1619-20. doi: 10.1001/jama.2013.278328.",
+                "type": "Comment in",
+                "orderIn": 8
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "citedByCount": 5283,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "Y",
+          "hasLabsLinks": "Y",
+          "hasData": "Y",
+          "authMan": "Y",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "Y",
+          "manuscriptId": "NIHMS320818",
+          "hasTMAccessionNumbers": "Y",
+          "tmAccessionTypeList": {
+            "accessionType": [
+              "nct"
+            ]
+          },
+          "dateOfCompletion": "2011-08-18",
+          "dateOfCreation": "2011-07-20",
+          "dateOfRevision": "2025-05-29",
+          "electronicPublicationDate": "2011-07-18",
+          "firstPublicationDate": "2011-07-18",
+          "firstIndexDate": "2011-07-20",
+          "fullTextReceivedDate": "2025-02-05",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

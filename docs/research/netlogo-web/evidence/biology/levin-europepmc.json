@@ -1,0 +1,280 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1093%2Fclinids%2F24.supplement_1.s9%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1093/clinids/24.supplement_1.s9\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "8994776",
+          "source": "MED",
+          "pmid": "8994776",
+          "doi": "10.1093/clinids/24.supplement_1.s9",
+          "title": "The population genetics of antibiotic resistance.",
+          "authorString": "Levin BR, Lipsitch M, Perrot V, Schrag S, Antia R, Simonsen L, Walker NM, Stewart FM.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Levin BR",
+                "lastName": "Levin",
+                "firstName": "B R",
+                "initials": "BR",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Biology, Emory University, Atlanta, Georgia 30322, USA."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Lipsitch M",
+                "lastName": "Lipsitch",
+                "firstName": "M",
+                "initials": "M"
+              },
+              {
+                "fullName": "Perrot V",
+                "lastName": "Perrot",
+                "firstName": "V",
+                "initials": "V"
+              },
+              {
+                "fullName": "Schrag S",
+                "lastName": "Schrag",
+                "firstName": "S",
+                "initials": "S"
+              },
+              {
+                "fullName": "Antia R",
+                "lastName": "Antia",
+                "firstName": "R",
+                "initials": "R"
+              },
+              {
+                "fullName": "Simonsen L",
+                "lastName": "Simonsen",
+                "firstName": "L",
+                "initials": "L",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-1535-8526"
+                }
+              },
+              {
+                "fullName": "Walker NM",
+                "lastName": "Walker",
+                "firstName": "N M",
+                "initials": "NM"
+              },
+              {
+                "fullName": "Stewart FM",
+                "lastName": "Stewart",
+                "firstName": "F M",
+                "initials": "FM"
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0003-1535-8526"
+              }
+            ]
+          },
+          "journalInfo": {
+            "volume": "24 Suppl 1",
+            "journalIssueId": 1025119,
+            "dateOfPublication": "1997 Jan",
+            "monthOfPublication": 1,
+            "yearOfPublication": 1997,
+            "journal": {
+              "medlineAbbreviation": "Clin Infect Dis",
+              "title": "Clinical infectious diseases : an official publication of the Infectious Diseases Society of America",
+              "essn": "1537-6591",
+              "issn": "1058-4838",
+              "isoabbreviation": "Clin Infect Dis",
+              "nlmid": "9203213"
+            },
+            "printPublicationDate": "1997-01-01"
+          },
+          "pubYear": "1997",
+          "pageInfo": "S9-16",
+          "abstractText": "Mathematical models are used to ascertain the relationship between the incidence of antibiotic treatment and the frequency of resistant bacteria in the commensal flora of human hosts, as well as the rates at which these frequencies would decline following a cessation of antibiotic use. Recent studies of the population biology of plasmid-encoded and chromosomal antibiotic resistance are reviewed for estimates of the parameters of these models and to evaluate other factors contributing to the fate of antibiotic-resistant bacteria in human hosts. The implications of these theoretical and empirical results to the future of antibacterial chemotherapy are discussed.",
+          "affiliation": "Department of Biology, Emory University, Atlanta, Georgia 30322, USA.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, U.S. Gov't, P.H.S.",
+              "Journal Article"
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "agency": "NIGMS NIH HHS",
+                "acronym": "GM",
+                "grantId": "GM33782",
+                "orderIn": 0
+              }
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Humans"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Bacteria",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "DE",
+                      "qualifierName": "drug effects"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "PY",
+                      "qualifierName": "pathogenicity"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Bacterial Infections",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "DT",
+                      "qualifierName": "drug therapy"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Anti-Bacterial Agents",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "TU",
+                      "qualifierName": "therapeutic use"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Genetics, Population"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Drug Resistance, Microbial",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "GE",
+                      "qualifierName": "genetics"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "R Factors"
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Models, Theoretical"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Drug Utilization"
+              }
+            ]
+          },
+          "chemicalList": {
+            "chemical": [
+              {
+                "name": "Anti-Bacterial Agents",
+                "registryNumber": "0"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "pdf",
+                "site": "Unpaywall",
+                "url": "https://academic.oup.com/cid/article-pdf/24/Supplement_1/S9/20902360/24-Supplement_1-S9.pdf"
+              },
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1093/clinids/24.supplement_1.s9"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "citedByCount": 198,
+          "hasReferences": "N",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "N",
+          "hasData": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "1997-03-19",
+          "dateOfCreation": "1997-01-01",
+          "dateOfRevision": "2019-05-12",
+          "firstPublicationDate": "1997-01-01",
+          "firstIndexDate": "2008-01-29",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

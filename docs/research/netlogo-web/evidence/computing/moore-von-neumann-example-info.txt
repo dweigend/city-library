@@ -1,0 +1,9 @@
+## WHAT IS IT?
+
+This model shows how to make Moore (square) and Von Neumann (diamond) neighborhoods of any radius.  The built-in primitive `neighbors` gives you a Moore neighborhood of radius 1, and the built-in primitive `neighbors4` gives you a Von Neumann neighborhood of radius 1, but for other radii you have to use the code like that given here.
+
+## THINGS TO NOTICE
+
+World wrapping can be on or off; the same code works fine either way.
+
+<!-- 2006 -->

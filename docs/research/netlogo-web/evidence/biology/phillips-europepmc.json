@@ -1,0 +1,305 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1042%2Fbse0420061%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1042/bse0420061\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "17144880",
+          "source": "MED",
+          "pmid": "17144880",
+          "doi": "10.1042/bse0420061",
+          "title": "Resistance exercise, muscle loading/unloading and the control of muscle mass.",
+          "authorString": "Baar K, Nader G, Bodine S.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Baar K",
+                "lastName": "Baar",
+                "firstName": "Keith",
+                "initials": "K",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Division of Molecular Physiology, University of Dundee, Dundee UK. k.baar@dundee.ac.uk"
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Nader G",
+                "lastName": "Nader",
+                "firstName": "Gustavo",
+                "initials": "G"
+              },
+              {
+                "fullName": "Bodine S",
+                "lastName": "Bodine",
+                "firstName": "Sue",
+                "initials": "S",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-5742-9145"
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0002-5742-9145"
+              }
+            ]
+          },
+          "journalInfo": {
+            "volume": "42",
+            "journalIssueId": 1365099,
+            "dateOfPublication": "2006 ",
+            "monthOfPublication": 0,
+            "yearOfPublication": 2006,
+            "journal": {
+              "medlineAbbreviation": "Essays Biochem",
+              "title": "Essays in biochemistry",
+              "essn": "1744-1358",
+              "issn": "0071-1365",
+              "nlmid": "0043306",
+              "isoabbreviation": "Essays Biochem"
+            },
+            "printPublicationDate": "2006-01-01"
+          },
+          "pubYear": "2006",
+          "pageInfo": "61-74",
+          "abstractText": "Muscle mass is determined by the difference between the rate of protein synthesis and degradation. If synthesis is greater than degradation, muscle mass will increase (hypertrophy) and when the reverse is true muscle mass will decrease (atrophy). Following resistance exercise/increased loading there is a transient increase in protein synthesis within muscle. This change in protein synthesis correlates with an increase in the activity of protein kinase B/Akt and mTOR (mammalian target of rapamycin). mTOR increases protein synthesis by increasing translation initiation and by inducing ribosomal biogenesis. By contrast, unloading or inactivity results in a decrease in protein synthesis and a significant increase in muscle protein breakdown. The decrease in synthesis is due in part to the inactivation of mTOR and therefore a decrease in translation initiation, but also to a decrease in the rate of translation elongation. The increase in degradation is the result of a co-ordinated response of the calpains, lysosomal proteases and the ATP-dependent ubiquitin-proteosome. Caspase 3 and the calpains act upstream of the ubiquitin-proteosome system to assist in the complete breakdown of the myofibrillar proteins. Two muscle specific E3 ubiquitin ligases, MuRF1 and MAFbx/atrogen-1, have been identified as key regulators of muscle atrophy. In this chapter, these pathways and how the balance between anabolism and catabolism is affected by loading and unloading will be discussed.",
+          "affiliation": "Division of Molecular Physiology, University of Dundee, Dundee UK. k.baar@dundee.ac.uk",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Review",
+              "Journal Article"
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Muscle, Skeletal",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "AH",
+                      "qualifierName": "anatomy & histology"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "PA",
+                      "qualifierName": "pathology"
+                    },
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Animals"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Humans"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Muscular Atrophy",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "PA",
+                      "qualifierName": "pathology"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "PP",
+                      "qualifierName": "physiopathology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Hypertrophy"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Protein Kinases",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Muscle Proteins",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "BI",
+                      "qualifierName": "biosynthesis"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Exercise",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Signal Transduction"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Phosphorylation"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Weight-Bearing"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Models, Biological"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Proto-Oncogene Proteins c-akt",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "ME",
+                      "qualifierName": "metabolism"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Physical Exertion",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "TOR Serine-Threonine Kinases"
+              }
+            ]
+          },
+          "chemicalList": {
+            "chemical": [
+              {
+                "name": "Muscle Proteins",
+                "registryNumber": "0"
+              },
+              {
+                "name": "Protein Kinases",
+                "registryNumber": "EC 2.7.-"
+              },
+              {
+                "name": "Proto-Oncogene Proteins c-akt",
+                "registryNumber": "EC 2.7.11.1"
+              },
+              {
+                "name": "MTOR protein, human",
+                "registryNumber": "EC 2.7.1.1"
+              },
+              {
+                "name": "TOR Serine-Threonine Kinases",
+                "registryNumber": "EC 2.7.11.1"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1042/bse0420061"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "citedByCount": 68,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "N",
+          "hasData": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2007-02-20",
+          "dateOfCreation": "2006-12-06",
+          "dateOfRevision": "2021-12-03",
+          "firstPublicationDate": "2006-01-01",
+          "firstIndexDate": "2008-12-23",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

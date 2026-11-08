@@ -1,0 +1,414 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fnature04795%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1038/nature04795\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "16642006",
+          "source": "MED",
+          "pmid": "16642006",
+          "pmcid": "PMC7095311",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC7095311"
+            ]
+          },
+          "doi": "10.1038/nature04795",
+          "title": "Strategies for mitigating an influenza pandemic.",
+          "authorString": "Ferguson NM, Cummings DA, Fraser C, Cajka JC, Cooley PC, Burke DS.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Ferguson NM",
+                "lastName": "Ferguson",
+                "firstName": "Neil M",
+                "initials": "NM",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-1154-8093"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Infectious Disease Epidemiology, Faculty of Medicine, Imperial College London, St Mary's Campus, Norfolk Place, London W2 1PG, UK. neil.ferguson@imperial.ac.uk"
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Cummings DA",
+                "lastName": "Cummings",
+                "firstName": "Derek A T",
+                "initials": "DA"
+              },
+              {
+                "fullName": "Fraser C",
+                "lastName": "Fraser",
+                "firstName": "Christophe",
+                "initials": "C",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-2399-9657"
+                }
+              },
+              {
+                "fullName": "Cajka JC",
+                "lastName": "Cajka",
+                "firstName": "James C",
+                "initials": "JC",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-9800-6627"
+                }
+              },
+              {
+                "fullName": "Cooley PC",
+                "lastName": "Cooley",
+                "firstName": "Philip C",
+                "initials": "PC"
+              },
+              {
+                "fullName": "Burke DS",
+                "lastName": "Burke",
+                "firstName": "Donald S",
+                "initials": "DS",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-5704-8094"
+                }
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0001-9800-6627"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-1154-8093"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-5704-8094"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-2399-9657"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "wikipedia"
+            ]
+          },
+          "journalInfo": {
+            "issue": "7101",
+            "volume": "442",
+            "journalIssueId": 1338431,
+            "dateOfPublication": "2006 Jul",
+            "monthOfPublication": 7,
+            "yearOfPublication": 2006,
+            "journal": {
+              "medlineAbbreviation": "Nature",
+              "title": "Nature",
+              "essn": "1476-4687",
+              "issn": "0028-0836",
+              "nlmid": "0410462",
+              "isoabbreviation": "Nature"
+            },
+            "printPublicationDate": "2006-07-01"
+          },
+          "pubYear": "2006",
+          "pageInfo": "448-452",
+          "abstractText": "Development of strategies for mitigating the severity of a new influenza pandemic is now a top global public health priority. Influenza prevention and containment strategies can be considered under the broad categories of antiviral, vaccine and non-pharmaceutical (case isolation, household quarantine, school or workplace closure, restrictions on travel) measures. Mathematical models are powerful tools for exploring this complex landscape of intervention strategies and quantifying the potential costs and benefits of different options. Here we use a large-scale epidemic simulation to examine intervention options should initial containment of a novel influenza outbreak fail, using Great Britain and the United States as examples. We find that border restrictions and/or internal travel restrictions are unlikely to delay spread by more than 2-3 weeks unless more than 99% effective. School closure during the peak of a pandemic can reduce peak attack rates by up to 40%, but has little impact on overall attack rates, whereas case isolation or household quarantine could have a significant impact, if feasible. Treatment of clinical cases can reduce transmission, but only if antivirals are given within a day of symptoms starting. Given enough drugs for 50% of the population, household-based prophylaxis coupled with reactive school closure could reduce clinical attack rates by 40-50%. More widespread prophylaxis would be even more logistically challenging but might reduce attack rates by over 75%. Vaccine stockpiled in advance of a pandemic could significantly reduce attack rates even if of low efficacy. Estimates of policy effectiveness will change if the characteristics of a future pandemic strain differ substantially from those seen in past pandemics.",
+          "affiliation": "Department of Infectious Disease Epidemiology, Faculty of Medicine, Imperial College London, St Mary's Campus, Norfolk Place, London W2 1PG, UK. neil.ferguson@imperial.ac.uk",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print-Electronic",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, Non-U.S. Gov't",
+              "research-article",
+              "Journal Article",
+              "Research Support, N.I.H., Extramural"
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Humans"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Influenza Vaccines",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "AD",
+                      "qualifierName": "administration & dosage"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "SD",
+                      "qualifierName": "supply & distribution"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Antiviral Agents",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "AD",
+                      "qualifierName": "administration & dosage"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "SD",
+                      "qualifierName": "supply & distribution"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "TU",
+                      "qualifierName": "therapeutic use"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Treatment Outcome"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Premedication"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Self Medication"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Incidence"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Family Characteristics"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Quarantine",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "LJ",
+                      "qualifierName": "legislation & jurisprudence"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Models, Theoretical"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Time Factors"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Public Policy"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Schools"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Travel",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "LJ",
+                      "qualifierName": "legislation & jurisprudence"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "Y",
+                "descriptorName": "Computer Simulation"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Cost-Benefit Analysis"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "United States"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Influenza, Human",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "DT",
+                      "qualifierName": "drug therapy"
+                    },
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "EP",
+                      "qualifierName": "epidemiology"
+                    },
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PC",
+                      "qualifierName": "prevention & control"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "VI",
+                      "qualifierName": "virology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Influenza A Virus, H5N1 Subtype",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "CL",
+                      "qualifierName": "classification"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "DE",
+                      "qualifierName": "drug effects"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "IM",
+                      "qualifierName": "immunology"
+                    },
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "United Kingdom"
+              }
+            ]
+          },
+          "chemicalList": {
+            "chemical": [
+              {
+                "name": "Antiviral Agents",
+                "registryNumber": "0"
+              },
+              {
+                "name": "Influenza Vaccines",
+                "registryNumber": "0"
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "pdf",
+                "site": "Unpaywall",
+                "url": "https://www.nature.com/articles/nature04795.pdf"
+              },
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1038/nature04795"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC7095311"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC7095311?pdf=render"
+              }
+            ]
+          },
+          "isOpenAccess": "Y",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "citedByCount": 1277,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "Y",
+          "hasLabsLinks": "Y",
+          "hasData": "Y",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2006-08-16",
+          "dateOfCreation": "2006-04-28",
+          "dateOfRevision": "2026-01-28",
+          "electronicPublicationDate": "2006-04-26",
+          "firstPublicationDate": "2006-04-26",
+          "firstIndexDate": "2008-01-29",
+          "fullTextReceivedDate": "2025-02-03",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

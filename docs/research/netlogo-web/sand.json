@@ -1,0 +1,111 @@
+{
+  "slug": "sand",
+  "name": "Sand",
+  "catalogPath": "Sample Models/Chemistry & Physics/Sand",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Chemistry%20&%20Physics/Sand.nlogox",
+  "deliveryBatch": "B11",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "NetLogo Sand investigates how local occupancy rules create piles and falling granular patterns. Particles descend into empty cells or move diagonally around obstructions, with random tie-breaking when both diagonal directions are available. Establishes a physical granular-flow reference that exposes the missing force and stress variables [1]. Introduces force-based discrete-element modeling as a mechanistic contrast to occupancy-only rules [2]. Reviews the collective behavior and physical limits of granular descriptions [3]. The NetLogo baseline is a lattice rule system without contact forces, grain rotation or calibrated friction, so it does not reproduce the cited physical theories quantitatively. The simulation illustrates how simple exclusion and gravity-directed motion generate macroscopic piles. Reproducing these patterns establishes rule fidelity, not empirical validation.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Chemistry%20&%20Physics/Sand.nlogox",
+    "checkedAt": "2026-11-05",
+    "revision": "NetLogo 7.0.4; SHA-256 7db053940a922d00b19dc6132a68e1eb7d53e0ec0e0dcd9d77d9ce0342db0e4a",
+    "evidence": "Full served model XML, Procedures and Info downloaded and consulted; retained at evidence/physics/sand.nlogox",
+    "notes": "This dossier describes the original NetLogo baseline; it does not establish reimplementation behavior or empirical validation.",
+    "citation": "* Wilensky, U. (1996).  NetLogo Sand model.  http://ccl.northwestern.edu/netlogo/models/Sand.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "infoEvidenceFile": "evidence/physics/sand-source.json",
+    "evidenceFile": "evidence/physics/sand.nlogox"
+  },
+  "publications": [
+    {
+      "id": "1",
+      "authors": [
+        "Ralph Alger Bagnold"
+      ],
+      "title": "Experiments on a gravity-free dispersion of large solid spheres in a Newtonian fluid under shear",
+      "year": 1954,
+      "venue": "Proceedings of the Royal Society of London. Series A. Mathematical and Physical Sciences",
+      "doi": "10.1098/rspa.1954.0186",
+      "url": "https://doi.org/10.1098/rspa.1954.0186",
+      "relevance": "Establishes a physical granular-flow reference that exposes the missing force and stress variables; relevant here to how simple exclusion and gravity-directed motion generate macroscopic piles.",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query=Experiments%20on%20a%20gravity-free%20dispersion%20of%20large%20solid%20spheres%20in%20a%20Newtonian%20fluid%20under%20shear%20Bagnold%201954&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata and abstract",
+        "access": "Open DOI-registrant metadata; full publication access not assessed",
+        "notes": "Title, complete listed author sequence, publication date and DOI checked against live primary DOI registration metadata. Given names retain registered initials where supplied; no invented expansion. Registrant abstract consulted: Abstract Dispersions of solid spherical grains of diameter D = 0.13cm were sheared in Newtonian fluids of varying viscosity (water and a glycerine-water-alcohol mixture) in the annular space between two concentric drums. The density σ of the grains was balanced against the density ρ of the fluid, giving a condition of no differential forces due to radial acceleration. The volume concentration C of the grains was varied between 62 and 13 %. A substantial radial dispersive pressure was found to be exerted between the grains. This was measured as an increase of static pressure in the inner stationary drum which had a deformable periphery. The torque on the inner drum was also measured. The dispersive pressure P was found to be proportional to a shear stress λ attributable to the presence of the grains. The linear grain concentration λ is defined as the ratio grain diameter/mean free dispersion distance and is related to C by λ=1(C0/C)12−1 where C0 is the maximum possible static volume concentration. Both the stressesT and P, as dimensionless groups TσD2/λη2, and PσD2/λη 2, were found to bear single-valued empirical relations to a dimensionless shear strain group λ½σD2(dU/dy)lη for all the values of λ&lt; 12(C= 57% approx.) where dU/dy is the rate of shearing of the grains over one another, and η the fluid viscosity. This relation gives Tασ(λD)2(dU/dy)2 and T∝λ12ηdU/dy according as dU/dy is large or small, i.e. according to whether grain inertia or fluid viscosity dominate. An alternative semi-empirical relation F = (1+λ)(1+½λ)ηdU/dy was found for the viscous case, when T is the whole shear stress. The ratio T/P was constant at 0·3 approx, in the inertia region, and at 0.75 approx, in the viscous region. The results are applied to a few hitherto unexplained natural phenomena.",
+        "evidenceFile": "evidence/physics/publication-bagnold.json",
+        "verified": true
+      },
+      "verified": true,
+      "volume": "225",
+      "issue": "1160",
+      "pages": "49-63",
+      "publisher": "The Royal Society"
+    },
+    {
+      "id": "2",
+      "authors": [
+        "P. A. Cundall",
+        "O. D. L. Strack"
+      ],
+      "title": "A discrete numerical model for granular assemblies",
+      "year": 1979,
+      "venue": "Géotechnique",
+      "doi": "10.1680/geot.1979.29.1.47",
+      "url": "https://doi.org/10.1680/geot.1979.29.1.47",
+      "relevance": "Introduces force-based discrete-element modeling as a mechanistic contrast to occupancy-only rules; relevant here to how simple exclusion and gravity-directed motion generate macroscopic piles.",
+      "verification": {
+        "consultedUrl": "https://doi.org/10.1680/geot.1979.29.1.47",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata and abstract",
+        "access": "Open DOI-registrant metadata; full publication access not assessed",
+        "notes": "Title, complete listed author sequence, publication date and DOI checked against live primary DOI registration metadata. Given names retain registered initials where supplied; no invented expansion. Registrant abstract consulted: The distinct element method is a numerical model capable of describing the mechanical behaviour of assemblies of discs and spheres. The method is based on the use of an explicit numerical scheme in which the interaction of the particles is monitored contact by contact and the motion of the particles modelled particle by particle. The main features of the distinct element method are described. The method is validated by comparing force vector plots obtained from the computer program BALL with the corresponding plots obtained from a photoelastic analysis. The photoelastic analysis used for the comparison is the one applied to an assembly of discs by De Josselin de Jong and Verruijt (1969). The force vector diagrams obtained numerically closely resemble those obtained photoelastically. It is concluded from this comparison that the distinct element method and the program BALL are valid tools for research into the behaviour of granular assemblies. La méthode des éléments distincts est un modèle numérique capable de décrire le comportement mécanique de l'assemblage de disques et de sphères. La méthode est basée sur l'utilisation d'un système numérique explicite dans lequel l'interaction des particules est contrôlée contact par contact et le mouvement des particules simulé particule par particule. Les caracteristiques principales de la méthode des eléments distints sont décrites. La méthode est validée en comparant les tracés de vecteur de force obtenus par le programme sur ordicateur BALL avec les tracés correspondants obtanus a l'aide d'une analyse photo-élastique. L'analyse photo-élastique utilisée pour la comparaison est celle appliquée sur un assemblage de disques par De Josselin de Jong et Verruijt (1969). Les diagrammes de vecteur de force obtenus numériquement sont très voisins de ceux obtenus photo-élastiquement. Cette comparaison permet de conclure que la methode des éléments distincts et le programme BALL sont des instruments valables pour la recherche du comportement des assemblages granulaires.",
+        "evidenceFile": "evidence/physics/publication-cundall.json",
+        "verified": true
+      },
+      "verified": true,
+      "volume": "29",
+      "issue": "1",
+      "pages": "47-65",
+      "publisher": "Emerald"
+    },
+    {
+      "id": "3",
+      "authors": [
+        "Heinrich M. Jaeger",
+        "Sidney R. Nagel",
+        "Robert P. Behringer"
+      ],
+      "title": "Granular solids, liquids, and gases",
+      "year": 1996,
+      "venue": "Reviews of Modern Physics",
+      "doi": "10.1103/revmodphys.68.1259",
+      "url": "https://doi.org/10.1103/revmodphys.68.1259",
+      "relevance": "Reviews the collective behavior and physical limits of granular descriptions; relevant here to how simple exclusion and gravity-directed motion generate macroscopic piles.",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1103%2FRevModPhys.68.1259",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata and abstract",
+        "access": "Open publisher abstract; full article access not established",
+        "notes": "Title, complete listed author sequence, publication date and DOI checked against live primary DOI registration metadata. Given names retain registered initials where supplied; no invented expansion. No abstract/full text was returned; mechanism interpretation is bounded by model Info and the bibliographic subject.",
+        "evidenceFile": "evidence/physics/publication-granular.json",
+        "verified": true,
+        "additionalConsultedUrls": [
+          "https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.68.1259"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/physics/abstracts-02.json"
+        ],
+        "primaryReadingNotes": "Abstract frames granular behavior as distinct from ordinary solids, liquids and gases; title/abstract do not certify any particular cellular sand rule."
+      },
+      "verified": true,
+      "volume": "68",
+      "issue": "4",
+      "pages": "1259-1273",
+      "publisher": "American Physical Society (APS)"
+    }
+  ],
+  "gaps": []
+}

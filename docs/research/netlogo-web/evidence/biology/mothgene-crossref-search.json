@@ -1,0 +1,1040 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=The+industrial+melanism+mutation+in+British+peppered+moths+is+a+transposable+element+van%27t+Hof+2016&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 1463844,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                11,
+                4
+              ]
+            ],
+            "date-time": "2026-11-04T04:07:31Z",
+            "timestamp": 1793765251834,
+            "version": "4.6.1"
+          },
+          "reference-count": 40,
+          "publisher": "Springer Science and Business Media LLC",
+          "issue": "7605",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2016,
+                    6,
+                    1
+                  ]
+                ],
+                "date-time": "2016-06-01T00:00:00Z",
+                "timestamp": 1464739200000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "http://www.springer.com/tdm"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "link.springer.com"
+            ],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Nature"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2016,
+                6
+              ]
+            ]
+          },
+          "DOI": "10.1038/nature17951",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2016,
+                6,
+                1
+              ]
+            ],
+            "date-time": "2016-06-01T04:53:47Z",
+            "timestamp": 1464756827000
+          },
+          "page": "102-105",
+          "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+          "source": "Crossref",
+          "is-referenced-by-count": 575,
+          "title": [
+            "The industrial melanism mutation in British peppered moths is a transposable element"
+          ],
+          "prefix": "10.1038",
+          "volume": "534",
+          "author": [
+            {
+              "given": "Arjen E. van\u2019t",
+              "family": "Hof",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Pascal",
+              "family": "Campagne",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Daniel J.",
+              "family": "Rigden",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Carl J.",
+              "family": "Yung",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Jessica",
+              "family": "Lingley",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Michael A.",
+              "family": "Quail",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Neil",
+              "family": "Hall",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Alistair C.",
+              "family": "Darby",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Ilik J.",
+              "family": "Saccheri",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "published-online": {
+            "date-parts": [
+              [
+                2016,
+                6,
+                1
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "BFnature17951_CR1",
+              "doi-asserted-by": "publisher",
+              "first-page": "399",
+              "DOI": "10.1086/378925",
+              "volume": "78",
+              "author": "LM Cook",
+              "year": "2003",
+              "unstructured": "Cook, L. M. The rise and fall of the carbonaria form of the peppered moth. Q. Rev. Biol. 78, 399\u2013417 (2003)",
+              "journal-title": "Q. Rev. Biol."
+            },
+            {
+              "key": "BFnature17951_CR2",
+              "doi-asserted-by": "publisher",
+              "first-page": "958",
+              "DOI": "10.1126/science.1203043",
+              "volume": "332",
+              "author": "AE van\u2019t Hof",
+              "year": "2011",
+              "unstructured": "van\u2019t Hof, A. E., Edmonds, N., Dal\u00edkov\u00e1, M., Marec, F. & Saccheri, I. J. Industrial melanism in British peppered moths has a singular and recent mutational origin. Science 332, 958\u2013960 (2011)",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BFnature17951_CR3",
+              "doi-asserted-by": "publisher",
+              "first-page": "R344",
+              "DOI": "10.1016/j.cub.2004.04.021",
+              "volume": "14",
+              "author": "JFY Brookfield",
+              "year": "2004",
+              "unstructured": "Brookfield, J. F. Y. Evolutionary genetics: mobile DNAs as sources of adaptive change? Curr. Biol. 14, R344\u2013R345 (2004)",
+              "journal-title": "Curr. Biol."
+            },
+            {
+              "key": "BFnature17951_CR4",
+              "doi-asserted-by": "publisher",
+              "first-page": "767",
+              "DOI": "10.1038/nrg3015",
+              "volume": "12",
+              "author": "RDH Barrett",
+              "year": "2011",
+              "unstructured": "Barrett, R. D. H. & Hoekstra, H. E. Molecular spandrels: tests of adaptation at the genetic level. Nature Rev. Genet. 12, 767\u2013780 (2011)",
+              "journal-title": "Nature Rev. Genet."
+            },
+            {
+              "key": "BFnature17951_CR5",
+              "doi-asserted-by": "publisher",
+              "first-page": "484",
+              "DOI": "10.1016/j.tig.2010.08.004",
+              "volume": "26",
+              "author": "NJ Nadeau",
+              "year": "2010",
+              "unstructured": "Nadeau, N. J. & Jiggins, C. D. A golden age for evolutionary genetics ? Genomic studies of adaptation in natural populations. Trends Genet. 26, 484\u2013492 (2010)",
+              "journal-title": "Trends Genet."
+            },
+            {
+              "key": "BFnature17951_CR6",
+              "first-page": "1235",
+              "volume": "67",
+              "author": "A Martin",
+              "year": "2013",
+              "unstructured": "Martin, A. & Orgogozo, V. The loci of repeated evolution: a catalog of genetic hotspots of phenotypic variation. Evolution 67, 1235\u20131250 (2013)",
+              "journal-title": "Evolution"
+            },
+            {
+              "key": "BFnature17951_CR7",
+              "doi-asserted-by": "publisher",
+              "first-page": "751",
+              "DOI": "10.1038/nrg3483",
+              "volume": "14",
+              "author": "DL Stern",
+              "year": "2013",
+              "unstructured": "Stern, D. L. The genetic causes of convergent evolution. Nature Rev. Genet. 14, 751\u2013764 (2013)",
+              "journal-title": "Nature Rev. Genet."
+            },
+            {
+              "key": "BFnature17951_CR8",
+              "doi-asserted-by": "publisher",
+              "first-page": "807",
+              "DOI": "10.1038/nrg3522",
+              "volume": "14",
+              "author": "O Savolainen",
+              "year": "2013",
+              "unstructured": "Savolainen, O., Lascoux, M. & Merila, J. Ecological genomics of local adaptation. Nature Rev. Genet. 14, 807\u2013820 (2013)",
+              "journal-title": "Nature Rev. Genet."
+            },
+            {
+              "key": "BFnature17951_CR9",
+              "doi-asserted-by": "publisher",
+              "first-page": "995",
+              "DOI": "10.1111/j.1558-5646.2007.00105.x",
+              "volume": "61",
+              "author": "HE Hoekstra",
+              "year": "2007",
+              "unstructured": "Hoekstra, H. E. & Coyne, J. A. The locus of evolution: evo devo and the genetics of adaptation. Evolution 61, 995\u20131016 (2007)",
+              "journal-title": "Evolution"
+            },
+            {
+              "key": "BFnature17951_CR10",
+              "doi-asserted-by": "publisher",
+              "first-page": "207",
+              "DOI": "10.1038/hdy.2012.92",
+              "volume": "110",
+              "author": "LM Cook",
+              "year": "2013",
+              "unstructured": "Cook, L. M. & Saccheri, I. J. The peppered moth and industrial melanism: evolution of a natural selection case study. Heredity 110, 207\u2013212 (2013)",
+              "journal-title": "Heredity"
+            },
+            {
+              "key": "BFnature17951_CR11",
+              "doi-asserted-by": "publisher",
+              "first-page": "141",
+              "DOI": "10.1002/gene.1017",
+              "volume": "29",
+              "author": "T Chu",
+              "year": "2001",
+              "unstructured": "Chu, T., Henrion, G., Haegeli, V. & Strickland, S. Cortex, a Drosophila gene required to complete oocyte meiosis, is a member of the Cdc20/fizzy protein family. Genesis 29, 141\u2013152 (2001)",
+              "journal-title": "Genesis"
+            },
+            {
+              "key": "BFnature17951_CR12",
+              "doi-asserted-by": "publisher",
+              "first-page": "16212",
+              "DOI": "10.1073/pnas.0803785105",
+              "volume": "105",
+              "author": "IJ Saccheri",
+              "year": "2008",
+              "unstructured": "Saccheri, I. J., Rousset, F., Watts, P. C., Brakefield, P. M. & Cook, L. M. Selection and gene flow along a diminishing cline of melanic peppered moths. Proc. Natl Acad. Sci. USA 105, 16212\u201316217 (2008)",
+              "journal-title": "Proc. Natl Acad. Sci. USA"
+            },
+            {
+              "key": "BFnature17951_CR13",
+              "first-page": "60",
+              "volume": "33",
+              "author": "CA Clarke",
+              "year": "1979",
+              "unstructured": "Clarke, C. A. Biston betularia, obligate f. insularia indistinguishable from f. carbonaria (Geometridae). J. Lepid. Soc. 33, 60\u201364 (1979)",
+              "journal-title": "J. Lepid. Soc."
+            },
+            {
+              "key": "BFnature17951_CR14",
+              "doi-asserted-by": "publisher",
+              "first-page": "67",
+              "DOI": "10.1038/hdy.1977.42",
+              "volume": "39",
+              "author": "DR Lees",
+              "year": "1977",
+              "unstructured": "Lees, D. R. & Creed, E. R. Genetics of insularia forms of peppered moth, Biston betularia. Heredity 39, 67\u201373 (1977)",
+              "journal-title": "Heredity"
+            },
+            {
+              "key": "BFnature17951_CR15",
+              "doi-asserted-by": "publisher",
+              "first-page": "1513",
+              "DOI": "10.1534/genetics.103.025387",
+              "volume": "167",
+              "author": "Y Kim",
+              "year": "2004",
+              "unstructured": "Kim, Y. & Nielsen, R. Linkage disequilibrium as a signature of selective sweeps. Genetics 167, 1513\u20131524 (2004)",
+              "journal-title": "Genetics"
+            },
+            {
+              "key": "BFnature17951_CR16",
+              "doi-asserted-by": "publisher",
+              "first-page": "522",
+              "DOI": "10.1093/jhered/esi082",
+              "volume": "96",
+              "author": "LM Cook",
+              "year": "2005",
+              "unstructured": "Cook, L. M., Sutton, S. L. & Crawford, T. J. Melanic moth frequencies in Yorkshire, an old English industrial hot spot. J. Hered. 96, 522\u2013528 (2005)",
+              "journal-title": "J. Hered."
+            },
+            {
+              "key": "BFnature17951_CR17",
+              "doi-asserted-by": "publisher",
+              "first-page": "397",
+              "DOI": "10.1038/nrg2337",
+              "volume": "9",
+              "author": "C Feschotte",
+              "year": "2008",
+              "unstructured": "Feschotte, C. Transposable elements and the evolution of regulatory networks. Nature Rev. Genet. 9, 397\u2013405 (2008)",
+              "journal-title": "Nature Rev. Genet."
+            },
+            {
+              "key": "BFnature17951_CR18",
+              "doi-asserted-by": "publisher",
+              "first-page": "649",
+              "DOI": "10.1016/j.molcel.2013.04.024",
+              "volume": "50",
+              "author": "J He",
+              "year": "2013",
+              "unstructured": "He, J. et al. Insights into degron recognition by APC/C coactivators from the structure of an Acm1-Cdh1 complex. Mol. Cell 50, 649\u2013660 (2013)",
+              "journal-title": "Mol. Cell"
+            },
+            {
+              "key": "BFnature17951_CR19",
+              "doi-asserted-by": "publisher",
+              "first-page": "e1001648",
+              "DOI": "10.1371/journal.pbio.1001648",
+              "volume": "11",
+              "author": "ZJ Whitfield",
+              "year": "2013",
+              "unstructured": "Whitfield, Z. J., Chisholm, J., Hawley, R. S. & Orr-Weaver, T. L. A meiosis-specific form of the APC/C promotes the oocyte-to-embryo transition by decreasing levels of the polo kinase inhibitor matrimony. PLoS Biol. 11, e1001648 (2013)",
+              "journal-title": "PLoS Biol."
+            },
+            {
+              "key": "BFnature17951_CR20",
+              "doi-asserted-by": "publisher",
+              "unstructured": "Nadeau, N. J. et al. The gene cortex controls mimicry and crypsis in butterflies and moths. Nature \n                    http://dx.doi.org/10.1038/nature17961\n                    \n                   (this issue)",
+              "DOI": "10.1038/nature17961"
+            },
+            {
+              "key": "BFnature17951_CR21",
+              "doi-asserted-by": "publisher",
+              "first-page": "52",
+              "DOI": "10.1038/hdy.2015.69",
+              "volume": "116",
+              "author": "K Ito",
+              "year": "2016",
+              "unstructured": "Ito, K. et al. Mapping and recombination analysis of two moth colour mutations, Black moth and Wild wing spot, in the silkworm Bombyx mori. Heredity 116, 52\u201359 (2016)",
+              "journal-title": "Heredity"
+            },
+            {
+              "key": "BFnature17951_CR22",
+              "doi-asserted-by": "publisher",
+              "first-page": "e1000905",
+              "DOI": "10.1371/journal.pgen.1000905",
+              "volume": "6",
+              "author": "J Gonz\u00e1lez",
+              "year": "2010",
+              "unstructured": "Gonz\u00e1lez, J., Karasov, T. L., Messer, P. W. & Petrov, D. A. Genome-wide patterns of adaptation to temperate environments associated with transposable elements in Drosophila. PLoS Genet. 6, e1000905 (2010)",
+              "journal-title": "PLoS Genet."
+            },
+            {
+              "key": "BFnature17951_CR23",
+              "doi-asserted-by": "publisher",
+              "first-page": "1626",
+              "DOI": "10.1073/pnas.0303793101",
+              "volume": "101",
+              "author": "TA Schlenke",
+              "year": "2004",
+              "unstructured": "Schlenke, T. A. & Begun, D. J. Strong selective sweep associated with a transposon insertion in Drosophila simulans. Proc. Natl Acad. Sci. USA 101, 1626\u20131631 (2004)",
+              "journal-title": "Proc. Natl Acad. Sci. USA"
+            },
+            {
+              "key": "BFnature17951_CR24",
+              "doi-asserted-by": "publisher",
+              "first-page": "5495",
+              "DOI": "10.1038/ncomms6495",
+              "volume": "5",
+              "author": "L Schrader",
+              "year": "2014",
+              "unstructured": "Schrader, L. et al. Transposable element islands facilitate adaptation to novel environments in an invasive species. Nature Commun. 5, 5495 (2014)",
+              "journal-title": "Nature Commun."
+            },
+            {
+              "key": "BFnature17951_CR25",
+              "doi-asserted-by": "publisher",
+              "first-page": "1503",
+              "DOI": "10.1111/mec.12170",
+              "volume": "22",
+              "author": "E Casacuberta",
+              "year": "2013",
+              "unstructured": "Casacuberta, E. & Gonz\u00e1lez, J. The impact of transposable elements in environmental adaptation. Mol. Ecol. 22, 1503\u20131517 (2013)",
+              "journal-title": "Mol. Ecol."
+            },
+            {
+              "key": "BFnature17951_CR26",
+              "doi-asserted-by": "publisher",
+              "first-page": "1414",
+              "DOI": "10.1093/molbev/msl003",
+              "volume": "23",
+              "author": "A Koga",
+              "year": "2006",
+              "unstructured": "Koga, A., Iida, A., Hori, H., Shimada, A. & Shima, A. Vertebrate DNA transposon as a natural mutator: the medaka fish Tol2 element contributes to genetic variation without recognizable traces. Mol. Biol. Evol. 23, 1414\u20131419 (2006)",
+              "journal-title": "Mol. Biol. Evol."
+            },
+            {
+              "key": "BFnature17951_CR27",
+              "doi-asserted-by": "publisher",
+              "first-page": "283",
+              "DOI": "10.1038/hdy.2012.84",
+              "volume": "110",
+              "author": "AE van\u2019t Hof",
+              "year": "2013",
+              "unstructured": "van\u2019t Hof, A. E. et al. Linkage map of the peppered moth, Biston betularia (Lepidoptera, Geometridae): a model of industrial melanism. Heredity 110, 283\u2013295 (2013)",
+              "journal-title": "Heredity"
+            },
+            {
+              "key": "BFnature17951_CR28",
+              "doi-asserted-by": "publisher",
+              "first-page": "W465",
+              "DOI": "10.1093/nar/gki458",
+              "volume": "33",
+              "author": "M Stanke",
+              "year": "2005",
+              "unstructured": "Stanke, M. & Morgenstern, B. AUGUSTUS: a web server for gene prediction in eukaryotes that allows user-defined constraints. Nucleic Acids Res. 33, W465\u2013W467 (2005)",
+              "journal-title": "Nucleic Acids Res."
+            },
+            {
+              "key": "BFnature17951_CR29",
+              "doi-asserted-by": "publisher",
+              "first-page": "644",
+              "DOI": "10.1038/nbt.1883",
+              "volume": "29",
+              "author": "MG Grabherr",
+              "year": "2011",
+              "unstructured": "Grabherr, M. G. et al. Full-length transcriptome assembly from RNA-Seq data without a reference genome. Nature Biotechnol. 29, 644\u2013652 (2011)",
+              "journal-title": "Nature Biotechnol."
+            },
+            {
+              "key": "BFnature17951_CR30",
+              "doi-asserted-by": "publisher",
+              "first-page": "179",
+              "DOI": "10.1038/nmeth.1785",
+              "volume": "9",
+              "author": "O Delaneau",
+              "year": "2011",
+              "unstructured": "Delaneau, O., Marchini, J. & Zagury, J.-F. A linear complexity phasing method for thousands of genomes. Nature Methods 9, 179\u2013181 (2011)",
+              "journal-title": "Nature Methods"
+            },
+            {
+              "key": "BFnature17951_CR31",
+              "doi-asserted-by": "publisher",
+              "first-page": "101",
+              "DOI": "10.1046/j.1471-8278.2000.00014.x",
+              "volume": "1",
+              "author": "P-M Agapow",
+              "year": "2001",
+              "unstructured": "Agapow, P.-M. & Burt, A. Indices of multilocus linkage disequilibrium. Mol. Ecol. Notes 1, 101\u2013102 (2001)",
+              "journal-title": "Mol. Ecol. Notes"
+            },
+            {
+              "key": "BFnature17951_CR32",
+              "doi-asserted-by": "publisher",
+              "first-page": "e1002453",
+              "DOI": "10.1371/journal.pgen.1002453",
+              "volume": "8",
+              "author": "DJ Lawson",
+              "year": "2012",
+              "unstructured": "Lawson, D. J., Hellenthal, G., Myers, S. & Falush, D. Inference of population structure using dense haplotype data. PLoS Genet. 8, e1002453 (2012)",
+              "journal-title": "PLoS Genet."
+            },
+            {
+              "key": "BFnature17951_CR33",
+              "doi-asserted-by": "publisher",
+              "first-page": "e1000794",
+              "DOI": "10.1371/journal.pgen.1000794",
+              "volume": "6",
+              "author": "SW Baxter",
+              "year": "2010",
+              "unstructured": "Baxter, S. W. et al. Genomic hotspots for adaptation: the population genetics of M\u00fcllerian mimicry in the Heliconius melpomene clade. PLoS Genet. 6, e1000794 (2010)",
+              "journal-title": "PLoS Genet."
+            },
+            {
+              "key": "BFnature17951_CR34",
+              "doi-asserted-by": "publisher",
+              "first-page": "37",
+              "DOI": "10.1098/rspb.2007.1115",
+              "volume": "275",
+              "author": "RD Reed",
+              "year": "2008",
+              "unstructured": "Reed, R. D., McMillan, W. O. & Nagy, L. M. Gene expression underlying adaptive variation in Heliconius wing patterns: non-modular regulation of overlapping cinnabar and vermilion prepatterns. Proc. R. Soc. Lond. B 275, 37\u201345 (2008)",
+              "journal-title": "Proc. R. Soc. Lond. B"
+            },
+            {
+              "key": "BFnature17951_CR35",
+              "doi-asserted-by": "publisher",
+              "first-page": "772",
+              "DOI": "10.1093/molbev/mst010",
+              "volume": "30",
+              "author": "K Katoh",
+              "year": "2013",
+              "unstructured": "Katoh, K. & Standley, D. M. MAFFT multiple sequence alignment software version 7: improvements in performance and usability. Mol. Biol. Evol. 30, 772\u2013780 (2013)",
+              "journal-title": "Mol. Biol. Evol."
+            },
+            {
+              "key": "BFnature17951_CR36",
+              "doi-asserted-by": "publisher",
+              "first-page": "2725",
+              "DOI": "10.1093/molbev/mst197",
+              "volume": "30",
+              "author": "K Tamura",
+              "year": "2013",
+              "unstructured": "Tamura, K., Stecher, G., Peterson, D., Filipski, A. & Kumar, S. MEGA6: molecular evolutionary genetics analysis version 6.0. Mol. Biol. Evol. 30, 2725\u20132729 (2013)",
+              "journal-title": "Mol. Biol. Evol."
+            },
+            {
+              "key": "BFnature17951_CR37",
+              "doi-asserted-by": "publisher",
+              "first-page": "779",
+              "DOI": "10.1006/jmbi.1993.1626",
+              "volume": "234",
+              "author": "A \u0160ali",
+              "year": "1993",
+              "unstructured": "\u0160ali, A. & Blundell, T. L. Comparative protein modelling by satisfaction of spatial restraints. J. Mol. Biol. 234, 779\u2013815 (1993)",
+              "journal-title": "J. Mol. Biol."
+            },
+            {
+              "key": "BFnature17951_CR38",
+              "doi-asserted-by": "publisher",
+              "first-page": "W529",
+              "DOI": "10.1093/nar/gkq399",
+              "volume": "38",
+              "author": "H Ashkenazy",
+              "year": "2010",
+              "unstructured": "Ashkenazy, H., Erez, E., Martz, E., Pupko, T. & Ben-Tal, N. ConSurf 2010: calculating evolutionary conservation in sequence and structure of proteins and nucleic acids. Nucleic Acids Res. 38, W529\u2013W533 (2010)",
+              "journal-title": "Nucleic Acids Res."
+            },
+            {
+              "key": "BFnature17951_CR39",
+              "doi-asserted-by": "publisher",
+              "first-page": "115",
+              "DOI": "10.2174/138920210790886871",
+              "volume": "11",
+              "author": "M Mu\u00f1oz-L\u00f3pez",
+              "year": "2010",
+              "unstructured": "Mu\u00f1oz-L\u00f3pez, M. & Garc\u00eda-P\u00e9rez, J. L. DNA transposons: nature and applications in genomics. Curr. Genomics 11, 115\u2013128 (2010)",
+              "journal-title": "Curr. Genomics"
+            },
+            {
+              "key": "BFnature17951_CR40",
+              "doi-asserted-by": "publisher",
+              "first-page": "450",
+              "DOI": "10.1038/nature14471",
+              "volume": "522",
+              "author": "L Chang",
+              "year": "2015",
+              "unstructured": "Chang, L., Zhang, Z., Yang, J., McLaughlin, S. H. & Barford, D. Atomic structure of the APC/C and its mechanism of protein ubiquitination. Nature 522, 450\u2013454 (2015)",
+              "journal-title": "Nature"
+            }
+          ],
+          "container-title": [
+            "Nature"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://www.nature.com/articles/nature17951.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://www.nature.com/articles/nature17951",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://www.nature.com/articles/nature17951.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2023,
+                5,
+                18
+              ]
+            ],
+            "date-time": "2023-05-18T13:51:53Z",
+            "timestamp": 1684417913000
+          },
+          "score": 71.47947,
+          "resource": {
+            "primary": {
+              "URL": "https://www.nature.com/articles/nature17951"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2016,
+                6
+              ]
+            ]
+          },
+          "references-count": 40,
+          "journal-issue": {
+            "issue": "7605",
+            "published-print": {
+              "date-parts": [
+                [
+                  2016,
+                  6
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "BFnature17951"
+          ],
+          "URL": "https://doi.org/10.1038/nature17951",
+          "relation": {
+            "has-review": [
+              {
+                "id-type": "doi",
+                "id": "10.3410/f.726394796.793519551",
+                "asserted-by": "object"
+              },
+              {
+                "id-type": "doi",
+                "id": "10.3410/f.726394796.793519894",
+                "asserted-by": "object"
+              }
+            ]
+          },
+          "ISSN": [
+            "0028-0836",
+            "1476-4687"
+          ],
+          "issn-type": [
+            {
+              "value": "0028-0836",
+              "type": "print"
+            },
+            {
+              "value": "1476-4687",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2016,
+                6
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "3 July 2015",
+              "order": 1,
+              "name": "received",
+              "label": "Received",
+              "group": {
+                "name": "ArticleHistory",
+                "label": "Article History"
+              }
+            },
+            {
+              "value": "22 March 2016",
+              "order": 2,
+              "name": "accepted",
+              "label": "Accepted",
+              "group": {
+                "name": "ArticleHistory",
+                "label": "Article History"
+              }
+            },
+            {
+              "value": "1 June 2016",
+              "order": 3,
+              "name": "first_online",
+              "label": "First Online",
+              "group": {
+                "name": "ArticleHistory",
+                "label": "Article History"
+              }
+            },
+            {
+              "value": "The authors declare no competing financial interests.",
+              "order": 1,
+              "name": "Ethics",
+              "group": {
+                "name": "EthicsHeading",
+                "label": "Competing interests"
+              }
+            }
+          ]
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2025,
+                5,
+                14
+              ]
+            ],
+            "date-time": "2025-05-14T10:56:05Z",
+            "timestamp": 1747220165444,
+            "version": "3.40.5"
+          },
+          "reference-count": 0,
+          "publisher": "H1 Connect",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2016,
+                6,
+                20
+              ]
+            ]
+          },
+          "DOI": "10.3410/f.726394796.793519551",
+          "type": "dataset",
+          "created": {
+            "date-parts": [
+              [
+                2016,
+                6,
+                20
+              ]
+            ],
+            "date-time": "2016-06-20T15:28:09Z",
+            "timestamp": 1466436489000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Faculty Opinions recommendation of The industrial melanism mutation in British peppered moths is a transposable element."
+          ],
+          "prefix": "10.3410",
+          "author": [
+            {
+              "ORCID": "https://orcid.org/0000-0002-5304-4061",
+              "authenticated-orcid": true,
+              "given": "Gerd",
+              "family": "Kempermann",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "German Center for Neurodegenerative Diseases (DZNE) Dresden, Technische Universit\u00e4t Dresden, Germany"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "4950",
+          "content-created": {
+            "date-parts": [
+              [
+                2016,
+                6,
+                13
+              ]
+            ]
+          },
+          "container-title": [
+            "Faculty Opinions \u2013 Post-Publication Peer Review of the Biomedical Literature"
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2020,
+                4,
+                22
+              ]
+            ],
+            "date-time": "2020-04-22T16:30:38Z",
+            "timestamp": 1587573038000
+          },
+          "score": 63.633144,
+          "resource": {
+            "primary": {
+              "URL": "https://facultyopinions.com/prime/726394796#eval793519551"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2016,
+                6,
+                13
+              ]
+            ]
+          },
+          "references-count": 0,
+          "URL": "https://doi.org/10.3410/f.726394796.793519551",
+          "relation": {
+            "is-review-of": [
+              {
+                "id-type": "doi",
+                "id": "10.1038/nature17951",
+                "asserted-by": "subject"
+              }
+            ]
+          },
+          "published": {
+            "date-parts": [
+              [
+                2016,
+                6,
+                13
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2024,
+                3,
+                4
+              ]
+            ],
+            "date-time": "2024-03-04T06:30:27Z",
+            "timestamp": 1709533827895
+          },
+          "reference-count": 0,
+          "publisher": "H1 Connect",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2016,
+                6,
+                27
+              ]
+            ]
+          },
+          "DOI": "10.3410/f.726394796.793519894",
+          "type": "dataset",
+          "created": {
+            "date-parts": [
+              [
+                2016,
+                6,
+                27
+              ]
+            ],
+            "date-time": "2016-06-27T14:25:11Z",
+            "timestamp": 1467037511000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Faculty Opinions recommendation of The industrial melanism mutation in British peppered moths is a transposable element."
+          ],
+          "prefix": "10.3410",
+          "author": [
+            {
+              "given": "Bas",
+              "family": "Zwaan",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Laboratory of Genetics, Wageningen University, The Netherlands"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "4950",
+          "content-created": {
+            "date-parts": [
+              [
+                2016,
+                6,
+                19
+              ]
+            ]
+          },
+          "container-title": [
+            "Faculty Opinions \u2013 Post-Publication Peer Review of the Biomedical Literature"
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2020,
+                4,
+                22
+              ]
+            ],
+            "date-time": "2020-04-22T16:45:30Z",
+            "timestamp": 1587573930000
+          },
+          "score": 63.17267,
+          "resource": {
+            "primary": {
+              "URL": "https://facultyopinions.com/prime/726394796#eval793519894"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2016,
+                6,
+                19
+              ]
+            ]
+          },
+          "references-count": 0,
+          "URL": "https://doi.org/10.3410/f.726394796.793519894",
+          "relation": {
+            "is-review-of": [
+              {
+                "id-type": "doi",
+                "id": "10.1038/nature17951",
+                "asserted-by": "subject"
+              }
+            ]
+          },
+          "published": {
+            "date-parts": [
+              [
+                2016,
+                6,
+                19
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+import assert from "node:assert/strict";
+import { Graph } from "city-library";
+const graph=Graph.add<{name:string}>();
+const [a,b,c,d]=["a","b","c","d"].map(name=>graph.nodes.add({name}));
+graph.edges.add({from:a!,to:b!});
+graph.edges.add({from:c!,to:d!});
+const before=graph.components();
+assert.deepEqual(before,[[a,b],[c,d]]);
+assert.equal(graph.connected(),false);
+graph.edges.add({from:b!,to:c!});
+assert.deepEqual(graph.components(),[[a,b,c,d]]);
+assert.equal(graph.connected(),true);
+graph.nodes.delete(b!);
+assert.deepEqual(graph.components(),[[a],[c,d]]);
+assert.deepEqual(before,[[a,b],[c,d]]);
+assert.ok(Object.isFrozen(before)&&Object.isFrozen(before[0]));

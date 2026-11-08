@@ -1,0 +1,842 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=Mechanism+of+signal+propagation+in+Physarum+polycephalum+Alim+Andrew+Pringle+Brenner+2017&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 1384445,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                14
+              ]
+            ],
+            "date-time": "2026-10-14T21:40:47Z",
+            "timestamp": 1792014047322,
+            "version": "4.4.0"
+          },
+          "reference-count": 42,
+          "publisher": "National Academy of Sciences",
+          "issue": "20",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2017,
+                    11,
+                    2
+                  ]
+                ],
+                "date-time": "2017-11-02T00:00:00Z",
+                "timestamp": 1509580800000
+              },
+              "content-version": "vor",
+              "delay-in-days": 184,
+              "URL": "http://www.pnas.org/site/misc/userlicense.xhtml"
+            }
+          ],
+          "funder": [
+            {
+              "DOI": "10.13039/501100000854",
+              "name": "Human Frontier Science Program",
+              "doi-asserted-by": "publisher",
+              "award": [
+                "Pringle"
+              ],
+              "award-info": [
+                {
+                  "award-number": [
+                    "Pringle"
+                  ]
+                }
+              ],
+              "id": [
+                {
+                  "id": "10.13039/501100000854",
+                  "id-type": "DOI",
+                  "asserted-by": "publisher"
+                }
+              ]
+            },
+            {
+              "DOI": "10.13039/100000001",
+              "name": "National Science Foundation",
+              "doi-asserted-by": "publisher",
+              "award": [
+                "DMR1420570"
+              ],
+              "award-info": [
+                {
+                  "award-number": [
+                    "DMR1420570"
+                  ]
+                }
+              ],
+              "id": [
+                {
+                  "id": "10.13039/100000001",
+                  "id-type": "DOI",
+                  "asserted-by": "publisher"
+                }
+              ]
+            },
+            {
+              "DOI": "10.13039/100000001",
+              "name": "National Science Foundation",
+              "doi-asserted-by": "publisher",
+              "award": [
+                "DMS-1411694"
+              ],
+              "award-info": [
+                {
+                  "award-number": [
+                    "DMS-1411694"
+                  ]
+                }
+              ],
+              "id": [
+                {
+                  "id": "10.13039/100000001",
+                  "id-type": "DOI",
+                  "asserted-by": "publisher"
+                }
+              ]
+            },
+            {
+              "DOI": "10.13039/100000893",
+              "name": "Simons Foundation",
+              "doi-asserted-by": "publisher",
+              "award": [
+                "Investigator"
+              ],
+              "award-info": [
+                {
+                  "award-number": [
+                    "Investigator"
+                  ]
+                }
+              ],
+              "id": [
+                {
+                  "id": "10.13039/100000893",
+                  "id-type": "DOI",
+                  "asserted-by": "publisher"
+                }
+              ]
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "www.pnas.org"
+            ],
+            "crossmark-restriction": true
+          },
+          "short-container-title": [
+            "Proc. Natl. Acad. Sci. U.S.A."
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2017,
+                5,
+                16
+              ]
+            ]
+          },
+          "abstract": "<jats:title>Significance</jats:title>\n                  <jats:p>\n                    How do apparently simple organisms coordinate sophisticated behaviors? The slime mold\n                    <jats:italic>Physarum polycephalum</jats:italic>\n                    solves complex problems, for example finding the shortest route between food sources, despite growing as a single cell and the lack of any neural circuitry. By carefully observing\n                    <jats:italic>P. polycephalum\u2019s</jats:italic>\n                    response to a nutrient stimulus and using the data to develop a mathematical model, we identify a simple mechanism underpinning the slime mold\u2019s behaviors: A stimulus triggers the release of a signaling molecule. The molecule is initially advected by fluid flows but also increases fluid flows, generating a feedback loop and enabling the movement of information throughout the organism\u2019s body. This simple mechanism is sufficient to explain\n                    <jats:italic>P. polycephalum\u2019s</jats:italic>\n                    emergent, complex behaviors.\n                  </jats:p>",
+          "DOI": "10.1073/pnas.1618114114",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2017,
+                5,
+                2
+              ]
+            ],
+            "date-time": "2017-05-02T20:35:16Z",
+            "timestamp": 1493757316000
+          },
+          "page": "5136-5141",
+          "update-policy": "https://doi.org/10.1073/pnas.cm10313",
+          "source": "Crossref",
+          "is-referenced-by-count": 101,
+          "title": [
+            "Mechanism of signal propagation in\n                    <i>Physarum polycephalum</i>"
+          ],
+          "prefix": "10.1073",
+          "volume": "114",
+          "author": [
+            {
+              "given": "Karen",
+              "family": "Alim",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "The Kavli Institute for Bionano Science and Technology, Harvard John A. Paulson School of Engineering and Applied Sciences, Harvard University, Cambridge, MA 02138;"
+                },
+                {
+                  "name": "Max Planck Institute for Dynamics and Self-Organization, 37077 Goettingen, Germany;"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Natalie",
+              "family": "Andrew",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "The Kavli Institute for Bionano Science and Technology, Harvard John A. Paulson School of Engineering and Applied Sciences, Harvard University, Cambridge, MA 02138;"
+                },
+                {
+                  "name": "Max Planck Institute for Dynamics and Self-Organization, 37077 Goettingen, Germany;"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Anne",
+              "family": "Pringle",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Department of Botany, University of Wisconsin\u2013Madison, Madison, WI 53706;"
+                },
+                {
+                  "name": "Department of Bacteriology, University of Wisconsin\u2013Madison, Madison, WI 53706"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Michael P.",
+              "family": "Brenner",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "The Kavli Institute for Bionano Science and Technology, Harvard John A. Paulson School of Engineering and Applied Sciences, Harvard University, Cambridge, MA 02138;"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "341",
+          "published-online": {
+            "date-parts": [
+              [
+                2017,
+                5,
+                2
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "e_1_3_3_1_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1515/9780691186986"
+            },
+            {
+              "key": "e_1_3_3_2_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1146/annurev.bb.04.060175.001003"
+            },
+            {
+              "key": "e_1_3_3_3_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/S10267-008-0450-4"
+            },
+            {
+              "key": "e_1_3_3_4_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.1216376110"
+            },
+            {
+              "key": "e_1_3_3_5_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/35035159"
+            },
+            {
+              "key": "e_1_3_3_6_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.1177894"
+            },
+            {
+              "key": "e_1_3_3_7_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.0912198107"
+            },
+            {
+              "key": "e_1_3_3_8_2",
+              "first-page": "112",
+              "volume-title": "Cell Biology of Physarum and Didymium: Organisms, Nucleus, and Cell Cycle",
+              "author": "Ueda T",
+              "year": "1982",
+              "unstructured": "T Ueda, Y Kobatake, Chemotaxis in plasmodia of Physarum polycephalum. Cell Biology of Physarum and Didymium: Organisms, Nucleus, and Cell Cycle, eds HC Aldrich, JW Daniel (Academic, New York) Vol 1, 112\u2013144 (1982)."
+            },
+            {
+              "key": "e_1_3_3_9_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1247/csf.19.363"
+            },
+            {
+              "key": "e_1_3_3_10_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1242/jeb.67.1.49"
+            },
+            {
+              "key": "e_1_3_3_11_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1083/jcb.69.1.218"
+            },
+            {
+              "key": "e_1_3_3_12_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.1305049110"
+            },
+            {
+              "key": "e_1_3_3_13_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1247/csf.18.111"
+            },
+            {
+              "key": "e_1_3_3_14_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/978-3-0348-8916-2_10"
+            },
+            {
+              "key": "e_1_3_3_15_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00218125"
+            },
+            {
+              "key": "e_1_3_3_16_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1751-1097.1988.tb02726.x"
+            },
+            {
+              "key": "e_1_3_3_17_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/B978-0-12-049601-3.50010-9"
+            },
+            {
+              "key": "e_1_3_3_18_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1103/PhysRevLett.117.178103"
+            },
+            {
+              "key": "e_1_3_3_19_2",
+              "author": "Bullock TH",
+              "year": "1965",
+              "unstructured": "TH Bullock, GA Horridge Structure and Function in the Nervous Systems of Invertebrates (Freeman, San Francisco, 1965).",
+              "journal-title": "Structure and Function in the Nervous Systems of Invertebrates"
+            },
+            {
+              "key": "e_1_3_3_20_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1242/jeb.202.9.1139"
+            },
+            {
+              "key": "e_1_3_3_21_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0022-460X(82)90293-0"
+            },
+            {
+              "key": "e_1_3_3_22_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00582358"
+            },
+            {
+              "key": "e_1_3_3_23_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1017/S0022112010005914"
+            },
+            {
+              "key": "e_1_3_3_24_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rsif.2015.0099"
+            },
+            {
+              "key": "e_1_3_3_25_2",
+              "first-page": "167",
+              "volume-title": "Oscillations and Morphogenesis",
+              "author": "Ueda T",
+              "year": "1993",
+              "unstructured": "T Ueda, Intracellular oscillations and pattern formation in the cell behavior of Physarum. Oscillations and Morphogenesis, ed L Rensing (Dekker, New York), pp. 167\u2013181 (1993)."
+            },
+            {
+              "key": "e_1_3_3_26_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1080/09291018409359857"
+            },
+            {
+              "key": "e_1_3_3_27_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00387438"
+            },
+            {
+              "key": "e_1_3_3_28_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rspa.1953.0139"
+            },
+            {
+              "key": "e_1_3_3_29_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rspa.1956.0065"
+            },
+            {
+              "key": "e_1_3_3_30_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF03167234"
+            },
+            {
+              "key": "e_1_3_3_31_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.jtbi.2012.06.017"
+            },
+            {
+              "key": "e_1_3_3_32_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1242/jcs.53.1.37"
+            },
+            {
+              "key": "e_1_3_3_33_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1002/cm.970010404"
+            },
+            {
+              "key": "e_1_3_3_34_2",
+              "volume-title": "Calcium: A Matter of Life or Death",
+              "author": "Krebs J",
+              "year": "2007",
+              "unstructured": ", eds J Krebs, M Michalak (Elsevier, 1st Ed, New York Calcium: A Matter of Life or Death, 2007).",
+              "edition": "1"
+            },
+            {
+              "key": "e_1_3_3_35_2",
+              "volume-title": "Myxomycetes: A Handbook of Slime Molds",
+              "author": "Stephenson SL",
+              "year": "1994",
+              "unstructured": "SL Stephenson, H Stempen Myxomycetes: A Handbook of Slime Molds (Timber, Portland, OR, 1994)."
+            },
+            {
+              "key": "e_1_3_3_36_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/j.protis.2016.05.003"
+            },
+            {
+              "key": "e_1_3_3_37_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1099/00221287-25-1-47"
+            },
+            {
+              "key": "e_1_3_3_38_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1128/jb.84.5.1104-1110.1962"
+            },
+            {
+              "key": "e_1_3_3_39_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/S0006-3495(97)78835-0"
+            },
+            {
+              "key": "e_1_3_3_40_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "48",
+              "DOI": "10.1016/B978-0-12-374920-8.00705-0",
+              "volume-title": "Comprehensive Biophysics",
+              "author": "Robinson DN",
+              "year": "2012",
+              "unstructured": "DN Robinson, YS Kee, T Luo, A Surcel, Understanding how dividing cells change shape. Comprehensive Biophysics, eds EH Egelman, D Wirtz (Elsevier, New York) Vol 7, 48\u201373 (2012)."
+            },
+            {
+              "key": "e_1_3_3_41_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nature10286"
+            },
+            {
+              "key": "e_1_3_3_42_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1007/BF00180376"
+            }
+          ],
+          "container-title": [
+            "Proceedings of the National Academy of Sciences"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://www.pnas.org/syndication/doi/10.1073/pnas.1618114114",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "syndication"
+            },
+            {
+              "URL": "https://pnas.org/doi/pdf/10.1073/pnas.1618114114",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2022,
+                4,
+                13
+              ]
+            ],
+            "date-time": "2022-04-13T02:23:35Z",
+            "timestamp": 1649816615000
+          },
+          "score": 46.800903,
+          "resource": {
+            "primary": {
+              "URL": "https://pnas.org/doi/full/10.1073/pnas.1618114114"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2017,
+                5,
+                2
+              ]
+            ]
+          },
+          "references-count": 42,
+          "journal-issue": {
+            "issue": "20",
+            "published-print": {
+              "date-parts": [
+                [
+                  2017,
+                  5,
+                  16
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1073/pnas.1618114114"
+          ],
+          "URL": "https://doi.org/10.1073/pnas.1618114114",
+          "ISSN": [
+            "0027-8424",
+            "1091-6490"
+          ],
+          "issn-type": [
+            {
+              "value": "0027-8424",
+              "type": "print"
+            },
+            {
+              "value": "1091-6490",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2017,
+                5,
+                2
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "2017-05-02",
+              "order": 2,
+              "name": "published",
+              "label": "Published",
+              "group": {
+                "name": "publication_history",
+                "label": "Publication History"
+              }
+            }
+          ]
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2024,
+                12,
+                22
+              ]
+            ],
+            "date-time": "2024-12-22T05:10:24Z",
+            "timestamp": 1734844224436,
+            "version": "3.32.0"
+          },
+          "description": "This datasheet on Physarum polycephalum covers Identity, Hosts/Species Affected, Further Information.",
+          "reference-count": 1,
+          "publisher": "CABI Publishing",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2022,
+                9,
+                19
+              ]
+            ]
+          },
+          "DOI": "10.1079/cabicompendium.62550361",
+          "type": "dataset",
+          "created": {
+            "date-parts": [
+              [
+                2022,
+                11,
+                24
+              ]
+            ],
+            "date-time": "2022-11-24T21:59:18Z",
+            "timestamp": 1669327158000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Physarum polycephalum"
+          ],
+          "prefix": "10.1079",
+          "author": [
+            {
+              "name": "CABI",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "242",
+          "reference": [
+            {
+              "key": "e_1_3_1_2_1",
+              "doi-asserted-by": "publisher",
+              "unstructured": "Moreira I. C. Leonardo-Silva L. Ferreira-S\u00e1 A. S. Xavier-Santos S. 2021. Myxomycetes in the Pantanal biome: first records and a new associate Attalea phalerata.Mycotaxon 136(1) 219-227. DOI: 10.5248/136.219",
+              "DOI": "10.5248/136.219"
+            }
+          ],
+          "container-title": [
+            "CABI Compendium"
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2024,
+                12,
+                21
+              ]
+            ],
+            "date-time": "2024-12-21T20:12:15Z",
+            "timestamp": 1734811935000
+          },
+          "score": 35.164623,
+          "resource": {
+            "primary": {
+              "URL": "http://www.cabidigitallibrary.org/doi/10.1079/cabicompendium.62550361"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2022,
+                9,
+                19
+              ]
+            ]
+          },
+          "references-count": 1,
+          "URL": "https://doi.org/10.1079/cabicompendium.62550361",
+          "published": {
+            "date-parts": [
+              [
+                2022,
+                9,
+                19
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2024,
+                9,
+                5
+              ]
+            ],
+            "date-time": "2024-09-05T05:22:34Z",
+            "timestamp": 1725513754501
+          },
+          "publisher-location": "Dordrecht",
+          "reference-count": 0,
+          "publisher": "Springer Netherlands",
+          "isbn-type": [
+            {
+              "type": "print",
+              "value": "9781402067532"
+            },
+            {
+              "type": "electronic",
+              "value": "9781402067549"
+            }
+          ],
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2008,
+                    1,
+                    1
+                  ]
+                ],
+                "date-time": "2008-01-01T00:00:00Z",
+                "timestamp": 1199145600000
+              },
+              "content-version": "unspecified",
+              "delay-in-days": 0,
+              "URL": "http://www.springer.com/tdm"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2008
+              ]
+            ]
+          },
+          "DOI": "10.1007/978-1-4020-6754-9_12824",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2008,
+                5,
+                23
+              ]
+            ],
+            "date-time": "2008-05-23T11:06:34Z",
+            "timestamp": 1211540794000
+          },
+          "page": "1492-1492",
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Physarum polycephalum"
+          ],
+          "prefix": "10.1007",
+          "member": "297",
+          "published-online": {
+            "date-parts": [
+              [
+                2016,
+                7,
+                16
+              ]
+            ]
+          },
+          "container-title": [
+            "Encyclopedia of Genetics, Genomics, Proteomics and Informatics"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/978-1-4020-6754-9_12824",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2016,
+                7,
+                15
+              ]
+            ],
+            "date-time": "2016-07-15T03:41:15Z",
+            "timestamp": 1468554075000
+          },
+          "score": 34.319687,
+          "resource": {
+            "primary": {
+              "URL": "http://link.springer.com/10.1007/978-1-4020-6754-9_12824"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2008
+              ]
+            ]
+          },
+          "ISBN": [
+            "9781402067532",
+            "9781402067549"
+          ],
+          "references-count": 0,
+          "URL": "https://doi.org/10.1007/978-1-4020-6754-9_12824",
+          "published": {
+            "date-parts": [
+              [
+                2008
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

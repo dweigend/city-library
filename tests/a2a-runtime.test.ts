@@ -7,7 +7,7 @@ test("uniform validation precedes draws and never invokes options accessors", ()
   const before = random.state;
   let getters = 0;
   const accessor = Object.defineProperty({}, "min", { get() { getters++; return 0; } });
-  for (const options of [accessor, { min: NaN }, { max: Infinity }, { integer: 1 }, { integer: true, min: 0.5 }, { min: 1, max: 1 }, { distribution: "normal" }, { mean: 1 }, { bound: 3 }]) {
+  for (const options of [accessor, { min: NaN }, { max: Infinity }, { integer: 1 }, { integer: true, min: 0.5 }, { min: 1, max: 1 }, { distribution: "exponential", mean: -1 }, { mean: 1 }, { bound: 3 }]) {
     assert.throws(() => random.number(options as never));
     assert.deepEqual(random.state, before);
   }

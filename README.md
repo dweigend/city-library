@@ -1,30 +1,40 @@
 # City Library
 
-A modular, TypeScript-first toolkit for procedural cities and agent-based models. Use focused geometry, graph and simulation capabilities independently, then compose the parts your model needs. Applications own visualization; the library owns domain logic and state.
+City Library is an open, modular library for building simulations and games about future cities. Try a rule, watch what happens, change it and try again.
 
-> **Work in progress.** A1, bounded A2a and the A5a graph kernel are implemented. The active Lab refactor adds bounded spatial/Grid and measurement capabilities plus modular NetLogo reference experiments; broader APIs remain planned and acceptance is tracked separately. No package is published. See [A5a usage](docs/development/a5a-usage.md), [Agent Lab](ui/agent-lab/README.md) and [refactor evidence](docs/development/agent-lab-evidence.md) for scope and commands.
+## A toolkit for experiments
 
-## Purpose
+Cities face difficult questions about climate, biodiversity, mobility and resources. Simulations and games let us explore alternatives and learn through play. Fun is just another name for learning.
 
-City Library aims to become a city engine for exploring sustainable cities of the future. The motivation is that many city builders reproduce familiar urban patterns rather than help explore how cities could be planned more sustainably. This project puts those future possibilities at the center: how urban layouts, transport, resource cycles and energy systems could work together under different planning choices.
+Combine agents, space, networks and measurements in TypeScript. Use a graph on its own, add agents when needed, or pair a grid with a local rule. Each part should work independently and make its assumptions easy to inspect.
 
-The engine should make those concepts explicit and testable through simulation. Sustainability is a design question to investigate through stated assumptions and observable outcomes.
+TypeScript brings these experiments to the web, with an ecosystem of useful game libraries.
 
-## Development approach
+NetLogo inspires the scripting approach: a short script should be enough to get an idea running. Bits UI and shadcn-svelte inspire the modular approach: small building blocks with useful defaults and room to make something your own.
 
-1. **Agent Loom first.** Build the agent modeling core as pure logic, without a UI. Establish independently usable and testable simulation behavior before adding presentation.
-2. **Extend through focused libraries.** Add capabilities for city grids, traffic, resource cycles and energy systems. Develop each capability independently, then compose them into broader city simulations.
-3. **Compose a headless city engine.** Keep simulation logic and UI clearly separated. The complete engine must work without a browser or renderer, so scripts, experiments and different interfaces can use the same models.
+Agent Loom provides the headless modeling core. Agent Lab adds browser controls and views; the same model also runs in a script. Applying its results to a real city still requires evidence.
 
-This is the development sequence; A1 establishes the first headless agent subset. The broader capabilities below remain planned.
+The core and shared UI are usable, with 125 experiment entries toward a fixed selection of 200. The full specification and scientific model comparisons remain unfinished, and the package is not published. See [the work plan](PLAN.md) for progress and open checks.
 
-## Documentation
+## Run the Lab
 
-- [Agent Loom specification](docs/agent-loom/README.md): the general modeling core and current development focus.
-- [API inventory](docs/agent-loom/api-table.md): all 309 planned operation/type entries.
-- [API reference](docs/agent-loom/api-reference.md): contracts and usage examples.
-- [Architecture](docs/DESIGN.md): module boundaries, state ownership and extension rules.
-- [Work plan](PLAN.md): delivery sequence and acceptance criteria.
+From the repository root, use Bun 1.4.2 and start the Svelte work-in-progress runtime:
+
+```sh
+bun install --frozen-lockfile
+CITY_LIBRARY_UI_RUNTIME=svelte bun run dev:ui:svelte
+```
+
+Open http://localhost:3101. Choose an experiment, set its initial values and press Setup. Advance one step at a time or use Run/Pause. Live controls call model actions; setup controls prepare the next initialization.
+
+The runtime variable is required: the Vite command defaults to legacy rendering. For the older Bun host, run `bun run dev:ui` and open http://localhost:3100. See [Lab usage](ui/agent-lab/README.md) for ports, updates and migration limits.
+
+## Write and explore
+
+- [Write a model](docs/development/model-authoring.md): follow a real headless model and its UI binding.
+- [Documentation](docs/README.md): find architecture, APIs, authoring rules and evidence.
+- [Agent Loom reference](docs/agent-loom/README.md): target contracts and operation inventory; delivered coverage is tracked separately.
+- [Work plan](PLAN.md): current priorities and acceptance gates.
 
 ## How the pieces fit
 
@@ -51,28 +61,10 @@ flowchart TD
     Data --> Apps
 ```
 
-This is a composition map, not a required startup sequence. A building generator can work without residents, a graph without coordinates, and an agent model without a grid or renderer. Kits combine the same public operations available to model authors.
+This is a composition map, not a required startup sequence. A graph needs no coordinates, an agent model needs no grid, and a building generator need not create residents. Broader building generation and city-domain models remain delivery goals.
 
-## Planned capabilities
+## Development
 
-| Area | Purpose |
-| --- | --- |
-| Simulation | Agents, worlds, lifecycle, time and execution |
-| Spatial Structures | Geometry, grids, fields, neighborhoods and spatial queries |
-| Graphs | Connections, routes, network generation and analysis |
-| Generation | Terrain, streets, parcels and alternative building generators |
-| City Models | Mobility, households, allocation, economy and supply |
-| Data & Experiments | Validated inputs, statistics, experiments and storage |
+`bun run check` runs TypeScript/Svelte checks, tests, public examples, the library build and a packed Bun/Node/TypeScript consumer. The consumer requires Node 26.8.2. `bun run build:ui:svelte` builds the Vite host; use `CITY_LIBRARY_UI_RUNTIME=svelte bun run build:ui:svelte` when building the Svelte runtime explicitly.
 
-Phase one implements the complete Agent Loom core incrementally, beginning with a small headless Agent/World model. Building generation and broader city models follow. Agent Loom is part of City Library, not a separate required engine.
-
-## Modeling principles
-
-- Write ordinary TypeScript with directly typed model properties and native collections.
-- Keep each capability independently usable and compose through public APIs.
-- Give each live value one owner; share canonical references across domains.
-- Make randomness, execution order, units, defaults and failure behavior explicit.
-- Keep rendering and host I/O outside the domain logic. UI edits use defined actions.
-- Add replaceable variants through focused contracts while preserving existing behavior.
-
-Generator results describe geometry and declared properties. Connecting them to residents, capacities or a live simulation is explicit. Saving measurements does not imply that a complete model can be resumed.
+Keep model state under one owner, use public actions for changes and keep rendering outside the headless library. New capabilities start with asserted public examples. [Architecture](docs/ARCHITECTURE.md) and [UI design](docs/DESIGN.md) define the binding rules.

@@ -1,0 +1,171 @@
+{
+  "marker": "selected-social-b02:ethnocentrism:366bca9cfe1417bf6ff6c456581573d91bcf9e252dd8f6a0afa80954edd3dc81",
+  "chunk": "http://localhost:3112/chunks/ui-wch7bh1t.js",
+  "chunks": [
+    {
+      "url": "http://localhost:3112/chunks/ui-wch7bh1t.js",
+      "sha256": "365cae33a572c86062ab1a9fd39051bea0f574d7e3d108d1634d64eab04d4998"
+    },
+    {
+      "url": "http://localhost:3112/chunks/app-cakyt1j7.js",
+      "sha256": "97a2f893efa8c3e92a3bfe5c5cf6ec5967996ce836f64e0c5cae4050a4d58470"
+    }
+  ],
+  "buildVersion": "1793960871793",
+  "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+  "defaults": {
+    "seed": 1,
+    "setup": "empty",
+    "immigrantsPerDay": 1,
+    "initialPtr": 0.12,
+    "costOfGiving": 0.01,
+    "gainOfReceiving": 0.03,
+    "mutationRate": 0.005,
+    "deathRate": 0.1,
+    "immigrantChanceCooperateWithSame": 0.5,
+    "immigrantChanceCooperateWithDifferent": 0.5
+  },
+  "setupTick": 0,
+  "setupMonitors": {
+    "Tick": "0",
+    "Population": "0",
+    "Encounters": "0",
+    "Cooperation": "0.0%"
+  },
+  "setupStatus": "Model initialized.",
+  "setupRaster": [
+    {
+      "width": 1344,
+      "height": 1344,
+      "sampledColors": 1
+    }
+  ],
+  "duplicateFields": [],
+  "errors": [],
+  "targetProbeTick": 10,
+  "progressMonitors": {
+    "Tick": "10",
+    "Population": "5",
+    "Encounters": "2",
+    "Cooperation": "0.0%"
+  },
+  "status": "Steps completed.",
+  "historyLength": 11,
+  "diagnostic": null,
+  "raster": [
+    {
+      "width": 1344,
+      "height": 1344,
+      "sampledColors": 2
+    }
+  ],
+  "mobileLight": {
+    "viewport": [
+      390,
+      844
+    ],
+    "scrollWidth": 390,
+    "overflow": false,
+    "background": "rgb(255, 255, 255)",
+    "raster": [
+      {
+        "width": 716,
+        "height": 716,
+        "sampledColors": 6
+      }
+    ]
+  },
+  "uiChecks": {
+    "run": true,
+    "paused": true,
+    "running": {
+      "Tick": "16",
+      "Population": "6",
+      "Encounters": "6",
+      "Cooperation": "0.0%"
+    },
+    "pause": {
+      "Tick": "16",
+      "Population": "6",
+      "Encounters": "6",
+      "Cooperation": "0.0%"
+    },
+    "stable": {
+      "Tick": "16",
+      "Population": "6",
+      "Encounters": "6",
+      "Cooperation": "0.0%"
+    },
+    "actions": [
+      {
+        "label": "Setup empty",
+        "enabled": true,
+        "monitors": {
+          "Tick": "0",
+          "Population": "0",
+          "Encounters": "0",
+          "Cooperation": "0.0%"
+        },
+        "status": "Action completed."
+      },
+      {
+        "label": "Setup full",
+        "enabled": true,
+        "monitors": {
+          "Tick": "0",
+          "Population": "2601",
+          "Encounters": "0",
+          "Cooperation": "0.0%"
+        },
+        "status": "Action completed."
+      }
+    ],
+    "liveTest": {
+      "name": "live-immigrantsPerDay",
+      "before": "1",
+      "changed": "100",
+      "afterSetup": "100",
+      "status": "Model initialized.",
+      "resetMonitors": {
+        "Tick": "0",
+        "Population": "0",
+        "Encounters": "0",
+        "Cooperation": "0.0%"
+      }
+    },
+    "resetMonitors": {
+      "Tick": "0",
+      "Population": "0",
+      "Encounters": "0",
+      "Cooperation": "0.0%"
+    },
+    "infoHasOriginal": true,
+    "inspector": null,
+    "errors": [],
+    "unlabeled": [],
+    "overflow": false
+  },
+  "publicBrowserProbe": {
+    "slug": "ethnocentrism",
+    "assertions": 3,
+    "evidence": {
+      "tick": 2,
+      "agents": 0,
+      "encounters": 20808
+    }
+  },
+  "keyboardFocus": {
+    "tag": "BUTTON",
+    "text": "Run",
+    "outlineStyle": "solid",
+    "outlineWidth": "2px",
+    "focusedVisible": true
+  },
+  "images": {
+    "setup-light": "ethnocentrism-target-setup-light.png",
+    "progress-light": "ethnocentrism-target-progress-light.png",
+    "desktop-dark": "ethnocentrism-target-desktop-dark.png",
+    "mobile-light": "ethnocentrism-target-mobile-light.png",
+    "mobile-dark": "ethnocentrism-target-mobile-dark.png"
+  }
+}

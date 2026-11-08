@@ -1,0 +1,80 @@
+{
+  "status": "Proposal source fixtures only; no SHP/ASC decoder or runtime acceptance",
+  "city": {
+    "source": {
+      "path": "experiments/gis-general-examples/data/cities.shp",
+      "sha256": "f44e2a231471e56376014c235ffdfefd44485f555a57b0592bc7f76f59f9d7a7",
+      "gitBlobSHA1": "a753c8cff278572537f6d4af804fa99f7cd56ba4",
+      "revision": "90be931773fcf499049247a8aaa1aecbe003654c"
+    },
+    "recordNumber": 1,
+    "coordinateByteOffset": 112,
+    "littleEndianXY": [
+      33.08604049682617,
+      68.96354675292969
+    ],
+    "nameFromDBF": "Murmansk",
+    "attributeSource": {
+      "path": "experiments/gis-general-examples/data/cities.dbf",
+      "sha256": "9547d390b41076c6a6386794b662aa9292e0c4d185479f169c595e45e430021e",
+      "gitBlobSHA1": "af907cdc5549b270ddfd6b9136d468f727f4866e",
+      "revision": "90be931773fcf499049247a8aaa1aecbe003654c"
+    }
+  },
+  "worldRaster": {
+    "source": {
+      "path": "experiments/gis-general-examples/data/world-elevation.asc",
+      "sha256": "f3d60e51f1e0ded1df20484375359f50a21033f698a25193b66f5e877ab12bda",
+      "gitBlobSHA1": "689ff8343bc10f1a7f4fb0f1b9045a2a4ac736cc",
+      "revision": "90be931773fcf499049247a8aaa1aecbe003654c"
+    },
+    "headers": {
+      "ncols": "360",
+      "nrows": "180",
+      "xllcorner": "-180",
+      "yllcorner": "-90",
+      "cellsize": "1",
+      "NODATA_value": "-9999"
+    },
+    "explicitEnvelopeFixtureCorners": [
+      [
+        -180,
+        -90
+      ],
+      [
+        180,
+        90
+      ]
+    ],
+    "note": "Header-derived outer corners, not two actual stored Point features"
+  },
+  "countryBudgetAudit": {
+    "source": {
+      "path": "experiments/gis-general-examples/data/countries.shp",
+      "sha256": "eb10297087c926150c13f5547abef10c7692e89ebae1c5d73d69a2d2769a7f89",
+      "gitBlobSHA1": "ba2311503ad153b6fab2f7baeca0db28c4626cdb",
+      "revision": "90be931773fcf499049247a8aaa1aecbe003654c"
+    },
+    "positionCountIncludesClosingVertices": true,
+    "maxRingPositions": 1282,
+    "maxShapeRecordPositions": 3316,
+    "recordsAbove2048": [
+      {
+        "record": 39,
+        "positions": 3316,
+        "parts": 126,
+        "maxRingPositions": 932,
+        "country": "Canada"
+      },
+      {
+        "record": 184,
+        "positions": 2167,
+        "parts": 83,
+        "maxRingPositions": 1282,
+        "country": "Russia"
+      }
+    ],
+    "interpretation": "SHP multipart record is not automatically one PlanarPolygon. Shell/hole assignment not performed; no per-final-polygon maximum claimed."
+  },
+  "sourceRightsContext": "docs/development/gis-data-audit.md; model code waiver is not a dataset waiver"
+}

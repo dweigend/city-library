@@ -1,0 +1,250 @@
+/** Disease Solo (Wilensky, 2005). Complete original notices: NOTICE.md. */
+import { Agent, Grid, Random, World, geometry, run } from "city-library";
+import type { Definition, Inputs } from "../definition.ts";
+import { parameters, stepCount } from "../parameters.ts";
+
+export interface DiseaseParameters {
+  seed: number;
+  numAndroids: number;
+  infectionChance: number;
+  stepSize: number;
+  chase: boolean;
+  avoid: boolean;
+}
+export const inputs: Inputs<DiseaseParameters> = {
+  seed: { kind: "number", default: 1, integer: true },
+  numAndroids: { kind: "number", default: 60, min: 1, max: 300, integer: true },
+  infectionChance: { kind: "number", default: 100, min: 0, max: 100 },
+  stepSize: { kind: "number", default: 1, min: 1, max: 5, integer: true },
+  chase: { kind: "boolean", default: false },
+  avoid: { kind: "boolean", default: false },
+};
+type Person = Agent<{ breed: "android" | "user"; infected: boolean }>;
+export function create(options: Partial<DiseaseParameters> = {}) {
+  let settings = parameters(inputs, options);
+  const random = Random.add({ seed: settings.seed });
+  const space = { x: 21, y: 25, boundary: "hard" } as const;
+  const world = World.add(space, { random });
+  const grid = Grid.add(space);
+  world.add(grid);
+  let numSick = 0;
+  let runNumber = 1;
+  let delay = 0;
+  let stopped = false;
+  const history: { tick: number; sick: number; run: number }[] = [];
+  const all = () => world.agents as readonly Person[];
+  const androids = () => all().filter((person) => person.breed === "android");
+  const shuffled = (people: readonly Person[]) =>
+    random.sample(people, {
+      count: people.length,
+      compatibility: "legacy-shuffle",
+    });
+  const integer = (upper: number) =>
+    random.number({ min: 0, max: upper, integer: true });
+  function forward(person: Person, amount: number) {
+    // Native FD tries unit substeps; a hard-edge substep leaves the current location intact.
+    let left = amount;
+    while (left > 1e-12) {
+      const part = Math.min(1, left);
+      const direction = geometry.direction({ heading: person.heading });
+      if (
+        !geometry.normalize(
+          {
+            x: person.x + direction.x * part,
+            y: person.y + direction.y * part,
+          },
+          { space, endpoints: "half-open" },
+        )
+      )
+        break;
+      person.move(part);
+      left -= part;
+    }
+  }
+  function createSomeAndroids() {
+    for (let index = 0; index < settings.numAndroids; index++) {
+      const person = world.add(
+        Agent.add(
+          { breed: "android" as const, infected: false },
+          {
+            position: { x: integer(21) - 10, y: integer(25) - 12 },
+            orientation: { heading: integer(4) * 90 },
+          },
+        ),
+      );
+      void person;
+    }
+  }
+  function createUser() {
+    return world.add(
+      Agent.add(
+        { breed: "user" as const, infected: false },
+        { position: { x: 0, y: 0 }, orientation: { heading: integer(4) * 90 } },
+      ),
+    );
+  }
+  function setupWorld() {
+    for (const person of all()) person.delete();
+    numSick = 0;
+    delay = 0;
+    stopped = false;
+    createSomeAndroids();
+    createUser();
+    world.tick.reset();
+    record();
+  }
+  function setupClear() {
+    history.length = 0;
+    runNumber = 1;
+    setupWorld();
+  }
+  function setupKeep() {
+    runNumber++;
+    setupWorld();
+  }
+  function getSick(person: Person) {
+    person.infected = true;
+  }
+  function infect() {
+    const selected = random.sample(androids())[0];
+    if (selected) getSick(selected);
+  }
+  function maybeGetSick(person: Person) {
+    if (!person.infected && integer(100) < settings.infectionChance)
+      getSick(person);
+  }
+  function spreadDisease(person: Person) {
+    const field = grid.fieldAt(person)!;
+    for (const other of shuffled(
+      all().filter(
+        (candidate) =>
+          candidate !== person && grid.fieldAt(candidate) === field,
+      ),
+    ))
+      maybeGetSick(other);
+  }
+  function avoid(person: Person) {
+    const candidates = grid.fields.filter(
+      (field) =>
+        person.distanceTo(field) <= 1 &&
+        !all().some((other) => other.infected && grid.fieldAt(other) === field),
+    );
+    const chosen = random.sample(candidates)[0];
+    if (chosen) person.rotate({ towards: chosen });
+    else person.rotate(integer(4) * 90);
+  }
+  function chase(person: Person) {
+    const chosen = random.sample(
+      all().filter((other) => !other.infected && person.distanceTo(other) <= 1),
+    )[0];
+    if (chosen) person.rotate({ towards: chosen });
+    else person.rotate(integer(4) * 90);
+  }
+  function androidsWander() {
+    for (const person of shuffled(androids())) {
+      if (settings.avoid && !person.infected) avoid(person);
+      else if (settings.chase && person.infected) chase(person);
+      else person.rotate(integer(4) * 90);
+    }
+    for (const person of shuffled(androids())) forward(person, 1);
+  }
+  function move(newHeading: number) {
+    if (!Number.isFinite(newHeading))
+      throw new RangeError("Heading must be finite.");
+    for (const person of all().filter((person) => person.breed === "user")) {
+      person.rotate(newHeading - person.heading);
+      forward(person, settings.stepSize);
+    }
+  }
+  function record() {
+    history.push({ tick: world.tick.value, sick: numSick, run: runNumber });
+    if (history.length > 2001) history.shift();
+  }
+  function go() {
+    if (numSick === all().length) delay++;
+    if (delay > 50) {
+      stopped = true;
+      return;
+    }
+    run(
+      world,
+      () => {
+        androidsWander();
+        for (const person of shuffled(
+          all().filter((person) => person.infected),
+        ))
+          spreadDisease(person);
+        numSick = all().filter((person) => person.infected).length;
+      },
+      1,
+    );
+    record();
+  }
+  function advance(count = 1) {
+    stepCount(count);
+    for (let index = 0; index < count && !stopped; index++) go();
+  }
+  function setParameters(
+    update: Partial<Omit<DiseaseParameters, "seed" | "numAndroids">>,
+  ) {
+    if (
+      Object.keys(update).some((key) => key === "seed" || key === "numAndroids")
+    )
+      throw new TypeError("Setup parameters require a new model.");
+    settings = parameters(inputs, { ...settings, ...update });
+  }
+  function read() {
+    return {
+      tick: world.tick.value,
+      width: 21,
+      height: 25,
+      parameters: { ...settings },
+      numSick,
+      runNumber,
+      delay,
+      stopped,
+      agents: all().map((person) => ({
+        id: person.id,
+        breed: person.breed,
+        infected: person.infected,
+        x: person.x,
+        y: person.y,
+        heading: person.heading,
+        color: person.infected
+          ? "#e43838"
+          : person.breed === "user"
+            ? "#58b8ed"
+            : "#888888",
+        size: person.breed === "user" ? 1.5 : 1,
+      })),
+      history: history.map((point) => ({ ...point })),
+    };
+  }
+  setupClear();
+  return {
+    read,
+    advance,
+    go,
+    setParameters,
+    setupClear,
+    setupKeep,
+    setupWorld,
+    infect,
+    move,
+    createSomeAndroids,
+    createUser,
+    androidsWander,
+    avoid,
+    chase,
+    spreadDisease,
+    maybeGetSick,
+    getSick,
+  };
+}
+export const model: Definition<DiseaseParameters, ReturnType<typeof create>> = {
+  title: "Disease Solo",
+  description:
+    "Contact infection among moving androids and one controlled person.",
+  inputs,
+  create,
+};

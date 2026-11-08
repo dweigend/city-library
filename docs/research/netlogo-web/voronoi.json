@@ -1,0 +1,121 @@
+{
+  "slug": "voronoi",
+  "name": "Voronoi",
+  "catalogPath": "Sample Models/Mathematics/Voronoi",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Voronoi.nlogox",
+  "deliveryBatch": "B16",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "How does nearest-site assignment partition space? NetLogo Voronoi places sites and colors every grid patch according to its closest site, producing a raster approximation to a Voronoi diagram. Dragging a site changes the affected territories, which are redrawn outward from the interaction region. Fortune's algorithm [1] establishes the exact geometric construction as a useful comparison; computational geometry [2] explains diagram structure and algorithmic choices; spatial tessellation theory [3] connects nearest-site regions with scientific applications. The NetLogo baseline deliberately uses patch classification rather than calculating exact polygon vertices. Resolution, ties, finite boundaries, and coincident sites therefore matter. The experiment illustrates how a global partition follows from a local distance criterion, while its visual resemblance to cells or territories does not demonstrate any particular biological or urban growth mechanism.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Voronoi.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Mathematics/Voronoi.nlogox",
+    "revision": "NetLogo 7.0.4 served 2026-11-05; SHA-256 d0e70a519c77947710ea1fb8860ab1cd83e447704246ecb22048b823a6a570b2",
+    "checkedAt": "2026-11-05",
+    "evidence": "Full original served XML source, Procedures and Info retained in evidence/computing/voronoi.nlogox; extracted Info retained alongside.",
+    "notes": " This dossier describes scientific connections to the original NetLogo teaching model; it does not certify a City Library reimplementation or empirical validity.",
+    "originalCitation": "Wilensky, U. (2006).  NetLogo Voronoi model.  http://ccl.northwestern.edu/netlogo/models/Voronoi.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "sourceSnapshot": "evidence/computing/voronoi.nlogox",
+    "evidenceFile": "evidence/computing/voronoi.nlogox"
+  },
+  "publications": [
+    {
+      "id": "10.1007/bf01840357",
+      "authors": [
+        "Steven Fortune"
+      ],
+      "title": "A sweepline algorithm for Voronoi diagrams",
+      "year": 1987,
+      "venue": "Algorithmica",
+      "doi": "10.1007/bf01840357",
+      "url": "https://doi.org/10.1007/bf01840357",
+      "relevance": "Exact sweepline construction contrasts with NetLogo’s raster nearest-site approximation.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1007%2FBF01840357",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1007_bf01840357.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1007_bf01840357.json"
+      },
+      "publisher": "Springer Science and Business Media LLC",
+      "volume": "2",
+      "issue": "1-4",
+      "pages": "153-174",
+      "verified": true
+    },
+    {
+      "id": "10.1007/978-3-540-77974-2",
+      "authors": [
+        "Mark de Berg",
+        "Otfried Cheong",
+        "Marc van Kreveld",
+        "Mark Overmars"
+      ],
+      "title": "Computational Geometry: Algorithms and Applications",
+      "year": 2008,
+      "venue": "Springer Berlin Heidelberg",
+      "doi": "10.1007/978-3-540-77974-2",
+      "url": "https://doi.org/10.1007/978-3-540-77974-2",
+      "relevance": "Voronoi geometry, degeneracies and computational representations directly support the mechanism.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1007%2F978-3-540-77974-2",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text.",
+        "snapshot": "evidence/computing/doi-10_1007_978_3_540_77974_2.json",
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1007_978_3_540_77974_2.json"
+      },
+      "publisher": "Springer Berlin Heidelberg",
+      "isbn": [
+        "9783540779735",
+        "9783540779742"
+      ],
+      "verified": true
+    },
+    {
+      "id": "10.1002/9780470317013",
+      "authors": [
+        "Atsuyuki Okabe",
+        "Barry Boots",
+        "Kokichi Sugihara",
+        "Sung Nok Chiu",
+        "D. G. Kendall"
+      ],
+      "title": "Spatial Tessellations: Concepts and Applications of Voronoi Diagrams",
+      "year": 2000,
+      "venue": "Wiley Series in Probability and Statistics",
+      "doi": "10.1002/9780470317013",
+      "url": "https://doi.org/10.1002/9780470317013",
+      "relevance": "Scientific monograph on Voronoi tessellations supplies applications and assumptions of nearest-site territorial models.",
+      "verification": {
+        "verified": true,
+        "consultedUrl": "https://api.crossref.org/works/10.1002%2F9780470317013",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "metadata",
+        "access": "Public Crossref registrant metadata; publisher full text not accessed.",
+        "notes": "Exact title, author/editor list, year, venue/publisher and DOI checked against the retained DOI registration response. Mechanism discussion draws on the original NetLogo Info and established method, not a claim to have read paywalled full text. Wiley book page also checked: full title, all five listed contributors, 12 July 2000, second edition. Publisher summary and contents accessible; chapters not read.   ",
+        "snapshot": "evidence/computing/doi-10_1002_9780470317013.json",
+        "additionalConsultedUrls": [
+          "https://onlinelibrary.wiley.com/doi/book/10.1002/9780470317013"
+        ],
+        "bibliographicScope": "Complete contributor list from primary DOI registration metadata; initials are preserved when the record does not expand them.",
+        "evidenceFile": "evidence/computing/doi-10_1002_9780470317013.json"
+      },
+      "publisher": "John Wiley & Sons, Inc.",
+      "isbn": [
+        "9780470317013",
+        "9780471986355"
+      ],
+      "contributorRole": "editor",
+      "verified": true
+    }
+  ],
+  "gaps": []
+}

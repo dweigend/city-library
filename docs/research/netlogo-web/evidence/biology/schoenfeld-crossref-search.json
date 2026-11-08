@@ -1,0 +1,2189 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=The+mechanisms+of+muscle+hypertrophy+and+their+application+to+resistance+training+Schoenfeld+2010&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 3833475,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                11,
+                3
+              ]
+            ],
+            "date-time": "2026-11-03T20:40:37Z",
+            "timestamp": 1793738437855,
+            "version": "4.6.1"
+          },
+          "reference-count": 187,
+          "publisher": "Ovid Technologies (Wolters Kluwer Health)",
+          "issue": "10",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2010,
+                10
+              ]
+            ]
+          },
+          "DOI": "10.1519/jsc.0b013e3181e840f3",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2010,
+                11,
+                6
+              ]
+            ],
+            "date-time": "2010-11-06T01:26:10Z",
+            "timestamp": 1289006770000
+          },
+          "page": "2857-2872",
+          "source": "Crossref",
+          "is-referenced-by-count": 961,
+          "title": [
+            "The Mechanisms of Muscle Hypertrophy and Their Application to Resistance Training"
+          ],
+          "prefix": "10.1519",
+          "volume": "24",
+          "author": [
+            {
+              "given": "Brad J",
+              "family": "Schoenfeld",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "276",
+          "reference": [
+            {
+              "key": "R1-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "22",
+              "DOI": "10.2165/00007256-199417010-00003",
+              "article-title": "Abernethy, PJ, Jurimae, J, Logan, PA, Taylor, AW, and Thayer, RE. Acute and chronic response of skeletal muscle to resistance exercise.",
+              "volume": "17",
+              "year": "1994",
+              "journal-title": "Sports Med"
+            },
+            {
+              "key": "R2-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "555",
+              "DOI": "10.1007/s00421-003-0833-3",
+              "article-title": "Ahtiainen, JP, Pakarinen, A, Alen, M, Kraemer, WJ, and Hakkinen, K. Muscle hypertrophy, hormonal adaptations and strength development during strength training in strength-trained and untrained men.",
+              "volume": "89",
+              "year": "2003",
+              "journal-title": "Eur J Appl Physiol"
+            },
+            {
+              "key": "R3-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "229",
+              "DOI": "10.1055/s-2007-1025011",
+              "article-title": "Alen, M, Pakarinen, A, Hakkinen, K, and Komi, PV. Responses of serum androgenic-anabolic and catabolic hormones to prolonged strength training.",
+              "volume": "9",
+              "year": "1988",
+              "journal-title": "Int J Sport Med"
+            },
+            {
+              "key": "R4-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "723",
+              "DOI": "10.1113/jphysiol.2005.091694",
+              "article-title": "Allen, DG, Whitehead, NP, and Yeung, EW. Mechanisms of stretch-induced muscle damage in normal and dystrophic muscle: Role of ionic changes.",
+              "volume": "567",
+              "year": "2005",
+              "journal-title": "J Physiol"
+            },
+            {
+              "key": "R5-40-20210210",
+              "first-page": "637",
+              "article-title": "Anderson, KG and Behm, DG. Maintenance of EMG activity and loss of force output with instability.",
+              "volume": "18",
+              "year": "2004",
+              "journal-title": "J Strength Cond Res"
+            },
+            {
+              "key": "R6-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "33",
+              "DOI": "10.1139/h05-103",
+              "article-title": "Anderson, KG and Behm, DG. Trunk muscle activity increases with unstable squat movements.",
+              "volume": "30",
+              "year": "2005",
+              "journal-title": "Can J Appl Physiol"
+            },
+            {
+              "key": "R7-40-20210210",
+              "first-page": "102",
+              "article-title": "Nonuniform response of skeletal muscle to heavy resistance training: can bodybuilders induce regional muscle hypertrophy?",
+              "volume": "14",
+              "author": "Antonio",
+              "year": "2000",
+              "journal-title": "J Strength Cond Res"
+            },
+            {
+              "key": "R8-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "1893",
+              "DOI": "10.1152/jappl.1993.74.4.1893",
+              "article-title": "Role of muscle fiber hypertrophy and hyperplasia in intermittently stretched avian muscle.",
+              "volume": "4",
+              "author": "Antonio, J and Gonyea",
+              "year": "1993",
+              "journal-title": "J Appl Physiol"
+            },
+            {
+              "key": "R9-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "106",
+              "DOI": "10.1006/bbrc.1998.9435",
+              "article-title": "Aronson, D, Boppart, MD, Dufresne, SD, Fielding, RA, and Goodyear, LJ. Exercise stimulates c-Jun NH2 kinase activity and c-Jun transcriptional activity in human skeletal muscle.",
+              "volume": "251",
+              "year": "1998",
+              "journal-title": "Biochem Biophys Res Comm"
+            },
+            {
+              "key": "R10-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "25636",
+              "DOI": "10.1074/jbc.272.41.25636",
+              "article-title": "Aronson, D, Dufresne, SD, and Goodyear, LJ. Contractile activity stimulates the c-Jun NH2-terminal kinase pathway in rat skeletal muscle.",
+              "volume": "272",
+              "year": "1997",
+              "journal-title": "J Biol Chem"
+            },
+            {
+              "key": "R11-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "C120",
+              "DOI": "10.1152/ajpcell.1999.276.1.C120",
+              "article-title": "Baar, K and Esser, KA. Phosphorylation of p70. S6k correlates with increased skeletal muscle mass following resistance exercise.",
+              "volume": "276",
+              "year": "1999",
+              "journal-title": "Am J Physiol"
+            },
+            {
+              "key": "R12-40-20210210",
+              "first-page": "363",
+              "article-title": "Ballor, DL, Becque, MD, and Katch, VL. Metabolic responses during hydraulic resistance exercise.",
+              "volume": "19",
+              "year": "1987",
+              "journal-title": "Med Sci Sports Exerc"
+            },
+            {
+              "key": "R13-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "E383",
+              "DOI": "10.1152/ajpendo.2001.280.3.E383",
+              "article-title": "Bamman, MM, Shipp, JR, Jiang, J, Gower, BA, Hunter, GR, Goodman, A, McLafferty, CL Jr, Urban, RJ. Mechanical load increases muscle IGF-I and androgen receptor mRNA concentrations in humans.",
+              "volume": "280",
+              "year": "2001",
+              "journal-title": "Am J Physiol Endocrinol Metab"
+            },
+            {
+              "key": "R14-40-20210210",
+              "first-page": "222",
+              "article-title": "Barnett, C, Kippers, V, and Turner, P. Effects of variations of the bench press exercise on the EMG activity of five shoulder muscles.",
+              "volume": "9",
+              "year": "1995",
+              "journal-title": "J Strength Cond Res"
+            },
+            {
+              "key": "R15-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "301",
+              "DOI": "10.1046/j.1365-201x.1999.00618.x",
+              "article-title": "Davis, ER, Shoturma, DI, and Sweeney, HL. Contribution of satellite cells to IGF-I induced hypertrophy of skeletal muscle.",
+              "volume": "167",
+              "year": "1999",
+              "journal-title": "Acta Physiol Scan"
+            },
+            {
+              "key": "R16-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "482",
+              "DOI": "10.1152/japplphysiol.00895.2004",
+              "article-title": "Bickel, CS, Slade, J, Mahoney, E, Haddad, F, Dudley, GA, and Adams, GR. Time course of molecular responses of human skeletal muscle to acute bouts of resistance exercise.",
+              "volume": "98",
+              "year": "2005",
+              "journal-title": "J Appl Physiol"
+            },
+            {
+              "key": "R17-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "30",
+              "DOI": "10.1519/00126548-200004000-00010",
+              "article-title": "Bloomer, RJ and Ives, JC. Varying neural and hypertrophic influences in a strength program.",
+              "volume": "22",
+              "year": "2000",
+              "journal-title": "Strength Cond J"
+            },
+            {
+              "key": "R18-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "1014",
+              "DOI": "10.1038/ncb1101-1014",
+              "article-title": "Bodine, SC, Stitt, TN, Gonzalez, M, Kline, WO, Stover, GL, Bauerlein, R, Zlotchenko, E, Scrimgeour, A, Lawrence, JC, Glass, DJ, and Yancopoulos, GD. Akt/mTOR pathway is a crucial regulator of skeletal muscle hypertrophy and can prevent muscle atrophy in vivo.",
+              "volume": "3",
+              "year": "2001",
+              "journal-title": "Nat Cell Biol"
+            },
+            {
+              "key": "R19-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "175",
+              "DOI": "10.1007/s002239900210",
+              "article-title": "Brahm, H, Pehl-Aulin, K, Saltin, B, and Ljunghall, S. Net fluxes over working thigh of hormones, growth factors and biomarkers of bone metabolism during short lasting dynamic exercise.",
+              "volume": "60",
+              "year": "1997",
+              "journal-title": "Calc Tiss Int"
+            },
+            {
+              "key": "R20-40-20210210",
+              "first-page": "291",
+              "article-title": "Bricout, VA, Germain, PS, Serrurier, BD, and Guezennec, CY. Changes in testosterone muscle receptors: Effects of an androgen treatment on physically trained rats.",
+              "volume": "40",
+              "year": "1994",
+              "journal-title": "Cell Mol Biol"
+            },
+            {
+              "key": "R21-40-20210210",
+              "first-page": "301",
+              "article-title": "Brown, JMM, Solomon, C, and Paton, M. Further evidence of functional differentiation within biceps brachii.",
+              "volume": "33",
+              "year": "1993",
+              "journal-title": "Electromyogr Clin Neurophysiol"
+            },
+            {
+              "key": "R22-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "62",
+              "DOI": "10.1519/JSC.0b013e318185f14a",
+              "article-title": "Buresh, R, Berg, K, and French, J. The effect of resistive exercise rest interval on hormonal response, strength, and hypertrophy with training.",
+              "volume": "23",
+              "year": "2009",
+              "journal-title": "J Strength Cond Res"
+            },
+            {
+              "key": "R23-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "463",
+              "DOI": "10.1146/annurev.cellbio.12.1.463",
+              "article-title": "Burridge, K and Chrzanowska-Wodnicka, M. Focal adhesions, contractility, and signaling.",
+              "volume": "12",
+              "year": "1996",
+              "journal-title": "Ann Rev Cell Dev Biol"
+            },
+            {
+              "key": "R24-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "50",
+              "DOI": "10.1007/s00421-002-0681-6",
+              "article-title": "Campos, GE, Luecke, TJ, Wendeln, HK, Toma, K, Hagerman, FC, Murray, TF, Ragg, KE, Ratamess, NA, Kraemer, WJ, and Staron, RS. Muscular adaptations in response to three different resistance-training regimens: Specificity of repetition maximum training zones.",
+              "volume": "88",
+              "year": "2002",
+              "journal-title": "Eur J Appl Physiol"
+            },
+            {
+              "key": "R25-40-20210210",
+              "first-page": "223",
+              "article-title": "Chan, ST, Johnson, AW, Moore, MH, Kapadia, CR, and Dudley, HA. Early weight gain and glycogen-obligated water during nutritional rehabilitation.",
+              "volume": "36",
+              "year": "1982",
+              "journal-title": "Hum Nutr Clin Nutr"
+            },
+            {
+              "key": "R26-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "414",
+              "DOI": "10.1152/japplphysiol.00015.2005",
+              "article-title": "Role of Ca2+/calmodulin-dependent kinases in skeletal muscle plasticity.",
+              "volume": "99",
+              "author": "Chin",
+              "year": "2005",
+              "journal-title": "J Appl Physiol"
+            },
+            {
+              "key": "R28-40-20210210",
+              "first-page": "282",
+              "article-title": "Cote, C, Simoneau, JA, Lagasse, P, Boulay, M, Thibault, MC, Marcotte, M, and Bouchard, B. Isokinetic strength training protocols: Do they produce skeletal muscle hypertrophy?",
+              "volume": "69",
+              "year": "1988",
+              "journal-title": "Arch Phys Med Rehab"
+            },
+            {
+              "key": "R29-40-20210210",
+              "first-page": "270",
+              "article-title": "Craig, B and Kang, H. Growth hormone release following single versus multiple sets of back squats: Total work versus power.",
+              "volume": "8",
+              "year": "1994",
+              "journal-title": "J Strength Cond Res"
+            },
+            {
+              "key": "R30-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "333",
+              "DOI": "10.1113/jphysiol.2004.061846",
+              "article-title": "Crameri, RM, Langberg, H, Magnusson, P, Jensen, CH, Schroder, HD, Olesen, JL, Suetta, C, Teisner, B, and Kjaer, M. Changes in satellite cells in human skeletal muscle after a single bout of high intensity exercise.",
+              "volume": "558",
+              "year": "2004",
+              "journal-title": "J Physiol"
+            },
+            {
+              "key": "R31-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "215",
+              "DOI": "10.2165/00007256-200636030-00004",
+              "article-title": "Crewther, B, Keogh, J, Cronin, J, and Cook, C. Possible stimuli for strength and power adaptation: Acute hormonal responses.",
+              "volume": "36",
+              "year": "2006",
+              "journal-title": "Sport Med"
+            },
+            {
+              "key": "R32-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "765",
+              "DOI": "10.2165/11315230-000000000-00000",
+              "article-title": "Salles, BF, Simao, R, Miranda, F, Novaes Jda, S, Lemos, A, and Willardson, JM. Rest interval between sets in strength training.",
+              "volume": "39",
+              "year": "2009",
+              "journal-title": "Sport Med"
+            },
+            {
+              "key": "R33-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "80",
+              "DOI": "10.2165/00007256-199112020-00002",
+              "article-title": "Deschenes, MR, Kraemer, WJ, Maresh, CM, and Crivello, JF. Exercise induced hormonal changes and their effects upon skeletal muscle muscle tissue.",
+              "volume": "12",
+              "year": "1991",
+              "journal-title": "Sport Med"
+            },
+            {
+              "key": "R34-40-20210210",
+              "first-page": "E89",
+              "article-title": "Vol, DL, Rotwein, P, Sadow, JL, Novakofski, J, and Bechtel, PJ. Activation of insulin-like growth factor gene expression during work-induced skeletal muscle growth.",
+              "volume": "259",
+              "year": "1990",
+              "journal-title": "Am J Physiol"
+            },
+            {
+              "key": "R35-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "21908",
+              "DOI": "10.1074/jbc.274.31.21908",
+              "article-title": "Dunn, SE, Burns, JL, and Michel, RN. Calcineurin is required for skeletal muscle hypertrophy.",
+              "volume": "274",
+              "year": "1999",
+              "journal-title": "J Biol Chem"
+            },
+            {
+              "key": "R37-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "5",
+              "DOI": "10.1007/BF00236686",
+              "article-title": "Gustavsson, B and Tesch, PA. Glycogen and triglyceride utilization in relation to muscle metabolic characteristics in men performing heavy-resistance exercise.",
+              "volume": "61",
+              "year": "1990",
+              "journal-title": "Eur J Appl Physiol Occupl Physiol"
+            },
+            {
+              "key": "R39-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "578",
+              "DOI": "10.1007/s00421-003-0842-2",
+              "article-title": "Farthing, JP and Chilibeck, PD. The effects of eccentric and concentric training at different velocities on muscle hypertrophy.",
+              "volume": "89",
+              "year": "2003",
+              "journal-title": "Eur J Appl Physiol"
+            },
+            {
+              "key": "R40-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "370",
+              "DOI": "10.1136/bjsm.36.5.370",
+              "article-title": "Folland, JP, Irish, CS, Roberts, JC, Tarr, JE, and Jones, DA. Fatigue is not a necessary stimulus for strength gains during resistance training.",
+              "volume": "36",
+              "year": "2002",
+              "journal-title": "Br J Sports Med"
+            },
+            {
+              "key": "R41-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "695",
+              "DOI": "10.1172/JCI2545",
+              "article-title": "Frigeri, A, Nicchia, GP, Verbavatz, JM, Valenti, G, and Svelto, M. Expression of aquaporin-4 in fast-twitch fibers of mammalian skeletal muscle.",
+              "volume": "102",
+              "year": "1998",
+              "journal-title": "J Clin Invest"
+            },
+            {
+              "key": "R42-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "663",
+              "DOI": "10.2165/00007256-200434100-00004",
+              "article-title": "The role of resistance exercise intensity on muscle fibre adaptations.",
+              "volume": "34",
+              "author": "Fry",
+              "year": "2004",
+              "journal-title": "Sport Med"
+            },
+            {
+              "key": "R43-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "106",
+              "DOI": "10.2165/00007256-199723020-00004",
+              "article-title": "Fry, AC and Kraemer, WJ. Resistance exercise overtraining and overreaching: Neuroendocrine responses.",
+              "volume": "23",
+              "year": "1997",
+              "journal-title": "Sport Med"
+            },
+            {
+              "key": "R44-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "400",
+              "DOI": "10.1139/h94-032",
+              "article-title": "Fry, AC, Kraemer, WJ, Stone, MH, Warren, BJ, Fleck, SJ, Kearney, JT, and Gordon, SE. Endocrine responses to overreaching before and after 1 year of weightlifting.",
+              "volume": "19",
+              "year": "1994",
+              "journal-title": "Can J Appl Physiol"
+            },
+            {
+              "key": "R46-40-20210210",
+              "first-page": "163",
+              "article-title": "Glass, SC and Armstrong, T. Electromyographical activity of the pectoralis muscle during incline and decline bench presses.",
+              "volume": "11",
+              "year": "1997",
+              "journal-title": "J Strength Cond Res"
+            },
+            {
+              "key": "R47-40-20210210",
+              "first-page": "185",
+              "article-title": "Goldberg, AL, Etlinger, JD, Goldspink, DF, and Jablecki, C. Mechanism of work-induced hypertrophy of skeletal muscle.",
+              "volume": "7",
+              "year": "1975",
+              "journal-title": "Med Sci Sport Exerc"
+            },
+            {
+              "key": "R48-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "285",
+              "DOI": "10.1042/bst0300285",
+              "article-title": "Gene expression in skeletal muscle.",
+              "volume": "30",
+              "author": "Goldspink",
+              "year": "2002",
+              "journal-title": "Biochem Soc Trans"
+            },
+            {
+              "key": "R50-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "821",
+              "DOI": "10.1152/jappl.1994.76.2.821",
+              "article-title": "Gordon, SE, Kraemer, WJ, Vos, NH, Lynch, JM, and Knuttgen, HG. Effect of acid-base balance on the growth hormone response to acute high-intensity cycle exercise.",
+              "volume": "76",
+              "year": "1994",
+              "journal-title": "J Appl Physiol"
+            },
+            {
+              "key": "R51-40-20210210",
+              "first-page": "955",
+              "article-title": "Goto, K, Ishii, N, Kizuka, T, and Takamatsu, K. The impact of metabolic stress on hormonal responses and muscular adaptations.",
+              "volume": "37",
+              "year": "2005",
+              "journal-title": "Med Sci Sport Exerc"
+            },
+            {
+              "key": "R52-40-20210210",
+              "first-page": "730",
+              "article-title": "Goto, K, Nagasawa, M, Yanagisawa, O, Kizuka, T, Ishii, N, and Takamatsu, K. Muscular adaptations to combinations of high- and low-intensity resistance exercises.",
+              "volume": "18",
+              "year": "2004",
+              "journal-title": "J Strength Cond Res"
+            },
+            {
+              "key": "R53-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "39",
+              "DOI": "10.1016/S0304-4165(00)00045-3",
+              "article-title": "Grant, AC, Gow, IF, Zammit, VA, Shennan, DB. Regulation of protein synthesis in lactating rat mammary tissue by cell volume.",
+              "volume": "1475",
+              "year": "2000",
+              "journal-title": "Biochim Biophysic Acta"
+            },
+            {
+              "key": "R54-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "394",
+              "DOI": "10.1152/japplphysiol.01153.2001",
+              "article-title": "Haddad, F and Adams, GR. Selected contribution: acute cellular and molecular responses to resistance exercise.",
+              "volume": "93",
+              "year": "2002",
+              "journal-title": "J Appl Physiol"
+            },
+            {
+              "key": "R55-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "319",
+              "DOI": "10.1111/j.1748-1716.1979.tb06482.x",
+              "article-title": "Haggmark, T and Thorstensson, A. Fibre types in human abdominal muscles.",
+              "volume": "107",
+              "year": "1979",
+              "journal-title": "Acta Physiolog Scan"
+            },
+            {
+              "key": "R56-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "587",
+              "DOI": "10.1111/j.1748-1716.1985.tb07760.x",
+              "article-title": "Hakkinen, K, Komi, PV, and Alen, M. Effect of explosive type strength training on isometric force- and relaxation-time, electromyographic and muscle fibre characteristics of leg extensor muscles.",
+              "volume": "125",
+              "year": "1985",
+              "journal-title": "Acta Physiolog Scan"
+            },
+            {
+              "key": "R57-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "882",
+              "DOI": "10.1152/jappl.1993.74.2.882",
+              "article-title": "Hakkinen, K and Pakarinen, A. Acute hormonal responses to two different fatiguing heavy-resistance protocols in male athletes.",
+              "volume": "74",
+              "year": "1993",
+              "journal-title": "J Appl Physiol"
+            },
+            {
+              "key": "R58-40-20210210",
+              "first-page": "191",
+              "article-title": "Hakkinen, K and Pakarinen, A. Serum hormones in male strength athletes during intensive short term strength training.",
+              "volume": "63",
+              "year": "1991",
+              "journal-title": "Eur J Appl Physiol"
+            },
+            {
+              "key": "R60-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "2406",
+              "DOI": "10.1152/jappl.1988.65.6.2406",
+              "article-title": "Hakkinen, K, Pakarinen, A, Alen, M, Kauhanen, H, and Komi, PV. Neuromuscular and hormonal adaptations in athletes to strength training in two years.",
+              "volume": "65",
+              "year": "1988",
+              "journal-title": "J Appl Physiol"
+            },
+            {
+              "key": "R62-40-20210210",
+              "first-page": "967",
+              "article-title": "Halson, SL and Jeukendrup, AE. Does overtraining exist? An analysis of overreaching and overtraining research.",
+              "volume": "34",
+              "year": "2004",
+              "journal-title": "Sport Med"
+            },
+            {
+              "key": "R63-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "231",
+              "DOI": "10.1113/jphysiol.2003.051722",
+              "article-title": "Hameed, M, Lange, KH, Andersen, JL, Schjerling, P, Kjaer, M, Harridge, SD, and Goldspink, G. The effect of recombinant human growth hormone and resistance training on IGF-I mRNA expression in the muscles of elderly men.",
+              "volume": "555",
+              "year": "2004",
+              "journal-title": "J Physiol"
+            },
+            {
+              "key": "R64-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "347",
+              "DOI": "10.1034/j.1600-0838.2001.110606.x",
+              "article-title": "Hansen, S, Kvorning, T, Kjaer, M, and Sjogaard, G. The effect of short-term strength training on human skeletal muscle: The importance of physiologically elevated hormone levels.",
+              "volume": "11",
+              "year": "2001",
+              "journal-title": "Scan J Med Sci Sport"
+            },
+            {
+              "key": "R65-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "697",
+              "DOI": "10.1042/bj3130697",
+              "article-title": "The role of cellular hydration in the regulation of cell function.",
+              "volume": "313",
+              "author": "Haussinger",
+              "year": "1996",
+              "journal-title": "Biochem J"
+            },
+            {
+              "key": "R66-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "534",
+              "DOI": "10.1152/jappl.2001.91.2.534",
+              "article-title": "Hawke, TJ and Garry, DJ. Myogenic satellite cells: Physiology to molecular biology.",
+              "volume": "91",
+              "year": "2001",
+              "journal-title": "J Appl Physiol"
+            },
+            {
+              "key": "R67-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "35",
+              "DOI": "10.1002/jmor.1052160106",
+              "article-title": "Heron, MI and Richmond, FJR. In-series fiber architecture in long human muscles.",
+              "volume": "216",
+              "year": "1993",
+              "journal-title": "J Morphol"
+            },
+            {
+              "key": "R68-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "2173",
+              "DOI": "10.1152/jappl.1996.81.5.2173",
+              "article-title": "Higbie, EJ, Cureton, KJ, Warren, GL III, and Prior, BM. Effects of concentric and eccentric training on muscle strength, cross-sectional area, and neural activation.",
+              "volume": "81",
+              "year": "1996",
+              "journal-title": "J Appl Physiol"
+            },
+            {
+              "key": "R69-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "409",
+              "DOI": "10.1113/jphysiol.2002.035832",
+              "article-title": "Hill, M and Goldspink, G. Expression and splicing of the insulin-like growth factor gene in rodent muscle is associated with muscle satellite (stem) cell activation following local tissue damage.",
+              "volume": "549",
+              "year": "2003",
+              "journal-title": "J Physiol"
+            },
+            {
+              "key": "R70-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "1929",
+              "DOI": "10.1249/01.MSS.0000093613.30362.DF",
+              "article-title": "Hoffman, JR, Im, J, Rundell, KW, Kang, J, Nioka, S, Spiering, BA, Kime, R, and Chance, B. Effect of muscle oxygenation during resistance exercise on anabolic hormone response.",
+              "volume": "35",
+              "year": "2003",
+              "journal-title": "Med Sci Sport Exerc"
+            },
+            {
+              "key": "R71-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "1454",
+              "DOI": "10.1152/japplphysiol.90538.2008",
+              "article-title": "Holm, L, Reitelseder, S, Pedersen, TG, Doessing, S, Petersen, SG, Flyvbjerg, A, Andersen, JL, Aagaard, P, and Kjaer, M. Changes in muscle size and MHC composition in response to resistance exercise with heavy and light loading intensity.",
+              "volume": "105",
+              "year": "2008",
+              "journal-title": "J Appl Physiol"
+            },
+            {
+              "key": "R72-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "1207",
+              "DOI": "10.1002/jcb.20671",
+              "article-title": "Hornberger, TA and Chien, S. Mechanical stimuli and nutrients regulate rapamycin-sensitive signaling through distinct mechanisms in skeletal muscle.",
+              "volume": "97",
+              "year": "2006",
+              "journal-title": "J Cell Biochem"
+            },
+            {
+              "key": "R73-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "4741",
+              "DOI": "10.1073/pnas.0600678103",
+              "article-title": "Hornberger, TA, Chu, WK, Mak, YW, Hsiung, JW, Huang, SA, and Chien, S. The role of phospholipase D and phosphatidic acid in the mechanical activation of mTOR signaling in skeletal muscle.",
+              "volume": "103",
+              "year": "2006",
+              "journal-title": "Proc Natl Acad Sci USA"
+            },
+            {
+              "key": "R74-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "1677",
+              "DOI": "10.1152/jappl.1996.81.4.1677",
+              "article-title": "Hortobagyi, T, Barrier, J, Beard, D, Braspennincx, J, and Koens, J. Greater initial adaptations to submaximal muscle lengthening than maximal shortening.",
+              "volume": "81",
+              "year": "1996",
+              "journal-title": "J Appl Physiol"
+            },
+            {
+              "key": "R76-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "1647",
+              "DOI": "10.1152/japplphysiol.01400.2005",
+              "article-title": "Izquierdo, M, Ibanez, J, Gonzalez-Badillo, JJ, Hakkinen, K, Ratamess, NA, Kraemer, WJ, French, DN, Eslava, J, Altadill, A, Asiain, X, and Gorostiaga, EM. Differential effects of strength training leading to failure versus not to failure on hormonal responses, strength and muscle power increases.",
+              "volume": "100",
+              "year": "2006",
+              "journal-title": "J Appl Physiol"
+            },
+            {
+              "key": "R77-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "117",
+              "DOI": "10.1038/nrm1018",
+              "article-title": "Jacinto, E and Hall, MN. Tor signalling in bugs, brain and brawn.",
+              "volume": "4",
+              "year": "2003",
+              "journal-title": "Nat Rev Mol Cell Biol"
+            },
+            {
+              "key": "R78-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "522",
+              "DOI": "10.1519/JSC.0b013e3181c8664f",
+              "article-title": "Jensky, NE, Sims, JK, Dieli-Conwright, CM, Sattler, FR, Rice, JC, and Schroeder, ET. Exercise does not influence myostatin and follistatin messenger RNA expression in young women.",
+              "volume": "24",
+              "year": "2010",
+              "journal-title": "J Strength Cond Res"
+            },
+            {
+              "key": "R79-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "1",
+              "DOI": "10.1113/jphysiol.1987.sp016721",
+              "article-title": "Jones, DA and Rutherford, OM. Human muscle strength training: The effects of three different regimens and the nature of the resultant changes.",
+              "volume": "391",
+              "year": "1987",
+              "journal-title": "J Physiol"
+            },
+            {
+              "key": "R80-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "25",
+              "DOI": "10.1007/s004180050003",
+              "article-title": "Kadi, F, Bonnerud, P, Eriksson, A, and Thornell, LE. The expression of androgen receptors in human neck and limb muscles: Effects of training and self-administration of androgenic-anabolic steroids.",
+              "volume": "113",
+              "year": "2000",
+              "journal-title": "Histochem Cell Biol"
+            },
+            {
+              "key": "R81-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "1144",
+              "DOI": "10.1249/01.mss.0000170097.59514.bb",
+              "article-title": "Kawada, S and Ishii, N. Skeletal muscle hypertrophy after chronic restriction of venous blood flow in rats.",
+              "volume": "37",
+              "year": "2005",
+              "journal-title": "Med Sci Sport Exerc"
+            },
+            {
+              "key": "R82-40-20210210",
+              "first-page": "309",
+              "article-title": "Keeler, LK, Finkelstein, LH, Miller, W, and Fernhall, B. Early-phase adaptations of traditional-speed vs. SuperSlow resistance training on strength and aerobic capacity in sedentary individuals.",
+              "volume": "15",
+              "year": "2001",
+              "journal-title": "J Strength Cond Res"
+            },
+            {
+              "key": "R83-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "2238",
+              "DOI": "10.1016/j.cellsig.2006.05.004",
+              "article-title": "Kefaloyianni, E, Gaitanaki, C, and Beis, I. ERK1/2 and p38-MAPK signalling pathways, through MSK1, are involved in NF-kappaB transactivation during oxidative stress in skeletal myoblasts.",
+              "volume": "18",
+              "year": "2006",
+              "journal-title": "Cell Signal"
+            },
+            {
+              "key": "R84-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "1584",
+              "DOI": "10.1152/jappl.1996.81.4.1584",
+              "article-title": "Mechanical overload and skeletal muscle fiber hyperplasia: A meta-analysis.",
+              "volume": "81",
+              "author": "Kelley",
+              "year": "1996",
+              "journal-title": "J Appl Physiol"
+            },
+            {
+              "key": "R85-40-20210210",
+              "first-page": "643",
+              "article-title": "Kerksick, CM, Rasmussen, CJ, Lancaster, SL, Magu, B, Smith, P, Melton, C, Greenwood, M, Almada, AL, Earnest, CP, and Kreider, RB. The effects of protein and amino acid supplementation on performance and training adaptations during ten weeks of resistance training.",
+              "volume": "20",
+              "year": "2006",
+              "journal-title": "J Strength Cond Res"
+            },
+            {
+              "key": "R86-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "962",
+              "DOI": "10.1519/JSC.0b013e3181a00baf",
+              "article-title": "Kerksick, CM, Wilborn, CD, Campbell, BI, Roberts, MD, Rasmussen, CJ, Greenwood, M, and Kreider, RB. Early-phase adaptations to a split-body, linear periodization resistance training program in college-aged and middle-aged men.",
+              "volume": "23",
+              "year": "2009",
+              "journal-title": "J Strength Cond Res"
+            },
+            {
+              "key": "R87-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "1168",
+              "DOI": "10.1152/japplphysiol.00221.2002",
+              "article-title": "Kimball, SR, Farrell, PA, and Jefferson, LS. Invited review: Role of insulin in translational control of protein synthesis in skeletal muscle by amino acids or exercise.",
+              "volume": "93",
+              "year": "2002",
+              "journal-title": "J Appl Physiol"
+            },
+            {
+              "key": "R88-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "388",
+              "DOI": "10.1152/japplphysiol.00085.2007",
+              "article-title": "Kramer, HF and Goodyear, LJ. Exercise, MAPK, and NF-kappaB signaling in skeletal muscle.",
+              "volume": "103",
+              "year": "2007",
+              "journal-title": "J Appl Physiol"
+            },
+            {
+              "key": "R89-40-20210210",
+              "first-page": "364",
+              "article-title": "Kraemer, WJ, Adams, K, Cafarelli, E, Dudley, GA, Dooly, C, Feigenbaum, MS, Fleck, SJ, Franklin, B, Fry, AC, Hoffman, JR, Newton, RU, Potteiger, J, Stone, MH, Ratamess, NA, Triplett-McBride, T, and American College of Sports Medicine. American College of Sports Medicine position stand. Progression models in resistance training for healthy adults.",
+              "volume": "34",
+              "year": "2002",
+              "journal-title": "Med Sci Sport Exerc"
+            },
+            {
+              "key": "R90-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "594",
+              "DOI": "10.1152/jappl.1993.75.2.594",
+              "article-title": "Kraemer, WJ, Fleck, SJ, Dziados, JE, Harman, EA, Marchitelli, LJ, Gordon, SE, Mello, R, Frykman, PN, Koziris, LP, and Triplett, NT. Changes in hormonal concentrations after different heavy-resistance exercise protocols in women.",
+              "volume": "75",
+              "year": "1993",
+              "journal-title": "J Appl Physiol"
+            },
+            {
+              "key": "R91-40-20210210",
+              "first-page": "103",
+              "article-title": "Kraemer, WJ, Fry, AC, Warren, BJ, Stone, MH, Fleck, SJ, Kearney, JT, Conroy, BP, Maresh, CM, Weseman, CA, Triplett, NT, et al. Acute hormonal responses in elite junior weightlifters.",
+              "volume": "13",
+              "year": "1992",
+              "journal-title": "Int J Sport Med"
+            },
+            {
+              "key": "R92-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "228",
+              "DOI": "10.1055/s-2007-1024673",
+              "article-title": "Kraemer, WJ, Gordon, SE, Fleck, SJ, Marchitelli, LJ, Mello, R, Dziados, JE, Friedl, K, Harman, E, Maresh, C, and Fry, AC. Endogenous anabolic hormonal and growth factor responses to heavy resistance exercise in males and females.",
+              "volume": "12",
+              "year": "1991",
+              "journal-title": "Int J Sport Med"
+            },
+            {
+              "key": "R93-40-20210210",
+              "first-page": "982",
+              "article-title": "Kraemer, WJ, Hakkinen, K, Newton, RU, Nindl, BC, Volek, JS, McCormick, M, Gotshalk, LA, Gordon, SE, Fleck, SJ, Campbell, WW, Putukian, M, and Evans, WJ. Effects of heavy-resistance training on hormonal response patterns in younger vs. older men.",
+              "volume": "87",
+              "year": "1999",
+              "journal-title": "J Appl Physiol"
+            },
+            {
+              "key": "R94-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "1442",
+              "DOI": "10.1152/jappl.1990.69.4.1442",
+              "article-title": "Kraemer, WJ, Marchitelli, L, Gordon, SE, Harman, E, Dziados, JE, Mello, R, Frykman, P, McCurry, D, and Fleck, SJ. Hormonal and growth factor responses to heavy resistance exercise protocols.",
+              "volume": "69",
+              "year": "1990",
+              "journal-title": "J Appl Physiol"
+            },
+            {
+              "key": "R95-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "247",
+              "DOI": "10.1055/s-2008-1025663",
+              "article-title": "Kraemer, WJ, Noble, BJ, Clark, MJ, and Culver, BW. Physiologic responses to heavy-resistance exercise with very short rest periods.",
+              "volume": "8",
+              "year": "1987",
+              "journal-title": "Int J Sport Med"
+            },
+            {
+              "key": "R96-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "339",
+              "DOI": "10.2165/00007256-200535040-00004",
+              "article-title": "Kraemer, WJ and Ratamess, NA. Hormonal responses and adaptations to resistance exercise and training.",
+              "volume": "35",
+              "year": "2005",
+              "journal-title": "Sport Med"
+            },
+            {
+              "key": "R97-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "1150",
+              "DOI": "10.1519/JSC.0b013e3181d4d436",
+              "article-title": "Single vs. multiple sets of resistance exercise for muscle hypertrophy: A meta-analysis.",
+              "volume": "24",
+              "author": "Krieger",
+              "year": "2010",
+              "journal-title": "J Strength Cond Res"
+            },
+            {
+              "key": "R98-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "529",
+              "DOI": "10.1249/MSS.0b013e31815ddac6",
+              "article-title": "Kubota, A, Sakuraba, K, Sawaki, K, Sumide, T, and Tamura, Y. Prevention of disuse muscular weakness by restriction of blood flow.",
+              "volume": "40",
+              "year": "2008",
+              "journal-title": "Med Sci Sport Exerc"
+            },
+            {
+              "key": "R100-40-20210210",
+              "first-page": "E1325",
+              "article-title": "Kvorning, T, Andersen, M, Brixen, K, and Madsen, K. Suppression of endogenous testosterone production attenuates the response to strength training: A randomized, placebo-controlled, and blinded intervention study.",
+              "volume": "291",
+              "year": "2006",
+              "journal-title": "Am J Physiol: Endocrinol Metab"
+            },
+            {
+              "key": "R101-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "513",
+              "DOI": "10.1210/jcem.87.2.8206",
+              "article-title": "Lange, KH, Andersen, JL, Beyer, N, Isaksson, F, Larsson, B, Rasmussen, MH, Juul, A, Bulow, J, and Kjaer, M. GH administration changes myosin heavy chain isoforms in skeletal muscle but does not augment muscle strength or hypertrophy, either alone or combined with resistance exercise training in healthy elderly men.",
+              "volume": "87",
+              "year": "2002",
+              "journal-title": "J Clin Endocrinol Metab"
+            },
+            {
+              "key": "R102-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "115",
+              "DOI": "10.1111/j.1748-1716.1983.tb07185.x",
+              "article-title": "Lexell, J, Henriksson-Larsen, K, and Sjostrom, M. Distribution of different fibre types in human skeletal muscles. 2. A study of cross-sections of whole m. vastus lateralis.",
+              "volume": "117",
+              "year": "1983",
+              "journal-title": "Acta Physiolog Scan"
+            },
+            {
+              "key": "R103-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "385",
+              "DOI": "10.1002/aja.1001900406",
+              "article-title": "Lindman, R, Eriksson, A, and Thornell, LE. Fiber type composition of the human female trapezius muscle: Enzyme-histochemical characteristics.",
+              "volume": "190",
+              "year": "1991",
+              "journal-title": "Am J Anat"
+            },
+            {
+              "key": "R105-40-20210210",
+              "first-page": "57",
+              "article-title": "Loebel, CC and Kraemer, WJ. A brief review: Testosterone and resistance exercise in men.",
+              "volume": "12",
+              "year": "1998",
+              "journal-title": "J Strength Cond Res"
+            },
+            {
+              "key": "R106-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "1111",
+              "DOI": "10.1096/fasebj.11.13.9367345",
+              "article-title": "Low, SY, Rennie, MJ, and Taylor, PM. Signaling elements involved in amino acid transport responses to altered muscle cell volume.",
+              "volume": "11",
+              "year": "1997",
+              "journal-title": "FASEB J"
+            },
+            {
+              "key": "R107-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "1439",
+              "DOI": "10.1152/jappl.1994.77.3.1439",
+              "article-title": "Lynn, R and Morgan, DL. Decline running produces more sarcomeres in rat vastus intermedius muscle fibers than does incline running.",
+              "volume": "77",
+              "year": "1994",
+              "journal-title": "J Appl Physiol"
+            },
+            {
+              "key": "R108-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "1399",
+              "DOI": "10.1152/jappl.1984.57.5.1399",
+              "article-title": "Dougall, JD, Sale, DG, Alway, SE, and Sutton, JR. Muscle fiber number in biceps brachii in bodybuilders and control subjects.",
+              "volume": "57",
+              "year": "1984",
+              "journal-title": "J Appl Physiol"
+            },
+            {
+              "key": "R109-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "117",
+              "DOI": "10.1007/BF00421171",
+              "article-title": "Dougall, JD, Sale, DG, Elder, GC, Sutton, JR. Muscle ultrastructural characteristics of elite powerlifters and bodybuilders.",
+              "volume": "48",
+              "year": "1982",
+              "journal-title": "Eur J Appl Physiol Occup Physiol"
+            },
+            {
+              "key": "R110-40-20210210",
+              "first-page": "745",
+              "article-title": "Marshall, PWM and Murphy, BA. Increased deltoid and abdominal muscle activity during swiss ball bench press.",
+              "volume": "20",
+              "year": "2006",
+              "journal-title": "J Strength Cond Res"
+            },
+            {
+              "key": "R111-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "37",
+              "DOI": "10.1113/jphysiol.1983.sp014658",
+              "article-title": "Maughan, RJ, Watson, JS, and Weir, J. Strength and cross-sectional area of human skeletal muscle.",
+              "volume": "338",
+              "year": "1983",
+              "journal-title": "J Physiol"
+            },
+            {
+              "key": "R112-40-20210210",
+              "first-page": "915",
+              "article-title": "JM, Cormie, P, and Deane, R. Isometric squat force output and muscle activity in stable and unstable conditions.",
+              "volume": "20",
+              "year": "2006",
+              "journal-title": "J Strength Cond Res"
+            },
+            {
+              "key": "R113-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "96",
+              "DOI": "10.1139/h99-009",
+              "article-title": "Call, GE, Byrnes, WC, Fleck, SJ, Dickinson, A, and Kraemer, WJ. Acute and chronic hormonal responses to resistance training designed to promote muscle hypertrophy.",
+              "volume": "24",
+              "year": "1999",
+              "journal-title": "Can J Appl Physiol"
+            },
+            {
+              "key": "R114-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "695",
+              "DOI": "10.1007/s00421-008-0951-z",
+              "article-title": "Caulley, GO, McBride, JM, Cormie, P, Hudson, MB, Nuzzo, JL, Quindry, JC, and Travis Triplett, N. Acute hormonal and neuromuscular responses to hypertrophy, strength and power type resistance exercise.",
+              "volume": "105",
+              "year": "2009",
+              "journal-title": "Eur J Appl Physiol"
+            },
+            {
+              "key": "R115-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "139",
+              "DOI": "10.1007/BF00433384",
+              "article-title": "Donagh, MJN and Davies, CTM. Adaptive response of mammalian skeletal muscle to exercise with high loads.",
+              "volume": "52",
+              "year": "1984",
+              "journal-title": "Eur J Appl Physiol"
+            },
+            {
+              "key": "R116-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "163",
+              "DOI": "10.1080/026404100365063",
+              "article-title": "Hugh, MP, Connolly, DA, Eston, RG, and Gleim, GW. Electromyographic analysis of exercise resulting in symptoms of muscle damage.",
+              "volume": "18",
+              "year": "2000",
+              "journal-title": "J Sport Sci"
+            },
+            {
+              "key": "R117-40-20210210",
+              "first-page": "5549",
+              "article-title": "Kay, BR, OReilly, CE, Phillips, SM, Tarnopolsky, MA, and Parise, G. Co-expression of IGF-1 family members with myogenic regulatory factors following acute damaging muscle-lengthening contractions in humans.",
+              "volume": "15",
+              "year": "2008",
+              "journal-title": "J Physiol"
+            },
+            {
+              "key": "R118-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "341",
+              "DOI": "10.1079/PNS2004362",
+              "article-title": "Michel, RN, Dunn, SE, and Chin, ER. Calcineurin and skeletal muscle growth.",
+              "volume": "63",
+              "year": "2004",
+              "journal-title": "Proc Nutr Soc"
+            },
+            {
+              "key": "R119-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "182",
+              "DOI": "10.1016/j.yfrne.2007.08.004",
+              "article-title": "Michels, G and Hoppe, UC. Rapid actions of androgens.",
+              "volume": "29",
+              "year": "2008",
+              "journal-title": "Fron Neuroendocrin"
+            },
+            {
+              "key": "R120-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "351",
+              "DOI": "10.1006/bbrc.1996.5959",
+              "article-title": "Millar, ID, Barber, MC, Lomax, MA, Travers, MT, and Shennan, DB. Mammary protein synthesis is acutely regulated by the cellular hydration state.",
+              "volume": "230",
+              "year": "1997",
+              "journal-title": "Biochem Biophys Res Comm"
+            },
+            {
+              "key": "R121-40-20210210",
+              "first-page": "1032",
+              "article-title": "Miranda, H, Fleck, SJ, Simao, R, Barreto, AC, Dantas, EH, and Novaes, J. Effect of two different rest period lengths on the number of repetitions performed during resistance training.",
+              "volume": "21",
+              "year": "2007",
+              "journal-title": "J Strength Cond Res"
+            },
+            {
+              "key": "R122-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "E1153",
+              "DOI": "10.1152/ajpendo.00387.2004",
+              "article-title": "Moore, DR, Phillips, SM, Babraj, JA, Smith, K, and Rennie, MJ. Myofibrillar and collagen protein synthesis in human skeletal muscle in young men after maximal shortening and lengthening contractions.",
+              "volume": "288",
+              "year": "2005",
+              "journal-title": "Am J Physiol Endocrinol Metab"
+            },
+            {
+              "key": "R123-40-20210210",
+              "first-page": "421",
+              "article-title": "Moss, FP and Leblond, CP. Satellite cells are the source of nuclei in muscles of growing rats.",
+              "volume": "170",
+              "year": "1970",
+              "journal-title": "Anat Rec"
+            },
+            {
+              "key": "R124-40-20210210",
+              "first-page": "256",
+              "article-title": "Mulligan, SE, Fleck, SJ, Gordon, SE, and Koziris, LP. Influence of resistance exercise volume on serum growth hormone and cortisol concentrations in women.",
+              "volume": "10",
+              "year": "1996",
+              "journal-title": "J Strength Cond Res"
+            },
+            {
+              "key": "R125-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "581",
+              "DOI": "10.1038/23060",
+              "article-title": "Musaro, A, McCullagh, KJ, Naya, FJ, Olson, EN, and Rosenthal, N. IGF-1 induces skeletal myocyte hypertrophy through calcineurin in association with GATA-2 and NF-ATc1.",
+              "volume": "400",
+              "year": "1999",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "R126-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "1985",
+              "DOI": "10.1016/j.biocel.2005.02.026",
+              "article-title": "Molecular determinants of skeletal muscle mass: Getting the AKT together.",
+              "volume": "37",
+              "author": "Nader",
+              "year": "2005",
+              "journal-title": "Int J Biochem Cell Biol"
+            },
+            {
+              "key": "R127-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "451",
+              "DOI": "10.1113/jphysiol.1989.sp017507",
+              "article-title": "Nardone, A, Romano, C, and Schieppati, M. Selective recruitment of high-threshold human motor units during voluntary isotonic lengthening of active muscles.",
+              "volume": "409",
+              "year": "1989",
+              "journal-title": "J Physiol"
+            },
+            {
+              "key": "R128-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "363",
+              "DOI": "10.1113/jphysiol.1988.sp016924",
+              "article-title": "Nardone, A and Schieppati, M. Shift of activity from slow to fast muscle during voluntary lengthening contractions of the triceps surae muscles in humans.",
+              "volume": "395",
+              "year": "1988",
+              "journal-title": "J Physiol"
+            },
+            {
+              "key": "R129-40-20210210",
+              "first-page": "883",
+              "article-title": "Neils, CM, Udermann, BE, Brice, GA, Winchester, JB, and McGuigan, MR. Influence of contraction velocity in untrained individuals over the initial early phase of resistance training.",
+              "volume": "19",
+              "year": "2005",
+              "journal-title": "J Strength Cond Res"
+            },
+            {
+              "key": "R130-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "451",
+              "DOI": "10.1123/ijsnem.11.4.451",
+              "article-title": "Nindl, BC, Kraemer, WJ, Gotshalk, LA, Marx, JO, Volek, JS, Bush, FA, Hakkinen, K, Newton, RU, and Fleck, SJ. Testosterone responses after resistance exercise in women: Influence of regional fat distribution.",
+              "volume": "11",
+              "year": "2001",
+              "journal-title": "Int J Sport Nutr Exerc Metab"
+            },
+            {
+              "key": "R131-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "161",
+              "DOI": "10.1097/00003677-200310000-00002",
+              "article-title": "Nindl, BC, Kraemer, WJ, Marx, JO, Tuckow, AP, and Hymer, WC. Growth hormone molecular heterogeneity and exercise.",
+              "volume": "31",
+              "year": "2003",
+              "journal-title": "Exerc Sport Sci Rev"
+            },
+            {
+              "key": "R132-40-20210210",
+              "first-page": "63",
+              "article-title": "Nisell, R and Ekholm, J. Joint load during the parallel squat in powerlifting and force analysis of in vivo bilateral quadriceps tendon rupture.",
+              "volume": "8",
+              "year": "1986",
+              "journal-title": "Scan J Sport Sci"
+            },
+            {
+              "key": "R133-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "200",
+              "DOI": "10.1055/s-0028-1104584",
+              "article-title": "Nogueira, W, Gentil, P, Mello, SN, Oliveira, RJ, Bezerra, AJ, and Bottaro, M. Effects of power training on muscle thickness of older men.",
+              "volume": "30",
+              "year": "2009",
+              "journal-title": "Int J Sport Med"
+            },
+            {
+              "key": "R134-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "946",
+              "DOI": "10.1519/JSC.0b013e3181a2b22f",
+              "article-title": "Ojasto, T and Hakkinen, K. Effects of different accentuated eccentric loads on acute neuromuscular, growth hormone, and blood lactate responses during a hypertrophic protocol.",
+              "volume": "23",
+              "year": "2009",
+              "journal-title": "J Strength Cond Res"
+            },
+            {
+              "key": "R136-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "1588",
+              "DOI": "10.1152/japplphysiol.00585.2006",
+              "article-title": "Pierce, JR, Clark, BC, Ploutz-Snyder, LL, and Kanaley, JA. Growth hormone and muscle function responses to skeletal muscle ischemia.",
+              "volume": "101",
+              "year": "2006",
+              "journal-title": "J Appl Physiol"
+            },
+            {
+              "key": "R137-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "229",
+              "DOI": "10.1136/bjsm.31.3.229",
+              "article-title": "Pincivero, DM, Lephart, SM, and Karunakara, RG. Effects of rest interval on isokinetic strength and functional performance after short-term high intensity training.",
+              "volume": "31",
+              "year": "1997",
+              "journal-title": "Br J Sport Med"
+            },
+            {
+              "key": "R138-40-20210210",
+              "first-page": "67",
+              "article-title": "Strength training and fiber types.",
+              "volume": "63",
+              "author": "Pipes",
+              "year": "1994",
+              "journal-title": "Sch Coach"
+            },
+            {
+              "key": "R139-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "461",
+              "DOI": "10.1085/jgp.200509364",
+              "article-title": "Prado, LG, Makarenko, I, Andresen, C, Kruger, M, Opitz, CA, Linke, WA. Isoform diversity of giant proteins in relation to passive and active contractile properties of rabbit skeletal muscles.",
+              "volume": "126",
+              "year": "2005",
+              "journal-title": "J Gen Physiol"
+            },
+            {
+              "key": "R140-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "54",
+              "DOI": "10.1007/s004210000328",
+              "article-title": "Raastad, T, Glomsheller, T, Bjoro, T, and Hallen, J. Changes in human skeletal muscle contractility and hormone status during 2 weeks of heavy strength training.",
+              "volume": "84",
+              "year": "2001",
+              "journal-title": "Eur J Appl Physiol"
+            },
+            {
+              "key": "R141-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "1",
+              "DOI": "10.1007/s00421-007-0394-y",
+              "article-title": "Ratamess, NA, Falvo, MJ, Mangine, GT, Hoffman, JR, Faigenbaum, AD, and Kang, J. The effect of rest interval length on metabolic responses to the bench press exercise.",
+              "volume": "100",
+              "year": "2007",
+              "journal-title": "Eur J Appl Physiol"
+            },
+            {
+              "key": "R142-40-20210210",
+              "first-page": "S256",
+              "article-title": "Reaburn, P, Logan, P, and MacKinnon, L. Serum testosterone response to high-intensity resistance training in male veteran sprint runners.",
+              "volume": "11",
+              "year": "1997",
+              "journal-title": "J Strength Cond Res"
+            },
+            {
+              "key": "R143-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "100",
+              "DOI": "10.1136/bjsm.37.2.100",
+              "article-title": "Claims for the anabolic effects of growth hormone: A case of the emperors new clothes?",
+              "volume": "37",
+              "author": "Rennie",
+              "year": "2003",
+              "journal-title": "Br J Sport Med"
+            },
+            {
+              "key": "R144-40-20210210",
+              "first-page": "R502",
+              "article-title": "Robergs, RA, Ghiasvand, F, and Parker, D. Biochemistry of exercise induced metabolic acidosis. Am J Physiol.",
+              "volume": "287",
+              "year": "2003",
+              "journal-title": "Reg Int Comp Physiol"
+            },
+            {
+              "key": "R145-40-20210210",
+              "first-page": "1160",
+              "article-title": "Rooney, KJ, Herbert, RD, and Balnave, RJF. Fatigue contributes to the strength training stimulus.",
+              "volume": "26",
+              "year": "1994",
+              "journal-title": "Med Sci Sport Exerc"
+            },
+            {
+              "key": "R146-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "608",
+              "DOI": "10.1002/mus.880170607",
+              "article-title": "Rosenblatt, JD, Yong, D, and Parry, DJ. Satellite cell activity is required for hypertrophy of overloaded adult rat muscle.",
+              "volume": "17",
+              "year": "1994",
+              "journal-title": "Mus Nerve"
+            },
+            {
+              "key": "R147-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "320",
+              "DOI": "10.1128/MMBR.68.2.320-344.2004",
+              "article-title": "Roux, PP and Blenis, J. ERK and p38 MAPK-activated protein kinases: A family of protein kinases with diverse biological functions.",
+              "volume": "68",
+              "year": "2004",
+              "journal-title": "Microbiol Mol Biol Rev"
+            },
+            {
+              "key": "R148-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "16",
+              "DOI": "10.1034/j.1399-0004.2000.570103.x",
+              "article-title": "Sabourin, LA and Rudnicki, MA. The molecular regulation of myogenesis.",
+              "volume": "57",
+              "year": "2000",
+              "journal-title": "Clin Gen"
+            },
+            {
+              "key": "R149-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "337",
+              "DOI": "10.1007/BF00240414",
+              "article-title": "Schott, J, McCully, K, and Rutherford, OM. The role of metabolites in strength training. II. Short versus long isometric contractions.",
+              "volume": "71",
+              "year": "1995",
+              "journal-title": "Eur J Appl Physiol"
+            },
+            {
+              "key": "R150-40-20210210",
+              "first-page": "1381",
+              "article-title": "Schwab, R, Johnson, GO, Housh, TJ, Kinder, JE, and Weir, JP. Acute effects of different intensities of weight lifting on serum testosterone.",
+              "volume": "25",
+              "year": "1993",
+              "journal-title": "Med Sci Sport Exerc"
+            },
+            {
+              "key": "R151-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "261",
+              "DOI": "10.1159/000147199",
+              "article-title": "Segal, RL, Wolf, SL, DeCamp, MJ, Chopp, MT, and English, AW. Anatomical partitioning of three multiarticular human muscles.",
+              "volume": "142",
+              "year": "1991",
+              "journal-title": "Acta Anat"
+            },
+            {
+              "key": "R152-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "1768",
+              "DOI": "10.1152/japplphysiol.01027.2004",
+              "article-title": "Shepstone, TN, Tang, JE, Dallaire, S, Schuenke, MD, Staron, RS, and Phillips, SM. Short-term high- vs. low-velocity isokinetic lengthening training results in greater hypertrophy of the elbow flexors in young men.",
+              "volume": "98",
+              "year": "2005",
+              "journal-title": "J Appl Physiol"
+            },
+            {
+              "key": "R153-40-20210210",
+              "first-page": "189",
+              "article-title": "Shinohara, M, Kouzaki, M, Yoshihisa T, and Fukunaga T. Efficacy of tourniquet ischemia for strength training with low resistance.",
+              "volume": "77",
+              "year": "1998",
+              "journal-title": "Eur J Appl Physiol"
+            },
+            {
+              "key": "R155-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "3024",
+              "DOI": "10.1210/jc.2006-0357",
+              "article-title": "Hikim, I, Cornford, M, Gaytan, H, Lee, ML, and Bhasin, S. Effects of testosterone supplementation on skeletal muscle fiber hypertrophy and satellite cells in community-dwelling older men.",
+              "volume": "91",
+              "year": "2006",
+              "journal-title": "J Clin Endocrinol Metab"
+            },
+            {
+              "key": "R156-40-20210210",
+              "first-page": "129",
+              "article-title": "Water and electrolyte fluxes during exercise and their relation to muscle fatigue.",
+              "volume": "556",
+              "author": "Sjogaard",
+              "year": "1986",
+              "journal-title": "Acta Physiol Scan Suppl"
+            },
+            {
+              "key": "R157-40-20210210",
+              "first-page": "R190",
+              "article-title": "Sjogaard, G, Adams, RP, and Saltin, B. Water and ion shifts in skeletal muscle of humans with intense dynamic knee extension.",
+              "volume": "248",
+              "year": "1985",
+              "journal-title": "Am J Physiol"
+            },
+            {
+              "key": "R158-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "644",
+              "DOI": "10.1249/01.MSS.0000058366.04460.5F",
+              "article-title": "Smilios, I, Pilianidis, T, Karamouzis, M, and Tokmakidis, SP. Hormonal responses after various resistance exercise protocols.",
+              "volume": "35",
+              "year": "2003",
+              "journal-title": "Med Sci Sport Exerc"
+            },
+            {
+              "key": "R159-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "317",
+              "DOI": "10.1097/00005768-200002000-00011",
+              "article-title": "Cytokine hypothesis of overtraining: A physiological adaptation to excessive stress?",
+              "volume": "32",
+              "author": "Smith",
+              "year": "2000",
+              "journal-title": "Med Sci Sport Exerc"
+            },
+            {
+              "key": "R160-40-20210210",
+              "first-page": "185",
+              "article-title": "Tissue trauma: The underlying cause of overtraining syndrome?",
+              "volume": "18",
+              "author": "Smith",
+              "year": "2004",
+              "journal-title": "J Strength Cond Res"
+            },
+            {
+              "key": "R161-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "332",
+              "DOI": "10.1007/BF00240413",
+              "article-title": "Smith, RC and Rutherford, OM. The role of metabolites in strength training. I. A comparison of eccentric and concentric contractions.",
+              "volume": "71",
+              "year": "1995",
+              "journal-title": "Eur J Appl Physiol Occup Physiol"
+            },
+            {
+              "key": "R162-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "328",
+              "DOI": "10.1139/H09-010",
+              "article-title": "Changes in muscle mass with mechanical load: Possible cellular mechanisms.",
+              "volume": "34",
+              "author": "Spangenburg",
+              "year": "2009",
+              "journal-title": "Appl Physiol Nutr Metab"
+            },
+            {
+              "key": "R163-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "1247",
+              "DOI": "10.1152/jappl.1994.76.3.1247",
+              "article-title": "Staron, RS, Karapondo DL, Kraemer WJ, Fry AC, Gordon SE, Falkel JE, Hagerman FC, and Hikida, RS. Skeletal muscle adaptations during early phase of heavy-resistance training in men and women.",
+              "volume": "76",
+              "year": "1994",
+              "journal-title": "J Appl Physiol"
+            },
+            {
+              "key": "R165-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "217",
+              "DOI": "10.1042/bj2870217",
+              "article-title": "Liver cell volume and protein synthesis.",
+              "volume": "287",
+              "author": "Stoll",
+              "year": "1992",
+              "journal-title": "Biochem J"
+            },
+            {
+              "key": "R166-40-20210210",
+              "first-page": "342",
+              "article-title": "Stone, MH, OBryant, HS, and Garhammer, JG. A hypothetical model for strength training.",
+              "volume": "21",
+              "year": "1981",
+              "journal-title": "J Sport Med Phys Fitness"
+            },
+            {
+              "key": "R168-40-20210210",
+              "first-page": "135",
+              "article-title": "Stull, GA and Clarke, DH. Patterns of recovery following isometric and isotonic strength decrement.",
+              "volume": "3",
+              "year": "1971",
+              "journal-title": "Med Sci Sports"
+            },
+            {
+              "key": "R169-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "1119",
+              "DOI": "10.1152/japplphysiol.90368.2008",
+              "article-title": "Suga, T, Okita, K, Morita, N, Yokota, T, Hirabayashi, K, Horiuchi, M, Takada, S, Takahashi, T, Omokawa, M, Kinugawa, S, and Tsutsui, H. Intramuscular metabolism during low-intensity resistance exercise with blood flow restriction.",
+              "volume": "106",
+              "year": "2009",
+              "journal-title": "J Appl Physiol"
+            },
+            {
+              "key": "R170-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "345",
+              "DOI": "10.1006/jmcc.1998.0872",
+              "article-title": "Suzuki, YJ and Ford, GD. Redox regulation of signal transduction in cardiac and smooth muscle.",
+              "volume": "31",
+              "year": "1999",
+              "journal-title": "J Mol and Cell Cardiol"
+            },
+            {
+              "key": "R171-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "61",
+              "DOI": "10.1152/jappl.2000.88.1.61",
+              "article-title": "Takarada, Y, Nakamura, Y, Aruga, S, Onda, T, Miyazaki, S, and Ishii, N. Rapid increase in plasma growth hormone after low-intensity resistance exercise with vascular occlusion.",
+              "volume": "88",
+              "year": "2000",
+              "journal-title": "J Appl Physiol"
+            },
+            {
+              "key": "R172-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "2035",
+              "DOI": "10.1097/00005768-200012000-00011",
+              "article-title": "Takarada, Y, Takazawa, H, and Ishii, N. Applications of vascular occlusion diminish disuse atrophy of knee extensor muscles.",
+              "volume": "32",
+              "year": "2000",
+              "journal-title": "Med Sci Sport Exerc"
+            },
+            {
+              "key": "R173-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "2097",
+              "DOI": "10.1152/jappl.2000.88.6.2097",
+              "article-title": "Takarada, Y, Takazawa, H, Sato, Y, Takebayashi, S, Tanaka, Y, and Ishii, N. Effects of resistance exercise combined with moderate vascular occlusion on muscular function in humans.",
+              "volume": "88",
+              "year": "2000",
+              "journal-title": "J Appl Physiol"
+            },
+            {
+              "key": "R174-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "1926",
+              "DOI": "10.1519/JSC.0b013e318185f2b0",
+              "article-title": "Tanimoto, M, Sanada, K, Yamamoto, K, Kawano, H, Gando, Y, Tabata, I, Ishii, N, and Miyachi, M. Effects of whole-body low-intensity resistance training with slow movement and tonic force generation on muscular size and strength in young men.",
+              "volume": "22",
+              "year": "2008",
+              "journal-title": "J Strength Cond Res"
+            },
+            {
+              "key": "R176-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "631",
+              "DOI": "10.1016/0014-4886(84)90036-0",
+              "article-title": "Romeny, BM, Denier van der Gon, JJ, and Gielen, CCAM. Relation between location of a motor unit in the human biceps brachii and its critical firing levels for different, tasks.",
+              "volume": "85",
+              "year": "1984",
+              "journal-title": "Exp Neurol"
+            },
+            {
+              "key": "R178-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "362",
+              "DOI": "10.1007/BF00422734",
+              "article-title": "Tesch, PA, Colliander, EB, and Kaiser, P. Muscle metabolism during intense, heavy-resistance exercise.",
+              "volume": "55",
+              "year": "1986",
+              "journal-title": "Eur J Appl Physiol Occup Physiol"
+            },
+            {
+              "key": "R179-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "301",
+              "DOI": "10.1007/BF00441291",
+              "article-title": "Tesch, PA and Larsson, L. Muscle hypertrophy in bodybuilders.",
+              "volume": "49",
+              "year": "1982",
+              "journal-title": "Eur J Appl Physiol Occup Physiol"
+            },
+            {
+              "key": "R180-40-20210210",
+              "first-page": "67",
+              "article-title": "Tesch, PA, Ploutz-Snyder, LL, Ystrom, L, Castro, MJ, and Dudley, GA. Skeletal muscle glycogen loss evoked by resistance exercise.",
+              "volume": "12",
+              "year": "1998",
+              "journal-title": "J Strength Cond Res"
+            },
+            {
+              "key": "R181-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "782",
+              "DOI": "10.1016/S0955-0674(97)80078-6",
+              "article-title": "Thomas, G and Hall, MN. TOR signalling and control of cell growth.",
+              "volume": "9",
+              "year": "1997",
+              "journal-title": "Curr Opin Cell Biol"
+            },
+            {
+              "key": "R182-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "643",
+              "DOI": "10.1007/s00421-006-0238-1",
+              "article-title": "Toigo, M and Boutellier, U. New fundamental resistance exercise determinants of molecular and cellular muscle adaptations.",
+              "volume": "97",
+              "year": "2006",
+              "journal-title": "Eur J Appl Physiol"
+            },
+            {
+              "key": "R183-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "531",
+              "DOI": "10.1152/japplphysiol.00656.2003",
+              "article-title": "Tremblay, MS, Copeland, JL, and Van Helder, W. Effect of training status and exercise mode on endogenous steroid hormones in men.",
+              "volume": "96",
+              "year": "2004",
+              "journal-title": "J Appl Physiol"
+            },
+            {
+              "key": "R184-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "1523",
+              "DOI": "10.1152/jn.1988.60.5.1523",
+              "article-title": "Zuylen, EJ, Gielen, CCAM, and Denier van der Gon, JJ. Coordination and inhomogeneous activation of human arm muscles during isometric torques.",
+              "volume": "60",
+              "year": "1988",
+              "journal-title": "Neurophysiology"
+            },
+            {
+              "key": "R186-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "564",
+              "DOI": "10.1093/ptj/80.6.564",
+              "article-title": "Garcia, FJ, Grenier, SG, and McGill, S. Abdominal muscle response during curl-ups on both stable and labile surfaces.",
+              "volume": "80",
+              "year": "2000",
+              "journal-title": "Phys Ther"
+            },
+            {
+              "key": "R187-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "263",
+              "DOI": "10.1006/cbir.2000.0499",
+              "article-title": "Vierck, J, OReilly, B, Hossner, K, Antonio, J, Byrne, K, Bucci, L, and Dodson, M. Satellite cell regulation following myotrauma caused by resistance exercise.",
+              "volume": "24",
+              "year": "2000",
+              "journal-title": "Cell Biol Int"
+            },
+            {
+              "key": "R188-40-20210210",
+              "first-page": "1799",
+              "article-title": "Vissing, K, Brink, M, Lonbro, S, Sorensen, H, Overgaard, K, Danborg, K, Mortensen, J, Elstrom, O, Rosenhoj, N, Ringgaard, S, Andersen, JL, and Aagaard, P. Muscle adaptations to plyometric vs. resistance training in untrained young men.",
+              "volume": "22",
+              "year": "2008",
+              "journal-title": "J Strength Cond Res"
+            },
+            {
+              "key": "R189-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "628",
+              "DOI": "10.1007/s00421-003-1031-z",
+              "article-title": "Volek, JS, Ratamess, NA, Rubin, MR, Gomez, AL, French, DN, McGuigan, MM, Scheett, TP, Sharman, MJ, Hakkinen, K, and Kraemer, WJ. The effects of creatine supplementation on muscular performance and body composition responses to short-term resistance training overreaching.",
+              "volume": "91",
+              "year": "2004",
+              "journal-title": "Eur J Appl Physiol"
+            },
+            {
+              "key": "R190-40-20210210",
+              "first-page": "760",
+              "article-title": "Waters, MJ, Shang, CA, Behncken, SN, Tam, SP, Li, H, Shen, B, and Lobie, PE. Growth hormone as a cytokine.",
+              "volume": "26",
+              "year": "1999",
+              "journal-title": "Clin Exp Pharmacol Physiol"
+            },
+            {
+              "key": "R191-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "60",
+              "DOI": "10.1152/japplphysiol.01147.2009",
+              "article-title": "West, DW, Burd, NA, Tang, JE, Moore, DR, Staples, AW, Holwerda, AM, Baker, SK, and Phillips, SM. Elevations in ostensibly anabolic hormones with resistance exercise enhance neither training-induced muscle hypertrophy nor strength of the elbow flexors.",
+              "volume": "108",
+              "year": "2010",
+              "journal-title": "J Appl Physiol"
+            },
+            {
+              "key": "R192-40-20210210",
+              "first-page": "98",
+              "article-title": "Strength training research: Sets and repetitions.",
+              "volume": "58",
+              "author": "Westcott",
+              "year": "1989",
+              "journal-title": "Schol Coach"
+            },
+            {
+              "key": "R193-40-20210210",
+              "first-page": "275",
+              "article-title": "Wickiewicz, TL, Roy, RR, Powell, PL, and Edgerton, VR. Muscle architecture of the human lower limb.",
+              "volume": "179",
+              "year": "1983",
+              "journal-title": "Clin Orthopaed Rel Res"
+            },
+            {
+              "key": "R194-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "546",
+              "DOI": "10.1007/s00421-006-0300-z",
+              "article-title": "Wilkinson, SB, Tarnopolsky, MA, Grant, EJ, Correia, CE, and Phillips, SM. Hypertrophy with unilateral resistance exercise occurs without increases in endogenous anabolic hormone concentration.",
+              "volume": "98",
+              "year": "2006",
+              "journal-title": "Eur J Appl Physiol"
+            },
+            {
+              "key": "R195-40-20210210",
+              "first-page": "978",
+              "article-title": "A brief review: Factors affecting the length of the rest interval between resistance exercise sets.",
+              "volume": "20",
+              "author": "Willardson",
+              "year": "2006",
+              "journal-title": "J Strength Cond Res"
+            },
+            {
+              "key": "R196-40-20210210",
+              "first-page": "628",
+              "article-title": "The application of training to failure in periodized multiple-set resistance exercise programs.",
+              "volume": "21",
+              "author": "Willardson",
+              "year": "2007",
+              "journal-title": "J Strength Cond Res"
+            },
+            {
+              "key": "R197-40-20210210",
+              "first-page": "35",
+              "article-title": "Wolfe, BL, LeMura, LM, and Cole, PJ. Quantitative analysis of single- vs. multiple-set programs in resistance training.",
+              "volume": "18",
+              "year": "2004",
+              "journal-title": "J Strength Cond Res"
+            },
+            {
+              "key": "R198-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "125",
+              "DOI": "10.1159/000085004",
+              "article-title": "Woodley, SJ and Mercer, SR. Hamstring muscles: Architecture and innervation.",
+              "volume": "179",
+              "year": "2005",
+              "journal-title": "Cells Tiss Org"
+            },
+            {
+              "key": "R199-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "487",
+              "DOI": "10.1007/BF00123364",
+              "article-title": "Yang, S, Alnaqeeb, M, Simpson, H, and Goldspink, G. Cloning and characterization of an IGF-I isoform expressed in skeletal muscle subjected to stretch.",
+              "volume": "17",
+              "year": "1996",
+              "journal-title": "J Mus Cell Res Mot"
+            },
+            {
+              "key": "R200-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "156",
+              "DOI": "10.1016/S0014-5793(02)02918-6",
+              "article-title": "Yang, SY and Goldspink, G. Different roles of the IGF-IEc peptide (MGF) and mature IGF-I in myoblast proliferation and differentiation.",
+              "volume": "522",
+              "year": "2002",
+              "journal-title": "FEBS Lett"
+            },
+            {
+              "key": "R201-40-20210210",
+              "first-page": "261",
+              "article-title": "Yarasheski, KE, Campbell, JA, Smith, K, Rennie, MJ, Holloszy, JO, and Bier, DM. Effect of growth hormone and resistance exercise on muscle growth in young men.",
+              "volume": "262",
+              "year": "1992",
+              "journal-title": "Am J Appl Physiol"
+            },
+            {
+              "key": "R202-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "3073",
+              "DOI": "10.1152/jappl.1993.74.6.3073",
+              "article-title": "Yarasheski, KE, Zachweija, JJ, Angelopoulos, TJ, and Bier, DM. Short-term growth hormone treatment does not increase muscle protein synthesis in experienced weight lifters.",
+              "volume": "74",
+              "year": "1993",
+              "journal-title": "J Appl Physiol"
+            },
+            {
+              "key": "R203-40-20210210",
+              "first-page": "E268",
+              "article-title": "Yarasheski, KE, Zachwieja, JJ, Campbell, JA, and Bier, DM. Effect of growth hormone and resistance exercise on muscle growth and strength in older men.",
+              "volume": "268",
+              "year": "1995",
+              "journal-title": "Am J Appl Physiol"
+            },
+            {
+              "key": "R204-40-20210210",
+              "doi-asserted-by": "crossref",
+              "first-page": "171",
+              "DOI": "10.1007/s00418-002-0427-x",
+              "article-title": "Yu, JG and Thornell, LE. Desmin and actin alterations in human muscles affected by delayed onset muscle soreness: A high resolution immunocytochemical study.",
+              "volume": "118",
+              "year": "2002",
+              "journal-title": "Histochem Cell Biol"
+            }
+          ],
+          "container-title": [
+            "Journal of Strength and Conditioning Research"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://www.ovid.com/00124278-201010000-00040",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2026,
+                8,
+                7
+              ]
+            ],
+            "date-time": "2026-08-07T18:34:09Z",
+            "timestamp": 1786127649000
+          },
+          "score": 36.918476,
+          "resource": {
+            "primary": {
+              "URL": "https://www.ovid.com/00124278-201010000-00040"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2010,
+                10
+              ]
+            ]
+          },
+          "references-count": 187,
+          "journal-issue": {
+            "issue": "10",
+            "published-print": {
+              "date-parts": [
+                [
+                  2010
+                ]
+              ]
+            }
+          },
+          "URL": "https://doi.org/10.1519/jsc.0b013e3181e840f3",
+          "ISSN": [
+            "1064-8011"
+          ],
+          "issn-type": [
+            {
+              "value": "1064-8011",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2010,
+                10
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                17
+              ]
+            ],
+            "date-time": "2026-09-17T03:20:44Z",
+            "timestamp": 1789615244308,
+            "version": "build-2803163510"
+          },
+          "reference-count": 0,
+          "publisher": "OMICS Publishing Group",
+          "issue": "01",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "J Sports Med Doping Stud"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2012
+              ]
+            ]
+          },
+          "DOI": "10.4172/2161-0673.s1-004",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2014,
+                8,
+                29
+              ]
+            ],
+            "date-time": "2014-08-29T08:57:46Z",
+            "timestamp": 1409302666000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 2,
+          "title": [
+            "Eccentric Resistance Training and Muscle Hypertrophy"
+          ],
+          "prefix": "10.4172",
+          "volume": "S1",
+          "author": [
+            {
+              "given": "Fernanda de",
+              "family": "Souza-Teixeira",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "2674",
+          "container-title": [
+            "Journal of Sports Medicine &amp; Doping Studies"
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2017,
+                4,
+                13
+              ]
+            ],
+            "date-time": "2017-04-13T15:08:40Z",
+            "timestamp": 1492096120000
+          },
+          "score": 31.932487,
+          "resource": {
+            "primary": {
+              "URL": "https://www.omicsonline.org/eccentric-resistance-training-and-muscle-hypertrophy-2161-0673.S1-004.php?aid=6621"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2012
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "01",
+            "published-print": {
+              "date-parts": [
+                [
+                  2012
+                ]
+              ]
+            }
+          },
+          "URL": "https://doi.org/10.4172/2161-0673.s1-004",
+          "ISSN": [
+            "2161-0673"
+          ],
+          "issn-type": [
+            {
+              "value": "2161-0673",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2012
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                8,
+                7
+              ]
+            ],
+            "date-time": "2026-08-07T18:54:36Z",
+            "timestamp": 1786128876172,
+            "version": "build-2736575974"
+          },
+          "reference-count": 0,
+          "publisher": "Ovid Technologies (Wolters Kluwer Health)",
+          "issue": "2",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Strength and Conditioning Journal"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2003,
+                4
+              ]
+            ]
+          },
+          "DOI": "10.1519/00126548-200304000-00001",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2008,
+                5,
+                4
+              ]
+            ],
+            "date-time": "2008-05-04T02:28:09Z",
+            "timestamp": 1209868089000
+          },
+          "page": "7-15",
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Does Resistance Training Stimulate Cardiac Muscle Hypertrophy?"
+          ],
+          "prefix": "10.1519",
+          "volume": "25",
+          "author": [
+            {
+              "given": "Richard J.",
+              "family": "Bloomer",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "276",
+          "container-title": [
+            "Strength and Conditioning Journal"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://www.ovid.com/00126548-200304000-00001",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2026,
+                8,
+                7
+              ]
+            ],
+            "date-time": "2026-08-07T18:36:01Z",
+            "timestamp": 1786127761000
+          },
+          "score": 30.645012,
+          "resource": {
+            "primary": {
+              "URL": "https://www.ovid.com/00126548-200304000-00001"
+            }
+          },
+          "subtitle": [
+            ""
+          ],
+          "issued": {
+            "date-parts": [
+              [
+                2003,
+                4
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "2"
+          },
+          "URL": "https://doi.org/10.1519/00126548-200304000-00001",
+          "ISSN": [
+            "1524-1602"
+          ],
+          "issn-type": [
+            {
+              "value": "1524-1602",
+              "type": "print"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2003,
+                4
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

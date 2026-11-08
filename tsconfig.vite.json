@@ -1,0 +1,5 @@
+{
+  "extends": "./tsconfig.dev.json",
+  "compilerOptions": { "lib": ["ESNext", "DOM", "DOM.Iterable"] },
+  "include": ["vite.config.ts", "scripts/agent-lab-vite.ts"]
+}

@@ -1,0 +1,12 @@
+import { strict as assert } from "node:assert";
+import { Agent, Grid, World, Random, geometry } from "city-library";
+const random = Random.add({ seed: 17 });
+const world = World.add({ x: 5, y: 5, boundary: "wrap" }, { random });
+const grid = Grid.add(world.space!); world.add(grid);
+const person = Agent.add({ kind: "seeker" }, { position: { x: 2, y: 0 }, orientation: { heading: 90 } }); world.add(person);
+const before = { x: person.x, y: person.y, heading: person.heading, tick: world.tick.value, random: random.state };
+const forward = geometry.direction({ heading: person.heading });
+const ahead = geometry.normalize({ x: person.x + forward.x, y: person.y + forward.y }, { space: world.space! });
+assert.ok(ahead); assert.equal(grid.fieldAt(ahead)!.x, -2); assert.equal(grid.fieldAt(ahead)!.y, 0);
+assert.deepEqual({ x: person.x, y: person.y, heading: person.heading, tick: world.tick.value, random: random.state }, before);
+assert.equal(world.agents.length, 1);

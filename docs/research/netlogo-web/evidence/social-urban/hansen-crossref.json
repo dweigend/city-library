@@ -1,0 +1,1811 @@
+{
+  "consultedUrl": "https://api.crossref.org/works/10.1029%2F2005JD005776",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work",
+    "message-version": "1.0.0",
+    "message": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            10,
+            11
+          ]
+        ],
+        "date-time": "2026-10-11T12:26:47Z",
+        "timestamp": 1791721607441,
+        "version": "4.3.4"
+      },
+      "reference-count": 173,
+      "publisher": "American Geophysical Union (AGU)",
+      "issue": "D18",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2005,
+                9,
+                28
+              ]
+            ],
+            "date-time": "2005-09-28T00:00:00Z",
+            "timestamp": 1127865600000
+          },
+          "content-version": "vor",
+          "delay-in-days": 1,
+          "URL": "http://onlinelibrary.wiley.com/termsAndConditions#vor"
+        }
+      ],
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [
+        "J. Geophys. Res."
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            2005,
+            9,
+            27
+          ]
+        ]
+      },
+      "abstract": "<jats:p>\n                    We use a global climate model to compare the effectiveness of many climate forcing agents for producing climate change. We find a substantial range in the \u201cefficacy\u201d of different forcings, where the efficacy is the global temperature response per unit forcing relative to the response to CO\n                    <jats:sub>2</jats:sub>\n                    forcing. Anthropogenic CH\n                    <jats:sub>4</jats:sub>\n                    has efficacy \u223c110%, which increases to \u223c145% when its indirect effects on stratospheric H\n                    <jats:sub>2</jats:sub>\n                    O and tropospheric O\n                    <jats:sub>3</jats:sub>\n                    are included, yielding an effective climate forcing of \u223c0.8 W/m\n                    <jats:sup>2</jats:sup>\n                    for the period 1750\u20132000 and making CH\n                    <jats:sub>4</jats:sub>\n                    the largest anthropogenic climate forcing other than CO\n                    <jats:sub>2</jats:sub>\n                    . Black carbon (BC) aerosols from biomass burning have a calculated efficacy \u223c58%, while fossil fuel BC has an efficacy \u223c78%. Accounting for forcing efficacies and for indirect effects via snow albedo and cloud changes, we find that fossil fuel soot, defined as BC + OC (organic carbon), has a net positive forcing while biomass burning BC + OC has a negative forcing. We show that replacement of the traditional instantaneous and adjusted forcings, Fi and Fa, with an easily computed alternative, Fs, yields a better predictor of climate change, i.e., its efficacies are closer to unity. Fs is inferred from flux and temperature changes in a fixed\u2010ocean model run. There is remarkable congruence in the spatial distribution of climate change, normalized to the same forcing Fs, for most climate forcing agents, suggesting that the global forcing has more relevance to regional climate change than may have been anticipated. Increasing greenhouse gases intensify the Hadley circulation in our model, increasing rainfall in the Intertropical Convergence Zone (ITCZ), Eastern United States, and East Asia, while intensifying dry conditions in the subtropics including the Southwest United States, the Mediterranean region, the Middle East, and an expanding Sahel. These features survive in model simulations that use all estimated forcings for the period 1880\u20132000. Responses to localized forcings, such as land use change and heavy regional concentrations of BC aerosols, include more specific regional characteristics. We suggest that anthropogenic tropospheric O\n                    <jats:sub>3</jats:sub>\n                    and the BC snow albedo effect contribute substantially to rapid warming and sea ice loss in the Arctic. As a complement to a priori forcings, such as Fi, Fa, and Fs, we tabulate the a posteriori effective forcing, Fe, which is the product of the forcing and its efficacy. Fe requires calculation of the climate response and introduces greater model dependence, but once it is calculated for a given amount of a forcing agent it provides a good prediction of the response to other forcing amounts.\n                  </jats:p>",
+      "DOI": "10.1029/2005jd005776",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2005,
+            9,
+            27
+          ]
+        ],
+        "date-time": "2005-09-27T17:09:45Z",
+        "timestamp": 1127840985000
+      },
+      "source": "Crossref",
+      "is-referenced-by-count": 1115,
+      "title": [
+        "Efficacy of climate forcings"
+      ],
+      "prefix": "10.1029",
+      "volume": "110",
+      "author": [
+        {
+          "given": "J.",
+          "family": "Hansen",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "NASA Goddard Institute for Space Studies  New York New York USA"
+            },
+            {
+              "name": "Columbia University Earth Institute  New York New York USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "M.",
+          "family": "Sato",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Columbia University Earth Institute  New York New York USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "R.",
+          "family": "Ruedy",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "SGT Incorporated  New York New York USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "L.",
+          "family": "Nazarenko",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Columbia University Earth Institute  New York New York USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "A.",
+          "family": "Lacis",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "NASA Goddard Institute for Space Studies  New York New York USA"
+            },
+            {
+              "name": "Department of Earth and Environmental Sciences Columbia University  New York New York USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "G. A.",
+          "family": "Schmidt",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "NASA Goddard Institute for Space Studies  New York New York USA"
+            },
+            {
+              "name": "Department of Earth and Environmental Sciences Columbia University  New York New York USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "G.",
+          "family": "Russell",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "NASA Goddard Institute for Space Studies  New York New York USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "I.",
+          "family": "Aleinov",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Columbia University Earth Institute  New York New York USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "M.",
+          "family": "Bauer",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Columbia University Earth Institute  New York New York USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "S.",
+          "family": "Bauer",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Columbia University Earth Institute  New York New York USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "N.",
+          "family": "Bell",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Columbia University Earth Institute  New York New York USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "B.",
+          "family": "Cairns",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Applied Physics and Applied Mathematics Columbia University  New York New York USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "V.",
+          "family": "Canuto",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "NASA Goddard Institute for Space Studies  New York New York USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "M.",
+          "family": "Chandler",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Columbia University Earth Institute  New York New York USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Y.",
+          "family": "Cheng",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "SGT Incorporated  New York New York USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "A.",
+          "family": "Del Genio",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "NASA Goddard Institute for Space Studies  New York New York USA"
+            },
+            {
+              "name": "Department of Earth and Environmental Sciences Columbia University  New York New York USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "G.",
+          "family": "Faluvegi",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Columbia University Earth Institute  New York New York USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "E.",
+          "family": "Fleming",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "NASA Goddard Space Flight Center  Greenbelt Maryland USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "A.",
+          "family": "Friend",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Laboratoire des Sciences du Climat et de l'Environnement Orme des Merisiers  Gif\u2010sur\u2010Yvette France"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "T.",
+          "family": "Hall",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "NASA Goddard Institute for Space Studies  New York New York USA"
+            },
+            {
+              "name": "Department of Applied Physics and Applied Mathematics Columbia University  New York New York USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "C.",
+          "family": "Jackman",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "NASA Goddard Space Flight Center  Greenbelt Maryland USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "M.",
+          "family": "Kelley",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Laboratoire des Sciences du Climat et de l'Environnement Orme des Merisiers  Gif\u2010sur\u2010Yvette France"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "N.",
+          "family": "Kiang",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "NASA Goddard Institute for Space Studies  New York New York USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "D.",
+          "family": "Koch",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Columbia University Earth Institute  New York New York USA"
+            },
+            {
+              "name": "Department of Geology Yale University  New Haven Connecticut USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "J.",
+          "family": "Lean",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Naval Research Laboratory  Washington, D. C. USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "J.",
+          "family": "Lerner",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Columbia University Earth Institute  New York New York USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "K.",
+          "family": "Lo",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "SGT Incorporated  New York New York USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "S.",
+          "family": "Menon",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Lawrence Berkeley National Laboratory  Berkeley California USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "R.",
+          "family": "Miller",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "NASA Goddard Institute for Space Studies  New York New York USA"
+            },
+            {
+              "name": "Department of Applied Physics and Applied Mathematics Columbia University  New York New York USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "P.",
+          "family": "Minnis",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "NASA Langley Research Center  Hampton Virginia USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "T.",
+          "family": "Novakov",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Lawrence Berkeley National Laboratory  Berkeley California USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "V.",
+          "family": "Oinas",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "SGT Incorporated  New York New York USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Ja.",
+          "family": "Perlwitz",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Applied Physics and Applied Mathematics Columbia University  New York New York USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Ju.",
+          "family": "Perlwitz",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Columbia University Earth Institute  New York New York USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "D.",
+          "family": "Rind",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "NASA Goddard Institute for Space Studies  New York New York USA"
+            },
+            {
+              "name": "Department of Earth and Environmental Sciences Columbia University  New York New York USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "A.",
+          "family": "Romanou",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "NASA Goddard Institute for Space Studies  New York New York USA"
+            },
+            {
+              "name": "Department of Earth and Environmental Sciences Columbia University  New York New York USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "D.",
+          "family": "Shindell",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "NASA Goddard Institute for Space Studies  New York New York USA"
+            },
+            {
+              "name": "Department of Earth and Environmental Sciences Columbia University  New York New York USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "P.",
+          "family": "Stone",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Center for Meteorology Massachusetts Institute of Technology  Cambridge Massachusetts USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "S.",
+          "family": "Sun",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "NASA Goddard Institute for Space Studies  New York New York USA"
+            },
+            {
+              "name": "Center for Meteorology Massachusetts Institute of Technology  Cambridge Massachusetts USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "N.",
+          "family": "Tausnev",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "SGT Incorporated  New York New York USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "D.",
+          "family": "Thresher",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Earth and Environmental Sciences Columbia University  New York New York USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "B.",
+          "family": "Wielicki",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "NASA Langley Research Center  Hampton Virginia USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "T.",
+          "family": "Wong",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "NASA Langley Research Center  Hampton Virginia USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "M.",
+          "family": "Yao",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "SGT Incorporated  New York New York USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "S.",
+          "family": "Zhang",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Columbia University Earth Institute  New York New York USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "13",
+      "published-online": {
+        "date-parts": [
+          [
+            2005,
+            9,
+            28
+          ]
+        ]
+      },
+      "reference": [
+        {
+          "key": "e_1_2_10_2_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1126/science.288.5468.1042"
+        },
+        {
+          "key": "e_1_2_10_3_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/nature03174"
+        },
+        {
+          "key": "e_1_2_10_4_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1126/science.245.4923.1227"
+        },
+        {
+          "key": "e_1_2_10_5_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/373393b0"
+        },
+        {
+          "key": "e_1_2_10_6_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/1999JD900165"
+        },
+        {
+          "key": "e_1_2_10_7_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/2003GL018883"
+        },
+        {
+          "key": "e_1_2_10_8_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1006/asle.2001.0037"
+        },
+        {
+          "key": "e_1_2_10_9_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S1463-5003(01)00012-9"
+        },
+        {
+          "key": "e_1_2_10_10_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1175/1520-0469(1986)043<0468:AOEMTT>2.0.CO;2"
+        },
+        {
+          "key": "e_1_2_10_11_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/2003JD003697"
+        },
+        {
+          "key": "e_1_2_10_12_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/2001GL014048"
+        },
+        {
+          "key": "e_1_2_10_13_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1365\u20102486.2004.00812.x"
+        },
+        {
+          "key": "e_1_2_10_14_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.2153-3490.1969.tb00466.x"
+        },
+        {
+          "key": "e_1_2_10_15_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/2000JD900221"
+        },
+        {
+          "key": "e_1_2_10_16_1",
+          "unstructured": "J. Charney 1979 Natl. Acad. Sci. Press Washington D. C."
+        },
+        {
+          "key": "e_1_2_10_17_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1175/1520-0469(2002)059<1550:AIMFTT>2.0.CO;2"
+        },
+        {
+          "key": "e_1_2_10_18_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/qj.49712556011"
+        },
+        {
+          "key": "e_1_2_10_19_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/95JD01465"
+        },
+        {
+          "key": "e_1_2_10_20_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/B0-12-227090-8/00375-4"
+        },
+        {
+          "key": "e_1_2_10_21_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/0004-6981(85)90113-1"
+        },
+        {
+          "key": "e_1_2_10_22_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/97JD01555"
+        },
+        {
+          "key": "e_1_2_10_23_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1175/JCLI3530.1"
+        },
+        {
+          "key": "e_1_2_10_24_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1126/science.1102586"
+        },
+        {
+          "key": "e_1_2_10_25_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1256/qj.03.64"
+        },
+        {
+          "key": "e_1_2_10_26_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1175/JCLI3413.1"
+        },
+        {
+          "key": "e_1_2_10_27_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1175/1520-0477(1975)056<1240:SVATLA>2.0.CO;2"
+        },
+        {
+          "key": "e_1_2_10_28_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1175/1520-0442(2004)017<2384:NAOTCR>2.0.CO;2"
+        },
+        {
+          "key": "e_1_2_10_29_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/1999JD900332"
+        },
+        {
+          "key": "e_1_2_10_30_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/1999JD900770"
+        },
+        {
+          "key": "e_1_2_10_31_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/96JD03510"
+        },
+        {
+          "key": "e_1_2_10_32_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/1999GL010487"
+        },
+        {
+          "key": "e_1_2_10_33_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/2001GL013909"
+        },
+        {
+          "key": "e_1_2_10_34_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/s003820050182"
+        },
+        {
+          "key": "e_1_2_10_35_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/s003820000083"
+        },
+        {
+          "key": "e_1_2_10_36_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1175/1520-0485(1995)025<0463:PEITTI>2.0.CO;2"
+        },
+        {
+          "key": "e_1_2_10_37_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/2004GL020111"
+        },
+        {
+          "key": "e_1_2_10_38_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/2003GL018747"
+        },
+        {
+          "key": "e_1_2_10_39_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/2000JC000414"
+        },
+        {
+          "key": "e_1_2_10_40_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1175/1520-0485(1998)028<0831:TGMSF>2.0.CO;2"
+        },
+        {
+          "key": "e_1_2_10_41_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1175/1520-0442(1999)012<1268:SEOAOC>2.0.CO;2"
+        },
+        {
+          "key": "e_1_2_10_42_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/370544a0"
+        },
+        {
+          "key": "e_1_2_10_43_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S1364-6826(98)00117-5"
+        },
+        {
+          "key": "e_1_2_10_44_1",
+          "unstructured": "Hansen J.(2002) Air pollution as a climate forcing 169 pp. NASA Goddard Inst. for Space Stud. New York."
+        },
+        {
+          "key": "e_1_2_10_45_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/scientificamerican0304-68"
+        },
+        {
+          "key": "e_1_2_10_46_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1073/pnas.2237157100"
+        },
+        {
+          "key": "e_1_2_10_47_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1073/pnas.0406982101"
+        },
+        {
+          "key": "e_1_2_10_48_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1126/science.199.4333.1065"
+        },
+        {
+          "key": "e_1_2_10_49_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1126/science.213.4511.957"
+        },
+        {
+          "key": "e_1_2_10_50_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1175/1520-0493(1983)111<0609:ETDGMF>2.0.CO;2"
+        },
+        {
+          "key": "e_1_2_10_51_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/GM029p0130"
+        },
+        {
+          "key": "e_1_2_10_52_1",
+          "first-page": "142",
+          "article-title": "How sensitive is the world's climate?",
+          "volume": "9",
+          "author": "Hansen J.",
+          "year": "1993",
+          "journal-title": "Natl. Geogr. Res. Explor."
+        },
+        {
+          "key": "e_1_2_10_53_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/0169-8095(94)00077-Q"
+        },
+        {
+          "key": "e_1_2_10_54_1",
+          "unstructured": "Hansen J. et al. (1996) A Pinatubo climate modeling investigation inGlobal Environment Change edited byG.Fiocco D.Fua' andG.Visconti NATO ASI Ser. Ser. 1 42 233\u2013272."
+        },
+        {
+          "key": "e_1_2_10_55_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/96JD03436"
+        },
+        {
+          "key": "e_1_2_10_56_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/97JD01495"
+        },
+        {
+          "key": "e_1_2_10_57_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1098/rstb.1997.0018"
+        },
+        {
+          "key": "e_1_2_10_58_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1073/pnas.95.22.12753"
+        },
+        {
+          "key": "e_1_2_10_59_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1073/pnas.170278997"
+        },
+        {
+          "key": "e_1_2_10_60_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/2001JD001143"
+        },
+        {
+          "key": "e_1_2_10_61_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/2004EO250001"
+        },
+        {
+          "key": "e_1_2_10_62_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1126/science.1110252"
+        },
+        {
+          "key": "e_1_2_10_63_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/BF00142475"
+        },
+        {
+          "key": "e_1_2_10_64_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/360573a0"
+        },
+        {
+          "key": "e_1_2_10_65_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1046/j.1365-3121.2002.00408.x"
+        },
+        {
+          "key": "e_1_2_10_66_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1126/science.281.5381.1342"
+        },
+        {
+          "key": "e_1_2_10_67_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1175/1520-0469(1969)026<1191:TRGAHO>2.0.CO;2"
+        },
+        {
+          "key": "e_1_2_10_68_1",
+          "unstructured": "Intergovernmental Panel on Climate Change (IPCC) J. T. Houghton 2001 Cambridge Univ. Press New York"
+        },
+        {
+          "key": "e_1_2_10_69_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/35055518"
+        },
+        {
+          "key": "e_1_2_10_70_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1175/1520-0442(2004)017<2909:TSCBLG>2.0.CO;2"
+        },
+        {
+          "key": "e_1_2_10_71_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/2000JD900241"
+        },
+        {
+          "key": "e_1_2_10_72_1",
+          "unstructured": "R. Jastrow 1967 HarperCollins New York"
+        },
+        {
+          "key": "e_1_2_10_73_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/94GL01287"
+        },
+        {
+          "key": "e_1_2_10_74_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1175/JCLI-3233.1"
+        },
+        {
+          "key": "e_1_2_10_75_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1256/qj.03.61"
+        },
+        {
+          "key": "e_1_2_10_76_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/s00382-003-0305-9"
+        },
+        {
+          "key": "e_1_2_10_77_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1073/pnas.0505191102"
+        },
+        {
+          "key": "e_1_2_10_78_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1126/science.305.5686.932"
+        },
+        {
+          "key": "e_1_2_10_79_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/1999GB001232"
+        },
+        {
+          "key": "e_1_2_10_80_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/2001JD900038"
+        },
+        {
+          "key": "e_1_2_10_81_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/2004JD005296"
+        },
+        {
+          "key": "e_1_2_10_82_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/1999JD900248"
+        },
+        {
+          "key": "e_1_2_10_83_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/90JD01945"
+        },
+        {
+          "key": "e_1_2_10_84_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/JD095iD07p09971"
+        },
+        {
+          "key": "e_1_2_10_85_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/92GL01620"
+        },
+        {
+          "key": "e_1_2_10_86_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0096-3003(99)00200-3"
+        },
+        {
+          "key": "e_1_2_10_87_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/94RG01872"
+        },
+        {
+          "key": "e_1_2_10_88_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1175/1520-0442(2004)017<2170:TYCITS>2.0.CO;2"
+        },
+        {
+          "key": "e_1_2_10_89_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/2000GL000043"
+        },
+        {
+          "key": "e_1_2_10_90_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/2003JD004456"
+        },
+        {
+          "key": "e_1_2_10_91_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/2001JC001167"
+        },
+        {
+          "key": "e_1_2_10_92_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/2001GL014357"
+        },
+        {
+          "key": "e_1_2_10_93_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.5194/acp-5-715-2005"
+        },
+        {
+          "key": "e_1_2_10_94_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1126/science.1075405"
+        },
+        {
+          "key": "e_1_2_10_95_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/1999JD901199"
+        },
+        {
+          "key": "e_1_2_10_96_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/237452a0"
+        },
+        {
+          "key": "e_1_2_10_97_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1175/1520-0469(1975)032<0003:TEODTC>2.0.CO;2"
+        },
+        {
+          "key": "e_1_2_10_98_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1175/JCLI-3276.1"
+        },
+        {
+          "key": "e_1_2_10_99_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/2004JD005367"
+        },
+        {
+          "key": "e_1_2_10_100_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/2002GL016098"
+        },
+        {
+          "key": "e_1_2_10_101_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/s00382-004-0392-2"
+        },
+        {
+          "key": "e_1_2_10_102_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/373399a0"
+        },
+        {
+          "key": "e_1_2_10_103_1",
+          "volume-title": "Human\u2010Induced Climate Change: An Interdisciplinary Assessment",
+          "author": "Menon S.",
+          "year": "2005"
+        },
+        {
+          "key": "e_1_2_10_104_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1175/1520-0469(2002)059<0692:GSOTAI>2.0.CO;2"
+        },
+        {
+          "key": "e_1_2_10_105_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1126/science.1075159"
+        },
+        {
+          "key": "e_1_2_10_106_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/2000JD900594"
+        },
+        {
+          "key": "e_1_2_10_107_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/2003JD003653"
+        },
+        {
+          "key": "e_1_2_10_108_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/2003JD004085"
+        },
+        {
+          "key": "e_1_2_10_109_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1175/1520-0442(2004)017<1671:CCTAC>2.0.CO;2"
+        },
+        {
+          "key": "e_1_2_10_110_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/98JD02116"
+        },
+        {
+          "key": "e_1_2_10_111_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.jqsrt.2004.03.030"
+        },
+        {
+          "key": "e_1_2_10_112_1",
+          "unstructured": "Mitchell T. D. T. R.Carter P. D.Jones M.Hulme andM.New(2004) A comprehensive set of high\u2010resolution grids of monthly climate for Europe and the globe: The observed record (1901\u20132000) and 16 scenarios (2001\u20132100) Tyndall Working Pap.55 30 pp. (Available athttp://www.tyndall.ac.uk)."
+        },
+        {
+          "key": "e_1_2_10_113_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1175/1520-0442-16.10.1511"
+        },
+        {
+          "key": "e_1_2_10_114_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/2005JD005977"
+        },
+        {
+          "key": "e_1_2_10_115_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/2001GL013137"
+        },
+        {
+          "key": "e_1_2_10_116_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/2004GL021752"
+        },
+        {
+          "key": "e_1_2_10_117_1",
+          "first-page": "289",
+          "volume-title": "Climate Change 2001: The Scientific Basis",
+          "author": "Penner J. E.",
+          "year": "2001"
+        },
+        {
+          "key": "e_1_2_10_118_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1126/science.256.5062.1432"
+        },
+        {
+          "key": "e_1_2_10_119_1",
+          "unstructured": "J. E. Penner D. H. Lister D. J. Griggs D. J. Dokken M. McFarland 1999 Cambridge Univ. Press New York"
+        },
+        {
+          "key": "e_1_2_10_120_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/2003JD003409"
+        },
+        {
+          "key": "e_1_2_10_121_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/20859"
+        },
+        {
+          "key": "e_1_2_10_122_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/2005GL022580"
+        },
+        {
+          "key": "e_1_2_10_123_1",
+          "first-page": "239",
+          "volume-title": "Climate Change 2001: The Scientific Basis",
+          "author": "Prather M.",
+          "year": "2001"
+        },
+        {
+          "key": "e_1_2_10_124_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/2003JD004317"
+        },
+        {
+          "key": "e_1_2_10_125_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1126/science.1064034"
+        },
+        {
+          "key": "e_1_2_10_126_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/1999GB900046"
+        },
+        {
+          "key": "e_1_2_10_127_1",
+          "first-page": "349",
+          "volume-title": "Climate Change 2001: The Scientific Basis",
+          "author": "Ramaswamy V.",
+          "year": "2001"
+        },
+        {
+          "key": "e_1_2_10_128_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/1999GL900615"
+        },
+        {
+          "key": "e_1_2_10_129_1",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Randel W. J. F.Wu A.Gettelman J. M.Russell J. M.Zawodny andS. J.Oltmans(2001) J. Geophys. Res 106 14 313\u201314 325.",
+          "DOI": "10.1029/2001JD900048"
+        },
+        {
+          "key": "e_1_2_10_130_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/2004JD004757"
+        },
+        {
+          "key": "e_1_2_10_131_1",
+          "unstructured": "Reichler T. M.Dameris R.Sausen andD.Nodorp(1996) A global climatology of the tropopause height based on ECMWF analyses Inst. Phys. Atmos. Rep. 57 23 pp. Dtsch. Forsch. fur Luft and Raumfahrt Wessling Germany."
+        },
+        {
+          "key": "e_1_2_10_132_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/1999JD901160"
+        },
+        {
+          "key": "e_1_2_10_133_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/2004JD004676"
+        },
+        {
+          "key": "e_1_2_10_134_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/1998RG000054"
+        },
+        {
+          "key": "e_1_2_10_135_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/2000GL012502"
+        },
+        {
+          "key": "e_1_2_10_136_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/1999GL010863"
+        },
+        {
+          "key": "e_1_2_10_137_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1175/1520-0442(2001)014<2960:IAFQFA>2.0.CO;2"
+        },
+        {
+          "key": "e_1_2_10_138_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1080/07055900.1995.9649550"
+        },
+        {
+          "key": "e_1_2_10_139_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/96JD01162"
+        },
+        {
+          "key": "e_1_2_10_140_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1126/science.206.4425.1363"
+        },
+        {
+          "key": "e_1_2_10_141_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/93JD02553"
+        },
+        {
+          "key": "e_1_2_10_142_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1073/pnas.0731897100"
+        },
+        {
+          "key": "e_1_2_10_143_1",
+          "article-title": "Present day atmospheric simulations using GISS ModelE: Comparison to in\u2010situ, satellite and reanalysis data",
+          "author": "Schmidt G. A.",
+          "year": "2005",
+          "journal-title": "J. Clim."
+        },
+        {
+          "key": "e_1_2_10_144_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/2005JD006046"
+        },
+        {
+          "key": "e_1_2_10_145_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/2003JD004331"
+        },
+        {
+          "key": "e_1_2_10_146_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/BF02423524"
+        },
+        {
+          "key": "e_1_2_10_147_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/0004-6981(87)90094-1"
+        },
+        {
+          "key": "e_1_2_10_148_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.5194/acp-2-363-2002"
+        },
+        {
+          "key": "e_1_2_10_149_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/2004GL020724"
+        },
+        {
+          "key": "e_1_2_10_150_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1126/science.284.5412.305"
+        },
+        {
+          "key": "e_1_2_10_151_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/20905"
+        },
+        {
+          "key": "e_1_2_10_152_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/2000JD900547"
+        },
+        {
+          "key": "e_1_2_10_153_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.5194/acp-3-1675-2003"
+        },
+        {
+          "key": "e_1_2_10_154_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1175/1520-0442(2003)016<4094:VASFOC>2.0.CO;2"
+        },
+        {
+          "key": "e_1_2_10_155_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/2003JD004151"
+        },
+        {
+          "key": "e_1_2_10_156_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1175/JCLI3435.1"
+        },
+        {
+          "key": "e_1_2_10_157_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0921-8181(99)00017-X"
+        },
+        {
+          "key": "e_1_2_10_158_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/2003GL018141"
+        },
+        {
+          "key": "e_1_2_10_159_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/2000GL011846"
+        },
+        {
+          "key": "e_1_2_10_160_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1126/science.296.5568.727"
+        },
+        {
+          "key": "e_1_2_10_161_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/381681a0"
+        },
+        {
+          "key": "e_1_2_10_162_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/2003JD003699"
+        },
+        {
+          "key": "e_1_2_10_163_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/s00382-004-0497-7"
+        },
+        {
+          "key": "e_1_2_10_164_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/95JD02051"
+        },
+        {
+          "key": "e_1_2_10_165_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/2003GL019216"
+        },
+        {
+          "key": "e_1_2_10_166_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/98GL00950"
+        },
+        {
+          "key": "e_1_2_10_167_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/joc.1130"
+        },
+        {
+          "key": "e_1_2_10_168_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1175/1520-0469(1977)034<1149:TIOPOT>2.0.CO;2"
+        },
+        {
+          "key": "e_1_2_10_169_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/313467a0"
+        },
+        {
+          "key": "e_1_2_10_170_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1175/1520-0469(1975)032<2044:TEOCTS>2.0.CO;2"
+        },
+        {
+          "key": "e_1_2_10_171_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/2003JD003998"
+        },
+        {
+          "key": "e_1_2_10_172_1",
+          "unstructured": "Wong T. B. A.Wielicki andR. B.Lee(2004) Decadal variability of Earth radiation budget deduced from satellite altitude corrected ERBE/ERBS nonscanner data paper presented at13th Conference on Satellite Meteorology and Oceanography Am. Meteorol. Soc. Norfolk Va. 20 \u2013 24 Sept. (Available athttp://asd-www.larc.nasa.gov/\u223ctak/wong/r47.pdf)."
+        },
+        {
+          "issue": "4",
+          "key": "e_1_2_10_173_1",
+          "first-page": "134",
+          "article-title": "Meteorology: A three\u2010dimensional science, Second session of the commission for aerology",
+          "volume": "6",
+          "author": "World Meteorological Organization (WMO)",
+          "year": "1957",
+          "journal-title": "WMO Bull."
+        },
+        {
+          "key": "e_1_2_10_174_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1029/2000JD900472"
+        }
+      ],
+      "container-title": [
+        "Journal of Geophysical Research: Atmospheres"
+      ],
+      "original-title": [],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1029%2F2005JD005776",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2005JD005776",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2023,
+            10,
+            12
+          ]
+        ],
+        "date-time": "2023-10-12T09:52:44Z",
+        "timestamp": 1697104364000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2005JD005776"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            2005,
+            9,
+            27
+          ]
+        ]
+      },
+      "references-count": 173,
+      "journal-issue": {
+        "issue": "D18",
+        "published-print": {
+          "date-parts": [
+            [
+              2005,
+              9,
+              27
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "10.1029/2005JD005776"
+      ],
+      "URL": "https://doi.org/10.1029/2005jd005776",
+      "archive": [
+        "Portico"
+      ],
+      "relation": {},
+      "ISSN": [
+        "0148-0227"
+      ],
+      "issn-type": [
+        {
+          "value": "0148-0227",
+          "type": "print"
+        }
+      ],
+      "subject": [],
+      "published": {
+        "date-parts": [
+          [
+            2005,
+            9,
+            27
+          ]
+        ]
+      },
+      "article-number": "2005JD005776"
+    }
+  }
+}

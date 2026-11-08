@@ -1,0 +1,211 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1098%2Frsif.2013.0299%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1098/rsif.2013.0299\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "23864500",
+          "source": "MED",
+          "pmid": "23864500",
+          "pmcid": "PMC3730681",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC3730681"
+            ]
+          },
+          "doi": "10.1098/rsif.2013.0299",
+          "title": "Honeybee combs: how the circular cells transform into rounded hexagons.",
+          "authorString": "Karihaloo BL, Zhang K, Wang J.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Karihaloo BL",
+                "lastName": "Karihaloo",
+                "firstName": "B L",
+                "initials": "BL",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-0657-2678"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "School of Engineering, Cardiff University, Cardiff CF24 3AA, UK. karihaloob@cardiff.ac.uk"
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "Zhang K",
+                "lastName": "Zhang",
+                "firstName": "K",
+                "initials": "K"
+              },
+              {
+                "fullName": "Wang J",
+                "lastName": "Wang",
+                "firstName": "J",
+                "initials": "J"
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0003-0657-2678"
+              }
+            ]
+          },
+          "journalInfo": {
+            "issue": "86",
+            "volume": "10",
+            "journalIssueId": 2068138,
+            "dateOfPublication": "2013 Sep",
+            "monthOfPublication": 9,
+            "yearOfPublication": 2013,
+            "journal": {
+              "medlineAbbreviation": "J R Soc Interface",
+              "title": "Journal of the Royal Society, Interface",
+              "essn": "1742-5662",
+              "issn": "1742-5689",
+              "nlmid": "101217269",
+              "isoabbreviation": "J R Soc Interface"
+            },
+            "printPublicationDate": "2013-09-01"
+          },
+          "pubYear": "2013",
+          "pageInfo": "20130299",
+          "abstractText": "We report that the cells in a natural honeybee comb have a circular shape at 'birth' but quickly transform into the familiar rounded hexagonal shape, while the comb is being built. The mechanism for this transformation is the flow of molten visco-elastic wax near the triple junction between the neighbouring circular cells. The flow may be unconstrained or constrained by the unmolten wax away from the junction. The heat for melting the wax is provided by the 'hot' worker bees.",
+          "affiliation": "School of Engineering, Cardiff University, Cardiff CF24 3AA, UK. karihaloob@cardiff.ac.uk",
+          "publicationStatus": "epublish",
+          "language": "eng",
+          "pubModel": "Electronic-Print",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, Non-U.S. Gov't",
+              "research-article",
+              "Journal Article"
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Animals"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Bees",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Behavior, Animal",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "keywordList": {
+            "keyword": [
+              "Honeycomb",
+              "Circular Cell At Birth",
+              "Rounded Hexagonal Cell"
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1098/rsif.2013.0299"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC3730681"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC3730681?pdf=render"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1098/rsif.2013.0299"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "citedByCount": 26,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "Y",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "N",
+          "hasData": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2014-02-04",
+          "dateOfCreation": "2013-07-19",
+          "dateOfRevision": "2021-10-21",
+          "electronicPublicationDate": "2013-07-17",
+          "firstPublicationDate": "2013-07-17",
+          "firstIndexDate": "2013-07-19",
+          "fullTextReceivedDate": "2025-02-05",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

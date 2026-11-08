@@ -1,0 +1,756 @@
+{
+  "query": "Bar Yam Rabin Smith 1992 polymer dynamics local",
+  "consultedUrl": "https://api.crossref.org/works?query=Bar%20Yam%20Rabin%20Smith%201992%20polymer%20dynamics%20local&rows=3",
+  "checkedAt": "2026-11-05",
+  "items": [
+    {
+      "indexed": {
+        "date-parts": [
+          [
+            2023,
+            6,
+            9
+          ]
+        ],
+        "date-time": "2023-06-09T14:30:33Z",
+        "timestamp": 1686321033749
+      },
+      "reference-count": 14,
+      "publisher": "Springer Science and Business Media LLC",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2011,
+                2,
+                25
+              ]
+            ],
+            "date-time": "2011-02-25T00:00:00Z",
+            "timestamp": 1298592000000
+          },
+          "content-version": "unspecified",
+          "delay-in-days": 7360,
+          "URL": "https://www.cambridge.org/core/terms"
+        }
+      ],
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [
+        "MRS Proc."
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            1991
+          ]
+        ]
+      },
+      "abstract": "<jats:title>Abstract</jats:title><jats:p>In order to improve our ability to simulate the complex behavior of polymers, we introduce dynamical models in the class of Cellular Automata (CA). Space partitioning methods enable us to overcome fundamental obstacles to large scale simulation of connected chains with excluded volume by parallel processing computers. A highly efficient, two-space algorithm is devised and tested on both Cellular Automata Machines (CAMs) and serial computers. Preliminary results on the static and dynamic properties of polymers in two dimensions are reported.</jats:p>",
+      "DOI": "10.1557/proc-248-483",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2011,
+            3,
+            6
+          ]
+        ],
+        "date-time": "2011-03-06T01:33:34Z",
+        "timestamp": 1299375214000
+      },
+      "source": "Crossref",
+      "is-referenced-by-count": 4,
+      "title": [
+        "Cellular Automaton Simulation of Polymers"
+      ],
+      "prefix": "10.1557",
+      "volume": "248",
+      "author": [
+        {
+          "given": "M. A.",
+          "family": "Smith",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Y.",
+          "family": "Bar-Yam",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Y.",
+          "family": "Rabin",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "N.",
+          "family": "Margolus",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "T.",
+          "family": "Toffoli",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "C. H.",
+          "family": "Bennett",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "member": "297",
+      "published-online": {
+        "date-parts": [
+          [
+            2011,
+            2,
+            25
+          ]
+        ]
+      },
+      "reference": [
+        {
+          "key": "S1946427400482862_ref014",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1063/1.458541"
+        },
+        {
+          "key": "S1946427400482862_ref013",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/0010-4655(90)90047-5"
+        },
+        {
+          "key": "S1946427400482862_ref012",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1021/ma00187a030"
+        },
+        {
+          "key": "S1946427400482862_ref008",
+          "volume-title": "Cellular Automata",
+          "author": "Farmer",
+          "year": "1984"
+        },
+        {
+          "key": "S1946427400482862_ref005",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1063/1.4822889"
+        },
+        {
+          "key": "S1946427400482862_ref002",
+          "volume-title": "Theory of Polymer Dynamics",
+          "author": "Doi",
+          "year": "1986"
+        },
+        {
+          "key": "S1946427400482862_ref001",
+          "volume-title": "Scaling Concepts in Polymer Physics",
+          "author": "deGennes",
+          "year": "1979"
+        },
+        {
+          "key": "S1946427400482862_ref006",
+          "volume-title": "Theory and Applications of Cellular Automata",
+          "author": "Wolfram",
+          "year": "1986"
+        },
+        {
+          "key": "S1946427400482862_ref009",
+          "doi-asserted-by": "crossref",
+          "DOI": "10.7551/mitpress/1763.001.0001",
+          "volume-title": "Cellular Automata Machines: A New Environment for Modeling",
+          "author": "Toffoli",
+          "year": "1987"
+        },
+        {
+          "key": "S1946427400482862_ref003",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1017/CBO9781139167864"
+        },
+        {
+          "key": "S1946427400482862_ref007",
+          "unstructured": "7 Gardner M. , Mathematical Games, Sci. Amer. (Feb. Mar., Apr. 1971; Jan. 1972)"
+        },
+        {
+          "key": "S1946427400482862_ref011",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1103/PhysRevLett.64.1915"
+        },
+        {
+          "key": "S1946427400482862_ref004",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/978-3-642-82803-4"
+        },
+        {
+          "key": "S1946427400482862_ref010",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1088/0305-4470/23/10/010"
+        }
+      ],
+      "container-title": [
+        "MRS Proceedings"
+      ],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/S1946427400482862",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2021,
+            2,
+            24
+          ]
+        ],
+        "date-time": "2021-02-24T20:03:11Z",
+        "timestamp": 1614196991000
+      },
+      "score": 33.171913,
+      "resource": {
+        "primary": {
+          "URL": "http://link.springer.com/10.1557/PROC-248-483"
+        }
+      },
+      "issued": {
+        "date-parts": [
+          [
+            1991
+          ]
+        ]
+      },
+      "references-count": 14,
+      "alternative-id": [
+        "S1946427400482862"
+      ],
+      "URL": "https://doi.org/10.1557/proc-248-483",
+      "ISSN": [
+        "0272-9172",
+        "1946-4274"
+      ],
+      "issn-type": [
+        {
+          "value": "0272-9172",
+          "type": "print"
+        },
+        {
+          "value": "1946-4274",
+          "type": "electronic"
+        }
+      ],
+      "published": {
+        "date-parts": [
+          [
+            1991
+          ]
+        ]
+      },
+      "article-number": "483"
+    },
+    {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            10,
+            25
+          ]
+        ],
+        "date-time": "2026-10-25T15:00:37Z",
+        "timestamp": 1792940437969,
+        "version": "4.5.0"
+      },
+      "edition-number": "0",
+      "reference-count": 0,
+      "publisher": "CRC Press",
+      "isbn-type": [
+        {
+          "value": "9780429034961",
+          "type": "electronic"
+        }
+      ],
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "DOI": "10.1201/9780429034961",
+      "type": "book",
+      "created": {
+        "date-parts": [
+          [
+            2019,
+            10,
+            16
+          ]
+        ],
+        "date-time": "2019-10-16T10:40:52Z",
+        "timestamp": 1571222452000
+      },
+      "source": "Crossref",
+      "is-referenced-by-count": 89,
+      "title": [
+        "Dynamics Of Complex Systems"
+      ],
+      "prefix": "10.1201",
+      "author": [
+        {
+          "given": "Yaneer",
+          "family": "Bar-yam",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "301",
+      "published-online": {
+        "date-parts": [
+          [
+            2019,
+            3,
+            4
+          ]
+        ]
+      },
+      "language": "en",
+      "deposited": {
+        "date-parts": [
+          [
+            2021,
+            4,
+            4
+          ]
+        ],
+        "date-time": "2021-04-04T00:40:14Z",
+        "timestamp": 1617496814000
+      },
+      "score": 31.234386,
+      "resource": {
+        "primary": {
+          "URL": "https://www.taylorfrancis.com/books/9780429697586"
+        }
+      },
+      "issued": {
+        "date-parts": [
+          [
+            2019,
+            3,
+            4
+          ]
+        ]
+      },
+      "ISBN": [
+        "9780429034961"
+      ],
+      "references-count": 0,
+      "URL": "https://doi.org/10.1201/9780429034961",
+      "published": {
+        "date-parts": [
+          [
+            2019,
+            3,
+            4
+          ]
+        ]
+      }
+    },
+    {
+      "indexed": {
+        "date-parts": [
+          [
+            2022,
+            3,
+            29
+          ]
+        ],
+        "date-time": "2022-03-29T20:27:56Z",
+        "timestamp": 1648585676639
+      },
+      "reference-count": 20,
+      "publisher": "Elsevier BV",
+      "issue": "5",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2001,
+                4,
+                1
+              ]
+            ],
+            "date-time": "2001-04-01T00:00:00Z",
+            "timestamp": 986083200000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+        }
+      ],
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [
+        "Parallel Computing"
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            2001,
+            4
+          ]
+        ]
+      },
+      "DOI": "10.1016/s0167-8191(00)00081-8",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2002,
+            10,
+            14
+          ]
+        ],
+        "date-time": "2002-10-14T23:55:37Z",
+        "timestamp": 1034639737000
+      },
+      "page": "613-641",
+      "source": "Crossref",
+      "is-referenced-by-count": 6,
+      "title": [
+        "Cellular automata for polymer simulation with application to polymer melts and polymer collapse including implications for protein folding"
+      ],
+      "prefix": "10.1016",
+      "volume": "27",
+      "author": [
+        {
+          "given": "B.",
+          "family": "Ostrovsky",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "G.",
+          "family": "Crooks",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "M.A.",
+          "family": "Smith",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Y.",
+          "family": "Bar-Yam",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "member": "78",
+      "reference": [
+        {
+          "key": "10.1016/S0167-8191(00)00081-8_BIB1",
+          "series-title": "Dynamics of Complex Systems",
+          "author": "Bar-Yam",
+          "year": "1997"
+        },
+        {
+          "key": "10.1016/S0167-8191(00)00081-8_BIB2",
+          "doi-asserted-by": "crossref",
+          "unstructured": "K. Binder, (Ed.), Applications of Monte Carlo Methods in Statistical Physics, second ed., Springer, Berlin, 1987",
+          "DOI": "10.1007/978-3-642-51703-7"
+        },
+        {
+          "key": "10.1016/S0167-8191(00)00081-8_BIB3",
+          "doi-asserted-by": "crossref",
+          "first-page": "915",
+          "DOI": "10.1051/jphys:019900051010091500",
+          "article-title": "Static and dynamic properties of two-dimensional polymer melts",
+          "volume": "51",
+          "author": "Carmesin",
+          "year": "1990",
+          "journal-title": "J. Phys. France"
+        },
+        {
+          "key": "10.1016/S0167-8191(00)00081-8_BIB4",
+          "doi-asserted-by": "crossref",
+          "first-page": "447",
+          "DOI": "10.1146/annurev.bb.20.060191.002311",
+          "article-title": "Polymer principles in protein structure and stability",
+          "volume": "20",
+          "author": "Chan",
+          "year": "1991",
+          "journal-title": "Annu. Rev. Biophys. Biophys. Chem."
+        },
+        {
+          "key": "10.1016/S0167-8191(00)00081-8_BIB5",
+          "doi-asserted-by": "crossref",
+          "first-page": "4559",
+          "DOI": "10.1103/PhysRevE.60.4559",
+          "article-title": "Mesostructure of polymer collapse and fractal smoothing",
+          "volume": "60",
+          "author": "Crooks",
+          "year": "1999",
+          "journal-title": "Phys. Rev. E"
+        },
+        {
+          "key": "10.1016/S0167-8191(00)00081-8_BIB6",
+          "series-title": "Scaling Concepts in Polymer Physics",
+          "author": "de Gennes",
+          "year": "1979"
+        },
+        {
+          "key": "10.1016/S0167-8191(00)00081-8_BIB7",
+          "series-title": "Theory of Polymer Dynamics",
+          "author": "Doi",
+          "year": "1986"
+        },
+        {
+          "key": "10.1016/S0167-8191(00)00081-8_BIB8",
+          "unstructured": "G.D. Doolen, (Ed.), Lattice Gas Methods for Partial Differential Equations, Addison-Wesley, Reading, MA, 1990"
+        },
+        {
+          "key": "10.1016/S0167-8191(00)00081-8_BIB9",
+          "unstructured": "D. Farmer, T. Toffoli, S. Wolfram, (Eds.), Cellular Automata, North-Holland, Amsterdam, 1984"
+        },
+        {
+          "key": "10.1016/S0167-8191(00)00081-8_BIB10",
+          "doi-asserted-by": "crossref",
+          "first-page": "141",
+          "DOI": "10.1146/annurev.bb.24.060195.001041",
+          "article-title": "Thermodynamics of partly folded intermediates in proteins",
+          "volume": "24",
+          "author": "Freire",
+          "year": "1995",
+          "journal-title": "Annu. Rev. Biophys. Biomol. Struct."
+        },
+        {
+          "key": "10.1016/S0167-8191(00)00081-8_BIB11",
+          "doi-asserted-by": "crossref",
+          "first-page": "409",
+          "DOI": "10.1209/0295-5075/25/6/003",
+          "article-title": "Irreversible polymer collapse in 2 and 3 dimensions",
+          "volume": "25",
+          "author": "Ostrovsky",
+          "year": "1994",
+          "journal-title": "Europhys. Lett."
+        },
+        {
+          "key": "10.1016/S0167-8191(00)00081-8_BIB12",
+          "doi-asserted-by": "crossref",
+          "first-page": "1694",
+          "DOI": "10.1016/S0006-3495(95)80347-4",
+          "article-title": "Motion of polymer ends in homopolymer and heteropolymer collapse",
+          "volume": "68",
+          "author": "Ostrovsky",
+          "year": "1995",
+          "journal-title": "Biophys. J."
+        },
+        {
+          "key": "10.1016/S0167-8191(00)00081-8_BIB13",
+          "doi-asserted-by": "crossref",
+          "first-page": "239",
+          "DOI": "10.1146/annurev.bb.24.060195.001323",
+          "article-title": "Applications of parallel computing to biological problems",
+          "volume": "24",
+          "author": "Ostrovsky",
+          "year": "1995",
+          "journal-title": "Annu. Rev. Biophys. Biomol. Struct."
+        },
+        {
+          "key": "10.1016/S0167-8191(00)00081-8_BIB14",
+          "unstructured": "B. Ostrovsky, M.A. Smith, Y. Bar-Yam, Polymer interpenetration in 2D high density melts, Int. J. Polym. Complex Fluids (4) (1995)"
+        },
+        {
+          "key": "10.1016/S0167-8191(00)00081-8_BIB15",
+          "unstructured": "B. Ostrovsky, M.A. Smith, M. Biafore, Y. Bar-Yam, Y. Rabin, N. Margolus and T. Toffoli, Massively parallel architectures and polymer simulation, in: Proceedings of the Sixth SIAM Conference on Parallel Processing for Scientific Computing, 1993, p. 193"
+        },
+        {
+          "key": "10.1016/S0167-8191(00)00081-8_BIB16",
+          "unstructured": "M.A. Smith, Cellular automata methods in mathematical physics, Ph.D. Thesis, MIT, Cambridge, 1994"
+        },
+        {
+          "key": "10.1016/S0167-8191(00)00081-8_BIB17",
+          "doi-asserted-by": "crossref",
+          "unstructured": "M.A. Smith, Y. Bar-Yam, Y. Rabin, C.H. Bennett, N. Margolus, T. Toffoli, Cellular automata simulation of polymers, in: E.B. Sirota, D. Weitz, T. Witten, J. Israelachvili (Eds.), Complex Fluids, MRS Symposium Proceedings, vol. 248, 1992, p. 483",
+          "DOI": "10.1557/PROC-248-483"
+        },
+        {
+          "key": "10.1016/S0167-8191(00)00081-8_BIB18",
+          "first-page": "165",
+          "article-title": "Parallel processing simulation of polymers",
+          "volume": "2",
+          "author": "Smith",
+          "year": "1992",
+          "journal-title": "J. Comput. Polym. Sci."
+        },
+        {
+          "key": "10.1016/S0167-8191(00)00081-8_BIB19",
+          "series-title": "Cellular Automata Machines: A New Environment for Modeling",
+          "author": "Toffoli",
+          "year": "1987"
+        },
+        {
+          "key": "10.1016/S0167-8191(00)00081-8_BIB20",
+          "unstructured": "S. Wolfram, (Ed.), Theory and Applications of Cellular Automata, World Scientific, Singapore, 1986"
+        }
+      ],
+      "container-title": [
+        "Parallel Computing"
+      ],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://api.elsevier.com/content/article/PII:S0167819100000818?httpAccept=text/xml",
+          "content-type": "text/xml",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://api.elsevier.com/content/article/PII:S0167819100000818?httpAccept=text/plain",
+          "content-type": "text/plain",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2020,
+            1,
+            17
+          ]
+        ],
+        "date-time": "2020-01-17T00:27:26Z",
+        "timestamp": 1579220846000
+      },
+      "score": 29.311665,
+      "resource": {
+        "primary": {
+          "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0167819100000818"
+        }
+      },
+      "issued": {
+        "date-parts": [
+          [
+            2001,
+            4
+          ]
+        ]
+      },
+      "references-count": 20,
+      "journal-issue": {
+        "issue": "5",
+        "published-print": {
+          "date-parts": [
+            [
+              2001,
+              4
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "S0167819100000818"
+      ],
+      "URL": "https://doi.org/10.1016/s0167-8191(00)00081-8",
+      "ISSN": [
+        "0167-8191"
+      ],
+      "issn-type": [
+        {
+          "value": "0167-8191",
+          "type": "print"
+        }
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2001,
+            4
+          ]
+        ]
+      }
+    }
+  ]
+}

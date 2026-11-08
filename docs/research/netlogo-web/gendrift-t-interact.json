@@ -1,0 +1,103 @@
+{
+  "slug": "gendrift-t-interact",
+  "name": "GenDrift T interact",
+  "catalogPath": "Sample Models/Biology/Evolution/Genetic Drift/GenDrift T interact",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Evolution/Genetic%20Drift/GenDrift%20T%20interact.nlogox",
+  "deliveryBatch": "B08",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "Can a population lose diversity without any color being advantageous? NetLogo GenDrift T Interact starts moving agents with several colors; neighboring encounters cause one agent to copy another's color. Colors that disappear cannot return. Finite-population drift [1], spatial copying processes [2], and neutral evolutionary theory [3] frame the resulting fixation and regional differences. The model's walls can isolate groups, altering which agents can interact. Color copying stands in for inherited variation rather than explicitly modeling mating, chromosomes, or reproduction. Consensus in a connected run illustrates stochastic loss under the specified interaction rules. It does not identify an adaptive benefit, establish that every spatial arrangement reaches global consensus, or reproduce a calibrated genetic history.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Evolution/Genetic%20Drift/GenDrift%20T%20interact.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Evolution/Genetic%20Drift/GenDrift%20T%20interact.nlogox",
+    "revision": "Best available served NetLogo Web artifact retrieved on 2026-11-05; SHA-256 150d47b9fc00fcf8545030d8c14e6b579584dba4e0a9e0773e11b9771232af17",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served .nlogox downloaded; Info mechanism descriptions, credits and reference sections inspected. Procedures are not independently audited by this literature task. Source provenance is separate from City Library reimplementation and target-runtime verification.",
+    "evidenceFile": "evidence/biology/gendrift-t-interact.nlogox",
+    "infoFile": "evidence/biology/gendrift-t-interact-info.txt",
+    "originalModelCitation": "* Wilensky, U. (1997).  NetLogo GenDrift T interact model.  http://ccl.northwestern.edu/netlogo/models/GenDriftTinteract.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "notes": "Original/served model is the behavioral baseline. This research does not claim implementation or browser acceptance."
+  },
+  "publications": [
+    {
+      "id": "moran",
+      "authors": [
+        "P. A. P. Moran"
+      ],
+      "title": "Random processes in genetics",
+      "year": 1958,
+      "venue": "Mathematical Proceedings of the Cambridge Philosophical Society",
+      "doi": "10.1017/s0305004100033193",
+      "url": "https://doi.org/10.1017/s0305004100033193",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1017%2FS0305004100033193",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-abstract-and-metadata",
+        "access": "Publisher-deposited abstract and metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/moran-crossref-direct.json"
+      },
+      "verified": true,
+      "volume": "54",
+      "issue": "1",
+      "pages": "60-71",
+      "relevance": "Provides a finite-population neutral-drift framework for interpreting chance fixation."
+    },
+    {
+      "id": "clifford",
+      "authors": [
+        "PETER CLIFFORD",
+        "AIDAN SUDBURY"
+      ],
+      "title": "A model for spatial conflict",
+      "year": 1973,
+      "venue": "Biometrika",
+      "doi": "10.1093/biomet/60.3.581",
+      "url": "https://doi.org/10.1093/biomet/60.3.581",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=A+model+for+spatial+conflict&rows=4",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-metadata",
+        "access": "Crossref publisher-deposited metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/clifford-crossref-refined.json"
+      },
+      "verified": true,
+      "volume": "60",
+      "issue": "3",
+      "pages": "581-588",
+      "relevance": "A spatial copying/conflict process is mathematically close to neighboring agents adopting each other’s states."
+    },
+    {
+      "id": "kimura",
+      "authors": [
+        "MOTOO KIMURA"
+      ],
+      "title": "Evolutionary Rate at the Molecular Level",
+      "year": 1968,
+      "venue": "Nature",
+      "doi": "10.1038/217624a0",
+      "url": "https://doi.org/10.1038/217624a0",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Evolutionary+rate+at+the+molecular+level+Kimura+1968&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-metadata",
+        "access": "Crossref publisher-deposited metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/kimura-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2F217624a0%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/kimura-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "217",
+      "issue": "5129",
+      "pages": "624-626",
+      "relevance": "Distinguishes neutral change from adaptive selection, relevant to the absence of color fitness differences."
+    }
+  ],
+  "gaps": []
+}

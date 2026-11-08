@@ -1,0 +1,511 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.bibliographic=Signals+Brian+Skyrms+2010&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 4197541,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2022,
+                4,
+                2
+              ]
+            ],
+            "date-time": "2022-04-02T23:42:07Z",
+            "timestamp": 1648942927243
+          },
+          "reference-count": 0,
+          "publisher": "Oxford University Press (OUP)",
+          "issue": "3",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Analysis"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2011,
+                7,
+                1
+              ]
+            ]
+          },
+          "DOI": "10.1093/analys/anr054",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2011,
+                6,
+                14
+              ]
+            ],
+            "date-time": "2011-06-14T20:41:03Z",
+            "timestamp": 1308084063000
+          },
+          "page": "597-599",
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Signals: Evolution, Learning and Information * By BRIAN SKYRMS"
+          ],
+          "prefix": "10.1093",
+          "volume": "71",
+          "author": [
+            {
+              "given": "S.",
+              "family": "Huttegger",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "286",
+          "published-online": {
+            "date-parts": [
+              [
+                2011,
+                6,
+                14
+              ]
+            ]
+          },
+          "container-title": [
+            "Analysis"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://academic.oup.com/analysis/article-pdf/71/3/597/565685/anr054.pdf",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2017,
+                8,
+                22
+              ]
+            ],
+            "date-time": "2017-08-22T12:39:49Z",
+            "timestamp": 1503405589000
+          },
+          "score": 34.086052,
+          "resource": {
+            "primary": {
+              "URL": "https://academic.oup.com/analysis/article-lookup/doi/10.1093/analys/anr054"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2011,
+                6,
+                14
+              ]
+            ]
+          },
+          "references-count": 0,
+          "journal-issue": {
+            "issue": "3",
+            "published-online": {
+              "date-parts": [
+                [
+                  2011,
+                  7,
+                  5
+                ]
+              ]
+            },
+            "published-print": {
+              "date-parts": [
+                [
+                  2011,
+                  7,
+                  1
+                ]
+              ]
+            }
+          },
+          "URL": "https://doi.org/10.1093/analys/anr054",
+          "ISSN": [
+            "0003-2638",
+            "1467-8284"
+          ],
+          "issn-type": [
+            {
+              "value": "0003-2638",
+              "type": "print"
+            },
+            {
+              "value": "1467-8284",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2011,
+                6,
+                14
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2024,
+                5,
+                9
+              ]
+            ],
+            "date-time": "2024-05-09T20:44:07Z",
+            "timestamp": 1715287447241
+          },
+          "reference-count": 0,
+          "publisher": "The MIT Press",
+          "isbn-type": [
+            {
+              "value": "9780262259255",
+              "type": "electronic"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2009
+              ]
+            ]
+          },
+          "DOI": "10.7551/mitpress/8470.003.0009",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2018,
+                12,
+                14
+              ]
+            ],
+            "date-time": "2018-12-14T04:11:51Z",
+            "timestamp": 1544760711000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Brian Skyrms"
+          ],
+          "prefix": "10.7551",
+          "member": "281",
+          "container-title": [
+            "Why We Cooperate"
+          ],
+          "language": "en",
+          "deposited": {
+            "date-parts": [
+              [
+                2018,
+                12,
+                14
+              ]
+            ],
+            "date-time": "2018-12-14T04:11:57Z",
+            "timestamp": 1544760717000
+          },
+          "score": 33.971684,
+          "resource": {
+            "primary": {
+              "URL": "https://direct.mit.edu/books/book/2353/chapter/61857/brian-skyrms"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2009
+              ]
+            ]
+          },
+          "ISBN": [
+            "9780262259255"
+          ],
+          "references-count": 0,
+          "URL": "https://doi.org/10.7551/mitpress/8470.003.0009",
+          "published": {
+            "date-parts": [
+              [
+                2009
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                16
+              ]
+            ],
+            "date-time": "2026-10-16T18:04:59Z",
+            "timestamp": 1792173899566,
+            "version": "4.4.0"
+          },
+          "reference-count": 8,
+          "publisher": "Oxford University Press (OUP)",
+          "issue": "480",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Mind"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2011,
+                10,
+                1
+              ]
+            ]
+          },
+          "DOI": "10.1093/mind/fzs002",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2012,
+                4,
+                8
+              ]
+            ],
+            "date-time": "2012-04-08T03:48:29Z",
+            "timestamp": 1333856909000
+          },
+          "page": "1288-1297",
+          "source": "Crossref",
+          "is-referenced-by-count": 34,
+          "title": [
+            "Signals: Evolution, Learning, and Information, by Brian Skyrms."
+          ],
+          "prefix": "10.1093",
+          "volume": "120",
+          "author": [
+            {
+              "given": "P.",
+              "family": "Godfrey-Smith",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "286",
+          "published-online": {
+            "date-parts": [
+              [
+                2012,
+                4,
+                5
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "key": "1_42328645",
+              "doi-asserted-by": "crossref",
+              "first-page": "79",
+              "DOI": "10.1006/game.2000.0830",
+              "volume": "37",
+              "year": "2001",
+              "journal-title": "GAMES AND ECONOMIC BEHAVIOR"
+            },
+            {
+              "key": "2_42328646",
+              "first-page": "1",
+              "volume": "15",
+              "year": "2011",
+              "journal-title": "BIOLOGY AND PHILOSOPHY"
+            },
+            {
+              "key": "3_24038960",
+              "doi-asserted-by": "crossref",
+              "first-page": "1431",
+              "DOI": "10.2307/1913390",
+              "volume": "50",
+              "year": "1982",
+              "ISSN": "https://id.crossref.org/issn/0012-9682",
+              "issn-type": "print"
+            },
+            {
+              "key": "10_33727775",
+              "doi-asserted-by": "crossref",
+              "first-page": "409",
+              "DOI": "10.1007/s10670-006-9022-1",
+              "volume": "66",
+              "year": "2007",
+              "journal-title": "ERKENNTNIS"
+            },
+            {
+              "key": "11_30700465",
+              "doi-asserted-by": "crossref",
+              "first-page": "575",
+              "DOI": "10.1086/392661",
+              "volume": "65",
+              "year": "1998",
+              "ISSN": "https://id.crossref.org/issn/0031-8248",
+              "issn-type": "print"
+            },
+            {
+              "key": "16_42328647",
+              "doi-asserted-by": "crossref",
+              "first-page": "550",
+              "DOI": "10.1086/289205",
+              "volume": "51",
+              "year": "1984",
+              "ISSN": "https://id.crossref.org/issn/0031-8248",
+              "issn-type": "print"
+            },
+            {
+              "key": "17_42328648",
+              "doi-asserted-by": "crossref",
+              "first-page": "379",
+              "DOI": "10.1002/j.1538-7305.1948.tb01338.x",
+              "volume": "27",
+              "year": "1948",
+              "journal-title": "THE BELL SYSTEM MATHEMATICAL JOURNAL"
+            },
+            {
+              "key": "21_42328649",
+              "doi-asserted-by": "crossref",
+              "first-page": "158",
+              "DOI": "10.5840/jphil201110839",
+              "volume": "108",
+              "year": "2011",
+              "ISSN": "https://id.crossref.org/issn/0022-362X",
+              "issn-type": "print"
+            }
+          ],
+          "container-title": [
+            "Mind"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://academic.oup.com/mind/article-pdf/120/480/1288/2812688/fzs002.pdf",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2017,
+                8,
+                23
+              ]
+            ],
+            "date-time": "2017-08-23T17:06:57Z",
+            "timestamp": 1503508017000
+          },
+          "score": 33.61249,
+          "resource": {
+            "primary": {
+              "URL": "https://academic.oup.com/mind/article-lookup/doi/10.1093/mind/fzs002"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2011,
+                10,
+                1
+              ]
+            ]
+          },
+          "references-count": 8,
+          "journal-issue": {
+            "issue": "480",
+            "published-online": {
+              "date-parts": [
+                [
+                  2012,
+                  6,
+                  12
+                ]
+              ]
+            },
+            "published-print": {
+              "date-parts": [
+                [
+                  2011,
+                  10,
+                  1
+                ]
+              ]
+            }
+          },
+          "URL": "https://doi.org/10.1093/mind/fzs002",
+          "ISSN": [
+            "0026-4423",
+            "1460-2113"
+          ],
+          "issn-type": [
+            {
+              "value": "0026-4423",
+              "type": "print"
+            },
+            {
+              "value": "1460-2113",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2011,
+                10,
+                1
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

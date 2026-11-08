@@ -1,0 +1,187 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1086%2F415929%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1086/415929\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "3059390",
+          "source": "MED",
+          "pmid": "3059390",
+          "doi": "10.1086/415929",
+          "title": "Synchronous rhythmic flashing of fireflies. II.",
+          "authorString": "Buck J.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Buck J",
+                "lastName": "Buck",
+                "firstName": "J",
+                "initials": "J",
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Laboratory of Physical Biology, National Institutes of Health, Bethesda, Maryland 20892."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "journalInfo": {
+            "issue": "3",
+            "volume": "63",
+            "journalIssueId": 615959,
+            "dateOfPublication": "1988 Sep",
+            "monthOfPublication": 9,
+            "yearOfPublication": 1988,
+            "journal": {
+              "medlineAbbreviation": "Q Rev Biol",
+              "title": "The Quarterly review of biology",
+              "essn": "1539-7718",
+              "issn": "0033-5770",
+              "nlmid": "0376515",
+              "isoabbreviation": "Q Rev Biol"
+            },
+            "printPublicationDate": "1988-09-01"
+          },
+          "pubYear": "1988",
+          "pageInfo": "265-289",
+          "abstractText": "Synchronized flashing by males of some firefly species involves a capacity for visually coordinated, rhythmically coincident, inter-individual behavior that is apparently unique in the animal kingdom except for a few other arthropods and for man. This paper reviews (1) diverse communicative interactions that have evolved from elementary photic signals, (2) physiological mechanisms of synchronism, and (3) theories about its biological meaning. Work of the past 20 years shows that flash synchrony is widespread geographically and taxonomically, appears in an astonishing range of spectacular display types, utilizes several neural flash-control mechanisms and is pervasively but enigmatically involved in courtship. No proposed function for synchrony has been fully established but theory and physiology concur in indicating that synchrony aids male orientation toward the female, female recognition of male flashing, or both. Increased mate choice for the female is one likely ultimate benefit.",
+          "affiliation": "Laboratory of Physical Biology, National Institutes of Health, Bethesda, Maryland 20892.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Review",
+              "Journal Article"
+            ]
+          },
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Animals"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Luminescent Measurements"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Behavior, Animal",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "N",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Periodicity"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Models, Biological"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Female"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Male"
+              },
+              {
+                "majorTopic_YN": "N",
+                "descriptorName": "Coleoptera",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "majorTopic_YN": "Y",
+                      "abbreviation": "PH",
+                      "qualifierName": "physiology"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "pdf",
+                "site": "Unpaywall",
+                "url": "http://www.math.pitt.edu/~bard/bardware/classes/mth3380/syncpapers/buck88.pdf"
+              },
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1086/415929"
+              }
+            ]
+          },
+          "commentCorrectionList": {
+            "commentCorrection": [
+              {
+                "source": "MED",
+                "reference": "Q Rev Biol 1989 Jun;64(2):146",
+                "type": "Erratum in",
+                "orderIn": 1
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "citedByCount": 233,
+          "hasReferences": "N",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "N",
+          "hasData": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "1989-01-18",
+          "dateOfCreation": "1988-09-01",
+          "dateOfRevision": "2019-10-29",
+          "firstPublicationDate": "1988-09-01",
+          "firstIndexDate": "2008-01-29",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "slug": "algae",
+  "name": "Algae",
+  "catalogPath": "Sample Models/Biology/Unverified/Algae",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Unverified/Algae.nlogox",
+  "deliveryBatch": "B10",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "How can an organism balance light near the surface against nutrients deeper in water? NetLogo Algae represents a vertical aquatic column where algae change density as light-driven storage and metabolism alter their buoyancy. Research on vertical migration [1], buoyancy structures [2], and competition under mixing [3] provides scientific context. The Info traces the model to an Allan Konopka workshop prototype. Its density bookkeeping, light distribution, and resource rules are simplified, and the model does not resolve lake hydrodynamics or full cellular physiology. Repeated movement illustrates one possible response to opposing resource gradients. It does not establish a calibrated migration cycle, explain all phytoplankton strategies, or predict a specific lake's bloom dynamics.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Unverified/Algae.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Unverified/Algae.nlogox",
+    "revision": "Best available served NetLogo Web artifact retrieved on 2026-11-05; SHA-256 cc5e6f85951b49972fb7b896a0e2a7ecbcfc27150f51b88b45a66aaf17a3e2e1",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served .nlogox downloaded; Info mechanism descriptions, credits and reference sections inspected. Procedures are not independently audited by this literature task. Source provenance is separate from City Library reimplementation and target-runtime verification.",
+    "evidenceFile": "evidence/biology/algae.nlogox",
+    "infoFile": "evidence/biology/algae-info.txt",
+    "originalModelCitation": "* Wilensky, U. (2005).  NetLogo Algae model.  http://ccl.northwestern.edu/netlogo/models/Algae.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "notes": "Original/served model is the behavioral baseline. This research does not claim implementation or browser acceptance."
+  },
+  "publications": [
+    {
+      "id": "konopka",
+      "authors": [
+        "Allan Konopka"
+      ],
+      "title": "Buoyancy regulation and vertical migration by Oscillatoria rubescens in Crooked Lake, Indiana",
+      "year": 1982,
+      "venue": "British Phycological Journal",
+      "doi": "10.1080/00071618200650451",
+      "url": "https://doi.org/10.1080/00071618200650451",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Buoyancy+regulation+and+vertical+migration+by+Oscillatoria+rubescens&rows=4",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-metadata",
+        "access": "Crossref publisher-deposited metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/konopka-crossref-refined.json"
+      },
+      "verified": true,
+      "volume": "17",
+      "issue": "4",
+      "pages": "427-442",
+      "relevance": "Studies buoyancy regulation and vertical migration, directly matching the model’s light–nutrient tradeoff."
+    },
+    {
+      "id": "walsby",
+      "authors": [
+        "A E Walsby"
+      ],
+      "title": "Gas vesicles",
+      "year": 1994,
+      "venue": "Microbiological Reviews",
+      "doi": "10.1128/mr.58.1.94-144.1994",
+      "url": "https://doi.org/10.1128/mr.58.1.94-144.1994",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1128%2Fmr.58.1.94-144.1994",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/walsby-crossref-direct.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1128%2Fmr.58.1.94-144.1994%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/walsby-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "58",
+      "issue": "1",
+      "pages": "94-144",
+      "relevance": "Reviews gas-vesicle biology and buoyancy mechanisms, providing context for the simplified density variable."
+    },
+    {
+      "id": "huisman",
+      "authors": [
+        "Jef Huisman",
+        "Jonathan Sharples",
+        "Jasper M. Stroom",
+        "Petra M. Visser",
+        "W. Edwin A. Kardinaal",
+        "Jolanda M. H. Verspagen",
+        "Ben Sommeijer"
+      ],
+      "title": "CHANGES IN TURBULENT MIXING SHIFT COMPETITION FOR LIGHT BETWEEN PHYTOPLANKTON SPECIES",
+      "year": 2004,
+      "venue": "Ecology",
+      "doi": "10.1890/03-0763",
+      "url": "https://doi.org/10.1890/03-0763",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=Changes+in+turbulent+mixing+shift+competition+for+light+between+phytoplankton+species+Huisman+2004&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "primary-registrant-metadata-and-institutional-abstract",
+        "access": "Crossref metadata and Europe PMC/PubMed abstract accessible; publisher full text/paywall not inferred from repository access.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/huisman-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1890%2F03-0763%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/huisman-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "85",
+      "issue": "11",
+      "pages": "2960-2970",
+      "relevance": "Examines mixing and light competition, exposing an important environmental driver beyond this simplified column."
+    }
+  ],
+  "gaps": []
+}

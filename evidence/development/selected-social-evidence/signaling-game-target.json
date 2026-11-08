@@ -1,0 +1,193 @@
+{
+  "marker": "selected-social-b02:signaling-game:399be72f527afb3d0e9ba27969d1a25e8a94364358aca2e707f0b01f24009bf5",
+  "chunk": "http://localhost:3112/chunks/ui-5jw8ta77.js",
+  "chunks": [
+    {
+      "url": "http://localhost:3112/chunks/ui-5jw8ta77.js",
+      "sha256": "766d7051f0922284a445430989a32473a94f08d33e1da330b50ff3073ca25e1b"
+    },
+    {
+      "url": "http://localhost:3112/chunks/app-cakyt1j7.js",
+      "sha256": "97a2f893efa8c3e92a3bfe5c5cf6ec5967996ce836f64e0c5cae4050a4d58470"
+    }
+  ],
+  "buildVersion": "1793960930389",
+  "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+  "defaults": {
+    "seed": 1,
+    "numberOfStates": 2,
+    "numberOfSignals": 2,
+    "printProbabilities": true
+  },
+  "setupTick": 0,
+  "setupMonitors": {
+    "Tick": "0",
+    "Probability of success": "50.00%",
+    "Correct": "0",
+    "Wrong": "0",
+    "Success rate": "—"
+  },
+  "setupStatus": "Model initialized.",
+  "setupRaster": [
+    {
+      "width": 2140,
+      "height": 1020,
+      "sampledColors": 1
+    },
+    {
+      "width": 2140,
+      "height": 1020,
+      "sampledColors": 1
+    },
+    {
+      "width": 2140,
+      "height": 1020,
+      "sampledColors": 28
+    }
+  ],
+  "duplicateFields": [],
+  "errors": [],
+  "targetProbeTick": 10,
+  "progressMonitors": {
+    "Tick": "10",
+    "Probability of success": "50.07%",
+    "Correct": "7",
+    "Wrong": "3",
+    "Success rate": "70.00%"
+  },
+  "status": "Steps completed.",
+  "historyLength": 11,
+  "diagnostic": null,
+  "raster": [
+    {
+      "width": 2140,
+      "height": 1020,
+      "sampledColors": 1
+    },
+    {
+      "width": 2140,
+      "height": 1020,
+      "sampledColors": 1
+    },
+    {
+      "width": 2140,
+      "height": 1020,
+      "sampledColors": 44
+    }
+  ],
+  "mobileLight": {
+    "viewport": [
+      390,
+      844
+    ],
+    "scrollWidth": 390,
+    "overflow": false,
+    "background": "rgb(255, 255, 255)",
+    "raster": [
+      {
+        "width": 712,
+        "height": 764,
+        "sampledColors": 1
+      },
+      {
+        "width": 712,
+        "height": 764,
+        "sampledColors": 1
+      },
+      {
+        "width": 712,
+        "height": 764,
+        "sampledColors": 84
+      }
+    ]
+  },
+  "uiChecks": {
+    "run": true,
+    "paused": true,
+    "running": {
+      "Tick": "16",
+      "Probability of success": "51.34%",
+      "Correct": "12",
+      "Wrong": "4",
+      "Success rate": "75.00%"
+    },
+    "pause": {
+      "Tick": "16",
+      "Probability of success": "51.34%",
+      "Correct": "12",
+      "Wrong": "4",
+      "Success rate": "75.00%"
+    },
+    "stable": {
+      "Tick": "16",
+      "Probability of success": "51.34%",
+      "Correct": "12",
+      "Wrong": "4",
+      "Success rate": "75.00%"
+    },
+    "actions": [
+      {
+        "label": "Print probabilities",
+        "enabled": true,
+        "monitors": {
+          "Tick": "16",
+          "Probability of success": "51.34%",
+          "Correct": "12",
+          "Wrong": "4",
+          "Success rate": "75.00%"
+        },
+        "status": "Action completed."
+      }
+    ],
+    "liveTest": {
+      "name": "live-printProbabilities",
+      "before": true,
+      "changed": false,
+      "afterSetup": false,
+      "status": "Model initialized.",
+      "resetMonitors": {
+        "Tick": "0",
+        "Probability of success": "50.00%",
+        "Correct": "0",
+        "Wrong": "0",
+        "Success rate": "—"
+      }
+    },
+    "resetMonitors": {
+      "Tick": "0",
+      "Probability of success": "50.00%",
+      "Correct": "0",
+      "Wrong": "0",
+      "Success rate": "—"
+    },
+    "infoHasOriginal": true,
+    "inspector": null,
+    "errors": [],
+    "unlabeled": [],
+    "overflow": false
+  },
+  "publicBrowserProbe": {
+    "slug": "signaling-game",
+    "assertions": 304,
+    "evidence": {
+      "tick": 100,
+      "correct": 73,
+      "terminalTick": 4373,
+      "terminalProbability": 0.9900006220343336
+    }
+  },
+  "keyboardFocus": {
+    "tag": "BUTTON",
+    "text": "Run",
+    "outlineStyle": "solid",
+    "outlineWidth": "2px",
+    "focusedVisible": true
+  },
+  "images": {
+    "setup-light": "signaling-game-target-setup-light.png",
+    "progress-light": "signaling-game-target-progress-light.png",
+    "desktop-dark": "signaling-game-target-desktop-dark.png",
+    "mobile-light": "signaling-game-target-mobile-light.png",
+    "mobile-dark": "signaling-game-target-mobile-dark.png"
+  }
+}

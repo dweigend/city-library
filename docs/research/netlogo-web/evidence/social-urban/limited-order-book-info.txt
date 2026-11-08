@@ -1,0 +1,109 @@
+## WHAT IS IT?
+
+This model aims to reproduce phenomena that emerge in modern-day cryptocurrency markets, but is general enough to model any resource traded using the concept of a limited order book. A Limited Order Book is a simple idea: it is a record of outstanding limit orders maintained by a stock exchange. A limit order is a type of order to buy or sell a security at a specific price or better. The simple act of buying and selling in this manner creates complex behaviors at the level of the exchange.
+
+## HOW IT WORKS
+
+In this model, each trader holds some `cash`, some tokens (`stockpile`), and trades in the same limited order book. Tokens can be thought of as any tradable good, such as gold, silver, oil, stocks, or cryptocurrency such as Bitcoin or Ethereum. Each trader also holds a firm and constant `belief` in the value of tokens, which is randomly set somewhere in the interval [initial-belief / 2, initial-belief] during the initialization of the model.
+
+Time is split into multiple slices and represented as ticks. In each tick, each trader uses a pre-determined strategy to put limited orders on the market. Then, the matchmaking process starts between buyers and sellers. First, we create two empty lists to store pending orders. Then, since we assume that each trader has an equal opportunity of trading, we match each order randomly, during which:
+
+1. If it is a SELL order, we try to find if any of the unmatched BUY orders at the stated sale price or higher. If so, we will execute the order sale at the highest possible price and the two parties will exchange tokens and cash.
+2. We repeat this process until there are no remaining matching BUY orders or the selling order is completely executed (this means if you sell 100 tokens, they might not all sell to the same buyer).
+2. If the SELL order is not fully executed, we will put it into the unmatched list for selling orders, waiting for other buying orders to pick it up.
+
+For BUY orders, we go through the same process but with an opposite bias. In other words, we try to match BUY orders to _cheaper_ prices.
+
+Consequently, the market price of the token, as well as the other information available in the market, is calculated and provided to traders in the next tick.
+
+In this fairly simplified model, we only implement two simple trading strategies.
+
+The first one is called "honest", in which the trader will always try to buy and sell tokens at a price according to his/her belief of the value of that token.
+
+The second strategy we call "cunning" and is slightly more complicated. Here, the trader will always buy with a price of either the best-selling-price or their belief (whichever is smaller) and sell with a price of either the best-buying-price or their belief (whichever is larger).
+
+Note that after the matchmaking process, both strategies will cancel unfulfilled orders and issue new ones rather than keeping the orders on the exchange.
+
+## HOW TO USE IT
+
+### Basic Usage
+* SETUP button resets the model.
+* GO button allows the model to continuously simulate the market.
+* GO-ONCE button asks the model to simulate the market for 1 tick.
+
+### Parameters
+The following parameters affect how the market works in this model.
+
+* The TRADE-PRECISION slider sets the maximum precision for the number of tokens for each trade. For example, if you set it to 0, the minimum trade unit would be 10^0 = 1. If you set it to 1, the minimum trade unit would be 10^(-1) = 0.1. Default is 1. This models the fact that these currencies are often sold in very small units.
+* The HONEST-TRADERS slider determines how many traders with the "honest" strategy will be spawned during the setup process.
+* The CUNNING-TRADERS slider determines how many traders with the "cunning" strategy will be spawned during the setup process.
+
+The below parameters all set the maximum amount of CASH, TOKENS, and BELIEF for each agent. Each is initialized according to a random draw from a uniform distribution on the interval [amount/2, amount]:
+* The INITIAL-CASH slider sets the maximum cash each trader will receive when the model is initialized.
+* The INITIAL-TOKENS slider sets the maximum tokens each trader will receive when the model is initialized.
+* The INITIAL-BELIEF slider determines the maximum initial BELIEF of each trader.
+
+### Plots and Monitors
+The plots and monitors give you a set of tools to measure the market as it transacts.
+
+* The **Trading Prices** plot allows you to watch the daily trading prices.
+* The **Average Utilities Gain** plot allows you to follow the _average utility gain_ of traders with different strategies. Utility, in this model, is defined as the sum of cash and value of the stockpile (cash + belief * stockpile).
+
+## THINGS TO NOTICE
+
+* Notice that trading seems to stop only a few hundred ticks into running the model. Why might that be the case? How might you make trading continue longer without changing the code of the model?
+* Notice that the sum of each traders' utilities is increasing, no matter how many honest or cunning traders are spawned. Why might this  happen? Does everyone in the market equally share the gains? Why or why not?
+
+## THINGS TO TRY
+
+* **Make all traders honest or cunning.** How fast do traders stop trading in each of these situations?
+* **Try to mix honest traders with cunning ones.** What happened to the utility gains relative to each other. Why does that occur?
+* **Try first giving traders lots of CASH. Then trying giving traders lots of TOKENS.** How does the market behave differently across these two scenarios?
+
+## EXTENDING THE MODEL
+
+Try to create a more complicated trading strategy (there are a ton of possibilities)!
+
+* You could try to allow traders to trade more than 1 unit of TOKENS each trade.
+* You could also try to allow traders to change their belief in the value of the token according to some random factors or through watching the market dynamics.
+
+## NETLOGO FEATURES
+
+While in many NetLogo models we want to ask turtles to do things in a random order to not introduce bias toward particular turtles, here we use `foreach sort-on [who] traders` so that the traders are deterministically called by their `who` property and always rendered in the same order.This feature enables you to dynamically introduce traders into the model and keep its visualization stable and intact.
+
+## RELATED MODELS
+
+See the Bidding Market, simple economy, and Sugarscape models to explore more market or economy-related models.
+
+## REFERENCES
+
+1. Baker, J. and Wilensky, U. (2017). NetLogo Bidding Market model. http://ccl.northwestern.edu/netlogo/models/BiddingMarket. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
+2. Chen, J. (2021). Cryptocurrency Trading Model. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
+
+## HOW TO CITE
+
+If you mention this model or the NetLogo software in a publication, we ask that you include the citations below.
+
+For the model itself:
+
+* Chen, J. and Wilensky, U. (2021).  NetLogo Limited Order Book model.  http://ccl.northwestern.edu/netlogo/models/LimitedOrderBook.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
+
+Please cite the NetLogo software as:
+
+* Wilensky, U. (1999). NetLogo. http://ccl.northwestern.edu/netlogo/. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
+
+This model was developed as part of the Spring 2021 Multi-agent Modeling course offered by Dr. Uri Wilensky at Northwestern University. For more info, visit http://ccl.northwestern.edu/courses/mam/. Special thanks to Teaching Assistants Jacob Kelter, Leif Rasmussen, and Connor Bain.
+
+## COPYRIGHT AND LICENSE
+
+Copyright 2021 Uri Wilensky.
+
+![CC BY-NC-SA 3.0](http://ccl.northwestern.edu/images/creativecommons/byncsa.png)
+
+This model is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License.  To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
+
+NetLogo itself is free software for non-commercial use under the terms of the GNU General Public License ([see full license information here](https://ccl.northwestern.edu/netlogo/docs/copyright.html)).
+
+To inquire about commercial licenses for either NetLogo or specific models from the models library, please contact netlogo-commercial-admin@ccl.northwestern.edu.
+
+<!-- 2021 MAM2021 Cite: Chen, J. -->

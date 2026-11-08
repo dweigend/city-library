@@ -1,5 +1,5 @@
 import type { Agent } from "./agent.ts";
-import { requireAgent, requireLivingAgent } from "./lifecycle.ts";
+import { notifyMovement, requireAgent, requireLivingAgent } from "./lifecycle.ts";
 import { validateOptions } from "./state.ts";
 import {
   axes,
@@ -144,6 +144,7 @@ export function createSpatial(agent: Agent, options: SpatialOptions) {
         : to
       : relativePosition(coordinates, by!, space);
     coordinates = next;
+    notifyMovement(agent);
   } as SpatialMethods["move"];
   const methods: SpatialMethods = {
     move,

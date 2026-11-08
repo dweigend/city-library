@@ -1,0 +1,454 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.bibliographic=Governing+the+Commons+Ostrom+1990&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 1417640,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                11,
+                5
+              ]
+            ],
+            "date-time": "2026-11-05T15:35:01Z",
+            "timestamp": 1793892901535,
+            "version": "4.8.0"
+          },
+          "edition-number": "1",
+          "reference-count": 0,
+          "publisher": "Cambridge University Press",
+          "isbn-type": [
+            {
+              "value": "9780521371018",
+              "type": "print"
+            },
+            {
+              "value": "9780521405997",
+              "type": "print"
+            },
+            {
+              "value": "9780511807763",
+              "type": "electronic"
+            }
+          ],
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2012,
+                    6,
+                    5
+                  ]
+                ],
+                "date-time": "2012-06-05T00:00:00Z",
+                "timestamp": 1338854400000
+              },
+              "content-version": "unspecified",
+              "delay-in-days": 7858,
+              "URL": "https://www.cambridge.org/core/terms"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                1990,
+                11,
+                30
+              ]
+            ]
+          },
+          "DOI": "10.1017/cbo9780511807763",
+          "type": "monograph",
+          "created": {
+            "date-parts": [
+              [
+                2012,
+                6,
+                17
+              ]
+            ],
+            "date-time": "2012-06-17T19:31:20Z",
+            "timestamp": 1339961480000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 18694,
+          "title": [
+            "Governing the Commons"
+          ],
+          "prefix": "10.1017",
+          "author": [
+            {
+              "given": "Elinor",
+              "family": "Ostrom",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "56",
+          "published-online": {
+            "date-parts": [
+              [
+                2012,
+                6,
+                5
+              ]
+            ]
+          },
+          "deposited": {
+            "date-parts": [
+              [
+                2019,
+                11,
+                28
+              ]
+            ],
+            "date-time": "2019-11-28T02:18:07Z",
+            "timestamp": 1574907487000
+          },
+          "score": 43.310432,
+          "resource": {
+            "primary": {
+              "URL": "https://www.cambridge.org/core/product/identifier/9780511807763/type/book"
+            }
+          },
+          "subtitle": [
+            "The Evolution of Institutions for Collective Action"
+          ],
+          "issued": {
+            "date-parts": [
+              [
+                1990,
+                11,
+                30
+              ]
+            ]
+          },
+          "ISBN": [
+            "9780521371018",
+            "9780521405997",
+            "9780511807763"
+          ],
+          "references-count": 0,
+          "URL": "https://doi.org/10.1017/cbo9780511807763",
+          "published": {
+            "date-parts": [
+              [
+                1990,
+                11,
+                30
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                18
+              ]
+            ],
+            "date-time": "2026-09-18T18:15:24Z",
+            "timestamp": 1789755324596,
+            "version": "4.0.1"
+          },
+          "publisher-location": "Wiesbaden",
+          "reference-count": 6,
+          "publisher": "VS Verlag f\u00fcr Sozialwissenschaften",
+          "isbn-type": [
+            {
+              "value": "9783531140056",
+              "type": "print"
+            },
+            {
+              "value": "9783531904009",
+              "type": "electronic"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "DOI": "10.1007/978-3-531-90400-9_93",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2008,
+                5,
+                8
+              ]
+            ],
+            "date-time": "2008-05-08T07:50:20Z",
+            "timestamp": 1210233020000
+          },
+          "page": "349-352",
+          "source": "Crossref",
+          "is-referenced-by-count": 21,
+          "title": [
+            "Elinor Ostrom, Governing the Commons. The Evolution of Institutions for Collective Action, Cambridge 1990"
+          ],
+          "prefix": "10.1007",
+          "author": [
+            {
+              "given": "Paul",
+              "family": "Kevenh\u00f6rster",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "reference": [
+            {
+              "key": "93_CR1",
+              "unstructured": "Peter J. Boettke (Hrsg.), Polycentric Political Economy: A Festschrift for Elinor and Vincent Ostrom, Amsterdam 2005."
+            },
+            {
+              "key": "93_CR2",
+              "doi-asserted-by": "publisher",
+              "first-page": "1243",
+              "DOI": "10.1126/science.162.3859.1243",
+              "volume": "162",
+              "author": "G. Hardin",
+              "year": "1968",
+              "unstructured": "Garrett Hardin, The Tragedy of the Commons, in: Science 162 (1968), S. 1243\u20131248.",
+              "journal-title": "Science"
+            },
+            {
+              "key": "93_CR3",
+              "doi-asserted-by": "publisher",
+              "first-page": "622",
+              "DOI": "10.2307/1342203",
+              "volume": "111",
+              "author": "M. A. Heller",
+              "year": "1998",
+              "unstructured": "Michael A. Heller, The Tragedy of the Anticommons: Property in the Transition from Marx to Markets, in: Harvard Law Review 111 (1998), S. 622\u2013688.",
+              "journal-title": "Harvard Law Review"
+            },
+            {
+              "key": "93_CR4",
+              "unstructured": "Elinor Ostrom, Institutionelle Arrangements und das Dilemma der Ahmende, in: Manfred Glagow/ Helmut Willke/ Helmut Wiesenthal (Hrsg.), Gesellschaftliche Steuerungsrationalit\u00e4t und partikulare Handlungsstrategien, Pfaffenweiler 1989, S. 199\u2013234."
+            },
+            {
+              "key": "93_CR5",
+              "doi-asserted-by": "publisher",
+              "first-page": "493",
+              "DOI": "10.1146/annurev.polisci.2.1.493",
+              "volume": "2",
+              "author": "E. Ostrom",
+              "year": "1999",
+              "unstructured": "Elinor Ostrom, Coping with Tragedies of the Commons, in: Annual Review of Political Science 2 (1999), S. 493\u2013535.",
+              "journal-title": "Annual Review of Political Science"
+            },
+            {
+              "key": "93_CR6",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Elinor Ostrom/ Roy Gardner/ James Walker, Rules, Games, and Common-Pool Resources, Ann Arbor 1994.",
+              "DOI": "10.3998/mpub.9739"
+            }
+          ],
+          "container-title": [
+            "Schl\u00fcsselwerke der Politikwissenschaft"
+          ],
+          "language": "de",
+          "link": [
+            {
+              "URL": "http://link.springer.com/content/pdf/10.1007/978-3-531-90400-9_93.pdf",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2021,
+                5,
+                3
+              ]
+            ],
+            "date-time": "2021-05-03T02:12:18Z",
+            "timestamp": 1620007938000
+          },
+          "score": 38.006645,
+          "resource": {
+            "primary": {
+              "URL": "http://link.springer.com/10.1007/978-3-531-90400-9_93"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                null
+              ]
+            ]
+          },
+          "ISBN": [
+            "9783531140056",
+            "9783531904009"
+          ],
+          "references-count": 6,
+          "URL": "https://doi.org/10.1007/978-3-531-90400-9_93"
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2024,
+                9,
+                12
+              ]
+            ],
+            "date-time": "2024-09-12T08:32:27Z",
+            "timestamp": 1726129947848
+          },
+          "publisher-location": "New York",
+          "edition-number": "2",
+          "reference-count": 0,
+          "publisher": "Routledge",
+          "isbn-type": [
+            {
+              "type": "electronic",
+              "value": "9781003047162"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2021,
+                7,
+                5
+              ]
+            ]
+          },
+          "DOI": "10.4324/9781003047162-15",
+          "type": "book-chapter",
+          "created": {
+            "date-parts": [
+              [
+                2021,
+                7,
+                5
+              ]
+            ],
+            "date-time": "2021-07-05T09:33:38Z",
+            "timestamp": 1625477618000
+          },
+          "page": "177-206",
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Elinor Ostrom, Governing the Commons (1990)*"
+          ],
+          "prefix": "10.4324",
+          "author": [
+            {
+              "given": "Naazneen H.",
+              "family": "Barma",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Steven K.",
+              "family": "Vogel",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "301",
+          "container-title": [
+            "The Political Economy Reader"
+          ],
+          "language": "en",
+          "deposited": {
+            "date-parts": [
+              [
+                2021,
+                7,
+                5
+              ]
+            ],
+            "date-time": "2021-07-05T09:33:55Z",
+            "timestamp": 1625477635000
+          },
+          "score": 36.97852,
+          "resource": {
+            "primary": {
+              "URL": "https://www.taylorfrancis.com/books/9781003047162/chapters/10.4324/9781003047162-15"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2021,
+                7,
+                5
+              ]
+            ]
+          },
+          "ISBN": [
+            "9781003047162"
+          ],
+          "references-count": 0,
+          "URL": "https://doi.org/10.4324/9781003047162-15",
+          "published": {
+            "date-parts": [
+              [
+                2021,
+                7,
+                5
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

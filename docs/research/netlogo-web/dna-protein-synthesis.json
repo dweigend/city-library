@@ -1,0 +1,118 @@
+{
+  "slug": "dna-protein-synthesis",
+  "name": "DNA Protein Synthesis",
+  "catalogPath": "Curricular Models/BEAGLE Evolution/DNA Protein Synthesis",
+  "launchUrl": "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/BEAGLE%20Evolution/DNA%20Protein%20Synthesis.nlogox",
+  "deliveryBatch": "B09",
+  "schemaVersion": 1,
+  "status": "complete",
+  "miniText": "How do sequence changes alter the products of gene expression? NetLogo DNA Protein Synthesis depicts DNA, transcription into mRNA, and translation involving tRNA and amino-acid chains. Users can compare substitutions, insertions, and deletions and observe their modeled consequences. The central dogma [1], code-deciphering experiments [2], and genetic reading-frame work [3] provide scientific context. The served model is a curricular representation of selected molecular steps, not a complete simulation of folding, splicing, quality control, or cellular regulation. It illustrates why a sequence change can have different consequences depending on its position and type. Its animations do not establish actual protein function, the clinical significance of a variant, or quantitative synthesis rates.",
+  "modelSource": {
+    "url": "https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/BEAGLE%20Evolution/DNA%20Protein%20Synthesis.nlogox",
+    "consultedUrl": "https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/BEAGLE%20Evolution/DNA%20Protein%20Synthesis.nlogox",
+    "revision": "Best available served NetLogo Web artifact retrieved on 2026-11-05; SHA-256 189eda6e21a0408e290f1afb5781ddae936f819ed8917788a683dcaf7d661301",
+    "checkedAt": "2026-11-05",
+    "evidence": "Complete served .nlogox downloaded; Info mechanism descriptions, credits and reference sections inspected. Procedures are not independently audited by this literature task. Source provenance is separate from City Library reimplementation and target-runtime verification.",
+    "evidenceFile": "evidence/biology/dna-protein-synthesis.nlogox",
+    "infoFile": "evidence/biology/dna-protein-synthesis-info.txt",
+    "originalModelCitation": "* Novak, M. and Wilensky, U. (2012).  NetLogo DNA Protein Synthesis model.  http://ccl.northwestern.edu/netlogo/models/DNAProteinSynthesis.  Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.",
+    "notes": "Original/served model is the behavioral baseline. This research does not claim implementation or browser acceptance."
+  },
+  "publications": [
+    {
+      "id": "crick",
+      "authors": [
+        "FRANCIS CRICK"
+      ],
+      "title": "Central Dogma of Molecular Biology",
+      "year": 1970,
+      "venue": "Nature",
+      "doi": "10.1038/227561a0",
+      "url": "https://doi.org/10.1038/227561a0",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1038%2F227561a0",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-metadata",
+        "access": "Crossref publisher-deposited metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/crick-crossref-direct.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2F227561a0%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/crick-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "227",
+      "issue": "5258",
+      "pages": "561-563",
+      "relevance": "The central-dogma paper contextualizes directional information transfer without claiming every molecular detail is represented."
+    },
+    {
+      "id": "nirenberg",
+      "authors": [
+        "Marshall W. Nirenberg",
+        "J. Heinrich Matthaei"
+      ],
+      "title": "The dependence of cell-free protein synthesis in E. coli upon naturally occurring or synthetic polyribonucleotides",
+      "year": 1961,
+      "venue": "Proceedings of the National Academy of Sciences",
+      "doi": "10.1073/pnas.47.10.1588",
+      "url": "https://doi.org/10.1073/pnas.47.10.1588",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works?query.title=The+dependence+of+cell-free+protein+synthesis+in+E+coli+upon+naturally+occurring+or+synthetic+polyribonucleotides+Nirenberg+Matthaei+1961&rows=3",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-metadata",
+        "access": "Crossref publisher-deposited metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/nirenberg-crossref-search.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1073%2Fpnas.47.10.1588%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/nirenberg-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "47",
+      "issue": "10",
+      "pages": "1588-1602",
+      "relevance": "Original cell-free synthesis research grounds the connection between nucleotide sequences and amino-acid production."
+    },
+    {
+      "id": "frameshift",
+      "authors": [
+        "F. H. C. CRICK",
+        "LESLIE BARNETT",
+        "S. BRENNER",
+        "R. J. WATTS-TOBIN"
+      ],
+      "title": "General Nature of the Genetic Code for Proteins",
+      "year": 1961,
+      "venue": "Nature",
+      "doi": "10.1038/1921227a0",
+      "url": "https://doi.org/10.1038/1921227a0",
+      "verification": {
+        "consultedUrl": "https://api.crossref.org/works/10.1038%2F1921227a0",
+        "checkedAt": "2026-11-05",
+        "evidenceType": "doi-registrant-metadata",
+        "access": "Crossref publisher-deposited metadata accessible; publisher full-text access/paywall not tested.",
+        "notes": "Exact author list and bibliographic fields transcribed from registrant metadata; initials are preserved where the deposited credited name uses initials. Metadata verification does not imply full-text reading.",
+        "evidenceFile": "evidence/biology/frameshift-crossref-direct.json",
+        "additionalConsultedUrls": [
+          "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2F1921227a0%22&format=json&resultType=core&pageSize=2"
+        ],
+        "additionalEvidenceFiles": [
+          "evidence/biology/frameshift-europepmc.json"
+        ]
+      },
+      "verified": true,
+      "volume": "192",
+      "issue": "4809",
+      "pages": "1227-1232",
+      "relevance": "Original genetic-code work directly contextualizes insertion/deletion reading-frame effects."
+    }
+  ],
+  "gaps": []
+}

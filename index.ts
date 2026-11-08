@@ -5,6 +5,7 @@ export { Random } from "./src/random/index.ts";
 export type { RandomState } from "./src/random/index.ts";
 export { Graph } from "./src/graph/index.ts";
 export type { Edge } from "./src/graph/index.ts";
+export type { GeneratorOptions } from "./src/graph/index.ts";
 
 export { Grid } from "./src/grid/index.ts";
 export type { Field } from "./src/grid/index.ts";
@@ -15,4 +16,6 @@ export type {
   Orientation,
 } from "./src/geometry/space.ts";
 export { stats } from "./src/stats/index.ts";
-export type { Histogram } from "./src/stats/index.ts";
+export type { Histogram, Summary } from "./src/stats/index.ts";
+export { geometry } from "./src/geometry/index.ts";
+export type { Bounds, PlanarXY, PlanarPolygon, PlanarGeometry, PlanarJson, PlanarFeature, PlanarDataset } from "./src/geometry/index.ts";

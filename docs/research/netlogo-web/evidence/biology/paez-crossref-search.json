@@ -1,0 +1,1341 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=CRISPR+immunity+drives+rapid+phage+genome+evolution+in+Streptococcus+thermophilus+Paez-Espino+2015&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 1767340,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                11,
+                4
+              ]
+            ],
+            "date-time": "2026-11-04T16:45:45Z",
+            "timestamp": 1793810745869,
+            "version": "4.6.1"
+          },
+          "reference-count": 31,
+          "publisher": "American Society for Microbiology",
+          "issue": "2",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2015,
+                    4,
+                    21
+                  ]
+                ],
+                "date-time": "2015-04-21T00:00:00Z",
+                "timestamp": 1429574400000
+              },
+              "content-version": "vor",
+              "delay-in-days": 0,
+              "URL": "http://creativecommons.org/licenses/by-nc-sa/3.0/"
+            },
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2015,
+                    5,
+                    1
+                  ]
+                ],
+                "date-time": "2015-05-01T00:00:00Z",
+                "timestamp": 1430438400000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://journals.asm.org/non-commercial-tdm-license"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "journals.asm.org"
+            ],
+            "crossmark-restriction": true
+          },
+          "short-container-title": [
+            "mBio"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2015,
+                5
+              ]
+            ]
+          },
+          "abstract": "<jats:title>ABSTRACT</jats:title>\n                  <jats:p>\n                    Many bacteria rely on CRISPR-Cas systems to provide adaptive immunity against phages, predation by which can shape the ecology and functioning of microbial communities. To characterize the impact of CRISPR immunization on phage genome evolution, we performed long-term bacterium-phage (\n                    <jats:named-content content-type=\"genus-species\">Streptococcus thermophilus</jats:named-content>\n                    -phage 2972) coevolution experiments. We found that in this species, CRISPR immunity drives fixation of single nucleotide polymorphisms that accumulate exclusively in phage genome regions targeted by CRISPR. Mutation rates in phage genomes highly exceed those of the host. The presence of multiple phages increased phage persistence by enabling recombination-based formation of chimeric phage genomes in which sequences heavily targeted by CRISPR were replaced. Collectively, our results establish CRISPR-Cas adaptive immunity as a key driver of phage genome evolution under the conditions studied and highlight the importance of multiple coexisting phages for persistence in natural systems.\n                  </jats:p>\n                  <jats:p>\n                    <jats:bold>IMPORTANCE</jats:bold>\n                    Phages remain an enigmatic part of the biosphere. As predators, they challenge the survival of host bacteria and archaea and set off an \u201carms race\u201d involving host immunization countered by phage mutation. The CRISPR-Cas system is adaptive: by capturing fragments of a phage genome upon exposure, the host is positioned to counteract future infections. To investigate this process, we initiated massive deep-sequencing experiments with a host and infective phage and tracked the coevolution of both populations over hundreds of days. In the present study, we found that CRISPR immunity drives the accumulation of phage genome rearrangements (which enable longer phage survival) and escape mutations, establishing CRISPR as one of the fundamental drivers of phage evolution.\n                  </jats:p>",
+          "DOI": "10.1128/mbio.00262-15",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2015,
+                4,
+                21
+              ]
+            ],
+            "date-time": "2015-04-21T21:09:21Z",
+            "timestamp": 1429650561000
+          },
+          "update-policy": "https://doi.org/10.1128/asmj-crossmark-policy-page",
+          "source": "Crossref",
+          "is-referenced-by-count": 178,
+          "title": [
+            "CRISPR Immunity Drives Rapid Phage Genome Evolution in Streptococcus thermophilus"
+          ],
+          "prefix": "10.1128",
+          "volume": "6",
+          "author": [
+            {
+              "given": "David",
+              "family": "Paez-Espino",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "University of California, Berkeley, California, USA"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Itai",
+              "family": "Sharon",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "University of California, Berkeley, California, USA"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Wesley",
+              "family": "Morovic",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "DuPont Nutrition and Health, Madison, Wisconsin, USA"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Buffy",
+              "family": "Stahl",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "DuPont Nutrition and Health, Madison, Wisconsin, USA"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Brian C.",
+              "family": "Thomas",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "University of California, Berkeley, California, USA"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Rodolphe",
+              "family": "Barrangou",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Department of Food, Bioprocessing and Nutrition Sciences, North Carolina State University, Raleigh, North Carolina, USA"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Jillian F.",
+              "family": "Banfield",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "University of California, Berkeley, California, USA"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "235",
+          "reference": [
+            {
+              "key": "e_1_3_2_2_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nature06350"
+            },
+            {
+              "key": "e_1_3_2_3_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0966-842X(94)90538-X"
+            },
+            {
+              "key": "e_1_3_2_4_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.1198767"
+            },
+            {
+              "key": "e_1_3_2_5_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nrmicro1750"
+            },
+            {
+              "key": "e_1_3_2_6_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1365-2958.2002.02839.x"
+            },
+            {
+              "key": "e_1_3_2_7_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.1138140"
+            },
+            {
+              "key": "e_1_3_2_8_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nature09523"
+            },
+            {
+              "key": "e_1_3_2_9_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1128/JB.01415-07"
+            },
+            {
+              "key": "e_1_3_2_10_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1128/JB.01412-07"
+            },
+            {
+              "key": "e_1_3_2_11_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/ncomms2440"
+            },
+            {
+              "key": "e_1_3_2_12_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/emboj.2011.41"
+            },
+            {
+              "key": "e_1_3_2_13_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/emboj.2012.352"
+            },
+            {
+              "key": "e_1_3_2_14_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pone.0038077"
+            },
+            {
+              "key": "e_1_3_2_15_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pgen.1003312"
+            },
+            {
+              "key": "e_1_3_2_16_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1042/BST20130160"
+            },
+            {
+              "key": "e_1_3_2_17_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.1104144108"
+            },
+            {
+              "key": "e_1_3_2_18_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/nar/gkr606"
+            },
+            {
+              "key": "e_1_3_2_19_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1099/mic.0.023960-0"
+            },
+            {
+              "key": "e_1_3_2_20_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1111/j.1462-2920.2012.02879.x"
+            },
+            {
+              "key": "e_1_3_2_21_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1073/pnas.1102716108"
+            },
+            {
+              "key": "e_1_3_2_22_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.1225829"
+            },
+            {
+              "key": "e_1_3_2_23_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1128/JB.00644-10"
+            },
+            {
+              "key": "e_1_3_2_24_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1371/journal.pgen.1003454"
+            },
+            {
+              "key": "e_1_3_2_25_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/nature13011"
+            },
+            {
+              "key": "e_1_3_2_26_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1128/JVI.73.10.8647-8656.1999"
+            },
+            {
+              "key": "e_1_3_2_27_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1126/science.1157358"
+            },
+            {
+              "key": "e_1_3_2_28_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/bioinformatics/bts174"
+            },
+            {
+              "key": "e_1_3_2_29_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1186/gb-2009-10-3-r25"
+            },
+            {
+              "key": "e_1_3_2_30_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1101/gr.074492.107"
+            },
+            {
+              "key": "e_1_3_2_31_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1101/gr.142315.112"
+            },
+            {
+              "key": "e_1_3_2_32_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1186/1471-2105-8-398"
+            }
+          ],
+          "container-title": [
+            "mBio"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://journals.asm.org/doi/pdf/10.1128/mBio.00262-15",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://journals.asm.org/doi/pdf/10.1128/mBio.00262-15",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2022,
+                3,
+                7
+              ]
+            ],
+            "date-time": "2022-03-07T21:02:47Z",
+            "timestamp": 1646686967000
+          },
+          "score": 72.11298,
+          "resource": {
+            "primary": {
+              "URL": "https://journals.asm.org/doi/10.1128/mBio.00262-15"
+            }
+          },
+          "editor": [
+            {
+              "given": "Janet K.",
+              "family": "Jansson",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "editor"
+                }
+              ]
+            }
+          ],
+          "issued": {
+            "date-parts": [
+              [
+                2015,
+                5
+              ]
+            ]
+          },
+          "references-count": 31,
+          "journal-issue": {
+            "issue": "2",
+            "published-print": {
+              "date-parts": [
+                [
+                  2015,
+                  5
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1128/mBio.00262-15"
+          ],
+          "URL": "https://doi.org/10.1128/mbio.00262-15",
+          "relation": {
+            "has-review": [
+              {
+                "id-type": "doi",
+                "id": "10.3410/f.725444974.793506188",
+                "asserted-by": "object"
+              }
+            ]
+          },
+          "ISSN": [
+            "2161-2129",
+            "2150-7511"
+          ],
+          "issn-type": [
+            {
+              "value": "2161-2129",
+              "type": "print"
+            },
+            {
+              "value": "2150-7511",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2015,
+                5
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "2015-02-17",
+              "order": 0,
+              "name": "received",
+              "label": "Received",
+              "group": {
+                "name": "publication_history",
+                "label": "Publication History"
+              }
+            },
+            {
+              "value": "2015-03-17",
+              "order": 1,
+              "name": "accepted",
+              "label": "Accepted",
+              "group": {
+                "name": "publication_history",
+                "label": "Publication History"
+              }
+            },
+            {
+              "value": "2015-04-21",
+              "order": 2,
+              "name": "published",
+              "label": "Published",
+              "group": {
+                "name": "publication_history",
+                "label": "Publication History"
+              }
+            }
+          ],
+          "article-number": "e00262-15"
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2024,
+                3,
+                4
+              ]
+            ],
+            "date-time": "2024-03-04T06:14:12Z",
+            "timestamp": 1709532852328
+          },
+          "reference-count": 0,
+          "publisher": "H1 Connect",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2015,
+                4,
+                29
+              ]
+            ]
+          },
+          "DOI": "10.3410/f.725444974.793506188",
+          "type": "dataset",
+          "created": {
+            "date-parts": [
+              [
+                2015,
+                4,
+                29
+              ]
+            ],
+            "date-time": "2015-04-29T13:35:12Z",
+            "timestamp": 1430314512000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 0,
+          "title": [
+            "Faculty Opinions recommendation of CRISPR immunity drives rapid phage genome evolution in Streptococcus thermophilus."
+          ],
+          "prefix": "10.3410",
+          "author": [
+            {
+              "given": "Marvin",
+              "family": "Whiteley",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "School of Biological Sciences, Georgia Institute of Technology, USA"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "4950",
+          "content-created": {
+            "date-parts": [
+              [
+                2015,
+                4,
+                24
+              ]
+            ]
+          },
+          "container-title": [
+            "Faculty Opinions \u2013 Post-Publication Peer Review of the Biomedical Literature"
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2020,
+                4,
+                22
+              ]
+            ],
+            "date-time": "2020-04-22T07:10:39Z",
+            "timestamp": 1587539439000
+          },
+          "score": 62.677166,
+          "resource": {
+            "primary": {
+              "URL": "https://facultyopinions.com/prime/725444974#eval793506188"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2015,
+                4,
+                24
+              ]
+            ]
+          },
+          "references-count": 0,
+          "URL": "https://doi.org/10.3410/f.725444974.793506188",
+          "relation": {
+            "is-review-of": [
+              {
+                "id-type": "doi",
+                "id": "10.1128/mBio.00262-15",
+                "asserted-by": "subject"
+              }
+            ]
+          },
+          "published": {
+            "date-parts": [
+              [
+                2015,
+                4,
+                24
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                30
+              ]
+            ],
+            "date-time": "2026-10-30T19:28:36Z",
+            "timestamp": 1793388516554,
+            "version": "4.5.0"
+          },
+          "reference-count": 42,
+          "publisher": "American Society for Microbiology",
+          "issue": "4",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2008,
+                    2,
+                    15
+                  ]
+                ],
+                "date-time": "2008-02-15T00:00:00Z",
+                "timestamp": 1203033600000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "https://journals.asm.org/non-commercial-tdm-license"
+            }
+          ],
+          "content-domain": {
+            "domain": [
+              "journals.asm.org"
+            ],
+            "crossmark-restriction": true
+          },
+          "short-container-title": [
+            "J Bacteriol"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                2008,
+                2,
+                15
+              ]
+            ]
+          },
+          "abstract": "<jats:title>ABSTRACT</jats:title>\n                  <jats:p>\n                    Clustered regularly interspaced short palindromic repeats (CRISPR) and their associated genes are linked to a mechanism of acquired resistance against bacteriophages. Bacteria can integrate short stretches of phage-derived sequences (spacers) within CRISPR loci to become phage resistant. In this study, we further characterized the efficiency of CRISPR1 as a phage resistance mechanism in\n                    <jats:italic>Streptococcus thermophilus</jats:italic>\n                    . First, we show that CRISPR1 is distinct from previously known phage defense systems and is effective against the two main groups of\n                    <jats:italic>S. thermophilus</jats:italic>\n                    phages. Analyses of 30 bacteriophage-insensitive mutants of\n                    <jats:italic>S. thermophilus</jats:italic>\n                    indicate that the addition of one new spacer in CRISPR1 is the most frequent outcome of a phage challenge and that the iterative addition of spacers increases the overall phage resistance of the host. The added new spacers have a size of between 29 to 31 nucleotides, with 30 being by far the most frequent. Comparative analysis of 39 newly acquired spacers with the complete genomic sequences of the wild-type phages 2972, 858, and DT1 demonstrated that the newly added spacer must be identical to a region (named proto-spacer) in the phage genome to confer a phage resistance phenotype. Moreover, we found a CRISPR1-specific sequence (NNAGAAW) located downstream of the proto-spacer region that is important for the phage resistance phenotype. Finally, we show through the analyses of 20 mutant phages that virulent phages are rapidly evolving through single nucleotide mutations as well as deletions, in response to CRISPR1.\n                  </jats:p>",
+          "DOI": "10.1128/jb.01412-07",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2007,
+                12,
+                7
+              ]
+            ],
+            "date-time": "2007-12-07T20:53:35Z",
+            "timestamp": 1197060815000
+          },
+          "page": "1390-1400",
+          "update-policy": "https://doi.org/10.1128/asmj-crossmark-policy-page",
+          "source": "Crossref",
+          "is-referenced-by-count": 1169,
+          "title": [
+            "Phage Response to CRISPR-Encoded Resistance in\n                    <i>Streptococcus thermophilus</i>"
+          ],
+          "prefix": "10.1128",
+          "volume": "190",
+          "author": [
+            {
+              "given": "He\u0301le\u0300ne",
+              "family": "Deveau",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "De\u0301partement de Biochimie et de Microbiologie, Faculte\u0301 des Sciences et de Ge\u0301nie, Groupe de Recherche en E\u0301cologie Buccale, Faculte\u0301 de Me\u0301decine Dentaire, Fe\u0301lix d'He\u0301relle Reference Center for Bacterial Viruses, Universite\u0301 Laval, Quebec City, Quebec G1V 0A6, Canada"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Rodolphe",
+              "family": "Barrangou",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Danisco, USA, Inc., 3329 Agriculture Drive, Madison, Wisconsin 53716"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Josiane E.",
+              "family": "Garneau",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "De\u0301partement de Biochimie et de Microbiologie, Faculte\u0301 des Sciences et de Ge\u0301nie, Groupe de Recherche en E\u0301cologie Buccale, Faculte\u0301 de Me\u0301decine Dentaire, Fe\u0301lix d'He\u0301relle Reference Center for Bacterial Viruses, Universite\u0301 Laval, Quebec City, Quebec G1V 0A6, Canada"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Jessica",
+              "family": "Labonte\u0301",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "De\u0301partement de Biochimie et de Microbiologie, Faculte\u0301 des Sciences et de Ge\u0301nie, Groupe de Recherche en E\u0301cologie Buccale, Faculte\u0301 de Me\u0301decine Dentaire, Fe\u0301lix d'He\u0301relle Reference Center for Bacterial Viruses, Universite\u0301 Laval, Quebec City, Quebec G1V 0A6, Canada"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Christophe",
+              "family": "Fremaux",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Danisco France SAS, BP10, F-86220 Dange\u0301-Saint-Romain, France"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Patrick",
+              "family": "Boyaval",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Danisco France SAS, BP10, F-86220 Dange\u0301-Saint-Romain, France"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Dennis A.",
+              "family": "Romero",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Danisco, USA, Inc., 3329 Agriculture Drive, Madison, Wisconsin 53716"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Philippe",
+              "family": "Horvath",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Danisco France SAS, BP10, F-86220 Dange\u0301-Saint-Romain, France"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Sylvain",
+              "family": "Moineau",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "De\u0301partement de Biochimie et de Microbiologie, Faculte\u0301 des Sciences et de Ge\u0301nie, Groupe de Recherche en E\u0301cologie Buccale, Faculte\u0301 de Me\u0301decine Dentaire, Fe\u0301lix d'He\u0301relle Reference Center for Bacterial Viruses, Universite\u0301 Laval, Quebec City, Quebec G1V 0A6, Canada"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "235",
+          "reference": [
+            {
+              "key": "e_1_3_2_2_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/nar/25.17.3389"
+            },
+            {
+              "key": "e_1_3_2_3_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "1709",
+              "DOI": "10.1126/science.1138140",
+              "volume": "315",
+              "year": "2007",
+              "unstructured": "Barrangou, R., C. Fremaux, P. Boyaval, M. Richards, H. Deveau, S. Moineau, D. A. Romero, and P. Horvath. 2007. CRISPR provides acquired resistance against viruses in prokaryotes. Science 315 : 1709-1712.",
+              "journal-title": "Science"
+            },
+            {
+              "key": "e_1_3_2_4_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "118",
+              "DOI": "10.1016/0042-6822(78)90416-6",
+              "volume": "85",
+              "year": "1978",
+              "unstructured": "Behnke, D., and H. Malke. 1978. Bacteriophage interference in Streptococcus pyogenes. I. Characterization of prophage-host systems interfering with the virulent phage A25. Virology 85 : 118-128.",
+              "journal-title": "Virology"
+            },
+            {
+              "key": "e_1_3_2_5_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "1554",
+              "DOI": "10.1038/nbt1034",
+              "volume": "22",
+              "year": "2004",
+              "unstructured": "Bolotin, A., B. Quinquis, P. Renault, A. Sorokin, S. D. Ehrlich, S. Kulakauskas, A. Lapidus, E. Goltsman, M. Mazur, G. D. Pusch, M. Fonstein, R. Overbeek, N. Kyrpides, B. Purnelle, D. Prozzi, K. Ngui, D. Masuy, F. Hancy, S. Burteau, M. Boutry, J. Delcour, A. Goffeau, and P. Hols. 2004. Complete sequence and comparative genome analysis of the dairy bacterium Streptococcus thermophilus. Nat. Biotechnol. 22 : 1554-1558.",
+              "journal-title": "Nat. Biotechnol."
+            },
+            {
+              "key": "e_1_3_2_6_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "2551",
+              "DOI": "10.1099/mic.0.28048-0",
+              "volume": "151",
+              "year": "2005",
+              "unstructured": "Bolotin, A., B. Quinquis, A. Sorokin, and S. D. Ehrlich. 2005. Clustered regularly interspaced short palindrome repeats (CRISPRs) have spacers of extrachromosomal origin. Microbiology 151 : 2551-2561.",
+              "journal-title": "Microbiology"
+            },
+            {
+              "key": "e_1_3_2_7_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1128/JB.186.11.3649-3652.2004"
+            },
+            {
+              "key": "e_1_3_2_8_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "278",
+              "DOI": "10.1016/j.tim.2005.04.003",
+              "volume": "13",
+              "year": "2005",
+              "unstructured": "Breitbart, M., and F. Rohwer. 2005. Here a virus, there a virus, everywhere the same virus? Trends Microbiol. 13 : 278-284.",
+              "journal-title": "Trends Microbiol."
+            },
+            {
+              "key": "e_1_3_2_9_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "283",
+              "DOI": "10.1146/annurev.micro.55.1.283",
+              "volume": "55",
+              "year": "2001",
+              "unstructured": "Br\u00fcssow, H. 2001. Phages of dairy bacteria. Annu. Rev. Microbiol. 55 : 283-303.",
+              "journal-title": "Annu. Rev. Microbiol."
+            },
+            {
+              "key": "e_1_3_2_10_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1046/j.1365-2958.2001.02228.x"
+            },
+            {
+              "key": "e_1_3_2_11_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "473",
+              "DOI": "10.1016/j.mib.2005.06.006",
+              "volume": "8",
+              "year": "2005",
+              "unstructured": "Chopin, M.-C., A. Chopin, and E. Bidnenko. 2005. Phage abortive infection in lactococci: variations on a theme. Curr. Opin. Microbiol. 8 : 473-479.",
+              "journal-title": "Curr. Opin. Microbiol."
+            },
+            {
+              "key": "e_1_3_2_12_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "497",
+              "DOI": "10.1016/S0958-1669(00)00134-8",
+              "volume": "11",
+              "year": "2000",
+              "unstructured": "Delcour, J., T. Ferain, and P. Hols. 2000. Advances in the genetics of thermophilic lactic acid bacteria. Curr. Opin. Biotechnol. 11 : 497-504.",
+              "journal-title": "Curr. Opin. Biotechnol."
+            },
+            {
+              "key": "e_1_3_2_13_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "73",
+              "DOI": "10.1023/A:1020676825358",
+              "volume": "82",
+              "year": "2002",
+              "unstructured": "Desiere, F., S. Lucchini, C. Canchaya, M. Ventura, and H. Br\u00fcssow. 2002. Comparative genomics of phages and prophages in lactic acid bacteria. Antonie van Leeuwenhoek 82 : 73-91.",
+              "journal-title": "Antonie van Leeuwenhoek"
+            },
+            {
+              "key": "e_1_3_2_14_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1128/AEM.02517-05"
+            },
+            {
+              "key": "e_1_3_2_15_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1128/AEM.68.9.4364-4369.2002"
+            },
+            {
+              "key": "e_1_3_2_16_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1128/AEM.72.4.3036-3041.2006"
+            },
+            {
+              "key": "e_1_3_2_17_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "325",
+              "DOI": "10.1046/j.1365-2958.2001.02521.x",
+              "volume": "41",
+              "year": "2001",
+              "unstructured": "Duplessis, M., and S. Moineau. 2001. Identification of a genetic determinant responsible for host specificity in Streptococcus thermophilus bacteriophages. Mol. Microbiol. 41 : 325-336.",
+              "journal-title": "Mol. Microbiol."
+            },
+            {
+              "key": "e_1_3_2_18_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "192",
+              "DOI": "10.1016/j.virol.2005.05.033",
+              "volume": "340",
+              "year": "2005",
+              "unstructured": "Duplessis, M., W. M. Russell, D. A. Romero, and S. Moineau. 2005. Global gene expression analysis of two Streptococcus thermophilus bacteriophages using DNA microarray. Virology 340 : 192-208.",
+              "journal-title": "Virology"
+            },
+            {
+              "key": "e_1_3_2_19_2",
+              "first-page": "93",
+              "year": "2007",
+              "unstructured": "Emond, E., and S. Moineau. 2007. Bacteriophages and food fermentations, p. 93-124. In S. McGrath and D. van Sinderen (ed.), Bacteriophage: genetics and molecular biology. Horizon Scientific Press/Caister Academic Press, New York, NY.",
+              "journal-title": "Bacteriophage: genetics and molecular biology."
+            },
+            {
+              "key": "e_1_3_2_20_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "718",
+              "DOI": "10.1007/s00239-005-0223-z",
+              "volume": "62",
+              "year": "2006",
+              "unstructured": "Godde, J. S., and A. Bickerton. 2006. The repetitive DNA elements called CRISPRs and their associated genes: evidence of horizontal transfer among prokaryotes. J. Mol. Evol. 62 : 718-729.",
+              "journal-title": "J. Mol. Evol."
+            },
+            {
+              "key": "e_1_3_2_21_2",
+              "first-page": "474",
+              "volume": "1",
+              "year": "2005",
+              "unstructured": "Haft, D. H., J. Selengut, E. F. Mongodin, and K. E. Nelson. 2005. A guild of 45 CRISPR-associated (Cas) protein families and multiple CRISPR/Cas subtypes exist in prokaryotic genomes. PLoS Comput. Biol. 1 : 474-483.",
+              "journal-title": "PLoS Comput. Biol."
+            },
+            {
+              "key": "e_1_3_2_22_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1128/aem.57.1.283-288.1991"
+            },
+            {
+              "key": "e_1_3_2_23_2",
+              "first-page": "1401",
+              "volume": "190",
+              "year": "2007",
+              "unstructured": "Horvath, P., D. A. Romero, A.-C. Co\u00fbt\u00e9-Monvoisin, M. Richards, H. Deveau, S. Moineau, P. Boyaval, C. Fremaux, and R. Barrangou. 2007. Diversity, activity and evolution of CRISPR loci in Streptococcus thermophilus. J. Bacteriol. 190 : 1401-1412.",
+              "journal-title": "J. Bacteriol."
+            },
+            {
+              "key": "e_1_3_2_24_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "1565",
+              "DOI": "10.1046/j.1365-2958.2002.02839.x",
+              "volume": "43",
+              "year": "2002",
+              "unstructured": "Jansen, R., J. D. Embden, W. Gaastra, and L. M. Schouls. 2002. Identification of genes that are associated with DNA repeats in prokaryotes. Mol. Microbiol. 43 : 1565-1575.",
+              "journal-title": "Mol. Microbiol."
+            },
+            {
+              "key": "e_1_3_2_25_2",
+              "first-page": "295",
+              "year": "2004",
+              "unstructured": "Josephsen, J., and H. Neve. 2004. Bacteriophage and antiphage mechanisms of lactic acid bacteria, p. 295-350. In S. Salminen, A. Von Wright, and A. Ouwehand (ed.), Lactic acid bacteria: microbiological and functional aspects, 3rd ed. Marcel Dekker, Inc., New York, NY.",
+              "journal-title": "Lactic acid bacteria: microbiological and functional aspects"
+            },
+            {
+              "key": "e_1_3_2_26_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1128/JB.01111-06"
+            },
+            {
+              "key": "e_1_3_2_27_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1128/AEM.71.3.1237-1246.2005"
+            },
+            {
+              "key": "e_1_3_2_28_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1128/aem.63.8.3246-3253.1997"
+            },
+            {
+              "key": "e_1_3_2_29_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1128/AEM.71.7.4057-4068.2005"
+            },
+            {
+              "key": "e_1_3_2_30_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "1107",
+              "DOI": "10.1093/nar/26.4.1107",
+              "volume": "26",
+              "year": "1998",
+              "unstructured": "Lukashin, A. V., and M. Borodovsky. 1998. GeneMark.hmm: new solutions for gene finding. Nucleic Acids Res. 26 : 1107-1115.",
+              "journal-title": "Nucleic Acids Res."
+            },
+            {
+              "key": "e_1_3_2_31_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "1",
+              "DOI": "10.1186/1745-6150-1-1",
+              "volume": "1",
+              "year": "2006",
+              "unstructured": "Makarova, K. S., N. V. Grishin, S. A. Shabalina, Y. I. Wolf, and E. V. Koonin. 2006. A putative RNA-interference-based immune system in prokaryotes: computational analysis of the predicted enzymatic machinery, functional analogies with eukaryotic RNAi, and hypothetical mechanisms of action. Biol. Direct. 1 : 1-26.",
+              "journal-title": "Biol. Direct."
+            },
+            {
+              "key": "e_1_3_2_32_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "15611",
+              "DOI": "10.1073/pnas.0607117103",
+              "volume": "103",
+              "year": "2006",
+              "unstructured": "Makarova, K., A. Slesarev, Y. Wolf, A. Sorokin, B. Mirkin, E. Koonin, A. Pavlov, N. Pavlova, V. Karamychev, N. Polouchine, V. Shakhova, I. Grigoriev, Y. Lou, D. Rohksar, S. Lucas, K. Huang, D. Goodstein, T. Hawkins, V. Plengvidhya, D. Welker, J. Hughes, Y. Goh, A. Benson, K. Baldwin, J. Lee, I. Diaz-Muniz, B. Dosti, V. Smeianov, W. Wechter, R. Barabote, G. Lorca, E. Altermann, R. Barrangou, B. Ganesan, Y. Xie, H. Rawsthorne, D. Tamir, C. Parker, F. Breidt, J. Broadbent, R. Hutkins, D. O'Sullivan, J. Steele, G. Unlu, M. Saier, T. Klaenhammer, P. Richardson, S. Kozyavkin, B. Weimer, and D. Mills. 2006. Comparative genomics of the lactic acid bacteria. Proc. Natl. Acad. Sci. USA 103 : 15611-15616.",
+              "journal-title": "Proc. Natl. Acad. Sci. USA"
+            },
+            {
+              "key": "e_1_3_2_33_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1128/aem.59.1.208-212.1993"
+            },
+            {
+              "key": "e_1_3_2_34_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "875",
+              "DOI": "10.1139/m92-143",
+              "volume": "38",
+              "year": "1992",
+              "unstructured": "Moineau, S., J. Fortier, H.-W. Ackermann, and S. Pandian. 1992. Characterization of lactococcal bacteriophages from Quebec cheese plants. Can. J. Microbiol. 38 : 875-882.",
+              "journal-title": "Can. J. Microbiol."
+            },
+            {
+              "key": "e_1_3_2_35_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1128/aem.60.6.1832-1841.1994"
+            },
+            {
+              "key": "e_1_3_2_36_2",
+              "first-page": "388",
+              "volume": "68",
+              "year": "2002",
+              "unstructured": "Moineau, S., D. Tremblay, and S. Labrie. 2002. Phages of lactic acid bacteria: from genomics to industrial applications. ASM News 68 : 388-393.",
+              "journal-title": "ASM News"
+            },
+            {
+              "key": "e_1_3_2_37_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "174",
+              "DOI": "10.1007/s00239-004-0046-3",
+              "volume": "60",
+              "year": "2005",
+              "unstructured": "Mojica, F. J., C. Diez-Villasenor, J. Garcia-Martinez, and E. Soria. 2005. Intervening sequences of regularly spaced prokaryotic repeats derive from foreign genetic elements. J. Mol. Evol. 60 : 174-182.",
+              "journal-title": "J. Mol. Evol."
+            },
+            {
+              "key": "e_1_3_2_38_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "653",
+              "DOI": "10.1099/mic.0.27437-0",
+              "volume": "151",
+              "year": "2005",
+              "unstructured": "Pourcel, C., G. Salvignol, and G. Vergnaud. 2005. CRISPR elements in Yersinia pestis acquire new repeats by preferential uptake of bacteriophage DNA, and provide additional tools for evolutionary studies. Microbiology 151 : 653-663.",
+              "journal-title": "Microbiology"
+            },
+            {
+              "key": "e_1_3_2_39_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "233",
+              "DOI": "10.1007/BF02900361",
+              "volume": "5",
+              "year": "1996",
+              "unstructured": "Staden, R. 1996. The Staden sequence analysis package. Mol. Biotechnol. 5 : 233-241.",
+              "journal-title": "Mol. Biotechnol."
+            },
+            {
+              "key": "e_1_3_2_40_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "395",
+              "DOI": "10.1038/nrmicro1393",
+              "volume": "4",
+              "year": "2006",
+              "unstructured": "Sturino, J. M., and T. R. Klaenhammer. 2006. Engineered bacteriophage-defense systems in bioprocessing. Nat. Rev. Microbiol. 4 : 395-404.",
+              "journal-title": "Nat. Rev. Microbiol."
+            },
+            {
+              "key": "e_1_3_2_41_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "63",
+              "DOI": "10.1006/viro.1998.9525",
+              "volume": "255",
+              "year": "1999",
+              "unstructured": "Tremblay, D. M., and S. Moineau. 1999. Complete genomic sequence of the lytic bacteriophage DT1 of Streptococcus thermophilus. Virology 255 : 63-76.",
+              "journal-title": "Virology"
+            },
+            {
+              "key": "e_1_3_2_42_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1128/JB.188.7.2400-2410.2006"
+            },
+            {
+              "key": "e_1_3_2_43_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "62",
+              "DOI": "10.1006/viro.2001.1331",
+              "volume": "296",
+              "year": "2002",
+              "unstructured": "Ventura, M., S. Foley, A. Bruttin, S. C. Chennoufi, C. Canchaya, and H. Br\u00fcssow. 2002. Transcription mapping as a tool in phage genomics: the case of the temperate Streptococcus thermophilus phage Sfi21. Virology 296 : 62-76.",
+              "journal-title": "Virology"
+            }
+          ],
+          "container-title": [
+            "Journal of Bacteriology"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://journals.asm.org/doi/pdf/10.1128/JB.01412-07",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://journals.asm.org/doi/pdf/10.1128/JB.01412-07",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2021,
+                7,
+                29
+              ]
+            ],
+            "date-time": "2021-07-29T13:43:59Z",
+            "timestamp": 1627566239000
+          },
+          "score": 35.524864,
+          "resource": {
+            "primary": {
+              "URL": "https://journals.asm.org/doi/10.1128/JB.01412-07"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2008,
+                2,
+                15
+              ]
+            ]
+          },
+          "references-count": 42,
+          "journal-issue": {
+            "issue": "4",
+            "published-print": {
+              "date-parts": [
+                [
+                  2008,
+                  2,
+                  15
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1128/JB.01412-07"
+          ],
+          "URL": "https://doi.org/10.1128/jb.01412-07",
+          "relation": {
+            "has-review": [
+              {
+                "id-type": "doi",
+                "id": "10.3410/f.1098565.554664",
+                "asserted-by": "object"
+              },
+              {
+                "id-type": "doi",
+                "id": "10.3410/f.1098565.793485604",
+                "asserted-by": "object"
+              },
+              {
+                "id-type": "doi",
+                "id": "10.3410/f.1098565.793488699",
+                "asserted-by": "object"
+              }
+            ]
+          },
+          "ISSN": [
+            "0021-9193",
+            "1098-5530"
+          ],
+          "issn-type": [
+            {
+              "value": "0021-9193",
+              "type": "print"
+            },
+            {
+              "value": "1098-5530",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                2008,
+                2,
+                15
+              ]
+            ]
+          },
+          "assertion": [
+            {
+              "value": "2007-08-31",
+              "order": 0,
+              "name": "received",
+              "label": "Received",
+              "group": {
+                "name": "publication_history",
+                "label": "Publication History"
+              }
+            },
+            {
+              "value": "2007-11-21",
+              "order": 1,
+              "name": "accepted",
+              "label": "Accepted",
+              "group": {
+                "name": "publication_history",
+                "label": "Publication History"
+              }
+            },
+            {
+              "value": "2020-12-20",
+              "order": 2,
+              "name": "published",
+              "label": "Published",
+              "group": {
+                "name": "publication_history",
+                "label": "Publication History"
+              }
+            }
+          ]
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}

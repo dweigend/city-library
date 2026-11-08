@@ -1,0 +1,165 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1890%2F03-0763%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1890/03-0763\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "IND43714787",
+          "source": "AGR",
+          "doi": "10.1890/03-0763",
+          "title": "Changes in turbulent mixing shift competition for light between phytoplankton species",
+          "authorString": "Huisman J, Sharples J, Stroom JM, Visser PM, Kardinaal WEA, Verspagen JMH, Sommeijer B.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Huisman J",
+                "lastName": "Huisman",
+                "firstName": "Jef",
+                "initials": "J",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-9598-3211"
+                }
+              },
+              {
+                "fullName": "Sharples J",
+                "lastName": "Sharples",
+                "firstName": "Jonathan",
+                "initials": "J",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-7031-3593"
+                }
+              },
+              {
+                "fullName": "Stroom JM",
+                "lastName": "Stroom",
+                "firstName": "Jasper M",
+                "initials": "JM"
+              },
+              {
+                "fullName": "Visser PM",
+                "lastName": "Visser",
+                "firstName": "P M",
+                "initials": "PM",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-3294-1908"
+                }
+              },
+              {
+                "fullName": "Kardinaal WEA",
+                "lastName": "Kardinaal",
+                "firstName": "W Edwin A",
+                "initials": "WEA"
+              },
+              {
+                "fullName": "Verspagen JMH",
+                "lastName": "Verspagen",
+                "firstName": "Jolanda M H",
+                "initials": "JMH",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-9295-4183"
+                }
+              },
+              {
+                "fullName": "Sommeijer B",
+                "lastName": "Sommeijer",
+                "firstName": "Ben",
+                "initials": "B"
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0001-9295-4183"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0001-9598-3211"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-7031-3593"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-3294-1908"
+              }
+            ]
+          },
+          "journalInfo": {
+            "issue": "11",
+            "volume": "85",
+            "journalIssueId": 3568172,
+            "dateOfPublication": "2004 Nov",
+            "monthOfPublication": 11,
+            "yearOfPublication": 2004,
+            "journal": {
+              "title": "Ecology",
+              "issn": "0012-9658"
+            },
+            "printPublicationDate": "2004-11-01"
+          },
+          "pubYear": "2004",
+          "pageInfo": "2960-2970",
+          "abstractText": "The intriguing impact of physical mixing processes on species interactions has always fascinated ecologists. Here, we exploit recent advances in plankton models to develop competition theory that predicts how changes in turbulent mixing affect competition for light between buoyant and sinking phytoplankton species. We compared the model predictions with a lake experiment, in which the turbulence structure of the entire lake was manipulated using artificial mixing. Vertical eddy diffusivities were calculated from the measured temperature microstructure in the lake. Changes in turbulent mixing of the lake caused a dramatic shift in phytoplankton species composition, consistent with the predictions of the competition model. The buoyant and potentially toxic cyanobacterium Microcystis dominated at low turbulent diffusivity, whereas sinking diatoms and green algae dominated at high turbulent diffusivity. These findings warn that changes in the turbulence structure of natural waters, for instance driven by climate change, may induce major shifts in the species composition of phytoplankton communities.",
+          "language": "eng",
+          "pubModel": "Undetermined",
+          "pubTypeList": {
+            "pubType": [
+              "Journal Article"
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1890/03-0763"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "citedByCount": 158,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "N",
+          "hasData": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2017-06-26",
+          "dateOfCreation": "2017-06-26",
+          "dateOfRevision": "2025-02-19",
+          "firstPublicationDate": "2004-11-01",
+          "firstIndexDate": "2018-01-11",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

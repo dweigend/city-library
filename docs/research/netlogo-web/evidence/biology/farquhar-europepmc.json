@@ -1,0 +1,144 @@
+{
+  "consultedUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1007%2Fbf00386231%22&format=json&resultType=core&pageSize=2",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "version": "6.9",
+    "hitCount": 1,
+    "request": {
+      "queryString": "DOI:\"10.1007/bf00386231\"",
+      "resultType": "core",
+      "cursorMark": "*",
+      "pageSize": 2,
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "id": "24306196",
+          "source": "MED",
+          "pmid": "24306196",
+          "doi": "10.1007/bf00386231",
+          "title": "A biochemical model of photosynthetic CO2 assimilation in leaves of C 3 species.",
+          "authorString": "Farquhar GD, von Caemmerer S, Berry JA.",
+          "authorList": {
+            "author": [
+              {
+                "fullName": "Farquhar GD",
+                "lastName": "Farquhar",
+                "firstName": "G D",
+                "initials": "GD",
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-7065-1971"
+                },
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Environmental Biology, Research School of Biological Sciences, Australian National University, P.O. Box 475, 2601, Canberra City, ACT, Australia."
+                    }
+                  ]
+                }
+              },
+              {
+                "fullName": "von Caemmerer S",
+                "lastName": "von Caemmerer",
+                "firstName": "S",
+                "initials": "S"
+              },
+              {
+                "fullName": "Berry JA",
+                "lastName": "Berry",
+                "firstName": "J A",
+                "initials": "JA"
+              }
+            ]
+          },
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0002-7065-1971"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "wikipedia"
+            ]
+          },
+          "journalInfo": {
+            "issue": "1",
+            "volume": "149",
+            "journalIssueId": 2101421,
+            "dateOfPublication": "1980 Jun",
+            "monthOfPublication": 6,
+            "yearOfPublication": 1980,
+            "journal": {
+              "medlineAbbreviation": "Planta",
+              "title": "Planta",
+              "essn": "1432-2048",
+              "issn": "0032-0935",
+              "isoabbreviation": "Planta",
+              "nlmid": "1250576"
+            },
+            "printPublicationDate": "1980-06-01"
+          },
+          "pubYear": "1980",
+          "pageInfo": "78-90",
+          "abstractText": "Various aspects of the biochemistry of photosynthetic carbon assimilation in C3 plants are integrated into a form compatible with studies of gas exchange in leaves. These aspects include the kinetic properties of ribulose bisphosphate carboxylase-oxygenase; the requirements of the photosynthetic carbon reduction and photorespiratory carbon oxidation cycles for reduced pyridine nucleotides; the dependence of electron transport on photon flux and the presence of a temperature dependent upper limit to electron transport. The measurements of gas exchange with which the model outputs may be compared include those of the temperature and partial pressure of CO2(p(CO2)) dependencies of quantum yield, the variation of compensation point with temperature and partial pressure of O2(p(O2)), the dependence of net CO2 assimilation rate on p(CO2) and irradiance, and the influence of p(CO2) and irradiance on the temperature dependence of assimilation rate.",
+          "affiliation": "Department of Environmental Biology, Research School of Biological Sciences, Australian National University, P.O. Box 475, 2601, Canberra City, ACT, Australia.",
+          "publicationStatus": "ppublish",
+          "language": "eng",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Journal Article"
+            ]
+          },
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "pdf",
+                "site": "Unpaywall",
+                "url": "http://www.geo.utexas.edu/courses/387H/LAID_papers/Farquhar_etal1980.pdf"
+              },
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1007/BF00386231"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "citedByCount": 3251,
+          "hasReferences": "Y",
+          "hasTextMinedTerms": "Y",
+          "hasDbCrossReferences": "N",
+          "hasPDF": "N",
+          "hasBook": "N",
+          "hasSuppl": "N",
+          "hasLabsLinks": "Y",
+          "hasData": "N",
+          "authMan": "N",
+          "epmcAuthMan": "N",
+          "nihAuthMan": "N",
+          "hasTMAccessionNumbers": "N",
+          "dateOfCompletion": "2013-12-06",
+          "dateOfCreation": "2013-12-06",
+          "dateOfRevision": "2024-01-09",
+          "firstPublicationDate": "1980-06-01",
+          "firstIndexDate": "2013-12-06",
+          "hasEvaluations": "N"
+        }
+      ]
+    }
+  }
+}

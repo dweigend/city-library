@@ -1,0 +1,1515 @@
+{
+  "consultedUrl": "https://api.crossref.org/works?query.title=The+spread+of+HIV-1+in+Africa+sexual+contact+patterns+and+the+predicted+demographic+impact+of+AIDS+Anderson+1991&rows=3",
+  "checkedAt": "2026-11-05",
+  "response": {
+    "status": "ok",
+    "message-type": "work-list",
+    "message-version": "1.0.0",
+    "message": {
+      "facets": {},
+      "total-results": 3677033,
+      "items": [
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                4
+              ]
+            ],
+            "date-time": "2026-10-04T21:55:55Z",
+            "timestamp": 1791150955830,
+            "version": "4.1.0"
+          },
+          "reference-count": 91,
+          "publisher": "Springer Science and Business Media LLC",
+          "issue": "6336",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    1991,
+                    8,
+                    1
+                  ]
+                ],
+                "date-time": "1991-08-01T00:00:00Z",
+                "timestamp": 681004800000
+              },
+              "content-version": "tdm",
+              "delay-in-days": 0,
+              "URL": "http://www.springer.com/tdm"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Nature"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1991,
+                8
+              ]
+            ]
+          },
+          "DOI": "10.1038/352581a0",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2003,
+                8,
+                11
+              ]
+            ],
+            "date-time": "2003-08-11T23:31:10Z",
+            "timestamp": 1060644670000
+          },
+          "page": "581-589",
+          "source": "Crossref",
+          "is-referenced-by-count": 233,
+          "title": [
+            "The spread of HIV-1 in Africa: sexual contact patterns and the predicted demographic impact of AIDS"
+          ],
+          "prefix": "10.1038",
+          "volume": "352",
+          "author": [
+            {
+              "given": "R. M.",
+              "family": "Anderson",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "R. M.",
+              "family": "May",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "M. C.",
+              "family": "Boily",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "G. P.",
+              "family": "Garnett",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "J. T.",
+              "family": "Rowley",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "R. M.",
+              "family": "May",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "297",
+          "reference": [
+            {
+              "key": "BF352581a0_CR1",
+              "doi-asserted-by": "publisher",
+              "first-page": "1425",
+              "DOI": "10.1056/NEJM198112103052401",
+              "volume": "305",
+              "author": "MS Gottlieb",
+              "year": "1981",
+              "unstructured": "Gottlieb, M. S. et al. New Engl. J. Med. 305, 1425\u20131431 (1981).",
+              "journal-title": "New Engl. J. Med."
+            },
+            {
+              "key": "BF352581a0_CR2",
+              "doi-asserted-by": "publisher",
+              "first-page": "868",
+              "DOI": "10.1126/science.6189183",
+              "volume": "220",
+              "author": "F Barre-Sinoussi",
+              "year": "1988",
+              "unstructured": "Barre-Sinoussi, F. et al. Science 220, 868\u2013871 (1988).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BF352581a0_CR3",
+              "doi-asserted-by": "publisher",
+              "first-page": "497",
+              "DOI": "10.1126/science.6200936",
+              "volume": "224",
+              "author": "RC Gallo",
+              "year": "1984",
+              "unstructured": "Gallo, R. C. et al. Science 224, 497\u2013500 (1984).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BF352581a0_CR4",
+              "doi-asserted-by": "publisher",
+              "first-page": "793",
+              "DOI": "10.1126/science.2167515",
+              "volume": "249",
+              "author": "KM De Cock",
+              "year": "1990",
+              "unstructured": "De Cock, K. M. et al. Science 249, 793\u2013796 (1990).",
+              "journal-title": "Science"
+            },
+            {
+              "key": "BF352581a0_CR5",
+              "doi-asserted-by": "publisher",
+              "first-page": "1658",
+              "DOI": "10.1056/NEJM198906223202501",
+              "volume": "320",
+              "author": "RW Ryder",
+              "year": "1989",
+              "unstructured": "Ryder, R. W. et al. New Engl. J. Med 320, 1658\u20131642 (1989).",
+              "journal-title": "New Engl. J. Med"
+            },
+            {
+              "key": "BF352581a0_CR6",
+              "unstructured": "Centers for Disease Control National HIV Seroprevalence Surveys 1\u201326 (US Department of Health and Human Services, 1990)."
+            },
+            {
+              "key": "BF352581a0_CR7",
+              "doi-asserted-by": "publisher",
+              "first-page": "1008",
+              "DOI": "10.1001/jama.1989.03420070058030",
+              "volume": "261",
+              "author": "DC Des Jarlais",
+              "year": "1989",
+              "unstructured": "Des Jarlais, D. C. et al. J. Am. med. Ass. 261, 1008\u20131012 (1989).",
+              "journal-title": "J. Am. med. Ass."
+            },
+            {
+              "key": "BF352581a0_CR8",
+              "unstructured": "Vanichseni, S. et al. V Int. Conf. AIDS Montreal 6/4-9 Poster TGO 23 (1989)."
+            },
+            {
+              "key": "BF352581a0_CR9",
+              "first-page": "160",
+              "volume": "i",
+              "author": "JT John",
+              "year": "1989",
+              "unstructured": "John, J.T., Babu, G.P., Jayakumari, H. & Simoes, E.A.F. Lancet i, 160\u2013161 (1989).",
+              "journal-title": "Lancet"
+            },
+            {
+              "key": "BF352581a0_CR10",
+              "doi-asserted-by": "publisher",
+              "first-page": "1059",
+              "DOI": "10.1097/00002030-199011000-00002",
+              "volume": "4",
+              "author": "RJ Biggar",
+              "year": "1990",
+              "unstructured": "Biggar, R. J. AIDS 4, 1059\u20131066 (1990).",
+              "journal-title": "AIDS"
+            },
+            {
+              "key": "BF352581a0_CR11",
+              "first-page": "344",
+              "volume": "2",
+              "author": "M Goodenow",
+              "year": "1989",
+              "unstructured": "Goodenow, M. et al. J. AIDS 2, 344\u2013352 (1989).",
+              "journal-title": "J. AIDS"
+            },
+            {
+              "key": "BF352581a0_CR12",
+              "doi-asserted-by": "publisher",
+              "first-page": "276",
+              "DOI": "10.1038/348276a0",
+              "volume": "348",
+              "author": "K Wellings",
+              "year": "1990",
+              "unstructured": "Wellings, K. et al. Nature 348, 276\u2013278 (1990).",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BF352581a0_CR13",
+              "unstructured": "Anzala, A. et al. V Int. Conf. AIDS Montreal abstract A025 (1989)."
+            },
+            {
+              "key": "BF352581a0_CR14",
+              "first-page": "551",
+              "volume": "1",
+              "author": "B N'galy",
+              "year": "1988",
+              "unstructured": "N'galy, B. & Ryder, R. W. J. AIDS 1, 551\u2013558 (1988).",
+              "journal-title": "J. AIDS"
+            },
+            {
+              "key": "BF352581a0_CR15",
+              "first-page": "1008",
+              "volume": "79",
+              "author": "MF Rogers",
+              "year": "1987",
+              "unstructured": "Rogers, M. F. et al. Pediatrics 79, 1008\u20131014 (1987).",
+              "journal-title": "Pediatrics"
+            },
+            {
+              "key": "BF352581a0_CR16",
+              "first-page": "69",
+              "volume": "4",
+              "author": "JMG Taylor",
+              "year": "19199",
+              "unstructured": "Taylor, J. M. G., Kwo, J. M. & Detels, R. J. AIDS 4, 69\u201375 (199).",
+              "journal-title": "J. AIDS"
+            },
+            {
+              "key": "BF352581a0_CR17",
+              "first-page": "344",
+              "volume": "2",
+              "author": "M Goodenow",
+              "year": "1989",
+              "unstructured": "Goodenow, M. et al. J. AIDS 2, 344\u2013352 (1989).",
+              "journal-title": "J. AIDS"
+            },
+            {
+              "key": "BF352581a0_CR18",
+              "doi-asserted-by": "publisher",
+              "first-page": "1095",
+              "DOI": "10.1097/00002030-199011000-00007",
+              "volume": "4",
+              "author": "M Nowak",
+              "year": "1990",
+              "unstructured": "Nowak, M., May, R. M. & Anderson, R. M. AIDS 4, 1095\u20131103 (1990).",
+              "journal-title": "AIDS"
+            },
+            {
+              "key": "BF352581a0_CR19",
+              "doi-asserted-by": "publisher",
+              "first-page": "1250",
+              "DOI": "10.1136/bmj.299.6710.1250",
+              "volume": "299",
+              "author": "SK Hira",
+              "year": "1989",
+              "unstructured": "Hira, S. K. et al. Br. med. J. 299, 1250\u20131253 (1989).",
+              "journal-title": "Br. med. J."
+            },
+            {
+              "key": "BF352581a0_CR20",
+              "doi-asserted-by": "crossref",
+              "unstructured": "Italian Multicentre Study Lancet i, 1043\u20131045 (1988).",
+              "DOI": "10.1016/S0140-6736(88)90064-5"
+            },
+            {
+              "key": "BF352581a0_CR21",
+              "doi-asserted-by": "publisher",
+              "first-page": "1643",
+              "DOI": "10.1056/NEJM198906223202502",
+              "volume": "320",
+              "author": "S Blanche",
+              "year": "1989",
+              "unstructured": "Blanche, S. et al. New Engl. J. Med. 320, 1643\u20131648 (1989).",
+              "journal-title": "New Engl. J. Med."
+            },
+            {
+              "key": "BF352581a0_CR22",
+              "doi-asserted-by": "crossref",
+              "unstructured": "European Collaborative Study Lancet i, 253\u2013259 (1991).",
+              "DOI": "10.1126/science.253.5017.259"
+            },
+            {
+              "key": "BF352581a0_CR23",
+              "doi-asserted-by": "publisher",
+              "first-page": "1791",
+              "DOI": "10.1056/NEJM198912283212604",
+              "volume": "321",
+              "author": "GB Scott",
+              "year": "1989",
+              "unstructured": "Scott, G. B. et al. New Engl. J. Med. 321, 1791\u20131796 (1989).",
+              "journal-title": "New Engl. J. Med."
+            },
+            {
+              "key": "BF352581a0_CR24",
+              "doi-asserted-by": "publisher",
+              "first-page": "725",
+              "DOI": "10.1097/00002030-199008000-00002",
+              "volume": "4",
+              "author": "RW Ryder",
+              "year": "1990",
+              "unstructured": "Ryder, R. W. et al. AIDS 4, 725\u2013732 (1990).",
+              "journal-title": "AIDS"
+            },
+            {
+              "key": "BF352581a0_CR25",
+              "doi-asserted-by": "publisher",
+              "first-page": "1237",
+              "DOI": "10.1097/00002030-199012000-00009",
+              "volume": "4",
+              "author": "S Berkley",
+              "year": "1990",
+              "unstructured": "Berkley, S. et al. AIDS 4, 1237\u20131242 (1990).",
+              "journal-title": "AIDS"
+            },
+            {
+              "key": "BF352581a0_CR26",
+              "doi-asserted-by": "publisher",
+              "first-page": "1267",
+              "DOI": "10.1097/00002030-199012000-00014",
+              "volume": "4",
+              "author": "RC Brown",
+              "year": "1990",
+              "unstructured": "Brown, R. C. AIDS 4, 1267\u20131270 (1990).",
+              "journal-title": "AIDS"
+            },
+            {
+              "key": "BF352581a0_CR27",
+              "doi-asserted-by": "publisher",
+              "first-page": "191",
+              "DOI": "10.1038/332191a0",
+              "volume": "332",
+              "author": "RM Anderson",
+              "year": "1988",
+              "unstructured": "Anderson, R. M., May, R. M. & McLean, A. R. Nature 332, 191\u2013290 (1988).",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BF352581a0_CR28",
+              "doi-asserted-by": "publisher",
+              "first-page": "1051",
+              "DOI": "10.1097/00002030-199011000-00001",
+              "volume": "4",
+              "author": "JA Levy",
+              "year": "1990",
+              "unstructured": "Levy, J. A. AIDS 4, 1051\u20131058 (1990).",
+              "journal-title": "AIDS"
+            },
+            {
+              "key": "BF352581a0_CR29",
+              "doi-asserted-by": "publisher",
+              "first-page": "623",
+              "DOI": "10.1136/bmj.298.6674.623",
+              "volume": "298",
+              "author": "P Piot",
+              "year": "1989",
+              "unstructured": "Piot, P. & Laga, M. Br. med. J. 298, 623\u2013624 (1989).",
+              "journal-title": "Br. med. J."
+            },
+            {
+              "key": "BF352581a0_CR30",
+              "first-page": "245",
+              "volume": "3",
+              "author": "E Konings",
+              "year": "1989",
+              "unstructured": "Konings, E., Anderson, R. M., Morley, D. & Meegan, M. AIDS 3, 245\u2013247 (1989).",
+              "journal-title": "AIDS"
+            },
+            {
+              "key": "BF352581a0_CR31",
+              "unstructured": "Anderson, R. M., May, R. M., Ng, W., Rowley, J. T. Phil. Trans. Roy. Soc. B (in the press)."
+            },
+            {
+              "key": "BF352581a0_CR32",
+              "unstructured": "Carael, M., Cleland, J. & Odeokun, L. AIDS (in the press.)"
+            },
+            {
+              "key": "BF352581a0_CR33",
+              "unstructured": "Hogsborg, M. & Aaby, P. in Anthropological Studies Relevant to the Sexual Transmission of HIV (International Union for the Scientific Study of Population, Liege, in the press)."
+            },
+            {
+              "key": "BF352581a0_CR34",
+              "unstructured": "Potts, M., Anderson, R. M. & Boiley, M. C. Lancet (in the press)."
+            },
+            {
+              "key": "BF352581a0_CR35",
+              "doi-asserted-by": "publisher",
+              "first-page": "240",
+              "DOI": "10.1111/j.1749-6632.1989.tb27374.x",
+              "volume": "569",
+              "author": "RM Anderson",
+              "year": "1989",
+              "unstructured": "Anderson, R. M., Ng, W., Boily, M. C. & May, R. M. N.Y. Acad. Sci. 569, 240\u2013274 (1989).",
+              "journal-title": "N.Y. Acad. Sci."
+            },
+            {
+              "key": "BF352581a0_CR36",
+              "doi-asserted-by": "publisher",
+              "first-page": "514",
+              "DOI": "10.1038/333514a0",
+              "volume": "333",
+              "author": "RM Anderson",
+              "year": "1988",
+              "unstructured": "Anderson, R. M. & May, R. M. Nature 333, 514\u2013522 (1988).",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BF352581a0_CR37",
+              "doi-asserted-by": "publisher",
+              "first-page": "415",
+              "DOI": "10.1016/0025-5564(88)90078-8",
+              "volume": "90",
+              "author": "JM Hyman",
+              "year": "1988",
+              "unstructured": "Hyman, J. M. & Stanley, E. A. Math. Biosci. 90, 415\u2013474 (1988).",
+              "journal-title": "Math. Biosci."
+            },
+            {
+              "key": "BF352581a0_CR38",
+              "doi-asserted-by": "publisher",
+              "first-page": "103",
+              "DOI": "10.1002/sim.4780080111",
+              "volume": "8",
+              "author": "J Bongaarts",
+              "year": "1989",
+              "unstructured": "Bongaarts, J. Stats. Med. 8, 103\u2013120 (1989).",
+              "journal-title": "Stats. Med."
+            },
+            {
+              "key": "BF352581a0_CR39",
+              "doi-asserted-by": "publisher",
+              "first-page": "119",
+              "DOI": "10.1016/0025-5564(88)90031-4",
+              "volume": "92",
+              "author": "JA Jacquez",
+              "year": "1988",
+              "unstructured": "Jacquez, J. A., Simon, C. P., Koopman, J. et al. Math. Biosci. 92, 119\u2013199 (1988).",
+              "journal-title": "Math. Biosci."
+            },
+            {
+              "key": "BF352581a0_CR40",
+              "doi-asserted-by": "publisher",
+              "first-page": "1",
+              "DOI": "10.1097/00002030-198912000-00005",
+              "volume": "3",
+              "author": "S Gupta",
+              "year": "1989",
+              "unstructured": "Gupta, S., Anderson, R. M. & May, R. M. AIDS 3, 1\u201311 (1989).",
+              "journal-title": "AIDS"
+            },
+            {
+              "key": "BF352581a0_CR41",
+              "doi-asserted-by": "publisher",
+              "first-page": "315",
+              "DOI": "10.1038/336315a0",
+              "volume": "336",
+              "author": "PM Sharp",
+              "year": "1988",
+              "unstructured": "Sharp, P. M. & Li, W. H. Nature 336, 315 (1988).",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BF352581a0_CR42",
+              "first-page": "237",
+              "volume": "5",
+              "author": "S Yokoyama",
+              "year": "1988",
+              "unstructured": "Yokoyama, S., Chung, L. & Gojobori, T. Molec. biol. Evol. 5, 237\u2013251 (1988).",
+              "journal-title": "Molec. biol. Evol."
+            },
+            {
+              "key": "BF352581a0_CR43",
+              "doi-asserted-by": "publisher",
+              "first-page": "S89",
+              "DOI": "10.1017/S0031182000073042",
+              "volume": "100",
+              "author": "RM May",
+              "year": "1990",
+              "unstructured": "May, R. M. & Anderson, R. M. Parasitology 100, S89\u2013S101 (1990).",
+              "journal-title": "Parasitology"
+            },
+            {
+              "key": "BF352581a0_CR44",
+              "doi-asserted-by": "publisher",
+              "first-page": "475",
+              "DOI": "10.1016/0025-5564(88)90079-X",
+              "volume": "90",
+              "author": "RM May",
+              "year": "1988",
+              "unstructured": "May, R. M., Anderson, R. M. & McLean, A. R. Math. Biosci. 90, 475\u2013505 (1988).",
+              "journal-title": "Math. Biosci."
+            },
+            {
+              "key": "BF352581a0_CR45",
+              "doi-asserted-by": "publisher",
+              "first-page": "220",
+              "DOI": "10.1007/978-3-642-46693-9_16",
+              "volume": "81",
+              "author": "RM May",
+              "year": "1988",
+              "unstructured": "May, R. M., Anderson, R. M. & McLean, A. R. Lect. Notes Biomath. 81, 220\u2013248 (1988).",
+              "journal-title": "Lect. Notes Biomath."
+            },
+            {
+              "key": "BF352581a0_CR46",
+              "first-page": "1",
+              "volume": "64",
+              "author": "J Kreiss",
+              "year": "1988",
+              "unstructured": "Kreiss, J., Carael, M. & Mehous, A. Genitourin. Med. 64, 1\u20132 (1988).",
+              "journal-title": "Genitourin. Med."
+            },
+            {
+              "key": "BF352581a0_CR47",
+              "first-page": "33",
+              "volume-title": "Current Topics in AIDS",
+              "author": "RM May",
+              "year": "1989",
+              "unstructured": "May, R. M. & Anderson, R. M. in Current Topics in AIDS Vol. 2 33\u201368 (Wiley, New York, 1989)."
+            },
+            {
+              "key": "BF352581a0_CR48",
+              "doi-asserted-by": "publisher",
+              "first-page": "47",
+              "DOI": "10.1097/00002030-199001000-00007",
+              "volume": "4",
+              "author": "JT Rowley",
+              "year": "1990",
+              "unstructured": "Rowley, J. T., Anderson, R. M. & Ng, T. W. AIDS 4, 47\u201356 (1990).",
+              "journal-title": "AIDS"
+            },
+            {
+              "key": "BF352581a0_CR49",
+              "unstructured": "HIV/AIDS Surveillance Data Base 9th update (US Bureau of the Census, Washington DC, 1990)."
+            },
+            {
+              "key": "BF352581a0_CR50",
+              "unstructured": "Andreasson, P. et al. V Int. Conf. AIDS Montreal 6/4-9 poster MGP 16 (1989)."
+            },
+            {
+              "key": "BF352581a0_CR51",
+              "unstructured": "Gnaore, E. et al. VI Int. Conf. on AIDS San Francisco 6/20-24 poster FC663 (1990)."
+            },
+            {
+              "key": "BF352581a0_CR52",
+              "unstructured": "Mati, J. et al. VI Int. Conf. AIDS San Francisco 6/20-24 poster (1990)."
+            },
+            {
+              "key": "BF352581a0_CR53",
+              "unstructured": "Liomba, N. G. et al. V Int. Conf. AIDS Montreal 6/4-9 poster WGO 29 (1989)."
+            },
+            {
+              "key": "BF352581a0_CR54",
+              "unstructured": "Maiga, M. K. et al. V Int. Conf. AIDS Montreal 6/4-9 abstract A577 (1989)."
+            },
+            {
+              "key": "BF352581a0_CR55",
+              "unstructured": "HIV Seroprevalence: Blood-Bank, Mozambique (Ministry of Health (Mozambique), 1989)."
+            },
+            {
+              "key": "BF352581a0_CR56",
+              "unstructured": "Le Page, P. et al. IV Int. Conf. AIDS and Associated Cancers in Africa Marseille poster 243 (1989)."
+            },
+            {
+              "key": "BF352581a0_CR57",
+              "doi-asserted-by": "publisher",
+              "first-page": "1081",
+              "DOI": "10.1097/00002030-199011000-00005",
+              "volume": "4",
+              "author": "J Killewo",
+              "year": "1990",
+              "unstructured": "Killewo, J. et al. AIDS 4, 1081\u201386 (1990).",
+              "journal-title": "AIDS"
+            },
+            {
+              "key": "BF352581a0_CR58",
+              "unstructured": "Guay, L. et al. VI Int. Conf. AIDS San Francisco 6/20-24 poster (1990)."
+            },
+            {
+              "key": "BF352581a0_CR59",
+              "unstructured": "Murile, A. V Int. Conf. AIDS Montreal 6/4-9 abstract TBP 353 (1989)."
+            },
+            {
+              "key": "BF352581a0_CR60",
+              "doi-asserted-by": "publisher",
+              "first-page": "1108",
+              "DOI": "10.1093/infdis/155.6.1108",
+              "volume": "155",
+              "author": "P Piot",
+              "year": "1987",
+              "unstructured": "Piot, P. et al. J. infect. Dis. 155, 1108\u20131112 (1987).",
+              "journal-title": "J. infect. Dis."
+            },
+            {
+              "key": "BF352581a0_CR61",
+              "unstructured": "Lifoon, A. R. et al. VI Int. Conf. AIDS San Francisco abstract C33 (1990)."
+            },
+            {
+              "key": "BF352581a0_CR62",
+              "unstructured": "Ward, J. et al. IV International Conference on AIDS Stockholm abstract 7711 (1988)."
+            },
+            {
+              "key": "BF352581a0_CR63",
+              "doi-asserted-by": "publisher",
+              "first-page": "99",
+              "DOI": "10.1136/bmj.297.6641.99",
+              "volume": "297",
+              "author": "J Giezecke",
+              "year": "1988",
+              "unstructured": "Giezecke, J. et al. Br. med. J. 297, 99\u2013102 (1988).",
+              "journal-title": "Br. med. J."
+            },
+            {
+              "key": "BF352581a0_CR64",
+              "doi-asserted-by": "publisher",
+              "first-page": "87",
+              "DOI": "10.1097/00002030-198902000-00006",
+              "volume": "3",
+              "author": "G Rezza",
+              "year": "1989",
+              "unstructured": "Rezza, G. et al. AIDS 3, 87\u201390 (1989).",
+              "journal-title": "AIDS"
+            },
+            {
+              "key": "BF352581a0_CR65",
+              "doi-asserted-by": "publisher",
+              "first-page": "575",
+              "DOI": "10.1038/336575a0",
+              "volume": "336",
+              "author": "I Auger",
+              "year": "1988",
+              "unstructured": "Auger, I. et al. Nature 336, 575\u2013577 (1988).",
+              "journal-title": "Nature"
+            },
+            {
+              "key": "BF352581a0_CR66",
+              "doi-asserted-by": "crossref",
+              "unstructured": "European Collaborative Study Lancet ii, 1039\u20131042 (1988).",
+              "DOI": "10.1016/S0140-6736(88)90063-3"
+            },
+            {
+              "key": "BF352581a0_CR67",
+              "doi-asserted-by": "publisher",
+              "first-page": "640",
+              "DOI": "10.1001/jama.1987.03390050066020",
+              "volume": "257",
+              "author": "MA Fischl",
+              "year": "1987",
+              "unstructured": "Fischl, M. A. et al. J. Am. med. Ass. 257, 640\u2013644 (1987).",
+              "journal-title": "J. Am. med. Ass."
+            },
+            {
+              "key": "BF352581a0_CR68",
+              "unstructured": "European Study Group Br. med. J. 298, 411\u2013415 (1989)."
+            },
+            {
+              "key": "BF352581a0_CR69",
+              "doi-asserted-by": "publisher",
+              "first-page": "788",
+              "DOI": "10.1001/jama.1987.03400060064030",
+              "volume": "258",
+              "author": "N Padian",
+              "year": "1987",
+              "unstructured": "Padian, N. et al. J. Am. med. Ass. 258, 788\u2013791 (1987).",
+              "journal-title": "J. Am. med. Ass."
+            },
+            {
+              "key": "BF352581a0_CR70",
+              "doi-asserted-by": "publisher",
+              "first-page": "645",
+              "DOI": "10.1001/archinte.1989.00390030109021",
+              "volume": "149",
+              "author": "JB Glaser",
+              "year": "1989",
+              "unstructured": "Glaser, J. B., Strange, T. J. & Rosati, D. Archs intern. Med. 149, 645\u2013649 (1989).",
+              "journal-title": "Archs intern. Med."
+            },
+            {
+              "key": "BF352581a0_CR71",
+              "doi-asserted-by": "publisher",
+              "first-page": "367",
+              "DOI": "10.1097/00002030-198906000-00005",
+              "volume": "3",
+              "author": "AM Johnson",
+              "year": "1989",
+              "unstructured": "Johnson, A. M. et al. AIDS 3, 367\u2013372 (1989).",
+              "journal-title": "AIDS"
+            },
+            {
+              "key": "BF352581a0_CR72",
+              "doi-asserted-by": "publisher",
+              "first-page": "55",
+              "DOI": "10.1001/jama.1988.03720010033036",
+              "volume": "259",
+              "author": "TA Peterman",
+              "year": "1988",
+              "unstructured": "Peterman, T. A., Stoneburner, R. L., Allen, J. R., Jaffe, H. W. & Curran, J. W. J. Am. med. Ass. 259, 55\u201358 (1988).",
+              "journal-title": "J. Am. med. Ass."
+            },
+            {
+              "key": "BF352581a0_CR73",
+              "first-page": "714",
+              "volume": "3",
+              "author": "IK Hewlett",
+              "year": "1990",
+              "unstructured": "Hewlett, I. K. et al. J. AIDS 3, 714\u2013720 (1990).",
+              "journal-title": "J. AIDS"
+            },
+            {
+              "key": "BF352581a0_CR74",
+              "doi-asserted-by": "publisher",
+              "first-page": "526",
+              "DOI": "10.1136/bmj.296.6621.526",
+              "volume": "296",
+              "author": "AJ France",
+              "year": "1988",
+              "unstructured": "France, A. J. et al. Br. med. J. 296, 526\u2013529 (1988).",
+              "journal-title": "Br. med. J."
+            },
+            {
+              "key": "BF352581a0_CR75",
+              "unstructured": "Centres for Disease Control Morbidity and Mortality Weekly Reports 36, 593\u2013595 (1987)."
+            },
+            {
+              "key": "BF352581a0_CR76",
+              "doi-asserted-by": "publisher",
+              "first-page": "497",
+              "DOI": "10.3109/00365548609021653",
+              "volume": "18",
+              "author": "G Biberfield",
+              "year": "1986",
+              "unstructured": "Biberfield, G. et al. Scand. J. infect. Dis. 18, 497\u2013500 (1986).",
+              "journal-title": "Scand. J. infect. Dis."
+            },
+            {
+              "key": "BF352581a0_CR77",
+              "first-page": "758",
+              "volume": "4",
+              "author": "WA Andinan",
+              "year": "1990",
+              "unstructured": "Andinan, W. A. et al. AIDS 4, 758\u2013766 (1990).",
+              "journal-title": "AIDS"
+            },
+            {
+              "key": "BF352581a0_CR78",
+              "doi-asserted-by": "publisher",
+              "first-page": "1351",
+              "DOI": "10.1016/S0140-6736(89)91965-X",
+              "volume": "ii",
+              "author": "JJ Goedert",
+              "year": "1989",
+              "unstructured": "Goedert, J. J. et al. Lancet ii, 1351\u20131354 (1989).",
+              "journal-title": "Lancet"
+            },
+            {
+              "key": "BF352581a0_CR79",
+              "doi-asserted-by": "publisher",
+              "first-page": "109",
+              "DOI": "10.1098/rstb.1989.0079",
+              "volume": "325",
+              "author": "GK Reeves",
+              "year": "1989",
+              "unstructured": "Reeves, G. K. Phil. Trans. R. Soc. B 325, 109\u2013114 (1989).",
+              "journal-title": "Phil. Trans. R. Soc."
+            },
+            {
+              "key": "BF352581a0_CR80",
+              "doi-asserted-by": "publisher",
+              "first-page": "1297",
+              "DOI": "10.1056/NEJM198711193172101",
+              "volume": "317",
+              "author": "R Rothenberg",
+              "year": "1987",
+              "unstructured": "Rothenberg, R. et al. New Engl. J. Med. 317, 1297\u20131302 (1987).",
+              "journal-title": "New Engl. J. Med."
+            },
+            {
+              "key": "BF352581a0_CR81",
+              "doi-asserted-by": "publisher",
+              "first-page": "66",
+              "DOI": "10.2307/2982185",
+              "volume": "151",
+              "author": "RM Anderson",
+              "year": "1988",
+              "unstructured": "Anderson, R. M. J. statist. Soc. A 151, 66\u201393 (1988).",
+              "journal-title": "J. statist. Soc."
+            },
+            {
+              "key": "BF352581a0_CR82",
+              "first-page": "763",
+              "volume": "3",
+              "author": "SM Blower",
+              "year": "1990",
+              "unstructured": "Blower, S. M., Anderson, R. M. & Wallace, P. J. AIDS 3, 763\u2013772 (1990).",
+              "journal-title": "J. AIDS"
+            },
+            {
+              "key": "BF352581a0_CR83",
+              "doi-asserted-by": "publisher",
+              "first-page": "181",
+              "DOI": "10.1080/00224498809551454",
+              "volume": "1",
+              "author": "JD Baldwin",
+              "year": "1988",
+              "unstructured": "Baldwin, J. D. & Baldwin, J. I. J. Sex Res. 1, 181\u2013196 (1988).",
+              "journal-title": "J. Sex Res."
+            },
+            {
+              "key": "BF352581a0_CR84",
+              "doi-asserted-by": "publisher",
+              "first-page": "255",
+              "DOI": "10.1097/00002030-198808000-00003",
+              "volume": "2",
+              "author": "CP Hudson",
+              "year": "1988",
+              "unstructured": "Hudson, C. P. et al. AIDS 2, 255\u2013260 (1988).",
+              "journal-title": "AIDS"
+            },
+            {
+              "key": "BF352581a0_CR85",
+              "doi-asserted-by": "publisher",
+              "first-page": "524",
+              "DOI": "10.1016/S0140-6736(85)90462-3",
+              "volume": "ii",
+              "author": "P Van de Perre",
+              "year": "1985",
+              "unstructured": "Van de Perre, P. et al. Lancet ii, 524\u2013527 (1985).",
+              "journal-title": "Lancet"
+            },
+            {
+              "key": "BF352581a0_CR86",
+              "unstructured": "Berkley, S. F. et al. IV Int. Conf. AIDS and Associated Cancers in Africa Marseille 1989 poster 012 (1989)."
+            },
+            {
+              "key": "BF352581a0_CR87",
+              "doi-asserted-by": "publisher",
+              "first-page": "1113",
+              "DOI": "10.1016/S0140-6736(86)90527-1",
+              "volume": "i",
+              "author": "M Melbye",
+              "year": "1986",
+              "unstructured": "Melbye, M. et al. Lancet i, 1113\u20131115 (1986).",
+              "journal-title": "Lancet"
+            },
+            {
+              "key": "BF352581a0_CR88",
+              "doi-asserted-by": "publisher",
+              "first-page": "1263",
+              "DOI": "10.1097/00002030-199012000-00013",
+              "volume": "4",
+              "author": "IM Lisse",
+              "year": "1990",
+              "unstructured": "Lisse, I. M. et al. AIDS 4, 1263\u20131266 (1990).",
+              "journal-title": "AIDS"
+            },
+            {
+              "key": "BF352581a0_CR89",
+              "volume-title": "HIV Infection in Thailand",
+              "author": "P Thangcharven",
+              "year": "1989",
+              "unstructured": "Thangcharven, P. et al. HIV Infection in Thailand (Mahidol University Publication, Bangkok, 1989)."
+            },
+            {
+              "key": "BF352581a0_CR90",
+              "unstructured": "Ntozi, J. P. M. & Lubega, M. in Anthropological Studies Relevant to the Sexual Transmission of HIV (International Union for the Scientific Study of Population, Liege, in the press)."
+            },
+            {
+              "key": "BF352581a0_CR91",
+              "unstructured": "Boily, M. C. & Anderson, R. M. IMA J. math. Med. Biol. (in the press)."
+            }
+          ],
+          "container-title": [
+            "Nature"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "http://www.nature.com/articles/352581a0",
+              "content-type": "text/html",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://www.nature.com/articles/352581a0.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "http://www.nature.com/articles/352581a0.pdf",
+              "content-type": "application/pdf",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2023,
+                5,
+                17
+              ]
+            ],
+            "date-time": "2023-05-17T01:44:55Z",
+            "timestamp": 1684287895000
+          },
+          "score": 56.665947,
+          "resource": {
+            "primary": {
+              "URL": "https://www.nature.com/articles/352581a0"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1991,
+                8
+              ]
+            ]
+          },
+          "references-count": 91,
+          "journal-issue": {
+            "issue": "6336",
+            "published-print": {
+              "date-parts": [
+                [
+                  1991,
+                  8
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "BF352581a0"
+          ],
+          "URL": "https://doi.org/10.1038/352581a0",
+          "ISSN": [
+            "0028-0836",
+            "1476-4687"
+          ],
+          "issn-type": [
+            {
+              "value": "0028-0836",
+              "type": "print"
+            },
+            {
+              "value": "1476-4687",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1991,
+                8
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2025,
+                10,
+                11
+              ]
+            ],
+            "date-time": "2025-10-11T17:36:42Z",
+            "timestamp": 1760204202202
+          },
+          "reference-count": 21,
+          "publisher": "Wiley",
+          "issue": "1",
+          "license": [
+            {
+              "start": {
+                "date-parts": [
+                  [
+                    2006,
+                    12,
+                    17
+                  ]
+                ],
+                "date-time": "2006-12-17T00:00:00Z",
+                "timestamp": 1166313600000
+              },
+              "content-version": "vor",
+              "delay-in-days": 6225,
+              "URL": "http://onlinelibrary.wiley.com/termsAndConditions#vor"
+            }
+          ],
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "short-container-title": [
+            "Annals of the New York Academy of Sciences"
+          ],
+          "published-print": {
+            "date-parts": [
+              [
+                1989,
+                12
+              ]
+            ]
+          },
+          "DOI": "10.1111/j.1749-6632.1989.tb27374.x",
+          "type": "journal-article",
+          "created": {
+            "date-parts": [
+              [
+                2006,
+                12,
+                17
+              ]
+            ],
+            "date-time": "2006-12-17T14:46:18Z",
+            "timestamp": 1166366778000
+          },
+          "page": "240-274",
+          "source": "Crossref",
+          "is-referenced-by-count": 26,
+          "title": [
+            "The Influence of Different Sexual\u2010Contact Patterns between Age Classes on the Predicted Demographic Impact of AIDS in Developing Countries"
+          ],
+          "prefix": "10.1111",
+          "volume": "569",
+          "author": [
+            {
+              "given": "R. M.",
+              "family": "ANDERSON",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "T. W.",
+              "family": "NG",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "M. C.",
+              "family": "BOILY",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "R. M.",
+              "family": "MAY",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "member": "311",
+          "published-online": {
+            "date-parts": [
+              [
+                2006,
+                12,
+                17
+              ]
+            ]
+          },
+          "reference": [
+            {
+              "issue": "1",
+              "key": "e_1_2_1_2_2",
+              "first-page": "557",
+              "article-title": "Epidemiology of HIV infection and AIDS: Incubation and infectious periods, survival and vertical transmission",
+              "volume": "2",
+              "author": "Anderson R. M.",
+              "year": "1988",
+              "journal-title": "AIDS"
+            },
+            {
+              "key": "e_1_2_1_3_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/338251a0"
+            },
+            {
+              "key": "e_1_2_1_4_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1097/00002030-198800001-00038"
+            },
+            {
+              "key": "e_1_2_1_5_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/332228a0"
+            },
+            {
+              "key": "e_1_2_1_6_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1016/0025-5564(88)90079-X"
+            },
+            {
+              "key": "e_1_2_1_7_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/333514a0"
+            },
+            {
+              "key": "e_1_2_1_8_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.2307/2982185"
+            },
+            {
+              "key": "e_1_2_1_9_2",
+              "first-page": "419",
+              "article-title": "Possible demographic consequences of HIV/AIDS epidemics: II.",
+              "volume": "100",
+              "author": "May R. M.",
+              "year": "1988",
+              "journal-title": "Assuming HIV infection does not necessarily lead to AIDS. Lecture Notes in Biomathematics."
+            },
+            {
+              "key": "e_1_2_1_10_2",
+              "first-page": "1008",
+              "article-title": "AIDS in children: Report of the CDC national surveillance.",
+              "volume": "78",
+              "author": "Rogers M.",
+              "year": "1987",
+              "journal-title": "Pediatrics"
+            },
+            {
+              "key": "e_1_2_1_11_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/326137a0"
+            },
+            {
+              "key": "e_1_2_1_12_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/imammb/3.4.229"
+            },
+            {
+              "key": "e_1_2_1_13_2",
+              "unstructured": "McLean A. R.&R. M.Anderson1989.In preparation."
+            },
+            {
+              "key": "e_1_2_1_14_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1038/328719a0"
+            },
+            {
+              "key": "e_1_2_1_15_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rstb.1988.0108"
+            },
+            {
+              "issue": "1",
+              "key": "e_1_2_1_16_2",
+              "first-page": "549",
+              "article-title": "Heterosexual transmission of HIV",
+              "volume": "2",
+              "author": "Johnson A. M.",
+              "year": "1988",
+              "journal-title": "AIDS"
+            },
+            {
+              "key": "e_1_2_1_17_2",
+              "doi-asserted-by": "crossref",
+              "first-page": "55",
+              "DOI": "10.1001/jama.1988.03720010033036",
+              "article-title": "Risk of human immunodeficiency virus transmission from heterosexual adults with transfusion associated infections.",
+              "volume": "259",
+              "author": "Peterman T. A.",
+              "year": "1988",
+              "journal-title": "JAMA"
+            },
+            {
+              "key": "e_1_2_1_18_2",
+              "first-page": "245",
+              "article-title": "Rates of sexual partner change among two pastoralist southern nilotic groups in East Africa.",
+              "volume": "3",
+              "author": "Konings E.",
+              "year": "1988",
+              "journal-title": "AIDS"
+            },
+            {
+              "key": "e_1_2_1_19_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1098/rstb.1989.0074"
+            },
+            {
+              "key": "e_1_2_1_20_2",
+              "first-page": "1927",
+              "article-title": "Effects of zidovudine in 365 consecutive patients with AIDS or AIDS\u2010related complex.",
+              "author": "Dournon E.",
+              "year": "1988",
+              "journal-title": "Lancet"
+            },
+            {
+              "key": "e_1_2_1_21_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1093/imammb/5.4.237"
+            },
+            {
+              "key": "e_1_2_1_22_2",
+              "doi-asserted-by": "publisher",
+              "DOI": "10.1097/00002030-198902000-00005"
+            }
+          ],
+          "container-title": [
+            "Annals of the New York Academy of Sciences"
+          ],
+          "language": "en",
+          "link": [
+            {
+              "URL": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1111%2Fj.1749-6632.1989.tb27374.x",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "text-mining"
+            },
+            {
+              "URL": "https://nyaspubs.onlinelibrary.wiley.com/doi/pdf/10.1111/j.1749-6632.1989.tb27374.x",
+              "content-type": "unspecified",
+              "content-version": "vor",
+              "intended-application": "similarity-checking"
+            }
+          ],
+          "deposited": {
+            "date-parts": [
+              [
+                2023,
+                9,
+                25
+              ]
+            ],
+            "date-time": "2023-09-25T20:36:48Z",
+            "timestamp": 1695674208000
+          },
+          "score": 36.5315,
+          "resource": {
+            "primary": {
+              "URL": "https://nyaspubs.onlinelibrary.wiley.com/doi/10.1111/j.1749-6632.1989.tb27374.x"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                1989,
+                12
+              ]
+            ]
+          },
+          "references-count": 21,
+          "journal-issue": {
+            "issue": "1",
+            "published-print": {
+              "date-parts": [
+                [
+                  1989,
+                  12
+                ]
+              ]
+            }
+          },
+          "alternative-id": [
+            "10.1111/j.1749-6632.1989.tb27374.x"
+          ],
+          "URL": "https://doi.org/10.1111/j.1749-6632.1989.tb27374.x",
+          "archive": [
+            "Portico"
+          ],
+          "ISSN": [
+            "0077-8923",
+            "1749-6632"
+          ],
+          "issn-type": [
+            {
+              "value": "0077-8923",
+              "type": "print"
+            },
+            {
+              "value": "1749-6632",
+              "type": "electronic"
+            }
+          ],
+          "published": {
+            "date-parts": [
+              [
+                1989,
+                12
+              ]
+            ]
+          }
+        },
+        {
+          "indexed": {
+            "date-parts": [
+              [
+                2026,
+                7,
+                6
+              ]
+            ],
+            "date-time": "2026-07-06T23:44:15Z",
+            "timestamp": 1783381455762,
+            "version": "3.54.6"
+          },
+          "reference-count": 0,
+          "publisher": "World Bank",
+          "content-domain": {
+            "domain": [],
+            "crossmark-restriction": false
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2009,
+                10,
+                1
+              ]
+            ]
+          },
+          "DOI": "10.1596/1813-9450-5076",
+          "type": "book",
+          "created": {
+            "date-parts": [
+              [
+                2010,
+                11,
+                9
+              ]
+            ],
+            "date-time": "2010-11-09T09:04:17Z",
+            "timestamp": 1289293457000
+          },
+          "source": "Crossref",
+          "is-referenced-by-count": 7,
+          "title": [
+            "Demographic And Socioeconomic Patterns Of HIV/AIDS Prevalence In Africa"
+          ],
+          "prefix": "10.1596",
+          "author": [
+            {
+              "given": "Kathleen",
+              "family": "Beegle",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Damien",
+              "family": "de Walque",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "member": "558",
+          "published-online": {
+            "date-parts": [
+              [
+                2012,
+                3,
+                19
+              ]
+            ]
+          },
+          "language": "en",
+          "deposited": {
+            "date-parts": [
+              [
+                2025,
+                4,
+                10
+              ]
+            ],
+            "date-time": "2025-04-10T12:03:36Z",
+            "timestamp": 1744286616000
+          },
+          "score": 35.433212,
+          "resource": {
+            "primary": {
+              "URL": "https://hdl.handle.net/10986/4268"
+            }
+          },
+          "issued": {
+            "date-parts": [
+              [
+                2009,
+                10,
+                1
+              ]
+            ]
+          },
+          "references-count": 0,
+          "URL": "https://doi.org/10.1596/1813-9450-5076",
+          "published": {
+            "date-parts": [
+              [
+                2009,
+                10,
+                1
+              ]
+            ]
+          }
+        }
+      ],
+      "items-per-page": 3,
+      "query": {
+        "start-index": 0,
+        "search-terms": null
+      }
+    }
+  }
+}
