@@ -8,6 +8,13 @@
 - Follow the project-wide [binding architecture rules](docs/DESIGN.md#binding-architecture-rules): keep domain logic headless and framework-independent, UI thin and separate, dependencies directed toward core contracts, and domain state under one owner. Every domain function must be accessible through a public TypeScript API; UI changes state only through defined actions/functions. Apply these constraints to every implementation slice.
 - Follow the [binding domain layout and extension rules](docs/DESIGN.md#binding-domain-layout-and-extension-rules). Keep domain kernels, algorithms and variants separate; preserve the phase-one API when adding explicit variants. Prepared directories are user-requested scaffolding, not delivered modules; add source files and exports only with working slices.
 
+- Use the binding [Agent Loom terminology](docs/agent-loom/terminology.md) across APIs, code, examples, tests, UI and current documentation. Preserve source quotations and distinct tick/step semantics.
+
+## Code quality and refactoring
+
+- Follow [docs/CODING_STANDARDS.md](docs/CODING_STANDARDS.md) for all code changes. Model scripts are readable reference examples: clear syntax, meaningful names and visible flow take priority over brevity.
+- For model/UI script refactors, use the local `.agents/skills/refactor-model-scripts/SKILL.md`; for library refactors, use `.agents/skills/refactor-library/SKILL.md`. Read both for changes spanning those boundaries. These skills remain local; shared standards live in the documentation.
+
 ## Implementation coordination
 
 - Follow PLAN's [example-first delivery gate](PLAN.md#example-first-delivery-gate): write four or five asserted public example scripts per expansion phase before runtime implementation. Preserve their accepted syntax and expectations; fix implementations rather than weakening examples. Clean public API design takes priority over implementation convenience.

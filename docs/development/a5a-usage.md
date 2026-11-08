@@ -51,7 +51,7 @@ const model = createNetworkDiffusionModel({
 });
 model.advance(100);
 const observation = model.read();
-// Agend Lab imports this same composition; no browser is required here.
+// Agent Lab imports this same composition; no browser is required here.
 ```
 
 The model import is a repository example composition, not a new package export. From the repository root, import `./examples/models/network-diffusion.ts` instead. The first example block above is the public library authoring surface; its rule is deliberately simpler than the probabilistic interactive composition.

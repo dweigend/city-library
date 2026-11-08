@@ -2,7 +2,11 @@
 
 Status: binding phase-one Agent Loom target, domain layout and architecture; bounded A1, A2a standard Random and A5a non-spatial Graph are implemented, with acceptance evidence tracked separately. Updated: 5 November 2026. See [A1 usage](development/a1-usage.md) and [A5a usage](development/a5a-usage.md) for delivered subsets; later contracts remain planned. The [work plan](../PLAN.md) owns progress, sequencing and C01–C06; this document defines architecture and public-contract boundaries. The [README](../README.md) remains the public introduction.
 
+The [coding standards](CODING_STANDARDS.md) define shared readability, TypeScript and refactoring requirements. The architecture and public-contract boundaries below remain authoritative.
+
 ## Binding architecture rules
+
+The [UI API specification](ui/README.md), [UI API table](ui/api-table.md) and [UI API reference](ui/api-reference.md) are binding for the shared UI layer. Readability has highest priority; use defined defaults before adding customization. Availability labels distinguish existing runtime contracts from implementation targets. This does not move presentation into the headless library.
 
 These rules are mandatory throughout the project, including libraries, applications, examples and future adapters. They are normative constraints, not claims of implemented functionality. The [Agent Loom specification](agent-loom/README.md) is also binding for phase one. Broader city scenarios remain design sketches unless explicitly accepted.
 
@@ -60,7 +64,7 @@ Direct typed properties remain valid inside model-authoring logic as specified b
 
 **Architecture invariant:** every domain function must be callable through a public TypeScript API without UI. Replacing the UI must require no core changes.
 
-Within the external Agend Lab, keep application orchestration, DOM presentation, detached observation projection and concrete visualization separate. Renderer-specific types and dependencies belong to the visualization layer. Application actions resolve canonical identities; renderers receive detached records and report interaction intent. Canvas layout, dragging and camera state are presentation state, never model coordinates or another authority for topology, time or randomness. Renderer lifetime includes explicit resource cleanup. The [Cytoscape assignment](development/cytoscape.md) records the first concrete implementation and acceptance evidence for these boundaries.
+Within the external Agent Lab, keep application orchestration, DOM presentation, detached observation projection and concrete visualization separate. Renderer-specific types and dependencies belong to the visualization layer. Application actions resolve canonical identities; renderers receive detached records and report interaction intent. Canvas layout, dragging and camera state are presentation state, never model coordinates or another authority for topology, time or randomness. Renderer lifetime includes explicit resource cleanup. The [Cytoscape assignment](development/cytoscape.md) records the first concrete implementation and acceptance evidence for these boundaries.
 
 For every implementation slice, verify public headless access, dependency direction, explicit contracts and canonical state ownership. When UI is present, also verify that it uses defined actions and contains no domain rules. Use the existing slice checks and browser verification requirements; documentation alone does not establish compliance.
 
@@ -343,3 +347,15 @@ These gates define evidence requirements without claiming completion. The agent-
 - **Future topology:** hexagonal grids need explicit coordinates, neighborhoods, wrapping, dimensions and storage representation. They must preserve phase-one square/cubic behavior.
 
 The [work plan](../PLAN.md) tracks delivery; the [specification overview](agent-loom/README.md) identifies the API source.
+
+## Binding UI authoring rules
+
+The following user-defined rules are mandatory for public UI API design, documentation and subsequent implementation, including the Svelte migration. Readability takes priority over brevity. The shared UI provides opinionated design defaults for rapid prototyping; authors customize only when needed.
+
+- **Default first:** omission means defined, useful default behavior. Prepare shared defaults before requiring experiment-specific configuration.
+- **Flat first:** ordinary experiments use no builder chains, additional configuration layers or nested layout trees.
+- **One normal syntax:** provide one ordinary authoring form, not a collection of competing shorthand forms.
+- **Customize at the affected entry:** a special label or presentation belongs directly beside its binding.
+- **Place functions for readability:** keep short projections inline; give longer functions descriptive names and place them below the UI description.
+
+These are binding design rules, not a declaration that proposed syntax is available or frozen. Concrete simplified syntax remains a design candidate until explicitly agreed and frozen through the example-first gate. Preserve existing accepted examples and headless model contracts; domain state has one owner and UI changes it only through public model actions. Recording these rules does not authorize runtime changes or establish migration acceptance.

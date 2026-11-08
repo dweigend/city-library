@@ -1,10 +1,10 @@
-# Network visualization for Agend Lab
+# Network visualization for Agent Lab
 
-Status: Cytoscape.js selected by the user on 5 November 2026 for the Agend Lab visualization layer; implementation and acceptance are tracked in [the development assignment](../development/cytoscape.md). The comparison below records the preceding research against official documentation, source/release records and npm registry metadata. No renderer was benchmarked during research. The recommendation is an engineering assessment for this repository, not a measured performance ranking.
+Status: Cytoscape.js selected by the user on 5 November 2026 for the Agent Lab visualization layer; implementation and acceptance are tracked in [the development assignment](../development/cytoscape.md). The comparison below records the preceding research against official documentation, source/release records and npm registry metadata. No renderer was benchmarked during research. The recommendation is an engineering assessment for this repository, not a measured performance ranking.
 
 ## Proposed decision
 
-Use **Cytoscape.js as the first candidate for an Agend Lab network-view prototype**. Keep **Sigma.js as the challenger when large-graph rendering becomes the primary need**. Choose after a small browser comparison on the same fixtures. Do not add either to the City Library engine or change its graph ownership/API.
+Use **Cytoscape.js as the first candidate for an Agent Lab network-view prototype**. Keep **Sigma.js as the challenger when large-graph rendering becomes the primary need**. Choose after a small browser comparison on the same fixtures. Do not add either to the City Library engine or change its graph ownership/API.
 
 This preference assumes our first goal is an inspectable 2D modeling workbench: select nodes/edges, inspect attributes, highlight relationships and update observations while stepping a model. Expected real graph sizes and update rates are still unknown. The current Exchange scenario has agents and transient interactions, not an implemented persistent network. The full Graph target is planned A5; a renderer cannot make it implemented.
 

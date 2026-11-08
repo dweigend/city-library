@@ -11,6 +11,8 @@ Agent Loom defines City Library's general modeling core: agents, worlds, spatial
 - [Architecture](../DESIGN.md): state ownership, dependencies, domain layout and extension rules.
 - [Work plan](../../PLAN.md): delivery order and acceptance criteria.
 
+- [Binding terminology](terminology.md): shared names and semantic distinctions across the system.
+
 ## Scope
 
 | Area | Purpose |

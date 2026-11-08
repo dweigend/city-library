@@ -23,7 +23,15 @@ All entries are planned. P0 = coherent preparation; P1 = first standalone capabi
 
 ## Active UI refactor and reference-model validation
 
+The [binding UI specification](docs/ui/README.md), [API table](docs/ui/api-table.md) and [API reference](docs/ui/api-reference.md) own shared UI authoring contracts. Priorities are readability, defaults first, then necessary customization. Target syntax is not delivered until its public examples, implementation and checks pass; preserve the example-first gate and separate browser acceptance. Internal renderer and Svelte APIs are not public experiment-author contracts.
+
 The user authorized replacement of the historical Agend_Lab application. The [refactor assignment](docs/development/agent-lab-refactor.md) owns the shared top-level ui toolkit, ui/agent-lab application, automatically discovered experiments/*/{model.ts,ui.ts}, provenance and four NetLogo comparisons. This is active work, not completed acceptance. Existing frozen core examples and headless factories remain compatible. Required spatial/grid/observation capabilities must be explicit example-first core slices, not duplicate infrastructure hidden in experiments or UI. Runtime work follows consistency review and executable author examples; browser comparisons are separate evidence.
+
+## Code quality
+
+The [coding standards](docs/CODING_STANDARDS.md) govern library, model and UI refactoring. Refactor within existing contracts and verify affected behavior; API expansion retains the example-first gate. Script readability is an acceptance criterion: model.ts and ui.ts serve as reference examples with clear syntax and visible flow.
+
+Next tooling work: configure Biome with focused lint/format commands and verify it against existing code. Separate adoption from broad formatting changes. No Biome checks are currently configured or claimed.
 
 ## Shared tools, kits and integration
 

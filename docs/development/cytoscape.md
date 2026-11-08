@@ -1,6 +1,6 @@
 # Cytoscape network view
 
-Status: implemented by a scoped subagent; author shell/browser acceptance completed on 5 November 2026. Independent source/CLI review found no blockers; the coordinator's subsequent resize correction was verified separately below. This is an external Agend Lab presentation change, not a new core expansion phase or delivery of A5 Graph.
+Status: implemented by a scoped subagent; author shell/browser acceptance completed on 5 November 2026. Independent source/CLI review found no blockers; the coordinator's subsequent resize correction was verified separately below. This is an external Agent Lab presentation change, not a new core expansion phase or delivery of A5 Graph.
 
 ## Assignment and acceptance
 
