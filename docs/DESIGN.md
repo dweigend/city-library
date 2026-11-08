@@ -23,7 +23,7 @@ Every affected UI flow needs current browser evidence and independent screenshot
 
 ## Binding UI authoring rules
 
-Use these rules for public UI APIs, documentation and implementation. Readability takes priority over brevity. The shared UI provides opinionated design defaults for rapid prototyping; authors customize only when needed.
+Follow the [coding standards](CODING_STANDARDS.md) and these rules for public UI APIs, documentation and implementation. Readability takes priority over brevity. The shared UI provides opinionated design defaults for rapid prototyping; authors customize only when needed.
 
 - **Default first:** omission means defined, useful default behavior. Prepare shared defaults before requiring experiment-specific configuration.
 - **Flat first:** ordinary experiments use no builder chains, additional configuration layers or nested layout trees.
@@ -36,7 +36,3 @@ The [UI reference](ui/api-reference.md) defines the implemented readable-authori
 ## Binding UI API documentation
 
 The [UI specification](ui/README.md), [API table](ui/api-table.md) and [API reference](ui/api-reference.md) define the shared authoring contract. Planned operations must be labelled as planned. Current acceptance and review limits belong in [PLAN](../PLAN.md).
-
-## Binding UI authoring rules
-
-Follow the [coding standards](CODING_STANDARDS.md). Readability takes priority over brevity. Provide useful defaults first, one flat ordinary authoring syntax, customization beside its affected binding, short projections inline and descriptively named longer functions below the declaration. Preserve accepted examples and headless state ownership; new syntax requires explicit agreement and the example-first gate. These rules do not establish runtime or browser acceptance.

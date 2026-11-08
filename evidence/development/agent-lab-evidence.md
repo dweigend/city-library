@@ -2,32 +2,7 @@
 
 Status: modular replacement implemented; final checks and evidence are recorded below. This is bounded delivery, not full A3/A4/A7 or NetLogo parity.
 
-## Git checkpoints
-
-- `40c4ce6`: preserves the pre-refactor library and existing application, including previously uncommitted work.
-- `085f71b`: refactor assignment and binding DESIGN update.
-- `8c53722`: 15 new asserted author scripts, headless entry contract, source archives and provenance. Scripts precede their runtime.
-
-## Executed baseline
-
-Before runtime implementation, `bun run check` passed: existing typechecks, behavior tests, 15 earlier public scripts, browser-target core build and packed Bun/Node/ambient-free TypeScript consumer. This is baseline evidence only, not verification of the refactor.
-
-New example initial failures, exact contracts and hashes are recorded in [agent-lab-examples.md](agent-lab-examples.md). Reference sources, licensing and comparisons are recorded in [netlogo-reference-sources.md](../../docs/development/netlogo-reference-sources.md).
-
-## Review decisions
-
-Argon found six architecture blockers; Astra identified step/observation ordering, domain prerequisites and typing issues. Responses and accepted corrections are recorded in [the assignment](https://github.com/dweigend/city-library/blob/dc7b164abd23c8e7b7f11c902195ab030c5f1c4b/docs/development/agent-lab-refactor.md#review-responses-and-decisions). These are pre-implementation reviews, not approval of runtime behavior. The suggestion to record inside a rule callback was rejected for new models in favor of post-success recording.
-
-## Acceptance checklist
-
-- Shared controls/renderers and automatic catalog with no scenario-specific shell branches.
-- Four headless reference ports and source-specific behavioral fixtures, including both Wolf Sheep modes.
-- Core spatial/grid/stats closure and earlier API compatibility.
-- New/old scripts, strict types, tests, build and packed public consumer.
-- Actual target browser flows, desktop/mobile and supported themes.
-- Setup/progress screenshots compared with separately versioned NetLogo Web references.
-- UI guideline review, independent implementation review and fixes.
-- Legacy runtime removed; active commands/configs migrated; final Git checkpoints and main-thread handoff.
+Historical verification: 5 November 2026. The results below are retained from that delivery, not a fresh check run. [Frozen examples](agent-lab-examples.md), [assignment and review decisions](agent-lab-refactor.md#review-responses-and-decisions) and [source provenance](netlogo-reference-sources.md) remain versioned.
 
 ## Gaps to track
 
@@ -44,10 +19,12 @@ Before this work, spatial movement, Grid/Field, occupancy, field diffusion and g
 
 ## Executed target/browser evidence
 
-[Browser comparison and corrective retests](agent-lab-browser-evidence.md) includes all four default setups/progressed runs, both Wolf modes, Run/Pause, live/draft inputs, validation, catalog rebuild switching, layout/keyboard selection, responsive sizing and selective actual light/dark emulation. No complete accessibility or cross-browser certification is claimed.
+Real Chromium checks at desktop 1280 × 800 and mobile 390 × 844 covered all four default setups/progressed runs, both Wolf modes, Run/Pause, live/draft inputs, validation, catalog rebuild switching, layout/keyboard selection, responsive sizing and selective actual light/dark emulation. No complete accessibility or cross-browser certification is claimed.
 
-Root also smoke-tested the replacement server on port 3100 with Preferential Attachment Setup and 10 steps (12 nodes/11 edges), dark/light theme switching and no console errors. Network labels now use the shared muted token and update on preference changes; screenshots are in agent-lab-screenshots/preferential-attachment-theme-{dark,light}.png. All owned browser tabs are closed after checks.
+Root also smoke-tested the replacement server on port 3100 with Preferential Attachment Setup and 10 steps (12 nodes/11 edges), dark/light theme switching and no console errors. Network labels now use the shared muted token and update on preference changes. Detailed browser logs and screenshots are local artifacts under `.local/development-archive/`. All owned browser tabs are closed after checks.
 
 Final executed `bun run check` passed after review fixes: all three TypeScript configurations, 103 tests across 13 files, 35 public example scripts, browser-target build/declarations and packed Bun/Node/ambient-free TypeScript consumer. The packed consumer additionally executes spatial wrapping, typed Grid admission, canonical occupancy, conservative diffusion and histogram/Gini through the installed package. No UI or reference sources enter that archive.
 
 Remaining library work: paths/canMove/gradients, general geometry namespace, advanced activation/MT compatibility, Graph/Input/Agenda World participation, generic Input/stats.describe/alignment/History, study execution/storage/continuation and further graph algorithms. The model-owned bounded histories are not delivery of generic storage.History. Current neutral glyphs, independent layout and RNG differ intentionally from NetLogo; see provenance/deviation records.
+
+See the [documentation policy](README.md) for local artifact retention.

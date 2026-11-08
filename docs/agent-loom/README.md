@@ -14,8 +14,6 @@ The specification defines the required core API. Implemented subsets cover agent
 - [Work plan](../../PLAN.md): next goals and acceptance criteria.
 - [Binding terminology](terminology.md): shared names and semantic distinctions across the system.
 
-- [Binding terminology](terminology.md): shared names and semantic distinctions across the system.
-
 ## Scope
 
 | Area | Purpose |
