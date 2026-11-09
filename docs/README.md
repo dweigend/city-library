@@ -9,6 +9,7 @@ Start with an experiment, change something and see what happens. These guides ta
 | Understand the project | [City Library](../README.md) |
 | Run an experiment | [Agent Lab](../ui/agent-lab/README.md) |
 | Write a model and connect its UI | [Model authoring](development/model-authoring.md) |
+| Compose event-driven city models | [DES capabilities](development/des-feature-matrix.md) and [ten examples](development/des-examples.md) |
 | Look up UI bindings | [UI API](ui/README.md) |
 | Understand ownership and dependencies | [Architecture](ARCHITECTURE.md) |
 | Work on the interface | [UI design](DESIGN.md) |
