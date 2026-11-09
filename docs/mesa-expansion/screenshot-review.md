@@ -1,0 +1,55 @@
+# Independent screenshot review
+
+Reviewer: independent native Codex subagent (`gpt-6.1-sol`, inherited medium reasoning), separate from model implementation and browser capture. Final image recheck observed repository HEAD `25e4657a128b07075a8e909aa5dc44ce77c0f433`; the two corrected UI files were clean at that point. All forty final PNG files were individually opened with `view_image`, not inferred from source or a manifest. Criteria: local frontend-design principles, frontend-design-shadcn-svelte and web-design-guidelines. Current Vercel rules were fetched successfully on 2026-11-09 into `/tmp/mesa-browser/vercel-review-rules.md`.
+
+## Review status
+
+All ten entries were inspected in desktop/narrow and light/dark combinations. Both material findings were corrected by the implementing coordinator, and all affected replacement images were independently opened and reinspected. No blocking visual finding remains in the captured states. This independent pass approves the inspected image evidence for all ten entries; its limits below still apply.
+
+## Findings and responses
+
+| Finding | Evidence and source | Status |
+| --- | --- | --- |
+| Medium: zoning bar category labels overlap and become unreadable | Desktop light/dark images below; `experiments/zoning-scenario-comparison/ui.ts:8` emits long scenario/seed labels into six narrow slots | Resolved: six replacement images inspected (four viewport/theme states plus two scrolled narrow chart states). Run 1–Run 6 labels are readable without overlap; scenario/seed table remains available. |
+| Medium: recycling graph node labels overlap heavily at the center | Desktop/narrow, both themes; `experiments/household-recycling-behavior/ui.ts:6` emits long household/status labels | Resolved: six replacement images inspected. H1–H12 labels are distinct; selected H11 has full Household 11 / recycling true in a visible inspector. Four viewport/theme states plus two narrow inspector/chart states verified. |
+| Low: summary-table raw decimals consume unnecessary width | Zoning narrow screenshots | Resolved: two-decimal summary presentation is legible, including narrow light/dark captures; model values remain unchanged. |
+
+Initial partial captures had transient dim controls/table text. The browser operator traced this to the shared 0.15-second color transitions; two animation frames were insufficient. The complete final set waits 500 ms plus two frames after appearance changes. Actual final images show settled light/dark palettes. Computed enabled Setup/Run/1-step controls have opacity 1 and semantic foreground/background colors. No source contrast defect was inferred from the superseded captures.
+
+Desktop PNG files are backend-downsampled to 1280×720. Authoritative capture evidence records CSS viewport 1366×768 at DPR 2, satisfying the required viewport. Narrow CSS viewport is 390×844 at DPR 2 and PNGs are 780×1688. Each final manifest entry includes resize viewport, live page dimensions/DPR, computed theme/control colors, disabled status and document width. All document widths match their viewport. Wide tables scroll locally; their clipped last columns in the initial narrow scroll position are not document overflow. Screenshots show ordinary vertical continuation below the viewport, which is not content loss.
+
+## Actual images inspected
+
+The full machine-readable capture evidence is `/tmp/mesa-browser/final-manifest.json`. Paths below identify each image actually opened in this independent pass.
+
+| Model | Desktop light | Desktop dark | Narrow light | Narrow dark |
+| --- | --- | --- | --- | --- |
+| household-energy-demand | [light desktop](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91o5tq-a3a5b4d7.png) | [dark desktop](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91o6c8-b647551a.png) | [light narrow](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91o6t2-a3ed1132.png) | [dark narrow](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91o79f-bda402f6.png) |
+| pedestrian-crossing-phases | [light desktop](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91o893-dcb31655.png) | [dark desktop](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91o90s-3388dd96.png) | [light narrow](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91oa2w-e96bb3ae.png) | [dark narrow](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91oaqu-da0634e7.png) |
+| neighborhood-heat-intervention | [light desktop](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91oed3-0d32f0a0.png) | [dark desktop](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91oexh-18d05e1b.png) | [light narrow](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91off3-ff24d52f.png) | [dark narrow](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91ofwu-72df4df7.png) |
+| residential-occupancy | [light desktop](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91ogws-fd61a6e2.png) | [dark desktop](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91ohgi-6f45133b.png) | [light narrow](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91ohyv-5831fdd3.png) | [dark narrow](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91oifd-cdcb1a67.png) |
+| solar-battery-microgrid | [light desktop](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91ojcc-fd15c81c.png) | [dark desktop](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91okee-22942eee.png) | [light narrow](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91ol08-db501e73.png) | [dark narrow](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91olgl-64e71a60.png) |
+| stormwater-retention | [light desktop](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91omdw-e2092d26.png) | [dark desktop](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91omww-30e8d4f2.png) | [light narrow](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91one2-90daf2e0.png) | [dark narrow](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91onuo-e0d5ce3a.png) |
+| urban-tree-watering | [light desktop](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91oosc-18166622.png) | [dark desktop](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91opbg-70867ac9.png) | [light narrow](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91opsd-fe42d062.png) | [dark narrow](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91oq8x-c5667b21.png) |
+| workplace-household-membership | [light desktop](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91otxd-160629e1.png) | [dark desktop](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91ouhl-9407a7fd.png) | [light narrow](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91ouzr-6f26beb4.png) | [dark narrow](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91ovgv-efd5c556.png) |
+| zoning-scenario-comparison | [light desktop](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91rko6-646b3eb2.png) | [dark desktop](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91rl7q-b4660377.png) | [light narrow](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91rlou-7a9e19aa.png) | [dark narrow](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91rm5k-dd971ba6.png) |
+| household-recycling-behavior | [light desktop](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91t8qq-4ad71e80.png) | [dark desktop](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91t9ao-50ab48b2.png) | [light narrow](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91t9t4-cdc56bed.png) | [dark narrow](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91taa6-39395db7.png) |
+
+Additional replacement-state images independently inspected:
+
+- [zoning-scenario-comparison narrow-chart light](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91rmn3-6eba50c9.png)
+- [zoning-scenario-comparison narrow-chart dark](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91rn4g-d004ca8c.png)
+- [household-recycling-behavior narrow-inspector light](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91tas9-4b6aa882.png)
+- [household-recycling-behavior narrow-inspector dark](/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91tb9f-f7e47c9d.png)
+
+## Limits
+
+This review covers the captured visual states, including compact navigation/controls, legible monitors, chart labels, tables, graph presentation and settled themes. It does not claim interaction, keyboard focus-return, screen-reader, numerical-model, scientific or complete accessibility acceptance. Browser interactions are separately recorded by the browser operator. Below-fold charts not visible in a viewport image are outside that particular image's evidence; additional scrolled zoning chart and recycling inspector images were also inspected. No source files, browser tabs or model state were changed by this reviewer.
+
+## Final evidence decision
+
+The initial forty settled files were inspected individually. Both affected four-image groups were then replaced and inspected again, together with four additional scrolled-state images. The final retained manifest contains forty main images plus four additional images; all forty-four retained files have been inspected. Superseded transition captures and superseded label-overlap captures are not acceptance evidence. All ten models have inspected desktop/light, desktop/dark, narrow/light and narrow/dark evidence. No unresolved blocking image finding remains. No blanket accessibility or interaction approval is inferred from these images.
+
+## Evidence preservation
+
+After this review, the coordinator preserved byte-identical copies in [the portable manifest](browser-evidence/manifest.json), with SHA-256 equality checked against all forty-four inspected originals. Image findings and approval refer to the same bytes; the reviewer did not separately rerun inspection merely because the files were copied.

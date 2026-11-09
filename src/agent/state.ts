@@ -41,7 +41,7 @@ const typedConstructors = [
   Float32Array, Float64Array, BigInt64Array, BigUint64Array,
   ...(typeof Float16Array === "undefined" ? [] : [Float16Array]),
 ];
-function cloneSupported(root: unknown): unknown {
+export function cloneSupported(root: unknown): unknown {
   const seen = new Map<object, unknown>();
   function clone(value: unknown): unknown {
     if (typeof value === "number" && !Number.isFinite(value)) throw new RangeError("Model numbers must be finite.");

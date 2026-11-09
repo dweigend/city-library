@@ -1,18 +1,21 @@
 # Work plan
 
+The [visual correction](docs/mesa-expansion/visual-correction.md) is complete: all ten original Mesa examples now have meaningful primary mechanism views, with fresh browser, independent image and Gemini high review approval.
 City Library brings reusable parts to simulations and games about future cities. Models work in scripts and browsers without depending on a renderer. See the [README](README.md) for the idea and [architecture](docs/ARCHITECTURE.md) for the boundaries.
 
 ## Available now
 
 The repository provides a headless core, a shared UI and 125 paired experiment entries. The catalog target is 200 selected models; research dossiers cover the full selection. Implementation, scientific comparison and independent acceptance remain separate requirements.
 
-The core includes Agent/World lifecycle and execution, seeded Random streams, spatial movement and perception, Grid/Field operations, Graph algorithms, planar geometry and statistics. The [Agent Loom specification](docs/agent-loom/README.md) defines the required API beyond the implemented subsets. Use [public exports](index.ts) and asserted examples to check a particular operation; the [coverage inventory](docs/development/coverage.md) needs reconciliation with those contracts.
+The core includes Agent/World lifecycle and execution, seeded Random streams, spatial movement and perception, Grid/Field operations, Graph algorithms, planar geometry and statistics. The [Mesa/DES expansion](docs/mesa-expansion/STATUS.md) adds pure measurements, bounded History, serial studies, explicit activation, two-phase updates, linear threshold calculations, causal Agenda composition and capacity-owned resources. Its twenty illustrative city entries supplement the fixed upstream selection; their browser and independent acceptance evidence remains separate. The [Agent Loom specification](docs/agent-loom/README.md) defines the required API beyond the implemented subsets. Use [public exports](index.ts) and asserted examples to check a particular operation; the [coverage inventory](docs/development/coverage.md) needs reconciliation with those contracts.
 
 Both UI hosts support `defineUI`, keyed live controls, flat groups, monitor formatting and labelled charts. All 125 entries use the shared contract without a model-specific fallback. The Svelte runtime remains a work in progress; the legacy host is available. See [Lab usage](ui/agent-lab/README.md) and the [UI API](docs/ui/README.md).
 
 The [catalog ledger](experiments/catalog/progress.json) tracks model-level acceptance. It records 125 implemented entries, including 20 whose remaining acceptance stages still need evidence reconciliation. Research is recorded for 200 selected models; independent review and full acceptance are recorded for one. These counts describe distinct stages, not a completed catalog. A working setup or passing test does not establish scientific equivalence or complete accessibility.
 
 ## Next steps
+
+The [Salabim concept integration](docs/development/des-contract.md) is an authorized additive DES expansion with [ten separate city examples](docs/development/des-examples.md). Its [cross-track contract](CROSS-TRACK-CONTRACTS.md) assigns Agenda, queues, Resource, Store, waits, time-weighted observation and event diagnostics to this track; Mesa owns History/measurements, studies, activation, two-phase updates and global execution budgets. The five core and ten model examples are committed and pass against the implemented runtime. Final Gemini DES design/source approval, independent refactor/code checks, scientific countercheck and all ten browser flows are recorded. A later shared canvas resize correction passed its own independent source review, ten-flow/80-viewport replay and fresh spatial-image inspection. This bounded slice is locally complete; the wider API/catalog goals below remain open. Source evidence is separate in [the research record](docs/research/salabim-concepts.md); executed checks and independent review belong in [integration evidence](docs/development/des-integration-evidence.md). Neither this work nor Mesa establishes whole upstream parity or city calibration.
 
 1. Reconcile the remaining model-level acceptance stages with their required evidence; implementation alone does not complete a model.
 2. Finish remaining Svelte controls, lifecycle and model-switching acceptance, including desktop/narrow light/dark screenshots and independent inspection.
@@ -21,7 +24,7 @@ The [catalog ledger](experiments/catalog/progress.json) tracks model-level accep
 5. Resolve the breadth of public domain-procedure access before exporting arbitrary helpers; the [procedure matrix](docs/development/model-function-encapsulation.md) records the open interpretation.
 6. Define the next main release scope, finish its remote checks and obtain explicit merge approval. Preparing documentation does not complete the remaining model work.
 
-New core capabilities still start with public examples. Agenda, advanced execution, RNG compatibility, paths, generic Input/History, study execution, codecs and complete continuation remain broader targets; check actual exports before treating a particular operation as missing or complete.
+New core capabilities still start with public examples. Full RNG compatibility, paths, generic Input, advanced study transport/continuation, codecs and complete continuation remain broader targets; check actual exports before treating a particular operation as missing or complete.
 
 ## UI and review
 

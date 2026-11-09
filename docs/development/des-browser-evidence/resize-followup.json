@@ -1,0 +1,2018 @@
+{
+  "fixCommit": "11d78f7",
+  "method": "Window error and unhandledrejection listeners installed before Setup after each navigation; real T3 preview Chrome tab2h",
+  "beforeFix": {
+    "source": "Coordinator report, not a new baseline run by this browser agent",
+    "maintenanceErrors": 2,
+    "mesaErrors": 5,
+    "message": "ResizeObserver loop completed with undelivered notifications",
+    "originalBlindSpot": "Snapshot consoleEntries were empty while window.error events were emitted; original screenshots alone did not establish error-free behavior"
+  },
+  "flows": [
+    {
+      "slug": "des-civic-office",
+      "listenerBeforeSetup": true,
+      "resizeCycles": 4,
+      "resizeStates": [
+        {
+          "cycle": 0,
+          "viewport": "narrow",
+          "width": 390,
+          "height": 844,
+          "documentWidth": 390,
+          "errors": [],
+          "rejections": [],
+          "buffers": []
+        },
+        {
+          "cycle": 0,
+          "viewport": "desktop",
+          "width": 1366,
+          "height": 768,
+          "documentWidth": 1366,
+          "errors": [],
+          "rejections": [],
+          "buffers": []
+        },
+        {
+          "cycle": 1,
+          "viewport": "narrow",
+          "width": 390,
+          "height": 844,
+          "documentWidth": 390,
+          "errors": [],
+          "rejections": [],
+          "buffers": []
+        },
+        {
+          "cycle": 1,
+          "viewport": "desktop",
+          "width": 1366,
+          "height": 768,
+          "documentWidth": 1366,
+          "errors": [],
+          "rejections": [],
+          "buffers": []
+        },
+        {
+          "cycle": 2,
+          "viewport": "narrow",
+          "width": 390,
+          "height": 844,
+          "documentWidth": 390,
+          "errors": [],
+          "rejections": [],
+          "buffers": []
+        },
+        {
+          "cycle": 2,
+          "viewport": "desktop",
+          "width": 1366,
+          "height": 768,
+          "documentWidth": 1366,
+          "errors": [],
+          "rejections": [],
+          "buffers": []
+        },
+        {
+          "cycle": 3,
+          "viewport": "narrow",
+          "width": 390,
+          "height": 844,
+          "documentWidth": 390,
+          "errors": [],
+          "rejections": [],
+          "buffers": []
+        },
+        {
+          "cycle": 3,
+          "viewport": "desktop",
+          "width": 1366,
+          "height": 768,
+          "documentWidth": 1366,
+          "errors": [],
+          "rejections": [],
+          "buffers": []
+        }
+      ],
+      "running": {
+        "monitors": "Time (min)\n5\nWaiting\n0\nBusy desks\n1\nCompleted\n2",
+        "running": true
+      },
+      "paused": {
+        "monitors": "Time (min)\n5\nWaiting\n0\nBusy desks\n1\nCompleted\n2",
+        "paused": true,
+        "errors": [],
+        "rejections": []
+      }
+    },
+    {
+      "slug": "des-ev-charging",
+      "listenerBeforeSetup": true,
+      "resizeCycles": 4,
+      "resizeStates": [
+        {
+          "cycle": 0,
+          "viewport": "narrow",
+          "width": 390,
+          "height": 844,
+          "documentWidth": 390,
+          "errors": [],
+          "rejections": [],
+          "buffers": []
+        },
+        {
+          "cycle": 0,
+          "viewport": "desktop",
+          "width": 1366,
+          "height": 768,
+          "documentWidth": 1366,
+          "errors": [],
+          "rejections": [],
+          "buffers": []
+        },
+        {
+          "cycle": 1,
+          "viewport": "narrow",
+          "width": 390,
+          "height": 844,
+          "documentWidth": 390,
+          "errors": [],
+          "rejections": [],
+          "buffers": []
+        },
+        {
+          "cycle": 1,
+          "viewport": "desktop",
+          "width": 1366,
+          "height": 768,
+          "documentWidth": 1366,
+          "errors": [],
+          "rejections": [],
+          "buffers": []
+        },
+        {
+          "cycle": 2,
+          "viewport": "narrow",
+          "width": 390,
+          "height": 844,
+          "documentWidth": 390,
+          "errors": [],
+          "rejections": [],
+          "buffers": []
+        },
+        {
+          "cycle": 2,
+          "viewport": "desktop",
+          "width": 1366,
+          "height": 768,
+          "documentWidth": 1366,
+          "errors": [],
+          "rejections": [],
+          "buffers": []
+        },
+        {
+          "cycle": 3,
+          "viewport": "narrow",
+          "width": 390,
+          "height": 844,
+          "documentWidth": 390,
+          "errors": [],
+          "rejections": [],
+          "buffers": []
+        },
+        {
+          "cycle": 3,
+          "viewport": "desktop",
+          "width": 1366,
+          "height": 768,
+          "documentWidth": 1366,
+          "errors": [],
+          "rejections": [],
+          "buffers": []
+        }
+      ],
+      "running": {
+        "monitors": "Time (min)\n5\nCharging\n0\nWaiting\n0\nCompleted\n3\nAbandoned\n0",
+        "running": true
+      },
+      "paused": {
+        "monitors": "Time (min)\n5\nCharging\n0\nWaiting\n0\nCompleted\n3\nAbandoned\n0",
+        "paused": true,
+        "errors": [],
+        "rejections": []
+      }
+    },
+    {
+      "slug": "des-goods-buffer",
+      "listenerBeforeSetup": true,
+      "resizeCycles": 4,
+      "resizeStates": [
+        {
+          "cycle": 0,
+          "viewport": "narrow",
+          "width": 390,
+          "height": 844,
+          "documentWidth": 390,
+          "errors": [],
+          "rejections": [],
+          "buffers": []
+        },
+        {
+          "cycle": 0,
+          "viewport": "desktop",
+          "width": 1366,
+          "height": 768,
+          "documentWidth": 1366,
+          "errors": [],
+          "rejections": [],
+          "buffers": []
+        },
+        {
+          "cycle": 1,
+          "viewport": "narrow",
+          "width": 390,
+          "height": 844,
+          "documentWidth": 390,
+          "errors": [],
+          "rejections": [],
+          "buffers": []
+        },
+        {
+          "cycle": 1,
+          "viewport": "desktop",
+          "width": 1366,
+          "height": 768,
+          "documentWidth": 1366,
+          "errors": [],
+          "rejections": [],
+          "buffers": []
+        },
+        {
+          "cycle": 2,
+          "viewport": "narrow",
+          "width": 390,
+          "height": 844,
+          "documentWidth": 390,
+          "errors": [],
+          "rejections": [],
+          "buffers": []
+        },
+        {
+          "cycle": 2,
+          "viewport": "desktop",
+          "width": 1366,
+          "height": 768,
+          "documentWidth": 1366,
+          "errors": [],
+          "rejections": [],
+          "buffers": []
+        },
+        {
+          "cycle": 3,
+          "viewport": "narrow",
+          "width": 390,
+          "height": 844,
+          "documentWidth": 390,
+          "errors": [],
+          "rejections": [],
+          "buffers": []
+        },
+        {
+          "cycle": 3,
+          "viewport": "desktop",
+          "width": 1366,
+          "height": 768,
+          "documentWidth": 1366,
+          "errors": [],
+          "rejections": [],
+          "buffers": []
+        }
+      ],
+      "running": {
+        "monitors": "Time (min)\n5\nProduced\n3\nStored\n2\nBlocked producers\n0\nCollected\n1",
+        "running": true
+      },
+      "paused": {
+        "monitors": "Time (min)\n5\nProduced\n3\nStored\n2\nBlocked producers\n0\nCollected\n1",
+        "paused": true,
+        "errors": [],
+        "rejections": []
+      }
+    },
+    {
+      "slug": "des-bus-interchange",
+      "listenerBeforeSetup": true,
+      "resizeCycles": 4,
+      "resizeStates": [
+        {
+          "cycle": 0,
+          "viewport": "narrow",
+          "width": 390,
+          "height": 844,
+          "documentWidth": 390,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 732,
+              "height": 928,
+              "cssWidth": 366,
+              "cssHeight": 464
+            },
+            {
+              "width": 732,
+              "height": 928,
+              "cssWidth": 366,
+              "cssHeight": 464
+            },
+            {
+              "width": 732,
+              "height": 928,
+              "cssWidth": 366,
+              "cssHeight": 464
+            }
+          ]
+        },
+        {
+          "cycle": 0,
+          "viewport": "desktop",
+          "width": 1366,
+          "height": 768,
+          "documentWidth": 1366,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 2044,
+              "height": 844,
+              "cssWidth": 1022,
+              "cssHeight": 422
+            },
+            {
+              "width": 2044,
+              "height": 844,
+              "cssWidth": 1022,
+              "cssHeight": 422
+            },
+            {
+              "width": 2044,
+              "height": 844,
+              "cssWidth": 1022,
+              "cssHeight": 422
+            }
+          ]
+        },
+        {
+          "cycle": 1,
+          "viewport": "narrow",
+          "width": 390,
+          "height": 844,
+          "documentWidth": 390,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 732,
+              "height": 928,
+              "cssWidth": 366,
+              "cssHeight": 464
+            },
+            {
+              "width": 732,
+              "height": 928,
+              "cssWidth": 366,
+              "cssHeight": 464
+            },
+            {
+              "width": 732,
+              "height": 928,
+              "cssWidth": 366,
+              "cssHeight": 464
+            }
+          ]
+        },
+        {
+          "cycle": 1,
+          "viewport": "desktop",
+          "width": 1366,
+          "height": 768,
+          "documentWidth": 1366,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 2044,
+              "height": 844,
+              "cssWidth": 1022,
+              "cssHeight": 422
+            },
+            {
+              "width": 2044,
+              "height": 844,
+              "cssWidth": 1022,
+              "cssHeight": 422
+            },
+            {
+              "width": 2044,
+              "height": 844,
+              "cssWidth": 1022,
+              "cssHeight": 422
+            }
+          ]
+        },
+        {
+          "cycle": 2,
+          "viewport": "narrow",
+          "width": 390,
+          "height": 844,
+          "documentWidth": 390,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 732,
+              "height": 928,
+              "cssWidth": 366,
+              "cssHeight": 464
+            },
+            {
+              "width": 732,
+              "height": 928,
+              "cssWidth": 366,
+              "cssHeight": 464
+            },
+            {
+              "width": 732,
+              "height": 928,
+              "cssWidth": 366,
+              "cssHeight": 464
+            }
+          ]
+        },
+        {
+          "cycle": 2,
+          "viewport": "desktop",
+          "width": 1366,
+          "height": 768,
+          "documentWidth": 1366,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 2044,
+              "height": 844,
+              "cssWidth": 1022,
+              "cssHeight": 422
+            },
+            {
+              "width": 2044,
+              "height": 844,
+              "cssWidth": 1022,
+              "cssHeight": 422
+            },
+            {
+              "width": 2044,
+              "height": 844,
+              "cssWidth": 1022,
+              "cssHeight": 422
+            }
+          ]
+        },
+        {
+          "cycle": 3,
+          "viewport": "narrow",
+          "width": 390,
+          "height": 844,
+          "documentWidth": 390,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 732,
+              "height": 928,
+              "cssWidth": 366,
+              "cssHeight": 464
+            },
+            {
+              "width": 732,
+              "height": 928,
+              "cssWidth": 366,
+              "cssHeight": 464
+            },
+            {
+              "width": 732,
+              "height": 928,
+              "cssWidth": 366,
+              "cssHeight": 464
+            }
+          ]
+        },
+        {
+          "cycle": 3,
+          "viewport": "desktop",
+          "width": 1366,
+          "height": 768,
+          "documentWidth": 1366,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 2044,
+              "height": 844,
+              "cssWidth": 1022,
+              "cssHeight": 422
+            },
+            {
+              "width": 2044,
+              "height": 844,
+              "cssWidth": 1022,
+              "cssHeight": 422
+            },
+            {
+              "width": 2044,
+              "height": 844,
+              "cssWidth": 1022,
+              "cssHeight": 422
+            }
+          ]
+        }
+      ],
+      "running": {
+        "monitors": "Time (min)\n5\nRoute (min)\n5\nWaiting\n1\nDeparted\n0",
+        "running": true
+      },
+      "paused": {
+        "monitors": "Time (min)\n5\nRoute (min)\n5\nWaiting\n1\nDeparted\n0",
+        "paused": true,
+        "errors": [],
+        "rejections": []
+      }
+    },
+    {
+      "slug": "des-parcel-logistics",
+      "listenerBeforeSetup": true,
+      "resizeCycles": 4,
+      "resizeStates": [
+        {
+          "cycle": 0,
+          "viewport": "narrow",
+          "width": 390,
+          "height": 844,
+          "documentWidth": 390,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 732,
+              "height": 928,
+              "cssWidth": 366,
+              "cssHeight": 464
+            },
+            {
+              "width": 732,
+              "height": 928,
+              "cssWidth": 366,
+              "cssHeight": 464
+            },
+            {
+              "width": 732,
+              "height": 928,
+              "cssWidth": 366,
+              "cssHeight": 464
+            }
+          ]
+        },
+        {
+          "cycle": 0,
+          "viewport": "desktop",
+          "width": 1366,
+          "height": 768,
+          "documentWidth": 1366,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 2044,
+              "height": 844,
+              "cssWidth": 1022,
+              "cssHeight": 422
+            },
+            {
+              "width": 2044,
+              "height": 844,
+              "cssWidth": 1022,
+              "cssHeight": 422
+            },
+            {
+              "width": 2044,
+              "height": 844,
+              "cssWidth": 1022,
+              "cssHeight": 422
+            }
+          ]
+        },
+        {
+          "cycle": 1,
+          "viewport": "narrow",
+          "width": 390,
+          "height": 844,
+          "documentWidth": 390,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 732,
+              "height": 928,
+              "cssWidth": 366,
+              "cssHeight": 464
+            },
+            {
+              "width": 732,
+              "height": 928,
+              "cssWidth": 366,
+              "cssHeight": 464
+            },
+            {
+              "width": 732,
+              "height": 928,
+              "cssWidth": 366,
+              "cssHeight": 464
+            }
+          ]
+        },
+        {
+          "cycle": 1,
+          "viewport": "desktop",
+          "width": 1366,
+          "height": 768,
+          "documentWidth": 1366,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 2044,
+              "height": 844,
+              "cssWidth": 1022,
+              "cssHeight": 422
+            },
+            {
+              "width": 2044,
+              "height": 844,
+              "cssWidth": 1022,
+              "cssHeight": 422
+            },
+            {
+              "width": 2044,
+              "height": 844,
+              "cssWidth": 1022,
+              "cssHeight": 422
+            }
+          ]
+        },
+        {
+          "cycle": 2,
+          "viewport": "narrow",
+          "width": 390,
+          "height": 844,
+          "documentWidth": 390,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 732,
+              "height": 928,
+              "cssWidth": 366,
+              "cssHeight": 464
+            },
+            {
+              "width": 732,
+              "height": 928,
+              "cssWidth": 366,
+              "cssHeight": 464
+            },
+            {
+              "width": 732,
+              "height": 928,
+              "cssWidth": 366,
+              "cssHeight": 464
+            }
+          ]
+        },
+        {
+          "cycle": 2,
+          "viewport": "desktop",
+          "width": 1366,
+          "height": 768,
+          "documentWidth": 1366,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 2044,
+              "height": 844,
+              "cssWidth": 1022,
+              "cssHeight": 422
+            },
+            {
+              "width": 2044,
+              "height": 844,
+              "cssWidth": 1022,
+              "cssHeight": 422
+            },
+            {
+              "width": 2044,
+              "height": 844,
+              "cssWidth": 1022,
+              "cssHeight": 422
+            }
+          ]
+        },
+        {
+          "cycle": 3,
+          "viewport": "narrow",
+          "width": 390,
+          "height": 844,
+          "documentWidth": 390,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 732,
+              "height": 928,
+              "cssWidth": 366,
+              "cssHeight": 464
+            },
+            {
+              "width": 732,
+              "height": 928,
+              "cssWidth": 366,
+              "cssHeight": 464
+            },
+            {
+              "width": 732,
+              "height": 928,
+              "cssWidth": 366,
+              "cssHeight": 464
+            }
+          ]
+        },
+        {
+          "cycle": 3,
+          "viewport": "desktop",
+          "width": 1366,
+          "height": 768,
+          "documentWidth": 1366,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 2044,
+              "height": 844,
+              "cssWidth": 1022,
+              "cssHeight": 422
+            },
+            {
+              "width": 2044,
+              "height": 844,
+              "cssWidth": 1022,
+              "cssHeight": 422
+            },
+            {
+              "width": 2044,
+              "height": 844,
+              "cssWidth": 1022,
+              "cssHeight": 422
+            }
+          ]
+        }
+      ],
+      "running": {
+        "monitors": "Time (min)\n5\nDepot queue\n0\nBlocked senders\n0\nVan occupied\n1\nDelivered\n1",
+        "running": true
+      },
+      "paused": {
+        "monitors": "Time (min)\n5\nDepot queue\n0\nBlocked senders\n0\nVan occupied\n1\nDelivered\n1",
+        "paused": true,
+        "errors": [],
+        "rejections": []
+      }
+    },
+    {
+      "slug": "des-waste-collection",
+      "listenerBeforeSetup": true,
+      "resizeCycles": 4,
+      "resizeStates": [
+        {
+          "cycle": 0,
+          "viewport": "narrow",
+          "width": 390,
+          "height": 844,
+          "documentWidth": 390,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 732,
+              "height": 488,
+              "cssWidth": 366,
+              "cssHeight": 244
+            }
+          ]
+        },
+        {
+          "cycle": 0,
+          "viewport": "desktop",
+          "width": 1366,
+          "height": 768,
+          "documentWidth": 1366,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 1382,
+              "height": 922,
+              "cssWidth": 690.6953125,
+              "cssHeight": 460.796875
+            }
+          ]
+        },
+        {
+          "cycle": 1,
+          "viewport": "narrow",
+          "width": 390,
+          "height": 844,
+          "documentWidth": 390,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 732,
+              "height": 488,
+              "cssWidth": 366,
+              "cssHeight": 244
+            }
+          ]
+        },
+        {
+          "cycle": 1,
+          "viewport": "desktop",
+          "width": 1366,
+          "height": 768,
+          "documentWidth": 1366,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 1382,
+              "height": 922,
+              "cssWidth": 690.6953125,
+              "cssHeight": 460.796875
+            }
+          ]
+        },
+        {
+          "cycle": 2,
+          "viewport": "narrow",
+          "width": 390,
+          "height": 844,
+          "documentWidth": 390,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 732,
+              "height": 488,
+              "cssWidth": 366,
+              "cssHeight": 244
+            }
+          ]
+        },
+        {
+          "cycle": 2,
+          "viewport": "desktop",
+          "width": 1366,
+          "height": 768,
+          "documentWidth": 1366,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 1382,
+              "height": 922,
+              "cssWidth": 690.6953125,
+              "cssHeight": 460.796875
+            }
+          ]
+        },
+        {
+          "cycle": 3,
+          "viewport": "narrow",
+          "width": 390,
+          "height": 844,
+          "documentWidth": 390,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 732,
+              "height": 488,
+              "cssWidth": 366,
+              "cssHeight": 244
+            }
+          ]
+        },
+        {
+          "cycle": 3,
+          "viewport": "desktop",
+          "width": 1366,
+          "height": 768,
+          "documentWidth": 1366,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 1382,
+              "height": 922,
+              "cssWidth": 690.6953125,
+              "cssHeight": 460.796875
+            }
+          ]
+        }
+      ],
+      "running": {
+        "monitors": "Time (min)\n5\nRemaining load\n6\nOn truck\n2\nDelivered\n4",
+        "running": true
+      },
+      "paused": {
+        "monitors": "Time (min)\n5\nRemaining load\n6\nOn truck\n2\nDelivered\n4",
+        "paused": true,
+        "errors": [],
+        "rejections": []
+      }
+    },
+    {
+      "slug": "des-emergency-dispatch",
+      "listenerBeforeSetup": true,
+      "resizeCycles": 4,
+      "resizeStates": [
+        {
+          "cycle": 0,
+          "viewport": "narrow",
+          "width": 390,
+          "height": 844,
+          "documentWidth": 390,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 732,
+              "height": 928,
+              "cssWidth": 366,
+              "cssHeight": 464
+            },
+            {
+              "width": 732,
+              "height": 928,
+              "cssWidth": 366,
+              "cssHeight": 464
+            },
+            {
+              "width": 732,
+              "height": 928,
+              "cssWidth": 366,
+              "cssHeight": 464
+            }
+          ]
+        },
+        {
+          "cycle": 0,
+          "viewport": "desktop",
+          "width": 1366,
+          "height": 768,
+          "documentWidth": 1366,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 2044,
+              "height": 844,
+              "cssWidth": 1022,
+              "cssHeight": 422
+            },
+            {
+              "width": 2044,
+              "height": 844,
+              "cssWidth": 1022,
+              "cssHeight": 422
+            },
+            {
+              "width": 2044,
+              "height": 844,
+              "cssWidth": 1022,
+              "cssHeight": 422
+            }
+          ]
+        },
+        {
+          "cycle": 1,
+          "viewport": "narrow",
+          "width": 390,
+          "height": 844,
+          "documentWidth": 390,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 732,
+              "height": 928,
+              "cssWidth": 366,
+              "cssHeight": 464
+            },
+            {
+              "width": 732,
+              "height": 928,
+              "cssWidth": 366,
+              "cssHeight": 464
+            },
+            {
+              "width": 732,
+              "height": 928,
+              "cssWidth": 366,
+              "cssHeight": 464
+            }
+          ]
+        },
+        {
+          "cycle": 1,
+          "viewport": "desktop",
+          "width": 1366,
+          "height": 768,
+          "documentWidth": 1366,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 2044,
+              "height": 844,
+              "cssWidth": 1022,
+              "cssHeight": 422
+            },
+            {
+              "width": 2044,
+              "height": 844,
+              "cssWidth": 1022,
+              "cssHeight": 422
+            },
+            {
+              "width": 2044,
+              "height": 844,
+              "cssWidth": 1022,
+              "cssHeight": 422
+            }
+          ]
+        },
+        {
+          "cycle": 2,
+          "viewport": "narrow",
+          "width": 390,
+          "height": 844,
+          "documentWidth": 390,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 732,
+              "height": 928,
+              "cssWidth": 366,
+              "cssHeight": 464
+            },
+            {
+              "width": 732,
+              "height": 928,
+              "cssWidth": 366,
+              "cssHeight": 464
+            },
+            {
+              "width": 732,
+              "height": 928,
+              "cssWidth": 366,
+              "cssHeight": 464
+            }
+          ]
+        },
+        {
+          "cycle": 2,
+          "viewport": "desktop",
+          "width": 1366,
+          "height": 768,
+          "documentWidth": 1366,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 2044,
+              "height": 844,
+              "cssWidth": 1022,
+              "cssHeight": 422
+            },
+            {
+              "width": 2044,
+              "height": 844,
+              "cssWidth": 1022,
+              "cssHeight": 422
+            },
+            {
+              "width": 2044,
+              "height": 844,
+              "cssWidth": 1022,
+              "cssHeight": 422
+            }
+          ]
+        },
+        {
+          "cycle": 3,
+          "viewport": "narrow",
+          "width": 390,
+          "height": 844,
+          "documentWidth": 390,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 732,
+              "height": 928,
+              "cssWidth": 366,
+              "cssHeight": 464
+            },
+            {
+              "width": 732,
+              "height": 928,
+              "cssWidth": 366,
+              "cssHeight": 464
+            },
+            {
+              "width": 732,
+              "height": 928,
+              "cssWidth": 366,
+              "cssHeight": 464
+            }
+          ]
+        },
+        {
+          "cycle": 3,
+          "viewport": "desktop",
+          "width": 1366,
+          "height": 768,
+          "documentWidth": 1366,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 2044,
+              "height": 844,
+              "cssWidth": 1022,
+              "cssHeight": 422
+            },
+            {
+              "width": 2044,
+              "height": 844,
+              "cssWidth": 1022,
+              "cssHeight": 422
+            },
+            {
+              "width": 2044,
+              "height": 844,
+              "cssWidth": 1022,
+              "cssHeight": 422
+            }
+          ]
+        }
+      ],
+      "running": {
+        "monitors": "Time (min)\n5\nBusy teams\n1\nWaiting calls\n1\nCompleted\n1",
+        "running": true
+      },
+      "paused": {
+        "monitors": "Time (min)\n5\nBusy teams\n1\nWaiting calls\n1\nCompleted\n1",
+        "paused": true,
+        "errors": [],
+        "rejections": []
+      }
+    },
+    {
+      "slug": "des-bike-redistribution",
+      "listenerBeforeSetup": true,
+      "resizeCycles": 4,
+      "resizeStates": [
+        {
+          "cycle": 0,
+          "viewport": "narrow",
+          "width": 390,
+          "height": 844,
+          "documentWidth": 390,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 732,
+              "height": 366,
+              "cssWidth": 366,
+              "cssHeight": 183
+            }
+          ]
+        },
+        {
+          "cycle": 0,
+          "viewport": "desktop",
+          "width": 1366,
+          "height": 768,
+          "documentWidth": 1366,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 1843,
+              "height": 922,
+              "cssWidth": 921.09375,
+              "cssHeight": 460.796875
+            }
+          ]
+        },
+        {
+          "cycle": 1,
+          "viewport": "narrow",
+          "width": 390,
+          "height": 844,
+          "documentWidth": 390,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 732,
+              "height": 366,
+              "cssWidth": 366,
+              "cssHeight": 183
+            }
+          ]
+        },
+        {
+          "cycle": 1,
+          "viewport": "desktop",
+          "width": 1366,
+          "height": 768,
+          "documentWidth": 1366,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 1843,
+              "height": 922,
+              "cssWidth": 921.09375,
+              "cssHeight": 460.796875
+            }
+          ]
+        },
+        {
+          "cycle": 2,
+          "viewport": "narrow",
+          "width": 390,
+          "height": 844,
+          "documentWidth": 390,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 732,
+              "height": 366,
+              "cssWidth": 366,
+              "cssHeight": 183
+            }
+          ]
+        },
+        {
+          "cycle": 2,
+          "viewport": "desktop",
+          "width": 1366,
+          "height": 768,
+          "documentWidth": 1366,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 1843,
+              "height": 922,
+              "cssWidth": 921.09375,
+              "cssHeight": 460.796875
+            }
+          ]
+        },
+        {
+          "cycle": 3,
+          "viewport": "narrow",
+          "width": 390,
+          "height": 844,
+          "documentWidth": 390,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 732,
+              "height": 366,
+              "cssWidth": 366,
+              "cssHeight": 183
+            }
+          ]
+        },
+        {
+          "cycle": 3,
+          "viewport": "desktop",
+          "width": 1366,
+          "height": 768,
+          "documentWidth": 1366,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 1843,
+              "height": 922,
+              "cssWidth": 921.09375,
+              "cssHeight": 460.796875
+            }
+          ]
+        }
+      ],
+      "running": {
+        "monitors": "Time (min)\n5\nBikes in transit\n0\nDelivered bikes\n4\nTotal bikes\n6",
+        "running": true
+      },
+      "paused": {
+        "monitors": "Time (min)\n5\nBikes in transit\n0\nDelivered bikes\n4\nTotal bikes\n6",
+        "paused": true,
+        "errors": [],
+        "rejections": []
+      }
+    },
+    {
+      "slug": "des-water-allocation",
+      "listenerBeforeSetup": true,
+      "resizeCycles": 4,
+      "resizeStates": [
+        {
+          "cycle": 0,
+          "viewport": "narrow",
+          "width": 390,
+          "height": 844,
+          "documentWidth": 390,
+          "errors": [],
+          "rejections": [],
+          "buffers": []
+        },
+        {
+          "cycle": 0,
+          "viewport": "desktop",
+          "width": 1366,
+          "height": 768,
+          "documentWidth": 1366,
+          "errors": [],
+          "rejections": [],
+          "buffers": []
+        },
+        {
+          "cycle": 1,
+          "viewport": "narrow",
+          "width": 390,
+          "height": 844,
+          "documentWidth": 390,
+          "errors": [],
+          "rejections": [],
+          "buffers": []
+        },
+        {
+          "cycle": 1,
+          "viewport": "desktop",
+          "width": 1366,
+          "height": 768,
+          "documentWidth": 1366,
+          "errors": [],
+          "rejections": [],
+          "buffers": []
+        },
+        {
+          "cycle": 2,
+          "viewport": "narrow",
+          "width": 390,
+          "height": 844,
+          "documentWidth": 390,
+          "errors": [],
+          "rejections": [],
+          "buffers": []
+        },
+        {
+          "cycle": 2,
+          "viewport": "desktop",
+          "width": 1366,
+          "height": 768,
+          "documentWidth": 1366,
+          "errors": [],
+          "rejections": [],
+          "buffers": []
+        },
+        {
+          "cycle": 3,
+          "viewport": "narrow",
+          "width": 390,
+          "height": 844,
+          "documentWidth": 390,
+          "errors": [],
+          "rejections": [],
+          "buffers": []
+        },
+        {
+          "cycle": 3,
+          "viewport": "desktop",
+          "width": 1366,
+          "height": 768,
+          "documentWidth": 1366,
+          "errors": [],
+          "rejections": [],
+          "buffers": []
+        }
+      ],
+      "running": {
+        "monitors": "Time (min)\n5\nSupply units\n6\nDelivered units\n6\nUnmet units\n6",
+        "running": true
+      },
+      "paused": {
+        "monitors": "Time (min)\n5\nSupply units\n6\nDelivered units\n6\nUnmet units\n6",
+        "paused": true,
+        "errors": [],
+        "rejections": []
+      }
+    },
+    {
+      "slug": "des-machine-maintenance",
+      "listenerBeforeSetup": true,
+      "resizeCycles": 4,
+      "resizeStates": [
+        {
+          "cycle": 0,
+          "viewport": "narrow",
+          "width": 390,
+          "height": 844,
+          "documentWidth": 390,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 732,
+              "height": 293,
+              "cssWidth": 366,
+              "cssHeight": 146.5
+            }
+          ]
+        },
+        {
+          "cycle": 0,
+          "viewport": "desktop",
+          "width": 1366,
+          "height": 768,
+          "documentWidth": 1366,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 2044,
+              "height": 818,
+              "cssWidth": 1022,
+              "cssHeight": 409
+            }
+          ]
+        },
+        {
+          "cycle": 1,
+          "viewport": "narrow",
+          "width": 390,
+          "height": 844,
+          "documentWidth": 390,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 732,
+              "height": 293,
+              "cssWidth": 366,
+              "cssHeight": 146.5
+            }
+          ]
+        },
+        {
+          "cycle": 1,
+          "viewport": "desktop",
+          "width": 1366,
+          "height": 768,
+          "documentWidth": 1366,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 2044,
+              "height": 818,
+              "cssWidth": 1022,
+              "cssHeight": 409
+            }
+          ]
+        },
+        {
+          "cycle": 2,
+          "viewport": "narrow",
+          "width": 390,
+          "height": 844,
+          "documentWidth": 390,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 732,
+              "height": 293,
+              "cssWidth": 366,
+              "cssHeight": 146.5
+            }
+          ]
+        },
+        {
+          "cycle": 2,
+          "viewport": "desktop",
+          "width": 1366,
+          "height": 768,
+          "documentWidth": 1366,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 2044,
+              "height": 818,
+              "cssWidth": 1022,
+              "cssHeight": 409
+            }
+          ]
+        },
+        {
+          "cycle": 3,
+          "viewport": "narrow",
+          "width": 390,
+          "height": 844,
+          "documentWidth": 390,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 732,
+              "height": 293,
+              "cssWidth": 366,
+              "cssHeight": 146.5
+            }
+          ]
+        },
+        {
+          "cycle": 3,
+          "viewport": "desktop",
+          "width": 1366,
+          "height": 768,
+          "documentWidth": 1366,
+          "errors": [],
+          "rejections": [],
+          "buffers": [
+            {
+              "width": 2044,
+              "height": 818,
+              "cssWidth": 1022,
+              "cssHeight": 409
+            }
+          ]
+        }
+      ],
+      "running": {
+        "monitors": "Time (min)\n5\nOperational machines\n1\nWaiting repairs\n1\nCompleted repairs\n1\nAvailability\n0.600",
+        "running": true
+      },
+      "paused": {
+        "monitors": "Time (min)\n5\nOperational machines\n1\nWaiting repairs\n1\nCompleted repairs\n1\nAvailability\n0.600",
+        "paused": true,
+        "errors": [],
+        "rejections": []
+      }
+    }
+  ],
+  "pendingResizeCatalogCases": [
+    {
+      "slug": "des-waste-collection",
+      "method": "Later observer on same canvas parent dispatches catalog option pointerdown/up after resize delivery; old canvas fillRect counts any detached draw",
+      "scheduled": {
+        "scheduled": true,
+        "oldCanvasWidth": 1382,
+        "parentWidth": 1021
+      },
+      "disposed": {
+        "url": "http://localhost:3211/?experiment=des-ev-charging",
+        "title": "DES EV Charging ",
+        "setup": true,
+        "oldConnected": false,
+        "ghostDraws": 0,
+        "observerFired": true,
+        "errors": [],
+        "rejections": []
+      }
+    },
+    {
+      "slug": "des-bike-redistribution",
+      "method": "Later observer on same canvas parent dispatches catalog option pointerdown/up after resize delivery; old canvas fillRect counts any detached draw",
+      "scheduled": {
+        "scheduled": true,
+        "oldCanvasWidth": 1843,
+        "parentWidth": 1021
+      },
+      "disposed": {
+        "url": "http://localhost:3211/?experiment=des-ev-charging",
+        "title": "DES EV Charging ",
+        "setup": true,
+        "oldConnected": false,
+        "ghostDraws": 0,
+        "observerFired": true,
+        "errors": [],
+        "rejections": []
+      }
+    },
+    {
+      "slug": "des-machine-maintenance",
+      "method": "Later observer on same canvas parent dispatches catalog option pointerdown/up after resize delivery; old canvas fillRect counts any detached draw",
+      "scheduled": {
+        "scheduled": true,
+        "oldCanvasWidth": 2044,
+        "parentWidth": 1021
+      },
+      "disposed": {
+        "url": "http://localhost:3211/?experiment=des-ev-charging",
+        "title": "DES EV Charging ",
+        "setup": true,
+        "oldConnected": false,
+        "ghostDraws": 0,
+        "observerFired": true,
+        "errors": [],
+        "rejections": []
+      }
+    }
+  ],
+  "independentProbeCommit": "68d10d5",
+  "replacementScreenshots": [
+    {
+      "slug": "des-waste-collection",
+      "viewport": "desktop",
+      "theme": "light",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-waste-collection-desktop-light.png",
+      "css": {
+        "width": 1366,
+        "height": 768,
+        "scrollWidth": 1366,
+        "dark": false,
+        "background": "oklch(1 0 0)",
+        "errors": [],
+        "rejections": [],
+        "buffers": [
+          {
+            "width": 1382,
+            "height": 922,
+            "cssWidth": 690.6953125,
+            "cssHeight": 460.796875
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "windowErrorListenerBeforeSetup": true,
+      "canvasFix": "11d78f7",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw92b96b-561d63ba.png",
+      "sha256": "e0b59e4508957068147c8da7725c491b226b80922b7a5d26f6e07f2be7d25f9d",
+      "supersedesSourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91no9s-51de3d2a.png"
+    },
+    {
+      "slug": "des-waste-collection",
+      "viewport": "desktop",
+      "theme": "dark",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-waste-collection-desktop-dark.png",
+      "css": {
+        "width": 1366,
+        "height": 768,
+        "scrollWidth": 1366,
+        "dark": true,
+        "background": "oklch(0.145 0 0)",
+        "errors": [],
+        "rejections": [],
+        "buffers": [
+          {
+            "width": 1382,
+            "height": 922,
+            "cssWidth": 690.6953125,
+            "cssHeight": 460.796875
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "windowErrorListenerBeforeSetup": true,
+      "canvasFix": "11d78f7",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw92b9p8-df2aa08b.png",
+      "sha256": "4a817b38b9ee00817ab9a829310f3c1d3938ba6deea973d3cfd6bb0ae838f572",
+      "supersedesSourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91nos6-e50c4ba9.png"
+    },
+    {
+      "slug": "des-waste-collection",
+      "viewport": "narrow",
+      "theme": "light",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-waste-collection-narrow-light.png",
+      "css": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "dark": false,
+        "background": "oklch(1 0 0)",
+        "errors": [],
+        "rejections": [],
+        "buffers": [
+          {
+            "width": 732,
+            "height": 488,
+            "cssWidth": 366,
+            "cssHeight": 244
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "windowErrorListenerBeforeSetup": true,
+      "canvasFix": "11d78f7",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw92ba5y-40c37247.png",
+      "sha256": "39908fb1886e7eb9bca57c1f78fd3f947cf8925dfdafb594bf1ef09231ca0336",
+      "supersedesSourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91npo1-79e06d18.png"
+    },
+    {
+      "slug": "des-waste-collection",
+      "viewport": "narrow",
+      "theme": "dark",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-waste-collection-narrow-dark.png",
+      "css": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "dark": true,
+        "background": "oklch(0.145 0 0)",
+        "errors": [],
+        "rejections": [],
+        "buffers": [
+          {
+            "width": 732,
+            "height": 488,
+            "cssWidth": 366,
+            "cssHeight": 244
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "windowErrorListenerBeforeSetup": true,
+      "canvasFix": "11d78f7",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw92bam3-084389c4.png",
+      "sha256": "c008e573053b99d74c5f46ba78b8dc046d7c7e06d18737db5f067afb37495bb8",
+      "supersedesSourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91nqd3-0662c066.png"
+    },
+    {
+      "slug": "des-bike-redistribution",
+      "viewport": "desktop",
+      "theme": "light",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-bike-redistribution-desktop-light.png",
+      "css": {
+        "width": 1366,
+        "height": 768,
+        "scrollWidth": 1366,
+        "dark": false,
+        "background": "oklch(1 0 0)",
+        "errors": [],
+        "rejections": [],
+        "buffers": [
+          {
+            "width": 1843,
+            "height": 922,
+            "cssWidth": 921.09375,
+            "cssHeight": 460.796875
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "windowErrorListenerBeforeSetup": true,
+      "canvasFix": "11d78f7",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw92bd4l-9f51d112.png",
+      "sha256": "a106731e95d80d93dbe49672117462f92a949f275964fc2aa4b87187008cc992",
+      "supersedesSourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91ntiz-dbdcd005.png"
+    },
+    {
+      "slug": "des-bike-redistribution",
+      "viewport": "desktop",
+      "theme": "dark",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-bike-redistribution-desktop-dark.png",
+      "css": {
+        "width": 1366,
+        "height": 768,
+        "scrollWidth": 1366,
+        "dark": true,
+        "background": "oklch(0.145 0 0)",
+        "errors": [],
+        "rejections": [],
+        "buffers": [
+          {
+            "width": 1843,
+            "height": 922,
+            "cssWidth": 921.09375,
+            "cssHeight": 460.796875
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "windowErrorListenerBeforeSetup": true,
+      "canvasFix": "11d78f7",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw92bds2-8737a63f.png",
+      "sha256": "dcddd1dcb550e9923af8ff59ee5feee5c214f936f6c87ffa6b901c9b75aab64f",
+      "supersedesSourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91nu1i-581e9082.png"
+    },
+    {
+      "slug": "des-bike-redistribution",
+      "viewport": "narrow",
+      "theme": "light",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-bike-redistribution-narrow-light.png",
+      "css": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "dark": false,
+        "background": "oklch(1 0 0)",
+        "errors": [],
+        "rejections": [],
+        "buffers": [
+          {
+            "width": 732,
+            "height": 366,
+            "cssWidth": 366,
+            "cssHeight": 183
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "windowErrorListenerBeforeSetup": true,
+      "canvasFix": "11d78f7",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw92be8f-20127e01.png",
+      "sha256": "4d31b1aca54186ada9adb02ed04349fde026b37c4541cbcd0242b2dba7a81a52",
+      "supersedesSourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91nuhw-9db02756.png"
+    },
+    {
+      "slug": "des-bike-redistribution",
+      "viewport": "narrow",
+      "theme": "dark",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-bike-redistribution-narrow-dark.png",
+      "css": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "dark": true,
+        "background": "oklch(0.145 0 0)",
+        "errors": [],
+        "rejections": [],
+        "buffers": [
+          {
+            "width": 732,
+            "height": 366,
+            "cssWidth": 366,
+            "cssHeight": 183
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "windowErrorListenerBeforeSetup": true,
+      "canvasFix": "11d78f7",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw92beo9-32873f4c.png",
+      "sha256": "122cf4d777c2688dae198689dcbd79616225b6458a876cd3ca21c6253eb12ce9",
+      "supersedesSourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91nuxz-ecd0e116.png"
+    },
+    {
+      "slug": "des-machine-maintenance",
+      "viewport": "desktop",
+      "theme": "light",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-machine-maintenance-desktop-light.png",
+      "css": {
+        "width": 1366,
+        "height": 768,
+        "scrollWidth": 1366,
+        "dark": false,
+        "background": "oklch(1 0 0)",
+        "errors": [],
+        "rejections": [],
+        "buffers": [
+          {
+            "width": 2044,
+            "height": 818,
+            "cssWidth": 1022,
+            "cssHeight": 409
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "windowErrorListenerBeforeSetup": true,
+      "canvasFix": "11d78f7",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw92bgzu-16d391d5.png",
+      "sha256": "9f0f40c43dbef2c54056af694eaa42f4e898f7b7d485a639c8797a09c9746d00",
+      "supersedesSourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91v4wb-8148f040.png"
+    },
+    {
+      "slug": "des-machine-maintenance",
+      "viewport": "desktop",
+      "theme": "dark",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-machine-maintenance-desktop-dark.png",
+      "css": {
+        "width": 1366,
+        "height": 768,
+        "scrollWidth": 1366,
+        "dark": true,
+        "background": "oklch(0.145 0 0)",
+        "errors": [],
+        "rejections": [],
+        "buffers": [
+          {
+            "width": 2044,
+            "height": 818,
+            "cssWidth": 1022,
+            "cssHeight": 409
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "windowErrorListenerBeforeSetup": true,
+      "canvasFix": "11d78f7",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw92bhjb-ca66d0c0.png",
+      "sha256": "16ba2833857984ed69dc326349506a69eeca841e8ccac2fc9845b69d60917d62",
+      "supersedesSourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91v5eq-88fcab63.png"
+    },
+    {
+      "slug": "des-machine-maintenance",
+      "viewport": "narrow",
+      "theme": "light",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-machine-maintenance-narrow-light.png",
+      "css": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "dark": false,
+        "background": "oklch(1 0 0)",
+        "errors": [],
+        "rejections": [],
+        "buffers": [
+          {
+            "width": 732,
+            "height": 293,
+            "cssWidth": 366,
+            "cssHeight": 146.5
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "windowErrorListenerBeforeSetup": true,
+      "canvasFix": "11d78f7",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw92bi1a-811e3db0.png",
+      "sha256": "be86f78ed2bdf007fe1a955da1f45a4abdf5bc99e082369120af21e0fe3e9b90",
+      "supersedesSourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91v5vc-1c9fe832.png"
+    },
+    {
+      "slug": "des-machine-maintenance",
+      "viewport": "narrow",
+      "theme": "dark",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-machine-maintenance-narrow-dark.png",
+      "css": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "dark": true,
+        "background": "oklch(0.145 0 0)",
+        "errors": [],
+        "rejections": [],
+        "buffers": [
+          {
+            "width": 732,
+            "height": 293,
+            "cssWidth": 366,
+            "cssHeight": 146.5
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "windowErrorListenerBeforeSetup": true,
+      "canvasFix": "11d78f7",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw92bihk-c493d266.png",
+      "sha256": "8989cda17e339e000c4582fa1191a91c8a706b62fbf56e7bdd286cc55db2f224",
+      "supersedesSourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91v6b4-a9080a5b.png"
+    }
+  ],
+  "scope": "10 DES Setup/step/timedRunPause flows, 4 narrow/desktop cycles (8 viewport changes) per model with500ms+2frames settle; 3 spatial pending-resize catalog disposals;12 spatial screenshots. No claim for arbitrary custom caller callbacks."
+}

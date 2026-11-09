@@ -1,0 +1,477 @@
+[
+  {
+    "slug": "residential-occupancy",
+    "start": {
+      "monitors": [
+        {
+          "label": "Day",
+          "value": "0"
+        },
+        {
+          "label": "Occupied",
+          "value": "1"
+        },
+        {
+          "label": "Available",
+          "value": "0"
+        },
+        {
+          "label": "Waiting",
+          "value": "1"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Pause",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "text": "Skip to experiment\nAgent Lab\nResidential Occupancy\nSetup\nPause\n1 step\n10 steps\n100 steps\nSpeed\nApplicants\nDwelling slots\nMove out first household\nModel info\nDay\n0\nOccupied\n1\nAvailable\n0\nWaiting\n1\nRunning\nHousing · orange waiting, blue housed, gray moved out (schematic)\nOccupancy\n1\n0\n1\nday\nHouseholds\noccupied\nwaiting",
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "end": {
+      "monitors": [
+        {
+          "label": "Day",
+          "value": "6"
+        },
+        {
+          "label": "Occupied",
+          "value": "0"
+        },
+        {
+          "label": "Available",
+          "value": "1"
+        },
+        {
+          "label": "Waiting",
+          "value": "0"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": true
+        },
+        {
+          "label": "1 step",
+          "disabled": true
+        },
+        {
+          "label": "10 steps",
+          "disabled": true
+        },
+        {
+          "label": "100 steps",
+          "disabled": true
+        }
+      ],
+      "text": "Skip to experiment\nAgent Lab\nResidential Occupancy\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nApplicants\nDwelling slots\nMove out first household\nModel info\nDay\n6\nOccupied\n0\nAvailable\n1\nWaiting\n0\nCompleted\nHousing · orange waiting, blue housed, gray moved out (schematic)\nOccupancy\n1\n0\n6\nday\nHouseholds\noccupied\nwaiting",
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "stable": {
+      "monitors": [
+        {
+          "label": "Day",
+          "value": "6"
+        },
+        {
+          "label": "Occupied",
+          "value": "0"
+        },
+        {
+          "label": "Available",
+          "value": "1"
+        },
+        {
+          "label": "Waiting",
+          "value": "0"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": true
+        },
+        {
+          "label": "1 step",
+          "disabled": true
+        },
+        {
+          "label": "10 steps",
+          "disabled": true
+        },
+        {
+          "label": "100 steps",
+          "disabled": true
+        }
+      ],
+      "text": "Skip to experiment\nAgent Lab\nResidential Occupancy\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nApplicants\nDwelling slots\nMove out first household\nModel info\nDay\n6\nOccupied\n0\nAvailable\n1\nWaiting\n0\nCompleted\nHousing · orange waiting, blue housed, gray moved out (schematic)\nOccupancy\n1\n0\n6\nday\nHouseholds\noccupied\nwaiting",
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "liveControls": [
+      {
+        "name": "",
+        "disabled": false
+      },
+      {
+        "name": "applicants",
+        "disabled": false
+      },
+      {
+        "name": "slots",
+        "disabled": false
+      }
+    ]
+  },
+  {
+    "slug": "pedestrian-crossing-phases",
+    "start": {
+      "monitors": [
+        {
+          "label": "Minute",
+          "value": "0"
+        },
+        {
+          "label": "Signal",
+          "value": "red"
+        },
+        {
+          "label": "Waiting",
+          "value": "12"
+        },
+        {
+          "label": "Crossing",
+          "value": "0"
+        },
+        {
+          "label": "Arrived",
+          "value": "0"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Pause",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "text": "Skip to experiment\nAgent Lab\nPedestrian Crossing Phases\nSetup\nPause\n1 step\n10 steps\n100 steps\nSpeed\nPedestrians\nGreen Minutes\nModel info\nMinute\n0\nSignal\nred\nWaiting\n12\nCrossing\n0\nArrived\n0\nRunning\nCrossing · waiting → crosswalk → arrived (schematic)\nCohort\n12\n0\n1\nmin\nPeople\nwaiting\ncrossing\narrived",
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "end": {
+      "monitors": [
+        {
+          "label": "Minute",
+          "value": "5"
+        },
+        {
+          "label": "Signal",
+          "value": "red"
+        },
+        {
+          "label": "Waiting",
+          "value": "0"
+        },
+        {
+          "label": "Crossing",
+          "value": "0"
+        },
+        {
+          "label": "Arrived",
+          "value": "12"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": true
+        },
+        {
+          "label": "1 step",
+          "disabled": true
+        },
+        {
+          "label": "10 steps",
+          "disabled": true
+        },
+        {
+          "label": "100 steps",
+          "disabled": true
+        }
+      ],
+      "text": "Skip to experiment\nAgent Lab\nPedestrian Crossing Phases\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nPedestrians\nGreen Minutes\nModel info\nMinute\n5\nSignal\nred\nWaiting\n0\nCrossing\n0\nArrived\n12\nCompleted\nCrossing · waiting → crosswalk → arrived (schematic)\nCohort\n12\n0\n5\nmin\nPeople\nwaiting\ncrossing\narrived",
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "stable": {
+      "monitors": [
+        {
+          "label": "Minute",
+          "value": "5"
+        },
+        {
+          "label": "Signal",
+          "value": "red"
+        },
+        {
+          "label": "Waiting",
+          "value": "0"
+        },
+        {
+          "label": "Crossing",
+          "value": "0"
+        },
+        {
+          "label": "Arrived",
+          "value": "12"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": true
+        },
+        {
+          "label": "1 step",
+          "disabled": true
+        },
+        {
+          "label": "10 steps",
+          "disabled": true
+        },
+        {
+          "label": "100 steps",
+          "disabled": true
+        }
+      ],
+      "text": "Skip to experiment\nAgent Lab\nPedestrian Crossing Phases\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nPedestrians\nGreen Minutes\nModel info\nMinute\n5\nSignal\nred\nWaiting\n0\nCrossing\n0\nArrived\n12\nCompleted\nCrossing · waiting → crosswalk → arrived (schematic)\nCohort\n12\n0\n5\nmin\nPeople\nwaiting\ncrossing\narrived",
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "liveControls": [
+      {
+        "name": "",
+        "disabled": false
+      },
+      {
+        "name": "pedestrians",
+        "disabled": false
+      },
+      {
+        "name": "greenMinutes",
+        "disabled": false
+      }
+    ]
+  },
+  {
+    "slug": "zoning-scenario-comparison",
+    "start": {
+      "monitors": [
+        {
+          "label": "Study runs",
+          "value": "0"
+        },
+        {
+          "label": "Planned runs",
+          "value": "6"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Pause",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "text": "Skip to experiment\nAgent Lab\nZoning Scenario Comparison\nSetup\nPause\n1 step\n10 steps\n100 steps\nSpeed\nParcels\nBase Cap\nSeed\nModel info\nStudy runs\n0\nPlanned runs\n6\nRunning\nSix density runs · colored block = dwelling slot (aggregate schematic)\nDwelling capacity\n1\n0\n1\nDwelling slots\nSlots\nReplication summaries",
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "end": {
+      "monitors": [
+        {
+          "label": "Study runs",
+          "value": "6"
+        },
+        {
+          "label": "Planned runs",
+          "value": "6"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": true
+        },
+        {
+          "label": "1 step",
+          "disabled": true
+        },
+        {
+          "label": "10 steps",
+          "disabled": true
+        },
+        {
+          "label": "100 steps",
+          "disabled": true
+        }
+      ],
+      "text": "Skip to experiment\nAgent Lab\nZoning Scenario Comparison\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nParcels\nBase Cap\nSeed\nModel info\nStudy runs\n6\nPlanned runs\n6\nCompleted\nSix density runs · colored block = dwelling slot (aggregate schematic)\nDwelling capacity\n32\n0\nRun 1\nRun 2\nRun 3\nRun 4\nRun 5\nRun 6\nDwelling slots\nSlots\nReplication summaries\nscenario\tmean\tsampleSd\nscenario-0\t14.00\t2.00\nscenario-1\t28.00\t4.00",
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "stable": {
+      "monitors": [
+        {
+          "label": "Study runs",
+          "value": "6"
+        },
+        {
+          "label": "Planned runs",
+          "value": "6"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": true
+        },
+        {
+          "label": "1 step",
+          "disabled": true
+        },
+        {
+          "label": "10 steps",
+          "disabled": true
+        },
+        {
+          "label": "100 steps",
+          "disabled": true
+        }
+      ],
+      "text": "Skip to experiment\nAgent Lab\nZoning Scenario Comparison\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nParcels\nBase Cap\nSeed\nModel info\nStudy runs\n6\nPlanned runs\n6\nCompleted\nSix density runs · colored block = dwelling slot (aggregate schematic)\nDwelling capacity\n32\n0\nRun 1\nRun 2\nRun 3\nRun 4\nRun 5\nRun 6\nDwelling slots\nSlots\nReplication summaries\nscenario\tmean\tsampleSd\nscenario-0\t14.00\t2.00\nscenario-1\t28.00\t4.00",
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "liveControls": [
+      {
+        "name": "",
+        "disabled": false
+      },
+      {
+        "name": "parcels",
+        "disabled": false
+      },
+      {
+        "name": "baseCap",
+        "disabled": false
+      },
+      {
+        "name": "seed",
+        "disabled": false
+      }
+    ]
+  }
+]

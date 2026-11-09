@@ -1,0 +1,73 @@
+{
+  "catalogSwitch": {
+    "url": "http://localhost:3191/?experiment=workplace-household-membership",
+    "focus": "Setup",
+    "ring": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.55 0 0 / 0.5) 0px 0px 0px 3px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+    "channels": {
+      "errors": [],
+      "rejections": [],
+      "console": []
+    }
+  },
+  "setup": {
+    "monitors": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Memberships",
+        "value": "12"
+      },
+      {
+        "label": "Workplace A",
+        "value": "3"
+      }
+    ],
+    "buttons": [
+      {
+        "label": "Run",
+        "disabled": false
+      },
+      {
+        "label": "1 step",
+        "disabled": false
+      },
+      {
+        "label": "10 steps",
+        "disabled": false
+      },
+      {
+        "label": "100 steps",
+        "disabled": false
+      }
+    ],
+    "text": "Skip to experiment\nAgent Lab\nWorkplace and Household Membership\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nResidents\nReassign first resident\nModel info\nTick\n0\nMemberships\n12\nWorkplace A\n3\nPaused\nHomes ← residents → workplaces\nFit\nLayout\nInspect node",
+    "channels": {
+      "errors": [],
+      "rejections": [],
+      "console": []
+    },
+    "width": 1366,
+    "height": 768,
+    "dpr": 2,
+    "docWidth": 1366
+  },
+  "narrowBefore": {
+    "text": "Skip to experiment\nAgent Lab\nWorkplace and Household Membership\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nParameters\nTick\n0\nMemberships\n12\nWorkplace A\n3\nPaused\nHomes ← residents → workplaces\nFit\nLayout\nInspect node",
+    "overflow": false
+  },
+  "narrowParameters": {
+    "inputs": [
+      {
+        "name": "",
+        "value": ""
+      },
+      {
+        "name": "residents",
+        "value": "6"
+      }
+    ],
+    "text": "Skip to experiment\nAgent Lab\nWorkplace and Household Membership\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nParameters\nResidents\nReassign first resident\nModel info\nTick\n0\nMemberships\n12\nWorkplace A\n3\nPaused\nHomes ← residents → workplaces\nFit\nLayout\nInspect node"
+  }
+}

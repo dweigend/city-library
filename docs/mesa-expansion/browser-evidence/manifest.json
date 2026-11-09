@@ -1,0 +1,2549 @@
+{
+  "sourceManifest": "/tmp/mesa-browser/final-manifest.json",
+  "images": [
+    {
+      "slug": "household-energy-demand",
+      "size": "desktop",
+      "colorScheme": "light",
+      "path": "household-energy-demand-desktop-light.png",
+      "resizeViewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "evidence": {
+        "width": 1366,
+        "height": 768,
+        "dpr": 2,
+        "scheme": "light",
+        "foreground": "oklch(0.145 0 0)",
+        "background": "oklch(1 0 0)",
+        "docWidth": 1366,
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false,
+            "color": "oklch(0.145 0 0)",
+            "bg": "oklch(1 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "Run",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklch(0.205 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "1 step",
+            "disabled": false,
+            "color": "oklch(0.145 0 0)",
+            "bg": "oklch(1 0 0)",
+            "opacity": "1"
+          }
+        ],
+        "monitors": [
+          [
+            "Hour",
+            "10"
+          ],
+          [
+            "Demand (kW)",
+            "3.60"
+          ],
+          [
+            "Energy (kWh)",
+            "36.00"
+          ]
+        ]
+      },
+      "pngSize": [
+        1280,
+        720
+      ],
+      "originalPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91o5tq-a3a5b4d7.png",
+      "sha256": "0ac180977c7ef23746d063a19100c9877b156905396248947dd79ddaaecfabaf"
+    },
+    {
+      "slug": "household-energy-demand",
+      "size": "desktop",
+      "colorScheme": "dark",
+      "path": "household-energy-demand-desktop-dark.png",
+      "resizeViewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "evidence": {
+        "width": 1366,
+        "height": 768,
+        "dpr": 2,
+        "scheme": "dark",
+        "foreground": "oklch(0.985 0 0)",
+        "background": "oklch(0.145 0 0)",
+        "docWidth": 1366,
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklab(0.36 0 0 / 0.3)",
+            "opacity": "1"
+          },
+          {
+            "label": "Run",
+            "disabled": false,
+            "color": "oklch(0.205 0 0)",
+            "bg": "oklch(0.922 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "1 step",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklab(0.36 0 0 / 0.3)",
+            "opacity": "1"
+          }
+        ],
+        "monitors": [
+          [
+            "Hour",
+            "10"
+          ],
+          [
+            "Demand (kW)",
+            "3.60"
+          ],
+          [
+            "Energy (kWh)",
+            "36.00"
+          ]
+        ]
+      },
+      "pngSize": [
+        1280,
+        720
+      ],
+      "originalPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91o6c8-b647551a.png",
+      "sha256": "8d568fdaf660aa719641762498416a54777a84a31164297bfbdd1ad55983df0e"
+    },
+    {
+      "slug": "household-energy-demand",
+      "size": "narrow",
+      "colorScheme": "light",
+      "path": "household-energy-demand-narrow-light.png",
+      "resizeViewport": {
+        "width": 390,
+        "height": 844
+      },
+      "evidence": {
+        "width": 390,
+        "height": 844,
+        "dpr": 2,
+        "scheme": "light",
+        "foreground": "oklch(0.145 0 0)",
+        "background": "oklch(1 0 0)",
+        "docWidth": 390,
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false,
+            "color": "oklch(0.145 0 0)",
+            "bg": "oklch(1 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "Run",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklch(0.205 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "1 step",
+            "disabled": false,
+            "color": "oklch(0.145 0 0)",
+            "bg": "oklch(1 0 0)",
+            "opacity": "1"
+          }
+        ],
+        "monitors": [
+          [
+            "Hour",
+            "10"
+          ],
+          [
+            "Demand (kW)",
+            "3.60"
+          ],
+          [
+            "Energy (kWh)",
+            "36.00"
+          ]
+        ]
+      },
+      "pngSize": [
+        780,
+        1688
+      ],
+      "originalPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91o6t2-a3ed1132.png",
+      "sha256": "0b6f3325c1a11b3d861e3b3157ea7416a6277c0297b03b3638764a4fa5cead86"
+    },
+    {
+      "slug": "household-energy-demand",
+      "size": "narrow",
+      "colorScheme": "dark",
+      "path": "household-energy-demand-narrow-dark.png",
+      "resizeViewport": {
+        "width": 390,
+        "height": 844
+      },
+      "evidence": {
+        "width": 390,
+        "height": 844,
+        "dpr": 2,
+        "scheme": "dark",
+        "foreground": "oklch(0.985 0 0)",
+        "background": "oklch(0.145 0 0)",
+        "docWidth": 390,
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklab(0.36 0 0 / 0.3)",
+            "opacity": "1"
+          },
+          {
+            "label": "Run",
+            "disabled": false,
+            "color": "oklch(0.205 0 0)",
+            "bg": "oklch(0.922 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "1 step",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklab(0.36 0 0 / 0.3)",
+            "opacity": "1"
+          }
+        ],
+        "monitors": [
+          [
+            "Hour",
+            "10"
+          ],
+          [
+            "Demand (kW)",
+            "3.60"
+          ],
+          [
+            "Energy (kWh)",
+            "36.00"
+          ]
+        ]
+      },
+      "pngSize": [
+        780,
+        1688
+      ],
+      "originalPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91o79f-bda402f6.png",
+      "sha256": "e8e6b645c8fc72c32444c6122f52fb6415ef497ceafc97ece93be2c51e4c148f"
+    },
+    {
+      "slug": "pedestrian-crossing-phases",
+      "size": "desktop",
+      "colorScheme": "light",
+      "path": "pedestrian-crossing-phases-desktop-light.png",
+      "resizeViewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "evidence": {
+        "width": 1366,
+        "height": 768,
+        "dpr": 2,
+        "scheme": "light",
+        "foreground": "oklch(0.145 0 0)",
+        "background": "oklch(1 0 0)",
+        "docWidth": 1366,
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false,
+            "color": "oklch(0.145 0 0)",
+            "bg": "oklch(1 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "Run",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklch(0.205 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "1 step",
+            "disabled": false,
+            "color": "oklch(0.145 0 0)",
+            "bg": "oklch(1 0 0)",
+            "opacity": "1"
+          }
+        ],
+        "monitors": [
+          [
+            "Minute",
+            "5"
+          ],
+          [
+            "Signal",
+            "red"
+          ],
+          [
+            "Waiting",
+            "0"
+          ],
+          [
+            "Crossing",
+            "0"
+          ],
+          [
+            "Arrived",
+            "8"
+          ]
+        ]
+      },
+      "pngSize": [
+        1280,
+        720
+      ],
+      "originalPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91o893-dcb31655.png",
+      "sha256": "9b03830b4c92391f6236762604eb549f813e8b18245c0e149c89822246ca85a3"
+    },
+    {
+      "slug": "pedestrian-crossing-phases",
+      "size": "desktop",
+      "colorScheme": "dark",
+      "path": "pedestrian-crossing-phases-desktop-dark.png",
+      "resizeViewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "evidence": {
+        "width": 1366,
+        "height": 768,
+        "dpr": 2,
+        "scheme": "dark",
+        "foreground": "oklch(0.985 0 0)",
+        "background": "oklch(0.145 0 0)",
+        "docWidth": 1366,
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklab(0.36 0 0 / 0.3)",
+            "opacity": "1"
+          },
+          {
+            "label": "Run",
+            "disabled": false,
+            "color": "oklch(0.205 0 0)",
+            "bg": "oklch(0.922 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "1 step",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklab(0.36 0 0 / 0.3)",
+            "opacity": "1"
+          }
+        ],
+        "monitors": [
+          [
+            "Minute",
+            "5"
+          ],
+          [
+            "Signal",
+            "red"
+          ],
+          [
+            "Waiting",
+            "0"
+          ],
+          [
+            "Crossing",
+            "0"
+          ],
+          [
+            "Arrived",
+            "8"
+          ]
+        ]
+      },
+      "pngSize": [
+        1280,
+        720
+      ],
+      "originalPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91o90s-3388dd96.png",
+      "sha256": "5dd7c65686f661a43e4aa555dd30d88ab4a49796395c285f3effffcd40e80674"
+    },
+    {
+      "slug": "pedestrian-crossing-phases",
+      "size": "narrow",
+      "colorScheme": "light",
+      "path": "pedestrian-crossing-phases-narrow-light.png",
+      "resizeViewport": {
+        "width": 390,
+        "height": 844
+      },
+      "evidence": {
+        "width": 390,
+        "height": 844,
+        "dpr": 2,
+        "scheme": "light",
+        "foreground": "oklch(0.145 0 0)",
+        "background": "oklch(1 0 0)",
+        "docWidth": 390,
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false,
+            "color": "oklch(0.145 0 0)",
+            "bg": "oklch(1 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "Run",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklch(0.205 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "1 step",
+            "disabled": false,
+            "color": "oklch(0.145 0 0)",
+            "bg": "oklch(1 0 0)",
+            "opacity": "1"
+          }
+        ],
+        "monitors": [
+          [
+            "Minute",
+            "5"
+          ],
+          [
+            "Signal",
+            "red"
+          ],
+          [
+            "Waiting",
+            "0"
+          ],
+          [
+            "Crossing",
+            "0"
+          ],
+          [
+            "Arrived",
+            "8"
+          ]
+        ]
+      },
+      "pngSize": [
+        780,
+        1688
+      ],
+      "originalPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91oa2w-e96bb3ae.png",
+      "sha256": "ac3aaf5c5de8ca19666bcff03156f739ef144baad6d8efead54ef78301b0a45a"
+    },
+    {
+      "slug": "pedestrian-crossing-phases",
+      "size": "narrow",
+      "colorScheme": "dark",
+      "path": "pedestrian-crossing-phases-narrow-dark.png",
+      "resizeViewport": {
+        "width": 390,
+        "height": 844
+      },
+      "evidence": {
+        "width": 390,
+        "height": 844,
+        "dpr": 2,
+        "scheme": "dark",
+        "foreground": "oklch(0.985 0 0)",
+        "background": "oklch(0.145 0 0)",
+        "docWidth": 390,
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklab(0.36 0 0 / 0.3)",
+            "opacity": "1"
+          },
+          {
+            "label": "Run",
+            "disabled": false,
+            "color": "oklch(0.205 0 0)",
+            "bg": "oklch(0.922 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "1 step",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklab(0.36 0 0 / 0.3)",
+            "opacity": "1"
+          }
+        ],
+        "monitors": [
+          [
+            "Minute",
+            "5"
+          ],
+          [
+            "Signal",
+            "red"
+          ],
+          [
+            "Waiting",
+            "0"
+          ],
+          [
+            "Crossing",
+            "0"
+          ],
+          [
+            "Arrived",
+            "8"
+          ]
+        ]
+      },
+      "pngSize": [
+        780,
+        1688
+      ],
+      "originalPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91oaqu-da0634e7.png",
+      "sha256": "5614c26ecdc5b8bf5f6f7eb2e1e5038a5cd7551b7a20605ed251b007bec68e8b"
+    },
+    {
+      "slug": "neighborhood-heat-intervention",
+      "size": "desktop",
+      "colorScheme": "light",
+      "path": "neighborhood-heat-intervention-desktop-light.png",
+      "resizeViewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "evidence": {
+        "width": 1366,
+        "height": 768,
+        "dpr": 2,
+        "scheme": "light",
+        "foreground": "oklch(0.145 0 0)",
+        "background": "oklch(1 0 0)",
+        "docWidth": 1366,
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false,
+            "color": "oklch(0.145 0 0)",
+            "bg": "oklch(1 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "Run",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklch(0.205 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "1 step",
+            "disabled": false,
+            "color": "oklch(0.145 0 0)",
+            "bg": "oklch(1 0 0)",
+            "opacity": "1"
+          }
+        ],
+        "monitors": [
+          [
+            "Tick",
+            "10"
+          ],
+          [
+            "Mean heat index",
+            "27.50"
+          ]
+        ]
+      },
+      "pngSize": [
+        1280,
+        720
+      ],
+      "originalPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91oed3-0d32f0a0.png",
+      "sha256": "2c5ef48fa6f1cd574f8042bd8bd4d0776fee93ed924ad653e3d4f09171b680bd"
+    },
+    {
+      "slug": "neighborhood-heat-intervention",
+      "size": "desktop",
+      "colorScheme": "dark",
+      "path": "neighborhood-heat-intervention-desktop-dark.png",
+      "resizeViewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "evidence": {
+        "width": 1366,
+        "height": 768,
+        "dpr": 2,
+        "scheme": "dark",
+        "foreground": "oklch(0.985 0 0)",
+        "background": "oklch(0.145 0 0)",
+        "docWidth": 1366,
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklab(0.36 0 0 / 0.3)",
+            "opacity": "1"
+          },
+          {
+            "label": "Run",
+            "disabled": false,
+            "color": "oklch(0.205 0 0)",
+            "bg": "oklch(0.922 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "1 step",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklab(0.36 0 0 / 0.3)",
+            "opacity": "1"
+          }
+        ],
+        "monitors": [
+          [
+            "Tick",
+            "10"
+          ],
+          [
+            "Mean heat index",
+            "27.50"
+          ]
+        ]
+      },
+      "pngSize": [
+        1280,
+        720
+      ],
+      "originalPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91oexh-18d05e1b.png",
+      "sha256": "63e8f68ea2b2b571da12b39b4198c4beea9fc9b0120bd2b7fb7646eb57166c02"
+    },
+    {
+      "slug": "neighborhood-heat-intervention",
+      "size": "narrow",
+      "colorScheme": "light",
+      "path": "neighborhood-heat-intervention-narrow-light.png",
+      "resizeViewport": {
+        "width": 390,
+        "height": 844
+      },
+      "evidence": {
+        "width": 390,
+        "height": 844,
+        "dpr": 2,
+        "scheme": "light",
+        "foreground": "oklch(0.145 0 0)",
+        "background": "oklch(1 0 0)",
+        "docWidth": 390,
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false,
+            "color": "oklch(0.145 0 0)",
+            "bg": "oklch(1 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "Run",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklch(0.205 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "1 step",
+            "disabled": false,
+            "color": "oklch(0.145 0 0)",
+            "bg": "oklch(1 0 0)",
+            "opacity": "1"
+          }
+        ],
+        "monitors": [
+          [
+            "Tick",
+            "10"
+          ],
+          [
+            "Mean heat index",
+            "27.50"
+          ]
+        ]
+      },
+      "pngSize": [
+        780,
+        1688
+      ],
+      "originalPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91off3-ff24d52f.png",
+      "sha256": "c377a0437268b32346807c4f026f3798cad786a36087477fcb79438d62fc1887"
+    },
+    {
+      "slug": "neighborhood-heat-intervention",
+      "size": "narrow",
+      "colorScheme": "dark",
+      "path": "neighborhood-heat-intervention-narrow-dark.png",
+      "resizeViewport": {
+        "width": 390,
+        "height": 844
+      },
+      "evidence": {
+        "width": 390,
+        "height": 844,
+        "dpr": 2,
+        "scheme": "dark",
+        "foreground": "oklch(0.985 0 0)",
+        "background": "oklch(0.145 0 0)",
+        "docWidth": 390,
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklab(0.36 0 0 / 0.3)",
+            "opacity": "1"
+          },
+          {
+            "label": "Run",
+            "disabled": false,
+            "color": "oklch(0.205 0 0)",
+            "bg": "oklch(0.922 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "1 step",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklab(0.36 0 0 / 0.3)",
+            "opacity": "1"
+          }
+        ],
+        "monitors": [
+          [
+            "Tick",
+            "10"
+          ],
+          [
+            "Mean heat index",
+            "27.50"
+          ]
+        ]
+      },
+      "pngSize": [
+        780,
+        1688
+      ],
+      "originalPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91ofwu-72df4df7.png",
+      "sha256": "b0c69e6fdede46b7ef1f8b440002169bf8ca616fdf5cbe21631e8f653f7f2569"
+    },
+    {
+      "slug": "residential-occupancy",
+      "size": "desktop",
+      "colorScheme": "light",
+      "path": "residential-occupancy-desktop-light.png",
+      "resizeViewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "evidence": {
+        "width": 1366,
+        "height": 768,
+        "dpr": 2,
+        "scheme": "light",
+        "foreground": "oklch(0.145 0 0)",
+        "background": "oklch(1 0 0)",
+        "docWidth": 1366,
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false,
+            "color": "oklch(0.145 0 0)",
+            "bg": "oklch(1 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "Run",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklch(0.205 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "1 step",
+            "disabled": false,
+            "color": "oklch(0.145 0 0)",
+            "bg": "oklch(1 0 0)",
+            "opacity": "1"
+          }
+        ],
+        "monitors": [
+          [
+            "Day",
+            "10"
+          ],
+          [
+            "Occupied",
+            "3"
+          ],
+          [
+            "Available",
+            "0"
+          ],
+          [
+            "Waiting",
+            "2"
+          ]
+        ]
+      },
+      "pngSize": [
+        1280,
+        720
+      ],
+      "originalPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91ogws-fd61a6e2.png",
+      "sha256": "297d8cefc768ef7ba6f6eec98bdba7bfe7f31d52fe08bca90210e63825994024"
+    },
+    {
+      "slug": "residential-occupancy",
+      "size": "desktop",
+      "colorScheme": "dark",
+      "path": "residential-occupancy-desktop-dark.png",
+      "resizeViewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "evidence": {
+        "width": 1366,
+        "height": 768,
+        "dpr": 2,
+        "scheme": "dark",
+        "foreground": "oklch(0.985 0 0)",
+        "background": "oklch(0.145 0 0)",
+        "docWidth": 1366,
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklab(0.36 0 0 / 0.3)",
+            "opacity": "1"
+          },
+          {
+            "label": "Run",
+            "disabled": false,
+            "color": "oklch(0.205 0 0)",
+            "bg": "oklch(0.922 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "1 step",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklab(0.36 0 0 / 0.3)",
+            "opacity": "1"
+          }
+        ],
+        "monitors": [
+          [
+            "Day",
+            "10"
+          ],
+          [
+            "Occupied",
+            "3"
+          ],
+          [
+            "Available",
+            "0"
+          ],
+          [
+            "Waiting",
+            "2"
+          ]
+        ]
+      },
+      "pngSize": [
+        1280,
+        720
+      ],
+      "originalPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91ohgi-6f45133b.png",
+      "sha256": "a39feb424236c74f55a571a367ef03922087ee42753602465c8433c4b81607e5"
+    },
+    {
+      "slug": "residential-occupancy",
+      "size": "narrow",
+      "colorScheme": "light",
+      "path": "residential-occupancy-narrow-light.png",
+      "resizeViewport": {
+        "width": 390,
+        "height": 844
+      },
+      "evidence": {
+        "width": 390,
+        "height": 844,
+        "dpr": 2,
+        "scheme": "light",
+        "foreground": "oklch(0.145 0 0)",
+        "background": "oklch(1 0 0)",
+        "docWidth": 390,
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false,
+            "color": "oklch(0.145 0 0)",
+            "bg": "oklch(1 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "Run",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklch(0.205 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "1 step",
+            "disabled": false,
+            "color": "oklch(0.145 0 0)",
+            "bg": "oklch(1 0 0)",
+            "opacity": "1"
+          }
+        ],
+        "monitors": [
+          [
+            "Day",
+            "10"
+          ],
+          [
+            "Occupied",
+            "3"
+          ],
+          [
+            "Available",
+            "0"
+          ],
+          [
+            "Waiting",
+            "2"
+          ]
+        ]
+      },
+      "pngSize": [
+        780,
+        1688
+      ],
+      "originalPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91ohyv-5831fdd3.png",
+      "sha256": "68f450b314f991315a097438fae23c061b80f84ba50653d98adef49672a5e0db"
+    },
+    {
+      "slug": "residential-occupancy",
+      "size": "narrow",
+      "colorScheme": "dark",
+      "path": "residential-occupancy-narrow-dark.png",
+      "resizeViewport": {
+        "width": 390,
+        "height": 844
+      },
+      "evidence": {
+        "width": 390,
+        "height": 844,
+        "dpr": 2,
+        "scheme": "dark",
+        "foreground": "oklch(0.985 0 0)",
+        "background": "oklch(0.145 0 0)",
+        "docWidth": 390,
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklab(0.36 0 0 / 0.3)",
+            "opacity": "1"
+          },
+          {
+            "label": "Run",
+            "disabled": false,
+            "color": "oklch(0.205 0 0)",
+            "bg": "oklch(0.922 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "1 step",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklab(0.36 0 0 / 0.3)",
+            "opacity": "1"
+          }
+        ],
+        "monitors": [
+          [
+            "Day",
+            "10"
+          ],
+          [
+            "Occupied",
+            "3"
+          ],
+          [
+            "Available",
+            "0"
+          ],
+          [
+            "Waiting",
+            "2"
+          ]
+        ]
+      },
+      "pngSize": [
+        780,
+        1688
+      ],
+      "originalPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91oifd-cdcb1a67.png",
+      "sha256": "25ee9cb7b6fcbc2e03c3f0c74cf0db14a0b87f6a06c0ad82ab7cc3144f3d5587"
+    },
+    {
+      "slug": "solar-battery-microgrid",
+      "size": "desktop",
+      "colorScheme": "light",
+      "path": "solar-battery-microgrid-desktop-light.png",
+      "resizeViewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "evidence": {
+        "width": 1366,
+        "height": 768,
+        "dpr": 2,
+        "scheme": "light",
+        "foreground": "oklch(0.145 0 0)",
+        "background": "oklch(1 0 0)",
+        "docWidth": 1366,
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false,
+            "color": "oklch(0.145 0 0)",
+            "bg": "oklch(1 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "Run",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklch(0.205 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "1 step",
+            "disabled": false,
+            "color": "oklch(0.145 0 0)",
+            "bg": "oklch(1 0 0)",
+            "opacity": "1"
+          }
+        ],
+        "monitors": [
+          [
+            "Hour",
+            "10"
+          ],
+          [
+            "Stored (kWh)",
+            "2"
+          ],
+          [
+            "Grid import (kWh)",
+            "6"
+          ],
+          [
+            "Reserve crossings",
+            "1"
+          ],
+          [
+            "Last crossing (h)",
+            "7"
+          ]
+        ]
+      },
+      "pngSize": [
+        1280,
+        720
+      ],
+      "originalPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91ojcc-fd15c81c.png",
+      "sha256": "f57bfbd46f9e23722f865d1caa3f482ed2731bfda44134d50d06f63ee806036e"
+    },
+    {
+      "slug": "solar-battery-microgrid",
+      "size": "desktop",
+      "colorScheme": "dark",
+      "path": "solar-battery-microgrid-desktop-dark.png",
+      "resizeViewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "evidence": {
+        "width": 1366,
+        "height": 768,
+        "dpr": 2,
+        "scheme": "dark",
+        "foreground": "oklch(0.985 0 0)",
+        "background": "oklch(0.145 0 0)",
+        "docWidth": 1366,
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklab(0.36 0 0 / 0.3)",
+            "opacity": "1"
+          },
+          {
+            "label": "Run",
+            "disabled": false,
+            "color": "oklch(0.205 0 0)",
+            "bg": "oklch(0.922 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "1 step",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklab(0.36 0 0 / 0.3)",
+            "opacity": "1"
+          }
+        ],
+        "monitors": [
+          [
+            "Hour",
+            "10"
+          ],
+          [
+            "Stored (kWh)",
+            "2"
+          ],
+          [
+            "Grid import (kWh)",
+            "6"
+          ],
+          [
+            "Reserve crossings",
+            "1"
+          ],
+          [
+            "Last crossing (h)",
+            "7"
+          ]
+        ]
+      },
+      "pngSize": [
+        1280,
+        720
+      ],
+      "originalPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91okee-22942eee.png",
+      "sha256": "5f3e3be0ce966df0dcd982750597a1ad38c2fa4a63ad3e903b2f67a5f27f9a85"
+    },
+    {
+      "slug": "solar-battery-microgrid",
+      "size": "narrow",
+      "colorScheme": "light",
+      "path": "solar-battery-microgrid-narrow-light.png",
+      "resizeViewport": {
+        "width": 390,
+        "height": 844
+      },
+      "evidence": {
+        "width": 390,
+        "height": 844,
+        "dpr": 2,
+        "scheme": "light",
+        "foreground": "oklch(0.145 0 0)",
+        "background": "oklch(1 0 0)",
+        "docWidth": 390,
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false,
+            "color": "oklch(0.145 0 0)",
+            "bg": "oklch(1 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "Run",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklch(0.205 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "1 step",
+            "disabled": false,
+            "color": "oklch(0.145 0 0)",
+            "bg": "oklch(1 0 0)",
+            "opacity": "1"
+          }
+        ],
+        "monitors": [
+          [
+            "Hour",
+            "10"
+          ],
+          [
+            "Stored (kWh)",
+            "2"
+          ],
+          [
+            "Grid import (kWh)",
+            "6"
+          ],
+          [
+            "Reserve crossings",
+            "1"
+          ],
+          [
+            "Last crossing (h)",
+            "7"
+          ]
+        ]
+      },
+      "pngSize": [
+        780,
+        1688
+      ],
+      "originalPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91ol08-db501e73.png",
+      "sha256": "31ef5ec8ef468da4ac13d3483f2b111b0f24d139cee9ce28ae9a2d1850ae766a"
+    },
+    {
+      "slug": "solar-battery-microgrid",
+      "size": "narrow",
+      "colorScheme": "dark",
+      "path": "solar-battery-microgrid-narrow-dark.png",
+      "resizeViewport": {
+        "width": 390,
+        "height": 844
+      },
+      "evidence": {
+        "width": 390,
+        "height": 844,
+        "dpr": 2,
+        "scheme": "dark",
+        "foreground": "oklch(0.985 0 0)",
+        "background": "oklch(0.145 0 0)",
+        "docWidth": 390,
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklab(0.36 0 0 / 0.3)",
+            "opacity": "1"
+          },
+          {
+            "label": "Run",
+            "disabled": false,
+            "color": "oklch(0.205 0 0)",
+            "bg": "oklch(0.922 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "1 step",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklab(0.36 0 0 / 0.3)",
+            "opacity": "1"
+          }
+        ],
+        "monitors": [
+          [
+            "Hour",
+            "10"
+          ],
+          [
+            "Stored (kWh)",
+            "2"
+          ],
+          [
+            "Grid import (kWh)",
+            "6"
+          ],
+          [
+            "Reserve crossings",
+            "1"
+          ],
+          [
+            "Last crossing (h)",
+            "7"
+          ]
+        ]
+      },
+      "pngSize": [
+        780,
+        1688
+      ],
+      "originalPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91olgl-64e71a60.png",
+      "sha256": "7a2be837b4c8b05dbd9b765016ffe567719e57c24334bfd6ca7aebb2ed4b9f40"
+    },
+    {
+      "slug": "stormwater-retention",
+      "size": "desktop",
+      "colorScheme": "light",
+      "path": "stormwater-retention-desktop-light.png",
+      "resizeViewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "evidence": {
+        "width": 1366,
+        "height": 768,
+        "dpr": 2,
+        "scheme": "light",
+        "foreground": "oklch(0.145 0 0)",
+        "background": "oklch(1 0 0)",
+        "docWidth": 1366,
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false,
+            "color": "oklch(0.145 0 0)",
+            "bg": "oklch(1 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "Run",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklch(0.205 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "1 step",
+            "disabled": false,
+            "color": "oklch(0.145 0 0)",
+            "bg": "oklch(1 0 0)",
+            "opacity": "1"
+          }
+        ],
+        "monitors": [
+          [
+            "Hour",
+            "10"
+          ],
+          [
+            "Stored (m\u00b3)",
+            "3.00"
+          ],
+          [
+            "Overflow (m\u00b3)",
+            "4.00"
+          ],
+          [
+            "Capacity crossings",
+            "1"
+          ]
+        ]
+      },
+      "pngSize": [
+        1280,
+        720
+      ],
+      "originalPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91omdw-e2092d26.png",
+      "sha256": "22e22e0f02e96931d43b2041de8b7608395053726155e5f263995eae96bd9a65"
+    },
+    {
+      "slug": "stormwater-retention",
+      "size": "desktop",
+      "colorScheme": "dark",
+      "path": "stormwater-retention-desktop-dark.png",
+      "resizeViewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "evidence": {
+        "width": 1366,
+        "height": 768,
+        "dpr": 2,
+        "scheme": "dark",
+        "foreground": "oklch(0.985 0 0)",
+        "background": "oklch(0.145 0 0)",
+        "docWidth": 1366,
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklab(0.36 0 0 / 0.3)",
+            "opacity": "1"
+          },
+          {
+            "label": "Run",
+            "disabled": false,
+            "color": "oklch(0.205 0 0)",
+            "bg": "oklch(0.922 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "1 step",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklab(0.36 0 0 / 0.3)",
+            "opacity": "1"
+          }
+        ],
+        "monitors": [
+          [
+            "Hour",
+            "10"
+          ],
+          [
+            "Stored (m\u00b3)",
+            "3.00"
+          ],
+          [
+            "Overflow (m\u00b3)",
+            "4.00"
+          ],
+          [
+            "Capacity crossings",
+            "1"
+          ]
+        ]
+      },
+      "pngSize": [
+        1280,
+        720
+      ],
+      "originalPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91omww-30e8d4f2.png",
+      "sha256": "8eb464f62233ba9bebdd47b94bc2c7fb51187eef2a39965f654bc75bf687ec85"
+    },
+    {
+      "slug": "stormwater-retention",
+      "size": "narrow",
+      "colorScheme": "light",
+      "path": "stormwater-retention-narrow-light.png",
+      "resizeViewport": {
+        "width": 390,
+        "height": 844
+      },
+      "evidence": {
+        "width": 390,
+        "height": 844,
+        "dpr": 2,
+        "scheme": "light",
+        "foreground": "oklch(0.145 0 0)",
+        "background": "oklch(1 0 0)",
+        "docWidth": 390,
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false,
+            "color": "oklch(0.145 0 0)",
+            "bg": "oklch(1 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "Run",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklch(0.205 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "1 step",
+            "disabled": false,
+            "color": "oklch(0.145 0 0)",
+            "bg": "oklch(1 0 0)",
+            "opacity": "1"
+          }
+        ],
+        "monitors": [
+          [
+            "Hour",
+            "10"
+          ],
+          [
+            "Stored (m\u00b3)",
+            "3.00"
+          ],
+          [
+            "Overflow (m\u00b3)",
+            "4.00"
+          ],
+          [
+            "Capacity crossings",
+            "1"
+          ]
+        ]
+      },
+      "pngSize": [
+        780,
+        1688
+      ],
+      "originalPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91one2-90daf2e0.png",
+      "sha256": "a0d1cb3cb802e5febd639a032fe3f26b4d1f9845628ba5d08f44e0faf70286d9"
+    },
+    {
+      "slug": "stormwater-retention",
+      "size": "narrow",
+      "colorScheme": "dark",
+      "path": "stormwater-retention-narrow-dark.png",
+      "resizeViewport": {
+        "width": 390,
+        "height": 844
+      },
+      "evidence": {
+        "width": 390,
+        "height": 844,
+        "dpr": 2,
+        "scheme": "dark",
+        "foreground": "oklch(0.985 0 0)",
+        "background": "oklch(0.145 0 0)",
+        "docWidth": 390,
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklab(0.36 0 0 / 0.3)",
+            "opacity": "1"
+          },
+          {
+            "label": "Run",
+            "disabled": false,
+            "color": "oklch(0.205 0 0)",
+            "bg": "oklch(0.922 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "1 step",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklab(0.36 0 0 / 0.3)",
+            "opacity": "1"
+          }
+        ],
+        "monitors": [
+          [
+            "Hour",
+            "10"
+          ],
+          [
+            "Stored (m\u00b3)",
+            "3.00"
+          ],
+          [
+            "Overflow (m\u00b3)",
+            "4.00"
+          ],
+          [
+            "Capacity crossings",
+            "1"
+          ]
+        ]
+      },
+      "pngSize": [
+        780,
+        1688
+      ],
+      "originalPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91onuo-e0d5ce3a.png",
+      "sha256": "b98fdcca0cdf97425dc88216e26b155c6f405ea31da7c22a77ce957d1cd17997"
+    },
+    {
+      "slug": "urban-tree-watering",
+      "size": "desktop",
+      "colorScheme": "light",
+      "path": "urban-tree-watering-desktop-light.png",
+      "resizeViewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "evidence": {
+        "width": 1366,
+        "height": 768,
+        "dpr": 2,
+        "scheme": "light",
+        "foreground": "oklch(0.145 0 0)",
+        "background": "oklch(1 0 0)",
+        "docWidth": 1366,
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false,
+            "color": "oklch(0.145 0 0)",
+            "bg": "oklch(1 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "Run",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklch(0.205 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "1 step",
+            "disabled": false,
+            "color": "oklch(0.145 0 0)",
+            "bg": "oklch(1 0 0)",
+            "opacity": "1"
+          }
+        ],
+        "monitors": [
+          [
+            "Day",
+            "10"
+          ],
+          [
+            "Used today (L)",
+            "20"
+          ],
+          [
+            "Total water (L)",
+            "200"
+          ]
+        ]
+      },
+      "pngSize": [
+        1280,
+        720
+      ],
+      "originalPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91oosc-18166622.png",
+      "sha256": "35ac88ca9b87592906d759814e9d55725ac831b790e2d25bb3101b4ce3427c42"
+    },
+    {
+      "slug": "urban-tree-watering",
+      "size": "desktop",
+      "colorScheme": "dark",
+      "path": "urban-tree-watering-desktop-dark.png",
+      "resizeViewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "evidence": {
+        "width": 1366,
+        "height": 768,
+        "dpr": 2,
+        "scheme": "dark",
+        "foreground": "oklch(0.985 0 0)",
+        "background": "oklch(0.145 0 0)",
+        "docWidth": 1366,
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklab(0.36 0 0 / 0.3)",
+            "opacity": "1"
+          },
+          {
+            "label": "Run",
+            "disabled": false,
+            "color": "oklch(0.205 0 0)",
+            "bg": "oklch(0.922 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "1 step",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklab(0.36 0 0 / 0.3)",
+            "opacity": "1"
+          }
+        ],
+        "monitors": [
+          [
+            "Day",
+            "10"
+          ],
+          [
+            "Used today (L)",
+            "20"
+          ],
+          [
+            "Total water (L)",
+            "200"
+          ]
+        ]
+      },
+      "pngSize": [
+        1280,
+        720
+      ],
+      "originalPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91opbg-70867ac9.png",
+      "sha256": "0032b230fd2781ef3543ae4c730ddc3ca72dce397e122cb15cb6a5608da46500"
+    },
+    {
+      "slug": "urban-tree-watering",
+      "size": "narrow",
+      "colorScheme": "light",
+      "path": "urban-tree-watering-narrow-light.png",
+      "resizeViewport": {
+        "width": 390,
+        "height": 844
+      },
+      "evidence": {
+        "width": 390,
+        "height": 844,
+        "dpr": 2,
+        "scheme": "light",
+        "foreground": "oklch(0.145 0 0)",
+        "background": "oklch(1 0 0)",
+        "docWidth": 390,
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false,
+            "color": "oklch(0.145 0 0)",
+            "bg": "oklch(1 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "Run",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklch(0.205 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "1 step",
+            "disabled": false,
+            "color": "oklch(0.145 0 0)",
+            "bg": "oklch(1 0 0)",
+            "opacity": "1"
+          }
+        ],
+        "monitors": [
+          [
+            "Day",
+            "10"
+          ],
+          [
+            "Used today (L)",
+            "20"
+          ],
+          [
+            "Total water (L)",
+            "200"
+          ]
+        ]
+      },
+      "pngSize": [
+        780,
+        1688
+      ],
+      "originalPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91opsd-fe42d062.png",
+      "sha256": "5c4a3b3bc3606150554a13cba4b8eb1e8cb228a350ea4c27e8b9d9744e488f57"
+    },
+    {
+      "slug": "urban-tree-watering",
+      "size": "narrow",
+      "colorScheme": "dark",
+      "path": "urban-tree-watering-narrow-dark.png",
+      "resizeViewport": {
+        "width": 390,
+        "height": 844
+      },
+      "evidence": {
+        "width": 390,
+        "height": 844,
+        "dpr": 2,
+        "scheme": "dark",
+        "foreground": "oklch(0.985 0 0)",
+        "background": "oklch(0.145 0 0)",
+        "docWidth": 390,
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklab(0.36 0 0 / 0.3)",
+            "opacity": "1"
+          },
+          {
+            "label": "Run",
+            "disabled": false,
+            "color": "oklch(0.205 0 0)",
+            "bg": "oklch(0.922 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "1 step",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklab(0.36 0 0 / 0.3)",
+            "opacity": "1"
+          }
+        ],
+        "monitors": [
+          [
+            "Day",
+            "10"
+          ],
+          [
+            "Used today (L)",
+            "20"
+          ],
+          [
+            "Total water (L)",
+            "200"
+          ]
+        ]
+      },
+      "pngSize": [
+        780,
+        1688
+      ],
+      "originalPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91oq8x-c5667b21.png",
+      "sha256": "2fb623ad8591c00116b320f583715c31dcb4e66ae93265b2a2b93ff80e71c75d"
+    },
+    {
+      "slug": "workplace-household-membership",
+      "size": "desktop",
+      "colorScheme": "light",
+      "path": "workplace-household-membership-desktop-light.png",
+      "resizeViewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "evidence": {
+        "width": 1366,
+        "height": 768,
+        "dpr": 2,
+        "scheme": "light",
+        "foreground": "oklch(0.145 0 0)",
+        "background": "oklch(1 0 0)",
+        "docWidth": 1366,
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false,
+            "color": "oklch(0.145 0 0)",
+            "bg": "oklch(1 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "Run",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklch(0.205 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "1 step",
+            "disabled": false,
+            "color": "oklch(0.145 0 0)",
+            "bg": "oklch(1 0 0)",
+            "opacity": "1"
+          }
+        ],
+        "monitors": [
+          [
+            "Tick",
+            "10"
+          ],
+          [
+            "Memberships",
+            "12"
+          ],
+          [
+            "Workplace A",
+            "3"
+          ]
+        ]
+      },
+      "pngSize": [
+        1280,
+        720
+      ],
+      "originalPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91otxd-160629e1.png",
+      "sha256": "68fd6a6774887a80457ddc3e38afbdde93d636c7a98bb4bb3b7e46ec88ee94f4"
+    },
+    {
+      "slug": "workplace-household-membership",
+      "size": "desktop",
+      "colorScheme": "dark",
+      "path": "workplace-household-membership-desktop-dark.png",
+      "resizeViewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "evidence": {
+        "width": 1366,
+        "height": 768,
+        "dpr": 2,
+        "scheme": "dark",
+        "foreground": "oklch(0.985 0 0)",
+        "background": "oklch(0.145 0 0)",
+        "docWidth": 1366,
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklab(0.36 0 0 / 0.3)",
+            "opacity": "1"
+          },
+          {
+            "label": "Run",
+            "disabled": false,
+            "color": "oklch(0.205 0 0)",
+            "bg": "oklch(0.922 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "1 step",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklab(0.36 0 0 / 0.3)",
+            "opacity": "1"
+          }
+        ],
+        "monitors": [
+          [
+            "Tick",
+            "10"
+          ],
+          [
+            "Memberships",
+            "12"
+          ],
+          [
+            "Workplace A",
+            "3"
+          ]
+        ]
+      },
+      "pngSize": [
+        1280,
+        720
+      ],
+      "originalPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91ouhl-9407a7fd.png",
+      "sha256": "0c9ec4bda16b33a690670677942fee2bd2a8909b1460660dfac876295e1df06d"
+    },
+    {
+      "slug": "workplace-household-membership",
+      "size": "narrow",
+      "colorScheme": "light",
+      "path": "workplace-household-membership-narrow-light.png",
+      "resizeViewport": {
+        "width": 390,
+        "height": 844
+      },
+      "evidence": {
+        "width": 390,
+        "height": 844,
+        "dpr": 2,
+        "scheme": "light",
+        "foreground": "oklch(0.145 0 0)",
+        "background": "oklch(1 0 0)",
+        "docWidth": 390,
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false,
+            "color": "oklch(0.145 0 0)",
+            "bg": "oklch(1 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "Run",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklch(0.205 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "1 step",
+            "disabled": false,
+            "color": "oklch(0.145 0 0)",
+            "bg": "oklch(1 0 0)",
+            "opacity": "1"
+          }
+        ],
+        "monitors": [
+          [
+            "Tick",
+            "10"
+          ],
+          [
+            "Memberships",
+            "12"
+          ],
+          [
+            "Workplace A",
+            "3"
+          ]
+        ]
+      },
+      "pngSize": [
+        780,
+        1688
+      ],
+      "originalPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91ouzr-6f26beb4.png",
+      "sha256": "57e351d9180b3a5dc8dd91699f0b0866d5af1a2ce6c65bee958d6e750ede8473"
+    },
+    {
+      "slug": "workplace-household-membership",
+      "size": "narrow",
+      "colorScheme": "dark",
+      "path": "workplace-household-membership-narrow-dark.png",
+      "resizeViewport": {
+        "width": 390,
+        "height": 844
+      },
+      "evidence": {
+        "width": 390,
+        "height": 844,
+        "dpr": 2,
+        "scheme": "dark",
+        "foreground": "oklch(0.985 0 0)",
+        "background": "oklch(0.145 0 0)",
+        "docWidth": 390,
+        "buttons": [
+          {
+            "label": "Setup",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklab(0.36 0 0 / 0.3)",
+            "opacity": "1"
+          },
+          {
+            "label": "Run",
+            "disabled": false,
+            "color": "oklch(0.205 0 0)",
+            "bg": "oklch(0.922 0 0)",
+            "opacity": "1"
+          },
+          {
+            "label": "1 step",
+            "disabled": false,
+            "color": "oklch(0.985 0 0)",
+            "bg": "oklab(0.36 0 0 / 0.3)",
+            "opacity": "1"
+          }
+        ],
+        "monitors": [
+          [
+            "Tick",
+            "10"
+          ],
+          [
+            "Memberships",
+            "12"
+          ],
+          [
+            "Workplace A",
+            "3"
+          ]
+        ]
+      },
+      "pngSize": [
+        780,
+        1688
+      ],
+      "originalPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91ovgv-efd5c556.png",
+      "sha256": "afd55f85afcf94609f9a3b6ec642336c1222639e84473155bdf2ec1afedb7571"
+    },
+    {
+      "slug": "zoning-scenario-comparison",
+      "size": "desktop",
+      "colorScheme": "light",
+      "path": "zoning-scenario-comparison-desktop-light.png",
+      "resizeViewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "evidence": {
+        "width": 1366,
+        "height": 768,
+        "dpr": 2,
+        "scrollY": 0,
+        "scheme": "light",
+        "foreground": "oklch(0.145 0 0)",
+        "background": "oklch(1 0 0)",
+        "docWidth": 1366,
+        "monitors": [
+          [
+            "Study runs",
+            "6"
+          ],
+          [
+            "Planned runs",
+            "6"
+          ]
+        ]
+      },
+      "pngSize": [
+        1280,
+        720
+      ],
+      "originalPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91rko6-646b3eb2.png",
+      "sha256": "5f9c181797d49122b47979d0d28f167d9423da0a9288c823bb20c1924bbd2a54"
+    },
+    {
+      "slug": "zoning-scenario-comparison",
+      "size": "desktop",
+      "colorScheme": "dark",
+      "path": "zoning-scenario-comparison-desktop-dark.png",
+      "resizeViewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "evidence": {
+        "width": 1366,
+        "height": 768,
+        "dpr": 2,
+        "scrollY": 0,
+        "scheme": "dark",
+        "foreground": "oklch(0.985 0 0)",
+        "background": "oklch(0.145 0 0)",
+        "docWidth": 1366,
+        "monitors": [
+          [
+            "Study runs",
+            "6"
+          ],
+          [
+            "Planned runs",
+            "6"
+          ]
+        ]
+      },
+      "pngSize": [
+        1280,
+        720
+      ],
+      "originalPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91rl7q-b4660377.png",
+      "sha256": "43dbbfa6db34bb388278238f3c93b5fafa608123c67e600579650685ea1179ff"
+    },
+    {
+      "slug": "zoning-scenario-comparison",
+      "size": "narrow",
+      "colorScheme": "light",
+      "path": "zoning-scenario-comparison-narrow-light.png",
+      "resizeViewport": {
+        "width": 390,
+        "height": 844
+      },
+      "evidence": {
+        "width": 390,
+        "height": 844,
+        "dpr": 2,
+        "scrollY": 0,
+        "scheme": "light",
+        "foreground": "oklch(0.145 0 0)",
+        "background": "oklch(1 0 0)",
+        "docWidth": 390,
+        "monitors": [
+          [
+            "Study runs",
+            "6"
+          ],
+          [
+            "Planned runs",
+            "6"
+          ]
+        ]
+      },
+      "pngSize": [
+        780,
+        1688
+      ],
+      "originalPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91rlou-7a9e19aa.png",
+      "sha256": "e057403d199e7b0d29212ea3a27bc3ddbcd729ad195f5bf665e52dda4dd7f72a"
+    },
+    {
+      "slug": "zoning-scenario-comparison",
+      "size": "narrow",
+      "colorScheme": "dark",
+      "path": "zoning-scenario-comparison-narrow-dark.png",
+      "resizeViewport": {
+        "width": 390,
+        "height": 844
+      },
+      "evidence": {
+        "width": 390,
+        "height": 844,
+        "dpr": 2,
+        "scrollY": 0,
+        "scheme": "dark",
+        "foreground": "oklch(0.985 0 0)",
+        "background": "oklch(0.145 0 0)",
+        "docWidth": 390,
+        "monitors": [
+          [
+            "Study runs",
+            "6"
+          ],
+          [
+            "Planned runs",
+            "6"
+          ]
+        ]
+      },
+      "pngSize": [
+        780,
+        1688
+      ],
+      "originalPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91rm5k-dd971ba6.png",
+      "sha256": "dbe1003582d883808de12063f4528284b5585124f4f5f23796f065b164ca7852"
+    },
+    {
+      "slug": "zoning-scenario-comparison",
+      "size": "narrow-chart",
+      "colorScheme": "light",
+      "path": "zoning-scenario-comparison-narrow-chart-light.png",
+      "resizeViewport": {
+        "width": 390,
+        "height": 844
+      },
+      "evidence": {
+        "width": 390,
+        "height": 844,
+        "dpr": 2,
+        "scrollY": 167,
+        "scheme": "light",
+        "foreground": "oklch(0.145 0 0)",
+        "background": "oklch(1 0 0)",
+        "docWidth": 390,
+        "monitors": [
+          [
+            "Study runs",
+            "6"
+          ],
+          [
+            "Planned runs",
+            "6"
+          ]
+        ]
+      },
+      "pngSize": [
+        780,
+        1688
+      ],
+      "originalPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91rmn3-6eba50c9.png",
+      "sha256": "6888168eaf155b68df1a9569b0ec806c5676bc008167275691974fd1e2d4bd00"
+    },
+    {
+      "slug": "zoning-scenario-comparison",
+      "size": "narrow-chart",
+      "colorScheme": "dark",
+      "path": "zoning-scenario-comparison-narrow-chart-dark.png",
+      "resizeViewport": {
+        "width": 390,
+        "height": 844
+      },
+      "evidence": {
+        "width": 390,
+        "height": 844,
+        "dpr": 2,
+        "scrollY": 167,
+        "scheme": "dark",
+        "foreground": "oklch(0.985 0 0)",
+        "background": "oklch(0.145 0 0)",
+        "docWidth": 390,
+        "monitors": [
+          [
+            "Study runs",
+            "6"
+          ],
+          [
+            "Planned runs",
+            "6"
+          ]
+        ]
+      },
+      "pngSize": [
+        780,
+        1688
+      ],
+      "originalPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91rn4g-d004ca8c.png",
+      "sha256": "9461ee0db1544258969b1da1e95aa72e670901f89c439e1724f352e04f94b84d"
+    },
+    {
+      "slug": "household-recycling-behavior",
+      "size": "desktop",
+      "colorScheme": "light",
+      "path": "household-recycling-behavior-desktop-light.png",
+      "resizeViewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "evidence": {
+        "width": 1366,
+        "height": 768,
+        "dpr": 2,
+        "scrollY": 0,
+        "scheme": "light",
+        "foreground": "oklch(0.145 0 0)",
+        "background": "oklch(1 0 0)",
+        "docWidth": 1366,
+        "monitors": [
+          [
+            "Tick",
+            "10"
+          ],
+          [
+            "Recycling households",
+            "7"
+          ],
+          [
+            "household",
+            "Household 11"
+          ],
+          [
+            "recycling",
+            "true"
+          ]
+        ]
+      },
+      "pngSize": [
+        1280,
+        720
+      ],
+      "originalPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91t8qq-4ad71e80.png",
+      "sha256": "10ea8654211a2d1a7151c01daa3d173304ced4149e315468b794253ecb202568"
+    },
+    {
+      "slug": "household-recycling-behavior",
+      "size": "desktop",
+      "colorScheme": "dark",
+      "path": "household-recycling-behavior-desktop-dark.png",
+      "resizeViewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "evidence": {
+        "width": 1366,
+        "height": 768,
+        "dpr": 2,
+        "scrollY": 0,
+        "scheme": "dark",
+        "foreground": "oklch(0.985 0 0)",
+        "background": "oklch(0.145 0 0)",
+        "docWidth": 1366,
+        "monitors": [
+          [
+            "Tick",
+            "10"
+          ],
+          [
+            "Recycling households",
+            "7"
+          ],
+          [
+            "household",
+            "Household 11"
+          ],
+          [
+            "recycling",
+            "true"
+          ]
+        ]
+      },
+      "pngSize": [
+        1280,
+        720
+      ],
+      "originalPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91t9ao-50ab48b2.png",
+      "sha256": "78cab3106152ac954bc09de020e53edd6c870e36cf1e66fd70dcb352a772c34b"
+    },
+    {
+      "slug": "household-recycling-behavior",
+      "size": "narrow",
+      "colorScheme": "light",
+      "path": "household-recycling-behavior-narrow-light.png",
+      "resizeViewport": {
+        "width": 390,
+        "height": 844
+      },
+      "evidence": {
+        "width": 390,
+        "height": 844,
+        "dpr": 2,
+        "scrollY": 0,
+        "scheme": "light",
+        "foreground": "oklch(0.145 0 0)",
+        "background": "oklch(1 0 0)",
+        "docWidth": 390,
+        "monitors": [
+          [
+            "Tick",
+            "10"
+          ],
+          [
+            "Recycling households",
+            "7"
+          ],
+          [
+            "household",
+            "Household 11"
+          ],
+          [
+            "recycling",
+            "true"
+          ]
+        ]
+      },
+      "pngSize": [
+        780,
+        1688
+      ],
+      "originalPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91t9t4-cdc56bed.png",
+      "sha256": "409f96a5e80fdef7cc80b6c9468990b7d53104a6aa53bc5f44eddad6b0341291"
+    },
+    {
+      "slug": "household-recycling-behavior",
+      "size": "narrow",
+      "colorScheme": "dark",
+      "path": "household-recycling-behavior-narrow-dark.png",
+      "resizeViewport": {
+        "width": 390,
+        "height": 844
+      },
+      "evidence": {
+        "width": 390,
+        "height": 844,
+        "dpr": 2,
+        "scrollY": 0,
+        "scheme": "dark",
+        "foreground": "oklch(0.985 0 0)",
+        "background": "oklch(0.145 0 0)",
+        "docWidth": 390,
+        "monitors": [
+          [
+            "Tick",
+            "10"
+          ],
+          [
+            "Recycling households",
+            "7"
+          ],
+          [
+            "household",
+            "Household 11"
+          ],
+          [
+            "recycling",
+            "true"
+          ]
+        ]
+      },
+      "pngSize": [
+        780,
+        1688
+      ],
+      "originalPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91taa6-39395db7.png",
+      "sha256": "b3f28a36f8c0951a17bdd2502b3673ccb49c62e02ffee8457a9e2bb1360ddfcc"
+    },
+    {
+      "slug": "household-recycling-behavior",
+      "size": "narrow-inspector",
+      "colorScheme": "light",
+      "path": "household-recycling-behavior-narrow-inspector-light.png",
+      "resizeViewport": {
+        "width": 390,
+        "height": 844
+      },
+      "evidence": {
+        "width": 390,
+        "height": 844,
+        "dpr": 2,
+        "scrollY": 348,
+        "scheme": "light",
+        "foreground": "oklch(0.145 0 0)",
+        "background": "oklch(1 0 0)",
+        "docWidth": 390,
+        "monitors": [
+          [
+            "Tick",
+            "10"
+          ],
+          [
+            "Recycling households",
+            "7"
+          ],
+          [
+            "household",
+            "Household 11"
+          ],
+          [
+            "recycling",
+            "true"
+          ]
+        ]
+      },
+      "pngSize": [
+        780,
+        1688
+      ],
+      "originalPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91tas9-4b6aa882.png",
+      "sha256": "0859a2673fbe5a173e195a1444d2bc12ef5a54909d8448a89284654d3143b75b"
+    },
+    {
+      "slug": "household-recycling-behavior",
+      "size": "narrow-inspector",
+      "colorScheme": "dark",
+      "path": "household-recycling-behavior-narrow-inspector-dark.png",
+      "resizeViewport": {
+        "width": 390,
+        "height": 844
+      },
+      "evidence": {
+        "width": 390,
+        "height": 844,
+        "dpr": 2,
+        "scrollY": 348,
+        "scheme": "dark",
+        "foreground": "oklch(0.985 0 0)",
+        "background": "oklch(0.145 0 0)",
+        "docWidth": 390,
+        "monitors": [
+          [
+            "Tick",
+            "10"
+          ],
+          [
+            "Recycling households",
+            "7"
+          ],
+          [
+            "household",
+            "Household 11"
+          ],
+          [
+            "recycling",
+            "true"
+          ]
+        ]
+      },
+      "pngSize": [
+        780,
+        1688
+      ],
+      "originalPath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91tb9f-f7e47c9d.png",
+      "sha256": "246eb5f121b9ce1821ab052aacd17d00c43fd2edfdfaca7490905923fa65a8fa"
+    }
+  ]
+}

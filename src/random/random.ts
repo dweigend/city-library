@@ -7,6 +7,7 @@ import { normalDraw, polarGaussian, type NormalOptions } from "./normal.ts";
 import { exponentialDraw } from "./distributions/exponential.ts";
 import { poissonDraw } from "./distributions/poisson.ts";
 import type { MeanOptions } from "./distributions/mean-options.ts";
+import { bernoulliDraw, triangularDraw, gammaDraw, type DesDistributionOptions } from "./distributions/des.ts";
 export interface Random {
   readonly algorithm: "mulberry32";
   readonly seed: number;
@@ -15,6 +16,7 @@ export interface Random {
   number(options: UniformOptions): number;
   number(options: NormalOptions): number;
   number(options: MeanOptions): number;
+  number(options: DesDistributionOptions): number;
   sample<T>(source: Iterable<T>, options?: SampleOptions<T>): T[];
   reseed(seed: number): void;
   copy(): Random;
@@ -50,14 +52,17 @@ function add(options: { seed?: number; algorithm?: "mulberry32" } = {}): Random 
     get seed() { return state.seed; },
     get state() { return snapshot(state); },
     set state(value: RandomState) { state = validateState(value); },
-    number(options: UniformOptions | NormalOptions | MeanOptions = {}) {
+    number(options: UniformOptions | NormalOptions | MeanOptions | DesDistributionOptions = {}) {
       if (arguments.length > 1) throw new TypeError("Unexpected number arguments.");
       // Inspect only validated data: even a distribution getter must not run.
-      const record = validateOptions(options, ["distribution", "min", "max", "integer", "mean", "deviation"]);
+      const record = validateOptions(options, ["distribution", "min", "max", "integer", "mean", "deviation", "probability", "mode", "shape", "rate"]);
       switch (record.distribution) {
         case "normal": return normalDraw(record, gaussian);
         case "exponential": return exponentialDraw(record, draw);
         case "poisson": return poissonDraw(record, draw);
+        case "bernoulli": return bernoulliDraw(record, draw);
+        case "triangular": return triangularDraw(record, draw);
+        case "gamma": return gammaDraw(record, draw, gaussian);
         default: return uniformDraw(record, draw);
       }
     },

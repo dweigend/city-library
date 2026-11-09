@@ -1,0 +1,67 @@
+{
+  "mode": "compare",
+  "head": "95a5dc8f5e9769b72b7fedb3c79ba35217914236",
+  "cases": 32,
+  "pairedInstances": 64,
+  "snapshots": 192,
+  "purityChecks": 4736,
+  "atomicityChecks": 328,
+  "pairedChecks": 4352,
+  "detachedChecks": 192,
+  "sourceHashes": {
+    "neighborhood-heat-intervention": {
+      "model.ts": "b50dbadccd7f7a0180ee5be9f77db899965163111c0723ed563ac0a4cfc78eef",
+      "ui.ts": "ced1f2901ef9300dc17577d2ae40251b401a711d4c25147fa887eb0404b4f800"
+    },
+    "household-energy-demand": {
+      "model.ts": "9b8a804513e0e48e75473509409e1224fa1ff5926de5faa26803927c3a69cd40",
+      "ui.ts": "b29f74ea8a156dd399c2b8e8d6e5bb3b24d3225a92e8b81f55fc47be1b6773a2"
+    },
+    "residential-occupancy": {
+      "model.ts": "bbcba1268a4f11ec5c5303b5501469d7633b98db13ba57745392ef23e3ada608",
+      "ui.ts": "9b64d930870b7f381a74d1285efce5479999b9f9de2ac179627dadfcfd24306d"
+    },
+    "pedestrian-crossing-phases": {
+      "model.ts": "2ed1a6edd66af522eeb8647e7c942972b32bc7e1d9137e44e8afac05cb58d334",
+      "ui.ts": "574fdfd63a0786070514c78cfb0f6bea5bf1fe21838eb92cb0eddfc5e7928302"
+    },
+    "solar-battery-microgrid": {
+      "model.ts": "81549c3ece448c8d1fad7928fd83c91e80b220ca6ea0163993f5a984162bf562",
+      "ui.ts": "5547d853ab4a5cc7616f7c237c1a71f6eb18c0154e2b7d423256b29d071f5e9d"
+    },
+    "stormwater-retention": {
+      "model.ts": "2b734ffe458de1522038ce1c9cb905a3b6724feeb0d6bdca50808cd05845cce6",
+      "ui.ts": "4e11d947267de780d1b5f6f58fa384630dacec9ffd2284089ee12615c1df5316"
+    },
+    "urban-tree-watering": {
+      "model.ts": "d3cf0b3c3912fc00551db9c186d0c6dd2017275409275e0509794f2974466ee0",
+      "ui.ts": "258fec675433d96d0a240cc9b47d2c22d68217f34f25130549f00dceb1df5978"
+    },
+    "household-recycling-behavior": {
+      "model.ts": "73cb52a466994b1f9dc7c2850eebaa564dd1d4705cabd9dcb324fedf6844f1f1",
+      "ui.ts": "53871972b608a4bee71bc605a6a5f19a0808ff093f94b00443f7c699af730d87"
+    },
+    "zoning-scenario-comparison": {
+      "model.ts": "2baea9a45d73692243dcb64f31c41033e1256d49041f43797350c13cc7728638",
+      "ui.ts": "2974d1bcd3b4c988b3dff9af7bd67064bd157ae0dd61149292c14901d7d2cd12"
+    },
+    "workplace-household-membership": {
+      "model.ts": "9350adef11b0b5f5410682c19ef964a22ba1426aa81b51e5c89d6b73fd69b20c",
+      "ui.ts": "85e8faab5141c45cef47ac8f61d6b99645507a1c2cd34eb3843fdb3ede396d0e"
+    }
+  },
+  "mismatches": [
+    {
+      "filename": "06-pedestrian-crossing-phases.json",
+      "path": "$.snapshots.0.projectionsA.crossingData.cells.6.id",
+      "before": "view:road:-1:-2",
+      "after": "view:stripe:-1:-2"
+    },
+    {
+      "filename": "07-pedestrian-crossing-phases.json",
+      "path": "$.snapshots.0.projectionsA.crossingData.cells.6.id",
+      "before": "view:road:-1:-2",
+      "after": "view:stripe:-1:-2"
+    }
+  ]
+}
