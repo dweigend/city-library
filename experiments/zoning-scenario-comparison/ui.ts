@@ -34,8 +34,14 @@ type ZoningObservation = Observation<typeof model>;
 
 /** Aggregate slots are grouped into schematic buildings; no parcel geography/order is inferred. */
 export function zoningData(state: ZoningObservation): SpatialData {
-  const panelWidth = state.parameters.parcels * PARCEL_SPACING + PANEL_HORIZONTAL_PADDING;
   const panelHeight = Math.max(...state.runPlan.map(run => run.cap)) + PANEL_VERTICAL_PADDING;
+  // Few parcels must not collapse the whole canvas into a narrow strip: the
+  // six captions still need two readable columns beside their capacity stacks.
+  const minimumPanelWidth = panelHeight * PANEL_ROWS / PANEL_COLUMNS;
+  const panelWidth = Math.max(
+    state.parameters.parcels * PARCEL_SPACING + PANEL_HORIZONTAL_PADDING,
+    minimumPanelWidth,
+  );
   const width = panelWidth * PANEL_COLUMNS;
   const height = panelHeight * PANEL_ROWS;
   const cells = [];
