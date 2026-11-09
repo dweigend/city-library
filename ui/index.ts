@@ -16,6 +16,8 @@ export type {
   AxisSpec,
   Cell,
   SpatialAgent,
+  SpatialLabel,
   Inspector,
 } from "./definition.ts";
 export { netLogoColor } from "./palette/netlogo-color.ts";
+export { scientificPalette } from "./palette/scientific.ts";

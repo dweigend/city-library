@@ -55,7 +55,18 @@ export interface SpatialAgent extends NetworkNode {
   readonly x: number;
   readonly y: number;
   readonly heading?: number;
-  readonly shape?: "circle" | "triangle";
+  readonly shape?: "circle" | "triangle" | "rectangle" | "diamond";
+  /** Full rectangle dimensions in centered scene coordinates; exclusive with size. */
+  readonly extent?: { readonly width: number; readonly height: number };
+  readonly filled?: boolean;
+  readonly stroke?: string;
+  /** Nonnegative outline width in CSS pixels, default 1. */
+  readonly strokeWidth?: number;
+}
+export interface SpatialLabel {
+  readonly x: number;
+  readonly y: number;
+  readonly text: string;
 }
 export interface SpatialSegment {
   /** Detached endpoints in finite, centered two-dimensional world coordinates. */
@@ -67,6 +78,10 @@ export interface SpatialSegment {
   readonly width?: number;
 }
 export interface SpatialData {
+  /** Plain-text scene meaning and quantities; never another model-state owner. */
+  readonly description?: string;
+  /** Fixed nonselectable annotations in centered scene coordinates. */
+  readonly labels?: readonly SpatialLabel[];
   /** Controlled label visibility; omit to retain the host Labels checkbox. */
   readonly showLabels?: boolean;
   readonly width: number;

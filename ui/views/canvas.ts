@@ -1,4 +1,6 @@
 import type { RendererOptions } from "./appearance.ts";
+import { validateCanvasData, hitSceneSymbol } from "./spatial-data.ts";
+import { symbolPath } from "./spatial-symbols.ts";
 import type {
   Cell,
   GridData,
@@ -82,22 +84,24 @@ export function mountCanvas(
       for (const agent of data.agents) {
         const x = ((agent.x + data.width / 2) / data.width) * canvas.width;
         const y = ((data.height / 2 - agent.y) / data.height) * canvas.height;
+        const ratio = Math.min(devicePixelRatio, 2);
         const size = Math.max(
           2,
-          (agent.size ?? 8) * Math.min(devicePixelRatio, 2),
+          (agent.size ?? 8) * ratio,
         );
+        const width = agent.extent ? agent.extent.width / data.width * canvas.width : size;
+        const height = agent.extent ? agent.extent.height / data.height * canvas.height : size;
         ctx.save();
         ctx.translate(x, y);
         ctx.rotate(((agent.heading ?? 0) * Math.PI) / 180);
         ctx.fillStyle = agent.color ?? theme?.foreground ?? "#fff";
-        ctx.beginPath();
-        if (agent.shape === "triangle") {
-          ctx.moveTo(0, -size / 2);
-          ctx.lineTo(size * 0.35, size * 0.35);
-          ctx.lineTo(-size * 0.35, size * 0.35);
-          ctx.closePath();
-        } else ctx.arc(0, 0, size / 2, 0, Math.PI * 2);
-        ctx.fill();
+        symbolPath(ctx, agent, width, height);
+        if (agent.filled !== false) ctx.fill();
+        if ((agent.filled === false || agent.stroke !== undefined) && (agent.strokeWidth ?? 1) > 0) {
+          ctx.strokeStyle = agent.stroke ?? theme?.foreground ?? "#fff";
+          ctx.lineWidth = (agent.strokeWidth ?? 1) * ratio;
+          ctx.stroke();
+        }
         if (agent.id === selected) {
           ctx.strokeStyle = theme?.selected ?? "#fbbf24";
           ctx.lineWidth = 2;
@@ -113,6 +117,17 @@ export function mountCanvas(
           ctx.fillText(agent.label, x + size, y - size);
         }
       }
+    if ("agents" in data && data.labels) {
+      ctx.save();
+      ctx.font = theme?.font ?? `${12 * Math.min(devicePixelRatio, 2)}px system-ui, sans-serif`;
+      ctx.fillStyle = theme?.foreground ?? "#fff";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      for (const label of data.labels) ctx.fillText(label.text,
+        (label.x + data.width / 2) / data.width * canvas.width,
+        (data.height / 2 - label.y) / data.height * canvas.height);
+      ctx.restore();
+    }
   }
   function resizeBuffer() {
     if (options.theme) {
@@ -153,7 +168,13 @@ export function mountCanvas(
       data.height / 2 -
       ((event.clientY - rect.top) / rect.height) * data.height;
     if (!drawingEnabled && "agents" in data) {
-      const nearest = [...data.agents].sort(
+      // Passenger dots drawn over cabin/slot rectangles remain selectable.
+      // Scenes with only legacy symbols retain their original nearest behavior.
+      const hasDiagramShapes = data.agents.some(agent => agent.shape === "rectangle" || agent.shape === "diamond");
+      const shaped = hasDiagramShapes ? [...data.agents].reverse().find(agent =>
+        hitSceneSymbol(agent, x, y, data.width / rect.width)) : undefined;
+      if (shaped) { select(shaped.id); return; }
+      const nearest = data.agents.filter(agent => agent.shape !== "rectangle" && agent.shape !== "diamond").sort(
         (a, b) => Math.hypot(a.x - x, a.y - y) - Math.hypot(b.x - x, b.y - y),
       )[0];
       if (nearest && Math.hypot(nearest.x - x, nearest.y - y) < 2) {
@@ -275,6 +296,7 @@ export function mountCanvas(
   canvas.addEventListener("keydown", key);
   return {
     update(data: GridData | SpatialData, id: string | null, drawing = false) {
+      validateCanvasData(data);
       if (!drawing) stopDrawing();
       drawingEnabled = Boolean(intent) && drawing;
       setDrawingPresentation(drawingEnabled);
@@ -288,8 +310,9 @@ export function mountCanvas(
         !data.agents.some((agent) => Boolean(agent.label));
       canvas.setAttribute(
         "aria-label",
-        `Model view. ${"agents" in data ? data.agents.length + " agents" : data.cells.length + " cells"}. Arrow keys select an item.${drawingEnabled ? " Space or Enter draws a cell." : ""}${id ? " Selected " + id : ""}`,
+        `${"agents" in data && data.description ? data.description : `Model view. ${"agents" in data ? data.agents.length + " agents" : data.cells.length + " cells"}.`} Arrow keys select an item.${drawingEnabled ? " Space or Enter draws a cell." : ""}${id ? " Selected " + id : ""}`,
       );
+      canvas.textContent = "agents" in data ? data.description ?? "" : "";
       draw();
     },
     stopDrawing,
