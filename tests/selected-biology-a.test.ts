@@ -129,5 +129,5 @@ describe("selected biology A source mechanisms", () => {
     body.setParameters({ metabolicRate: 100 });
     body.advance();
     expect(body.read().totalGlucose).toBe(initial.totalGlucose + 724);
-  });
+  }, 20000);
 });

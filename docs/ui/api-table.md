@@ -4,7 +4,7 @@ This inventory and the [UI API reference](api-reference.md) form the binding UI 
 
 ## Status and notation
 
-`Supported` means a repository contract available in both host adapters. `Required` means a binding design rule; `Planned` means a candidate that needs a defined contract before use. [PLAN](../../PLAN.md) tracks remaining acceptance work. Source presence alone does not establish scientific or independent acceptance.
+`Supported` means a repository contract available in the Svelte host. `Required` means a binding design rule; `Planned` means a candidate that needs a defined contract before use. [PLAN](../../PLAN.md) tracks remaining acceptance work. Source presence alone does not establish scientific or independent acceptance.
 
 `P` is the model parameter object; `K = Extract<keyof P, string>`; `M` is its concrete instance; `S = ReturnType<M["read"]>`; `Scalar = string \| number \| boolean`; `Row = Readonly<Record<string, Scalar>>`. `?` marks optional properties. All declaration arrays and observation data are readonly. IDs below remain stable when availability changes. Each row links to its detailed contract.
 
