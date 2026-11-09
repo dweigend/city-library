@@ -20,7 +20,9 @@ export function create(options: Partial<CrossingParameters> = {}) {
   }));
   const history = storage.history({ capacity: 120 });
   function record() { history.add({ tick: world.tick.value, values: measure.read(walkers) }); }
-  function green() { return world.tick.value % 6 >= 3 && world.tick.value % 6 < 3 + settings.greenMinutes; }
+  const redMinutes = 3;
+  const cycleMinutes = redMinutes + settings.greenMinutes;
+  function green() { return world.tick.value % cycleMinutes >= redMinutes; }
   function step() {
     const selected: typeof walkers = [];
     world.activate(walkers, ({ self }) => { selected.push(self); }, { order: "fixed" });

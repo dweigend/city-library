@@ -189,7 +189,10 @@ function generatorTypeContract(){const graph=Graph.add<{name:string}>();const a=
 result.push(result[0]);return result;}void generatorTypeContract;
 `);
   await writeFile(join(directory, "consumer.ts"), `
-import {measurements,storage,experiments,twoPhase,continuous} from 'city-library';
+import {measurements,storage,experiments,twoPhase,continuous,Agenda,Resource} from 'city-library';
+const events=scheduledAgendaConsumer();
+function scheduledAgendaConsumer(){const timeline=Agenda.add<string>();const owner=World.add();owner.add(timeline);timeline.add({at:2,data:'arrival'});const event=timeline.next({until:10});if(event?.at!==2||timeline.time!==2||owner.tick.value!==0||owner.agendas[0]!==timeline)throw Error('packed agenda ownership mismatch');const resource=Resource.add<object>({capacity:1});const claim=resource.request({owner:{}});resource.release(claim);if(resource.used!==0||claim.status!=='released')throw Error('packed resource mismatch');return timeline;}
+void events;
 const numeric=measurements.define((state:{energy:number})=>({energy:state.energy}));
 const bounded=storage.history({capacity:1});
 bounded.add({tick:0,values:numeric.read({energy:4})});
