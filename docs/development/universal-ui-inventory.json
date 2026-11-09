@@ -1,0 +1,4178 @@
+{
+  "baseline": "a78bd2359e7a12ac537be131ca8d3023c4b718eb",
+  "status": "Preliminary source inventory, not migration acceptance. Proposed decisions must be resolved after expert synthesis.",
+  "entries": [
+    {
+      "slug": "anisogamy",
+      "ui": "experiments/anisogamy/ui.ts",
+      "model": "experiments/anisogamy/model.ts",
+      "uiLines": 143,
+      "modelLines": 368,
+      "views": [
+        "spatial",
+        "line",
+        "bar",
+        "inspector"
+      ],
+      "localColors": [
+        "#4575b4",
+        "#d73027"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "NetLogo palette mapping: preserve numeric compatibility",
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "9c57ff66d500e6e77633c36cccf7afa1822f477c758eddd1f99b303dcb754c4d",
+      "modelSha256": "a12c76466a37f6c7261c4a234fc60f5d36725252122c26f4acffd6cf4990f128",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "ants",
+      "ui": "experiments/ants/ui.ts",
+      "model": "experiments/ants/model.ts",
+      "uiLines": 79,
+      "modelLines": 234,
+      "views": [
+        "spatial",
+        "inspector",
+        "line"
+      ],
+      "localColors": [
+        "#00aaaa",
+        "#4499cc",
+        "#2244cc",
+        "#a536c7",
+        "#000000",
+        "#00dddd",
+        "#55aaff",
+        "#2244dd",
+        "#ffac30",
+        "#ee3333"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "b52fcd8d68b0bf5ea142031e2d88fd3bbb60c1cd293958a527ada8745b7d7308",
+      "modelSha256": "8dbbfebc8b8dbc9b0561c186163eb3ce757095e05a347de46d9223417b6caa52",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "artificial-neural-net-multilayer",
+      "ui": "experiments/artificial-neural-net-multilayer/ui.ts",
+      "model": "experiments/artificial-neural-net-multilayer/model.ts",
+      "uiLines": 104,
+      "modelLines": 264,
+      "views": [
+        "network",
+        "line",
+        "table"
+      ],
+      "localColors": [
+        "#eeeeee",
+        "#242424",
+        "#d74343",
+        "#3975bc"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Explicit topology/diagram coordinates",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "1fec0c0f287e4151a5622e5d1aa8b130be72a1c2613306ba10bc0bb74be0efe3",
+      "modelSha256": "fb401a9e7059ac815d1b672ebcb535525ad85e5e57d676d801cf7b18ed0583c3",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "artificial-neural-net-perceptron",
+      "ui": "experiments/artificial-neural-net-perceptron/ui.ts",
+      "model": "experiments/artificial-neural-net-perceptron/model.ts",
+      "uiLines": 124,
+      "modelLines": 271,
+      "views": [
+        "network",
+        "line",
+        "scatter",
+        "table"
+      ],
+      "localColors": [
+        "#eeeeee",
+        "#242424",
+        "#d74343",
+        "#3975bc",
+        "#47a66a",
+        "#8a8a8a"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Explicit topology/diagram coordinates",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "84d5bdbf81e2eacf30ac29c811da4782096f6b3165adf08130554227791a6df7",
+      "modelSha256": "a55215d72e4c18f389a260a7fe41a2db1cafd92e13aabc71e03ce94b8508169f",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "autumn",
+      "ui": "experiments/autumn/ui.ts",
+      "model": "experiments/autumn/model.ts",
+      "uiLines": 194,
+      "modelLines": 521,
+      "views": [
+        "spatial",
+        "line"
+      ],
+      "localColors": [
+        "#348b34",
+        "#8a5c2e",
+        "#d63838",
+        "#357be5",
+        "#777777",
+        "#d4ba25"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "1f64ae05c713603dcc3a1bdad55a2226079207671d5a2c780775841aff029370",
+      "modelSha256": "a12a98d355b059470c4c9d3f0d76953291e520f955d1a91cf47b27b8c95fef0c",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "bacterial-infection",
+      "ui": "experiments/bacterial-infection/ui.ts",
+      "model": "experiments/bacterial-infection/model.ts",
+      "uiLines": 141,
+      "modelLines": 464,
+      "views": [
+        "spatial",
+        "bar",
+        "line",
+        "inspector"
+      ],
+      "localColors": [
+        "#a536c7",
+        "#389b39",
+        "#8b603f",
+        "#ce3030",
+        "#999999",
+        "#9b2121",
+        "#9b8d21",
+        "#ffd7d7",
+        "#4a4a4a",
+        "#dd2020"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "e66c4ba7f48a93ca2b66e4bf474ca1855710072b3b88251562d405789bb86e1a",
+      "modelSha256": "c9d24e8729f01639c6006ddd175fd2bc5e50ac0f59a7e064bacfba607defcd9e",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "baldwin-effect",
+      "ui": "experiments/baldwin-effect/ui.ts",
+      "model": "experiments/baldwin-effect/model.ts",
+      "uiLines": 147,
+      "modelLines": 361,
+      "views": [
+        "spatial",
+        "line",
+        "inspector"
+      ],
+      "localColors": [
+        "#888888",
+        "#d73027",
+        "#4575b4"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "ea51e811d0617d21bf78bf2507ad1a6b04baf8031546a9c02369e40d52e20c6d",
+      "modelSha256": "d1f3b368684f549a81c53764488a3b0aee6081e8a87a7169f0896c2e3914f032",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "bank-reserves",
+      "ui": "experiments/bank-reserves/ui.ts",
+      "model": "experiments/bank-reserves/model.ts",
+      "uiLines": 123,
+      "modelLines": 359,
+      "views": [
+        "spatial",
+        "line",
+        "inspector"
+      ],
+      "localColors": [
+        "#d43b36",
+        "#315bd5",
+        "#38a339",
+        "#8d8d8d"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "4bd929a7b3d548f1902e0cbad2f43769339e48630d3bad4c4234f80f674c80cd",
+      "modelSha256": "8ab5b09fb769917c5efedfed2704d45dd25738f7a7c34e6c7a642e496853017c",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "bidding-market",
+      "ui": "experiments/bidding-market/ui.ts",
+      "model": "experiments/bidding-market/model.ts",
+      "uiLines": 154,
+      "modelLines": 339,
+      "views": [
+        "spatial",
+        "line"
+      ],
+      "localColors": [
+        "#447abd",
+        "#666666",
+        "#cb7641",
+        "#d9b52f",
+        "#426795"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "92cde9a71582576c0cb54a04dd2c4c2e0f9d6f4d98064929f11a2a7d4e5579b8",
+      "modelSha256": "f48c18ace6182cddb02a75fb26db3bc2af179e9fb3e91cb5a6fa76843b215b8d",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "binomial-rabbits",
+      "ui": "experiments/binomial-rabbits/ui.ts",
+      "model": "experiments/binomial-rabbits/model.ts",
+      "uiLines": 68,
+      "modelLines": 165,
+      "views": [
+        "bar",
+        "spatial"
+      ],
+      "localColors": [
+        "#c94236"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "7a7852f2db8b6fbf59945188063dacd3b0d92e1e795a35b1308c8872869835f9",
+      "modelSha256": "e6f77a547d8912c05dbd0f0ecbdc659aaaa35de62a8975b6ea9cf739ba1a3482",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "birthdays",
+      "ui": "experiments/birthdays/ui.ts",
+      "model": "experiments/birthdays/model.ts",
+      "uiLines": 36,
+      "modelLines": 142,
+      "views": [
+        "table",
+        "line"
+      ],
+      "localColors": [],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "History projection/order and units"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "e8684916ab305bb0b3450f1481ce7bedd778c6ca510aab33f3cbd27279e31d02",
+      "modelSha256": "e31c72133f2d755ab6b0e8f303540ddda4ac81add7567b0d97bc8a97bf62bd81",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "blood-sugar-regulation",
+      "ui": "experiments/blood-sugar-regulation/ui.ts",
+      "model": "experiments/blood-sugar-regulation/model.ts",
+      "uiLines": 103,
+      "modelLines": 377,
+      "views": [
+        "spatial",
+        "line"
+      ],
+      "localColors": [
+        "#888888",
+        "#58b8ed",
+        "#e43838"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "3b2e5e213fc4e7a4e6a04de200eebf11ebac5bdc628f6db4180e81e8c09e144f",
+      "modelSha256": "897079716892f8d684102981f7d61876ff4abfd9bb57ba28db7fcf9bcbb7eea3",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "braess-paradox",
+      "ui": "experiments/braess-paradox/ui.ts",
+      "model": "experiments/braess-paradox/model.ts",
+      "uiLines": 89,
+      "modelLines": 400,
+      "views": [
+        "spatial",
+        "line",
+        "bar"
+      ],
+      "localColors": [
+        "#70cced"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "e43d63b60514b393f3837e3826aa0eff37348b8cf168ed55d5edc7af73f2262c",
+      "modelSha256": "ec56ccf9c4bf7b1c7aa512785139c4903da27d2a666911e4d22474e5135b47f2",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "brians-brain",
+      "ui": "experiments/brians-brain/ui.ts",
+      "model": "experiments/brians-brain/model.ts",
+      "uiLines": 55,
+      "modelLines": 164,
+      "views": [
+        "grid"
+      ],
+      "localColors": [
+        "#fff",
+        "#d73027",
+        "#000"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Pointer drawing/action lifecycle",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "d76fb1f92f19d521613a7b1a8fa370974510ceaaac56c10a1e61253c36fb636f",
+      "modelSha256": "a9fb5cefa551e44a65d4371831315d240f97e3b804685a09172c03fdf68c2afe",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "ca-1d-elementary",
+      "ui": "experiments/ca-1d-elementary/ui.ts",
+      "model": "experiments/ca-1d-elementary/model.ts",
+      "uiLines": 63,
+      "modelLines": 272,
+      "views": [
+        "grid",
+        "table"
+      ],
+      "localColors": [],
+      "review": "keep unless concrete extension improves binding",
+      "reason": "Current shape is explicit public authoring; preserve scientific/topology/pointer semantics instead of stylistic rewrite.",
+      "risks": [
+        "NetLogo palette mapping: preserve numeric compatibility",
+        "Pinned upstream portrayal/source semantics"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "ea7cbf4ff8af1a5e21c2a21603def767e787d14a81ccf5ae2da96b57eab183d8",
+      "modelSha256": "0e401cae6a0591e4269544fa4c833b65763f699b81677a8a17c922084e8f7d3d",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "ca-continuous",
+      "ui": "experiments/ca-continuous/ui.ts",
+      "model": "experiments/ca-continuous/model.ts",
+      "uiLines": 44,
+      "modelLines": 210,
+      "views": [
+        "grid"
+      ],
+      "localColors": [],
+      "review": "keep unless concrete extension improves binding",
+      "reason": "Current shape is explicit public authoring; preserve scientific/topology/pointer semantics instead of stylistic rewrite.",
+      "risks": [
+        "NetLogo palette mapping: preserve numeric compatibility",
+        "Pinned upstream portrayal/source semantics"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "827200f7893669a59d2910239751550d5d32f155c2ecd991572b6c1e0fa7a974",
+      "modelSha256": "f962cf09b8f9a1f9c11441c240ebb4fcad4d7c6b0b0b53dbd1f0ebfd29d086bf",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "ca-stochastic",
+      "ui": "experiments/ca-stochastic/ui.ts",
+      "model": "experiments/ca-stochastic/model.ts",
+      "uiLines": 101,
+      "modelLines": 273,
+      "views": [
+        "grid",
+        "line"
+      ],
+      "localColors": [],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "NetLogo palette mapping: preserve numeric compatibility",
+        "Pinned upstream portrayal/source semantics",
+        "History projection/order and units"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "55cbc63a15cb54234917dbb9da325c5dbe1b1dc3bebfb9271b2ea4559b06e689",
+      "modelSha256": "4963d69df22f018ebe9f50a3d6d887ec8ac591c3714a27588a200248c760d31f",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "cash-flow",
+      "ui": "experiments/cash-flow/ui.ts",
+      "model": "experiments/cash-flow/model.ts",
+      "uiLines": 123,
+      "modelLines": 359,
+      "views": [
+        "spatial",
+        "line",
+        "bar",
+        "inspector"
+      ],
+      "localColors": [
+        "#d43b36",
+        "#315bd5",
+        "#38a339",
+        "#8d8d8d"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "3126e367253d51232e48ffa2c713f61cf0a24fb54a5df5d17bd2280edafd1a2b",
+      "modelSha256": "ea8e7eed783534261130ae0f625e2dcf3363eebc10c4edb3e1f94a26ba7cc5b5",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "central-limit-theorem",
+      "ui": "experiments/central-limit-theorem/ui.ts",
+      "model": "experiments/central-limit-theorem/model.ts",
+      "uiLines": 103,
+      "modelLines": 222,
+      "views": [
+        "spatial",
+        "bar"
+      ],
+      "localColors": [
+        "#b91c1c",
+        "#2563eb",
+        "#f5f5f5",
+        "#bdbdbd",
+        "#16a34a",
+        "#f87171"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Pointer drawing/action lifecycle",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "3f0092279016b0e5fb574470edaf4a227c06cca0279d6091e1970e8f90bc7fff",
+      "modelSha256": "495cf76500ebb2f39508ebd358e5abc50bc0e9e86fb0a52df28ef22d8154ca62",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "chloroplasts-and-food",
+      "ui": "experiments/chloroplasts-and-food/ui.ts",
+      "model": "experiments/chloroplasts-and-food/model.ts",
+      "uiLines": 94,
+      "modelLines": 480,
+      "views": [
+        "spatial",
+        "line"
+      ],
+      "localColors": [
+        "#222222",
+        "#df4545",
+        "#b67b37"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "ab1319bb87a652cc35c32e6fe4dd7938872a1e09dc9bc2eba828fc6a25ff889f",
+      "modelSha256": "bc23a701de3f81e7e42dcfcdc339d2db1b3845fd4ccd583231564a153494feef",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "consumer-choice",
+      "ui": "experiments/consumer-choice/ui.ts",
+      "model": "experiments/consumer-choice/model.ts",
+      "uiLines": 138,
+      "modelLines": 238,
+      "views": [
+        "network",
+        "inspector",
+        "line"
+      ],
+      "localColors": [
+        "#e58b20",
+        "#377ac7",
+        "#aaaaaa",
+        "#666666"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities",
+        "Explicit topology/diagram coordinates",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "2c6d8ada99525eaa286f41918e4b80ecde43d4dba838cea88e927ea12424e4b4",
+      "modelSha256": "9530c8a16f07c3fade1b116d0b4cad171f5f61918583677d8171cd632d639ae6",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "crispr-bacterium",
+      "ui": "experiments/crispr-bacterium/ui.ts",
+      "model": "experiments/crispr-bacterium/model.ts",
+      "uiLines": 142,
+      "modelLines": 499,
+      "views": [
+        "spatial",
+        "bar",
+        "line"
+      ],
+      "localColors": [
+        "#35a85b",
+        "#2db5a4",
+        "#d18b34",
+        "#df4545"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "22cf8030c7c73fbbc2843aeab94525e49a9f512e421d14e2511e7ca6a941b6b6",
+      "modelSha256": "4da61331c86a264514e8254259015263bd143c82bc54e7d1c4dfd5efad96a058",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "crispr-ecosystem",
+      "ui": "experiments/crispr-ecosystem/ui.ts",
+      "model": "experiments/crispr-ecosystem/model.ts",
+      "uiLines": 199,
+      "modelLines": 421,
+      "views": [
+        "spatial",
+        "line",
+        "bar"
+      ],
+      "localColors": [
+        "#db9a35",
+        "#9272b8"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "a5d202ce8135ba0f6ca141a110b6011a72fee33ed7a0335ebd9f3a414f7b7d69",
+      "modelSha256": "80ce02797eb81adefce2d4b02b08df0b4a184407cc2675d7441f11f79e0e2e09",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "crystallization-basic",
+      "ui": "experiments/crystallization-basic/ui.ts",
+      "model": "experiments/crystallization-basic/model.ts",
+      "uiLines": 91,
+      "modelLines": 245,
+      "views": [
+        "spatial",
+        "bar",
+        "line",
+        "inspector"
+      ],
+      "localColors": [
+        "#e4413b"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "NetLogo palette mapping: preserve numeric compatibility",
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "fdf1e30619e7e006db6704d3f6ff710af1f7adbb599872193d2b687150807ada",
+      "modelSha256": "a62498fe92a192a0373f7cd621657712d8654231d06d78c31bbfff96f2af03b5",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "cyclic-ca",
+      "ui": "experiments/cyclic-ca/ui.ts",
+      "model": "experiments/cyclic-ca/model.ts",
+      "uiLines": 43,
+      "modelLines": 220,
+      "views": [
+        "grid"
+      ],
+      "localColors": [],
+      "review": "keep unless concrete extension improves binding",
+      "reason": "Current shape is explicit public authoring; preserve scientific/topology/pointer semantics instead of stylistic rewrite.",
+      "risks": [
+        "NetLogo palette mapping: preserve numeric compatibility",
+        "Pinned upstream portrayal/source semantics"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "be805f3a443be014fa25e855421417b4f3b1a2eca85e44bbef95d2e863b39428",
+      "modelSha256": "398f9c047a4526aba0ee3f3dca7f958d37eeaf3448a0d3a4a5bfe3dc7c3da997",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "daisyworld",
+      "ui": "experiments/daisyworld/ui.ts",
+      "model": "experiments/daisyworld/model.ts",
+      "uiLines": 142,
+      "modelLines": 331,
+      "views": [
+        "spatial",
+        "line"
+      ],
+      "localColors": [
+        "#8d8d8d",
+        "#000000",
+        "#ffffff"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "NetLogo palette mapping: preserve numeric compatibility",
+        "Pinned upstream portrayal/source semantics",
+        "Pointer drawing/action lifecycle",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "9ee0f0dd9b522c21f1a3d50eb18f2d5cefbb3851f24390b23697e121da3c8866",
+      "modelSha256": "e45e8a381a75342b78555d7d5eeeec59618cd229f7683712637919aab4b468e3",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "des-bike-redistribution",
+      "ui": "experiments/des-bike-redistribution/ui.ts",
+      "model": "experiments/des-bike-redistribution/model.ts",
+      "uiLines": 16,
+      "modelLines": 82,
+      "views": [
+        "spatial",
+        "bar",
+        "table"
+      ],
+      "localColors": [],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "DES scene primitive/layout constants; canonical queue/capacity ownership"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "a925f27daf93dc6c1e06d82da1527f7d92dfd5868f1809df4d372ece7ed52529",
+      "modelSha256": "88e9afd56c38d2818d9a2600de7e51dc4de23027aaabfb35167bec5ddaf128ae",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "des-bus-interchange",
+      "ui": "experiments/des-bus-interchange/ui.ts",
+      "model": "experiments/des-bus-interchange/model.ts",
+      "uiLines": 20,
+      "modelLines": 85,
+      "views": [
+        "spatial",
+        "line",
+        "table"
+      ],
+      "localColors": [],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "History projection/order and units",
+        "DES scene primitive/layout constants; canonical queue/capacity ownership"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "16f6c7cfbef90ad79db00521a02a992d9f6aec3c8571918f9b2672e9bf0822c0",
+      "modelSha256": "08c89006f3f491f3cd8a0c5114fe57433bde6dce0ddaba37099aa5209f187bbf",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "des-civic-office",
+      "ui": "experiments/des-civic-office/ui.ts",
+      "model": "experiments/des-civic-office/model.ts",
+      "uiLines": 20,
+      "modelLines": 72,
+      "views": [
+        "spatial",
+        "line",
+        "table"
+      ],
+      "localColors": [],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "History projection/order and units",
+        "DES scene primitive/layout constants; canonical queue/capacity ownership"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "16b68135d6b0a59d20a6f83dc003703764ad97aaa2ad8bf6ac192921c72580e0",
+      "modelSha256": "c081b1274508857c1057a575be6865abb07a4edb17b2877216b0d4bb91a4c69f",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "des-elevator",
+      "ui": "experiments/des-elevator/ui.ts",
+      "model": "experiments/des-elevator/model.ts",
+      "uiLines": 79,
+      "modelLines": 305,
+      "views": [
+        "spatial",
+        "table"
+      ],
+      "localColors": [],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "DES scene primitive/layout constants; canonical queue/capacity ownership"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "0f4370ee067f106e0c7cf48fbb351a2bca2a3f65cad4e5ce8e864a51e42212eb",
+      "modelSha256": "85832237463827eda377500f1051852c00997481e02b067baaac1d8f136d01e8",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "des-emergency-dispatch",
+      "ui": "experiments/des-emergency-dispatch/ui.ts",
+      "model": "experiments/des-emergency-dispatch/model.ts",
+      "uiLines": 17,
+      "modelLines": 73,
+      "views": [
+        "spatial",
+        "table"
+      ],
+      "localColors": [],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "DES scene primitive/layout constants; canonical queue/capacity ownership"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "f4a744b003d3f75b22cab6c9bb8d27a6cd202ea8860f28600b731e2f235a0b94",
+      "modelSha256": "bb0dc8a415fff4db5fcee61741c85bb62905ee8bef08e7a50fb47f9d03c19f2c",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "des-ev-charging",
+      "ui": "experiments/des-ev-charging/ui.ts",
+      "model": "experiments/des-ev-charging/model.ts",
+      "uiLines": 24,
+      "modelLines": 76,
+      "views": [
+        "spatial",
+        "line",
+        "table"
+      ],
+      "localColors": [],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "History projection/order and units",
+        "DES scene primitive/layout constants; canonical queue/capacity ownership"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "fc1496125205c7e7b7eb7c45b138e429ff89b6cf65192e89ed0cfd00455a912f",
+      "modelSha256": "366f5a3a0f62945d5e37b0b82f787ab0619234722adab445329940bd80e77244",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "des-goods-buffer",
+      "ui": "experiments/des-goods-buffer/ui.ts",
+      "model": "experiments/des-goods-buffer/model.ts",
+      "uiLines": 22,
+      "modelLines": 60,
+      "views": [
+        "spatial",
+        "line",
+        "table"
+      ],
+      "localColors": [],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "History projection/order and units",
+        "DES scene primitive/layout constants; canonical queue/capacity ownership"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "8e02f57ae37aac212bd33b355e59dc0ac7d022c2955022a006499d9a9d8071e1",
+      "modelSha256": "a9936f8677d5809efc1431d7e923d1893d3649467f0ab2350864ce31430e927d",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "des-machine-maintenance",
+      "ui": "experiments/des-machine-maintenance/ui.ts",
+      "model": "experiments/des-machine-maintenance/model.ts",
+      "uiLines": 19,
+      "modelLines": 102,
+      "views": [
+        "spatial",
+        "table"
+      ],
+      "localColors": [],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "DES scene primitive/layout constants; canonical queue/capacity ownership"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "5f7f8e11e02d1b0670d65505d94ada22394cc7abfe6ab3c946a0e8e1de5a3a0a",
+      "modelSha256": "8ef7137cb47dc1e95fde2e1ee83c75a1175f7b91947c8cb061a30a04d71234a1",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "des-parcel-logistics",
+      "ui": "experiments/des-parcel-logistics/ui.ts",
+      "model": "experiments/des-parcel-logistics/model.ts",
+      "uiLines": 19,
+      "modelLines": 96,
+      "views": [
+        "spatial",
+        "line",
+        "table"
+      ],
+      "localColors": [],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "History projection/order and units",
+        "DES scene primitive/layout constants; canonical queue/capacity ownership"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "b448ea4ccdb1ed338b00fc04644993adbde7905eb228b5727259fd6d625537b8",
+      "modelSha256": "4e5e793f791a4ca17b23343fcf7b0bd30d7a5e623b9a960f7b9e2af6cf987309",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "des-waste-collection",
+      "ui": "experiments/des-waste-collection/ui.ts",
+      "model": "experiments/des-waste-collection/model.ts",
+      "uiLines": 15,
+      "modelLines": 79,
+      "views": [
+        "spatial",
+        "line"
+      ],
+      "localColors": [],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "History projection/order and units",
+        "DES scene primitive/layout constants; canonical queue/capacity ownership"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "3bac32e78b1d483c8950e08019cfbe2f0701d7ba104a18b336a0a638e110d5d5",
+      "modelSha256": "65e9005cb70108cd5c84715e87590b67500c3707743277a3a7cea4eea80d92bc",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "des-water-allocation",
+      "ui": "experiments/des-water-allocation/ui.ts",
+      "model": "experiments/des-water-allocation/model.ts",
+      "uiLines": 20,
+      "modelLines": 61,
+      "views": [
+        "spatial",
+        "bar",
+        "table"
+      ],
+      "localColors": [],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "DES scene primitive/layout constants; canonical queue/capacity ownership"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "cfd83d9f0e5f760cf433e999ec2098bf0aa83e862629eb518078c0f8e524fba1",
+      "modelSha256": "0663d5d5c046ba9b76122de025dfcf1046b00ec540b989695cb33874fc96db5e",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "diffusion-on-a-directed-network",
+      "ui": "experiments/diffusion-on-a-directed-network/ui.ts",
+      "model": "experiments/diffusion-on-a-directed-network/model.ts",
+      "uiLines": 114,
+      "modelLines": 167,
+      "views": [
+        "inspector",
+        "network",
+        "bar",
+        "table"
+      ],
+      "localColors": [
+        "#355fa5"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities",
+        "Explicit topology/diagram coordinates",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "54aec06d46fee71a0bcf56afc5273d1e1e63c588951cc501182632a4d7d0e03d",
+      "modelSha256": "04500b221b518615518c514b5c1d8216640e5c65e439265c82cf505a1906d2e7",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "dining-philosophers",
+      "ui": "experiments/dining-philosophers/ui.ts",
+      "model": "experiments/dining-philosophers/model.ts",
+      "uiLines": 114,
+      "modelLines": 295,
+      "views": [
+        "spatial",
+        "bar",
+        "line",
+        "table"
+      ],
+      "localColors": [
+        "#3975bc",
+        "#d74343",
+        "#47a66a",
+        "#c15cbd",
+        "#e5e5e5"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "cecff0f1d272215d870b703c947f208e527fbd455c61bf1d3b80807d10c64585",
+      "modelSha256": "2c5723457b07bac0150051f4aff730f17195cac441328f33e8d39c6cce2e4bb5",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "disease-solo",
+      "ui": "experiments/disease-solo/ui.ts",
+      "model": "experiments/disease-solo/model.ts",
+      "uiLines": 70,
+      "modelLines": 250,
+      "views": [
+        "spatial",
+        "line"
+      ],
+      "localColors": [
+        "#df4545"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "0ff58406268a6092d6d47df6ae3f88aa17d295ab5ae0000a8d5fade9bbe26b87",
+      "modelSha256": "4ae3f77b74545de4323021eb3d502064f76966ec3e0e2704c0901e4d2f012b6c",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "dla",
+      "ui": "experiments/dla/ui.ts",
+      "model": "experiments/dla/model.ts",
+      "uiLines": 62,
+      "modelLines": 195,
+      "views": [
+        "spatial",
+        "inspector"
+      ],
+      "localColors": [
+        "#59b03c",
+        "#000000",
+        "#e4413b"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "e0ea1a83d75edc23da5070606cd8fafdfcc514ccfa0b4e97c935404c29761bf7",
+      "modelSha256": "c9d4d5d677fe96f66dba5365b372267c9212ebecdc8fd965100e8cb5b613136c",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "dna-protein-synthesis",
+      "ui": "experiments/dna-protein-synthesis/ui.ts",
+      "model": "experiments/dna-protein-synthesis/model.ts",
+      "uiLines": 114,
+      "modelLines": 921,
+      "views": [
+        "spatial",
+        "table"
+      ],
+      "localColors": [],
+      "review": "keep unless concrete extension improves binding",
+      "reason": "Current shape is explicit public authoring; preserve scientific/topology/pointer semantics instead of stylistic rewrite.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "History projection/order and units"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "cbf36087256a2c023d746980dfde089dc47bfd2f93f4059e5cf04e115c070f86",
+      "modelSha256": "598d714d50bf0dbbcab7f079afedb9b0abbfef36c143d2e0eb050335f3077d2a",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "el-farol",
+      "ui": "experiments/el-farol/ui.ts",
+      "model": "experiments/el-farol/model.ts",
+      "uiLines": 95,
+      "modelLines": 279,
+      "views": [
+        "spatial",
+        "line",
+        "inspector"
+      ],
+      "localColors": [
+        "#315bd5",
+        "#38a339",
+        "#171717",
+        "#ffffff",
+        "#d43b36"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "eec3bc45729d31df817f9eacc3805f3471fbc5d6df4967f830fec4c6f74a303f",
+      "modelSha256": "a74483fc58c726c8864aef3a211f3ed6bd39c76d30119ab4ff55777d40e27844",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "epidem-basic",
+      "ui": "experiments/epidem-basic/ui.ts",
+      "model": "experiments/epidem-basic/model.ts",
+      "uiLines": 81,
+      "modelLines": 274,
+      "views": [
+        "spatial",
+        "line"
+      ],
+      "localColors": [
+        "#df4545",
+        "#35a85b"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "5503669dd14e8cd25f98c271bf9a34e41ab8dc8e1fbfec46f96a88239369b422",
+      "modelSha256": "48db3044717651ceae34eb3c13451e7ce34c1e50a34871a655838f8e717c10ef",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "epidem-travel-and-control",
+      "ui": "experiments/epidem-travel-and-control/ui.ts",
+      "model": "experiments/epidem-travel-and-control/model.ts",
+      "uiLines": 108,
+      "modelLines": 470,
+      "views": [
+        "spatial",
+        "line"
+      ],
+      "localColors": [
+        "#df4545",
+        "#35a85b"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "92bb024b55854eb9754acf70e9287bacf17a43e398264c77fc4ce547fc206173",
+      "modelSha256": "d1534275ece4f8f68dfbf50348fbeb0046222c017d678f5bb92cf67ad28a9727",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "ethnocentrism",
+      "ui": "experiments/ethnocentrism/ui.ts",
+      "model": "experiments/ethnocentrism/model.ts",
+      "uiLines": 119,
+      "modelLines": 345,
+      "views": [
+        "spatial",
+        "inspector",
+        "line"
+      ],
+      "localColors": [
+        "#40914b",
+        "#d64c4c",
+        "#bd8c42",
+        "#777777",
+        "#3d7ec4",
+        "#d1b72e",
+        "#3e9a58"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "96f1fe486083a6b439b88eabb3f47a0267e353dc117d5626f5de3a875fbf0da8",
+      "modelSha256": "a238bd3840ca768fc6520ea5ac7911e433152a26fa01b2828a49a59301f15b3f",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "expected-value",
+      "ui": "experiments/expected-value/ui.ts",
+      "model": "experiments/expected-value/model.ts",
+      "uiLines": 134,
+      "modelLines": 217,
+      "views": [
+        "spatial",
+        "bar",
+        "line"
+      ],
+      "localColors": [
+        "#064e3b",
+        "#065f46",
+        "#047857",
+        "#10b981",
+        "#6ee7b7",
+        "#a7f3d0",
+        "#d1fae5",
+        "#b91c1c",
+        "#101010",
+        "#2563eb"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "1dc573b41ff73241866cb97acb2220453a303b952d8d837ff2a97058a303d446",
+      "modelSha256": "6f179ce6d6c7e89d52a1f181823231c21162713ca42ce1248b5e60bf43556fd1",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "fire",
+      "ui": "experiments/fire/ui.ts",
+      "model": "experiments/fire/model.ts",
+      "uiLines": 48,
+      "modelLines": 168,
+      "views": [
+        "grid"
+      ],
+      "localColors": [
+        "#38a339",
+        "#ff2424",
+        "#000000"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "aa4a32ffd832e33f2dd63342729cd0f71eb44811b89fed3d0fb3b1b6a302427a",
+      "modelSha256": "c86026ee0b02dc657e534952241bc2c14cfac81dc44aa26ec87e5dc339866a16",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "fireflies",
+      "ui": "experiments/fireflies/ui.ts",
+      "model": "experiments/fireflies/model.ts",
+      "uiLines": 72,
+      "modelLines": 182,
+      "views": [
+        "spatial",
+        "inspector",
+        "line"
+      ],
+      "localColors": [
+        "#bf3030",
+        "#ffff38",
+        "#555555"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "b1be270251af097fb9669e8af02b719e42a63b82b80e2ace99c7447781c70ac6",
+      "modelSha256": "7d88e92de4226976f606c999cb1a77451fc5f760db686d7170e123ae94709d5d",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "flocking",
+      "ui": "experiments/flocking/ui.ts",
+      "model": "experiments/flocking/model.ts",
+      "uiLines": 73,
+      "modelLines": 210,
+      "views": [
+        "spatial",
+        "inspector"
+      ],
+      "localColors": [],
+      "review": "keep unless concrete extension improves binding",
+      "reason": "Current shape is explicit public authoring; preserve scientific/topology/pointer semantics instead of stylistic rewrite.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "6ba900962c70374f90581bfbf6209e75609b62bdd05b47122a135962cfc258ce",
+      "modelSha256": "2c45921ec43bffe2e73cb8f7da49a59ebe47eeef486f6e9f3c5f11b8b843930f",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "fruit-wars",
+      "ui": "experiments/fruit-wars/ui.ts",
+      "model": "experiments/fruit-wars/model.ts",
+      "uiLines": 181,
+      "modelLines": 461,
+      "views": [
+        "spatial",
+        "line",
+        "bar"
+      ],
+      "localColors": [
+        "#de3030",
+        "#888888"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "NetLogo palette mapping: preserve numeric compatibility",
+        "Pinned upstream portrayal/source semantics",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "3cbaee468e4cf9e031a4fad87b8e0e3460111b46129a1ba118d5a0a00bb410c1",
+      "modelSha256": "c96586f686d6b2842e588d2297d7cb4e10aa9b0bc4cc906f9d9062287298dcbe",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "fur",
+      "ui": "experiments/fur/ui.ts",
+      "model": "experiments/fur/model.ts",
+      "uiLines": 46,
+      "modelLines": 175,
+      "views": [
+        "grid"
+      ],
+      "localColors": [],
+      "review": "keep unless concrete extension improves binding",
+      "reason": "Current shape is explicit public authoring; preserve scientific/topology/pointer semantics instead of stylistic rewrite.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "e530606007dca9d98a15510883daec0b6c82c070c56669c3e74e0fae5b2449fd",
+      "modelSha256": "20a464c5cdf2b6971eb7268175727ffdee78f5ad5a9d55c19d44e99db5fd5649",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "galton-box",
+      "ui": "experiments/galton-box/ui.ts",
+      "model": "experiments/galton-box/model.ts",
+      "uiLines": 56,
+      "modelLines": 216,
+      "views": [
+        "spatial",
+        "bar"
+      ],
+      "localColors": [
+        "#d6ad24",
+        "#c94236"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "730e04ddafa54905a7215c3493bdaf17f01d059f38e8b2934ab01c54d9ecd5c8",
+      "modelSha256": "1ad4f450fd11fad7f84ef621ae403dad47deb91f1c24f22b6161ebc70c56b109",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "gendrift-t-interact",
+      "ui": "experiments/gendrift-t-interact/ui.ts",
+      "model": "experiments/gendrift-t-interact/model.ts",
+      "uiLines": 81,
+      "modelLines": 217,
+      "views": [
+        "spatial",
+        "line",
+        "inspector"
+      ],
+      "localColors": [
+        "#ffffff",
+        "#000000"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "NetLogo palette mapping: preserve numeric compatibility",
+        "Pinned upstream portrayal/source semantics",
+        "Pointer drawing/action lifecycle",
+        "Selection IDs and inspectable entities",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "8b6c5aac47d537982e58274ff360e5be510b10b9a885304e1491ea6eab6d9501",
+      "modelSha256": "69e919d2c0a51b75c3ad2252049eeea737c9ec7ee5ff53eb8074bcb582abe7e9",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "genevo-1-genetic-switch",
+      "ui": "experiments/genevo-1-genetic-switch/ui.ts",
+      "model": "experiments/genevo-1-genetic-switch/model.ts",
+      "uiLines": 99,
+      "modelLines": 570,
+      "views": [
+        "spatial",
+        "line"
+      ],
+      "localColors": [
+        "#888888",
+        "#df4545"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "94b301bb17b6da244d7af244632658540b818b72a268a3f31fdb46fe70a94161",
+      "modelSha256": "0a66b1af1ea3c91f9b94080306bbb777b01abc46538bb0b426bfc61d996653c2",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "heat-diffusion",
+      "ui": "experiments/heat-diffusion/ui.ts",
+      "model": "experiments/heat-diffusion/model.ts",
+      "uiLines": 85,
+      "modelLines": 263,
+      "views": [
+        "grid",
+        "inspector"
+      ],
+      "localColors": [
+        "#8d8d8d"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "NetLogo palette mapping: preserve numeric compatibility",
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "936f3c345e0dc8838bce2bd1959ca686067f36af2b26886549a288c11f628fc8",
+      "modelSha256": "df456567d0b6598215a078f095d57a261d5e3999af9dae0653809778c64cdb20",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "heatbugs",
+      "ui": "experiments/heatbugs/ui.ts",
+      "model": "experiments/heatbugs/model.ts",
+      "uiLines": 110,
+      "modelLines": 272,
+      "views": [
+        "spatial",
+        "inspector",
+        "line"
+      ],
+      "localColors": [],
+      "review": "keep unless concrete extension improves binding",
+      "reason": "Current shape is explicit public authoring; preserve scientific/topology/pointer semantics instead of stylistic rewrite.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "7506c76b94ef12b9724de9f878a8fb277260ec09a1d6897193c9d2665deb1928",
+      "modelSha256": "92296c79a005728d2b8444054cb38804d9c0d2f86ee69abd1ec076fe64c96a51",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "heroes-and-cowards",
+      "ui": "experiments/heroes-and-cowards/ui.ts",
+      "model": "experiments/heroes-and-cowards/model.ts",
+      "uiLines": 47,
+      "modelLines": 244,
+      "views": [
+        "spatial",
+        "inspector"
+      ],
+      "localColors": [
+        "#3675db",
+        "#d83838"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "9696c958b06c11e4b82b8978cfcbda367660b87eb72b5190536f91c4c4c20fa1",
+      "modelSha256": "962428649b4f432439e324bf46fc88c5f3fa6e7cf4f3c035bfe3a56ea8d374ec",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "hex-cell-aggregation",
+      "ui": "experiments/hex-cell-aggregation/ui.ts",
+      "model": "experiments/hex-cell-aggregation/model.ts",
+      "uiLines": 99,
+      "modelLines": 203,
+      "views": [
+        "spatial",
+        "inspector"
+      ],
+      "localColors": [
+        "#d73027",
+        "#f28e2b"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "21cd915032d8783774b87fa4454422ee728645b20e681c32463d36595e5c1c8a",
+      "modelSha256": "ce9f985218d4383e5927d6540d9d29d59473a2ce03a16f1ea2a2a341f88f1b5c",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "hiv",
+      "ui": "experiments/hiv/ui.ts",
+      "model": "experiments/hiv/model.ts",
+      "uiLines": 93,
+      "modelLines": 323,
+      "views": [
+        "spatial",
+        "line"
+      ],
+      "localColors": [
+        "#df4545",
+        "#408dde",
+        "#888888"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "2c3f4328c6cf9ce7d974113ed248c27878e3097f530d1fc65ef9d215449b584e",
+      "modelSha256": "4c2ba3db0a02cd81530490038fe9b6c88665ed7f2998746b790f126a5234c9d9",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "honeycomb",
+      "ui": "experiments/honeycomb/ui.ts",
+      "model": "experiments/honeycomb/model.ts",
+      "uiLines": 43,
+      "modelLines": 109,
+      "views": [
+        "spatial"
+      ],
+      "localColors": [],
+      "review": "keep unless concrete extension improves binding",
+      "reason": "Current shape is explicit public authoring; preserve scientific/topology/pointer semantics instead of stylistic rewrite.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "49f771e21ad7d742d62e417ec5374c9acc607bb99571ad1d56c02f97091532f4",
+      "modelSha256": "a994adb20035dd2c2570a2baedb0026fdc60ed79485b8cc162695ccd54f42b92",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "hotellings-law",
+      "ui": "experiments/hotellings-law/ui.ts",
+      "model": "experiments/hotellings-law/model.ts",
+      "uiLines": 96,
+      "modelLines": 219,
+      "views": [
+        "spatial",
+        "line",
+        "bar"
+      ],
+      "localColors": [],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "NetLogo palette mapping: preserve numeric compatibility",
+        "Pinned upstream portrayal/source semantics",
+        "History projection/order and units"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "05c98c1c5ec696f2d77f727c155342ceee51ec472c2be3cd5b91cdd3fb14ee6c",
+      "modelSha256": "8e83e4dc3a21f254194ee061db2f6d0f4823bab67b9dece10b0af9c18970b9e8",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "household-energy-demand",
+      "ui": "experiments/household-energy-demand/ui.ts",
+      "model": "experiments/household-energy-demand/model.ts",
+      "uiLines": 12,
+      "modelLines": 48,
+      "views": [
+        "line"
+      ],
+      "localColors": [],
+      "review": "keep",
+      "reason": "Short direct public observation/action bindings already satisfy flat default-first authoring.",
+      "risks": [
+        "History projection/order and units"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "841f3d482ce27f6c466e522f65a70d5b3e04eacba2cbc17861ff0d2371a477ac",
+      "modelSha256": "ec298847caf2ea769c82794f20a799347e1a786635911af7b73f3d7f9277d4b2",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "household-recycling-behavior",
+      "ui": "experiments/household-recycling-behavior/ui.ts",
+      "model": "experiments/household-recycling-behavior/model.ts",
+      "uiLines": 13,
+      "modelLines": 52,
+      "views": [
+        "network",
+        "inspector",
+        "line"
+      ],
+      "localColors": [],
+      "review": "keep",
+      "reason": "Short direct public observation/action bindings already satisfy flat default-first authoring.",
+      "risks": [
+        "Selection IDs and inspectable entities",
+        "History projection/order and units"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "be025c69ff62ac53e20ba356056699b3765fedc5961733d21cf8b1eda75721c4",
+      "modelSha256": "28c78ea7fa1a131850d02a1d770f93e7e578687d0f911398f38b8632180a257f",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "interstitial-diffusion",
+      "ui": "experiments/interstitial-diffusion/ui.ts",
+      "model": "experiments/interstitial-diffusion/model.ts",
+      "uiLines": 136,
+      "modelLines": 344,
+      "views": [
+        "line",
+        "spatial",
+        "inspector"
+      ],
+      "localColors": [
+        "#a39600",
+        "#d491ce",
+        "#909090",
+        "#000000",
+        "#eedb00",
+        "#355fa5"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Pointer drawing/action lifecycle",
+        "Selection IDs and inspectable entities",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "490dd2a0af67508ac8c49b3edd02119ac38629496d9ec608a2415b5d797d366a",
+      "modelSha256": "61dbd5228f21795006fd693ff05c2931f69db21f68542cc3da953de9e27bc408",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "invasive-plants",
+      "ui": "experiments/invasive-plants/ui.ts",
+      "model": "experiments/invasive-plants/model.ts",
+      "uiLines": 129,
+      "modelLines": 330,
+      "views": [
+        "spatial",
+        "inspector",
+        "line",
+        "bar"
+      ],
+      "localColors": [
+        "#999999",
+        "#44ee44"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Pointer drawing/action lifecycle",
+        "Selection IDs and inspectable entities",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "88a1efc7b4ee23c16e2e6d26cfcc838e639417bb8e7eb1f88d10a5c0c4e0295b",
+      "modelSha256": "c881ecd85fd6f1d2d50dc202db2f896526db7780332464dcef60b00628a7c3c2",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "ising",
+      "ui": "experiments/ising/ui.ts",
+      "model": "experiments/ising/model.ts",
+      "uiLines": 51,
+      "modelLines": 142,
+      "views": [
+        "grid",
+        "line"
+      ],
+      "localColors": [
+        "#5a8fd8",
+        "#15336b"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "2845994aac9cd3bd61b82874b6d98a938597f2c636d2756a127b8c5419beecfe",
+      "modelSha256": "b56f656260a2fdaa3b3e2e8e69499d0bc632a2cafa6061037df5997e58586972",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "k-means-clustering",
+      "ui": "experiments/k-means-clustering/ui.ts",
+      "model": "experiments/k-means-clustering/model.ts",
+      "uiLines": 82,
+      "modelLines": 291,
+      "views": [
+        "spatial",
+        "line"
+      ],
+      "localColors": [
+        "#888888"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "NetLogo palette mapping: preserve numeric compatibility",
+        "Pinned upstream portrayal/source semantics",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "2dc4bc579cd464d133d40a74b2919377cbd3828a9d08ee30aec6af637b956168",
+      "modelSha256": "a7742a4c78c1c6924b051075101c7d3499252922ac507b0894b4510ccfce5ed8",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "language-change",
+      "ui": "experiments/language-change/ui.ts",
+      "model": "experiments/language-change/model.ts",
+      "uiLines": 103,
+      "modelLines": 224,
+      "views": [
+        "network",
+        "inspector",
+        "line"
+      ],
+      "localColors": [
+        "#929292",
+        "#cc4444"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities",
+        "Explicit topology/diagram coordinates",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "19e2b1d85c6da97dca1ddf2dfc6481fdf19b6ee588bb9b2c8cdc7f641de28cd9",
+      "modelSha256": "3b0a314687cb25babae2d88f33ad80f8b2f37394a4d1820a8e3ca438cabb7c32",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "life",
+      "ui": "experiments/life/ui.ts",
+      "model": "experiments/life/model.ts",
+      "uiLines": 63,
+      "modelLines": 221,
+      "views": [
+        "grid"
+      ],
+      "localColors": [],
+      "review": "keep unless concrete extension improves binding",
+      "reason": "Current shape is explicit public authoring; preserve scientific/topology/pointer semantics instead of stylistic rewrite.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Pointer drawing/action lifecycle"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "216ec72d03a26441a26360574aacb47284dad2f013f7b0ab91c3e59000817ab8",
+      "modelSha256": "1ac597718fb5292267055695e0cd2fea0a093176e773a1e378a32cc1c227a254",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "limited-order-book",
+      "ui": "experiments/limited-order-book/ui.ts",
+      "model": "experiments/limited-order-book/model.ts",
+      "uiLines": 131,
+      "modelLines": 440,
+      "views": [
+        "spatial",
+        "line",
+        "table"
+      ],
+      "localColors": [
+        "#447abd",
+        "#cb7641"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "e9c8f52b277ebce3ab056b70dc089818835d5f267a240e7f3ad089d94e2ffc1b",
+      "modelSha256": "f9a4a6d103e194a90fab80bba92e59507913fd96829f344a14648552bcf7bdb8",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "mammoths",
+      "ui": "experiments/mammoths/ui.ts",
+      "model": "experiments/mammoths/model.ts",
+      "uiLines": 108,
+      "modelLines": 343,
+      "views": [
+        "spatial",
+        "line",
+        "inspector"
+      ],
+      "localColors": [
+        "#8c541f",
+        "#b8a600",
+        "#329b32",
+        "#245eaa",
+        "#a7d67c",
+        "#ffdf00"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "568ae1ac78e7f9252fb42a353d7e75aadd8a454880bc63dbb993ad516021d996",
+      "modelSha256": "40ef15f8b558355d31bbb40c463af4f217e160c57925ba573aab2dd1cf4ef6ae",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "mandelbrot",
+      "ui": "experiments/mandelbrot/ui.ts",
+      "model": "experiments/mandelbrot/model.ts",
+      "uiLines": 60,
+      "modelLines": 218,
+      "views": [
+        "spatial"
+      ],
+      "localColors": [],
+      "review": "keep unless concrete extension improves binding",
+      "reason": "Current shape is explicit public authoring; preserve scientific/topology/pointer semantics instead of stylistic rewrite.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "c29f9839081b2c65803d06e4430b7acaa3c6598c2e7687d08c15ca62f3b2e266",
+      "modelSha256": "eb1350d424c45b893fd71c3a394e01a797327684fcacf5b73d509a0129043141",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "membrane-formation",
+      "ui": "experiments/membrane-formation/ui.ts",
+      "model": "experiments/membrane-formation/model.ts",
+      "uiLines": 72,
+      "modelLines": 221,
+      "views": [
+        "spatial",
+        "line"
+      ],
+      "localColors": [
+        "#888888"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "79b26c565576b46857db7ddb9f7e12b2649de3daded9915f499123d1c5d5e6ee",
+      "modelSha256": "99222762fd2e66c70c635ff7d481794c0cc95ae3972cee17a7a00a0a615c9905",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "mendelian-inheritance",
+      "ui": "experiments/mendelian-inheritance/ui.ts",
+      "model": "experiments/mendelian-inheritance/model.ts",
+      "uiLines": 69,
+      "modelLines": 194,
+      "views": [
+        "spatial",
+        "inspector"
+      ],
+      "localColors": [
+        "#777777",
+        "#ffffff"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "528e93194d699a5dc1c7bafdd52cb770250112cc7dfbfae96094351ec3705fd7",
+      "modelSha256": "733e128ae89564fa810944cdcf6f723dbf40128c6395ac582d5146732d705f39",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "mimicry",
+      "ui": "experiments/mimicry/ui.ts",
+      "model": "experiments/mimicry/model.ts",
+      "uiLines": 84,
+      "modelLines": 238,
+      "views": [
+        "spatial",
+        "line",
+        "inspector"
+      ],
+      "localColors": [
+        "#666666",
+        "#d73027",
+        "#4575b4"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "NetLogo palette mapping: preserve numeric compatibility",
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "26270912a90de86a734122baa5dd7e46c7f30d8bcba363cb8926c1dd7054496b",
+      "modelSha256": "9df1c4aab4092947be9b85fd401cde1b57a4551c86f4d8250f0b8df52f9091b2",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "minority-game",
+      "ui": "experiments/minority-game/ui.ts",
+      "model": "experiments/minority-game/model.ts",
+      "uiLines": 175,
+      "modelLines": 217,
+      "views": [
+        "spatial",
+        "line",
+        "bar",
+        "inspector"
+      ],
+      "localColors": [
+        "#399557",
+        "#e13b3b",
+        "#3675db",
+        "#d83838"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "2663c26f9d0ca2fd18581750fb88f6697721174d6db4f1a9983842cc9db3117f",
+      "modelSha256": "b54c061d56996991b9fc2a12edcfcdc8225b158c8c9336e514cdf0f6656cbc85",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "muscle-development",
+      "ui": "experiments/muscle-development/ui.ts",
+      "model": "experiments/muscle-development/model.ts",
+      "uiLines": 93,
+      "modelLines": 218,
+      "views": [
+        "spatial",
+        "line"
+      ],
+      "localColors": [
+        "#b22b2b",
+        "#348b34",
+        "#d4ba25"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "bb134a5dd7b6b13b536a792c722369011c26ee8d5dee2659d45376db3761d4dd",
+      "modelSha256": "3d265fccb243ad5ad0dad20eee1be7fd2b36fff553894f9291e9db1dbdc50eca",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "neighborhood-heat-intervention",
+      "ui": "experiments/neighborhood-heat-intervention/ui.ts",
+      "model": "experiments/neighborhood-heat-intervention/model.ts",
+      "uiLines": 9,
+      "modelLines": 47,
+      "views": [
+        "table",
+        "line"
+      ],
+      "localColors": [],
+      "review": "keep",
+      "reason": "Short direct public observation/action bindings already satisfy flat default-first authoring.",
+      "risks": [
+        "History projection/order and units"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "89bfa2fd17133e72b7581cc1ed63ebcddefd054acdc41ea41197dfe1ff7afd85",
+      "modelSha256": "2f23b9d4b1973478dff01a319bb8987babfcda1365cccad6747e1422bbc6f72f",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "pagerank",
+      "ui": "experiments/pagerank/ui.ts",
+      "model": "experiments/pagerank/model.ts",
+      "uiLines": 87,
+      "modelLines": 362,
+      "views": [
+        "network",
+        "bar",
+        "table"
+      ],
+      "localColors": [],
+      "review": "keep unless concrete extension improves binding",
+      "reason": "Current shape is explicit public authoring; preserve scientific/topology/pointer semantics instead of stylistic rewrite.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Explicit topology/diagram coordinates",
+        "History projection/order and units"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "f0b709aa4467aa1f489a82125c6c6ccd2a4c661974425d2e369d5244e11f8937",
+      "modelSha256": "8eadba0b9a045f6bf2cf8665c3d57d4b97c22fccc548d1fa24b3753a775b5a40",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "particle-swarm-optimization",
+      "ui": "experiments/particle-swarm-optimization/ui.ts",
+      "model": "experiments/particle-swarm-optimization/model.ts",
+      "uiLines": 105,
+      "modelLines": 352,
+      "views": [
+        "spatial",
+        "line"
+      ],
+      "localColors": [
+        "#dfae55",
+        "#db633c",
+        "#30b7dd"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "NetLogo palette mapping: preserve numeric compatibility",
+        "Pinned upstream portrayal/source semantics",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "245d76a0c314d387e80b8d2140257d4975a9f757a6f897cc831eb9b04507d2cd",
+      "modelSha256": "22866e68a0781d8e5e5c7afc67632099b0059a5e401f62110c3becc4f04e1aef",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "partition-permutation-distribution",
+      "ui": "experiments/partition-permutation-distribution/ui.ts",
+      "model": "experiments/partition-permutation-distribution/model.ts",
+      "uiLines": 51,
+      "modelLines": 129,
+      "views": [
+        "bar"
+      ],
+      "localColors": [],
+      "review": "keep unless concrete extension improves binding",
+      "reason": "Current shape is explicit public authoring; preserve scientific/topology/pointer semantics instead of stylistic rewrite.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "08e0c613a93c8365a52d27230534e95bc80b4115b5e753f967f67591121a17ae",
+      "modelSha256": "fc0cacd685c7e18008aa2abad8268ce4df93406e61f7fbd79ddcc13172425e4f",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "party",
+      "ui": "experiments/party/ui.ts",
+      "model": "experiments/party/model.ts",
+      "uiLines": 101,
+      "modelLines": 261,
+      "views": [
+        "spatial",
+        "inspector",
+        "line"
+      ],
+      "localColors": [
+        "#40914b",
+        "#cc5555",
+        "#dc70b5",
+        "#4281cd",
+        "#888888",
+        "#b8b8b8"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "598dbb427d4b2279280be91e503b40feab61a09e46af1cdbcae95eff9be9d6b5",
+      "modelSha256": "d5c634412043c4138b01abf76ff6d199ba9983edd34ddd5c93cfeba3c2d3860f",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "paths",
+      "ui": "experiments/paths/ui.ts",
+      "model": "experiments/paths/model.ts",
+      "uiLines": 80,
+      "modelLines": 202,
+      "views": [
+        "spatial",
+        "inspector"
+      ],
+      "localColors": [],
+      "review": "keep unless concrete extension improves binding",
+      "reason": "Current shape is explicit public authoring; preserve scientific/topology/pointer semantics instead of stylistic rewrite.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Pointer drawing/action lifecycle",
+        "Selection IDs and inspectable entities"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "5be00b1cf0094910aeee4cd93ff15675599a3219e59f492315b36d894e8b145f",
+      "modelSha256": "de34710a6ab9edc798273b919ad9afaa9a3643539134c9f5e5c02bcb09421a09",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "pedestrian-crossing-phases",
+      "ui": "experiments/pedestrian-crossing-phases/ui.ts",
+      "model": "experiments/pedestrian-crossing-phases/model.ts",
+      "uiLines": 9,
+      "modelLines": 57,
+      "views": [
+        "table",
+        "line"
+      ],
+      "localColors": [],
+      "review": "keep",
+      "reason": "Short direct public observation/action bindings already satisfy flat default-first authoring.",
+      "risks": [
+        "History projection/order and units"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "7bb45a91bbb0bcfb3b36f1e77dadb4081fe446efa1150072d4c8d8d8d3531128",
+      "modelSha256": "a6231ac62d5b1a785a1ae2860f16bb4eb6369ce52cbe84e7bcaa2a4cdf95429f",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "peppered-moths",
+      "ui": "experiments/peppered-moths/ui.ts",
+      "model": "experiments/peppered-moths/model.ts",
+      "uiLines": 84,
+      "modelLines": 217,
+      "views": [
+        "spatial",
+        "line",
+        "inspector"
+      ],
+      "localColors": [
+        "#888888",
+        "#4575b4",
+        "#d73027",
+        "#7b6db0"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "NetLogo palette mapping: preserve numeric compatibility",
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "052081618873bbcc4b63bb5c267067c0ae2459971777f31910791c7748e812ed",
+      "modelSha256": "b31db091e08a6969b3c167602e98794474ea981c11e5b4040e59248a9ea64478",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "percolation",
+      "ui": "experiments/percolation/ui.ts",
+      "model": "experiments/percolation/model.ts",
+      "uiLines": 68,
+      "modelLines": 193,
+      "views": [
+        "grid",
+        "line"
+      ],
+      "localColors": [
+        "#9b6530",
+        "#727272",
+        "#ff2424",
+        "#000000"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "90c47919f3100021e8bb6e393d735cf190a8e24b0bf87ba54a352d89614677fc",
+      "modelSha256": "8962d06dd2a17f841124c75596313399bc523035838656de0778d11eed91cab6",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "piaget-vygotsky-game",
+      "ui": "experiments/piaget-vygotsky-game/ui.ts",
+      "model": "experiments/piaget-vygotsky-game/model.ts",
+      "uiLines": 118,
+      "modelLines": 324,
+      "views": [
+        "spatial",
+        "line",
+        "bar",
+        "inspector"
+      ],
+      "localColors": [
+        "#399557",
+        "#3675db",
+        "#d83838",
+        "#858585"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "NetLogo palette mapping: preserve numeric compatibility",
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "838db138b3f11e4cd29cf8887ff1c2e51808da049c13b7a81957fdf28888a219",
+      "modelSha256": "fab2daeebc74c636134f02b4e855cfe598afdb8bd60eb12797f516918cc8ae0c",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "preferential-attachment",
+      "ui": "experiments/preferential-attachment/ui.ts",
+      "model": "experiments/preferential-attachment/model.ts",
+      "uiLines": 53,
+      "modelLines": 102,
+      "views": [
+        "inspector",
+        "network",
+        "bar",
+        "scatter"
+      ],
+      "localColors": [
+        "#e34a33"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "1133c968d5bfb0668f847fc891e4afd43973ebcd50b9079fc6c1b9a69a39748b",
+      "modelSha256": "cfdc732e9086b2629f4d47676bb5fa4864abf60a7428d6d299d001db6ec0303d",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "prisoners-dilemma-basic",
+      "ui": "experiments/prisoners-dilemma-basic/ui.ts",
+      "model": "experiments/prisoners-dilemma-basic/model.ts",
+      "uiLines": 73,
+      "modelLines": 118,
+      "views": [
+        "table"
+      ],
+      "localColors": [],
+      "review": "keep unless concrete extension improves binding",
+      "reason": "Current shape is explicit public authoring; preserve scientific/topology/pointer semantics instead of stylistic rewrite.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "653ca72bfb1acd5cdefd1aeb68806ece613fb310ef6cf86d5dd8c5738ec42f47",
+      "modelSha256": "3e4aeb4ffece8637a89effa792ff6a47b564628cde70d4606c049f9fcb169a1e",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "prisoners-dilemma-two-person-iterated",
+      "ui": "experiments/prisoners-dilemma-two-person-iterated/ui.ts",
+      "model": "experiments/prisoners-dilemma-two-person-iterated/model.ts",
+      "uiLines": 77,
+      "modelLines": 212,
+      "views": [
+        "table",
+        "line"
+      ],
+      "localColors": [
+        "#315bd5"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "fc53f0a215541bb3948bb2fd5d4f4f953764911db7687585d158e744fa4ddd3c",
+      "modelSha256": "5d644d96281d90ef723816387dc070076f3a724a19a14270aea40136ce562f02",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "rabbits-grass-weeds",
+      "ui": "experiments/rabbits-grass-weeds/ui.ts",
+      "model": "experiments/rabbits-grass-weeds/model.ts",
+      "uiLines": 85,
+      "modelLines": 231,
+      "views": [
+        "spatial",
+        "line"
+      ],
+      "localColors": [
+        "#389b39",
+        "#b539ba",
+        "#000000",
+        "#ffffff",
+        "#d73027"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "7b2d06b49325179a9fcec1663a39b25022ea8b954dffdf888aa0b2cf9690fd82",
+      "modelSha256": "56e4e9a4294dd8f09adb43981d1fb26240d865135b74bfbaadd4c2c72a093b7e",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "random-combinations-and-permutations",
+      "ui": "experiments/random-combinations-and-permutations/ui.ts",
+      "model": "experiments/random-combinations-and-permutations/model.ts",
+      "uiLines": 137,
+      "modelLines": 276,
+      "views": [
+        "spatial",
+        "bar",
+        "line"
+      ],
+      "localColors": [
+        "#16a34a",
+        "#2563eb",
+        "#c026d3",
+        "#06b6d4",
+        "#ec4899",
+        "#eab308",
+        "#525252",
+        "#4b5563",
+        "#d1fae5",
+        "#111827"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Pointer drawing/action lifecycle",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "b28e6c2e64cbfc8b3fb28384925391d79bb0b29f1f3d7fba770d8cda10bc52ac",
+      "modelSha256": "362dc26e059c157369ee32667d1e5c855eea7062f6445ee2948ab24e19756ecd",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "rebellion",
+      "ui": "experiments/rebellion/ui.ts",
+      "model": "experiments/rebellion/model.ts",
+      "uiLines": 134,
+      "modelLines": 242,
+      "views": [
+        "spatial",
+        "inspector",
+        "line"
+      ],
+      "localColors": [
+        "#27a9c2",
+        "#d94141",
+        "#696969",
+        "#40914b",
+        "#797979"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "41d704e0a92c0e69402d109c9af19612b0dd21e9e088bb656d7144055099e0a2",
+      "modelSha256": "c73622b6caa2aeb4068558fb292a18602b8aaf801f09ef3e18f6e6013515d803",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "repressilator-1d",
+      "ui": "experiments/repressilator-1d/ui.ts",
+      "model": "experiments/repressilator-1d/model.ts",
+      "uiLines": 149,
+      "modelLines": 494,
+      "views": [
+        "spatial",
+        "bar",
+        "line"
+      ],
+      "localColors": [
+        "#d86715",
+        "#9772b8",
+        "#26a779",
+        "#888888"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "245f00b7db9d9479e479ebb3ca2505cfcc143b77da9242d2218a2248224e8223",
+      "modelSha256": "1abc7550e2d7119b02b9b82c4b892609041bd2c4d60eafddb66be7f1ba8f8f0a",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "residential-occupancy",
+      "ui": "experiments/residential-occupancy/ui.ts",
+      "model": "experiments/residential-occupancy/model.ts",
+      "uiLines": 11,
+      "modelLines": 63,
+      "views": [
+        "table",
+        "line"
+      ],
+      "localColors": [],
+      "review": "keep",
+      "reason": "Short direct public observation/action bindings already satisfy flat default-first authoring.",
+      "risks": [
+        "History projection/order and units"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "9271b40683c008ecf8c66784ff8acab52d02109b3ad9a4fe6ca7981c52505a01",
+      "modelSha256": "74ad10d712c3a1f88348376c63e86e811cd2b7c576b8a45d2708997c9915e0bf",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "robby-the-robot",
+      "ui": "experiments/robby-the-robot/ui.ts",
+      "model": "experiments/robby-the-robot/model.ts",
+      "uiLines": 141,
+      "modelLines": 482,
+      "views": [
+        "spatial",
+        "scatter",
+        "line",
+        "table"
+      ],
+      "localColors": [
+        "#ffffff",
+        "#f0ae37",
+        "#b9b9b9",
+        "#2467bb"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "NetLogo palette mapping: preserve numeric compatibility",
+        "Pinned upstream portrayal/source semantics",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "7f79bd193a399a43f3f4c10fe9b7db9334c05acaf5b30457945c3cce18c70799",
+      "modelSha256": "9c3d4391ae886a2136491f945c14e3959d894445a63ad45b6f10be1b9110de0a",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "robotic-factory",
+      "ui": "experiments/robotic-factory/ui.ts",
+      "model": "experiments/robotic-factory/model.ts",
+      "uiLines": 178,
+      "modelLines": 618,
+      "views": [
+        "spatial",
+        "line",
+        "bar",
+        "table"
+      ],
+      "localColors": [
+        "#2466b9",
+        "#c33c34",
+        "#338640",
+        "#a342a3",
+        "#c9a52c",
+        "#333333",
+        "#777777",
+        "#d19845",
+        "#5b7e9e"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "eba1d1fcd070d62ade97c6d3086ea6665b5c315ae13823617d3f5e176a0f1276",
+      "modelSha256": "aa2d635cdde9561e71e35a44f46eee586aeabd2179a27d05ebfbf240c515272f",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "rumor-mill",
+      "ui": "experiments/rumor-mill/ui.ts",
+      "model": "experiments/rumor-mill/model.ts",
+      "uiLines": 134,
+      "modelLines": 189,
+      "views": [
+        "grid",
+        "line",
+        "inspector"
+      ],
+      "localColors": [
+        "#d83838",
+        "#dd3434",
+        "#355bd5",
+        "#000000"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Pointer drawing/action lifecycle",
+        "Selection IDs and inspectable entities",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "43a0d10b5e2e2259a804fb632e46c996da4a3d510b51da3135959c959d51d73c",
+      "modelSha256": "d8866547554323350ae60f31b82cdc31d972241096206fa4196dcefa849193ca",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "sand",
+      "ui": "experiments/sand/ui.ts",
+      "model": "experiments/sand/model.ts",
+      "uiLines": 56,
+      "modelLines": 165,
+      "views": [
+        "grid"
+      ],
+      "localColors": [
+        "#000000",
+        "#8b8b8b",
+        "#2d53cf",
+        "#a56a2a"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "13b9d1d9bfef3e09a67d77e5c0d0e8adeae6cf7ca161b701e100ee91759535dc",
+      "modelSha256": "1537443d038a7f15ecd366d0fde68db97555a2ba25978ec4d00e3544ec062a91",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "sandpile",
+      "ui": "experiments/sandpile/ui.ts",
+      "model": "experiments/sandpile/model.ts",
+      "uiLines": 101,
+      "modelLines": 246,
+      "views": [
+        "grid",
+        "line",
+        "scatter"
+      ],
+      "localColors": [
+        "#43d36b",
+        "#ef4040",
+        "#000000",
+        "#032b63",
+        "#105ab4",
+        "#5388d3",
+        "#ffffff"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Pointer drawing/action lifecycle",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "b13aff78d8b3948c9db031e708e74ce65af075dc8139785f74a83599708d4a10",
+      "modelSha256": "6bb6e4765e5c89936b8a5183b7fae790646cb9439e83c1b014c44ed7fcefce99",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "segregation",
+      "ui": "experiments/segregation/ui.ts",
+      "model": "experiments/segregation/model.ts",
+      "uiLines": 96,
+      "modelLines": 223,
+      "views": [
+        "inspector",
+        "grid",
+        "line"
+      ],
+      "localColors": [
+        "#355fa5",
+        "#d97719"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "52eb51b7178790234883de771237061bb872b4ee1ac2be7b87b3533928ca29f9",
+      "modelSha256": "008224a297f9a112fe860c0ee323b3bc803e7c7307d2b6ef417231b83b150589",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "sex-ratio-equilibrium",
+      "ui": "experiments/sex-ratio-equilibrium/ui.ts",
+      "model": "experiments/sex-ratio-equilibrium/model.ts",
+      "uiLines": 155,
+      "modelLines": 372,
+      "views": [
+        "spatial",
+        "line",
+        "inspector"
+      ],
+      "localColors": [
+        "#3bb34b",
+        "#f6a130",
+        "#428bd0",
+        "#5555a0"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "b02e1fa2130af43326529d70fca66802a9c910cbfacc1183817ab5ded452a965",
+      "modelSha256": "a2f4f2e256616eb360a22cbaee25b5de1b2e593a9d17856efb8f15c4ba2c98f6",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "shepherds",
+      "ui": "experiments/shepherds/ui.ts",
+      "model": "experiments/shepherds/model.ts",
+      "uiLines": 78,
+      "modelLines": 277,
+      "views": [
+        "spatial",
+        "line"
+      ],
+      "localColors": [
+        "#2878cb",
+        "#ffffff",
+        "#aa7038"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "NetLogo palette mapping: preserve numeric compatibility",
+        "Pinned upstream portrayal/source semantics",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "2e8db76f895281f100dd32dc5a246d1d76922737daebad2035297d37b9b9065e",
+      "modelSha256": "41a09e7a743a943b69e1a41f1ad67590769a36ccec32645c58b4281c2f48b638",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "signaling-game",
+      "ui": "experiments/signaling-game/ui.ts",
+      "model": "experiments/signaling-game/model.ts",
+      "uiLines": 158,
+      "modelLines": 181,
+      "views": [
+        "network",
+        "line",
+        "table"
+      ],
+      "localColors": [
+        "#56b9e9",
+        "#267194",
+        "#e658c8",
+        "#8e3a7f",
+        "#c29d2e",
+        "#409b55",
+        "#d83838"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Explicit topology/diagram coordinates",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "b59209af43b28eaca5192cc922bb50f1b6bcc1f3900a6e2331b152da7cc7094a",
+      "modelSha256": "21c8da2e83a8a9e168f5c40aa7269061b0a84f18186122a843598fe402e4608b",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "simple-birth-rates",
+      "ui": "experiments/simple-birth-rates/ui.ts",
+      "model": "experiments/simple-birth-rates/model.ts",
+      "uiLines": 85,
+      "modelLines": 209,
+      "views": [
+        "spatial",
+        "line",
+        "table"
+      ],
+      "localColors": [
+        "#d73027",
+        "#2878cb",
+        "#259b45"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "06015e35e43a93290b0ce3e87fb65bd57914b84ba5742620fb3f313c314246bd",
+      "modelSha256": "6715e585c7cde2f06a0ce51efe0876f4f165ec7dd6c49291f039b36a130af90a",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "simple-genetic-algorithm",
+      "ui": "experiments/simple-genetic-algorithm/ui.ts",
+      "model": "experiments/simple-genetic-algorithm/model.ts",
+      "uiLines": 98,
+      "modelLines": 221,
+      "views": [
+        "grid",
+        "line"
+      ],
+      "localColors": [
+        "#eeeeee",
+        "#171717",
+        "#9b67c4",
+        "#d74343",
+        "#47a66a",
+        "#3975bc"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "473732e16f940b96511b2285458cf2c77d4b43846b022470950f58593b5bae6f",
+      "modelSha256": "27c2f85033a7d0fbd3eb5159f8bc5553c0eab9b87d02e744137f42fc9cc9799d",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "simulated-annealing",
+      "ui": "experiments/simulated-annealing/ui.ts",
+      "model": "experiments/simulated-annealing/model.ts",
+      "uiLines": 55,
+      "modelLines": 238,
+      "views": [
+        "grid",
+        "line"
+      ],
+      "localColors": [
+        "#ffffff",
+        "#000000"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "a4bf9315e6afcf5fef884925e98aa683bbdd28167e752e62d8367c805c23366c",
+      "modelSha256": "5801d99e73cbc5f7e6e3d30e5cf5ed88540e3219b07334897bdb5207939d6e86",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "slime",
+      "ui": "experiments/slime/ui.ts",
+      "model": "experiments/slime/model.ts",
+      "uiLines": 55,
+      "modelLines": 159,
+      "views": [
+        "spatial"
+      ],
+      "localColors": [],
+      "review": "keep unless concrete extension improves binding",
+      "reason": "Current shape is explicit public authoring; preserve scientific/topology/pointer semantics instead of stylistic rewrite.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "077f650d67f483b20ed10b6fd905821bae80dd29e3319d09fae4d88ba2193e77",
+      "modelSha256": "62be807136e7214d5875e7527c04b8ba9aa45147d6d18a94c3c86cde7ef8b9cc",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "smoothlife",
+      "ui": "experiments/smoothlife/ui.ts",
+      "model": "experiments/smoothlife/model.ts",
+      "uiLines": 76,
+      "modelLines": 291,
+      "views": [
+        "grid"
+      ],
+      "localColors": [],
+      "review": "keep unless concrete extension improves binding",
+      "reason": "Current shape is explicit public authoring; preserve scientific/topology/pointer semantics instead of stylistic rewrite.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Pointer drawing/action lifecycle"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "d64e7cc98cfc2beb8b18148d113659c8e39e1e47f9f8d6e992d954f0da6b0c69",
+      "modelSha256": "43ac0789741c3eae88f82202ee8c243419d04a162347688030fe7515dd6f7e44",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "solar-battery-microgrid",
+      "ui": "experiments/solar-battery-microgrid/ui.ts",
+      "model": "experiments/solar-battery-microgrid/model.ts",
+      "uiLines": 9,
+      "modelLines": 42,
+      "views": [
+        "line"
+      ],
+      "localColors": [],
+      "review": "keep",
+      "reason": "Short direct public observation/action bindings already satisfy flat default-first authoring.",
+      "risks": [
+        "History projection/order and units"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "f1da247b6606d954afd68b6533e6e6d56ea4204781a571d2b7a1e55078c3518a",
+      "modelSha256": "aa8e2c2007d7d15552e0a0990faaa78f0d7be04081a98d9871168b025ca88402",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "solid-diffusion",
+      "ui": "experiments/solid-diffusion/ui.ts",
+      "model": "experiments/solid-diffusion/model.ts",
+      "uiLines": 69,
+      "modelLines": 160,
+      "views": [
+        "spatial",
+        "line"
+      ],
+      "localColors": [
+        "#38a339",
+        "#315bd5"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "6c86124dfa2ff048b464be1154e642a9ccc2835a765c32f55018cf0d2a165436",
+      "modelSha256": "f6572a5cdb58a997940a2416630beef9dcc82cc8f1b184f4a4561ae3ab682abe",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "stochastic-patchwork",
+      "ui": "experiments/stochastic-patchwork/ui.ts",
+      "model": "experiments/stochastic-patchwork/model.ts",
+      "uiLines": 56,
+      "modelLines": 116,
+      "views": [
+        "grid",
+        "bar"
+      ],
+      "localColors": [
+        "#80552e",
+        "#d4bb77",
+        "#16833b",
+        "#245ba5"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "374c632c1df6607fc9239163c06da2ecaf28d5c06187689e8b742c5369fb6b51",
+      "modelSha256": "208bf24ef448f918d138029b7c60af3f6639f757f2fa12149bb0610430c39579",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "stormwater-retention",
+      "ui": "experiments/stormwater-retention/ui.ts",
+      "model": "experiments/stormwater-retention/model.ts",
+      "uiLines": 9,
+      "modelLines": 44,
+      "views": [
+        "line"
+      ],
+      "localColors": [],
+      "review": "keep",
+      "reason": "Short direct public observation/action bindings already satisfy flat default-first authoring.",
+      "risks": [
+        "History projection/order and units"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "08e6695bba3aac5d357f87407fc656515ccbc26b123f337eeb47768e55c53324",
+      "modelSha256": "24b58344ad926dbba526c12752ac4d8516721f99f50debc173002dfb4dc006f2",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "sunflower-emergent",
+      "ui": "experiments/sunflower-emergent/ui.ts",
+      "model": "experiments/sunflower-emergent/model.ts",
+      "uiLines": 58,
+      "modelLines": 156,
+      "views": [
+        "spatial"
+      ],
+      "localColors": [],
+      "review": "keep unless concrete extension improves binding",
+      "reason": "Current shape is explicit public authoring; preserve scientific/topology/pointer semantics instead of stylistic rewrite.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "baf5fc08eb0d1bf748b958b30950933f60d1a05373c6ccc9b837f87d9d3b5701",
+      "modelSha256": "279b97ae650ca259e763976e1daf4cd876134cc196e9f8df8bd0dde4ed030240",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "taxi-cabs",
+      "ui": "experiments/taxi-cabs/ui.ts",
+      "model": "experiments/taxi-cabs/model.ts",
+      "uiLines": 441,
+      "modelLines": 813,
+      "views": [
+        "spatial",
+        "line",
+        "bar",
+        "inspector"
+      ],
+      "localColors": [
+        "#eeeeee",
+        "#358a3c",
+        "#dd3434"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "63a4e0a29f89c6c8266eba0a649e22dc9d4fc8d557c55bf2f376d42e2585c701",
+      "modelSha256": "08cfcd3228a0137bb359f51adc8fbe92a364a71f7508d472832a65f535e852c2",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "termites",
+      "ui": "experiments/termites/ui.ts",
+      "model": "experiments/termites/model.ts",
+      "uiLines": 54,
+      "modelLines": 183,
+      "views": [
+        "spatial",
+        "inspector"
+      ],
+      "localColors": [
+        "#eeee2b",
+        "#000000",
+        "#ee8d24",
+        "#ffffff"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "bbb6e4317b98c66140b1b88b29e0be1584c887eec8cd946f1aa6b10bb6002bed",
+      "modelSha256": "56a292925a8cffda19bd5f6d5843122c2f38c04fb062a58a16ccde1183edae50",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "three-doors",
+      "ui": "experiments/three-doors/ui.ts",
+      "model": "experiments/three-doors/model.ts",
+      "uiLines": 55,
+      "modelLines": 132,
+      "views": [
+        "spatial",
+        "scatter"
+      ],
+      "localColors": [],
+      "review": "keep unless concrete extension improves binding",
+      "reason": "Current shape is explicit public authoring; preserve scientific/topology/pointer semantics instead of stylistic rewrite.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "194cbdb7bdcf72cbcf82d572926618c19c6be22670279c21f850734aed1d7b1b",
+      "modelSha256": "af9f635e21dce71478049a9cc584a83ff07232a233de1cdf1d2f94b81eba6bad",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "traffic-2-lanes",
+      "ui": "experiments/traffic-2-lanes/ui.ts",
+      "model": "experiments/traffic-2-lanes/model.ts",
+      "uiLines": 206,
+      "modelLines": 277,
+      "views": [
+        "spatial",
+        "line",
+        "inspector"
+      ],
+      "localColors": [
+        "#298d35",
+        "#3259cc",
+        "#39a4b1",
+        "#df3535"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Pointer drawing/action lifecycle",
+        "Selection IDs and inspectable entities",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "c7f87b92d5484ad7bf3b0d25b48a9f469e017571070cf258a1e243a76a502b9e",
+      "modelSha256": "0448a952a1bc20a925f0213d54c1ffba498128bd1d7431b3410b455a78ade895",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "traffic-basic",
+      "ui": "experiments/traffic-basic/ui.ts",
+      "model": "experiments/traffic-basic/model.ts",
+      "uiLines": 91,
+      "modelLines": 148,
+      "views": [
+        "spatial",
+        "line",
+        "inspector"
+      ],
+      "localColors": [
+        "#df3535",
+        "#375bd7",
+        "#239638"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "dd9de6d09f1a77dfd5766beac4612b5c89da93dd71f06014846deac802a340c0",
+      "modelSha256": "b55978d6069ce3ea8c77ba7abd4b61731ed61f114ebb335bbfd6747398e38a28",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "traffic-grid",
+      "ui": "experiments/traffic-grid/ui.ts",
+      "model": "experiments/traffic-grid/model.ts",
+      "uiLines": 115,
+      "modelLines": 390,
+      "views": [
+        "spatial",
+        "line",
+        "inspector"
+      ],
+      "localColors": [],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Pointer drawing/action lifecycle",
+        "Selection IDs and inspectable entities",
+        "History projection/order and units"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "375a92402c8be8d78213bf2991ee01cc7da07bc706588b37c608626d8c1b52ac",
+      "modelSha256": "b16f7b7b89f5ada395675c848ddba9fb42055ca6e51949e9d3da9be1458973ca",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "traffic-grid-goal",
+      "ui": "experiments/traffic-grid-goal/ui.ts",
+      "model": "experiments/traffic-grid-goal/model.ts",
+      "uiLines": 125,
+      "modelLines": 466,
+      "views": [
+        "spatial",
+        "line",
+        "inspector"
+      ],
+      "localColors": [],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Pointer drawing/action lifecycle",
+        "Selection IDs and inspectable entities",
+        "History projection/order and units"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "b589b4a1b672473691c1414648b8dfe2a13e29fa5ceb810ffe65d211da049b0a",
+      "modelSha256": "ec5373c2b9e38d506c1f622f6dd1e6004178cfa79fb1999fd8e2da288a71db3e",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "traffic-intersection",
+      "ui": "experiments/traffic-intersection/ui.ts",
+      "model": "experiments/traffic-intersection/model.ts",
+      "uiLines": 107,
+      "modelLines": 300,
+      "views": [
+        "spatial",
+        "line",
+        "inspector"
+      ],
+      "localColors": [
+        "#dc3434",
+        "#345bd6"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "3e4d7af814e9cbccb77ccb9e48bc73cdc490d2bfe2189b024cb5ce8e3b4018ab",
+      "modelSha256": "03b679235a9a532d9ed59aeaf00f5caa32f90fb0b9ace896d9f6a47ba87dbf10",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "tumor",
+      "ui": "experiments/tumor/ui.ts",
+      "model": "experiments/tumor/model.ts",
+      "uiLines": 67,
+      "modelLines": 212,
+      "views": [
+        "spatial",
+        "line"
+      ],
+      "localColors": [
+        "#888888"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "e96171cefe29c6f134fc7aebbfc6b01c2d9761b9836d491f191f760b13df8885",
+      "modelSha256": "b3f7dfadf32a95c99001a149ed6212a6bb5ac8204ced410099b3baa77100da45",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "turing-machine-2d",
+      "ui": "experiments/turing-machine-2d/ui.ts",
+      "model": "experiments/turing-machine-2d/model.ts",
+      "uiLines": 132,
+      "modelLines": 340,
+      "views": [
+        "spatial",
+        "inspector",
+        "table"
+      ],
+      "localColors": [],
+      "review": "keep unless concrete extension improves binding",
+      "reason": "Current shape is explicit public authoring; preserve scientific/topology/pointer semantics instead of stylistic rewrite.",
+      "risks": [
+        "NetLogo palette mapping: preserve numeric compatibility",
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "e6f5380809a268cc3c814dc756cc2ec896b646475cd90ba6c9ff7cd8cf64f689",
+      "modelSha256": "82a55902aef906028d68eba47b7ea8bbbd7172ef7a406d2a6ea9b174ce8ef788",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "urban-suite-awareness",
+      "ui": "experiments/urban-suite-awareness/ui.ts",
+      "model": "experiments/urban-suite-awareness/model.ts",
+      "uiLines": 157,
+      "modelLines": 213,
+      "views": [
+        "inspector",
+        "spatial",
+        "line"
+      ],
+      "localColors": [
+        "#355fa5",
+        "#2e7d32",
+        "#171717",
+        "#777777",
+        "#b4c68a",
+        "#61a76a",
+        "#26733b"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Pointer drawing/action lifecycle",
+        "Selection IDs and inspectable entities",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "437f60073026a16a51e626f5182eeea2b1bc1e57261d022dc6273921653795eb",
+      "modelSha256": "040c36ed042b3e7443654676e22a6cf1977e42f95f5dc17ddf386c0e0805095b",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "urban-suite-cells",
+      "ui": "experiments/urban-suite-cells/ui.ts",
+      "model": "experiments/urban-suite-cells/model.ts",
+      "uiLines": 73,
+      "modelLines": 153,
+      "views": [
+        "inspector",
+        "grid",
+        "line"
+      ],
+      "localColors": [],
+      "review": "keep unless concrete extension improves binding",
+      "reason": "Current shape is explicit public authoring; preserve scientific/topology/pointer semantics instead of stylistic rewrite.",
+      "risks": [
+        "NetLogo palette mapping: preserve numeric compatibility",
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "a4c46af84875f995f567ef58b1cd41b5d9d4b8bf0f9382478b1a3f7362b2917e",
+      "modelSha256": "6e44e66d6fa86b0e4cab03eadd23f0b59a9d82aa7956a96bbfeb82322bdcad24",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "urban-suite-economic-disparity",
+      "ui": "experiments/urban-suite-economic-disparity/ui.ts",
+      "model": "experiments/urban-suite-economic-disparity/model.ts",
+      "uiLines": 162,
+      "modelLines": 223,
+      "views": [
+        "inspector",
+        "spatial",
+        "line"
+      ],
+      "localColors": [
+        "#d73229",
+        "#ffffff",
+        "#000000"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "NetLogo palette mapping: preserve numeric compatibility",
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "0e9591ceb58e91cb784aa248a358f1d17bb1a8671bc83ba679bb76cba3248e18",
+      "modelSha256": "b68185ce8e34de9386595238a8b9edf1cdab55050976a0e22f66d0b8041ab1b3",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "urban-suite-path-dependence",
+      "ui": "experiments/urban-suite-path-dependence/ui.ts",
+      "model": "experiments/urban-suite-path-dependence/model.ts",
+      "uiLines": 113,
+      "modelLines": 182,
+      "views": [
+        "inspector",
+        "spatial",
+        "bar"
+      ],
+      "localColors": [
+        "#d73229"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "NetLogo palette mapping: preserve numeric compatibility",
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "96c41367798220db6188d5ef9c46f66f44ec6850cc2393833f43aef0e3465353",
+      "modelSha256": "b83685f91e68cfaadee7616b139e73e88fbcdc80e6a69995deceb13244a7a067",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "urban-suite-pollution",
+      "ui": "experiments/urban-suite-pollution/ui.ts",
+      "model": "experiments/urban-suite-pollution/model.ts",
+      "uiLines": 120,
+      "modelLines": 189,
+      "views": [
+        "inspector",
+        "spatial",
+        "line"
+      ],
+      "localColors": [
+        "#9b2226",
+        "#26733b",
+        "#171717",
+        "#777777"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "fcd66fbf6c4598be7601b3d96b9252a7ffa16b89d2a523794e4b2b16275fa9c0",
+      "modelSha256": "91749ab6f807534a72c1c788c4b687a077a05e9b7520acd4b53be41b0716fe5f",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "urban-suite-positive-feedback",
+      "ui": "experiments/urban-suite-positive-feedback/ui.ts",
+      "model": "experiments/urban-suite-positive-feedback/model.ts",
+      "uiLines": 63,
+      "modelLines": 92,
+      "views": [
+        "inspector",
+        "grid",
+        "line"
+      ],
+      "localColors": [],
+      "review": "keep unless concrete extension improves binding",
+      "reason": "Current shape is explicit public authoring; preserve scientific/topology/pointer semantics instead of stylistic rewrite.",
+      "risks": [
+        "NetLogo palette mapping: preserve numeric compatibility",
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "a695c154a43984425ecc7f4ee7724037e891b6be2ad4e15e33d6861c40b8a610",
+      "modelSha256": "5965b571b3d4ce1e8e15982212e05d2921642762d2c3516c7da60762b791f6e7",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "urban-suite-recycling",
+      "ui": "experiments/urban-suite-recycling/ui.ts",
+      "model": "experiments/urban-suite-recycling/model.ts",
+      "uiLines": 160,
+      "modelLines": 197,
+      "views": [
+        "inspector",
+        "spatial",
+        "line"
+      ],
+      "localColors": [
+        "#4f8736",
+        "#9ec850",
+        "#d6ae45",
+        "#234f9b",
+        "#a4212b"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "3ebd83d739fcf7d2d54a0abfff6ef57d085a848af7bd94916524fe291dcf7020",
+      "modelSha256": "62be19dcf9eabb873dd6667d05fdb190f584d21ec3bc0a8eda85857b09ffec87",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "urban-suite-sprawl-effect",
+      "ui": "experiments/urban-suite-sprawl-effect/ui.ts",
+      "model": "experiments/urban-suite-sprawl-effect/model.ts",
+      "uiLines": 110,
+      "modelLines": 153,
+      "views": [
+        "inspector",
+        "spatial",
+        "line"
+      ],
+      "localColors": [
+        "#ffffff",
+        "#d73229"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "NetLogo palette mapping: preserve numeric compatibility",
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "23c4339cc1dadad3713e0f9b6632ded199632556860632448b4cb250bd5aa193",
+      "modelSha256": "fc31783762a2d9b139967dba46f5260dfb4597955bf305ab46cff746c2d083f5",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "urban-suite-structure-from-randomness-1",
+      "ui": "experiments/urban-suite-structure-from-randomness-1/ui.ts",
+      "model": "experiments/urban-suite-structure-from-randomness-1/model.ts",
+      "uiLines": 61,
+      "modelLines": 104,
+      "views": [
+        "inspector",
+        "grid",
+        "line"
+      ],
+      "localColors": [],
+      "review": "keep unless concrete extension improves binding",
+      "reason": "Current shape is explicit public authoring; preserve scientific/topology/pointer semantics instead of stylistic rewrite.",
+      "risks": [
+        "NetLogo palette mapping: preserve numeric compatibility",
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "81f7946f967336c186c9646582fec82dd7f13cff0b268103485386f41f160303",
+      "modelSha256": "640a94ac6519d97a97d9146362cd7b86e19e53b541d47b0fdd394284c6582912",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "urban-suite-structure-from-randomness-2",
+      "ui": "experiments/urban-suite-structure-from-randomness-2/ui.ts",
+      "model": "experiments/urban-suite-structure-from-randomness-2/model.ts",
+      "uiLines": 94,
+      "modelLines": 114,
+      "views": [
+        "inspector",
+        "grid",
+        "line"
+      ],
+      "localColors": [],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "NetLogo palette mapping: preserve numeric compatibility",
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities",
+        "History projection/order and units"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "f386a8b9e07ad14ebb482caefaf7f47a4d294bff7a2983e88f19efd768898dab",
+      "modelSha256": "8c8c9abe7f4b190ac1ca38c2a03432a5b6c35f84d607a0e14276b5b2a53e4db9",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "urban-suite-tijuana-bordertowns",
+      "ui": "experiments/urban-suite-tijuana-bordertowns/ui.ts",
+      "model": "experiments/urban-suite-tijuana-bordertowns/model.ts",
+      "uiLines": 235,
+      "modelLines": 2000,
+      "views": [
+        "inspector",
+        "spatial"
+      ],
+      "localColors": [],
+      "review": "keep unless concrete extension improves binding",
+      "reason": "Current shape is explicit public authoring; preserve scientific/topology/pointer semantics instead of stylistic rewrite.",
+      "risks": [
+        "NetLogo palette mapping: preserve numeric compatibility",
+        "Pinned upstream portrayal/source semantics",
+        "Pointer drawing/action lifecycle",
+        "Selection IDs and inspectable entities",
+        "History projection/order and units"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "192790610d5ebeb4090016f23924a667603a7366c003f929caa54ce077a36cff",
+      "modelSha256": "e8d16b1534f7c45013b122e97a318d21d72705fd1db5f5fbdd2b049eaacf9ba8",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "urban-tree-watering",
+      "ui": "experiments/urban-tree-watering/ui.ts",
+      "model": "experiments/urban-tree-watering/model.ts",
+      "uiLines": 10,
+      "modelLines": 52,
+      "views": [
+        "table",
+        "line"
+      ],
+      "localColors": [],
+      "review": "keep",
+      "reason": "Short direct public observation/action bindings already satisfy flat default-first authoring.",
+      "risks": [
+        "History projection/order and units"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "37ec77ce01150ff71ab01844896b1bbaee181cef3a6d9e501e71ebe4e212b85b",
+      "modelSha256": "b21c2b1a27c6175dcdd8c35653b9f69ff2fd28380217af14f4366909474ddf35",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "vants",
+      "ui": "experiments/vants/ui.ts",
+      "model": "experiments/vants/model.ts",
+      "uiLines": 55,
+      "modelLines": 127,
+      "views": [
+        "spatial",
+        "inspector"
+      ],
+      "localColors": [
+        "#000000",
+        "#ffffff",
+        "#d73027"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "aef85ea088246c5525126e6ea93d138a5d4b4e0f31511b449ae5133da771cfbf",
+      "modelSha256": "e1fbd86ac2a3f2e16cab299864e368e88717d313c7d5ddd0c4a1587560a98a32",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "virus",
+      "ui": "experiments/virus/ui.ts",
+      "model": "experiments/virus/model.ts",
+      "uiLines": 106,
+      "modelLines": 262,
+      "views": [
+        "spatial",
+        "line"
+      ],
+      "localColors": [
+        "#408dde",
+        "#df4545",
+        "#888888"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "3bd518c42fae8b1f44222635bb9fea7c97e0cf9c2477a825529cba81c81953b3",
+      "modelSha256": "9412d360d9101d1b599f3a1773c45b7f0b4efb001ea8b789232e4838fc6c2c4a",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "virus-on-a-network",
+      "ui": "experiments/virus-on-a-network/ui.ts",
+      "model": "experiments/virus-on-a-network/model.ts",
+      "uiLines": 102,
+      "modelLines": 193,
+      "views": [
+        "inspector",
+        "network",
+        "line"
+      ],
+      "localColors": [
+        "#c84332",
+        "#888888",
+        "#355fa5"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "eeff13ea006c38a6123dbb02ea5d8b24dd85164ea4042bf81d4717d4c641b605",
+      "modelSha256": "21f37fbe630b6d1feafb25acbab49c1ed3f3034068c27019753127da3c67ac8c",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "vision-evolution",
+      "ui": "experiments/vision-evolution/ui.ts",
+      "model": "experiments/vision-evolution/model.ts",
+      "uiLines": 148,
+      "modelLines": 392,
+      "views": [
+        "spatial",
+        "line",
+        "bar",
+        "inspector"
+      ],
+      "localColors": [
+        "#264e91",
+        "#8b603f",
+        "#9b9b9b32",
+        "#000000",
+        "#ce4747",
+        "#888888",
+        "#428bd0"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "cfeeaf1f2d082e19d2587bf2d4fb12c700bec738a0f7431e10e8558357a1e557",
+      "modelSha256": "788e3ee1402eae4dba206f0516e244d75eb533bdf95bc0d8953d505b15288c76",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "voting",
+      "ui": "experiments/voting/ui.ts",
+      "model": "experiments/voting/model.ts",
+      "uiLines": 47,
+      "modelLines": 147,
+      "views": [
+        "inspector",
+        "grid"
+      ],
+      "localColors": [
+        "#355fa5",
+        "#60b632"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "971c074cad4a2090c6cecc2cf9bb028bbabeba0be60e501a4fded1758e0c7dc8",
+      "modelSha256": "29155ca966960eccc231fdd57f52089cbe627e6629283344c3b6f3a781e05937",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "wealth-distribution",
+      "ui": "experiments/wealth-distribution/ui.ts",
+      "model": "experiments/wealth-distribution/model.ts",
+      "uiLines": 157,
+      "modelLines": 308,
+      "views": [
+        "inspector",
+        "spatial",
+        "bar",
+        "line"
+      ],
+      "localColors": [
+        "#d94838",
+        "#60ad2c",
+        "#355fa5"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "c62f9408d8b986507f467f33367bc3ce3f33a6868f6e97f0818d1ebbf657b204",
+      "modelSha256": "68dd406523911c716f725cd6c991df2a93517ec1db98b2f5eb38928285291844",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "wolf-sheep-predation",
+      "ui": "experiments/wolf-sheep-predation/ui.ts",
+      "model": "experiments/wolf-sheep-predation/model.ts",
+      "uiLines": 131,
+      "modelLines": 280,
+      "views": [
+        "inspector",
+        "spatial",
+        "line"
+      ],
+      "localColors": [
+        "#60ad2c",
+        "#a07850",
+        "#fff",
+        "#171717",
+        "#e58032"
+      ],
+      "review": "targeted migration candidate",
+      "reason": "Review reusable presentation encodings/history projection/layout defaults while preserving source meanings and domain snapshots.",
+      "risks": [
+        "Pinned upstream portrayal/source semantics",
+        "Selection IDs and inspectable entities",
+        "History projection/order and units",
+        "Local scientific colors: meaning needs named stable mapping, not ordinal replacement"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "991a78e29ad6d9aee2f75ac13623fa30d2937080e12afddaffdc2b72e12dfa53",
+      "modelSha256": "b494a86c55161fb67b8419783db52144cc694f852c97822122c7f8b6cd236263",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "workplace-household-membership",
+      "ui": "experiments/workplace-household-membership/ui.ts",
+      "model": "experiments/workplace-household-membership/model.ts",
+      "uiLines": 9,
+      "modelLines": 65,
+      "views": [
+        "network",
+        "table"
+      ],
+      "localColors": [],
+      "review": "keep",
+      "reason": "Short direct public observation/action bindings already satisfy flat default-first authoring.",
+      "risks": [
+        "Already direct public bindings; preserve concise declaration"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "9a1d4f7f714a03e0e58aaded3c8074ba594d94331b5f09914b5eddd1b9f976e4",
+      "modelSha256": "6f09e8adeb682dd2745e6316b5cbf090e2abf02533fd04e6cac150a379f86c97",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    },
+    {
+      "slug": "zoning-scenario-comparison",
+      "ui": "experiments/zoning-scenario-comparison/ui.ts",
+      "model": "experiments/zoning-scenario-comparison/model.ts",
+      "uiLines": 13,
+      "modelLines": 63,
+      "views": [
+        "table",
+        "bar"
+      ],
+      "localColors": [],
+      "review": "keep",
+      "reason": "Short direct public observation/action bindings already satisfy flat default-first authoring.",
+      "risks": [
+        "Already direct public bindings; preserve concise declaration"
+      ],
+      "modelExists": true,
+      "modelImportsUI": false,
+      "uiSha256": "b0a647522aa9a4860ce49ae21fdecc9b64a4f08f57e019a56fc14d1ec3f60adb",
+      "modelSha256": "50f0965b926e9c6d67eba09ba3d9ae3cc046c601f773fb4ac3abb609ac68061e",
+      "status": "source inventory; migration decision pending coordinator synthesis",
+      "readBoundary": "Corresponding model source checked for public inputs/create/read/advance and presentation/scientific compatibility signals; no behavior change or runtime acceptance inferred."
+    }
+  ]
+}
