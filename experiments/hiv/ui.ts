@@ -6,23 +6,12 @@ const numbers = new Intl.NumberFormat("en", { maximumFractionDigits: 3 });
 
 const binding = defineUI(model, {
   setup: ["seed", "initialPeople"],
+  change: (instance, changes) => instance.setParameters(changes),
   live: {
-    averageCommitment: {
-      set: (instance, value) =>
-        instance.setParameters({ averageCommitment: value }),
-    },
-    averageCouplingTendency: {
-      set: (instance, value) =>
-        instance.setParameters({ averageCouplingTendency: value }),
-    },
-    averageCondomUse: {
-      set: (instance, value) =>
-        instance.setParameters({ averageCondomUse: value }),
-    },
-    averageTestFrequency: {
-      set: (instance, value) =>
-        instance.setParameters({ averageTestFrequency: value }),
-    },
+    averageCommitment: {},
+    averageCouplingTendency: {},
+    averageCondomUse: {},
+    averageTestFrequency: {},
   },
   actions: [],
   complete: (state) => state.stopped,

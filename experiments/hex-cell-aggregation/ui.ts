@@ -11,30 +11,25 @@ export const ui = defineUI(model, {
   actions: [
     { label: "Read switches", run: (instance) => instance.readSwitches() },
   ],
+  change: (instance, changes) => instance.setSwitches(changes),
   live: {
     oneNeighbor: {
       label: "1 live neighbors",
-      set: (instance, value) => instance.setSwitches({ oneNeighbor: value }),
     },
     twoNeighbors: {
       label: "2 live neighbors",
-      set: (instance, value) => instance.setSwitches({ twoNeighbors: value }),
     },
     threeNeighbors: {
       label: "3 live neighbors",
-      set: (instance, value) => instance.setSwitches({ threeNeighbors: value }),
     },
     fourNeighbors: {
       label: "4 live neighbors",
-      set: (instance, value) => instance.setSwitches({ fourNeighbors: value }),
     },
     fiveNeighbors: {
       label: "5 live neighbors",
-      set: (instance, value) => instance.setSwitches({ fiveNeighbors: value }),
     },
     sixNeighbors: {
       label: "6 live neighbors",
-      set: (instance, value) => instance.setSwitches({ sixNeighbors: value }),
     },
   },
   monitors: [

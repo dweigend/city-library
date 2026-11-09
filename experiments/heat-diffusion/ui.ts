@@ -12,25 +12,14 @@ export const ui = defineUI(model, {
     url: "https://ccl.northwestern.edu/netlogo/models/HeatDiffusion",
     label: "Original NetLogo model · Uri Wilensky · CC BY-NC-SA 3.0",
   },
+  change: (instance, changes) => instance.setRules(changes),
   live: {
-    leftTemp: {
-      set: (m, v) => m.setRules({ leftTemp: v }),
-    },
-    rightTemp: {
-      set: (m, v) => m.setRules({ rightTemp: v }),
-    },
-    topTemp: {
-      set: (m, v) => m.setRules({ topTemp: v }),
-    },
-    bottomTemp: {
-      set: (m, v) => m.setRules({ bottomTemp: v }),
-    },
-    alpha: {
-      set: (m, v) => m.setRules({ alpha: v }),
-    },
-    materialType: {
-      set: (m, v) => m.setRules({ materialType: v }),
-    },
+    leftTemp: {},
+    rightTemp: {},
+    topTemp: {},
+    bottomTemp: {},
+    alpha: {},
+    materialType: {},
   },
   actions: [{ label: "Update alpha", run: (m) => m.updateAlpha() }],
   monitors: [

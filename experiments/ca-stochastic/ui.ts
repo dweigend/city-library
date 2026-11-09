@@ -11,49 +11,22 @@ export const ui = defineUI(model, {
     { label: "Setup example", run: (m) => m.setupExample() },
     { label: "Continue", run: (m) => m.continueRun(), enabled: (s) => s.done },
   ],
+  change: (instance, changes) => instance.setRules(changes),
   live: {
-    OOO: {
-      set: (m, v) => m.setRules({ OOO: v }),
-    },
-    OOI: {
-      set: (m, v) => m.setRules({ OOI: v }),
-    },
-    OIO: {
-      set: (m, v) => m.setRules({ OIO: v }),
-    },
-    OII: {
-      set: (m, v) => m.setRules({ OII: v }),
-    },
-    IOO: {
-      set: (m, v) => m.setRules({ IOO: v }),
-    },
-    IOI: {
-      set: (m, v) => m.setRules({ IOI: v }),
-    },
-    IIO: {
-      set: (m, v) => m.setRules({ IIO: v }),
-    },
-    III: {
-      set: (m, v) => m.setRules({ III: v }),
-    },
-    example: {
-      set: (m, v) => m.setRules({ example: v }),
-    },
-    autoContinue: {
-      set: (m, v) => m.setRules({ autoContinue: v }),
-    },
-    autoClear: {
-      set: (m, v) => m.setRules({ autoClear: v }),
-    },
-    plot: {
-      set: (m, v) => m.setRules({ plot: v }),
-    },
-    onColor: {
-      set: (m, v) => m.setRules({ onColor: v }),
-    },
-    offColor: {
-      set: (m, v) => m.setRules({ offColor: v }),
-    },
+    OOO: {},
+    OOI: {},
+    OIO: {},
+    OII: {},
+    IOO: {},
+    IOI: {},
+    IIO: {},
+    III: {},
+    example: {},
+    autoContinue: {},
+    autoClear: {},
+    plot: {},
+    onColor: {},
+    offColor: {},
   },
   complete: (s) => s.done,
   monitors: [

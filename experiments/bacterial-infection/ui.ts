@@ -13,31 +13,16 @@ export const ui = defineUI(model, {
     "init5PoresB",
     "init6PoresB",
   ] as const,
+  change: (instance, changes) => instance.setParameters(changes),
   live: {
-    reproduce: {
-      set: (m, v) => m.setParameters({ reproduce: v }),
-    },
-    reproduceEvery: {
-      set: (m, v) => m.setParameters({ reproduceEvery: v }),
-    },
-    autoDoseA: {
-      set: (m, v) => m.setParameters({ autoDoseA: v }),
-    },
-    autoDoseB: {
-      set: (m, v) => m.setParameters({ autoDoseB: v }),
-    },
-    aDosage: {
-      set: (m, v) => m.setParameters({ aDosage: v }),
-    },
-    bDosage: {
-      set: (m, v) => m.setParameters({ bDosage: v }),
-    },
-    doseAEvery: {
-      set: (m, v) => m.setParameters({ doseAEvery: v }),
-    },
-    doseBEvery: {
-      set: (m, v) => m.setParameters({ doseBEvery: v }),
-    },
+    reproduce: {},
+    reproduceEvery: {},
+    autoDoseA: {},
+    autoDoseB: {},
+    aDosage: {},
+    bDosage: {},
+    doseAEvery: {},
+    doseBEvery: {},
   },
   actions: [
     { label: "Manual dose A", run: (m) => m.doseRegion("A") },

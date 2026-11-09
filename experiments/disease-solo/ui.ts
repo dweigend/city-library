@@ -3,20 +3,12 @@ import { model } from "./model.ts";
 
 const binding = defineUI(model, {
   setup: ["seed", "numAndroids"],
+  change: (instance, changes) => instance.setParameters(changes),
   live: {
-    infectionChance: {
-      set: (instance, value) =>
-        instance.setParameters({ infectionChance: value }),
-    },
-    stepSize: {
-      set: (instance, value) => instance.setParameters({ stepSize: value }),
-    },
-    avoid: {
-      set: (instance, value) => instance.setParameters({ avoid: value }),
-    },
-    chase: {
-      set: (instance, value) => instance.setParameters({ chase: value }),
-    },
+    infectionChance: {},
+    stepSize: {},
+    avoid: {},
+    chase: {},
   },
   actions: [
     { label: "Infect", run: (instance) => instance.infect() },

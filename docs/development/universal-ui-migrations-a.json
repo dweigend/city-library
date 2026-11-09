@@ -1,0 +1,2325 @@
+{
+  "baseline": "a78bd2359e7a12ac537be131ca8d3023c4b718eb",
+  "decisionRecord": "docs/development/universal-ui-decisions.md (accepted01fba1a)",
+  "exampleFirstFreeze": "6a6c6b7",
+  "scope": "Sorted inventory first73 entries; own ui.ts files only; no model, scene, runtime, registry or shared export changes",
+  "summary": {
+    "reviewed": 73,
+    "migrated": 38,
+    "retained": 35,
+    "exactForwardersConsolidated": 211
+  },
+  "method": "Used the already installed transitive TypeScript6 parser for temporary AST analysis and narrow text edits; no dependency was added. Top-level TypeScript7 exposes version-only runtime, so its parser was not used. No broad file formatting. Scalar/labels/groups/enabled/getters/overrides/actions and every view expression preserved.",
+  "checks": {
+    "astEquivalentOutsideWrites": "38/38 passed",
+    "headlessMigratedImports": "38/38 passed",
+    "uiTypecheck": "bunx tsc --noEmit -p tsconfig.ui.json, exit0",
+    "modelHashes": "73/73 exact baseline",
+    "retainedUIHashes": "35/35 exact baseline",
+    "gitDiffCheck": "passed"
+  },
+  "entries": [
+    {
+      "slug": "anisogamy",
+      "scope": "Phase A common live-write migration only",
+      "decision": "migrate",
+      "reason": "Replace 7 exact same-key forwards to setParameters with one explicit change handler; retained field records still declare controls and all local metadata. This removes repeated action boilerplate without introducing reflection or changing a model call.",
+      "changedFiles": [
+        "experiments/anisogamy/ui.ts"
+      ],
+      "publicMethod": "setParameters",
+      "migratedControlKeys": [
+        "worldSize",
+        "maxAdults",
+        "zygoteFitnessThreshold",
+        "gameteFitnessThreshold",
+        "mutationSigma",
+        "speedSizeCorrelation",
+        "allowAssortativeFusion"
+      ],
+      "baselineUIHash": "9c57ff66d500e6e77633c36cccf7afa1822f477c758eddd1f99b303dcb754c4d",
+      "resultUIHash": "20240018baf6fa165303594d55d5678463d88d70a9500bd48ed203b2938cc2e9",
+      "baselineModelHash": "a12c76466a37f6c7261c4a234fc60f5d36725252122c26f4acffd6cf4990f128",
+      "resultModelHash": "a12c76466a37f6c7261c4a234fc60f5d36725252122c26f4acffd6cf4990f128",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Preserve matingTypeTrait NetLogo offsets, gamete diameter/mass sqrt portrayal, undefined mean-trait gaps and original histogram edges. Canonical IDs survive breed changes.",
+      "projectionAndMetadataPreservation": "Complete program AST is unchanged after excluding only the exact migrated live set properties and the newly added spec.change property.",
+      "normalizedUnchangedProgramSha256": "0525dafbfcf327454e593816a75213fa3f3aa67a032a78d28cfa7a835ad2009f",
+      "writeEquivalence": {
+        "before": "live[field].set(instance, decodedValue) => instance.setParameters({ [sameField]: decodedValue })",
+        "after": "The existing descriptor decoder invokes change(instance, { [sameField]: decodedValue }), which calls instance.setParameters(changes).",
+        "preconditions": "AST verified each removed setter has two identifier parameters, one direct method call, one object argument, one property with the exact declared live key, and the unchanged second parameter as its value. No block-bodied/transformed setter was removed."
+      },
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "ants",
+      "scope": "Phase A common live-write migration only",
+      "decision": "retain",
+      "reason": "No common write family reaches the accepted three-forward threshold (setRules: 2 exact fields). Retain explicit actions and the existing declaration; a new handler would not simplify its ordinary reading/writing.",
+      "changedFiles": [],
+      "publicMethod": null,
+      "migratedControlKeys": [],
+      "baselineUIHash": "b52fcd8d68b0bf5ea142031e2d88fd3bbb60c1cd293958a527ada8745b7d7308",
+      "resultUIHash": "b52fcd8d68b0bf5ea142031e2d88fd3bbb60c1cd293958a527ada8745b7d7308",
+      "baselineModelHash": "8dbbfebc8b8dbc9b0561c186163eb3ce757095e05a347de46d9223417b6caa52",
+      "resultModelHash": "8dbbfebc8b8dbc9b0561c186163eb3ce757095e05a347de46d9223417b6caa52",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Preserve nest/food-pile palette and chemical (chemical\u22120.1)/4.9 clamp. Ant IDs select actual carrying agents; world coordinates encode foraging adjacency. Diffusion/evaporation controls are percentages.",
+      "projectionAndMetadataPreservation": "UI source bytes are unchanged in this assignment.",
+      "normalizedUnchangedProgramSha256": null,
+      "writeEquivalence": null,
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "artificial-neural-net-multilayer",
+      "scope": "Phase A common live-write migration only",
+      "decision": "migrate",
+      "reason": "Replace 6 exact same-key forwards to setParameters with one explicit change handler; retained field records still declare controls and all local metadata. This removes repeated action boilerplate without introducing reflection or changing a model call.",
+      "changedFiles": [
+        "experiments/artificial-neural-net-multilayer/ui.ts"
+      ],
+      "publicMethod": "setParameters",
+      "migratedControlKeys": [
+        "learningRate",
+        "examplesPerEpoch",
+        "targetFunction",
+        "input1",
+        "input2",
+        "showWeights"
+      ],
+      "baselineUIHash": "1fec0c0f287e4151a5622e5d1aa8b130be72a1c2613306ba10bc0bb74be0efe3",
+      "resultUIHash": "5995c7d25c8732537586e61ec17af07a435319ea599f527e72a08c4a5ff2c823",
+      "baselineModelHash": "fb401a9e7059ac815d1b672ebcb535525ad85e5e57d676d801cf7b18ed0583c3",
+      "resultModelHash": "fb401a9e7059ac815d1b672ebcb535525ad85e5e57d676d801cf7b18ed0583c3",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Activation threshold0.5 and signed red/blue weights are scientific meanings; retain weight stroke max(0.5,0.05*abs(weight)*20), preset positions and node IDs. Epoch denotes training work.",
+      "projectionAndMetadataPreservation": "Complete program AST is unchanged after excluding only the exact migrated live set properties and the newly added spec.change property.",
+      "normalizedUnchangedProgramSha256": "1eee460709651466467b24ade55bb8f829bfcec32556440000b9955c1f471b01",
+      "writeEquivalence": {
+        "before": "live[field].set(instance, decodedValue) => instance.setParameters({ [sameField]: decodedValue })",
+        "after": "The existing descriptor decoder invokes change(instance, { [sameField]: decodedValue }), which calls instance.setParameters(changes).",
+        "preconditions": "AST verified each removed setter has two identifier parameters, one direct method call, one object argument, one property with the exact declared live key, and the unchanged second parameter as its value. No block-bodied/transformed setter was removed."
+      },
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "artificial-neural-net-perceptron",
+      "scope": "Phase A common live-write migration only",
+      "decision": "migrate",
+      "reason": "Replace 6 exact same-key forwards to setParameters with one explicit change handler; retained field records still declare controls and all local metadata. This removes repeated action boilerplate without introducing reflection or changing a model call.",
+      "changedFiles": [
+        "experiments/artificial-neural-net-perceptron/ui.ts"
+      ],
+      "publicMethod": "setParameters",
+      "migratedControlKeys": [
+        "learningRate",
+        "examplesPerEpoch",
+        "targetFunction",
+        "input1",
+        "input2",
+        "showWeights"
+      ],
+      "baselineUIHash": "84d5bdbf81e2eacf30ac29c811da4782096f6b3165adf08130554227791a6df7",
+      "resultUIHash": "526d835fcfb5f829d02a429cd13c5dd11bf5dc0d5cc5a6b9bf3216674397edd3",
+      "baselineModelHash": "a55215d72e4c18f389a260a7fe41a2db1cafd92e13aabc71e03ce94b8508169f",
+      "resultModelHash": "a55215d72e4c18f389a260a7fe41a2db1cafd92e13aabc71e03ce94b8508169f",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Keep positive/negative truth classifications and exact boundary points; signed weight width max(0.5,0.2*abs(weight)*20) differs intentionally from multilayer. Network IDs are stringified source node IDs.",
+      "projectionAndMetadataPreservation": "Complete program AST is unchanged after excluding only the exact migrated live set properties and the newly added spec.change property.",
+      "normalizedUnchangedProgramSha256": "8cd058c72f564e2318f4f35e0c11a426b671c563f863760d716a896d4d2f559f",
+      "writeEquivalence": {
+        "before": "live[field].set(instance, decodedValue) => instance.setParameters({ [sameField]: decodedValue })",
+        "after": "The existing descriptor decoder invokes change(instance, { [sameField]: decodedValue }), which calls instance.setParameters(changes).",
+        "preconditions": "AST verified each removed setter has two identifier parameters, one direct method call, one object argument, one property with the exact declared live key, and the unchanged second parameter as its value. No block-bodied/transformed setter was removed."
+      },
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "autumn",
+      "scope": "Phase A common live-write migration only",
+      "decision": "migrate",
+      "reason": "Replace 5 exact same-key forwards to setParameters with one explicit change handler; retained field records still declare controls and all local metadata. This removes repeated action boilerplate without introducing reflection or changing a model call.",
+      "changedFiles": [
+        "experiments/autumn/ui.ts"
+      ],
+      "publicMethod": "setParameters",
+      "migratedControlKeys": [
+        "windFactor",
+        "temperature",
+        "rainIntensity",
+        "sunIntensity",
+        "leafDisplayMode"
+      ],
+      "baselineUIHash": "1f64ae05c713603dcc3a1bdad55a2226079207671d5a2c780775841aff029370",
+      "resultUIHash": "9b700c539a7b791b42efe667d59e1213a6bc0478845e3709cde802b2978a3107",
+      "baselineModelHash": "a12a98d355b059470c4c9d3f0d76953291e520f955d1a91cf47b27b8c95fef0c",
+      "resultModelHash": "a12a98d355b059470c4c9d3f0d76953291e520f955d1a91cf47b27b8c95fef0c",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Keep breed-specific triangle/circle shape, agent.size*12*sqrt(fillFraction), model-owned terrain colors and undefined mean values as gaps. Weather and chemistry series have different quantities.",
+      "projectionAndMetadataPreservation": "Complete program AST is unchanged after excluding only the exact migrated live set properties and the newly added spec.change property.",
+      "normalizedUnchangedProgramSha256": "ebc7cfba6ff24c5313acf10d190f72e99e62882cdffd379318f80f355ace1886",
+      "writeEquivalence": {
+        "before": "live[field].set(instance, decodedValue) => instance.setParameters({ [sameField]: decodedValue })",
+        "after": "The existing descriptor decoder invokes change(instance, { [sameField]: decodedValue }), which calls instance.setParameters(changes).",
+        "preconditions": "AST verified each removed setter has two identifier parameters, one direct method call, one object argument, one property with the exact declared live key, and the unchanged second parameter as its value. No block-bodied/transformed setter was removed."
+      },
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "bacterial-infection",
+      "scope": "Phase A common live-write migration only",
+      "decision": "migrate",
+      "reason": "Replace 8 exact same-key forwards to setParameters with one explicit change handler; retained field records still declare controls and all local metadata. This removes repeated action boilerplate without introducing reflection or changing a model call.",
+      "changedFiles": [
+        "experiments/bacterial-infection/ui.ts"
+      ],
+      "publicMethod": "setParameters",
+      "migratedControlKeys": [
+        "reproduce",
+        "reproduceEvery",
+        "autoDoseA",
+        "autoDoseB",
+        "aDosage",
+        "bDosage",
+        "doseAEvery",
+        "doseBEvery"
+      ],
+      "baselineUIHash": "e66c4ba7f48a93ca2b66e4bf474ca1855710072b3b88251562d405789bb86e1a",
+      "resultUIHash": "2a1f99ecc4d5d64c33272ae13343a87130cc1d62de21cba5e0ca097a29506a38",
+      "baselineModelHash": "c9d24e8729f01639c6006ddd175fd2bc5e50ac0f59a7e064bacfba607defcd9e",
+      "resultModelHash": "c9d24e8729f01639c6006ddd175fd2bc5e50ac0f59a7e064bacfba607defcd9e",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Variation3..6 indexes the same four colors in agents and histories; preserve region ports, antibiotic geometry and source time conversion. IDs resolve only bacteria for inspector.",
+      "projectionAndMetadataPreservation": "Complete program AST is unchanged after excluding only the exact migrated live set properties and the newly added spec.change property.",
+      "normalizedUnchangedProgramSha256": "04b88e27d824e941f4bf5497a21ebb53a9d08e2f847beb900ee35df46b80ee75",
+      "writeEquivalence": {
+        "before": "live[field].set(instance, decodedValue) => instance.setParameters({ [sameField]: decodedValue })",
+        "after": "The existing descriptor decoder invokes change(instance, { [sameField]: decodedValue }), which calls instance.setParameters(changes).",
+        "preconditions": "AST verified each removed setter has two identifier parameters, one direct method call, one object argument, one property with the exact declared live key, and the unchanged second parameter as its value. No block-bodied/transformed setter was removed."
+      },
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "baldwin-effect",
+      "scope": "Phase A common live-write migration only",
+      "decision": "migrate",
+      "reason": "Replace 6 exact same-key forwards to setParameters with one explicit change handler; retained field records still declare controls and all local metadata. This removes repeated action boilerplate without introducing reflection or changing a model call.",
+      "changedFiles": [
+        "experiments/baldwin-effect/ui.ts"
+      ],
+      "publicMethod": "setParameters",
+      "migratedControlKeys": [
+        "numPop",
+        "geneLength",
+        "plasticity",
+        "numTrials",
+        "mutationRate",
+        "smoothness"
+      ],
+      "baselineUIHash": "ea51e811d0617d21bf78bf2507ad1a6b04baf8031546a9c02369e40d52e20c6d",
+      "resultUIHash": "72b72f5f73c76f6b4332230f12b8971e3f386266cd4e087edf3acd4604892106",
+      "baselineModelHash": "d1f3b368684f549a81c53764488a3b0aee6081e8a87a7169f0896c2e3914f032",
+      "resultModelHash": "d1f3b368684f549a81c53764488a3b0aee6081e8a87a7169f0896c2e3914f032",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Keep generation axis, genotype/phenotype arrays, inherited-match/fitness layout and null/undefined mean gaps; blue/red/gray identify learning strategies across plots.",
+      "projectionAndMetadataPreservation": "Complete program AST is unchanged after excluding only the exact migrated live set properties and the newly added spec.change property.",
+      "normalizedUnchangedProgramSha256": "02b62a98aaa613fdbf35b9fa39b4800ecdabc25ee00311937492eff95f692fb9",
+      "writeEquivalence": {
+        "before": "live[field].set(instance, decodedValue) => instance.setParameters({ [sameField]: decodedValue })",
+        "after": "The existing descriptor decoder invokes change(instance, { [sameField]: decodedValue }), which calls instance.setParameters(changes).",
+        "preconditions": "AST verified each removed setter has two identifier parameters, one direct method call, one object argument, one property with the exact declared live key, and the unchanged second parameter as its value. No block-bodied/transformed setter was removed."
+      },
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "bank-reserves",
+      "scope": "Phase A common live-write migration only",
+      "decision": "retain",
+      "reason": "No common write family reaches the accepted three-forward threshold (setRules: 1 exact fields). Retain explicit actions and the existing declaration; a new handler would not simplify its ordinary reading/writing.",
+      "changedFiles": [],
+      "publicMethod": null,
+      "migratedControlKeys": [],
+      "baselineUIHash": "4bd929a7b3d548f1902e0cbad2f43769339e48630d3bad4c4234f80f674c80cd",
+      "resultUIHash": "4bd929a7b3d548f1902e0cbad2f43769339e48630d3bad4c4234f80f674c80cd",
+      "baselineModelHash": "8ab5b09fb769917c5efedfed2704d45dd25738f7a7c34e6c7a642e496853017c",
+      "resultModelHash": "8ab5b09fb769917c5efedfed2704d45dd25738f7a7c34e6c7a642e496853017c",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Money and loans are synthetic signed accounting quantities; rich/middle/poor colors are model classification, not DES status. None customer remains unavailable text. IDs select canonical accounts.",
+      "projectionAndMetadataPreservation": "UI source bytes are unchanged in this assignment.",
+      "normalizedUnchangedProgramSha256": null,
+      "writeEquivalence": null,
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "bidding-market",
+      "scope": "Phase A common live-write migration only",
+      "decision": "retain",
+      "reason": "No common write family reaches the accepted three-forward threshold (setRules: 2 exact fields). Retain explicit actions and the existing declaration; a new handler would not simplify its ordinary reading/writing.",
+      "changedFiles": [],
+      "publicMethod": null,
+      "migratedControlKeys": [],
+      "baselineUIHash": "92cde9a71582576c0cb54a04dd2c4c2e0f9d6f4d98064929f11a2a7d4e5579b8",
+      "resultUIHash": "92cde9a71582576c0cb54a04dd2c4c2e0f9d6f4d98064929f11a2a7d4e5579b8",
+      "baselineModelHash": "f48c18ace6182cddb02a75fb26db3bc2af179e9fb3e91cb5a6fa76843b215b8d",
+      "resultModelHash": "f48c18ace6182cddb02a75fb26db3bc2af179e9fb3e91cb5a6fa76843b215b8d",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Keep asking/willing price ranges, percentage undefinedness and square-root demand/bought sizes. Lines connect actual buyer/seller IDs; sale-marker thickness responds to stars.",
+      "projectionAndMetadataPreservation": "UI source bytes are unchanged in this assignment.",
+      "normalizedUnchangedProgramSha256": null,
+      "writeEquivalence": null,
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "binomial-rabbits",
+      "scope": "Phase A common live-write migration only",
+      "decision": "retain",
+      "reason": "No common write family reaches the accepted three-forward threshold (setRules: 2 exact fields). Retain explicit actions and the existing declaration; a new handler would not simplify its ordinary reading/writing.",
+      "changedFiles": [],
+      "publicMethod": null,
+      "migratedControlKeys": [],
+      "baselineUIHash": "7a7852f2db8b6fbf59945188063dacd3b0d92e1e795a35b1308c8872869835f9",
+      "resultUIHash": "7a7852f2db8b6fbf59945188063dacd3b0d92e1e795a35b1308c8872869835f9",
+      "baselineModelHash": "e6f77a547d8912c05dbd0f0ecbdc659aaaa35de62a8975b6ea9cf739ba1a3482",
+      "resultModelHash": "e6f77a547d8912c05dbd0f0ecbdc659aaaa35de62a8975b6ea9cf739ba1a3482",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Preserve 45-unit world, source y=-22 display, weighted hop ratios and histogram x values; source display IDs are stable labels rather than another Agent registry.",
+      "projectionAndMetadataPreservation": "UI source bytes are unchanged in this assignment.",
+      "normalizedUnchangedProgramSha256": null,
+      "writeEquivalence": null,
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "birthdays",
+      "scope": "Phase A common live-write migration only",
+      "decision": "retain",
+      "reason": "No common write family reaches the accepted three-forward threshold. Retain explicit actions and the existing declaration; a new handler would not simplify its ordinary reading/writing.",
+      "changedFiles": [],
+      "publicMethod": null,
+      "migratedControlKeys": [],
+      "baselineUIHash": "e8684916ab305bb0b3450f1481ce7bedd778c6ca510aab33f3cbd27279e31d02",
+      "resultUIHash": "e8684916ab305bb0b3450f1481ce7bedd778c6ca510aab33f3cbd27279e31d02",
+      "baselineModelHash": "e31c72133f2d755ab6b0e8f303540ddda4ac81add7567b0d97bc8a97bf62bd81",
+      "resultModelHash": "e31c72133f2d755ab6b0e8f303540ddda4ac81add7567b0d97bc8a97bf62bd81",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Rooms contain23 people; percent success retains two-decimal formatting. Table order is birthday order supplied by model; display labels are not canonical Agent membership.",
+      "projectionAndMetadataPreservation": "UI source bytes are unchanged in this assignment.",
+      "normalizedUnchangedProgramSha256": null,
+      "writeEquivalence": null,
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "blood-sugar-regulation",
+      "scope": "Phase A common live-write migration only",
+      "decision": "migrate",
+      "reason": "Replace 4 exact same-key forwards to setParameters with one explicit change handler; retained field records still declare controls and all local metadata. This removes repeated action boilerplate without introducing reflection or changing a model call.",
+      "changedFiles": [
+        "experiments/blood-sugar-regulation/ui.ts"
+      ],
+      "publicMethod": "setParameters",
+      "migratedControlKeys": [
+        "metabolicRate",
+        "glucoseSensitivity",
+        "insulinSensitivity",
+        "glucagonSensitivity"
+      ],
+      "baselineUIHash": "3b2e5e213fc4e7a4e6a04de200eebf11ebac5bdc628f6db4180e81e8c09e144f",
+      "resultUIHash": "3cce48ac8f5cb4289cda8da70ee309ca58fb9cbe495ffae52bc2b77d4af090fc",
+      "baselineModelHash": "897079716892f8d684102981f7d61876ff4abfd9bb57ba28db7fcf9bcbb7eea3",
+      "resultModelHash": "897079716892f8d684102981f7d61876ff4abfd9bb57ba28db7fcf9bcbb7eea3",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Keep follows as public actions, liver glucose storage in model, agent identity and followed-size distinction. Hormone chart colors match biochemical categories; no clinical units/calibration are inferred.",
+      "projectionAndMetadataPreservation": "Complete program AST is unchanged after excluding only the exact migrated live set properties and the newly added spec.change property.",
+      "normalizedUnchangedProgramSha256": "920fa8f55e8f265d00a197fbc450ee2a3c30c8ecb047bb887e13d5135a9c2f06",
+      "writeEquivalence": {
+        "before": "live[field].set(instance, decodedValue) => instance.setParameters({ [sameField]: decodedValue })",
+        "after": "The existing descriptor decoder invokes change(instance, { [sameField]: decodedValue }), which calls instance.setParameters(changes).",
+        "preconditions": "AST verified each removed setter has two identifier parameters, one direct method call, one object argument, one property with the exact declared live key, and the unchanged second parameter as its value. No block-bodied/transformed setter was removed."
+      },
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "braess-paradox",
+      "scope": "Phase A common live-write migration only",
+      "decision": "migrate",
+      "reason": "Replace 5 exact same-key forwards to setRules with one explicit change handler; retained field records still declare controls and all local metadata. This removes repeated action boilerplate without introducing reflection or changing a model call.",
+      "changedFiles": [
+        "experiments/braess-paradox/ui.ts"
+      ],
+      "publicMethod": "setRules",
+      "migratedControlKeys": [
+        "middleOn",
+        "spawnRate",
+        "smoothing",
+        "mode",
+        "randomness"
+      ],
+      "baselineUIHash": "e43d63b60514b393f3837e3826aa0eff37348b8cf168ed55d5edc7af73f2262c",
+      "resultUIHash": "ef4975d03db6fb7ee7cd57f76d933c48ea2d9dd375cc8aa5df531f09b80bfd6d",
+      "baselineModelHash": "ec56ccf9c4bf7b1c7aa512785139c4903da27d2a666911e4d22474e5135b47f2",
+      "resultModelHash": "ec56ccf9c4bf7b1c7aa512785139c4903da27d2a666911e4d22474e5135b47f2",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Travel chart explicitly uses ticks/450; preserve source49\u00d749 roads, three route identifiers and actual congestion fields. Model owns route choice and probabilities.",
+      "projectionAndMetadataPreservation": "Complete program AST is unchanged after excluding only the exact migrated live set properties and the newly added spec.change property.",
+      "normalizedUnchangedProgramSha256": "7206b847a00bf462649a376da58da5f2aefdb9bb4ccfa29ed3471d18202926a4",
+      "writeEquivalence": {
+        "before": "live[field].set(instance, decodedValue) => instance.setRules({ [sameField]: decodedValue })",
+        "after": "The existing descriptor decoder invokes change(instance, { [sameField]: decodedValue }), which calls instance.setRules(changes).",
+        "preconditions": "AST verified each removed setter has two identifier parameters, one direct method call, one object argument, one property with the exact declared live key, and the unchanged second parameter as its value. No block-bodied/transformed setter was removed."
+      },
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "brians-brain",
+      "scope": "Phase A common live-write migration only",
+      "decision": "retain",
+      "reason": "No common write family reaches the accepted three-forward threshold. Retain explicit actions and the existing declaration; a new handler would not simplify its ordinary reading/writing.",
+      "changedFiles": [],
+      "publicMethod": null,
+      "migratedControlKeys": [],
+      "baselineUIHash": "d76fb1f92f19d521613a7b1a8fa370974510ceaaac56c10a1e61253c36fb636f",
+      "resultUIHash": "d76fb1f92f19d521613a7b1a8fa370974510ceaaac56c10a1e61253c36fb636f",
+      "baselineModelHash": "a9fb5cefa551e44a65d4371831315d240f97e3b804685a09172c03fdf68c2afe",
+      "resultModelHash": "a9fb5cefa551e44a65d4371831315d240f97e3b804685a09172c03fdf68c2afe",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Keep states0/1/2 and black/white/red correspondence; drawing begin/move/end calls model brush methods. Grid identity must remain stable under painting.",
+      "projectionAndMetadataPreservation": "UI source bytes are unchanged in this assignment.",
+      "normalizedUnchangedProgramSha256": null,
+      "writeEquivalence": null,
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "ca-1d-elementary",
+      "scope": "Phase A common live-write migration only",
+      "decision": "migrate",
+      "reason": "Replace 4 exact same-key forwards to setRules with one explicit change handler; retained field records still declare controls and all local metadata. This removes repeated action boilerplate without introducing reflection or changing a model call.",
+      "changedFiles": [
+        "experiments/ca-1d-elementary/ui.ts"
+      ],
+      "publicMethod": "setRules",
+      "migratedControlKeys": [
+        "rule",
+        "autoContinue",
+        "foreground",
+        "background"
+      ],
+      "baselineUIHash": "ea7cbf4ff8af1a5e21c2a21603def767e787d14a81ccf5ae2da96b57eab183d8",
+      "resultUIHash": "be333a60bb27e13f35d7755e536b2bb37786702443014f769b7ff49988227e92",
+      "baselineModelHash": "0e401cae6a0591e4269544fa4c833b65763f699b81677a8a17c922084e8f7d3d",
+      "resultModelHash": "0e401cae6a0591e4269544fa4c833b65763f699b81677a8a17c922084e8f7d3d",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Keep exact NetLogo conversion and eight binary neighborhood rule ordering. Continue is enabled only after completion with rules hidden; rows are source evolution time.",
+      "projectionAndMetadataPreservation": "Complete program AST is unchanged after excluding only the exact migrated live set properties and the newly added spec.change property.",
+      "normalizedUnchangedProgramSha256": "67ef1141c8b3a00455590eb931c315f90e64e2f079d663dc148123acae074f53",
+      "writeEquivalence": {
+        "before": "live[field].set(instance, decodedValue) => instance.setRules({ [sameField]: decodedValue })",
+        "after": "The existing descriptor decoder invokes change(instance, { [sameField]: decodedValue }), which calls instance.setRules(changes).",
+        "preconditions": "AST verified each removed setter has two identifier parameters, one direct method call, one object argument, one property with the exact declared live key, and the unchanged second parameter as its value. No block-bodied/transformed setter was removed."
+      },
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "ca-continuous",
+      "scope": "Phase A common live-write migration only",
+      "decision": "migrate",
+      "reason": "Replace 3 exact same-key forwards to setRules with one explicit change handler; retained field records still declare controls and all local metadata. This removes repeated action boilerplate without introducing reflection or changing a model call.",
+      "changedFiles": [
+        "experiments/ca-continuous/ui.ts"
+      ],
+      "publicMethod": "setRules",
+      "migratedControlKeys": [
+        "addConstant",
+        "precisionLevel",
+        "autoContinue"
+      ],
+      "baselineUIHash": "827200f7893669a59d2910239751550d5d32f155c2ecd991572b6c1e0fa7a974",
+      "resultUIHash": "d403b85124a04e2664588c1ef4a1429446663a14a67cd18ac1cdcfc72332f46a",
+      "baselineModelHash": "f962cf09b8f9a1f9c11441c240ebb4fcad4d7c6b0b0b53dbd1f0ebfd29d086bf",
+      "resultModelHash": "f962cf09b8f9a1f9c11441c240ebb4fcad4d7c6b0b0b53dbd1f0ebfd29d086bf",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Keep precision/additive map and exact NetLogo numeric colors; autoContinue and explicit continueRun remain model-owned.",
+      "projectionAndMetadataPreservation": "Complete program AST is unchanged after excluding only the exact migrated live set properties and the newly added spec.change property.",
+      "normalizedUnchangedProgramSha256": "ba07be29b2ec89e841f490dc9a0b31b74530825b8335e5c9a44d0f2085357eb2",
+      "writeEquivalence": {
+        "before": "live[field].set(instance, decodedValue) => instance.setRules({ [sameField]: decodedValue })",
+        "after": "The existing descriptor decoder invokes change(instance, { [sameField]: decodedValue }), which calls instance.setRules(changes).",
+        "preconditions": "AST verified each removed setter has two identifier parameters, one direct method call, one object argument, one property with the exact declared live key, and the unchanged second parameter as its value. No block-bodied/transformed setter was removed."
+      },
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "ca-stochastic",
+      "scope": "Phase A common live-write migration only",
+      "decision": "migrate",
+      "reason": "Replace 14 exact same-key forwards to setRules with one explicit change handler; retained field records still declare controls and all local metadata. This removes repeated action boilerplate without introducing reflection or changing a model call.",
+      "changedFiles": [
+        "experiments/ca-stochastic/ui.ts"
+      ],
+      "publicMethod": "setRules",
+      "migratedControlKeys": [
+        "OOO",
+        "OOI",
+        "OIO",
+        "OII",
+        "IOO",
+        "IOI",
+        "IIO",
+        "III",
+        "example",
+        "autoContinue",
+        "autoClear",
+        "plot",
+        "onColor",
+        "offColor"
+      ],
+      "baselineUIHash": "55cbc63a15cb54234917dbb9da325c5dbe1b1dc3bebfb9271b2ea4559b06e689",
+      "resultUIHash": "65d7439088fd3cd183da6775a16d1aa5304e2f01ba0befabdb7986d048c56ca3",
+      "baselineModelHash": "4963d69df22f018ebe9f50a3d6d887ec8ac591c3714a27588a200248c760d31f",
+      "resultModelHash": "4963d69df22f018ebe9f50a3d6d887ec8ac591c3714a27588a200248c760d31f",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Preserve conditional Bernoulli rules, row continuation, exact source colors and entropy fields. Two histories represent distinct entropy measures; no new normalization.",
+      "projectionAndMetadataPreservation": "Complete program AST is unchanged after excluding only the exact migrated live set properties and the newly added spec.change property.",
+      "normalizedUnchangedProgramSha256": "c882c988f027e9e58ee35998284f61fb472516f93604871ffdbb5b1547a19e85",
+      "writeEquivalence": {
+        "before": "live[field].set(instance, decodedValue) => instance.setRules({ [sameField]: decodedValue })",
+        "after": "The existing descriptor decoder invokes change(instance, { [sameField]: decodedValue }), which calls instance.setRules(changes).",
+        "preconditions": "AST verified each removed setter has two identifier parameters, one direct method call, one object argument, one property with the exact declared live key, and the unchanged second parameter as its value. No block-bodied/transformed setter was removed."
+      },
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "cash-flow",
+      "scope": "Phase A common live-write migration only",
+      "decision": "retain",
+      "reason": "No common write family reaches the accepted three-forward threshold (setRules: 1 exact fields). Retain explicit actions and the existing declaration; a new handler would not simplify its ordinary reading/writing.",
+      "changedFiles": [],
+      "publicMethod": null,
+      "migratedControlKeys": [],
+      "baselineUIHash": "3126e367253d51232e48ffa2c713f61cf0a24fb54a5df5d17bd2280edafd1a2b",
+      "resultUIHash": "3126e367253d51232e48ffa2c713f61cf0a24fb54a5df5d17bd2280edafd1a2b",
+      "baselineModelHash": "ea8e7eed783534261130ae0f625e2dcf3363eebc10c4edb3e1f94a26ba7cc5b5",
+      "resultModelHash": "ea8e7eed783534261130ae0f625e2dcf3363eebc10c4edb3e1f94a26ba7cc5b5",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Keep single-step business\u2192books\u2192bank phase sequence, signed loans, None customer and source wealth colors. UI formatting does not change balances.",
+      "projectionAndMetadataPreservation": "UI source bytes are unchanged in this assignment.",
+      "normalizedUnchangedProgramSha256": null,
+      "writeEquivalence": null,
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "central-limit-theorem",
+      "scope": "Phase A common live-write migration only",
+      "decision": "migrate",
+      "reason": "Replace 4 exact same-key forwards to setRules with one explicit change handler; retained field records still declare controls and all local metadata. This removes repeated action boilerplate without introducing reflection or changing a model call.",
+      "changedFiles": [
+        "experiments/central-limit-theorem/ui.ts"
+      ],
+      "publicMethod": "setRules",
+      "migratedControlKeys": [
+        "sampleSize",
+        "maxValue",
+        "alsoSums",
+        "showEV"
+      ],
+      "baselineUIHash": "3f0092279016b0e5fb574470edaf4a227c06cca0279d6091e1970e8f90bc7fff",
+      "resultUIHash": "d62d7b6ec86cbc3ff0b7f7cb00a96b2e1954f839879a97275912e0b61fb12bc9",
+      "baselineModelHash": "495cf76500ebb2f39508ebd358e5abc50bc0e9e86fb0a52df28ef22d8154ca62",
+      "resultModelHash": "495cf76500ebb2f39508ebd358e5abc50bc0e9e86fb0a52df28ef22d8154ca62",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Sampling without replacement and expected value are model measurements; preserve chosen/unselected encoding, real x-position population and null unavailable sample SD.",
+      "projectionAndMetadataPreservation": "Complete program AST is unchanged after excluding only the exact migrated live set properties and the newly added spec.change property.",
+      "normalizedUnchangedProgramSha256": "d15b6d266a368d140dbe1b69c201b50ff684a7c025248f3cb061fb9b84835839",
+      "writeEquivalence": {
+        "before": "live[field].set(instance, decodedValue) => instance.setRules({ [sameField]: decodedValue })",
+        "after": "The existing descriptor decoder invokes change(instance, { [sameField]: decodedValue }), which calls instance.setRules(changes).",
+        "preconditions": "AST verified each removed setter has two identifier parameters, one direct method call, one object argument, one property with the exact declared live key, and the unchanged second parameter as its value. No block-bodied/transformed setter was removed."
+      },
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "chloroplasts-and-food",
+      "scope": "Phase A common live-write migration only",
+      "decision": "migrate",
+      "reason": "Replace 4 exact same-key forwards to setParameters with one explicit change handler; retained field records still declare controls and all local metadata. This removes repeated action boilerplate without introducing reflection or changing a model call.",
+      "changedFiles": [
+        "experiments/chloroplasts-and-food/ui.ts"
+      ],
+      "publicMethod": "setParameters",
+      "migratedControlKeys": [
+        "waterflowThroughLeaf",
+        "intensityOfLight",
+        "autoStop",
+        "stopAt"
+      ],
+      "baselineUIHash": "ab1319bb87a652cc35c32e6fe4dd7938872a1e09dc9bc2eba828fc6a25ff889f",
+      "resultUIHash": "78fac3568d6412c9e2e912098eb6a79a5f5b633c57afb35390d437e9e559a993",
+      "baselineModelHash": "bc23a701de3f81e7e42dcfcdc339d2db1b3845fd4ccd583231564a153494feef",
+      "resultModelHash": "bc23a701de3f81e7e42dcfcdc339d2db1b3845fd4ccd583231564a153494feef",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Keep photon/chloroplast scale differences, hidden molecule filtering, compartment geometry and observed colors. Model updates gas/water/sugar counts.",
+      "projectionAndMetadataPreservation": "Complete program AST is unchanged after excluding only the exact migrated live set properties and the newly added spec.change property.",
+      "normalizedUnchangedProgramSha256": "55cd4673e57651f77c1d423af85ad735fd56358188c159da736b98a290701537",
+      "writeEquivalence": {
+        "before": "live[field].set(instance, decodedValue) => instance.setParameters({ [sameField]: decodedValue })",
+        "after": "The existing descriptor decoder invokes change(instance, { [sameField]: decodedValue }), which calls instance.setParameters(changes).",
+        "preconditions": "AST verified each removed setter has two identifier parameters, one direct method call, one object argument, one property with the exact declared live key, and the unchanged second parameter as its value. No block-bodied/transformed setter was removed."
+      },
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "consumer-choice",
+      "scope": "Phase A common live-write migration only",
+      "decision": "migrate",
+      "reason": "Replace 5 exact same-key forwards to setParameters with one explicit change handler; retained field records still declare controls and all local metadata. This removes repeated action boilerplate without introducing reflection or changing a model call.",
+      "changedFiles": [
+        "experiments/consumer-choice/ui.ts"
+      ],
+      "publicMethod": "setParameters",
+      "migratedControlKeys": [
+        "normInfluence",
+        "informationExchange",
+        "exploration",
+        "qualityOrange",
+        "qualityBlue"
+      ],
+      "baselineUIHash": "2c6d8ada99525eaa286f41918e4b80ecde43d4dba838cea88e927ea12424e4b4",
+      "resultUIHash": "18895ce8787745f3036ac2bcaa846d866f914ad9bf911a346140ed72e7ce285f",
+      "baselineModelHash": "9530c8a16f07c3fade1b116d0b4cad171f5f61918583677d8171cd632d639ae6",
+      "resultModelHash": "9530c8a16f07c3fade1b116d0b4cad171f5f61918583677d8171cd632d639ae6",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Orange/blue colors identify product alternatives across network and histories; preserve quality-dependent diameter4*(1+4*quality), personal utility arrays and null clustering gaps.",
+      "projectionAndMetadataPreservation": "Complete program AST is unchanged after excluding only the exact migrated live set properties and the newly added spec.change property.",
+      "normalizedUnchangedProgramSha256": "ce385cc90dbf23ca232b3986f653c0d5bd72a10812369d816bc0c97473c082ed",
+      "writeEquivalence": {
+        "before": "live[field].set(instance, decodedValue) => instance.setParameters({ [sameField]: decodedValue })",
+        "after": "The existing descriptor decoder invokes change(instance, { [sameField]: decodedValue }), which calls instance.setParameters(changes).",
+        "preconditions": "AST verified each removed setter has two identifier parameters, one direct method call, one object argument, one property with the exact declared live key, and the unchanged second parameter as its value. No block-bodied/transformed setter was removed."
+      },
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "crispr-bacterium",
+      "scope": "Phase A common live-write migration only",
+      "decision": "migrate",
+      "reason": "Replace 4 exact same-key forwards to setParameters with one explicit change handler; retained field records still declare controls and all local metadata. This removes repeated action boilerplate without introducing reflection or changing a model call.",
+      "changedFiles": [
+        "experiments/crispr-bacterium/ui.ts"
+      ],
+      "publicMethod": "setParameters",
+      "migratedControlKeys": [
+        "guideUnbindChance",
+        "processivity",
+        "crisprFunction",
+        "labels"
+      ],
+      "baselineUIHash": "22cf8030c7c73fbbc2843aeab94525e49a9f512e421d14e2511e7ca6a941b6b6",
+      "resultUIHash": "6000fe606922c4588e18cf724e2e72e0c1e7dbfe014967c4e81fcedb0c4668df",
+      "baselineModelHash": "4da61331c86a264514e8254259015263bd143c82bc54e7d1c4dfd5efad96a058",
+      "resultModelHash": "4da61331c86a264514e8254259015263bd143c82bc54e7d1c4dfd5efad96a058",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Preserve integer sequence bins i\u22120.5, maxVirusTypes bounds and Number conversions in history. Model owns Cas/virus events and colors. UI currently calculates histograms from observed arrays.",
+      "projectionAndMetadataPreservation": "Complete program AST is unchanged after excluding only the exact migrated live set properties and the newly added spec.change property.",
+      "normalizedUnchangedProgramSha256": "8b5e9a67e559a0afc4666d4b3afe372d3638cc1d08bbf195fe1098b31f7df1a4",
+      "writeEquivalence": {
+        "before": "live[field].set(instance, decodedValue) => instance.setParameters({ [sameField]: decodedValue })",
+        "after": "The existing descriptor decoder invokes change(instance, { [sameField]: decodedValue }), which calls instance.setParameters(changes).",
+        "preconditions": "AST verified each removed setter has two identifier parameters, one direct method call, one object argument, one property with the exact declared live key, and the unchanged second parameter as its value. No block-bodied/transformed setter was removed."
+      },
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "crispr-ecosystem",
+      "scope": "Phase A common live-write migration only",
+      "decision": "migrate",
+      "reason": "Replace 4 exact same-key forwards to setParameters with one explicit change handler; retained field records still declare controls and all local metadata. This removes repeated action boilerplate without introducing reflection or changing a model call.",
+      "changedFiles": [
+        "experiments/crispr-ecosystem/ui.ts"
+      ],
+      "publicMethod": "setParameters",
+      "migratedControlKeys": [
+        "infectionChance",
+        "spacerLossChance",
+        "crispr",
+        "plottedVirus"
+      ],
+      "baselineUIHash": "a5d202ce8135ba0f6ca141a110b6011a72fee33ed7a0335ebd9f3a414f7b7d69",
+      "resultUIHash": "df01c271aac86d8bf8ba13591e2c837f3cf6e7481ecc72ae4ae1b5ee46eba108",
+      "baselineModelHash": "80ce02797eb81adefce2d4b02b08df0b4a184407cc2675d7441f11f79e0e2e09",
+      "resultModelHash": "80ce02797eb81adefce2d4b02b08df0b4a184407cc2675d7441f11f79e0e2e09",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Preserve focal-virus percentage, dynamic sequence identities, observed missing sequence\u21920 history rule and exact integer histogram bins; foodEnergy color is model observation.",
+      "projectionAndMetadataPreservation": "Complete program AST is unchanged after excluding only the exact migrated live set properties and the newly added spec.change property.",
+      "normalizedUnchangedProgramSha256": "b5baf7523dd4c1a050d98ae5fbc56e1eedcf40d16548920dd6dbbbe68a0cb24c",
+      "writeEquivalence": {
+        "before": "live[field].set(instance, decodedValue) => instance.setParameters({ [sameField]: decodedValue })",
+        "after": "The existing descriptor decoder invokes change(instance, { [sameField]: decodedValue }), which calls instance.setParameters(changes).",
+        "preconditions": "AST verified each removed setter has two identifier parameters, one direct method call, one object argument, one property with the exact declared live key, and the unchanged second parameter as its value. No block-bodied/transformed setter was removed."
+      },
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "crystallization-basic",
+      "scope": "Phase A common live-write migration only",
+      "decision": "migrate",
+      "reason": "Replace 3 exact same-key forwards to setRules with one explicit change handler; retained field records still declare controls and all local metadata. This removes repeated action boilerplate without introducing reflection or changing a model call.",
+      "changedFiles": [
+        "experiments/crystallization-basic/ui.ts"
+      ],
+      "publicMethod": "setRules",
+      "migratedControlKeys": [
+        "meltingTemp",
+        "roomTemp",
+        "histogram"
+      ],
+      "baselineUIHash": "fdf1e30619e7e006db6704d3f6ff710af1f7adbb599872193d2b687150807ada",
+      "resultUIHash": "35551d1c7a5f09ce18980243d564bc1977bb7ccddeb47bd6fa41f6fae5bebc98",
+      "baselineModelHash": "a62498fe92a192a0373f7cd621657712d8654231d06d78c31bbfff96f2af03b5",
+      "resultModelHash": "a62498fe92a192a0373f7cd621657712d8654231d06d78c31bbfff96f2af03b5",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Keep exact NetLogo color classes and source temperature boundaries, per-bin label rounding only for display, sequential cooling/rotation order untouched.",
+      "projectionAndMetadataPreservation": "Complete program AST is unchanged after excluding only the exact migrated live set properties and the newly added spec.change property.",
+      "normalizedUnchangedProgramSha256": "6d6e91981e7ecdc8c9bbc34dc1cadb4c7d5d67982eaf48aa618df8c3b2f6f82a",
+      "writeEquivalence": {
+        "before": "live[field].set(instance, decodedValue) => instance.setRules({ [sameField]: decodedValue })",
+        "after": "The existing descriptor decoder invokes change(instance, { [sameField]: decodedValue }), which calls instance.setRules(changes).",
+        "preconditions": "AST verified each removed setter has two identifier parameters, one direct method call, one object argument, one property with the exact declared live key, and the unchanged second parameter as its value. No block-bodied/transformed setter was removed."
+      },
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "cyclic-ca",
+      "scope": "Phase A common live-write migration only",
+      "decision": "retain",
+      "reason": "No common write family reaches the accepted three-forward threshold. Retain explicit actions and the existing declaration; a new handler would not simplify its ordinary reading/writing.",
+      "changedFiles": [],
+      "publicMethod": null,
+      "migratedControlKeys": [],
+      "baselineUIHash": "be805f3a443be014fa25e855421417b4f3b1a2eca85e44bbef95d2e863b39428",
+      "resultUIHash": "be805f3a443be014fa25e855421417b4f3b1a2eca85e44bbef95d2e863b39428",
+      "baselineModelHash": "398f9c047a4526aba0ee3f3dca7f958d37eeaf3448a0d3a4a5bfe3dc7c3da997",
+      "resultModelHash": "398f9c047a4526aba0ee3f3dca7f958d37eeaf3448a0d3a4a5bfe3dc7c3da997",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Exact model colorList/NetLogo conversion and periodic neighborhood remain authoritative. Threshold controls invoke model validation.",
+      "projectionAndMetadataPreservation": "UI source bytes are unchanged in this assignment.",
+      "normalizedUnchangedProgramSha256": null,
+      "writeEquivalence": null,
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "daisyworld",
+      "scope": "Phase A common live-write migration only",
+      "decision": "migrate",
+      "reason": "Replace 8 exact same-key forwards to setRules with one explicit change handler; retained field records still declare controls and all local metadata. This removes repeated action boilerplate without introducing reflection or changing a model call.",
+      "changedFiles": [
+        "experiments/daisyworld/ui.ts"
+      ],
+      "publicMethod": "setRules",
+      "migratedControlKeys": [
+        "scenario",
+        "solarLuminosity",
+        "albedoSurface",
+        "albedoBlacks",
+        "albedoWhites",
+        "showTempMap",
+        "showDaisies",
+        "paintDaisiesAs"
+      ],
+      "baselineUIHash": "9ee0f0dd9b522c21f1a3d50eb18f2d5cefbb3851f24390b23697e121da3c8866",
+      "resultUIHash": "6833302b084e950cb7c42981c46ef2be1037ca402011140b6ce591245b62048f",
+      "baselineModelHash": "e45e8a381a75342b78555d7d5eeeec59618cd229f7683712637919aab4b468e3",
+      "resultModelHash": "e45e8a381a75342b78555d7d5eeeec59618cd229f7683712637919aab4b468e3",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Keep fixed (temperature+50)/160 clamp and NetLogo10+9.999 range; albedo is model-owned and black/white breeds remain stable. Painting actions alter actual fields/daisies.",
+      "projectionAndMetadataPreservation": "Complete program AST is unchanged after excluding only the exact migrated live set properties and the newly added spec.change property.",
+      "normalizedUnchangedProgramSha256": "3424e528e19e61a44198eb762de1572d4bc67db50dd52273ec9740740242bf1a",
+      "writeEquivalence": {
+        "before": "live[field].set(instance, decodedValue) => instance.setRules({ [sameField]: decodedValue })",
+        "after": "The existing descriptor decoder invokes change(instance, { [sameField]: decodedValue }), which calls instance.setRules(changes).",
+        "preconditions": "AST verified each removed setter has two identifier parameters, one direct method call, one object argument, one property with the exact declared live key, and the unchanged second parameter as its value. No block-bodied/transformed setter was removed."
+      },
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "des-bike-redistribution",
+      "scope": "Phase A common live-write migration only",
+      "decision": "retain",
+      "reason": "No common write family reaches the accepted three-forward threshold. Retain explicit actions and the existing declaration; a new handler would not simplify its ordinary reading/writing.",
+      "changedFiles": [],
+      "publicMethod": null,
+      "migratedControlKeys": [],
+      "baselineUIHash": "a925f27daf93dc6c1e06d82da1527f7d92dfd5868f1809df4d372ece7ed52529",
+      "resultUIHash": "a925f27daf93dc6c1e06d82da1527f7d92dfd5868f1809df4d372ece7ed52529",
+      "baselineModelHash": "88e9afd56c38d2818d9a2600de7e51dc4de23027aaabfb35167bec5ddaf128ae",
+      "resultModelHash": "88e9afd56c38d2818d9a2600de7e51dc4de23027aaabfb35167bec5ddaf128ae",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Minutes and indivisible bikes; store occupancy plus cargo conserve fleet. Slot glyphs are anonymous capacity, not individual bike identities; station/truck Agent IDs remain canonical.",
+      "projectionAndMetadataPreservation": "UI source bytes are unchanged in this assignment.",
+      "normalizedUnchangedProgramSha256": null,
+      "writeEquivalence": null,
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "des-bus-interchange",
+      "scope": "Phase A common live-write migration only",
+      "decision": "retain",
+      "reason": "No common write family reaches the accepted three-forward threshold. Retain explicit actions and the existing declaration; a new handler would not simplify its ordinary reading/writing.",
+      "changedFiles": [],
+      "publicMethod": null,
+      "migratedControlKeys": [],
+      "baselineUIHash": "16f6c7cfbef90ad79db00521a02a992d9f6aec3c8571918f9b2672e9bf0822c0",
+      "resultUIHash": "16f6c7cfbef90ad79db00521a02a992d9f6aec3c8571918f9b2672e9bf0822c0",
+      "baselineModelHash": "08c89006f3f491f3cd8a0c5114fe57433bde6dce0ddaba37099aa5209f187bbf",
+      "resultModelHash": "08c89006f3f491f3cd8a0c5114fe57433bde6dce0ddaba37099aa5209f187bbf",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Minutes interpolate observed route legs only in diagram coordinates; retain 2/3/8 weighted alternatives and retained berth claims. Admission ledger filtering must not establish future priority queue semantics.",
+      "projectionAndMetadataPreservation": "UI source bytes are unchanged in this assignment.",
+      "normalizedUnchangedProgramSha256": null,
+      "writeEquivalence": null,
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "des-civic-office",
+      "scope": "Phase A common live-write migration only",
+      "decision": "retain",
+      "reason": "No common write family reaches the accepted three-forward threshold. Retain explicit actions and the existing declaration; a new handler would not simplify its ordinary reading/writing.",
+      "changedFiles": [],
+      "publicMethod": null,
+      "migratedControlKeys": [],
+      "baselineUIHash": "16b68135d6b0a59d20a6f83dc003703764ad97aaa2ad8bf6ac192921c72580e0",
+      "resultUIHash": "16b68135d6b0a59d20a6f83dc003703764ad97aaa2ad8bf6ac192921c72580e0",
+      "baselineModelHash": "c081b1274508857c1057a575be6865abb07a4edb17b2877216b0d4bb91a4c69f",
+      "resultModelHash": "c081b1274508857c1057a575be6865abb07a4edb17b2877216b0d4bb91a4c69f",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Minutes; Resource owns capacity and retained service. Existing ledger filters do not expose canonical ordered queue owners; numbered desk assignment is diagram symbolism, not an observed allocation.",
+      "projectionAndMetadataPreservation": "UI source bytes are unchanged in this assignment.",
+      "normalizedUnchangedProgramSha256": null,
+      "writeEquivalence": null,
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "des-elevator",
+      "scope": "Phase A common live-write migration only",
+      "decision": "retain",
+      "reason": "No common write family reaches the accepted three-forward threshold. Retain explicit actions and the existing declaration; a new handler would not simplify its ordinary reading/writing.",
+      "changedFiles": [],
+      "publicMethod": null,
+      "migratedControlKeys": [],
+      "baselineUIHash": "0f4370ee067f106e0c7cf48fbb351a2bca2a3f65cad4e5ce8e864a51e42212eb",
+      "resultUIHash": "0f4370ee067f106e0c7cf48fbb351a2bca2a3f65cad4e5ce8e864a51e42212eb",
+      "baselineModelHash": "85832237463827eda377500f1051852c00997481e02b067baaac1d8f136d01e8",
+      "resultModelHash": "85832237463827eda377500f1051852c00997481e02b067baaac1d8f136d01e8",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Seconds, distinct World tick/Agenda time, alight-before-board, original-age calls and Resource-owned seats remain fixed. Cabin passenger IDs correspond to actual occupants.",
+      "projectionAndMetadataPreservation": "UI source bytes are unchanged in this assignment.",
+      "normalizedUnchangedProgramSha256": null,
+      "writeEquivalence": null,
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "des-emergency-dispatch",
+      "scope": "Phase A common live-write migration only",
+      "decision": "retain",
+      "reason": "No common write family reaches the accepted three-forward threshold. Retain explicit actions and the existing declaration; a new handler would not simplify its ordinary reading/writing.",
+      "changedFiles": [],
+      "publicMethod": null,
+      "migratedControlKeys": [],
+      "baselineUIHash": "f4a744b003d3f75b22cab6c9bb8d27a6cd202ea8860f28600b731e2f235a0b94",
+      "resultUIHash": "f4a744b003d3f75b22cab6c9bb8d27a6cd202ea8860f28600b731e2f235a0b94",
+      "baselineModelHash": "bb0dc8a415fff4db5fcee61741c85bb62905ee8bef08e7a50fb47f9d03c19f2c",
+      "resultModelHash": "bb0dc8a415fff4db5fcee61741c85bb62905ee8bef08e7a50fb47f9d03c19f2c",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Minutes; lower priority number first among waiters, no clinical calibration. Team triangles mean assignment, not physical travel; preserve actual calls and access edges.",
+      "projectionAndMetadataPreservation": "UI source bytes are unchanged in this assignment.",
+      "normalizedUnchangedProgramSha256": null,
+      "writeEquivalence": null,
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "des-ev-charging",
+      "scope": "Phase A common live-write migration only",
+      "decision": "retain",
+      "reason": "No common write family reaches the accepted three-forward threshold. Retain explicit actions and the existing declaration; a new handler would not simplify its ordinary reading/writing.",
+      "changedFiles": [],
+      "publicMethod": null,
+      "migratedControlKeys": [],
+      "baselineUIHash": "fc1496125205c7e7b7eb7c45b138e429ff89b6cf65192e89ed0cfd00455a912f",
+      "resultUIHash": "fc1496125205c7e7b7eb7c45b138e429ff89b6cf65192e89ed0cfd00455a912f",
+      "baselineModelHash": "366f5a3a0f62945d5e37b0b82f787ab0619234722adab445329940bd80e77244",
+      "resultModelHash": "366f5a3a0f62945d5e37b0b82f787ab0619234722adab445329940bd80e77244",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Minutes/session durations; canonical policy-sorted waiting owners must determine order. Keep cancelled/completed distinct and retained grants above reduced capacity visible; no battery physics.",
+      "projectionAndMetadataPreservation": "UI source bytes are unchanged in this assignment.",
+      "normalizedUnchangedProgramSha256": null,
+      "writeEquivalence": null,
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "des-goods-buffer",
+      "scope": "Phase A common live-write migration only",
+      "decision": "retain",
+      "reason": "No common write family reaches the accepted three-forward threshold. Retain explicit actions and the existing declaration; a new handler would not simplify its ordinary reading/writing.",
+      "changedFiles": [],
+      "publicMethod": null,
+      "migratedControlKeys": [],
+      "baselineUIHash": "8e02f57ae37aac212bd33b355e59dc0ac7d022c2955022a006499d9a9d8071e1",
+      "resultUIHash": "8e02f57ae37aac212bd33b355e59dc0ac7d022c2955022a006499d9a9d8071e1",
+      "baselineModelHash": "a9936f8677d5809efc1431d7e923d1893d3649467f0ab2350864ce31430e927d",
+      "resultModelHash": "a9936f8677d5809efc1431d7e923d1893d3649467f0ab2350864ce31430e927d",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Minutes and indivisible crates; arrays directly preserve Store transfer/put order. A symbolic bounded slot is not an assigned physical storage location.",
+      "projectionAndMetadataPreservation": "UI source bytes are unchanged in this assignment.",
+      "normalizedUnchangedProgramSha256": null,
+      "writeEquivalence": null,
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "des-machine-maintenance",
+      "scope": "Phase A common live-write migration only",
+      "decision": "retain",
+      "reason": "No common write family reaches the accepted three-forward threshold. Retain explicit actions and the existing declaration; a new handler would not simplify its ordinary reading/writing.",
+      "changedFiles": [],
+      "publicMethod": null,
+      "migratedControlKeys": [],
+      "baselineUIHash": "5f7f8e11e02d1b0670d65505d94ada22394cc7abfe6ab3c946a0e8e1de5a3a0a",
+      "resultUIHash": "5f7f8e11e02d1b0670d65505d94ada22394cc7abfe6ab3c946a0e8e1de5a3a0a",
+      "baselineModelHash": "8ef7137cb47dc1e95fde2e1ee83c75a1175f7b91947c8cb061a30a04d71234a1",
+      "resultModelHash": "8ef7137cb47dc1e95fde2e1ee83c75a1175f7b91947c8cb061a30a04d71234a1",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Minutes and synthetic cycles; triangles identify repair assignment, Resource owns teams and TimeWeighted owns availability. EventTrace is diagnostics, not History.",
+      "projectionAndMetadataPreservation": "UI source bytes are unchanged in this assignment.",
+      "normalizedUnchangedProgramSha256": null,
+      "writeEquivalence": null,
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "des-parcel-logistics",
+      "scope": "Phase A common live-write migration only",
+      "decision": "retain",
+      "reason": "No common write family reaches the accepted three-forward threshold. Retain explicit actions and the existing declaration; a new handler would not simplify its ordinary reading/writing.",
+      "changedFiles": [],
+      "publicMethod": null,
+      "migratedControlKeys": [],
+      "baselineUIHash": "b448ea4ccdb1ed338b00fc04644993adbde7905eb228b5727259fd6d625537b8",
+      "resultUIHash": "b448ea4ccdb1ed338b00fc04644993adbde7905eb228b5727259fd6d625537b8",
+      "baselineModelHash": "4e5e793f791a4ca17b23343fcf7b0bd30d7a5e623b9a960f7b9e2af6cf987309",
+      "resultModelHash": "4e5e793f791a4ca17b23343fcf7b0bd30d7a5e623b9a960f7b9e2af6cf987309",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Minutes; return remains van-occupied after delivery; actual Store IDs determine depot/blocked order. Preserve East/West graph and weighted outbound/return portrayal.",
+      "projectionAndMetadataPreservation": "UI source bytes are unchanged in this assignment.",
+      "normalizedUnchangedProgramSha256": null,
+      "writeEquivalence": null,
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "des-waste-collection",
+      "scope": "Phase A common live-write migration only",
+      "decision": "retain",
+      "reason": "No common write family reaches the accepted three-forward threshold. Retain explicit actions and the existing declaration; a new handler would not simplify its ordinary reading/writing.",
+      "changedFiles": [],
+      "publicMethod": null,
+      "migratedControlKeys": [],
+      "baselineUIHash": "3bac32e78b1d483c8950e08019cfbe2f0701d7ba104a18b336a0a638e110d5d5",
+      "resultUIHash": "3bac32e78b1d483c8950e08019cfbe2f0701d7ba104a18b336a0a638e110d5d5",
+      "baselineModelHash": "65e9005cb70108cd5c84715e87590b67500c3707743277a3a7cea4eea80d92bc",
+      "resultModelHash": "65e9005cb70108cd5c84715e87590b67500c3707743277a3a7cea4eea80d92bc",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Minutes and load units; exact Grid topology and bounded truck capacity matter. No invented roads or bins; depot unloading label is intentionally short for narrow layout.",
+      "projectionAndMetadataPreservation": "UI source bytes are unchanged in this assignment.",
+      "normalizedUnchangedProgramSha256": null,
+      "writeEquivalence": null,
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "des-water-allocation",
+      "scope": "Phase A common live-write migration only",
+      "decision": "retain",
+      "reason": "No common write family reaches the accepted three-forward threshold. Retain explicit actions and the existing declaration; a new handler would not simplify its ordinary reading/writing.",
+      "changedFiles": [],
+      "publicMethod": null,
+      "migratedControlKeys": [],
+      "baselineUIHash": "cfd83d9f0e5f760cf433e999ec2098bf0aa83e862629eb518078c0f8e524fba1",
+      "resultUIHash": "cfd83d9f0e5f760cf433e999ec2098bf0aa83e862629eb518078c0f8e524fba1",
+      "baselineModelHash": "0663d5d5c046ba9b76122de025dfcf1046b00ec540b989695cb33874fc96db5e",
+      "resultModelHash": "0663d5d5c046ba9b76122de025dfcf1046b00ec540b989695cb33874fc96db5e",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Synthetic allocation units, NOT m3/pressure/households. Three per-district glyphs represent demand units and preserve committed versus supplied distinction.",
+      "projectionAndMetadataPreservation": "UI source bytes are unchanged in this assignment.",
+      "normalizedUnchangedProgramSha256": null,
+      "writeEquivalence": null,
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "diffusion-on-a-directed-network",
+      "scope": "Phase A common live-write migration only",
+      "decision": "retain",
+      "reason": "No common write family reaches the accepted three-forward threshold (setRules: 1 exact fields). Retain explicit actions and the existing declaration; a new handler would not simplify its ordinary reading/writing.",
+      "changedFiles": [],
+      "publicMethod": null,
+      "migratedControlKeys": [],
+      "baselineUIHash": "54aec06d46fee71a0bcf56afc5273d1e1e63c588951cc501182632a4d7d0e03d",
+      "resultUIHash": "54aec06d46fee71a0bcf56afc5273d1e1e63c588951cc501182632a4d7d0e03d",
+      "baselineModelHash": "04500b221b518615518c514b5c1d8216640e5c65e439265c82cf505a1906d2e7",
+      "resultModelHash": "04500b221b518615518c514b5c1d8216640e5c65e439265c82cf505a1906d2e7",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Preserve diameter4+50*sqrt(value/totalValue), explicit finite relative-flow width and zero guards; graph IDs/active topology stay authoritative. Table intentionally says first20 and slices20.",
+      "projectionAndMetadataPreservation": "UI source bytes are unchanged in this assignment.",
+      "normalizedUnchangedProgramSha256": null,
+      "writeEquivalence": null,
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "dining-philosophers",
+      "scope": "Phase A common live-write migration only",
+      "decision": "migrate",
+      "reason": "Replace 3 exact same-key forwards to setParameters with one explicit change handler; retained field records still declare controls and all local metadata. This removes repeated action boilerplate without introducing reflection or changing a model call.",
+      "changedFiles": [
+        "experiments/dining-philosophers/ui.ts"
+      ],
+      "publicMethod": "setParameters",
+      "migratedControlKeys": [
+        "hungryChance",
+        "fullChance",
+        "cooperation"
+      ],
+      "baselineUIHash": "cecff0f1d272215d870b703c947f208e527fbd455c61bf1d3b80807d10c64585",
+      "resultUIHash": "40370c63a8e3dd365c60a075beb2e88cf7bd325f98b6a497c17cfd41dab0ec00",
+      "baselineModelHash": "2c5723457b07bac0150051f4aff730f17195cac441328f33e8d39c6cce2e4bb5",
+      "resultModelHash": "2c5723457b07bac0150051f4aff730f17195cac441328f33e8d39c6cce2e4bb5",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Thinking/hungry/eating colors are shared across geometry and chart; fork/philosopher numeric IDs are explicitly namespaced p-/f-. Preserve cooperation marks and fork ownership, not Resource substitution.",
+      "projectionAndMetadataPreservation": "Complete program AST is unchanged after excluding only the exact migrated live set properties and the newly added spec.change property.",
+      "normalizedUnchangedProgramSha256": "0c442fff1e730bbc686281b76774e4c9ce0de99f73be5ed8a4b92b7181e42a0e",
+      "writeEquivalence": {
+        "before": "live[field].set(instance, decodedValue) => instance.setParameters({ [sameField]: decodedValue })",
+        "after": "The existing descriptor decoder invokes change(instance, { [sameField]: decodedValue }), which calls instance.setParameters(changes).",
+        "preconditions": "AST verified each removed setter has two identifier parameters, one direct method call, one object argument, one property with the exact declared live key, and the unchanged second parameter as its value. No block-bodied/transformed setter was removed."
+      },
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "disease-solo",
+      "scope": "Phase A common live-write migration only",
+      "decision": "migrate",
+      "reason": "Replace 4 exact same-key forwards to setParameters with one explicit change handler; retained field records still declare controls and all local metadata. This removes repeated action boilerplate without introducing reflection or changing a model call.",
+      "changedFiles": [
+        "experiments/disease-solo/ui.ts"
+      ],
+      "publicMethod": "setParameters",
+      "migratedControlKeys": [
+        "infectionChance",
+        "stepSize",
+        "avoid",
+        "chase"
+      ],
+      "baselineUIHash": "0ff58406268a6092d6d47df6ae3f88aa17d295ab5ae0000a8d5fade9bbe26b87",
+      "resultUIHash": "79caddb25c1cc3b978b318d0773af384bc2be0bb8b067a3e92fee7dd39e191a8",
+      "baselineModelHash": "4ae3f77b74545de4323021eb3d502064f76966ec3e0e2704c0901e4d2f012b6c",
+      "resultModelHash": "4ae3f77b74545de4323021eb3d502064f76966ec3e0e2704c0901e4d2f012b6c",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Keep controlled-user movement/infection actions, model-owned disease colors and contact geometry. No clinical rate/unit calibration is implied.",
+      "projectionAndMetadataPreservation": "Complete program AST is unchanged after excluding only the exact migrated live set properties and the newly added spec.change property.",
+      "normalizedUnchangedProgramSha256": "d9f64667e731eb3df96242822a711d501ce35f4d884534e427f115677f95c722",
+      "writeEquivalence": {
+        "before": "live[field].set(instance, decodedValue) => instance.setParameters({ [sameField]: decodedValue })",
+        "after": "The existing descriptor decoder invokes change(instance, { [sameField]: decodedValue }), which calls instance.setParameters(changes).",
+        "preconditions": "AST verified each removed setter has two identifier parameters, one direct method call, one object argument, one property with the exact declared live key, and the unchanged second parameter as its value. No block-bodied/transformed setter was removed."
+      },
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "dla",
+      "scope": "Phase A common live-write migration only",
+      "decision": "migrate",
+      "reason": "Replace 3 exact same-key forwards to setRules with one explicit change handler; retained field records still declare controls and all local metadata. This removes repeated action boilerplate without introducing reflection or changing a model call.",
+      "changedFiles": [
+        "experiments/dla/ui.ts"
+      ],
+      "publicMethod": "setRules",
+      "migratedControlKeys": [
+        "maxParticles",
+        "wiggleAngle",
+        "useWholeWorld"
+      ],
+      "baselineUIHash": "e0ea1a83d75edc23da5070606cd8fafdfcc514ccfa0b4e97c935404c29761bf7",
+      "resultUIHash": "2ca80e8daa2390238215e5e71f6f84926e8e77a1b2650a1f29c2599925566f4d",
+      "baselineModelHash": "c9d4d5d677fe96f66dba5365b372267c9212ebecdc8fd965100e8cb5b613136c",
+      "resultModelHash": "c9d4d5d677fe96f66dba5365b372267c9212ebecdc8fd965100e8cb5b613136c",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Preserve lattice deposition geometry and walker identities for inspector. Binary occupied colors and source boundary/radius are not arbitrary group layout.",
+      "projectionAndMetadataPreservation": "Complete program AST is unchanged after excluding only the exact migrated live set properties and the newly added spec.change property.",
+      "normalizedUnchangedProgramSha256": "a02f9fe9d5967bda202dee90a2a58ccc2ab0eea3aa006f5edfd9a19f2a6724db",
+      "writeEquivalence": {
+        "before": "live[field].set(instance, decodedValue) => instance.setRules({ [sameField]: decodedValue })",
+        "after": "The existing descriptor decoder invokes change(instance, { [sameField]: decodedValue }), which calls instance.setRules(changes).",
+        "preconditions": "AST verified each removed setter has two identifier parameters, one direct method call, one object argument, one property with the exact declared live key, and the unchanged second parameter as its value. No block-bodied/transformed setter was removed."
+      },
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "dna-protein-synthesis",
+      "scope": "Phase A common live-write migration only",
+      "decision": "migrate",
+      "reason": "Replace 3 exact same-key forwards to setParameters with one explicit change handler; retained field records still declare controls and all local metadata. This removes repeated action boilerplate without introducing reflection or changing a model call.",
+      "changedFiles": [
+        "experiments/dna-protein-synthesis/ui.ts"
+      ],
+      "publicMethod": "setParameters",
+      "migratedControlKeys": [
+        "nucleotidesAffected",
+        "mutationType",
+        "showGenes"
+      ],
+      "baselineUIHash": "cbf36087256a2c023d746980dfde089dc47bfd2f93f4059e5cf04e115c070f86",
+      "resultUIHash": "2699971abfd7d2218853674f49a8731967b50624cd429c2086d0c05820f4a65d",
+      "baselineModelHash": "598d714d50bf0dbbcab7f079afedb9b0abbfef36c143d2e0eb050335f3077d2a",
+      "resultModelHash": "598d714d50bf0dbbcab7f079afedb9b0abbfef36c143d2e0eb050335f3077d2a",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Protein strand/sequence remains text, not count data. Original/duplicate lanes and molecular visibility encode explicit instruction flow; public transcribe/translate/replicate/release actions stay model-owned.",
+      "projectionAndMetadataPreservation": "Complete program AST is unchanged after excluding only the exact migrated live set properties and the newly added spec.change property.",
+      "normalizedUnchangedProgramSha256": "9c989203f101bdd86b4e6a2e669711ff063236bb407527f111d31ea7a6608e80",
+      "writeEquivalence": {
+        "before": "live[field].set(instance, decodedValue) => instance.setParameters({ [sameField]: decodedValue })",
+        "after": "The existing descriptor decoder invokes change(instance, { [sameField]: decodedValue }), which calls instance.setParameters(changes).",
+        "preconditions": "AST verified each removed setter has two identifier parameters, one direct method call, one object argument, one property with the exact declared live key, and the unchanged second parameter as its value. No block-bodied/transformed setter was removed."
+      },
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "el-farol",
+      "scope": "Phase A common live-write migration only",
+      "decision": "retain",
+      "reason": "No common write family reaches the accepted three-forward threshold (setRules: 1 exact fields). Retain explicit actions and the existing declaration; a new handler would not simplify its ordinary reading/writing.",
+      "changedFiles": [],
+      "publicMethod": null,
+      "migratedControlKeys": [],
+      "baselineUIHash": "eec3bc45729d31df817f9eacc3805f3471fbc5d6df4967f830fec4c6f74a303f",
+      "resultUIHash": "eec3bc45729d31df817f9eacc3805f3471fbc5d6df4967f830fec4c6f74a303f",
+      "baselineModelHash": "a74483fc58c726c8864aef3a211f3ed6bd39c76d30119ab4ff55777d40e27844",
+      "resultModelHash": "a74483fc58c726c8864aef3a211f3ed6bd39c76d30119ab4ff55777d40e27844",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Preserve overcrowdingThreshold as model input and explicit reference line over max(10,tick); homes/bar topology has meaning and attendance is count, not percent.",
+      "projectionAndMetadataPreservation": "UI source bytes are unchanged in this assignment.",
+      "normalizedUnchangedProgramSha256": null,
+      "writeEquivalence": null,
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "epidem-basic",
+      "scope": "Phase A common live-write migration only",
+      "decision": "migrate",
+      "reason": "Replace 3 exact same-key forwards to setParameters with one explicit change handler; retained field records still declare controls and all local metadata. This removes repeated action boilerplate without introducing reflection or changing a model call.",
+      "changedFiles": [
+        "experiments/epidem-basic/ui.ts"
+      ],
+      "publicMethod": "setParameters",
+      "migratedControlKeys": [
+        "infectionChance",
+        "recoveryChance",
+        "averageRecoveryTime"
+      ],
+      "baselineUIHash": "5503669dd14e8cd25f98c271bf9a34e41ab8dc8e1fbfec46f96a88239369b422",
+      "resultUIHash": "c7c815b1ace32bc481637463febdf6e077f2540e9215cfc5e6871fe5577f9769",
+      "baselineModelHash": "48db3044717651ceae34eb3c13451e7ce34c1e50a34871a655838f8e717c10ef",
+      "resultModelHash": "48db3044717651ceae34eb3c13451e7ce34c1e50a34871a655838f8e717c10ef",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Counts and model-calculated transmission reporters stay headless; susceptible/infected/cured portrayal and contact movement remain unchanged. No empirical epidemiology claim.",
+      "projectionAndMetadataPreservation": "Complete program AST is unchanged after excluding only the exact migrated live set properties and the newly added spec.change property.",
+      "normalizedUnchangedProgramSha256": "8529b05a3798e278948031ae80500cbaf1c8ddd9d9fe13d6463f53990573b668",
+      "writeEquivalence": {
+        "before": "live[field].set(instance, decodedValue) => instance.setParameters({ [sameField]: decodedValue })",
+        "after": "The existing descriptor decoder invokes change(instance, { [sameField]: decodedValue }), which calls instance.setParameters(changes).",
+        "preconditions": "AST verified each removed setter has two identifier parameters, one direct method call, one object argument, one property with the exact declared live key, and the unchanged second parameter as its value. No block-bodied/transformed setter was removed."
+      },
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "epidem-travel-and-control",
+      "scope": "Phase A common live-write migration only",
+      "decision": "migrate",
+      "reason": "Replace 10 exact same-key forwards to setParameters with one explicit change handler; retained field records still declare controls and all local metadata. This removes repeated action boilerplate without introducing reflection or changing a model call.",
+      "changedFiles": [
+        "experiments/epidem-travel-and-control/ui.ts"
+      ],
+      "publicMethod": "setParameters",
+      "migratedControlKeys": [
+        "infectionChance",
+        "recoveryChance",
+        "averageRecoveryTime",
+        "averageIsolationTendency",
+        "inoculationChance",
+        "averageHospitalGoingTendency",
+        "intraMobility",
+        "travelTendency",
+        "edges",
+        "travel"
+      ],
+      "baselineUIHash": "92bb024b55854eb9754acf70e9287bacf17a43e398264c77fc4ce547fc206173",
+      "resultUIHash": "0bd70ed757dd23cb34ae1e75eb452862db99af59b490d8f911719d4b497c378f",
+      "baselineModelHash": "d1534275ece4f8f68dfbf50348fbeb0046222c017d678f5bb92cf67ad28a9727",
+      "resultModelHash": "d1534275ece4f8f68dfbf50348fbeb0046222c017d678f5bb92cf67ad28a9727",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Preserve travel/contact geography and precedence ambulance\u2192cured\u2192inoculated\u2192infected\u2192susceptible. R0/beta/gamma are model reporters, not UI calculations.",
+      "projectionAndMetadataPreservation": "Complete program AST is unchanged after excluding only the exact migrated live set properties and the newly added spec.change property.",
+      "normalizedUnchangedProgramSha256": "c01cb3dafc3f6642d54017f10e6864114e5777279d8abda285f6cfe9572d86dc",
+      "writeEquivalence": {
+        "before": "live[field].set(instance, decodedValue) => instance.setParameters({ [sameField]: decodedValue })",
+        "after": "The existing descriptor decoder invokes change(instance, { [sameField]: decodedValue }), which calls instance.setParameters(changes).",
+        "preconditions": "AST verified each removed setter has two identifier parameters, one direct method call, one object argument, one property with the exact declared live key, and the unchanged second parameter as its value. No block-bodied/transformed setter was removed."
+      },
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "ethnocentrism",
+      "scope": "Phase A common live-write migration only",
+      "decision": "migrate",
+      "reason": "Replace 8 exact same-key forwards to setParameters with one explicit change handler; retained field records still declare controls and all local metadata. This removes repeated action boilerplate without introducing reflection or changing a model call.",
+      "changedFiles": [
+        "experiments/ethnocentrism/ui.ts"
+      ],
+      "publicMethod": "setParameters",
+      "migratedControlKeys": [
+        "immigrantsPerDay",
+        "initialPtr",
+        "costOfGiving",
+        "gainOfReceiving",
+        "mutationRate",
+        "deathRate",
+        "immigrantChanceCooperateWithSame",
+        "immigrantChanceCooperateWithDifferent"
+      ],
+      "baselineUIHash": "96f1fe486083a6b439b88eabb3f47a0267e353dc117d5626f5de3a875fbf0da8",
+      "resultUIHash": "17b1cfa79c211604258c7935ab856c7dbcb75a136af51d47fd9069d517dfae21",
+      "baselineModelHash": "a238bd3840ca768fc6520ea5ac7911e433152a26fa01b2828a49a59301f15b3f",
+      "resultModelHash": "a238bd3840ca768fc6520ea5ac7911e433152a26fa01b2828a49a59301f15b3f",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Tag color, own-group cooperation shape, other-group size and CC/CD/DC/DD labels are separate channels. Preserve +25/\u221225 coordinate conversion and canonical agent IDs.",
+      "projectionAndMetadataPreservation": "Complete program AST is unchanged after excluding only the exact migrated live set properties and the newly added spec.change property.",
+      "normalizedUnchangedProgramSha256": "a0148db2cd6c3a06f8afde0227827d3711ebe1324f67e2ccd995908eeef11f31",
+      "writeEquivalence": {
+        "before": "live[field].set(instance, decodedValue) => instance.setParameters({ [sameField]: decodedValue })",
+        "after": "The existing descriptor decoder invokes change(instance, { [sameField]: decodedValue }), which calls instance.setParameters(changes).",
+        "preconditions": "AST verified each removed setter has two identifier parameters, one direct method call, one object argument, one property with the exact declared live key, and the unchanged second parameter as its value. No block-bodied/transformed setter was removed."
+      },
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "expected-value",
+      "scope": "Phase A common live-write migration only",
+      "decision": "retain",
+      "reason": "No common write family reaches the accepted three-forward threshold (setDisplay: 2 exact fields). Retain explicit actions and the existing declaration; a new handler would not simplify its ordinary reading/writing.",
+      "changedFiles": [],
+      "publicMethod": null,
+      "migratedControlKeys": [],
+      "baselineUIHash": "1dc573b41ff73241866cb97acb2220453a303b952d8d837ff2a97058a303d446",
+      "resultUIHash": "1dc573b41ff73241866cb97acb2220453a303b952d8d837ff2a97058a303d446",
+      "baselineModelHash": "6f179ce6d6c7e89d52a1f181823231c21162713ca42ce1248b5e60bf43556fd1",
+      "resultModelHash": "6f179ce6d6c7e89d52a1f181823231c21162713ca42ce1248b5e60bf43556fd1",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Expected value and sampleSize product are model-owned. Preserve hidden/visible tile state, dieNums labels and explicit equality/reference series; selection IDs namespace overlays.",
+      "projectionAndMetadataPreservation": "UI source bytes are unchanged in this assignment.",
+      "normalizedUnchangedProgramSha256": null,
+      "writeEquivalence": null,
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "fire",
+      "scope": "Phase A common live-write migration only",
+      "decision": "retain",
+      "reason": "No common write family reaches the accepted three-forward threshold. Retain explicit actions and the existing declaration; a new handler would not simplify its ordinary reading/writing.",
+      "changedFiles": [],
+      "publicMethod": null,
+      "migratedControlKeys": [],
+      "baselineUIHash": "aa4a32ffd832e33f2dd63342729cd0f71eb44811b89fed3d0fb3b1b6a302427a",
+      "resultUIHash": "aa4a32ffd832e33f2dd63342729cd0f71eb44811b89fed3d0fb3b1b6a302427a",
+      "baselineModelHash": "c86026ee0b02dc657e534952241bc2c14cfac81dc44aa26ec87e5dc339866a16",
+      "resultModelHash": "c86026ee0b02dc657e534952241bc2c14cfac81dc44aa26ec87e5dc339866a16",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Preserve source fading-red formula255*max(0,(emberColor\u221210)/5), four-neighbor topology and completion after fires+embers0.",
+      "projectionAndMetadataPreservation": "UI source bytes are unchanged in this assignment.",
+      "normalizedUnchangedProgramSha256": null,
+      "writeEquivalence": null,
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "fireflies",
+      "scope": "Phase A common live-write migration only",
+      "decision": "migrate",
+      "reason": "Replace 5 exact same-key forwards to setRules with one explicit change handler; retained field records still declare controls and all local metadata. This removes repeated action boilerplate without introducing reflection or changing a model call.",
+      "changedFiles": [
+        "experiments/fireflies/ui.ts"
+      ],
+      "publicMethod": "setRules",
+      "migratedControlKeys": [
+        "strategy",
+        "flashLength",
+        "cycleLength",
+        "flashesToReset",
+        "showDarkFireflies"
+      ],
+      "baselineUIHash": "b1be270251af097fb9669e8af02b719e42a63b82b80e2ace99c7447781c70ac6",
+      "resultUIHash": "a2ee28459265eabf00efd0ed47bbe59c8a83abc67861fe81849826ad524adf88",
+      "baselineModelHash": "7d88e92de4226976f606c999cb1a77451fc5f760db686d7170e123ae94709d5d",
+      "resultModelHash": "7d88e92de4226976f606c999cb1a77451fc5f760db686d7170e123ae94709d5d",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Pulse-clock state and delayed recoloring stay in model. Preserve showDarkFireflies filter and yellow/dark distinction; IDs select observed fireflies.",
+      "projectionAndMetadataPreservation": "Complete program AST is unchanged after excluding only the exact migrated live set properties and the newly added spec.change property.",
+      "normalizedUnchangedProgramSha256": "bab928ba2bcfc05a53fe90bfe75d6cee37afb34932487790ab5275f584ddd331",
+      "writeEquivalence": {
+        "before": "live[field].set(instance, decodedValue) => instance.setRules({ [sameField]: decodedValue })",
+        "after": "The existing descriptor decoder invokes change(instance, { [sameField]: decodedValue }), which calls instance.setRules(changes).",
+        "preconditions": "AST verified each removed setter has two identifier parameters, one direct method call, one object argument, one property with the exact declared live key, and the unchanged second parameter as its value. No block-bodied/transformed setter was removed."
+      },
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "flocking",
+      "scope": "Phase A common live-write migration only",
+      "decision": "migrate",
+      "reason": "Replace 5 exact same-key forwards to setRules with one explicit change handler; retained field records still declare controls and all local metadata. This removes repeated action boilerplate without introducing reflection or changing a model call.",
+      "changedFiles": [
+        "experiments/flocking/ui.ts"
+      ],
+      "publicMethod": "setRules",
+      "migratedControlKeys": [
+        "vision",
+        "minimumSeparation",
+        "maxAlignTurn",
+        "maxCohereTurn",
+        "maxSeparateTurn"
+      ],
+      "baselineUIHash": "6ba900962c70374f90581bfbf6209e75609b62bdd05b47122a135962cfc258ce",
+      "resultUIHash": "1f8308dbeb323017ad85331dc1c53dbb510263fe32979730628bb0aea71826f7",
+      "baselineModelHash": "2c45921ec43bffe2e73cb8f7da49a59ebe47eeef486f6e9f3c5f11b8b843930f",
+      "resultModelHash": "2c45921ec43bffe2e73cb8f7da49a59ebe47eeef486f6e9f3c5f11b8b843930f",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Keep HSL shade55/90%/(40+6*shade), heading triangles and neighborhood relationships. Sequential movement/RNG cannot be reordered by projection.",
+      "projectionAndMetadataPreservation": "Complete program AST is unchanged after excluding only the exact migrated live set properties and the newly added spec.change property.",
+      "normalizedUnchangedProgramSha256": "89af9f4342382e5a6a2ce3077b60261f09b29e78d067e88119ccdfa033f4dc62",
+      "writeEquivalence": {
+        "before": "live[field].set(instance, decodedValue) => instance.setRules({ [sameField]: decodedValue })",
+        "after": "The existing descriptor decoder invokes change(instance, { [sameField]: decodedValue }), which calls instance.setRules(changes).",
+        "preconditions": "AST verified each removed setter has two identifier parameters, one direct method call, one object argument, one property with the exact declared live key, and the unchanged second parameter as its value. No block-bodied/transformed setter was removed."
+      },
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "fruit-wars",
+      "scope": "Phase A common live-write migration only",
+      "decision": "migrate",
+      "reason": "Replace 7 exact same-key forwards to setRules with one explicit change handler; retained field records still declare controls and all local metadata. This removes repeated action boilerplate without introducing reflection or changing a model call.",
+      "changedFiles": [
+        "experiments/fruit-wars/ui.ts"
+      ],
+      "publicMethod": "setRules",
+      "migratedControlKeys": [
+        "ticksToFlee",
+        "rateOfMutation",
+        "collaborationBonus",
+        "maxAge",
+        "bushGrowthChance",
+        "showEnergy",
+        "visualization"
+      ],
+      "baselineUIHash": "3cbaee468e4cf9e031a4fad87b8e0e3460111b46129a1ba118d5a0a00bb410c1",
+      "resultUIHash": "094117d4e41dab22f2ae7d51a95cef4065db40db7021ce816dc3723ea44782f8",
+      "baselineModelHash": "c96586f686d6b2842e588d2297d7cb4e10aa9b0bc4cc906f9d9062287298dcbe",
+      "resultModelHash": "c96586f686d6b2842e588d2297d7cb4e10aa9b0bc4cc906f9d9062287298dcbe",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Preserve selected-trait hue and fixed trait/40 intensity, source NetLogo bushes, null trait means and aggression bins0..61. Death percentages and foraging yields differ in units.",
+      "projectionAndMetadataPreservation": "Complete program AST is unchanged after excluding only the exact migrated live set properties and the newly added spec.change property.",
+      "normalizedUnchangedProgramSha256": "a35d38d90f48bca8df42feb05d1c41971068c23220a6fad5a75bafded72d6f75",
+      "writeEquivalence": {
+        "before": "live[field].set(instance, decodedValue) => instance.setRules({ [sameField]: decodedValue })",
+        "after": "The existing descriptor decoder invokes change(instance, { [sameField]: decodedValue }), which calls instance.setRules(changes).",
+        "preconditions": "AST verified each removed setter has two identifier parameters, one direct method call, one object argument, one property with the exact declared live key, and the unchanged second parameter as its value. No block-bodied/transformed setter was removed."
+      },
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "fur",
+      "scope": "Phase A common live-write migration only",
+      "decision": "retain",
+      "reason": "No common write family reaches the accepted three-forward threshold (setParameters: 2 exact fields). Retain explicit actions and the existing declaration; a new handler would not simplify its ordinary reading/writing.",
+      "changedFiles": [],
+      "publicMethod": null,
+      "migratedControlKeys": [],
+      "baselineUIHash": "e530606007dca9d98a15510883daec0b6c82c070c56669c3e74e0fae5b2449fd",
+      "resultUIHash": "e530606007dca9d98a15510883daec0b6c82c070c56669c3e74e0fae5b2449fd",
+      "baselineModelHash": "20a464c5cdf2b6971eb7268175727ffdee78f5ad5a9d55c19d44e99db5fd5649",
+      "resultModelHash": "20a464c5cdf2b6971eb7268175727ffdee78f5ad5a9d55c19d44e99db5fd5649",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Keep synchronous skin rules and model-owned black/white portrayal; no world relocation or automatic numeric scale.",
+      "projectionAndMetadataPreservation": "UI source bytes are unchanged in this assignment.",
+      "normalizedUnchangedProgramSha256": null,
+      "writeEquivalence": null,
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "galton-box",
+      "scope": "Phase A common live-write migration only",
+      "decision": "migrate",
+      "reason": "Replace 3 exact same-key forwards to setRules with one explicit change handler; retained field records still declare controls and all local metadata. This removes repeated action boilerplate without introducing reflection or changing a model call.",
+      "changedFiles": [
+        "experiments/galton-box/ui.ts"
+      ],
+      "publicMethod": "setRules",
+      "migratedControlKeys": [
+        "numberOfBalls",
+        "chanceOfBouncingRight",
+        "pileUp"
+      ],
+      "baselineUIHash": "730e04ddafa54905a7215c3493bdaf17f01d059f38e8b2934ab01c54d9ecd5c8",
+      "resultUIHash": "4425a81e0cc5aa422d8cb3093372b3823088c35940a7e10c5020b6e10e137926",
+      "baselineModelHash": "1ad4f450fd11fad7f84ef621ae403dad47deb91f1c24f22b6161ebc70c56b109",
+      "resultModelHash": "1ad4f450fd11fad7f84ef621ae403dad47deb91f1c24f22b6161ebc70c56b109",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Physical peg staggering and falling-ball geometry must remain; y/width/height represent the source box, not collection wrapping. Counter x coordinates have distribution meaning.",
+      "projectionAndMetadataPreservation": "Complete program AST is unchanged after excluding only the exact migrated live set properties and the newly added spec.change property.",
+      "normalizedUnchangedProgramSha256": "7710c61d40fc1e9b9f9be1da495162298446657935a634aab209fa2c5a37f287",
+      "writeEquivalence": {
+        "before": "live[field].set(instance, decodedValue) => instance.setRules({ [sameField]: decodedValue })",
+        "after": "The existing descriptor decoder invokes change(instance, { [sameField]: decodedValue }), which calls instance.setRules(changes).",
+        "preconditions": "AST verified each removed setter has two identifier parameters, one direct method call, one object argument, one property with the exact declared live key, and the unchanged second parameter as its value. No block-bodied/transformed setter was removed."
+      },
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "gendrift-t-interact",
+      "scope": "Phase A common live-write migration only",
+      "decision": "retain",
+      "reason": "No common write family reaches the accepted three-forward threshold. Retain explicit actions and the existing declaration; a new handler would not simplify its ordinary reading/writing.",
+      "changedFiles": [],
+      "publicMethod": null,
+      "migratedControlKeys": [],
+      "baselineUIHash": "8b6c5aac47d537982e58274ff360e5be510b10b9a885304e1491ea6eab6d9501",
+      "resultUIHash": "8b6c5aac47d537982e58274ff360e5be510b10b9a885304e1491ea6eab6d9501",
+      "baselineModelHash": "69e919d2c0a51b75c3ad2252049eeea737c9ec7ee5ff53eb8074bcb582abe7e9",
+      "resultModelHash": "69e919d2c0a51b75c3ad2252049eeea737c9ec7ee5ff53eb8074bcb582abe7e9",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Keep explicit fixed NetLogo lineage colors/order and count-index association, wall drawing via model, and same lineage color in chart and agents.",
+      "projectionAndMetadataPreservation": "UI source bytes are unchanged in this assignment.",
+      "normalizedUnchangedProgramSha256": null,
+      "writeEquivalence": null,
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "genevo-1-genetic-switch",
+      "scope": "Phase A common live-write migration only",
+      "decision": "migrate",
+      "reason": "Replace 8 exact same-key forwards to setParameters with one explicit change handler; retained field records still declare controls and all local metadata. This removes repeated action boilerplate without introducing reflection or changing a model call.",
+      "changedFiles": [
+        "experiments/genevo-1-genetic-switch/ui.ts"
+      ],
+      "publicMethod": "setParameters",
+      "migratedControlKeys": [
+        "lactose",
+        "glucose",
+        "levelSpace",
+        "lacIBondLeakage",
+        "lacILactoseBindingChance",
+        "lacILactoseSeparationChance",
+        "lacYDegradationChance",
+        "lacZDegradationChance"
+      ],
+      "baselineUIHash": "94b301bb17b6da244d7af244632658540b818b72a268a3f31fdb46fe70a94161",
+      "resultUIHash": "a67a50da446cabd74b422306914a1afeb6c1590239c52df1f681e95d44461101",
+      "baselineModelHash": "0a66b1af1ea3c91f9b94080306bbb777b01abc46538bb0b426bfc61d996653c2",
+      "resultModelHash": "0a66b1af1ea3c91f9b94080306bbb777b01abc46538bb0b426bfc61d996653c2",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Hidden lactose indicates actual partner binding; preserve source biochemical color/visibility and division/message values. No helper may schedule synthesis.",
+      "projectionAndMetadataPreservation": "Complete program AST is unchanged after excluding only the exact migrated live set properties and the newly added spec.change property.",
+      "normalizedUnchangedProgramSha256": "c86f35b4e1bc7a01a11749021a3ad9934252da2f2c7694e3f401b2302601d3ec",
+      "writeEquivalence": {
+        "before": "live[field].set(instance, decodedValue) => instance.setParameters({ [sameField]: decodedValue })",
+        "after": "The existing descriptor decoder invokes change(instance, { [sameField]: decodedValue }), which calls instance.setParameters(changes).",
+        "preconditions": "AST verified each removed setter has two identifier parameters, one direct method call, one object argument, one property with the exact declared live key, and the unchanged second parameter as its value. No block-bodied/transformed setter was removed."
+      },
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "heat-diffusion",
+      "scope": "Phase A common live-write migration only",
+      "decision": "migrate",
+      "reason": "Replace 6 exact same-key forwards to setRules with one explicit change handler; retained field records still declare controls and all local metadata. This removes repeated action boilerplate without introducing reflection or changing a model call.",
+      "changedFiles": [
+        "experiments/heat-diffusion/ui.ts"
+      ],
+      "publicMethod": "setRules",
+      "migratedControlKeys": [
+        "leftTemp",
+        "rightTemp",
+        "topTemp",
+        "bottomTemp",
+        "alpha",
+        "materialType"
+      ],
+      "baselineUIHash": "936f3c345e0dc8838bce2bd1959ca686067f36af2b26886549a288c11f628fc8",
+      "resultUIHash": "8b41352d50062699b7fd2192b1fd192406753d21a128290b87881f4942bc369c",
+      "baselineModelHash": "df456567d0b6598215a078f095d57a261d5e3999af9dae0653809778c64cdb20",
+      "resultModelHash": "df456567d0b6598215a078f095d57a261d5e3999af9dae0653809778c64cdb20",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Fixed observed min/max; constant domain fraction0.5; clamp then netLogoColor(10+min(9.9,10*fraction)); gray exterior remains. Fields select canonical IDs and alpha update is explicit.",
+      "projectionAndMetadataPreservation": "Complete program AST is unchanged after excluding only the exact migrated live set properties and the newly added spec.change property.",
+      "normalizedUnchangedProgramSha256": "d02e51fdf812686551024165654dd4b1b9ad7326fa5dc93cd9001fda6e6907b4",
+      "writeEquivalence": {
+        "before": "live[field].set(instance, decodedValue) => instance.setRules({ [sameField]: decodedValue })",
+        "after": "The existing descriptor decoder invokes change(instance, { [sameField]: decodedValue }), which calls instance.setRules(changes).",
+        "preconditions": "AST verified each removed setter has two identifier parameters, one direct method call, one object argument, one property with the exact declared live key, and the unchanged second parameter as its value. No block-bodied/transformed setter was removed."
+      },
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "heatbugs",
+      "scope": "Phase A common live-write migration only",
+      "decision": "migrate",
+      "reason": "Replace 7 exact same-key forwards to setRules with one explicit change handler; retained field records still declare controls and all local metadata. This removes repeated action boilerplate without introducing reflection or changing a model call.",
+      "changedFiles": [
+        "experiments/heatbugs/ui.ts"
+      ],
+      "publicMethod": "setRules",
+      "migratedControlKeys": [
+        "maxOutputHeat",
+        "minOutputHeat",
+        "maxIdealTemp",
+        "minIdealTemp",
+        "evaporationRate",
+        "diffusionRate",
+        "randomMoveChance"
+      ],
+      "baselineUIHash": "7506c76b94ef12b9724de9f878a8fb277260ec09a1d6897193c9d2665deb1928",
+      "resultUIHash": "4f4864044c68dcc9acc58ba74fbe6907fb99d45135da9781bedf3436d2e87022",
+      "baselineModelHash": "92296c79a005728d2b8444054cb38804d9c0d2f86ee69abd1ec076fe64c96a51",
+      "resultModelHash": "92296c79a005728d2b8444054cb38804d9c0d2f86ee69abd1ec076fe64c96a51",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Preserve fixed temp/150 heat colors, explicit relative unhappiness denominator and configured idealTemp domain; watched glyph enlargement and null history gaps remain.",
+      "projectionAndMetadataPreservation": "Complete program AST is unchanged after excluding only the exact migrated live set properties and the newly added spec.change property.",
+      "normalizedUnchangedProgramSha256": "be90f0babdab117da83b40e9a9ca7a65a2df32107ae43e27613765295567aab1",
+      "writeEquivalence": {
+        "before": "live[field].set(instance, decodedValue) => instance.setRules({ [sameField]: decodedValue })",
+        "after": "The existing descriptor decoder invokes change(instance, { [sameField]: decodedValue }), which calls instance.setRules(changes).",
+        "preconditions": "AST verified each removed setter has two identifier parameters, one direct method call, one object argument, one property with the exact declared live key, and the unchanged second parameter as its value. No block-bodied/transformed setter was removed."
+      },
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "heroes-and-cowards",
+      "scope": "Phase A common live-write migration only",
+      "decision": "retain",
+      "reason": "No common write family reaches the accepted three-forward threshold. Retain explicit actions and the existing declaration; a new handler would not simplify its ordinary reading/writing.",
+      "changedFiles": [],
+      "publicMethod": null,
+      "migratedControlKeys": [],
+      "baselineUIHash": "9696c958b06c11e4b82b8978cfcbda367660b87eb72b5190536f91c4c4c20fa1",
+      "resultUIHash": "9696c958b06c11e4b82b8978cfcbda367660b87eb72b5190536f91c4c4c20fa1",
+      "baselineModelHash": "962428649b4f432439e324bf46fc88c5f3fa6e7cf4f3c035bfe3a56ea8d374ec",
+      "resultModelHash": "962428649b4f432439e324bf46fc88c5f3fa6e7cf4f3c035bfe3a56ea8d374ec",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Brave/coward colors and heading triangles distinguish personalities; actual continuous positions encode friend-enemy movement. IDs resolve observed people.",
+      "projectionAndMetadataPreservation": "UI source bytes are unchanged in this assignment.",
+      "normalizedUnchangedProgramSha256": null,
+      "writeEquivalence": null,
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "hex-cell-aggregation",
+      "scope": "Phase A common live-write migration only",
+      "decision": "migrate",
+      "reason": "Replace 6 exact same-key forwards to setSwitches with one explicit change handler; retained field records still declare controls and all local metadata. This removes repeated action boilerplate without introducing reflection or changing a model call.",
+      "changedFiles": [
+        "experiments/hex-cell-aggregation/ui.ts"
+      ],
+      "publicMethod": "setSwitches",
+      "migratedControlKeys": [
+        "oneNeighbor",
+        "twoNeighbors",
+        "threeNeighbors",
+        "fourNeighbors",
+        "fiveNeighbors",
+        "sixNeighbors"
+      ],
+      "baselineUIHash": "21cd915032d8783774b87fa4454422ee728645b20e681c32463d36595e5c1c8a",
+      "resultUIHash": "3fd3ce14b37ce988c095c74c950441856e1b86111610d97297055ccf264f7e52",
+      "baselineModelHash": "ce9f985218d4383e5927d6540d9d29d59473a2ce03a16f1ea2a2a341f88f1b5c",
+      "resultModelHash": "ce9f985218d4383e5927d6540d9d29d59473a2ce03a16f1ea2a2a341f88f1b5c",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Preserve model-supplied odd/even-column displayY offset and six-neighbor topology; count6 has biological/neighborhood meaning. Inspector uses original field coordinates.",
+      "projectionAndMetadataPreservation": "Complete program AST is unchanged after excluding only the exact migrated live set properties and the newly added spec.change property.",
+      "normalizedUnchangedProgramSha256": "40d8a927359752890d8df65ac26c87f2ab1108e0f6c38d0d6d108f3896aa0448",
+      "writeEquivalence": {
+        "before": "live[field].set(instance, decodedValue) => instance.setSwitches({ [sameField]: decodedValue })",
+        "after": "The existing descriptor decoder invokes change(instance, { [sameField]: decodedValue }), which calls instance.setSwitches(changes).",
+        "preconditions": "AST verified each removed setter has two identifier parameters, one direct method call, one object argument, one property with the exact declared live key, and the unchanged second parameter as its value. No block-bodied/transformed setter was removed."
+      },
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "hiv",
+      "scope": "Phase A common live-write migration only",
+      "decision": "migrate",
+      "reason": "Replace 4 exact same-key forwards to setParameters with one explicit change handler; retained field records still declare controls and all local metadata. This removes repeated action boilerplate without introducing reflection or changing a model call.",
+      "changedFiles": [
+        "experiments/hiv/ui.ts"
+      ],
+      "publicMethod": "setParameters",
+      "migratedControlKeys": [
+        "averageCommitment",
+        "averageCouplingTendency",
+        "averageCondomUse",
+        "averageTestFrequency"
+      ],
+      "baselineUIHash": "2c3f4328c6cf9ce7d974113ed248c27878e3097f530d1fc65ef9d215449b584e",
+      "resultUIHash": "36034d7e9cb11826207dc1212595f8a76a3a9e9b2640e00558b87b7cbbb9d217",
+      "baselineModelHash": "4c2ba3db0a02cd81530490038fe9b6c88665ed7f2998746b790f126a5234c9d9",
+      "resultModelHash": "4c2ba3db0a02cd81530490038fe9b6c88665ed7f2998746b790f126a5234c9d9",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Keep infected-known versus unknown colors and coupling fields; source-specific percent versus count histories cannot be coerced into one unit. Biological assumptions remain model-owned.",
+      "projectionAndMetadataPreservation": "Complete program AST is unchanged after excluding only the exact migrated live set properties and the newly added spec.change property.",
+      "normalizedUnchangedProgramSha256": "1a74332bcf6a500041704518b2bc493f5969c2bb314c1766d74bf79053392655",
+      "writeEquivalence": {
+        "before": "live[field].set(instance, decodedValue) => instance.setParameters({ [sameField]: decodedValue })",
+        "after": "The existing descriptor decoder invokes change(instance, { [sameField]: decodedValue }), which calls instance.setParameters(changes).",
+        "preconditions": "AST verified each removed setter has two identifier parameters, one direct method call, one object argument, one property with the exact declared live key, and the unchanged second parameter as its value. No block-bodied/transformed setter was removed."
+      },
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "honeycomb",
+      "scope": "Phase A common live-write migration only",
+      "decision": "retain",
+      "reason": "No common write family reaches the accepted three-forward threshold. Retain explicit actions and the existing declaration; a new handler would not simplify its ordinary reading/writing.",
+      "changedFiles": [],
+      "publicMethod": null,
+      "migratedControlKeys": [],
+      "baselineUIHash": "49f771e21ad7d742d62e417ec5374c9acc607bb99571ad1d56c02f97091532f4",
+      "resultUIHash": "49f771e21ad7d742d62e417ec5374c9acc607bb99571ad1d56c02f97091532f4",
+      "baselineModelHash": "a994adb20035dd2c2570a2baedb0026fdc60ed79485b8cc162695ccd54f42b92",
+      "resultModelHash": "a994adb20035dd2c2570a2baedb0026fdc60ed79485b8cc162695ccd54f42b92",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Model already owns exact chemical grayscale min(1,chemical/20) and bee HSL shade. Hide/show actions affect visibility intentionally; IDs and geometry remain.",
+      "projectionAndMetadataPreservation": "UI source bytes are unchanged in this assignment.",
+      "normalizedUnchangedProgramSha256": null,
+      "writeEquivalence": null,
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "hotellings-law",
+      "scope": "Phase A common live-write migration only",
+      "decision": "retain",
+      "reason": "No common write family reaches the accepted three-forward threshold (setRules: 1 exact fields). Retain explicit actions and the existing declaration; a new handler would not simplify its ordinary reading/writing.",
+      "changedFiles": [],
+      "publicMethod": null,
+      "migratedControlKeys": [],
+      "baselineUIHash": "05c98c1c5ec696f2d77f727c155342ceee51ec472c2be3cd5b91cdd3fb14ee6c",
+      "resultUIHash": "05c98c1c5ec696f2d77f727c155342ceee51ec472c2be3cd5b91cdd3fb14ee6c",
+      "baselineModelHash": "8e83e4dc3a21f254194ee061db2f6d0f4823bab67b9dece10b0af9c18970b9e8",
+      "resultModelHash": "8e83e4dc3a21f254194ee061db2f6d0f4823bab67b9dece10b0af9c18970b9e8",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Keep exact NetLogo store color+2 region tint and lookup by historical store ID. Missing historical store currently maps to0 deliberately; price and revenue are different quantities.",
+      "projectionAndMetadataPreservation": "UI source bytes are unchanged in this assignment.",
+      "normalizedUnchangedProgramSha256": null,
+      "writeEquivalence": null,
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "household-energy-demand",
+      "scope": "Phase A common live-write migration only",
+      "decision": "retain",
+      "reason": "No common write family reaches the accepted three-forward threshold. Retain explicit actions and the existing declaration; a new handler would not simplify its ordinary reading/writing.",
+      "changedFiles": [],
+      "publicMethod": null,
+      "migratedControlKeys": [],
+      "baselineUIHash": "841f3d482ce27f6c466e522f65a70d5b3e04eacba2cbc17861ff0d2371a477ac",
+      "resultUIHash": "841f3d482ce27f6c466e522f65a70d5b3e04eacba2cbc17861ff0d2371a477ac",
+      "baselineModelHash": "ec298847caf2ea769c82794f20a799347e1a786635911af7b73f3d7f9277d4b2",
+      "resultModelHash": "ec298847caf2ea769c82794f20a799347e1a786635911af7b73f3d7f9277d4b2",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Keep h/kW/kWh labels and two-decimal presentation only. shiftedShare invokes defined model action; model owns measurement and cumulative energy.",
+      "projectionAndMetadataPreservation": "UI source bytes are unchanged in this assignment.",
+      "normalizedUnchangedProgramSha256": null,
+      "writeEquivalence": null,
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "household-recycling-behavior",
+      "scope": "Phase A common live-write migration only",
+      "decision": "retain",
+      "reason": "No common write family reaches the accepted three-forward threshold. Retain explicit actions and the existing declaration; a new handler would not simplify its ordinary reading/writing.",
+      "changedFiles": [],
+      "publicMethod": null,
+      "migratedControlKeys": [],
+      "baselineUIHash": "be025c69ff62ac53e20ba356056699b3765fedc5961733d21cf8b1eda75721c4",
+      "resultUIHash": "be025c69ff62ac53e20ba356056699b3765fedc5961733d21cf8b1eda75721c4",
+      "baselineModelHash": "28c78ea7fa1a131850d02a1d770f93e7e578687d0f911398f38b8632180a257f",
+      "resultModelHash": "28c78ea7fa1a131850d02a1d770f93e7e578687d0f911398f38b8632180a257f",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "H1..Hn are compact display labels, canonical node IDs remain for inspector. Preserve detached History sample.tick/value.share; seeded two-phase adoption is model-owned.",
+      "projectionAndMetadataPreservation": "UI source bytes are unchanged in this assignment.",
+      "normalizedUnchangedProgramSha256": null,
+      "writeEquivalence": null,
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "interstitial-diffusion",
+      "scope": "Phase A common live-write migration only",
+      "decision": "migrate",
+      "reason": "Replace 6 exact same-key forwards to setRules with one explicit change handler; retained field records still declare controls and all local metadata. This removes repeated action boilerplate without introducing reflection or changing a model call.",
+      "changedFiles": [
+        "experiments/interstitial-diffusion/ui.ts"
+      ],
+      "publicMethod": "setRules",
+      "migratedControlKeys": [
+        "maxTicks",
+        "constantLeftSurface",
+        "leftSurfaceConcentration",
+        "constantRightSurface",
+        "rightSurfaceConcentration",
+        "goMode"
+      ],
+      "baselineUIHash": "490dd2a0af67508ac8c49b3edd02119ac38629496d9ec608a2415b5d797d366a",
+      "resultUIHash": "c0d9285b6ee624cd53d2382bf1ca077d6f379846a1516f842ff24bc2c9cd5390",
+      "baselineModelHash": "61dbd5228f21795006fd693ff05c2931f69db21f68542cc3da953de9e27bc408",
+      "resultModelHash": "61dbd5228f21795006fd693ff05c2931f69db21f68542cc3da953de9e27bc408",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Preserve concentration units and explicit concentration-to-screen curve y offset25/scale25, mixed-boundary lattice coordinates and profileAt15 presence. Drawing invokes public drawProfile only.",
+      "projectionAndMetadataPreservation": "Complete program AST is unchanged after excluding only the exact migrated live set properties and the newly added spec.change property.",
+      "normalizedUnchangedProgramSha256": "a2968d592e328e1229268861a1a5bba3fdc4220b2161f7b05cfd448668ae4a12",
+      "writeEquivalence": {
+        "before": "live[field].set(instance, decodedValue) => instance.setRules({ [sameField]: decodedValue })",
+        "after": "The existing descriptor decoder invokes change(instance, { [sameField]: decodedValue }), which calls instance.setRules(changes).",
+        "preconditions": "AST verified each removed setter has two identifier parameters, one direct method call, one object argument, one property with the exact declared live key, and the unchanged second parameter as its value. No block-bodied/transformed setter was removed."
+      },
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "invasive-plants",
+      "scope": "Phase A common live-write migration only",
+      "decision": "migrate",
+      "reason": "Replace 8 exact same-key forwards to setRules with one explicit change handler; retained field records still declare controls and all local metadata. This removes repeated action boilerplate without introducing reflection or changing a model call.",
+      "changedFiles": [
+        "experiments/invasive-plants/ui.ts"
+      ],
+      "publicMethod": "setRules",
+      "migratedControlKeys": [
+        "seedProductionRate",
+        "spreadDistance",
+        "weedKillerThreshold",
+        "weedKillerEffectiveness",
+        "weedKillerRate",
+        "showSeeds",
+        "drawMode",
+        "drawValue"
+      ],
+      "baselineUIHash": "88a1efc7b4ee23c16e2e6d26cfcc838e639417bb8e7eb1f88d10a5c0c4e0295b",
+      "resultUIHash": "d0f80fb1bd3645ac70e34b83f87201ea12e9564fce7a689006d8db10504a0d25",
+      "baselineModelHash": "c881ecd85fd6f1d2d50dc202db2f896526db7780332464dcef60b00628a7c3c2",
+      "resultModelHash": "c881ecd85fd6f1d2d50dc202db2f896526db7780332464dcef60b00628a7c3c2",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Preserve sqrt(infestation/100) luminance, sqrt(resistance/100) glyph diameter and 0..100 histogram bounds; showSeeds/drawing modes are model-owned.",
+      "projectionAndMetadataPreservation": "Complete program AST is unchanged after excluding only the exact migrated live set properties and the newly added spec.change property.",
+      "normalizedUnchangedProgramSha256": "5f9af8fd7850621425bb4e5380123fb2a2ea5f333bca23a6697a9b64d6020dec",
+      "writeEquivalence": {
+        "before": "live[field].set(instance, decodedValue) => instance.setRules({ [sameField]: decodedValue })",
+        "after": "The existing descriptor decoder invokes change(instance, { [sameField]: decodedValue }), which calls instance.setRules(changes).",
+        "preconditions": "AST verified each removed setter has two identifier parameters, one direct method call, one object argument, one property with the exact declared live key, and the unchanged second parameter as its value. No block-bodied/transformed setter was removed."
+      },
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "ising",
+      "scope": "Phase A common live-write migration only",
+      "decision": "retain",
+      "reason": "No common write family reaches the accepted three-forward threshold. Retain explicit actions and the existing declaration; a new handler would not simplify its ordinary reading/writing.",
+      "changedFiles": [],
+      "publicMethod": null,
+      "migratedControlKeys": [],
+      "baselineUIHash": "2845994aac9cd3bd61b82874b6d98a938597f2c636d2756a127b8c5419beecfe",
+      "resultUIHash": "2845994aac9cd3bd61b82874b6d98a938597f2c636d2756a127b8c5419beecfe",
+      "baselineModelHash": "b56f656260a2fdaa3b3e2e8e69499d0bc632a2cafa6061037df5997e58586972",
+      "resultModelHash": "b56f656260a2fdaa3b3e2e8e69499d0bc632a2cafa6061037df5997e58586972",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Attempted-flip tick is not a population count. Keep signed magnetization and fixed two-spin colors; sequential Metropolis RNG/order unchanged.",
+      "projectionAndMetadataPreservation": "UI source bytes are unchanged in this assignment.",
+      "normalizedUnchangedProgramSha256": null,
+      "writeEquivalence": null,
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "k-means-clustering",
+      "scope": "Phase A common live-write migration only",
+      "decision": "retain",
+      "reason": "No common write family reaches the accepted three-forward threshold (setParameters: 2 exact fields). Retain explicit actions and the existing declaration; a new handler would not simplify its ordinary reading/writing.",
+      "changedFiles": [],
+      "publicMethod": null,
+      "migratedControlKeys": [],
+      "baselineUIHash": "2dc4bc579cd464d133d40a74b2919377cbd3828a9d08ee30aec6af637b956168",
+      "resultUIHash": "2dc4bc579cd464d133d40a74b2919377cbd3828a9d08ee30aec6af637b956168",
+      "baselineModelHash": "a7742a4c78c1c6924b051075101c7d3499252922ac507b0894b4510ccfce5ed8",
+      "resultModelHash": "a7742a4c78c1c6924b051075101c7d3499252922ac507b0894b4510ccfce5ed8",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Preserve point/centroid identities, source NetLogo cluster-color relation, null unassigned points and SSE meanings. Centroid source IDs are distinct from display indexes.",
+      "projectionAndMetadataPreservation": "UI source bytes are unchanged in this assignment.",
+      "normalizedUnchangedProgramSha256": null,
+      "writeEquivalence": null,
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "language-change",
+      "scope": "Phase A common live-write migration only",
+      "decision": "migrate",
+      "reason": "Replace 6 exact same-key forwards to setParameters with one explicit change handler; retained field records still declare controls and all local metadata. This removes repeated action boilerplate without introducing reflection or changing a model call.",
+      "changedFiles": [
+        "experiments/language-change/ui.ts"
+      ],
+      "publicMethod": "setParameters",
+      "migratedControlKeys": [
+        "percentGrammar1",
+        "updateAlgorithm",
+        "thresholdVal",
+        "sinkState1",
+        "logistic",
+        "alpha"
+      ],
+      "baselineUIHash": "19e2b1d85c6da97dca1ddf2dfc6481fdf19b6ee588bb9b2c8cdc7f641de28cd9",
+      "resultUIHash": "fb07c5014bb8a80a3a0c7ba52ac52d236d69951c5c5a43dbe16f05c4b1422969",
+      "baselineModelHash": "3b0a314687cb25babae2d88f33ad80f8b2f37394a4d1820a8e3ca438cabb7c32",
+      "resultModelHash": "3b0a314687cb25babae2d88f33ad80f8b2f37394a4d1820a8e3ca438cabb7c32",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Continuous grammar state maps exact RGB(70+155*s,135\u221245*s,220\u2212130*s); preserve initial graph coordinates and stable IDs. Reset/redistribute call model.",
+      "projectionAndMetadataPreservation": "Complete program AST is unchanged after excluding only the exact migrated live set properties and the newly added spec.change property.",
+      "normalizedUnchangedProgramSha256": "fffa635d4070b904ae69faa54380d5e3e8df2080ebb06b81645a3b2e71588615",
+      "writeEquivalence": {
+        "before": "live[field].set(instance, decodedValue) => instance.setParameters({ [sameField]: decodedValue })",
+        "after": "The existing descriptor decoder invokes change(instance, { [sameField]: decodedValue }), which calls instance.setParameters(changes).",
+        "preconditions": "AST verified each removed setter has two identifier parameters, one direct method call, one object argument, one property with the exact declared live key, and the unchanged second parameter as its value. No block-bodied/transformed setter was removed."
+      },
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "life",
+      "scope": "Phase A common live-write migration only",
+      "decision": "retain",
+      "reason": "No common write family reaches the accepted three-forward threshold (setColors: 2 exact fields). Retain explicit actions and the existing declaration; a new handler would not simplify its ordinary reading/writing.",
+      "changedFiles": [],
+      "publicMethod": null,
+      "migratedControlKeys": [],
+      "baselineUIHash": "216ec72d03a26441a26360574aacb47284dad2f013f7b0ab91c3e59000817ab8",
+      "resultUIHash": "216ec72d03a26441a26360574aacb47284dad2f013f7b0ab91c3e59000817ab8",
+      "baselineModelHash": "1ac597718fb5292267055695e0cd2fea0a093176e773a1e378a32cc1c227a254",
+      "resultModelHash": "1ac597718fb5292267055695e0cd2fea0a093176e773a1e378a32cc1c227a254",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Preserve actual Grid IDs for setCell action and draw begin/move/end. User-configurable colors remain model-controlled presentation values; synchronous next generation order unchanged.",
+      "projectionAndMetadataPreservation": "UI source bytes are unchanged in this assignment.",
+      "normalizedUnchangedProgramSha256": null,
+      "writeEquivalence": null,
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "limited-order-book",
+      "scope": "Phase A common live-write migration only",
+      "decision": "retain",
+      "reason": "No common write family reaches the accepted three-forward threshold. Retain explicit actions and the existing declaration; a new handler would not simplify its ordinary reading/writing.",
+      "changedFiles": [],
+      "publicMethod": null,
+      "migratedControlKeys": [],
+      "baselineUIHash": "e9c8f52b277ebce3ab056b70dc089818835d5f267a240e7f3ad089d94e2ffc1b",
+      "resultUIHash": "e9c8f52b277ebce3ab056b70dc089818835d5f267a240e7f3ad089d94e2ffc1b",
+      "baselineModelHash": "f9a4a6d103e194a90fab80bba92e59507913fd96829f344a14648552bcf7bdb8",
+      "resultModelHash": "f9a4a6d103e194a90fab80bba92e59507913fd96829f344a14648552bcf7bdb8",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Keep dollar-volume label, signed/nullable/nonfinite utility gaps and exclusion of latest tick0. Order filtering removes actual removed records; FIFO/matching remain model-owned.",
+      "projectionAndMetadataPreservation": "UI source bytes are unchanged in this assignment.",
+      "normalizedUnchangedProgramSha256": null,
+      "writeEquivalence": null,
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "mammoths",
+      "scope": "Phase A common live-write migration only",
+      "decision": "migrate",
+      "reason": "Replace 6 exact same-key forwards to setParameters with one explicit change handler; retained field records still declare controls and all local metadata. This removes repeated action boilerplate without introducing reflection or changing a model call.",
+      "changedFiles": [
+        "experiments/mammoths/ui.ts"
+      ],
+      "publicMethod": "setParameters",
+      "migratedControlKeys": [
+        "mammothBirthRate",
+        "humanBirthRate",
+        "mammothSpeed",
+        "humanSpeed",
+        "oddsOfKilling",
+        "climateChangeDecayChance"
+      ],
+      "baselineUIHash": "568ae1ac78e7f9252fb42a353d7e75aadd8a454880bc63dbb993ad516021d996",
+      "resultUIHash": "de2a614e71722083016ffd750bc2ea8441ede40e8ca31f715e32e0fd907583d8",
+      "baselineModelHash": "40ef15f8b558355d31bbb40c463af4f217e160c57925ba573aab2dd1cf4ef6ae",
+      "resultModelHash": "40ef15f8b558355d31bbb40c463af4f217e160c57925ba573aab2dd1cf4ef6ae",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Source months convert to years/12; original coordinates+48 are provenance. Species and death-cause colors are separate mappings; preserve habitat terrain and climate/hunting distinction.",
+      "projectionAndMetadataPreservation": "Complete program AST is unchanged after excluding only the exact migrated live set properties and the newly added spec.change property.",
+      "normalizedUnchangedProgramSha256": "28a60ee31fe83ea659a6891e814a5360eed101a3b7d1da0ec8f610d515f58ae2",
+      "writeEquivalence": {
+        "before": "live[field].set(instance, decodedValue) => instance.setParameters({ [sameField]: decodedValue })",
+        "after": "The existing descriptor decoder invokes change(instance, { [sameField]: decodedValue }), which calls instance.setParameters(changes).",
+        "preconditions": "AST verified each removed setter has two identifier parameters, one direct method call, one object argument, one property with the exact declared live key, and the unchanged second parameter as its value. No block-bodied/transformed setter was removed."
+      },
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    },
+    {
+      "slug": "mandelbrot",
+      "scope": "Phase A common live-write migration only",
+      "decision": "retain",
+      "reason": "No common write family reaches the accepted three-forward threshold (setRules: 1 exact fields). Retain explicit actions and the existing declaration; a new handler would not simplify its ordinary reading/writing.",
+      "changedFiles": [],
+      "publicMethod": null,
+      "migratedControlKeys": [],
+      "baselineUIHash": "c29f9839081b2c65803d06e4430b7acaa3c6598c2e7687d08c15ca62f3b2e266",
+      "resultUIHash": "c29f9839081b2c65803d06e4430b7acaa3c6598c2e7687d08c15ca62f3b2e266",
+      "baselineModelHash": "eb1350d424c45b893fd71c3a394e01a797327684fcacf5b73d509a0129043141",
+      "resultModelHash": "eb1350d424c45b893fd71c3a394e01a797327684fcacf5b73d509a0129043141",
+      "modelChanged": false,
+      "scientificIdentityAndOrderContract": "Fixed maxIterations115 and counter/115 hue/luminance are scientific convergence portrayal; sparse records derive from full Grid, not UI truncation. Hide-agents action and source display IDs persist.",
+      "projectionAndMetadataPreservation": "UI source bytes are unchanged in this assignment.",
+      "normalizedUnchangedProgramSha256": null,
+      "writeEquivalence": null,
+      "verification": [
+        "bunx tsc --noEmit -p tsconfig.ui.json passed on integrated current sources",
+        "Headless import of every migrated ui.ts passed; each exports a mount-capable BoundEntry",
+        "All73 model hashes remain identical to baseline; all35 retained UI hashes remain identical",
+        "Complete AST-preservation comparison passed for all38 migrated files and211 exact forwards"
+      ],
+      "acceptanceLimit": "Browser dispatch/control and shared-runtime validation are separate coordinator-owned gates. Static AST preservation is not a claim of browser acceptance, scientific calibration or full-session rollback."
+    }
+  ]
+}
