@@ -1,4 +1,7 @@
 const phases = {
+  "mesa-measurements": ["01-shared-measurement", "02-explicit-bounded-history", "03-scenarios-and-replications", "04-run-stop-and-summary", "05-failure-and-budget"],
+  "mesa-dynamics": ["01-fixed-lifecycle", "02-priority-and-random", "03-two-phase", "04-linear-thresholds", "05-graph-membership"],
+  "mesa-attachment": ["01-identity-and-clocks", "02-mixed-batch", "03-conflict-atomicity", "04-detach-snapshots"],
   "townscaper-grid": ["01-finite-hex-refinement", "02-square-target-first-step", "03-validation-and-failure", "04-continuation-and-revisions", "05-explicit-grid-state-copy"],
   "city-simulation": ["01-household-budget", "02-neighborhood-heat", "04-scarce-resource", "05-shared-machine"],
   "grid-parcels": ["01-regular-regression-and-tiny-wraps", "02-square-and-hex-field-rule", "03-irregular-lookup-ties-and-occupancy", "04-merge-and-source-provenance", "05-convex-split-and-rejections"],

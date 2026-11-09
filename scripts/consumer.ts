@@ -188,6 +188,24 @@ function generatorTypeContract(){const graph=Graph.add<{name:string}>();const a=
 // @ts-expect-error Generated edge containers are readonly.
 result.push(result[0]);return result;}void generatorTypeContract;
 `);
+  await writeFile(join(directory, "consumer.ts"), `
+import {measurements,storage,experiments,twoPhase,continuous} from 'city-library';
+const numeric=measurements.define((state:{energy:number})=>({energy:state.energy}));
+const bounded=storage.history({capacity:1});
+bounded.add({tick:0,values:numeric.read({energy:4})});
+bounded.add({tick:1,values:{energy:3}});
+if(bounded.samples.length!==1||bounded.samples[0]?.values.energy!==3)throw Error('packed history mismatch');
+const scheduledWorld=World.add();
+const scheduled=scheduledWorld.add(Agent.add({energy:2}));
+scheduledWorld.activate([scheduled],({self})=>{self.energy+=1},{order:'fixed'});
+if(scheduled.energy!==3||scheduledWorld.tick.value!==0)throw Error('packed activation mismatch');
+twoPhase([scheduled],{compute:member=>member.energy*2,commit:(member,value)=>{member.energy=value}});
+if(scheduled.energy!==6)throw Error('packed two-phase mismatch');
+if(continuous.crossing({from:0,to:4,threshold:2,duration:2})?.elapsed!==1)throw Error('packed crossing mismatch');
+const planned=experiments.replicate(experiments.design({axes:[{name:'demand',values:[1,2]}]}),[1]);
+const study=experiments.run({plan:planned,steps:2,create:()=>({world:World.add(),step(){}}),measure:()=>({value:2})});
+if(study.outcomes.length!==2||experiments.summarize(study,entry=>entry.samples.at(-1)?.measurement.value)[0]?.mean!==2)throw Error('packed study mismatch');
+`, { flag: "a" });
   await command(["bun", "consumer.ts"], directory);
   // Preserve the TypeScript consumer contract while executing plain JavaScript in Node.
   const javascript = new Bun.Transpiler({ loader: "ts", target: "node" })
