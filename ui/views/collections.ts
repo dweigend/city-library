@@ -162,7 +162,7 @@ export function collectionDiagram(input: readonly CollectionRow[]): SpatialData 
       filled, color, stroke: color, selectable: false });
   }
   rows.forEach((row, index) => {
-    for (const [line, text] of headings[index]!.entries()) labels.push({ x: left, y: top - line * layout.labelLine, text });
+    for (const [line, text] of headings[index]!.entries()) labels.push({ x: 0, y: top - line * layout.labelLine, text });
     const contentTop = top - headings[index]!.length * layout.labelLine - layout.itemPitch / 2;
     if (row.kind === "items") row.items.forEach((item, itemIndex) => {
       const shape = item.shape ?? "rectangle";
