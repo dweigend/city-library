@@ -759,9 +759,8 @@
       "originalSha256": "db3a52865405a618e619c597c0d00df00aad9b9480f2c8cc5e540a5c7c8f7f5f",
       "migratedSha256": "db5cc7aedd5e4db79772d71bdedde245cf5777b68b667e51a6bdf4d17648b3ab",
       "change": "experiments/ -> models/ in import paths only",
-      "baselineManifestMismatch": {
-        "actualBaseSha256": "308d0c0a4e84153f8252e8c8c244f4e0c6d932ff0fb40da3d14c047fe4d09704"
-      }
+      "baselineManifestMismatch": true,
+      "baseFileSha256": "308d0c0a4e84153f8252e8c8c244f4e0c6d932ff0fb40da3d14c047fe4d09704"
     },
     {
       "manifest": "models/catalog/acceptance/selected-social-example-SHA256SUMS",
