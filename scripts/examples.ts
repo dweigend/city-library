@@ -1,4 +1,6 @@
 const phases = {
+  "ui-live-changes": ["01-shared-change", "02-binding-override", "03-groups-labels-enabled", "04-drafts-errors-and-legacy", "05-stable-chart-colors"],
+  "ui-collections": ["01-store-items", "02-priority-and-retained-capacity", "03-counts-defaults-and-errors", "04-selection-and-lifecycle", "05-complete-table-inspection"],
   "ui-des-scenes": ["01-residents-and-clerks", "02-bounded-slots", "03-labels-and-legacy-defaults", "04-browser-validation", "05-picking-and-disposal"],
   "des-elevator": ["01-single-trip", "02-full-call-persists", "03-alight-before-board", "04-multiple-cars-and-oldest-call", "05-validation-arrivals-and-budget"],
   des: ["01-causal-agenda", "02-queues-and-resources", "03-store-backpressure", "04-state-process-and-timeout", "05-observation-trace-and-random"],
