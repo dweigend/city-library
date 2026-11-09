@@ -49,3 +49,7 @@ This review covers the captured visual states, including compact navigation/cont
 ## Final evidence decision
 
 The initial forty settled files were inspected individually. Both affected four-image groups were then replaced and inspected again, together with four additional scrolled-state images. The final retained manifest contains forty main images plus four additional images; all forty-four retained files have been inspected. Superseded transition captures and superseded label-overlap captures are not acceptance evidence. All ten models have inspected desktop/light, desktop/dark, narrow/light and narrow/dark evidence. No unresolved blocking image finding remains. No blanket accessibility or interaction approval is inferred from these images.
+
+## Evidence preservation
+
+After this review, the coordinator preserved byte-identical copies in [the portable manifest](browser-evidence/manifest.json), with SHA-256 equality checked against all forty-four inspected originals. Image findings and approval refer to the same bytes; the reviewer did not separately rerun inspection merely because the files were copied.
