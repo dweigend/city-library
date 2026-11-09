@@ -3,28 +3,15 @@ import { defineUI, type Observation, type SpatialData, type Series } from "../..
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
   setup: ["seed", "initialNumberFish", "initialNumberFood"],
+  change: (instance, changes) => instance.setParameters(changes),
   live: {
-    energyGainFromFood: {
-      set: (m, v) => m.setParameters({ energyGainFromFood: v }),
-    },
-    foodReplenishRate: {
-      set: (m, v) => m.setParameters({ foodReplenishRate: v }),
-    },
-    mutationRate: {
-      set: (m, v) => m.setParameters({ mutationRate: v }),
-    },
-    reproductionRate: {
-      set: (m, v) => m.setParameters({ reproductionRate: v }),
-    },
-    eyeCost: {
-      set: (m, v) => m.setParameters({ eyeCost: v }),
-    },
-    maxEyeSize: {
-      set: (m, v) => m.setParameters({ maxEyeSize: v }),
-    },
-    showVision: {
-      set: (m, v) => m.setParameters({ showVision: v }),
-    },
+    energyGainFromFood: {},
+    foodReplenishRate: {},
+    mutationRate: {},
+    reproductionRate: {},
+    eyeCost: {},
+    maxEyeSize: {},
+    showVision: {},
   },
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Evolution/Vision%20Evolution.nlogox",

@@ -7,21 +7,16 @@ export const ui = defineUI(model, {
     url: "https://ccl.northwestern.edu/netlogo/models/SimpleGeneticAlgorithm",
     label: "Stonedahl & Wilensky · CC BY-NC-SA 3.0",
   },
+  change: (instance, changes) => instance.setParameters(changes),
   live: {
-    populationSize: {
-      set: (m, v) => m.setParameters({ populationSize: v }),
-    },
+    populationSize: {},
     crossoverRate: {
       label: "Crossover rate (%)",
-      set: (m, v) => m.setParameters({ crossoverRate: v }),
     },
     mutationRate: {
       label: "Mutation rate (%)",
-      set: (m, v) => m.setParameters({ mutationRate: v }),
     },
-    plotDiversity: {
-      set: (m, v) => m.setParameters({ plotDiversity: v }),
-    },
+    plotDiversity: {},
   },
   complete: (s) => s.done,
   monitors: [

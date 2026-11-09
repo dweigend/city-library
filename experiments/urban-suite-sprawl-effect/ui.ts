@@ -18,22 +18,17 @@ export const ui = defineUI(model, {
     url: "https://ccl.northwestern.edu/netlogo/models/UrbanSuite-SprawlEffect",
     label: "Original NetLogo model · Felsen and Wilensky · CC BY-NC-SA 3.0",
   },
+  change: (instance, changes) => instance.setRules(changes),
   live: {
     maxAttraction: {
       label: "Maximum attraction",
-      set: (instance, value) => instance.setRules({ maxAttraction: value }),
     },
     seekerSearchAngle: {
       label: "Search angle",
-      set: (instance, value) => instance.setRules({ seekerSearchAngle: value }),
     },
-    seekerPatience: {
-      set: (instance, value) => instance.setRules({ seekerPatience: value }),
-    },
+    seekerPatience: {},
     waitBetweenSeeking: {
       label: "House waiting time",
-      set: (instance, value) =>
-        instance.setRules({ waitBetweenSeeking: value }),
     },
   },
   monitors: [

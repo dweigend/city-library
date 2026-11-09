@@ -2,19 +2,12 @@ import { defineUI, type Observation } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
   setup: ["seed"],
+  change: (instance, changes) => instance.setRules(changes),
   live: {
-    humanStrategy: {
-      set: (m, value) => m.setRules({ humanStrategy: value }),
-    },
-    computerStrategy: {
-      set: (m, value) => m.setRules({ computerStrategy: value }),
-    },
-    selectComputerStrategy: {
-      set: (m, value) => m.setRules({ selectComputerStrategy: value }),
-    },
-    displayHistory: {
-      set: (m, value) => m.setRules({ displayHistory: value }),
-    },
+    humanStrategy: {},
+    computerStrategy: {},
+    selectComputerStrategy: {},
+    displayHistory: {},
   },
   actions: [{ label: "Play once", run: (m) => m.play() }],
   source: {
