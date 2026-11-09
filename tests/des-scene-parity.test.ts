@@ -71,13 +71,23 @@ describe("independent public scene parity", () => {
   test("all service scenes preserve complete entity populations and semantic states", () => {
     exercise(office({ residents: 100, clerks: 10 }), officeScene, (state, scene) => {
       expect(count(scene, "resident:")).toBe(state.residents.length);
-      expect(count(scene, "desk:")).toBe(state.parameters.clerks);
+      const capacity = scene.agents.filter(agent => agent.selectable === false);
+      expect(capacity).toHaveLength(Math.max(state.busy, state.parameters.clerks));
+      expect(capacity.filter(agent => agent.filled !== false)).toHaveLength(state.busy);
+      expect(scene.description).toContain(`Clerk capacity: ${state.busy} of ${state.parameters.clerks} seats`);
+      expect(scene.agents.filter(agent => agent.color === scientificPalette.waiting).map(agent => agent.id))
+        .toEqual(state.waitingResidents.map(number => `resident:${number}`));
       expect(scene.agents.filter(agent => agent.color === scientificPalette.waiting)).toHaveLength(state.waiting);
       expect(scene.agents.filter(agent => agent.color === scientificPalette.active)).toHaveLength(state.busy);
     });
     exercise(charging({ vehicles: 100, chargers: 10 }), chargingScene, (state, scene) => {
       expect(count(scene, "vehicle:")).toBe(state.vehicles.length);
-      expect(count(scene, "charger:")).toBe(state.parameters.chargers);
+      const capacity = scene.agents.filter(agent => agent.selectable === false);
+      expect(capacity).toHaveLength(Math.max(state.active, state.parameters.chargers));
+      expect(capacity.filter(agent => agent.filled !== false)).toHaveLength(state.active);
+      expect(scene.description).toContain(`Charger capacity: ${state.active} of ${state.parameters.chargers} vehicles`);
+      expect(scene.agents.filter(agent => agent.color === scientificPalette.waiting).map(agent => agent.id))
+        .toEqual(state.waitingVehicles.map(number => `vehicle:${number}`));
       for (const vehicle of state.vehicles) {
         const color = vehicle.status === "waiting" ? scientificPalette.waiting : vehicle.status === "granted" ? scientificPalette.active
           : vehicle.status === "released" ? scientificPalette.completed : scientificPalette.unavailable;
@@ -86,7 +96,10 @@ describe("independent public scene parity", () => {
     });
     exercise(buffer({ lots: 100, capacity: 20 }), bufferScene, (state, scene) => {
       expect(count(scene, "crate:")).toBe(state.produced);
-      expect(count(scene, "slot:")).toBe(state.parameters.capacity);
+      const capacity = scene.agents.filter(agent => agent.selectable === false);
+      expect(capacity).toHaveLength(state.parameters.capacity);
+      expect(capacity.filter(agent => agent.filled !== false)).toHaveLength(state.stored);
+      expect(scene.description).toContain(`Store capacity: ${state.stored} of ${state.parameters.capacity} crates`);
       expect(scene.agents.filter(agent => agent.color === scientificPalette.waiting)).toHaveLength(state.blocked);
       expect(scene.agents.filter(agent => agent.color === scientificPalette.active)).toHaveLength(state.stored);
     }, 100);

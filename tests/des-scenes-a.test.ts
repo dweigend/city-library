@@ -20,9 +20,13 @@ describe("five detached service and transport scenes", () => {
     const before = structuredClone(state);
     const scene = officeScene(state);
     expect(scene.agents.filter(agent => agent.id.startsWith("resident:"))).toHaveLength(4);
-    expect(scene.agents.filter(agent => agent.id.startsWith("desk:"))).toHaveLength(1);
-    expect(scene.description).toContain("3 in service");
-    expect(scene.description).toContain("2 retained");
+    const capacity = scene.agents.filter(agent => agent.selectable === false);
+    expect(capacity).toHaveLength(state.busy);
+    expect(capacity.filter(agent => agent.color === scientificPalette.neutral)).toHaveLength(state.parameters.clerks);
+    expect(capacity.filter(agent => agent.color === scientificPalette.unavailable)).toHaveLength(state.busy - state.parameters.clerks);
+    expect(capacity.every(agent => agent.filled !== false)).toBe(true);
+    expect(scene.description).toContain("Residents in service: 3 items");
+    expect(scene.description).toContain("Clerk capacity: 3 of 1 seats; 2 excess above capacity");
     expect(state).toEqual(before);
     expect(office.read()).toEqual(before);
   });
@@ -34,8 +38,13 @@ describe("five detached service and transport scenes", () => {
     const scene = chargingScene(state);
     const priority = scene.agents.find(agent => agent.id === "vehicle:4")!;
     const ordinary = scene.agents.find(agent => agent.id === "vehicle:2")!;
-    expect(priority.x).toBeGreaterThan(ordinary.x);
-    expect(scene.agents.filter(agent => agent.id.startsWith("priority:"))).toHaveLength(1);
+    expect(priority.x).toBeLessThan(ordinary.x);
+    expect(scene.agents.filter(agent => agent.color === scientificPalette.waiting).map(agent => agent.id))
+      .toEqual(state.waitingVehicles.map(number => `vehicle:${number}`));
+    expect(priority.shape).toBe("diamond");
+    expect(ordinary.shape).toBe("rectangle");
+    expect(scene.agents.filter(agent => agent.id === priority.id)).toHaveLength(1);
+    expect(scene.agents.filter(agent => agent.selectable !== false)).toHaveLength(state.vehicles.length);
     charging.abandonWaiting();
     const cancelled = chargingScene(charging.read()).agents.find(agent => agent.id === "vehicle:2")!;
     expect(cancelled.color).toBe(scientificPalette.unavailable);
@@ -46,7 +55,10 @@ describe("five detached service and transport scenes", () => {
     const buffer = createBuffer();
     buffer.advance(3);
     const full = bufferScene(buffer.read());
-    expect(full.agents.filter(agent => agent.id.startsWith("slot:"))).toHaveLength(2);
+    const capacity = full.agents.filter(agent => agent.selectable === false);
+    expect(capacity).toHaveLength(buffer.read().parameters.capacity);
+    expect(capacity.filter(agent => agent.filled !== false)).toHaveLength(buffer.read().stored);
+    expect(full.description).toContain("Store capacity: 2 of 2 crates");
     expect(full.agents.filter(agent => agent.id.startsWith("crate:"))).toHaveLength(3);
     expect(full.agents.find(agent => agent.id === "crate:3")!.color).toBe(scientificPalette.waiting);
     buffer.advance();
