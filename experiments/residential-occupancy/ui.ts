@@ -35,7 +35,7 @@ export function housingData(state: HousingObservation): SpatialData {
     }
     const waiting = household.reservation === "waiting";
     return { id: household.id, x: (waiting ? -6.7 : 6.2) + (ordinal % 2) * 0.7,
-      y: height / 2 - 1.5 - Math.floor(ordinal / 2) * 0.55, label: String(index + 1), size: 10,
+      y: height / 2 - 1.5 - Math.floor(ordinal / 2) * 0.55, size: 10,
       color: netLogoColor(waiting ? 25 : 5) };
   });
   return { width: 16, height, cells, agents, showLabels: true };

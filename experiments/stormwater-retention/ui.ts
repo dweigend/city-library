@@ -16,7 +16,7 @@ function retentionData(state: State): SpatialData {
   const storedBlocks = Math.round(state.storedM3 / state.parameters.capacityM3 * 40);
   // The true catchment grid is offset beside a normalized volume gauge; basin dimensions are schematic.
   return {
-    width: 18, height: 12, showLabels: true,
+    width: 18, height: 14, showLabels: true,
     cells: [
       ...state.catchment.fields.map(field => ({ id: field.id, x: field.x - 5, y: field.y,
         color: netLogoColor(state.parameters.rainMmPerHour > 0 ? 105 : 8) })),
@@ -27,7 +27,7 @@ function retentionData(state: State): SpatialData {
     agents: [
       { id: "inflow", x: -7, y: 2.5, size: 3, label: `In ${state.intervalInflowM3.toFixed(2)} m³` },
       { id: "capacity", x: -1, y: 5.3, size: 3, label: `Capacity ${state.parameters.capacityM3} m³` },
-      { id: "overflow", x: 3, y: 3, size: 3, color: netLogoColor(15), label: `Overflow ${state.intervalOverflowM3.toFixed(2)} m³` },
+      { id: "overflow", x: 2.5, y: 2.5, size: 3, color: netLogoColor(15), label: `Spill ${state.intervalOverflowM3.toFixed(2)} m³` },
       { id: "drainage", x: 3, y: -4, size: 3, color: netLogoColor(105), label: `Drain ${state.intervalDischargedM3.toFixed(2)} m³` },
     ],
     segments: [

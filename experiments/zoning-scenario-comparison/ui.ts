@@ -20,7 +20,8 @@ type ZoningObservation = Observation<typeof model>;
 /** Aggregate slots are grouped into schematic buildings; no parcel geography/order is inferred. */
 export function zoningData(state: ZoningObservation): SpatialData {
   const panelWidth = state.parameters.parcels * 1.25 + 2;
-  const panelHeight = Math.max(...state.runPlan.map(run => run.cap)) + 3;
+  const captionInset = 1.5;
+  const panelHeight = Math.max(...state.runPlan.map(run => run.cap)) + 5;
   const width = panelWidth * 2;
   const height = panelHeight * 3;
   const cells = [];
@@ -28,10 +29,11 @@ export function zoningData(state: ZoningObservation): SpatialData {
   const firstScenario = state.runPlan[0]?.scenarioId;
   for (const [run, planned] of state.runPlan.entries()) {
     const left = -width / 2 + (run % 2) * panelWidth + 1;
-    const bottom = height / 2 - (Math.floor(run / 2) + 1) * panelHeight + 1;
+    const panelTop = height / 2 - Math.floor(run / 2) * panelHeight;
+    const bottom = panelTop - panelHeight + 1;
     const outcome = state.outcomes[run];
     const cap = planned.cap;
-    agents.push({ id: `view:run:${run}`, x: left, y: bottom + panelHeight - 1.2,
+    agents.push({ id: `view:run:${run}`, x: left, y: panelTop - captionInset,
       label: `Run ${run + 1} · cap ${cap}${outcome ? ` · ${outcome.slots}` : " · pending"}`, size: 2, color: netLogoColor(5) });
     for (let parcel = 0; parcel < state.parameters.parcels; parcel += 1) {
       cells.push({ id: `view:parcel:${run}:${parcel}`, x: left + parcel * 1.25, y: bottom, color: netLogoColor(8) });
