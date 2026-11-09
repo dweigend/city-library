@@ -6,7 +6,9 @@ export function scene(state: Observation<typeof model>): SpatialData {
   const agents: SpatialAgent[] = [];
   for (const machine of state.machines) {
     const x = machine.x * 2;
-    const color = machine.status === "operational" ? scientificPalette.completed : machine.status === "repairing" ? scientificPalette.active : scientificPalette.waiting;
+    let color: string = scientificPalette.waiting;
+    if (machine.status === "operational") color = scientificPalette.completed;
+    else if (machine.status === "repairing") color = scientificPalette.active;
     agents.push({ id: machine.id, x, y: 0, shape: "rectangle", extent: { width: 2, height: 2 }, color });
     if (machine.status === "repairing") agents.push({ id: `crew:${machine.number}`, x, y: -2.2, shape: "triangle", size: 15, color: scientificPalette.active });
   }

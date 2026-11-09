@@ -10,10 +10,10 @@ export function chargingScene(state: Observation<typeof model>): SpatialData {
   const capacity = state.parameters.chargers;
   const columns = Math.min(5, capacity);
   const height = Math.max(10, 2 * (Math.ceil(Math.max(state.waiting, finished.length, cancelled.length) / 6) * 0.9 + 3.7));
-  const point = (index: number) => ({ x: (index % columns - (columns - 1) / 2) * 1.7,
+  const chargerPoint = (index: number) => ({ x: (index % columns - (columns - 1) / 2) * 1.7,
     y: (Math.ceil(capacity / columns) - 1) * 1.2 - Math.floor(index / columns) * 2.4 });
   const agents: SpatialAgent[] = Array.from({ length: capacity }, (_, index) => ({
-    id: `charger:${index + 1}`, ...point(index), shape: "rectangle",
+    id: `charger:${index + 1}`, ...chargerPoint(index), shape: "rectangle",
     extent: { width: 1.3, height: 1.8 }, filled: false, stroke: scientificPalette.neutral,
   }));
   for (const vehicle of state.vehicles) {
@@ -25,7 +25,7 @@ export function chargingScene(state: Observation<typeof model>): SpatialData {
       color = scientificPalette.waiting;
     } else if (vehicle.status === "granted") {
       const index = active.indexOf(vehicle);
-      position = index < capacity ? point(index) : { x: (index - capacity) * 1.1 - 1.5, y: -3.5 };
+      position = index < capacity ? chargerPoint(index) : { x: (index - capacity) * 1.1 - 1.5, y: -3.5 };
       color = scientificPalette.active;
     } else if (vehicle.status === "released") {
       const index = finished.indexOf(vehicle);

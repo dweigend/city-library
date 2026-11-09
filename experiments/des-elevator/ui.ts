@@ -19,7 +19,7 @@ export const ui = defineUI(model, {
   ],
 });
 
-function elevatorScene(state: Observation<typeof model>): SpatialData {
+export function elevatorScene(state: Observation<typeof model>): SpatialData {
   const longestLine = Math.max(0, ...state.floorQueues.map(line => line.passengers.length));
   const columns = Math.max(6, Math.min(20, Math.ceil(Math.sqrt(longestLine) * 2)));
   const queueRows = Math.ceil(longestLine / columns);
@@ -65,12 +65,12 @@ function elevatorScene(state: Observation<typeof model>): SpatialData {
     labels.push({ x, y: floorSpan / 2 + floorGap * 0.5, text: `Car ${car.number}` });
     if (car.direction !== 0) agents.push({ id: `direction:${car.number}`, x, y: y + 0.65,
       shape: "triangle", heading: car.direction === 1 ? 0 : 180, size: 5, color: scientificPalette.neutral });
+    const seatColumns = Math.min(4, car.capacity);
+    const seatRows = Math.ceil(car.capacity / seatColumns);
     car.passengers.forEach((number, seat) => {
       const passenger = state.passengers[number - 1]!;
-      const seatColumns = Math.min(4, car.capacity);
-      const rows = Math.ceil(car.capacity / seatColumns);
       agents.push({ id: passenger.id, x: x + (seat % seatColumns - (seatColumns - 1) / 2) * 0.4,
-        y: y + ((rows - 1) / 2 - Math.floor(seat / seatColumns)) * 0.3,
+        y: y + ((seatRows - 1) / 2 - Math.floor(seat / seatColumns)) * 0.3,
         shape: "circle", size: riderSize, color: scientificPalette.active });
     });
   });

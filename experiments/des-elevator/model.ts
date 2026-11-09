@@ -160,15 +160,17 @@ export function create(options: Partial<ElevatorParameters> = {}) {
     car.agent.status = "closing";
     schedule(agenda.time + settings.doorTime, { kind: "closed", car: car.agent.number });
   }
-  function boardNext(car: Car) {
-    if (car.claims.size === 0 && (!car.call || car.call.floor !== car.agent.floor)) {
-      const local = oldestCall(car, car.agent.floor);
-      if (local) reserve(car, local);
-      else if (!car.call) {
-        const next = oldestCall(car);
-        if (next) reserve(car, next);
-      }
+  function reserveNextCall(car: Car) {
+    if (car.claims.size > 0 || car.call?.floor === car.agent.floor) return;
+    const local = oldestCall(car, car.agent.floor);
+    if (local) reserve(car, local);
+    else if (!car.call) {
+      const next = oldestCall(car);
+      if (next) reserve(car, next);
     }
+  }
+  function boardNext(car: Car) {
+    reserveNextCall(car);
     if (car.claims.size === 0 && car.call?.floor === car.agent.floor)
       car.agent.direction = car.call.direction;
     const line = car.agent.direction === 0 ? undefined : lineAt(car.agent.floor, car.agent.direction);
