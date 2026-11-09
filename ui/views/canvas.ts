@@ -28,6 +28,7 @@ export function mountCanvas(
   let showLabels = false;
   let drawingEnabled = false;
   let pointer: number | null = null;
+  let resizeFrame: number | undefined;
   const labelControl = document.createElement("label");
   labelControl.className = "view-labels";
   const labels = document.createElement("input");
@@ -125,13 +126,21 @@ export function mountCanvas(
       canvas.height = Math.round(height);
   }
   const resize = new ResizeObserver((entries) => {
+    if (disposed) return;
     const width = Math.max(1, entries[0]?.contentRect.width ?? 200);
     if (options.theme) {
       availableWidth = width;
       displayHeightLimit = parseFloat(getComputedStyle(canvas).maxHeight) || Infinity;
     } else pixelWidth = width * Math.min(devicePixelRatio, 2);
-    resizeBuffer();
-    draw();
+    // Intrinsic buffer dimensions can resize the observed parent. Write after
+    // notification delivery so the browser can measure the new layout next frame.
+    if (resizeFrame !== undefined) return;
+    resizeFrame = requestAnimationFrame(() => {
+      resizeFrame = undefined;
+      if (disposed) return;
+      resizeBuffer();
+      draw();
+    });
   });
   resize.observe(options.theme ? container : canvas);
   function pick(event: MouseEvent) {
@@ -290,6 +299,8 @@ export function mountCanvas(
       disposed = true;
       stopDrawing();
       resize.disconnect();
+      if (resizeFrame !== undefined) cancelAnimationFrame(resizeFrame);
+      resizeFrame = undefined;
       canvas.removeEventListener("pointerdown", pointerDown);
       canvas.removeEventListener("pointermove", pointerMove);
       canvas.removeEventListener("pointerup", pointerEnd);
