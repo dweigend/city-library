@@ -26,3 +26,11 @@ ASTRA-02–11 document ten model-specific invariants rather than additional defe
 All Gemini `M01`–`M10` retain findings are accepted: public projection exports, true Grid coordinates, deterministic schematic layouts, existing continuous functions, real Resource tickets, two-phase updates and native Graph edges remain. Layout constants describe presentation, not new domain geometry. No shared UI, palette, canvas, CSS, host, library or reference-model changes belong to this refactor.
 
 Gemini checked screenshot hashes and pixel statistics. That supports file integrity, not a complete WCAG or semantic-image approval. Fresh rendered flows and independent actual-image inspection are separate acceptance gates; no general WCAG-AA certification is claimed.
+
+## Implemented changes and comparison
+
+The model/UI changes and one focused road-projection regression were committed as `95a5dc8f5e9769b72b7fedb3c79ba35217914236`. Each fix row above is implemented there; retain decisions preserve its baseline mechanism. The native independent source/behavior check found no further blocker.
+
+The unmodified strict replay exits 1 for exactly two cases: crossing's default and action trajectories contain the deliberately changed `crossingData.cells` array. All domain observations, IDs, clocks, actions and other exported projections compare exactly. A separate comparison resolves crossing cells by the renderer's last-write-per-coordinate rule, then compares every remaining value exactly: 32/32 cases pass. The original strict mismatch remains in [strict replay evidence](refactor-baseline/strict-replay-summary.json); the separate [effective comparison](refactor-baseline/effective-replay-summary.json) does not replace or overwrite it.
+
+Crossing's view correction also changes view-cell selection: the old first coordinate match could select a hidden road descriptor beneath a stripe. The sole surviving stripe descriptor is now selected, with fewer cell entries in the keyboard sequence. These are view-only IDs; no domain identity, action or inspector behavior changes. The change is a small explicit presentation correction, not complete projection-array identity.
