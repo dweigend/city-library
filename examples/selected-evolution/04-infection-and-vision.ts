@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
-import { create as infection, giveDose } from '../../experiments/bacterial-infection/model.ts';
-import { create as vision, visionRadius, energyCost } from '../../experiments/vision-evolution/model.ts';
+import { create as infection, giveDose } from '../../models/bacterial-infection/model.ts';
+import { create as vision, visionRadius, energyCost } from '../../models/vision-evolution/model.ts';
 
 assert.equal(giveDose(0, 4, false, 'yes, skip no doses', 0), true);
 assert.equal(giveDose(240, 4, false, 'yes, but skip dose 2', 1), false);

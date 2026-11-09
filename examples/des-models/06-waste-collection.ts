@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { model } from "../../experiments/des-waste-collection/model.ts";
+import { model } from "../../models/des-waste-collection/model.ts";
 
 const collection = model.create();
 const independent = model.create();

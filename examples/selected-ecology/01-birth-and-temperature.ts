@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
-import { create as births } from "../../experiments/simple-birth-rates/model.ts";
-import { create as daisies } from "../../experiments/daisyworld/model.ts";
+import { create as births } from "../../models/simple-birth-rates/model.ts";
+import { create as daisies } from "../../models/daisyworld/model.ts";
 const population = births({ carryingCapacity: 1, redFertility: 0, blueFertility: 0, seed: 7 });
 assert.equal(population.read().blueCount, 1);
 assert.equal(population.read().redCount, 0);

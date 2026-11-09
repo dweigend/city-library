@@ -1,11 +1,11 @@
 import { describe, expect, test } from "bun:test";
-import { create as grid } from "../experiments/traffic-grid/model.ts";
-import { create as goal } from "../experiments/traffic-grid-goal/model.ts";
-import { create as taxi, inputs } from "../experiments/taxi-cabs/model.ts";
+import { create as grid } from "../models/traffic-grid/model.ts";
+import { create as goal } from "../models/traffic-grid-goal/model.ts";
+import { create as taxi, inputs } from "../models/taxi-cabs/model.ts";
 import type {
   DemandKey,
   TaxiParameters,
-} from "../experiments/taxi-cabs/model.ts";
+} from "../models/taxi-cabs/model.ts";
 
 function noDemand(): Partial<TaxiParameters> {
   return Object.fromEntries(

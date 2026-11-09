@@ -1,6 +1,6 @@
-import type { Definition } from '../experiments/definition.ts';
+import type { Definition } from '../models/definition.ts';
 import type { ChangeUISpec, KeyedLive, LegacyLiveField, LiveChanges, ModelInstance, SetupField, Snapshot, UISpec } from './definition.ts';
-import type { Descriptor } from './controls/form.ts';
+import type { Descriptor } from './inputs.ts';
 
 export type ControlValue = string | number | boolean;
 /** Internal union of the two typed variants of the existing flat declaration. */

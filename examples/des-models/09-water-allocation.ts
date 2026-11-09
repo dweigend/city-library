@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { model } from "../../experiments/des-water-allocation/model.ts";
+import { model } from "../../models/des-water-allocation/model.ts";
 
 const water = model.create();
 const independent = model.create();

@@ -1,6 +1,6 @@
 import { strict as assert } from "node:assert";
 import { defineUI, type UISpec } from "../../ui/index.ts";
-import { model, type VirusParameters } from "../../experiments/virus-on-a-network/model.ts";
+import { model, type VirusParameters } from "../../models/virus-on-a-network/model.ts";
 
 const spec = { views: [
   { type: "network", label: "Network", nodes: state => state.nodes, edges: state => state.edges },

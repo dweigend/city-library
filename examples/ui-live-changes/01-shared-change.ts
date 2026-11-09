@@ -1,5 +1,5 @@
 import { defineUI, type ChangeUISpec } from '../../ui/index.ts';
-import { model, type WolfSheepParameters } from '../../experiments/wolf-sheep-predation/model.ts';
+import { model, type WolfSheepParameters } from '../../models/wolf-sheep-predation/model.ts';
 import { assert, equal, button, changeNumber, settle } from '../ui-authoring/assertions.ts';
 
 type Instance = ReturnType<typeof model.create>;

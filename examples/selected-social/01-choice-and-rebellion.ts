@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
-import { create as choice } from '../../experiments/consumer-choice/model.ts';
-import { create as rebellion } from '../../experiments/rebellion/model.ts';
+import { create as choice } from '../../models/consumer-choice/model.ts';
+import { create as rebellion } from '../../models/rebellion/model.ts';
 // Dissatisfaction followed by certain exploration switches every consumer.
 const market = choice({ numConsumers: 10, avgConnections: 0, initialOrangePercent: 100,
   qualityOrange: 0, qualityBlue: 0, exploration: 1, normInfluence: 0, informationExchange: 0 });

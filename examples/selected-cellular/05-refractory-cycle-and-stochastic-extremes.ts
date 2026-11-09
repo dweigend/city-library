@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
-import { create as brain } from "../../experiments/brians-brain/model.ts";
-import { create as cyclic } from "../../experiments/cyclic-ca/model.ts";
-import { create as stochastic } from "../../experiments/ca-stochastic/model.ts";
+import { create as brain } from "../../models/brians-brain/model.ts";
+import { create as cyclic } from "../../models/cyclic-ca/model.ts";
+import { create as stochastic } from "../../models/ca-stochastic/model.ts";
 const b = brain({ width: 5, height: 5, initialization: "blank" });
 b.setCells(b.read().cells.map(c => c.y === 0 && Math.abs(c.x) === 1 ? 1 : 0));
 b.advance();

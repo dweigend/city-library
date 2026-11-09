@@ -1,49 +1,25 @@
-# Universal UI authoring decisions
+# UI authoring decisions
 
-Status: accepted implementation direction for the user-authorized task, not runtime acceptance. Baseline `a78bd2359e7a12ac537be131ca8d3023c4b718eb`. The independent Opus proposal and Astra analysis both incorporated the same source dossier and all-146 inventory; neither read the other's draft. Existing APIs and frozen examples remain binding.
+Use one flat `defineUI(model, spec)` description and reuse the existing Svelte session, controls and renderers. `ui/index.ts` is the public entry; `ui/svelte/index.ts` preserves import compatibility and delegates to that same implementation. The headless package does not import UI code.
 
-## Synthesis
+## Explicit writes with useful defaults
 
-Keep `defineUI`, both hosts, ordinary observation maps and all existing renderers. The measured repeated single-field live forwards justify one explicit spec-level write default. Repeated abstract DES collection placement justifies one pure adapter returning existing `SpatialData`. Astra's distinction between identity, anonymous count and capacity is stronger than overlaying people onto numbered slots; use separate discriminated rows. Complete existing table inspection through shared paging. These are complementary additions, not a new authoring language.
+A common `change(instance, changes)` action removes repeated single-field forwarding. Each edit is descriptor-decoded and supplies one own key; a field's local `set` overrides it. No action is guessed and no model property is assigned directly. Keep short named domain setters explicit where a shared default would obscure them.
 
-### Phase A: explicit live write default and chart stability
+`UISpec` remains an extendable interface for existing explicit-set declarations. `ChangeUISpec` describes the required common-write variant. These are typed variants of the same flat call, not competing authoring languages. Legacy live arrays remain compatibility records with their required setters; they do not acquire the common write default. The [UI reference](../ui/api-reference.md#live) owns exact behavior and errors.
 
-Add `change(instance, changes)` to the existing spec. `LiveChanges<P>` is `Partial<P>`. A keyed field may omit `set` only when the spec supplies `change`; without it the existing required-set typing remains. Each edit is descriptor-decoded first and invokes exactly one own-key change. A local `set` wins. Reading still defaults to compatible `state.parameters[field]`. Pre-Setup edits change drafts without invoking actions. Legacy arrays retain required setters and cannot use `change`. No reflection, batching, guessed method, direct mutation or rollback promise.
+## Presentation facts stay distinct
 
-Migrate only files with at least three uniform forwards to the same public method and a demonstrable readability benefit; preserve labels, groups, enabled predicates, getters, overrides and all scientific projections. One/two explicit setters and named domain actions normally remain clearer. All 146 pairs receive final source-backed retain/change decisions.
+`collectionDiagram` returns ordinary `SpatialData`, using the existing canvas and shared layout defaults. Identified items, anonymous counts and capacities are separate row variants. Supplied order must come from the model; the projection never reconstructs a Resource queue by filtering an admission ledger. Capacity does not assign a person to a desk or seat, and retained excess remains visible. Decorations can opt out of selection without losing their visual meaning.
 
-Correct chart default colors to remain keyed by a unique series label during a mounted view's lifetime. Explicit colors always win; fixed lists retain their first-frame colors. Duplicate labels preserve positional fallback. Reset on disposal/Setup. This is stable presentation state, never a scientific category registry. Public scripts must freeze filtering/reordering and explicit-color behavior before runtime.
+Keep physical grids, route topology and the elevator's floor/shaft geometry in their existing spatial projections. There is no new view type, scene DSL, generic coordinate framework or widget per domain. The [collection reference](../ui/api-reference.md#collection-diagrams) owns the data contract.
 
-### Public type compatibility correction
+## Preserve scientific meaning
 
-The first implementation expressed write paths as a `UISpec` union alias. Independent review demonstrated that this broke the previously exported interface-extension syntax (`interface ExtendedSpec extends UISpec<P,M>`). Preserve the original `UISpec` interface and its required local-setter contract. Add the precise `ChangeUISpec` interface for a required common `change` action with optional local setters; internal `AuthoringSpec` unites the variants. Ordinary `defineUI(model, { ... })` calls and inference remain one flat authoring form. This adds a meaningful type variant, not an operation alias or a second DSL.
+Keep readable history maps, explicit source color formulas, NetLogo compatibility conversion and stated normalization domains. Do not replace them with encounter-order categories, automatic per-frame scales or guessed physical units. Synthetic water allocation remains allocation units, not hydraulic volume. A formatter changes text, not observations.
 
-Four newly frozen positive examples and two newly added independent tests initially annotated common-write records with `UISpec`. Correct only their imports/type annotations to `ChangeUISpec`, with README/hash records; objects, callbacks, values, runtime assertions and compile-time negative expectations remain unchanged. This annotation correction preserves the old consumer contract instead of weakening it. A compile-only legacy interface-extension regression and standalone old/new consumers verify both surfaces.
+Charts keep default colors associated with unique series labels during a mounted view; explicit colors win and duplicate labels preserve positional fallback. Tables expose all projected rows through bounded pages. Neither feature changes model data or creates entity identities.
 
-### Phase B: pure collection diagrams and complete inspection
+## Provenance and acceptance
 
-Export `collectionDiagram(rows)` and its `CollectionRow`/`CollectionItem` types from both existing UI entries. Rows are flat and discriminated:
-
-- `{id,label,kind:'items',items,order?:'unordered'|'supplied',color?}`: identified items `{id,label?,color?,shape?}`; order defaults unordered and preserves input placement without claiming queue rank. Supplied order means exactly the model-owned order. No sorting or state inference.
-- `{id,label,kind:'count',count,color?}`: nonnegative safe integer, exact visible count, no fabricated selectable individuals.
-- `{id,label,kind:'capacity',used,capacity,unit,color?}`: finite nonnegative quantities in the same required nonempty unit. Exact used/capacity and retained excess stay visible; no relation to an item row's length is inferred. No person-to-slot assignment. Small integer capacities may use anonymous unit outlines; other capacities use a symbolic frame with exact values. No hidden truncation of data.
-
-Rows retain declaration order. Omitted colors use the existing scientific neutral; item overrides row color. Item shapes use the existing vocabulary, default rectangle. Existing CSS size and rectangle-only extent contracts remain unchanged. Spacing, wrapping, symbol sizes and annotation placement have one owner in the projection, with useful defaults and no per-model layout options. Empty rows remain named and zero is visible; empty input returns a valid empty scene with description `No collections`. Identified items all remain present and inspectable. Long labels wrap using shared defaults. All coordinates are abstract diagram units.
-
-Validate types/discriminants/unknown enums and combinations before output. Invalid types throw TypeError; invalid ranges, duplicate row/item IDs or overflow throw RangeError. Output is detached and pure. Reject decoration-ID collisions rather than assuming an impossible prefix. Add `SpatialAgent.selectable?: boolean`, default true; false excludes pointer, nearest, keyboard and chooser selection. Count/capacity decorations are nonselectable. Existing pure circle/triangle nearest behavior and mixed painted-bounds picking remain compatible.
-
-Replace only office/EV/goods abstract scene helpers initially. Office adds a detached `waitingResidents` snapshot directly from Resource.waiting; old observation fields remain identical. EV uses its actual ordered waitingVehicles; goods uses Store snapshots. Elevator, routes, grids and physical/topological projections retain their semantically necessary geometry. New descriptions explain separate identity/capacity rows and retained occupancy.
-
-Both existing table hosts expose every row through 200-row pages, with accessible previous/next controls and visible range/total. Preserve first-record column order and blank missing values. Setup resets the page; shrinking data clamps it. Empty state is explicit. Paging is host-owned and never mutates model data. No selectable-table row identity is invented.
-
-## Rejected or deferred
-
-Do not widen extent to other shapes: existing frozen invalid-input examples intentionally reject that combination. Do not introduce a view kind, scene DSL, coordinate framework, widget per domain, category/legend registry, generic scale layer, string field paths, history wrapper, default Tick monitor or automatic inspector. The existing short maps and domain lookups are readable. Preserve source scientific palettes, NetLogo conversion and explicit normalization; no blanket replacement of 448 color literals. Keep conditional scientific formulas and unit meanings exact.
-
-The old table cap is an inspection gap, not justification for clipping a new collection. Any pre-existing domain-measurement logic found in UI needs an explicit bounded ownership fix or documented deferral, never silent formula changes during setter migration.
-
-## Sequence and evidence
-
-Freeze five complete asserted public authoring scripts for Phase A and five for Phase B before their respective runtime. Initially missing features remain honestly red. Separate scoped owners implement core typing/normalization, projection/picking/table/chart and script migrations. Independent tests/refactors/rechecks preserve original syntax and assertions. Two all-146 baseline captures at steps 0/1/3 are byte-identical, including 98 exposed RNG states; compare after migrations and ignore only explicitly approved added observation fields.
-
-Run all changed entries through real catalog Setup/step/live actions, all-146 catalog smoke for shared runtime, both-host public fixtures, all eleven DES flows, numeric/empty/missing/signed/category/selection/resize/disposal tests, and affected desktop/narrow light/dark images with independent actual inspection. New Gemini substantial source/design approval is separate from expert proposals and browser/image evidence. Finish with relevant typechecks, public scripts, build/consumer and one stable full check, focused remediation checks, final manifest and clean local commits. No push, PR or main merge.
+The original two-model design comparison and example-first decisions are preserved in the [pre-consolidation decision record](https://github.com/dweigend/city-library/blob/754e4cc0bb1afb5b417aeda1d918d3b654c8c85f/docs/development/universal-ui-decisions.md). The five live-authoring and five collection scripts preceded runtime implementation; path changes preserve their executable assertions. [Historical acceptance](universal-ui-evidence.md) is distinct from [current main integration](pr-main-integration.md).

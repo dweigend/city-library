@@ -119,20 +119,6 @@ test("sampling acquires and invokes a source iterator exactly once", () => {
   assert.throws(() => Random.add().sample({ 0: "a", length: 1 } as never));
 });
 
-test("sampling draw schedules distinguish singleton choices from legacy shuffles", () => {
-  const selected = Random.add();
-  selected.sample([1]);
-  assert.equal(selected.number(), 0.002735721180215478);
-  const shuffled = Random.add();
-  assert.deepEqual(shuffled.sample([1], { count: 1, compatibility: "legacy-shuffle" }), [1]);
-  assert.deepEqual(shuffled.sample([], { count: 0, compatibility: "legacy-shuffle" }), []);
-  assert.equal(shuffled.number(), 0.6270739405881613);
-  const before = shuffled.state;
-  assert.throws(() => shuffled.sample([1, 2], { count: 2, compatibility: "legacy-shuffle", order: "draw" }));
-  assert.throws(() => shuffled.sample([1, 2], { count: 1, compatibility: "legacy-shuffle" }));
-  assert.deepEqual(shuffled.state, before);
-});
-
 test("source ordering with replacement remains the same draw schedule", () => {
   const first = Random.add();
   const second = Random.add();

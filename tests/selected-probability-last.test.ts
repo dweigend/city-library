@@ -1,10 +1,10 @@
 import { test, expect } from "bun:test";
 import { Random } from "city-library";
-import { create as expectedValue } from "../experiments/expected-value/model.ts";
-import { create as partition } from "../experiments/partition-permutation-distribution/model.ts";
-import { create as centralLimit } from "../experiments/central-limit-theorem/model.ts";
-import { create as combinations } from "../experiments/random-combinations-and-permutations/model.ts";
-import { create as mandelbrot } from "../experiments/mandelbrot/model.ts";
+import { create as expectedValue } from "../models/expected-value/model.ts";
+import { create as partition } from "../models/partition-permutation-distribution/model.ts";
+import { create as centralLimit } from "../models/central-limit-theorem/model.ts";
+import { create as combinations } from "../models/random-combinations-and-permutations/model.ts";
+import { create as mandelbrot } from "../models/mandelbrot/model.ts";
 
 test("Partition live target reduction preserves signed draws and rejected trial ticks", () => {
   const m = partition({ seed: 1 });

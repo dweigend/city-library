@@ -130,7 +130,7 @@ honestly, without stubs or availability claims.
 
 ## Source evidence
 
-See GRID-PARCELS-INTERIM.md and workstreams/spatial for provenance. Primary sources:
+See [source comparison and adaptation](PROVENANCE.md) for provenance. Primary sources:
 Grid Lab core, Volume Houses grids, parcel research geometry and report. Target
 implementation inspected at dc7b164; source at 3e1d34f1. Current target checkouts
 contain concurrent documentation work; preserve it and use an isolated branch.

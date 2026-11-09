@@ -1,9 +1,9 @@
 import { describe, expect, test } from 'bun:test';
 import { normalizeAuthoring, decodeControl, groupLive } from '../ui/authoring.ts';
 import { defineUI, type UISpec } from '../ui/index.ts';
-import { model as voting, type VotingParameters } from '../experiments/voting/model.ts';
-import { model as wealth } from '../experiments/wealth-distribution/model.ts';
-import { inputs as wolfInputs } from '../experiments/wolf-sheep-predation/model.ts';
+import { model as voting, type VotingParameters } from '../models/voting/model.ts';
+import { model as wealth } from '../models/wealth-distribution/model.ts';
+import { inputs as wolfInputs } from '../models/wolf-sheep-predation/model.ts';
 import { createSession, type SessionState } from '../ui/svelte/session.ts';
 
 describe('public authoring contract at the common host boundary', () => {
@@ -120,7 +120,7 @@ test('client session restart installs a fresh owner and clears only the prior pr
   const result = Bun.spawnSync([process.execPath, '--conditions=browser', '-e', `
     import { strict as assert } from 'node:assert';
     import { createSession } from './ui/svelte/session.ts';
-    import { model } from './experiments/wealth-distribution/model.ts';
+    import { model } from './models/wealth-distribution/model.ts';
     const instances = [];
     const definition = { ...model, create(options) { const instance = model.create({ ...options, people: 2 }); instances.push(instance); return instance; } };
     const session = createSession(definition, { setup: [], monitors: [{ label: 'Tick', value: state => state.tick, format(value) { if (value === 1) throw Error('Actual projection failure'); return String(value); } }], views: [] });
@@ -151,7 +151,7 @@ function clientSessionCase(source: string) {
   const result = Bun.spawnSync([process.execPath, '--conditions=browser', '-e', `
     import { strict as assert } from 'node:assert';
     import { createSession } from './ui/svelte/session.ts';
-    import { model } from './experiments/wealth-distribution/model.ts';
+    import { model } from './models/wealth-distribution/model.ts';
     ${source}
   `], { cwd: import.meta.dir + '/..', stdout: 'pipe', stderr: 'pipe' });
   expect(new TextDecoder().decode(result.stderr)).toBe('');

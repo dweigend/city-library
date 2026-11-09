@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
-import { create as rumor } from '../../experiments/rumor-mill/model.ts';
-import { create as signaling } from '../../experiments/signaling-game/model.ts';
+import { create as rumor } from '../../models/rumor-mill/model.ts';
+import { create as signaling } from '../../models/signaling-game/model.ts';
 const mill = rumor({ setup: 'one', eightMode: false });
 assert.equal(mill.read().clique, 1); assert.equal(mill.read().totalHeard, 1);
 mill.advance(); assert.equal(mill.read().clique, 2); assert.equal(mill.read().totalHeard, 2);

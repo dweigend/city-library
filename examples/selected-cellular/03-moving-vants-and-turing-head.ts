@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
-import { create as vants } from "../../experiments/vants/model.ts";
-import { create as turing } from "../../experiments/turing-machine-2d/model.ts";
+import { create as vants } from "../../models/vants/model.ts";
+import { create as turing } from "../../models/turing-machine-2d/model.ts";
 const v = vants({ width: 9, height: 9, numVants: 2, seed: 7 });
 const initial = v.read();
 v.advance(25);

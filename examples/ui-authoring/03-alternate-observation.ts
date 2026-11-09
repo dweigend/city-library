@@ -1,5 +1,5 @@
 import { defineUI, type UISpec } from '../../ui/index.ts';
-import { model, type VotingParameters } from '../../experiments/voting/model.ts';
+import { model, type VotingParameters } from '../../models/voting/model.ts';
 import { assert, equal, button, control, settle } from './assertions.ts';
 
 /** A real model adapter: only the observation name changes; all behavior delegates. */

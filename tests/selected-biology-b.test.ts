@@ -1,9 +1,9 @@
 import { describe, expect, test } from "bun:test";
-import { create as autumn } from "../experiments/autumn/model.ts";
-import { create as membrane } from "../experiments/membrane-formation/model.ts";
-import { create as sunflower } from "../experiments/sunflower-emergent/model.ts";
-import { create as tumor } from "../experiments/tumor/model.ts";
-import { create as muscle } from "../experiments/muscle-development/model.ts";
+import { create as autumn } from "../models/autumn/model.ts";
+import { create as membrane } from "../models/membrane-formation/model.ts";
+import { create as sunflower } from "../models/sunflower-emergent/model.ts";
+import { create as tumor } from "../models/tumor/model.ts";
+import { create as muscle } from "../models/muscle-development/model.ts";
 
 describe("Selected biology B07 source procedures", () => {
   test("Autumn setup converts sugar before the first tick; cold water procedure returns only locally", () => {

@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
-import { create as chloroplasts } from "../../experiments/chloroplasts-and-food/model.ts";
-import { create as slime } from "../../experiments/slime/model.ts";
+import { create as chloroplasts } from "../../models/chloroplasts-and-food/model.ts";
+import { create as slime } from "../../models/slime/model.ts";
 
 const cell = chloroplasts({ seed: 1, initialChloroplasts: 3, initialCarbonDioxide: 100, intensityOfLight: 0, waterflowThroughLeaf: 0 });
 assert.equal(cell.read().tick, 0);

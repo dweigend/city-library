@@ -2,7 +2,7 @@
 
 Date: 2026-11-07. This is a source and design ledger, not evidence that target
 runtime checks or independent acceptance have passed. The frozen phase examples
-and [phase plan](PHASE-PLAN.md) define the delivered contract.
+and [bounded layout contract](STATUS.md#bounded-layout-contract) define the delivered contract.
 
 ## Exact local candidates
 

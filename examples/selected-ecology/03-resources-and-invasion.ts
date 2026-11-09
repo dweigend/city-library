@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
-import { create as rabbits } from "../../experiments/rabbits-grass-weeds/model.ts";
-import { create as plants } from "../../experiments/invasive-plants/model.ts";
+import { create as rabbits } from "../../models/rabbits-grass-weeds/model.ts";
+import { create as plants } from "../../models/invasive-plants/model.ts";
 const extinct = rabbits({ number: 0, grassGrowRate: 0, weedsGrowRate: 0 });
 extinct.advance(5);
 assert.equal(extinct.read().tick, 0); // preflight stop occurs before growth and tick

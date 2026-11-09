@@ -7,10 +7,7 @@
   import type { BoundEntry } from "../definition.ts";
   import type { CatalogEntry } from "../agent-lab/catalog.ts";
   import { createCatalogLoader } from "../agent-lab/catalog.ts";
-  import legacyStyles from "../agent-lab/styles.css?url";
-  import legacyHostStyles from "./legacy-host.css?url";
-
-  let { entries, version, legacyEntries }: { entries: readonly CatalogEntry<BoundEntry>[]; version: string; legacyEntries: readonly string[] } = $props();
+  let { entries, version }: { entries: readonly CatalogEntry<BoundEntry>[]; version: string } = $props();
   let host: HTMLElement;
   let selected = $state("");
   let filter = $state("");
@@ -22,15 +19,7 @@
   const items = $derived(entries.filter(entry => entry.title.toLocaleLowerCase().includes(filter.toLocaleLowerCase())).map(entry => ({ value: entry.slug, label: entry.title })));
   const loader = createCatalogLoader<BoundEntry>((entry, slug) => {
     const staging = document.createElement("div");
-    let target = staging;
-    if (legacyEntries.includes(slug)) {
-      const shadow = staging.attachShadow({ mode: "open" });
-      for (const href of [legacyStyles, legacyHostStyles]) {
-        const link = document.createElement("link"); link.rel = "stylesheet"; link.href = href; shadow.append(link);
-      }
-      target = document.createElement("div"); shadow.append(target);
-    }
-    const candidate = entry.mount(target);
+    const candidate = entry.mount(staging);
     mounted?.dispose();
     mounted = candidate;
     host.replaceChildren(staging);
@@ -56,20 +45,20 @@
   });
 </script>
 
-<a class="lab-skip" href="#experiment-content">Skip to experiment</a>
+<a class="lab-skip" href="#experiment-content">Skip to model</a>
 <main class="lab-shell">
   <header class="lab-header">
     <h1>Agent Lab</h1>
     <div class="lab-chooser">
-      <Input type="search" aria-label="Find experiment" placeholder="Find experiment" value={filter} oninput={(event) => filter = event.currentTarget.value} />
+      <Input type="search" aria-label="Find model" placeholder="Find model" value={filter} oninput={(event) => filter = event.currentTarget.value} />
       <Select.Root type="single" {items} value={selected} onValueChange={open}>
-        <Select.Trigger aria-label="Experiment"><Select.Value placeholder="Experiment" /></Select.Trigger>
+        <Select.Trigger aria-label="Model"><Select.Value placeholder="Model" /></Select.Trigger>
         <Select.Content><Select.Group>{#each items as item (item.value)}<Select.Item value={item.value} label={item.label}>{item.label}</Select.Item>{/each}</Select.Group></Select.Content>
       </Select.Root>
     </div>
     {#if updates}<Button variant="outline" onclick={() => location.reload()}>Reload updates</Button>{/if}
   </header>
   {#if error}<p role="alert" class="lab-error">{error}</p>{/if}
-  <span class="sr-only" role="status" aria-live="polite">{loading ? "Loading experiment" : ""}</span>
-  <section id="experiment-content" aria-label="Experiment workbench" aria-busy={loading} bind:this={host}></section>
+  <span class="sr-only" role="status" aria-live="polite">{loading ? "Loading model" : ""}</span>
+  <section id="experiment-content" aria-label="Model workbench" aria-busy={loading} bind:this={host}></section>
 </main>

@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { create } from "../../experiments/diffusion-on-a-directed-network/model.ts";
+import { create } from "../../models/diffusion-on-a-directed-network/model.ts";
 
 const model = create({ gridSize: 3, diffusionRate: 50 });
 model.setValues([8, 0, 0, 0, 0, 0, 0, 0, 0]);

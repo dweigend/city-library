@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { model } from "../experiments/residential-occupancy/model.ts";
+import { model } from "../models/residential-occupancy/model.ts";
 
 test("dwelling reservations use Resource capacity and stable FIFO admission", () => {
   const instance = model.create({ applicants: 5, slots: 2 });

@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
-import { create as solid } from "../../experiments/solid-diffusion/model.ts";
-import { create as interstitial } from "../../experiments/interstitial-diffusion/model.ts";
+import { create as solid } from "../../models/solid-diffusion/model.ts";
+import { create as interstitial } from "../../models/interstitial-diffusion/model.ts";
 const atoms = solid({ width: 5, height: 3, seed: 4 });
 assert.equal(atoms.read().atoms.length, 12);
 assert.equal(atoms.read().vacancies, 3);

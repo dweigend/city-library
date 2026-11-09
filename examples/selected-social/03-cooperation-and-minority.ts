@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
-import { create as ethnicity } from '../../experiments/ethnocentrism/model.ts';
-import { create as minority } from '../../experiments/minority-game/model.ts';
+import { create as ethnicity } from '../../models/ethnocentrism/model.ts';
+import { create as minority } from '../../models/minority-game/model.ts';
 const society = ethnicity({ setup: 'full', immigrantsPerDay: 0, initialPtr: 0, costOfGiving: 0, gainOfReceiving: 0,
   deathRate: 0, mutationRate: 0, immigrantChanceCooperateWithSame: 1, immigrantChanceCooperateWithDifferent: 1 });
 assert.equal(society.read().agents.length, 2601);

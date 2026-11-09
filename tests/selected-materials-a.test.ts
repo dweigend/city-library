@@ -1,8 +1,8 @@
 import { test, expect } from "bun:test";
-import { create as sandpile } from "../experiments/sandpile/model.ts";
-import { create as ising } from "../experiments/ising/model.ts";
-import { create as sand } from "../experiments/sand/model.ts";
-import { create as solid } from "../experiments/solid-diffusion/model.ts";
+import { create as sandpile } from "../models/sandpile/model.ts";
+import { create as ising } from "../models/ising/model.ts";
+import { create as sand } from "../models/sand/model.ts";
+import { create as solid } from "../models/solid-diffusion/model.ts";
 
 test("sandpile deterministic open avalanche oracle and pure exploration", () => {
   const model = sandpile({

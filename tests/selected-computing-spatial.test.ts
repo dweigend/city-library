@@ -2,17 +2,17 @@ import { describe, test, expect } from "bun:test";
 import {
   create as annealing,
   fieldEnergy,
-} from "../experiments/simulated-annealing/model.ts";
-import { create as clustering } from "../experiments/k-means-clustering/model.ts";
-import { create as swarm } from "../experiments/particle-swarm-optimization/model.ts";
+} from "../models/simulated-annealing/model.ts";
+import { create as clustering } from "../models/k-means-clustering/model.ts";
+import { create as swarm } from "../models/particle-swarm-optimization/model.ts";
 import {
   create as robby,
   robbyState,
   actionNumber,
   actionSymbol,
   chromosomeDistance,
-} from "../experiments/robby-the-robot/model.ts";
-import { create as factory } from "../experiments/robotic-factory/model.ts";
+} from "../models/robby-the-robot/model.ts";
+import { create as factory } from "../models/robotic-factory/model.ts";
 describe("B18 Simulated Annealing native rules", () => {
   test("native450bright patches, directed anisotropic energy and exact1000 attempts", () => {
     const a = annealing();

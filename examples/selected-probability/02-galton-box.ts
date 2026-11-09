@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
-import { create as first } from "../../experiments/galton-box/model.ts";
-import { create as second } from "../../experiments/partition-permutation-distribution/model.ts";
+import { create as first } from "../../models/galton-box/model.ts";
+import { create as second } from "../../models/partition-permutation-distribution/model.ts";
 
 // Frozen before runtime: detached deterministic observations and independent instances.
 for (const create of [first, second]) {

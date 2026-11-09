@@ -1,8 +1,8 @@
 import { expect, test } from "bun:test";
 import { Random } from "city-library";
-import { create as awareness } from "../experiments/urban-suite-awareness/model.ts";
-import { create as pollution } from "../experiments/urban-suite-pollution/model.ts";
-import { create as recycling } from "../experiments/urban-suite-recycling/model.ts";
+import { create as awareness } from "../models/urban-suite-awareness/model.ts";
+import { create as pollution } from "../models/urban-suite-pollution/model.ts";
+import { create as recycling } from "../models/urban-suite-recycling/model.ts";
 
 test("Awareness freezes senders but reselects recipients and excludes transient negative awareness", () => {
   const model = awareness({ people: 0, centers: 0 });

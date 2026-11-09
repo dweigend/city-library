@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { create } from "../../experiments/des-elevator/model.ts";
+import { create } from "../../models/des-elevator/model.ts";
 
 assert.throws(() => create({ floors: 1 }), RangeError);
 assert.throws(() => create({ capacity: 0 }), RangeError);

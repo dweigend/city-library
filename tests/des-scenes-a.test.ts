@@ -1,16 +1,16 @@
 import { describe, expect, test } from "bun:test";
 import { scientificPalette } from "../ui/index.ts";
 import type { SpatialData } from "../ui/index.ts";
-import { create as createOffice } from "../experiments/des-civic-office/model.ts";
-import { officeScene } from "../experiments/des-civic-office/scene.ts";
-import { create as createCharging } from "../experiments/des-ev-charging/model.ts";
-import { chargingScene } from "../experiments/des-ev-charging/scene.ts";
-import { create as createBuffer } from "../experiments/des-goods-buffer/model.ts";
-import { bufferScene } from "../experiments/des-goods-buffer/scene.ts";
-import { create as createBuses } from "../experiments/des-bus-interchange/model.ts";
-import { busScene } from "../experiments/des-bus-interchange/scene.ts";
-import { create as createParcels } from "../experiments/des-parcel-logistics/model.ts";
-import { parcelScene } from "../experiments/des-parcel-logistics/scene.ts";
+import { create as createOffice } from "../models/des-civic-office/model.ts";
+import { officeScene } from "../models/des-civic-office/scene.ts";
+import { create as createCharging } from "../models/des-ev-charging/model.ts";
+import { chargingScene } from "../models/des-ev-charging/scene.ts";
+import { create as createBuffer } from "../models/des-goods-buffer/model.ts";
+import { bufferScene } from "../models/des-goods-buffer/scene.ts";
+import { create as createBuses } from "../models/des-bus-interchange/model.ts";
+import { busScene } from "../models/des-bus-interchange/scene.ts";
+import { create as createParcels } from "../models/des-parcel-logistics/model.ts";
+import { parcelScene } from "../models/des-parcel-logistics/scene.ts";
 
 describe("five detached service and transport scenes", () => {
   test("office renders each resident once and capacity slots stay distinct from retained claims", () => {

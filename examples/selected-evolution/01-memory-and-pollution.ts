@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
-import { create as mimicry, rememberColor, forgetColors, colorInMemory } from '../../experiments/mimicry/model.ts';
-import { create as moths } from '../../experiments/peppered-moths/model.ts';
+import { create as mimicry, rememberColor, forgetColors, colorInMemory } from '../../models/mimicry/model.ts';
+import { create as moths } from '../../models/peppered-moths/model.ts';
 
 // A remembered color starts at age zero; the cutoff is inclusive.
 let memory = rememberColor([], 15, 2);

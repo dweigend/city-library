@@ -4,7 +4,7 @@ Use `defineUI` to describe what an experiment shows and which model actions its 
 
 ## Status
 
-This reference and the [API table](api-table.md) define the repository UI contract supported by both the legacy and Svelte adapters. Array declarations remain compatibility syntax. [PLAN](../../PLAN.md) identifies remaining acceptance work. The package has not been published.
+This reference and the [API table](api-table.md) define the repository UI contract supported by the Svelte adapter. Array declarations remain compatibility syntax. [PLAN](../../PLAN.md) identifies remaining acceptance work. The package has not been published.
 
 ## Principles
 
@@ -39,7 +39,7 @@ export const ui = defineUI(model, {
 
 `Definition<P, M>` supplies `title`, optional `description`, canonical `inputs` and `create(parameters)`. Inputs are descriptors for number, boolean, choice or text, each with `default`; numbers may specify `min`, `max`, `step`, `integer`, and choices specify `options`. This is the experiment definition contract, not the future live-property core `Input` API.
 
-`M` implements `read(): unknown`, `advance(steps?: number): void` and optionally `dispose(): void`. Callback observations are inferred from `read()`. Import the public type `Observation<typeof model>` for a named projection, or `Observation<Instance>` when an instance type is already available. Both UI entrypoints export the same alias; it creates no wrapper or new state. The factory and actions own runtime validation, including cross-field constraints. UI constraints complement that validation. Observers and rendering projections must be side-effect-free and must not advance model time or consume model randomness.
+`M` implements `read(): unknown`, `advance(steps?: number): void` and optionally `dispose(): void`. Callback observations are inferred from `read()`. Import the public type `Observation<typeof model>` for a named projection, or `Observation<Instance>` when an instance type is already available. The public UI entry and its compatibility import export the same alias; it creates no wrapper or new state. The factory and actions own runtime validation, including cross-field constraints. UI constraints complement that validation. Observers and rendering projections must be side-effect-free and must not advance model time or consume model randomness.
 
 ## Setup
 
@@ -122,7 +122,7 @@ Experimental nodes add optional initial `position: { x, y }`; later dragging and
 
 `{ type: "spatial", label, data }` projects `SpatialData`: `width`, `height`, optional `cells` and required `agents`. Each spatial agent extends node presentation fields with `x`, `y`, optional `heading` in degrees and optional `shape: "circle" | "triangle" | "rectangle" | "diamond"`. The baseline renderer defaults heading to zero and shape to circle. Coordinates are centered world coordinates; positive y points upward. Display size remains CSS pixels.
 
-Experimental additions: `showLabels` controls label visibility when supplied; omission retains the host Labels control. `segments` contains ordered `{ from: {x,y}, to: {x,y}, color?, width? }` strokes above cells and below agents, selection and labels. Endpoints must be finite centered coordinates. Width defaults to 1 CSS pixel; zero omits a stroke; negative/nonfinite widths are invalid input. Omitted color uses the host foreground (legacy host white). Segments do not participate in picking or model collision logic.
+Experimental additions: `showLabels` controls label visibility when supplied; omission retains the host Labels control. `segments` contains ordered `{ from: {x,y}, to: {x,y}, color?, width? }` strokes above cells and below agents, selection and labels. Endpoints must be finite centered coordinates. Width defaults to 1 CSS pixel; zero omits a stroke; negative/nonfinite widths are invalid input. Omitted color uses the host foreground. Segments do not participate in picking or model collision logic.
 
 `SpatialAgent.selectable` defaults to true. Explicit false excludes a symbol from pointer/nearest and keyboard selection; annotations remain nonselectable. It does not create domain identity or change drawing actions on Grid cells.
 
@@ -130,11 +130,11 @@ Rectangles may supply positive finite `extent: { width, height }` in diagram uni
 
 Optional `labels: readonly { x, y, text }[]` supplies nonselectable diagram annotations in the shared font and foreground. Optional nonempty `description` supplies the canvas accessible name and fallback text; authors should summarize the actual counts and states. Omission retains the legacy count description. Labels, segments and layout coordinates do not create domain entities.
 
-Mixed diagrams containing rectangles or diamonds pick the topmost painted symbol within its actual bounds, including outlined slots. Pure circle/triangle diagrams retain their previous nearest-agent compatibility behavior. Tiny symbols have a shared two-buffer-pixel minimum for painting and picking. Rotation and device-pixel scaling use the same geometry in both hosts.
+Mixed diagrams containing rectangles or diamonds pick the topmost painted symbol within its actual bounds, including outlined slots. Pure circle/triangle diagrams retain their previous nearest-agent compatibility behavior. Tiny symbols have a shared two-buffer-pixel minimum for painting and picking. Rotation and device-pixel scaling use the same geometry in the shared Svelte renderer.
 
 ### Collection diagrams
 
-`collectionDiagram(rows): SpatialData` is a pure, detached projection exported by both UI adapters. Use it inside the existing spatial view for abstract collections; it creates no view kind, renderer, model or clock. Shared defaults own spacing, wrapping, glyph sizes and annotations. Authors supply no layout numbers.
+`collectionDiagram(rows): SpatialData` is a pure, detached projection exported by the public UI entry and its compatibility import. Use it inside the existing spatial view for abstract collections; it creates no view kind, renderer, model or clock. Shared defaults own spacing, wrapping, glyph sizes and annotations. Authors supply no layout numbers.
 
 Each row has a unique nonempty `id`, visible `label` and optional `color`, defaulting to `scientificPalette.neutral`. Its discriminant defines one fact:
 
@@ -170,7 +170,7 @@ When a toggle is supplied it begins off for each mounted instance; without a tog
 
 ## Palette
 
-Both public UI adapters export `scientificPalette`: `neutral`, `waiting`, `active`, `completed` and `unavailable`. Use these shared semantic colors together with shape, position or labels; color alone must not carry the state distinction. They are presentation constants, not model state.
+The public UI entry and its compatibility import export `scientificPalette`: `neutral`, `waiting`, `active`, `completed` and `unavailable`. Use these shared semantic colors together with shape, position or labels; color alone must not carry the state distinction. They are presentation constants, not model state.
 
 
 Experimental export `netLogoColor(color: number): string` converts finite numeric NetLogo colors using the observed official tenth-color bins. Values wrap modulo 140 and select the lower tenth bin. Nonnumeric values throw `TypeError`; nonfinite values throw `RangeError`. Use it for compatibility presentation, not as a second scientific state variable. This export is absent from the main baseline.
@@ -197,7 +197,7 @@ Setup-string and keyed-live forms are supported, with legacy arrays preserved fo
 
 ## Author examples
 
-The [five public author examples](../../examples/ui-authoring/README.md) cover defaults and inert declaration, ordered overrides and numeric bindings, alternate observations and getter precedence, grouping/format/categories, and independent actions/legacy/disposal. Compile-only cases cover incorrect field types and incomplete observation shapes. Headless assertions and real-browser checks are separate gates; the browser harness exercises both adapters and waits for settled rendering.
+The [five public author examples](../../examples/ui-authoring/README.md) cover defaults and inert declaration, ordered overrides and numeric bindings, alternate observations and getter precedence, grouping/format/categories, and independent actions/legacy/disposal. Compile-only cases cover incorrect field types and incomplete observation shapes. Headless assertions and real-browser checks are separate gates; the browser harness exercises the Svelte adapter and waits for settled rendering.
 
 ## Extensions
 

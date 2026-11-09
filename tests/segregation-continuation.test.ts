@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "bun:test";
-import { create } from "../experiments/segregation/model.ts";
+import { create } from "../models/segregation/model.ts";
 import baseline from "./fixtures/segregation-index-baseline.json";
 
 test("indexed Segregation preserves complete pre-index states and RNG continuation", () => {

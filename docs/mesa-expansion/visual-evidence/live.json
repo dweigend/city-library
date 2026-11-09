@@ -1,0 +1,59 @@
+[
+  {
+    "slug": "household-recycling-behavior",
+    "action": "live influence0",
+    "before": [
+      {
+        "label": "Tick",
+        "value": "3"
+      },
+      {
+        "label": "Recycling households",
+        "value": "2"
+      }
+    ],
+    "after": [
+      {
+        "label": "Tick",
+        "value": "13"
+      },
+      {
+        "label": "Recycling households",
+        "value": "2"
+      }
+    ],
+    "pendingSetup": false,
+    "channels": {
+      "errors": [],
+      "rejections": [],
+      "console": []
+    }
+  },
+  {
+    "slug": "residential-occupancy",
+    "action": "occupied shrink3to2 reject, correct4",
+    "invalid": {
+      "text": "Skip to experiment\nAgent Lab\nResidential Occupancy\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nApplicants\nDwelling slots\nCapacity cannot shrink below granted units.\nMove out first household\nModel info\n\nCapacity cannot shrink below granted units.\n\nDay\n2\nOccupied\n3\nAvailable\n0\nWaiting\n6\nPaused\nHousing · orange waiting, blue housed, gray moved out (schematic)\nOccupancy\n6\n0\n2\nday\nHouseholds\noccupied\nwaiting",
+      "invalid": "true",
+      "monitors": [
+        "2",
+        "3",
+        "0",
+        "6"
+      ]
+    },
+    "recovered": {
+      "text": "Skip to experiment\nAgent Lab\nResidential Occupancy\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nApplicants\nDwelling slots\nMove out first household\nModel info\nDay\n2\nOccupied\n4\nAvailable\n0\nWaiting\n5\nPaused\nHousing · orange waiting, blue housed, gray moved out (schematic)\nOccupancy\n6\n0\n2\nday\nHouseholds\noccupied\nwaiting",
+      "invalid": "false",
+      "monitors": [
+        "2",
+        "4",
+        "0",
+        "5"
+      ],
+      "errors": [],
+      "rejections": [],
+      "console": []
+    }
+  }
+]

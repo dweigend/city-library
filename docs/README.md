@@ -22,6 +22,6 @@ The API specifications include planned operations. Check their status notes, cur
 
 Adapted models retain their [reference sources](development/netlogo-reference-sources.md). The [model acceptance rules](development/netlogo-model-acceptance.md) distinguish headless tests, source comparisons, browser behavior and independent review.
 
-[Source records](research/netlogo-web/README.md) describe model assumptions and provenance. [Acceptance evidence](../evidence/) supports model-level verification. Use these records to inspect a source or validate a claim; the guides and specifications describe the current system and its next goals.
+[Source records](../models/catalog/research/README.md) describe model assumptions and provenance. [Model acceptance ledger](../models/catalog/progress.json) supports model-level verification. Use these records to inspect a source or validate a claim; the guides and specifications describe the current system and its next goals.
 
 For [planar layouts and parcels](grid-parcels/API.md), consult the [implementation ledger](grid-parcels/STATUS.md) and [finite quad contract](grid-parcels/TOWNSCAPER-CONTRACT.md). The [city authoring plan](development/example-first/PLAN.md) separates working scripts from unmet targets.

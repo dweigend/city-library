@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
-import { create as disease } from "../../experiments/disease-solo/model.ts";
-import { create as virus } from "../../experiments/virus/model.ts";
+import { create as disease } from "../../models/disease-solo/model.ts";
+import { create as virus } from "../../models/virus/model.ts";
 
 // Separate source models: persistent contact infection versus finite sickness/immunity.
 const contact = disease({ seed: 11, numAndroids: 20, infectionChance: 0 });

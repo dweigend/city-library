@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { model } from "../../experiments/des-emergency-dispatch/model.ts";
+import { model } from "../../models/des-emergency-dispatch/model.ts";
 
 const dispatch = model.create();
 const independent = model.create();

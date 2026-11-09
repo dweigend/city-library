@@ -1,15 +1,15 @@
 import { describe, expect, test } from "bun:test";
 import type { SpatialData } from "../ui/index.ts";
-import { create as waste } from "../experiments/des-waste-collection/model.ts";
-import { scene as wasteScene } from "../experiments/des-waste-collection/scene.ts";
-import { create as dispatch } from "../experiments/des-emergency-dispatch/model.ts";
-import { scene as dispatchScene } from "../experiments/des-emergency-dispatch/scene.ts";
-import { create as bikes } from "../experiments/des-bike-redistribution/model.ts";
-import { scene as bikeScene } from "../experiments/des-bike-redistribution/scene.ts";
-import { create as water } from "../experiments/des-water-allocation/model.ts";
-import { scene as waterScene } from "../experiments/des-water-allocation/scene.ts";
-import { create as maintenance } from "../experiments/des-machine-maintenance/model.ts";
-import { scene as maintenanceScene } from "../experiments/des-machine-maintenance/scene.ts";
+import { create as waste } from "../models/des-waste-collection/model.ts";
+import { scene as wasteScene } from "../models/des-waste-collection/scene.ts";
+import { create as dispatch } from "../models/des-emergency-dispatch/model.ts";
+import { scene as dispatchScene } from "../models/des-emergency-dispatch/scene.ts";
+import { create as bikes } from "../models/des-bike-redistribution/model.ts";
+import { scene as bikeScene } from "../models/des-bike-redistribution/scene.ts";
+import { create as water } from "../models/des-water-allocation/model.ts";
+import { scene as waterScene } from "../models/des-water-allocation/scene.ts";
+import { create as maintenance } from "../models/des-machine-maintenance/model.ts";
+import { scene as maintenanceScene } from "../models/des-machine-maintenance/scene.ts";
 
 function count(scene: SpatialData, prefix: string, filledOnly = false) {
   return scene.agents.filter(agent => agent.id.startsWith(prefix) && (!filledOnly || agent.filled !== false)).length;

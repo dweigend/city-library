@@ -189,6 +189,10 @@ test("singleton selection and explicit legacy shuffle have distinct schedules", 
     const random = Random.add();
     unchanged(random, () => random.sample([1, 2, 3], options as never));
   }
+  const before = legacy.state;
+  assert.throws(() => legacy.sample([1, 2], { count: 2, compatibility: "legacy-shuffle", order: "draw" }));
+  assert.throws(() => legacy.sample([1, 2], { count: 1, compatibility: "legacy-shuffle" }));
+  assert.deepEqual(legacy.state, before);
 });
 
 test("unsupported profiles distributions and raw branches do not draw", () => {

@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
-import { create as createVirus } from "../../experiments/virus-on-a-network/model.ts";
-import { create as createDiffusion } from "../../experiments/diffusion-on-a-directed-network/model.ts";
+import { create as createVirus } from "../../models/virus-on-a-network/model.ts";
+import { create as createDiffusion } from "../../models/diffusion-on-a-directed-network/model.ts";
 
 const virus = createVirus();
 const state = virus.read();

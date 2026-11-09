@@ -1,7 +1,7 @@
 import { describe, expect, test } from "bun:test";
 import { collectionDiagram, defineUI, scientificPalette, type CollectionRow, type SpatialData, type ChangeUISpec } from "../ui/index.ts";
 import { collectionDiagram as svelteCollectionDiagram, defineUI as defineSvelteUI } from "../ui/svelte/index.ts";
-import type { Definition } from "../experiments/definition.ts";
+import type { Definition } from "../models/definition.ts";
 import { normalizeAuthoring } from "../ui/authoring.ts";
 import { tablePage, tablePageSize } from "../ui/views/table-page.ts";
 import { validateCanvasData } from "../ui/views/spatial-data.ts";

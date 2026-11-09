@@ -1,7 +1,7 @@
 /** Compile-only public contracts. Never import this file from a runtime harness. */
 import { defineUI, type Observation } from '../../ui/index.ts';
 import { defineUI as defineSvelteUI, type Observation as SvelteObservation } from '../../ui/svelte/index.ts';
-import { model } from '../../experiments/voting/model.ts';
+import { model } from '../../models/voting/model.ts';
 
 function observation(observed: Observation<typeof model>, alternate: SvelteObservation<typeof model>) {
   const tick: number = observed.tick;

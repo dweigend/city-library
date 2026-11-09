@@ -1,6 +1,6 @@
 /** Compile-only public-consumer regressions; no model or browser is initialized. */
 import { defineUI, type ChangeUISpec, type UISpec } from "../ui/index.ts";
-import type { Definition } from "../experiments/definition.ts";
+import type { Definition } from "../models/definition.ts";
 
 interface Parameters { amount: number }
 interface Instance {

@@ -1,6 +1,6 @@
 /** Frozen public city-model contract; time is minutes. */
 import assert from "node:assert/strict";
-import { create as buses } from "../../experiments/des-bus-interchange/model.ts";
+import { create as buses } from "../../models/des-bus-interchange/model.ts";
 
 const interchange = buses();
 assert.equal(interchange.read().travelMinutes, 5);

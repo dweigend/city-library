@@ -1,6 +1,6 @@
 /** Frozen public city-model contract; time is minutes. */
 import assert from "node:assert/strict";
-import { create as goods } from "../../experiments/des-goods-buffer/model.ts";
+import { create as goods } from "../../models/des-goods-buffer/model.ts";
 
 const buffer = goods();
 buffer.advance(3);

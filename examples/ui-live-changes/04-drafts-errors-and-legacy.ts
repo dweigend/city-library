@@ -1,5 +1,5 @@
 import { defineUI, type ChangeUISpec } from '../../ui/index.ts';
-import type { Definition } from '../../experiments/definition.ts';
+import type { Definition } from '../../models/definition.ts';
 import { assert, equal, button, changeNumber, settle } from '../ui-authoring/assertions.ts';
 
 interface Parameters { amount: number }

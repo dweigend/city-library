@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
-import { create as basic } from '../../experiments/traffic-basic/model.ts';
-import { create as lanes } from '../../experiments/traffic-2-lanes/model.ts';
+import { create as basic } from '../../models/traffic-basic/model.ts';
+import { create as lanes } from '../../models/traffic-2-lanes/model.ts';
 
 const road = basic({ seed: 1, numberOfCars: 1, acceleration: 0, deceleration: 0 });
 const start = road.snapshot().cars[0]!;

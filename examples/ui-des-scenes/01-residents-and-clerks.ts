@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { scientificPalette, defineUI, type SpatialData } from "../../ui/index.ts";
-import { model } from "../../experiments/des-civic-office/model.ts";
+import { model } from "../../models/des-civic-office/model.ts";
 import type { Observation } from "../../ui/index.ts";
 
 export function scene(state: Observation<typeof model>): SpatialData {

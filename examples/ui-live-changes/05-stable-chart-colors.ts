@@ -1,5 +1,5 @@
 import { defineUI } from '../../ui/index.ts';
-import type { Definition } from '../../experiments/definition.ts';
+import type { Definition } from '../../models/definition.ts';
 import { assert, equal, button, settle } from '../ui-authoring/assertions.ts';
 
 function create() {

@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
-import { create as first } from "../../experiments/three-doors/model.ts";
-import { create as second } from "../../experiments/random-combinations-and-permutations/model.ts";
+import { create as first } from "../../models/three-doors/model.ts";
+import { create as second } from "../../models/random-combinations-and-permutations/model.ts";
 
 // Frozen before runtime: detached deterministic observations and independent instances.
 for (const create of [first, second]) {

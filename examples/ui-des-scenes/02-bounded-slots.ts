@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { scientificPalette, type SpatialData } from "../../ui/index.ts";
-import { model } from "../../experiments/des-goods-buffer/model.ts";
+import { model } from "../../models/des-goods-buffer/model.ts";
 
 const buffer = model.create();
 buffer.produce(); buffer.produce(); buffer.produce();

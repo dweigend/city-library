@@ -3,17 +3,17 @@ import { Random } from "city-library";
 import {
   create as fruit,
   genomeTraits,
-} from "../experiments/fruit-wars/model.ts";
+} from "../models/fruit-wars/model.ts";
 import {
   create as book,
   floorToUnit,
-} from "../experiments/limited-order-book/model.ts";
+} from "../models/limited-order-book/model.ts";
 import {
   create as bidding,
   changePrice,
-} from "../experiments/bidding-market/model.ts";
-import { create as stores } from "../experiments/hotellings-law/model.ts";
-import { create as traffic } from "../experiments/braess-paradox/model.ts";
+} from "../models/bidding-market/model.ts";
+import { create as stores } from "../models/hotellings-law/model.ts";
+import { create as traffic } from "../models/braess-paradox/model.ts";
 
 describe("selected B03 market and foraging source mechanisms", () => {
   test("Fruit traits derive from all four genome partitions and extinction stops before another tick", () => {

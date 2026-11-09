@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { create } from "../experiments/des-elevator/model.ts";
+import { create } from "../models/des-elevator/model.ts";
 
 type Elevator = ReturnType<typeof create>;
 type Observation = ReturnType<Elevator["read"]>;

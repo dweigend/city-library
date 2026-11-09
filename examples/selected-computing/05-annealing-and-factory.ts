@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
-import { create as annealing } from '../../experiments/simulated-annealing/model.ts';
-import { create as factory } from '../../experiments/robotic-factory/model.ts';
+import { create as annealing } from '../../models/simulated-annealing/model.ts';
+import { create as factory } from '../../models/robotic-factory/model.ts';
 
 const a=annealing({width:4,height:4,coolingRate:10,swapRadius:1});
 // Alternating columns: vertical agreement plus horizontal disagreement yields ZERO energy.

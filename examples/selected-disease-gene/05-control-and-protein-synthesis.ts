@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
-import { create as travel } from "../../experiments/epidem-travel-and-control/model.ts";
-import { create as synthesis, mrnaStringFromDNAString, complementaryMRNABase, whichProteinForThisCodon } from "../../experiments/dna-protein-synthesis/model.ts";
+import { create as travel } from "../../models/epidem-travel-and-control/model.ts";
+import { create as synthesis, mrnaStringFromDNAString, complementaryMRNABase, whichProteinForThisCodon } from "../../models/dna-protein-synthesis/model.ts";
 
 const controls = travel({ seed: 51, initialPeople: 100, initialAmbulance: 2, infectionChance: 0, recoveryChance: 100, averageRecoveryTime: 1, inoculationChance: 50 });
 assert.equal(controls.read().agents.length, 102);

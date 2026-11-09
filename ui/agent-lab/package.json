@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "check": "svelte-check --tsconfig ../../tsconfig.svelte.json"
+    "check": "svelte-check --tsconfig ../../tsconfig.json"
   },
   "devDependencies": {
     "svelte-check": "4.7.8",

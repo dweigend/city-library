@@ -2,13 +2,13 @@
 
 ## Source identity and attribution
 
-Official repository: [NetLogo/models](https://github.com/NetLogo/models/tree/bf0626a89358b48494066862843a91f36f2556cf), pinned commit `bf0626a89358b48494066862843a91f36f2556cf`. All four pinned XML files declare `NetLogo 7.1.0-alpha1`. The separately fetched NetLogo Web model files declare `NetLogo 7.0.4`. Exact snapshots and SHA-256/Git blob identities are retained in [reference-sources](../../experiments/reference-sources/README.md) and its [manifest](../../experiments/reference-sources/manifest.json).
+Official repository: [NetLogo/models](https://github.com/NetLogo/models/tree/bf0626a89358b48494066862843a91f36f2556cf), pinned commit `bf0626a89358b48494066862843a91f36f2556cf`. All four pinned XML files declare `NetLogo 7.1.0-alpha1`. The separately fetched NetLogo Web model files declare `NetLogo 7.0.4`. Exact snapshots and SHA-256/Git blob identities are retained in [reference-sources](../../models/catalog/reference-sources/README.md) and its [manifest](../../models/catalog/reference-sources/manifest.json).
 
 All four trimmed Procedures texts and widget XML subtrees match between the pinned and web snapshots. Whole files differ in version/serialization and trailing Info citation comments. This is file comparison evidence, not an engine-equivalence claim.
 
 Each model Info declares **CC BY-NC-SA 3.0** and its original attribution: Preferential Attachment, Uri Wilensky 2005; Voting, Uri Wilensky 1998; Wolf Sheep Predation, Uri Wilensky 1997; Wealth Distribution, Uri Wilensky 1998. Full notices/citations remain inside every unmodified snapshot. [Upstream README](https://github.com/NetLogo/models/blob/bf0626a89358b48494066862843a91f36f2556cf/README.md) says licenses vary per model; no root LICENSE exists at this revision. [License text](https://creativecommons.org/licenses/by-nc-sa/3.0/legalcode.en). Derived reference experiments must retain attribution, identify modifications and preserve the declared license requirements; do not silently place copied model material under a general code license. Independently authored generic library operations are separate from these reference artifacts.
 
-The [extracted widget audit](../../experiments/reference-sources/model-audit.json) records exact slider ranges/defaults, switches, chooser choices, monitor expressions, plot expressions and view dimensions.
+The [extracted widget audit](../../models/catalog/reference-sources/model-audit.json) records exact slider ranges/defaults, switches, chooser choices, monitor expressions, plot expressions and view dimensions.
 
 ## Shared execution and spatial semantics
 

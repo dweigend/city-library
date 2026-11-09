@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
-import { create as development } from '../../experiments/piaget-vygotsky-game/model.ts';
-import { create as heroes } from '../../experiments/heroes-and-cowards/model.ts';
+import { create as development } from '../../models/piaget-vygotsky-game/model.ts';
+import { create as heroes } from '../../models/heroes-and-cowards/model.ts';
 const learners = development({ numberOfPlayers: 10, strategy: 'Piagetian', randomizeStrategyEachRun: false,
   moveError: 0, attemptsPerRun: 2, stopAfterEachRun: true });
 learners.advance(); const first = learners.read();

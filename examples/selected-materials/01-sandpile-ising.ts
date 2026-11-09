@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
-import { create as sandpile } from "../../experiments/sandpile/model.ts";
-import { create as ising } from "../../experiments/ising/model.ts";
+import { create as sandpile } from "../../models/sandpile/model.ts";
+import { create as ising } from "../../models/ising/model.ts";
 
 // Full avalanche is a phase barrier: one drop completes before one tick.
 const pile = sandpile({ width: 3, height: 3, initial: "uniform", grainsPerField: 3, dropLocation: "center", seed: 1 });

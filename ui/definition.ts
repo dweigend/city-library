@@ -1,4 +1,4 @@
-import type { Definition } from "../experiments/definition.ts";
+import type { Definition } from "../models/definition.ts";
 
 export interface ModelInstance {
   read(): unknown;

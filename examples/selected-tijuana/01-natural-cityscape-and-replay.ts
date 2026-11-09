@@ -1,6 +1,6 @@
 // Frozen before runtime; acceptance syntax and assertions must remain unchanged.
 import { strict as assert } from "node:assert";
-import { create, TijuanaRuntimeError } from "../../experiments/urban-suite-tijuana-bordertowns/model.ts";
+import { create, TijuanaRuntimeError } from "../../models/urban-suite-tijuana-bordertowns/model.ts";
 import { semantic } from "./scenario.ts";
 
 // Fixed BEFORE runtime: five target seeds, 3000 native-shaped setup calls each.

@@ -1,5 +1,5 @@
 import { collectionDiagram, defineUI, scientificPalette, type Observation, type SpatialData } from '../../ui/index.ts';
-import { model } from '../../experiments/des-goods-buffer/model.ts';
+import { model } from '../../models/des-goods-buffer/model.ts';
 import { assert, equal, button, settle } from '../ui-authoring/assertions.ts';
 
 export function scene(state: Observation<typeof model>): SpatialData {

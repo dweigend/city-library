@@ -1,6 +1,6 @@
 import { collectionDiagram, defineUI, scientificPalette, type Observation } from '../../ui/index.ts';
-import { model as charging } from '../../experiments/des-ev-charging/model.ts';
-import { model as office } from '../../experiments/des-civic-office/model.ts';
+import { model as charging } from '../../models/des-ev-charging/model.ts';
+import { model as office } from '../../models/des-civic-office/model.ts';
 import { assert, equal, button, settle } from '../ui-authoring/assertions.ts';
 
 export function chargingScene(state: Observation<typeof charging>) {

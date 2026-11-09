@@ -1,6 +1,6 @@
 import { describe, expect, test } from "bun:test";
 import { defineUI } from "../ui/index.ts";
-import type { Definition } from "../experiments/definition.ts";
+import type { Definition } from "../models/definition.ts";
 import { normalizeAuthoring } from "../ui/authoring.ts";
 
 interface Parameters { amount: number; enabled: boolean; mode: "quiet" | "busy" }

@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { extract, sourceBlockers, widgetCounts } from "../scripts/netlogo-catalog.ts";
+import { extract, sourceBlockers, widgetCounts } from "../models/catalog/sources.ts";
 
 test("catalog counts only direct widgets and retains all code notice blocks", () => {
   expect(widgetCounts('<note><![CDATA[<plotfile>.pdf <plotfile>.jpg]]></note><plot><setup></setup><pen><update>plot 1</update></pen></plot><chooser><choice/></chooser><button/>')).toEqual({ note: 1, plot: 1, chooser: 1, button: 1 });
@@ -12,9 +12,9 @@ test("catalog counts only direct widgets and retains all code notice blocks", ()
 });
 
 test("capture refuses to overwrite the accepted snapshot before network access", async () => {
-  const before = await Bun.file('experiments/catalog/inventory.json').text();
-  const child = Bun.spawn(['bun', 'scripts/netlogo-catalog.ts', 'capture'], { stdout: 'pipe', stderr: 'pipe' });
+  const before = await Bun.file('models/catalog/inventory.json').text();
+  const child = Bun.spawn(['bun', 'models/catalog/sources.ts', 'capture'], { stdout: 'pipe', stderr: 'pipe' });
   expect(await child.exited).not.toBe(0);
   expect(await new Response(child.stderr).text()).toContain('Snapshot already exists');
-  expect(await Bun.file('experiments/catalog/inventory.json').text()).toBe(before);
+  expect(await Bun.file('models/catalog/inventory.json').text()).toBe(before);
 });

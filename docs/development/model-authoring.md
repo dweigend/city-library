@@ -4,7 +4,7 @@ Start with a small rule you can run and inspect. An experiment pairs a headless 
 
 ## Follow a growing network
 
-[Preferential Attachment](../../experiments/preferential-attachment/model.ts) starts with two agents joined by an edge. Each step samples an existing edge, chooses one endpoint and attaches a new agent to it. This gives well-connected nodes more opportunities to receive another connection. The file retains the original model attribution and adaptation notes.
+[Preferential Attachment](../../models/preferential-attachment/model.ts) starts with two agents joined by an edge. Each step samples an existing edge, chooses one endpoint and attaches a new agent to it. This gives well-connected nodes more opportunities to receive another connection. The file retains the original model attribution and adaptation notes.
 
 Run its public-API assertions from the repository root:
 
@@ -16,7 +16,7 @@ The example runs without a browser. This excerpt uses paths relative to `example
 
 ```ts
 import assert from "node:assert/strict";
-import { model } from "../../experiments/preferential-attachment/model.ts";
+import { model } from "../../models/preferential-attachment/model.ts";
 
 const simulation = model.create({ seed: 7 });
 assert.equal(simulation.read().nodeCount, 2);
@@ -31,7 +31,7 @@ assert.equal(observation.edgeCount, 9);
 
 ## Bind the same model to a UI
 
-[Its UI file](../../experiments/preferential-attachment/ui.ts) imports `defineUI` from `../../ui/index.ts` and its companion model from `./model.ts`. It declares monitors, a network view, two charts and an inspector. The UI projects observations; the host supplies controls, layout and playback. Network growth stays in the model.
+[Its UI file](../../models/preferential-attachment/ui.ts) imports `defineUI` from `../../ui/index.ts` and its companion model from `./model.ts`. It declares monitors, a network view, two charts and an inspector. The UI projects observations; the host supplies controls, layout and playback. Network growth stays in the model.
 
 Use the existing `defineUI(model, spec)` contract. Keep short property projections inline and place longer named projections below the declaration. Use `Observation<typeof model>` from the public UI entrypoint to type a named projection. Keep public actions explicit and typed. Keep numeric measurements in monitor getters and format only the display, for example `format: (value: number) => value.toFixed(3)`. Give unrelated projected entities different IDs; use kind prefixes when source IDs overlap. [The UI reference](../ui/api-reference.md) explains the public contracts and compatibility forms.
 

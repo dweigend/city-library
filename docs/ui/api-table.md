@@ -4,7 +4,7 @@ This inventory and the [UI API reference](api-reference.md) form the binding UI 
 
 ## Status and notation
 
-`Supported` means a repository contract available in both host adapters. `Required` means a binding design rule; `Planned` means a candidate that needs a defined contract before use. [PLAN](../../PLAN.md) tracks remaining acceptance work. Source presence alone does not establish scientific or independent acceptance.
+`Supported` means a repository contract available in the Svelte host. `Required` means a binding design rule; `Planned` means a candidate that needs a defined contract before use. [PLAN](../../PLAN.md) tracks remaining acceptance work. Source presence alone does not establish scientific or independent acceptance.
 
 `P` is the model parameter object; `K = Extract<keyof P, string>`; `M` is its concrete instance; `S = ReturnType<M["read"]>`; `Scalar = string \| number \| boolean`; `Row = Readonly<Record<string, Scalar>>`. `?` marks optional properties. All declaration arrays and observation data are readonly. IDs below remain stable when availability changes. Each row links to its detailed contract.
 
@@ -16,7 +16,7 @@ This inventory and the [UI API reference](api-reference.md) form the binding UI 
 | UI-002 | `UISpec<P,M>` | Ordinary object; only `views` is required. No renderer configuration or layout tree required. | Supported | [Principles](api-reference.md#principles) |
 | UI-003 | `ModelInstance` | `read(): unknown`, `advance(steps?: number): void`, `dispose?(): void`; concrete `read` return type supplies `S`. | Supported | [Model](api-reference.md#model) |
 | UI-004 | `BoundEntry` | `title: string`, `description?: string`, `mount(container: HTMLElement): { dispose(): void; pause?(): void }`. Mounted handle belongs to host integration. | Supported | [Lifecycle](api-reference.md#lifecycle) |
-| UI-005 | `Definition<P,M>` | Headless companion from `experiments/definition.ts`: `title`, `description?`, `inputs: Inputs<P>`, `create(options?: Partial<P>): M`. Not re-exported by `ui/index.ts`. | Supported | [Model](api-reference.md#model) |
+| UI-005 | `Definition<P,M>` | Headless companion from `models/definition.ts`: `title`, `description?`, `inputs: Inputs<P>`, `create(options?: Partial<P>): M`. Not re-exported by `ui/index.ts`. | Supported | [Model](api-reference.md#model) |
 | UI-006 | `Input<T>`, `Inputs<P>` | Number: `kind`, `default`, optional `min/max/step/integer`; boolean: `kind/default`; choice: `kind/default/options`; text: `kind/default`. Canonical defaults and validation belong to model. | Supported | [Model](api-reference.md#model) |
 
 ## Controls and observations
@@ -38,7 +38,7 @@ This inventory and the [UI API reference](api-reference.md) form the binding UI 
 
 ## Views
 
-Every view requires `type` and `label`; labels are currently explicit. All callbacks consume the same typed model observation. `View<S>` is publicly re-exported. Inspector is accepted in `UISpec.views` and its named type is re-exported by both UI entrypoints.
+Every view requires `type` and `label`; labels are currently explicit. All callbacks consume the same typed model observation. `View<S>` is publicly re-exported. Inspector is accepted in `UISpec.views` and its named type is re-exported by the public UI entry and its compatibility import.
 
 | ID | Discriminant and required data callback | Data contract | Scope | Reference |
 | --- | --- | --- | --- | --- |
@@ -64,7 +64,7 @@ Every view requires `type` and `label`; labels are currently explicit. All callb
 | UI-047 | `SpatialData`: `width: number`, `height: number`, `agents: readonly SpatialAgent[]`, `cells?: readonly Cell[]` | Required extent/agents; omission gives no cell backdrop. | Supported | [Spatial](api-reference.md#spatial) |
 | UI-048 | `SpatialData.showLabels?: boolean` | Controlled label visibility when supplied; omission retains host Labels control. | Supported | [Spatial](api-reference.md#spatial) |
 | UI-049 | `SpatialData.segments?: readonly SpatialSegment[]` | Ordered strokes above cells and below agents/selection/labels; omitted means no strokes. | Supported | [Spatial](api-reference.md#spatial) |
-| UI-050 | `SpatialSegment`: `from/to: { x: number; y: number }`, `color?: string`, `width?: number` | Detached finite centered world endpoints; nonnegative finite CSS-pixel width defaults 1, zero omits stroke. Color defaults to host foreground (white in legacy host). | Supported | [Spatial](api-reference.md#spatial) |
+| UI-050 | `SpatialSegment`: `from/to: { x: number; y: number }`, `color?: string`, `width?: number` | Detached finite centered world endpoints; nonnegative finite CSS-pixel width defaults 1, zero omits stroke. Color defaults to host foreground. | Supported | [Spatial](api-reference.md#spatial) |
 | UI-051 | `Series`: `label: string`, `color?: string`, `points: readonly { x: number; y: number }[]` | Label/points required; host palette when color omitted. No model history is inferred or recorded by the view. | Supported | [Charts](api-reference.md#charts) |
 
 ## Drawing and palette
@@ -99,7 +99,7 @@ Do not treat internal renderer mounts, Svelte components, theme bridges, catalog
 
 | ID | Contract | Availability | Reference |
 | --- | --- | --- | --- |
-| UI-078 | `Observation<T>` infers the detached observation from a definition or model instance; exported by both UI entrypoints. | Public type | [Model](api-reference.md#model) |
+| UI-078 | `Observation<T>` infers the detached observation from a definition or model instance; exported by the public UI entry and its compatibility import. | Public type | [Model](api-reference.md#model) |
 | UI-079 | `Monitor<S, V>` types an extracted monitor with observation `S` and scalar `V`; scalar formatter arguments must accept the paired getter result. | Public type | [Monitors](api-reference.md#monitors) |
 | UI-080 | Selection retains string/null and one semantic presentation ID per entity across views; authors namespace overlapping source IDs. | Authoring contract | [Inspector](api-reference.md#inspector) |
 
@@ -107,8 +107,8 @@ Do not treat internal renderer mounts, Svelte components, theme bridges, catalog
 
 | ID | Public operation | Defaults and ownership | Reference |
 | --- | --- | --- | --- |
-| UI-070 | `change?: (instance, changes: LiveChanges<P>) => void` | Explicit common action for keyed fields without local setters; one decoded key, local override wins; legacy arrays retain setters | [Live](api-reference.md#live) |
-| UI-071 | `collectionDiagram(rows: readonly CollectionRow[]): SpatialData` | Pure existing-spatial projection; discriminated identified items, anonymous count and unit capacity; shared layout defaults, complete identities, empty/overflow explicit | [Collection diagrams](api-reference.md#collection-diagrams) |
-| UI-072 | `SpatialAgent.selectable?: boolean` | Omitted true; false excludes decoration from pointer/nearest/keyboard selection | [Spatial](api-reference.md#spatial) |
-| UI-073 | Existing table paging | 200-row pages, all rows reachable; range/total, shrink clamp and Setup reset; host-only state | [Table](api-reference.md#table) |
-| UI-074 | Existing chart default colors | Unique labels retain palette slots during a mounted view; explicit colors win, duplicate labels positional | [Charts](api-reference.md#charts) |
+| UI-081 | `change?: (instance, changes: LiveChanges<P>) => void` | Explicit common action for keyed fields without local setters; one decoded key, local override wins; legacy arrays retain setters | [Live](api-reference.md#live) |
+| UI-082 | `collectionDiagram(rows: readonly CollectionRow[]): SpatialData` | Pure existing-spatial projection; discriminated identified items, anonymous count and unit capacity; shared layout defaults, complete identities, empty/overflow explicit | [Collection diagrams](api-reference.md#collection-diagrams) |
+| UI-083 | `SpatialAgent.selectable?: boolean` | Omitted true; false excludes decoration from pointer/nearest/keyboard selection | [Spatial](api-reference.md#spatial) |
+| UI-084 | Existing table paging | 200-row pages, all rows reachable; range/total, shrink clamp and Setup reset; host-only state | [Table](api-reference.md#table) |
+| UI-085 | Existing chart default colors | Unique labels retain palette slots during a mounted view; explicit colors win, duplicate labels positional | [Charts](api-reference.md#charts) |

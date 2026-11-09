@@ -1,6 +1,6 @@
 import { describe, expect, test } from "bun:test";
 import { Random } from "city-library";
-import { createNetworkDiffusionModel } from "../examples/models/network-diffusion.ts";
+import { createNetworkDiffusionModel } from "./fixtures/network-diffusion.ts";
 
 describe("headless network diffusion", () => {
   test("ring propagation is synchronous and new adopters wait until the next tick", () => {

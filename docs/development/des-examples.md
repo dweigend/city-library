@@ -1,6 +1,6 @@
 # Ten discrete-event city examples
 
-These are original synthetic teaching scenarios, not calibrated city forecasts or Salabim ports. The model owns execution and observations. Each `ui.ts` binds canonical inputs, public actions and detached observations through `defineUI`; the existing Agent Lab discovers every `experiments/<slug>/{model,ui}.ts` pair automatically. No registry or custom renderer is needed.
+These are original synthetic teaching scenarios, not calibrated city forecasts or Salabim ports. The model owns execution and observations. Each `ui.ts` binds canonical inputs, public actions and detached observations through `defineUI`; the existing Agent Lab discovers every `models/<slug>/{model,ui}.ts` pair automatically. No registry or custom renderer is needed.
 
 ## Delivery gate
 
@@ -21,7 +21,7 @@ Phase A has three examples focused on the new detached capabilities, followed by
 | B, combined | `des-water-allocation` | Neighborhood Grid and finite water allocation with explicit unmet demand | Allocation units and minutes; no hydraulic, pressure or water-quality claims. Six delivered plus six unmet; added supply fulfills total demand 12 | Add supply action and neighborhood allocation ledger |
 | B, combined | `des-machine-maintenance` | Spatial machine Agents, crew Resource, failures and delayed repairs | Synthetic minutes, explicit working/failed/repair states; at minute 10 two repairs complete and mean availability is 0.5 | Spatial machines, live repair-team capacity, uptime and repair ledger |
 
-Phase-B exact fixtures will be frozen with its asserted scripts; the descriptions above specify required mechanisms without claiming unexecuted results.
+The ten asserted scripts under `examples/des-models` define the exact fixtures for both phases.
 
 ## Common acceptance
 
@@ -31,8 +31,6 @@ Focused models use Agenda time as their reported model time. Combined models exp
 
 Browser verification must cover Setup, step, Run/Pause, model switching and each declared control/action. Capture desktop at least 1366×768 and narrow 390×844 in light and dark themes, and obtain separate independent screenshot inspection. Record exact executed checks, screenshot paths, reviewer findings/responses and remaining gates in integration evidence.
 
-## Authoring and refactor sources
+## Authoring
 
-The global frontend-design, frontend-design-shadcn-svelte and standalone shadcn-svelte skills were read for phase A; the new UI declarations reuse the existing shared UI components and tokens. `web-design-guidelines` applies after implementation and actual browser rendering. No new UI component or CSS is needed for these pairs.
-
-The worktree initially lacked the auxiliary refactor skills. Exact copies were located under the original checkout at `/home/david/Projekte/city-library/.agents/skills/refactor-library/SKILL.md` and `/home/david/Projekte/city-library/.agents/skills/refactor-model-scripts/SKILL.md`. Their required supporting references and the shared coding standards must also be read by the independent refactor agent before claiming that workflow was followed.
+Model state and observations belong to the headless implementation. Follow the [coding standards](../CODING_STANDARDS.md), [model authoring guide](model-authoring.md) and shared [UI contract](../ui/README.md). UI declarations reuse the existing components and tokens.

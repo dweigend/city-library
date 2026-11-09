@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
-import { create as createVirus } from "../experiments/virus-on-a-network/model.ts";
-import { create as createDiffusion } from "../experiments/diffusion-on-a-directed-network/model.ts";
+import { create as createVirus } from "../models/virus-on-a-network/model.ts";
+import { create as createDiffusion } from "../models/diffusion-on-a-directed-network/model.ts";
 
 test("directed transport splits old value once, retains sinks and conserves quantity", () => {
   const model = createDiffusion({ gridSize: 3, diffusionRate: 50 });

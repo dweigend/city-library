@@ -1,10 +1,10 @@
 # Elevator model contract
 
-Status: public contract frozen by the five asserted scripts in example-first commit `e90eccb`, preceding model runtime commit `48a4349`. Executed acceptance is recorded in [the evidence](des-2d-evidence.md). The model is a synthetic explicit-state adaptation of Salabim elevator concepts, not a physical elevator specification or a whole-upstream port. [Source research](../research/des-elevator-sources.md) records the pinned source, license, deviations and independent findings.
+Status: public contract frozen by the five asserted scripts in example-first commit `e90eccb`, preceding model runtime commit `48a4349`. The original assertions remain frozen; import-path migration is recorded separately in [the path receipt](model-path-migration.json). Pre-consolidation acceptance is summarized in [the historical evidence](des-2d-evidence.md); current integration checks belong in [the integration record](pr-main-integration.md). The model is a synthetic explicit-state adaptation of Salabim elevator concepts, not a physical elevator specification or a whole-upstream port. [Source research](../research/des-elevator-sources.md) records the pinned source, license, deviations and independent findings.
 
 ## Public model
 
-`experiments/des-elevator/model.ts` exports `inputs`, `create(options?)` and `model`, using the existing headless Definition contract. All imports are inert. Each factory creates an independent World, Agenda, canonical passenger/car Agents, direction queues and one Resource per car.
+`models/des-elevator/model.ts` exports `inputs`, `create(options?)` and `model`, using the existing headless Definition contract. All imports are inert. Each factory creates an independent World, Agenda, canonical passenger/car Agents, direction queues and one Resource per car.
 
 ```ts
 create(options?: Partial<ElevatorParameters>): ElevatorModel

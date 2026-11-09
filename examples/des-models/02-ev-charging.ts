@@ -1,6 +1,6 @@
 /** Frozen public city-model contract; time is minutes. */
 import assert from "node:assert/strict";
-import { create as charging } from "../../experiments/des-ev-charging/model.ts";
+import { create as charging } from "../../models/des-ev-charging/model.ts";
 
 const ev = charging();
 assert.equal(ev.read().waiting, 1);

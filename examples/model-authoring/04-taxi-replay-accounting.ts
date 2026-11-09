@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
-import { create, inputs } from "../../experiments/taxi-cabs/model.ts";
-import type { TaxiParameters } from "../../experiments/taxi-cabs/model.ts";
+import { create, inputs } from "../../models/taxi-cabs/model.ts";
+import type { TaxiParameters } from "../../models/taxi-cabs/model.ts";
 
 const noDemand: Partial<TaxiParameters> = Object.fromEntries(
   Object.keys(inputs).filter((key) => key.startsWith("prob-")).map((key) => [key, 0]),

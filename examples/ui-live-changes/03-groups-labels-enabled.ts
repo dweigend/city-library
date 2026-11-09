@@ -1,5 +1,5 @@
 import { defineUI, type ChangeUISpec } from '../../ui/index.ts';
-import { model, type TaxiParameters } from '../../experiments/taxi-cabs/model.ts';
+import { model, type TaxiParameters } from '../../models/taxi-cabs/model.ts';
 import { assert, equal, button, changeNumber, control, settle } from '../ui-authoring/assertions.ts';
 
 type Instance = ReturnType<typeof model.create>;

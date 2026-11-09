@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { create } from '../../experiments/taxi-cabs/model.ts';
+import { create } from '../../models/taxi-cabs/model.ts';
 
 const service = create({ seed: 1, numTaxicab: 3 });
 const initial = service.snapshot();

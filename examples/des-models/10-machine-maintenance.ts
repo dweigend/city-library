@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { model } from "../../experiments/des-machine-maintenance/model.ts";
+import { model } from "../../models/des-machine-maintenance/model.ts";
 
 const maintenance = model.create();
 const independent = model.create();

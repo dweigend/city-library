@@ -1,14 +1,14 @@
 import { describe, expect, test } from "bun:test";
 import { Agent } from "city-library";
-import { create as ants } from "../experiments/ants/model.ts";
-import { create as heatbugs } from "../experiments/heatbugs/model.ts";
+import { create as ants } from "../models/ants/model.ts";
+import { create as heatbugs } from "../models/heatbugs/model.ts";
 import {
   create as flocking,
   headingDifference,
   averageHeadingTowardsFlockmates,
-} from "../experiments/flocking/model.ts";
-import { create as fireflies } from "../experiments/fireflies/model.ts";
-import { create as plants } from "../experiments/invasive-plants/model.ts";
+} from "../models/flocking/model.ts";
+import { create as fireflies } from "../models/fireflies/model.ts";
+import { create as plants } from "../models/invasive-plants/model.ts";
 
 describe("selected ecology collective source mechanisms", () => {
   test("Ants source dimensions, nest and delayed departure", () => {

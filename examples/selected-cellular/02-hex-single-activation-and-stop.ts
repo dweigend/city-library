@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { create } from "../../experiments/hex-cell-aggregation/model.ts";
+import { create } from "../../models/hex-cell-aggregation/model.ts";
 const m = create({ width: 9, height: 9, seed: 3 });
 assert.equal(m.read().cells.filter(c => c.alive).length, 1);
 assert.equal(m.read().cells.filter(c => !c.alive && c.liveNeighborCount === 1).length, 6);

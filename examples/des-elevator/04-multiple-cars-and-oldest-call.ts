@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { create } from "../../experiments/des-elevator/model.ts";
+import { create } from "../../models/des-elevator/model.ts";
 
 const multiple = create({ floors: 3, elevators: 2, capacity: 1, travelTime: 1, doorTime: 1, transferTime: 1, initialPassengers: 0 });
 multiple.addPassenger(0, 2);

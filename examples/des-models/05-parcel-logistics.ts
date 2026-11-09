@@ -1,6 +1,6 @@
 /** Frozen public city-model contract; time is minutes. */
 import assert from "node:assert/strict";
-import { create as parcels } from "../../experiments/des-parcel-logistics/model.ts";
+import { create as parcels } from "../../models/des-parcel-logistics/model.ts";
 
 const logistics = parcels();
 logistics.advance(12);

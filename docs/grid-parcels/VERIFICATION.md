@@ -14,7 +14,7 @@ later delivery documentation changes do not alter the reviewed runtime.
 
 | Commit | Evidence |
 | --- | --- |
-| `158b803` | Full unchanged catalogue/interim snapshot, scoped plan and five complete asserted public scripts, with real missing-API failures recorded in [EXAMPLE-FIRST](EXAMPLE-FIRST.md). No runtime edits preceded this commit. |
+| `158b803` | Full unchanged catalogue/interim snapshot, scoped plan and five complete asserted public scripts, with real missing-API failures recorded in the original pre-runtime record at commit `158b803`. No runtime edits preceded this commit. |
 | `aa824df` | Immutable square/hex/authored topology and provenance comparison. |
 | `49ff219` | Canonical Field factory, accurate layout Grid types and World/occupancy integration. |
 | `c92289a` | Net area, bounded conforming merge and guarded convex split. |
@@ -77,7 +77,7 @@ scientific model parity or arbitrary-scale computational geometry.
 
 ## Limits
 
-See [STATUS](STATUS.md) for every deferred catalogue family and [PHASE-PLAN](PHASE-PLAN.md)
+See [STATUS](STATUS.md) for every deferred catalogue family and [bounded layout contract](STATUS.md#bounded-layout-contract)
 for bounded inputs and numerical semantics. Source research results establish
 provenance, not target behavior. No arbitrary polygon Boolean solver, recursive
 subdivision, offset/corridor, irregular diffusion, state transfer or volume API

@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
-import { create as drift } from '../../experiments/gendrift-t-interact/model.ts';
-import { create as mendel } from '../../experiments/mendelian-inheritance/model.ts';
+import { create as drift } from '../../models/gendrift-t-interact/model.ts';
+import { create as mendel } from '../../models/mendelian-inheritance/model.ts';
 
 const d = drift({ seed: 51, number: 30, colors: 2 });
 d.placeWall(0);

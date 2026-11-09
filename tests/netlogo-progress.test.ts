@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { stages, validateProgressRow, verifyProgress, type ProgressRow } from "../scripts/netlogo-progress.ts";
+import { stages, validateProgressRow, verifyProgress, type ProgressRow } from "../models/catalog/progress.ts";
 
 test("all binding selected paths have source identity and evidence-backed milestones", async () => {
   const rows = await verifyProgress();

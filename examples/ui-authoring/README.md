@@ -25,10 +25,10 @@ bun examples/ui-authoring/05-independent-actions-and-legacy.ts
 sha256sum -c examples/ui-authoring/SHA256SUMS
 ```
 
-Run `bun x tsc -p examples/ui-authoring/tsconfig.json` for the positive and negative type contracts. `SHA256SUMS` protects the executable examples; implementations must satisfy their assertions rather than weaken them.
+Run `bun run typecheck` for the positive and negative type contracts. `SHA256SUMS` protects the executable examples; implementations must satisfy their assertions rather than weaken them.
 
 ## Browser checks
 
-Invoke all five exported `browserChecks` functions in a real browser against each supported public host adapter, using fresh attached containers. The helpers query actual labels, controls, fieldsets, monitors and chart accessibility content. They do not supply a substitute DOM or change model state directly.
+Invoke all five exported `browserChecks` functions in a real browser against the supported Svelte adapter, using fresh attached containers. The helpers query actual labels, controls, fieldsets, monitors and chart accessibility content. They do not supply a substitute DOM or change model state directly.
 
 Browser acceptance requires desktop/narrow light/dark interaction checks and independent screenshot review. The five examples complement focused tests for invalid data, formatter errors, getter precedence, setup/live defaults, choice setter inference and invalid observations. Follow the [authoring contract](../../docs/development/ui-authoring-contract.md) and [UI design rules](../../docs/DESIGN.md).

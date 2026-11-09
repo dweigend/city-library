@@ -4,19 +4,19 @@ import {
   rememberColor,
   forgetColors,
   colorInMemory,
-} from "../experiments/mimicry/model.ts";
+} from "../models/mimicry/model.ts";
 import {
   create as anisogamy,
   gameteDiameter,
   tickAdvanceAmount,
-} from "../experiments/anisogamy/model.ts";
-import { create as peppered } from "../experiments/peppered-moths/model.ts";
+} from "../models/anisogamy/model.ts";
+import { create as peppered } from "../models/peppered-moths/model.ts";
 import {
   create as baldwin,
   fitnessOf,
-} from "../experiments/baldwin-effect/model.ts";
-import { create as mammoths } from "../experiments/mammoths/model.ts";
-import terrain from "../experiments/mammoths/data/terrain.json";
+} from "../models/baldwin-effect/model.ts";
+import { create as mammoths } from "../models/mammoths/model.ts";
+import terrain from "../models/mammoths/data/terrain.json";
 
 describe("B08 first five source mechanisms", () => {
   test("Mimicry FIFO ages and duration-zero eviction; observations do not change RNG", () => {
