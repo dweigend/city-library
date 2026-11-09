@@ -16,8 +16,9 @@ The existing canvas now excludes `selectable: false` symbols from mixed painted-
 
 - `bunx tsc --noEmit -p tsconfig.ui.json`: passed.
 - `bun test tests/universal-collections.test.ts tests/ui-des-scene-kernel.test.ts`: 12 passed, 0 failed, 105 assertions.
-- Frozen public scripts `01-store-items.ts`, `03-counts-defaults-and-errors.ts`, `04-selection-and-lifecycle.ts`, `05-complete-table-inspection.ts`: passed headlessly with original assertions.
-- The initial complete five-script attempt stopped at `02-priority-and-retained-capacity.ts` because the separately owned office observation had not yet added `waitingResidents`. That pending integration was reported; it is not a helper pass or a weakened assertion.
+- All five frozen `examples/ui-collections/0*.ts` public scripts: passed headlessly with original assertions after the separate office observation was integrated.
+- `bunx tsc --noEmit -p examples/ui-collections/tsconfig.json`: passed, including original negative type cases.
+- The initial complete five-script attempt stopped at `02-priority-and-retained-capacity.ts` because the separately owned office observation had not yet added `waitingResidents`. That pending integration was reported; the later full five-script replay passed after the model owner supplied the actual detached Resource snapshot. No assertion was weakened.
 
 The new helper tests exercise 1,200 identities, exact zero/fractional/maximum finite capacity, nonallocation for enormous anonymous quantities, neutral and explicit colors, order, detached mutations, duplicate/generated identity collisions and callback-free validation. Existing geometry assertions continue to cover painted bounds and numerical overflow. The public browser exercises are not claimed to have run in these headless commands.
 
