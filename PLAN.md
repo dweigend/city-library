@@ -27,6 +27,8 @@ The subsequent [flat 2D scenes and elevator expansion](docs/development/des-2d-e
 
 New core capabilities still start with public examples. Full RNG compatibility, paths, generic Input, advanced study transport/continuation, codecs and complete continuation remain broader targets; check actual exports before treating a particular operation as missing or complete.
 
+The [universal UI authoring integration](docs/development/universal-ui-evidence.md) audits all 146 pairs, migrates 82 common live-write bindings and three abstract collection projections, and retains 61 pairs with concrete reasons. Five public examples per phase precede runtime. Independent model/RNG parity, focused tests, refactors and native source review pass; the full check passes with focused later corrections. New browser/image and Gemini acceptance remain distinct active gates. Source-specific scientific portrayals and good existing scripts remain intact.
+
 ## UI and review
 
 Keep model state in the headless model and UI declarations short. The [UI specification](docs/ui/README.md) defines authoring contracts; [UI design](docs/DESIGN.md) defines component, styling and browser-review rules. Existing accepted examples remain regression contracts.

@@ -14,7 +14,7 @@ Check the API table before relying on a proposed operation. These priorities als
 
 ## Using the contract
 
-The Bun/legacy and Svelte hosts adapt the same authoring API. Start with the [five authoring examples](../../examples/ui-authoring/README.md), then the [formatter and observation examples](../../examples/ui-authoring-next/README.md). Keyed live controls, flat grouping, monitor formatters and categorical/labelled charts are implemented in both hosts.
+The Bun/legacy and Svelte hosts adapt the same authoring API. Start with the [five authoring examples](../../examples/ui-authoring/README.md), then the [formatter and observation examples](../../examples/ui-authoring-next/README.md). Keyed live controls, explicit common change actions, flat grouping, monitor formatters, categorical/labelled charts, pure collection diagrams and complete table paging are implemented in both hosts. New acceptance and limits are tracked in the [universal authoring evidence](../development/universal-ui-decisions.md), separately from prior UI approvals.
 
 Use `Observation<typeof model>` for named projections. Annotate scalar formatter parameters when you need their concrete type; automatic scalar-specific inference for unannotated formatters is not promised. Namespace projected entity IDs when different kinds share a source ID. The [reference](api-reference.md) explains these rules in detail.
 

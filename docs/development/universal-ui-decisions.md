@@ -14,6 +14,12 @@ Migrate only files with at least three uniform forwards to the same public metho
 
 Correct chart default colors to remain keyed by a unique series label during a mounted view's lifetime. Explicit colors always win; fixed lists retain their first-frame colors. Duplicate labels preserve positional fallback. Reset on disposal/Setup. This is stable presentation state, never a scientific category registry. Public scripts must freeze filtering/reordering and explicit-color behavior before runtime.
 
+### Public type compatibility correction
+
+The first implementation expressed write paths as a `UISpec` union alias. Independent review demonstrated that this broke the previously exported interface-extension syntax (`interface ExtendedSpec extends UISpec<P,M>`). Preserve the original `UISpec` interface and its required local-setter contract. Add the precise `ChangeUISpec` interface for a required common `change` action with optional local setters; internal `AuthoringSpec` unites the variants. Ordinary `defineUI(model, { ... })` calls and inference remain one flat authoring form. This adds a meaningful type variant, not an operation alias or a second DSL.
+
+Four newly frozen positive examples and two newly added independent tests initially annotated common-write records with `UISpec`. Correct only their imports/type annotations to `ChangeUISpec`, with README/hash records; objects, callbacks, values, runtime assertions and compile-time negative expectations remain unchanged. This annotation correction preserves the old consumer contract instead of weakening it. A compile-only legacy interface-extension regression and standalone old/new consumers verify both surfaces.
+
 ### Phase B: pure collection diagrams and complete inspection
 
 Export `collectionDiagram(rows)` and its `CollectionRow`/`CollectionItem` types from both existing UI entries. Rows are flat and discriminated:
