@@ -5,8 +5,8 @@ void valid;
 defineUI(model, { change: (instance, changes) => instance.setAmount(changes), live: { amount: {} }, views: [] });
 // @ts-expect-error An omitted setter requires an explicit common write action.
 defineUI(model, { live: { amount: {} }, views: [] });
+// @ts-expect-error A local override receives the declared numeric input.
 defineUI(model, { change: (instance, changes) => instance.setAmount(changes), live: {
-  // @ts-expect-error A local override receives the declared numeric input.
   amount: { set: (instance, value: string) => instance.setAmount({ amount: Number(value) }) },
 }, views: [] });
 // @ts-expect-error Legacy arrays cannot acquire a competing change default.

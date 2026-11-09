@@ -9,7 +9,8 @@ import { createSession } from "./session.ts";
 /** Vite-only adapter; the public authoring contract remains framework independent. */
 export function defineUI<P extends object, M>(
   definition: Definition<P, M> & { readonly create: (options?: Partial<P>) => ModelInstance },
-  spec: Omit<UISpec<NoInfer<P>, Extract<NoInfer<M>, ModelInstance>>, 'live'> & {
+  spec: Omit<UISpec<NoInfer<P>, Extract<NoInfer<M>, ModelInstance>>, 'live' | 'change'> & {
+    readonly change?: undefined;
     readonly live?: readonly LegacyLiveField<NoInfer<P>, Extract<NoInfer<M>, ModelInstance>>[];
   },
 ): BoundEntry;
@@ -23,7 +24,8 @@ export function defineUI<
   const T extends NonNullable<RuntimeSpec<NoInfer<P>, Extract<NoInfer<M>, ModelInstance>>['monitors']>,
 >(
   definition: Definition<P, M> & { readonly create: (options?: Partial<P>) => ModelInstance },
-  spec: Omit<MonitorSpec<NoInfer<P>, Extract<NoInfer<M>, ModelInstance>, T>, 'live'> & {
+  spec: Omit<MonitorSpec<NoInfer<P>, Extract<NoInfer<M>, ModelInstance>, T>, 'live' | 'change'> & {
+    readonly change?: undefined;
     readonly live?: readonly LegacyLiveField<NoInfer<P>, Extract<NoInfer<M>, ModelInstance>>[];
   },
 ): BoundEntry;

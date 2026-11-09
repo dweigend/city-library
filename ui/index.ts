@@ -4,6 +4,7 @@ export type {
   Monitor,
   BoundEntry,
   UISpec,
+  LiveChanges,
   View,
   ModelInstance,
   NetworkNode,
