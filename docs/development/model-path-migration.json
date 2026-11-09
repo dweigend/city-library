@@ -710,6 +710,79 @@
       "originalSha256": "6269e50bba826ca5291f63fcb9177aaaab218008b406960771820839bfb2f667",
       "migratedSha256": "8c44aa3a9e11df0b83096b086df7277a7e994cf839b645ae57f7a5f338862c5c",
       "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "models/catalog/acceptance/selected-transport/frozen-SHA256SUMS",
+      "file": "examples/selected-transport/01-paths.ts",
+      "originalSha256": "526018fa57fda1efcd10756ae61c0317e7572b07317a307b03394ce2ba8c6098",
+      "migratedSha256": "f344e26331e51399bcf668d6b778ecdbfae682e6fb6073654e04dae6208e8cdd",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "models/catalog/acceptance/selected-transport/frozen-SHA256SUMS",
+      "file": "examples/selected-transport/02-basic-and-lanes.ts",
+      "originalSha256": "b596c92f9d24d32a88d4f701563536c8087255d5dd00f01806a85083832044a9",
+      "migratedSha256": "17a9cdeccd88e3df9d490fdd6fa41fd9680905701f20c197042c92824612fbd9",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "models/catalog/acceptance/selected-transport/frozen-SHA256SUMS",
+      "file": "examples/selected-transport/03-grid-signals.ts",
+      "originalSha256": "a3e857d8cf56e650bcf19bd6113a4149cdcba91ce9e768218deab1f0fd6cc1f1",
+      "migratedSha256": "60c7d941b9bef13b36baa131580070a1ccdbe51b6c465527871fff3bf8313e1d",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "models/catalog/acceptance/selected-transport/frozen-SHA256SUMS",
+      "file": "examples/selected-transport/04-intersection-and-goals.ts",
+      "originalSha256": "af419ade90e8b70663eeb56639f365060935a8abf0a5bf3afed327f1ff42915c",
+      "migratedSha256": "40087639f913f6bdd7fc2cb838ef604ef705232eebdfe47256d70da106661e25",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "models/catalog/acceptance/selected-transport/frozen-SHA256SUMS",
+      "file": "examples/selected-transport/05-taxi-service.ts",
+      "originalSha256": "fdc5bda86b812580ec70223b979e0a7451183e88c317eda0d86f9436db4f13ff",
+      "migratedSha256": "ecc87850c3bf133ac4b718b4dbb5505d96935dd3a5d93d76628cd1802bae883a",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "models/catalog/acceptance/selected-social-example-SHA256SUMS",
+      "file": "examples/selected-social/01-choice-and-rebellion.ts",
+      "originalSha256": "21d71469daf4e23d2c3aad29882f0a61e39ddb31ebdac0fa45694cc45804574f",
+      "migratedSha256": "038810b6fa82cd59c1cbbf452e28cf3b217bcce89c05338ec0d0417ce42de6b3",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "models/catalog/acceptance/selected-social-example-SHA256SUMS",
+      "file": "examples/selected-social/02-language-and-party.ts",
+      "originalSha256": "db3a52865405a618e619c597c0d00df00aad9b9480f2c8cc5e540a5c7c8f7f5f",
+      "migratedSha256": "db5cc7aedd5e4db79772d71bdedde245cf5777b68b667e51a6bdf4d17648b3ab",
+      "change": "experiments/ -> models/ in import paths only",
+      "baselineManifestMismatch": {
+        "actualBaseSha256": "308d0c0a4e84153f8252e8c8c244f4e0c6d932ff0fb40da3d14c047fe4d09704"
+      }
+    },
+    {
+      "manifest": "models/catalog/acceptance/selected-social-example-SHA256SUMS",
+      "file": "examples/selected-social/03-cooperation-and-minority.ts",
+      "originalSha256": "e9641b58457602d0a7edd878001c262aeb4373b0696d2b7cb1c76e6ff10f9950",
+      "migratedSha256": "61191e9085c3237428c84572b72ea65d794b2be84f1bb576b15cd57934953f72",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "models/catalog/acceptance/selected-social-example-SHA256SUMS",
+      "file": "examples/selected-social/04-rumors-and-signals.ts",
+      "originalSha256": "6648ef9d2836a3e65f216c5ff1fb963aa419f47eacd77fb7e8a549f47f673c2a",
+      "migratedSha256": "e9d8b10b5db09277d35f43a41c706b74132b520ebd4f95f6415cb9adb41f98da",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "models/catalog/acceptance/selected-social-example-SHA256SUMS",
+      "file": "examples/selected-social/05-development-and-personalities.ts",
+      "originalSha256": "ff46d354986d65d2c141278a2ab7c5b900ea7c6bd738ebdc193d92cc9e2477b3",
+      "migratedSha256": "e6dee58746e6938abb14c69f5cc8e2fe7f25625cba290fdddff6e4512b0853a5",
+      "change": "experiments/ -> models/ in import paths only"
     }
   ],
   "unresolved": [],
