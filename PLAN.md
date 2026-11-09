@@ -4,11 +4,11 @@ City Library brings reusable parts to simulations and games about future cities.
 
 ## Available now
 
-The repository provides a headless core, a shared UI and 125 paired experiment entries. The catalog target is 200 selected models; research dossiers cover the full selection. Implementation, scientific comparison and independent acceptance remain separate requirements.
+The repository provides a headless core, a shared UI and 146 paired experiment entries: 125 entries in the fixed model selection plus 21 Mesa/DES/elevator demonstrations. The catalog target is 200 selected models; research dossiers cover the full selection. Implementation, scientific comparison and independent acceptance remain separate requirements.
 
 The core includes Agent/World lifecycle and execution, seeded Random streams, spatial movement and perception, Grid/Field operations, Graph algorithms, planar geometry and statistics. The [Mesa/DES expansion](docs/mesa-expansion/STATUS.md) adds pure measurements, bounded History, serial studies, explicit activation, two-phase updates, linear threshold calculations, causal Agenda composition and capacity-owned resources. Its twenty illustrative city entries supplement the fixed upstream selection; their browser and independent acceptance evidence remains separate. The [Agent Loom specification](docs/agent-loom/README.md) defines the required API beyond the implemented subsets. Use [public exports](index.ts) and asserted examples to check a particular operation; the [coverage inventory](docs/development/coverage.md) needs reconciliation with those contracts.
 
-Both UI hosts support `defineUI`, keyed live controls, flat groups, monitor formatting and labelled charts. All 125 entries use the shared contract without a model-specific fallback. The Svelte runtime remains a work in progress; the legacy host is available. See [Lab usage](ui/agent-lab/README.md) and the [UI API](docs/ui/README.md).
+Both UI hosts support `defineUI`, keyed live controls, flat groups, monitor formatting and labelled charts. All 146 entries use the shared contract without a model-specific fallback. The Svelte runtime remains a work in progress; the legacy host is available. See [Lab usage](ui/agent-lab/README.md) and the [UI API](docs/ui/README.md).
 
 The [catalog ledger](experiments/catalog/progress.json) tracks model-level acceptance. It records 125 implemented entries, including 20 whose remaining acceptance stages still need evidence reconciliation. Research is recorded for 200 selected models; independent review and full acceptance are recorded for one. These counts describe distinct stages, not a completed catalog. A working setup or passing test does not establish scientific equivalence or complete accessibility.
 
@@ -27,7 +27,7 @@ The subsequent [flat 2D scenes and elevator expansion](docs/development/des-2d-e
 
 New core capabilities still start with public examples. Full RNG compatibility, paths, generic Input, advanced study transport/continuation, codecs and complete continuation remain broader targets; check actual exports before treating a particular operation as missing or complete.
 
-The [universal UI authoring integration](docs/development/universal-ui-evidence.md) audits all 146 pairs, migrates 82 common live-write bindings and three abstract collection projections, and retains 61 pairs with concrete reasons. Five public examples per phase precede runtime. Independent model/RNG parity, focused tests, refactors and native source review pass; the full check passes with focused later corrections. New browser/image and Gemini acceptance remain distinct active gates. Source-specific scientific portrayals and good existing scripts remain intact.
+The [universal UI authoring integration](docs/development/universal-ui-evidence.md) audits all 146 pairs, migrates 82 common live-write bindings and three abstract collection projections, and retains 61 pairs with concrete reasons. Five public examples per phase precede runtime. Independent model/RNG parity, focused tests, refactors and native source review pass; the full check passes with focused later corrections. New Gemini source approval, all-146 browser smoke with 82 actual live edits, both-host fixtures, eleven deep DES flows and 92 independently inspected images are complete. Tooling, capture freshness and late-delta check limits remain explicit in the evidence. Source-specific scientific portrayals and good existing scripts remain intact.
 
 ## UI and review
 
