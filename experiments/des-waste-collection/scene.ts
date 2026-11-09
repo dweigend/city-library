@@ -21,8 +21,8 @@ export function scene(state: Observation<typeof model>): SpatialData {
     shape: "rectangle", extent: { width: 0.5, height: 0.5 }, filled: unit < state.carried,
     color: scientificPalette.active, stroke: scientificPalette.neutral });
   return { width: 20, height: 13, showLabels: false, agents,
-    description: `Six collection patches contain ${state.remaining} load units; triangle truck carries ${state.carried} of ${state.parameters.loadCapacity}; ${state.delivered} delivered. Squares mark individual units, outlined patches are empty when collected.`,
-    labels: [{ x: -6, y: 1.7, text: state.depotBusy ? "Depot · unloading" : "Depot" },
+    description: `Six collection patches contain ${state.remaining} load units; triangle truck carries ${state.carried} of ${state.parameters.loadCapacity}; ${state.delivered} delivered; depot ${state.depotBusy ? "unloading" : "available"}. Squares mark individual units, outlined patches are empty when collected.`,
+    labels: [{ x: -6, y: 1.7, text: "Depot" },
       { x: -3.8, y: -3.3, text: `Truck load ${state.carried}/${state.parameters.loadCapacity}` },
       { x: 3, y: 4.5, text: `Collection sites · ${state.remaining} remaining` },
       { x: 3, y: -4.3, text: `Delivered ${state.delivered}` }] };
