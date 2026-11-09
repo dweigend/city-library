@@ -50,6 +50,8 @@ export interface GridData {
   readonly cells: readonly Cell[];
 }
 export interface SpatialAgent extends NetworkNode {
+  /** Presentation-only decoration may opt out of pointer and keyboard selection. */
+  readonly selectable?: boolean;
   /** Symbol diameter in CSS pixels, consistent with NetworkNode. */
   readonly size?: number;
   readonly x: number;
