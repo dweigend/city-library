@@ -87,6 +87,7 @@ function waterLandAndVisionData(s: UIObservation): SpatialData {
       ...(s.parameters.showVision
         ? s.fish.map((a) => ({
             id: `fov-${a.id}`,
+            selectable: false,
             x: a.x,
             y: a.y,
             color: "#9b9b9b32",

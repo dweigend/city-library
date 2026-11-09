@@ -83,6 +83,7 @@ function searchLandscapeData(s: UIObservation): SpatialData {
         : [
             {
               id: "highlight",
+              selectable: false,
               x:
                 s.parameters.highlightMode === "True best"
                   ? s.trueBest.x
