@@ -1,0 +1,28 @@
+import assert from "node:assert/strict";
+import { model } from "../../experiments/des-machine-maintenance/model.ts";
+
+const maintenance = model.create();
+const independent = model.create();
+assert.equal(maintenance.read().operational, 3);
+assert.equal(maintenance.read().availability, 1);
+maintenance.advance(4);
+assert.equal(maintenance.read().operational, 0);
+assert.equal(maintenance.read().busy, 1);
+assert.equal(maintenance.read().waiting, 2);
+maintenance.advance(6);
+assert.equal(maintenance.read().completedRepairs, 2);
+assert.equal(maintenance.read().operational, 1);
+assert.equal(maintenance.read().busy, 1);
+assert.equal(maintenance.read().waiting, 1);
+assert.deepEqual(maintenance.read().machines.map((machine) => machine.availability), [0.6, 0.5, 0.4]);
+assert.equal(maintenance.read().availability, 0.5);
+assert.deepEqual(maintenance.read(), maintenance.read());
+assert.equal(independent.read().time, 0);
+const expanded = model.create();
+expanded.advance(4);
+expanded.setRepairTeams(3);
+expanded.advance(3);
+assert.equal(expanded.read().completedRepairs, 3);
+assert.equal(expanded.read().operational, 3);
+assert.throws(() => expanded.setRepairTeams(0), RangeError);
+assert.equal(expanded.read().parameters.repairTeams, 3);
