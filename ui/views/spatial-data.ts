@@ -1,4 +1,4 @@
-import type { GridData, SpatialAgent, SpatialData } from "../definition.ts";
+import type { GridData, SpatialData } from "../definition.ts";
 
 function record(value: unknown, name: string): Record<string, unknown> {
   if (typeof value !== "object" || value === null || Array.isArray(value))
@@ -71,24 +71,4 @@ export function validateCanvasData(value: GridData | SpatialData): void {
     const label = point(value, "Scene label");
     text(label.text, "Scene label text");
   }
-}
-
-/** True painted bounds for mixed diagrams; legacy nearest picking stays separate. */
-export function hitSceneSymbol(agent: SpatialAgent, x: number, y: number, unitsPerPixel: number): boolean {
-  const radians = (agent.heading ?? 0) * Math.PI / 180;
-  const dx = x - agent.x;
-  const dy = y - agent.y;
-  // Canvas clockwise rotation is negative rotation in upward-positive coordinates.
-  const localX = dx * Math.cos(radians) - dy * Math.sin(radians);
-  const localY = dx * Math.sin(radians) + dy * Math.cos(radians);
-  const width = agent.extent?.width ?? (agent.size ?? 8) * unitsPerPixel;
-  const height = agent.extent?.height ?? width;
-  if (agent.shape === "diamond") return Math.abs(localX) / (width / 2) + Math.abs(localY) / (height / 2) <= 1;
-  if (agent.shape === "rectangle") return Math.abs(localX) <= width / 2 && Math.abs(localY) <= height / 2;
-  if (agent.shape === "triangle") {
-    if (localY < -height * 0.35 || localY > height / 2) return false;
-    const halfWidth = width * 0.35 * (height / 2 - localY) / (height * 0.85);
-    return Math.abs(localX) <= halfWidth;
-  }
-  return localX * localX + localY * localY <= width * width / 4;
 }

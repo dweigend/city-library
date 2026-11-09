@@ -1,5 +1,6 @@
 import type { RendererOptions } from "./appearance.ts";
-import { validateCanvasData, hitSceneSymbol } from "./spatial-data.ts";
+import { validateCanvasData } from "./spatial-data.ts";
+import { canvasPoint, hitSceneSymbol, symbolDiameter, symbolDimensions, symbolRotation, validateCanvasGeometry } from "./spatial-geometry.ts";
 import { symbolPath } from "./spatial-symbols.ts";
 import type {
   Cell,
@@ -68,32 +69,23 @@ export function mountCanvas(
         ctx.strokeStyle = segment.color ?? theme?.foreground ?? "#fff";
         ctx.lineWidth = width * Math.min(devicePixelRatio, 2);
         ctx.beginPath();
-        ctx.moveTo(
-          ((segment.from.x + data.width / 2) / data.width) * canvas.width,
-          ((data.height / 2 - segment.from.y) / data.height) * canvas.height,
-        );
-        ctx.lineTo(
-          ((segment.to.x + data.width / 2) / data.width) * canvas.width,
-          ((data.height / 2 - segment.to.y) / data.height) * canvas.height,
-        );
+        const from = canvasPoint(segment.from, data, canvas);
+        const to = canvasPoint(segment.to, data, canvas);
+        ctx.moveTo(from.x, from.y);
+        ctx.lineTo(to.x, to.y);
         ctx.stroke();
       }
       ctx.restore();
     }
     if ("agents" in data)
       for (const agent of data.agents) {
-        const x = ((agent.x + data.width / 2) / data.width) * canvas.width;
-        const y = ((data.height / 2 - agent.y) / data.height) * canvas.height;
+        const { x, y } = canvasPoint(agent, data, canvas);
         const ratio = Math.min(devicePixelRatio, 2);
-        const size = Math.max(
-          2,
-          (agent.size ?? 8) * ratio,
-        );
-        const width = agent.extent ? agent.extent.width / data.width * canvas.width : size;
-        const height = agent.extent ? agent.extent.height / data.height * canvas.height : size;
+        const size = symbolDiameter(agent, ratio);
+        const { width, height } = symbolDimensions(agent, data, canvas, ratio);
         ctx.save();
         ctx.translate(x, y);
-        ctx.rotate(((agent.heading ?? 0) * Math.PI) / 180);
+        ctx.rotate(symbolRotation(agent));
         ctx.fillStyle = agent.color ?? theme?.foreground ?? "#fff";
         symbolPath(ctx, agent, width, height);
         if (agent.filled !== false) ctx.fill();
@@ -123,22 +115,32 @@ export function mountCanvas(
       ctx.fillStyle = theme?.foreground ?? "#fff";
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
-      for (const label of data.labels) ctx.fillText(label.text,
-        (label.x + data.width / 2) / data.width * canvas.width,
-        (data.height / 2 - label.y) / data.height * canvas.height);
+      for (const label of data.labels) {
+        const { x, y } = canvasPoint(label, data, canvas);
+        ctx.fillText(label.text, x, y);
+      }
       ctx.restore();
     }
   }
-  function resizeBuffer() {
-    if (options.theme) {
-      const ratio = latest ? latest.width / latest.height : 1;
-      pixelWidth = Math.max(1, Math.min(availableWidth, displayHeightLimit * ratio)) * Math.min(devicePixelRatio, 2);
-    }
-    const height = pixelWidth * (latest ? latest.height / latest.width : 1);
-    if (canvas.width !== Math.round(pixelWidth))
-      canvas.width = Math.round(pixelWidth);
-    if (canvas.height !== Math.round(height))
-      canvas.height = Math.round(height);
+  function prepareBuffer(data: GridData | SpatialData | undefined) {
+    const aspect = data ? data.width / data.height : 1;
+    const inverseAspect = data ? data.height / data.width : 1;
+    if (!Number.isFinite(aspect) || aspect <= 0 || !Number.isFinite(inverseAspect) || inverseAspect <= 0)
+      throw new RangeError("Canvas aspect ratio must remain finite and positive.");
+    const width = options.theme
+      ? Math.max(1, Math.min(availableWidth, displayHeightLimit * aspect)) * Math.min(devicePixelRatio, 2)
+      : pixelWidth;
+    const height = width * inverseAspect;
+    if (!Number.isFinite(width) || width <= 0 || !Number.isFinite(height) || height <= 0)
+      throw new RangeError("Canvas buffer dimensions must remain finite and positive.");
+    const buffer = { width: Math.max(1, Math.round(width)), height: Math.max(1, Math.round(height)), pixelWidth: width };
+    if (data) validateCanvasGeometry(data, buffer, Math.min(devicePixelRatio, 2));
+    return buffer;
+  }
+  function resizeBuffer(buffer = prepareBuffer(latest)) {
+    pixelWidth = buffer.pixelWidth;
+    if (canvas.width !== buffer.width) canvas.width = buffer.width;
+    if (canvas.height !== buffer.height) canvas.height = buffer.height;
   }
   const resize = new ResizeObserver((entries) => {
     if (disposed) return;
@@ -172,14 +174,16 @@ export function mountCanvas(
       // Scenes with only legacy symbols retain their original nearest behavior.
       const hasDiagramShapes = data.agents.some(agent => agent.shape === "rectangle" || agent.shape === "diamond");
       const shaped = hasDiagramShapes ? [...data.agents].reverse().find(agent =>
-        hitSceneSymbol(agent, x, y, data.width / rect.width)) : undefined;
+        hitSceneSymbol(agent, x, y, data, canvas, Math.min(devicePixelRatio, 2))) : undefined;
       if (shaped) { select(shaped.id); return; }
-      const nearest = data.agents.filter(agent => agent.shape !== "rectangle" && agent.shape !== "diamond").sort(
-        (a, b) => Math.hypot(a.x - x, a.y - y) - Math.hypot(b.x - x, b.y - y),
-      )[0];
-      if (nearest && Math.hypot(nearest.x - x, nearest.y - y) < 2) {
-        select(nearest.id);
-        return;
+      if (!hasDiagramShapes) {
+        const nearest = [...data.agents].sort(
+          (a, b) => Math.hypot(a.x - x, a.y - y) - Math.hypot(b.x - x, b.y - y),
+        )[0];
+        if (nearest && Math.hypot(nearest.x - x, nearest.y - y) < 2) {
+          select(nearest.id);
+          return;
+        }
       }
     }
     const cell = data.cells?.find(
@@ -297,12 +301,13 @@ export function mountCanvas(
   return {
     update(data: GridData | SpatialData, id: string | null, drawing = false) {
       validateCanvasData(data);
+      const buffer = prepareBuffer(data);
       if (!drawing) stopDrawing();
       drawingEnabled = Boolean(intent) && drawing;
       setDrawingPresentation(drawingEnabled);
       latest = data;
       if (!options.theme) canvas.style.aspectRatio = `${data.width} / ${data.height}`;
-      resizeBuffer();
+      resizeBuffer(buffer);
       selected = id;
       labelControl.hidden =
         !("agents" in data) ||
