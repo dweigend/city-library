@@ -65,6 +65,17 @@ function unique(ids: Set<string>, id: string) {
   if (ids.has(id)) throw new RangeError(`Duplicate collection identity: ${id}`);
   ids.add(id);
 }
+function normalizeItems(input: unknown, ids: Set<string>, defaultColor: string): CollectionItem[] {
+  return array(input, "Collection items").map(value => {
+    const item = record(value, ["id", "label", "color", "shape"], "item");
+    const id = text(item.id, "Item id");
+    unique(ids, id);
+    if (item.shape !== undefined && !shapes.includes(item.shape as string)) throw new TypeError("Unknown collection shape.");
+    return { id, label: item.label === undefined ? id : text(item.label, "Item label"),
+      color: item.color === undefined ? defaultColor : text(item.color, "Item color"),
+      shape: (item.shape ?? "rectangle") as NonNullable<CollectionItem["shape"]> };
+  });
+}
 function normalizeRows(input: unknown): CollectionRow[] {
   const rowIds = new Set<string>();
   const itemIds = new Set<string>();
@@ -76,14 +87,7 @@ function normalizeRows(input: unknown): CollectionRow[] {
     if (row.kind === "items") {
       for (const key of ["count", "used", "capacity", "unit"]) if (Object.hasOwn(row, key)) throw new TypeError("Items cannot contain quantity fields.");
       if (row.order !== undefined && row.order !== "unordered" && row.order !== "supplied") throw new TypeError("Unknown collection order.");
-      const items = array(row.items, "Collection items").map(value => {
-        const item = record(value, ["id", "label", "color", "shape"], "item");
-        const id = text(item.id, "Item id"); unique(itemIds, id);
-        if (item.shape !== undefined && !shapes.includes(item.shape as string)) throw new TypeError("Unknown collection shape.");
-        return { id, label: item.label === undefined ? id : text(item.label, "Item label"),
-          color: item.color === undefined ? base.color : text(item.color, "Item color"),
-          shape: (item.shape ?? "rectangle") as NonNullable<CollectionItem["shape"]> };
-      });
+      const items = normalizeItems(row.items, itemIds, base.color);
       return { ...base, kind: "items", items, order: row.order ?? "unordered" };
     }
     if (row.kind === "count") {
@@ -115,10 +119,13 @@ function summary(row: CollectionRow): string {
   const excess = Math.max(0, row.used - row.capacity);
   return `${row.label}: ${row.used} of ${row.capacity} ${row.unit}${excess ? `; ${excess} excess above capacity` : ""}`;
 }
+function usesUnitOutlines(row: Extract<CollectionRow, { readonly kind: "capacity" }>): boolean {
+  return Number.isSafeInteger(row.capacity) && Number.isSafeInteger(row.used) &&
+    Math.max(row.capacity, row.used) <= layout.unitOutlineLimit;
+}
 function outlineUnits(row: CollectionRow): number {
   if (row.kind !== "capacity") return 0;
-  return Number.isSafeInteger(row.capacity) && Number.isSafeInteger(row.used) && Math.max(row.capacity, row.used) <= layout.unitOutlineLimit
-    ? Math.max(row.capacity, row.used) : 1;
+  return usesUnitOutlines(row) ? Math.max(row.capacity, row.used) : 1;
 }
 
 /** Pure layout of detached collections; coordinates are diagram units, never model space. */
@@ -157,7 +164,7 @@ export function collectionDiagram(input: readonly CollectionRow[]): SpatialData 
     });
     if (row.kind === "capacity") {
       const units = outlineUnits(row);
-      if (units === 1 && (!Number.isSafeInteger(row.used) || !Number.isSafeInteger(row.capacity) || Math.max(row.used, row.capacity) > layout.unitOutlineLimit)) {
+      if (!usesUnitOutlines(row)) {
         decoration(row, "frame", left + layout.capacityFrameWidth / 2, contentTop, false, scientificPalette.neutral, layout.capacityFrameWidth);
         const fill = row.capacity ? Math.min(row.used, row.capacity) / row.capacity : 0;
         if (fill > 0) decoration(row, "used", left + layout.capacityFrameWidth * fill / 2, contentTop, true, row.color ?? scientificPalette.neutral, layout.capacityFrameWidth * fill);
