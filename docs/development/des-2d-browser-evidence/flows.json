@@ -1,0 +1,424 @@
+{
+  "flows": [
+    {
+      "title": "DES Civic Office",
+      "before": "2 residents waiting; 1 in service; 0 completed. 1 clerk slots, 0 retained service claims above current capacity. Arrow keys select an item.",
+      "stepped": "2 residents waiting; 1 in service; 0 completed. 1 clerk slots, 0 retained service claims above current capacity. Arrow keys select an item.",
+      "actions": [
+        "Add resident"
+      ],
+      "stable": true,
+      "description": "2 residents waiting; 1 in service; 0 completed. 1 clerk slots, 0 retained service claims above current capacity. Arrow keys select an item.",
+      "fallback": "2 residents waiting; 1 in service; 0 completed. 1 clerk slots, 0 retained service claims above current capacity.",
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "title": "DES EV Charging",
+      "before": "1 vehicles waiting in resource priority order; 2 charging; 0 free charger slots; 0 completed; 0 cancelled. Triangles mark priority vehicles. Arrow keys select an item.",
+      "stepped": "1 vehicles waiting in resource priority order; 2 charging; 0 free charger slots; 0 completed; 0 cancelled. Triangles mark priority vehicles. Arrow keys select an item.",
+      "actions": [
+        "Add priority vehicle",
+        "Cancel waiting vehicle"
+      ],
+      "stable": true,
+      "description": "1 vehicles waiting in resource priority order; 2 charging; 0 free charger slots; 0 completed; 0 cancelled. Triangles mark priority vehicles. Arrow keys select an item.",
+      "fallback": "1 vehicles waiting in resource priority order; 2 charging; 0 free charger slots; 0 completed; 0 cancelled. Triangles mark priority vehicles.",
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "title": "DES Parcel Logistics",
+      "before": "1 parcels in 1 depot slots, 0 blocked outside, 0 delivered; 1 van occupied, loading or outbound. Arrow keys select an item.",
+      "stepped": "1 parcels in 1 depot slots, 0 blocked outside, 0 delivered; 1 van occupied, loading or outbound. Arrow keys select an item.",
+      "actions": [
+        "Add parcel"
+      ],
+      "stable": true,
+      "description": "1 parcels in 1 depot slots, 0 blocked outside, 0 delivered; 1 van occupied, loading or outbound. Arrow keys select an item.",
+      "fallback": "1 parcels in 1 depot slots, 0 blocked outside, 0 delivered; 1 van occupied, loading or outbound.",
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "title": "DES Urban Goods Buffer",
+      "before": "0 crates produced: 0 stored in 2 bounded slots, 0 blocked outside the store, 0 collected. Arrow keys select an item.",
+      "stepped": "1 crates produced: 1 stored in 2 bounded slots, 0 blocked outside the store, 0 collected. Arrow keys select an item.",
+      "actions": [
+        "Produce crate",
+        "Collect crate"
+      ],
+      "stable": true,
+      "description": "3 crates produced: 2 stored in 2 bounded slots, 1 blocked outside the store, 0 collected. Arrow keys select an item.",
+      "fallback": "3 crates produced: 2 stored in 2 bounded slots, 1 blocked outside the store, 0 collected.",
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "title": "DES Bus Interchange",
+      "before": "2 buses traveling on the 5-minute route; 0 waiting; 0 at berth; 1 berth slots; 0 departed. Arrow keys select an item.",
+      "stepped": "2 buses traveling on the 5-minute route; 0 waiting; 0 at berth; 1 berth slots; 0 departed. Arrow keys select an item.",
+      "actions": [
+        "Dispatch bus"
+      ],
+      "stable": true,
+      "description": "0 buses traveling on the 5-minute route; 1 waiting; 1 at berth; 1 berth slots; 0 departed. Arrow keys select an item.",
+      "fallback": "0 buses traveling on the 5-minute route; 1 waiting; 1 at berth; 1 berth slots; 0 departed.",
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "title": "DES Waste Collection",
+      "before": "Six collection patches contain 12 load units; triangle truck carries 0 of 4; 0 delivered. Squares mark individual units, outlined patches are empty when collected. Arrow keys select an item.",
+      "stepped": "Six collection patches contain 10 load units; triangle truck carries 2 of 4; 0 delivered. Squares mark individual units, outlined patches are empty when collected. Arrow keys select an item.",
+      "actions": [],
+      "stable": true,
+      "description": "Six collection patches contain 8 load units; triangle truck carries 4 of 4; 0 delivered. Squares mark individual units, outlined patches are empty when collected. Arrow keys select an item.",
+      "fallback": "Six collection patches contain 8 load units; triangle truck carries 4 of 4; 0 delivered. Squares mark individual units, outlined patches are empty when collected.",
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "title": "DES Emergency Dispatch",
+      "before": "Four-node access path; three diamond calls, 2 waiting, 0 completed, 1 assigned triangle teams. Lower priority number is served first among waiting calls. Team placement marks assignment, not a physical travel position. Arrow keys select an item.",
+      "stepped": "Four-node access path; three diamond calls, 2 waiting, 0 completed, 1 assigned triangle teams. Lower priority number is served first among waiting calls. Team placement marks assignment, not a physical travel position. Arrow keys select an item.",
+      "actions": [],
+      "stable": true,
+      "description": "Four-node access path; three diamond calls, 1 waiting, 1 completed, 1 assigned triangle teams. Lower priority number is served first among waiting calls. Team placement marks assignment, not a physical travel position. Arrow keys select an item.",
+      "fallback": "Four-node access path; three diamond calls, 1 waiting, 1 completed, 1 assigned triangle teams. Lower priority number is served first among waiting calls. Team placement marks assignment, not a physical travel position.",
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "title": "DES Bike Redistribution",
+      "before": "6 bikes conserved across three stores and truck: Depot 6 of 18 slots, Market 0 of 18 slots, Park 0 of 18 slots; 0 aboard. Dots are bikes; outlined dots are free slots; triangle is the truck at its last recorded stop. Arrow keys select an item.",
+      "stepped": "6 bikes conserved across three stores and truck: Depot 4 of 18 slots, Market 2 of 18 slots, Park 0 of 18 slots; 0 aboard. Dots are bikes; outlined dots are free slots; triangle is the truck at its last recorded stop. Arrow keys select an item.",
+      "actions": [],
+      "stable": true,
+      "description": "6 bikes conserved across three stores and truck: Depot 2 of 18 slots, Market 2 of 18 slots, Park 0 of 18 slots; 2 aboard. Dots are bikes; outlined dots are free slots; triangle is the truck at its last recorded stop. Arrow keys select an item.",
+      "fallback": "6 bikes conserved across three stores and truck: Depot 2 of 18 slots, Market 2 of 18 slots, Park 0 of 18 slots; 2 aboard. Dots are bikes; outlined dots are free slots; triangle is the truck at its last recorded stop.",
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "title": "DES Water Allocation",
+      "before": "Four district patches demand twelve discrete allocation units; 0 supplied, 12 unmet. Filled squares are delivered units, outlined squares unmet units. 6 supply units committed and 0 available; patch labels distinguish reserved and waiting allocations. No hydraulic flow is represented. Arrow keys select an item.",
+      "stepped": "Four district patches demand twelve discrete allocation units; 6 supplied, 6 unmet. Filled squares are delivered units, outlined squares unmet units. 6 supply units committed and 0 available; patch labels distinguish reserved and waiting allocations. No hydraulic flow is represented. Arrow keys select an item.",
+      "actions": [
+        "Add 3 supply units"
+      ],
+      "stable": true,
+      "description": "Four district patches demand twelve discrete allocation units; 6 supplied, 6 unmet. Filled squares are delivered units, outlined squares unmet units. 6 supply units committed and 0 available; patch labels distinguish reserved and waiting allocations. No hydraulic flow is represented. Arrow keys select an item.",
+      "fallback": "Four district patches demand twelve discrete allocation units; 6 supplied, 6 unmet. Filled squares are delivered units, outlined squares unmet units. 6 supply units committed and 0 available; patch labels distinguish reserved and waiting allocations. No hydraulic flow is represented.",
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "title": "DES Machine Maintenance",
+      "before": "Three square machines: 3 operational, 0 waiting, 0 being repaired. Triangle teams appear beneath assigned machines; neutral triangles are available teams. Status labels distinguish each state. 0 repairs completed. Arrow keys select an item.",
+      "stepped": "Three square machines: 3 operational, 0 waiting, 0 being repaired. Triangle teams appear beneath assigned machines; neutral triangles are available teams. Status labels distinguish each state. 0 repairs completed. Arrow keys select an item.",
+      "actions": [],
+      "stable": true,
+      "description": "Three square machines: 1 operational, 1 waiting, 1 being repaired. Triangle teams appear beneath assigned machines; neutral triangles are available teams. Status labels distinguish each state. 2 repairs completed. Arrow keys select an item.",
+      "fallback": "Three square machines: 1 operational, 1 waiting, 1 being repaired. Triangle teams appear beneath assigned machines; neutral triangles are available teams. Status labels distinguish each state. 2 repairs completed.",
+      "errors": [],
+      "rejects": []
+    },
+    {
+      "title": "DES Elevator",
+      "before": "6 floors, 2 cars with 4 slots each. 6 amber floor dots waiting, 0 teal cabin dots riding, 0 passengers have arrived and left the scene. Triangles indicate requested and car directions. Diagram coordinates; time 0 seconds. Arrow keys select an item.",
+      "stepped": "6 floors, 2 cars with 4 slots each. 6 amber floor dots waiting, 0 teal cabin dots riding, 0 passengers have arrived and left the scene. Triangles indicate requested and car directions. Diagram coordinates; time 1 seconds. Arrow keys select an item.",
+      "actions": [
+        "Add passenger"
+      ],
+      "stable": true,
+      "description": "6 floors, 2 cars with 4 slots each. 3 amber floor dots waiting, 2 teal cabin dots riding, 1 passengers have arrived and left the scene. Triangles indicate requested and car directions. Diagram coordinates; time 10 seconds. Arrow keys select an item.",
+      "fallback": "6 floors, 2 cars with 4 slots each. 3 amber floor dots waiting, 2 teal cabin dots riding, 1 passengers have arrived and left the scene. Triangles indicate requested and car directions. Diagram coordinates; time 10 seconds.",
+      "errors": [],
+      "rejects": []
+    }
+  ],
+  "controls": [
+    {
+      "title": "DES Civic Office",
+      "changed": [
+        {
+          "id": "c1674-residents",
+          "value": 4
+        },
+        {
+          "id": "c1676-serviceMinutes",
+          "value": 3
+        },
+        {
+          "id": "c1678-clerks",
+          "value": 2
+        }
+      ],
+      "before": 0,
+      "step": 1,
+      "paused": 3,
+      "enteredRun": true,
+      "stable": true,
+      "selected": true,
+      "focused": true,
+      "errors": []
+    },
+    {
+      "title": "DES EV Charging",
+      "changed": [
+        {
+          "id": "c1840-vehicles",
+          "value": 4
+        },
+        {
+          "id": "c1842-sessionMinutes",
+          "value": 3
+        },
+        {
+          "id": "c1844-chargers",
+          "value": 3
+        }
+      ],
+      "before": 0,
+      "step": 1,
+      "paused": 3,
+      "enteredRun": true,
+      "stable": true,
+      "selected": true,
+      "focused": true,
+      "errors": []
+    },
+    {
+      "title": "DES Urban Goods Buffer",
+      "changed": [
+        {
+          "id": "c2006-capacity",
+          "value": 3
+        },
+        {
+          "id": "c2008-lots",
+          "value": 4
+        },
+        {
+          "id": "c2010-firstCollection",
+          "value": 5
+        }
+      ],
+      "before": 0,
+      "step": 1,
+      "paused": 3,
+      "enteredRun": true,
+      "stable": true,
+      "selected": true,
+      "focused": true,
+      "errors": []
+    },
+    {
+      "title": "DES Bus Interchange",
+      "changed": [
+        {
+          "id": "c2172-buses",
+          "value": 3
+        },
+        {
+          "id": "c2174-dwellMinutes",
+          "value": 3
+        },
+        {
+          "id": "c2176-berths",
+          "value": 2
+        }
+      ],
+      "before": 0,
+      "step": 1,
+      "paused": 3,
+      "enteredRun": true,
+      "stable": true,
+      "selected": true,
+      "focused": true,
+      "errors": []
+    },
+    {
+      "title": "DES Parcel Logistics",
+      "changed": [
+        {
+          "id": "c2338-parcels",
+          "value": 3
+        },
+        {
+          "id": "c2340-depotCapacity",
+          "value": 2
+        },
+        {
+          "id": "c2342-loadingMinutes",
+          "value": 2
+        }
+      ],
+      "before": 0,
+      "step": 1,
+      "paused": 3,
+      "enteredRun": true,
+      "stable": true,
+      "selected": true,
+      "focused": true,
+      "errors": []
+    },
+    {
+      "title": "DES Waste Collection",
+      "changed": [
+        {
+          "id": "c2504-loadCapacity",
+          "value": 5
+        },
+        {
+          "id": "c2506-unloadMinutes",
+          "value": 3
+        }
+      ],
+      "before": 0,
+      "step": 1,
+      "paused": 3,
+      "enteredRun": true,
+      "stable": true,
+      "selected": true,
+      "focused": true,
+      "errors": []
+    },
+    {
+      "title": "DES Emergency Dispatch",
+      "changed": [
+        {
+          "id": "c2667-serviceMinutes",
+          "value": 3
+        },
+        {
+          "id": "c2669-responders",
+          "value": 2
+        }
+      ],
+      "before": 0,
+      "step": 1,
+      "paused": 3,
+      "enteredRun": true,
+      "stable": true,
+      "selected": true,
+      "focused": true,
+      "errors": []
+    },
+    {
+      "title": "DES Bike Redistribution",
+      "changed": [
+        {
+          "id": "c2830-targetBikes",
+          "value": 3
+        },
+        {
+          "id": "c2832-truckCapacity",
+          "value": 3
+        }
+      ],
+      "before": 0,
+      "step": 1,
+      "paused": 3,
+      "enteredRun": true,
+      "stable": true,
+      "selected": true,
+      "focused": true,
+      "errors": []
+    },
+    {
+      "title": "DES Machine Maintenance",
+      "changed": [
+        {
+          "id": "c3155-repairMinutes",
+          "value": 4
+        },
+        {
+          "id": "c3157-failureMinutes",
+          "value": 5
+        },
+        {
+          "id": "c3159-repairTeams",
+          "value": 2
+        }
+      ],
+      "before": 0,
+      "step": 1,
+      "paused": 3,
+      "enteredRun": true,
+      "stable": true,
+      "selected": true,
+      "focused": true,
+      "errors": []
+    },
+    {
+      "title": "DES Elevator",
+      "changed": [
+        {
+          "id": "c3321-floors",
+          "value": 7
+        },
+        {
+          "id": "c3323-elevators",
+          "value": 3
+        },
+        {
+          "id": "c3325-capacity",
+          "value": 5
+        },
+        {
+          "id": "c3327-travelTime",
+          "value": 3
+        },
+        {
+          "id": "c3329-doorTime",
+          "value": 2
+        },
+        {
+          "id": "c3331-transferTime",
+          "value": 2
+        },
+        {
+          "id": "c3333-initialPassengers",
+          "value": 7
+        },
+        {
+          "id": "c3335-arrivalInterval",
+          "value": 1
+        },
+        {
+          "id": "c3337-arrivalLimit",
+          "value": 1
+        }
+      ],
+      "before": 0,
+      "step": 1,
+      "paused": 3,
+      "enteredRun": true,
+      "stable": true,
+      "selected": true,
+      "focused": true,
+      "errors": []
+    },
+    {
+      "title": "DES Water Allocation",
+      "changed": [
+        {
+          "supplyUnits": 9
+        },
+        {
+          "transferMinutes": 2
+        }
+      ],
+      "before": 0,
+      "step": 1,
+      "paused": 3,
+      "enteredRun": true,
+      "stable": true,
+      "selected": false,
+      "focused": true,
+      "errors": []
+    }
+  ]
+}
