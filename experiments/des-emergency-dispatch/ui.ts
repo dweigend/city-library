@@ -1,5 +1,6 @@
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
+import { scene } from "./scene.ts";
 export const ui = defineUI(model, {
   setup: ["serviceMinutes"],
   live: { responders: { set: (instance, value) => instance.setResponders(value) } },
@@ -10,7 +11,7 @@ export const ui = defineUI(model, {
     { label: "Completed", value: (state) => state.completed },
   ],
   views: [
-    { type: "network", label: "Response access graph", nodes: (state) => state.nodes, edges: (state) => state.edges },
+    { type: "spatial", label: "Response assignments", data: scene },
     { type: "table", label: "Call ledger", rows: (state) => state.calls },
   ],
 });
