@@ -175,10 +175,10 @@ export function mountCanvas(
       // Scenes with only legacy symbols retain their original nearest behavior.
       const hasDiagramShapes = data.agents.some(agent => agent.shape === "rectangle" || agent.shape === "diamond");
       const shaped = hasDiagramShapes ? [...data.agents].reverse().find(agent =>
-        hitSceneSymbol(agent, x, y, data, canvas, Math.min(devicePixelRatio, 2))) : undefined;
+        agent.selectable !== false && hitSceneSymbol(agent, x, y, data, canvas, Math.min(devicePixelRatio, 2))) : undefined;
       if (shaped) { select(shaped.id); return; }
       if (!hasDiagramShapes) {
-        const nearest = [...data.agents].sort(
+        const nearest = data.agents.filter(agent => agent.selectable !== false).sort(
           (a, b) => Math.hypot(a.x - x, a.y - y) - Math.hypot(b.x - x, b.y - y),
         )[0];
         if (nearest && Math.hypot(nearest.x - x, nearest.y - y) < 2) {
@@ -282,10 +282,9 @@ export function mountCanvas(
       !latest
     )
       return;
-    const items =
-      !drawingEnabled && "agents" in latest && latest.agents.length
-        ? latest.agents
-        : (latest.cells ?? []);
+    const selectableAgents = !drawingEnabled && "agents" in latest
+      ? latest.agents.filter(agent => agent.selectable !== false) : [];
+    const items = selectableAgents.length ? selectableAgents : (latest.cells ?? []);
     if (!items.length) return;
     event.preventDefault();
     const current = items.findIndex((item) => item.id === selected);

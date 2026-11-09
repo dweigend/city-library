@@ -42,6 +42,7 @@ function agent(value: unknown) {
     number(extent.width, "Rectangle width", 0, true);
     number(extent.height, "Rectangle height", 0, true);
   }
+  if (data.selectable !== undefined && typeof data.selectable !== "boolean") throw new TypeError("Selectable must be boolean.");
   if (data.filled !== undefined && typeof data.filled !== "boolean") throw new TypeError("Filled must be boolean.");
   if (data.stroke !== undefined) text(data.stroke, "Outline color");
   if (data.strokeWidth !== undefined) number(data.strokeWidth, "Outline width", 0);
