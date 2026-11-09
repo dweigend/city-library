@@ -1,3 +1,4 @@
+import { tablePage } from "./views/table-page.ts";
 import type { MonitorSpec, RuntimeSpec } from "./authoring.ts";
 import type { LegacyLiveField } from "./definition.ts";
 import { normalizeAuthoring, groupLive, decodeControl } from "./authoring.ts";
@@ -484,32 +485,51 @@ export function defineUI<P extends object, M extends ModelInstance>(
             });
           } else if (view.type === "table") {
             const table = document.createElement("table");
-            figure.append(table);
-            views.push({
-              render(state) {
-                const rows = view.rows(state);
-                table.replaceChildren();
-                const keys = Object.keys(rows[0] ?? {});
-                const head = document.createElement("tr");
+            const navigation = document.createElement("div");
+            navigation.className = "view-actions";
+            navigation.dataset.pagination = "";
+            const previous = document.createElement("button");
+            previous.type = "button"; previous.textContent = "Previous rows";
+            const next = document.createElement("button");
+            next.type = "button"; next.textContent = "Next rows";
+            const range = document.createElement("output");
+            range.setAttribute("aria-label", "Visible rows");
+            navigation.append(previous, range, next);
+            const empty = document.createElement("p");
+            empty.textContent = "No rows";
+            figure.append(table, navigation, empty);
+            let page = 0;
+            let rows: readonly Readonly<Record<string, string | number | boolean>>[] = [];
+            function renderPage() {
+              const visible = tablePage(rows, page);
+              page = visible.page;
+              table.replaceChildren();
+              const keys = Object.keys(rows[0] ?? {});
+              const head = document.createElement("tr");
+              for (const key of keys) {
+                const th = document.createElement("th");
+                th.scope = "col"; th.textContent = key; head.append(th);
+              }
+              table.append(head);
+              for (const row of visible.rows) {
+                const tr = document.createElement("tr");
                 for (const key of keys) {
-                  const th = document.createElement("th");
-                  th.scope = "col";
-                  th.textContent = key;
-                  head.append(th);
+                  const td = document.createElement("td");
+                  td.textContent = String(row[key] ?? ""); tr.append(td);
                 }
-                table.append(head);
-                for (const row of rows.slice(0, 200)) {
-                  const tr = document.createElement("tr");
-                  for (const key of keys) {
-                    const td = document.createElement("td");
-                    td.textContent = String(row[key] ?? "");
-                    tr.append(td);
-                  }
-                  table.append(tr);
-                }
-              },
+                table.append(tr);
+              }
+              previous.disabled = !visible.previous; next.disabled = !visible.next;
+              range.textContent = visible.range;
+              navigation.hidden = !visible.paged; empty.hidden = rows.length > 0;
+            }
+            previous.onclick = () => { page--; renderPage(); };
+            next.onclick = () => { page++; renderPage(); };
+            views.push({
+              render(state) { rows = view.rows(state); renderPage(); },
               dispose() {
-                table.remove();
+                previous.onclick = null; next.onclick = null;
+                table.remove(); navigation.remove(); empty.remove();
               },
             });
           }

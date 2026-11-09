@@ -346,3 +346,5 @@ th {
     --error: #ff9d9d;
   }
 }
+
+.view-actions[data-pagination] { align-items: center; flex-wrap: wrap; }
