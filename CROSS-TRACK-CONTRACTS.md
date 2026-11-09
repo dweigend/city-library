@@ -2,7 +2,7 @@
 
 ## Current integration status
 
-The coordination-only commit is `91e4c11`. The public-example freeze commits are `1570b64` (five DES scripts), `0ea94f1` (five phase-A city pairs) and `73a3bf9` (five phase-B city pairs). Additive APIs below are now frozen and implemented through `e624416`; Mesa World attachment is normally merged from `69ed507`. Native pre-freeze logic review passed; Gemini requested contract clarifications, responses are recorded in `docs/development/des-design-review.md`, and final independent approval remains pending. The original coordination baseline below explains the delivery boundary.
+The coordination-only commit is `91e4c11`. The public-example freeze commits are `1570b64` (five DES scripts), `0ea94f1` (five phase-A city pairs) and `73a3bf9` (five phase-B city pairs). Additive APIs below are now frozen and implemented through `e624416`; Mesa World attachment is normally merged from `69ed507`. Native pre-freeze logic review passed; Gemini requested contract clarifications, responses are recorded in `docs/development/des-design-review.md`, and the final Gemini DES design/source review is approved (docs/development/des-gemini-final-review.md); the late shared canvas resize correction passed its separate source/browser gates (docs/development/des-canvas-resize-review.md and docs/development/des-integration-evidence.md). The original coordination baseline below explains the delivery boundary.
 
 ## Status and ownership
 
@@ -40,7 +40,7 @@ The binding batch API is preserved. Time starts at zero; event time is finite an
 
 The caller's per-call event limit counts equal-time events and zero-delay chains. Exhaustion leaves the clock at the last event; no hidden skipping, World tick update or global run-budget consumption occurs. Mesa global run budgets count their separately defined execution unit. Neither budget silently substitutes for the other.
 
-Agenda is usable standalone and World-attached. Mesa owns `src/world/world.ts` and `src/world/activation/`; Salabim will not edit those. Desired binding attachment is `world.add(agenda)`, `world.delete(agenda)`, `world.agendas: readonly Agenda[]`, sharing existing atomic membership and single-World ownership without implicit dispatch. Mesa implemented that seam in 69ed507; attachment/clock/identity checks now pass on the merged target.
+Agenda is usable standalone and World-attached. Mesa owns `src/world/world.ts` and `src/world/activation/`; Salabim will not edit those. Binding attachment is `world.add(agenda)`, `world.delete(agenda)`, `world.agendas: readonly Agenda[]`, sharing existing atomic membership and single-World ownership without implicit dispatch. Mesa implemented that seam in 69ed507; attachment/clock/identity checks now pass on the merged target.
 
 ## Process interaction and activation
 
