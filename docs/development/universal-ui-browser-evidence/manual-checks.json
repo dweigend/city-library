@@ -1,0 +1,158 @@
+{
+  "manual": [
+    {
+      "slug": "traffic-2-lanes",
+      "states": [
+        {
+          "action": "Select car with actual pointer",
+          "monitors": [
+            {
+              "label": "Tick",
+              "value": "0"
+            },
+            {
+              "label": "Selected speed",
+              "value": "0.500"
+            }
+          ],
+          "drawing": "true"
+        },
+        {
+          "action": "Watch selected car",
+          "monitors": [
+            {
+              "label": "Tick",
+              "value": "0"
+            },
+            {
+              "label": "Selected speed",
+              "value": "0.500"
+            }
+          ],
+          "canvas": "Model view. 40 agents. Arrow keys select an item. Selected cl_7cd3et6hfydtli4i"
+        },
+        {
+          "action": "Follow selected car",
+          "monitors": [
+            {
+              "label": "Tick",
+              "value": "0"
+            },
+            {
+              "label": "Selected speed",
+              "value": "0.500"
+            }
+          ],
+          "canvas": "Model view. 40 agents. Arrow keys select an item. Selected cl_7cd3et6hfydtli4i"
+        },
+        {
+          "action": "Reset perspective",
+          "monitors": [
+            {
+              "label": "Tick",
+              "value": "0"
+            },
+            {
+              "label": "Selected speed",
+              "value": "0.500"
+            }
+          ],
+          "canvas": "Model view. 40 agents. Arrow keys select an item. Selected cl_7cd3et6hfydtli4i"
+        },
+        {
+          "action": "Step after camera actions",
+          "monitors": [
+            {
+              "label": "Tick",
+              "value": "1"
+            },
+            {
+              "label": "Selected speed",
+              "value": "0.505"
+            }
+          ]
+        }
+      ],
+      "errors": []
+    },
+    {
+      "slug": "robby-the-robot",
+      "action": "Keyboard Space on Next rows",
+      "range": "201–243 of 243",
+      "rows": 43,
+      "first": "200move-south↓",
+      "last": "242move-east→"
+    },
+    {
+      "slug": "wolf-sheep-predation",
+      "before": {
+        "disabled": true,
+        "value": "30"
+      },
+      "grassModeEnabled": true,
+      "valueAfterChange": "31",
+      "monitors": [
+        {
+          "label": "Tick",
+          "value": "0"
+        },
+        {
+          "label": "Sheep",
+          "value": "100"
+        },
+        {
+          "label": "Wolves",
+          "value": "50"
+        },
+        {
+          "label": "Grass / 4",
+          "value": "328"
+        }
+      ],
+      "alerts": []
+    }
+  ],
+  "overlays": [
+    {
+      "slug": "particle-swarm-optimization",
+      "pointer": "Model view. 51 agents. Arrow keys select an item. Selected cl_18vle9eoymysapjz",
+      "keyboard": "Model view. 51 agents. Arrow keys select an item. Selected 49",
+      "passed": true,
+      "monitors": [
+        {
+          "label": "Tick",
+          "value": "0"
+        },
+        {
+          "label": "Best value found",
+          "value": "0.00000"
+        }
+      ]
+    },
+    {
+      "slug": "vision-evolution",
+      "pointer": "Model view. 180 agents. Arrow keys select an item. Selected cl_6sikyjzw4c34z21g",
+      "keyboard": "Model view. 180 agents. Arrow keys select an item. Selected cl_6slsw1r1954qp63j",
+      "passed": true,
+      "inspector": [
+        "idcl_6slsw1r1954qp63jx48.13512698141858y-40heading139eyeSize1landMobility0landFoodPreference0.6554157987702638energy110.05316907539964fovRadius3.2"
+      ],
+      "monitors": [
+        {
+          "label": "Tick",
+          "value": "0"
+        },
+        {
+          "label": "Fish",
+          "value": "50"
+        },
+        {
+          "label": "Food",
+          "value": "80"
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "console": []
+}

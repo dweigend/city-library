@@ -1,0 +1,8384 @@
+[
+  {
+    "slug": "anisogamy",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Adults",
+        "value": "100"
+      },
+      {
+        "label": "Gametes",
+        "value": "0"
+      },
+      {
+        "label": "Zygotes",
+        "value": "0"
+      },
+      {
+        "label": "Tick advance",
+        "value": "1"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Adults",
+        "value": "100"
+      },
+      {
+        "label": "Gametes",
+        "value": "4"
+      },
+      {
+        "label": "Zygotes",
+        "value": "0"
+      },
+      {
+        "label": "Tick advance",
+        "value": "1"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "maxAdults",
+      "before": 100,
+      "expected": 101,
+      "actual": 101,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Adults, gametes and zygotes",
+      "Adult mating types",
+      "Gamete mating types",
+      "Mean gamete mass trait",
+      "Adult gamete mass traits"
+    ],
+    "canvasCount": 1,
+    "chartCount": 4,
+    "milliseconds": 236
+  },
+  {
+    "slug": "ants",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Carrying food",
+        "value": "0"
+      },
+      {
+        "label": "Food remaining",
+        "value": "313"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Carrying food",
+        "value": "0"
+      },
+      {
+        "label": "Food remaining",
+        "value": "313"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Nest, food and pheromone",
+      "Food in each pile"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 167
+  },
+  {
+    "slug": "artificial-neural-net-multilayer",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Epoch",
+        "value": "0"
+      },
+      {
+        "label": "Epoch error",
+        "value": "0.00000"
+      },
+      {
+        "label": "Output activation",
+        "value": "0.500"
+      },
+      {
+        "label": "Test",
+        "value": "—"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Epoch",
+        "value": "1"
+      },
+      {
+        "label": "Epoch error",
+        "value": "0.25594"
+      },
+      {
+        "label": "Output activation",
+        "value": "0.536"
+      },
+      {
+        "label": "Test",
+        "value": "—"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "learningRate",
+      "before": 0.5,
+      "expected": 0.5001,
+      "actual": 0.5001,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Neural network",
+      "Error vs. epochs",
+      "Weights"
+    ],
+    "canvasCount": 3,
+    "chartCount": 1,
+    "milliseconds": 201
+  },
+  {
+    "slug": "artificial-neural-net-perceptron",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Epoch",
+        "value": "0"
+      },
+      {
+        "label": "Epoch error",
+        "value": "0.00000"
+      },
+      {
+        "label": "Output",
+        "value": "-1"
+      },
+      {
+        "label": "Test",
+        "value": "—"
+      },
+      {
+        "label": "Decision boundary",
+        "value": "line"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Epoch",
+        "value": "1"
+      },
+      {
+        "label": "Epoch error",
+        "value": "1.03600"
+      },
+      {
+        "label": "Output",
+        "value": "1"
+      },
+      {
+        "label": "Test",
+        "value": "—"
+      },
+      {
+        "label": "Decision boundary",
+        "value": "line"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "learningRate",
+      "before": 0.5,
+      "expected": 0.5001,
+      "actual": 0.5001,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Perceptron",
+      "Error vs. epochs",
+      "Rule learned",
+      "Weights"
+    ],
+    "canvasCount": 3,
+    "chartCount": 2,
+    "milliseconds": 183
+  },
+  {
+    "slug": "autumn",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Leaves",
+        "value": "278"
+      },
+      {
+        "label": "Dead leaves",
+        "value": "0"
+      },
+      {
+        "label": "Raindrops",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Leaves",
+        "value": "278"
+      },
+      {
+        "label": "Dead leaves",
+        "value": "0"
+      },
+      {
+        "label": "Raindrops",
+        "value": "19"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "windFactor",
+      "before": 3,
+      "expected": 4,
+      "actual": 4,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Autumn",
+      "Leaves",
+      "Weather",
+      "Leaf averages"
+    ],
+    "canvasCount": 1,
+    "chartCount": 3,
+    "milliseconds": 183
+  },
+  {
+    "slug": "bacterial-infection",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Minutes",
+        "value": "0"
+      },
+      {
+        "label": "Hours",
+        "value": "0"
+      },
+      {
+        "label": "Days",
+        "value": "0"
+      },
+      {
+        "label": "Doses A",
+        "value": "0"
+      },
+      {
+        "label": "Doses B",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Minutes",
+        "value": "1"
+      },
+      {
+        "label": "Hours",
+        "value": "0"
+      },
+      {
+        "label": "Days",
+        "value": "0"
+      },
+      {
+        "label": "Doses A",
+        "value": "1"
+      },
+      {
+        "label": "Doses B",
+        "value": "1"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "reproduce",
+      "before": true,
+      "expected": false,
+      "actual": false,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Patients A and B",
+      "Patient A pore counts",
+      "Patient B pore counts",
+      "Population in A",
+      "Population in B"
+    ],
+    "canvasCount": 1,
+    "chartCount": 4,
+    "milliseconds": 167
+  },
+  {
+    "slug": "baldwin-effect",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Generation",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Generation",
+        "value": "1"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "numPop",
+      "before": 200,
+      "expected": 201,
+      "actual": 201,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Fitness and inherited matches",
+      "Plastic alleles (%)",
+      "Correct inherited alleles (%)",
+      "Mean fitness"
+    ],
+    "canvasCount": 1,
+    "chartCount": 3,
+    "milliseconds": 267
+  },
+  {
+    "slug": "bank-reserves",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Mean wealth",
+        "value": "0"
+      },
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Next phase",
+        "value": "Business"
+      },
+      {
+        "label": "Savings total",
+        "value": "0"
+      },
+      {
+        "label": "Wallets total",
+        "value": "289"
+      },
+      {
+        "label": "Loans total",
+        "value": "0"
+      },
+      {
+        "label": "Money total",
+        "value": "289"
+      },
+      {
+        "label": "Bank reserves",
+        "value": "0"
+      },
+      {
+        "label": "Bank to loan",
+        "value": "0"
+      },
+      {
+        "label": "Rich",
+        "value": "0"
+      },
+      {
+        "label": "Middle class",
+        "value": "0"
+      },
+      {
+        "label": "Poor",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Mean wealth",
+        "value": "0"
+      },
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Next phase",
+        "value": "Balance books"
+      },
+      {
+        "label": "Savings total",
+        "value": "0"
+      },
+      {
+        "label": "Wallets total",
+        "value": "289"
+      },
+      {
+        "label": "Loans total",
+        "value": "0"
+      },
+      {
+        "label": "Money total",
+        "value": "289"
+      },
+      {
+        "label": "Bank reserves",
+        "value": "0"
+      },
+      {
+        "label": "Bank to loan",
+        "value": "0"
+      },
+      {
+        "label": "Rich",
+        "value": "0"
+      },
+      {
+        "label": "Middle class",
+        "value": "57"
+      },
+      {
+        "label": "Poor",
+        "value": "0"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "People",
+      "Income distribution",
+      "Money and loans",
+      "Savings and wallets",
+      "Wealth distribution"
+    ],
+    "canvasCount": 1,
+    "chartCount": 4,
+    "milliseconds": 134
+  },
+  {
+    "slug": "bidding-market",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Sales",
+        "value": "0"
+      },
+      {
+        "label": "Average price",
+        "value": "0"
+      },
+      {
+        "label": "Money taken (%)",
+        "value": "0"
+      },
+      {
+        "label": "Items sold (%)",
+        "value": "0"
+      },
+      {
+        "label": "Demand met (%)",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Sales",
+        "value": "0"
+      },
+      {
+        "label": "Average price",
+        "value": "0"
+      },
+      {
+        "label": "Money taken (%)",
+        "value": "0"
+      },
+      {
+        "label": "Items sold (%)",
+        "value": "0"
+      },
+      {
+        "label": "Demand met (%)",
+        "value": "0"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Buyers and sellers",
+      "Seller asking prices",
+      "Buyer willing to pay",
+      "Items",
+      "Market outcomes",
+      "Average price"
+    ],
+    "canvasCount": 1,
+    "chartCount": 5,
+    "milliseconds": 132
+  },
+  {
+    "slug": "binomial-rabbits",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Mean",
+        "value": "0.000"
+      },
+      {
+        "label": "X scale",
+        "value": "44"
+      },
+      {
+        "label": "Y scale",
+        "value": "0.000"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Mean",
+        "value": "-0.025"
+      },
+      {
+        "label": "X scale",
+        "value": "44"
+      },
+      {
+        "label": "Y scale",
+        "value": "3416.667"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Rabbit distribution",
+      "Rabbits"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 250
+  },
+  {
+    "slug": "birthdays",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Successes",
+        "value": "0"
+      },
+      {
+        "label": "Success rate (%)",
+        "value": "0.00"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Successes",
+        "value": "1"
+      },
+      {
+        "label": "Success rate (%)",
+        "value": "100.00"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Room",
+      "Success rate (%)"
+    ],
+    "canvasCount": 0,
+    "chartCount": 1,
+    "milliseconds": 133
+  },
+  {
+    "slug": "blood-sugar-regulation",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Blood glucose",
+        "value": "4356"
+      },
+      {
+        "label": "Insulin",
+        "value": "363"
+      },
+      {
+        "label": "Glucagon",
+        "value": "363"
+      },
+      {
+        "label": "Stored glucose",
+        "value": "118691"
+      },
+      {
+        "label": "Meal time",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Blood glucose",
+        "value": "4260"
+      },
+      {
+        "label": "Insulin",
+        "value": "411"
+      },
+      {
+        "label": "Glucagon",
+        "value": "407"
+      },
+      {
+        "label": "Stored glucose",
+        "value": "118687"
+      },
+      {
+        "label": "Meal time",
+        "value": "0"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "metabolicRate",
+      "before": 100,
+      "expected": 101,
+      "actual": 101,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Blood Sugar Regulation",
+      "Signal molecules"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 1125
+  },
+  {
+    "slug": "braess-paradox",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Active commuters",
+        "value": "0"
+      },
+      {
+        "label": "Cars spawned",
+        "value": "0"
+      },
+      {
+        "label": "Completed",
+        "value": "0"
+      },
+      {
+        "label": "Last travel time",
+        "value": "0"
+      },
+      {
+        "label": "Average travel time",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Active commuters",
+        "value": "0"
+      },
+      {
+        "label": "Cars spawned",
+        "value": "0"
+      },
+      {
+        "label": "Completed",
+        "value": "0"
+      },
+      {
+        "label": "Last travel time",
+        "value": "0"
+      },
+      {
+        "label": "Average travel time",
+        "value": "0"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "middleOn",
+      "before": true,
+      "expected": false,
+      "actual": false,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Road congestion and commuters",
+      "Travel time (ticks / 450)",
+      "Routes taken",
+      "Choice probabilities"
+    ],
+    "canvasCount": 1,
+    "chartCount": 3,
+    "milliseconds": 175
+  },
+  {
+    "slug": "brians-brain",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Firing",
+        "value": "3008"
+      },
+      {
+        "label": "Refractory",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Firing",
+        "value": "2135"
+      },
+      {
+        "label": "Refractory",
+        "value": "3008"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Cells"
+    ],
+    "canvasCount": 1,
+    "chartCount": 0,
+    "milliseconds": 167
+  },
+  {
+    "slug": "ca-1d-elementary",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Row",
+        "value": "64"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Row",
+        "value": "63"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "rule",
+      "before": 105,
+      "expected": 106,
+      "actual": 106,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Rows",
+      "Rule table"
+    ],
+    "canvasCount": 1,
+    "chartCount": 0,
+    "milliseconds": 355
+  },
+  {
+    "slug": "ca-continuous",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Row",
+        "value": "100"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Row",
+        "value": "99"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "addConstant",
+      "before": 0.47,
+      "expected": 0.48,
+      "actual": 0.48,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Rows"
+    ],
+    "canvasCount": 1,
+    "chartCount": 0,
+    "milliseconds": 373
+  },
+  {
+    "slug": "ca-stochastic",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Row",
+        "value": "80"
+      },
+      {
+        "label": "Metric entropy",
+        "value": "0.85409"
+      },
+      {
+        "label": "Topological entropy",
+        "value": "0.97672"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Row",
+        "value": "79"
+      },
+      {
+        "label": "Metric entropy",
+        "value": "0.86707"
+      },
+      {
+        "label": "Topological entropy",
+        "value": "0.97672"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "OOO",
+      "before": 0,
+      "expected": 1,
+      "actual": 1,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Rows",
+      "Entropy"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 283
+  },
+  {
+    "slug": "cash-flow",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Mean wealth",
+        "value": "0"
+      },
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Next phase",
+        "value": "Business → balance books → bank sheet"
+      },
+      {
+        "label": "Savings total",
+        "value": "0"
+      },
+      {
+        "label": "Wallets total",
+        "value": "2350"
+      },
+      {
+        "label": "Loans total",
+        "value": "0"
+      },
+      {
+        "label": "Money total",
+        "value": "2350"
+      },
+      {
+        "label": "Bank reserves",
+        "value": "0"
+      },
+      {
+        "label": "Bank to loan",
+        "value": "0"
+      },
+      {
+        "label": "Rich",
+        "value": "0"
+      },
+      {
+        "label": "Middle class",
+        "value": "473"
+      },
+      {
+        "label": "Poor",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Mean wealth",
+        "value": "4.974630021141649"
+      },
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Next phase",
+        "value": "Business → balance books → bank sheet"
+      },
+      {
+        "label": "Savings total",
+        "value": "2353"
+      },
+      {
+        "label": "Wallets total",
+        "value": "-3"
+      },
+      {
+        "label": "Loans total",
+        "value": "0"
+      },
+      {
+        "label": "Money total",
+        "value": "2350"
+      },
+      {
+        "label": "Bank reserves",
+        "value": "494.13"
+      },
+      {
+        "label": "Bank to loan",
+        "value": "1858.87"
+      },
+      {
+        "label": "Rich",
+        "value": "32"
+      },
+      {
+        "label": "Middle class",
+        "value": "441"
+      },
+      {
+        "label": "Poor",
+        "value": "0"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "People",
+      "Income distribution",
+      "Money and loans",
+      "Savings and wallets",
+      "Wealth distribution"
+    ],
+    "canvasCount": 1,
+    "chartCount": 4,
+    "milliseconds": 172
+  },
+  {
+    "slug": "central-limit-theorem",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Population",
+        "value": "0"
+      },
+      {
+        "label": "Samples",
+        "value": "0"
+      },
+      {
+        "label": "Expected value",
+        "value": "N/A"
+      },
+      {
+        "label": "Std dev means",
+        "value": "N/A"
+      },
+      {
+        "label": "Std dev sums",
+        "value": "N/A"
+      },
+      {
+        "label": "State",
+        "value": "Ready"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Population",
+        "value": "0"
+      },
+      {
+        "label": "Samples",
+        "value": "0"
+      },
+      {
+        "label": "Expected value",
+        "value": "N/A"
+      },
+      {
+        "label": "Std dev means",
+        "value": "N/A"
+      },
+      {
+        "label": "Std dev sums",
+        "value": "N/A"
+      },
+      {
+        "label": "State",
+        "value": "There are not enough people to take a sample of this size."
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "maxValue",
+      "before": 28,
+      "expected": 29,
+      "actual": 29,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Population",
+      "Sample-data distribution"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 167
+  },
+  {
+    "slug": "chloroplasts-and-food",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "CO2",
+        "value": "100"
+      },
+      {
+        "label": "O2",
+        "value": "0"
+      },
+      {
+        "label": "Glucose produced",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "CO2",
+        "value": "100"
+      },
+      {
+        "label": "O2",
+        "value": "0"
+      },
+      {
+        "label": "Glucose produced",
+        "value": "0"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "waterflowThroughLeaf",
+      "before": 25,
+      "expected": 26,
+      "actual": 26,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Chloroplasts and Food",
+      "Molecules"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 167
+  },
+  {
+    "slug": "consumer-choice",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Orange",
+        "value": "50"
+      },
+      {
+        "label": "Blue",
+        "value": "50"
+      },
+      {
+        "label": "Clustering",
+        "value": "0.432"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Orange",
+        "value": "49"
+      },
+      {
+        "label": "Blue",
+        "value": "51"
+      },
+      {
+        "label": "Clustering",
+        "value": "0.437"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "normInfluence",
+      "before": 0.15,
+      "expected": 0.16,
+      "actual": 0.16,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Consumer connections",
+      "Market shares (consumers)",
+      "Consumer clustering"
+    ],
+    "canvasCount": 3,
+    "chartCount": 2,
+    "milliseconds": 289
+  },
+  {
+    "slug": "crispr-bacterium",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "RNAP",
+        "value": "25"
+      },
+      {
+        "label": "Cas9",
+        "value": "23"
+      },
+      {
+        "label": "Guides",
+        "value": "107"
+      },
+      {
+        "label": "Viruses",
+        "value": "0"
+      },
+      {
+        "label": "Event",
+        "value": ""
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "RNAP",
+        "value": "25"
+      },
+      {
+        "label": "Cas9",
+        "value": "23"
+      },
+      {
+        "label": "Guides",
+        "value": "107"
+      },
+      {
+        "label": "Viruses",
+        "value": "0"
+      },
+      {
+        "label": "Event",
+        "value": ""
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "guideUnbindChance",
+      "before": 5,
+      "expected": 6,
+      "actual": 6,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "CRISPR Bacterium",
+      "Guide and spacer sequences",
+      "History"
+    ],
+    "canvasCount": 1,
+    "chartCount": 2,
+    "milliseconds": 161
+  },
+  {
+    "slug": "crispr-ecosystem",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Mean array length",
+        "value": "0"
+      },
+      {
+        "label": "Array standard deviation",
+        "value": "0"
+      },
+      {
+        "label": "Focal virus %",
+        "value": "1.6"
+      },
+      {
+        "label": "Focal array %",
+        "value": "0"
+      },
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Bacteria",
+        "value": "50"
+      },
+      {
+        "label": "Viruses",
+        "value": "250"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Mean array length",
+        "value": "0"
+      },
+      {
+        "label": "Array standard deviation",
+        "value": "0"
+      },
+      {
+        "label": "Focal virus %",
+        "value": "1.613"
+      },
+      {
+        "label": "Focal array %",
+        "value": "0"
+      },
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Bacteria",
+        "value": "50"
+      },
+      {
+        "label": "Viruses",
+        "value": "248"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "infectionChance",
+      "before": 5,
+      "expected": 6,
+      "actual": 6,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "CRISPR Ecosystem",
+      "CRISPR-virus coevolution",
+      "Sequence histogram",
+      "Array length histogram",
+      "Virus relative abundance",
+      "History"
+    ],
+    "canvasCount": 1,
+    "chartCount": 5,
+    "milliseconds": 167
+  },
+  {
+    "slug": "crystallization-basic",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Average metal temperature",
+        "value": "1550.000"
+      },
+      {
+        "label": "Source frozen count",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Average metal temperature",
+        "value": "1477.440"
+      },
+      {
+        "label": "Source frozen count",
+        "value": "0"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "meltingTemp",
+      "before": 550,
+      "expected": 551,
+      "actual": 551,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Metal atoms",
+      "Temperatures",
+      "Number solidified",
+      "Average metal temperature"
+    ],
+    "canvasCount": 1,
+    "chartCount": 3,
+    "milliseconds": 184
+  },
+  {
+    "slug": "cyclic-ca",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Neighbors",
+        "value": "48"
+      },
+      {
+        "label": "States",
+        "value": "3"
+      },
+      {
+        "label": "Threshold",
+        "value": "3"
+      },
+      {
+        "label": "Status",
+        "value": ""
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Neighbors",
+        "value": "48"
+      },
+      {
+        "label": "States",
+        "value": "3"
+      },
+      {
+        "label": "Threshold",
+        "value": "3"
+      },
+      {
+        "label": "Status",
+        "value": ""
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Cells"
+    ],
+    "canvasCount": 1,
+    "chartCount": 0,
+    "milliseconds": 1300
+  },
+  {
+    "slug": "daisyworld",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Global temperature",
+        "value": "8.886"
+      },
+      {
+        "label": "Black daisies",
+        "value": "168"
+      },
+      {
+        "label": "White daisies",
+        "value": "168"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Global temperature",
+        "value": "13.329"
+      },
+      {
+        "label": "Black daisies",
+        "value": "316"
+      },
+      {
+        "label": "White daisies",
+        "value": "164"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "scenario",
+      "before": "maintain current luminosity",
+      "expected": "ramp-up-ramp-down",
+      "actual": "ramp-up-ramp-down",
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Daisyworld",
+      "Luminosity",
+      "Global temperature",
+      "Population"
+    ],
+    "canvasCount": 1,
+    "chartCount": 3,
+    "milliseconds": 350
+  },
+  {
+    "slug": "des-bike-redistribution",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Time (min)",
+        "value": "0"
+      },
+      {
+        "label": "Bikes in transit",
+        "value": "0"
+      },
+      {
+        "label": "Delivered bikes",
+        "value": "0"
+      },
+      {
+        "label": "Total bikes",
+        "value": "6"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Time (min)",
+        "value": "1"
+      },
+      {
+        "label": "Bikes in transit",
+        "value": "0"
+      },
+      {
+        "label": "Delivered bikes",
+        "value": "2"
+      },
+      {
+        "label": "Total bikes",
+        "value": "6"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Station slots and bikes",
+      "Station inventory",
+      "Delivery ledger"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 133
+  },
+  {
+    "slug": "des-bus-interchange",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Time (min)",
+        "value": "0"
+      },
+      {
+        "label": "Route (min)",
+        "value": "5"
+      },
+      {
+        "label": "Waiting",
+        "value": "0"
+      },
+      {
+        "label": "Departed",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Time (min)",
+        "value": "1"
+      },
+      {
+        "label": "Route (min)",
+        "value": "5"
+      },
+      {
+        "label": "Waiting",
+        "value": "0"
+      },
+      {
+        "label": "Departed",
+        "value": "0"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Bus route and berth capacity",
+      "Interchange queue",
+      "Bus ledger"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 167
+  },
+  {
+    "slug": "des-civic-office",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Time (min)",
+        "value": "0"
+      },
+      {
+        "label": "Waiting",
+        "value": "2"
+      },
+      {
+        "label": "Busy desks",
+        "value": "1"
+      },
+      {
+        "label": "Completed",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Time (min)",
+        "value": "1"
+      },
+      {
+        "label": "Waiting",
+        "value": "2"
+      },
+      {
+        "label": "Busy desks",
+        "value": "1"
+      },
+      {
+        "label": "Completed",
+        "value": "0"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Residents and clerk capacity",
+      "Waiting residents",
+      "Service ledger"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 134
+  },
+  {
+    "slug": "des-elevator",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Time (s)",
+        "value": "0"
+      },
+      {
+        "label": "Waiting",
+        "value": "6"
+      },
+      {
+        "label": "Riding",
+        "value": "0"
+      },
+      {
+        "label": "Arrived",
+        "value": "0"
+      },
+      {
+        "label": "Mean wait (s)",
+        "value": "0.0"
+      },
+      {
+        "label": "Mean ride (s)",
+        "value": "0.0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Time (s)",
+        "value": "1"
+      },
+      {
+        "label": "Waiting",
+        "value": "6"
+      },
+      {
+        "label": "Riding",
+        "value": "0"
+      },
+      {
+        "label": "Arrived",
+        "value": "0"
+      },
+      {
+        "label": "Mean wait (s)",
+        "value": "0.0"
+      },
+      {
+        "label": "Mean ride (s)",
+        "value": "0.0"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Elevators",
+      "Passengers"
+    ],
+    "canvasCount": 1,
+    "chartCount": 0,
+    "milliseconds": 133
+  },
+  {
+    "slug": "des-emergency-dispatch",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Time (min)",
+        "value": "0"
+      },
+      {
+        "label": "Busy teams",
+        "value": "1"
+      },
+      {
+        "label": "Waiting calls",
+        "value": "2"
+      },
+      {
+        "label": "Completed",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Time (min)",
+        "value": "1"
+      },
+      {
+        "label": "Busy teams",
+        "value": "1"
+      },
+      {
+        "label": "Waiting calls",
+        "value": "2"
+      },
+      {
+        "label": "Completed",
+        "value": "0"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Response assignments",
+      "Call ledger"
+    ],
+    "canvasCount": 1,
+    "chartCount": 0,
+    "milliseconds": 119
+  },
+  {
+    "slug": "des-ev-charging",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Time (min)",
+        "value": "0"
+      },
+      {
+        "label": "Charging",
+        "value": "2"
+      },
+      {
+        "label": "Waiting",
+        "value": "1"
+      },
+      {
+        "label": "Completed",
+        "value": "0"
+      },
+      {
+        "label": "Abandoned",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Time (min)",
+        "value": "1"
+      },
+      {
+        "label": "Charging",
+        "value": "2"
+      },
+      {
+        "label": "Waiting",
+        "value": "1"
+      },
+      {
+        "label": "Completed",
+        "value": "0"
+      },
+      {
+        "label": "Abandoned",
+        "value": "0"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Vehicles and charger capacity",
+      "Charger occupancy",
+      "Charging sessions"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 133
+  },
+  {
+    "slug": "des-machine-maintenance",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Time (min)",
+        "value": "0"
+      },
+      {
+        "label": "Operational machines",
+        "value": "3"
+      },
+      {
+        "label": "Waiting repairs",
+        "value": "0"
+      },
+      {
+        "label": "Completed repairs",
+        "value": "0"
+      },
+      {
+        "label": "Availability",
+        "value": "1.000"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Time (min)",
+        "value": "1"
+      },
+      {
+        "label": "Operational machines",
+        "value": "3"
+      },
+      {
+        "label": "Waiting repairs",
+        "value": "0"
+      },
+      {
+        "label": "Completed repairs",
+        "value": "0"
+      },
+      {
+        "label": "Availability",
+        "value": "1.000"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Machines and repair teams",
+      "Machine ledger",
+      "Event trace"
+    ],
+    "canvasCount": 1,
+    "chartCount": 0,
+    "milliseconds": 133
+  },
+  {
+    "slug": "des-parcel-logistics",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Time (min)",
+        "value": "0"
+      },
+      {
+        "label": "Depot queue",
+        "value": "1"
+      },
+      {
+        "label": "Blocked senders",
+        "value": "0"
+      },
+      {
+        "label": "Van occupied",
+        "value": "1"
+      },
+      {
+        "label": "Delivered",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Time (min)",
+        "value": "1"
+      },
+      {
+        "label": "Depot queue",
+        "value": "1"
+      },
+      {
+        "label": "Blocked senders",
+        "value": "0"
+      },
+      {
+        "label": "Van occupied",
+        "value": "1"
+      },
+      {
+        "label": "Delivered",
+        "value": "0"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Depot and van journey",
+      "Cumulative deliveries",
+      "Parcel ledger"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 133
+  },
+  {
+    "slug": "des-goods-buffer",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Time (min)",
+        "value": "0"
+      },
+      {
+        "label": "Produced",
+        "value": "0"
+      },
+      {
+        "label": "Stored",
+        "value": "0"
+      },
+      {
+        "label": "Blocked producers",
+        "value": "0"
+      },
+      {
+        "label": "Collected",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Time (min)",
+        "value": "1"
+      },
+      {
+        "label": "Produced",
+        "value": "1"
+      },
+      {
+        "label": "Stored",
+        "value": "1"
+      },
+      {
+        "label": "Blocked producers",
+        "value": "0"
+      },
+      {
+        "label": "Collected",
+        "value": "0"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Crates and bounded buffer",
+      "Crates in buffer",
+      "Collection ledger"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 134
+  },
+  {
+    "slug": "des-waste-collection",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Time (min)",
+        "value": "0"
+      },
+      {
+        "label": "Remaining load",
+        "value": "12"
+      },
+      {
+        "label": "On truck",
+        "value": "0"
+      },
+      {
+        "label": "Delivered",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Time (min)",
+        "value": "1"
+      },
+      {
+        "label": "Remaining load",
+        "value": "10"
+      },
+      {
+        "label": "On truck",
+        "value": "2"
+      },
+      {
+        "label": "Delivered",
+        "value": "0"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Collection patches and truck",
+      "Depot deliveries"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 133
+  },
+  {
+    "slug": "des-water-allocation",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Time (min)",
+        "value": "0"
+      },
+      {
+        "label": "Supply units",
+        "value": "6"
+      },
+      {
+        "label": "Delivered units",
+        "value": "0"
+      },
+      {
+        "label": "Unmet units",
+        "value": "12"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Time (min)",
+        "value": "1"
+      },
+      {
+        "label": "Supply units",
+        "value": "6"
+      },
+      {
+        "label": "Delivered units",
+        "value": "6"
+      },
+      {
+        "label": "Unmet units",
+        "value": "6"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "District allocation patches",
+      "District allocation",
+      "Allocation ledger"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 134
+  },
+  {
+    "slug": "diffusion-on-a-directed-network",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Nodes",
+        "value": "81"
+      },
+      {
+        "label": "Active edges",
+        "value": "147"
+      },
+      {
+        "label": "Total value",
+        "value": "81.0000"
+      },
+      {
+        "label": "Max flow",
+        "value": "0.000"
+      },
+      {
+        "label": "Mean flow",
+        "value": "0.000"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Nodes",
+        "value": "81"
+      },
+      {
+        "label": "Active edges",
+        "value": "147"
+      },
+      {
+        "label": "Total value",
+        "value": "81.0000"
+      },
+      {
+        "label": "Max flow",
+        "value": "0.1000"
+      },
+      {
+        "label": "Mean flow",
+        "value": "0.05102"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Active directed connections",
+      "Current value distribution",
+      "Active transfers · first 20"
+    ],
+    "canvasCount": 3,
+    "chartCount": 1,
+    "milliseconds": 167
+  },
+  {
+    "slug": "dining-philosophers",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Thinking",
+        "value": "20"
+      },
+      {
+        "label": "Hungry",
+        "value": "0"
+      },
+      {
+        "label": "Eating",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Thinking",
+        "value": "20"
+      },
+      {
+        "label": "Hungry",
+        "value": "0"
+      },
+      {
+        "label": "Eating",
+        "value": "0"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "hungryChance",
+      "before": 0.5,
+      "expected": 0.51,
+      "actual": 0.51,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Table",
+      "Spaghetti consumed",
+      "Resource allocation",
+      "Fork ownership"
+    ],
+    "canvasCount": 1,
+    "chartCount": 2,
+    "milliseconds": 166
+  },
+  {
+    "slug": "disease-solo",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Sick",
+        "value": "0"
+      },
+      {
+        "label": "Run",
+        "value": "1"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Sick",
+        "value": "0"
+      },
+      {
+        "label": "Run",
+        "value": "1"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "infectionChance",
+      "before": 100,
+      "expected": 99,
+      "actual": 99,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Disease Solo",
+      "History"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 166
+  },
+  {
+    "slug": "dla",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Radius",
+        "value": "0.000"
+      },
+      {
+        "label": "Walkers",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Radius",
+        "value": "0.000"
+      },
+      {
+        "label": "Walkers",
+        "value": "0"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "maxParticles",
+      "before": 100,
+      "expected": 101,
+      "actual": 101,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Aggregate and walkers"
+    ],
+    "canvasCount": 1,
+    "chartCount": 0,
+    "milliseconds": 263
+  },
+  {
+    "slug": "dna-protein-synthesis",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Original genes",
+        "value": "1"
+      },
+      {
+        "label": "Copied genes",
+        "value": "0"
+      },
+      {
+        "label": "Proteins",
+        "value": "0"
+      },
+      {
+        "label": "Instruction",
+        "value": "1"
+      },
+      {
+        "label": "Message",
+        "value": "Explore protein synthesis from DNA and effects of mutations."
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Original genes",
+        "value": "1"
+      },
+      {
+        "label": "Copied genes",
+        "value": "0"
+      },
+      {
+        "label": "Proteins",
+        "value": "0"
+      },
+      {
+        "label": "Instruction",
+        "value": "1"
+      },
+      {
+        "label": "Message",
+        "value": "Explore protein synthesis from DNA and effects of mutations."
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "nucleotidesAffected",
+      "before": 1,
+      "expected": 2,
+      "actual": 2,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "DNA Protein Synthesis",
+      "Protein sequences",
+      "DNA sequences"
+    ],
+    "canvasCount": 1,
+    "chartCount": 0,
+    "milliseconds": 188
+  },
+  {
+    "slug": "el-farol",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Week",
+        "value": "0"
+      },
+      {
+        "label": "Attendance",
+        "value": "62"
+      },
+      {
+        "label": "Crowded",
+        "value": "No"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Week",
+        "value": "1"
+      },
+      {
+        "label": "Attendance",
+        "value": "34"
+      },
+      {
+        "label": "Crowded",
+        "value": "No"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Homes and bar",
+      "Bar attendance"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 133
+  },
+  {
+    "slug": "epidem-basic",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Infected",
+        "value": "5"
+      },
+      {
+        "label": "Recovered",
+        "value": "0"
+      },
+      {
+        "label": "R0",
+        "value": "0"
+      },
+      {
+        "label": "Infection rate",
+        "value": "0"
+      },
+      {
+        "label": "Recovery rate",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Infected",
+        "value": "10"
+      },
+      {
+        "label": "Recovered",
+        "value": "0"
+      },
+      {
+        "label": "R0",
+        "value": "0.514"
+      },
+      {
+        "label": "Infection rate",
+        "value": "0"
+      },
+      {
+        "label": "Recovery rate",
+        "value": "0"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "infectionChance",
+      "before": 30,
+      "expected": 31,
+      "actual": 31,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "epiDEM Basic",
+      "History"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 167
+  },
+  {
+    "slug": "epidem-travel-and-control",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Infected",
+        "value": "9"
+      },
+      {
+        "label": "Recovered",
+        "value": "0"
+      },
+      {
+        "label": "R0",
+        "value": "0"
+      },
+      {
+        "label": "Infection rate",
+        "value": "0"
+      },
+      {
+        "label": "Recovery rate",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Infected",
+        "value": "55"
+      },
+      {
+        "label": "Recovered",
+        "value": "0"
+      },
+      {
+        "label": "R0",
+        "value": "0.523"
+      },
+      {
+        "label": "Infection rate",
+        "value": "0"
+      },
+      {
+        "label": "Recovery rate",
+        "value": "0"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "infectionChance",
+      "before": 55,
+      "expected": 56,
+      "actual": 56,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "epiDEM Travel and Control",
+      "History"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 166
+  },
+  {
+    "slug": "ethnocentrism",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Population",
+        "value": "0"
+      },
+      {
+        "label": "Encounters",
+        "value": "0"
+      },
+      {
+        "label": "Cooperation",
+        "value": "0.0%"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Population",
+        "value": "1"
+      },
+      {
+        "label": "Encounters",
+        "value": "0"
+      },
+      {
+        "label": "Cooperation",
+        "value": "0.0%"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "immigrantsPerDay",
+      "before": 1,
+      "expected": 2,
+      "actual": 2,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Group tags and cooperation strategies",
+      "Strategy counts"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 153
+  },
+  {
+    "slug": "expected-value",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Expected value",
+        "value": "30.000"
+      },
+      {
+        "label": "Runs",
+        "value": "1"
+      },
+      {
+        "label": "This sample total",
+        "value": "0"
+      },
+      {
+        "label": "Mean of samples",
+        "value": "0.000"
+      },
+      {
+        "label": "Calculation",
+        "value": "10 × (0 × 0/16 + 1 × 1/16 + 2 × 6/16 + 3 × 5/16 + 4 × 0/16 + 5 × 4/16 + 6 × 0/16)"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Expected value",
+        "value": "30.000"
+      },
+      {
+        "label": "Runs",
+        "value": "2"
+      },
+      {
+        "label": "This sample total",
+        "value": "25"
+      },
+      {
+        "label": "Mean of samples",
+        "value": "12.500"
+      },
+      {
+        "label": "Calculation",
+        "value": "10 × (0 × 0/16 + 1 × 1/16 + 2 × 6/16 + 3 × 5/16 + 4 × 0/16 + 5 × 4/16 + 6 × 0/16)"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Tiles",
+      "Population (%)",
+      "Cumulative mean",
+      "Sample totals"
+    ],
+    "canvasCount": 1,
+    "chartCount": 3,
+    "milliseconds": 133
+  },
+  {
+    "slug": "fire",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Burned (%)",
+        "value": "0.00"
+      },
+      {
+        "label": "Fires",
+        "value": "251"
+      },
+      {
+        "label": "Embers",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Burned (%)",
+        "value": "0.32"
+      },
+      {
+        "label": "Fires",
+        "value": "115"
+      },
+      {
+        "label": "Embers",
+        "value": "251"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Forest"
+    ],
+    "canvasCount": 1,
+    "chartCount": 0,
+    "milliseconds": 500
+  },
+  {
+    "slug": "fireflies",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Flashing",
+        "value": "155"
+      },
+      {
+        "label": "Fireflies",
+        "value": "1500"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Flashing",
+        "value": "158"
+      },
+      {
+        "label": "Fireflies",
+        "value": "1500"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "strategy",
+      "before": "delay",
+      "expected": "advance",
+      "actual": "advance",
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Fireflies",
+      "Flashing fireflies"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 353
+  },
+  {
+    "slug": "flocking",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Birds",
+        "value": "300"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Birds",
+        "value": "300"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "vision",
+      "before": 5,
+      "expected": 5.5,
+      "actual": 5.5,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Flock"
+    ],
+    "canvasCount": 1,
+    "chartCount": 0,
+    "milliseconds": 231
+  },
+  {
+    "slug": "fruit-wars",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Population",
+        "value": "40"
+      },
+      {
+        "label": "Average population",
+        "value": "0"
+      },
+      {
+        "label": "Average forage",
+        "value": "0"
+      },
+      {
+        "label": "Murders",
+        "value": "0"
+      },
+      {
+        "label": "Starvation deaths",
+        "value": "0"
+      },
+      {
+        "label": "Age deaths",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Population",
+        "value": "40"
+      },
+      {
+        "label": "Average population",
+        "value": "0"
+      },
+      {
+        "label": "Average forage",
+        "value": "0"
+      },
+      {
+        "label": "Murders",
+        "value": "0"
+      },
+      {
+        "label": "Starvation deaths",
+        "value": "0"
+      },
+      {
+        "label": "Age deaths",
+        "value": "0"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "ticksToFlee",
+      "before": 49,
+      "expected": 50,
+      "actual": 50,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Foragers and fruit bushes",
+      "Death causes (%)",
+      "Forage rate",
+      "Mean traits",
+      "Aggression distribution"
+    ],
+    "canvasCount": 1,
+    "chartCount": 4,
+    "milliseconds": 167
+  },
+  {
+    "slug": "fur",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "White cells",
+        "value": "1855"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "White cells",
+        "value": "1742"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Skin"
+    ],
+    "canvasCount": 1,
+    "chartCount": 0,
+    "milliseconds": 1017
+  },
+  {
+    "slug": "galton-box",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Balls",
+        "value": "0"
+      },
+      {
+        "label": "State",
+        "value": "Active"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Balls",
+        "value": "1"
+      },
+      {
+        "label": "State",
+        "value": "Active"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "numberOfBalls",
+      "before": 75,
+      "expected": 76,
+      "actual": 76,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Galton box",
+      "Counters"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 166
+  },
+  {
+    "slug": "gendrift-t-interact",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Most populous (%)",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Most populous (%)",
+        "value": "22"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Genetic drift and walls",
+      "Agent populations"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 133
+  },
+  {
+    "slug": "genevo-1-genetic-switch",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Energy",
+        "value": "1000"
+      },
+      {
+        "label": "LacZ",
+        "value": "0"
+      },
+      {
+        "label": "LacY",
+        "value": "0"
+      },
+      {
+        "label": "Message",
+        "value": ""
+      },
+      {
+        "label": "Divisions",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Energy",
+        "value": "1009.5"
+      },
+      {
+        "label": "LacZ",
+        "value": "0"
+      },
+      {
+        "label": "LacY",
+        "value": "0"
+      },
+      {
+        "label": "Message",
+        "value": ""
+      },
+      {
+        "label": "Divisions",
+        "value": "0"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "lactose",
+      "before": false,
+      "expected": true,
+      "actual": true,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "GenEvo 1 Genetic Switch",
+      "History"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 167
+  },
+  {
+    "slug": "heat-diffusion",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Heat diffusivity",
+        "value": "0.104131"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Heat diffusivity",
+        "value": "0.104131"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "leftTemp",
+      "before": 1,
+      "expected": 2,
+      "actual": 2,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Plate temperature"
+    ],
+    "canvasCount": 1,
+    "chartCount": 0,
+    "milliseconds": 167
+  },
+  {
+    "slug": "heatbugs",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Bugs",
+        "value": "100"
+      },
+      {
+        "label": "Mean unhappiness",
+        "value": "23.190"
+      },
+      {
+        "label": "Watched bug",
+        "value": "none"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Bugs",
+        "value": "100"
+      },
+      {
+        "label": "Mean unhappiness",
+        "value": "23.190"
+      },
+      {
+        "label": "Watched bug",
+        "value": "none"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "maxOutputHeat",
+      "before": 25,
+      "expected": 26,
+      "actual": 26,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Heat and bugs",
+      "Average bug unhappiness"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 183
+  },
+  {
+    "slug": "heroes-and-cowards",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "People",
+        "value": "68"
+      },
+      {
+        "label": "Movement",
+        "value": "Active"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "People",
+        "value": "68"
+      },
+      {
+        "label": "Movement",
+        "value": "Active"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Friends and enemies"
+    ],
+    "canvasCount": 1,
+    "chartCount": 0,
+    "milliseconds": 150
+  },
+  {
+    "slug": "hex-cell-aggregation",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Alive",
+        "value": "1"
+      },
+      {
+        "label": "Eligible",
+        "value": "6"
+      },
+      {
+        "label": "Applied neighbors",
+        "value": "1, 2, 3, 4, 5, 6"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Alive",
+        "value": "2"
+      },
+      {
+        "label": "Eligible",
+        "value": "8"
+      },
+      {
+        "label": "Applied neighbors",
+        "value": "1, 2, 3, 4, 5, 6"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "oneNeighbor",
+      "before": true,
+      "expected": false,
+      "actual": false,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Hex cells"
+    ],
+    "canvasCount": 1,
+    "chartCount": 0,
+    "milliseconds": 200
+  },
+  {
+    "slug": "hiv",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Infected %",
+        "value": "2.667"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Infected %",
+        "value": "2.667"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "averageCommitment",
+      "before": 50,
+      "expected": 51,
+      "actual": 51,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "HIV",
+      "History"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 166
+  },
+  {
+    "slug": "honeycomb",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Bees",
+        "value": "250"
+      },
+      {
+        "label": "Chemical",
+        "value": "0.00"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Bees",
+        "value": "250"
+      },
+      {
+        "label": "Chemical",
+        "value": "450.00"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Honeycomb"
+    ],
+    "canvasCount": 1,
+    "chartCount": 0,
+    "milliseconds": 120
+  },
+  {
+    "slug": "hotellings-law",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Consumers",
+        "value": "1681"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Consumers",
+        "value": "1681"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Stores and market areas",
+      "Market area history",
+      "Revenue history",
+      "Market shares",
+      "Store prices"
+    ],
+    "canvasCount": 1,
+    "chartCount": 4,
+    "milliseconds": 284
+  },
+  {
+    "slug": "household-energy-demand",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Hour",
+        "value": "0"
+      },
+      {
+        "label": "Demand (kW)",
+        "value": "3.60"
+      },
+      {
+        "label": "Energy (kWh)",
+        "value": "0.00"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Hour",
+        "value": "1"
+      },
+      {
+        "label": "Demand (kW)",
+        "value": "3.60"
+      },
+      {
+        "label": "Energy (kWh)",
+        "value": "3.60"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Hourly demand"
+    ],
+    "canvasCount": 0,
+    "chartCount": 1,
+    "milliseconds": 133
+  },
+  {
+    "slug": "household-recycling-behavior",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Recycling households",
+        "value": "1"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Recycling households",
+        "value": "1"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Peer network",
+      "Adoption share"
+    ],
+    "canvasCount": 3,
+    "chartCount": 1,
+    "milliseconds": 141
+  },
+  {
+    "slug": "interstitial-diffusion",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Diffusing atoms",
+        "value": "1757"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Diffusing atoms",
+        "value": "1757"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "maxTicks",
+      "before": 1000,
+      "expected": 1001,
+      "actual": 1001,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Concentration profile",
+      "Lattice and diffusing atoms"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 528
+  },
+  {
+    "slug": "invasive-plants",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Year",
+        "value": "0"
+      },
+      {
+        "label": "Aggregate infestation",
+        "value": "700.00"
+      },
+      {
+        "label": "Seeds",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Year",
+        "value": "1"
+      },
+      {
+        "label": "Aggregate infestation",
+        "value": "225.00"
+      },
+      {
+        "label": "Seeds",
+        "value": "11"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "spreadDistance",
+      "before": 1,
+      "expected": 1.5,
+      "actual": 1.5,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Infestation, resistance and seeds",
+      "Aggregate infestation",
+      "Infestation levels"
+    ],
+    "canvasCount": 1,
+    "chartCount": 2,
+    "milliseconds": 197
+  },
+  {
+    "slug": "ising",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Attempted flips",
+        "value": "0"
+      },
+      {
+        "label": "Magnetization",
+        "value": "0.0200"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Attempted flips",
+        "value": "1000"
+      },
+      {
+        "label": "Magnetization",
+        "value": "0.0111"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Spins",
+      "Magnetization"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 150
+  },
+  {
+    "slug": "k-means-clustering",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Points",
+        "value": "140"
+      },
+      {
+        "label": "Mean centroid SSE",
+        "value": "1597.848"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Points",
+        "value": "140"
+      },
+      {
+        "label": "Mean centroid SSE",
+        "value": "610.397"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Clusters",
+      "Square deviation of clusters"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 133
+  },
+  {
+    "slug": "language-change",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Mean grammar state",
+        "value": "0.6000"
+      },
+      {
+        "label": "Grammar 0",
+        "value": "40"
+      },
+      {
+        "label": "Grammar 1",
+        "value": "60"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Mean grammar state",
+        "value": "0.5700"
+      },
+      {
+        "label": "Grammar 0",
+        "value": "43"
+      },
+      {
+        "label": "Grammar 1",
+        "value": "57"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "percentGrammar1",
+      "before": 60,
+      "expected": 61,
+      "actual": 61,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Language network",
+      "Mean state of language users"
+    ],
+    "canvasCount": 3,
+    "chartCount": 1,
+    "milliseconds": 186
+  },
+  {
+    "slug": "life",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Living",
+        "value": "3555"
+      },
+      {
+        "label": "Density",
+        "value": "0.3485"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Living",
+        "value": "3747"
+      },
+      {
+        "label": "Density",
+        "value": "0.3673"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Cells"
+    ],
+    "canvasCount": 1,
+    "chartCount": 0,
+    "milliseconds": 164
+  },
+  {
+    "slug": "limited-order-book",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Latest price",
+        "value": "0"
+      },
+      {
+        "label": "Latest volume ($)",
+        "value": "0"
+      },
+      {
+        "label": "Price to date",
+        "value": "0"
+      },
+      {
+        "label": "Total cash",
+        "value": "74597.5"
+      },
+      {
+        "label": "Circulating tokens",
+        "value": "3646"
+      },
+      {
+        "label": "Total utilities",
+        "value": "140872.25"
+      },
+      {
+        "label": "Average utilities",
+        "value": "1408.7225"
+      },
+      {
+        "label": "Average honest utility",
+        "value": "1411.125"
+      },
+      {
+        "label": "Average cunning utility",
+        "value": "1406.32"
+      },
+      {
+        "label": "Cunning / honest (%)",
+        "value": "99.6594915404376"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Latest price",
+        "value": "16.638378378378373"
+      },
+      {
+        "label": "Latest volume ($)",
+        "value": "1231.2399999999996"
+      },
+      {
+        "label": "Price to date",
+        "value": "16.638378378378373"
+      },
+      {
+        "label": "Total cash",
+        "value": "74597.5"
+      },
+      {
+        "label": "Circulating tokens",
+        "value": "3646"
+      },
+      {
+        "label": "Total utilities",
+        "value": "140872.25"
+      },
+      {
+        "label": "Average utilities",
+        "value": "1408.7225"
+      },
+      {
+        "label": "Average honest utility",
+        "value": "1411.125"
+      },
+      {
+        "label": "Average cunning utility",
+        "value": "1406.32"
+      },
+      {
+        "label": "Cunning / honest (%)",
+        "value": "99.6594915404376"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Traders",
+      "Trading prices",
+      "Average utility gain (%)",
+      "Orders"
+    ],
+    "canvasCount": 1,
+    "chartCount": 2,
+    "milliseconds": 269
+  },
+  {
+    "slug": "mammoths",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Months",
+        "value": "0"
+      },
+      {
+        "label": "Years",
+        "value": "0"
+      },
+      {
+        "label": "Mammoths",
+        "value": "900"
+      },
+      {
+        "label": "Humans",
+        "value": "50"
+      },
+      {
+        "label": "Hunting deaths",
+        "value": "0"
+      },
+      {
+        "label": "Climate deaths",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Months",
+        "value": "1"
+      },
+      {
+        "label": "Years",
+        "value": "0.08333333333333333"
+      },
+      {
+        "label": "Mammoths",
+        "value": "880"
+      },
+      {
+        "label": "Humans",
+        "value": "54"
+      },
+      {
+        "label": "Hunting deaths",
+        "value": "3"
+      },
+      {
+        "label": "Climate deaths",
+        "value": "0"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "mammothBirthRate",
+      "before": 2,
+      "expected": 3,
+      "actual": 3,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Americas habitat",
+      "Populations",
+      "Cause of mammoth deaths"
+    ],
+    "canvasCount": 1,
+    "chartCount": 2,
+    "milliseconds": 833
+  },
+  {
+    "slug": "mandelbrot",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Computed fields",
+        "value": "0"
+      },
+      {
+        "label": "Total iterations",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Computed fields",
+        "value": "1491"
+      },
+      {
+        "label": "Total iterations",
+        "value": "1500"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Mandelbrot"
+    ],
+    "canvasCount": 1,
+    "chartCount": 0,
+    "milliseconds": 481
+  },
+  {
+    "slug": "membrane-formation",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Molecules",
+        "value": "1250"
+      },
+      {
+        "label": "Lipids",
+        "value": "250"
+      },
+      {
+        "label": "Hydrophobic isolation",
+        "value": "0.228"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Molecules",
+        "value": "1250"
+      },
+      {
+        "label": "Lipids",
+        "value": "250"
+      },
+      {
+        "label": "Hydrophobic isolation",
+        "value": "0.231"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "waterWaterForce",
+      "before": 0.2,
+      "expected": 0.21,
+      "actual": 0.21,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Membrane Formation",
+      "Hydrophobic isolation"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 4545
+  },
+  {
+    "slug": "mendelian-inheritance",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Trial",
+        "value": "0"
+      },
+      {
+        "label": "Dark offspring",
+        "value": "0"
+      },
+      {
+        "label": "Light offspring",
+        "value": "0"
+      },
+      {
+        "label": "Dark ratio",
+        "value": "N/A"
+      },
+      {
+        "label": "Light ratio",
+        "value": "N/A"
+      },
+      {
+        "label": "Genotype",
+        "value": "Select a mouse"
+      },
+      {
+        "label": "Message",
+        "value": ""
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Trial",
+        "value": "1"
+      },
+      {
+        "label": "Dark offspring",
+        "value": "6"
+      },
+      {
+        "label": "Light offspring",
+        "value": "0"
+      },
+      {
+        "label": "Dark ratio",
+        "value": "N/A"
+      },
+      {
+        "label": "Light ratio",
+        "value": "N/A"
+      },
+      {
+        "label": "Genotype",
+        "value": "Select a mouse"
+      },
+      {
+        "label": "Message",
+        "value": ""
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Parents and F1 offspring"
+    ],
+    "canvasCount": 1,
+    "chartCount": 0,
+    "milliseconds": 122
+  },
+  {
+    "slug": "mimicry",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Monarchs",
+        "value": "225"
+      },
+      {
+        "label": "Viceroys",
+        "value": "225"
+      },
+      {
+        "label": "Monarch color min",
+        "value": "15"
+      },
+      {
+        "label": "Monarch color mean",
+        "value": "15"
+      },
+      {
+        "label": "Monarch color max",
+        "value": "15"
+      },
+      {
+        "label": "Viceroy color min",
+        "value": "105"
+      },
+      {
+        "label": "Viceroy color mean",
+        "value": "105"
+      },
+      {
+        "label": "Viceroy color max",
+        "value": "105"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Monarchs",
+        "value": "216"
+      },
+      {
+        "label": "Viceroys",
+        "value": "218"
+      },
+      {
+        "label": "Monarch color min",
+        "value": "15"
+      },
+      {
+        "label": "Monarch color mean",
+        "value": "15"
+      },
+      {
+        "label": "Monarch color max",
+        "value": "15"
+      },
+      {
+        "label": "Viceroy color min",
+        "value": "105"
+      },
+      {
+        "label": "Viceroy color mean",
+        "value": "105"
+      },
+      {
+        "label": "Viceroy color max",
+        "value": "105"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "memoryDuration",
+      "before": 30,
+      "expected": 31,
+      "actual": 31,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Birds and butterflies",
+      "Butterfly populations",
+      "Mean butterfly colors"
+    ],
+    "canvasCount": 1,
+    "chartCount": 2,
+    "milliseconds": 152
+  },
+  {
+    "slug": "minority-game",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "History",
+        "value": "101000"
+      },
+      {
+        "label": "Minority",
+        "value": "0"
+      },
+      {
+        "label": "Average score",
+        "value": "0.000"
+      },
+      {
+        "label": "Movement",
+        "value": "Active"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "History",
+        "value": "010000"
+      },
+      {
+        "label": "Minority",
+        "value": "1"
+      },
+      {
+        "label": "Average score",
+        "value": "0.487"
+      },
+      {
+        "label": "Movement",
+        "value": "Active"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Players",
+      "Scores",
+      "Success histogram",
+      "Success rate",
+      "Number picking zero"
+    ],
+    "canvasCount": 1,
+    "chartCount": 4,
+    "milliseconds": 183
+  },
+  {
+    "slug": "muscle-development",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Muscle mass",
+        "value": "1623.25"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Muscle mass",
+        "value": "1625.10"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "daysBetweenWorkouts",
+      "before": 5,
+      "expected": 6,
+      "actual": 6,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Muscle Development",
+      "Muscle development",
+      "Hormones"
+    ],
+    "canvasCount": 1,
+    "chartCount": 2,
+    "milliseconds": 167
+  },
+  {
+    "slug": "neighborhood-heat-intervention",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Mean heat index",
+        "value": "30.00"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Mean heat index",
+        "value": "29.75"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Neighborhood fields",
+      "Mean heat index"
+    ],
+    "canvasCount": 0,
+    "chartCount": 1,
+    "milliseconds": 134
+  },
+  {
+    "slug": "pagerank",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Total rank",
+        "value": "1.000000"
+      },
+      {
+        "label": "Maximum rank",
+        "value": "0.090909"
+      },
+      {
+        "label": "Surfers",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Total rank",
+        "value": "1.000000"
+      },
+      {
+        "label": "Maximum rank",
+        "value": "0.200000"
+      },
+      {
+        "label": "Surfers",
+        "value": "5"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "calculationMethod",
+      "before": "random-surfer",
+      "expected": "diffusion",
+      "actual": "diffusion",
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Pages and edges",
+      "Current ranks",
+      "Surfers",
+      "Page visits"
+    ],
+    "canvasCount": 3,
+    "chartCount": 1,
+    "milliseconds": 184
+  },
+  {
+    "slug": "particle-swarm-optimization",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Best value found",
+        "value": "0.00000"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Best value found",
+        "value": "0.88114"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "particleInertia",
+      "before": 0.98,
+      "expected": 0.99,
+      "actual": 0.99,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Search landscape",
+      "Best found"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 893
+  },
+  {
+    "slug": "partition-permutation-distribution",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Successes",
+        "value": "0"
+      },
+      {
+        "label": "Running total",
+        "value": "0"
+      },
+      {
+        "label": "Previous addends",
+        "value": ""
+      },
+      {
+        "label": "Addend",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Successes",
+        "value": "0"
+      },
+      {
+        "label": "Running total",
+        "value": "46"
+      },
+      {
+        "label": "Previous addends",
+        "value": ""
+      },
+      {
+        "label": "Addend",
+        "value": "46"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "targetTotal",
+      "before": 72,
+      "expected": 73,
+      "actual": 73,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Current addends",
+      "Addends",
+      "Addends per total"
+    ],
+    "canvasCount": 0,
+    "chartCount": 3,
+    "milliseconds": 190
+  },
+  {
+    "slug": "party",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Happy",
+        "value": "11"
+      },
+      {
+        "label": "Single-sex groups",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Happy",
+        "value": "11"
+      },
+      {
+        "label": "Single-sex groups",
+        "value": "0"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Party groups",
+      "Number happy",
+      "Single-sex groups"
+    ],
+    "canvasCount": 1,
+    "chartCount": 2,
+    "milliseconds": 133
+  },
+  {
+    "slug": "paths",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Walkers",
+        "value": "250"
+      },
+      {
+        "label": "Buildings",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Walkers",
+        "value": "250"
+      },
+      {
+        "label": "Buildings",
+        "value": "0"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "minimumRoutePopularity",
+      "before": 80,
+      "expected": 81,
+      "actual": 81,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Paths"
+    ],
+    "canvasCount": 1,
+    "chartCount": 0,
+    "milliseconds": 300
+  },
+  {
+    "slug": "pedestrian-crossing-phases",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Minute",
+        "value": "0"
+      },
+      {
+        "label": "Signal",
+        "value": "red"
+      },
+      {
+        "label": "Waiting",
+        "value": "8"
+      },
+      {
+        "label": "Crossing",
+        "value": "0"
+      },
+      {
+        "label": "Arrived",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Minute",
+        "value": "1"
+      },
+      {
+        "label": "Signal",
+        "value": "red"
+      },
+      {
+        "label": "Waiting",
+        "value": "8"
+      },
+      {
+        "label": "Crossing",
+        "value": "0"
+      },
+      {
+        "label": "Arrived",
+        "value": "0"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Pedestrians",
+      "Cohort"
+    ],
+    "canvasCount": 0,
+    "chartCount": 1,
+    "milliseconds": 150
+  },
+  {
+    "slug": "peppered-moths",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Light",
+        "value": "27"
+      },
+      {
+        "label": "Medium",
+        "value": "38"
+      },
+      {
+        "label": "Dark",
+        "value": "35"
+      },
+      {
+        "label": "Pollution (%)",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Light",
+        "value": "43"
+      },
+      {
+        "label": "Medium",
+        "value": "39"
+      },
+      {
+        "label": "Dark",
+        "value": "39"
+      },
+      {
+        "label": "Pollution (%)",
+        "value": "0"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "numMoths",
+      "before": 100,
+      "expected": 101,
+      "actual": 101,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Moths and pollution",
+      "Color populations"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 170
+  },
+  {
+    "slug": "percolation",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Total oil",
+        "value": "0"
+      },
+      {
+        "label": "Front",
+        "value": "75"
+      },
+      {
+        "label": "Current row",
+        "value": "220"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Total oil",
+        "value": "75"
+      },
+      {
+        "label": "Front",
+        "value": "64"
+      },
+      {
+        "label": "Current row",
+        "value": "219"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Soil",
+      "Saturated soil",
+      "Percolating oil"
+    ],
+    "canvasCount": 1,
+    "chartCount": 2,
+    "milliseconds": 280
+  },
+  {
+    "slug": "piaget-vygotsky-game",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Attempt",
+        "value": "0"
+      },
+      {
+        "label": "Strategy",
+        "value": "P-V"
+      },
+      {
+        "label": "Mean distance",
+        "value": "122.000"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Attempt",
+        "value": "1"
+      },
+      {
+        "label": "Strategy",
+        "value": "P-V"
+      },
+      {
+        "label": "Mean distance",
+        "value": "34.567"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "strategy",
+      "before": "P-V",
+      "expected": "Random",
+      "actual": "Random",
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Target throws",
+      "Average distance from target",
+      "Strategy averages"
+    ],
+    "canvasCount": 1,
+    "chartCount": 2,
+    "milliseconds": 234
+  },
+  {
+    "slug": "preferential-attachment",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Nodes",
+        "value": "2"
+      },
+      {
+        "label": "Edges",
+        "value": "1"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Nodes",
+        "value": "3"
+      },
+      {
+        "label": "Edges",
+        "value": "2"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Network",
+      "Degree distribution",
+      "Degree distribution · log₁₀"
+    ],
+    "canvasCount": 3,
+    "chartCount": 2,
+    "milliseconds": 145
+  },
+  {
+    "slug": "prisoners-dilemma-basic",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Answers (no native clock)",
+        "value": "0"
+      },
+      {
+        "label": "Sentence (years)",
+        "value": "Choose and answer"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Answers (no native clock)",
+        "value": "1"
+      },
+      {
+        "label": "Sentence (years)",
+        "value": "5"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "youSilent",
+      "before": true,
+      "expected": false,
+      "actual": false,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Answer",
+      "Your jail time (years)"
+    ],
+    "canvasCount": 0,
+    "chartCount": 0,
+    "milliseconds": 155
+  },
+  {
+    "slug": "prisoners-dilemma-two-person-iterated",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Round",
+        "value": "0"
+      },
+      {
+        "label": "Human score",
+        "value": "3"
+      },
+      {
+        "label": "Computer score",
+        "value": "3"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Round",
+        "value": "1"
+      },
+      {
+        "label": "Human score",
+        "value": "8"
+      },
+      {
+        "label": "Computer score",
+        "value": "3"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "humanStrategy",
+      "before": "act-randomly",
+      "expected": "cooperate",
+      "actual": "cooperate",
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Players",
+      "Average score (includes initial 3)",
+      "History"
+    ],
+    "canvasCount": 0,
+    "chartCount": 1,
+    "milliseconds": 170
+  },
+  {
+    "slug": "rabbits-grass-weeds",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Rabbits",
+        "value": "150"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Rabbits",
+        "value": "142"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "birthThreshold",
+      "before": 15,
+      "expected": 16,
+      "actual": 16,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Rabbits and resources",
+      "Populations (resources / 4)"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 167
+  },
+  {
+    "slug": "random-combinations-and-permutations",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Search attempts",
+        "value": "0"
+      },
+      {
+        "label": "Steps in sample",
+        "value": "0"
+      },
+      {
+        "label": "Samples",
+        "value": "0"
+      },
+      {
+        "label": "Combination successes",
+        "value": "0"
+      },
+      {
+        "label": "Permutation successes",
+        "value": "0"
+      },
+      {
+        "label": "Mean combination",
+        "value": "N/A"
+      },
+      {
+        "label": "Mean permutations",
+        "value": "N/A"
+      },
+      {
+        "label": "Ratio",
+        "value": "N/A"
+      },
+      {
+        "label": "Instructions",
+        "value": "OK, you have created a 3-by-1 block. Now press Create Combi."
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Search attempts",
+        "value": "0"
+      },
+      {
+        "label": "Steps in sample",
+        "value": "0"
+      },
+      {
+        "label": "Samples",
+        "value": "0"
+      },
+      {
+        "label": "Combination successes",
+        "value": "0"
+      },
+      {
+        "label": "Permutation successes",
+        "value": "0"
+      },
+      {
+        "label": "Mean combination",
+        "value": "N/A"
+      },
+      {
+        "label": "Mean permutations",
+        "value": "N/A"
+      },
+      {
+        "label": "Ratio",
+        "value": "N/A"
+      },
+      {
+        "label": "Instructions",
+        "value": "You are in Dice mode. Please pick dice faces for every square."
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "singleSuccess",
+      "before": false,
+      "expected": true,
+      "actual": true,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Combination and guess",
+      "Successes per sample distribution",
+      "Success frequency lines"
+    ],
+    "canvasCount": 1,
+    "chartCount": 2,
+    "milliseconds": 200
+  },
+  {
+    "slug": "rebellion",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Police",
+        "value": "64"
+      },
+      {
+        "label": "Citizens",
+        "value": "1120"
+      },
+      {
+        "label": "Quiet",
+        "value": "1120"
+      },
+      {
+        "label": "Active",
+        "value": "0"
+      },
+      {
+        "label": "Jailed",
+        "value": "0"
+      },
+      {
+        "label": "Watched citizen",
+        "value": "—"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Police",
+        "value": "64"
+      },
+      {
+        "label": "Citizens",
+        "value": "1120"
+      },
+      {
+        "label": "Quiet",
+        "value": "1092"
+      },
+      {
+        "label": "Active",
+        "value": "7"
+      },
+      {
+        "label": "Jailed",
+        "value": "21"
+      },
+      {
+        "label": "Watched citizen",
+        "value": "—"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "governmentLegitimacy",
+      "before": 0.82,
+      "expected": 0.83,
+      "actual": 0.83,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Citizens and police",
+      "All citizen types"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 1500
+  },
+  {
+    "slug": "repressilator-1d",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Signal",
+        "value": "On"
+      },
+      {
+        "label": "Mean on duration",
+        "value": "0"
+      },
+      {
+        "label": "Mean off duration",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Signal",
+        "value": "On"
+      },
+      {
+        "label": "Mean on duration",
+        "value": "0"
+      },
+      {
+        "label": "Mean off duration",
+        "value": "0"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "tfsPerMRNA",
+      "before": 2,
+      "expected": 3,
+      "actual": 3,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Repressilator 1D",
+      "Completed signal durations",
+      "History"
+    ],
+    "canvasCount": 1,
+    "chartCount": 2,
+    "milliseconds": 167
+  },
+  {
+    "slug": "residential-occupancy",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Day",
+        "value": "0"
+      },
+      {
+        "label": "Occupied",
+        "value": "3"
+      },
+      {
+        "label": "Available",
+        "value": "0"
+      },
+      {
+        "label": "Waiting",
+        "value": "5"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Day",
+        "value": "1"
+      },
+      {
+        "label": "Occupied",
+        "value": "3"
+      },
+      {
+        "label": "Available",
+        "value": "0"
+      },
+      {
+        "label": "Waiting",
+        "value": "5"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Reservation status",
+      "Occupancy"
+    ],
+    "canvasCount": 0,
+    "chartCount": 1,
+    "milliseconds": 133
+  },
+  {
+    "slug": "robby-the-robot",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Generation",
+        "value": "0"
+      },
+      {
+        "label": "Best fitness",
+        "value": "-44.00"
+      },
+      {
+        "label": "Trial score",
+        "value": "—"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Generation",
+        "value": "1"
+      },
+      {
+        "label": "Best fitness",
+        "value": "-12.55"
+      },
+      {
+        "label": "Trial score",
+        "value": "—"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "mutationRate",
+      "before": 0.01,
+      "expected": 0.011,
+      "actual": 0.011,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Robby environment",
+      "Population fitness and allele distance",
+      "Best fitness",
+      "Best strategy",
+      "Output"
+    ],
+    "canvasCount": 1,
+    "chartCount": 2,
+    "milliseconds": 884
+  },
+  {
+    "slug": "robotic-factory",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "New sheets",
+        "value": "10"
+      },
+      {
+        "label": "Products ready",
+        "value": "0"
+      },
+      {
+        "label": "Idle / tick",
+        "value": "0.000"
+      },
+      {
+        "label": "Diagnostic",
+        "value": "—"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "New sheets",
+        "value": "10"
+      },
+      {
+        "label": "Products ready",
+        "value": "0"
+      },
+      {
+        "label": "Idle / tick",
+        "value": "5.000"
+      },
+      {
+        "label": "Diagnostic",
+        "value": "—"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "fullCharge",
+      "before": 350,
+      "expected": 351,
+      "actual": 351,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Factory floor",
+      "Idle time",
+      "Outstanding orders",
+      "Robot energy",
+      "Supply of machines",
+      "Robots"
+    ],
+    "canvasCount": 1,
+    "chartCount": 4,
+    "milliseconds": 167
+  },
+  {
+    "slug": "rumor-mill",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Clique (%)",
+        "value": "0.010"
+      },
+      {
+        "label": "Times heard",
+        "value": "1"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Clique (%)",
+        "value": "0.020"
+      },
+      {
+        "label": "Times heard",
+        "value": "2"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Rumor spread",
+      "Rumor spread (%)",
+      "Successive differences",
+      "Successive ratios"
+    ],
+    "canvasCount": 1,
+    "chartCount": 3,
+    "milliseconds": 150
+  },
+  {
+    "slug": "sand",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Sand sites",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Sand sites",
+        "value": "3"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "releaseChance",
+      "before": 100,
+      "expected": 99,
+      "actual": 99,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Sand"
+    ],
+    "canvasCount": 1,
+    "chartCount": 0,
+    "milliseconds": 183
+  },
+  {
+    "slug": "sandpile",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Average",
+        "value": "0.0000"
+      },
+      {
+        "label": "Last avalanche size",
+        "value": "0"
+      },
+      {
+        "label": "Last avalanche lifetime",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Average",
+        "value": "1.4951"
+      },
+      {
+        "label": "Last avalanche size",
+        "value": "1"
+      },
+      {
+        "label": "Last avalanche lifetime",
+        "value": "1"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "grainsPerField",
+      "before": 1,
+      "expected": 2,
+      "actual": 2,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Pile",
+      "Average grain count",
+      "Avalanche sizes (log10)",
+      "Avalanche lifetimes (log10)"
+    ],
+    "canvasCount": 1,
+    "chartCount": 3,
+    "milliseconds": 200
+  },
+  {
+    "slug": "segregation",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Residents",
+        "value": "2483"
+      },
+      {
+        "label": "Unhappy",
+        "value": "424"
+      },
+      {
+        "label": "Unhappy (%)",
+        "value": "17.1"
+      },
+      {
+        "label": "Similar (%)",
+        "value": "49.5"
+      },
+      {
+        "label": "State",
+        "value": "Active"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Residents",
+        "value": "2483"
+      },
+      {
+        "label": "Unhappy",
+        "value": "228"
+      },
+      {
+        "label": "Unhappy (%)",
+        "value": "9.2"
+      },
+      {
+        "label": "Similar (%)",
+        "value": "58.6"
+      },
+      {
+        "label": "State",
+        "value": "Active"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Neighborhood",
+      "Similar neighbors (%)",
+      "Unhappy residents"
+    ],
+    "canvasCount": 1,
+    "chartCount": 2,
+    "milliseconds": 333
+  },
+  {
+    "slug": "sex-ratio-equilibrium",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Adult sex ratio (%)",
+        "value": "35"
+      },
+      {
+        "label": "Male-child chance",
+        "value": "0.402"
+      },
+      {
+        "label": "Running average",
+        "value": "NA"
+      },
+      {
+        "label": "Running SD",
+        "value": "NA"
+      },
+      {
+        "label": "Male mating success",
+        "value": "0"
+      },
+      {
+        "label": "Female mating success",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Adult sex ratio (%)",
+        "value": "35"
+      },
+      {
+        "label": "Male-child chance",
+        "value": "0.402"
+      },
+      {
+        "label": "Running average",
+        "value": "NA"
+      },
+      {
+        "label": "Running SD",
+        "value": "NA"
+      },
+      {
+        "label": "Male mating success",
+        "value": "0.13"
+      },
+      {
+        "label": "Female mating success",
+        "value": "0.07"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "meanLongevity",
+      "before": 60,
+      "expected": 65,
+      "actual": 65,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Population",
+      "Population by sex",
+      "Mating success ratio (male to female)",
+      "Adult sex ratio",
+      "Average male-child chance"
+    ],
+    "canvasCount": 1,
+    "chartCount": 4,
+    "milliseconds": 233
+  },
+  {
+    "slug": "shepherds",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Current efficiency (%)",
+        "value": "67.6"
+      },
+      {
+        "label": "Carried sheep",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Current efficiency (%)",
+        "value": "67.6"
+      },
+      {
+        "label": "Carried sheep",
+        "value": "4"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Sheep and shepherds",
+      "Herding efficiency"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 550
+  },
+  {
+    "slug": "signaling-game",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Probability of success",
+        "value": "50.00%"
+      },
+      {
+        "label": "Correct",
+        "value": "0"
+      },
+      {
+        "label": "Wrong",
+        "value": "0"
+      },
+      {
+        "label": "Success rate",
+        "value": "—"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Probability of success",
+        "value": "51.39%"
+      },
+      {
+        "label": "Correct",
+        "value": "1"
+      },
+      {
+        "label": "Wrong",
+        "value": "0"
+      },
+      {
+        "label": "Success rate",
+        "value": "100.00%"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Current signal",
+      "Probability of success (%)",
+      "Sender probabilities (%)",
+      "Receiver probabilities (%)",
+      "Printed output"
+    ],
+    "canvasCount": 3,
+    "chartCount": 1,
+    "milliseconds": 143
+  },
+  {
+    "slug": "simple-birth-rates",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Generation",
+        "value": "0"
+      },
+      {
+        "label": "Reds",
+        "value": "500"
+      },
+      {
+        "label": "Blues",
+        "value": "500"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Generation",
+        "value": "1"
+      },
+      {
+        "label": "Reds",
+        "value": "497"
+      },
+      {
+        "label": "Blues",
+        "value": "488"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "carryingCapacity",
+      "before": 1000,
+      "expected": 1001,
+      "actual": 1001,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Population",
+      "Populations",
+      "Experiment output"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 340
+  },
+  {
+    "slug": "simple-genetic-algorithm",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Generation",
+        "value": "0"
+      },
+      {
+        "label": "Best fitness",
+        "value": "62"
+      },
+      {
+        "label": "Mean fitness",
+        "value": "49.900"
+      },
+      {
+        "label": "Worst fitness",
+        "value": "41"
+      },
+      {
+        "label": "Diversity",
+        "value": "0.99015"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Generation",
+        "value": "1"
+      },
+      {
+        "label": "Best fitness",
+        "value": "67"
+      },
+      {
+        "label": "Mean fitness",
+        "value": "54.700"
+      },
+      {
+        "label": "Worst fitness",
+        "value": "43"
+      },
+      {
+        "label": "Diversity",
+        "value": "0.95214"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "crossoverRate",
+      "before": 70,
+      "expected": 71,
+      "actual": 71,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Best genome",
+      "Fitness",
+      "Diversity"
+    ],
+    "canvasCount": 1,
+    "chartCount": 2,
+    "milliseconds": 322
+  },
+  {
+    "slug": "simulated-annealing",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Temperature",
+        "value": "1.00000"
+      },
+      {
+        "label": "Global energy",
+        "value": "1796"
+      },
+      {
+        "label": "Accepted / attempted",
+        "value": "0 / 0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Temperature",
+        "value": "0.990000"
+      },
+      {
+        "label": "Global energy",
+        "value": "1772"
+      },
+      {
+        "label": "Accepted / attempted",
+        "value": "417 / 1000"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "coolingRate",
+      "before": 1,
+      "expected": 1.1,
+      "actual": 1.1,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Brightness",
+      "Global energy"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 162
+  },
+  {
+    "slug": "slime",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Population",
+        "value": "400"
+      },
+      {
+        "label": "Chemical",
+        "value": "0.00"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Population",
+        "value": "400"
+      },
+      {
+        "label": "Chemical",
+        "value": "720.00"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "sniffThreshold",
+      "before": 1,
+      "expected": 2,
+      "actual": 2,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Slime"
+    ],
+    "canvasCount": 1,
+    "chartCount": 0,
+    "milliseconds": 183
+  },
+  {
+    "slug": "smoothlife",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Disk cells",
+        "value": "29"
+      },
+      {
+        "label": "Annulus cells",
+        "value": "224"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Disk cells",
+        "value": "29"
+      },
+      {
+        "label": "Annulus cells",
+        "value": "224"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "minBirth",
+      "before": 0.278,
+      "expected": 0.279,
+      "actual": 0.279,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Cells"
+    ],
+    "canvasCount": 1,
+    "chartCount": 0,
+    "milliseconds": 2427
+  },
+  {
+    "slug": "solar-battery-microgrid",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Hour",
+        "value": "0"
+      },
+      {
+        "label": "Stored (kWh)",
+        "value": "5"
+      },
+      {
+        "label": "Grid import (kWh)",
+        "value": "0"
+      },
+      {
+        "label": "Reserve crossings",
+        "value": "0"
+      },
+      {
+        "label": "Last crossing (h)",
+        "value": "none"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Hour",
+        "value": "1"
+      },
+      {
+        "label": "Stored (kWh)",
+        "value": "7"
+      },
+      {
+        "label": "Grid import (kWh)",
+        "value": "0"
+      },
+      {
+        "label": "Reserve crossings",
+        "value": "0"
+      },
+      {
+        "label": "Last crossing (h)",
+        "value": "none"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Stored energy"
+    ],
+    "canvasCount": 0,
+    "chartCount": 1,
+    "milliseconds": 139
+  },
+  {
+    "slug": "solid-diffusion",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Vacancies",
+        "value": "35"
+      },
+      {
+        "label": "Max diffusion distance squared",
+        "value": "4"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Vacancies",
+        "value": "35"
+      },
+      {
+        "label": "Max diffusion distance squared",
+        "value": "0"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Atoms",
+      "Atoms by column",
+      "Max diffusion distance squared"
+    ],
+    "canvasCount": 1,
+    "chartCount": 2,
+    "milliseconds": 167
+  },
+  {
+    "slug": "stochastic-patchwork",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Target color",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Target color",
+        "value": "8"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Patchwork",
+      "Color distribution"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 134
+  },
+  {
+    "slug": "stormwater-retention",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Hour",
+        "value": "0"
+      },
+      {
+        "label": "Stored (m³)",
+        "value": "0.00"
+      },
+      {
+        "label": "Overflow (m³)",
+        "value": "0.00"
+      },
+      {
+        "label": "Capacity crossings",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Hour",
+        "value": "1"
+      },
+      {
+        "label": "Stored (m³)",
+        "value": "0.70"
+      },
+      {
+        "label": "Overflow (m³)",
+        "value": "0.00"
+      },
+      {
+        "label": "Capacity crossings",
+        "value": "0"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Retention balance"
+    ],
+    "canvasCount": 0,
+    "chartCount": 1,
+    "milliseconds": 133
+  },
+  {
+    "slug": "sunflower-emergent",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Particles",
+        "value": "1"
+      },
+      {
+        "label": "Temporary candidates",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "2"
+      },
+      {
+        "label": "Particles",
+        "value": "2"
+      },
+      {
+        "label": "Temporary candidates",
+        "value": "12"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "ringDist",
+      "before": 0.2,
+      "expected": 0.21,
+      "actual": 0.21,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Sunflower Emergent"
+    ],
+    "canvasCount": 1,
+    "chartCount": 0,
+    "milliseconds": 167
+  },
+  {
+    "slug": "taxi-cabs",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Time of day",
+        "value": "AM Peak"
+      },
+      {
+        "label": "Waiting passengers",
+        "value": "0"
+      },
+      {
+        "label": "Occupied cabs",
+        "value": "0"
+      },
+      {
+        "label": "Total income ($)",
+        "value": "0.00"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Time of day",
+        "value": "AM Peak"
+      },
+      {
+        "label": "Waiting passengers",
+        "value": "1"
+      },
+      {
+        "label": "Occupied cabs",
+        "value": "0"
+      },
+      {
+        "label": "Total income ($)",
+        "value": "0.00"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "waitTimeMean",
+      "before": 50,
+      "expected": 51,
+      "actual": 51,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Taxi service",
+      "Taxicabs travelling distance",
+      "Trip income distribution ($)",
+      "Trip distance distribution (grids)",
+      "Trip duration distribution (ticks)"
+    ],
+    "canvasCount": 1,
+    "chartCount": 4,
+    "milliseconds": 317
+  },
+  {
+    "slug": "termites",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Work sweeps",
+        "value": "0"
+      },
+      {
+        "label": "Chips on ground",
+        "value": "8127"
+      },
+      {
+        "label": "Carrying",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Work sweeps",
+        "value": "1"
+      },
+      {
+        "label": "Chips on ground",
+        "value": "8046"
+      },
+      {
+        "label": "Carrying",
+        "value": "81"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Wood chips and termites"
+    ],
+    "canvasCount": 1,
+    "chartCount": 0,
+    "milliseconds": 334
+  },
+  {
+    "slug": "three-doors",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "State",
+        "value": "Racing"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "State",
+        "value": "Racing"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Race",
+      "Switching and wins"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 183
+  },
+  {
+    "slug": "traffic-2-lanes",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Selected speed",
+        "value": "0.500"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Selected speed",
+        "value": "0.505"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "numberOfCars",
+      "before": 40,
+      "expected": 41,
+      "actual": 41,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Two lanes",
+      "Car speeds",
+      "Driver patience",
+      "Cars per lane"
+    ],
+    "canvasCount": 1,
+    "chartCount": 3,
+    "milliseconds": 167
+  },
+  {
+    "slug": "traffic-basic",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Red car speed",
+        "value": "0.540"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Red car speed",
+        "value": "0.545"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Road",
+      "Car speeds"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 133
+  },
+  {
+    "slug": "traffic-grid",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Phase",
+        "value": "0"
+      },
+      {
+        "label": "Stopped cars",
+        "value": "200"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Phase",
+        "value": "1"
+      },
+      {
+        "label": "Stopped cars",
+        "value": "105"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "power",
+      "before": true,
+      "expected": false,
+      "actual": false,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Traffic grid",
+      "Stopped cars",
+      "Average speed of cars",
+      "Average wait time of cars"
+    ],
+    "canvasCount": 1,
+    "chartCount": 3,
+    "milliseconds": 199
+  },
+  {
+    "slug": "traffic-grid-goal",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Phase",
+        "value": "0"
+      },
+      {
+        "label": "Stopped cars",
+        "value": "200"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Phase",
+        "value": "1"
+      },
+      {
+        "label": "Stopped cars",
+        "value": "102"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "power",
+      "before": true,
+      "expected": false,
+      "actual": false,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Traffic grid",
+      "Stopped cars",
+      "Average speed of cars",
+      "Average wait time of cars"
+    ],
+    "canvasCount": 1,
+    "chartCount": 3,
+    "milliseconds": 200
+  },
+  {
+    "slug": "traffic-intersection",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Waiting overall",
+        "value": "0"
+      },
+      {
+        "label": "Accidents",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Waiting overall",
+        "value": "0"
+      },
+      {
+        "label": "Accidents",
+        "value": "0"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "auto",
+      "before": true,
+      "expected": false,
+      "actual": false,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Intersection",
+      "Waiting cars"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 166
+  },
+  {
+    "slug": "tumor",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Cell count",
+        "value": "2"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Cell count",
+        "value": "4"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Tumor",
+      "Living cells"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 133
+  },
+  {
+    "slug": "turing-machine-2d",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "On cells",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "On cells",
+        "value": "32"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "example",
+      "before": 1,
+      "expected": 2,
+      "actual": 2,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Tape and heads",
+      "Transition rules"
+    ],
+    "canvasCount": 1,
+    "chartCount": 0,
+    "milliseconds": 279
+  },
+  {
+    "slug": "urban-suite-awareness",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Unaware",
+        "value": "60"
+      },
+      {
+        "label": "Aware",
+        "value": "0"
+      },
+      {
+        "label": "Well-informed",
+        "value": "0"
+      },
+      {
+        "label": "Activists",
+        "value": "0"
+      },
+      {
+        "label": "Centers",
+        "value": "20"
+      },
+      {
+        "label": "Mean awareness",
+        "value": "0.000"
+      },
+      {
+        "label": "Mean non-usage",
+        "value": "0.000"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Unaware",
+        "value": "60"
+      },
+      {
+        "label": "Aware",
+        "value": "0"
+      },
+      {
+        "label": "Well-informed",
+        "value": "0"
+      },
+      {
+        "label": "Activists",
+        "value": "0"
+      },
+      {
+        "label": "Centers",
+        "value": "20"
+      },
+      {
+        "label": "Mean awareness",
+        "value": "0.000"
+      },
+      {
+        "label": "Mean non-usage",
+        "value": "1.000"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "People and awareness centers",
+      "Awareness levels",
+      "Mean awareness",
+      "Centers"
+    ],
+    "canvasCount": 1,
+    "chartCount": 3,
+    "milliseconds": 154
+  },
+  {
+    "slug": "urban-suite-cells",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "On cells",
+        "value": "1"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "On cells",
+        "value": "5"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "neighborhood",
+      "before": "von-neumann",
+      "expected": "moore",
+      "actual": "moore",
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Cells",
+      "On cells · source step index"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 213
+  },
+  {
+    "slug": "urban-suite-economic-disparity",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Rich",
+        "value": "5"
+      },
+      {
+        "label": "Poor",
+        "value": "5"
+      },
+      {
+        "label": "Jobs",
+        "value": "1"
+      },
+      {
+        "label": "Counter",
+        "value": "0"
+      },
+      {
+        "label": "Rich median",
+        "value": "3.73676"
+      },
+      {
+        "label": "Poor median",
+        "value": "3.58924"
+      },
+      {
+        "label": "View",
+        "value": "quality"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Rich",
+        "value": "10"
+      },
+      {
+        "label": "Poor",
+        "value": "10"
+      },
+      {
+        "label": "Jobs",
+        "value": "1"
+      },
+      {
+        "label": "Counter",
+        "value": "10"
+      },
+      {
+        "label": "Rich median",
+        "value": "5.78658"
+      },
+      {
+        "label": "Poor median",
+        "value": "5.95506"
+      },
+      {
+        "label": "View",
+        "value": "quality"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "numberOfTests",
+      "before": 15,
+      "expected": 16,
+      "actual": 16,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Residents, jobs and land",
+      "Median travel distance · actual nearest job"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 204
+  },
+  {
+    "slug": "urban-suite-path-dependence",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Firms",
+        "value": "200"
+      },
+      {
+        "label": "Settled",
+        "value": "0"
+      },
+      {
+        "label": "Searching",
+        "value": "200"
+      },
+      {
+        "label": "Largest regional population",
+        "value": "5"
+      },
+      {
+        "label": "Maximum cell occupancy",
+        "value": "5"
+      },
+      {
+        "label": "Setup warning",
+        "value": "—"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Firms",
+        "value": "200"
+      },
+      {
+        "label": "Settled",
+        "value": "104"
+      },
+      {
+        "label": "Searching",
+        "value": "96"
+      },
+      {
+        "label": "Largest regional population",
+        "value": "5"
+      },
+      {
+        "label": "Maximum cell occupancy",
+        "value": "5"
+      },
+      {
+        "label": "Setup warning",
+        "value": "—"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "increasingReturns",
+      "before": 0.5,
+      "expected": 0.51,
+      "actual": 0.51,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Firms and field quality",
+      "Residents · occupied fields by occupant count"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 167
+  },
+  {
+    "slug": "urban-suite-pollution",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "People",
+        "value": "30"
+      },
+      {
+        "label": "Trees",
+        "value": "0"
+      },
+      {
+        "label": "Power plants",
+        "value": "2"
+      },
+      {
+        "label": "Total pollution",
+        "value": "6.000"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "People",
+        "value": "36"
+      },
+      {
+        "label": "Trees",
+        "value": "5"
+      },
+      {
+        "label": "Power plants",
+        "value": "2"
+      },
+      {
+        "label": "Total pollution",
+        "value": "10.500"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "birthRate",
+      "before": 0.1,
+      "expected": 0.11,
+      "actual": 0.11,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "People, trees and pollution",
+      "World status · counts and total pollution"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 167
+  },
+  {
+    "slug": "urban-suite-positive-feedback",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Maximum activity",
+        "value": "0.998487"
+      },
+      {
+        "label": "Total activity",
+        "value": "213.032"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Maximum activity",
+        "value": "1.00000"
+      },
+      {
+        "label": "Total activity",
+        "value": "202.926"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Activity",
+      "Activity distribution · descending rank"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 134
+  },
+  {
+    "slug": "urban-suite-recycling",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Recyclers",
+        "value": "25"
+      },
+      {
+        "label": "Wastefuls",
+        "value": "25"
+      },
+      {
+        "label": "New (%)",
+        "value": "100.00"
+      },
+      {
+        "label": "Recycled (%)",
+        "value": "0.00"
+      },
+      {
+        "label": "Waste (%)",
+        "value": "0.00"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Recyclers",
+        "value": "25"
+      },
+      {
+        "label": "Wastefuls",
+        "value": "25"
+      },
+      {
+        "label": "New (%)",
+        "value": "97.96"
+      },
+      {
+        "label": "Recycled (%)",
+        "value": "0.00"
+      },
+      {
+        "label": "Waste (%)",
+        "value": "2.04"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "maxStoredEnergy",
+      "before": 50,
+      "expected": 55,
+      "actual": 55,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "People and resources",
+      "Populations",
+      "Land types (%)"
+    ],
+    "canvasCount": 1,
+    "chartCount": 2,
+    "milliseconds": 166
+  },
+  {
+    "slug": "urban-suite-sprawl-effect",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Seekers",
+        "value": "200"
+      },
+      {
+        "label": "Houses",
+        "value": "0"
+      },
+      {
+        "label": "Build threshold",
+        "value": "7"
+      },
+      {
+        "label": "Total attraction",
+        "value": "8466.00"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Seekers",
+        "value": "179"
+      },
+      {
+        "label": "Houses",
+        "value": "21"
+      },
+      {
+        "label": "Build threshold",
+        "value": "7"
+      },
+      {
+        "label": "Total attraction",
+        "value": "8468.84"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "maxAttraction",
+      "before": 15,
+      "expected": 16,
+      "actual": 16,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Seekers, houses and attraction",
+      "Residents"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 167
+  },
+  {
+    "slug": "urban-suite-structure-from-randomness-1",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Total activity",
+        "value": "-118.000"
+      },
+      {
+        "label": "Max |activity|",
+        "value": "1.00000"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Total activity",
+        "value": "-118.000"
+      },
+      {
+        "label": "Max |activity|",
+        "value": "1.00000"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Activity",
+      "Activity distribution · descending rank"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 233
+  },
+  {
+    "slug": "urban-suite-structure-from-randomness-2",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Above now",
+        "value": "0"
+      },
+      {
+        "label": "Activated",
+        "value": "0"
+      },
+      {
+        "label": "Mean potential",
+        "value": "0.00698225"
+      },
+      {
+        "label": "Max potential",
+        "value": "1.00000"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Above now",
+        "value": "0"
+      },
+      {
+        "label": "Activated",
+        "value": "0"
+      },
+      {
+        "label": "Mean potential",
+        "value": "0.00591716"
+      },
+      {
+        "label": "Max potential",
+        "value": "2.00000"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Persistent activation",
+      "Cells above threshold · current predicate",
+      "Potential · maximum and mean × 10"
+    ],
+    "canvasCount": 1,
+    "chartCount": 2,
+    "milliseconds": 233
+  },
+  {
+    "slug": "urban-suite-tijuana-bordertowns",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Phase",
+        "value": "cleared"
+      },
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Epoch",
+        "value": "0"
+      },
+      {
+        "label": "Services / jobs",
+        "value": "0 / 0"
+      },
+      {
+        "label": "Builders (1 / 2 / 3)",
+        "value": "0 / 0 / 0"
+      },
+      {
+        "label": "Seed migrants",
+        "value": "0"
+      },
+      {
+        "label": "Irregular settlers",
+        "value": "0"
+      },
+      {
+        "label": "Nodes / rings",
+        "value": "0 / 0"
+      },
+      {
+        "label": "Values",
+        "value": "0.00"
+      },
+      {
+        "label": "Weights",
+        "value": "0.000"
+      },
+      {
+        "label": "Marginal",
+        "value": "0.0"
+      },
+      {
+        "label": "Marginal weight",
+        "value": "0.000"
+      },
+      {
+        "label": "Max cost",
+        "value": "0"
+      },
+      {
+        "label": "Crossed",
+        "value": "0"
+      },
+      {
+        "label": "Savings",
+        "value": "N/A (empty-subset)"
+      },
+      {
+        "label": "Savings node",
+        "value": "N/A (empty-subset)"
+      },
+      {
+        "label": "No water (%)",
+        "value": "N/A (zero-denominator)"
+      },
+      {
+        "label": "No power (%)",
+        "value": "N/A (zero-denominator)"
+      },
+      {
+        "label": "Pen segments",
+        "value": "0"
+      },
+      {
+        "label": "Recorded calls",
+        "value": "0"
+      },
+      {
+        "label": "Last failure",
+        "value": "None"
+      },
+      {
+        "label": "Warnings",
+        "value": "None"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Phase",
+        "value": "cleared"
+      },
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Epoch",
+        "value": "0"
+      },
+      {
+        "label": "Services / jobs",
+        "value": "0 / 0"
+      },
+      {
+        "label": "Builders (1 / 2 / 3)",
+        "value": "0 / 0 / 0"
+      },
+      {
+        "label": "Seed migrants",
+        "value": "0"
+      },
+      {
+        "label": "Irregular settlers",
+        "value": "0"
+      },
+      {
+        "label": "Nodes / rings",
+        "value": "0 / 0"
+      },
+      {
+        "label": "Values",
+        "value": "0.00"
+      },
+      {
+        "label": "Weights",
+        "value": "0.000"
+      },
+      {
+        "label": "Marginal",
+        "value": "0.0"
+      },
+      {
+        "label": "Marginal weight",
+        "value": "0.000"
+      },
+      {
+        "label": "Max cost",
+        "value": "0"
+      },
+      {
+        "label": "Crossed",
+        "value": "0"
+      },
+      {
+        "label": "Savings",
+        "value": "N/A (empty-subset)"
+      },
+      {
+        "label": "Savings node",
+        "value": "N/A (empty-subset)"
+      },
+      {
+        "label": "No water (%)",
+        "value": "N/A (zero-denominator)"
+      },
+      {
+        "label": "No power (%)",
+        "value": "N/A (zero-denominator)"
+      },
+      {
+        "label": "Pen segments",
+        "value": "0"
+      },
+      {
+        "label": "Recorded calls",
+        "value": "0"
+      },
+      {
+        "label": "Last failure",
+        "value": "None"
+      },
+      {
+        "label": "Warnings",
+        "value": "None"
+      }
+    ],
+    "staticOrComplete": true,
+    "live": {
+      "key": "maquiladoras",
+      "before": 8,
+      "expected": 7,
+      "actual": 7,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Tijuana"
+    ],
+    "canvasCount": 1,
+    "chartCount": 0,
+    "milliseconds": 245
+  },
+  {
+    "slug": "urban-tree-watering",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Day",
+        "value": "0"
+      },
+      {
+        "label": "Used today (L)",
+        "value": "0"
+      },
+      {
+        "label": "Total water (L)",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Day",
+        "value": "1"
+      },
+      {
+        "label": "Used today (L)",
+        "value": "20"
+      },
+      {
+        "label": "Total water (L)",
+        "value": "20"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Tree moisture",
+      "Mean moisture"
+    ],
+    "canvasCount": 0,
+    "chartCount": 1,
+    "milliseconds": 139
+  },
+  {
+    "slug": "vants",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Black cells",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Black cells",
+        "value": "1"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Vants"
+    ],
+    "canvasCount": 1,
+    "chartCount": 0,
+    "milliseconds": 350
+  },
+  {
+    "slug": "virus",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Infected %",
+        "value": "6.667"
+      },
+      {
+        "label": "Immune %",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Infected %",
+        "value": "8"
+      },
+      {
+        "label": "Immune %",
+        "value": "0"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "infectiousness",
+      "before": 65,
+      "expected": 66,
+      "actual": 66,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Virus",
+      "History"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 217
+  },
+  {
+    "slug": "virus-on-a-network",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Susceptible",
+        "value": "147"
+      },
+      {
+        "label": "Infected",
+        "value": "3"
+      },
+      {
+        "label": "Resistant",
+        "value": "0"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Susceptible",
+        "value": "146"
+      },
+      {
+        "label": "Infected",
+        "value": "4"
+      },
+      {
+        "label": "Resistant",
+        "value": "0"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "spreadChance",
+      "before": 2.5,
+      "expected": 2.6,
+      "actual": 2.6,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Network",
+      "Network status (%)"
+    ],
+    "canvasCount": 3,
+    "chartCount": 1,
+    "milliseconds": 462
+  },
+  {
+    "slug": "vision-evolution",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Fish",
+        "value": "50"
+      },
+      {
+        "label": "Food",
+        "value": "80"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Fish",
+        "value": "50"
+      },
+      {
+        "label": "Food",
+        "value": "77"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "energyGainFromFood",
+      "before": 100,
+      "expected": 101,
+      "actual": 101,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Water, land and vision",
+      "Population size",
+      "Average eye size",
+      "Eye size histogram",
+      "Land mobility histogram",
+      "Food preference histogram"
+    ],
+    "canvasCount": 1,
+    "chartCount": 5,
+    "milliseconds": 405
+  },
+  {
+    "slug": "voting",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Blue",
+        "value": "11326"
+      },
+      {
+        "label": "Green",
+        "value": "11475"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Blue",
+        "value": "11229"
+      },
+      {
+        "label": "Green",
+        "value": "11572"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Votes"
+    ],
+    "canvasCount": 1,
+    "chartCount": 0,
+    "milliseconds": 235
+  },
+  {
+    "slug": "wealth-distribution",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "People",
+        "value": "250"
+      },
+      {
+        "label": "Total wealth",
+        "value": "8027"
+      },
+      {
+        "label": "Gini",
+        "value": "0.278"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "People",
+        "value": "250"
+      },
+      {
+        "label": "Total wealth",
+        "value": "8138"
+      },
+      {
+        "label": "Gini",
+        "value": "0.270"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "growthInterval",
+      "before": 1,
+      "expected": 2,
+      "actual": 2,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Resources and wealth classes",
+      "Current wealth classes",
+      "Wealth classes",
+      "Lorenz curve (%)",
+      "Gini index"
+    ],
+    "canvasCount": 1,
+    "chartCount": 4,
+    "milliseconds": 231
+  },
+  {
+    "slug": "wolf-sheep-predation",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Sheep",
+        "value": "100"
+      },
+      {
+        "label": "Wolves",
+        "value": "50"
+      },
+      {
+        "label": "Grass / 4",
+        "value": "—"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Sheep",
+        "value": "104"
+      },
+      {
+        "label": "Wolves",
+        "value": "50"
+      },
+      {
+        "label": "Grass / 4",
+        "value": "—"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": {
+      "key": "sheepGain",
+      "before": 4,
+      "expected": 5,
+      "actual": 5,
+      "ok": true,
+      "proof": "Control value refreshed from the public observation getter after its model action; no private instance access."
+    },
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Animals and grass",
+      "Populations"
+    ],
+    "canvasCount": 1,
+    "chartCount": 1,
+    "milliseconds": 167
+  },
+  {
+    "slug": "workplace-household-membership",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Tick",
+        "value": "0"
+      },
+      {
+        "label": "Memberships",
+        "value": "12"
+      },
+      {
+        "label": "Workplace A",
+        "value": "3"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Tick",
+        "value": "1"
+      },
+      {
+        "label": "Memberships",
+        "value": "12"
+      },
+      {
+        "label": "Workplace A",
+        "value": "2"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Membership graph",
+      "Resident groups"
+    ],
+    "canvasCount": 3,
+    "chartCount": 0,
+    "milliseconds": 144
+  },
+  {
+    "slug": "zoning-scenario-comparison",
+    "ok": true,
+    "setup": [
+      {
+        "label": "Study runs",
+        "value": "0"
+      },
+      {
+        "label": "Planned runs",
+        "value": "6"
+      }
+    ],
+    "afterStep": [
+      {
+        "label": "Study runs",
+        "value": "1"
+      },
+      {
+        "label": "Planned runs",
+        "value": "6"
+      }
+    ],
+    "staticOrComplete": false,
+    "live": null,
+    "alerts": [],
+    "errors": [],
+    "views": [
+      "Run outcomes",
+      "Replication summaries",
+      "Dwelling capacity"
+    ],
+    "canvasCount": 0,
+    "chartCount": 1,
+    "milliseconds": 123
+  }
+]

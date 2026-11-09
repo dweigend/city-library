@@ -1,0 +1,1240 @@
+{
+  "flows": [
+    {
+      "slug": "des-civic-office",
+      "control": {
+        "name": "residents",
+        "original": 3,
+        "changed": 4,
+        "observed": "4"
+      },
+      "setup": [
+        {
+          "label": "Time (min)",
+          "value": "0"
+        },
+        {
+          "label": "Waiting",
+          "value": "3"
+        },
+        {
+          "label": "Busy desks",
+          "value": "1"
+        },
+        {
+          "label": "Completed",
+          "value": "0"
+        }
+      ],
+      "step": [
+        {
+          "label": "Time (min)",
+          "value": "1"
+        },
+        {
+          "label": "Waiting",
+          "value": "3"
+        },
+        {
+          "label": "Busy desks",
+          "value": "1"
+        },
+        {
+          "label": "Completed",
+          "value": "0"
+        }
+      ],
+      "paused": [
+        {
+          "label": "Time (min)",
+          "value": "3"
+        },
+        {
+          "label": "Waiting",
+          "value": "2"
+        },
+        {
+          "label": "Busy desks",
+          "value": "1"
+        },
+        {
+          "label": "Completed",
+          "value": "1"
+        }
+      ],
+      "pauseStable": true,
+      "actions": [
+        {
+          "label": "Add resident",
+          "before": [
+            {
+              "label": "Time (min)",
+              "value": "3"
+            },
+            {
+              "label": "Waiting",
+              "value": "2"
+            },
+            {
+              "label": "Busy desks",
+              "value": "1"
+            },
+            {
+              "label": "Completed",
+              "value": "1"
+            }
+          ],
+          "after": [
+            {
+              "label": "Time (min)",
+              "value": "3"
+            },
+            {
+              "label": "Waiting",
+              "value": "3"
+            },
+            {
+              "label": "Busy desks",
+              "value": "1"
+            },
+            {
+              "label": "Completed",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "selection": "Waiting residents: 3 items (supplied order); Residents in service: 1 items (unordered); Clerk capacity: 1 of 1 seats; Completed residents: 1 items (unordered). Arrow keys select an item. Selected resident:1",
+      "alerts": [],
+      "errors": []
+    },
+    {
+      "slug": "des-ev-charging",
+      "control": {
+        "name": "vehicles",
+        "original": 3,
+        "changed": 4,
+        "observed": "4"
+      },
+      "setup": [
+        {
+          "label": "Time (min)",
+          "value": "0"
+        },
+        {
+          "label": "Charging",
+          "value": "2"
+        },
+        {
+          "label": "Waiting",
+          "value": "2"
+        },
+        {
+          "label": "Completed",
+          "value": "0"
+        },
+        {
+          "label": "Abandoned",
+          "value": "0"
+        }
+      ],
+      "step": [
+        {
+          "label": "Time (min)",
+          "value": "1"
+        },
+        {
+          "label": "Charging",
+          "value": "2"
+        },
+        {
+          "label": "Waiting",
+          "value": "2"
+        },
+        {
+          "label": "Completed",
+          "value": "0"
+        },
+        {
+          "label": "Abandoned",
+          "value": "0"
+        }
+      ],
+      "paused": [
+        {
+          "label": "Time (min)",
+          "value": "3"
+        },
+        {
+          "label": "Charging",
+          "value": "2"
+        },
+        {
+          "label": "Waiting",
+          "value": "1"
+        },
+        {
+          "label": "Completed",
+          "value": "1"
+        },
+        {
+          "label": "Abandoned",
+          "value": "0"
+        }
+      ],
+      "pauseStable": true,
+      "actions": [
+        {
+          "label": "Add priority vehicle",
+          "before": [
+            {
+              "label": "Time (min)",
+              "value": "3"
+            },
+            {
+              "label": "Charging",
+              "value": "2"
+            },
+            {
+              "label": "Waiting",
+              "value": "1"
+            },
+            {
+              "label": "Completed",
+              "value": "1"
+            },
+            {
+              "label": "Abandoned",
+              "value": "0"
+            }
+          ],
+          "after": [
+            {
+              "label": "Time (min)",
+              "value": "3"
+            },
+            {
+              "label": "Charging",
+              "value": "2"
+            },
+            {
+              "label": "Waiting",
+              "value": "2"
+            },
+            {
+              "label": "Completed",
+              "value": "1"
+            },
+            {
+              "label": "Abandoned",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "label": "Cancel waiting vehicle",
+          "before": [
+            {
+              "label": "Time (min)",
+              "value": "3"
+            },
+            {
+              "label": "Charging",
+              "value": "2"
+            },
+            {
+              "label": "Waiting",
+              "value": "2"
+            },
+            {
+              "label": "Completed",
+              "value": "1"
+            },
+            {
+              "label": "Abandoned",
+              "value": "0"
+            }
+          ],
+          "after": [
+            {
+              "label": "Time (min)",
+              "value": "3"
+            },
+            {
+              "label": "Charging",
+              "value": "2"
+            },
+            {
+              "label": "Waiting",
+              "value": "1"
+            },
+            {
+              "label": "Completed",
+              "value": "1"
+            },
+            {
+              "label": "Abandoned",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "selection": "Priority queue: 1 items (supplied order); Charging vehicles: 2 items (unordered); Charger capacity: 2 of 2 vehicles; Completed vehicles: 1 items (unordered); Cancelled vehicles: 1 items (unordered). Diamonds mark priority vehicles; rectangles mark ordinary vehicles. Capacity units do not identify a vehicle's charger. Arrow keys select an item. Selected vehicle:4",
+      "alerts": [],
+      "errors": []
+    },
+    {
+      "slug": "des-goods-buffer",
+      "control": {
+        "name": "capacity",
+        "original": 2,
+        "changed": 3,
+        "observed": "3"
+      },
+      "setup": [
+        {
+          "label": "Time (min)",
+          "value": "0"
+        },
+        {
+          "label": "Produced",
+          "value": "0"
+        },
+        {
+          "label": "Stored",
+          "value": "0"
+        },
+        {
+          "label": "Blocked producers",
+          "value": "0"
+        },
+        {
+          "label": "Collected",
+          "value": "0"
+        }
+      ],
+      "step": [
+        {
+          "label": "Time (min)",
+          "value": "1"
+        },
+        {
+          "label": "Produced",
+          "value": "1"
+        },
+        {
+          "label": "Stored",
+          "value": "1"
+        },
+        {
+          "label": "Blocked producers",
+          "value": "0"
+        },
+        {
+          "label": "Collected",
+          "value": "0"
+        }
+      ],
+      "paused": [
+        {
+          "label": "Time (min)",
+          "value": "3"
+        },
+        {
+          "label": "Produced",
+          "value": "3"
+        },
+        {
+          "label": "Stored",
+          "value": "3"
+        },
+        {
+          "label": "Blocked producers",
+          "value": "0"
+        },
+        {
+          "label": "Collected",
+          "value": "0"
+        }
+      ],
+      "pauseStable": true,
+      "actions": [
+        {
+          "label": "Produce crate",
+          "before": [
+            {
+              "label": "Time (min)",
+              "value": "3"
+            },
+            {
+              "label": "Produced",
+              "value": "3"
+            },
+            {
+              "label": "Stored",
+              "value": "3"
+            },
+            {
+              "label": "Blocked producers",
+              "value": "0"
+            },
+            {
+              "label": "Collected",
+              "value": "0"
+            }
+          ],
+          "after": [
+            {
+              "label": "Time (min)",
+              "value": "3"
+            },
+            {
+              "label": "Produced",
+              "value": "4"
+            },
+            {
+              "label": "Stored",
+              "value": "3"
+            },
+            {
+              "label": "Blocked producers",
+              "value": "1"
+            },
+            {
+              "label": "Collected",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "label": "Collect crate",
+          "before": [
+            {
+              "label": "Time (min)",
+              "value": "3"
+            },
+            {
+              "label": "Produced",
+              "value": "4"
+            },
+            {
+              "label": "Stored",
+              "value": "3"
+            },
+            {
+              "label": "Blocked producers",
+              "value": "1"
+            },
+            {
+              "label": "Collected",
+              "value": "0"
+            }
+          ],
+          "after": [
+            {
+              "label": "Time (min)",
+              "value": "3"
+            },
+            {
+              "label": "Produced",
+              "value": "4"
+            },
+            {
+              "label": "Stored",
+              "value": "3"
+            },
+            {
+              "label": "Blocked producers",
+              "value": "0"
+            },
+            {
+              "label": "Collected",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "selection": "Blocked puts: 0 items (supplied order); Stored crates: 3 items (supplied order); Store capacity: 3 of 3 crates; Collected crates: 1 items (unordered). Arrow keys select an item. Selected crate:1",
+      "alerts": [],
+      "errors": []
+    },
+    {
+      "slug": "des-bus-interchange",
+      "control": {
+        "name": "buses",
+        "original": 2,
+        "changed": 3,
+        "observed": "3"
+      },
+      "setup": [
+        {
+          "label": "Time (min)",
+          "value": "0"
+        },
+        {
+          "label": "Route (min)",
+          "value": "5"
+        },
+        {
+          "label": "Waiting",
+          "value": "0"
+        },
+        {
+          "label": "Departed",
+          "value": "0"
+        }
+      ],
+      "step": [
+        {
+          "label": "Time (min)",
+          "value": "1"
+        },
+        {
+          "label": "Route (min)",
+          "value": "5"
+        },
+        {
+          "label": "Waiting",
+          "value": "0"
+        },
+        {
+          "label": "Departed",
+          "value": "0"
+        }
+      ],
+      "paused": [
+        {
+          "label": "Time (min)",
+          "value": "3"
+        },
+        {
+          "label": "Route (min)",
+          "value": "5"
+        },
+        {
+          "label": "Waiting",
+          "value": "0"
+        },
+        {
+          "label": "Departed",
+          "value": "0"
+        }
+      ],
+      "pauseStable": true,
+      "actions": [
+        {
+          "label": "Dispatch bus",
+          "before": [
+            {
+              "label": "Time (min)",
+              "value": "3"
+            },
+            {
+              "label": "Route (min)",
+              "value": "5"
+            },
+            {
+              "label": "Waiting",
+              "value": "0"
+            },
+            {
+              "label": "Departed",
+              "value": "0"
+            }
+          ],
+          "after": [
+            {
+              "label": "Time (min)",
+              "value": "3"
+            },
+            {
+              "label": "Route (min)",
+              "value": "5"
+            },
+            {
+              "label": "Waiting",
+              "value": "0"
+            },
+            {
+              "label": "Departed",
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "selection": "4 buses traveling on the 5-minute route; 0 waiting; 0 at berth; 1 berth slots; 0 departed. Arrow keys select an item. Selected bus:4",
+      "alerts": [],
+      "errors": []
+    },
+    {
+      "slug": "des-parcel-logistics",
+      "control": {
+        "name": "parcels",
+        "original": 2,
+        "changed": 3,
+        "observed": "3"
+      },
+      "setup": [
+        {
+          "label": "Time (min)",
+          "value": "0"
+        },
+        {
+          "label": "Depot queue",
+          "value": "1"
+        },
+        {
+          "label": "Blocked senders",
+          "value": "1"
+        },
+        {
+          "label": "Van occupied",
+          "value": "1"
+        },
+        {
+          "label": "Delivered",
+          "value": "0"
+        }
+      ],
+      "step": [
+        {
+          "label": "Time (min)",
+          "value": "1"
+        },
+        {
+          "label": "Depot queue",
+          "value": "1"
+        },
+        {
+          "label": "Blocked senders",
+          "value": "1"
+        },
+        {
+          "label": "Van occupied",
+          "value": "1"
+        },
+        {
+          "label": "Delivered",
+          "value": "0"
+        }
+      ],
+      "paused": [
+        {
+          "label": "Time (min)",
+          "value": "3"
+        },
+        {
+          "label": "Depot queue",
+          "value": "1"
+        },
+        {
+          "label": "Blocked senders",
+          "value": "1"
+        },
+        {
+          "label": "Van occupied",
+          "value": "1"
+        },
+        {
+          "label": "Delivered",
+          "value": "1"
+        }
+      ],
+      "pauseStable": true,
+      "actions": [
+        {
+          "label": "Add parcel",
+          "before": [
+            {
+              "label": "Time (min)",
+              "value": "3"
+            },
+            {
+              "label": "Depot queue",
+              "value": "1"
+            },
+            {
+              "label": "Blocked senders",
+              "value": "1"
+            },
+            {
+              "label": "Van occupied",
+              "value": "1"
+            },
+            {
+              "label": "Delivered",
+              "value": "1"
+            }
+          ],
+          "after": [
+            {
+              "label": "Time (min)",
+              "value": "3"
+            },
+            {
+              "label": "Depot queue",
+              "value": "1"
+            },
+            {
+              "label": "Blocked senders",
+              "value": "2"
+            },
+            {
+              "label": "Van occupied",
+              "value": "1"
+            },
+            {
+              "label": "Delivered",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "selection": "1 parcels in 1 depot slots, 2 blocked outside, 1 delivered; 1 van occupied, returning to the depot. Arrow keys select an item. Selected van",
+      "alerts": [],
+      "errors": []
+    },
+    {
+      "slug": "des-waste-collection",
+      "control": {
+        "name": "loadCapacity",
+        "original": 4,
+        "changed": 5,
+        "observed": "5"
+      },
+      "setup": [
+        {
+          "label": "Time (min)",
+          "value": "0"
+        },
+        {
+          "label": "Remaining load",
+          "value": "12"
+        },
+        {
+          "label": "On truck",
+          "value": "0"
+        },
+        {
+          "label": "Delivered",
+          "value": "0"
+        }
+      ],
+      "step": [
+        {
+          "label": "Time (min)",
+          "value": "1"
+        },
+        {
+          "label": "Remaining load",
+          "value": "10"
+        },
+        {
+          "label": "On truck",
+          "value": "2"
+        },
+        {
+          "label": "Delivered",
+          "value": "0"
+        }
+      ],
+      "paused": [
+        {
+          "label": "Time (min)",
+          "value": "3"
+        },
+        {
+          "label": "Remaining load",
+          "value": "7"
+        },
+        {
+          "label": "On truck",
+          "value": "5"
+        },
+        {
+          "label": "Delivered",
+          "value": "0"
+        }
+      ],
+      "pauseStable": true,
+      "actions": [],
+      "selection": "Six collection patches contain 7 load units; triangle truck carries 5 of 5; 0 delivered; depot unloading. Squares mark individual units, outlined patches are empty when collected. Arrow keys select an item. Selected load:4",
+      "alerts": [],
+      "errors": []
+    },
+    {
+      "slug": "des-emergency-dispatch",
+      "control": {
+        "name": "serviceMinutes",
+        "original": 2,
+        "changed": 3,
+        "observed": "3"
+      },
+      "setup": [
+        {
+          "label": "Time (min)",
+          "value": "0"
+        },
+        {
+          "label": "Busy teams",
+          "value": "1"
+        },
+        {
+          "label": "Waiting calls",
+          "value": "2"
+        },
+        {
+          "label": "Completed",
+          "value": "0"
+        }
+      ],
+      "step": [
+        {
+          "label": "Time (min)",
+          "value": "1"
+        },
+        {
+          "label": "Busy teams",
+          "value": "1"
+        },
+        {
+          "label": "Waiting calls",
+          "value": "2"
+        },
+        {
+          "label": "Completed",
+          "value": "0"
+        }
+      ],
+      "paused": [
+        {
+          "label": "Time (min)",
+          "value": "3"
+        },
+        {
+          "label": "Busy teams",
+          "value": "1"
+        },
+        {
+          "label": "Waiting calls",
+          "value": "2"
+        },
+        {
+          "label": "Completed",
+          "value": "0"
+        }
+      ],
+      "pauseStable": true,
+      "actions": [],
+      "selection": "Four-node access path; three diamond calls, 2 waiting, 0 completed, 1 assigned triangle teams. Lower priority number is served first among waiting calls. Team placement marks assignment, not a physical travel position. Arrow keys select an item. Selected call:3",
+      "alerts": [],
+      "errors": []
+    },
+    {
+      "slug": "des-bike-redistribution",
+      "control": {
+        "name": "targetBikes",
+        "original": 2,
+        "changed": 3,
+        "observed": "3"
+      },
+      "setup": [
+        {
+          "label": "Time (min)",
+          "value": "0"
+        },
+        {
+          "label": "Bikes in transit",
+          "value": "0"
+        },
+        {
+          "label": "Delivered bikes",
+          "value": "0"
+        },
+        {
+          "label": "Total bikes",
+          "value": "9"
+        }
+      ],
+      "step": [
+        {
+          "label": "Time (min)",
+          "value": "1"
+        },
+        {
+          "label": "Bikes in transit",
+          "value": "0"
+        },
+        {
+          "label": "Delivered bikes",
+          "value": "2"
+        },
+        {
+          "label": "Total bikes",
+          "value": "9"
+        }
+      ],
+      "paused": [
+        {
+          "label": "Time (min)",
+          "value": "3"
+        },
+        {
+          "label": "Bikes in transit",
+          "value": "0"
+        },
+        {
+          "label": "Delivered bikes",
+          "value": "3"
+        },
+        {
+          "label": "Total bikes",
+          "value": "9"
+        }
+      ],
+      "pauseStable": true,
+      "actions": [],
+      "selection": "9 bikes conserved across three stores and truck: Depot 6 of 18 slots, Market 3 of 18 slots, Park 0 of 18 slots; 0 aboard. Dots are bikes; outlined dots are free slots; triangle is the truck at its last recorded stop. Arrow keys select an item. Selected cl_13qdpt0fcfq5q6k",
+      "alerts": [],
+      "errors": []
+    },
+    {
+      "slug": "des-water-allocation",
+      "control": {
+        "name": "supplyUnits",
+        "original": 6,
+        "changed": 9,
+        "observed": "9"
+      },
+      "setup": [
+        {
+          "label": "Time (min)",
+          "value": "0"
+        },
+        {
+          "label": "Supply units",
+          "value": "9"
+        },
+        {
+          "label": "Delivered units",
+          "value": "0"
+        },
+        {
+          "label": "Unmet units",
+          "value": "12"
+        }
+      ],
+      "step": [
+        {
+          "label": "Time (min)",
+          "value": "1"
+        },
+        {
+          "label": "Supply units",
+          "value": "9"
+        },
+        {
+          "label": "Delivered units",
+          "value": "9"
+        },
+        {
+          "label": "Unmet units",
+          "value": "3"
+        }
+      ],
+      "paused": [
+        {
+          "label": "Time (min)",
+          "value": "3"
+        },
+        {
+          "label": "Supply units",
+          "value": "9"
+        },
+        {
+          "label": "Delivered units",
+          "value": "9"
+        },
+        {
+          "label": "Unmet units",
+          "value": "3"
+        }
+      ],
+      "pauseStable": true,
+      "actions": [
+        {
+          "label": "Add 3 supply units",
+          "before": [
+            {
+              "label": "Time (min)",
+              "value": "3"
+            },
+            {
+              "label": "Supply units",
+              "value": "9"
+            },
+            {
+              "label": "Delivered units",
+              "value": "9"
+            },
+            {
+              "label": "Unmet units",
+              "value": "3"
+            }
+          ],
+          "after": [
+            {
+              "label": "Time (min)",
+              "value": "3"
+            },
+            {
+              "label": "Supply units",
+              "value": "12"
+            },
+            {
+              "label": "Delivered units",
+              "value": "9"
+            },
+            {
+              "label": "Unmet units",
+              "value": "3"
+            }
+          ]
+        }
+      ],
+      "selection": "Four district patches demand twelve discrete allocation units; 9 supplied, 3 unmet. Filled squares are delivered units, outlined squares unmet units. 12 supply units committed and 0 available; patch labels distinguish reserved and waiting allocations. No hydraulic flow is represented. Arrow keys select an item. Selected allocation:cl_15fhaswqvuencaa:2",
+      "alerts": [],
+      "errors": []
+    },
+    {
+      "slug": "des-machine-maintenance",
+      "control": {
+        "name": "repairMinutes",
+        "original": 3,
+        "changed": 4,
+        "observed": "4"
+      },
+      "setup": [
+        {
+          "label": "Time (min)",
+          "value": "0"
+        },
+        {
+          "label": "Operational machines",
+          "value": "3"
+        },
+        {
+          "label": "Waiting repairs",
+          "value": "0"
+        },
+        {
+          "label": "Completed repairs",
+          "value": "0"
+        },
+        {
+          "label": "Availability",
+          "value": "1.000"
+        }
+      ],
+      "step": [
+        {
+          "label": "Time (min)",
+          "value": "1"
+        },
+        {
+          "label": "Operational machines",
+          "value": "3"
+        },
+        {
+          "label": "Waiting repairs",
+          "value": "0"
+        },
+        {
+          "label": "Completed repairs",
+          "value": "0"
+        },
+        {
+          "label": "Availability",
+          "value": "1.000"
+        }
+      ],
+      "paused": [
+        {
+          "label": "Time (min)",
+          "value": "3"
+        },
+        {
+          "label": "Operational machines",
+          "value": "1"
+        },
+        {
+          "label": "Waiting repairs",
+          "value": "1"
+        },
+        {
+          "label": "Completed repairs",
+          "value": "0"
+        },
+        {
+          "label": "Availability",
+          "value": "0.889"
+        }
+      ],
+      "pauseStable": true,
+      "actions": [],
+      "selection": "Three square machines: 1 operational, 1 waiting, 1 being repaired. Triangle teams appear beneath assigned machines; neutral triangles are available teams. Status labels distinguish each state. 0 repairs completed. Arrow keys select an item. Selected cl_167ehrl2hd4prdn",
+      "alerts": [],
+      "errors": []
+    },
+    {
+      "slug": "des-elevator",
+      "control": {
+        "name": "floors",
+        "original": 6,
+        "changed": 7,
+        "observed": "7"
+      },
+      "setup": [
+        {
+          "label": "Time (s)",
+          "value": "0"
+        },
+        {
+          "label": "Waiting",
+          "value": "6"
+        },
+        {
+          "label": "Riding",
+          "value": "0"
+        },
+        {
+          "label": "Arrived",
+          "value": "0"
+        },
+        {
+          "label": "Mean wait (s)",
+          "value": "0.0"
+        },
+        {
+          "label": "Mean ride (s)",
+          "value": "0.0"
+        }
+      ],
+      "step": [
+        {
+          "label": "Time (s)",
+          "value": "1"
+        },
+        {
+          "label": "Waiting",
+          "value": "6"
+        },
+        {
+          "label": "Riding",
+          "value": "0"
+        },
+        {
+          "label": "Arrived",
+          "value": "0"
+        },
+        {
+          "label": "Mean wait (s)",
+          "value": "0.0"
+        },
+        {
+          "label": "Mean ride (s)",
+          "value": "0.0"
+        }
+      ],
+      "paused": [
+        {
+          "label": "Time (s)",
+          "value": "3"
+        },
+        {
+          "label": "Waiting",
+          "value": "4"
+        },
+        {
+          "label": "Riding",
+          "value": "2"
+        },
+        {
+          "label": "Arrived",
+          "value": "0"
+        },
+        {
+          "label": "Mean wait (s)",
+          "value": "2.5"
+        },
+        {
+          "label": "Mean ride (s)",
+          "value": "0.0"
+        }
+      ],
+      "pauseStable": true,
+      "actions": [
+        {
+          "label": "Add passenger",
+          "before": [
+            {
+              "label": "Time (s)",
+              "value": "3"
+            },
+            {
+              "label": "Waiting",
+              "value": "4"
+            },
+            {
+              "label": "Riding",
+              "value": "2"
+            },
+            {
+              "label": "Arrived",
+              "value": "0"
+            },
+            {
+              "label": "Mean wait (s)",
+              "value": "2.5"
+            },
+            {
+              "label": "Mean ride (s)",
+              "value": "0.0"
+            }
+          ],
+          "after": [
+            {
+              "label": "Time (s)",
+              "value": "3"
+            },
+            {
+              "label": "Waiting",
+              "value": "5"
+            },
+            {
+              "label": "Riding",
+              "value": "2"
+            },
+            {
+              "label": "Arrived",
+              "value": "0"
+            },
+            {
+              "label": "Mean wait (s)",
+              "value": "2.5"
+            },
+            {
+              "label": "Mean ride (s)",
+              "value": "0.0"
+            }
+          ]
+        }
+      ],
+      "selection": "7 floors, 2 cars with 4 slots each. 5 amber floor dots waiting, 2 teal cabin dots riding, 0 passengers have arrived and left the scene. Triangles indicate requested and car directions. Diagram coordinates; time 3 seconds. Arrow keys select an item. Selected direction:2",
+      "alerts": [],
+      "errors": []
+    }
+  ],
+  "errors": [],
+  "console": []
+}
