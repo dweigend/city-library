@@ -1,3 +1,6 @@
+import type { Agenda } from "../agenda/index.ts";
+import type { Graph } from "../graph/graph.ts";
+import { activate, report, select, type ActivationContext, type ActivationOptions, type ActivationSource, type SelectionOptions, type WorldMember } from "./activation/index.ts";
 import type { Grid, GridMembership, LayoutGrid } from "../grid/grid.ts";
 import {
   normalizeSpace,
@@ -9,24 +12,30 @@ import {
 import type { Agent } from "../agent/agent.ts";
 import {
   frameworkRecord,
+  frameworkOwner,
   registerFramework,
-  requireAgent,
-  requireLivingAgent,
   notifyMembership,
 } from "../agent/lifecycle.ts";
 import { validateOptions } from "../agent/state.ts";
 import { Random, isRandom } from "../random/random.ts";
 import { createClock, type Clock, type Tick } from "./tick.ts";
+type WorldComponent = Agent | GridMembership | Graph | Agenda;
 export interface World {
   readonly space: NormalizedSpace | undefined;
   readonly random: Random;
   readonly tick: Tick;
   readonly agents: readonly Agent[];
   readonly grids: readonly (Grid | LayoutGrid)[];
-  add<T extends Agent | GridMembership>(component: T): T;
-  add<T extends Agent | GridMembership>(components: Iterable<T>): readonly T[];
+  readonly graphs: readonly Graph[];
+  readonly agendas: readonly Agenda[];
+  activate<T extends WorldMember>(source: ActivationSource<T>, action: (context: ActivationContext<T>) => unknown, options?: ActivationOptions<T>): void;
+  report<T extends WorldMember, R>(source: T, callback: (context: ActivationContext<T>) => R, options?: ActivationOptions<T>): R | undefined;
+  report<T extends WorldMember, R>(source: readonly T[] | { kind: "agents" | "fields" | "edges"; breed?: string }, callback: (context: ActivationContext<T>) => R, options?: ActivationOptions<T>): readonly (R | undefined)[];
+  select<T extends WorldMember>(source: ActivationSource<T>, predicate: (context: ActivationContext<T>) => boolean, options?: SelectionOptions): readonly T[];
+  add<T extends WorldComponent>(component: T): T;
+  add<T extends WorldComponent>(components: Iterable<T>): readonly T[];
   delete(
-    component: Agent | GridMembership | Iterable<Agent | GridMembership>,
+    component: WorldComponent | Iterable<WorldComponent>,
   ): void;
 }
 const clocks = new WeakMap<World, Clock>();
@@ -37,19 +46,19 @@ export function worldClock(value: unknown): Clock {
 }
 function entrySnapshot(value: unknown): {
   single: boolean;
-  entries: (Agent | GridMembership)[];
+  entries: (WorldComponent)[];
 } {
-  if (["agent", "grid"].includes(frameworkRecord(value)?.kind ?? ""))
-    return { single: true, entries: [value as Agent | GridMembership] };
+  if (["agent", "grid", "graph", "agenda"].includes(frameworkRecord(value)?.kind ?? ""))
+    return { single: true, entries: [value as WorldComponent] };
   if (
     (typeof value !== "object" && typeof value !== "function") ||
     value === null ||
     !(Symbol.iterator in value)
   )
-    throw new TypeError("Expected an Agent or iterable of Agents.");
+    throw new TypeError("Expected a component or iterable of components.");
   return {
     single: false,
-    entries: [...new Set(value as Iterable<Agent | GridMembership>)],
+    entries: [...new Set(value as Iterable<WorldComponent>)],
   };
 }
 function add(options?: { random?: Random }): World;
@@ -87,7 +96,7 @@ function add(
   const random =
     values.random === undefined ? Random.add() : (values.random as Random);
   const clock = createClock();
-  const members = new Set<Agent | GridMembership>();
+  const members = new Set<WorldComponent>();
   const world: World = {
     space,
     random,
@@ -106,7 +115,18 @@ function add(
         ),
       );
     },
-    add<T extends Agent | GridMembership>(
+    get graphs() {
+      return Object.freeze([...members].filter((value): value is Graph => frameworkRecord(value)?.kind === "graph"));
+    },
+    get agendas() {
+      return Object.freeze([...members].filter((value): value is Agenda => frameworkRecord(value)?.kind === "agenda"));
+    },
+    activate(source, action, options) { activate(world, source, action, options); },
+    report(source, callback, options) {
+      return report(world, source, callback, options) as never;
+    },
+    select(source, predicate, options) { return select(world, source, predicate, options); },
+    add<T extends WorldComponent>(
       value: T | Iterable<T>,
     ): T & readonly T[] {
       const { single, entries } = entrySnapshot(value);
@@ -114,10 +134,10 @@ function add(
         const record = frameworkRecord(agent);
         if (
           !record ||
-          !["agent", "grid"].includes(record.kind) ||
+          !["agent", "grid", "graph", "agenda"].includes(record.kind) ||
           !record.alive
         )
-          throw new TypeError("Expected living Agent or Grid.");
+          throw new TypeError("Expected a living Agent, Grid, Graph or Agenda.");
         if (space) {
           if (record.kind === "agent") {
             const point = agent as Agent;
@@ -135,7 +155,7 @@ function add(
                 )
             )
               throw new RangeError("Agent outside World Space.");
-          } else {
+          } else if (record.kind === "grid") {
             const grid = agent as Grid | LayoutGrid;
             if ("layout" in grid) {
               if (space.dimensions !== 2 || space.boundary.x !== "hard" || space.boundary.y !== "hard")
@@ -162,12 +182,21 @@ function add(
           }
         }
         if (record.world && record.world !== world)
-          throw new TypeError("Agent belongs to another World.");
+          throw new TypeError("Component belongs to another World.");
+        for (const participant of record.deletionParticipants) participant.validateWorld?.(world);
+      }
+      const prospective = new Set([...members, ...entries]);
+      for (const component of prospective) {
+        if (frameworkRecord(component)?.kind !== "graph") continue;
+        for (const node of (component as Graph).nodes) {
+          const owner = frameworkOwner(node);
+          if (owner && owner !== world) throw new TypeError("Graph node belongs to another World.");
+        }
       }
       for (const agent of entries) {
         const record = frameworkRecord(agent);
-        if (!record || !["agent", "grid"].includes(record.kind))
-          throw new TypeError("Expected Agent or Grid.");
+        if (!record || !["agent", "grid", "graph", "agenda"].includes(record.kind))
+          throw new TypeError("Expected an Agent, Grid, Graph or Agenda.");
         if (members.has(agent)) continue;
         members.add(agent);
         record.world = world;
@@ -181,19 +210,19 @@ function add(
       }
       return (single ? entries[0] : Object.freeze(entries)) as T & readonly T[];
     },
-    delete(value: Agent | GridMembership | Iterable<Agent | GridMembership>) {
+    delete(value: WorldComponent | Iterable<WorldComponent>) {
       const { entries } = entrySnapshot(value);
       for (const agent of entries) {
         const record = frameworkRecord(agent);
-        if (!record || !["agent", "grid"].includes(record.kind))
-          throw new TypeError("Expected Agent or Grid.");
+        if (!record || !["agent", "grid", "graph", "agenda"].includes(record.kind))
+          throw new TypeError("Expected an Agent, Grid, Graph or Agenda.");
         if (record.world && record.world !== world)
-          throw new TypeError("Agent belongs to another World.");
+          throw new TypeError("Component belongs to another World.");
       }
       for (const agent of entries) {
         const record = frameworkRecord(agent);
-        if (!record || !["agent", "grid"].includes(record.kind))
-          throw new TypeError("Expected Agent or Grid.");
+        if (!record || !["agent", "grid", "graph", "agenda"].includes(record.kind))
+          throw new TypeError("Expected an Agent, Grid, Graph or Agenda.");
         if (record.world === world) record.detach?.();
       }
     },
