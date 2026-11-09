@@ -122,7 +122,7 @@ function wrapLabel(value: string): string[] {
   return lines;
 }
 function summary(row: CollectionRow): string {
-  if (row.kind === "items") return `${row.label}: ${row.items.length} items (${row.order === "supplied" ? "supplied order" : "unordered"})`;
+  if (row.kind === "items") return `${row.label}: ${row.items.length} ${row.items.length === 1 ? "item" : "items"} (${row.order === "supplied" ? "supplied order" : "unordered"})`;
   if (row.kind === "count") return `${row.label}: ${row.count}`;
   const excess = Math.max(0, row.used - row.capacity);
   return `${row.label}: ${row.used} of ${row.capacity} ${row.unit}${excess ? `; ${excess} excess above capacity` : ""}`;
