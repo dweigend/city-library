@@ -29,12 +29,14 @@ Each of the ten entries was loaded, given an edited setup input, initialized, ad
 | Household recycling behavior | Seeded graph and adoption series progressed. Live influence 0 retained exactly one initial adopter after ten steps. After the screenshot finding, parent changed graph labels to compact H1…H12 and added the accepted inspector view. Clicking H1 in the node selector displayed Household 1/recycling true. Clicking the actual H11 canvas node changed the inspector to Household 11/recycling true while Tick 10 and seven adopters stayed unchanged. All four views and two scrolled narrow inspector states were recaptured. |
 | Workplace and household membership | Reassign first resident changed workplace; all seven residents retained household and workplace rows, with 14 membership edges. Graph and table updated through the shared actions. |
 
+A separate playback check let each of the ten models run for 500 ms: every first monitor advanced from zero. After Pause and settled Run-button state, another 500 ms left the displayed step/run counter unchanged. Three checks were repeated with a settled paused baseline because a scheduled frame landed between the first read and the Pause click. The repeated counters were stable; no post-pause advancement was observed. Raw interaction/playback journals are retained under `/tmp/mesa-browser/`.
+
 Additional interaction checks:
 
 - On narrow view, Parameters expands the canonical controls; they remain usable.
 - Keyboard catalog selection via search, ArrowDown and Enter switched the membership model to Solar Battery Microgrid, changed the URL, cleared the old results/canvas and showed Setup to begin. Focus returned to the Experiment combobox. Setup followed by Tab moved focus to Run with its visible 3 px focus ring.
 - Occupied capacity shrink 3→2 was rejected with Capacity cannot shrink below granted units, aria-invalid=true, and occupied remained 3. Correcting slots to 4 cleared the error and admitted the next applicant.
-- No unexpected browser error or model alert remained in the successful checked flows. The explicitly induced capacity error is expected validation behavior.
+- No unexpected model alert remained in the successful checked flows. The explicitly induced capacity error is expected validation behavior. Snapshot console arrays are not a universal console-error guarantee; the later explicit resize-error reproduction below qualifies that evidence.
 
 The first Residential navigation showed a stale catalog-metadata error for the previously absent Resource export. The parent restarted only the port-3191 Vite server after runtime integration; Residential then loaded and passed the checks above. This was recorded as an integration cache issue, not accepted as a source-only workaround.
 
@@ -65,3 +67,13 @@ Additional scrolled images:
 ## Acceptance limits
 
 This record establishes executed browser interactions and captured evidence. Independent screenshot findings, parent fixes and independent reapproval belong to the separate screenshot-review record. This worker does not claim complete accessibility conformance, touch-device coverage, scientific validation, or full NetLogo compatibility. Browser checks do not replace the shell/type/package checks recorded by other workers.
+
+## Portable evidence copies
+
+The coordinator copied all forty-four final approved PNGs byte-for-byte into [browser-evidence](browser-evidence/manifest.json). The manifest records original paths, verified CSS viewport/DPR, portable filenames and SHA-256 values. Every copy hash equals its independently inspected original. This does not replace or expand the review; it preserves those same images without requiring temporary browser directories.
+
+## Late resize-error investigation
+
+After the successful interaction and image checks, Salabim reported Vite client window errors during resizing. The coordinator independently installed a `window.error` listener before Setup on port 3191. Four alternating narrow390×844/desktop1366×768 resizes, each settled for500ms, produced no errors in Household Recycling Behavior (network and chart). The same sequence in the integrated DES Machine Maintenance spatial view produced five `ResizeObserver loop completed with undelivered notifications.` events, including initialization. The model remained usable; no model-state loss was observed in this short sequence. An empty preview snapshot console array and the silent local Vite session did not detect this event channel.
+
+The shared spatial canvas observer is under coordinated investigation by Salabim. No source change or universal console-clean claim is made by this report. Existing successful flows and independent image approval remain their stated evidence; they do not clear this runtime warning. Any accepted fix and targeted reproduction result will be recorded separately.
