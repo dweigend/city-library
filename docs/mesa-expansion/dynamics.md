@@ -11,3 +11,7 @@ This phase implements the existing World activation contract first. The ordinary
 Stopping, step budgets, and outcome reasons use the existing `experiments.run` contract. No competing runner is added. World tick, Agenda time and elapsed physical duration remain distinct. Groups use caller objects as Graph nodes, graph edges for membership, and frozen native snapshots of neighbors; no parallel group registry is needed.
 
 The five public scripts in `examples/mesa-dynamics` are the phase acceptance contract. They cover deterministic activation/lifecycle, seeded scheduling, two-phase updates, linear thresholds, and Graph membership combined with study stopping. Runtime implementation must preserve these assertions.
+
+## Agenda membership
+
+The binding World attachment contract extends its existing owner protocol to Agenda and Graph. `world.add` and `world.delete` accept one component or a finite iterable, identity-deduplicate at entry, and validate the complete batch before mutation. `world.agendas` and `world.graphs` are frozen insertion-order snapshots of canonical references. Agenda attaches to at most one World through the existing private framework record, with no competing ownership map. Detachment preserves events/time, registration never dispatches or advances any clock. The four `examples/mesa-attachment` scripts freeze identity, mixed batch, conflict atomicity and snapshot guarantees before Agenda attachment runtime changes.
