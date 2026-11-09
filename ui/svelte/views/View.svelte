@@ -96,8 +96,9 @@
         labelControl = data.showLabels === undefined && data.agents.some(agent => Boolean(agent.label));
       }
       if (current.type === "table") {
-        rows = current.rows(value);
-        page = tablePage(rows, untrack(() => page)).page;
+        const projectedRows = current.rows(value);
+        page = tablePage(projectedRows, untrack(() => page)).page;
+        rows = projectedRows;
       }
       if (current.type === "inspector") inspected = current.value(value, id);
       untrack(() => mounted?.update(value, id, enabled));
