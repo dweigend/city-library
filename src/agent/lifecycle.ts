@@ -4,7 +4,7 @@ export interface DeletionParticipant {
   commit(): void;
 }
 interface FrameworkRecord {
-  readonly kind: "agent" | "world" | "random" | "graph" | "edge" | "grid" | "field";
+  readonly kind: "agent" | "world" | "random" | "graph" | "edge" | "grid" | "field" | "agenda";
   alive: boolean;
   world?: World;
   detach?: () => void;
