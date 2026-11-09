@@ -390,4 +390,4 @@ Complete widgets, defaults, actions, plot setup/update code and topology:
   
 ```
 
-Complete Info, provenance, limitations and notices remain in [source](../../../experiments/artificial-neural-net-perceptron/source.nlogox) and [NOTICE](../../../experiments/artificial-neural-net-perceptron/NOTICE.md). Runtime interpretation: [batch contract](../../../docs/development/selected-computing-contract.md). Execution evidence is separate.
+Complete Info, provenance, limitations and notices remain in [source](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/artificial-neural-net-perceptron/source.nlogox) and [NOTICE](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/artificial-neural-net-perceptron/NOTICE.md). Runtime interpretation: [batch contract](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/docs/development/selected-computing-contract.md). Execution evidence is separate.

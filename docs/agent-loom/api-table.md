@@ -245,7 +245,7 @@ Run synchronous model updates; steps defaults to 1. Each successful callback add
 
 ```ts
 world.activate<T extends WorldMember>(source: ActivationSource<T>, action: (context: ActivationContext<T>) => unknown,
-  options?: { order?: "shuffle" | "netlogo-7.0.0"; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; breeds?: ReadonlyMap<WorldMember,string>; breedOrder?: readonly string[] }): void
+  options?: { order?: "fixed" | "shuffle" | "priority" | "netlogo-7.0.0"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; breeds?: ReadonlyMap<WorldMember,string>; breedOrder?: readonly string[] }): void
 ```
 
 Invoke a synchronous action for selected World members under explicit scheduling and scoped self/caller contexts. Never adds ticks.
@@ -259,7 +259,7 @@ Invoke a synchronous action for selected World members under explicit scheduling
 
 ```ts
 world.report<T extends WorldMember,R>(source: T, report: (context: ActivationContext<T>) => R,
-  options?: { order?: "shuffle" | "netlogo-7.0.0"; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; breeds?: ReadonlyMap<WorldMember,string>; breedOrder?: readonly string[] }): R | undefined
+  options?: { order?: "fixed" | "shuffle" | "priority" | "netlogo-7.0.0"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; breeds?: ReadonlyMap<WorldMember,string>; breedOrder?: readonly string[] }): R | undefined
 ```
 
 Evaluate a synchronous report for one or more World members under explicit scheduling and scoped contexts. Never adds ticks.
@@ -273,7 +273,7 @@ Evaluate a synchronous report for one or more World members under explicit sched
 
 ```ts
 world.report<T extends WorldMember,R>(source: readonly T[] | { kind: "agents" | "fields" | "edges"; breed?: string }, report: (context: ActivationContext<T>) => R,
-  options?: { order?: "shuffle" | "netlogo-7.0.0"; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; breeds?: ReadonlyMap<WorldMember,string>; breedOrder?: readonly string[] }): readonly (R | undefined)[]
+  options?: { order?: "fixed" | "shuffle" | "priority" | "netlogo-7.0.0"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; breeds?: ReadonlyMap<WorldMember,string>; breedOrder?: readonly string[] }): readonly (R | undefined)[]
 ```
 
 Evaluate a synchronous report for one or more World members under explicit scheduling and scoped contexts. Never adds ticks.
@@ -2057,6 +2057,19 @@ Draw a gamma value using positive finite shape and rate; mean equals shape/rate.
 
 [Details](api-reference.md#complete-distributions)
 
+<a id="random-number-additive-distributions"></a>
+
+### Additive random.number variants
+
+```ts
+random.number(options: { distribution: "bernoulli", probability: number }): number
+random.number(options: { distribution: "triangular", min: number, mode: number, max: number }): number
+```
+
+Bernoulli returns numeric 0 or 1 for finite probability in [0,1]. Triangular requires finite min ≤ mode ≤ max and finite range width. Each nonconstant draw consumes one standard-stream uniform; Bernoulli probabilities 0/1 and constant triangular consume none. Invalid options reject before drawing. These delivered additions supplement the original numbered inventory and do not imply another stream-compatibility profile.
+
+[Details](api-reference.md#complete-distributions)
+
 <a id="random-number-6"></a>
 <a id="api-146"></a>
 
@@ -2670,6 +2683,18 @@ Read the current agenda time, starting at 0. advance changes only this time; it 
 
 [Details](api-reference.md#agenda)
 
+<a id="agenda-size"></a>
+
+### agenda.size
+
+```ts
+agenda.size: number // readonly
+```
+
+Read the pending-event count without advancing any clock or dispatching work. This delivered addition supplements the original numbered inventory.
+
+[Details](api-reference.md#agenda)
+
 <a id="agenda-add-2"></a>
 <a id="api-190"></a>
 
@@ -2708,6 +2733,18 @@ agenda.advance(options: { until: number; maxEvents?: number }): readonly Event<E
 Return detached due events in time/priority/sequence order; maxEvents defaults to 1000. If due events remain after the budget, stop agenda.time at the last dispatched time; otherwise advance it to until. Never advances World ticks.
 
 [Details](api-reference.md#agenda)
+
+<a id="agenda-next"></a>
+
+### agenda.next
+
+```ts
+agenda.next(options: { until: number }): Event<E> | undefined
+```
+
+Extract at most one due event. Success leaves Agenda time at event.at even for the last due event; absence advances it to until. The caller handles each result before extracting more events and supplies its own finite dispatch budget. No callbacks or World tick changes occur. The existing batch advance contract is unchanged. This delivered addition supplements the original numbered inventory.
+
+[Details](api-reference.md#agenda) · [Causal composition](../development/des-contract.md#time-and-causality)
 
 <a id="type-event-handle"></a>
 <a id="api-193"></a>
@@ -4658,3 +4695,7 @@ type Position = { readonly x:number; readonly y:number; readonly z?:number };
 Finite x/y coordinates with optional z; the operation’s spatial context determines the required dimension.
 
 [Details](api-reference.md#pure-spatial-contracts)
+
+## Additive ordinary tools
+
+The root exports `measurements`, `twoPhase` and `continuous` add pure measurement projection, a synchronous compute/commit barrier and linear threshold calculations. World activation also accepts fixed and stable priority ordering. Their [reference contracts](api-reference.md#additive-measurement-and-update-tools) and [frozen examples](../mesa-expansion/STATUS.md) supplement the original operation inventory; they do not imply complete continuation or NetLogo compatibility.

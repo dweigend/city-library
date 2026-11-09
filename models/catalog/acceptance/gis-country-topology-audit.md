@@ -1,6 +1,6 @@
 # Pinned country rings: exact offline topology and Polygon budget audit
 
-The actual country data fit the existing **2048-position per-Polygon comparison** after shell/hole grouping: the maximum resulting Polygon has **1282 positions including all closing vertices**. No simplification, raised limit, projection, source repair or runtime implementation was used. This closes the numerical source-data question left in [the archival data audit](gis-data-audit.md) and [the planar advisory status](planar-geometry-advisory-status.md); it does not resolve the broader unfrozen planar API proposal or establish GIS model acceptance.
+The actual country data fit the existing **2048-position per-Polygon comparison** after shell/hole grouping: the maximum resulting Polygon has **1282 positions including all closing vertices**. No simplification, raised limit, projection, source repair or runtime implementation was used. This closes the numerical source-data question left in [the archival data audit](gis-data-audit.md) and [the planar advisory status](https://github.com/dweigend/city-library/blob/dc7b164abd23c8e7b7f11c902195ab030c5f1c4b/docs/development/planar-geometry-advisory-status.md); it does not resolve the broader unfrozen planar API proposal or establish GIS model acceptance.
 
 ## Inputs and reproducibility
 
@@ -11,7 +11,7 @@ Only existing local files were read. Both compound-data inputs match the previou
 | `experiments/gis-general-examples/data/countries.shp` | 400460 | `eb10297087c926150c13f5547abef10c7692e89ebae1c5d73d69a2d2769a7f89` | `ba2311503ad153b6fab2f7baeca0db28c4626cdb` |
 | `experiments/gis-general-examples/data/countries.dbf` | 101732 | `87bc912fe6433f761de79c0ad6f6c3449331db3f9e4ef713ffc46b1550274092` | `9c10a4cdfe224fd75f6845ff86d8566d7e8c89a8` |
 
-The unchanged [proposal source fixtures](../../examples/planar-geometry-proposal/source-fixtures.json) supply the earlier record/ring budget context; its own SHA-256 is recorded in [audit.json](gis-country-topology-evidence/audit.json). DBF names identify the historical records; they are not current geographic or political assertions. Rights and notices remain the separate qualified findings in the archival audit.
+The unchanged [proposal source fixtures](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/examples/planar-geometry-proposal/source-fixtures.json) supply the earlier record/ring budget context; its own SHA-256 is recorded in [audit.json](gis-country-topology-evidence/audit.json). DBF names identify the historical records; they are not current geographic or political assertions. Rights and notices remain the separate qualified findings in the archival audit.
 
 Run from the repository root:
 
@@ -21,7 +21,7 @@ python3 docs/development/gis-country-topology-evidence/verify.py
 sha256sum -c docs/development/gis-country-topology-evidence/SHA256SUMS
 ```
 
-The [audit script](gis-country-topology-evidence/audit.py) is offline evidence tooling, not a production decoder, reusable geometry library or model helper. Its four JSON outputs are deterministic; wall-clock timing is printed separately. [Validation results](gis-country-topology-evidence/validation.json) record executed checks.
+The [audit script](https://github.com/dweigend/city-library/blob/dc7b164abd23c8e7b7f11c902195ab030c5f1c4b/docs/development/gis-country-topology-evidence/audit.py) is offline evidence tooling, not a production decoder, reusable geometry library or model helper. Its four JSON outputs are deterministic; wall-clock timing is printed separately. [Validation results](gis-country-topology-evidence/validation.json) record executed checks.
 
 ## Exact predicates and executed coverage
 

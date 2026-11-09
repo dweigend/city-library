@@ -1,0 +1,1800 @@
+{
+  "method": "T3 preview real Chrome; Playwright MCP launch blocked by SUID sandbox",
+  "baseUrl": "http://localhost:3211",
+  "screenshots": [
+    {
+      "slug": "des-civic-office",
+      "viewport": "desktop",
+      "theme": "light",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-civic-office-desktop-light.png",
+      "css": {
+        "width": 1366,
+        "height": 768,
+        "scrollWidth": 1366,
+        "dark": false,
+        "background": "oklch(1 0 0)",
+        "styles": [
+          {
+            "selector": "body",
+            "color": "oklch(0.145 0 0)",
+            "background": "oklch(1 0 0)"
+          },
+          {
+            "selector": "tbody td",
+            "color": "oklch(0.145 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "selector": "input[type=number]",
+            "color": "oklch(0.145 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "selector": "button[aria-label=Experiment]",
+            "color": "oklch(0.145 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91mxyr-dff603a1.png",
+      "sha256": "954d5a7b9f5dbd1a5bdf91b90d9da3a585868492ee4542e302346dbb65846eab"
+    },
+    {
+      "slug": "des-civic-office",
+      "viewport": "desktop",
+      "theme": "dark",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-civic-office-desktop-dark.png",
+      "css": {
+        "width": 1366,
+        "height": 768,
+        "scrollWidth": 1366,
+        "dark": true,
+        "background": "oklch(0.145 0 0)",
+        "styles": [
+          {
+            "selector": "body",
+            "color": "oklch(0.985 0 0)",
+            "background": "oklch(0.145 0 0)"
+          },
+          {
+            "selector": "tbody td",
+            "color": "oklch(0.985 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "selector": "input[type=number]",
+            "color": "oklch(0.985 0 0)",
+            "background": "oklab(0.36 0 0 / 0.3)"
+          },
+          {
+            "selector": "button[aria-label=Experiment]",
+            "color": "oklch(0.985 0 0)",
+            "background": "oklab(0.36 0 0 / 0.3)"
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91myi0-f267afae.png",
+      "sha256": "8f7943edd4e8dba14b28d22ad987b71d9b0a66156407ec140a0ee9c5e9fee3e9"
+    },
+    {
+      "slug": "des-civic-office",
+      "viewport": "narrow",
+      "theme": "light",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-civic-office-narrow-light.png",
+      "css": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "dark": false,
+        "background": "oklch(1 0 0)",
+        "styles": [
+          {
+            "selector": "body",
+            "color": "oklch(0.145 0 0)",
+            "background": "oklch(1 0 0)"
+          },
+          {
+            "selector": "tbody td",
+            "color": "oklch(0.145 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "selector": "input[type=number]",
+            "color": "oklch(0.145 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "selector": "button[aria-label=Experiment]",
+            "color": "oklch(0.145 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91myyp-9ef10661.png",
+      "sha256": "01b78fd346a49a4bb825cc255c55e7d929ffe623a64d6719d745069e29652b5a"
+    },
+    {
+      "slug": "des-civic-office",
+      "viewport": "narrow",
+      "theme": "dark",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-civic-office-narrow-dark.png",
+      "css": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "dark": true,
+        "background": "oklch(0.145 0 0)",
+        "styles": [
+          {
+            "selector": "body",
+            "color": "oklch(0.985 0 0)",
+            "background": "oklch(0.145 0 0)"
+          },
+          {
+            "selector": "tbody td",
+            "color": "oklch(0.985 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "selector": "input[type=number]",
+            "color": "oklch(0.985 0 0)",
+            "background": "oklab(0.36 0 0 / 0.3)"
+          },
+          {
+            "selector": "button[aria-label=Experiment]",
+            "color": "oklch(0.985 0 0)",
+            "background": "oklab(0.36 0 0 / 0.5)"
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91mzf1-6c439b76.png",
+      "sha256": "69daab2d56a17867cee3116508e5653af44e6dbd145c7e92982c7de2637f1269"
+    },
+    {
+      "slug": "des-ev-charging",
+      "viewport": "desktop",
+      "theme": "light",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-ev-charging-desktop-light.png",
+      "css": {
+        "width": 1366,
+        "height": 768,
+        "scrollWidth": 1366,
+        "dark": false,
+        "background": "oklch(1 0 0)",
+        "styles": [
+          {
+            "selector": "body",
+            "color": "oklch(0.145 0 0)",
+            "background": "oklch(1 0 0)"
+          },
+          {
+            "selector": "tbody td",
+            "color": "oklch(0.145 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "selector": "input[type=number]",
+            "color": "oklch(0.145 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "selector": "button[aria-label=Experiment]",
+            "color": "oklch(0.145 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91n0am-bbe6ed56.png",
+      "sha256": "f207c8d6691c04615c8d22c37e0044e90e3cbf97b5ede361495d6a70a2cc1c5a"
+    },
+    {
+      "slug": "des-ev-charging",
+      "viewport": "desktop",
+      "theme": "dark",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-ev-charging-desktop-dark.png",
+      "css": {
+        "width": 1366,
+        "height": 768,
+        "scrollWidth": 1366,
+        "dark": true,
+        "background": "oklch(0.145 0 0)",
+        "styles": [
+          {
+            "selector": "body",
+            "color": "oklch(0.985 0 0)",
+            "background": "oklch(0.145 0 0)"
+          },
+          {
+            "selector": "tbody td",
+            "color": "oklch(0.985 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "selector": "input[type=number]",
+            "color": "oklch(0.985 0 0)",
+            "background": "oklab(0.36 0 0 / 0.3)"
+          },
+          {
+            "selector": "button[aria-label=Experiment]",
+            "color": "oklch(0.985 0 0)",
+            "background": "oklab(0.36 0 0 / 0.3)"
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91n0sz-c1a5234e.png",
+      "sha256": "370db0a76d0ea9a127757f63e77e3ea085a9ca1a4f2ca84533ba1ffc60686a80"
+    },
+    {
+      "slug": "des-ev-charging",
+      "viewport": "narrow",
+      "theme": "light",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-ev-charging-narrow-light.png",
+      "css": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "dark": false,
+        "background": "oklch(1 0 0)",
+        "styles": [
+          {
+            "selector": "body",
+            "color": "oklch(0.145 0 0)",
+            "background": "oklch(1 0 0)"
+          },
+          {
+            "selector": "tbody td",
+            "color": "oklch(0.145 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "selector": "input[type=number]",
+            "color": "oklch(0.145 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "selector": "button[aria-label=Experiment]",
+            "color": "oklch(0.145 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91n19k-45dce550.png",
+      "sha256": "1038858ebc8744c6ab6e29ceba1067bdcfd0883996846bb02a4f742db158abc5"
+    },
+    {
+      "slug": "des-ev-charging",
+      "viewport": "narrow",
+      "theme": "dark",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-ev-charging-narrow-dark.png",
+      "css": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "dark": true,
+        "background": "oklch(0.145 0 0)",
+        "styles": [
+          {
+            "selector": "body",
+            "color": "oklch(0.985 0 0)",
+            "background": "oklch(0.145 0 0)"
+          },
+          {
+            "selector": "tbody td",
+            "color": "oklch(0.985 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "selector": "input[type=number]",
+            "color": "oklch(0.985 0 0)",
+            "background": "oklab(0.36 0 0 / 0.3)"
+          },
+          {
+            "selector": "button[aria-label=Experiment]",
+            "color": "oklch(0.985 0 0)",
+            "background": "oklab(0.36 0 0 / 0.3)"
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91n1pr-438cf3e6.png",
+      "sha256": "2a50786e4459371265605a6e488c5c630c80571d57b739658caced60dbdfe076"
+    },
+    {
+      "slug": "des-goods-buffer",
+      "viewport": "desktop",
+      "theme": "light",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-goods-buffer-desktop-light.png",
+      "css": {
+        "width": 1366,
+        "height": 768,
+        "scrollWidth": 1366,
+        "dark": false,
+        "background": "oklch(1 0 0)",
+        "styles": [
+          {
+            "selector": "body",
+            "color": "oklch(0.145 0 0)",
+            "background": "oklch(1 0 0)"
+          },
+          null,
+          {
+            "selector": "input[type=number]",
+            "color": "oklch(0.145 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "selector": "button[aria-label=Experiment]",
+            "color": "oklch(0.145 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91n2j5-d04e3f87.png",
+      "sha256": "a3e7adcd338e4af56d1f6be0d693e7b920e37b126ab85ac5e91480bd5556975f"
+    },
+    {
+      "slug": "des-goods-buffer",
+      "viewport": "desktop",
+      "theme": "dark",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-goods-buffer-desktop-dark.png",
+      "css": {
+        "width": 1366,
+        "height": 768,
+        "scrollWidth": 1366,
+        "dark": true,
+        "background": "oklch(0.145 0 0)",
+        "styles": [
+          {
+            "selector": "body",
+            "color": "oklch(0.985 0 0)",
+            "background": "oklch(0.145 0 0)"
+          },
+          null,
+          {
+            "selector": "input[type=number]",
+            "color": "oklch(0.985 0 0)",
+            "background": "oklab(0.36 0 0 / 0.3)"
+          },
+          {
+            "selector": "button[aria-label=Experiment]",
+            "color": "oklch(0.985 0 0)",
+            "background": "oklab(0.36 0 0 / 0.3)"
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91n31g-f7ec2372.png",
+      "sha256": "250e92ee55fcc80344484bebce4818c7ae6c19a8d31a8b514ca4a64419306c2e"
+    },
+    {
+      "slug": "des-goods-buffer",
+      "viewport": "narrow",
+      "theme": "light",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-goods-buffer-narrow-light.png",
+      "css": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "dark": false,
+        "background": "oklch(1 0 0)",
+        "styles": [
+          {
+            "selector": "body",
+            "color": "oklch(0.145 0 0)",
+            "background": "oklch(1 0 0)"
+          },
+          null,
+          {
+            "selector": "input[type=number]",
+            "color": "oklch(0.145 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "selector": "button[aria-label=Experiment]",
+            "color": "oklch(0.145 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91n3i4-44ce8f8e.png",
+      "sha256": "88525484e20a689bc0906b77e2fd43af546d382dca922ac1364c7290e9a4dedf"
+    },
+    {
+      "slug": "des-goods-buffer",
+      "viewport": "narrow",
+      "theme": "dark",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-goods-buffer-narrow-dark.png",
+      "css": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "dark": true,
+        "background": "oklch(0.145 0 0)",
+        "styles": [
+          {
+            "selector": "body",
+            "color": "oklch(0.985 0 0)",
+            "background": "oklch(0.145 0 0)"
+          },
+          null,
+          {
+            "selector": "input[type=number]",
+            "color": "oklch(0.985 0 0)",
+            "background": "oklab(0.36 0 0 / 0.3)"
+          },
+          {
+            "selector": "button[aria-label=Experiment]",
+            "color": "oklch(0.985 0 0)",
+            "background": "oklab(0.36 0 0 / 0.3)"
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91n3yc-fce14ad0.png",
+      "sha256": "b8d6eaa1e39eb4106a1b67bb6da3254d28b498a593df56eeda565462874755af"
+    },
+    {
+      "slug": "des-bus-interchange",
+      "viewport": "desktop",
+      "theme": "light",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-bus-interchange-desktop-light.png",
+      "css": {
+        "width": 1366,
+        "height": 768,
+        "scrollWidth": 1366,
+        "dark": false,
+        "background": "oklch(1 0 0)",
+        "styles": [
+          {
+            "selector": "body",
+            "color": "oklch(0.145 0 0)",
+            "background": "oklch(1 0 0)"
+          },
+          {
+            "selector": "tbody td",
+            "color": "oklch(0.145 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "selector": "input[type=number]",
+            "color": "oklch(0.145 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "selector": "button[aria-label=Experiment]",
+            "color": "oklch(0.145 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91n4vz-81d10a5e.png",
+      "sha256": "70165be1430cc7ceb5ba8ebf94c16cf86d6ec70a02bdb688c9c95d6139a2f370"
+    },
+    {
+      "slug": "des-bus-interchange",
+      "viewport": "desktop",
+      "theme": "dark",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-bus-interchange-desktop-dark.png",
+      "css": {
+        "width": 1366,
+        "height": 768,
+        "scrollWidth": 1366,
+        "dark": true,
+        "background": "oklch(0.145 0 0)",
+        "styles": [
+          {
+            "selector": "body",
+            "color": "oklch(0.985 0 0)",
+            "background": "oklch(0.145 0 0)"
+          },
+          {
+            "selector": "tbody td",
+            "color": "oklch(0.985 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "selector": "input[type=number]",
+            "color": "oklch(0.985 0 0)",
+            "background": "oklab(0.36 0 0 / 0.3)"
+          },
+          {
+            "selector": "button[aria-label=Experiment]",
+            "color": "oklch(0.985 0 0)",
+            "background": "oklab(0.36 0 0 / 0.3)"
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91n5g7-cfff251f.png",
+      "sha256": "8898b9f655e80b836ad2ed4c3d9c7becf722fdcf3cc024155505488f150a830e"
+    },
+    {
+      "slug": "des-bus-interchange",
+      "viewport": "narrow",
+      "theme": "light",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-bus-interchange-narrow-light.png",
+      "css": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "dark": false,
+        "background": "oklch(1 0 0)",
+        "styles": [
+          {
+            "selector": "body",
+            "color": "oklch(0.145 0 0)",
+            "background": "oklch(1 0 0)"
+          },
+          {
+            "selector": "tbody td",
+            "color": "oklch(0.145 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "selector": "input[type=number]",
+            "color": "oklch(0.145 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "selector": "button[aria-label=Experiment]",
+            "color": "oklch(0.145 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91n5xo-7965d332.png",
+      "sha256": "1d152ad04024fd276f8a615d90bb43fc6548ad1a86a0f2bb01fa0ca565fc004e"
+    },
+    {
+      "slug": "des-bus-interchange",
+      "viewport": "narrow",
+      "theme": "dark",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-bus-interchange-narrow-dark.png",
+      "css": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "dark": true,
+        "background": "oklch(0.145 0 0)",
+        "styles": [
+          {
+            "selector": "body",
+            "color": "oklch(0.985 0 0)",
+            "background": "oklch(0.145 0 0)"
+          },
+          {
+            "selector": "tbody td",
+            "color": "oklch(0.985 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "selector": "input[type=number]",
+            "color": "oklch(0.985 0 0)",
+            "background": "oklab(0.36 0 0 / 0.3)"
+          },
+          {
+            "selector": "button[aria-label=Experiment]",
+            "color": "oklch(0.985 0 0)",
+            "background": "oklab(0.36 0 0 / 0.3)"
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91n6ea-837fe874.png",
+      "sha256": "edf11fa6361f07aab8602c3bb6a0e5dccff500b778f4fca4f3a07ea259a24a85"
+    },
+    {
+      "slug": "des-parcel-logistics",
+      "viewport": "desktop",
+      "theme": "light",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-parcel-logistics-desktop-light.png",
+      "css": {
+        "width": 1366,
+        "height": 768,
+        "scrollWidth": 1366,
+        "dark": false,
+        "background": "oklch(1 0 0)",
+        "styles": [
+          {
+            "selector": "body",
+            "color": "oklch(0.145 0 0)",
+            "background": "oklch(1 0 0)"
+          },
+          {
+            "selector": "tbody td",
+            "color": "oklch(0.145 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "selector": "input[type=number]",
+            "color": "oklch(0.145 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "selector": "button[aria-label=Experiment]",
+            "color": "oklch(0.145 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91n7ag-d39c0d39.png",
+      "sha256": "78de349dfbd32e50de84bd5f20238df23c955ac9af65897634886702d821ac40"
+    },
+    {
+      "slug": "des-parcel-logistics",
+      "viewport": "desktop",
+      "theme": "dark",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-parcel-logistics-desktop-dark.png",
+      "css": {
+        "width": 1366,
+        "height": 768,
+        "scrollWidth": 1366,
+        "dark": true,
+        "background": "oklch(0.145 0 0)",
+        "styles": [
+          {
+            "selector": "body",
+            "color": "oklch(0.985 0 0)",
+            "background": "oklch(0.145 0 0)"
+          },
+          {
+            "selector": "tbody td",
+            "color": "oklch(0.985 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "selector": "input[type=number]",
+            "color": "oklch(0.985 0 0)",
+            "background": "oklab(0.36 0 0 / 0.3)"
+          },
+          {
+            "selector": "button[aria-label=Experiment]",
+            "color": "oklch(0.985 0 0)",
+            "background": "oklab(0.36 0 0 / 0.3)"
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91n7tl-56de5907.png",
+      "sha256": "a3f21a42cf136c176b904f96304676d3ddedd626a3814b5586ed6905f2dda503"
+    },
+    {
+      "slug": "des-parcel-logistics",
+      "viewport": "narrow",
+      "theme": "light",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-parcel-logistics-narrow-light.png",
+      "css": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "dark": false,
+        "background": "oklch(1 0 0)",
+        "styles": [
+          {
+            "selector": "body",
+            "color": "oklch(0.145 0 0)",
+            "background": "oklch(1 0 0)"
+          },
+          {
+            "selector": "tbody td",
+            "color": "oklch(0.145 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "selector": "input[type=number]",
+            "color": "oklch(0.145 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "selector": "button[aria-label=Experiment]",
+            "color": "oklch(0.145 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91n8aw-0725262b.png",
+      "sha256": "416686ddb862c7cc4d4ae4041b11c0bb9238b39042ae31fc1eff2aea0ccb74c4"
+    },
+    {
+      "slug": "des-parcel-logistics",
+      "viewport": "narrow",
+      "theme": "dark",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-parcel-logistics-narrow-dark.png",
+      "css": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "dark": true,
+        "background": "oklch(0.145 0 0)",
+        "styles": [
+          {
+            "selector": "body",
+            "color": "oklch(0.985 0 0)",
+            "background": "oklch(0.145 0 0)"
+          },
+          {
+            "selector": "tbody td",
+            "color": "oklch(0.985 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "selector": "input[type=number]",
+            "color": "oklch(0.985 0 0)",
+            "background": "oklab(0.36 0 0 / 0.3)"
+          },
+          {
+            "selector": "button[aria-label=Experiment]",
+            "color": "oklch(0.985 0 0)",
+            "background": "oklab(0.36 0 0 / 0.3)"
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91n90j-95422607.png",
+      "sha256": "1bac53f980a6f00d3cf59b1bbd8b93d899b4e2f54903a98211f5c84a33d5984c"
+    },
+    {
+      "slug": "des-waste-collection",
+      "viewport": "desktop",
+      "theme": "light",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-waste-collection-desktop-light.png",
+      "css": {
+        "width": 1366,
+        "height": 768,
+        "scrollWidth": 1366,
+        "dark": false,
+        "background": "oklch(1 0 0)",
+        "errors": [],
+        "rejections": [],
+        "buffers": [
+          {
+            "width": 1382,
+            "height": 922,
+            "cssWidth": 690.6953125,
+            "cssHeight": 460.796875
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "windowErrorListenerBeforeSetup": true,
+      "canvasFix": "11d78f7",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw92b96b-561d63ba.png",
+      "sha256": "e0b59e4508957068147c8da7725c491b226b80922b7a5d26f6e07f2be7d25f9d",
+      "supersedesSourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91no9s-51de3d2a.png"
+    },
+    {
+      "slug": "des-waste-collection",
+      "viewport": "desktop",
+      "theme": "dark",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-waste-collection-desktop-dark.png",
+      "css": {
+        "width": 1366,
+        "height": 768,
+        "scrollWidth": 1366,
+        "dark": true,
+        "background": "oklch(0.145 0 0)",
+        "errors": [],
+        "rejections": [],
+        "buffers": [
+          {
+            "width": 1382,
+            "height": 922,
+            "cssWidth": 690.6953125,
+            "cssHeight": 460.796875
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "windowErrorListenerBeforeSetup": true,
+      "canvasFix": "11d78f7",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw92b9p8-df2aa08b.png",
+      "sha256": "4a817b38b9ee00817ab9a829310f3c1d3938ba6deea973d3cfd6bb0ae838f572",
+      "supersedesSourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91nos6-e50c4ba9.png"
+    },
+    {
+      "slug": "des-waste-collection",
+      "viewport": "narrow",
+      "theme": "light",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-waste-collection-narrow-light.png",
+      "css": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "dark": false,
+        "background": "oklch(1 0 0)",
+        "errors": [],
+        "rejections": [],
+        "buffers": [
+          {
+            "width": 732,
+            "height": 488,
+            "cssWidth": 366,
+            "cssHeight": 244
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "windowErrorListenerBeforeSetup": true,
+      "canvasFix": "11d78f7",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw92ba5y-40c37247.png",
+      "sha256": "39908fb1886e7eb9bca57c1f78fd3f947cf8925dfdafb594bf1ef09231ca0336",
+      "supersedesSourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91npo1-79e06d18.png"
+    },
+    {
+      "slug": "des-waste-collection",
+      "viewport": "narrow",
+      "theme": "dark",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-waste-collection-narrow-dark.png",
+      "css": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "dark": true,
+        "background": "oklch(0.145 0 0)",
+        "errors": [],
+        "rejections": [],
+        "buffers": [
+          {
+            "width": 732,
+            "height": 488,
+            "cssWidth": 366,
+            "cssHeight": 244
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "windowErrorListenerBeforeSetup": true,
+      "canvasFix": "11d78f7",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw92bam3-084389c4.png",
+      "sha256": "c008e573053b99d74c5f46ba78b8dc046d7c7e06d18737db5f067afb37495bb8",
+      "supersedesSourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91nqd3-0662c066.png"
+    },
+    {
+      "slug": "des-emergency-dispatch",
+      "viewport": "desktop",
+      "theme": "light",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-emergency-dispatch-desktop-light.png",
+      "css": {
+        "width": 1366,
+        "height": 768,
+        "scrollWidth": 1366,
+        "dark": false,
+        "background": "oklch(1 0 0)",
+        "styles": [
+          {
+            "selector": "body",
+            "color": "oklch(0.145 0 0)",
+            "background": "oklch(1 0 0)"
+          },
+          {
+            "selector": "tbody td",
+            "color": "oklch(0.145 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "selector": "input[type=number]",
+            "color": "oklch(0.145 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "selector": "button[aria-label=Experiment]",
+            "color": "oklch(0.145 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91nr9b-53c8583c.png",
+      "sha256": "6acc76491daacf433a6b735a73058bf0489e8f2e1a0724fc7e35d53839c380ca"
+    },
+    {
+      "slug": "des-emergency-dispatch",
+      "viewport": "desktop",
+      "theme": "dark",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-emergency-dispatch-desktop-dark.png",
+      "css": {
+        "width": 1366,
+        "height": 768,
+        "scrollWidth": 1366,
+        "dark": true,
+        "background": "oklch(0.145 0 0)",
+        "styles": [
+          {
+            "selector": "body",
+            "color": "oklch(0.985 0 0)",
+            "background": "oklch(0.145 0 0)"
+          },
+          {
+            "selector": "tbody td",
+            "color": "oklch(0.985 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "selector": "input[type=number]",
+            "color": "oklch(0.985 0 0)",
+            "background": "oklab(0.36 0 0 / 0.3)"
+          },
+          {
+            "selector": "button[aria-label=Experiment]",
+            "color": "oklch(0.985 0 0)",
+            "background": "oklab(0.36 0 0 / 0.3)"
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91nrs9-defa3658.png",
+      "sha256": "ec4c0a243e7660873500b71e85252e39a007935bb7647743a0f371f38d4dc7f8"
+    },
+    {
+      "slug": "des-emergency-dispatch",
+      "viewport": "narrow",
+      "theme": "light",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-emergency-dispatch-narrow-light.png",
+      "css": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "dark": false,
+        "background": "oklch(1 0 0)",
+        "styles": [
+          {
+            "selector": "body",
+            "color": "oklch(0.145 0 0)",
+            "background": "oklch(1 0 0)"
+          },
+          {
+            "selector": "tbody td",
+            "color": "oklch(0.145 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "selector": "input[type=number]",
+            "color": "oklch(0.145 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "selector": "button[aria-label=Experiment]",
+            "color": "oklch(0.145 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91ns9q-550dcc55.png",
+      "sha256": "ae21d95e747c0b47a43783a84e5072af1834a61d1bc2bad70fbbb8d5d83fc4c5"
+    },
+    {
+      "slug": "des-emergency-dispatch",
+      "viewport": "narrow",
+      "theme": "dark",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-emergency-dispatch-narrow-dark.png",
+      "css": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "dark": true,
+        "background": "oklch(0.145 0 0)",
+        "styles": [
+          {
+            "selector": "body",
+            "color": "oklch(0.985 0 0)",
+            "background": "oklch(0.145 0 0)"
+          },
+          {
+            "selector": "tbody td",
+            "color": "oklch(0.985 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "selector": "input[type=number]",
+            "color": "oklch(0.985 0 0)",
+            "background": "oklab(0.36 0 0 / 0.3)"
+          },
+          {
+            "selector": "button[aria-label=Experiment]",
+            "color": "oklch(0.985 0 0)",
+            "background": "oklab(0.36 0 0 / 0.3)"
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91nspw-c42e7e4d.png",
+      "sha256": "2effc3805a0620cbde007796d1d1746ef78cad6f3135059f0a4c32bacd2fdc20"
+    },
+    {
+      "slug": "des-bike-redistribution",
+      "viewport": "desktop",
+      "theme": "light",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-bike-redistribution-desktop-light.png",
+      "css": {
+        "width": 1366,
+        "height": 768,
+        "scrollWidth": 1366,
+        "dark": false,
+        "background": "oklch(1 0 0)",
+        "errors": [],
+        "rejections": [],
+        "buffers": [
+          {
+            "width": 1843,
+            "height": 922,
+            "cssWidth": 921.09375,
+            "cssHeight": 460.796875
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "windowErrorListenerBeforeSetup": true,
+      "canvasFix": "11d78f7",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw92bd4l-9f51d112.png",
+      "sha256": "a106731e95d80d93dbe49672117462f92a949f275964fc2aa4b87187008cc992",
+      "supersedesSourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91ntiz-dbdcd005.png"
+    },
+    {
+      "slug": "des-bike-redistribution",
+      "viewport": "desktop",
+      "theme": "dark",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-bike-redistribution-desktop-dark.png",
+      "css": {
+        "width": 1366,
+        "height": 768,
+        "scrollWidth": 1366,
+        "dark": true,
+        "background": "oklch(0.145 0 0)",
+        "errors": [],
+        "rejections": [],
+        "buffers": [
+          {
+            "width": 1843,
+            "height": 922,
+            "cssWidth": 921.09375,
+            "cssHeight": 460.796875
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "windowErrorListenerBeforeSetup": true,
+      "canvasFix": "11d78f7",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw92bds2-8737a63f.png",
+      "sha256": "dcddd1dcb550e9923af8ff59ee5feee5c214f936f6c87ffa6b901c9b75aab64f",
+      "supersedesSourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91nu1i-581e9082.png"
+    },
+    {
+      "slug": "des-bike-redistribution",
+      "viewport": "narrow",
+      "theme": "light",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-bike-redistribution-narrow-light.png",
+      "css": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "dark": false,
+        "background": "oklch(1 0 0)",
+        "errors": [],
+        "rejections": [],
+        "buffers": [
+          {
+            "width": 732,
+            "height": 366,
+            "cssWidth": 366,
+            "cssHeight": 183
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "windowErrorListenerBeforeSetup": true,
+      "canvasFix": "11d78f7",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw92be8f-20127e01.png",
+      "sha256": "4d31b1aca54186ada9adb02ed04349fde026b37c4541cbcd0242b2dba7a81a52",
+      "supersedesSourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91nuhw-9db02756.png"
+    },
+    {
+      "slug": "des-bike-redistribution",
+      "viewport": "narrow",
+      "theme": "dark",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-bike-redistribution-narrow-dark.png",
+      "css": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "dark": true,
+        "background": "oklch(0.145 0 0)",
+        "errors": [],
+        "rejections": [],
+        "buffers": [
+          {
+            "width": 732,
+            "height": 366,
+            "cssWidth": 366,
+            "cssHeight": 183
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "windowErrorListenerBeforeSetup": true,
+      "canvasFix": "11d78f7",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw92beo9-32873f4c.png",
+      "sha256": "122cf4d777c2688dae198689dcbd79616225b6458a876cd3ca21c6253eb12ce9",
+      "supersedesSourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91nuxz-ecd0e116.png"
+    },
+    {
+      "slug": "des-water-allocation",
+      "viewport": "desktop",
+      "theme": "light",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-water-allocation-desktop-light.png",
+      "css": {
+        "width": 1366,
+        "height": 768,
+        "scrollWidth": 1366,
+        "dark": false,
+        "background": "oklch(1 0 0)",
+        "styles": [
+          {
+            "selector": "body",
+            "color": "oklch(0.145 0 0)",
+            "background": "oklch(1 0 0)"
+          },
+          {
+            "selector": "tbody td",
+            "color": "oklch(0.145 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "selector": "input[type=number]",
+            "color": "oklch(0.145 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "selector": "button[aria-label=Experiment]",
+            "color": "oklch(0.145 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91nvqt-6656921e.png",
+      "sha256": "4a0d31775aedd2f8d789769aab074710aeaaf8fb31de06ae12e66a23a5546e14"
+    },
+    {
+      "slug": "des-water-allocation",
+      "viewport": "desktop",
+      "theme": "dark",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-water-allocation-desktop-dark.png",
+      "css": {
+        "width": 1366,
+        "height": 768,
+        "scrollWidth": 1366,
+        "dark": true,
+        "background": "oklch(0.145 0 0)",
+        "styles": [
+          {
+            "selector": "body",
+            "color": "oklch(0.985 0 0)",
+            "background": "oklch(0.145 0 0)"
+          },
+          {
+            "selector": "tbody td",
+            "color": "oklch(0.985 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "selector": "input[type=number]",
+            "color": "oklch(0.985 0 0)",
+            "background": "oklab(0.36 0 0 / 0.3)"
+          },
+          {
+            "selector": "button[aria-label=Experiment]",
+            "color": "oklch(0.985 0 0)",
+            "background": "oklab(0.36 0 0 / 0.3)"
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91nw9p-cbdc5549.png",
+      "sha256": "93b510c2ca9df8c696e3b04f06a29dfcb8c97d86096eeddfe538a5ad13ea0dcf"
+    },
+    {
+      "slug": "des-water-allocation",
+      "viewport": "narrow",
+      "theme": "light",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-water-allocation-narrow-light.png",
+      "css": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "dark": false,
+        "background": "oklch(1 0 0)",
+        "styles": [
+          {
+            "selector": "body",
+            "color": "oklch(0.145 0 0)",
+            "background": "oklch(1 0 0)"
+          },
+          {
+            "selector": "tbody td",
+            "color": "oklch(0.145 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "selector": "input[type=number]",
+            "color": "oklch(0.145 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "selector": "button[aria-label=Experiment]",
+            "color": "oklch(0.145 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91nwqe-a7af0ae4.png",
+      "sha256": "5cf405a235ec26720449c595265bd09ce0913ed98d9a39918232779bbc8552f4"
+    },
+    {
+      "slug": "des-water-allocation",
+      "viewport": "narrow",
+      "theme": "dark",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-water-allocation-narrow-dark.png",
+      "css": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "dark": true,
+        "background": "oklch(0.145 0 0)",
+        "styles": [
+          {
+            "selector": "body",
+            "color": "oklch(0.985 0 0)",
+            "background": "oklch(0.145 0 0)"
+          },
+          {
+            "selector": "tbody td",
+            "color": "oklch(0.985 0 0)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "selector": "input[type=number]",
+            "color": "oklch(0.985 0 0)",
+            "background": "oklab(0.36 0 0 / 0.3)"
+          },
+          {
+            "selector": "button[aria-label=Experiment]",
+            "color": "oklch(0.985 0 0)",
+            "background": "oklab(0.36 0 0 / 0.3)"
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91nx6k-63528c3d.png",
+      "sha256": "a073d99f18a065a0c86bb281310e28ed9b0a6dcf3a4ec35308159c47a89e9f8b"
+    },
+    {
+      "slug": "des-machine-maintenance",
+      "viewport": "desktop",
+      "theme": "light",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-machine-maintenance-desktop-light.png",
+      "css": {
+        "width": 1366,
+        "height": 768,
+        "scrollWidth": 1366,
+        "dark": false,
+        "background": "oklch(1 0 0)",
+        "errors": [],
+        "rejections": [],
+        "buffers": [
+          {
+            "width": 2044,
+            "height": 818,
+            "cssWidth": 1022,
+            "cssHeight": 409
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "windowErrorListenerBeforeSetup": true,
+      "canvasFix": "11d78f7",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw92bgzu-16d391d5.png",
+      "sha256": "9f0f40c43dbef2c54056af694eaa42f4e898f7b7d485a639c8797a09c9746d00",
+      "supersedesSourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91v4wb-8148f040.png"
+    },
+    {
+      "slug": "des-machine-maintenance",
+      "viewport": "desktop",
+      "theme": "dark",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-machine-maintenance-desktop-dark.png",
+      "css": {
+        "width": 1366,
+        "height": 768,
+        "scrollWidth": 1366,
+        "dark": true,
+        "background": "oklch(0.145 0 0)",
+        "errors": [],
+        "rejections": [],
+        "buffers": [
+          {
+            "width": 2044,
+            "height": 818,
+            "cssWidth": 1022,
+            "cssHeight": 409
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "windowErrorListenerBeforeSetup": true,
+      "canvasFix": "11d78f7",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw92bhjb-ca66d0c0.png",
+      "sha256": "16ba2833857984ed69dc326349506a69eeca841e8ccac2fc9845b69d60917d62",
+      "supersedesSourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91v5eq-88fcab63.png"
+    },
+    {
+      "slug": "des-machine-maintenance",
+      "viewport": "narrow",
+      "theme": "light",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-machine-maintenance-narrow-light.png",
+      "css": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "dark": false,
+        "background": "oklch(1 0 0)",
+        "errors": [],
+        "rejections": [],
+        "buffers": [
+          {
+            "width": 732,
+            "height": 293,
+            "cssWidth": 366,
+            "cssHeight": 146.5
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "windowErrorListenerBeforeSetup": true,
+      "canvasFix": "11d78f7",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw92bi1a-811e3db0.png",
+      "sha256": "be86f78ed2bdf007fe1a955da1f45a4abdf5bc99e082369120af21e0fe3e9b90",
+      "supersedesSourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91v5vc-1c9fe832.png"
+    },
+    {
+      "slug": "des-machine-maintenance",
+      "viewport": "narrow",
+      "theme": "dark",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/des-machine-maintenance-narrow-dark.png",
+      "css": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "dark": true,
+        "background": "oklch(0.145 0 0)",
+        "errors": [],
+        "rejections": [],
+        "buffers": [
+          {
+            "width": 732,
+            "height": 293,
+            "cssWidth": 366,
+            "cssHeight": 146.5
+          }
+        ]
+      },
+      "themeSettle": "500ms plus two animation frames",
+      "windowErrorListenerBeforeSetup": true,
+      "canvasFix": "11d78f7",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw92bihk-c493d266.png",
+      "sha256": "8989cda17e339e000c4582fa1191a91c8a706b62fbf56e7bdd286cc55db2f224",
+      "supersedesSourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91v6b4-a9080a5b.png"
+    }
+  ],
+  "flows": [
+    {
+      "slug": "des-civic-office",
+      "initial": {
+        "monitors": "Time (min)\n0\nWaiting\n2\nBusy desks\n1\nCompleted\n0",
+        "rows": [
+          "1\t0\t0\t-1\tgranted\n2\t0\t-1\t-1\twaiting\n3\t0\t-1\t-1\twaiting"
+        ]
+      },
+      "running": {
+        "monitors": "Time (min)\n5\nWaiting\n0\nBusy desks\n1\nCompleted\n2",
+        "status": true
+      },
+      "paused": {
+        "monitors": "Time (min)\n5\nWaiting\n0\nBusy desks\n1\nCompleted\n2",
+        "paused": true
+      }
+    },
+    {
+      "slug": "des-ev-charging",
+      "initial": {
+        "monitors": "Time (min)\n0\nCharging\n2\nWaiting\n1\nCompleted\n0\nAbandoned\n0",
+        "rows": [
+          "1\t2\t0\t-1\tgranted\n2\t4\t0\t-1\tgranted\n3\t2\t-1\t-1\twaiting"
+        ]
+      },
+      "running": {
+        "monitors": "Time (min)\n5\nCharging\n0\nWaiting\n0\nCompleted\n3\nAbandoned\n0",
+        "status": true
+      },
+      "paused": {
+        "monitors": "Time (min)\n5\nCharging\n0\nWaiting\n0\nCompleted\n3\nAbandoned\n0",
+        "paused": true
+      }
+    },
+    {
+      "slug": "des-goods-buffer",
+      "initial": {
+        "monitors": "Time (min)\n0\nProduced\n0\nStored\n0\nBlocked producers\n0\nCollected\n0",
+        "rows": [
+          ""
+        ]
+      },
+      "running": {
+        "monitors": "Time (min)\n5\nProduced\n3\nStored\n2\nBlocked producers\n0\nCollected\n1",
+        "status": true
+      },
+      "paused": {
+        "monitors": "Time (min)\n5\nProduced\n3\nStored\n2\nBlocked producers\n0\nCollected\n1",
+        "paused": true
+      }
+    },
+    {
+      "slug": "des-bus-interchange",
+      "initial": {
+        "monitors": "Time (min)\n0\nRoute (min)\n5\nWaiting\n0\nDeparted\n0",
+        "rows": [
+          "1\t-1\t-1\t-1\n2\t-1\t-1\t-1"
+        ]
+      },
+      "running": {
+        "monitors": "Time (min)\n5\nRoute (min)\n5\nWaiting\n1\nDeparted\n0",
+        "status": true
+      },
+      "paused": {
+        "monitors": "Time (min)\n5\nRoute (min)\n5\nWaiting\n1\nDeparted\n0",
+        "paused": true
+      }
+    },
+    {
+      "slug": "des-parcel-logistics",
+      "initial": {
+        "monitors": "Time (min)\n0\nDepot queue\n1\nBlocked senders\n0\nVan occupied\n1\nDelivered\n0",
+        "rows": [
+          "1\tEast\t2\t0\t-1\t-1\n2\tWest\t3\t-1\t-1\t-1"
+        ]
+      },
+      "running": {
+        "monitors": "Time (min)\n5\nDepot queue\n0\nBlocked senders\n0\nVan occupied\n1\nDelivered\n1",
+        "status": true
+      },
+      "paused": {
+        "monitors": "Time (min)\n5\nDepot queue\n0\nBlocked senders\n0\nVan occupied\n1\nDelivered\n1",
+        "paused": true
+      }
+    },
+    {
+      "slug": "des-waste-collection",
+      "initial": {
+        "monitors": "Time (min)\n0\nRemaining load\n12\nOn truck\n0\nDelivered\n0",
+        "rows": []
+      },
+      "running": {
+        "monitors": "Time (min)\n5\nRemaining load\n6\nOn truck\n2\nDelivered\n4",
+        "status": true
+      },
+      "paused": {
+        "monitors": "Time (min)\n5\nRemaining load\n6\nOn truck\n2\nDelivered\n4",
+        "paused": true
+      }
+    },
+    {
+      "slug": "des-emergency-dispatch",
+      "initial": {
+        "monitors": "Time (min)\n0\nBusy teams\n1\nWaiting calls\n2\nCompleted\n0",
+        "rows": [
+          "1\tMarket\t5\t0\t-1\tgranted\n2\tHospital\t0\t-1\t-1\twaiting\n3\tSchool\t5\t-1\t-1\twaiting"
+        ]
+      },
+      "running": {
+        "monitors": "Time (min)\n5\nBusy teams\n1\nWaiting calls\n1\nCompleted\n1",
+        "status": true
+      },
+      "paused": {
+        "monitors": "Time (min)\n7\nBusy teams\n1\nWaiting calls\n1\nCompleted\n1",
+        "paused": true
+      }
+    },
+    {
+      "slug": "des-bike-redistribution",
+      "initial": {
+        "monitors": "Time (min)\n0\nBikes in transit\n0\nDelivered bikes\n0\nTotal bikes\n6",
+        "rows": [
+          ""
+        ]
+      },
+      "running": {
+        "monitors": "Time (min)\n5\nBikes in transit\n0\nDelivered bikes\n4\nTotal bikes\n6",
+        "status": true
+      },
+      "paused": {
+        "monitors": "Time (min)\n5\nBikes in transit\n0\nDelivered bikes\n4\nTotal bikes\n6",
+        "paused": true
+      }
+    },
+    {
+      "slug": "des-water-allocation",
+      "initial": {
+        "monitors": "Time (min)\n0\nSupply units\n6\nDelivered units\n0\nUnmet units\n12",
+        "rows": [
+          "cl_17izzbfuwx252\tDistrict 1\t-0.5\t-0.5\t3\t0\tgranted\ncl_7id8dgryr0w15\tDistrict 2\t0.5\t-0.5\t3\t0\tgranted\ncl_427np4pbk1zcs\tDistrict 3\t-0.5\t0.5\t3\t0\twaiting\ncl_ad1l06q1mg66v\tDistrict 4\t0.5\t0.5\t3\t0\twaiting"
+        ]
+      },
+      "running": {
+        "monitors": "Time (min)\n5\nSupply units\n6\nDelivered units\n6\nUnmet units\n6",
+        "status": true
+      },
+      "paused": {
+        "monitors": "Time (min)\n5\nSupply units\n6\nDelivered units\n6\nUnmet units\n6",
+        "paused": true
+      }
+    },
+    {
+      "slug": "des-machine-maintenance",
+      "initial": {
+        "monitors": "Time (min)\n0\nOperational machines\n3\nWaiting repairs\n0\nCompleted repairs\n0\nAvailability\n1.000",
+        "rows": [
+          "cl_17izzbfuwx252\t1\t-3\t0\t0\t1\toperational\ncl_7id8dgryr0w15\t2\t0\t0\t0\t1\toperational\ncl_427np4pbk1zcs\t3\t3\t0\t0\t1\toperational",
+          ""
+        ]
+      },
+      "running": {
+        "monitors": "Time (min)\n5\nOperational machines\n1\nWaiting repairs\n1\nCompleted repairs\n1\nAvailability\n0.600",
+        "status": true
+      },
+      "paused": {
+        "monitors": "Time (min)\n5\nOperational machines\n1\nWaiting repairs\n1\nCompleted repairs\n1\nAvailability\n0.600",
+        "paused": true
+      }
+    }
+  ],
+  "controls": [
+    {
+      "slug": "des-civic-office",
+      "officeInitial": {
+        "monitors": "Time (min)\n0\nWaiting\n1\nBusy desks\n1\nCompleted\n0",
+        "rows": [
+          "1\t0\t0\t-1\tgranted\n2\t0\t-1\t-1\twaiting"
+        ],
+        "alerts": []
+      },
+      "officeLive": {
+        "monitors": "Time (min)\n0\nWaiting\n1\nBusy desks\n2\nCompleted\n0",
+        "rows": [
+          "1\t0\t0\t-1\tgranted\n2\t0\t0\t-1\tgranted\n3\t0\t-1\t-1\twaiting"
+        ],
+        "alerts": []
+      },
+      "officeDone": {
+        "monitors": "Time (min)\n10\nWaiting\n0\nBusy desks\n0\nCompleted\n3",
+        "rows": [
+          "1\t0\t0\t2\treleased\n2\t0\t0\t2\treleased\n3\t0\t2\t4\treleased"
+        ],
+        "alerts": []
+      }
+    },
+    {
+      "slug": "des-ev-charging",
+      "evAdded": {
+        "monitors": "Time (min)\n0\nCharging\n2\nWaiting\n2\nCompleted\n0\nAbandoned\n0",
+        "rows": [
+          "1\t2\t0\t-1\tgranted\n2\t4\t0\t-1\tgranted\n3\t2\t-1\t-1\twaiting\n4\t2\t-1\t-1\twaiting"
+        ],
+        "alerts": []
+      },
+      "evCancelled": {
+        "monitors": "Time (min)\n0\nCharging\n2\nWaiting\n1\nCompleted\n0\nAbandoned\n1",
+        "rows": [
+          "1\t2\t0\t-1\tgranted\n2\t4\t0\t-1\tgranted\n3\t2\t-1\t-1\tcancelled\n4\t2\t-1\t-1\twaiting"
+        ],
+        "alerts": []
+      },
+      "evCapacity": {
+        "monitors": "Time (min)\n0\nCharging\n3\nWaiting\n0\nCompleted\n0\nAbandoned\n1",
+        "rows": [
+          "1\t2\t0\t-1\tgranted\n2\t4\t0\t-1\tgranted\n3\t2\t-1\t-1\tcancelled\n4\t2\t0\t-1\tgranted"
+        ],
+        "alerts": []
+      },
+      "evDone": {
+        "monitors": "Time (min)\n10\nCharging\n0\nWaiting\n0\nCompleted\n3\nAbandoned\n1",
+        "rows": [
+          "1\t2\t0\t2\treleased\n2\t4\t0\t4\treleased\n3\t2\t-1\t-1\tcancelled\n4\t2\t0\t2\treleased"
+        ],
+        "alerts": []
+      }
+    },
+    {
+      "slug": "des-goods-buffer",
+      "goodsBlocked": {
+        "monitors": "Time (min)\n0\nProduced\n3\nStored\n2\nBlocked producers\n1\nCollected\n0",
+        "rows": [
+          ""
+        ],
+        "alerts": []
+      },
+      "goodsCollected": {
+        "monitors": "Time (min)\n0\nProduced\n3\nStored\n2\nBlocked producers\n0\nCollected\n1",
+        "rows": [
+          "1\t0\t0"
+        ],
+        "alerts": []
+      }
+    },
+    {
+      "slug": "des-bus-interchange",
+      "bus": {
+        "monitors": "Time (min)\n10\nRoute (min)\n5\nWaiting\n0\nDeparted\n3",
+        "rows": [
+          "1\t5\t5\t7\n2\t5\t5\t7\n3\t5\t7\t9"
+        ],
+        "alerts": []
+      }
+    },
+    {
+      "slug": "des-parcel-logistics",
+      "parcelAdded": {
+        "monitors": "Time (min)\n0\nDepot queue\n1\nBlocked senders\n1\nVan occupied\n1\nDelivered\n0",
+        "rows": [
+          "1\tEast\t2\t0\t-1\t-1\n2\tWest\t3\t-1\t-1\t-1\n3\tEast\t2\t-1\t-1\t-1"
+        ],
+        "alerts": []
+      },
+      "parcelProgress": {
+        "monitors": "Time (min)\n10\nDepot queue\n1\nBlocked senders\n0\nVan occupied\n1\nDelivered\n2",
+        "rows": [
+          "1\tEast\t2\t0\t3\t5\n2\tWest\t3\t5\t9\t-1\n3\tEast\t2\t-1\t-1\t-1"
+        ],
+        "alerts": []
+      }
+    },
+    {
+      "slug": "des-waste-collection",
+      "waste": {
+        "monitors": "Time (min)\n100\nRemaining load\n0\nOn truck\n0\nDelivered\n12",
+        "rows": [],
+        "alerts": []
+      }
+    },
+    {
+      "slug": "des-emergency-dispatch",
+      "responseExpanded": {
+        "monitors": "Time (min)\n0\nBusy teams\n3\nWaiting calls\n0\nCompleted\n0",
+        "rows": [
+          "1\tMarket\t5\t0\t-1\tgranted\n2\tHospital\t0\t0\t-1\tgranted\n3\tSchool\t5\t0\t-1\tgranted"
+        ],
+        "alerts": []
+      },
+      "responseDone": {
+        "monitors": "Time (min)\n10\nBusy teams\n0\nWaiting calls\n0\nCompleted\n3",
+        "rows": [
+          "1\tMarket\t5\t0\t4\treleased\n2\tHospital\t0\t0\t8\treleased\n3\tSchool\t5\t0\t6\treleased"
+        ],
+        "alerts": []
+      }
+    },
+    {
+      "slug": "des-bike-redistribution",
+      "bikes": {
+        "monitors": "Time (min)\n10\nBikes in transit\n0\nDelivered bikes\n4\nTotal bikes\n6",
+        "rows": [
+          "Market\t1\t1\nMarket\t1\t3\nPark\t1\t6\nPark\t1\t10"
+        ],
+        "alerts": []
+      }
+    },
+    {
+      "slug": "des-water-allocation",
+      "waterThird": {
+        "monitors": "Time (min)\n2\nSupply units\n9\nDelivered units\n9\nUnmet units\n3",
+        "rows": [
+          "cl_17izzbfuwx252\tDistrict 1\t-0.5\t-0.5\t3\t3\tgranted\ncl_7id8dgryr0w15\tDistrict 2\t0.5\t-0.5\t3\t3\tgranted\ncl_427np4pbk1zcs\tDistrict 3\t-0.5\t0.5\t3\t3\tgranted\ncl_ad1l06q1mg66v\tDistrict 4\t0.5\t0.5\t3\t0\twaiting"
+        ],
+        "alerts": []
+      },
+      "waterDone": {
+        "monitors": "Time (min)\n3\nSupply units\n12\nDelivered units\n12\nUnmet units\n0",
+        "rows": [
+          "cl_17izzbfuwx252\tDistrict 1\t-0.5\t-0.5\t3\t3\tgranted\ncl_7id8dgryr0w15\tDistrict 2\t0.5\t-0.5\t3\t3\tgranted\ncl_427np4pbk1zcs\tDistrict 3\t-0.5\t0.5\t3\t3\tgranted\ncl_ad1l06q1mg66v\tDistrict 4\t0.5\t0.5\t3\t3\tgranted"
+        ],
+        "alerts": []
+      }
+    },
+    {
+      "slug": "des-machine-maintenance",
+      "maintenanceFailed": {
+        "monitors": "Time (min)\n4\nOperational machines\n0\nWaiting repairs\n2\nCompleted repairs\n0\nAvailability\n0.750",
+        "rows": [
+          "cl_17izzbfuwx252\t1\t-3\t0\t0\t0.5\trepairing\ncl_7id8dgryr0w15\t2\t0\t0\t0\t0.75\twaiting\ncl_427np4pbk1zcs\t3\t3\t0\t0\t1\twaiting",
+          "2\t1\tfailure\n3\t2\tfailure\n4\t3\tfailure"
+        ],
+        "alerts": []
+      },
+      "maintenanceRestored": {
+        "monitors": "Time (min)\n7\nOperational machines\n3\nWaiting repairs\n0\nCompleted repairs\n3\nAvailability\n0.524",
+        "rows": [
+          "cl_17izzbfuwx252\t1\t-3\t0\t1\t0.5714285714285714\toperational\ncl_7id8dgryr0w15\t2\t0\t0\t1\t0.42857142857142855\toperational\ncl_427np4pbk1zcs\t3\t3\t0\t1\t0.5714285714285714\toperational",
+          "2\t1\tfailure\n3\t2\tfailure\n4\t3\tfailure\n5\t1\trepair\n7\t2\trepair\n7\t3\trepair"
+        ],
+        "alerts": []
+      }
+    }
+  ],
+  "supplemental": [
+    {
+      "name": "maintenance-narrow-dark-parameters-open",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91p2aq-f3e7f510.png",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/maintenance-narrow-dark-parameters-open.png",
+      "sha256": "132395b2d0e984c967170427fe59155508013e92fc81c048099a13197ec2afdf"
+    },
+    {
+      "name": "maintenance-narrow-dark-labels-ledger",
+      "sourcePath": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw91v6zk-08bea219.png",
+      "path": "/home/david/.t3/worktrees/city-library/t3-4aa89a8c/docs/development/des-browser-evidence/maintenance-narrow-dark-labels-ledger.png",
+      "sha256": "7b9db2c6d98db19a12085e111e2bff27a504929b5edbba1464c9dbdcf3555a1a"
+    }
+  ],
+  "keyboard": {
+    "keyboardRunPause": true,
+    "focusVisible": true,
+    "focusRing": "3px oklab ring/0.5",
+    "dropdownEscapeRestoresFocus": true
+  },
+  "modelSwitch": {
+    "url": "http://localhost:3211/?experiment=des-ev-charging",
+    "title": "DES EV Charging ",
+    "setup": true,
+    "runDisabled": true
+  },
+  "tableScroll": {
+    "wrapperScrollLeft": 129,
+    "documentWidth": 390,
+    "viewport": 390
+  },
+  "invalidSetup": {
+    "monitors": "Time (min)\n0\nWaiting\n2\nBusy desks\n1\nCompleted\n0",
+    "valid": false,
+    "alerts": [],
+    "statuses": [
+      "",
+      "Paused. Setup changes pending."
+    ]
+  },
+  "superseded": "Initial immediate-after-theme snapshots were superseded after independent review identified color transitions. Final captures wait500ms+2rAF. Re-opening overwritten paths showed tool raster cache; independent inspection uses unique sourcePath plus byte hashes.",
+  "labelFix": "Maintenance optional spatial labels use numeric identity; full status remains table.",
+  "resizeObserverFollowup": {
+    "fixCommit": "11d78f7",
+    "details": "resize-followup.json",
+    "originalSnapshotConsoleBlindSpot": true,
+    "preFixMaintenanceWindowErrorsReportedByCoordinator": 2,
+    "postFixWindowErrors": 0,
+    "postFixUnhandledRejections": 0,
+    "models": 10,
+    "resizeCyclesPerModel": 4,
+    "viewportChangesPerModel": 8,
+    "replacementScreenshots": 12,
+    "independentPendingFrameProbeCommit": "68d10d5"
+  }
+}

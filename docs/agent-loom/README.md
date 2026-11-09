@@ -37,6 +37,6 @@ These groups cover all 16 inventory areas; Field, Node and Edge have individual 
 
 The inventory and reference define the required signatures and behavior. An entry remains planned until its public API, example and behavior checks are delivered. Conflicting or unspecified contracts must be resolved explicitly before implementation.
 
-Examples retain the specification's `agent-loom`, `agent-loom/storage` and `agent-loom/experiments/node` import paths. The current root package is `city-library`; storage and Node experiment subpath mappings remain unresolved. They are not installation instructions. Serialization identifiers and compatibility versions are also part of the specified contracts.
+Examples retain the specification's `agent-loom`, `agent-loom/storage` and `agent-loom/experiments/node` import paths. The current root package is `city-library`; storage and Node experiment subpath mappings remain unresolved. The delivered bounded History subset is currently available as root `city-library` export `storage`; this does not add a storage subpath or full snapshot implementation. They are not installation instructions. Serialization identifiers and compatibility versions are also part of the specified contracts.
 
 The specification originates from [city_game at revision 08b3efb](https://github.com/dweigend/city_game/tree/08b3efb66d0f93d023f0b1deb762578552f7b819/docs/agent-loom). This Markdown specification is the maintained source.

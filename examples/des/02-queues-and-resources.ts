@@ -1,0 +1,45 @@
+import assert from "node:assert/strict";
+import { Agent, Resource, ServiceQueue } from "city-library";
+
+const first = Agent.add({ name: "First resident" });
+const second = Agent.add({ name: "Second resident" });
+const queue = ServiceQueue.add<typeof first>({ policy: "priority" });
+queue.add(first, { priority: 2 });
+queue.add(second, { priority: -1 });
+assert.deepEqual(queue.entries, [second, first]);
+assert.throws(() => second.delete());
+assert.equal(queue.take(), second);
+assert.equal(queue.take(), first);
+assert.equal(queue.take(), undefined);
+
+// Two desks; a two-unit request must not be bypassed by a later one-unit request.
+const desks = Resource.add<typeof first>({ capacity: 2 });
+const holder = desks.request({ owner: first });
+const large = desks.request({ owner: second, units: 2 });
+const small = desks.request({ owner: first });
+assert.equal(holder.status, "granted");
+assert.equal(large.status, "waiting");
+assert.equal(small.status, "waiting");
+assert.equal(desks.used, 1);
+assert.equal(desks.available, 1);
+assert.throws(() => first.delete());
+assert.throws(() => desks.setCapacity(0));
+assert.equal(desks.capacity, 2);
+desks.release(holder);
+assert.equal(large.status, "granted");
+assert.equal(small.status, "waiting");
+assert.equal(desks.used, 2);
+desks.setCapacity(1, { occupied: "retain" });
+assert.equal(desks.available, 0);
+assert.equal(large.status, "granted");
+desks.release(large);
+assert.equal(small.status, "granted");
+desks.cancel(small);
+assert.equal(desks.used, 0);
+assert.equal(desks.waiting.length, 0);
+desks.release(holder);
+assert.throws(() => Resource.add<typeof first>({ capacity: 1 }).cancel(holder));
+first.delete();
+second.delete();
+assert.throws(() => desks.request({ owner: first }));
+console.log("DES canonical queue identity, FIFO conservation and explicit occupied shrink passed");

@@ -44,4 +44,4 @@ Default 150×221, hard x / wrapped y, source column/row 0..149/0..220. Public ce
 
 Porosity is live, default 60.5%, range 0..99 step 0.5. `setRules` never resurrects an empty front. `setFront` is a validated deterministic setup fixture. Source plots track cumulative totalOil and current-row red count; both target charts use recorded post-step history and the initial sample. Histories are bounded to prevent unbounded observation storage. Mulberry, omitted order-independent resets and source y-test `one-of` draws change trajectories; no identical-seed or scientific distribution-equivalence claim is made.
 
-See [browser/shell evidence and remaining gates](selected-grid-batch-report.md) and [shared interaction contract](../../docs/development/selected-grid-batch-interaction-contract.md).
+See [browser/shell evidence and remaining gates](selected-grid-batch-report.md) and [shared interaction contract](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/docs/development/selected-grid-batch-interaction-contract.md).

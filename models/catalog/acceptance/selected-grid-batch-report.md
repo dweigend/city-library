@@ -4,7 +4,7 @@ Executed 2026-11-05 on `experiment/selected-grid-batch`, based on coordinator `b
 
 ## Environment, method and artifacts
 
-[Source audit and adaptations](selected-grid-batch-source-audit.md) records canonical paths, exact hashes, version 7.0.4, Galapagos revision, full notices, domain ownership, defaults, order, boundaries, stopping/reporters and deliberate differences. The five frozen public examples were preserved; [interaction contract](../../docs/development/selected-grid-batch-interaction-contract.md) precedes shared renderer changes. Runtime steps are ordinary named TypeScript compositions of existing public City Library APIs.
+[Source audit and adaptations](selected-grid-batch-source-audit.md) records canonical paths, exact hashes, version 7.0.4, Galapagos revision, full notices, domain ownership, defaults, order, boundaries, stopping/reporters and deliberate differences. The five frozen public examples were preserved; [interaction contract](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/docs/development/selected-grid-batch-interaction-contract.md) precedes shared renderer changes. Runtime steps are ordinary named TypeScript compositions of existing public City Library APIs.
 
 Real server Chromium was controlled with configured T3 preview tools, starting with `preview_status`. Reference URLs were the exact selected `.nlogox` under `https://www.netlogoweb.org/assets/modelslib/`, loaded through `/launch#<URL>`. SHA-256 was computed inside Chromium over the actual `session.nlogoSource.nlogo` bytes for every model and matched each archive. Chrome user agent reported Linux Chrome/156.0.0.0. Source desktop viewport was 1280×1100; target default Fire setup/progress was 1280×800, Life 1280×1000, Percolation 1280×1100. Mobile viewport was 390×844; some PNGs have device-pixel-ratio 2. Mobile means browser emulation, not physical-device certification. Screenshots listed below were visually inspected.
 
@@ -12,7 +12,7 @@ Target server: `CITY_LIBRARY_UI_PORT=3111 CITY_LIBRARY_UI_HOST=0.0.0.0 bun run d
 
 The reference launcher catalog's hidden native select was temporarily hidden only to avoid its 550 options truncating automation snapshots; model widgets/code were unchanged. Deterministic source interventions below were entered into NetLogo's Command Center, not substituted TypeScript or source rewrites. Reference patch observation order is y descending; target Grid order is y ascending.
 
-All image paths below are relative to [selected-grid-batch-evidence](../../docs/development/selected-grid-batch-evidence).
+All image paths below are relative to [selected-grid-batch-evidence](https://github.com/dweigend/city-library/blob/dc7b164abd23c8e7b7f11c902195ab030c5f1c4b/docs/development/selected-grid-batch-evidence).
 
 ## Fire — Sample Models/Earth Science/Fire
 
@@ -20,8 +20,8 @@ Reference and target defaults: 251×251, hard boundaries, density 57%. Source Se
 
 | State | Reference image | Target image |
 | --- | --- | --- |
-| Default Setup | [reference](selected-grid-batch-evidence/fire-reference-setup.png) | [target](selected-grid-batch-evidence/fire-target-setup.png) |
-| Progressed / paused | [tick 149](selected-grid-batch-evidence/fire-reference-progress.png) | [tick 96](selected-grid-batch-evidence/fire-target-progress.png) |
+| Default Setup | [reference](../../fire/evidence/selected-grid-batch-evidence/fire-reference-setup.png) | [target](../../fire/evidence/selected-grid-batch-evidence/fire-target-setup.png) |
+| Progressed / paused | [tick 149](../../fire/evidence/selected-grid-batch-evidence/fire-reference-progress.png) | [tick 96](../../fire/evidence/selected-grid-batch-evidence/fire-target-progress.png) |
 
 Target Setup reset tick and metrics; mobile single-step gave tick 1, fires=115, embers=251, burned=0.32% with no horizontal overflow: [mobile](https://github.com/dweigend/city-library/blob/dc7b164abd23c8e7b7f11c902195ab030c5f1c4b/docs/development/selected-grid-batch-evidence/fire-target-mobile.png). Density is setup-only. Target density 0, Setup, 100 steps stopped at tick **12**, fires=embers=0, percent=0 and disabled further Run/steps: [dark terminal](https://github.com/dweigend/city-library/blob/dc7b164abd23c8e7b7f11c902195ab030c5f1c4b/docs/development/selected-grid-batch-evidence/fire-target-dark-terminal.png). This confirms that the host waits for embers, not just propagation.
 
@@ -43,8 +43,8 @@ Reference default: 101×101 torus, initial-density 35%, foreground 123/backgroun
 
 | State | Reference image | Target image |
 | --- | --- | --- |
-| Random Setup | [reference](selected-grid-batch-evidence/life-reference-setup.png) | [target](selected-grid-batch-evidence/life-target-setup.png) |
-| Ten generations | [reference](selected-grid-batch-evidence/life-reference-progress.png) | [target](selected-grid-batch-evidence/life-target-progress.png) |
+| Random Setup | [reference](../../life/evidence/selected-grid-batch-evidence/life-reference-setup.png) | [target](../../life/evidence/selected-grid-batch-evidence/life-target-setup.png) |
+| Ten generations | [reference](../../life/evidence/selected-grid-batch-evidence/life-reference-progress.png) | [target](../../life/evidence/selected-grid-batch-evidence/life-target-progress.png) |
 
 Source go-forever on/off reached tick 147 (density 0.10); target Run/Pause was also exercised. Source setup-blank resets to tick 0/all dead. Draw-cells toggled and an actual canvas drag created the central living cell. The reference emitted a warning that `display` is not implemented in NetLogo Web, but drawing state changed and rendered. Native reference picker automation changed the HTML color value without changing its NetLogo global; to verify model palette timing independently, Command Center executed `set fgcolor 55 set bgcolor 0`. Existing living cell still had source color 123 until actual Recolor changed it to 55, and all dead colors became 0. This is a reference picker-automation limitation, not evidence that global recolor should happen on input.
 
@@ -60,8 +60,8 @@ Reference and target defaults: **150×221**, hard x/wrapped y, porosity **60.5%*
 
 | State | Reference image | Target image |
 | --- | --- | --- |
-| Default Setup | [reference](selected-grid-batch-evidence/percolation-reference-setup.png) | [target](selected-grid-batch-evidence/percolation-target-setup.png) |
-| Progressed / paused | [tick 7](selected-grid-batch-evidence/percolation-reference-progress.png) | [tick 10](selected-grid-batch-evidence/percolation-target-progress.png) |
+| Default Setup | [reference](../../percolation/evidence/selected-grid-batch-evidence/percolation-reference-setup.png) | [target](../../percolation/evidence/selected-grid-batch-evidence/percolation-target-setup.png) |
+| Progressed / paused | [tick 7](../../percolation/evidence/selected-grid-batch-evidence/percolation-reference-progress.png) | [tick 10](../../percolation/evidence/selected-grid-batch-evidence/percolation-target-progress.png) |
 
 Source `set porosity 0 setup go go` stopped at tick **1**, totalOil **75**, front **0**. Target live change to 0 at tick 10, followed by one actual step, gave tick **11**, totalOil **548**, front **0**, currentRow **209**; Run/steps disabled. Raising porosity to 99 afterwards left those values and disabled stepping unchanged. Thus live porosity changes future attempts and never resurrects oil.
 

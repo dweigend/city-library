@@ -2,7 +2,7 @@
 
 Executed 6 November 2026 in the configured T3 Chromium preview. This is functional source/target evidence, not a pixel clone, matched random trajectory, empirical validation or independent transfer approval. The UI uses the public headless model, `defineUI`, the existing host controls/inspector and the shared spatial renderer. It introduces no custom canvas, scientific state, generator, clock, scenario editor or simulation equations.
 
-The [frozen public contract](../../docs/development/selected-tijuana-contract.md), [original-browser baseline](tijuana-reference-browser.md) and [shared segment browser proof](https://github.com/dweigend/city-library/blob/dc7b164abd23c8e7b7f11c902195ab030c5f1c4b/docs/development/spatial-segment-browser-report.md) remain separate authorities. Copyright, licensing and full source credits remain in the experiment NOTICE. No literature research was repeated.
+The [frozen public contract](../../urban-suite-tijuana-bordertowns/contract.md), [original-browser baseline](tijuana-reference-browser.md) and [shared segment browser proof](https://github.com/dweigend/city-library/blob/dc7b164abd23c8e7b7f11c902195ab030c5f1c4b/docs/development/spatial-segment-browser-report.md) remain separate authorities. Copyright, licensing and full source credits remain in the experiment NOTICE. No literature research was repeated.
 
 ## Runtime attribution and reproduction
 

@@ -1,0 +1,821 @@
+{
+  "flow": {
+    "source": "b35f9e4",
+    "initial": {
+      "monitors": [
+        {
+          "label": "Study runs",
+          "value": "0"
+        },
+        {
+          "label": "Planned runs",
+          "value": "6"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "text": "Skip to experiment\nAgent Lab\nZoning Scenario Comparison\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nParcels\nBase Cap\nSeed\nModel info\nStudy runs\n0\nPlanned runs\n6\nPaused\nSix density runs · colored block = dwelling slot (aggregate schematic)\nDwelling capacity\n1\n0\n1\nDwelling slots\nSlots\nReplication summaries",
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "step": {
+      "monitors": [
+        {
+          "label": "Study runs",
+          "value": "1"
+        },
+        {
+          "label": "Planned runs",
+          "value": "6"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "text": "Skip to experiment\nAgent Lab\nZoning Scenario Comparison\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nParcels\nBase Cap\nSeed\nModel info\nStudy runs\n1\nPlanned runs\n6\nPaused\nSix density runs · colored block = dwelling slot (aggregate schematic)\nDwelling capacity\n12\n0\nRun 1\nDwelling slots\nSlots\nReplication summaries\nscenario\tmean\tsampleSd\nscenario-0\t12.00\tnone",
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "running": {
+      "monitors": [
+        {
+          "label": "Study runs",
+          "value": "3"
+        },
+        {
+          "label": "Planned runs",
+          "value": "6"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Pause",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "text": "Skip to experiment\nAgent Lab\nZoning Scenario Comparison\nSetup\nPause\n1 step\n10 steps\n100 steps\nSpeed\nParcels\nBase Cap\nSeed\nModel info\nStudy runs\n3\nPlanned runs\n6\nRunning\nSix density runs · colored block = dwelling slot (aggregate schematic)\nDwelling capacity\n16\n0\nRun 1\nRun 2\nRun 3\nDwelling slots\nSlots\nReplication summaries\nscenario\tmean\tsampleSd\nscenario-0\t14.00\t2.00",
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "pause": {
+      "monitors": [
+        {
+          "label": "Study runs",
+          "value": "3"
+        },
+        {
+          "label": "Planned runs",
+          "value": "6"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "text": "Skip to experiment\nAgent Lab\nZoning Scenario Comparison\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nParcels\nBase Cap\nSeed\nModel info\nStudy runs\n3\nPlanned runs\n6\nPaused\nSix density runs · colored block = dwelling slot (aggregate schematic)\nDwelling capacity\n16\n0\nRun 1\nRun 2\nRun 3\nDwelling slots\nSlots\nReplication summaries\nscenario\tmean\tsampleSd\nscenario-0\t14.00\t2.00",
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "visual": {
+      "monitors": [
+        {
+          "label": "Study runs",
+          "value": "4"
+        },
+        {
+          "label": "Planned runs",
+          "value": "6"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "text": "Skip to experiment\nAgent Lab\nZoning Scenario Comparison\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nParcels\nBase Cap\nSeed\nModel info\nStudy runs\n4\nPlanned runs\n6\nPaused\nSix density runs · colored block = dwelling slot (aggregate schematic)\nDwelling capacity\n24\n0\nRun 1\nRun 2\nRun 3\nRun 4\nDwelling slots\nSlots\nReplication summaries\nscenario\tmean\tsampleSd\nscenario-0\t14.00\t2.00\nscenario-1\t24.00\tnone",
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "terminalStart": {
+      "monitors": [
+        {
+          "label": "Study runs",
+          "value": "0"
+        },
+        {
+          "label": "Planned runs",
+          "value": "6"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Pause",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "text": "Skip to experiment\nAgent Lab\nZoning Scenario Comparison\nSetup\nPause\n1 step\n10 steps\n100 steps\nSpeed\nParcels\nBase Cap\nSeed\nModel info\nStudy runs\n0\nPlanned runs\n6\nRunning\nSix density runs · colored block = dwelling slot (aggregate schematic)\nDwelling capacity\n1\n0\n1\nDwelling slots\nSlots\nReplication summaries",
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "terminal": {
+      "monitors": [
+        {
+          "label": "Study runs",
+          "value": "6"
+        },
+        {
+          "label": "Planned runs",
+          "value": "6"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": true
+        },
+        {
+          "label": "1 step",
+          "disabled": true
+        },
+        {
+          "label": "10 steps",
+          "disabled": true
+        },
+        {
+          "label": "100 steps",
+          "disabled": true
+        }
+      ],
+      "text": "Skip to experiment\nAgent Lab\nZoning Scenario Comparison\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nParcels\nBase Cap\nSeed\nModel info\nStudy runs\n6\nPlanned runs\n6\nCompleted\nSix density runs · colored block = dwelling slot (aggregate schematic)\nDwelling capacity\n32\n0\nRun 1\nRun 2\nRun 3\nRun 4\nRun 5\nRun 6\nDwelling slots\nSlots\nReplication summaries\nscenario\tmean\tsampleSd\nscenario-0\t14.00\t2.00\nscenario-1\t28.00\t4.00",
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "terminalStable": {
+      "monitors": [
+        {
+          "label": "Study runs",
+          "value": "6"
+        },
+        {
+          "label": "Planned runs",
+          "value": "6"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": true
+        },
+        {
+          "label": "1 step",
+          "disabled": true
+        },
+        {
+          "label": "10 steps",
+          "disabled": true
+        },
+        {
+          "label": "100 steps",
+          "disabled": true
+        }
+      ],
+      "text": "Skip to experiment\nAgent Lab\nZoning Scenario Comparison\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nParcels\nBase Cap\nSeed\nModel info\nStudy runs\n6\nPlanned runs\n6\nCompleted\nSix density runs · colored block = dwelling slot (aggregate schematic)\nDwelling capacity\n32\n0\nRun 1\nRun 2\nRun 3\nRun 4\nRun 5\nRun 6\nDwelling slots\nSlots\nReplication summaries\nscenario\tmean\tsampleSd\nscenario-0\t14.00\t2.00\nscenario-1\t28.00\t4.00",
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    }
+  },
+  "images": [
+    {
+      "slug": "zoning-scenario-comparison",
+      "size": "desktop",
+      "theme": "light",
+      "path": "docs/mesa-expansion/refactor-evidence/zoning-b35f9e4-desktop-light.png",
+      "original": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw955ntb-74c7b359.png",
+      "evidence": {
+        "monitors": [
+          {
+            "label": "Study runs",
+            "value": "4"
+          },
+          {
+            "label": "Planned runs",
+            "value": "6"
+          }
+        ],
+        "buttons": [
+          {
+            "label": "Run",
+            "disabled": false
+          },
+          {
+            "label": "1 step",
+            "disabled": false
+          },
+          {
+            "label": "10 steps",
+            "disabled": false
+          },
+          {
+            "label": "100 steps",
+            "disabled": false
+          }
+        ],
+        "text": "Skip to experiment\nAgent Lab\nZoning Scenario Comparison\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nParcels\nBase Cap\nSeed\nModel info\nStudy runs\n4\nPlanned runs\n6\nPaused\nSix density runs · colored block = dwelling slot (aggregate schematic)\nDwelling capacity\n24\n0\nRun 1\nRun 2\nRun 3\nRun 4\nDwelling slots\nSlots\nReplication summaries\nscenario\tmean\tsampleSd\nscenario-0\t14.00\t2.00\nscenario-1\t24.00\tnone",
+        "channels": {
+          "errors": [],
+          "rejections": [],
+          "console": []
+        },
+        "width": 1366,
+        "height": 768,
+        "dpr": 2,
+        "docWidth": 1366
+      },
+      "source": "b35f9e4"
+    },
+    {
+      "slug": "zoning-scenario-comparison",
+      "size": "desktop",
+      "theme": "dark",
+      "path": "docs/mesa-expansion/refactor-evidence/zoning-b35f9e4-desktop-dark.png",
+      "original": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw955oe1-e6249aa3.png",
+      "evidence": {
+        "monitors": [
+          {
+            "label": "Study runs",
+            "value": "4"
+          },
+          {
+            "label": "Planned runs",
+            "value": "6"
+          }
+        ],
+        "buttons": [
+          {
+            "label": "Run",
+            "disabled": false
+          },
+          {
+            "label": "1 step",
+            "disabled": false
+          },
+          {
+            "label": "10 steps",
+            "disabled": false
+          },
+          {
+            "label": "100 steps",
+            "disabled": false
+          }
+        ],
+        "text": "Skip to experiment\nAgent Lab\nZoning Scenario Comparison\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nParcels\nBase Cap\nSeed\nModel info\nStudy runs\n4\nPlanned runs\n6\nPaused\nSix density runs · colored block = dwelling slot (aggregate schematic)\nDwelling capacity\n24\n0\nRun 1\nRun 2\nRun 3\nRun 4\nDwelling slots\nSlots\nReplication summaries\nscenario\tmean\tsampleSd\nscenario-0\t14.00\t2.00\nscenario-1\t24.00\tnone",
+        "channels": {
+          "errors": [],
+          "rejections": [],
+          "console": []
+        },
+        "width": 1366,
+        "height": 768,
+        "dpr": 2,
+        "docWidth": 1366
+      },
+      "source": "b35f9e4"
+    },
+    {
+      "slug": "zoning-scenario-comparison",
+      "size": "narrow",
+      "theme": "light",
+      "path": "docs/mesa-expansion/refactor-evidence/zoning-b35f9e4-narrow-light.png",
+      "original": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw955ovr-25db6d7d.png",
+      "evidence": {
+        "monitors": [
+          {
+            "label": "Study runs",
+            "value": "4"
+          },
+          {
+            "label": "Planned runs",
+            "value": "6"
+          }
+        ],
+        "buttons": [
+          {
+            "label": "Run",
+            "disabled": false
+          },
+          {
+            "label": "1 step",
+            "disabled": false
+          },
+          {
+            "label": "10 steps",
+            "disabled": false
+          },
+          {
+            "label": "100 steps",
+            "disabled": false
+          }
+        ],
+        "text": "Skip to experiment\nAgent Lab\nZoning Scenario Comparison\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nParameters\nStudy runs\n4\nPlanned runs\n6\nPaused\nSix density runs · colored block = dwelling slot (aggregate schematic)\nDwelling capacity\n24\n0\nRun 1\nRun 2\nRun 3\nRun 4\nDwelling slots\nSlots\nReplication summaries\nscenario\tmean\tsampleSd\nscenario-0\t14.00\t2.00\nscenario-1\t24.00\tnone",
+        "channels": {
+          "errors": [],
+          "rejections": [],
+          "console": []
+        },
+        "width": 390,
+        "height": 844,
+        "dpr": 2,
+        "docWidth": 390
+      },
+      "source": "b35f9e4"
+    },
+    {
+      "slug": "zoning-scenario-comparison",
+      "size": "narrow",
+      "theme": "dark",
+      "path": "docs/mesa-expansion/refactor-evidence/zoning-b35f9e4-narrow-dark.png",
+      "original": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw955pdr-82ddc57f.png",
+      "evidence": {
+        "monitors": [
+          {
+            "label": "Study runs",
+            "value": "4"
+          },
+          {
+            "label": "Planned runs",
+            "value": "6"
+          }
+        ],
+        "buttons": [
+          {
+            "label": "Run",
+            "disabled": false
+          },
+          {
+            "label": "1 step",
+            "disabled": false
+          },
+          {
+            "label": "10 steps",
+            "disabled": false
+          },
+          {
+            "label": "100 steps",
+            "disabled": false
+          }
+        ],
+        "text": "Skip to experiment\nAgent Lab\nZoning Scenario Comparison\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nParameters\nStudy runs\n4\nPlanned runs\n6\nPaused\nSix density runs · colored block = dwelling slot (aggregate schematic)\nDwelling capacity\n24\n0\nRun 1\nRun 2\nRun 3\nRun 4\nDwelling slots\nSlots\nReplication summaries\nscenario\tmean\tsampleSd\nscenario-0\t14.00\t2.00\nscenario-1\t24.00\tnone",
+        "channels": {
+          "errors": [],
+          "rejections": [],
+          "console": []
+        },
+        "width": 390,
+        "height": 844,
+        "dpr": 2,
+        "docWidth": 390
+      },
+      "source": "b35f9e4"
+    },
+    {
+      "slug": "zoning-scenario-comparison",
+      "size": "terminal-desktop",
+      "theme": "light",
+      "path": "docs/mesa-expansion/refactor-evidence/zoning-b35f9e4-terminal-desktop-light.png",
+      "original": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw955vpz-9e758477.png",
+      "evidence": {
+        "monitors": [
+          {
+            "label": "Study runs",
+            "value": "6"
+          },
+          {
+            "label": "Planned runs",
+            "value": "6"
+          }
+        ],
+        "buttons": [
+          {
+            "label": "Run",
+            "disabled": true
+          },
+          {
+            "label": "1 step",
+            "disabled": true
+          },
+          {
+            "label": "10 steps",
+            "disabled": true
+          },
+          {
+            "label": "100 steps",
+            "disabled": true
+          }
+        ],
+        "text": "Skip to experiment\nAgent Lab\nZoning Scenario Comparison\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nParcels\nBase Cap\nSeed\nModel info\nStudy runs\n6\nPlanned runs\n6\nCompleted\nSix density runs · colored block = dwelling slot (aggregate schematic)\nDwelling capacity\n32\n0\nRun 1\nRun 2\nRun 3\nRun 4\nRun 5\nRun 6\nDwelling slots\nSlots\nReplication summaries\nscenario\tmean\tsampleSd\nscenario-0\t14.00\t2.00\nscenario-1\t28.00\t4.00",
+        "channels": {
+          "errors": [],
+          "rejections": [],
+          "console": []
+        },
+        "width": 1366,
+        "height": 768,
+        "dpr": 2,
+        "docWidth": 1366
+      },
+      "source": "b35f9e4"
+    }
+  ],
+  "boundaryProbes": [
+    {
+      "slug": "zoning-scenario-comparison",
+      "size": "narrow-boundary",
+      "theme": "light",
+      "path": "docs/mesa-expansion/refactor-evidence/zoning-b35f9e4-parcels1-cap10-light.png",
+      "original": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw955qg6-beabc5a5.png",
+      "evidence": {
+        "monitors": [
+          {
+            "label": "Study runs",
+            "value": "0"
+          },
+          {
+            "label": "Planned runs",
+            "value": "6"
+          }
+        ],
+        "buttons": [
+          {
+            "label": "Run",
+            "disabled": false
+          },
+          {
+            "label": "1 step",
+            "disabled": false
+          },
+          {
+            "label": "10 steps",
+            "disabled": false
+          },
+          {
+            "label": "100 steps",
+            "disabled": false
+          }
+        ],
+        "text": "Skip to experiment\nAgent Lab\nZoning Scenario Comparison\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nParameters\nStudy runs\n0\nPlanned runs\n6\nPaused\nSix density runs · colored block = dwelling slot (aggregate schematic)\nDwelling capacity\n1\n0\n1\nDwelling slots\nSlots\nReplication summaries",
+        "channels": {
+          "errors": [],
+          "rejections": [],
+          "console": []
+        },
+        "width": 390,
+        "height": 844,
+        "dpr": 2,
+        "docWidth": 390
+      },
+      "metrics": {
+        "font": "32px system-ui, sans-serif",
+        "ascent": 25,
+        "descent": 8,
+        "textWidth": 359.3287658691406,
+        "bufferWidth": 732,
+        "bufferHeight": 732,
+        "cssWidth": 366,
+        "cssHeight": 366,
+        "firstCaptionBaseline": 31.88235294117647
+      },
+      "parameters": {
+        "parcels": 1,
+        "baseCap": 10
+      },
+      "source": "b35f9e4"
+    },
+    {
+      "slug": "zoning-scenario-comparison",
+      "size": "narrow-boundary",
+      "theme": "dark",
+      "path": "docs/mesa-expansion/refactor-evidence/zoning-b35f9e4-parcels1-cap10-dark.png",
+      "original": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw955qxs-0cf2f85e.png",
+      "evidence": {
+        "monitors": [
+          {
+            "label": "Study runs",
+            "value": "0"
+          },
+          {
+            "label": "Planned runs",
+            "value": "6"
+          }
+        ],
+        "buttons": [
+          {
+            "label": "Run",
+            "disabled": false
+          },
+          {
+            "label": "1 step",
+            "disabled": false
+          },
+          {
+            "label": "10 steps",
+            "disabled": false
+          },
+          {
+            "label": "100 steps",
+            "disabled": false
+          }
+        ],
+        "text": "Skip to experiment\nAgent Lab\nZoning Scenario Comparison\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nParameters\nStudy runs\n0\nPlanned runs\n6\nPaused\nSix density runs · colored block = dwelling slot (aggregate schematic)\nDwelling capacity\n1\n0\n1\nDwelling slots\nSlots\nReplication summaries",
+        "channels": {
+          "errors": [],
+          "rejections": [],
+          "console": []
+        },
+        "width": 390,
+        "height": 844,
+        "dpr": 2,
+        "docWidth": 390
+      },
+      "metrics": {
+        "font": "32px system-ui, sans-serif",
+        "ascent": 25,
+        "descent": 8,
+        "textWidth": 359.3287658691406,
+        "bufferWidth": 732,
+        "bufferHeight": 732,
+        "cssWidth": 366,
+        "cssHeight": 366,
+        "firstCaptionBaseline": 31.88235294117647
+      },
+      "parameters": {
+        "parcels": 1,
+        "baseCap": 10
+      },
+      "source": "b35f9e4"
+    },
+    {
+      "slug": "zoning-scenario-comparison",
+      "size": "narrow-boundary",
+      "theme": "light",
+      "path": "docs/mesa-expansion/refactor-evidence/zoning-b35f9e4-parcels1-cap1-light.png",
+      "original": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw955s0n-b2fff223.png",
+      "evidence": {
+        "monitors": [
+          {
+            "label": "Study runs",
+            "value": "0"
+          },
+          {
+            "label": "Planned runs",
+            "value": "6"
+          }
+        ],
+        "buttons": [
+          {
+            "label": "Run",
+            "disabled": false
+          },
+          {
+            "label": "1 step",
+            "disabled": false
+          },
+          {
+            "label": "10 steps",
+            "disabled": false
+          },
+          {
+            "label": "100 steps",
+            "disabled": false
+          }
+        ],
+        "text": "Skip to experiment\nAgent Lab\nZoning Scenario Comparison\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nParameters\nStudy runs\n0\nPlanned runs\n6\nPaused\nSix density runs · colored block = dwelling slot (aggregate schematic)\nDwelling capacity\n1\n0\n1\nDwelling slots\nSlots\nReplication summaries",
+        "channels": {
+          "errors": [],
+          "rejections": [],
+          "console": []
+        },
+        "width": 390,
+        "height": 844,
+        "dpr": 2,
+        "docWidth": 390
+      },
+      "metrics": {
+        "font": "32px system-ui, sans-serif",
+        "ascent": 25,
+        "descent": 8,
+        "textWidth": 341.02471923828125,
+        "bufferWidth": 732,
+        "bufferHeight": 732,
+        "cssWidth": 366,
+        "cssHeight": 366,
+        "firstCaptionBaseline": 72.25
+      },
+      "parameters": {
+        "parcels": 1,
+        "baseCap": 1
+      },
+      "source": "b35f9e4"
+    },
+    {
+      "slug": "zoning-scenario-comparison",
+      "size": "narrow-boundary",
+      "theme": "dark",
+      "path": "docs/mesa-expansion/refactor-evidence/zoning-b35f9e4-parcels1-cap1-dark.png",
+      "original": "/home/david/.t3/userdata/browser-artifacts/browser-screenshot-localhost-mw955si2-21930afe.png",
+      "evidence": {
+        "monitors": [
+          {
+            "label": "Study runs",
+            "value": "0"
+          },
+          {
+            "label": "Planned runs",
+            "value": "6"
+          }
+        ],
+        "buttons": [
+          {
+            "label": "Run",
+            "disabled": false
+          },
+          {
+            "label": "1 step",
+            "disabled": false
+          },
+          {
+            "label": "10 steps",
+            "disabled": false
+          },
+          {
+            "label": "100 steps",
+            "disabled": false
+          }
+        ],
+        "text": "Skip to experiment\nAgent Lab\nZoning Scenario Comparison\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nParameters\nStudy runs\n0\nPlanned runs\n6\nPaused\nSix density runs · colored block = dwelling slot (aggregate schematic)\nDwelling capacity\n1\n0\n1\nDwelling slots\nSlots\nReplication summaries",
+        "channels": {
+          "errors": [],
+          "rejections": [],
+          "console": []
+        },
+        "width": 390,
+        "height": 844,
+        "dpr": 2,
+        "docWidth": 390
+      },
+      "metrics": {
+        "font": "32px system-ui, sans-serif",
+        "ascent": 25,
+        "descent": 8,
+        "textWidth": 341.02471923828125,
+        "bufferWidth": 732,
+        "bufferHeight": 732,
+        "cssWidth": 366,
+        "cssHeight": 366,
+        "firstCaptionBaseline": 72.25
+      },
+      "parameters": {
+        "parcels": 1,
+        "baseCap": 1
+      },
+      "source": "b35f9e4"
+    }
+  ]
+}

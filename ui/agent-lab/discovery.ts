@@ -74,7 +74,7 @@ export async function discoverEntries(
 export function createCatalogModule(
   entries: readonly DiscoveredEntry[],
   version: string,
-  importPath: (entry: DiscoveredEntry) => string = (entry) => entry.uiPath,
+  importPath: (entry: DiscoveredEntry) => string,
 ): string {
   return `export const version=${JSON.stringify(version)};export const catalog=[${entries.map((entry) => `{slug:${JSON.stringify(entry.slug)},title:${JSON.stringify(entry.title)},description:${JSON.stringify(entry.description)},error:${JSON.stringify(entry.error)},load:async()=>{${entry.error ? `throw new Error(${JSON.stringify(entry.error)});` : `const module=await import(${JSON.stringify(importPath(entry))});return module.ui;`}}}`).join(",")}];`;
 }

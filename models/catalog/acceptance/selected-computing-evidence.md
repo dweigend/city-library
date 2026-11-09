@@ -8,16 +8,16 @@ All ten immutable B18 selections have real headless implementations, thin discov
 
 | Model | Original progress | Target default progress | Detailed report |
 | --- | --- | --- | --- |
-| Robby the Robot | generation 19, best fitness 15 | generation 42, best fitness 13; bounded action then stopped at 43 | [Robby](selected-computing/robby-the-robot-acceptance.md) |
-| Artificial Neural Net - Perceptron | epoch 309, signed error 0.868 | epoch 87, signed error 0.896 | [Perceptron](selected-computing/artificial-neural-net-perceptron-acceptance.md) |
-| Dining Philosophers | tick 546, 80 units eaten | tick 102, 2 thinking / 15 hungry / 3 eating | [Dining](selected-computing/dining-philosophers-acceptance.md) |
-| Simple Genetic Algorithm | generation 242, best 81, diversity 0 | generation 132, best 84, diversity 0; live mutation restored variation | [Genetic algorithm](selected-computing/simple-genetic-algorithm-acceptance.md) |
-| Robotic Factory | tick 946, 10 products stored | tick 1003, 9 products stored, no diagnostic | [Factory](selected-computing/robotic-factory-acceptance.md) |
-| Particle Swarm Optimization | optimum found at tick 19 | optimum found at tick 12; separate Traces/Highlight run at tick 10 | [PSO](selected-computing/particle-swarm-optimization-acceptance.md) |
-| Artificial Neural Net - Multilayer | epoch 147, error 0.0001629488 | epoch 103, displayed error 0.00026; Test(1,0) correct | [Multilayer](selected-computing/artificial-neural-net-multilayer-acceptance.md) |
-| PageRank | tick 212, 1060 visits, rank total 1 | tick 102, 5 surfers, rank total 1; diffusion step 103 removes surfers | [PageRank](selected-computing/pagerank-acceptance.md) |
-| K-Means Clustering | 140 points, convergence tick 6 | 140 points, convergence tick 4; live plot/reset actions also executed | [K-Means](selected-computing/k-means-clustering-acceptance.md) |
-| Simulated Annealing | tick 671, energy 464 | tick 672, energy 356, 672000 attempts | [Annealing](selected-computing/simulated-annealing-acceptance.md) |
+| Robby the Robot | generation 19, best fitness 15 | generation 42, best fitness 13; bounded action then stopped at 43 | [Robby](../../robby-the-robot/evidence/selected-computing/robby-the-robot-acceptance.md) |
+| Artificial Neural Net - Perceptron | epoch 309, signed error 0.868 | epoch 87, signed error 0.896 | [Perceptron](../../artificial-neural-net-perceptron/evidence/selected-computing/artificial-neural-net-perceptron-acceptance.md) |
+| Dining Philosophers | tick 546, 80 units eaten | tick 102, 2 thinking / 15 hungry / 3 eating | [Dining](../../dining-philosophers/evidence/selected-computing/dining-philosophers-acceptance.md) |
+| Simple Genetic Algorithm | generation 242, best 81, diversity 0 | generation 132, best 84, diversity 0; live mutation restored variation | [Genetic algorithm](../../simple-genetic-algorithm/evidence/selected-computing/simple-genetic-algorithm-acceptance.md) |
+| Robotic Factory | tick 946, 10 products stored | tick 1003, 9 products stored, no diagnostic | [Factory](../../robotic-factory/evidence/selected-computing/robotic-factory-acceptance.md) |
+| Particle Swarm Optimization | optimum found at tick 19 | optimum found at tick 12; separate Traces/Highlight run at tick 10 | [PSO](../../particle-swarm-optimization/evidence/selected-computing/particle-swarm-optimization-acceptance.md) |
+| Artificial Neural Net - Multilayer | epoch 147, error 0.0001629488 | epoch 103, displayed error 0.00026; Test(1,0) correct | [Multilayer](../../artificial-neural-net-multilayer/evidence/selected-computing/artificial-neural-net-multilayer-acceptance.md) |
+| PageRank | tick 212, 1060 visits, rank total 1 | tick 102, 5 surfers, rank total 1; diffusion step 103 removes surfers | [PageRank](../../pagerank/evidence/selected-computing/pagerank-acceptance.md) |
+| K-Means Clustering | 140 points, convergence tick 6 | 140 points, convergence tick 4; live plot/reset actions also executed | [K-Means](../../k-means-clustering/evidence/selected-computing/k-means-clustering-acceptance.md) |
+| Simulated Annealing | tick 671, energy 464 | tick 672, energy 356, 672000 attempts | [Annealing](../../simulated-annealing/evidence/selected-computing/simulated-annealing-acceptance.md) |
 
 These are actual observations at their stated settings/ticks, not paired RNG trajectories or a statistical equivalence study. Annealing's target completed one extra Run cycle before Pause; its temperature is correctly `.99 ** 672`, while the reference uses `.99 ** 671`. Both preserve 450 bright patches. Public deterministic mechanisms and invariants are asserted separately.
 

@@ -14,7 +14,7 @@ The following pairs directly embed the existing committed screenshots. Source an
 
 ## Smoothlife
 
-[Scientific dossier](../../docs/research/netlogo-web/smoothlife.md).
+[Scientific dossier](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/docs/research/netlogo-web/smoothlife.md).
 
 | State | Original NetLogo | City Library |
 | --- | --- | --- |
@@ -23,7 +23,7 @@ The following pairs directly embed the existing committed screenshots. Source an
 
 ## Hex Cell Aggregation
 
-[Scientific dossier](../../docs/research/netlogo-web/hex-cell-aggregation.md).
+[Scientific dossier](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/docs/research/netlogo-web/hex-cell-aggregation.md).
 
 | State | Original NetLogo | City Library |
 | --- | --- | --- |
@@ -32,7 +32,7 @@ The following pairs directly embed the existing committed screenshots. Source an
 
 ## Vants
 
-[Scientific dossier](../../docs/research/netlogo-web/vants.md).
+[Scientific dossier](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/docs/research/netlogo-web/vants.md).
 
 | State | Original NetLogo | City Library |
 | --- | --- | --- |
@@ -41,7 +41,7 @@ The following pairs directly embed the existing committed screenshots. Source an
 
 ## Turing Machine 2D
 
-[Scientific dossier](../../docs/research/netlogo-web/turing-machine-2d.md).
+[Scientific dossier](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/docs/research/netlogo-web/turing-machine-2d.md).
 
 | State | Original NetLogo | City Library |
 | --- | --- | --- |
@@ -50,7 +50,7 @@ The following pairs directly embed the existing committed screenshots. Source an
 
 ## Ca 1D Elementary
 
-[Scientific dossier](../../docs/research/netlogo-web/ca-1d-elementary.md).
+[Scientific dossier](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/docs/research/netlogo-web/ca-1d-elementary.md).
 
 | State | Original NetLogo | City Library |
 | --- | --- | --- |
@@ -59,7 +59,7 @@ The following pairs directly embed the existing committed screenshots. Source an
 
 ## Ca Continuous
 
-[Scientific dossier](../../docs/research/netlogo-web/ca-continuous.md).
+[Scientific dossier](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/docs/research/netlogo-web/ca-continuous.md).
 
 | State | Original NetLogo | City Library |
 | --- | --- | --- |
@@ -68,7 +68,7 @@ The following pairs directly embed the existing committed screenshots. Source an
 
 ## Brians Brain
 
-[Scientific dossier](../../docs/research/netlogo-web/brians-brain.md).
+[Scientific dossier](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/docs/research/netlogo-web/brians-brain.md).
 
 | State | Original NetLogo | City Library |
 | --- | --- | --- |
@@ -77,7 +77,7 @@ The following pairs directly embed the existing committed screenshots. Source an
 
 ## Cyclic Ca
 
-[Scientific dossier](../../docs/research/netlogo-web/cyclic-ca.md).
+[Scientific dossier](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/docs/research/netlogo-web/cyclic-ca.md).
 
 | State | Original NetLogo | City Library |
 | --- | --- | --- |
@@ -86,7 +86,7 @@ The following pairs directly embed the existing committed screenshots. Source an
 
 ## Ca Stochastic
 
-[Scientific dossier](../../docs/research/netlogo-web/ca-stochastic.md).
+[Scientific dossier](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/docs/research/netlogo-web/ca-stochastic.md).
 
 | State | Original NetLogo | City Library |
 | --- | --- | --- |

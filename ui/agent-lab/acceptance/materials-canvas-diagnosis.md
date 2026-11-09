@@ -12,7 +12,7 @@ The prior report's `immediateAnomalies`/`captureWorkaround` labels are historica
 
 ## Historical file audit
 
-The starting evidence was [selected-materials-browser.md](selected-materials-browser.md), its observation JSON and retained PNGs. Both Sand files have the same **47683 bytes**, dimensions **780×1688**, and SHA-256:
+The starting evidence was [selected-materials-browser.md](../../../models/catalog/acceptance/selected-materials-browser.md), its observation JSON and retained PNGs. Both Sand files have the same **47683 bytes**, dimensions **780×1688**, and SHA-256:
 
 `6d6f0263697ac0aa8923100fa01f91c85dc4604eb2bfff9d7cc7f96d12f39efb`
 

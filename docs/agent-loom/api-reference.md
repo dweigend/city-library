@@ -304,11 +304,11 @@ interface ActivationContext<T extends WorldMember> {
   die(): never;
 }
 world.activate<T extends WorldMember>(source: ActivationSource<T>, action: (context: ActivationContext<T>) => unknown,
-  options?: { order?: "shuffle" | "netlogo-7.0.0"; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; breeds?: ReadonlyMap<WorldMember,string>; breedOrder?: readonly string[] }): void
+  options?: { order?: "fixed" | "shuffle" | "priority" | "netlogo-7.0.0"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; breeds?: ReadonlyMap<WorldMember,string>; breedOrder?: readonly string[] }): void
 world.report<T extends WorldMember,R>(source: T, report: (context: ActivationContext<T>) => R,
-  options?: { order?: "shuffle" | "netlogo-7.0.0"; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; breeds?: ReadonlyMap<WorldMember,string>; breedOrder?: readonly string[] }): R | undefined
+  options?: { order?: "fixed" | "shuffle" | "priority" | "netlogo-7.0.0"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; breeds?: ReadonlyMap<WorldMember,string>; breedOrder?: readonly string[] }): R | undefined
 world.report<T extends WorldMember,R>(source: readonly T[] | { kind: "agents" | "fields" | "edges"; breed?: string }, report: (context: ActivationContext<T>) => R,
-  options?: { order?: "shuffle" | "netlogo-7.0.0"; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; breeds?: ReadonlyMap<WorldMember,string>; breedOrder?: readonly string[] }): readonly (R | undefined)[]
+  options?: { order?: "fixed" | "shuffle" | "priority" | "netlogo-7.0.0"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; breeds?: ReadonlyMap<WorldMember,string>; breedOrder?: readonly string[] }): readonly (R | undefined)[]
 world.select<T extends WorldMember>(source: ActivationSource<T>, predicate: (context: ActivationContext<T>) => boolean,
   options?: { caller?: ActivationContext<WorldMember>; breeds?: ReadonlyMap<WorldMember,string> }): readonly T[]
 ```
@@ -318,6 +318,8 @@ world.select<T extends WorldMember>(source: ActivationSource<T>, predicate: (con
 Default scripts use ordinary arrays, loops, filtering, Set and Map. Array iteration consumes no RNG and does not acquire NetLogo ask semantics. Explicit World activation supplies the optional synchronous scheduling/context capability; it does not change the model language or replace independently created components. The compatibility profile targets NetLogo 7.0.0; it does not promise bit-for-bit compatibility with later releases.
 
 Sources are ordinary data and original object references. An array captures unique membership in first-occurrence order; global-kind selectors resolve current live World membership at invocation. A graph attachment does not attach its nodes; only registered World agents qualify as agents, while fields and edges must belong to attached owned components. Live-selector creation itself performs no traversal or random draw; reuse the same plain selector to see later births/deaths. Filtering with native TS captures an ordinary array; no library Population wrapper exists.
+
+The additive ordinary schedules `fixed` and `priority` preserve the same activation frames and lifecycle. Fixed visits entry order without random draws. Priority evaluates a pure synchronous numeric `priority(member)` once for each living entry before actions; lower finite values run first, with entry order resolving ties. Dead captured entries are excluded before projection. Living ownership remains checked at visit, retaining partial failure behavior. Unknown option keys reject.
 
 order defaults shuffle: capture and identity-deduplicate at entry, run a complete descending Fisher–Yates copy through world.random before any callback, and skip members dead before their visit. Living ownership is validated at visit after shuffling, preserving partial failure: earlier callbacks and draws remain when a later foreign member fails. A one-element array still has no shuffle draw, whereas a native single source has no traversal at all.
 
@@ -1303,9 +1305,11 @@ Uniform, integer and distribution draws are variants of one idea.
 
 | Input | Default / required value | Meaning |
 | --- | --- | --- |
-| `distribution` | "uniform" | "uniform", "normal", "exponential", "poisson" or "gamma"; distribution-specific settings only. |
-| `min / max / integer` | 0 / 1 / false | Uniform [min,max), or integer values min ≤ n &lt; max. Integer bounds must be safe integers; max &gt; min. Other distributions reject these settings. |
+| `distribution` | "uniform" | "uniform", "normal", "exponential", "poisson", "gamma", "bernoulli" or "triangular"; distribution-specific settings only. |
+| `min / max / integer` | 0 / 1 / false | Uniform [min,max), or integer values min ≤ n &lt; max. Integer bounds must be safe integers; max &gt; min. These defaults and integer mode apply only to uniform; triangular has separate required min/mode/max settings. |
 | `mean / deviation` | 0 / 1 for normal | Finite normal mean and nonnegative deviation. Exponential/Poisson mean defaults to 1 and must be nonnegative. Gamma uses required positive finite shape/rate (not mean/deviation); its mean is shape/rate. |
+| `probability` | Required for Bernoulli | Finite probability in [0,1]; return numeric 0 or 1. |
+| `min / mode / max` | All required for triangular | Finite values with min ≤ mode ≤ max and finite max−min. These settings describe the triangular variant, not uniform defaults. |
 
 **Result and effects:** Draw explicitly. For the standard Mulberry profile, degenerate normal deviation 0 and exponential/Poisson mean 0 return the constant without a draw. The explicit NetLogo profile preserves its different pinned zero-case draw schedule. The [distribution contracts](#complete-distributions) pin schedules and cache behavior by profile; no current-version native NetLogo bit parity is implied.
 
@@ -1360,6 +1364,8 @@ random.number(options: { distribution?: "uniform", min?: number, max?: number, i
 random.number(options: { distribution: "normal", mean?: number, deviation?: number }): number
 random.number(options: { distribution: "exponential" | "poisson", mean?: number }): number
 random.number(options: { distribution: "gamma", shape: number, rate: number }): number
+random.number(options: { distribution: "bernoulli", probability: number }): number
+random.number(options: { distribution: "triangular", min: number, mode: number, max: number }): number
 random.number(options: { distribution?: "uniform", bound: number, integer?: boolean }): number
 ```
 
@@ -1368,6 +1374,8 @@ random.number(options: { distribution?: "uniform", bound: number, integer?: bool
 Normal defaults mean 0, deviation 1; exponential and Poisson default mean 1. Uniform defaults [0,1), integer false; finite bounds require max &gt; min. Integer bounds and range must be safe integers, result is min ≤ n &lt; max. Uniform uses one selected-stream double and floor for integer mode; no claim of unbiased arbitrary 53-bit integer sampling. Standard normal uses a cached polar Gaussian; deviation zero returns mean without drawing. Standard exponential requires mean ≥ 0 and uses −mean × log(1−U); zero returns zero without drawing.
 
 Standard Poisson requires mean in [0,100000], uses a product loop below 30 and transformed rejection at or above 30; mean zero returns zero without drawing. Standard gamma requires finite shape/rate &gt; 0, uses Marsaglia–Tsang rejection with shape boosting below 1, and returns output units where rate has inverse-output units. All standard algorithms have revision "agent-loom-random/1"; changes to schedule/cache require a new recorded revision, not silent continuation compatibility.
+
+The delivered additive Bernoulli variant requires probability in [0,1], returns numeric 0 or 1, and consumes one standard-stream uniform draw except at probability 0 or 1, which return without drawing. The triangular variant requires all three finite values min ≤ mode ≤ max; a nonconstant range must have finite width. It uses one standard-stream uniform inverse-CDF draw; min = mode = max returns that constant without drawing. Unknown/distribution-inappropriate keys and invalid domains reject before draws. These additions do not establish NetLogo or Salabim stream compatibility. See the [DES contract](../development/des-contract.md#observations-trace-data-and-random-draws) and its asserted public examples.
 
 The MT profile automatically keeps the old operation-specific semantics. Uniform accepts finite signed bound (default 1) and integer false by default; min/max form also remains available, applying the same double to its affine range, but cannot be combined with bound. Float returns bound × U and always consumes one MT double, including bound zero. Integer bound magnitude must be ≤ Number.MAX_SAFE_INTEGER; zero returns positive zero without draws; otherwise draw bounded-long with ceil(abs(bound)), applying the sign of bound to nonzero output.
 
@@ -1636,9 +1644,12 @@ Boundary include/exclude applies equally to exterior and hole boundaries; an inc
 
 ```ts
 Agenda.add<E = unknown>(): Agenda<E>
+agenda.time: number // readonly
+agenda.size: number // readonly; pending event count
 agenda.add(options: { at: number; data: E; priority?: number }): EventHandle<E>
 agenda.delete(handle: EventHandle<E>): void
 agenda.advance(options: { until: number; maxEvents?: number }): readonly Event<E>[]
+agenda.next(options: { until: number }): Event<E> | undefined
 type EventHandle<E> = { readonly id: string; readonly agenda: Agenda<E> };
 type Event<E> = { readonly id: string; readonly at: number; readonly priority: number; readonly sequence: number; readonly data: E };
 ```
@@ -1654,7 +1665,9 @@ type Event<E> = { readonly id: string; readonly at: number; readonly priority: n
 
 Queue plain event data; process returned due events using ordinary TypeScript.
 
-**Result and effects:** `Agenda` starts at `time` 0. `add` returns an opaque issued cancellation handle; forged handles or handles from another Agenda reject before mutation; deleting an absent event is a no-op. `advance` returns detached ordered due events and advances only `agenda.time`, never `world.tick.value`. `World` attachment supplies no implicit dispatch loop; model calls `advance` explicitly.
+**Result and effects:** `Agenda` starts at `time` 0. `add` returns an opaque issued cancellation handle; forged handles or handles from another Agenda reject before mutation; deleting an absent event is a no-op. `advance` returns detached ordered due events and advances only `agenda.time`, never `world.tick.value`. `World` attachment supplies no implicit dispatch loop; the model explicitly extracts and handles events.
+
+The delivered additive `next({until})` removes at most one due event. On success it returns a detached Event and leaves `agenda.time` exactly at that event's `at`, **even when it was the last due event**. Without a due event it returns undefined and advances only Agenda time to `until`. Validate finite `until` ≥ current time before mutation. Dispatch each returned event before extracting the next so its handler can schedule causal follow-up events within the same horizon. `size` is the readonly pending-event count; reading it changes no time or state. The existing batch `advance` contract is unchanged: it advances to the horizon when no due work remains. Caller loops use explicit finite event budgets; `next` neither dispatches callbacks nor advances World tick. See the [DES time and causality contract](../development/des-contract.md#time-and-causality).
 
 <a id="experiments-api"></a>
 
@@ -2666,3 +2679,28 @@ Counts are hard ceilings for their explicitly named bounded adapters, not target
 Lower caller caps may be supplied only where an operation documents them; higher caps reject. No resource value silently changes algorithm semantics or validates model science.
 
 The legacy-simple network profile accepts unique nonempty string node IDs of at most 256 UTF-16 units, simple homogeneous directed or undirected unweighted edges, no loops/parallel pairs, at most 1024 nodes and 32768 edges. Validate endpoints, direction and complete shape, then return a detached canonical copy sorted by code-unit node ID and endpoint order. Both prior typed validation and unknown-data canonicalization map to this single boundary; malformed types throw TypeError and domain/count violations RangeError. General graph-json follows the richer Graph interchange contract and is a separate format.
+
+## Additive measurement and update tools
+
+These root `city-library` exports extend the original inventory. They do not rename or replace its contracts. The bounded History and serial study subset are available through root `storage` and `experiments`; broader storage/worker/continuation targets remain separate.
+
+```ts
+measurements.define<Model, Values extends Readonly<Record<string, number>>>(
+  project: (model: Model) => Values,
+): { read(model: Model): Readonly<Values> }
+twoPhase<T, Proposal>(source: Iterable<T>, actions: {
+  compute(member: T): Proposal;
+  commit(member: T, proposal: Proposal): unknown;
+}): void
+continuous.linear(input: { value: number; rate: number; duration: number }): number
+continuous.crossing(input: {
+  from: number; to: number; threshold: number; duration: number;
+  direction?: "rising" | "falling" | "either";
+}): { readonly elapsed: number; readonly value: number; readonly direction: "rising" | "falling" } | undefined
+```
+
+Measurements call a pure synchronous projection once, validate an own finite numeric record and return detached frozen values. They own no model state or sampling schedule. Two-phase updates capture unique original references, compute all proposals before committing in entry order and advance no clock. A compute failure prevents library commits; a commit failure preserves earlier and partial current effects. Callers keep compute pure and proposals independent or immutable. There is no implicit World membership or dead-member filtering.
+
+Continuous tools require finite values and finite nonnegative duration. The caller declares quantity/time units. Linear progression evaluates `value + rate * duration` in that order and rejects nonfinite results. Crossing assumes a linear segment, uses strict start/inclusive end and returns no crossing for zero duration or constant segments. Interpolation uses scaled IEEE-754 arithmetic, not mathematical exactness; the endpoint returns exactly duration, interior results can underflow to zero, and no epsilon is invented. The result is finite within the interval. Planning absolute Agenda events remains explicit; validate additions, and cancel/recompute predictions when an intervening event changes a rate. See [the frozen decisions and examples](../mesa-expansion/dynamics.md).
+
+History normally records `world.tick.value`. Any deliberately selected alternative axis must be named and used consistently for that series. Equal-time Agenda measurements require aggregation before History insertion or a separate EventTrace; no implicit conversion or extra tick occurs.

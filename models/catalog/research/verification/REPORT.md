@@ -25,9 +25,9 @@ This work makes **no claim of runtime implementation, browser acceptance, source
 
 ## Integration points
 
-- [Complete index](../../../docs/research/netlogo-web/INDEX.md)
-- [Machine-readable ledger](../../../docs/research/netlogo-web/status.json)
-- [Data contract and command](../../../docs/research/netlogo-web/README.md)
+- [Complete index](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/docs/research/netlogo-web/INDEX.md)
+- [Machine-readable ledger](../status.json)
+- [Data contract and command](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/docs/research/netlogo-web/README.md)
 - [Social/urban report](batches/social-urban/REPORT.md)
 - [Biology report](batches/biology/README.md)
 - [Physics/chemistry report](batches/physics/REPORT.md)

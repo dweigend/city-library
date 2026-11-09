@@ -1,0 +1,300 @@
+{
+  "occupancy": {
+    "initial": {
+      "monitors": [
+        {
+          "label": "Day",
+          "value": "0"
+        },
+        {
+          "label": "Occupied",
+          "value": "3"
+        },
+        {
+          "label": "Available",
+          "value": "0"
+        },
+        {
+          "label": "Waiting",
+          "value": "5"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "text": "Skip to experiment\nAgent Lab\nResidential Occupancy\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nApplicants\nDwelling slots\nMove out first household\nModel info\nDay\n0\nOccupied\n3\nAvailable\n0\nWaiting\n5\nPaused\nHousing · orange waiting, blue housed, gray moved out (schematic)\nOccupancy\n5\n0\n1\nday\nHouseholds\noccupied\nwaiting",
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "rejected": {
+      "monitors": [
+        {
+          "label": "Day",
+          "value": "0"
+        },
+        {
+          "label": "Occupied",
+          "value": "3"
+        },
+        {
+          "label": "Available",
+          "value": "0"
+        },
+        {
+          "label": "Waiting",
+          "value": "5"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "text": "Skip to experiment\nAgent Lab\nResidential Occupancy\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nApplicants\nDwelling slots\nCapacity cannot shrink below granted units.\nMove out first household\nModel info\n\nCapacity cannot shrink below granted units.\n\nDay\n0\nOccupied\n3\nAvailable\n0\nWaiting\n5\nPaused\nHousing · orange waiting, blue housed, gray moved out (schematic)\nOccupancy\n5\n0\n1\nday\nHouseholds\noccupied\nwaiting",
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "recovered": {
+      "monitors": [
+        {
+          "label": "Day",
+          "value": "0"
+        },
+        {
+          "label": "Occupied",
+          "value": "4"
+        },
+        {
+          "label": "Available",
+          "value": "0"
+        },
+        {
+          "label": "Waiting",
+          "value": "4"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "text": "Skip to experiment\nAgent Lab\nResidential Occupancy\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nApplicants\nDwelling slots\nMove out first household\nModel info\nDay\n0\nOccupied\n4\nAvailable\n0\nWaiting\n4\nPaused\nHousing · orange waiting, blue housed, gray moved out (schematic)\nOccupancy\n5\n0\n1\nday\nHouseholds\noccupied\nwaiting",
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "released": {
+      "monitors": [
+        {
+          "label": "Day",
+          "value": "0"
+        },
+        {
+          "label": "Occupied",
+          "value": "4"
+        },
+        {
+          "label": "Available",
+          "value": "0"
+        },
+        {
+          "label": "Waiting",
+          "value": "3"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "text": "Skip to experiment\nAgent Lab\nResidential Occupancy\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nApplicants\nDwelling slots\nMove out first household\nModel info\nDay\n0\nOccupied\n4\nAvailable\n0\nWaiting\n3\nPaused\nHousing · orange waiting, blue housed, gray moved out (schematic)\nOccupancy\n5\n0\n1\nday\nHouseholds\noccupied\nwaiting",
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "inputs": [
+      {
+        "name": "",
+        "invalid": null
+      },
+      {
+        "name": "applicants",
+        "invalid": "false"
+      },
+      {
+        "name": "slots",
+        "invalid": "false"
+      }
+    ]
+  },
+  "trees": {
+    "dry": {
+      "monitors": [
+        {
+          "label": "Day",
+          "value": "1"
+        },
+        {
+          "label": "Used today (L)",
+          "value": "0"
+        },
+        {
+          "label": "Total water (L)",
+          "value": "0"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "text": "Skip to experiment\nAgent Lab\nUrban Tree Watering\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nTrees\nSeed\nDaily water (L)\nModel info\nDay\n1\nUsed today (L)\n0\nTotal water (L)\n0\nPaused\nTrees · red dry / green moist · blue allocated water\nMean moisture\n5.70\n0\n1\nday\nL\nMoisture",
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "watered": {
+      "monitors": [
+        {
+          "label": "Day",
+          "value": "2"
+        },
+        {
+          "label": "Used today (L)",
+          "value": "81"
+        },
+        {
+          "label": "Total water (L)",
+          "value": "81"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "text": "Skip to experiment\nAgent Lab\nUrban Tree Watering\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nTrees\nSeed\nDaily water (L)\nModel info\nDay\n2\nUsed today (L)\n81\nTotal water (L)\n81\nPaused\nTrees · red dry / green moist · blue allocated water\nMean moisture\n10\n0\n2\nday\nL\nMoisture",
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    }
+  }
+}

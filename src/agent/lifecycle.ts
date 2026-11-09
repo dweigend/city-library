@@ -1,17 +1,21 @@
 import type { World } from "../world/world.ts";
+/** Internal coordination: validation may reject; commits must not throw or reenter. */
 export interface DeletionParticipant {
+  /** Attachment-only validation; detachment preserves external graph memberships. */
+  validateWorld?(world: World): void;
   validate(): void;
   commit(): void;
 }
 interface FrameworkRecord {
-  readonly kind: "agent" | "world" | "random" | "graph" | "edge" | "grid" | "field";
+  readonly kind: "agent" | "world" | "random" | "graph" | "edge" | "grid" | "field" | "agenda";
   alive: boolean;
   world?: World;
   detach?: () => void;
   readonly deletionParticipants: Set<DeletionParticipant>;
   worldObservers?: Set<WorldObserver>;
 }
-/** Private derived-query coordination; observers never own domain state. */
+/** Private derived-query coordination; observers never own domain state.
+ * Membership notifications must not throw or reenter domain mutation. */
 interface WorldObserver {
   membership(component: object, attached: boolean): void;
   movement(agent: object): void;
@@ -54,4 +58,12 @@ export function notifyMovement(agent: object): void {
   const world = frameworkRecord(agent)?.world;
   if (world) for (const observer of frameworkRecord(world)?.worldObservers ?? [])
     observer.movement(agent);
+}
+
+/** Resolve ownership from canonical component relations; fields and edges have no separate owner. */
+export function frameworkOwner(value: object): World | undefined {
+  const record = frameworkRecord(value);
+  if (record?.kind === "field") return frameworkRecord((value as { grid: object }).grid)?.world;
+  if (record?.kind === "edge") return frameworkRecord((value as { graph: object }).graph)?.world;
+  return record?.world;
 }

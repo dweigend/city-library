@@ -7,8 +7,8 @@
 - **Pre-Runtime Freeze Baseline:** `9fca840935cbc152e8faef4cddf877347568261a` (`2df94d1` accepted `E0` checkpoint + reviewed `E3` contract/examples/archive freeze)
 - **Reviewed Diff (`9fca840..6726d7e`):**
   - Runtime: [`src/grid/topology/index.ts`](../../src/grid/topology/index.ts), [`src/grid/topology/quad-validation.ts`](../../src/grid/topology/quad-validation.ts), [`src/grid/topology/quadrilaterals.ts`](../../src/grid/topology/quadrilaterals.ts), [`src/grid/topology/relax.ts`](../../src/grid/topology/relax.ts)
-  - Public example registration & dev typecheck: [`scripts/examples.ts`](../../scripts/examples.ts), [`tsconfig.dev.json`](../../tsconfig.dev.json)
-  - Focused tests & type checks: [`tests/townscaper-grid.test.ts`](../../tests/townscaper-grid.test.ts), [`tests/townscaper-grid-types.ts`](../../tests/townscaper-grid-types.ts), [`scripts/consumer.ts`](../../scripts/consumer.ts)
+  - Public example registration & dev typecheck: [`scripts/examples.ts`](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/scripts/examples.ts), [`tsconfig.dev.json`](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/tsconfig.dev.json)
+  - Focused tests & type checks: [`tests/townscaper-grid.test.ts`](../../tests/townscaper-grid.test.ts), [`tests/townscaper-grid-types.ts`](../../tests/townscaper-grid-types.ts), [`scripts/consumer.ts`](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/scripts/consumer.ts)
   - Contract & boundary notes: [`docs/grid-parcels/TOWNSCAPER-CONTRACT.md`](TOWNSCAPER-CONTRACT.md), [`docs/grid-parcels/TOWNSCAPER-REVIEW-RESPONSES.md`](TOWNSCAPER-REVIEW-RESPONSES.md), [`docs/grid-parcels/TOWNSCAPER-VERIFICATION.md`](TOWNSCAPER-VERIFICATION.md)
 
 ---

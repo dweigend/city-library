@@ -16,13 +16,13 @@ Each linked dossier contains the separately completed framing and exactly three 
 
 | Model | Executed original/target comparison | Scientific dossier |
 | --- | --- | --- |
-| Paths | [Report](selected-transport-browser-report.md#paths) | [Research](../../docs/research/netlogo-web/paths.md) |
-| Traffic 2 Lanes | [Report](selected-transport-browser-report.md#traffic-2-lanes) | [Research](../../docs/research/netlogo-web/traffic-2-lanes.md) |
-| Traffic Grid | [Original/historical target](selected-transport-browser-report.md#traffic-grid), [current target](selected-transport-grid-goal-remediation.md) | [Research](../../docs/research/netlogo-web/traffic-grid.md) |
-| Taxi Cabs | [Report](selected-transport-browser-report.md#taxi-cabs) | [Research](../../docs/research/netlogo-web/taxi-cabs.md) |
-| Traffic Basic | [Report](selected-transport-browser-report.md#traffic-basic) | [Research](../../docs/research/netlogo-web/traffic-basic.md) |
-| Traffic Intersection | [Report](selected-transport-browser-report.md#traffic-intersection) | [Research](../../docs/research/netlogo-web/traffic-intersection.md) |
-| Traffic Grid Goal | [Original/historical target](selected-transport-browser-report.md#traffic-grid-goal), [current target](selected-transport-grid-goal-remediation.md) | [Research](../../docs/research/netlogo-web/traffic-grid-goal.md) |
+| Paths | [Report](selected-transport-browser-report.md#paths) | [Research](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/docs/research/netlogo-web/paths.md) |
+| Traffic 2 Lanes | [Report](selected-transport-browser-report.md#traffic-2-lanes) | [Research](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/docs/research/netlogo-web/traffic-2-lanes.md) |
+| Traffic Grid | [Original/historical target](selected-transport-browser-report.md#traffic-grid), [current target](selected-transport-grid-goal-remediation.md) | [Research](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/docs/research/netlogo-web/traffic-grid.md) |
+| Taxi Cabs | [Report](selected-transport-browser-report.md#taxi-cabs) | [Research](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/docs/research/netlogo-web/taxi-cabs.md) |
+| Traffic Basic | [Report](selected-transport-browser-report.md#traffic-basic) | [Research](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/docs/research/netlogo-web/traffic-basic.md) |
+| Traffic Intersection | [Report](selected-transport-browser-report.md#traffic-intersection) | [Research](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/docs/research/netlogo-web/traffic-intersection.md) |
+| Traffic Grid Goal | [Original/historical target](selected-transport-browser-report.md#traffic-grid-goal), [current target](selected-transport-grid-goal-remediation.md) | [Research](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/docs/research/netlogo-web/traffic-grid-goal.md) |
 
 All seven concrete originals and targets ran in T3 Chromium with actual session-source and loaded target-chunk hashes, paired setup/progress, controls/parameters, desktop/mobile light/dark and bounded diagnostics. Paths preserves the actual distance-self all-zero tie rather than its misleading comment. Taxi preserves the actual zero-green MOD failure without ticking. Negative/overshooting Grid speeds, stale Goal upCar and U-turn/fare/accounting rules remain explicit. Histories, camera/glyph/report presentation and different RNG are declared adaptations, with no trajectory/distribution equivalence claim. All plots/reporters remain public source-specific observations.
 

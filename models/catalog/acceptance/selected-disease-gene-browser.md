@@ -14,16 +14,16 @@ Complete XML, procedures, widgets, Info, shapes and previews are archived under 
 
 | Exact selected model | Report |
 | --- | --- |
-| Disease Solo | [Contact, user movement, Keep plots and delayed stop](selected-disease-gene-disease-solo.md) |
-| Repressilator 1D | [Poisson expression, inhibition, signal intervals and arithmetic error](selected-disease-gene-repressilator-1d.md) |
-| HIV | [Coupling, source trait draws, testing and canonical partners](selected-disease-gene-hiv.md) |
-| Virus | [Moving hosts, recovery/immunity, births/deaths and empty-world clock](selected-disease-gene-virus.md) |
-| CRISPR Bacterium | [Intracellular transcription, guide binding, invasion and defense](selected-disease-gene-crispr-bacterium.md) |
-| CRISPR Ecosystem | [Food/energy, spacer defense, replication and abundance plots](selected-disease-gene-crispr-ecosystem.md) |
-| epiDEM Basic | [Neighbor infection, recovery snapshots and R0](selected-disease-gene-epidem-basic.md) |
-| epiDEM Travel and Control | [Continents, interventions, contacts, ambulances and preserved ln0](selected-disease-gene-epidem-travel-and-control.md) |
-| GenEvo 1 Genetic Switch | [Operon reactions, lactose/glucose, energy and division](selected-disease-gene-genevo-1-genetic-switch.md) |
-| DNA Protein Synthesis | [Sequences, gated transcription/translation, mutation and proteins](selected-disease-gene-dna-protein-synthesis.md) |
+| Disease Solo | [Contact, user movement, Keep plots and delayed stop](../../disease-solo/evidence/selected-disease-gene-disease-solo.md) |
+| Repressilator 1D | [Poisson expression, inhibition, signal intervals and arithmetic error](../../repressilator-1d/evidence/selected-disease-gene-repressilator-1d.md) |
+| HIV | [Coupling, source trait draws, testing and canonical partners](../../hiv/evidence/selected-disease-gene-hiv.md) |
+| Virus | [Moving hosts, recovery/immunity, births/deaths and empty-world clock](../../virus/evidence/selected-disease-gene-virus.md) |
+| CRISPR Bacterium | [Intracellular transcription, guide binding, invasion and defense](../../crispr-bacterium/evidence/selected-disease-gene-crispr-bacterium.md) |
+| CRISPR Ecosystem | [Food/energy, spacer defense, replication and abundance plots](../../crispr-ecosystem/evidence/selected-disease-gene-crispr-ecosystem.md) |
+| epiDEM Basic | [Neighbor infection, recovery snapshots and R0](../../epidem-basic/evidence/selected-disease-gene-epidem-basic.md) |
+| epiDEM Travel and Control | [Continents, interventions, contacts, ambulances and preserved ln0](../../epidem-travel-and-control/evidence/selected-disease-gene-epidem-travel-and-control.md) |
+| GenEvo 1 Genetic Switch | [Operon reactions, lactose/glucose, energy and division](../../genevo-1-genetic-switch/evidence/selected-disease-gene-genevo-1-genetic-switch.md) |
+| DNA Protein Synthesis | [Sequences, gated transcription/translation, mutation and proteins](../../dna-protein-synthesis/evidence/selected-disease-gene-dna-protein-synthesis.md) |
 
 Every report links the already completed three-publication dossier. Those scientific access/verification limitations remain in force; no literature was duplicated and no empirical or medical validation is claimed. These models are teaching toys, not health guidance.
 
@@ -49,10 +49,10 @@ Normal original and target setup/progression flows recorded no console/runtime e
 | Standalone `tsc -p docs/development/selected-disease-gene-evidence/tsconfig.examples.json` | PASS, covers all five public scripts without editing root registration |
 | `bun run build` | PASS |
 | `bun run consumer` | PASS: actual locally packed package, Bun, Node ESM and ambient-free TypeScript consumer |
-| Source/session/final marker and decoded artifact checks | PASS; [read-only verifier](selected-disease-gene-check-artifacts.py) |
+| Source/session/final marker and decoded artifact checks | PASS; [read-only verifier](https://github.com/dweigend/city-library/blob/dc7b164abd23c8e7b7f11c902195ab030c5f1c4b/docs/development/selected-disease-gene-check-artifacts.py) |
 | Parent status-fix ancestry | e1c4ae8 is an ancestor; visible error status verified at tick0 |
 
-[Toolchain](selected-disease-gene-evidence/toolchain.log), [focused tests](selected-disease-gene-evidence/focused-tests.log), [frozen runs](selected-disease-gene-evidence/frozen-example-runs.json), [typecheck](selected-disease-gene-evidence/typecheck-final.log), [standalone types](selected-disease-gene-evidence/standalone-examples-types.log), [build](selected-disease-gene-evidence/build.log), [packed consumer](selected-disease-gene-evidence/packed-consumer.log). Package consumer checks the actual packaged public library primitives; experiment source files remain repository public model APIs, not newly invented package exports. Root's global full check was not rerun or claimed here. Initial work-in-progress type failures are kept separately from final executed passes.
+[Toolchain](https://github.com/dweigend/city-library/blob/dc7b164abd23c8e7b7f11c902195ab030c5f1c4b/docs/development/selected-disease-gene-evidence/toolchain.log), [focused tests](https://github.com/dweigend/city-library/blob/dc7b164abd23c8e7b7f11c902195ab030c5f1c4b/docs/development/selected-disease-gene-evidence/focused-tests.log), [frozen runs](selected-disease-gene-evidence/frozen-example-runs.json), [typecheck](https://github.com/dweigend/city-library/blob/dc7b164abd23c8e7b7f11c902195ab030c5f1c4b/docs/development/selected-disease-gene-evidence/typecheck-final.log), [standalone types](https://github.com/dweigend/city-library/blob/dc7b164abd23c8e7b7f11c902195ab030c5f1c4b/docs/development/selected-disease-gene-evidence/standalone-examples-types.log), [build](https://github.com/dweigend/city-library/blob/dc7b164abd23c8e7b7f11c902195ab030c5f1c4b/docs/development/selected-disease-gene-evidence/build.log), [packed consumer](https://github.com/dweigend/city-library/blob/dc7b164abd23c8e7b7f11c902195ab030c5f1c4b/docs/development/selected-disease-gene-evidence/packed-consumer.log). Package consumer checks the actual packaged public library primitives; experiment source files remain repository public model APIs, not newly invented package exports. Root's global full check was not rerun or claimed here. Initial work-in-progress type failures are kept separately from final executed passes.
 
 ## Architecture, adaptations and design QA
 

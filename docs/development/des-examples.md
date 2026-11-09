@@ -1,0 +1,36 @@
+# Ten discrete-event city examples
+
+These are original synthetic teaching scenarios, not calibrated city forecasts or Salabim ports. The model owns execution and observations. Each `ui.ts` binds canonical inputs, public actions and detached observations through `defineUI`; the existing Agent Lab discovers every `models/<slug>/{model,ui}.ts` pair automatically. No registry or custom renderer is needed.
+
+## Delivery gate
+
+Freeze the five phase-A scripts and five phase-B scripts, paired models and UI declarations before DES runtime implementation. Accepted public calls and asserted values are contracts. Implementation fixes must not weaken them. The core's five capability examples are a separate API gate. Passing headless assertions does not establish scientific validation or browser acceptance.
+
+Phase A has three examples focused on the new detached capabilities, followed by two compositions with existing Agent, World and Graph APIs. Phase B contributes five further compositions. Together they provide exactly three focused and seven combined models, with different mechanisms rather than ten parameterizations of one queue.
+
+| Phase | Slug | Mechanism and public actions | Units and deterministic acceptance | UI evidence needed |
+| --- | --- | --- | --- | --- |
+| A, focused | `des-civic-office` | FIFO desks; `addResident`, `setClerks`; capacity reduction retains current service | Minutes. Three residents, one clerk, two-minute service: completion times 2, 4, 6; total waiting 6; zero final occupancy | Clerk live control, resident action, queue chart, service ledger |
+| A, focused | `des-ev-charging` | Priority charger allocation; heterogeneous durations; `addVehicle`, `abandonWaiting`, `setChargers` | Minutes. Two chargers, sessions 2, 4, 2: completion times 2, 4, 4; cancellation never releases another vehicle's grant. Session durations are inputs, not battery physics | Priority insertion, cancellation, live capacity, occupancy chart and session ledger |
+| A, focused | `des-goods-buffer` | Bounded Store producer backpressure; `produce`, `collect`; timed replenishment/collection | Minutes and indivisible crates. Produce at 1, 2, 3 into capacity 2; one producer blocked at 3. Collect at 4, 6, 8; first take admits blocked producer synchronously. Produced = stored + blocked + collected | Production/collection actions, stock chart, collection ledger |
+| A, combined | `des-bus-interchange` | Weighted Graph route and canonical bus Agents followed by berth Resource; `addBus`, `setBerths` | Minutes; World tick and Agenda time advanced separately. Graph shortest cost 5 beats direct cost 8. Two buses arriving at 5 use one berth for 2 each, depart at 7 and 9 | Route network, dispatch action, berth control, queue chart, bus ledger |
+| A, combined | `des-parcel-logistics` | Canonical parcel Agents, bounded depot Store, weighted Graph and van Resource; `addParcel` | Minutes. Loading 1, routes 2 and 3. One van delivers at 3 and 9, returns at 5 and 12; occupancy persists during the return leg | Delivery network, sender action, backpressure monitors, cumulative deliveries and parcel ledger |
+| B, combined | `des-waste-collection` | Grid collection locations, a canonical spatial truck Agent, bounded truck load and timed disposal | Load units and synthetic minutes. Twelve initial units are delivered by minute 12, with exact site/truck/depot conservation; no emissions calibration | Spatial/grid location view, setup truck capacity, collection ledger |
+| B, combined | `des-emergency-dispatch` | Graph incident locations, canonical location Agents, priority waiting and team Resource | Synthetic travel/service minutes; dispatch priority is a toy policy, not a clinical triage rule. One team completes calls 1, 2, 3 at minutes 4, 12, 18 | Live responder capacity, response ledger and route view |
+| B, combined | `des-bike-redistribution` | Spatial station Agents, Graph travel and bounded station Stores | Indivisible bicycles and synthetic minutes; station + in-transit total of 6 conserved; inventories [2,2,2] at minute 4 | Spatial stations, inventory bars and transfer ledger |
+| B, combined | `des-water-allocation` | Neighborhood Grid and finite water allocation with explicit unmet demand | Allocation units and minutes; no hydraulic, pressure or water-quality claims. Six delivered plus six unmet; added supply fulfills total demand 12 | Add supply action and neighborhood allocation ledger |
+| B, combined | `des-machine-maintenance` | Spatial machine Agents, crew Resource, failures and delayed repairs | Synthetic minutes, explicit working/failed/repair states; at minute 10 two repairs complete and mean availability is 0.5 | Spatial machines, live repair-team capacity, uptime and repair ledger |
+
+The ten asserted scripts under `examples/des-models` define the exact fixtures for both phases.
+
+## Common acceptance
+
+All ten factories are inert on import and independent on creation. Setup validates canonical descriptors. `advance` rejects negative or nonintegral counts. Model steps explicitly drain causal Agenda events within a finite event budget; no Promise, wall-clock timer or automatic World ticking performs a simulated wait. Reads return detached data without consuming randomness or advancing clocks. Resource and Store kernels own occupancy and waiting; model ledgers describe scientific milestones rather than reimplementing allocation.
+
+Focused models use Agenda time as their reported model time. Combined models explicitly call `run(world, procedure, count)` and drain Agenda time inside each procedure. A failed procedure does not receive a successful World tick. Equal numeric values in default fixtures do not make these clocks interchangeable.
+
+Browser verification must cover Setup, step, Run/Pause, model switching and each declared control/action. Capture desktop at least 1366×768 and narrow 390×844 in light and dark themes, and obtain separate independent screenshot inspection. Record exact executed checks, screenshot paths, reviewer findings/responses and remaining gates in integration evidence.
+
+## Authoring
+
+Model state and observations belong to the headless implementation. Follow the [coding standards](../CODING_STANDARDS.md), [model authoring guide](model-authoring.md) and shared [UI contract](../ui/README.md). UI declarations reuse the existing components and tokens.

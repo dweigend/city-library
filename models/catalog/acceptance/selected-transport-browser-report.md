@@ -12,7 +12,7 @@ NetLogo MT and City Library Mulberry streams, activation/color draw order and pr
 
 ## Paths
 
-Canonical selection: `Sample Models/Social Science/Paths`. Source NetLogo 7.0.4, pinned Galapagos `90be931773fcf499049247a8aaa1aecbe003654c`; actual loaded XML SHA-256 `89f74e30ca5a70a0fc139e99c6e2ea62e9509ce1c8c76bc8cffa154cf3cd75d0`. [Complete original and notices](../../experiments/paths/original.nlogox); [adaptation notice](../../experiments/paths/NOTICE.md).
+Canonical selection: `Sample Models/Social Science/Paths`. Source NetLogo 7.0.4, pinned Galapagos `90be931773fcf499049247a8aaa1aecbe003654c`; actual loaded XML SHA-256 `89f74e30ca5a70a0fc139e99c6e2ea62e9509ce1c8c76bc8cffa154cf3cd75d0`. [Complete original and notices](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/paths/original.nlogox); [adaptation notice](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/paths/NOTICE.md).
 
 Walkers and goals remain canonical Agent/Field references. Reinforcement, occupied-field decay exemption, route hysteresis, building radius and random ties among every eligible visible route are implemented. Native distance-self probe returned eleven zeros; distance-myself returned varying positive distances. Source comment and execution differ; the port preserves execution. Browser drawing placed and removed a building at tick 1, with counts 0→1→0.
 
@@ -36,7 +36,7 @@ Additional inspected captures: [desktop dark](https://github.com/dweigend/city-l
 
 ## Traffic 2 Lanes
 
-Canonical selection: `Sample Models/Social Science/Traffic 2 Lanes`. Source NetLogo 7.0.4, pinned Galapagos `90be931773fcf499049247a8aaa1aecbe003654c`; actual loaded XML SHA-256 `6a3d627581f1a628e42ff2ca13c643824f9a441309d08645e101df13d09f17d9`. [Complete original and notices](../../experiments/traffic-2-lanes/original.nlogox); [adaptation notice](../../experiments/traffic-2-lanes/NOTICE.md).
+Canonical selection: `Sample Models/Social Science/Traffic 2 Lanes`. Source NetLogo 7.0.4, pinned Galapagos `90be931773fcf499049247a8aaa1aecbe003654c`; actual loaded XML SHA-256 `6a3d627581f1a628e42ff2ca13c643824f9a441309d08645e101df13d09f17d9`. [Complete original and notices](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/traffic-2-lanes/original.nlogox); [adaptation notice](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/traffic-2-lanes/NOTICE.md).
 
 Live population reconciliation preserves the selected car. Forward movement, impatient lane choice and lateral motion are separate shuffled phases. Speed/patience/per-lane histories are current sampled summaries. Selected car was changed by an actual canvas click (selected-speed readback changed 0.505→0.480). Watch, Follow and Reset perspective buttons executed; Follow shifts observation x coordinates around the selected car, without moving domain agents. Lane-line decoration and car sprites are simplified.
 
@@ -60,7 +60,7 @@ Additional inspected captures: [desktop dark](https://github.com/dweigend/city-l
 
 ## Traffic Grid
 
-Canonical selection: `Sample Models/Social Science/Traffic Grid`. Source NetLogo 7.0.4, pinned Galapagos `90be931773fcf499049247a8aaa1aecbe003654c`; actual loaded XML SHA-256 `ec0cdcff88fbc9d54aa20a922fa3da8087c40318c929bae108f22f16932def3d`. [Complete original and notices](../../experiments/traffic-grid/original.nlogox); [adaptation notice](../../experiments/traffic-grid/NOTICE.md).
+Canonical selection: `Sample Models/Social Science/Traffic Grid`. Source NetLogo 7.0.4, pinned Galapagos `90be931773fcf499049247a8aaa1aecbe003654c`; actual loaded XML SHA-256 `ec0cdcff88fbc9d54aa20a922fa3da8087c40318c929bae108f22f16932def3d`. [Complete original and notices](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/traffic-grid/original.nlogox); [adaptation notice](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/traffic-grid/NOTICE.md).
 
 Shared source-specific composition retains the floating road predicate, setup stopped/wait accounting, selected signal phases, current-patch red check and sequential following. Native source at tick 50 included speed −0.09899999999999998; target tests preserve the same permitted negative boundary rather than clamp it. Change light and canvas intersection selection executed. The current-intersection label remains in the public cell readmodel; grid text decoration is simplified.
 
@@ -84,7 +84,7 @@ Additional inspected captures: [desktop dark](https://github.com/dweigend/city-l
 
 ## Taxi Cabs
 
-Canonical selection: `Sample Models/Social Science/Taxi Cabs`. Source NetLogo 7.0.4, pinned Galapagos `90be931773fcf499049247a8aaa1aecbe003654c`; actual loaded XML SHA-256 `150f739ec217fbb199d86eca783922a79acceeb6504e44add1921d934d3d4a30`. [Complete original and notices](../../experiments/taxi-cabs/original.nlogox); [adaptation notice](../../experiments/taxi-cabs/NOTICE.md).
+Canonical selection: `Sample Models/Social Science/Taxi Cabs`. Source NetLogo 7.0.4, pinned Galapagos `90be931773fcf499049247a8aaa1aecbe003654c`; actual loaded XML SHA-256 `150f739ec217fbb199d86eca783922a79acceeb6504e44add1921d934d3d4a30`. [Complete original and notices](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/taxi-cabs/original.nlogox); [adaptation notice](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/taxi-cabs/NOTICE.md).
 
 All 45 independent demand values, the five source phases, Gaussian patience, directed-road corner cases, pickup/U-turn/delivery/dropoff branches and completed-trip accounting are implemented. All 53 live controls use the shared single field reader. Demand disclosures expose nine fields per phase; changing AM cbd→cbd to 0.4 survived Setup. Preserve source misleading OD comments and movement-only tick fare. Original Midday marginal reporter repeats com-com and omits com-cbd; target exposes the actual independent inputs, not that erroneous sum. Histogram bins use public stats with 30 explicit bins and adaptive extent; complete trip samples remain public. Road-line decoration and vehicle/person shapes are simplified.
 
@@ -108,7 +108,7 @@ Additional inspected captures: [desktop dark](https://github.com/dweigend/city-l
 
 ## Traffic Basic
 
-Canonical selection: `Sample Models/Social Science/Traffic Basic`. Source NetLogo 7.0.4, pinned Galapagos `90be931773fcf499049247a8aaa1aecbe003654c`; actual loaded XML SHA-256 `77495cbc72df4370fe07d37ca59241585fdc63b8fec36a13c70da7ba65a6a7c3`. [Complete original and notices](../../experiments/traffic-basic/original.nlogox); [adaptation notice](../../experiments/traffic-basic/NOTICE.md).
+Canonical selection: `Sample Models/Social Science/Traffic Basic`. Source NetLogo 7.0.4, pinned Galapagos `90be931773fcf499049247a8aaa1aecbe003654c`; actual loaded XML SHA-256 `77495cbc72df4370fe07d37ca59241585fdc63b8fec36a13c70da7ba65a6a7c3`. [Complete original and notices](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/traffic-basic/original.nlogox); [adaptation notice](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/traffic-basic/NOTICE.md).
 
 Sequential car-following uses the car on patch-ahead 1, copies its current speed minus deceleration, otherwise accelerates, clamps to [0,1] and moves with Agent. The red car is a stable selected identity. Car speed traces retain red/min/max. The public factory permits capacity 51, matching the source procedure bound; the original slider caps at 41. This explicit input-range extension permits the full valid road capacity without changing the default 20. The watch halo and vehicle sprites are simplified to a larger red marker.
 
@@ -132,7 +132,7 @@ Additional inspected captures: [desktop dark](https://github.com/dweigend/city-l
 
 ## Traffic Intersection
 
-Canonical selection: `Sample Models/Social Science/Unverified/Traffic Intersection`. Source NetLogo 7.0.4, pinned Galapagos `90be931773fcf499049247a8aaa1aecbe003654c`; actual loaded XML SHA-256 `231db7a8ab42c4bb097f57fbde6520b6b1c64d6c39d3e96c2c3d57e6aaa4b5c9`. [Complete original and notices](../../experiments/traffic-intersection/original.nlogox); [adaptation notice](../../experiments/traffic-intersection/NOTICE.md).
+Canonical selection: `Sample Models/Social Science/Unverified/Traffic Intersection`. Source NetLogo 7.0.4, pinned Galapagos `90be931773fcf499049247a8aaa1aecbe003654c`; actual loaded XML SHA-256 `231db7a8ab42c4bb097f57fbde6520b6b1c64d6c39d3e96c2c3d57e6aaa4b5c9`. [Complete original and notices](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/traffic-intersection/original.nlogox); [adaptation notice](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/traffic-intersection/NOTICE.md).
 
 Hard-boundary unit substeps, minimum braking bounds, collision aging and creation, post-movement spawn and strict elapsed > length light timing are preserved. The two light agents are included in original count turtles; they are distinct from cars. Switch invokes source change-to-yellow; yellow completes even with auto disabled. The source has no collision-free guarantee and target tests do not invent one. Waiting histories show overall/north/east zero-speed cars.
 
@@ -156,7 +156,7 @@ Additional inspected captures: [desktop dark](https://github.com/dweigend/city-l
 
 ## Traffic Grid Goal
 
-Canonical selection: `IABM Textbook/chapter 5/Traffic Grid Goal`. Source NetLogo 7.0.4, pinned Galapagos `90be931773fcf499049247a8aaa1aecbe003654c`; actual loaded XML SHA-256 `7259187f36f97a8c6e9378398a72d927844233c3811151a714eb3aa97807bfa9`. [Complete original and notices](../../experiments/traffic-grid-goal/original.nlogox); [adaptation notice](../../experiments/traffic-grid-goal/NOTICE.md).
+Canonical selection: `IABM Textbook/chapter 5/Traffic Grid Goal`. Source NetLogo 7.0.4, pinned Galapagos `90be931773fcf499049247a8aaa1aecbe003654c`; actual loaded XML SHA-256 `7259187f36f97a8c6e9378398a72d927844233c3811151a714eb3aa97807bfa9`. [Complete original and notices](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/traffic-grid-goal/original.nlogox); [adaptation notice](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/traffic-grid-goal/NOTICE.md).
 
 Uses the Grid procedures plus distinct canonical house/work fields and local Moore-neighbor greedy choices. The setup upCar flag intentionally remains unchanged after heading changes, exactly as the source collision lookup does. Goal toggling uses face adjacency and keeps the two sequential source tests. Watch a car highlights home/work, enlarges the car and labels its goal; Stop watching clears highlights/labels while preserving enlarged size. Target watch/stop/change-light and canvas nearest-intersection selection executed. Current/home/work field labels are in the public readmodel; patch text decoration is simplified.
 

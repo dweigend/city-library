@@ -640,6 +640,76 @@
       "migratedSha256": "087133aecf6a320ad04aef0a7603822411be996fb73ad07ee985021e15a9cc17",
       "baselineManifestMismatch": false,
       "change": "experiments/ -> models/ in paths only"
+    },
+    {
+      "freezeRevision": "23693e90e199512faf68a04c9a2198b9eb50463b",
+      "file": "examples/des-models/03-goods-buffer.ts",
+      "originalSha256": "55e6281207d6a5657cd21e67b011d226ec512912cb6cc9421f64e428d1bed08b",
+      "migratedSha256": "d64a311206544473047995920eb44ebf84b536175430544145330ac777adac85",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "freezeRevision": "23693e90e199512faf68a04c9a2198b9eb50463b",
+      "file": "examples/des-models/05-parcel-logistics.ts",
+      "originalSha256": "0bef0ecf33fcf9f7c8d3a45f9a5be00cb31bc944278e498bbb2153cad7aa463a",
+      "migratedSha256": "d1b66fd22257c50083d5e7b77033f7f147b654ae31c75536bc4bee4cb95fd19d",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "freezeRevision": "23693e90e199512faf68a04c9a2198b9eb50463b",
+      "file": "examples/des-models/08-bike-redistribution.ts",
+      "originalSha256": "e7ae4df67bad3b009900025cdfac282de8964bed63e29c4cbc1dd76df6935325",
+      "migratedSha256": "6231911fc84bcbb3bcafdc5a5160f522fb6436cbf8661c00c4944dd63f8c3926",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "freezeRevision": "23693e90e199512faf68a04c9a2198b9eb50463b",
+      "file": "examples/des-models/02-ev-charging.ts",
+      "originalSha256": "0e610d96efcd34e86bb5f13eef4c51499f1fbcb22f21ef11dff6cc945d201761",
+      "migratedSha256": "ae595308992104af3e025f97002ecb63869ab593111daae058fad567d73a14c0",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "freezeRevision": "23693e90e199512faf68a04c9a2198b9eb50463b",
+      "file": "examples/des-models/01-civic-office.ts",
+      "originalSha256": "07b3efb21ede82e7d97c5fc5c7e0d48c72e9dca2fd6f351e43ab6f43d2cc995f",
+      "migratedSha256": "68b63d3a60a18017ca48b5e3e06751c3e50f25eda9eacbb95a0a7043d1bdd91f",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "freezeRevision": "23693e90e199512faf68a04c9a2198b9eb50463b",
+      "file": "examples/des-models/10-machine-maintenance.ts",
+      "originalSha256": "f160d0002e9e051b17dab072bcce45de8863ff37ec202037d04ddf5edf053d30",
+      "migratedSha256": "ddbaada8bbc57ca80cdad52ff34da1950b79c93201860c879b0184f86432fcb8",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "freezeRevision": "23693e90e199512faf68a04c9a2198b9eb50463b",
+      "file": "examples/des-models/09-water-allocation.ts",
+      "originalSha256": "5a600858875ddd50c0a13f12450edc4c8550a75bff4f263626e88d20776613e3",
+      "migratedSha256": "e68cc333bc2be99ae08dbfa74abadb12739b83366fa671f6fbefca9148e945ec",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "freezeRevision": "23693e90e199512faf68a04c9a2198b9eb50463b",
+      "file": "examples/des-models/06-waste-collection.ts",
+      "originalSha256": "a9c0ded60ab069a169c42406cf7a9eeeab2e0fcf52f0a44bda078e582cc2a092",
+      "migratedSha256": "2639690167c849e1a1c855f401f28b4a6e6fefab3aa6c255b42e17ac191a6968",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "freezeRevision": "23693e90e199512faf68a04c9a2198b9eb50463b",
+      "file": "examples/des-models/04-bus-interchange.ts",
+      "originalSha256": "307c29c249cfaf4d7e7d16e8089b212a2d9b55fad41ee941e4377941777326da",
+      "migratedSha256": "83fc6b19d97d2aaa9c78ad28054df94870cccaa92b205df1ac4490e917c5b6be",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "freezeRevision": "23693e90e199512faf68a04c9a2198b9eb50463b",
+      "file": "examples/des-models/07-emergency-dispatch.ts",
+      "originalSha256": "6269e50bba826ca5291f63fcb9177aaaab218008b406960771820839bfb2f667",
+      "migratedSha256": "8c44aa3a9e11df0b83096b086df7277a7e994cf839b645ae57f7a5f338862c5c",
+      "change": "experiments/ -> models/ in import paths only"
     }
   ],
   "unresolved": [],

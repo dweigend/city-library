@@ -26,7 +26,7 @@ Reference comparisons observed network growth/hubs, Voting region formation, Wol
 
 ## Reference provenance and comparison caveat
 
-The existing [portable reference record](../../experiments/reference-sources/browser-evidence.json) records NetLogo Web captures. Reference model files identified NetLogo 7.0.4, while pinned repository sources identified 7.1.0-alpha1; the prior source audit reported matching procedure text and structurally matching widgets. Reference seeds were not fixed, so screenshots compare mechanisms and presentation, not identical stochastic trajectories.
+The existing [portable reference record](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/reference-sources/browser-evidence.json) records NetLogo Web captures. Reference model files identified NetLogo 7.0.4, while pinned repository sources identified 7.1.0-alpha1; the prior source audit reported matching procedure text and structurally matching widgets. Reference seeds were not fixed, so screenshots compare mechanisms and presentation, not identical stochastic trajectories.
 
 The original progressed Wolf Sheep grass reference retained a tick-0 HUD despite progressed curves/populations: it is historical evidence, not tick-20 HUD proof. A later native-control capture showed tick 268, 217 sheep, 50 wolves and grass/4 = 197, with energy labels on, Go stopped and default rule/population parameters. That later reference superseded the misleading HUD capture as progressed-state evidence; tick 268 is not a same-horizon numeric comparison with the target tick 20. PA/Voting/Wealth reference HUDs showed ticks 25/20/20 respectively.
 

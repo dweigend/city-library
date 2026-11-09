@@ -30,7 +30,7 @@ The links in each table are matched setup/progress pairs. Read the source/target
 
 ## Simple Birth Rates
 
-Canonical selected path: `Sample Models/Biology/Simple Birth Rates`; experiment `simple-birth-rates`. [Existing scientific dossier](../../docs/research/netlogo-web/simple-birth-rates.md).
+Canonical selected path: `Sample Models/Biology/Simple Birth Rates`; experiment `simple-birth-rates`. [Existing scientific dossier](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/docs/research/netlogo-web/simple-birth-rates.md).
 
 Setup is exactly500 red/500 blue on both sides. At tick10 the original has497 red/499 blue, target596 red/462 blue. These distinct stochastic realizations are not claimed equal; independent excess-population mortality targets capacity in expectation rather than enforcing exactly1000. The capacity1/zero-fertility intervention retains one blue through generations; experiment mode logs red extinction and resets to generation0. Native experiment reset and target Run experiment/Repeat experiment/Setup experiment were exercised; repeating is paused by toggling the same Repeat experiment control. Public headless tests also cover odd capacity, parent survival and independent mortality.
 
@@ -43,7 +43,7 @@ Target [desktop dark](https://github.com/dweigend/city-library/blob/dc7b164abd23
 
 ## Daisyworld
 
-Canonical selected path: `Sample Models/Biology/Daisyworld`; experiment `daisyworld`. [Existing scientific dossier](../../docs/research/netlogo-web/daisyworld.md).
+Canonical selected path: `Sample Models/Biology/Daisyworld`; experiment `daisyworld`. [Existing scientific dossier](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/docs/research/netlogo-web/daisyworld.md).
 
 Both setups have168 black and168 white daisies and mean temperature8.8859530679°C (target monitor rounds8.886). At tick10 original717 black/114 white, mean31.274643°C; target726/112, mean31.767°C. Empty-world thermal relaxation gives the exact source oracle `0.75*(72*ln(0.48)+80)=20.3656645457` after one step. Original held drawing changes an occupied flower to black after its explicit removal and leaves the plot-owned count globals stale until plotting; remove-all deletes actual flowers without ticking. Target paint/remove updates detached population reporters immediately. Target mouse and Home/Enter/ArrowRight/Space drawing produced three black flowers at tick0 with visible keyboard focus. Fixed-scenario luminosity applies after the completed step, and changing albedo affects future flowers, preserving captured existing albedo. Glyphs and immediate reporter refresh are explicit presentation adaptations.
 
@@ -56,7 +56,7 @@ Target [desktop dark](https://github.com/dweigend/city-library/blob/dc7b164abd23
 
 ## Termites
 
-Canonical selected path: `Sample Models/Biology/Termites`; experiment `termites`. [Existing scientific dossier](../../docs/research/netlogo-web/termites.md).
+Canonical selected path: `Sample Models/Biology/Termites`; experiment `termites`. [Existing scientific dossier](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/docs/research/netlogo-web/termites.md).
 
 The original setup has8197 ground chips and400 white termites. `ask turtles [go]` completes **one full recursive source go per turtle**: search-for-chip →pickup/forward20 →find-new-pile →put-down-chip →get-away. Every turtle finishes unladen; ground chips remain8197. Native wiggle moves1 **before** right-random50 and left-random50; pickup moves20 without a new turn; blocked drop turns-random360 then moves1; after dropping, escape turns-random360 and moves20, recursively repeating while on wood. These explicit orders remain in the headless source composition.
 
@@ -73,7 +73,7 @@ Target [desktop dark](https://github.com/dweigend/city-library/blob/dc7b164abd23
 
 ## Shepherds
 
-Canonical selected path: `Sample Models/Biology/Shepherds`; experiment `shepherds`. [Existing scientific dossier](../../docs/research/netlogo-web/shepherds.md).
+Canonical selected path: `Sample Models/Biology/Shepherds`; experiment `shepherds`. [Existing scientific dossier](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/docs/research/netlogo-web/shepherds.md).
 
 Both sides retain150 sheep and30 shepherds. Original setup efficiency66.2597%, then69.2590% at tick50; target67.6%, then69.1%, with18 carried sheep at tick50. The metric samples only at setup and ticks divisible by50; both monitors hold their last sample between updates, including the recorded tick51/52 playback state. Hidden carried sheep remain canonical and count in patch/neighborhood occupancy. Native live speed0 and target setup speed0 followed by live0.2 were exercised; target population remains conserved and carried ownership is unique. Counts and exact source phase order are checked headlessly; differing herd configurations are stochastic outcomes.
 
@@ -86,7 +86,7 @@ Target [desktop dark](https://github.com/dweigend/city-library/blob/dc7b164abd23
 
 ## Rabbits Grass Weeds
 
-Canonical selected path: `Sample Models/Biology/Rabbits Grass Weeds`; experiment `rabbits-grass-weeds`. [Existing scientific dossier](../../docs/research/netlogo-web/rabbits-grass-weeds.md).
+Canonical selected path: `Sample Models/Biology/Rabbits Grass Weeds`; experiment `rabbits-grass-weeds`. [Existing scientific dossier](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/docs/research/netlogo-web/rabbits-grass-weeds.md).
 
 Both setups contain150 rabbits; both observed tick10 populations happen to be97, which is not a seeded-trajectory claim. Source growth is per1000, tries weeds before grass on originally empty fields, and grass may overwrite a just-grown weed. Headless tests cover strict reproduction/death boundaries and extinction preflight. Native and target live weed growth20/grass growth0/weed energy10 were exercised, with target154 rabbits at tick10. Native `number=0` Setup exposes the upstream `SET-PLOT-Y-RANGE`0..0 error; [error image](https://github.com/dweigend/city-library/blob/dc7b164abd23c8e7b7f11c902195ab030c5f1c4b/docs/development/selected-ecology-evidence/rabbits-grass-weeds-source-zero-plot-error.png) is retained. A separate subsequent native `repeat5[go]` remains at tick0, proving the source extinction preflight independently of that failed Setup command chain. Target supports safe empty charts, keeps tick0, and disables normal progress at extinction. This is an explicit chart/setup robustness repair, not exact functional parity with the native error.
 
@@ -99,7 +99,7 @@ Target [desktop dark](https://github.com/dweigend/city-library/blob/dc7b164abd23
 
 ## Invasive Plants
 
-Canonical selected path: `Sample Models/Biology/Invasive Plants`; experiment `invasive-plants`. [Existing scientific dossier](../../docs/research/netlogo-web/invasive-plants.md).
+Canonical selected path: `Sample Models/Biology/Invasive Plants`; experiment `invasive-plants`. [Existing scientific dossier](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/docs/research/netlogo-web/invasive-plants.md).
 
 Both use the33×33 hard world and default plus pattern with total resistance30500. Original setup infestation1200, target700 reflect different random initial patches; at tick10 original aggregate454.425 with81 seeds, target103.58 with17. This is a qualified mechanism comparison, not statistical equivalence. Source probes establish sprout0.6→1,1.6→2 and partial forward from x14,heading90,fd4→x16, while x16,fd2 stays16. Target normal draws, integer rounding, old-seed germination, herbicide/runoff, new-seed generation and spread preserve that source order. Public half-open geometry normalization governs patch endpoints; no private boundary kernel was added.
 
@@ -114,7 +114,7 @@ Target [desktop dark](https://github.com/dweigend/city-library/blob/dc7b164abd23
 
 ## Ants
 
-Canonical selected path: `Sample Models/Biology/Ants`; experiment `ants`. [Existing scientific dossier](../../docs/research/netlogo-web/ants.md).
+Canonical selected path: `Sample Models/Biology/Ants`; experiment `ants`. [Existing scientific dossier](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/docs/research/netlogo-web/ants.md).
 
 Both setups contain125 ants at the origin, zero chemical and three source-radius-five food piles; original total food304, target313. First native/target go reaches tick1 without departure (`who>=ticks`); at tick50 original food300/chemical840.617678 and four carrying ants, target food309/three carrying. Different random realization and RNG calls are explicit. Strict scent comparisons, pickup-return versus caller continuation, hard-edge bounce, source departure delay and diffusion-then-evaporation are tested. Live diffusion0/evaporation99 were changed through target controls; the native rates were also set to0/99 after50 steps, then a separate go reached tick51. Pile reporters exclude nest patches and preserve all three histories.
 
@@ -127,7 +127,7 @@ Target [desktop dark](https://github.com/dweigend/city-library/blob/dc7b164abd23
 
 ## Heatbugs
 
-Canonical selected path: `Sample Models/Biology/Heatbugs`; experiment `heatbugs`. [Existing scientific dossier](../../docs/research/netlogo-web/heatbugs.md).
+Canonical selected path: `Sample Models/Biology/Heatbugs`; experiment `heatbugs`. [Existing scientific dossier](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/docs/research/netlogo-web/heatbugs.md).
 
 Both setups use100 unique occupied cells, zero heat, ideal temperatures10..39 and heat outputs5..24. Original total heat after10 steps is14792.092996; target mean pre-move unhappiness is15.586 at tick10 (original plot is separately retained, not falsely equated to this field total). Exact heat balance before evaporation/emission and unique occupancy are headless invariants. Native Heat up adds25 to all10000 fields (total250000), Deep freeze restores0, both at tick0. Target Freeze/Heat up, Happiness/Ideal temperature, Watch happiest/saddest and Reset perspective were clicked; changing live max-output to30 changes Heat up while existing bug output stays captured. Target watch highlights/exposes an identity instead of moving NetLogo's camera; field/color display refreshes immediately. Source0..99 coordinates translate by49.5 into centered canonical coordinates without changing adjacency or dynamics.
 
@@ -140,7 +140,7 @@ Target [desktop dark](https://github.com/dweigend/city-library/blob/dc7b164abd23
 
 ## Flocking
 
-Canonical selected path: `Sample Models/Biology/Flocking`; experiment `flocking`. [Existing scientific dossier](../../docs/research/netlogo-web/flocking.md).
+Canonical selected path: `Sample Models/Biology/Flocking`; experiment `flocking`. [Existing scientific dossier](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/docs/research/netlogo-web/flocking.md).
 
 Both sides retain300 birds at tick10. No source plot exists. Native `vision=0` before/after samples preserve headings; target selected bird stays352.99999999999994° over10 ticks while its wrapped position changes. Native `subtract-headings` returns[180,180] for both opposite-heading probes, fixing the clockwise tie. Coincident `towards` produces the retained native error; the public source cohesion reporter throws RangeError accordingly rather than omitting that mate. Cardinal trigonometry was also probed and retains the native floating residuals, not an invented exact-zero cleanup. Sequential heading reads and five0.2 movement subpasses are source procedures; intermediate source display calls are omitted inside the headless tick.
 
@@ -153,7 +153,7 @@ Target [desktop dark](https://github.com/dweigend/city-library/blob/dc7b164abd23
 
 ## Fireflies
 
-Canonical selected path: `Sample Models/Biology/Fireflies`; experiment `fireflies`. [Existing scientific dossier](../../docs/research/netlogo-web/fireflies.md).
+Canonical selected path: `Sample Models/Biology/Fireflies`; experiment `fireflies`. [Existing scientific dossier](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/docs/research/netlogo-web/fireflies.md).
 
 Both setups contain1500 agents with threshold1, delay reset1/window-1, cycle10, dark agents hidden. Native flashes151 at setup/141 at tick10; target155/151. Old-color sensing, self-inclusion, captured reset fields, sequential motion/clock updates and the separate recolor phase are preserved. Native and target live strategy=advance/flash-length3 leave current agents' threshold1/reset1/window-1 unchanged, as retained inspector/probe records show. Visibility changes immediately in the target, while source recolors on its next display phase.
 

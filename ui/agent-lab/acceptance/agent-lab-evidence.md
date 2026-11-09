@@ -2,7 +2,7 @@
 
 Status: modular replacement implemented; final checks and evidence are recorded below. This is bounded delivery, not full A3/A4/A7 or NetLogo parity.
 
-Historical verification: 5 November 2026. The results below are retained from that delivery, not a fresh check run. [Frozen examples](agent-lab-examples.md), [assignment and review decisions](agent-lab-refactor.md#review-responses-and-decisions) and [source provenance](netlogo-reference-sources.md) remain versioned.
+Historical verification: 5 November 2026. The results below are retained from that delivery, not a fresh check run. [Frozen examples](agent-lab-examples.md), [assignment and review decisions](https://github.com/dweigend/city-library/blob/dc7b164abd23c8e7b7f11c902195ab030c5f1c4b/docs/development/agent-lab-refactor.md#review-responses-and-decisions) and [source provenance](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/docs/development/netlogo-reference-sources.md) remain versioned.
 
 ## Gaps to track
 

@@ -1,0 +1,3268 @@
+[
+  {
+    "slug": "neighborhood-heat-intervention",
+    "fields": {
+      "inputs": [
+        {
+          "name": "",
+          "value": "",
+          "min": "",
+          "max": ""
+        },
+        {
+          "name": "width",
+          "value": "6",
+          "min": "2",
+          "max": "12"
+        },
+        {
+          "name": "shadeCooling",
+          "value": "0.5",
+          "min": "0",
+          "max": "2"
+        }
+      ],
+      "buttons": [
+        "Neighborhood Heat Intervention",
+        "Setup",
+        "Run",
+        "1 step",
+        "10 steps",
+        "100 steps",
+        "Parameters",
+        "Model info"
+      ]
+    },
+    "invalid": {
+      "invalid": "false",
+      "text": "Skip to experiment\nAgent Lab\nNeighborhood Heat Intervention\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nWidth\nShade Cooling\nModel info\n\nSetup to begin.",
+      "valid": false
+    },
+    "initial": {
+      "monitors": [
+        {
+          "label": "Tick",
+          "value": "0"
+        },
+        {
+          "label": "Mean heat index",
+          "value": "30.00"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "step": {
+      "monitors": [
+        {
+          "label": "Tick",
+          "value": "1"
+        },
+        {
+          "label": "Mean heat index",
+          "value": "29.75"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "running": {
+      "monitors": [
+        {
+          "label": "Tick",
+          "value": "3"
+        },
+        {
+          "label": "Mean heat index",
+          "value": "29.25"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Pause",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "pauseBaseline": {
+      "monitors": [
+        {
+          "label": "Tick",
+          "value": "3"
+        },
+        {
+          "label": "Mean heat index",
+          "value": "29.25"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "paused": {
+      "monitors": [
+        {
+          "label": "Tick",
+          "value": "3"
+        },
+        {
+          "label": "Mean heat index",
+          "value": "29.25"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "live": {
+      "before": {
+        "monitors": [
+          {
+            "label": "Tick",
+            "value": "3"
+          },
+          {
+            "label": "Mean heat index",
+            "value": "29.25"
+          }
+        ],
+        "buttons": [
+          {
+            "label": "Run",
+            "disabled": false
+          },
+          {
+            "label": "1 step",
+            "disabled": false
+          },
+          {
+            "label": "10 steps",
+            "disabled": false
+          },
+          {
+            "label": "100 steps",
+            "disabled": false
+          }
+        ],
+        "channels": {
+          "errors": [],
+          "rejections": [],
+          "console": []
+        },
+        "width": 1366,
+        "height": 768,
+        "dpr": 2,
+        "docWidth": 1366
+      },
+      "after": {
+        "monitors": [
+          {
+            "label": "Tick",
+            "value": "13"
+          },
+          {
+            "label": "Mean heat index",
+            "value": "22.75"
+          }
+        ],
+        "buttons": [
+          {
+            "label": "Run",
+            "disabled": false
+          },
+          {
+            "label": "1 step",
+            "disabled": false
+          },
+          {
+            "label": "10 steps",
+            "disabled": false
+          },
+          {
+            "label": "100 steps",
+            "disabled": false
+          }
+        ],
+        "channels": {
+          "errors": [],
+          "rejections": [],
+          "console": []
+        },
+        "width": 1366,
+        "height": 768,
+        "dpr": 2,
+        "docWidth": 1366
+      }
+    }
+  },
+  {
+    "slug": "household-energy-demand",
+    "fields": {
+      "inputs": [
+        {
+          "name": "",
+          "value": "",
+          "min": "",
+          "max": ""
+        },
+        {
+          "name": "households",
+          "value": "12",
+          "min": "1",
+          "max": "100"
+        },
+        {
+          "name": "shiftedShare",
+          "value": "0.5",
+          "min": "0",
+          "max": "1"
+        }
+      ],
+      "buttons": [
+        "Household Energy Demand",
+        "Setup",
+        "Run",
+        "1 step",
+        "10 steps",
+        "100 steps",
+        "Parameters",
+        "Model info"
+      ]
+    },
+    "invalid": {
+      "invalid": "false",
+      "text": "Skip to experiment\nAgent Lab\nHousehold Energy Demand\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nHouseholds\nShifted share\nModel info\n\nSetup to begin.",
+      "valid": false
+    },
+    "initial": {
+      "monitors": [
+        {
+          "label": "Hour",
+          "value": "0"
+        },
+        {
+          "label": "Demand (kW)",
+          "value": "4.50"
+        },
+        {
+          "label": "Energy (kWh)",
+          "value": "0.00"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "step": {
+      "monitors": [
+        {
+          "label": "Hour",
+          "value": "1"
+        },
+        {
+          "label": "Demand (kW)",
+          "value": "4.50"
+        },
+        {
+          "label": "Energy (kWh)",
+          "value": "4.50"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "running": {
+      "monitors": [
+        {
+          "label": "Hour",
+          "value": "3"
+        },
+        {
+          "label": "Demand (kW)",
+          "value": "4.50"
+        },
+        {
+          "label": "Energy (kWh)",
+          "value": "13.50"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Pause",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "pauseBaseline": {
+      "monitors": [
+        {
+          "label": "Hour",
+          "value": "3"
+        },
+        {
+          "label": "Demand (kW)",
+          "value": "4.50"
+        },
+        {
+          "label": "Energy (kWh)",
+          "value": "13.50"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "paused": {
+      "monitors": [
+        {
+          "label": "Hour",
+          "value": "3"
+        },
+        {
+          "label": "Demand (kW)",
+          "value": "4.50"
+        },
+        {
+          "label": "Energy (kWh)",
+          "value": "13.50"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "live": {
+      "before": {
+        "monitors": [
+          {
+            "label": "Hour",
+            "value": "3"
+          },
+          {
+            "label": "Demand (kW)",
+            "value": "4.50"
+          },
+          {
+            "label": "Energy (kWh)",
+            "value": "13.50"
+          }
+        ],
+        "buttons": [
+          {
+            "label": "Run",
+            "disabled": false
+          },
+          {
+            "label": "1 step",
+            "disabled": false
+          },
+          {
+            "label": "10 steps",
+            "disabled": false
+          },
+          {
+            "label": "100 steps",
+            "disabled": false
+          }
+        ],
+        "channels": {
+          "errors": [],
+          "rejections": [],
+          "console": []
+        },
+        "width": 1366,
+        "height": 768,
+        "dpr": 2,
+        "docWidth": 1366
+      },
+      "after": {
+        "monitors": [
+          {
+            "label": "Hour",
+            "value": "13"
+          },
+          {
+            "label": "Demand (kW)",
+            "value": "18.00"
+          },
+          {
+            "label": "Energy (kWh)",
+            "value": "72.00"
+          }
+        ],
+        "buttons": [
+          {
+            "label": "Run",
+            "disabled": false
+          },
+          {
+            "label": "1 step",
+            "disabled": false
+          },
+          {
+            "label": "10 steps",
+            "disabled": false
+          },
+          {
+            "label": "100 steps",
+            "disabled": false
+          }
+        ],
+        "channels": {
+          "errors": [],
+          "rejections": [],
+          "console": []
+        },
+        "width": 1366,
+        "height": 768,
+        "dpr": 2,
+        "docWidth": 1366
+      }
+    }
+  },
+  {
+    "slug": "residential-occupancy",
+    "fields": {
+      "inputs": [
+        {
+          "name": "",
+          "value": "",
+          "min": "",
+          "max": ""
+        },
+        {
+          "name": "applicants",
+          "value": "8",
+          "min": "1",
+          "max": "40"
+        },
+        {
+          "name": "slots",
+          "value": "3",
+          "min": "1",
+          "max": "20"
+        }
+      ],
+      "buttons": [
+        "Residential Occupancy",
+        "Setup",
+        "Run",
+        "1 step",
+        "10 steps",
+        "100 steps",
+        "Parameters",
+        "Move out first household",
+        "Model info"
+      ]
+    },
+    "invalid": {
+      "invalid": "false",
+      "text": "Skip to experiment\nAgent Lab\nResidential Occupancy\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nApplicants\nDwelling slots\nMove out first household\nModel info\n\nSetup to begin.",
+      "valid": false
+    },
+    "initial": {
+      "monitors": [
+        {
+          "label": "Day",
+          "value": "0"
+        },
+        {
+          "label": "Occupied",
+          "value": "3"
+        },
+        {
+          "label": "Available",
+          "value": "0"
+        },
+        {
+          "label": "Waiting",
+          "value": "6"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "step": {
+      "monitors": [
+        {
+          "label": "Day",
+          "value": "1"
+        },
+        {
+          "label": "Occupied",
+          "value": "3"
+        },
+        {
+          "label": "Available",
+          "value": "0"
+        },
+        {
+          "label": "Waiting",
+          "value": "6"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "running": {
+      "monitors": [
+        {
+          "label": "Day",
+          "value": "3"
+        },
+        {
+          "label": "Occupied",
+          "value": "3"
+        },
+        {
+          "label": "Available",
+          "value": "0"
+        },
+        {
+          "label": "Waiting",
+          "value": "5"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Pause",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "pauseBaseline": {
+      "monitors": [
+        {
+          "label": "Day",
+          "value": "3"
+        },
+        {
+          "label": "Occupied",
+          "value": "3"
+        },
+        {
+          "label": "Available",
+          "value": "0"
+        },
+        {
+          "label": "Waiting",
+          "value": "5"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "paused": {
+      "monitors": [
+        {
+          "label": "Day",
+          "value": "3"
+        },
+        {
+          "label": "Occupied",
+          "value": "3"
+        },
+        {
+          "label": "Available",
+          "value": "0"
+        },
+        {
+          "label": "Waiting",
+          "value": "5"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "live": {
+      "before": {
+        "monitors": [
+          {
+            "label": "Day",
+            "value": "3"
+          },
+          {
+            "label": "Occupied",
+            "value": "3"
+          },
+          {
+            "label": "Available",
+            "value": "0"
+          },
+          {
+            "label": "Waiting",
+            "value": "5"
+          }
+        ],
+        "buttons": [
+          {
+            "label": "Run",
+            "disabled": false
+          },
+          {
+            "label": "1 step",
+            "disabled": false
+          },
+          {
+            "label": "10 steps",
+            "disabled": false
+          },
+          {
+            "label": "100 steps",
+            "disabled": false
+          }
+        ],
+        "channels": {
+          "errors": [],
+          "rejections": [],
+          "console": []
+        },
+        "width": 1366,
+        "height": 768,
+        "dpr": 2,
+        "docWidth": 1366
+      },
+      "after": {
+        "monitors": [
+          {
+            "label": "Day",
+            "value": "4"
+          },
+          {
+            "label": "Occupied",
+            "value": "4"
+          },
+          {
+            "label": "Available",
+            "value": "0"
+          },
+          {
+            "label": "Waiting",
+            "value": "4"
+          }
+        ],
+        "buttons": [
+          {
+            "label": "Run",
+            "disabled": false
+          },
+          {
+            "label": "1 step",
+            "disabled": false
+          },
+          {
+            "label": "10 steps",
+            "disabled": false
+          },
+          {
+            "label": "100 steps",
+            "disabled": false
+          }
+        ],
+        "channels": {
+          "errors": [],
+          "rejections": [],
+          "console": []
+        },
+        "width": 1366,
+        "height": 768,
+        "dpr": 2,
+        "docWidth": 1366
+      }
+    }
+  },
+  {
+    "slug": "pedestrian-crossing-phases",
+    "fields": {
+      "inputs": [
+        {
+          "name": "",
+          "value": "",
+          "min": "",
+          "max": ""
+        },
+        {
+          "name": "pedestrians",
+          "value": "8",
+          "min": "1",
+          "max": "40"
+        },
+        {
+          "name": "greenMinutes",
+          "value": "2",
+          "min": "1",
+          "max": "4"
+        }
+      ],
+      "buttons": [
+        "Pedestrian Crossing Phases",
+        "Setup",
+        "Run",
+        "1 step",
+        "10 steps",
+        "100 steps",
+        "Parameters",
+        "Model info"
+      ]
+    },
+    "invalid": {
+      "invalid": "false",
+      "text": "Skip to experiment\nAgent Lab\nPedestrian Crossing Phases\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nPedestrians\nGreen Minutes\nModel info\n\nSetup to begin.",
+      "valid": false
+    },
+    "initial": {
+      "monitors": [
+        {
+          "label": "Minute",
+          "value": "0"
+        },
+        {
+          "label": "Signal",
+          "value": "red"
+        },
+        {
+          "label": "Waiting",
+          "value": "12"
+        },
+        {
+          "label": "Crossing",
+          "value": "0"
+        },
+        {
+          "label": "Arrived",
+          "value": "0"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "step": {
+      "monitors": [
+        {
+          "label": "Minute",
+          "value": "1"
+        },
+        {
+          "label": "Signal",
+          "value": "red"
+        },
+        {
+          "label": "Waiting",
+          "value": "12"
+        },
+        {
+          "label": "Crossing",
+          "value": "0"
+        },
+        {
+          "label": "Arrived",
+          "value": "0"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "running": {
+      "monitors": [
+        {
+          "label": "Minute",
+          "value": "3"
+        },
+        {
+          "label": "Signal",
+          "value": "green"
+        },
+        {
+          "label": "Waiting",
+          "value": "12"
+        },
+        {
+          "label": "Crossing",
+          "value": "0"
+        },
+        {
+          "label": "Arrived",
+          "value": "0"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Pause",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "pauseBaseline": {
+      "monitors": [
+        {
+          "label": "Minute",
+          "value": "3"
+        },
+        {
+          "label": "Signal",
+          "value": "green"
+        },
+        {
+          "label": "Waiting",
+          "value": "12"
+        },
+        {
+          "label": "Crossing",
+          "value": "0"
+        },
+        {
+          "label": "Arrived",
+          "value": "0"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "paused": {
+      "monitors": [
+        {
+          "label": "Minute",
+          "value": "3"
+        },
+        {
+          "label": "Signal",
+          "value": "green"
+        },
+        {
+          "label": "Waiting",
+          "value": "12"
+        },
+        {
+          "label": "Crossing",
+          "value": "0"
+        },
+        {
+          "label": "Arrived",
+          "value": "0"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    }
+  },
+  {
+    "slug": "solar-battery-microgrid",
+    "fields": {
+      "inputs": [
+        {
+          "name": "",
+          "value": "",
+          "min": "",
+          "max": ""
+        },
+        {
+          "name": "seed",
+          "value": "1",
+          "min": "-2147483648",
+          "max": "4294967295"
+        },
+        {
+          "name": "solarKw",
+          "value": "4",
+          "min": "0",
+          "max": "8"
+        },
+        {
+          "name": "demandKw",
+          "value": "2",
+          "min": "0",
+          "max": "8"
+        }
+      ],
+      "buttons": [
+        "Solar Battery Microgrid",
+        "Setup",
+        "Run",
+        "1 step",
+        "10 steps",
+        "100 steps",
+        "Parameters",
+        "Model info"
+      ]
+    },
+    "invalid": {
+      "invalid": "false",
+      "text": "Skip to experiment\nAgent Lab\nSolar Battery Microgrid\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nSeed\nSolar Kw\nDemand Kw\nModel info\n\nSetup to begin.",
+      "valid": false
+    },
+    "initial": {
+      "monitors": [
+        {
+          "label": "Hour",
+          "value": "0"
+        },
+        {
+          "label": "Stored (kWh)",
+          "value": "5"
+        },
+        {
+          "label": "Grid import (kWh)",
+          "value": "0"
+        },
+        {
+          "label": "Reserve crossings",
+          "value": "0"
+        },
+        {
+          "label": "Last crossing (h)",
+          "value": "none"
+        },
+        {
+          "label": "Flow interval",
+          "value": "Initial rates"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "step": {
+      "monitors": [
+        {
+          "label": "Hour",
+          "value": "1"
+        },
+        {
+          "label": "Stored (kWh)",
+          "value": "9"
+        },
+        {
+          "label": "Grid import (kWh)",
+          "value": "0"
+        },
+        {
+          "label": "Reserve crossings",
+          "value": "0"
+        },
+        {
+          "label": "Last crossing (h)",
+          "value": "none"
+        },
+        {
+          "label": "Flow interval",
+          "value": "0–1 h"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "running": {
+      "monitors": [
+        {
+          "label": "Hour",
+          "value": "3"
+        },
+        {
+          "label": "Stored (kWh)",
+          "value": "10"
+        },
+        {
+          "label": "Grid import (kWh)",
+          "value": "0"
+        },
+        {
+          "label": "Reserve crossings",
+          "value": "0"
+        },
+        {
+          "label": "Last crossing (h)",
+          "value": "none"
+        },
+        {
+          "label": "Flow interval",
+          "value": "2–3 h"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Pause",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "pauseBaseline": {
+      "monitors": [
+        {
+          "label": "Hour",
+          "value": "3"
+        },
+        {
+          "label": "Stored (kWh)",
+          "value": "10"
+        },
+        {
+          "label": "Grid import (kWh)",
+          "value": "0"
+        },
+        {
+          "label": "Reserve crossings",
+          "value": "0"
+        },
+        {
+          "label": "Last crossing (h)",
+          "value": "none"
+        },
+        {
+          "label": "Flow interval",
+          "value": "2–3 h"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "paused": {
+      "monitors": [
+        {
+          "label": "Hour",
+          "value": "3"
+        },
+        {
+          "label": "Stored (kWh)",
+          "value": "10"
+        },
+        {
+          "label": "Grid import (kWh)",
+          "value": "0"
+        },
+        {
+          "label": "Reserve crossings",
+          "value": "0"
+        },
+        {
+          "label": "Last crossing (h)",
+          "value": "none"
+        },
+        {
+          "label": "Flow interval",
+          "value": "2–3 h"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    }
+  },
+  {
+    "slug": "stormwater-retention",
+    "fields": {
+      "inputs": [
+        {
+          "name": "",
+          "value": "",
+          "min": "",
+          "max": ""
+        },
+        {
+          "name": "capacityM3",
+          "value": "3",
+          "min": "1",
+          "max": "10"
+        },
+        {
+          "name": "rainMmPerHour",
+          "value": "20",
+          "min": "0",
+          "max": "50"
+        }
+      ],
+      "buttons": [
+        "Stormwater Retention",
+        "Setup",
+        "Run",
+        "1 step",
+        "10 steps",
+        "100 steps",
+        "Parameters",
+        "Model info"
+      ]
+    },
+    "invalid": {
+      "invalid": "false",
+      "text": "Skip to experiment\nAgent Lab\nStormwater Retention\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nCapacity M3\nRain (mm/h)\nModel info\n\nSetup to begin.",
+      "valid": false
+    },
+    "initial": {
+      "monitors": [
+        {
+          "label": "Hour",
+          "value": "0"
+        },
+        {
+          "label": "Stored (m³)",
+          "value": "0.00"
+        },
+        {
+          "label": "Overflow (m³)",
+          "value": "0.00"
+        },
+        {
+          "label": "Capacity crossings",
+          "value": "0"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "step": {
+      "monitors": [
+        {
+          "label": "Hour",
+          "value": "1"
+        },
+        {
+          "label": "Stored (m³)",
+          "value": "0.70"
+        },
+        {
+          "label": "Overflow (m³)",
+          "value": "0.00"
+        },
+        {
+          "label": "Capacity crossings",
+          "value": "0"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "running": {
+      "monitors": [
+        {
+          "label": "Hour",
+          "value": "3"
+        },
+        {
+          "label": "Stored (m³)",
+          "value": "2.10"
+        },
+        {
+          "label": "Overflow (m³)",
+          "value": "0.00"
+        },
+        {
+          "label": "Capacity crossings",
+          "value": "0"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Pause",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "pauseBaseline": {
+      "monitors": [
+        {
+          "label": "Hour",
+          "value": "3"
+        },
+        {
+          "label": "Stored (m³)",
+          "value": "2.10"
+        },
+        {
+          "label": "Overflow (m³)",
+          "value": "0.00"
+        },
+        {
+          "label": "Capacity crossings",
+          "value": "0"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "paused": {
+      "monitors": [
+        {
+          "label": "Hour",
+          "value": "3"
+        },
+        {
+          "label": "Stored (m³)",
+          "value": "2.10"
+        },
+        {
+          "label": "Overflow (m³)",
+          "value": "0.00"
+        },
+        {
+          "label": "Capacity crossings",
+          "value": "0"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "live": {
+      "before": {
+        "monitors": [
+          {
+            "label": "Hour",
+            "value": "3"
+          },
+          {
+            "label": "Stored (m³)",
+            "value": "2.10"
+          },
+          {
+            "label": "Overflow (m³)",
+            "value": "0.00"
+          },
+          {
+            "label": "Capacity crossings",
+            "value": "0"
+          }
+        ],
+        "buttons": [
+          {
+            "label": "Run",
+            "disabled": false
+          },
+          {
+            "label": "1 step",
+            "disabled": false
+          },
+          {
+            "label": "10 steps",
+            "disabled": false
+          },
+          {
+            "label": "100 steps",
+            "disabled": false
+          }
+        ],
+        "channels": {
+          "errors": [],
+          "rejections": [],
+          "console": []
+        },
+        "width": 1366,
+        "height": 768,
+        "dpr": 2,
+        "docWidth": 1366
+      },
+      "after": {
+        "monitors": [
+          {
+            "label": "Hour",
+            "value": "13"
+          },
+          {
+            "label": "Stored (m³)",
+            "value": "4.00"
+          },
+          {
+            "label": "Overflow (m³)",
+            "value": "18.60"
+          },
+          {
+            "label": "Capacity crossings",
+            "value": "1"
+          }
+        ],
+        "buttons": [
+          {
+            "label": "Run",
+            "disabled": false
+          },
+          {
+            "label": "1 step",
+            "disabled": false
+          },
+          {
+            "label": "10 steps",
+            "disabled": false
+          },
+          {
+            "label": "100 steps",
+            "disabled": false
+          }
+        ],
+        "channels": {
+          "errors": [],
+          "rejections": [],
+          "console": []
+        },
+        "width": 1366,
+        "height": 768,
+        "dpr": 2,
+        "docWidth": 1366
+      }
+    }
+  },
+  {
+    "slug": "urban-tree-watering",
+    "fields": {
+      "inputs": [
+        {
+          "name": "",
+          "value": "",
+          "min": "",
+          "max": ""
+        },
+        {
+          "name": "trees",
+          "value": "10",
+          "min": "2",
+          "max": "40"
+        },
+        {
+          "name": "seed",
+          "value": "1",
+          "min": "-2147483648",
+          "max": "4294967295"
+        },
+        {
+          "name": "dailyLiters",
+          "value": "20",
+          "min": "0",
+          "max": "100"
+        }
+      ],
+      "buttons": [
+        "Urban Tree Watering",
+        "Setup",
+        "Run",
+        "1 step",
+        "10 steps",
+        "100 steps",
+        "Parameters",
+        "Model info"
+      ]
+    },
+    "invalid": {
+      "invalid": "false",
+      "text": "Skip to experiment\nAgent Lab\nUrban Tree Watering\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nTrees\nSeed\nDaily water (L)\nModel info\n\nSetup to begin.",
+      "valid": false
+    },
+    "initial": {
+      "monitors": [
+        {
+          "label": "Day",
+          "value": "0"
+        },
+        {
+          "label": "Used today (L)",
+          "value": "0"
+        },
+        {
+          "label": "Total water (L)",
+          "value": "0"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "step": {
+      "monitors": [
+        {
+          "label": "Day",
+          "value": "1"
+        },
+        {
+          "label": "Used today (L)",
+          "value": "20"
+        },
+        {
+          "label": "Total water (L)",
+          "value": "20"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "running": {
+      "monitors": [
+        {
+          "label": "Day",
+          "value": "3"
+        },
+        {
+          "label": "Used today (L)",
+          "value": "20"
+        },
+        {
+          "label": "Total water (L)",
+          "value": "60"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Pause",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "pauseBaseline": {
+      "monitors": [
+        {
+          "label": "Day",
+          "value": "3"
+        },
+        {
+          "label": "Used today (L)",
+          "value": "20"
+        },
+        {
+          "label": "Total water (L)",
+          "value": "60"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "paused": {
+      "monitors": [
+        {
+          "label": "Day",
+          "value": "3"
+        },
+        {
+          "label": "Used today (L)",
+          "value": "20"
+        },
+        {
+          "label": "Total water (L)",
+          "value": "60"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "live": {
+      "before": {
+        "monitors": [
+          {
+            "label": "Day",
+            "value": "3"
+          },
+          {
+            "label": "Used today (L)",
+            "value": "20"
+          },
+          {
+            "label": "Total water (L)",
+            "value": "60"
+          }
+        ],
+        "buttons": [
+          {
+            "label": "Run",
+            "disabled": false
+          },
+          {
+            "label": "1 step",
+            "disabled": false
+          },
+          {
+            "label": "10 steps",
+            "disabled": false
+          },
+          {
+            "label": "100 steps",
+            "disabled": false
+          }
+        ],
+        "channels": {
+          "errors": [],
+          "rejections": [],
+          "console": []
+        },
+        "width": 1366,
+        "height": 768,
+        "dpr": 2,
+        "docWidth": 1366
+      },
+      "after": {
+        "monitors": [
+          {
+            "label": "Day",
+            "value": "4"
+          },
+          {
+            "label": "Used today (L)",
+            "value": "20"
+          },
+          {
+            "label": "Total water (L)",
+            "value": "80"
+          }
+        ],
+        "buttons": [
+          {
+            "label": "Run",
+            "disabled": false
+          },
+          {
+            "label": "1 step",
+            "disabled": false
+          },
+          {
+            "label": "10 steps",
+            "disabled": false
+          },
+          {
+            "label": "100 steps",
+            "disabled": false
+          }
+        ],
+        "channels": {
+          "errors": [],
+          "rejections": [],
+          "console": []
+        },
+        "width": 1366,
+        "height": 768,
+        "dpr": 2,
+        "docWidth": 1366
+      }
+    }
+  },
+  {
+    "slug": "household-recycling-behavior",
+    "fields": {
+      "inputs": [
+        {
+          "name": "",
+          "value": "",
+          "min": "",
+          "max": ""
+        },
+        {
+          "name": "households",
+          "value": "12",
+          "min": "3",
+          "max": "40"
+        },
+        {
+          "name": "seed",
+          "value": "1",
+          "min": "-2147483648",
+          "max": "4294967295"
+        },
+        {
+          "name": "influence",
+          "value": "0.5",
+          "min": "0",
+          "max": "1"
+        }
+      ],
+      "buttons": [
+        "Household Recycling Behavior",
+        "Setup",
+        "Run",
+        "1 step",
+        "10 steps",
+        "100 steps",
+        "Parameters",
+        "Model info"
+      ]
+    },
+    "invalid": {
+      "invalid": "false",
+      "text": "Skip to experiment\nAgent Lab\nHousehold Recycling Behavior\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nHouseholds\nSeed\nInfluence\nModel info\n\nSetup to begin.",
+      "valid": false
+    },
+    "initial": {
+      "monitors": [
+        {
+          "label": "Tick",
+          "value": "0"
+        },
+        {
+          "label": "Recycling households",
+          "value": "1"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "step": {
+      "monitors": [
+        {
+          "label": "Tick",
+          "value": "1"
+        },
+        {
+          "label": "Recycling households",
+          "value": "1"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "running": {
+      "monitors": [
+        {
+          "label": "Tick",
+          "value": "3"
+        },
+        {
+          "label": "Recycling households",
+          "value": "2"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Pause",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "pauseBaseline": {
+      "monitors": [
+        {
+          "label": "Tick",
+          "value": "3"
+        },
+        {
+          "label": "Recycling households",
+          "value": "2"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "paused": {
+      "monitors": [
+        {
+          "label": "Tick",
+          "value": "3"
+        },
+        {
+          "label": "Recycling households",
+          "value": "2"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "live": {
+      "before": {
+        "monitors": [
+          {
+            "label": "Tick",
+            "value": "3"
+          },
+          {
+            "label": "Recycling households",
+            "value": "2"
+          }
+        ],
+        "buttons": [
+          {
+            "label": "Run",
+            "disabled": false
+          },
+          {
+            "label": "1 step",
+            "disabled": false
+          },
+          {
+            "label": "10 steps",
+            "disabled": false
+          },
+          {
+            "label": "100 steps",
+            "disabled": false
+          }
+        ],
+        "channels": {
+          "errors": [],
+          "rejections": [],
+          "console": []
+        },
+        "width": 1366,
+        "height": 768,
+        "dpr": 2,
+        "docWidth": 1366
+      },
+      "after": {
+        "monitors": [
+          {
+            "label": "Tick",
+            "value": "4"
+          },
+          {
+            "label": "Recycling households",
+            "value": "3"
+          }
+        ],
+        "buttons": [
+          {
+            "label": "Run",
+            "disabled": false
+          },
+          {
+            "label": "1 step",
+            "disabled": false
+          },
+          {
+            "label": "10 steps",
+            "disabled": false
+          },
+          {
+            "label": "100 steps",
+            "disabled": false
+          }
+        ],
+        "channels": {
+          "errors": [],
+          "rejections": [],
+          "console": []
+        },
+        "width": 1366,
+        "height": 768,
+        "dpr": 2,
+        "docWidth": 1366
+      }
+    }
+  },
+  {
+    "slug": "zoning-scenario-comparison",
+    "fields": {
+      "inputs": [
+        {
+          "name": "",
+          "value": "",
+          "min": "",
+          "max": ""
+        },
+        {
+          "name": "parcels",
+          "value": "12",
+          "min": "1",
+          "max": "100"
+        },
+        {
+          "name": "baseCap",
+          "value": "2",
+          "min": "1",
+          "max": "10"
+        },
+        {
+          "name": "seed",
+          "value": "1",
+          "min": "-2147483648",
+          "max": "4294967293"
+        }
+      ],
+      "buttons": [
+        "Zoning Scenario Comparison",
+        "Setup",
+        "Run",
+        "1 step",
+        "10 steps",
+        "100 steps",
+        "Parameters",
+        "Model info"
+      ]
+    },
+    "invalid": {
+      "invalid": "false",
+      "text": "Skip to experiment\nAgent Lab\nZoning Scenario Comparison\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nParcels\nBase Cap\nSeed\nModel info\n\nSetup to begin.",
+      "valid": false
+    },
+    "initial": {
+      "monitors": [
+        {
+          "label": "Study runs",
+          "value": "0"
+        },
+        {
+          "label": "Planned runs",
+          "value": "6"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "step": {
+      "monitors": [
+        {
+          "label": "Study runs",
+          "value": "1"
+        },
+        {
+          "label": "Planned runs",
+          "value": "6"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "running": {
+      "monitors": [
+        {
+          "label": "Study runs",
+          "value": "3"
+        },
+        {
+          "label": "Planned runs",
+          "value": "6"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Pause",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "pauseBaseline": {
+      "monitors": [
+        {
+          "label": "Study runs",
+          "value": "3"
+        },
+        {
+          "label": "Planned runs",
+          "value": "6"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "paused": {
+      "monitors": [
+        {
+          "label": "Study runs",
+          "value": "3"
+        },
+        {
+          "label": "Planned runs",
+          "value": "6"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    }
+  },
+  {
+    "slug": "workplace-household-membership",
+    "fields": {
+      "inputs": [
+        {
+          "name": "",
+          "value": "",
+          "min": "",
+          "max": ""
+        },
+        {
+          "name": "residents",
+          "value": "6",
+          "min": "2",
+          "max": "20"
+        }
+      ],
+      "buttons": [
+        "Workplace and Household Membership",
+        "Setup",
+        "Run",
+        "1 step",
+        "10 steps",
+        "100 steps",
+        "Parameters",
+        "Reassign first resident",
+        "Model info"
+      ]
+    },
+    "invalid": {
+      "invalid": "false",
+      "text": "Skip to experiment\nAgent Lab\nWorkplace and Household Membership\nSetup\nRun\n1 step\n10 steps\n100 steps\nSpeed\nResidents\nReassign first resident\nModel info\n\nSetup to begin.",
+      "valid": false
+    },
+    "initial": {
+      "monitors": [
+        {
+          "label": "Tick",
+          "value": "0"
+        },
+        {
+          "label": "Memberships",
+          "value": "16"
+        },
+        {
+          "label": "Workplace A",
+          "value": "4"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "step": {
+      "monitors": [
+        {
+          "label": "Tick",
+          "value": "1"
+        },
+        {
+          "label": "Memberships",
+          "value": "16"
+        },
+        {
+          "label": "Workplace A",
+          "value": "3"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "running": {
+      "monitors": [
+        {
+          "label": "Tick",
+          "value": "3"
+        },
+        {
+          "label": "Memberships",
+          "value": "16"
+        },
+        {
+          "label": "Workplace A",
+          "value": "3"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Pause",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "pauseBaseline": {
+      "monitors": [
+        {
+          "label": "Tick",
+          "value": "3"
+        },
+        {
+          "label": "Memberships",
+          "value": "16"
+        },
+        {
+          "label": "Workplace A",
+          "value": "3"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "paused": {
+      "monitors": [
+        {
+          "label": "Tick",
+          "value": "3"
+        },
+        {
+          "label": "Memberships",
+          "value": "16"
+        },
+        {
+          "label": "Workplace A",
+          "value": "3"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Run",
+          "disabled": false
+        },
+        {
+          "label": "1 step",
+          "disabled": false
+        },
+        {
+          "label": "10 steps",
+          "disabled": false
+        },
+        {
+          "label": "100 steps",
+          "disabled": false
+        }
+      ],
+      "channels": {
+        "errors": [],
+        "rejections": [],
+        "console": []
+      },
+      "width": 1366,
+      "height": 768,
+      "dpr": 2,
+      "docWidth": 1366
+    },
+    "action": {
+      "before": {
+        "monitors": [
+          {
+            "label": "Tick",
+            "value": "3"
+          },
+          {
+            "label": "Memberships",
+            "value": "16"
+          },
+          {
+            "label": "Workplace A",
+            "value": "3"
+          }
+        ],
+        "buttons": [
+          {
+            "label": "Run",
+            "disabled": false
+          },
+          {
+            "label": "1 step",
+            "disabled": false
+          },
+          {
+            "label": "10 steps",
+            "disabled": false
+          },
+          {
+            "label": "100 steps",
+            "disabled": false
+          }
+        ],
+        "channels": {
+          "errors": [],
+          "rejections": [],
+          "console": []
+        },
+        "width": 1366,
+        "height": 768,
+        "dpr": 2,
+        "docWidth": 1366
+      },
+      "after": {
+        "monitors": [
+          {
+            "label": "Tick",
+            "value": "3"
+          },
+          {
+            "label": "Memberships",
+            "value": "16"
+          },
+          {
+            "label": "Workplace A",
+            "value": "3"
+          }
+        ],
+        "buttons": [
+          {
+            "label": "Run",
+            "disabled": false
+          },
+          {
+            "label": "1 step",
+            "disabled": false
+          },
+          {
+            "label": "10 steps",
+            "disabled": false
+          },
+          {
+            "label": "100 steps",
+            "disabled": false
+          }
+        ],
+        "channels": {
+          "errors": [],
+          "rejections": [],
+          "console": []
+        },
+        "width": 1366,
+        "height": 768,
+        "dpr": 2,
+        "docWidth": 1366
+      }
+    }
+  }
+]
