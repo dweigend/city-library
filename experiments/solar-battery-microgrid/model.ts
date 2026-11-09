@@ -33,8 +33,17 @@ export function create(options: Partial<BatteryParameters> = {}) {
   record();
   return {
     advance(count = 1) { stepCount(count); for (let index = 0; index < count; index += 1) { run(world, step); record(); } },
-    read() { return Object.freeze({ tick: world.tick.value, ...measure.read(state), capacityKwh, reserveKwh,
-      lastCrossingHour: lastCrossingHour ?? "none", solarPhase, history: history.samples, done: false }); },
+    read() {
+      const samples = history.samples;
+      const previous = samples.at(-2)?.values;
+      const interval = world.tick.value === 0 ? 0 : world.tick.value - 1;
+      const solarHour = (interval + solarPhase) % 24;
+      return Object.freeze({ tick: world.tick.value, ...measure.read(state), capacityKwh, reserveKwh,
+        solarKw: solarHour >= 6 && solarHour < 18 ? settings.solarKw : 0, demandKw: settings.demandKw,
+        intervalImportedKwh: state.importedKwh - (previous?.importedKwh ?? 0),
+        intervalExportedKwh: state.exportedKwh - (previous?.exportedKwh ?? 0),
+        lastCrossingHour: lastCrossingHour ?? "none", solarPhase, history: samples, done: false });
+    },
   };
 }
 export const model = { title: "Solar Battery Microgrid",

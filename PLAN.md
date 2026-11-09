@@ -1,5 +1,6 @@
 # Work plan
 
+The [visual correction](docs/mesa-expansion/visual-correction.md) is in progress: all ten original Mesa examples must expose a meaningful mechanism visualization, with fresh browser and independent image acceptance.
 City Library brings reusable parts to simulations and games about future cities. Models work in scripts and browsers without depending on a renderer. See the [README](README.md) for the idea and [architecture](docs/ARCHITECTURE.md) for the boundaries.
 
 ## Available now

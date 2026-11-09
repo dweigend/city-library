@@ -47,7 +47,9 @@ export function create(options: Partial<MembershipParameters> = {}) {
       reassignResident(residentIndex);
     },
     read() {
-      const nodes = [...residents, ...places].map(member => Object.freeze({ id: member.id, label: member.label }));
+      const nodes = [...residents, ...places].map(member => Object.freeze({
+        id: member.id, label: member.label, kind: "kind" in member ? member.kind : "resident",
+      }));
       const people = residents.map(resident => {
         const groups = membership.neighbors(resident);
         return Object.freeze({ id: resident.id, label: resident.label,

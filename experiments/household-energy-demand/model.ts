@@ -15,7 +15,9 @@ export const demandMeasurement = measurements.define((state: DemandState) => ({
 export function create(options: Partial<EnergyParameters> = {}) {
   let settings = parameters(inputs, options);
   const world = World.add();
-  const loads = { demandKw: settings.households * 0.3, energyKwh: 0 };
+  const baseHouseholdKw = 0.3;
+  const applianceHouseholdKw = 0.9;
+  const loads = { demandKw: settings.households * baseHouseholdKw, energyKwh: 0 };
   const history = storage.history({ capacity: 120 });
   function record() { history.add({ tick: world.tick.value, values: demandMeasurement.read(loads) }); }
   record();
@@ -23,7 +25,7 @@ export function create(options: Partial<EnergyParameters> = {}) {
     const hour = world.tick.value % 24;
     const evening = hour >= 18 && hour < 21 ? 1 - settings.shiftedShare : 0;
     const midday = hour >= 12 && hour < 15 ? settings.shiftedShare : 0;
-    loads.demandKw = settings.households * (0.3 + 0.9 * (evening + midday));
+    loads.demandKw = settings.households * (baseHouseholdKw + applianceHouseholdKw * (evening + midday));
     // Each successful interval represents one hour: kW × hour = kWh.
     loads.energyKwh += loads.demandKw;
   }
@@ -38,7 +40,10 @@ export function create(options: Partial<EnergyParameters> = {}) {
     exportMeasurements() { return history.samples; },
     read() {
       return Object.freeze({ tick: world.tick.value, hour: world.tick.value % 24,
-        parameters: settings, ...demandMeasurement.read(loads), history: history.samples, done: false });
+        parameters: settings, ...demandMeasurement.read(loads),
+        householdDemandKw: loads.demandKw / settings.households,
+        householdBaseKw: baseHouseholdKw, householdPeakKw: baseHouseholdKw + applianceHouseholdKw,
+        demandHour: world.tick.value === 0 ? 0 : (world.tick.value - 1) % 24, history: history.samples, done: false });
     },
   };
 }

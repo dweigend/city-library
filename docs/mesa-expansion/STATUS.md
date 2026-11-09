@@ -1,5 +1,6 @@
 # Mesa mechanism expansion
 
+The [visual correction](visual-correction.md) supersedes the former table-first presentation acceptance. All ten own examples are being rechecked for meaningful mechanism visuals; prior image approvals remain historical evidence.
 This work adds ten illustrative city models and reusable headless mechanisms. These examples are additional entries, not accepted ports from the fixed selection of 200 upstream models. README and its approved diagram stay unchanged.
 
 ## Ownership and contract inventory

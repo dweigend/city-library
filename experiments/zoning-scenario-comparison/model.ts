@@ -53,7 +53,10 @@ export function create(options: Partial<ZoningParameters> = {}) {
           scenario: summary.scenarioId, replications: summary.valid,
           mean: summary.mean ?? "none", sampleSd: summary.sampleSd ?? "none",
         }));
-      return Object.freeze({ tick: world.tick.value, plannedRuns: plan.length, completedRuns: completed.length,
+      const runPlan = Object.freeze(plan.map(run => Object.freeze({
+        id: run.id, scenarioId: run.scenarioId, cap: run.parameters.cap,
+      })));
+      return Object.freeze({ tick: world.tick.value, parameters: settings, runPlan, plannedRuns: plan.length, completedRuns: completed.length,
         outcomes: Object.freeze(outcomes), summaries: Object.freeze(summaries), done: completed.length === plan.length });
     },
   };

@@ -35,8 +35,18 @@ export function create(options: Partial<StormwaterParameters> = {}) {
   return {
     advance(count = 1) { stepCount(count); for (let index = 0; index < count; index += 1) { run(world, step); record(); } },
     setRain(value: number) { settings = parameters(inputs, { ...settings, rainMmPerHour: value }); },
-    read() { return Object.freeze({ tick: world.tick.value, parameters: settings, ...measure.read(state),
-      lastCrossingHour: lastCrossingHour ?? "none", history: history.samples, done: false }); },
+    read() {
+      const samples = history.samples;
+      const previous = samples.at(-2)?.values;
+      return Object.freeze({ tick: world.tick.value, parameters: settings, ...measure.read(state),
+        intervalInflowM3: state.inflowM3 - (previous?.inflowM3 ?? 0),
+        intervalDischargedM3: state.dischargedM3 - (previous?.dischargedM3 ?? 0),
+        intervalOverflowM3: state.overflowM3 - (previous?.overflowM3 ?? 0),
+        catchment: Object.freeze({ width: 3, height: 3, fields: Object.freeze(catchment.fields.map(field => Object.freeze({
+          id: field.id, x: field.x, y: field.y, areaM2: field.areaM2, runoffShare: field.runoffShare,
+        }))) }),
+        lastCrossingHour: lastCrossingHour ?? "none", history: samples, done: false });
+    },
   };
 }
 export const model = { title: "Stormwater Retention",

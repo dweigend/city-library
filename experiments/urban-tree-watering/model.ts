@@ -42,7 +42,7 @@ export function create(options: Partial<TreeParameters> = {}) {
   return {
     advance(count = 1) { stepCount(count); for (let index = 0; index < count; index += 1) { run(world, step); record(); } },
     setDailyLiters(value: number) { settings = parameters(inputs, { ...settings, dailyLiters: value }); },
-    read() { return Object.freeze({ tick: world.tick.value, parameters: settings, ...measure.read(trees), totalWaterLiters,
+    read() { return Object.freeze({ tick: world.tick.value, parameters: settings, ...measure.read(trees), totalWaterLiters, moistureCapacityLiters,
       trees: Object.freeze(trees.map(tree => Object.freeze({ id: tree.id, label: tree.label, moistureLiters: tree.moistureLiters, receivedLiters: tree.receivedLiters }))),
       history: history.samples, done: false }); },
   };
