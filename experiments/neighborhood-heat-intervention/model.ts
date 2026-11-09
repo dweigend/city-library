@@ -37,8 +37,9 @@ export function create(options: Partial<HeatParameters> = {}) {
       for (let index = 0; index < count; index += 1) { run(world, step); record(); }
     },
     setShadeCooling(value: number) { settings = parameters(inputs, { ...settings, shadeCooling: value }); },
-    read() { return Object.freeze({ tick: world.tick.value, parameters: settings, ...measure.read(grid.fields),
-      fields: Object.freeze(grid.fields.map((field, index) => Object.freeze({ id: field.id, field: index + 1, shaded: field.shaded, heatIndex: field.heatIndex }))),
+    read() { return Object.freeze({ tick: world.tick.value, parameters: settings, width: grid.space.x, height: grid.space.y, ...measure.read(grid.fields),
+      fields: Object.freeze(grid.fields.map((field, index) => Object.freeze({ id: field.id, field: index + 1,
+        x: field.x, y: field.y, shaded: field.shaded, heatIndex: field.heatIndex }))),
       history: history.samples, done: false }); },
   };
 }
