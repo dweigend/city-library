@@ -2057,6 +2057,19 @@ Draw a gamma value using positive finite shape and rate; mean equals shape/rate.
 
 [Details](api-reference.md#complete-distributions)
 
+<a id="random-number-additive-distributions"></a>
+
+### Additive random.number variants
+
+```ts
+random.number(options: { distribution: "bernoulli", probability: number }): number
+random.number(options: { distribution: "triangular", min: number, mode: number, max: number }): number
+```
+
+Bernoulli returns numeric 0 or 1 for finite probability in [0,1]. Triangular requires finite min ≤ mode ≤ max and finite range width. Each nonconstant draw consumes one standard-stream uniform; Bernoulli probabilities 0/1 and constant triangular consume none. Invalid options reject before drawing. These delivered additions supplement the original numbered inventory and do not imply another stream-compatibility profile.
+
+[Details](api-reference.md#complete-distributions)
+
 <a id="random-number-6"></a>
 <a id="api-146"></a>
 
@@ -2670,6 +2683,18 @@ Read the current agenda time, starting at 0. advance changes only this time; it 
 
 [Details](api-reference.md#agenda)
 
+<a id="agenda-size"></a>
+
+### agenda.size
+
+```ts
+agenda.size: number // readonly
+```
+
+Read the pending-event count without advancing any clock or dispatching work. This delivered addition supplements the original numbered inventory.
+
+[Details](api-reference.md#agenda)
+
 <a id="agenda-add-2"></a>
 <a id="api-190"></a>
 
@@ -2708,6 +2733,18 @@ agenda.advance(options: { until: number; maxEvents?: number }): readonly Event<E
 Return detached due events in time/priority/sequence order; maxEvents defaults to 1000. If due events remain after the budget, stop agenda.time at the last dispatched time; otherwise advance it to until. Never advances World ticks.
 
 [Details](api-reference.md#agenda)
+
+<a id="agenda-next"></a>
+
+### agenda.next
+
+```ts
+agenda.next(options: { until: number }): Event<E> | undefined
+```
+
+Extract at most one due event. Success leaves Agenda time at event.at even for the last due event; absence advances it to until. The caller handles each result before extracting more events and supplies its own finite dispatch budget. No callbacks or World tick changes occur. The existing batch advance contract is unchanged. This delivered addition supplements the original numbered inventory.
+
+[Details](api-reference.md#agenda) · [Causal composition](../development/des-contract.md#time-and-causality)
 
 <a id="type-event-handle"></a>
 <a id="api-193"></a>
