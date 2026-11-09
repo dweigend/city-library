@@ -16,12 +16,12 @@ The quarter retains all subdivision results and diagnostics. Its zero-residual e
 
 ```sh
 bun run examples:city
-bun run typecheck:city
+bun run typecheck
 bun run examples:city:targets
 bun run typecheck:city:targets
 ```
 
-The first pair covers household, heat, scarce resource and shared machine. Record the new probes' actual run/typecheck results before claiming this expanded ready gate passes. The second pair includes those four scripts and the actual quarter script and is intentionally nonzero while its exports are absent. The target runner does not catch an expected failure and report success. It stops at the real failing assertion or unavailable public call. Target typechecking also reports inferred-type errors downstream of missing members; those are not suppressed with any or fake declarations.
+The example command covers household, heat, scarce resource and shared machine; typecheck checks the whole repository. Record the new probes' actual run/typecheck results before claiming this expanded ready gate passes. The second pair includes those four scripts and the actual quarter script and is intentionally nonzero while its exports are absent. The target runner does not catch an expected failure and report success. It stops at the real failing assertion or unavailable public call. Target typechecking also reports inferred-type errors downstream of missing members; those are not suppressed with any or fake declarations.
 
 The regular example registry and development typecheck should include all four scripts using delivered capabilities after integration checks pass. The original household and heat contracts remain unchanged; the two new probes add no library API. The target script is a named, documented open acceptance obligation, not an unreported skipped test. Once its complete phase passes, add that same file to both regular gates, preserving this full-target command as a regression gate. Check the current test commands before claiming a complete example-first delivery.
 

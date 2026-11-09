@@ -1,32 +1,26 @@
-# Nächste Integrations- und Entwicklungsaufgaben
+# Nächste Migrations- und Entwicklungsaufgaben
 
-Modelle, UI-Bindungen, Anleitungen und modellspezifische Quellen liegen unter `models/<slug>`. Svelte ist die einzige Oberfläche; `bun run dev` startet den Lab.
+Die strukturelle Migration ist auf `main`: Modelle und Quellen liegen unter `models/<slug>`, Svelte ist die einzige Oberfläche, und eine Root-tsconfig prüft den gemeinsamen Stand. Diese Arbeit wird nicht erneut umgesetzt.
 
-[PLAN](../../PLAN.md) beschreibt den aktuellen Umfang. Die [Fortschrittsdatei](../../models/catalog/progress-summary.json) besitzt die Abnahmezahlen; Implementierung, Browserprüfung, Originalvergleich und wissenschaftliche Abnahme bleiben getrennte Anforderungen.
+145 Modellpaare bedeuten 125 Implementierungen aus der festen NetLogo-Auswahl plus zwanzig zusätzliche Stadtbeispiele. Die zusätzlichen Beispiele ersetzen keine fehlenden Auswahlmodelle. Die [Fortschrittsdatei](../../models/catalog/progress-summary.json) besitzt die Abnahmezahlen; technische Funktion, Quellenvergleich und wissenschaftliche Abnahme bleiben getrennt.
 
-## Das aktuelle Integrationspaket abschließen
+## In dieser Reihenfolge vorbereiten und umsetzen
 
-1. Veraltete Links, widersprüchliche Angaben und doppelte Zuständigkeiten entfernen. Quellen, Lizenztexte, eingefrorene Beispiele und benötigte Abnahmebelege erhalten; historische Arbeitsprotokolle gehören nicht in die gepflegte Dokumentation.
-2. Funktion und Komplexität unabhängig prüfen lassen: „Geht es einfacher? Wie wäre es KISS?“ Für dieses Paket gilt Claude Opus 5.5 mit mittlerem Reasoning. Befunde beheben und den endgültigen PR-Diff erneut unabhängig prüfen lassen.
-3. `bun run check`, `bun run build:ui` und `bun models/catalog/progress.ts verify` ausführen. Browserabläufe und Screenshots belegen die tatsächlich geprüften Zustände; sie ersetzen keine vollständige Modellabnahme.
-4. Commit, Push und Pull Request bereitstellen, GitHub-Prüfungen abschließen. Erst nach ausdrücklicher Freigabe des konkreten PR nach `main` mergen. Paketveröffentlichung und das Löschen aktiver Worktrees sind nicht Teil dieses Pakets.
+1. Den [API-Abgleich](coverage.md#source-reconciliation-and-remaining-scope) pro Eintrag vervollständigen. Die Spezifikation nennt 309 Einträge, die Tabelle enthält derzeit 312 Überschriften; Umfang und Überladungen explizit klären, nichts stillschweigend streichen. Vorhandene Funktionen und Belege zuerst zuordnen.
+2. Fehlende Abnahmestufen der vorhandenen Auswahlmodelle mit ihren Belegen abgleichen. Die zwanzig Stadtbeispiele bleiben gesondert. Danach tatsächliche Prüflücken in kleinen Modellgruppen schließen.
+3. Die gemeinsame UI anhand ihrer [Verträge](../ui/api-table.md) vollständig prüfen: schneller Modellwechsel, Setup-Erholung, Lade-/Laufzeitfehler, Timerbereinigung, Tastatur/Fokus und Auswahl. Betroffene Ansichten in Desktop/schmal und hell/dunkel unabhängig ansehen lassen.
+4. Giant Component als erste kleine fehlende Modellgruppe prüfen: vier eingefrorene Zielskripte sind vorhanden. Quellenvertrag und echte API-Abhängigkeiten klären, bevor Runtime entsteht. Weitere Auswahlmodelle nach tatsächlichen Abhängigkeiten gruppieren.
+5. Quartiersgeometrie nach dem [verbindlichen Ablauf](example-first/PLAN.md#geometry-and-topology-delivery-sequence) ergänzen: Straßenkorridore und Subtraktion vor begrenzter Unterteilung. Die akzeptierten Quartiersassertions bleiben unverändert.
+6. Übrige Kern-, Daten- und Stadtfähigkeiten in den [vorbereiteten Arbeitspaketen](../../PLAN.md#remaining-migration-sequence) liefern. Bereits vorhandene Agenda-, History-, Studien- und Kapazitätsfunktionen wiederverwenden; kein zweites Ausführungs- oder Zustandsmodell aufbauen.
 
-## Danach gezielt weiterarbeiten
+Der genaue Zugriff auf einzelne Modellprozeduren bleibt eine [offene API-Entscheidung](model-function-encapsulation.md). Speicher-/Node-Studien-Unterpfade und vollständige Fortsetzung brauchen ebenfalls ihre eigenen Verträge. Offene Entscheidungen blockieren nur die betroffenen Erweiterungen.
 
-- Fehlende Abnahmebelege vorhandener Modelle mit dem [Katalog](../../models/catalog/README.md) abgleichen. Nur tatsächlich belegte Stufen aktualisieren.
-- UI-Restliste mit [API-Tabelle](../ui/api-table.md), Komponenten und Browserbelegen abgleichen. Schnellen Modellwechsel, Lade-/Ausführungsfehler, Tastatur und Fokus sowie schmale Ansichten in beiden Themes vollständig prüfen.
-- Die [API-Coverage](coverage.md) mit öffentlichen Exporten und ausführbaren Beispielen abgleichen; vorhandene Funktionen nicht erneut implementieren.
-- Den offenen Umfang direkter Modellprozeduren anhand der [Prozedurübersicht](model-function-encapsulation.md) klären, bevor neue APIs entstehen.
-- Neue Modelle nur in einer kleinen ausgewählten Gruppe ergänzen. Die vollständige Katalogauswahl ist kein Auftrag, alle fehlenden Modelle in dieses Integrationspaket aufzunehmen.
+## Prüf- und Abnahmerhythmus
 
-## Offene Zielverträge erhalten
+Vor jedem betroffenen Bibliotheks- oder Modellschritt die Refactor-Skills und gemeinsamen Coding-Standards anwenden; bei Schritten über beide Grenzen beide Skills nutzen. Gemini 3.8 Flash prüft wesentliche Entwürfe und Implementierungen unabhängig. Opus 5.5 mit mittlerem Reasoning übernimmt die Abnahmen und prüft bei API-Erweiterungen, abgeschlossenen Funktionsfamilien und vor Integration erneut: „Geht es einfacher? Wie wäre es KISS bei gleicher Funktionalität?“ Befunde beheben und wesentliche Änderungen unabhängig nachprüfen lassen.
 
-Das Quartiersziel braucht `geometry.corridor`, `geometry.subtract` und `geometry.subdivide`. Giant Component benötigt sein Modell. Die zugehörigen Zielprüfungen bleiben getrennt vom grünen Standardgate; ihre Assertions werden nicht abgeschwächt:
+Architekturregeln zu Headless-Code, Abhängigkeitsrichtung, Identität und einem Zustandsowner bei jedem wesentlichen Schritt prüfen. Bei UI-Arbeit zusätzlich Design-Skills, Designregeln und echte Browser-/Screenshot-Abnahme anwenden. Bestehende öffentliche Syntax, RNG-Reihenfolge und Tick-/Fehlersemantik nicht als Vereinfachung verändern. Neue APIs beginnen mit vier oder fünf eingefrorenen öffentlichen Beispielen.
 
-```sh
-bun run examples:city:targets
-bun run typecheck:city:targets
-bun run typecheck:giant-component:targets
-```
+`bun run check`, `bun run build:ui` und `bun models/catalog/progress.ts verify` sind die regulären technischen Prüfungen. Quartier und Giant haben bis zur tatsächlichen Umsetzung getrennte rote Zielprüfungen: `bun run typecheck:city:targets`, `bun run examples:city:targets` und `bun run typecheck:giant-component:targets`. Erfüllte Ziele erst nach echter Abnahme in das Standardgate aufnehmen.
 
-Neue Fähigkeiten beginnen mit vier oder fünf öffentlichen, assertierten Beispielen gemäß [Example-first-Gate](../../PLAN.md#example-first-delivery-gate). Die strukturelle Konsolidierung schließt diese Entwicklungsziele oder wissenschaftliche Prüfungen nicht ab.
+Jeder konkrete PR benötigt den unabhängig geprüften endgültigen Diff, grüne GitHub-Prüfungen und eine ausdrückliche Mergefreigabe. Veröffentlichung und das Löschen aktiver Worktrees bleiben eigene Entscheidungen.
