@@ -42,14 +42,16 @@ export function zoningData(state: ZoningObservation): SpatialData {
   const agents = [];
   const firstScenario = state.runPlan[0]?.scenarioId;
   for (const [run, planned] of state.runPlan.entries()) {
-    const left = -width / 2 + (run % PANEL_COLUMNS) * panelWidth + 1;
+    const panelLeft = -width / 2 + (run % PANEL_COLUMNS) * panelWidth;
+    const left = panelLeft + 1;
     const panelTop = height / 2 - Math.floor(run / PANEL_COLUMNS) * panelHeight;
     const bottom = panelTop - panelHeight + 1;
     const outcome = state.outcomes[run];
     const cap = planned.cap;
     agents.push({
       id: `view:run:${run}`,
-      x: left,
+      // Keep the full pending caption inside its panel at narrow viewports.
+      x: panelLeft,
       y: panelTop - CAPTION_INSET,
       label: `Run ${run + 1} · cap ${cap}${outcome ? ` · ${outcome.slots}` : " · pending"}`,
       size: 2,
