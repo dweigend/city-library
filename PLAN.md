@@ -18,6 +18,19 @@ The catalog owns [source and acceptance records](models/catalog/README.md); relo
 
 ## Remaining migration sequence
 
+Track the next bounded deliveries in GitHub. Existing geometry and model-group issues remain authoritative for their scope; these issues add missing acceptance and inventory work.
+
+| Next delivery | Issue | Dependency |
+| --- | --- | --- |
+| Reconcile operation-level API coverage | [#52](https://github.com/dweigend/city-library/issues/52) | Start now; use actual exports and canonical reference entries. |
+| Complete shared Svelte acceptance | [#53](https://github.com/dweigend/city-library/issues/53) | Independent of new geometry and missing selected models. |
+| Reconcile implemented-model acceptance evidence | [#54](https://github.com/dweigend/city-library/issues/54) | Coordinate existing model-group issues; preserve stage evidence. |
+| Deliver the frozen Giant Component target | [#55](https://github.com/dweigend/city-library/issues/55) | Resolve its concrete source/API blockers before implementation. |
+| Street corridors and subtraction | [#38](https://github.com/dweigend/city-library/issues/38) | Freeze the public examples before runtime changes. |
+| Bounded subdivision and quarter | [#39](https://github.com/dweigend/city-library/issues/39) | Follow the corridor/subtraction contract and preserve quarter assertions. |
+
+Every substantial delivery requires independent functional and complexity review with Claude Opus 5.5 at medium effort: can the implementation be simpler under KISS/YAGNI? Resolve findings before acceptance; preserve existing public contracts and assertions. Create implementation PRs when a concrete slice is reviewable, rather than empty PRs for unimplemented scope.
+
 The structural migration is integrated: model folders, one Svelte runtime and one root TypeScript configuration are the baseline, not work to repeat. There are 145 model pairs: 125 belong to the fixed selected-200 catalog and twenty are additional illustrative city models. Keep their acceptance scopes separate. The catalog ledger remains authoritative for selected-model stages; illustrative models do not fill the 75 missing selected implementations.
 
 The table prepares the whole remaining scope as bounded work. A row is ready for implementation only after its stated contract and example gate. Independent tracks may proceed together when their state owners and public dependencies do not overlap. Each implementation slice remains independently reviewable and deliverable; this sequence does not authorize one large rewrite or a merge.
