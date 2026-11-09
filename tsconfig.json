@@ -1,12 +1,18 @@
 {
   "compilerOptions": {
     "lib": [
-      "ESNext"
+      "ESNext",
+      "DOM",
+      "DOM.Iterable"
     ],
     "target": "ESNext",
     "module": "Preserve",
     "moduleDetection": "force",
-    "types": [],
+    "types": [
+      "bun",
+      "svelte",
+      "vite/client"
+    ],
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
@@ -19,11 +25,37 @@
     "paths": {
       "city-library": [
         "./index.ts"
+      ],
+      "$lib": [
+        "./ui"
+      ],
+      "$lib/*": [
+        "./ui/*"
+      ],
+      "$ui": [
+        "./ui"
+      ],
+      "$ui/*": [
+        "./ui/*"
       ]
     }
   },
   "include": [
     "index.ts",
-    "src/**/*.ts"
+    "src/**/*.ts",
+    "ui/**/*.ts",
+    "ui/**/*.svelte",
+    "models/**/*.ts",
+    "examples/**/*.ts",
+    "tests/**/*.ts",
+    "scripts/**/*.ts",
+    "vite.config.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "agent-lab-output",
+    "examples/city-simulation/03-generative-quarter.ts",
+    "examples/giant-component/**/*.ts"
   ]
 }

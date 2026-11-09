@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
-import { create as basic } from "../../experiments/prisoners-dilemma-basic/model.ts";
-import { create as iterated } from "../../experiments/prisoners-dilemma-two-person-iterated/model.ts";
+import { create as basic } from "../../models/prisoners-dilemma-basic/model.ts";
+import { create as iterated } from "../../models/prisoners-dilemma-two-person-iterated/model.ts";
 for (const [youSilent, partnerSilent, years] of [[true,true,1],[false,true,0],[true,false,5],[false,false,3]] as const) {
   const p = basic({ youSilent, partnerSilent, partnerSilenceKnown: true, seed: 1 });
   p.answer(); assert.equal(p.read().years, years); assert.equal(p.read().partnerIsSilent, partnerSilent);

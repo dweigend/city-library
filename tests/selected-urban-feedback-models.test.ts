@@ -1,8 +1,8 @@
 import { expect, test } from "bun:test";
 import { Random } from "city-library";
-import { create as feedback } from "../experiments/urban-suite-positive-feedback/model.ts";
-import { create as path } from "../experiments/urban-suite-path-dependence/model.ts";
-import { create as cells, type CountRule, type Neighborhood } from "../experiments/urban-suite-cells/model.ts";
+import { create as feedback } from "../models/urban-suite-positive-feedback/model.ts";
+import { create as path } from "../models/urban-suite-path-dependence/model.ts";
+import { create as cells, type CountRule, type Neighborhood } from "../models/urban-suite-cells/model.ts";
 
 test("Feedback smooths the old field before powers and maximum normalization", () => {
   const model = feedback({ alpha: 2, mooreNeighborhood: true });

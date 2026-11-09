@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { create } from "../../experiments/fire/model.ts";
+import { create } from "../../models/fire/model.ts";
 
 const fire = create({ width: 5, height: 3, density: 0 });
 fire.setForest(fire.read().cells.map(({ x, y }) => y === 0 && (x === -1 || x === 0)));

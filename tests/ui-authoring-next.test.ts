@@ -5,7 +5,7 @@ test('scalar formatting reads once per publication and preserves the real numeri
   const result = Bun.spawnSync([process.execPath, '--conditions=browser', '-e', `
     import { strict as assert } from 'node:assert';
     import { defineUI } from './ui/index.ts';
-    import { model as voting } from './experiments/voting/model.ts';
+    import { model as voting } from './models/voting/model.ts';
     import { createSession } from './ui/svelte/session.ts';
     const reads = [], formatted = [];
     const definition = { ...voting, create(options) { return voting.create({ ...options, width: 3, height: 3 }); } };

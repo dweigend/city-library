@@ -1,8 +1,8 @@
 import { strict as assert } from "node:assert";
-import { create as structureOne } from "../../experiments/urban-suite-structure-from-randomness-1/model.ts";
-import { create as structureTwo } from "../../experiments/urban-suite-structure-from-randomness-2/model.ts";
-import { create as sprawl } from "../../experiments/urban-suite-sprawl-effect/model.ts";
-import { create as economic } from "../../experiments/urban-suite-economic-disparity/model.ts";
+import { create as structureOne } from "../../models/urban-suite-structure-from-randomness-1/model.ts";
+import { create as structureTwo } from "../../models/urban-suite-structure-from-randomness-2/model.ts";
+import { create as sprawl } from "../../models/urban-suite-sprawl-effect/model.ts";
+import { create as economic } from "../../models/urban-suite-economic-disparity/model.ts";
 
 const a = structureOne(), b = structureTwo(), c = sprawl(), d = economic();
 assert.equal(a.read().cells.length, 16900);

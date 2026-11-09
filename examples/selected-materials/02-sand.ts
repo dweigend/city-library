@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { create } from "../../experiments/sand/model.ts";
+import { create } from "../../models/sand/model.ts";
 const sand = create({ width: 9, height: 9, releaseChance: 0, density: 0, seed: 3 });
 sand.setSand([{ x: 0, y: 2 }]);
 sand.moveAllSand();

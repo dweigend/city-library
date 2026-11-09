@@ -1,5 +1,5 @@
 import { defineUI, type Observation, type SpatialData, type GridData } from '../../ui/index.ts';
-import { model as wealth } from '../../experiments/wealth-distribution/model.ts';
+import { model as wealth } from '../../models/wealth-distribution/model.ts';
 import { assert, equal, button, restart, monitor, settle } from './assertions.ts';
 
 /** Observation-only adapter exposes a deliberate cross-kind source-ID collision.

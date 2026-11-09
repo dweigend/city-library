@@ -1,7 +1,7 @@
 /** Compile-only negative contracts using real models; never imported at runtime. */
 import { defineUI } from '../../ui/index.ts';
-import { model as voting } from '../../experiments/voting/model.ts';
-import { model as wealth } from '../../experiments/wealth-distribution/model.ts';
+import { model as voting } from '../../models/voting/model.ts';
+import { model as wealth } from '../../models/wealth-distribution/model.ts';
 import { alternate } from './03-alternate-observation.ts';
 function negativeContracts() {
   defineUI(voting, { setup: [
@@ -39,9 +39,9 @@ function negativeContracts() {
   ] }] }] });
 }
 void negativeContracts;
-import type { Definition } from '../../experiments/definition.ts';
-import type { VotingParameters } from '../../experiments/voting/model.ts';
-import { model as wolves, type WolfSheepParameters } from '../../experiments/wolf-sheep-predation/model.ts';
+import type { Definition } from '../../models/definition.ts';
+import type { VotingParameters } from '../../models/voting/model.ts';
+import { model as wolves, type WolfSheepParameters } from '../../models/wolf-sheep-predation/model.ts';
 type VotingInstance = ReturnType<typeof voting.create>;
 type VotingRead = ReturnType<VotingInstance['read']>;
 type Base = Omit<VotingInstance, 'read'>;

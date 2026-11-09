@@ -3,15 +3,15 @@ import {
   create as smooth,
   sigmoid,
   transition,
-} from "../experiments/smoothlife/model.ts";
-import { create as hex } from "../experiments/hex-cell-aggregation/model.ts";
-import { create as vants } from "../experiments/vants/model.ts";
+} from "../models/smoothlife/model.ts";
+import { create as hex } from "../models/hex-cell-aggregation/model.ts";
+import { create as vants } from "../models/vants/model.ts";
 import {
   create as turing,
   directionToNumber,
   numberToDirection,
   type Rule,
-} from "../experiments/turing-machine-2d/model.ts";
+} from "../models/turing-machine-2d/model.ts";
 
 describe("selected B19 SmoothLife source equation", () => {
   test("discrete Euclidean disk and annulus have exact normalizers, include self and wrap", () => {

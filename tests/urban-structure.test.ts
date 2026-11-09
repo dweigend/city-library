@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
 import { Random } from "city-library";
-import { create as structureOne } from "../experiments/urban-suite-structure-from-randomness-1/model.ts";
-import { create as structureTwo } from "../experiments/urban-suite-structure-from-randomness-2/model.ts";
+import { create as structureOne } from "../models/urban-suite-structure-from-randomness-1/model.ts";
+import { create as structureTwo } from "../models/urban-suite-structure-from-randomness-2/model.ts";
 
 function withoutIds<T extends { readonly cells: readonly { readonly id: string }[] }>(state: T) {
   return { ...state, cells: state.cells.map(({ id: _id, ...cell }) => cell) };

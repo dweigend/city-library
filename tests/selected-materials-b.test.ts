@@ -1,8 +1,8 @@
 import { describe, expect, test } from "bun:test";
-import { create as heat } from "../experiments/heat-diffusion/model.ts";
-import { create as crystal } from "../experiments/crystallization-basic/model.ts";
-import { create as interstitial } from "../experiments/interstitial-diffusion/model.ts";
-import { create as dla } from "../experiments/dla/model.ts";
+import { create as heat } from "../models/heat-diffusion/model.ts";
+import { create as crystal } from "../models/crystallization-basic/model.ts";
+import { create as interstitial } from "../models/interstitial-diffusion/model.ts";
+import { create as dla } from "../models/dla/model.ts";
 
 describe("selected materials source mechanisms", () => {
   test("heat patch updates are sequential old-temperature writes and clamp strips", () => {

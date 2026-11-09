@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
-import { create as elementary } from "../../experiments/ca-1d-elementary/model.ts";
-import { create as continuous } from "../../experiments/ca-continuous/model.ts";
+import { create as elementary } from "../../models/ca-1d-elementary/model.ts";
+import { create as continuous } from "../../models/ca-continuous/model.ts";
 const e = elementary({ width: 9, height: 5, rule: 90, initialization: "single", autoContinue: false });
 e.advance();
 assert.equal(e.read().tick, 1);

@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
-import { create as heat } from "../../experiments/heat-diffusion/model.ts";
-import { create as crystal } from "../../experiments/crystallization-basic/model.ts";
+import { create as heat } from "../../models/heat-diffusion/model.ts";
+import { create as crystal } from "../../models/crystallization-basic/model.ts";
 const plate = heat({ width: 11, height: 11, initialPlateTemp: 44, leftTemp: 44, rightTemp: 44, topTemp: 44, bottomTemp: 44, alpha: 0.8418, seed: 7 });
 plate.advance(2);
 assert.equal(plate.read().tick, 2);

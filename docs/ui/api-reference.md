@@ -4,7 +4,7 @@ Use `defineUI` to describe what an experiment shows and which model actions its 
 
 ## Status
 
-This reference and the [API table](api-table.md) define the repository UI contract supported by both the legacy and Svelte adapters. Array declarations remain compatibility syntax. [PLAN](../../PLAN.md) identifies remaining acceptance work. The package has not been published.
+This reference and the [API table](api-table.md) define the repository UI contract supported by the Svelte adapter. Array declarations remain compatibility syntax. [PLAN](../../PLAN.md) identifies remaining acceptance work. The package has not been published.
 
 ## Principles
 
@@ -110,7 +110,7 @@ Experimental nodes add optional initial `position: { x, y }`; later dragging and
 
 `{ type: "spatial", label, data }` projects `SpatialData`: `width`, `height`, optional `cells` and required `agents`. Each spatial agent extends node presentation fields with `x`, `y`, optional `heading` in degrees and optional `shape: "circle" | "triangle"`. The baseline renderer defaults heading to zero and shape to circle. Coordinates are centered world coordinates; positive y points upward. Display size remains CSS pixels.
 
-Experimental additions: `showLabels` controls label visibility when supplied; omission retains the host Labels control. `segments` contains ordered `{ from: {x,y}, to: {x,y}, color?, width? }` strokes above cells and below agents, selection and labels. Endpoints must be finite centered coordinates. Width defaults to 1 CSS pixel; zero omits a stroke; negative/nonfinite widths are invalid input. Omitted color uses the host foreground (legacy host white). Segments do not participate in picking or model collision logic.
+Experimental additions: `showLabels` controls label visibility when supplied; omission retains the host Labels control. `segments` contains ordered `{ from: {x,y}, to: {x,y}, color?, width? }` strokes above cells and below agents, selection and labels. Endpoints must be finite centered coordinates. Width defaults to 1 CSS pixel; zero omits a stroke; negative/nonfinite widths are invalid input. Omitted color uses the host foreground. Segments do not participate in picking or model collision logic.
 
 ### Charts
 
@@ -162,7 +162,7 @@ Setup-string and keyed-live forms are supported, with legacy arrays preserved fo
 
 ## Author examples
 
-The [five public author examples](../../examples/ui-authoring/README.md) cover defaults and inert declaration, ordered overrides and numeric bindings, alternate observations and getter precedence, grouping/format/categories, and independent actions/legacy/disposal. Compile-only cases cover incorrect field types and incomplete observation shapes. Headless assertions and real-browser checks are separate gates; the browser harness exercises both adapters and waits for settled rendering.
+The [five public author examples](../../examples/ui-authoring/README.md) cover defaults and inert declaration, ordered overrides and numeric bindings, alternate observations and getter precedence, grouping/format/categories, and independent actions/legacy/disposal. Compile-only cases cover incorrect field types and incomplete observation shapes. Headless assertions and real-browser checks are separate gates; the browser harness exercises the Svelte adapter and waits for settled rendering.
 
 ## Extensions
 

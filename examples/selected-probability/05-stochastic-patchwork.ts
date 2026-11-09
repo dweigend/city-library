@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
-import { create as first } from "../../experiments/stochastic-patchwork/model.ts";
-import { create as second } from "../../experiments/mandelbrot/model.ts";
+import { create as first } from "../../models/stochastic-patchwork/model.ts";
+import { create as second } from "../../models/mandelbrot/model.ts";
 
 // Frozen before runtime: detached deterministic observations and independent instances.
 for (const create of [first, second]) {

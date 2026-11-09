@@ -2,7 +2,7 @@ import { expect, test } from "bun:test";
 import { mkdtemp, mkdir, writeFile, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { discoverEntries } from "../scripts/agent-lab.ts";
+import { discoverEntries } from "../ui/agent-lab/discovery.ts";
 
 test("catalog discovers only entry candidates and reports incomplete pairs without invoking factories", async () => {
   const root = await mkdtemp(join(tmpdir(), "agent-lab-catalog-"));

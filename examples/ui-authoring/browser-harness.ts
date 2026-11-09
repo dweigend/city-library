@@ -1,8 +1,8 @@
 /** Explicit real-browser harness. Vite compiles the Svelte import; no model or DOM mock. */
 export async function runBrowserChecks(container: HTMLElement, host: 'legacy' | 'svelte') {
-  const bind = host === 'svelte'
-    ? (await import('../../ui/svelte/index.ts')).defineUI
-    : (await import('../../ui/index.ts')).defineUI;
+  // Preserve the accepted harness call signature; both former host names use one UI.
+  void host;
+  const { defineUI: bind } = await import('../../ui/index.ts');
   const examples = await Promise.all([
     import('./01-defaults-and-inert-entry.ts'),
     import('./02-ordered-setup-and-numeric-live.ts'),

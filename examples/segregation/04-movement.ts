@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { create } from "../../experiments/segregation/model.ts";
+import { create } from "../../models/segregation/model.ts";
 const m = create({width:5,height:5,similarWanted:100});
 m.setResidents([{x:0,y:0,group:"blue"},{x:1,y:0,group:"orange"},{x:-1,y:0,group:"orange"}]);
 const before=m.read();

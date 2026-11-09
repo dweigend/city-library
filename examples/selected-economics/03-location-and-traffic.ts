@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
-import { create as stores } from "../../experiments/hotellings-law/model.ts";
-import { create as traffic } from "../../experiments/braess-paradox/model.ts";
+import { create as stores } from "../../models/hotellings-law/model.ts";
+import { create as traffic } from "../../models/braess-paradox/model.ts";
 const h = stores({ layout: "line", rules: "moving-only", seed: 1 });
 assert.equal(h.read().stores.length, 3);
 assert.equal(h.read().consumers.length, 41);

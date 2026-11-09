@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { create } from "../../experiments/percolation/model.ts";
+import { create } from "../../models/percolation/model.ts";
 
 const dry = create({ width: 5, height: 5, porosity: 0 });
 dry.setFront([1, 3]);

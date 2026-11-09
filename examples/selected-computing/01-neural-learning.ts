@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
-import { create as perceptron } from '../../experiments/artificial-neural-net-perceptron/model.ts';
-import { create as multilayer } from '../../experiments/artificial-neural-net-multilayer/model.ts';
+import { create as perceptron } from '../../models/artificial-neural-net-perceptron/model.ts';
+import { create as multilayer } from '../../models/artificial-neural-net-multilayer/model.ts';
 
 // The signed perceptron has a strict zero threshold and no hidden units.
 const p = perceptron({seed: 7, learningRate: .5, examplesPerEpoch: 1, targetFunction: 'or'});

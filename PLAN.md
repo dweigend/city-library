@@ -4,15 +4,21 @@ City Library brings reusable parts to simulations and games about future cities.
 
 ## Available now
 
-The repository provides a headless core, a shared UI and 125 paired experiment entries. The catalog target is 200 selected models; research dossiers cover the full selection. Implementation, scientific comparison and independent acceptance remain separate requirements.
+The repository provides a headless core, a shared UI and 125 paired models. The catalog target is 200 selected models; research dossiers cover the full selection. Implementation, scientific comparison and independent acceptance remain separate requirements.
 
 The core includes Agent/World lifecycle and execution, seeded Random streams, spatial movement and perception, Grid/Field operations, Graph algorithms, planar geometry and statistics. The [Agent Loom specification](docs/agent-loom/README.md) defines the required API beyond the implemented subsets. Use [public exports](index.ts) and asserted examples to check a particular operation; the [coverage inventory](docs/development/coverage.md) needs reconciliation with those contracts.
 
-Both UI hosts support `defineUI`, keyed live controls, flat groups, monitor formatting and labelled charts. All 125 entries use the shared contract without a model-specific fallback. The Svelte runtime remains a work in progress; the legacy host is available. See [Lab usage](ui/agent-lab/README.md) and the [UI API](docs/ui/README.md).
+The Svelte UI supports `defineUI`, keyed live controls, flat groups, monitor formatting and labelled charts. All 125 entries use the shared contract without a model-specific fallback. The Svelte UI is the single supported runtime; browser checks and their limits are recorded in the [UI acceptance record](ui/agent-lab/acceptance/runtime-consolidation/independent-testing.md). See [Lab usage](ui/agent-lab/README.md) and the [UI API](docs/ui/README.md).
 
-The [catalog ledger](experiments/catalog/progress.json) tracks model-level acceptance. It records 125 implemented entries, including 20 whose remaining acceptance stages still need evidence reconciliation. Research is recorded for 200 selected models; independent review and full acceptance are recorded for one. These counts describe distinct stages, not a completed catalog. A working setup or passing test does not establish scientific equivalence or complete accessibility.
+The [catalog ledger](models/catalog/progress.json) tracks model-level acceptance. It records 125 implemented entries, including 20 whose remaining acceptance stages still need evidence reconciliation. Research is recorded for 200 selected models; independent review and full acceptance are recorded for one. These counts describe distinct stages, not a completed catalog. A working setup or passing test does not establish scientific equivalence or complete accessibility.
+
+Models live under `models/<slug>` with their headless implementation, UI binding, usage guide, notices and source records. Catalog-wide selection and acceptance stay under `models/catalog`; shared UI acceptance belongs to `ui/agent-lab/acceptance`. The [path migration receipt](docs/development/model-path-migration.json) retains previous and current frozen-file hashes, including ten manifest discrepancies already present at the base revision. Import-path changes preserve executable assertions and do not advance scientific acceptance stages.
+
+The catalog owns [source and acceptance records](models/catalog/README.md); relocating those records does not establish new scientific acceptance.
 
 ## Next steps
+
+Use the [integration and development checklist](docs/development/continuation-plan.md) to work through the current baseline, acceptance gaps and expansion dependencies one task at a time.
 
 1. Reconcile the remaining model-level acceptance stages with their required evidence; implementation alone does not complete a model.
 2. Finish remaining Svelte controls, lifecycle and model-switching acceptance, including desktop/narrow light/dark screenshots and independent inspection.
@@ -89,7 +95,7 @@ A phase is complete only when all of its four or five scripts typecheck and run 
 
 ## Tooling and release boundaries
 
-Use the pinned Bun workflow and lockfile. `bun run check` runs typechecks (including Svelte), behavior tests, registered public examples, the library build and the packed public consumer. `bun run build:ui:svelte` checks the separate production UI build. Run checks appropriate to each change and record actual results; browser evidence remains separate from shell checks.
+Use the pinned Bun workflow and lockfile. `bun run check` runs typechecks (including Svelte), behavior tests, registered public examples, the library build and the packed public consumer. `bun run build:ui` checks the separate production UI build. Run checks appropriate to each change and record actual results; browser evidence remains separate from shell checks.
 
 Keep headless package exports free of UI/framework/host ambient dependencies and verify downstream consumers when public entries or packaging change. The root package is `city-library`; additional subpaths require explicit contracts. GitHub CI is defined in `.github/workflows/check.yml` with stable Library checks and Svelte build jobs; a local command pass does not prove a hosted CI run or configured branch protection. Formatting/linting scope remains a separate tooling decision.
 

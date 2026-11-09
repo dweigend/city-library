@@ -1,14 +1,14 @@
 import { describe, expect, test } from "bun:test";
 import { readFileSync } from "node:fs";
-import { create as smoothlife } from "../experiments/smoothlife/model.ts";
-import { create as hex } from "../experiments/hex-cell-aggregation/model.ts";
-import { create as vants } from "../experiments/vants/model.ts";
-import { create as turing } from "../experiments/turing-machine-2d/model.ts";
-import { create as elementary } from "../experiments/ca-1d-elementary/model.ts";
-import { create as continuous } from "../experiments/ca-continuous/model.ts";
-import { create as brain } from "../experiments/brians-brain/model.ts";
-import { create as cyclic } from "../experiments/cyclic-ca/model.ts";
-import { create as stochastic } from "../experiments/ca-stochastic/model.ts";
+import { create as smoothlife } from "../models/smoothlife/model.ts";
+import { create as hex } from "../models/hex-cell-aggregation/model.ts";
+import { create as vants } from "../models/vants/model.ts";
+import { create as turing } from "../models/turing-machine-2d/model.ts";
+import { create as elementary } from "../models/ca-1d-elementary/model.ts";
+import { create as continuous } from "../models/ca-continuous/model.ts";
+import { create as brain } from "../models/brians-brain/model.ts";
+import { create as cyclic } from "../models/cyclic-ca/model.ts";
+import { create as stochastic } from "../models/ca-stochastic/model.ts";
 
 // Independent oracle: values read from the actual pinned original running in
 // Chromium, after native Enter executed each recorded NetLogo command.
@@ -29,14 +29,14 @@ interface Probe {
 }
 const slugs = ["smoothlife", "hex-cell-aggregation", "vants", "turing-machine-2d", "ca-1d-elementary", "ca-continuous", "brians-brain", "cyclic-ca", "ca-stochastic"] as const;
 function source(slug: (typeof slugs)[number]): Probe["observed"] {
-  const path = new URL(`../evidence/development/selected-cellular-evidence/${slug}-source-probe.json`, import.meta.url);
+  const path = new URL(`../models/${slug}/evidence/selected-cellular-evidence/${slug}-source-probe.json`, import.meta.url);
   return (JSON.parse(readFileSync(path, "utf8")) as Probe).observed;
 }
 
 describe("selected cellular executed-original probes", () => {
   test("every oracle pins the exact archived original bytes", () => {
     for (const slug of slugs) {
-      const bytes = readFileSync(new URL(`../experiments/${slug}/source.nlogox`, import.meta.url));
+      const bytes = readFileSync(new URL(`../models/${slug}/source.nlogox`, import.meta.url));
       expect(new Bun.CryptoHasher("sha256").update(bytes).digest("hex")).toBe(source(slug).sha);
     }
   });

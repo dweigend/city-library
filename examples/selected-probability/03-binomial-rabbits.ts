@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
-import { create as first } from "../../experiments/binomial-rabbits/model.ts";
-import { create as second } from "../../experiments/central-limit-theorem/model.ts";
+import { create as first } from "../../models/binomial-rabbits/model.ts";
+import { create as second } from "../../models/central-limit-theorem/model.ts";
 
 // Frozen before runtime: detached deterministic observations and independent instances.
 for (const create of [first, second]) {

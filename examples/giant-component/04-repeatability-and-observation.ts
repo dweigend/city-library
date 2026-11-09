@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { create } from "../../experiments/giant-component/model.ts";
+import { create } from "../../models/giant-component/model.ts";
 const a=create({numberOfNodes:12,seed:42}),b=create({numberOfNodes:12,seed:42});
 a.advance(20);b.advance(20);
 const x=a.read(),y=b.read();

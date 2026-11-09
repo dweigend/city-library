@@ -1,7 +1,7 @@
 import { strict as assert } from "node:assert";
-import { create as awareness } from "../../experiments/urban-suite-awareness/model.ts";
-import { create as pollution } from "../../experiments/urban-suite-pollution/model.ts";
-import { create as recycling } from "../../experiments/urban-suite-recycling/model.ts";
+import { create as awareness } from "../../models/urban-suite-awareness/model.ts";
+import { create as pollution } from "../../models/urban-suite-pollution/model.ts";
+import { create as recycling } from "../../models/urban-suite-recycling/model.ts";
 
 const a = awareness();
 assert.equal(a.read().cells.length, 37 * 38);

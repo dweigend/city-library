@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { create } from "../../experiments/giant-component/model.ts";
+import { create } from "../../models/giant-component/model.ts";
 const state=create().read();
 assert.equal(state.parameters.numberOfNodes,80);
 assert.equal(state.nodeCount,80);

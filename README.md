@@ -14,23 +14,24 @@ NetLogo inspires the scripting approach: a short script should be enough to get 
 
 Agent Loom provides the headless modeling core. Agent Lab adds browser controls and views; the same model also runs in a script. Applying its results to a real city still requires evidence.
 
-The core and shared UI are usable, with 125 experiment entries toward a fixed selection of 200. The full specification and scientific model comparisons remain unfinished, and the package is not published. See [the work plan](PLAN.md) for progress and open checks.
+The core and shared UI are usable, with 125 models toward a fixed selection of 200. The full specification and scientific model comparisons remain unfinished, and the package is not published. See [the work plan](PLAN.md) for progress and open checks.
 
 ## Run the Lab
 
-From the repository root, use Bun 1.4.2 and start the Svelte work-in-progress runtime:
+From the repository root, use Bun 1.4.2 and start Agent Lab:
 
 ```sh
 bun install --frozen-lockfile
-CITY_LIBRARY_UI_RUNTIME=svelte bun run dev:ui:svelte
+bun run dev
 ```
 
-Open http://localhost:3101. Choose an experiment, set its initial values and press Setup. Advance one step at a time or use Run/Pause. Live controls call model actions; setup controls prepare the next initialization.
+Open http://localhost:3101. Choose a model, set its initial values and press Setup. Advance one step at a time or use Run/Pause. Live controls call model actions; setup controls prepare the next initialization.
 
-The runtime variable is required: the Vite command defaults to legacy rendering. For the older Bun host, run `bun run dev:ui` and open http://localhost:3100. See [Lab usage](ui/agent-lab/README.md) for ports, updates and migration limits.
+See [Lab usage](ui/agent-lab/README.md) for configuration and explicit source reloads.
 
 ## Write and explore
 
+- [Model catalog](models/catalog/README.md): find model folders, source records and acceptance.
 - [Write a model](docs/development/model-authoring.md): follow a real headless model and its UI binding.
 - [Documentation](docs/README.md): find architecture, APIs, authoring rules and evidence.
 - [Agent Loom reference](docs/agent-loom/README.md): target contracts and operation inventory; delivered coverage is tracked separately.
@@ -65,6 +66,6 @@ This is a composition map, not a required startup sequence. A graph needs no coo
 
 ## Development
 
-`bun run check` runs TypeScript/Svelte checks, tests, public examples, the library build and a packed Bun/Node/TypeScript consumer. The consumer requires Node 26.8.2. `bun run build:ui:svelte` builds the Vite host; use `CITY_LIBRARY_UI_RUNTIME=svelte bun run build:ui:svelte` when building the Svelte runtime explicitly.
+`bun run check` runs TypeScript/Svelte checks, tests, public examples, the library build and a packed Bun/Node/TypeScript consumer. The consumer requires Node 26.8.2. `bun run build:ui` builds the Vite host.
 
 Keep model state under one owner, use public actions for changes and keep rendering outside the headless library. New capabilities start with asserted public examples. [Architecture](docs/ARCHITECTURE.md) and [UI design](docs/DESIGN.md) define the binding rules.

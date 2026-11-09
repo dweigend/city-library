@@ -1,0 +1,867 @@
+{
+  "count": 125,
+  "findings": [
+    {
+      "slug": "traffic-grid",
+      "kind": "non-callable labelled procedure",
+      "action": "world"
+    },
+    {
+      "slug": "traffic-grid",
+      "kind": "non-callable labelled procedure",
+      "action": "grid"
+    },
+    {
+      "slug": "traffic-grid",
+      "kind": "non-callable labelled procedure",
+      "action": "roads"
+    },
+    {
+      "slug": "traffic-grid",
+      "kind": "non-callable labelled procedure",
+      "action": "intersections"
+    },
+    {
+      "slug": "epidem-basic",
+      "kind": "non-callable labelled procedure",
+      "action": "world"
+    },
+    {
+      "slug": "epidem-basic",
+      "kind": "non-callable labelled procedure",
+      "action": "grid"
+    },
+    {
+      "slug": "epidem-travel-and-control",
+      "kind": "non-callable labelled procedure",
+      "action": "world"
+    },
+    {
+      "slug": "epidem-travel-and-control",
+      "kind": "non-callable labelled procedure",
+      "action": "grid"
+    },
+    {
+      "slug": "epidem-travel-and-control",
+      "kind": "non-callable labelled procedure",
+      "action": "graph"
+    },
+    {
+      "slug": "traffic-grid-goal",
+      "kind": "non-callable labelled procedure",
+      "action": "world"
+    },
+    {
+      "slug": "traffic-grid-goal",
+      "kind": "non-callable labelled procedure",
+      "action": "grid"
+    },
+    {
+      "slug": "traffic-grid-goal",
+      "kind": "non-callable labelled procedure",
+      "action": "roads"
+    },
+    {
+      "slug": "traffic-grid-goal",
+      "kind": "non-callable labelled procedure",
+      "action": "intersections"
+    },
+    {
+      "slug": "taxi-cabs",
+      "kind": "non-callable labelled procedure",
+      "action": "world"
+    },
+    {
+      "slug": "taxi-cabs",
+      "kind": "non-callable labelled procedure",
+      "action": "grid"
+    },
+    {
+      "slug": "dna-protein-synthesis",
+      "kind": "non-callable labelled procedure",
+      "action": "world"
+    },
+    {
+      "slug": "dna-protein-synthesis",
+      "kind": "non-callable labelled procedure",
+      "action": "grid"
+    },
+    {
+      "slug": "dna-protein-synthesis",
+      "kind": "non-callable labelled procedure",
+      "action": "backbones"
+    },
+    {
+      "slug": "genevo-1-genetic-switch",
+      "kind": "non-callable labelled procedure",
+      "action": "world"
+    },
+    {
+      "slug": "genevo-1-genetic-switch",
+      "kind": "non-callable labelled procedure",
+      "action": "grid"
+    },
+    {
+      "slug": "crispr-ecosystem",
+      "kind": "non-callable labelled procedure",
+      "action": "world"
+    },
+    {
+      "slug": "crispr-ecosystem",
+      "kind": "non-callable labelled procedure",
+      "action": "grid"
+    }
+  ],
+  "rows": [
+    {
+      "slug": "membrane-formation",
+      "intro": "Water and connected hydrophilic/hydrophobic lipid parts attract or repel through local movement rules. Aggregates illustrate self-organization, without a calibrated molecular force field or guarantee of thermodynamic equilibrium.",
+      "params": 7,
+      "actions": 7
+    },
+    {
+      "slug": "honeycomb",
+      "intro": "Circularly moving bees deposit a chemical whose diffusion and evaporation alter subsequent movement. These artificial feedback rules create honeycomb-like patterns without claiming that real bees use this construction mechanism.",
+      "params": 2,
+      "actions": 4
+    },
+    {
+      "slug": "simple-genetic-algorithm",
+      "intro": "Tournament selection, single-point crossover and mutation evolve bit strings toward the ALL-ONES target. Fitness is known by construction, so improvements illustrate the optimizer rather than an inferred biological fitness landscape.",
+      "params": 6,
+      "actions": 7
+    },
+    {
+      "slug": "k-means-clustering",
+      "intro": "Data points are assigned to the nearest centroid and centroids are recomputed until the tolerance-based stopping condition. Radial data generation, initialization and empty-cluster handling belong to the example; a partition is not evidence of natural categories.",
+      "params": 4,
+      "actions": 6
+    },
+    {
+      "slug": "robby-the-robot",
+      "intro": "Robot genomes are evaluated in 20 fresh environments with 100 actions each before strategy selection and mutation. A score belongs to that evaluation budget and environment distribution, not an exhaustive guarantee of robot performance.",
+      "params": 4,
+      "actions": 13
+    },
+    {
+      "slug": "baldwin-effect",
+      "intro": "Organisms try to learn a successful phenotype before selection and reproduction update their inherited genes. Random and smart learning are distinct procedures; acquired phenotypes are not simply copied into the genotype.",
+      "params": 7,
+      "actions": 8
+    },
+    {
+      "slug": "sex-ratio-equilibrium",
+      "intro": "Inherited reproductive tendencies change through biparental reproduction and demographic turnover. Adult sex counts and reproductive investment are distinct quantities; a near-balanced output is conditional on these inheritance and survival rules.",
+      "params": 8,
+      "actions": 8
+    },
+    {
+      "slug": "bank-reserves",
+      "intro": "Payments, personal balance-book settlement and the bank balance sheet occupy separate phases. Reserve requirements constrain the stipulated lending mechanism; these rules are not an empirical account of modern bank credit creation.",
+      "params": 3,
+      "actions": 12
+    },
+    {
+      "slug": "fire",
+      "intro": "Fire spreads only from the old burning membership to orthogonal tree neighbors, then becomes fading embers. Empty cells interrupt the front; the forest has no wind, fuel variation or regrowth.",
+      "params": 4,
+      "actions": 1
+    },
+    {
+      "slug": "limited-order-book",
+      "intro": "Limit orders enter a book and trade only when the source's strict crossing condition holds. Quotes, completed trades and unfilled orders are different observations; the mechanism does not reproduce a particular exchange's matching engine.",
+      "params": 7,
+      "actions": 2
+    },
+    {
+      "slug": "urban-suite-recycling",
+      "intro": "Recyclers and wasteful agents draw energy from resources using different extraction and restoration rules. Discrete regeneration and recycling costs are explicit abstractions rather than measured household material flows.",
+      "params": 8,
+      "actions": 3
+    },
+    {
+      "slug": "disease-solo",
+      "intro": "A controlled person shares space with wandering androids; contact, chasing and avoidance determine infection opportunities. Keep/clear setup actions distinguish retaining a population from replacing it; contacts are stylized rather than measured.",
+      "params": 6,
+      "actions": 15
+    },
+    {
+      "slug": "virus",
+      "intro": "Moving hosts become infected, recover or die, while immunity and demographic renewal alter susceptibility. The finite population and contact rules illustrate persistence mechanisms without forecasting a real virus.",
+      "params": 6,
+      "actions": 13
+    },
+    {
+      "slug": "simulated-annealing",
+      "intro": "Image elements swap under anisotropic local energy and a temperature-dependent acceptance rule. Cooling changes the chance of accepting worse moves; reaching a low-energy image does not prove a global minimum.",
+      "params": 6,
+      "actions": 5
+    },
+    {
+      "slug": "crystallization-basic",
+      "intro": "Atoms cool and then update crystal orientations in separate phases. Freezing counts and temperature distributions describe this staged local rule, without establishing an atomistic material model.",
+      "params": 8,
+      "actions": 6
+    },
+    {
+      "slug": "chloroplasts-and-food",
+      "intro": "Photons, water, gases and energy carriers feed simplified chloroplast reactions and sugar production. The molecule animation is a curricular dependency model rather than a complete biochemical pathway or productivity estimate.",
+      "params": 7,
+      "actions": 12
+    },
+    {
+      "slug": "wealth-distribution",
+      "intro": "Agents seek grain, spend it according to metabolism and are replaced after starvation or age-related death. Grain holdings and replacement endowments illustrate resource-mediated inequality rather than wages, inherited capital or finance.",
+      "params": 9,
+      "actions": 1
+    },
+    {
+      "slug": "traffic-grid",
+      "intro": "Cars follow local road directions, react to signals and queue behind occupied space on a road grid. Signal timing and sequential movement are explicit; the model is not a network-wide traffic assignment solver.",
+      "params": 9,
+      "actions": 18
+    },
+    {
+      "slug": "prisoners-dilemma-basic",
+      "intro": "Two one-shot choices select one of four configured payoff outcomes. The payoff ordering and player actions define the dilemma; there is no repeated-game learning hidden in this baseline.",
+      "params": 4,
+      "actions": 3
+    },
+    {
+      "slug": "cyclic-ca",
+      "intro": "Cells switch toward a cyclic successor state when the selected neighborhood meets a threshold. Neighborhood geometry, state count and periodic boundaries determine which waves can propagate.",
+      "params": 8,
+      "actions": 2
+    },
+    {
+      "slug": "crispr-bacterium",
+      "intro": "Molecules move inside a cell, guide RNA and Cas complexes recognize targets, and transcription and degradation compete with viral invasion. Spacer acquisition and explicit infection actions make this a mechanistic teaching example rather than a quantitative molecular simulator.",
+      "params": 7,
+      "actions": 17
+    },
+    {
+      "slug": "wolf-sheep-predation",
+      "intro": "Wolves eat sheep and spend energy; the optional grass variant also gives sheep renewable food and energy costs. Local reproduction and movement can create population feedback without being identical to aggregate predator–prey equations.",
+      "params": 9,
+      "actions": 1
+    },
+    {
+      "slug": "bacterial-infection",
+      "intro": "Bacteria reproduce into available space, while moving antibiotic particles interact with membrane porosity. Regional dosing and fever controls change the constructed selection environment; porosity is a teaching abstraction for resistance.",
+      "params": 17,
+      "actions": 15
+    },
+    {
+      "slug": "simple-birth-rates",
+      "intro": "Birth and death draws change finite populations according to the selected fertility experiment. Extinction and demographic sampling remain possible even when an average-rate calculation suggests growth.",
+      "params": 4,
+      "actions": 3
+    },
+    {
+      "slug": "termites",
+      "intro": "Termites search for chips, carry them and seek places to deposit them near other chips. Searches can resume across bounded work sweeps; a sweep is not automatically a completed source tick.",
+      "params": 3,
+      "actions": 0
+    },
+    {
+      "slug": "language-change",
+      "intro": "Networked speakers use individual copying, neighborhood thresholds or reward-based learning to change grammar use. The optional absorbing state and logistic response alter the dynamics; these interaction rules do not reconstruct an empirically fitted language history.",
+      "params": 8,
+      "actions": 3
+    },
+    {
+      "slug": "minority-game",
+      "intro": "Agents select between two choices using remembered strategies and score the minority outcome. Strategy memory, crowd composition and payoff rules determine performance; winning does not establish a universally optimal trading strategy.",
+      "params": 5,
+      "actions": 1
+    },
+    {
+      "slug": "party",
+      "intro": "People compare the fraction of the other sex in their group with a tolerance and move between group sites when unhappy. The male/female labels and this one preference rule are source assumptions rather than a measured model of real social preferences.",
+      "params": 4,
+      "actions": 2
+    },
+    {
+      "slug": "rabbits-grass-weeds",
+      "intro": "Rabbits move, eat growing resources, lose energy and reproduce when the configured conditions allow. Resource growth and consumption are sequential, so population cycles depend on the explicit local order and energy assumptions.",
+      "params": 7,
+      "actions": 1
+    },
+    {
+      "slug": "diffusion-on-a-directed-network",
+      "intro": "Transport is staged through active directed edges before node quantities are committed. Conservation and flow reporters can be examined independently of rewiring; this is a graph diffusion rule, not the separate public network-diffusion example.",
+      "params": 4,
+      "actions": 4
+    },
+    {
+      "slug": "sandpile",
+      "intro": "Added grains trigger topplings that distribute sand locally and lose grains at open boundaries. Avalanche sizes and durations depend on the finite lattice and driving rule; a finite histogram does not prove a scaling law.",
+      "params": 7,
+      "actions": 9
+    },
+    {
+      "slug": "gendrift-t-interact",
+      "intro": "Moving agents copy colors after local encounters, while walls can divide the interaction space. A lost color cannot return through selection alone; color copying represents neutral drift rather than explicit mating or chromosomes.",
+      "params": 3,
+      "actions": 10
+    },
+    {
+      "slug": "flocking",
+      "intro": "Birds turn using separation, circular heading alignment and cohesion, then move in sequential activation order. Turn limits and perception range are explicit assumptions; a coherent flock does not imply global route planning.",
+      "params": 7,
+      "actions": 1
+    },
+    {
+      "slug": "heatbugs",
+      "intro": "Bugs seek preferred temperatures while avoiding occupied cells, emit heat and experience diffusion. Unhappiness measures deviation from an assigned ideal, not an independently observed biological welfare measure.",
+      "params": 9,
+      "actions": 5
+    },
+    {
+      "slug": "hex-cell-aggregation",
+      "intro": "One eligible cell grows at a time on a bounded six-neighbor hexagonal lattice. Neighbor switches determine eligibility; the displayed hexagons do not use a square-grid approximation.",
+      "params": 9,
+      "actions": 2
+    },
+    {
+      "slug": "virus-on-a-network",
+      "intro": "Susceptible nodes acquire infection through network neighbors; scheduled checks can remove infection and create permanent resistance. Network construction and check timing are part of the model, not continuous-time epidemic equations.",
+      "params": 8,
+      "actions": 3
+    },
+    {
+      "slug": "fur",
+      "intro": "Pigment cells compare short-range activation with longer-range inhibition in elliptical neighborhoods. Fixed geometry and binary pigment states can create spots or stripes without modeling tissue growth or species-specific genetics.",
+      "params": 7,
+      "actions": 7
+    },
+    {
+      "slug": "ca-1d-elementary",
+      "intro": "Eight binary three-cell neighborhoods select the next bit, and successive rows display time. Single-seed, random-seed and continuation actions preserve the distinction between spatial width and the displayed generation history.",
+      "params": 9,
+      "actions": 6
+    },
+    {
+      "slug": "epidem-basic",
+      "intro": "Moving susceptible people can become infected and later recover in a closed population. Reported epidemic counts and R0 use the model's own infection history; they are not fitted estimates for a named disease.",
+      "params": 5,
+      "actions": 11
+    },
+    {
+      "slug": "urban-suite-pollution",
+      "intro": "Plants reset local pollutant sources, trees remove pollution and moving people gain or lose health under the configured rules. The field and health measures are abstract rather than air-quality units or epidemiological risk estimates.",
+      "params": 6,
+      "actions": 4
+    },
+    {
+      "slug": "fireflies",
+      "intro": "Moving fireflies adjust their phase through local flashing neighbors, with recoloring delayed according to the source order. The flashing count summarizes pulse coupling rather than a measured insect light-response curve.",
+      "params": 7,
+      "actions": 1
+    },
+    {
+      "slug": "ants",
+      "intro": "Searching ants respond to nearby scent, carry food home and deposit pheromone. Diffusion and evaporation change the field after local decisions; the three food piles can be depleted independently.",
+      "params": 4,
+      "actions": 1
+    },
+    {
+      "slug": "ising",
+      "intro": "Random sequential Metropolis proposals flip individual spins according to local energy and temperature. Magnetization describes this finite lattice; a single run does not locate a thermodynamic critical point.",
+      "params": 5,
+      "actions": 4
+    },
+    {
+      "slug": "mendelian-inheritance",
+      "intro": "Selected parental mouse genotypes determine randomly sampled offspring alleles and coat colors. Expected dominant/recessive ratios apply across repeated births rather than to every small litter.",
+      "params": 4,
+      "actions": 6
+    },
+    {
+      "slug": "brians-brain",
+      "intro": "Each synchronous generation changes firing cells to refractory, refractory cells to resting, and resting cells to firing when exactly two neighbors fire. Drawing changes the initial or current field; this is an excitable cellular rule, not a physiological neuron model.",
+      "params": 5,
+      "actions": 8
+    },
+    {
+      "slug": "muscle-development",
+      "intro": "Lifting, sleep and simplified hormonal responses change modeled muscle through time. The hormone variables are explanatory abstractions and do not define a personalized training prescription.",
+      "params": 6,
+      "actions": 10
+    },
+    {
+      "slug": "prisoners-dilemma-two-person-iterated",
+      "intro": "Two strategies repeatedly choose cooperation or defection, retain memory and accumulate payoffs. The selected strategy pair and finite horizon determine the comparison; success against one opponent is not universal dominance.",
+      "params": 5,
+      "actions": 5
+    },
+    {
+      "slug": "birthdays",
+      "intro": "Each trial assigns birthdays to a room of 23 people and records whether any pair matches. The 365-day sampling model omits leap days and seasonal birth frequencies.",
+      "params": 1,
+      "actions": 0
+    },
+    {
+      "slug": "tumor",
+      "intro": "Self-renewing stem cells and limited-lived transitory cells divide under different rules, with explicit treatment actions. Persistence after removing one compartment is a consequence of those selected cell hierarchies, not a clinical prediction.",
+      "params": 2,
+      "actions": 11
+    },
+    {
+      "slug": "life",
+      "intro": "All cells count the old generation on a toroidal grid before births and deaths are committed. The familiar birth-at-three and survival-at-two-or-three rule is deterministic; initialization alone supplies variation.",
+      "params": 7,
+      "actions": 8
+    },
+    {
+      "slug": "segregation",
+      "intro": "Agents compare nearby similarity with a threshold and relocate sequentially when dissatisfied. A satisfied final arrangement reflects the specified local preferences and vacancies, not a complete causal model of residential segregation.",
+      "params": 5,
+      "actions": 2
+    },
+    {
+      "slug": "hiv",
+      "intro": "People move, form and dissolve couples, use condoms and test according to individual tendencies. Infection and symptoms are simplified model processes; the counters do not estimate individual medical risk.",
+      "params": 6,
+      "actions": 15
+    },
+    {
+      "slug": "dining-philosophers",
+      "intro": "Asynchronously activated philosophers compete for adjacent forks and alternate between states. Marked-fork cooperation is an explicit alternative to uncoordinated acquisition; finite runs alone do not prove freedom from starvation.",
+      "params": 5,
+      "actions": 4
+    },
+    {
+      "slug": "paths",
+      "intro": "Travelers pursue destinations while reinforcing the popularity of fields they cross and favoring established routes. Popularity and thresholds are path-formation assumptions rather than construction costs or a global network optimum.",
+      "params": 7,
+      "actions": 9
+    },
+    {
+      "slug": "pagerank",
+      "intro": "Rank is redistributed along directed links while a separate random surfer accumulates visit counts. Damping and dangling-node treatment shape the result; a short stochastic visit history need not equal the rank vector.",
+      "params": 7,
+      "actions": 5
+    },
+    {
+      "slug": "ethnocentrism",
+      "intro": "Agents cooperate differently with same- and different-group neighbors, then reproduce with inheritance and mutation alongside immigration. Payoffs and group labels are stipulated local rules rather than a causal explanation of human identity.",
+      "params": 10,
+      "actions": 3
+    },
+    {
+      "slug": "epidem-travel-and-control",
+      "intro": "Travel tendencies and social links combine with isolation, hospital, inoculation and recovery rules. Perfect recovered immunity and simplified intervention behavior constrain any comparison of policies.",
+      "params": 13,
+      "actions": 19
+    },
+    {
+      "slug": "ca-continuous",
+      "intro": "Each new row averages three parent values, adds a constant and retains the fractional part at the chosen precision. Finite precision matters: a visually irregular image is not evidence of random forcing or physical diffusion.",
+      "params": 8,
+      "actions": 4
+    },
+    {
+      "slug": "urban-suite-economic-disparity",
+      "intro": "Rich and poor entrants search using different utilities and alter nearby price and quality; services can move or disappear. Binary incomes and the assumed attraction of jobs to valuable land are propositions rather than calibrated urban laws.",
+      "params": 9,
+      "actions": 4
+    },
+    {
+      "slug": "consumer-choice",
+      "intro": "Consumers combine personal experience, information from network neighbors and normative utility when choosing between two products. Fixed behavioral weights and this two-product market do not estimate real demand or strategic pricing.",
+      "params": 9,
+      "actions": 1
+    },
+    {
+      "slug": "repressilator-1d",
+      "intro": "Three transcription-factor types inhibit one another in a cyclic molecular system. Stochastic creation and degradation create the observed signal; these counts do not specify calibrated gene-expression kinetics.",
+      "params": 13,
+      "actions": 33
+    },
+    {
+      "slug": "robotic-factory",
+      "intro": "Robots route garments between machines, spend finite energy, recharge and process stochastic orders. Queues, orders and charging rules define the factory example rather than a measured production schedule.",
+      "params": 6,
+      "actions": 13
+    },
+    {
+      "slug": "urban-suite-sprawl-effect",
+      "intro": "Seekers follow attraction, settle probabilistically and modify the shared landscape; heavily used sites can reset abruptly. The source's reset rule illustrates feedback rather than realistic land-market clearing or zoning.",
+      "params": 7,
+      "actions": 3
+    },
+    {
+      "slug": "three-doors",
+      "intro": "Contestants choose a door, observe the host reveal an unchosen losing door, and retain or switch their choice. The host's constrained information and reveal rule are essential to the Monty Hall comparison.",
+      "params": 3,
+      "actions": 0
+    },
+    {
+      "slug": "heat-diffusion",
+      "intro": "Randomly ordered local heat updates operate inside fixed-temperature boundary strips. Material diffusivity and alpha change the numerical transfer rule; this update order differs from a simultaneous field solve.",
+      "params": 10,
+      "actions": 6
+    },
+    {
+      "slug": "vants",
+      "intro": "Virtual ants move, inspect and toggle a binary field, and turn according to the encountered value in a fixed order. Reverse execution is explicit; deterministic irregular traces should not be interpreted as random forcing.",
+      "params": 4,
+      "actions": 1
+    },
+    {
+      "slug": "traffic-grid-goal",
+      "intro": "Cars choose local moves toward assigned destinations while respecting source-specific signals and following constraints. Local goal seeking is distinct from globally shortest or equilibrium routing.",
+      "params": 9,
+      "actions": 21
+    },
+    {
+      "slug": "urban-suite-structure-from-randomness-1",
+      "intro": "A cell and its four face neighbors contribute to a staged average, optionally with signed noise. Relative grayscale shows an abstract activity field, not measured urban land use.",
+      "params": 2,
+      "actions": 2
+    },
+    {
+      "slug": "cash-flow",
+      "intro": "Agents exchange wallet money and settle savings and loans through an aggregate bank. The banking phases and reserve constraints are explicit assumptions; wealth and money-accounting plots do not validate a real financial system.",
+      "params": 3,
+      "actions": 12
+    },
+    {
+      "slug": "signaling-game",
+      "intro": "Senders and receivers draw from count-based urns mapping states to signals and signals to guesses; successful guesses reinforce both mappings. The run stops above a 0.99 success probability, which is a model criterion rather than a general account of language origin.",
+      "params": 4,
+      "actions": 2
+    },
+    {
+      "slug": "shepherds",
+      "intro": "Shepherds find sheep, pick them up, seek herds and release them after the source-specific delay. The carrying and search phases make this a local coordination example rather than optimal herd routing.",
+      "params": 4,
+      "actions": 1
+    },
+    {
+      "slug": "taxi-cabs",
+      "intro": "Taxi agents serve zonal demand using distinct pickup, delivery and roaming branches with explicit trip accounting. Work phases and source ticks are separate observations; the demand and dispatch rules are not a calibrated city fleet study.",
+      "params": 55,
+      "actions": 31
+    },
+    {
+      "slug": "interstitial-diffusion",
+      "intro": "Atoms perform exclusion random walks on a mixed-boundary lattice, with optional constant-concentration reservoirs at the sides. Profile drawing and atom simulation are distinct operations; column concentration is not a continuum PDE solver.",
+      "params": 11,
+      "actions": 11
+    },
+    {
+      "slug": "hotellings-law",
+      "intro": "Consumers choose stores in a spatial market while stores adjust location or price according to the selected rule. Market share and revenue depend on these stipulated consumer choices, not a measured retail demand curve.",
+      "params": 4,
+      "actions": 2
+    },
+    {
+      "slug": "urban-suite-cells",
+      "intro": "Cells activate from a snapshot of neighboring membership and age according to the source's strict time rule. Optional expiration changes growth form; the lattice contains no households, prices or transport demand.",
+      "params": 5,
+      "actions": 4
+    },
+    {
+      "slug": "urban-suite-positive-feedback",
+      "intro": "Activity is raised to a selected exponent, optionally after neighborhood averaging, and normalized by the global maximum. Normalization preserves relative comparison rather than a conserved population or economic quantity.",
+      "params": 3,
+      "actions": 2
+    },
+    {
+      "slug": "invasive-plants",
+      "intro": "Plants generate and disperse seeds across a resistance field, while targeted herbicide changes infestation and runoff. Drawing infestation or resistance is an explicit intervention on an abstract landscape rather than a calibrated land-management prescription.",
+      "params": 11,
+      "actions": 6
+    },
+    {
+      "slug": "heroes-and-cowards",
+      "intro": "Each actor moves relative to a selected friend and enemy, either toward a protective midpoint or away from danger. These geometric rules generate collective motion without a social decision or combat model.",
+      "params": 3,
+      "actions": 3
+    },
+    {
+      "slug": "particle-swarm-optimization",
+      "intro": "Particles combine personal-best and global-best memory while moving over a toroidal objective landscape. Inertia, attraction and random draws define the search; a good observed value is not a proof of global optimality.",
+      "params": 11,
+      "actions": 4
+    },
+    {
+      "slug": "turing-machine-2d",
+      "intro": "Each moving head reads a binary field, follows one of four explicit state/symbol rules, writes and moves. Multiple heads share the tape, so activation order matters; a complex trace does not prove universal computation.",
+      "params": 18,
+      "actions": 3
+    },
+    {
+      "slug": "dla",
+      "intro": "Off-lattice random walkers attach to a lattice aggregate when they meet the growth condition. The deposited pattern and its radius depend on the finite world and stopping rule; resemblance to a natural aggregate is not a material calibration.",
+      "params": 6,
+      "actions": 4
+    },
+    {
+      "slug": "anisogamy",
+      "intro": "Adults produce gametes whose size affects encounters and survival; fusion produces zygotes, which mature under carrying-capacity limits. The model exposes separate production, maturation and fusion procedures, and uses a variable tick increment rather than assuming one whole tick per sweep.",
+      "params": 8,
+      "actions": 7
+    },
+    {
+      "slug": "sand",
+      "intro": "Falling sand uses staged local rules so a generation reads a consistent old field before movement is committed. Pile geometry is the consequence of a cellular rule rather than a granular-mechanics solver.",
+      "params": 6,
+      "actions": 6
+    },
+    {
+      "slug": "voting",
+      "intro": "All cells count the old eight-neighbor votes before committing a binary next state, with optional tie and narrow-majority reversals. These local deterministic decisions omit electoral institutions and strategic human voting.",
+      "params": 5,
+      "actions": 2
+    },
+    {
+      "slug": "traffic-intersection",
+      "intro": "Two crossing flows obey signal schedules and bounded acceleration/braking rules; modeled collisions remove vehicles. Waiting and crash counters describe this one intersection rather than a complete safety assessment.",
+      "params": 9,
+      "actions": 13
+    },
+    {
+      "slug": "traffic-basic",
+      "intro": "Cars circulate on a closed lane, accelerating in free space and braking behind nearby vehicles. Stop-and-go waves can arise without an external bottleneck under these simplified following rules.",
+      "params": 4,
+      "actions": 5
+    },
+    {
+      "slug": "stochastic-patchwork",
+      "intro": "Independent colored fields create a population from which sample means are recorded. Population colors, sample size and the finite recording window distinguish the data distribution from the distribution of means.",
+      "params": 3,
+      "actions": 1
+    },
+    {
+      "slug": "daisyworld",
+      "intro": "Black and white daisies alter local albedo, which affects temperature, growth and reproduction while heat diffuses. This simplified climate–population feedback is distinct from a calibrated planetary climate model.",
+      "params": 11,
+      "actions": 3
+    },
+    {
+      "slug": "mimicry",
+      "intro": "Predators remember unpleasant prey colors while butterfly reproduction and color variation change the prey population. A simplified memory and color space illustrate learning-mediated selection, not a verified history of a particular mimic pair.",
+      "params": 4,
+      "actions": 7
+    },
+    {
+      "slug": "braess-paradox",
+      "intro": "Commuters select routes, move through congestion-dependent fields and feed completed travel times back into route choice. The middle route can change collective outcomes; the paradox depends on demand and the chosen cost rules.",
+      "params": 6,
+      "actions": 1
+    },
+    {
+      "slug": "peppered-moths",
+      "intro": "Changing backgrounds alter the predation probabilities of moth color variants over successive reproduction. The background and survival rules illustrate selection, without reproducing a historical abundance series or the full genetics of melanism.",
+      "params": 6,
+      "actions": 8
+    },
+    {
+      "slug": "expected-value",
+      "intro": "A walker selects values from a configured tile population and records sample totals and cumulative means. Correlated movement and the tile distribution matter; the output is not an independent-sample experiment under every setting.",
+      "params": 12,
+      "actions": 2
+    },
+    {
+      "slug": "fruit-wars",
+      "intro": "Foragers seek fruit, spend energy, reproduce with heritable traits and may fight or flee when they meet. Separate starvation, age and murder counters help distinguish outcomes that a total population plot would hide.",
+      "params": 10,
+      "actions": 2
+    },
+    {
+      "slug": "blood-sugar-regulation",
+      "intro": "Moving glucose and hormone particles interact with liver and pancreatic regions; opposing insulin and glucagon rules create feedback. Molecule counts and encounter rules do not supply clinical concentrations or dosing guidance.",
+      "params": 5,
+      "actions": 19
+    },
+    {
+      "slug": "smoothlife",
+      "intro": "Disk and annulus averages feed a continuous-state transition rule with normalized neighborhood weights. Resolution, radii and transition parameters define this numerical pattern system rather than a literal continuous limit of Life.",
+      "params": 13,
+      "actions": 7
+    },
+    {
+      "slug": "central-limit-theorem",
+      "intro": "A finite population supplies samples without replacement, whose sums and means accumulate into separate histograms. Changing sample size changes the sampling distribution, not the shape of the underlying population.",
+      "params": 5,
+      "actions": 5
+    },
+    {
+      "slug": "dna-protein-synthesis",
+      "intro": "DNA strings are parsed into genes, transcribed into mRNA and translated through codons into protein chains. Sequence editing and instructional actions expose these steps, while folding, splicing and actual protein function remain outside the example.",
+      "params": 6,
+      "actions": 45
+    },
+    {
+      "slug": "galton-box",
+      "intro": "Balls fall through staggered pegs, make probabilistic left/right choices and accumulate in counters or piles. Collision and pile-up rules make this a finite mechanical sampling example rather than an abstract unlimited sequence of coin flips.",
+      "params": 5,
+      "actions": 1
+    },
+    {
+      "slug": "rebellion",
+      "intro": "Agents compare grievance and perceived arrest risk while police respond to active rebels and prison terms delay return. Legitimacy, risk aversion and local vision are theoretical variables rather than calibrated political forecasts.",
+      "params": 8,
+      "actions": 2
+    },
+    {
+      "slug": "mammoths",
+      "intro": "Mammoth populations interact with hunters and changing environmental conditions. Hunting and climate are controlled scenario mechanisms; extinction in one simulation does not settle their historical contribution.",
+      "params": 9,
+      "actions": 10
+    },
+    {
+      "slug": "genevo-1-genetic-switch",
+      "intro": "Repressors, RNA polymerase, lactose and expressed proteins move and interact around the lac operon. Binding, transport, energy and division rules expose a constructed gene switch, without calibrated reaction kinetics.",
+      "params": 11,
+      "actions": 23
+    },
+    {
+      "slug": "rumor-mill",
+      "intro": "Informed grid cells each select a neighbor to hear the rumor; a snapshot of senders prevents newly informed cells from transmitting immediately. Four- versus eight-neighbor contact and repeated exposures shape the wave, without a measured social network.",
+      "params": 4,
+      "actions": 5
+    },
+    {
+      "slug": "artificial-neural-net-multilayer",
+      "intro": "A small hidden layer propagates sigmoid activations and changes weights by backpropagation against the selected Boolean target. Training error and a direct test are separate observations; fitting these few examples does not establish generalization.",
+      "params": 7,
+      "actions": 7
+    },
+    {
+      "slug": "binomial-rabbits",
+      "intro": "Weighted hop choices accumulate into rabbit displacements and a distribution on a wrapping world. Multiple hop patterns and finite populations mean that not every configuration is a literal binomial experiment.",
+      "params": 10,
+      "actions": 2
+    },
+    {
+      "slug": "urban-suite-awareness",
+      "intro": "People gain awareness through information centers and informed contacts, lose it through disuse and can become activists. Awareness points and thresholds are invented operational measures rather than observed attitudes.",
+      "params": 4,
+      "actions": 4
+    },
+    {
+      "slug": "piaget-vygotsky-game",
+      "intro": "Players compare movement attempts under random, individual-improvement and neighbor-assisted strategies, with limits on error and the zone of proximal development. Scores compare these constructed learning rules rather than validate a psychological scale or educational intervention.",
+      "params": 10,
+      "actions": 1
+    },
+    {
+      "slug": "autumn",
+      "intro": "Weather drives leaf water, chlorophyll and sugar changes, with separate color, shape and falling rules. The displayed pigments and weather responses are illustrative quantities rather than a calibrated forecast of leaf fall.",
+      "params": 9,
+      "actions": 17
+    },
+    {
+      "slug": "urban-suite-tijuana-bordertowns",
+      "intro": "Migrants seek compatriots and affordable serviced sites while earnings, spending, settlement density and infrastructure interact. These stylized rules form a pedagogical border-town scenario rather than a contemporary Tijuana forecast.",
+      "params": 13,
+      "actions": 6
+    },
+    {
+      "slug": "vision-evolution",
+      "intro": "Eye size changes perception across water and land while inherited traits and food encounters affect survival and reproduction. The constructed visual opportunity tests a hypothesis, without reconstructing a fossil lineage or establishing one cause of terrestrial evolution.",
+      "params": 10,
+      "actions": 11
+    },
+    {
+      "slug": "solid-diffusion",
+      "intro": "Atoms exchange with vacancies on a lattice, changing composition through local movement. Vacancy availability and finite boundaries constrain transport; the example does not calibrate diffusion coefficients for a material.",
+      "params": 3,
+      "actions": 3
+    },
+    {
+      "slug": "urban-suite-path-dependence",
+      "intro": "Firm settlement probabilities respond to regional quality and existing firms under alternative decision branches. Different random histories can reinforce different locations; one run cannot establish the frequency of lock-in.",
+      "params": 7,
+      "actions": 4
+    },
+    {
+      "slug": "percolation",
+      "intro": "Oil enters permeable soil according to sequential local rules while the displayed landscape scrolls. The finite porous grid and entrance geometry determine penetration; this is not a calibrated groundwater flow model.",
+      "params": 4,
+      "actions": 2
+    },
+    {
+      "slug": "urban-suite-structure-from-randomness-2",
+      "intro": "Staged potential averaging and signed noise feed a threshold whose activation persists. The irreversible displayed state and the changing potential are separate quantities, without buildings or resource budgets.",
+      "params": 2,
+      "actions": 3
+    },
+    {
+      "slug": "sunflower-emergent",
+      "intro": "New particles are placed on successive rings by comparing approximate repulsive energy. Spiral structure follows this sequential placement rule, without specifying a golden angle or modeling complete plant development.",
+      "params": 8,
+      "actions": 4
+    },
+    {
+      "slug": "crispr-ecosystem",
+      "intro": "Bacteria consume food, reproduce and carry spacer arrays; viruses infect, replicate and may change. Innate protection, spacer loss and adaptive memory are selected ecological assumptions, not fitted marine-community rates.",
+      "params": 8,
+      "actions": 26
+    },
+    {
+      "slug": "el-farol",
+      "intro": "Each person scores prediction strategies against attendance history and uses a selected forecast to decide whether to attend. A capacity threshold and adaptive forecasts create coordination pressure without proving convergence to one optimal attendance pattern.",
+      "params": 4,
+      "actions": 5
+    },
+    {
+      "slug": "random-combinations-and-permutations",
+      "intro": "Repeated random draws are compared with a user-selected pattern either with or without regard to order. Ordered permutations and unordered combinations are distinct events and have different matching frequencies.",
+      "params": 9,
+      "actions": 6
+    },
+    {
+      "slug": "ca-stochastic",
+      "intro": "The eight binary neighborhoods each select a Bernoulli activation probability for the next row. Zero and one give deterministic transitions; intermediate probabilities change trajectories even with the same starting field.",
+      "params": 18,
+      "actions": 4
+    },
+    {
+      "slug": "bidding-market",
+      "intro": "Buyers meet sellers with finite demand and supply, transact against quotes and adjust price expectations. Seller cash, quote ranges and unfilled demand distinguish successful trades from a claim of market equilibrium.",
+      "params": 10,
+      "actions": 1
+    },
+    {
+      "slug": "mandelbrot",
+      "intro": "Moving agents distribute complex-number iteration work across fields and record escape behavior. The finite iteration limit and sampling grid determine the image; undecided points are not a proof of set membership.",
+      "params": 4,
+      "actions": 2
+    },
+    {
+      "slug": "preferential-attachment",
+      "intro": "A new node chooses an existing node with probability proportional to degree and adds a link. Finite degree distributions illustrate cumulative attachment without demonstrating that a real network grew by this mechanism.",
+      "params": 1,
+      "actions": 0
+    },
+    {
+      "slug": "partition-permutation-distribution",
+      "intro": "Trials add random values toward a target and retain overshoot outcomes in the resulting distribution. The stopping and retention rules distinguish this experiment from uniformly sampling integer partitions.",
+      "params": 5,
+      "actions": 1
+    },
+    {
+      "slug": "traffic-2-lanes",
+      "intro": "Cars accelerate, brake behind other cars and change lanes after patience is exhausted when the switching rule allows. The wrapping two-lane road omits merges and measured driver heterogeneity.",
+      "params": 5,
+      "actions": 12
+    },
+    {
+      "slug": "artificial-neural-net-perceptron",
+      "intro": "Two inputs and a bias feed a signed threshold unit; supervised errors change its weights. A single linear boundary cannot represent XOR, regardless of how long training runs.",
+      "params": 7,
+      "actions": 7
+    },
+    {
+      "slug": "slime",
+      "intro": "Mobile cells sense and contribute to a chemical field that diffuses and decays. Local attraction can create aggregates without a pacemaker, while differentiation and a complete slime-mold life cycle are outside the model.",
+      "params": 6,
+      "actions": 5
+    }
+  ]
+}

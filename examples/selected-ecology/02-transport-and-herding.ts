@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
-import { create as termites } from "../../experiments/termites/model.ts";
-import { create as shepherds } from "../../experiments/shepherds/model.ts";
+import { create as termites } from "../../models/termites/model.ts";
+import { create as shepherds } from "../../models/shepherds/model.ts";
 const wood = termites({ number: 5, density: 20, seed: 13 });
 const initial = wood.read().chipCount + wood.read().carryingCount;
 wood.advance(100);

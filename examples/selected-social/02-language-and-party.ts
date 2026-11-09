@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
-import { create as language } from '../../experiments/language-change/model.ts';
-import { create as party } from '../../experiments/party/model.ts';
+import { create as language } from '../../models/language-change/model.ts';
+import { create as party } from '../../models/party/model.ts';
 const grammar = language({ numNodes: 10, percentGrammar1: 0, updateAlgorithm: 'threshold', thresholdVal: 0, sinkState1: false });
 assert.equal(grammar.read().nodes.length, 10); assert.equal(grammar.read().edges.length, 9);
 const edges = grammar.read().edges;

@@ -123,4 +123,4 @@ Structure1 all-zero recoloring fails after activity commit and before tick. The 
 
 Sprawl integer random uses ceiling for positive bounds. Exact zero returns zero without a draw; positive fractional bounds below one consume a draw. Search angle zero is invalid. Economic Disparity's helper stop returns from evaluation only: land impacts continue even with `numberOfTests = 0`. Job-cap removal at `>= maxJobs` applies without new jobs; counter creation uses strict `>`. Travel plots use agent-weighted nearest-job distance medians rather than the cached distance with its .01 offset.
 
-Tijuana requires its own [full model contract](selected-tijuana-contract.md) and substantive lifecycle examples; its cleared-state checks here do not replace that acceptance.
+Tijuana requires its own [full model contract](../../models/urban-suite-tijuana-bordertowns/contract.md) and substantive lifecycle examples; its cleared-state checks here do not replace that acceptance.

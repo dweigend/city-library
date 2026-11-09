@@ -1,7 +1,7 @@
 import { test, expect } from "bun:test";
-import { create as fire } from "../experiments/fire/model.ts";
-import { create as life } from "../experiments/life/model.ts";
-import { create as oil } from "../experiments/percolation/model.ts";
+import { create as fire } from "../models/fire/model.ts";
+import { create as life } from "../models/life/model.ts";
+import { create as oil } from "../models/percolation/model.ts";
 
 test("fixtures reject sparse/accessor values without invoking getters or changing state", () => {
   for (const [model, set] of [

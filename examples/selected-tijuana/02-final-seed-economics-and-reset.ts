@@ -1,6 +1,6 @@
 // Frozen before runtime; acceptance syntax and assertions must remain unchanged.
 import { strict as assert } from "node:assert";
-import { create } from "../../experiments/urban-suite-tijuana-bordertowns/model.ts";
+import { create } from "../../models/urban-suite-tijuana-bordertowns/model.ts";
 import { cell, field, globals, job, migrant, near, scene, service } from "./scenario.ts";
 
 const model = create({ seed: 1 });

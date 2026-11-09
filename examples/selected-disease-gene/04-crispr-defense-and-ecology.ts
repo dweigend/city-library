@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
-import { create as bacterium } from "../../experiments/crispr-bacterium/model.ts";
-import { create as ecosystem } from "../../experiments/crispr-ecosystem/model.ts";
+import { create as bacterium } from "../../models/crispr-bacterium/model.ts";
+import { create as ecosystem } from "../../models/crispr-ecosystem/model.ts";
 
 const defense = bacterium({ seed: 41, initialArraySize: 3, maxVirusTypes: 1, crisprFunction: 0 });
 assert.deepEqual(defense.read().array, [0, 0, 0]);

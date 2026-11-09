@@ -1,5 +1,5 @@
 import { strict as assert } from "node:assert";
-import { create } from "../../experiments/urban-suite-economic-disparity/model.ts";
+import { create } from "../../models/urban-suite-economic-disparity/model.ts";
 
 const model = create({ poorPerStep: 0, richPerStep: 0, deathRate: 4 });
 model.setAgents([

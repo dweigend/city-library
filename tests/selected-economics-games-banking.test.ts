@@ -1,20 +1,20 @@
 import { describe, expect, test } from "bun:test";
-import { create as cashFlow } from "../experiments/cash-flow/model.ts";
-import { create as reserves } from "../experiments/bank-reserves/model.ts";
+import { create as cashFlow } from "../models/cash-flow/model.ts";
+import { create as reserves } from "../models/bank-reserves/model.ts";
 import {
   create as basic,
   sentence,
-} from "../experiments/prisoners-dilemma-basic/model.ts";
+} from "../models/prisoners-dilemma-basic/model.ts";
 import {
   create as iterated,
   payoff,
   strategyAction,
-} from "../experiments/prisoners-dilemma-two-person-iterated/model.ts";
+} from "../models/prisoners-dilemma-two-person-iterated/model.ts";
 import {
   create as bar,
   bestStrategy,
   predictAttendance,
-} from "../experiments/el-farol/model.ts";
+} from "../models/el-farol/model.ts";
 import { Random } from "city-library";
 
 describe("selected economics source-specific banks and games", () => {

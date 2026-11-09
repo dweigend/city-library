@@ -4,11 +4,11 @@ import {
   create,
   inputs,
   TijuanaRuntimeError,
-} from "../experiments/urban-suite-tijuana-bordertowns/model.ts";
+} from "../models/urban-suite-tijuana-bordertowns/model.ts";
 import type {
   TijuanaAgentInput,
   BoundaryCode,
-} from "../experiments/urban-suite-tijuana-bordertowns/model.ts";
+} from "../models/urban-suite-tijuana-bordertowns/model.ts";
 import {
   field,
   globals,

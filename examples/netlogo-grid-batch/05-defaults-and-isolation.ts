@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
-import { create as createFire } from "../../experiments/fire/model.ts";
-import { create as createLife } from "../../experiments/life/model.ts";
-import { create as createPercolation } from "../../experiments/percolation/model.ts";
+import { create as createFire } from "../../models/fire/model.ts";
+import { create as createLife } from "../../models/life/model.ts";
+import { create as createPercolation } from "../../models/percolation/model.ts";
 
 const fire = createFire({ density: 0 });
 assert.equal(fire.read().width, 251);

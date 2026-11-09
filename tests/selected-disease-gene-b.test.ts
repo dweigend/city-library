@@ -1,14 +1,14 @@
 import { describe, expect, test } from "bun:test";
-import { create as ecosystem } from "../experiments/crispr-ecosystem/model.ts";
-import { create as epidemic } from "../experiments/epidem-basic/model.ts";
-import { create as travel } from "../experiments/epidem-travel-and-control/model.ts";
-import { create as geneSwitch } from "../experiments/genevo-1-genetic-switch/model.ts";
+import { create as ecosystem } from "../models/crispr-ecosystem/model.ts";
+import { create as epidemic } from "../models/epidem-basic/model.ts";
+import { create as travel } from "../models/epidem-travel-and-control/model.ts";
+import { create as geneSwitch } from "../models/genevo-1-genetic-switch/model.ts";
 import {
   create as synthesis,
   complementaryMRNABase,
   mrnaStringFromDNAString,
   whichProteinForThisCodon,
-} from "../experiments/dna-protein-synthesis/model.ts";
+} from "../models/dna-protein-synthesis/model.ts";
 
 describe("B09 source mechanisms and exact public boundaries", () => {
   test("epiDEM Basic excludes same patch, uses neighbor patches, and recovers the infected snapshot only", () => {

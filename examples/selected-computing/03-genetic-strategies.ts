@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
-import { create as genetic, hammingDistance } from '../../experiments/simple-genetic-algorithm/model.ts';
-import { create as robby } from '../../experiments/robby-the-robot/model.ts';
+import { create as genetic, hammingDistance } from '../../models/simple-genetic-algorithm/model.ts';
+import { create as robby } from '../../models/robby-the-robot/model.ts';
 
 assert.equal(hammingDistance([0,0,1,1],[0,1,0,1]),.5);
 const g=genetic({width:4,populationSize:5,crossoverRate:100,mutationRate:0});

@@ -1,5 +1,5 @@
 import { defineUI, type UISpec } from '../../ui/index.ts';
-import { model, type WealthParameters } from '../../experiments/wealth-distribution/model.ts';
+import { model, type WealthParameters } from '../../models/wealth-distribution/model.ts';
 import { assert, equal, labels, button, settle } from './assertions.ts';
 
 type Instance = ReturnType<typeof model.create>;

@@ -2,7 +2,7 @@
  * These explicit defaults are expanded here, never supplied by the runtime.
  * No helper accesses a World, live Agent/Field, or private model operation.
  */
-import type { create, TijuanaAgentInput, TijuanaFieldInput, TijuanaGlobals, TijuanaRules, TijuanaScenario } from "../../experiments/urban-suite-tijuana-bordertowns/model.ts";
+import type { create, TijuanaAgentInput, TijuanaFieldInput, TijuanaGlobals, TijuanaRules, TijuanaScenario } from "../../models/urban-suite-tijuana-bordertowns/model.ts";
 export type Model = ReturnType<typeof create>;
 export type MigrantInput = Extract<TijuanaAgentInput, { kind: "migrant" }>;
 export type BuilderInput = Extract<TijuanaAgentInput, { kind: "third-builder" }>;

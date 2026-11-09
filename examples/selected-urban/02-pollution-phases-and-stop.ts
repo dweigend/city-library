@@ -1,5 +1,5 @@
 import { strict as assert } from "node:assert";
-import { create } from "../../experiments/urban-suite-pollution/model.ts";
+import { create } from "../../models/urban-suite-pollution/model.ts";
 
 const close = (actual: number, expected: number) => assert.ok(Math.abs(actual - expected) < 1e-10);
 const model = create({ initialPopulation: 0, powerPlants: 0, birthRate: 0, plantingRate: 0 });

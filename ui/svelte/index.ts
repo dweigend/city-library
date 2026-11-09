@@ -1,3 +1,2 @@
-export { defineUI } from "./compose.ts";
-export type { Observation, Monitor, BoundEntry, UISpec, View, ModelInstance, NetworkNode, NetworkEdge, GridData, SpatialData, SpatialSegment, Series, BarSeries, AxisSpec, Cell, SpatialAgent, Inspector } from "../definition.ts";
-export { netLogoColor } from "../palette/netlogo-color.ts";
+/** Compatibility import for existing consumers; the public UI has one implementation. */
+export * from "../index.ts";

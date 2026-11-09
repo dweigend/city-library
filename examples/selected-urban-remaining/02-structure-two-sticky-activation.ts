@@ -1,5 +1,5 @@
 import { strict as assert } from "node:assert";
-import { create } from "../../experiments/urban-suite-structure-from-randomness-2/model.ts";
+import { create } from "../../models/urban-suite-structure-from-randomness-2/model.ts";
 
 const model = create({ threshold: 0, seed: 1 });
 assert.equal(model.read().counts.activated, 0); // setup leaves patches black

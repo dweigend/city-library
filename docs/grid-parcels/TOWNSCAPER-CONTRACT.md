@@ -149,7 +149,7 @@ Private incidence arrays/maps are sufficient. Dependencies remain directed towar
 existing geometry/random contracts; no absolute source-runtime imports or new
 packages are needed. Reuse the target's exact predicates and Layout constructor;
 source prototype code is inspiration only. Preserve the complete target-owned
-[49-row catalogue](../library-handover/parcel-proposal/COVERAGE.md) and its
+[49-row catalogue](https://github.com/dweigend/city-library/blob/cc6d5c3136c07cda94d5a4449b6e384c435f6ad4/docs/library-handover/parcel-proposal/COVERAGE.md) and its
 58 operation/property sections. Historical documentation approval is not runtime
 approval. See the [receipt](TOWNSCAPER-RECEIPT.md) for source provenance.
 

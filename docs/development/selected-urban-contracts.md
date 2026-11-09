@@ -2,19 +2,19 @@
 
 ## Provenance and scope
 
-All three canonical paths start `Curricular Models/Urban Suite/`. Each unchanged XML was copied from its existing research dossier's `modelSource.evidenceFile`; its bytes were checked against both the dossier and [served inventory](../../experiments/catalog/inventory.json). All three match Galapagos revision `90be931773fcf499049247a8aaa1aecbe003654c`, served as NetLogo 7.0.4.  The XML includes complete Procedures, Widgets, Info and shape data; no includes or extensions are declared. Per-folder notices preserve the original complete copyright/license notice, credits, citation, served URL and immutable upstream URL.
+All three canonical paths start `Curricular Models/Urban Suite/`. Each unchanged XML was copied from its existing research dossier's `modelSource.evidenceFile`; its bytes were checked against both the dossier and [served inventory](../../models/catalog/inventory.json). All three match Galapagos revision `90be931773fcf499049247a8aaa1aecbe003654c`, served as NetLogo 7.0.4.  The XML includes complete Procedures, Widgets, Info and shape data; no includes or extensions are declared. Per-folder notices preserve the original complete copyright/license notice, credits, citation, served URL and immutable upstream URL.
 
 | Canonical final path component | Archive | SHA-256 |
 | --- | --- | --- |
-| Urban Suite - Awareness | [source](../../experiments/urban-suite-awareness/source.nlogox), [notice](../../experiments/urban-suite-awareness/NOTICE.md) | `abfd1ff77cf243256865be372f1800349650d70a8c0e4381ed8ad8168e3ebd89` |
-| Urban Suite - Pollution | [source](../../experiments/urban-suite-pollution/source.nlogox), [notice](../../experiments/urban-suite-pollution/NOTICE.md) | `bbc4bf5e78cdc516b093b33d0c793c52f8ace5fc005e40023de1654041907671` |
-| Urban Suite - Recycling | [source](../../experiments/urban-suite-recycling/source.nlogox), [notice](../../experiments/urban-suite-recycling/NOTICE.md) | `bcc3570d06d548b468a9ea5bc73ba4fd66960d982c19d9e6eb22953c71bda11e` |
+| Urban Suite - Awareness | [source](../../models/urban-suite-awareness/source.nlogox), [notice](../../models/urban-suite-awareness/NOTICE.md) | `abfd1ff77cf243256865be372f1800349650d70a8c0e4381ed8ad8168e3ebd89` |
+| Urban Suite - Pollution | [source](../../models/urban-suite-pollution/source.nlogox), [notice](../../models/urban-suite-pollution/NOTICE.md) | `bbc4bf5e78cdc516b093b33d0c793c52f8ace5fc005e40023de1654041907671` |
+| Urban Suite - Recycling | [source](../../models/urban-suite-recycling/source.nlogox), [notice](../../models/urban-suite-recycling/NOTICE.md) | `bcc3570d06d548b468a9ea5bc73ba4fd66960d982c19d9e6eb22953c71bda11e` |
 
 All are copyright 2007 Uri Wilensky, licensed **CC BY-NC-SA 3.0**, with Felsen and Wilensky (2007) model citations. Original student contributors are Eileen Pedersen, Brian Reif and Susana Odriozola (Awareness); Young Jang (Pollution); Anita Phetkhamphou and Tidza Causevic (Recycling). Preserve attribution and share-alike/noncommercial terms in adaptations; these archives are not relicensed as general library code. Source notice text also discusses NetLogo's separate license; that does not override the models' license.
 
 ## Shared core capabilities
 
-The reviewed implementation surfaces are `index.ts`, public `Agent`, `World/run`, `Grid` and `Random`, the existing Voting and Segregation compositions, `experiments/parameters.ts`, and the binding DESIGN/PLAN contracts. No new reusable domain capability is needed for these three models:
+The reviewed implementation surfaces are `index.ts`, public `Agent`, `World/run`, `Grid` and `Random`, the existing Voting and Segregation compositions, `models/parameters.ts`, and the binding DESIGN/PLAN contracts. No new reusable domain capability is needed for these three models:
 
 | Mechanism | Actual public closure and composition boundary |
 | --- | --- |
@@ -30,7 +30,7 @@ These three models need no graph/component operations. No routing, discrete even
 
 ## Shared authoring contract
 
-Each `experiments/<slug>/model.ts` exports `inputs`, `create(options={})` and `model` satisfying the existing `Definition` contract. `create` returns `advance(count=1)`, `read()`, the listed `setRules` and intervention functions. Public examples define required syntax and behavior.
+Each `models/<slug>/model.ts` exports `inputs`, `create(options={})` and `model` satisfying the existing `Definition` contract. `create` returns `advance(count=1)`, `read()`, the listed `setRules` and intervention functions. Public examples define required syntax and behavior.
 
 Each instance owns exactly one World, one attached Grid and one Random. World agents own position/orientation/kind/individual state; Grid fields own land state. Source-specific activation lists are temporary snapshots of canonical references. No persistent writable population/occupancy copy or independent tick. Procedures are named ordinary TypeScript (for example `wander`, `informOthers`, `createCenters`, `expireCenters`, `reproduce`, `plantTree`, `cleanup`, `processRecyclerPatch`, `processWastefulPatch`, `movePeople`, `regenerateResources`). Read is pure and consumes no RNG.
 

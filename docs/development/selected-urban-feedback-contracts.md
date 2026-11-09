@@ -42,7 +42,7 @@ Path empty birth, Feedback zero powers/divisor and Cells color memory follow the
 
 ## Shared author surface
 
-The `experiments/<slug>/model.ts` exports `inputs`, `create(options={})`, `model` using the existing Definition/parameters conventions. Instances expose `read()`, `advance(count=1)`, model-specific `setRules` and the named interventions below. Fixed dimensions are not user parameters. Seed1 is a target replay key, integer−2147483648..4294967295, explicitly Mulberry rather than NetLogo's RNG.
+The `models/<slug>/model.ts` exports `inputs`, `create(options={})`, `model` using the existing Definition/parameters conventions. Instances expose `read()`, `advance(count=1)`, model-specific `setRules` and the named interventions below. Fixed dimensions are not user parameters. Seed1 is a target replay key, integer−2147483648..4294967295, explicitly Mulberry rather than NetLogo's RNG.
 
 `read()` includes `tick,width,height,parameters,cells,history,randomState,done`. Cells have canonical `id,x,y` plus the listed fields. `done` is alwaysfalse: none of these sources has a scientific stop/convergence rule. A stable, empty or saturated state still ticks. Path additionally returns firms/counts/warnings and regional/occupancy reports. Validate advance counts and all input/fixture data atomically through existing conventions; reject unknown keys, accessors, malformed records, nonfinite data and out-of-step rule values before writing state/RNG/history. Arrays must have exact required lengths. Snapshot IDs remain opaque and observations are ordered by canonical insertion, never by parsing IDs.
 

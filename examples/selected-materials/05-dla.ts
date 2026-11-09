@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { create } from "../../experiments/dla/model.ts";
+import { create } from "../../models/dla/model.ts";
 const cluster = create({ width: 21, height: 21, maxParticles: 1, wiggleAngle: 0, useWholeWorld: false, seed: 9 });
 assert.equal(cluster.read().radius, 0);
 assert.equal(cluster.read().agents.length, 0);

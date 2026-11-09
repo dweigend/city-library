@@ -15,22 +15,7 @@
       media="(prefers-color-scheme: dark)"
     />
     <title>Agent Lab</title>
-    <link rel="stylesheet" href="/styles.css" />
-    <script type="module" src="/app.js"></script>
+    <script type="module" src="/app.ts"></script>
   </head>
-  <body>
-    <a href="#experiment-content" class="skip-link">Skip to experiment</a>
-    <main>
-      <header>
-        <h1>Agent Lab</h1>
-        <label for="experiment" class="sr-only">Experiment</label
-        ><select id="experiment" aria-label="Experiment"></select>
-      </header>
-      <p id="catalog-status" role="status" aria-live="polite"></p>
-      <section
-        id="experiment-content"
-        aria-label="Experiment workbench"
-      ></section>
-    </main>
-  </body>
+  <body><div id="app"></div></body>
 </html>

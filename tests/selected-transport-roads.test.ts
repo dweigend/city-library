@@ -1,9 +1,9 @@
 import { describe, expect, test } from "bun:test";
 import { Agent, Grid } from "city-library";
-import { create as paths } from "../experiments/paths/model.ts";
-import { create as basic } from "../experiments/traffic-basic/model.ts";
-import { create as lanes } from "../experiments/traffic-2-lanes/model.ts";
-import { create as crossing } from "../experiments/traffic-intersection/model.ts";
+import { create as paths } from "../models/paths/model.ts";
+import { create as basic } from "../models/traffic-basic/model.ts";
+import { create as lanes } from "../models/traffic-2-lanes/model.ts";
+import { create as crossing } from "../models/traffic-intersection/model.ts";
 
 describe("selected transport source rules", () => {
   test("Paths building toggles use toroidal radius and do not advance time", () => {

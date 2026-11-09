@@ -1,9 +1,9 @@
 import { describe, expect, test } from "bun:test";
-import { create as disease } from "../experiments/disease-solo/model.ts";
-import { create as hiv } from "../experiments/hiv/model.ts";
-import { create as virus } from "../experiments/virus/model.ts";
-import { create as repressilator } from "../experiments/repressilator-1d/model.ts";
-import { create as bacterium } from "../experiments/crispr-bacterium/model.ts";
+import { create as disease } from "../models/disease-solo/model.ts";
+import { create as hiv } from "../models/hiv/model.ts";
+import { create as virus } from "../models/virus/model.ts";
+import { create as repressilator } from "../models/repressilator-1d/model.ts";
+import { create as bacterium } from "../models/crispr-bacterium/model.ts";
 
 describe("B09 native contact and molecular compositions", () => {
   test("Disease Solo caches sickness only in GO and keeps distinct run histories", () => {

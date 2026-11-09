@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
-import { create as swarm } from '../../experiments/particle-swarm-optimization/model.ts';
-import { create as clustering } from '../../experiments/k-means-clustering/model.ts';
+import { create as swarm } from '../../models/particle-swarm-optimization/model.ts';
+import { create as clustering } from '../../models/k-means-clustering/model.ts';
 
 const p=swarm({width:5,height:5,populationSize:1,landscapeSmoothness:0,particleInertia:1,particleSpeedLimit:2});
 const landscape=Array(25).fill(0);landscape[24]=1;

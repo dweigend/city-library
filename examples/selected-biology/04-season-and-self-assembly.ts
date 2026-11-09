@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
-import { create as autumn } from "../../experiments/autumn/model.ts";
-import { create as membrane } from "../../experiments/membrane-formation/model.ts";
+import { create as autumn } from "../../models/autumn/model.ts";
+import { create as membrane } from "../../models/membrane-formation/model.ts";
 
 const tree = autumn({ seed: 1, numberOfLeaves: 12, startSugarMean: 50, startSugarStddev: 0, temperature: 5, rainIntensity: 0, windFactor: 0, sunIntensity: 0 });
 assert.equal(tree.read().leaves.length, 12);

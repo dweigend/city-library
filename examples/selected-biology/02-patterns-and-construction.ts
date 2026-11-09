@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
-import { create as fur } from "../../experiments/fur/model.ts";
-import { create as honeycomb } from "../../experiments/honeycomb/model.ts";
+import { create as fur } from "../../models/fur/model.ts";
+import { create as honeycomb } from "../../models/honeycomb/model.ts";
 
 const skin = fur({ seed: 1, initialDensity: 0 });
 assert.equal(skin.read().cells.length, 61 * 61);

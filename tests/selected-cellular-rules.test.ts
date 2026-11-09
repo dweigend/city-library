@@ -3,26 +3,26 @@ import {
   create as elementary,
   elementaryTransition,
   listRules,
-} from "../experiments/ca-1d-elementary/model.ts";
+} from "../models/ca-1d-elementary/model.ts";
 import {
   create as continuous,
   fractionalPart,
   iteratedMap,
-} from "../experiments/ca-continuous/model.ts";
+} from "../models/ca-continuous/model.ts";
 import {
   create as stochastic,
   entropy,
   binaryListToIndex,
-} from "../experiments/ca-stochastic/model.ts";
+} from "../models/ca-stochastic/model.ts";
 import {
   create as brain,
   brainTransition,
-} from "../experiments/brians-brain/model.ts";
+} from "../models/brians-brain/model.ts";
 import {
   create as cyclic,
   cyclicOffsets,
   presets,
-} from "../experiments/cyclic-ca/model.ts";
+} from "../models/cyclic-ca/model.ts";
 
 describe("selected B19 cellular source rules", () => {
   test("Cyclic palette matches base-colors observed in the original Chromium command center", () => {
