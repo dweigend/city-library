@@ -1,6 +1,6 @@
 # Mesa mechanism expansion
 
-The [visual correction](visual-correction.md) supersedes the former table-first presentation acceptance. All ten own examples are being rechecked for meaningful mechanism visuals; prior image approvals remain historical evidence.
+The [visual correction](visual-correction.md) supersedes the former table-first presentation acceptance. All ten own examples now have approved primary mechanism visuals; prior table-first image approvals remain historical evidence.
 This work adds ten illustrative city models and reusable headless mechanisms. These examples are additional entries, not accepted ports from the fixed selection of 200 upstream models. README and its approved diagram stay unchanged.
 
 ## Ownership and contract inventory
@@ -35,3 +35,7 @@ The forty-four Mesa images have independent visual approval and all ten interact
 ## Completed final gates
 
 The fresh final Antigravity `gemini-3.8-flash` review (`thinking_level=high`) explicitly approved baseline `98015d0` for the requested scope; [its report](gemini-final-review.md) and [author responses](review-responses.md) preserve approval boundaries. The later canvas-only `11d78f7` fix received separate independent source/lifecycle approval, nineteen passing focused UI tests, complete typecheck, explicit Svelte build, all ten repeated real-browser resize/setup/playback/switch sequences, deterministic pending-frame cancellation, and four independently approved fresh spatial images. [The handoff record](DELIVERY.md) links all ten pairs and exact checks. The previous resize gate is resolved for these ordinary-host flows, not as universal ResizeObserver immunity.
+
+## Corrected visual requirement accepted
+
+The fresh Antigravity `gemini-3.8-flash` review with `thinking_level=high` explicitly **APPROVED** baseline `4758c3577f8a6218e974bef836e53d6780c7e53a` for the corrected visual mechanism scope. Source was finalized at `55749cc`, with42independently inspected images and the script/screenshot report at `2a5edf5`. [The independent final verdict](visual-gemini-final-review.md) supersedes the prior table-first approval for this requirement. [The current visual report](visual-report.md) links all ten model/UI pairs, exact excerpts and screenshots. Domain trajectories and original IDs remain unchanged; the scoped scientific, accessibility and compatibility limits remain explicit.

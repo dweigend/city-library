@@ -1,6 +1,6 @@
 # City mechanisms delivery
 
-Ten requested mechanisms are implemented through public headless APIs and the normal Mesa/Salabim integration. Ten original illustrative model/UI pairs supplement the fixed upstream selection of 200; they are not accepted NetLogo ports. README, its diagram and the selection ledger are unchanged. The models use synthetic assumptions, not calibrated city predictions.
+Ten requested mechanisms are implemented through public headless APIs and the normal Mesa/Salabim integration. The [current visual report](visual-report.md) records the subsequently corrected, approved primary mechanism views with exact script excerpts and screenshots; earlier table-first screenshots are historical evidence. Ten original illustrative model/UI pairs supplement the fixed upstream selection of 200; they are not accepted NetLogo ports. README, its diagram and the selection ledger are unchanged. The models use synthetic assumptions, not calibrated city predictions.
 
 Worktree: `/home/david/.t3/worktrees/city-library/t3-4fc992c0`. Owned branch: `feat/mesa-mechanisms`. No push, PR, publication or main merge was performed. Final Git identity/status is reported in the handoff rather than embedding a self-referential commit hash here.
 
