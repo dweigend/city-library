@@ -66,6 +66,9 @@ Every view requires `type` and `label`; labels are currently explicit. All callb
 | UI-049 | `SpatialData.segments?: readonly SpatialSegment[]` | Ordered strokes above cells and below agents/selection/labels; omitted means no strokes. | Supported | [Spatial](api-reference.md#spatial) |
 | UI-050 | `SpatialSegment`: `from/to: { x: number; y: number }`, `color?: string`, `width?: number` | Detached finite centered world endpoints; nonnegative finite CSS-pixel width defaults 1, zero omits stroke. Color defaults to host foreground. | Supported | [Spatial](api-reference.md#spatial) |
 | UI-051 | `Series`: `label: string`, `color?: string`, `points: readonly { x: number; y: number }[]` | Label/points required; host palette when color omitted. No model history is inferred or recorded by the view. | Supported | [Charts](api-reference.md#charts) |
+| UI-052 | `SpatialAgent.extent?`, `filled?`, `stroke?`, `strokeWidth?` | Positive finite diagram dimensions only for rectangles and exclusive with CSS size; fill defaults true; outline width is nonnegative CSS pixels. | Supported | [Spatial](api-reference.md#spatial) |
+| UI-053 | `SpatialLabel`; `SpatialData.labels?: readonly SpatialLabel[]` | Nonselectable annotations with finite x/y and text, using shared foreground/font. | Supported | [Spatial](api-reference.md#spatial) |
+| UI-054 | `SpatialData.description?: string` | Nonempty accessible scene meaning and quantities; omission retains count description. Invalid candidate geometry preserves the previous valid projection. | Supported | [Spatial](api-reference.md#spatial) |
 
 ## Drawing and palette
 
@@ -74,6 +77,7 @@ Every view requires `type` and `label`; labels are currently explicit. All callb
 | UI-060 | `drawing?: { toggleLabel?: string; enabled: (state: S) => boolean; intent: (model: M, intent: DrawingIntent) => void }` | Omitted means no drawing binding; explicit enable predicate and model action required. Optional toggle starts off per mounted instance. Without toggle label, predicate alone gates drawing. | Supported | [Drawing](api-reference.md#drawing) |
 | UI-061 | `DrawingIntent` | `{ phase: "begin" \| "move"; position: { x: number; y: number } }` or `{ phase: "end"; position?: never }`; named type not re-exported by UI entry. | Supported | [Drawing](api-reference.md#drawing) |
 | UI-062 | `netLogoColor(color: number): string` | Public experimental helper; finite numeric colors wrap modulo 140 and select observed tenth-color bins. Non-number throws TypeError; nonfinite number throws RangeError. | Supported | [Palette](api-reference.md#palette) |
+| UI-063 | `scientificPalette` | Shared readonly neutral/waiting/active/completed/unavailable presentation colors; shape/text must also convey state. | Supported | [Palette](api-reference.md#palette) |
 
 ## Design rules and planned extensions
 
