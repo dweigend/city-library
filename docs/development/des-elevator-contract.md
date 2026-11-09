@@ -1,6 +1,6 @@
 # Elevator model contract
 
-Status: proposed public examples before implementation. Freeze the five scripts in `examples/des-elevator/` before creating the model runtime. The model is a synthetic explicit-state adaptation of Salabim elevator concepts, not a physical elevator specification or a whole-upstream port. [Source research](../research/des-elevator-sources.md) records the pinned source, license, deviations and independent findings.
+Status: public contract frozen by the five asserted scripts in example-first commit `e90eccb`, preceding model runtime commit `48a4349`. Executed acceptance is recorded in [the evidence](des-2d-evidence.md). The model is a synthetic explicit-state adaptation of Salabim elevator concepts, not a physical elevator specification or a whole-upstream port. [Source research](../research/des-elevator-sources.md) records the pinned source, license, deviations and independent findings.
 
 ## Public model
 
@@ -65,4 +65,4 @@ All exact fixtures below use one-second travel/open/close/transfer unless explic
 4. Two cars and separate 0→2 / 2→0 calls: car assignments 1/2, boarding at 2/4, arrivals 7/9. A separate one-car oldest-first fixture boards an earlier 2→0 request at 4 before a later local 0→2 request at 10.
 5. Invalid parameters/actions are atomic, bounded scheduled arrivals remain conserved, reads are detached/independent, and a one-event safety budget throws without completing a World step. Zero-duration door/transfer operations remain event-bounded.
 
-These asserted scripts initially fail because the model module does not exist. No mocks, disabled assertions or weakened runtime expectations may make the gate appear green.
+The five asserted scripts initially failed because the model module did not exist; they now pass against the delivered model. Their original runtime expectations were preserved.

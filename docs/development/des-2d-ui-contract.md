@@ -1,6 +1,6 @@
 # Flat spatial scene contract
 
-Status: proposed example-first contract; no runtime acceptance is claimed. The five scripts in `examples/ui-des-scenes/` must be committed before these extensions are implemented. Existing UI calls, shapes, controls and default rendering remain supported by both hosts.
+Status: public contract frozen by the five asserted scripts in example-first commit `362dce2`, preceding runtime commit `f40fc4e`. Executed acceptance and its limits are recorded separately in [the evidence](des-2d-evidence.md). Existing UI calls, shapes, controls and default rendering remain supported by both hosts.
 
 ## Existing system and visual target
 
