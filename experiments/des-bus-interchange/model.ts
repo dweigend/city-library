@@ -17,17 +17,17 @@ export function create(options: Partial<BusParameters> = {}) {
   const origin = graph.nodes.add({ id: "stop:origin", label: "District" });
   const junction = graph.nodes.add({ id: "stop:junction", label: "Junction" });
   const interchange = graph.nodes.add({ id: "stop:interchange", label: "Interchange" });
-  graph.edges.add({ from: origin, to: junction, state: { minutes: 2 } });
-  graph.edges.add({ from: junction, to: interchange, state: { minutes: 3 } });
+  const outbound = graph.edges.add({ from: origin, to: junction, state: { minutes: 2 } });
+  const inbound = graph.edges.add({ from: junction, to: interchange, state: { minutes: 3 } });
   graph.edges.add({ from: origin, to: interchange, state: { minutes: 8 } });
   const travelMinutes = graph.distances({ from: origin, cost: (edge) => edge.minutes }).get(interchange)!;
   const berths = Resource.add<Agent<{ number: number }>>({ capacity: settings.berths });
-  const buses: { agent: Agent<{ number: number }>; arrived?: number; started?: number; departed?: number; ticket?: ReturnType<typeof berths.request> }[] = [];
+  const buses: { agent: Agent<{ number: number }>; dispatchedAt: number; arrived?: number; started?: number; departed?: number; ticket?: ReturnType<typeof berths.request> }[] = [];
   const history: { x: number; y: number }[] = [{ x: 0, y: 0 }];
   function addBus() {
     const number = buses.length + 1;
     const agent = world.add(Agent.add({ number }));
-    buses.push({ agent });
+    buses.push({ agent, dispatchedAt: agenda.time });
     agenda.add({ at: agenda.time + travelMinutes, data: { kind: "arrive", bus: number } });
   }
   function startGranted() {
@@ -72,9 +72,11 @@ export function create(options: Partial<BusParameters> = {}) {
       return {
         tick: world.tick.value, time: agenda.time, parameters: { ...settings }, travelMinutes,
         waiting: berths.waiting.length, occupied: berths.used, departed: buses.filter((bus) => bus.departed !== undefined).length,
-        buses: buses.map((bus) => ({ number: bus.agent.number, arrived: bus.arrived ?? -1, started: bus.started ?? -1, departed: bus.departed ?? -1 })),
+        buses: buses.map((bus) => ({ number: bus.agent.number, arrived: bus.arrived ?? -1, started: bus.started ?? -1, departed: bus.departed ?? -1, dispatchedAt: bus.dispatchedAt })),
         nodes: [...graph.nodes].map((node) => ({ ...node })),
         edges: [...graph.edges].map((edge) => ({ id: edge.id, from: edge.from.id, to: edge.to.id })),
+        route: [outbound, inbound].map((edge) => ({ from: edge.from.id, to: edge.to.id, minutes: edge.minutes })),
+        edgeCosts: [...graph.edges].map((edge) => ({ id: edge.id, minutes: edge.minutes })),
         history: history.map((point) => ({ ...point })),
       };
     },

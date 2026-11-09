@@ -83,8 +83,11 @@ export function create(options: Partial<ParcelParameters> = {}) {
         queued: buffer.items.length, blocked: buffer.waitingPuts.length, vanBusy: van.used,
         delivered: parcels.filter((parcel) => parcel.delivered !== undefined).length,
         parcels: parcels.map((parcel) => ({ number: parcel.agent.number, destination: parcel.agent.destination, routeMinutes: parcel.minutes, dispatched: parcel.dispatched ?? -1, delivered: parcel.delivered ?? -1, returned: parcel.returned ?? -1 })),
+        queuedParcels: buffer.items.map((parcel) => parcel.number),
+        blockedParcels: buffer.waitingPuts.map((request) => request.value.number),
         nodes: [...graph.nodes].map((node) => ({ ...node })),
         edges: [...graph.edges].map((edge) => ({ id: edge.id, from: edge.from.id, to: edge.to.id })),
+        edgeCosts: [...graph.edges].map((edge) => ({ id: edge.id, minutes: edge.minutes })),
         history: history.map((point) => ({ ...point })),
       };
     },

@@ -13,7 +13,7 @@ export function create(options: Partial<ChargingParameters> = {}) {
   let settings = parameters(inputs, options);
   const agenda = Agenda.add<{ vehicle: number; kind: "finish" | "abandon" }>();
   const chargers = Resource.add<number>({ capacity: settings.chargers, policy: "priority" });
-  const vehicles: { number: number; duration: number; started?: number; finished?: number; ticket: ReturnType<typeof chargers.request> }[] = [];
+  const vehicles: { number: number; priority: number; duration: number; started?: number; finished?: number; ticket: ReturnType<typeof chargers.request> }[] = [];
   const history: { x: number; y: number }[] = [];
   let abandoned = 0;
   function startGranted() {
@@ -26,7 +26,7 @@ export function create(options: Partial<ChargingParameters> = {}) {
   function addVehicle(priority = 0) {
     if (!Number.isSafeInteger(priority)) throw new RangeError("Priority must be a safe integer.");
     const number = vehicles.length + 1;
-    vehicles.push({ number, duration: settings.sessionMinutes * (number === 2 ? 2 : 1), ticket: chargers.request({ owner: number, priority }) });
+    vehicles.push({ number, priority, duration: settings.sessionMinutes * (number === 2 ? 2 : 1), ticket: chargers.request({ owner: number, priority }) });
     startGranted();
   }
   for (let index = 0; index < settings.vehicles; index += 1) addVehicle();
@@ -66,7 +66,8 @@ export function create(options: Partial<ChargingParameters> = {}) {
       return {
         tick: agenda.time, parameters: { ...settings }, active: chargers.used,
         waiting: chargers.waiting.length, completed: vehicles.filter((vehicle) => vehicle.finished !== undefined).length, abandoned,
-        vehicles: vehicles.map((vehicle) => ({ number: vehicle.number, duration: vehicle.duration, started: vehicle.started ?? -1, finished: vehicle.finished ?? -1, status: vehicle.ticket.status })),
+        vehicles: vehicles.map((vehicle) => ({ number: vehicle.number, duration: vehicle.duration, started: vehicle.started ?? -1, finished: vehicle.finished ?? -1, status: vehicle.ticket.status, priority: vehicle.priority })),
+        waitingVehicles: chargers.waiting.map((request) => request.owner),
         history: history.map((point) => ({ ...point })),
       };
     },
