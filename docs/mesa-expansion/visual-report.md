@@ -2,9 +2,9 @@
 
 Each corrected example now begins with a model view. Tables and time-series charts support that view; they do not substitute for it. These are the existing spatial/network primitives used by Fire, Traffic2Lanes and PreferentialAttachment, with public scientific palette mappings and readable ordinary projections. No reference model, shared component, host or CSS was changed.
 
-Allten model trajectories retain every original observation key and ID exactly against4427227 at0/1/3/10/30/130. New coordinates are actual Grid coordinates or clearly described view-only schematics; no random presentation positions become domain state. Complete typecheck,43focusedtests/403assertions,14frozenpublicscripts and the explicit Svelte build pass. The browser pass and independent image review approved42final states. The fresh Geminihigh visual-transfer review is recorded separately when received.
+All ten model trajectories retain every original observation key and ID exactly against `4427227` at steps 0/1/3/10/30/130. New coordinates are actual Grid coordinates or clearly described view-only schematics; no random presentation positions become domain state. Complete typecheck, 43 focused tests / 403 assertions, 14 frozen public scripts and the explicit Svelte build pass. The browser pass and independent image review approved42final states. The fresh Gemini high visual-transfer review is recorded separately when received.
 
-Below are exact excerpts from the current ui.ts files and actual final desktop-light screenshots. Full desktop/narrow light/dark originals, hashes and extra mechanism states are in [the42-image manifest](visual-evidence/manifest.json). [Browser interactions](visual-browser-verification.md), [independent images](visual-image-review.md), [behavior preservation](visual-behavior-verification.md) and the three refactor reports retain their separate scopes.
+Below are exact excerpts from the current ui.ts files and actual final desktop-light screenshots. Full desktop/narrow light/dark originals, hashes and extra mechanism states are in [the 42-image manifest](visual-evidence/manifest.json). [Browser interactions](visual-browser-verification.md), [independent images](visual-image-review.md), [behavior preservation](visual-behavior-verification.md) and the three refactor reports retain their separate scopes.
 
 ## Neighborhood heat
 
@@ -246,4 +246,4 @@ export function membershipNodes(state: Observation<typeof model>): readonly Netw
 
 ## Verification limits
 
-The images and ordinary Chrome flows demonstrate the corrected visual teaching mechanisms. They are not a claim of scientific forecasting, complete accessibility, all browser-engine support, full NetLogo compatibility or general continuation. The existing Vite chunk-size advisory remains. Prior table-first image reports are historical evidence, superseded for this visual requirement by the new42-image review.
+The images and ordinary Chrome flows demonstrate the corrected visual teaching mechanisms. They are not a claim of scientific forecasting, complete accessibility, all browser-engine support, full NetLogo compatibility or general continuation. The existing Vite chunk-size advisory remains. Prior table-first image reports are historical evidence, superseded for this visual requirement by the new 42-image review.

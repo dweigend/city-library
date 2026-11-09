@@ -34,3 +34,9 @@ Original models were loaded from Git baseline `4427227` in isolated Bun processe
 ## Remaining acceptance
 
 All ten corrected entries require real setup/step/timed Run/Pause/live-action/model-switch checks with explicit window error/rejection capture, desktop at least1366×768 and narrow390×844 screenshots in light/dark, and independent actual-image review of whether the mechanism is understandable. Full typecheck, focused behavior/public examples and the explicit Svelte build accompany this change. A fresh Antigravity Gemini3.8Flash high review must assess the corrected visual transfer. Prior approvals are not reused for the new view semantics.
+
+## Completed implementation and browser gates
+
+All ten views are implemented and independently refactored. The final corrected source is `55749cc`; the portable report and image evidence are committed at `2a5edf5`. On the corrected source, the coordinator executed full `bun run typecheck` (Svelte 0 errors / 0 warnings), 43 focused tests with 403 assertions, all 14 frozen Mesa scripts and the explicit Svelte production build (1.23 seconds), all passed. The separate independent behavior pass reconfirmed the same scope and exact original observations through step130.
+
+The real Svelte browser pass completed all ten setup/input/step/timed Run/Pause/live-action/model-switch flows with explicit window error, rejection and console capture. The independent image reviewer opened all42retained PNGs and approved their visible mechanisms after corrected queue labels and zoning/retention caption bands were recaptured. [The report](visual-report.md) contains exact script excerpts and ten screenshots; [image evidence](visual-evidence/manifest.json) preserves all states and hashes. A fresh final Gemini3.8Flash review with `thinking_level=high` remains a separate gate until its verdict is received.
