@@ -20,13 +20,13 @@ export const ui = defineUI(model, {
 type State = Observation<typeof model>;
 function householdsData(state: State): SpatialData {
   // A display arrangement of identical aggregate loads, not physical house locations.
-  const columns = Math.min(10, state.parameters.households);
+  const columns = Math.min(maximumHouseColumns, state.parameters.households);
   const rows = Math.ceil(state.parameters.households / columns);
   const loadFraction = (state.householdDemandKw - state.householdBaseKw) / (state.householdPeakKw - state.householdBaseKw);
   const homes = Array.from({ length: state.parameters.households }, (_, index) => ({
     id: `household:${index}`, x: index % columns - (columns - 1) / 2,
     y: (rows - 1) / 2 - Math.floor(index / columns),
-    color: netLogoColor(loadFraction > 0 ? 25 : 105), size: 7 + 13 * loadFraction,
+    color: loadFraction > 0 ? applianceLoadColor : baseLoadColor, size: baseLoadSize + applianceLoadSize * loadFraction,
   }));
   return {
     width: columns + 2, height: Math.max(4, rows + 2), showLabels: false,
@@ -35,11 +35,25 @@ function householdsData(state: State): SpatialData {
   };
 }
 function houseOutline(x: number, y: number) {
-  const corners = [
-    [-0.35, -0.3], [0.35, -0.3], [0.35, 0.2], [0, 0.45], [-0.35, 0.2], [-0.35, -0.3],
-  ];
-  return corners.slice(1).map((point, index) => ({
-    from: { x: x + corners[index]![0]!, y: y + corners[index]![1]! },
-    to: { x: x + point[0]!, y: y + point[1]! },
-  }));
+  // The closed outline has a fixed first point and typed coordinate pairs.
+  const [first, ...remaining] = houseCorners;
+  let previous: readonly [number, number] = first;
+  return remaining.map(point => {
+    const segment = {
+      from: { x: x + previous[0], y: y + previous[1] },
+      to: { x: x + point[0], y: y + point[1] },
+    };
+    previous = point;
+    return segment;
+  });
 }
+
+const maximumHouseColumns = 10;
+const baseLoadColor = netLogoColor(105);
+const applianceLoadColor = netLogoColor(25);
+const baseLoadSize = 7;
+const applianceLoadSize = 13;
+const houseCorners = [
+  [-0.35, -0.3], [0.35, -0.3], [0.35, 0.2],
+  [0, 0.45], [-0.35, 0.2], [-0.35, -0.3],
+] as const;

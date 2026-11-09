@@ -16,6 +16,15 @@ export const ui = defineUI(model, {
 });
 
 type State = Observation<typeof model>;
+const TRUNK_TOP_OFFSET = -0.25;
+const TRUNK_BOTTOM_OFFSET = -0.8;
+const TRUNK_WIDTH = 3;
+const TRUNK_COLOR = netLogoColor(35);
+const WATER_MARKER_COLOR = netLogoColor(105);
+const WATER_MARKER_HEADING = 180;
+const DRY_COLOR = netLogoColor(15);
+const MOIST_COLOR = netLogoColor(55);
+
 export function treesData(state: State): SpatialData {
   // Planting rows are a stable display layout; the model has no geographic tree positions.
   const columns = Math.ceil(Math.sqrt(state.trees.length));
@@ -30,13 +39,18 @@ export function treesData(state: State): SpatialData {
       { id: tree.id, x: tree.x, y: tree.y, size: 10 + 18 * tree.moistureLiters / state.moistureCapacityLiters,
         color: moistureColor(tree.moistureLiters / state.moistureCapacityLiters) },
       ...(tree.receivedLiters > 0 ? [{ id: `water:${tree.id}`, x: tree.x + 0.45, y: tree.y - 0.5,
-        size: 7 + Math.min(7, tree.receivedLiters), color: netLogoColor(105), shape: "triangle" as const, heading: 180 }] : []),
+        size: 7 + Math.min(7, tree.receivedLiters), color: WATER_MARKER_COLOR, shape: "triangle" as const, heading: WATER_MARKER_HEADING }] : []),
     ]),
-    segments: trees.map(tree => ({ from: { x: tree.x, y: tree.y - 0.25 }, to: { x: tree.x, y: tree.y - 0.8 }, color: netLogoColor(35), width: 3 })),
+    segments: trees.map(tree => ({
+      from: { x: tree.x, y: tree.y + TRUNK_TOP_OFFSET },
+      to: { x: tree.x, y: tree.y + TRUNK_BOTTOM_OFFSET },
+      color: TRUNK_COLOR,
+      width: TRUNK_WIDTH,
+    })),
   };
 }
 
 function moistureColor(fraction: number): string {
   const moistPercent = 100 * Math.max(0, Math.min(1, fraction));
-  return `color-mix(in srgb, ${netLogoColor(15)} ${100 - moistPercent}%, ${netLogoColor(55)} ${moistPercent}%)`;
+  return `color-mix(in srgb, ${DRY_COLOR} ${100 - moistPercent}%, ${MOIST_COLOR} ${moistPercent}%)`;
 }

@@ -3,14 +3,21 @@ import { World, run, measurements, storage } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
 import { parameters, stepCount } from "../parameters.ts";
 
-export interface EnergyParameters { households: number; shiftedShare: number }
+export interface EnergyParameters {
+  households: number;
+  shiftedShare: number;
+}
 export const inputs: Inputs<EnergyParameters> = {
   households: { kind: "number", default: 12, min: 1, max: 100, integer: true },
   shiftedShare: { kind: "number", default: 0.5, min: 0, max: 1, step: 0.1 },
 };
-interface DemandState { demandKw: number; energyKwh: number }
+interface DemandState {
+  demandKw: number;
+  energyKwh: number;
+}
 export const demandMeasurement = measurements.define((state: DemandState) => ({
-  demandKw: state.demandKw, energyKwh: state.energyKwh,
+  demandKw: state.demandKw,
+  energyKwh: state.energyKwh,
 }));
 export function create(options: Partial<EnergyParameters> = {}) {
   let settings = parameters(inputs, options);
@@ -19,7 +26,9 @@ export function create(options: Partial<EnergyParameters> = {}) {
   const applianceHouseholdKw = 0.9;
   const loads = { demandKw: settings.households * baseHouseholdKw, energyKwh: 0 };
   const history = storage.history({ capacity: 120 });
-  function record() { history.add({ tick: world.tick.value, values: demandMeasurement.read(loads) }); }
+  function record() {
+    history.add({ tick: world.tick.value, values: demandMeasurement.read(loads) });
+  }
   record();
   function step() {
     const hour = world.tick.value % 24;
@@ -32,22 +41,36 @@ export function create(options: Partial<EnergyParameters> = {}) {
   return {
     advance(count = 1) {
       stepCount(count);
-      for (let index = 0; index < count; index += 1) { run(world, step); record(); }
+      for (let index = 0; index < count; index += 1) {
+        run(world, step);
+        record();
+      }
     },
     setShiftedShare(value: number) {
       settings = parameters(inputs, { ...settings, shiftedShare: value });
     },
-    exportMeasurements() { return history.samples; },
+    exportMeasurements() {
+      return history.samples;
+    },
     read() {
-      return Object.freeze({ tick: world.tick.value, hour: world.tick.value % 24,
-        parameters: settings, ...demandMeasurement.read(loads),
+      return Object.freeze({
+        tick: world.tick.value,
+        hour: world.tick.value % 24,
+        parameters: settings,
+        ...demandMeasurement.read(loads),
         householdDemandKw: loads.demandKw / settings.households,
-        householdBaseKw: baseHouseholdKw, householdPeakKw: baseHouseholdKw + applianceHouseholdKw,
-        demandHour: world.tick.value === 0 ? 0 : (world.tick.value - 1) % 24, history: history.samples, done: false });
+        householdBaseKw: baseHouseholdKw,
+        householdPeakKw: baseHouseholdKw + applianceHouseholdKw,
+        // Demand describes the completed interval, before run increments the tick.
+        demandHour: world.tick.value === 0 ? 0 : (world.tick.value - 1) % 24,
+        history: history.samples,
+        done: false,
+      });
     },
   };
 }
 export const model = {
   title: "Household Energy Demand", description: "Illustrative hourly appliance shifting with explicit bounded measurements; synthetic loads.",
-  inputs, create,
+  inputs,
+  create,
 } satisfies Definition<EnergyParameters, ReturnType<typeof create>>;

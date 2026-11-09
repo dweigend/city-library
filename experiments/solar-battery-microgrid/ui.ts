@@ -13,29 +13,39 @@ export const ui = defineUI(model, {
 });
 
 type State = Observation<typeof model>;
+const BATTERY_BLOCK_COUNT = 40;
+const STORED_ENERGY_COLOR = netLogoColor(55);
+const INACTIVE_COLOR = netLogoColor(8);
+const SOLAR_COLOR = netLogoColor(45);
+const DEMAND_COLOR = netLogoColor(25);
+const GRID_COLOR = netLogoColor(105);
+const RESERVE_COLOR = netLogoColor(15);
+
 function microgridData(state: State): SpatialData {
   // Fixed diagram coordinates express connections and a storage gauge, not geography.
   const reserveY = -5 + state.reserveKwh;
   return {
     width: 18, height: 12, showLabels: true,
-    cells: Array.from({ length: 40 }, (_, index) => ({
+    cells: Array.from({ length: BATTERY_BLOCK_COUNT }, (_, index) => ({
       id: `battery-block:${index}`, x: index % 4 - 1.5, y: Math.floor(index / 4) - 4.5,
-      color: netLogoColor(index < Math.round(state.energyKwh / state.capacityKwh * 40) ? 55 : 8),
+      color: index < Math.round(state.energyKwh / state.capacityKwh * BATTERY_BLOCK_COUNT) ? STORED_ENERGY_COLOR : INACTIVE_COLOR,
     })),
+    // SpatialData uses agent descriptors for text annotations as well as glyphs.
+    // These fixed diagram labels are view-only, not additional simulated agents.
     agents: [
-      { id: "solar", x: -6, y: 3, size: 14 + state.solarKw * 2, color: netLogoColor(45) },
+      { id: "solar", x: -6, y: 3, size: 14 + state.solarKw * 2, color: SOLAR_COLOR },
       { id: "solar-label", x: -8, y: 4.5, size: 2, label: `Solar ${state.solarKw} kW` },
-      { id: "demand", x: 4, y: 3, size: 14 + state.demandKw * 2, color: netLogoColor(25), label: `Load ${state.demandKw} kW` },
-      { id: "grid", x: 4, y: -3, size: 14, color: netLogoColor(105) },
+      { id: "demand", x: 4, y: 3, size: 14 + state.demandKw * 2, color: DEMAND_COLOR, label: `Load ${state.demandKw} kW` },
+      { id: "grid", x: 4, y: -3, size: 14, color: GRID_COLOR },
       { id: "grid-import-label", x: 3, y: -1.8, size: 2, label: `In ${state.intervalImportedKwh.toFixed(1)} kWh` },
       { id: "grid-export-label", x: 3, y: -4.3, size: 2, label: `Out ${state.intervalExportedKwh.toFixed(1)} kWh` },
-      { id: "reserve", x: -7.5, y: reserveY, size: 3, color: netLogoColor(15), label: `Reserve ${state.reserveKwh} kWh` },
+      { id: "reserve", x: -7.5, y: reserveY, size: 3, color: RESERVE_COLOR, label: `Reserve ${state.reserveKwh} kWh` },
     ],
     segments: [
-      { from: { x: -2, y: reserveY }, to: { x: 2, y: reserveY }, color: netLogoColor(15), width: 2 },
-      { from: { x: -6, y: 3 }, to: { x: -2, y: 3 }, color: netLogoColor(state.solarKw > 0 ? 45 : 8), width: 1 + state.solarKw },
-      { from: { x: 2, y: 3 }, to: { x: 4, y: 3 }, color: netLogoColor(25), width: 1 + state.demandKw },
-      { from: { x: 2, y: -3 }, to: { x: 4, y: -3 }, color: netLogoColor(state.intervalImportedKwh + state.intervalExportedKwh > 0 ? 105 : 8), width: 2 },
+      { from: { x: -2, y: reserveY }, to: { x: 2, y: reserveY }, color: RESERVE_COLOR, width: 2 },
+      { from: { x: -6, y: 3 }, to: { x: -2, y: 3 }, color: state.solarKw > 0 ? SOLAR_COLOR : INACTIVE_COLOR, width: 1 + state.solarKw },
+      { from: { x: 2, y: 3 }, to: { x: 4, y: 3 }, color: DEMAND_COLOR, width: 1 + state.demandKw },
+      { from: { x: 2, y: -3 }, to: { x: 4, y: -3 }, color: state.intervalImportedKwh + state.intervalExportedKwh > 0 ? GRID_COLOR : INACTIVE_COLOR, width: 2 },
     ],
   };
 }

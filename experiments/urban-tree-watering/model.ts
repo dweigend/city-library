@@ -23,7 +23,9 @@ export function create(options: Partial<TreeParameters> = {}) {
     wateredLiters: members.reduce((sum, tree) => sum + tree.receivedLiters, 0),
   }));
   const history = storage.history({ capacity: 120 });
-  function record() { history.add({ tick: world.tick.value, values: measure.read(trees) }); }
+  function record() {
+    history.add({ tick: world.tick.value, values: measure.read(trees) });
+  }
   function step() {
     let remainingLiters = settings.dailyLiters;
     world.activate(trees, ({ self }) => {
@@ -40,11 +42,33 @@ export function create(options: Partial<TreeParameters> = {}) {
   }
   record();
   return {
-    advance(count = 1) { stepCount(count); for (let index = 0; index < count; index += 1) { run(world, step); record(); } },
-    setDailyLiters(value: number) { settings = parameters(inputs, { ...settings, dailyLiters: value }); },
-    read() { return Object.freeze({ tick: world.tick.value, parameters: settings, ...measure.read(trees), totalWaterLiters, moistureCapacityLiters,
-      trees: Object.freeze(trees.map(tree => Object.freeze({ id: tree.id, label: tree.label, moistureLiters: tree.moistureLiters, receivedLiters: tree.receivedLiters }))),
-      history: history.samples, done: false }); },
+    advance(count = 1) {
+      stepCount(count);
+      for (let index = 0; index < count; index += 1) {
+        run(world, step);
+        record();
+      }
+    },
+    setDailyLiters(value: number) {
+      settings = parameters(inputs, { ...settings, dailyLiters: value });
+    },
+    read() {
+      return Object.freeze({
+        tick: world.tick.value,
+        parameters: settings,
+        ...measure.read(trees),
+        totalWaterLiters,
+        moistureCapacityLiters,
+        trees: Object.freeze(trees.map(tree => Object.freeze({
+          id: tree.id,
+          label: tree.label,
+          moistureLiters: tree.moistureLiters,
+          receivedLiters: tree.receivedLiters,
+        }))),
+        history: history.samples,
+        done: false,
+      });
+    },
   };
 }
 export const model = { title: "Urban Tree Watering",

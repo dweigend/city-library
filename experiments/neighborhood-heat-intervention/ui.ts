@@ -22,16 +22,25 @@ export function heatMap(state: Observation<typeof model>): SpatialData {
     cells: state.fields.map(field => ({ id: field.id, x: field.x, y: field.y,
       color: heatColor(field.heatIndex) })),
     // Hatching depicts the existing shade property; it is neither a resident nor new domain geometry.
-    segments: state.fields.filter(field => field.shaded).flatMap(field => [-0.16, 0.16].map(offset => ({
-      from: { x: field.x - 0.2 + offset, y: field.y - 0.2 },
-      to: { x: field.x + 0.2 + offset, y: field.y + 0.2 },
-      color: netLogoColor(65), width: 1.6,
+    segments: state.fields.filter(field => field.shaded).flatMap(field => [-hatchOffset, hatchOffset].map(offset => ({
+      from: { x: field.x - hatchExtent + offset, y: field.y - hatchExtent },
+      to: { x: field.x + hatchExtent + offset, y: field.y + hatchExtent },
+      color: shadeColor, width: hatchWidth,
     }))),
     agents: [],
   };
 }
 
 export function heatColor(heatIndex: number): string {
-  const hotPercent = 100 * Math.max(0, Math.min(1, heatIndex / 30));
-  return `color-mix(in srgb, ${netLogoColor(105)} ${100 - hotPercent}%, ${netLogoColor(15)} ${hotPercent}%)`;
+  const hotPercent = 100 * Math.max(0, Math.min(1, heatIndex / maximumHeatIndex));
+  return `color-mix(in srgb, ${coolColor} ${100 - hotPercent}%, ${hotColor} ${hotPercent}%)`;
 }
+
+// View geometry in field-coordinate units; palette endpoints remain fixed across ticks.
+const hatchOffset = 0.16;
+const hatchExtent = 0.2;
+const hatchWidth = 1.6;
+const shadeColor = netLogoColor(65);
+const maximumHeatIndex = 30;
+const coolColor = netLogoColor(105);
+const hotColor = netLogoColor(15);

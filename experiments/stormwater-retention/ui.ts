@@ -12,28 +12,34 @@ export const ui = defineUI(model, {
 });
 
 type State = Observation<typeof model>;
+const BASIN_BLOCK_COUNT = 40;
+const CATCHMENT_X_OFFSET = -5;
+const WATER_COLOR = netLogoColor(105);
+const INACTIVE_COLOR = netLogoColor(8);
+const OVERFLOW_COLOR = netLogoColor(15);
+
 function retentionData(state: State): SpatialData {
-  const storedBlocks = Math.round(state.storedM3 / state.parameters.capacityM3 * 40);
+  const storedBlocks = Math.round(state.storedM3 / state.parameters.capacityM3 * BASIN_BLOCK_COUNT);
   // The true catchment grid is offset beside a normalized volume gauge; basin dimensions are schematic.
   return {
     width: 18, height: 14, showLabels: true,
     cells: [
-      ...state.catchment.fields.map(field => ({ id: field.id, x: field.x - 5, y: field.y,
-        color: netLogoColor(state.parameters.rainMmPerHour > 0 ? 105 : 8) })),
-      ...Array.from({ length: 40 }, (_, index) => ({ id: `basin-block:${index}`,
+      ...state.catchment.fields.map(field => ({ id: field.id, x: field.x + CATCHMENT_X_OFFSET, y: field.y,
+        color: state.parameters.rainMmPerHour > 0 ? WATER_COLOR : INACTIVE_COLOR })),
+      ...Array.from({ length: BASIN_BLOCK_COUNT }, (_, index) => ({ id: `basin-block:${index}`,
         x: index % 4 - 0.5, y: Math.floor(index / 4) - 4.5,
-        color: netLogoColor(index < storedBlocks ? 105 : 8) })),
+        color: index < storedBlocks ? WATER_COLOR : INACTIVE_COLOR })),
     ],
     agents: [
       { id: "inflow", x: -7, y: 2.5, size: 3, label: `In ${state.intervalInflowM3.toFixed(2)} m³` },
       { id: "capacity", x: -1, y: 5.3, size: 3, label: `Capacity ${state.parameters.capacityM3} m³` },
-      { id: "overflow", x: 2.5, y: 2.5, size: 3, color: netLogoColor(15), label: `Spill ${state.intervalOverflowM3.toFixed(2)} m³` },
-      { id: "drainage", x: 3, y: -4, size: 3, color: netLogoColor(105), label: `Drain ${state.intervalDischargedM3.toFixed(2)} m³` },
+      { id: "overflow", x: 2.5, y: 2.5, size: 3, color: OVERFLOW_COLOR, label: `Spill ${state.intervalOverflowM3.toFixed(2)} m³` },
+      { id: "drainage", x: 3, y: -4, size: 3, color: WATER_COLOR, label: `Drain ${state.intervalDischargedM3.toFixed(2)} m³` },
     ],
     segments: [
-      { from: { x: -3.5, y: 0 }, to: { x: -1, y: 0 }, color: netLogoColor(state.intervalInflowM3 > 0 ? 105 : 8), width: 3 },
-      { from: { x: 3, y: -4 }, to: { x: 5, y: -4 }, color: netLogoColor(state.intervalDischargedM3 > 0 ? 105 : 8), width: 3 },
-      { from: { x: 3, y: 4.5 }, to: { x: 5, y: 3 }, color: netLogoColor(state.intervalOverflowM3 > 0 ? 15 : 8), width: 3 },
+      { from: { x: -3.5, y: 0 }, to: { x: -1, y: 0 }, color: state.intervalInflowM3 > 0 ? WATER_COLOR : INACTIVE_COLOR, width: 3 },
+      { from: { x: 3, y: -4 }, to: { x: 5, y: -4 }, color: state.intervalDischargedM3 > 0 ? WATER_COLOR : INACTIVE_COLOR, width: 3 },
+      { from: { x: 3, y: 4.5 }, to: { x: 5, y: 3 }, color: state.intervalOverflowM3 > 0 ? OVERFLOW_COLOR : INACTIVE_COLOR, width: 3 },
     ],
   };
 }

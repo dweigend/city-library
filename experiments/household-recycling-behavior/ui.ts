@@ -19,7 +19,18 @@ export const ui = defineUI(model, {
 export function recyclingNodes(state: Observation<typeof model>): readonly NetworkNode[] {
   return state.nodes.map((node, index) => {
     const angle = 2 * Math.PI * index / state.nodes.length - Math.PI / 2;
-    return { id: node.id, label: `H${index + 1}`, color: netLogoColor(node.recycling ? 55 : 25), size: node.recycling ? 18 : 13,
-      position: { x: Math.cos(angle) * 150, y: Math.sin(angle) * 150 } };
+    return {
+      id: node.id,
+      label: `H${index + 1}`,
+      color: node.recycling ? recyclingColor : waitingColor,
+      size: node.recycling ? adopterSize : waitingSize,
+      position: { x: Math.cos(angle) * ringRadius, y: Math.sin(angle) * ringRadius },
+    };
   });
 }
+
+const ringRadius = 150;
+const recyclingColor = netLogoColor(55);
+const waitingColor = netLogoColor(25);
+const adopterSize = 18;
+const waitingSize = 13;

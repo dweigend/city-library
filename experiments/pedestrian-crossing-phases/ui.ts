@@ -2,6 +2,7 @@ import { defineUI, netLogoColor, type Observation, type SpatialData } from "../.
 import { model } from "./model.ts";
 
 export const ui = defineUI(model, {
+  complete: state => state.done,
   monitors: [{ label: "Minute", value: state => state.tick }, { label: "Signal", value: state => state.signal },
     { label: "Waiting", value: state => state.waiting }, { label: "Crossing", value: state => state.crossing }, { label: "Arrived", value: state => state.arrived }],
   views: [
@@ -15,19 +16,42 @@ type CrossingObservation = Observation<typeof model>;
 
 /** The model has discrete stages, so these lane positions illustrate stages, not walking dynamics. */
 export function crossingData(state: CrossingObservation): SpatialData {
-  const height = Math.max(8, Math.ceil(state.people.length / 4) * 0.65 + 3);
+  const height = Math.max(minimumViewHeight, Math.ceil(state.people.length / cohortColumns) * rowSpacing + 3);
   const cells = [];
   for (let y = -Math.floor(height / 2); y <= Math.floor(height / 2); y += 1) {
-    for (const x of [-1, 0, 1]) cells.push({ id: `view:road:${x}:${y}`, x, y, color: netLogoColor(3) });
+    const isStripe = stripeRows.includes(y);
+    for (const x of roadColumns) {
+      cells.push({
+        id: `view:${isStripe ? "stripe" : "road"}:${x}:${y}`,
+        x,
+        y,
+        color: isStripe ? stripeColor : roadColor,
+      });
+    }
   }
-  for (const x of [-1, 0, 1]) for (const y of [-2, 0, 2])
-    cells.push({ id: `view:stripe:${x}:${y}`, x, y, color: netLogoColor(9) });
-  const centers = { waiting: -4.5, crossing: 0, arrived: 4.5 };
   const agents = state.people.map((person, index) => ({
-    id: person.id, x: centers[person.stage] + ((index % 4) - 1.5) * 0.45,
-    y: Math.floor(state.people.length / 4) * 0.3 - Math.floor(index / 4) * 0.65,
-    color: netLogoColor(person.stage === "waiting" ? 25 : person.stage === "crossing" ? 105 : 55), size: 11,
+    id: person.id, x: stageCenters[person.stage] + ((index % cohortColumns) - 1.5) * columnSpacing,
+    y: Math.floor(state.people.length / cohortColumns) * 0.3 - Math.floor(index / cohortColumns) * rowSpacing,
+    color: stageColors[person.stage], size: 11,
   }));
-  agents.push({ id: "view:signal", x: -2.5, y: height / 2 - 1, color: netLogoColor(state.signal === "green" ? 55 : 15), size: 26 });
+  agents.push({ id: "view:signal", x: -2.5, y: height / 2 - 1, color: state.signal === "green" ? greenSignalColor : redSignalColor, size: 26 });
   return { width: 14, height, cells, agents };
 }
+
+const roadColumns = [-1, 0, 1];
+const stripeRows: readonly number[] = [-2, 0, 2];
+const roadColor = netLogoColor(3);
+const stripeColor = netLogoColor(9);
+const stageCenters = { waiting: -4.5, crossing: 0, arrived: 4.5 };
+const stageColors = {
+  waiting: netLogoColor(25),
+  crossing: netLogoColor(105),
+  arrived: netLogoColor(55),
+};
+const greenSignalColor = netLogoColor(55);
+const redSignalColor = netLogoColor(15);
+
+const minimumViewHeight = 8;
+const cohortColumns = 4;
+const rowSpacing = 0.65;
+const columnSpacing = 0.45;

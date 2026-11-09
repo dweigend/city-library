@@ -22,26 +22,37 @@ export function create(options: Partial<OccupancyParameters> = {}) {
   const housing = Resource.add<(typeof applicants)[number]>({ capacity: settings.slots, policy: "fifo" });
   const tickets = applicants.map(owner => housing.request({ owner }));
   const measure = measurements.define((resource: typeof housing) => ({
-    occupied: resource.used, available: resource.available, waiting: resource.waiting.length,
+    occupied: resource.used,
+    available: resource.available,
+    waiting: resource.waiting.length,
   }));
   const history = storage.history({ capacity: 120 });
-  function record() { history.add({ tick: world.tick.value, values: measure.read(housing) }); }
+  function record() {
+    history.add({ tick: world.tick.value, values: measure.read(housing) });
+  }
   function moveOut() {
     const ticket = tickets.find(ticket => ticket.status === "granted");
-    if (ticket) housing.release(ticket);
+    if (ticket) {
+      housing.release(ticket);
+    }
   }
   const moveOutIntervalDays = 3;
   function step() {
     // One household moves out every three days; individual lease lengths are not modeled.
-    if (world.tick.value % moveOutIntervalDays === moveOutIntervalDays - 1) moveOut();
+    if (world.tick.value % moveOutIntervalDays === moveOutIntervalDays - 1) {
+      moveOut();
+    }
   }
   record();
   return {
     advance(count = 1) {
       stepCount(count);
       for (let index = 0; index < count; index += 1) {
-        if (tickets.every(ticket => ticket.status === "released")) break;
-        run(world, step); record();
+        if (tickets.every(ticket => ticket.status === "released")) {
+          break;
+        }
+        run(world, step);
+        record();
       }
     },
     moveOut,
@@ -51,10 +62,22 @@ export function create(options: Partial<OccupancyParameters> = {}) {
       settings = next;
     },
     read() {
-      return Object.freeze({ tick: world.tick.value, parameters: settings, ...measure.read(housing),
-        households: Object.freeze(tickets.map(ticket => Object.freeze({ id: ticket.owner.id, label: ticket.owner.label, reservation: ticket.status }))),
-        eligibility: Object.freeze(eligibility.neighbors(building).map(applicant => Object.freeze({ id: applicant.id, label: applicant.label }))),
-        history: history.samples, done: tickets.every(ticket => ticket.status === "released") });
+      return Object.freeze({
+        tick: world.tick.value,
+        parameters: settings,
+        ...measure.read(housing),
+        households: Object.freeze(tickets.map(ticket => Object.freeze({
+          id: ticket.owner.id,
+          label: ticket.owner.label,
+          reservation: ticket.status,
+        }))),
+        eligibility: Object.freeze(eligibility.neighbors(building).map(applicant => Object.freeze({
+          id: applicant.id,
+          label: applicant.label,
+        }))),
+        history: history.samples,
+        done: tickets.every(ticket => ticket.status === "released"),
+      });
     },
   };
 }

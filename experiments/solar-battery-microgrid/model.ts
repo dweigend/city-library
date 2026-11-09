@@ -19,30 +19,50 @@ export function create(options: Partial<BatteryParameters> = {}) {
   let lastCrossingHour: number | undefined;
   const measure = measurements.define((values: typeof state) => ({ ...values }));
   const history = storage.history({ capacity: 120 });
-  function record() { history.add({ tick: world.tick.value, values: measure.read(state) }); }
+  function record() {
+    history.add({ tick: world.tick.value, values: measure.read(state) });
+  }
   function step() {
     const hour = (world.tick.value + solarPhase) % 24;
     const solarKw = hour >= 6 && hour < 18 ? settings.solarKw : 0;
-    const raw = continuous.linear({ value: state.energyKwh, rate: solarKw - settings.demandKw, duration: 1 });
-    const crossing = continuous.crossing({ from: state.energyKwh, to: raw, threshold: reserveKwh, duration: 1, direction: "falling" });
-    if (crossing) { state.reserveCrossings += 1; lastCrossingHour = world.tick.value + crossing.elapsed; }
-    state.importedKwh += Math.max(0, reserveKwh - raw);
-    state.exportedKwh += Math.max(0, raw - capacityKwh);
-    state.energyKwh = Math.min(capacityKwh, Math.max(reserveKwh, raw));
+    const unconstrainedEnergyKwh = continuous.linear({ value: state.energyKwh, rate: solarKw - settings.demandKw, duration: 1 });
+    const crossing = continuous.crossing({ from: state.energyKwh, to: unconstrainedEnergyKwh, threshold: reserveKwh, duration: 1, direction: "falling" });
+    if (crossing) {
+      state.reserveCrossings += 1;
+      lastCrossingHour = world.tick.value + crossing.elapsed;
+    }
+    state.importedKwh += Math.max(0, reserveKwh - unconstrainedEnergyKwh);
+    state.exportedKwh += Math.max(0, unconstrainedEnergyKwh - capacityKwh);
+    state.energyKwh = Math.min(capacityKwh, Math.max(reserveKwh, unconstrainedEnergyKwh));
   }
   record();
   return {
-    advance(count = 1) { stepCount(count); for (let index = 0; index < count; index += 1) { run(world, step); record(); } },
+    advance(count = 1) {
+      stepCount(count);
+      for (let index = 0; index < count; index += 1) {
+        run(world, step);
+        record();
+      }
+    },
     read() {
       const samples = history.samples;
       const previous = samples.at(-2)?.values;
       const interval = world.tick.value === 0 ? 0 : world.tick.value - 1;
       const solarHour = (interval + solarPhase) % 24;
-      return Object.freeze({ tick: world.tick.value, ...measure.read(state), capacityKwh, reserveKwh,
-        solarKw: solarHour >= 6 && solarHour < 18 ? settings.solarKw : 0, demandKw: settings.demandKw,
+      return Object.freeze({
+        tick: world.tick.value,
+        ...measure.read(state),
+        capacityKwh,
+        reserveKwh,
+        solarKw: solarHour >= 6 && solarHour < 18 ? settings.solarKw : 0,
+        demandKw: settings.demandKw,
         intervalImportedKwh: state.importedKwh - (previous?.importedKwh ?? 0),
         intervalExportedKwh: state.exportedKwh - (previous?.exportedKwh ?? 0),
-        lastCrossingHour: lastCrossingHour ?? "none", solarPhase, history: samples, done: false });
+        lastCrossingHour: lastCrossingHour ?? "none",
+        solarPhase,
+        history: samples,
+        done: false,
+      });
     },
   };
 }
