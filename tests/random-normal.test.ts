@@ -44,7 +44,7 @@ test("normal parameters validate fully before touching a pending cache or invoki
     { ...normal, mean: NaN }, { ...normal, mean: Infinity },
     { ...normal, deviation: -1 }, { ...normal, deviation: Infinity },
     { ...normal, min: 0 }, { ...normal, max: undefined }, { ...normal, integer: false },
-    { distribution: "uniform", mean: 0 }, { distribution: "gamma", shape: 2, rate: 1 },
+    { distribution: "uniform", mean: 0 }, { distribution: "gamma", shape: 2, rate: 0 },
     Object.assign(Object.create({ mean: 0 }), normal), { ...normal, [Symbol("extra")]: 1 },
   ];
   for (const value of invalid) {
