@@ -189,7 +189,38 @@ function generatorTypeContract(){const graph=Graph.add<{name:string}>();const a=
 result.push(result[0]);return result;}void generatorTypeContract;
 `);
   await writeFile(join(directory, "consumer.ts"), `
-import {measurements,storage,experiments,twoPhase,continuous,Agenda,Resource} from 'city-library';
+import {Agenda,Resource,Store,ServiceQueue,Signal,TimeWeighted,EventTrace} from 'city-library';
+const eventAgenda=Agenda.add<{kind:string}>();
+const eventWorld=World.add();eventWorld.add(eventAgenda);
+eventAgenda.add({at:2,data:{kind:'arrival'}});
+if(eventAgenda.next({until:10})?.at!==2)throw Error('packed causal first event');
+eventAgenda.add({at:3,data:{kind:'service'}});
+if(eventAgenda.next({until:10})?.at!==3||eventAgenda.time!==3)throw Error('packed causal successor');
+if(eventAgenda.next({until:10})!==undefined||Number(eventAgenda.time)!==10||eventWorld.tick.value!==0)throw Error('packed empty horizon');
+const packedOwner=Agent.add({kind:'resident'});
+const packedResource=Resource.add<typeof packedOwner>({capacity:1});
+const claim=packedResource.request({owner:packedOwner});
+const waiting=packedResource.request({owner:packedOwner});
+packedResource.release(claim);
+if(waiting.status!=='granted'||packedResource.used!==1)throw Error('packed resource admission');
+let blockedDeletion=false;try{packedOwner.delete()}catch{blockedDeletion=true}
+if(!blockedDeletion)throw Error('packed resource lifecycle');
+packedResource.cancel(waiting);packedOwner.delete();
+const packedStore=Store.add<number>({capacity:1});
+packedStore.put(1);const blockedPut=packedStore.put(2);
+if(String(blockedPut.status)!=='waiting'||packedStore.take()!==1||String(blockedPut.status)!=='stored'||packedStore.get().value!==2)throw Error('packed store backpressure');
+const packedQueue=ServiceQueue.add<number>({policy:'priority'});
+packedQueue.add(1,{priority:2});packedQueue.add(2,{priority:-1});
+if(packedQueue.take()!==2)throw Error('packed queue policy');
+const packedSignal=Signal.add(false);const condition=packedSignal.wait(value=>value);packedSignal.set(true);
+if(condition.status!=='satisfied')throw Error('packed condition');
+const weighted=TimeWeighted.add({value:0});weighted.set({at:2,value:3});
+if(weighted.read({until:5}).integral!==9)throw Error('packed time weighting');
+const packedTrace=EventTrace.add<{kind:string}>({capacity:2});packedTrace.record({at:1,value:{kind:'a'}});packedTrace.record({at:1,value:{kind:'b'}});
+if(packedTrace.read().length!==2)throw Error('packed equal-time event trace');
+const gammaRandom=Random.add({seed:5});const gammaCopy=gammaRandom.copy();
+if(gammaRandom.number({distribution:'gamma',shape:.7,rate:2})!==gammaCopy.number({distribution:'gamma',shape:.7,rate:2}))throw Error('packed gamma continuation');
+import {measurements,storage,experiments,twoPhase,continuous} from 'city-library';
 const events=scheduledAgendaConsumer();
 function scheduledAgendaConsumer(){const timeline=Agenda.add<string>();const owner=World.add();owner.add(timeline);timeline.add({at:2,data:'arrival'});const event=timeline.next({until:10});if(event?.at!==2||timeline.time!==2||owner.tick.value!==0||owner.agendas[0]!==timeline)throw Error('packed agenda ownership mismatch');const resource=Resource.add<object>({capacity:1});const claim=resource.request({owner:{}});resource.release(claim);if(resource.used!==0||claim.status!=='released')throw Error('packed resource mismatch');return timeline;}
 void events;

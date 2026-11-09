@@ -39,6 +39,8 @@ export function triangularDraw(options: unknown, draw: () => number): number {
 }
 
 const rejectionLimit = 1_000_000;
+// Fast acceptance bound from the Marsaglia–Tsang gamma sampler.
+const squeezeCoefficient = 0.0331;
 
 /** Marsaglia and Tsang (2000); standard-profile shape boosting below one. */
 export function gammaDraw(options: unknown, draw: () => number, gaussian: () => number): number {
@@ -56,7 +58,7 @@ export function gammaDraw(options: unknown, draw: () => number, gaussian: () => 
     const volume = base * base * base;
     const uniform = draw();
     const square = normal * normal;
-    if (uniform >= 1 - 0.0331 * square * square &&
+    if (uniform >= 1 - squeezeCoefficient * square * square &&
         Math.log(uniform) >= square / 2 + d * (1 - volume + Math.log(volume))) continue;
     let result = d * volume / rate;
     if (shape < 1) result *= Math.pow(draw(), 1 / shape);

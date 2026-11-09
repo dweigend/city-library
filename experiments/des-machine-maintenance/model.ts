@@ -2,7 +2,11 @@
 import { Agent, Agenda, EventTrace, Resource, TimeWeighted, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
 import { parameters, stepCount } from "../parameters.ts";
-export interface MaintenanceParameters { repairTeams: number; repairMinutes: number; failureMinutes: number }
+export interface MaintenanceParameters {
+  repairTeams: number;
+  repairMinutes: number;
+  failureMinutes: number;
+}
 export const inputs: Inputs<MaintenanceParameters> = {
   repairTeams: { kind: "number", default: 1, min: 1, max: 3, integer: true },
   repairMinutes: { kind: "number", default: 3, min: 1, max: 10, integer: true },
@@ -26,6 +30,32 @@ export function create(options: Partial<MaintenanceParameters> = {}) {
       agenda.add({ at: agenda.time + settings.repairMinutes, data: { kind: "repair", machine: number } });
     }
   }
+  function failMachine(index: number) {
+    const machine = machines[index]!;
+    machine.operational = false;
+    uptime[index]!.set({ at: agenda.time, value: 0 });
+    requests.set(machine.number, {
+      ticket: teams.request({ owner: machine }),
+      started: false,
+    });
+  }
+  function completeRepair(index: number) {
+    const machine = machines[index]!;
+    machine.operational = true;
+    machine.repairs += 1;
+    uptime[index]!.set({ at: agenda.time, value: 1 });
+    teams.release(requests.get(machine.number)!.ticket);
+    requests.delete(machine.number);
+    agenda.add({
+      at: agenda.time + settings.failureMinutes + index,
+      data: { kind: "failure", machine: machine.number },
+    });
+  }
+  function machineStatus(machine: typeof machines[number]): string {
+    if (machine.operational) return "operational";
+    const request = requests.get(machine.number)!;
+    return request.ticket.status === "granted" ? "repairing" : "waiting";
+  }
   return {
     setRepairTeams(repairTeams: number) {
       const next = parameters(inputs, { ...settings, repairTeams });
@@ -44,18 +74,8 @@ export function create(options: Partial<MaintenanceParameters> = {}) {
           if (!event) break;
           const index = event.data.machine - 1;
           const machine = machines[index]!;
-          if (event.data.kind === "failure") {
-            machine.operational = false;
-            uptime[index]!.set({ at: agenda.time, value: 0 });
-            requests.set(machine.number, { ticket: teams.request({ owner: machine }), started: false });
-          } else {
-            machine.operational = true;
-            machine.repairs += 1;
-            uptime[index]!.set({ at: agenda.time, value: 1 });
-            teams.release(requests.get(machine.number)!.ticket);
-            requests.delete(machine.number);
-            agenda.add({ at: agenda.time + settings.failureMinutes + index, data: { kind: "failure", machine: machine.number } });
-          }
+          if (event.data.kind === "failure") failMachine(index);
+          else completeRepair(index);
           trace.record({ at: agenda.time, value: { machine: machine.number, kind: event.data.kind } });
           startRepairs();
         }
@@ -70,7 +90,7 @@ export function create(options: Partial<MaintenanceParameters> = {}) {
         availability: availability.reduce((sum, value) => sum + value, 0) / machines.length,
         machines: machines.map((machine, index) => ({
           id: machine.id, number: machine.number, x: machine.x, y: machine.y, repairs: machine.repairs,
-          availability: availability[index]!, status: machine.operational ? "operational" : requests.get(machine.number)!.ticket.status === "granted" ? "repairing" : "waiting",
+          availability: availability[index]!, status: machineStatus(machine),
         })),
         trace: trace.read().map((sample) => ({ minute: sample.at, machine: sample.value.machine, event: sample.value.kind })),
       };
