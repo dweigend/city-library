@@ -2,19 +2,19 @@ import { test, expect } from "bun:test";
 import {
   create as sexRatio,
   adultSexRatio,
-} from "../experiments/sex-ratio-equilibrium/model.ts";
+} from "../models/sex-ratio-equilibrium/model.ts";
 import {
   create as infection,
   giveDose,
-} from "../experiments/bacterial-infection/model.ts";
+} from "../models/bacterial-infection/model.ts";
 import {
   create as vision,
   visionRadius,
   energyCost,
   weightedDistance,
-} from "../experiments/vision-evolution/model.ts";
-import { create as drift } from "../experiments/gendrift-t-interact/model.ts";
-import { create as mendel } from "../experiments/mendelian-inheritance/model.ts";
+} from "../models/vision-evolution/model.ts";
+import { create as drift } from "../models/gendrift-t-interact/model.ts";
+import { create as mendel } from "../models/mendelian-inheritance/model.ts";
 
 test("sex-ratio preserves native all-males numerator, death threshold and empty reporter contract", () => {
   expect(

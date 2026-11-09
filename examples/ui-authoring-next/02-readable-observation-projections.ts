@@ -1,6 +1,6 @@
 import { defineUI, type Observation, type SpatialData, type BarSeries } from '../../ui/index.ts';
 import type { Observation as SvelteObservation } from '../../ui/svelte/index.ts';
-import { model } from '../../experiments/wealth-distribution/model.ts';
+import { model } from '../../models/wealth-distribution/model.ts';
 import { assert, equal, button, monitor, settle } from './assertions.ts';
 
 type Wealth = Observation<typeof model>;

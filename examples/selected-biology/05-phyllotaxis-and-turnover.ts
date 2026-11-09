@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
-import { create as sunflower } from "../../experiments/sunflower-emergent/model.ts";
-import { create as tumor } from "../../experiments/tumor/model.ts";
+import { create as sunflower } from "../../models/sunflower-emergent/model.ts";
+import { create as tumor } from "../../models/tumor/model.ts";
 
 const flower = sunflower({ seed: 1, ringDist: 1, fixedTemps: true });
 assert.equal(flower.read().tick, 1);

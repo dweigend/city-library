@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
-import { create as anisogamy, gameteDiameter, tickAdvanceAmount } from '../../experiments/anisogamy/model.ts';
-import { create as sexRatio, adultSexRatio } from '../../experiments/sex-ratio-equilibrium/model.ts';
+import { create as anisogamy, gameteDiameter, tickAdvanceAmount } from '../../models/anisogamy/model.ts';
+import { create as sexRatio, adultSexRatio } from '../../models/sex-ratio-equilibrium/model.ts';
 
 assert.equal(gameteDiameter(Math.PI / 4), 1);
 assert.equal(tickAdvanceAmount([]), 1);

@@ -1,0 +1,789 @@
+{
+  "base": "cc6d5c3136c07cda94d5a4449b6e384c435f6ad4",
+  "records": [
+    {
+      "manifest": "examples/ui-migration/SHA256SUMS",
+      "file": "examples/ui-migration/01-inert-entry.ts",
+      "originalSha256": "56c8dc68c9fdf09918981153ab7cd9be1b6c69d9d507e235b405ad01f188ada1",
+      "migratedSha256": "8d1d1ceb5a5cd8749ed77cfef72aefa887364496b9321015f1dc6884ef221775",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/ui-migration/SHA256SUMS",
+      "file": "examples/ui-migration/02-setup-draft.ts",
+      "originalSha256": "a45ba4424300cd9ea02d5e763be0b1b29e8e3987fdfb486f3a01c58dca11f7ba",
+      "migratedSha256": "614a33285f197dde3ad7f6b8514b61541b8d7b101601b9651e79cf6396045fb3",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/ui-migration/SHA256SUMS",
+      "file": "examples/ui-migration/03-actions-and-live-rules.ts",
+      "originalSha256": "ec73abfb4e0ca82467b2e80ffe7b33fb71d4008f6d09561fd743e39c9811c8e5",
+      "migratedSha256": "b5307da0ce3ee6f1f87bccda184b049ab3c169ed41f15bfe74168582666075ab",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/ui-migration/SHA256SUMS",
+      "file": "examples/ui-migration/04-observation-views.ts",
+      "originalSha256": "282c3686494c235065f7db90dcecf2895815b7c7e9245f92bf0d8b611c9c085f",
+      "migratedSha256": "9518a0d0fbd31b90098ba6687610efa0213e0c41deed2ce2235ec705c740c8e1",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/ui-migration/SHA256SUMS",
+      "file": "examples/ui-migration/05-invalid-rule-and-instance-isolation.ts",
+      "originalSha256": "85aede37b83062db6b0237470d6ea79e476781e2123d30629f10d4416481c0db",
+      "migratedSha256": "3f32f8bcbd4400e99620ff0619038fcb8a9a2b9c2f6b72346376eda40563640e",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/netlogo-grid-batch/SHA256SUMS",
+      "file": "examples/netlogo-grid-batch/01-life-synchronous-blinker.ts",
+      "originalSha256": "8ea0a6bd429471696659a1209a119efc4727ff1079b1509fe59e049ba3f23b39",
+      "migratedSha256": "56e6381b3983b00cd08f98081804a511fcd62c702c85c631bf91ef5e262cb0ce",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/netlogo-grid-batch/SHA256SUMS",
+      "file": "examples/netlogo-grid-batch/02-fire-front-and-embers.ts",
+      "originalSha256": "f807200bc39a7402e8b82a7a461e19ccdb0ef6db583b88bf57bd009be797fde3",
+      "migratedSha256": "c8031a898e4e30c562702874012290f804daec5bacdae2a37c442f27b5305054",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/netlogo-grid-batch/SHA256SUMS",
+      "file": "examples/netlogo-grid-batch/03-percolation-stop-and-wrap.ts",
+      "originalSha256": "ce7cb425564d2b7c28a24c598ed9dc4733bfe6b82c7768e8edbcfd19f96f2edf",
+      "migratedSha256": "879a9a573dd01188d0eaf56acc708f1da60eb7827005edd0e3aeefb508726d28",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/netlogo-grid-batch/SHA256SUMS",
+      "file": "examples/netlogo-grid-batch/04-atomic-inputs-and-drawing.ts",
+      "originalSha256": "26cab2662212c689fa13bc87707ba903d966044390169f6c75bb3a160deb5489",
+      "migratedSha256": "4f6766b5bcbc9195d9150c5fa606c32336e51ae53cbdaaaf1e488096d8a18684",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/netlogo-grid-batch/SHA256SUMS",
+      "file": "examples/netlogo-grid-batch/05-defaults-and-isolation.ts",
+      "originalSha256": "83a15927bbda497264ba4338859fd09e621fd302b112aa806ccf2c9aa76d365e",
+      "migratedSha256": "c741717c03e59ce1db64f362aa6bb06d1c6cfca60ca191c0547a19c3130ff915",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/selected-tijuana/SHA256SUMS",
+      "file": "examples/selected-tijuana/01-natural-cityscape-and-replay.ts",
+      "originalSha256": "e9871c028de8c16aa43826bfc8a0f59b95eefd0404dbbd12e4feb6ee041e319e",
+      "migratedSha256": "a71d1cfeb010f93c4691474656e27d916284c39cee9521dcb2556c9a27aae6f2",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/giant-component/SHA256SUMS",
+      "file": "examples/giant-component/01-default-setup.ts",
+      "originalSha256": "3828aebcc78f2fb2be8b0b0cd03dc6c7c7a9a6e8de0827e23dac69ac40733fc5",
+      "migratedSha256": "02e60addf2f38698faa29469ee32811a5654fb4803d2a680f16f3230d7ca39c3",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/giant-component/SHA256SUMS",
+      "file": "examples/giant-component/02-complete-two-node.ts",
+      "originalSha256": "fbb997609b396a31d179cc7ff4627cb2be12ddaaaa154c111a71cb0c871bf4a4",
+      "migratedSha256": "0de8f04141bbdb7d42b64b4351c5742dd5ef4346cc09e826bca329a6caa829d9",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/giant-component/SHA256SUMS",
+      "file": "examples/giant-component/03-connected-is-not-terminal.ts",
+      "originalSha256": "726f2c730a606a2356ebbfc5331a77158606615e02fa4d183627d323e4283a63",
+      "migratedSha256": "984aaffa5b57af52150e85615143e67f101d713268fdb2f6a520d3b55d65ddd1",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/giant-component/SHA256SUMS",
+      "file": "examples/giant-component/04-repeatability-and-observation.ts",
+      "originalSha256": "786be08fb735e058e249591b40b94734463dc6e753a91b675d8db217b6427397",
+      "migratedSha256": "8c0f1a0714c608b55ad4d5179ced4149a097f5be3bde69e02b1ab2ffbcb0d1e8",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/selected-network/SHA256SUMS",
+      "file": "examples/selected-network/03-virus-phase-and-stop.ts",
+      "originalSha256": "b2ee101176834cc65d1985a7e95d88383508be5eee9b6c6d852a67232a491d86",
+      "migratedSha256": "52da7ee289e9e99d07013222bc3c3953d907fbeaba42de0fab1179cd4c526245",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/segregation/SHA256SUMS",
+      "file": "examples/segregation/01-setup.ts",
+      "originalSha256": "a0292794021cdfe7a2829a859de3401b24a58ddaaacc31b6a6383609bd7bb5a4",
+      "migratedSha256": "51efa2c6f282af10c457d26fbc16527673275f8052a4d099c0fa9695a38a5f35",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/segregation/SHA256SUMS",
+      "file": "examples/segregation/02-neighbor-metrics.ts",
+      "originalSha256": "6626250a4dd94e7d34835eeecdabe68c9ed2421fcec1ccfd21a835cf96225ce4",
+      "migratedSha256": "29bf4e178d518b5f66a88fbef4d4b4702d9eb1f009f81779b519c577d7efffff",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/segregation/SHA256SUMS",
+      "file": "examples/segregation/03-terminal-intervention.ts",
+      "originalSha256": "90100ae23b560b28d0bb6cd531e4ecb8192548f450ebd020c2dec602445228e4",
+      "migratedSha256": "14ce803a37b5f3c25bfffd43e88e22302e2dcd60b9910296c810d3dd3c3effa2",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/segregation/SHA256SUMS",
+      "file": "examples/segregation/04-movement.ts",
+      "originalSha256": "55e03cb004e0b8178a5a99e33e89c1fb288d49df2b98deec3d82f0f13d8e6a5a",
+      "migratedSha256": "ad75e533a6a1eb8b15e50bf90ed3097dfd01abab254581eb8bbc8bb610b50f74",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/segregation/SHA256SUMS",
+      "file": "examples/segregation/05-validation-purity.ts",
+      "originalSha256": "7852268559b28be619c7926852b30d8f353ae16d6865f6b782fafd941996463a",
+      "migratedSha256": "ad8fb48fdd926e768a984fe2a92a1c9ca4b4801d2cebba9ea7c46259d0679119",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/selected-urban/SHA256SUMS",
+      "file": "examples/selected-urban/01-awareness-contact-and-expiry.ts",
+      "originalSha256": "61163f28876ef0b2f9a52d871700d80130c646bf538d6faaade5cd3265e1ba39",
+      "migratedSha256": "a67e817389981735bd932782cf32c9b72b6d81a2aa8af3fee7cad1efb1003b90",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/selected-urban/SHA256SUMS",
+      "file": "examples/selected-urban/02-pollution-phases-and-stop.ts",
+      "originalSha256": "8f211f1ce3d4554411672f030c1af836c92df2f684fad208cc3790c1859c6aed",
+      "migratedSha256": "d92c874ac1a75b1bdb3b02db319785d050d7d30ca291bde73603513b59371b16",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/selected-urban/SHA256SUMS",
+      "file": "examples/selected-urban/03-recycling-order-and-energy.ts",
+      "originalSha256": "73739dc175b26fe52c5fc817fe5093b60d5fd7c2485416c35a73bc37f8fe3976",
+      "migratedSha256": "21478f27ca5d4137124f0126be7bc48359cb990da9bda69a8d696c4a3bae7612",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/selected-urban/SHA256SUMS",
+      "file": "examples/selected-urban/04-defaults-isolation-and-validation.ts",
+      "originalSha256": "627fe27ecaf25dfb2cbfc41eba6fc40ba9eb004a13d53a36f2b8893a6e16e5c3",
+      "migratedSha256": "aebba32bce8fb0906ecce943f9964a4c7833376064db6eccbe0f6f04b228bca2",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/selected-urban/SHA256SUMS",
+      "file": "examples/selected-urban/05-live-seeking-and-cap.ts",
+      "originalSha256": "b7aa3efdb5206cea19c360a688bd2afea9c80f4969b37a5de85b31adcbe528bb",
+      "migratedSha256": "e3443e4c63752b0e94489d298aeacda08d7ba512a53d34104a10d21416be4afe",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/selected-probability/SHA256SUMS",
+      "file": "examples/selected-probability/01-birthdays.ts",
+      "originalSha256": "bccbab5d9b5c8f63bc437e7a89e7514d16b7fe404a66c8db1d53ff3b1ba6d680",
+      "migratedSha256": "c46b91d2e74424efcc4ea52b7c153f236dcd93bebc724dfcef3e8f8c4d4759f1",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/selected-probability/SHA256SUMS",
+      "file": "examples/selected-probability/02-galton-box.ts",
+      "originalSha256": "ea57c3635f86af47879f04770c346a4dff9a1a2324876e18ab9a8c5f111f0306",
+      "migratedSha256": "c045436ec6af27a2dbc60c97a1dee6fc23e931a10c74e6dd27e40838244a828c",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/selected-probability/SHA256SUMS",
+      "file": "examples/selected-probability/03-binomial-rabbits.ts",
+      "originalSha256": "6216090fd8b727e3fe7ccaa9f17d33b6998ae64a7df081e4fdfb15a854758d3d",
+      "migratedSha256": "b719a08b1669d5c0c77a1d663804a15a588364afbbd6bdaf251dd02bc462287a",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/selected-probability/SHA256SUMS",
+      "file": "examples/selected-probability/04-three-doors.ts",
+      "originalSha256": "c0efba701bd4d6da99a2924cc6e895efc8d3c939edfd2453862cebc7f02024cb",
+      "migratedSha256": "d5d2df123a09570026221c64b6caf33322ee6838cabf98161624c6855545bcbe",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/selected-probability/SHA256SUMS",
+      "file": "examples/selected-probability/05-stochastic-patchwork.ts",
+      "originalSha256": "bb8b21b79601928f252ea716d090e65c9201dac2c2532e58c2f2ad8816fbf723",
+      "migratedSha256": "69c18be670727ab45fa0cb57c2e696f4e531abf86d9adad3352cad92aa7b842a",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/selected-ecology/SHA256SUMS",
+      "file": "examples/selected-ecology/01-birth-and-temperature.ts",
+      "originalSha256": "c05c2dcca4d42529dafb4455a806ceb5eda1c6886c09cfc27ce2115866a4f689",
+      "migratedSha256": "c2f47d0319b9ba335957b0c9215853bb385838f48e130f5eda205dfdab589589",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/selected-ecology/SHA256SUMS",
+      "file": "examples/selected-ecology/02-transport-and-herding.ts",
+      "originalSha256": "86c5641f44827c50997c849c66048dd10ce80a193f2f77def3ee0c2e6e9cb2ac",
+      "migratedSha256": "206255268372bbc16d4ff76e4c7f775b12a89cf76743432e37694d8cc17ff639",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/selected-ecology/SHA256SUMS",
+      "file": "examples/selected-ecology/03-resources-and-invasion.ts",
+      "originalSha256": "fa35506aa6dec4ff0bf537c61fcd5ed1baadd7fd9ae2555339ad76cf2e2fa00f",
+      "migratedSha256": "763f7068c7321c5129738c5961b56df1bedd169480007a4705f053278d1c2187",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/selected-ecology/SHA256SUMS",
+      "file": "examples/selected-ecology/04-foraging-and-heat.ts",
+      "originalSha256": "c1baf5e55ad323d5ca8146e55f804d9bb011ef198724501b96c08d4272c237f1",
+      "migratedSha256": "6a78936b15418b4567f1bf9edf631407466e9adb52e5b4a2e5e7442a60723f0c",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/selected-ecology/SHA256SUMS",
+      "file": "examples/selected-ecology/05-flocking-and-flashes.ts",
+      "originalSha256": "186af69d4deb1f363b6934ea8956b7079ebca74747da474234de0e549d9aa639",
+      "migratedSha256": "ce5d9030687fe678e54b7a91b5de3bac773f54f3499d655a1185838042c1b1aa",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/ui-authoring/SHA256SUMS",
+      "file": "examples/ui-authoring/01-defaults-and-inert-entry.ts",
+      "originalSha256": "3af4f39bc939e145c9a092c0ed4038f7aa2ffcf50995a33de7c3ed4dd368d75a",
+      "migratedSha256": "8a4337f24d27dc5716a00cb9eb0124388478153a9e86adcb23e0c9368afa6c11",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/ui-authoring/SHA256SUMS",
+      "file": "examples/ui-authoring/02-ordered-setup-and-numeric-live.ts",
+      "originalSha256": "b2ad3adcb93bdfeba3bfa8589ca5d7e1793cee22591cebb4c8b66fd17f4294dd",
+      "migratedSha256": "75d66d2d966777423366590049d8356412f99ec0aae15c171941c10fba64b6b3",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/ui-authoring/SHA256SUMS",
+      "file": "examples/ui-authoring/03-alternate-observation.ts",
+      "originalSha256": "7ffbd63380f80ae49b7ea36e284316ca93969a6728dc0c06c312182864dbae97",
+      "migratedSha256": "7688b811827724cc829cf878a86fbd1a8339552007bc86660634a8419d4ac11e",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/ui-authoring/SHA256SUMS",
+      "file": "examples/ui-authoring/04-groups-format-and-categories.ts",
+      "originalSha256": "4f0530613aafb496c9de6b9e144a4fa007a6c0b4a3498dbc2bc91b948ed7e945",
+      "migratedSha256": "783fcc38037df6cde7bfb2cc0f4f9eec4189a36bb1fcf2da757afe0516755cd6",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/ui-authoring/SHA256SUMS",
+      "file": "examples/ui-authoring/05-independent-actions-and-legacy.ts",
+      "originalSha256": "cf0411dcba1a86c50186831de2f63d374819680b6cd859286e09f1212564ce0a",
+      "migratedSha256": "bcfc0bebf8810edbeab677d182edb3a408e769a9907c2b282b049e173119a843",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/ui-authoring/SHA256SUMS",
+      "file": "examples/ui-authoring/authoring.types.ts",
+      "originalSha256": "d395bc0bac710371ee33b68f1bc200aaa937003582f33eebc918ae263f3d527b",
+      "migratedSha256": "fb3efedfe4f5c7fcc9bbaa47c870a110eeddc197d5bf4fa62b65da38ca58701f",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/selected-urban-remaining/SHA256SUMS",
+      "file": "examples/selected-urban-remaining/01-structure-one-impulse-and-noise.ts",
+      "originalSha256": "3098e217d36e69e7eb4aa1b44340ce548bb28e199be7960bd2fa92ccd18341df",
+      "migratedSha256": "8cb75fe0b60cd2db1123201805eb43e675bca553bc4029e011b5299d67fa217e",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/selected-urban-remaining/SHA256SUMS",
+      "file": "examples/selected-urban-remaining/02-structure-two-sticky-activation.ts",
+      "originalSha256": "da9aeb97a4e76da75d10d20f138306b1bd299e2ef3e1ae97f0bebff6f451d292",
+      "migratedSha256": "046d0cf63781d7ba7e3d07cc5f6b40938f7acabc29169017388ef32c3d0c7456",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/selected-urban-remaining/SHA256SUMS",
+      "file": "examples/selected-urban-remaining/03-sprawl-conversion-and-cached-threshold.ts",
+      "originalSha256": "97a4456bb52b2b4ebe8ed105f6ee7ce9c5d099ea179d406263ab5b5e8db7dc56",
+      "migratedSha256": "8cba99c9f94f4ba3535098e35a7daf1a59f501472706397dc54f7308afa77eae",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/selected-urban-remaining/SHA256SUMS",
+      "file": "examples/selected-urban-remaining/04-economic-oldest-removal-and-median.ts",
+      "originalSha256": "38e1be831135af3af6911048c48425f231047d63d1de7e2d00d4fad033802463",
+      "migratedSha256": "243985fb8b1d664e821ca6352b885c70859544c5fb95ce1c6a9605da255094c2",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/selected-urban-remaining/SHA256SUMS",
+      "file": "examples/selected-urban-remaining/05-defaults-isolation-and-preflight.ts",
+      "originalSha256": "8ee53fe7684984b3fb642b122a4dad8b1f3381166ab5ea60ca2fa8cc68d3b420",
+      "migratedSha256": "fdcf6e3e355099184d1f901fbfb930230a463cdd823fcf9f84516a5f6059639f",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/selected-evolution/SHA256SUMS",
+      "file": "examples/selected-evolution/01-memory-and-pollution.ts",
+      "originalSha256": "2814195cc0edb30e5ef4a80a304164fb191e4721e0239c3e220352170693eb7d",
+      "migratedSha256": "e743b8fcc97b9c129a2652166ed7f4f0262d0a5192ce24984fc1ae6757fada17",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/selected-evolution/SHA256SUMS",
+      "file": "examples/selected-evolution/02-gametes-and-sex-ratio.ts",
+      "originalSha256": "963fe44509a01657b2b2faa1fe7f612abe29165e6ebb11e9567301604c8f9ccc",
+      "migratedSha256": "8caf82020f4662aee0d605387dc5d6f9d4106ca8e1731dca4d74b4d46821a11b",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/selected-evolution/SHA256SUMS",
+      "file": "examples/selected-evolution/03-learning-and-mammoths.ts",
+      "originalSha256": "504c6fd6b3498ea7dab029c5145adbf55a2f092f61f140cf1fa05924b5f05955",
+      "migratedSha256": "8e560f320f0f1468dcdbf2031820e91b9baca9d79ad5578a303b6e1c58b3c9c4",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/selected-evolution/SHA256SUMS",
+      "file": "examples/selected-evolution/04-infection-and-vision.ts",
+      "originalSha256": "764c66b661526801409cdebd496773699dd78a6de5dc8583812540fc5770f296",
+      "migratedSha256": "003ec5a71830778c1733da777ab03a69c2469a4f55a0e422dcc1eea722fc75d9",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/selected-cellular/SHA256SUMS",
+      "file": "examples/selected-cellular/01-smoothlife-normalized-disk-and-annulus.ts",
+      "originalSha256": "ec4149b7e7f731985124f94c7901e0e4027ef2aee641c94064d3da82a6f4a005",
+      "migratedSha256": "345d888af934f05c1f894c550002d95e08387ae5f29f13b5901f3e21ca09b19a",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/selected-cellular/SHA256SUMS",
+      "file": "examples/selected-cellular/02-hex-single-activation-and-stop.ts",
+      "originalSha256": "70e9805e04e0b2e957fad78ac9da41944543e870eaa76dc782f665907424a1f4",
+      "migratedSha256": "04140a9e7afcd4f72234600541c99ef5d48c7e0083bdab8507f709ae10a40328",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/selected-cellular/SHA256SUMS",
+      "file": "examples/selected-cellular/03-moving-vants-and-turing-head.ts",
+      "originalSha256": "f3ba7a253ee724e149890121bfcb888337e51dd1978e5a0dfec3fecc48aa9df3",
+      "migratedSha256": "ece9795f16f2747a9f441a5bba775b86920d1f900aa3f75dbc6bba0df170d52c",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/selected-cellular/SHA256SUMS",
+      "file": "examples/selected-cellular/04-elementary-and-continuous-rows.ts",
+      "originalSha256": "7d017dc443c8178b243ee23a67ec091345569e8259c5ca01b29d38d1a8d3bc67",
+      "migratedSha256": "cc257a2e787e5189533379238361a49bdbb77d67300f7522d31df3d0d5925ad8",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/selected-cellular/SHA256SUMS",
+      "file": "examples/selected-cellular/05-refractory-cycle-and-stochastic-extremes.ts",
+      "originalSha256": "aa2b2a4db0313a14ba7964e7d772f7f73015d3c5c6cd2c9732dfab9ed9b857af",
+      "migratedSha256": "4af59e8e33f53fb10a3951b9a3e5263a9db1e5b631d8747b9b3424f96130c41c",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/model-authoring/SHA256SUMS",
+      "file": "examples/model-authoring/01-taxi-reporters.ts",
+      "originalSha256": "b03e266dc107fab111d9971ed5ea2ff377082c7c566da46157152ffe1ac5b5a7",
+      "migratedSha256": "4d4c05e964a2369d5a84ea815c1adae301ff7c0bd2f1bdf7f22465f18f1bf399",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/model-authoring/SHA256SUMS",
+      "file": "examples/model-authoring/02-taxi-observation-purity.ts",
+      "originalSha256": "8dd05b5fed48ec8f370b0f8e57cec4c6753f8bf3ed2d8a45647011798caf80c7",
+      "migratedSha256": "48b35b25dda15efa00ce6eb640b2320486ead9e5b56f125121ca85957866e394",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/model-authoring/SHA256SUMS",
+      "file": "examples/model-authoring/03-taxi-intervention-isolation.ts",
+      "originalSha256": "fb3404fe5c48df51e2141178fe9a0f5b2e2fa597d0546e36bf86ab03747db71e",
+      "migratedSha256": "f4b6f27c995d3183116eb9bb7bd6e2a5a2653dc830c0f46af7a14b1578b950ce",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/model-authoring/SHA256SUMS",
+      "file": "examples/model-authoring/04-taxi-replay-accounting.ts",
+      "originalSha256": "2f48dc7b370d848d03fc6d990be72914c0bf249bd1e7ef13f203b48866f4299f",
+      "migratedSha256": "07e5bd9f0721b13b5286649980cd8d92d0ba42441299b605aad29ebdceb8e562",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/ui-authoring-next/SHA256SUMS",
+      "file": "examples/ui-authoring-next/01-typed-monitor-formatters.ts",
+      "originalSha256": "4b93e0d5458b0f40e6112a93fe609e483450da62613fb164301b8241f5786c44",
+      "migratedSha256": "07da7b81adc7c36b763c63ed088180f9fafeb9904ae83ebcc4d6eb11c601987c",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/ui-authoring-next/SHA256SUMS",
+      "file": "examples/ui-authoring-next/02-readable-observation-projections.ts",
+      "originalSha256": "9d1c10e6eb13d9e25018cba844f0dc74d951b1465fb9d0af9ed01770d1379368",
+      "migratedSha256": "c139edf7072201c957a59091402e8f4930555bafc7f466001ccd844d2c155215",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/ui-authoring-next/SHA256SUMS",
+      "file": "examples/ui-authoring-next/03-namespaced-selection.ts",
+      "originalSha256": "c8dbdb5a29586a57616d239b31ed174c022b11426e27153b7402dc2e0f1fbc7e",
+      "migratedSha256": "bbb248e7a1d04ba3fe4efc1c1ce4a076a2c1daa893189e4c846838d6ff72767e",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/ui-authoring-next/SHA256SUMS",
+      "file": "examples/ui-authoring-next/04-formatter-errors-and-recovery.ts",
+      "originalSha256": "3e052f8c4cb854791cc348c1914b28c44f8af24b768ad25a02963857483331d0",
+      "migratedSha256": "371e835ffe0f856bbdebc2235ac1374d6d3f8f879861cfa82d8e55d780e94d88",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/ui-authoring-next/SHA256SUMS",
+      "file": "examples/ui-authoring-next/05-independent-mounts-and-legacy.ts",
+      "originalSha256": "9ca3f59dde4f84a714c0b8ccabcda3322f8f7bd4d72df59e3b282a8d0c298428",
+      "migratedSha256": "da778eeb91fbf684f23e843fb25c3ad8be50a2283bafb1bd1d108b0f7e9c9155",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/ui-authoring-next/SHA256SUMS",
+      "file": "examples/ui-authoring-next/authoring.types.ts",
+      "originalSha256": "2fd86f0b19a89950727a69a2aa6a5d3854e1a9356ef38e9a7b71093ad50ff4ff",
+      "migratedSha256": "5675c663780aac20abfe6a42c39e89143922708ab52d1baf794e80b85a74b35c",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/selected-urban-feedback/SHA256SUMS",
+      "file": "examples/selected-urban-feedback/01-positive-powers-and-normalization.ts",
+      "originalSha256": "ed9714a46f1441d21809ef3d3191927bd1269acdd4dad785fc6482ef23e3158e",
+      "migratedSha256": "94f83c56c3a29ff5c5215ee88ad2ce6da2bc3bc8bd06241263ca84786a495f8e",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/selected-urban-feedback/SHA256SUMS",
+      "file": "examples/selected-urban-feedback/02-positive-moore-wrap.ts",
+      "originalSha256": "358aa3f24ca8f077af092fe6713a7c1e938a84c57a2a33ff2e27c5d3bbc8c3cb",
+      "migratedSha256": "20152872e1379af816fd29755247e607fb751f70b95d08b6f0db53af56460804",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/selected-urban-feedback/SHA256SUMS",
+      "file": "examples/selected-urban-feedback/03-path-source-setup-and-disturb.ts",
+      "originalSha256": "7418cccdd115179509fdc60d6203f25fda637c6113eb5ff635f8df7fb9d6ed7e",
+      "migratedSha256": "49939cb89b7c5d42cc4314e5cedbb0d883dae4e5bac52bc1c1b300256e98111c",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/selected-urban-feedback/SHA256SUMS",
+      "file": "examples/selected-urban-feedback/04-cells-snapshot-and-strict-age.ts",
+      "originalSha256": "7b23bf01fc5f03e137e5803f0a481f09b5f7d99e9f182aeeccad3eaf043b7232",
+      "migratedSha256": "ca69104391706789708f20bdea1ced2ea54b5d04a0dd2a5f7d77ffc472cc65a6",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/selected-urban-feedback/SHA256SUMS",
+      "file": "examples/selected-urban-feedback/05-defaults-isolation-and-atomic-fixtures.ts",
+      "originalSha256": "6df21da9c4929c0d2b29891e4b6131fedbf5dd492b629d4e5b4d45def4292fd7",
+      "migratedSha256": "e24fe5206297d09f54850cb0e3b9fa33d0a993f76f51ebda460f83f0620c9a52",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/selected-computing/SHA256SUMS",
+      "file": "examples/selected-computing/01-neural-learning.ts",
+      "originalSha256": "0ac307d812f2de34b42438022f151685347c0a093dcd35c9f64731e64c45b7d9",
+      "migratedSha256": "b5bc10a43845f9d07d72890ca71ba888f081e9e8099d88520a0ed8514674d6a8",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/selected-computing/SHA256SUMS",
+      "file": "examples/selected-computing/02-resources-and-ranking.ts",
+      "originalSha256": "05aeff29210fffc3f0294a152adcac5a3486456286aa535a43d005826fa4b752",
+      "migratedSha256": "b707b44b02f2fd545cd1b83bd73577283e8079a0e437728aec14a50589c5adf7",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/selected-computing/SHA256SUMS",
+      "file": "examples/selected-computing/03-genetic-strategies.ts",
+      "originalSha256": "1f9dd926442a599c6c08e0bd7f3b75e169654569f4c5c23e8ec2e3f7477843ce",
+      "migratedSha256": "21248e9eb401f92e2fc96d63a46f8a62712a964d4c9244a40ed27791c0a1f774",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/selected-computing/SHA256SUMS",
+      "file": "examples/selected-computing/04-swarm-and-clustering.ts",
+      "originalSha256": "4afdd067e1ed8b41c786518ae6673dbd22c0eb6bee89bf5b84111cc5009d8c82",
+      "migratedSha256": "826d1fd397ed5ae62e194623bbe69b969f5964807c1b422449a868b570202752",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/selected-computing/SHA256SUMS",
+      "file": "examples/selected-computing/05-annealing-and-factory.ts",
+      "originalSha256": "2952352249803c7d110c609ce008b6fb4765ee80bc8bec38e9a3ca60c98a4eca",
+      "migratedSha256": "dd14a29c996504a40a255e8260a9db551097c4405ee6a9cadec2364648cffc56",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "examples/selected-tijuana/SHA256SUMS",
+      "file": "examples/selected-tijuana/02-final-seed-economics-and-reset.ts",
+      "originalSha256": "db0a92fd4902e85adcfd0706946e61e7b5f57db598975bc0de1732ff446d7449",
+      "baseFileSha256": "3c817aee7a95ce7a4947cfebcf67eec52fa122360e4ef57e13feaeb9908ea04f",
+      "migratedSha256": "85c779e001b7ce45e9c9e6f283024a116ef6840012ac2e11cd3f44362b3f5393",
+      "baselineManifestMismatch": true,
+      "change": "experiments/ -> models/ in paths only"
+    },
+    {
+      "manifest": "examples/selected-tijuana/SHA256SUMS",
+      "file": "examples/selected-tijuana/03-migration-crossing-and-partial-errors.ts",
+      "originalSha256": "4c521bd31c312ab95086a967172dbcc490925f6b42ce9a7ff6dfe747e67370a0",
+      "baseFileSha256": "eb8651379078e1985090cc72cf2cec35e0ddde099ff7b1ba57d3344ededd4aba",
+      "migratedSha256": "9ceb64448d2a91b8d6e8bf8718c821a8ac8d5ac956160311db2f5e467d1f650e",
+      "baselineManifestMismatch": true,
+      "change": "experiments/ -> models/ in paths only"
+    },
+    {
+      "manifest": "examples/selected-tijuana/SHA256SUMS",
+      "file": "examples/selected-tijuana/04-domain-display-and-node-intervention.ts",
+      "originalSha256": "4775888bd46d5fec0de6f3f9d0ce48d931d728a5748bf23bf6e29d4cc04f76c5",
+      "baseFileSha256": "d5839170a5c55686e1b1e94b43c83113e057078b13355d5892a3ebf847ba84f1",
+      "migratedSha256": "25f4106065428b748527632761cc88232c4a41477fea502dfd5ee3d337c1fc71",
+      "baselineManifestMismatch": true,
+      "change": "experiments/ -> models/ in paths only"
+    },
+    {
+      "manifest": "examples/selected-tijuana/SHA256SUMS",
+      "file": "examples/selected-tijuana/05-growth-reports-and-delayed-errors.ts",
+      "originalSha256": "c0f12a3ff43a9fd1530f071ce3fa6d9511701ed734fb9ffb0bdf4e6a88e70056",
+      "baseFileSha256": "169ca5c453e782f7d2e69a589ba3fa6b2505fbb2b6dc230514b38561c5421cfe",
+      "migratedSha256": "c5f55b066af995dad01c0667098d3bf7ff9058a4e39ce528417dcad64d325c12",
+      "baselineManifestMismatch": true,
+      "change": "experiments/ -> models/ in paths only"
+    },
+    {
+      "manifest": "examples/selected-tijuana/SHA256SUMS",
+      "file": "examples/selected-tijuana/scenario.ts",
+      "originalSha256": "0c238b92a55cc4866e4c65d09bc69c32a254c5fca12cb875a863b302686f2d0a",
+      "baseFileSha256": "7437d3f5a2def5c21a19cfc75c0d9de8660539f74c7da5f0f15a6e48ce91044d",
+      "migratedSha256": "ed14e079f347fc0ef398158c3b924621b17fff001f46e5a567a9a24f988b477d",
+      "baselineManifestMismatch": true,
+      "change": "experiments/ -> models/ in paths only"
+    },
+    {
+      "manifest": "examples/selected-network/SHA256SUMS",
+      "file": "examples/selected-network/01-directed-staging.ts",
+      "originalSha256": "2097aa6a26c6fa98d1b2e88e75673da17384344c2e92d65241b12b093466268d",
+      "baseFileSha256": "233e477541ff0be241348b130544295c0088849699493d7f7df93a0b144bac27",
+      "migratedSha256": "702b85287a3f3ddffbccb45ae27da2b8ba35ed7dbe15908d8cce8023e9bb2b7e",
+      "baselineManifestMismatch": true,
+      "change": "experiments/ -> models/ in paths only"
+    },
+    {
+      "manifest": "examples/selected-network/SHA256SUMS",
+      "file": "examples/selected-network/02-rewire-and-no-links.ts",
+      "originalSha256": "9609c01ab623bb687df5da312694decc01b41f49410c9b7d8fce29e866b2f8d4",
+      "baseFileSha256": "5be0bc90e8d9845461fc93575d2dcbc4bf4293c364941694086f55caff1f9aa1",
+      "migratedSha256": "d35195eb8df43d477013f4173b859abda2badb7e78eb0a75bac8f0fa3deda9fc",
+      "baselineManifestMismatch": true,
+      "change": "experiments/ -> models/ in paths only"
+    },
+    {
+      "manifest": "examples/selected-network/SHA256SUMS",
+      "file": "examples/selected-network/04-atomic-fixtures.ts",
+      "originalSha256": "325e503bcf86ffb417b0b6b6a999e20aed37eb55f28d95c5d46fbf2d853b81a3",
+      "baseFileSha256": "42d5cc58c08e5ff585d2149795f6c912d5737c3aa4e63455911c5e416dc6de01",
+      "migratedSha256": "a01c40932fdf7f0796569ae4427d1bce16189dba3505f85faf2eaf883eb20dff",
+      "baselineManifestMismatch": true,
+      "change": "experiments/ -> models/ in paths only"
+    },
+    {
+      "manifest": "examples/selected-network/SHA256SUMS",
+      "file": "examples/selected-network/05-defaults-and-isolation.ts",
+      "originalSha256": "8b62a0045c028617519bb9d20a92492fc04c91bf825a162c29481bd3613ed9a3",
+      "baseFileSha256": "121f754570a6cec5cfc4c399f65d8125e11baee44465d31287dcd86a85313169",
+      "migratedSha256": "26e2d5fe92d878119052275a16eb35e1f7111e8667429fbcb5b0a4863231b4d5",
+      "baselineManifestMismatch": true,
+      "change": "experiments/ -> models/ in paths only"
+    },
+    {
+      "manifest": "examples/ui-authoring/SHA256SUMS",
+      "file": "tsconfig.json",
+      "originalSha256": "eb3ca59cd30ec3ae3e34ca0001da61ffa646043599ac68c01a3eafd316e4752d",
+      "baseFileSha256": "eb3ca59cd30ec3ae3e34ca0001da61ffa646043599ac68c01a3eafd316e4752d",
+      "migratedSha256": "087133aecf6a320ad04aef0a7603822411be996fb73ad07ee985021e15a9cc17",
+      "baselineManifestMismatch": false,
+      "change": "experiments/ -> models/ in paths only"
+    },
+    {
+      "manifest": "examples/selected-evolution/SHA256SUMS",
+      "file": "examples/selected-evolution/05-drift-and-inheritance.ts",
+      "originalSha256": "feb0b5854a69e77ce14aa9f396bb5d2c313ba65b7aa59c274d0af5e33dd69f8f",
+      "baseFileSha256": "e28ea987fc83d2b09df3225645ce34e967305f68d3e240b3893c7805506271bd",
+      "migratedSha256": "b80a932ad4262d17cc305c602fdc3e32d7a8b470e26fdc747c7d64771a4f248b",
+      "baselineManifestMismatch": true,
+      "change": "experiments/ -> models/ in paths only"
+    },
+    {
+      "manifest": "examples/ui-authoring-next/SHA256SUMS",
+      "file": "tsconfig.json",
+      "originalSha256": "eb3ca59cd30ec3ae3e34ca0001da61ffa646043599ac68c01a3eafd316e4752d",
+      "baseFileSha256": "eb3ca59cd30ec3ae3e34ca0001da61ffa646043599ac68c01a3eafd316e4752d",
+      "migratedSha256": "087133aecf6a320ad04aef0a7603822411be996fb73ad07ee985021e15a9cc17",
+      "baselineManifestMismatch": false,
+      "change": "experiments/ -> models/ in paths only"
+    },
+    {
+      "freezeRevision": "23693e90e199512faf68a04c9a2198b9eb50463b",
+      "file": "examples/des-models/03-goods-buffer.ts",
+      "originalSha256": "55e6281207d6a5657cd21e67b011d226ec512912cb6cc9421f64e428d1bed08b",
+      "migratedSha256": "d64a311206544473047995920eb44ebf84b536175430544145330ac777adac85",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "freezeRevision": "23693e90e199512faf68a04c9a2198b9eb50463b",
+      "file": "examples/des-models/05-parcel-logistics.ts",
+      "originalSha256": "0bef0ecf33fcf9f7c8d3a45f9a5be00cb31bc944278e498bbb2153cad7aa463a",
+      "migratedSha256": "d1b66fd22257c50083d5e7b77033f7f147b654ae31c75536bc4bee4cb95fd19d",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "freezeRevision": "23693e90e199512faf68a04c9a2198b9eb50463b",
+      "file": "examples/des-models/08-bike-redistribution.ts",
+      "originalSha256": "e7ae4df67bad3b009900025cdfac282de8964bed63e29c4cbc1dd76df6935325",
+      "migratedSha256": "6231911fc84bcbb3bcafdc5a5160f522fb6436cbf8661c00c4944dd63f8c3926",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "freezeRevision": "23693e90e199512faf68a04c9a2198b9eb50463b",
+      "file": "examples/des-models/02-ev-charging.ts",
+      "originalSha256": "0e610d96efcd34e86bb5f13eef4c51499f1fbcb22f21ef11dff6cc945d201761",
+      "migratedSha256": "ae595308992104af3e025f97002ecb63869ab593111daae058fad567d73a14c0",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "freezeRevision": "23693e90e199512faf68a04c9a2198b9eb50463b",
+      "file": "examples/des-models/01-civic-office.ts",
+      "originalSha256": "07b3efb21ede82e7d97c5fc5c7e0d48c72e9dca2fd6f351e43ab6f43d2cc995f",
+      "migratedSha256": "68b63d3a60a18017ca48b5e3e06751c3e50f25eda9eacbb95a0a7043d1bdd91f",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "freezeRevision": "23693e90e199512faf68a04c9a2198b9eb50463b",
+      "file": "examples/des-models/10-machine-maintenance.ts",
+      "originalSha256": "f160d0002e9e051b17dab072bcce45de8863ff37ec202037d04ddf5edf053d30",
+      "migratedSha256": "ddbaada8bbc57ca80cdad52ff34da1950b79c93201860c879b0184f86432fcb8",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "freezeRevision": "23693e90e199512faf68a04c9a2198b9eb50463b",
+      "file": "examples/des-models/09-water-allocation.ts",
+      "originalSha256": "5a600858875ddd50c0a13f12450edc4c8550a75bff4f263626e88d20776613e3",
+      "migratedSha256": "e68cc333bc2be99ae08dbfa74abadb12739b83366fa671f6fbefca9148e945ec",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "freezeRevision": "23693e90e199512faf68a04c9a2198b9eb50463b",
+      "file": "examples/des-models/06-waste-collection.ts",
+      "originalSha256": "a9c0ded60ab069a169c42406cf7a9eeeab2e0fcf52f0a44bda078e582cc2a092",
+      "migratedSha256": "2639690167c849e1a1c855f401f28b4a6e6fefab3aa6c255b42e17ac191a6968",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "freezeRevision": "23693e90e199512faf68a04c9a2198b9eb50463b",
+      "file": "examples/des-models/04-bus-interchange.ts",
+      "originalSha256": "307c29c249cfaf4d7e7d16e8089b212a2d9b55fad41ee941e4377941777326da",
+      "migratedSha256": "83fc6b19d97d2aaa9c78ad28054df94870cccaa92b205df1ac4490e917c5b6be",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "freezeRevision": "23693e90e199512faf68a04c9a2198b9eb50463b",
+      "file": "examples/des-models/07-emergency-dispatch.ts",
+      "originalSha256": "6269e50bba826ca5291f63fcb9177aaaab218008b406960771820839bfb2f667",
+      "migratedSha256": "8c44aa3a9e11df0b83096b086df7277a7e994cf839b645ae57f7a5f338862c5c",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "models/catalog/acceptance/selected-transport/frozen-SHA256SUMS",
+      "file": "examples/selected-transport/01-paths.ts",
+      "originalSha256": "526018fa57fda1efcd10756ae61c0317e7572b07317a307b03394ce2ba8c6098",
+      "migratedSha256": "f344e26331e51399bcf668d6b778ecdbfae682e6fb6073654e04dae6208e8cdd",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "models/catalog/acceptance/selected-transport/frozen-SHA256SUMS",
+      "file": "examples/selected-transport/02-basic-and-lanes.ts",
+      "originalSha256": "b596c92f9d24d32a88d4f701563536c8087255d5dd00f01806a85083832044a9",
+      "migratedSha256": "17a9cdeccd88e3df9d490fdd6fa41fd9680905701f20c197042c92824612fbd9",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "models/catalog/acceptance/selected-transport/frozen-SHA256SUMS",
+      "file": "examples/selected-transport/03-grid-signals.ts",
+      "originalSha256": "a3e857d8cf56e650bcf19bd6113a4149cdcba91ce9e768218deab1f0fd6cc1f1",
+      "migratedSha256": "60c7d941b9bef13b36baa131580070a1ccdbe51b6c465527871fff3bf8313e1d",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "models/catalog/acceptance/selected-transport/frozen-SHA256SUMS",
+      "file": "examples/selected-transport/04-intersection-and-goals.ts",
+      "originalSha256": "af419ade90e8b70663eeb56639f365060935a8abf0a5bf3afed327f1ff42915c",
+      "migratedSha256": "40087639f913f6bdd7fc2cb838ef604ef705232eebdfe47256d70da106661e25",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "models/catalog/acceptance/selected-transport/frozen-SHA256SUMS",
+      "file": "examples/selected-transport/05-taxi-service.ts",
+      "originalSha256": "fdc5bda86b812580ec70223b979e0a7451183e88c317eda0d86f9436db4f13ff",
+      "migratedSha256": "ecc87850c3bf133ac4b718b4dbb5505d96935dd3a5d93d76628cd1802bae883a",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "models/catalog/acceptance/selected-social-example-SHA256SUMS",
+      "file": "examples/selected-social/01-choice-and-rebellion.ts",
+      "originalSha256": "21d71469daf4e23d2c3aad29882f0a61e39ddb31ebdac0fa45694cc45804574f",
+      "migratedSha256": "038810b6fa82cd59c1cbbf452e28cf3b217bcce89c05338ec0d0417ce42de6b3",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "models/catalog/acceptance/selected-social-example-SHA256SUMS",
+      "file": "examples/selected-social/02-language-and-party.ts",
+      "originalSha256": "db3a52865405a618e619c597c0d00df00aad9b9480f2c8cc5e540a5c7c8f7f5f",
+      "migratedSha256": "db5cc7aedd5e4db79772d71bdedde245cf5777b68b667e51a6bdf4d17648b3ab",
+      "change": "experiments/ -> models/ in import paths only",
+      "baselineManifestMismatch": true,
+      "baseFileSha256": "308d0c0a4e84153f8252e8c8c244f4e0c6d932ff0fb40da3d14c047fe4d09704"
+    },
+    {
+      "manifest": "models/catalog/acceptance/selected-social-example-SHA256SUMS",
+      "file": "examples/selected-social/03-cooperation-and-minority.ts",
+      "originalSha256": "e9641b58457602d0a7edd878001c262aeb4373b0696d2b7cb1c76e6ff10f9950",
+      "migratedSha256": "61191e9085c3237428c84572b72ea65d794b2be84f1bb576b15cd57934953f72",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "models/catalog/acceptance/selected-social-example-SHA256SUMS",
+      "file": "examples/selected-social/04-rumors-and-signals.ts",
+      "originalSha256": "6648ef9d2836a3e65f216c5ff1fb963aa419f47eacd77fb7e8a549f47f673c2a",
+      "migratedSha256": "e9d8b10b5db09277d35f43a41c706b74132b520ebd4f95f6415cb9adb41f98da",
+      "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": "models/catalog/acceptance/selected-social-example-SHA256SUMS",
+      "file": "examples/selected-social/05-development-and-personalities.ts",
+      "originalSha256": "ff46d354986d65d2c141278a2ab7c5b900ea7c6bd738ebdc193d92cc9e2477b3",
+      "migratedSha256": "e6dee58746e6938abb14c69f5cc8e2fe7f25625cba290fdddff6e4512b0853a5",
+      "change": "experiments/ -> models/ in import paths only"
+    }
+  ],
+  "unresolved": [],
+  "scope": "Mechanical repository path migration only. Original manifest hashes are retained here. baselineManifestMismatch identifies entries already stale against the base file; no assertion changes were made in this migration."
+}

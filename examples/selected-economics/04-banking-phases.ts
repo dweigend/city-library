@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
-import { create as cashFlow } from "../../experiments/cash-flow/model.ts";
-import { create as reserves } from "../../experiments/bank-reserves/model.ts";
+import { create as cashFlow } from "../../models/cash-flow/model.ts";
+import { create as reserves } from "../../models/bank-reserves/model.ts";
 const c = cashFlow({ people: 1, reserves: 21, seed: 1 });
 const cw = c.read().walletsTotal;
 assert.ok(cw === 0 || cw === 10); assert.equal(c.read().savingsTotal, 0);

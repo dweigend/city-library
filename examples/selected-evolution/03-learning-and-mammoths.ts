@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
-import { create as baldwin, fitnessOf } from '../../experiments/baldwin-effect/model.ts';
-import { create as mammoths } from '../../experiments/mammoths/model.ts';
+import { create as baldwin, fitnessOf } from '../../models/baldwin-effect/model.ts';
+import { create as mammoths } from '../../models/mammoths/model.ts';
 
 assert.equal(fitnessOf([1, 0, 1, 0], [1, 1, 1, 1], 0.5), 0.5);
 assert.equal(fitnessOf([1, 0, 1, 0], [1, 1, 1, 1], 0.49), 0);

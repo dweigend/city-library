@@ -1,6 +1,6 @@
 import { describe, expect, test } from "bun:test";
-import { create } from "../experiments/neighborhood-heat-intervention/model.ts";
-import { heatMap } from "../experiments/neighborhood-heat-intervention/ui.ts";
+import { create } from "../models/neighborhood-heat-intervention/model.ts";
+import { heatMap } from "../models/neighborhood-heat-intervention/ui.ts";
 
 describe("neighborhood heat observation geometry", () => {
   test("the same heat index has the same color across geometry and time", () => {

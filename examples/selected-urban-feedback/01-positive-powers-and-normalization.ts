@@ -1,5 +1,5 @@
 import { strict as assert } from "node:assert";
-import { create } from "../../experiments/urban-suite-positive-feedback/model.ts";
+import { create } from "../../models/urban-suite-positive-feedback/model.ts";
 
 const model = create({ alpha: 2, mooreNeighborhood: false });
 model.setActivities(model.read().cells.map((_, index) => index === 0 ? 0.25 : index === 1 ? 0.5 : index === 2 ? 1 : 0));

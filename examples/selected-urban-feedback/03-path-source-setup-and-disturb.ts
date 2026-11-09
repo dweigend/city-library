@@ -1,5 +1,5 @@
 import { strict as assert } from "node:assert";
-import { create } from "../../experiments/urban-suite-path-dependence/model.ts";
+import { create } from "../../models/urban-suite-path-dependence/model.ts";
 
 // Preserve the actual source's inverted distribute branch; do not repair it silently.
 const distributed = create({ initialFirms: 200, distribute: true });

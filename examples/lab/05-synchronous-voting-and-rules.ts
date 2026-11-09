@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { model } from "../../experiments/voting/model.ts";
+import { model } from "../../models/voting/model.ts";
 
 const votes = [1, 1, 1, 1, 0, 0, 0, 0, 0];
 const instance = model.create({ width: 3, height: 3, seed: 1 });

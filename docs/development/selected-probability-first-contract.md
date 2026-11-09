@@ -2,15 +2,17 @@
 
 These models introduce no new City Library capability or UI contract. Their named TypeScript procedures compose the existing public `Random`, `World` and `run` API; `create` performs the original Setup, `advance` calls Go, and `read` returns detached, frozen observations without advancing time or RNG. The world is the sole tick owner, local model records own their domain values, and UI adapters call only exposed actions. Importing modules does not create instances.
 
-The exact selected identity remains the original catalog path. Source bytes, full notices, widget inventories and hashes are retained separately in `experiments/<slug>/source.nlogox`, `NOTICE.md` and the selected models ledger. Scientific dossiers describe assumptions and limitations; they do not establish browser, technical or empirical acceptance.
+The exact selected identity remains the original catalog path. Source bytes, full notices, widget inventories and hashes are retained separately in `models/<slug>/source.nlogox`, `NOTICE.md` and the selected models ledger. Scientific dossiers describe assumptions and limitations; they do not establish browser, technical or empirical acceptance.
 
 | Exact selected path | Public model | Setup-only parameters | Live actions/parameters |
 | --- | --- | --- | --- |
-| Sample Models/Mathematics/Probability/Birthdays | `experiments/birthdays/model.ts` | Seed; original world remains 9 × 23 | Advance one room or repeated rooms |
-| Sample Models/Mathematics/Probability/Galton Box | `experiments/galton-box/model.ts` | Seed, numberOfRows | numberOfBalls, chanceOfBouncingRight, pileUp through setRules |
-| Sample Models/Mathematics/Probability/Binomial Rabbits | `experiments/binomial-rabbits/model.ts` | Seed, number, hop1/2/3, ratio1/2/3 | hops and xScaling through setRules; goOneHop bypasses Go's equality stop |
-| Sample Models/Mathematics/Probability/Three Doors | `experiments/three-doors/model.ts` | Seed, number, gradation | Advance the race; terminal completed-step stop |
-| Sample Models/Mathematics/Probability/ProbLab/Stochastic Patchwork | `experiments/stochastic-patchwork/model.ts` | Seed, blockSide | targetPercent through setRules |
+| Sample Models/Mathematics/Probability/Birthdays | `models/birthdays/model.ts` | Seed; original world remains 9 × 23 | Advance one room or repeated rooms |
+| Sample Models/Mathematics/Probability/Galton Box | `models/galton-box/model.ts` | Seed, numberOfRows | numberOfBalls, chanceOfBouncingRight, pileUp through setRules |
+| Sample Models/Mathematics/Probability/Binomial Rabbits | `models/binomial-rabbits/model.ts` | Seed, number, hop1/2/3, ratio1/2/3 | hops and xScaling through setRules; goOneHop bypasses Go's equality stop |
+| Sample Models/Mathematics/Probability/Three Doors | `models/three-doors/model.ts` | Seed, number, gradation | Advance the race; terminal completed-step stop |
+| Sample Models/Mathematics/Probability/ProbLab/Stochastic Patchwork | `models/stochastic-patchwork/model.ts` | Seed, blockSide | targetPercent through setRules |
+
+Zero steps preserve observations and RNG state; invalid step counts fail. These guarantees apply to both [probability model groups](selected-probability-last-contract.md).
 
 ## Procedures and observed quantities
 

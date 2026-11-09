@@ -1,5 +1,5 @@
 import { strict as assert } from "node:assert";
-import { create } from "../../experiments/urban-suite-cells/model.ts";
+import { create } from "../../models/urban-suite-cells/model.ts";
 
 const model = create();
 assert.equal(model.read().counts.on, 1);

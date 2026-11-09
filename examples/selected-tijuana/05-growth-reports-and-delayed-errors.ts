@@ -1,6 +1,6 @@
 // Frozen before runtime; acceptance syntax and assertions must remain unchanged.
 import { strict as assert } from "node:assert";
-import { create } from "../../experiments/urban-suite-tijuana-bordertowns/model.ts";
+import { create } from "../../models/urban-suite-tijuana-bordertowns/model.ts";
 import { cell, field, globals, job, migrant, near, ring, scene, service, thirdBuilder } from "./scenario.ts";
 
 // Asymmetric x<81 allows this negative-side site; abs(x)<81 would exclude it.

@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { create } from "../../experiments/virus-on-a-network/model.ts";
+import { create } from "../../models/virus-on-a-network/model.ts";
 
 const model = create({ numberOfNodes: 10, averageNodeDegree: 1, initialOutbreakSize: 1, checkFrequency: 3, spreadChance: 0, recoveryChance: 0 });
 model.setStates(Array.from({ length: 10 }, () => ({ status: "infected" as const, checkTimer: 2 })));

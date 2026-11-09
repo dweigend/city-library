@@ -1,9 +1,9 @@
 import { test, expect } from "bun:test";
-import { create as choice } from "../experiments/consumer-choice/model.ts";
-import { create as rebellion } from "../experiments/rebellion/model.ts";
-import { create as language } from "../experiments/language-change/model.ts";
-import { create as party } from "../experiments/party/model.ts";
-import { create as ethnicity } from "../experiments/ethnocentrism/model.ts";
+import { create as choice } from "../models/consumer-choice/model.ts";
+import { create as rebellion } from "../models/rebellion/model.ts";
+import { create as language } from "../models/language-change/model.ts";
+import { create as party } from "../models/party/model.ts";
+import { create as ethnicity } from "../models/ethnocentrism/model.ts";
 
 test("consumer utilities combine retained experience and current neighbors only after consumption", () => {
   const m = choice({

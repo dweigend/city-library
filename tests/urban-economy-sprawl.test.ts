@@ -1,6 +1,6 @@
 import { describe, expect, test } from "bun:test";
-import { create as sprawl } from "../experiments/urban-suite-sprawl-effect/model.ts";
-import { create as economic } from "../experiments/urban-suite-economic-disparity/model.ts";
+import { create as sprawl } from "../models/urban-suite-sprawl-effect/model.ts";
+import { create as economic } from "../models/urban-suite-economic-disparity/model.ts";
 
 const origin = <T extends { readonly x: number; readonly y: number }>(cells: readonly T[]) => cells.find(cell => cell.x === 0 && cell.y === 0)!;
 

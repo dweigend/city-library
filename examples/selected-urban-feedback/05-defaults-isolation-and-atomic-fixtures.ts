@@ -1,7 +1,7 @@
 import { strict as assert } from "node:assert";
-import { create as feedback } from "../../experiments/urban-suite-positive-feedback/model.ts";
-import { create as path } from "../../experiments/urban-suite-path-dependence/model.ts";
-import { create as cells } from "../../experiments/urban-suite-cells/model.ts";
+import { create as feedback } from "../../models/urban-suite-positive-feedback/model.ts";
+import { create as path } from "../../models/urban-suite-path-dependence/model.ts";
+import { create as cells } from "../../models/urban-suite-cells/model.ts";
 
 const f = feedback();
 assert.equal(f.read().cells.length, 21 * 21);

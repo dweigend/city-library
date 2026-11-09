@@ -1,9 +1,9 @@
 import { describe, expect, test } from "bun:test";
-import { create as createChloroplasts } from "../experiments/chloroplasts-and-food/model.ts";
-import { create as createSlime } from "../experiments/slime/model.ts";
-import { create as createFur } from "../experiments/fur/model.ts";
-import { create as createHoneycomb } from "../experiments/honeycomb/model.ts";
-import { create as createBlood } from "../experiments/blood-sugar-regulation/model.ts";
+import { create as createChloroplasts } from "../models/chloroplasts-and-food/model.ts";
+import { create as createSlime } from "../models/slime/model.ts";
+import { create as createFur } from "../models/fur/model.ts";
+import { create as createHoneycomb } from "../models/honeycomb/model.ts";
+import { create as createBlood } from "../models/blood-sugar-regulation/model.ts";
 
 describe("selected biology A source mechanisms", () => {
   test("Slime deposition, diffusion and evaporation conserve the declared mass", () => {

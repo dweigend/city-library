@@ -1,6 +1,6 @@
 /** Frozen public city-model contract; time is minutes. */
 import assert from "node:assert/strict";
-import { create as office } from "../../experiments/des-civic-office/model.ts";
+import { create as office } from "../../models/des-civic-office/model.ts";
 
 const civic = office();
 assert.equal(civic.read().waiting, 2);

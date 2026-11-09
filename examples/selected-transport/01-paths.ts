@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { create } from '../../experiments/paths/model.ts';
+import { create } from '../../models/paths/model.ts';
 
 const empty = create({ seed: 1, walkerCount: 0 });
 assert.equal(empty.snapshot().tick, 0);

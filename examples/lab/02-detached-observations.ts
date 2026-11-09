@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { model } from "../../experiments/preferential-attachment/model.ts";
+import { model } from "../../models/preferential-attachment/model.ts";
 
 const instance = model.create({ seed: 19 });
 const captured = instance.read();

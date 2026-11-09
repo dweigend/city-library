@@ -1,6 +1,6 @@
 import { strict as assert } from "node:assert";
 import { defineUI } from "../../ui/index.ts";
-import { model } from "../../experiments/virus-on-a-network/model.ts";
+import { model } from "../../models/virus-on-a-network/model.ts";
 
 let creations = 0;
 const entry = defineUI({ ...model, create: options => { creations++; return model.create(options); } }, {

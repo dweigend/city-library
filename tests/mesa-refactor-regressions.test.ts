@@ -1,9 +1,9 @@
 import { describe, expect, test } from "bun:test";
-import { create } from "../experiments/pedestrian-crossing-phases/model.ts";
-import { crossingData } from "../experiments/pedestrian-crossing-phases/ui.ts";
+import { create } from "../models/pedestrian-crossing-phases/model.ts";
+import { crossingData } from "../models/pedestrian-crossing-phases/ui.ts";
 import { netLogoColor } from "../ui/index.ts";
-import { create as createZoning } from "../experiments/zoning-scenario-comparison/model.ts";
-import { zoningData } from "../experiments/zoning-scenario-comparison/ui.ts";
+import { create as createZoning } from "../models/zoning-scenario-comparison/model.ts";
+import { zoningData } from "../models/zoning-scenario-comparison/ui.ts";
 
 describe("crossing road projection", () => {
   test("one effective road cell per coordinate retains all nine crosswalk stripes", () => {

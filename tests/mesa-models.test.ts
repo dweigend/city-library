@@ -1,13 +1,13 @@
 import { describe, expect, test } from "bun:test";
-import { model as energy } from "../experiments/household-energy-demand/model.ts";
-import { model as crossing } from "../experiments/pedestrian-crossing-phases/model.ts";
-import { model as zoning } from "../experiments/zoning-scenario-comparison/model.ts";
-import { model as heat } from "../experiments/neighborhood-heat-intervention/model.ts";
-import { model as battery } from "../experiments/solar-battery-microgrid/model.ts";
-import { model as stormwater } from "../experiments/stormwater-retention/model.ts";
-import { model as trees } from "../experiments/urban-tree-watering/model.ts";
-import { model as recycling } from "../experiments/household-recycling-behavior/model.ts";
-import { model as membership } from "../experiments/workplace-household-membership/model.ts";
+import { model as energy } from "../models/household-energy-demand/model.ts";
+import { model as crossing } from "../models/pedestrian-crossing-phases/model.ts";
+import { model as zoning } from "../models/zoning-scenario-comparison/model.ts";
+import { model as heat } from "../models/neighborhood-heat-intervention/model.ts";
+import { model as battery } from "../models/solar-battery-microgrid/model.ts";
+import { model as stormwater } from "../models/stormwater-retention/model.ts";
+import { model as trees } from "../models/urban-tree-watering/model.ts";
+import { model as recycling } from "../models/household-recycling-behavior/model.ts";
+import { model as membership } from "../models/workplace-household-membership/model.ts";
 
 const models = [energy, crossing, zoning, heat, battery, stormwater, trees, recycling, membership];
 describe("original illustrative Mesa city models", () => {

@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
-import { create as ants } from "../../experiments/ants/model.ts";
-import { create as bugs } from "../../experiments/heatbugs/model.ts";
+import { create as ants } from "../../models/ants/model.ts";
+import { create as bugs } from "../../models/heatbugs/model.ts";
 const colony = ants({ population: 2, seed: 9 });
 const setup = colony.read();
 assert.equal(setup.ants.length, 2);

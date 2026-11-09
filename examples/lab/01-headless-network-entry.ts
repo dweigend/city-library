@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { model } from "../../experiments/preferential-attachment/model.ts";
+import { model } from "../../models/preferential-attachment/model.ts";
 
 assert.equal("document" in globalThis, false);
 assert.equal(model.inputs.seed.default, 1);

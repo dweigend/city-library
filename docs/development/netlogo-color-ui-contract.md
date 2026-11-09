@@ -1,6 +1,6 @@
 # Observed numeric color binding for shared UI
 
-Numeric NetLogo colors carry meaning in several adapted models, including the color memory and cycling in Cells. The shared `netLogoColor` UI helper maps those observed numeric values to CSS colors. Its [binding record](../../evidence/development/urban-feedback-reference-evidence/color-bindings.json) pins all 1,400 observed RGB bins, source identity and lookup hash; the mapping does not copy engine code or introduce new scientific state.
+Numeric NetLogo colors carry meaning in several adapted models, including the color memory and cycling in Cells. The shared `netLogoColor` UI helper maps those observed numeric values to CSS colors. Its [binding record](../../models/catalog/acceptance/urban-feedback-reference-evidence/color-bindings.json) pins all 1,400 observed RGB bins, source identity and lookup hash; the mapping does not copy engine code or introduce new scientific state.
 
 The public examples in `examples/ui-color/` cover the binding. Public `netLogoColor(color:number):string`, exported from ui/index.ts, returns lowercase #rrggbb. Require an actual number (TypeError otherwise) and finite value (RangeError otherwise). Normalize modulo140,adding140 only when the remainder is negative; look up floor(10*normalized) in the observed1400-bin RGB table. No interpolation, nearest-bin rounding, hidden state, DOM, clock or RNG. Retain table provenance/hash in the reusable ui/palette module. This is a UI binding, not a new scientific kernel or model-specific private library.
 

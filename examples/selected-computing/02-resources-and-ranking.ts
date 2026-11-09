@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
-import { create as dining } from '../../experiments/dining-philosophers/model.ts';
-import { create as pagerank } from '../../experiments/pagerank/model.ts';
+import { create as dining } from '../../models/dining-philosophers/model.ts';
+import { create as pagerank } from '../../models/pagerank/model.ts';
 
 const d = dining({numPhilosophers: 3, hungryChance: 1, fullChance: 1, cooperation: false});
 d.setScenario({states: ['HUNGRY','HUNGRY','HUNGRY'], owners: [null,null,null], marked: [true,false,false]});

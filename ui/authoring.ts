@@ -1,6 +1,6 @@
-import type { Definition } from '../experiments/definition.ts';
+import type { Definition } from '../models/definition.ts';
 import type { LegacyLiveField, ModelInstance, SetupField, Snapshot, UISpec } from './definition.ts';
-import type { Descriptor } from './controls/form.ts';
+import type { Descriptor } from './inputs.ts';
 
 export type ControlValue = string | number | boolean;
 /** Internal erasure of the getter/formatter existential pair. Public Monitor uses strict
@@ -48,7 +48,7 @@ export function decodeControl(descriptor: Descriptor, value: unknown): ControlVa
   return value;
 }
 
-/** Internal mount-time normalization shared by the DOM and Svelte adapters. No model is created. */
+/** Internal mount-time normalization for the Svelte host. No model is created. */
 export function normalizeAuthoring<P extends object, M extends ModelInstance>(definition: Definition<P, M>, spec: RuntimeSpec<P, M>): NormalizedSpec<P, M> {
   const descriptors = new Map(Object.entries(definition.inputs) as [Extract<keyof P, string>, Descriptor][]);
   const descriptorFor = (field: Extract<keyof P, string>) => {

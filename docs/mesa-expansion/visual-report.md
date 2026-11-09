@@ -2,15 +2,15 @@
 
 Each corrected example now begins with a model view. Tables and time-series charts support that view; they do not substitute for it. These are the existing spatial/network primitives used by Fire, Traffic2Lanes and PreferentialAttachment, with public scientific palette mappings and readable ordinary projections. No reference model, shared component, host or CSS was changed.
 
-All ten model trajectories retain every original observation key and ID exactly against `4427227` at steps 0/1/3/10/30/130. New coordinates are actual Grid coordinates or clearly described view-only schematics; no random presentation positions become domain state. Complete typecheck, 43 focused tests / 403 assertions, 14 frozen public scripts and the explicit Svelte build pass. The browser pass and independent image review approved42final states. The [fresh Gemini high visual-transfer review](visual-gemini-final-review.md) explicitly approved baseline `4758c35` for the corrected requirement.
+All ten model trajectories retain every original observation key and ID exactly against `4427227` at steps 0/1/3/10/30/130. New coordinates are actual Grid coordinates or clearly described view-only schematics; no random presentation positions become domain state. Complete typecheck, 43 focused tests / 403 assertions, 14 frozen public scripts and the explicit Svelte build pass. The browser pass and independent image review approved42final states. The [fresh Gemini high visual-transfer review](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/docs/mesa-expansion/visual-gemini-final-review.md) explicitly approved baseline `4758c35` for the corrected requirement.
 
-Below are exact excerpts from the current ui.ts files and actual final desktop-light screenshots. Full desktop/narrow light/dark originals, hashes and extra mechanism states are in [the 42-image manifest](visual-evidence/manifest.json). [Browser interactions](visual-browser-verification.md), [independent images](visual-image-review.md), [behavior preservation](visual-behavior-verification.md) and the three refactor reports retain their separate scopes.
+Below are exact excerpts from the current ui.ts files and actual final desktop-light screenshots. Full desktop/narrow light/dark originals, hashes and extra mechanism states are in [the 42-image manifest](visual-evidence/manifest.json). [Browser interactions](visual-browser-verification.md), [independent images](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/docs/mesa-expansion/visual-image-review.md), [behavior preservation](visual-behavior-verification.md) and the three refactor reports retain their separate scopes.
 
 ## Neighborhood heat
 
 Actual Grid fields, fixed0–30 heat-index colors and separate shade hatching.
 
-[model.ts](../../experiments/neighborhood-heat-intervention/model.ts) · [ui.ts](../../experiments/neighborhood-heat-intervention/ui.ts)
+[model.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/neighborhood-heat-intervention/model.ts) · [ui.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/neighborhood-heat-intervention/ui.ts)
 
 Excerpt:
 
@@ -34,7 +34,7 @@ export function heatMap(state: Observation<typeof model>): SpatialData {
 
 Identical household outlines show current base/appliance load through size and color.
 
-[model.ts](../../experiments/household-energy-demand/model.ts) · [ui.ts](../../experiments/household-energy-demand/ui.ts)
+[model.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/household-energy-demand/model.ts) · [ui.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/household-energy-demand/ui.ts)
 
 Excerpt:
 
@@ -58,7 +58,7 @@ function householdsData(state: State): SpatialData {
 
 Resource-owned grants occupy dwelling slots; waiters and moved-out households remain distinct.
 
-[model.ts](../../experiments/residential-occupancy/model.ts) · [ui.ts](../../experiments/residential-occupancy/ui.ts)
+[model.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/residential-occupancy/model.ts) · [ui.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/residential-occupancy/ui.ts)
 
 Excerpt:
 
@@ -82,7 +82,7 @@ export function housingData(state: HousingObservation): SpatialData {
 
 Road, signal and cohort positions expose waiting, crossing and arrived stages.
 
-[model.ts](../../experiments/pedestrian-crossing-phases/model.ts) · [ui.ts](../../experiments/pedestrian-crossing-phases/ui.ts)
+[model.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/pedestrian-crossing-phases/model.ts) · [ui.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/pedestrian-crossing-phases/ui.ts)
 
 Excerpt:
 
@@ -106,7 +106,7 @@ export function crossingData(state: CrossingObservation): SpatialData {
 
 Rounded energy blocks, reserve line and explicitly labelled completed-interval flows.
 
-[model.ts](../../experiments/solar-battery-microgrid/model.ts) · [ui.ts](../../experiments/solar-battery-microgrid/ui.ts)
+[model.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/solar-battery-microgrid/model.ts) · [ui.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/solar-battery-microgrid/ui.ts)
 
 Excerpt:
 
@@ -130,7 +130,7 @@ function microgridData(state: State): SpatialData {
 
 Real catchment Grid feeds a schematic volume gauge, drain and red overflow.
 
-[model.ts](../../experiments/stormwater-retention/model.ts) · [ui.ts](../../experiments/stormwater-retention/ui.ts)
+[model.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/stormwater-retention/model.ts) · [ui.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/stormwater-retention/ui.ts)
 
 Excerpt:
 
@@ -154,7 +154,7 @@ function retentionData(state: State): SpatialData {
 
 Tree crown size and fixed-domain color show moisture; blue marks show actual water allocation.
 
-[model.ts](../../experiments/urban-tree-watering/model.ts) · [ui.ts](../../experiments/urban-tree-watering/ui.ts)
+[model.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/urban-tree-watering/model.ts) · [ui.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/urban-tree-watering/ui.ts)
 
 Excerpt:
 
@@ -178,7 +178,7 @@ export function treesData(state: State): SpatialData {
 
 Actual ring edges and fixed view-only positions show green adoption spreading among orange households.
 
-[model.ts](../../experiments/household-recycling-behavior/model.ts) · [ui.ts](../../experiments/household-recycling-behavior/ui.ts)
+[model.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/household-recycling-behavior/model.ts) · [ui.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/household-recycling-behavior/ui.ts)
 
 Excerpt:
 
@@ -200,7 +200,7 @@ export function recyclingNodes(state: Observation<typeof model>): readonly Netwo
 
 Actual planned capacities and completed outcomes form aggregate dwelling-slot panels.
 
-[model.ts](../../experiments/zoning-scenario-comparison/model.ts) · [ui.ts](../../experiments/zoning-scenario-comparison/ui.ts)
+[model.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/zoning-scenario-comparison/model.ts) · [ui.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/zoning-scenario-comparison/ui.ts)
 
 Excerpt:
 
@@ -224,7 +224,7 @@ export function zoningData(state: ZoningObservation): SpatialData {
 
 Actual membership edges join explicit home, resident and workplace columns.
 
-[model.ts](../../experiments/workplace-household-membership/model.ts) · [ui.ts](../../experiments/workplace-household-membership/ui.ts)
+[model.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/workplace-household-membership/model.ts) · [ui.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/workplace-household-membership/ui.ts)
 
 Excerpt:
 

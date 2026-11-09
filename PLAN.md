@@ -5,15 +5,21 @@ City Library brings reusable parts to simulations and games about future cities.
 
 ## Available now
 
-The repository provides a headless core, a shared UI and 125 paired experiment entries. The catalog target is 200 selected models; research dossiers cover the full selection. Implementation, scientific comparison and independent acceptance remain separate requirements.
+The repository provides a headless core and a shared UI, with 125 selected-model implementations and twenty separate illustrative city models. The catalog target is 200 selected models; research dossiers cover the full selection. Implementation, scientific comparison and independent acceptance remain separate requirements.
 
 The core includes Agent/World lifecycle and execution, seeded Random streams, spatial movement and perception, Grid/Field operations, Graph algorithms, planar geometry and statistics. The [Mesa/DES expansion](docs/mesa-expansion/STATUS.md) adds pure measurements, bounded History, serial studies, explicit activation, two-phase updates, linear threshold calculations, causal Agenda composition and capacity-owned resources. Its twenty illustrative city entries supplement the fixed upstream selection; their browser and independent acceptance evidence remains separate. The [Agent Loom specification](docs/agent-loom/README.md) defines the required API beyond the implemented subsets. Use [public exports](index.ts) and asserted examples to check a particular operation; the [coverage inventory](docs/development/coverage.md) needs reconciliation with those contracts.
 
-Both UI hosts support `defineUI`, keyed live controls, flat groups, monitor formatting and labelled charts. All 125 entries use the shared contract without a model-specific fallback. The Svelte runtime remains a work in progress; the legacy host is available. See [Lab usage](ui/agent-lab/README.md) and the [UI API](docs/ui/README.md).
+The Svelte UI supports `defineUI`, keyed live controls, flat groups, monitor formatting and labelled charts. All model entries use the shared contract without a model-specific fallback. The Svelte UI is the single supported runtime; browser checks and their limits are recorded in the [UI acceptance record](ui/agent-lab/acceptance/README.md). See [Lab usage](ui/agent-lab/README.md) and the [UI API](docs/ui/README.md).
 
-The [catalog ledger](experiments/catalog/progress.json) tracks model-level acceptance. It records 125 implemented entries, including 20 whose remaining acceptance stages still need evidence reconciliation. Research is recorded for 200 selected models; independent review and full acceptance are recorded for one. These counts describe distinct stages, not a completed catalog. A working setup or passing test does not establish scientific equivalence or complete accessibility.
+The [catalog ledger](models/catalog/progress.json) tracks model-level acceptance. It records 125 implemented entries, including 20 whose remaining acceptance stages still need evidence reconciliation. Research is recorded for 200 selected models; independent review and full acceptance are recorded for one. These counts describe distinct stages, not a completed catalog. A working setup or passing test does not establish scientific equivalence or complete accessibility.
+
+Models live under `models/<slug>` with their headless implementation, UI binding, usage guide, notices and source records. Catalog-wide selection and acceptance stay under `models/catalog`; shared UI acceptance belongs to `ui/agent-lab/acceptance`. The [path migration receipt](docs/development/model-path-migration.json) retains previous and current frozen-file hashes, including ten manifest discrepancies already present at the base revision. Import-path changes preserve executable assertions and do not advance scientific acceptance stages.
+
+The catalog owns [source and acceptance records](models/catalog/README.md); relocating those records does not establish new scientific acceptance.
 
 ## Next steps
+
+Use the [integration and development checklist](docs/development/continuation-plan.md) to work through the current baseline, acceptance gaps and expansion dependencies one task at a time.
 
 The [Salabim concept integration](docs/development/des-contract.md) is an authorized additive DES expansion with [ten separate city examples](docs/development/des-examples.md). Its [cross-track contract](CROSS-TRACK-CONTRACTS.md) assigns Agenda, queues, Resource, Store, waits, time-weighted observation and event diagnostics to this track; Mesa owns History/measurements, studies, activation, two-phase updates and global execution budgets. The five core and ten model examples are committed and pass against the implemented runtime. Final Gemini DES design/source approval, independent refactor/code checks, scientific countercheck and all ten browser flows are recorded. A later shared canvas resize correction passed its own independent source review, ten-flow/80-viewport replay and fresh spatial-image inspection. This bounded slice is locally complete; the wider API/catalog goals below remain open. Source evidence is separate in [the research record](docs/research/salabim-concepts.md); executed checks and independent review belong in [integration evidence](docs/development/des-integration-evidence.md). Neither this work nor Mesa establishes whole upstream parity or city calibration.
 
@@ -92,7 +98,7 @@ A phase is complete only when all of its four or five scripts typecheck and run 
 
 ## Tooling and release boundaries
 
-Use the pinned Bun workflow and lockfile. `bun run check` runs typechecks (including Svelte), behavior tests, registered public examples, the library build and the packed public consumer. `bun run build:ui:svelte` checks the separate production UI build. Run checks appropriate to each change and record actual results; browser evidence remains separate from shell checks.
+Use the pinned Bun workflow and lockfile. `bun run check` runs typechecks (including Svelte), behavior tests, registered public examples, the library build and the packed public consumer. `bun run build:ui` checks the separate production UI build. Run checks appropriate to each change and record actual results; browser evidence remains separate from shell checks.
 
 Keep headless package exports free of UI/framework/host ambient dependencies and verify downstream consumers when public entries or packaging change. The root package is `city-library`; additional subpaths require explicit contracts. GitHub CI is defined in `.github/workflows/check.yml` with stable Library checks and Svelte build jobs; a local command pass does not prove a hosted CI run or configured branch protection. Formatting/linting scope remains a separate tooling decision.
 

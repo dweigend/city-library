@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { create } from "../../experiments/segregation/model.ts";
+import { create } from "../../models/segregation/model.ts";
 const a = create();
 const b = create();
 const state = a.read();

@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { create } from '../../experiments/traffic-grid/model.ts';
+import { create } from '../../models/traffic-grid/model.ts';
 
 const traffic = create({ seed: 1, numCars: 1, ticksPerCycle: 2 });
 const initial = traffic.snapshot();

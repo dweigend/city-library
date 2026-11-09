@@ -1,4 +1,4 @@
-import type { Definition } from "../experiments/definition.ts";
+import type { Definition } from "../models/definition.ts";
 import { defineUI } from "./index.ts";
 
 interface Parameters {

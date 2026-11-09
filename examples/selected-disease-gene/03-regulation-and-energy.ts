@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
-import { create as repressilator } from "../../experiments/repressilator-1d/model.ts";
-import { create as switchModel } from "../../experiments/genevo-1-genetic-switch/model.ts";
+import { create as repressilator } from "../../models/repressilator-1d/model.ts";
+import { create as switchModel } from "../../models/genevo-1-genetic-switch/model.ts";
 
 const oscillator = repressilator({ seed: 31, initialTF0s: 10, initialTF1s: 0, initialTF2s: 0, tfsPerMRNA: 0, tfDecayProb: 1 });
 assert.deepEqual(oscillator.read().tfCounts, [10, 0, 0]);

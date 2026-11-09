@@ -1,6 +1,6 @@
 # Evolution model contracts
 
-Public City Library operations supply Agent/World/Grid, fractional Tick.advance, uniform/normal Random.number, weighted Random.sample, spatial movement/perception and stats. Source-specific equations below belong in named model procedures, not generic model factories. All snapshots are detached, read is pure, and UI writes only through public model actions. Definitions use the existing experiments/definition.ts and reusable ui/defineUI contract.
+Public City Library operations supply Agent/World/Grid, fractional Tick.advance, uniform/normal Random.number, weighted Random.sample, spatial movement/perception and stats. Source-specific equations below belong in named model procedures, not generic model factories. All snapshots are detached, read is pure, and UI writes only through public model actions. Definitions use the existing models/definition.ts and reusable ui/defineUI contract.
 
 ## Identity and source audit
 
@@ -21,4 +21,4 @@ selected-evolution-source-audit.json retains exact selected catalogPath identity
 
 ## Delivery gates
 
-Exactly five scripts cover all ten, pure source equations, initialized populations, read purity/detachment, actions and terminal/tick boundaries. Broader behavior tests complement them. Do not weaken frozen assertions to accommodate runtime. A missing reusable capability needs its own public contract and examples; do not replace it privately in a model. Mammoths uses a source-native static mask for all 9409 fields, with no runtime importer. See experiments/mammoths/data/README.md and selected-evolution-evidence/mammoths-mask-verification.json. Independent review is required for model acceptance.
+Exactly five scripts cover all ten, pure source equations, initialized populations, read purity/detachment, actions and terminal/tick boundaries. Broader behavior tests complement them. Do not weaken frozen assertions to accommodate runtime. A missing reusable capability needs its own public contract and examples; do not replace it privately in a model. Mammoths uses a source-native static mask for all 9409 fields, with no runtime importer. See models/mammoths/data/README.md and selected-evolution-evidence/mammoths-mask-verification.json. Independent review is required for model acceptance.

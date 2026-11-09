@@ -1,5 +1,5 @@
 import { strict as assert } from "node:assert";
-import { create } from "../../experiments/urban-suite-recycling/model.ts";
+import { create } from "../../models/urban-suite-recycling/model.ts";
 
 const model = create({ numRecyclers: 0, numWastefuls: 0, resourceRegeneration: 0, recyclingWasteCost: 0.5 });
 model.setResources(model.read().cells.map(() => "waste"));

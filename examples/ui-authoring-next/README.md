@@ -40,10 +40,10 @@ bun examples/ui-authoring-next/02-readable-observation-projections.ts
 bun examples/ui-authoring-next/03-namespaced-selection.ts
 bun examples/ui-authoring-next/04-formatter-errors-and-recovery.ts
 bun examples/ui-authoring-next/05-independent-mounts-and-legacy.ts
-bun x tsc -p examples/ui-authoring-next/tsconfig.json
+bun run typecheck
 sha256sum -c examples/ui-authoring-next/SHA256SUMS
 ```
 
-`SHA256SUMS` protects the five scripts, assertion helper, browser harness, type contracts and focused tsconfig. Implementations must preserve their asserted expectations.
+`SHA256SUMS` protects the five scripts, assertion helper, browser harness, type contracts and shared root tsconfig. Implementations must preserve their asserted expectations.
 
-The browser checks need both hosts, desktop/narrow light/dark states, captured page/console failures and independent inspection of screenshots. Headless assertions and typechecks do not establish browser behavior or scientific equivalence.
+The browser checks use the shared Svelte host and require desktop/narrow light/dark states, captured page/console failures and independent inspection of screenshots. Headless assertions and typechecks do not establish browser behavior or scientific equivalence.

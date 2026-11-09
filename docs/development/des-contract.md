@@ -1,6 +1,6 @@
 # Discrete-event composition contract
 
-Status: public examples frozen in commits 1570b64, 0ea94f1 and 73a3bf9 before runtime implementation. Native pre-freeze logic review passed; the first substantial Gemini design review requested changes, with responses recorded in des-design-review.md. Final Gemini approval for DES design/source is recorded in des-gemini-final-review.md; the later shared renderer correction passed separate independent source/browser checks recorded in des-integration-evidence.md. Runtime, scientific validation and browser acceptance are separate gates. Existing Agent Loom contracts remain authoritative.
+Status: the bounded Agenda, service queue, Resource, Store, Signal, trace and time-weighted contracts are implemented. The public examples preserve the accepted calls and expected results. Model-level scientific calibration and broader upstream parity remain separate requirements.
 
 ## Time and causality
 
@@ -102,5 +102,3 @@ Reuse existing explicit Random uniform, normal, exponential and Poisson distribu
 ## Example gates and status
 
 The five scripts in `examples/des/` freeze: causal/tied/budgeted Agenda; resource and queue conservation/lifecycle; store producer-consumer backpressure; explicit state/process/timeouts; time-weighted samples/trace and Random continuation. They use public root imports, assert expected results and initially failed because exports did not yet exist. No mock runtime or disabled assertions are permitted. Ten real model/UI pairs are specified separately in the city-example acceptance document.
-
-The auxiliary refactoring skills missing in this checkout were located at `/home/david/Projekte/city-library/.agents/skills/refactor-library/SKILL.md` and `/home/david/Projekte/city-library/.agents/skills/refactor-model-scripts/SKILL.md`. Their existence is source evidence, not a claim that implementation/refactoring gates passed.

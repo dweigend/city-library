@@ -3,19 +3,19 @@ import {
   create as perceptron,
   sign,
   targetAnswer as signedTarget,
-} from "../experiments/artificial-neural-net-perceptron/model.ts";
+} from "../models/artificial-neural-net-perceptron/model.ts";
 import {
   create as multilayer,
   sigmoid,
   step,
-} from "../experiments/artificial-neural-net-multilayer/model.ts";
-import { create as dining } from "../experiments/dining-philosophers/model.ts";
-import { create as pagerank } from "../experiments/pagerank/model.ts";
+} from "../models/artificial-neural-net-multilayer/model.ts";
+import { create as dining } from "../models/dining-philosophers/model.ts";
+import { create as pagerank } from "../models/pagerank/model.ts";
 import {
   create as genetic,
   hammingDistance,
   calculateFitness,
-} from "../experiments/simple-genetic-algorithm/model.ts";
+} from "../models/simple-genetic-algorithm/model.ts";
 
 describe("B18 neural source equations and action boundaries", () => {
   test("strict signed threshold, all truth functions and single-example update", () => {

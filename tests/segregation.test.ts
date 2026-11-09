@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { create } from "../experiments/segregation/model.ts";
+import { create } from "../models/segregation/model.ts";
 
 test("similarity is weighted by neighbor links, and threshold uses occupied neighbors only", () => {
   const model = create({ width: 7, height: 5, similarWanted: 60 });

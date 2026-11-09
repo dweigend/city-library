@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
-import { create as first } from "../../experiments/birthdays/model.ts";
-import { create as second } from "../../experiments/expected-value/model.ts";
+import { create as first } from "../../models/birthdays/model.ts";
+import { create as second } from "../../models/expected-value/model.ts";
 
 // Frozen before runtime: detached deterministic observations and independent instances.
 for (const create of [first, second]) {

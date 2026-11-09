@@ -1,5 +1,5 @@
 import { strict as assert } from "node:assert";
-import { create } from "../../experiments/urban-suite-sprawl-effect/model.ts";
+import { create } from "../../models/urban-suite-sprawl-effect/model.ts";
 
 const model = create({ population: 1, smoothness: 1, maxAttraction: 0, seekerPatience: 0, waitBetweenSeeking: 5 });
 const id = model.read().agents[0]!.id;

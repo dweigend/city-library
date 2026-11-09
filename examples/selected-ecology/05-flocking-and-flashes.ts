@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
-import { create as flocking } from "../../experiments/flocking/model.ts";
-import { create as fireflies } from "../../experiments/fireflies/model.ts";
+import { create as flocking } from "../../models/flocking/model.ts";
+import { create as fireflies } from "../../models/fireflies/model.ts";
 const flock = flocking({ population: 10, vision: 0, seed: 8 });
 const before = flock.read().birds.map(b => b.heading);
 flock.advance(5);

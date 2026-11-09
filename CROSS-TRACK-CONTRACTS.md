@@ -6,7 +6,6 @@ The coordination-only commit is `91e4c11`. The public-example freeze commits are
 
 ## Status and ownership
 
-Coordination baseline: `cc6d5c3136c07cda94d5a4449b6e384c435f6ad4`. Salabim worktree `/home/david/.t3/worktrees/city-library/t3-4aa89a8c`, owned branch `feat/salabim-concepts`. Mesa worktree `/home/david/.t3/worktrees/city-library/t3-4fc992c0`; its coordinator reports its own branch/commit independently.
 
 The original coordination commit preceded example freeze and runtime. At baseline the public exports were Agent, World, run, Random, Graph, Grid, topology, stats and geometry and their existing types, with no Agenda, History, Resource or Process export. The current signatures below are frozen and implemented; the current integration status above identifies the commits. Implementation and passing target checks remain separate from final independent acceptance.
 

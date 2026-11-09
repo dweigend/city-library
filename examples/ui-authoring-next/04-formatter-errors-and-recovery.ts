@@ -1,5 +1,5 @@
 import { defineUI } from '../../ui/index.ts';
-import { model } from '../../experiments/voting/model.ts';
+import { model } from '../../models/voting/model.ts';
 import { assert, equal, button, changeNumber, restart, monitor, settle } from './assertions.ts';
 
 const message = 'Deliberate presentation failure after stepping';

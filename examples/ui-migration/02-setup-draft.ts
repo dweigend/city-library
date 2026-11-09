@@ -1,6 +1,6 @@
 import { strict as assert } from "node:assert";
 import { defineUI, type UISpec } from "../../ui/index.ts";
-import { model, type VirusParameters } from "../../experiments/virus-on-a-network/model.ts";
+import { model, type VirusParameters } from "../../models/virus-on-a-network/model.ts";
 
 const spec = { setup: [{ field: "numberOfNodes", label: "Nodes" }], views: [] } as const satisfies UISpec<VirusParameters, ReturnType<typeof model.create>>;
 export const ui = defineUI(model, spec);

@@ -1,14 +1,14 @@
 import { describe, expect, test } from "bun:test";
-import { create as createHousing } from "../experiments/residential-occupancy/model.ts";
-import { housingData } from "../experiments/residential-occupancy/ui.ts";
-import { create as createCrossing } from "../experiments/pedestrian-crossing-phases/model.ts";
-import { crossingData } from "../experiments/pedestrian-crossing-phases/ui.ts";
-import { create as createRecycling } from "../experiments/household-recycling-behavior/model.ts";
-import { recyclingNodes } from "../experiments/household-recycling-behavior/ui.ts";
-import { create as createZoning } from "../experiments/zoning-scenario-comparison/model.ts";
-import { zoningData } from "../experiments/zoning-scenario-comparison/ui.ts";
-import { create as createMembership } from "../experiments/workplace-household-membership/model.ts";
-import { membershipNodes } from "../experiments/workplace-household-membership/ui.ts";
+import { create as createHousing } from "../models/residential-occupancy/model.ts";
+import { housingData } from "../models/residential-occupancy/ui.ts";
+import { create as createCrossing } from "../models/pedestrian-crossing-phases/model.ts";
+import { crossingData } from "../models/pedestrian-crossing-phases/ui.ts";
+import { create as createRecycling } from "../models/household-recycling-behavior/model.ts";
+import { recyclingNodes } from "../models/household-recycling-behavior/ui.ts";
+import { create as createZoning } from "../models/zoning-scenario-comparison/model.ts";
+import { zoningData } from "../models/zoning-scenario-comparison/ui.ts";
+import { create as createMembership } from "../models/workplace-household-membership/model.ts";
+import { membershipNodes } from "../models/workplace-household-membership/ui.ts";
 
 function withoutIdentities(value: unknown): unknown {
   if (Array.isArray(value)) return value.map(withoutIdentities);

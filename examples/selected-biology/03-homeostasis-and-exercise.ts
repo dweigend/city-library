@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
-import { create as blood } from "../../experiments/blood-sugar-regulation/model.ts";
-import { create as muscle } from "../../experiments/muscle-development/model.ts";
+import { create as blood } from "../../models/blood-sugar-regulation/model.ts";
+import { create as muscle } from "../../models/muscle-development/model.ts";
 
 const body = blood({ seed: 1, metabolicRate: 0 });
 assert.equal(body.read().glucoseCount, 4356);

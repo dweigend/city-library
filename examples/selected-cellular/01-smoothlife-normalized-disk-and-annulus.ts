@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { create } from "../../experiments/smoothlife/model.ts";
+import { create } from "../../models/smoothlife/model.ts";
 // Uniform input must remain uniform: normalized disk/annulus means are both 0.4.
 const m = create({ width: 9, height: 9, innerRadius: 1, outerRadius: 2, seed: 1 });
 m.setCells(m.read().cells.map(() => 0.4));

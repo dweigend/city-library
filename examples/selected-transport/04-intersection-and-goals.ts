@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
-import { create as intersection } from '../../experiments/traffic-intersection/model.ts';
-import { create as goals } from '../../experiments/traffic-grid-goal/model.ts';
+import { create as intersection } from '../../models/traffic-intersection/model.ts';
+import { create as goals } from '../../models/traffic-grid-goal/model.ts';
 
 const crossing = intersection({ seed: 1, freqNorth: 0, freqEast: 0, auto: false });
 assert.equal(crossing.snapshot().cars.length, 0);

@@ -1,9 +1,9 @@
 import { test, expect } from "bun:test";
-import { create as birth } from "../experiments/simple-birth-rates/model.ts";
-import { create as daisy } from "../experiments/daisyworld/model.ts";
-import { create as termites } from "../experiments/termites/model.ts";
-import { create as shepherds } from "../experiments/shepherds/model.ts";
-import { create as rabbits } from "../experiments/rabbits-grass-weeds/model.ts";
+import { create as birth } from "../models/simple-birth-rates/model.ts";
+import { create as daisy } from "../models/daisyworld/model.ts";
+import { create as termites } from "../models/termites/model.ts";
+import { create as shepherds } from "../models/shepherds/model.ts";
+import { create as rabbits } from "../models/rabbits-grass-weeds/model.ts";
 
 test("birth source odd-capacity split, empty go and experiment restart", () => {
   const m = birth({ carryingCapacity: 1, redFertility: 0, blueFertility: 0 });

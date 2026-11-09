@@ -1,7 +1,7 @@
 /** Compile-only optional/extracted monitor contracts; not a runtime fixture. */
 import { defineUI, type Monitor, type Observation } from '../ui/index.ts';
 import { defineUI as defineSvelteUI, type Monitor as SvelteMonitor } from '../ui/svelte/index.ts';
-import { model } from '../experiments/voting/model.ts';
+import { model } from '../models/voting/model.ts';
 
 function optionalFormatterContracts(
   wrongScalar: { value: (state: Observation<typeof model>) => number; format?: (value: string) => string; label: string },

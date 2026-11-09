@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { create } from "../../experiments/life/model.ts";
+import { create } from "../../models/life/model.ts";
 
 const life = create({ width: 5, height: 5, initialization: "blank" });
 const mask = life.read().cells.map(({ x, y }) => y === 0 && Math.abs(x) <= 1);

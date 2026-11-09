@@ -16,7 +16,7 @@ This inventory and the [UI API reference](api-reference.md) form the binding UI 
 | UI-002 | `UISpec<P,M>` | Ordinary object; only `views` is required. No renderer configuration or layout tree required. | Supported | [Principles](api-reference.md#principles) |
 | UI-003 | `ModelInstance` | `read(): unknown`, `advance(steps?: number): void`, `dispose?(): void`; concrete `read` return type supplies `S`. | Supported | [Model](api-reference.md#model) |
 | UI-004 | `BoundEntry` | `title: string`, `description?: string`, `mount(container: HTMLElement): { dispose(): void; pause?(): void }`. Mounted handle belongs to host integration. | Supported | [Lifecycle](api-reference.md#lifecycle) |
-| UI-005 | `Definition<P,M>` | Headless companion from `experiments/definition.ts`: `title`, `description?`, `inputs: Inputs<P>`, `create(options?: Partial<P>): M`. Not re-exported by `ui/index.ts`. | Supported | [Model](api-reference.md#model) |
+| UI-005 | `Definition<P,M>` | Headless companion from `models/definition.ts`: `title`, `description?`, `inputs: Inputs<P>`, `create(options?: Partial<P>): M`. Not re-exported by `ui/index.ts`. | Supported | [Model](api-reference.md#model) |
 | UI-006 | `Input<T>`, `Inputs<P>` | Number: `kind`, `default`, optional `min/max/step/integer`; boolean: `kind/default`; choice: `kind/default/options`; text: `kind/default`. Canonical defaults and validation belong to model. | Supported | [Model](api-reference.md#model) |
 
 ## Controls and observations
@@ -64,7 +64,7 @@ Every view requires `type` and `label`; labels are currently explicit. All callb
 | UI-047 | `SpatialData`: `width: number`, `height: number`, `agents: readonly SpatialAgent[]`, `cells?: readonly Cell[]` | Required extent/agents; omission gives no cell backdrop. | Supported | [Spatial](api-reference.md#spatial) |
 | UI-048 | `SpatialData.showLabels?: boolean` | Controlled label visibility when supplied; omission retains host Labels control. | Supported | [Spatial](api-reference.md#spatial) |
 | UI-049 | `SpatialData.segments?: readonly SpatialSegment[]` | Ordered strokes above cells and below agents/selection/labels; omitted means no strokes. | Supported | [Spatial](api-reference.md#spatial) |
-| UI-050 | `SpatialSegment`: `from/to: { x: number; y: number }`, `color?: string`, `width?: number` | Detached finite centered world endpoints; nonnegative finite CSS-pixel width defaults 1, zero omits stroke. Color defaults to host foreground (white in legacy host). | Supported | [Spatial](api-reference.md#spatial) |
+| UI-050 | `SpatialSegment`: `from/to: { x: number; y: number }`, `color?: string`, `width?: number` | Detached finite centered world endpoints; nonnegative finite CSS-pixel width defaults 1, zero omits stroke. Color defaults to host foreground. | Supported | [Spatial](api-reference.md#spatial) |
 | UI-051 | `Series`: `label: string`, `color?: string`, `points: readonly { x: number; y: number }[]` | Label/points required; host palette when color omitted. No model history is inferred or recorded by the view. | Supported | [Charts](api-reference.md#charts) |
 
 ## Drawing and palette

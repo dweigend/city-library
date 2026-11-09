@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { model } from "../../experiments/des-bike-redistribution/model.ts";
+import { model } from "../../models/des-bike-redistribution/model.ts";
 
 const bikes = model.create();
 assert.deepEqual(bikes.read().stations.map((station) => station.bikes), [6, 0, 0]);

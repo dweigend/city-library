@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
-import { create as book } from "../../experiments/limited-order-book/model.ts";
-import { create as bidding } from "../../experiments/bidding-market/model.ts";
+import { create as book } from "../../models/limited-order-book/model.ts";
+import { create as bidding } from "../../models/bidding-market/model.ts";
 const close = (a: number, b: number) => assert.ok(Math.abs(a - b) < 1e-7, `${a} != ${b}`);
 const b = book({ seed: 1 });
 const initial = b.read(); assert.equal(initial.traders.length, 100);

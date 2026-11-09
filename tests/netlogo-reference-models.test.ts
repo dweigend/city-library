@@ -1,13 +1,13 @@
 import { test, expect } from "bun:test";
-import { model as attachment } from "../experiments/preferential-attachment/model.ts";
-import { model as voting } from "../experiments/voting/model.ts";
-import { model as wolf } from "../experiments/wolf-sheep-predation/model.ts";
+import { model as attachment } from "../models/preferential-attachment/model.ts";
+import { model as voting } from "../models/voting/model.ts";
+import { model as wolf } from "../models/wolf-sheep-predation/model.ts";
 import {
   model as wealth,
   wealthClass,
   profitableHeading,
   harvestedWealth,
-} from "../experiments/wealth-distribution/model.ts";
+} from "../models/wealth-distribution/model.ts";
 
 test("attachment always grows a simple tree and seeded observations remain independent", () => {
   const first = attachment.create({ seed: 12 });

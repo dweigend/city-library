@@ -1,9 +1,9 @@
 import { test, expect } from 'bun:test';
-import { create as minority } from '../experiments/minority-game/model.ts';
-import { create as rumor } from '../experiments/rumor-mill/model.ts';
-import { create as signaling } from '../experiments/signaling-game/model.ts';
-import { create as development } from '../experiments/piaget-vygotsky-game/model.ts';
-import { create as heroes } from '../experiments/heroes-and-cowards/model.ts';
+import { create as minority } from '../models/minority-game/model.ts';
+import { create as rumor } from '../models/rumor-mill/model.ts';
+import { create as signaling } from '../models/signaling-game/model.ts';
+import { create as development } from '../models/piaget-vygotsky-game/model.ts';
+import { create as heroes } from '../models/heroes-and-cowards/model.ts';
 
 test('minority rewards old actual and virtual choices before shifting history',()=>{
  const m=minority({number:11,memory:2,strategiesPerAgent:3});const before=m.read();m.advance();const after=m.read();

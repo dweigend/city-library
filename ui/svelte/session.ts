@@ -1,8 +1,8 @@
 import { normalizeAuthoring, decodeControl, groupLive, type RuntimeSpec } from "../authoring.ts";
 import { flushSync } from "svelte";
 import { writable, type Readable } from "svelte/store";
-import type { Definition } from "../../experiments/definition.ts";
-import type { Descriptor } from "../controls/form.ts";
+import type { Definition } from "../../models/definition.ts";
+import type { Descriptor } from "../inputs.ts";
 import type { DrawingIntent, Inspector, ModelInstance, Snapshot, View } from "../definition.ts";
 import { createPlayback } from "../playback.ts";
 import { createRepeatedAction } from "../actions/repeat.ts";

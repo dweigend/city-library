@@ -1,9 +1,9 @@
 import { describe, expect, test } from "bun:test";
-import { create as createEnergy } from "../experiments/household-energy-demand/model.ts";
-import { create as createBattery } from "../experiments/solar-battery-microgrid/model.ts";
-import { create as createBasin } from "../experiments/stormwater-retention/model.ts";
-import { create as createTrees } from "../experiments/urban-tree-watering/model.ts";
-import { treesData } from "../experiments/urban-tree-watering/ui.ts";
+import { create as createEnergy } from "../models/household-energy-demand/model.ts";
+import { create as createBattery } from "../models/solar-battery-microgrid/model.ts";
+import { create as createBasin } from "../models/stormwater-retention/model.ts";
+import { create as createTrees } from "../models/urban-tree-watering/model.ts";
+import { treesData } from "../models/urban-tree-watering/ui.ts";
 
 describe("detached observations for city resource visuals", () => {
   test("tree moisture colors use a fixed domain independent of display population", () => {
@@ -85,7 +85,7 @@ describe("detached observations for city resource visuals", () => {
 
   test("resource UI imports are inert without browser globals", async () => {
     for (const slug of ["household-energy-demand", "solar-battery-microgrid", "stormwater-retention", "urban-tree-watering"]) {
-      const entry = await import(`../experiments/${slug}/ui.ts`);
+      const entry = await import(`../models/${slug}/ui.ts`);
       expect(typeof entry.ui.mount).toBe("function");
     }
   });

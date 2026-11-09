@@ -2,11 +2,11 @@ import { describe, expect, test } from "bun:test";
 import {
   create as birthdays,
   makeMonth,
-} from "../experiments/birthdays/model.ts";
-import { create as galton } from "../experiments/galton-box/model.ts";
-import { create as rabbits } from "../experiments/binomial-rabbits/model.ts";
-import { create as doors } from "../experiments/three-doors/model.ts";
-import { create as patchwork } from "../experiments/stochastic-patchwork/model.ts";
+} from "../models/birthdays/model.ts";
+import { create as galton } from "../models/galton-box/model.ts";
+import { create as rabbits } from "../models/binomial-rabbits/model.ts";
+import { create as doors } from "../models/three-doors/model.ts";
+import { create as patchwork } from "../models/stochastic-patchwork/model.ts";
 
 describe("B17 first five source mechanisms", () => {
   test("Birthdays sorts 23 people, colors exactly duplicate dates and counts rooms", () => {

@@ -1,5 +1,5 @@
 import { strict as assert } from "node:assert";
-import { create } from "../../experiments/urban-suite-structure-from-randomness-1/model.ts";
+import { create } from "../../models/urban-suite-structure-from-randomness-1/model.ts";
 
 const model = create({ keepAddingRandomness: false, seed: 1 });
 model.setActivities(model.read().cells.map(cell => cell.x === -64.5 && cell.y === -64.5 ? 1 : 0));

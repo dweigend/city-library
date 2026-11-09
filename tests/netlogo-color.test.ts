@@ -2,7 +2,7 @@ import { expect, test } from "bun:test";
 import { readFileSync } from "node:fs";
 import { netLogoColor } from "../ui/palette/netlogo-color.ts";
 
-const binding = JSON.parse(readFileSync(new URL("../evidence/development/urban-feedback-reference-evidence/color-bindings.json", import.meta.url), "utf8")) as {
+const binding = JSON.parse(readFileSync(new URL("../models/catalog/acceptance/urban-feedback-reference-evidence/color-bindings.json", import.meta.url), "utf8")) as {
   lookup: { rgb1400: number[][]; sha256: string };
 };
 const hex = (rgb: readonly number[]) => "#" + rgb.map(channel => channel.toString(16).padStart(2, "0")).join("");

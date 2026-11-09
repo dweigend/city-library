@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
-import { create as hiv } from "../../experiments/hiv/model.ts";
-import { create as epidemic } from "../../experiments/epidem-basic/model.ts";
+import { create as hiv } from "../../models/hiv/model.ts";
+import { create as epidemic } from "../../models/epidem-basic/model.ts";
 
 const couples = hiv({ seed: 21, initialPeople: 80, averageCouplingTendency: 0, averageTestFrequency: 0 });
 assert.equal(couples.read().agents.length, 80);

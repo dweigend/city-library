@@ -1,5 +1,5 @@
 import { strict as assert } from "node:assert";
-import { create } from "../../experiments/urban-suite-awareness/model.ts";
+import { create } from "../../models/urban-suite-awareness/model.ts";
 
 const model = create({ people: 0, centers: 0, nonUsageLimit: 0, seed: 7 });
 model.setPeople([11, 11, 10].map((awareness) => ({ x: 0, y: -0.5, heading: 0, awareness })));

@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { create } from "../../experiments/segregation/model.ts";
+import { create } from "../../models/segregation/model.ts";
 const m=create({width:5,height:5});
 const before=m.read();
 assert.deepEqual(m.read(),before);
