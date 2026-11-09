@@ -20,6 +20,18 @@ export type {
 export { stats } from "./src/stats/index.ts";
 export type { Histogram, Summary } from "./src/stats/index.ts";
 export { geometry } from "./src/geometry/index.ts";
+export { Agenda, EventTrace } from "./src/agenda/index.ts";
+export type { Event, EventHandle, TraceEvent } from "./src/agenda/index.ts";
+export { TimeWeighted } from "./src/stats/time-weighted.ts";
+export type { TimeWeightedSummary } from "./src/stats/time-weighted.ts";
+export { ServiceQueue } from "./src/agenda/service-queue.ts";
+export type { QueueHandle, QueuePolicy } from "./src/agenda/service-queue.ts";
+export { Resource } from "./src/agenda/resource.ts";
+export type { ResourceRequest, ResourceStatus } from "./src/agenda/resource.ts";
+export { Store } from "./src/agenda/store.ts";
+export type { PutRequest, GetRequest, PutStatus, GetStatus } from "./src/agenda/store.ts";
+export { Signal } from "./src/agenda/signal.ts";
+export type { WaitRequest, WaitStatus } from "./src/agenda/signal.ts";
 export type { Bounds, PlanarXY, PlanarPolygon, PlanarGeometry, PlanarJson, PlanarFeature, PlanarDataset, ParcelShape, MergeResult, SplitResult } from "./src/geometry/index.ts";
 export { measurements } from "./src/measurement/index.ts";
 export type { Measurement } from "./src/measurement/index.ts";
