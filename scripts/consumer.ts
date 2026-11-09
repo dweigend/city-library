@@ -234,7 +234,7 @@ const scheduled=scheduledWorld.add(Agent.add({energy:2}));
 scheduledWorld.activate([scheduled],({self})=>{self.energy+=1},{order:'fixed'});
 if(scheduled.energy!==3||scheduledWorld.tick.value!==0)throw Error('packed activation mismatch');
 twoPhase([scheduled],{compute:member=>member.energy*2,commit:(member,value)=>{member.energy=value}});
-if(scheduled.energy!==6)throw Error('packed two-phase mismatch');
+if(numeric.read(scheduled).energy!==6)throw Error('packed two-phase mismatch');
 if(continuous.crossing({from:0,to:4,threshold:2,duration:2})?.elapsed!==1)throw Error('packed crossing mismatch');
 const planned=experiments.replicate(experiments.design({axes:[{name:'demand',values:[1,2]}]}),[1]);
 const study=experiments.run({plan:planned,steps:2,create:()=>({world:World.add(),step(){}}),measure:()=>({value:2})});
