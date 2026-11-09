@@ -1,5 +1,6 @@
 /** Depot backpressure, one-trip parcel agents and graph-derived round trips. */
 import { Agent, Agenda, Graph, Resource, Store, World, run } from "city-library";
+import type { ResourceRequest } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
 import { parameters, stepCount } from "../parameters.ts";
 
@@ -10,6 +11,14 @@ export const inputs: Inputs<ParcelParameters> = {
   loadingMinutes: { kind: "number", default: 1, min: 1, max: 10, integer: true },
 };
 type Parcel = Agent<{ number: number; destination: string }>;
+interface ParcelJourney {
+  agent: Parcel;
+  minutes: number;
+  dispatched?: number;
+  delivered?: number;
+  returned?: number;
+  ticket?: ResourceRequest<Parcel>;
+}
 export function create(options: Partial<ParcelParameters> = {}) {
   const settings = parameters(inputs, options);
   const world = World.add();
@@ -24,7 +33,7 @@ export function create(options: Partial<ParcelParameters> = {}) {
   const distances = graph.distances({ from: depot, cost: (edge) => edge.minutes });
   const buffer = Store.add<Parcel>({ capacity: settings.depotCapacity });
   const van = Resource.add<Parcel>({ capacity: 1 });
-  const parcels: { agent: Parcel; minutes: number; dispatched?: number; delivered?: number; returned?: number; ticket?: ReturnType<typeof van.request> }[] = [];
+  const parcels: ParcelJourney[] = [];
   const history: { x: number; y: number }[] = [{ x: 0, y: 0 }];
   function dispatch() {
     if (van.available === 0) return;
