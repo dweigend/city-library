@@ -1,6 +1,6 @@
 import type { RendererOptions } from "./appearance.ts";
 import { validateCanvasData } from "./spatial-data.ts";
-import { canvasPoint, hitSceneSymbol, symbolDiameter, symbolDimensions, symbolRotation, validateCanvasGeometry } from "./spatial-geometry.ts";
+import { canvasPoint, hitSceneSymbol, symbolDiameter, symbolDimensions, symbolRotation, validateBufferDimensions, validateCanvasGeometry } from "./spatial-geometry.ts";
 import { symbolPath } from "./spatial-symbols.ts";
 import type {
   Cell,
@@ -134,6 +134,7 @@ export function mountCanvas(
     if (!Number.isFinite(width) || width <= 0 || !Number.isFinite(height) || height <= 0)
       throw new RangeError("Canvas buffer dimensions must remain finite and positive.");
     const buffer = { width: Math.max(1, Math.round(width)), height: Math.max(1, Math.round(height)), pixelWidth: width };
+    validateBufferDimensions(buffer);
     if (data) validateCanvasGeometry(data, buffer, Math.min(devicePixelRatio, 2));
     return buffer;
   }

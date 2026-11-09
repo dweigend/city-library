@@ -1,6 +1,6 @@
 import { describe, expect, test } from "bun:test";
 import type { SpatialAgent, SpatialData } from "../ui/definition.ts";
-import { canvasPoint, hitSceneSymbol, symbolDimensions, symbolRotation, validateCanvasGeometry } from "../ui/views/spatial-geometry.ts";
+import { canvasPoint, hitSceneSymbol, symbolDimensions, symbolRotation, validateBufferDimensions, validateCanvasGeometry } from "../ui/views/spatial-geometry.ts";
 
 // Fixed geometry fixtures specify actual painted bounds, not a second renderer.
 const scene = { width: 100, height: 50 };
@@ -40,6 +40,14 @@ describe("flat scene geometry", () => {
     expect(() => validateCanvasGeometry(data, buffer, 1)).toThrow(RangeError);
     expect(() => symbolRotation({ id: "spin", x: 0, y: 0, heading: Number.MAX_VALUE })).toThrow(RangeError);
     expect(() => symbolDimensions({ ...rectangle, extent: { width: Number.MAX_VALUE, height: 1 } }, { width: 0.1, height: 1 }, buffer, 1)).toThrow(RangeError);
+  });
+  test("buffer dimensions reject DOM unsigned-long wrapping before publication", () => {
+    for (const dimension of [0, -1, 0.5, 2 ** 32, 400 * 2 ** 32, Number.MAX_VALUE, Infinity, NaN]) {
+      expect(() => validateBufferDimensions({ width: dimension, height: 1 })).toThrow(RangeError);
+      expect(() => validateBufferDimensions({ width: 1, height: dimension })).toThrow(RangeError);
+    }
+    validateBufferDimensions({ width: 1, height: 0xffffffff });
+    validateBufferDimensions(buffer);
   });
   test("geometry validation leaves the detached projection untouched", () => {
     const data: SpatialData = { ...scene, agents: [rectangle], labels: [{ x: 0, y: 0, text: "Slots" }] };

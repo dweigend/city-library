@@ -7,6 +7,14 @@ function finite(value: number, name: string): number {
   return value;
 }
 
+/** Canvas dimensions use Web IDL unsigned long; conversion otherwise wraps. */
+export function validateBufferDimensions(buffer: Dimensions): void {
+  for (const dimension of [buffer.width, buffer.height]) {
+    if (!Number.isInteger(dimension) || dimension < 1 || dimension > 0xffffffff)
+      throw new RangeError("Canvas buffer dimensions must fit positive unsigned 32-bit integers.");
+  }
+}
+
 /** Keep the legacy minimum in buffer pixels, including on low-DPI displays. */
 export function symbolDiameter(agent: SpatialAgent, pixelRatio: number): number {
   return Math.max(2, finite((agent.size ?? 8) * pixelRatio, "Symbol diameter"));
