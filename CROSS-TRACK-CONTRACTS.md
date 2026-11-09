@@ -1,10 +1,14 @@
 # Mesa / Salabim integration contracts
 
+## Current integration status
+
+The coordination-only commit is `91e4c11`. The public-example freeze commits are `1570b64` (five DES scripts), `0ea94f1` (five phase-A city pairs) and `73a3bf9` (five phase-B city pairs). Additive APIs below are now frozen and implemented through `e624416`; Mesa World attachment is normally merged from `69ed507`. Native pre-freeze logic review passed; Gemini requested contract clarifications, responses are recorded in `docs/development/des-design-review.md`, and final independent approval remains pending. The original coordination baseline below explains the delivery boundary.
+
 ## Status and ownership
 
 Coordination baseline: `cc6d5c3136c07cda94d5a4449b6e384c435f6ad4`. Salabim worktree `/home/david/.t3/worktrees/city-library/t3-4aa89a8c`, owned branch `feat/salabim-concepts`. Mesa worktree `/home/david/.t3/worktrees/city-library/t3-4fc992c0`; its coordinator reports its own branch/commit independently.
 
-This document commits a coordination agreement, **not an example freeze or runtime delivery**. At this revision all new Salabim signatures below are proposed, awaiting the example-first commit and independent review. Actual baseline public exports are Agent, World, run, Random, Graph, Grid, topology, stats and geometry and their existing types. No Agenda, History, Resource or Process export exists at baseline. A later evidence entry records the exact example-freeze SHA; do not infer freezing from this document's commit.
+The original coordination commit preceded example freeze and runtime. At baseline the public exports were Agent, World, run, Random, Graph, Grid, topology, stats and geometry and their existing types, with no Agenda, History, Resource or Process export. The current signatures below are frozen and implemented; the current integration status above identifies the commits. Implementation and passing target checks remain separate from final independent acceptance.
 
 | Owner | Scope |
 | --- | --- |
@@ -13,7 +17,7 @@ This document commits a coordination agreement, **not an example freeze or runti
 
 There is one capacity owner: Resource. Mesa composes Resource rather than implementing another reservation counter. No duplicate History, activation scheduler or global budget API is introduced. Each track owns its files; no edits are made in the counterpart checkout. Integrate through normal merges preserving example-first history. Each track adds only its own root exports; the Mesa integration coordinator resolves textual export conflicts.
 
-## Agenda: proposed exact public surface
+## Agenda: frozen public surface
 
 ```ts
 Agenda.add<E = unknown>(): Agenda<E>
@@ -36,13 +40,13 @@ The binding batch API is preserved. Time starts at zero; event time is finite an
 
 The caller's per-call event limit counts equal-time events and zero-delay chains. Exhaustion leaves the clock at the last event; no hidden skipping, World tick update or global run-budget consumption occurs. Mesa global run budgets count their separately defined execution unit. Neither budget silently substitutes for the other.
 
-Agenda remains standalone initially. Mesa owns `src/world/world.ts` and `src/world/activation/`; Salabim will not edit those. Desired binding attachment is `world.add(agenda)`, `world.delete(agenda)`, `world.agendas: readonly Agenda[]`, sharing existing atomic membership and single-World ownership without implicit dispatch. Mesa must explicitly integrate that seam; until implemented/tested it remains pending rather than silently promised delivered.
+Agenda is usable standalone and World-attached. Mesa owns `src/world/world.ts` and `src/world/activation/`; Salabim will not edit those. Desired binding attachment is `world.add(agenda)`, `world.delete(agenda)`, `world.agendas: readonly Agenda[]`, sharing existing atomic membership and single-World ownership without implicit dispatch. Mesa implemented that seam in 69ed507; attachment/clock/identity checks now pass on the merged target.
 
 ## Process interaction and activation
 
 No public `Process`, `ProcessEvent` or `Process.activate` scheduler is frozen or delivered by Salabim. A previously proposed facade is superseded before freeze by this coordination decision. Process interaction is ordinary typed model state plus Agenda events/handles: delay schedules an event, reactivation replaces a pending handle, passivation cancels it while retaining state, cancellation marks a terminal state, and timeout is an explicitly ordered event. A dispatcher may explicitly invoke Mesa's existing `world.activate`; Agenda does not duplicate selection, activation frames or two-phase updates. Exact Mesa activation signatures remain owned by its contract/example commit.
 
-## Resource and capacity: proposed exact public surface
+## Resource and capacity: frozen public surface
 
 ```ts
 Resource.add<T>(options: { capacity: number; policy?: "fifo" | "priority" }): Resource<T>
@@ -66,7 +70,7 @@ Release of a granted ticket synchronously grants eligible waiters; repeated rele
 
 Shrink defaults to reject below used units atomically. Explicit retain preserves existing claims without preemption, allows temporary overcapacity, and reports zero available until releases catch up. Previously valid oversized waiting requests can block until growth/cancellation. Growth admits waiters. No callback or activation occurs automatically.
 
-## Queue, Store and wait conditions: proposed surface
+## Queue, Store and wait conditions: frozen surface
 
 ```ts
 ServiceQueue.add<T>(options?: { policy?: "fifo" | "priority" }): ServiceQueue<T>
@@ -117,14 +121,16 @@ TimeWeighted initial at defaults to 0. Finite times are nonnegative/nondecreasin
 
 EventTrace replaces the pre-freeze name EventSamples. It is bounded **event diagnostics**, allows equal at values, rejects backward timestamps, retains newest entries, and copies supported data. It is not a measurement-definition system or numerical History substitute. No automatic recording/subscription/console output.
 
-Mesa reports these binding/proposed signatures (its own example-freeze SHA is authoritative):
+Mesa reports these delivered signatures (its own example-freeze SHA is authoritative):
 
 ```ts
 storage.history(options?: { capacity?: number }): History // default 300, cap 1_000_000
 history.add(sample: { tick: number; values: Readonly<Record<string, number>> }): void
 history.samples: readonly { readonly tick: number; readonly values: Readonly<Record<string, number>> }[]
 history.delete(): void
-measurements.define(project).read(model): Readonly<Record<string, number>>
+measurements.define<Model, Values extends Readonly<Record<string, number>>>(
+  project: (model: Model) => Values
+): { read(model: Model): Readonly<Values> }
 ```
 
 History uses strictly increasing tick and a fixed exact finite metric schema; reads are detached. Its tick is an explicitly supplied recording axis, not an automatic World clock. Caller may supply World tick or deliberately map Agenda time into tick in consistent units. Aggregate same-time event effects before one History add, or record them in EventTrace. Never invent epsilon ticks or modify World tick to satisfy History. Undefined time-weighted mean at zero duration must be omitted or explicitly handled by caller before numeric History recording. Neither read advances any clock or draws Random.

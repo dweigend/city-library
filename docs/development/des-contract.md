@@ -1,6 +1,6 @@
 # Discrete-event composition contract
 
-Status: additive design for independent review in the Salabim concept integration; examples must be frozen before runtime implementation. Runtime, scientific validation and browser acceptance are separate gates. Existing Agent Loom contracts remain authoritative.
+Status: public examples frozen in commits 1570b64, 0ea94f1 and 73a3bf9 before runtime implementation. Native pre-freeze logic review passed; the first substantial Gemini design review requested changes, with responses recorded in des-design-review.md. Final independent approval is pending. Runtime, scientific validation and browser acceptance are separate gates. Existing Agent Loom contracts remain authoritative.
 
 ## Time and causality
 
@@ -10,7 +10,9 @@ The additive operation `agenda.next({until}): Event<E> | undefined` removes at m
 
 Models explicitly dispatch returned data with ordinary synchronous TypeScript. Every loop has a finite positive event budget; equal-time and zero-delay chains count against it. Exhausting the budget leaves the cursor at the last returned event and does not silently skip work or advance World tick. The caller may resume at the same horizon. If exactly the final event consumes the budget, a later empty `next` is needed to advance to the horizon. No guarantee of progress exists for a model that continually schedules zero-delay work. No hidden callback, timer, Promise, World step or second Environment engine exists.
 
-Agenda is usable without World. `world.add(agenda)`, `world.delete(agenda)` and readonly `world.agendas` are binding membership targets owned by the Mesa attachment slice (not yet delivered here), using existing membership semantics, including atomic batches and at most one World owner. World attachment never dispatches events. World tick and Agenda time are distinct; models document an explicit unit/horizon mapping. A successful `run(world, step, 1)` increments tick once regardless of event count; fractional explicit tick advances remain valid.
+Agenda is usable without World. `world.add(agenda)`, `world.delete(agenda)` and readonly `world.agendas` are implemented by the normally merged Mesa attachment slice (69ed507), using existing membership semantics, including atomic batches and at most one World owner. World attachment never dispatches events. World tick and Agenda time are distinct; models document an explicit unit/horizon mapping. A successful `run(world, step, 1)` increments tick once regardless of event count; fractional explicit tick advances remain valid.
+
+All public Agenda arguments validate before mutation. Missing/non-record options, unknown keys, accessors and nonnumeric times throw TypeError; nonfinite/out-of-range times and invalid numeric budgets/priorities throw RangeError. Invalid `next` leaves the cursor and pending events unchanged.
 
 ## Service queue and resources
 
@@ -32,7 +34,7 @@ resource.available: number
 resource.waiting: readonly ResourceRequest<T>[]
 ```
 
-Capacity is a nonnegative safe integer; request units are positive safe integers, default 1. A new request larger than current capacity rejects. Priority defaults to 0 and is a signed safe integer. FIFO is default. Priority orders lower values first with stable insertion ties. Strict head-of-line admission never skips a blocked earlier request to admit a smaller later request. A new request cannot bypass the queue. A request ticket exposes readonly `id`, canonical `owner`, `units` and live `status: "waiting" | "granted" | "released" | "cancelled"`. Resource is the only owner of waiting and granted occupancy. `used` sums granted units; `available = max(0, capacity-used)`.
+Capacity is a nonnegative safe integer; request units are positive safe integers, default 1. A new request larger than current capacity rejects. Priority defaults to 0 and is a signed safe integer. FIFO is default. Priority orders lower values first with stable insertion ties. Strict head-of-line admission never skips a blocked earlier request to admit a smaller later request. Admission never skips the policy-sorted head. Priority may reorder waiting tickets when a higher-priority request arrives, but never preempts holders. A request ticket exposes readonly `id`, canonical `owner`, `units` and live `status: "waiting" | "granted" | "released" | "cancelled"`. Resource is the only owner of waiting and granted occupancy. `used` sums granted units; `available = max(0, capacity-used)`.
 
 Release accepts granted tickets, returns their units and synchronously admits waiting requests; repeated release of a released ticket is a no-op. Cancel removes a waiting request or returns a granted request's units, sets cancelled status and synchronously admits waiters; repeated cancel of terminal tickets is a no-op. Releasing a waiting or cancelled ticket rejects. Foreign or forged tickets reject before mutation. No method dispatches model callbacks. Models inspect ticket statuses and explicitly schedule new completions, once per newly granted ticket.
 
@@ -80,6 +82,8 @@ Timeouts are ordinary typed Agenda events that cancel waiting resource/store/sig
 
 Agent references remain the original living objects; no DES wrapper becomes another Agent identity. Queue entries, waiting/granted resource owners, stored or waiting-producer Agent values register deletion participants with existing Agent lifecycle coordination. Deletion rejects atomically while participation remains. Taking/deleting queue entries, consuming store items, and releasing/cancelling requests remove their participation. A completed get ticket is a historical caller-held reference, not ongoing occupancy. Detached ordinary records are allowed as owners/values and have no Agent deletion hook. Dead Agents reject on admission. World detachment alone neither releases resources nor cancels requests. The caller performs its explicit domain cleanup before deleting an Agent.
 
+Each ticket, queue entry and store occupancy slot registers its own deletion participant, including repeated references to the same Agent in one container. Removing one participation never unregisters another. Pending put participation transfers to its stored slot until consumption; completed direct handoff leaves no store occupancy. Independent containers retain their independent hooks.
+
 ## Observations, trace data and random draws
 
 ```ts
@@ -87,16 +91,16 @@ TimeWeighted.add({ at?: number, value: number }): TimeWeighted
 weighted.set({ at: number, value: number }): void
 weighted.read({ until: number }): { duration: number; integral: number; mean: number | undefined }
 EventTrace.add<T>({ capacity: number }): EventTrace<T>
-samples.record({ at: number, value: T }): void
-samples.read(): readonly { readonly at: number; readonly value: T }[]
+trace.record({ at: number, value: T }): void
+trace.read(): readonly { readonly at: number; readonly value: T }[]
 ```
 
 Mesa owns measurement definitions, History and parameter studies. EventTrace is the agreed name for bounded event diagnostics; it does not create a duplicate History API. TimeWeighted owns the DES integration of a caller-selected signal over explicit time. Observation times are finite and nonnegative. TimeWeighted initial time defaults to zero; set times are nondecreasing and define a right-continuous piecewise constant signal. `read` is pure and may extend the last value to a horizon at least the last set time. Duration is from initial time; zero duration has integral zero and undefined mean. Numeric values/integrals must remain finite. EventTrace uses finite positive safe-integer capacity, retains the newest samples, allows equal times, rejects backward times and returns detached supported data. Typed trace data is `EventTrace<{ kind: string; agentId?: string; detail?: ... }>`: recording is explicit; no console logging, hidden subscribers or duplicate clock. This is event trace data, not complete-state continuation.
 
-Reuse existing explicit Random uniform, normal, exponential and Poisson distributions. Add `random.number({distribution:"bernoulli",probability})` returning 0/1; `triangular` with required finite min/mode/max and min <= mode <= max; `gamma` with required finite positive shape/rate. Validation precedes draws. Bernoulli probability 0/1 and constant triangular consume no draws. Gamma follows the binding standard Marsaglia–Tsang sampler with shape boosting below 1, rate in inverse-output units and a maximum of 1,000,000 rejection attempts; it uses the existing cached standard Gaussian. It uses a documented bounded rejection sampler and finite-result checks; its rejection exhaustion throws. All draws use the supplied stream; copy/state/local continue to work. These methods do not establish Salabim stream compatibility or full model continuation.
+Reuse existing explicit Random uniform, normal, exponential and Poisson distributions. Add `random.number({distribution:"bernoulli",probability})` returning 0/1; `triangular` with required finite min/mode/max and min <= mode <= max; `gamma` with required finite positive shape/rate. Validation precedes draws. Bernoulli requires finite probability in [0,1]; endpoints 0/1 consume no draws. Triangular requires finite min <= mode <= max; a constant consumes no draws and every nonconstant call consumes exactly one uniform double. Shape/type failures throw TypeError and finite/range violations throw RangeError before draws. Gamma follows the binding standard Marsaglia–Tsang sampler with shape boosting below 1, rate in inverse-output units and a maximum of 1,000,000 rejection attempts; it uses the existing cached standard Gaussian. It uses a documented bounded rejection sampler and finite-result checks; its rejection exhaustion throws. All draws use the supplied stream; copy/state/local continue to work. These methods do not establish Salabim stream compatibility or full model continuation.
 
 ## Example gates and status
 
-The five scripts in `examples/des/` are proposed to freeze: causal/tied/budgeted Agenda; resource and queue conservation/lifecycle; store producer-consumer backpressure; explicit state/process/timeouts; time-weighted samples/trace and Random continuation. They use public root imports, assert expected results and initially fail because exports do not yet exist. No mock runtime or disabled assertions are permitted. Ten real model/UI pairs are specified separately in the city-example acceptance document.
+The five scripts in `examples/des/` freeze: causal/tied/budgeted Agenda; resource and queue conservation/lifecycle; store producer-consumer backpressure; explicit state/process/timeouts; time-weighted samples/trace and Random continuation. They use public root imports, assert expected results and initially failed because exports did not yet exist. No mock runtime or disabled assertions are permitted. Ten real model/UI pairs are specified separately in the city-example acceptance document.
 
 The auxiliary refactoring skills missing in this checkout were located at `/home/david/Projekte/city-library/.agents/skills/refactor-library/SKILL.md` and `/home/david/Projekte/city-library/.agents/skills/refactor-model-scripts/SKILL.md`. Their existence is source evidence, not a claim that implementation/refactoring gates passed.

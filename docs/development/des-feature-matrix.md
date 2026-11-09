@@ -1,0 +1,23 @@
+# Discrete-event capabilities
+
+Use the root `city-library` entry to compose event-driven models without World or a browser. [Public contracts](des-contract.md) define the details; [source research](../research/salabim-concepts.md) records the pinned Salabim comparison. This is a TypeScript adaptation of useful concepts, not a Python bridge or a complete Salabim port.
+
+| Official Salabim concept | Delivered City Library surface | Boundary / evidence |
+| --- | --- | --- |
+| Event scheduling | `Agenda.add`, event add/delete, batch advance, causal `next`, time/size | Public example 01 covers event-time dispatch, last-event causality, ties and budgets. Standalone or explicitly World-attached; no automatic World tick or dispatch. |
+| Queues | `ServiceQueue` FIFO or stable lower-first priority, issued handles, snapshots | Public example 02 and adversarial tests. No linked-list complexity promise or complete upstream queue algebra. |
+| Resource requests | `Resource.request`, release/cancel, live outcome tickets, used/available/waiting | One owner for requests and occupancy; strict head-of-line admission; integer capacity and units. Duplicate-Agent lifecycle tests. |
+| Capacity changes | `setCapacity` with reject or retain occupied claims | No preemption; shrink can temporarily retain overcapacity or a blocked oversized waiter. Fractional/negative capacity, anonymous and simultaneous multi-resource claims are unsupported. |
+| Bounded producer-consumer stores | `Store.put/get/take`, blocked producer/consumer tickets, cancellation | FIFO backpressure, direct handoff and undefined-valued payload outcomes; public example 03. Filtering and multi-store choice are unsupported. |
+| State waits | `Signal.value/set/wait/cancel` | One-shot pure synchronous predicates, atomic failure; explicit caller dispatch after satisfaction. No expression-string evaluator or hidden wait timer. |
+| Process interaction | Typed model state, Agenda handles and explicit dispatch for delay, replacement/reactivation, passivation, cancellation and timeout | Public example 04 and maintenance model. Mesa's World activation is reused when needed; there is no competing Process scheduler or coroutine interpreter. |
+| Monitoring levels | `TimeWeighted.set/read` with explicit sample times and duration/integral/mean | Right-continuous levels; pure aggregate reads, zero-duration mean undefined. Numeric History and measurement definitions belong to Mesa. |
+| Event trace | `EventTrace.record/read` with bounded detached `{at,value}` diagnostics | Same-time events supported; no automatic console output, subscriptions, numeric History substitute or resumable model snapshot. |
+| Random distributions | Existing uniform/normal/exponential/Poisson; new Bernoulli/triangular/gamma through explicit `Random.number` | Public example 05 and independent continuation/inverse-CDF/moment checks. Gamma uses shape/rate and bounded Marsaglia–Tsang rejection. No Salabim/Python stream compatibility. |
+| Animation and interfaces | Existing separate Agent Lab, ten thin `ui.ts` declarations | Host-specific controls/charts/tables/spatial/network views. Python Tkinter/OpenGL/video and real-time infrastructure are unsupported. Browser evidence and independent visual review are separate gates. |
+| Scientific validation | Deterministic invariants and a predeclared synthetic M/M/1 countercheck | [Executed queue report](../research/des-mm1-results.md). No empirical city calibration, physical EV battery model, traffic-flow model or hydraulic claim. |
+| Complete continuation | Not delivered | Random continuation alone does not capture model state, pending behavior, resources or future callbacks. No full continuation claim. |
+
+The ten scenarios are three focused models (civic office, EV charging, goods buffer) and seven compositions (bus interchange, parcel logistics, waste collection, emergency dispatch, bike redistribution, water allocation, infrastructure maintenance). Each has its own headless model, UI and asserted expected results. See [the scenario inventory](des-examples.md) and [integration evidence](des-integration-evidence.md) for executed acceptance and review status.
+
+Generic measurement definitions, History, parameter studies, activation, two-phase updates, global run budgets, linear threshold mechanisms and groups belong to the Mesa track. A per-call Agenda event budget bounds zero-delay work inside one interval; exhausting it must throw or stop the host interval, never count a normal successful World step. Shared [cross-track contracts](../../CROSS-TRACK-CONTRACTS.md) define time-axis mapping and ownership.

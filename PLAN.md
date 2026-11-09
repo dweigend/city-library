@@ -14,6 +14,8 @@ The [catalog ledger](experiments/catalog/progress.json) tracks model-level accep
 
 ## Next steps
 
+The [Salabim concept integration](docs/development/des-contract.md) is an authorized additive DES expansion with [ten separate city examples](docs/development/des-examples.md). Its [cross-track contract](CROSS-TRACK-CONTRACTS.md) assigns Agenda, queues, Resource, Store, waits, time-weighted observation and event diagnostics to this track; Mesa owns History/measurements, studies, activation, two-phase updates and global execution budgets. The five core and ten model examples are committed and pass against the implemented runtime. Independent final review and browser acceptance are tracked separately. Source evidence is separate in [the research record](docs/research/salabim-concepts.md); executed checks and independent review belong in [integration evidence](docs/development/des-integration-evidence.md). Neither this work nor Mesa establishes whole upstream parity or city calibration.
+
 1. Reconcile the remaining model-level acceptance stages with their required evidence; implementation alone does not complete a model.
 2. Finish remaining Svelte controls, lifecycle and model-switching acceptance, including desktop/narrow light/dark screenshots and independent inspection.
 3. Complete the selected 200 models and their headless, source, browser and independent review gates. Follow the [model acceptance rules](docs/development/netlogo-model-acceptance.md).
