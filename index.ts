@@ -33,3 +33,13 @@ export type { PutRequest, GetRequest, PutStatus, GetStatus } from "./src/agenda/
 export { Signal } from "./src/agenda/signal.ts";
 export type { WaitRequest, WaitStatus } from "./src/agenda/signal.ts";
 export type { Bounds, PlanarXY, PlanarPolygon, PlanarGeometry, PlanarJson, PlanarFeature, PlanarDataset, ParcelShape, MergeResult, SplitResult } from "./src/geometry/index.ts";
+export { measurements } from "./src/measurement/index.ts";
+export type { Measurement } from "./src/measurement/index.ts";
+export { storage } from "./src/storage/index.ts";
+export type { History, Sample } from "./src/storage/index.ts";
+export { experiments } from "./src/experiments/index.ts";
+export type * from "./src/experiments/types.ts";
+export { twoPhase } from "./src/execution/index.ts";
+export { continuous } from "./src/continuous/index.ts";
+export type { CrossingDirection, ThresholdCrossing } from "./src/continuous/index.ts";
+export type { WorldMember, ActivationSource, ActivationContext, ActivationOptions } from "./src/world/activation/index.ts";

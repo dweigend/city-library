@@ -1,4 +1,4 @@
-import { frameworkRecord, registerFramework, type DeletionParticipant } from "../agent/lifecycle.ts";
+import { frameworkOwner, frameworkRecord, registerFramework, type DeletionParticipant } from "../agent/lifecycle.ts";
 import { validateOptions } from "../agent/state.ts";
 import { collectionGuard } from "./collections.ts";
 import { cloneEdgeState, createEdge, type Edge } from "./edge.ts";
@@ -57,6 +57,12 @@ function owner<N extends object, E extends object>(parallel: boolean, selfLoops:
   const edges = new Set<Edge<N, E>>();
   const keys = new Map<string, Edge<N, E>>();
   const hooks = new Map<N, DeletionParticipant>();
+  function nodeComponent(node: N): object {
+    const kind = frameworkRecord(node)?.kind;
+    if (kind === "field") return (node as { grid: object }).grid;
+    if (kind === "edge") return (node as { graph: object }).graph;
+    return node;
+  }
   const guard = collectionGuard();
   let nextKey = 0n;
 
@@ -73,7 +79,10 @@ function owner<N extends object, E extends object>(parallel: boolean, selfLoops:
     for (const edge of edges) if (edge.from === node || edge.to === node) removeEdge(edge);
     members.delete(node);
     const hook = hooks.get(node);
-    if (hook) frameworkRecord(node)!.deletionParticipants.delete(hook);
+    if (hook) {
+      frameworkRecord(node)!.deletionParticipants.delete(hook);
+      frameworkRecord(nodeComponent(node))?.deletionParticipants.delete(hook);
+    }
     hooks.delete(node);
   }
   function between(from: N, to: N, options?: { direction?: Direction }): readonly Edge<N, E>[] {
@@ -94,14 +103,26 @@ function owner<N extends object, E extends object>(parallel: boolean, selfLoops:
       add(node: N) {
         if ((typeof node !== "object" && typeof node !== "function") || node === null) throw new TypeError("Graph nodes must be objects.");
         if (frameworkRecord(node)?.alive === false) throw new TypeError("Deleted framework node.");
+        const nodeOwner = frameworkOwner(node);
+        const graphOwner = frameworkRecord(graph)?.world;
+        if (nodeOwner && graphOwner && nodeOwner !== graphOwner)
+          throw new TypeError("Graph node belongs to another World.");
         if (members.has(node)) return node;
         guard.validate();
         members.add(node);
         const record = frameworkRecord(node);
-        if (record?.kind === "agent") {
-          const hook = { validate: guard.validate, commit: () => removeNode(node) };
+        if (record) {
+          const hook: DeletionParticipant = {
+            validate: guard.validate,
+            commit: () => removeNode(node),
+            validateWorld(world) {
+              const owner = frameworkRecord(graph)?.world;
+              if (owner && owner !== world) throw new TypeError("Graph belongs to another World.");
+            },
+          };
           hooks.set(node, hook);
           record.deletionParticipants.add(hook);
+          frameworkRecord(nodeComponent(node))?.deletionParticipants.add(hook);
         }
         return node;
       },
