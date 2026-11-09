@@ -1,0 +1,3647 @@
+{
+  "baseline": "a78bd2359e7a12ac537be131ca8d3023c4b718eb",
+  "scope": "Sorted inventory entries0..72 inclusive (first73 pairs)",
+  "reviewer": "Independent scoped native semantic audit agent; no implementation changes",
+  "preparation": [
+    "AGENTS",
+    "Full CODING_STANDARDS",
+    "ARCHITECTURE binding ownership rules",
+    "DESIGN binding UI rules",
+    "UI public API reference",
+    "Original refactor-library and refactor-model-scripts skills",
+    "Shared refactoring workflow and both decision examples"
+  ],
+  "summary": {
+    "reviewedPairs": 73,
+    "retainRecommendations": 53,
+    "targetedCandidates": 20
+  },
+  "findings": [
+    {
+      "topic": "Inspection completeness",
+      "finding": "Directed-network intentionally slices active transfers to20 and labels first20; shared host paging alone cannot make subsequent author-omitted transfers reachable. limited-order-book passes every active order and can benefit from shared paging without script changes."
+    },
+    {
+      "topic": "Measurement ownership debt",
+      "finding": "CRISPR Bacterium/Ecosystem UI projections call stats.histogram on observed sequence arrays. Do not silently move or alter biological histogram bins while implementing presentation APIs; any ownership cleanup needs exact independent fixtures."
+    },
+    {
+      "topic": "Defaults already available",
+      "finding": "Several triangle projections explicitly use size8, equal to the current shared canvas default. Removing redundant overrides is possible without a new API; this does not authorize replacing quantity-driven sizes or source-portrayal differences."
+    },
+    {
+      "topic": "Strongest collection reuse",
+      "finding": "Office, EV and goods helpers repeat wrapping, slot dimensions and group spacing. Use canonical observed queue snapshots and separate identity from capacity; bike stores may benefit only if transit/topology remains visible."
+    },
+    {
+      "topic": "Scientific scales",
+      "finding": "Heat fixed min/max, directed-network sqrt relative value, fire ember decay, Mandelbrot fixed115 iterations, heatbugs declared dual normalization and other source mappings must not become silent per-frame auto normalization."
+    }
+  ],
+  "entries": [
+    {
+      "slug": "anisogamy",
+      "ui": "experiments/anisogamy/ui.ts",
+      "model": "experiments/anisogamy/model.ts",
+      "baselineUIHash": "9c57ff66d500e6e77633c36cccf7afa1822f477c758eddd1f99b303dcb754c4d",
+      "baselineModelHash": "a12c76466a37f6c7261c4a234fc60f5d36725252122c26f4acffd6cf4990f128",
+      "recommendation": "candidate",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "adults/gametes/zygotes, traitDistribution and fractional tickAdvanceAmount",
+      "scientificIdentityAndOrderContract": "Preserve matingTypeTrait NetLogo offsets, gamete diameter/mass sqrt portrayal, undefined mean-trait gaps and original histogram edges. Canonical IDs survive breed changes.",
+      "reason": "The repeated blue/red identity mapping across three histories and histograms could share one explicit stable style definition; do not replace biological mass or fractional ticks with generic count defaults.",
+      "reuseOpportunity": "stable category mapping; history accessor if accepted",
+      "existingViews": [
+        "spatial",
+        "line",
+        "bar",
+        "inspector"
+      ],
+      "boundPublicModelCalls": [
+        "restoreDefaultParameters",
+        "setParameters"
+      ],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/anisogamy/ui.ts",
+          "line": 47,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/anisogamy/model.ts",
+          "line": 287,
+          "marker": "read()"
+        },
+        {
+          "file": "experiments/anisogamy/model.ts",
+          "line": 287,
+          "marker": "function read"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/anisogamy/ui.ts",
+          "sha256": "9c57ff66d500e6e77633c36cccf7afa1822f477c758eddd1f99b303dcb754c4d"
+        },
+        {
+          "file": "experiments/anisogamy/model.ts",
+          "sha256": "a12c76466a37f6c7261c4a234fc60f5d36725252122c26f4acffd6cf4990f128"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "ants",
+      "ui": "experiments/ants/ui.ts",
+      "model": "experiments/ants/model.ts",
+      "baselineUIHash": "b52fcd8d68b0bf5ea142031e2d88fd3bbb60c1cd293958a527ada8745b7d7308",
+      "baselineModelHash": "8dbbfebc8b8dbc9b0561c186163eb3ce757095e05a347de46d9223417b6caa52",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "ants carrying state; foodByPile and chemical/nest/food cells",
+      "scientificIdentityAndOrderContract": "Preserve nest/food-pile palette and chemical (chemical\u22120.1)/4.9 clamp. Ant IDs select actual carrying agents; world coordinates encode foraging adjacency. Diffusion/evaporation controls are percentages.",
+      "reason": "The three pile-history maps are compact and preserve pile IDs. size8 equals existing default and may be omitted without changing painting; a category collection would lose pheromone geometry.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "spatial",
+        "inspector",
+        "line"
+      ],
+      "boundPublicModelCalls": [
+        "setRules"
+      ],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/ants/ui.ts",
+          "line": 31,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/ants/model.ts",
+          "line": 189,
+          "marker": "read()"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/ants/ui.ts",
+          "sha256": "b52fcd8d68b0bf5ea142031e2d88fd3bbb60c1cd293958a527ada8745b7d7308"
+        },
+        {
+          "file": "experiments/ants/model.ts",
+          "sha256": "8dbbfebc8b8dbc9b0561c186163eb3ce757095e05a347de46d9223417b6caa52"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "artificial-neural-net-multilayer",
+      "ui": "experiments/artificial-neural-net-multilayer/ui.ts",
+      "model": "experiments/artificial-neural-net-multilayer/model.ts",
+      "baselineUIHash": "1fec0c0f287e4151a5622e5d1aa8b130be72a1c2613306ba10bc0bb74be0efe3",
+      "baselineModelHash": "fb401a9e7059ac815d1b672ebcb535525ad85e5e57d676d801cf7b18ed0583c3",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "nodes activation/kind, weighted directed edges, epochError, lastTest",
+      "scientificIdentityAndOrderContract": "Activation threshold0.5 and signed red/blue weights are scientific meanings; retain weight stroke max(0.5,0.05*abs(weight)*20), preset positions and node IDs. Epoch denotes training work.",
+      "reason": "The network, error history and optional weights table expose different author tasks clearly; shared graph renderer already owns placement. Replacing weighted encodings with unspecified autoscale would change meaning.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "network",
+        "line",
+        "table"
+      ],
+      "boundPublicModelCalls": [
+        "setParameters",
+        "test"
+      ],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "Shared 200-row host limit applies; preserve all model rows and original order. Specific author filtering/limits must be considered separately.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/artificial-neural-net-multilayer/ui.ts",
+          "line": 59,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/artificial-neural-net-multilayer/model.ts",
+          "line": 232,
+          "marker": "read()"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/artificial-neural-net-multilayer/ui.ts",
+          "sha256": "1fec0c0f287e4151a5622e5d1aa8b130be72a1c2613306ba10bc0bb74be0efe3"
+        },
+        {
+          "file": "experiments/artificial-neural-net-multilayer/model.ts",
+          "sha256": "fb401a9e7059ac815d1b672ebcb535525ad85e5e57d676d801cf7b18ed0583c3"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "artificial-neural-net-perceptron",
+      "ui": "experiments/artificial-neural-net-perceptron/ui.ts",
+      "model": "experiments/artificial-neural-net-perceptron/model.ts",
+      "baselineUIHash": "84d5bdbf81e2eacf30ac29c811da4782096f6b3165adf08130554227791a6df7",
+      "baselineModelHash": "a55215d72e4c18f389a260a7fe41a2db1cafd92e13aabc71e03ce94b8508169f",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "signed activation, weights, truthPoints and decision boundary",
+      "scientificIdentityAndOrderContract": "Keep positive/negative truth classifications and exact boundary points; signed weight width max(0.5,0.2*abs(weight)*20) differs intentionally from multilayer. Network IDs are stringified source node IDs.",
+      "reason": "Network plus scatter truth/boundary and error history are cohesive. Do not force identical ANN scales, labels or fixed node sizes simply because the two models are related.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "network",
+        "line",
+        "scatter",
+        "table"
+      ],
+      "boundPublicModelCalls": [
+        "setParameters",
+        "test"
+      ],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "Shared 200-row host limit applies; preserve all model rows and original order. Specific author filtering/limits must be considered separately.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/artificial-neural-net-perceptron/ui.ts",
+          "line": 57,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/artificial-neural-net-perceptron/model.ts",
+          "line": 227,
+          "marker": "read()"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/artificial-neural-net-perceptron/ui.ts",
+          "sha256": "84d5bdbf81e2eacf30ac29c811da4782096f6b3165adf08130554227791a6df7"
+        },
+        {
+          "file": "experiments/artificial-neural-net-perceptron/model.ts",
+          "sha256": "a55215d72e4c18f389a260a7fe41a2db1cafd92e13aabc71e03ce94b8508169f"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "autumn",
+      "ui": "experiments/autumn/ui.ts",
+      "model": "experiments/autumn/model.ts",
+      "baselineUIHash": "1f64ae05c713603dcc3a1bdad55a2226079207671d5a2c780775841aff029370",
+      "baselineModelHash": "a12a98d355b059470c4c9d3f0d76953291e520f955d1a91cf47b27b8c95fef0c",
+      "recommendation": "candidate",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "live/dead leaves, weather agents, cells and optional leaf-average history",
+      "scientificIdentityAndOrderContract": "Keep breed-specific triangle/circle shape, agent.size*12*sqrt(fillFraction), model-owned terrain colors and undefined mean values as gaps. Weather and chemistry series have different quantities.",
+      "reason": "Twelve verbose history projections and repeated component colors are a credible accessor/style-map migration if exact labels, omissions and units survive; tree/weather geometry should remain low-level.",
+      "reuseOpportunity": "history accessors; stable component styles",
+      "existingViews": [
+        "spatial",
+        "line"
+      ],
+      "boundPublicModelCalls": [
+        "setParameters"
+      ],
+      "modelExposesRandomState": false,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/autumn/ui.ts",
+          "line": 37,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/autumn/model.ts",
+          "line": 450,
+          "marker": "read()"
+        },
+        {
+          "file": "experiments/autumn/model.ts",
+          "line": 450,
+          "marker": "function read"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/autumn/ui.ts",
+          "sha256": "1f64ae05c713603dcc3a1bdad55a2226079207671d5a2c780775841aff029370"
+        },
+        {
+          "file": "experiments/autumn/model.ts",
+          "sha256": "a12a98d355b059470c4c9d3f0d76953291e520f955d1a91cf47b27b8c95fef0c"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "bacterial-infection",
+      "ui": "experiments/bacterial-infection/ui.ts",
+      "model": "experiments/bacterial-infection/model.ts",
+      "baselineUIHash": "e66c4ba7f48a93ca2b66e4bf474ca1855710072b3b88251562d405789bb86e1a",
+      "baselineModelHash": "c9d24e8729f01639c6006ddd175fd2bc5e50ac0f59a7e064bacfba607defcd9e",
+      "recommendation": "candidate",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "regionA/B pore variation counts, bacteria/antibiotics, minutes/hours/days",
+      "scientificIdentityAndOrderContract": "Variation3..6 indexes the same four colors in agents and histories; preserve region ports, antibiotic geometry and source time conversion. IDs resolve only bacteria for inspector.",
+      "reason": "One explicit variation mapping would remove duplicated positional palette arrays across agents and histories while keeping pore classes stable; do not infer categories from current survivors.",
+      "reuseOpportunity": "stable variation mapping",
+      "existingViews": [
+        "spatial",
+        "bar",
+        "line",
+        "inspector"
+      ],
+      "boundPublicModelCalls": [
+        "doseRegion",
+        "setParameters"
+      ],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/bacterial-infection/ui.ts",
+          "line": 57,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/bacterial-infection/model.ts",
+          "line": 383,
+          "marker": "read()"
+        },
+        {
+          "file": "experiments/bacterial-infection/model.ts",
+          "line": 383,
+          "marker": "function read"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/bacterial-infection/ui.ts",
+          "sha256": "e66c4ba7f48a93ca2b66e4bf474ca1855710072b3b88251562d405789bb86e1a"
+        },
+        {
+          "file": "experiments/bacterial-infection/model.ts",
+          "sha256": "c9d24e8729f01639c6006ddd175fd2bc5e50ac0f59a7e064bacfba607defcd9e"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "baldwin-effect",
+      "ui": "experiments/baldwin-effect/ui.ts",
+      "model": "experiments/baldwin-effect/model.ts",
+      "baselineUIHash": "ea51e811d0617d21bf78bf2507ad1a6b04baf8031546a9c02369e40d52e20c6d",
+      "baselineModelHash": "d1f3b368684f549a81c53764488a3b0aee6081e8a87a7169f0896c2e3914f032",
+      "recommendation": "candidate",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "nonLearners/randomLearners/smartLearners and optional trait means",
+      "scientificIdentityAndOrderContract": "Keep generation axis, genotype/phenotype arrays, inherited-match/fitness layout and null/undefined mean gaps; blue/red/gray identify learning strategies across plots.",
+      "reason": "Three repeated strategy-label/color ternaries can share one declared strategy mapping; preserve the explicit scientific fields and absent-data checks.",
+      "reuseOpportunity": "stable strategy mapping",
+      "existingViews": [
+        "spatial",
+        "line",
+        "inspector"
+      ],
+      "boundPublicModelCalls": [
+        "setParameters"
+      ],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/baldwin-effect/ui.ts",
+          "line": 31,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/baldwin-effect/model.ts",
+          "line": 314,
+          "marker": "read()"
+        },
+        {
+          "file": "experiments/baldwin-effect/model.ts",
+          "line": 314,
+          "marker": "function read"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/baldwin-effect/ui.ts",
+          "sha256": "ea51e811d0617d21bf78bf2507ad1a6b04baf8031546a9c02369e40d52e20c6d"
+        },
+        {
+          "file": "experiments/baldwin-effect/model.ts",
+          "sha256": "d1f3b368684f549a81c53764488a3b0aee6081e8a87a7169f0896c2e3914f032"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "bank-reserves",
+      "ui": "experiments/bank-reserves/ui.ts",
+      "model": "experiments/bank-reserves/model.ts",
+      "baselineUIHash": "4bd929a7b3d548f1902e0cbad2f43769339e48630d3bad4c4234f80f674c80cd",
+      "baselineModelHash": "8ab5b09fb769917c5efedfed2704d45dd25738f7a7c34e6c7a642e496853017c",
+      "recommendation": "candidate",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "people wallets/savings/loans/wealth/customer, banking phase, histogram and totals",
+      "scientificIdentityAndOrderContract": "Money and loans are synthetic signed accounting quantities; rich/middle/poor colors are model classification, not DES status. None customer remains unavailable text. IDs select canonical accounts.",
+      "reason": "Color definitions repeated in income, money and savings series can be one explicit named accounting palette; ordinary history maps otherwise read clearly and banking phases must not change.",
+      "reuseOpportunity": "stable accounting style mapping",
+      "existingViews": [
+        "spatial",
+        "line",
+        "inspector"
+      ],
+      "boundPublicModelCalls": [
+        "setRules"
+      ],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/bank-reserves/ui.ts",
+          "line": 29,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/bank-reserves/model.ts",
+          "line": 308,
+          "marker": "read()"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/bank-reserves/ui.ts",
+          "sha256": "4bd929a7b3d548f1902e0cbad2f43769339e48630d3bad4c4234f80f674c80cd"
+        },
+        {
+          "file": "experiments/bank-reserves/model.ts",
+          "sha256": "8ab5b09fb769917c5efedfed2704d45dd25738f7a7c34e6c7a642e496853017c"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "bidding-market",
+      "ui": "experiments/bidding-market/ui.ts",
+      "model": "experiments/bidding-market/model.ts",
+      "baselineUIHash": "92cde9a71582576c0cb54a04dd2c4c2e0f9d6f4d98064929f11a2a7d4e5579b8",
+      "baselineModelHash": "f48c18ace6182cddb02a75fb26db3bc2af179e9fb3e91cb5a6fa76843b215b8d",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "buyers/sellers, quotes, remaining demand/supply and sale edges",
+      "scientificIdentityAndOrderContract": "Keep asking/willing price ranges, percentage undefinedness and square-root demand/bought sizes. Lines connect actual buyer/seller IDs; sale-marker thickness responds to stars.",
+      "reason": "Named buyersAndSellersData and marketOutcomesSeries already separate concerns. Min/mean/max history selection is readable; no generic collection should replace bilateral sale geometry.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "spatial",
+        "line"
+      ],
+      "boundPublicModelCalls": [
+        "setRules"
+      ],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/bidding-market/ui.ts",
+          "line": 47,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/bidding-market/model.ts",
+          "line": 271,
+          "marker": "read()"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/bidding-market/ui.ts",
+          "sha256": "92cde9a71582576c0cb54a04dd2c4c2e0f9d6f4d98064929f11a2a7d4e5579b8"
+        },
+        {
+          "file": "experiments/bidding-market/model.ts",
+          "sha256": "f48c18ace6182cddb02a75fb26db3bc2af179e9fb3e91cb5a6fa76843b215b8d"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "binomial-rabbits",
+      "ui": "experiments/binomial-rabbits/ui.ts",
+      "model": "experiments/binomial-rabbits/model.ts",
+      "baselineUIHash": "7a7852f2db8b6fbf59945188063dacd3b0d92e1e795a35b1308c8872869835f9",
+      "baselineModelHash": "e6f77a547d8912c05dbd0f0ecbdc659aaaa35de62a8975b6ea9cf739ba1a3482",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "rabbits total/step, wrapped xScale/yScale, distribution",
+      "scientificIdentityAndOrderContract": "Preserve 45-unit world, source y=-22 display, weighted hop ratios and histogram x values; source display IDs are stable labels rather than another Agent registry.",
+      "reason": "The two views directly show a wrapped random-walk distribution and its rabbits. Its display offsets are source portrayal, not interchangeable queue spacing.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "bar",
+        "spatial"
+      ],
+      "boundPublicModelCalls": [
+        "goOneHop",
+        "setRules"
+      ],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/binomial-rabbits/ui.ts",
+          "line": 42,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/binomial-rabbits/model.ts",
+          "line": 125,
+          "marker": "read()"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/binomial-rabbits/ui.ts",
+          "sha256": "7a7852f2db8b6fbf59945188063dacd3b0d92e1e795a35b1308c8872869835f9"
+        },
+        {
+          "file": "experiments/binomial-rabbits/model.ts",
+          "sha256": "e6f77a547d8912c05dbd0f0ecbdc659aaaa35de62a8975b6ea9cf739ba1a3482"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "birthdays",
+      "ui": "experiments/birthdays/ui.ts",
+      "model": "experiments/birthdays/model.ts",
+      "baselineUIHash": "e8684916ab305bb0b3450f1481ce7bedd778c6ca510aab33f3cbd27279e31d02",
+      "baselineModelHash": "e31c72133f2d755ab6b0e8f303540ddda4ac81add7567b0d97bc8a97bf62bd81",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "birthday-sorted people date/matched, successRate and history",
+      "scientificIdentityAndOrderContract": "Rooms contain23 people; percent success retains two-decimal formatting. Table order is birthday order supplied by model; display labels are not canonical Agent membership.",
+      "reason": "The concise Room table and one success-rate map already express the task with defaults; no layout numbers or duplicated controls need an abstraction.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "table",
+        "line"
+      ],
+      "boundPublicModelCalls": [],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "Shared 200-row host limit applies; preserve all model rows and original order. Specific author filtering/limits must be considered separately.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/birthdays/ui.ts",
+          "line": 18,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/birthdays/model.ts",
+          "line": 102,
+          "marker": "read()"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/birthdays/ui.ts",
+          "sha256": "e8684916ab305bb0b3450f1481ce7bedd778c6ca510aab33f3cbd27279e31d02"
+        },
+        {
+          "file": "experiments/birthdays/model.ts",
+          "sha256": "e31c72133f2d755ab6b0e8f303540ddda4ac81add7567b0d97bc8a97bf62bd81"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "blood-sugar-regulation",
+      "ui": "experiments/blood-sugar-regulation/ui.ts",
+      "model": "experiments/blood-sugar-regulation/model.ts",
+      "baselineUIHash": "3b2e5e213fc4e7a4e6a04de200eebf11ebac5bdc628f6db4180e81e8c09e144f",
+      "baselineModelHash": "897079716892f8d684102981f7d61876ff4abfd9bb57ba28db7fcf9bcbb7eea3",
+      "recommendation": "candidate",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "agents by biological breed, liver/pancreatic cells, molecule counts and history",
+      "scientificIdentityAndOrderContract": "Keep follows as public actions, liver glucose storage in model, agent identity and followed-size distinction. Hormone chart colors match biochemical categories; no clinical units/calibration are inferred.",
+      "reason": "signalMoleculesSeries uses flatMap returning exactly one point for every sample; a typed history accessor could replace this repetition while preserving molecule colors. Do not relayout organ geometry.",
+      "reuseOpportunity": "history accessors",
+      "existingViews": [
+        "spatial",
+        "line"
+      ],
+      "boundPublicModelCalls": [
+        "eat",
+        "followGlucagon",
+        "followGlucose",
+        "followInsulin",
+        "setParameters"
+      ],
+      "modelExposesRandomState": false,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/blood-sugar-regulation/ui.ts",
+          "line": 44,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/blood-sugar-regulation/model.ts",
+          "line": 303,
+          "marker": "read()"
+        },
+        {
+          "file": "experiments/blood-sugar-regulation/model.ts",
+          "line": 303,
+          "marker": "function read"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/blood-sugar-regulation/ui.ts",
+          "sha256": "3b2e5e213fc4e7a4e6a04de200eebf11ebac5bdc628f6db4180e81e8c09e144f"
+        },
+        {
+          "file": "experiments/blood-sugar-regulation/model.ts",
+          "sha256": "897079716892f8d684102981f7d61876ff4abfd9bb57ba28db7fcf9bcbb7eea3"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "braess-paradox",
+      "ui": "experiments/braess-paradox/ui.ts",
+      "model": "experiments/braess-paradox/model.ts",
+      "baselineUIHash": "e43d63b60514b393f3837e3826aa0eff37348b8cf168ed55d5edc7af73f2262c",
+      "baselineModelHash": "ec56ccf9c4bf7b1c7aa512785139c4903da27d2a666911e4d22474e5135b47f2",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "commuters/road-delay cells, routeCounts and choice probabilities",
+      "scientificIdentityAndOrderContract": "Travel chart explicitly uses ticks/450; preserve source49\u00d749 roads, three route identifiers and actual congestion fields. Model owns route choice and probabilities.",
+      "reason": "The route and probability charts use short explicit projections; generic collection rows would erase the congestion topology that explains Braess behavior.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "spatial",
+        "line",
+        "bar"
+      ],
+      "boundPublicModelCalls": [
+        "setRules"
+      ],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/braess-paradox/ui.ts",
+          "line": 36,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/braess-paradox/model.ts",
+          "line": 336,
+          "marker": "read()"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/braess-paradox/ui.ts",
+          "sha256": "e43d63b60514b393f3837e3826aa0eff37348b8cf168ed55d5edc7af73f2262c"
+        },
+        {
+          "file": "experiments/braess-paradox/model.ts",
+          "sha256": "ec56ccf9c4bf7b1c7aa512785139c4903da27d2a666911e4d22474e5135b47f2"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "brians-brain",
+      "ui": "experiments/brians-brain/ui.ts",
+      "model": "experiments/brians-brain/model.ts",
+      "baselineUIHash": "d76fb1f92f19d521613a7b1a8fa370974510ceaaac56c10a1e61253c36fb636f",
+      "baselineModelHash": "a9fb5cefa551e44a65d4371831315d240f97e3b804685a09172c03fdf68c2afe",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "three-state cells, drawing/brush and firing/refractory/off counts",
+      "scientificIdentityAndOrderContract": "Keep states0/1/2 and black/white/red correspondence; drawing begin/move/end calls model brush methods. Grid identity must remain stable under painting.",
+      "reason": "Already one direct grid projection plus explicit drawing actions. Category mapping extraction would add indirection for a three-state expression without removing substantial author work.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "grid"
+      ],
+      "boundPublicModelCalls": [
+        "beginBrush",
+        "endBrush",
+        "moveBrush",
+        "read",
+        "setDrawing",
+        "setInitialDensity",
+        "setupBlank",
+        "setupRandom"
+      ],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/brians-brain/ui.ts",
+          "line": 41,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/brians-brain/ui.ts",
+          "line": 14,
+          "marker": "read()"
+        },
+        {
+          "file": "experiments/brians-brain/model.ts",
+          "line": 134,
+          "marker": "read()"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/brians-brain/ui.ts",
+          "sha256": "d76fb1f92f19d521613a7b1a8fa370974510ceaaac56c10a1e61253c36fb636f"
+        },
+        {
+          "file": "experiments/brians-brain/model.ts",
+          "sha256": "a9fb5cefa551e44a65d4371831315d240f97e3b804685a09172c03fdf68c2afe"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "ca-1d-elementary",
+      "ui": "experiments/ca-1d-elementary/ui.ts",
+      "model": "experiments/ca-1d-elementary/model.ts",
+      "baselineUIHash": "ea7cbf4ff8af1a5e21c2a21603def767e787d14a81ccf5ae2da96b57eab183d8",
+      "baselineModelHash": "0e401cae6a0591e4269544fa4c833b65763f699b81677a8a17c922084e8f7d3d",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "row progression, rulesShown/rule table and cells.colorNumber",
+      "scientificIdentityAndOrderContract": "Keep exact NetLogo conversion and eight binary neighborhood rule ordering. Continue is enabled only after completion with rules hidden; rows are source evolution time.",
+      "reason": "One grid map and direct rules table are already default-first; do not replace row-history geometry with unordered categorical groups.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "grid",
+        "table"
+      ],
+      "boundPublicModelCalls": [
+        "continueRun",
+        "read",
+        "setRuleBit",
+        "setRules",
+        "setupRandom",
+        "setupSingle",
+        "showRules"
+      ],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "Shared 200-row host limit applies; preserve all model rows and original order. Specific author filtering/limits must be considered separately.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/ca-1d-elementary/ui.ts",
+          "line": 48,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/ca-1d-elementary/ui.ts",
+          "line": 23,
+          "marker": "read()"
+        },
+        {
+          "file": "experiments/ca-1d-elementary/model.ts",
+          "line": 240,
+          "marker": "read()"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/ca-1d-elementary/ui.ts",
+          "sha256": "ea7cbf4ff8af1a5e21c2a21603def767e787d14a81ccf5ae2da96b57eab183d8"
+        },
+        {
+          "file": "experiments/ca-1d-elementary/model.ts",
+          "sha256": "0e401cae6a0591e4269544fa4c833b65763f699b81677a8a17c922084e8f7d3d"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "ca-continuous",
+      "ui": "experiments/ca-continuous/ui.ts",
+      "model": "experiments/ca-continuous/model.ts",
+      "baselineUIHash": "827200f7893669a59d2910239751550d5d32f155c2ecd991572b6c1e0fa7a974",
+      "baselineModelHash": "f962cf09b8f9a1f9c11441c240ebb4fcad4d7c6b0b0b53dbd1f0ebfd29d086bf",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "fractional cell values/colorNumber and current row/done",
+      "scientificIdentityAndOrderContract": "Keep precision/additive map and exact NetLogo numeric colors; autoContinue and explicit continueRun remain model-owned.",
+      "reason": "The one grid callback is short and source-compatible; an encoding wrapper would make its intention harder to read.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "grid"
+      ],
+      "boundPublicModelCalls": [
+        "continueRun",
+        "setRules",
+        "setupRandom",
+        "setupSingle"
+      ],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/ca-continuous/ui.ts",
+          "line": 30,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/ca-continuous/model.ts",
+          "line": 180,
+          "marker": "read()"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/ca-continuous/ui.ts",
+          "sha256": "827200f7893669a59d2910239751550d5d32f155c2ecd991572b6c1e0fa7a974"
+        },
+        {
+          "file": "experiments/ca-continuous/model.ts",
+          "sha256": "f962cf09b8f9a1f9c11441c240ebb4fcad4d7c6b0b0b53dbd1f0ebfd29d086bf"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "ca-stochastic",
+      "ui": "experiments/ca-stochastic/ui.ts",
+      "model": "experiments/ca-stochastic/model.ts",
+      "baselineUIHash": "55cbc63a15cb54234917dbb9da325c5dbe1b1dc3bebfb9271b2ea4559b06e689",
+      "baselineModelHash": "4963d69df22f018ebe9f50a3d6d887ec8ac591c3714a27588a200248c760d31f",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "binary cells, probabilities, metric/topological entropy history",
+      "scientificIdentityAndOrderContract": "Preserve conditional Bernoulli rules, row continuation, exact source colors and entropy fields. Two histories represent distinct entropy measures; no new normalization.",
+      "reason": "Grid and two short entropy maps already use existing renderers well; retain explicit source configuration and control names.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "grid",
+        "line"
+      ],
+      "boundPublicModelCalls": [
+        "continueRun",
+        "setRules",
+        "setupExample",
+        "setupRandom"
+      ],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/ca-stochastic/ui.ts",
+          "line": 73,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/ca-stochastic/model.ts",
+          "line": 238,
+          "marker": "read()"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/ca-stochastic/ui.ts",
+          "sha256": "55cbc63a15cb54234917dbb9da325c5dbe1b1dc3bebfb9271b2ea4559b06e689"
+        },
+        {
+          "file": "experiments/ca-stochastic/model.ts",
+          "sha256": "4963d69df22f018ebe9f50a3d6d887ec8ac591c3714a27588a200248c760d31f"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "cash-flow",
+      "ui": "experiments/cash-flow/ui.ts",
+      "model": "experiments/cash-flow/model.ts",
+      "baselineUIHash": "3126e367253d51232e48ffa2c713f61cf0a24fb54a5df5d17bd2280edafd1a2b",
+      "baselineModelHash": "ea8e7eed783534261130ae0f625e2dcf3363eebc10c4edb3e1f94a26ba7cc5b5",
+      "recommendation": "candidate",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "signed accounting totals, people/account inspector, wealthHistogram",
+      "scientificIdentityAndOrderContract": "Keep single-step business\u2192books\u2192bank phase sequence, signed loans, None customer and source wealth colors. UI formatting does not change balances.",
+      "reason": "Shares repeated accounting series colors with Bank Reserves but not its stepping contract; a common presentation palette is plausible, a common model scheduler is not.",
+      "reuseOpportunity": "stable accounting style mapping",
+      "existingViews": [
+        "spatial",
+        "line",
+        "bar",
+        "inspector"
+      ],
+      "boundPublicModelCalls": [
+        "setRules"
+      ],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/cash-flow/ui.ts",
+          "line": 29,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/cash-flow/model.ts",
+          "line": 310,
+          "marker": "read()"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/cash-flow/ui.ts",
+          "sha256": "3126e367253d51232e48ffa2c713f61cf0a24fb54a5df5d17bd2280edafd1a2b"
+        },
+        {
+          "file": "experiments/cash-flow/model.ts",
+          "sha256": "ea8e7eed783534261130ae0f625e2dcf3363eebc10c4edb3e1f94a26ba7cc5b5"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "central-limit-theorem",
+      "ui": "experiments/central-limit-theorem/ui.ts",
+      "model": "experiments/central-limit-theorem/model.ts",
+      "baselineUIHash": "3f0092279016b0e5fb574470edaf4a227c06cca0279d6091e1970e8f90bc7fff",
+      "baselineModelHash": "495cf76500ebb2f39508ebd358e5abc50bc0e9e86fb0a52df28ef22d8154ca62",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "population people/chosen, active fields, mean/sum histograms and nullable statistics",
+      "scientificIdentityAndOrderContract": "Sampling without replacement and expected value are model measurements; preserve chosen/unselected encoding, real x-position population and null unavailable sample SD.",
+      "reason": "Existing direct meanHistogram/sumHistogram and physical sampling positions are clear. Do not replace a sampling distribution with anonymous collection rows.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "spatial",
+        "bar"
+      ],
+      "boundPublicModelCalls": [
+        "createPopulation",
+        "drawYourOwnPeople",
+        "preset",
+        "setRules"
+      ],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/central-limit-theorem/ui.ts",
+          "line": 64,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/central-limit-theorem/model.ts",
+          "line": 167,
+          "marker": "read()"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/central-limit-theorem/ui.ts",
+          "sha256": "3f0092279016b0e5fb574470edaf4a227c06cca0279d6091e1970e8f90bc7fff"
+        },
+        {
+          "file": "experiments/central-limit-theorem/model.ts",
+          "sha256": "495cf76500ebb2f39508ebd358e5abc50bc0e9e86fb0a52df28ef22d8154ca62"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "chloroplasts-and-food",
+      "ui": "experiments/chloroplasts-and-food/ui.ts",
+      "model": "experiments/chloroplasts-and-food/model.ts",
+      "baselineUIHash": "ab1319bb87a652cc35c32e6fe4dd7938872a1e09dc9bc2eba828fc6a25ff889f",
+      "baselineModelHash": "bc23a701de3f81e7e42dcfcdc339d2db1b3845fd4ccd583231564a153494feef",
+      "recommendation": "candidate",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "molecules hidden/charged/breed, chloroplasts/atpSites, CO2/O2/glucose history",
+      "scientificIdentityAndOrderContract": "Keep photon/chloroplast scale differences, hidden molecule filtering, compartment geometry and observed colors. Model updates gas/water/sugar counts.",
+      "reason": "Three long flatMap-to-one-point histories can use a common typed chart projection; molecule sizes and source flow remain explicit.",
+      "reuseOpportunity": "history accessors",
+      "existingViews": [
+        "spatial",
+        "line"
+      ],
+      "boundPublicModelCalls": [
+        "setParameters"
+      ],
+      "modelExposesRandomState": false,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/chloroplasts-and-food/ui.ts",
+          "line": 34,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/chloroplasts-and-food/model.ts",
+          "line": 404,
+          "marker": "read()"
+        },
+        {
+          "file": "experiments/chloroplasts-and-food/model.ts",
+          "line": 404,
+          "marker": "function read"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/chloroplasts-and-food/ui.ts",
+          "sha256": "ab1319bb87a652cc35c32e6fe4dd7938872a1e09dc9bc2eba828fc6a25ff889f"
+        },
+        {
+          "file": "experiments/chloroplasts-and-food/model.ts",
+          "sha256": "bc23a701de3f81e7e42dcfcdc339d2db1b3845fd4ccd583231564a153494feef"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "consumer-choice",
+      "ui": "experiments/consumer-choice/ui.ts",
+      "model": "experiments/consumer-choice/model.ts",
+      "baselineUIHash": "2c6d8ada99525eaa286f41918e4b80ecde43d4dba838cea88e927ea12424e4b4",
+      "baselineModelHash": "9530c8a16f07c3fade1b116d0b4cad171f5f61918583677d8171cd632d639ae6",
+      "recommendation": "candidate",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "consumers choice/utilities/experience, graph edges, counts and cluster history",
+      "scientificIdentityAndOrderContract": "Orange/blue colors identify product alternatives across network and histories; preserve quality-dependent diameter4*(1+4*quality), personal utility arrays and null clustering gaps.",
+      "reason": "One explicit product style mapping could remove repeated orange/blue literals without changing utility or norm mechanisms. Graph positions are initial topology coordinates, not category layout.",
+      "reuseOpportunity": "stable product mapping",
+      "existingViews": [
+        "network",
+        "inspector",
+        "line"
+      ],
+      "boundPublicModelCalls": [
+        "setParameters"
+      ],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/consumer-choice/ui.ts",
+          "line": 45,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/consumer-choice/model.ts",
+          "line": 199,
+          "marker": "read()"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/consumer-choice/ui.ts",
+          "sha256": "2c6d8ada99525eaa286f41918e4b80ecde43d4dba838cea88e927ea12424e4b4"
+        },
+        {
+          "file": "experiments/consumer-choice/model.ts",
+          "sha256": "9530c8a16f07c3fade1b116d0b4cad171f5f61918583677d8171cd632d639ae6"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "crispr-bacterium",
+      "ui": "experiments/crispr-bacterium/ui.ts",
+      "model": "experiments/crispr-bacterium/model.ts",
+      "baselineUIHash": "22cf8030c7c73fbbc2843aeab94525e49a9f512e421d14e2511e7ca6a941b6b6",
+      "baselineModelHash": "4da61331c86a264514e8254259015263bd143c82bc54e7d1c4dfd5efad96a058",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "guideSequences/array, molecule sequences/bindings and molecular history",
+      "scientificIdentityAndOrderContract": "Preserve integer sequence bins i\u22120.5, maxVirusTypes bounds and Number conversions in history. Model owns Cas/virus events and colors. UI currently calculates histograms from observed arrays.",
+      "reason": "A universal accessor does not resolve the existing UI-side histogram measurement responsibility; record it as targeted ownership debt, not silently move biology/statistics during API adoption.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "spatial",
+        "bar",
+        "line"
+      ],
+      "boundPublicModelCalls": [
+        "commonInfection",
+        "randomInfection",
+        "setParameters"
+      ],
+      "modelExposesRandomState": false,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/crispr-bacterium/ui.ts",
+          "line": 47,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/crispr-bacterium/model.ts",
+          "line": 383,
+          "marker": "read()"
+        },
+        {
+          "file": "experiments/crispr-bacterium/model.ts",
+          "line": 383,
+          "marker": "function read"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/crispr-bacterium/ui.ts",
+          "sha256": "22cf8030c7c73fbbc2843aeab94525e49a9f512e421d14e2511e7ca6a941b6b6"
+        },
+        {
+          "file": "experiments/crispr-bacterium/model.ts",
+          "sha256": "4da61331c86a264514e8254259015263bd143c82bc54e7d1c4dfd5efad96a058"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "crispr-ecosystem",
+      "ui": "experiments/crispr-ecosystem/ui.ts",
+      "model": "experiments/crispr-ecosystem/model.ts",
+      "baselineUIHash": "a5d202ce8135ba0f6ca141a110b6011a72fee33ed7a0335ebd9f3a414f7b7d69",
+      "baselineModelHash": "80ce02797eb81adefce2d4b02b08df0b4a184407cc2675d7441f11f79e0e2e09",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "virus/array sequences, arrayLengths, relativeAbundance and coevolution histories",
+      "scientificIdentityAndOrderContract": "Preserve focal-virus percentage, dynamic sequence identities, observed missing sequence\u21920 history rule and exact integer histogram bins; foodEnergy color is model observation.",
+      "reason": "Dynamic virus membership and three histogram definitions are substantive scientific projections. Do not replace them with frame-ordinal categories; optional later measurement-owner cleanup needs explicit fixtures.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "spatial",
+        "line",
+        "bar"
+      ],
+      "boundPublicModelCalls": [
+        "plotNewVirus",
+        "setParameters"
+      ],
+      "modelExposesRandomState": false,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/crispr-ecosystem/ui.ts",
+          "line": 61,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/crispr-ecosystem/model.ts",
+          "line": 340,
+          "marker": "read()"
+        },
+        {
+          "file": "experiments/crispr-ecosystem/model.ts",
+          "line": 340,
+          "marker": "function read"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/crispr-ecosystem/ui.ts",
+          "sha256": "a5d202ce8135ba0f6ca141a110b6011a72fee33ed7a0335ebd9f3a414f7b7d69"
+        },
+        {
+          "file": "experiments/crispr-ecosystem/model.ts",
+          "sha256": "80ce02797eb81adefce2d4b02b08df0b4a184407cc2675d7441f11f79e0e2e09"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "crystallization-basic",
+      "ui": "experiments/crystallization-basic/ui.ts",
+      "model": "experiments/crystallization-basic/model.ts",
+      "baselineUIHash": "fdf1e30619e7e006db6704d3f6ff710af1f7adbb599872193d2b687150807ada",
+      "baselineModelHash": "a62498fe92a192a0373f7cd621657712d8654231d06d78c31bbfff96f2af03b5",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "atoms temp/colorIndex, source histogram lower/upper, frozen count",
+      "scientificIdentityAndOrderContract": "Keep exact NetLogo color classes and source temperature boundaries, per-bin label rounding only for display, sequential cooling/rotation order untouched.",
+      "reason": "Histogram already comes from model and histories are short; source crystal orientation and bin semantics justify retaining explicit projections.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "spatial",
+        "bar",
+        "line",
+        "inspector"
+      ],
+      "boundPublicModelCalls": [
+        "setRules"
+      ],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/crystallization-basic/ui.ts",
+          "line": 37,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/crystallization-basic/model.ts",
+          "line": 194,
+          "marker": "read()"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/crystallization-basic/ui.ts",
+          "sha256": "fdf1e30619e7e006db6704d3f6ff710af1f7adbb599872193d2b687150807ada"
+        },
+        {
+          "file": "experiments/crystallization-basic/model.ts",
+          "sha256": "a62498fe92a192a0373f7cd621657712d8654231d06d78c31bbfff96f2af03b5"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "cyclic-ca",
+      "ui": "experiments/cyclic-ca/ui.ts",
+      "model": "experiments/cyclic-ca/model.ts",
+      "baselineUIHash": "be805f3a443be014fa25e855421417b4f3b1a2eca85e44bbef95d2e863b39428",
+      "baselineModelHash": "398f9c047a4526aba0ee3f3dca7f958d37eeaf3448a0d3a4a5bfe3dc7c3da997",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "successor state/colorNumber, neighborCount and threshold warning",
+      "scientificIdentityAndOrderContract": "Exact model colorList/NetLogo conversion and periodic neighborhood remain authoritative. Threshold controls invoke model validation.",
+      "reason": "Single short grid map has no duplicated layout or state owner to remove.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "grid"
+      ],
+      "boundPublicModelCalls": [
+        "setThreshold"
+      ],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/cyclic-ca/ui.ts",
+          "line": 29,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/cyclic-ca/model.ts",
+          "line": 185,
+          "marker": "read()"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/cyclic-ca/ui.ts",
+          "sha256": "be805f3a443be014fa25e855421417b4f3b1a2eca85e44bbef95d2e863b39428"
+        },
+        {
+          "file": "experiments/cyclic-ca/model.ts",
+          "sha256": "398f9c047a4526aba0ee3f3dca7f958d37eeaf3448a0d3a4a5bfe3dc7c3da997"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "daisyworld",
+      "ui": "experiments/daisyworld/ui.ts",
+      "model": "experiments/daisyworld/model.ts",
+      "baselineUIHash": "9ee0f0dd9b522c21f1a3d50eb18f2d5cefbb3851f24390b23697e121da3c8866",
+      "baselineModelHash": "e45e8a381a75342b78555d7d5eeeec59618cd229f7683712637919aab4b468e3",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "black/white daisies, temperature cells, luminosity and population history",
+      "scientificIdentityAndOrderContract": "Keep fixed (temperature+50)/160 clamp and NetLogo10+9.999 range; albedo is model-owned and black/white breeds remain stable. Painting actions alter actual fields/daisies.",
+      "reason": "Temperature is an explicit fixed scientific scale; replacing it with automatic min/max would change interpretation. Existing histories are concise.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "spatial",
+        "line"
+      ],
+      "boundPublicModelCalls": [
+        "paint",
+        "read",
+        "removeAllDaisies",
+        "setRules"
+      ],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/daisyworld/ui.ts",
+          "line": 73,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/daisyworld/ui.ts",
+          "line": 44,
+          "marker": "read()"
+        },
+        {
+          "file": "experiments/daisyworld/model.ts",
+          "line": 289,
+          "marker": "read()"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/daisyworld/ui.ts",
+          "sha256": "9ee0f0dd9b522c21f1a3d50eb18f2d5cefbb3851f24390b23697e121da3c8866"
+        },
+        {
+          "file": "experiments/daisyworld/model.ts",
+          "sha256": "e45e8a381a75342b78555d7d5eeeec59618cd229f7683712637919aab4b468e3"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "des-bike-redistribution",
+      "ui": "experiments/des-bike-redistribution/ui.ts",
+      "model": "experiments/des-bike-redistribution/model.ts",
+      "baselineUIHash": "a925f27daf93dc6c1e06d82da1527f7d92dfd5868f1809df4d372ece7ed52529",
+      "baselineModelHash": "88e9afd56c38d2818d9a2600de7e51dc4de23027aaabfb35167bec5ddaf128ae",
+      "recommendation": "candidate",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "three Store station counts/capacity, truck cargo, trips and conserved totalBikes",
+      "scientificIdentityAndOrderContract": "Minutes and indivisible bikes; store occupancy plus cargo conserve fleet. Slot glyphs are anonymous capacity, not individual bike identities; station/truck Agent IDs remain canonical.",
+      "reason": "Repeated slot/cargo spacing is presentation-only and can reuse collection/capacity layout if station topology, transit and conservation stay visible. Keep the short ui.ts binding.",
+      "reuseOpportunity": "shared collection/capacity layout",
+      "existingViews": [
+        "spatial",
+        "bar",
+        "table"
+      ],
+      "boundPublicModelCalls": [],
+      "modelExposesRandomState": false,
+      "largeTableInspection": "Shared 200-row host limit applies; preserve all model rows and original order. Specific author filtering/limits must be considered separately.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/des-bike-redistribution/ui.ts",
+          "line": 11,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/des-bike-redistribution/model.ts",
+          "line": 70,
+          "marker": "read()"
+        },
+        {
+          "file": "experiments/des-bike-redistribution/scene.ts",
+          "line": 6,
+          "marker": "export function scene"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/des-bike-redistribution/ui.ts",
+          "sha256": "a925f27daf93dc6c1e06d82da1527f7d92dfd5868f1809df4d372ece7ed52529"
+        },
+        {
+          "file": "experiments/des-bike-redistribution/model.ts",
+          "sha256": "88e9afd56c38d2818d9a2600de7e51dc4de23027aaabfb35167bec5ddaf128ae"
+        },
+        {
+          "file": "experiments/des-bike-redistribution/scene.ts",
+          "sha256": "bec25eaa5fd9b75256b54e6420f328a0d028f5a663dda6784f5927b36caaec54"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "des-bus-interchange",
+      "ui": "experiments/des-bus-interchange/ui.ts",
+      "model": "experiments/des-bus-interchange/model.ts",
+      "baselineUIHash": "16f6c7cfbef90ad79db00521a02a992d9f6aec3c8571918f9b2672e9bf0822c0",
+      "baselineModelHash": "08c89006f3f491f3cd8a0c5114fe57433bde6dce0ddaba37099aa5209f187bbf",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "actual graph route/edgeCosts, dispatchedAt and buses at travel/service milestones",
+      "scientificIdentityAndOrderContract": "Minutes interpolate observed route legs only in diagram coordinates; retain 2/3/8 weighted alternatives and retained berth claims. Admission ledger filtering must not establish future priority queue semantics.",
+      "reason": "Custom route geometry communicates weighted travel plus service; a collection-only rewrite would remove the mechanism. Local berth layout may reuse tokens later but preserve path scene.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "spatial",
+        "line",
+        "table"
+      ],
+      "boundPublicModelCalls": [
+        "addBus",
+        "setBerths"
+      ],
+      "modelExposesRandomState": false,
+      "largeTableInspection": "Shared 200-row host limit applies; preserve all model rows and original order. Specific author filtering/limits must be considered separately.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/des-bus-interchange/ui.ts",
+          "line": 15,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/des-bus-interchange/model.ts",
+          "line": 71,
+          "marker": "read()"
+        },
+        {
+          "file": "experiments/des-bus-interchange/scene.ts",
+          "line": 13,
+          "marker": "export function busScene"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/des-bus-interchange/ui.ts",
+          "sha256": "16f6c7cfbef90ad79db00521a02a992d9f6aec3c8571918f9b2672e9bf0822c0"
+        },
+        {
+          "file": "experiments/des-bus-interchange/model.ts",
+          "sha256": "08c89006f3f491f3cd8a0c5114fe57433bde6dce0ddaba37099aa5209f187bbf"
+        },
+        {
+          "file": "experiments/des-bus-interchange/scene.ts",
+          "sha256": "bdc53bb8e8139fee1fa398daf850f37b7d9a816ce6826680af9f954b765ae16a"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "des-civic-office",
+      "ui": "experiments/des-civic-office/ui.ts",
+      "model": "experiments/des-civic-office/model.ts",
+      "baselineUIHash": "16b68135d6b0a59d20a6f83dc003703764ad97aaa2ad8bf6ac192921c72580e0",
+      "baselineModelHash": "c081b1274508857c1057a575be6865abb07a4edb17b2877216b0d4bb91a4c69f",
+      "recommendation": "candidate",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "residents ledger, Resource waiting count/busy, completed and history",
+      "scientificIdentityAndOrderContract": "Minutes; Resource owns capacity and retained service. Existing ledger filters do not expose canonical ordered queue owners; numbered desk assignment is diagram symbolism, not an observed allocation.",
+      "reason": "Strong shared collection/capacity candidate removes wrapping/spacing. Add detached owner-order snapshot if the new view claims queue order; show retained excess without fabricated seat identity.",
+      "reuseOpportunity": "shared collection/capacity layout; optional owner snapshot",
+      "existingViews": [
+        "spatial",
+        "line",
+        "table"
+      ],
+      "boundPublicModelCalls": [
+        "addResident",
+        "setClerks"
+      ],
+      "modelExposesRandomState": false,
+      "largeTableInspection": "Shared 200-row host limit applies; preserve all model rows and original order. Specific author filtering/limits must be considered separately.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/des-civic-office/ui.ts",
+          "line": 15,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/des-civic-office/model.ts",
+          "line": 60,
+          "marker": "read()"
+        },
+        {
+          "file": "experiments/des-civic-office/scene.ts",
+          "line": 6,
+          "marker": "export function officeScene"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/des-civic-office/ui.ts",
+          "sha256": "16b68135d6b0a59d20a6f83dc003703764ad97aaa2ad8bf6ac192921c72580e0"
+        },
+        {
+          "file": "experiments/des-civic-office/model.ts",
+          "sha256": "c081b1274508857c1057a575be6865abb07a4edb17b2877216b0d4bb91a4c69f"
+        },
+        {
+          "file": "experiments/des-civic-office/scene.ts",
+          "sha256": "9dfe32e9598fb5439f17b218151d7f3128a4507efb6f1a5a094f905ae92b7e38"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "des-elevator",
+      "ui": "experiments/des-elevator/ui.ts",
+      "model": "experiments/des-elevator/model.ts",
+      "baselineUIHash": "0f4370ee067f106e0c7cf48fbb351a2bca2a3f65cad4e5ce8e864a51e42212eb",
+      "baselineModelHash": "85832237463827eda377500f1051852c00997481e02b067baaac1d8f136d01e8",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "floorQueues actual order, cars floor/direction/passengers/used/capacity, timed passenger ledger",
+      "scientificIdentityAndOrderContract": "Seconds, distinct World tick/Agenda time, alight-before-board, original-age calls and Resource-owned seats remain fixed. Cabin passenger IDs correspond to actual occupants.",
+      "reason": "Elevation/shaft/floor geometry conveys meaning that generic rows do not. Keep one shared spatial pipeline; centralized primitive sizes could reduce styling constants without erasing floor semantics.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "spatial",
+        "table"
+      ],
+      "boundPublicModelCalls": [
+        "addPassenger"
+      ],
+      "modelExposesRandomState": false,
+      "largeTableInspection": "Shared 200-row host limit applies; preserve all model rows and original order. Specific author filtering/limits must be considered separately.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/des-elevator/ui.ts",
+          "line": 16,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/des-elevator/model.ts",
+          "line": 282,
+          "marker": "read()"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/des-elevator/ui.ts",
+          "sha256": "0f4370ee067f106e0c7cf48fbb351a2bca2a3f65cad4e5ce8e864a51e42212eb"
+        },
+        {
+          "file": "experiments/des-elevator/model.ts",
+          "sha256": "85832237463827eda377500f1051852c00997481e02b067baaac1d8f136d01e8"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "des-emergency-dispatch",
+      "ui": "experiments/des-emergency-dispatch/ui.ts",
+      "model": "experiments/des-emergency-dispatch/model.ts",
+      "baselineUIHash": "f4a744b003d3f75b22cab6c9bb8d27a6cd202ea8860f28600b731e2f235a0b94",
+      "baselineModelHash": "bb0dc8a415fff4db5fcee61741c85bb62905ee8bef08e7a50fb47f9d03c19f2c",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "four-node graph, calls location/priority/status and teams.used",
+      "scientificIdentityAndOrderContract": "Minutes; lower priority number first among waiters, no clinical calibration. Team triangles mean assignment, not physical travel; preserve actual calls and access edges.",
+      "reason": "Small fixed access-path scene and short bindings are explanatory. Generic count rows would hide location/priority relationships; decoration selection is a shared-runtime concern.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "spatial",
+        "table"
+      ],
+      "boundPublicModelCalls": [
+        "setResponders"
+      ],
+      "modelExposesRandomState": false,
+      "largeTableInspection": "Shared 200-row host limit applies; preserve all model rows and original order. Specific author filtering/limits must be considered separately.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/des-emergency-dispatch/ui.ts",
+          "line": 13,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/des-emergency-dispatch/model.ts",
+          "line": 60,
+          "marker": "read()"
+        },
+        {
+          "file": "experiments/des-emergency-dispatch/scene.ts",
+          "line": 6,
+          "marker": "export function scene"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/des-emergency-dispatch/ui.ts",
+          "sha256": "f4a744b003d3f75b22cab6c9bb8d27a6cd202ea8860f28600b731e2f235a0b94"
+        },
+        {
+          "file": "experiments/des-emergency-dispatch/model.ts",
+          "sha256": "bb0dc8a415fff4db5fcee61741c85bb62905ee8bef08e7a50fb47f9d03c19f2c"
+        },
+        {
+          "file": "experiments/des-emergency-dispatch/scene.ts",
+          "sha256": "a53e3d66ac308c39789e797d67e7018e0bb8a085f9edb2e8f4961cc57459c2eb"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "des-ev-charging",
+      "ui": "experiments/des-ev-charging/ui.ts",
+      "model": "experiments/des-ev-charging/model.ts",
+      "baselineUIHash": "fc1496125205c7e7b7eb7c45b138e429ff89b6cf65192e89ed0cfd00455a912f",
+      "baselineModelHash": "366f5a3a0f62945d5e37b0b82f787ab0619234722adab445329940bd80e77244",
+      "recommendation": "candidate",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "vehicles priority/status, actual ordered waitingVehicles and Resource.active",
+      "scientificIdentityAndOrderContract": "Minutes/session durations; canonical policy-sorted waiting owners must determine order. Keep cancelled/completed distinct and retained grants above reduced capacity visible; no battery physics.",
+      "reason": "Strong reuse candidate for ordered collections plus separate capacity/active state removes many per-scene spacing literals. Priority marker identity/label must survive without becoming another vehicle.",
+      "reuseOpportunity": "shared collection/capacity layout",
+      "existingViews": [
+        "spatial",
+        "line",
+        "table"
+      ],
+      "boundPublicModelCalls": [
+        "abandonWaiting",
+        "addVehicle",
+        "setChargers"
+      ],
+      "modelExposesRandomState": false,
+      "largeTableInspection": "Shared 200-row host limit applies; preserve all model rows and original order. Specific author filtering/limits must be considered separately.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/des-ev-charging/ui.ts",
+          "line": 19,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/des-ev-charging/model.ts",
+          "line": 65,
+          "marker": "read()"
+        },
+        {
+          "file": "experiments/des-ev-charging/scene.ts",
+          "line": 6,
+          "marker": "export function chargingScene"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/des-ev-charging/ui.ts",
+          "sha256": "fc1496125205c7e7b7eb7c45b138e429ff89b6cf65192e89ed0cfd00455a912f"
+        },
+        {
+          "file": "experiments/des-ev-charging/model.ts",
+          "sha256": "366f5a3a0f62945d5e37b0b82f787ab0619234722adab445329940bd80e77244"
+        },
+        {
+          "file": "experiments/des-ev-charging/scene.ts",
+          "sha256": "ef3bd870f967e761d65c1be0e313c3a572d003561ed70f8fcc8c1773618c7e54"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "des-goods-buffer",
+      "ui": "experiments/des-goods-buffer/ui.ts",
+      "model": "experiments/des-goods-buffer/model.ts",
+      "baselineUIHash": "8e02f57ae37aac212bd33b355e59dc0ac7d022c2955022a006499d9a9d8071e1",
+      "baselineModelHash": "a9936f8677d5809efc1431d7e923d1893d3649467f0ab2350864ce31430e927d",
+      "recommendation": "candidate",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "Store.crates, waitingPuts blockedCrates, collected deliveries and occupancy history",
+      "scientificIdentityAndOrderContract": "Minutes and indivisible crates; arrays directly preserve Store transfer/put order. A symbolic bounded slot is not an assigned physical storage location.",
+      "reason": "Best shared-layout candidate: three identity collections and separate used/capacity quantities currently repeat slot/wrap arithmetic; keep produce/collect actions and all crate IDs.",
+      "reuseOpportunity": "shared collection/capacity layout",
+      "existingViews": [
+        "spatial",
+        "line",
+        "table"
+      ],
+      "boundPublicModelCalls": [
+        "collect",
+        "produce"
+      ],
+      "modelExposesRandomState": false,
+      "largeTableInspection": "Shared 200-row host limit applies; preserve all model rows and original order. Specific author filtering/limits must be considered separately.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/des-goods-buffer/ui.ts",
+          "line": 17,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/des-goods-buffer/model.ts",
+          "line": 48,
+          "marker": "read()"
+        },
+        {
+          "file": "experiments/des-goods-buffer/scene.ts",
+          "line": 5,
+          "marker": "export function bufferScene"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/des-goods-buffer/ui.ts",
+          "sha256": "8e02f57ae37aac212bd33b355e59dc0ac7d022c2955022a006499d9a9d8071e1"
+        },
+        {
+          "file": "experiments/des-goods-buffer/model.ts",
+          "sha256": "a9936f8677d5809efc1431d7e923d1893d3649467f0ab2350864ce31430e927d"
+        },
+        {
+          "file": "experiments/des-goods-buffer/scene.ts",
+          "sha256": "2d3b55114742047e18beae73b7a1d41c3283834c21f41afd4b3a2bb51aa2cf84"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "des-machine-maintenance",
+      "ui": "experiments/des-machine-maintenance/ui.ts",
+      "model": "experiments/des-machine-maintenance/model.ts",
+      "baselineUIHash": "5f7f8e11e02d1b0670d65505d94ada22394cc7abfe6ab3c946a0e8e1de5a3a0a",
+      "baselineModelHash": "8ef7137cb47dc1e95fde2e1ee83c75a1175f7b91947c8cb061a30a04d71234a1",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "spatial machine position/status/repairs, team usage, trace and time-weighted availability",
+      "scientificIdentityAndOrderContract": "Minutes and synthetic cycles; triangles identify repair assignment, Resource owns teams and TimeWeighted owns availability. EventTrace is diagnostics, not History.",
+      "reason": "The three actual machine locations and crew assignment are part of the demonstration. Short UI is already direct; shared decoration/tokens can help without replacing spatial model meaning.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "spatial",
+        "table"
+      ],
+      "boundPublicModelCalls": [
+        "setRepairTeams"
+      ],
+      "modelExposesRandomState": false,
+      "largeTableInspection": "Shared 200-row host limit applies; preserve all model rows and original order. Specific author filtering/limits must be considered separately.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/des-machine-maintenance/ui.ts",
+          "line": 14,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/des-machine-maintenance/model.ts",
+          "line": 84,
+          "marker": "read()"
+        },
+        {
+          "file": "experiments/des-machine-maintenance/scene.ts",
+          "line": 5,
+          "marker": "export function scene"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/des-machine-maintenance/ui.ts",
+          "sha256": "5f7f8e11e02d1b0670d65505d94ada22394cc7abfe6ab3c946a0e8e1de5a3a0a"
+        },
+        {
+          "file": "experiments/des-machine-maintenance/model.ts",
+          "sha256": "8ef7137cb47dc1e95fde2e1ee83c75a1175f7b91947c8cb061a30a04d71234a1"
+        },
+        {
+          "file": "experiments/des-machine-maintenance/scene.ts",
+          "sha256": "451f73fa2d35f8176a176adc4486b6ff0ee329402664cf074a77845bbe34be2d"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "des-parcel-logistics",
+      "ui": "experiments/des-parcel-logistics/ui.ts",
+      "model": "experiments/des-parcel-logistics/model.ts",
+      "baselineUIHash": "b448ea4ccdb1ed338b00fc04644993adbde7905eb228b5727259fd6d625537b8",
+      "baselineModelHash": "4e5e793f791a4ca17b23343fcf7b0bd30d7a5e623b9a960f7b9e2af6cf987309",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "graph nodes/edge costs, queuedParcels/blockedParcels, parcel delivery/return and van Resource",
+      "scientificIdentityAndOrderContract": "Minutes; return remains van-occupied after delivery; actual Store IDs determine depot/blocked order. Preserve East/West graph and weighted outbound/return portrayal.",
+      "reason": "Journey geometry is substantive, unlike interchangeable collection spacing. Keep existing scene and short bindings; any shared depot packing must not remove return occupancy.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "spatial",
+        "line",
+        "table"
+      ],
+      "boundPublicModelCalls": [
+        "addParcel"
+      ],
+      "modelExposesRandomState": false,
+      "largeTableInspection": "Shared 200-row host limit applies; preserve all model rows and original order. Specific author filtering/limits must be considered separately.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/des-parcel-logistics/ui.ts",
+          "line": 14,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/des-parcel-logistics/model.ts",
+          "line": 80,
+          "marker": "read()"
+        },
+        {
+          "file": "experiments/des-parcel-logistics/scene.ts",
+          "line": 13,
+          "marker": "export function parcelScene"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/des-parcel-logistics/ui.ts",
+          "sha256": "b448ea4ccdb1ed338b00fc04644993adbde7905eb228b5727259fd6d625537b8"
+        },
+        {
+          "file": "experiments/des-parcel-logistics/model.ts",
+          "sha256": "4e5e793f791a4ca17b23343fcf7b0bd30d7a5e623b9a960f7b9e2af6cf987309"
+        },
+        {
+          "file": "experiments/des-parcel-logistics/scene.ts",
+          "sha256": "65881bdf09f3567a8b6736a9063a6fd70fecb95bb1bd0527ac226ff7bdd3773b"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "des-waste-collection",
+      "ui": "experiments/des-waste-collection/ui.ts",
+      "model": "experiments/des-waste-collection/model.ts",
+      "baselineUIHash": "3bac32e78b1d483c8950e08019cfbe2f0701d7ba104a18b336a0a638e110d5d5",
+      "baselineModelHash": "65e9005cb70108cd5c84715e87590b67500c3707743277a3a7cea4eea80d92bc",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "six actual Grid fields waste, truck.load, depot Resource and delivered history",
+      "scientificIdentityAndOrderContract": "Minutes and load units; exact Grid topology and bounded truck capacity matter. No invented roads or bins; depot unloading label is intentionally short for narrow layout.",
+      "reason": "The scene combines genuine collection geography and load units. A generic group diagram would lose the tour; the current history directly uses model points.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "spatial",
+        "line"
+      ],
+      "boundPublicModelCalls": [],
+      "modelExposesRandomState": false,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/des-waste-collection/ui.ts",
+          "line": 11,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/des-waste-collection/model.ts",
+          "line": 64,
+          "marker": "read()"
+        },
+        {
+          "file": "experiments/des-waste-collection/scene.ts",
+          "line": 6,
+          "marker": "export function scene"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/des-waste-collection/ui.ts",
+          "sha256": "3bac32e78b1d483c8950e08019cfbe2f0701d7ba104a18b336a0a638e110d5d5"
+        },
+        {
+          "file": "experiments/des-waste-collection/model.ts",
+          "sha256": "65e9005cb70108cd5c84715e87590b67500c3707743277a3a7cea4eea80d92bc"
+        },
+        {
+          "file": "experiments/des-waste-collection/scene.ts",
+          "sha256": "49bc43e46abc004697b00a7d9eb7f5aac86e85ca18b40ccd0f9569a9384d563b"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "des-water-allocation",
+      "ui": "experiments/des-water-allocation/ui.ts",
+      "model": "experiments/des-water-allocation/model.ts",
+      "baselineUIHash": "cfd83d9f0e5f760cf433e999ec2098bf0aa83e862629eb518078c0f8e524fba1",
+      "baselineModelHash": "0663d5d5c046ba9b76122de025dfcf1046b00ec540b989695cb33874fc96db5e",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "four Grid districts demand/supplied/status, entitlements capacity/used/available",
+      "scientificIdentityAndOrderContract": "Synthetic allocation units, NOT m3/pressure/households. Three per-district glyphs represent demand units and preserve committed versus supplied distinction.",
+      "reason": "Grid districts are the task; generic rows are not a better replacement. Existing bar/table projections are already concise and unit-labelled.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "spatial",
+        "bar",
+        "table"
+      ],
+      "boundPublicModelCalls": [
+        "addSupply"
+      ],
+      "modelExposesRandomState": false,
+      "largeTableInspection": "Shared 200-row host limit applies; preserve all model rows and original order. Specific author filtering/limits must be considered separately.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/des-water-allocation/ui.ts",
+          "line": 12,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/des-water-allocation/model.ts",
+          "line": 48,
+          "marker": "read()"
+        },
+        {
+          "file": "experiments/des-water-allocation/scene.ts",
+          "line": 6,
+          "marker": "export function scene"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/des-water-allocation/ui.ts",
+          "sha256": "cfd83d9f0e5f760cf433e999ec2098bf0aa83e862629eb518078c0f8e524fba1"
+        },
+        {
+          "file": "experiments/des-water-allocation/model.ts",
+          "sha256": "0663d5d5c046ba9b76122de025dfcf1046b00ec540b989695cb33874fc96db5e"
+        },
+        {
+          "file": "experiments/des-water-allocation/scene.ts",
+          "sha256": "4b54d55fc40df4aacc1b749daf05b5b5fcccdd9e40165788e264a2dd241ff6cd"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "diffusion-on-a-directed-network",
+      "ui": "experiments/diffusion-on-a-directed-network/ui.ts",
+      "model": "experiments/diffusion-on-a-directed-network/model.ts",
+      "baselineUIHash": "54aec06d46fee71a0bcf56afc5273d1e1e63c588951cc501182632a4d7d0e03d",
+      "baselineModelHash": "04500b221b518615518c514b5c1d8216640e5c65e439265c82cf505a1906d2e7",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "nodes.value, active/currentFlow edges, totalValue/maxFlow and histogram",
+      "scientificIdentityAndOrderContract": "Preserve diameter4+50*sqrt(value/totalValue), explicit finite relative-flow width and zero guards; graph IDs/active topology stay authoritative. Table intentionally says first20 and slices20.",
+      "reason": "This is a key counterexample to universal autoscale. Shared table pagination cannot expose later edges while the author slice remains; decide that intentional display limit explicitly if full inspection is required.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "inspector",
+        "network",
+        "bar",
+        "table"
+      ],
+      "boundPublicModelCalls": [
+        "rewire",
+        "setRules"
+      ],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "Shared 200-row host limit applies; preserve all model rows and original order. Specific author filtering/limits must be considered separately.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/diffusion-on-a-directed-network/ui.ts",
+          "line": 37,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/diffusion-on-a-directed-network/model.ts",
+          "line": 147,
+          "marker": "read()"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/diffusion-on-a-directed-network/ui.ts",
+          "sha256": "54aec06d46fee71a0bcf56afc5273d1e1e63c588951cc501182632a4d7d0e03d"
+        },
+        {
+          "file": "experiments/diffusion-on-a-directed-network/model.ts",
+          "sha256": "04500b221b518615518c514b5c1d8216640e5c65e439265c82cf505a1906d2e7"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "dining-philosophers",
+      "ui": "experiments/dining-philosophers/ui.ts",
+      "model": "experiments/dining-philosophers/model.ts",
+      "baselineUIHash": "cecff0f1d272215d870b703c947f208e527fbd455c61bf1d3b80807d10c64585",
+      "baselineModelHash": "2c5723457b07bac0150051f4aff730f17195cac441328f33e8d39c6cce2e4bb5",
+      "recommendation": "candidate",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "philosopher states/totalEaten, fork owner/marked and allocation histories",
+      "scientificIdentityAndOrderContract": "Thinking/hungry/eating colors are shared across geometry and chart; fork/philosopher numeric IDs are explicitly namespaced p-/f-. Preserve cooperation marks and fork ownership, not Resource substitution.",
+      "reason": "An explicit state style map would remove duplicated state-color ternaries and series colors. The circular table/fork geometry and ownership table should stay.",
+      "reuseOpportunity": "stable philosopher-state mapping",
+      "existingViews": [
+        "spatial",
+        "bar",
+        "line",
+        "table"
+      ],
+      "boundPublicModelCalls": [
+        "setParameters"
+      ],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "Shared 200-row host limit applies; preserve all model rows and original order. Specific author filtering/limits must be considered separately.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/dining-philosophers/ui.ts",
+          "line": 27,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/dining-philosophers/model.ts",
+          "line": 254,
+          "marker": "read()"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/dining-philosophers/ui.ts",
+          "sha256": "cecff0f1d272215d870b703c947f208e527fbd455c61bf1d3b80807d10c64585"
+        },
+        {
+          "file": "experiments/dining-philosophers/model.ts",
+          "sha256": "2c5723457b07bac0150051f4aff730f17195cac441328f33e8d39c6cce2e4bb5"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "disease-solo",
+      "ui": "experiments/disease-solo/ui.ts",
+      "model": "experiments/disease-solo/model.ts",
+      "baselineUIHash": "0ff58406268a6092d6d47df6ae3f88aa17d295ab5ae0000a8d5fade9bbe26b87",
+      "baselineModelHash": "4ae3f77b74545de4323021eb3d502064f76966ec3e0e2704c0901e4d2f012b6c",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "one user/android agent population, numSick, runNumber/delay and history",
+      "scientificIdentityAndOrderContract": "Keep controlled-user movement/infection actions, model-owned disease colors and contact geometry. No clinical rate/unit calibration is implied.",
+      "reason": "One spatial callback and single sick-count history are already straightforward; shared default glyph omission can be considered without hiding the controlled-person mechanism.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "spatial",
+        "line"
+      ],
+      "boundPublicModelCalls": [
+        "infect",
+        "move",
+        "setParameters",
+        "setupClear",
+        "setupKeep"
+      ],
+      "modelExposesRandomState": false,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/disease-solo/ui.ts",
+          "line": 40,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/disease-solo/model.ts",
+          "line": 196,
+          "marker": "read()"
+        },
+        {
+          "file": "experiments/disease-solo/model.ts",
+          "line": 196,
+          "marker": "function read"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/disease-solo/ui.ts",
+          "sha256": "0ff58406268a6092d6d47df6ae3f88aa17d295ab5ae0000a8d5fade9bbe26b87"
+        },
+        {
+          "file": "experiments/disease-solo/model.ts",
+          "sha256": "4ae3f77b74545de4323021eb3d502064f76966ec3e0e2704c0901e4d2f012b6c"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "dla",
+      "ui": "experiments/dla/ui.ts",
+      "model": "experiments/dla/model.ts",
+      "baselineUIHash": "e0ea1a83d75edc23da5070606cd8fafdfcc514ccfa0b4e97c935404c29761bf7",
+      "baselineModelHash": "c9d4d5d677fe96f66dba5365b372267c9212ebecdc8fd965100e8cb5b613136c",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "occupied lattice cells, off-lattice walker agents, radius/done",
+      "scientificIdentityAndOrderContract": "Preserve lattice deposition geometry and walker identities for inspector. Binary occupied colors and source boundary/radius are not arbitrary group layout.",
+      "reason": "Two short named projections already keep observations explicit; collection abstractions add no concrete benefit.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "spatial",
+        "inspector"
+      ],
+      "boundPublicModelCalls": [
+        "setRules"
+      ],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/dla/ui.ts",
+          "line": 31,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/dla/model.ts",
+          "line": 165,
+          "marker": "read()"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/dla/ui.ts",
+          "sha256": "e0ea1a83d75edc23da5070606cd8fafdfcc514ccfa0b4e97c935404c29761bf7"
+        },
+        {
+          "file": "experiments/dla/model.ts",
+          "sha256": "c9d4d5d677fe96f66dba5365b372267c9212ebecdc8fd965100e8cb5b613136c"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "dna-protein-synthesis",
+      "ui": "experiments/dna-protein-synthesis/ui.ts",
+      "model": "experiments/dna-protein-synthesis/model.ts",
+      "baselineUIHash": "cbf36087256a2c023d746980dfde089dc47bfd2f93f4059e5cf04e115c070f86",
+      "baselineModelHash": "598d714d50bf0dbbcab7f079afedb9b0abbfef36c143d2e0eb050335f3077d2a",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "hidden molecular agents, original/duplicate DNA, proteins, triggered/completed instruction events",
+      "scientificIdentityAndOrderContract": "Protein strand/sequence remains text, not count data. Original/duplicate lanes and molecular visibility encode explicit instruction flow; public transcribe/translate/replicate/release actions stay model-owned.",
+      "reason": "Direct sequence tables and molecular projection are already cohesive; do not replace the instructional geometry with generic collection counts.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "spatial",
+        "table"
+      ],
+      "boundPublicModelCalls": [
+        "nextInstruction",
+        "previousInstruction",
+        "releaseMRNA",
+        "releaseProtein",
+        "replicateDNA",
+        "setParameters",
+        "showProteinProduction",
+        "transcribe",
+        "translate"
+      ],
+      "modelExposesRandomState": false,
+      "largeTableInspection": "Shared 200-row host limit applies; preserve all model rows and original order. Specific author filtering/limits must be considered separately.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/dna-protein-synthesis/ui.ts",
+          "line": 78,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/dna-protein-synthesis/model.ts",
+          "line": 827,
+          "marker": "read()"
+        },
+        {
+          "file": "experiments/dna-protein-synthesis/model.ts",
+          "line": 827,
+          "marker": "function read"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/dna-protein-synthesis/ui.ts",
+          "sha256": "cbf36087256a2c023d746980dfde089dc47bfd2f93f4059e5cf04e115c070f86"
+        },
+        {
+          "file": "experiments/dna-protein-synthesis/model.ts",
+          "sha256": "598d714d50bf0dbbcab7f079afedb9b0abbfef36c143d2e0eb050335f3077d2a"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "el-farol",
+      "ui": "experiments/el-farol/ui.ts",
+      "model": "experiments/el-farol/model.ts",
+      "baselineUIHash": "eec3bc45729d31df817f9eacc3805f3471fbc5d6df4967f830fec4c6f74a303f",
+      "baselineModelHash": "a74483fc58c726c8864aef3a211f3ed6bd39c76d30119ab4ff55777d40e27844",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "people attend/prediction/strategy, home/bar cells, plotHistory/threshold",
+      "scientificIdentityAndOrderContract": "Preserve overcrowdingThreshold as model input and explicit reference line over max(10,tick); homes/bar topology has meaning and attendance is count, not percent.",
+      "reason": "Threshold reference line is purposeful scientific comparison, not magic model layout. Current named projections and short maps should stay.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "spatial",
+        "line",
+        "inspector"
+      ],
+      "boundPublicModelCalls": [
+        "setRules"
+      ],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/el-farol/ui.ts",
+          "line": 24,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/el-farol/model.ts",
+          "line": 225,
+          "marker": "read()"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/el-farol/ui.ts",
+          "sha256": "eec3bc45729d31df817f9eacc3805f3471fbc5d6df4967f830fec4c6f74a303f"
+        },
+        {
+          "file": "experiments/el-farol/model.ts",
+          "sha256": "a74483fc58c726c8864aef3a211f3ed6bd39c76d30119ab4ff55777d40e27844"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "epidem-basic",
+      "ui": "experiments/epidem-basic/ui.ts",
+      "model": "experiments/epidem-basic/model.ts",
+      "baselineUIHash": "5503669dd14e8cd25f98c271bf9a34e41ab8dc8e1fbfec46f96a88239369b422",
+      "baselineModelHash": "48db3044717651ceae34eb3c13451e7ce34c1e50a34871a655838f8e717c10ef",
+      "recommendation": "candidate",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "infected/cured/susceptible agents, betaN/gamma/r0 and history",
+      "scientificIdentityAndOrderContract": "Counts and model-calculated transmission reporters stay headless; susceptible/infected/cured portrayal and contact movement remain unchanged. No empirical epidemiology claim.",
+      "reason": "Two verbose history object mappings can share a typed accessor if accepted; spatial cells/agent colors and model disease states need no new category engine.",
+      "reuseOpportunity": "history accessors",
+      "existingViews": [
+        "spatial",
+        "line"
+      ],
+      "boundPublicModelCalls": [
+        "setParameters"
+      ],
+      "modelExposesRandomState": false,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/epidem-basic/ui.ts",
+          "line": 37,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/epidem-basic/model.ts",
+          "line": 220,
+          "marker": "read()"
+        },
+        {
+          "file": "experiments/epidem-basic/model.ts",
+          "line": 220,
+          "marker": "function read"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/epidem-basic/ui.ts",
+          "sha256": "5503669dd14e8cd25f98c271bf9a34e41ab8dc8e1fbfec46f96a88239369b422"
+        },
+        {
+          "file": "experiments/epidem-basic/model.ts",
+          "sha256": "48db3044717651ceae34eb3c13451e7ce34c1e50a34871a655838f8e717c10ef"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "epidem-travel-and-control",
+      "ui": "experiments/epidem-travel-and-control/ui.ts",
+      "model": "experiments/epidem-travel-and-control/model.ts",
+      "baselineUIHash": "92bb024b55854eb9754acf70e9287bacf17a43e398264c77fc4ce547fc206173",
+      "baselineModelHash": "d1534275ece4f8f68dfbf50348fbeb0046222c017d678f5bb92cf67ad28a9727",
+      "recommendation": "candidate",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "people continent/inoculated/isolated/hospitalized/ambulance, edges and infection history",
+      "scientificIdentityAndOrderContract": "Preserve travel/contact geography and precedence ambulance\u2192cured\u2192inoculated\u2192infected\u2192susceptible. R0/beta/gamma are model reporters, not UI calculations.",
+      "reason": "Same two historical series as epiDEM Basic can use one authoring capability without merging the distinct control/travel mechanisms.",
+      "reuseOpportunity": "history accessors",
+      "existingViews": [
+        "spatial",
+        "line"
+      ],
+      "boundPublicModelCalls": [
+        "setParameters"
+      ],
+      "modelExposesRandomState": false,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/epidem-travel-and-control/ui.ts",
+          "line": 63,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/epidem-travel-and-control/model.ts",
+          "line": 385,
+          "marker": "read()"
+        },
+        {
+          "file": "experiments/epidem-travel-and-control/model.ts",
+          "line": 385,
+          "marker": "function read"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/epidem-travel-and-control/ui.ts",
+          "sha256": "92bb024b55854eb9754acf70e9287bacf17a43e398264c77fc4ce547fc206173"
+        },
+        {
+          "file": "experiments/epidem-travel-and-control/model.ts",
+          "sha256": "d1534275ece4f8f68dfbf50348fbeb0046222c017d678f5bb92cf67ad28a9727"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "ethnocentrism",
+      "ui": "experiments/ethnocentrism/ui.ts",
+      "model": "experiments/ethnocentrism/model.ts",
+      "baselineUIHash": "96f1fe486083a6b439b88eabb3f47a0267e353dc117d5626f5de3a875fbf0da8",
+      "baselineModelHash": "a238bd3840ca768fc6520ea5ac7911e433152a26fa01b2828a49a59301f15b3f",
+      "recommendation": "candidate",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "agent tag/cooperateWithSame/cooperateWithDifferent, strategy counts and 100-step statistics",
+      "scientificIdentityAndOrderContract": "Tag color, own-group cooperation shape, other-group size and CC/CD/DC/DD labels are separate channels. Preserve +25/\u221225 coordinate conversion and canonical agent IDs.",
+      "reason": "One stable strategy-series definition can replace positional colors; do not conflate four strategy categories with four unrelated tag categories.",
+      "reuseOpportunity": "stable strategy mapping",
+      "existingViews": [
+        "spatial",
+        "inspector",
+        "line"
+      ],
+      "boundPublicModelCalls": [
+        "setParameters",
+        "setupEmpty",
+        "setupFull"
+      ],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/ethnocentrism/ui.ts",
+          "line": 54,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/ethnocentrism/model.ts",
+          "line": 277,
+          "marker": "read()"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/ethnocentrism/ui.ts",
+          "sha256": "96f1fe486083a6b439b88eabb3f47a0267e353dc117d5626f5de3a875fbf0da8"
+        },
+        {
+          "file": "experiments/ethnocentrism/model.ts",
+          "sha256": "a238bd3840ca768fc6520ea5ac7911e433152a26fa01b2828a49a59301f15b3f"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "expected-value",
+      "ui": "experiments/expected-value/ui.ts",
+      "model": "experiments/expected-value/model.ts",
+      "baselineUIHash": "1dc573b41ff73241866cb97acb2220453a303b952d8d837ff2a97058a303d446",
+      "baselineModelHash": "6f179ce6d6c7e89d52a1f181823231c21162713ca42ce1248b5e60bf43556fd1",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "population ratios/percentages, expectedValue/cumulativeMeans/histogram, selected tiles and walker",
+      "scientificIdentityAndOrderContract": "Expected value and sampleSize product are model-owned. Preserve hidden/visible tile state, dieNums labels and explicit equality/reference series; selection IDs namespace overlays.",
+      "reason": "Its statistical comparisons and instructional tile drawing are already explicit; no collection layout is a substitute for value-spatial sampling.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "spatial",
+        "bar",
+        "line"
+      ],
+      "boundPublicModelCalls": [
+        "clearSelection",
+        "setDisplay"
+      ],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/expected-value/ui.ts",
+          "line": 60,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/expected-value/model.ts",
+          "line": 163,
+          "marker": "read()"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/expected-value/ui.ts",
+          "sha256": "1dc573b41ff73241866cb97acb2220453a303b952d8d837ff2a97058a303d446"
+        },
+        {
+          "file": "experiments/expected-value/model.ts",
+          "sha256": "6f179ce6d6c7e89d52a1f181823231c21162713ca42ce1248b5e60bf43556fd1"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "fire",
+      "ui": "experiments/fire/ui.ts",
+      "model": "experiments/fire/model.ts",
+      "baselineUIHash": "aa4a32ffd832e33f2dd63342729cd0f71eb44811b89fed3d0fb3b1b6a302427a",
+      "baselineModelHash": "c86026ee0b02dc657e534952241bc2c14cfac81dc44aa26ec87e5dc339866a16",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "tree/fire/ember/burned cells, emberColor and burned count",
+      "scientificIdentityAndOrderContract": "Preserve source fading-red formula255*max(0,(emberColor\u221210)/5), four-neighbor topology and completion after fires+embers0.",
+      "reason": "The one named forest projection is readable and source-specific; auto color normalization would be scientifically misleading.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "grid"
+      ],
+      "boundPublicModelCalls": [],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/fire/ui.ts",
+          "line": 21,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/fire/model.ts",
+          "line": 133,
+          "marker": "read()"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/fire/ui.ts",
+          "sha256": "aa4a32ffd832e33f2dd63342729cd0f71eb44811b89fed3d0fb3b1b6a302427a"
+        },
+        {
+          "file": "experiments/fire/model.ts",
+          "sha256": "c86026ee0b02dc657e534952241bc2c14cfac81dc44aa26ec87e5dc339866a16"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "fireflies",
+      "ui": "experiments/fireflies/ui.ts",
+      "model": "experiments/fireflies/model.ts",
+      "baselineUIHash": "b1be270251af097fb9669e8af02b719e42a63b82b80e2ace99c7447781c70ac6",
+      "baselineModelHash": "7d88e92de4226976f606c999cb1a77451fc5f760db686d7170e123ae94709d5d",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "firefly clocks/window/threshold/flashing/hidden and flashing history",
+      "scientificIdentityAndOrderContract": "Pulse-clock state and delayed recoloring stay in model. Preserve showDarkFireflies filter and yellow/dark distinction; IDs select observed fireflies.",
+      "reason": "Single history and short named projection need no API. size8 can be omitted since it matches existing renderer default, while triangle heading remains explicit.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "spatial",
+        "inspector",
+        "line"
+      ],
+      "boundPublicModelCalls": [
+        "setRules"
+      ],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/fireflies/ui.ts",
+          "line": 32,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/fireflies/model.ts",
+          "line": 147,
+          "marker": "read()"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/fireflies/ui.ts",
+          "sha256": "b1be270251af097fb9669e8af02b719e42a63b82b80e2ace99c7447781c70ac6"
+        },
+        {
+          "file": "experiments/fireflies/model.ts",
+          "sha256": "7d88e92de4226976f606c999cb1a77451fc5f760db686d7170e123ae94709d5d"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "flocking",
+      "ui": "experiments/flocking/ui.ts",
+      "model": "experiments/flocking/model.ts",
+      "baselineUIHash": "6ba900962c70374f90581bfbf6209e75609b62bdd05b47122a135962cfc258ce",
+      "baselineModelHash": "2c45921ec43bffe2e73cb8f7da49a59ebe47eeef486f6e9f3c5f11b8b843930f",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "birds heading/shade/flockmateIds/nearestNeighbor",
+      "scientificIdentityAndOrderContract": "Keep HSL shade55/90%/(40+6*shade), heading triangles and neighborhood relationships. Sequential movement/RNG cannot be reordered by projection.",
+      "reason": "This short spatial/inspector binding is already best-practice. size8 equals current default and may be omitted, but a category/collection rewrite would erase continuous movement.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "spatial",
+        "inspector"
+      ],
+      "boundPublicModelCalls": [
+        "setRules"
+      ],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/flocking/ui.ts",
+          "line": 33,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/flocking/model.ts",
+          "line": 180,
+          "marker": "read()"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/flocking/ui.ts",
+          "sha256": "6ba900962c70374f90581bfbf6209e75609b62bdd05b47122a135962cfc258ce"
+        },
+        {
+          "file": "experiments/flocking/model.ts",
+          "sha256": "2c45921ec43bffe2e73cb8f7da49a59ebe47eeef486f6e9f3c5f11b8b843930f"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "fruit-wars",
+      "ui": "experiments/fruit-wars/ui.ts",
+      "model": "experiments/fruit-wars/model.ts",
+      "baselineUIHash": "3cbaee468e4cf9e031a4fad87b8e0e3460111b46129a1ba118d5a0a00bb410c1",
+      "baselineModelHash": "c96586f686d6b2842e588d2297d7cb4e10aa9b0bc4cc906f9d9062287298dcbe",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "forager traits/energy, bushes/deaths, mortality/means and aggression histograms",
+      "scientificIdentityAndOrderContract": "Preserve selected-trait hue and fixed trait/40 intensity, source NetLogo bushes, null trait means and aggression bins0..61. Death percentages and foraging yields differ in units.",
+      "reason": "Many lines represent genuine distinct traits, dynamic labels and missingness; a universal short wrapper is not automatically clearer. Stable color helpers only if they retain exact trait formulas.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "spatial",
+        "line",
+        "bar"
+      ],
+      "boundPublicModelCalls": [
+        "setRules"
+      ],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/fruit-wars/ui.ts",
+          "line": 56,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/fruit-wars/model.ts",
+          "line": 383,
+          "marker": "read()"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/fruit-wars/ui.ts",
+          "sha256": "3cbaee468e4cf9e031a4fad87b8e0e3460111b46129a1ba118d5a0a00bb410c1"
+        },
+        {
+          "file": "experiments/fruit-wars/model.ts",
+          "sha256": "c96586f686d6b2842e588d2297d7cb4e10aa9b0bc4cc906f9d9062287298dcbe"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "fur",
+      "ui": "experiments/fur/ui.ts",
+      "model": "experiments/fur/model.ts",
+      "baselineUIHash": "e530606007dca9d98a15510883daec0b6c82c070c56669c3e74e0fae5b2449fd",
+      "baselineModelHash": "20a464c5cdf2b6971eb7268175727ffdee78f5ad5a9d55c19d44e99db5fd5649",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "white/newWhite skin cells and whiteCount",
+      "scientificIdentityAndOrderContract": "Keep synchronous skin rules and model-owned black/white portrayal; no world relocation or automatic numeric scale.",
+      "reason": "Already direct GridData with no projection arithmetic; rewriting would add needless structure.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "grid"
+      ],
+      "boundPublicModelCalls": [
+        "restart",
+        "setParameters"
+      ],
+      "modelExposesRandomState": false,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/fur/ui.ts",
+          "line": 30,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/fur/model.ts",
+          "line": 142,
+          "marker": "read()"
+        },
+        {
+          "file": "experiments/fur/model.ts",
+          "line": 142,
+          "marker": "function read"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/fur/ui.ts",
+          "sha256": "e530606007dca9d98a15510883daec0b6c82c070c56669c3e74e0fae5b2449fd"
+        },
+        {
+          "file": "experiments/fur/model.ts",
+          "sha256": "20a464c5cdf2b6971eb7268175727ffdee78f5ad5a9d55c19d44e99db5fd5649"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "galton-box",
+      "ui": "experiments/galton-box/ui.ts",
+      "model": "experiments/galton-box/model.ts",
+      "baselineUIHash": "730e04ddafa54905a7215c3493bdaf17f01d059f38e8b2934ab01c54d9ecd5c8",
+      "baselineModelHash": "1ad4f450fd11fad7f84ef621ae403dad47deb91f1c24f22b6161ebc70c56b109",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "source pegs, particles piled/displayId, counters and full/done",
+      "scientificIdentityAndOrderContract": "Physical peg staggering and falling-ball geometry must remain; y/width/height represent the source box, not collection wrapping. Counter x coordinates have distribution meaning.",
+      "reason": "The existing two views are short. Default packing must not rearrange Galton paths or histogram locations.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "spatial",
+        "bar"
+      ],
+      "boundPublicModelCalls": [
+        "setRules"
+      ],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/galton-box/ui.ts",
+          "line": 30,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/galton-box/model.ts",
+          "line": 174,
+          "marker": "read()"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/galton-box/ui.ts",
+          "sha256": "730e04ddafa54905a7215c3493bdaf17f01d059f38e8b2934ab01c54d9ecd5c8"
+        },
+        {
+          "file": "experiments/galton-box/model.ts",
+          "sha256": "1ad4f450fd11fad7f84ef621ae403dad47deb91f1c24f22b6161ebc70c56b109"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "gendrift-t-interact",
+      "ui": "experiments/gendrift-t-interact/ui.ts",
+      "model": "experiments/gendrift-t-interact/model.ts",
+      "baselineUIHash": "8b6c5aac47d537982e58274ff360e5be510b10b9a885304e1491ea6eab6d9501",
+      "baselineModelHash": "69e919d2c0a51b75c3ad2252049eeea737c9ec7ee5ff53eb8074bcb582abe7e9",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "agent colorNumber, wall cells/mode, color-count histories",
+      "scientificIdentityAndOrderContract": "Keep explicit fixed NetLogo lineage colors/order and count-index association, wall drawing via model, and same lineage color in chart and agents.",
+      "reason": "Lineage colors already derive centrally from netLogoColor rather than per-frame ordinal selection. Existing wall/topology interaction is more important than reducing its map.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "spatial",
+        "line",
+        "inspector"
+      ],
+      "boundPublicModelCalls": [
+        "drawWall",
+        "removeAllWalls",
+        "setWallMode",
+        "setup"
+      ],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/gendrift-t-interact/ui.ts",
+          "line": 40,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/gendrift-t-interact/model.ts",
+          "line": 167,
+          "marker": "read()"
+        },
+        {
+          "file": "experiments/gendrift-t-interact/model.ts",
+          "line": 167,
+          "marker": "function read"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/gendrift-t-interact/ui.ts",
+          "sha256": "8b6c5aac47d537982e58274ff360e5be510b10b9a885304e1491ea6eab6d9501"
+        },
+        {
+          "file": "experiments/gendrift-t-interact/model.ts",
+          "sha256": "69e919d2c0a51b75c3ad2252049eeea737c9ec7ee5ff53eb8074bcb582abe7e9"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "genevo-1-genetic-switch",
+      "ui": "experiments/genevo-1-genetic-switch/ui.ts",
+      "model": "experiments/genevo-1-genetic-switch/model.ts",
+      "baselineUIHash": "94b301bb17b6da244d7af244632658540b818b72a268a3f31fdb46fe70a94161",
+      "baselineModelHash": "0a66b1af1ea3c91f9b94080306bbb777b01abc46538bb0b426bfc61d996653c2",
+      "recommendation": "candidate",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "lacI/rnap/lactose/other molecules, pump fields, energy and lacZ history",
+      "scientificIdentityAndOrderContract": "Hidden lactose indicates actual partner binding; preserve source biochemical color/visibility and division/message values. No helper may schedule synthesis.",
+      "reason": "Energy/LacZ history construction is repetitive but molecular geometry/filtering is necessary; adopt only an accessor that keeps Number conversion and exact sample order.",
+      "reuseOpportunity": "history accessors",
+      "existingViews": [
+        "spatial",
+        "line"
+      ],
+      "boundPublicModelCalls": [
+        "reset",
+        "setParameters"
+      ],
+      "modelExposesRandomState": false,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/genevo-1-genetic-switch/ui.ts",
+          "line": 52,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/genevo-1-genetic-switch/model.ts",
+          "line": 486,
+          "marker": "read()"
+        },
+        {
+          "file": "experiments/genevo-1-genetic-switch/model.ts",
+          "line": 486,
+          "marker": "function read"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/genevo-1-genetic-switch/ui.ts",
+          "sha256": "94b301bb17b6da244d7af244632658540b818b72a268a3f31fdb46fe70a94161"
+        },
+        {
+          "file": "experiments/genevo-1-genetic-switch/model.ts",
+          "sha256": "0a66b1af1ea3c91f9b94080306bbb777b01abc46538bb0b426bfc61d996653c2"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "heat-diffusion",
+      "ui": "experiments/heat-diffusion/ui.ts",
+      "model": "experiments/heat-diffusion/model.ts",
+      "baselineUIHash": "936f3c345e0dc8838bce2bd1959ca686067f36af2b26886549a288c11f628fc8",
+      "baselineModelHash": "df456567d0b6598215a078f095d57a261d5e3999af9dae0653809778c64cdb20",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "temperature/oldTemperature/legendLevel/inPlate, minTemp/maxTemp and diffusivity",
+      "scientificIdentityAndOrderContract": "Fixed observed min/max; constant domain fraction0.5; clamp then netLogoColor(10+min(9.9,10*fraction)); gray exterior remains. Fields select canonical IDs and alpha update is explicit.",
+      "reason": "Strong scientific scale counterexample: current function is precise and readable. Do not replace it with frame-derived extrema or generic colors.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "grid",
+        "inspector"
+      ],
+      "boundPublicModelCalls": [
+        "setRules",
+        "updateAlpha"
+      ],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/heat-diffusion/ui.ts",
+          "line": 44,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/heat-diffusion/model.ts",
+          "line": 228,
+          "marker": "read()"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/heat-diffusion/ui.ts",
+          "sha256": "936f3c345e0dc8838bce2bd1959ca686067f36af2b26886549a288c11f628fc8"
+        },
+        {
+          "file": "experiments/heat-diffusion/model.ts",
+          "sha256": "df456567d0b6598215a078f095d57a261d5e3999af9dae0653809778c64cdb20"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "heatbugs",
+      "ui": "experiments/heatbugs/ui.ts",
+      "model": "experiments/heatbugs/model.ts",
+      "baselineUIHash": "7506c76b94ef12b9724de9f878a8fb277260ec09a1d6897193c9d2665deb1928",
+      "baselineModelHash": "92296c79a005728d2b8444054cb38804d9c0d2f86ee69abd1ec076fe64c96a51",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "bug idealTemp/outputHeat/unhappiness, temp cells, watched and maxUnhappiness",
+      "scientificIdentityAndOrderContract": "Preserve fixed temp/150 heat colors, explicit relative unhappiness denominator and configured idealTemp domain; watched glyph enlargement and null history gaps remain.",
+      "reason": "Two distinct declared normalization modes are explanatory. A generic color helper without these policies would hide meaning; keep current named projection and public watch actions.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "spatial",
+        "inspector",
+        "line"
+      ],
+      "boundPublicModelCalls": [
+        "deepFreeze",
+        "heatUp",
+        "setColorMode",
+        "setRules",
+        "watch"
+      ],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/heatbugs/ui.ts",
+          "line": 65,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/heatbugs/model.ts",
+          "line": 231,
+          "marker": "read()"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/heatbugs/ui.ts",
+          "sha256": "7506c76b94ef12b9724de9f878a8fb277260ec09a1d6897193c9d2665deb1928"
+        },
+        {
+          "file": "experiments/heatbugs/model.ts",
+          "sha256": "92296c79a005728d2b8444054cb38804d9c0d2f86ee69abd1ec076fe64c96a51"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "heroes-and-cowards",
+      "ui": "experiments/heroes-and-cowards/ui.ts",
+      "model": "experiments/heroes-and-cowards/model.ts",
+      "baselineUIHash": "9696c958b06c11e4b82b8978cfcbda367660b87eb72b5190536f91c4c4c20fa1",
+      "baselineModelHash": "962428649b4f432439e324bf46fc88c5f3fa6e7cf4f3c035bfe3a56ea8d374ec",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "personality/friend/enemy agents, diagnostic and count",
+      "scientificIdentityAndOrderContract": "Brave/coward colors and heading triangles distinguish personalities; actual continuous positions encode friend-enemy movement. IDs resolve observed people.",
+      "reason": "Short spatial/inspector declaration already separates presentation from model; no collection or new wrapper improves it.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "spatial",
+        "inspector"
+      ],
+      "boundPublicModelCalls": [
+        "preset"
+      ],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/heroes-and-cowards/ui.ts",
+          "line": 19,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/heroes-and-cowards/model.ts",
+          "line": 210,
+          "marker": "read()"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/heroes-and-cowards/ui.ts",
+          "sha256": "9696c958b06c11e4b82b8978cfcbda367660b87eb72b5190536f91c4c4c20fa1"
+        },
+        {
+          "file": "experiments/heroes-and-cowards/model.ts",
+          "sha256": "962428649b4f432439e324bf46fc88c5f3fa6e7cf4f3c035bfe3a56ea8d374ec"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "hex-cell-aggregation",
+      "ui": "experiments/hex-cell-aggregation/ui.ts",
+      "model": "experiments/hex-cell-aggregation/model.ts",
+      "baselineUIHash": "21cd915032d8783774b87fa4454422ee728645b20e681c32463d36595e5c1c8a",
+      "baselineModelHash": "ce9f985218d4383e5927d6540d9d29d59473a2ce03a16f1ea2a2a341f88f1b5c",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "alive hex fields, displayY/liveNeighborCount/eligible/neighborIds",
+      "scientificIdentityAndOrderContract": "Preserve model-supplied odd/even-column displayY offset and six-neighbor topology; count6 has biological/neighborhood meaning. Inspector uses original field coordinates.",
+      "reason": "A square grid or generic collection would misrepresent hex adjacency. Current displayY adaptation already exposes the correct model-owned topology.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "spatial",
+        "inspector"
+      ],
+      "boundPublicModelCalls": [
+        "readSwitches",
+        "setSwitches"
+      ],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/hex-cell-aggregation/ui.ts",
+          "line": 52,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/hex-cell-aggregation/model.ts",
+          "line": 167,
+          "marker": "read()"
+        },
+        {
+          "file": "experiments/hex-cell-aggregation/model.ts",
+          "line": 107,
+          "marker": "function read"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/hex-cell-aggregation/ui.ts",
+          "sha256": "21cd915032d8783774b87fa4454422ee728645b20e681c32463d36595e5c1c8a"
+        },
+        {
+          "file": "experiments/hex-cell-aggregation/model.ts",
+          "sha256": "ce9f985218d4383e5927d6540d9d29d59473a2ce03a16f1ea2a2a341f88f1b5c"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "hiv",
+      "ui": "experiments/hiv/ui.ts",
+      "model": "experiments/hiv/model.ts",
+      "baselineUIHash": "2c3f4328c6cf9ce7d974113ed248c27878e3097f530d1fc65ef9d215449b584e",
+      "baselineModelHash": "4c2ba3db0a02cd81530490038fe9b6c88665ed7f2998746b790f126a5234c9d9",
+      "recommendation": "candidate",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "infected/known/coupled agents and percentInfected/history",
+      "scientificIdentityAndOrderContract": "Keep infected-known versus unknown colors and coupling fields; source-specific percent versus count histories cannot be coerced into one unit. Biological assumptions remain model-owned.",
+      "reason": "The repeated three history mappings can share an accessor while retaining explicit labels Infected%,Known%,Coupled and exact Number conversions.",
+      "reuseOpportunity": "history accessors",
+      "existingViews": [
+        "spatial",
+        "line"
+      ],
+      "boundPublicModelCalls": [
+        "setParameters"
+      ],
+      "modelExposesRandomState": false,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/hiv/ui.ts",
+          "line": 40,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/hiv/model.ts",
+          "line": 251,
+          "marker": "read()"
+        },
+        {
+          "file": "experiments/hiv/model.ts",
+          "line": 251,
+          "marker": "function read"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/hiv/ui.ts",
+          "sha256": "2c3f4328c6cf9ce7d974113ed248c27878e3097f530d1fc65ef9d215449b584e"
+        },
+        {
+          "file": "experiments/hiv/model.ts",
+          "sha256": "4c2ba3db0a02cd81530490038fe9b6c88665ed7f2998746b790f126a5234c9d9"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "honeycomb",
+      "ui": "experiments/honeycomb/ui.ts",
+      "model": "experiments/honeycomb/model.ts",
+      "baselineUIHash": "49f771e21ad7d742d62e417ec5374c9acc607bb99571ad1d56c02f97091532f4",
+      "baselineModelHash": "a994adb20035dd2c2570a2baedb0026fdc60ed79485b8cc162695ccd54f42b92",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "hidden bee agents, chemical cells/total and shade",
+      "scientificIdentityAndOrderContract": "Model already owns exact chemical grayscale min(1,chemical/20) and bee HSL shade. Hide/show actions affect visibility intentionally; IDs and geometry remain.",
+      "reason": "The UI is one concise filter/map plus direct cells; no redundant layout or history work warrants a rewrite.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "spatial"
+      ],
+      "boundPublicModelCalls": [
+        "hideBees",
+        "showBees"
+      ],
+      "modelExposesRandomState": false,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/honeycomb/ui.ts",
+          "line": 24,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/honeycomb/model.ts",
+          "line": 76,
+          "marker": "read()"
+        },
+        {
+          "file": "experiments/honeycomb/model.ts",
+          "line": 76,
+          "marker": "function read"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/honeycomb/ui.ts",
+          "sha256": "49f771e21ad7d742d62e417ec5374c9acc607bb99571ad1d56c02f97091532f4"
+        },
+        {
+          "file": "experiments/honeycomb/model.ts",
+          "sha256": "a994adb20035dd2c2570a2baedb0026fdc60ed79485b8cc162695ccd54f42b92"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "hotellings-law",
+      "ui": "experiments/hotellings-law/ui.ts",
+      "model": "experiments/hotellings-law/model.ts",
+      "baselineUIHash": "05c98c1c5ec696f2d77f727c155342ceee51ec472c2be3cd5b91cdd3fb14ee6c",
+      "baselineModelHash": "8e83e4dc3a21f254194ee061db2f6d0f4823bab67b9dece10b0af9c18970b9e8",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "stores stable IDs/color/price/area/revenue, preferredStore fields and nested histories",
+      "scientificIdentityAndOrderContract": "Keep exact NetLogo store color+2 region tint and lookup by historical store ID. Missing historical store currently maps to0 deliberately; price and revenue are different quantities.",
+      "reason": "Existing nested history lookup expresses actual identity across time; ordinal category replacement would be wrong. Do not infer area from screen packing.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "spatial",
+        "line",
+        "bar"
+      ],
+      "boundPublicModelCalls": [
+        "setRules"
+      ],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/hotellings-law/ui.ts",
+          "line": 19,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/hotellings-law/model.ts",
+          "line": 168,
+          "marker": "read()"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/hotellings-law/ui.ts",
+          "sha256": "05c98c1c5ec696f2d77f727c155342ceee51ec472c2be3cd5b91cdd3fb14ee6c"
+        },
+        {
+          "file": "experiments/hotellings-law/model.ts",
+          "sha256": "8e83e4dc3a21f254194ee061db2f6d0f4823bab67b9dece10b0af9c18970b9e8"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "household-energy-demand",
+      "ui": "experiments/household-energy-demand/ui.ts",
+      "model": "experiments/household-energy-demand/model.ts",
+      "baselineUIHash": "841f3d482ce27f6c466e522f65a70d5b3e04eacba2cbc17861ff0d2371a477ac",
+      "baselineModelHash": "ec298847caf2ea769c82794f20a799347e1a786635911af7b73f3d7f9277d4b2",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "hour, demandKw/energyKwh, History tick/values.demandKw",
+      "scientificIdentityAndOrderContract": "Keep h/kW/kWh labels and two-decimal presentation only. shiftedShare invokes defined model action; model owns measurement and cumulative energy.",
+      "reason": "Twelve-line UI already offers useful defaults and one clear History map. A helper solely to remove that map would add vocabulary without clarity.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "line"
+      ],
+      "boundPublicModelCalls": [
+        "setShiftedShare"
+      ],
+      "modelExposesRandomState": false,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/household-energy-demand/ui.ts",
+          "line": 10,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/household-energy-demand/model.ts",
+          "line": 39,
+          "marker": "read()"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/household-energy-demand/ui.ts",
+          "sha256": "841f3d482ce27f6c466e522f65a70d5b3e04eacba2cbc17861ff0d2371a477ac"
+        },
+        {
+          "file": "experiments/household-energy-demand/model.ts",
+          "sha256": "ec298847caf2ea769c82794f20a799347e1a786635911af7b73f3d7f9277d4b2"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "household-recycling-behavior",
+      "ui": "experiments/household-recycling-behavior/ui.ts",
+      "model": "experiments/household-recycling-behavior/model.ts",
+      "baselineUIHash": "be025c69ff62ac53e20ba356056699b3765fedc5961733d21cf8b1eda75721c4",
+      "baselineModelHash": "28c78ea7fa1a131850d02a1d770f93e7e578687d0f911398f38b8632180a257f",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "nodes household/recycling, edges, History share and adopters",
+      "scientificIdentityAndOrderContract": "H1..Hn are compact display labels, canonical node IDs remain for inspector. Preserve detached History sample.tick/value.share; seeded two-phase adoption is model-owned.",
+      "reason": "Thirteen-line graph/inspector/chart binding already reads well. Keep labels chosen by prior narrow-screen acceptance; generic grouped scenes would discard peer topology.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "network",
+        "inspector",
+        "line"
+      ],
+      "boundPublicModelCalls": [
+        "setInfluence"
+      ],
+      "modelExposesRandomState": false,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/household-recycling-behavior/ui.ts",
+          "line": 6,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/household-recycling-behavior/model.ts",
+          "line": 44,
+          "marker": "read()"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/household-recycling-behavior/ui.ts",
+          "sha256": "be025c69ff62ac53e20ba356056699b3765fedc5961733d21cf8b1eda75721c4"
+        },
+        {
+          "file": "experiments/household-recycling-behavior/model.ts",
+          "sha256": "28c78ea7fa1a131850d02a1d770f93e7e578687d0f911398f38b8632180a257f"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "interstitial-diffusion",
+      "ui": "experiments/interstitial-diffusion/ui.ts",
+      "model": "experiments/interstitial-diffusion/model.ts",
+      "baselineUIHash": "490dd2a0af67508ac8c49b3edd02119ac38629496d9ec608a2415b5d797d366a",
+      "baselineModelHash": "61dbd5228f21795006fd693ff05c2931f69db21f68542cc3da953de9e27bc408",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "lattice/atoms, profile/initialProfile/profileAt15 and draw mode",
+      "scientificIdentityAndOrderContract": "Preserve concentration units and explicit concentration-to-screen curve y offset25/scale25, mixed-boundary lattice coordinates and profileAt15 presence. Drawing invokes public drawProfile only.",
+      "reason": "Profile overlay and lattice geometry are semantic comparisons, not arbitrary collection layout; conditional reference histories are already named clearly.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "line",
+        "spatial",
+        "inspector"
+      ],
+      "boundPublicModelCalls": [
+        "drawProfile",
+        "setRules",
+        "toggleLattice"
+      ],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/interstitial-diffusion/ui.ts",
+          "line": 51,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/interstitial-diffusion/model.ts",
+          "line": 299,
+          "marker": "read()"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/interstitial-diffusion/ui.ts",
+          "sha256": "490dd2a0af67508ac8c49b3edd02119ac38629496d9ec608a2415b5d797d366a"
+        },
+        {
+          "file": "experiments/interstitial-diffusion/model.ts",
+          "sha256": "61dbd5228f21795006fd693ff05c2931f69db21f68542cc3da953de9e27bc408"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "invasive-plants",
+      "ui": "experiments/invasive-plants/ui.ts",
+      "model": "experiments/invasive-plants/model.ts",
+      "baselineUIHash": "88a1efc7b4ee23c16e2e6d26cfcc838e639417bb8e7eb1f88d10a5c0c4e0295b",
+      "baselineModelHash": "c881ecd85fd6f1d2d50dc202db2f896526db7780332464dcef60b00628a7c3c2",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "field infestation/resistance/block flags, seeds hidden and histogram",
+      "scientificIdentityAndOrderContract": "Preserve sqrt(infestation/100) luminance, sqrt(resistance/100) glyph diameter and 0..100 histogram bounds; showSeeds/drawing modes are model-owned.",
+      "reason": "Source quantity transforms have deliberate meaning. Repeated draw-clock scheduling already uses shared repeat; replacing it with another animation or auto scale is prohibited.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "spatial",
+        "inspector",
+        "line",
+        "bar"
+      ],
+      "boundPublicModelCalls": [
+        "clearFields",
+        "clearPlots",
+        "draw",
+        "drawingTick",
+        "setRules"
+      ],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/invasive-plants/ui.ts",
+          "line": 61,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/invasive-plants/model.ts",
+          "line": 166,
+          "marker": "read()"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/invasive-plants/ui.ts",
+          "sha256": "88a1efc7b4ee23c16e2e6d26cfcc838e639417bb8e7eb1f88d10a5c0c4e0295b"
+        },
+        {
+          "file": "experiments/invasive-plants/model.ts",
+          "sha256": "c881ecd85fd6f1d2d50dc202db2f896526db7780332464dcef60b00628a7c3c2"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "ising",
+      "ui": "experiments/ising/ui.ts",
+      "model": "experiments/ising/model.ts",
+      "baselineUIHash": "2845994aac9cd3bd61b82874b6d98a938597f2c636d2756a127b8c5419beecfe",
+      "baselineModelHash": "b56f656260a2fdaa3b3e2e8e69499d0bc632a2cafa6061037df5997e58586972",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "spins, magnetization=sumOfSpins/fieldCount and history",
+      "scientificIdentityAndOrderContract": "Attempted-flip tick is not a population count. Keep signed magnetization and fixed two-spin colors; sequential Metropolis RNG/order unchanged.",
+      "reason": "One grid map plus one history is already short; no universal category object is needed for a binary spin expression.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "grid",
+        "line"
+      ],
+      "boundPublicModelCalls": [
+        "setTemperature"
+      ],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/ising/ui.ts",
+          "line": 27,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/ising/model.ts",
+          "line": 116,
+          "marker": "read()"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/ising/ui.ts",
+          "sha256": "2845994aac9cd3bd61b82874b6d98a938597f2c636d2756a127b8c5419beecfe"
+        },
+        {
+          "file": "experiments/ising/model.ts",
+          "sha256": "b56f656260a2fdaa3b3e2e8e69499d0bc632a2cafa6061037df5997e58586972"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "k-means-clustering",
+      "ui": "experiments/k-means-clustering/ui.ts",
+      "model": "experiments/k-means-clustering/model.ts",
+      "baselineUIHash": "2dc4bc579cd464d133d40a74b2919377cbd3828a9d08ee30aec6af637b956168",
+      "baselineModelHash": "a7742a4c78c1c6924b051075101c7d3499252922ac507b0894b4510ccfce5ed8",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "points.cluster, centroids index/color, SSE deviations/history",
+      "scientificIdentityAndOrderContract": "Preserve point/centroid identities, source NetLogo cluster-color relation, null unassigned points and SSE meanings. Centroid source IDs are distinct from display indexes.",
+      "reason": "The geometry is essential to Lloyd assignment and named clustersData is clear. Automatic category reordering could disconnect history deviation indexes from centroids.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "spatial",
+        "line"
+      ],
+      "boundPublicModelCalls": [
+        "assignClusters",
+        "resetCentroids",
+        "setParameters",
+        "updateClusters"
+      ],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/k-means-clustering/ui.ts",
+          "line": 36,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/k-means-clustering/model.ts",
+          "line": 100,
+          "marker": "read()"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/k-means-clustering/ui.ts",
+          "sha256": "2dc4bc579cd464d133d40a74b2919377cbd3828a9d08ee30aec6af637b956168"
+        },
+        {
+          "file": "experiments/k-means-clustering/model.ts",
+          "sha256": "a7742a4c78c1c6924b051075101c7d3499252922ac507b0894b4510ccfce5ed8"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "language-change",
+      "ui": "experiments/language-change/ui.ts",
+      "model": "experiments/language-change/model.ts",
+      "baselineUIHash": "19e2b1d85c6da97dca1ddf2dfc6481fdf19b6ee588bb9b2c8cdc7f641de28cd9",
+      "baselineModelHash": "3b0a314687cb25babae2d88f33ad80f8b2f37394a4d1820a8e3ca438cabb7c32",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "nodes original/current/spoken grammar and graph edges/history",
+      "scientificIdentityAndOrderContract": "Continuous grammar state maps exact RGB(70+155*s,135\u221245*s,220\u2212130*s); preserve initial graph coordinates and stable IDs. Reset/redistribute call model.",
+      "reason": "grammarColor is already a named cohesive transform; replacing it with generic categorical colors or auto numeric scale changes the model portrayal.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "network",
+        "inspector",
+        "line"
+      ],
+      "boundPublicModelCalls": [
+        "redistributeGrammars",
+        "resetNodes",
+        "setParameters"
+      ],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/language-change/ui.ts",
+          "line": 48,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/language-change/model.ts",
+          "line": 188,
+          "marker": "read()"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/language-change/ui.ts",
+          "sha256": "19e2b1d85c6da97dca1ddf2dfc6481fdf19b6ee588bb9b2c8cdc7f641de28cd9"
+        },
+        {
+          "file": "experiments/language-change/model.ts",
+          "sha256": "3b0a314687cb25babae2d88f33ad80f8b2f37394a4d1820a8e3ca438cabb7c32"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "life",
+      "ui": "experiments/life/ui.ts",
+      "model": "experiments/life/model.ts",
+      "baselineUIHash": "216ec72d03a26441a26360574aacb47284dad2f013f7b0ab91c3e59000817ab8",
+      "baselineModelHash": "1ac597718fb5292267055695e0cd2fea0a093176e773a1e378a32cc1c227a254",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "living fields/color, drawing/brush, living/dead counts and density",
+      "scientificIdentityAndOrderContract": "Preserve actual Grid IDs for setCell action and draw begin/move/end. User-configurable colors remain model-controlled presentation values; synchronous next generation order unchanged.",
+      "reason": "Direct cells binding and established drawing controls already satisfy the authoring contract. Shared selection/decorative changes require regression, not script rewrite.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "grid"
+      ],
+      "boundPublicModelCalls": [
+        "beginBrush",
+        "endBrush",
+        "moveBrush",
+        "read",
+        "recolor",
+        "setCell",
+        "setColors",
+        "setDrawing"
+      ],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/life/ui.ts",
+          "line": 52,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/life/ui.ts",
+          "line": 12,
+          "marker": "read()"
+        },
+        {
+          "file": "experiments/life/model.ts",
+          "line": 186,
+          "marker": "read()"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/life/ui.ts",
+          "sha256": "216ec72d03a26441a26360574aacb47284dad2f013f7b0ab91c3e59000817ab8"
+        },
+        {
+          "file": "experiments/life/model.ts",
+          "sha256": "1ac597718fb5292267055695e0cd2fea0a093176e773a1e378a32cc1c227a254"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "limited-order-book",
+      "ui": "experiments/limited-order-book/ui.ts",
+      "model": "experiments/limited-order-book/model.ts",
+      "baselineUIHash": "e9c8f52b277ebce3ab056b70dc089818835d5f267a240e7f3ad089d94e2ffc1b",
+      "baselineModelHash": "f9a4a6d103e194a90fab80bba92e59507913fd96829f344a14648552bcf7bdb8",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "active orders with owner/remaining/pending, trader strategies, price and utility history",
+      "scientificIdentityAndOrderContract": "Keep dollar-volume label, signed/nullable/nonfinite utility gaps and exclusion of latest tick0. Order filtering removes actual removed records; FIFO/matching remain model-owned.",
+      "reason": "Orders table will benefit from shared complete inspection beyond200, but existing projection is clear. Do not convert an order book to UI-maintained queue or invent identity from row index.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "spatial",
+        "line",
+        "table"
+      ],
+      "boundPublicModelCalls": [],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "Shared 200-row host limit applies; preserve all model rows and original order. Specific author filtering/limits must be considered separately.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/limited-order-book/ui.ts",
+          "line": 43,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/limited-order-book/model.ts",
+          "line": 367,
+          "marker": "read()"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/limited-order-book/ui.ts",
+          "sha256": "e9c8f52b277ebce3ab056b70dc089818835d5f267a240e7f3ad089d94e2ffc1b"
+        },
+        {
+          "file": "experiments/limited-order-book/model.ts",
+          "sha256": "f9a4a6d103e194a90fab80bba92e59507913fd96829f344a14648552bcf7bdb8"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "mammoths",
+      "ui": "experiments/mammoths/ui.ts",
+      "model": "experiments/mammoths/model.ts",
+      "baselineUIHash": "568ae1ac78e7f9252fb42a353d7e75aadd8a454880bc63dbb993ad516021d996",
+      "baselineModelHash": "40ef15f8b558355d31bbb40c463af4f217e160c57925ba573aab2dd1cf4ef6ae",
+      "recommendation": "candidate",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "mammoths/humans, terrain cells, ageMonths/years and mortality histories",
+      "scientificIdentityAndOrderContract": "Source months convert to years/12; original coordinates+48 are provenance. Species and death-cause colors are separate mappings; preserve habitat terrain and climate/hunting distinction.",
+      "reason": "One stable species/cause definition could reduce repeated colors across spatial/history without conflating them. Actual Americas geometry and month-based rules must remain.",
+      "reuseOpportunity": "stable species/cause mappings",
+      "existingViews": [
+        "spatial",
+        "line",
+        "inspector"
+      ],
+      "boundPublicModelCalls": [
+        "setParameters"
+      ],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/mammoths/ui.ts",
+          "line": 38,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/mammoths/model.ts",
+          "line": 283,
+          "marker": "read()"
+        },
+        {
+          "file": "experiments/mammoths/model.ts",
+          "line": 283,
+          "marker": "function read"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/mammoths/ui.ts",
+          "sha256": "568ae1ac78e7f9252fb42a353d7e75aadd8a454880bc63dbb993ad516021d996"
+        },
+        {
+          "file": "experiments/mammoths/model.ts",
+          "sha256": "40ef15f8b558355d31bbb40c463af4f217e160c57925ba573aab2dd1cf4ef6ae"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    },
+    {
+      "slug": "mandelbrot",
+      "ui": "experiments/mandelbrot/ui.ts",
+      "model": "experiments/mandelbrot/model.ts",
+      "baselineUIHash": "c29f9839081b2c65803d06e4430b7acaa3c6598c2e7687d08c15ca62f3b2e266",
+      "baselineModelHash": "eb1350d424c45b893fd71c3a394e01a797327684fcacf5b73d509a0129043141",
+      "recommendation": "retain",
+      "recommendationStatus": "Source audit only; coordinator synthesis chooses final migration. No implementation or scientific approval.",
+      "observedBoundary": "sparse fields.counter/cReal/cImaginary/zReal/zImaginary and worker agents",
+      "scientificIdentityAndOrderContract": "Fixed maxIterations115 and counter/115 hue/luminance are scientific convergence portrayal; sparse records derive from full Grid, not UI truncation. Hide-agents action and source display IDs persist.",
+      "reason": "The compact named projection directly exposes a complex-plane computation. New collection layout or auto current-maximum color would misrepresent iteration counts.",
+      "reuseOpportunity": null,
+      "existingViews": [
+        "spatial"
+      ],
+      "boundPublicModelCalls": [
+        "hideAgents",
+        "setRules"
+      ],
+      "modelExposesRandomState": true,
+      "largeTableInspection": "No table declared; shared renderer regression still applies.",
+      "sourceEvidence": [
+        {
+          "file": "experiments/mandelbrot/ui.ts",
+          "line": 25,
+          "marker": "views:"
+        },
+        {
+          "file": "experiments/mandelbrot/model.ts",
+          "line": 167,
+          "marker": "read()"
+        }
+      ],
+      "sourceFilesReviewed": [
+        {
+          "file": "experiments/mandelbrot/ui.ts",
+          "sha256": "c29f9839081b2c65803d06e4430b7acaa3c6598c2e7687d08c15ca62f3b2e266"
+        },
+        {
+          "file": "experiments/mandelbrot/model.ts",
+          "sha256": "eb1350d424c45b893fd71c3a394e01a797327684fcacf5b73d509a0129043141"
+        }
+      ],
+      "verificationLimit": "Static paired-source semantic audit. Existing independent baseline executes default0/1/3, but this report runs no runtime/browser tests; scientific calibration and future migrations remain separate gates."
+    }
+  ]
+}
