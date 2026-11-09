@@ -51,6 +51,8 @@ Wait is requested → boarding completion; ride is boarding completion → aligh
 
 Read returns detached arrays/records: `parameters`, `tick`, `time`, `created`, `waiting`, `riding`, `arrived`, `generated`, `meanWait`, `meanRide`, `meanSystem`; `cars` with id/number/floor/direction/status/used/capacity/passenger numbers; `passengers` with id/number/from/to/requested/boarded/arrived/car/status; and `floorQueues` with floor/direction/passenger numbers. Missing boarded/arrived/car use −1; status is waiting/riding/arrived. It also exposes `pendingEvents` for bounded-execution diagnostics. Reads do not dispatch, tick, mutate queues or draw randomness. Counts obey created = waiting + riding + arrived and every car used ≤ capacity.
 
+Disposal cancels pending events, releases car claims, empties queues and removes owned Agents. It is idempotent. Subsequent writes and advances reject; `read()` returns a detached historical final observation with `pendingEvents: 0`, rather than a claim that its displayed passengers remain active Resource occupants.
+
 The UI uses diagram floor/cabin coordinates derived from these observations, not domain travel interpolation or another clock. Cabin dots must equal actual riding membership. Generated mockup count mistakes are not assertions.
 
 ## Deterministic example gate

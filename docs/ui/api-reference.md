@@ -108,9 +108,15 @@ Experimental nodes add optional initial `position: { x, y }`; later dragging and
 
 ### Spatial
 
-`{ type: "spatial", label, data }` projects `SpatialData`: `width`, `height`, optional `cells` and required `agents`. Each spatial agent extends node presentation fields with `x`, `y`, optional `heading` in degrees and optional `shape: "circle" | "triangle"`. The baseline renderer defaults heading to zero and shape to circle. Coordinates are centered world coordinates; positive y points upward. Display size remains CSS pixels.
+`{ type: "spatial", label, data }` projects `SpatialData`: `width`, `height`, optional `cells` and required `agents`. Each spatial agent extends node presentation fields with `x`, `y`, optional `heading` in degrees and optional `shape: "circle" | "triangle" | "rectangle" | "diamond"`. The baseline renderer defaults heading to zero and shape to circle. Coordinates are centered world coordinates; positive y points upward. Display size remains CSS pixels.
 
 Experimental additions: `showLabels` controls label visibility when supplied; omission retains the host Labels control. `segments` contains ordered `{ from: {x,y}, to: {x,y}, color?, width? }` strokes above cells and below agents, selection and labels. Endpoints must be finite centered coordinates. Width defaults to 1 CSS pixel; zero omits a stroke; negative/nonfinite widths are invalid input. Omitted color uses the host foreground (legacy host white). Segments do not participate in picking or model collision logic.
+
+Rectangles may supply positive finite `extent: { width, height }` in diagram units instead of CSS-pixel `size`; other shapes cannot use extent. `filled` defaults to true. Optional `stroke` and nonnegative finite `strokeWidth` add an outline; `filled: false` supports empty resource slots. Coordinates and headings must be finite, and derived geometry must remain finite before a new projection is published. Invalid updates preserve the previous valid projection.
+
+Optional `labels: readonly { x, y, text }[]` supplies nonselectable diagram annotations in the shared font and foreground. Optional nonempty `description` supplies the canvas accessible name and fallback text; authors should summarize the actual counts and states. Omission retains the legacy count description. Labels, segments and layout coordinates do not create domain entities.
+
+Mixed diagrams containing rectangles or diamonds pick the topmost painted symbol within its actual bounds, including outlined slots. Pure circle/triangle diagrams retain their previous nearest-agent compatibility behavior. Tiny symbols have a shared two-buffer-pixel minimum for painting and picking. Rotation and device-pixel scaling use the same geometry in both hosts.
 
 ### Charts
 
@@ -137,6 +143,9 @@ Experimental `drawing` supplies required `enabled(observation)` and `intent(inst
 When a toggle is supplied it begins off for each mounted instance; without a toggle drawing follows `enabled`. Drawing, selection and camera gestures are host responsibilities. Do not attach custom pointer listeners to the Lab DOM to bypass this boundary. This addition is experimental and does not establish arbitrary custom-element support.
 
 ## Palette
+
+Both public UI adapters export `scientificPalette`: `neutral`, `waiting`, `active`, `completed` and `unavailable`. Use these shared semantic colors together with shape, position or labels; color alone must not carry the state distinction. They are presentation constants, not model state.
+
 
 Experimental export `netLogoColor(color: number): string` converts finite numeric NetLogo colors using the observed official tenth-color bins. Values wrap modulo 140 and select the lower tenth bin. Nonnumeric values throw `TypeError`; nonfinite values throw `RangeError`. Use it for compatibility presentation, not as a second scientific state variable. This export is absent from the main baseline.
 
