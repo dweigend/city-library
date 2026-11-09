@@ -2,6 +2,8 @@ import { describe, expect, test } from "bun:test";
 import { create } from "../experiments/pedestrian-crossing-phases/model.ts";
 import { crossingData } from "../experiments/pedestrian-crossing-phases/ui.ts";
 import { netLogoColor } from "../ui/index.ts";
+import { create as createZoning } from "../experiments/zoning-scenario-comparison/model.ts";
+import { zoningData } from "../experiments/zoning-scenario-comparison/ui.ts";
 
 describe("crossing road projection", () => {
   test("one effective road cell per coordinate retains all nine crosswalk stripes", () => {
@@ -21,4 +23,20 @@ describe("crossing road projection", () => {
       expect(instance.read()).toEqual(before);
     }
   });
+});
+
+test("single-parcel studies retain canvas width for two caption columns", () => {
+  for (const baseCap of [1, 10]) {
+    const instance = createZoning({ parcels: 1, baseCap });
+    for (const steps of [0, 6]) {
+      instance.advance(steps);
+      const before = instance.read();
+      const scene = zoningData(before);
+      // A tall, thin world also shrinks its canvas width at the host height limit.
+      expect(scene.width).toBeGreaterThanOrEqual(scene.height);
+      expect(scene.cells?.filter(cell => cell.id.startsWith("view:slot:")).length)
+        .toBe(before.outcomes.reduce((total, outcome) => total + outcome.slots, 0));
+      expect(instance.read()).toEqual(before);
+    }
+  }
 });
