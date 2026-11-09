@@ -1,4 +1,6 @@
 const phases = {
+  des: ["01-causal-agenda", "02-queues-and-resources", "03-store-backpressure", "04-state-process-and-timeout", "05-observation-trace-and-random"],
+  "des-models": ["01-civic-office", "02-ev-charging", "03-goods-buffer", "04-bus-interchange", "05-parcel-logistics", "06-waste-collection", "07-emergency-dispatch", "08-bike-redistribution", "09-water-allocation", "10-machine-maintenance"],
   "mesa-measurements": ["01-shared-measurement", "02-explicit-bounded-history", "03-scenarios-and-replications", "04-run-stop-and-summary", "05-failure-and-budget"],
   "mesa-dynamics": ["01-fixed-lifecycle", "02-priority-and-random", "03-two-phase", "04-linear-thresholds", "05-graph-membership"],
   "mesa-attachment": ["01-identity-and-clocks", "02-mixed-batch", "03-conflict-atomicity", "04-detach-snapshots"],

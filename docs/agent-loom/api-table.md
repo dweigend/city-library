@@ -245,7 +245,7 @@ Run synchronous model updates; steps defaults to 1. Each successful callback add
 
 ```ts
 world.activate<T extends WorldMember>(source: ActivationSource<T>, action: (context: ActivationContext<T>) => unknown,
-  options?: { order?: "shuffle" | "netlogo-7.0.0"; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; breeds?: ReadonlyMap<WorldMember,string>; breedOrder?: readonly string[] }): void
+  options?: { order?: "fixed" | "shuffle" | "priority" | "netlogo-7.0.0"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; breeds?: ReadonlyMap<WorldMember,string>; breedOrder?: readonly string[] }): void
 ```
 
 Invoke a synchronous action for selected World members under explicit scheduling and scoped self/caller contexts. Never adds ticks.
@@ -259,7 +259,7 @@ Invoke a synchronous action for selected World members under explicit scheduling
 
 ```ts
 world.report<T extends WorldMember,R>(source: T, report: (context: ActivationContext<T>) => R,
-  options?: { order?: "shuffle" | "netlogo-7.0.0"; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; breeds?: ReadonlyMap<WorldMember,string>; breedOrder?: readonly string[] }): R | undefined
+  options?: { order?: "fixed" | "shuffle" | "priority" | "netlogo-7.0.0"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; breeds?: ReadonlyMap<WorldMember,string>; breedOrder?: readonly string[] }): R | undefined
 ```
 
 Evaluate a synchronous report for one or more World members under explicit scheduling and scoped contexts. Never adds ticks.
@@ -273,7 +273,7 @@ Evaluate a synchronous report for one or more World members under explicit sched
 
 ```ts
 world.report<T extends WorldMember,R>(source: readonly T[] | { kind: "agents" | "fields" | "edges"; breed?: string }, report: (context: ActivationContext<T>) => R,
-  options?: { order?: "shuffle" | "netlogo-7.0.0"; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; breeds?: ReadonlyMap<WorldMember,string>; breedOrder?: readonly string[] }): readonly (R | undefined)[]
+  options?: { order?: "fixed" | "shuffle" | "priority" | "netlogo-7.0.0"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; breeds?: ReadonlyMap<WorldMember,string>; breedOrder?: readonly string[] }): readonly (R | undefined)[]
 ```
 
 Evaluate a synchronous report for one or more World members under explicit scheduling and scoped contexts. Never adds ticks.
@@ -4658,3 +4658,7 @@ type Position = { readonly x:number; readonly y:number; readonly z?:number };
 Finite x/y coordinates with optional z; the operation’s spatial context determines the required dimension.
 
 [Details](api-reference.md#pure-spatial-contracts)
+
+## Additive ordinary tools
+
+The root exports `measurements`, `twoPhase` and `continuous` add pure measurement projection, a synchronous compute/commit barrier and linear threshold calculations. World activation also accepts fixed and stable priority ordering. Their [reference contracts](api-reference.md#additive-measurement-and-update-tools) and [frozen examples](../mesa-expansion/STATUS.md) supplement the original operation inventory; they do not imply complete continuation or NetLogo compatibility.

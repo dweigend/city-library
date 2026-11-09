@@ -304,11 +304,11 @@ interface ActivationContext<T extends WorldMember> {
   die(): never;
 }
 world.activate<T extends WorldMember>(source: ActivationSource<T>, action: (context: ActivationContext<T>) => unknown,
-  options?: { order?: "shuffle" | "netlogo-7.0.0"; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; breeds?: ReadonlyMap<WorldMember,string>; breedOrder?: readonly string[] }): void
+  options?: { order?: "fixed" | "shuffle" | "priority" | "netlogo-7.0.0"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; breeds?: ReadonlyMap<WorldMember,string>; breedOrder?: readonly string[] }): void
 world.report<T extends WorldMember,R>(source: T, report: (context: ActivationContext<T>) => R,
-  options?: { order?: "shuffle" | "netlogo-7.0.0"; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; breeds?: ReadonlyMap<WorldMember,string>; breedOrder?: readonly string[] }): R | undefined
+  options?: { order?: "fixed" | "shuffle" | "priority" | "netlogo-7.0.0"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; breeds?: ReadonlyMap<WorldMember,string>; breedOrder?: readonly string[] }): R | undefined
 world.report<T extends WorldMember,R>(source: readonly T[] | { kind: "agents" | "fields" | "edges"; breed?: string }, report: (context: ActivationContext<T>) => R,
-  options?: { order?: "shuffle" | "netlogo-7.0.0"; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; breeds?: ReadonlyMap<WorldMember,string>; breedOrder?: readonly string[] }): readonly (R | undefined)[]
+  options?: { order?: "fixed" | "shuffle" | "priority" | "netlogo-7.0.0"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; breeds?: ReadonlyMap<WorldMember,string>; breedOrder?: readonly string[] }): readonly (R | undefined)[]
 world.select<T extends WorldMember>(source: ActivationSource<T>, predicate: (context: ActivationContext<T>) => boolean,
   options?: { caller?: ActivationContext<WorldMember>; breeds?: ReadonlyMap<WorldMember,string> }): readonly T[]
 ```
@@ -318,6 +318,8 @@ world.select<T extends WorldMember>(source: ActivationSource<T>, predicate: (con
 Default scripts use ordinary arrays, loops, filtering, Set and Map. Array iteration consumes no RNG and does not acquire NetLogo ask semantics. Explicit World activation supplies the optional synchronous scheduling/context capability; it does not change the model language or replace independently created components. The compatibility profile targets NetLogo 7.0.0; it does not promise bit-for-bit compatibility with later releases.
 
 Sources are ordinary data and original object references. An array captures unique membership in first-occurrence order; global-kind selectors resolve current live World membership at invocation. A graph attachment does not attach its nodes; only registered World agents qualify as agents, while fields and edges must belong to attached owned components. Live-selector creation itself performs no traversal or random draw; reuse the same plain selector to see later births/deaths. Filtering with native TS captures an ordinary array; no library Population wrapper exists.
+
+The additive ordinary schedules `fixed` and `priority` preserve the same activation frames and lifecycle. Fixed visits entry order without random draws. Priority evaluates a pure synchronous numeric `priority(member)` once for each living entry before actions; lower finite values run first, with entry order resolving ties. Dead captured entries are excluded before projection. Living ownership remains checked at visit, retaining partial failure behavior. Unknown option keys reject.
 
 order defaults shuffle: capture and identity-deduplicate at entry, run a complete descending Fisher–Yates copy through world.random before any callback, and skip members dead before their visit. Living ownership is validated at visit after shuffling, preserving partial failure: earlier callbacks and draws remain when a later foreign member fails. A one-element array still has no shuffle draw, whereas a native single source has no traversal at all.
 
@@ -2666,3 +2668,28 @@ Counts are hard ceilings for their explicitly named bounded adapters, not target
 Lower caller caps may be supplied only where an operation documents them; higher caps reject. No resource value silently changes algorithm semantics or validates model science.
 
 The legacy-simple network profile accepts unique nonempty string node IDs of at most 256 UTF-16 units, simple homogeneous directed or undirected unweighted edges, no loops/parallel pairs, at most 1024 nodes and 32768 edges. Validate endpoints, direction and complete shape, then return a detached canonical copy sorted by code-unit node ID and endpoint order. Both prior typed validation and unknown-data canonicalization map to this single boundary; malformed types throw TypeError and domain/count violations RangeError. General graph-json follows the richer Graph interchange contract and is a separate format.
+
+## Additive measurement and update tools
+
+These root `city-library` exports extend the original inventory. They do not rename or replace its contracts. The bounded History and serial study subset are available through root `storage` and `experiments`; broader storage/worker/continuation targets remain separate.
+
+```ts
+measurements.define<Model, Values extends Readonly<Record<string, number>>>(
+  project: (model: Model) => Values,
+): { read(model: Model): Readonly<Values> }
+twoPhase<T, Proposal>(source: Iterable<T>, actions: {
+  compute(member: T): Proposal;
+  commit(member: T, proposal: Proposal): unknown;
+}): void
+continuous.linear(input: { value: number; rate: number; duration: number }): number
+continuous.crossing(input: {
+  from: number; to: number; threshold: number; duration: number;
+  direction?: "rising" | "falling" | "either";
+}): { readonly elapsed: number; readonly value: number; readonly direction: "rising" | "falling" } | undefined
+```
+
+Measurements call a pure synchronous projection once, validate an own finite numeric record and return detached frozen values. They own no model state or sampling schedule. Two-phase updates capture unique original references, compute all proposals before committing in entry order and advance no clock. A compute failure prevents library commits; a commit failure preserves earlier and partial current effects. Callers keep compute pure and proposals independent or immutable. There is no implicit World membership or dead-member filtering.
+
+Continuous tools require finite values and finite nonnegative duration. The caller declares quantity/time units. Linear progression evaluates `value + rate * duration` in that order and rejects nonfinite results. Crossing assumes a linear segment, uses strict start/inclusive end and returns no crossing for zero duration or constant segments. Interpolation uses scaled IEEE-754 arithmetic, not mathematical exactness; the endpoint returns exactly duration, interior results can underflow to zero, and no epsilon is invented. The result is finite within the interval. Planning absolute Agenda events remains explicit; validate additions, and cancel/recompute predictions when an intervening event changes a rate. See [the frozen decisions and examples](../mesa-expansion/dynamics.md).
+
+History normally records `world.tick.value`. Any deliberately selected alternative axis must be named and used consistently for that series. Equal-time Agenda measurements require aggregation before History insertion or a separate EventTrace; no implicit conversion or extra tick occurs.
