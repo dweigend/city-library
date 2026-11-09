@@ -1,5 +1,5 @@
 import { tablePage } from "./views/table-page.ts";
-import type { MonitorSpec, RuntimeSpec } from "./authoring.ts";
+import type { AuthoringSpec, MonitorSpec, RuntimeSpec } from "./authoring.ts";
 import type { LegacyLiveField } from "./definition.ts";
 import { normalizeAuthoring, groupLive, decodeControl } from "./authoring.ts";
 import type { Definition } from "../experiments/definition.ts";
@@ -26,7 +26,7 @@ export function defineUI<P extends object, M>(
 ): BoundEntry;
 export function defineUI<P extends object, M>(
   definition: Definition<P, M> & { readonly create: (options?: Partial<P>) => ModelInstance },
-  spec: UISpec<NoInfer<P>, Extract<NoInfer<M>, ModelInstance>>,
+  spec: AuthoringSpec<NoInfer<P>, Extract<NoInfer<M>, ModelInstance>>,
 ): BoundEntry;
 export function defineUI<
   P extends object,

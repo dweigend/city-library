@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { collectionDiagram, defineUI, scientificPalette, type CollectionRow, type SpatialData, type UISpec } from "../ui/index.ts";
+import { collectionDiagram, defineUI, scientificPalette, type CollectionRow, type SpatialData, type ChangeUISpec } from "../ui/index.ts";
 import { collectionDiagram as svelteCollectionDiagram, defineUI as defineSvelteUI } from "../ui/svelte/index.ts";
 import type { Definition } from "../experiments/definition.ts";
 import { normalizeAuthoring } from "../ui/authoring.ts";
@@ -36,7 +36,7 @@ describe("independent universal UI public consumers", () => {
     const spec = {
       change: (instance, changes) => instance.apply(changes),
       live: { "flow-rate": {}, enabled: {} }, views: [],
-    } satisfies UISpec<Rules, ReturnType<typeof createRules>>;
+    } satisfies ChangeUISpec<Rules, ReturnType<typeof createRules>>;
     expect(defineUI(definition, spec).title).toBe(rules.title);
     expect(defineSvelteUI(definition, spec).title).toBe(rules.title);
     expect(creations).toBe(0);
@@ -54,7 +54,7 @@ describe("independent universal UI public consumers", () => {
         enabled: { set(instance, value) { overrides++; instance.apply({ enabled: !value }); } },
         mode: {},
       }, views: [],
-    } satisfies UISpec<Rules, ReturnType<typeof createRules>>;
+    } satisfies ChangeUISpec<Rules, ReturnType<typeof createRules>>;
     const normalized = normalizeAuthoring(rules, spec);
     const first = createRules();
     const independent = createRules();

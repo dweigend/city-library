@@ -213,17 +213,17 @@ interface UISpecBase<P extends object, M extends ModelInstance> {
   readonly source?: { readonly url: string; readonly label: string };
   readonly views: readonly (View<Snapshot<M>> | Inspector<Snapshot<M>>)[];
 }
-/** Keyed fields may omit their setter only with an explicit common write action. */
-export type UISpec<P extends object, M extends ModelInstance> = UISpecBase<P, M> & (
-  | {
-      readonly change: (model: M, changes: LiveChanges<P>) => void;
-      readonly live?: KeyedLive<P, M, true>;
-    }
-  | {
-      readonly change?: undefined;
-      readonly live?: readonly LegacyLiveField<P, M>[] | KeyedLive<P, M>;
-    }
-);
+/** Existing authoring form remains interface-extensible for downstream consumers. */
+export interface UISpec<P extends object, M extends ModelInstance> extends UISpecBase<P, M> {
+  readonly change?: undefined;
+  readonly live?: readonly LegacyLiveField<P, M>[] | KeyedLive<P, M>;
+}
+
+/** The same flat declaration with an explicit default write for keyed live fields. */
+export interface ChangeUISpec<P extends object, M extends ModelInstance> extends UISpecBase<P, M> {
+  readonly change: (model: M, changes: LiveChanges<P>) => void;
+  readonly live?: KeyedLive<P, M, true>;
+}
 
 export interface BoundEntry {
   readonly title: string;

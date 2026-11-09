@@ -1,4 +1,4 @@
-import { defineUI, type UISpec } from '../../ui/index.ts';
+import { defineUI, type ChangeUISpec } from '../../ui/index.ts';
 import { model, type VirusParameters } from '../../experiments/virus/model.ts';
 import { assert, equal, button, changeNumber, control, settle } from '../ui-authoring/assertions.ts';
 
@@ -10,7 +10,7 @@ export const spec = {
     duration: { label: 'Duration override', set: (instance, value) => instance.setParameters({ duration: value + 1 }) },
   },
   monitors: [{ label: 'Duration', value: state => state.parameters.duration }], views: [],
-} as const satisfies UISpec<VirusParameters, Instance>;
+} as const satisfies ChangeUISpec<VirusParameters, Instance>;
 export const ui = defineUI(model, spec);
 const actual = model.create({ numberPeople: 10, seed: 9 });
 spec.live.duration.set(actual, 12);

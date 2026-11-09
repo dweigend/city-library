@@ -1,8 +1,10 @@
 import type { Definition } from '../experiments/definition.ts';
-import type { KeyedLive, LegacyLiveField, LiveChanges, ModelInstance, SetupField, Snapshot, UISpec } from './definition.ts';
+import type { ChangeUISpec, KeyedLive, LegacyLiveField, LiveChanges, ModelInstance, SetupField, Snapshot, UISpec } from './definition.ts';
 import type { Descriptor } from './controls/form.ts';
 
 export type ControlValue = string | number | boolean;
+/** Internal union of the two typed variants of the existing flat declaration. */
+export type AuthoringSpec<P extends object, M extends ModelInstance> = UISpec<P, M> | ChangeUISpec<P, M>;
 /** Internal erasure of the getter/formatter existential pair. Public Monitor uses strict
  * function properties; the method signature here accepts every approved scalar case.
  * Hosts always pass the result of this record's getter to this record's formatter. */
@@ -11,7 +13,7 @@ interface RuntimeMonitor<S> {
   readonly value: (state: S) => string | number;
   format?(value: string | number): string;
 }
-export type RuntimeSpec<P extends object, M extends ModelInstance> = Omit<UISpec<P, M>, 'monitors' | 'live' | 'change'> & {
+export type RuntimeSpec<P extends object, M extends ModelInstance> = Omit<AuthoringSpec<P, M>, 'monitors' | 'live' | 'change'> & {
   readonly change?: (model: M, changes: LiveChanges<P>) => void;
   readonly live?: readonly LegacyLiveField<P, M>[] | KeyedLive<P, M, true>;
   readonly monitors?: readonly RuntimeMonitor<Snapshot<M>>[];
@@ -26,7 +28,7 @@ type CompatibleMonitor<T> = T extends {
 type CompatibleMonitors<T> = { readonly [K in keyof T]: CompatibleMonitor<T[K]> };
 type WithMonitors<S, T> = S extends unknown ? Omit<S, 'monitors'> & { readonly monitors?: T } : never;
 export type MonitorSpec<P extends object, M extends ModelInstance, T extends readonly RuntimeMonitor<Snapshot<M>>[]> =
-  WithMonitors<UISpec<P, M>, T & CompatibleMonitors<T>>;
+  WithMonitors<AuthoringSpec<P, M>, T & CompatibleMonitors<T>>;
 
 export type NormalizedSpec<P extends object, M extends ModelInstance> = Omit<RuntimeSpec<P, M>, 'setup' | 'live'> & {
   readonly setup: readonly SetupField<P>[];

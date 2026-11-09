@@ -1,4 +1,4 @@
-import { defineUI, type UISpec } from '../../ui/index.ts';
+import { defineUI, type ChangeUISpec } from '../../ui/index.ts';
 import { model, type TaxiParameters } from '../../experiments/taxi-cabs/model.ts';
 import { assert, equal, button, changeNumber, control, settle } from '../ui-authoring/assertions.ts';
 
@@ -12,7 +12,7 @@ export const spec = {
     waitTimeSd: { label: 'Waiting deviation', group: 'Timing', enabled: state => state.parameters.waitTimeMean > 0 },
   },
   monitors: [{ label: 'Waiting mean', value: state => state.parameters.waitTimeMean }], views: [],
-} as const satisfies UISpec<TaxiParameters, Instance>;
+} as const satisfies ChangeUISpec<TaxiParameters, Instance>;
 export const ui = defineUI(model, spec);
 const actual = model.create({ numTaxicab: 1, seed: 3 });
 spec.change(actual, { 'prob-cbd-cbd-AM': 0.5 });

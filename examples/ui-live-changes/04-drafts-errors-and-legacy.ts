@@ -1,4 +1,4 @@
-import { defineUI, type UISpec } from '../../ui/index.ts';
+import { defineUI, type ChangeUISpec } from '../../ui/index.ts';
 import type { Definition } from '../../experiments/definition.ts';
 import { assert, equal, button, changeNumber, settle } from '../ui-authoring/assertions.ts';
 
@@ -19,7 +19,7 @@ export const model: Definition<Parameters, ReturnType<typeof create>> = {
 export const spec = {
   setup: [], change: (instance, changes) => instance.setAmount(changes), live: { amount: {} },
   monitors: [{ label: 'Amount', value: state => state.parameters.amount }], views: [],
-} as const satisfies UISpec<Parameters, ReturnType<typeof create>>;
+} as const satisfies ChangeUISpec<Parameters, ReturnType<typeof create>>;
 export const ui = defineUI(model, spec);
 const actual = create();
 spec.change(actual, { amount: 4 }); equal(actual.read().parameters.amount, 4, 'The rule action owns validation');

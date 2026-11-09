@@ -1,4 +1,4 @@
-import { defineUI, type UISpec } from '../../ui/index.ts';
+import { defineUI, type ChangeUISpec } from '../../ui/index.ts';
 import { model, type WolfSheepParameters } from '../../experiments/wolf-sheep-predation/model.ts';
 import { assert, equal, button, changeNumber, settle } from '../ui-authoring/assertions.ts';
 
@@ -14,7 +14,7 @@ export const spec = {
   },
   monitors: [{ label: 'Food gain', value: state => state.parameters.sheepGain }],
   views: [],
-} as const satisfies UISpec<WolfSheepParameters, Instance>;
+} as const satisfies ChangeUISpec<WolfSheepParameters, Instance>;
 export const ui = defineUI(model, spec);
 const actual = model.create({ initialSheep: 2, initialWolves: 1, seed: 17 });
 const independent = model.create({ initialSheep: 2, initialWolves: 1, seed: 17 });
