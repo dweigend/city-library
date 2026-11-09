@@ -44,6 +44,7 @@ const cancelled = agenda.add({ at: 11, data: { kind: "cancelled" } });
 agenda.delete(cancelled);
 agenda.delete(cancelled);
 assert.equal(agenda.next({ until: 11 }), undefined);
+// @ts-expect-error Foreign payload schemas also reject at the typed cancellation boundary.
 assert.throws(() => ties.delete(cancelled));
 assert.throws(() => agenda.add({ at: 10, data: { kind: "past" } }));
 world.delete(agenda);

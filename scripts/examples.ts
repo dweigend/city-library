@@ -1,4 +1,6 @@
 const phases = {
+  des: ["01-causal-agenda", "02-queues-and-resources", "03-store-backpressure", "04-state-process-and-timeout", "05-observation-trace-and-random"],
+  "des-models": ["01-civic-office", "02-ev-charging", "03-goods-buffer", "04-bus-interchange", "05-parcel-logistics", "06-waste-collection", "07-emergency-dispatch", "08-bike-redistribution", "09-water-allocation", "10-machine-maintenance"],
   "townscaper-grid": ["01-finite-hex-refinement", "02-square-target-first-step", "03-validation-and-failure", "04-continuation-and-revisions", "05-explicit-grid-state-copy"],
   "city-simulation": ["01-household-budget", "02-neighborhood-heat", "04-scarce-resource", "05-shared-machine"],
   "grid-parcels": ["01-regular-regression-and-tiny-wraps", "02-square-and-hex-field-rule", "03-irregular-lookup-ties-and-occupancy", "04-merge-and-source-provenance", "05-convex-split-and-rejections"],
