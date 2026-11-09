@@ -1,6 +1,5 @@
-import assert from "node:assert/strict";
 import { defineUI, scientificPalette, type SpatialData } from "../../ui/index.ts";
-import { button, settle } from "../ui-authoring/assertions.ts";
+import { assert, equal, button, settle } from "../ui-authoring/assertions.ts";
 
 export const valid: SpatialData = {
   width: 10, height: 6, description: "One empty resource slot.",
@@ -17,8 +16,8 @@ export const invalid: readonly SpatialData[] = [
   { ...valid, agents: [{ ...valid.agents[0]!, strokeWidth: -1 }] },
   { ...valid, labels: [{ x: Infinity, y: 0, text: "floor" }] },
 ];
-assert.equal(invalid.length, 9);
-assert.equal(valid.agents[0]!.extent!.width, 2);
+equal(invalid.length, 9, "Nine invalid scene cases remain asserted");
+equal(valid.agents[0]!.extent!.width, 2, "Valid extent remains two diagram units");
 
 /** Execute against each real public adapter; source-only execution is insufficient. */
 export async function browserChecks(container: HTMLElement, bind: typeof defineUI = defineUI) {

@@ -1,6 +1,5 @@
-import assert from "node:assert/strict";
 import { defineUI, scientificPalette, type SpatialData } from "../../ui/index.ts";
-import { button, settle } from "../ui-authoring/assertions.ts";
+import { assert, equal, button, settle } from "../ui-authoring/assertions.ts";
 
 export const scene: SpatialData = {
   width: 10, height: 6, showLabels: false,
@@ -11,8 +10,8 @@ export const scene: SpatialData = {
     { id: "resident:1", x: -4, y: 0, size: 8, color: scientificPalette.waiting },
   ],
 };
-assert.equal(scene.agents[0]!.id, "slot:desk");
-assert.equal(scene.labels!.length, 1);
+equal(scene.agents[0]!.id, "slot:desk", "Projected slot id remains stable");
+equal(scene.labels!.length, 1, "One nonselectable label remains");
 
 /** Extent hit testing and keyboard identity are checked through the public UI. */
 export async function browserChecks(container: HTMLElement, bind: typeof defineUI = defineUI) {
@@ -46,7 +45,7 @@ export async function browserChecks(container: HTMLElement, bind: typeof defineU
   assert(canvas.getAttribute("aria-label")?.includes("One outlined slot"), "Accessible description reflects actual scene meaning");
   mounted.dispose();
   await settle(container);
-  assert.equal(container.querySelector("canvas"), null);
-  assert.equal(disposed, 1);
-  assert.equal(steps, 0, "Selection and disposal never step the model");
+  equal(container.querySelector("canvas"), null, "Disposal removes the canvas");
+  equal(disposed, 1, "Disposal runs once");
+  equal(steps, 0, "Selection and disposal never step the model");
 }

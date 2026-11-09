@@ -1,4 +1,6 @@
 const phases = {
+  "ui-des-scenes": ["01-residents-and-clerks", "02-bounded-slots", "03-labels-and-legacy-defaults", "04-browser-validation", "05-picking-and-disposal"],
+  "des-elevator": ["01-single-trip", "02-full-call-persists", "03-alight-before-board", "04-multiple-cars-and-oldest-call", "05-validation-arrivals-and-budget"],
   des: ["01-causal-agenda", "02-queues-and-resources", "03-store-backpressure", "04-state-process-and-timeout", "05-observation-trace-and-random"],
   "des-models": ["01-civic-office", "02-ev-charging", "03-goods-buffer", "04-bus-interchange", "05-parcel-logistics", "06-waste-collection", "07-emergency-dispatch", "08-bike-redistribution", "09-water-allocation", "10-machine-maintenance"],
   "mesa-measurements": ["01-shared-measurement", "02-explicit-bounded-history", "03-scenarios-and-replications", "04-run-stop-and-summary", "05-failure-and-budget"],

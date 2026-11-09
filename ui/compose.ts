@@ -117,6 +117,7 @@ export function defineUI<P extends object, M extends ModelInstance>(
         resetDrawing();
         status.textContent = errorMessage(error);
         status.dataset.state = "error";
+        status.setAttribute("role", "alert");
       }
       function completed(state: Snapshot<M>) {
         return spec.complete?.(state) ?? false;
@@ -167,6 +168,7 @@ export function defineUI<P extends object, M extends ModelInstance>(
           const state = read(instance);
           status.textContent = completed(state) ? "Completed." : message;
           status.dataset.state = "success";
+          status.setAttribute("role", "status");
           render(state);
           return true;
         } catch (error) {
@@ -273,6 +275,7 @@ export function defineUI<P extends object, M extends ModelInstance>(
               render();
               status.textContent = "Action repeated.";
               status.dataset.state = "success";
+              status.setAttribute("role", "status");
             },
             changed: running => toggle.setAttribute("aria-pressed", String(running)),
             failed: fail,
@@ -537,6 +540,7 @@ export function defineUI<P extends object, M extends ModelInstance>(
             render();
             status.textContent = "Model initialized.";
             status.dataset.state = "success";
+            status.setAttribute("role", "status");
           } catch (error) {
             disposeViews();
             next.dispose?.();
