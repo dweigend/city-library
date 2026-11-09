@@ -34,3 +34,23 @@ These are author checks of this refactor. Browser interaction, screenshot accept
 ## Separate behavior finding
 
 During this pass the independent test author reported that an Array subclass's inherited `map` override can execute when collection normalization uses the validated original array. This finding is separate from the clarity refactor above. The coordinator authorized a distinct correction to copy validated own data descriptors into a plain array before invoking any array methods. Its fix and regression evidence will be recorded separately below; no frozen assertion is to be weakened.
+
+### Approved correction: inherited array hooks
+
+The independent test author reproduced a collection Array subclass overriding inherited `map`: the old boundary validated own entries but returned the caller's array, so normalization invoked the override and could return an empty scene instead of the supplied identities. This was a real behavior defect, not a readability preference. The coordinator explicitly authorized a separate correction.
+
+The array boundary now snapshots own property descriptors into a private local Map, validates the data entries, then copies indexed descriptor values into a fresh plain array. Later mapping cannot invoke the input's inherited `map`, iterator, constructor or `Symbol.species`. Legitimate subclass contents remain supported. Own accessors, holes and extra fields keep their existing rejection semantics. The private descriptor lookup is validation state only, not an identity registry, cache or domain owner. Both outer rows and nested item arrays use this one boundary.
+
+The independent author added regression `inherited array methods, iterators and species cannot erase identified items` in `tests/universal-ui-adversarial.test.ts`. It checks zero inherited-hook reads and exact preserved identities for outer and nested arrays, including the subclass species getter. Its original failing repro and independent test authorship remain in the separate test report.
+
+Post-correction checks executed by this refactor author:
+
+- Public collection, independent adversarial and shared geometry suites: **21 passed, 0 failed, 3,974 assertions**.
+- All five frozen collection scripts and their typed consumer/negative cases: passed.
+- The original 111 ordinary-output snapshots still compare byte-for-byte equal with the same SHA256 recorded above. Only the buggy inherited-array behavior intentionally changes.
+- Scoped UI TypeScript: passed. An initial attempt to type the descriptor object as an Array-mapped descriptor exposed an inappropriate `length` type; the private keyed descriptor Map corrected that typing without a broad cast or public type weakening.
+- Full `bun run typecheck`: the first post-correction run caught two in-progress independent-test typing errors (missing `override` and readonly expected-array inference). The test author corrected those without changing assertion contents; the final rerun is recorded below.
+
+This correction changes no ordinary scene geometry, entity ID, scientific palette, time, RNG or model action. New browser checks and independent final source approval still belong to the coordinator's separate gates.
+
+Final post-correction `bun run typecheck`: **passed**, including Svelte **0 errors, 0 warnings**. No frozen script or test assertion was edited by this agent. The clarity refactor was committed separately as `bbfd5ee`; this behavior correction has its own subsequent commit.

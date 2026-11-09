@@ -41,15 +41,23 @@ function record(value: unknown, allowed: readonly string[], name: string): Recor
 }
 function array(value: unknown, name: string): readonly unknown[] {
   if (!Array.isArray(value)) throw new TypeError(`${name} must be an array.`);
-  for (const key of Reflect.ownKeys(value)) {
-    const descriptor = Object.getOwnPropertyDescriptor(value, key)!;
+  const descriptors = new Map<PropertyKey, PropertyDescriptor>();
+  for (const key of Reflect.ownKeys(value)) descriptors.set(key, Object.getOwnPropertyDescriptor(value, key)!);
+  // Native arrays always own a non-accessor length descriptor. Read descriptors
+  // rather than inherited methods, iterators or subclass species constructors.
+  const length: number = descriptors.get("length")!.value;
+  for (const [key, descriptor] of descriptors) {
     if (!("value" in descriptor)) throw new TypeError(`${name} cannot contain accessors.`);
-    if (key !== "length" && (typeof key !== "string" || !/^(0|[1-9][0-9]*)$/.test(key) || Number(key) >= value.length))
+    if (key !== "length" && (typeof key !== "string" || !/^(0|[1-9][0-9]*)$/.test(key) || Number(key) >= length))
       throw new TypeError(`${name} cannot contain extra properties.`);
   }
-  for (let index = 0; index < value.length; index++)
-    if (!Object.hasOwn(value, index)) throw new TypeError(`${name} cannot contain holes.`);
-  return value;
+  const detached: unknown[] = [];
+  for (let index = 0; index < length; index++) {
+    const descriptor = descriptors.get(String(index));
+    if (!descriptor) throw new TypeError(`${name} cannot contain holes.`);
+    detached.push(descriptor.value);
+  }
+  return detached;
 }
 function text(value: unknown, name: string): string {
   if (typeof value !== "string" || !value.trim()) throw new TypeError(`${name} must be nonempty text.`);
