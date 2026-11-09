@@ -17,10 +17,11 @@ function typeContracts() {
   Random.add({ seed: "random" });
   const exponential: number = random.number({ distribution: "exponential", mean: 2 });
   const poisson: number = random.number({ distribution: "poisson", mean: 150 });
-  // @ts-expect-error Gamma remains a deferred distribution overload.
-  random.number({ distribution: "gamma", shape: 2, rate: 1 });
+  const gamma: number = random.number({ distribution: "gamma", shape: 2, rate: 1 });
+  // @ts-expect-error Unsupported distribution names remain rejected.
+  random.number({ distribution: "unsupported" });
   // @ts-expect-error Deferred raw variants are not advertised.
   random.raw({ kind: "int32" });
-  return [energy, copied, value, exponential, poisson];
+  return [energy, copied, value, exponential, poisson, gamma];
 }
 void typeContracts;
