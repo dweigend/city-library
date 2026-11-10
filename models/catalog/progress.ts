@@ -3,7 +3,9 @@ import { createHash } from "node:crypto";
 import documentMappings from "../../docs/development/document-path-migration.json";
 import scriptMappings from "../../scripts/naming-path-mappings.json";
 
-const evidencePaths: Readonly<Record<string, string>> = { ...documentMappings.paths, ...scriptMappings.paths };
+import namingIntegration from "../../scripts/main-naming-integration-receipt.json";
+
+const evidencePaths: Readonly<Record<string, string>> = { ...documentMappings.paths, ...scriptMappings.paths, ...Object.fromEntries(namingIntegration.records.map(record => [record.source, record.destination])) };
 function resolveEvidencePath(path: string): string {
   const source = Object.keys(evidencePaths).sort((a, b) => b.length - a.length).find(source => path === source || path.startsWith(`${source}/`));
   return source ? evidencePaths[source]! + path.slice(source.length) : path;
