@@ -43,14 +43,14 @@ export function mountCanvas(
     showLabels = labels.checked;
     draw();
   });
+  /** Cell edges snap to whole buffer pixels, so neighbours tile without seams or overlap. */
   function drawCell(cell: Cell, width: number, height: number) {
+    const left = Math.round(((cell.x + width / 2 - 0.5) / width) * canvas.width);
+    const right = Math.round(((cell.x + width / 2 + 0.5) / width) * canvas.width);
+    const top = Math.round(((height / 2 - cell.y - 0.5) / height) * canvas.height);
+    const bottom = Math.round(((height / 2 - cell.y + 0.5) / height) * canvas.height);
     ctx.fillStyle = cell.color;
-    ctx.fillRect(
-      ((cell.x + width / 2 - 0.5) / width) * canvas.width,
-      ((height / 2 - cell.y - 0.5) / height) * canvas.height,
-      canvas.width / width + 0.5,
-      canvas.height / height + 0.5,
-    );
+    ctx.fillRect(left, top, Math.max(1, right - left), Math.max(1, bottom - top));
   }
   function draw() {
     const data = latest;

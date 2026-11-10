@@ -133,16 +133,18 @@
       </div>
     {/if}
     {#if view.type === "table"}
-      <Table.Root>
-        <Table.Header><Table.Row>
-          {#each columns as key (key)}<Table.Head>{key}</Table.Head>{/each}
-        </Table.Row></Table.Header>
-        <Table.Body>
-          {#each visible.rows as row}<Table.Row>
-            {#each columns as key (key)}<Table.Cell>{String(row[key] ?? "")}</Table.Cell>{/each}
-          </Table.Row>{/each}
-        </Table.Body>
-      </Table.Root>
+      <div class="model-table">
+        <Table.Root>
+          <Table.Header><Table.Row>
+            {#each columns as key (key)}<Table.Head>{key}</Table.Head>{/each}
+          </Table.Row></Table.Header>
+          <Table.Body>
+            {#each visible.rows as row}<Table.Row>
+              {#each columns as key (key)}<Table.Cell>{String(row[key] ?? "")}</Table.Cell>{/each}
+            </Table.Row>{/each}
+          </Table.Body>
+        </Table.Root>
+      </div>
       {#if visible.paged}
         <div class="model-view-actions" data-pagination>
           <Button variant="outline" size="sm" disabled={!visible.previous} onclick={() => page--}>Previous rows</Button>

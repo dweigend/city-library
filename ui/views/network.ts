@@ -25,6 +25,9 @@ export function mountNetwork(
     );
   }
   function edgeTheme() { return labelTheme(); }
+  function surfaceTheme() { return options.theme?.().surface ?? "#f5f5f5"; }
+  const labelPixels = options.theme ? parseFloat(getComputedStyle(container).fontSize) : 11;
+  const labelGap = 4;
   cy.style([
     {
       selector: "node",
@@ -33,16 +36,23 @@ export function mountNetwork(
         height: "data(size)",
         "background-color": "data(color)",
         label: "data(label)",
-        "font-size": options.theme ? parseFloat(getComputedStyle(container).fontSize) : 11,
+        "font-size": labelPixels,
         ...(options.theme ? { "font-family": getComputedStyle(container).fontFamily } : {}),
         "text-valign": "bottom",
-        "text-margin-y": 5,
+        "text-margin-y": labelGap,
+        // A thin halo keeps text legible where edges pass beneath it.
+        "text-outline-width": 2,
+        "text-outline-color": surfaceTheme(),
+        "text-outline-opacity": 0.85,
+        // Draw nodes and their labels above edges.
+        "z-index": 10,
         color: labelTheme(),
       },
     },
+    { selector: ".label-hidden", style: { label: "" } },
     {
       selector: ".selected",
-      style: { "border-width": 3, "border-color": options.theme?.().selected ?? "#b45309" },
+      style: { label: "data(label)", "z-index": 20, "border-width": 3, "border-color": options.theme?.().selected ?? "#b45309" },
     },
     {
       selector: "edge",
@@ -63,9 +73,9 @@ export function mountNetwork(
     if (disposed) return;
     const label = labelTheme();
     const selected = options.theme?.().selected ?? "#b45309";
-    const key = `${label}\n${selected}`;
+    const key = `${label}\n${selected}\n${surfaceTheme()}`;
     if (key === appliedTheme) return;
-    cy.style().selector("node").style({ color: label }).selector(".selected").style({ "border-color": selected }).update();
+    cy.style().selector("node").style({ color: label, "text-outline-color": surfaceTheme() }).selector(".selected").style({ "border-color": selected }).update();
     cy.edges().filter(edge => edge.data("defaultColor")).data("color", label);
     appliedTheme = key;
   }
@@ -95,6 +105,46 @@ export function mountNetwork(
   cy.on("pan zoom", () => {
     if (!adjusting) fitted = false;
   });
+  /**
+   * Labels keep a constant screen size. Where labels would overlap, only the label
+   * of the selected node, then of larger nodes, stays visible; zooming in reveals more.
+   */
+  let labelFrame: number | undefined;
+  function scheduleLabels() {
+    if (labelFrame !== undefined || disposed) return;
+    labelFrame = requestAnimationFrame(() => {
+      labelFrame = undefined;
+      if (!disposed) arrangeLabels();
+    });
+  }
+  function arrangeLabels() {
+    const zoom = cy.zoom();
+    cy.batch(() => {
+      cy.nodes().style({ "font-size": labelPixels / zoom, "text-margin-y": labelGap / zoom });
+      cy.nodes().removeClass("label-hidden");
+    });
+    const labelled = cy.nodes().filter(node => Boolean(node.data("label")));
+    const ordered = labelled.sort((a, b) =>
+      Number(b.hasClass("selected")) - Number(a.hasClass("selected")) || b.data("size") - a.data("size"));
+    type Box = { x1: number; x2: number; y1: number; y2: number };
+    const margin = 2 / zoom;
+    const intersects = (box: Box, other: Box) =>
+      box.x1 - margin < other.x2 && box.x2 + margin > other.x1 && box.y1 - margin < other.y2 && box.y2 + margin > other.y1;
+    // Node symbols are obstacles too, so a label never covers another node.
+    const bodies = cy.nodes().map(node => ({ id: node.id(), box: node.boundingBox({ includeLabels: false }) as Box }));
+    const kept: Box[] = [];
+    const hidden: string[] = [];
+    ordered.forEach(node => {
+      const box = node.boundingBox({ includeNodes: false, includeEdges: false, includeLabels: true }) as Box;
+      const isCovered = kept.some(other => intersects(box, other))
+        || bodies.some(body => body.id !== node.id() && intersects(box, body.box));
+      if (isCovered && !node.hasClass("selected")) hidden.push(node.id());
+      else kept.push(box);
+    });
+    cy.batch(() => { for (const id of hidden) cy.getElementById(id).addClass("label-hidden"); });
+  }
+  cy.on("zoom", scheduleLabels);
+  cy.on("dragfree layoutstop", scheduleLabels);
   function layout() {
     if (!disposed) {
       cy.layout({
@@ -217,6 +267,7 @@ export function mountNetwork(
         first = false;
         fit();
       }
+      scheduleLabels();
       canvas.setAttribute(
         "aria-label",
         `${nodes.length} nodes and ${edges.length} connections`,
@@ -227,6 +278,7 @@ export function mountNetwork(
     dispose() {
       if (disposed) return;
       disposed = true;
+      if (labelFrame !== undefined) cancelAnimationFrame(labelFrame);
       appearance.removeEventListener("change", appearanceChanged);
       resize.disconnect();
       cy.destroy();

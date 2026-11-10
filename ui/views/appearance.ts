@@ -5,6 +5,8 @@ export interface RendererTheme {
   readonly background: string;
   readonly foreground: string;
   readonly muted: string;
+  /** Network canvas surface behind node labels. */
+  readonly surface: string;
   readonly selected: string;
   readonly node: string;
   readonly series: readonly string[];
