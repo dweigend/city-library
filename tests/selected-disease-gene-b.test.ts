@@ -10,7 +10,7 @@ import {
   whichProteinForThisCodon,
 } from "../models/dna-protein-synthesis/model.ts";
 
-describe("B09 source mechanisms and exact public boundaries", () => {
+describe("source mechanisms and exact public boundaries", () => {
   test("epiDEM Basic excludes same patch, uses neighbor patches, and recovers the infected snapshot only", () => {
     const model = epidemic({
       seed: 3,

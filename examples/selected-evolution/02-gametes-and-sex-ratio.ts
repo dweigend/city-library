@@ -33,4 +33,4 @@ assert.equal(before.adultSexRatioHistory.length, 0);
 const empty = sexRatio({ initialPopulationSize: 0 });
 empty.advance();
 assert.equal(empty.read().tick, 0); // pre-step extinction gate
-console.log('B08 gamete geometry, partial ticks and source sex-ratio reporter passed');
+console.log('gamete geometry, partial ticks and source sex-ratio reporter passed');

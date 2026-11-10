@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { create as dining } from '../../models/dining-philosophers/model.ts';
 import { create as pagerank } from '../../models/pagerank/model.ts';
 
-const d = dining({numPhilosophers: 3, hungryChance: 1, fullChance: 1, cooperation: false});
+const d = dining({philosopherCount: 3, hungryChance: 1, fullChance: 1, cooperation: false});
 d.setScenario({states: ['HUNGRY','HUNGRY','HUNGRY'], owners: [null,null,null], marked: [true,false,false]});
 d.activate(0);
 let s = d.read();
@@ -40,4 +40,4 @@ p.setParameters({calculationMethod:'diffusion'});p.advance();
 assert.equal(p.read().surfers.length,0);
 assert.equal(p.read().pages.reduce((a,x)=>a+x.visits,0),7);
 assert.equal(p.read().tick,5);
-console.log('B18 marked resource protocol and both PageRank mechanisms passed');
+console.log('marked resource protocol and both PageRank mechanisms passed');

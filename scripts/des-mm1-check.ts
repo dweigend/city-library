@@ -19,7 +19,7 @@ type EventData = { kind: "arrival" } | { kind: "departure"; customer: number };
 function replication(seed: number) {
   const random = Random.create({ seed });
   const agenda = Agenda.create<EventData>();
-  const server = Resource.add<number>({ capacity: 1 });
+  const server = Resource.create<number>({ capacity: 1 });
   interface Customer {
     id: number;
     arrival: number;

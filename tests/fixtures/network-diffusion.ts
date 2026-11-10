@@ -38,10 +38,10 @@ function parameters(options: NetworkDiffusionOptions): DiffusionParameters {
 /** Illustrative information diffusion: synchronous state updates over canonical Graph contacts. */
 export function createNetworkDiffusionModel(options: NetworkDiffusionOptions = {}) {
   let settings = parameters(options);
-  const random = Random.add({ seed: settings.seed });
-  const world = World.add({ random });
-  const graph = Graph.add<DiffusionAgent, { kind: ContactKind }>({ edgeState: { kind: "contact" } });
-  const agents: DiffusionAgent[] = Array.from({ length: settings.count }, (_, index) => Agent.add({
+  const random = Random.create({ seed: settings.seed });
+  const world = World.create({ random });
+  const graph = Graph.create<DiffusionAgent, { kind: ContactKind }>({ edgeState: { kind: "contact" } });
+  const agents: DiffusionAgent[] = Array.from({ length: settings.count }, (_, index) => Agent.create({
     label: `Agent ${index + 1}`,
     community: settings.topology === "communities" ? Math.floor(index * 3 / settings.count) : 0,
     state: (index === 0 ? "active" : "unaware") as DiffusionState,

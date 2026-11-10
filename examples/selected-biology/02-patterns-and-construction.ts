@@ -17,7 +17,7 @@ skin.advance();
 assert.equal(skin.read().whiteCount, 61 * 61);
 assert.throws(() => fur({ innerRadiusX: 6, innerRadiusY: 6, outerRadiusX: 3, outerRadiusY: 3 }), RangeError);
 
-const hive = honeycomb({ seed: 3, numBees: 10 });
+const hive = honeycomb({ seed: 3, beeCount: 10 });
 assert.equal(hive.read().agents.length, 10);
 hive.advance();
 assert.equal(hive.read().tick, 1);

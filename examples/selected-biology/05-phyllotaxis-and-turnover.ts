@@ -8,7 +8,7 @@ assert.equal(flower.read().particles.length, 1);
 flower.advance(3);
 assert.equal(flower.read().tick, 4);
 assert.equal(flower.read().particles.length, 4);
-assert.equal(flower.read().numTempParticles, 360);
+assert.equal(flower.read().temporaryParticleCount, 360);
 for (const [index, particle] of flower.read().particles.entries()) {
   assert.ok(Math.abs(Math.hypot(particle.x, particle.y) - (index + 1)) < 1e-9);
 }

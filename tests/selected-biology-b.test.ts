@@ -5,7 +5,7 @@ import { create as sunflower } from "../models/sunflower-emergent/model.ts";
 import { create as tumor } from "../models/tumor/model.ts";
 import { create as muscle } from "../models/muscle-development/model.ts";
 
-describe("Selected biology B07 source procedures", () => {
+describe("Selected biology source procedures", () => {
   test("Autumn setup converts sugar before the first tick; cold water procedure returns only locally", () => {
     const tree = autumn({
       numberOfLeaves: 4,
@@ -57,7 +57,7 @@ describe("Selected biology B07 source procedures", () => {
   });
 
   test("Membrane uses one distinct water partner for each lipid and conserves membership", () => {
-    const solution = membrane({ seed: 4, numWater: 0, numLipids: 8 });
+    const solution = membrane({ seed: 4, waterCount: 0, lipidCount: 8 });
     const setup = solution.read();
     expect(setup.agents.length).toBe(16);
     expect(setup.edges.length).toBe(8);
@@ -77,7 +77,7 @@ describe("Selected biology B07 source procedures", () => {
   });
 
   test("Membrane self-inclusive hydrophobic isolation equals one for an isolated one-lipid oil", () => {
-    const solution = membrane({ numWater: 0, numLipids: 1 });
+    const solution = membrane({ waterCount: 0, lipidCount: 1 });
     expect(solution.read().hydrophobicIsolation).toBe(1);
     solution.setParameters({
       waterWaterForce: 0,
@@ -101,14 +101,14 @@ describe("Selected biology B07 source procedures", () => {
     flower.advance();
     expect(flower.read().particles[0]).toEqual(first);
     expect(flower.read().particles[1]!.size).toBe(2.5);
-    expect(flower.read().numTempParticles).toBe(30);
+    expect(flower.read().temporaryParticleCount).toBe(30);
     expect(flower.read().temporaryParticles).toEqual([]);
   });
 
   test("Sunflower counts temporary candidates and stops before the outer ring", () => {
     const flower = sunflower({ ringDist: 1, fixedTemps: true });
     flower.advance(2);
-    expect(flower.read().numTempParticles).toBe(360);
+    expect(flower.read().temporaryParticleCount).toBe(360);
     expect(flower.read().temporaryParticles.length).toBe(360);
     flower.advance(100);
     expect(flower.read().particles.length).toBe(79);

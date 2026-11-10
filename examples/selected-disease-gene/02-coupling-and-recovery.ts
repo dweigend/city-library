@@ -25,4 +25,4 @@ spread.advance(3);
 assert.equal(spread.read().tick, finalTick);
 assert.ok(finalTick <= 4);
 assert.equal(spread.read().agents.length, 200);
-console.log("B09 coupling and recovery passed");
+console.log("coupling and recovery passed");

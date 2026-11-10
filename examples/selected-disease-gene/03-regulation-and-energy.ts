@@ -24,4 +24,4 @@ cell.setParameters({ glucose: true });
 cell.advance();
 assert.ok(Math.abs(cell.read().energy - 1009.89) < 1e-9);
 assert.equal(cell.read().divisionNumber, 0);
-console.log("B09 regulation and energy passed");
+console.log("regulation and energy passed");

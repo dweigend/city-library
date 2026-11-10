@@ -10,7 +10,7 @@ assert.deepEqual(occupied.read({ until: 10 }), { duration: 10, integral: 11, mea
 assert.throws(() => occupied.set({ at: 4, value: 0 }));
 assert.equal(TimeWeighted.create({ value: 3 }).read({ until: 0 }).mean, undefined);
 
-const trace = EventTrace.add<{ kind: string; customer: number }>({ capacity: 2 });
+const trace = EventTrace.create<{ kind: string; customer: number }>({ capacity: 2 });
 trace.record({ at: 1, value: { kind: "arrival", customer: 1 } });
 trace.record({ at: 2, value: { kind: "service", customer: 1 } });
 trace.record({ at: 2, value: { kind: "arrival", customer: 2 } });

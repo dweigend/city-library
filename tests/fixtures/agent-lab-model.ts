@@ -6,8 +6,8 @@ export function createTestModel(initialEnergy = 10) {
     throw new RangeError("Initial energy must be an integer from 0 to 1,000,000.");
   }
 
-  const world = World.add();
-  let selected = Agent.add({ energy: initialEnergy });
+  const world = World.create();
+  let selected = Agent.create({ energy: initialEnergy });
   world.add(selected);
   // Caller-owned inspection references; World remains the only membership owner.
   const inspectedAgents = [selected];

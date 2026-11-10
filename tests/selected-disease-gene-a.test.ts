@@ -5,16 +5,16 @@ import { create as virus } from "../models/virus/model.ts";
 import { create as repressilator } from "../models/repressilator-1d/model.ts";
 import { create as bacterium } from "../models/crispr-bacterium/model.ts";
 
-describe("B09 native contact and molecular compositions", () => {
+describe("native contact and molecular compositions", () => {
   test("Disease Solo caches sickness only in GO and keeps distinct run histories", () => {
-    const model = disease({ seed: 11, numAndroids: 20, infectionChance: 0 });
+    const model = disease({ seed: 11, androidCount: 20, infectionChance: 0 });
     model.infect();
-    expect(model.read().numSick).toBe(0);
+    expect(model.read().sickCount).toBe(0);
     expect(model.read().agents.filter((agent) => agent.infected)).toHaveLength(
       1,
     );
     model.advance(8);
-    expect(model.read().numSick).toBe(1);
+    expect(model.read().sickCount).toBe(1);
     expect(model.read().tick).toBe(8);
     model.setupKeep();
     expect(model.read().runNumber).toBe(2);
@@ -27,7 +27,7 @@ describe("B09 native contact and molecular compositions", () => {
   });
 
   test("Disease user movement takes native unit substeps at the hard edge", () => {
-    const model = disease({ numAndroids: 1, stepSize: 5 });
+    const model = disease({ androidCount: 1, stepSize: 5 });
     model.move(90);
     model.move(90);
     model.move(90);
@@ -42,7 +42,7 @@ describe("B09 native contact and molecular compositions", () => {
   });
 
   test("Disease delay has fifty completed tail steps and a preflight stop", () => {
-    const model = disease({ numAndroids: 1, infectionChance: 100 });
+    const model = disease({ androidCount: 1, infectionChance: 100 });
     // This is a direct public source procedure on the canonical turtles it creates.
     const added = model.createUser();
     model.getSick(added);
@@ -50,11 +50,11 @@ describe("B09 native contact and molecular compositions", () => {
     // The original user can be infected naturally; once all are infected the cached counter drives the tail.
     for (
       let index = 0;
-      index < 1000 && model.read().numSick < model.read().agents.length;
+      index < 1000 && model.read().sickCount < model.read().agents.length;
       index++
     )
       model.advance();
-    expect(model.read().numSick).toBe(model.read().agents.length);
+    expect(model.read().sickCount).toBe(model.read().agents.length);
     const start = model.read().tick;
     model.advance(60);
     expect(model.read().tick).toBe(start + 50);

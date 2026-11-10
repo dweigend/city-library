@@ -15,7 +15,7 @@ import {
 import { create as stores } from "../models/hotellings-law/model.ts";
 import { create as traffic } from "../models/braess-paradox/model.ts";
 
-describe("selected B03 market and foraging source mechanisms", () => {
+describe("selected market and foraging source mechanisms", () => {
   test("Fruit traits derive from all four genome partitions and extinction stops before another tick", () => {
     const genome = Array<number>(240).fill(0);
     genome.fill(1, 0, 20);
