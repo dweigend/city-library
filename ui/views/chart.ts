@@ -46,12 +46,14 @@ export function prepareChartData(mode: Mode, input: readonly (Series | BarSeries
   return { categorical, categories, series, minX, maxX, minY, maxY };
 }
 
-/** Data extent; an empty extent is 0–1 and a flat one keeps a unit span. */
+/** Data extent; an empty extent is 0–1, a flat zero is 0–1 and another flat value sits centred. */
 function extent(values: readonly number[]): [number, number] {
   if (values.length === 0) return [0, 1];
   const min = Math.min(...values);
   const max = Math.max(...values);
-  return max > min ? [min, max] : [min, min + 1];
+  if (max > min) return [min, max];
+  if (min === 0) return [0, 1];
+  return [min - Math.abs(min) / 2, min + Math.abs(min) / 2];
 }
 
 /**
@@ -70,6 +72,9 @@ export function niceTicks(min: number, max: number, count: number, minimumStep =
     Number((first + index * step).toFixed(decimals)) + 0);
   return { min: values[0]!, max: values.at(-1)!, step, values };
 }
+
+/** Fraction of the x span added on each side of a scatter plot. */
+const scatterMargin = 0.04;
 
 const compactNumber = new Intl.NumberFormat("en", { notation: "compact", maximumFractionDigits: 1 });
 /** Tick text uses the precision of its step, and compact notation for large magnitudes. */
@@ -192,7 +197,9 @@ export function mountChart<M extends Mode = "line">(
       const tickRows = data.categorical ? categories.lines : 1;
       const bottom = Math.max(plotTop + 20, viewportHeight - 8 - tickRows * lineHeight - (xAxis ? lineHeight + 6 : 0));
       // Numeric bars are centered on their x value, so the domain gains half a bin per side.
-      const pad = mode === "bar" && !data.categorical ? numericSpacing(data) / 2 : 0;
+      // Scatter points at the extremes would sit on the axes, so their domain gains a small margin.
+      const pad = mode === "bar" && !data.categorical ? numericSpacing(data) / 2
+        : mode === "scatter" ? (data.maxX - data.minX) * scatterMargin : 0;
       const scale = { ...data, minX: data.minX - pad, maxX: data.maxX + pad, minY: yTicks.min, maxY: yTicks.max };
       const geometry = chartGeometry(scale, left, right + 14, bottom, plotTop);
       svg.replaceChildren();

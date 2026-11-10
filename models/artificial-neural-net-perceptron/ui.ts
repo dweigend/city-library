@@ -52,7 +52,7 @@ export const ui = defineUI(model, {
       nodes: (s) =>
         s.nodes.map((n) => ({
           id: String(n.id),
-          label: `${nodeName(n.kind)} · ${n.activation}`,
+          label: `${nodeName(n.kind)}: ${String(n.activation).replace("-", "\u2212")}`,
           color: indexedColor(n.activation === 1 ? 28 : 23),
           position: { x: n.x * 40, y: -n.y * 40 },
           size: n.kind === "output" ? 32 : 26,

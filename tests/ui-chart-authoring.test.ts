@@ -107,6 +107,9 @@ describe("chart authoring data and geometry", () => {
 
   test("flat or empty data keeps a unit span and numeric bars share the smallest bin spacing", () => {
     expect(prepareChartData("line", [{ label: "Flat", points: [{ x: 0, y: 0 }] }])).toMatchObject({ minY: 0, maxY: 1 });
+    const flat = prepareChartData("line", [{ label: "Luminosity", points: [{ x: 0, y: 0.8 }, { x: 5, y: 0.8 }] }]);
+    expect(flat.minY).toBeCloseTo(0.4);
+    expect(flat.maxY).toBeCloseTo(1.2);
     const prices = prepareChartData("line", [{ label: "Price", points: [{ x: 10, y: 16 }, { x: 20, y: 17.5 }] }]);
     expect([prices.minX, prices.maxX, prices.minY, prices.maxY]).toEqual([10, 20, 16, 17.5]);
     const counts = prepareChartData("bar", [{ label: "Counts", points: [{ x: "A", y: 4 }, { x: "B", y: 9 }] }]);

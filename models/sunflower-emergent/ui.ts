@@ -49,7 +49,7 @@ function sunflowerData(state: Observation<typeof model>): SpatialData {
   return {
     width: extent,
     height: extent * (state.height / state.width),
-    agents: particles.map((particle) => ({ ...particle, size: particle.size * sourcePatchPixels * zoom })),
+    agents: particles.map((particle) => ({ ...particle, size: particle.size * sourcePatchPixels * Math.min(zoom, maximumParticleZoom) })),
     description: `${state.particles.length} seeds within radius ${radius.toFixed(1)} of ${state.width / 2} patches.`,
   };
 }
@@ -57,3 +57,5 @@ function sunflowerData(state: Observation<typeof model>): SpatialData {
 // The source view draws 3 pixels per patch; padding keeps outer seeds inside the frame.
 const sourcePatchPixels = 3;
 const framePadding = 4;
+// Beyond 4x the crowded first seeds merge into one disc, so particle growth stops there.
+const maximumParticleZoom = 4;
