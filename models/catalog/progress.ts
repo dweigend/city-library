@@ -1,5 +1,14 @@
 /** Validate the binding selection and render evidence-backed delivery progress. */
 import { createHash } from "node:crypto";
+import documentMappings from "../../docs/development/document-path-migration.json";
+import scriptMappings from "../../scripts/naming-path-mappings.json";
+
+const evidencePaths: Readonly<Record<string, string>> = { ...documentMappings.paths, ...scriptMappings.paths };
+function resolveEvidencePath(path: string): string {
+  const source = Object.keys(evidencePaths).sort((a, b) => b.length - a.length).find(source => path === source || path.startsWith(`${source}/`));
+  return source ? evidencePaths[source]! + path.slice(source.length) : path;
+}
+
 const root = "models/catalog";
 const sha256 = (value: string) => createHash("sha256").update(value).digest("hex");
 export const stages = ["selected", "source-audited", "contract-frozen", "implemented", "headless-verified", "browser-verified", "baseline-compared", "research-verified", "reviewed"] as const;
@@ -57,7 +66,7 @@ export async function verifyProgress() {
     for (const stage of stages) {
       const milestone = row.stages[stage];
       for (const file of milestone.evidence)
-        if (!(await Bun.file(file).exists())) throw new Error(`Evidence missing: ${file}`);
+        if (!(await Bun.file(resolveEvidencePath(file)).exists())) throw new Error(`Evidence missing: ${file}`);
     }
     if (!row.stages.selected.done) throw new Error(`Selected stage missing: ${row.path}`);
   }
