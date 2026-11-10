@@ -13,3 +13,5 @@ Do not replace versioned contracts or provenance with links into a local archive
 The root `tsconfig.json` covers supported TypeScript and Svelte source, examples and tests. Run `bun run typecheck` for the combined check. Two frozen targets remain outside this green gate: the generative-quarter script needs corridor, subtraction and subdivision APIs, and Giant Component needs its model implementation. `bun run typecheck:city:targets` and `bun run typecheck:giant-component:targets` expose those missing contracts; `bun run typecheck:targets` requires both to pass. Keep their asserted scripts unchanged while implementing the missing capabilities.
 
 `bun run build` regenerates the headless package and declarations. `bun run consumer` validates the packed package with Bun, Node ESM and an ambient-free TypeScript consumer. `bun run check` runs the regular type, test, example, build and consumer gates.
+
+The [examples directory migration](examples-migration.md) coordinates canonical models, public contract fixtures, unmet targets and overlapping local cleanup work.

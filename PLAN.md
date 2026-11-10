@@ -18,6 +18,8 @@ The catalog owns [source and acceptance records](models/catalog/README.md); relo
 
 ## Remaining migration sequence
 
+The [examples directory migration](https://github.com/dweigend/city-library/issues/58) owns the complete removal of `examples/`. Reuse canonical models, move public API assertions and unmet targets to explicit test fixtures, and preserve their contracts and provenance. Its inventory and worktree reconciliation precede file moves; the current example commands remain active until their replacements are verified. See the [migration guide](docs/development/examples-migration.md).
+
 The structural migration is integrated: model folders, one Svelte runtime and one root TypeScript configuration are the baseline, not work to repeat. There are 145 model pairs: 125 belong to the fixed selected-200 catalog and twenty are additional illustrative city models. Keep their acceptance scopes separate. The catalog ledger remains authoritative for selected-model stages; illustrative models do not fill the 75 missing selected implementations.
 
 The table prepares the whole remaining scope as bounded work. A row is ready for implementation only after its stated contract and example gate. Independent tracks may proceed together when their state owners and public dependencies do not overlap. Each implementation slice remains independently reviewable and deliverable; this sequence does not authorize one large rewrite or a merge.
