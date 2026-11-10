@@ -1,5 +1,7 @@
 # Agent Loom API reference
 
+Availability: static factories use `Type.create`. Delivered streams support only `mulberry32`; `mt-word-stream/1` is an undelivered target whose seed, distribution and continuation contract still requires resolution, not an algorithm-equivalence claim. `unsupported-interleaved-activation` always throws. The snapshot, declaration-limit and finite-study XML formats below are undelivered targets; their naming changes do not migrate stored bytes or publish codecs. Original representation provenance belongs in dedicated source records.
+
 This reference defines how the Agent Loom API should behave: inputs, results, mutations, validation and errors. Use it when writing or extending a model.
 
 > **Target specification.** The signatures and examples define the required core API. Only the subsets recorded in [PLAN](../../PLAN.md) and the [coverage inventory](../development/coverage.md) are implemented. Check public exports and runnable examples before using an operation.
@@ -304,18 +306,18 @@ interface ActivationContext<T extends WorldMember> {
   die(): never;
 }
 world.activate<T extends WorldMember>(source: ActivationSource<T>, action: (context: ActivationContext<T>) => unknown,
-  options?: { order?: "fixed" | "shuffle" | "priority" | "netlogo-7.0.0"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; breeds?: ReadonlyMap<WorldMember,string>; groupOrder?: readonly string[] }): void
+  options?: { order?: "fixed" | "shuffle" | "priority" | "unsupported-interleaved-activation"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; groups?: ReadonlyMap<WorldMember,string>; groupOrder?: readonly string[] }): void
 world.report<T extends WorldMember,R>(source: T, report: (context: ActivationContext<T>) => R,
-  options?: { order?: "fixed" | "shuffle" | "priority" | "netlogo-7.0.0"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; breeds?: ReadonlyMap<WorldMember,string>; groupOrder?: readonly string[] }): R | undefined
+  options?: { order?: "fixed" | "shuffle" | "priority" | "unsupported-interleaved-activation"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; groups?: ReadonlyMap<WorldMember,string>; groupOrder?: readonly string[] }): R | undefined
 world.report<T extends WorldMember,R>(source: readonly T[] | { kind: "agents" | "fields" | "edges"; breed?: string }, report: (context: ActivationContext<T>) => R,
-  options?: { order?: "fixed" | "shuffle" | "priority" | "netlogo-7.0.0"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; breeds?: ReadonlyMap<WorldMember,string>; groupOrder?: readonly string[] }): readonly (R | undefined)[]
+  options?: { order?: "fixed" | "shuffle" | "priority" | "unsupported-interleaved-activation"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; groups?: ReadonlyMap<WorldMember,string>; groupOrder?: readonly string[] }): readonly (R | undefined)[]
 world.select<T extends WorldMember>(source: ActivationSource<T>, predicate: (context: ActivationContext<T>) => boolean,
-  options?: { caller?: ActivationContext<WorldMember>; breeds?: ReadonlyMap<WorldMember,string> }): readonly T[]
+  options?: { caller?: ActivationContext<WorldMember>; groups?: ReadonlyMap<WorldMember,string> }): readonly T[]
 ```
 
 **Behavior and errors**
 
-Default scripts use ordinary arrays, loops, filtering, Set and Map. Array iteration consumes no RNG and does not acquire NetLogo ask semantics. Explicit World activation supplies the optional synchronous scheduling/context capability; it does not change the model language or replace independently created components. The compatibility profile targets NetLogo 7.0.0; it does not promise bit-for-bit compatibility with later releases.
+Default scripts use ordinary arrays, loops, filtering, Set and Map. Array iteration consumes no RNG and does not acquire external engine ask semantics. Explicit World activation supplies the optional synchronous scheduling/context capability; it does not change the model language or replace independently created components. The compatibility profile targets external engine 7.0.0; it does not promise bit-for-bit compatibility with later releases.
 
 Sources are ordinary data and original object references. An array captures unique membership in first-occurrence order; global-kind selectors resolve current live World membership at invocation. A graph attachment does not attach its nodes; only registered World agents qualify as agents, while fields and edges must belong to attached owned components. Live-selector creation itself performs no traversal or random draw; reuse the same plain selector to see later births/deaths. Filtering with native TS captures an ordinary array; no library Population wrapper exists.
 
@@ -325,13 +327,13 @@ order defaults shuffle: capture and identity-deduplicate at entry, run a complet
 
 Births during callbacks never join an invocation. select never shuffles: visit entry membership in deterministic source order, evaluate Boolean predicates on still-live members, retain original references still alive after true. Nonboolean (including death-unwound undefined) rejects without undoing earlier effects. A predicate may deliberately mutate/draw, so select with a callback is not automatically a pure query.
 
-order netlogo-7.0.0 requires the MT compatibility RNG, explicit XY members, and compatible contexts. Global agents are sorted by ascending numeric compatibility IDs, fields by descending Y then ascending X, and edges by canonical numeric endpoint IDs then breed declaration order; captured arrays retain captured order. Implement forward lazy selection: at position i draw Java nextInt(n-i) when at least two remain, swap the chosen remaining item into i, then prefetch the following item before invoking the current callback.
+The undelivered interleaved activation target requires a separately specified random stream, explicit XY members, and compatible contexts. Global agents are sorted by ascending numeric compatibility IDs, fields by descending Y then ascending X, and edges by canonical numeric endpoint IDs then breed declaration order; captured arrays retain captured order. Implement forward lazy selection: at position i draw Java nextInt(n-i) when at least two remain, swap the chosen remaining item into i, then prefetch the following item before invoking the current callback.
 
-Captured/field sources filter dead values while prefetching; tree-like global-agent/edge/breed sources defer that dead check until traversal. This prefetch timing is observable when callbacks draw or kill later members. A singleton direct member draws no traversal RNG. Only observer calls may activate the special global agents/fields selectors; report permits those selectors from nested contexts. NetLogo-compatible breed selectors retain declaration provenance, never silently becoming a captured array.
+Captured/field sources filter dead values while prefetching; tree-like global-agent/edge/breed sources defer that dead check until traversal. This prefetch timing is observable when callbacks draw or kill later members. A singleton direct member draws no traversal RNG. Only observer calls may activate the special global agents/fields selectors; report permits those selectors from nested contexts. Declaration-ordered group selectors retain declaration provenance, never silently becoming a captured array.
 
 Core IDs are opaque strings and cannot supply native numeric ordering: for global agents/edges supply ids as a same-World identity-to-unique-nonnegative-safe-integer Map; breed selectors use breeds and groupOrder (distinct declared names) to recover model-owned role membership/order. Global field ordering needs coordinates only. Validate the complete mappings and ownership before drawing; absent required numeric IDs, unknown breed names, duplicate IDs or a foreign map key reject. Captured arrays already retain their own order and may omit those maps.
 
-Imported legacy conversion metadata can provide these maps explicitly; no random or ID-allocation inference occurs.
+Imported versioned conversion metadata can provide these maps explicitly; no random or ID-allocation inference occurs.
 
 Each callback receives original self/world, caller as the immediate explicitly supplied outer context's self (absent for observer calls), and scoped die. Nested JavaScript alone does not imply caller: pass the active context explicitly. Expired/foreign contexts reject before traversal. Reading caller preserves the immediate identity even during death unwinding; model-held references to deleted identities retain ordinary object semantics. die deletes self and immediately throws a private frame signal; fields cannot die, inactive frames reject. JavaScript catch/finally remains observable.
 
@@ -479,7 +481,7 @@ Dimension mismatches reject before mutation, including a z component of zero sup
 
 The default 3D basis is right +X, forward +Y, up +Z. Orientation is stored as an orthonormal right-handed basis (or equivalent unit quaternion); coordinates alone never encode roll. The public heading/pitch/roll values describe composition H·P·R: H is a clockwise world-Z rotation, P is a positive local-right rotation raising forward toward +Z, and R is a positive local-forward rotation taking right toward −up. Relative `rotate(angle,{axis})` uses the current local axis: x applies P, y applies R, z turns forward toward right. In XY only z is valid. Default angle zero preserves all basis values; finite angles are reduced modulo 360 before composition.
 
-For extraction let f be forward and r be right. Pitch = asin(clamp(f.z,−1,1)) in degrees, in [−90,90]; outside a pole heading = atan2(f.x,f.y), normalized to [0,360). Let r0=(cos H,−sin H,0) and u0=r0×f. Roll = atan2(−r·u0,r·r0), normalized to [−180,180). At |cos pitch| ≤ 1e−12 use heading = atan2(−r.y,r.x), roll = 0, preserving the represented basis when reconstructing. Public readback is a canonical representation; the underlying basis is not reconstructed after each read. Every composition renormalizes the basis; no native NetLogo transcendental bit equality is promised.
+For extraction let f be forward and r be right. Pitch = asin(clamp(f.z,−1,1)) in degrees, in [−90,90]; outside a pole heading = atan2(f.x,f.y), normalized to [0,360). Let r0=(cos H,−sin H,0) and u0=r0×f. Roll = atan2(−r·u0,r·r0), normalized to [−180,180). At |cos pitch| ≤ 1e−12 use heading = atan2(−r.y,r.x), roll = 0, preserving the represented basis when reconstructing. Public readback is a canonical representation; the underlying basis is not reconstructed after each read. Every composition renormalizes the basis; no native external engine transcendental bit equality is promised.
 
 Facing a target sets shortest-displacement forward and roll zero; coincident targets preserve orientation. For a vertical target preserve prior heading and use pitch ±90. Facing uses the same optional `space` context option as distance and move.
 
@@ -1114,7 +1116,7 @@ circle defaults radius 10 world units and center {x:0,y:0}; radius is finite non
 
 spring requires one finite initial XY point per current node, no extra/omitted identities. iterations defaults 100 nonnegative integer, length defaults 1 positive finite, step defaults 0.01 positive finite. Each iteration simultaneously evaluates Hooke attraction (distance−length) on each unique adjacency and inverse-square repulsion length²/max(distance²,1e−12) on every unordered node pair; unit vectors use current displacement, with coincident pairs separated along +X for the earlier insertion index and −X for the later one. Sum forces then apply step×force to every point together. Every intermediate must remain finite or RangeError is thrown; no partial result is returned. No convergence or physical equilibrium guarantee is implied.
 
-tutte requires distinct boundary members and an equally long position array with at least 3 finite points forming a strictly convex polygon in supplied order; the graph must be simple undirected and each unpinned component must connect to a boundary node. Solve each unpinned vertex as the arithmetic mean of its neighbors with boundary positions fixed. A singular system or nonfinite solution throws. This is a barycentric placement contract, not a claim that arbitrary nonplanar input becomes a planar embedding. It preserves the ordinary model use of NetLogo layout operations while rendering remains an independent consumer.
+tutte requires distinct boundary members and an equally long position array with at least 3 finite points forming a strictly convex polygon in supplied order; the graph must be simple undirected and each unpinned component must connect to a boundary node. Solve each unpinned vertex as the arithmetic mean of its neighbors with boundary positions fixed. A singular system or nonfinite solution throws. This is a barycentric placement contract, not a claim that arbitrary nonplanar input becomes a planar embedding. It preserves the ordinary model use of external engine layout operations while rendering remains an independent consumer.
 
 <a id="node-api"></a>
 
@@ -1262,7 +1264,7 @@ World attachment/detachment of an active tied component must move its complete t
 
 Capturing/restoring continuation preserves tieMode only when all involved component roots are explicitly included; decode validates forest, identity, dimensions and ownership before load. No tie operation draws randomness or advances time.
 
-These target rules preserve coupled-model motion in ordinary TypeScript. They do not claim identical NetLogo root-selection behavior for every undirected tie graph. The relation constrains model motion through graph edges.
+These target rules preserve coupled-model motion in ordinary TypeScript. They do not claim identical external engine root-selection behavior for every undirected tie graph. The relation constrains model motion through graph edges.
 
 <a id="random-api"></a>
 
@@ -1277,15 +1279,15 @@ These target rules preserve coupled-model motion in ordinary TypeScript. They do
 ### Create a generator
 
 ```ts
-Random.create(options?: { seed?: number | "random"; algorithm?: "mulberry32" | "netlogo-7.0.0" }): Random
+Random.create(options?: { seed?: number | "random"; algorithm?: "mulberry32" | "mt-word-stream/1" }): Random
 ```
 
 `Random` is independently usable and may be explicitly passed to a `World`.
 
 | Input | Default / required value | Meaning |
 | --- | --- | --- |
-| `seed` | 1 | Mulberry signed/unsigned 32-bit integer normalized modulo 2³²; NetLogo profile signed 32-bit integer; or "random" for a fresh run seed. Read actual selected seed. |
-| `algorithm` | "mulberry32" | The netlogo-7.0.0 profile preserves pinned legacy stream/distribution semantics; it does not change native TypeScript iteration. |
+| `seed` | 1 | Mulberry signed/unsigned 32-bit integer normalized modulo 2³²; target MT profile signed 32-bit integer; or "random" for a fresh run seed. Read actual selected seed. |
+| `algorithm` | "mulberry32" | The mt-word-stream/1 profile preserves pinned versioned stream/distribution semantics; it does not change native TypeScript iteration. |
 
 **Result and effects:** Construction does not draw from an existing generator. Same algorithm revision, numeric seed and operation order reproduce the same sequence. Advanced in-place continuation is exposed through random.state and captured through supported storage codecs.
 
@@ -1311,7 +1313,7 @@ Uniform, integer and distribution draws are variants of one idea.
 | `probability` | Required for Bernoulli | Finite probability in [0,1]; return numeric 0 or 1. |
 | `min / mode / max` | All required for triangular | Finite values with min ≤ mode ≤ max and finite max−min. These settings describe the triangular variant, not uniform defaults. |
 
-**Result and effects:** Draw explicitly. For the standard Mulberry profile, degenerate normal deviation 0 and exponential/Poisson mean 0 return the constant without a draw. The explicit NetLogo profile preserves its different pinned zero-case draw schedule. The [distribution contracts](#complete-distributions) pin schedules and cache behavior by profile; no current-version native NetLogo bit parity is implied.
+**Result and effects:** Draw explicitly. For the standard Mulberry profile, degenerate normal deviation 0 and exponential/Poisson mean 0 return the constant without a draw. The explicit target MT profile preserves its different pinned zero-case draw schedule. The [distribution contracts](#complete-distributions) pin schedules and cache behavior by profile; no current-version native external engine bit parity is implied.
 
 <a id="random-sample"></a>
 
@@ -1337,12 +1339,12 @@ Select members, choose by weights or generate a random order using the same oper
 
 ```ts
 type RandomState = {
-  readonly algorithm: "mulberry32" | "netlogo-7.0.0";
+  readonly algorithm: "mulberry32" | "mt-word-stream/1";
   readonly seed: number;
   readonly continuation:
     | { readonly algorithm: "mulberry32"; readonly revision: "agent-loom-random/1";
         readonly word: number; readonly gaussian: number | null }
-    | { readonly algorithm: "netlogo-7.0.0"; readonly revision: 2;
+    | { readonly algorithm: "mt-word-stream/1"; readonly revision: 2;
         readonly words: readonly number[]; readonly index: number; readonly gaussian: number | null };
 };
 random.state: RandomState // read/write validated continuation
@@ -1375,7 +1377,7 @@ Normal defaults mean 0, deviation 1; exponential and Poisson default mean 1. Uni
 
 Standard Poisson requires mean in [0,100000], uses a product loop below 30 and transformed rejection at or above 30; mean zero returns zero without drawing. Standard gamma requires finite shape/rate &gt; 0, uses Marsaglia–Tsang rejection with shape boosting below 1, and returns output units where rate has inverse-output units. All standard algorithms have revision "agent-loom-random/1"; changes to schedule/cache require a new recorded revision, not silent continuation compatibility.
 
-The delivered additive Bernoulli variant requires probability in [0,1], returns numeric 0 or 1, and consumes one standard-stream uniform draw except at probability 0 or 1, which return without drawing. The triangular variant requires all three finite values min ≤ mode ≤ max; a nonconstant range must have finite width. It uses one standard-stream uniform inverse-CDF draw; min = mode = max returns that constant without drawing. Unknown/distribution-inappropriate keys and invalid domains reject before draws. These additions do not establish NetLogo or Salabim stream compatibility. See the [DES contract](../development/des-contract.md#observations-trace-data-and-random-draws) and its asserted public examples.
+The delivered additive Bernoulli variant requires probability in [0,1], returns numeric 0 or 1, and consumes one standard-stream uniform draw except at probability 0 or 1, which return without drawing. The triangular variant requires all three finite values min ≤ mode ≤ max; a nonconstant range must have finite width. It uses one standard-stream uniform inverse-CDF draw; min = mode = max returns that constant without drawing. Unknown/distribution-inappropriate keys and invalid domains reject before draws. These additions do not establish external engine or external queue engine stream compatibility. See the [DES contract](../development/des-contract.md#observations-trace-data-and-random-draws) and its asserted public examples.
 
 The MT profile automatically keeps the old operation-specific semantics. Uniform accepts finite signed bound (default 1) and integer false by default; min/max form also remains available, applying the same double to its affine range, but cannot be combined with bound. Float returns bound × U and always consumes one MT double, including bound zero. Integer bound magnitude must be ≤ Number.MAX_SAFE_INTEGER; zero returns positive zero without draws; otherwise draw bounded-long with ceil(abs(bound)), applying the sign of bound to nonzero output.
 
@@ -1390,7 +1392,7 @@ For the Mulberry profile, bound is unsupported. For the MT profile, default unif
 ```ts
 random.sample<T>(source: Iterable<T>, options?: {
   count?: number; replace?: boolean; weight?: (value: T) => number;
-  order?: "draw" | "source"; compatibility?: "legacy-shuffle";
+  order?: "draw" | "source"; algorithm?: "fisher-yates-descending";
 }): T[]
 ```
 
@@ -1398,9 +1400,9 @@ random.sample<T>(source: Iterable<T>, options?: {
 
 Consume source into a finite ordered array without deduplicating entries; repeated references are distinct positions. Defaults count 1, replace false, equal weight 1, order draw. Evaluate weight exactly once per entry before sampling; require a finite nonnegative value, finite total and a pure synchronous callback. Invalid count/weight or thrown evaluation leaves the stream unchanged. Count is a nonnegative safe integer. Without replacement stop at min(count,positive-weight entry count); with replacement take count draws if any eligible entry exists. Count zero/empty/all-zero returns [] without drawing.
 
-Each actual selection consumes one double, including a singleton, chooses by cumulative weight and removes the selected position for no replacement. Use the final positive position for a rounding remainder. Return original values, never mutate source. Order source sorts selected positions back into original order after drawing, retaining draw order among repeated selections of one position. It is not NetLogo ask.
+Each actual selection consumes one double, including a singleton, chooses by cumulative weight and removes the selected position for no replacement. Use the final positive position for a rounding remainder. Return original values, never mutate source. Order source sorts selected positions back into original order after drawing, retaining draw order among repeated selections of one position. It is not external engine ask.
 
-For the old full Fisher–Yates schedule explicitly choose compatibility "legacy-shuffle", count equal to source length, replace false and omit weight/order. Descending i=n−1..1 draws an index in [0,i] using the selected stream's existing bounded integer primitive and swaps a copied array. Empty/singleton shuffles consume no draw. Other option combinations reject. Native-compatible agentset lazy shuffling remains a separate explicit compatibility execution contract; neither full sample nor ordinary for-of promises that source-dependent ask draw trace.
+For the old full Fisher–Yates schedule explicitly choose algorithm "fisher-yates-descending", count equal to source length, replace false and omit weight/order. Descending i=n−1..1 draws an index in [0,i] using the selected stream's existing bounded integer primitive and swaps a copied array. Empty/singleton shuffles consume no draw. Other option combinations reject. Native-compatible agentset lazy shuffling remains a separate explicit compatibility execution contract; neither full sample nor ordinary for-of promises that source-dependent ask draw trace.
 
 <a id="complete-random-general"></a>
 
@@ -1418,7 +1420,7 @@ random.raw(options: { kind: "double" | "gaussian" }): number
 
 **Behavior and errors**
 
-`Random.create` defaults to algorithm "mulberry32" and seed 1. Its algorithms are versioned stream contracts: "mulberry32" is the Mulberry32 stream; "netlogo-7.0.0" pins the MT19937 adaptation and draw semantics of NetLogo 7.0.0. Selecting the latter selects its pinned distribution/draw semantics below, while ordinary iteration and agent activation remain ordinary TypeScript. Numeric Mulberry seeds must be integers in [−2³¹,2³²−1] and normalize modulo 2³²; MT seeds must be signed 32-bit integers.
+`Random.create` defaults to algorithm "mulberry32" and seed 1. Its algorithms are versioned stream contracts: "mulberry32" is the Mulberry32 stream; "mt-word-stream/1" pins the MT19937 adaptation and draw semantics of external engine 7.0.0. Selecting the latter selects its pinned distribution/draw semantics below, while ordinary iteration and agent activation remain ordinary TypeScript. Numeric Mulberry seeds must be integers in [−2³¹,2³²−1] and normalize modulo 2³²; MT seeds must be signed 32-bit integers.
 
 Seed "random" obtains one unsigned 32-bit value from the host entropy source, interpreting it as signed for MT; record the actual numeric `random.seed` value. It draws from no model stream. The read-only `random.algorithm` exposes the selected identifier.
 
@@ -1626,7 +1628,7 @@ neighbors uses a positive finite cellSize default1; every extent/cellSize is an 
 
 splitPath requires planar context and finite intended unwrapped endpoints, preserving full displacement instead of choosing a shortest wrapped endpoint. mode defaults clip: intersect the segment with hard-axis bounds, returning [] if empty/zero-length; reject instead throws if either original endpoint escapes a hard half-open interval. Normalize wrapped starts, split at every seam in travel order (including multiple crossings), and return only positive-length visible pieces; seam endpoints use equivalent paired bounds without a connecting cross-world line. Validate arithmetic and a conservative maximum10000 pieces before allocating.
 
-Bounds/center-coordinate legacy inputs convert to full extents and offset explicitly. This is pure geometry and uses only the supplied spatial context.
+Bounds/center-coordinate versioned inputs convert to full extents and offset explicitly. This is pure geometry and uses only the supplied spatial context.
 
 bounds traverses all non-null planar feature coordinates, returning [minX,maxX,minY,maxY], or undefined with none; zero-width/height envelopes are valid results. map requires finite strictly positive source and target widths/heights. mode defaults uniform-centered: scale=min(targetWidth/sourceWidth,targetHeight/sourceHeight), center the scaled source in target, then transform the point. independent-axes uses separate x/y ratios. Points outside the source map outside without clipping; coordinate labels are retained by callers and no CRS projection or geodesy is inferred. Input/output distance units are the caller's explicit coordinate units.
 
@@ -1766,14 +1768,14 @@ Results remain in plan order: actual serial outcome, not-started/cancelled with 
 ### Study data binding
 
 ```ts
-storage.decode(text: string, options: { format: "behaviorspace" }): readonly StudySpec[]
+storage.decode(text: string, options: { format: "finite-study-xml" }): readonly StudySpec[]
 studies.bind<Model extends StudyModel>(spec: StudySpec, bindings: StudyBindings<Model>): BoundStudy<Model>
 studies.run<Model extends StudyModel>(bound: BoundStudy<Model>): StudyResult<StudyParameters,Readonly<Record<string,StudyScalar>>>
 ```
 
 **Behavior and errors**
 
-Parse the current NetLogo 7.0.4 finite-data XML dialect (version 2); explicit legacy version-1 imports retain the earlier NetLogo 7.0.0 finite-data dialect, retaining exact setup/go/reporter labels and original XML. Enumerated/finite stepped value sets, repetitions, timeLimit, exitCondition, runMetricsCondition and ordered metrics are supported.
+Parse the current finite-data XML dialect (version 2); explicit versioned version-1 imports retain the earlier finite-data dialect, retaining exact setup/go/reporter labels and original XML. Enumerated/finite stepped value sets, repetitions, timeLimit, exitCondition, runMetricsCondition and ordered metrics are supported.
 
 Unsupported constructs reject; DTDs/external entities, code and literals are never executed. bind requires the exact setup/go labels paired with the same normal create/model.step contract; go is a source label only and always invokes the model.step returned by setup.create, never an independent callback. It requires finite scalar literal decoder, every metric reporter and each declared optional exit/sampling reporter. Missing, extra or mismatched labels reject; explicit distinct seed count equals repetitions. Decode settings, construct bounded plan and issue an immutable binding; forged/copied/JSON-reconstructed handles reject in run.
 
@@ -1870,7 +1872,7 @@ export interface StudyAxis {
 
 export interface StudySpec {
 	readonly version: 1 | 2;
-	readonly dialect: "netlogo-7.0.4-finite-v2" | "netlogo-7.0.0-finite-v1";
+	readonly dialect: "finite-study-xml/2" | "finite-study-xml/1";
 	readonly name: string;
 	readonly repetitions: number;
 	readonly runMetricsEveryStep: boolean;
@@ -2281,7 +2283,7 @@ storage.decode(data: string, options: { format: "snapshot-json" }):
 | --- | --- | --- |
 | `state` | No extra model state | Caller-supplied supported extra state for a World, component bundle or data snapshot. Ordinary closures/functions are not saved. |
 | `rootKind` | Read-only snapshot metadata: "world", "bundle" or "data" | A validated discriminator for the root shape, not an application model schema. Narrow decoded snapshots by this field before restoring a known World root. |
-| `format` | Required explicit supported format | "snapshot-json" accepts a Snapshot; "geojson" and "behaviorspace" select bounded external codecs. GeoJSON decode requires `coordinateSystem:{crs,units}`; returned dataset retains these labels. GeoJSON encode emits geometry only, so caller retains its labels separately. Unknown formats/versions reject. |
+| `format` | Required explicit supported format | "snapshot-json" accepts a Snapshot; "geojson" and "finite-study-xml" select bounded external codecs. GeoJSON decode requires `coordinateSystem:{crs,units}`; returned dataset retains these labels. GeoJSON encode emits geometry only, so caller retains its labels separately. Unknown formats/versions reject. |
 
 ##### Types before and after serialization
 
@@ -2302,7 +2304,7 @@ Use a small persistence surface for supported Worlds, component bundles, histori
 
 Agent or other live component nodes are external references unless also registered in the captured World or declared as component roots. They must be declared explicitly, otherwise save rejects; Graph membership alone never attaches them to a World. Caller closures and unrelated live objects are not traversed implicitly. `save` is observational. `load` returns `{value,state}`, creates fresh independent identities and preserves relationships inside a supported bundle, RNG algorithm/continuation and recorded clocks.
 
-A supported World snapshot preserves the absence or presence of its spatial context, including derived dimensions and boundary rules; each captured Grid preserves its own spatial context. Restoring a network-only World must not invent a space. Exact continuation is promised only for supported captured state plus the same caller-supplied model procedures; unavailable codecs reject rather than silently lose data. The versioned codec contract defines legacy import and validation. File and database I/O remains caller-owned.
+A supported World snapshot preserves the absence or presence of its spatial context, including derived dimensions and boundary rules; each captured Grid preserves its own spatial context. Restoring a network-only World must not invent a space. Exact continuation is promised only for supported captured state plus the same caller-supplied model procedures; unavailable codecs reject rather than silently lose data. The versioned codec contract defines versioned import and validation. File and database I/O remains caller-owned.
 
 Decoding validates data without creating live model components. Restoration creates a fresh supported component graph; failure must not modify existing Worlds or publish a partially restored graph. No model functions, listeners, file handles or network connections are recreated. Applications rebind their own procedures and external integrations explicitly. Snapshot-json preserves supported model data and relationships; unsupported values and codec versions reject instead of silently disappearing.
 
@@ -2428,9 +2430,9 @@ Default validation limits are 32 MiB UTF-8 text, nesting depth 128, 1000000 reco
 
 Unknown framework/version/algorithm, dangling reference, excessive resources and malformed values reject; no partial fallback. Errors include a stable data path and reason, without claiming every model's scientific validity. A world discriminator validates built-in structure only: restored model state remains unknown until caller checks. Bundle names and extra state remain unknown. No unchecked generic decode overload restores trust erased by serialization.
 
-Legacy world V1–V4 and RNG state V1/V2 are separate from the target envelope. Import model data explicitly through `storage.decode(text,{format:"legacy-world-json"})`, or `storage.decode(data,{format:"legacy-world-data"})` for in-memory V1 structured-cloneable payloads that are not universally JSON-safe. Both validate the supported model-only subset of the old schemas, preserve XYZ, declared variable/reference graphs and MT Gaussian continuation where present, and return a target WorldSnapshot&lt;unknown&gt;.
+Legacy world V1–V4 and RNG state V1/V2 are separate from the target envelope. Import model data explicitly through `storage.decode(text,{format:"model-world-json"})`, or `storage.decode(data,{format:"model-world-data"})` for in-memory V1 structured-cloneable payloads that are not universally JSON-safe. Both validate the supported model-only subset of the old schemas, preserve XYZ, declared variable/reference graphs and MT Gaussian continuation where present, and return a target WorldSnapshot&lt;unknown&gt;.
 
-Nonempty legacy presentation sections and built-in appearance fields are unsupported and reject instead of being silently discarded; callers must explicitly remove those sections and fields before import. Application-defined properties named color, shape or similar remain ordinary supported model state and must not be stripped. V1 and V2 are physical XY envelopes, V3 retains the same model geometry, and V4 is explicitly dimension 3; none is a NetLogo export-world file. Reject unsupported version/dimension combinations. Nested MT RNG-state version 1 is accepted only with empty Gaussian cache; nested MT version 2 carries the cache.
+Nonempty versioned presentation sections and built-in appearance fields are unsupported and reject instead of being silently discarded; callers must explicitly remove those sections and fields before import. Application-defined properties named color, shape or similar remain ordinary supported model state and must not be stripped. V1 and V2 are physical XY envelopes, V3 retains the same model geometry, and V4 is explicitly dimension 3; none is a external engine export-world file. Reject unsupported version/dimension combinations. Nested MT RNG-state version 1 is accepted only with empty Gaussian cache; nested MT version 2 carries the cache.
 
 These RNG revisions are distinct from world envelope V1/V2. Old 2D worlds become explicit unit-cell Grids and separately attached Agents/Graph; on each axis with old patch-center bounds min/max, set extent=max−min+1 and offset=(min+max)/2, then translate framework positions by subtracting offset. Store original bounds/offset, old globals, original numeric IDs and next-ID counters as validated conversion state. Translate known patch/agent positions only; arbitrary model coordinates in custom data are not guessed. Caller procedures can add the recorded offset when preserving an external coordinate convention.
 
@@ -2460,9 +2462,9 @@ This pure guard checks the private library-issued kind/identity brand of a live 
 ```ts
 storage.encode(value: PlanarGeometry | PlanarFeature | PlanarDataset | readonly PlanarFeature[], options: { format: "geojson" }): string
 storage.decode(text: string, options: { format: "geojson"; coordinateSystem: { crs: string; units: string } }): PlanarDataset
-storage.encode(value: readonly StudySpec[], options: { format: "behaviorspace" }): string
-storage.decode(text: string, options: { format: "behaviorspace" }): readonly StudySpec[]
-storage.decode(text: string, options: { format: "legacy-world-json" }): WorldSnapshot<unknown>
+storage.encode(value: readonly StudySpec[], options: { format: "finite-study-xml" }): string
+storage.decode(text: string, options: { format: "finite-study-xml" }): readonly StudySpec[]
+storage.decode(text: string, options: { format: "model-world-json" }): WorldSnapshot<unknown>
 ```
 
 **Behavior and errors**
@@ -2472,7 +2474,7 @@ Every codec call requires an explicit built-in format name or a Format object an
 - `storage.decode(text,{format:"geojson",coordinateSystem:{crs,units}})` accepts standard Feature/FeatureCollection and Point/MultiPoint/LineString/MultiLineString/Polygon/MultiPolygon/GeometryCollection with finite planar XY coordinates. It returns {features,coordinateSystem}; explicit nonempty crs and units labels are mandatory and do not reproject coordinates. Reject XYZ coordinates rather than silently dropping altitude. Rings require ≥4 positions and closed first/last point; holes remain explicit. Null feature geometry is retained as null. Feature IDs/properties remain cloneable data, not Agents.
 
 Encode accepts a PlanarGeometry, one PlanarFeature, a PlanarDataset or a feature array; geometry/feature values retain their standard GeoJSON root kind, while a dataset/array becomes a FeatureCollection. It omits coordinate-system labels from geometry; callers retain labels separately. Empty collections are valid; malformed rings/nonfinite/unsupported structures reject. GIS operations do not infer geodesy, raster sampling or CRS conversion.
-- `storage.decode(text,{format:"behaviorspace"})` parses bounded declarative XML study metadata into labeled setup/go/stop/measure command strings, enumerated/stepped parameter values, repetitions, seeds, time limit and cadence. It never evaluates those strings. Explicit caller-owned bindings in studies convert only recognized labels to TS procedures; unknown labels reject there. Reject external entities/DTDs, executable imports, malformed numeric ranges and range expansion beyond 1000000 values. Encode accepts that declarative plan and returns escaped XML without translating TypeScript back into NetLogo procedures.
+- `storage.decode(text,{format:"finite-study-xml"})` parses bounded declarative XML study metadata into labeled setup/go/stop/measure command strings, enumerated/stepped parameter values, repetitions, seeds, time limit and cadence. It never evaluates those strings. Explicit caller-owned bindings in studies convert only recognized labels to TS procedures; unknown labels reject there. Reject external entities/DTDs, executable imports, malformed numeric ranges and range expansion beyond 1000000 values. Encode accepts that declarative plan and returns escaped XML without translating TypeScript back into external engine procedures.
 
 <a id="snapshot-wire-schema"></a>
 
@@ -2505,7 +2507,7 @@ type WorldRecord = {
   id: string; kind: "world"; revision: 1; modelId: string;
   tick: number; space: (Space & Required<Pick<Space, "dimensions" | "boundary">>) | null; random: Ref;
   components: readonly Ref[]; compatibility: null | {
-    profile: "netlogo-7.0.0"; turtleOwn: readonly string[]; linkOwn: readonly string[];
+    profile: "mt-word-stream/1"; agentOwn: readonly string[]; edgeOwn: readonly string[];
     turtleBreeds: readonly { name: string; own: readonly string[] }[];
     linkBreeds: readonly { name: string; direction: "directed" | "undirected"; own: readonly string[] }[];
     turtleMembership: readonly (readonly [Ref,string,number])[];
@@ -2569,7 +2571,7 @@ type ExtensionRecord = {
 
 **Optional application values at the persistence boundary**
 
-Format converts an entire ordinary data value to and from text or bytes. ValueCodec handles one otherwise unsupported application value inside the default snapshot format; it does not choose the whole document format. The ordinary data defaults need no registration. An application with a legacy in-memory value outside those defaults can supply an explicit value codec to save/load. This is an optional boundary adapter composed from ordinary TypeScript functions, not model-authoring syntax. Functions themselves, framework components, weak collections and active host resources cannot be overridden by a codec. Codecs never serialize executable code or turn arbitrary decoded data into a trusted model type.
+Format converts an entire ordinary data value to and from text or bytes. ValueCodec handles one otherwise unsupported application value inside the default snapshot format; it does not choose the whole document format. The ordinary data defaults need no registration. An application with a versioned in-memory value outside those defaults can supply an explicit value codec to save/load. This is an optional boundary adapter composed from ordinary TypeScript functions, not model-authoring syntax. Functions themselves, framework components, weak collections and active host resources cannot be overridden by a codec. Codecs never serialize executable code or turn arbitrary decoded data into a trusted model type.
 
 ```ts
 type ValueCodec = {
@@ -2580,13 +2582,13 @@ type ValueCodec = {
 };
 storage.save<V>(value: V, options: { valueCodecs: readonly ValueCodec[] }): Snapshot<V, {}>
 storage.save<V,S>(value: V, options: { state: S; valueCodecs?: readonly ValueCodec[] }): Snapshot<V,S>
-storage.decode(data: unknown, options: { format: "legacy-world-data"; valueCodecs?: readonly ValueCodec[] }): WorldSnapshot<unknown>
+storage.decode(data: unknown, options: { format: "model-world-data"; valueCodecs?: readonly ValueCodec[] }): WorldSnapshot<unknown>
 storage.load<V,S>(snapshot: Snapshot<V,S>, options?: {
   valueCodecs?: readonly ValueCodec[]
 }): { value: V; state: S };
 ```
 
-The legacy-world-data overload validates its old in-memory schema, then uses explicitly supplied codecs only for unsupported ordinary legacy payload values while constructing the target snapshot; it never executes a model callback. Codec IDs are unique nonempty strings ≤ 128 code units; versions are positive safe integers. accepts is evaluated once per unsupported object in codec list order and must return boolean synchronously; no match or more than one match rejects. encode returns only supported plain data, without further extension values, functions, host resources or reference to the encoded original.
+The model-world-data overload validates its old in-memory schema, then uses explicitly supplied codecs only for unsupported ordinary versioned payload values while constructing the target snapshot; it never executes a model callback. Codec IDs are unique nonempty strings ≤ 128 code units; versions are positive safe integers. accepts is evaluated once per unsupported object in codec list order and must return boolean synchronously; no match or more than one match rejects. encode returns only supported plain data, without further extension values, functions, host resources or reference to the encoded original.
 
 Its detached payload may contain ordinary internal cycles but cannot reference another extension value. Encode the whole original object once, preserving repeated external aliases through one ExtensionRecord; codec-internal identity relationships are its responsibility. Decode receives an independently restored plain payload; a supplied codec with exact ID/version is mandatory before live allocation starts. Every encode/decode callback must be synchronous and nonthenable; callback failure aborts save/load without publishing a partial framework graph. Callers remain responsible for effects outside the returned values.
 
@@ -2632,9 +2634,9 @@ Agenda events are ordered by at, priority and sequence; event IDs and sequences 
 
 A handle's localId may name an event deleted since the handle was issued; restoring it preserves the documented no-op deletion behavior, but it must be a prior allocated ID of the correct owner. An arbitrary forged ID is invalid.
 
-The compatibility object contains validated legacy-import provenance, not a model declaration API. New models store their ordinary Map/record breed metadata in explicitly captured extra state. The compatibility object is null when no imported compatibility declarations exist; otherwise it is the exact inline schema above. Each membership triple contains Agent/Edge reference, declared breed name (empty string denotes the unbred base population) and nonnegative safe integer numeric compatibility ID.
+The compatibility object contains validated versioned-import provenance, not a model declaration API. New models store their ordinary Map/record breed metadata in explicitly captured extra state. The compatibility object is null when no imported compatibility declarations exist; otherwise it is the exact inline schema above. Each membership triple contains Agent/Edge reference, declared breed name (empty string denotes the unbred base population) and nonnegative safe integer numeric compatibility ID.
 
-IDs are unique within turtles or links, counters exceed every historical assigned ID, and membership endpoints resolve inside the captured World/registered graphs. Own-variable and breed names are unique nonempty strings under compatibility declaration rules. Variables themselves remain direct state; no dynamically scoped activation frame, myself reference, running callback or local-randomness scope can be captured. Save during those scopes rejects. Restoration preserves declarations, numeric ordering IDs and future allocation counters for explicitly rebound TS procedures, never NetLogo code.
+IDs are unique within turtles or links, counters exceed every historical assigned ID, and membership endpoints resolve inside the captured World/registered graphs. Own-variable and breed names are unique nonempty strings under compatibility declaration rules. Variables themselves remain direct state; no dynamically scoped activation frame, myself reference, running callback or local-randomness scope can be captured. Save during those scopes rejects. Restoration preserves declarations, numeric ordering IDs and future allocation counters for explicitly rebound TS procedures, never external engine code.
 
 <a id="limits-api"></a>
 
@@ -2645,7 +2647,7 @@ IDs are unique within turtles or links, counters exceed every historical assigne
 ### Readable resource budgets
 
 ```ts
-limits.netlogo = {
+limits.declarations = {
   declarations: 1000, creation: 1000000, valueDepth: 32, valueNodes: 100000,
   randomIterations: 1000000
 };
@@ -2653,8 +2655,8 @@ limits.geojson = {
   textBytes: 8388608, features: 10000, positions: 100000, polygonPositions: 2048,
   coordinateMagnitude: 1000000000, propertyDepth: 32, propertyNodes: 100000
 };
-limits.compatibilityNetwork = { nodes: 1024, edges: 32768, idLength: 256 };
-limits.behaviorspace = {
+limits.simpleNetwork = { nodes: 1024, edges: 32768, idLength: 256 };
+limits.studyXml = {
   textBytes: 1048576, depth: 8, elements: 20000, entityReferences: 100000,
   studies: 100, metrics: 32, sourceLength: 65536
 };
@@ -2665,20 +2667,20 @@ limits.study = {
 ```
 
 ```ts
-interface LegacyNetworkData { readonly directed:boolean; readonly nodes:readonly string[]; readonly edges:readonly {readonly from:string;readonly to:string}[] }
-storage.decode(text:string, options:{format:"legacy-network-json"}):LegacyNetworkData
-storage.decode(data:unknown, options:{format:"legacy-network-data"}):LegacyNetworkData
+interface SimpleNetworkData { readonly directed:boolean; readonly nodes:readonly string[]; readonly edges:readonly {readonly from:string;readonly to:string}[] }
+storage.decode(text:string, options:{format:"simple-network-json"}):SimpleNetworkData
+storage.decode(data:unknown, options:{format:"simple-network-data"}):SimpleNetworkData
 ```
 
 **Behavior and errors**
 
 The root export limits is one deeply frozen data object; the assignment notation above describes its readable fields, not writable configuration. Reading budgets invokes no allocation, callbacks, model clock or RNG.
 
-Counts are hard ceilings for their explicitly named bounded adapters, not targets to fill. netlogo applies to the pinned compatibility declaration/creation/value/distribution operations. geojson applies to planar dataset parsing/writing and containment. compatibilityNetwork retains the bounded simple-network import/validation profile: request it explicitly with storage.decode(text,{format:"legacy-network-json"}) or storage.decode(data,{format:"legacy-network-data"}); it does not impose a 1024-node cap on all live Graph models. behaviorspace applies to the finite-data XML parser including subexperiment records; study bounds materialized plans and completed-step/sample budgets.
+Counts are hard ceilings for their explicitly named bounded adapters, not targets to fill. declarations applies to the pinned compatibility declaration/creation/value/distribution operations. geojson applies to planar dataset parsing/writing and containment. simpleNetwork retains the bounded simple-network import/validation profile: request it explicitly with storage.decode(text,{format:"simple-network-json"}) or storage.decode(data,{format:"simple-network-data"}); it does not impose a 1024-node cap on all live Graph models. studyXml applies to the finite-data XML parser including subexperiment records; study bounds materialized plans and completed-step/sample budgets.
 
 Lower caller caps may be supplied only where an operation documents them; higher caps reject. No resource value silently changes algorithm semantics or validates model science.
 
-The legacy-simple network profile accepts unique nonempty string node IDs of at most 256 UTF-16 units, simple homogeneous directed or undirected unweighted edges, no loops/parallel pairs, at most 1024 nodes and 32768 edges. Validate endpoints, direction and complete shape, then return a detached canonical copy sorted by code-unit node ID and endpoint order. Both prior typed validation and unknown-data canonicalization map to this single boundary; malformed types throw TypeError and domain/count violations RangeError. General graph-json follows the richer Graph interchange contract and is a separate format.
+The versioned-simple network profile accepts unique nonempty string node IDs of at most 256 UTF-16 units, simple homogeneous directed or undirected unweighted edges, no loops/parallel pairs, at most 1024 nodes and 32768 edges. Validate endpoints, direction and complete shape, then return a detached canonical copy sorted by code-unit node ID and endpoint order. Both prior typed validation and unknown-data canonicalization map to this single boundary; malformed types throw TypeError and domain/count violations RangeError. General graph-json follows the richer Graph interchange contract and is a separate format.
 
 ## Additive measurement and update tools
 

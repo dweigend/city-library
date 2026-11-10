@@ -44,24 +44,17 @@ Follow the central [naming conventions](docs/NAMING_CONVENTIONS.md) for the nami
 
 The [central conventions](docs/NAMING_CONVENTIONS.md) are accepted after independent review. This inventory records intended naming changes; it does not claim migrated exports or accepted runtime behavior. Existing assertions and semantic expectations remain acceptance gates. Rename frozen public syntax only through this recorded migration decision and update its callers and integrity records together.
 
-| Existing name | Target name | Migration boundary |
-| --- | --- | --- |
-| Static construction `Type.add(...)` | `Type.create(...)` | Core factories and all consumers; instance membership `world.add(...)` and lifecycle `delete` remain unchanged. |
-| `experiments`, `src/experiments` | `studies`, `src/studies` | Public namespace, imports, scripts and documented package-entry targets. |
-| Target `agent-loom/studies/node` | `agent-loom/studies/node` | Specification target only; mapping to a published `city-library` subpath remains an explicit future decision, with no new export delivered by this rename. |
-| `ExperimentModel`, `ExperimentOptions`, `ExperimentPlan` | `StudyModel`, `StudyOptions`, `StudyPlan` | Public types, callbacks, diagnostics and all consumers. |
-| `BehaviorSpaceSpec`, `BehaviorSpaceAxis`, `BehaviorSpaceBindings`, `BoundBehaviorSpace`, `BehaviorSpaceMeasurement` | `StudySpec`, `StudyAxis`, `StudyBindings`, `BoundStudy`, `StudyMeasurement` | Target contracts and bound study plans; format identity requires separate analysis. |
-| `netLogoColor`, palette module names | `indexedColor`, `indexed-color.ts`, `indexed-palette.ts` | UI exports, model declarations, tests and palette contract. |
-| `breed`, `breeds`, `breedOrder` for execution classification | `group`, `groups`, `groupOrder` | Activation contract and consumers; biological species retain their scientific meaning. |
-| Preferential-attachment `links` option | `edgesPerNode` | Generator options and every example and test; preserve seed-clique and edge-count behavior. |
-| Public count keys such as `numAgents` | `agentCount` and domain-specific `*Count` | Input/observation keys, UI bindings and declared data representations; inventory every key before editing. |
-| `NwGeneratorOptions`, `nw-options.ts`, `nw-planning.ts` | `TopologyGeneratorOptions`, `topology-options.ts`, `topology-planning.ts` | Graph variant implementation and public type consumers. |
-| UI `NetworkNode`, `NetworkEdge` | `GraphNodeData`, `GraphEdgeData` | Presentation data contracts; scientific network terminology remains valid. |
-| Model-selection `experiment` URL key and `experiment-content` | `model`, `model-content` | Browser navigation and DOM consumers. |
-| Source-project and phase-based file/directory names | Capability-based names, including `quad-layouts`, `grid-models`, `model-acceptance.md` | Imports, script registrations, documentation links and frozen-path records. |
+Current capability inventory:
 
-Profile and format names remain an implementation-analysis requirement: `netlogo-7.0.0`, `nw-web-topology/1`, `legacy-shuffle`, the sampling `compatibility` option, external XML format identifiers and serialized source-vocabulary keys need a complete behavior/representation inventory and must be replaced by neutral names after that inventory. No guessed algorithm equivalence, silent format rewrite or active historical alias is accepted. Unsupported promised behavior remains an explicit gap. Source identity and immutable evidence stay at the documented evidence boundaries.
+- Construction: static `Type.create`; membership: instance `world.add`.
+- Studies: `studies`, `StudyModel`, `StudyOptions`, `StudyPlan` and declarative `StudySpec` targets; published subpath mapping remains unresolved.
+- Topology: delivered `ordered-topology/1`, with explicit ordering and draw rules.
+- Sampling: delivered `algorithm:"fisher-yates-descending"` for the full descending shuffle.
+- Activation: fixed, shuffle and priority; `unsupported-interleaved-activation` rejects.
+- Random: delivered Mulberry32; the proposed `mt-word-stream/1` contract remains undelivered and requires complete seed/distribution/continuation decisions.
+- Representation targets: `finite-study-xml`, `simple-network-json`, `simple-network-data`, `model-world-json` and `model-world-data`. These names do not deliver codecs or authorize rewriting immutable serialized evidence. XML dialect revisions and snapshot provenance require explicit boundary schemas before implementation.
 
+Executable assertions, ordering, identity and random sequences remain acceptance gates. Machine migration receipts retain provenance separately from this capability inventory.
 
 Apply the library refactoring skill to each affected kernel/algorithm and the model-script skill to each affected `model.ts`/`ui.ts`; use both across the boundary. Read their shared workflow and the [coding standards](docs/CODING_STANDARDS.md) before diagnosis and repeat their checks after changes. Keep the skills private. A refactor needs a concrete readability, cohesion or ownership benefit; function/file size is a review signal, not a splitting mandate.
 
@@ -143,13 +136,13 @@ Rendering, materials, symbols, cameras, widgets, picking, browser editors and pr
 
 The first-generator contract and city-domain admission/replacement remain later slice decisions. Numerical precision, coordinate conversion, packaging, runtime support, rights/notices and continuation details require explicit decisions only where the binding target leaves them unspecified; specified contracts remain mandatory. Geometric capabilities may use declared abstract units; city-domain admission must make metric conversion explicit. Shared infrastructure requires a concrete use case.
 
-The [Markdown API specification](docs/agent-loom/README.md) defines the required core scope: all 309 operation/type entries across 16 reference areas, including compatibility profiles, codecs, advanced algorithms, limits and shared types. Completion requires a delivered public export, contract, executable example and target evidence for each entry. Deferred operations remain open; exclusions or scope changes require an explicit recorded decision. The regular Agent Loom Grid contract remains square/cubic. Finite hexagonal layouts and layout-backed Grids are available through the additive topology API; broader hexagonal behavior remains outside that regular Grid contract. Track implementation status against public examples and behavior checks, not source-project results.
+The [Markdown API specification](docs/agent-loom/README.md) defines the required core scope: all 309 operation/type entries across 16 reference areas, including behavior profiles, codecs, advanced algorithms, limits and shared types. Completion requires a delivered public export, contract, executable example and target evidence for each entry. Deferred operations remain open; exclusions or scope changes require an explicit recorded decision. The regular Agent Loom Grid contract remains square/cubic. Finite hexagonal layouts and layout-backed Grids are available through the additive topology API; broader hexagonal behavior remains outside that regular Grid contract. Track implementation status against public examples and behavior checks, not source-project results.
 
 ## City authoring and planar topology
 
 Five [city authoring scripts](examples/city-simulation/README.md) cover household budgets, neighborhood heat, a generative quarter, scarcity and machine lifecycle. Four run through existing public APIs. The quarter remains an unmet target until corridor, subtraction and bounded subdivision are delivered; its dedicated target gates must remain red. Preserve accepted assertions and syntax. The [extension plan](docs/development/example-first/PLAN.md) owns the requirements and the [research guide](docs/development/example-first/RESEARCH-INTEGRATION.md) explains joint feasibility, transitions and observations.
 
-[Grid and parcel foundations](docs/grid-parcels/STATUS.md) provide detached square, hexagonal and authored layouts, layout-backed Grid Fields and bounded planar merge/split. [Finite quad generation and square-target relaxation](docs/grid-parcels/QUAD-LAYOUTS-CONTRACT.md) extend these APIs independently. Their [verification record](docs/grid-parcels/TOWNSCAPER-VERIFICATION.md) distinguishes checks and review scope; finite quads do not satisfy the quarter prerequisites. Wrapping layouts, irregular diffusion, volume layouts, dual mapping, chunks, arbitrary-boundary quads and architectural solving remain future work.
+[Grid and parcel foundations](docs/grid-parcels/STATUS.md) provide detached square, hexagonal and authored layouts, layout-backed Grid Fields and bounded planar merge/split. [Finite quad generation and square-target relaxation](docs/grid-parcels/QUAD-LAYOUTS-CONTRACT.md) extend these APIs independently. Their [verification record](docs/grid-parcels/QUAD-LAYOUTS-VERIFICATION.md) distinguishes checks and review scope; finite quads do not satisfy the quarter prerequisites. Wrapping layouts, irregular diffusion, volume layouts, dual mapping, chunks, arbitrary-boundary quads and architectural solving remain future work.
 
 ## Code quality
 

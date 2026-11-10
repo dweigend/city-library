@@ -153,7 +153,7 @@ src/
 │   ├── summarize.ts
 │   ├── calibration/
 │   ├── continuation.ts
-│   ├── behaviorspace.ts
+│   ├── study-xml.ts
 │   └── node/                   # Separate host entry and worker implementation
 ├── storage/
 │   ├── snapshot.ts
@@ -242,7 +242,7 @@ The binding Agent Loom [API table](agent-loom/api-table.md) supplies the operati
 
 Keep future reference pages task-oriented. Each entry identifies an operation, summarizes its contract and links to detailed usage. Within an object area, prefer creation, readable properties, mutations, queries, advanced operations and types where applicable. Keep naturally related actions together. Field has no independent constructor; statistics and geometry are primarily functions; experiment design and execution have their own workflow. Do not manufacture lifecycle methods to fill a rigid template.
 
-The following tables summarize responsibilities and usage progression; they do not replace the binding API signatures or narrow their scope. Advanced features, compatibility profiles and codecs specified there remain target work, delivered through bounded implementation slices. Report conflicting or unspecified behavior rather than silently changing the contract.
+The following tables summarize responsibilities and usage progression; they do not replace the binding API signatures or narrow their scope. Advanced features, behavior profiles and codecs specified there remain target work, delivered through bounded implementation slices. Report conflicting or unspecified behavior rather than silently changing the contract.
 
 ## General modeling boundaries
 
@@ -259,7 +259,7 @@ The following tables summarize responsibilities and usage progression; they do n
 | Agenda | Create; inspect time; queue/cancel event data; advance to a horizon within a budget; explicitly handle returned events | Owns pending event data, handles, insertion order and its own time. No automatic callbacks, World step or wall-clock timer. |
 | studies | Design scenarios; replicate seeds; create/run independent models; measure/summarize; optionally evaluate, select, hold out or resume | Owns study plan, budgets and outcomes; each model owns its state. The reference execution contract uses World plus a step procedure. Host workers and compatibility bindings are explicit optional integrations, not requirements for static tools. |
 | storage | Save/load supplied supported data; explicitly encode/decode; create and record bounded History; validate restored data | Owns snapshot/codec contracts and History buffers. Depends only on the selected data/component contracts; no file/database I/O in core. One area covers selected data and declared model state, with distinct guarantees. |
-| limits | Read documented resource budgets for specific operations or adapters | Immutable policy data, not a global allocation manager. Specified profiles include NetLogo, GeoJSON, legacy networks, Study and studies; their ceilings do not become universal model limits. |
+| limits | Read documented resource budgets for specific operations or adapters | Immutable policy data, not a global allocation manager. Target budgets cover declarations, planar geometry interchange, simple-network imports, finite study XML and study execution; their ceilings do not become universal model limits. |
 | Exports and shared types | Discover delivered public entry points and the structural types required by accepted calls | A documentation and compatibility responsibility, not a catch-all module. The reference root maps to `city-library`; future Storage and Node experiment subpaths still require explicit mapping decisions. Do not silently discard or rename target entry contracts. |
 
 Field and Edge remain visible reference categories even if implemented alongside their owning Grid and Graph. Do not split them into competing ownership systems merely to obtain a module per heading. Likewise, detached graph and grid capabilities may be stateful objects: independent use does not require converting every capability into stateless functions.

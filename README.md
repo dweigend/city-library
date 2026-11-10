@@ -10,7 +10,7 @@ Combine agents, space, networks and measurements in TypeScript. Use a graph on i
 
 TypeScript brings these studies to the web, with an ecosystem of useful game libraries.
 
-NetLogo inspires the scripting approach: a short script should be enough to get an idea running. Bits UI and shadcn-svelte inspire the modular approach: small building blocks with useful defaults and room to make something your own.
+A short script should be enough to get an idea running. Small, independent building blocks provide useful defaults and room to make something your own.
 
 Agent Loom provides the headless modeling core. Agent Lab adds browser controls and views; the same model also runs in a script. Applying its results to a real city still requires evidence.
 
