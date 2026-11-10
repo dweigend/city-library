@@ -21,7 +21,7 @@ The core and the shared UI are usable today, and the [models](models/README.md) 
 From the repository root, use Bun 1.4.2 and start Agent Lab:
 
 ```sh
-bun install --frozen-lockfile
+bun install
 bun run dev
 ```
 
