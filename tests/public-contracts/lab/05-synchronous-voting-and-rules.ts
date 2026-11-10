@@ -8,7 +8,7 @@ const captured = instance.read();
 instance.advance(1);
 assert.deepEqual(instance.read().cells.map(cell => cell.vote), Array<number>(9).fill(0));
 assert.equal(instance.read().tick, 1);
-assert.deepEqual(instance.read().history.map(point => [point.tick, point.zero, point.one]), [[0, 5, 4], [1, 9, 0]]);
+assert.deepEqual(instance.read().history.map(point => [point.tick, point.zeroVoteCount, point.oneVoteCount]), [[0, 5, 4], [1, 9, 0]]);
 assert.deepEqual(captured.cells.map(cell => cell.vote), votes);
 instance.advance(100);
 assert.equal(instance.read().tick, 1);
@@ -22,7 +22,7 @@ assert.equal(changed.read().tick, 0);
 assert.deepEqual(changed.read().randomState, random);
 changed.advance(1);
 assert.deepEqual(changed.read().cells.map(cell => cell.vote), votes.map(vote => 1 - vote));
-assert.equal(changed.read().counts.one, 5);
+assert.equal(changed.read().counts.oneVoteCount, 5);
 
 const close = model.create({ width: 3, height: 3, seed: 1, awardCloseCallsToLoser: true });
 close.setVotes(votes);

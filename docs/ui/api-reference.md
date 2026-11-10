@@ -139,7 +139,7 @@ Mixed diagrams containing rectangles or diamonds pick the topmost painted symbol
 Each row has a unique nonempty `id`, visible `label` and optional `color`, defaulting to `scientificPalette.neutral`. Its discriminant defines one fact:
 
 - `kind: "items"`, `items: readonly CollectionItem[]`, optional `order: "unordered" | "supplied"`. Items have globally unique `id`, optional `label`, `color` and existing `shape`. Placement preserves input order; omission makes no queue-order claim. Use a model-owned ordered snapshot for supplied order.
-- `kind: "count"`, `count`: a nonnegative safe integer, shown exactly without inventing selectable people.
+- `kind: "count"`, `itemCount`: a nonnegative safe integer, shown exactly without inventing selectable people.
 - `kind: "capacity"`, finite nonnegative `used` and `capacity`, and required nonempty `unit`: exact quantities and retained excess remain visible. Anonymous unit outlines or a symbolic frame never assign identified items to seats.
 
 Item colors override row colors. Empty rows stay named; `[]` returns a valid empty scene described as `No collections`. Every supplied identity is retained, including collections above 200. Count/capacity decorations have `selectable: false`; generated decoration IDs are checked for collisions with supplied IDs. Unknown fields, incompatible variants, accessors and unsupported enums throw `TypeError`; invalid ranges, duplicate IDs and derived overflow throw `RangeError`. Output changes cannot mutate input. Abstract diagram coordinates do not replace physical topology, Grid fields or elevator floors.

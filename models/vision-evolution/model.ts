@@ -1,12 +1,12 @@
 /** NetLogo Vision Evolution, Wilensky (2018), CC BY-NC-SA 3.0; see NOTICE.md. */
 import { Agent, Grid, Random, World, geometry, stats } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
-export const sourceMarker = "b08-vision-evolution-source-composition-v1";
+import { parseParameters, validateStepCount } from "../parameters.ts";
+
 export interface Parameters {
   seed: number;
-  initialNumberFish: number;
-  initialNumberFood: number;
+  initialFishCount: number;
+  initialFoodCount: number;
   energyGainFromFood: number;
   foodReplenishRate: number;
   mutationRate: number;
@@ -23,14 +23,14 @@ export const inputs: Inputs<Parameters> = {
     max: 4294967295,
     integer: true,
   },
-  initialNumberFish: {
+  initialFishCount: {
     kind: "number",
     default: 50,
     min: 0,
     max: 250,
     integer: true,
   },
-  initialNumberFood: {
+  initialFoodCount: {
     kind: "number",
     default: 80,
     min: 0,
@@ -96,7 +96,7 @@ export function weightedDistance(
   );
 }
 export function create(options: Partial<Parameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const space = {
     x: 101,
@@ -173,8 +173,8 @@ export function create(options: Partial<Parameters> = {}) {
     world.delete(world.agents);
     world.tick.reset();
     history.length = 0;
-    for (let n = 0; n < settings.initialNumberFood; n++) makeFood();
-    for (let n = 0; n < settings.initialNumberFish; n++) makeFish();
+    for (let n = 0; n < settings.initialFoodCount; n++) makeFood();
+    for (let n = 0; n < settings.initialFishCount; n++) makeFish();
     record();
   }
   function mutate(value: number, rate: number, lower: number, upper: number) {
@@ -298,12 +298,12 @@ export function create(options: Partial<Parameters> = {}) {
     });
     if (history.length > 1001) history.splice(1, 1);
   }
-  function advance(steps = 1) {
-    stepCount(steps);
-    for (let n = 0; n < steps; n++) {
+  function advance(stepCount = 1) {
+    validateStepCount(stepCount);
+    for (let n = 0; n < stepCount; n++) {
       if (!fish().length) break;
       for (const agent of random.sample(fish(), {
-        count: fish().length,
+        sampleCount: fish().length,
         algorithm: "fisher-yates-descending",
       })) {
         move(agent);
@@ -319,7 +319,7 @@ export function create(options: Partial<Parameters> = {}) {
   }
   function read() {
     return {
-      sourceMarker,
+
       parameters: { ...settings },
       randomState: random.state,
       width: 101,
@@ -366,7 +366,7 @@ export function create(options: Partial<Parameters> = {}) {
     };
   }
   function setParameters(change: Partial<Parameters>) {
-    settings = parameters(inputs, { ...settings, ...change });
+    settings = parseParameters(inputs, { ...settings, ...change });
   }
   setup();
   return {

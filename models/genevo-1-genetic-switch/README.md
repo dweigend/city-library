@@ -23,8 +23,8 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer |
-| `lacINumber` | `25` | integer; ≥ 1; ≤ 50 |
-| `rnapNumber` | `25` | integer; ≥ 0; ≤ 50 |
+| `lacICount` | `25` | integer; ≥ 1; ≤ 50 |
+| `rnapCount` | `25` | integer; ≥ 0; ≤ 50 |
 | `lactose` | `false` | boolean |
 | `glucose` | `true` | boolean |
 | `levelSpace` | `false` | boolean |

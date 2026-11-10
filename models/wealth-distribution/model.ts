@@ -6,11 +6,11 @@
  */
 import { Agent, Grid, Random, World, run, stats } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 
 export interface WealthParameters {
   seed: number;
-  people: number;
+  personCount: number;
   maxVision: number;
   metabolismMax: number;
   bestLand: number;
@@ -27,7 +27,7 @@ export const inputs: Inputs<WealthParameters> = {
     max: 4294967295,
     integer: true,
   },
-  people: { kind: "number", default: 250, min: 2, max: 1000, integer: true },
+  personCount: { kind: "number", default: 250, min: 2, max: 1000, integer: true },
   maxVision: { kind: "number", default: 5, min: 1, max: 15, integer: true },
   metabolismMax: {
     kind: "number",
@@ -81,7 +81,7 @@ export function harvestedWealth(
   return Math.floor(wealth + grain / occupants);
 }
 export function create(options: Partial<WealthParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   if (settings.minLife > settings.maxLife)
     throw new RangeError("Minimum life cannot exceed maximum life.");
   const random = Random.create({ seed: settings.seed });
@@ -115,7 +115,7 @@ export function create(options: Partial<WealthParameters> = {}) {
     person.vision = 1 + integer(settings.maxVision);
     person.age = integer(person.life);
   }
-  for (let i = 0; i < settings.people; i += 1) {
+  for (let i = 0; i < settings.personCount; i += 1) {
     const field = random.sample(fields)[0]!;
     const person = Agent.create(
       { age: 0, wealth: 0, life: 1, metabolism: 1, vision: 1 },
@@ -128,9 +128,9 @@ export function create(options: Partial<WealthParameters> = {}) {
   function measurement() {
     const wealths = people.map((person) => person.wealth);
     const maximum = Math.max(...wealths);
-    const classes = { low: 0, middle: 0, high: 0 };
+    const classes = { lowWealthPersonCount: 0, middleWealthPersonCount: 0, highWealthPersonCount: 0 };
     for (const person of people)
-      classes[wealthClass(person.wealth, maximum)] += 1;
+      classes[`${wealthClass(person.wealth, maximum)}WealthPersonCount` as const] += 1;
     const sorted = [...wealths].sort((a, b) => a - b);
     const totalWealth = sorted.reduce((sum, value) => sum + value, 0);
     let sum = 0;
@@ -151,9 +151,9 @@ export function create(options: Partial<WealthParameters> = {}) {
   }
   const history: {
     tick: number;
-    low: number;
-    middle: number;
-    high: number;
+    lowWealthPersonCount: number;
+    middleWealthPersonCount: number;
+    highWealthPersonCount: number;
     gini: number;
   }[] = [];
   function record() {
@@ -196,7 +196,7 @@ export function create(options: Partial<WealthParameters> = {}) {
       );
     }
     for (const person of people) grid.fieldAt(person)!.grain = 0;
-    for (const person of random.sample(people, { count: people.length })) {
+    for (const person of random.sample(people, { sampleCount: people.length })) {
       person.move(1);
       person.wealth -= person.metabolism;
       person.age += 1;
@@ -211,9 +211,9 @@ export function create(options: Partial<WealthParameters> = {}) {
   }
   record();
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i += 1) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i += 1) {
         run(world, rules);
         record();
       }
@@ -247,7 +247,7 @@ export function create(options: Partial<WealthParameters> = {}) {
         )
       )
         throw new TypeError("Unknown live rule.");
-      const next = parameters(inputs, { ...settings, ...rules });
+      const next = parseParameters(inputs, { ...settings, ...rules });
       if (next.minLife > next.maxLife)
         throw new RangeError("Minimum life cannot exceed maximum life.");
       settings = next;
@@ -260,7 +260,7 @@ export function create(options: Partial<WealthParameters> = {}) {
         width: 51,
         height: 51,
         parameters: settings,
-        peopleCount: people.length,
+        personCount: people.length,
         totalWealth: m.totalWealth,
         classes: Object.freeze(m.classes),
         gini: m.gini,

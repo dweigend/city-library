@@ -19,28 +19,28 @@ export function createRepeatedAction<M extends object>(options: {
     previous?.();
     if (previous) options.changed(false);
   }
-  function available(model: M | undefined): model is M {
+  function isAvailable(model: M | undefined): model is M {
     return model !== undefined && options.enabled(model);
   }
   return {
     get running() { return cancel !== undefined; },
     stop,
     sync() {
-      try { if (!available(options.current())) stop(); }
+      try { if (!isAvailable(options.current())) stop(); }
       catch (error) { stop(); throw error; }
     },
     start() {
       if (cancel) return;
       try {
         const owner = options.current();
-        if (!available(owner)) return;
+        if (!isAvailable(owner)) return;
         const token = ++generation;
         cancel = options.schedule(() => {
           if (token !== generation) return;
           try {
-            if (options.current() !== owner || !available(owner)) { stop(); return; }
+            if (options.current() !== owner || !isAvailable(owner)) { stop(); return; }
             options.perform(owner);
-            if (token === generation && (options.current() !== owner || !available(owner))) stop();
+            if (token === generation && (options.current() !== owner || !isAvailable(owner))) stop();
           } catch (error) { stop(); options.failed(error); }
         }, options.intervalMs);
         options.changed(true);

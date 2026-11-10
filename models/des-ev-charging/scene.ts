@@ -17,7 +17,7 @@ export function chargingScene(state: Observation<typeof model>): SpatialData {
     },
     {
       id: "chargers", label: "Charger capacity", kind: "capacity", color: scientificPalette.neutral,
-      used: state.active, capacity: state.parameters.chargers, unit: "vehicles",
+      used: state.activeVehicleCount, capacity: state.parameters.chargerCount, unit: "vehicles",
     },
     {
       id: "completed", label: "Completed vehicles", kind: "items", color: scientificPalette.completed,

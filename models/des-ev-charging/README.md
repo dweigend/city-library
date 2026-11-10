@@ -18,8 +18,8 @@ const observation = simulation.read();
 
 | Input | Default |
 | --- | --- |
-| `chargers` | `2` |
+| `chargerCount` | `2` |
 | `sessionMinutes` | `2` |
-| `vehicles` | `3` |
+| `vehicleCount` | `3` |
 
 [model.ts](model.ts) owns validation, actions and detached observations; [ui.ts](ui.ts) binds those public operations. The [scenario contract](../../docs/development/des-examples.md) defines assumptions, units and expected behavior. [Lab usage](../../ui/agent-lab/README.md) covers controls and model switching.

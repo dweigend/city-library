@@ -233,7 +233,7 @@ Detach registered components without deleting them. Missing unowned components a
 
 ```ts
 run<R>(world: World, step: (() => R) &
-  ([Extract<R, PromiseLike<unknown>>] extends [never] ? unknown : never), steps?: number): void
+  ([Extract<R, PromiseLike<unknown>>] extends [never] ? unknown : never), stepCount?: number): void
 ```
 
 Run synchronous model updates; steps defaults to 1. Each successful callback adds 1 to world.tick.value; failed callbacks retain prior effects and add no tick.
@@ -1107,10 +1107,10 @@ Return weak, strong or biconnected node components; biconnected analysis require
 <a id="graph-connected"></a>
 <a id="api-92"></a>
 
-### graph.connected
+### graph.isConnected
 
 ```ts
-graph.connected(options?: { mode?: "weak" | "strong" }): boolean
+graph.isConnected(options?: { mode?: "weak" | "strong" }): boolean
 ```
 
 Test connectivity in weak or strong mode without mutating the graph.
@@ -1198,7 +1198,7 @@ Return shortest-cost maps for all node sources; unreachable targets are omitted 
 
 ```ts
 graph.routes(options: {
-  from: N; to: N; limit: number; maxEdges?: number;
+  from: N; to: N; limit: number; maxEdgeCount?: number;
   cost?: (edge: Edge<N, E>) => number
 }): readonly Route<N, E>[]
 ```
@@ -1217,7 +1217,7 @@ graph.distanceSummary(options?: {
   cost?: (edge: Edge<N, E>) => number;
   disconnected?: "reachable" | "reject"
 }): { mean?: number; diameter?: number; radius?: number;
-       eccentricity: ReadonlyMap<N, number>; reachablePairs: number }
+       eccentricity: ReadonlyMap<N, number>; reachablePairCount: number }
 ```
 
 Summarize nonnegative shortest-path distances as mean, diameter, radius, eccentricity and reachable-pair count under explicit disconnected handling.
@@ -1231,12 +1231,12 @@ Summarize nonnegative shortest-path distances as mean, diameter, radius, eccentr
 
 ```ts
 graph.analyze(options: {
-  measure: "degree" | "closeness" | "betweenness" | "eigenvector" | "pageRank";
+  measure: "degree" | "closeness" | "betweenness" | "eigenvector" | "page-rank";
   direction?: "out" | "in" | "all"; normalized?: boolean;
   disconnected?: "reachable" | "discount";
   cost?: (edge: Edge<N, E>) => number;
   weight?: (edge: Edge<N, E>) => number;
-  damping?: number; tolerance?: number; maxIterations?: number
+  damping?: number; tolerance?: number; maxIterationCount?: number
 }): ReadonlyMap<N, number>
 ```
 
@@ -1279,10 +1279,10 @@ Return local and mean clustering plus transitivity for a simple undirected loop-
 
 ```ts
 graph.communities(options?: {
-  method?: "greedy" | "louvain" | "labelPropagation";
+  method?: "greedy" | "louvain" | "label-propagation";
   weight?: (edge: Edge<N, E>) => number;
   resolution?: number; random?: Random;
-  maxIterations?: number; tolerance?: number
+  maxIterationCount?: number; tolerance?: number
 }): readonly (readonly N[])[]
 ```
 
@@ -1426,7 +1426,7 @@ Return minimum spanning edges in stable Kruskal order; signed finite costs are a
 ```ts
 graph.flow(options: {
   from: N; to: N; capacity: (edge: Edge<N, E>) => number;
-  tolerance?: number; maxAugmentations?: number
+  tolerance?: number; maxAugmentationCount?: number
 }): { value: number; flowByEdge: ReadonlyMap<Edge<N, E>, number>;
        sourceSide: readonly N[]; sinkSide: readonly N[] }
 ```
@@ -1576,9 +1576,9 @@ type GeneratorOptions<N> =
       wrap?: boolean; directed?: boolean }
   | { kind: "random"; nodes: readonly N[]; probability: number;
       directed?: boolean; random: Random }
-  | { kind: "small-world"; nodes: readonly N[]; neighbors: number;
+  | { kind: "small-world"; nodes: readonly N[]; neighborCount: number;
       probability: number; random: Random }
-  | { kind: "preferential"; nodes: readonly N[]; links: number;
+  | { kind: "preferential"; nodes: readonly N[]; edgesPerNode: number;
       random: Random }
   | { kind: "geometric"; nodes: readonly N[];
       position: (node: N) => Position; radius: number; space?: Space }
@@ -1617,7 +1617,7 @@ type LayoutOptions<N> =
   | { kind: "circle"; radius?: number; center?: Position }
   | { kind: "radial"; root: N; spacing?: number; center?: Position }
   | { kind: "spring"; initial: ReadonlyMap<N, Position>;
-      iterations?: number; length?: number; step?: number }
+      iterationCount?: number; length?: number; step?: number }
   | { kind: "tutte"; boundary: readonly N[];
       positions: readonly Position[] }
 ```
@@ -2092,7 +2092,7 @@ Pinned-MT uniform draw using a finite signed bound; unsupported by Mulberry. Flo
 
 ```ts
 random.sample<T>(source: Iterable<T>, options?: {
-  count?: number; replace?: boolean; weight?: (value: T) => number;
+  sampleCount?: number; replace?: boolean; weight?: (value: T) => number;
   order?: "draw" | "source"; algorithm?: "fisher-yates-descending";
 }): T[]
 ```
@@ -2308,7 +2308,7 @@ Remove a property binding without changing its model value; absent bindings are 
 stats.describe(values: Iterable<number>, options?: { sample?: boolean }): Summary
 ```
 
-Return count, sum, extrema, mean, median, variance and standard deviation without changing input. Empty count/sum are zero; unavailable statistics are undefined.
+Return count, sum, extrema, mean, median, variance and standard deviation without changing input. Empty valueCount/sum are zero; unavailable statistics are undefined.
 
 [Details](api-reference.md#describe)
 
@@ -2357,13 +2357,13 @@ Return the magnitude of the mean heading unit vector in [0,1]. Empty input retur
 ### Summary
 
 ```ts
-type Summary = { readonly count:number; readonly sum:number;
+type Summary = { readonly valueCount:number; readonly sum:number;
   readonly min:number|undefined; readonly max:number|undefined;
   readonly mean:number|undefined; readonly median:number|undefined;
   readonly variance:number|undefined; readonly standardDeviation:number|undefined };
 ```
 
-Detached numeric summary; empty input has count/sum zero and unavailable extrema, averages and spread values undefined.
+Detached numeric summary; empty input has valueCount/sum zero and unavailable extrema, averages and spread values undefined.
 
 [Details](api-reference.md#complete-statistics)
 
@@ -2374,7 +2374,7 @@ Detached numeric summary; empty input has count/sum zero and unavailable extrema
 
 ```ts
 type Histogram = { readonly edges:readonly number[]; readonly counts:readonly number[];
-  readonly underflow:number; readonly overflow:number };
+  readonly underflowValueCount:number; readonly overflowValueCount:number };
 ```
 
 Detached bin edges and counts with explicit underflow and overflow totals.
@@ -2729,10 +2729,10 @@ Cancel this Agenda’s issued event handle; deleting an already absent event is 
 ### agenda.advance
 
 ```ts
-agenda.advance(options: { until: number; maxEvents?: number }): readonly Event<E>[]
+agenda.advance(options: { until: number; maxEventCount?: number }): readonly Event<E>[]
 ```
 
-Return detached due events in time/priority/sequence order; maxEvents defaults to 1000. If due events remain after the budget, stop agenda.time at the last dispatched time; otherwise advance it to until. Never advances World ticks.
+Return detached due events in time/priority/sequence order; maxEventCount defaults to 1000. If due events remain after the budget, stop agenda.time at the last dispatched time; otherwise advance it to until. Never advances World ticks.
 
 [Details](api-reference.md#agenda)
 
@@ -2784,7 +2784,7 @@ Detached scheduled event data with identity, time, priority and insertion sequen
 ### studies.design
 
 ```ts
-studies.design(input: { constants?: StudyParameters; axes: readonly StudyAxis[]; maxScenarios?: number }): readonly StudyScenario[]
+studies.design(input: { constants?: StudyParameters; axes: readonly StudyAxis[]; maxScenarioCount?: number }): readonly StudyScenario[]
 ```
 
 Expand a bounded Cartesian parameter design into ordered scenarios without running models or drawing randomness.
@@ -2797,7 +2797,7 @@ Expand a bounded Cartesian parameter design into ordered scenarios without runni
 ### studies.design
 
 ```ts
-studies.design<Parameters extends StudyParameters>(input: { defaults: Parameters; axes: readonly StudyAxisFor<Parameters>[]; maxScenarios?: number }): readonly StudyScenario<StudyParameterValues<Parameters>>[]
+studies.design<Parameters extends StudyParameters>(input: { defaults: Parameters; axes: readonly StudyAxisFor<Parameters>[]; maxScenarioCount?: number }): readonly StudyScenario<StudyParameterValues<Parameters>>[]
 ```
 
 Expand a bounded Cartesian parameter design into ordered scenarios without running models or drawing randomness.
@@ -2810,7 +2810,7 @@ Expand a bounded Cartesian parameter design into ordered scenarios without runni
 ### studies.replicate
 
 ```ts
-studies.replicate<Parameters>(scenarios: readonly StudyScenario<Parameters>[], seeds: readonly number[], options?: { maxRuns?: number }): readonly PlannedRun<Parameters>[]
+studies.replicate<Parameters>(scenarios: readonly StudyScenario<Parameters>[], seeds: readonly number[], options?: { maxRunCount?: number }): readonly PlannedRun<Parameters>[]
 ```
 
 Expand ordered scenarios over explicit seeds into a bounded whole-run plan without running models.
@@ -2936,11 +2936,11 @@ studies.resume<Parameters,Model extends StudyModel,Measurements>(checkpoint: Stu
   create(parameters:Parameters,seed:number,run:PlannedRun<Parameters>):Model;
   load(snapshot: WorldSnapshot<unknown> | BundleSnapshot<unknown>, run:PlannedRun<Parameters>):Model;
   measure(model:Model):Measurements;
-  sampleWhen?(model:Model,completedSteps:number):boolean;
-  stopWhen?(model:Model,completedSteps:number):boolean;
+  sampleWhen?(model:Model,completedStepCount:number):boolean;
+  stopWhen?(model:Model,completedStepCount:number):boolean;
   after?(result:StudyResult<Parameters,Measurements>):void;
   host?:{ advance(model:Model):void | "stopped" };
-  pause?:{ when(model:Model,completedSteps:number):boolean; save(model:Model):Snapshot<unknown,unknown> };
+  pause?:{ when(model:Model,completedStepCount:number):boolean; save(model:Model):Snapshot<unknown,unknown> };
 }): StudyResult<Parameters,Measurements> | StudyCheckpoint<Parameters,Measurements>
 ```
 
@@ -2957,8 +2957,8 @@ Continue a validated paused study after explicitly rebinding callbacks, preservi
 studies.run<Parameters extends StudyParameters,Measurements>(options: {
   plan: readonly PlannedRun<Parameters>[];
   executor: { moduleUrl: string; exportName: string; sha256: string; config?: NodeStudyConfig };
-  steps: number; every?: number; sampleInitial?: boolean; sampleFinal?: boolean;
-  provenance?: Readonly<Record<string,string>>; maxTotalSteps?: number; maxTotalSamples?: number;
+  stepCount: number; sampleIntervalSteps?: number; sampleInitial?: boolean; sampleFinal?: boolean;
+  provenance?: Readonly<Record<string,string>>; maxTotalStepCount?: number; maxTotalSampleCount?: number;
   timeoutMs: number; concurrency?: number; signal?: StudyCancellationSignal;
 }): Promise<NodeStudyResult<Parameters,Measurements>>
 ```
@@ -3003,20 +3003,20 @@ Either a parameter/seed Cartesian plan or an explicit ordered run plan; the two 
 ```ts
 type StudyOptions<Parameters,Model extends StudyModel,Measurements> = StudyPlan<Parameters> & {
   create(parameters: Parameters, seed: number, run: PlannedRun<Parameters>): Model;
-  readonly steps: number;
+  readonly stepCount: number;
   measure(model: Model): Measurements;
-  readonly every?: number;
+  readonly sampleIntervalSteps?: number;
   readonly sampleInitial?: boolean;
   readonly sampleFinal?: boolean;
-  sampleWhen?(model: Model, completedSteps: number): boolean;
-  stopWhen?(model: Model, completedSteps: number): boolean;
+  sampleWhen?(model: Model, completedStepCount: number): boolean;
+  stopWhen?(model: Model, completedStepCount: number): boolean;
   readonly onError?: "stop" | "continue";
   before?(plan: readonly PlannedRun<Parameters>[]):void;
   after?(result:StudyResult<Parameters,Measurements>):void;
-  readonly pause?: { when(model:Model,completedSteps:number):boolean; save(model:Model):Snapshot<unknown,unknown> };
+  readonly pause?: { when(model:Model,completedStepCount:number):boolean; save(model:Model):Snapshot<unknown,unknown> };
   readonly provenance?: Readonly<Record<string,string>>;
-  readonly maxTotalSteps?: number;
-  readonly maxTotalSamples?: number;
+  readonly maxTotalStepCount?: number;
+  readonly maxTotalSampleCount?: number;
   readonly host?: { advance(model: Model): void | "stopped" };
 };
 ```
@@ -3048,15 +3048,15 @@ Synchronous Node worker provider factory that turns validated transport configur
 interface StudyCheckpoint<Parameters,Measurements> {
   readonly framework: "agent-loom-study"; readonly version: 1; readonly kind: "paused";
   readonly plan: readonly PlannedRun<Parameters>[];
-  readonly policy: { readonly steps:number; readonly every:number; readonly sampleInitial:boolean;
+  readonly policy: { readonly stepCount:number; readonly sampleIntervalSteps:number; readonly sampleInitial:boolean;
     readonly sampleFinal:boolean; readonly onError:"stop"|"continue";
-    readonly maxTotalSteps:number; readonly maxTotalSamples:number;
+    readonly maxTotalStepCount:number; readonly maxTotalSampleCount:number;
     readonly provenance:Readonly<Record<string,string>> };
   readonly cursor: number;
   readonly outcomes: readonly StudyOutcome<Parameters,Measurements>[];
   readonly active: { readonly run:PlannedRun<Parameters>; readonly snapshot:unknown;
-    readonly completedSteps:number; readonly samples:readonly StudySample<Measurements>[] };
-  readonly consumedSteps:number; readonly consumedSamples:number;
+    readonly completedStepCount:number; readonly samples:readonly StudySample<Measurements>[] };
+  readonly consumedStepCount:number; readonly consumedSampleCount:number;
   readonly beforeCompleted:boolean; readonly afterCompleted:false;
 }
 ```
@@ -3212,10 +3212,10 @@ Per-run valid loss or explicit unavailable result with its failure information.
 ```ts
 export type CandidateScore<Parameters> = {
 	readonly candidate: StudyScenario<Parameters>;
-	readonly requested: number;
-	readonly valid: number;
-	readonly failed: number;
-	readonly sampleSd: number | null;
+	readonly requestedRunCount: number;
+	readonly validRunCount: number;
+	readonly failedRunCount: number;
+	readonly sampleStandardDeviation: number | null;
 	readonly losses: readonly CandidateLoss[];
 } & (
 	| {
@@ -3380,7 +3380,7 @@ export type NodeStudyOutcome<Parameters, Measurements> =
 			readonly run: PlannedRun<Parameters>;
 			readonly kind: "not-started";
 			readonly reason: "cancelled";
-			readonly completedSteps: 0;
+			readonly completedStepCount: 0;
 	  }
 	| {
 			readonly run: PlannedRun<Parameters>;
@@ -3391,7 +3391,7 @@ export type NodeStudyOutcome<Parameters, Measurements> =
 				| "cancelled"
 				| "worker-error"
 				| "protocol";
-			readonly completedSteps: null;
+			readonly completedStepCount: null;
 			readonly error: { readonly name: string; readonly message: string };
 	  };
 ```
@@ -3639,7 +3639,7 @@ Discriminated terminal status with its supported reason and error/cleanup fields
 ```ts
 export type StudyOutcome<Parameters, Measurements> = StudyTerminal & {
 	readonly run: PlannedRun<Parameters>;
-	readonly completedSteps: number;
+	readonly completedStepCount: number;
 	readonly samples: readonly StudySample<Measurements>[];
 };
 ```
@@ -3675,15 +3675,15 @@ Versioned ordered run outcomes, provenance and optional whole-study hook error.
 export interface ReplicationSummary {
 	readonly scenarioId: string;
 	readonly scenarioIndex: number;
-	readonly requested: number;
-	readonly completed: number;
-	readonly stopped: number;
-	readonly failed: number;
-	readonly skipped: number;
-	readonly valid: number;
-	readonly missing: number;
+	readonly requestedRunCount: number;
+	readonly completedRunCount: number;
+	readonly stoppedRunCount: number;
+	readonly failedRunCount: number;
+	readonly skippedRunCount: number;
+	readonly validRunCount: number;
+	readonly missingRunCount: number;
 	readonly mean: number | null;
-	readonly sampleSd: number | null;
+	readonly sampleStandardDeviation: number | null;
 	readonly values: readonly {
 		readonly runId: string;
 		readonly seed: number;
@@ -4297,11 +4297,11 @@ type WorldRecord = {
   tick: number; space: (Space & Required<Pick<Space, "dimensions" | "boundary">>) | null; random: Ref;
   components: readonly Ref[]; compatibility: null | {
     profile: "mt-word-stream/1"; agentOwn: readonly string[]; edgeOwn: readonly string[];
-    turtleBreeds: readonly { name: string; own: readonly string[] }[];
-    linkBreeds: readonly { name: string; direction: "directed" | "undirected"; own: readonly string[] }[];
-    turtleMembership: readonly (readonly [Ref,string,number])[];
-    linkMembership: readonly (readonly [Ref,string,number])[];
-    nextTurtleId: number; nextLinkId: number;
+    agentGroups: readonly { name: string; own: readonly string[] }[];
+    edgeGroups: readonly { name: string; direction: "directed" | "undirected"; own: readonly string[] }[];
+    agentMembership: readonly (readonly [Ref,string,number])[];
+    edgeMembership: readonly (readonly [Ref,string,number])[];
+    nextAgentId: number; nextEdgeId: number;
   };
 };
 ```
@@ -4584,8 +4584,8 @@ Read deeply frozen bounds for declarative Study XML parsing, studies, metrics an
 
 ```ts
 limits.study = {
-  axes: 32, parameters: 128, name: 128, string: 65536, scenarios: 10000,
-  runs: 10000, steps: 1000000, totalSteps: 10000000, totalSamples: 1000000
+  axisCount: 32, parameterCount: 128, nameLength: 128, stringLength: 65536, scenarioCount: 10000,
+  runCount: 10000, stepCount: 1000000, totalStepCount: 10000000, totalSampleCount: 1000000
 };
 ```
 

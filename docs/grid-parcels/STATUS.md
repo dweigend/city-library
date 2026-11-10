@@ -6,11 +6,13 @@ catalogue. Foundation evidence is recorded in [VERIFICATION](VERIFICATION.md);
 the finite quad extension has its own [contract](QUAD-LAYOUTS-CONTRACT.md) and
 [verification record](QUAD-LAYOUTS-VERIFICATION.md). The accepted
 [example-first plan](../development/example-first/PLAN.md) owns further stages.
+The linked quad contract is a frozen historical signature record. Current calls use `rings` → `ringCount`, `iterations` → `iterationCount`, `squareTarget` → `square-target` and `relaxationIterations` → `relaxationIterationCount`; keep the historical bytes unchanged and use the current API table below.
+
 The bounded capabilities below are implemented and included in the [integration pull request](https://github.com/dweigend/city-library/pull/48). The broader catalogue remains planned; package publication is outside this scope. Historical verification records describe their original checkpoints and do not determine current merge authorization.
 
 | Catalogue area | Bounded implementation | Explicit backlog |
 | --- | --- | --- |
-| Topology generation | `square`, `hex`, `fromPolygons`; finite `quadrilaterals({ rings, edgeLength?, random })`; separate `relax({ layout, method: "squareTarget", iterations })` for supported convex quads | `triangle`, `trihex`, `rectangles`, `voronoi`, arbitrary-boundary quadrilaterals, Lloyd relaxation, `validate`, dual mapping and chunks |
+| Topology generation | `square`, `hex`, `fromPolygons`; finite `quadrilaterals({ ringCount, edgeLength?, random })`; separate `relax({ layout, method: "square-target", iterationCount })` for supported convex quads | `triangle`, `trihex`, `rectangles`, `voronoi`, arbitrary-boundary quadrilaterals, Lloyd relaxation, `validate`, dual mapping and chunks |
 | Layout queries | `cells`, `polygon`, `neighbors`, `cellAt`, `sharedBoundary`; local numeric keys, edge adjacency and lowest-key ties | Wrapping layouts, persistent parcel IDs, topology mutation |
 | Geometry measurements | `area({shape})` for Polygon and the MultiPolygon variant; existing dataset `bounds` and existing `contains` retain their contracts | `validate`, `perimeter`, shape `bounds` overload, `orientedBounds`, `centroid`, `interiorPoint`, `minimumWidth`, `compactness`, object `contains` overload, `contact`, geometry `sharedBoundary`, `boundaryOverlap` |
 | Geometry changes | `merge({shapes})`, `merge({layout,cells})` for conforming connected simple unions; `split` for guarded convex infinite-line cuts | General Boolean merge, `intersection`, `subtract`, `clip`, `offset`, `corridor` |

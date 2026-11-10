@@ -23,8 +23,8 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer |
-| `numberOfMammoths` | `900` | integer; ≥ 0; ≤ 2000 |
-| `numberOfHumans` | `50` | integer; ≥ 0; ≤ 100 |
+| `mammothCount` | `900` | integer; ≥ 0; ≤ 2000 |
+| `humanCount` | `50` | integer; ≥ 0; ≤ 100 |
 | `mammothBirthRate` | `2` | number; ≥ 0; ≤ 10 |
 | `humanBirthRate` | `10` | number; ≥ 0; ≤ 20 |
 | `mammothSpeed` | `0.2` | number; ≥ 0; ≤ 1 |
@@ -36,9 +36,9 @@ const observation = simulation.read();
 
 Use `advance(...)` for progress and `read()` for observations; the model defines how work advances its tick.
 
-Other instance procedures: `setup`, `landAhead`, `move`, `reproduce`, `density`, `climateChange`, `mammothsAct`, `humansAct`, `dieNaturally`, `setParameters`. See their typed arguments in [model.ts](model.ts).
+Other instance procedures: `setup`, `hasLandAhead`, `move`, `reproduce`, `density`, `climateChange`, `mammothsAct`, `humansAct`, `dieNaturally`, `setParameters`. See their typed arguments in [model.ts](model.ts).
 
-Model-specific `read()` fields include `years`, `mammothsKilledByHumans`, `mammothsKilledByClimateChange`, `mammoths`, `humans`, `cells`.
+Model-specific `read()` fields include `years`, `mammothsKilledByHumans`, `mammothsKilledByClimateChange`, `mammothCount`, `humanCount`, `cells`.
 
 The [UI binding](ui.ts) presents `Months`, `Years`, `Mammoths`, `Humans`, `Hunting deaths`, `Climate deaths`, `Americas habitat`, `Populations`, `Cause of mammoth deaths`, `Resident`.
 
@@ -46,4 +46,4 @@ The [UI binding](ui.ts) presents `Months`, `Years`, `Mammoths`, `Humans`, `Hunti
 
 Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
 
-[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `mammoths` and links any shared checks.
+[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `mammothCount` and links any shared checks.

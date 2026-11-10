@@ -12,7 +12,7 @@ const continuation = mill.read().randomState; mill.setColorMode('when-heard');
 assert.deepEqual(mill.read().randomState, continuation); assert.equal(mill.read().tick, 1);
 mill.setParameters({ eightMode: true }); const oldHeard = mill.read().totalHeard, oldClique = mill.read().clique;
 mill.advance(); assert.equal(mill.read().totalHeard, oldHeard + oldClique);
-const game = signaling({ numberOfStates: 2, numberOfSignals: 3, printProbabilities: false });
+const game = signaling({ stateCount: 2, signalCount: 3, printProbabilities: false });
 assert.equal(game.read().probabilityOfSuccess, 0.5); assert.equal(game.read().successRate, null);
 for (let i=0;i<100;i++) {
   const before = game.read(); game.advance(); const after = game.read();

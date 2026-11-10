@@ -22,7 +22,7 @@ const observation = simulation.read();
 
 | Input | Default | Declared values |
 | --- | --- | --- |
-| `people` | `473` | integer; ≥ 0; ≤ 500 |
+| `personCount` | `473` | integer; ≥ 0; ≤ 500 |
 | `reserves` | `21` | number; ≥ 0; ≤ 100 |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
 
@@ -32,7 +32,7 @@ Use `advance(...)` for progress and `read()` for observations; the model defines
 
 Other instance procedures: `setup`, `depositToSavings`, `withdrawFromSavings`, `takeOutLoan`, `repayLoan`, `balanceBooks`, `bankBalanceSheet`, `pollClass`, `updateAppearance`, `doBusiness`, `setRules`, `setAccounts`. See their typed arguments in [model.ts](model.ts).
 
-Model-specific `read()` fields include `phase`, `bankDeposits`, `bankLoans`, `bankReserves`, `bankToLoan`, `rich`, `poor`, `middleClass`, `meanWealth`, `people`, `wealthHistogram`, `histogramRange`.
+Model-specific `read()` fields include `phase`, `bankDeposits`, `bankLoans`, `bankReserves`, `bankToLoan`, `rich`, `poor`, `middleClass`, `meanWealth`, `personCount`, `wealthHistogram`, `histogramRange`.
 
 The [UI binding](ui.ts) presents `Mean wealth`, `Tick`, `Next phase`, `Savings total`, `Wallets total`, `Loans total`, `Money total`, `Bank reserves`, `Bank to loan`, `Rich` and further views or controls.
 

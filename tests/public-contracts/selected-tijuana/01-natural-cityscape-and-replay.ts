@@ -28,7 +28,7 @@ for (const seed of [1, 2, 3, 4, 5]) {
   try {
     model.advanceCityscape();
     const first = model.read();
-    assert.equal(first.tick, 1); assert.equal(first.counts.serviceCenters, 3);
+    assert.equal(first.tick, 1); assert.equal(first.counts.serviceCenterCount, 3);
     assert.ok(first.cells.some(item => item.water === 2 && item.electricity === 3));
     assert.ok(first.cells.some(item => item.elevation < 9.9));
     assert.ok(first.agents.some(item => item.kind === "first-builder" || item.kind === "second-builder" || item.kind === "third-builder"));
@@ -36,9 +36,9 @@ for (const seed of [1, 2, 3, 4, 5]) {
       const batch = Math.min(25, 3000 - calls);
       model.advanceCityscape(batch); calls += batch;
       for (const point of model.read().history) {
-        sawJobs ||= point.counts.employmentCenters > 0;
+        sawJobs ||= point.counts.employmentCenterCount > 0;
         sawSeeds ||= point.seedMigrants > 0;
-        sawExpansion ||= point.counts.migrants > point.seedMigrants;
+        sawExpansion ||= point.counts.migrantCount > point.seedMigrants;
       }
     }
   } catch (error) {
@@ -52,7 +52,7 @@ for (const seed of [1, 2, 3, 4, 5]) {
   if (seed === 1) { firstSeedResult = semantic(model); firstSeedFailed = failure !== null; }
   if (state.setupDone) {
     assert.equal(state.tick, 0); assert.equal(state.globals.thirdPhase, "stop");
-    assert.ok(state.counts.employmentCenters > 0 && state.counts.migrants > 0);
+    assert.ok(state.counts.employmentCenterCount > 0 && state.counts.migrantCount > 0);
     assert.ok(sawJobs && sawSeeds && sawExpansion, "Successful generation must include jobs, seed expansion and economics.");
     assert.ok(state.agents.filter(item => item.kind === "migrant").every(item => item.size !== 0.65 && item.income >= item.livingExpenses));
     // Final setup precision does not introduce a global nonnegative clamp.

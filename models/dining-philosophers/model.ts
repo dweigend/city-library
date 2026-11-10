@@ -1,8 +1,8 @@
 /** Wilensky (2003), CC BY-NC-SA 3.0. Exact source and notices adjacent. */
 import { Agent, Random, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
-export type PhilosopherState = "THINKING" | "HUNGRY" | "EATING";
+import { parseParameters, validateStepCount } from "../parameters.ts";
+export type PhilosopherState = "thinking" | "hungry" | "eating";
 export interface Parameters {
   seed: number;
   philosopherCount: number;
@@ -30,14 +30,14 @@ export const inputs: Inputs<Parameters> = {
   cooperation: { kind: "boolean", default: false },
 };
 export function create(options: Partial<Parameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed }),
     world = World.create({ x: 1, y: 1, boundary: "hard" }, { random });
   const n = settings.philosopherCount;
   type Philosopher = Agent<{
     who: number;
     state: PhilosopherState;
-    totalEaten: number;
+    mealCount: number;
   }>;
   type Fork = Agent<{
     who: number;
@@ -55,7 +55,7 @@ export function create(options: Partial<Parameters> = {}) {
     philosophers.push(
       world.add(
         Agent.create(
-          { who: i, state: "THINKING" as PhilosopherState, totalEaten: 0 },
+          { who: i, state: "thinking" as PhilosopherState, mealCount: 0 },
           {
             position: { x: 0.35 * Math.sin(angle), y: 0.35 * Math.cos(angle) },
             orientation: { heading },
@@ -91,15 +91,15 @@ export function create(options: Partial<Parameters> = {}) {
   random.sample(forks)[0]!.marked = true;
   const history: {
     tick: number;
-    thinking: number;
-    hungry: number;
-    eating: number;
+    thinkingPhilosopherCount: number;
+    hungryPhilosopherCount: number;
+    eatingPhilosopherCount: number;
   }[] = [];
   function counts() {
     return {
-      thinking: philosophers.filter((p) => p.state === "THINKING").length,
-      hungry: philosophers.filter((p) => p.state === "HUNGRY").length,
-      eating: philosophers.filter((p) => p.state === "EATING").length,
+      thinkingPhilosopherCount: philosophers.filter((p) => p.state === "thinking").length,
+      hungryPhilosopherCount: philosophers.filter((p) => p.state === "hungry").length,
+      eatingPhilosopherCount: philosophers.filter((p) => p.state === "eating").length,
     };
   }
   function record() {
@@ -131,12 +131,12 @@ export function create(options: Partial<Parameters> = {}) {
     const p = philosopher(id),
       left = forks[id]!,
       right = forks[(id + n - 1) % n]!;
-    if (p.state === "THINKING") {
-      if (random.number() < settings.hungryChance) p.state = "HUNGRY";
+    if (p.state === "thinking") {
+      if (random.number() < settings.hungryChance) p.state = "hungry";
       return;
     }
-    if (p.state === "EATING") {
-      p.totalEaten++;
+    if (p.state === "eating") {
+      p.mealCount++;
       if (random.number() < settings.fullChance) {
         if (settings.cooperation) {
           if (left.marked) {
@@ -149,7 +149,7 @@ export function create(options: Partial<Parameters> = {}) {
         }
         release(left);
         release(right);
-        p.state = "THINKING";
+        p.state = "thinking";
       }
       return;
     }
@@ -163,7 +163,7 @@ export function create(options: Partial<Parameters> = {}) {
       (!settings.cooperation || !right.marked || left.owner === p)
     )
       acquire(p, right, false);
-    if (left.owner === p && right.owner === p) p.state = "EATING";
+    if (left.owner === p && right.owner === p) p.state = "eating";
   }
   function activate(id: number) {
     philosopher(id);
@@ -174,22 +174,22 @@ export function create(options: Partial<Parameters> = {}) {
   return {
     activate,
     counts,
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++)
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++)
         activate(random.sample(philosophers)[0]!.who);
     },
     setParameters(
       changes: Partial<Omit<Parameters, "seed" | "philosopherCount">>,
     ) {
-      parameters(inputs, changes);
+      parseParameters(inputs, changes);
       if (
         Reflect.ownKeys(changes).some(
           (k) => k === "seed" || k === "philosopherCount",
         )
       )
         throw new TypeError("Population and seed are setup-only.");
-      settings = parameters(inputs, { ...settings, ...changes });
+      settings = parseParameters(inputs, { ...settings, ...changes });
     },
     setScenario(s: {
       states: readonly PhilosopherState[];
@@ -201,7 +201,7 @@ export function create(options: Partial<Parameters> = {}) {
         s.states.length !== n ||
         s.owners.length !== n ||
         s.marked.length !== n ||
-        s.states.some((v) => !["THINKING", "HUNGRY", "EATING"].includes(v)) ||
+        s.states.some((v) => !["thinking", "hungry", "eating"].includes(v)) ||
         s.marked.some((v) => typeof v !== "boolean") ||
         s.marked.filter(Boolean).length !== 1
       )
@@ -222,14 +222,14 @@ export function create(options: Partial<Parameters> = {}) {
       if (
         s.states.some(
           (state, i) =>
-            state === "EATING" &&
+            state === "eating" &&
             (s.owners[i] !== i || s.owners[(i + n - 1) % n] !== i),
         )
       )
         throw new RangeError("Eating requires both forks.");
       if (
         s.states.some(
-          (state, i) => state === "THINKING" && s.owners.includes(i),
+          (state, i) => state === "thinking" && s.owners.includes(i),
         )
       )
         throw new RangeError("Thinking philosophers cannot own forks.");
@@ -241,7 +241,7 @@ export function create(options: Partial<Parameters> = {}) {
         throw new RangeError("Nonnegative integer food counters required.");
       philosophers.forEach((p, i) => {
         p.state = s.states[i]!;
-        if (s.totalEaten) p.totalEaten = s.totalEaten[i]!;
+        if (s.totalEaten) p.mealCount = s.totalEaten[i]!;
       });
       forks.forEach((f, i) => {
         release(f);
@@ -262,7 +262,7 @@ export function create(options: Partial<Parameters> = {}) {
             Object.freeze({
               id: p.who,
               state: p.state,
-              totalEaten: p.totalEaten,
+              mealCount: p.mealCount,
               x: p.x,
               y: p.y,
               heading: p.heading,

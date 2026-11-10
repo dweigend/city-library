@@ -1,14 +1,16 @@
 /** Validate the binding selection and render evidence-backed delivery progress. */
 import { createHash } from "node:crypto";
 import documentMappings from "../../docs/development/document-path-migration.json";
-import scriptMappings from "../../scripts/naming-path-mappings.json";
+import scriptMappings from "../../docs/development/naming-path-mappings.json";
 
-import namingIntegration from "../../scripts/main-naming-integration-receipt.json";
+import namingIntegration from "../../docs/development/main-naming-integration-receipt.json";
+import namingCompletion from "../../docs/development/naming-completion-receipt.json";
 
-const evidencePaths: Readonly<Record<string, string>> = { ...documentMappings.paths, ...scriptMappings.paths, ...Object.fromEntries(namingIntegration.records.map(record => [record.source, record.destination])) };
+const namingPaths: Readonly<Record<string, string>> = namingCompletion.paths;
+const evidencePaths: Readonly<Record<string, string>> = { ...documentMappings.paths, ...scriptMappings.paths, ...namingCompletion.paths, ...Object.fromEntries(namingIntegration.records.map(record => [record.source, record.destination])) };
 function resolveEvidencePath(path: string): string {
   const source = Object.keys(evidencePaths).sort((a, b) => b.length - a.length).find(source => path === source || path.startsWith(`${source}/`));
-  return source ? evidencePaths[source]! + path.slice(source.length) : path;
+  return source ? (namingPaths[evidencePaths[source]!] ?? evidencePaths[source]!) + path.slice(source.length) : path;
 }
 
 const root = "models/catalog";

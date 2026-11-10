@@ -7,7 +7,7 @@ export const ui = defineUI(model, {
     "height",
     "seed",
     "initialBulkConcentration",
-    "initialColumnsPopulated",
+    "initialPopulatedColumnCount",
   ],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/InterstitialDiffusion",

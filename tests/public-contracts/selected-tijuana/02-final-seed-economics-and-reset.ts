@@ -19,7 +19,7 @@ const before = model.read();
 const result = model.advanceCityscape();
 const state = model.read();
 assert.equal(result.status, "ready"); assert.equal(state.tick, 0); assert.equal(state.setupDone, true);
-assert.equal(state.globals.thirdPhase, "stop"); assert.equal(state.counts.migrants, 1);
+assert.equal(state.globals.thirdPhase, "stop"); assert.equal(state.counts.migrantCount, 1);
 const person = state.agents.find(item => item.kind === "migrant")!;
 assert.equal(person.size, 0.6);
 near(state.globals.maxCost, 2 + 3 + 2 + 27 + (10 / 30 + 5 / 25) + 8);

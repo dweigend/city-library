@@ -6,7 +6,7 @@ const origin = <T extends { readonly x: number; readonly y: number }>(cells: rea
 
 describe("Urban Suite Sprawl Effect public composition", () => {
   test("source patience and phase boundaries retain identity and move half a patch", () => {
-    const model = sprawl({ population: 1, smoothness: 1, maxAttraction: 15, seekerPatience: 1, waitBetweenSeeking: 5 });
+    const model = sprawl({ personCount: 1, smoothness: 1, maxAttraction: 15, seekerPatience: 1, waitBetweenSeeking: 5 });
     model.setAttractions(model.read().cells.map(() => 0));
     model.setAgents([{ kind: "seeker", x: 0, y: 0, heading: 0, patienceCounter: 1, stayCounter: 0 }]);
     const id = model.read().agents[0]!.id;
@@ -22,7 +22,7 @@ describe("Urban Suite Sprawl Effect public composition", () => {
     expect(state.tick).toBe(6);
   });
   test("house degradation is sequential and <= includes the cap", () => {
-    const model = sprawl({ maxAttraction: 0, smoothness: 1, population: 1 });
+    const model = sprawl({ maxAttraction: 0, smoothness: 1, personCount: 1 });
     model.setAgents([
       { kind: "house", x: 0, y: 0, heading: 0, patienceCounter: 0, stayCounter: 9 },
       { kind: "house", x: 0, y: 0, heading: 90, patienceCounter: 0, stayCounter: 9 },
@@ -34,8 +34,8 @@ describe("Urban Suite Sprawl Effect public composition", () => {
     model.advance(); expect(origin(model.read().cells).attraction).toBe(0);
   });
   test("integer attraction0 versus positive fraction consumes different target continuation", () => {
-    const a = sprawl({ population: 1, maxAttraction: 15, smoothness: 1 });
-    const b = sprawl({ population: 1, maxAttraction: 15, smoothness: 1 });
+    const a = sprawl({ personCount: 1, maxAttraction: 15, smoothness: 1 });
+    const b = sprawl({ personCount: 1, maxAttraction: 15, smoothness: 1 });
     a.setAttractions(a.read().cells.map(() => 0)); b.setAttractions(b.read().cells.map(() => 0.1));
     const fixture = [{ kind: "seeker" as const, x: 0, y: 0, heading: 0, patienceCounter: -1, stayCounter: 0 }];
     a.setAgents(fixture); b.setAgents(fixture);
@@ -46,7 +46,7 @@ describe("Urban Suite Sprawl Effect public composition", () => {
     expect(a.read().agents[0]!.patienceCounter).toBe(-1);
   });
   test("equal superior side probes choose left, source turn remains a bounded random angle", () => {
-    const model = sprawl({ population: 1, smoothness: 1, maxAttraction: 15, seekerSearchAngle: 90 });
+    const model = sprawl({ personCount: 1, smoothness: 1, maxAttraction: 15, seekerSearchAngle: 90 });
     model.setAttractions(model.read().cells.map(cell => cell.y === 0 && Math.abs(cell.x) === 1 ? 3 : 0));
     model.setAgents([{ kind: "seeker", x: 0, y: 0, heading: 0, patienceCounter: 1, stayCounter: 0 }]);
     model.advance(); const person = model.read().agents[0]!;
@@ -55,7 +55,7 @@ describe("Urban Suite Sprawl Effect public composition", () => {
     expect(person.patienceCounter).toBe(0);
   });
   test("live rules preserve cached threshold; invalid fixtures and pure reads are atomic", () => {
-    const model = sprawl({ population: 1, smoothness: 1 });
+    const model = sprawl({ personCount: 1, smoothness: 1 });
     model.setRules({ maxAttraction: 0 }); expect(model.read().buildThreshold).toBe(7);
     const before = model.read();
     expect(Object.isFrozen(before.agents[0])).toBe(true); expect(Object.isFrozen(before.cells[0])).toBe(true);
@@ -68,11 +68,11 @@ describe("Urban Suite Sprawl Effect public composition", () => {
 
 describe("Urban Suite Economic Disparity public composition", () => {
   test("zero candidate helper STOP still runs complete cumulative land impacts", () => {
-    const model = economic({ numberOfTests: 0, poorPerStep: 5, richPerStep: 5 });
+    const model = economic({ testCount: 0, poorPersonCountPerStep: 5, richPersonCountPerStep: 5 });
     model.setAgents([{ kind: "job", x: 0, y: 0, utility: 0 }]);
     model.setLand(model.read().cells.map(() => ({ price: 40, quality: 40 })));
     model.advance(); const state = model.read();
-    expect(state.counts).toEqual({ jobs: 1, rich: 5, poor: 5 }); expect(state.counter).toBe(10);
+    expect(state.counts).toEqual({ jobCount: 1, richPersonCount: 5, poorPersonCount: 5 }); expect(state.counter).toBe(10);
     expect(state.agents.every(person => person.x === 0 && person.y === 0 && person.utility === 0)).toBe(true);
     expect(origin(state.cells).price).toBeCloseTo(38.914033536687384, 12);
     expect(origin(state.cells).quality).toBe(origin(state.cells).price);
@@ -80,7 +80,7 @@ describe("Urban Suite Economic Disparity public composition", () => {
     expect(state.tick).toBe(1);
   });
   test("job cap removes one oldest even without births and refreshes offset cache", () => {
-    const model = economic({ poorPerStep: 0, richPerStep: 0, maxJobs: 5 });
+    const model = economic({ poorPersonCountPerStep: 0, richPersonCountPerStep: 0, maxJobCount: 5 });
     model.setAgents(Array.from({ length: 5 }, (_, i) => ({ kind: "job" as const, x: i * 10, y: 0, utility: 0 })));
     const before = model.read().agents.map(person => person.id);
     model.advance(); const state = model.read();
@@ -89,13 +89,13 @@ describe("Urban Suite Economic Disparity public composition", () => {
     expect(state.medianTravelDistance).toEqual({ rich: undefined, poor: undefined });
   });
   test("strict counter boundary creates only after crossing and resets remainder", () => {
-    const model = economic({ numberOfTests: 0, poorPerStep: 5, richPerStep: 5, residentsPerJob: 10, deathRate: 0 });
-    model.advance(); expect(model.read().counter).toBe(10); expect(model.read().counts.jobs).toBe(1);
-    model.advance(); expect(model.read().counter).toBe(0); expect(model.read().counts.jobs).toBe(2);
+    const model = economic({ testCount: 0, poorPersonCountPerStep: 5, richPersonCountPerStep: 5, residentsPerJob: 10, deathRate: 0 });
+    model.advance(); expect(model.read().counter).toBe(10); expect(model.read().counts.jobCount).toBe(1);
+    model.advance(); expect(model.read().counter).toBe(0); expect(model.read().counts.jobCount).toBe(2);
     expect(model.read().agents.find(person => person.kind === "job" && (person.x !== 0 || person.y !== 0))!.utility).toBe(0);
   });
   test("travel median is Agent weighted actual distance, independent of +.01 cache", () => {
-    const model = economic({ poorPerStep: 0, richPerStep: 0 });
+    const model = economic({ poorPersonCountPerStep: 0, richPersonCountPerStep: 0 });
     model.setAgents([
       { kind: "job", x: 0, y: 0, utility: 0 },
       { kind: "rich", x: 0, y: 0, utility: 0 }, { kind: "rich", x: 0, y: 0, utility: 0 },
@@ -154,13 +154,13 @@ test("default source mechanisms stay independent, replayable and conserve Sprawl
   expect(b.read()).toEqual(untouchedSprawl); expect(d.read()).toEqual(untouchedEconomic);
   for (let i = 0; i < 20; i++) { b.read(); b.advance(); d.read(); d.advance(); }
   expect(sprawlValues(a)).toEqual(sprawlValues(b)); expect(economicValues(c)).toEqual(economicValues(d));
-  expect(a.read().counts.seekers + a.read().counts.houses).toBe(200);
+  expect(a.read().counts.seekerCount + a.read().counts.houseCount).toBe(200);
   expect(c.read().cells.every(cell => cell.price === cell.quality && cell.price >= 1 && cell.price <= 100)).toBe(true);
   expect(a.read().cells.every(cell => Number.isFinite(cell.attraction) && cell.attraction >= 0)).toBe(true);
 });
 
 test("closed fixture arrays reject extra fields, sparse entries and getters before mutation", () => {
-  const a = sprawl({ population: 1, smoothness: 1 }), b = economic();
+  const a = sprawl({ personCount: 1, smoothness: 1 }), b = economic();
   const beforeA = a.read(), beforeB = b.read();
   const attractions = Object.assign(beforeA.cells.map(() => 0), { extra: 3 });
   const land = Object.assign(beforeB.cells.map(() => ({ price: 40, quality: 40 })), { extra: 3 });

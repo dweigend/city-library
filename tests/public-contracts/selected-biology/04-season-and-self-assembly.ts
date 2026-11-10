@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { create as autumn } from "../../../models/autumn/model.ts";
 import { create as membrane } from "../../../models/membrane-formation/model.ts";
 
-const tree = autumn({ seed: 1, numberOfLeaves: 12, startSugarMean: 50, startSugarStddev: 0, temperature: 5, rainIntensity: 0, windFactor: 0, sunIntensity: 0 });
+const tree = autumn({ seed: 1, leafCount: 12, startSugarMean: 50, startSugarStddev: 0, temperature: 5, rainIntensity: 0, windFactor: 0, sunIntensity: 0 });
 assert.equal(tree.read().leaves.length, 12);
 const initial = tree.read();
 assert.ok(initial.leaves.every(leaf => leaf.sugarLevel === 49 && leaf.anthocyanin === 1));

@@ -23,7 +23,7 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
-| `number` | `68` | integer; ≥ 3; ≤ 200 |
+| `personCount` | `68` | integer; ≥ 3; ≤ 200 |
 | `personalities` | `"mixed"` | `brave`, `cowardly`, `mixed` |
 
 ## Actions and observations

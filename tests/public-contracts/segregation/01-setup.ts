@@ -8,6 +8,6 @@ assert.equal(state.height, 51);
 assert.equal(state.tick, 0);
 assert.equal(state.parameters.density, 95);
 assert.equal(state.parameters.similarWanted, 30);
-assert.ok(state.counts.population > 0 && state.counts.population <= 2601);
+assert.ok(state.counts.personCount > 0 && state.counts.personCount <= 2601);
 assert.deepEqual(state.residents.map(({x,y,group,happy}) => ({x,y,group,happy})), b.read().residents.map(({x,y,group,happy}) => ({x,y,group,happy})));
 assert.deepEqual(state.randomState, b.read().randomState);

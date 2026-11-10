@@ -19,8 +19,8 @@ export const ui = defineUI(model, {
   actions: [{ label: "Hide agents", run: (m) => m.hideAgents() }],
   monitors: [
     { label: "Tick", value: (s) => s.tick },
-    { label: "Computed fields", value: (s) => s.computedFields },
-    { label: "Total iterations", value: (s) => s.iterations },
+    { label: "Computed fields", value: (s) => s.computedFieldCount },
+    { label: "Total iterations", value: (s) => s.iterationCount },
   ],
   views: [
     {

@@ -6,15 +6,15 @@ import { create as recycling } from "../../../models/urban-suite-recycling/model
 const a = awareness();
 assert.equal(a.read().cells.length, 37 * 38);
 assert.equal(a.read().people.length, 60);
-assert.equal(a.read().counts.centers, 20);
+assert.equal(a.read().counts.centerCount, 20);
 assert.equal(a.read().meanAwareness, 0);
 const p = pollution();
 assert.equal(p.read().cells.length, 71 * 63);
-assert.deepEqual(p.read().counts, { people: 30, trees: 0, powerPlants: 2 });
+assert.deepEqual(p.read().counts, { personCount: 30, treeCount: 0, powerPlantCount: 2 });
 assert.equal(p.read().totalPollution, 6);
 const r = recycling();
 assert.equal(r.read().cells.length, 35 * 35);
-assert.deepEqual(r.read().counts, { recyclers: 25, wastefuls: 25 });
+assert.deepEqual(r.read().counts, { recyclerCount: 25, wastefulPersonCount: 25 });
 assert.ok(r.read().people.every((person) => person.energy === 25));
 assert.equal(r.read().landPercentages.new, 100);
 

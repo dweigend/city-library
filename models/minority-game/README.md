@@ -23,7 +23,7 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
-| `number` | `501` | integer; ≥ 1; ≤ 1501 |
+| `playerCount` | `501` | integer; ≥ 1; ≤ 1501 |
 | `memory` | `6` | integer; ≥ 1; ≤ 12 |
 | `strategiesPerAgent` | `5` | integer; ≥ 1; ≤ 10 |
 | `colorBy` | `"success"` | `choice`, `success` |

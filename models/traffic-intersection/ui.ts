@@ -57,9 +57,8 @@ const binding = defineUI(model, {
 });
 
 export { model };
-export const sourceMarker =
-  "selected-transport-b04:traffic-intersection:231db7a8ab42c4bb097f57fbde6520b6b1c64d6c39d3e96c2c3d57e6aaa4b5c9";
-export const ui = { ...binding, model, sourceMarker };
+
+export const ui = { ...binding, model };
 
 type UIObservation = Observation<typeof model>;
 
@@ -69,7 +68,7 @@ function waitingCarsSeries(state: UIObservation): readonly Series[] {
       label: "Overall",
       points: state.history.map((point) => ({
         x: point.tick,
-        y: point.waiting,
+        y: point.waitingCarCount,
       })),
     },
     {
@@ -77,7 +76,7 @@ function waitingCarsSeries(state: UIObservation): readonly Series[] {
       color: "#dc3434",
       points: state.history.map((point) => ({
         x: point.tick,
-        y: point.waitingNorth,
+        y: point.waitingNorthCarCount,
       })),
     },
     {
@@ -85,7 +84,7 @@ function waitingCarsSeries(state: UIObservation): readonly Series[] {
       color: "#345bd6",
       points: state.history.map((point) => ({
         x: point.tick,
-        y: point.waitingEast,
+        y: point.waitingEastCarCount,
       })),
     },
   ];

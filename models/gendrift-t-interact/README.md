@@ -23,8 +23,8 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
-| `number` | `300` | integer; ≥ 1; ≤ 1000 |
-| `colors` | `5` | integer; ≥ 2; ≤ 10 |
+| `agentCount` | `300` | integer; ≥ 1; ≤ 1000 |
+| `colorCount` | `5` | integer; ≥ 2; ≤ 10 |
 
 ## Actions and observations
 

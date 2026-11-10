@@ -2,7 +2,7 @@
 import { Grid, Random, World, geometry, run } from "city-library";
 import type { Field } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 
 export interface FurParameters {
   seed: number;
@@ -24,7 +24,7 @@ export const inputs: Inputs<FurParameters> = {
 };
 type Pigment = Field<{ white: boolean; newWhite: boolean }>;
 export function create(options: Partial<FurParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const space = { x: 61, y: 61, boundary: "wrap" } as const;
   const world = World.create(space, { random });
@@ -72,7 +72,7 @@ export function create(options: Partial<FurParameters> = {}) {
 
   function restart() {
     for (const field of random.sample(grid.fields, {
-      count: grid.fields.length,
+      sampleCount: grid.fields.length,
       algorithm: "fisher-yates-descending",
     })) {
       field.white = random.number() * 100 < settings.initialDensity;
@@ -124,9 +124,9 @@ export function create(options: Partial<FurParameters> = {}) {
     for (const field of grid.fields) pickNewColor(field);
     for (const field of grid.fields) field.white = field.newWhite;
   }
-  function advance(count = 1) {
-    stepCount(count);
-    for (let index = 0; index < count; index++) run(world, go);
+  function advance(stepCount = 1) {
+    validateStepCount(stepCount);
+    for (let index = 0; index < stepCount; index++) run(world, go);
   }
   function setParameters(
     update: Partial<Pick<FurParameters, "initialDensity" | "ratio">>,
@@ -137,7 +137,7 @@ export function create(options: Partial<FurParameters> = {}) {
       )
     )
       throw new TypeError("Only ratio and restart density may change live.");
-    settings = parameters(inputs, { ...settings, ...update });
+    settings = parseParameters(inputs, { ...settings, ...update });
   }
   function read() {
     return {

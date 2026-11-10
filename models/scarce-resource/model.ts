@@ -1,14 +1,14 @@
 import { Agent } from "city-library";
 import type { Definition } from "../definition.ts";
-import { stepCount } from "../parameters.ts";
+import { validateStepCount } from "../parameters.ts";
 
 export type Allocation = ReturnType<typeof createAllocation>;
 export type Applicant = Allocation["alice"];
 
 export function createAllocation() {
-  const inventory = Agent.create({ quantity: 1 });
-  const alice = Agent.create({ name: "A", received: 0, eligible: true });
-  const bob = Agent.create({ name: "B", received: 0, eligible: true });
+  const inventory = Agent.create({ unitCount: 1 });
+  const alice = Agent.create({ name: "A", receivedUnitCount: 0, eligible: true });
+  const bob = Agent.create({ name: "B", receivedUnitCount: 0, eligible: true });
 
   return { inventory, alice, bob };
 }
@@ -20,23 +20,23 @@ export function chooseApplicant(priority: readonly Applicant[]) {
 export function transferOne(model: Allocation, applicant: Applicant | undefined) {
   if (applicant === undefined || !applicant.eligible) return false;
   if (applicant !== model.alice && applicant !== model.bob) return false;
-  if (applicant.received !== 0 || model.inventory.quantity < 1) return false;
+  if (applicant.receivedUnitCount !== 0 || model.inventory.unitCount < 1) return false;
 
   // No asynchronous work or callbacks occur between validation and application.
-  model.inventory.quantity -= 1;
-  applicant.received += 1;
+  model.inventory.unitCount -= 1;
+  applicant.receivedUnitCount += 1;
 
   return true;
 }
 
 export function observe(model: Allocation) {
-  const received = model.alice.received + model.bob.received;
+  const received = model.alice.receivedUnitCount + model.bob.receivedUnitCount;
 
   return {
-    inventory: model.inventory.quantity,
-    alice: model.alice.received,
-    bob: model.bob.received,
-    unmet: 2 - received,
+    inventoryUnitCount: model.inventory.unitCount,
+    aliceReceivedUnitCount: model.alice.receivedUnitCount,
+    bobReceivedUnitCount: model.bob.receivedUnitCount,
+    unmetUnitCount: 2 - received,
   };
 }
 
@@ -45,7 +45,7 @@ export function create() {
   return {
     allocate(user: "A" | "B") { return transferOne(state, user === "A" ? state.alice : state.bob); },
     // Allocation requires an explicit applicant; playback must not invent a priority.
-    advance(count = 1) { stepCount(count); },
+    advance(stepCount = 1) { validateStepCount(stepCount); },
     read() { return observe(state); },
   };
 }

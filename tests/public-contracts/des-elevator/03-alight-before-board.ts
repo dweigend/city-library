@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { create } from "../../../models/des-elevator/model.ts";
 
-const elevator = create({ floors: 3, elevators: 1, capacity: 1, travelTime: 1, doorTime: 1, transferTime: 1, initialPassengers: 0 });
+const elevator = create({ floorCount: 3, elevatorCount: 1, capacity: 1, travelTimeSeconds: 1, doorTimeSeconds: 1, transferTimeSeconds: 1, initialPassengerCount: 0 });
 elevator.addPassenger(0, 1);
 elevator.addPassenger(1, 2);
 elevator.addPassenger(1, 0);
@@ -16,5 +16,5 @@ assert.deepEqual(elevator.read().floorQueues.find(queue => queue.floor === 1 && 
 elevator.advance(12);
 assert.deepEqual(elevator.read().passengers.map(passenger => passenger.boarded), [2, 7, 15]);
 assert.deepEqual(elevator.read().passengers.map(passenger => passenger.arrived), [6, 11, 19]);
-assert.equal(elevator.read().arrived, 3);
-assert.equal(elevator.read().riding, 0);
+assert.equal(elevator.read().arrivedPassengerCount, 3);
+assert.equal(elevator.read().ridingPassengerCount, 0);

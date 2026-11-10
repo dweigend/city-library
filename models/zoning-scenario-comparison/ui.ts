@@ -4,8 +4,8 @@ import { model } from "./model.ts";
 export const ui = defineUI(model, {
   complete: state => state.done,
   monitors: [
-    { label: "Study runs", value: state => state.completedRuns },
-    { label: "Planned runs", value: state => state.plannedRuns },
+    { label: "Study runs", value: state => state.completedRunCount },
+    { label: "Planned runs", value: state => state.plannedRunCount },
   ],
   views: [
     { type: "spatial", label: "Six density runs · colored block = dwelling slot (aggregate schematic)", data: zoningData },
@@ -15,7 +15,7 @@ export const ui = defineUI(model, {
       yAxis: { label: "Dwelling slots" },
       series: state => [{
         label: "Slots",
-        points: state.outcomes.map((outcome, index) => ({ x: `Run ${index + 1}`, y: outcome.slots })),
+        points: state.outcomes.map((outcome, index) => ({ x: `Run ${index + 1}`, y: outcome.slotCount })),
       }],
     },
     {
@@ -24,7 +24,7 @@ export const ui = defineUI(model, {
       rows: state => state.summaries.map(summary => ({
         scenario: summary.scenario,
         mean: typeof summary.mean === "number" ? summary.mean.toFixed(2) : summary.mean,
-        sampleSd: typeof summary.sampleSd === "number" ? summary.sampleSd.toFixed(2) : summary.sampleSd,
+        sampleStandardDeviation: typeof summary.sampleStandardDeviation === "number" ? summary.sampleStandardDeviation.toFixed(2) : summary.sampleStandardDeviation,
       })),
     },
   ],
@@ -39,7 +39,7 @@ export function zoningData(state: ZoningObservation): SpatialData {
   // six captions still need two readable columns beside their capacity stacks.
   const minimumPanelWidth = panelHeight * PANEL_ROWS / PANEL_COLUMNS;
   const panelWidth = Math.max(
-    state.parameters.parcels * PARCEL_SPACING + PANEL_HORIZONTAL_PADDING,
+    state.parameters.parcelCount * PARCEL_SPACING + PANEL_HORIZONTAL_PADDING,
     minimumPanelWidth,
   );
   const width = panelWidth * PANEL_COLUMNS;
@@ -59,11 +59,11 @@ export function zoningData(state: ZoningObservation): SpatialData {
       // Keep the full pending caption inside its panel at narrow viewports.
       x: panelLeft,
       y: panelTop - CAPTION_INSET,
-      label: `Run ${run + 1} · cap ${cap}${outcome ? ` · ${outcome.slots}` : " · pending"}`,
+      label: `Run ${run + 1} · cap ${cap}${outcome ? ` · ${outcome.slotCount}` : " · pending"}`,
       size: 2,
       color: CAPTION_COLOR,
     });
-    for (let parcel = 0; parcel < state.parameters.parcels; parcel += 1) {
+    for (let parcel = 0; parcel < state.parameters.parcelCount; parcel += 1) {
       cells.push({
         id: `view:parcel:${run}:${parcel}`,
         x: left + parcel * PARCEL_SPACING,
@@ -72,7 +72,7 @@ export function zoningData(state: ZoningObservation): SpatialData {
       });
       // Every successful parcel contributes cap slots. This count groups aggregate
       // capacity into a schematic, without identifying the original buildable parcels.
-      if (!outcome || parcel >= outcome.slots / cap) continue;
+      if (!outcome || parcel >= outcome.slotCount / cap) continue;
       for (let floor = 0; floor < cap; floor += 1) {
         cells.push({
           id: `view:slot:${run}:${parcel}:${floor}`,

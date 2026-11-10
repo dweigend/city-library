@@ -6,7 +6,7 @@
  */
 import { Agent, Grid, Random, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 
 export interface SegregationParameters {
   width: number;
@@ -30,20 +30,20 @@ export interface ResidentInput {
 type Resident = Agent<{
   group: ResidentInput["group"];
   happy: boolean;
-  similarNearby: number;
-  otherNearby: number;
-  totalNearby: number;
+  similarNeighborCount: number;
+  otherNeighborCount: number;
+  neighborCount: number;
 }>;
 interface Measurement {
   readonly tick: number;
-  readonly population: number;
-  readonly unhappy: number;
+  readonly personCount: number;
+  readonly unhappyPersonCount: number;
   readonly percentSimilar: number;
   readonly percentUnhappy: number;
 }
 
 export function create(options: Partial<SegregationParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const space = { x: settings.width, y: settings.height, boundary: "wrap" as const };
   const world = World.create(space, { random });
@@ -59,20 +59,20 @@ export function create(options: Partial<SegregationParameters> = {}) {
     world.add(Agent.create({
       group: input.group,
       happy: true,
-      similarNearby: 0,
-      otherNearby: 0,
-      totalNearby: 0,
+      similarNeighborCount: 0,
+      otherNeighborCount: 0,
+      neighborCount: 0,
     }, { position: { x: input.x, y: input.y }, orientation: { heading } }));
   }
   function updateResidents() {
     const population = residents();
     // Detached, phase-local group counts are an observation of canonical positions.
     // They are rebuilt after movement; they never own or update occupancy.
-    const groups = new Map<typeof fields[number], { blue: number; orange: number }>();
+    const groups = new Map<typeof fields[number], { bluePersonCount: number; orangePersonCount: number }>();
     for (const resident of population) {
       const field = grid.fieldAt(resident)!;
-      const count = groups.get(field) ?? { blue: 0, orange: 0 };
-      count[resident.group] += 1;
+      const count = groups.get(field) ?? { bluePersonCount: 0, orangePersonCount: 0 };
+      count[resident.group === "blue" ? "bluePersonCount" : "orangePersonCount"] += 1;
       groups.set(field, count);
     }
     for (const resident of population) {
@@ -80,25 +80,25 @@ export function create(options: Partial<SegregationParameters> = {}) {
       let orange = 0;
       for (const neighbor of grid.neighbors(grid.fieldAt(resident)!)) {
         const count = groups.get(neighbor);
-        if (count) { blue += count.blue; orange += count.orange; }
+        if (count) { blue += count.bluePersonCount; orange += count.orangePersonCount; }
       }
-      resident.similarNearby = resident.group === "blue" ? blue : orange;
-      resident.otherNearby = resident.group === "blue" ? orange : blue;
-      resident.totalNearby = blue + orange;
-      resident.happy = resident.similarNearby >= settings.similarWanted * resident.totalNearby / 100;
+      resident.similarNeighborCount = resident.group === "blue" ? blue : orange;
+      resident.otherNeighborCount = resident.group === "blue" ? orange : blue;
+      resident.neighborCount = blue + orange;
+      resident.happy = resident.similarNeighborCount >= settings.similarWanted * resident.neighborCount / 100;
     }
   }
   function measure(): Measurement {
     const population = residents();
-    const unhappy = population.filter((resident) => !resident.happy).length;
-    const similar = population.reduce((sum, resident) => sum + resident.similarNearby, 0);
-    const total = population.reduce((sum, resident) => sum + resident.totalNearby, 0);
+    const unhappyPersonCount = population.filter((resident) => !resident.happy).length;
+    const similar = population.reduce((sum, resident) => sum + resident.similarNeighborCount, 0);
+    const total = population.reduce((sum, resident) => sum + resident.neighborCount, 0);
     return {
       tick: world.tick.value,
-      population: population.length,
-      unhappy,
+      personCount: population.length,
+      unhappyPersonCount: unhappyPersonCount,
       percentSimilar: total === 0 ? 0 : 100 * similar / total,
-      percentUnhappy: population.length === 0 ? 0 : 100 * unhappy / population.length,
+      percentUnhappy: population.length === 0 ? 0 : 100 * unhappyPersonCount / population.length,
     };
   }
   function record() {
@@ -131,13 +131,13 @@ export function create(options: Partial<SegregationParameters> = {}) {
   function moveUnhappyResidents() {
     const population = residents();
     const unhappy = population.filter((resident) => !resident.happy);
-    for (const resident of random.sample(unhappy, { count: unhappy.length })) {
+    for (const resident of random.sample(unhappy, { sampleCount: unhappy.length })) {
       findNewSpot(resident);
     }
     updateResidents();
   }
 
-  for (const field of random.sample(fields, { count: fields.length })) {
+  for (const field of random.sample(fields, { sampleCount: fields.length })) {
     if (Math.floor(random.number() * 100) < settings.density) {
       const group = random.number() < 0.5 ? "blue" : "orange";
       addResident({ x: field.x, y: field.y, group }, Math.floor(random.number() * 360));
@@ -147,9 +147,9 @@ export function create(options: Partial<SegregationParameters> = {}) {
   record();
 
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let index = 0; index < count; index += 1) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let index = 0; index < stepCount; index += 1) {
         if (stopReason()) break;
         run(world, moveUnhappyResidents);
         record();
@@ -162,7 +162,7 @@ export function create(options: Partial<SegregationParameters> = {}) {
           !("value" in Object.getOwnPropertyDescriptor(rules, key)!))) {
         throw new TypeError("Supply only a similarWanted data property.");
       }
-      const next = parameters(inputs, { ...settings, ...rules });
+      const next = parseParameters(inputs, { ...settings, ...rules });
       settings = next;
       updateResidents();
       record();
@@ -201,10 +201,10 @@ export function create(options: Partial<SegregationParameters> = {}) {
         parameters: settings,
         residents: Object.freeze(residents().map((resident) => Object.freeze({
           id: resident.id, x: resident.x, y: resident.y, group: resident.group,
-          happy: resident.happy, similarNearby: resident.similarNearby,
-          otherNearby: resident.otherNearby, totalNearby: resident.totalNearby,
+          happy: resident.happy, similarNeighborCount: resident.similarNeighborCount,
+          otherNeighborCount: resident.otherNeighborCount, neighborCount: resident.neighborCount,
         }))),
-        counts: Object.freeze({ population: measurement.population, unhappy: measurement.unhappy }),
+        counts: Object.freeze({ personCount: measurement.personCount, unhappyPersonCount: measurement.unhappyPersonCount }),
         percentSimilar: measurement.percentSimilar,
         percentUnhappy: measurement.percentUnhappy,
         done: reason !== null,

@@ -35,8 +35,8 @@ export const ui = defineUI(model, {
   },
   monitors: [
     { label: "Tick", value: (s) => s.tick },
-    { label: "Firing", value: (s) => s.counts.firing },
-    { label: "Refractory", value: (s) => s.counts.refractory },
+    { label: "Firing", value: (s) => s.counts.firingFieldCount },
+    { label: "Refractory", value: (s) => s.counts.refractoryFieldCount },
   ],
   views: [
     {

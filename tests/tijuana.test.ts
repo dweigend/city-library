@@ -63,7 +63,7 @@ describe("Tijuana source boundaries and canonical observations", () => {
     model.advanceCityscape();
     const state = model.read();
     // fd1 reaches85; the subsequent patch-ahead2 is outside and the builder dies.
-    expect(state.counts.firstBuilders).toBe(0);
+    expect(state.counts.firstBuilderCount).toBe(0);
     expect(state.traces.map((t) => [t.from.x, t.to.x])).toEqual([[84, 85]]);
     expect(
       state.traces.every(
@@ -83,7 +83,7 @@ describe("Tijuana source boundaries and canonical observations", () => {
       }),
     );
     model.advanceCityscape();
-    expect(model.read().counts.firstBuilders).toBe(0);
+    expect(model.read().counts.firstBuilderCount).toBe(0);
     expect(model.read().traces).toHaveLength(0);
   });
 
@@ -100,8 +100,8 @@ describe("Tijuana source boundaries and canonical observations", () => {
       }),
     );
     model.advanceCityscape();
-    expect(model.read().counts.firstBuilders).toBe(1);
-    expect(model.read().counts.secondBuilders).toBe(0);
+    expect(model.read().counts.firstBuilderCount).toBe(1);
+    expect(model.read().counts.secondBuilderCount).toBe(0);
     model.addNode({ x: 10, y: 10 });
     // Ordinals0/service and2/first were injected; both dead second births3,4 still count.
     expect(
@@ -129,8 +129,8 @@ describe("Tijuana source boundaries and canonical observations", () => {
     );
     model.advanceCityscape();
     const state = model.read();
-    expect(state.counts.secondBuilders).toBe(1);
-    expect(state.counts.thirdBuilders).toBe(2);
+    expect(state.counts.secondBuilderCount).toBe(1);
+    expect(state.counts.thirdBuilderCount).toBe(2);
     expect(
       state.agents
         .filter((a) => a.kind === "third-builder")
@@ -207,7 +207,7 @@ describe("Tijuana source boundaries and canonical observations", () => {
     expect(state.cells.filter((f) => f.elevation === 8)).toHaveLength(1);
     expect(state.tick).toBe(1);
     expect(state.randomState.continuation.gaussian).toBeNull();
-    expect(state.counts.serviceCenters).toBe(0);
+    expect(state.counts.serviceCenterCount).toBe(0);
     expect(state.history).toHaveLength(0);
   });
 
@@ -397,7 +397,7 @@ describe("Tijuana source boundaries and canonical observations", () => {
         alive: false,
       });
     errorCode(() => model.advance(), "invalid-source-reference");
-    expect(model.read().counts.migrants).toBe(2);
+    expect(model.read().counts.migrantCount).toBe(2);
     expect(model.read().tick).toBe(2);
     expect(model.read().history).toHaveLength(1);
     expect(model.read().lastFailure!.code).toBe("invalid-source-reference");
@@ -410,7 +410,7 @@ describe("Tijuana source boundaries and canonical observations", () => {
     errorCode(() => a.advance(), "empty-max");
     const failed = semantic(a),
       untouched = semantic(b);
-    expect(a.advance(0)).toEqual({ status: "noop", completed: 0 });
+    expect(a.advance(0)).toEqual({ status: "noop", completedStepCount: 0 });
     expect(a.advanceCityscape().status).toBe("guarded");
     expect(semantic(a)).toEqual(failed);
     a.setRules({ cityGrowth: true });

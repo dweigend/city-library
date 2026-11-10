@@ -2,7 +2,7 @@ import { defineUI, type Observation, type SpatialData } from "../../ui/index.ts"
 
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: ["seed", "population"],
+  setup: ["seed", "antCount"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/Ants",
     label: "Source attribution · Wilensky · CC BY-NC-SA 3.0",

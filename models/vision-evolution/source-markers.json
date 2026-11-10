@@ -1,0 +1,21 @@
+{
+  "model": "vision-evolution",
+  "markers": [
+    {
+      "sourceMarker": "b08-vision-evolution-source-composition-v1",
+      "originalLocations": [
+        {
+          "path": "models/vision-evolution/model.ts",
+          "line": 5,
+          "kind": "model-export"
+        },
+        {
+          "path": "models/vision-evolution/model.ts",
+          "line": 322,
+          "kind": "observation-shorthand",
+          "reference": "sourceMarker"
+        }
+      ]
+    }
+  ]
+}

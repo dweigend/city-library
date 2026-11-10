@@ -1,11 +1,11 @@
 /** NetLogo Galton Box, Uri Wilensky (2002), CC BY-NC-SA 3.0. Full notices: NOTICE.md. */
 import { Agent, Grid, Random, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface Parameters {
   seed: number;
-  numberOfRows: number;
-  numberOfBalls: number;
+  rowCount: number;
+  ballCount: number;
   chanceOfBouncingRight: number;
   pileUp: boolean;
 }
@@ -17,8 +17,8 @@ export const inputs: Inputs<Parameters> = {
     max: 4294967295,
     integer: true,
   },
-  numberOfRows: { kind: "number", default: 11, min: 1, max: 15, integer: true },
-  numberOfBalls: {
+  rowCount: { kind: "number", default: 11, min: 1, max: 15, integer: true },
+  ballCount: {
     kind: "number",
     default: 75,
     min: 1,
@@ -35,7 +35,7 @@ export const inputs: Inputs<Parameters> = {
   pileUp: { kind: "boolean", default: true },
 };
 export function create(options: Partial<Parameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const world = World.create({ x: 35, y: 61, boundary: "hard" }, { random });
   const grid = Grid.create(
@@ -56,7 +56,7 @@ export function create(options: Partial<Parameters> = {}) {
   let created = 0,
     nextId = 0;
   function propagate(x: number, y: number) {
-    if (y < 28 - 2 * settings.numberOfRows) return;
+    if (y < 28 - 2 * settings.rowCount) return;
     const field = grid.fieldAt({ x, y });
     if (!field || field.color === 45) return;
     field.color = 45;
@@ -85,14 +85,14 @@ export function create(options: Partial<Parameters> = {}) {
     const field = grid.fieldAt({ x, y });
     return field ? (grid.agentsAt(field) as readonly Ball[]) : [];
   }
-  function full() {
+  function isFull() {
     return counters.some((field) =>
       ballsAt(field.x, field.y - 1).some((ball) => ball.piled),
     );
   }
   function timeForNewBall() {
     return (
-      created < settings.numberOfBalls &&
+      created < settings.ballCount &&
       !ballsAt(0, 29).some((ball) => !ball.piled)
     );
   }
@@ -124,7 +124,7 @@ export function create(options: Partial<Parameters> = {}) {
   }
   function prepareGo() {
     if (timeForNewBall()) newBall();
-    if (full()) {
+    if (isFull()) {
       const counterY = counters[0]!.y;
       for (const ball of balls())
         if (!ball.piled && ball.y > counterY) {
@@ -137,7 +137,7 @@ export function create(options: Partial<Parameters> = {}) {
   function go() {
     const falling = balls().filter((ball) => !ball.piled);
     for (const ball of random.sample(falling, {
-      count: falling.length,
+      sampleCount: falling.length,
       algorithm: "fisher-yates-descending",
     }))
       fall(ball);
@@ -157,19 +157,19 @@ export function create(options: Partial<Parameters> = {}) {
     get grid() {
       return grid;
     },
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) {
         if (!prepareGo()) break;
         run(world, go);
       }
     },
     setRules(
       change: Partial<
-        Pick<Parameters, "numberOfBalls" | "chanceOfBouncingRight" | "pileUp">
+        Pick<Parameters, "ballCount" | "chanceOfBouncingRight" | "pileUp">
       >,
     ) {
-      settings = parameters(inputs, { ...settings, ...change });
+      settings = parseParameters(inputs, { ...settings, ...change });
     },
     read() {
       return Object.freeze({
@@ -177,7 +177,7 @@ export function create(options: Partial<Parameters> = {}) {
         width: 35,
         height: 61,
         parameters: settings,
-        balls: created,
+        ballCount: created,
         particles: Object.freeze(
           balls().map((ball) =>
             Object.freeze({
@@ -198,10 +198,10 @@ export function create(options: Partial<Parameters> = {}) {
             Object.freeze({ x: field.x, y: field.y, count: field.count }),
           ),
         ),
-        full: full(),
+        full: isFull(),
         done:
           !balls().some((ball) => !ball.piled) &&
-          (created >= settings.numberOfBalls || full()),
+          (created >= settings.ballCount || isFull()),
         randomState: random.state,
       });
     },

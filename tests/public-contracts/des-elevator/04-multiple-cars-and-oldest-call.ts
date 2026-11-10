@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { create } from "../../../models/des-elevator/model.ts";
 
-const multiple = create({ floors: 3, elevators: 2, capacity: 1, travelTime: 1, doorTime: 1, transferTime: 1, initialPassengers: 0 });
+const multiple = create({ floorCount: 3, elevatorCount: 2, capacity: 1, travelTimeSeconds: 1, doorTimeSeconds: 1, transferTimeSeconds: 1, initialPassengerCount: 0 });
 multiple.addPassenger(0, 2);
 multiple.addPassenger(2, 0);
 multiple.advance(10);
@@ -11,7 +11,7 @@ assert.deepEqual(multiple.read().passengers.map(passenger => passenger.arrived),
 assert.equal(multiple.read().cars.every(car => car.used === 0), true);
 
 // Original age wins over a later request at the car's current floor.
-const oldest = create({ floors: 3, elevators: 1, capacity: 1, travelTime: 1, doorTime: 1, transferTime: 1, initialPassengers: 0 });
+const oldest = create({ floorCount: 3, elevatorCount: 1, capacity: 1, travelTimeSeconds: 1, doorTimeSeconds: 1, transferTimeSeconds: 1, initialPassengerCount: 0 });
 oldest.addPassenger(2, 0);
 oldest.addPassenger(0, 2);
 oldest.advance(16);

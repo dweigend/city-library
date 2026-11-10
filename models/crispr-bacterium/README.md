@@ -24,7 +24,7 @@ const observation = simulation.read();
 | --- | --- | --- |
 | `seed` | `1` | integer |
 | `initialArraySize` | `15` | integer; ≥ 1; ≤ 30 |
-| `maxVirusTypes` | `30` | integer; ≥ 1; ≤ 100 |
+| `maxVirusTypeCount` | `30` | integer; ≥ 1; ≤ 100 |
 | `guideUnbindChance` | `5` | number; ≥ 0; ≤ 10 |
 | `processivity` | `80` | number; ≥ 0; ≤ 100 |
 | `crisprFunction` | `20` | number; ≥ 0; ≤ 100 |

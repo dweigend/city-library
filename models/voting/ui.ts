@@ -9,8 +9,8 @@ export const ui = defineUI(model, {
   complete: (state) => state.done,
   monitors: [
     { label: "Tick", value: (state) => state.tick },
-    { label: "Blue", value: (state) => state.counts.one },
-    { label: "Green", value: (state) => state.counts.zero },
+    { label: "Blue", value: (state) => state.counts.oneVoteCount },
+    { label: "Green", value: (state) => state.counts.zeroVoteCount },
   ],
   live: {
     changeVote: {

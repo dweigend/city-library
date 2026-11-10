@@ -23,7 +23,7 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer |
-| `initialDNAString` | `"1 long gene"` | 10 named choices; see `inputs.initialDNAString` |
+| `initialDNAString` | `"one-long-gene"` | 10 named choices; see `inputs.initialDNAString` |
 | `userCreatedCode` | `"AAAAA"` | text |
 | `nucleotidesAffected` | `1` | integer; ≥ 1; ≤ 6 |
 | `mutationType` | `"substitution"` | `deletion`, `insertion`, `substitution` |

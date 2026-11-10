@@ -23,11 +23,11 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
-| `initialFirms` | `200` | integer; ≥ 0; ≤ 1000 |
+| `initialFirmCount` | `200` | integer; ≥ 0; ≤ 1000 |
 | `distribute` | `false` | boolean |
 | `regionSize` | `0` | integer; ≥ 0; ≤ 5 |
 | `increasingReturns` | `0.5` | number; ≥ 0; ≤ 1 |
-| `attempts` | `1` | integer; ≥ 1; ≤ 20 |
+| `attemptCount` | `1` | integer; ≥ 1; ≤ 20 |
 | `birth` | `false` | boolean |
 
 ## Actions and observations

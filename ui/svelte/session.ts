@@ -25,7 +25,7 @@ export interface SessionState {
   liveDraft: Readonly<Record<string, Value>>;
   pending: readonly string[];
   status: string;
-  error: boolean;
+  hasError: boolean;
   fieldErrors: Readonly<Record<string, string>>;
   selected: string | null;
   speed: number;
@@ -48,7 +48,7 @@ export interface Session extends Readable<SessionState> {
   setDraft(field: string, value: Value): void;
   setLive(field: string, value: Value): void;
   run(): void;
-  step(count: number): void;
+  step(stepCount: number): void;
   action(index: number): void;
   repeat(index: number): void;
   setSpeed(value: number): void;
@@ -56,7 +56,7 @@ export interface Session extends Readable<SessionState> {
   toggleDrawing(): void;
   intent(intent: DrawingIntent): void;
   pause(): void;
-  fail(error: unknown): void;
+  fail(cause: unknown): void;
   dispose(): void;
 }
 
@@ -85,7 +85,7 @@ export function createSession<P extends object, M extends ModelInstance>(definit
   let running = false;
   let drawing = false;
   let status = "";
-  let error = false;
+  let hasError = false;
   const repeatFlags = new Set<number>();
   const store = writable<SessionState>();
   const isComplete = () => observation !== undefined && (spec.complete?.(observation) ?? false);
@@ -96,7 +96,7 @@ export function createSession<P extends object, M extends ModelInstance>(definit
       observation, initialized: !!instance, running, complete: false, epoch,
       draft: { ...draft }, liveDraft: { ...liveDraft },
       pending: applied ? setup.filter(field => draft[field.field] !== applied![field.field]).map(field => field.field) : [],
-      status, error, fieldErrors: { ...fieldErrors }, selected, speed,
+      status, hasError, fieldErrors: { ...fieldErrors }, selected, speed,
       drawing: false, drawingAvailable: false,
       actions: (spec.actions ?? []).map(() => ({ enabled: false, repeating: false })),
       liveEnabled: live.map(() => observation === undefined), monitors: [],
@@ -106,7 +106,7 @@ export function createSession<P extends object, M extends ModelInstance>(definit
     const available = observation !== undefined;
     return {
       ...currentState(), complete: isComplete(),
-      drawing: available && !error && !!spec.drawing?.enabled(observation!) && (!spec.drawing?.toggleLabel || drawing),
+      drawing: available && !hasError && !!spec.drawing?.enabled(observation!) && (!spec.drawing?.toggleLabel || drawing),
       drawingAvailable: available && !!spec.drawing?.enabled(observation!),
       actions: (spec.actions ?? []).map((action, index) => ({ enabled: available && (action.enabled?.(observation!, selected) ?? true), pressed: available ? action.pressed?.(observation!) : undefined, repeating: repeatFlags.has(index) })),
       liveEnabled: spec.live.map(field => !available || (field.enabled?.(observation!) ?? true)),
@@ -128,11 +128,11 @@ export function createSession<P extends object, M extends ModelInstance>(definit
   }
   function fail(cause: unknown, preservePrimary = false, forcePublication = false) {
     if (disposed) return;
-    const message = preservePrimary && error ? status : cause instanceof Error ? cause.message : String(cause);
+    const message = preservePrimary && hasError ? status : cause instanceof Error ? cause.message : String(cause);
     // Identical renderer errors must not recursively invalidate their own effect.
     // Presentation edits still force a current snapshot when a projection remains broken.
-    if (!forcePublication && error && status === message && !running && !drawing) return;
-    status = message; error = true; drawing = false;
+    if (!forcePublication && hasError && status === message && !running && !drawing) return;
+    status = message; hasError = true; drawing = false;
     handlingFailure = true;
     try { playback.stop(); stopRepeats(); running = false; }
     finally { handlingFailure = false; }
@@ -149,7 +149,7 @@ export function createSession<P extends object, M extends ModelInstance>(definit
   }
   function act(action: (model: M) => void) {
     if (!instance || disposed) return false;
-    try { action(instance); error = false; status = ""; observe(); return !error; }
+    try { action(instance); hasError = false; status = ""; observe(); return !hasError; }
     catch (cause) {
       fail(cause, false, true);
       try { observe(); } catch { /* Retain primary error. */ }
@@ -168,7 +168,7 @@ export function createSession<P extends object, M extends ModelInstance>(definit
   const repeats = (spec.actions ?? []).map((action, index) => action.repeat ? createRepeatedAction({
     current: () => disposed || isComplete() ? undefined : instance,
     enabled: model => action.enabled?.(model.read() as Snapshot<M>, selected) ?? true,
-    perform: model => { action.run(model, selected); error = false; status = ""; observe(); },
+    perform: model => { action.run(model, selected); hasError = false; status = ""; observe(); },
     changed: value => { if (value) repeatFlags.add(index); else repeatFlags.delete(index); publish(); },
     failed: fail,
     intervalMs: action.repeat.intervalMs,
@@ -209,7 +209,7 @@ export function createSession<P extends object, M extends ModelInstance>(definit
         try {
           flushSync(() => {
             instance = next; observation = nextObservation; selected = null; replaced = true;
-            applied = { ...draft }; fieldErrors = {}; epoch++; error = false; status = "";
+            applied = { ...draft }; fieldErrors = {}; epoch++; hasError = false; status = "";
             observe();
           });
         } finally { if (replaced) old?.dispose?.(); }
@@ -227,9 +227,9 @@ export function createSession<P extends object, M extends ModelInstance>(definit
       playback.stop(); stopRepeats();
       try {
         const decoded = decodeControl(live[index]!.descriptor, value);
-        if (!instance) { liveDraft[field] = decoded; delete fieldErrors[field]; error = false; publish(); return; }
+        if (!instance) { liveDraft[field] = decoded; delete fieldErrors[field]; hasError = false; publish(); return; }
         if (observation === undefined || !(binding.enabled?.(observation) ?? true)) return;
-        binding.set(instance, decoded); delete fieldErrors[field]; error = false; status = ""; observe();
+        binding.set(instance, decoded); delete fieldErrors[field]; hasError = false; status = ""; observe();
       } catch (cause) { fieldErrors[field] = cause instanceof Error ? cause.message : String(cause); fail(cause, false, true); try { observe(); } catch { /* Primary error retained. */ } }
     },
     run() {
@@ -237,9 +237,9 @@ export function createSession<P extends object, M extends ModelInstance>(definit
       try { if (running) { pause(); return; } if (!instance || isComplete()) return; stopRepeats(); drawing = false; playback.start(); }
       catch (cause) { fail(cause, false, true); }
     },
-    step(count) {
+    step(stepCount) {
       if (disposed) return;
-      pause(); try { if (!isComplete()) act(model => model.advance(count)); } catch (cause) { fail(cause, false, true); }
+      pause(); try { if (!isComplete()) act(model => model.advance(stepCount)); } catch (cause) { fail(cause, false, true); }
     },
     action(index) {
       if (disposed) return;

@@ -100,6 +100,5 @@ const binding = defineUI(model, {
 });
 
 export { model };
-export const sourceMarker =
-  "selected-transport-b04:traffic-grid:ec0cdcff88fbc9d54aa20a922fa3da8087c40318c929bae108f22f16932def3d";
-export const ui = { ...binding, model, sourceMarker };
+
+export const ui = { ...binding, model };

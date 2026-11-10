@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { create as mimicry, rememberColor, forgetColors, colorInMemory } from '../../../models/mimicry/model.ts';
+import { create as mimicry, rememberColor, forgetColors, isColorInMemory } from '../../../models/mimicry/model.ts';
 import { create as moths } from '../../../models/peppered-moths/model.ts';
 
 // A remembered color starts at age zero; the cutoff is inclusive.
@@ -8,8 +8,8 @@ memory = rememberColor(memory, 25, 2);
 assert.deepEqual(memory, [[15, 0], [25, 0]]);
 memory = rememberColor(memory, 35, 2);
 assert.deepEqual(memory, [[25, 0], [35, 0]]);
-assert.equal(colorInMemory(memory, 15), false);
-assert.equal(colorInMemory(memory, 35), true);
+assert.equal(isColorInMemory(memory, 15), false);
+assert.equal(isColorInMemory(memory, 35), true);
 assert.deepEqual(forgetColors(forgetColors(memory, 1), 1), []);
 assert.deepEqual(forgetColors(memory, 1), [[25, 1], [35, 1]]);
 const butterflies = mimicry({ seed: 11 });

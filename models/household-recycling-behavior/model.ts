@@ -1,22 +1,22 @@
 /** Original synthetic peer-adoption rule. No empirical behavioral or causal claim. */
 import { Agent, Graph, Random, World, run, twoPhase, measurements, storage } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface RecyclingParameters {
-  households: number;
+  householdCount: number;
   influence: number;
   seed: number;
 }
 export const inputs: Inputs<RecyclingParameters> = {
-  households: { kind: "number", default: 12, min: 3, max: 40, integer: true },
+  householdCount: { kind: "number", default: 12, min: 3, max: 40, integer: true },
   influence: { kind: "number", default: 0.5, min: 0, max: 1, step: 0.1 },
   seed: { kind: "number", default: 1, min: -2147483648, max: 4294967295, integer: true },
 };
 export function create(options: Partial<RecyclingParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const world = World.create({ random });
-  const households = Array.from({ length: settings.households }, (_, index) => world.add(Agent.create({
+  const households = Array.from({ length: settings.householdCount }, (_, index) => world.add(Agent.create({
     label: `Household ${index + 1}`, recycling: index === 0,
   })));
   const graph = Graph.create<(typeof households)[number]>();
@@ -26,8 +26,8 @@ export function create(options: Partial<RecyclingParameters> = {}) {
     graph.edges.add({ from: household, to: households[(index + 1) % households.length]! });
   });
   const measure = measurements.define((members: typeof households) => {
-    const adopters = members.filter(household => household.recycling).length;
-    return { adopters, share: adopters / members.length };
+    const adopterCount = members.filter(household => household.recycling).length;
+    return { adopterCount: adopterCount, share: adopterCount / members.length };
   });
   const history = storage.history({ capacity: 120 });
   function record() {
@@ -54,15 +54,15 @@ export function create(options: Partial<RecyclingParameters> = {}) {
   }
   record();
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let index = 0; index < count; index += 1) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let index = 0; index < stepCount; index += 1) {
         run(world, step);
         record();
       }
     },
     setInfluence(value: number) {
-      settings = parameters(inputs, { ...settings, influence: value });
+      settings = parseParameters(inputs, { ...settings, influence: value });
     },
     read() {
       return Object.freeze({

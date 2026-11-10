@@ -6,7 +6,7 @@ This document owns system-wide naming rules and the canonical vocabulary. [Codin
 
 ## Status and migration
 
-The English-language, casing, domain vocabulary, explicit units and capability-based documentation rules consolidate existing requirements. The verb families, type suffixes, collection/count patterns, PascalCase Svelte component filename rule and terminology refinements below complete those requirements for the naming migration. These conventions are accepted after independent review; existing APIs are not claimed to conform yet.
+The English-language, casing, domain vocabulary, explicit units and capability-based documentation rules consolidate existing requirements. The verb families, type suffixes, collection/count patterns, PascalCase Svelte component filename rule and terminology refinements below complete those requirements for the naming migration. These conventions are accepted after independent review; repository-wide implementation and consumer verification determine conformance; a naming rule alone does not establish completion.
 
 Migrate a public name together with its callers, exports, documentation and checks. Preserve behavior, identity, ordering, errors, random draws and accepted assertions. Record a public contract or serialized-format change explicitly. Do not retain a second alias API merely to preserve an old name. A frozen example's substantive API change needs its recorded naming decision; path changes also update integrity records without weakening assertions.
 
@@ -51,7 +51,7 @@ Use network for scientific subject matter when appropriate; use Graph for the AP
 | breed for general execution classification | group |
 | experiment for model selection or the study API | model or study according to the task |
 | opaque phase codes and source-project abbreviations | the actual capability |
-| `agentCount` and other `num*` count keys | `agentCount` and the corresponding singular noun plus `Count` |
+| `numAgents` and other `num*` count keys | `agentCount` and the corresponding singular noun plus `Count` |
 
 ## Spelling and structure
 
@@ -61,8 +61,9 @@ Use network for scientific subject matter when appropriate; use Graph for the AP
 | Types, interfaces, classes and component symbols | `PascalCase` | `StudySpec`, `GraphView` |
 | Ordinary modules, folders and model slugs | `kebab-case` | `indexed-palette.ts`, `traffic-basic` |
 | Svelte component files | `PascalCase.svelte` | `GraphView.svelte` |
-| Tests | capability name plus `.test.ts` | `graph-connectivity.test.ts` |
-| Package scripts and CLI flags | lowercase kebab-case; script groups may use `:` | `examples:quad-layouts`, `--quad-layouts` |
+| Runtime tests | capability name plus `.test.ts` | `graph-connectivity.test.ts` |
+| Compile-only checks | capability name plus `-types.ts` | `ui-authoring-types.ts` |
+| Package scripts and CLI flags | lowercase kebab-case; script groups may use `:` | `contracts:quad-layouts`, `--quad-layouts` |
 | Stable string discriminants | lowercase kebab-case | `fixed-priority` |
 | CSS classes and custom properties owned here | kebab-case and semantic meaning | `model-controls`, `--text-muted` |
 
@@ -70,11 +71,29 @@ Use `Id`, `Url` and `Xml` inside compound identifiers: `agentId`, `sourceUrl`, `
 
 Name files and directories after a capability or domain responsibility. Avoid opaque delivery-phase codes, source-project abbreviations, temporary review labels and names such as `new`, `next`, `old` or `legacy`. Use meaningful algorithm/variant names where behaviors differ. Do not add empty folders or rename scientific models merely to make their names generic.
 
+## Repository structure
+
+Use a few top-level folders named for their responsibility. Keep source directly inside its owning area; do not add a second `src/` layer, a package hierarchy or a folder merely to hold one file. Create folders only for working content.
+
+| Folder | Responsibility |
+| --- | --- |
+| `library/` | Headless City Library modules, grouped by domain. Agent Loom is the modeling core within this library. |
+| `models/` | Executable models, their UI descriptions and model-specific source and evidence records. |
+| `ui/` | Shared presentation components and the Agent Lab browser host. |
+| `tests/` | Automated checks, public contract scripts and unmet target fixtures. |
+| `docs/` | Guides, binding contracts and development evidence. |
+
+Place a development tool with the area it supports: library build and declaration tools belong in `library/development/`; test runners belong in `tests/`. Keep migration receipts and path mappings in `docs/development/`, preserving immutable evidence bytes. Do not collect unrelated tools and evidence under a top-level `scripts/` folder. Use an existing evidence folder before creating another one.
+
+Keep the public package entry `index.ts` and required tool configuration at the root. Folder moves do not introduce package subpaths or rename public APIs. Update imports, build inputs, package contents, checks and current documentation together; map historical paths without rewriting frozen evidence.
+
+This layout applies to the whole repository. The central [README](../README.md#repository-structure) shows the orientation tree; [architecture](ARCHITECTURE.md#binding-domain-layout-and-extension-rules) owns domain boundaries below `library/`.
+
 ## Objects, collections and values
 
 Use a singular noun for one object (`agent`) and a plural noun for a collection (`agents`). Discrete counts use `<singularNoun>Count`; other quantities name the measured quantity and unit, such as `totalDistanceMiles` or `populationSize`. Use `agentCount` for a count and `edgesPerNode` for a per-item quantity. Public `num*` input and observation keys migrate with their controls, serialization consumers and assertions; this is an explicit public-key change, not an internal variable cleanup. Name indexes and mappings for their lookup relationship when it helps: `agentsById`, `fieldIndex`. Avoid duplicating information already clear from a small local context.
 
-Use positive boolean names that read as a statement: `isActive`, `hasCapacity`, `canMove`. Predicate functions use the same form. Domain attributes may use an established adjective, such as `directed`; do not add a prefix mechanically. Avoid negative flags and ambiguous boolean arguments.
+Use positive boolean names that read as a statement: `isActive`, `hasCapacity`, `canMove`. Predicate functions use the same form. Domain attributes may use an established adjective, such as `directed`; do not add a prefix mechanically. Observation state adjectives such as `done`, `stopped` and `full` retain their state meaning; callable predicates use affirmative names such as `isComplete` or `isFull`. Catalog membership labels such as `selected-` may qualify a test area when they identify the binding selected-model set, rather than delivery order. Avoid negative flags and ambiguous boolean arguments.
 
 Use `id` within its unambiguous owner and qualify references such as `agentId`. Identity, collection index and display label are different concepts. Include units where callers could confuse them (`durationMs`, `distanceMeters`); document abstract units explicitly. Do not imply that tick, step, frame or agenda time share a unit. Name meaningful thresholds, amounts, radii, angles and limits; equal literals with different meanings remain separate concepts.
 

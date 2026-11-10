@@ -24,7 +24,7 @@ const observation = simulation.read();
 | --- | --- | --- |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
 | `neighborhood` | `"von-neumann"` | `von-neumann`, `moore`, `displaced-von-n`, `h`, `moore-von-n` |
-| `countRule` | `"= 1"` | `> 0`, `= 1`, `<= 2` |
+| `countRule` | `"exactly-one"` | `positive`, `exactly-one`, `at-most-two` |
 | `probability` | `100` | integer; ≥ 0; ≤ 100 |
 | `ageLimit` | `55` | integer; ≥ 0; ≤ 100 |
 

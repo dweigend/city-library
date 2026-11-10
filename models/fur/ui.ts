@@ -41,6 +41,5 @@ const binding = defineUI(model, {
 });
 
 export { model };
-export const sourceMarker =
-  "selected-biology-b07:fur:8f7b57b7df931ec45906251a9421017d438286b5607c20c409f722e6db311bc5";
-export const ui = { ...binding, model, sourceMarker };
+
+export const ui = { ...binding, model };

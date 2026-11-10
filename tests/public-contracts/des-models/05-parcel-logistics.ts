@@ -4,10 +4,10 @@ import { create as parcels } from "../../../models/des-parcel-logistics/model.ts
 
 const logistics = parcels();
 logistics.advance(12);
-assert.deepEqual(logistics.read().parcels.map((parcel) => parcel.delivered), [3, 9]);
+assert.deepEqual(logistics.read().parcels.map((parcel) => parcel.deliveredAtMinutes), [3, 9]);
 assert.deepEqual(logistics.read().parcels.map((parcel) => parcel.returned), [5, 12]);
-assert.equal(logistics.read().vanBusy, 0);
-assert.equal(logistics.read().queued, 0);
+assert.equal(logistics.read().busyVanCount, 0);
+assert.equal(logistics.read().queuedParcelCount, 0);
 
 const independent = parcels();
 const baseline = independent.read();

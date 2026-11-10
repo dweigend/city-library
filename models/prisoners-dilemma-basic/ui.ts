@@ -14,7 +14,7 @@ export const ui = defineUI(model, {
     label: "Source attribution · Uri Wilensky · CC BY-NC-SA 3.0",
   },
   monitors: [
-    { label: "Answers (no native clock)", value: (s) => s.rounds },
+    { label: "Answers (no native clock)", value: (s) => s.roundCount },
     { label: "Sentence (years)", value: (s) => s.years ?? "Choose and answer" },
   ],
   views: [

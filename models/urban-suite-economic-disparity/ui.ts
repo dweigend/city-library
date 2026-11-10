@@ -43,19 +43,19 @@ export const ui = defineUI(model, {
   ],
   change: (instance, changes) => instance.setRules(changes),
   live: {
-    numberOfTests: {
+    testCount: {
       label: "Location tests",
     },
     residentsPerJob: {},
-    poorPerStep: {
+    poorPersonCountPerStep: {
       label: "Poor births per step",
     },
-    richPerStep: {
+    richPersonCountPerStep: {
       label: "Rich births per step",
     },
     poorPricePriority: {},
     richQualityPriority: {},
-    maxJobs: {
+    maxJobCount: {
       label: "Maximum jobs",
     },
     deathRate: {
@@ -64,9 +64,9 @@ export const ui = defineUI(model, {
   },
   monitors: [
     { label: "Tick", value: (state) => state.tick },
-    { label: "Rich", value: (state) => state.counts.rich },
-    { label: "Poor", value: (state) => state.counts.poor },
-    { label: "Jobs", value: (state) => state.counts.jobs },
+    { label: "Rich", value: (state) => state.counts.richPersonCount },
+    { label: "Poor", value: (state) => state.counts.poorPersonCount },
+    { label: "Jobs", value: (state) => state.counts.jobCount },
     { label: "Counter", value: (state) => state.counter },
     {
       label: "Rich median",

@@ -25,7 +25,7 @@ const observation = simulation.read();
 | `width` | `171` | integer; ≥ 9; ≤ 301 |
 | `height` | `171` | integer; ≥ 9; ≤ 301 |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
-| `maxParticles` | `100` | integer; ≥ 1; ≤ 300 |
+| `maxParticleCount` | `100` | integer; ≥ 1; ≤ 300 |
 | `wiggleAngle` | `60` | number; ≥ 0; ≤ 360 |
 | `useWholeWorld` | `true` | boolean |
 

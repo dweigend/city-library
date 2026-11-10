@@ -9,7 +9,7 @@ assert.equal(m.read().tick,0);
 assert.deepEqual(m.read().randomState,rng);
 m.setRules({similarWanted:100});
 assert.equal(m.read().done,false);
-assert.equal(m.read().counts.unhappy,2);
+assert.equal(m.read().counts.unhappyPersonCount,2);
 m.advance();
 assert.equal(m.read().tick,1);
 m.setResidents([]);

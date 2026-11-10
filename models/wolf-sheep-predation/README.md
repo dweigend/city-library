@@ -24,8 +24,8 @@ const observation = simulation.read();
 | --- | --- | --- |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
 | `mode` | `"sheep-wolves"` | `sheep-wolves`, `sheep-wolves-grass` |
-| `initialSheep` | `100` | integer; ≥ 0; ≤ 250 |
-| `initialWolves` | `50` | integer; ≥ 0; ≤ 250 |
+| `initialSheepCount` | `100` | integer; ≥ 0; ≤ 250 |
+| `initialWolfCount` | `50` | integer; ≥ 0; ≤ 250 |
 | `sheepGain` | `4` | integer; ≥ 0; ≤ 50 |
 | `wolfGain` | `20` | integer; ≥ 0; ≤ 100 |
 | `sheepReproduce` | `4` | integer; ≥ 1; ≤ 20 |

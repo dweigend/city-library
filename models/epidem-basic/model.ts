@@ -1,18 +1,18 @@
 /** NetLogo epiDEM Basic. See source.nlogox and NOTICE.md. Teaching model only. */
 import { Agent, Grid, Random, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 
 export interface EpidemParameters {
   seed: number;
-  initialPeople: number;
+  initialPersonCount: number;
   infectionChance: number;
   recoveryChance: number;
   averageRecoveryTime: number;
 }
 export const inputs: Inputs<EpidemParameters> = {
   seed: { kind: "number", default: 1, integer: true },
-  initialPeople: {
+  initialPersonCount: {
     kind: "number",
     default: 100,
     min: 50,
@@ -30,11 +30,11 @@ type Person = Agent<{
   susceptible: boolean;
   infectionLength: number;
   recoveryTime: number;
-  nbInfected: number;
-  nbRecovered: number;
+  newlyInfectedPersonCount: number;
+  newlyRecoveredPersonCount: number;
 }>;
 export function create(options: Partial<EpidemParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const space = { x: 25, y: 25, boundary: "wrap" } as const;
   const world = World.create(space, { random });
@@ -44,23 +44,23 @@ export function create(options: Partial<EpidemParameters> = {}) {
   let betaN = 0;
   let gamma = 0;
   let r0 = 0;
-  let nbInfectedPrevious = 0;
+  let previousNewlyInfectedPersonCount = 0;
   const history: {
     tick: number;
-    infected: number;
-    cured: number;
-    susceptible: number;
+    infectedPersonCount: number;
+    recoveredPersonCount: number;
+    susceptiblePersonCount: number;
     r0: number;
   }[] = [];
   const people = () => world.agents as readonly Person[];
   const shuffled = (values: readonly Person[]) =>
     random.sample(values, {
-      count: values.length,
+      sampleCount: values.length,
       algorithm: "fisher-yates-descending",
     });
 
   function setupPeople() {
-    for (let who = 0; who < settings.initialPeople; who++) {
+    for (let who = 0; who < settings.initialPersonCount; who++) {
       const recoveryTime = Math.max(
         0,
         Math.min(
@@ -84,8 +84,8 @@ export function create(options: Partial<EpidemParameters> = {}) {
               ? Math.floor(random.number() * Math.ceil(recoveryTime))
               : 0,
             recoveryTime,
-            nbInfected: 0,
-            nbRecovered: 0,
+            newlyInfectedPersonCount: 0,
+            newlyRecoveredPersonCount: 0,
           },
           {
             position: {
@@ -103,9 +103,9 @@ export function create(options: Partial<EpidemParameters> = {}) {
   function record() {
     history.push({
       tick: world.tick.value,
-      infected: people().filter((p) => p.infected).length,
-      cured: people().filter((p) => p.cured).length,
-      susceptible: people().filter((p) => !p.infected && !p.cured).length,
+      infectedPersonCount: people().filter((p) => p.infected).length,
+      recoveredPersonCount: people().filter((p) => p.cured).length,
+      susceptiblePersonCount: people().filter((p) => !p.infected && !p.cured).length,
       r0,
     });
   }
@@ -117,7 +117,7 @@ export function create(options: Partial<EpidemParameters> = {}) {
     betaN = 0;
     gamma = 0;
     r0 = 0;
-    nbInfectedPrevious = 0;
+    previousNewlyInfectedPersonCount = 0;
     setupPeople();
     record();
   }
@@ -126,8 +126,8 @@ export function create(options: Partial<EpidemParameters> = {}) {
     person.move(1);
   }
   function clearCount(person: Person) {
-    person.nbInfected = 0;
-    person.nbRecovered = 0;
+    person.newlyInfectedPersonCount = 0;
+    person.newlyRecoveredPersonCount = 0;
   }
   function infect(person: Person) {
     const field = grid.fieldAt(person)!;
@@ -139,7 +139,7 @@ export function create(options: Partial<EpidemParameters> = {}) {
     )) {
       if (random.number() * 100 < settings.infectionChance) {
         target.infected = true;
-        target.nbInfected++;
+        target.newlyInfectedPersonCount++;
       }
     }
   }
@@ -151,29 +151,29 @@ export function create(options: Partial<EpidemParameters> = {}) {
     ) {
       person.infected = false;
       person.cured = true;
-      person.nbRecovered++;
+      person.newlyRecoveredPersonCount++;
     }
   }
   function calculateR0() {
-    const newlyInfected = people().reduce((sum, p) => sum + p.nbInfected, 0);
-    const newlyRecovered = people().reduce((sum, p) => sum + p.nbRecovered, 0);
+    const newlyInfected = people().reduce((sum, p) => sum + p.newlyInfectedPersonCount, 0);
+    const newlyRecovered = people().reduce((sum, p) => sum + p.newlyRecoveredPersonCount, 0);
     const infected = people().filter((p) => p.infected).length;
-    nbInfectedPrevious = infected + newlyRecovered - newlyInfected;
-    betaN = nbInfectedPrevious < 10 ? 0 : newlyInfected / nbInfectedPrevious;
-    gamma = nbInfectedPrevious < 10 ? 0 : newlyRecovered / nbInfectedPrevious;
+    previousNewlyInfectedPersonCount = infected + newlyRecovered - newlyInfected;
+    betaN = previousNewlyInfectedPersonCount < 10 ? 0 : newlyInfected / previousNewlyInfectedPersonCount;
+    gamma = previousNewlyInfectedPersonCount < 10 ? 0 : newlyRecovered / previousNewlyInfectedPersonCount;
     const susceptibleT =
-      settings.initialPeople -
+      settings.initialPersonCount -
       infected -
       people().filter((p) => p.cured).length;
     const s0 = people().filter((p) => p.susceptible).length;
-    if (settings.initialPeople - susceptibleT !== 0 && susceptibleT !== 0) {
+    if (settings.initialPersonCount - susceptibleT !== 0 && susceptibleT !== 0) {
       if (s0 / susceptibleT <= 0)
         throw new RangeError(
           "Source R0 logarithm requires a positive argument.",
         );
       r0 =
         (Math.log(s0 / susceptibleT) /
-          (settings.initialPeople - susceptibleT)) *
+          (settings.initialPersonCount - susceptibleT)) *
         s0;
     }
   }
@@ -189,9 +189,9 @@ export function create(options: Partial<EpidemParameters> = {}) {
     // Source invokes calculate-r0 once for every agent, with unchanged aggregate data.
     for (const _person of shuffled(people())) calculateR0();
   }
-  function advance(count = 1) {
-    stepCount(count);
-    for (let index = 0; index < count; index++) {
+  function advance(stepCount = 1) {
+    validateStepCount(stepCount);
+    for (let index = 0; index < stepCount; index++) {
       if (!people().some((p) => p.infected)) {
         stopped = true;
         break;
@@ -202,7 +202,7 @@ export function create(options: Partial<EpidemParameters> = {}) {
     }
   }
   function setParameters(
-    update: Partial<Omit<EpidemParameters, "seed" | "initialPeople">>,
+    update: Partial<Omit<EpidemParameters, "seed" | "initialPersonCount">>,
   ) {
     if (
       Object.keys(update).some(
@@ -215,7 +215,7 @@ export function create(options: Partial<EpidemParameters> = {}) {
       )
     )
       throw new TypeError("Only live parameters may change.");
-    settings = parameters(inputs, { ...settings, ...update });
+    settings = parseParameters(inputs, { ...settings, ...update });
   }
   function read() {
     return {
@@ -227,7 +227,7 @@ export function create(options: Partial<EpidemParameters> = {}) {
       betaN,
       gamma,
       r0,
-      nbInfectedPrevious,
+      previousNewlyInfectedPersonCount: previousNewlyInfectedPersonCount,
       infectedCount: people().filter((p) => p.infected).length,
       curedCount: people().filter((p) => p.cured).length,
       history: history.map((point) => ({ ...point })),
@@ -245,8 +245,8 @@ export function create(options: Partial<EpidemParameters> = {}) {
         susceptible: p.susceptible,
         infectionLength: p.infectionLength,
         recoveryTime: p.recoveryTime,
-        nbInfected: p.nbInfected,
-        nbRecovered: p.nbRecovered,
+        newlyInfectedPersonCount: p.newlyInfectedPersonCount,
+        newlyRecoveredPersonCount: p.newlyRecoveredPersonCount,
       })),
     };
   }

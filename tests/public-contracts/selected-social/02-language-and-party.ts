@@ -11,9 +11,9 @@ grammar.setParameters({ percentGrammar1: 100, updateAlgorithm: 'reward' });
 grammar.redistributeGrammars(); assert.ok(grammar.read().nodes.every(n => n.state === 1 && n.origState === 1 && n.spokenState === 1));
 grammar.advance(3); assert.ok(grammar.read().nodes.every(n => n.state === 1));
 // Group happiness is computed before migration and retained until the next call.
-const gathering = party({ groupCount: 5, number: 0, tolerance: 0 });
+const gathering = party({ groupCount: 5, personCount: 0, tolerance: 0 });
 gathering.setGroups([['male','female'], [], [], [], []]);
-assert.equal(gathering.read().happyCount, 0); assert.equal(gathering.read().boringGroups, 0);
+assert.equal(gathering.read().happyCount, 0); assert.equal(gathering.read().singleSexGroupCount, 0);
 gathering.advance(); assert.equal(gathering.read().tick, 1);
 assert.ok(gathering.read().people.every(p => p.group !== 0 && !p.happy));
 assert.equal(gathering.read().people.length, 2);

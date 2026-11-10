@@ -31,7 +31,7 @@ test('scalar formatting reads once per publication and preserves the real numeri
       assert.deepEqual(latest.monitors, [{ label: 'Tick', value: '1.000' }]);
       assert.equal(latest.observation.tick, 1);
       assert.equal(before.tick, 0, 'Formatting does not mutate detached prior observations');
-      assert.equal(latest.error, false);
+      assert.equal(latest.hasError, false);
     } finally { session.dispose(); unsubscribe(); }
   `], { cwd: import.meta.dir + '/..', stdout: 'pipe', stderr: 'pipe' });
   expect(new TextDecoder().decode(result.stderr)).toBe('');

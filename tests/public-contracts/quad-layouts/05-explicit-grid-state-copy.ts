@@ -1,8 +1,8 @@
 import assert from "node:assert/strict";
 import { Grid, Random, topology } from "city-library";
 
-const raw = topology.quadrilaterals({ rings: 3, edgeLength: 4, random: Random.create({ seed: 7 }) });
-const relaxed = topology.relax({ layout: raw, method: "squareTarget", iterations: 8 });
+const raw = topology.quadrilaterals({ ringCount: 3, edgeLength: 4, random: Random.create({ seed: 7 }) });
+const relaxed = topology.relax({ layout: raw, method: "square-target", iterationCount: 8 });
 const before = Grid.create({ layout: raw, state: { population: 0, observation: "old" } });
 const after = Grid.create({ layout: relaxed, state: { population: 0, observation: "new" } });
 before.fields.forEach((field, index) => { field.population = index + 1; });

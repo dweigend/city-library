@@ -36,7 +36,7 @@ Other instance procedures: `setRules`. See their typed arguments in [model.ts](m
 
 Additional instance accessors: `world`. See [model.ts](model.ts) for the returned live references.
 
-Model-specific `read()` fields include `successes`, `seriesTrials`, `addend`, `current`, `previous`, `addends`, `series`, `ribbon`, `addendHistogram`, `seriesHistogram`, `runningTotal`.
+Model-specific `read()` fields include `successCount`, `seriesTrials`, `addend`, `current`, `previous`, `addends`, `series`, `ribbon`, `addendHistogram`, `seriesHistogram`, `runningTotal`.
 
 The [UI binding](ui.ts) presents `Number of successes`, `Tick`, `Successes`, `Running total`, `Previous addends`, `Addend`, `Current addends`, `Addends`, `Trials`, `Addends per total` and further views or controls.
 

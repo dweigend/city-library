@@ -4,31 +4,31 @@
 import { Agent, Agenda, Resource, ServiceQueue, World, run } from "city-library";
 import type { EventHandle, ResourceRequest } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 
 export interface ElevatorParameters {
-  floors: number;
-  elevators: number;
+  floorCount: number;
+  elevatorCount: number;
   capacity: number;
-  travelTime: number;
-  doorTime: number;
-  transferTime: number;
-  initialPassengers: number;
-  arrivalInterval: number;
-  arrivalLimit: number;
-  maxEventsPerStep: number;
+  travelTimeSeconds: number;
+  doorTimeSeconds: number;
+  transferTimeSeconds: number;
+  initialPassengerCount: number;
+  arrivalIntervalSeconds: number;
+  arrivalCountLimit: number;
+  maxEventCountPerStep: number;
 }
 export const inputs: Inputs<ElevatorParameters> = {
-  floors: { kind: "number", default: 6, min: 2, max: 12, integer: true },
-  elevators: { kind: "number", default: 2, min: 1, max: 4, integer: true },
+  floorCount: { kind: "number", default: 6, min: 2, max: 12, integer: true },
+  elevatorCount: { kind: "number", default: 2, min: 1, max: 4, integer: true },
   capacity: { kind: "number", default: 4, min: 1, max: 8, integer: true },
-  travelTime: { kind: "number", default: 2, min: 1, max: 10, integer: true },
-  doorTime: { kind: "number", default: 1, min: 0, max: 5, integer: true },
-  transferTime: { kind: "number", default: 1, min: 0, max: 5, integer: true },
-  initialPassengers: { kind: "number", default: 6, min: 0, max: 100, integer: true },
-  arrivalInterval: { kind: "number", default: 0, min: 0, max: 60, integer: true },
-  arrivalLimit: { kind: "number", default: 0, min: 0, max: 100, integer: true },
-  maxEventsPerStep: { kind: "number", default: 1000, min: 1, max: 100000, integer: true },
+  travelTimeSeconds: { kind: "number", default: 2, min: 1, max: 10, integer: true },
+  doorTimeSeconds: { kind: "number", default: 1, min: 0, max: 5, integer: true },
+  transferTimeSeconds: { kind: "number", default: 1, min: 0, max: 5, integer: true },
+  initialPassengerCount: { kind: "number", default: 6, min: 0, max: 100, integer: true },
+  arrivalIntervalSeconds: { kind: "number", default: 0, min: 0, max: 60, integer: true },
+  arrivalCountLimit: { kind: "number", default: 0, min: 0, max: 100, integer: true },
+  maxEventCountPerStep: { kind: "number", default: 1000, min: 1, max: 100000, integer: true },
 };
 
 type Direction = -1 | 0 | 1;
@@ -53,24 +53,24 @@ type ElevatorEvent =
   | { kind: "request"; index: number };
 
 export function create(options: Partial<ElevatorParameters> = {}) {
-  const settings = parameters(inputs, options);
-  if (settings.arrivalLimit > 0 && settings.arrivalInterval === 0)
+  const settings = parseParameters(inputs, options);
+  if (settings.arrivalCountLimit > 0 && settings.arrivalIntervalSeconds === 0)
     throw new RangeError("Scheduled arrivals require a positive arrival interval.");
   const world = World.create();
   const agenda = Agenda.create<ElevatorEvent>();
   const pending = new Map<string, EventHandle<ElevatorEvent>>();
   const passengers: Passenger[] = [];
   const lines: FloorLine[] = [];
-  for (let floor = 0; floor < settings.floors; floor++) {
+  for (let floor = 0; floor < settings.floorCount; floor++) {
     for (const direction of [-1, 1] as const)
       lines.push({ floor, direction, queue: ServiceQueue.create<Passenger>() });
   }
-  const cars: Car[] = Array.from({ length: settings.elevators }, (_, index) => ({
+  const cars: Car[] = Array.from({ length: settings.elevatorCount }, (_, index) => ({
     agent: world.add(Agent.create({ number: index + 1, floor: 0, direction: 0 as Direction, status: "idle" as CarStatus })),
     seats: Resource.create<Passenger>({ capacity: settings.capacity }),
     claims: new Map(),
   }));
-  let generated = 0;
+  let generatedPassengerCount = 0;
   let disposed = false;
   let finalObservation: ReturnType<typeof observe> | undefined;
 
@@ -107,10 +107,10 @@ export function create(options: Partial<ElevatorParameters> = {}) {
       schedule(agenda.time, { kind: "visit", car: car.agent.number });
     }
   }
-  function addPassenger(from = 0, to = settings.floors - 1): number {
+  function addPassenger(from = 0, to = settings.floorCount - 1): number {
     requireActive();
     if (!Number.isSafeInteger(from) || !Number.isSafeInteger(to) || from < 0 || to < 0 ||
-        from >= settings.floors || to >= settings.floors || from === to)
+        from >= settings.floorCount || to >= settings.floorCount || from === to)
       throw new RangeError("Passenger floors must be distinct integers within the building.");
     const passenger = world.add(Agent.create({ number: passengers.length + 1, from, to,
       requested: agenda.time, boarded: -1, arrived: -1, car: -1 }));
@@ -120,8 +120,8 @@ export function create(options: Partial<ElevatorParameters> = {}) {
     return passenger.number;
   }
   function deterministicRequest(index: number) {
-    if (index % 2 === 0) addPassenger(0, 1 + index % (settings.floors - 1));
-    else addPassenger(settings.floors - 1, index % (settings.floors - 1));
+    if (index % 2 === 0) addPassenger(0, 1 + index % (settings.floorCount - 1));
+    else addPassenger(settings.floorCount - 1, index % (settings.floorCount - 1));
   }
   function beginMove(car: Car) {
     const destination = car.claims.size > 0
@@ -138,7 +138,7 @@ export function create(options: Partial<ElevatorParameters> = {}) {
     }
     if (car.claims.size === 0) car.agent.direction = destination > car.agent.floor ? 1 : -1;
     car.agent.status = "moving";
-    schedule(agenda.time + settings.travelTime, {
+    schedule(agenda.time + settings.travelTimeSeconds, {
       kind: "move", car: car.agent.number, floor: car.agent.floor + car.agent.direction,
     });
   }
@@ -154,11 +154,11 @@ export function create(options: Partial<ElevatorParameters> = {}) {
     }
     if (car.claims.size === 0 && car.call) car.agent.direction = car.call.direction;
     car.agent.status = "opening";
-    schedule(agenda.time + settings.doorTime, { kind: "opened", car: car.agent.number });
+    schedule(agenda.time + settings.doorTimeSeconds, { kind: "opened", car: car.agent.number });
   }
   function closeDoors(car: Car) {
     car.agent.status = "closing";
-    schedule(agenda.time + settings.doorTime, { kind: "closed", car: car.agent.number });
+    schedule(agenda.time + settings.doorTimeSeconds, { kind: "closed", car: car.agent.number });
   }
   function reserveNextCall(car: Car) {
     if (car.claims.size > 0 || car.call?.floor === car.agent.floor) return;
@@ -182,13 +182,13 @@ export function create(options: Partial<ElevatorParameters> = {}) {
     }
     reserve(car, line!);
     car.agent.status = "boarding";
-    schedule(agenda.time + settings.transferTime, { kind: "board", car: car.agent.number, passenger: passenger.number });
+    schedule(agenda.time + settings.transferTimeSeconds, { kind: "board", car: car.agent.number, passenger: passenger.number });
   }
   function alightNext(car: Car) {
     const claim = [...car.claims.values()].find(ticket => ticket.owner.to === car.agent.floor);
     if (!claim) { boardNext(car); return; }
     car.agent.status = "alighting";
-    schedule(agenda.time + settings.transferTime, { kind: "alight", car: car.agent.number, passenger: claim.owner.number });
+    schedule(agenda.time + settings.transferTimeSeconds, { kind: "alight", car: car.agent.number, passenger: claim.owner.number });
   }
   function finishBoarding(car: Car, number: number) {
     const line = car.call!;
@@ -220,7 +220,7 @@ export function create(options: Partial<ElevatorParameters> = {}) {
   function dispatch(event: ElevatorEvent) {
     if (event.kind === "request") {
       deterministicRequest(event.index);
-      generated++;
+      generatedPassengerCount++;
       return;
     }
     const car = cars[event.car - 1]!;
@@ -236,15 +236,15 @@ export function create(options: Partial<ElevatorParameters> = {}) {
   function observe() {
     const boarded = passengers.filter(passenger => passenger.boarded >= 0);
     const arrived = passengers.filter(passenger => passenger.arrived >= 0);
-    const waiting = lines.reduce((sum, line) => sum + line.queue.entries.length, 0);
-    const riding = cars.reduce((sum, car) => sum + car.seats.used, 0);
+    const waitingPassengerCount = lines.reduce((sum, line) => sum + line.queue.entries.length, 0);
+    const ridingPassengerCount = cars.reduce((sum, car) => sum + car.seats.used, 0);
     return {
       parameters: { ...settings }, time: agenda.time, tick: world.tick.value,
-      created: passengers.length, waiting, riding, arrived: arrived.length, generated,
-      meanWait: boarded.length ? boarded.reduce((sum, passenger) => sum + passenger.boarded - passenger.requested, 0) / boarded.length : 0,
-      meanRide: arrived.length ? arrived.reduce((sum, passenger) => sum + passenger.arrived - passenger.boarded, 0) / arrived.length : 0,
-      meanSystem: arrived.length ? arrived.reduce((sum, passenger) => sum + passenger.arrived - passenger.requested, 0) / arrived.length : 0,
-      pendingEvents: agenda.size,
+      createdPassengerCount: passengers.length, waitingPassengerCount: waitingPassengerCount, ridingPassengerCount: ridingPassengerCount, arrivedPassengerCount: arrived.length, generatedPassengerCount: generatedPassengerCount,
+      meanWaitSeconds: boarded.length ? boarded.reduce((sum, passenger) => sum + passenger.boarded - passenger.requested, 0) / boarded.length : 0,
+      meanRideSeconds: arrived.length ? arrived.reduce((sum, passenger) => sum + passenger.arrived - passenger.boarded, 0) / arrived.length : 0,
+      meanSystemSeconds: arrived.length ? arrived.reduce((sum, passenger) => sum + passenger.arrived - passenger.requested, 0) / arrived.length : 0,
+      pendingEventCount: agenda.size,
       cars: cars.map(car => ({ id: car.agent.id, number: car.agent.number, floor: car.agent.floor,
         direction: car.agent.direction, status: car.agent.status, used: car.seats.used,
         capacity: car.seats.capacity, passengers: [...car.claims.keys()] })),
@@ -257,33 +257,33 @@ export function create(options: Partial<ElevatorParameters> = {}) {
     };
   }
 
-  for (let index = 0; index < settings.initialPassengers; index++) deterministicRequest(index);
-  for (let index = 0; index < settings.arrivalLimit; index++) {
-    schedule((index + 1) * settings.arrivalInterval, {
-      kind: "request", index: settings.initialPassengers + index,
+  for (let index = 0; index < settings.initialPassengerCount; index++) deterministicRequest(index);
+  for (let index = 0; index < settings.arrivalCountLimit; index++) {
+    schedule((index + 1) * settings.arrivalIntervalSeconds, {
+      kind: "request", index: settings.initialPassengerCount + index,
     });
   }
   return {
     addPassenger,
-    advance(steps = 1) {
+    advance(stepCount = 1) {
       requireActive();
-      stepCount(steps);
+      validateStepCount(stepCount);
       run(world, () => {
         const until = agenda.time + 1;
         for (let count = 0; ; count++) {
-          if (count >= settings.maxEventsPerStep) throw new RangeError("Elevator event budget exhausted.");
+          if (count >= settings.maxEventCountPerStep) throw new RangeError("Elevator event budget exhausted.");
           const event = agenda.next({ until });
           if (!event) break;
           pending.delete(event.id);
           dispatch(event.data);
         }
-      }, steps);
+      }, stepCount);
     },
     read() { return structuredClone(finalObservation ?? observe()); },
     dispose() {
       if (disposed) return;
       finalObservation = observe();
-      finalObservation.pendingEvents = 0;
+      finalObservation.pendingEventCount = 0;
       disposed = true;
       for (const handle of pending.values()) agenda.delete(handle);
       pending.clear();

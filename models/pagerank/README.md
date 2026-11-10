@@ -23,10 +23,10 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
-| `networkChoice` | `"Example 1"` | `Example 1`, `Example 2`, `Preferential Attachment` |
+| `networkChoice` | `"example-1"` | `example-1`, `example-2`, `preferential-attachment` |
 | `calculationMethod` | `"random-surfer"` | `diffusion`, `random-surfer` |
 | `dampingFactor` | `0.85` | number; ≥ 0; ≤ 1 |
-| `numberOfSurfers` | `5` | integer; ≥ 1; ≤ 100 |
+| `surferCount` | `5` | integer; ≥ 1; ≤ 100 |
 | `watchSurfers` | `true` | boolean |
 | `showPageRanks` | `true` | boolean |
 

@@ -1,10 +1,10 @@
 /** NetLogo Flocking, Wilensky (1998), CC BY-NC-SA 3.0; exact source/NOTICE retained. */
 import { Agent, Random, World, run, geometry } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface FlockingParameters {
   seed: number;
-  population: number;
+  birdCount: number;
   vision: number;
   minimumSeparation: number;
   maxAlignTurn: number;
@@ -19,7 +19,7 @@ export const inputs: Inputs<FlockingParameters> = {
     max: 4294967295,
     integer: true,
   },
-  population: {
+  birdCount: {
     kind: "number",
     default: 300,
     min: 1,
@@ -73,7 +73,7 @@ export function averageHeadingTowardsFlockmates(
     : (Math.atan2(dx, dy) * 180) / Math.PI;
 }
 export function create(options: Partial<FlockingParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const width = 71,
     height = 71;
@@ -82,7 +82,7 @@ export function create(options: Partial<FlockingParameters> = {}) {
     { random },
   );
   const birds = () => world.agents as readonly Bird[];
-  for (let i = 0; i < settings.population; i++)
+  for (let i = 0; i < settings.birdCount; i++)
     world.add(
       Agent.create(
         {
@@ -101,7 +101,7 @@ export function create(options: Partial<FlockingParameters> = {}) {
     );
   const shuffle = () =>
     random.sample(birds(), {
-      count: birds().length,
+      sampleCount: birds().length,
       algorithm: "fisher-yates-descending",
     });
   function turn(bird: Bird, angle: number, limit: number) {
@@ -116,7 +116,7 @@ export function create(options: Partial<FlockingParameters> = {}) {
       distance = Math.min(...distances);
     const nearest = random.sample(
       mates.filter((_, i) => distances[i] === distance),
-      { count: 1 },
+      { sampleCount: 1 },
     )[0]!;
     bird.nearestNeighbor = nearest.id;
     if (distance < settings.minimumSeparation) {
@@ -147,16 +147,16 @@ export function create(options: Partial<FlockingParameters> = {}) {
     );
   }
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++)
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++)
         run(world, () => {
           for (const bird of shuffle()) flock(bird);
           for (let substep = 0; substep < 5; substep++)
             for (const bird of shuffle()) bird.move(0.2);
         });
     },
-    setRules(rules: Partial<Omit<FlockingParameters, "seed" | "population">>) {
+    setRules(rules: Partial<Omit<FlockingParameters, "seed" | "birdCount">>) {
       if (
         typeof rules !== "object" ||
         rules === null ||
@@ -175,7 +175,7 @@ export function create(options: Partial<FlockingParameters> = {}) {
         )
       )
         throw new TypeError("Supply only live rule data.");
-      settings = parameters(inputs, { ...settings, ...rules });
+      settings = parseParameters(inputs, { ...settings, ...rules });
     },
     read() {
       return Object.freeze({

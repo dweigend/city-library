@@ -5,7 +5,7 @@ const instance = model.create({ width: 3, height: 3, seed: 5 });
 instance.setVotes(Array<number>(9).fill(0));
 const captured = instance.read();
 assert.equal(captured.tick, 0);
-assert.equal(captured.counts.zero, 9);
+assert.equal(captured.counts.zeroVoteCount, 9);
 assert.equal(captured.history.length, 1);
 assert.throws(() => instance.setVotes([0, 1]));
 assert.throws(() => instance.setVotes([2, ...Array<number>(8).fill(0)]));

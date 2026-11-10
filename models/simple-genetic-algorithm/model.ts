@@ -1,7 +1,7 @@
 /** Stonedahl & Wilensky (2008), CC BY-NC-SA 3.0. Exact source/notices adjacent. */
 import { Agent, Random, World, run, stats } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface Parameters {
   seed: number;
   width: number;
@@ -55,7 +55,7 @@ export function hammingDistance(a: readonly number[], b: readonly number[]) {
   return a.reduce((sum, v, i) => sum + Number(v !== b[i]), 0) / a.length;
 }
 export function create(options: Partial<Parameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed }),
     world = World.create({ random });
   type Individual = Agent<{ who: number; bits: number[]; fitness: number }>;
@@ -136,13 +136,13 @@ export function create(options: Partial<Parameters> = {}) {
       pairs = Math.floor(
         (settings.populationSize * settings.crossoverRate) / 100 / 2,
       );
-    const parent = () => chooseBest(random.sample(old, { count: 3 }));
+    const parent = () => chooseBest(random.sample(old, { sampleCount: 3 }));
     for (let i = 0; i < pairs; i++)
       offspring.push(...crossover(parent().bits, parent().bits));
     while (offspring.length < settings.populationSize)
       offspring.push([...parent().bits]);
     for (const p of old) p.delete();
-    for (const bits of random.sample(offspring, { count: offspring.length }))
+    for (const bits of random.sample(offspring, { sampleCount: offspring.length }))
       add(mutate(bits));
     winner = chooseBest(population());
   }
@@ -153,19 +153,19 @@ export function create(options: Partial<Parameters> = {}) {
     crossover,
     mutate,
     createNextGeneration,
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) {
         if (winner.fitness === settings.width) break;
         run(world, createNextGeneration);
         record();
       }
     },
     setParameters(changes: Partial<Omit<Parameters, "seed" | "width">>) {
-      parameters(inputs, changes);
+      parseParameters(inputs, changes);
       if (Object.hasOwn(changes, "seed") || Object.hasOwn(changes, "width"))
         throw new TypeError("Seed and genome width are setup-only.");
-      settings = parameters(inputs, { ...settings, ...changes });
+      settings = parseParameters(inputs, { ...settings, ...changes });
     },
     setScenario(s: { genomes: readonly (readonly number[])[] }) {
       if (

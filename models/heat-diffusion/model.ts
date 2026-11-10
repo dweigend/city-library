@@ -3,7 +3,7 @@
  */
 import { Grid, Random, World, run, stats } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export type Material =
   "wood" | "stone" | "iron" | "aluminum" | "silver" | "other";
 export interface HeatParameters {
@@ -41,7 +41,7 @@ export const inputs: Inputs<HeatParameters> = {
   },
 };
 export function create(options: Partial<HeatParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   if (settings.width % 2 !== 1 || settings.height % 2 !== 1)
     throw new RangeError("Use odd cell dimensions for integer native fields.");
   const random = Random.create({ seed: settings.seed });
@@ -146,7 +146,7 @@ export function create(options: Partial<HeatParameters> = {}) {
   }
   function go() {
     for (const field of random.sample(fields, {
-      count: fields.length,
+      sampleCount: fields.length,
       algorithm: "fisher-yates-descending",
     }))
       updateField(field);
@@ -176,7 +176,7 @@ export function create(options: Partial<HeatParameters> = {}) {
         ].includes(key)
       )
         throw new TypeError("Only live thermal parameters may change.");
-    settings = parameters(inputs, { ...settings, ...changes });
+    settings = parseParameters(inputs, { ...settings, ...changes });
   }
   function updateAlpha(material: Material = settings.materialType) {
     const alphas = {
@@ -186,8 +186,8 @@ export function create(options: Partial<HeatParameters> = {}) {
       aluminum: 0.8418,
       silver: 1.7004,
     };
-    const next = parameters(inputs, { ...settings, materialType: material });
-    settings = parameters(inputs, {
+    const next = parseParameters(inputs, { ...settings, materialType: material });
+    settings = parseParameters(inputs, {
       ...next,
       alpha: material === "other" ? next.alpha : alphas[material],
     });
@@ -218,9 +218,9 @@ export function create(options: Partial<HeatParameters> = {}) {
     heatDiffusivity,
     setRules,
     setTemperatures,
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) {
         run(world, go);
         record();
       }

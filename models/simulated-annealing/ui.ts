@@ -21,7 +21,7 @@ export const ui = defineUI(model, {
     { label: "Global energy", value: (s) => s.globalEnergy },
     {
       label: "Accepted / attempted",
-      value: (s) => `${s.accepted} / ${s.attempts}`,
+      value: (s) => `${s.acceptedSwapCount} / ${s.attemptCount}`,
     },
   ],
   views: [

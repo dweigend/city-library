@@ -3,9 +3,9 @@
  */
 import { Agent, Grid, Random, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export type HeadState = 0 | 1;
-export type Turn = "--" | "Right" | "Backwards" | "Left";
+export type Turn = "straight" | "right" | "backwards" | "left";
 export type Rule = readonly [
   state: HeadState,
   turn: 0 | 90 | 180 | 270,
@@ -15,7 +15,7 @@ export interface TuringParameters {
   width: number;
   height: number;
   seed: number;
-  heads: number;
+  headCount: number;
   colorPaths: boolean;
   example: number;
   off0State: number;
@@ -31,7 +31,7 @@ export interface TuringParameters {
   on1Turn: Turn;
   on1On: boolean;
 }
-const directions = ["--", "Right", "Backwards", "Left"] as const;
+const directions = ["straight", "right", "backwards", "left"] as const;
 const liveKeys = [
   "example",
   "off0State",
@@ -57,20 +57,20 @@ export const inputs: Inputs<TuringParameters> = {
     max: 4294967295,
     integer: true,
   },
-  heads: { kind: "number", default: 32, min: 1, max: 256, integer: true },
+  headCount: { kind: "number", default: 32, min: 1, max: 256, integer: true },
   colorPaths: { kind: "boolean", default: true },
   example: { kind: "number", default: 1, min: 1, max: 5, integer: true },
   off0State: { kind: "number", default: 1, min: 0, max: 1, integer: true },
-  off0Turn: { kind: "choice", default: "Backwards", options: directions },
+  off0Turn: { kind: "choice", default: "backwards", options: directions },
   off0On: { kind: "boolean", default: true },
   off1State: { kind: "number", default: 0, min: 0, max: 1, integer: true },
-  off1Turn: { kind: "choice", default: "Right", options: directions },
+  off1Turn: { kind: "choice", default: "right", options: directions },
   off1On: { kind: "boolean", default: true },
   on0State: { kind: "number", default: 0, min: 0, max: 1, integer: true },
-  on0Turn: { kind: "choice", default: "--", options: directions },
+  on0Turn: { kind: "choice", default: "straight", options: directions },
   on0On: { kind: "boolean", default: true },
   on1State: { kind: "number", default: 1, min: 0, max: 1, integer: true },
-  on1Turn: { kind: "choice", default: "Left", options: directions },
+  on1Turn: { kind: "choice", default: "left", options: directions },
   on1On: { kind: "boolean", default: true },
 };
 const examples: readonly (readonly Rule[])[] = [
@@ -116,7 +116,7 @@ export function numberToDirection(angle: Rule[1]): Turn {
   return directions[angle / 90]!;
 }
 export function create(options: Partial<TuringParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   if (settings.width % 2 !== 1 || settings.height % 2 !== 1)
     throw new RangeError("Turing source coordinates require odd dimensions.");
   const random = Random.create({ seed: settings.seed });
@@ -165,7 +165,7 @@ export function create(options: Partial<TuringParameters> = {}) {
       field.on = false;
       field.colorNumber = 0;
     }
-    for (let who = 0; who < settings.heads; who++) {
+    for (let who = 0; who < settings.headCount; who++) {
       const color = 5 + 10 * random.number({ min: 0, max: 14, integer: true });
       const agent = Agent.create(
         {
@@ -197,7 +197,7 @@ export function create(options: Partial<TuringParameters> = {}) {
     // any writes. Only the writing ask's order affects colliding heads.
     for (const agent of agents) agent.ruleSet = findRule(agent, table);
     for (const agent of random.sample(agents, {
-      count: agents.length,
+      sampleCount: agents.length,
       algorithm: "fisher-yates-descending",
     })) {
       const cell = grid.fieldAt(agent)!;
@@ -246,7 +246,7 @@ export function create(options: Partial<TuringParameters> = {}) {
         );
       return tuple as unknown as Rule;
     });
-    settings = parameters(inputs, {
+    settings = parseParameters(inputs, {
       ...settings,
       off0State: next[0]![0],
       off0Turn: numberToDirection(next[0]![1]),
@@ -264,9 +264,9 @@ export function create(options: Partial<TuringParameters> = {}) {
   }
   setup();
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) run(world, go);
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) run(world, go);
     },
     setRules,
     setConfiguration(
@@ -284,13 +284,13 @@ export function create(options: Partial<TuringParameters> = {}) {
         )
       )
         throw new TypeError("Supply only example or live transition values.");
-      settings = parameters(inputs, { ...settings, ...field });
+      settings = parseParameters(inputs, { ...settings, ...field });
     },
     setupExample(index = settings.example) {
       if (!Number.isSafeInteger(index) || index < 1 || index > 5)
         throw new RangeError("Use example 1..5.");
       setRules(examples[index - 1]!);
-      settings = parameters(inputs, { ...settings, example: index });
+      settings = parseParameters(inputs, { ...settings, example: index });
       setup();
     },
     read() {

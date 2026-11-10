@@ -26,7 +26,7 @@ for (const directed of [true, false]) {
     close(bypass.get(u), 1 / 2); close(bypass.get(v), 1 / 4);
     close(result.get(u), 2 / 3);
   }
-  for (const field of ["direction", "disconnected", "weight", "damping", "tolerance", "maxIterations"]) {
+  for (const field of ["direction", "disconnected", "weight", "damping", "tolerance", "maxIterationCount"]) {
     assert.throws(() => graph.analyze({ measure: "betweenness", [field]: field === "weight" ? () => 1 : 1 } as never), TypeError);
     assert.throws(() => graph.analyze({ measure: "betweenness", [field]: undefined } as never), TypeError);
   }

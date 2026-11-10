@@ -1,7 +1,7 @@
 /** NetLogo Crystallization Basic (Wilensky, 2002), CC BY-NC-SA 3.0; see NOTICE.md. */
 import { Agent, Grid, Random, World, run, stats } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface CrystalParameters {
   width: number;
   height: number;
@@ -31,7 +31,7 @@ export const inputs: Inputs<CrystalParameters> = {
 type Atom = Agent<{ temp: number; sidesExposed: number; colorIndex: number }>;
 const colors = [8.9, 85, 95, 105, 115, 125, 15] as const;
 export function create(options: Partial<CrystalParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const space = { x: 33, y: 33, boundary: "hard" as const };
   const world = World.create(space, { random });
@@ -77,7 +77,7 @@ export function create(options: Partial<CrystalParameters> = {}) {
           Math.abs(f.y) < settings.height / 2,
     );
     for (const field of random.sample(sites, {
-      count: sites.length,
+      sampleCount: sites.length,
       algorithm: "fisher-yates-descending",
     })) {
       const atom = world.add(
@@ -149,17 +149,17 @@ export function create(options: Partial<CrystalParameters> = {}) {
     // Three distinct randomized passes are required: asynchronous cooling,
     // then complete color assignment, then orientation changes.
     for (const atom of random.sample(population, {
-      count: population.length,
+      sampleCount: population.length,
       algorithm: "fisher-yates-descending",
     }))
       coolAtom(atom);
     for (const atom of random.sample(population, {
-      count: population.length,
+      sampleCount: population.length,
       algorithm: "fisher-yates-descending",
     }))
       setColor(atom);
     for (const atom of random.sample(population, {
-      count: population.length,
+      sampleCount: population.length,
       algorithm: "fisher-yates-descending",
     }))
       rotateAtom(atom);
@@ -174,7 +174,7 @@ export function create(options: Partial<CrystalParameters> = {}) {
       if (!["meltingTemp", "roomTemp", "histogram"].includes(key))
         throw new TypeError("Only live crystallization rules may change.");
     // tempRange remains the setup-time quantity, exactly as in the source.
-    settings = parameters(inputs, { ...settings, ...changes });
+    settings = parseParameters(inputs, { ...settings, ...changes });
   }
   setup();
   return {
@@ -184,9 +184,9 @@ export function create(options: Partial<CrystalParameters> = {}) {
     recolor,
     setColor: recolor,
     setRules,
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count && !done(); i++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount && !done(); i++) {
         run(world, go);
         record();
       }

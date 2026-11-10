@@ -9,9 +9,9 @@ export function tablePage<T>(rows: readonly T[], requestedPage: number) {
   return {
     page,
     rows: rows.slice(start, end),
-    previous: page > 0,
-    next: page < lastPage,
-    paged: rows.length > tablePageSize,
+    hasPreviousPage: page > 0,
+    hasNextPage: page < lastPage,
+    isPaged: rows.length > tablePageSize,
     range: rows.length ? `${start + 1}–${end} of ${rows.length}` : "No rows",
   };
 }

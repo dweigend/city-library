@@ -14,8 +14,8 @@ regularization.setScenario(scene(regularization, {
     colonia: x === -82 && y === 0 ? -17 : x === -81 && y === 0 ? -15 : 0 }),
 }));
 regularization.advance();
-assert.equal(regularization.read().counts.rings, 1);
-assert.equal(regularization.read().counts.thirdBuilders, 1);
+assert.equal(regularization.read().counts.ringCount, 1);
+assert.equal(regularization.read().counts.thirdBuilderCount, 1);
 const newRing = regularization.read().agents.find(item => item.kind === "ring")!;
 assert.equal(newRing.x, -82); assert.equal(newRing.y, 0); near(newRing.size, 75);
 const newBuilder = regularization.read().agents.find(item => item.kind === "third-builder")!;
@@ -39,8 +39,8 @@ adjusted.setScenario(scene(adjusted, {
 }));
 adjusted.advanceCityscape();
 assert.equal(adjusted.read().tick, 26); assert.equal(adjusted.read().setupDone, false);
-assert.equal(adjusted.read().counts.thirdBuilders, 0);
-assert.equal(adjusted.read().counts.employmentCenters, 1); // industrial fallback duplicates collapse
+assert.equal(adjusted.read().counts.thirdBuilderCount, 0);
+assert.equal(adjusted.read().counts.employmentCenterCount, 1); // industrial fallback duplicates collapse
 assert.ok(adjusted.read().cells.every(item => item.landValue >= 0));
 assert.equal(adjusted.read().globals.marginalValue, 0);
 assert.equal(adjusted.read().globals.marginalWeight, 0);
@@ -57,7 +57,7 @@ growth.setScenario(scene(growth, {
 const original = growth.read().agents.find(item => item.kind === "third-builder")!.id;
 growth.advance();
 const built = growth.read();
-assert.equal(built.tick, 1); assert.equal(built.counts.thirdBuilders, 3);
+assert.equal(built.tick, 1); assert.equal(built.counts.thirdBuilderCount, 3);
 const builder = built.agents.find(item => item.id === original)!;
 assert.ok(builder.kind === "third-builder"); near(builder.y, 0.75); near(builder.weight, 0.55);
 assert.ok(built.agents.filter(item => item.kind === "third-builder").filter(item => item.id !== original).every(item => item.weight === 0.4));
@@ -83,7 +83,7 @@ reports.setScenario(scene(reports, {
 assert.equal(reports.read().reports.savings, 10); assert.equal(reports.read().reports.savingsNode, 30);
 assert.equal(reports.read().reports.equippedFieldCount, 2);
 assert.equal(reports.read().reports.noWaterPercent, 100); assert.equal(reports.read().reports.noPowerPercent, 100);
-assert.equal(reports.read().counts.migrants, 3); // denominators are equipped patches*density, not people
+assert.equal(reports.read().counts.migrantCount, 3); // denominators are equipped patches*density, not people
 
 const sparse = create();
 sparse.setScenario(scene(sparse, {
@@ -93,7 +93,7 @@ sparse.setScenario(scene(sparse, {
 }));
 const historyBefore = sparse.read().history.length;
 assert.throws(() => sparse.advance(), /empty|mean/i);
-assert.equal(sparse.read().tick, 1); assert.equal(sparse.read().counts.rings, 1); assert.equal(sparse.read().counts.migrants, 1);
+assert.equal(sparse.read().tick, 1); assert.equal(sparse.read().counts.ringCount, 1); assert.equal(sparse.read().counts.migrantCount, 1);
 assert.equal(cell(sparse, 2, 0).landValue, 0); assert.equal(cell(sparse, 2, 0).colonia, 9.9);
 assert.equal(sparse.read().globals.maxCost, 40); assert.equal(sparse.read().history.length, historyBefore);
 assert.equal(sparse.read().lastFailure!.tick, 1);
@@ -108,7 +108,7 @@ industrial.setScenario(scene(industrial, {
 const parentId = industrial.read().agents.find(item => item.kind === "migrant")!.id;
 assert.throws(() => industrial.advance(), /numeric|number|transport/i);
 const partial = industrial.read();
-assert.equal(partial.tick, 1); assert.equal(partial.counts.migrants, 2); // hatch was already committed
+assert.equal(partial.tick, 1); assert.equal(partial.counts.migrantCount, 2); // hatch was already committed
 const parent = partial.agents.find(item => item.id === parentId)!;
 assert.ok(parent.kind === "migrant"); assert.equal(parent.residentSince, 0); assert.equal(parent.livingExpenses, 40);
 assert.equal(partial.lastFailure!.action, "go"); assert.equal(partial.done, false);

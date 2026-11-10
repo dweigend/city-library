@@ -6,7 +6,7 @@ const binding = defineUI(model, {
   setup: ["seed"],
   change: (instance, changes) => instance.setParameters(changes),
   live: {
-    numberOfCars: {},
+    carCount: {},
     acceleration: {},
     deceleration: {},
     maxPatience: {},
@@ -77,9 +77,8 @@ const binding = defineUI(model, {
 });
 
 export { model };
-export const sourceMarker =
-  "selected-transport-b04:traffic-2-lanes:6a3d627581f1a628e42ff2ca13c643824f9a441309d08645e101df13d09f17d9";
-export const ui = { ...binding, model, sourceMarker };
+
+export const ui = { ...binding, model };
 
 type UIObservation = Observation<typeof model>;
 
@@ -184,7 +183,7 @@ function carsPerLaneSeries(state: UIObservation): readonly Series[] {
       color: "#298d35",
       points: state.history.map((point) => ({
         x: point.tick,
-        y: point.lane1,
+        y: point.lane1CarCount,
       })),
     },
     {
@@ -192,7 +191,7 @@ function carsPerLaneSeries(state: UIObservation): readonly Series[] {
       color: "#3259cc",
       points: state.history.map((point) => ({
         x: point.tick,
-        y: point.lane2,
+        y: point.lane2CarCount,
       })),
     },
   ];

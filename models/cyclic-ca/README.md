@@ -26,7 +26,7 @@ const observation = simulation.read();
 | `height` | `201` | integer; ≥ 3; ≤ 501 |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
 | `preset` | `"none"` | 22 named choices; see `inputs.preset` |
-| `neighborhood` | `"Moore"` | `Moore`, `von Neumann` |
+| `neighborhood` | `"moore"` | `moore`, `von-neumann` |
 | `radius` | `3` | integer; ≥ 1; ≤ 6 |
 | `stateCount` | `3` | integer; ≥ 2; ≤ 14 |
 | `threshold` | `3` | integer; ≥ 1; ≤ 168 |

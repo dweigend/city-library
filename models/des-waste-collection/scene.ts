@@ -14,16 +14,16 @@ export function scene(state: Observation<typeof model>): SpatialData {
       shape: "rectangle", extent: { width: 0.5, height: 0.5 }, color: scientificPalette.waiting });
   }
   agents.push({ id: "depot", x: -6, y: 0, shape: "rectangle", extent: { width: 2, height: 2 }, filled: false,
-    stroke: state.depotBusy ? scientificPalette.active : scientificPalette.neutral });
+    stroke: state.busyDepotCount ? scientificPalette.active : scientificPalette.neutral });
   const truck = { x: state.truck.x === -2 ? -6 : state.truck.x * 3 + 1, y: state.truck.y * 3 - 0.8 };
   agents.push({ id: state.truck.id, ...truck, shape: "triangle", size: 15, color: scientificPalette.active });
   for (let unit = 0; unit < state.parameters.loadCapacity; unit++) agents.push({ id: `load:${unit}`, x: -5.5 + (unit % 6) * 0.65, y: -4 - Math.floor(unit / 6) * 0.65,
-    shape: "rectangle", extent: { width: 0.5, height: 0.5 }, filled: unit < state.carried,
+    shape: "rectangle", extent: { width: 0.5, height: 0.5 }, filled: unit < state.carriedWasteUnitCount,
     color: scientificPalette.active, stroke: scientificPalette.neutral });
   return { width: 20, height: 13, showLabels: false, agents,
-    description: `Six collection patches contain ${state.remaining} load units; triangle truck carries ${state.carried} of ${state.parameters.loadCapacity}; ${state.delivered} delivered; depot ${state.depotBusy ? "unloading" : "available"}. Squares mark individual units, outlined patches are empty when collected.`,
+    description: `Six collection patches contain ${state.remainingWasteUnitCount} load units; triangle truck carries ${state.carriedWasteUnitCount} of ${state.parameters.loadCapacity}; ${state.deliveredWasteUnitCount} delivered; depot ${state.busyDepotCount ? "unloading" : "available"}. Squares mark individual units, outlined patches are empty when collected.`,
     labels: [{ x: -6, y: 1.7, text: "Depot" },
-      { x: -3.8, y: -3.3, text: `Truck load ${state.carried}/${state.parameters.loadCapacity}` },
-      { x: 3, y: 4.5, text: `Collection sites · ${state.remaining} remaining` },
-      { x: 3, y: -4.3, text: `Delivered ${state.delivered}` }] };
+      { x: -3.8, y: -3.3, text: `Truck load ${state.carriedWasteUnitCount}/${state.parameters.loadCapacity}` },
+      { x: 3, y: 4.5, text: `Collection sites · ${state.remainingWasteUnitCount} remaining` },
+      { x: 3, y: -4.3, text: `Delivered ${state.deliveredWasteUnitCount}` }] };
 }

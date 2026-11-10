@@ -15,8 +15,8 @@ export const ui = defineUI(model, {
       value: (state) => state.percentBurned,
       format: (value: number) => value.toFixed(2),
     },
-    { label: "Fires", value: (state) => state.counts.fires },
-    { label: "Embers", value: (state) => state.counts.embers },
+    { label: "Fires", value: (state) => state.counts.fireCount },
+    { label: "Embers", value: (state) => state.counts.emberCount },
   ],
   views: [
     {

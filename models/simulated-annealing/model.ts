@@ -1,7 +1,7 @@
 /** Stonedahl & Wilensky (2009), CC BY-NC-SA 3.0. Exact source and notices adjacent. */
 import { Grid, Random, World, run, geometry } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface AnnealingParameters {
   width: number;
   height: number;
@@ -38,7 +38,7 @@ export function fieldEnergy(
   );
 }
 export function create(options: Partial<AnnealingParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const { width, height } = settings;
   if ((width * height) % 2)
     throw new RangeError(
@@ -54,8 +54,8 @@ export function create(options: Partial<AnnealingParameters> = {}) {
   const fields = grid.fields;
   let temperature = 1,
     globalEnergy = 0,
-    attempts = 0,
-    accepted = 0;
+    attemptCount = 0,
+    acceptedSwapCount = 0;
   const history: {
     tick: number;
     energy: number;
@@ -93,7 +93,7 @@ export function create(options: Partial<AnnealingParameters> = {}) {
   function attemptSwap(x1: number, y1: number, x2: number, y2: number) {
     const p1 = at(x1, y1),
       p2 = at(x2, y2);
-    attempts++;
+    attemptCount++;
     if (p1.brightness === p2.brightness) return false;
     const affected = new Set([
       p1,
@@ -119,7 +119,7 @@ export function create(options: Partial<AnnealingParameters> = {}) {
       p2.brightness = p1.brightness;
       p1.brightness = b;
     } else {
-      accepted++;
+      acceptedSwapCount++;
       globalEnergy += after - before;
     }
     return accept;
@@ -140,12 +140,12 @@ export function create(options: Partial<AnnealingParameters> = {}) {
       throw new RangeError("Temperature must be in [0,1].");
     fields.forEach((f, i) => (f.brightness = s.brightness[i]!));
     temperature = t;
-    attempts = accepted = 0;
+    attemptCount = acceptedSwapCount = 0;
     globalEnergy = totalEnergy();
     history.length = 0;
     record();
   }
-  for (const f of random.sample(fields, { count: fields.length / 2 }))
+  for (const f of random.sample(fields, { sampleCount: fields.length / 2 }))
     f.brightness = 1;
   globalEnergy = totalEnergy();
   record();
@@ -170,10 +170,10 @@ export function create(options: Partial<AnnealingParameters> = {}) {
     });
   }
   return {
-    advance(count = 1) {
-      stepCount(count);
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
       neighborhoodTable();
-      for (let t = 0; t < count; t++) {
+      for (let t = 0; t < stepCount; t++) {
         run(world, () => {
           for (let n = 0; n < 1000; n++) {
             const i = Math.floor(random.number() * fields.length),
@@ -204,7 +204,7 @@ export function create(options: Partial<AnnealingParameters> = {}) {
         )
       )
         throw new TypeError("Setup-only parameter.");
-      settings = parameters(inputs, { ...settings, ...changes });
+      settings = parseParameters(inputs, { ...settings, ...changes });
     },
     read() {
       return {
@@ -214,8 +214,8 @@ export function create(options: Partial<AnnealingParameters> = {}) {
         parameters: { ...settings },
         temperature,
         globalEnergy,
-        attempts,
-        accepted,
+        attemptCount: attemptCount,
+        acceptedSwapCount: acceptedSwapCount,
         randomState: random.state,
         brightness: fields.map((f) => f.brightness),
         cells: fields.map((f) => ({

@@ -18,7 +18,7 @@ const colors = {
   order: "#d19845",
 };
 export const ui = defineUI(model, {
-  setup: ["seed", { field: "numberOfRobots", label: "Robots" }],
+  setup: ["seed", { field: "robotCount", label: "Robots" }],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/RoboticFactory",
     label:
@@ -39,8 +39,8 @@ export const ui = defineUI(model, {
   },
   monitors: [
     { label: "Tick", value: (s) => s.tick },
-    { label: "New sheets", value: (s) => s.newSheets },
-    { label: "Products ready", value: (s) => s.productsReady },
+    { label: "New sheets", value: (s) => s.newSheetCount },
+    { label: "Products ready", value: (s) => s.readyProductCount },
     {
       label: "Idle / tick",
       value: (s) => s.idlePerTick,
@@ -62,7 +62,7 @@ export const ui = defineUI(model, {
           label: "Sum idle / tick",
           points: s.history
             .filter((p) => p.tick > 0)
-            .map((p) => ({ x: p.tick, y: p.idle })),
+            .map((p) => ({ x: p.tick, y: p.idleRobotCount })),
         },
       ],
     },
@@ -119,15 +119,15 @@ function outstandingOrdersSeries(s: UIObservation): readonly Series[] {
   return [
     {
       label: "Total",
-      points: s.history.map((p) => ({ x: p.tick, y: p.orders })),
+      points: s.history.map((p) => ({ x: p.tick, y: p.orderCount })),
     },
     {
       label: "Deluxe",
-      points: s.history.map((p) => ({ x: p.tick, y: p.deluxe })),
+      points: s.history.map((p) => ({ x: p.tick, y: p.deluxeOrderCount })),
     },
     {
       label: "Standard",
-      points: s.history.map((p) => ({ x: p.tick, y: p.standard })),
+      points: s.history.map((p) => ({ x: p.tick, y: p.standardOrderCount })),
     },
   ];
 }
@@ -143,11 +143,11 @@ function robotEnergySeries(s: UIObservation): readonly BarSeries[] {
     },
     {
       label: "Below zero",
-      points: [{ x: -50, y: s.energyHistogram.underflow }],
+      points: [{ x: -50, y: s.energyHistogram.underflowValueCount }],
     },
     {
       label: "Above 600",
-      points: [{ x: 650, y: s.energyHistogram.overflow }],
+      points: [{ x: 650, y: s.energyHistogram.overflowValueCount }],
     },
   ];
 }
@@ -156,15 +156,15 @@ function supplyOfMachinesSeries(s: UIObservation): readonly Series[] {
   return [
     {
       label: "Finishers",
-      points: s.history.map((p) => ({ x: p.tick, y: p.finishers })),
+      points: s.history.map((p) => ({ x: p.tick, y: p.finisherCount })),
     },
     {
       label: "Cutters",
-      points: s.history.map((p) => ({ x: p.tick, y: p.cutters })),
+      points: s.history.map((p) => ({ x: p.tick, y: p.cutterCount })),
     },
     {
       label: "Stitchers",
-      points: s.history.map((p) => ({ x: p.tick, y: p.stitchers })),
+      points: s.history.map((p) => ({ x: p.tick, y: p.stitcherCount })),
     },
     {
       label: "Loading dock",

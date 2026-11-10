@@ -45,8 +45,8 @@ export const ui = defineUI(model, {
   },
   change: (instance, changes) => instance.setRules(changes),
   live: {
-    maquiladoras: {},
-    serviceCenters: {},
+    maquiladoraCount: {},
+    serviceCenterCount: {},
     migrationTicks: {},
     crossingTicks: {},
     buildingTicks: {},
@@ -67,18 +67,18 @@ export const ui = defineUI(model, {
     {
       label: "Services / jobs",
       value: (s) =>
-        `${s.counts.serviceCenters} / ${s.counts.employmentCenters}`,
+        `${s.counts.serviceCenterCount} / ${s.counts.employmentCenterCount}`,
     },
     {
       label: "Builders (1 / 2 / 3)",
       value: (s) =>
-        `${s.counts.firstBuilders} / ${s.counts.secondBuilders} / ${s.counts.thirdBuilders}`,
+        `${s.counts.firstBuilderCount} / ${s.counts.secondBuilderCount} / ${s.counts.thirdBuilderCount}`,
     },
     { label: "Seed migrants", value: (s) => s.seedMigrants },
-    { label: "Irregular settlers", value: (s) => s.counts.migrants },
+    { label: "Irregular settlers", value: (s) => s.counts.migrantCount },
     {
       label: "Nodes / rings",
-      value: (s) => `${s.counts.nodes} / ${s.counts.rings}`,
+      value: (s) => `${s.counts.nodeCount} / ${s.counts.ringCount}`,
     },
     {
       label: "Values",

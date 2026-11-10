@@ -23,15 +23,15 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer |
-| `initialFruitBushes` | `40` | integer; ≥ 0; ≤ 40 |
-| `initialForagers` | `40` | integer; ≥ 1; ≤ 100 |
+| `initialFruitBushCount` | `40` | integer; ≥ 0; ≤ 40 |
+| `initialForagerCount` | `40` | integer; ≥ 1; ≤ 100 |
 | `ticksToFlee` | `49` | integer; ≥ 0; ≤ 100 |
 | `rateOfMutation` | `1` | number; ≥ 0; ≤ 10 |
 | `collaborationBonus` | `5` | number; ≥ 0.1; ≤ 5 |
 | `maxAge` | `500` | integer; ≥ 1; ≤ 500 |
 | `bushGrowthChance` | `6` | integer; ≥ 0; ≤ 100 |
 | `showEnergy` | `false` | boolean |
-| `visualization` | `"Reactive Aggression"` | `None`, `Reactive Aggression`, `Proactive Aggression`, `Strength`, `Speed`, `Intelligence` |
+| `visualization` | `"reactive-aggression"` | `none`, `reactive-aggression`, `proactive-aggression`, `strength`, `speed`, `intelligence` |
 
 ## Actions and observations
 

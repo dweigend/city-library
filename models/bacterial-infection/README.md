@@ -25,20 +25,20 @@ const observation = simulation.read();
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
 | `reproduce` | `true` | boolean |
 | `reproduceEvery` | `2` | number; ≥ 0.5; ≤ 4 |
-| `autoDoseA` | `"yes, but skip dose 4"` | `no, skip all dosing`, `yes, skip no doses`, `yes, but skip dose 2`, `yes, but skip dose 3`, `yes, but skip dose 4` |
-| `autoDoseB` | `"yes, but skip dose 4"` | `no, skip all dosing`, `yes, skip no doses`, `yes, but skip dose 2`, `yes, but skip dose 3`, `yes, but skip dose 4` |
+| `autoDoseA` | `"skip-dose-4"` | `skip-all-doses`, `take-all-doses`, `skip-dose-2`, `skip-dose-3`, `skip-dose-4` |
+| `autoDoseB` | `"skip-dose-4"` | `skip-all-doses`, `take-all-doses`, `skip-dose-2`, `skip-dose-3`, `skip-dose-4` |
 | `aDosage` | `50` | number; ≥ 50; ≤ 200 |
 | `bDosage` | `50` | number; ≥ 50; ≤ 200 |
 | `doseAEvery` | `4` | number; ≥ 4; ≤ 24 |
 | `doseBEvery` | `4` | number; ≥ 4; ≤ 24 |
-| `init3PoresA` | `4` | integer; ≥ 0; ≤ 16 |
-| `init4PoresA` | `4` | integer; ≥ 0; ≤ 16 |
-| `init5PoresA` | `4` | integer; ≥ 0; ≤ 16 |
-| `init6PoresA` | `4` | integer; ≥ 0; ≤ 16 |
-| `init3PoresB` | `4` | integer; ≥ 0; ≤ 16 |
-| `init4PoresB` | `4` | integer; ≥ 0; ≤ 16 |
-| `init5PoresB` | `4` | integer; ≥ 0; ≤ 16 |
-| `init6PoresB` | `4` | integer; ≥ 0; ≤ 16 |
+| `initialThreePoreBacteriumCountA` | `4` | integer; ≥ 0; ≤ 16 |
+| `initialFourPoreBacteriumCountA` | `4` | integer; ≥ 0; ≤ 16 |
+| `initialFivePoreBacteriumCountA` | `4` | integer; ≥ 0; ≤ 16 |
+| `initialSixPoreBacteriumCountA` | `4` | integer; ≥ 0; ≤ 16 |
+| `initialThreePoreBacteriumCountB` | `4` | integer; ≥ 0; ≤ 16 |
+| `initialFourPoreBacteriumCountB` | `4` | integer; ≥ 0; ≤ 16 |
+| `initialFivePoreBacteriumCountB` | `4` | integer; ≥ 0; ≤ 16 |
+| `initialSixPoreBacteriumCountB` | `4` | integer; ≥ 0; ≤ 16 |
 
 ## Actions and observations
 

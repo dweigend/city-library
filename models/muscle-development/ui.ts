@@ -3,7 +3,7 @@ import { defineUI, type Observation, type Series } from "../../ui/index.ts";
 import { model } from "./model.ts";
 
 const binding = defineUI(model, {
-  setup: ["seed", "slowTwitchFibers"],
+  setup: ["seed", "slowTwitchFiberPercent"],
   change: (instance, changes) => instance.setParameters(changes),
   live: {
     daysBetweenWorkouts: {},
@@ -59,9 +59,8 @@ const binding = defineUI(model, {
 });
 
 export { model };
-export const sourceMarker =
-  "selected-biology-b07:muscle-development:29c39af0fbaff47c0ecab4d901260f05a5195f807046dd895ddd66eef1163e26";
-export const ui = { ...binding, model, sourceMarker };
+
+export const ui = { ...binding, model };
 
 type UIObservation = Observation<typeof model>;
 

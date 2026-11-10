@@ -23,8 +23,8 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer |
-| `initialPeople` | `250` | integer; ≥ 50; ≤ 400 |
-| `initialAmbulance` | `2` | integer; ≥ 0; ≤ 4 |
+| `initialPersonCount` | `250` | integer; ≥ 50; ≤ 400 |
+| `initialAmbulanceCount` | `2` | integer; ≥ 0; ≤ 4 |
 | `infectionChance` | `55` | number; ≥ 0; ≤ 100 |
 | `recoveryChance` | `45` | number; ≥ 0; ≤ 100 |
 | `averageRecoveryTime` | `110` | number; ≥ 0; ≤ 300 |

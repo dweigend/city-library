@@ -1,7 +1,7 @@
 /** Stonedahl & Wilensky (2008), CC BY-NC-SA 3.0; source notices adjacent. */
 import { Agent, Grid, Random, World, run, stats, geometry } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface SwarmParameters {
   width: number;
   height: number;
@@ -12,8 +12,8 @@ export interface SwarmParameters {
   particleSpeedLimit: number;
   attractionToPersonalBest: number;
   attractionToGlobalBest: number;
-  highlightMode: "None" | "Best found" | "True best";
-  trailsMode: "None" | "Tails" | "Traces";
+  highlightMode: "none" | "best-found" | "true-best";
+  trailsMode: "none" | "tails" | "traces";
 }
 export const inputs: Inputs<SwarmParameters> = {
   width: { kind: "number", default: 201, min: 3, max: 301, integer: true },
@@ -39,13 +39,13 @@ export const inputs: Inputs<SwarmParameters> = {
   attractionToGlobalBest: { kind: "number", default: 1, min: 0, max: 2, step: 0.1 },
   highlightMode: {
     kind: "choice",
-    default: "None",
-    options: ["None", "Best found", "True best"],
+    default: "none",
+    options: ["none", "best-found", "true-best"],
   },
   trailsMode: {
     kind: "choice",
-    default: "None",
-    options: ["None", "Tails", "Traces"],
+    default: "none",
+    options: ["none", "tails", "traces"],
   },
 };
 export interface ParticleInput {
@@ -58,7 +58,7 @@ export interface ParticleInput {
   personalBestY?: number;
 }
 export function create(options: Partial<SwarmParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const { width, height } = settings,
     space = { x: width, y: height, boundary: "wrap" as const },
     random = Random.create({ seed: settings.seed }),
@@ -127,7 +127,7 @@ export function create(options: Partial<SwarmParameters> = {}) {
   }
   function updateBests() {
     for (const p of random.sample(particles, {
-      count: particles.length,
+      sampleCount: particles.length,
       algorithm: "fisher-yates-descending",
     })) {
       const val = grid.fieldAt(p)!.val;
@@ -147,9 +147,9 @@ export function create(options: Partial<SwarmParameters> = {}) {
     }
   }
   function moveParticles() {
-    if (settings.trailsMode !== "Traces") trails.length = 0;
+    if (settings.trailsMode !== "traces") trails.length = 0;
     for (const p of random.sample(particles, {
-      count: particles.length,
+      sampleCount: particles.length,
       algorithm: "fisher-yates-descending",
     })) {
       const from = { x: p.x, y: p.y };
@@ -204,7 +204,7 @@ export function create(options: Partial<SwarmParameters> = {}) {
         y: Math.abs(vector.y) < 1e-15 ? 0 : vector.y * magnitude,
       };
       p.move({ by });
-      if (settings.trailsMode !== "None")
+      if (settings.trailsMode !== "none")
         trails.push({ from, to: { x: p.x, y: p.y }, particle: p.sourceId });
     }
     if (trails.length > 20000) trails.splice(0, trails.length - 20000);
@@ -281,9 +281,9 @@ export function create(options: Partial<SwarmParameters> = {}) {
     );
   record();
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) {
         updateBests();
         if (globalBestValue === trueBest.val) break;
         run(world, moveParticles);
@@ -306,7 +306,7 @@ export function create(options: Partial<SwarmParameters> = {}) {
         )
       )
         throw new TypeError("Setup-only parameter.");
-      settings = parameters(inputs, { ...settings, ...changes });
+      settings = parseParameters(inputs, { ...settings, ...changes });
     },
     read() {
       return {

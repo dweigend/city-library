@@ -1,13 +1,13 @@
 /** NetLogo Fireflies, Wilensky (1997), CC BY-NC-SA 3.0; see exact source and NOTICE. */
 import { Agent, Grid, Random, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface FirefliesParameters {
   seed: number;
-  number: number;
+  fireflyCount: number;
   flashLength: number;
   cycleLength: number;
-  flashesToReset: number;
+  flashCountToReset: number;
   strategy: "delay" | "advance";
   showDarkFireflies: boolean;
 }
@@ -19,10 +19,10 @@ export const inputs: Inputs<FirefliesParameters> = {
     max: 4294967295,
     integer: true,
   },
-  number: { kind: "number", default: 1500, min: 0, max: 2000, integer: true },
+  fireflyCount: { kind: "number", default: 1500, min: 0, max: 2000, integer: true },
   flashLength: { kind: "number", default: 1, min: 1, max: 10, integer: true },
   cycleLength: { kind: "number", default: 10, min: 5, max: 100, integer: true },
-  flashesToReset: { kind: "number", default: 1, min: 1, max: 3, integer: true },
+  flashCountToReset: { kind: "number", default: 1, min: 1, max: 3, integer: true },
   strategy: { kind: "choice", default: "delay", options: ["delay", "advance"] },
   showDarkFireflies: { kind: "boolean", default: false },
 };
@@ -34,7 +34,7 @@ type Firefly = Agent<{
   flashing: boolean;
 }>;
 export function create(options: Partial<FirefliesParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const width = 71,
     height = 71;
@@ -56,17 +56,17 @@ export function create(options: Partial<FirefliesParameters> = {}) {
     ]),
   );
   const fireflies = () => world.agents as readonly Firefly[];
-  const history: Readonly<{ tick: number; flashing: number }>[] = [];
+  const history: Readonly<{ tick: number; flashingFireflyCount: number }>[] = [];
   function record() {
     history.push(
       Object.freeze({
         tick: world.tick.value,
-        flashing: fireflies().filter((f) => f.flashing).length,
+        flashingFireflyCount: fireflies().filter((f) => f.flashing).length,
       }),
     );
     if (history.length > 1001) history.splice(1, 1);
   }
-  for (let i = 0; i < settings.number; i++) {
+  for (let i = 0; i < settings.fireflyCount; i++) {
     const clock = Math.floor(
       random.number() * Math.round(settings.cycleLength),
     );
@@ -91,15 +91,15 @@ export function create(options: Partial<FirefliesParameters> = {}) {
   }
   record();
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) {
         run(world, () => {
           const oldFlashes = new Set<Agent>(
             fireflies().filter((f) => f.flashing),
           );
           for (const f of random.sample(fireflies(), {
-            count: fireflies().length,
+            sampleCount: fireflies().length,
             algorithm: "fisher-yates-descending",
           })) {
             f.rotate(random.number() * 90 - random.number() * 90);
@@ -115,7 +115,7 @@ export function create(options: Partial<FirefliesParameters> = {}) {
                   .neighbors({ source: nearby, radius: 1 })
                   .filter((other) => oldFlashes.has(other)).length +
                 (f.flashing ? 1 : 0);
-              if (flashes >= settings.flashesToReset) f.clock = f.resetLevel;
+              if (flashes >= settings.flashCountToReset) f.clock = f.resetLevel;
             }
           }
           for (const f of fireflies()) f.flashing = f.clock < f.threshold;
@@ -123,7 +123,7 @@ export function create(options: Partial<FirefliesParameters> = {}) {
         record();
       }
     },
-    setRules(rules: Partial<Omit<FirefliesParameters, "seed" | "number">>) {
+    setRules(rules: Partial<Omit<FirefliesParameters, "seed" | "fireflyCount">>) {
       if (
         typeof rules !== "object" ||
         rules === null ||
@@ -142,7 +142,7 @@ export function create(options: Partial<FirefliesParameters> = {}) {
         )
       )
         throw new TypeError("Supply only live rule data.");
-      settings = parameters(inputs, { ...settings, ...rules });
+      settings = parseParameters(inputs, { ...settings, ...rules });
     },
     read() {
       return Object.freeze({

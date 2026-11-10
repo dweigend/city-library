@@ -26,7 +26,7 @@ const observation = simulation.read();
 | `middleOn` | `true` | boolean |
 | `spawnRate` | `10` | integer; ≥ 1; ≤ 10 |
 | `smoothing` | `10` | integer; ≥ 1; ≤ 10 |
-| `mode` | `"Probabilistic Greedy"` | `Best Known /w Random Deviation`, `Empirical Analytical`, `Probabilistic Greedy` |
+| `mode` | `"probabilistic-greedy"` | `best-known-with-random-deviation`, `empirical-analytical`, `probabilistic-greedy` |
 | `randomness` | `16` | integer; ≥ 0; ≤ 100 |
 
 ## Actions and observations
@@ -35,7 +35,7 @@ Use `advance(...)` for progress and `read()` for observations; the model defines
 
 Other instance procedures: `setRules`. See their typed arguments in [model.ts](model.ts).
 
-Model-specific `read()` fields include `travelTime`, `top`, `bottom`, `middle`, `spawnTime`, `middlePrev`, `avg`, `carsSpawned`, `completed`, `topProb`, `bottomProb`, `middleProb`, `routeCounts`, `commuters`, `cells`.
+Model-specific `read()` fields include `travelTime`, `top`, `bottom`, `middle`, `spawnTime`, `middlePrev`, `avg`, `spawnedCarCount`, `completedCarCount`, `topProb`, `bottomProb`, `middleProb`, `routeCounts`, `commuters`, `cells`.
 
 The [UI binding](ui.ts) presents `Middle road`, `Route choice`, `Tick`, `Active commuters`, `Cars spawned`, `Completed`, `Last travel time`, `Average travel time`, `Road congestion and commuters`, `Travel time (ticks / 450)` and further views or controls.
 

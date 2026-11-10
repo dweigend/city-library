@@ -5,11 +5,11 @@
  */
 import { Agent, Graph, Random, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 
 export interface VirusParameters {
   seed: number;
-  numberOfNodes: number;
+  nodeCount: number;
   averageNodeDegree: number;
   initialOutbreakSize: number;
   spreadChance: number;
@@ -19,7 +19,7 @@ export interface VirusParameters {
 }
 export const inputs: Inputs<VirusParameters> = {
   seed: { kind: "number", default: 1, min: -2147483648, max: 4294967295, integer: true },
-  numberOfNodes: { kind: "number", default: 150, min: 10, max: 300, step: 5, integer: true },
+  nodeCount: { kind: "number", default: 150, min: 10, max: 300, step: 5, integer: true },
   averageNodeDegree: { kind: "number", default: 6, min: 1, max: 299, integer: true },
   initialOutbreakSize: { kind: "number", default: 3, min: 1, max: 300, integer: true },
   spreadChance: { kind: "number", default: 2.5, min: 0, max: 10, step: 0.1 },
@@ -33,11 +33,11 @@ export interface ConnectionInput { readonly from: number; readonly to: number }
 type VirusNode = Agent<{ index: number; status: InfectionStatus; checkTimer: number }>;
 type LiveRules = Pick<VirusParameters, "spreadChance" | "recoveryChance" | "resistanceChance" | "checkFrequency">;
 /** History values are percentages, matching the source plot rather than its loose Info description. */
-interface VirusSample { readonly tick: number; readonly susceptible: number; readonly infected: number; readonly resistant: number }
+interface VirusSample { readonly tick: number; readonly susceptibleNodeCount: number; readonly infectedNodeCount: number; readonly resistantNodeCount: number }
 
 export function create(options: Partial<VirusParameters> = {}) {
-  let settings = parameters(inputs, options);
-  if (settings.averageNodeDegree > settings.numberOfNodes - 1 || settings.initialOutbreakSize > settings.numberOfNodes)
+  let settings = parseParameters(inputs, options);
+  if (settings.averageNodeDegree > settings.nodeCount - 1 || settings.initialOutbreakSize > settings.nodeCount)
     throw new RangeError("Degree and outbreak must fit the setup population.");
   const random = Random.create({ seed: settings.seed });
   const world = World.create({ x: 41, y: 41 }, { random });
@@ -47,7 +47,7 @@ export function create(options: Partial<VirusParameters> = {}) {
   const integer = (upper: number) => Math.floor(random.number() * upper);
 
   function setupNodes() {
-    for (let index = 0; index < settings.numberOfNodes; index++) {
+    for (let index = 0; index < settings.nodeCount; index++) {
       const x = (random.number() * 41 - 20.5) * 0.95;
       const y = (random.number() * 41 - 20.5) * 0.95;
       const node = world.add(Agent.create({ index, status: "susceptible" as InfectionStatus, checkTimer: integer(settings.checkFrequency) }, { position: { x, y } }));
@@ -72,13 +72,13 @@ export function create(options: Partial<VirusParameters> = {}) {
     }
   }
   function counts() {
-    const result = { susceptible: 0, infected: 0, resistant: 0 };
-    for (const node of nodes) result[node.status]++;
+    const result = { susceptibleNodeCount: 0, infectedNodeCount: 0, resistantNodeCount: 0 };
+    for (const node of nodes) result[`${node.status}NodeCount` as const]++;
     return result;
   }
   function percentages() {
     const current = counts();
-    return { susceptible: current.susceptible / nodes.length * 100, infected: current.infected / nodes.length * 100, resistant: current.resistant / nodes.length * 100 };
+    return { susceptibleNodeCount: current.susceptibleNodeCount / nodes.length * 100, infectedNodeCount: current.infectedNodeCount / nodes.length * 100, resistantNodeCount: current.resistantNodeCount / nodes.length * 100 };
   }
   function record() {
     const point = Object.freeze({ tick: world.tick.value, ...percentages() });
@@ -95,16 +95,16 @@ export function create(options: Partial<VirusParameters> = {}) {
   function spreadVirus() {
     // Capture senders once; newly infected neighbors are not new senders here.
     const senders = nodes.filter(node => node.status === "infected");
-    for (const sender of random.sample(senders, { count: senders.length })) {
+    for (const sender of random.sample(senders, { sampleCount: senders.length })) {
       const candidates = graph.neighbors(sender).filter(node => node.status !== "resistant");
-      for (const recipient of random.sample(candidates, { count: candidates.length }))
+      for (const recipient of random.sample(candidates, { sampleCount: candidates.length }))
         if (random.number() * 100 < settings.spreadChance) recipient.status = "infected";
     }
   }
   function doVirusChecks() {
     // Select after spreading: new infections may recover in this same tick.
     const checking = nodes.filter(node => node.status === "infected" && node.checkTimer === 0);
-    for (const node of random.sample(checking, { count: checking.length })) {
+    for (const node of random.sample(checking, { sampleCount: checking.length })) {
       // Source random 100 is integer, even though recovery's slider is fractional.
       if (integer(100) < settings.recoveryChance)
         node.status = integer(100) < settings.resistanceChance ? "resistant" : "susceptible";
@@ -114,13 +114,13 @@ export function create(options: Partial<VirusParameters> = {}) {
 
   setupNodes();
   setupSpatiallyClusteredNetwork();
-  for (const node of random.sample(nodes, { count: settings.initialOutbreakSize })) node.status = "infected";
+  for (const node of random.sample(nodes, { sampleCount: settings.initialOutbreakSize })) node.status = "infected";
   record();
 
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let index = 0; index < count; index++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let index = 0; index < stepCount; index++) {
         if (!nodes.some(node => node.status === "infected")) break;
         run(world, go);
         record();
@@ -130,7 +130,7 @@ export function create(options: Partial<VirusParameters> = {}) {
       if (typeof rules !== "object" || rules === null || ![Object.prototype, null].includes(Object.getPrototypeOf(rules)) ||
         Reflect.ownKeys(rules).some(key => !["spreadChance", "recoveryChance", "resistanceChance", "checkFrequency"].includes(String(key)) || typeof key !== "string" || !("value" in Object.getOwnPropertyDescriptor(rules, key)!)))
         throw new TypeError("Supply only live virus rule data properties.");
-      settings = parameters(inputs, { ...settings, ...rules });
+      settings = parseParameters(inputs, { ...settings, ...rules });
       record();
     },
     setStates(values: readonly VirusStateInput[]) {

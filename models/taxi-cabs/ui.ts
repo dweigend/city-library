@@ -205,7 +205,7 @@ export const ui = defineUI(model, {
     { label: "Waiting passengers", value: (state) => state.passengers.length },
     {
       label: "Occupied cabs",
-      value: (state) => state.occupiedCabs,
+      value: (state) => state.occupiedCabCount,
     },
     {
       label: "Total income ($)",
@@ -327,6 +327,3 @@ function taxicabsTravellingDistanceSeries(
     },
   ];
 }
-
-export const sourceMarker =
-  "selected-transport-b04:taxi-cabs:150f739ec217fbb199d86eca783922a79acceeb6504e44add1921d934d3d4a30";

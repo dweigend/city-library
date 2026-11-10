@@ -1,6 +1,6 @@
 import { Agent, World, run } from "city-library";
 import type { Definition } from "../definition.ts";
-import { stepCount } from "../parameters.ts";
+import { validateStepCount } from "../parameters.ts";
 
 /** Exogenous income and rent form an open monthly flow, not a closed economy. */
 export function create() {
@@ -15,7 +15,7 @@ export function create() {
   return {
     household, world,
     advance(months = 1) {
-      stepCount(months);
+      validateStepCount(months);
       run(world, settleMonth, months);
     },
     read() {

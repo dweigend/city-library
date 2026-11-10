@@ -16,7 +16,7 @@ const ready = model.read();
 model.rewire();
 const rewired = model.read();
 assert.equal(rewired.tick, ready.tick);
-assert.equal(rewired.counts.activeEdges, 2);
+assert.equal(rewired.counts.activeEdgeCount, 2);
 assert.deepEqual(rewired.edges.map(edge => [edge.id, edge.currentFlow]), ready.edges.map(edge => [edge.id, edge.currentFlow]));
 assert.deepEqual(rewired.nodes, ready.nodes);
 assert.equal(rewired.history.length, ready.history.length);

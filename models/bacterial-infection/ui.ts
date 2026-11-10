@@ -4,14 +4,14 @@ import { model } from "./model.ts";
 export const ui = defineUI(model, {
   setup: [
     "seed",
-    "init3PoresA",
-    "init4PoresA",
-    "init5PoresA",
-    "init6PoresA",
-    "init3PoresB",
-    "init4PoresB",
-    "init5PoresB",
-    "init6PoresB",
+    "initialThreePoreBacteriumCountA",
+    "initialFourPoreBacteriumCountA",
+    "initialFivePoreBacteriumCountA",
+    "initialSixPoreBacteriumCountA",
+    "initialThreePoreBacteriumCountB",
+    "initialFourPoreBacteriumCountB",
+    "initialFivePoreBacteriumCountB",
+    "initialSixPoreBacteriumCountB",
   ] as const,
   change: (instance, changes) => instance.setParameters(changes),
   live: {
@@ -36,8 +36,8 @@ export const ui = defineUI(model, {
     { label: "Minutes", value: (s) => s.minutes },
     { label: "Hours", value: (s) => s.hours },
     { label: "Days", value: (s) => s.days },
-    { label: "Doses A", value: (s) => s.dosesGivenToA },
-    { label: "Doses B", value: (s) => s.dosesGivenToB },
+    { label: "Doses A", value: (s) => s.doseCountA },
+    { label: "Doses B", value: (s) => s.doseCountB },
   ],
   views: [
     {

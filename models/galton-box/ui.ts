@@ -1,11 +1,11 @@
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: ["seed", "numberOfRows"],
+  setup: ["seed", "rowCount"],
   complete: (s) => s.done,
   change: (instance, changes) => instance.setRules(changes),
   live: {
-    numberOfBalls: {},
+    ballCount: {},
     chanceOfBouncingRight: {
       label: "Bounce right (%)",
     },
@@ -17,7 +17,7 @@ export const ui = defineUI(model, {
   },
   monitors: [
     { label: "Tick", value: (s) => s.tick },
-    { label: "Balls", value: (s) => s.balls },
+    { label: "Balls", value: (s) => s.ballCount },
     {
       label: "State",
       value: (s) => (s.full ? "Full" : s.done ? "Finished" : "Active"),

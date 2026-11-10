@@ -1,7 +1,7 @@
 /** NetLogo Ising, Wilensky (2003), CC BY-NC-SA 3.0; see NOTICE.md. */
 import { Grid, Random, World } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface IsingParameters {
   width: number;
   height: number;
@@ -23,7 +23,7 @@ export const inputs: Inputs<IsingParameters> = {
   temperature: { kind: "number", default: 2.27, min: 0, max: 10 },
 };
 export function create(options: Partial<IsingParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   if (settings.width % 2 !== 1 || settings.height % 2 !== 1)
     throw new RangeError("Use odd lattice dimensions.");
   const random = Random.create({ seed: settings.seed }),
@@ -48,7 +48,7 @@ export function create(options: Partial<IsingParameters> = {}) {
   }
   function setup() {
     for (const f of random.sample(fields, {
-      count: fields.length,
+      sampleCount: fields.length,
       algorithm: "fisher-yates-descending",
     }))
       f.spin =
@@ -76,9 +76,9 @@ export function create(options: Partial<IsingParameters> = {}) {
   }
   setup();
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) {
         for (let j = 0; j < 1000; j++)
           update(fields[Math.floor(random.number() * fields.length)]!);
         world.tick.advance(1000);
@@ -97,7 +97,7 @@ export function create(options: Partial<IsingParameters> = {}) {
     },
     setup,
     setTemperature(temperature: number) {
-      settings = parameters(inputs, { ...settings, temperature });
+      settings = parseParameters(inputs, { ...settings, temperature });
     },
     setSpins(spins: readonly number[]) {
       if (

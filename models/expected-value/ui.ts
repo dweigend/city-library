@@ -48,7 +48,7 @@ export const ui = defineUI(model, {
       value: (s) => s.expectedValue,
       format: (value: number) => value.toFixed(3),
     },
-    { label: "Runs", value: (s) => s.runs },
+    { label: "Runs", value: (s) => s.runCount },
     { label: "This sample total", value: (s) => s.sampleTotal },
     {
       label: "Mean of samples",

@@ -32,22 +32,22 @@ test("daisy source setup counts and captured albedo; interventions preserve tick
   m.setRules({ albedoBlacks: 0.9 });
   expect(m.read().daisies.find((a) => a.id === b.id)!.albedo).toBe(0.25);
   m.removeAllDaisies();
-  m.paint(0, 0, "add black");
+  m.paint(0, 0, "add-black");
   expect(m.read().daisies[0]!.albedo).toBe(0.9);
   expect(m.read().tick).toBe(0);
-  m.paint(0, 0, "add white");
+  m.paint(0, 0, "add-white");
   expect(m.read().whiteCount).toBe(0);
   m.paint(0, 0, "remove");
   expect(m.read().blackCount).toBe(0);
 });
 test("daisy nonpositive absorbed energy branch and scenario tick timing", () => {
-  const m = daisy({ startBlacks: 0, startWhites: 0, albedoSurface: 1 });
+  const m = daisy({ initialBlackDaisyCount: 0, initialWhiteDaisyCount: 0, albedoSurface: 1 });
   expect(m.read().globalTemperature).toBe(40);
   m.advance();
   expect(m.read().globalTemperature).toBe(60);
   const scenario = daisy({
-    startBlacks: 0,
-    startWhites: 0,
+    initialBlackDaisyCount: 0,
+    initialWhiteDaisyCount: 0,
     scenario: "ramp-up-ramp-down",
   });
   scenario.advance(200);
@@ -58,7 +58,7 @@ test("daisy nonpositive absorbed energy branch and scenario tick timing", () => 
 });
 test("termites conserve chips including carried chips on empty/full and default landscapes", () => {
   for (const density of [0, 20, 100]) {
-    const m = termites({ number: 5, density, seed: 10 });
+    const m = termites({ termiteCount: 5, density, seed: 10 });
     const total = m.read().chipCount;
     m.advance(100);
     expect(m.read().chipCount + m.read().carryingCount).toBe(total);
@@ -94,17 +94,17 @@ test("shepherd carries same unique sheep, never deletes populations, samples eff
   expect(m.read().history.at(-1)!.tick).toBe(50);
 });
 test("rabbits stop before growth when extinct and die only below zero", () => {
-  const empty = rabbits({ number: 0 });
+  const empty = rabbits({ rabbitCount: 0 });
   empty.advance(10);
   expect(empty.read().tick).toBe(0);
-  const m = rabbits({ number: 3, grassGrowRate: 0, weedsGrowRate: 0, seed: 4 });
+  const m = rabbits({ rabbitCount: 3, grassGrowRate: 0, weedsGrowRate: 0, seed: 4 });
   m.advance(30);
   expect(m.read().rabbits.length).toBe(0);
   expect(m.read().tick).toBeLessThanOrEqual(19);
 });
 test("rabbits use per-thousand growth and grass overwrites new weeds", () => {
   const m = rabbits({
-    number: 0,
+    rabbitCount: 0,
     grassGrowRate: 20,
     weedsGrowRate: 20,
     seed: 99,
@@ -112,7 +112,7 @@ test("rabbits use per-thousand growth and grass overwrites new weeds", () => {
   const s = m.read();
   expect(s.cells.filter((c) => c.cover === "grass").length).toBeGreaterThan(0);
   expect(s.cells.filter((c) => c.cover === "grass").length).toBeLessThan(100);
-  expect(s.history[0]!.grass).toBe(
+  expect(s.history[0]!.grassFieldCount).toBe(
     s.cells.filter((c) => c.cover === "grass").length / 4,
   );
 });
@@ -120,9 +120,9 @@ test("observations are detached and do not draw RNG; live validation is atomic",
   for (const m of [
     birth({ carryingCapacity: 5 }),
     daisy(),
-    termites({ number: 1 }),
+    termites({ termiteCount: 1 }),
     shepherds({ sheepCount: 5 }),
-    rabbits({ number: 5 }),
+    rabbits({ rabbitCount: 5 }),
   ]) {
     const s = m.read();
     expect(m.read()).toEqual(s);

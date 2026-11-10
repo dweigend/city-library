@@ -21,7 +21,7 @@ export const ui = defineUI(model, {
   monitors: [
     { label: "Tick", value: (state) => state.tick },
     { label: "Total oil", value: (state) => state.totalOil },
-    { label: "Front", value: (state) => state.counts.front },
+    { label: "Front", value: (state) => state.counts.frontFieldCount },
     { label: "Current row", value: (state) => state.currentRow },
   ],
   views: [
@@ -59,7 +59,7 @@ export const ui = defineUI(model, {
           color: "#ff2424",
           points: state.history.map((point) => ({
             x: point.tick,
-            y: point.front,
+            y: point.frontFieldCount,
           })),
         },
       ],

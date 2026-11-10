@@ -22,16 +22,16 @@ elevator.dispose();
 
 | Input | Default | Meaning |
 | --- | --- | --- |
-| `floors` | `6` | Number of floors |
-| `elevators` | `2` | Number of cars |
+| `floorCount` | `6` | Number of floors |
+| `elevatorCount` | `2` | Number of cars |
 | `capacity` | `4` | Passenger places per car |
-| `travelTime` | `2` | Seconds per adjacent-floor move |
-| `doorTime` | `1` | Seconds for opening and separately closing |
-| `transferTime` | `1` | Seconds per boarding or alighting passenger |
-| `initialPassengers` | `6` | Deterministic initial journeys |
-| `arrivalInterval` | `0` | Seconds between scheduled arrivals; zero disables them |
-| `arrivalLimit` | `0` | Maximum additional scheduled arrivals |
-| `maxEventsPerStep` | `1000` | Headless per-step event bound; omitted from ordinary UI setup |
+| `travelTimeSeconds` | `2` | Seconds per adjacent-floor move |
+| `doorTimeSeconds` | `1` | Seconds for opening and separately closing |
+| `transferTimeSeconds` | `1` | Seconds per boarding or alighting passenger |
+| `initialPassengerCount` | `6` | Deterministic initial journeys |
+| `arrivalIntervalSeconds` | `0` | Seconds between scheduled arrivals; zero disables them |
+| `arrivalCountLimit` | `0` | Maximum additional scheduled arrivals |
+| `maxEventCountPerStep` | `1000` | Headless per-step event bound; omitted from ordinary UI setup |
 
 [model.ts](model.ts) owns validation, actions and detached observations; [ui.ts](ui.ts) projects the same floor queues and cabin occupants. The [model contract](../../docs/development/des-elevator-contract.md) defines dispatch, timing, failure and measurement boundaries. The [source record](../../docs/research/des-elevator-sources.md) documents the MIT-licensed Salabim samples at pinned revision [`99bc8b2213d66a7287f04952cabc1fb9aa6c369d`](https://github.com/salabim/salabim/tree/99bc8b2213d66a7287f04952cabc1fb9aa6c369d/sample%20models) and the deliberate adaptations.
 

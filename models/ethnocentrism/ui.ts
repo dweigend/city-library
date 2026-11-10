@@ -9,7 +9,7 @@ const binding = defineUI(model, {
   },
   change: (instance, changes) => instance.setParameters(changes),
   live: {
-    immigrantsPerDay: {},
+    immigrantCountPerDay: {},
     initialPtr: {
       label: "Initial reproduction probability",
     },
@@ -63,11 +63,10 @@ const binding = defineUI(model, {
 });
 
 export { model };
-export const sourceMarker =
-  "selected-social-b02:ethnocentrism:366bca9cfe1417bf6ff6c456581573d91bcf9e252dd8f6a0afa80954edd3dc81";
+
 
 /** Public headless definition and provenance remain inspectable in the loaded binding. */
-export const ui = { ...binding, model, sourceMarker };
+export const ui = { ...binding, model };
 
 type UIObservation = Observation<typeof model>;
 

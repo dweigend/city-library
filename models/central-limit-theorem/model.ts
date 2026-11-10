@@ -1,7 +1,7 @@
 /** Central Limit Theorem, Wilensky (2005), CC BY-NC-SA 3.0. Full source notices: NOTICE.md. */
 import { Agent, Grid, Random, World, stats } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface Parameters {
   seed: number;
   sampleSize: number;
@@ -28,7 +28,7 @@ function plotHistogram(values: readonly number[]) {
   return Object.freeze(h.counts.map((y, x) => Object.freeze({ x, y })));
 }
 export function create(options: Partial<Parameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const grid = Grid.create(
     { x: 31, y: 31, boundary: "wrap" },
@@ -81,7 +81,7 @@ export function create(options: Partial<Parameters> = {}) {
     if (!Number.isInteger(n) || n < 1 || n > 6)
       throw new RangeError("Preset must be from 1 to 6.");
     setup();
-    settings = parameters(inputs, { ...settings, maxValue: 30 });
+    settings = parseParameters(inputs, { ...settings, maxValue: 30 });
     ranger = 31;
     background = "preset";
     for (const field of fields) field.active = true;
@@ -138,7 +138,7 @@ export function create(options: Partial<Parameters> = {}) {
       return;
     }
     message = "";
-    for (const p of random.sample(people(), { count: settings.sampleSize }))
+    for (const p of random.sample(people(), { sampleCount: settings.sampleSize }))
       p.chosen = true;
     world.tick.advance();
     calculateAndPlotSampleStuff();
@@ -150,9 +150,9 @@ export function create(options: Partial<Parameters> = {}) {
     get grid() {
       return grid;
     },
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) {
         go();
         if (message) break;
       }
@@ -162,7 +162,7 @@ export function create(options: Partial<Parameters> = {}) {
     preset,
     drawYourOwnPeople,
     setRules(change: Partial<Omit<Parameters, "seed">>) {
-      settings = parameters(inputs, { ...settings, ...change });
+      settings = parseParameters(inputs, { ...settings, ...change });
     },
     read() {
       return Object.freeze({

@@ -2,7 +2,7 @@ import { defineUI, indexedColor, type Observation, type SpatialData } from "../.
 
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: ["width", "height", "seed", "heads", "colorPaths"],
+  setup: ["width", "height", "seed", "headCount", "colorPaths"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/TuringMachine2D",
     label: "Source attribution · Wilensky · CC BY-NC-SA 3.0",

@@ -1,7 +1,7 @@
 /** NetLogo Honeycomb, Wilensky (2003), rules by David Little. See NOTICE.md. */
 import { Agent, Grid, Random, World, stats, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 
 export interface HoneycombParameters {
   seed: number;
@@ -13,7 +13,7 @@ export const inputs: Inputs<HoneycombParameters> = {
 };
 type Bee = Agent<{ who: number; shade: number; hidden: boolean }>;
 export function create(options: Partial<HoneycombParameters> = {}) {
-  const settings = parameters(inputs, options);
+  const settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const space = { x: 81, y: 81, boundary: "wrap" } as const;
   const world = World.create(space, { random });
@@ -49,7 +49,7 @@ export function create(options: Partial<HoneycombParameters> = {}) {
 
   function go() {
     for (const bee of random.sample(bees(), {
-      count: bees().length,
+      sampleCount: bees().length,
       algorithm: "fisher-yates-descending",
     })) {
       const chemical = grid.fieldAt(bee)!.chemical;
@@ -63,9 +63,9 @@ export function create(options: Partial<HoneycombParameters> = {}) {
     }
   }
 
-  function advance(count = 1) {
-    stepCount(count);
-    for (let index = 0; index < count; index++) run(world, go);
+  function advance(stepCount = 1) {
+    validateStepCount(stepCount);
+    for (let index = 0; index < stepCount; index++) run(world, go);
   }
   function hideBees() {
     for (const bee of bees()) bee.hidden = true;

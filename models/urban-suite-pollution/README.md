@@ -23,8 +23,8 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
-| `initialPopulation` | `30` | integer; ≥ 0; ≤ 100 |
-| `powerPlants` | `2` | integer; ≥ 0; ≤ 20 |
+| `initialPersonCount` | `30` | integer; ≥ 0; ≤ 100 |
+| `powerPlantCount` | `2` | integer; ≥ 0; ≤ 20 |
 | `birthRate` | `0.1` | number; ≥ 0; ≤ 0.2 |
 | `plantingRate` | `0.05` | number; ≥ 0; ≤ 0.1 |
 | `pollutingRate` | `3` | integer; ≥ 0; ≤ 5 |

@@ -2,7 +2,7 @@ import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 
 const binding = defineUI(model, {
-  setup: ["seed", "population"],
+  setup: ["seed", "agentCount"],
   change: (instance, changes) => instance.setParameters(changes),
   live: {
     sniffThreshold: {},
@@ -42,6 +42,5 @@ const binding = defineUI(model, {
 });
 
 export { model };
-export const sourceMarker =
-  "selected-biology-b07:slime:ede03dc05cc186a9607cb2ef1b11dfde4a1c05eb57edd19e2a577768c04644da";
-export const ui = { ...binding, model, sourceMarker };
+
+export const ui = { ...binding, model };

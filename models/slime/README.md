@@ -23,7 +23,7 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer |
-| `population` | `400` | integer; ≥ 1; ≤ 1500 |
+| `agentCount` | `400` | integer; ≥ 1; ≤ 1500 |
 | `sniffThreshold` | `1` | number; ≥ 0; ≤ 5 |
 | `sniffAngle` | `45` | number; ≥ 0; ≤ 180 |
 | `wiggleAngle` | `40` | number; ≥ 0; ≤ 45 |

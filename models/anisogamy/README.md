@@ -25,7 +25,7 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer |
-| `maxAdults` | `100` | integer; ≥ 10; ≤ 500 |
+| `maxAdultCount` | `100` | integer; ≥ 10; ≤ 500 |
 | `worldSize` | `65` | integer; ≥ 1; ≤ 97 |
 | `zygoteFitnessThreshold` | `0.45` | number; ≥ 0; ≤ 0.5 |
 | `gameteFitnessThreshold` | `0` | number; ≥ 0; ≤ 0.51 |

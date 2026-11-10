@@ -30,9 +30,9 @@ describe('public authoring contract at the common host boundary', () => {
     expect(first.read().parameters.changeVote).toBe(true);
   });
 
-  test('new exclusion does not change legacy defaults, explicit ordering or factory defaults', () => {
-    const legacy = normalizeAuthoring(voting, { live: [{ field: 'changeVote', value: (state: ReturnType<ReturnType<typeof voting.create>['read']>) => state.parameters.changeVote, set: (model: ReturnType<typeof voting.create>, value: string | number | boolean) => model.setRules({ changeVote: Boolean(value) }) }], views: [] });
-    expect(legacy.setup.map(field => field.field)).toEqual(Object.keys(voting.inputs) as (keyof VotingParameters)[]);
+  test('new exclusion does not change array-field defaults, explicit ordering or factory defaults', () => {
+    const arraySpec = normalizeAuthoring(voting, { live: [{ field: 'changeVote', value: (state: ReturnType<ReturnType<typeof voting.create>['read']>) => state.parameters.changeVote, set: (model: ReturnType<typeof voting.create>, value: string | number | boolean) => model.setRules({ changeVote: Boolean(value) }) }], views: [] });
+    expect(arraySpec.setup.map(field => field.field)).toEqual(Object.keys(voting.inputs) as (keyof VotingParameters)[]);
     expect(normalizeAuthoring(voting, { live: {}, views: [] }).setup.map(field => field.field)).toEqual(Object.keys(voting.inputs) as (keyof VotingParameters)[]);
     const explicit = normalizeAuthoring(voting, { setup: ['seed', { field: 'width', label: 'Columns' }], live: {}, views: [] });
     expect(explicit.setup).toEqual([{ field: 'seed' }, { field: 'width', label: 'Columns' }]);
@@ -122,7 +122,7 @@ test('client session restart installs a fresh owner and clears only the prior pr
     import { createSession } from './ui/svelte/session.ts';
     import { model } from './models/wealth-distribution/model.ts';
     const instances = [];
-    const definition = { ...model, create(options) { const instance = model.create({ ...options, people: 2 }); instances.push(instance); return instance; } };
+    const definition = { ...model, create(options) { const instance = model.create({ ...options, personCount: 2 }); instances.push(instance); return instance; } };
     const session = createSession(definition, { setup: [], monitors: [{ label: 'Tick', value: state => state.tick, format(value) { if (value === 1) throw Error('Actual projection failure'); return String(value); } }], views: [] });
     let state;
     const unsubscribe = session.subscribe(value => state = value);
@@ -130,17 +130,17 @@ test('client session restart installs a fresh owner and clears only the prior pr
     assert.equal(state.initialized, true);
     session.step(1);
     assert.equal(instances[0].read().tick, 1);
-    assert.equal(state.error, true);
+    assert.equal(state.hasError, true);
     assert.equal(state.status, 'Actual projection failure');
     session.initialize();
     assert.equal(instances.length, 2);
     assert.equal(state.epoch, 2);
     assert.equal(instances[1].read().tick, 0);
     assert.equal(instances[0].read().tick, 1);
-    assert.equal(state.error, false);
+    assert.equal(state.hasError, false);
     assert.equal(state.status, '');
     session.step(1);
-    assert.equal(state.error, true, 'A genuine new-owner failure must still be displayed');
+    assert.equal(state.hasError, true, 'A genuine new-owner failure must still be displayed');
     session.dispose(); unsubscribe();
   `], { cwd: import.meta.dir + '/..', stdout: 'pipe', stderr: 'pipe' });
   expect(new TextDecoder().decode(result.stderr)).toBe('');
@@ -164,26 +164,26 @@ test('live enabled preflight rejects first setup and restart without replacing o
       const created = [], disposed = [];
       const definition = { ...model, create(options) {
         const actual = model.create(options); created.push(actual);
-        return { ...actual, dispose() { disposed.push(actual.read().peopleCount); } };
+        return { ...actual, dispose() { disposed.push(actual.read().personCount); } };
       } };
       const session = createSession(definition, {
-        setup: ['people'], live: { growthAmount: {
-          enabled: state => { if (state.peopleCount === 3) throw Error('Candidate enabled failure'); return true; },
+        setup: ['personCount'], live: { growthAmount: {
+          enabled: state => { if (state.personCount === 3) throw Error('Candidate enabled failure'); return true; },
           set: (instance, value) => instance.setRules({ growthAmount: value }),
         } }, views: [],
       });
       let state; const unsubscribe = session.subscribe(value => state = value);
-      if (startWithValidOwner) { session.setDraft('people', 2); session.initialize(); }
-      session.setDraft('people', 3); session.initialize();
-      assert.equal(state.error, true);
+      if (startWithValidOwner) { session.setDraft('personCount', 2); session.initialize(); }
+      session.setDraft('personCount', 3); session.initialize();
+      assert.equal(state.hasError, true);
       assert.equal(state.status, 'Candidate enabled failure');
       assert.equal(state.epoch, startWithValidOwner ? 1 : 0);
       assert.equal(state.initialized, startWithValidOwner);
-      assert.equal(state.observation?.peopleCount, startWithValidOwner ? 2 : undefined);
+      assert.equal(state.observation?.personCount, startWithValidOwner ? 2 : undefined);
       assert.deepEqual(disposed, [3], 'Only the rejected candidate is disposed');
-      session.setDraft('people', 2); session.initialize();
-      assert.equal(state.error, false, 'A successful later setup recovers');
-      assert.equal(state.observation.peopleCount, 2);
+      session.setDraft('personCount', 2); session.initialize();
+      assert.equal(state.hasError, false, 'A successful later setup recovers');
+      assert.equal(state.observation.personCount, 2);
       session.dispose(); unsubscribe();
     }
   `);
@@ -194,29 +194,29 @@ test('a callback failure after candidate preflight publishes the current owner a
     const created = [], disposed = []; let candidateCalls = 0;
     const definition = { ...model, create(options) {
       const actual = model.create(options); created.push(actual);
-      return { ...actual, dispose() { disposed.push(actual.read().peopleCount); } };
+      return { ...actual, dispose() { disposed.push(actual.read().personCount); } };
     } };
     const session = createSession(definition, {
-      setup: ['people'], live: { growthAmount: {
-        enabled: state => { if (state.peopleCount === 3 && ++candidateCalls === 2) throw Error('Post-preflight failure'); return true; },
+      setup: ['personCount'], live: { growthAmount: {
+        enabled: state => { if (state.personCount === 3 && ++candidateCalls === 2) throw Error('Post-preflight failure'); return true; },
         set: (instance, value) => instance.setRules({ growthAmount: value }),
       } }, monitors: [{ label: 'Tick', value: state => state.tick }], views: [],
     });
     let state; const unsubscribe = session.subscribe(value => state = value);
-    session.setDraft('people', 2); session.initialize();
-    session.setDraft('people', 3); session.initialize();
-    assert.equal(state.error, true);
+    session.setDraft('personCount', 2); session.initialize();
+    session.setDraft('personCount', 3); session.initialize();
+    assert.equal(state.hasError, true);
     assert.equal(state.status, 'Post-preflight failure');
     assert.equal(state.initialized, true);
     assert.equal(state.epoch, 2);
-    assert.equal(state.observation.peopleCount, 3);
+    assert.equal(state.observation.personCount, 3);
     assert.equal(state.observation.tick, 0);
     assert.deepEqual(disposed, [2], 'Old owner is disposed after replacement');
     session.step(1);
     assert.equal(created[1].read().tick, 1, 'Actions target the same owner exposed by the store');
     assert.equal(created[0].read().tick, 0);
-    assert.equal(state.error, false);
-    assert.equal(state.observation.peopleCount, 3);
+    assert.equal(state.hasError, false);
+    assert.equal(state.observation.personCount, 3);
     session.dispose(); unsubscribe();
   `);
 });
@@ -225,25 +225,25 @@ test('persistent formatter failure keeps draft and speed current, preserves the 
   clientSessionCase(`
     const created = [];
     const definition = { ...model, create(options) { const actual = model.create(options); created.push(actual); return actual; } };
-    const session = createSession(definition, { setup: ['people'], monitors: [{ label: 'Tick', value: state => state.tick,
+    const session = createSession(definition, { setup: ['personCount'], monitors: [{ label: 'Tick', value: state => state.tick,
       format(value) { if (value === 1) throw Error('Primary formatter failure'); return String(value); },
     }], views: [] });
     let state; const unsubscribe = session.subscribe(value => state = value);
-    session.setDraft('people', 2); session.initialize(); session.step(1);
-    assert.equal(state.error, true); assert.equal(state.status, 'Primary formatter failure');
-    assert.doesNotThrow(() => session.setDraft('people', 3));
-    assert.equal(state.draft.people, 3);
+    session.setDraft('personCount', 2); session.initialize(); session.step(1);
+    assert.equal(state.hasError, true); assert.equal(state.status, 'Primary formatter failure');
+    assert.doesNotThrow(() => session.setDraft('personCount', 3));
+    assert.equal(state.draft.personCount, 3);
     assert.doesNotThrow(() => session.setSpeed(7));
     assert.equal(state.speed, 7);
     assert.equal(state.status, 'Primary formatter failure');
     assert.equal(state.observation.tick, 1);
-    assert.deepEqual(state.pending, ['people']);
+    assert.deepEqual(state.pending, ['personCount']);
     session.initialize();
-    assert.equal(created.length, 2); assert.equal(created[1].read().peopleCount, 3);
+    assert.equal(created.length, 2); assert.equal(created[1].read().personCount, 3);
     assert.equal(state.observation.tick, 0); assert.equal(state.epoch, 2);
-    assert.equal(state.error, false); assert.equal(state.status, ''); assert.deepEqual(state.pending, []);
+    assert.equal(state.hasError, false); assert.equal(state.status, ''); assert.deepEqual(state.pending, []);
     session.dispose(); const before = state;
-    for (const action of [() => session.setDraft('people', 4), () => session.setSpeed(1), () => session.select('stale'),
+    for (const action of [() => session.setDraft('personCount', 4), () => session.setSpeed(1), () => session.select('stale'),
       () => session.toggleDrawing(), () => session.run(), () => session.step(1), () => session.action(0),
       () => session.repeat(0), () => session.intent({ phase: 'end' }), () => session.initialize(), () => session.fail(Error('stale'))])
       assert.doesNotThrow(action);

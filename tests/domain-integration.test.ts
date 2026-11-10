@@ -49,7 +49,7 @@ describe("Agent and discrete event public integration", () => {
   });
 
   test("fractional World ticks, Agenda time and completed study boundaries remain distinct", () => {
-    const result = studies.run({ parameters: [{}], seeds: [1], steps: 2,
+    const result = studies.run({ parameters: [{}], seeds: [1], stepCount: 2,
       create() {
         const world = World.create();
         world.tick.advance(10.5);
@@ -59,7 +59,7 @@ describe("Agent and discrete event public integration", () => {
       measure: model => ({ tick: model.world.tick.value, at: model.agenda.time }),
     });
     const outcome = result.outcomes[0]!;
-    expect(outcome.completedSteps).toBe(2);
+    expect(outcome.completedStepCount).toBe(2);
     expect(outcome.samples.map(sample => [sample.step, sample.measurement.tick, sample.measurement.at])).toEqual([
       [0, 10.5, 0], [1, 11.5, 50], [2, 12.5, 100],
     ]);
@@ -113,7 +113,7 @@ describe("Agent and discrete event public integration", () => {
   });
 
   test("budget exhaustion leaves partial DES effects and the existing adapter reports no completed interval", () => {
-    const result = studies.run({ parameters: [{}], seeds: [1], steps: 1,
+    const result = studies.run({ parameters: [{}], seeds: [1], stepCount: 1,
       create() {
         const world = World.create();
         const agenda = world.add(Agenda.create<number>());
@@ -134,7 +134,7 @@ describe("Agent and discrete event public integration", () => {
     const outcome = result.outcomes[0]!;
     expect(outcome.status).toBe("stopped");
     expect(outcome.reason).toBe("adapter-stopped");
-    expect(outcome.completedSteps).toBe(0);
+    expect(outcome.completedStepCount).toBe(0);
     expect(outcome.samples).toEqual([{ step: 0, measurement: { processed: 0, tick: 0 } }]);
   });
 

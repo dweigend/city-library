@@ -9,7 +9,7 @@ const spec = {
   monitors: [{ label: "Tick", value: state => state.tick }], views: [],
 } as const satisfies UISpec<VirusParameters, ReturnType<typeof model.create>>;
 export const ui = defineUI(model, spec);
-const instance = model.create({ numberOfNodes: 10, spreadChance: 0, recoveryChance: 0 });
+const instance = model.create({ nodeCount: 10, spreadChance: 0, recoveryChance: 0 });
 spec.actions[0].run(instance);
 assert.equal(spec.monitors[0].value(instance.read()), 1);
 spec.live[0].set(instance, 7);

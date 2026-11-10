@@ -15,7 +15,7 @@ export function bufferScene(state: Observation<typeof model>): SpatialData {
     },
     {
       id: "capacity", label: "Store capacity", kind: "capacity", color: scientificPalette.neutral,
-      used: state.stored, capacity: state.parameters.capacity, unit: "crates",
+      used: state.storedLotCount, capacity: state.parameters.capacity, unit: "crates",
     },
     {
       id: "collected", label: "Collected crates", kind: "items", color: scientificPalette.completed,

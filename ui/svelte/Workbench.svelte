@@ -71,7 +71,7 @@
     {/if}
   </aside>
   <section class="lab-results" aria-label="Model results">
-    {#if snapshot.error}<p role="alert" class="lab-error">{snapshot.status}</p>{/if}
+    {#if snapshot.hasError}<p role="alert" class="lab-error">{snapshot.status}</p>{/if}
     {#if !snapshot.initialized}
       <p class="lab-empty" role="status">Setup to begin.</p>
     {:else}

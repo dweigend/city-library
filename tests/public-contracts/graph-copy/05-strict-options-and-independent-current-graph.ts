@@ -30,7 +30,7 @@ const copied: Graph<Node> = source.copy({ nodes: undefined, edges: undefined, di
 assert.deepEqual([...copied.nodes], [a, b]);
 assert.equal(copied.edges.size, 1);
 // The result is the actual current Graph receiver, not a fabricated ReadonlyGraph.
-assert.equal(copied.connected(), true);
+assert.equal(copied.isConnected(), true);
 assert.equal(copied.distances({ from: a }).get(b), 1);
 assert.equal(copied.analyze({ measure: "degree" }).get(a), 1);
 assert.deepEqual(copied.neighbors(a), [b]);

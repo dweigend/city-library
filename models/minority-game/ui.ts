@@ -9,7 +9,7 @@ import {
 import { model } from "./model.ts";
 const binding = defineUI(model, {
   complete: (s) => Boolean(s.diagnostic),
-  setup: ["seed", "number", "memory", "strategiesPerAgent"],
+  setup: ["seed", "playerCount", "memory", "strategiesPerAgent"],
   live: {
     colorBy: {
       set: (m, v) => m.setParameters({ colorBy: v }),
@@ -84,11 +84,10 @@ const binding = defineUI(model, {
 });
 
 export { model };
-export const sourceMarker =
-  "selected-social-b02:minority-game:5da641101e48d2ca325cfffa3f1bdaf27708152b628ab5504a95a2798a53e1a1";
+
 
 /** Public headless definition and provenance remain inspectable in the loaded binding. */
-export const ui = { ...binding, model, sourceMarker };
+export const ui = { ...binding, model };
 
 type UIObservation = Observation<typeof model>;
 

@@ -34,7 +34,7 @@ describe("bounded parcel geometry", () => {
     expect(result.sourceCells).toEqual([]);
     expect([first, second]).toEqual(snapshot);
     expect(Object.isFrozen(result.shape.coordinates[0]![0])).toBe(true);
-    const layout = topology.square({ columns: 2, rows: 1 });
+    const layout = topology.square({ columnCount: 2, rowCount: 1 });
     const selected = geometry.merge({ layout, cells: [1, 0] });
     expect(selected.sourceCells).toEqual([1, 0]);
     expect(() => geometry.merge({ layout, cells: [] })).toThrow(TypeError);
@@ -56,7 +56,7 @@ describe("bounded parcel geometry", () => {
     const unsupported = geometry.merge({ shapes: [holed] });
     expect(unsupported.status).toBe("unsupported");
     expect(() => geometry.merge({ shapes: [holed, polygon([[0, 0], [1, 1], [0, 1], [1, 0]])] })).toThrow(RangeError);
-    const ringLayout = topology.square({ columns: 3, rows: 3 });
+    const ringLayout = topology.square({ columnCount: 3, rowCount: 3 });
     const holeUnion = geometry.merge({ layout: ringLayout, cells: [0, 1, 2, 3, 5, 6, 7, 8] });
     expect(holeUnion.status).toBe("unsupported");
     if (holeUnion.status === "ok") throw new Error("A holed union is unsupported.");
@@ -64,7 +64,7 @@ describe("bounded parcel geometry", () => {
   });
 
   test("merged output budgets reject honestly instead of throwing away input", () => {
-    const layout = topology.square({ columns: 64, rows: 1 });
+    const layout = topology.square({ columnCount: 64, rowCount: 1 });
     const result = geometry.merge({ layout, cells: layout.cells });
     expect(result.status).toBe("unsupported");
     if (result.status === "ok") throw new Error("Unreduced boundary exceeds phase support.");

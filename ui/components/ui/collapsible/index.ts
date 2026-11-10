@@ -1,6 +1,6 @@
-import Content from "./collapsible-content.svelte";
-import Trigger from "./collapsible-trigger.svelte";
-import Root from "./collapsible.svelte";
+import Content from "./CollapsibleContent.svelte";
+import Trigger from "./CollapsibleTrigger.svelte";
+import Root from "./Collapsible.svelte";
 
 export {
 	Root,

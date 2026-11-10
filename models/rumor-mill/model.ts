@@ -1,7 +1,7 @@
 /** Source: Wilensky (1997), CC BY-NC-SA 3.0; exact source and attribution beside this file. */
 import { Grid, Random, World, run } from 'city-library';
 import type { Definition, Inputs } from '../definition.ts';
-import { parameters, stepCount } from '../parameters.ts';
+import { parseParameters, validateStepCount } from '../parameters.ts';
 export interface RumorParameters {
   seed: number;
   setup: 'one' | 'random';
@@ -22,7 +22,7 @@ export const inputs: Inputs<RumorParameters> = {
   eightMode: { kind: 'boolean', default: false },
 };
 export function create(options: Partial<RumorParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const world = World.create({ random });
   const grid = Grid.create(
@@ -54,7 +54,7 @@ export function create(options: Partial<RumorParameters> = {}) {
     for (const f of random.sample(
       grid.fields.filter((f) => f.timesHeard === 0),
       {
-        count: grid.fields.filter((f) => f.timesHeard === 0).length,
+        sampleCount: grid.fields.filter((f) => f.timesHeard === 0).length,
         algorithm: 'fisher-yates-descending',
       },
     ))
@@ -85,11 +85,11 @@ export function create(options: Partial<RumorParameters> = {}) {
   else seedRandom(true);
   record();
   return {
-    advance(count = 1) {
-      stepCount(count);
-      if (count === 0) return;
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      if (stepCount === 0) return;
       stopped = false;
-      for (let i = 0; i < count; i++) {
+      for (let i = 0; i < stepCount; i++) {
         if (grid.fields.every((f) => f.timesHeard > 0)) {
           stopped = true;
           break;
@@ -97,7 +97,7 @@ export function create(options: Partial<RumorParameters> = {}) {
         run(world, () => {
           const sources = grid.fields.filter((f) => f.timesHeard > 0);
           for (const f of random.sample(sources, {
-            count: sources.length,
+            sampleCount: sources.length,
             algorithm: 'fisher-yates-descending',
           })) {
             const candidates = grid.neighbors(f, {
@@ -146,12 +146,12 @@ export function create(options: Partial<RumorParameters> = {}) {
       colorMode = value;
     },
     setParameters(p: Partial<Pick<RumorParameters, 'initClique' | 'eightMode'>>) {
-      parameters(inputs, p);
+      parseParameters(inputs, p);
       if (
         Reflect.ownKeys(p).some((k) => !['initClique', 'eightMode'].includes(String(k)))
       )
         throw new TypeError('Only rumor rules are live.');
-      settings = parameters(inputs, { ...settings, ...p });
+      settings = parseParameters(inputs, { ...settings, ...p });
       stopped = false;
     },
     read() {

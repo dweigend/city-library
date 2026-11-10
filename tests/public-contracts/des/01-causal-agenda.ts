@@ -21,7 +21,7 @@ const ties = Agenda.create<string>();
 ties.add({ at: 1, priority: 1, data: "late-priority" });
 ties.add({ at: 1, priority: -1, data: "first" });
 ties.add({ at: 1, priority: -1, data: "second" });
-assert.deepEqual(ties.advance({ until: 4, maxEvents: 2 }).map(event => event.data), ["first", "second"]);
+assert.deepEqual(ties.advance({ until: 4, maxEventCount: 2 }).map(event => event.data), ["first", "second"]);
 assert.equal(ties.time, 1);
 assert.deepEqual(ties.advance({ until: 4 }).map(event => event.data), ["late-priority"]);
 assert.equal(ties.time, 4);

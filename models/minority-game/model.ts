@@ -1,10 +1,10 @@
 /** Source: Wilensky (2004), CC BY-NC-SA 3.0; exact source and attribution beside this file. */
 import { Agent, Random, World, run, stats, geometry } from 'city-library';
 import type { Definition, Inputs } from '../definition.ts';
-import { parameters, stepCount } from '../parameters.ts';
+import { parseParameters, validateStepCount } from '../parameters.ts';
 export interface MinorityParameters {
   seed: number;
-  number: number;
+  playerCount: number;
   memory: number;
   strategiesPerAgent: number;
   colorBy: 'choice' | 'success';
@@ -17,7 +17,7 @@ export const inputs: Inputs<MinorityParameters> = {
     max: 4294967295,
     integer: true,
   },
-  number: { kind: 'number', default: 501, min: 1, max: 1501, step: 2, integer: true },
+  playerCount: { kind: 'number', default: 501, min: 1, max: 1501, step: 2, integer: true },
   memory: { kind: 'number', default: 6, min: 1, max: 12, integer: true },
   strategiesPerAgent: { kind: 'number', default: 5, min: 1, max: 10, integer: true },
   colorBy: { kind: 'choice', default: 'success', options: ['choice', 'success'] },
@@ -31,7 +31,7 @@ type Player = Agent<{
   strategyScores: number[];
 }>;
 export function create(options: Partial<MinorityParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   if (settings.memory === 1 && settings.strategiesPerAgent > 4)
     throw new RangeError('Memory 1 supports at most four distinct strategies.');
   const random = Random.create({ seed: settings.seed }),
@@ -54,7 +54,7 @@ export function create(options: Partial<MinorityParameters> = {}) {
     maxRate: number | null;
     avgRate: number | null;
   }>[] = [];
-  for (let who = 0; who < settings.number; who++) {
+  for (let who = 0; who < settings.playerCount; who++) {
     let strategies: number[][] = [];
     do {
       strategies = Array.from({ length: settings.strategiesPerAgent }, () =>
@@ -78,7 +78,7 @@ export function create(options: Partial<MinorityParameters> = {}) {
         },
         {
           position: geometry.normalize(
-            { x: 0, y: (35 * who) / settings.number },
+            { x: 0, y: (35 * who) / settings.playerCount },
             { space: world.space!, endpoints: 'half-open' },
           )!,
           orientation: { heading: 90 },
@@ -88,7 +88,7 @@ export function create(options: Partial<MinorityParameters> = {}) {
   }
   function updateSystem() {
     zeroCount = agents().filter((a) => a.choice === 0).length;
-    minority = zeroCount <= (settings.number - 1) / 2 ? 0 : 1;
+    minority = zeroCount <= (settings.playerCount - 1) / 2 ? 0 : 1;
     const summary = stats.describe(
       agents().map((a) => a.score),
       { sample: true },
@@ -119,13 +119,13 @@ export function create(options: Partial<MinorityParameters> = {}) {
   updateSystem();
   record();
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) {
         diagnostic = null;
         run(world, () => {
           for (const a of random.sample(agents(), {
-            count: agents().length,
+            sampleCount: agents().length,
             algorithm: 'fisher-yates-descending',
           })) {
             a.strategyScores = a.strategyScores.map(
@@ -138,7 +138,7 @@ export function create(options: Partial<MinorityParameters> = {}) {
           }
           history = (history * 2 + minority) % 2 ** settings.memory;
           for (const a of random.sample(agents(), {
-            count: agents().length,
+            sampleCount: agents().length,
             algorithm: 'fisher-yates-descending',
           }))
             a.choice = a.strategies[a.currentStrategy]![history]!;
@@ -151,17 +151,17 @@ export function create(options: Partial<MinorityParameters> = {}) {
           break;
         }
         for (const a of random.sample(agents(), {
-          count: agents().length,
+          sampleCount: agents().length,
           algorithm: 'fisher-yates-descending',
         }))
           a.move(a.score / avgScore);
       }
     },
     setParameters(p: Partial<Pick<MinorityParameters, 'colorBy'>>) {
-      const next = parameters(inputs, p);
+      const next = parseParameters(inputs, p);
       if (Reflect.ownKeys(p).some((k) => k !== 'colorBy'))
         throw new TypeError('Only colorBy is live.');
-      settings = parameters(inputs, { ...settings, ...p });
+      settings = parseParameters(inputs, { ...settings, ...p });
       void next;
     },
     read() {

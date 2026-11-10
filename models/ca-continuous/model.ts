@@ -1,7 +1,7 @@
 /** Adapted from Wilensky (2003), CC BY-NC-SA 3.0; exact source/notices adjacent. */
 import { Grid, Random, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface ContinuousParameters {
   width: number;
   height: number;
@@ -59,7 +59,7 @@ export function iteratedMap(
   return Math.round(fractionalPart(x + addConstant) * scale) / scale;
 }
 export function create(options: Partial<ContinuousParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   if (settings.width % 2 !== 1 || settings.height % 2 !== 1)
     throw new RangeError("Use odd centered dimensions.");
   const { width, height } = settings,
@@ -119,9 +119,9 @@ export function create(options: Partial<ContinuousParameters> = {}) {
   }
   initialize(settings.initialization);
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) {
         if (row === bottom) {
           if (settings.autoContinue || done) {
             done = true;
@@ -141,12 +141,12 @@ export function create(options: Partial<ContinuousParameters> = {}) {
       }
     },
     setupSingle() {
-      settings = parameters(inputs, { ...settings, initialization: "single" });
+      settings = parseParameters(inputs, { ...settings, initialization: "single" });
       initialize("single");
       world.tick.reset();
     },
     setupRandom() {
-      settings = parameters(inputs, { ...settings, initialization: "random" });
+      settings = parseParameters(inputs, { ...settings, initialization: "random" });
       initialize("random");
       world.tick.reset();
     },
@@ -162,7 +162,7 @@ export function create(options: Partial<ContinuousParameters> = {}) {
         >
       >,
     ) {
-      parameters(inputs, field);
+      parseParameters(inputs, field);
       const allowed = [
         "maxValue",
         "addConstant",
@@ -175,7 +175,7 @@ export function create(options: Partial<ContinuousParameters> = {}) {
         )
       )
         throw new TypeError("Unknown live rule.");
-      settings = parameters(inputs, { ...settings, ...field });
+      settings = parseParameters(inputs, { ...settings, ...field });
     },
     read() {
       return Object.freeze({

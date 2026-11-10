@@ -2,7 +2,7 @@
 import { Agent, Grid, Random, World, run } from "city-library";
 import type { Field } from "city-library";
 import type { Definition } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 import { inputs } from "./parameters.ts";
 import type {
   DemandKey,
@@ -81,17 +81,17 @@ export function create(options: Partial<TaxiParameters> = {}) {
       else taxicabMoveDeliver(cab);
     }
   }
-  function step(count = 1) {
-    stepCount(count);
-    for (let index = 0; index < count; index++) {
+  function step(stepCount = 1) {
+    validateStepCount(stepCount);
+    for (let index = 0; index < stepCount; index++) {
       run(world, go);
       record();
     }
-    return count;
+    return stepCount;
   }
 
   // Rules, demand phase and history belong here; World/Grid own agents and road fields.
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const world = World.create({ x: 65, y: 65, boundary: "wrap" }, { random });
   const grid = Grid.create(
@@ -124,7 +124,7 @@ export function create(options: Partial<TaxiParameters> = {}) {
   const fieldId = (field: ModelField) => `${field.x},${field.y}`;
   const cabId = (cab: Cab) => `cab-${cab.who}`;
   const shuffled = <T>(items: readonly T[]) =>
-    random.sample(items, { count: items.length });
+    random.sample(items, { sampleCount: items.length });
   function choose<T>(items: readonly T[]): T {
     if (!items.length)
       throw new Error("The original model requested an empty road agentset.");
@@ -222,8 +222,8 @@ export function create(options: Partial<TaxiParameters> = {}) {
     totalMiles: number;
     businessMiles: number;
     deadMiles: number;
-    waitingPassengers: number;
-    occupiedCabs: number;
+    waitingPassengerCount: number;
+    occupiedCabCount: number;
     totalIncome: number;
   }[] = [];
 
@@ -681,8 +681,8 @@ export function create(options: Partial<TaxiParameters> = {}) {
       totalMiles: cabs().reduce((sum, cab) => sum + cab.totalDistanceMiles, 0),
       businessMiles: cabs().reduce((sum, cab) => sum + cab.businessDistanceMiles, 0),
       deadMiles: cabs().reduce((sum, cab) => sum + cab.deadheadDistanceMiles, 0),
-      waitingPassengers: passengers().length,
-      occupiedCabs: cabs().filter((cab) => !cab.vacancy).length,
+      waitingPassengerCount: passengers().length,
+      occupiedCabCount: cabs().filter((cab) => !cab.vacancy).length,
       totalIncome: cabs().reduce((sum, cab) => sum + cab.totalIncome, 0),
     });
     if (history.length > 1001) history.splice(1, 1);
@@ -695,12 +695,12 @@ export function create(options: Partial<TaxiParameters> = {}) {
     ) {
       throw new TypeError("Seed and taxi population are setup-only.");
     }
-    settings = parameters(inputs, { ...settings, ...values });
+    settings = parseParameters(inputs, { ...settings, ...values });
   }
   function snapshot() {
     return {
       tick: world.tick.value,
-      occupiedCabs: cabs().filter((cab) => !cab.vacancy).length,
+      occupiedCabCount: cabs().filter((cab) => !cab.vacancy).length,
       totalIncome: cabs().reduce((sum, cab) => sum + cab.totalIncome, 0),
       width: 65,
       height: 65,

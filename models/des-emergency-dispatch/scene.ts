@@ -17,7 +17,7 @@ export function scene(state: Observation<typeof model>): SpatialData {
       stroke: completed ? scientificPalette.completed : scientificPalette.neutral, strokeWidth: call.priority === 0 ? 2 : 1 });
     if (active) agents.push({ id: `team:${call.number}`, x: point.x + 0.9, y: 1.9, shape: "triangle", size: 13, color: scientificPalette.active });
   }
-  for (let team = 0; team < Math.max(0, state.parameters.responders - state.busy); team++) agents.push({ id: `idle-team:${team}`, x: -6 + team * 0.8, y: -2,
+  for (let team = 0; team < Math.max(0, state.parameters.responderCount - state.busyResponderCount); team++) agents.push({ id: `idle-team:${team}`, x: -6 + team * 0.8, y: -2,
     shape: "triangle", size: 13, color: scientificPalette.neutral });
   return { width: 18, height: 9, showLabels: false, agents,
     segments: state.edges.map(edge => ({ from: points.get(edge.from)!, to: points.get(edge.to)!, color: scientificPalette.neutral })),
@@ -28,5 +28,5 @@ export function scene(state: Observation<typeof model>): SpatialData {
           { x, y: 3.8, text: call.completed >= 0 ? "done" : call.status === "waiting" ? "waiting" : "assigned" }];
       }),
       { x: -6, y: -3, text: "Available teams" }],
-    description: `Four-node access path; three diamond calls, ${state.waiting} waiting, ${state.completed} completed, ${state.busy} assigned triangle teams. Lower priority number is served first among waiting calls. Team placement marks assignment, not a physical travel position.` };
+    description: `Four-node access path; three diamond calls, ${state.waitingCallCount} waiting, ${state.completedCallCount} completed, ${state.busyResponderCount} assigned triangle teams. Lower priority number is served first among waiting calls. Team placement marks assignment, not a physical travel position.` };
 }

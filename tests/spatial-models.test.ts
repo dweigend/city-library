@@ -26,8 +26,8 @@ describe("original illustrative spatial city models", () => {
   }
 
   test("hourly load shifting conserves daily appliance energy and evicts old measurements", () => {
-    const evening = energy.create({ households: 10, shiftedShare: 0 });
-    const midday = energy.create({ households: 10, shiftedShare: 1 });
+    const evening = energy.create({ householdCount: 10, shiftedShare: 0 });
+    const midday = energy.create({ householdCount: 10, shiftedShare: 1 });
     evening.advance(24); midday.advance(24);
     expect(evening.read().energyKwh).toBeCloseTo(midday.read().energyKwh, 12);
     expect(evening.read().energyKwh).toBeCloseTo(99, 12);
@@ -45,31 +45,31 @@ describe("original illustrative spatial city models", () => {
   });
 
   test("crossing commits one cohort state per minute and terminates at arrival", () => {
-    const instance = crossing.create({ pedestrians: 4, greenMinutes: 1 });
+    const instance = crossing.create({ pedestrianCount: 4, greenMinutes: 1 });
     instance.advance(3);
-    expect(instance.read().waiting).toBe(4);
+    expect(instance.read().waitingPedestrianCount).toBe(4);
     instance.advance();
-    expect(instance.read().crossing).toBe(4);
-    expect(instance.read().arrived).toBe(0);
+    expect(instance.read().crossingPedestrianCount).toBe(4);
+    expect(instance.read().arrivedPedestrianCount).toBe(0);
     instance.advance(100);
-    expect(instance.read().arrived).toBe(4);
+    expect(instance.read().arrivedPedestrianCount).toBe(4);
     expect(instance.read().tick).toBe(5);
     expect(instance.read().done).toBe(true);
   });
 
   test("zoning compares paired seeds and summarizes replications rather than samples", () => {
-    const first = zoning.create({ parcels: 10, seed: 7, baseCap: 2 });
-    const second = zoning.create({ parcels: 10, seed: 7, baseCap: 2 });
+    const first = zoning.create({ parcelCount: 10, seed: 7, baseCap: 2 });
+    const second = zoning.create({ parcelCount: 10, seed: 7, baseCap: 2 });
     first.advance(100); second.advance(100);
     const observation = first.read();
     expect(observation).toEqual(second.read());
     expect(observation.tick).toBe(6);
-    expect(observation.completedRuns).toBe(6);
+    expect(observation.completedRunCount).toBe(6);
     expect(observation.done).toBe(true);
     expect(observation.summaries).toHaveLength(2);
-    expect(observation.summaries.map(summary => summary.replications)).toEqual([3, 3]);
+    expect(observation.summaries.map(summary => summary.replicationCount)).toEqual([3, 3]);
     for (let seed = 0; seed < 3; seed += 1) {
-      expect(observation.outcomes[seed + 3]!.slots).toBe(observation.outcomes[seed]!.slots * 2);
+      expect(observation.outcomes[seed + 3]!.slotCount).toBe(observation.outcomes[seed]!.slotCount * 2);
     }
     expect(observation.outcomes.every(outcome => outcome.reason === "stop-condition")).toBe(true);
   });
@@ -93,10 +93,10 @@ describe("original illustrative spatial city models", () => {
     instance.advance();
     expect(instance.read().energyKwh).toBe(2);
     expect(instance.read().lastCrossingHour).toBe(0.375);
-    expect(instance.read().reserveCrossings).toBe(1);
+    expect(instance.read().reserveCrossingCount).toBe(1);
     expect(instance.read().importedKwh).toBe(5);
     instance.advance(30);
-    expect(instance.read().reserveCrossings).toBe(1);
+    expect(instance.read().reserveCrossingCount).toBe(1);
     expect(instance.read().history.every(sample => sample.values.energyKwh! >= 2 && sample.values.energyKwh! <= 10)).toBe(true);
   });
 
@@ -106,7 +106,7 @@ describe("original illustrative spatial city models", () => {
     expect(instance.read().lastCrossingHour).toBeCloseTo(1 / 2.05, 12);
     instance.advance(9);
     const state = instance.read();
-    expect(state.capacityCrossings).toBe(1);
+    expect(state.capacityCrossingCount).toBe(1);
     expect(state.storedM3).toBe(1);
     expect(state.storedM3 + state.overflowM3 + state.dischargedM3).toBeCloseTo(state.inflowM3, 11);
     instance.setRain(0); instance.advance(10);
@@ -115,7 +115,7 @@ describe("original illustrative spatial city models", () => {
   });
 
   test("tree watering prioritizes the initial driest tree with stable input ties", () => {
-    const instance = trees.create({ trees: 20, dailyLiters: 1, seed: 5 });
+    const instance = trees.create({ treeCount: 20, dailyLiters: 1, seed: 5 });
     const initial = instance.read().trees;
     const firstDriest = initial.reduce((best, tree, index) => tree.moistureLiters < initial[best]!.moistureLiters ? index : best, 0);
     instance.advance();
@@ -128,11 +128,11 @@ describe("original illustrative spatial city models", () => {
   });
 
   test("recycling cannot cascade beyond the old adopter's immediate neighbors in one step", () => {
-    const first = recycling.create({ households: 10, influence: 1, seed: 9 });
-    const second = recycling.create({ households: 10, influence: 1, seed: 9 });
+    const first = recycling.create({ householdCount: 10, influence: 1, seed: 9 });
+    const second = recycling.create({ householdCount: 10, influence: 1, seed: 9 });
     first.advance(); second.advance();
     const oneStep = first.read();
-    expect(oneStep.adopters).toBeLessThanOrEqual(3);
+    expect(oneStep.adopterCount).toBeLessThanOrEqual(3);
     expect(oneStep.nodes.slice(2, 9).every(node => !node.recycling)).toBe(true);
     first.advance(20); second.advance(20);
     expect(first.read().history).toEqual(second.read().history);
@@ -140,19 +140,19 @@ describe("original illustrative spatial city models", () => {
   });
 
   test("reassignment preserves canonical resident IDs and household edges", () => {
-    const instance = membership.create({ residents: 4 });
+    const instance = membership.create({ residentCount: 4 });
     const initial = instance.read();
     instance.reassign(0);
     const reassigned = instance.read();
     expect(reassigned.tick).toBe(0);
-    expect(reassigned.memberships).toBe(8);
+    expect(reassigned.membershipCount).toBe(8);
     expect(reassigned.nodes).toEqual(initial.nodes);
     expect(reassigned.people[0]!.household).toBe(initial.people[0]!.household);
     expect(reassigned.people[0]!.workplace).not.toBe(initial.people[0]!.workplace);
     expect(initial.people[0]!.workplace).toBe("Workplace A");
     expect(() => instance.reassign(4)).toThrow(RangeError);
     instance.advance(20);
-    expect(instance.read().memberships).toBe(8);
+    expect(instance.read().membershipCount).toBe(8);
     expect(instance.read().people.every(person => person.household.startsWith("Household") && person.workplace.startsWith("Workplace"))).toBe(true);
   });
 });

@@ -23,7 +23,7 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
-| `number` | `70` | integer; ≥ 0; ≤ 300 |
+| `personCount` | `70` | integer; ≥ 0; ≤ 300 |
 | `groupCount` | `10` | integer; ≥ 5; ≤ 20 |
 | `tolerance` | `25` | number; ≥ 0; ≤ 99 |
 

@@ -15,7 +15,7 @@ export function validateBufferDimensions(buffer: Dimensions): void {
   }
 }
 
-/** Keep the legacy minimum in buffer pixels, including on low-DPI displays. */
+/** Keep the existing minimum in buffer pixels, including on low-DPI displays. */
 export function symbolDiameter(agent: SpatialAgent, pixelRatio: number): number {
   return Math.max(2, finite((agent.size ?? 8) * pixelRatio, "Symbol diameter"));
 }
@@ -71,7 +71,7 @@ export function validateCanvasGeometry(data: GridData | SpatialData, buffer: Dim
 }
 
 /** Test in buffer coordinates, matching both rectangle rotation and pixel rounding. */
-export function hitSceneSymbol(agent: SpatialAgent, x: number, y: number, scene: Dimensions, buffer: Dimensions, pixelRatio: number): boolean {
+export function isPointInSceneSymbol(agent: SpatialAgent, x: number, y: number, scene: Dimensions, buffer: Dimensions, pixelRatio: number): boolean {
   const radians = symbolRotation(agent);
   const dx = (x - agent.x) / scene.width * buffer.width;
   const dy = (y - agent.y) / scene.height * buffer.height;

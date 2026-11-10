@@ -42,7 +42,7 @@ export const ui = defineUI(model, {
   },
   monitors: [
     { label: "Tick", value: (state) => state.tick },
-    { label: "Living", value: (state) => state.counts.living },
+    { label: "Living", value: (state) => state.counts.livingFieldCount },
     {
       label: "Density",
       value: (state) => state.density,

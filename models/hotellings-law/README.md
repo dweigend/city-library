@@ -23,7 +23,7 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer |
-| `numberOfStores` | `3` | integer; ≥ 2; ≤ 10 |
+| `storeCount` | `3` | integer; ≥ 2; ≤ 10 |
 | `layout` | `"plane"` | `plane`, `line` |
 | `rules` | `"normal"` | `normal`, `moving-only`, `pricing-only` |
 

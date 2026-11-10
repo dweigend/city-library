@@ -25,7 +25,7 @@ const observation = simulation.read();
 | `seed` | `1` | integer |
 | `populationSize` | `100` | integer; ≥ 20; ≤ 500 |
 | `mutationRate` | `0.01` | number; ≥ 0; ≤ 1 |
-| `numberOfGenerations` | `100` | integer; ≥ 1; ≤ 1000 |
+| `generationCount` | `100` | integer; ≥ 1; ≤ 1000 |
 
 ## Actions and observations
 

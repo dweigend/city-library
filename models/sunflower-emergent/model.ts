@@ -1,7 +1,7 @@
 /** NetLogo Sunflower Emergent (Wilensky, 2009). Complete notices: NOTICE.md. */
 import { Agent, Random, World, run, stats } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 
 export interface SunflowerParameters {
   seed: number;
@@ -9,7 +9,7 @@ export interface SunflowerParameters {
   particleSize: number;
   fixedTemps: boolean;
   showTemps: boolean;
-  energyApproximation: "inverse distance" | "exponential";
+  energyApproximation: "inverse-distance" | "exponential";
   alpha: number;
   beta: number;
 }
@@ -21,15 +21,15 @@ export const inputs: Inputs<SunflowerParameters> = {
   showTemps: { kind: "boolean", default: true },
   energyApproximation: {
     kind: "choice",
-    default: "inverse distance",
-    options: ["inverse distance", "exponential"],
+    default: "inverse-distance",
+    options: ["inverse-distance", "exponential"],
   },
   alpha: { kind: "number", default: 3, min: 1, max: 3 },
   beta: { kind: "number", default: 0.6, min: 0, max: 1 },
 };
 type Particle = Agent<{ temporary: boolean; size: number }>;
 export function create(options: Partial<SunflowerParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const world = World.create({ x: 161, y: 161, boundary: "hard" }, { random });
   const particles = () =>
@@ -109,9 +109,9 @@ export function create(options: Partial<SunflowerParameters> = {}) {
       : [];
     for (const particle of temporary) particle.delete();
   }
-  function advance(count = 1) {
-    stepCount(count);
-    for (let index = 0; index < count; index++) {
+  function advance(stepCount = 1) {
+    validateStepCount(stepCount);
+    for (let index = 0; index < stepCount; index++) {
       if (settings.ringDist * (particles().length + 1) >= 80) {
         stopped = true;
         break;
@@ -123,7 +123,7 @@ export function create(options: Partial<SunflowerParameters> = {}) {
   function setParameters(update: Partial<Omit<SunflowerParameters, "seed">>) {
     if (Object.keys(update).some((key) => key === "seed"))
       throw new TypeError("Seed is setup-only.");
-    settings = parameters(inputs, { ...settings, ...update });
+    settings = parseParameters(inputs, { ...settings, ...update });
     stopped = settings.ringDist * (particles().length + 1) >= 80;
   }
   function read() {

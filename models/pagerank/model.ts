@@ -1,13 +1,13 @@
 /** Stonedahl & Wilensky (2009), CC BY-NC-SA 3.0. Exact source/notices adjacent. */
 import { Agent, Graph, Random, World, run, stats } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface Parameters {
   seed: number;
-  networkChoice: "Example 1" | "Example 2" | "Preferential Attachment";
+  networkChoice: "example-1" | "example-2" | "preferential-attachment";
   calculationMethod: "diffusion" | "random-surfer";
   dampingFactor: number;
-  numberOfSurfers: number;
+  surferCount: number;
   watchSurfers: boolean;
   showPageRanks: boolean;
 }
@@ -21,8 +21,8 @@ export const inputs: Inputs<Parameters> = {
   },
   networkChoice: {
     kind: "choice",
-    default: "Example 1",
-    options: ["Example 1", "Example 2", "Preferential Attachment"],
+    default: "example-1",
+    options: ["example-1", "example-2", "preferential-attachment"],
   },
   calculationMethod: {
     kind: "choice",
@@ -30,7 +30,7 @@ export const inputs: Inputs<Parameters> = {
     options: ["diffusion", "random-surfer"],
   },
   dampingFactor: { kind: "number", default: 0.85, min: 0, max: 1, step: 0.01 },
-  numberOfSurfers: {
+  surferCount: {
     kind: "number",
     default: 5,
     min: 1,
@@ -41,7 +41,7 @@ export const inputs: Inputs<Parameters> = {
   showPageRanks: { kind: "boolean", default: true },
 };
 export function create(options: Partial<Parameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed }),
     world = World.create({ x: 21, y: 21, boundary: "hard" }, { random });
   type Page = Agent<{
@@ -49,7 +49,7 @@ export function create(options: Partial<Parameters> = {}) {
     who: number;
     rank: number;
     newRank: number;
-    visits: number;
+    visitCount: number;
     color: string;
   }>;
   type Surfer = Agent<{
@@ -85,7 +85,7 @@ export function create(options: Partial<Parameters> = {}) {
           who: id,
           rank: 0,
           newRank: 0,
-          visits: 0,
+          visitCount: 0,
           color: colors[id] ?? "#9b67c4",
         },
         {
@@ -117,7 +117,7 @@ export function create(options: Partial<Parameters> = {}) {
   }
   function createNetwork() {
     const ps: Array<Page | undefined> = [];
-    if (settings.networkChoice === "Example 1") {
+    if (settings.networkChoice === "example-1") {
       for (let i = 0; i < 11; i++) ps[i] = addPage(i);
       const incoming: [[number, number[]], ...[number, number[]][]] = [
         [0, [3]],
@@ -129,7 +129,7 @@ export function create(options: Partial<Parameters> = {}) {
       ];
       for (const [to, froms] of incoming)
         for (const from of froms) edge(ps[from]!, ps[to]!);
-    } else if (settings.networkChoice === "Example 2") {
+    } else if (settings.networkChoice === "example-2") {
       for (let i = 1; i <= 7; i++) ps[i] = addPage(i);
       const incoming: [[number, number[]], ...[number, number[]][]] = [
         [1, [2, 3, 5, 6]],
@@ -169,7 +169,7 @@ export function create(options: Partial<Parameters> = {}) {
     tick: number;
     totalRank: number;
     maxRank: number;
-    visits: number;
+    visitCount: number;
   }[] = [];
   function globals() {
     const summary = stats.describe(pages().map((p) => p.rank));
@@ -179,7 +179,7 @@ export function create(options: Partial<Parameters> = {}) {
     history.push({
       tick: world.tick.value,
       ...globals(),
-      visits: pages().reduce((s, p) => s + p.visits, 0),
+      visitCount: pages().reduce((s, p) => s + p.visitCount, 0),
     });
     if (history.length > 1001) history.shift();
   }
@@ -187,7 +187,7 @@ export function create(options: Partial<Parameters> = {}) {
     for (const s of surfers()) s.delete();
     const ps = pages();
     for (const p of ps) p.newRank = 0;
-    for (const p of random.sample(ps, { count: ps.length })) {
+    for (const p of random.sample(ps, { sampleCount: ps.length })) {
       const outgoing = graph.neighbors(p, { direction: "out" }),
         destinations = outgoing.length ? outgoing : ps;
       const share = p.rank / destinations.length;
@@ -201,18 +201,18 @@ export function create(options: Partial<Parameters> = {}) {
   function surf() {
     const ps = pages();
     let ss = surfers();
-    if (ss.length < settings.numberOfSurfers)
-      for (let i = ss.length; i < settings.numberOfSurfers; i++)
+    if (ss.length < settings.surferCount)
+      for (let i = ss.length; i < settings.surferCount; i++)
         addSurfer(random.sample(ps)[0]!);
     ss = surfers();
-    if (ss.length > settings.numberOfSurfers)
+    if (ss.length > settings.surferCount)
       for (const s of random.sample(ss, {
-        count: ss.length - settings.numberOfSurfers,
+        sampleCount: ss.length - settings.surferCount,
       }))
         s.delete();
-    for (const s of random.sample(surfers(), { count: surfers().length })) {
+    for (const s of random.sample(surfers(), { sampleCount: surfers().length })) {
       const old = s.currentPage!;
-      old.visits++;
+      old.visitCount++;
       const draw = random.number(),
         outgoing = graph.neighbors(old, { direction: "out" });
       s.currentPage = random.sample(
@@ -228,8 +228,8 @@ export function create(options: Partial<Parameters> = {}) {
         }
       }
     }
-    const total = ps.reduce((sum, p) => sum + p.visits, 0);
-    for (const p of ps) p.rank = p.visits / total;
+    const total = ps.reduce((sum, p) => sum + p.visitCount, 0);
+    for (const p of ps) p.rank = p.visitCount / total;
   }
   function go() {
     for (const e of graph.edges) {
@@ -244,18 +244,18 @@ export function create(options: Partial<Parameters> = {}) {
     diffuse,
     surf,
     globals,
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) {
         run(world, go);
         record();
       }
     },
     setParameters(changes: Partial<Omit<Parameters, "seed" | "networkChoice">>) {
-      parameters(inputs, changes);
+      parseParameters(inputs, changes);
       if (Object.hasOwn(changes, "seed") || Object.hasOwn(changes, "networkChoice"))
         throw new TypeError("Network and seed are setup-only.");
-      settings = parameters(inputs, { ...settings, ...changes });
+      settings = parseParameters(inputs, { ...settings, ...changes });
     },
     setScenario(s: {
       pages: readonly { id: number; rank: number; visits?: number }[];
@@ -298,7 +298,7 @@ export function create(options: Partial<Parameters> = {}) {
       for (const value of s.pages) {
         const p = addPage(value.id);
         p.rank = value.rank;
-        p.visits = value.visits ?? 0;
+        p.visitCount = value.visits ?? 0;
         byId.set(value.id, p);
       }
       for (const e of s.edges) edge(byId.get(e.from)!, byId.get(e.to)!);
@@ -319,7 +319,7 @@ export function create(options: Partial<Parameters> = {}) {
               id: p.who,
               rank: p.rank,
               newRank: p.newRank,
-              visits: p.visits,
+              visitCount: p.visitCount,
               color: p.color,
               x: p.x,
               y: p.y,

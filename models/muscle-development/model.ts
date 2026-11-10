@@ -1,7 +1,7 @@
 /** NetLogo Muscle Development (Wilensky, 2002). Complete notices: NOTICE.md. */
 import { Agent, Grid, Random, World, run, stats } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 
 export interface MuscleParameters {
   seed: number;
@@ -9,7 +9,7 @@ export interface MuscleParameters {
   hoursOfSleep: number;
   intensity: number;
   lift: boolean;
-  slowTwitchFibers: number;
+  slowTwitchFiberPercent: number;
 }
 export const inputs: Inputs<MuscleParameters> = {
   seed: { kind: "number", default: 1, integer: true },
@@ -23,12 +23,12 @@ export const inputs: Inputs<MuscleParameters> = {
   hoursOfSleep: { kind: "number", default: 8, min: 0, max: 12 },
   intensity: { kind: "number", default: 95, min: 50, max: 100 },
   lift: { kind: "boolean", default: true },
-  slowTwitchFibers: { kind: "number", default: 50, min: 0, max: 100 },
+  slowTwitchFiberPercent: { kind: "number", default: 50, min: 0, max: 100 },
 };
 type Fiber = Agent<{ fiberSize: number; maxSize: number }>;
 
 export function create(options: Partial<MuscleParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const space = { x: 17, y: 17, boundary: "wrap" } as const;
   const world = World.create(space, { random });
@@ -63,12 +63,12 @@ export function create(options: Partial<MuscleParameters> = {}) {
   }
   function newMuscleFibers() {
     for (const field of random.sample(grid.fields, {
-      count: grid.fields.length,
+      sampleCount: grid.fields.length,
       algorithm: "fisher-yates-descending",
     })) {
       let maxSize = 4;
       for (let trial = 0; trial < 20; trial++) {
-        if (random.number() * 100 > settings.slowTwitchFibers) maxSize++;
+        if (random.number() * 100 > settings.slowTwitchFiberPercent) maxSize++;
       }
       const fiber = Agent.create(
         { maxSize, fiberSize: (0.2 + random.number() * 0.4) * maxSize },
@@ -87,7 +87,7 @@ export function create(options: Partial<MuscleParameters> = {}) {
   }
   function liftWeights() {
     for (const fiber of random.sample(fibers(), {
-      count: fibers().length,
+      sampleCount: fibers().length,
       algorithm: "fisher-yates-descending",
     })) {
       if (random.number() < (settings.intensity / 100) ** 2) {
@@ -142,15 +142,15 @@ export function create(options: Partial<MuscleParameters> = {}) {
     regulateHormones();
     developMuscle();
   }
-  function advance(count = 1) {
-    stepCount(count);
-    for (let index = 0; index < count; index++) {
+  function advance(stepCount = 1) {
+    validateStepCount(stepCount);
+    for (let index = 0; index < stepCount; index++) {
       run(world, go);
       record();
     }
   }
   function setParameters(
-    update: Partial<Omit<MuscleParameters, "seed" | "slowTwitchFibers">>,
+    update: Partial<Omit<MuscleParameters, "seed" | "slowTwitchFiberPercent">>,
   ) {
     if (
       Object.keys(update).some(
@@ -164,7 +164,7 @@ export function create(options: Partial<MuscleParameters> = {}) {
       )
     )
       throw new TypeError("Only live parameters may change.");
-    settings = parameters(inputs, { ...settings, ...update });
+    settings = parseParameters(inputs, { ...settings, ...update });
   }
   function read() {
     return {

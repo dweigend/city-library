@@ -16,7 +16,7 @@ test("native families obey degree, direction and tree invariants through canonic
       expect(Object.isFrozen(edges)).toBe(true);
       expect(edges.every(edge => graph.edges.has(edge) && edge.from !== edge.to && edge.directed === directed && edge.path === undefined)).toBe(true);
       expect(new Set(edges.map(edge => directed ? `${edge.from.index}:${edge.to.index}` : canonical(edge.from.index, edge.to.index))).size).toBe(edges.length);
-      expect(graph.connected()).toBe(true);
+      expect(graph.isConnected()).toBe(true);
       const degree = [...graph.analyze({ measure: "degree", direction: "all" }).values()];
       if (kind === "complete") {
         expect(edges.length).toBe(count * (count - 1) / (directed ? 1 : 2));
@@ -103,7 +103,7 @@ test("small-world rank selection matches explicit eligible-pool rewiring on chan
       adjacency[source]!.delete(old); adjacency[old]!.delete(source);
       adjacency[source]!.add(target); adjacency[target]!.add(source); edge[1] = target;
     }
-    const result = graph.generate({ kind: "small-world", nodes, neighbors, probability, random });
+    const result = graph.generate({ kind: "small-world", nodes, neighborCount: neighbors, probability, random });
     expect(result.map(edge => [edge.from.index, edge.to.index])).toEqual(expected);
     expect(random.state).toEqual(control.state);
     expect(new Set(result.map(edge => canonical(edge.from.index, edge.to.index))).size).toBe(result.length);
@@ -126,7 +126,7 @@ test("closed descriptors, domains, membership and induced loops reject before ca
   const variants: GeneratorOptions<typeof nodes[number]>[] = [
     { kind: "path", nodes }, { kind: "cycle", nodes }, { kind: "star", nodes }, { kind: "wheel", nodes }, { kind: "complete", nodes },
     { kind: "tree", nodes }, { kind: "lattice", nodes, shape: [4] }, { kind: "random", nodes, probability: 0, random },
-    { kind: "small-world", nodes, neighbors: 2, probability: 0, random }, { kind: "preferential", nodes, edgesPerNode: 1, random },
+    { kind: "small-world", nodes, neighborCount: 2, probability: 0, random }, { kind: "preferential", nodes, edgesPerNode: 1, random },
     { kind: "geometric", nodes, radius: 1, position: () => { reads++; return { x: 0, y: 0 }; } },
   ];
   for (const options of variants) {
@@ -138,7 +138,7 @@ test("closed descriptors, domains, membership and induced loops reject before ca
   const sparse = [...nodes]; delete sparse[0];
   for (const invalid of [undefined, null, [], {}, { kind: "kleinberg", nodes }, { kind: "path", nodes: new Set(nodes) },
     { kind: "path", nodes: [nodes[0], nodes[0]] }, { kind: "path", nodes: [{}] }, { kind: "path", nodes: accessor }, { kind: "path", nodes: sparse },
-    { kind: "path", nodes, directed: 1 }, { kind: "path", nodes, probability: undefined }, { kind: "small-world", nodes, neighbors: 2, probability: 1, random, directed: undefined },
+    { kind: "path", nodes, directed: 1 }, { kind: "path", nodes, probability: undefined }, { kind: "small-world", nodes, neighborCount: 2, probability: 1, random, directed: undefined },
     { kind: "random", nodes, probability: 0, random: { number() { reads++; return 0; } } },
     { kind: "geometric", nodes, radius: 1, get position() { reads++; return () => ({ x: 0, y: 0 }); } },
   ]) expect(() => graph.generate(invalid as never)).toThrow(TypeError);
@@ -237,7 +237,7 @@ test("known over-cap batches draw nothing; stochastic cap failure stops at first
   expect(() => graph.generate({ kind: "random", nodes, probability: 1, random })).toThrow(RangeError);
   expect(random.state).toEqual(before); expect(graph.edges.size).toBe(0);
   const known = fixture(2002);
-  expect(() => known.graph.generate({ kind: "small-world", nodes: known.nodes, neighbors: 1000, probability: 1, random })).toThrow(RangeError);
+  expect(() => known.graph.generate({ kind: "small-world", nodes: known.nodes, neighborCount: 1000, probability: 1, random })).toThrow(RangeError);
   expect(() => known.graph.generate({ kind: "preferential", nodes: known.nodes, edgesPerNode: 1000, random })).toThrow(RangeError);
   expect(random.state).toEqual(before); expect(known.graph.edges.size).toBe(0);
   const control = random.copy(), probability = 0.999999999;

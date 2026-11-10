@@ -6,15 +6,15 @@
  */
 import { Grid, Random, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 
 export type Neighborhood = "von-neumann" | "moore" | "displaced-von-n" | "h" | "moore-von-n";
-export type CountRule = "> 0" | "= 1" | "<= 2";
+export type CountRule = "positive" | "exactly-one" | "at-most-two";
 export interface CellsParameters { seed: number; neighborhood: Neighborhood; countRule: CountRule; probability: number; ageLimit: number }
 export const inputs: Inputs<CellsParameters> = {
   seed: { kind: "number", default: 1, min: -2147483648, max: 4294967295, integer: true },
   neighborhood: { kind: "choice", default: "von-neumann", options: ["von-neumann", "moore", "displaced-von-n", "h", "moore-von-n"] },
-  countRule: { kind: "choice", default: "= 1", options: ["> 0", "= 1", "<= 2"] },
+  countRule: { kind: "choice", default: "exactly-one", options: ["positive", "exactly-one", "at-most-two"] },
   probability: { kind: "number", default: 100, min: 0, max: 100, integer: true },
   ageLimit: { kind: "number", default: 55, min: 0, max: 100, integer: true },
 };
@@ -22,7 +22,7 @@ export interface CellInput { readonly on: boolean; readonly onTime: number; read
 interface CellsSample { readonly tick: number; readonly on: number }
 
 export function create(options: Partial<CellsParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const width = 81, height = 81, startingColor = 109;
   const random = Random.create({ seed: settings.seed });
   const world = World.create({ x: width, y: height, boundary: "wrap" }, { random });
@@ -69,8 +69,8 @@ export function create(options: Partial<CellsParameters> = {}) {
   }
   function countPasses(count: number) {
     if (count === 0) return false;
-    if (settings.countRule === "> 0") return true;
-    if (settings.countRule === "= 1") return count === 1;
+    if (settings.countRule === "positive") return true;
+    if (settings.countRule === "exactly-one") return count === 1;
     return count <= 2;
   }
   function go() {
@@ -90,15 +90,15 @@ export function create(options: Partial<CellsParameters> = {}) {
   recolorCells(); record();
 
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) { run(world, go); record(); }
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) { run(world, go); record(); }
     },
     setRules(rules: Partial<Omit<CellsParameters, "seed">>) {
       if (typeof rules !== "object" || rules === null || ![Object.prototype, null].includes(Object.getPrototypeOf(rules)) ||
         Reflect.ownKeys(rules).some(key => typeof key !== "string" || !["neighborhood", "countRule", "probability", "ageLimit"].includes(key) || !("value" in Object.getOwnPropertyDescriptor(rules, key)!)))
         throw new TypeError("Supply only live cells rule data.");
-      const next = parameters(inputs, { ...settings, ...rules });
+      const next = parseParameters(inputs, { ...settings, ...rules });
       const nextAdjacency = next.neighborhood === settings.neighborhood ? adjacency : fields.map(field => neighborhoodOf(field, next.neighborhood));
       settings = next; adjacency = nextAdjacency; record();
     },

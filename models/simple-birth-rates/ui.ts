@@ -58,10 +58,10 @@ export const ui = defineUI(model, {
       type: "line",
       label: "Populations",
       series: (s) =>
-        (["red", "blue", "total"] as const).map((key) => ({
-          label: key,
+        (["redPersonCount", "bluePersonCount", "personCount"] as const).map((key) => ({
+          label: key === "redPersonCount" ? "Red" : key === "bluePersonCount" ? "Blue" : "Total",
           color:
-            key === "red" ? "#d73027" : key === "blue" ? "#2878cb" : "#259b45",
+            key === "redPersonCount" ? "#d73027" : key === "bluePersonCount" ? "#2878cb" : "#259b45",
           points: s.history.map((p) => ({
             x: p.tick,
             y: p[key],

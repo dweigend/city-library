@@ -28,8 +28,8 @@ const observation = simulation.read();
 | `supplyDistribution` | `"even"` | `concentrated`, `even` |
 | `demandAmount` | `"high"` | `low`, `high` |
 | `demandDistribution` | `"even"` | `concentrated`, `even` |
-| `sellerBehavior` | `"normal"` | `normal`, `desperate`, `random`, `mix of all` |
-| `buyerBehavior` | `"normal"` | `normal`, `desperate`, `random`, `mix of all` |
+| `sellerBehavior` | `"normal"` | `normal`, `desperate`, `random`, `mixed` |
+| `buyerBehavior` | `"normal"` | `normal`, `desperate`, `random`, `mixed` |
 | `sellersIgnoreFullBuyers` | `false` | boolean |
 | `stars` | `true` | boolean |
 
@@ -39,7 +39,7 @@ Use `advance(...)` for progress and `read()` for observations; the model defines
 
 Other instance procedures: `setRules`. See their typed arguments in [model.ts](model.ts).
 
-Model-specific `read()` fields include `totalSales`, `salesPerTick`, `remainingSupply`, `startingMoneyActual`, `quotes`, `sellerCash`, `averagePrice`, `percentMoneyTaken`, `percentItemsSold`, `percentDemandSatisfied`, `sellers`, `buyers`, `edges`.
+Model-specific `read()` fields include `saleCount`, `saleCountPerTick`, `remainingSupplyItemCount`, `startingMoneyActual`, `quotes`, `sellerCash`, `averagePrice`, `percentMoneyTaken`, `percentItemsSold`, `percentDemandSatisfied`, `sellers`, `buyers`, `edges`.
 
 The [UI binding](ui.ts) presents `Ignore full buyers`, `Sale markers`, `Tick`, `Sales`, `Average price`, `Money taken (%)`, `Items sold (%)`, `Demand met (%)`, `Buyers and sellers`, `Seller asking prices` and further views or controls.
 

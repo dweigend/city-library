@@ -1,7 +1,7 @@
 /** NetLogo Prisoner's Dilemma Two Person Iterated (Wilensky, 2002), CC BY-NC-SA 3.0; see NOTICE.md. */
 import { Agent, Random, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export const strategies = [
   "act-randomly",
   "cooperate",
@@ -73,7 +73,7 @@ export function strategyAction(
   }
 }
 export function create(options: Partial<IteratedParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed }),
     world = World.create({ random });
   const human = Agent.create<Player>({
@@ -181,15 +181,15 @@ export function create(options: Partial<IteratedParameters> = {}) {
     playARound,
     prepareNextRound,
     setRules(changes: Partial<Omit<IteratedParameters, "seed">>) {
-      settings = parameters(inputs, { ...settings, ...changes });
+      settings = parseParameters(inputs, { ...settings, ...changes });
     },
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) play();
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) play();
     },
     read() {
       return Object.freeze({
-        sourceMarker: "prisoners-dilemma-two-person-iterated:source-v1",
+
         tick: world.tick.value,
         parameters: settings,
         human: playerSnapshot(human),

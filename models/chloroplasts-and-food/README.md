@@ -23,8 +23,8 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer |
-| `initialChloroplasts` | `3` | integer; ≥ 0; ≤ 6 |
-| `initialCarbonDioxide` | `100` | integer; ≥ 0; ≤ 200 |
+| `initialChloroplastCount` | `3` | integer; ≥ 0; ≤ 6 |
+| `initialCarbonDioxideCount` | `100` | integer; ≥ 0; ≤ 200 |
 | `waterflowThroughLeaf` | `25` | number; ≥ 0; ≤ 50 |
 | `intensityOfLight` | `50` | number; ≥ 0; ≤ 100 |
 | `autoStop` | `false` | boolean |

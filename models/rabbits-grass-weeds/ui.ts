@@ -2,7 +2,7 @@ import { defineUI, type Observation, type SpatialData, type Series } from "../..
 
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: ["seed", "number"],
+  setup: ["seed", "rabbitCount"],
   change: (instance, changes) => instance.setRules(changes),
   live: {
     birthThreshold: {},
@@ -64,10 +64,10 @@ function rabbitsAndResourcesData(s: UIObservation): SpatialData {
 }
 
 function populationsResources4Series(s: UIObservation): readonly Series[] {
-  return (["rabbits", "grass", "weeds"] as const).map((key) => ({
-    label: key,
+  return (["rabbitCount", "grassFieldCount", "weedFieldCount"] as const).map((key) => ({
+    label: key === "rabbitCount" ? "Rabbits" : key === "grassFieldCount" ? "Grass" : "Weeds",
     color:
-      key === "rabbits" ? "#d73027" : key === "grass" ? "#389b39" : "#b539ba",
+      key === "rabbitCount" ? "#d73027" : key === "grassFieldCount" ? "#389b39" : "#b539ba",
     points: s.history.map((p) => ({
       x: p.tick,
       y: p[key],

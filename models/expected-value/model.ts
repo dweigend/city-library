@@ -1,7 +1,7 @@
 /** Expected Value, Abrahamson & Wilensky (2004), CC BY-NC-SA 3.0. Full notices: NOTICE.md. */
 import { Agent, Grid, Random, World, stats } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface Parameters {
   seed: number;
   ratio0: number;
@@ -41,7 +41,7 @@ function plotHistogram(values: readonly number[]) {
   return Object.freeze(h.counts.map((y, x) => Object.freeze({ x, y })));
 }
 export function create(options: Partial<Parameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const grid = Grid.create(
     { x: 15, y: 15, boundary: "wrap" },
@@ -89,7 +89,7 @@ export function create(options: Partial<Parameters> = {}) {
     populationCounts.forEach((n, value) => {
       for (const t of random.sample(
         tiles.filter((t) => t.value < 0),
-        { count: n },
+        { sampleCount: n },
       ))
         t.value = value;
     });
@@ -100,7 +100,7 @@ export function create(options: Partial<Parameters> = {}) {
       });
       for (let pass = 0; pass < 56; pass++)
         for (const tile of random.sample(tiles, {
-          count: tiles.length,
+          sampleCount: tiles.length,
           algorithm: "fisher-yates-descending",
         })) {
           const neighbor = grid.neighbors(tile, { neighborhood: "faces" })[
@@ -111,11 +111,11 @@ export function create(options: Partial<Parameters> = {}) {
     }
   }
   function setupLittleGuy() {
-    const tile = random.sample(tiles, { count: 1 })[0]!;
+    const tile = random.sample(tiles, { sampleCount: 1 })[0]!;
     walker.move({ to: tile });
     const neighbor = random.sample(
       grid.neighbors(tile, { neighborhood: "faces" }),
-      { count: 1 },
+      { sampleCount: 1 },
     )[0]!;
     walker.rotate({ towards: neighbor });
   }
@@ -152,13 +152,13 @@ export function create(options: Partial<Parameters> = {}) {
     get grid() {
       return grid;
     },
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) go();
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) go();
     },
     clearSelection,
     setDisplay(change: Partial<Pick<Parameters, "blackOut" | "dieNums">>) {
-      settings = parameters(inputs, { ...settings, ...change });
+      settings = parseParameters(inputs, { ...settings, ...change });
     },
     read() {
       let cumulativeTotal = 0;
@@ -183,7 +183,7 @@ export function create(options: Partial<Parameters> = {}) {
         cumulativeMeans: Object.freeze(cumulativeMeans),
         sampleTotal: totals.at(-1)!,
         mean: stats.describe(totals).mean ?? 0,
-        runs: totals.length,
+        runCount: totals.length,
         totals: Object.freeze([...totals]),
         values: Object.freeze([...values]),
         walker: Object.freeze({

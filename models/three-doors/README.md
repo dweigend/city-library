@@ -23,7 +23,7 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
-| `number` | `300` | integer; ≥ 1; ≤ 1000 |
+| `contestantCount` | `300` | integer; ≥ 1; ≤ 1000 |
 | `gradation` | `false` | boolean |
 
 ## Actions and observations

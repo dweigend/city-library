@@ -1,7 +1,7 @@
 import type { SpatialAgent } from "../definition.ts";
 
 /** Build a centered path; context translation/rotation and paint stay with canvas. */
-export function symbolPath(context: CanvasRenderingContext2D, agent: SpatialAgent, width: number, height: number) {
+export function traceSymbolPath(context: CanvasRenderingContext2D, agent: SpatialAgent, width: number, height: number) {
   context.beginPath();
   if (agent.shape === "triangle") {
     context.moveTo(0, -height / 2);

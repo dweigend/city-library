@@ -36,17 +36,17 @@ test("Feedback preserves alpha-zero powers and reports positive-alpha zero norma
 });
 
 test("Path repeats every search attempt after certain settlement and retains cardinal cells", () => {
-  const model = path({ seed: 12, initialFirms: 0, increasingReturns: 0, attempts: 3 });
+  const model = path({ seed: 12, initialFirmCount: 0, increasingReturns: 0, attemptCount: 3 });
   model.setQualities(model.read().cells.map(() => 1));
   model.setFirms([{ x: 0, y: 0, heading: 0, movedIn: false }]);
   model.advance();
   const stream = Random.create({ seed: 12 });
   for (let i = 0; i < 121 + 3 * 3; i++) stream.number(); // setup qualities, then 2 turns + acceptance per attempt
   expect(model.read().randomState).toEqual(stream.state);
-  expect(model.read().counts).toEqual({ firms: 1, settled: 1, searching: 0 });
+  expect(model.read().counts).toEqual({ firmCount: 1, settledFirmCount: 1, searchingFirmCount: 0 });
   expect(Number.isInteger(model.read().firms[0]!.x)).toBe(true);
   expect(Number.isInteger(model.read().firms[0]!.y)).toBe(true);
-  const once = path({ seed: 12, initialFirms: 0, increasingReturns: 0, attempts: 1 });
+  const once = path({ seed: 12, initialFirmCount: 0, increasingReturns: 0, attemptCount: 1 });
   once.setQualities(once.read().cells.map(() => 1));
   once.setFirms([{ x: 0, y: 0, heading: 0, movedIn: false }]);
   once.advance();
@@ -54,40 +54,40 @@ test("Path repeats every search attempt after certain settlement and retains car
 });
 
 test("Path radius counts include searching/self firms across wrapping edges and refresh at go", () => {
-  const model = path({ initialFirms: 0, increasingReturns: 0, regionSize: 0 });
+  const model = path({ initialFirmCount: 0, increasingReturns: 0, regionSize: 0 });
   model.setQualities(model.read().cells.map(() => 1));
   model.setFirms([
     { x: 5, y: 0, heading: 0, movedIn: true },
     { x: -5, y: 0, heading: 0, movedIn: true },
   ]);
-  expect(model.read().largestPopulation).toBe(1);
+  expect(model.read().largestFirmCount).toBe(1);
   const before = model.read();
   model.setRules({ regionSize: 1 });
-  expect(model.read().largestPopulation).toBe(1); // cached source global, not rewritten by the slider
+  expect(model.read().largestFirmCount).toBe(1); // cached source global, not rewritten by the slider
   expect(model.read().randomState).toEqual(before.randomState);
   model.advance();
-  expect(model.read().largestPopulation).toBe(2);
+  expect(model.read().largestFirmCount).toBe(2);
   expect(model.read().firms.map(firm => firm.x)).toEqual([5, -5]);
   model.disturb();
-  expect(model.read().largestPopulation).toBe(2); // searching firms still belong to the population
+  expect(model.read().largestFirmCount).toBe(2); // searching firms still belong to the population
 });
 
 test("Path births one child and errors atomically when no parent exists", () => {
-  const model = path({ initialFirms: 0, increasingReturns: 0, birth: true });
+  const model = path({ initialFirmCount: 0, increasingReturns: 0, birth: true });
   const empty = model.read();
   expect(() => model.advance()).toThrow("parent");
   expect(model.read()).toEqual(empty);
   model.setQualities(model.read().cells.map(() => 1));
   model.setFirms([{ x: 2, y: 3, heading: 90, movedIn: true }]);
   model.advance();
-  expect(model.read().counts.firms).toBe(2);
+  expect(model.read().counts.firmCount).toBe(2);
   expect(model.read().firms[0]).toMatchObject({ x: 2, y: 3, movedIn: true });
   model.advance();
-  expect(model.read().counts.firms).toBe(3);
+  expect(model.read().counts.firmCount).toBe(3);
 });
 
 test("Path histogram counts occupied patches rather than firms and exposes all pure ties", () => {
-  const model = path({ initialFirms: 0 });
+  const model = path({ initialFirmCount: 0 });
   model.setFirms([
     { x: 0, y: 0, heading: 0, movedIn: true },
     { x: 0, y: 0, heading: 0, movedIn: false },
@@ -97,11 +97,11 @@ test("Path histogram counts occupied patches rather than firms and exposes all p
   expect(observed.histogram.counts.reduce((a, b) => a + b, 0)).toBe(2);
   expect(observed.histogram.edges.at(-1)).toBe(3);
   expect(observed.winningAreas).toHaveLength(1);
-  expect(observed.winningAreas[0]).toMatchObject({ x: 0, y: 0, occupants: 2 });
+  expect(observed.winningAreas[0]).toMatchObject({ x: 0, y: 0, occupantCount: 2 });
   model.read(); model.read();
   expect(model.read()).toEqual(observed);
-  const warnings = path({ initialFirms: 121, distribute: true });
-  expect(warnings.read().counts.firms).toBe(0);
+  const warnings = path({ initialFirmCount: 121, distribute: true });
+  expect(warnings.read().counts.firmCount).toBe(0);
   expect(warnings.read().warnings).toEqual(["Can't distribute, fewer fields than people."]);
 });
 
@@ -111,11 +111,11 @@ test("Cells composes all five original neighborhoods and closed count rules", ()
     model.advance();
     expect(model.read().counts.on).toBe(expected);
   }
-  for (const rule of ["> 0", "= 1", "<= 2"] as const satisfies readonly CountRule[]) {
+  for (const rule of ["positive", "exactly-one", "at-most-two"] as const satisfies readonly CountRule[]) {
     const model = cells({ countRule: rule });
     model.setCells(model.read().cells.map(cell => ({ on: cell.y === 0 && [-1, 1].includes(cell.x), onTime: 0, seed: false })));
     model.advance();
-    expect(model.read().cells.find(cell => cell.x === 0 && cell.y === 0)!.on).toBe(rule !== "= 1");
+    expect(model.read().cells.find(cell => cell.x === 0 && cell.y === 0)!.on).toBe(rule !== "exactly-one");
     expect(model.read().cells.find(cell => cell.x === 20 && cell.y === 20)!.on).toBe(false); // count>0 guard
   }
 });
@@ -129,7 +129,7 @@ test("Cells probability endpoints consume qualifying trials but no trial for imp
     expect(model.read().randomState).toEqual(oracle.state);
     expect(model.read().counts.on).toBe(probability === 0 ? 1 : 5);
   }
-  const empty = cells({ countRule: "<= 2" });
+  const empty = cells({ countRule: "at-most-two" });
   empty.setCells(empty.read().cells.map(() => ({ on: false, onTime: 0, seed: false })));
   const stream = empty.read().randomState;
   empty.advance();
@@ -180,7 +180,7 @@ test("Cells scientific recolor overwrites nonseed cycle colors but retains seed 
 });
 
 test("Feedback models reject malformed mutations atomically without invoking data accessors", () => {
-  const f = feedback(), p = path({ initialFirms: 0 }), c = cells();
+  const f = feedback(), p = path({ initialFirmCount: 0 }), c = cells();
   let accessed = false;
   const invalidFirm = { x: 0, y: 0, heading: 0, get movedIn() { accessed = true; return true; } };
   const invalidCells = c.read().cells.map(() => ({ on: false, onTime: 0, seed: false, colorNumber: 140 }));
@@ -189,7 +189,7 @@ test("Feedback models reject malformed mutations atomically without invoking dat
     () => f.setRules({ alpha: NaN }),
     () => p.setFirms([invalidFirm]),
     () => p.setFirms([{ x: 0, y: 0, heading: 45, movedIn: false }]),
-    () => p.setRules({ attempts: 0 }),
+    () => p.setRules({ attemptCount: 0 }),
     () => c.setCells(invalidCells),
     () => c.setRules({ probability: 100.5 }),
     () => c.setCells(c.read().cells.map(() => ({ on: false, onTime: 1, seed: false }))),

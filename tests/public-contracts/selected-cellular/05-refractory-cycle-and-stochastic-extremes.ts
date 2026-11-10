@@ -9,7 +9,7 @@ assert.equal(b.read().cells.find(c => c.x === 0 && c.y === 0)!.state, 1);
 assert.equal(b.read().cells.find(c => c.x === 1 && c.y === 0)!.state, 2);
 b.advance();
 assert.equal(b.read().cells.find(c => c.x === 1 && c.y === 0)!.state, 0);
-const y = cyclic({ width: 5, height: 5, preset: "custom", stateCount: 3, radius: 1, threshold: 1, neighborhood: "Moore" });
+const y = cyclic({ width: 5, height: 5, preset: "custom", stateCount: 3, radius: 1, threshold: 1, neighborhood: "moore" });
 y.setCells(y.read().cells.map(c => c.x === 1 && c.y === 0 ? 1 : 0));
 y.advance();
 assert.equal(y.read().cells.find(c => c.x === 0 && c.y === 0)!.state, 1);

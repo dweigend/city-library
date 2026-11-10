@@ -23,7 +23,7 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer |
-| `numberOfRobots` | `5` | integer; ≥ 3; ≤ 20 |
+| `robotCount` | `5` | integer; ≥ 3; ≤ 20 |
 | `fullCharge` | `350` | integer; ≥ 0; ≤ 1000 |
 | `justInTimeSupplyRobot` | `150` | integer; ≥ 0; ≤ 300 |
 | `showAgentName` | `true` | boolean |

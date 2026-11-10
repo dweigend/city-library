@@ -11,8 +11,8 @@ assert.equal(hs.stores.reduce((n, s) => n + s.areaCount, 0), 41);
 // The road model uses its source waiting clock, not static shortest-path costs.
 const b = traffic({ spawnRate: 10, seed: 1 });
 assert.equal(b.read().commuters.length, 0);
-b.advance(26); assert.equal(b.read().tick, 26); assert.equal(b.read().carsSpawned, 0);
-b.advance(); assert.equal(b.read().tick, 27); assert.equal(b.read().carsSpawned, 1);
+b.advance(26); assert.equal(b.read().tick, 26); assert.equal(b.read().spawnedCarCount, 0);
+b.advance(); assert.equal(b.read().tick, 27); assert.equal(b.read().spawnedCarCount, 1);
 assert.equal(b.read().commuters.length, 1); assert.equal(b.read().commuters[0]!.ticksHere, 2);
 b.advance(100); assert.equal(b.read().tick, 127);
 assert.ok(b.read().commuters.every(c => c.route >= 0 && c.route <= 2));

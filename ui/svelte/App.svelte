@@ -13,7 +13,7 @@
   let filter = $state("");
   let error = $state("");
   let loading = $state(false);
-  let updates = $state(false);
+  let hasUpdates = $state(false);
   let mounted: ReturnType<BoundEntry["mount"]> | undefined;
   let active = "";
   const items = $derived(entries.filter(entry => entry.title.toLocaleLowerCase().includes(filter.toLocaleLowerCase())).map(entry => ({ value: entry.slug, label: entry.title })));
@@ -38,7 +38,7 @@
     const first = entries.find(entry => entry.slug === requested) ?? entries[0];
     if (first) void open(first.slug);
     const timer = window.setInterval(async () => {
-      try { const response = await fetch("/build-version", { cache: "no-store" }); if (response.ok) updates = (await response.text()) !== version; }
+      try { const response = await fetch("/build-version", { cache: "no-store" }); if (response.ok) hasUpdates = (await response.text()) !== version; }
       catch { /* Retain the current usable run while the development host is unavailable. */ }
     }, 2000);
     return () => { window.clearInterval(timer); loader.dispose(); mounted?.dispose(); };
@@ -56,7 +56,7 @@
         <Select.Content><Select.Group>{#each items as item (item.value)}<Select.Item value={item.value} label={item.label}>{item.label}</Select.Item>{/each}</Select.Group></Select.Content>
       </Select.Root>
     </div>
-    {#if updates}<Button variant="outline" onclick={() => location.reload()}>Reload updates</Button>{/if}
+    {#if hasUpdates}<Button variant="outline" onclick={() => location.reload()}>Reload updates</Button>{/if}
   </header>
   {#if error}<p role="alert" class="lab-error">{error}</p>{/if}
   <span class="sr-only" role="status" aria-live="polite">{loading ? "Loading model" : ""}</span>

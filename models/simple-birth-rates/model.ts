@@ -1,7 +1,7 @@
 /** NetLogo Simple Birth Rates (Wilensky, 1997), CC BY-NC-SA 3.0; see NOTICE.md. */
 import { Agent, Random, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface Parameters {
   seed: number;
   carryingCapacity: number;
@@ -42,7 +42,7 @@ type ModelAgent = Agent<{
   color: "red" | "blue";
 }>;
 export function create(options: Partial<Parameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({
     seed: settings.seed,
   });
@@ -59,9 +59,9 @@ export function create(options: Partial<Parameters> = {}) {
   const population = () => world.agents as readonly ModelAgent[];
   const history: {
     tick: number;
-    red: number;
-    blue: number;
-    total: number;
+    redPersonCount: number;
+    bluePersonCount: number;
+    personCount: number;
   }[] = [];
   const output: string[] = [];
   const counts = () => ({
@@ -73,9 +73,9 @@ export function create(options: Partial<Parameters> = {}) {
     history.push(
       Object.freeze({
         tick: world.tick.value,
-        red: c.redCount,
-        blue: c.blueCount,
-        total: population().length,
+        redPersonCount: c.redCount,
+        bluePersonCount: c.blueCount,
+        personCount: population().length,
       }),
     );
     if (history.length > 1001) history.splice(1, 1);
@@ -109,7 +109,7 @@ export function create(options: Partial<Parameters> = {}) {
   function reproduce() {
     const old = population();
     for (const parent of random.sample(old, {
-      count: old.length,
+      sampleCount: old.length,
       algorithm: "fisher-yates-descending",
     })) {
       const fertility =
@@ -129,14 +129,14 @@ export function create(options: Partial<Parameters> = {}) {
     if (old.length <= settings.carryingCapacity) return;
     const chance = (old.length - settings.carryingCapacity) / old.length;
     for (const a of random.sample(old, {
-      count: old.length,
+      sampleCount: old.length,
       algorithm: "fisher-yates-descending",
     }))
       if (random.number() < chance) a.delete();
   }
-  function advance(count = 1) {
-    stepCount(count);
-    for (let i = 0; i < count; i++) {
+  function advance(stepCount = 1) {
+    validateStepCount(stepCount);
+    for (let i = 0; i < stepCount; i++) {
       run(world, () => {
         reproduce();
         grimReaper();
@@ -170,7 +170,7 @@ export function create(options: Partial<Parameters> = {}) {
         )
       )
         throw new TypeError("Unknown live rule.");
-      settings = parameters(inputs, {
+      settings = parseParameters(inputs, {
         ...settings,
         ...rules,
       });

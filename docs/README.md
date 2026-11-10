@@ -25,4 +25,4 @@ Adapted models retain their [reference sources](development/model-reference-sour
 
 [Source records](../models/catalog/research/README.md) describe model assumptions and provenance. [Model acceptance ledger](../models/catalog/progress.json) supports model-level verification. Use these records to inspect a source or validate a claim; the guides and specifications describe the current system and its next goals.
 
-For [planar layouts and parcels](grid-parcels/API.md), consult the [implementation ledger](grid-parcels/STATUS.md) and [finite quad contract](grid-parcels/QUAD-LAYOUTS-CONTRACT.md). The [city authoring plan](development/example-first/PLAN.md) separates working scripts from unmet targets.
+For [planar layouts and parcels](grid-parcels/API.md), consult the [implementation ledger](grid-parcels/STATUS.md) and [finite quad contract](grid-parcels/QUAD-LAYOUTS-CONTRACT.md). That contract preserves historical signatures; use the [current naming map](grid-parcels/STATUS.md) for executable calls. The [city authoring plan](development/example-first/PLAN.md) separates working scripts from unmet targets.

@@ -1,7 +1,7 @@
 import { defineUI, type Observation } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: ["seed", "population"],
+  setup: ["seed", "birdCount"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/Flocking",
     label: "Source attribution · Wilensky · CC BY-NC-SA 3.0",

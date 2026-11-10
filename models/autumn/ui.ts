@@ -3,7 +3,7 @@ import { defineUI, type Observation, type SpatialData, type Series } from "../..
 import { model } from "./model.ts";
 
 const binding = defineUI(model, {
-  setup: ["seed", "numberOfLeaves", "startSugarMean", "startSugarStddev"],
+  setup: ["seed", "leafCount", "startSugarMean", "startSugarStddev"],
   change: (instance, changes) => instance.setParameters(changes),
   live: {
     windFactor: {},
@@ -48,9 +48,8 @@ const binding = defineUI(model, {
 });
 
 export { model };
-export const sourceMarker =
-  "selected-biology-b07:autumn:54c2fa97ac3e235b27d603dbaf7a66234ea4ab507c5643a8df95ee5ef89b5087";
-export const ui = { ...binding, model, sourceMarker };
+
+export const ui = { ...binding, model };
 
 type UIObservation = Observation<typeof model>;
 
@@ -81,14 +80,14 @@ function leavesSeries(state: UIObservation): readonly Series[] {
       label: "Live",
       color: "#348b34",
       points: state.history.flatMap((point) => [
-        { x: point.tick, y: point.leaves },
+        { x: point.tick, y: point.leafCount },
       ]),
     },
     {
       label: "Dead",
       color: "#8a5c2e",
       points: state.history.flatMap((point) => [
-        { x: point.tick, y: point.deadLeaves },
+        { x: point.tick, y: point.deadLeafCount },
       ]),
     },
   ];

@@ -33,7 +33,7 @@ const edges = graph.generate({
   kind: "small-world",
   profile: "ordered-topology/1",
   nodes,
-  neighborsPerSide: 1,
+  neighborCountPerSide: 1,
   probability: 0,
   directed: true,
   random: topology
@@ -74,7 +74,7 @@ assert.throws(
       kind: "small-world",
       profile: "ordered-topology/1",
       nodes,
-      neighborsPerSide: 1,
+      neighborCountPerSide: 1,
       probability: 1,
       directed: true,
       random: topology
@@ -86,7 +86,7 @@ assert.equal(graph.edges.size, 5); // Induced-edgeless preflight.
 // Explicit caller block order: an existing portable shuffle API, not a native ask-order claim.
 const blockControl = blocks.copy();
 for (let i = 0; i < 3; i++) blockControl.number();
-for (const node of blocks.sample(nodes, { count: nodes.length, algorithm: "fisher-yates-descending" }))
+for (const node of blocks.sample(nodes, { sampleCount: nodes.length, algorithm: "fisher-yates-descending" }))
   node.visits++;
 assert.deepEqual(blocks.state, blockControl.state);
 assert.ok(nodes.every(node => node.visits === 1));
@@ -122,7 +122,7 @@ assert.throws(
       kind: "small-world",
       profile: "ordered-topology/1",
       nodes: many,
-      neighborsPerSide: 0,
+      neighborCountPerSide: 0,
       probability: 0,
       random: capRandom
     }),

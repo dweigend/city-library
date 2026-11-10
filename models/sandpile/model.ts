@@ -1,7 +1,7 @@
 /** Exact NetLogo Sandpile source composition; CC0, see NOTICE.md. */
 import { Grid, Random, World, stats } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface SandpileParameters {
   width: number;
   height: number;
@@ -29,7 +29,7 @@ export const inputs: Inputs<SandpileParameters> = {
   animateAvalanches: { kind: "boolean", default: false },
 };
 export function create(options: Partial<SandpileParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   if (settings.width % 2 !== 1 || settings.height % 2 !== 1)
     throw new RangeError("Use odd lattice dimensions.");
   const random = Random.create({ seed: settings.seed }),
@@ -94,7 +94,7 @@ export function create(options: Partial<SandpileParameters> = {}) {
       const overloaded = active.filter((f) => f.n > 3);
       if (overloaded.length) lifetime++;
       for (const f of random.sample(overloaded, {
-        count: overloaded.length,
+        sampleCount: overloaded.length,
         algorithm: "fisher-yates-descending",
       })) {
         updateN(f, -4);
@@ -118,7 +118,7 @@ export function create(options: Partial<SandpileParameters> = {}) {
     if (!Number.isInteger(n) || n < 0 || n > 3)
       throw new RangeError("Grains per field must be 0..3.");
     for (const f of random.sample(fields, {
-      count: fields.length,
+      sampleCount: fields.length,
       algorithm: "fisher-yates-descending",
     }))
       f.n = mode === "random" ? Math.floor(random.number() * 4) : n;
@@ -147,9 +147,9 @@ export function create(options: Partial<SandpileParameters> = {}) {
   }
   setup(settings.initial);
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) {
         if (settings.dropLocation === "mouse-click") continue;
         drop(
           settings.dropLocation === "center"
@@ -201,7 +201,7 @@ export function create(options: Partial<SandpileParameters> = {}) {
         >
       >,
     ) {
-      settings = parameters(inputs, { ...settings, ...value });
+      settings = parseParameters(inputs, { ...settings, ...value });
     },
     stabilize,
     read() {

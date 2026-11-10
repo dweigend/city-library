@@ -27,8 +27,8 @@ export function parcelScene(state: Observation<typeof model>): SpatialData {
   for (const parcel of state.parcels) {
     let position: DiagramPoint;
     let color: string;
-    if (parcel.delivered >= 0) {
-      const deliveredHere = state.parcels.filter(item => item.destination === parcel.destination && item.delivered >= 0);
+    if (parcel.deliveredAtMinutes >= 0) {
+      const deliveredHere = state.parcels.filter(item => item.destination === parcel.destination && item.deliveredAtMinutes >= 0);
       const index = deliveredHere.indexOf(parcel);
       const destination = places[parcel.destination === "East" ? "place:east" : "place:west"]!;
       position = { x: destination.x + 1 + (index % 5) * 0.75, y: destination.y - Math.floor(index / 5) * 0.75 };
@@ -48,11 +48,11 @@ export function parcelScene(state: Observation<typeof model>): SpatialData {
       extent: { width: 0.5, height: 0.5 }, color });
   }
   agents.push({ id: "van", x: van.x, y: van.y, heading: van.heading, shape: "triangle", size: 11,
-    color: state.vanBusy ? scientificPalette.active : scientificPalette.neutral });
-  const returning = journey !== undefined && journey.delivered >= 0;
+    color: state.busyVanCount ? scientificPalette.active : scientificPalette.neutral });
+  const returning = journey !== undefined && journey.deliveredAtMinutes >= 0;
   return {
     width: 26, height, showLabels: false,
-    description: `${state.queued} parcels in ${capacity} depot slots, ${state.blocked} blocked outside, ${state.delivered} delivered; ${state.vanBusy} van occupied${returning ? ", returning to the depot" : journey ? ", loading or outbound" : ", idle at the depot"}.`,
+    description: `${state.queuedParcelCount} parcels in ${capacity} depot slots, ${state.blockedParcelCount} blocked outside, ${state.deliveredParcelCount} delivered; ${state.busyVanCount} van occupied${returning ? ", returning to the depot" : journey ? ", loading or outbound" : ", idle at the depot"}.`,
     agents,
     segments: state.edges.map(edge => ({ from: places[edge.from]!, to: places[edge.to]!, color: scientificPalette.neutral })),
     labels: [
@@ -61,7 +61,7 @@ export function parcelScene(state: Observation<typeof model>): SpatialData {
       ...state.edges.map(edge => ({ x: (places[edge.from]!.x + places[edge.to]!.x) / 2,
         y: (places[edge.from]!.y + places[edge.to]!.y) / 2 - 0.4,
         text: String(state.edgeCosts.find(cost => cost.id === edge.id)!.minutes) })),
-      ...(state.blocked ? [{ x: -10.2, y: 2.1, text: "Blocked" }] : []),
+      ...(state.blockedParcelCount ? [{ x: -10.2, y: 2.1, text: "Blocked" }] : []),
     ],
   };
 }
@@ -70,10 +70,10 @@ function vanPosition(state: Observation<typeof model>, journey: Observation<type
   const depot = places["place:depot"]!;
   if (!journey) return { ...depot, heading: 90 };
   const destination = places[journey.destination === "East" ? "place:east" : "place:west"]!;
-  const returning = journey.delivered >= 0;
+  const returning = journey.deliveredAtMinutes >= 0;
   const from = returning ? destination : depot;
   const to = returning ? depot : destination;
-  const departure = returning ? journey.delivered : journey.dispatched + state.parameters.loadingMinutes;
+  const departure = returning ? journey.deliveredAtMinutes : journey.dispatched + state.parameters.loadingMinutes;
   const fraction = Math.max(0, Math.min(1, (state.time - departure) / journey.routeMinutes));
   return { x: from.x + (to.x - from.x) * fraction, y: from.y + (to.y - from.y) * fraction,
     heading: Math.atan2(to.x - from.x, to.y - from.y) * 180 / Math.PI };

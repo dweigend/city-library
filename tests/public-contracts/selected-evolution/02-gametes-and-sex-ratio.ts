@@ -6,7 +6,7 @@ assert.equal(gameteDiameter(Math.PI / 4), 1);
 assert.equal(tickAdvanceAmount([]), 1);
 const maximumDiameter = 2 * Math.sqrt(0.5 / Math.PI);
 assert.equal(tickAdvanceAmount([maximumDiameter / 4, maximumDiameter / 2]), 0.25);
-const a = anisogamy({ seed: 21, maxAdults: 10, mutationSigma: 0, speedSizeCorrelation: true });
+const a = anisogamy({ seed: 21, maxAdultCount: 10, mutationSigma: 0, speedSizeCorrelation: true });
 const first = a.read();
 assert.equal(first.adults.length, 10);
 assert.equal(first.tick, 0);

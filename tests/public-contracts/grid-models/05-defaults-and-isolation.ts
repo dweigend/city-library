@@ -6,8 +6,8 @@ import { create as createPercolation } from "../../../models/percolation/model.t
 const fire = createFire({ density: 0 });
 assert.equal(fire.read().width, 251);
 assert.equal(fire.read().height, 251);
-assert.deepEqual(fire.read().counts, { trees: 0, fires: 251, embers: 0 });
-assert.equal(fire.read().initialTrees, 0);
+assert.deepEqual(fire.read().counts, { treeCount: 0, fireCount: 251, emberCount: 0 });
+assert.equal(fire.read().initialTreeCount, 0);
 assert.equal(fire.read().percentBurned, 0);
 assert.equal(createFire().read().parameters.density, 57);
 const first = createLife();
@@ -27,5 +27,5 @@ assert.equal(oil.read().width, 150);
 assert.equal(oil.read().height, 221);
 assert.equal(oil.read().parameters.porosity, 60.5);
 assert.equal(oil.read().currentRow, 220);
-assert.equal(oil.read().counts.front, 75);
+assert.equal(oil.read().counts.frontFieldCount, 75);
 assert.equal(oil.read().totalOil, 0);

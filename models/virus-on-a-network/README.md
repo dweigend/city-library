@@ -23,7 +23,7 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
-| `numberOfNodes` | `150` | integer; ≥ 10; ≤ 300 |
+| `nodeCount` | `150` | integer; ≥ 10; ≤ 300 |
 | `averageNodeDegree` | `6` | integer; ≥ 1; ≤ 299 |
 | `initialOutbreakSize` | `3` | integer; ≥ 1; ≤ 300 |
 | `spreadChance` | `2.5` | number; ≥ 0; ≤ 10 |

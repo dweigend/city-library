@@ -1,10 +1,10 @@
 /** Source: Wilensky (2014), CC BY-NC-SA 3.0; exact source and attribution beside this file. */
 import { Agent, Random, World, run, geometry } from 'city-library';
 import type { Definition, Inputs } from '../definition.ts';
-import { parameters, stepCount } from '../parameters.ts';
+import { parseParameters, validateStepCount } from '../parameters.ts';
 export interface HeroesParameters {
   seed: number;
-  number: number;
+  personCount: number;
   personalities: 'brave' | 'cowardly' | 'mixed';
 }
 export interface ActorInput {
@@ -22,7 +22,7 @@ export const inputs: Inputs<HeroesParameters> = {
     max: 4294967295,
     integer: true,
   },
-  number: { kind: 'number', default: 68, min: 3, max: 200, integer: true },
+  personCount: { kind: 'number', default: 68, min: 3, max: 200, integer: true },
   personalities: {
     kind: 'choice',
     default: 'mixed',
@@ -47,7 +47,7 @@ type Actor = Agent<{
   enemy: number;
 }>;
 export function create(options: Partial<HeroesParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed }),
     world = World.create({ x: 33, y: 33, boundary: 'hard' }, { random });
   const actors = () => world.agents as readonly Actor[];
@@ -62,7 +62,7 @@ export function create(options: Partial<HeroesParameters> = {}) {
     world.tick.reset();
     history.length = 0;
     diagnostic = null;
-    for (let who = 0; who < settings.number; who++)
+    for (let who = 0; who < settings.personCount; who++)
       world.add(
         Agent.create(
           { who, personality: 'brave' as const, friend: 0, enemy: 0 },
@@ -70,7 +70,7 @@ export function create(options: Partial<HeroesParameters> = {}) {
         ),
       );
     for (const a of random.sample(actors(), {
-      count: actors().length,
+      sampleCount: actors().length,
       algorithm: 'fisher-yates-descending',
     })) {
       a.move({
@@ -90,14 +90,14 @@ export function create(options: Partial<HeroesParameters> = {}) {
   }
   setup();
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) {
         diagnostic = null;
         // Native optimized fd < 1 retains a blocked position and continues the phase.
         run(world, () => {
           for (const a of random.sample(actors(), {
-            count: actors().length,
+            sampleCount: actors().length,
             algorithm: 'fisher-yates-descending',
           })) {
             const friend = actors()[a.friend]!,
@@ -124,7 +124,7 @@ export function create(options: Partial<HeroesParameters> = {}) {
       }
     },
     preset(seed: number) {
-      const next = parameters(inputs, { seed, number: 68, personalities: 'mixed' });
+      const next = parseParameters(inputs, { seed, personCount: 68, personalities: 'mixed' });
       settings = next;
       random.reseed(seed);
       setup();
@@ -203,7 +203,7 @@ export function create(options: Partial<HeroesParameters> = {}) {
       record();
     },
     setParameters(p: Record<string, never>) {
-      parameters(inputs, p);
+      parseParameters(inputs, p);
       if (Reflect.ownKeys(p).length)
         throw new TypeError('All Heroes and Cowards parameters are setup-only.');
     },

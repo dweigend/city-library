@@ -3,16 +3,16 @@ import { Random, topology, type Layout } from "city-library";
 
 const random = Random.create({ seed: 7 });
 const initial = random.state;
-const first = topology.quadrilaterals({ rings: 3, random });
+const first = topology.quadrilaterals({ ringCount: 3, random });
 const afterPairing = random.state;
 
 random.state = initial;
 
-const replay = topology.quadrilaterals({ rings: 3, random });
-const advanced = topology.quadrilaterals({ rings: 3, random });
+const replay = topology.quadrilaterals({ ringCount: 3, random });
+const advanced = topology.quadrilaterals({ ringCount: 3, random });
 const beforeRelaxation = random.state;
-const zero = topology.relax({ layout: first, method: "squareTarget", iterations: 0 });
-const relaxed = topology.relax({ layout: first, method: "squareTarget", iterations: 4 });
+const zero = topology.relax({ layout: first, method: "square-target", iterationCount: 0 });
+const relaxed = topology.relax({ layout: first, method: "square-target", iterationCount: 4 });
 
 console.log({ replayedCells: replay.cells.length, relaxedCells: relaxed.cells.length });
 
@@ -32,7 +32,7 @@ const oldPolygons = snapshot(first);
 const oldNeighbors = first.cells.map(cell => first.neighbors({ cell }));
 const neighbor = first.neighbors({ cell: 0 })[0]!;
 const oldBoundary = first.sharedBoundary({ firstCell: 0, secondCell: neighbor });
-const anotherRevision = topology.relax({ layout: first, method: "squareTarget", iterations: 1 });
+const anotherRevision = topology.relax({ layout: first, method: "square-target", iterationCount: 1 });
 assert.notEqual(zero, first);
 assert.deepEqual(snapshot(zero), oldPolygons);
 assert.notEqual(zero.polygon({ cell: 0 }), first.polygon({ cell: 0 }));

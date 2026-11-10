@@ -12,7 +12,7 @@ export const ui = defineUI(model, {
   setup: [
     "seed",
     { field: "smoothness", label: "Setup smoothing passes" },
-    { field: "population", label: "Setup population" },
+    { field: "personCount", label: "Setup population" },
   ],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/UrbanSuite-SprawlEffect",
@@ -33,8 +33,8 @@ export const ui = defineUI(model, {
   },
   monitors: [
     { label: "Tick", value: (state) => state.tick },
-    { label: "Seekers", value: (state) => state.counts.seekers },
-    { label: "Houses", value: (state) => state.counts.houses },
+    { label: "Seekers", value: (state) => state.counts.seekerCount },
+    { label: "Houses", value: (state) => state.counts.houseCount },
     { label: "Build threshold", value: (state) => state.buildThreshold },
     {
       label: "Total attraction",
@@ -91,14 +91,14 @@ function residentsSeries(state: UIObservation): readonly Series[] {
       color: "#d73229",
       points: state.history.map((point) => ({
         x: point.tick,
-        y: point.seekers,
+        y: point.seekerCount,
       })),
     },
     {
       label: "Houses",
       points: state.history.map((point) => ({
         x: point.tick,
-        y: point.houses,
+        y: point.houseCount,
       })),
     },
   ];

@@ -1,24 +1,24 @@
 /** NetLogo Daisyworld (Wilensky, 2006), CC BY-NC-SA 3.0; see NOTICE.md. */
 import { Agent, Grid, Random, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface Parameters {
   seed: number;
-  startBlacks: number;
-  startWhites: number;
+  initialBlackDaisyCount: number;
+  initialWhiteDaisyCount: number;
   solarLuminosity: number;
   albedoSurface: number;
   albedoBlacks: number;
   albedoWhites: number;
   scenario:
     | "ramp-up-ramp-down"
-    | "maintain current luminosity"
-    | "low solar luminosity"
-    | "our solar luminosity"
-    | "high solar luminosity";
+    | "maintain-current-luminosity"
+    | "low-solar-luminosity"
+    | "our-solar-luminosity"
+    | "high-solar-luminosity";
   showTempMap: boolean;
   showDaisies: boolean;
-  paintDaisiesAs: "add black" | "add white" | "remove";
+  paintDaisiesAs: "add-black" | "add-white" | "remove";
 }
 export const inputs: Inputs<Parameters> = {
   seed: {
@@ -28,14 +28,14 @@ export const inputs: Inputs<Parameters> = {
     max: 4294967295,
     integer: true,
   },
-  startBlacks: {
+  initialBlackDaisyCount: {
     kind: "number",
     default: 20,
     min: 0,
     max: 50,
     integer: true,
   },
-  startWhites: {
+  initialWhiteDaisyCount: {
     kind: "number",
     default: 20,
     min: 0,
@@ -68,13 +68,13 @@ export const inputs: Inputs<Parameters> = {
   },
   scenario: {
     kind: "choice",
-    default: "maintain current luminosity",
+    default: "maintain-current-luminosity",
     options: [
       "ramp-up-ramp-down",
-      "maintain current luminosity",
-      "low solar luminosity",
-      "our solar luminosity",
-      "high solar luminosity",
+      "maintain-current-luminosity",
+      "low-solar-luminosity",
+      "our-solar-luminosity",
+      "high-solar-luminosity",
     ],
   },
   showTempMap: {
@@ -88,7 +88,7 @@ export const inputs: Inputs<Parameters> = {
   paintDaisiesAs: {
     kind: "choice",
     default: "remove",
-    options: ["add black", "add white", "remove"],
+    options: ["add-black", "add-white", "remove"],
   },
 };
 type Daisy = Agent<{
@@ -97,7 +97,7 @@ type Daisy = Agent<{
   albedo: number;
 }>;
 export function create(options: Partial<Parameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({
     seed: settings.seed,
   });
@@ -122,19 +122,19 @@ export function create(options: Partial<Parameters> = {}) {
     });
   const history: {
     tick: number;
-    black: number;
-    white: number;
+    blackDaisyCount: number;
+    whiteDaisyCount: number;
     temperature: number;
     luminosity: number;
   }[] = [];
   function luminosity(scenario: Parameters["scenario"], initial = false) {
     if (scenario === "ramp-up-ramp-down" && initial) return 0.8;
-    if (scenario === "low solar luminosity") return 0.6;
-    if (scenario === "our solar luminosity") return 1;
-    if (scenario === "high solar luminosity") return 1.4;
+    if (scenario === "low-solar-luminosity") return 0.6;
+    if (scenario === "our-solar-luminosity") return 1;
+    if (scenario === "high-solar-luminosity") return 1.4;
     return settings.solarLuminosity;
   }
-  settings = parameters(inputs, {
+  settings = parseParameters(inputs, {
     ...settings,
     solarLuminosity: luminosity(settings.scenario, true),
   });
@@ -160,13 +160,13 @@ export function create(options: Partial<Parameters> = {}) {
     return a;
   }
   for (const [kind, count] of [
-    ["black", Math.round((settings.startBlacks * 841) / 100)],
-    ["white", Math.floor((settings.startWhites * 841) / 100)],
+    ["black", Math.round((settings.initialBlackDaisyCount * 841) / 100)],
+    ["white", Math.floor((settings.initialWhiteDaisyCount * 841) / 100)],
   ] as const)
     for (const f of random.sample(
       grid.fields.filter((f) => at(f).length === 0),
       {
-        count,
+        sampleCount: count,
       },
     ))
       sprout(f, kind);
@@ -187,8 +187,8 @@ export function create(options: Partial<Parameters> = {}) {
     history.push(
       Object.freeze({
         tick: world.tick.value,
-        black: population().filter((a) => a.kind === "black").length,
-        white: population().filter((a) => a.kind === "white").length,
+        blackDaisyCount: population().filter((a) => a.kind === "black").length,
+        whiteDaisyCount: population().filter((a) => a.kind === "white").length,
         temperature: temperature(),
         luminosity: settings.solarLuminosity,
       }),
@@ -205,7 +205,7 @@ export function create(options: Partial<Parameters> = {}) {
     });
     const old = population();
     for (const a of random.sample(old, {
-      count: old.length,
+      sampleCount: old.length,
       algorithm: "fisher-yates-descending",
     })) {
       a.age++;
@@ -228,9 +228,9 @@ export function create(options: Partial<Parameters> = {}) {
     }
   }
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) {
         run(world, rules);
         record();
         let solar = luminosity(settings.scenario);
@@ -240,14 +240,14 @@ export function create(options: Partial<Parameters> = {}) {
           if (world.tick.value > 600 && world.tick.value <= 850)
             solar = Number((solar - 0.0025).toFixed(4));
         }
-        settings = parameters(inputs, {
+        settings = parseParameters(inputs, {
           ...settings,
           solarLuminosity: solar,
         });
       }
     },
     paint(x: number, y: number, mode: Parameters["paintDaisiesAs"]) {
-      if (!["add black", "add white", "remove"].includes(mode))
+      if (!["add-black", "add-white", "remove"].includes(mode))
         throw new TypeError("Unknown painting mode.");
       const f = grid.fieldAt({
         x,
@@ -257,13 +257,13 @@ export function create(options: Partial<Parameters> = {}) {
       const existing = at(f);
       if (mode === "remove") for (const a of existing) a.delete();
       else if (existing.length === 0)
-        sprout(f, mode === "add black" ? "black" : "white");
+        sprout(f, mode === "add-black" ? "black" : "white");
     },
     removeAllDaisies() {
       for (const a of [...population()]) a.delete();
     },
     setRules(
-      rules: Partial<Omit<Parameters, "seed" | "startBlacks" | "startWhites">>,
+      rules: Partial<Omit<Parameters, "seed" | "initialBlackDaisyCount" | "initialWhiteDaisyCount">>,
     ) {
       if (
         Reflect.ownKeys(rules).some(
@@ -281,7 +281,7 @@ export function create(options: Partial<Parameters> = {}) {
         )
       )
         throw new TypeError("Unknown live rule.");
-      settings = parameters(inputs, {
+      settings = parseParameters(inputs, {
         ...settings,
         ...rules,
       });
