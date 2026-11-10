@@ -34,6 +34,7 @@ The specifications include planned operations. Check [what works today](developm
 ## Contribute
 
 - [Work plan](../PLAN.md): next work, review policy and the example-first gate.
+- [Evolution](evolution/README.md): non-binding brainstorming on refactoring and further development toward city systems and games.
 - [Coding standards](CODING_STANDARDS.md) and [naming conventions](NAMING_CONVENTIONS.md).
 - [Git delivery workflow](development/git-workflow.md).
 - [Checks and development records](development/README.md): commands, target checks and where records live.
