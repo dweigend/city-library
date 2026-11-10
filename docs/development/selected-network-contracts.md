@@ -18,10 +18,10 @@ Read at this checkout: root exports, `src/graph/{graph,queries,edge}.ts`, Random
 
 | Capability | Existing public support | Consequence |
 | --- | --- | --- |
-| Canonical node/edge identities, simple undirected or antiparallel directed edges, edge state | Graph.add/nodes.add/edges.add/neighbors/edges.between/edge.delete | Sufficient for Virus and Directed Diffusion; model-specific equations and state remain explicit compositions. |
+| Canonical node/edge identities, simple undirected or antiparallel directed edges, edge state | Graph.create/nodes.add/edges.add/neighbors/edges.between/edge.delete | Sufficient for Virus and Directed Diffusion; model-specific equations and state remain explicit compositions. |
 | Uniform draws, sampling, activation snapshots | Random.number/sample, ordinary arrays | Sufficient for source probability and phase scheduling; Mulberry is an explicit adaptation. |
 | Initial spatial distance | Agent positions/distanceTo, explicit hard Space | Virus can implement its source-specific nearest-unconnected growth procedure through public queries. This is **not** a geometric-radius graph or an existing generic generator. Do not substitute one. |
-| Square field topology and face neighbors | Grid.add/fields/neighbors(faces) | Sufficient to construct Directed Diffusion's directed nearest-neighbor candidate graph without model-local index/wrap math. |
+| Square field topology and face neighbors | Grid.create/fields/neighbors(faces) | Sufficient to construct Directed Diffusion's directed nearest-neighbor candidate graph without model-local index/wrap math. |
 | Numeric histograms | stats.histogram | Sufficient for Directed Diffusion's current-value histogram with source bin/range semantics. |
 | Connected components | Public graph.components and graph.connected | Giant Component uses canonical component memberships; no model-local traversal. |
 | Spatially clustered nearest-unconnected generator | No equivalent kind in binding graph.generate | Source-specific construction may remain named model composition over Graph/Agent queries. If extracted for reuse, first resolve a new variant contract explicitly; do not call existing `geometric` equivalent. |

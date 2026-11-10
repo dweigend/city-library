@@ -98,7 +98,7 @@ Each view has a discriminant `type`, a required `label` and one data projection.
 
 ### Network
 
-`{ type: "network", label, nodes, edges }` projects arrays of `NetworkNode` and `NetworkEdge`. Nodes require string `id`; optional `label`, `color`, `size` customize presentation. Size is symbol diameter in CSS pixels, not a physical collision radius. Edges require `id`, `from`, `to` referencing node IDs.
+`{ type: "network", label, nodes, edges }` projects arrays of `GraphNodeData` and `GraphEdgeData`. Nodes require string `id`; optional `label`, `color`, `size` customize presentation. Size is symbol diameter in CSS pixels, not a physical collision radius. Edges require `id`, `from`, `to` referencing node IDs.
 
 Experimental nodes add optional initial `position: { x, y }`; later dragging and layout remain presentation-owned. Experimental edges add `directed`, `color` and positive finite CSS-pixel `width`. Do not infer graph weights or mutate graph state from renderer positions.
 
@@ -138,7 +138,7 @@ When a toggle is supplied it begins off for each mounted instance; without a tog
 
 ## Palette
 
-Experimental export `netLogoColor(color: number): string` converts finite numeric NetLogo colors using the observed official tenth-color bins. Values wrap modulo 140 and select the lower tenth bin. Nonnumeric values throw `TypeError`; nonfinite values throw `RangeError`. Use it for compatibility presentation, not as a second scientific state variable. This export is absent from the main baseline.
+Experimental export `indexedColor(color: number): string` converts finite numeric NetLogo colors using the observed official tenth-color bins. Values wrap modulo 140 and select the lower tenth bin. Nonnumeric values throw `TypeError`; nonfinite values throw `RangeError`. Use it for compatibility presentation, not as a second scientific state variable. This export is absent from the main baseline.
 
 ## Lifecycle
 

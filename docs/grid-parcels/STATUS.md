@@ -93,7 +93,7 @@ lineage. They are not availability flags. Source comparison and notices are in
 - Malformed options, invalid geometry, unknown/duplicate keys, non-finite
   coordinates and zero direction throw TypeError/RangeError. Valid but unsupported
   geometry is distinguished from supported but infeasible/no-change operations.
-- `Grid.add({ layout, state })` returns a distinct accurate LayoutGrid type with
+- `Grid.create({ layout, state })` returns a distinct accurate LayoutGrid type with
   canonical typed Field identities, lookup, shared-edge neighbors and occupancy.
   It has no `space`, `cellSize`, regular neighborhood options or `diffuse`.
   Field coordinates are embedded representative positions; topology is geometry,
@@ -101,7 +101,7 @@ lineage. They are not availability flags. Source comparison and notices are in
   explicit detached sources preserve existing Agent lifecycle semantics.
   Representative Field positions use area centroids, which may be outside concave
   authored cells; lookup follows the actual polygon, not these representatives.
-- Existing `Grid.add(space, options?)`, `Grid.add()`, Field identity/direct state,
+- Existing `Grid.create(space, options?)`, `Grid.create()`, Field identity/direct state,
   Space, faces/Moore and diffusion remain compatible. Split/merge transfers no
   Field state or Agent membership implicitly. City policy stays in user scripts.
 

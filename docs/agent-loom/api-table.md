@@ -10,7 +10,7 @@ Each entry lists its exact signature, compact contract and detailed reference. O
 
 ## Contents
 
-[World](#area-world) · [Agent](#area-agent) · [Grid](#area-grid) · [Field](#area-field) · [Graph](#area-graph) · [Node](#area-node) · [Edge](#area-edge) · [Random](#area-random) · [Input](#area-input) · [stats](#area-stats) · [geometry](#area-geometry) · [Agenda](#area-agenda) · [experiments](#area-experiments) · [storage](#area-storage) · [limits](#area-limits) · [Exports and shared types](#area-exports-and-shared-types)
+[World](#area-world) · [Agent](#area-agent) · [Grid](#area-grid) · [Field](#area-field) · [Graph](#area-graph) · [Node](#area-node) · [Edge](#area-edge) · [Random](#area-random) · [Input](#area-input) · [stats](#area-stats) · [geometry](#area-geometry) · [Agenda](#area-agenda) · [studies](#area-studies) · [storage](#area-storage) · [limits](#area-limits) · [Exports and shared types](#area-exports-and-shared-types)
 
 <a id="area-world"></a>
 
@@ -19,10 +19,10 @@ Each entry lists its exact signature, compact contract and detailed reference. O
 <a id="world-add"></a>
 <a id="api-12"></a>
 
-### World.add
+### World.create
 
 ```ts
-World.add(options?: { random?: Random }): World
+World.create(options?: { random?: Random }): World
 ```
 
 Create an independent World without a spatial context; supply an optional shared Random. The World owns its Tick and an independent seed-1 Random by default.
@@ -32,10 +32,10 @@ Create an independent World without a spatial context; supply an optional shared
 <a id="world-add-2"></a>
 <a id="api-13"></a>
 
-### World.add
+### World.create
 
 ```ts
-World.add(space: Space, options?: { boundary?: Space["boundary"]; random?: Random }): World
+World.create(space: Space, options?: { boundary?: Space["boundary"]; random?: Random }): World
 ```
 
 Create an independent World with the supplied immutable spatial context, optional boundary override and shared Random. Dimensions derive from the axes.
@@ -245,7 +245,7 @@ Run synchronous model updates; steps defaults to 1. Each successful callback add
 
 ```ts
 world.activate<T extends WorldMember>(source: ActivationSource<T>, action: (context: ActivationContext<T>) => unknown,
-  options?: { order?: "fixed" | "shuffle" | "priority" | "netlogo-7.0.0"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; breeds?: ReadonlyMap<WorldMember,string>; breedOrder?: readonly string[] }): void
+  options?: { order?: "fixed" | "shuffle" | "priority" | "netlogo-7.0.0"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; breeds?: ReadonlyMap<WorldMember,string>; groupOrder?: readonly string[] }): void
 ```
 
 Invoke a synchronous action for selected World members under explicit scheduling and scoped self/caller contexts. Never adds ticks.
@@ -259,7 +259,7 @@ Invoke a synchronous action for selected World members under explicit scheduling
 
 ```ts
 world.report<T extends WorldMember,R>(source: T, report: (context: ActivationContext<T>) => R,
-  options?: { order?: "fixed" | "shuffle" | "priority" | "netlogo-7.0.0"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; breeds?: ReadonlyMap<WorldMember,string>; breedOrder?: readonly string[] }): R | undefined
+  options?: { order?: "fixed" | "shuffle" | "priority" | "netlogo-7.0.0"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; breeds?: ReadonlyMap<WorldMember,string>; groupOrder?: readonly string[] }): R | undefined
 ```
 
 Evaluate a synchronous report for one or more World members under explicit scheduling and scoped contexts. Never adds ticks.
@@ -273,7 +273,7 @@ Evaluate a synchronous report for one or more World members under explicit sched
 
 ```ts
 world.report<T extends WorldMember,R>(source: readonly T[] | { kind: "agents" | "fields" | "edges"; breed?: string }, report: (context: ActivationContext<T>) => R,
-  options?: { order?: "fixed" | "shuffle" | "priority" | "netlogo-7.0.0"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; breeds?: ReadonlyMap<WorldMember,string>; breedOrder?: readonly string[] }): readonly (R | undefined)[]
+  options?: { order?: "fixed" | "shuffle" | "priority" | "netlogo-7.0.0"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; breeds?: ReadonlyMap<WorldMember,string>; groupOrder?: readonly string[] }): readonly (R | undefined)[]
 ```
 
 Evaluate a synchronous report for one or more World members under explicit scheduling and scoped contexts. Never adds ticks.
@@ -362,10 +362,10 @@ Scoped World/self/caller identities with die terminating the active frame after 
 <a id="agent-add"></a>
 <a id="api-37"></a>
 
-### Agent.add
+### Agent.create
 
 ```ts
-Agent.add(): Agent<{}>
+Agent.create(): Agent<{}>
 ```
 
 Create a detached living XY agent at the origin, with heading 0 and empty custom state. Construction consumes no randomness.
@@ -375,10 +375,10 @@ Create a detached living XY agent at the origin, with heading 0 and empty custom
 <a id="agent-add-2"></a>
 <a id="api-38"></a>
 
-### Agent.add
+### Agent.create
 
 ```ts
-Agent.add<S extends object>(state: S, options?: { position?: Position; orientation?: Partial<Orientation> }): Agent<S>
+Agent.create<S extends object>(state: S, options?: { position?: Position; orientation?: Partial<Orientation> }): Agent<S>
 ```
 
 Create a living independent XY or XYZ agent with directly typed custom properties. Initial supported state is copied; position and orientation are changed through the spatial operations.
@@ -726,10 +726,10 @@ Retain only the number-valued properties of S as a record type for gradient inpu
 <a id="grid-add"></a>
 <a id="api-62"></a>
 
-### Grid.add
+### Grid.create
 
 ```ts
-Grid.add<F extends object>(space: Space, options: { state: F; cellSize?: number; boundary?: Space["boundary"] }): Grid<F>
+Grid.create<F extends object>(space: Space, options: { state: F; cellSize?: number; boundary?: Space["boundary"] }): Grid<F>
 ```
 
 Create an independent regular square or cubic Grid with immutable normalized space and independently copied custom field state. Cell dimensions are exact and allocation is bounded; construction uses no randomness.
@@ -739,10 +739,10 @@ Create an independent regular square or cubic Grid with immutable normalized spa
 <a id="grid-add-2"></a>
 <a id="api-63"></a>
 
-### Grid.add
+### Grid.create
 
 ```ts
-Grid.add(space?: Space, options?: { cellSize?: number; boundary?: Space["boundary"] }): Grid<{}>
+Grid.create(space?: Space, options?: { cellSize?: number; boundary?: Space["boundary"] }): Grid<{}>
 ```
 
 Create an independent Grid; omitted space defaults to 40×40 XY, cellSize to 1 and boundary to hard. Fields start with independent empty custom state.
@@ -944,10 +944,10 @@ Grid-owned field identity with immutable cell coordinates and directly writable 
 <a id="graph-add"></a>
 <a id="api-78"></a>
 
-### Graph.add
+### Graph.create
 
 ```ts
-Graph.add<N extends object = object>(options?: {
+Graph.create<N extends object = object>(options?: {
   parallel?: boolean; selfLoops?: boolean
 }): Graph<N, {}>
 ```
@@ -959,10 +959,10 @@ Create a graph with optional parallel edges, self-loops and independently copied
 <a id="graph-add-2"></a>
 <a id="api-79"></a>
 
-### Graph.add
+### Graph.create
 
 ```ts
-Graph.add<N extends object = object, E extends object = {}>(options: {
+Graph.create<N extends object = object, E extends object = {}>(options: {
   edgeState: E; parallel?: boolean; selfLoops?: boolean
 }): Graph<N, E>
 ```
@@ -1956,10 +1956,10 @@ Graph-owned connection between node identities N with directly writable typed pr
 <a id="random-add"></a>
 <a id="api-138"></a>
 
-### Random.add
+### Random.create
 
 ```ts
-Random.add(options?: { seed?: number | "random"; algorithm?: "mulberry32" | "netlogo-7.0.0" }): Random
+Random.create(options?: { seed?: number | "random"; algorithm?: "mulberry32" | "netlogo-7.0.0" }): Random
 ```
 
 Create an independent Random; seed defaults to 1 and algorithm to mulberry32. Seed random obtains host entropy without drawing from a model stream; netlogo-7.0.0 explicitly selects the pinned MT profile.
@@ -2660,10 +2660,10 @@ Detached planar features accompanied by explicit coordinate-reference-system and
 <a id="agenda-add"></a>
 <a id="api-189"></a>
 
-### Agenda.add
+### Agenda.create
 
 ```ts
-Agenda.add<E = unknown>(): Agenda<E>
+Agenda.create<E = unknown>(): Agenda<E>
 ```
 
 Store timed event data and return due events in time, priority and insertion order. Advancing the Agenda changes its own time only; event handling remains explicit.
@@ -2772,122 +2772,122 @@ Detached scheduled event data with identity, time, priority and insertion sequen
 
 [Details](api-reference.md#agenda)
 
-<a id="area-experiments"></a>
+<a id="area-studies"></a>
 
-## experiments
+## studies
 
-<a id="experiments-design"></a>
+<a id="studies-design"></a>
 <a id="api-263"></a>
 
-### experiments.design
+### studies.design
 
 ```ts
-experiments.design(input: { constants?: StudyParameters; axes: readonly StudyAxis[]; maxScenarios?: number }): readonly StudyScenario[]
+studies.design(input: { constants?: StudyParameters; axes: readonly StudyAxis[]; maxScenarios?: number }): readonly StudyScenario[]
 ```
 
 Expand a bounded Cartesian parameter design into ordered scenarios without running models or drawing randomness.
 
 [Details](api-reference.md#study-design-contract)
 
-<a id="experiments-design-2"></a>
+<a id="studies-design-2"></a>
 <a id="api-264"></a>
 
-### experiments.design
+### studies.design
 
 ```ts
-experiments.design<Parameters extends StudyParameters>(input: { defaults: Parameters; axes: readonly StudyAxisFor<Parameters>[]; maxScenarios?: number }): readonly StudyScenario<StudyParameterValues<Parameters>>[]
+studies.design<Parameters extends StudyParameters>(input: { defaults: Parameters; axes: readonly StudyAxisFor<Parameters>[]; maxScenarios?: number }): readonly StudyScenario<StudyParameterValues<Parameters>>[]
 ```
 
 Expand a bounded Cartesian parameter design into ordered scenarios without running models or drawing randomness.
 
 [Details](api-reference.md#study-design-contract)
 
-<a id="experiments-replicate"></a>
+<a id="studies-replicate"></a>
 <a id="api-265"></a>
 
-### experiments.replicate
+### studies.replicate
 
 ```ts
-experiments.replicate<Parameters>(scenarios: readonly StudyScenario<Parameters>[], seeds: readonly number[], options?: { maxRuns?: number }): readonly PlannedRun<Parameters>[]
+studies.replicate<Parameters>(scenarios: readonly StudyScenario<Parameters>[], seeds: readonly number[], options?: { maxRuns?: number }): readonly PlannedRun<Parameters>[]
 ```
 
 Expand ordered scenarios over explicit seeds into a bounded whole-run plan without running models.
 
 [Details](api-reference.md#study-design-contract)
 
-<a id="experiments-run"></a>
+<a id="studies-run"></a>
 <a id="api-261"></a>
 
-### experiments.run
+### studies.run
 
 ```ts
-experiments.run<Parameters,Model extends ExperimentModel,Measurements>(options: ExperimentOptions<Parameters,Model,Measurements> & {pause?:never}): StudyResult<Parameters,Measurements>
+studies.run<Parameters,Model extends StudyModel,Measurements>(options: StudyOptions<Parameters,Model,Measurements> & {pause?:never}): StudyResult<Parameters,Measurements>
 ```
 
 Run the finite study and return its terminal outcomes. Pausing is not accepted by this overload.
 
 [Details](api-reference.md#study-options-contract)
 
-<a id="experiments-run-2"></a>
+<a id="studies-run-2"></a>
 <a id="api-262"></a>
 
-### experiments.run
+### studies.run
 
 ```ts
-experiments.run<Parameters,Model extends ExperimentModel,Measurements>(options: ExperimentOptions<Parameters,Model,Measurements> & Required<Pick<ExperimentOptions<Parameters,Model,Measurements>,"pause">>): StudyResult<Parameters,Measurements> | StudyCheckpoint<Parameters,Measurements>
+studies.run<Parameters,Model extends StudyModel,Measurements>(options: StudyOptions<Parameters,Model,Measurements> & Required<Pick<StudyOptions<Parameters,Model,Measurements>,"pause">>): StudyResult<Parameters,Measurements> | StudyCheckpoint<Parameters,Measurements>
 ```
 
 Run the finite study with an explicit boundary-pause policy. Return terminal outcomes or a resumable checkpoint.
 
 [Details](api-reference.md#study-options-contract)
 
-<a id="experiments-summarize"></a>
+<a id="studies-summarize"></a>
 <a id="api-266"></a>
 
-### experiments.summarize
+### studies.summarize
 
 ```ts
-experiments.summarize<Parameters,Measurements>(result: StudyResult<Parameters,Measurements>, select: (outcome: StudyOutcome<Parameters,Measurements>) => number | undefined): readonly ReplicationSummary[]
+studies.summarize<Parameters,Measurements>(result: StudyResult<Parameters,Measurements>, select: (outcome: StudyOutcome<Parameters,Measurements>) => number | undefined): readonly ReplicationSummary[]
 ```
 
 Summarize an explicit numeric selection from per-run outcomes, keeping missing/failed runs distinct.
 
 [Details](api-reference.md#study-design-contract)
 
-<a id="experiments-bind"></a>
+<a id="studies-bind"></a>
 <a id="api-269"></a>
 
-### experiments.bind
+### studies.bind
 
 ```ts
-experiments.bind<Model extends ExperimentModel>(spec: BehaviorSpaceSpec, bindings: BehaviorSpaceBindings<Model>): BoundBehaviorSpace<Model>
+studies.bind<Model extends StudyModel>(spec: StudySpec, bindings: StudyBindings<Model>): BoundStudy<Model>
 ```
 
-Bind recognized BehaviorSpace source labels to explicit TypeScript callbacks and a finite run plan; never evaluate source strings.
+Bind recognized Study source labels to explicit TypeScript callbacks and a finite run plan; never evaluate source strings.
 
 [Details](api-reference.md#study-behaviorspace-contract)
 
-<a id="experiments-run-3"></a>
+<a id="studies-run-3"></a>
 <a id="api-270"></a>
 
-### experiments.run
+### studies.run
 
 ```ts
-experiments.run<Model extends ExperimentModel>(bound: BoundBehaviorSpace<Model>): StudyResult<StudyParameters,Readonly<Record<string,StudyScalar>>>
+studies.run<Model extends StudyModel>(bound: BoundStudy<Model>): StudyResult<StudyParameters,Readonly<Record<string,StudyScalar>>>
 ```
 
-Execute the validated bound BehaviorSpace plan using its explicitly supplied model callbacks and ordinary study lifecycle. No source strings are evaluated.
+Execute the validated bound Study plan using its explicitly supplied model callbacks and ordinary study lifecycle. No source strings are evaluated.
 
 [Details](api-reference.md#study-behaviorspace-contract)
 
-<a id="experiments-evaluate"></a>
+<a id="studies-evaluate"></a>
 <a id="api-271"></a>
 
-### experiments.evaluate
+### studies.evaluate
 
 ```ts
-experiments.evaluate<Parameters,Model extends ExperimentModel,Measurements>(input:
-  Omit<ExperimentOptions<Parameters,Model,Measurements>,"parameters" | "plan" | "pause"> & {
+studies.evaluate<Parameters,Model extends StudyModel,Measurements>(input:
+  Omit<StudyOptions<Parameters,Model,Measurements>,"parameters" | "plan" | "pause"> & {
     pause?: never; candidates: readonly StudyScenario<Parameters>[]; seeds: readonly number[]; objective: CandidateObjective<Parameters,Measurements>
   }): CandidateEvaluation<Parameters,Measurements>
 ```
@@ -2896,27 +2896,27 @@ Evaluate a finite candidate grid against explicit observations, objective and se
 
 [Details](api-reference.md#study-calibration-contract)
 
-<a id="experiments-select"></a>
+<a id="studies-select"></a>
 <a id="api-272"></a>
 
-### experiments.select
+### studies.select
 
 ```ts
-experiments.select<Parameters,Measurements>(evaluation: CandidateEvaluation<Parameters,Measurements>, options: { maxMeanLossDelta: number }): CandidateSelection<Parameters,Measurements>
+studies.select<Parameters,Measurements>(evaluation: CandidateEvaluation<Parameters,Measurements>, options: { maxMeanLossDelta: number }): CandidateSelection<Parameters,Measurements>
 ```
 
 Select eligible candidates within the supplied mean-loss difference of the best eligible result.
 
 [Details](api-reference.md#study-calibration-contract)
 
-<a id="experiments-holdout"></a>
+<a id="studies-holdout"></a>
 <a id="api-273"></a>
 
-### experiments.holdout
+### studies.holdout
 
 ```ts
-experiments.holdout<Parameters,Model extends ExperimentModel,Measurements>(selection: CandidateSelection<Parameters,Measurements>, input:
-  Omit<ExperimentOptions<Parameters,Model,Measurements>,"parameters" | "plan" | "pause"> & { pause?: never; seeds: readonly number[]; objective: CandidateObjective<Parameters,Measurements> }
+studies.holdout<Parameters,Model extends StudyModel,Measurements>(selection: CandidateSelection<Parameters,Measurements>, input:
+  Omit<StudyOptions<Parameters,Model,Measurements>,"parameters" | "plan" | "pause"> & { pause?: never; seeds: readonly number[]; objective: CandidateObjective<Parameters,Measurements> }
 ): CandidateHoldout<Parameters,Measurements>
 ```
 
@@ -2924,13 +2924,13 @@ Evaluate a fixed candidate selection using disjoint held-out seeds and observati
 
 [Details](api-reference.md#study-calibration-contract)
 
-<a id="experiments-resume"></a>
+<a id="studies-resume"></a>
 <a id="api-274"></a>
 
-### experiments.resume
+### studies.resume
 
 ```ts
-experiments.resume<Parameters,Model extends ExperimentModel,Measurements>(checkpoint: StudyCheckpoint<Parameters,Measurements>, callbacks: {
+studies.resume<Parameters,Model extends StudyModel,Measurements>(checkpoint: StudyCheckpoint<Parameters,Measurements>, callbacks: {
   create(parameters:Parameters,seed:number,run:PlannedRun<Parameters>):Model;
   load(snapshot: WorldSnapshot<unknown> | BundleSnapshot<unknown>, run:PlannedRun<Parameters>):Model;
   measure(model:Model):Measurements;
@@ -2946,13 +2946,13 @@ Continue a validated paused study after explicitly rebinding callbacks, preservi
 
 [Details](api-reference.md#study-boundaries-contract)
 
-<a id="experiments-run-4"></a>
+<a id="studies-run-4"></a>
 <a id="api-267"></a>
 
-### experiments.run
+### studies.run
 
 ```ts
-experiments.run<Parameters extends StudyParameters,Measurements>(options: {
+studies.run<Parameters extends StudyParameters,Measurements>(options: {
   plan: readonly PlannedRun<Parameters>[];
   executor: { moduleUrl: string; exportName: string; sha256: string; config?: NodeStudyConfig };
   steps: number; every?: number; sampleInitial?: boolean; sampleFinal?: boolean;
@@ -2961,17 +2961,17 @@ experiments.run<Parameters extends StudyParameters,Measurements>(options: {
 }): Promise<NodeStudyResult<Parameters,Measurements>>
 ```
 
-Available from agent-loom/experiments/node. Execute whole independent runs in native Node workers through the optional Node host subpath. Validate the trusted provider module and preserve plan-order outcomes, including transport failures.
+Available from agent-loom/studies/node. Execute whole independent runs in native Node workers through the optional Node host subpath. Validate the trusted provider module and preserve plan-order outcomes, including transport failures.
 
 [Details](api-reference.md#study-worker-contract)
 
 <a id="type-experiment-model"></a>
 <a id="api-258"></a>
 
-### ExperimentModel
+### StudyModel
 
 ```ts
-interface ExperimentModel { readonly world: World; step(): void; dispose?(): void }
+interface StudyModel { readonly world: World; step(): void; dispose?(): void }
 ```
 
 Ordinary model object with its World, synchronous step procedure and optional cleanup.
@@ -2981,10 +2981,10 @@ Ordinary model object with its World, synchronous step procedure and optional cl
 <a id="type-experiment-plan"></a>
 <a id="api-259"></a>
 
-### ExperimentPlan
+### StudyPlan
 
 ```ts
-type ExperimentPlan<Parameters> =
+type StudyPlan<Parameters> =
   | { readonly parameters: readonly Parameters[]; readonly seeds: readonly number[]; readonly plan?: never }
   | { readonly plan: readonly PlannedRun<Parameters>[]; readonly parameters?: never; readonly seeds?: never };
 ```
@@ -2996,10 +2996,10 @@ Either a parameter/seed Cartesian plan or an explicit ordered run plan; the two 
 <a id="type-experiment-options"></a>
 <a id="api-260"></a>
 
-### ExperimentOptions
+### StudyOptions
 
 ```ts
-type ExperimentOptions<Parameters,Model extends ExperimentModel,Measurements> = ExperimentPlan<Parameters> & {
+type StudyOptions<Parameters,Model extends StudyModel,Measurements> = StudyPlan<Parameters> & {
   create(parameters: Parameters, seed: number, run: PlannedRun<Parameters>): Model;
   readonly steps: number;
   measure(model: Model): Measurements;
@@ -3029,11 +3029,11 @@ Model factory, finite plan, horizon, measurement/sampling policies and optional 
 ### WorkerStudyProvider
 
 ```ts
-type WorkerStudyProvider<Parameters,Model extends ExperimentModel,Measurements> = (config: NodeStudyConfig) =>
-  Pick<ExperimentOptions<Parameters,Model,Measurements>,"create" | "measure" | "sampleWhen" | "stopWhen" | "host">;
+type WorkerStudyProvider<Parameters,Model extends StudyModel,Measurements> = (config: NodeStudyConfig) =>
+  Pick<StudyOptions<Parameters,Model,Measurements>,"create" | "measure" | "sampleWhen" | "stopWhen" | "host">;
 ```
 
-Synchronous Node worker provider factory that turns validated transport configuration into create/measure and optional sampling, stopping and host callbacks. Exported through agent-loom/experiments/node.
+Synchronous Node worker provider factory that turns validated transport configuration into create/measure and optional sampling, stopping and host callbacks. Exported through agent-loom/studies/node.
 
 [Details](api-reference.md#study-worker-contract)
 
@@ -3079,10 +3079,10 @@ Map a scalar literal type to its corresponding number, boolean or string value t
 <a id="type-behavior-space-axis"></a>
 <a id="api-277"></a>
 
-### BehaviorSpaceAxis
+### StudyAxis
 
 ```ts
-export interface BehaviorSpaceAxis {
+export interface StudyAxis {
 	readonly variable: string;
 	readonly values: readonly string[];
 }
@@ -3095,10 +3095,10 @@ Declared variable name with bounded source-literal values for explicit caller de
 <a id="type-behavior-space-spec"></a>
 <a id="api-278"></a>
 
-### BehaviorSpaceSpec
+### StudySpec
 
 ```ts
-export interface BehaviorSpaceSpec {
+export interface StudySpec {
 	readonly version: 1 | 2;
 	readonly dialect: "netlogo-7.0.4-finite-v2" | "netlogo-7.0.0-finite-v1";
 	readonly name: string;
@@ -3110,27 +3110,27 @@ export interface BehaviorSpaceSpec {
 	readonly exitCondition?: string;
 	readonly runMetricsCondition?: string;
 	readonly metrics: readonly string[];
-	readonly axes: readonly BehaviorSpaceAxis[];
+	readonly axes: readonly StudyAxis[];
 	readonly originalXml: string;
- readonly subexperiments?:readonly { readonly axes:readonly BehaviorSpaceAxis[] }[];
+ readonly subexperiments?:readonly { readonly axes:readonly StudyAxis[] }[];
  readonly preExperiment?:string; readonly postExperiment?:string;
 }
 ```
 
-Versioned finite BehaviorSpace plan retaining source labels, parameter axes, repetition and measurement policies.
+Versioned finite Study plan retaining source labels, parameter axes, repetition and measurement policies.
 
 [Details](api-reference.md#study-contracts-general)
 
 <a id="type-behavior-space-measurement"></a>
 <a id="api-279"></a>
 
-### BehaviorSpaceMeasurement
+### StudyMeasurement
 
 ```ts
-export type BehaviorSpaceMeasurement = Readonly<Record<string, StudyScalar>>;
+export type StudyMeasurement = Readonly<Record<string, StudyScalar>>;
 ```
 
-Read-only named scalar measurements emitted by a bound BehaviorSpace study.
+Read-only named scalar measurements emitted by a bound Study study.
 
 [Details](api-reference.md#study-contracts-general)
 
@@ -3698,10 +3698,10 @@ Per-scenario outcome counts, valid numeric values, mean and sample standard devi
 <a id="type-behavior-space-bindings"></a>
 <a id="api-307"></a>
 
-### BehaviorSpaceBindings
+### StudyBindings
 
 ```ts
-interface BehaviorSpaceBindings<Model extends ExperimentModel> {
+interface StudyBindings<Model extends StudyModel> {
  readonly seeds: readonly number[];
  decodeLiteral(source:string, variable:string): StudyScalar;
  readonly setup: { readonly source:string; create(parameters:StudyParameters,seed:number,run:PlannedRun<StudyParameters>):Model };
@@ -3722,17 +3722,17 @@ Explicit source-label bindings to model creation, measurement, stopping and stud
 <a id="type-bound-behavior-space"></a>
 <a id="api-308"></a>
 
-### BoundBehaviorSpace
+### BoundStudy
 
 ```ts
-interface BoundBehaviorSpace<Model extends ExperimentModel> {
- readonly spec:BehaviorSpaceSpec;
+interface BoundStudy<Model extends StudyModel> {
+ readonly spec:StudySpec;
  readonly plan:readonly PlannedRun<StudyParameters>[];
- readonly options:ExperimentOptions<StudyParameters,Model,Readonly<Record<string,StudyScalar>>>;
+ readonly options:StudyOptions<StudyParameters,Model,Readonly<Record<string,StudyScalar>>>;
 }
 ```
 
-Validated BehaviorSpace specification, materialized run plan and ordinary experiment options.
+Validated Study specification, materialized run plan and ordinary experiment options.
 
 [Details](api-reference.md#study-contracts-general)
 
@@ -3951,7 +3951,7 @@ Decode the explicit graph format to validated detached GraphData with unknown mo
 ### storage.decode
 
 ```ts
-storage.decode(text: string, options: { format: "behaviorspace" }): readonly BehaviorSpaceSpec[]
+storage.decode(text: string, options: { format: "behaviorspace" }): readonly StudySpec[]
 ```
 
 Validate and decode the explicit named format or synchronous Format adapter. Returns its documented data type; decoded custom model values remain untrusted until validated.
@@ -4055,10 +4055,10 @@ Encode supported planar GeoJSON geometry/features. Coordinate-system labels are 
 ### storage.encode
 
 ```ts
-storage.encode(value: readonly BehaviorSpaceSpec[], options: { format: "behaviorspace" }): string
+storage.encode(value: readonly StudySpec[], options: { format: "behaviorspace" }): string
 ```
 
-Encode the declarative BehaviorSpace plan as escaped XML without translating TypeScript callbacks into source commands.
+Encode the declarative Study plan as escaped XML without translating TypeScript callbacks into source commands.
 
 [Details](api-reference.md#complete-external-codecs)
 
@@ -4567,11 +4567,11 @@ Read deeply frozen limits for the explicit legacy simple-network import profile;
 ```ts
 limits.behaviorspace = {
   textBytes: 1048576, depth: 8, elements: 20000, entityReferences: 100000,
-  experiments: 100, metrics: 32, sourceLength: 65536
+  studies: 100, metrics: 32, sourceLength: 65536
 };
 ```
 
-Read deeply frozen bounds for declarative BehaviorSpace XML parsing, experiments, metrics and source labels.
+Read deeply frozen bounds for declarative Study XML parsing, studies, metrics and source labels.
 
 [Details](api-reference.md#public-resource-limits)
 
@@ -4604,7 +4604,7 @@ Read deeply frozen finite-study bounds for parameter axes, scenarios, runs, comp
 agent-loom
 ```
 
-Exports Agent, Grid, Graph, Input, Random, World, run, Agenda, stats, geometry, experiments and limits.
+Exports Agent, Grid, Graph, Input, Random, World, run, Agenda, stats, geometry, studies and limits.
 
 [Details](api-reference.md#public-imports)
 
@@ -4621,16 +4621,16 @@ Exports storage and the associated persistence types; file/database access remai
 
 [Details](api-reference.md#public-imports)
 
-<a id="exports-agent-loom-experiments-node"></a>
+<a id="exports-agent-loom-studies-node"></a>
 <a id="api-9"></a>
 
-### agent-loom/experiments/node
+### agent-loom/studies/node
 
 ```ts
-agent-loom/experiments/node
+agent-loom/studies/node
 ```
 
-Exports experiments with the native Node worker overload and the serial study contracts. Node-only execution is explicit.
+Exports studies with the native Node worker overload and the serial study contracts. Node-only execution is explicit.
 
 [Details](api-reference.md#study-worker-contract)
 
@@ -4698,4 +4698,4 @@ Finite x/y coordinates with optional z; the operation’s spatial context determ
 
 ## Additive ordinary tools
 
-The root exports `measurements`, `twoPhase` and `continuous` add pure measurement projection, a synchronous compute/commit barrier and linear threshold calculations. World activation also accepts fixed and stable priority ordering. Their [reference contracts](api-reference.md#additive-measurement-and-update-tools) and [frozen examples](../mesa-expansion/STATUS.md) supplement the original operation inventory; they do not imply complete continuation or NetLogo compatibility.
+The root exports `measurements`, `twoPhase` and `continuous` add pure measurement projection, a synchronous compute/commit barrier and linear threshold calculations. World activation also accepts fixed and stable priority ordering. Their [reference contracts](api-reference.md#additive-measurement-and-update-tools) and [frozen examples](../execution-studies/STATUS.md) supplement the original operation inventory; they do not imply complete continuation or NetLogo compatibility.

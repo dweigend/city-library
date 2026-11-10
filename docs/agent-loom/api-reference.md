@@ -10,7 +10,7 @@ The `agent-loom` import paths are specification names. Their mapping to City Lib
 
 ## Contents
 
-[Vocabulary](#vocabulary) · [Exports and shared types](#exports) · [World](#world-api) · [Agent](#agent-api) · [Grid](#grid-api) · [Field](#field-api) · [Graph](#graph-api) · [Node](#node-api) · [Edge](#edge-api) · [Random](#random-api) · [Input](#input-api) · [stats](#stats-api) · [geometry](#geometry-api) · [Agenda](#agenda-api) · [experiments](#experiments-api) · [storage](#storage-api) · [limits](#limits-api)
+[Vocabulary](#vocabulary) · [Exports and shared types](#exports) · [World](#world-api) · [Agent](#agent-api) · [Grid](#grid-api) · [Field](#field-api) · [Graph](#graph-api) · [Node](#node-api) · [Edge](#edge-api) · [Random](#random-api) · [Input](#input-api) · [stats](#stats-api) · [geometry](#geometry-api) · [Agenda](#agenda-api) · [studies](#studies-api) · [storage](#storage-api) · [limits](#limits-api)
 
 <a id="main"></a>
 
@@ -25,7 +25,7 @@ These meanings apply throughout the public API. Ordinary model properties remain
 | `value` | Read one current principal value, where a dedicated result or state object needs it. | `world.tick.value`; `graph.flow(options).value`. Model properties such as energy stay direct. `random.number()` generates a new number. |
 | `advance` | Move a temporal process forward. Its receiver defines the effects. | `world.tick.advance(amount)` changes only the counter. `agenda.advance({until,maxEvents})` processes events up to a target and returns them. |
 | `reset` | Restore the receiver's specified initial state. | `world.tick.reset()` restores its value to 0. |
-| `add` | Create an object or add an element to its receiver. | `Agent.add()`, `world.add(component)`. |
+| `add` | Create an object or add an element to its receiver. | `Agent.create()`, `world.add(component)`. |
 | `delete` | Remove the specified element. On a container, omitting the element removes all contents and keeps the container. On an individual object, delete that object. | `edge.delete()` removes one edge; `history.delete()` and `graph.delete()` empty their containers. `agent.delete()` and `edge.delete()` delete those objects. `world.delete(component)` removes membership, preserving the component; its component argument remains required. |
 | `set` | Assign a specified value through a managed operation. | `input.set(object,property,value)`. Ordinary model data uses direct assignment. |
 | `copy` | Create a new object with the receiver's documented copying semantics. | `agent.copy()`, `graph.copy()`, `random.copy()`. A Graph copy has independent edges and retains its original node identities. |
@@ -45,7 +45,7 @@ Domain-specific operations retain their own meaning: `random.reseed(seed)` selec
 ```ts
 import {
   Agent, Grid, Graph, Input, Random, World, run, Agenda,
-  stats, geometry, experiments, limits
+  stats, geometry, studies, limits
 } from "agent-loom";
 ```
 
@@ -100,7 +100,7 @@ The library supplies logic, identity, spatial state and data access. It supplies
 ```ts
 import { Agent } from "agent-loom";
 
-const person = Agent.add({
+const person = Agent.create({
   name: "Anna",
   role: "worker",
   energy: 80,
@@ -154,11 +154,11 @@ These synchronous value functions validate all inputs and return detached data. 
 ### World creation
 
 ```ts
-World.add(options?: { random?: Random }): World
-World.add(space: Space, options?: { boundary?: Space["boundary"]; random?: Random }): World
+World.create(options?: { random?: Random }): World
+World.create(space: Space, options?: { boundary?: Space["boundary"]; random?: Random }): World
 ```
 
-`World` supplies step time, shared randomness and component membership. Its `space` is optional. Use `World.add()` or `World.add(worldOptions)` for a world without a spatial context; these options may supply a random generator. Use `World.add(space, worldOptions)` for a bounded space. Components also work independently when their required data is available.
+`World` supplies step time, shared randomness and component membership. Its `space` is optional. Use `World.create()` or `World.create(worldOptions)` for a world without a spatial context; these options may supply a random generator. Use `World.create(space, worldOptions)` for a bounded space. Components also work independently when their required data is available.
 
 | Input | Default / required value | Meaning |
 | --- | --- | --- |
@@ -304,11 +304,11 @@ interface ActivationContext<T extends WorldMember> {
   die(): never;
 }
 world.activate<T extends WorldMember>(source: ActivationSource<T>, action: (context: ActivationContext<T>) => unknown,
-  options?: { order?: "fixed" | "shuffle" | "priority" | "netlogo-7.0.0"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; breeds?: ReadonlyMap<WorldMember,string>; breedOrder?: readonly string[] }): void
+  options?: { order?: "fixed" | "shuffle" | "priority" | "netlogo-7.0.0"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; breeds?: ReadonlyMap<WorldMember,string>; groupOrder?: readonly string[] }): void
 world.report<T extends WorldMember,R>(source: T, report: (context: ActivationContext<T>) => R,
-  options?: { order?: "fixed" | "shuffle" | "priority" | "netlogo-7.0.0"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; breeds?: ReadonlyMap<WorldMember,string>; breedOrder?: readonly string[] }): R | undefined
+  options?: { order?: "fixed" | "shuffle" | "priority" | "netlogo-7.0.0"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; breeds?: ReadonlyMap<WorldMember,string>; groupOrder?: readonly string[] }): R | undefined
 world.report<T extends WorldMember,R>(source: readonly T[] | { kind: "agents" | "fields" | "edges"; breed?: string }, report: (context: ActivationContext<T>) => R,
-  options?: { order?: "fixed" | "shuffle" | "priority" | "netlogo-7.0.0"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; breeds?: ReadonlyMap<WorldMember,string>; breedOrder?: readonly string[] }): readonly (R | undefined)[]
+  options?: { order?: "fixed" | "shuffle" | "priority" | "netlogo-7.0.0"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; breeds?: ReadonlyMap<WorldMember,string>; groupOrder?: readonly string[] }): readonly (R | undefined)[]
 world.select<T extends WorldMember>(source: ActivationSource<T>, predicate: (context: ActivationContext<T>) => boolean,
   options?: { caller?: ActivationContext<WorldMember>; breeds?: ReadonlyMap<WorldMember,string> }): readonly T[]
 ```
@@ -329,7 +329,7 @@ order netlogo-7.0.0 requires the MT compatibility RNG, explicit XY members, and 
 
 Captured/field sources filter dead values while prefetching; tree-like global-agent/edge/breed sources defer that dead check until traversal. This prefetch timing is observable when callbacks draw or kill later members. A singleton direct member draws no traversal RNG. Only observer calls may activate the special global agents/fields selectors; report permits those selectors from nested contexts. NetLogo-compatible breed selectors retain declaration provenance, never silently becoming a captured array.
 
-Core IDs are opaque strings and cannot supply native numeric ordering: for global agents/edges supply ids as a same-World identity-to-unique-nonnegative-safe-integer Map; breed selectors use breeds and breedOrder (distinct declared names) to recover model-owned role membership/order. Global field ordering needs coordinates only. Validate the complete mappings and ownership before drawing; absent required numeric IDs, unknown breed names, duplicate IDs or a foreign map key reject. Captured arrays already retain their own order and may omit those maps.
+Core IDs are opaque strings and cannot supply native numeric ordering: for global agents/edges supply ids as a same-World identity-to-unique-nonnegative-safe-integer Map; breed selectors use breeds and groupOrder (distinct declared names) to recover model-owned role membership/order. Global field ordering needs coordinates only. Validate the complete mappings and ownership before drawing; absent required numeric IDs, unknown breed names, duplicate IDs or a foreign map key reject. Captured arrays already retain their own order and may omit those maps.
 
 Imported legacy conversion metadata can provide these maps explicitly; no random or ID-allocation inference occurs.
 
@@ -350,8 +350,8 @@ Ordinary agent.delete() deletes but does not return from user code. No operation
 ### Create an agent
 
 ```ts
-Agent.add(): Agent<{}>
-Agent.add<S extends object>(state: S, options?: { position?: Position; orientation?: Partial<Orientation> }): Agent<S>
+Agent.create(): Agent<{}>
+Agent.create<S extends object>(state: S, options?: { position?: Position; orientation?: Partial<Orientation> }): Agent<S>
 ```
 
 An `Agent` holds its own coordinates, orientation and typed custom state. Omitting state produces the empty state type; a custom state type requires matching initial data. Initial state must be a property data object; functions are not evaluated as initializers. Built-in operation/property names are reserved and conflicting state keys are rejected.
@@ -524,11 +524,11 @@ gradient captures the containing cell and its unique neighbors (faces default, m
 ### Create a grid
 
 ```ts
-Grid.add<F extends object>(space: Space, options: { state: F; cellSize?: number; boundary?: Space["boundary"] }): Grid<F>
-Grid.add(space?: Space, options?: { cellSize?: number; boundary?: Space["boundary"] }): Grid<{}>
+Grid.create<F extends object>(space: Space, options: { state: F; cellSize?: number; boundary?: Space["boundary"] }): Grid<F>
+Grid.create(space?: Space, options?: { cellSize?: number; boundary?: Space["boundary"] }): Grid<{}>
 ```
 
-The `Grid` owns its extents and cells before any `World` attachment. One regular square/cubic grid family serves XY and XYZ. The basic call is `Grid.add(space)`. For custom field values, pass `Grid.add(space, { state: fieldState })`. The same options object can contain cellSize or boundary. A normalized context, such as an existing `world.space` after checking that it is present, can replace the plain extents: the new Grid inherits its extents and boundary rules. Dimensions are always derived from the axes and validated against any input context metadata. A named boundary option overrides the inherited boundary for this Grid only.
+The `Grid` owns its extents and cells before any `World` attachment. One regular square/cubic grid family serves XY and XYZ. The basic call is `Grid.create(space)`. For custom field values, pass `Grid.create(space, { state: fieldState })`. The same options object can contain cellSize or boundary. A normalized context, such as an existing `world.space` after checking that it is present, can replace the plain extents: the new Grid inherits its extents and boundary rules. Dimensions are always derived from the axes and validated against any input context metadata. A named boundary option overrides the inherited boundary for this Grid only.
 
 Omit unneeded properties to use their defaults; there is no middle state argument to skip. Omitting state produces the empty field-state type; a custom field-state type requires matching data in the options. When supplying options, pass space explicitly rather than skipping its argument.
 
@@ -600,7 +600,7 @@ Rate zero validates but changes nothing. Overflow rejects with no field changes.
 
 ## Field
 
-A Field is one cell owned by a Grid. [Grid.add](#grid-add) creates all fields; [Grid queries](#grid-query) return their existing identities.
+A Field is one cell owned by a Grid. [Grid.create](#grid-add) creates all fields; [Grid queries](#grid-query) return their existing identities.
 
 <a id="field-identity"></a>
 
@@ -629,7 +629,7 @@ Read cell-center coordinates in world units. The Grid determines position from c
 
 ### Model properties
 
-Read and assign the custom properties supplied through Grid.add. Each field starts with an independent copy under the [shared supported-data contract](#complete-values). Root names id, grid, x, y and z are reserved. Field identity and Grid membership remain fixed; individual fields cannot be deleted and a live Grid cannot be resized.
+Read and assign the custom properties supplied through Grid.create. Each field starts with an independent copy under the [shared supported-data contract](#complete-values). Root names id, grid, x, y and z are reserved. Field identity and Grid membership remain fixed; individual fields cannot be deleted and a live Grid cannot be resized.
 
 <a id="graph-api"></a>
 
@@ -640,10 +640,10 @@ Read and assign the custom properties supplied through Grid.add. Each field star
 ### Simple, directed, mixed and parallel connections
 
 ```ts
-Graph.add<N extends object = object>(options?: {
+Graph.create<N extends object = object>(options?: {
   parallel?: boolean; selfLoops?: boolean
 }): Graph<N, {}>
-Graph.add<N extends object = object, E extends object = {}>(options: {
+Graph.create<N extends object = object, E extends object = {}>(options: {
   edgeState: E; parallel?: boolean; selfLoops?: boolean
 }): Graph<N, E>
 ```
@@ -1277,7 +1277,7 @@ These target rules preserve coupled-model motion in ordinary TypeScript. They do
 ### Create a generator
 
 ```ts
-Random.add(options?: { seed?: number | "random"; algorithm?: "mulberry32" | "netlogo-7.0.0" }): Random
+Random.create(options?: { seed?: number | "random"; algorithm?: "mulberry32" | "netlogo-7.0.0" }): Random
 ```
 
 `Random` is independently usable and may be explicitly passed to a `World`.
@@ -1291,7 +1291,7 @@ Random.add(options?: { seed?: number | "random"; algorithm?: "mulberry32" | "net
 
 A `World` supplies its own default generator. To choose a repeatable seed explicitly, create a generator with a chosen seed and define the options to pass during the model’s initial `World` creation:
 
-Use `World.add(worldOptions)` without a spatial context, or `World.add(space, worldOptions)` when the model has a bounded space. Its `world.random` property then exposes that same generator. A fixed seed repeats the sequence only when the order of random operations is also the same.
+Use `World.create(worldOptions)` without a spatial context, or `World.create(space, worldOptions)` when the model has a bounded space. Its `world.random` property then exposes that same generator. A fixed seed repeats the sequence only when the order of random operations is also the same.
 
 <a id="random-number"></a>
 
@@ -1418,7 +1418,7 @@ random.raw(options: { kind: "double" | "gaussian" }): number
 
 **Behavior and errors**
 
-`Random.add` defaults to algorithm "mulberry32" and seed 1. Its algorithms are versioned stream contracts: "mulberry32" is the Mulberry32 stream; "netlogo-7.0.0" pins the MT19937 adaptation and draw semantics of NetLogo 7.0.0. Selecting the latter selects its pinned distribution/draw semantics below, while ordinary iteration and agent activation remain ordinary TypeScript. Numeric Mulberry seeds must be integers in [−2³¹,2³²−1] and normalize modulo 2³²; MT seeds must be signed 32-bit integers.
+`Random.create` defaults to algorithm "mulberry32" and seed 1. Its algorithms are versioned stream contracts: "mulberry32" is the Mulberry32 stream; "netlogo-7.0.0" pins the MT19937 adaptation and draw semantics of NetLogo 7.0.0. Selecting the latter selects its pinned distribution/draw semantics below, while ordinary iteration and agent activation remain ordinary TypeScript. Numeric Mulberry seeds must be integers in [−2³¹,2³²−1] and normalize modulo 2³²; MT seeds must be signed 32-bit integers.
 
 Seed "random" obtains one unsigned 32-bit value from the host entropy source, interpreting it as signed for MT; record the actual numeric `random.seed` value. It draws from no model stream. The read-only `random.algorithm` exposes the selected identifier.
 
@@ -1643,7 +1643,7 @@ Boundary include/exclude applies equally to exterior and hole boundaries; an inc
 ### An independent event agenda
 
 ```ts
-Agenda.add<E = unknown>(): Agenda<E>
+Agenda.create<E = unknown>(): Agenda<E>
 agenda.time: number // readonly
 agenda.size: number // readonly; pending event count
 agenda.add(options: { at: number; data: E; priority?: number }): EventHandle<E>
@@ -1669,19 +1669,19 @@ Queue plain event data; process returned due events using ordinary TypeScript.
 
 The delivered additive `next({until})` removes at most one due event. On success it returns a detached Event and leaves `agenda.time` exactly at that event's `at`, **even when it was the last due event**. Without a due event it returns undefined and advances only Agenda time to `until`. Validate finite `until` ≥ current time before mutation. Dispatch each returned event before extracting the next so its handler can schedule causal follow-up events within the same horizon. `size` is the readonly pending-event count; reading it changes no time or state. The existing batch `advance` contract is unchanged: it advances to the horizon when no due work remains. Caller loops use explicit finite event budgets; `next` neither dispatches callbacks nor advances World tick. See the [DES time and causality contract](../development/des-contract.md#time-and-causality).
 
-<a id="experiments-api"></a>
+<a id="studies-api"></a>
 
-## experiments
+## studies
 
 <a id="study-design-contract"></a>
 
 ### Design and replication
 
 ```ts
-experiments.design(input: { constants?: StudyParameters; axes: readonly StudyAxis[]; maxScenarios?: number }): readonly StudyScenario[]
-experiments.design<Parameters extends StudyParameters>(input: { defaults: Parameters; axes: readonly StudyAxisFor<Parameters>[]; maxScenarios?: number }): readonly StudyScenario<StudyParameterValues<Parameters>>[]
-experiments.replicate<Parameters>(scenarios: readonly StudyScenario<Parameters>[], seeds: readonly number[], options?: { maxRuns?: number }): readonly PlannedRun<Parameters>[]
-experiments.summarize<Parameters,Measurements>(result: StudyResult<Parameters,Measurements>, select: (outcome: StudyOutcome<Parameters,Measurements>) => number | undefined): readonly ReplicationSummary[]
+studies.design(input: { constants?: StudyParameters; axes: readonly StudyAxis[]; maxScenarios?: number }): readonly StudyScenario[]
+studies.design<Parameters extends StudyParameters>(input: { defaults: Parameters; axes: readonly StudyAxisFor<Parameters>[]; maxScenarios?: number }): readonly StudyScenario<StudyParameterValues<Parameters>>[]
+studies.replicate<Parameters>(scenarios: readonly StudyScenario<Parameters>[], seeds: readonly number[], options?: { maxRuns?: number }): readonly PlannedRun<Parameters>[]
+studies.summarize<Parameters,Measurements>(result: StudyResult<Parameters,Measurements>, select: (outcome: StudyOutcome<Parameters,Measurements>) => number | undefined): readonly ReplicationSummary[]
 ```
 
 **Behavior and errors**
@@ -1695,11 +1695,11 @@ Caller caps may lower but never enlarge hard limits; validate products before ou
 ### One model execution contract
 
 ```ts
-interface ExperimentModel { readonly world: World; step(): void; dispose?(): void }
-type ExperimentPlan<Parameters> =
+interface StudyModel { readonly world: World; step(): void; dispose?(): void }
+type StudyPlan<Parameters> =
   | { readonly parameters: readonly Parameters[]; readonly seeds: readonly number[]; readonly plan?: never }
   | { readonly plan: readonly PlannedRun<Parameters>[]; readonly parameters?: never; readonly seeds?: never };
-type ExperimentOptions<Parameters,Model extends ExperimentModel,Measurements> = ExperimentPlan<Parameters> & {
+type StudyOptions<Parameters,Model extends StudyModel,Measurements> = StudyPlan<Parameters> & {
   create(parameters: Parameters, seed: number, run: PlannedRun<Parameters>): Model;
   readonly steps: number;
   measure(model: Model): Measurements;
@@ -1717,8 +1717,8 @@ type ExperimentOptions<Parameters,Model extends ExperimentModel,Measurements> = 
   readonly maxTotalSamples?: number;
   readonly host?: { advance(model: Model): void | "stopped" };
 };
-experiments.run<Parameters,Model extends ExperimentModel,Measurements>(options: ExperimentOptions<Parameters,Model,Measurements> & {pause?:never}): StudyResult<Parameters,Measurements>
-experiments.run<Parameters,Model extends ExperimentModel,Measurements>(options: ExperimentOptions<Parameters,Model,Measurements> & Required<Pick<ExperimentOptions<Parameters,Model,Measurements>,"pause">>): StudyResult<Parameters,Measurements> | StudyCheckpoint<Parameters,Measurements>
+studies.run<Parameters,Model extends StudyModel,Measurements>(options: StudyOptions<Parameters,Model,Measurements> & {pause?:never}): StudyResult<Parameters,Measurements>
+studies.run<Parameters,Model extends StudyModel,Measurements>(options: StudyOptions<Parameters,Model,Measurements> & Required<Pick<StudyOptions<Parameters,Model,Measurements>,"pause">>): StudyResult<Parameters,Measurements> | StudyCheckpoint<Parameters,Measurements>
 ```
 
 The overload without pause returns terminal study outcomes. The overload with an explicit pause policy returns terminal outcomes or a resumable checkpoint.
@@ -1742,20 +1742,20 @@ Return every planned identity once, in input order, with detached samples, actua
 ### Whole-run worker transport
 
 ```ts
-experiments.run<Parameters extends StudyParameters,Measurements>(options: {
+studies.run<Parameters extends StudyParameters,Measurements>(options: {
   plan: readonly PlannedRun<Parameters>[];
   executor: { moduleUrl: string; exportName: string; sha256: string; config?: NodeStudyConfig };
   steps: number; every?: number; sampleInitial?: boolean; sampleFinal?: boolean;
   provenance?: Readonly<Record<string,string>>; maxTotalSteps?: number; maxTotalSamples?: number;
   timeoutMs: number; concurrency?: number; signal?: StudyCancellationSignal;
 }): Promise<NodeStudyResult<Parameters,Measurements>>
-type WorkerStudyProvider<Parameters,Model extends ExperimentModel,Measurements> = (config: NodeStudyConfig) =>
-  Pick<ExperimentOptions<Parameters,Model,Measurements>,"create" | "measure" | "sampleWhen" | "stopWhen" | "host">;
+type WorkerStudyProvider<Parameters,Model extends StudyModel,Measurements> = (config: NodeStudyConfig) =>
+  Pick<StudyOptions<Parameters,Model,Measurements>,"create" | "measure" | "sampleWhen" | "stopWhen" | "host">;
 ```
 
 **Behavior and errors**
 
-This overload is exported as experiments from the explicit same-package host subpath agent-loom/experiments/node, which also exposes the serial operation contracts. The root experiments export is headless/serial and rejects executor options; it never eagerly loads Node modules. The host overload uses actual native Node workers; Bun/browser execution rejects explicitly. The trusted local compiled ESM .mjs/.js provider URL, named export and lowercase SHA-256 must match before executing provider bytes; .js requires type:module. Config defaults null and is bounded acyclic JSON-like data, never callbacks or live model state.
+This overload is exported as studies from the explicit same-package host subpath agent-loom/studies/node, which also exposes the serial operation contracts. The root studies export is headless/serial and rejects executor options; it never eagerly loads Node modules. The host overload uses actual native Node workers; Bun/browser execution rejects explicitly. The trusted local compiled ESM .mjs/.js provider URL, named export and lowercase SHA-256 must match before executing provider bytes; .js requires type:module. Config defaults null and is bounded acyclic JSON-like data, never callbacks or live model state.
 
 The provider constructs the same create/model/measure callbacks inside each worker. Its per-run source callbacks are never serialized. Worker parameter plans use bounded finite scalar StudyParameters. timeoutMs is integer [1,3600000] wall-clock milliseconds, distinct from model ticks; concurrency defaults 1 and is integer [1,16]. Each worker executes one whole run with onError continue. Cancellation prevents new starts, terminates active workers and removes host listeners.
 
@@ -1763,12 +1763,12 @@ Results remain in plan order: actual serial outcome, not-started/cancelled with 
 
 <a id="study-behaviorspace-contract"></a>
 
-### BehaviorSpace data binding
+### Study data binding
 
 ```ts
-storage.decode(text: string, options: { format: "behaviorspace" }): readonly BehaviorSpaceSpec[]
-experiments.bind<Model extends ExperimentModel>(spec: BehaviorSpaceSpec, bindings: BehaviorSpaceBindings<Model>): BoundBehaviorSpace<Model>
-experiments.run<Model extends ExperimentModel>(bound: BoundBehaviorSpace<Model>): StudyResult<StudyParameters,Readonly<Record<string,StudyScalar>>>
+storage.decode(text: string, options: { format: "behaviorspace" }): readonly StudySpec[]
+studies.bind<Model extends StudyModel>(spec: StudySpec, bindings: StudyBindings<Model>): BoundStudy<Model>
+studies.run<Model extends StudyModel>(bound: BoundStudy<Model>): StudyResult<StudyParameters,Readonly<Record<string,StudyScalar>>>
 ```
 
 **Behavior and errors**
@@ -1784,13 +1784,13 @@ Execute the same ordinary model lifecycle and failure phases. Parsing/binding co
 ### Finite selection and held-out evaluation
 
 ```ts
-experiments.evaluate<Parameters,Model extends ExperimentModel,Measurements>(input:
-  Omit<ExperimentOptions<Parameters,Model,Measurements>,"parameters" | "plan" | "pause"> & {
+studies.evaluate<Parameters,Model extends StudyModel,Measurements>(input:
+  Omit<StudyOptions<Parameters,Model,Measurements>,"parameters" | "plan" | "pause"> & {
     pause?: never; candidates: readonly StudyScenario<Parameters>[]; seeds: readonly number[]; objective: CandidateObjective<Parameters,Measurements>
   }): CandidateEvaluation<Parameters,Measurements>
-experiments.select<Parameters,Measurements>(evaluation: CandidateEvaluation<Parameters,Measurements>, options: { maxMeanLossDelta: number }): CandidateSelection<Parameters,Measurements>
-experiments.holdout<Parameters,Model extends ExperimentModel,Measurements>(selection: CandidateSelection<Parameters,Measurements>, input:
-  Omit<ExperimentOptions<Parameters,Model,Measurements>,"parameters" | "plan" | "pause"> & { pause?: never; seeds: readonly number[]; objective: CandidateObjective<Parameters,Measurements> }
+studies.select<Parameters,Measurements>(evaluation: CandidateEvaluation<Parameters,Measurements>, options: { maxMeanLossDelta: number }): CandidateSelection<Parameters,Measurements>
+studies.holdout<Parameters,Model extends StudyModel,Measurements>(selection: CandidateSelection<Parameters,Measurements>, input:
+  Omit<StudyOptions<Parameters,Model,Measurements>,"parameters" | "plan" | "pause"> & { pause?: never; seeds: readonly number[]; objective: CandidateObjective<Parameters,Measurements> }
 ): CandidateHoldout<Parameters,Measurements>
 ```
 
@@ -1807,7 +1807,7 @@ Issuance/type errors throw TypeError, budget/domain violations RangeError, run/o
 ### Whole-study hooks, subexperiments and continuation
 
 ```ts
-experiments.resume<Parameters,Model extends ExperimentModel,Measurements>(checkpoint: StudyCheckpoint<Parameters,Measurements>, callbacks: {
+studies.resume<Parameters,Model extends StudyModel,Measurements>(checkpoint: StudyCheckpoint<Parameters,Measurements>, callbacks: {
   create(parameters:Parameters,seed:number,run:PlannedRun<Parameters>):Model;
   load(snapshot: WorldSnapshot<unknown> | BundleSnapshot<unknown>, run:PlannedRun<Parameters>):Model;
   measure(model:Model):Measurements;
@@ -1842,7 +1842,7 @@ storage.decode(text:string, options:{format:"study-json"}):StudyCheckpoint<unkno
 
 before executes once after plan/budget validation and before the first model allocation. after executes once on terminal completion (including failed runs) if before succeeded, with detached results; never on a pause. Both use the synchronous/thenable rules. A failed before starts no model and returns every run as skipped/before-error with a studyError phase before; a failed after retains all outcomes and adds studyError phase after. Neither error silently discards results. Whole-study hooks are distinct from per-run create/dispose; resume never repeats successful before or a completed after.
 
-Separate BehaviorSpace subexperiments concatenate independently expanded Cartesian blocks, preserving block order and IDs; they are not globally cross-multiplied. Scenario indices and IDs remain unique across concatenated blocks. Conditional metrics use the same sampleWhen at initial/scheduled samples, with the documented explicit sampleFinal override. Pre/post labels bind to before/after callbacks rather than executed source. Replication statistics use experiments.summarize; list-valued observations remain detached lists with preserved order and missing values.
+Separate Study subexperiments concatenate independently expanded Cartesian blocks, preserving block order and IDs; they are not globally cross-multiplied. Scenario indices and IDs remain unique across concatenated blocks. Conditional metrics use the same sampleWhen at initial/scheduled samples, with the documented explicit sampleFinal override. Pre/post labels bind to before/after callbacks rather than executed source. Replication statistics use studies.summarize; list-valued observations remain detached lists with preserved order and missing values.
 
 Pause checks occur only after initial sampling/stop and after successful-step sampling/stop, never inside a step or ahead of a terminal stop/horizon. save must declare all required World/component roots and custom model continuation through storage.save; functions are excluded. Its checkpoint must have rootKind world or bundle. A data-only Snapshot is rejected before issuing a study checkpoint: selected measurements alone cannot resume a model. The resume load callback continues to accept only WorldSnapshot or BundleSnapshot. Validate/encode the snapshot and checkpoint before issuing the checkpoint, then dispose the live instance once.
 
@@ -1863,12 +1863,12 @@ The checkpoint envelope validates framework-owned structure, not arbitrary param
 ```ts
 type WidenStudyScalar<Value extends StudyScalar> = Value extends number ? number : Value extends boolean ? boolean : string;
 declare const selectionMeasurement: unique symbol;
-export interface BehaviorSpaceAxis {
+export interface StudyAxis {
 	readonly variable: string;
 	readonly values: readonly string[];
 }
 
-export interface BehaviorSpaceSpec {
+export interface StudySpec {
 	readonly version: 1 | 2;
 	readonly dialect: "netlogo-7.0.4-finite-v2" | "netlogo-7.0.0-finite-v1";
 	readonly name: string;
@@ -1880,13 +1880,13 @@ export interface BehaviorSpaceSpec {
 	readonly exitCondition?: string;
 	readonly runMetricsCondition?: string;
 	readonly metrics: readonly string[];
-	readonly axes: readonly BehaviorSpaceAxis[];
+	readonly axes: readonly StudyAxis[];
 	readonly originalXml: string;
- readonly subexperiments?:readonly { readonly axes:readonly BehaviorSpaceAxis[] }[];
+ readonly subexperiments?:readonly { readonly axes:readonly StudyAxis[] }[];
  readonly preExperiment?:string; readonly postExperiment?:string;
 }
 
-export type BehaviorSpaceMeasurement = Readonly<Record<string, StudyScalar>>;
+export type StudyMeasurement = Readonly<Record<string, StudyScalar>>;
 
 export interface CandidateObjective<Parameters, Measurements> {
 	readonly id: string;
@@ -2140,7 +2140,7 @@ export interface ReplicationSummary {
 }
 
 
-interface BehaviorSpaceBindings<Model extends ExperimentModel> {
+interface StudyBindings<Model extends StudyModel> {
  readonly seeds: readonly number[];
  decodeLiteral(source:string, variable:string): StudyScalar;
  readonly setup: { readonly source:string; create(parameters:StudyParameters,seed:number,run:PlannedRun<StudyParameters>):Model };
@@ -2152,10 +2152,10 @@ interface BehaviorSpaceBindings<Model extends ExperimentModel> {
  readonly postExperiment?:{ readonly source:string; run(result:StudyResult<StudyParameters,Readonly<Record<string,StudyScalar>>>):void };
  readonly provenance?:Readonly<Record<string,string>>;
 }
-interface BoundBehaviorSpace<Model extends ExperimentModel> {
- readonly spec:BehaviorSpaceSpec;
+interface BoundStudy<Model extends StudyModel> {
+ readonly spec:StudySpec;
  readonly plan:readonly PlannedRun<StudyParameters>[];
- readonly options:ExperimentOptions<StudyParameters,Model,Readonly<Record<string,StudyScalar>>>;
+ readonly options:StudyOptions<StudyParameters,Model,Readonly<Record<string,StudyScalar>>>;
 }
 ```
 
@@ -2195,8 +2195,8 @@ Save the data you choose. File and database access stays with the caller.
 import { Agent, World, run } from "agent-loom";
 import { storage } from "agent-loom/storage";
 
-const person = Agent.add({ energy: 10 });
-const world = World.add();
+const person = Agent.create({ energy: 10 });
+const world = World.create();
 world.add(person);
 
 function step() {
@@ -2460,8 +2460,8 @@ This pure guard checks the private library-issued kind/identity brand of a live 
 ```ts
 storage.encode(value: PlanarGeometry | PlanarFeature | PlanarDataset | readonly PlanarFeature[], options: { format: "geojson" }): string
 storage.decode(text: string, options: { format: "geojson"; coordinateSystem: { crs: string; units: string } }): PlanarDataset
-storage.encode(value: readonly BehaviorSpaceSpec[], options: { format: "behaviorspace" }): string
-storage.decode(text: string, options: { format: "behaviorspace" }): readonly BehaviorSpaceSpec[]
+storage.encode(value: readonly StudySpec[], options: { format: "behaviorspace" }): string
+storage.decode(text: string, options: { format: "behaviorspace" }): readonly StudySpec[]
 storage.decode(text: string, options: { format: "legacy-world-json" }): WorldSnapshot<unknown>
 ```
 
@@ -2472,7 +2472,7 @@ Every codec call requires an explicit built-in format name or a Format object an
 - `storage.decode(text,{format:"geojson",coordinateSystem:{crs,units}})` accepts standard Feature/FeatureCollection and Point/MultiPoint/LineString/MultiLineString/Polygon/MultiPolygon/GeometryCollection with finite planar XY coordinates. It returns {features,coordinateSystem}; explicit nonempty crs and units labels are mandatory and do not reproject coordinates. Reject XYZ coordinates rather than silently dropping altitude. Rings require ≥4 positions and closed first/last point; holes remain explicit. Null feature geometry is retained as null. Feature IDs/properties remain cloneable data, not Agents.
 
 Encode accepts a PlanarGeometry, one PlanarFeature, a PlanarDataset or a feature array; geometry/feature values retain their standard GeoJSON root kind, while a dataset/array becomes a FeatureCollection. It omits coordinate-system labels from geometry; callers retain labels separately. Empty collections are valid; malformed rings/nonfinite/unsupported structures reject. GIS operations do not infer geodesy, raster sampling or CRS conversion.
-- `storage.decode(text,{format:"behaviorspace"})` parses bounded declarative XML study metadata into labeled setup/go/stop/measure command strings, enumerated/stepped parameter values, repetitions, seeds, time limit and cadence. It never evaluates those strings. Explicit caller-owned bindings in experiments convert only recognized labels to TS procedures; unknown labels reject there. Reject external entities/DTDs, executable imports, malformed numeric ranges and range expansion beyond 1000000 values. Encode accepts that declarative plan and returns escaped XML without translating TypeScript back into NetLogo procedures.
+- `storage.decode(text,{format:"behaviorspace"})` parses bounded declarative XML study metadata into labeled setup/go/stop/measure command strings, enumerated/stepped parameter values, repetitions, seeds, time limit and cadence. It never evaluates those strings. Explicit caller-owned bindings in studies convert only recognized labels to TS procedures; unknown labels reject there. Reject external entities/DTDs, executable imports, malformed numeric ranges and range expansion beyond 1000000 values. Encode accepts that declarative plan and returns escaped XML without translating TypeScript back into NetLogo procedures.
 
 <a id="snapshot-wire-schema"></a>
 
@@ -2656,7 +2656,7 @@ limits.geojson = {
 limits.compatibilityNetwork = { nodes: 1024, edges: 32768, idLength: 256 };
 limits.behaviorspace = {
   textBytes: 1048576, depth: 8, elements: 20000, entityReferences: 100000,
-  experiments: 100, metrics: 32, sourceLength: 65536
+  studies: 100, metrics: 32, sourceLength: 65536
 };
 limits.study = {
   axes: 32, parameters: 128, name: 128, string: 65536, scenarios: 10000,
@@ -2682,7 +2682,7 @@ The legacy-simple network profile accepts unique nonempty string node IDs of at 
 
 ## Additive measurement and update tools
 
-These root `city-library` exports extend the original inventory. They do not rename or replace its contracts. The bounded History and serial study subset are available through root `storage` and `experiments`; broader storage/worker/continuation targets remain separate.
+These root `city-library` exports extend the original inventory. They do not rename or replace its contracts. The bounded History and serial study subset are available through root `storage` and `studies`; broader storage/worker/continuation targets remain separate.
 
 ```ts
 measurements.define<Model, Values extends Readonly<Record<string, number>>>(
@@ -2701,6 +2701,6 @@ continuous.crossing(input: {
 
 Measurements call a pure synchronous projection once, validate an own finite numeric record and return detached frozen values. They own no model state or sampling schedule. Two-phase updates capture unique original references, compute all proposals before committing in entry order and advance no clock. A compute failure prevents library commits; a commit failure preserves earlier and partial current effects. Callers keep compute pure and proposals independent or immutable. There is no implicit World membership or dead-member filtering.
 
-Continuous tools require finite values and finite nonnegative duration. The caller declares quantity/time units. Linear progression evaluates `value + rate * duration` in that order and rejects nonfinite results. Crossing assumes a linear segment, uses strict start/inclusive end and returns no crossing for zero duration or constant segments. Interpolation uses scaled IEEE-754 arithmetic, not mathematical exactness; the endpoint returns exactly duration, interior results can underflow to zero, and no epsilon is invented. The result is finite within the interval. Planning absolute Agenda events remains explicit; validate additions, and cancel/recompute predictions when an intervening event changes a rate. See [the frozen decisions and examples](../mesa-expansion/dynamics.md).
+Continuous tools require finite values and finite nonnegative duration. The caller declares quantity/time units. Linear progression evaluates `value + rate * duration` in that order and rejects nonfinite results. Crossing assumes a linear segment, uses strict start/inclusive end and returns no crossing for zero duration or constant segments. Interpolation uses scaled IEEE-754 arithmetic, not mathematical exactness; the endpoint returns exactly duration, interior results can underflow to zero, and no epsilon is invented. The result is finite within the interval. Planning absolute Agenda events remains explicit; validate additions, and cancel/recompute predictions when an intervening event changes a rate. See [the frozen decisions and examples](../execution-studies/dynamics.md).
 
 History normally records `world.tick.value`. Any deliberately selected alternative axis must be named and used consistently for that series. Equal-time Agenda measurements require aggregation before History insertion or a separate EventTrace; no implicit conversion or extra tick occurs.

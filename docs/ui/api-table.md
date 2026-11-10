@@ -43,7 +43,7 @@ Every view requires `type` and `label`; labels are currently explicit. All callb
 | ID | Discriminant and required data callback | Data contract | Scope | Reference |
 | --- | --- | --- | --- | --- |
 | UI-030 | `views: readonly (View<S> \| Inspector<S>)[]` | Required; `[]` is valid. Order is authored order. | Supported | [Views](api-reference.md#views) |
-| UI-031 | `type: "network"`; `nodes(state): readonly NetworkNode[]`; `edges(state): readonly NetworkEdge[]` | Detached graph presentation; no World or renderer objects required. | Supported | [Network](api-reference.md#network) |
+| UI-031 | `type: "network"`; `nodes(state): readonly GraphNodeData[]`; `edges(state): readonly GraphEdgeData[]` | Detached graph presentation; no World or renderer objects required. | Supported | [Network](api-reference.md#network) |
 | UI-032 | `type: "grid"`; `data(state): GridData` | Rectangular rendered cells. | Supported | [Grid](api-reference.md#grid) |
 | UI-033 | `type: "spatial"`; `data(state): SpatialData` | Spatial agent presentation, optional cell backdrop. | Supported | [Spatial](api-reference.md#spatial) |
 | UI-034 | `type: "line" \| "bar" \| "scatter"`; `series(state): readonly Series[]` | Line/scatter use numeric Series; bar supports numeric/categorical BarSeries in the public contract. | Supported | [Charts](api-reference.md#charts) |
@@ -54,13 +54,13 @@ Every view requires `type` and `label`; labels are currently explicit. All callb
 
 | ID | Type / properties | Defaults and constraints | Scope | Reference |
 | --- | --- | --- | --- | --- |
-| UI-040 | `NetworkNode`: `id: string`, `label?: string`, `color?: string`, `size?: number` | Stable ID; optional label; host color; symbol diameter in CSS pixels, default 16 for network and 8 for spatial rendering. Size is not collision radius. | Supported | [Network](api-reference.md#network) |
-| UI-041 | `NetworkNode.position?: { x: number; y: number }` | Initial view coordinates; later layout/dragging remains presentation-owned. Omission uses host placement. | Supported | [Network](api-reference.md#network) |
-| UI-042 | `NetworkEdge`: `id: string`, `from: string`, `to: string` | Stable edge ID and node IDs. | Supported | [Network](api-reference.md#network) |
+| UI-040 | `GraphNodeData`: `id: string`, `label?: string`, `color?: string`, `size?: number` | Stable ID; optional label; host color; symbol diameter in CSS pixels, default 16 for network and 8 for spatial rendering. Size is not collision radius. | Supported | [Network](api-reference.md#network) |
+| UI-041 | `GraphNodeData.position?: { x: number; y: number }` | Initial view coordinates; later layout/dragging remains presentation-owned. Omission uses host placement. | Supported | [Network](api-reference.md#network) |
+| UI-042 | `GraphEdgeData`: `id: string`, `from: string`, `to: string` | Stable edge ID and node IDs. | Supported | [Network](api-reference.md#network) |
 | UI-043 | Edge `directed?: boolean`, `color?: string`, `width?: number` | Undirected when omitted; host color; positive finite CSS-pixel width, default 1. | Supported | [Network](api-reference.md#network) |
 | UI-044 | `Cell`: `id: string`, `x: number`, `y: number`, `color: string` | Rendered cell record, not domain `Field`. Named type is exported by the UI entry in the public contract. | Supported | [Grid](api-reference.md#grid) |
 | UI-045 | `GridData`: `width: number`, `height: number`, `cells: readonly Cell[]` | All required; dimensions and coordinates describe presentation extent. | Supported | [Grid](api-reference.md#grid) |
-| UI-046 | `SpatialAgent extends NetworkNode`: `x: number`, `y: number`, `heading?: number`, `shape?: "circle" \| "triangle"` | Required position; heading defaults 0 degrees; shape defaults circle. Named type is exported by the UI entry in the public contract. | Supported | [Spatial](api-reference.md#spatial) |
+| UI-046 | `SpatialAgent extends GraphNodeData`: `x: number`, `y: number`, `heading?: number`, `shape?: "circle" \| "triangle"` | Required position; heading defaults 0 degrees; shape defaults circle. Named type is exported by the UI entry in the public contract. | Supported | [Spatial](api-reference.md#spatial) |
 | UI-047 | `SpatialData`: `width: number`, `height: number`, `agents: readonly SpatialAgent[]`, `cells?: readonly Cell[]` | Required extent/agents; omission gives no cell backdrop. | Supported | [Spatial](api-reference.md#spatial) |
 | UI-048 | `SpatialData.showLabels?: boolean` | Controlled label visibility when supplied; omission retains host Labels control. | Supported | [Spatial](api-reference.md#spatial) |
 | UI-049 | `SpatialData.segments?: readonly SpatialSegment[]` | Ordered strokes above cells and below agents/selection/labels; omitted means no strokes. | Supported | [Spatial](api-reference.md#spatial) |
@@ -73,7 +73,7 @@ Every view requires `type` and `label`; labels are currently explicit. All callb
 | --- | --- | --- | --- | --- |
 | UI-060 | `drawing?: { toggleLabel?: string; enabled: (state: S) => boolean; intent: (model: M, intent: DrawingIntent) => void }` | Omitted means no drawing binding; explicit enable predicate and model action required. Optional toggle starts off per mounted instance. Without toggle label, predicate alone gates drawing. | Supported | [Drawing](api-reference.md#drawing) |
 | UI-061 | `DrawingIntent` | `{ phase: "begin" \| "move"; position: { x: number; y: number } }` or `{ phase: "end"; position?: never }`; named type not re-exported by UI entry. | Supported | [Drawing](api-reference.md#drawing) |
-| UI-062 | `netLogoColor(color: number): string` | Public experimental helper; finite numeric colors wrap modulo 140 and select observed tenth-color bins. Non-number throws TypeError; nonfinite number throws RangeError. | Supported | [Palette](api-reference.md#palette) |
+| UI-062 | `indexedColor(color: number): string` | Public experimental helper; finite numeric colors wrap modulo 140 and select observed tenth-color bins. Non-number throws TypeError; nonfinite number throws RangeError. | Supported | [Palette](api-reference.md#palette) |
 
 ## Design rules and planned extensions
 
