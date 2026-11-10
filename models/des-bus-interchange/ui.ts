@@ -1,5 +1,6 @@
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
+import { busScene } from "./scene.ts";
 
 export const ui = defineUI(model, {
   setup: ["buses", "dwellMinutes"],
@@ -12,7 +13,7 @@ export const ui = defineUI(model, {
     { label: "Departed", value: (state) => state.departed },
   ],
   views: [
-    { type: "network", label: "Bus routes", nodes: (state) => state.nodes, edges: (state) => state.edges },
+    { type: "spatial", label: "Bus route and berth capacity", data: busScene },
     { type: "line", label: "Interchange queue", xAxis: { label: "Time", unit: "min" }, yAxis: { label: "Buses" }, series: (state) => [{ label: "Waiting", points: state.history }] },
     { type: "table", label: "Bus ledger", rows: (state) => state.buses },
   ],

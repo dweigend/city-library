@@ -3,22 +3,13 @@ import { defineUI, netLogoColor, type Observation, type Series } from "../../ui/
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
   setup: ["seed"],
+  change: (instance, changes) => instance.setParameters(changes),
   live: {
-    numMoths: {
-      set: (m, value) => m.setParameters({ numMoths: value }),
-    },
-    speed: {
-      set: (m, value) => m.setParameters({ speed: value }),
-    },
-    mutation: {
-      set: (m, value) => m.setParameters({ mutation: value }),
-    },
-    selection: {
-      set: (m, value) => m.setParameters({ selection: value }),
-    },
-    cyclePollution: {
-      set: (m, value) => m.setParameters({ cyclePollution: value }),
-    },
+    numMoths: {},
+    speed: {},
+    mutation: {},
+    selection: {},
+    cyclePollution: {},
   },
   actions: [
     { label: "Pollute", run: (m) => m.polluteWorld() },

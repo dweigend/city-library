@@ -24,21 +24,17 @@ export const ui = defineUI(model, {
     label:
       "Original NetLogo model \u00B7 Martin and Wilensky \u00B7 CC BY-NC-SA 3.0",
   },
+  change: (instance, changes) => instance.setParameters(changes),
   live: {
-    fullCharge: {
-      set: (m, v) => m.setParameters({ fullCharge: v }),
-    },
+    fullCharge: {},
     justInTimeSupplyRobot: {
       label: "Dispatch charge",
-      set: (m, v) => m.setParameters({ justInTimeSupplyRobot: v }),
     },
     showAgentName: {
       label: "Agent names",
-      set: (m, v) => m.setParameters({ showAgentName: v }),
     },
     makeTrails: {
       label: "Trails",
-      set: (m, v) => m.setParameters({ makeTrails: v }),
     },
   },
   monitors: [

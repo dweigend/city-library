@@ -11,19 +11,12 @@ export const ui = defineUI(model, {
       label: "Initial male-child chance",
     },
   ],
+  change: (instance, changes) => instance.setParameters(changes),
   live: {
-    meanLongevity: {
-      set: (m, v) => m.setParameters({ meanLongevity: v }),
-    },
-    gestationPeriod: {
-      set: (m, v) => m.setParameters({ gestationPeriod: v }),
-    },
-    maximumLitterSize: {
-      set: (m, v) => m.setParameters({ maximumLitterSize: v }),
-    },
-    matingChance: {
-      set: (m, v) => m.setParameters({ matingChance: v }),
-    },
+    meanLongevity: {},
+    gestationPeriod: {},
+    maximumLitterSize: {},
+    matingChance: {},
   },
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Evolution/Sex%20Ratio%20Equilibrium.nlogox",

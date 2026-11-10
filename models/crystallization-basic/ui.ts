@@ -13,16 +13,11 @@ export const ui = defineUI(model, {
     url: "https://ccl.northwestern.edu/netlogo/models/CrystallizationBasic",
     label: "Original NetLogo model · Uri Wilensky · CC BY-NC-SA 3.0",
   },
+  change: (instance, changes) => instance.setRules(changes),
   live: {
-    meltingTemp: {
-      set: (m, v) => m.setRules({ meltingTemp: v }),
-    },
-    roomTemp: {
-      set: (m, v) => m.setRules({ roomTemp: v }),
-    },
-    histogram: {
-      set: (m, v) => m.setRules({ histogram: v }),
-    },
+    meltingTemp: {},
+    roomTemp: {},
+    histogram: {},
   },
   complete: (s) => s.done,
   monitors: [

@@ -7,17 +7,13 @@ export const ui = defineUI(model, {
     label:
       "Original NetLogo model \u00B7 Stonedahl and Wilensky \u00B7 CC BY-NC-SA 3.0",
   },
+  change: (instance, changes) => instance.setParameters(changes),
   live: {
     coolingRate: {
       label: "Cooling (%)",
-      set: (m, v) => m.setParameters({ coolingRate: v }),
     },
-    swapRadius: {
-      set: (m, v) => m.setParameters({ swapRadius: v }),
-    },
-    acceptEqualChanges: {
-      set: (m, v) => m.setParameters({ acceptEqualChanges: v }),
-    },
+    swapRadius: {},
+    acceptEqualChanges: {},
   },
   monitors: [
     { label: "Tick", value: (s) => s.tick },

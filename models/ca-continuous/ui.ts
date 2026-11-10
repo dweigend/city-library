@@ -11,16 +11,11 @@ export const ui = defineUI(model, {
     { label: "Setup random", run: (m) => m.setupRandom() },
     { label: "Continue", run: (m) => m.continueRun(), enabled: (s) => s.done },
   ],
+  change: (instance, changes) => instance.setRules(changes),
   live: {
-    addConstant: {
-      set: (m, v) => m.setRules({ addConstant: v }),
-    },
-    precisionLevel: {
-      set: (m, v) => m.setRules({ precisionLevel: v }),
-    },
-    autoContinue: {
-      set: (m, v) => m.setRules({ autoContinue: v }),
-    },
+    addConstant: {},
+    precisionLevel: {},
+    autoContinue: {},
   },
   complete: (s) => s.done,
   monitors: [

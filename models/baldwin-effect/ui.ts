@@ -3,25 +3,14 @@ import { defineUI, type Observation, type Series } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
   setup: ["seed"],
+  change: (instance, changes) => instance.setParameters(changes),
   live: {
-    numPop: {
-      set: (m, value) => m.setParameters({ numPop: value }),
-    },
-    geneLength: {
-      set: (m, value) => m.setParameters({ geneLength: value }),
-    },
-    plasticity: {
-      set: (m, value) => m.setParameters({ plasticity: value }),
-    },
-    numTrials: {
-      set: (m, value) => m.setParameters({ numTrials: value }),
-    },
-    mutationRate: {
-      set: (m, value) => m.setParameters({ mutationRate: value }),
-    },
-    smoothness: {
-      set: (m, value) => m.setParameters({ smoothness: value }),
-    },
+    numPop: {},
+    geneLength: {},
+    plasticity: {},
+    numTrials: {},
+    mutationRate: {},
+    smoothness: {},
   },
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Evolution/Baldwin%20Effect.nlogox",

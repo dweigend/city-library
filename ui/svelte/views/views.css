@@ -17,3 +17,5 @@
 .model-inspector { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 0.25rem 0.75rem; }
 .model-inspector dt { color: var(--muted-foreground); overflow-wrap: anywhere; }
 .model-inspector dd { margin: 0; overflow-wrap: anywhere; }
+
+.model-view-actions[data-pagination] { flex-wrap: wrap; }
