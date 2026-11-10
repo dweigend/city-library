@@ -66,7 +66,7 @@ export function create(options: Partial<ConsumerChoiceParameters> = {}) {
     throw new RangeError('Requested connections exceed the complete graph.');
   const random = Random.create({ seed: settings.seed }),
     world = World.create({ x: 51, y: 51, boundary: 'hard' }, { random }),
-    graph = Graph.add<Consumer>();
+    graph = Graph.create<Consumer>();
   const consumers: Consumer[] = [];
   const qualities = () => [settings.qualityOrange, settings.qualityBlue];
   const satisfaction = (choice: number) =>

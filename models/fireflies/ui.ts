@@ -5,7 +5,7 @@ export const ui = defineUI(model, {
   setup: ["seed", "number"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/Fireflies",
-    label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Wilensky · CC BY-NC-SA 3.0",
   },
   live: {
     strategy: {

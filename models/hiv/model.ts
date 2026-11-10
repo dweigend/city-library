@@ -82,7 +82,7 @@ export function create(options: Partial<HIVParameters> = {}) {
   function setupPeople() {
     for (let who = 0; who < settings.initialPeople; who++) {
       const person = world.add(
-        Agent.add<PersonState>(
+        Agent.create<PersonState>(
           {
             who,
             infected: who < settings.initialPeople * 0.025,

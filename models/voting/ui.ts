@@ -4,7 +4,7 @@ export const ui = defineUI(model, {
   setup: ["width", "height", "seed"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/Voting",
-    label: "Original NetLogo model · Uri Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Uri Wilensky · CC BY-NC-SA 3.0",
   },
   complete: (state) => state.done,
   monitors: [

@@ -20,7 +20,7 @@ const binding = defineUI(model, {
   },
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Traffic%202%20Lanes.nlogox",
-    label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Wilensky · CC BY-NC-SA 3.0",
   },
   drawing: {
     toggleLabel: "Select car",

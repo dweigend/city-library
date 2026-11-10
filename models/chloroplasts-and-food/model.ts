@@ -33,7 +33,7 @@ export const inputs: Inputs<ChloroplastParameters> = {
   autoStop: { kind: "boolean", default: false },
   stopAt: { kind: "number", default: 2000, min: 100, max: 5000 },
 };
-type Breed =
+type AgentGroup =
   | "co2"
   | "o2"
   | "water"
@@ -45,7 +45,7 @@ type Breed =
   | "flow";
 type Molecule = Agent<{
   who: number;
-  group: Breed;
+  group: AgentGroup;
   chloroplastId: string;
   pair: number;
   charged: boolean;
@@ -58,7 +58,7 @@ export function create(options: Partial<ChloroplastParameters> = {}) {
   const world = World.create(space, { random });
   const grid = Grid.create(space, { state: { region: 0 } });
   world.add(grid);
-  const flowEdges = Graph.add<Molecule>();
+  const flowEdges = Graph.create<Molecule>();
   let nextWho = 0;
   let glucoseProduced = 0;
   let carbonDioxide = 0;
@@ -70,7 +70,7 @@ export function create(options: Partial<ChloroplastParameters> = {}) {
     glucoseProduced: number;
   }[] = [];
   const all = () => world.agents as readonly Molecule[];
-  const ofBreed = (group: Breed) =>
+  const ofGroup = (group: AgentGroup) =>
     all().filter((molecule) => molecule.group === group);
   const shuffled = (source: readonly Molecule[]) =>
     random.sample(source, {
@@ -79,7 +79,7 @@ export function create(options: Partial<ChloroplastParameters> = {}) {
     });
 
   function createMolecule(
-    group: Breed,
+    group: AgentGroup,
     sourceX = 0,
     y = 0,
     heading = random.number({ min: 0, max: 360, integer: true }),
@@ -130,7 +130,7 @@ export function create(options: Partial<ChloroplastParameters> = {}) {
       const chloroplast = createMolecule("chloroplast", 0, 0, heading);
       chloroplast.move(3.5 + random.number() * 3.5);
     }
-    for (const chloroplast of shuffled(ofBreed("chloroplast"))) {
+    for (const chloroplast of shuffled(ofGroup("chloroplast"))) {
       const atpOffset = random.number({ min: 0, max: 60, integer: true });
       chloroplast.rotate(-chloroplast.heading);
       for (let index = 0; index < 6; index++) {
@@ -181,7 +181,7 @@ export function create(options: Partial<ChloroplastParameters> = {}) {
       const photon = createMolecule("photon", field.x + 4.5, field.y, 135);
       photon.hidden = true;
     }
-    for (const photon of shuffled(ofBreed("photon"))) {
+    for (const photon of shuffled(ofGroup("photon"))) {
       photon.move(0.15);
       if (grid.fieldAt(photon)!.region === 5) photon.delete();
       else if (grid.fieldAt(photon)!.x + 4.5 >= -9.6) photon.hidden = false;
@@ -208,7 +208,7 @@ export function create(options: Partial<ChloroplastParameters> = {}) {
       water.hidden = true;
       flowEdges.nodes.add(water);
       flowEdges.edges.add({
-        from: ofBreed("flow")[0]!,
+        from: ofGroup("flow")[0]!,
         to: water,
         directed: true,
       });
@@ -240,17 +240,17 @@ export function create(options: Partial<ChloroplastParameters> = {}) {
 
   function updateADPATPs() {
     for (const site of shuffled(
-      ofBreed("atp").filter((site) => !site.charged),
+      ofGroup("atp").filter((site) => !site.charged),
     )) {
-      const waters = site.neighbors({ source: ofBreed("water"), radius: 2 });
-      const photons = site.neighbors({ source: ofBreed("photon"), radius: 2 });
-      const both = ofBreed("atp").filter(
+      const waters = site.neighbors({ source: ofGroup("water"), radius: 2 });
+      const photons = site.neighbors({ source: ofGroup("photon"), radius: 2 });
+      const both = ofGroup("atp").filter(
         (other) =>
           other.pair === site.pair &&
           other.chloroplastId === site.chloroplastId &&
           !other.charged,
       );
-      const otherCharged = ofBreed("atp").some(
+      const otherCharged = ofGroup("atp").some(
         (other) =>
           other.pair !== site.pair &&
           other.chloroplastId === site.chloroplastId &&
@@ -272,17 +272,17 @@ export function create(options: Partial<ChloroplastParameters> = {}) {
         }
       }
     }
-    for (const site of shuffled(ofBreed("atp"))) {
+    for (const site of shuffled(ofGroup("atp"))) {
       for (const photon of site.neighbors({
-        source: ofBreed("photon"),
+        source: ofGroup("photon"),
         radius: 2,
       }))
         photon.delete();
     }
     for (const site of shuffled(
-      ofBreed("atp").filter((site) => site.charged),
+      ofGroup("atp").filter((site) => site.charged),
     )) {
-      const both = ofBreed("atp").filter(
+      const both = ofGroup("atp").filter(
         (other) =>
           !other.hidden &&
           other.pair === site.pair &&
@@ -291,7 +291,7 @@ export function create(options: Partial<ChloroplastParameters> = {}) {
       );
       if (both.length !== 2) continue;
       const carbonDioxides = site.neighbors({
-        source: ofBreed("co2"),
+        source: ofGroup("co2"),
         radius: 2,
       });
       if (carbonDioxides.length < 2) continue;
@@ -307,7 +307,7 @@ export function create(options: Partial<ChloroplastParameters> = {}) {
       createMolecule("o2", site.x + 4.5, site.y);
       for (const member of both) member.charged = false;
     }
-    for (const site of ofBreed("atp")) {
+    for (const site of ofGroup("atp")) {
       site.hidden = !site.charged;
       if (site.charged) {
         // Source color and electric-shape draws affect subsequent stochastic calls.
@@ -318,8 +318,8 @@ export function create(options: Partial<ChloroplastParameters> = {}) {
   }
 
   function updateChloroplasts() {
-    for (const chloroplast of shuffled(ofBreed("chloroplast"))) {
-      const complexes = ofBreed("carbon").filter(
+    for (const chloroplast of shuffled(ofGroup("chloroplast"))) {
+      const complexes = ofGroup("carbon").filter(
         (carbon) => carbon.chloroplastId === chloroplast.id,
       );
       if (complexes.length !== 6) continue;
@@ -327,12 +327,12 @@ export function create(options: Partial<ChloroplastParameters> = {}) {
       const sugar = createMolecule("sugar", chloroplast.x + 4.5, chloroplast.y);
       flowEdges.nodes.add(sugar);
       flowEdges.edges.add({
-        from: ofBreed("flow")[0]!,
+        from: ofGroup("flow")[0]!,
         to: sugar,
         directed: true,
       });
       glucoseProduced++;
-      for (const site of ofBreed("atp").filter(
+      for (const site of ofGroup("atp").filter(
         (site) => site.chloroplastId === chloroplast.id,
       )) {
         site.hidden = true;
@@ -342,8 +342,8 @@ export function create(options: Partial<ChloroplastParameters> = {}) {
   }
 
   function updateCounts() {
-    carbonDioxide = ofBreed("co2").length;
-    oxygen = ofBreed("o2").length;
+    carbonDioxide = ofGroup("co2").length;
+    oxygen = ofGroup("o2").length;
   }
   function go() {
     for (const molecule of all().filter((molecule) =>
@@ -353,7 +353,7 @@ export function create(options: Partial<ChloroplastParameters> = {}) {
     doPhotonFlow();
     doWaterAndSugarFlow();
     doGasFlow();
-    for (const flow of ofBreed("flow")) {
+    for (const flow of ofGroup("flow")) {
       flow.move(0.05);
       for (const molecule of flowEdges.neighbors(flow, { direction: "out" }))
         molecule.move({ by: { x: 0.05, y: 0 } });

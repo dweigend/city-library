@@ -23,10 +23,10 @@ export const inputs: Inputs<BloodSugarParameters> = {
   insulinSensitivity: { kind: "number", default: 0.75, min: 0, max: 1 },
   glucagonSensitivity: { kind: "number", default: 0.75, min: 0, max: 1 },
 };
-type Breed = "liver" | "pancreas" | "glucose" | "insulin" | "glucagon";
+type AgentGroup = "liver" | "pancreas" | "glucose" | "insulin" | "glucagon";
 type Cell = Agent<{
   who: number;
-  group: Breed;
+  group: AgentGroup;
   glucoseStore: number;
   lifetime: number;
 }>;
@@ -55,7 +55,7 @@ export function create(options: Partial<BloodSugarParameters> = {}) {
     total: number;
   }[] = [];
   const all = () => world.agents as readonly Cell[];
-  const group = (kind: Breed) => all().filter((cell) => cell.group === kind);
+  const group = (kind: AgentGroup) => all().filter((cell) => cell.group === kind);
   const shuffled = (cells: readonly Cell[]) =>
     random.sample(cells, {
       count: cells.length,
@@ -69,7 +69,7 @@ export function create(options: Partial<BloodSugarParameters> = {}) {
     });
   }
 
-  function createCell(kind: Breed, x = 0, y = 0) {
+  function createCell(kind: AgentGroup, x = 0, y = 0) {
     return world.add(
       Agent.create(
         { who: nextWho++, group: kind, glucoseStore: 0, lifetime: 0 },

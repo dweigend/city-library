@@ -19,7 +19,7 @@ export function create(options: Partial<RecyclingParameters> = {}) {
   const households = Array.from({ length: settings.households }, (_, index) => world.add(Agent.create({
     label: `Household ${index + 1}`, recycling: index === 0,
   })));
-  const graph = Graph.add<(typeof households)[number]>();
+  const graph = Graph.create<(typeof households)[number]>();
   for (const household of households) graph.nodes.add(household);
   // Validated population is at least three; modulo always selects a ring member.
   households.forEach((household, index) => {

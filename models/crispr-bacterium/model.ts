@@ -32,9 +32,9 @@ export const inputs: Inputs<CRISPRParameters> = {
   crisprFunction: { kind: "number", default: 20, min: 0, max: 100 },
   labels: { kind: "boolean", default: false },
 };
-type Breed = "rnap" | "cas9" | "guide" | "dimer" | "virus";
+type AgentGroup = "rnap" | "cas9" | "guide" | "dimer" | "virus";
 type Molecule = Agent<{
-  group: Breed;
+  group: AgentGroup;
   sequence: number;
   bound: boolean;
   onDNA: boolean;
@@ -56,7 +56,7 @@ export function create(options: Partial<CRISPRParameters> = {}) {
     },
   });
   world.add(grid);
-  const bonds = Graph.add<Molecule>();
+  const bonds = Graph.create<Molecule>();
   for (const field of grid.fields) {
     if (Math.abs(field.x) === 16 || Math.abs(field.y) === 8)
       field.region = "wall";
@@ -81,7 +81,7 @@ export function create(options: Partial<CRISPRParameters> = {}) {
     spacers: number;
   }[] = [];
   const all = () => world.agents as readonly Molecule[];
-  const group = (kind: Breed) =>
+  const group = (kind: AgentGroup) =>
     all().filter((molecule) => molecule.group === kind);
   const shuffled = (molecules: readonly Molecule[]) =>
     random.sample(molecules, {
@@ -98,7 +98,7 @@ export function create(options: Partial<CRISPRParameters> = {}) {
     return grid.fields.filter((field) => field.region === "dna");
   }
   function addMolecule(
-    kind: Breed,
+    kind: AgentGroup,
     x = 0,
     y = 0,
     sequence = 0,

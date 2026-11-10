@@ -6,7 +6,7 @@ export const ui = defineUI(model, {
   setup: ["seed", "people", "centers"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/UrbanSuite-Awareness",
-    label: "Original NetLogo model · Felsen and Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Felsen and Wilensky · CC BY-NC-SA 3.0",
   },
   drawing: {
     toggleLabel: "Place centers",

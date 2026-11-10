@@ -58,7 +58,7 @@ export function create(options: Partial<Parameters> = {}) {
     currentPage: Page | null;
     color: string;
   }>;
-  const graph = Graph.add<Page, { traveledBy: number | null; color: string }>({
+  const graph = Graph.create<Page, { traveledBy: number | null; color: string }>({
     edgeState: { traveledBy: null, color: "#8a8a8a" },
     selfLoops: true,
   });

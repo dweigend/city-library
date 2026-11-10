@@ -64,7 +64,7 @@ export function create(options: Partial<SunflowerParameters> = {}) {
   }
   function potentialEnergy(candidate: Particle) {
     if (settings.energyApproximation === "exponential" && settings.beta === 0)
-      throw new RangeError("NetLogo exponential energy divides by beta = 0.");
+      throw new RangeError("Exponential energy divides by beta = 0.");
     return stats.describe(
       particles().map((particle) => {
         const distance = candidate.distanceTo(particle);

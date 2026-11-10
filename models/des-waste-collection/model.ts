@@ -14,8 +14,8 @@ export function create(options: Partial<WasteParameters> = {}) {
   const grid = Grid.create({ x: 3, y: 2 }, { state: { waste: 2 } });
   const truck = Agent.create({ load: 0 });
   world.add([grid, truck]);
-  const agenda = Agenda.add<{ kind: "collect" | "unload" }>();
-  const depot = Resource.add<typeof truck>({ capacity: 1 });
+  const agenda = Agenda.create<{ kind: "collect" | "unload" }>();
+  const depot = Resource.create<typeof truck>({ capacity: 1 });
   let unloading: ReturnType<typeof depot.request> | undefined;
   let fieldIndex = 0;
   let delivered = 0;

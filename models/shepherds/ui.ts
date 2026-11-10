@@ -10,7 +10,7 @@ export const ui = defineUI(model, {
   },
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/Shepherds",
-    label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Wilensky · CC BY-NC-SA 3.0",
   },
   monitors: [
     {

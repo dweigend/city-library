@@ -45,7 +45,7 @@ export const ui = defineUI(model, {
   ],
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Evolution/Bacterial%20Infection.nlogox",
-    label: "NetLogo original · Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Wilensky · CC BY-NC-SA 3.0",
   },
   monitors: [
     { label: "Minutes", value: (s) => s.minutes },

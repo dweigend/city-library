@@ -16,7 +16,7 @@ export const ui = defineUI(model, {
   ],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/UrbanSuite-PathDependence",
-    label: "Original NetLogo model · Rand and Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Rand and Wilensky · CC BY-NC-SA 3.0",
   },
   actions: [{ label: "Disturb", run: (instance) => instance.disturb() }],
   live: {

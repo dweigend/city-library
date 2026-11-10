@@ -12,12 +12,12 @@ export function create(options: Partial<DispatchParameters> = {}) {
   const world = World.create();
   const sites = ["Station", "Market", "School", "Hospital"].map((label, index) => Agent.create({ label }, { position: { x: index * 2 - 3, y: 0 } }));
   world.add(sites);
-  const graph = Graph.add<typeof sites[number]>();
+  const graph = Graph.create<typeof sites[number]>();
   for (const site of sites) graph.nodes.add(site);
   for (let index = 1; index < sites.length; index++) graph.edges.add({ from: sites[index - 1]!, to: sites[index]! });
   const distances = graph.distances({ from: sites[0]! });
-  const teams = Resource.add<{ number: number }>({ capacity: settings.responders, policy: "priority" });
-  const agenda = Agenda.add<{ call: number }>();
+  const teams = Resource.create<{ number: number }>({ capacity: settings.responders, policy: "priority" });
+  const agenda = Agenda.create<{ call: number }>();
   const calls = [
     { number: 1, location: 1, priority: 5 },
     { number: 2, location: 3, priority: 0 },

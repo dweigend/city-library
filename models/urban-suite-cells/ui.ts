@@ -5,7 +5,7 @@ export const ui = defineUI(model, {
   setup: ["seed"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/UrbanSuite-Cells",
-    label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Wilensky · CC BY-NC-SA 3.0",
   },
   actions: [
     { label: "40 steps", run: (instance) => instance.advance(40) },

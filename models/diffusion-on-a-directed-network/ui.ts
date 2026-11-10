@@ -10,7 +10,7 @@ export const ui = defineUI(model, {
   ],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/DiffusiononaDirectedNetwork",
-    label: "Original NetLogo model · Stonedahl and Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Stonedahl and Wilensky · CC BY-NC-SA 3.0",
   },
   actions: [
     {

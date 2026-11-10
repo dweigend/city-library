@@ -27,7 +27,7 @@ export function create(options: Partial<DiffusionParameters> = {}) {
   const world = World.create({ x: 21, y: 21 }, { random });
   const grid = Grid.create({ x: settings.gridSize, y: settings.gridSize });
   const fields = grid.fields;
-  const graph = Graph.add<DiffusionNode, FlowState>({ edgeState: { active: false, currentFlow: 0 } });
+  const graph = Graph.create<DiffusionNode, FlowState>({ edgeState: { active: false, currentFlow: 0 } });
   const nodes = fields.map((field, index) => {
     const scale = 9 / ((settings.gridSize - 1) / 2);
     const node = world.add(Agent.create({ index, value: 1 }, { position: { x: field.x * scale, y: field.y * scale } }));

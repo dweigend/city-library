@@ -23,7 +23,7 @@ export function create(options: Partial<AttachmentParameters> = {}) {
   const settings = parameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const world = World.create({ random });
-  const graph = Graph.add<Agent<{ label: string }>>();
+  const graph = Graph.create<Agent<{ label: string }>>();
   function addNode() {
     const node = Agent.create({ label: `Node ${graph.nodes.size + 1}` });
     graph.nodes.add(node);

@@ -65,7 +65,7 @@ const binding = defineUI(model, {
   complete: (state) => state.stopped,
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/BEAGLE%20Evolution/DNA%20Protein%20Synthesis.nlogox",
-    label: "Original NetLogo model · source notices",
+    label: "Source attribution · source notices",
   },
   monitors: [
     { label: "Tick", value: (state) => state.tick },

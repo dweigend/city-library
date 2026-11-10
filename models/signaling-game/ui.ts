@@ -13,7 +13,7 @@ const binding = defineUI(model, {
   },
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Philosophy/Signaling%20Game.nlogox",
-    label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Wilensky · CC BY-NC-SA 3.0",
   },
   complete: (s) => s.stopped,
   actions: [

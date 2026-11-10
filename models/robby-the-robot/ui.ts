@@ -6,7 +6,7 @@ export const ui = defineUI(model, {
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/RobbytheRobot",
     label:
-      "Original NetLogo model \u00B7 Mitchell, Tisue and Wilensky \u00B7 CC0",
+      "Source attribution \u00B7 Mitchell, Tisue and Wilensky \u00B7 CC0",
   },
   live: {
     populationSize: {

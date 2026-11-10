@@ -112,7 +112,7 @@ export function create(options: Partial<Parameters> = {}) {
         random.number({ distribution: "normal", mean, deviation: 0.05 }),
       ),
     );
-    const agent = Agent.add<IndividualState>(
+    const agent = Agent.create<IndividualState>(
       {
         sex,
         partner: null,

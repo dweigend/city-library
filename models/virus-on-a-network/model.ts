@@ -41,7 +41,7 @@ export function create(options: Partial<VirusParameters> = {}) {
     throw new RangeError("Degree and outbreak must fit the setup population.");
   const random = Random.create({ seed: settings.seed });
   const world = World.create({ x: 41, y: 41 }, { random });
-  const graph = Graph.add<VirusNode>();
+  const graph = Graph.create<VirusNode>();
   const nodes: VirusNode[] = [];
   const history: Readonly<VirusSample>[] = [];
   const integer = (upper: number) => Math.floor(random.number() * upper);

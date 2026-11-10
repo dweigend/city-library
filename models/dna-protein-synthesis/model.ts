@@ -196,7 +196,7 @@ export function create(options: Partial<DNAParameters> = {}) {
   const space = { x: 31, y: 16, boundary: "wrap" } as const;
   const world = World.create(space, { random });
   const grid = Grid.create(space);
-  const backbones = Graph.add<Molecule>();
+  const backbones = Graph.create<Molecule>();
   world.add(grid);
   let who = 0;
   let originalDNAString = "";
@@ -234,7 +234,7 @@ export function create(options: Partial<DNAParameters> = {}) {
   ) {
     // Source x=[0,30], y=[-8,7] is translated to the centered library Space.
     const p = world.add(
-      Agent.add<MoleculeData>(
+      Agent.create<MoleculeData>(
         {
           who: who++,
           group,

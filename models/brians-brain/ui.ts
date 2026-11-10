@@ -4,7 +4,7 @@ export const ui = defineUI(model, {
   setup: ["width", "height", "seed", "initialization"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/BriansBrain",
-    label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Wilensky · CC BY-NC-SA 3.0",
   },
   actions: [
     { label: "Setup blank", run: (m) => m.setupBlank() },
