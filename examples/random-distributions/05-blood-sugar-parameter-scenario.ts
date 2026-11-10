@@ -4,7 +4,7 @@ import { Random, World } from "city-library";
 const random = Random.create({ seed: 401 });
 const world = World.create({ random });
 const checkpoint = random.state;
-// Original make-liver uses Poisson150; 792 cells is the B07 proposed author scenario.
+// Original make-liver uses Poisson150; 792 cells is the proposed author scenario.
 const stores = Array.from({ length: 792 }, () => world.random.number({ distribution: "poisson", mean: 150 }));
 assert.ok(stores.every(value => Number.isSafeInteger(value) && value >= 0));
 const total = stores.reduce((sum, value) => sum + value, 0);

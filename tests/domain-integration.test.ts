@@ -1,13 +1,13 @@
 import { describe, expect, test } from "bun:test";
 import { Agent, Agenda, Graph, Grid, Random, Resource, World, continuous, studies, measurements, run, storage, twoPhase } from "city-library";
 
-describe("Mesa and DES public integration", () => {
+describe("Agent and discrete event public integration", () => {
   test("every outstanding reservation independently vetoes activation death before membership changes", () => {
     const world = World.create();
     const resident = world.add(Agent.create());
     const graph = world.add(Graph.create<object>());
     graph.nodes.add(resident);
-    const housing = Resource.add<typeof resident>({ capacity: 2 });
+    const housing = Resource.create<typeof resident>({ capacity: 2 });
     const first = housing.request({ owner: resident });
     const second = housing.request({ owner: resident });
     expect(() => world.activate(resident, context => context.die())).toThrow(TypeError);

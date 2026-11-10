@@ -10,7 +10,7 @@ import { model as recycling } from "../models/household-recycling-behavior/model
 import { model as membership } from "../models/workplace-household-membership/model.ts";
 
 const models = [energy, crossing, zoning, heat, battery, stormwater, trees, recycling, membership];
-describe("original illustrative Mesa city models", () => {
+describe("original illustrative spatial city models", () => {
   for (const model of models) {
     test(`${model.title}: inert observations and validated execution`, () => {
       const instance = model.create();

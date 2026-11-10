@@ -59,7 +59,7 @@ assert.throws(() => schedule(agenda.time));
 
 // At equal time first-dispatched wins. No timer or Promise participates.
 const races = Agenda.create<"release" | "timeout">();
-const desk = Resource.add<string>({ capacity: 1 });
+const desk = Resource.create<string>({ capacity: 1 });
 const holder = desk.request({ owner: "resident A" });
 const waiter = desk.request({ owner: "resident B" });
 races.add({ at: 1, priority: -1, data: "timeout" });
@@ -74,7 +74,7 @@ assert.equal(waiter.status, "cancelled");
 assert.equal(desk.used, 0);
 
 const releaseFirst = Agenda.create<"release" | "timeout">();
-const reverseDesk = Resource.add<string>({ capacity: 1 });
+const reverseDesk = Resource.create<string>({ capacity: 1 });
 const reverseHolder = reverseDesk.request({ owner: "resident A" });
 const reverseWaiter = reverseDesk.request({ owner: "resident B" });
 releaseFirst.add({ at: 1, priority: -1, data: "release" });

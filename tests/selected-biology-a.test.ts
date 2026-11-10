@@ -31,7 +31,7 @@ describe("selected biology A source mechanisms", () => {
   });
 
   test("Honeycomb's diffusion cadence starts at preincrement tick zero", () => {
-    const model = createHoneycomb({ numBees: 1, seed: 1 });
+    const model = createHoneycomb({ beeCount: 1, seed: 1 });
     model.advance();
     expect(model.read().chemicalTotal).toBeCloseTo(1.8, 10);
     model.advance(9);

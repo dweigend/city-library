@@ -10,7 +10,7 @@ assert.equal(wood.read().tick, null); // Source has no ticks; bounded procedure 
 const empty = termites({ number: 1, density: 0 });
 empty.advance(10); // Recursive source searches must remain interruptible.
 assert.equal(empty.read().chipCount, 0);
-const herd = shepherds({ numSheep: 20, numShepherds: 3, sheepSpeed: 0, seed: 2 });
+const herd = shepherds({ sheepCount: 20, shepherdCount: 3, sheepSpeed: 0, seed: 2 });
 herd.advance(20);
 assert.equal(herd.read().tick, 20);
 assert.equal(herd.read().sheep.length, 20);

@@ -8,7 +8,7 @@ import { create as rabbits } from "../models/binomial-rabbits/model.ts";
 import { create as doors } from "../models/three-doors/model.ts";
 import { create as patchwork } from "../models/stochastic-patchwork/model.ts";
 
-describe("B17 first five source mechanisms", () => {
+describe("first five source mechanisms", () => {
   test("Birthdays sorts 23 people, colors exactly duplicate dates and counts rooms", () => {
     const m = birthdays({ seed: 17 });
     expect(m.read().days).toHaveLength(365);
@@ -133,7 +133,7 @@ describe("B17 first five source mechanisms", () => {
   });
 });
 
-describe("B17 canonical public Agent/Grid/World composition", () => {
+describe("canonical public Agent/Grid/World composition", () => {
   test("Birthdays creates real world members, moves their canonical positions, and deletes the old room", () => {
     const model = birthdays({ seed: 17 });
     expect(model.world.agents).toHaveLength(0);

@@ -1,21 +1,21 @@
 import assert from 'node:assert/strict';
 import { create } from '../../models/taxi-cabs/model.ts';
 
-const service = create({ seed: 1, numTaxicab: 3 });
+const service = create({ seed: 1, taxicabCount: 3 });
 const initial = service.snapshot();
 assert.equal(initial.tick, 0);
 assert.equal(initial.cabs.length, 3);
 assert.equal(initial.passengers.length, 0);
 assert.equal(initial.currentPhase, 'AM Peak');
-assert.ok(initial.cabs.every(cab => cab.vacancy && cab.numTotalMiles === 0 && cab.totalIncome === 0));
+assert.ok(initial.cabs.every(cab => cab.vacancy && cab.totalDistanceMiles === 0 && cab.totalIncome === 0));
 service.setParameters({ lengthOfTimePeriod: 2, eachGridCost: 1, eachTickCost: 0.5 });
 service.step(10);
 const progressed = service.snapshot();
 assert.equal(progressed.tick, 10);
 assert.equal(progressed.cabs.length, 3);
-assert.ok(progressed.cabs.every(cab => cab.numTotalMiles === cab.numBusinessMiles + cab.numDeadMiles));
-assert.ok(progressed.cabs.every(cab => cab.totalIncome >= 0 && cab.numTotalTrips >= 0));
+assert.ok(progressed.cabs.every(cab => cab.totalDistanceMiles === cab.businessDistanceMiles + cab.deadheadDistanceMiles));
+assert.ok(progressed.cabs.every(cab => cab.totalIncome >= 0 && cab.totalTripCount >= 0));
 assert.ok(progressed.passengers.every(passenger => passenger.beenWaiting >= 0));
 assert.deepEqual(service.snapshot(), progressed);
-const separate = create({ seed: 1, numTaxicab: 3 });
+const separate = create({ seed: 1, taxicabCount: 3 });
 assert.deepEqual(separate.snapshot(), initial);

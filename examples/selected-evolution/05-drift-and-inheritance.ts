@@ -39,4 +39,4 @@ assert.equal(s.numberOfDarkOffspring, 12);
 assert.equal(s.trialNumber, 2);
 assert.deepEqual(m.read(), s);
 assert.equal(s.numberOfLightOffspring, 0);
-console.log('B08 wall lifecycle, pre-step stop and cumulative Mendelian counters passed');
+console.log('wall lifecycle, pre-step stop and cumulative Mendelian counters passed');

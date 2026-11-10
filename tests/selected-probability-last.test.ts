@@ -78,7 +78,7 @@ test("Expected Value tile allocation conserves all225 and the walk uses cardinal
 test("Partition counts rejected overshoots as trials and stops at requested successes", () => {
   const m = partition({
     targetTotal: 2,
-    numSuccesses: 100,
+    successCount: 100,
     diminishingSampleSpace: false,
     seed: 17,
   });
@@ -95,7 +95,7 @@ test("Partition counts rejected overshoots as trials and stops at requested succ
   expect(m.read()).toEqual(before);
 });
 test("Diminishing partition sample space accepts every draw and no running total overshoots", () => {
-  const m = partition({ targetTotal: 72, numSuccesses: 100, seed: 13 });
+  const m = partition({ targetTotal: 72, successCount: 100, seed: 13 });
   m.advance(10000);
   const s = m.read();
   expect(s.successes).toBe(100);
@@ -118,7 +118,7 @@ test("CLT setup is empty, insufficient sampling does not tick, and presets prese
   m.preset(4);
   expect(m.read().population).toBe(60);
   m.advance(3);
-  expect(m.read().numSamples).toBe(3);
+  expect(m.read().sampleCount).toBe(3);
   expect(m.read().people.filter((p) => p.chosen)).toHaveLength(10);
   expect(m.read().sums.every((sum, i) => sum === m.read().means[i]! * 10)).toBe(
     true,
@@ -135,7 +135,7 @@ test("CLT manual population adds one turtle per column click up to ceiling, with
   expect(m.read().stdDevMeans).toBe(0);
   m.createPopulation();
   expect(m.read().tick).toBe(0);
-  expect(m.read().numSamples).toBe(0);
+  expect(m.read().sampleCount).toBe(0);
 });
 test("Combination guard, edits, ordered versus multiset matches and source zero ticks", () => {
   const m = combinations({
@@ -189,11 +189,11 @@ test("Combination single-success preserves source clearing of sample statistics"
   expect(s.attempts).toBeGreaterThan(0);
 });
 test("Mandelbrot only visits occupied patches and preserves c set at setup", () => {
-  const empty = mandelbrot({ numAgents: 0 });
+  const empty = mandelbrot({ agentCount: 0 });
   empty.advance(4);
   expect(empty.read().tick).toBe(4);
   expect(empty.read().computedFields).toBe(0);
-  const m = mandelbrot({ numAgents: 1, seed: 17, throw: 0 });
+  const m = mandelbrot({ agentCount: 1, seed: 17, throw: 0 });
   m.advance();
   let s = m.read();
   expect(s.iterations).toBe(1);
@@ -290,7 +290,7 @@ test("Canonical CLT reset deletes actual Agents and retains the canonical Grid",
 });
 
 test("Canonical Mandelbrot eagerly initializes every Field and shares moving occupancy", () => {
-  const m = mandelbrot({ numAgents: 2, throw: 0 });
+  const m = mandelbrot({ agentCount: 2, throw: 0 });
   expect(m.grid.fields).toHaveLength(90601);
   expect(m.world.grids).toHaveLength(1);
   expect(Object.is(m.world.grids[0], m.grid)).toBe(true);
@@ -321,7 +321,7 @@ test("Canonical Mandelbrot eagerly initializes every Field and shares moving occ
 });
 
 test("Mandelbrot snapshots eligible occupants before shared-patch counter updates", () => {
-  const m = mandelbrot({ numAgents: 3, throw: 0 });
+  const m = mandelbrot({ agentCount: 3, throw: 0 });
   for (const agent of m.world.agents) agent.move({ to: { x: 0, y: 0 } });
   const field = m.grid.fieldAt({ x: 0, y: 0 })!;
   field.counter = 114;
@@ -333,7 +333,7 @@ test("Mandelbrot snapshots eligible occupants before shared-patch counter update
 });
 
 test("Mandelbrot hard-boundary jump rejects its destination before Agent mutation", () => {
-  const m = mandelbrot({ numAgents: 1, throw: 10 });
+  const m = mandelbrot({ agentCount: 1, throw: 10 });
   const agent = m.world.agents[0]!;
   agent.move({ to: { x: 149, y: 0 } });
   agent.rotate({ towards: { x: 150, y: 0 } });
@@ -344,10 +344,10 @@ test("Mandelbrot hard-boundary jump rejects its destination before Agent mutatio
 });
 
 test("Partition and symbolic combination own only a public World clock", () => {
-  const p = partition({ numSuccesses: 0 });
+  const p = partition({ successCount: 0 });
   p.advance(20);
   expect(p.world.tick.value).toBe(0);
-  p.setRules({ numSuccesses: 100 });
+  p.setRules({ successCount: 100 });
   p.advance(3);
   expect(p.read().tick).toBe(p.world.tick.value);
   expect(p.world.tick.value).toBe(3);
@@ -364,7 +364,7 @@ test("Partition and symbolic combination own only a public World clock", () => {
 
 test("Mandelbrot preflight relocates at clipped and exact-positive-edge source endpoints", () => {
   for (const x of [150.4, 149.5]) {
-    const m = mandelbrot({ numAgents: 1, throw: 0, seed: 17 });
+    const m = mandelbrot({ agentCount: 1, throw: 0, seed: 17 });
     const agent = m.world.agents[0]!;
     agent.move({ to: { x, y: 0 } });
     agent.rotate({ towards: { x: x + 1, y: 0 } });
@@ -380,7 +380,7 @@ test("Mandelbrot preflight relocates at clipped and exact-positive-edge source e
 });
 
 test("Mandelbrot preflight rejects a negative epsilon escape without the former distance tolerance", () => {
-  const m = mandelbrot({ numAgents: 1, throw: 0, seed: 17 });
+  const m = mandelbrot({ agentCount: 1, throw: 0, seed: 17 });
   const agent = m.world.agents[0]!;
   agent.move({ to: { x: -149.50000000005, y: 0 } });
   agent.rotate({ towards: { x: -150.50000000005, y: 0 } });
@@ -398,7 +398,7 @@ test("Mandelbrot preflight rejects a negative epsilon escape without the former 
 
 test("Mandelbrot preflight accepts each exact negative endpoint without relocation draws", () => {
   for (const axis of ["x", "y"] as const) {
-    const m = mandelbrot({ numAgents: 1, throw: 0, seed: 17 });
+    const m = mandelbrot({ agentCount: 1, throw: 0, seed: 17 });
     const agent = m.world.agents[0]!;
     agent.move({
       to: axis === "x" ? { x: -149.5, y: 0 } : { x: 0, y: -149.5 },

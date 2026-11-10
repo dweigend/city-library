@@ -15,7 +15,7 @@ assert.equal(crossing.snapshot().tick, 5);
 crossing.setParameters({ freqNorth: 100, freqEast: 100 });
 crossing.step(1);
 assert.equal(crossing.snapshot().cars.length, 2);
-const commuters = goals({ seed: 1, numCars: 3 });
+const commuters = goals({ seed: 1, carCount: 3 });
 assert.equal(commuters.snapshot().cars.length, 3);
 assert.ok(commuters.snapshot().cars.every(car => car.houseId !== car.workId && car.goalId === car.workId));
 commuters.watchCar(commuters.snapshot().cars[0]!.id);

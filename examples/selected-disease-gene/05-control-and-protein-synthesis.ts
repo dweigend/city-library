@@ -36,4 +36,4 @@ dna.setParameters({ mutationType: "insertion", nucleotidesAffected: 1 });
 dna.replicateDNA();
 assert.equal(dna.read().duplicateDNAString.length, 13);
 assert.equal(dna.read().tick, 43);
-console.log("B09 control and protein synthesis passed");
+console.log("control and protein synthesis passed");

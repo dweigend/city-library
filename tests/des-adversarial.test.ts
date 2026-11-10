@@ -119,20 +119,20 @@ describe("DES causal execution through public imports", () => {
 
 describe("single-owner queue, capacity and lifecycle contracts", () => {
   test("priority queue has stable ties and independently issued handles", () => {
-    const queue = ServiceQueue.add<string>({ policy: "priority" });
+    const queue = ServiceQueue.create<string>({ policy: "priority" });
     const first = queue.add("first", { priority: -1 });
     queue.add("last", { priority: 2 });
     queue.add("second", { priority: -1 });
     expect(queue.entries).toEqual(["first", "second", "last"]);
     expect(() => queue.delete({ ...first })).toThrow();
-    expect(() => ServiceQueue.add<string>().delete(first)).toThrow();
+    expect(() => ServiceQueue.create<string>().delete(first)).toThrow();
     queue.delete(first);
     queue.delete(first);
     expect(queue.take()).toBe("second");
   });
 
   test("strict head of line survives shrink, growth and cancellation", () => {
-    const capacity = Resource.add<string>({ capacity: 3 });
+    const capacity = Resource.create<string>({ capacity: 3 });
     const holder = capacity.request({ owner: "holder", units: 2 });
     const large = capacity.request({ owner: "large", units: 3 });
     const small = capacity.request({ owner: "small", units: 1 });
@@ -153,7 +153,7 @@ describe("single-owner queue, capacity and lifecycle contracts", () => {
   });
 
   test("priority admits stable lower-priority-number waiters without preempting holders", () => {
-    const capacity = Resource.add<string>({ capacity: 1, policy: "priority" });
+    const capacity = Resource.create<string>({ capacity: 1, policy: "priority" });
     const holder = capacity.request({ owner: "holder", priority: 99 });
     const later = capacity.request({ owner: "later", priority: 0 });
     const earlier = capacity.request({ owner: "earlier", priority: -1 });
@@ -167,10 +167,10 @@ describe("single-owner queue, capacity and lifecycle contracts", () => {
   });
 
   test("forged requests and invalid units cannot mutate occupancy", () => {
-    const capacity = Resource.add<string>({ capacity: 1 });
+    const capacity = Resource.create<string>({ capacity: 1 });
     const holder = capacity.request({ owner: "holder" });
     expect(() => capacity.cancel({ ...holder })).toThrow();
-    expect(() => Resource.add<string>({ capacity: 1 }).release(holder)).toThrow();
+    expect(() => Resource.create<string>({ capacity: 1 }).release(holder)).toThrow();
     for (const units of [0, -1, 0.5, 2, Infinity]) expect(() => capacity.request({ owner: "bad", units })).toThrow();
     Reflect.set(holder, "status", "released");
     expect(holder.status).toBe("granted");
@@ -184,9 +184,9 @@ describe("single-owner queue, capacity and lifecycle contracts", () => {
     const person = Agent.create({ label: "resident" });
     const world = World.create();
     world.add(person);
-    const queue = ServiceQueue.add<typeof person>();
+    const queue = ServiceQueue.create<typeof person>();
     const queued = queue.add(person);
-    const capacity = Resource.add<typeof person>({ capacity: 1 });
+    const capacity = Resource.create<typeof person>({ capacity: 1 });
     const held = capacity.request({ owner: person });
     expect(() => person.delete()).toThrow();
     expect(person.alive).toBe(true);
@@ -204,7 +204,7 @@ describe("single-owner queue, capacity and lifecycle contracts", () => {
 
   test("duplicate queue participation protects the Agent until the last entry leaves", () => {
     const person = Agent.create({ label: "same resident" });
-    const queue = ServiceQueue.add<typeof person>();
+    const queue = ServiceQueue.create<typeof person>();
     queue.add(person);
     queue.add(person);
     expect(queue.take()).toBe(person);
@@ -217,7 +217,7 @@ describe("single-owner queue, capacity and lifecycle contracts", () => {
 
   test("multiple requests by one Agent retain independent lifecycle participation", () => {
     const person = Agent.create({ label: "same requester" });
-    const capacity = Resource.add<typeof person>({ capacity: 1 });
+    const capacity = Resource.create<typeof person>({ capacity: 1 });
     const first = capacity.request({ owner: person });
     const second = capacity.request({ owner: person });
     capacity.cancel(first);
@@ -364,7 +364,7 @@ describe("explicit conditions and observation", () => {
   });
 
   test("event diagnostics permit equal timestamps and detach insertion and read data", () => {
-    const trace = EventTrace.add<{ nested: { count: number } }>({ capacity: 2 });
+    const trace = EventTrace.create<{ nested: { count: number } }>({ capacity: 2 });
     const value = { nested: { count: 1 } };
     trace.record({ at: 1, value });
     value.nested.count = 99;

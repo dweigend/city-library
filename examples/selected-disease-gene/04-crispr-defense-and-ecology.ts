@@ -26,4 +26,4 @@ active.advance(4);
 assert.equal(active.read().tick, 4);
 assert.ok(active.read().bacteriaCount > 0);
 assert.ok(active.read().cells.every(field => field.foodEnergy >= 0 && field.foodEnergy <= 100));
-console.log("B09 CRISPR defense and ecology passed");
+console.log("CRISPR defense and ecology passed");

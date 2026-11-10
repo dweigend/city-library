@@ -121,7 +121,7 @@ test("observations are detached and do not draw RNG; live validation is atomic",
     birth({ carryingCapacity: 5 }),
     daisy(),
     termites({ number: 1 }),
-    shepherds({ numSheep: 5 }),
+    shepherds({ sheepCount: 5 }),
     rabbits({ number: 5 }),
   ]) {
     const s = m.read();

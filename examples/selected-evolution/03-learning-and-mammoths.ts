@@ -5,7 +5,7 @@ import { create as mammoths } from '../../models/mammoths/model.ts';
 assert.equal(fitnessOf([1, 0, 1, 0], [1, 1, 1, 1], 0.5), 0.5);
 assert.equal(fitnessOf([1, 0, 1, 0], [1, 1, 1, 1], 0.49), 0);
 assert.equal(fitnessOf([1, 1, 1, 1], [1, 1, 1, 1], 0), 1);
-const b = baldwin({ seed: 31, numPop: 20, geneLength: 4, numTrials: 2, plasticity: 0, mutationRate: 0, smoothness: 1 });
+const b = baldwin({ seed: 31, populationSize: 20, geneLength: 4, trialCount: 2, plasticity: 0, mutationRate: 0, smoothness: 1 });
 const initial = b.read();
 assert.equal(initial.nonLearners.length, 20);
 assert.equal(initial.randomLearners.length, 20);
@@ -39,4 +39,4 @@ assert.equal(setup.tick, 0);
 const empty = mammoths({ numberOfMammoths: 0, numberOfHumans: 0 });
 empty.advance();
 assert.equal(empty.read().tick, 1); // source does not stop at extinction
-console.log('B08 fitness threshold, populations and imported terrain/climate passed');
+console.log('fitness threshold, populations and imported terrain/climate passed');

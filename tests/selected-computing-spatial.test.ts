@@ -13,7 +13,7 @@ import {
   chromosomeDistance,
 } from "../models/robby-the-robot/model.ts";
 import { create as factory } from "../models/robotic-factory/model.ts";
-describe("B18 Simulated Annealing native rules", () => {
+describe("Simulated Annealing native rules", () => {
   test("native450bright patches, directed anisotropic energy and exact1000 attempts", () => {
     const a = annealing();
     expect(a.read().brightness.filter((x) => x === 1)).toHaveLength(450);
@@ -54,7 +54,7 @@ describe("B18 Simulated Annealing native rules", () => {
     expect(a.read().tick).toBe(15);
   });
 });
-describe("B18 K-Means native source contract", () => {
+describe("K-Means native source contract", () => {
   test("native per-cluster rounded default140points and seven centroids", () => {
     const k = clustering();
     expect(k.read().points).toHaveLength(140);
@@ -64,9 +64,9 @@ describe("B18 K-Means native source contract", () => {
   });
   test("assign/update non-ticking, empty clusters retained and strict threshold", () => {
     const k = clustering({
-      numClusters: 2,
-      numCentroids: 2,
-      numDataPoints: 10,
+      clusterCount: 2,
+      centroidCount: 2,
+      dataPointCount: 10,
     });
     k.setScenario({
       points: [
@@ -101,13 +101,13 @@ describe("B18 K-Means native source contract", () => {
     expect(k.read()).toEqual(s);
     k.read().points[0]!.x = 1000;
     expect(k.read()).toEqual(s);
-    k.setParameters({ numCentroids: 3 });
+    k.setParameters({ centroidCount: 3 });
     expect(k.read().centroids).toHaveLength(7);
     k.resetCentroids();
     expect(k.read().centroids).toHaveLength(3);
   });
 });
-describe("B18 PSO actual landscape and update phases", () => {
+describe("PSO actual landscape and update phases", () => {
   test("native201square,50particles,global best remains zero after setup", () => {
     const p = swarm();
     const s = p.read();
@@ -167,7 +167,7 @@ describe("B18 PSO actual landscape and update phases", () => {
     expect(p.read()).toEqual(s);
   });
 });
-describe("B18 Robby full native fitness and intervention actions", () => {
+describe("Robby full native fitness and intervention actions", () => {
   test("ternary sensor weights, action map and source273 display normalization", () => {
     expect(robbyState(2, 2, 2, 2, 1)).toBe(241);
     expect(robbyState(1, 0, 2, 2, 0)).toBe(105);
@@ -236,7 +236,7 @@ describe("B18 Robby full native fitness and intervention actions", () => {
     expect(r.read().robot).toBe(null);
   });
 });
-describe("B18 Robotic Factory canonical source quirks", () => {
+describe("Robotic Factory canonical source quirks", () => {
   test("nine machines, default robots5energy350dock10 and first old-heading motion", () => {
     const f = factory();
     const s = f.read();

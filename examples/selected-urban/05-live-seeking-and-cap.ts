@@ -1,7 +1,7 @@
 import { strict as assert } from "node:assert";
 import { create } from "../../models/urban-suite-recycling/model.ts";
 
-const model = create({ numRecyclers: 0, numWastefuls: 0, resourceRegeneration: 0, agentsSeekResources: false, maxStoredEnergy: 100 });
+const model = create({ recyclerCount: 0, wastefulCount: 0, resourceRegeneration: 0, agentsSeekResources: false, maxStoredEnergy: 100 });
 model.setResources(model.read().cells.map((cell) => cell.x === 1 && cell.y === 0 ? "new" : "waste"));
 model.setPeople([{ kind: "wasteful", x: 0, y: 0, heading: 0, energy: 1 }]);
 const state = model.read().randomState;

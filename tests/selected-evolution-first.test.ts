@@ -18,7 +18,7 @@ import {
 import { create as mammoths } from "../models/mammoths/model.ts";
 import terrain from "../models/mammoths/data/terrain.json";
 
-describe("B08 first five source mechanisms", () => {
+describe("first five source mechanisms", () => {
   test("Mimicry FIFO ages and duration-zero eviction; observations do not change RNG", () => {
     const old = [
       [15, 2],
@@ -74,7 +74,7 @@ describe("B08 first five source mechanisms", () => {
   });
 
   test("Peppered pollution actions are non-ticking and non-random; empty go still ticks", () => {
-    const model = peppered({ numMoths: 0, speed: 100 });
+    const model = peppered({ mothCount: 0, speed: 100 });
     const rng = model.read().randomState;
     for (let i = 0; i < 8; i++) model.polluteWorld();
     expect(model.read().darkness).toBe(8);
@@ -93,7 +93,7 @@ describe("B08 first five source mechanisms", () => {
     expect(fitnessOf([1, 0], [1, 1], 0.49)).toBe(0);
     const model = baldwin({
       seed: 1,
-      numPop: 20,
+      populationSize: 20,
       smoothness: 0,
       geneLength: 100,
     });
@@ -102,11 +102,11 @@ describe("B08 first five source mechanisms", () => {
     );
     model.advance();
     expect(model.read().randomLearners).toHaveLength(20);
-    const fractional = baldwin({ seed: 1, numPop: 12 });
+    const fractional = baldwin({ seed: 1, populationSize: 12 });
     fractional.advance();
     expect(fractional.read().nonLearners).toHaveLength(11); // ceil2.4 removal, floor2.4 births
     expect(fractional.read().smartLearners).toHaveLength(11);
-    expect(() => baldwin({ numPop: 1 }).advance()).not.toThrow(); // repeat0 performs no tournament
+    expect(() => baldwin({ populationSize: 1 }).advance()).not.toThrow(); // repeat0 performs no tournament
   });
 
   test("Mammoths literal terrain matches every original-derived field; climate precedes movement", () => {
