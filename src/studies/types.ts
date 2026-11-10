@@ -40,11 +40,11 @@ export interface ReplicationSummary {
   readonly valid: number; readonly missing: number; readonly mean: number | null; readonly sampleSd: number | null;
   readonly values: readonly { readonly runId: string; readonly seed: number; readonly status: StudyStatus; readonly value: number | null }[];
 }
-export interface ExperimentModel { readonly world: World; step(): void; dispose?(): void }
-export type ExperimentPlan<Parameters> =
+export interface StudyModel { readonly world: World; step(): void; dispose?(): void }
+export type StudyPlan<Parameters> =
   | { readonly parameters: readonly Parameters[]; readonly seeds: readonly number[]; readonly plan?: never }
   | { readonly plan: readonly PlannedRun<Parameters>[]; readonly parameters?: never; readonly seeds?: never };
-export type ExperimentOptions<Parameters, Model extends ExperimentModel, Measurements> = ExperimentPlan<Parameters> & {
+export type StudyOptions<Parameters, Model extends StudyModel, Measurements> = StudyPlan<Parameters> & {
   create(parameters: Parameters, seed: number, run: PlannedRun<Parameters>): Model;
   readonly steps: number;
   measure(model: Model): Measurements;

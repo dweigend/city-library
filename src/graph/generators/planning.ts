@@ -1,6 +1,6 @@
 import { displacement, finite, position, type Position } from "../../geometry/space.ts";
-import { edgeLimit, type GeneratorConfig } from "./options.ts";
-import { planNwTopology } from "./nw-planning.ts";
+import { edgeLimit, type GeneratorSpec } from "./options.ts";
+import { planTopology } from "./topology-planning.ts";
 
 export type Connection = readonly [number, number];
 /** Private degree prefix index; intervals match the stable cumulative scan. */
@@ -25,8 +25,8 @@ class DegreeIndex {
 }
 
 /** Plan only integer endpoint indices. Graph alone materializes/publishes edges. */
-export function planGenerator<N>(config: GeneratorConfig<N>): Connection[] {
-  if (config.profile !== undefined) return planNwTopology(config);
+export function planGenerator<N>(config: GeneratorSpec<N>): Connection[] {
+  if (config.profile !== undefined) return planTopology(config);
   const count = config.nodes.length;
   const result: Connection[] = [];
   function add(from: number, to: number) {
@@ -76,7 +76,7 @@ export function planGenerator<N>(config: GeneratorConfig<N>): Connection[] {
       for (let from = 0; from < count; from++) for (let to = config.directed ? 0 : from + 1; to < count; to++)
         if (from !== to && config.random!.number() < config.probability) add(from, to);
       break;
-    case "smallWorld": {
+    case "small-world": {
       const neighbors = Array.from({ length: count }, () => new Set<number>());
       for (let from = 0; from < count; from++) for (let offset = 1; offset <= config.neighbors / 2; offset++) {
         const to = (from + offset) % count;
@@ -101,21 +101,21 @@ export function planGenerator<N>(config: GeneratorConfig<N>): Connection[] {
       const degree = Array<number>(count).fill(0);
       const index = new DegreeIndex(count);
       let total = 0;
-      for (let from = 0; from <= config.links; from++) for (let to = from + 1; to <= config.links; to++) {
+      for (let from = 0; from <= config.edgesPerNode; from++) for (let to = from + 1; to <= config.edgesPerNode; to++) {
         add(from, to); degree[from]!++; degree[to]!++;
       }
-      for (let node = 0; node <= config.links; node++) { index.add(node, degree[node]!); total += degree[node]!; }
-      for (let node = config.links + 1; node < count; node++) {
+      for (let node = 0; node <= config.edgesPerNode; node++) { index.add(node, degree[node]!); total += degree[node]!; }
+      for (let node = config.edgesPerNode + 1; node < count; node++) {
         const selected: number[] = [];
         let available = total;
-        for (let choice = 0; choice < config.links; choice++) {
+        for (let choice = 0; choice < config.edgesPerNode; choice++) {
           const target = index.select(config.random!.number() * available);
           selected.push(target); add(node, target);
           index.add(target, -degree[target]!); available -= degree[target]!;
         }
         for (const target of selected) { degree[target]!++; index.add(target, degree[target]!); }
-        degree[node] = config.links; index.add(node, config.links);
-        total += config.links * 2;
+        degree[node] = config.edgesPerNode; index.add(node, config.edgesPerNode);
+        total += config.edgesPerNode * 2;
       }
       break;
     }

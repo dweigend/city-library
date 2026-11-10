@@ -30,7 +30,7 @@ export interface World {
   readonly agendas: readonly Agenda[];
   activate<T extends WorldMember>(source: ActivationSource<T>, action: (context: ActivationContext<T>) => unknown, options?: ActivationOptions<T>): void;
   report<T extends WorldMember, R>(source: T, callback: (context: ActivationContext<T>) => R, options?: ActivationOptions<T>): R | undefined;
-  report<T extends WorldMember, R>(source: readonly T[] | { kind: "agents" | "fields" | "edges"; breed?: string }, callback: (context: ActivationContext<T>) => R, options?: ActivationOptions<T>): readonly (R | undefined)[];
+  report<T extends WorldMember, R>(source: readonly T[] | { kind: "agents" | "fields" | "edges"; group?: string }, callback: (context: ActivationContext<T>) => R, options?: ActivationOptions<T>): readonly (R | undefined)[];
   select<T extends WorldMember>(source: ActivationSource<T>, predicate: (context: ActivationContext<T>) => boolean, options?: SelectionOptions): readonly T[];
   add<T extends WorldComponent>(component: T): T;
   add<T extends WorldComponent>(components: Iterable<T>): readonly T[];
@@ -61,12 +61,12 @@ function entrySnapshot(value: unknown): {
     entries: [...new Set(value as Iterable<WorldComponent>)],
   };
 }
-function add(options?: { random?: Random }): World;
-function add(
+function create(options?: { random?: Random }): World;
+function create(
   space: Space,
   options?: { boundary?: Space["boundary"]; random?: Random },
 ): World;
-function add(
+function create(
   input: Space | { random?: Random } = {},
   options?: { boundary?: Space["boundary"]; random?: Random },
 ): World {
@@ -76,7 +76,7 @@ function add(
     (arguments.length > 1 && arguments[1] === undefined)
   )
     throw new TypeError(
-      "World.add accepts Space and options without placeholders.",
+      "World.create accepts Space and options without placeholders.",
     );
   const spatial =
     typeof input === "object" &&
@@ -94,7 +94,7 @@ function add(
   if (values.random !== undefined && !isRandom(values.random))
     throw new TypeError("Expected a Random.");
   const random =
-    values.random === undefined ? Random.add() : (values.random as Random);
+    values.random === undefined ? Random.create() : (values.random as Random);
   const clock = createClock();
   const members = new Set<WorldComponent>();
   const world: World = {
@@ -231,4 +231,4 @@ function add(
   clocks.set(world, clock);
   return Object.freeze(world);
 }
-export const World = Object.freeze({ add });
+export const World = Object.freeze({ create });
