@@ -1,12 +1,17 @@
 # Prisoner's Dilemma Basic
 
-Two one-shot choices select one of four configured payoff outcomes. The payoff ordering and player actions define the dilemma; there is no repeated-game learning hidden in this baseline.
+Why can two sensible choices lead to a bad result for both? You and a partner are questioned separately and each either stays silent or confesses. A fixed payoff table gives each of you a prison sentence for the four combinations. Choose your answer and the partner's (or let it be random when `partnerSilenceKnown` is off), then compare the sentences.
+
+Things to try:
+
+- Go through all four combinations. Which choice is better for you whatever the partner does?
+- Compare that with the outcome when both stay silent.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Prisoner's Dilemma Basic`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Choose **Prisoner's Dilemma Basic** in [Agent Lab](../../ui/agent-lab/README.md).
 
-Headless, from a script in the repository root:
+From a script in the repository root:
 
 ```ts
 import { create } from "./models/prisoners-dilemma-basic/model.ts";
@@ -16,11 +21,11 @@ simulation.advance(1);
 const observation = simulation.read();
 ```
 
-This is an answer-driven one-shot example. Set the silence choices and press Answer, or call `answer()`; `advance(n)` performs `n` answers. `tick` is the host’s answer counter (`rounds`), while `nativeTick` is `null`. Repeated answers do not add strategy memory or make this the iterated-dilemma model.
+This is an answer-driven one-shot example. Set the silence choices and press Answer, or call `answer()`; `advance(n)` performs `n` answers. `tick` is the host’s answer counter (`roundCount`), while `nativeTick` is `null`. Repeated answers do not add strategy memory or make this the iterated-dilemma model.
 
 ## Parameters
 
-`create(options)` accepts these input keys. The [UI binding](ui.ts) distinguishes setup controls from live changes; [model.ts](model.ts) defines additional validation.
+`create(options)` accepts these inputs. [ui.ts](ui.ts) decides which are setup controls and which can change during a run; [model.ts](model.ts) adds further validation.
 
 | Input | Default | Declared values |
 | --- | --- | --- |
@@ -31,16 +36,16 @@ This is an answer-driven one-shot example. Set the silence choices and press Ans
 
 ## Actions and observations
 
-Use `advance(...)` for progress and `read()` for observations; the model defines how work advances its tick.
+Call `advance()` with an optional step count to run the model; the model defines how a step advances its tick. Call `read()` for a detached snapshot.
 
-Other instance procedures: `setup`, `answer`, `setRules`. See their typed arguments in [model.ts](model.ts).
+Other actions: `setup`, `answer`, `setRules`. Their typed arguments are in [model.ts](model.ts).
 
-Model-specific `read()` fields include `rounds`, `nativeTick`, `partnerIsSilent`, `years`, `face`, `message`.
+Model-specific `read()` fields include `roundCount`, `nativeTick`, `partnerIsSilent`, `years`, `face`, `message`.
 
-The [UI binding](ui.ts) presents `Answer`, `Answers (no native clock)`, `Sentence (years)`, `Your jail time (years)`.
+## Sources and limits
 
-## Sources and acceptance
+Adapted from the NetLogo *Prisoner's Dilemma Basic* model by Wilensky (2002). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+This is a single round. There is no learning or memory here; the iterated version is a separate model. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 
-The [catalog ledger](../catalog/progress.json) owns acceptance stages for `prisoners-dilemma-basic` and links the retained checks.
+The [catalog ledger](../catalog/progress.json) records the acceptance stages for `prisoners-dilemma-basic`.

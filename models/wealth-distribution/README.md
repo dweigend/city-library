@@ -1,12 +1,17 @@
 # Wealth Distribution
 
-Agents seek grain, spend it according to metabolism and are replaced after starvation or age-related death. Grain holdings and replacement endowments illustrate resource-mediated inequality rather than wages, inherited capital or finance.
+Can unequal wealth arise without inheritance? People move over a landscape where grain grows, best on a few fertile spots. Each person looks up to their individual vision, moves toward the richest visible cell, harvests it and eats grain according to an individual metabolism. A person who starves or reaches their life span is replaced by a new one with a random starting endowment.
+
+Things to try:
+
+- Lower `maxVision` and compare the spread of wealth.
+- Raise `growthAmount`. Does more grain reduce inequality?
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Wealth Distribution`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Choose **Wealth Distribution** in [Agent Lab](../../ui/agent-lab/README.md).
 
-Headless, from a script in the repository root:
+From a script in the repository root:
 
 ```ts
 import { create } from "./models/wealth-distribution/model.ts";
@@ -18,7 +23,7 @@ const observation = simulation.read();
 
 ## Parameters
 
-`create(options)` accepts these input keys. The [UI binding](ui.ts) distinguishes setup controls from live changes; [model.ts](model.ts) defines additional validation.
+`create(options)` accepts these inputs. [ui.ts](ui.ts) decides which are setup controls and which can change during a run; [model.ts](model.ts) adds further validation.
 
 | Input | Default | Declared values |
 | --- | --- | --- |
@@ -34,16 +39,16 @@ const observation = simulation.read();
 
 ## Actions and observations
 
-Use `advance(...)` for progress and `read()` for observations; the model defines how work advances its tick.
+Call `advance()` with an optional step count to run the model; the model defines how a step advances its tick. Call `read()` for a detached snapshot.
 
-Other instance procedures: `setRules`. See their typed arguments in [model.ts](model.ts).
+Other actions: `setRules`. Their typed arguments are in [model.ts](model.ts).
 
 Model-specific `read()` fields include `personCount`, `totalWealth`, `classes`, `gini`, `lorenz`, `agents`, `cells`.
 
-The [UI binding](ui.ts) presents `Maximum vision`, `Maximum metabolism`, `Minimum life`, `Maximum life`, `Tick`, `People`, `Total wealth`, `Gini`, `Selected`, `Resources and wealth classes` and further views or controls.
+## Sources and limits
 
-## Sources and acceptance
+Adapted from the NetLogo *Wealth Distribution* model by Wilensky (1998). Attribution and adaptation notes are in the comments of [model.ts](model.ts) and the retained source notices; the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
 
-Attribution and rights: [adaptation comments](model.ts) and the retained source notices. Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+Grain holdings stand in for wealth. Wages, inherited capital and finance are not part of the model. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 
-[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `wealth-distribution` and links any shared checks.
+[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) records the acceptance stages for `wealth-distribution`.

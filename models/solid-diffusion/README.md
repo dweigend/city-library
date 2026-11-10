@@ -1,12 +1,17 @@
 # Solid Diffusion
 
-Atoms exchange with vacancies on a lattice, changing composition through local movement. Vacancy availability and finite boundaries constrain transport; the example does not calibrate diffusion coefficients for a material.
+How do two solids mix where they touch? Two kinds of atoms start on either side of a boundary, with a few vacancies in the lattice. An atom next to a vacancy can jump into it, so atoms slowly cross the boundary. The model tracks the concentration profile across the columns and the farthest distance atoms have traveled.
+
+Things to try:
+
+- Follow the concentration profile over time. How does the transition zone widen?
+- Change the lattice size and compare how quickly atoms cross.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Solid Diffusion`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Choose **Solid Diffusion** in [Agent Lab](../../ui/agent-lab/README.md).
 
-Headless, from a script in the repository root:
+From a script in the repository root:
 
 ```ts
 import { create } from "./models/solid-diffusion/model.ts";
@@ -18,7 +23,7 @@ const observation = simulation.read();
 
 ## Parameters
 
-`create(options)` accepts these input keys. The [UI binding](ui.ts) distinguishes setup controls from live changes; [model.ts](model.ts) defines additional validation.
+`create(options)` accepts these inputs. [ui.ts](ui.ts) decides which are setup controls and which can change during a run; [model.ts](model.ts) adds further validation.
 
 | Input | Default | Declared values |
 | --- | --- | --- |
@@ -28,16 +33,16 @@ const observation = simulation.read();
 
 ## Actions and observations
 
-Use `advance(...)` for progress and `read()` for observations; the model defines how work advances its tick.
+Call `advance()` with an optional step count to run the model; the model defines how a step advances its tick. Call `read()` for a detached snapshot.
 
-Other instance procedures: `setup`, `moveAtomToHere`, `setAtoms`. See their typed arguments in [model.ts](model.ts).
+Other actions: `setup`, `moveAtomToHere`, `setAtoms`. Their typed arguments are in [model.ts](model.ts).
 
-Model-specific `read()` fields include `atoms`, `vacancies`, `maxDiffusionDistance`, `columns`.
+Model-specific `read()` fields include `atoms`, `vacancyCount`, `maxDiffusionDistance`, `columns`.
 
-The [UI binding](ui.ts) presents `Tick`, `Vacancies`, `Max diffusion distance squared`, `Atoms`, `Atoms by column`, `Distance squared`, `Greens`, `Blues`.
+## Sources and limits
 
-## Sources and acceptance
+Adapted from the NetLogo *Solid Diffusion* model by Wilensky (2007). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+Vacancy count and finite edges limit transport; the model does not calibrate diffusion coefficients for a real material. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 
-[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `solid-diffusion` and links any shared checks.
+[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) records the acceptance stages for `solid-diffusion`.

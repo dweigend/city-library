@@ -1,8 +1,8 @@
 # Discrete-event capabilities
 
-Use the root `city-library` entry to compose event-driven models without World or a browser. [Public contracts](des-contract.md) define the details; [source research](../research/salabim-concepts.md) records the pinned Salabim comparison. This is a TypeScript adaptation of useful concepts, not a Python bridge or a complete Salabim port.
+Use the root `city-library` entry to compose event-driven models without World or a browser. [Public contracts](des-contract.md) define the details; [source research](../research/salabim-concepts.md) records the pinned Salabim comparison. This is a TypeScript adaptation of useful concepts, not a Python bridge or a complete Salabim port. "Public example NN" below refers to the numbered scripts in `tests/public-contracts/des/`.
 
-| Official Salabim concept | Delivered City Library surface | Boundary / evidence |
+| Official Salabim concept | City Library surface | Boundary / evidence |
 | --- | --- | --- |
 | Event scheduling | `Agenda.create`, event add/delete, batch advance, causal `next`, time/size | Public example 01 covers event-time dispatch, last-event causality, ties and budgets. Standalone or explicitly World-attached; no automatic World tick or dispatch. |
 | Queues | `ServiceQueue` FIFO or stable lower-first priority, issued handles, snapshots | Public example 02 and adversarial tests. No linked-list complexity promise or complete upstream queue algebra. |
@@ -13,8 +13,8 @@ Use the root `city-library` entry to compose event-driven models without World o
 | Process interaction | Typed model state, Agenda handles and explicit dispatch for delay, replacement/reactivation, passivation, cancellation and timeout | Public example 04 and maintenance model. Mesa's World activation is reused when needed; there is no competing Process scheduler or coroutine interpreter. |
 | Monitoring levels | `TimeWeighted.set/read` with explicit sample times and duration/integral/mean | Right-continuous levels; pure aggregate reads, zero-duration mean undefined. Numeric History and measurement definitions belong to Mesa. |
 | Event trace | `EventTrace.record/read` with bounded detached `{at,value}` diagnostics | Same-time events supported; no automatic console output, subscriptions, numeric History substitute or resumable model snapshot. |
-| Random distributions | Existing uniform/normal/exponential/Poisson; new Bernoulli/triangular/gamma through explicit `Random.number` | Public example 05 and independent continuation/inverse-CDF/moment checks. Gamma uses shape/rate and bounded Marsaglia–Tsang rejection. No Salabim/Python stream compatibility. |
-| Animation and interfaces | Existing separate Agent Lab, ten thin `ui.ts` declarations | Host-specific controls/charts/tables/spatial/network views. Python Tkinter/OpenGL/video and real-time infrastructure are unsupported. Browser evidence and independent visual review are separate gates. |
+| Random distributions | Uniform/normal/exponential/Poisson; Bernoulli/triangular/gamma through explicit `Random.number` | Public example 05 and independent continuation/inverse-CDF/moment checks. Gamma uses shape/rate and bounded Marsaglia–Tsang rejection. No Salabim/Python stream compatibility. |
+| Animation and interfaces | Separate Agent Lab, ten thin `ui.ts` declarations | Host-specific controls/charts/tables/spatial/network views. Python Tkinter/OpenGL/video and real-time infrastructure are unsupported. Browser evidence and independent visual review are separate gates. |
 | Scientific validation | Deterministic invariants and a predeclared synthetic M/M/1 countercheck | [Executed queue report](../research/des-mm1-results.md). No empirical city calibration, physical EV battery model, traffic-flow model or hydraulic claim. |
 | Complete continuation | Not delivered | Random continuation alone does not capture model state, pending behavior, resources or future callbacks. No full continuation claim. |
 

@@ -1,18 +1,16 @@
 # System architecture
 
-The [naming migration contracts](../PLAN.md#naming-migration-contracts) authorize only their recorded naming changes as an exception to API-name preservation rules in this document, including static factory names and target study entries. Preserve behavior, assertions, identity, ordering and random sequences; migrate consumers together.
-
 A model should remain understandable when you remove its UI. City Library therefore keeps domain rules, state and execution in a headless library. Applications read observations and call public actions; they do not become a second model.
 
 A graph can work without coordinates, a field calculation without agents, and a generator without a running world. The caller chooses how to combine them.
 
-This document defines the required architecture, including parts still to be built. [PLAN](../PLAN.md) tracks available capabilities and next goals; the [Agent Loom specification](agent-loom/README.md) defines detailed target contracts. The current public package exposes its root entry only.
+This document defines the required architecture, including parts still to be built. [Coverage](development/coverage.md) lists what works today, [PLAN](../PLAN.md) sets the next goals and the [Agent Loom specification](agent-loom/README.md) defines detailed target contracts. The current public package exposes its root entry only.
 
-Use the system-wide [naming conventions](NAMING_CONVENTIONS.md) for domains, public contracts and module names.
+Use the system-wide [naming conventions](NAMING_CONVENTIONS.md) for domains, public contracts and module names. The [naming migration contracts](../PLAN.md#naming-migration-contracts) authorize only their recorded naming changes as an exception to API-name preservation rules in this document, including static factory names and target study entries. Preserve behavior, assertions, identity, ordering and random sequences; migrate consumers together.
 
 ## Reading this document
 
-Start with [model authoring](development/model-authoring.md) for a runnable introduction. This document covers [domain ownership](#binding-architecture-rules), [module layout](#binding-domain-layout-and-extension-rules), [public contracts](#dependency-and-public-contract-rules) and [time, randomness and observations](#time-randomness-and-observation). [UI design](DESIGN.md) and the [UI specification](ui/README.md) own presentation and author-facing bindings.
+For a short overview, read [concepts](concepts.md); for a runnable introduction, start with [model authoring](development/model-authoring.md). This document covers [domain ownership](#binding-architecture-rules), [module layout](#binding-domain-layout-and-extension-rules), [public contracts](#dependency-and-public-contract-rules) and [time, randomness and observations](#time-randomness-and-observation). [UI design](DESIGN.md) and the [UI specification](ui/README.md) own presentation and author-facing bindings.
 
 ## Binding architecture rules
 
@@ -369,4 +367,4 @@ These gates define evidence requirements without claiming completion. Use these 
 - **Shared lifecycle:** define the private coordination contract for identity, state copying, coupled movement and membership before implementing those interactions. Keep one owner and acyclic dependencies.
 - **Further topology:** the [grid/parcel phase](grid-parcels/STATUS.md#bounded-layout-contract) freezes finite planar hexagonal/layout semantics. Wrapping layouts, irregular diffusion, volume layouts and their storage representations require later explicit contracts. Preserve original square/cubic behavior.
 
-The [work plan](../PLAN.md) tracks available capabilities and next goals; the [specification overview](agent-loom/README.md) identifies the API source.
+The [work plan](../PLAN.md) tracks next goals and [coverage](development/coverage.md) tracks available capabilities; the [specification overview](agent-loom/README.md) identifies the API source.

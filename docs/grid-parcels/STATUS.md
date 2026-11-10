@@ -1,14 +1,18 @@
-# Grid and parcel catalogue status
+# Grids, layouts and parcels: what works today
 
-The complete approved target inventory remains unchanged in [API](API.md).
-This ledger separates the bounded first-phase implementation from the broader
-catalogue. Foundation evidence is recorded in [VERIFICATION](VERIFICATION.md);
-the finite quad extension has its own [contract](QUAD-LAYOUTS-CONTRACT.md) and
-[verification record](QUAD-LAYOUTS-VERIFICATION.md). The accepted
+Detached square, hexagonal and authored planar layouts, layout-backed Grid
+Fields and bounded planar merge/split are available. This ledger separates that
+bounded implementation from the broader [target catalogue](API.md), which
+remains planned.
+
+The finite quad extension has its own [contract](QUAD-LAYOUTS-CONTRACT.md) and
+[verification record](QUAD-LAYOUTS-VERIFICATION.md); foundation evidence is in
+[VERIFICATION](VERIFICATION.md). The accepted
 [example-first plan](../development/example-first/PLAN.md) owns further stages.
 The linked quad contract is a frozen historical signature record. Current calls use `rings` → `ringCount`, `iterations` → `iterationCount`, `squareTarget` → `square-target` and `relaxationIterations` → `relaxationIterationCount`; keep the historical bytes unchanged and use the current API table below.
-
-The bounded capabilities below are implemented and included in the [integration pull request](https://github.com/dweigend/city-library/pull/48). The broader catalogue remains planned; package publication is outside this scope. Historical verification records describe their original checkpoints and do not determine current merge authorization.
+Package publication is outside this scope. Historical verification records
+describe their original checkpoints and do not determine current merge
+authorization.
 
 | Catalogue area | Bounded implementation | Explicit backlog |
 | --- | --- | --- |

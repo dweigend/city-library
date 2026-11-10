@@ -1,12 +1,17 @@
 # Galton Box
 
-Balls fall through staggered pegs, make probabilistic left/right choices and accumulate in counters or piles. Collision and pile-up rules make this a finite mechanical sampling example rather than an abstract unlimited sequence of coin flips.
+How do many left-or-right bounces build a bell curve? Balls drop through `rowCount` rows of pegs and bounce right with `chanceOfBouncingRight` percent at each peg. They collect in bins at the bottom; with `pileUp`, they stack into visible piles.
+
+Things to try:
+
+- Change `chanceOfBouncingRight` and watch where the peak of the histogram moves.
+- Use few rows and many rows and compare the width of the distribution.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Galton Box`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Choose **Galton Box** in [Agent Lab](../../ui/agent-lab/README.md).
 
-Headless, from a script in the repository root:
+From a script in the repository root:
 
 ```ts
 import { create } from "./models/galton-box/model.ts";
@@ -18,7 +23,7 @@ const observation = simulation.read();
 
 ## Parameters
 
-`create(options)` accepts these input keys. The [UI binding](ui.ts) distinguishes setup controls from live changes; [model.ts](model.ts) defines additional validation.
+`create(options)` accepts these inputs. [ui.ts](ui.ts) decides which are setup controls and which can change during a run; [model.ts](model.ts) adds further validation.
 
 | Input | Default | Declared values |
 | --- | --- | --- |
@@ -30,18 +35,18 @@ const observation = simulation.read();
 
 ## Actions and observations
 
-Use `advance(...)` for progress and `read()` for observations; the model defines how work advances its tick.
+Call `advance()` with an optional step count to run the model; the model defines how a step advances its tick. Call `read()` for a detached snapshot.
 
-Other instance procedures: `setRules`. See their typed arguments in [model.ts](model.ts).
+Other actions: `setRules`. Their typed arguments are in [model.ts](model.ts).
 
-Additional instance accessors: `world`, `grid`. See [model.ts](model.ts) for the returned live references.
+Live references: `world`, `grid`. [model.ts](model.ts) describes what they return.
 
-Model-specific `read()` fields include `ballCount`, `particles`, `pegs`, `counters`, `isFull`.
+Model-specific `read()` fields include `ballCount`, `particles`, `pegs`, `counters`, `full`.
 
-The [UI binding](ui.ts) presents `Bounce right (%)`, `Tick`, `Balls`, `State`, `Galton box`, `Counters`.
+## Sources and limits
 
-## Sources and acceptance
+Adapted from the NetLogo *Galton Box* model by Wilensky (2002). Attribution and license are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+Collisions and pile-up make this a finite mechanical sample, not an endless sequence of coin flips. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 
-The [catalog ledger](../catalog/progress.json) owns acceptance stages for `galton-box` and links the retained checks.
+The [catalog ledger](../catalog/progress.json) records the acceptance stages for `galton-box`.

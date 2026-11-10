@@ -33,8 +33,8 @@ All implementation code is original to this repository. No numerical coefficient
 - [Australian Government: Batteries](https://www.energy.gov.au/solar/get-know-solar-technology/batteries) distinguishes stored energy and power limits. Our battery omits losses, aging, voltage, tariffs and weather forecasting; household loads are invented schedules.
 - Occupancy, signal phases, recycling influence, zoning caps and household/workplace assignments are explicit synthetic policies. They make no empirical, traffic-safety, planning-compliance, demographic or causal claims.
 
-## Discoverability and verification
+## Discovery and checks
 
-The existing `discoverEntries` function in `ui/agent-lab/discovery.ts` discovers paired directories automatically and is reused by the Vite host. These ten entries require no special shell/session case or modification of `models/catalog/progress.json`. Titles, descriptions and source/limitation information identify them as illustrative examples. The upstream model selection/count stays unchanged.
+Agent Lab discovers these folders through `discoverEntries` in `ui/agent-lab/discovery.ts`, like every other model; no special case and no change to `models/catalog/progress.json` is needed. Titles, descriptions and source/limitation notes mark them as illustrative examples, and the upstream model selection and its count stay unchanged.
 
-Library public examples must be frozen before dependent model runtime is written. Model mechanism assertions belong in `tests/spatial-models.test.ts`. Required runtime, package, browser and independent screenshot evidence is recorded separately by the implementation coordinator; none is claimed by this preparation document.
+Library public examples must be frozen before dependent model runtime is written. Model mechanism tests live mainly in `tests/spatial-models.test.ts`; residential occupancy is tested in `tests/model-occupancy.test.ts`. [Browser evidence](browser-verification.md) is recorded separately and applies only to the implementation it names.

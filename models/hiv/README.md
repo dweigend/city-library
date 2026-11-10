@@ -1,12 +1,17 @@
 # HIV
 
-People move, form and dissolve couples, use condoms and test according to individual tendencies. Infection and symptoms are simplified model processes; the counters do not estimate individual medical risk.
+How do partnership length, condom use and testing change how a sexually transmitted infection spreads? People move, form couples with `averageCouplingTendency` and stay together for about `averageCommitment` steps. Infection can pass within a couple, unless a condom is used (`averageCondomUse`). People get tested with `averageTestFrequency`; in this model, those who know they are infected always practice safer sex.
+
+Things to try:
+
+- Raise `averageTestFrequency` and compare the percentage infected over time.
+- Change `averageCommitment`. Do longer partnerships slow or speed the spread?
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `HIV`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Choose **HIV** in [Agent Lab](../../ui/agent-lab/README.md).
 
-Headless, from a script in the repository root:
+From a script in the repository root:
 
 ```ts
 import { create } from "./models/hiv/model.ts";
@@ -18,7 +23,7 @@ const observation = simulation.read();
 
 ## Parameters
 
-`create(options)` accepts these input keys. The [UI binding](ui.ts) distinguishes setup controls from live changes; [model.ts](model.ts) defines additional validation.
+`create(options)` accepts these inputs. [ui.ts](ui.ts) decides which are setup controls and which can change during a run; [model.ts](model.ts) adds further validation.
 
 | Input | Default | Declared values |
 | --- | --- | --- |
@@ -31,16 +36,16 @@ const observation = simulation.read();
 
 ## Actions and observations
 
-Use `advance(...)` for progress and `read()` for observations; the model defines how work advances its tick.
+Call `advance()` with an optional step count to run the model; the model defines how a step advances its tick. Call `read()` for a detached snapshot.
 
-Other instance procedures: `go`, `setParameters`, `randomNear`, `assignCommitment`, `assignCouplingTendency`, `assignCondomUse`, `assignTestFrequency`, `setupPeople`, `checkSliders`, `move`, `couple`, `uncouple`, `infect`, `test`, `percentInfected`. See their typed arguments in [model.ts](model.ts).
+Other actions: `go`, `setParameters`, `randomNear`, `assignCommitment`, `assignCouplingTendency`, `assignCondomUse`, `assignTestFrequency`, `setupPeople`, `checkSliders`, `move`, `couple`, `uncouple`, `infect`, `test`, `percentInfected`. Their typed arguments are in [model.ts](model.ts).
 
 Model-specific `read()` fields include `infectionChance`, `symptomsShow`, `percentInfected`, `agents`, `cells`.
 
-The [UI binding](ui.ts) presents `Tick`, `Infected %`, `HIV`, `History`, `Known %`, `Coupled`.
+## Sources and limits
 
-## Sources and acceptance
+Adapted from the NetLogo *HIV* model by Wilensky (1997). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+Infection and symptoms are simplified, the population is closed, and the model does not estimate any individual's medical risk. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 
-[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `hiv` and links any shared checks.
+[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) records the acceptance stages for `hiv`.

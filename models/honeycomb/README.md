@@ -1,12 +1,19 @@
 # Honeycomb
 
-Circularly moving bees deposit a chemical whose diffusion and evaporation alter subsequent movement. These artificial feedback rules create honeycomb-like patterns without claiming that real bees use this construction mechanism.
+Can a regular lattice emerge from movement and a fading trail? Bees move in circles and leave a chemical that spreads and evaporates. The chemical changes how fast they move and how tightly they turn, so the trail they leave shapes where they go next.
+
+Over time, the combined trails can form a honeycomb-like pattern.
+
+Things to try:
+
+- Change `beeCount` and compare the regularity of the pattern.
+- Hide the bees with `hideBees` to see the chemical field alone.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Honeycomb`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Choose **Honeycomb** in [Agent Lab](../../ui/agent-lab/README.md).
 
-Headless, from a script in the repository root:
+From a script in the repository root:
 
 ```ts
 import { create } from "./models/honeycomb/model.ts";
@@ -18,7 +25,7 @@ const observation = simulation.read();
 
 ## Parameters
 
-`create(options)` accepts these input keys. The [UI binding](ui.ts) distinguishes setup controls from live changes; [model.ts](model.ts) defines additional validation.
+`create(options)` accepts these inputs. [ui.ts](ui.ts) decides which are setup controls and which can change during a run; [model.ts](model.ts) adds further validation.
 
 | Input | Default | Declared values |
 | --- | --- | --- |
@@ -27,16 +34,16 @@ const observation = simulation.read();
 
 ## Actions and observations
 
-Use `advance(...)` for progress and `read()` for observations; the model defines how work advances its tick.
+Call `advance()` with an optional step count to run the model; the model defines how a step advances its tick. Call `read()` for a detached snapshot.
 
-Other instance procedures: `setup`, `go`, `hideBees`, `showBees`. See their typed arguments in [model.ts](model.ts).
+Other actions: `setup`, `go`, `hideBees`, `showBees`. Their typed arguments are in [model.ts](model.ts).
 
 Model-specific `read()` fields include `chemicalTotal`, `cells`, `agents`.
 
-The [UI binding](ui.ts) presents `Hide bees`, `Show bees`, `Tick`, `Bees`, `Chemical`, `Honeycomb`.
+## Sources and limits
 
-## Sources and acceptance
+Adapted from the NetLogo *Honeycomb* model by Wilensky (2003). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+These are artificial rules. The source explicitly does not claim that real bees build combs this way, and the honeycomb pattern is not evidence for any particular biological mechanism. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 
-[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `honeycomb` and links any shared checks.
+[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) records the acceptance stages for `honeycomb`.

@@ -1,12 +1,19 @@
 # Mimicry
 
-Predators remember unpleasant prey colors while butterfly reproduction and color variation change the prey population. A simplified memory and color space illustrate learning-mediated selection, not a verified history of a particular mimic pair.
+Can a harmless butterfly benefit from looking like a bad-tasting one? Birds hunt butterflies and remember the colors of unpleasant prey for `memoryDuration` steps, up to `memorySize` colors. Butterflies reproduce, and their offspring sometimes change color with `mutationRate`.
+
+Birds avoid colors they remember, so a color that resembles defended prey can be eaten less often.
+
+Things to try:
+
+- Set `memorySize` to 0. Does color still matter?
+- Raise `mutationRate` and follow how the color mix of the harmless butterflies changes.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Mimicry`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Choose **Mimicry** in [Agent Lab](../../ui/agent-lab/README.md).
 
-Headless, from a script in the repository root:
+From a script in the repository root:
 
 ```ts
 import { create } from "./models/mimicry/model.ts";
@@ -18,7 +25,7 @@ const observation = simulation.read();
 
 ## Parameters
 
-`create(options)` accepts these input keys. The [UI binding](ui.ts) distinguishes setup controls from live changes; [model.ts](model.ts) defines additional validation.
+`create(options)` accepts these inputs. [ui.ts](ui.ts) decides which are setup controls and which can change during a run; [model.ts](model.ts) adds further validation.
 
 | Input | Default | Declared values |
 | --- | --- | --- |
@@ -29,16 +36,16 @@ const observation = simulation.read();
 
 ## Actions and observations
 
-Use `advance(...)` for progress and `read()` for observations; the model defines how work advances its tick.
+Call `advance()` with an optional step count to run the model; the model defines how a step advances its tick. Call `read()` for a detached snapshot.
 
-Other instance procedures: `setup`, `birdsMove`, `butterfliesMove`, `butterfliesGetEaten`, `birdsForget`, `butterfliesReproduce`, `setParameters`. See their typed arguments in [model.ts](model.ts).
+Other actions: `setup`, `birdsMove`, `butterfliesMove`, `butterfliesGetEaten`, `birdsForget`, `butterfliesReproduce`, `setParameters`. Their typed arguments are in [model.ts](model.ts).
 
 Model-specific `read()` fields include `monarchColor`, `viceroyColor`, `birds`, `monarchs`, `viceroys`.
 
-The [UI binding](ui.ts) presents `Tick`, `Monarchs`, `Viceroys`, `${group === `, `Birds and butterflies`, `Butterfly populations`, `Mean butterfly colors`, `Bird memory`.
+## Sources and limits
 
-## Sources and acceptance
+Adapted from the NetLogo *Mimicry* model by Wilensky (1997). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+Bird memory and the color space are simplified. The model illustrates selection through predator learning, not the history of a particular pair of species. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 
-[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `mimicry` and links any shared checks.
+[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) records the acceptance stages for `mimicry`.

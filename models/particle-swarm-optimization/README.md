@@ -1,12 +1,17 @@
 # Particle Swarm Optimization
 
-Particles combine personal-best and global-best memory while moving over a toroidal objective landscape. Inertia, attraction and random draws define the search; a good observed value is not a proof of global optimality.
+How can a swarm share discoveries to find the highest point of a landscape? Each particle has a position and a velocity. It remembers the best point it has seen, and the swarm shares the best point anyone has seen. Every step, particles keep part of their velocity (`particleInertia`) and are pulled toward both best points with random strength.
+
+Things to try:
+
+- Set `attractionToGlobalBest` to 0. Does the swarm still converge?
+- Make the landscape rougher with lower `landscapeSmoothness`. How often does the swarm settle on a lower peak?
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Particle Swarm Optimization`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Choose **Particle Swarm Optimization** in [Agent Lab](../../ui/agent-lab/README.md).
 
-Headless, from a script in the repository root:
+From a script in the repository root:
 
 ```ts
 import { create } from "./models/particle-swarm-optimization/model.ts";
@@ -18,7 +23,7 @@ const observation = simulation.read();
 
 ## Parameters
 
-`create(options)` accepts these input keys. The [UI binding](ui.ts) distinguishes setup controls from live changes; [model.ts](model.ts) defines additional validation.
+`create(options)` accepts these inputs. [ui.ts](ui.ts) decides which are setup controls and which can change during a run; [model.ts](model.ts) adds further validation.
 
 | Input | Default | Declared values |
 | --- | --- | --- |
@@ -36,16 +41,16 @@ const observation = simulation.read();
 
 ## Actions and observations
 
-Use `advance(...)` for progress and `read()` for observations; the model defines how work advances its tick.
+Call `advance()` with an optional step count to run the model; the model defines how a step advances its tick. Call `read()` for a detached snapshot.
 
-Other instance procedures: `setScenario`, `updateBests`, `moveParticles`, `setParameters`. See their typed arguments in [model.ts](model.ts).
+Other actions: `setScenario`, `updateBests`, `moveParticles`, `setParameters`. Their typed arguments are in [model.ts](model.ts).
 
 Model-specific `read()` fields include `globalBestValue`, `globalBestX`, `globalBestY`, `trueBest`, `complete`, `particles`, `cells`, `landscape`, `trails`.
 
-The [UI binding](ui.ts) presents `Particles`, `Inertia`, `Speed limit`, `Personal attraction`, `Global attraction`, `Highlight`, `Trails`, `Tick`, `Best value found`, `Search landscape` and further views or controls.
+## Sources and limits
 
-## Sources and acceptance
+Adapted from the NetLogo *Particle Swarm Optimization* model by Stonedahl and Wilensky (2008). Attribution and license are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+A good value found in a run is not proof that the global optimum was found. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 
-[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `particle-swarm-optimization` and links any shared checks.
+[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) records the acceptance stages for `particle-swarm-optimization`.

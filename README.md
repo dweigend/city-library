@@ -14,7 +14,7 @@ A short script should be enough to get an idea running. Small, independent build
 
 Agent Loom provides the headless modeling core. Agent Lab adds browser controls and views; the same model also runs in a script. Applying its results to a real city still requires evidence.
 
-The core and shared UI are usable, with 125 models toward a fixed selection of 200. The full specification and scientific model comparisons remain unfinished, and the package is not published. See [the work plan](PLAN.md) for progress and open checks.
+The core and the shared UI are usable today, and the [models](models/README.md) range from adapted NetLogo classics to small original city models. The full specification and the scientific model comparisons are unfinished, and the package is not published. [What works today](docs/development/coverage.md) lists the available operations; [the work plan](PLAN.md) shows what comes next.
 
 ## Run the Lab
 
@@ -31,10 +31,11 @@ See [Lab usage](ui/agent-lab/README.md) for configuration and explicit source re
 
 ## Write and explore
 
-- [Model catalog](models/catalog/README.md): find model folders, source records and acceptance.
+- [Your first model](docs/first-model.md): build a small model, run it from a script and open it in Agent Lab.
+- [Explore the models](models/README.md): every model by topic, with its sources and limits.
+- [Concepts](docs/concepts.md): the few ideas behind a headless model and its UI.
 - [Write a model](docs/development/model-authoring.md): follow a real headless model and its UI binding.
-- [Documentation](docs/README.md): find architecture, APIs, authoring rules and evidence.
-- [Agent Loom reference](docs/agent-loom/README.md): target contracts and operation inventory; delivered coverage is tracked separately.
+- [Documentation](docs/README.md): guides, references, contracts and evidence.
 - [Work plan](PLAN.md): current priorities and acceptance gates.
 
 ## How the pieces fit
@@ -85,4 +86,6 @@ The [naming conventions](docs/NAMING_CONVENTIONS.md#repository-structure) define
 
 `bun run check` runs TypeScript/Svelte checks, tests, public examples, the library build and a packed Bun/Node/TypeScript consumer. The consumer requires Node 26.8.2. `bun run build:ui` builds the Vite host.
 
-Keep model state under one owner, use public actions for changes and keep rendering outside the headless library. New capabilities start with asserted public examples. [Architecture](docs/ARCHITECTURE.md), [naming conventions](docs/NAMING_CONVENTIONS.md) and [UI design](docs/DESIGN.md) define the binding rules.
+Keep model state under one owner, use public actions for changes and keep rendering outside the headless library. New capabilities start with asserted public examples. [Architecture](docs/ARCHITECTURE.md), [naming conventions](docs/NAMING_CONVENTIONS.md) and [UI design](docs/DESIGN.md) define the binding rules; the [contributor section](docs/README.md#contribute) lists the rest.
+
+This repository does not currently include a root license file. Source-specific terms are recorded in the notices.

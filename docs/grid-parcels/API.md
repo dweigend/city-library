@@ -1,9 +1,10 @@
-# Grid and parcel API — implementation starting point
+# Grid and parcel API — target catalogue
 
-Date: 2026-11-07. Saved from the user-approved chat inventory.
-Status: target catalogue, not a runtime availability claim. Work proceeds in
-bounded example-first phases; open research methods are not promised as delivered.
-This supersedes the interim inventory for authoring style, not historical evidence.
+This is the approved target catalogue for planar layouts and parcels, not a
+runtime availability claim. [STATUS](STATUS.md) lists what works today. Work
+proceeds in bounded example-first phases; open research methods are not promised
+as delivered. This catalogue supersedes the interim inventory for authoring
+style, not historical evidence.
 
 ## Language and architecture
 

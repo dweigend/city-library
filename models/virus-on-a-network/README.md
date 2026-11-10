@@ -1,12 +1,17 @@
 # Virus on a Network
 
-Susceptible nodes acquire infection through network neighbors; scheduled checks can remove infection and create permanent resistance. Network construction and check timing are part of the model, not continuous-time epidemic equations.
+How does network structure shape an outbreak? Nodes are linked into a network with `averageNodeDegree`. Infected nodes infect each neighbor with `spreadChance`. Every `checkFrequency` steps, infected nodes may be cured with `recoveryChance`, and cured nodes become permanently resistant with `resistanceChance`.
+
+Things to try:
+
+- Raise `averageNodeDegree`. Does the virus spread faster or last longer?
+- Check less often with a higher `checkFrequency` and compare.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Virus on a Network`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Choose **Virus on a Network** in [Agent Lab](../../ui/agent-lab/README.md).
 
-Headless, from a script in the repository root:
+From a script in the repository root:
 
 ```ts
 import { create } from "./models/virus-on-a-network/model.ts";
@@ -18,7 +23,7 @@ const observation = simulation.read();
 
 ## Parameters
 
-`create(options)` accepts these input keys. The [UI binding](ui.ts) distinguishes setup controls from live changes; [model.ts](model.ts) defines additional validation.
+`create(options)` accepts these inputs. [ui.ts](ui.ts) decides which are setup controls and which can change during a run; [model.ts](model.ts) adds further validation.
 
 | Input | Default | Declared values |
 | --- | --- | --- |
@@ -33,16 +38,16 @@ const observation = simulation.read();
 
 ## Actions and observations
 
-Use `advance(...)` for progress and `read()` for observations; the model defines how work advances its tick.
+Call `advance()` with an optional step count to run the model; the model defines how a step advances its tick. Call `read()` for a detached snapshot.
 
-Other instance procedures: `setRules`, `setStates`, `setConnections`. See their typed arguments in [model.ts](model.ts).
+Other actions: `setRules`, `setStates`, `setConnections`. Their typed arguments are in [model.ts](model.ts).
 
 Model-specific `read()` fields include `nodes`, `edges`, `counts`, `percentages`.
 
-The [UI binding](ui.ts) presents `Nodes`, `Mean degree`, `Initial infected`, `Spread chance (%)`, `Recovery chance (%)`, `Gain resistance (%)`, `Check frequency (ticks)`, `Tick`, `Susceptible`, `Infected` and further views or controls.
+## Sources and limits
 
-## Sources and acceptance
+Adapted from the NetLogo *Virus on a Network* model by Stonedahl and Wilensky (2008). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+Network construction and check timing are part of the model; it does not solve continuous-time epidemic equations. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 
-[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `virus-on-a-network` and links any shared checks.
+[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) records the acceptance stages for `virus-on-a-network`.

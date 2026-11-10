@@ -1,12 +1,17 @@
 # Heat Diffusion
 
-Randomly ordered local heat updates operate inside fixed-temperature boundary strips. Material diffusivity and alpha change the numerical transfer rule; this update order differs from a simultaneous field solve.
+How do fixed edge temperatures shape the temperature of a plate? A square plate starts at `initialPlateTemp`. Its four edges are held at fixed temperatures. Each step, the plate's cells exchange heat with their neighbors in random order, at a rate set by the material (`materialType`) or by `alpha`.
+
+Things to try:
+
+- Compare aluminum with a slower material. How long until the plate settles?
+- Set all edges to the same temperature and watch the plate even out.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Heat Diffusion`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Choose **Heat Diffusion** in [Agent Lab](../../ui/agent-lab/README.md).
 
-Headless, from a script in the repository root:
+From a script in the repository root:
 
 ```ts
 import { create } from "./models/heat-diffusion/model.ts";
@@ -18,7 +23,7 @@ const observation = simulation.read();
 
 ## Parameters
 
-`create(options)` accepts these input keys. The [UI binding](ui.ts) distinguishes setup controls from live changes; [model.ts](model.ts) defines additional validation.
+`create(options)` accepts these inputs. [ui.ts](ui.ts) decides which are setup controls and which can change during a run; [model.ts](model.ts) adds further validation.
 
 | Input | Default | Declared values |
 | --- | --- | --- |
@@ -35,16 +40,16 @@ const observation = simulation.read();
 
 ## Actions and observations
 
-Use `advance(...)` for progress and `read()` for observations; the model defines how work advances its tick.
+Call `advance()` with an optional step count to run the model; the model defines how a step advances its tick. Call `read()` for a detached snapshot.
 
-Other instance procedures: `setup`, `updateFieldAt`, `updateAlpha`, `heatDiffusivity`, `setRules`, `setTemperatures`. See their typed arguments in [model.ts](model.ts).
+Other actions: `setup`, `updateFieldAt`, `updateAlpha`, `heatDiffusivity`, `setRules`, `setTemperatures`. Their typed arguments are in [model.ts](model.ts).
 
 Model-specific `read()` fields include `plateSize`, `minTemp`, `maxTemp`, `heatDiffusivity`, `cells`.
 
-The [UI binding](ui.ts) presents `Initial plate temperature`, `Update alpha`, `Tick`, `Heat diffusivity`, `Plate temperature`, `ModelField`.
+## Sources and limits
 
-## Sources and acceptance
+Adapted from the NetLogo *Heat Diffusion* model by Wilensky (1998). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+The random update order differs from a simultaneous numerical solution of the heat equation. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 
-[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `heat-diffusion` and links any shared checks.
+[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) records the acceptance stages for `heat-diffusion`.

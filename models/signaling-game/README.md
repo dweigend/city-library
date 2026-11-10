@@ -1,12 +1,17 @@
 # Signaling Game
 
-Senders and receivers draw from count-based urns mapping states to signals and signals to guesses; successful guesses reinforce both mappings. The run stops above a 0.99 success probability, which is a model criterion rather than a general account of language origin.
+Can shared meaning arise without agreeing on it first? A sender sees one of `stateCount` states and sends one of `signalCount` signals; a receiver sees only the signal and guesses the state. Both draw from urns of counts, and a correct guess adds to the counts that were used, making the same choice more likely next time. The run stops once the chance of a correct guess passes 0.99.
+
+Things to try:
+
+- Use more signals than states. Do some signals stay unused?
+- Use fewer signals than states. How high does the success rate get?
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Signaling Game`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Choose **Signaling Game** in [Agent Lab](../../ui/agent-lab/README.md).
 
-Headless, from a script in the repository root:
+From a script in the repository root:
 
 ```ts
 import { create } from "./models/signaling-game/model.ts";
@@ -18,7 +23,7 @@ const observation = simulation.read();
 
 ## Parameters
 
-`create(options)` accepts these input keys. The [UI binding](ui.ts) distinguishes setup controls from live changes; [model.ts](model.ts) defines additional validation.
+`create(options)` accepts these inputs. [ui.ts](ui.ts) decides which are setup controls and which can change during a run; [model.ts](model.ts) adds further validation.
 
 | Input | Default | Declared values |
 | --- | --- | --- |
@@ -29,16 +34,16 @@ const observation = simulation.read();
 
 ## Actions and observations
 
-Use `advance(...)` for progress and `read()` for observations; the model defines how work advances its tick.
+Call `advance()` with an optional step count to run the model; the model defines how a step advances its tick. Call `read()` for a detached snapshot.
 
-Other instance procedures: `printProbabilities`, `setParameters`. See their typed arguments in [model.ts](model.ts).
+Other actions: `printProbabilities`, `setParameters`. Their typed arguments are in [model.ts](model.ts).
 
 Model-specific `read()` fields include `probabilityOfSuccess`, `timesCorrect`, `timesWrong`, `successRate`, `lastRound`, `output`, `senderUrns`, `receiverUrns`, `senderProbabilities`, `receiverProbabilities`.
 
-The [UI binding](ui.ts) presents `States`, `Signals`, `Print probabilities`, `Tick`, `Probability of success`, `Correct`, `Wrong`, `Success rate`, `Current signal`, `Sender` and further views or controls.
+## Sources and limits
 
-## Sources and acceptance
+Adapted from the NetLogo *Signaling Game* model (© 2016 Uri Wilensky). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+The 0.99 stopping point is a model criterion, not an account of how human language began. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 
-[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `signaling-game` and links any shared checks.
+[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) records the acceptance stages for `signaling-game`.

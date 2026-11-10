@@ -1,24 +1,39 @@
 # Neighborhood Heat Intervention
 
-Illustrative synchronous exchange and shade cooling in abstract index units; no temperature forecast.
+How does shade change a neighborhood's heat? A square grid of blocks starts at a heat index of 30. Each step, every block moves part of the way toward its neighbors' average, computed from the same previous state, and the shaded western half is cooled by `shadeCooling`. The heat index is an abstract number, not degrees.
 
-Run `bun run dev` and choose **Neighborhood Heat Intervention**. Setup creates the model; step or Run/Pause advances it. These synthetic scenarios are not calibrated city forecasts.
+Things to try:
 
-Headless, from a repository script:
+- Set `shadeCooling` to 0. Does the grid stay at 30?
+- Raise `shadeCooling` during a run with `setShadeCooling` and watch the boundary between shaded and unshaded blocks.
+
+## Use
+
+Choose **Neighborhood Heat Intervention** in [Agent Lab](../../ui/agent-lab/README.md).
+
+From a script in the repository root:
 
 ```ts
 import { create } from "./models/neighborhood-heat-intervention/model.ts";
 
-const simulation = create();
-simulation.advance(1);
-const observation = simulation.read();
+const heat = create({ width: 6, shadeCooling: 0.5 });
+heat.advance(10);
+const { meanHeat, shadedFieldCount } = heat.read();
 ```
 
-## Inputs
+## Parameters
 
-| Input | Default |
-| --- | --- |
-| `width` | `6` |
-| `shadeCooling` | `0.5` |
+`create(options)` accepts these inputs; [model.ts](model.ts) validates them.
 
-[model.ts](model.ts) owns validation, actions and detached observations; [ui.ts](ui.ts) binds those public operations. The [scenario contract](../../docs/execution-studies/models.md) defines assumptions, units and expected behavior. [Lab usage](../../ui/agent-lab/README.md) covers controls and model switching.
+| Input | Default | Declared values | Meaning |
+| --- | --- | --- | --- |
+| `width` | `6` | integer; ≥ 2; ≤ 12 | Blocks per side of the square grid |
+| `shadeCooling` | `0.5` | number; ≥ 0; ≤ 2; step 0.1 | Heat index removed per step from shaded blocks |
+
+## Actions and observations
+
+`advance()` runs steps; `setShadeCooling(value)` changes the cooling during a run. `read()` reports `meanHeat`, `shadedFieldCount`, every block in `fields` and a bounded `history`.
+
+## Sources and limits
+
+An original City Library teaching model with invented numbers. The [scenario description](../../docs/execution-studies/models.md) lists its assumptions, units and asserted behavior; the mechanism checks are in [spatial-models.test.ts](../../tests/spatial-models.test.ts) and [heat-projection.test.ts](../../tests/heat-projection.test.ts). Passing them shows that the mechanism works as described, not that the model forecasts temperatures. The heat index leaves out radiation, wind, humidity and building geometry.
