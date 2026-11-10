@@ -147,10 +147,10 @@ describe("source mechanisms and exact public boundaries", () => {
   test("CRISPR replication kills canonical host and creates nineteen children plus parent", () => {
     const model = ecosystem({ seed: 9, initialBacteria: 1, initialViruses: 1 });
     const host = model.world.agents.find(
-      (p) => "breed" in p && p.breed === "bacterium",
+      (p) => "breed" in p && p.group === "bacterium",
     ) as Parameters<typeof model.replicate>[1];
     const virus = model.world.agents.find(
-      (p) => "breed" in p && p.breed === "virus",
+      (p) => "breed" in p && p.group === "virus",
     ) as Parameters<typeof model.replicate>[0];
     model.replicate(virus, host);
     expect(host.alive).toBe(false);
@@ -159,7 +159,7 @@ describe("source mechanisms and exact public boundaries", () => {
     expect(
       model
         .read()
-        .agents.filter((p) => p.breed === "virus")
+        .agents.filter((p) => p.group === "virus")
         .every((p) => p.x === virus.x && p.y === virus.y),
     ).toBe(true);
   });

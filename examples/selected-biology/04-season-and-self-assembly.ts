@@ -14,8 +14,8 @@ assert.ok(tree.read().leaves.every(leaf => leaf.sugarLevel === 47.5 && leaf.anth
 assert.ok(tree.read().leaves.every(leaf => leaf.chlorophyll >= 0 && leaf.chlorophyll <= 100));
 
 const solution = membrane({ seed: 2, waterCount: 10, lipidCount: 4 });
-assert.equal(solution.read().agents.filter(agent => agent.breed === "water").length, 14);
-assert.equal(solution.read().agents.filter(agent => agent.breed === "oil").length, 4);
+assert.equal(solution.read().agents.filter(agent => agent.group === "water").length, 14);
+assert.equal(solution.read().agents.filter(agent => agent.group === "oil").length, 4);
 assert.equal(solution.read().edges.length, 4);
 const waterPartners = solution.read().edges.map(edge => edge.waterId);
 assert.equal(new Set(waterPartners).size, 4);

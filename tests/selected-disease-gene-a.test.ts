@@ -31,13 +31,13 @@ describe("native contact and molecular compositions", () => {
     model.move(90);
     model.move(90);
     model.move(90);
-    const user = model.read().agents.find((agent) => agent.breed === "user")!;
+    const user = model.read().agents.find((agent) => agent.group === "user")!;
     expect(user.x).toBeCloseTo(10);
     expect(user.y).toBeCloseTo(0);
     expect(model.read().tick).toBe(0);
     model.move(270);
     expect(
-      model.read().agents.find((agent) => agent.breed === "user")!.x,
+      model.read().agents.find((agent) => agent.group === "user")!.x,
     ).toBeCloseTo(5);
   });
 
@@ -215,7 +215,7 @@ describe("native contact and molecular compositions", () => {
       expect(to.bound).toBe(true);
       expect(from.x).toBeCloseTo(to.x, 12);
       expect(from.y).toBeCloseTo(to.y, 12);
-      expect([from.breed, to.breed].sort()).toEqual(["cas9", "guide"]);
+      expect([from.group, to.group].sort()).toEqual(["cas9", "guide"]);
     }
   });
 

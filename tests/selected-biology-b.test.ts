@@ -65,8 +65,8 @@ describe("Selected biology source procedures", () => {
     for (const edge of setup.edges) {
       const oil = setup.agents.find((agent) => agent.id === edge.oilId)!;
       const water = setup.agents.find((agent) => agent.id === edge.waterId)!;
-      expect(oil.breed).toBe("oil");
-      expect(water.breed).toBe("water");
+      expect(oil.group).toBe("oil");
+      expect(water.group).toBe("water");
       expect(water.hydrophilic).toBe(true);
     }
     solution.advance(4);

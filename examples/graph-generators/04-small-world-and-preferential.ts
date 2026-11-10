@@ -36,7 +36,7 @@ const invalid = Graph.create<Node>();
 const invalidNodes = Array.from({ length: 4 }, (_, index) => invalid.nodes.add({ index }));
 const invalidRandom = Random.create({ seed: 91 }), before = invalidRandom.state;
 for (const neighbors of [0, 1, 3, 4, 2.5]) assert.throws(() => invalid.generate({ kind: "small-world", nodes: invalidNodes, neighbors, probability: 1, random: invalidRandom }));
-for (const links of [0, 4, 1.5]) assert.throws(() => invalid.generate({ kind: "preferential", nodes: invalidNodes, links, random: invalidRandom }));
+for (const edgesPerNode of [0, 4, 1.5]) assert.throws(() => invalid.generate({ kind: "preferential", nodes: invalidNodes, edgesPerNode, random: invalidRandom }));
 assert.throws(() => invalid.generate({ kind: "small-world", nodes: invalidNodes, neighbors: 2, probability: 1, random: invalidRandom, directed: undefined } as never));
 assert.throws(() => invalid.generate({ kind: "preferential", nodes: invalidNodes, edgesPerNode: 1, random: invalidRandom, directed: true } as never));
 assert.deepEqual(invalidRandom.state, before); assert.equal(invalid.edges.size, 0);
