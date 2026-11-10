@@ -19,7 +19,7 @@ export interface Store<T> {
 interface PutEntry<T> { ticket: PutRequest<T>; status: PutStatus; release: () => void }
 interface GetEntry<T> { ticket: GetRequest<T>; status: GetStatus; value: T | undefined }
 
-function add<T>(options: { capacity: number }): Store<T> {
+function create<T>(options: { capacity: number }): Store<T> {
   const settings = validateOptions(options, ["capacity"]);
   const suppliedCapacity = settings.capacity;
   if (typeof suppliedCapacity !== "number") throw new TypeError("Store capacity must be numeric.");
@@ -95,4 +95,4 @@ function add<T>(options: { capacity: number }): Store<T> {
   });
 }
 
-export const Store = Object.freeze({ add });
+export const Store = Object.freeze({ create });

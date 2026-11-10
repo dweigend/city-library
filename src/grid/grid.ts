@@ -2,7 +2,7 @@ import type { Agent } from "../agent/agent.ts";
 import { createOccupancyIndex } from "./occupancy.ts";
 import { createField, reservedFieldKeys, type Field } from "./field.ts";
 import { gridIdentity, type GridMembership } from "./membership.ts";
-import { addLayoutGrid, type LayoutGrid } from "./layout-grid.ts";
+import { createLayoutGrid, type LayoutGrid } from "./layout-grid.ts";
 import type { Layout } from "./topology/index.ts";
 export type { Field } from "./field.ts";
 export type { GridMembership } from "./membership.ts";
@@ -69,7 +69,7 @@ function create<F extends object>(
     );
   if (typeof input === "object" && input !== null && Object.hasOwn(input, "layout")) {
     if (arguments.length !== 1) throw new TypeError("Layout Grid.create accepts one options record.");
-    return addLayoutGrid<F>(input as { layout: Layout; state: F });
+    return createLayoutGrid<F>(input as { layout: Layout; state: F });
   }
   const opts = validateOptions(options, ["state", "cellSize", "boundary"]);
   const space = normalizeSpace(input as Space, opts.boundary as Space["boundary"]);
