@@ -1,0 +1,132 @@
+# Naming conventions
+
+Use a small vocabulary of clear domain nouns and precise verbs throughout City Library. The same concept has the same name in public APIs, implementation, models, examples, tests, UI and current documentation. Names describe what something means or does, without relying on its implementation history or another library.
+
+This document owns system-wide naming rules and the canonical vocabulary. [Coding standards](CODING_STANDARDS.md) own code quality, [architecture](ARCHITECTURE.md) owns responsibility boundaries and the [time and domain semantics](agent-loom/terminology.md) explain the vocabulary's behavioral distinctions. Public references describe exact delivered and target signatures; a name here does not establish implementation availability.
+
+## Status and migration
+
+The English-language, casing, domain vocabulary, explicit units and capability-based documentation rules consolidate existing requirements. The verb families, type suffixes, collection/count patterns, PascalCase Svelte component filename rule and terminology refinements below complete those requirements for the naming migration. These conventions are accepted after independent review; existing APIs are not claimed to conform yet.
+
+Migrate a public name together with its callers, exports, documentation and checks. Preserve behavior, identity, ordering, errors, random draws and accepted assertions. Record a public contract or serialized-format change explicitly. Do not retain a second alias API merely to preserve an old name. A frozen example's substantive API change needs its recorded naming decision; path changes also update integrity records without weakening assertions.
+
+## Language and vocabulary
+
+Write repository content, identifiers, UI labels and commits in English. Discussions may use German. Prefer an established domain word over an abbreviation or a generic infrastructure name. A resident or vehicle is more expressive than a generic agent when the model supplies that meaning. Preserve established scientific concepts and algorithm names.
+
+| Meaning | Canonical name |
+| --- | --- |
+| Overall project and package | City Library; `city-library` |
+| Headless modeling core | Agent Loom |
+| Browser interface | Agent Lab |
+| Executable domain model | model |
+| Parameterized series of model runs | study |
+| One execution within a study | run |
+| Model individual | `Agent`, agent |
+| Membership and execution owner | `World`, world |
+| Regular spatial topology | `Grid`, grid |
+| Grid-owned member | `Field`, field |
+| Rendered element or geometric cell dimensions | cell; `cells`, `cellSize` |
+| Connection topology | `Graph`, graph |
+| Existing object participating in a graph | node; no compulsory superclass |
+| Graph-owned connection | `Edge`, edge |
+| Explicit random stream | `Random`, random stream |
+| Initial random input | seed; distinct from continuation state |
+| One model procedure invocation | step |
+| World-owned model time | tick; `world.tick.value` |
+| Event queue and its distinct time cursor | `Agenda`, agenda time |
+| Host scheduling callback | frame or callback |
+| Initial model creation | setup or initialization |
+| Detached model data read | observation; `observe()` where defined |
+| Execution classification across member kinds | group |
+| Numeric scientific color scale | indexed palette |
+| Partial property update | changes |
+
+Use network for scientific subject matter when appropriate; use Graph for the API structure. Biological cells remain cells. The `kind` discriminant describes structural category; group describes execution classification. species describes a biological distinction. Broad words such as simulation and experiment remain useful in prose, but do not introduce competing types for World, model or study. The study namespace is `studies`; model execution within a study uses `StudyModel` and operation choices use `StudyOptions`. These are migration targets, not claims about current exports.
+
+| Do not use as a competing system name | Use instead |
+| --- | --- |
+| turtle, patch, link for domain members | agent, field, edge |
+| environment or simulation for the membership owner | world |
+| breed for general execution classification | group |
+| experiment for model selection or the study API | model or study according to the task |
+| opaque phase codes and source-project abbreviations | the actual capability |
+| `numAgents` and other `num*` count keys | `agentCount` and the corresponding singular noun plus `Count` |
+
+## Spelling and structure
+
+| Element | Convention | Example |
+| --- | --- | --- |
+| Variables, properties, parameters, functions and methods | `camelCase` | `agentCount`, `observe`, `addEdge` |
+| Types, interfaces, classes and component symbols | `PascalCase` | `StudySpec`, `GraphView` |
+| Ordinary modules, folders and model slugs | `kebab-case` | `indexed-palette.ts`, `traffic-basic` |
+| Svelte component files | `PascalCase.svelte` | `GraphView.svelte` |
+| Tests | capability name plus `.test.ts` | `graph-connectivity.test.ts` |
+| Package scripts and CLI flags | lowercase kebab-case; script groups may use `:` | `examples:quad-layouts`, `--quad-layouts` |
+| Stable string discriminants | lowercase kebab-case | `fixed-priority` |
+| CSS classes and custom properties owned here | kebab-case and semantic meaning | `model-controls`, `--text-muted` |
+
+Use `Id`, `Url` and `Xml` inside compound identifiers: `agentId`, `sourceUrl`, `originalXml`. Preserve `UI` as an established public acronym exception, including `defineUI` and `UISpec`; do not migrate it to `Ui`. Standalone platform types and required external protocol spellings retain their actual names. Module-level constants may use `UPPER_SNAKE_CASE`; local values use descriptive camelCase. Do not rename existing module constants merely to change between these accepted spellings. Keep required tool entry filenames, `index.ts`, `model.ts`, `ui.ts` and established repository entry documents such as `README.md` and `AGENTS.md`.
+
+Name files and directories after a capability or domain responsibility. Avoid opaque delivery-phase codes, source-project abbreviations, temporary review labels and names such as `new`, `next`, `old` or `legacy`. Use meaningful algorithm/variant names where behaviors differ. Do not add empty folders or rename scientific models merely to make their names generic.
+
+## Objects, collections and values
+
+Use a singular noun for one object (`agent`) and a plural noun for a collection (`agents`). Discrete counts use `<singularNoun>Count`; other quantities name the measured quantity and unit, such as `totalDistanceMiles` or `populationSize`. Use `agentCount` for a count and `edgesPerNode` for a per-item quantity. Public `num*` input and observation keys migrate with their controls, serialization consumers and assertions; this is an explicit public-key change, not an internal variable cleanup. Name indexes and mappings for their lookup relationship when it helps: `agentsById`, `fieldIndex`. Avoid duplicating information already clear from a small local context.
+
+Use positive boolean names that read as a statement: `isActive`, `hasCapacity`, `canMove`. Predicate functions use the same form. Domain attributes may use an established adjective, such as `directed`; do not add a prefix mechanically. Avoid negative flags and ambiguous boolean arguments.
+
+Use `id` within its unambiguous owner and qualify references such as `agentId`. Identity, collection index and display label are different concepts. Include units where callers could confuse them (`durationMs`, `distanceMeters`); document abstract units explicitly. Do not imply that tick, step, frame or agenda time share a unit. Name meaningful thresholds, amounts, radii, angles and limits; equal literals with different meanings remain separate concepts.
+
+## Operations
+
+| Verb | Meaning |
+| --- | --- |
+| `create` | Construct a new value or object; state whether it also joins an owner. |
+| `add` | Join an existing owner or collection. |
+| `delete` | Remove membership or terminate an owned entity according to its lifecycle contract. |
+| `get` | Retrieve a value according to its documented absence/error contract. |
+| `find` | Search for a matching value; absence is an expected outcome. |
+| `set` | Assign the named value or property. |
+| `update` | Apply an explicit change to an existing value. |
+| `clear` | Empty the named collection or owned contents. |
+| `reset` | Restore a documented initial condition; never imply reconstruction without a reset contract. |
+| `observe` | Read detached model observations without changing model state. |
+| `compute` | Derive a result without changing caller-visible state; choose a mutation verb for an operation that changes state. |
+| `validate` / `parse` | Check an input contract / interpret a representation. |
+| `encode` / `decode` | Convert to / from a declared representation. |
+
+Static factories migrate from `Type.add(...)` to `Type.create(...)`; instance `world.add(component)` retains its membership meaning. This is a coordinated public-contract naming change, with no change to construction or registration behavior.
+
+Prefer a precise domain verb when it says more, such as `diffuse`, `route` or `advance`. Keep public commands and their UI actions semantically aligned. Labels use short ordinary English, such as “Add agent” and “Run”; accessible names preserve the same action and subject. Do not force getters, setters or wrappers around every property to satisfy a naming pattern.
+
+## Types and state
+
+Use a suffix only when it distinguishes a real role. Do not generate parallel types for every suffix.
+
+| Name | Meaning |
+| --- | --- |
+| `Options` | Optional choices for a specific operation. |
+| `Parameters` | Domain inputs to a model or study. |
+| `Spec` | Declarative description interpreted or bound by an operation. |
+| `State` | Explicit state with a documented owner and lifecycle. |
+| `Snapshot` | Detached capture of declared state; no implied complete continuation. |
+| `Observation` | Detached model output for inspection or measurement. |
+| `Result` | Output of an operation when a more precise domain noun is unavailable. |
+| `Data` | Plain transport or presentation representation, where that distinction matters. |
+
+Avoid using Config and Options interchangeably. Prefer Options for operation choices and Spec for declarative descriptions; retain Config only where a separately defined persistent configuration role is necessary. Avoid automatic `I` interface prefixes, `Impl` suffixes and vague Manager/Helper/Utils containers. Types live with their semantic owner. Local `ModelAgent` and `ModelField` types are permitted when imported core types already use Agent and Field.
+
+## Profiles, formats and source records
+
+Name an algorithm variant or profile for its precise behavior, with a version only when that behavior needs versioning. Define seed handling, draw consumption, ordering and distributions before choosing a random profile name. Active profile names and discriminants must not use external brands, historical phase names, `legacy` or `compatibility` as their identity. Never disguise an unresolved contract with `standard` or `compatible`. Analyze the implementation and promised behavior before selecting the replacement; a familiar algorithm name alone may omit seed, distribution or ordering rules. A format identifier describes an actual representation; renaming it requires an explicit format migration.
+
+Current product language, API names, examples and reader guides use the system's own vocabulary. Only dependency package names and import paths retain their required spellings. External protocol field spellings remain confined to explicit representation boundaries. Own profiles, discriminants, format identifiers, options and paths never use an external library or brand name; source identity lives only in dedicated source/evidence records. Required attribution, licenses, original source titles and URLs, raw fixtures, quotations and immutable verification records retain their accurate identities in dedicated source or evidence records. Do not falsify those records to make a text search empty. Keep source identity under `models/<slug>/source.*`, `models/<slug>/NOTICE.md`, catalog research/source records and explicit source-reference documents; keep recorded verification under model `evidence/` and Lab `acceptance/` records or a fixed-revision archive. These are evidence boundaries, not exemptions for current executable API names or ordinary reader prose. Preserve frozen artifact bytes and integrity hashes; migrate references or add explicit path or key mappings instead of rewriting recorded results. Current guides link to those records when needed and define behavior locally rather than through another library's documentation.
+
+## Review checklist
+
+- Does the name express one clear concept using the canonical vocabulary?
+- Do its casing, number, verb and type role match its meaning?
+- Can a reader understand the name without knowing a former project or delivery phase?
+- Do API, model, UI, examples, tests and documentation use the same concept consistently?
+- Are behavior, public contracts, format boundaries and required source records preserved or explicitly migrated?

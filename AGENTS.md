@@ -9,7 +9,7 @@
 - Follow [domain layout](docs/ARCHITECTURE.md#binding-domain-layout-and-extension-rules): separate kernels, algorithms and explicit variants; preserve phase-one APIs. Create directories and source/exports only with working slices; planned layout is not delivered functionality.
 - Follow [UI rules](docs/DESIGN.md#binding-ui-system-rules) without exceptions: minimal Svelte/shadcn-svelte, Bits UI for necessary custom interactions, encapsulated modules/components, external CSS, fixed system tokens, `app.css` ≤100 physical lines, simple public `ui.ts` scripts, KISS/YAGNI. Test every UI change in a real browser, capture screenshots and have an independent subagent inspect them; resolve findings before acceptance.
 
-- Use the binding [Agent Loom terminology](docs/agent-loom/terminology.md) across APIs, code, examples, tests, UI and current documentation. Preserve source quotations and distinct tick/step semantics.
+- Follow the system-wide [naming conventions](docs/NAMING_CONVENTIONS.md) across APIs, code, examples, tests, UI and current documentation. The [domain and time semantics](docs/agent-loom/terminology.md) explain behavioral distinctions.
 
 ## Code quality and refactoring
 
@@ -22,3 +22,5 @@
 - The coordinator orchestrates sequencing, integration and evidence; scoped subagents or implementation threads perform implementation. Preserve concurrent work.
 - Use Antigravity `gemini-3.8-flash` for independent substantial design/transfer reviews. Confirm provider/model availability; never substitute silently. Record findings/responses separately from independent approval.
 - Consult `gpt-6-astra` with high reasoning only for deep logical analysis, never routine implementation/review.
+
+The naming migration contracts recorded in [PLAN](PLAN.md#naming-migration-contracts) are the sole authorized exception to existing API-name preservation rules. Preserve behavior, executable assertions, identity, ordering and random sequences; migrate names and consumers together.

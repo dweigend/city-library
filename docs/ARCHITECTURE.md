@@ -1,10 +1,14 @@
 # System architecture
 
+The [naming migration contracts](../PLAN.md#naming-migration-contracts) authorize only their recorded naming changes as an exception to API-name preservation rules in this document, including static factory names and target study entries. Preserve behavior, assertions, identity, ordering and random sequences; migrate consumers together.
+
 A model should remain understandable when you remove its UI. City Library therefore keeps domain rules, state and execution in a headless library. Applications read observations and call public actions; they do not become a second model.
 
 A graph can work without coordinates, a field calculation without agents, and a generator without a running world. The caller chooses how to combine them.
 
 This document defines the required architecture, including parts still to be built. [PLAN](../PLAN.md) tracks available capabilities and next goals; the [Agent Loom specification](agent-loom/README.md) defines detailed target contracts. The current public package exposes its root entry only.
+
+Use the system-wide [naming conventions](NAMING_CONVENTIONS.md) for domains, public contracts and module names.
 
 ## Reading this document
 
