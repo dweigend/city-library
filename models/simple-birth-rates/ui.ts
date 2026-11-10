@@ -22,7 +22,7 @@ export const ui = defineUI(model, {
       label: "Advance population",
       run: (m) => m.advanceUntilRestart(),
       repeat: {
-        label: "Repeat experiment",
+        label: "Repeat population step",
         intervalMs: 100,
       },
     },
@@ -75,7 +75,7 @@ export const ui = defineUI(model, {
     },
     {
       type: "table",
-      label: "Experiment output",
+      label: "Population output",
       rows: (s) =>
         s.output.map((message) => ({
           message,
