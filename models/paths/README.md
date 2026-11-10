@@ -1,4 +1,4 @@
-# Paths
+# Path Formation
 
 How do footpaths form across a lawn? Walkers head toward random destinations. Every step they take makes the ground a little more popular (`popularityPerStep`), and popularity fades over time (`popularityDecayRate`). Walkers prefer nearby popular ground within `walkerVisionDist`, and ground that passes `minimumRoutePopularity` becomes a path.
 
@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Paths** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Path Formation** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

@@ -83,13 +83,8 @@ export const ui = defineUI(model, {
     },
     {
       type: "table",
-      label: "Best strategy",
-      rows: (s) =>
-        s.bestChromosome.map((a, i) => ({
-          state: i,
-          action: a,
-          symbol: actionSymbol(a),
-        })),
+      label: "Best strategy · action per situation",
+      rows: bestStrategyRows,
     },
     {
       type: "table",
@@ -100,6 +95,22 @@ export const ui = defineUI(model, {
 });
 
 type UIObservation = Observation<typeof model>;
+
+/**
+ * Each gene answers one situation, encoded in base 3 as north, east, south, west, here
+ * (0 empty, 1 can, 2 wall). Situations with a wall on Robby's own cell cannot occur.
+ */
+function bestStrategyRows(s: UIObservation) {
+  const site = ["empty", "can", "wall"] as const;
+  return s.bestChromosome.flatMap((action, situation) => {
+    const sense = (place: number) => site[Math.floor(situation / place) % 3]!;
+    if (sense(1) === "wall") return [];
+    return [{
+      north: sense(81), east: sense(27), south: sense(9), west: sense(3), here: sense(1),
+      action: `${actionSymbol(action)} ${action}`,
+    }];
+  });
+}
 
 function robbyEnvironmentData(s: UIObservation): SpatialData {
   return {

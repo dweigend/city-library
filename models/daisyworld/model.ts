@@ -116,10 +116,17 @@ export function create(options: Partial<Parameters> = {}) {
   });
   world.add(grid);
   const population = () => world.agents as readonly Daisy[];
-  const at = (f: (typeof grid.fields)[number]) =>
-    grid.agentsAt(f, {
-      source: population(),
-    });
+  // Daisies never move and each field holds at most one, so a field-keyed index
+  // gives the same answer as scanning the population for every field.
+  const daisyByField = new Map<string, Daisy>();
+  const at = (f: (typeof grid.fields)[number]): readonly Daisy[] => {
+    const daisy = daisyByField.get(f.id);
+    return daisy ? [daisy] : [];
+  };
+  function removeDaisy(daisy: Daisy) {
+    daisyByField.delete(grid.fieldAt(daisy)!.id);
+    daisy.delete();
+  }
   const history: {
     tick: number;
     blackDaisyCount: number;
@@ -157,6 +164,7 @@ export function create(options: Partial<Parameters> = {}) {
       },
     );
     world.add(a);
+    daisyByField.set(f.id, a as Daisy);
     return a;
   }
   for (const [kind, count] of [
@@ -210,7 +218,7 @@ export function create(options: Partial<Parameters> = {}) {
     })) {
       a.age++;
       if (a.age >= 25) {
-        a.delete();
+        removeDaisy(a);
         continue;
       }
       const f = grid.fieldAt(a)!;
@@ -255,12 +263,12 @@ export function create(options: Partial<Parameters> = {}) {
       });
       if (!f) throw new RangeError("No field.");
       const existing = at(f);
-      if (mode === "remove") for (const a of existing) a.delete();
+      if (mode === "remove") for (const a of existing) removeDaisy(a);
       else if (existing.length === 0)
         sprout(f, mode === "add-black" ? "black" : "white");
     },
     removeAllDaisies() {
-      for (const a of [...population()]) a.delete();
+      for (const a of [...population()]) removeDaisy(a);
     },
     setRules(
       rules: Partial<Omit<Parameters, "seed" | "initialBlackDaisyCount" | "initialWhiteDaisyCount">>,
@@ -324,8 +332,7 @@ export function create(options: Partial<Parameters> = {}) {
 }
 export const model = {
   title: "Daisyworld",
-  description:
-    "Local albedo feedback, thermal diffusion and daisy populations. Wilensky (2006), CC BY-NC-SA 3.0.",
+  description: "Black and white daisies change how much sunlight is absorbed and so regulate the planet's temperature. Wilensky (2006), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<Parameters, ReturnType<typeof create>>;

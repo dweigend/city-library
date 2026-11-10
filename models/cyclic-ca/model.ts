@@ -212,9 +212,8 @@ export function create(options: Partial<CyclicParameters> = {}) {
   };
 }
 export const model = {
-  title: "Cyclic CA",
-  description:
-    "Successor-state competition on cached periodic neighborhoods. Wilensky (2025), CC BY-NC-SA 3.0.",
+  title: "Cyclic Cellular Automaton",
+  description: "Each cell advances to the next color when enough neighbors already have it, forming spiral waves. Wilensky (2025), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<CyclicParameters, ReturnType<typeof create>>;

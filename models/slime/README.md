@@ -1,4 +1,4 @@
-# Slime
+# Slime Mold Aggregation
 
 Can cells gather into clumps without a leader cell? Each cell leaves a chemical that spreads and fades. It sniffs ahead and to both sides within `sniffAngle` and turns toward the strongest scent if it exceeds `sniffThreshold`; otherwise it wiggles randomly.
 
@@ -11,7 +11,7 @@ Things to try:
 
 ## Use
 
-Choose **Slime** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Slime Mold Aggregation** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

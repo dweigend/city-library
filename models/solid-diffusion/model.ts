@@ -153,8 +153,7 @@ export function create(options: Partial<SolidParameters> = {}) {
 }
 export const model = {
   title: "Solid Diffusion",
-  description:
-    "Vacancy-mediated atomic exchange · Uri Wilensky · CC BY-NC-SA 3.0",
+  description: "Atoms swap places with vacancies, slowly mixing two metals. Uri Wilensky, CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<SolidParameters, ReturnType<typeof create>>;

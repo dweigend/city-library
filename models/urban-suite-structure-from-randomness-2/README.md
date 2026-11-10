@@ -1,4 +1,4 @@
-# Urban Suite - Structure from Randomness 2
+# Structure from Random Thresholds
 
 Can random fluctuations leave a lasting mark? Each cell holds a potential. In each step it averages its potential with its four neighbors and adds random signed noise. A cell whose potential passes `threshold` becomes active and stays active for good, even if its potential later falls.
 
@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Urban Suite - Structure from Randomness 2** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Structure from Random Thresholds** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

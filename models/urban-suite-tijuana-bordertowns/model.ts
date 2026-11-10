@@ -1992,9 +1992,8 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
   };
 }
 export const model = {
-  title: "Urban Suite - Tijuana Bordertowns",
-  description:
-    "Road generation, settlement, infrastructure and household economics.",
+  title: "Border Town Settlement",
+  description: "Migrants build roads and homes near compatriots and services as a border town grows.",
   inputs,
   create,
 } satisfies Definition<TijuanaParameters, TijuanaModel>;

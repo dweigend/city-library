@@ -78,6 +78,6 @@ export function create(options: Partial<HeatParameters> = {}) {
 }
 export const model = {
   title: "Neighborhood Heat Intervention",
-  description: "Illustrative synchronous exchange and shade cooling in abstract index units; no temperature forecast.", inputs,
+  description: "Heat is exchanged between city blocks while shade cools selected blocks. Abstract index units.", inputs,
   create,
 } satisfies Definition<HeatParameters, ReturnType<typeof create>>;

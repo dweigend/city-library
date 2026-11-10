@@ -153,7 +153,7 @@ export function create(options: Partial<SlimeParameters> = {}) {
     setParameters,
   };
 }
-export const model = { title: "Slime", inputs, create } satisfies Definition<
+export const model = { title: "Slime Mold Aggregation", description: "Cells follow and release a chemical signal, gathering into clusters.", inputs, create } satisfies Definition<
   SlimeParameters,
   ReturnType<typeof create>
 >;

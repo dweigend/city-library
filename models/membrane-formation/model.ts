@@ -75,10 +75,28 @@ export function create(options: Partial<MembraneParameters> = {}) {
       partner.hydrophilic = true;
     }
   }
+  /** Positions of the population during one `go` sweep; only the active molecule moves. */
+  let sweepPositions: Map<Molecule, { x: number; y: number }> | undefined;
+  /** Cheap wrapped bounding-box prefilter. It keeps world order and every molecule
+   * that `neighbors` could accept, so the exact radius test and random draws are unchanged. */
+  function moleculesNear(molecule: Molecule, radius: number) {
+    const worldSize = 51;
+    const wrappedOffset = (a: number, b: number) => {
+      const offset = Math.abs(a - b) % worldSize;
+      return Math.min(offset, worldSize - offset);
+    };
+    const bound = radius + 1e-9;
+    const { x, y } = molecule;
+    const population = sweepPositions ? [...sweepPositions.keys()] : molecules();
+    return population.filter((candidate) => {
+      const position = sweepPositions?.get(candidate) ?? candidate;
+      return wrappedOffset(position.x, x) <= bound && wrappedOffset(position.y, y) <= bound;
+    });
+  }
   function interactWithNeighbor(molecule: Molecule) {
     const near = random.sample(
       molecule
-        .neighbors({ radius: 4, source: molecules() })
+        .neighbors({ radius: 4, source: moleculesNear(molecule, 4) })
         .filter((candidate) => !graph.hasEdge(molecule, candidate)),
     )[0];
     if (!near) return;
@@ -91,7 +109,7 @@ export function create(options: Partial<MembraneParameters> = {}) {
   }
   function repelTooCloseNeighbor(molecule: Molecule) {
     const near = random.sample(
-      molecule.neighbors({ radius: 1.3, source: molecules() }),
+      molecule.neighbors({ radius: 1.3, source: moleculesNear(molecule, 1.3) }),
     )[0];
     if (!near) return;
     molecule.rotate({ towards: near });
@@ -113,7 +131,7 @@ export function create(options: Partial<MembraneParameters> = {}) {
         // source model in-radius includes self. Its denominator excludes only the linked partner.
         const neighbors = [
           oil,
-          ...oil.neighbors({ radius: 4, source: molecules() }),
+          ...oil.neighbors({ radius: 4, source: moleculesNear(oil, 4) }),
         ];
         const numerator = neighbors.filter(
           (molecule) => molecule.group === "oil",
@@ -133,13 +151,20 @@ export function create(options: Partial<MembraneParameters> = {}) {
     if (history.length > 1001) history.splice(1, 1);
   }
   function go() {
-    for (const molecule of random.sample(molecules(), {
-      sampleCount: molecules().length,
-      algorithm: "fisher-yates-descending",
-    })) {
-      interactWithNeighbor(molecule);
-      repelTooCloseNeighbor(molecule);
-      interactWithPartner(molecule);
+    const population = molecules();
+    sweepPositions = new Map(population.map((molecule) => [molecule, { x: molecule.x, y: molecule.y }]));
+    try {
+      for (const molecule of random.sample(population, {
+        sampleCount: population.length,
+        algorithm: "fisher-yates-descending",
+      })) {
+        interactWithNeighbor(molecule);
+        repelTooCloseNeighbor(molecule);
+        interactWithPartner(molecule);
+        sweepPositions.set(molecule, { x: molecule.x, y: molecule.y });
+      }
+    } finally {
+      sweepPositions = undefined;
     }
   }
   function advance(stepCount = 1) {
@@ -216,6 +241,7 @@ export function create(options: Partial<MembraneParameters> = {}) {
 }
 export const model = {
   title: "Membrane Formation",
+  description: "Lipid molecules with water-loving heads and water-avoiding tails assemble into membranes.",
   inputs,
   create,
 } satisfies Definition<MembraneParameters, ReturnType<typeof create>>;

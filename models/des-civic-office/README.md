@@ -1,4 +1,4 @@
-# DES Civic Office
+# Civic Office Queue
 
 How long do residents wait at a service desk? Residents queue at a civic office and are served first come, first served by `clerkCount` clerks, each service taking `serviceMinutes`. Each step advances one minute and handles every event due in it. You can add residents and change the number of clerks during a run; removing a clerk lets the current service finish.
 
@@ -11,7 +11,7 @@ Things to try:
 
 ## Use
 
-Choose **DES Civic Office** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Civic Office Queue** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

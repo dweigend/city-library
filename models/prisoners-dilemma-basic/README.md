@@ -1,4 +1,4 @@
-# Prisoner's Dilemma Basic
+# Prisoner's Dilemma
 
 Why can two sensible choices lead to a bad result for both? You and a partner are questioned separately and each either stays silent or confesses. A fixed payoff table gives each of you a prison sentence for the four combinations. Choose your answer and the partner's (or let it be random when `partnerSilenceKnown` is off), then compare the sentences.
 
@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Prisoner's Dilemma Basic** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Prisoner's Dilemma** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

@@ -119,9 +119,8 @@ export function create(options: Partial<VantsParameters> = {}) {
   };
 }
 export const model = {
-  title: "Vants",
-  description:
-    "Reversible ordered virtual ants on a binary tape. Wilensky (2005), CC BY-NC-SA 3.0.",
+  title: "Virtual Ants",
+  description: "Ants flip the cells they visit and turn depending on the color, tracing intricate patterns. Wilensky (2005), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<VantsParameters, ReturnType<typeof create>>;

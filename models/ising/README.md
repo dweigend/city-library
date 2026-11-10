@@ -1,4 +1,4 @@
-# Ising
+# Ising Model
 
 How does heat compete with the tendency of magnets to align? Every cell holds a spin, up or down. The model repeatedly picks a random cell and proposes to flip it. A flip that lowers the energy with its four neighbors is always accepted; one that raises it is accepted with a chance that grows with `temperature`. Magnetization measures how many spins point the same way.
 
@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Ising** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Ising Model** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

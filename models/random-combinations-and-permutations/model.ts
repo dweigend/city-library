@@ -269,8 +269,7 @@ export function create(options: Partial<Parameters> = {}) {
 }
 export const model = {
   title: "Random Combinations and Permutations",
-  description:
-    "User-set patterns and random ordered / unordered matches. Wilensky (2004), CC BY-NC-SA 3.0.",
+  description: "Random draws are compared with a chosen pattern, with or without regard to order. Wilensky (2004), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<Parameters, ReturnType<typeof create>>;

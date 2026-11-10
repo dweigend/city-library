@@ -215,8 +215,7 @@ export function create(options: Partial<Parameters> = {}) {
 }
 export const model = {
   title: "Central Limit Theorem",
-  description:
-    "Finite populations, sampling without replacement and sample means. Wilensky (2005), CC BY-NC-SA 3.0.",
+  description: "Repeated samples from a population produce sample means that pile up into a bell shape. Wilensky (2005), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<Parameters, ReturnType<typeof create>>;

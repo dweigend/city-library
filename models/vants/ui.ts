@@ -24,7 +24,7 @@ export const ui = defineUI(model, {
   views: [
     {
       type: "spatial",
-      label: "Vants",
+      label: "Virtual Ants · view grows with the trail",
       data: vantsData,
     },
     {
@@ -37,19 +37,39 @@ export const ui = defineUI(model, {
 
 type UIObservation = Observation<typeof model>;
 
+/**
+ * The trail grows from the centre over thousands of steps. The view frames the visited
+ * area plus a margin (at least 41 cells) and widens to the whole world as the trail grows.
+ */
 function vantsData(state: UIObservation): SpatialData {
+  const reach = Math.max(
+    0,
+    ...state.cells.filter((cell) => cell.on).map((cell) => Math.max(Math.abs(cell.x), Math.abs(cell.y))),
+    ...state.agents.map((agent) => Math.max(Math.abs(agent.x), Math.abs(agent.y))),
+  );
+  const wanted = Math.max(minimumFrame, 2 * Math.ceil(reach + frameMargin) + 1);
+  const width = Math.min(state.width, wanted);
+  const height = Math.min(state.height, wanted);
   return {
-    width: state.width,
-    height: state.height,
-    cells: state.cells.map((cell) => ({
+    width,
+    height,
+    cells: state.cells.filter((cell) => Math.abs(cell.x) <= width / 2 && Math.abs(cell.y) <= height / 2).map((cell) => ({
       ...cell,
       color: cell.on ? "#000000" : "#ffffff",
     })),
     agents: state.agents.map((agent) => ({
       ...agent,
       color: "#d73027",
-      size: 8,
+      // Grows with the zoom so an ant stays about one cell wide.
+      size: Math.max(minimumAntSize, Math.min(maximumAntSize, (minimumAntSize * state.width) / width / 2)),
       shape: "triangle" as const,
     })),
   };
 }
+
+// Odd cell counts keep the centre cell centred; the margin keeps the ants in view.
+const minimumFrame = 41;
+const frameMargin = 6;
+// CSS-pixel ant symbol bounds: the full-world size and the closest-zoom size.
+const minimumAntSize = 8;
+const maximumAntSize = 18;

@@ -1,4 +1,4 @@
-# CA Continuous
+# Continuous Cellular Automaton
 
 What happens when a cellular rule works with real numbers instead of bits? Each cell holds a value. The next row takes the average of a cell and its two neighbors, adds `addConstant` and keeps only the fractional part, at the chosen `precisionLevel`.
 
@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **CA Continuous** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Continuous Cellular Automaton** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

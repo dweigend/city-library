@@ -157,9 +157,8 @@ export function create(options: Partial<SandParameters> = {}) {
   };
 }
 export const model = {
-  title: "Sand",
-  description:
-    "Synchronous falling sand rules · Uri Wilensky · CC BY-NC-SA 3.0",
+  title: "Falling Sand",
+  description: "Grains fall and slide off one another, piling up into heaps. Uri Wilensky, CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<SandParameters, ReturnType<typeof create>>;

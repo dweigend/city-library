@@ -1,4 +1,4 @@
-# Traffic Basic
+# Traffic on One Lane
 
 Can a traffic jam appear with no obstacle on the road? Cars drive one behind the other around a closed loop. Each car speeds up by `acceleration` when the road ahead is free and slows down by `deceleration` when a car is close ahead.
 
@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Traffic Basic** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Traffic on One Lane** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

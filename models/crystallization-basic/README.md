@@ -1,4 +1,4 @@
-# Crystallization Basic
+# Crystallization
 
 How do crystal grains form as metal cools? Atoms start hot (`initMetalTemp`) with random orientations and cool toward `roomTemp`. Once an atom is below `meltingTemp` and touches solid neighbors, it aligns with them and freezes. Separate seeds of solid lead to grains with different orientations and boundaries between them.
 
@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Crystallization Basic** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Crystallization** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

@@ -175,8 +175,7 @@ export function create(options: Partial<FirefliesParameters> = {}) {
 }
 export const model = {
   title: "Fireflies",
-  description:
-    "Mobile pulse coupling with delayed recoloring. Wilensky (1997), CC BY-NC-SA 3.0.",
+  description: "Fireflies reset their flashing clocks when neighbors flash and gradually synchronize. Wilensky (1997), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<FirefliesParameters, ReturnType<typeof create>>;

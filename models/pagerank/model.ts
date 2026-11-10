@@ -355,8 +355,7 @@ export function create(options: Partial<Parameters> = {}) {
 }
 export const model = {
   title: "PageRank",
-  description:
-    "Directed rank diffusion and cumulative random-surfer visits. Stonedahl & Wilensky (2009), CC BY-NC-SA 3.0.",
+  description: "Rank flows along links between web pages; a random surfer counts visits. Stonedahl & Wilensky (2009), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<Parameters, ReturnType<typeof create>>;

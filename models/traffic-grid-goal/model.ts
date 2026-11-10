@@ -458,9 +458,8 @@ export function create(options: Partial<TrafficParameters> = {}) {
 }
 
 export const model = {
-  title: "Traffic Grid Goal",
+  title: "Traffic Grid with Destinations",
   inputs,
   create,
-  description:
-    "Local destination-seeking cars with source-specific signal and following rules. Wilensky (2008), CC BY-NC-SA 3.0.",
+  description: "Cars travel between home and work through a grid of signalized streets. Wilensky (2008), CC BY-NC-SA 3.0.",
 } satisfies Definition<TrafficParameters, ReturnType<typeof create>>;

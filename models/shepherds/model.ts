@@ -270,8 +270,7 @@ export function create(options: Partial<Parameters> = {}) {
 }
 export const model = {
   title: "Shepherds",
-  description:
-    "Canonical sheep pickup, herd search and delayed release. Wilensky (1998), CC BY-NC-SA 3.0.",
+  description: "Shepherds pick up sheep and drop them near other sheep, gradually forming herds. Wilensky (1998), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<Parameters, ReturnType<typeof create>>;

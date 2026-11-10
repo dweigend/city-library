@@ -109,8 +109,7 @@ export function create(options: Partial<Parameters> = {}) {
 }
 export const model = {
   title: "Stochastic Patchwork",
-  description:
-    "Independent colored fields and the distribution of sample means. Abrahamson and Wilensky (2004), CC BY-NC-SA 3.0.",
+  description: "Randomly colored squares form a population whose sample averages are collected. Abrahamson and Wilensky (2004), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<Parameters, ReturnType<typeof create>>;

@@ -1,4 +1,4 @@
-# Fire
+# Forest Fire
 
 How dense must a forest be for a fire to cross it? Trees fill the grid randomly with `density` percent. The fire starts at the left edge. Each step, the trees burning at its start ignite their four direct neighbors, then turn into fading embers. Empty cells stop the fire.
 
@@ -11,7 +11,7 @@ Things to try:
 
 ## Use
 
-Choose **Fire** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Forest Fire** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

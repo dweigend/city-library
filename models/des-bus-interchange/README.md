@@ -1,4 +1,4 @@
-# DES Bus Interchange
+# Bus Interchange
 
 How do travel routes and limited berths shape bus departures? Buses travel to an interchange along the cheapest route in a small weighted network, then wait for one of `berthCount` berths and stay there for `dwellMinutes`. The model keeps two clocks: the world step count and the event time in minutes.
 
@@ -11,7 +11,7 @@ Things to try:
 
 ## Use
 
-Choose **DES Bus Interchange** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Bus Interchange** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

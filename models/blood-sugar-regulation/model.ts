@@ -372,6 +372,7 @@ export function create(options: Partial<BloodSugarParameters> = {}) {
 }
 export const model = {
   title: "Blood Sugar Regulation",
+  description: "Insulin and glucagon from the pancreas push blood glucose back toward a healthy level.",
   inputs,
   create,
 } satisfies Definition<BloodSugarParameters, ReturnType<typeof create>>;

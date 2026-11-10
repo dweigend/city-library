@@ -464,7 +464,8 @@ export function create(options: Partial<TravelParameters> = {}) {
   };
 }
 export const model = {
-  title: "epiDEM Travel and Control",
+  title: "Epidemic Travel and Control",
+  description: "Travel and social links spread an infection; isolation, hospitals and vaccination slow it.",
   inputs,
   create,
 } satisfies Definition<TravelParameters, ReturnType<typeof create>>;

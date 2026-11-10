@@ -212,6 +212,7 @@ export function create(options: Partial<Parameters> = {}) {
 }
 export const model = {
   title: "Peppered Moths",
+  description: "Birds eat moths that stand out against changing bark, shifting the light/dark balance.",
   inputs,
   create,
 } satisfies Definition<Parameters, ReturnType<typeof create>>;

@@ -31,10 +31,10 @@ export const ui = defineUI(model, {
     { label: "Trial", value: (s) => s.trialNumber },
     { label: "Dark offspring", value: (s) => s.darkOffspringCount },
     { label: "Light offspring", value: (s) => s.lightOffspringCount },
-    { label: "Dark ratio", value: (s) => s.darkRatioValue },
+    { label: "Dark ratio", value: (s) => s.darkRatioValue, format: (value: number | string) => (typeof value === "number" ? value.toFixed(2) : value) },
     { label: "Light ratio", value: (s) => s.lightRatioValue },
     { label: "Genotype", value: (s) => s.selectedGenotype ?? "Select a mouse" },
-    { label: "Message", value: (s) => s.message },
+    { label: "Message", value: (s) => s.message || "—" },
   ],
   views: [
     {

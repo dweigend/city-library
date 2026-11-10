@@ -60,9 +60,9 @@ export function membershipNodes(state: Observation<typeof model>): readonly Grap
   });
 }
 
-const RESIDENT_SPACING = 32;
+const RESIDENT_SPACING = 56;
 const PLACE_COLUMN_OFFSET = 170;
-const PLACE_ROW_OFFSET = 85;
+const PLACE_ROW_OFFSET = 110;
 const RESIDENT_SIZE = 16;
 const PLACE_SIZE = 30;
 const RESIDENT_COLOR = indexedColor(75);

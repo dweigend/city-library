@@ -475,6 +475,7 @@ export function create(options: Partial<ChloroplastParameters> = {}) {
 }
 export const model = {
   title: "Chloroplasts and Food",
+  description: "Light, water and carbon dioxide drive simplified chloroplast reactions that make sugar.",
   inputs,
   create,
 } satisfies Definition<ChloroplastParameters, ReturnType<typeof create>>;

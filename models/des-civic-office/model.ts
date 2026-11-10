@@ -70,4 +70,4 @@ export function create(options: Partial<OfficeParameters> = {}) {
     },
   };
 }
-export const model = { title: "DES Civic Office", description: "A finite morning queue, FIFO desks and explicit capacity changes. Minutes; synthetic scenario.", inputs, create } satisfies Definition<OfficeParameters, ReturnType<typeof create>>;
+export const model = { title: "Civic Office Queue", description: "Residents queue for a limited number of service desks during one morning.", inputs, create } satisfies Definition<OfficeParameters, ReturnType<typeof create>>;

@@ -1,4 +1,4 @@
-# Traffic Grid Goal
+# Traffic Grid with Destinations
 
 Do commuters with destinations behave differently from cars that just circle? Each car has a home and a workplace on the street grid. It moves toward its current goal, choosing locally which way to turn, and switches goal when it arrives. Traffic lights and car-following work as in Traffic Grid.
 
@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Traffic Grid Goal** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Traffic Grid with Destinations** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

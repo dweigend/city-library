@@ -41,6 +41,6 @@ export function create() {
 
 export const model = {
   title: "Neighborhood Heat",
-  description: "Face diffusion on nine equal-capacity fields; no calibrated temperature forecast.",
+  description: "Heat spreads from one hot field to its neighbors in a 3×3 block. Illustrative reference.",
   inputs: {}, create,
 } satisfies Definition<Record<string, never>, ReturnType<typeof create>>;

@@ -135,8 +135,7 @@ export function create(options: Partial<Parameters> = {}) {
 }
 export const model = {
   title: "Birthdays",
-  description:
-    "Rooms of 23 people and matching birthdays. Uri Wilensky (2004), CC BY-NC-SA 3.0.",
+  description: "Each room holds 23 people; count how often two of them share a birthday. Uri Wilensky (2004), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<Parameters, ReturnType<typeof create>>;

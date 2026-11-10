@@ -11,10 +11,19 @@ export const ui = defineUI(model, {
   ],
   views: [
     { type: "spatial", label: "District allocation patches", data: scene },
-    { type: "bar", label: "District allocation", yAxis: { unit: "allocation units" }, series: (state) => [
-      { label: "Demand", points: state.districts.map((district) => ({ x: district.name, y: district.demand })) },
-      { label: "Supplied", points: state.districts.map((district) => ({ x: district.name, y: district.supplied })) },
+    { type: "bar", label: "District allocation", xAxis: { label: "District" }, yAxis: { unit: "allocation units" }, series: (state) => [
+      { label: "Demand", points: state.districts.map((district, index) => ({ x: String(index + 1), y: district.demand })) },
+      { label: "Supplied", points: state.districts.map((district, index) => ({ x: String(index + 1), y: district.supplied })) },
     ] },
-    { type: "table", label: "Allocation ledger", rows: (state) => state.districts },
+    {
+      type: "table",
+      label: "Allocation ledger",
+      rows: (state) => state.districts.map((district) => ({
+        district: district.name,
+        demand: district.demand,
+        supplied: district.supplied,
+        status: district.status,
+      })),
+    },
   ],
 });

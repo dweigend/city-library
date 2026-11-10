@@ -271,7 +271,8 @@ export function create(options: Partial<TrafficLanesParameters> = {}) {
   };
 }
 export const model = {
-  title: "Traffic 2 Lanes",
+  title: "Two-Lane Traffic",
+  description: "Cars speed up, slow down and change lanes on a circular two-lane road.",
   inputs,
   create,
 } satisfies Definition<TrafficLanesParameters, ReturnType<typeof create>>;

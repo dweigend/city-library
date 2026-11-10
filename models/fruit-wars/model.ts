@@ -454,8 +454,7 @@ export function create(options: Partial<Parameters> = {}) {
 }
 export const model = {
   title: "Fruit Wars",
-  description:
-    "Foraging, heritable traits and conflict · Wilensky · CC BY-NC-SA 3.0",
+  description: "Foragers compete for fruit, pass on traits and may fight or flee when they meet. Wilensky, CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<Parameters, ReturnType<typeof create>>;

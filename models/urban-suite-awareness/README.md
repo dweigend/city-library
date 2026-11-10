@@ -1,4 +1,4 @@
-# Urban Suite - Awareness
+# Civic Awareness Spread
 
 How does awareness of an issue spread and fade? People move around. They gain awareness points at information centers and from aware people they meet, and lose them when they go without contact for long (`nonUsageLimit`). Highly aware people become activists and open new centers.
 
@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Urban Suite - Awareness** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Civic Awareness Spread** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

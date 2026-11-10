@@ -1,4 +1,4 @@
-# Urban Suite - Positive Feedback
+# Positive Feedback Growth
 
 Do increasing returns turn small differences into large ones? Every cell has an activity value. In each step the activity is raised to the power `alpha`, optionally after averaging over the neighborhood, and then divided by the current maximum, so the most active cell is always 1.
 
@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Urban Suite - Positive Feedback** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Positive Feedback Growth** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

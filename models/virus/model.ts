@@ -255,8 +255,7 @@ export function create(options: Partial<VirusParameters> = {}) {
 }
 export const model: Definition<VirusParameters, ReturnType<typeof create>> = {
   title: "Virus",
-  description:
-    "Moving hosts, infection, recovery, immunity and demographic turnover.",
+  description: "A virus spreads through a moving population with recovery, immunity and births.",
   inputs,
   create,
 };

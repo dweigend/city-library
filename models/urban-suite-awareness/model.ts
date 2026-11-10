@@ -207,7 +207,7 @@ export function create(options: Partial<AwarenessParameters> = {}) {
   };
 }
 export const model = {
-  title: "Urban Suite - Awareness",
-  description: "Local contact, awareness centers and disuse on a torus. Adapted from Felsen and Wilensky (2007), CC BY-NC-SA3.0.",
+  title: "Civic Awareness Spread",
+  description: "Residents become aware of an issue at information centers and from aware friends, and may become activists. Adapted from Felsen and Wilensky (2007), CC BY-NC-SA 3.0.",
   inputs, create,
 } satisfies Definition<AwarenessParameters, ReturnType<typeof create>>;

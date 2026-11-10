@@ -82,5 +82,5 @@ export function create(options: Partial<OccupancyParameters> = {}) {
   };
 }
 export const model = { title: "Residential Occupancy",
-  description: "Illustrative FIFO dwelling-slot reservations with explicit releases and synthetic periodic household turnover; no housing forecast.", inputs, create,
+  description: "Households reserve and release dwelling slots in arrival order. Synthetic turnover.", inputs, create,
 } satisfies Definition<OccupancyParameters, ReturnType<typeof create>>;

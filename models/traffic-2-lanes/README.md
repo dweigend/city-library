@@ -1,4 +1,4 @@
-# Traffic 2 Lanes
+# Two-Lane Traffic
 
 Do lane changes help or hurt traffic flow? Cars drive on a two-lane ring road. They speed up when there is room and brake behind slower cars. A car that is held up loses patience and changes lanes once its patience (`maxPatience`) runs out and the other lane is free.
 
@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Traffic 2 Lanes** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Two-Lane Traffic** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

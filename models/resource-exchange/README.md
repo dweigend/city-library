@@ -6,7 +6,7 @@ Randomness comes from the model's own seeded stream. Reading the model or select
 
 ## Use
 
-Choose **Resource exchange** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Resource Exchange** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

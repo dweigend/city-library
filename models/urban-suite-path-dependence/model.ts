@@ -176,7 +176,7 @@ export function create(options: Partial<PathParameters> = {}) {
   };
 }
 export const model = {
-  title: "Urban Suite - Path Dependence",
-  description: "Regional feedback and repeated firm search, retaining original branch behavior. Rand and Wilensky (2007), CC BY-NC-SA3.0.",
+  title: "Firm Location Path Dependence",
+  description: "Firms settle where other firms already are; early chance decisions lock in one center. Rand and Wilensky (2007), CC BY-NC-SA 3.0.",
   inputs, create,
 } satisfies Definition<PathParameters, ReturnType<typeof create>>;

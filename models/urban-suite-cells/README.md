@@ -1,4 +1,4 @@
-# Urban Suite - Cells
+# Urban Growth Cells
 
 How do growth rules shape the form of a city? Cells are active or empty. An empty cell becomes active with `probability` when the number of active neighbors matches `countRule` for the chosen `neighborhood`. With `ageLimit`, active cells expire after a while.
 
@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Urban Suite - Cells** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Urban Growth Cells** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

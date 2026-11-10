@@ -288,8 +288,7 @@ export function create(options: Partial<Parameters> = {}) {
 }
 export const model = {
   title: "Dining Philosophers",
-  description:
-    "Asynchronous resource contention and marked-fork cooperation. Wilensky (2003), CC BY-NC-SA 3.0.",
+  description: "Philosophers share forks around a table; uncoordinated grabbing can leave some of them hungry. Wilensky (2003), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<Parameters, ReturnType<typeof create>>;

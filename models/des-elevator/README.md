@@ -1,4 +1,4 @@
-# DES Elevator
+# Elevator Service
 
 How should two elevator cars share passenger calls? A building has six floors and two cars with four places each by default; time is measured in seconds. Passengers wait in a queue per floor and direction. An empty car takes the oldest waiting call, and ties follow passenger and car order. Cars move one floor per event, let passengers out before letting new ones in, and a call that does not fit or goes the other way keeps its original age. Separate floor and direction queues own the waiting passengers, and one Resource per car owns its occupied places.
 
@@ -11,7 +11,7 @@ Things to try:
 
 ## Use
 
-Choose **DES Elevator** in [Agent Lab](../../ui/agent-lab/README.md). **Add passenger** calls `addPassenger(from?, to?)`, which defaults to the ground and top floors.
+Choose **Elevator Service** in [Agent Lab](../../ui/agent-lab/README.md). **Add passenger** calls `addPassenger(from?, to?)`, which defaults to the ground and top floors.
 
 From a script in the repository root:
 

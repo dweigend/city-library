@@ -1,4 +1,4 @@
-# HIV
+# HIV Transmission
 
 How do partnership length, condom use and testing change how a sexually transmitted infection spreads? People move, form couples with `averageCouplingTendency` and stay together for about `averageCommitment` steps. Infection can pass within a couple, unless a condom is used (`averageCondomUse`). People get tested with `averageTestFrequency`; in this model, those who know they are infected always practice safer sex.
 
@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **HIV** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **HIV Transmission** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

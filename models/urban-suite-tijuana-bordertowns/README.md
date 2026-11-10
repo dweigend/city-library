@@ -1,4 +1,4 @@
-# Urban Suite - Tijuana Bordertowns
+# Border Town Settlement
 
 How do migration, income and access to services shape informal settlements at a border? Migrants arrive near people from their home region, find work in factories (maquiladoras), earn and spend money and look for affordable places close to services. Where settlements become dense, infrastructure follows. Building the city happens in a separate setup phase before the household dynamics start.
 
@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Urban Suite - Tijuana Bordertowns** in [Agent Lab](../../ui/agent-lab/README.md). Setup creates a cleared instance. Build the city with Cityscape step, 100 cityscape calls, or Cityscape continue / Keep building. Use Step or Run/Pause only when the Phase monitor becomes `ready`; the shared GO controls are guarded until then.
+Choose **Border Town Settlement** in [Agent Lab](../../ui/agent-lab/README.md). Setup creates a cleared instance. Build the city with Cityscape step, 100 cityscape calls, or Cityscape continue / Keep building. Use Step or Run/Pause only when the Phase monitor becomes `ready`; the shared GO controls are guarded until then.
 
 From a script in the repository root:
 

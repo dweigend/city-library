@@ -1,4 +1,4 @@
-# Limited Order Book
+# Limit Order Book
 
 How do simple trading strategies and an order book produce a market price? Traders hold cash and tokens and believe the token is worth some value. They place buy and sell limit orders in a shared book; an order trades only when it crosses the best opposite quote. Honest traders always quote around their belief; cunning traders improve their quotes toward the best price already in the book.
 
@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Limited Order Book** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Limit Order Book** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

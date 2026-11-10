@@ -181,9 +181,8 @@ export function create(options: Partial<RumorParameters> = {}) {
   };
 }
 export const model = {
-  title: 'Rumor Mill',
-  description:
-    'Repeated local exposure with a snapshot of informed senders. Wilensky (1997), CC BY-NC-SA 3.0.',
+  title: "Rumor Mill",
+  description: "A rumor spreads from person to person on a grid until most have heard it. Wilensky (1997), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<RumorParameters, ReturnType<typeof create>>;

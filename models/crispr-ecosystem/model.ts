@@ -416,6 +416,7 @@ export function create(options: Partial<EcosystemParameters> = {}) {
 }
 export const model = {
   title: "CRISPR Ecosystem",
+  description: "Bacteria and viruses co-evolve as bacteria store viral memories in their CRISPR arrays.",
   inputs,
   create,
 } satisfies Definition<EcosystemParameters, ReturnType<typeof create>>;

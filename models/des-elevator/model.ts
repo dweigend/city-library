@@ -300,6 +300,6 @@ export function create(options: Partial<ElevatorParameters> = {}) {
 }
 
 export const model = {
-  title: "DES Elevator", description: "Directional floor queues and capacity-owned cars. Seconds; a deterministic teaching controller, not a certified lift design.",
+  title: "Elevator Service", description: "Two elevator cars pick up passengers waiting on six floors, with limited room per car.",
   inputs, create,
 } satisfies Definition<ElevatorParameters, ReturnType<typeof create>>;

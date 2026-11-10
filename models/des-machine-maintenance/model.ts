@@ -98,5 +98,5 @@ export function create(options: Partial<MaintenanceParameters> = {}) {
   };
 }
 export const model = {
-  title: "DES Machine Maintenance", description: "Spatial machines fail, wait for repair teams and record time-weighted availability. Minutes; synthetic failure cycles.", inputs, create,
+  title: "Machine Maintenance", description: "Machines break down, wait for a repair team and record how often they are available.", inputs, create,
 } satisfies Definition<MaintenanceParameters, ReturnType<typeof create>>;

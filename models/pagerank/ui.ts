@@ -19,12 +19,12 @@ export const ui = defineUI(model, {
     {
       label: "Total rank",
       value: (s) => s.totalRank,
-      format: (value: number) => value.toFixed(6),
+      format: (value: number) => value.toFixed(3),
     },
     {
       label: "Maximum rank",
       value: (s) => s.maxRank,
-      format: (value: number) => value.toFixed(6),
+      format: (value: number) => value.toFixed(3),
     },
     { label: "Surfers", value: (s) => s.surfers.length },
   ],
@@ -35,7 +35,7 @@ export const ui = defineUI(model, {
       nodes: (s) =>
         s.pages.map((p) => ({
           id: String(p.id),
-          label: `${p.id}${s.parameters.showPageRanks ? `: ${p.rank.toFixed(3)}` : ""}${s.parameters.watchSurfers && p.surferCount ? ` [${p.surferCount} surfers]` : ""}`,
+          label: `${p.id}${s.parameters.showPageRanks ? `: ${p.rank.toFixed(3)}` : ""}${s.parameters.watchSurfers && p.surferCount ? ` [${p.surferCount} ${p.surferCount === 1 ? "surfer" : "surfers"}]` : ""}`,
           color: p.color,
           size: Math.max(8, p.size * 10),
           position: { x: p.x * 20, y: -p.y * 20 },

@@ -284,8 +284,7 @@ export function create(options: Partial<SmoothLifeParameters> = {}) {
 }
 export const model = {
   title: "SmoothLife",
-  description:
-    "Normalized disk/annulus SmoothLife. Head & Wilensky (2017), CC BY-NC-SA 3.0.",
+  description: "A continuous version of the Game of Life produces smooth, gliding blobs. Head & Wilensky (2017), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<SmoothLifeParameters, ReturnType<typeof create>>;

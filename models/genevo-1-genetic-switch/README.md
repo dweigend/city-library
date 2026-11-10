@@ -1,4 +1,4 @@
-# GenEvo 1 Genetic Switch
+# Lac Operon Genetic Switch
 
 How can a cell switch a gene on only when it needs it? This model follows the lac operon in an E. coli-like cell. A repressor (LacI) blocks the gene; lactose can bind the repressor and free the gene, so RNA polymerase can produce LacZ and LacY. Glucose availability, energy and cell division are part of the picture, and you can switch `lactose` and `glucose` on or off.
 
@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **GenEvo 1 Genetic Switch** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Lac Operon Genetic Switch** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

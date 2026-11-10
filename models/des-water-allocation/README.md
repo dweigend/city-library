@@ -1,4 +1,4 @@
-# DES Water Allocation
+# Water Allocation
 
 Who gets water when supply runs short? Four districts each request 3 units of water, but only `supplyUnitCount` units are available. Requests are served first come, first served; unmet demand is recorded rather than hidden. `addSupply()` adds supply and serves the next waiting district.
 
@@ -10,7 +10,7 @@ Things to try:
 
 ## Use
 
-Choose **DES Water Allocation** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Water Allocation** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

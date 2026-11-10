@@ -243,8 +243,7 @@ export function create(options: Partial<DiseaseParameters> = {}) {
 }
 export const model: Definition<DiseaseParameters, ReturnType<typeof create>> = {
   title: "Disease Solo",
-  description:
-    "Contact infection among moving androids and one controlled person.",
+  description: "You steer one person among wandering androids while an infection spreads by contact.",
   inputs,
   create,
 };

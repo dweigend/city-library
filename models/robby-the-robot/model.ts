@@ -475,8 +475,7 @@ export function create(options: Partial<RobbyParameters> = {}) {
 }
 export const model = {
   title: "Robby the Robot",
-  description:
-    "Robot strategies evaluated in 20 fresh environments with 100 actions each. Mitchell, Tisue and Wilensky (2012), CC0.",
+  description: "A genetic algorithm evolves strategies for a robot that collects cans on a grid. Mitchell, Tisue and Wilensky (2012), CC0.",
   inputs,
   create,
 } satisfies Definition<RobbyParameters, ReturnType<typeof create>>;

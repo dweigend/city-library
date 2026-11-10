@@ -95,8 +95,7 @@ export function create(options: Partial<AttachmentParameters> = {}) {
 }
 export const model = {
   title: "Preferential Attachment",
-  description:
-    "A growing network with degree-proportional attachment. Adapted from Uri Wilensky (2005), CC BY-NC-SA 3.0.",
+  description: "New nodes link to existing nodes in proportion to their degree, creating hubs. Adapted from Uri Wilensky (2005), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<AttachmentParameters, ReturnType<typeof create>>;

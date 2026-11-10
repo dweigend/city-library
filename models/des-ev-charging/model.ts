@@ -73,4 +73,4 @@ export function create(options: Partial<ChargingParameters> = {}) {
     },
   };
 }
-export const model = { title: "DES EV Charging", description: "Priority charging queue, heterogeneous session durations and cancellation. Minutes; no battery physics.", inputs, create } satisfies Definition<ChargingParameters, ReturnType<typeof create>>;
+export const model = { title: "EV Charging Queue", description: "Electric vehicles wait for a limited number of chargers; priority users go first and some leave early.", inputs, create } satisfies Definition<ChargingParameters, ReturnType<typeof create>>;

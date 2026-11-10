@@ -1,4 +1,4 @@
-# Mammoths
+# Mammoth Extinction
 
 What drives a large animal to extinction: hunting, a changing climate, or both? Mammoths and humans move, reproduce and die. Humans kill mammoths they meet with `oddsOfKilling`, and climate change turns land cells into changed terrain with `climateChangeDecayChance` per step. The model counts how many mammoths each cause has killed.
 
@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Mammoths** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Mammoth Extinction** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

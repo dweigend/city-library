@@ -332,9 +332,8 @@ export function create(options: Partial<TuringParameters> = {}) {
   };
 }
 export const model = {
-  title: "Turing Machine 2D",
-  description:
-    "Two-state moving heads with an explicit four-rule tape transition table. Wilensky (2002), CC BY-NC-SA 3.0.",
+  title: "Two-Dimensional Turing Machine",
+  description: "Heads read and write cells on a grid following a small rule table. Wilensky (2002), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<TuringParameters, ReturnType<typeof create>>;

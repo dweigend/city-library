@@ -1,4 +1,4 @@
-# Turing Machine 2D
+# Two-Dimensional Turing Machine
 
 What can simple read-write machines draw on a shared field? Each head has an internal state (0 or 1) and reads the cell below it (on or off). A table of four rules, one per state and cell combination, says what to write, how to turn and which state to enter next. Many heads (`headCount`) share the same field, so the order in which they move matters. `example` loads prepared rule tables.
 
@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Turing Machine 2D** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Two-Dimensional Turing Machine** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

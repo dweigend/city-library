@@ -41,8 +41,8 @@ export const ui = defineUI(model, {
       enabled: (s) => s.exists,
     },
   ],
+  // While Create Combi is active, clicking a square cycles its value.
   drawing: {
-    toggleLabel: "Edit combination",
     enabled: (s) => s.creating,
     intent: (m, intent) => {
       if (intent.phase === "begin")
@@ -50,6 +50,7 @@ export const ui = defineUI(model, {
     },
   },
   monitors: [
+    { label: "Instructions", value: (s) => s.instructions },
     { label: "Search attempts", value: (s) => s.attemptCount },
     { label: "Steps in sample", value: (s) => s.stepCount },
     { label: "Samples", value: (s) => s.samplesCounter },
@@ -73,7 +74,6 @@ export const ui = defineUI(model, {
       format: (value: number | string) =>
         typeof value === "number" ? value.toFixed(2) : value,
     },
-    { label: "Instructions", value: (s) => s.instructions },
   ],
   views: [
     {

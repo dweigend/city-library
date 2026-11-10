@@ -353,7 +353,7 @@ export function create(options: Partial<BankParameters> = {}) {
 }
 export const model = {
   title: "Bank Reserves",
-  description: "Source banking phases · Uri Wilensky · CC BY-NC-SA 3.0",
+  description: "People save, borrow and spend; a reserve requirement limits how much the bank can lend. Uri Wilensky, CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<BankParameters, ReturnType<typeof create>>;

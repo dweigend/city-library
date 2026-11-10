@@ -2,7 +2,15 @@ import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 
 export const ui = defineUI(model, {
-  views: [],
+  views: [
+    { type: "bar", label: "Material", yAxis: { unit: "units" }, series: state => [
+      { label: "Units", points: [
+        { x: "Stock", y: state.inventoryUnitCount },
+        { x: "Free", y: state.availableUnitCount },
+        { x: "Used", y: state.consumedUnitCount },
+      ] },
+    ] },
+  ],
   actions: [
     { label: "Reserve A", run: instance => { instance.reserve("A"); } },
     { label: "Reserve B", run: instance => { instance.reserve("B"); } },

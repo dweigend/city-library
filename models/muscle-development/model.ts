@@ -213,6 +213,7 @@ export function create(options: Partial<MuscleParameters> = {}) {
 }
 export const model = {
   title: "Muscle Development",
+  description: "Lifting, sleep and hormone responses build or shrink modeled muscle fibers over time.",
   inputs,
   create,
 } satisfies Definition<MuscleParameters, ReturnType<typeof create>>;

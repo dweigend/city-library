@@ -189,6 +189,7 @@ export function create(options: Partial<Parameters> = {}) {
 }
 export const model: Definition<Parameters, ReturnType<typeof create>> = {
   title: "Mendelian Inheritance",
+  description: "Mouse parents pass on dominant and recessive alleles that decide their offspring's coat color.",
   inputs,
   create,
 };

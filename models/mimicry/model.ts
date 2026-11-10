@@ -232,7 +232,7 @@ export function create(options: Partial<Parameters> = {}) {
     },
   };
 }
-export const model = { title: "Mimicry", inputs, create } satisfies Definition<
+export const model = { title: "Mimicry", description: "Birds learn to avoid bad-tasting butterflies, and tasty butterflies evolve to look like them.", inputs, create } satisfies Definition<
   Parameters,
   ReturnType<typeof create>
 >;

@@ -1,4 +1,4 @@
-# Repressilator 1D
+# Repressilator
 
 Can three genes that switch each other off produce a regular rhythm? Three kinds of transcription factor each block the gene of the next one in a ring. Genes produce mRNA, mRNA produces transcription factors, and both decay with fixed chances. Factors bind and unbind the DNA, and a signal can trap them.
 
@@ -11,7 +11,7 @@ Things to try:
 
 ## Use
 
-Choose **Repressilator 1D** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Repressilator** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

@@ -1,4 +1,4 @@
-# Sunflower Emergent
+# Sunflower Spirals
 
 Can a sunflower spiral appear without building in the golden angle? Particles are placed one at a time on successive rings, `ringDist` apart. Each new particle takes the position on its ring with the lowest estimated repulsion from the particles already placed, using the chosen `energyApproximation`.
 
@@ -11,7 +11,7 @@ Things to try:
 
 ## Use
 
-Choose **Sunflower Emergent** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Sunflower Spirals** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

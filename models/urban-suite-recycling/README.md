@@ -1,4 +1,4 @@
-# Urban Suite - Recycling
+# Recycling and Resource Use
 
 Can careful use of resources hold its own against fast exploitation? Recyclers take part of a resource and can restore wasted cells, at a cost (`recyclingWasteCost`). Wasteful agents use up cells completely. Everyone needs energy to survive, and resources regrow with `resourceRegeneration`.
 
@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Urban Suite - Recycling** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Recycling and Resource Use** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

@@ -1,4 +1,4 @@
-# CA Stochastic
+# Stochastic Cellular Automaton
 
 What changes when a cellular rule involves chance? As in the elementary one-dimensional automata, each cell's next value depends on itself and its two neighbors. Here each of the eight neighborhoods (`OOO` … `III`) has its own probability of producing a 1. Values of 0 and 100 make that case deterministic. Each generation is drawn as a new row.
 
@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **CA Stochastic** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Stochastic Cellular Automaton** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

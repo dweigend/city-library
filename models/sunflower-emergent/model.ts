@@ -150,7 +150,8 @@ export function create(options: Partial<SunflowerParameters> = {}) {
   return { advance, read, setParameters, potentialEnergy, createParticle, go };
 }
 export const model = {
-  title: "Sunflower Emergent",
+  title: "Sunflower Spirals",
+  description: "Seeds are placed one by one where they are least crowded, forming sunflower spirals.",
   inputs,
   create,
 } satisfies Definition<SunflowerParameters, ReturnType<typeof create>>;

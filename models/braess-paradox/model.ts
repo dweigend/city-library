@@ -393,8 +393,7 @@ export function create(options: Partial<Parameters> = {}) {
 }
 export const model = {
   title: "Braess' Paradox",
-  description:
-    "Adaptive routes and field congestion · Wilensky · CC BY-NC-SA 3.0",
+  description: "Commuters choose routes through congestion; adding a shortcut can make every trip slower. Wilensky, CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<Parameters, ReturnType<typeof create>>;

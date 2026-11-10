@@ -29,7 +29,7 @@ const binding = defineUI(model, {
   views: [
     {
       type: "spatial",
-      label: "epiDEM Basic",
+      label: "Basic Epidemic",
       data: (state) => ({
         width: state.width,
         height: state.height,

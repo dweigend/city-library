@@ -1,4 +1,4 @@
-# DES Machine Maintenance
+# Machine Maintenance
 
 How many repair teams does a set of machines need? Three machines fail after their working time (`failureMinutes`) and wait for one of `repairTeamCount` teams; a repair takes `repairMinutes`. The model records each machine's availability as the share of time it was working.
 
@@ -10,7 +10,7 @@ Things to try:
 
 ## Use
 
-Choose **DES Machine Maintenance** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Machine Maintenance** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

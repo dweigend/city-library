@@ -356,6 +356,7 @@ export function create(options: Partial<Parameters> = {}) {
 }
 export const model = {
   title: "Baldwin Effect",
+  description: "Organisms learn during their lifetime, and learning shapes which genes are passed on.",
   inputs,
   create,
 } satisfies Definition<Parameters, ReturnType<typeof create>>;

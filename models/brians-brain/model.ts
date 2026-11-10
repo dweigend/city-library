@@ -157,8 +157,7 @@ export function create(options: Partial<BrainParameters> = {}) {
 }
 export const model = {
   title: "Brian's Brain",
-  description:
-    "Synchronous firing, refractory and resting cells. Wilensky (2002), CC BY-NC-SA 3.0.",
+  description: "Cells cycle through firing, refractory and resting states, creating moving sparks. Wilensky (2002), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<BrainParameters, ReturnType<typeof create>>;

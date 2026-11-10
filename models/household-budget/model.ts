@@ -26,6 +26,6 @@ export function create() {
 
 export const model = {
   title: "Household Budget",
-  description: "Monthly external income and rent change one household's balance.",
+  description: "One household's balance changes each month with income and rent.",
   inputs: {}, create,
 } satisfies Definition<Record<string, never>, ReturnType<typeof create>>;

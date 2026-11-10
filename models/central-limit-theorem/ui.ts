@@ -32,6 +32,13 @@ export const ui = defineUI(model, {
     },
   },
   monitors: [
+    {
+      label: "State",
+      value: (s) =>
+        s.population < s.parameters.sampleSize
+          ? "Create people first: random, a preset, or draw your own"
+          : s.message || "Ready",
+    },
     { label: "Tick", value: (s) => s.tick },
     { label: "Population", value: (s) => s.population },
     { label: "Samples", value: (s) => s.sampleCount },
@@ -53,7 +60,6 @@ export const ui = defineUI(model, {
       format: (value: number | string) =>
         typeof value === "number" ? value.toFixed(3) : value,
     },
-    { label: "State", value: (s) => s.message || "Ready" },
   ],
   views: [
     {

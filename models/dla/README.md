@@ -1,4 +1,4 @@
-# DLA
+# Diffusion-Limited Aggregation
 
 How do branching clusters grow from wandering particles? A seed sits in the middle. Particles wander randomly, turning by up to `wiggleAngle`, and stick when they touch the cluster. New walkers replace those that attach, up to `maxParticleCount` at a time.
 
@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **DLA** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Diffusion-Limited Aggregation** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

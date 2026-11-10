@@ -40,37 +40,82 @@ export function prepareChartData(mode: Mode, input: readonly (Series | BarSeries
     }),
   }));
   const points = series.flatMap(line => [...line.points]);
-  return {
-    categorical, categories, series,
-    minX: Math.min(0, ...points.map(point => point.x)),
-    maxX: Math.max(1, ...points.map(point => point.x)),
-    minY: Math.min(0, ...points.map(point => point.y)),
-    maxY: Math.max(1, ...points.map(point => point.y)),
-  };
+  const [minX, maxX] = extent(points.map(point => point.x));
+  // Bar lengths encode magnitude, so bar charts always include zero; lines and points need not.
+  const [minY, maxY] = extent(mode === "bar" ? [0, ...points.map(point => point.y)] : points.map(point => point.y));
+  return { categorical, categories, series, minX, maxX, minY, maxY };
+}
+
+/** Data extent; an empty extent is 0–1, a flat zero is 0–1 and another flat value sits centred. */
+function extent(values: readonly number[]): [number, number] {
+  if (values.length === 0) return [0, 1];
+  const min = Math.min(...values);
+  const max = Math.max(...values);
+  if (max > min) return [min, max];
+  if (min === 0) return [0, 1];
+  return [min - Math.abs(min) / 2, min + Math.abs(min) / 2];
+}
+
+/**
+ * Rounded axis steps (1, 2 or 5 × 10ⁿ) covering the extent with about `count` intervals.
+ * `minimumStep` keeps count data from showing fractional ticks.
+ */
+export function niceTicks(min: number, max: number, count: number, minimumStep = 0) {
+  const rough = Math.max((max - min) / Math.max(1, count), minimumStep);
+  const magnitude = 10 ** Math.floor(Math.log10(rough));
+  const step = [1, 2, 5, 10].map(factor => factor * magnitude).find(candidate => candidate >= rough) ?? 10 * magnitude;
+  const first = Math.floor(min / step + 1e-9) * step;
+  const last = Math.ceil(max / step - 1e-9) * step;
+  // Multiply instead of accumulating, and round to the step's precision, to avoid 0.30000000000000004.
+  const decimals = Math.max(0, -Math.floor(Math.log10(step) + 1e-9));
+  const values = Array.from({ length: Math.round((last - first) / step) + 1 }, (_, index) =>
+    Number((first + index * step).toFixed(decimals)) + 0);
+  return { min: values[0]!, max: values.at(-1)!, step, values };
+}
+
+/** Fraction of the x span added on each side of a scatter plot. */
+const scatterMargin = 0.04;
+
+const compactNumber = new Intl.NumberFormat("en", { notation: "compact", maximumFractionDigits: 1 });
+/** Tick text uses the precision of its step, and compact notation for large magnitudes. */
+export function tickText(value: number, step: number): string {
+  if (Math.abs(value) >= 1e5) return compactNumber.format(value);
+  const decimals = Math.max(0, Math.min(6, -Math.floor(Math.log10(step) + 1e-9)));
+  return value.toFixed(decimals);
 }
 
 /** Shared geometry used by SVG rendering; empty series retain their category slot. */
-export function chartGeometry(data: ReturnType<typeof prepareChartData>, left = 36, viewportWidth = 640, bottom = 154) {
+export function chartGeometry(data: ReturnType<typeof prepareChartData>, left = 36, viewportWidth = 640, bottom = 154, top = 14) {
   const width = Math.max(1, viewportWidth - 14 - left);
   const x = (value: number) => left + ((value - data.minX) / (data.maxX - data.minX)) * width;
-  const y = (value: number) => bottom - ((value - data.minY) / (data.maxY - data.minY)) * Math.max(1, bottom - 14);
+  const y = (value: number) => bottom - ((value - data.minY) / (data.maxY - data.minY)) * Math.max(1, bottom - top);
   const slot = width / Math.max(1, data.categories.length);
   const groupWidth = slot * 0.8;
   const barWidth = groupWidth / Math.max(1, data.series.length);
   const categoryX = (index: number) => left + slot * (index + 0.5);
+  const numericBarWidth = Math.max(2, (x(data.minX + numericSpacing(data)) - x(data.minX)) * 0.8);
+  const dodgedBarWidth = numericBarWidth / Math.max(1, data.series.length);
+  /** Bars of different series at one x sit side by side, never on top of each other. */
   function bar(point: PlotPoint, seriesIndex: number) {
-    const validCount = data.series[seriesIndex]!.points.length;
-    const width = data.categorical ? barWidth : Math.max(2, Math.min(48, 500 / Math.max(1, validCount)));
+    const width = data.categorical ? barWidth : dodgedBarWidth;
     return {
       x: data.categorical
         ? categoryX(point.x) - groupWidth / 2 + seriesIndex * barWidth
-        : x(point.x) - width / 2,
+        : x(point.x) - numericBarWidth / 2 + seriesIndex * dodgedBarWidth,
       y: Math.min(y(0), y(point.y)),
       width,
       height: Math.abs(y(0) - y(point.y)),
     };
   }
   return { x, y, categoryX, bar };
+}
+
+/** Smallest distance between distinct numeric x values; histogram bins share it. */
+export function numericSpacing(data: ReturnType<typeof prepareChartData>): number {
+  const values = [...new Set(data.series.flatMap(line => line.points.map(point => point.x)))].sort((a, b) => a - b);
+  let spacing = Infinity;
+  for (let index = 1; index < values.length; index++) spacing = Math.min(spacing, values[index]! - values[index - 1]!);
+  return Number.isFinite(spacing) ? spacing : 1;
 }
 
 function axisText(axis: AxisSpec | undefined): string {
@@ -112,34 +157,99 @@ export function mountChart<M extends Mode = "line">(
     svg.append(node);
     return node;
   }
+  function strokePath(d: string, className: string) {
+    const path = document.createElementNS(ns, "path");
+    path.setAttribute("d", d);
+    path.setAttribute("class", className);
+    svg.append(path);
+  }
+  /** Approximate rendered width; SVG text is not measured to keep rendering synchronous. */
+  function textWidth(value: string, fontSize: number) { return value.length * fontSize * 0.6; }
+  /**
+   * Category labels wrap onto two lines when that makes every label fit; otherwise they
+   * stay on one line and only every n-th label is shown.
+   */
+  function categoryLines(categories: readonly string[], slot: number, fontSize: number) {
+    const every = (labels: readonly (readonly string[])[]) =>
+      Math.max(1, Math.ceil((Math.max(0, ...labels.flat().map(part => textWidth(part, fontSize))) + 8) / Math.max(1, slot)));
+    const wrapped = categories.map(category => {
+      if (textWidth(category, fontSize) <= slot - 8) return [category];
+      const words = category.split(" ");
+      const split = Math.ceil(words.length / 2);
+      return words.length > 1 ? [words.slice(0, split).join(" "), words.slice(split).join(" ")] : [category];
+    });
+    if (every(wrapped) === 1) return { wrapped, every: 1, lines: Math.max(1, ...wrapped.map(parts => parts.length)) };
+    const single = categories.map(category => [category]);
+    return { wrapped: single, every: every(single), lines: 1 };
+  }
   function render(data: ReturnType<typeof prepareChartData>) {
-      const left = yAxis ? 64 : 36;
-      const right = viewportWidth - 14;
-      const bottom = Math.max(32, viewportHeight - (xAxis ? 62 : 26));
-      const geometry = chartGeometry(data, left, viewportWidth, bottom);
+      const fontSize = parseFloat(getComputedStyle(svg).fontSize) || 12;
+      const lineHeight = fontSize * 1.2;
+      const plotTop = Math.ceil(fontSize / 2) + 2;
+      const yTickCount = Math.max(2, Math.min(6, Math.floor(viewportHeight / 40)));
+      const values = data.series.flatMap(series => series.points);
+      const yTicks = niceTicks(data.minY, data.maxY, yTickCount, values.every(point => Number.isInteger(point.y)) ? 1 : 0);
+      const yLabels = yTicks.values.map(value => tickText(value, yTicks.step));
+      const left = Math.ceil(Math.max(...yLabels.map(label => textWidth(label, fontSize)))) + 10 + (yAxis ? lineHeight + 4 : 0);
+      const right = viewportWidth - Math.ceil(fontSize);
+      const slot = (right - left) / Math.max(1, data.categories.length);
+      const categories = categoryLines(data.categories, slot, fontSize);
+      const tickRows = data.categorical ? categories.lines : 1;
+      const bottom = Math.max(plotTop + 20, viewportHeight - 8 - tickRows * lineHeight - (xAxis ? lineHeight + 6 : 0));
+      // Numeric bars are centered on their x value, so the domain gains half a bin per side.
+      // Scatter points at the extremes would sit on the axes, so their domain gains a small margin.
+      const pad = mode === "bar" && !data.categorical ? numericSpacing(data) / 2
+        : mode === "scatter" ? (data.maxX - data.minX) * scatterMargin : 0;
+      const scale = { ...data, minX: data.minX - pad, maxX: data.maxX + pad, minY: yTicks.min, maxY: yTicks.max };
+      const geometry = chartGeometry(scale, left, right + 14, bottom, plotTop);
       svg.replaceChildren();
       legend.replaceChildren();
-      const axes = document.createElementNS(ns, "path");
-      axes.setAttribute("d", `M${left} 12V${bottom}H${right}`);
-      axes.setAttribute("class", "axes");
-      svg.append(axes);
-      for (const [value, px, py] of [[data.maxY, left - 34, 16], [data.minY, left - 34, bottom + 4]] as const)
-        text(Number.isInteger(value) ? String(value) : value.toPrecision(3), px, py);
-      if (data.categorical)
-        data.categories.forEach((category, index) => text(category, geometry.categoryX(index), bottom + 23, "middle"));
-      else text(Number.isInteger(data.maxX) ? String(data.maxX) : data.maxX.toPrecision(3), right - 28, bottom + 23);
-      if (mode === "bar" && data.minY < 0) {
-        const baseline = document.createElementNS(ns, "path");
-        baseline.setAttribute("d", `M${left} ${geometry.y(0)}H${right}`);
-        baseline.setAttribute("class", "axes");
-        svg.append(baseline);
+      yTicks.values.forEach((value, index) => {
+        const y = geometry.y(value);
+        if (value !== yTicks.min) strokePath(`M${left} ${y}H${right}`, "grid");
+        text(yLabels[index]!, left - 6, y, "end").setAttribute("dominant-baseline", "middle");
+      });
+      strokePath(`M${left} ${plotTop}V${bottom}H${right}`, "axes");
+      const labelY = bottom + lineHeight;
+      if (data.categorical) {
+        categories.wrapped.forEach((parts, index) => {
+          if (index % categories.every !== 0) return;
+          const label = text("", geometry.categoryX(index), labelY, "middle");
+          parts.forEach((part, row) => {
+            const span = document.createElementNS(ns, "tspan");
+            span.setAttribute("x", String(geometry.categoryX(index)));
+            span.setAttribute("dy", String(row ? lineHeight : 0));
+            span.textContent = part;
+            label.append(span);
+          });
+        });
+      } else {
+        const minimumXStep = values.every(point => Number.isInteger(point.x)) ? 1 : 0;
+        const inRange = (value: number) => value >= data.minX - 1e-9 && value <= data.maxX + 1e-9;
+        // Narrow plots ask for few ticks; add intervals until at least two fall inside the data.
+        let xTickCount = Math.max(1, Math.min(8, Math.floor((right - left) / 80), pad ? (data.maxX - data.minX) / (2 * pad) : Infinity));
+        let xTicks = niceTicks(data.minX, data.maxX, xTickCount, minimumXStep);
+        while (xTicks.values.filter(inRange).length < 2 && xTickCount < 10) {
+          xTickCount++;
+          xTicks = niceTicks(data.minX, data.maxX, xTickCount, minimumXStep);
+        }
+        for (const value of xTicks.values) {
+          if (!inRange(value)) continue;
+          const x = geometry.x(value);
+          const label = tickText(value, xTicks.step);
+          const half = textWidth(label, fontSize) / 2;
+          const anchor = x - half < left - 4 ? "start" : x + half > viewportWidth ? "end" : "middle";
+          text(label, x, labelY, anchor);
+        }
       }
-      if (xAxis) text(xAxis, (left + right) / 2, viewportHeight - 9, "middle");
+      if (mode === "bar" && yTicks.min < 0) strokePath(`M${left} ${geometry.y(0)}H${right}`, "axes");
+      if (xAxis) text(xAxis, (left + right) / 2, viewportHeight - 6, "middle");
       if (yAxis) {
-        const center = (14 + bottom) / 2;
-        text(yAxis, 14, center, "middle").setAttribute("transform", `rotate(-90 14 ${center})`);
+        const center = (plotTop + bottom) / 2;
+        const x = lineHeight * 0.8;
+        text(yAxis, x, center, "middle").setAttribute("transform", `rotate(-90 ${x} ${center})`);
       }
-      const palette = options.theme?.().series ?? ["#287e9b", "#b45309", "#4c8b54", "#9759a2"];
+      const palette = options.theme?.().series ?? ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300", "#6250d6", "#e34948"];
       const labelCounts = new Map<string, number>();
       for (const line of data.series) labelCounts.set(line.label, (labelCounts.get(line.label) ?? 0) + 1);
       data.series.forEach((line, index) => {

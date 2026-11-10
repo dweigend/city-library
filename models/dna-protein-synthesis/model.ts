@@ -916,6 +916,7 @@ export function create(options: Partial<DNAParameters> = {}) {
 }
 export const model = {
   title: "DNA Protein Synthesis",
+  description: "Genes in a DNA strand are transcribed into mRNA and translated into protein chains.",
   inputs,
   create,
 } satisfies Definition<DNAParameters, ReturnType<typeof create>>;

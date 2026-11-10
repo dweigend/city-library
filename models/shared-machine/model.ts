@@ -111,7 +111,7 @@ export function create() {
 
 export const model = {
   title: "Shared Machine",
-  description: "Explicit reservation, consumption, failure and repair; time is in hours.",
+  description: "Jobs reserve material and one machine, which can fail and must be repaired. Time in hours.",
   inputs: {},
   create,
 } satisfies Definition<Record<string, never>, ReturnType<typeof create>>;

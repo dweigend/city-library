@@ -204,9 +204,8 @@ export function create(options: Partial<IteratedParameters> = {}) {
   };
 }
 export const model = {
-  title: "Prisoner's Dilemma Two Person Iterated",
-  description:
-    "Strategy memory and cumulative payoffs · Uri Wilensky · CC BY-NC-SA 3.0",
+  title: "Iterated Prisoner's Dilemma",
+  description: "Two strategies play repeated rounds of the prisoner's dilemma and accumulate payoffs. Uri Wilensky, CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<IteratedParameters, ReturnType<typeof create>>;

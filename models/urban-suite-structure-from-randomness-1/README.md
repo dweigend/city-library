@@ -1,4 +1,4 @@
-# Urban Suite - Structure from Randomness 1
+# Structure from Random Averaging
 
 Can spatial structure grow out of pure noise? Every cell starts with a random activity of 0 or 1. In each step, a cell's new value is the average of itself and its four direct neighbors. With `keepAddingRandomness`, fresh random noise is added after each averaging step.
 
@@ -11,7 +11,7 @@ Things to try:
 
 ## Use
 
-Choose **Urban Suite - Structure from Randomness 1** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Structure from Random Averaging** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

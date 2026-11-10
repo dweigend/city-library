@@ -265,9 +265,8 @@ export function create(options: Partial<StochasticParameters> = {}) {
   };
 }
 export const model = {
-  title: "CA Stochastic",
-  description:
-    "Conditional Bernoulli neighborhood rules and four-cell entropy. Wilensky (2003), CC BY-NC-SA 3.0.",
+  title: "Stochastic Cellular Automaton",
+  description: "Each three-cell neighborhood turns the next cell on with a chosen probability. Wilensky (2003), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<StochasticParameters, ReturnType<typeof create>>;

@@ -14,8 +14,10 @@ export const ui = defineUI(model, {
     {
       type: "inspector",
       label: "Selected",
-      value: (state, selectedId) =>
-        state.nodes.find((node) => node.id === selectedId),
+      value: (state, selectedId) => {
+        const node = state.nodes.find((candidate) => candidate.id === selectedId);
+        return node ? { node: node.label, degree: node.degree } : undefined;
+      },
     },
     {
       type: "network",
@@ -45,6 +47,8 @@ export const ui = defineUI(model, {
     {
       type: "scatter",
       label: "Degree distribution · log₁₀",
+      xAxis: { label: "log₁₀ degree" },
+      yAxis: { label: "log₁₀ nodes" },
       series: (state) => [
         { label: "log count", points: state.logDistribution },
       ],

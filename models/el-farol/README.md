@@ -1,4 +1,4 @@
-# El Farol
+# El Farol Bar
 
 Can people coordinate without talking to each other? Everyone wants to go to a bar, but only if it is not crowded. Each person holds `strategyCount` simple predictors of attendance based on the last `memorySize` weeks, uses the one that has been most accurate and goes if it predicts fewer than `overcrowdingThreshold` guests.
 
@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **El Farol** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **El Farol Bar** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

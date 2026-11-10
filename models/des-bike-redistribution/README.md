@@ -1,4 +1,4 @@
-# DES Bike Redistribution
+# Bike Share Redistribution
 
 How does a truck rebalance a bike-sharing fleet? Three stations start with 6, 0 and 0 bikes. A truck that carries `truckCapacity` bikes moves them along network travel times until every station holds `targetBikeCount`. Bikes at stations plus bikes on the truck always add up to 6.
 
@@ -10,7 +10,7 @@ Things to try:
 
 ## Use
 
-Choose **DES Bike Redistribution** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Bike Share Redistribution** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

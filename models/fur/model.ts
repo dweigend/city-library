@@ -169,7 +169,7 @@ export function create(options: Partial<FurParameters> = {}) {
     setParameters,
   };
 }
-export const model = { title: "Fur", inputs, create } satisfies Definition<
+export const model = { title: "Fur Patterns", description: "Pigment cells activate nearby cells and inhibit distant ones, producing spots or stripes.", inputs, create } satisfies Definition<
   FurParameters,
   ReturnType<typeof create>
 >;

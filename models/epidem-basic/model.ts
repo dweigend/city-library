@@ -268,7 +268,8 @@ export function create(options: Partial<EpidemParameters> = {}) {
   };
 }
 export const model = {
-  title: "epiDEM Basic",
+  title: "Basic Epidemic",
+  description: "Moving people infect one another and recover in a closed population.",
   inputs,
   create,
 } satisfies Definition<EpidemParameters, ReturnType<typeof create>>;

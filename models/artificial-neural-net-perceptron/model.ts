@@ -263,9 +263,8 @@ export function create(options: Partial<Parameters> = {}) {
   };
 }
 export const model = {
-  title: "Artificial Neural Net - Perceptron",
-  description:
-    "Signed perceptron learning. Rand & Wilensky (2006), CC BY-NC-SA 3.0.",
+  title: "Perceptron",
+  description: "A single threshold unit learns a logic function from two inputs; it cannot learn XOR. Rand & Wilensky (2006), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<Parameters, ReturnType<typeof create>>;

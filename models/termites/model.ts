@@ -176,8 +176,7 @@ export function create(options: Partial<Parameters> = {}) {
 }
 export const model = {
   title: "Termites",
-  description:
-    "Resumable wood-chip aggregation searches; work sweeps are not source ticks. Wilensky (1997), CC BY-NC-SA 3.0.",
+  description: "Termites pick up wood chips and drop them next to other chips, building piles. Wilensky (1997), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<Parameters, ReturnType<typeof create>>;

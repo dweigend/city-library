@@ -1,4 +1,4 @@
-# Sand
+# Falling Sand
 
 How do falling grains build a pile? Grains drop from spouts at the top (`spacing`, `releaseChance`). A grain falls into the empty cell below; if that is blocked, it slides diagonally down to the left or right, chosen at random when both are free. Every step reads the old field first and then moves all grains.
 
@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Sand** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Falling Sand** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

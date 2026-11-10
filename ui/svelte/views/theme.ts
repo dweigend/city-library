@@ -22,9 +22,10 @@ export function readRendererTheme(host: HTMLElement): RendererTheme {
     background: color("--view-background"),
     foreground: color("--view-foreground"),
     muted: color("--muted-foreground"),
+    surface: color("--muted"),
     selected: color("--view-selected"),
     node: color("--node-default"),
-    series: [1, 2, 3, 4].map(index => color(`--series-${index}`)),
+    series: [1, 2, 3, 4, 5, 6, 7, 8].map(index => color(`--series-${index}`)),
     font: `${style.fontWeight} ${parseFloat(style.fontSize) * Math.min(devicePixelRatio, 2)}px ${style.fontFamily}`,
   };
 }

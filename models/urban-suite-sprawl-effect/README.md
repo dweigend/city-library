@@ -1,4 +1,4 @@
-# Urban Suite - Sprawl Effect
+# Urban Sprawl
 
 Why do cities spread out? Seekers move toward attractive places and settle with some probability, which makes those places more attractive still. Sites that become too busy suddenly lose their attraction, so new arrivals look further away. `seekerPatience` and `waitBetweenSeeking` control how long seekers search.
 
@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Urban Suite - Sprawl Effect** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Urban Sprawl** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

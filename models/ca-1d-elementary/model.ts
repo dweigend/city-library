@@ -264,9 +264,8 @@ export function create(options: Partial<ElementaryParameters> = {}) {
   };
 }
 export const model = {
-  title: "CA 1D Elementary",
-  description:
-    "Eight binary neighborhood rules with source row continuation. Wilensky (1998), CC BY-NC-SA 3.0.",
+  title: "Elementary Cellular Automaton",
+  description: "A row of on/off cells follows one of 256 rules; each new row shows the next generation. Wilensky (1998), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<ElementaryParameters, ReturnType<typeof create>>;

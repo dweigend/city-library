@@ -1,4 +1,4 @@
-# epiDEM Basic
+# Basic Epidemic
 
 How does a rare infection spread through a population that is fully susceptible? People move around. An infected person can infect a susceptible neighbor with `infectionChance`, and after about `averageRecoveryTime` an infected person recovers with `recoveryChance`. Recovered people stay immune. The population is closed: nobody is born, dies or leaves. The model reports infected and cured counts and estimates R0 from its own infection history.
 
@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **epiDEM Basic** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Basic Epidemic** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

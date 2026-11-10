@@ -1,4 +1,4 @@
-# DES EV Charging
+# EV Charging Queue
 
 Who gets a charger first when cars queue? Electric vehicles wait for `chargerCount` chargers. Waiting vehicles are served by priority, sessions can have different lengths, and a waiting vehicle can give up. Each step advances one minute.
 
@@ -11,7 +11,7 @@ Things to try:
 
 ## Use
 
-Choose **DES EV Charging** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **EV Charging Queue** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

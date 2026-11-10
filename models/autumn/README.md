@@ -1,4 +1,4 @@
-# Autumn
+# Autumn Leaves
 
 Why do leaves change color in autumn? Each leaf on a tree holds water, chlorophyll and sugar. Weather drives these values: sun, temperature, rain and wind change them step by step. As chlorophyll fades, other pigments show through. Wind loosens the leaves, and a leaf falls once it is no longer attached.
 
@@ -11,7 +11,7 @@ Things to try:
 
 ## Use
 
-Choose **Autumn** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Autumn Leaves** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

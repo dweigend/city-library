@@ -1,4 +1,4 @@
-# Life
+# Game of Life
 
 How can a fixed local rule create structures that seem to move with purpose? This is Conway's Game of Life on a wrapping grid. A dead cell with exactly three living neighbors is born; a living cell with two or three living neighbors survives; every other cell dies or stays dead. All cells are counted first, then changed together. You can start with random cells (`initialDensity`) or draw your own.
 
@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Life** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Game of Life** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

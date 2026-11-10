@@ -1,4 +1,4 @@
-# Mandelbrot
+# Mandelbrot Set
 
 How does a simple rule draw an endlessly detailed boundary? Every point c of the complex plane is tested by repeating z → z² + c from z = 0. Points whose values escape quickly are colored by how fast they escape; points that stay bounded within the iteration limit belong to the dark shape. Here, moving worker agents share the computation: each worker iterates the field it stands on, then hops on (`throw`).
 
@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Mandelbrot** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Mandelbrot Set** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

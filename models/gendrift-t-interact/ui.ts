@@ -47,9 +47,9 @@ export const ui = defineUI(model, {
       type: "line",
       label: "Agent populations",
       series: (s) =>
-        [5, 15, 25, 35, 45, 55, 65, 125, 85, 95].map((c, i) => ({
-          label: `Color ${c}`,
-          color: indexedColor(c),
+        agentColors.slice(0, s.parameters.colorCount).map(({ color, name }, i) => ({
+          label: name,
+          color: indexedColor(color),
           points: s.history.map((p) => ({ x: p.tick, y: p.counts[i]! })),
         })),
     },
@@ -62,6 +62,14 @@ export const ui = defineUI(model, {
 });
 
 type UIObservation = Observation<typeof model>;
+
+/** The source's ten agent colors in count order, named as in NetLogo. */
+const agentColors = [
+  { color: 5, name: "Gray" }, { color: 15, name: "Red" }, { color: 25, name: "Orange" },
+  { color: 35, name: "Brown" }, { color: 45, name: "Yellow" }, { color: 55, name: "Green" },
+  { color: 65, name: "Lime" }, { color: 125, name: "Magenta" }, { color: 85, name: "Cyan" },
+  { color: 95, name: "Sky" },
+] as const;
 
 function geneticDriftAndWallsData(s: UIObservation): SpatialData {
   return {

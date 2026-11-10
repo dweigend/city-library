@@ -1,4 +1,4 @@
-# Prisoner's Dilemma Two Person Iterated
+# Iterated Prisoner's Dilemma
 
 Can cooperation last when the same two players meet again and again? Two players repeat the prisoner's dilemma. Each follows a strategy, for example `cooperate`, `defect`, `act-randomly` or `tit-for-tat`, and some strategies react to the opponent's earlier moves. Payoffs accumulate over the rounds.
 
@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Prisoner's Dilemma Two Person Iterated** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Iterated Prisoner's Dilemma** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

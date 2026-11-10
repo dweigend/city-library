@@ -57,4 +57,4 @@ export function create(options: Partial<BufferParameters> = {}) {
     },
   };
 }
-export const model = { title: "DES Urban Goods Buffer", description: "A bounded consolidation store with producer backpressure and timed collections. Minutes and indivisible crates.", inputs, create } satisfies Definition<BufferParameters, ReturnType<typeof create>>;
+export const model = { title: "Urban Goods Buffer", description: "Producers deliver crates to a store with limited space; collections empty it on a schedule.", inputs, create } satisfies Definition<BufferParameters, ReturnType<typeof create>>;

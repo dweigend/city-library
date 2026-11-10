@@ -1,4 +1,4 @@
-# DES Waste Collection
+# Waste Collection Tour
 
 How does truck size change a collection round? A truck drives a route over grid locations that hold 12 units of waste. It carries at most `loadCapacity` units and empties them at the depot, which takes `unloadMinutes`. Waste at the sites, on the truck and at the depot always adds up to 12.
 
@@ -11,7 +11,7 @@ Things to try:
 
 ## Use
 
-Choose **DES Waste Collection** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Waste Collection Tour** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

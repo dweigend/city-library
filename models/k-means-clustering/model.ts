@@ -284,8 +284,7 @@ export function create(options: Partial<ClusteringParameters> = {}) {
 }
 export const model = {
   title: "K-Means Clustering",
-  description:
-    "Lloyd assignment and centroid updates with native radial data and stopping tolerance. Hjorth, Head and Wilensky (2014), CC BY-NC-SA 3.0.",
+  description: "Points join their nearest center and centers move to the middle of their points until stable. Hjorth, Head and Wilensky (2014), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<ClusteringParameters, ReturnType<typeof create>>;

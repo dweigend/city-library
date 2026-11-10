@@ -1,4 +1,4 @@
-# Urban Suite - Path Dependence
+# Firm Location Path Dependence
 
 Does history decide where firms cluster? Firms move around and settle with a probability that depends on the local quality of a region and on how many firms are already there (`increasingReturns`). Different random histories can favor different locations. `disturb` lets you shake up a settled pattern.
 
@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Urban Suite - Path Dependence** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Firm Location Path Dependence** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

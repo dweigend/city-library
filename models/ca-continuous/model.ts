@@ -202,9 +202,8 @@ export function create(options: Partial<ContinuousParameters> = {}) {
   };
 }
 export const model = {
-  title: "CA Continuous",
-  description:
-    "Three-parent mean, additive fractional map and source precision. Wilensky (2003), CC BY-NC-SA 3.0.",
+  title: "Continuous Cellular Automaton",
+  description: "Each new row averages three parent values and keeps the fractional part, drawing shaded patterns. Wilensky (2003), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<ContinuousParameters, ReturnType<typeof create>>;

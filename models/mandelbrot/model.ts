@@ -210,9 +210,8 @@ export function create(options: Partial<Parameters> = {}) {
   };
 }
 export const model = {
-  title: "Mandelbrot",
-  description:
-    "Moving agents allocate complex-iteration work to fields. Wilensky (1997), CC BY-NC-SA 3.0.",
+  title: "Mandelbrot Set",
+  description: "Agents compute which points of the complex plane escape, drawing the Mandelbrot set. Wilensky (1997), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<Parameters, ReturnType<typeof create>>;

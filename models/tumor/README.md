@@ -1,4 +1,4 @@
-# Tumor
+# Tumor Growth
 
 Why can a tumor come back after treatment? Cells come in two kinds. Stem cells renew themselves when they divide; transitory cells divide only a limited number of times and then die. Treatment actions remove the original stem cell, moving stem cells or all transitory cells, so you can test which removal stops growth under these rules.
 
@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Tumor** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Tumor Growth** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

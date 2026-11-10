@@ -57,5 +57,5 @@ export function create(options: Partial<WaterParameters> = {}) {
   };
 }
 export const model = {
-  title: "DES Water Allocation", description: "FIFO allocation of finite supply units to four grid districts. Allocation only; no hydraulic pressure or flow claims.", inputs, create,
+  title: "Water Allocation", description: "A limited water supply is shared first-come, first-served among four districts.", inputs, create,
 } satisfies Definition<WaterParameters, ReturnType<typeof create>>;

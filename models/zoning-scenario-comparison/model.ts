@@ -109,7 +109,7 @@ export function create(options: Partial<ZoningParameters> = {}) {
 
 export const model = {
   title: "Zoning Scenario Comparison",
-  description: "Illustrative seeded density-cap studies over synthetic buildable parcels; no planning-compliance claim.",
+  description: "Compare two density caps on synthetic parcels by the housing slots they allow. Illustrative only.",
   inputs,
   create,
 } satisfies Definition<ZoningParameters, ReturnType<typeof create>>;

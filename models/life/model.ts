@@ -213,9 +213,8 @@ export function create(options: Partial<LifeParameters> = {}) {
   };
 }
 export const model = {
-  title: "Life",
-  description:
-    "Synchronous toroidal Game of Life. Uri Wilensky (1998), CC BY-NC-SA 3.0.",
+  title: "Game of Life",
+  description: "Cells live, die or are born based on their eight neighbors, producing gliders and still lifes. Uri Wilensky (1998), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<LifeParameters, ReturnType<typeof create>>;

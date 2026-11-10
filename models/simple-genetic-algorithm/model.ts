@@ -214,8 +214,7 @@ export function create(options: Partial<Parameters> = {}) {
 }
 export const model = {
   title: "Simple Genetic Algorithm",
-  description:
-    "Tournament selection, single-point crossover and mutation on ALL-ONES. Stonedahl & Wilensky (2008), CC BY-NC-SA 3.0.",
+  description: "Bit strings evolve toward all ones by selection, crossover and mutation. Stonedahl & Wilensky (2008), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<Parameters, ReturnType<typeof create>>;

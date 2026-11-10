@@ -1,4 +1,4 @@
-# Artificial Neural Net - Multilayer
+# Multilayer Neural Network
 
 What does a hidden layer add to a neural network? Two inputs pass through a small hidden layer with smooth (sigmoid) activations to one output. After each example, backpropagation adjusts all weights by `learningRate` to reduce the error against the chosen `targetFunction`.
 
@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Artificial Neural Net - Multilayer** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Multilayer Neural Network** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

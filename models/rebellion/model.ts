@@ -234,9 +234,8 @@ export function create(options: Partial<RebellionParameters> = {}) {
   };
 }
 export const model = {
-  title: 'Rebellion',
-  description:
-    'Grievance, local arrest risk and asynchronous policing. Wilensky (2004), CC BY-NC-SA 3.0.',
+  title: "Rebellion",
+  description: "Citizens rebel when grievance outweighs the risk of arrest; police jail active rebels. Wilensky (2004), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<RebellionParameters, ReturnType<typeof create>>;

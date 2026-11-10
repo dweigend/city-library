@@ -1,4 +1,4 @@
-# Urban Suite - Pollution
+# Urban Pollution and Health
 
 Can trees offset the pollution of power plants? Power plants keep polluting their surroundings, pollution spreads, and trees remove it nearby. People move around, lose health in polluted areas, plant trees with `plantingRate` and have children with `birthRate` when healthy.
 
@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Urban Suite - Pollution** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Urban Pollution and Health** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

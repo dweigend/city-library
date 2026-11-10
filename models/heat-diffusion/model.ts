@@ -256,8 +256,7 @@ export function create(options: Partial<HeatParameters> = {}) {
 }
 export const model = {
   title: "Heat Diffusion",
-  description:
-    "Random sequential field heat transfer with clamped boundary strips. Wilensky (1998), CC BY-NC-SA 3.0.",
+  description: "Heat spreads through a plate held at fixed temperatures along its edges. Wilensky (1998), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<HeatParameters, ReturnType<typeof create>>;

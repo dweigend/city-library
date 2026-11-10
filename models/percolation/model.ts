@@ -186,8 +186,7 @@ export function create(options: Partial<PercolationParameters> = {}) {
 }
 export const model = {
   title: "Percolation",
-  description:
-    "Sequential oil entry and scrolling soil. Uri Wilensky (1998), CC BY-NC-SA 3.0.",
+  description: "Oil seeps down through porous soil; the porosity decides how deep it gets. Uri Wilensky (1998), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<PercolationParameters, ReturnType<typeof create>>;

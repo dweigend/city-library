@@ -209,8 +209,7 @@ export function create(options: Partial<Parameters> = {}) {
 }
 export const model = {
   title: "Galton Box",
-  description:
-    "Falling balls, staggered pegs and accumulating piles. Uri Wilensky (2002), CC BY-NC-SA 3.0.",
+  description: "Balls bounce left or right off pegs and pile up into a bell-shaped distribution. Uri Wilensky (2002), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<Parameters, ReturnType<typeof create>>;

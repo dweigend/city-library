@@ -1,4 +1,4 @@
-# Artificial Neural Net - Perceptron
+# Perceptron
 
 Which logical functions can a single artificial neuron learn? Two inputs and a bias feed one output unit with a threshold. For each training example, the unit compares its output with the chosen `targetFunction` and adjusts its weights by `learningRate`. The decision boundary is a single straight line.
 
@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Artificial Neural Net - Perceptron** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Perceptron** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

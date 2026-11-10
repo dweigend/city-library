@@ -1,4 +1,4 @@
-# Vants
+# Virtual Ants
 
 Can a fully deterministic rule look random? Each virtual ant (vant) stands on a field of black and white cells. It turns right on one color and left on the other, flips the color of its cell and moves forward. The rule has no randomness, and `reverse` runs it backward step by step.
 
@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Vants** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Virtual Ants** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

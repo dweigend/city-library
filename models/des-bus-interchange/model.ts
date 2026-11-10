@@ -82,4 +82,4 @@ export function create(options: Partial<BusParameters> = {}) {
     },
   };
 }
-export const model = { title: "DES Bus Interchange", description: "Graph-derived bus travel followed by FIFO berth service. World steps and Agenda minutes remain explicit.", inputs, create } satisfies Definition<BusParameters, ReturnType<typeof create>>;
+export const model = { title: "Bus Interchange", description: "Buses travel to an interchange and wait for a free berth before passengers are served.", inputs, create } satisfies Definition<BusParameters, ReturnType<typeof create>>;

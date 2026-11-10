@@ -74,6 +74,6 @@ export function create(options: Partial<WasteParameters> = {}) {
   };
 }
 export const model = {
-  title: "DES Waste Collection", description: "A grid collection tour with a bounded truck and depot service. Load units and minutes; synthetic scenario.",
+  title: "Waste Collection Tour", description: "A truck with limited capacity empties bins on a grid and returns to the depot when full.",
   inputs, create,
 } satisfies Definition<WasteParameters, ReturnType<typeof create>>;

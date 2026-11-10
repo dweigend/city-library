@@ -1,4 +1,4 @@
-# epiDEM Travel and Control
+# Epidemic Travel and Control
 
 How do travel and control measures change an epidemic? This model extends epiDEM Basic. People live in separate regions and may travel between them (`travel`, `travelTendency`), may form social links (`edges`), may isolate themselves or go to hospital according to individual tendencies, and may be inoculated. Ambulances bring people to hospital.
 
@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **epiDEM Travel and Control** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Epidemic Travel and Control** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

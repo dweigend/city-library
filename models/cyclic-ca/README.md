@@ -1,4 +1,4 @@
-# Cyclic CA
+# Cyclic Cellular Automaton
 
 Can a random field organize itself into waves and spirals? Each cell holds one of `stateCount` states arranged in a cycle. A cell moves to the next state when at least `threshold` cells in its neighborhood (Moore or von Neumann, up to `radius`) already hold that next state. `preset` loads known parameter combinations.
 
@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Cyclic CA** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Cyclic Cellular Automaton** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

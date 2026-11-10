@@ -1,4 +1,4 @@
-# Fur
+# Fur Patterns
 
 Can a simple local rule produce spots and stripes? Every cell is either colored or plain. A colored cell activates nearby cells within an inner ellipse and inhibits cells in a surrounding outer ring, weighted by `ratio`. Each cell sums these influences and changes its color accordingly.
 
@@ -11,7 +11,7 @@ Things to try:
 
 ## Use
 
-Choose **Fur** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Fur Patterns** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

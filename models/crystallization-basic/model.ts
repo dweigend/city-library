@@ -237,9 +237,8 @@ export function create(options: Partial<CrystalParameters> = {}) {
   };
 }
 export const model = {
-  title: "Crystallization Basic",
-  description:
-    "Sequential atom cooling and separate crystal orientation phases. Wilensky (2002), CC BY-NC-SA 3.0.",
+  title: "Crystallization",
+  description: "A cooling liquid freezes into crystal grains whose orientations meet at boundaries. Wilensky (2002), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<CrystalParameters, ReturnType<typeof create>>;

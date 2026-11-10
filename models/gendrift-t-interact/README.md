@@ -1,4 +1,4 @@
-# GenDrift T interact
+# Genetic Drift by Contact
 
 Can a population lose its diversity when no trait has an advantage? Agents of `colorCount` colors wander. When two meet, one copies the other's color. Nothing favors any color, yet a color that disappears can never come back. Walls can be drawn to split the space into separate groups.
 
@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **GenDrift T interact** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Genetic Drift by Contact** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

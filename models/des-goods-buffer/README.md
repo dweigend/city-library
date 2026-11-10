@@ -1,4 +1,4 @@
-# DES Urban Goods Buffer
+# Urban Goods Buffer
 
 What happens when a delivery buffer is full? Producers deliver crates into a store that holds `capacity` crates. When the store is full, the next producer has to wait, which is called backpressure. Collections take crates out, starting at `firstCollectionTime`, and each collection immediately lets a waiting producer in. Each step advances one minute.
 
@@ -11,7 +11,7 @@ Things to try:
 
 ## Use
 
-Choose **DES Urban Goods Buffer** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Urban Goods Buffer** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

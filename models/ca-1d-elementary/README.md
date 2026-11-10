@@ -1,4 +1,4 @@
-# CA 1D Elementary
+# Elementary Cellular Automaton
 
 How much variety can come from the simplest possible rule? A row of cells holds 0s and 1s. Each cell's next value depends on itself and its two neighbors: eight possible neighborhoods, each mapped to 0 or 1. Those eight bits form the rule number from 0 to 255. Each new generation is drawn as the next row, so the picture shows space across and time down.
 
@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **CA 1D Elementary** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Elementary Cellular Automaton** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

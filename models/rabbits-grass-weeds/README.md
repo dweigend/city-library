@@ -1,4 +1,4 @@
-# Rabbits Grass Weeds
+# Rabbits, Grass and Weeds
 
 How do food quality and regrowth shape a population of consumers? Rabbits wander, spend energy and eat the grass or weeds on their cell. Each plant type has its own growth rate and energy value (`grassGrowRate`, `grassEnergy`, `weedsGrowRate`, `weedEnergy`). A rabbit that collects more than `birthThreshold` energy has offspring; a rabbit with no energy left dies.
 
@@ -11,7 +11,7 @@ Things to try:
 
 ## Use
 
-Choose **Rabbits Grass Weeds** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Rabbits, Grass and Weeds** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

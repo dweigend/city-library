@@ -1,4 +1,4 @@
-# DES Emergency Dispatch
+# Emergency Dispatch
 
 In which order does a single team answer emergency calls? Three calls come in at places in a small network. Waiting calls are ordered by priority, a running job is never interrupted, and travel time comes from the network. Each job takes travel plus `serviceMinutes`.
 
@@ -10,7 +10,7 @@ Things to try:
 
 ## Use
 
-Choose **DES Emergency Dispatch** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Emergency Dispatch** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

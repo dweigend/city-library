@@ -147,7 +147,7 @@ export function create(options: Partial<CellsParameters> = {}) {
   };
 }
 export const model = {
-  title: "Urban Suite - Cells",
-  description: "Snapshot cellular activation, strict source-time aging and retained seed colors. Wilensky (2007), CC BY-NC-SA3.0.",
+  title: "Urban Growth Cells",
+  description: "Cells switch on depending on how many neighbors are on, growing city-like clusters from seeds. Wilensky (2007), CC BY-NC-SA 3.0.",
   inputs, create,
 } satisfies Definition<CellsParameters, ReturnType<typeof create>>;

@@ -70,7 +70,7 @@ export function create(options: Partial<EnergyParameters> = {}) {
   };
 }
 export const model = {
-  title: "Household Energy Demand", description: "Illustrative hourly appliance shifting with explicit bounded measurements; synthetic loads.",
+  title: "Household Energy Demand", description: "Households move a share of appliance use to other hours, changing hourly electricity demand. Synthetic loads.",
   inputs,
   create,
 } satisfies Definition<EnergyParameters, ReturnType<typeof create>>;

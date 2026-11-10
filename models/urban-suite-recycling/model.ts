@@ -191,7 +191,7 @@ export function create(options: Partial<RecyclingParameters> = {}) {
   };
 }
 export const model = {
-  title: "Urban Suite - Recycling",
-  description: "Resource use, recycling costs and discrete regeneration. Adapted from Felsen and Wilensky (2007), CC BY-NC-SA3.0.",
+  title: "Recycling and Resource Use",
+  description: "Recyclers and wasteful residents use the same resources at different costs to the environment. Adapted from Felsen and Wilensky (2007), CC BY-NC-SA 3.0.",
   inputs, create,
 } satisfies Definition<RecyclingParameters, ReturnType<typeof create>>;

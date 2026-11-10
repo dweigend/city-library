@@ -1,4 +1,4 @@
-# DES Parcel Logistics
+# Parcel Logistics
 
 How does one delivery van work through a backlog? Parcels enter a depot that holds `depotCapacity` parcels; when it is full, further parcels wait outside. A single van loads a parcel in `loadingMinutes`, drives it along weighted network routes and returns before taking the next one. The van counts as busy until it is back.
 
@@ -11,7 +11,7 @@ Things to try:
 
 ## Use
 
-Choose **DES Parcel Logistics** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Parcel Logistics** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

@@ -333,7 +333,7 @@ export function create(options: Partial<Parameters> = {}) {
 }
 export const model = {
   title: "Bidding Market",
-  description: "Adaptive bilateral market · Wilensky · CC BY-NC-SA 3.0",
+  description: "Buyers and sellers meet, trade at asked prices and adjust what they expect to pay or receive. Wilensky, CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<Parameters, ReturnType<typeof create>>;

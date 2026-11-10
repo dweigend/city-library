@@ -1,4 +1,4 @@
-# Urban Suite - Economic Disparity
+# Rich and Poor Residential Choice
 
 Do rich and poor households sort into different parts of a city? Every step, new rich and poor residents arrive and test `testCount` sites. Poor residents weigh price more (`poorPricePriority`), rich residents weigh quality (`richQualityPriority`). Where they settle, they change local price and quality, and jobs move toward valuable land. Residents leave with `deathRate`.
 
@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Urban Suite - Economic Disparity** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Rich and Poor Residential Choice** in [Agent Lab](../../ui/agent-lab/README.md).
 
 From a script in the repository root:
 

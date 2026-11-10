@@ -1725,8 +1725,9 @@
       "source": "models/resource-exchange/model.ts",
       "destination": "models/resource-exchange/model.ts",
       "sourceSha256": "d2965253fd40853fe39ca2332213605666a774d838e309cf8984d064dc79ddbb",
-      "destinationSha256": "a5ad11119704a4ab0cd0afc21d54448a04189071c1568516bdef6ec797c2ac36",
-      "assertions": 0
+      "destinationSha256": "048fab66118ea11d8a3fdab21d837c969396293ea2da2808527a5c52713d9673",
+      "assertions": 0,
+      "note": "2026-11-10: display title capitalized and description rewritten in plain language; model behavior, inputs and assertions unchanged."
     },
     {
       "source": "tests/public-contracts/grid-models/01-life-synchronous-blinker.ts",
