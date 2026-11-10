@@ -36,12 +36,12 @@ Other instance procedures: `setup`, `createPopulation`, `preset`, `drawYourOwnPe
 
 Additional instance accessors: `world`, `grid`. See [model.ts](model.ts) for the returned live references.
 
-Model-specific `read()` fields include `ranger`, `background`, `message`, `population`, `cells`, `people`, `means`, `sums`, `meanHistogram`, `sumHistogram`, `numSamples`, `expectedValue`, `stdDevMeans`, `stdDevSums`.
+Model-specific `read()` fields include `ranger`, `background`, `message`, `population`, `cells`, `people`, `means`, `sums`, `meanHistogram`, `sumHistogram`, `sampleCount`, `expectedValue`, `stdDevMeans`, `stdDevSums`.
 
 The [UI binding](ui.ts) presents `Show expected value`, `Create random people`, `Preset ${n}`, `Tick`, `Population`, `Samples`, `Expected value`, `Std dev means`, `Std dev sums`, `State` and further views or controls.
 
 ## Sources and acceptance
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained NetLogo source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
 
 [Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `central-limit-theorem` and links any shared checks.

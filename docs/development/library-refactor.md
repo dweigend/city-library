@@ -6,7 +6,7 @@ The library refactor preserves the root TypeScript API while making validation, 
 
 Public functions describe the main flow. Private functions name meaningful validation or calculation steps. Guard clauses handle exceptional cases without wrapping the normal flow in nested branches. Documentation records inputs, defaults, units, ownership, errors and ordering where those contracts matter.
 
-World admission validates the full batch before attaching components. Graph generators use discriminated internal configuration and separate planners. Grid owns validation and commit; its diffusion algorithm owns the numerical calculation. Statistics preserve input-order accumulation and sort only an owned buffer. Experiment helpers expose execution phases without moving their state ownership.
+World admission validates the full batch before attaching components. Graph generators use discriminated internal configuration and separate planners. Grid owns validation and commit; its diffusion algorithm owns the numerical calculation. Statistics preserve input-order accumulation and sort only an owned buffer. Study helpers expose execution phases without moving their state ownership.
 
 This work uses local adaptations of the existing implementation, not transferred external code or new dependencies. The refactor preserves the public assertions; the current main branch relocates examples into public contract tests. It adds no API expansion and does not claim scientific model acceptance.
 
@@ -45,4 +45,10 @@ The known experiment empty-axis overlap/default-key defect remains a separate be
 
 The newer main branch was merged without conflicts. It changes model/UI integration and moves examples into public contract tests; it does not overlap the library implementation changes. After integration, real-browser Setup, one-step, ten-step and Run/Pause checks passed for Flocking, Heat Diffusion, Diffusion on a Directed Network, DES Bus Interchange and Preferential Attachment. All five advanced during Run and reported no page errors or alerts.
 
-The current full check and UI build are rerun separately; their result is recorded when completed. Earlier source reviews cover the refactor payload, not an independent review of unrelated main changes.
+The full check and UI build passed after integrating both the public-contract relocation and the naming migration. Public contracts passed all 292 scripts; packed Bun, Node ESM and ambient-free TypeScript consumers passed. Earlier source reviews cover the refactor payload; the naming conflict resolution receives a separate integration review.
+
+## Naming migration integration
+
+Upstream naming contracts take precedence over old names: factories use create, experiment APIs are Studies, generator modes use kebab-case, and activation uses group terminology. Conflict resolution preserves the readable private steps while adopting upstream public names and error messages. A relocated preferential-generator validation was also updated to retain the upstream edgesPerNode diagnostic.
+
+The integrated browser checks use the new model query parameter, verify the loaded model name and exercise Setup, one step, ten steps and Run/Pause. All five representative models advanced from tick/time 11 to 14 with no page errors or alerts. An initial run using the obsolete experiment parameter selected the default model; those observations are excluded from integrated-model coverage.

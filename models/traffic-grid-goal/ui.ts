@@ -2,7 +2,7 @@ import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 
 const binding = defineUI(model, {
-  setup: ["seed", "gridSizeX", "gridSizeY", "numCars"],
+  setup: ["seed", "gridSizeX", "gridSizeY", "carCount"],
   change: (instance, changes) => instance.setParameters(changes),
   live: {
     power: {},
@@ -13,7 +13,7 @@ const binding = defineUI(model, {
   },
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/IABM%20Textbook/chapter%205/Traffic%20Grid%20Goal.nlogox",
-    label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · NetLogo model · Wilensky · CC BY-NC-SA 3.0",
   },
   drawing: {
     toggleLabel: "Select intersection",
@@ -39,7 +39,7 @@ const binding = defineUI(model, {
   monitors: [
     { label: "Tick", value: (state) => state.tick },
     { label: "Phase", value: (state) => state.phase },
-    { label: "Stopped cars", value: (state) => state.numCarsStopped },
+    { label: "Stopped cars", value: (state) => state.stoppedCarCount },
   ],
   views: [
     {
@@ -60,7 +60,7 @@ const binding = defineUI(model, {
           label: "Stopped cars",
           points: state.history.map((point) => ({
             x: point.tick,
-            y: point.numCarsStopped,
+            y: point.stoppedCarCount,
           })),
         },
       ],

@@ -67,10 +67,10 @@ function flag(value: unknown): boolean {
   if (value !== undefined && typeof value !== "boolean") throw new TypeError("Graph flags must be boolean.");
   return value ?? false;
 }
-function add<N extends object = object>(options?: { parallel?: boolean; selfLoops?: boolean }): Graph<N, {}>;
-function add<N extends object = object, E extends object = {}>(options: { edgeState: E; parallel?: boolean; selfLoops?: boolean }): Graph<N, E>;
-function add<N extends object, E extends object>(options: GraphOptions<E> = {}): Graph<N, E> {
-  if (arguments.length > 1) throw new TypeError("Graph.add accepts one options record.");
+function create<N extends object = object>(options?: { parallel?: boolean; selfLoops?: boolean }): Graph<N, {}>;
+function create<N extends object = object, E extends object = {}>(options: { edgeState: E; parallel?: boolean; selfLoops?: boolean }): Graph<N, E>;
+function create<N extends object, E extends object>(options: GraphOptions<E> = {}): Graph<N, E> {
+  if (arguments.length > 1) throw new TypeError("Graph.create accepts one options record.");
   const settings = validateOptions(options, ["edgeState", "parallel", "selfLoops"]);
   const parallel = flag(settings.parallel);
   const selfLoops = flag(settings.selfLoops);
@@ -286,4 +286,4 @@ function owner<N extends object, E extends object>(parallel: boolean, selfLoops:
   }
   return Object.freeze(graph);
 }
-export const Graph = Object.freeze({ add });
+export const Graph = Object.freeze({ create });

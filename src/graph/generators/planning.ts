@@ -1,9 +1,9 @@
 import { displacement, finite, position, type Position } from "../../geometry/space.ts";
-import type { GeneratorConfig, GenericGeneratorConfig } from "./options.ts";
-import { planNwTopology } from "./nw-planning.ts";
+import type { GeneratorSpec, GenericGeneratorSpec } from "./options.ts";
+import { planTopology } from "./topology-planning.ts";
 import { addConnection, type Connection } from "./validation.ts";
 
-type KindConfig<N, K extends GenericGeneratorConfig<N>["kind"]> = Extract<GenericGeneratorConfig<N>, { kind: K }>;
+type KindSpec<N, K extends GenericGeneratorSpec<N>["kind"]> = Extract<GenericGeneratorSpec<N>, { kind: K }>;
 
 /** Private degree prefix index; intervals match the stable cumulative scan. */
 class DegreeIndex {
@@ -28,8 +28,8 @@ class DegreeIndex {
 }
 
 /** Plan only integer endpoint indices. Graph alone materializes/publishes edges. */
-export function planGenerator<N>(config: GeneratorConfig<N>): Connection[] {
-  if ("profile" in config) return planNwTopology(config);
+export function planGenerator<N>(config: GeneratorSpec<N>): Connection[] {
+  if ("profile" in config) return planTopology(config);
   const count = config.nodes.length;
   const connections: Connection[] = [];
   const add = (from: number, to: number) => addConnection(connections, from, to);
@@ -63,7 +63,7 @@ export function planGenerator<N>(config: GeneratorConfig<N>): Connection[] {
       for (let from = 0; from < count; from++) for (let to = config.directed ? 0 : from + 1; to < count; to++)
         if (from !== to && config.random.number() < config.probability) add(from, to);
       break;
-    case "smallWorld":
+    case "small-world":
       planSmallWorld(config, connections);
       break;
     case "preferential":
@@ -77,7 +77,7 @@ export function planGenerator<N>(config: GeneratorConfig<N>): Connection[] {
 }
 
 /** Row-major node order; axis strides grow from the first shape entry. */
-function planLattice<N>(config: KindConfig<N, "lattice">, add: (from: number, to: number) => void): void {
+function planLattice<N>(config: KindSpec<N, "lattice">, add: (from: number, to: number) => void): void {
   const count = config.nodes.length;
   const seen = new Set<number>();
   for (let node = 0; node < count; node++) {
@@ -102,7 +102,7 @@ function latticeSuccessor(node: number, coordinate: number, axis: number, stride
 }
 
 /** Ring lattice, then a probability draw per edge and a target draw only when rewiring is possible. */
-function planSmallWorld<N>(config: KindConfig<N, "smallWorld">, connections: Connection[]): void {
+function planSmallWorld<N>(config: KindSpec<N, "small-world">, connections: Connection[]): void {
   const count = config.nodes.length;
   const neighbors = Array.from({ length: count }, () => new Set<number>());
   for (let from = 0; from < count; from++) for (let offset = 1; offset <= config.neighbors / 2; offset++) {
@@ -125,32 +125,32 @@ function planSmallWorld<N>(config: KindConfig<N, "smallWorld">, connections: Con
 }
 
 /** Seed clique, then degree-proportional targets drawn without replacement per new node. */
-function planPreferential<N>(config: KindConfig<N, "preferential">, add: (from: number, to: number) => void): void {
+function planPreferential<N>(config: KindSpec<N, "preferential">, add: (from: number, to: number) => void): void {
   const count = config.nodes.length;
   const degree = Array<number>(count).fill(0);
   const index = new DegreeIndex(count);
   let total = 0;
-  for (let from = 0; from <= config.links; from++) for (let to = from + 1; to <= config.links; to++) {
+  for (let from = 0; from <= config.edgesPerNode; from++) for (let to = from + 1; to <= config.edgesPerNode; to++) {
     add(from, to); degree[from]!++; degree[to]!++;
   }
-  for (let node = 0; node <= config.links; node++) { index.add(node, degree[node]!); total += degree[node]!; }
-  for (let node = config.links + 1; node < count; node++) {
+  for (let node = 0; node <= config.edgesPerNode; node++) { index.add(node, degree[node]!); total += degree[node]!; }
+  for (let node = config.edgesPerNode + 1; node < count; node++) {
     const selected: number[] = [];
     let available = total;
-    for (let choice = 0; choice < config.links; choice++) {
+    for (let choice = 0; choice < config.edgesPerNode; choice++) {
       const target = index.select(config.random.number() * available);
       selected.push(target); add(node, target);
       // Remove the chosen target from this node's remaining draws.
       index.add(target, -degree[target]!); available -= degree[target]!;
     }
     for (const target of selected) { degree[target]!++; index.add(target, degree[target]!); }
-    degree[node] = config.links; index.add(node, config.links);
-    total += config.links * 2;
+    degree[node] = config.edgesPerNode; index.add(node, config.edgesPerNode);
+    total += config.edgesPerNode * 2;
   }
 }
 
 /** Captures every position first, then connects pairs within the radius. */
-function planGeometric<N>(config: KindConfig<N, "geometric">, add: (from: number, to: number) => void): void {
+function planGeometric<N>(config: KindSpec<N, "geometric">, add: (from: number, to: number) => void): void {
   const count = config.nodes.length;
   let dimensions: 2 | 3 | undefined = config.space?.dimensions;
   const points: Position[] = [];

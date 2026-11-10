@@ -13,9 +13,9 @@ export const inputs: Inputs<MembershipParameters> = {
 
 export function create(options: Partial<MembershipParameters> = {}) {
   const settings = parameters(inputs, options);
-  const world = World.add();
+  const world = World.create();
   const residents = Array.from({ length: settings.residents }, (_, index) =>
-    world.add(Agent.add({ label: `Resident ${index + 1}` })),
+    world.add(Agent.create({ label: `Resident ${index + 1}` })),
   );
   const householdA = { id: "household-a", label: "Household A", kind: "household" };
   const householdB = { id: "household-b", label: "Household B", kind: "household" };
@@ -23,7 +23,7 @@ export function create(options: Partial<MembershipParameters> = {}) {
   const workplaceB = { id: "workplace-b", label: "Workplace B", kind: "workplace" };
   const places = [householdA, householdB, workplaceA, workplaceB];
   type Member = (typeof residents)[number] | (typeof places)[number];
-  const membership = Graph.add<Member>();
+  const membership = Graph.create<Member>();
   for (const member of [...residents, ...places]) {
     membership.nodes.add(member);
   }

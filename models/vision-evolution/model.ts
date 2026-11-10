@@ -64,14 +64,14 @@ export const inputs: Inputs<Parameters> = {
   maxEyeSize: { kind: "number", default: 5, min: 1, max: 10, integer: true },
 };
 export type Fish = Agent<{
-  breed: "fish";
+  group: "fish";
   eyeSize: number;
   landMobility: number;
   landFoodPreference: number;
   energy: number;
   fovRadius: number;
 }>;
-type Food = Agent<{ breed: "food" }>;
+type Food = Agent<{ group: "food" }>;
 export function visionRadius(eyeSize: number, y: number, maxEyeSize: number) {
   return y < 0 ? eyeSize / maxEyeSize + 3 : eyeSize ** 2 + 3;
 }
@@ -97,19 +97,19 @@ export function weightedDistance(
 }
 export function create(options: Partial<Parameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const space = {
     x: 101,
     y: 101,
     boundary: { x: "wrap" as const, y: "hard" as const },
   };
-  const world = World.add(space, { random });
-  const grid = Grid.add(space);
+  const world = World.create(space, { random });
+  const grid = Grid.create(space);
   world.add(grid);
   const fish = () =>
-    world.agents.filter((a): a is Fish => (a as Fish | Food).breed === "fish");
+    world.agents.filter((a): a is Fish => (a as Fish | Food).group === "fish");
   const food = () =>
-    world.agents.filter((a): a is Food => (a as Fish | Food).breed === "food");
+    world.agents.filter((a): a is Food => (a as Fish | Food).group === "food");
   const history: {
     tick: number;
     fish: number;
@@ -118,8 +118,8 @@ export function create(options: Partial<Parameters> = {}) {
     aquaticEye: number;
   }[] = [];
   function makeFood() {
-    const prey = Agent.add(
-      { breed: "food" as const },
+    const prey = Agent.create(
+      { group: "food" as const },
       {
         position: {
           x: random.number() * 101 - 50.5,
@@ -144,9 +144,9 @@ export function create(options: Partial<Parameters> = {}) {
       heading: number;
     }> = {},
   ) {
-    const agent = Agent.add(
+    const agent = Agent.create(
       {
-        breed: "fish" as const,
+        group: "fish" as const,
         eyeSize: state.eyeSize ?? 1,
         landMobility: state.landMobility ?? 0,
         landFoodPreference: state.landFoodPreference ?? random.number(),
@@ -304,7 +304,7 @@ export function create(options: Partial<Parameters> = {}) {
       if (!fish().length) break;
       for (const agent of random.sample(fish(), {
         count: fish().length,
-        compatibility: "legacy-shuffle",
+        algorithm: "fisher-yates-descending",
       })) {
         move(agent);
         consumeEnergy(agent);

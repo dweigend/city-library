@@ -37,25 +37,25 @@ interface AwarenessSample {
 export function create(options: Partial<AwarenessParameters> = {}) {
   let settings = parameters(inputs, options);
   const width = 37, height = 38;
-  const random = Random.add({ seed: settings.seed });
-  const world = World.add({ x: width, y: height, boundary: "wrap" }, { random });
-  const grid = Grid.add({ x: width, y: height, boundary: "wrap" }, { state: { center: null as CenterKind | null, nonUsage: 0 } });
+  const random = Random.create({ seed: settings.seed });
+  const world = World.create({ x: width, y: height, boundary: "wrap" }, { random });
+  const grid = Grid.create({ x: width, y: height, boundary: "wrap" }, { state: { center: null as CenterKind | null, nonUsage: 0 } });
   world.add(grid);
   const fields = grid.fields;
   const history: Readonly<AwarenessSample>[] = [];
   const people = () => world.agents as readonly Person[];
   const integer = (upper: number) => Math.floor(random.number() * upper);
   // Full activation snapshots use the public uniform Fisher-Yates variant.
-  // Mulberry/order differ from NetLogo; rendering-only asks consume no draws.
+  // Mulberry/order differ from source model; rendering-only asks consume no draws.
   function activation<T>(snapshot: readonly T[]) {
-    return random.sample(snapshot, { count: snapshot.length, compatibility: "legacy-shuffle" });
+    return random.sample(snapshot, { count: snapshot.length, algorithm: "fisher-yates-descending" });
   }
   function initializePeople() {
     for (let i = 0; i < settings.people; i++) {
       const heading = integer(360);
       const x = random.number() * width - width / 2;
       const y = random.number() * height - height / 2;
-      world.add(Agent.add({ awareness: 0 }, { position: { x, y }, orientation: { heading } }));
+      world.add(Agent.create({ awareness: 0 }, { position: { x, y }, orientation: { heading } }));
     }
   }
   function measurement() {
@@ -167,7 +167,7 @@ export function create(options: Partial<AwarenessParameters> = {}) {
         copied.push({ x: person.x, y: person.y, heading: person.heading, awareness: person.awareness });
       }
       for (const person of people()) person.delete();
-      for (const person of copied) world.add(Agent.add({ awareness: person.awareness }, { position: { x: person.x, y: person.y }, orientation: { heading: person.heading } }));
+      for (const person of copied) world.add(Agent.create({ awareness: person.awareness }, { position: { x: person.x, y: person.y }, orientation: { heading: person.heading } }));
       record();
     },
     setCenters(values: readonly CenterInput[]) {

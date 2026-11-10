@@ -23,7 +23,7 @@ assert.equal(butterflies.read().tick, 1);
 assert.equal(snapshot.tick, 0);
 
 // Pollution actions do not tick or draw. The endpoint flips only on the next call.
-const p = moths({ seed: 12, numMoths: 0, speed: 100, cyclePollution: false });
+const p = moths({ seed: 12, mothCount: 0, speed: 100, cyclePollution: false });
 assert.equal(p.read().darkness, 0);
 for (let i = 0; i < 8; i++) p.polluteWorld();
 assert.equal(p.read().darkness, 8);
@@ -40,4 +40,4 @@ assert.equal(p.read().tick, 0);
 p.advance();
 assert.equal(p.read().tick, 1); // no extinction stop in this source
 assert.equal(p.read().moths.length, 0);
-console.log('B08 memory, inclusive forgetting and pollution endpoints passed');
+console.log('memory, inclusive forgetting and pollution endpoints passed');

@@ -1,6 +1,6 @@
 # Universal UI historical acceptance
 
-This is a portable summary of acceptance recorded before the `models/` and Svelte-only integration. It is not evidence that those checks ran on the current merged source. The full original record is pinned at [feature revision `754e4cc`](https://github.com/dweigend/city-library/blob/754e4cc0bb1afb5b417aeda1d918d3b654c8c85f/docs/development/universal-ui-evidence.md). Its `experiments/` paths, two-host descriptions and command names describe that revision. Current checks belong in [the main integration record](pr-main-integration.md).
+This is a portable summary of acceptance recorded before the `models/` and Svelte-only integration. It is not evidence that those checks ran on the current merged source. The full original record is pinned at [feature revision `754e4cc`](https://github.com/dweigend/city-library/blob/754e4cc0bb1afb5b417aeda1d918d3b654c8c85f/docs/development/universal-ui-evidence.md). Its `studies/` paths, two-host descriptions and command names describe that revision. Current checks belong in [the main integration record](pr-main-integration.md).
 
 ## Recorded scope
 

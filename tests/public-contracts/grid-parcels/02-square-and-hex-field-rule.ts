@@ -3,8 +3,8 @@ import { Grid, topology, geometry, type Position } from "city-library";
 
 const square = topology.square({ columns: 3, rows: 3 });
 const hex = topology.hex({ columns: 3, rows: 3 });
-const squareGrid = Grid.add({ layout: square, state: { temperature: 1 } });
-const hexGrid = Grid.add({ layout: hex, state: { temperature: 1 } });
+const squareGrid = Grid.create({ layout: square, state: { temperature: 1 } });
+const hexGrid = Grid.create({ layout: hex, state: { temperature: 1 } });
 // Identical synchronous model policy; topology alone determines the neighborhood.
 for (const grid of [squareGrid, hexGrid]) {
   const next = grid.fields.map(field => grid.neighbors(field).reduce((sum, neighbor) => sum + neighbor.temperature, 0));

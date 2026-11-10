@@ -97,12 +97,12 @@ export interface Patron {
 }
 export function create(options: Partial<ElFarolParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const space = { x: 35, y: 35, boundary: "wrap" as const };
-  const world = World.add(space, { random }),
-    grid = Grid.add(space);
+  const world = World.create(space, { random }),
+    grid = Grid.create(space);
   world.add(grid);
-  type Person = ReturnType<typeof Agent.add<Patron>>;
+  type Person = ReturnType<typeof Agent.create<Patron>>;
   const people = () => world.agents as readonly Person[];
   const homes = grid.fields.filter((p) => p.y < 0 || (p.x < 0 && p.y >= 0));
   const bar = grid.fields.filter((p) => p.x > 0 && p.y > 0);
@@ -156,7 +156,7 @@ export function create(options: Partial<ElFarolParameters> = {}) {
       history.push(random.number({ max: 100, integer: true }));
     attendance = history[0]!;
     for (let i = 0; i < 100; i++) {
-      const p = Agent.add<Patron>({
+      const p = Agent.create<Patron>({
         strategies: [],
         bestStrategy: 0,
         attend: false,
@@ -178,7 +178,7 @@ export function create(options: Partial<ElFarolParameters> = {}) {
     crowded = false;
     for (const p of random.sample(people(), {
       count: people().length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       p.prediction = predictAttendance(
         p.strategies[p.bestStrategy]!,
@@ -188,7 +188,7 @@ export function create(options: Partial<ElFarolParameters> = {}) {
     }
     for (const p of random.sample(people(), {
       count: people().length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     }))
       moveToEmptyOneOf(p.id, p.attend ? "bar" : "home");
     attendance = bar.reduce(
@@ -200,7 +200,7 @@ export function create(options: Partial<ElFarolParameters> = {}) {
     history.pop();
     for (const p of random.sample(people(), {
       count: people().length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     }))
       updateStrategies(p.id);
   }

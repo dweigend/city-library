@@ -1,6 +1,6 @@
 # UI and elevator integration with current main
 
-The integration keeps main's `models/<slug>/` layout, single root TypeScript configuration, automatic example discovery and one Svelte-backed UI entry. It adds common live-write defaults, collection projections, flat DES scenes and the elevator without restoring the removed legacy host or `experiments/` model tree. Main's README/diagram, package/lock decisions and bounded blood-sugar test budget remain authoritative.
+The integration keeps main's `models/<slug>/` layout, single root TypeScript configuration, automatic example discovery and one Svelte-backed UI entry. It adds common live-write defaults, collection projections, flat DES scenes and the elevator without restoring the removed legacy host or `studies/` model tree. Main's README/diagram, package/lock decisions and bounded blood-sugar test budget remain authoritative.
 
 ## Accepted contracts and migration
 
@@ -22,7 +22,7 @@ The normal merge is `b5977bb`, incorporating `origin/main` `429fd627724b0db9fff4
 - `bun run check`: exit 0, **773 tests / 707,999 assertions**, all automatically discovered supported examples, library/declaration build and packed Bun/Node ESM/ambient-free TypeScript consumer passed. This is a new post-merge run, not the historical 757-test result.
 - `bun run build:ui`: passed in 1.72 seconds, with the existing bundle-size advisory.
 - Standalone public UI consumer: Bun and isolated strict TypeScript (`types: []`, ESNext/DOM libraries) passed. It checks inert imports, old interface extension and the new common-write declaration against the current Svelte entry.
-- Static transfer checks: all 82 migrated UI bodies match the prior feature after path normalization; 146 model/UI pairs are discoverable. No live TypeScript remains under `experiments/`. Six expected existing DES observation/metadata additions and the new elevator are retained; main's other model changes and test budgets are preserved. Main README/diagram, package, lockfile, CI and root config match main.
+- Static transfer checks: all 82 migrated UI bodies match the prior feature after path normalization; 146 model/UI pairs are discoverable. No live TypeScript remains under `studies/`. Six expected existing DES observation/metadata additions and the new elevator are retained; main's other model changes and test budgets are preserved. Main README/diagram, package, lockfile, CI and root config match main.
 
 New browser work already passed all 146 actual catalog Setup/step cases, 82 valid live edits, 30 public/compatibility-import fixtures and eleven deep DES flows on port 3231. Both imports resolve to the same Svelte `defineUI`. The new [browser summary](pr-main-browser-review.md), commit `f208ff3`, records those current-source results plus resize/latest-projection/disposal and forced-late-callback checks. The new [independent image review](pr-main-image-review.md), commit `9415a9b`, approves all **64 post-merge captures** (44 DES plus 20 representative supplementary views); two Taxi narrow frames were corrected and independently reopened. Final local manifest SHA-256: `13699de3a11080ebc02f66d3ded511944c63adb91a957edaf1dc56146420ef02`.
 

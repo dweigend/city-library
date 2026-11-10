@@ -24,7 +24,7 @@ const observation = simulation.read();
 | --- | --- | --- |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
 | `number` | `70` | integer; ≥ 0; ≤ 300 |
-| `numGroups` | `10` | integer; ≥ 5; ≤ 20 |
+| `groupCount` | `10` | integer; ≥ 5; ≤ 20 |
 | `tolerance` | `25` | number; ≥ 0; ≤ 99 |
 
 ## Actions and observations
@@ -39,6 +39,6 @@ The [UI binding](ui.ts) presents `People`, `Groups`, `Opposite-sex tolerance (%)
 
 ## Sources and acceptance
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained NetLogo source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
 
 [Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `party` and links any shared checks.

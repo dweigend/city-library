@@ -35,4 +35,4 @@ assert.equal(old.tick, 0);
 const extinct = vision({ initialNumberFish: 0 });
 extinct.advance();
 assert.equal(extinct.read().tick, 0);
-console.log('B08 dosing cadence, region counts, vision and shoreline energy passed');
+console.log('dosing cadence, region counts, vision and shoreline energy passed');

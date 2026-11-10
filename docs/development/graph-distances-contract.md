@@ -1,6 +1,6 @@
 # Graph distances and summaries
 
-Network experiments need distances and summaries that use the same canonical nodes and edges as the rest of the model. `graph.distances`, `graph.allDistances` and `graph.distanceSummary` provide those shared calculations. [The routing specification](../agent-loom/api-reference.md#graph-weighted-routing) defines the public API; the rules below fix algorithm choice, negative costs, disconnected nodes and measurement behavior.
+Network studies need distances and summaries that use the same canonical nodes and edges as the rest of the model. `graph.distances`, `graph.allDistances` and `graph.distanceSummary` provide those shared calculations. [The routing specification](../agent-loom/api-reference.md#graph-weighted-routing) defines the public API; the rules below fix algorithm choice, negative costs, disconnected nodes and measurement behavior.
 
 ## Behavior
 

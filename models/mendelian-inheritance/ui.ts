@@ -24,7 +24,7 @@ export const ui = defineUI(model, {
   ],
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/CT-STEM/Mendelian%20Inheritance.nlogox",
-    label: "NetLogo original · Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Wilensky · CC BY-NC-SA 3.0",
   },
   complete: (s) => s.done,
   monitors: [

@@ -12,8 +12,8 @@ export interface EventTrace<T> {
   read(): readonly TraceEvent<T>[];
 }
 
-function add<T>(options: { capacity: number }): EventTrace<T> {
-  if (arguments.length !== 1) throw new TypeError("EventTrace.add requires one options record.");
+function create<T>(options: { capacity: number }): EventTrace<T> {
+  if (arguments.length !== 1) throw new TypeError("EventTrace.create requires one options record.");
   const values = validateOptions(options, ["capacity"]);
   const capacity = values.capacity;
   if (typeof capacity !== "number") throw new TypeError("EventTrace capacity must be a number.");
@@ -43,4 +43,4 @@ function add<T>(options: { capacity: number }): EventTrace<T> {
   });
 }
 
-export const EventTrace = Object.freeze({ add });
+export const EventTrace = Object.freeze({ create });

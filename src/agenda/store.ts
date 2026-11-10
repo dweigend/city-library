@@ -34,7 +34,7 @@ function validCapacity(value: unknown): number {
   return value;
 }
 
-function add<T>(options: { capacity: number }): Store<T> {
+function create<T>(options: { capacity: number }): Store<T> {
   const settings = validateOptions(options, ["capacity"]);
   const capacity = validCapacity(settings.capacity);
   const items: PutEntry<T>[] = [];
@@ -108,4 +108,4 @@ function add<T>(options: { capacity: number }): Store<T> {
   });
 }
 
-export const Store = Object.freeze({ add });
+export const Store = Object.freeze({ create });

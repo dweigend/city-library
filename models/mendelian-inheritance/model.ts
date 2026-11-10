@@ -35,10 +35,10 @@ export const inputs: Inputs<Parameters> = {
 type Mouse = Agent<{ genotype: Genotype; generation: string; sex: string }>;
 export function create(options: Partial<Parameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const space = { x: 33, y: 33, boundary: "hard" as const };
-  const world = World.add(space, { random });
-  const grid = Grid.add(space);
+  const world = World.create(space, { random });
+  const grid = Grid.create(space);
   world.add(grid);
   let parent1: Mouse;
   let parent2: Mouse;
@@ -60,7 +60,7 @@ export function create(options: Partial<Parameters> = {}) {
     previousNumberOfLightOffspring = 0;
     selectedGenotype = null;
     message = "";
-    parent1 = Agent.add(
+    parent1 = Agent.create(
       {
         genotype: settings.maleGenotype as Genotype,
         generation: "",
@@ -68,7 +68,7 @@ export function create(options: Partial<Parameters> = {}) {
       },
       { position: { x: -7, y: 10 } },
     );
-    parent2 = Agent.add(
+    parent2 = Agent.create(
       {
         genotype: settings.femaleGenotype as Genotype,
         generation: "",
@@ -103,7 +103,7 @@ export function create(options: Partial<Parameters> = {}) {
     for (let n = 0; n < settings.numberOfOffspring; n++) {
       const maleGamete = random.sample([...parent1.genotype])[0]!;
       const femaleGamete = random.sample([...parent2.genotype])[0]!;
-      const mouse = Agent.add({
+      const mouse = Agent.create({
         genotype: (maleGamete + femaleGamete) as Genotype,
         generation: "F1",
         sex: "",

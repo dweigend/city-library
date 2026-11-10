@@ -1,4 +1,4 @@
-import { defineUI, netLogoColor, type Observation, type SpatialData } from "../../ui/index.ts";
+import { defineUI, indexedColor, type Observation, type SpatialData } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
   live: { shiftedShare: { label: "Shifted share", set: (instance, value) => instance.setShiftedShare(value) } },
@@ -49,8 +49,8 @@ function houseOutline(x: number, y: number) {
 }
 
 const maximumHouseColumns = 10;
-const baseLoadColor = netLogoColor(105);
-const applianceLoadColor = netLogoColor(25);
+const baseLoadColor = indexedColor(105);
+const applianceLoadColor = indexedColor(25);
 const baseLoadSize = 7;
 const applianceLoadSize = 13;
 const houseCorners = [

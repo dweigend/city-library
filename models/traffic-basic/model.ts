@@ -19,10 +19,10 @@ type Car = Agent<{ speed: number }>;
 
 export function create(options: Partial<TrafficBasicParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const space = { x: 51, y: 9, boundary: { x: "wrap", y: "hard" } } as const;
-  const world = World.add(space, { random });
-  const grid = Grid.add(space);
+  const world = World.create(space, { random });
+  const grid = Grid.create(space);
   world.add(grid);
   const cars = () => world.agents as readonly Car[];
   const history: {
@@ -34,7 +34,7 @@ export function create(options: Partial<TrafficBasicParameters> = {}) {
 
   function setupCars() {
     for (let index = 0; index < settings.numberOfCars; index++) {
-      const car = Agent.add(
+      const car = Agent.create(
         { speed: 0.1 + random.number() * 0.9 },
         {
           position: { x: -25.5 + random.number() * 51, y: 0 },
@@ -57,7 +57,7 @@ export function create(options: Partial<TrafficBasicParameters> = {}) {
   function go() {
     for (const car of random.sample(cars(), {
       count: cars().length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       const positionAhead = geometry.normalize(
         { x: car.x + 1, y: car.y },

@@ -76,8 +76,8 @@ function detachedEvent<E>(event: Event<E>): Event<E> {
 }
 
 /** Creates an empty Agenda at time 0. */
-function add<E = unknown>(): Agenda<E> {
-  if (arguments.length) throw new TypeError("Agenda.add accepts no options.");
+function create<E = unknown>(): Agenda<E> {
+  if (arguments.length) throw new TypeError("Agenda.create accepts no options.");
   const pending: Event<E>[] = [];
   const handles = new WeakSet<EventHandle<E>>();
   let time = 0;
@@ -144,4 +144,4 @@ function add<E = unknown>(): Agenda<E> {
   return Object.freeze(agenda);
 }
 
-export const Agenda = Object.freeze({ add });
+export const Agenda = Object.freeze({ create });

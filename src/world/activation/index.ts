@@ -31,12 +31,12 @@ function callerIdentity(world: World, caller: ActivationContext<WorldMember> | u
 function sourceMembers<T extends WorldMember>(
   world: World,
   source: ActivationSource<T>,
-  breeds?: ReadonlyMap<WorldMember, string>,
+  groups?: ReadonlyMap<WorldMember, string>,
 ): T[] {
   if (Array.isArray(source)) return [...new Set(source)];
   const record = frameworkRecord(source);
   if (record && memberKinds.includes(record.kind)) return [source as T];
-  const selector = source as { kind?: unknown; breed?: unknown };
+  const selector = source as { kind?: unknown; group?: unknown };
   if (source === null || typeof source !== "object" || !selectorKinds.includes(String(selector.kind)))
     throw new TypeError("Expected a World member, array or kind selector.");
   let members: WorldMember[];
@@ -51,9 +51,9 @@ function sourceMembers<T extends WorldMember>(
       // "edges": the selector check above admits no other kind.
       members = world.graphs.flatMap((graph) => [...graph.edges]);
   }
-  if (selector.breed !== undefined) {
-    if (typeof selector.breed !== "string" || !breeds) throw new TypeError("Breed selectors require explicit breed mappings.");
-    members = members.filter((member) => breeds.get(member) === selector.breed);
+  if (selector.group !== undefined) {
+    if (typeof selector.group !== "string" || !groups) throw new TypeError("Group selectors require explicit group mappings.");
+    members = members.filter((member) => groups.get(member) === selector.group);
   }
   return members as T[];
 }
@@ -69,7 +69,7 @@ function livingOwned(world: World, member: WorldMember): boolean {
 /** Applies the activation order; "shuffle" permutes `members` in place. */
 function ordered<T extends WorldMember>(world: World, members: T[], options: ActivationOptions<T>): T[] {
   const order = options.order ?? "shuffle";
-  if (order === "netlogo-7.0.0") throw new TypeError("NetLogo activation requires the not-yet-delivered netlogo-7.0.0 Random stream.");
+  if (order === "unsupported-interleaved-activation") throw new TypeError("Interleaved activation is unsupported; its required random stream is not implemented.");
   if (order === "fixed") return members;
   if (order === "priority") return prioritized(members, options);
   if (order !== "shuffle") throw new TypeError("Unknown activation order.");
@@ -129,7 +129,7 @@ export function activate<T extends WorldMember>(
 ): void {
   requireCallback(action);
   const caller = callerIdentity(world, options.caller);
-  const members = ordered(world, sourceMembers(world, source, options.breeds), options);
+  const members = ordered(world, sourceMembers(world, source, options.groups), options);
   for (const member of members) {
     if (livingOwned(world, member)) invoke(world, member, caller, action);
   }
@@ -142,7 +142,7 @@ export function report<T extends WorldMember, R>(
 ): R | undefined | readonly (R | undefined)[] {
   requireCallback(callback);
   const caller = callerIdentity(world, options.caller);
-  const members = ordered(world, sourceMembers(world, source, options.breeds), options);
+  const members = ordered(world, sourceMembers(world, source, options.groups), options);
   const results = members.map((member) => livingOwned(world, member) ? invoke(world, member, caller, callback) : undefined);
   return frameworkRecord(source) ? results[0] : Object.freeze(results);
 }
@@ -155,7 +155,7 @@ export function select<T extends WorldMember>(
   requireCallback(predicate);
   const caller = callerIdentity(world, options.caller);
   const selected: T[] = [];
-  for (const member of sourceMembers(world, source, options.breeds)) {
+  for (const member of sourceMembers(world, source, options.groups)) {
     if (!livingOwned(world, member)) continue;
     const result = invoke(world, member, caller, predicate);
     if (typeof result !== "boolean") throw new TypeError("Selection predicates must return boolean.");

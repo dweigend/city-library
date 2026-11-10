@@ -43,7 +43,7 @@ type Bird = Agent<{
   flockmateIds: string[];
   nearestNeighbor: string | null;
 }>;
-/** NetLogo subtract-headings uses the clockwise +180 tie. */
+/** source model subtract-headings uses the clockwise +180 tie. */
 export function headingDifference(target: number, current: number) {
   if (![target, current].every(Number.isFinite))
     throw new RangeError("Headings must be finite.");
@@ -74,17 +74,17 @@ export function averageHeadingTowardsFlockmates(
 }
 export function create(options: Partial<FlockingParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const width = 71,
     height = 71;
-  const world = World.add(
+  const world = World.create(
     { x: width, y: height, boundary: "wrap" },
     { random },
   );
   const birds = () => world.agents as readonly Bird[];
   for (let i = 0; i < settings.population; i++)
     world.add(
-      Agent.add(
+      Agent.create(
         {
           shade: Math.floor(random.number() * 7),
           flockmateIds: [] as string[],
@@ -102,7 +102,7 @@ export function create(options: Partial<FlockingParameters> = {}) {
   const shuffle = () =>
     random.sample(birds(), {
       count: birds().length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     });
   function turn(bird: Bird, angle: number, limit: number) {
     bird.rotate(Math.max(-limit, Math.min(limit, angle)));

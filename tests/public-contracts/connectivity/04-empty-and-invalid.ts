@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { Graph } from "city-library";
-const graph=Graph.add();
+const graph=Graph.create();
 for(const mode of ["weak","strong","biconnected"] as const)assert.deepEqual(graph.components({mode}),[]);
 assert.equal(graph.connected(),true);
 assert.equal(graph.connected({mode:"strong"}),true);

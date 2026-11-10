@@ -43,10 +43,10 @@ type ModelAgent = Agent<{
 }>;
 export function create(options: Partial<Parameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({
+  const random = Random.create({
     seed: settings.seed,
   });
-  const world = World.add(
+  const world = World.create(
     {
       x: 101,
       y: 101,
@@ -80,11 +80,11 @@ export function create(options: Partial<Parameters> = {}) {
     );
     if (history.length > 1001) history.splice(1, 1);
   }
-  function setupExperiment() {
+  function initializePopulation() {
     for (const a of [...population()]) a.delete();
     for (let i = 0; i < settings.carryingCapacity; i++)
       world.add(
-        Agent.add(
+        Agent.create(
           {
             color:
               i < settings.carryingCapacity / 2
@@ -110,7 +110,7 @@ export function create(options: Partial<Parameters> = {}) {
     const old = population();
     for (const parent of random.sample(old, {
       count: old.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       const fertility =
         parent.color === "red" ? settings.redFertility : settings.blueFertility;
@@ -130,7 +130,7 @@ export function create(options: Partial<Parameters> = {}) {
     const chance = (old.length - settings.carryingCapacity) / old.length;
     for (const a of random.sample(old, {
       count: old.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     }))
       if (random.number() < chance) a.delete();
   }
@@ -144,22 +144,22 @@ export function create(options: Partial<Parameters> = {}) {
       record();
     }
   }
-  function experimentStep() {
+  function advanceUntilRestart() {
     advance();
     if (counts().redCount === 0) {
       output.push(`red extinct after ${world.tick.value} generations`);
-      setupExperiment();
+      initializePopulation();
     }
     if (counts().blueCount === 0) {
       output.push(`blue extinct after ${world.tick.value} generations`);
-      setupExperiment();
+      initializePopulation();
     }
   }
-  setupExperiment();
+  initializePopulation();
   return {
     advance,
-    experimentStep,
-    setupExperiment,
+    advanceUntilRestart,
+    initializePopulation,
     setRules(rules: Partial<Omit<Parameters, "seed">>) {
       if (
         Reflect.ownKeys(rules).some(
@@ -203,7 +203,7 @@ export function create(options: Partial<Parameters> = {}) {
 export const model = {
   title: "Simple Birth Rates",
   description:
-    "Fertility, demographic sampling and extinction experiments. Wilensky (1997), CC BY-NC-SA 3.0.",
+    "Fertility, demographic sampling and extinction studies. Wilensky (1997), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<Parameters, ReturnType<typeof create>>;

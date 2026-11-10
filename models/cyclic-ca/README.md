@@ -28,7 +28,7 @@ const observation = simulation.read();
 | `preset` | `"none"` | 22 named choices; see `inputs.preset` |
 | `neighborhood` | `"Moore"` | `Moore`, `von Neumann` |
 | `radius` | `3` | integer; ≥ 1; ≤ 6 |
-| `numStates` | `3` | integer; ≥ 2; ≤ 14 |
+| `stateCount` | `3` | integer; ≥ 2; ≤ 14 |
 | `threshold` | `3` | integer; ≥ 1; ≤ 168 |
 
 ## Actions and observations
@@ -43,6 +43,6 @@ The [UI binding](ui.ts) presents `Tick`, `Neighbors`, `States`, `Threshold`, `St
 
 ## Sources and acceptance
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained NetLogo source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
 
 [Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `cyclic-ca` and links any shared checks.

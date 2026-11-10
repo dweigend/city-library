@@ -98,7 +98,7 @@ type Daisy = Agent<{
 }>;
 export function create(options: Partial<Parameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({
+  const random = Random.create({
     seed: settings.seed,
   });
   const space = {
@@ -106,10 +106,10 @@ export function create(options: Partial<Parameters> = {}) {
     y: 29,
     boundary: "wrap" as const,
   };
-  const world = World.add(space, {
+  const world = World.create(space, {
     random,
   });
-  const grid = Grid.add(space, {
+  const grid = Grid.create(space, {
     state: {
       temperature: 0,
     },
@@ -139,7 +139,7 @@ export function create(options: Partial<Parameters> = {}) {
     solarLuminosity: luminosity(settings.scenario, true),
   });
   function sprout(f: (typeof grid.fields)[number], kind: "black" | "white") {
-    const a = Agent.add(
+    const a = Agent.create(
       {
         kind,
         age: 0,
@@ -206,7 +206,7 @@ export function create(options: Partial<Parameters> = {}) {
     const old = population();
     for (const a of random.sample(old, {
       count: old.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       a.age++;
       if (a.age >= 25) {

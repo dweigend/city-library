@@ -2,7 +2,7 @@ import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 
 const binding = defineUI(model, {
-  setup: ["seed", "numWater", "numLipids"],
+  setup: ["seed", "waterCount", "lipidCount"],
   change: (instance, changes) => instance.setParameters(changes),
   live: {
     waterWaterForce: {},
@@ -12,7 +12,7 @@ const binding = defineUI(model, {
   },
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Membrane%20Formation.nlogox",
-    label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · NetLogo model · Wilensky · CC BY-NC-SA 3.0",
   },
   monitors: [
     { label: "Tick", value: (state) => state.tick },

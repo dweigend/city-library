@@ -47,8 +47,8 @@ function plotHistogram(values: readonly number[]) {
 }
 export function create(options: Partial<Parameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
-  const world = World.add({ random });
+  const random = Random.create({ seed: settings.seed });
+  const world = World.create({ random });
   const original: (number | null)[] = Array(
       settings.width * settings.height,
     ).fill(settings.dice ? null : 0),

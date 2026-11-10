@@ -30,8 +30,8 @@ function accumulated(integral: number, elapsed: number, value: number): number {
 }
 
 /** Starts at `at` (default 0) holding `value`. */
-function add(options: { at?: number; value: number }): TimeWeighted {
-  if (arguments.length !== 1) throw new TypeError("TimeWeighted.add requires one options record.");
+function create(options: { at?: number; value: number }): TimeWeighted {
+  if (arguments.length !== 1) throw new TypeError("TimeWeighted.create requires one options record.");
   const values = validateOptions(options, ["at", "value"]);
   const start = timeValue(values.at === undefined ? 0 : values.at, 0);
   let at = start;
@@ -61,4 +61,4 @@ function add(options: { at?: number; value: number }): TimeWeighted {
   });
 }
 
-export const TimeWeighted = Object.freeze({ add });
+export const TimeWeighted = Object.freeze({ create });

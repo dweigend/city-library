@@ -21,9 +21,9 @@ type Cell = Agent<{
 }>;
 export function create(options: Partial<TumorParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const space = { x: 103, y: 103, boundary: "hard" } as const;
-  const world = World.add(space, { random });
+  const world = World.create(space, { random });
   const cells = () => world.agents as readonly Cell[];
   let nextWho = 0;
   let cellCount = 2;
@@ -65,7 +65,7 @@ export function create(options: Partial<TumorParameters> = {}) {
   }
   function setStem() {
     for (let index = 0; index < 2; index++) {
-      const cell = Agent.add(
+      const cell = Agent.create(
         {
           who: nextWho++,
           stem: true,
@@ -87,7 +87,7 @@ export function create(options: Partial<TumorParameters> = {}) {
   }
   function moveTransitionalCells(cell: Cell) {
     if (cell.stem) return;
-    // Preserve source age-dependent shade as a detached NetLogo color below.
+    // Preserve source age-dependent shade as a detached source model color below.
     cell.color = cell.age < 20 ? "#d84b4b" : "#f3dcdc";
     forwardCell(cell, 1);
     if (cell.age < 6) {
@@ -119,7 +119,7 @@ export function create(options: Partial<TumorParameters> = {}) {
   function go() {
     for (const cell of random.sample(cells(), {
       count: cells().length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       cell.penDown = settings.leaveTrail;
       if (cell.who === 1 && cell.x < 25) forwardCell(cell, 1);
@@ -177,7 +177,7 @@ export function create(options: Partial<TumorParameters> = {}) {
         age: cell.age,
         metastatic: cell.metastatic,
         color: cell.color,
-        netLogoColor: cell.stem ? 105 : 15 + 0.25 * cell.age,
+        indexedColor: cell.stem ? 105 : 15 + 0.25 * cell.age,
         size: 2,
       })),
       trails: trails.map((segment) => ({

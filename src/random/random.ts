@@ -37,7 +37,7 @@ export interface Random {
 
 const nonSynchronousFunctionTags = ["[object AsyncFunction]", "[object GeneratorFunction]", "[object AsyncGeneratorFunction]"];
 
-function add(options: { seed?: number; algorithm?: "mulberry32" } = {}): Random {
+function create(options: { seed?: number; algorithm?: "mulberry32" } = {}): Random {
   if (arguments.length > 1) throw new TypeError("Unexpected Random arguments.");
   const values = validateOptions(options, ["seed", "algorithm"]);
   if (values.algorithm !== undefined && values.algorithm !== "mulberry32") throw new TypeError("This slice supports mulberry32 only.");
@@ -91,7 +91,7 @@ function add(options: { seed?: number; algorithm?: "mulberry32" } = {}): Random 
     },
     copy() {
       if (arguments.length) throw new TypeError("Random.copy accepts no options.");
-      const copied = add({ seed: state.seed });
+      const copied = create({ seed: state.seed });
       copied.state = snapshot(state);
       return copied;
     },
@@ -133,4 +133,4 @@ function add(options: { seed?: number; algorithm?: "mulberry32" } = {}): Random 
 export function isRandom(value: unknown): value is Random {
   return frameworkRecord(value)?.kind === "random";
 }
-export const Random = Object.freeze({ add });
+export const Random = Object.freeze({ create });

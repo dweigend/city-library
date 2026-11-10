@@ -24,7 +24,7 @@
     mounted = candidate;
     host.replaceChildren(staging);
     active = slug;
-    const url = new URL(location.href); url.searchParams.set("experiment", slug); history.replaceState(null, "", url);
+    const url = new URL(location.href); url.searchParams.set("model", slug); history.replaceState(null, "", url);
     loading = false; error = "";
   }, message => { error = message; loading = false; selected = active; });
   async function open(slug: string) {
@@ -34,7 +34,7 @@
     await loader.load(entry);
   }
   onMount(() => {
-    const requested = new URL(location.href).searchParams.get("experiment");
+    const requested = new URL(location.href).searchParams.get("model");
     const first = entries.find(entry => entry.slug === requested) ?? entries[0];
     if (first) void open(first.slug);
     const timer = window.setInterval(async () => {
@@ -45,7 +45,7 @@
   });
 </script>
 
-<a class="lab-skip" href="#experiment-content">Skip to model</a>
+<a class="lab-skip" href="#model-content">Skip to model</a>
 <main class="lab-shell">
   <header class="lab-header">
     <h1>Agent Lab</h1>
@@ -60,5 +60,5 @@
   </header>
   {#if error}<p role="alert" class="lab-error">{error}</p>{/if}
   <span class="sr-only" role="status" aria-live="polite">{loading ? "Loading model" : ""}</span>
-  <section id="experiment-content" aria-label="Model workbench" aria-busy={loading} bind:this={host}></section>
+  <section id="model-content" aria-label="Model workbench" aria-busy={loading} bind:this={host}></section>
 </main>

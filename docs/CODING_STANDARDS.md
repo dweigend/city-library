@@ -8,7 +8,7 @@ Preserve correctness and accepted public contracts first. Then improve clarity, 
 
 ## Readable code
 
-- Use clear domain names and verbs for operations. Follow the binding [terminology](agent-loom/terminology.md). Use camelCase for variables/functions, PascalCase for types/classes and kebab-case for filenames; preserve accepted entry filenames and public names.
+- Follow the system-wide [naming conventions](NAMING_CONVENTIONS.md) for identifiers, files, operations and canonical vocabulary.
 - Give functions one clear task and files one cohesive responsibility. About 20 lines per function and 200 per file are review signals, not limits. Keep related logic together; do not fragment code to meet a count.
 - Keep abstraction levels consistent. Handle exceptional cases with guard clauses where clearer. Prefer positive, simple conditions and explicit control flow; avoid nested ternaries and clever one-liners.
 - Avoid ambiguous boolean parameters. Use named options or domain types when they clarify intent. Keep signatures small; group related parameters when useful.

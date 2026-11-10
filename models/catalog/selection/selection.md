@@ -314,6 +314,6 @@ Topic groups organize the selection; they do not define implementation order or 
 
 ## Maintain the scope
 
-Keep the selected membership, source paths, slugs and source hashes unchanged unless a new scope is explicitly agreed. Update implementation and verification through the acceptance ledger. For required source, headless, browser and independent checks, follow the [model acceptance rules](../../../docs/development/netlogo-model-acceptance.md).
+Keep the selected membership, source paths, slugs and source hashes unchanged unless a new scope is explicitly agreed. Update implementation and verification through the acceptance ledger. For required source, headless, browser and independent checks, follow the [model acceptance rules](../../../docs/development/model-acceptance.md).
 
 The original selection record and checksum manifest are retained as [source records](recorded/selection.md). Their paths describe the original checkout; [location metadata](../record-paths.json) resolves them to retained files. The JSON and CSV manifests remain in this directory.

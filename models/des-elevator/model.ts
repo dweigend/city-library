@@ -56,18 +56,18 @@ export function create(options: Partial<ElevatorParameters> = {}) {
   const settings = parameters(inputs, options);
   if (settings.arrivalLimit > 0 && settings.arrivalInterval === 0)
     throw new RangeError("Scheduled arrivals require a positive arrival interval.");
-  const world = World.add();
-  const agenda = Agenda.add<ElevatorEvent>();
+  const world = World.create();
+  const agenda = Agenda.create<ElevatorEvent>();
   const pending = new Map<string, EventHandle<ElevatorEvent>>();
   const passengers: Passenger[] = [];
   const lines: FloorLine[] = [];
   for (let floor = 0; floor < settings.floors; floor++) {
     for (const direction of [-1, 1] as const)
-      lines.push({ floor, direction, queue: ServiceQueue.add<Passenger>() });
+      lines.push({ floor, direction, queue: ServiceQueue.create<Passenger>() });
   }
   const cars: Car[] = Array.from({ length: settings.elevators }, (_, index) => ({
-    agent: world.add(Agent.add({ number: index + 1, floor: 0, direction: 0 as Direction, status: "idle" as CarStatus })),
-    seats: Resource.add<Passenger>({ capacity: settings.capacity }),
+    agent: world.add(Agent.create({ number: index + 1, floor: 0, direction: 0 as Direction, status: "idle" as CarStatus })),
+    seats: Resource.create<Passenger>({ capacity: settings.capacity }),
     claims: new Map(),
   }));
   let generated = 0;
@@ -112,7 +112,7 @@ export function create(options: Partial<ElevatorParameters> = {}) {
     if (!Number.isSafeInteger(from) || !Number.isSafeInteger(to) || from < 0 || to < 0 ||
         from >= settings.floors || to >= settings.floors || from === to)
       throw new RangeError("Passenger floors must be distinct integers within the building.");
-    const passenger = world.add(Agent.add({ number: passengers.length + 1, from, to,
+    const passenger = world.add(Agent.create({ number: passengers.length + 1, from, to,
       requested: agenda.time, boarded: -1, arrived: -1, car: -1 }));
     passengers.push(passenger);
     lineAt(from, to > from ? 1 : -1).queue.add(passenger);

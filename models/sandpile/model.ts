@@ -32,9 +32,9 @@ export function create(options: Partial<SandpileParameters> = {}) {
   let settings = parameters(inputs, options);
   if (settings.width % 2 !== 1 || settings.height % 2 !== 1)
     throw new RangeError("Use odd lattice dimensions.");
-  const random = Random.add({ seed: settings.seed }),
-    world = World.add({ random });
-  const grid = Grid.add(
+  const random = Random.create({ seed: settings.seed }),
+    world = World.create({ random });
+  const grid = Grid.create(
     { x: settings.width, y: settings.height, boundary: "hard" },
     { state: { n: 0 } },
   );
@@ -95,7 +95,7 @@ export function create(options: Partial<SandpileParameters> = {}) {
       if (overloaded.length) lifetime++;
       for (const f of random.sample(overloaded, {
         count: overloaded.length,
-        compatibility: "legacy-shuffle",
+        algorithm: "fisher-yates-descending",
       })) {
         updateN(f, -4);
         for (const neighbor of neighbors.get(f)!) updateN(neighbor, 1);
@@ -119,7 +119,7 @@ export function create(options: Partial<SandpileParameters> = {}) {
       throw new RangeError("Grains per field must be 0..3.");
     for (const f of random.sample(fields, {
       count: fields.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     }))
       f.n = mode === "random" ? Math.floor(random.number() * 4) : n;
     stabilize();

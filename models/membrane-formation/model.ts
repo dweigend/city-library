@@ -5,8 +5,8 @@ import { parameters, stepCount } from "../parameters.ts";
 
 export interface MembraneParameters {
   seed: number;
-  numWater: number;
-  numLipids: number;
+  waterCount: number;
+  lipidCount: number;
   waterWaterForce: number;
   waterOilForce: number;
   tooCloseForce: number;
@@ -14,30 +14,30 @@ export interface MembraneParameters {
 }
 export const inputs: Inputs<MembraneParameters> = {
   seed: { kind: "number", default: 1, integer: true },
-  numWater: { kind: "number", default: 750, min: 0, max: 1000, integer: true },
-  numLipids: { kind: "number", default: 250, min: 1, max: 500, integer: true },
+  waterCount: { kind: "number", default: 750, min: 0, max: 1000, integer: true },
+  lipidCount: { kind: "number", default: 250, min: 1, max: 500, integer: true },
   waterWaterForce: { kind: "number", default: 0.2, min: 0, max: 2 },
   waterOilForce: { kind: "number", default: -0.7, min: -2, max: 0 },
   tooCloseForce: { kind: "number", default: -0.3, min: -2, max: 0 },
   randomForce: { kind: "number", default: 0.1, min: 0, max: 1 },
 };
-type Molecule = Agent<{ breed: "water" | "oil"; hydrophilic: boolean }>;
+type Molecule = Agent<{ group: "water" | "oil"; hydrophilic: boolean }>;
 export function create(options: Partial<MembraneParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
-  const world = World.add({ x: 51, y: 51, boundary: "wrap" }, { random });
-  const graph = Graph.add<Molecule>();
+  const random = Random.create({ seed: settings.seed });
+  const world = World.create({ x: 51, y: 51, boundary: "wrap" }, { random });
+  const graph = Graph.create<Molecule>();
   const molecules = () => world.agents as readonly Molecule[];
   const history: { tick: number; hydrophobicIsolation: number }[] = [];
 
   function setupMolecules() {
     for (
       let index = 0;
-      index < settings.numWater + settings.numLipids;
+      index < settings.waterCount + settings.lipidCount;
       index++
     ) {
-      const water = Agent.add(
-        { breed: "water" as const, hydrophilic: false },
+      const water = Agent.create(
+        { group: "water" as const, hydrophilic: false },
         {
           position: {
             x: random.number() * 51 - 25.5,
@@ -51,16 +51,16 @@ export function create(options: Partial<MembraneParameters> = {}) {
       world.add(water);
       graph.nodes.add(water);
     }
-    for (let index = 0; index < settings.numLipids; index++) {
+    for (let index = 0; index < settings.lipidCount; index++) {
       const partner = random.sample(
         molecules().filter(
           (molecule) =>
-            molecule.breed === "water" &&
+            molecule.group === "water" &&
             graph.neighbors(molecule).length === 0,
         ),
       )[0]!;
-      const oil = Agent.add(
-        { breed: "oil" as const, hydrophilic: false },
+      const oil = Agent.create(
+        { group: "oil" as const, hydrophilic: false },
         {
           position: partner,
           orientation: {
@@ -84,7 +84,7 @@ export function create(options: Partial<MembraneParameters> = {}) {
     if (!near) return;
     molecule.rotate({ towards: near });
     molecule.move(
-      near.breed === molecule.breed
+      near.group === molecule.group
         ? settings.waterWaterForce
         : settings.waterOilForce,
     );
@@ -107,16 +107,16 @@ export function create(options: Partial<MembraneParameters> = {}) {
     molecule.move(settings.randomForce);
   }
   function hydrophobicIsolation() {
-    const oils = molecules().filter((molecule) => molecule.breed === "oil");
+    const oils = molecules().filter((molecule) => molecule.group === "oil");
     return stats.describe(
       oils.map((oil) => {
-        // NetLogo in-radius includes self. Its denominator excludes only the linked partner.
+        // source model in-radius includes self. Its denominator excludes only the linked partner.
         const neighbors = [
           oil,
           ...oil.neighbors({ radius: 4, source: molecules() }),
         ];
         const numerator = neighbors.filter(
-          (molecule) => molecule.breed === "oil",
+          (molecule) => molecule.group === "oil",
         ).length;
         const denominator = neighbors.filter(
           (molecule) => !graph.hasEdge(oil, molecule),
@@ -135,7 +135,7 @@ export function create(options: Partial<MembraneParameters> = {}) {
   function go() {
     for (const molecule of random.sample(molecules(), {
       count: molecules().length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       interactWithNeighbor(molecule);
       repelTooCloseNeighbor(molecule);
@@ -151,7 +151,7 @@ export function create(options: Partial<MembraneParameters> = {}) {
   }
   function setParameters(
     update: Partial<
-      Omit<MembraneParameters, "seed" | "numWater" | "numLipids">
+      Omit<MembraneParameters, "seed" | "waterCount" | "lipidCount">
     >,
   ) {
     if (
@@ -180,10 +180,10 @@ export function create(options: Partial<MembraneParameters> = {}) {
         x: molecule.x,
         y: molecule.y,
         heading: molecule.heading,
-        breed: molecule.breed,
+        group: molecule.group,
         hydrophilic: molecule.hydrophilic,
         color:
-          molecule.breed === "oil"
+          molecule.group === "oil"
             ? "#ed9228"
             : molecule.hydrophilic
               ? "#b94be0"

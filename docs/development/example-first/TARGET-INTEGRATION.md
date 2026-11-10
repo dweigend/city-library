@@ -1,7 +1,7 @@
 # Model probe checkpoint on the finite topology branch
 
 The reviewed client-model checkpoint `04ac06e8ef3a33e0b8993be05c8d24179fc92aaa`
-was cherry-picked as `e016814` onto `feat/townscaper-grid`, following the existing
+was cherry-picked as `e016814` onto `feat/quad-layouts-grid`, following the existing
 E0 integration `cf9baea` → `2df94d1`. The two source probes and their separate
 integration manifest are unchanged. The source worktree was not edited.
 

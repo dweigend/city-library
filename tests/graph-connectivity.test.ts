@@ -43,7 +43,7 @@ test("biconnected vertex blocks match cut-definition oracle for all five-node si
   const pairs: [number, number][] = [];
   for (let from = 0; from < 5; from++) for (let to = from + 1; to < 5; to++) pairs.push([from, to]);
   for (let mask = 0; mask < 1 << pairs.length; mask++) {
-    const graph = Graph.add<{ index: number }>({ parallel: true, selfLoops: true });
+    const graph = Graph.create<{ index: number }>({ parallel: true, selfLoops: true });
     const nodes = Array.from({ length: 5 }, (_, index) => graph.nodes.add({ index }));
     const adjacency = Array.from({ length: 5 }, () => Array<boolean>(5).fill(false));
     graph.edges.add({ from: nodes[mask % 5]!, to: nodes[mask % 5]! });
@@ -60,7 +60,7 @@ test("biconnected vertex blocks match cut-definition oracle for all five-node si
 
 test("strong components match independent mutual-reachability oracle on directed and mixed structures", () => {
   for (let structure = 0; structure < 256; structure++) {
-    const graph = Graph.add<{ index: number }>({ parallel: true, selfLoops: true });
+    const graph = Graph.create<{ index: number }>({ parallel: true, selfLoops: true });
     const nodes = Array.from({ length: 5 }, (_, index) => graph.nodes.add({ index }));
     const reaches = Array.from({ length: 5 }, (_, from) => Array.from({ length: 5 }, (_, to) => from === to));
     let state = structure + 1;
@@ -87,7 +87,7 @@ test("strong components match independent mutual-reachability oracle on directed
 });
 
 test("connectivity options reject malformed data without invoking accessors or mutating graphs", () => {
-  const graph = Graph.add({ selfLoops: true });
+  const graph = Graph.create({ selfLoops: true });
   const node = graph.nodes.add({});
   const edge = graph.edges.add({ from: node, to: node, directed: true });
   let reads = 0;
@@ -105,11 +105,11 @@ test("connectivity options reject malformed data without invoking accessors or m
 });
 
 test("canonical query snapshots survive Agent edits and reflect membership lifecycle without clock/RNG effects", () => {
-  const random = Random.add({ seed: 7 });
-  const world = World.add({ random });
-  const first = world.add(Agent.add({ energy: 3 }));
+  const random = Random.create({ seed: 7 });
+  const world = World.create({ random });
+  const first = world.add(Agent.create({ energy: 3 }));
   const second = world.add(first.copy());
-  const graph = Graph.add<typeof first>();
+  const graph = Graph.create<typeof first>();
   graph.nodes.add(first); graph.nodes.add(second);
   graph.edges.add({ from: first, to: second });
   const state = random.state;
@@ -128,7 +128,7 @@ test("canonical query snapshots survive Agent edits and reflect membership lifec
 });
 
 test("iterative connectivity handles a long chain without depending on call-stack depth", () => {
-  const graph = Graph.add<{ index: number }>({ parallel: true });
+  const graph = Graph.create<{ index: number }>({ parallel: true });
   const nodes = Array.from({ length: 12000 }, (_, index) => graph.nodes.add({ index }));
   for (let index = 1; index < nodes.length; index++) graph.edges.add({ from: nodes[index - 1]!, to: nodes[index]! });
   expect(graph.connected()).toBe(true);

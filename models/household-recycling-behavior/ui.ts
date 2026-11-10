@@ -1,4 +1,4 @@
-import { defineUI, netLogoColor, type Observation, type NetworkNode } from "../../ui/index.ts";
+import { defineUI, indexedColor, type Observation, type GraphNodeData } from "../../ui/index.ts";
 import { model } from "./model.ts";
 
 export const ui = defineUI(model, {
@@ -16,7 +16,7 @@ export const ui = defineUI(model, {
 });
 
 /** Fixed ring positions expose the model's actual ring edges without consuming its Random stream. */
-export function recyclingNodes(state: Observation<typeof model>): readonly NetworkNode[] {
+export function recyclingNodes(state: Observation<typeof model>): readonly GraphNodeData[] {
   return state.nodes.map((node, index) => {
     const angle = 2 * Math.PI * index / state.nodes.length - Math.PI / 2;
     return {
@@ -30,7 +30,7 @@ export function recyclingNodes(state: Observation<typeof model>): readonly Netwo
 }
 
 const ringRadius = 150;
-const recyclingColor = netLogoColor(55);
-const waitingColor = netLogoColor(25);
+const recyclingColor = indexedColor(55);
+const waitingColor = indexedColor(25);
 const adopterSize = 18;
 const waitingSize = 13;

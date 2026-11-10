@@ -34,6 +34,6 @@ The [UI binding](ui.ts) presents `Tick`, `Nodes`, `Edges`, `Selected`, `Network`
 
 ## Sources and acceptance
 
-Attribution and rights: [adaptation comments](model.ts) and the retained source notices. Baseline: [retained NetLogo source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+Attribution and rights: [adaptation comments](model.ts) and the retained source notices. Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
 
 The [catalog ledger](../catalog/progress.json) owns acceptance stages for `preferential-attachment` and links any shared checks.

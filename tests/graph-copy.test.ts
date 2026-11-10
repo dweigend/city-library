@@ -6,7 +6,7 @@ const participants = (node: object) => frameworkRecord(node)!.deletionParticipan
 
 test("source-order filters and all direction transforms preserve every selected labeled edge independently", () => {
   for (let fixture = 0; fixture < 24; fixture++) {
-    const source = Graph.add<{ index: number }, { label: number; nested: number[] }>({ parallel: true, selfLoops: true, edgeState: { label: 0, nested: [1] } });
+    const source = Graph.create<{ index: number }, { label: number; nested: number[] }>({ parallel: true, selfLoops: true, edgeState: { label: 0, nested: [1] } });
     const nodes = Array.from({ length: 5 }, (_, index) => source.nodes.add({ index }));
     let word = fixture + 1;
     for (let label = 0; label < 15; label++) {
@@ -37,7 +37,7 @@ test("source-order filters and all direction transforms preserve every selected 
 });
 
 test("undirected promotion retains opposite arcs and uses a fresh automatic-key owner", () => {
-  const source = Graph.add<object, { label: string }>({ selfLoops: true, edgeState: { label: "default" } });
+  const source = Graph.create<object, { label: string }>({ selfLoops: true, edgeState: { label: "default" } });
   const a = source.nodes.add({}), b = source.nodes.add({});
   source.edges.add({ from: a, to: b, directed: true, state: { label: "ab" } });
   source.edges.add({ from: b, to: a, directed: true, state: { label: "ba" } });
@@ -48,7 +48,7 @@ test("undirected promotion retains opposite arcs and uses a fresh automatic-key 
   expect(copy.edges.add({ from: b, to: b }).key).toBe("3");
   const plain = source.copy({ edges: [[...source.edges][0]!] , direction: "undirected" });
   expect(plain.parallel).toBe(false); expect([...plain.edges][0]!.key).toBeUndefined();
-  const keyed = Graph.add({ parallel: true }); keyed.nodes.add(a); keyed.nodes.add(b);
+  const keyed = Graph.create({ parallel: true }); keyed.nodes.add(a); keyed.nodes.add(b);
   keyed.edges.add({ from: a, to: b }).delete(); keyed.edges.add({ from: a, to: b, key: "9" });
   const fresh = keyed.copy();
   expect(fresh.edges.add({ from: a, to: b }).key).toBe("0");
@@ -58,7 +58,7 @@ test("undirected promotion retains opposite arcs and uses a fresh automatic-key 
 test("state extraction preserves hidden data, null prototypes and framework backreferences without rebinding", () => {
   const state = Object.assign(Object.create(null), { alias: { value: 1 }, same: undefined as unknown, self: undefined as unknown });
   state.same = state.alias; state.self = state;
-  const source = Graph.add<object, typeof state>({ edgeState: state });
+  const source = Graph.create<object, typeof state>({ edgeState: state });
   const a = source.nodes.add({}), b = source.nodes.add({}), c = source.nodes.add({});
   const ab = source.edges.add({ from: a, to: b }), bc = source.edges.add({ from: b, to: c });
   const shared = { nested: [2] };
@@ -78,8 +78,8 @@ test("state extraction preserves hidden data, null prototypes and framework back
 });
 
 test("late clone failures create no target Agent participants; recovery registers exactly one owner", () => {
-  const nodes = Array.from({ length: 3 }, (_, index) => Agent.add({ index }));
-  const source = Graph.add<typeof nodes[number], { data: object }>({ edgeState: { data: {} } });
+  const nodes = Array.from({ length: 3 }, (_, index) => Agent.create({ index }));
+  const source = Graph.create<typeof nodes[number], { data: object }>({ edgeState: { data: {} } });
   nodes.forEach(node => source.nodes.add(node));
   const good = source.edges.add({ from: nodes[0]!, to: nodes[1]! });
   const bad = source.edges.add({ from: nodes[1]!, to: nodes[2]! });
@@ -103,9 +103,9 @@ test("late clone failures create no target Agent participants; recovery register
 
 test("final liveness validation catches foreign deletion from a later reflection, including Map/Set and defaults", () => {
   for (const inDefaults of [false, true]) {
-    const foreign = Agent.add({ value: 1 }), a = Agent.add(), b = Agent.add(), c = Agent.add();
+    const foreign = Agent.create({ value: 1 }), a = Agent.create(), b = Agent.create(), c = Agent.create();
     const nested = { map: new Map([[{ key: 1 }, new Set([foreign])]]) };
-    const source = Graph.add<typeof a, { data: object }>({ edgeState: { data: inDefaults ? nested : {} } });
+    const source = Graph.create<typeof a, { data: object }>({ edgeState: { data: inDefaults ? nested : {} } });
     [a, b, c].forEach(node => source.nodes.add(node));
     const first = source.edges.add({ from: a, to: b, state: { data: inDefaults ? {} : nested } });
     const last = source.edges.add({ from: b, to: c, state: { data: {} } });
@@ -118,9 +118,9 @@ test("final liveness validation catches foreign deletion from a later reflection
   }
   // Non-Agent framework nodes have no Graph deletion hook; a late external
   // deletion must still be detected before any target owner is published.
-  const outer = Graph.add(), x = outer.nodes.add({}), y = outer.nodes.add({});
+  const outer = Graph.create(), x = outer.nodes.add({}), y = outer.nodes.add({});
   const external = outer.edges.add({ from: x, to: y });
-  const source = Graph.add<object, { data: object }>({ edgeState: { data: {} } });
+  const source = Graph.create<object, { data: object }>({ edgeState: { data: {} } });
   source.nodes.add(external); const other = source.nodes.add({});
   source.edges.add({ from: external, to: other }).data = new Proxy({}, { ownKeys() { external.delete(); return []; } });
   expect(() => source.copy()).toThrow(TypeError);
@@ -128,8 +128,8 @@ test("final liveness validation catches foreign deletion from a later reflection
 });
 
 test("source reflection rejects structural reentrancy and Agent deletion, permits reads and independent owners", () => {
-  const a = Agent.add(), b = Agent.add();
-  const source = Graph.add<typeof a, { data: object }>({ edgeState: { data: {} } });
+  const a = Agent.create(), b = Agent.create();
+  const source = Graph.create<typeof a, { data: object }>({ edgeState: { data: {} } });
   source.nodes.add(a); source.nodes.add(b);
   const edge = source.edges.add({ from: a, to: b });
   const before = [a, b].map(participants);
@@ -155,7 +155,7 @@ test("source reflection rejects structural reentrancy and Agent deletion, permit
 });
 
 test("array subclasses, strict own descriptors, complete validation and membership precede state reflection", () => {
-  const source = Graph.add<object, { data: object }>({ edgeState: { data: {} } });
+  const source = Graph.create<object, { data: object }>({ edgeState: { data: {} } });
   const a = source.nodes.add({}), b = source.nodes.add({}), edge = source.edges.add({ from: a, to: b });
   class Selection<T> extends Array<T> {}
   expect([...source.copy({ nodes: new Selection(b, a, b), edges: new Selection(edge, edge) }).nodes]).toEqual([a, b]);
@@ -176,9 +176,9 @@ test("array subclasses, strict own descriptors, complete validation and membersh
 });
 
 test("shared Agent identities retain World positions, continuation and independent graph hooks", () => {
-  const random = Random.add({ seed: 9 }), world = World.add({ x: 10, y: 10 }, { random });
-  const a = world.add(Agent.add({ value: 1 }, { position: { x: 1, y: 2 } })), b = world.add(Agent.add({ value: 2 }));
-  const source = Graph.add<typeof a>(); source.nodes.add(a); source.nodes.add(b); source.edges.add({ from: a, to: b });
+  const random = Random.create({ seed: 9 }), world = World.create({ x: 10, y: 10 }, { random });
+  const a = world.add(Agent.create({ value: 1 }, { position: { x: 1, y: 2 } })), b = world.add(Agent.create({ value: 2 }));
+  const source = Graph.create<typeof a>(); source.nodes.add(a); source.nodes.add(b); source.edges.add({ from: a, to: b });
   const state = random.state, before = [a, b].map(participants), copied = source.copy();
   expect([...copied.nodes]).toEqual([a, b]); expect([a, b].map(participants)).toEqual(before.map(count => count + 1));
   expect(a.world).toBe(world); expect(a.x).toBe(1); expect(a.y).toBe(2);
@@ -187,7 +187,7 @@ test("shared Agent identities retain World positions, continuation and independe
 });
 
 test("a large generated edge batch copies through the owner without public add scans or generator limits", () => {
-  const source = Graph.add<{ index: number }>({ parallel: true });
+  const source = Graph.create<{ index: number }>({ parallel: true });
   const nodes = Array.from({ length: 30000 }, (_, index) => source.nodes.add({ index }));
   const edges = source.generate({ kind: "path", nodes, directed: true });
   const copied = source.copy({ direction: "reverse" }), current = [...copied.edges];

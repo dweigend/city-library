@@ -5,16 +5,16 @@ export const ui = defineUI(model, {
   setup: ["seed"],
   change: (instance, changes) => instance.setParameters(changes),
   live: {
-    numPop: {},
+    populationSize: {},
     geneLength: {},
     plasticity: {},
-    numTrials: {},
+    trialCount: {},
     mutationRate: {},
     smoothness: {},
   },
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Evolution/Baldwin%20Effect.nlogox",
-    label: "NetLogo Baldwin Effect · Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Baldwin Effect · Wilensky · CC BY-NC-SA 3.0",
   },
   monitors: [{ label: "Generation", value: (s) => s.tick }],
   views: [

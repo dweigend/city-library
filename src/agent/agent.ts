@@ -39,9 +39,9 @@ export type Agent<S extends object = {}> = S & AgentMembers<S>;
  * consumes no randomness.
  * @throws TypeError for invalid arguments, unsupported state or reserved state keys.
  */
-function add(): Agent<{}>;
-function add<S extends object>(state: S, options?: SpatialOptions): Agent<S>;
-function add<S extends object>(
+function create(): Agent<{}>;
+function create<S extends object>(state: S, options?: SpatialOptions): Agent<S>;
+function create<S extends object>(
   state?: S,
   options: SpatialOptions = {},
 ): Agent<S> {
@@ -49,7 +49,7 @@ function add<S extends object>(
     arguments.length > 2 ||
     (arguments.length > 1 && arguments[1] === undefined)
   )
-    throw new TypeError("Agent.add accepts state and spatial options.");
+    throw new TypeError("Agent.create accepts state and spatial options.");
   const spatialOptions = validateOptions(options, [
     "position",
     "orientation",
@@ -87,7 +87,7 @@ function add<S extends object>(
             Object.getOwnPropertyDescriptor(agent, key)!,
           );
         }
-        return add(copiedState, {
+        return create(copiedState, {
           position: spatial.position(),
           orientation: spatial.orientation(),
         });
@@ -110,4 +110,4 @@ function add<S extends object>(
   Object.defineProperties(agent, properties);
   return agent;
 }
-export const Agent = Object.freeze({ add });
+export const Agent = Object.freeze({ create });

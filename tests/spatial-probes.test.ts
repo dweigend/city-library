@@ -11,7 +11,7 @@ test("pure forward vectors agree with existing Agent motion including XYZ roll",
   ];
   for (const orientation of angles) {
     const xyz = orientation.pitch !== undefined;
-    const agent = Agent.add({}, { position: xyz ? { x: 0, y: 0, z: 0 } : { x: 0, y: 0 }, orientation });
+    const agent = Agent.create({}, { position: xyz ? { x: 0, y: 0, z: 0 } : { x: 0, y: 0 }, orientation });
     const forward = geometry.direction(orientation);
     agent.move(1);
     close(forward.x, agent.x); close(forward.y, agent.y);
@@ -49,8 +49,8 @@ test("normalization is idempotent and distinguishes hard endpoints from wrap sea
 
 test("distance matches Agent measurement and toroidal metric properties", () => {
   const space = { x: 11, y: 9, boundary: { x: "wrap", y: "hard" } } as const;
-  const world = World.add(space);
-  const agent = Agent.add({}, { position: { x: 5, y: 4 } }); world.add(agent);
+  const world = World.create(space);
+  const agent = Agent.create({}, { position: { x: 5, y: 4 } }); world.add(agent);
   const targets: Position[] = [{ x: -5, y: -4 }, { x: 3, y: 1 }, { x: 16, y: 30 }];
   for (const target of targets) {
     close(geometry.distance(agent, target, { space }), agent.distanceTo(target));
@@ -67,10 +67,10 @@ test("distance matches Agent measurement and toroidal metric properties", () => 
 });
 
 test("canonical field probes are current and do not allocate, move or draw", () => {
-  const random = Random.add({ seed: 21 });
-  const world = World.add({ x: 5, y: 5, boundary: "wrap" }, { random });
-  const grid = Grid.add(world.space!, { state: { value: 7 } }); world.add(grid);
-  const person = Agent.add({}, { position: { x: 2, y: 0 }, orientation: { heading: 90 } }); world.add(person);
+  const random = Random.create({ seed: 21 });
+  const world = World.create({ x: 5, y: 5, boundary: "wrap" }, { random });
+  const grid = Grid.create(world.space!, { state: { value: 7 } }); world.add(grid);
+  const person = Agent.create({}, { position: { x: 2, y: 0 }, orientation: { heading: 90 } }); world.add(person);
   const before = random.state;
   const field = grid.fieldAt({ x: -2, y: 0 })!;
   for (let i = 0; i < 10; i++) {

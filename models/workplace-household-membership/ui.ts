@@ -1,4 +1,4 @@
-import { defineUI, netLogoColor, type Observation, type NetworkNode } from "../../ui/index.ts";
+import { defineUI, indexedColor, type Observation, type GraphNodeData } from "../../ui/index.ts";
 import { model } from "./model.ts";
 
 export const ui = defineUI(model, {
@@ -33,7 +33,7 @@ export const ui = defineUI(model, {
 });
 
 /** Three presentation columns expose the existing bipartite memberships, not travel coordinates. */
-export function membershipNodes(state: Observation<typeof model>): readonly NetworkNode[] {
+export function membershipNodes(state: Observation<typeof model>): readonly GraphNodeData[] {
   return state.nodes.map(node => {
     const residentIndex = state.people.findIndex(person => person.id === node.id);
     if (residentIndex >= 0) {
@@ -65,6 +65,6 @@ const PLACE_COLUMN_OFFSET = 170;
 const PLACE_ROW_OFFSET = 85;
 const RESIDENT_SIZE = 16;
 const PLACE_SIZE = 30;
-const RESIDENT_COLOR = netLogoColor(75);
-const HOUSEHOLD_COLOR = netLogoColor(105);
-const WORKPLACE_COLOR = netLogoColor(125);
+const RESIDENT_COLOR = indexedColor(75);
+const HOUSEHOLD_COLOR = indexedColor(105);
+const WORKPLACE_COLOR = indexedColor(125);

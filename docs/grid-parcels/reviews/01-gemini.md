@@ -103,7 +103,7 @@ The review confirms that all five frozen examples are byte-identical to their ba
 
 ### 3.4 Preservation of Regular Grid Contracts
 
-- Regular `Grid.add(space, options)` behavior remains intact:
+- Regular `Grid.create(space, options)` behavior remains intact:
   - Centered origin preserved.
   - Moore (8) and faces (4) neighborhood order preserved.
   - Directional diffusion multiplicity on tiny wrapping spaces (e.g., 1x1, 1x2, 2x2) is strictly maintained.

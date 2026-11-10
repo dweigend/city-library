@@ -1,0 +1,47 @@
+{
+  "scope": "README.md PLAN.md AGENTS.md docs/**/*.md",
+  "referencesChecked": 930,
+  "findings": [
+    [
+      "docs/grid-parcels/STATUS.md",
+      "TOWNSCAPER-CONTRACT.md",
+      "missing path"
+    ],
+    [
+      "docs/grid-parcels/TOWNSCAPER-REVIEW-RESPONSES.md",
+      "TOWNSCAPER-VERIFICATION.md",
+      "missing path"
+    ],
+    [
+      "docs/grid-parcels/TOWNSCAPER-RUNTIME-REVIEW.md",
+      "TOWNSCAPER-CONTRACT.md",
+      "missing path"
+    ],
+    [
+      "docs/grid-parcels/TOWNSCAPER-RUNTIME-REVIEW.md",
+      "TOWNSCAPER-VERIFICATION.md",
+      "missing path"
+    ],
+    [
+      "docs/grid-parcels/TOWNSCAPER-RECEIPT.md",
+      "TOWNSCAPER-CONTRACT.md",
+      "missing path"
+    ],
+    [
+      "docs/development/selected-urban-contracts.md",
+      "netlogo-model-acceptance.md",
+      "missing path"
+    ],
+    [
+      "docs/development/des-integration-evidence.md",
+      "../mesa-expansion/independent-testing.md",
+      "missing path"
+    ],
+    [
+      "docs/development/model-authoring.md",
+      "netlogo-model-acceptance.md",
+      "missing path"
+    ]
+  ],
+  "resolution": "All eight findings resolved through current guide links or explicit historical path mappings; raw receipt and review bytes preserved."
+}

@@ -1,4 +1,4 @@
-import { defineUI, netLogoColor, type Observation, type SpatialData } from "../../ui/index.ts";
+import { defineUI, indexedColor, type Observation, type SpatialData } from "../../ui/index.ts";
 import { model } from "./model.ts";
 
 export const ui = defineUI(model, {
@@ -92,7 +92,7 @@ const PARCEL_SPACING = 1.25;
 const PANEL_HORIZONTAL_PADDING = 2;
 const PANEL_VERTICAL_PADDING = 5;
 const CAPTION_INSET = 2.5;
-const CAPTION_COLOR = netLogoColor(5);
-const PARCEL_BASE_COLOR = netLogoColor(8);
-const BASE_CAP_COLOR = netLogoColor(105);
-const HIGHER_CAP_COLOR = netLogoColor(55);
+const CAPTION_COLOR = indexedColor(5);
+const PARCEL_BASE_COLOR = indexedColor(8);
+const BASE_CAP_COLOR = indexedColor(105);
+const HIGHER_CAP_COLOR = indexedColor(55);

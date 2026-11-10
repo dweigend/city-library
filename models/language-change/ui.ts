@@ -1,10 +1,10 @@
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 const binding = defineUI(model, {
-  setup: ["seed", { field: "numNodes", label: "Language users" }],
+  setup: ["seed", { field: "nodeCount", label: "Language users" }],
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Language%20Change.nlogox",
-    label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Wilensky · CC BY-NC-SA 3.0",
   },
   change: (instance, changes) => instance.setParameters(changes),
   live: {

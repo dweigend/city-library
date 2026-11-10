@@ -1,10 +1,10 @@
 import { validateOptions } from "../../agent/state.ts";
 import { finite, normalizeSpace, type Position, type Space, type NormalizedSpace } from "../../geometry/space.ts";
 import type { Random } from "../../random/random.ts";
-import { validateNwGenerator, type NwGeneratorConfig, type NwGeneratorOptions } from "./nw-options.ts";
+import { validateTopologyGenerator, type TopologyGeneratorSpec, type TopologyGeneratorOptions } from "./topology-options.ts";
 import {
   preferentialEdgeCount, readDenseArray, readFlag, readNodes, readPositiveInteger,
-  readPreferentialLinks, readProbability, readRandom, requireEdgeBudget, requireWheelSize,
+  readPreferentialEdgesPerNode, readProbability, readRandom, requireEdgeBudget, requireWheelSize,
 } from "./validation.ts";
 
 type GenericGeneratorOptions<N> =
@@ -12,35 +12,35 @@ type GenericGeneratorOptions<N> =
   | { kind: "tree"; nodes: readonly N[]; branching?: number; directed?: boolean }
   | { kind: "lattice"; nodes: readonly N[]; shape: readonly number[]; wrap?: boolean; directed?: boolean }
   | { kind: "random"; nodes: readonly N[]; probability: number; directed?: boolean; random: Random }
-  | { kind: "smallWorld"; nodes: readonly N[]; neighbors: number; probability: number; random: Random }
-  | { kind: "preferential"; nodes: readonly N[]; links: number; random: Random }
+  | { kind: "small-world"; nodes: readonly N[]; neighbors: number; probability: number; random: Random }
+  | { kind: "preferential"; nodes: readonly N[]; edgesPerNode: number; random: Random }
   | { kind: "geometric"; nodes: readonly N[]; position: (node: N) => Position; radius: number; space?: Space };
 /**
  * Generator options accepted by `graph.generate`. A `profile` selects the
- * explicit NW topology edition; without it the generic generator kinds apply.
+ * explicit ordered topology profile; without it the generic generator kinds apply.
  */
-export type GeneratorOptions<N> = GenericGeneratorOptions<N> | NwGeneratorOptions<N>;
+export type GeneratorOptions<N> = GenericGeneratorOptions<N> | TopologyGeneratorOptions<N>;
 
 const optionsByKind = {
   path: ["directed"], cycle: ["directed"], star: ["directed"], wheel: ["directed"], complete: ["directed"],
   tree: ["branching", "directed"], lattice: ["shape", "wrap", "directed"],
-  random: ["probability", "directed", "random"], smallWorld: ["neighbors", "probability", "random"],
-  preferential: ["links", "random"], geometric: ["position", "radius", "space"],
+  random: ["probability", "directed", "random"], "small-world": ["neighbors", "probability", "random"],
+  preferential: ["edgesPerNode", "random"], geometric: ["position", "radius", "space"],
 } as const;
 type GenericKind = keyof typeof optionsByKind;
 const suppliedOptionNames = [
-  "kind", "nodes", "directed", "branching", "shape", "wrap", "probability", "neighbors", "links", "random",
+  "kind", "nodes", "directed", "branching", "shape", "wrap", "probability", "neighbors", "edgesPerNode", "random",
   "position", "radius", "space", "profile", "clusteringExponent", "neighborsPerSide", "spokes",
 ];
 
 /** Validated generic generator settings; each kind carries only its own parameters. */
-export type GenericGeneratorConfig<N> = { readonly nodes: readonly N[]; readonly directed: boolean } & (
+export type GenericGeneratorSpec<N> = { readonly nodes: readonly N[]; readonly directed: boolean } & (
   | { readonly kind: "path" | "cycle" | "star" | "wheel" | "complete" }
   | { readonly kind: "tree"; readonly branching: number }
   | { readonly kind: "lattice"; readonly shape: readonly number[]; readonly wrap: boolean }
   | { readonly kind: "random"; readonly probability: number; readonly random: Random }
-  | { readonly kind: "smallWorld"; readonly neighbors: number; readonly probability: number; readonly random: Random }
-  | { readonly kind: "preferential"; readonly links: number; readonly random: Random }
+  | { readonly kind: "small-world"; readonly neighbors: number; readonly probability: number; readonly random: Random }
+  | { readonly kind: "preferential"; readonly edgesPerNode: number; readonly random: Random }
   | {
     readonly kind: "geometric";
     readonly position: (node: N) => Position;
@@ -48,16 +48,16 @@ export type GenericGeneratorConfig<N> = { readonly nodes: readonly N[]; readonly
     readonly space: NormalizedSpace | undefined;
   }
 );
-export type GeneratorConfig<N> = GenericGeneratorConfig<N> | NwGeneratorConfig<N>;
+export type GeneratorSpec<N> = GenericGeneratorSpec<N> | TopologyGeneratorSpec<N>;
 
 /**
  * Validates all generator options before any planning callback or draw.
  * Failure order: option record, kind, inapplicable keys, nodes, direction flag,
  * kind parameters, known edge budget, then the Random stream.
  */
-export function validateGenerator<N>(options: GeneratorOptions<N>): GeneratorConfig<N> {
+export function validateGenerator<N>(options: GeneratorOptions<N>): GeneratorSpec<N> {
   const supplied = validateOptions(options, suppliedOptionNames);
-  if (Object.hasOwn(supplied, "profile")) return validateNwGenerator<N>(supplied);
+  if (Object.hasOwn(supplied, "profile")) return validateTopologyGenerator<N>(supplied);
   if (typeof supplied.kind !== "string" || !Object.hasOwn(optionsByKind, supplied.kind)) throw new TypeError("Unknown graph generator.");
   const kind = supplied.kind as GenericKind;
   const allowed: readonly string[] = ["kind", "nodes", ...optionsByKind[kind]];
@@ -69,7 +69,7 @@ export function validateGenerator<N>(options: GeneratorOptions<N>): GeneratorCon
 
 function readGenericKind<N>(
   kind: GenericKind, supplied: Record<string, unknown>, nodes: readonly N[], directed: boolean,
-): GenericGeneratorConfig<N> {
+): GenericGeneratorSpec<N> {
   const count = nodes.length;
   switch (kind) {
     case "path":
@@ -104,7 +104,7 @@ function readGenericKind<N>(
       if (probability === 1) requireEdgeBudget(count * (count - 1) / (directed ? 1 : 2));
       return { kind, nodes, directed, probability, random: readRandom(supplied.random) };
     }
-    case "smallWorld": {
+    case "small-world": {
       const probability = readProbability(supplied.probability);
       const neighbors = readPositiveInteger(supplied.neighbors);
       if (count < 3 || neighbors < 2 || neighbors >= count || neighbors % 2) throw new RangeError("Invalid small-world neighborhood.");
@@ -112,9 +112,9 @@ function readGenericKind<N>(
       return { kind, nodes, directed, neighbors, probability, random: readRandom(supplied.random) };
     }
     case "preferential": {
-      const links = readPreferentialLinks(supplied.links, count);
-      requireEdgeBudget(preferentialEdgeCount(links, count));
-      return { kind, nodes, directed, links, random: readRandom(supplied.random) };
+      const edgesPerNode = readPreferentialEdgesPerNode(supplied.edgesPerNode, count);
+      requireEdgeBudget(preferentialEdgeCount(edgesPerNode, count));
+      return { kind, nodes, directed, edgesPerNode, random: readRandom(supplied.random) };
     }
     case "geometric": {
       if (typeof supplied.position !== "function") throw new TypeError("Geometric generator requires a position callback.");

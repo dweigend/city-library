@@ -1,4 +1,4 @@
-import { defineUI, netLogoColor, type Observation, type SpatialData } from "../../ui/index.ts";
+import { defineUI, indexedColor, type Observation, type SpatialData } from "../../ui/index.ts";
 
 import { model, type TijuanaRead } from "./model.ts";
 
@@ -6,7 +6,7 @@ export const ui = defineUI(model, {
   setup: ["seed"],
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/Urban%20Suite/Urban%20Suite%20-%20Tijuana%20Bordertowns.nlogox",
-    label: "Original NetLogo model · Uri Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Uri Wilensky · CC BY-NC-SA 3.0",
   },
   // The shared GO controls are available only after the source setup phase.
   complete: (state) => !state.setupDone,
@@ -181,12 +181,12 @@ function spatial(state: TijuanaRead): SpatialData {
       id: cell.id,
       x: cell.x,
       y: cell.y,
-      color: netLogoColor(cell.colorNumber),
+      color: indexedColor(cell.colorNumber),
     })),
     segments: state.traces.map((trace) => ({
       from: trace.from,
       to: trace.to,
-      color: netLogoColor(trace.colorNumber),
+      color: indexedColor(trace.colorNumber),
       width: trace.width,
     })),
     agents: state.agents
@@ -196,7 +196,7 @@ function spatial(state: TijuanaRead): SpatialData {
         x: agent.x,
         y: agent.y,
         heading: agent.heading,
-        color: netLogoColor(agent.colorNumber),
+        color: indexedColor(agent.colorNumber),
         size: Math.max(0, agent.size) * 4,
         shape:
           agent.shape === "default"

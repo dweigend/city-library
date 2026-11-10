@@ -2,9 +2,9 @@ import { expect, test } from "bun:test";
 import { Agent, Graph, Grid, World } from "city-library";
 
 test("implicit occupancy preserves World admission order across moves, copies and failed batches", () => {
-  const world = World.add({ x: 5, y: 5 });
-  const grid = world.add(Grid.add({ x: 5, y: 5 }));
-  const first = world.add(Agent.add({ energy: 4 }));
+  const world = World.create({ x: 5, y: 5 });
+  const grid = world.add(Grid.create({ x: 5, y: 5 }));
+  const first = world.add(Agent.create({ energy: 4 }));
   const second = world.add(first.copy());
   const home = grid.fieldAt(first)!;
   const before = grid.agentsAt(home);
@@ -14,8 +14,8 @@ test("implicit occupancy preserves World admission order across moves, copies an
   world.add([first, second, first]);
   expect(grid.agentsAt(home)).toEqual([first, second]);
   expect(() => first.move({ to: { x: NaN, y: 0 } })).toThrow();
-  const rejected = Agent.add();
-  const foreign = World.add().add(Agent.add());
+  const rejected = Agent.create();
+  const foreign = World.create().add(Agent.create());
   expect(() => world.add([rejected, foreign])).toThrow();
   expect(rejected.world).toBeUndefined();
   expect(grid.agentsAt(home)).toEqual([first, second]);
@@ -31,13 +31,13 @@ test("implicit occupancy preserves World admission order across moves, copies an
 });
 
 test("several indexes track 3D mixed-boundary motion and changing cell sizes independently", () => {
-  const world = World.add();
-  const fine = world.add(Grid.add({ x: 4, y: 4, z: 4, boundary: { x: "wrap", y: "hard", z: "wrap" } }));
-  const coarse = world.add(Grid.add({ x: 4, y: 4, z: 4, boundary: "hard" }, { cellSize: 2 }));
+  const world = World.create();
+  const fine = world.add(Grid.create({ x: 4, y: 4, z: 4, boundary: { x: "wrap", y: "hard", z: "wrap" } }));
+  const coarse = world.add(Grid.create({ x: 4, y: 4, z: 4, boundary: "hard" }, { cellSize: 2 }));
   const population = [
     { x: -2, y: -2, z: -2 }, { x: 2, y: 2, z: 2 },
     { x: 0, y: 0, z: 0 }, { x: 10, y: 0, z: -6 },
-  ].map(position => world.add(Agent.add({}, { position })));
+  ].map(position => world.add(Agent.create({}, { position })));
   for (let step = 0; step < 8; step++) {
     for (const grid of [fine, coarse]) for (const field of grid.fields)
       expect(grid.agentsAt(field)).toEqual(population.filter(agent => grid.fieldAt(agent) === field));
@@ -49,12 +49,12 @@ test("several indexes track 3D mixed-boundary motion and changing cell sizes ind
 });
 
 test("mismatched dimensions invalidate the entire implicit source and recover on detach", () => {
-  const world = World.add();
-  const grid = world.add(Grid.add({ x: 4, y: 4 }));
-  const point = world.add(Agent.add());
+  const world = World.create();
+  const grid = world.add(Grid.create({ x: 4, y: 4 }));
+  const point = world.add(Agent.create());
   const cell = grid.fieldAt(point)!;
   expect(grid.agentsAt(cell)).toEqual([point]);
-  const xyz = world.add(Agent.add({}, { position: { x: 10, y: 10, z: 10 } }));
+  const xyz = world.add(Agent.create({}, { position: { x: 10, y: 10, z: 10 } }));
   expect(() => grid.agentsAt(cell)).toThrow(TypeError);
   expect(grid.agentsAt(cell, { source: [point] })).toEqual([point]);
   xyz.move({ by: { x: 2 } });
@@ -68,11 +68,11 @@ test("mismatched dimensions invalidate the entire implicit source and recover on
 });
 
 test("Grid detach releases its prior World observation and later rebuilds current canonical data", () => {
-  const first = World.add();
-  const second = World.add();
-  const grid = first.add(Grid.add({ x: 5, y: 5 }));
-  const a = first.add(Agent.add());
-  const b = second.add(Agent.add());
+  const first = World.create();
+  const second = World.create();
+  const grid = first.add(Grid.create({ x: 5, y: 5 }));
+  const a = first.add(Agent.create());
+  const b = second.add(Agent.create());
   const cell = grid.fieldAt(a)!;
   for (let iteration = 0; iteration < 4; iteration++) {
     expect(grid.agentsAt(cell)).toEqual([a]);
@@ -92,13 +92,13 @@ test("Grid detach releases its prior World observation and later rebuilds curren
 });
 
 test("failed graph deletion and explicit source side effects leave the implicit index canonical", () => {
-  const world = World.add();
-  const grid = world.add(Grid.add({ x: 5, y: 5 }));
-  const a = world.add(Agent.add());
-  const b = Agent.add();
+  const world = World.create();
+  const grid = world.add(Grid.create({ x: 5, y: 5 }));
+  const a = world.add(Agent.create());
+  const b = Agent.create();
   const cell = grid.fieldAt(a)!;
   expect(grid.agentsAt(cell)).toEqual([a]);
-  const graph = Graph.add();
+  const graph = Graph.create();
   graph.nodes.add(a);
   const iterator = graph.nodes[Symbol.iterator]();
   iterator.next();

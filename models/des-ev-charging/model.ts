@@ -11,8 +11,8 @@ export const inputs: Inputs<ChargingParameters> = {
 };
 export function create(options: Partial<ChargingParameters> = {}) {
   let settings = parameters(inputs, options);
-  const agenda = Agenda.add<{ vehicle: number; kind: "finish" | "abandon" }>();
-  const chargers = Resource.add<number>({ capacity: settings.chargers, policy: "priority" });
+  const agenda = Agenda.create<{ vehicle: number; kind: "finish" | "abandon" }>();
+  const chargers = Resource.create<number>({ capacity: settings.chargers, policy: "priority" });
   const vehicles: { number: number; priority: number; duration: number; started?: number; finished?: number; ticket: ReturnType<typeof chargers.request> }[] = [];
   const history: { x: number; y: number }[] = [];
   let abandoned = 0;

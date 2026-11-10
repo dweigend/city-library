@@ -25,7 +25,7 @@ Setup creates workers and the initial complex plane, not a finished image. Each 
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer |
-| `numAgents` | `1500` | integer; ≥ 0; ≤ 1500 |
+| `agentCount` | `1500` | integer; ≥ 0; ≤ 1500 |
 | `throw` | `10` | integer; ≥ 0; ≤ 99 |
 | `scaleFactor` | `100` | integer; ≥ 1; ≤ 500 |
 
@@ -43,6 +43,6 @@ The [UI binding](ui.ts) presents `Number of agents`, `Hide agents`, `Tick`, `Com
 
 ## Sources and acceptance
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained NetLogo source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
 
 [Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `mandelbrot` and links any shared checks.

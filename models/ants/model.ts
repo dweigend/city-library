@@ -35,14 +35,14 @@ export const inputs: Inputs<AntsParameters> = {
 type Ant = Agent<{ who: number; carrying: boolean }>;
 export function create(options: Partial<AntsParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const width = 71,
     height = 71;
-  const world = World.add(
+  const world = World.create(
     { x: width, y: height, boundary: "hard" },
     { random },
   );
-  const grid = Grid.add(
+  const grid = Grid.create(
     { x: width, y: height, boundary: "hard" },
     {
       state: {
@@ -58,7 +58,7 @@ export function create(options: Partial<AntsParameters> = {}) {
   const ants = () => world.agents as readonly Ant[];
   for (let who = 0; who < settings.population; who++)
     world.add(
-      Agent.add(
+      Agent.create(
         { who, carrying: false },
         { orientation: { heading: Math.floor(random.number() * 360) } },
       ),
@@ -119,7 +119,7 @@ export function create(options: Partial<AntsParameters> = {}) {
   function go() {
     for (const ant of random.sample(ants(), {
       count: ants().length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       if (ant.who >= world.tick.value) continue;
       const field = grid.fieldAt(ant)!;
@@ -141,7 +141,7 @@ export function create(options: Partial<AntsParameters> = {}) {
       ant.rotate(-Math.floor(random.number() * 40));
       let d = geometry.direction({ heading: ant.heading });
       const ahead = { x: ant.x + d.x, y: ant.y + d.y };
-      // Preserve the source patch-edge contract through the public endpoint policy.
+      // Preserve the source field-edge contract through the public endpoint policy.
       if (
         !geometry.normalize(ahead, {
           space: world.space!,

@@ -1,9 +1,9 @@
 import assert from "node:assert/strict";
 import { Agent, Resource, ServiceQueue } from "city-library";
 
-const first = Agent.add({ name: "First resident" });
-const second = Agent.add({ name: "Second resident" });
-const queue = ServiceQueue.add<typeof first>({ policy: "priority" });
+const first = Agent.create({ name: "First resident" });
+const second = Agent.create({ name: "Second resident" });
+const queue = ServiceQueue.create<typeof first>({ policy: "priority" });
 queue.add(first, { priority: 2 });
 queue.add(second, { priority: -1 });
 assert.deepEqual(queue.entries, [second, first]);
@@ -13,7 +13,7 @@ assert.equal(queue.take(), first);
 assert.equal(queue.take(), undefined);
 
 // Two desks; a two-unit request must not be bypassed by a later one-unit request.
-const desks = Resource.add<typeof first>({ capacity: 2 });
+const desks = Resource.create<typeof first>({ capacity: 2 });
 const holder = desks.request({ owner: first });
 const large = desks.request({ owner: second, units: 2 });
 const small = desks.request({ owner: first });
@@ -38,7 +38,7 @@ desks.cancel(small);
 assert.equal(desks.used, 0);
 assert.equal(desks.waiting.length, 0);
 desks.release(holder);
-assert.throws(() => Resource.add<typeof first>({ capacity: 1 }).cancel(holder));
+assert.throws(() => Resource.create<typeof first>({ capacity: 1 }).cancel(holder));
 first.delete();
 second.delete();
 assert.throws(() => desks.request({ owner: first }));

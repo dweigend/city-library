@@ -24,7 +24,7 @@ for (const mutate of [
   () => p.setQualities([1]),
   () => p.setFirms([{ x: 5.5, y: 0, heading: 0, movedIn: false }]),
   () => c.setCells([{ on: true, onTime: 0, seed: true }]),
-  () => c.setRules({ neighborhood: "arbitrary NetLogo program" as "moore" }),
+  () => c.setRules({ neighborhood: "arbitrary program" as "moore" }),
 ]) {
   const before = [f.read(), p.read(), c.read()];
   assert.throws(mutate);

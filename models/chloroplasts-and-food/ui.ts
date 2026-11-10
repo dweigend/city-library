@@ -14,7 +14,7 @@ const binding = defineUI(model, {
   complete: (state) => state.stopped,
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Chloroplasts%20and%20Food.nlogox",
-    label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Wilensky · CC BY-NC-SA 3.0",
   },
   monitors: [
     { label: "Tick", value: (state) => state.tick },
@@ -52,7 +52,7 @@ function chloroplastsAndFoodData(state: UIObservation): SpatialData {
       .map((agent) => ({
         ...agent,
         size:
-          agent.breed === "chloroplast" ? 70 : agent.breed === "photon" ? 4 : 7,
+          agent.group === "chloroplast" ? 70 : agent.group === "photon" ? 4 : 7,
       })),
     cells: state.cells,
   };

@@ -32,26 +32,26 @@ type Atom = Agent<{ temp: number; sidesExposed: number; colorIndex: number }>;
 const colors = [8.9, 85, 95, 105, 115, 125, 15] as const;
 export function create(options: Partial<CrystalParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const space = { x: 33, y: 33, boundary: "hard" as const };
-  const world = World.add(space, { random });
-  const grid = Grid.add(space);
+  const world = World.create(space, { random });
+  const grid = Grid.create(space);
   world.add(grid);
   const neighboringAgents = new Map<Atom, readonly Atom[]>();
   let averageMetalTemp = settings.initMetalTemp,
-    numFrozen = 0,
+    frozenCount = 0,
     tempRange = 0;
   const history: Readonly<{
     tick: number;
     averageMetalTemp: number;
-    numFrozen: number;
+    frozenCount: number;
   }>[] = [];
   function atoms() {
     return world.agents as readonly Atom[];
   }
   function record() {
     history.push(
-      Object.freeze({ tick: world.tick.value, averageMetalTemp, numFrozen }),
+      Object.freeze({ tick: world.tick.value, averageMetalTemp, frozenCount }),
     );
     if (history.length > 1001) history.splice(1, 1);
   }
@@ -60,16 +60,16 @@ export function create(options: Partial<CrystalParameters> = {}) {
       Math.floor((atom.temp - settings.meltingTemp) / tempRange) + 1;
     if (index < 0) {
       atom.colorIndex = 0;
-      numFrozen++;
+      frozenCount++;
     } else atom.colorIndex = Math.min(colors.length - 1, index);
   }
   function setup() {
     world.delete(world.agents);
     neighboringAgents.clear();
-    numFrozen = 0;
+    frozenCount = 0;
     tempRange =
       (settings.initMetalTemp - settings.meltingTemp) / (colors.length - 1);
-    // NetLogo sprout gives each atom a random integer heading at creation.
+    // source model sprout gives each atom a random integer heading at creation.
     const sites = grid.fields.filter((f) =>
       settings.circle
         ? Math.hypot(f.x, f.y) < settings.width / 2
@@ -78,10 +78,10 @@ export function create(options: Partial<CrystalParameters> = {}) {
     );
     for (const field of random.sample(sites, {
       count: sites.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       const atom = world.add(
-        Agent.add(
+        Agent.create(
           { temp: settings.initMetalTemp, sidesExposed: 0, colorIndex: 0 },
           {
             position: { x: field.x, y: field.y },
@@ -144,23 +144,23 @@ export function create(options: Partial<CrystalParameters> = {}) {
     );
   }
   function go() {
-    numFrozen = 0;
+    frozenCount = 0;
     const population = atoms();
     // Three distinct randomized passes are required: asynchronous cooling,
     // then complete color assignment, then orientation changes.
     for (const atom of random.sample(population, {
       count: population.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     }))
       coolAtom(atom);
     for (const atom of random.sample(population, {
       count: population.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     }))
       setColor(atom);
     for (const atom of random.sample(population, {
       count: population.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     }))
       rotateAtom(atom);
     averageMetalTemp = stats.describe(population.map((a) => a.temp)).mean ?? 0;
@@ -200,7 +200,7 @@ export function create(options: Partial<CrystalParameters> = {}) {
         parameters: settings,
         tempRange,
         averageMetalTemp,
-        numFrozen,
+        frozenCount,
         done: done(),
         atoms: Object.freeze(
           population.map((a) =>

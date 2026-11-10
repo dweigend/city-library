@@ -30,7 +30,7 @@ export const inputs: Inputs<Parameters> = {
   allowAssortativeFusion: { kind: "boolean", default: false },
 };
 type Organism = Agent<{
-  breed: "adult" | "gamete" | "zygote";
+  group: "adult" | "gamete" | "zygote";
   matingTypeTrait: number;
   gameteSizeTrait: number;
   life: number;
@@ -40,12 +40,12 @@ type Organism = Agent<{
 }>;
 export function create(options: Partial<Parameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
-  let world = World.add(
+  const random = Random.create({ seed: settings.seed });
+  let world = World.create(
     { x: settings.worldSize, y: settings.worldSize, boundary: "wrap" },
     { random },
   );
-  let grid = Grid.add(world.space!, { state: { color: 89 } });
+  let grid = Grid.create(world.space!, { state: { color: 89 } });
   world.add(grid);
   const history: {
     tick: number;
@@ -61,9 +61,9 @@ export function create(options: Partial<Parameters> = {}) {
   }[] = [];
   let delta = 1;
   let wholeTick = false;
-  const population = (breed?: Organism["breed"]) =>
+  const population = (group?: Organism["group"]) =>
     (world.agents as readonly Organism[]).filter(
-      (a) => breed === undefined || a.breed === breed,
+      (a) => group === undefined || a.group === group,
     );
   function record() {
     history.push({
@@ -95,11 +95,11 @@ export function create(options: Partial<Parameters> = {}) {
   function setup() {
     world.delete(world.agents);
     if (world.space!.x !== settings.worldSize) {
-      world = World.add(
+      world = World.create(
         { x: settings.worldSize, y: settings.worldSize, boundary: "wrap" },
         { random },
       );
-      grid = Grid.add(world.space!, { state: { color: 89 } });
+      grid = Grid.create(world.space!, { state: { color: 89 } });
       world.add(grid);
     }
     world.tick.reset();
@@ -109,19 +109,19 @@ export function create(options: Partial<Parameters> = {}) {
     history.length = 0;
     for (const field of random.sample(grid.fields, {
       count: grid.fields.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       field.color = 89 + random.number() - random.number() * 2;
     }
     for (let i = 0; i < 10; i++)
       grid.diffuse("color", { rate: 0.5, neighborhood: "moore" });
     for (let i = 0; i < settings.maxAdults; i++) {
-      // Native create-turtles draws a default color and heading before its shuffled body.
+      // Native create-agents draws a default color and heading before its shuffled body.
       random.number({ max: 14, integer: true });
       world.add(
-        Agent.add(
+        Agent.create(
           {
-            breed: "adult" as const,
+            group: "adult" as const,
             matingTypeTrait: 0,
             gameteSizeTrait: 0.25,
             life: 0,
@@ -140,7 +140,7 @@ export function create(options: Partial<Parameters> = {}) {
     const adults = population("adult");
     for (const adult of random.sample(adults, {
       count: adults.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       adult.move({
         to: {
@@ -172,7 +172,7 @@ export function create(options: Partial<Parameters> = {}) {
     for (let i = 0; i < count; i++) {
       const child = adult.copy();
       world.add(child);
-      child.breed = "gamete";
+      child.group = "gamete";
       child.gameteSizeTrait = mass;
       child.size = gameteDiameter(mass);
       child.life = random.number({
@@ -186,7 +186,7 @@ export function create(options: Partial<Parameters> = {}) {
     }
   }
   function becomeAdult(zygote: Organism) {
-    zygote.breed = "adult";
+    zygote.group = "adult";
     zygote.size = 1;
     zygote.life = random.number({
       distribution: "normal",
@@ -221,7 +221,7 @@ export function create(options: Partial<Parameters> = {}) {
     if (mass >= settings.zygoteFitnessThreshold) {
       const child = gamete.copy();
       world.add(child);
-      child.breed = "zygote";
+      child.group = "zygote";
       child.gameteSizeTrait = inherited.gameteSizeTrait;
       child.matingTypeTrait = inherited.matingTypeTrait;
       child.size = gameteDiameter(mass);
@@ -243,7 +243,7 @@ export function create(options: Partial<Parameters> = {}) {
         const adults = population("adult");
         for (const adult of random.sample(adults, {
           count: adults.length,
-          compatibility: "legacy-shuffle",
+          algorithm: "fisher-yates-descending",
         })) {
           adult.rotate(random.number() * 360 - adult.heading);
           adult.move(1);
@@ -254,7 +254,7 @@ export function create(options: Partial<Parameters> = {}) {
         const zygotes = population("zygote");
         for (const zygote of random.sample(zygotes, {
           count: zygotes.length,
-          compatibility: "legacy-shuffle",
+          algorithm: "fisher-yates-descending",
         })) {
           zygote.incubationTime--;
           if (zygote.incubationTime < 1) becomeAdult(zygote);
@@ -266,7 +266,7 @@ export function create(options: Partial<Parameters> = {}) {
       const gametes = population("gamete");
       for (const gamete of random.sample(gametes, {
         count: gametes.length,
-        compatibility: "legacy-shuffle",
+        algorithm: "fisher-yates-descending",
       })) {
         if (!gamete.alive) continue;
         gamete.rotate(
@@ -290,7 +290,7 @@ export function create(options: Partial<Parameters> = {}) {
       x: a.x,
       y: a.y,
       heading: a.heading,
-      breed: a.breed,
+      group: a.group,
       matingTypeTrait: a.matingTypeTrait,
       gameteSizeTrait: a.gameteSizeTrait,
       life: a.life,
@@ -327,9 +327,9 @@ export function create(options: Partial<Parameters> = {}) {
           { edges: Array.from({ length: 21 }, (_, i) => i / 40) },
         ),
       },
-      adults: agents.filter((a) => a.breed === "adult"),
-      gametes: agents.filter((a) => a.breed === "gamete"),
-      zygotes: agents.filter((a) => a.breed === "zygote"),
+      adults: agents.filter((a) => a.group === "adult"),
+      gametes: agents.filter((a) => a.group === "gamete"),
+      zygotes: agents.filter((a) => a.group === "zygote"),
       history: history.map((p) => ({ ...p })),
       randomState: random.state,
     };

@@ -17,7 +17,7 @@ export interface Signal<T> {
 }
 interface Entry<T> { ticket: WaitRequest; status: WaitStatus; predicate: (value: T) => boolean }
 
-function add<T>(initial: T): Signal<T> {
+function create<T>(initial: T): Signal<T> {
   let value = initial;
   let evaluating = false;
   const pending: Entry<T>[] = [];
@@ -76,4 +76,4 @@ function add<T>(initial: T): Signal<T> {
   });
 }
 
-export const Signal = Object.freeze({ add });
+export const Signal = Object.freeze({ create });

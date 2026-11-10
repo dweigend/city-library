@@ -4,7 +4,7 @@ export type Zone = "cbd" | "com" | "res";
 export type DemandKey = `prob-${Zone}-${Zone}-${DemandPhase}`;
 export type TaxiParameters = Record<DemandKey, number> & {
   seed: number;
-  numTaxicab: number;
+  taxicabCount: number;
   lengthOfGreenLight: number;
   lengthOfTimePeriod: number;
   waitTimeMean: number;
@@ -16,7 +16,7 @@ export type TaxiParameters = Record<DemandKey, number> & {
 };
 export const inputs: Inputs<TaxiParameters> = {
   seed: { kind: "number", default: 1, integer: true },
-  numTaxicab: { kind: "number", default: 25, min: 1, max: 50, integer: true },
+  taxicabCount: { kind: "number", default: 25, min: 1, max: 50, integer: true },
   lengthOfGreenLight: {
     kind: "number",
     default: 20,

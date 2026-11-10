@@ -74,7 +74,7 @@ test("options reject before input iteration without invoking accessors or coerci
 });
 
 test("nonfinite values and sum/spread overflow reject without affecting unrelated state", () => {
-  const random = Random.add({ seed: 17 });
+  const random = Random.create({ seed: 17 });
   const state = random.state;
   for (const values of [[Infinity], [-Infinity], [NaN], [Number.MAX_VALUE, Number.MAX_VALUE], [Number.MAX_VALUE, -Number.MAX_VALUE], [1e154, -1e154]])
     expect(() => stats.describe(values)).toThrow(RangeError);

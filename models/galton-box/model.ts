@@ -36,9 +36,9 @@ export const inputs: Inputs<Parameters> = {
 };
 export function create(options: Partial<Parameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
-  const world = World.add({ x: 35, y: 61, boundary: "hard" }, { random });
-  const grid = Grid.add(
+  const random = Random.create({ seed: settings.seed });
+  const world = World.create({ x: 35, y: 61, boundary: "hard" }, { random });
+  const grid = Grid.create(
     { x: 35, y: 61, boundary: "hard" },
     {
       state: {
@@ -98,7 +98,7 @@ export function create(options: Partial<Parameters> = {}) {
   }
   function newBall() {
     world.add(
-      Agent.add(
+      Agent.create(
         { displayId: `ball-${nextId++}`, piled: false },
         { position: { x: 0, y: 30 } },
       ),
@@ -138,7 +138,7 @@ export function create(options: Partial<Parameters> = {}) {
     const falling = balls().filter((ball) => !ball.piled);
     for (const ball of random.sample(falling, {
       count: falling.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     }))
       fall(ball);
     for (const ball of balls())

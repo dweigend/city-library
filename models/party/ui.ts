@@ -5,11 +5,11 @@ const binding = defineUI(model, {
   setup: [
     "seed",
     { field: "number", label: "People" },
-    { field: "numGroups", label: "Groups" },
+    { field: "groupCount", label: "Groups" },
   ],
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Party.nlogox",
-    label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Wilensky · CC BY-NC-SA 3.0",
   },
   live: {
     tolerance: {

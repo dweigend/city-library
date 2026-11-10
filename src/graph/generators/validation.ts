@@ -59,16 +59,16 @@ export function requireWheelSize(count: number): void {
   if (count < 4) throw new RangeError("Wheel requires at least four nodes.");
 }
 
-/** Preferential attachment links each new node to `links` earlier nodes. */
-export function readPreferentialLinks(value: unknown, count: number): number {
-  const links = readPositiveInteger(value);
-  if (links >= count) throw new RangeError("Preferential links must be less than node count.");
-  return links;
+/** Preferential attachment connects each new node to `edgesPerNode` earlier nodes. */
+export function readPreferentialEdgesPerNode(value: unknown, count: number): number {
+  const edgesPerNode = readPositiveInteger(value);
+  if (edgesPerNode >= count) throw new RangeError("Preferential edgesPerNode must be less than node count.");
+  return edgesPerNode;
 }
 
-/** Seed clique over links + 1 nodes, then `links` edges for every later node. */
-export function preferentialEdgeCount(links: number, count: number): number {
-  return links * (links + 1) / 2 + (count - links - 1) * links;
+/** Seed clique over edgesPerNode + 1 nodes, then `edgesPerNode` edges for every later node. */
+export function preferentialEdgeCount(edgesPerNode: number, count: number): number {
+  return edgesPerNode * (edgesPerNode + 1) / 2 + (count - edgesPerNode - 1) * edgesPerNode;
 }
 
 /** Rejects a known planned edge count before any planning callback or draw. */

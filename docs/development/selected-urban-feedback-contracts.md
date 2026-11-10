@@ -28,8 +28,8 @@ Read the current root exports, Grid, Agent spatial/perception, Random sampling a
 
 | Requirement | Existing public composition |
 | --- | --- |
-| Fixed toroidal patch fields, simultaneous value staging | Grid.add/fields/fieldAt/neighbors with field-owned model data. Compute all new values before committing the next state. Temporary scratch maps are not a second state authority. |
-| Canonical firms, cardinal rotation/movement and hatch | Agent.add/rotate/move/copy, World.add/agents, run. No private population list or duplicate coordinates. |
+| Fixed toroidal patch fields, simultaneous value staging | Grid.create/fields/fieldAt/neighbors with field-owned model data. Compute all new values before committing the next state. Temporary scratch maps are not a second state authority. |
+| Canonical firms, cardinal rotation/movement and hatch | Agent.create/rotate/move/copy, World.create/agents, run. No private population list or duplicate coordinates. |
 | Same-cell occupancy | Attached Grid.agentsAt(field), current Agent positions; no writable cell-resident registry. |
 | Regional radius population | Filter canonical World.agents using public agent.distanceTo(field or agent,{space:world.space}) <= radius. This includes the query firm itself, unlike Agent.neighbors, which deliberately excludes self. Do not introduce a model-private toroidal distance engine. |
 | Five Cells neighborhoods | Grid.neighbors faces/Moore, native Set union/difference of canonical Fields. H removes vertical faces from Moore; displaced-von-n removes all faces. Moore-von-n is Moore plus two face-neighbor hops and the current field, producing13 unique fields on this81² torus. No duplicated topology engine. |

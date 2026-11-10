@@ -69,8 +69,8 @@ export interface IndividualState {
   gestation: number;
   age: number;
   longevity: number;
-  numOfExes: number;
-  numOfChildren: number;
+  formerPartnerCount: number;
+  childCount: number;
   adult: boolean;
 }
 export type Individual = Agent<IndividualState>;
@@ -84,8 +84,8 @@ export function adultSexRatio(
 }
 export function create(options: Partial<Parameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
-  const world = World.add({ x: 33, y: 21, boundary: "wrap" }, { random });
+  const random = Random.create({ seed: settings.seed });
+  const world = World.create({ x: 33, y: 21, boundary: "wrap" }, { random });
   const population = () => world.agents as readonly Individual[];
   const males = () => population().filter((a) => a.sex === "male");
   const females = () => population().filter((a) => a.sex === "female");
@@ -112,7 +112,7 @@ export function create(options: Partial<Parameters> = {}) {
         random.number({ distribution: "normal", mean, deviation: 0.05 }),
       ),
     );
-    const agent = Agent.add<IndividualState>(
+    const agent = Agent.create<IndividualState>(
       {
         sex,
         partner: null,
@@ -136,8 +136,8 @@ export function create(options: Partial<Parameters> = {}) {
             deviation: settings.meanLongevity / 10,
           }),
         ),
-        numOfExes: 0,
-        numOfChildren: 0,
+        formerPartnerCount: 0,
+        childCount: 0,
         adult: parent?.adult ?? true,
       },
       {
@@ -196,10 +196,10 @@ export function create(options: Partial<Parameters> = {}) {
       const partner = male.partner;
       partner.partner = male;
       partner.carrying = true;
-      partner.numOfExes++;
+      partner.formerPartnerCount++;
       partner.tempMaleChildChance =
         (partner.maleChildChance + male.maleChildChance) / 2;
-      male.numOfExes++;
+      male.formerPartnerCount++;
     }
     male.partner = null;
   }
@@ -222,8 +222,8 @@ export function create(options: Partial<Parameters> = {}) {
         random.number() < female.tempMaleChildChance ? "male" : "female";
       makeIndividual(sex, female);
     }
-    if (female.partner?.alive) female.partner.numOfChildren += litter;
-    female.numOfChildren += litter;
+    if (female.partner?.alive) female.partner.childCount += litter;
+    female.childCount += litter;
     female.partner = null;
   }
   function record() {
@@ -250,12 +250,12 @@ export function create(options: Partial<Parameters> = {}) {
       if (!population().length) break;
       for (const a of random.sample(population(), {
         count: population().length,
-        compatibility: "legacy-shuffle",
+        algorithm: "fisher-yates-descending",
       }))
         checkIfDead(a);
       for (const a of random.sample(males(), {
         count: males().length,
-        compatibility: "legacy-shuffle",
+        algorithm: "fisher-yates-descending",
       })) {
         move(a);
         if (a.age > adultAge) a.adult = true;
@@ -264,13 +264,13 @@ export function create(options: Partial<Parameters> = {}) {
         males().filter((a) => a.adult),
         {
           count: males().filter((a) => a.adult).length,
-          compatibility: "legacy-shuffle",
+          algorithm: "fisher-yates-descending",
         },
       ))
         searchForAnAdultPartner(a);
       for (const a of random.sample(females(), {
         count: females().length,
-        compatibility: "legacy-shuffle",
+        algorithm: "fisher-yates-descending",
       })) {
         if (!a.carrying) move(a);
         if (a.age > adultAge) a.adult = true;
@@ -278,7 +278,7 @@ export function create(options: Partial<Parameters> = {}) {
       const fertile = females().filter((a) => a.adult);
       for (const a of random.sample(fertile, {
         count: fertile.length,
-        compatibility: "legacy-shuffle",
+        algorithm: "fisher-yates-descending",
       }))
         reproduce(a);
       adultSexRatioHistory.push(adultSexRatio(population()));
@@ -290,7 +290,7 @@ export function create(options: Partial<Parameters> = {}) {
     const mean = stats.describe(
       population()
         .filter((a) => a.sex === sex)
-        .map((a) => a.numOfExes),
+        .map((a) => a.formerPartnerCount),
     ).mean;
     // Pure snapshots expose unavailable native empty means as NA; explicit reporter preserves the source error.
     if (mean === undefined)
@@ -314,8 +314,8 @@ export function create(options: Partial<Parameters> = {}) {
       gestation: a.gestation,
       tempMaleChildChance: a.tempMaleChildChance,
       partner: a.partner?.id ?? null,
-      numOfExes: a.numOfExes,
-      numOfChildren: a.numOfChildren,
+      formerPartnerCount: a.formerPartnerCount,
+      childCount: a.childCount,
     });
     const running =
       adultSexRatioHistory.length > 1000

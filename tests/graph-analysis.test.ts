@@ -16,7 +16,7 @@ function number(a: Fraction): number {
 
 test("weighted mixed multigraph scores match independent exhaustive vertex-simple path fractions", () => {
   for (let fixture = 0; fixture < 32; fixture++) {
-    const graph = Graph.add<{ index: number }, { amount: number }>({ parallel: true, selfLoops: true, edgeState: { amount: 1 } });
+    const graph = Graph.create<{ index: number }, { amount: number }>({ parallel: true, selfLoops: true, edgeState: { amount: 1 } });
     const nodes = Array.from({ length: 5 }, (_, index) => graph.nodes.add({ index }));
     const arcs: { to: number; units: number }[][] = nodes.map(() => []);
     let state = fixture + 1;
@@ -82,7 +82,7 @@ test("weighted mixed multigraph scores match independent exhaustive vertex-simpl
 
 test("spectral scores satisfy independent rank-one eigenpair and PageRank balance oracles", () => {
   for (const reverse of [false, true]) {
-    const graph = Graph.add<{ index: number }, { weight: number }>({ parallel: true, selfLoops: true, edgeState: { weight: 1 } });
+    const graph = Graph.create<{ index: number }, { weight: number }>({ parallel: true, selfLoops: true, edgeState: { weight: 1 } });
     const nodes = Array.from({ length: 3 }, (_, index) => graph.nodes.add({ index }));
     const edges = nodes.flatMap(from => nodes.map(to => ({ from, to, directed: true, state: { weight: (to.index + 1) * [2, 1, 1][from.index]! } })));
     for (const edge of reverse ? edges.toReversed() : edges) graph.edges.add(edge);
@@ -99,9 +99,9 @@ test("spectral scores satisfy independent rank-one eigenpair and PageRank balanc
 });
 
 test("all five measures capture once, allow nested observations and preserve canonical lifecycle and RNG authority", () => {
-  const random = Random.add({ seed: 17 }), world = World.add({ random });
-  const a = world.add(Agent.add({ energy: 2 })), b = world.add(Agent.add({ energy: 3 })), c = world.add(Agent.add({ energy: 4 }));
-  const graph = Graph.add<typeof a, { value: number }>({ edgeState: { value: 1 } });
+  const random = Random.create({ seed: 17 }), world = World.create({ random });
+  const a = world.add(Agent.create({ energy: 2 })), b = world.add(Agent.create({ energy: 3 })), c = world.add(Agent.create({ energy: 4 }));
+  const graph = Graph.create<typeof a, { value: number }>({ edgeState: { value: 1 } });
   for (const node of [a, b, c]) graph.nodes.add(node);
   const edges = [graph.edges.add({ from: a, to: b }), graph.edges.add({ from: b, to: c })];
   const state = random.state;
@@ -115,7 +115,7 @@ test("all five measures capture once, allow nested observations and preserve can
     const result = graph.analyze({ measure, ...((measure === "closeness" || measure === "betweenness") ? { cost: callback } : { weight: callback }) });
     expect(seen).toEqual(edges); expect([...result.keys()]).toEqual([a, b, c]);
     snapshots.push(result);
-    for (const mutate of [() => b.delete(), () => edges[0]!.delete(), () => graph.nodes.add(Agent.add({ energy: 5 })), () => graph.edges.add({ from: a, to: c })]) {
+    for (const mutate of [() => b.delete(), () => edges[0]!.delete(), () => graph.nodes.add(Agent.create({ energy: 5 })), () => graph.edges.add({ from: a, to: c })]) {
       const callback = () => { mutate(); return 1; };
       expect(() => graph.analyze({ measure, ...((measure === "closeness" || measure === "betweenness") ? { cost: callback } : { weight: callback }) })).toThrow();
       expect(b.alive).toBe(true); expect(graph.edges.size).toBe(2); expect(graph.nodes.size).toBe(3);
@@ -128,7 +128,7 @@ test("all five measures capture once, allow nested observations and preserve can
   for (const measure of measures) expect([...graph.analyze({ measure }).keys()]).toEqual([a, c]);
   (snapshots[0]! as Map<typeof a, number>).clear();
   expect(graph.analyze({ measure: "degree" }).size).toBe(2);
-  const independent = Graph.add<typeof a>(); independent.nodes.add(a);
+  const independent = Graph.create<typeof a>(); independent.nodes.add(a);
   expect(independent.analyze({ measure: "degree" }).get(a)).toBe(0);
 });
 
@@ -140,7 +140,7 @@ test("measure-specific own-data validation executes before callbacks even on emp
   } as const;
   const keys = ["direction", "normalized", "disconnected", "cost", "weight", "damping", "tolerance", "maxIterations", "unknown"];
   for (const populated of [false, true]) {
-    const graph = Graph.add(); const a = graph.nodes.add({}), b = graph.nodes.add({});
+    const graph = Graph.create(); const a = graph.nodes.add({}), b = graph.nodes.add({});
     graph.edges.add({ from: a, to: b });
     if (!populated) graph.delete();
     let calls = 0, reads = 0;
@@ -170,7 +170,7 @@ test("measure-specific own-data validation executes before callbacks even on emp
 });
 
 test("callback exceptions retain identity, malformed values reject and weights recapture after failure", () => {
-  const graph = Graph.add<object, { value: number }>({ edgeState: { value: 1 } });
+  const graph = Graph.create<object, { value: number }>({ edgeState: { value: 1 } });
   const a = graph.nodes.add({}), b = graph.nodes.add({});
   const edge = graph.edges.add({ from: a, to: b });
   for (const measure of ["degree", "closeness", "betweenness", "eigenvector", "pageRank"] as const) {
@@ -192,7 +192,7 @@ test("callback exceptions retain identity, malformed values reject and weights r
 });
 
 test("loop incidences, edgeless distinctions and wholly-undirected normalization remain explicit", () => {
-  const graph = Graph.add({ selfLoops: true });
+  const graph = Graph.create({ selfLoops: true });
   const a = graph.nodes.add({}), b = graph.nodes.add({});
   expect([...graph.analyze({ measure: "eigenvector" }).values()]).toEqual([0, 0]);
   expect([...graph.analyze({ measure: "pageRank" }).values()]).toEqual([0.5, 0.5]);
@@ -206,5 +206,5 @@ test("loop incidences, edgeless distinctions and wholly-undirected normalization
   const rank = graph.analyze({ measure: "pageRank", damping: 0.5, tolerance: 1e-13 });
   expect(rank.get(a)!).toBeCloseTo(9 / 14, 12); expect(rank.get(b)!).toBeCloseTo(5 / 14, 12);
   for (const measure of ["degree", "closeness", "betweenness", "eigenvector", "pageRank"] as const)
-    expect(Graph.add().analyze({ measure }).size).toBe(0);
+    expect(Graph.create().analyze({ measure }).size).toBe(0);
 });

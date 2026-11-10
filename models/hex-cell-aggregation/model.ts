@@ -45,14 +45,14 @@ export function create(options: Partial<HexParameters> = {}) {
   let settings = parameters(inputs, options);
   if (settings.width % 2 !== 1 || settings.height % 2 !== 1)
     throw new RangeError("Hex source coordinates require odd dimensions.");
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const space = {
     x: settings.width,
     y: settings.height,
     boundary: "hard" as const,
   };
-  const world = World.add(space, { random });
-  const grid = Grid.add(space, {
+  const world = World.create(space, { random });
+  const grid = Grid.create(space, {
     state: { alive: false, liveNeighborCount: 0, eligible: false },
   });
   world.add(grid);

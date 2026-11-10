@@ -1,6 +1,6 @@
 # Planar containment and bounds
 
-Containment and bounds queries let a model use planar shapes without a renderer or GIS runtime. This contract defines `geometry.contains`, `geometry.bounds` and the six existing Planar types. Public examples in `tests/public-contracts/planar-geometry-proposal/` assert edge cases and budgets; affine mapping is separate.
+Containment and bounds queries let a model use planar shapes without a renderer or GIS runtime. This contract defines `geometry.contains`, `geometry.bounds` and the six existing Planar types. Public examples in `tests/public-contracts/planar-geometry/` assert edge cases and budgets; affine mapping is separate.
 
 This contract covers geometry.contains, geometry.bounds and six existing Planar type definitions through public root exports. Bounds already exists. No parser/codec, CRS, geographic normalization, Polygon repair/boolean operations, dataset validity certificate, new convenience API, public caps option or stub. This is pure headless geometry; it grants no GIS model/browser/rights/independent acceptance.
 

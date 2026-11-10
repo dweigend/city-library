@@ -37,7 +37,7 @@ type Termite = Agent<{
 }>;
 export function create(options: Partial<Parameters> = {}) {
   const settings = parameters(inputs, options);
-  const random = Random.add({
+  const random = Random.create({
     seed: settings.seed,
   });
   const space = {
@@ -45,10 +45,10 @@ export function create(options: Partial<Parameters> = {}) {
     y: 201,
     boundary: "wrap" as const,
   };
-  const world = World.add(space, {
+  const world = World.create(space, {
     random,
   });
-  const grid = Grid.add(space, {
+  const grid = Grid.create(space, {
     state: {
       chip: false,
     },
@@ -56,12 +56,12 @@ export function create(options: Partial<Parameters> = {}) {
   world.add(grid);
   for (const f of random.sample(grid.fields, {
     count: grid.fields.length,
-    compatibility: "legacy-shuffle",
+    algorithm: "fisher-yates-descending",
   }))
     f.chip = random.number() * 100 < settings.density;
   for (let i = 0; i < settings.number; i++)
     world.add(
-      Agent.add(
+      Agent.create(
         {
           phase: "search" as const,
           carrying: false,
@@ -131,7 +131,7 @@ export function create(options: Partial<Parameters> = {}) {
         const old = population();
         for (const a of random.sample(old, {
           count: old.length,
-          compatibility: "legacy-shuffle",
+          algorithm: "fisher-yates-descending",
         }))
           activate(a);
         work++;

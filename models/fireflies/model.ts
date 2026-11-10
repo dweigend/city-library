@@ -35,16 +35,16 @@ type Firefly = Agent<{
 }>;
 export function create(options: Partial<FirefliesParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const width = 71,
     height = 71;
-  const world = World.add(
+  const world = World.create(
     { x: width, y: height, boundary: "wrap" },
     { random },
   );
   // Canonical Grid occupancy narrows the radius-one query to the current
   // Moore neighborhood. It owns no second population or copied positions.
-  const grid = Grid.add(
+  const grid = Grid.create(
     { x: width, y: height, boundary: "wrap" },
     { state: {} },
   );
@@ -71,7 +71,7 @@ export function create(options: Partial<FirefliesParameters> = {}) {
       random.number() * Math.round(settings.cycleLength),
     );
     world.add(
-      Agent.add(
+      Agent.create(
         {
           clock,
           threshold: settings.flashLength,
@@ -100,7 +100,7 @@ export function create(options: Partial<FirefliesParameters> = {}) {
           );
           for (const f of random.sample(fireflies(), {
             count: fireflies().length,
-            compatibility: "legacy-shuffle",
+            algorithm: "fisher-yates-descending",
           })) {
             f.rotate(random.number() * 90 - random.number() * 90);
             f.move(1);

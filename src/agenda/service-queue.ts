@@ -16,7 +16,7 @@ export interface ServiceQueue<T> {
 }
 interface Entry<T> { handle: QueueHandle<T>; priority: number; release: () => void }
 
-function add<T>(options: { policy?: QueuePolicy } = {}): ServiceQueue<T> {
+function create<T>(options: { policy?: QueuePolicy } = {}): ServiceQueue<T> {
   const settings = validateOptions(options, ["policy"]);
   const policy = settings.policy === undefined ? "fifo" : settings.policy;
   if (policy !== "fifo" && policy !== "priority") throw new TypeError("Invalid queue policy.");
@@ -56,4 +56,4 @@ function add<T>(options: { policy?: QueuePolicy } = {}): ServiceQueue<T> {
   });
 }
 
-export const ServiceQueue = Object.freeze({ add });
+export const ServiceQueue = Object.freeze({ create });

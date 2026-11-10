@@ -12,7 +12,7 @@ export const ui = defineUI(model, {
   actions: [{ label: "Play once", run: (m) => m.play() }],
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Prisoner's%20Dilemma/Prisoner's%20Dilemma%20Two%20Person%20Iterated.nlogox",
-    label: "Original NetLogo model · Uri Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Uri Wilensky · CC BY-NC-SA 3.0",
   },
   monitors: [
     { label: "Round", value: (s) => s.tick },

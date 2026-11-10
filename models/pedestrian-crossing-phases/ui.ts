@@ -1,4 +1,4 @@
-import { defineUI, netLogoColor, type Observation, type SpatialData } from "../../ui/index.ts";
+import { defineUI, indexedColor, type Observation, type SpatialData } from "../../ui/index.ts";
 import { model } from "./model.ts";
 
 export const ui = defineUI(model, {
@@ -40,16 +40,16 @@ export function crossingData(state: CrossingObservation): SpatialData {
 
 const roadColumns = [-1, 0, 1];
 const stripeRows: readonly number[] = [-2, 0, 2];
-const roadColor = netLogoColor(3);
-const stripeColor = netLogoColor(9);
+const roadColor = indexedColor(3);
+const stripeColor = indexedColor(9);
 const stageCenters = { waiting: -4.5, crossing: 0, arrived: 4.5 };
 const stageColors = {
-  waiting: netLogoColor(25),
-  crossing: netLogoColor(105),
-  arrived: netLogoColor(55),
+  waiting: indexedColor(25),
+  crossing: indexedColor(105),
+  arrived: indexedColor(55),
 };
-const greenSignalColor = netLogoColor(55);
-const redSignalColor = netLogoColor(15);
+const greenSignalColor = indexedColor(55);
+const redSignalColor = indexedColor(15);
 
 const minimumViewHeight = 8;
 const cohortColumns = 4;

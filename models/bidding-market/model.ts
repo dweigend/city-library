@@ -76,8 +76,8 @@ type Buyer = Agent<{
 }>;
 export function create(options: Partial<Parameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed }),
-    world = World.add({ x: 29, y: 29, boundary: "hard" }, { random });
+  const random = Random.create({ seed: settings.seed }),
+    world = World.create({ x: 29, y: 29, boundary: "hard" }, { random });
   const integer = (n: number) => Math.floor(random.number() * n),
     round = (n: number) => Math.round(n * 100) / 100;
   const sellers = () =>
@@ -89,14 +89,14 @@ export function create(options: Partial<Parameters> = {}) {
         (a): a is Buyer => (a as Seller | Buyer).kind === "buyer",
       );
   const shuffle = <T>(a: readonly T[]) =>
-    random.sample(a, { count: a.length, compatibility: "legacy-shuffle" });
+    random.sample(a, { count: a.length, algorithm: "fisher-yates-descending" });
   const amount = (d: Distribution, a: Amount) => {
     const n = a === "high" ? 50 : 25;
     return d === "even"
       ? 1 + integer(n)
       : 1 + Math.floor(-(n / 2) * Math.log(1 - random.number()));
   };
-  // NetLogo random rounds a positive fractional bound upward before its integer draw.
+  // source model random rounds a positive fractional bound upward before its integer draw.
   const initial = (n: number) =>
     n === 0 ? 0 : round(n / 2 + integer(Math.ceil(n / 2)));
   const behavior = (b: Behavior): Exclude<Behavior, "mix of all"> =>
@@ -111,7 +111,7 @@ export function create(options: Partial<Parameters> = {}) {
     const a = (index * 2 * Math.PI) / 50,
       items = amount(settings.supplyDistribution, settings.supplyAmount);
     world.add(
-      Agent.add(
+      Agent.create(
         {
           kind: "seller" as const,
           index,
@@ -130,7 +130,7 @@ export function create(options: Partial<Parameters> = {}) {
     const a = (index * 2 * Math.PI) / 50,
       want = amount(settings.demandDistribution, settings.demandAmount);
     world.add(
-      Agent.add(
+      Agent.create(
         {
           kind: "buyer" as const,
           index,

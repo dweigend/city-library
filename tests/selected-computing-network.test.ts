@@ -17,7 +17,7 @@ import {
   calculateFitness,
 } from "../models/simple-genetic-algorithm/model.ts";
 
-describe("B18 neural source equations and action boundaries", () => {
+describe("neural source equations and action boundaries", () => {
   test("strict signed threshold, all truth functions and single-example update", () => {
     expect(sign(0)).toBe(-1);
     expect(sign(0.01)).toBe(1);
@@ -119,7 +119,7 @@ describe("B18 neural source equations and action boundaries", () => {
   });
 });
 
-describe("B18 philosopher asynchronous resource protocol", () => {
+describe("philosopher asynchronous resource protocol", () => {
   test("defaults, hungry barrier and later consumption", () => {
     const d = dining();
     expect(d.read().philosophers).toHaveLength(20);
@@ -137,7 +137,7 @@ describe("B18 philosopher asynchronous resource protocol", () => {
     expect(d.read().tick).toBe(3);
   });
   test("native deadlock continues ticking without hidden reset or repair", () => {
-    const d = dining({ numPhilosophers: 3 });
+    const d = dining({ philosopherCount: 3 });
     d.setScenario({
       states: ["HUNGRY", "HUNGRY", "HUNGRY"],
       owners: [0, 1, 2],
@@ -153,7 +153,7 @@ describe("B18 philosopher asynchronous resource protocol", () => {
     expect(d.read().hungry).toBe(3); // toggling does not release held resources.
   });
   test("one marked fork and adjacent exclusive ownership across cooperative activation", () => {
-    const d = dining({ numPhilosophers: 5, cooperation: true, seed: 18 });
+    const d = dining({ philosopherCount: 5, cooperation: true, seed: 18 });
     let previous = d.read().philosophers.map((p) => p.totalEaten);
     for (let i = 0; i < 500; i++) {
       d.advance();
@@ -173,7 +173,7 @@ describe("B18 philosopher asynchronous resource protocol", () => {
     }
   });
   test("invalid fork ownership and population changes leave state untouched", () => {
-    const d = dining({ numPhilosophers: 3 }),
+    const d = dining({ philosopherCount: 3 }),
       before = d.read();
     expect(() =>
       d.setScenario({
@@ -185,12 +185,12 @@ describe("B18 philosopher asynchronous resource protocol", () => {
     expect(d.read()).toEqual(before);
     expect(() => d.activate(3)).toThrow();
     expect(d.read()).toEqual(before);
-    expect(() => d.setParameters({ numPhilosophers: 5 } as never)).toThrow();
+    expect(() => d.setParameters({ philosopherCount: 5 } as never)).toThrow();
     expect(d.read()).toEqual(before);
   });
 });
 
-describe("B18 PageRank canonical directed networks", () => {
+describe("PageRank canonical directed networks", () => {
   test("native network sizes and directed adjacencies", () => {
     const a = pagerank().read();
     expect(a.parameters.calculationMethod).toBe("random-surfer");
@@ -284,7 +284,7 @@ describe("B18 PageRank canonical directed networks", () => {
   });
 });
 
-describe("B18 binary-genotype scientific helpers and reproduction", () => {
+describe("binary-genotype scientific helpers and reproduction", () => {
   test("five pinned Hamming cases and strict invalid array contract", () => {
     expect(hammingDistance([0, 1], [0, 1])).toBe(0);
     expect(hammingDistance([0, 1], [1, 0])).toBe(1);
@@ -377,7 +377,7 @@ describe("B18 binary-genotype scientific helpers and reproduction", () => {
   });
 });
 
-describe("B18 isolated replay and bounded observations", () => {
+describe("isolated replay and bounded observations", () => {
   test("each public factory replays independently and read never draws", () => {
     for (const make of [perceptron, multilayer, dining, pagerank, genetic]) {
       const a = make({ seed: 101 }),
@@ -392,7 +392,7 @@ describe("B18 isolated replay and bounded observations", () => {
     }
   });
   test("long-running history is bounded while scientific tick keeps advancing", () => {
-    const d = dining({ numPhilosophers: 3, hungryChance: 0 });
+    const d = dining({ philosopherCount: 3, hungryChance: 0 });
     d.advance(1010);
     expect(d.read().history).toHaveLength(1001);
     expect(d.read().history[0]!.tick).toBe(10);

@@ -20,7 +20,7 @@ const binding = defineUI(model, {
   complete: (state) => state.stopped,
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Blood%20Sugar%20Regulation.nlogox",
-    label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Wilensky · CC BY-NC-SA 3.0",
   },
   monitors: [
     { label: "Tick", value: (state) => state.tick },
@@ -56,7 +56,7 @@ function bloodSugarRegulationData(state: UIObservation): SpatialData {
     width: state.width,
     height: state.height,
     agents: state.agents
-      .filter((agent) => agent.breed !== "liver" && agent.breed !== "pancreas")
+      .filter((agent) => agent.group !== "liver" && agent.group !== "pancreas")
       .map((agent) => ({
         ...agent,
         size: agent.id === state.followingId ? 9 : 3,

@@ -72,7 +72,7 @@ describe("selected ecology collective source mechanisms", () => {
     expect(headingDifference(359, 1)).toBe(-2);
     expect(headingDifference(180, 0)).toBe(180);
     expect(() =>
-      averageHeadingTowardsFlockmates(Agent.add(), [Agent.add()]),
+      averageHeadingTowardsFlockmates(Agent.create(), [Agent.create()]),
     ).toThrow(RangeError);
     const model = flocking({ population: 5, vision: 0, seed: 8 });
     const headings = model.read().birds.map((b) => b.heading);

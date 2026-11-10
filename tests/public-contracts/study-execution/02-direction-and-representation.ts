@@ -1,0 +1,38 @@
+import assert from "node:assert/strict";
+import { Graph } from "city-library";
+
+const a = { label: "a" };
+const b = { label: "b" };
+const graph = Graph.create<typeof a>();
+graph.nodes.add(a);
+graph.nodes.add(b);
+const outward = graph.edges.add({ from: a, to: b, directed: true });
+const inward = graph.edges.add({ from: b, to: a, directed: true });
+assert.notEqual(outward, inward);
+assert.deepEqual(graph.edges.between(a, b), [outward]);
+assert.deepEqual(graph.edges.between(a, b, { direction: "in" }), [inward]);
+assert.deepEqual(graph.edges.between(a, b, { direction: "all" }), [outward, inward]);
+assert.deepEqual(graph.neighbors(a, { direction: "all" }), [b]);
+assert.throws(() => graph.edges.add({ from: a, to: b }));
+assert.throws(() => graph.edges.add({ from: a, to: a }));
+assert.throws(() => graph.edges.add({ from: a, to: b, directed: true, key: "named" }));
+assert.equal(graph.edges.size, 2);
+
+const parallel = Graph.create<typeof a>({ parallel: true, selfLoops: true });
+parallel.nodes.add(a);
+parallel.nodes.add(b);
+const named = parallel.edges.add({ from: a, to: b, key: "0" });
+assert.equal(parallel.edges.add({ from: b, to: a, key: "0" }), named);
+assert.throws(() => parallel.edges.add({ from: a, to: b, directed: true, key: "0" }));
+const automatic = parallel.edges.add({ from: a, to: b });
+assert.equal(automatic.key, "1");
+automatic.delete();
+const next = parallel.edges.add({ from: a, to: b, directed: true });
+assert.equal(next.key, "2");
+assert.notEqual(next.id, automatic.id);
+const loop = parallel.edges.add({ from: a, to: a });
+assert.equal(loop.from, loop.to);
+assert.deepEqual(parallel.edges.between(a, a, { direction: "all" }), [loop]);
+assert.deepEqual(parallel.neighbors(a, { direction: "all" }), [b, a]);
+assert.equal(parallel.edges.size, 3);
+console.log("graph-representation: per-edge direction, explicit parallel keys and opt-in loops");

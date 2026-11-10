@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { Random, World, stats } from "city-library";
-const random = Random.add({ seed: 3 });
-const world = World.add({ random });
+const random = Random.create({ seed: 3 });
+const world = World.create({ random });
 const before = random.state;
 let visits = 0;
 function* values() { for (const value of [3, 1, 2]) { visits += 1; yield value; } }

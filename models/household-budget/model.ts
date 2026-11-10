@@ -4,8 +4,8 @@ import { stepCount } from "../parameters.ts";
 
 /** Exogenous income and rent form an open monthly flow, not a closed economy. */
 export function create() {
-  const household = Agent.add({ balance: 1000, income: 2400, rent: 900 });
-  const world = World.add();
+  const household = Agent.create({ balance: 1000, income: 2400, rent: 900 });
+  const world = World.create();
   world.add(household);
 
   function settleMonth() {

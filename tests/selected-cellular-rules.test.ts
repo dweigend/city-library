@@ -24,9 +24,9 @@ import {
   presets,
 } from "../models/cyclic-ca/model.ts";
 
-describe("selected B19 cellular source rules", () => {
+describe("selected cellular source rules", () => {
   test("Cyclic palette matches base-colors observed in the original Chromium command center", () => {
-    const model = cyclic({ width: 5, height: 5, numStates: 14 });
+    const model = cyclic({ width: 5, height: 5, stateCount: 14 });
     expect(model.read().colorList).toEqual([5, 15, 25, 35, 45, 55, 65, 75, 85, 95, 105, 115, 125, 135]);
   });
   test("all 256 elementary rules match their eight independent bits", () => {
@@ -194,7 +194,7 @@ describe("selected B19 cellular source rules", () => {
     expect(m.read().parameters).toMatchObject({
       radius: 1,
       threshold: 1,
-      numStates: 14,
+      stateCount: 14,
       neighborhood: "von Neumann",
     });
     expect(m.read().colorList).toHaveLength(14);
@@ -205,7 +205,7 @@ describe("selected B19 cellular source rules", () => {
       height: 5,
       preset: "custom",
       radius: 1,
-      numStates: 3,
+      stateCount: 3,
       threshold: 9,
     });
     const before = m.read();

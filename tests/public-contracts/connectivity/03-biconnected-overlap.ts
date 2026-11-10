@@ -1,12 +1,12 @@
 import assert from "node:assert/strict";
 import { Graph } from "city-library";
-const graph=Graph.add<{name:string}>({parallel:true,selfLoops:true});
+const graph=Graph.create<{name:string}>({parallel:true,selfLoops:true});
 const [a,b,c,d,e,f,g]=["a","b","c","d","e","f","g"].map(name=>graph.nodes.add({name}));
 for(const [from,to] of [[a,b],[b,c],[c,a],[c,d],[d,e],[e,c],[e,f],[e,f],[c,c]])graph.edges.add({from:from!,to:to!});
 assert.deepEqual(graph.components({mode:"biconnected"}),[[a,b,c],[c,d,e],[e,f],[g]]);
 assert.deepEqual(graph.components({mode:"weak"}),[[a,b,c,d,e,f],[g]]);
 assert.equal(graph.edges.size,9);
-const tie=Graph.add<object>();
+const tie=Graph.create<object>();
 const center=tie.nodes.add({}),left=tie.nodes.add({}),right=tie.nodes.add({});
 tie.edges.add({from:center,to:right});
 tie.edges.add({from:center,to:left});

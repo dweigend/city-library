@@ -16,12 +16,12 @@ const binding = defineUI(model, {
   complete: (state) => state.stopped,
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Sunflower%20Emergent.nlogox",
-    label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Wilensky · CC BY-NC-SA 3.0",
   },
   monitors: [
     { label: "Tick", value: (state) => state.tick },
     { label: "Particles", value: (state) => state.particles.length },
-    { label: "Temporary candidates", value: (state) => state.numTempParticles },
+    { label: "Temporary candidates", value: (state) => state.temporaryParticleCount },
   ],
   views: [
     {

@@ -9,11 +9,11 @@ export const inputs: Inputs<WaterParameters> = {
 };
 export function create(options: Partial<WaterParameters> = {}) {
   const settings = parameters(inputs, options);
-  const world = World.add();
-  const districts = Grid.add({ x: 2, y: 2 }, { state: { demand: 3, supplied: 0 } });
+  const world = World.create();
+  const districts = Grid.create({ x: 2, y: 2 }, { state: { demand: 3, supplied: 0 } });
   world.add(districts);
-  const entitlements = Resource.add<typeof districts.fields[number]>({ capacity: settings.supplyUnits });
-  const agenda = Agenda.add<{ district: number }>();
+  const entitlements = Resource.create<typeof districts.fields[number]>({ capacity: settings.supplyUnits });
+  const agenda = Agenda.create<{ district: number }>();
   const requests = districts.fields.map((field) => ({ ticket: entitlements.request({ owner: field, units: field.demand }), scheduled: false }));
   function scheduleTransfers() {
     requests.forEach((request, index) => {

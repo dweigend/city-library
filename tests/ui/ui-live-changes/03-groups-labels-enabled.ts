@@ -14,13 +14,13 @@ export const spec = {
   monitors: [{ label: 'Waiting mean', value: state => state.parameters.waitTimeMean }], views: [],
 } as const satisfies ChangeUISpec<TaxiParameters, Instance>;
 export const ui = defineUI(model, spec);
-const actual = model.create({ numTaxicab: 1, seed: 3 });
+const actual = model.create({ taxicabCount: 1, seed: 3 });
 spec.change(actual, { 'prob-cbd-cbd-AM': 0.5 });
 equal(actual.read().parameters['prob-cbd-cbd-AM'], 0.5, 'Hyphenated input keys remain exact public keys');
 equal(actual.read().tick, 0, 'A demand-rule edit does not advance taxi time');
 
 export async function browserChecks(container: HTMLElement, bind: typeof defineUI = defineUI) {
-  const tracked = { ...model, create: (options?: Partial<TaxiParameters>) => model.create({ numTaxicab: 1, ...options }) };
+  const tracked = { ...model, create: (options?: Partial<TaxiParameters>) => model.create({ taxicabCount: 1, ...options }) };
   const mounted = bind(tracked, spec).mount(container);
   try {
     await settle(container);

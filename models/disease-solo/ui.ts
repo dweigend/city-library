@@ -2,7 +2,7 @@ import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 
 const binding = defineUI(model, {
-  setup: ["seed", "numAndroids"],
+  setup: ["seed", "androidCount"],
   change: (instance, changes) => instance.setParameters(changes),
   live: {
     infectionChance: {},
@@ -22,11 +22,11 @@ const binding = defineUI(model, {
   complete: (state) => state.stopped,
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Disease%20Solo.nlogox",
-    label: "Original NetLogo model · source notices",
+    label: "Source attribution · NetLogo model · source notices",
   },
   monitors: [
     { label: "Tick", value: (state) => state.tick },
-    { label: "Sick", value: (state) => state.numSick },
+    { label: "Sick", value: (state) => state.sickCount },
     { label: "Run", value: (state) => state.runNumber },
   ],
   views: [

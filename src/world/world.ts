@@ -64,7 +64,7 @@ export interface World {
     options?: ActivationOptions<T>,
   ): R | undefined;
   report<T extends WorldMember, R>(
-    source: readonly T[] | { kind: "agents" | "fields" | "edges"; breed?: string },
+    source: readonly T[] | { kind: "agents" | "fields" | "edges"; group?: string },
     callback: (context: ActivationContext<T>) => R,
     options?: ActivationOptions<T>,
   ): readonly (R | undefined)[];
@@ -93,7 +93,7 @@ export interface World {
 
 const clocks = new WeakMap<World, Clock>();
 
-/** Internal clock access for run and experiments. */
+/** Internal clock access for run and studies. */
 export function worldClock(value: unknown): Clock {
   if (frameworkRecord(value)?.kind !== "world")
     throw new TypeError("Expected a World.");
@@ -219,12 +219,12 @@ function requireGraphNodesOwnedBy(world: World, components: Iterable<WorldCompon
  * Without an explicit Random the World creates an independent default one.
  * Construction performs no random draws.
  */
-function add(options?: { random?: Random }): World;
-function add(
+function create(options?: { random?: Random }): World;
+function create(
   space: Space,
   options?: { boundary?: Space["boundary"]; random?: Random },
 ): World;
-function add(
+function create(
   input: Space | { random?: Random } = {},
   options?: { boundary?: Space["boundary"]; random?: Random },
 ): World {
@@ -234,7 +234,7 @@ function add(
     (arguments.length > 1 && arguments[1] === undefined)
   )
     throw new TypeError(
-      "World.add accepts Space and options without placeholders.",
+      "World.create accepts Space and options without placeholders.",
     );
   // Any axis key selects the spatial form; otherwise the first argument holds options.
   const spatial =
@@ -253,7 +253,7 @@ function add(
   if (settings.random !== undefined && !isRandom(settings.random))
     throw new TypeError("Expected a Random.");
   const random =
-    settings.random === undefined ? Random.add() : (settings.random as Random);
+    settings.random === undefined ? Random.create() : (settings.random as Random);
   const clock = createClock();
   const members = new Set<WorldComponent>();
 
@@ -320,4 +320,4 @@ function add(
   return Object.freeze(world);
 }
 
-export const World = Object.freeze({ add });
+export const World = Object.freeze({ create });

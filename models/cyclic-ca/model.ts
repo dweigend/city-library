@@ -33,7 +33,7 @@ export interface CyclicParameters {
   preset: Preset;
   neighborhood: Neighborhood;
   radius: number;
-  numStates: number;
+  stateCount: number;
   threshold: number;
 }
 export const inputs: Inputs<CyclicParameters> = {
@@ -61,7 +61,7 @@ export const inputs: Inputs<CyclicParameters> = {
     options: ["Moore", "von Neumann"],
   },
   radius: { kind: "number", default: 3, min: 1, max: 6, integer: true },
-  numStates: { kind: "number", default: 3, min: 2, max: 14, integer: true },
+  stateCount: { kind: "number", default: 3, min: 2, max: 14, integer: true },
   threshold: { kind: "number", default: 3, min: 1, max: 168, integer: true },
 };
 export function cyclicOffsets(radius: number, neighborhood: Neighborhood) {
@@ -85,49 +85,49 @@ export function cyclicOffsets(radius: number, neighborhood: Neighborhood) {
 export function cyclicTransition(
   state: number,
   successors: number,
-  numStates: number,
+  stateCount: number,
   threshold: number,
 ) {
   if (
     !Number.isSafeInteger(state) ||
     state < 0 ||
-    state >= numStates ||
+    state >= stateCount ||
     !Number.isSafeInteger(successors) ||
     successors < 0 ||
-    !Number.isSafeInteger(numStates) ||
-    numStates < 2 ||
+    !Number.isSafeInteger(stateCount) ||
+    stateCount < 2 ||
     !Number.isSafeInteger(threshold) ||
     threshold < 1
   )
     throw new RangeError("Invalid cyclic transition.");
-  return successors >= threshold ? (state + 1) % numStates : state;
+  return successors >= threshold ? (state + 1) % stateCount : state;
 }
 export function create(options: Partial<CyclicParameters> = {}) {
   let settings = parameters(inputs, options);
   if (settings.width % 2 !== 1 || settings.height % 2 !== 1)
     throw new RangeError("Use odd centered dimensions.");
   if (settings.preset !== "none" && settings.preset !== "custom") {
-    const [radius, threshold, numStates, neighborhood] =
+    const [radius, threshold, stateCount, neighborhood] =
       presets[settings.preset];
     settings = parameters(inputs, {
       ...settings,
       radius,
       threshold,
-      numStates,
+      stateCount,
       neighborhood,
     });
   }
   const { width, height } = settings,
-    random = Random.add({ seed: settings.seed }),
+    random = Random.create({ seed: settings.seed }),
     space = { x: width, y: height, boundary: "wrap" as const };
-  const world = World.add(space, { random }),
-    grid = Grid.add(space, { state: { state: 0 } });
+  const world = World.create(space, { random }),
+    grid = Grid.create(space, { state: { state: 0 } });
   world.add(grid);
   const colorList = Object.freeze(
     random.sample(
-      // Actual NetLogo Web `show base-colors`, verified in original Chromium.
+      // Actual source runtime `show base-colors`, verified in original Chromium.
       [5, 15, 25, 35, 45, 55, 65, 75, 85, 95, 105, 115, 125, 135],
-      { count: settings.numStates, order: "source" },
+      { count: settings.stateCount, order: "source" },
     ),
   );
   const offsets = cyclicOffsets(settings.radius, settings.neighborhood);
@@ -137,15 +137,15 @@ export function create(options: Partial<CyclicParameters> = {}) {
     ),
   ]);
   for (const f of grid.fields)
-    f.state = Math.floor(random.number() * settings.numStates);
+    f.state = Math.floor(random.number() * settings.stateCount);
   function go() {
     const next = grid.fields.map((f, i) =>
       cyclicTransition(
         f.state,
         neighborhoods[i]!.filter(
-          (n) => n.state === (f.state + 1) % settings.numStates,
+          (n) => n.state === (f.state + 1) % settings.stateCount,
         ).length,
-        settings.numStates,
+        settings.stateCount,
         settings.threshold,
       ),
     );
@@ -174,7 +174,7 @@ export function create(options: Partial<CyclicParameters> = {}) {
             !("value" in d) ||
             !Number.isSafeInteger(d.value) ||
             d.value < 0 ||
-            d.value >= settings.numStates,
+            d.value >= settings.stateCount,
         )
       )
         throw new RangeError("Provide one valid cycle state per field.");

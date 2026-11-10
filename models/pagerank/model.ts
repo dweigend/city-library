@@ -42,8 +42,8 @@ export const inputs: Inputs<Parameters> = {
 };
 export function create(options: Partial<Parameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed }),
-    world = World.add({ x: 21, y: 21, boundary: "hard" }, { random });
+  const random = Random.create({ seed: settings.seed }),
+    world = World.create({ x: 21, y: 21, boundary: "hard" }, { random });
   type Page = Agent<{
     kind: "page";
     who: number;
@@ -58,7 +58,7 @@ export function create(options: Partial<Parameters> = {}) {
     currentPage: Page | null;
     color: string;
   }>;
-  const graph = Graph.add<Page, { traveledBy: number | null; color: string }>({
+  const graph = Graph.create<Page, { traveledBy: number | null; color: string }>({
     edgeState: { traveledBy: null, color: "#8a8a8a" },
     selfLoops: true,
   });
@@ -79,7 +79,7 @@ export function create(options: Partial<Parameters> = {}) {
   ];
   function addPage(id: number) {
     const p = world.add(
-      Agent.add(
+      Agent.create(
         {
           kind: "page" as const,
           who: id,
@@ -102,7 +102,7 @@ export function create(options: Partial<Parameters> = {}) {
   }
   function addSurfer(currentPage: Page) {
     const p = world.add(
-      Agent.add({
+      Agent.create({
         kind: "surfer" as const,
         who: nextWho++,
         currentPage: null as Page | null,

@@ -52,9 +52,9 @@ export function sentence(youSilent: boolean, partnerSilent: boolean) {
 }
 export function create(options: Partial<BasicParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed }),
-    world = World.add({ random });
-  const prisoner = Agent.add({
+  const random = Random.create({ seed: settings.seed }),
+    world = World.create({ random });
+  const prisoner = Agent.create({
     partnerIsSilent: false,
     years: null as number | null,
     face: "neutral",

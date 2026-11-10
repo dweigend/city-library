@@ -1,5 +1,5 @@
 /** Explicit real-browser harness. Vite compiles the Svelte import; no model or DOM mock. */
-export async function runBrowserChecks(container: HTMLElement, host: 'legacy' | 'svelte') {
+export async function runBrowserChecks(container: HTMLElement, host: 'array-controls' | 'svelte') {
   // Preserve the accepted harness call signature; both former host names use one UI.
   void host;
   const { defineUI: bind } = await import('../../../ui/index.ts');
@@ -8,7 +8,7 @@ export async function runBrowserChecks(container: HTMLElement, host: 'legacy' | 
     import('./02-ordered-setup-and-numeric-live.ts'),
     import('./03-alternate-observation.ts'),
     import('./04-groups-format-and-categories.ts'),
-    import('./05-independent-actions-and-legacy.ts'),
+    import('./05-independent-actions-and-scalar-setters.ts'),
   ]);
   for (const example of examples) {
     const fixture = container.ownerDocument.createElement('section');

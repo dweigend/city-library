@@ -39,12 +39,12 @@ export interface AccountFixture {
 }
 export function create(options: Partial<BankParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const space = { x: 17, y: 17, boundary: "wrap" as const };
-  const world = World.add(space, { random });
-  const grid = Grid.add(space);
+  const world = World.create(space, { random });
+  const grid = Grid.create(space);
   world.add(grid);
-  type Person = ReturnType<typeof Agent.add<Account>>;
+  type Person = ReturnType<typeof Agent.create<Account>>;
   const people = () => world.agents as readonly Person[];
   let bankDeposits = 0,
     bankLoans = 0,
@@ -201,7 +201,7 @@ export function create(options: Partial<BankParameters> = {}) {
     }
   }
   function addPerson(f: AccountFixture) {
-    const p = Agent.add<Account>(
+    const p = Agent.create<Account>(
       {
         wallet: f.wallet,
         savings: f.savings,
@@ -244,7 +244,7 @@ export function create(options: Partial<BankParameters> = {}) {
     pollClass();
     const ordered = random.sample(people(), {
       count: people().length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     });
     for (const p of ordered) {
       if (world.tick.value % 3 === 0) doBusiness(p.id);

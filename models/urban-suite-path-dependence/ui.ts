@@ -1,6 +1,6 @@
 import {
   defineUI,
-  netLogoColor,
+  indexedColor,
   type Observation,
   type SpatialData,
   type BarSeries,
@@ -16,7 +16,7 @@ export const ui = defineUI(model, {
   ],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/UrbanSuite-PathDependence",
-    label: "Original NetLogo model · Rand and Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Rand and Wilensky · CC BY-NC-SA 3.0",
   },
   actions: [{ label: "Disturb", run: (instance) => instance.disturb() }],
   change: (instance, changes) => instance.setRules(changes),
@@ -79,7 +79,7 @@ function firmsAndFieldQualityData(state: UIObservation): SpatialData {
       id: cell.id,
       x: cell.x,
       y: cell.y,
-      color: netLogoColor(cell.quality * 10 + 50),
+      color: indexedColor(cell.quality * 10 + 50),
     })),
     // Fixed symbols and numeric inspection replace the source's relative-size glyphs.
     agents: state.firms.map((firm) => ({

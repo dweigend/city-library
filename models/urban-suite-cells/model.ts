@@ -24,9 +24,9 @@ interface CellsSample { readonly tick: number; readonly on: number }
 export function create(options: Partial<CellsParameters> = {}) {
   let settings = parameters(inputs, options);
   const width = 81, height = 81, startingColor = 109;
-  const random = Random.add({ seed: settings.seed });
-  const world = World.add({ x: width, y: height, boundary: "wrap" }, { random });
-  const grid = Grid.add({ x: width, y: height, boundary: "wrap" }, { state: { on: false, onTime: 0, seed: false, colorNumber: 0 } });
+  const random = Random.create({ seed: settings.seed });
+  const world = World.create({ x: width, y: height, boundary: "wrap" }, { random });
+  const grid = Grid.create({ x: width, y: height, boundary: "wrap" }, { state: { on: false, onTime: 0, seed: false, colorNumber: 0 } });
   world.add(grid);
   const fields = grid.fields;
   type Cell = (typeof fields)[number];

@@ -15,7 +15,7 @@ const binding = defineUI(model, {
   complete: (state) => state.stopped,
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Autumn.nlogox",
-    label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Wilensky · CC BY-NC-SA 3.0",
   },
   monitors: [
     { label: "Tick", value: (state) => state.tick },
@@ -67,7 +67,7 @@ function autumnData(state: UIObservation): SpatialData {
       ...agent,
       size: agent.size * 12 * Math.sqrt(agent.fillFraction),
       shape:
-        agent.breed === "leaf" || agent.breed === "dead-leaf"
+        agent.group === "leaf" || agent.group === "dead-leaf"
           ? ("triangle" as const)
           : ("circle" as const),
     })),

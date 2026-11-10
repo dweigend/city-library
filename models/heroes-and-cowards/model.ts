@@ -48,8 +48,8 @@ type Actor = Agent<{
 }>;
 export function create(options: Partial<HeroesParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed }),
-    world = World.add({ x: 33, y: 33, boundary: 'hard' }, { random });
+  const random = Random.create({ seed: settings.seed }),
+    world = World.create({ x: 33, y: 33, boundary: 'hard' }, { random });
   const actors = () => world.agents as readonly Actor[];
   let diagnostic: string | null = null;
   const history: Readonly<{ tick: number; count: number }>[] = [];
@@ -64,14 +64,14 @@ export function create(options: Partial<HeroesParameters> = {}) {
     diagnostic = null;
     for (let who = 0; who < settings.number; who++)
       world.add(
-        Agent.add(
+        Agent.create(
           { who, personality: 'brave' as const, friend: 0, enemy: 0 },
           { orientation: { heading: Math.floor(random.number() * 360) } },
         ),
       );
     for (const a of random.sample(actors(), {
       count: actors().length,
-      compatibility: 'legacy-shuffle',
+      algorithm: 'fisher-yates-descending',
     })) {
       a.move({
         to: { x: random.number() * 33 - 16.5, y: random.number() * 33 - 16.5 },
@@ -98,7 +98,7 @@ export function create(options: Partial<HeroesParameters> = {}) {
         run(world, () => {
           for (const a of random.sample(actors(), {
             count: actors().length,
-            compatibility: 'legacy-shuffle',
+            algorithm: 'fisher-yates-descending',
           })) {
             const friend = actors()[a.friend]!,
               enemy = actors()[a.enemy]!;
@@ -192,7 +192,7 @@ export function create(options: Partial<HeroesParameters> = {}) {
       for (const a of [...actors()]) a.delete();
       for (const [who, a] of copy.entries())
         world.add(
-          Agent.add(
+          Agent.create(
             { who, personality: a.personality, friend: a.friend, enemy: a.enemy },
             { position: { x: a.x, y: a.y }, orientation: { heading: 90 } },
           ),

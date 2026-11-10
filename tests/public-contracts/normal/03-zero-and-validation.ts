@@ -1,6 +1,6 @@
 import { strict as assert } from "node:assert";
 import { Random } from "city-library";
-const random = Random.add({ seed: 7 });
+const random = Random.create({ seed: 7 });
 random.number({ distribution: "normal" });
 const pending = random.state;
 assert.equal(random.number({ distribution: "normal", mean: 11, deviation: 0 }), 11);

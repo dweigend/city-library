@@ -1,6 +1,6 @@
 # Taxi model observation contracts
 
-Four scripts check Taxi occupancy and income through the public experiment factory, without stored counters or state changes.
+Four scripts check Taxi occupancy and income through the public model factory, without stored counters or state changes.
 
 The contract exposes numeric `occupiedCabs` and `totalIncome` to `read()` and its existing `snapshot()` alias, using the same vacancy predicate and completed-income sum used by the Taxi UI. Cab state remains authoritative; these values are observations, not stored counters. No scientific equation, scheduling rule, random draw or clock behavior changes.
 

@@ -8,7 +8,7 @@ export interface VantsParameters {
   width: number;
   height: number;
   seed: number;
-  numVants: number;
+  vantCount: number;
 }
 export const inputs: Inputs<VantsParameters> = {
   width: { kind: "number", default: 241, min: 3, max: 301, integer: true },
@@ -20,23 +20,23 @@ export const inputs: Inputs<VantsParameters> = {
     max: 4294967295,
     integer: true,
   },
-  numVants: { kind: "number", default: 1, min: 1, max: 16, integer: true },
+  vantCount: { kind: "number", default: 1, min: 1, max: 16, integer: true },
 };
 export function create(options: Partial<VantsParameters> = {}) {
   const settings = parameters(inputs, options);
   if (settings.width % 2 !== 1 || settings.height % 2 !== 1)
     throw new RangeError("Vants source coordinates require odd dimensions.");
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const space = {
     x: settings.width,
     y: settings.height,
     boundary: "wrap" as const,
   };
-  const world = World.add(space, { random });
-  const grid = Grid.add(space, { state: { on: false } });
+  const world = World.create(space, { random });
+  const grid = Grid.create(space, { state: { on: false } });
   world.add(grid);
-  const agents = Array.from({ length: settings.numVants }, (_, who) =>
-    Agent.add(
+  const agents = Array.from({ length: settings.vantCount }, (_, who) =>
+    Agent.create(
       { who },
       {
         position: { x: 0, y: 0 },

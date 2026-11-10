@@ -16,7 +16,7 @@ const binding = defineUI(model, {
   complete: (state) => state.stopped,
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/epiDEM/epiDEM%20Basic.nlogox",
-    label: "Original NetLogo model · source notices",
+    label: "Source attribution · source notices",
   },
   monitors: [
     { label: "Tick", value: (state) => state.tick },

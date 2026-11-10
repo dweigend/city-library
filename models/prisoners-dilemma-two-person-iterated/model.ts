@@ -52,7 +52,7 @@ export function payoff(defect: boolean, partnerDefect: boolean) {
 export function strategyAction(
   strategy: Strategy,
   memory: Pick<Player, "defectNow" | "partnerDefected" | "partnerDefectedPast">,
-  random: ReturnType<typeof Random.add>,
+  random: ReturnType<typeof Random.create>,
 ): boolean {
   switch (strategy) {
     case "act-randomly":
@@ -74,15 +74,15 @@ export function strategyAction(
 }
 export function create(options: Partial<IteratedParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed }),
-    world = World.add({ random });
-  const human = Agent.add<Player>({
+  const random = Random.create({ seed: settings.seed }),
+    world = World.create({ random });
+  const human = Agent.create<Player>({
     score: 3,
     defectNow: false,
     partnerDefected: false,
     partnerDefectedPast: false,
   });
-  const computer = Agent.add<Player>({
+  const computer = Agent.create<Player>({
     score: 3,
     defectNow: false,
     partnerDefected: false,

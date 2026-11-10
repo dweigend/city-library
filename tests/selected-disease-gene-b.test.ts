@@ -10,7 +10,7 @@ import {
   whichProteinForThisCodon,
 } from "../models/dna-protein-synthesis/model.ts";
 
-describe("B09 source mechanisms and exact public boundaries", () => {
+describe("source mechanisms and exact public boundaries", () => {
   test("epiDEM Basic excludes same patch, uses neighbor patches, and recovers the infected snapshot only", () => {
     const model = epidemic({
       seed: 3,
@@ -147,10 +147,10 @@ describe("B09 source mechanisms and exact public boundaries", () => {
   test("CRISPR replication kills canonical host and creates nineteen children plus parent", () => {
     const model = ecosystem({ seed: 9, initialBacteria: 1, initialViruses: 1 });
     const host = model.world.agents.find(
-      (p) => "breed" in p && p.breed === "bacterium",
+      (p) => "group" in p && p.group === "bacterium",
     ) as Parameters<typeof model.replicate>[1];
     const virus = model.world.agents.find(
-      (p) => "breed" in p && p.breed === "virus",
+      (p) => "group" in p && p.group === "virus",
     ) as Parameters<typeof model.replicate>[0];
     model.replicate(virus, host);
     expect(host.alive).toBe(false);
@@ -159,7 +159,7 @@ describe("B09 source mechanisms and exact public boundaries", () => {
     expect(
       model
         .read()
-        .agents.filter((p) => p.breed === "virus")
+        .agents.filter((p) => p.group === "virus")
         .every((p) => p.x === virus.x && p.y === virus.y),
     ).toBe(true);
   });

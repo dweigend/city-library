@@ -3,7 +3,7 @@ import { stats } from "city-library";
 
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: ["seed", "numTaxicab"],
+  setup: ["seed", "taxicabCount"],
   change: (instance, changes) => instance.setParameters(changes),
   live: {
     lengthOfGreenLight: {},
@@ -197,7 +197,7 @@ export const ui = defineUI(model, {
   },
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Taxi%20Cabs.nlogox",
-    label: "Original NetLogo model · Dongping and Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · NetLogo model · Dongping and Wilensky · CC BY-NC-SA 3.0",
   },
   monitors: [
     { label: "Tick", value: (state) => state.tick },

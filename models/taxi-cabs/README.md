@@ -25,7 +25,7 @@ Each `advance(1)` (also `step(1)`) updates signals, demand and passenger waiting
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer |
-| `numTaxicab` | `25` | integer; ≥ 1; ≤ 50 |
+| `taxicabCount` | `25` | integer; ≥ 1; ≤ 50 |
 | `lengthOfGreenLight` | `20` | integer; ≥ 0; ≤ 30 |
 | `lengthOfTimePeriod` | `2000` | integer; ≥ 1; ≤ 5000 |
 | `waitTimeMean` | `50` | number |
@@ -92,6 +92,6 @@ The [UI binding](ui.ts) presents `cbd · cbd · AM`, `res · com · AM`, `res ·
 
 ## Sources and acceptance
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained NetLogo source](original.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](original.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
 
 [Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `taxi-cabs` and links any shared checks.

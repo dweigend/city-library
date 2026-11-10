@@ -20,7 +20,7 @@ export interface Monitor<S, V extends string | number = string | number> {
   readonly format?: (value: V) => string;
 }
 
-export interface NetworkNode {
+export interface GraphNodeData {
   readonly id: string;
   readonly label?: string;
   readonly color?: string;
@@ -29,7 +29,7 @@ export interface NetworkNode {
   /** Initial view coordinates only; later dragging/layout is presentation-owned. */
   readonly position?: { readonly x: number; readonly y: number };
 }
-export interface NetworkEdge {
+export interface GraphEdgeData {
   readonly id: string;
   readonly from: string;
   readonly to: string;
@@ -49,10 +49,10 @@ export interface GridData {
   readonly height: number;
   readonly cells: readonly Cell[];
 }
-export interface SpatialAgent extends NetworkNode {
+export interface SpatialAgent extends GraphNodeData {
   /** Presentation-only decoration may opt out of pointer and keyboard selection. */
   readonly selectable?: boolean;
-  /** Symbol diameter in CSS pixels, consistent with NetworkNode. */
+  /** Symbol diameter in CSS pixels, consistent with GraphNodeData. */
   readonly size?: number;
   readonly x: number;
   readonly y: number;
@@ -111,8 +111,8 @@ export type View<S> =
   | {
       readonly type: "network";
       readonly label: string;
-      readonly nodes: (state: S) => readonly NetworkNode[];
-      readonly edges: (state: S) => readonly NetworkEdge[];
+      readonly nodes: (state: S) => readonly GraphNodeData[];
+      readonly edges: (state: S) => readonly GraphEdgeData[];
     }
   | {
       readonly type: "grid";

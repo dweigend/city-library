@@ -10,7 +10,7 @@ export const ui = defineUI(model, {
   change: (instance, changes) => instance.setRules(changes),
   live: {
     targetTotal: {},
-    numSuccesses: {
+    successCount: {
       label: "Number of successes",
     },
     diminishingSampleSpace: {},

@@ -8,7 +8,7 @@ export interface TrafficParameters {
   seed: number;
   gridSizeX: number;
   gridSizeY: number;
-  numCars: number;
+  carCount: number;
   speedLimit: number;
   ticksPerCycle: number;
   currentPhase: number;
@@ -19,7 +19,7 @@ export const inputs: Inputs<TrafficParameters> = {
   seed: { kind: "number", default: 1, integer: true },
   gridSizeX: { kind: "number", default: 5, min: 1, max: 9, integer: true },
   gridSizeY: { kind: "number", default: 5, min: 1, max: 9, integer: true },
-  numCars: { kind: "number", default: 200, min: 1, max: 400, integer: true },
+  carCount: { kind: "number", default: 200, min: 1, max: 400, integer: true },
   speedLimit: { kind: "number", default: 1, min: 0.1, max: 1 },
   ticksPerCycle: {
     kind: "number",
@@ -64,7 +64,7 @@ export function create(options: Partial<TrafficParameters> = {}) {
   function go() {
     updateCurrent();
     setSignals();
-    numCarsStopped = 0;
+    stoppedCarCount = 0;
     for (const car of shuffled(cars())) {
       car.rotate({ towards: nextField(car) });
       setCarSpeed(car);
@@ -87,9 +87,9 @@ export function create(options: Partial<TrafficParameters> = {}) {
 
   // This factory owns rules, signals and history; World/Grid own live agents and fields.
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
-  const world = World.add({ x: 37, y: 37, boundary: "wrap" }, { random });
-  const grid = Grid.add(
+  const random = Random.create({ seed: settings.seed });
+  const world = World.create({ x: 37, y: 37, boundary: "wrap" }, { random });
+  const grid = Grid.create(
     { x: 37, y: 37, boundary: "wrap" },
     {
       state: {
@@ -128,11 +128,11 @@ export function create(options: Partial<TrafficParameters> = {}) {
   const intersections: ModelField[] = [];
   let current: ModelField;
   let phase = 0;
-  let numCarsStopped = 0;
+  let stoppedCarCount = 0;
   let watched: Car | null = null;
   const history: {
     tick: number;
-    numCarsStopped: number;
+    stoppedCarCount: number;
     meanSpeed: number;
     meanWait: number;
   }[] = [];
@@ -179,7 +179,7 @@ export function create(options: Partial<TrafficParameters> = {}) {
 
   function recordData(car: Car) {
     if (car.speed === 0) {
-      numCarsStopped++;
+      stoppedCarCount++;
       car.waitTime++;
     } else car.waitTime = 0;
   }
@@ -218,14 +218,14 @@ export function create(options: Partial<TrafficParameters> = {}) {
           .neighbors(field, { neighborhood: "moore" })
           .some((other) => other.color === "#ffffff"),
     );
-    for (let who = 0; who < settings.numCars; who++) {
+    for (let who = 0; who < settings.carCount; who++) {
       const location = choose(
         roads.filter((field) => grid.agentsAt(field).length === 0),
       );
       const upCar = location.intersection
         ? random.number() < 0.5
         : vertical(location.x);
-      const car = Agent.add(
+      const car = Agent.create(
         {
           who,
           speed: 0,
@@ -253,7 +253,7 @@ export function create(options: Partial<TrafficParameters> = {}) {
     setupFields();
     current = choose(intersections);
     setupSignals();
-    if (settings.numCars > roads.length) {
+    if (settings.carCount > roads.length) {
       throw new RangeError(
         "Too many cars for the amount of road; setup stopped.",
       );
@@ -311,7 +311,7 @@ export function create(options: Partial<TrafficParameters> = {}) {
   function record() {
     history.push({
       tick: world.tick.value,
-      numCarsStopped,
+      stoppedCarCount,
       meanSpeed:
         cars().reduce((sum, car) => sum + car.speed, 0) / cars().length,
       meanWait:
@@ -372,7 +372,7 @@ export function create(options: Partial<TrafficParameters> = {}) {
   function setParameters(values: Partial<TrafficParameters>) {
     if (
       Reflect.ownKeys(values).some((key) =>
-        ["seed", "gridSizeX", "gridSizeY", "numCars"].includes(String(key)),
+        ["seed", "gridSizeX", "gridSizeY", "carCount"].includes(String(key)),
       )
     ) {
       throw new TypeError(
@@ -388,7 +388,7 @@ export function create(options: Partial<TrafficParameters> = {}) {
       height: 37,
       parameters: { ...settings },
       phase,
-      numCarsStopped,
+      stoppedCarCount,
       currentIntersectionId: fieldId(current),
       watchedCarId: watched ? carId(watched) : null,
       cars: cars().map((car) => ({

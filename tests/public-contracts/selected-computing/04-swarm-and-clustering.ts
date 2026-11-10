@@ -12,7 +12,7 @@ p.setScenario({landscape,particles:[{x:2,y:2,vx:1,vy:0,personalBestValue:0,perso
 const tick=p.read().tick;p.advance();assert.equal(p.read().tick,tick); // found1 before movement.
 assert.equal(p.read().globalBestValue,1);
 
-const k=clustering({numClusters:2,numCentroids:2,numDataPoints:10});
+const k=clustering({clusterCount:2,centroidCount:2,dataPointCount:10});
 k.setScenario({points:[{x:-2,y:0},{x:0,y:0},{x:8,y:0},{x:10,y:0}],centroids:[{x:-2,y:0},{x:10,y:0}]});
 k.assignClusters();assert.equal(k.read().tick,0);
 assert.deepEqual(k.read().points.map(x=>x.cluster),[0,0,1,1]);
@@ -28,4 +28,4 @@ assert.deepEqual([k.read().centroids[1]!.x,k.read().centroids[1]!.y],[20,20]); /
 const points=k.read().points.map(({x,y})=>({x,y}));
 k.resetCentroids();assert.equal(k.read().tick,0);
 assert.deepEqual(k.read().points.map(({x,y})=>({x,y})),points);
-console.log('B18 inertia, best-before-move, Lloyd assignment, SSE and convergence passed');
+console.log('inertia, best-before-move, Lloyd assignment, SSE and convergence passed');

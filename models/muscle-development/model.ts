@@ -29,10 +29,10 @@ type Fiber = Agent<{ fiberSize: number; maxSize: number }>;
 
 export function create(options: Partial<MuscleParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const space = { x: 17, y: 17, boundary: "wrap" } as const;
-  const world = World.add(space, { random });
-  const grid = Grid.add(space, {
+  const world = World.create(space, { random });
+  const grid = Grid.create(space, {
     state: { anabolicHormone: 50, catabolicHormone: 52 },
   });
   world.add(grid);
@@ -64,13 +64,13 @@ export function create(options: Partial<MuscleParameters> = {}) {
   function newMuscleFibers() {
     for (const field of random.sample(grid.fields, {
       count: grid.fields.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       let maxSize = 4;
       for (let trial = 0; trial < 20; trial++) {
         if (random.number() * 100 > settings.slowTwitchFibers) maxSize++;
       }
-      const fiber = Agent.add(
+      const fiber = Agent.create(
         { maxSize, fiberSize: (0.2 + random.number() * 0.4) * maxSize },
         { position: field },
       );
@@ -88,7 +88,7 @@ export function create(options: Partial<MuscleParameters> = {}) {
   function liftWeights() {
     for (const fiber of random.sample(fibers(), {
       count: fibers().length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       if (random.number() < (settings.intensity / 100) ** 2) {
         const field = grid.fieldAt(fiber)!;

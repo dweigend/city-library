@@ -23,7 +23,7 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
-| `numNodes` | `100` | integer; ≥ 2; ≤ 100 |
+| `nodeCount` | `100` | integer; ≥ 2; ≤ 100 |
 | `percentGrammar1` | `60` | number; ≥ 0; ≤ 100 |
 | `updateAlgorithm` | `"individual"` | `individual`, `threshold`, `reward` |
 | `thresholdVal` | `0.3` | number; ≥ 0; ≤ 1 |
@@ -43,6 +43,6 @@ The [UI binding](ui.ts) presents `Language users`, `Grammar 1 on redistribution 
 
 ## Sources and acceptance
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained NetLogo source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
 
 [Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `language-change` and links any shared checks.

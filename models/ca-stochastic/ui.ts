@@ -1,10 +1,10 @@
-import { defineUI, netLogoColor } from "../../ui/index.ts";
+import { defineUI, indexedColor } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
   setup: ["width", "height", "seed", "density"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/CAStochastic",
-    label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Wilensky · CC BY-NC-SA 3.0",
   },
   actions: [
     { label: "Setup random", run: (m) => m.setupRandom() },
@@ -52,7 +52,7 @@ export const ui = defineUI(model, {
         height: s.height,
         cells: s.cells.map((c) => ({
           ...c,
-          color: netLogoColor(c.colorNumber),
+          color: indexedColor(c.colorNumber),
         })),
       }),
     },

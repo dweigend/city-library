@@ -17,9 +17,9 @@ type Metric = keyof typeof targets;
 type EventData = { kind: "arrival" } | { kind: "departure"; customer: number };
 
 function replication(seed: number) {
-  const random = Random.add({ seed });
-  const agenda = Agenda.add<EventData>();
-  const server = Resource.add<number>({ capacity: 1 });
+  const random = Random.create({ seed });
+  const agenda = Agenda.create<EventData>();
+  const server = Resource.create<number>({ capacity: 1 });
   interface Customer {
     id: number;
     arrival: number;
@@ -30,9 +30,9 @@ function replication(seed: number) {
   const customers: Customer[] = [];
   const present = new Set<Customer>();
   let handled = 0;
-  let systemLevel: ReturnType<typeof TimeWeighted.add> | undefined;
-  let queueLevel: ReturnType<typeof TimeWeighted.add> | undefined;
-  let busyLevel: ReturnType<typeof TimeWeighted.add> | undefined;
+  let systemLevel: ReturnType<typeof TimeWeighted.create> | undefined;
+  let queueLevel: ReturnType<typeof TimeWeighted.create> | undefined;
+  let busyLevel: ReturnType<typeof TimeWeighted.create> | undefined;
 
   function nextArrival() {
     const at = agenda.time + random.number({ distribution: "exponential", mean: 1 / arrivalRate });
@@ -79,9 +79,9 @@ function replication(seed: number) {
 
   nextArrival();
   drainUntil(warmup);
-  systemLevel = TimeWeighted.add({ at: warmup, value: present.size });
-  queueLevel = TimeWeighted.add({ at: warmup, value: server.waiting.length });
-  busyLevel = TimeWeighted.add({ at: warmup, value: server.used });
+  systemLevel = TimeWeighted.create({ at: warmup, value: present.size });
+  queueLevel = TimeWeighted.create({ at: warmup, value: server.waiting.length });
+  busyLevel = TimeWeighted.create({ at: warmup, value: server.used });
   drainUntil(end);
   const system = systemLevel.read({ until: end });
   const queue = queueLevel.read({ until: end });

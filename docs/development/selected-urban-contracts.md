@@ -18,11 +18,11 @@ The reviewed implementation surfaces are `index.ts`, public `Agent`, `World/run`
 
 | Mechanism | Actual public closure and composition boundary |
 | --- | --- |
-| Toroidal continuous pedestrian motion | `World.add(space,{random})`, `Agent.add(state,{position,orientation})`, `agent.move(1)`, `agent.rotate(angle)`; rotate is clockwise heading, so source left is negative. |
-| Patch state and Moore adjacency | `Grid.add(space,{state})`, `grid.fields`, `grid.fieldAt(agent)`, `grid.neighbors(field,{neighborhood:"moore"})`. Field x/y centers belong to Grid; no private cell-coordinate/topology engine. |
+| Toroidal continuous pedestrian motion | `World.create(space,{random})`, `Agent.create(state,{position,orientation})`, `agent.move(1)`, `agent.rotate(angle)`; rotate is clockwise heading, so source left is negative. |
+| Patch state and Moore adjacency | `Grid.create(space,{state})`, `grid.fields`, `grid.fieldAt(agent)`, `grid.neighbors(field,{neighborhood:"moore"})`. Field x/y centers belong to Grid; no private cell-coordinate/topology engine. |
 | Same-cell conversations and occupancy | Attach Grid to World and call `grid.agentsAt(field)` using canonical current agent positions. Filter the returned snapshot for the appropriate kind/status; no second occupancy authority. |
-| Random activation, one-of, n-of, integer/continuous trials | `Random.add`, `random.sample(source,{count})`, `random.number()` and explicit `Math.floor(draw*n)` for source integer trials. Snapshot participants at each source ask entry; sample for order where outcomes depend on it. |
-| Births, hatch, death | `agent.copy()` preserves heading, position and typed state; then explicitly set newborn health/kind and `world.add(child)`. `agent.delete()` removes canonical membership. Store kind as ordinary typed model state, not a parallel breed registry. |
+| Random activation, one-of, n-of, integer/continuous trials | `Random.create`, `random.sample(source,{count})`, `random.number()` and explicit `Math.floor(draw*n)` for source integer trials. Snapshot participants at each source ask entry; sample for order where outcomes depend on it. |
+| Births, hatch, death | `agent.copy()` preserves heading, position and typed state; then explicitly set newborn health/kind and `world.add(child)`. `agent.delete()` removes canonical membership. Store kind as ordinary typed model state, not a parallel group registry. |
 | Pollution diffusion | `grid.diffuse("pollution",{rate:0.8,neighborhood:"moore"})` is simultaneous conservative eight-direction diffusion. Do not use its faces default. |
 | Reports and histories | Pure reductions over canonical state, then detached frozen records; no missing generic statistics API is required for these sums/means and model-specific thresholds. |
 
@@ -80,7 +80,7 @@ Read counts `{people,trees,powerPlants}`, all people/trees with health, cells `p
 
 ## Recycling: source mechanism and contract
 
-World35×35, source x/y=-17..17, toroidal. Setup-only `numRecyclers`25 and `numWastefuls`25, each0..50 integer. Live inputs: `maxStoredEnergy`50, 10..100 step5; `recyclingWasteCost`0.5, 0..2 step0.25; `resourceRegeneration`25, 0..100 integer; `agentsSeekResources`false; `showEnergy`true. Setup creates the two kinds, positions each at a uniform integer patch center, retains source random headings, initializes energy=max/2 and every field resource="new".
+World35×35, source x/y=-17..17, toroidal. Setup-only `recyclerCount`25 and `wastefulCount`25, each0..50 integer. Live inputs: `maxStoredEnergy`50, 10..100 step5; `recyclingWasteCost`0.5, 0..2 step0.25; `resourceRegeneration`25, 0..100 integer; `agentsSeekResources`false; `showEnergy`true. Setup creates the two kinds, positions each at a uniform integer patch center, retains source random headings, initializes energy=max/2 and every field resource="new".
 
 Go order:
 
@@ -114,7 +114,7 @@ Additional behavior tests must cover wrap boundaries, strict exposure0.5/birth>4
 
 ## Required browser acceptance
 
-Follow [per-model acceptance](netlogo-model-acceptance.md) for **each** model. Launch the exact pinned served XML in real Chromium, record actual launcher/runtime version and source hash, source controls/defaults and actual ticks. Capture reference setup and progressed screenshots, then paired target setup/progress screenshots at the same parameter settings with declared independent RNG policy. Keep compact final images/reports in Git. Source and target should run desktop; target also suitable mobile viewport and controls. Check console/runtime errors explicitly. Browser blockers leave baseline/target milestones pending, never substitute source inspection.
+Follow [per-model acceptance](model-acceptance.md) for **each** model. Launch the exact pinned served XML in real Chromium, record actual launcher/runtime version and source hash, source controls/defaults and actual ticks. Capture reference setup and progressed screenshots, then paired target setup/progress screenshots at the same parameter settings with declared independent RNG policy. Keep compact final images/reports in Git. Source and target should run desktop; target also suitable mobile viewport and controls. Check console/runtime errors explicitly. Browser blockers leave baseline/target milestones pending, never substitute source inspection.
 
 Awareness: default60 people/20 centers/limit100; run until at least tick100 and record category sums, mean and centers; also test limit0, manual center placement/recolor and continued play with no people (source empty mean errors must be reported). Verify setup/reset, step, play/pause, parameter changes and brush on source and target. For deterministic mechanism comparisons use explicitly recorded console-injected source fixtures matching target fixtures and compare phase results; distinguish console interventions from original widget actions.
 

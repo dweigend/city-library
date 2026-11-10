@@ -101,7 +101,7 @@ describe("selected economics source-specific banks and games", () => {
       payoff(false, true),
       payoff(true, true),
     ]).toEqual([3, 5, 0, 1]);
-    const random = Random.add();
+    const random = Random.create();
     expect(
       strategyAction(
         "tit-for-two-tats",
