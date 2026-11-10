@@ -31,7 +31,7 @@ function validCapacity(value: unknown): number {
   if (!Number.isSafeInteger(value) || value < 0) throw new RangeError("Resource capacity must be a nonnegative safe integer.");
   return value;
 }
-function add<T>(options: { capacity: number; policy?: QueuePolicy }): Resource<T> {
+function create<T>(options: { capacity: number; policy?: QueuePolicy }): Resource<T> {
   const settings = validateOptions(options, ["capacity", "policy"]);
   let capacity = validCapacity(settings.capacity);
   const policy = settings.policy === undefined ? "fifo" : settings.policy;
@@ -107,4 +107,4 @@ function add<T>(options: { capacity: number; policy?: QueuePolicy }): Resource<T
   });
 }
 
-export const Resource = Object.freeze({ add });
+export const Resource = Object.freeze({ create });
