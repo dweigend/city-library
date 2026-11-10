@@ -3,23 +3,13 @@ import { model } from "./model.ts";
 
 const binding = defineUI(model, {
   setup: ["seed", "gridSizeX", "gridSizeY", "numCars"],
+  change: (instance, changes) => instance.setParameters(changes),
   live: {
-    power: {
-      set: (instance, value) => instance.setParameters({ power: value }),
-    },
-    speedLimit: {
-      set: (instance, value) => instance.setParameters({ speedLimit: value }),
-    },
-    ticksPerCycle: {
-      set: (instance, value) =>
-        instance.setParameters({ ticksPerCycle: value }),
-    },
-    currentPhase: {
-      set: (instance, value) => instance.setParameters({ currentPhase: value }),
-    },
-    currentAuto: {
-      set: (instance, value) => instance.setParameters({ currentAuto: value }),
-    },
+    power: {},
+    speedLimit: {},
+    ticksPerCycle: {},
+    currentPhase: {},
+    currentAuto: {},
   },
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/IABM%20Textbook/chapter%205/Traffic%20Grid%20Goal.nlogox",

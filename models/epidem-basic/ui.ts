@@ -6,19 +6,11 @@ const numbers = new Intl.NumberFormat("en", { maximumFractionDigits: 3 });
 
 const binding = defineUI(model, {
   setup: ["seed", "initialPeople"],
+  change: (instance, changes) => instance.setParameters(changes),
   live: {
-    infectionChance: {
-      set: (instance, value) =>
-        instance.setParameters({ infectionChance: value }),
-    },
-    recoveryChance: {
-      set: (instance, value) =>
-        instance.setParameters({ recoveryChance: value }),
-    },
-    averageRecoveryTime: {
-      set: (instance, value) =>
-        instance.setParameters({ averageRecoveryTime: value }),
-    },
+    infectionChance: {},
+    recoveryChance: {},
+    averageRecoveryTime: {},
   },
   actions: [],
   complete: (state) => state.stopped,

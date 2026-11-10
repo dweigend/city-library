@@ -16,21 +16,16 @@ export const ui = defineUI(model, {
       run: (instance) => instance.cycleColors(),
     },
   ],
+  change: (instance, changes) => instance.setRules(changes),
   live: {
-    neighborhood: {
-      set: (instance, value) => instance.setRules({ neighborhood: value }),
-    },
+    neighborhood: {},
     countRule: {
       label: "Neighbor count",
-      set: (instance, value) => instance.setRules({ countRule: value }),
     },
     probability: {
       label: "Activation probability (%)",
-      set: (instance, value) => instance.setRules({ probability: value }),
     },
-    ageLimit: {
-      set: (instance, value) => instance.setRules({ ageLimit: value }),
-    },
+    ageLimit: {},
   },
   monitors: [
     { label: "Tick", value: (state) => state.tick },

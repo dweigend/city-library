@@ -19,7 +19,7 @@ import {
   semantic,
   service,
   thirdBuilder,
-} from "../examples/selected-tijuana/scenario.ts";
+} from "./public-contracts/selected-tijuana/scenario.ts";
 
 function firstBuilder(
   x: number,

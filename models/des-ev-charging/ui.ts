@@ -1,5 +1,6 @@
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
+import { chargingScene } from "./scene.ts";
 
 export const ui = defineUI(model, {
   setup: ["vehicles", "sessionMinutes"],
@@ -16,6 +17,7 @@ export const ui = defineUI(model, {
     { label: "Abandoned", value: (state) => state.abandoned },
   ],
   views: [
+    { type: "spatial", label: "Vehicles and charger capacity", data: chargingScene },
     { type: "line", label: "Charger occupancy", xAxis: { label: "Time", unit: "min" }, yAxis: { label: "Vehicles" }, series: (state) => [{ label: "Charging", points: state.history }] },
     { type: "table", label: "Charging sessions", rows: (state) => state.vehicles },
   ],

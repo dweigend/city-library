@@ -4,20 +4,12 @@ import { model } from "./model.ts";
 
 const binding = defineUI(model, {
   setup: ["seed", "slowTwitchFibers"],
+  change: (instance, changes) => instance.setParameters(changes),
   live: {
-    daysBetweenWorkouts: {
-      set: (instance, value) =>
-        instance.setParameters({ daysBetweenWorkouts: value }),
-    },
-    hoursOfSleep: {
-      set: (instance, value) => instance.setParameters({ hoursOfSleep: value }),
-    },
-    intensity: {
-      set: (instance, value) => instance.setParameters({ intensity: value }),
-    },
-    lift: {
-      set: (instance, value) => instance.setParameters({ lift: value }),
-    },
+    daysBetweenWorkouts: {},
+    hoursOfSleep: {},
+    intensity: {},
+    lift: {},
   },
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Muscle%20Development.nlogox",

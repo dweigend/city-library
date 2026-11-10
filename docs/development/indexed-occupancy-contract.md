@@ -8,7 +8,7 @@ Agent spatial coordinates remain the only position authority; World remains the 
 
 Implicit queries use current World insertion order. An Agent moving away and back cannot reorder it. Reattaching an already attached member cannot reorder it. Detach and re-add places it at the new World insertion position. Returned arrays are frozen snapshots of live canonical references. An explicit source always overrides World membership, including source-order, duplicates, foreign agents and invalid-input semantics. Grid boundaries/cell sizes/2D and 3D behavior remain as specified. A World without Space may contain mixed dimensions: implicit queries must still reject any dimension mismatch, even if that Agent is outside the requested cell or deleted only after a previously failed query.
 
-Public examples in `examples/occupancy/` cover movement/order, admission/deletion/copy, Grid detachment/reattachment, source override/boundaries/dimensional failure, and observation/RNG purity. They exercise only existing public contracts. Spatial and Grid examples remain regression requirements.
+Public examples in `tests/public-contracts/occupancy/` cover movement/order, admission/deletion/copy, Grid detachment/reattachment, source override/boundaries/dimensional failure, and observation/RNG purity. They exercise only existing public contracts. Spatial and Grid examples remain regression requirements.
 
 ## Performance and model application
 

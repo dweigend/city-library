@@ -14,30 +14,25 @@ export const ui = defineUI(model, {
     label:
       "Original NetLogo model \u00B7 Stonedahl and Wilensky \u00B7 CC BY-NC-SA 3.0",
   },
+  change: (instance, changes) => instance.setParameters(changes),
   live: {
     particleInertia: {
       label: "Inertia",
-      set: (m, v) => m.setParameters({ particleInertia: v }),
     },
     particleSpeedLimit: {
       label: "Speed limit",
-      set: (m, v) => m.setParameters({ particleSpeedLimit: v }),
     },
     attractionToPersonalBest: {
       label: "Personal attraction",
-      set: (m, v) => m.setParameters({ attractionToPersonalBest: v }),
     },
     attractionToGlobalBest: {
       label: "Global attraction",
-      set: (m, v) => m.setParameters({ attractionToGlobalBest: v }),
     },
     highlightMode: {
       label: "Highlight",
-      set: (m, v) => m.setParameters({ highlightMode: v }),
     },
     trailsMode: {
       label: "Trails",
-      set: (m, v) => m.setParameters({ trailsMode: v }),
     },
   },
   complete: (s) => s.complete,
@@ -88,6 +83,7 @@ function searchLandscapeData(s: UIObservation): SpatialData {
         : [
             {
               id: "highlight",
+              selectable: false,
               x:
                 s.parameters.highlightMode === "True best"
                   ? s.trueBest.x

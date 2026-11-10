@@ -14,27 +14,18 @@ export const ui = defineUI(model, {
       },
     },
   ],
+  change: (instance, changes) => instance.setParameters(changes),
   live: {
-    learningRate: {
-      set: (m, v) => m.setParameters({ learningRate: v }),
-    },
-    examplesPerEpoch: {
-      set: (m, v) => m.setParameters({ examplesPerEpoch: v }),
-    },
-    targetFunction: {
-      set: (m, v) => m.setParameters({ targetFunction: v }),
-    },
+    learningRate: {},
+    examplesPerEpoch: {},
+    targetFunction: {},
     input1: {
       label: "Input 1",
-      set: (m, v) => m.setParameters({ input1: v }),
     },
     input2: {
       label: "Input 2",
-      set: (m, v) => m.setParameters({ input2: v }),
     },
-    showWeights: {
-      set: (m, v) => m.setParameters({ showWeights: v }),
-    },
+    showWeights: {},
   },
   monitors: [
     { label: "Epoch", value: (s) => s.tick },

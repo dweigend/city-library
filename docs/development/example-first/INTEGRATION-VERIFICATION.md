@@ -11,14 +11,14 @@ Research owners are city_game docs/GLOBAL-ARCHITECTURE-BRAINSTORM.md and docs/ME
 ## Executed checks
 
 - Both new scripts directly executed by their author with public city-library imports: passed.
-- bun run examples:city on the final two script versions: passed, now covering four delivered-API examples. Scarce unit changes winner under reversed priority without increasing total supply; stale selection is rejected without mutation before explicit reselection.
+- bun run contracts:city on the final two script versions: passed, now covering four delivered-API examples. Scarce unit changes winner under reversed priority without increasing total supply; stale selection is rejected without mutation before explicit reselection.
 - Shared machine: reservation stock 2 / available 1; start stock 1 / consumed 1; failure at hour 1 yields no completed service and no refund; repair-first at hour 2 permits B, request-first rejects without hidden retry; final hour 3 stock 0 / consumed 2 / one completed service. Machine identity remains canonical, cancelled unstarted work restores availability, repeated observations and independent interleaved models preserve state.
 - bun run typecheck:city: passed on final new scripts.
 - bun run typecheck: passed with Svelte diagnostics 0 errors/0 warnings; script-only changes were separately rechecked by the focused command after the last readability edits.
 - Original three script checksums: passed.
-- bun run examples:city:targets: exit 1 at the unchanged missing corridor export after all four ready scripts run; no skip or expected-error success.
+- bun run contracts:city:targets: exit 1 at the unchanged missing corridor export after all four ready scripts run; no skip or expected-error success.
 - bun run typecheck:city:targets: exit 1 at the original missing APIs and derivative inference errors. No fake declarations or any casts.
-- Complete registered bun run examples: passed (exit 0); console preserved in [integration-examples-console.txt](integration-examples-console.txt). Final new-script runs after the last readability edits are separate passing evidence above.
+- Complete registered bun run contracts: passed (exit 0); console preserved in [integration-examples-console.txt](integration-examples-console.txt). Final new-script runs after the last readability edits are separate passing evidence above.
 
 Fresh independent Gemini 4 Argon review [approved this checkpoint](INTEGRATION-REVIEW.md) with no blockers; [coordinator response](INTEGRATION-RESPONSE.md) records the completed administrative items. No library src/index change, build, consumer or browser interaction is claimed. Explicit clock advances prescribe scenario hours; the machine model does not implement an automatic scheduler, failure distribution or general service-duration constraint. No environmental superiority or physical performance is established by these traces.
 

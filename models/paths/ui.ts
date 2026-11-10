@@ -4,27 +4,13 @@ import { model } from "./model.ts";
 
 const binding = defineUI(model, {
   setup: ["seed", "walkerCount"],
+  change: (instance, changes) => instance.setParameters(changes),
   live: {
-    minimumRoutePopularity: {
-      set: (instance, value) =>
-        instance.setParameters({ minimumRoutePopularity: value }),
-    },
-    walkerVisionDist: {
-      set: (instance, value) =>
-        instance.setParameters({ walkerVisionDist: value }),
-    },
-    popularityDecayRate: {
-      set: (instance, value) =>
-        instance.setParameters({ popularityDecayRate: value }),
-    },
-    popularityPerStep: {
-      set: (instance, value) =>
-        instance.setParameters({ popularityPerStep: value }),
-    },
-    showPopularity: {
-      set: (instance, value) =>
-        instance.setParameters({ showPopularity: value }),
-    },
+    minimumRoutePopularity: {},
+    walkerVisionDist: {},
+    popularityDecayRate: {},
+    popularityPerStep: {},
+    showPopularity: {},
   },
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Paths.nlogox",

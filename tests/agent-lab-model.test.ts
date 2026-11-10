@@ -1,6 +1,6 @@
 import { describe, expect, test } from "bun:test";
 import { createTestModel } from "./fixtures/agent-lab-model.ts";
-import { createExchangeModel } from "../examples/models/exchange.ts";
+import { createExchangeModel } from "../models/resource-exchange/model.ts";
 
 describe("Headless model actions", () => {
   test("agent view reads are detached observations of canonical agents", () => {

@@ -1,5 +1,6 @@
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
+import { bufferScene } from "./scene.ts";
 
 export const ui = defineUI(model, {
   actions: [
@@ -14,6 +15,7 @@ export const ui = defineUI(model, {
     { label: "Collected", value: (state) => state.collected },
   ],
   views: [
+    { type: "spatial", label: "Crates and bounded buffer", data: bufferScene },
     { type: "line", label: "Crates in buffer", xAxis: { label: "Time", unit: "min" }, yAxis: { label: "Crates" }, series: (state) => [{ label: "Stored", points: state.history }] },
     { type: "table", label: "Collection ledger", rows: (state) => state.deliveries },
   ],

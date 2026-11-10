@@ -106,4 +106,4 @@ lineage. They are not availability flags. Source comparison and notices are in
   Field state or Agent membership implicitly. City policy stays in user scripts.
 
 
-The five public scripts in `examples/grid-parcels/` and their `SHA256SUMS` manifest preserve the accepted author tasks. Keep their public syntax and assertions unchanged.
+The five public scripts in `tests/public-contracts/grid-parcels/` and their `SHA256SUMS` manifest preserve the accepted author tasks. Keep their public syntax and assertions unchanged.

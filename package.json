@@ -38,23 +38,25 @@
   },
   "scripts": {
     "typecheck": "bun run check:ui:svelte",
-    "test": "bun test tests",
-    "examples": "bun examples/run.ts",
+    "test": "bun test tests models",
     "build": "bun build index.ts --target browser --format esm --outdir dist && bun scripts/typescript.ts declarations",
     "consumer": "bun tests/package-consumer.ts",
-    "check": "bun run typecheck && bun run test && bun run examples && bun run build && bun run consumer",
+    "check": "bun run typecheck && bun run test && bun run check:migration && bun run contracts && bun run build && bun run consumer",
     "check:ui:svelte": "bun run --cwd ui/agent-lab check",
-    "examples:townscaper": "bun examples/run.ts --townscaper",
     "typecheck:townscaper": "bun run typecheck",
-    "examples:city": "bun examples/run.ts --city",
-    "examples:city:targets": "bun examples/run.ts --city --targets",
     "typecheck:city": "bun run typecheck",
     "typecheck:city:targets": "bun scripts/typescript.ts city-targets",
     "typecheck:targets": "bun scripts/typescript.ts targets",
     "typecheck:giant-component:targets": "bun scripts/typescript.ts giant-component-targets",
     "dev": "bun --bun run vite --config vite.config.ts",
     "build:ui": "bun --bun run vite build --config vite.config.ts",
-    "preview": "bun --bun run vite preview --config vite.config.ts"
+    "preview": "bun --bun run vite preview --config vite.config.ts",
+    "contracts": "bun scripts/public-contracts.ts",
+    "contracts:townscaper": "bun scripts/public-contracts.ts --townscaper",
+    "contracts:city": "bun scripts/public-contracts.ts --city",
+    "contracts:city:targets": "bun scripts/public-contracts.ts --city --targets",
+    "contracts:targets": "bun scripts/public-contracts.ts --targets",
+    "check:migration": "bun scripts/check-examples-migration.ts"
   },
   "workspaces": [
     "ui/agent-lab"

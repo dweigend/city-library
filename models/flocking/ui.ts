@@ -6,24 +6,18 @@ export const ui = defineUI(model, {
     url: "https://ccl.northwestern.edu/netlogo/models/Flocking",
     label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
   },
+  change: (instance, changes) => instance.setRules(changes),
   live: {
-    vision: {
-      set: (m, v) => m.setRules({ vision: v }),
-    },
-    minimumSeparation: {
-      set: (m, v) => m.setRules({ minimumSeparation: v }),
-    },
+    vision: {},
+    minimumSeparation: {},
     maxAlignTurn: {
       label: "Max alignment turn",
-      set: (m, v) => m.setRules({ maxAlignTurn: v }),
     },
     maxCohereTurn: {
       label: "Max cohesion turn",
-      set: (m, v) => m.setRules({ maxCohereTurn: v }),
     },
     maxSeparateTurn: {
       label: "Max separation turn",
-      set: (m, v) => m.setRules({ maxSeparateTurn: v }),
     },
   },
   monitors: [

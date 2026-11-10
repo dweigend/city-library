@@ -11,11 +11,11 @@
 ## 1. Executive Summary & Verdict
 
 - **E3 Design, Provenance Transfer & Example-First Freeze Verdict:** **APPROVED FOR FREEZE.**
-  - All five public `examples/townscaper-grid/*.ts` scripts are complete, readable top-to-bottom author workflows with independent analytical, refinement, synchronous force, and bounded step-halving oracles.
-  - All routine numerical and RNG continuation rules in `docs/grid-parcels/TOWNSCAPER-CONTRACT.md` are justified, deterministic, and implementable using existing `Layout`, `PlanarPolygon`, `Random`, and `Grid` contracts without altering any accepted `E0` city script (`examples/city-simulation/*`) or any frozen foundation script (`examples/grid-parcels/*`).
+  - All five public `tests/public-contracts/townscaper-grid/*.ts` scripts are complete, readable top-to-bottom author workflows with independent analytical, refinement, synchronous force, and bounded step-halving oracles.
+  - All routine numerical and RNG continuation rules in `docs/grid-parcels/TOWNSCAPER-CONTRACT.md` are justified, deterministic, and implementable using existing `Layout`, `PlanarPolygon`, `Random`, and `Grid` contracts without altering any accepted `E0` city script (`tests/public-contracts/city-simulation/*`) or any frozen foundation script (`tests/public-contracts/grid-parcels/*`).
   - The 28-file research/proposal archive under `docs/library-handover/parcel-proposal/` is verified byte-identical to `dweigend/city_game` commit `5583c03039b1937cfe6d388b54692e583c2cdc26` via `docs/grid-parcels/TOWNSCAPER-PACKAGE-SHA256SUMS`, with `docs/grid-parcels/TOWNSCAPER-RECEIPT.md` maintaining a strict boundary between historical research/documentation provenance and target runtime delivery.
   - Zero blocking (`P0`/`P1`/`P2`) findings. Two non-blocking implementation/editorial notes (`P3`) are recorded in Section 7 to guard the upcoming runtime implementation after the freeze commit.
-- **Runtime Delivery Verdict (`E3`):** **NOT DELIVERED (by design).** `bun run examples:townscaper`, `bun run typecheck:townscaper`, and `bun test tests/townscaper-grid.test.ts` fail honestly on the missing `topology.quadrilaterals` and `topology.relax` exports with no mocks, stubs, private imports, or suppressed assertions.
+- **Runtime Delivery Verdict (`E3`):** **NOT DELIVERED (by design).** `bun run contracts:townscaper`, `bun run typecheck:townscaper`, and `bun test tests/townscaper-grid.test.ts` fail honestly on the missing `topology.quadrilaterals` and `topology.relax` exports with no mocks, stubs, private imports, or suppressed assertions.
 - **Target Capability Verdict (`03-generative-quarter.ts`, `E1`/`E2`):** **OPEN RED TARGET (by design).** The generative quarter script remains an untouched, honestly red `E1`/`E2` target (`geometry.corridor`, `geometry.subtract`, `geometry.subdivide`); this first PR is strictly scoped to `E3`.
 
 ---
@@ -28,10 +28,10 @@ Executed read-only verification commands in `/home/david/.t3/worktrees/city-libr
 | --- | --- | --- |
 | `sha256sum -c docs/grid-parcels/TOWNSCAPER-PACKAGE-SHA256SUMS` | Exit `0` (28/28 `OK`) | All 28 files (`3,186,191` bytes) in `docs/library-handover/parcel-proposal/` match the committed source blobs at `city_game` `5583c030`. |
 | `sha256sum -c docs/development/example-first/SCRIPT-SHA256SUMS` | Exit `0` (3/3 `OK`) | Accepted `E0` scripts (`01-household-budget.ts`, `02-neighborhood-heat.ts`, `03-generative-quarter.ts`) are untouched. |
-| `sha256sum -c examples/grid-parcels/SHA256SUMS` | Exit `0` (5/5 `OK`) | All 5 frozen `feat/grid-parcel-foundations` scripts in `examples/grid-parcels/` are untouched. |
-| `bun run examples:city` / `bun run typecheck:city` | Exit `0` / Exit `0` | Ready `E0` scripts pass (`19000`; `{ tick: 1, centerTemperature: 20, totalTemperature: 188 }`) and typecheck cleanly. |
-| `bun run examples:city:targets` / `bun run typecheck:city:targets` | Exit `1` / Exit `1` | `03-generative-quarter.ts` fails honestly at missing `geometry.corridor` (`TS2339` + 5 downstream `TS7006`). |
-| `bun run examples:townscaper` / `bun run typecheck:townscaper` | Exit `1` / Exit `1` | Fails honestly at missing `topology.quadrilaterals` and `topology.relax` (31 TypeScript diagnostics across the 5 examples and `tests/townscaper-grid-types.ts`). |
+| `bun run check:migration` | Exit `0` (5/5 `OK`) | All 5 frozen `feat/grid-parcel-foundations` scripts in `tests/public-contracts/grid-parcels/` are untouched. |
+| `bun run contracts:city` / `bun run typecheck:city` | Exit `0` / Exit `0` | Ready `E0` scripts pass (`19000`; `{ tick: 1, centerTemperature: 20, totalTemperature: 188 }`) and typecheck cleanly. |
+| `bun run contracts:city:targets` / `bun run typecheck:city:targets` | Exit `1` / Exit `1` | `03-generative-quarter.ts` fails honestly at missing `geometry.corridor` (`TS2339` + 5 downstream `TS7006`). |
+| `bun run contracts:townscaper` / `bun run typecheck:townscaper` | Exit `1` / Exit `1` | Fails honestly at missing `topology.quadrilaterals` and `topology.relax` (31 TypeScript diagnostics across the 5 examples and `tests/townscaper-grid-types.ts`). |
 | `bun test tests/townscaper-grid.test.ts` | Exit `1` (1 pass, 12 fail) | Only the malformed-options preflight rejection test passes incidentally; all 12 positive/RangeError tests fail honestly because `topology.quadrilaterals` and `topology.relax` are undefined. |
 
 - **Provenance & Licensing Hygiene (`TOWNSCAPER-RECEIPT.md`):**
@@ -41,7 +41,7 @@ Executed read-only verification commands in `/home/david/.t3/worktrees/city-libr
 
 ---
 
-## 3. Review of the Five Public Author Scripts (`examples/townscaper-grid/`)
+## 3. Review of the Five Public Author Scripts (`tests/public-contracts/townscaper-grid/`)
 
 All five scripts follow the primary checkout's `AGENTS.md`, `docs/CODING_STANDARDS.md`, and `docs/development/example-first/PLAN.md` authoring rules: flat top-to-bottom control flow, public root imports from `"city-library"`, no private deep imports, no invented wrapper/manager DSL, and independent appended acceptance assertions.
 
@@ -125,7 +125,7 @@ Each routine numerical and type decision in `docs/grid-parcels/TOWNSCAPER-CONTRA
 
 | ID | Severity | File(s) | Summary | Blocks Approval? |
 | --- | --- | --- | --- | --- |
-| `F1` | `P3` (Implementation guard) | `docs/grid-parcels/TOWNSCAPER-CONTRACT.md`, `examples/townscaper-grid/03-validation-and-failure.ts`, `tests/townscaper-grid.test.ts` | Explicit `undefined` option values (`{ rings: 1, edgeLength: undefined, random }`, `{ layout, method: "squareTarget", iterations: undefined }`) must throw `TypeError` during options validation rather than falling through `??` default coalescing. | No |
+| `F1` | `P3` (Implementation guard) | `docs/grid-parcels/TOWNSCAPER-CONTRACT.md`, `tests/public-contracts/townscaper-grid/03-validation-and-failure.ts`, `tests/townscaper-grid.test.ts` | Explicit `undefined` option values (`{ rings: 1, edgeLength: undefined, random }`, `{ layout, method: "squareTarget", iterations: undefined }`) must throw `TypeError` during options validation rather than falling through `??` default coalescing. | No |
 | `F2` | `P3` (Implementation guard) | `docs/grid-parcels/TOWNSCAPER-CONTRACT.md`, `tests/townscaper-grid.test.ts` | On `iterations: 0` (and stationary iterations), `topology.relax` must still emit the normalized CCW, lexicographically smallest `(x, y)` start ring for each quad (after validating 4 distinct corners, strict convexity, and the `1e-12 * maxEdge²` quality guard) and check `arguments.length === 1`. | No |
 
 ---

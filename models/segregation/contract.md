@@ -22,4 +22,4 @@ Mulberry RNG and omitted display-only draws mean seeded trajectories differ from
 
 ## Public examples
 
-Public model scripts under `examples/segregation/` cover: setup/repeatability; known weighted neighbor metrics; terminal/intervention rules; movement invariants; validation and observation purity. Their syntax and expectations are frozen; runtime must satisfy them. These examples verify the model composition.
+Public model scripts under `tests/public-contracts/segregation/` cover: setup/repeatability; known weighted neighbor metrics; terminal/intervention rules; movement invariants; validation and observation purity. Their syntax and expectations are frozen; runtime must satisfy them. These examples verify the model composition.

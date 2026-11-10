@@ -8,25 +8,21 @@ export const ui = defineUI(model, {
     label: "Original NetLogo model · Uri Wilensky · CC BY-NC-SA 3.0",
   },
   complete: (state) => state.done,
+  change: (instance, changes) => instance.setRules(changes),
   live: {
     sheepGain: {
       label: "Sheep food gain",
-      set: (instance, value) => instance.setRules({ sheepGain: value }),
     },
     wolfGain: {
       label: "Wolf food gain",
-      set: (instance, value) => instance.setRules({ wolfGain: value }),
     },
     sheepReproduce: {
       label: "Sheep reproduction (%)",
-      set: (instance, value) => instance.setRules({ sheepReproduce: value }),
     },
     wolfReproduce: {
       label: "Wolf reproduction (%)",
-      set: (instance, value) => instance.setRules({ wolfReproduce: value }),
     },
     grassRegrowth: {
-      set: (instance, value) => instance.setRules({ grassRegrowth: value }),
       enabled: (state) => state.parameters.mode === "sheep-wolves-grass",
     },
   },

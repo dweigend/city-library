@@ -1,8 +1,10 @@
 import type { Definition } from '../models/definition.ts';
-import type { LegacyLiveField, ModelInstance, SetupField, Snapshot, UISpec } from './definition.ts';
+import type { ChangeUISpec, KeyedLive, LegacyLiveField, LiveChanges, ModelInstance, SetupField, Snapshot, UISpec } from './definition.ts';
 import type { Descriptor } from './inputs.ts';
 
 export type ControlValue = string | number | boolean;
+/** Internal union of the two typed variants of the existing flat declaration. */
+export type AuthoringSpec<P extends object, M extends ModelInstance> = UISpec<P, M> | ChangeUISpec<P, M>;
 /** Internal erasure of the getter/formatter existential pair. Public Monitor uses strict
  * function properties; the method signature here accepts every approved scalar case.
  * Hosts always pass the result of this record's getter to this record's formatter. */
@@ -11,7 +13,9 @@ interface RuntimeMonitor<S> {
   readonly value: (state: S) => string | number;
   format?(value: string | number): string;
 }
-export type RuntimeSpec<P extends object, M extends ModelInstance> = Omit<UISpec<P, M>, 'monitors'> & {
+export type RuntimeSpec<P extends object, M extends ModelInstance> = Omit<AuthoringSpec<P, M>, 'monitors' | 'live' | 'change'> & {
+  readonly change?: (model: M, changes: LiveChanges<P>) => void;
+  readonly live?: readonly LegacyLiveField<P, M>[] | KeyedLive<P, M, true>;
   readonly monitors?: readonly RuntimeMonitor<Snapshot<M>>[];
 };
 
@@ -22,8 +26,9 @@ type CompatibleMonitor<T> = T extends {
   readonly format?: (value: infer F) => string;
 } ? [V] extends [F] ? T : never : T;
 type CompatibleMonitors<T> = { readonly [K in keyof T]: CompatibleMonitor<T[K]> };
+type WithMonitors<S, T> = S extends unknown ? Omit<S, 'monitors'> & { readonly monitors?: T } : never;
 export type MonitorSpec<P extends object, M extends ModelInstance, T extends readonly RuntimeMonitor<Snapshot<M>>[]> =
-  Omit<UISpec<P, M>, 'monitors'> & { readonly monitors?: T & CompatibleMonitors<T> };
+  WithMonitors<AuthoringSpec<P, M>, T & CompatibleMonitors<T>>;
 
 export type NormalizedSpec<P extends object, M extends ModelInstance> = Omit<RuntimeSpec<P, M>, 'setup' | 'live'> & {
   readonly setup: readonly SetupField<P>[];
@@ -48,7 +53,7 @@ export function decodeControl(descriptor: Descriptor, value: unknown): ControlVa
   return value;
 }
 
-/** Internal mount-time normalization for the Svelte host. No model is created. */
+/** Internal mount-time normalization shared by the DOM and Svelte adapters. No model is created. */
 export function normalizeAuthoring<P extends object, M extends ModelInstance>(definition: Definition<P, M>, spec: RuntimeSpec<P, M>): NormalizedSpec<P, M> {
   const descriptors = new Map(Object.entries(definition.inputs) as [Extract<keyof P, string>, Descriptor][]);
   const descriptorFor = (field: Extract<keyof P, string>) => {
@@ -57,6 +62,8 @@ export function normalizeAuthoring<P extends object, M extends ModelInstance>(de
     return descriptor;
   };
   const keyed = spec.live !== undefined && !Array.isArray(spec.live);
+  if (spec.change !== undefined && typeof spec.change !== 'function') throw new TypeError('Change must be a function.');
+  if (Array.isArray(spec.live) && spec.change !== undefined) throw new TypeError('Legacy live arrays cannot use change.');
   const entries = keyed
     ? Object.entries(spec.live!).map(([field, binding]) => ({ ...binding, field }))
     : spec.live ?? [];
@@ -65,12 +72,15 @@ export function normalizeAuthoring<P extends object, M extends ModelInstance>(de
   const live = (entries as readonly {
     field: Extract<keyof P, string>; label?: string; widget?: 'color'; group?: string;
     value?: (state: Snapshot<M>) => unknown;
-    set: (model: M, value: ControlValue) => void;
+    set?: (model: M, value: ControlValue) => void;
     enabled?: (state: Snapshot<M>) => boolean;
   }[]).map(binding => {
     const descriptor = descriptorFor(binding.field);
     if (binding.group !== undefined && (typeof binding.group !== 'string' || !binding.group.trim())) throw new TypeError(`Invalid empty group label for field: ${binding.field}`);
-    if (typeof binding.set !== 'function') throw new TypeError(`Missing setter for ${binding.field}`);
+    if (binding.set !== undefined && typeof binding.set !== 'function') throw new TypeError(`Invalid setter for ${binding.field}`);
+    const localSet = binding.set;
+    const change = spec.change;
+    if (!localSet && (!keyed || !change)) throw new TypeError(`Missing setter for ${binding.field}`);
     if (!keyed && typeof binding.value !== 'function') throw new TypeError(`Missing getter for ${binding.field}`);
     return {
       ...binding,
@@ -78,7 +88,15 @@ export function normalizeAuthoring<P extends object, M extends ModelInstance>(de
         const result = binding.value ? binding.value(state) : (state as { parameters?: Record<string, unknown> }).parameters?.[binding.field];
         return decodeControl(descriptor, result);
       },
-      set(model: M, value: ControlValue) { binding.set(model, decodeControl(descriptor, value)); },
+      set(model: M, value: ControlValue) {
+        const decoded = decodeControl(descriptor, value);
+        if (localSet) localSet.call(binding, model, decoded);
+        else if (change) {
+          // Each field descriptor establishes its value type at this erased host boundary.
+          const changes = { [binding.field]: decoded } as LiveChanges<P>;
+          change(model, changes);
+        }
+      },
     };
   });
   const setup = spec.setup?.map(field => typeof field === 'string' ? { field } : field) ?? [...descriptors.keys()]

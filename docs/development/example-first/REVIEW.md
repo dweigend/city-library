@@ -10,7 +10,7 @@
 
 ## 1. Executive Summary & Verdict
 
-- **Design / Test / Plan Checkpoint Verdict:** **APPROVED** (ready for checkpoint integration once the parent updates the final `bun run examples` status in `docs/development/example-first/VERIFICATION.md`).
+- **Design / Test / Plan Checkpoint Verdict:** **APPROVED** (ready for checkpoint integration once the parent updates the final `bun run contracts` status in `docs/development/example-first/VERIFICATION.md`).
 - **Runtime / Target Capability Verdict (`03-generative-quarter.ts`, E1–E6):** **NOT ACCEPTED / OPEN TARGET (by design).** No runtime library code (`index.ts`, `src/**`) or UI was modified in this diff, and `geometry.corridor`, `geometry.subtract`, and `geometry.subdivide` remain unimplemented targets.
 
 ---
@@ -22,12 +22,12 @@ Verified against `2a7f3eb`:
   - `PLAN.md` (+4 lines: pointer to `docs/development/example-first/PLAN.md` with explicit delivered-vs-target boundary)
   - `package.json` (+4 scripts: `examples:city`, `examples:city:targets`, `typecheck:city`, `typecheck:city:targets`)
   - `scripts/examples.ts` (+1 phase entry: `"city-simulation": ["01-household-budget", "02-neighborhood-heat"]`)
-  - `tsconfig.dev.json` (+2 explicit ready files: `examples/city-simulation/01-household-budget.ts`, `examples/city-simulation/02-neighborhood-heat.ts`)
+  - `tsconfig.dev.json` (+2 explicit ready files: `tests/public-contracts/city-simulation/01-household-budget.ts`, `tests/public-contracts/city-simulation/02-neighborhood-heat.ts`)
 - **Added untracked files (10):**
-  - `examples/city-simulation/01-household-budget.ts`
-  - `examples/city-simulation/02-neighborhood-heat.ts`
-  - `examples/city-simulation/03-generative-quarter.ts`
-  - `examples/city-simulation/README.md`
+  - `tests/public-contracts/city-simulation/01-household-budget.ts`
+  - `tests/public-contracts/city-simulation/02-neighborhood-heat.ts`
+  - `tests/targets/city-simulation/03-generative-quarter.ts`
+  - `tests/public-contracts/city-simulation/README.md`
   - `scripts/city-examples.ts`
   - `tsconfig.city-examples.json`
   - `tsconfig.city-targets.json`
@@ -36,14 +36,14 @@ Verified against `2a7f3eb`:
   - `docs/development/example-first/SCRIPT-SHA256SUMS`
 - **Concurrent checkouts untouched:**
   - Primary checkout (`/home/david/Projekte/city-library`) and Townscaper worktree (`/home/david/.t3/worktrees/city-library/feat-townscaper-grid`) dirty/untracked files remain completely untouched.
-  - All local Markdown links across `PLAN.md`, `examples/city-simulation/README.md`, `docs/development/example-first/PLAN.md`, and `docs/development/example-first/VERIFICATION.md` resolve to existing files.
+  - All local Markdown links across `PLAN.md`, `tests/public-contracts/city-simulation/README.md`, `docs/development/example-first/PLAN.md`, and `docs/development/example-first/VERIFICATION.md` resolve to existing files.
   - `sha256sum -c docs/development/example-first/SCRIPT-SHA256SUMS` passes (`OK` for all three scripts).
 
 ---
 
 ## 3. Authoring Style & Example-as-Test Verification
 
-All three scripts under `examples/city-simulation/` preserve the user-approved flat, readable top-to-bottom authoring style (`parameters -> setup -> execution -> export/observation -> appended assertions -> short named rule functions`):
+All three scripts under `tests/public-contracts/city-simulation/` preserve the user-approved flat, readable top-to-bottom authoring style (`parameters -> setup -> execution -> export/observation -> appended assertions -> short named rule functions`):
 - No nested loops or callback chains in the author workflow.
 - No invented DSL, manager class, builder, or unapproved public vocabulary (no `route`, `extendPath`, `union`, `circle`, `sample`, etc.).
 - Public imports come strictly from `"city-library"` (`Agent`, `World`, `Grid`, `Random`, `geometry`, `run`, `type PlanarPolygon`, `type PlanarXY`).
@@ -87,14 +87,14 @@ Executed read-only verification commands in `/home/david/.codex/worktrees/city-l
 | Command | Observed Exit Code | Result & Honesty Check |
 | --- | --- | --- |
 | `sha256sum -c docs/development/example-first/SCRIPT-SHA256SUMS` | `0` | All 3 script hashes match. |
-| `bun run examples:city` | `0` | Runs `01-household-budget` (`19000`) and `02-neighborhood-heat` (`{ tick: 1, centerTemperature: 20, totalTemperature: 188 }`) with all assertions active. |
+| `bun run contracts:city` | `0` | Runs `01-household-budget` (`19000`) and `02-neighborhood-heat` (`{ tick: 1, centerTemperature: 20, totalTemperature: 188 }`) with all assertions active. |
 | `bun run typecheck:city` | `0` | Clean strict TypeScript check for the two delivered scripts. |
 | `bun run typecheck` | `0` | Full project typecheck (`tsc --noEmit`, `tsconfig.dev.json` with ready scripts, UI tsconfigs, and `svelte-check`: 0 errors, 0 warnings). |
-| `bun run examples:city:targets` | `1` | Runs `01` and `02`, then fails honestly at `03-generative-quarter.ts:36:24` (`TypeError: geometry.corridor is not a function`). No try/catch suppression or expected-failure pass. |
+| `bun run contracts:city:targets` | `1` | Runs `01` and `02`, then fails honestly at `03-generative-quarter.ts:36:24` (`TypeError: geometry.corridor is not a function`). No try/catch suppression or expected-failure pass. |
 | `bun run typecheck:city:targets` | `1` | Fails honestly with 8 diagnostics in `03-generative-quarter.ts`: 3 `TS2339` errors for missing `geometry.corridor`, `geometry.subtract`, `geometry.subdivide`, and 5 derivative `TS7006` implicit-`any` errors on `result` and `part`. No `@ts-expect-error`, `any`, or fake ambient types. |
-| `bun run examples` (parent log `/tmp/city-example-contracts-examples.log`) | In progress / incomplete log | Log starts with `19000` and `{ tick: 1, centerTemperature: 20, totalTemperature: 188 }` from the newly registered `city-simulation` phase; parent must record final completion status in `VERIFICATION.md` before committing the checkpoint. |
+| `bun run contracts` (parent log `/tmp/city-example-contracts-examples.log`) | In progress / incomplete log | Log starts with `19000` and `{ tick: 1, centerTemperature: 20, totalTemperature: 188 }` from the newly registered `city-simulation` phase; parent must record final completion status in `VERIFICATION.md` before committing the checkpoint. |
 
-- **Readiness & Promotion Policy:** Standard gates (`scripts/examples.ts`, `tsconfig.dev.json`, `examples:city`, `typecheck:city`) include only the two delivered scripts (`01`, `02`), while `03-generative-quarter.ts` stays in `examples/city-simulation/03-generative-quarter.ts` under the dedicated `:targets` gates until `E1` and `E2` are implemented, at which point the exact unchanged file must be promoted into `scripts/examples.ts`, `scripts/city-examples.ts`, `tsconfig.city-examples.json`, and `tsconfig.dev.json`.
+- **Readiness & Promotion Policy:** Standard gates (`scripts/examples.ts`, `tsconfig.dev.json`, `examples:city`, `typecheck:city`) include only the two delivered scripts (`01`, `02`), while `03-generative-quarter.ts` stays in `tests/targets/city-simulation/03-generative-quarter.ts` under the dedicated `:targets` gates until `E1` and `E2` are implemented, at which point the exact unchanged file must be promoted into `scripts/examples.ts`, `scripts/city-examples.ts`, `tsconfig.city-examples.json`, and `tsconfig.dev.json`.
 
 ---
 
@@ -118,9 +118,9 @@ Executed read-only verification commands in `/home/david/.codex/worktrees/city-l
 
 ### Blockers for Design/Test Checkpoint Approval (`E0`)
 - **None on the scripts, assertions, tsconfigs, or plan design.**
-- **Pre-commit bookkeeping item (1):** In `docs/development/example-first/VERIFICATION.md` (line 15), the entry for `bun run examples` still reads:
-  > `- bun run examples: existing complete example registry plus two city scripts: running at initial record; update this entry with final outcome before checkpoint.`
-  - **Smallest fix:** Once the parent's `bun run examples` run finishes (or is re-run to completion), replace that line in `docs/development/example-first/VERIFICATION.md` with the actual observed exit code and outcome before creating the checkpoint commit.
+- **Pre-commit bookkeeping item (1):** In `docs/development/example-first/VERIFICATION.md` (line 15), the entry for `bun run contracts` still reads:
+  > `- bun run contracts: existing complete example registry plus two city scripts: running at initial record; update this entry with final outcome before checkpoint.`
+  - **Smallest fix:** Once the parent's `bun run contracts` run finishes (or is re-run to completion), replace that line in `docs/development/example-first/VERIFICATION.md` with the actual observed exit code and outcome before creating the checkpoint commit.
 
 ### Blockers for Target / Runtime Acceptance (`03-generative-quarter.ts`, not claimed in `E0`)
 - `geometry.corridor`, `geometry.subtract`, and `geometry.subdivide` are not yet exported or implemented in `city-library` (`examples:city:targets` and `typecheck:city:targets` exit `1` as required at `E0`).

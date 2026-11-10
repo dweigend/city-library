@@ -18,7 +18,7 @@ The five [binding UI authoring rules](../DESIGN.md#binding-ui-authoring-rules) g
 
 ## Define UI
 
-`defineUI<P, M>(definition, spec): BoundEntry` is exported by `ui/index.ts`. It binds a plain headless `Definition<P, M>` to a `UISpec<P, M>` while preserving the concrete instance and observation types inside callbacks. It returns title, optional description and a mounted-session contract. Creating the definition must not initialize a model, create timers, perform I/O or touch the DOM at module import.
+`defineUI<P, M>(definition, spec): BoundEntry` is exported by `ui/index.ts`. It binds a plain headless `Definition<P, M>` to a `UISpec<P, M>` or `ChangeUISpec<P, M>` while preserving the concrete instance and observation types inside callbacks. It returns title, optional description and a mounted-session contract. Creating the definition must not initialize a model, create timers, perform I/O or touch the DOM at module import.
 
 Readable authoring form:
 
@@ -39,7 +39,7 @@ export const ui = defineUI(model, {
 
 `Definition<P, M>` supplies `title`, optional `description`, canonical `inputs` and `create(parameters)`. Inputs are descriptors for number, boolean, choice or text, each with `default`; numbers may specify `min`, `max`, `step`, `integer`, and choices specify `options`. This is the experiment definition contract, not the future live-property core `Input` API.
 
-`M` implements `read(): unknown`, `advance(steps?: number): void` and optionally `dispose(): void`. Callback observations are inferred from `read()`. Import the public type `Observation<typeof model>` for a named projection, or `Observation<Instance>` when an instance type is already available. Both UI entrypoints export the same alias; it creates no wrapper or new state. The factory and actions own runtime validation, including cross-field constraints. UI constraints complement that validation. Observers and rendering projections must be side-effect-free and must not advance model time or consume model randomness.
+`M` implements `read(): unknown`, `advance(steps?: number): void` and optionally `dispose(): void`. Callback observations are inferred from `read()`. Import the public type `Observation<typeof model>` for a named projection, or `Observation<Instance>` when an instance type is already available. The public UI entry and its compatibility import export the same alias; it creates no wrapper or new state. The factory and actions own runtime validation, including cross-field constraints. UI constraints complement that validation. Observers and rendering projections must be side-effect-free and must not advance model time or consume model randomness.
 
 ## Setup
 
@@ -61,11 +61,23 @@ live: {
 }
 ```
 
-Each key names a declared model input. The required setter receives that field's TypeScript value type and explicitly invokes a model action. Optional `value`, `label`, `enabled`, `widget: "color"` and `group` customize the binding. An explicit getter takes precedence. Without one, every possible observation must have a required compatible `parameters[field]`; otherwise the type contract requires a getter. There is no guessed setter or direct assignment to model state.
+Each key names a declared model input. A local setter receives that field's TypeScript value type and explicitly invokes a model action. For several fields forwarded to one action, declare a common write default:
+
+```ts
+change: (instance, changes) => instance.setRules(changes),
+live: {
+  growthAmount: {},
+  reproduction: { label: "Reproduction (%)" },
+}
+```
+
+`UISpec<P,M>` remains the existing extendable interface with explicit local setters. For an extracted, explicitly annotated shared-write declaration, use `ChangeUISpec<P,M>`; inline declarations infer this variant. Both use the same `defineUI` call.
+
+`change` receives `LiveChanges<P>` (`Partial<P>`), containing exactly one own key per host edit after descriptor decoding. A field's explicit `set` overrides it. Without `change`, each keyed field still requires `set`. Legacy live arrays keep their explicit setters and cannot combine with `change`. No method is guessed and no model property is assigned directly. Optional `value`, `label`, `enabled`, `widget: "color"` and `group` customize the binding. An explicit getter takes precedence. Without one, every possible observation must have a required compatible `parameters[field]`; otherwise the type contract requires a getter. There is no guessed setter or direct assignment to model state.
 
 At the DOM boundary, the host checks descriptor primitive types, finite numeric values and known choice options. Descriptors cannot prove arbitrary branded, literal-number or refined-text TypeScript types; model factories/actions still validate those semantics and cross-field constraints.
 
-Before initialization, live edits supply values for setup. After initialization, a valid edit stops playback and invokes its setter; the host then reads canonical observations. Optional enabled predicates control availability. Legacy arrays retain required scalar-union `value`/`set` callbacks and existing reader precedence.
+Before initialization, live edits supply values for setup. After initialization, a valid edit stops playback and invokes its local setter or explicit common change action; the host then reads canonical observations. Optional enabled predicates control availability. Legacy arrays retain required scalar-union `value`/`set` callbacks and existing reader precedence.
 
 A nonempty `group` label creates a flat accessible fieldset/legend. A group appears at its first occurrence and collects its fields in declaration order. Equal labels share the group; whitespace-only labels fail at mount. This is a shared control feature, not permission for author scripts to inspect DOM or construct layouts.
 
@@ -108,13 +120,33 @@ Experimental nodes add optional initial `position: { x, y }`; later dragging and
 
 ### Spatial
 
-`{ type: "spatial", label, data }` projects `SpatialData`: `width`, `height`, optional `cells` and required `agents`. Each spatial agent extends node presentation fields with `x`, `y`, optional `heading` in degrees and optional `shape: "circle" | "triangle"`. The baseline renderer defaults heading to zero and shape to circle. Coordinates are centered world coordinates; positive y points upward. Display size remains CSS pixels.
+`{ type: "spatial", label, data }` projects `SpatialData`: `width`, `height`, optional `cells` and required `agents`. Each spatial agent extends node presentation fields with `x`, `y`, optional `heading` in degrees and optional `shape: "circle" | "triangle" | "rectangle" | "diamond"`. The baseline renderer defaults heading to zero and shape to circle. Coordinates are centered world coordinates; positive y points upward. Display size remains CSS pixels.
 
 Experimental additions: `showLabels` controls label visibility when supplied; omission retains the host Labels control. `segments` contains ordered `{ from: {x,y}, to: {x,y}, color?, width? }` strokes above cells and below agents, selection and labels. Endpoints must be finite centered coordinates. Width defaults to 1 CSS pixel; zero omits a stroke; negative/nonfinite widths are invalid input. Omitted color uses the host foreground. Segments do not participate in picking or model collision logic.
 
+`SpatialAgent.selectable` defaults to true. Explicit false excludes a symbol from pointer/nearest and keyboard selection; annotations remain nonselectable. It does not create domain identity or change drawing actions on Grid cells.
+
+Rectangles may supply positive finite `extent: { width, height }` in diagram units instead of CSS-pixel `size`; other shapes cannot use extent. `filled` defaults to true. Optional `stroke` and nonnegative finite `strokeWidth` add an outline; `filled: false` supports empty resource slots. Coordinates and headings must be finite, and derived geometry must remain finite before a new projection is published. Canvas buffer dimensions must fit positive unsigned 32-bit integers, preventing DOM conversion from wrapping an extreme aspect ratio to zero. This representability check is not a guarantee of browser-specific maximum allocation capacity. Invalid updates preserve the previous valid projection.
+
+Optional `labels: readonly { x, y, text }[]` supplies nonselectable diagram annotations in the shared font and foreground. Optional nonempty `description` supplies the canvas accessible name and fallback text; authors should summarize the actual counts and states. Omission retains the legacy count description. Labels, segments and layout coordinates do not create domain entities.
+
+Mixed diagrams containing rectangles or diamonds pick the topmost painted symbol within its actual bounds, including outlined slots. Pure circle/triangle diagrams retain their previous nearest-agent compatibility behavior. Tiny symbols have a shared two-buffer-pixel minimum for painting and picking. Rotation and device-pixel scaling use the same geometry in the shared Svelte renderer.
+
+### Collection diagrams
+
+`collectionDiagram(rows): SpatialData` is a pure, detached projection exported by the public UI entry and its compatibility import. Use it inside the existing spatial view for abstract collections; it creates no view kind, renderer, model or clock. Shared defaults own spacing, wrapping, glyph sizes and annotations. Authors supply no layout numbers.
+
+Each row has a unique nonempty `id`, visible `label` and optional `color`, defaulting to `scientificPalette.neutral`. Its discriminant defines one fact:
+
+- `kind: "items"`, `items: readonly CollectionItem[]`, optional `order: "unordered" | "supplied"`. Items have globally unique `id`, optional `label`, `color` and existing `shape`. Placement preserves input order; omission makes no queue-order claim. Use a model-owned ordered snapshot for supplied order.
+- `kind: "count"`, `count`: a nonnegative safe integer, shown exactly without inventing selectable people.
+- `kind: "capacity"`, finite nonnegative `used` and `capacity`, and required nonempty `unit`: exact quantities and retained excess remain visible. Anonymous unit outlines or a symbolic frame never assign identified items to seats.
+
+Item colors override row colors. Empty rows stay named; `[]` returns a valid empty scene described as `No collections`. Every supplied identity is retained, including collections above 200. Count/capacity decorations have `selectable: false`; generated decoration IDs are checked for collisions with supplied IDs. Unknown fields, incompatible variants, accessors and unsupported enums throw `TypeError`; invalid ranges, duplicate IDs and derived overflow throw `RangeError`. Output changes cannot mutate input. Abstract diagram coordinates do not replace physical topology, Grid fields or elevator floors.
+
 ### Charts
 
-Line and scatter views project numeric `Series[]`: each series has `label`, optional `color` and numeric `{ x, y }` points. Bar views project `BarSeries[]`, whose x values may instead be categories. A bar view uses one x mode across all series; mixed string/number modes fail. Scientific history remains model-owned.
+Line and scatter views project numeric `Series[]`: each series has `label`, optional `color` and numeric `{ x, y }` points. Bar views project `BarSeries[]`, whose x values may instead be categories. A bar view uses one x mode across all series; mixed string/number modes fail. Scientific history remains model-owned. Explicit series colors are preserved. Omitted colors stay associated with unique series labels during the mounted view lifetime, including filtering and reordering; duplicate labels retain positional fallback. Setup/disposal resets this presentation lifetime. This is not a scientific category registry.
 
 Categorical bars use first-seen category order and place series side by side. A repeated category within one series fails; missing categories leave empty slots rather than invented zero measurements. Signed finite values use a zero baseline, zero values remain in accessible text, and empty data invents no categories. Existing numeric bar positions retain their compatibility semantics.
 
@@ -122,13 +154,13 @@ Optional `xAxis` and `yAxis` contain `label?` and `unit?`. Together they display
 
 ### Table
 
-`{ type: "table", label, rows }` projects records whose values are string, number or boolean. Current rendering derives columns from the first record's key order, displays at most 200 records, and leaves missing values blank. An empty array has no derived columns. This display bound is not a model-data truncation rule.
+`{ type: "table", label, rows }` projects records whose values are string, number or boolean. Rendering derives columns from the first record's key order and leaves missing values blank. Tables expose all rows through 200-row pages when needed, with Previous rows/Next rows controls and an exact visible range/total. Shrinking data clamps the page; Setup resets it. Empty data reports No rows and has no derived columns. Paging never mutates or truncates model data and introduces no row-selection IDs.
 
 ### Inspector
 
 `{ type: "inspector", label, value(observation, selected) }` returns a scalar record or `undefined`. Undefined hides the inspector; returning a record displays its entries. Selection is presentation-owned and starts as `null`; setup clears it. Resolve IDs against the current observation and handle stale/missing IDs. Inspectors do not grant write access to the model.
 
-Within a mounted experiment, a projected ID must identify one semantic entity consistently across views. Two views of the same entity reuse its ID; unrelated entities must use different IDs. If source kinds overlap, project namespaced IDs such as `agent:${id}` and `cell:${id}`, then resolve those IDs against the current observation in the inspector and selection-dependent action. Do not change domain IDs or introduce a second allocator. This is an authoring contract: the host cannot infer whether two arbitrary projections represent the same entity. Selection remains `string | null`, and a missing target must not trigger a model action. The [namespaced example](../../examples/ui-authoring-next/03-namespaced-selection.ts) covers collisions, shared selection, disappearance and restart.
+Within a mounted experiment, a projected ID must identify one semantic entity consistently across views. Two views of the same entity reuse its ID; unrelated entities must use different IDs. If source kinds overlap, project namespaced IDs such as `agent:${id}` and `cell:${id}`, then resolve those IDs against the current observation in the inspector and selection-dependent action. Do not change domain IDs or introduce a second allocator. This is an authoring contract: the host cannot infer whether two arbitrary projections represent the same entity. Selection remains `string | null`, and a missing target must not trigger a model action. The [namespaced example](../../tests/ui/ui-authoring-next/03-namespaced-selection.ts) covers collisions, shared selection, disappearance and restart.
 
 ## Drawing
 
@@ -137,6 +169,9 @@ Experimental `drawing` supplies required `enabled(observation)` and `intent(inst
 When a toggle is supplied it begins off for each mounted instance; without a toggle drawing follows `enabled`. Drawing, selection and camera gestures are host responsibilities. Do not attach custom pointer listeners to the Lab DOM to bypass this boundary. This addition is experimental and does not establish arbitrary custom-element support.
 
 ## Palette
+
+The public UI entry and its compatibility import export `scientificPalette`: `neutral`, `waiting`, `active`, `completed` and `unavailable`. Use these shared semantic colors together with shape, position or labels; color alone must not carry the state distinction. They are presentation constants, not model state.
+
 
 Experimental export `netLogoColor(color: number): string` converts finite numeric NetLogo colors using the observed official tenth-color bins. Values wrap modulo 140 and select the lower tenth bin. Nonnumeric values throw `TypeError`; nonfinite values throw `RangeError`. Use it for compatibility presentation, not as a second scientific state variable. This export is absent from the main baseline.
 
@@ -162,7 +197,7 @@ Setup-string and keyed-live forms are supported, with legacy arrays preserved fo
 
 ## Author examples
 
-The [five public author examples](../../examples/ui-authoring/README.md) cover defaults and inert declaration, ordered overrides and numeric bindings, alternate observations and getter precedence, grouping/format/categories, and independent actions/legacy/disposal. Compile-only cases cover incorrect field types and incomplete observation shapes. Headless assertions and real-browser checks are separate gates; the browser harness exercises the Svelte adapter and waits for settled rendering.
+The [five public author examples](../../tests/ui/ui-authoring/README.md) cover defaults and inert declaration, ordered overrides and numeric bindings, alternate observations and getter precedence, grouping/format/categories, and independent actions/legacy/disposal. Compile-only cases cover incorrect field types and incomplete observation shapes. Headless assertions and real-browser checks are separate gates; the browser harness exercises the Svelte adapter and waits for settled rendering.
 
 ## Extensions
 

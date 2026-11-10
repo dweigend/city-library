@@ -1,0 +1,26 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/des-water-allocation/model.ts";
+
+const water = model.create();
+const independent = model.create();
+assert.equal(water.read().committed, 6);
+assert.equal(water.read().waiting, 2);
+water.advance();
+assert.deepEqual(water.read().districts.map((district) => district.supplied), [3, 3, 0, 0]);
+assert.equal(water.read().supplied, 6);
+assert.equal(water.read().unmet, 6);
+assert.equal(water.read().available, 0);
+assert.deepEqual(water.read(), water.read());
+water.addSupply();
+water.advance();
+assert.deepEqual(water.read().districts.map((district) => district.supplied), [3, 3, 3, 0]);
+assert.equal(water.read().committed, 9);
+water.addSupply();
+water.advance();
+assert.equal(water.read().supplied, 12);
+assert.equal(water.read().unmet, 0);
+assert.equal(water.read().waiting, 0);
+assert.equal(water.read().committed + water.read().available, water.read().supply);
+assert.equal(independent.read().supplied, 0);
+assert.throws(() => water.addSupply(-3), RangeError);
+assert.equal(water.read().supply, 12);

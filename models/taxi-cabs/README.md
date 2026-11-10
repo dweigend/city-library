@@ -94,4 +94,4 @@ The [UI binding](ui.ts) presents `cbd · cbd · AM`, `res · com · AM`, `res ·
 
 Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained NetLogo source](original.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
 
-[Local evidence](evidence/) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `taxi-cabs` and links any shared checks.
+[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `taxi-cabs` and links any shared checks.

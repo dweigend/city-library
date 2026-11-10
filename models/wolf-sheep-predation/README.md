@@ -46,4 +46,4 @@ The [UI binding](ui.ts) presents `Sheep food gain`, `Wolf food gain`, `Sheep rep
 
 Attribution and rights: [adaptation comments](model.ts) and the retained source notices. Baseline: [retained NetLogo source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
 
-[Local evidence](evidence/) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `wolf-sheep-predation` and links any shared checks.
+[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `wolf-sheep-predation` and links any shared checks.

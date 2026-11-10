@@ -19,21 +19,16 @@ export const ui = defineUI(model, {
     label: "Original NetLogo model · Rand and Wilensky · CC BY-NC-SA 3.0",
   },
   actions: [{ label: "Disturb", run: (instance) => instance.disturb() }],
+  change: (instance, changes) => instance.setRules(changes),
   live: {
     regionSize: {
       label: "Region radius",
-      set: (instance, value) => instance.setRules({ regionSize: value }),
     },
-    increasingReturns: {
-      set: (instance, value) => instance.setRules({ increasingReturns: value }),
-    },
+    increasingReturns: {},
     attempts: {
       label: "Search attempts",
-      set: (instance, value) => instance.setRules({ attempts: value }),
     },
-    birth: {
-      set: (instance, value) => instance.setRules({ birth: value }),
-    },
+    birth: {},
   },
   monitors: [
     { label: "Tick", value: (state) => state.tick },

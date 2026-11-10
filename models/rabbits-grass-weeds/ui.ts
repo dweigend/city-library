@@ -3,22 +3,13 @@ import { defineUI, type Observation, type SpatialData, type Series } from "../..
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
   setup: ["seed", "number"],
+  change: (instance, changes) => instance.setRules(changes),
   live: {
-    birthThreshold: {
-      set: (m, v) => m.setRules({ birthThreshold: v }),
-    },
-    grassGrowRate: {
-      set: (m, v) => m.setRules({ grassGrowRate: v }),
-    },
-    grassEnergy: {
-      set: (m, v) => m.setRules({ grassEnergy: v }),
-    },
-    weedsGrowRate: {
-      set: (m, v) => m.setRules({ weedsGrowRate: v }),
-    },
-    weedEnergy: {
-      set: (m, v) => m.setRules({ weedEnergy: v }),
-    },
+    birthThreshold: {},
+    grassGrowRate: {},
+    grassEnergy: {},
+    weedsGrowRate: {},
+    weedEnergy: {},
   },
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/RabbitsGrassWeeds",

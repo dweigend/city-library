@@ -61,6 +61,7 @@ export function create(options: Partial<OfficeParameters> = {}) {
       const completed = residents.filter((resident) => resident.completed !== undefined);
       return {
         tick: agenda.time, parameters: { ...settings }, waiting: desks.waiting.length,
+        waitingResidents: desks.waiting.map((request) => request.owner),
         busy: desks.used, completed: completed.length,
         totalWait: residents.reduce((sum, resident) => sum + (resident.started === undefined ? agenda.time : resident.started) - resident.arrived, 0),
         residents: residents.map((resident) => ({ number: resident.number, arrived: resident.arrived, started: resident.started ?? -1, completed: resident.completed ?? -1, status: resident.ticket.status })),

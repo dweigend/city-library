@@ -4,21 +4,12 @@ import { model } from "./model.ts";
 
 const binding = defineUI(model, {
   setup: ["seed", "initialChloroplasts", "initialCarbonDioxide"],
+  change: (instance, changes) => instance.setParameters(changes),
   live: {
-    waterflowThroughLeaf: {
-      set: (instance, value) =>
-        instance.setParameters({ waterflowThroughLeaf: value }),
-    },
-    intensityOfLight: {
-      set: (instance, value) =>
-        instance.setParameters({ intensityOfLight: value }),
-    },
-    autoStop: {
-      set: (instance, value) => instance.setParameters({ autoStop: value }),
-    },
-    stopAt: {
-      set: (instance, value) => instance.setParameters({ stopAt: value }),
-    },
+    waterflowThroughLeaf: {},
+    intensityOfLight: {},
+    autoStop: {},
+    stopAt: {},
   },
   complete: (state) => state.stopped,
   source: {

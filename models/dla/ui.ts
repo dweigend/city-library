@@ -7,16 +7,11 @@ export const ui = defineUI(model, {
     url: "https://ccl.northwestern.edu/netlogo/models/DLA",
     label: "Original NetLogo model · Uri Wilensky · CC BY-NC-SA 3.0",
   },
+  change: (instance, changes) => instance.setRules(changes),
   live: {
-    maxParticles: {
-      set: (m, v) => m.setRules({ maxParticles: v }),
-    },
-    wiggleAngle: {
-      set: (m, v) => m.setRules({ wiggleAngle: v }),
-    },
-    useWholeWorld: {
-      set: (m, v) => m.setRules({ useWholeWorld: v }),
-    },
+    maxParticles: {},
+    wiggleAngle: {},
+    useWholeWorld: {},
   },
   complete: (s) => s.done,
   monitors: [

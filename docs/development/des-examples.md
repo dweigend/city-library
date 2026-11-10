@@ -21,7 +21,7 @@ Phase A has three examples focused on the new detached capabilities, followed by
 | B, combined | `des-water-allocation` | Neighborhood Grid and finite water allocation with explicit unmet demand | Allocation units and minutes; no hydraulic, pressure or water-quality claims. Six delivered plus six unmet; added supply fulfills total demand 12 | Add supply action and neighborhood allocation ledger |
 | B, combined | `des-machine-maintenance` | Spatial machine Agents, crew Resource, failures and delayed repairs | Synthetic minutes, explicit working/failed/repair states; at minute 10 two repairs complete and mean availability is 0.5 | Spatial machines, live repair-team capacity, uptime and repair ledger |
 
-The ten asserted scripts under `examples/des-models` define the exact fixtures for both phases.
+The ten asserted scripts under `tests/public-contracts/des-models` define the exact fixtures for both phases.
 
 ## Common acceptance
 

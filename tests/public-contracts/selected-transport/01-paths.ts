@@ -1,0 +1,22 @@
+import assert from 'node:assert/strict';
+import { create } from '../../../models/paths/model.ts';
+
+const empty = create({ seed: 1, walkerCount: 0 });
+assert.equal(empty.snapshot().tick, 0);
+assert.equal(empty.snapshot().walkers.length, 0);
+assert.equal(empty.snapshot().cells.length, 10201);
+empty.toggleBuilding({ x: 0, y: 0 });
+assert.equal(empty.snapshot().buildings.length, 1);
+empty.toggleBuilding({ x: 3, y: 0 });
+assert.equal(empty.snapshot().buildings.length, 0);
+empty.setParameters({ popularityDecayRate: 100, showPopularity: true });
+empty.step(3);
+assert.equal(empty.snapshot().tick, 3);
+assert.ok(empty.snapshot().cells.every(cell => cell.popularity === 0));
+const populated = create({ seed: 2, walkerCount: 5 });
+populated.step(10);
+assert.equal(populated.snapshot().walkers.length, 5);
+assert.ok(populated.snapshot().cells.some(cell => cell.popularity > 0));
+const before = populated.snapshot();
+assert.deepEqual(populated.snapshot(), before);
+assert.equal(populated.snapshot().tick, 10);

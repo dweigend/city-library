@@ -1,5 +1,6 @@
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
+import { officeScene } from "./scene.ts";
 
 export const ui = defineUI(model, {
   setup: ["residents", "serviceMinutes"],
@@ -12,6 +13,7 @@ export const ui = defineUI(model, {
     { label: "Completed", value: (state) => state.completed },
   ],
   views: [
+    { type: "spatial", label: "Residents and clerk capacity", data: officeScene },
     { type: "line", label: "Waiting residents", xAxis: { label: "Time", unit: "min" }, yAxis: { label: "Residents" }, series: (state) => [{ label: "Waiting", points: state.history }] },
     { type: "table", label: "Service ledger", rows: (state) => state.residents },
   ],

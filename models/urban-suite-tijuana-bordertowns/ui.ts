@@ -43,44 +43,22 @@ export const ui = defineUI(model, {
       if (intent.phase !== "end") instance.addNode(intent.position);
     },
   },
+  change: (instance, changes) => instance.setRules(changes),
   live: {
-    maquiladoras: {
-      set: (m, v) => m.setRules({ maquiladoras: v }),
-    },
-    serviceCenters: {
-      set: (m, v) => m.setRules({ serviceCenters: v }),
-    },
-    migrationTicks: {
-      set: (m, v) => m.setRules({ migrationTicks: v }),
-    },
-    crossingTicks: {
-      set: (m, v) => m.setRules({ crossingTicks: v }),
-    },
-    buildingTicks: {
-      set: (m, v) => m.setRules({ buildingTicks: v }),
-    },
+    maquiladoras: {},
+    serviceCenters: {},
+    migrationTicks: {},
+    crossingTicks: {},
+    buildingTicks: {},
     initDensity: {
       label: "Initial density",
-      set: (m, v) => m.setRules({ initDensity: v }),
     },
-    coloniaSize: {
-      set: (m, v) => m.setRules({ coloniaSize: v }),
-    },
-    requiredCapital: {
-      set: (m, v) => m.setRules({ requiredCapital: v }),
-    },
-    carryingCapacity: {
-      set: (m, v) => m.setRules({ carryingCapacity: v }),
-    },
-    visualUpdate: {
-      set: (m, v) => m.setRules({ visualUpdate: v }),
-    },
-    colorCode: {
-      set: (m, v) => m.setRules({ colorCode: v }),
-    },
-    cityGrowth: {
-      set: (m, v) => m.setRules({ cityGrowth: v }),
-    },
+    coloniaSize: {},
+    requiredCapital: {},
+    carryingCapacity: {},
+    visualUpdate: {},
+    colorCode: {},
+    cityGrowth: {},
   },
   monitors: [
     { label: "Phase", value: (s) => s.phase },
