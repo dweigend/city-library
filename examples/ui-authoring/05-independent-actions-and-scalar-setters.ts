@@ -27,7 +27,7 @@ equal(first.read().parameters.growthAmount, 7, 'Canonical keyed action is applie
 equal(second.read().tick, secondBefore.tick, 'Other instance time remains independent');
 equal(second.read().randomState, secondBefore.randomState, 'Other instance RNG remains independent');
 scalarSetterSpec.live[0].set(second, 5);
-equal(second.read().parameters.growthAmount, 5, 'Legacy scalar-union setter remains accepted');
+equal(second.read().parameters.growthAmount, 5, 'Scalar-setter scalar-union setter remains accepted');
 
 export async function browserChecks(container: HTMLElement, bind: typeof defineUI = defineUI) {
   const left = container.ownerDocument.createElement('section');
@@ -43,7 +43,7 @@ export async function browserChecks(container: HTMLElement, bind: typeof defineU
   try {
     await settle(container);
     equal(labels(left, Object.keys(model.inputs)), ['Growth Amount'], 'Explicit empty setup leaves only live controls');
-    equal(labels(old, Object.keys(model.inputs)).filter(label => label === 'Growth Amount').length, 2, 'Legacy omitted setup preserves duplicate live/setup behavior');
+    equal(labels(old, Object.keys(model.inputs)).filter(label => label === 'Growth Amount').length, 2, 'Scalar-setter omitted setup preserves duplicate live/setup behavior');
     button(left, 'Setup').click(); await settle(container); button(right, 'Setup').click(); await settle(container);
     const action = button(left, 'One interval'); action.click(); await settle(container);
     equal(left.querySelector('dd')?.textContent?.trim(), '1', 'Mounted action advances only its model');
