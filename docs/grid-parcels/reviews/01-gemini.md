@@ -29,7 +29,7 @@ The review confirms that all five frozen examples are byte-identical to their ba
 
 ## 2. Frozen Examples & Provenance Verification
 
-- **Example Checksums:** Verified against `examples/grid-parcels/SHA256SUMS` using `sha256sum -c`. All 5 examples (`01` through `05`) matched with zero diff from `158b803..1fda843`.
+- **Example Checksums:** Verified against `tests/public-contracts/grid-parcels/SHA256SUMS` using `sha256sum -c`. All 5 examples (`01` through `05`) matched with zero diff from `158b803..1fda843`.
 - **Public API Conformance:** All 5 examples run with assertion passes under Bun without flags or shims.
 - **Source Provenance Isolation:** Checked for runtime leakage of `city_game` (committed at `3e1d34f1`). `git grep -i "city_game" src/ index.ts package.json` returned zero matches. No dependencies were added to `package.json` or `bun.lockb`. The source remains strictly read-only reference provenance.
 - **Scope Discipline:** No UI code (`ui/`) was modified; no secondary `Cell` type or alternative `MultiPolygon` format was exported.
@@ -103,7 +103,7 @@ The review confirms that all five frozen examples are byte-identical to their ba
 
 ### 3.4 Preservation of Regular Grid Contracts
 
-- Regular `Grid.add(space, options)` behavior remains intact:
+- Regular `Grid.create(space, options)` behavior remains intact:
   - Centered origin preserved.
   - Moore (8) and faces (4) neighborhood order preserved.
   - Directional diffusion multiplicity on tiny wrapping spaces (e.g., 1x1, 1x2, 2x2) is strictly maintained.
@@ -117,8 +117,8 @@ All checks executed independently during this review:
 
 | Check | Target / Command | Result |
 | --- | --- | --- |
-| Checksums | `sha256sum -c examples/grid-parcels/SHA256SUMS` | All 5 frozen examples matched |
-| Frozen Examples | `bun examples/grid-parcels/01..05-*.ts` | All 5 passed (exit code 0) |
+| Checksums | `bun run check:migration` | All 5 frozen examples matched |
+| Frozen Examples | `bun tests/public-contracts/grid-parcels/01..05-*.ts` | All 5 passed (exit code 0) |
 | Grid/Parcel Tests | `bun test tests/grid-parcels-*.test.ts` | 21 passed, 0 failed (1365 expect calls) |
 | Spatial Regressions | `bun test tests/spatial-grid.test.ts tests/indexed-occupancy.test.ts` | 19 passed, 0 failed |
 | TypeScript Check | `bun run typecheck && bunx tsc -p tsconfig.dev.json` | 0 errors, 0 warnings (including Svelte check) |

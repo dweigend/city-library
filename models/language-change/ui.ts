@@ -6,30 +6,24 @@ const binding = defineUI(model, {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Language%20Change.nlogox",
     label: "Source attribution · Wilensky · CC BY-NC-SA 3.0",
   },
+  change: (instance, changes) => instance.setParameters(changes),
   live: {
     percentGrammar1: {
       label: "Grammar 1 on redistribution (%)",
-      set: (m, v) => m.setParameters({ percentGrammar1: v }),
     },
     updateAlgorithm: {
       label: "Learning rule",
-      set: (m, v) => m.setParameters({ updateAlgorithm: v }),
     },
     thresholdVal: {
       label: "Threshold",
-      set: (m, v) => m.setParameters({ thresholdVal: v }),
     },
     sinkState1: {
       label: "Grammar 1 is a sink",
-      set: (m, v) => m.setParameters({ sinkState1: v }),
     },
     logistic: {
       label: "Logistic speech bias",
-      set: (m, v) => m.setParameters({ logistic: v }),
     },
-    alpha: {
-      set: (m, v) => m.setParameters({ alpha: v }),
-    },
+    alpha: {},
   },
   actions: [
     { label: "Reset states", run: (m) => m.resetNodes() },

@@ -3,20 +3,12 @@ import { model } from "./model.ts";
 
 const binding = defineUI(model, {
   setup: ["seed", "population"],
+  change: (instance, changes) => instance.setParameters(changes),
   live: {
-    sniffThreshold: {
-      set: (instance, value) =>
-        instance.setParameters({ sniffThreshold: value }),
-    },
-    sniffAngle: {
-      set: (instance, value) => instance.setParameters({ sniffAngle: value }),
-    },
-    wiggleAngle: {
-      set: (instance, value) => instance.setParameters({ wiggleAngle: value }),
-    },
-    wiggleBias: {
-      set: (instance, value) => instance.setParameters({ wiggleBias: value }),
-    },
+    sniffThreshold: {},
+    sniffAngle: {},
+    wiggleAngle: {},
+    wiggleBias: {},
   },
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Slime.nlogox",

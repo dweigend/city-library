@@ -7,19 +7,13 @@ export const ui = defineUI(model, {
     url: "https://ccl.northwestern.edu/netlogo/models/CentralLimitTheorem",
     label: "Wilensky (2005) · CC BY-NC-SA 3.0",
   },
+  change: (instance, changes) => instance.setRules(changes),
   live: {
-    sampleSize: {
-      set: (m, v) => m.setRules({ sampleSize: v }),
-    },
-    maxValue: {
-      set: (m, v) => m.setRules({ maxValue: v }),
-    },
-    alsoSums: {
-      set: (m, v) => m.setRules({ alsoSums: v }),
-    },
+    sampleSize: {},
+    maxValue: {},
+    alsoSums: {},
     showEV: {
       label: "Show expected value",
-      set: (m, v) => m.setRules({ showEV: v }),
     },
   },
   actions: [

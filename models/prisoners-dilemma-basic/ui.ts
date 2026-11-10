@@ -2,16 +2,11 @@ import { defineUI, type Observation } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
   setup: ["seed"],
+  change: (instance, changes) => instance.setRules(changes),
   live: {
-    youSilent: {
-      set: (m, value) => m.setRules({ youSilent: value }),
-    },
-    partnerSilent: {
-      set: (m, value) => m.setRules({ partnerSilent: value }),
-    },
-    partnerSilenceKnown: {
-      set: (m, value) => m.setRules({ partnerSilenceKnown: value }),
-    },
+    youSilent: {},
+    partnerSilent: {},
+    partnerSilenceKnown: {},
   },
   actions: [{ label: "Answer", run: (m) => m.answer() }],
   source: {

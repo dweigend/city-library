@@ -1,0 +1,31 @@
+import assert from "node:assert/strict";
+import { create as chloroplasts } from "../../../models/chloroplasts-and-food/model.ts";
+import { create as slime } from "../../../models/slime/model.ts";
+
+const cell = chloroplasts({ seed: 1, initialChloroplasts: 3, initialCarbonDioxide: 100, intensityOfLight: 0, waterflowThroughLeaf: 0 });
+assert.equal(cell.read().tick, 0);
+assert.equal(cell.read().carbonDioxide, 100);
+assert.equal(cell.read().chloroplasts.length, 3);
+assert.equal(cell.read().atpSites.length, 18);
+cell.advance(20);
+assert.equal(cell.read().tick, 20);
+assert.equal(cell.read().carbonDioxide, 100);
+assert.equal(cell.read().oxygen, 0);
+assert.equal(cell.read().glucoseProduced, 0);
+cell.setParameters({ autoStop: true, stopAt: 100 });
+cell.advance(100);
+assert.equal(cell.read().tick, 100);
+cell.advance();
+assert.equal(cell.read().tick, 100);
+
+const colony = slime({ seed: 2, population: 12, wiggleAngle: 0, wiggleBias: 0 });
+assert.equal(colony.read().agents.length, 12);
+assert.equal(colony.read().chemicalTotal, 0);
+colony.advance();
+assert.ok(Math.abs(colony.read().chemicalTotal - 21.6) < 1e-9);
+colony.advance();
+assert.ok(Math.abs(colony.read().chemicalTotal - 41.04) < 1e-9);
+const before = colony.read();
+colony.read().agents.splice(0);
+assert.deepEqual(colony.read(), before);
+assert.throws(() => colony.advance(-1), RangeError);

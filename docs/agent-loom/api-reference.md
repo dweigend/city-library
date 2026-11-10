@@ -998,7 +998,7 @@ type GeneratorOptions<N> =
       wrap?: boolean; directed?: boolean }
   | { kind: "random"; nodes: readonly N[]; probability: number;
       directed?: boolean; random: Random }
-  | { kind: "smallWorld"; nodes: readonly N[]; neighbors: number;
+  | { kind: "small-world"; nodes: readonly N[]; neighbors: number;
       probability: number; random: Random }
   | { kind: "preferential"; nodes: readonly N[]; links: number;
       random: Random }
@@ -1016,7 +1016,7 @@ For path connect consecutive nodes; cycle adds last-to-first (0/1 nodes produce 
 
 tree uses node 0 as root and joins each later node i to parent floor((i−1)/branching); branching defaults 2 and must be a positive integer. directed defaults false; true points parent to child. Empty input is a valid empty forest. lattice requires a nonempty shape of 1, 2 or 3 positive integer axis lengths whose product equals nodes.length; flatten with x fastest, then y, then z. Connect face-adjacent axis cells, wrap defaults false, duplicate/loop neighbor pairs collapsed. directed defaults false; true directs positive-axis steps including wrap seams. Existing Graph representation must permit any antiparallel directed pairs. This is topology, not a Grid or World-space constructor.
 
-random tests every unordered pair (or distinct ordered pair when directed) in lexicographic node index order, consuming one uniform number per candidate, and adds it when draw &lt; probability. probability is finite in [0,1]; even endpoints 0/1 consume the scheduled draws. smallWorld is undirected Watts–Strogatz: require n≥3, even integer neighbors in [2,n−1] and probability in [0,1]. Start an n-node ring connected neighbors/2 forward and backward; examine each original clockwise edge in source/offset order, draw once to decide rewiring, then uniformly sample an eligible nonself/nonneighbor endpoint if one exists.
+random tests every unordered pair (or distinct ordered pair when directed) in lexicographic node index order, consuming one uniform number per candidate, and adds it when draw &lt; probability. probability is finite in [0,1]; even endpoints 0/1 consume the scheduled draws. small-world is undirected Watts–Strogatz: require n≥3, even integer neighbors in [2,n−1] and probability in [0,1]. Start an n-node ring connected neighbors/2 forward and backward; examine each original clockwise edge in source/offset order, draw once to decide rewiring, then uniformly sample an eligible nonself/nonneighbor endpoint if one exists.
 
 Keep the original edge if none is eligible. A successful rewire preserves source and edge count. The supplied Random is the only stream used.
 

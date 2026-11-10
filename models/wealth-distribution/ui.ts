@@ -14,28 +14,21 @@ export const ui = defineUI(model, {
     url: "https://ccl.northwestern.edu/netlogo/models/WealthDistribution",
     label: "Source attribution · Uri Wilensky · CC BY-NC-SA 3.0",
   },
+  change: (instance, changes) => instance.setRules(changes),
   live: {
-    growthInterval: {
-      set: (instance, value) => instance.setRules({ growthInterval: value }),
-    },
-    growthAmount: {
-      set: (instance, value) => instance.setRules({ growthAmount: value }),
-    },
+    growthInterval: {},
+    growthAmount: {},
     maxVision: {
       label: "Maximum vision",
-      set: (instance, value) => instance.setRules({ maxVision: value }),
     },
     metabolismMax: {
       label: "Maximum metabolism",
-      set: (instance, value) => instance.setRules({ metabolismMax: value }),
     },
     minLife: {
       label: "Minimum life",
-      set: (instance, value) => instance.setRules({ minLife: value }),
     },
     maxLife: {
       label: "Maximum life",
-      set: (instance, value) => instance.setRules({ maxLife: value }),
     },
   },
   monitors: [

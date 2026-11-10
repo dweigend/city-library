@@ -13,16 +13,11 @@ export const ui = defineUI(model, {
     label: "Source attribution · Felsen and Wilensky · CC BY-NC-SA 3.0",
   },
   complete: (state) => state.done,
+  change: (instance, changes) => instance.setRules(changes),
   live: {
-    birthRate: {
-      set: (instance, value) => instance.setRules({ birthRate: value }),
-    },
-    plantingRate: {
-      set: (instance, value) => instance.setRules({ plantingRate: value }),
-    },
-    pollutingRate: {
-      set: (instance, value) => instance.setRules({ pollutingRate: value }),
-    },
+    birthRate: {},
+    plantingRate: {},
+    pollutingRate: {},
   },
   monitors: [
     { label: "Tick", value: (state) => state.tick },

@@ -3,29 +3,15 @@ import { model } from "./model.ts";
 
 const binding = defineUI(model, {
   setup: ["seed"],
+  change: (instance, changes) => instance.setParameters(changes),
   live: {
-    ringDist: {
-      set: (instance, value) => instance.setParameters({ ringDist: value }),
-    },
-    particleSize: {
-      set: (instance, value) => instance.setParameters({ particleSize: value }),
-    },
-    fixedTemps: {
-      set: (instance, value) => instance.setParameters({ fixedTemps: value }),
-    },
-    showTemps: {
-      set: (instance, value) => instance.setParameters({ showTemps: value }),
-    },
-    energyApproximation: {
-      set: (instance, value) =>
-        instance.setParameters({ energyApproximation: value }),
-    },
-    alpha: {
-      set: (instance, value) => instance.setParameters({ alpha: value }),
-    },
-    beta: {
-      set: (instance, value) => instance.setParameters({ beta: value }),
-    },
+    ringDist: {},
+    particleSize: {},
+    fixedTemps: {},
+    showTemps: {},
+    energyApproximation: {},
+    alpha: {},
+    beta: {},
   },
   complete: (state) => state.stopped,
   source: {

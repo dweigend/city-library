@@ -379,7 +379,7 @@
         "contract-frozen": {
           "done": true,
           "evidence": [
-            "examples/segregation/SHA256SUMS",
+            "tests/public-contracts/segregation/SHA256SUMS",
             "models/segregation/contract.md"
           ],
           "basis": "2682bfa precedes runtime"
@@ -480,7 +480,7 @@
           "done": true,
           "evidence": [
             "models/catalog/contracts/giant-component.md",
-            "examples/giant-component/SHA256SUMS"
+            "tests/targets/giant-component/SHA256SUMS"
           ],
           "basis": "6a0cd3b before model runtime"
         },
@@ -595,7 +595,7 @@
           "done": true,
           "evidence": [
             "docs/development/selected-network-contracts.md",
-            "examples/selected-network/SHA256SUMS"
+            "tests/public-contracts/selected-network/SHA256SUMS"
           ],
           "basis": "9d713fa precedes runtime"
         },
@@ -605,7 +605,7 @@
             "models/diffusion-on-a-directed-network/model.ts",
             "models/diffusion-on-a-directed-network/ui.ts",
             "tests/selected-network-models.test.ts",
-            "examples/selected-network/SHA256SUMS"
+            "tests/public-contracts/selected-network/SHA256SUMS"
           ],
           "basis": "2fab83b real public-library composition; integrated type/tests/examples/build/consumer passed"
         },
@@ -615,7 +615,7 @@
             "models/diffusion-on-a-directed-network/model.ts",
             "models/diffusion-on-a-directed-network/ui.ts",
             "tests/selected-network-models.test.ts",
-            "examples/selected-network/SHA256SUMS",
+            "tests/public-contracts/selected-network/SHA256SUMS",
             "models/catalog/acceptance/selected-ecology-integration-evidence/checks.json",
             "models/catalog/acceptance/selected-95-integration-evidence/checks.json",
             "models/catalog/acceptance/selected-105-integration-evidence/checks.json"
@@ -680,7 +680,7 @@
           "done": true,
           "evidence": [
             "docs/development/selected-network-contracts.md",
-            "examples/selected-network/SHA256SUMS"
+            "tests/public-contracts/selected-network/SHA256SUMS"
           ],
           "basis": "9d713fa precedes runtime"
         },
@@ -690,7 +690,7 @@
             "models/virus-on-a-network/model.ts",
             "models/virus-on-a-network/ui.ts",
             "tests/selected-network-models.test.ts",
-            "examples/selected-network/SHA256SUMS"
+            "tests/public-contracts/selected-network/SHA256SUMS"
           ],
           "basis": "2fab83b real public-library composition; integrated type/tests/examples/build/consumer passed"
         },
@@ -700,7 +700,7 @@
             "models/virus-on-a-network/model.ts",
             "models/virus-on-a-network/ui.ts",
             "tests/selected-network-models.test.ts",
-            "examples/selected-network/SHA256SUMS",
+            "tests/public-contracts/selected-network/SHA256SUMS",
             "models/catalog/acceptance/selected-ecology-integration-evidence/checks.json",
             "models/catalog/acceptance/selected-95-integration-evidence/checks.json",
             "models/catalog/acceptance/selected-105-integration-evidence/checks.json"
@@ -3031,7 +3031,7 @@
           "done": true,
           "evidence": [
             "docs/development/selected-urban-remaining-contracts.md",
-            "examples/selected-urban-remaining/SHA256SUMS",
+            "tests/public-contracts/selected-urban-remaining/SHA256SUMS",
             "models/catalog/acceptance/urban-remaining-four-reference-browser.md"
           ],
           "basis": "Five public asserted scripts frozen f308faf before scoped implementation, with executed original boundary decisions."
@@ -3205,7 +3205,7 @@
           "done": true,
           "evidence": [
             "docs/development/selected-urban-feedback-contracts.md",
-            "examples/selected-urban-feedback/SHA256SUMS"
+            "tests/public-contracts/selected-urban-feedback/SHA256SUMS"
           ],
           "basis": "five amended public model scripts frozenee77056 before runtime, after actually executed original edge cases; sourcecolor UI five examples frozen533210c"
         },
@@ -3221,7 +3221,7 @@
           "done": true,
           "evidence": [
             "tests/selected-urban-feedback-models.test.ts",
-            "examples/selected-urban-feedback/SHA256SUMS",
+            "tests/public-contracts/selected-urban-feedback/SHA256SUMS",
             "models/catalog/acceptance/urban-cells-browser-report.md",
             "models/catalog/acceptance/selected-ecology-integration-evidence/checks.json",
             "models/catalog/acceptance/selected-95-integration-evidence/checks.json",
@@ -3287,7 +3287,7 @@
           "done": true,
           "evidence": [
             "docs/development/selected-urban-feedback-contracts.md",
-            "examples/selected-urban-feedback/SHA256SUMS"
+            "tests/public-contracts/selected-urban-feedback/SHA256SUMS"
           ],
           "basis": "five amended public model scripts frozenee77056 before runtime, after actually executed original edge cases; sourcecolor UI five examples frozen533210c"
         },
@@ -3303,7 +3303,7 @@
           "done": true,
           "evidence": [
             "tests/selected-urban-feedback-models.test.ts",
-            "examples/selected-urban-feedback/SHA256SUMS",
+            "tests/public-contracts/selected-urban-feedback/SHA256SUMS",
             "models/catalog/acceptance/urban-cells-browser-report.md",
             "models/catalog/acceptance/selected-ecology-integration-evidence/checks.json",
             "models/catalog/acceptance/selected-95-integration-evidence/checks.json",
@@ -3369,7 +3369,7 @@
           "done": true,
           "evidence": [
             "docs/development/selected-urban-feedback-contracts.md",
-            "examples/selected-urban-feedback/SHA256SUMS"
+            "tests/public-contracts/selected-urban-feedback/SHA256SUMS"
           ],
           "basis": "five amended public model scripts frozenee77056 before runtime, after actually executed original edge cases; sourcecolor UI five examples frozen533210c"
         },
@@ -3385,7 +3385,7 @@
           "done": true,
           "evidence": [
             "tests/selected-urban-feedback-models.test.ts",
-            "examples/selected-urban-feedback/SHA256SUMS",
+            "tests/public-contracts/selected-urban-feedback/SHA256SUMS",
             "models/catalog/acceptance/urban-cells-browser-report.md",
             "models/catalog/acceptance/selected-ecology-integration-evidence/checks.json",
             "models/catalog/acceptance/selected-95-integration-evidence/checks.json",
@@ -3451,7 +3451,7 @@
           "done": true,
           "evidence": [
             "docs/development/selected-urban-remaining-contracts.md",
-            "examples/selected-urban-remaining/SHA256SUMS",
+            "tests/public-contracts/selected-urban-remaining/SHA256SUMS",
             "models/catalog/acceptance/urban-remaining-four-reference-browser.md"
           ],
           "basis": "Five public asserted scripts frozen f308faf before scoped implementation, with executed original boundary decisions."
@@ -3536,7 +3536,7 @@
           "done": true,
           "evidence": [
             "models/urban-suite-tijuana-bordertowns/contract.md",
-            "examples/selected-tijuana/SHA256SUMS",
+            "tests/public-contracts/selected-tijuana/SHA256SUMS",
             "models/catalog/acceptance/tijuana-reference-browser.md"
           ],
           "basis": "Five full lifecycle/diagnostic scripts and helper frozen62d9816 before runtime; source birth, coincident-face, raw fractional shortage and partial-error boundaries actually checked."
@@ -3620,7 +3620,7 @@
           "done": true,
           "evidence": [
             "docs/development/selected-urban-contracts.md",
-            "examples/selected-urban/SHA256SUMS"
+            "tests/public-contracts/selected-urban/SHA256SUMS"
           ],
           "basis": "five public asserted examples frozen at a394b5b before scoped runtime; no new library expansion"
         },
@@ -3636,7 +3636,7 @@
           "done": true,
           "evidence": [
             "tests/selected-urban-models.test.ts",
-            "examples/selected-urban/SHA256SUMS",
+            "tests/public-contracts/selected-urban/SHA256SUMS",
             "models/catalog/acceptance/urban-pollution-browser-report.md",
             "models/catalog/acceptance/selected-ecology-integration-evidence/checks.json",
             "models/catalog/acceptance/selected-95-integration-evidence/checks.json",
@@ -3702,7 +3702,7 @@
           "done": true,
           "evidence": [
             "docs/development/selected-urban-remaining-contracts.md",
-            "examples/selected-urban-remaining/SHA256SUMS",
+            "tests/public-contracts/selected-urban-remaining/SHA256SUMS",
             "models/catalog/acceptance/urban-remaining-four-reference-browser.md"
           ],
           "basis": "Five public asserted scripts frozen f308faf before scoped implementation, with executed original boundary decisions."
@@ -3787,7 +3787,7 @@
           "done": true,
           "evidence": [
             "docs/development/selected-urban-contracts.md",
-            "examples/selected-urban/SHA256SUMS"
+            "tests/public-contracts/selected-urban/SHA256SUMS"
           ],
           "basis": "five public asserted examples frozen at a394b5b before scoped runtime; no new library expansion"
         },
@@ -3803,7 +3803,7 @@
           "done": true,
           "evidence": [
             "tests/selected-urban-models.test.ts",
-            "examples/selected-urban/SHA256SUMS",
+            "tests/public-contracts/selected-urban/SHA256SUMS",
             "models/catalog/acceptance/urban-pollution-browser-report.md",
             "models/catalog/acceptance/selected-ecology-integration-evidence/checks.json",
             "models/catalog/acceptance/selected-95-integration-evidence/checks.json",
@@ -3873,7 +3873,7 @@
           "done": true,
           "evidence": [
             "docs/development/selected-urban-contracts.md",
-            "examples/selected-urban/SHA256SUMS"
+            "tests/public-contracts/selected-urban/SHA256SUMS"
           ],
           "basis": "five public asserted examples frozen at a394b5b before scoped runtime; no new library expansion"
         },
@@ -3889,7 +3889,7 @@
           "done": true,
           "evidence": [
             "tests/selected-urban-models.test.ts",
-            "examples/selected-urban/SHA256SUMS",
+            "tests/public-contracts/selected-urban/SHA256SUMS",
             "models/catalog/acceptance/urban-pollution-browser-report.md",
             "models/catalog/acceptance/selected-ecology-integration-evidence/checks.json",
             "models/catalog/acceptance/selected-95-integration-evidence/checks.json",
@@ -3959,7 +3959,7 @@
           "done": true,
           "evidence": [
             "docs/development/selected-urban-remaining-contracts.md",
-            "examples/selected-urban-remaining/SHA256SUMS",
+            "tests/public-contracts/selected-urban-remaining/SHA256SUMS",
             "models/catalog/acceptance/urban-remaining-four-reference-browser.md"
           ],
           "basis": "Five public asserted scripts frozen f308faf before scoped implementation, with executed original boundary decisions."
@@ -4149,7 +4149,7 @@
           "done": true,
           "evidence": [
             "models/catalog/acceptance/selected-ecology-source-audit.md",
-            "examples/selected-ecology/SHA256SUMS",
+            "tests/public-contracts/selected-ecology/SHA256SUMS",
             "models/catalog/acceptance/selected-ecology-source-integration.md"
           ],
           "basis": "Five asserted public scripts froze before scoped runtime at078c2da, hashes preserved; no runtime/target acceptance inferred."
@@ -4234,7 +4234,7 @@
           "done": true,
           "evidence": [
             "models/catalog/acceptance/selected-ecology-source-audit.md",
-            "examples/selected-ecology/SHA256SUMS",
+            "tests/public-contracts/selected-ecology/SHA256SUMS",
             "models/catalog/acceptance/selected-ecology-source-integration.md"
           ],
           "basis": "Five asserted public scripts froze before scoped runtime at078c2da, hashes preserved; no runtime/target acceptance inferred."
@@ -4319,7 +4319,7 @@
           "done": true,
           "evidence": [
             "models/catalog/acceptance/selected-ecology-source-audit.md",
-            "examples/selected-ecology/SHA256SUMS",
+            "tests/public-contracts/selected-ecology/SHA256SUMS",
             "models/catalog/acceptance/selected-ecology-source-integration.md"
           ],
           "basis": "Five asserted public scripts froze before scoped runtime at078c2da, hashes preserved; no runtime/target acceptance inferred."
@@ -4405,7 +4405,7 @@
           "done": true,
           "evidence": [
             "models/catalog/acceptance/selected-ecology-source-audit.md",
-            "examples/selected-ecology/SHA256SUMS",
+            "tests/public-contracts/selected-ecology/SHA256SUMS",
             "models/catalog/acceptance/selected-ecology-source-integration.md"
           ],
           "basis": "Five asserted public scripts froze before scoped runtime at078c2da, hashes preserved; no runtime/target acceptance inferred."
@@ -4490,7 +4490,7 @@
           "done": true,
           "evidence": [
             "models/catalog/acceptance/selected-ecology-source-audit.md",
-            "examples/selected-ecology/SHA256SUMS",
+            "tests/public-contracts/selected-ecology/SHA256SUMS",
             "models/catalog/acceptance/selected-ecology-source-integration.md"
           ],
           "basis": "Five asserted public scripts froze before scoped runtime at078c2da, hashes preserved; no runtime/target acceptance inferred."
@@ -4575,7 +4575,7 @@
           "done": true,
           "evidence": [
             "models/catalog/acceptance/selected-ecology-source-audit.md",
-            "examples/selected-ecology/SHA256SUMS",
+            "tests/public-contracts/selected-ecology/SHA256SUMS",
             "models/catalog/acceptance/selected-ecology-source-integration.md"
           ],
           "basis": "Five asserted public scripts froze before scoped runtime at078c2da, hashes preserved; no runtime/target acceptance inferred."
@@ -4660,7 +4660,7 @@
           "done": true,
           "evidence": [
             "models/catalog/acceptance/selected-ecology-source-audit.md",
-            "examples/selected-ecology/SHA256SUMS",
+            "tests/public-contracts/selected-ecology/SHA256SUMS",
             "models/catalog/acceptance/selected-ecology-source-integration.md"
           ],
           "basis": "Five asserted public scripts froze before scoped runtime at078c2da, hashes preserved; no runtime/target acceptance inferred."
@@ -4745,7 +4745,7 @@
           "done": true,
           "evidence": [
             "models/catalog/acceptance/selected-ecology-source-audit.md",
-            "examples/selected-ecology/SHA256SUMS",
+            "tests/public-contracts/selected-ecology/SHA256SUMS",
             "models/catalog/acceptance/selected-ecology-source-integration.md"
           ],
           "basis": "Five asserted public scripts froze before scoped runtime at078c2da, hashes preserved; no runtime/target acceptance inferred."
@@ -4830,7 +4830,7 @@
           "done": true,
           "evidence": [
             "models/catalog/acceptance/selected-ecology-source-audit.md",
-            "examples/selected-ecology/SHA256SUMS",
+            "tests/public-contracts/selected-ecology/SHA256SUMS",
             "models/catalog/acceptance/selected-ecology-source-integration.md"
           ],
           "basis": "Five asserted public scripts froze before scoped runtime at078c2da, hashes preserved; no runtime/target acceptance inferred."
@@ -4915,7 +4915,7 @@
           "done": true,
           "evidence": [
             "models/catalog/acceptance/selected-ecology-source-audit.md",
-            "examples/selected-ecology/SHA256SUMS",
+            "tests/public-contracts/selected-ecology/SHA256SUMS",
             "models/catalog/acceptance/selected-ecology-source-integration.md"
           ],
           "basis": "Five asserted public scripts froze before scoped runtime at078c2da, hashes preserved; no runtime/target acceptance inferred."
@@ -5242,7 +5242,7 @@
           "done": true,
           "evidence": [
             "models/catalog/acceptance/selected-biology-examples.sha256",
-            "examples/selected-biology/03-homeostasis-and-exercise.ts"
+            "tests/public-contracts/selected-biology/03-homeostasis-and-exercise.ts"
           ],
           "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
@@ -5728,7 +5728,7 @@
           "done": true,
           "evidence": [
             "models/catalog/acceptance/selected-biology-examples.sha256",
-            "examples/selected-biology/03-homeostasis-and-exercise.ts"
+            "tests/public-contracts/selected-biology/03-homeostasis-and-exercise.ts"
           ],
           "basis": "Actual ten-original/ten-target Chromium delivery; root validated ten exact source/inventory/native hashes, all78PNGs/30source-runtime hashes/193artifacts, reran16modeltests126assertions and four unchanged scripts. Full03 remains blocked by source-rounding conflict; independent approval pending."
         },
@@ -8137,7 +8137,7 @@
           "done": true,
           "evidence": [
             "docs/development/netlogo-grid-batch-contract.md",
-            "examples/netlogo-grid-batch/SHA256SUMS"
+            "tests/public-contracts/netlogo-grid-batch/SHA256SUMS"
           ],
           "basis": "242cc12 precedes runtime"
         },
@@ -8242,7 +8242,7 @@
           "done": true,
           "evidence": [
             "docs/development/netlogo-grid-batch-contract.md",
-            "examples/netlogo-grid-batch/SHA256SUMS"
+            "tests/public-contracts/netlogo-grid-batch/SHA256SUMS"
           ],
           "basis": "242cc12 precedes runtime"
         },
@@ -10947,7 +10947,7 @@
         "contract-frozen": {
           "done": true,
           "evidence": [
-            "examples/selected-probability/SHA256SUMS",
+            "tests/public-contracts/selected-probability/SHA256SUMS",
             "docs/development/selected-probability-first-contract.md"
           ],
           "basis": "Five asserted scripts frozen160db6d before runtime, unchanged through remediation/integration."
@@ -11033,7 +11033,7 @@
         "contract-frozen": {
           "done": true,
           "evidence": [
-            "examples/selected-probability/SHA256SUMS",
+            "tests/public-contracts/selected-probability/SHA256SUMS",
             "docs/development/selected-probability-first-contract.md"
           ],
           "basis": "Five asserted scripts frozen160db6d before runtime, unchanged through remediation/integration."
@@ -11119,7 +11119,7 @@
         "contract-frozen": {
           "done": true,
           "evidence": [
-            "examples/selected-probability/SHA256SUMS",
+            "tests/public-contracts/selected-probability/SHA256SUMS",
             "docs/development/selected-probability-first-contract.md"
           ],
           "basis": "Five asserted scripts frozen160db6d before runtime, unchanged through remediation/integration."
@@ -11205,7 +11205,7 @@
         "contract-frozen": {
           "done": true,
           "evidence": [
-            "examples/selected-probability/SHA256SUMS",
+            "tests/public-contracts/selected-probability/SHA256SUMS",
             "docs/development/selected-probability-first-contract.md"
           ],
           "basis": "Five asserted scripts frozen160db6d before runtime, unchanged through remediation/integration."
@@ -11291,7 +11291,7 @@
         "contract-frozen": {
           "done": true,
           "evidence": [
-            "examples/selected-probability/SHA256SUMS",
+            "tests/public-contracts/selected-probability/SHA256SUMS",
             "docs/development/selected-probability-first-contract.md"
           ],
           "basis": "Five asserted scripts frozen160db6d before runtime, unchanged through remediation/integration."
@@ -11377,7 +11377,7 @@
         "contract-frozen": {
           "done": true,
           "evidence": [
-            "examples/selected-probability/SHA256SUMS",
+            "tests/public-contracts/selected-probability/SHA256SUMS",
             "docs/development/selected-probability-last-contract.md"
           ],
           "basis": "Five asserted scripts frozen160db6d before runtime, unchanged through remediation/integration."
@@ -11463,7 +11463,7 @@
         "contract-frozen": {
           "done": true,
           "evidence": [
-            "examples/selected-probability/SHA256SUMS",
+            "tests/public-contracts/selected-probability/SHA256SUMS",
             "docs/development/selected-probability-last-contract.md"
           ],
           "basis": "Five asserted scripts frozen160db6d before runtime, unchanged through remediation/integration."
@@ -11549,7 +11549,7 @@
         "contract-frozen": {
           "done": true,
           "evidence": [
-            "examples/selected-probability/SHA256SUMS",
+            "tests/public-contracts/selected-probability/SHA256SUMS",
             "docs/development/selected-probability-last-contract.md"
           ],
           "basis": "Five asserted scripts frozen160db6d before runtime, unchanged through remediation/integration."
@@ -11635,7 +11635,7 @@
         "contract-frozen": {
           "done": true,
           "evidence": [
-            "examples/selected-probability/SHA256SUMS",
+            "tests/public-contracts/selected-probability/SHA256SUMS",
             "docs/development/selected-probability-last-contract.md"
           ],
           "basis": "Five asserted scripts frozen160db6d before runtime, unchanged through remediation/integration."
@@ -11721,7 +11721,7 @@
         "contract-frozen": {
           "done": true,
           "evidence": [
-            "examples/selected-probability/SHA256SUMS",
+            "tests/public-contracts/selected-probability/SHA256SUMS",
             "docs/development/selected-probability-last-contract.md"
           ],
           "basis": "Five asserted scripts frozen160db6d before runtime, unchanged through remediation/integration."
@@ -11810,7 +11810,7 @@
           "evidence": [
             "docs/development/selected-computing-contract.md",
             "models/catalog/acceptance/selected-computing-freeze.md",
-            "examples/selected-computing/SHA256SUMS",
+            "tests/public-contracts/selected-computing/SHA256SUMS",
             "models/catalog/acceptance/selected-computing-source-integration.md"
           ],
           "basis": "Five full mechanisms scripts4b42914 and explicit RNG pre-runtime correction0efdab3 preceded scoped runtime delegation; hashes verified unchanged at root. No runtime acceptance inferred."
@@ -11900,7 +11900,7 @@
           "evidence": [
             "docs/development/selected-computing-contract.md",
             "models/catalog/acceptance/selected-computing-freeze.md",
-            "examples/selected-computing/SHA256SUMS",
+            "tests/public-contracts/selected-computing/SHA256SUMS",
             "models/catalog/acceptance/selected-computing-source-integration.md"
           ],
           "basis": "Five full mechanisms scripts4b42914 and explicit RNG pre-runtime correction0efdab3 preceded scoped runtime delegation; hashes verified unchanged at root. No runtime acceptance inferred."
@@ -11990,7 +11990,7 @@
           "evidence": [
             "docs/development/selected-computing-contract.md",
             "models/catalog/acceptance/selected-computing-freeze.md",
-            "examples/selected-computing/SHA256SUMS",
+            "tests/public-contracts/selected-computing/SHA256SUMS",
             "models/catalog/acceptance/selected-computing-source-integration.md"
           ],
           "basis": "Five full mechanisms scripts4b42914 and explicit RNG pre-runtime correction0efdab3 preceded scoped runtime delegation; hashes verified unchanged at root. No runtime acceptance inferred."
@@ -12080,7 +12080,7 @@
           "evidence": [
             "docs/development/selected-computing-contract.md",
             "models/catalog/acceptance/selected-computing-freeze.md",
-            "examples/selected-computing/SHA256SUMS",
+            "tests/public-contracts/selected-computing/SHA256SUMS",
             "models/catalog/acceptance/selected-computing-source-integration.md"
           ],
           "basis": "Five full mechanisms scripts4b42914 and explicit RNG pre-runtime correction0efdab3 preceded scoped runtime delegation; hashes verified unchanged at root. No runtime acceptance inferred."
@@ -12170,7 +12170,7 @@
           "evidence": [
             "docs/development/selected-computing-contract.md",
             "models/catalog/acceptance/selected-computing-freeze.md",
-            "examples/selected-computing/SHA256SUMS",
+            "tests/public-contracts/selected-computing/SHA256SUMS",
             "models/catalog/acceptance/selected-computing-source-integration.md"
           ],
           "basis": "Five full mechanisms scripts4b42914 and explicit RNG pre-runtime correction0efdab3 preceded scoped runtime delegation; hashes verified unchanged at root. No runtime acceptance inferred."
@@ -12260,7 +12260,7 @@
           "evidence": [
             "docs/development/selected-computing-contract.md",
             "models/catalog/acceptance/selected-computing-freeze.md",
-            "examples/selected-computing/SHA256SUMS",
+            "tests/public-contracts/selected-computing/SHA256SUMS",
             "models/catalog/acceptance/selected-computing-source-integration.md"
           ],
           "basis": "Five full mechanisms scripts4b42914 and explicit RNG pre-runtime correction0efdab3 preceded scoped runtime delegation; hashes verified unchanged at root. No runtime acceptance inferred."
@@ -12350,7 +12350,7 @@
           "evidence": [
             "docs/development/selected-computing-contract.md",
             "models/catalog/acceptance/selected-computing-freeze.md",
-            "examples/selected-computing/SHA256SUMS",
+            "tests/public-contracts/selected-computing/SHA256SUMS",
             "models/catalog/acceptance/selected-computing-source-integration.md"
           ],
           "basis": "Five full mechanisms scripts4b42914 and explicit RNG pre-runtime correction0efdab3 preceded scoped runtime delegation; hashes verified unchanged at root. No runtime acceptance inferred."
@@ -12440,7 +12440,7 @@
           "evidence": [
             "docs/development/selected-computing-contract.md",
             "models/catalog/acceptance/selected-computing-freeze.md",
-            "examples/selected-computing/SHA256SUMS",
+            "tests/public-contracts/selected-computing/SHA256SUMS",
             "models/catalog/acceptance/selected-computing-source-integration.md"
           ],
           "basis": "Five full mechanisms scripts4b42914 and explicit RNG pre-runtime correction0efdab3 preceded scoped runtime delegation; hashes verified unchanged at root. No runtime acceptance inferred."
@@ -12530,7 +12530,7 @@
           "evidence": [
             "docs/development/selected-computing-contract.md",
             "models/catalog/acceptance/selected-computing-freeze.md",
-            "examples/selected-computing/SHA256SUMS",
+            "tests/public-contracts/selected-computing/SHA256SUMS",
             "models/catalog/acceptance/selected-computing-source-integration.md"
           ],
           "basis": "Five full mechanisms scripts4b42914 and explicit RNG pre-runtime correction0efdab3 preceded scoped runtime delegation; hashes verified unchanged at root. No runtime acceptance inferred."
@@ -12620,7 +12620,7 @@
           "evidence": [
             "docs/development/selected-computing-contract.md",
             "models/catalog/acceptance/selected-computing-freeze.md",
-            "examples/selected-computing/SHA256SUMS",
+            "tests/public-contracts/selected-computing/SHA256SUMS",
             "models/catalog/acceptance/selected-computing-source-integration.md"
           ],
           "basis": "Five full mechanisms scripts4b42914 and explicit RNG pre-runtime correction0efdab3 preceded scoped runtime delegation; hashes verified unchanged at root. No runtime acceptance inferred."
@@ -12707,7 +12707,7 @@
           "done": true,
           "evidence": [
             "models/catalog/acceptance/selected-cellular-plan.md",
-            "examples/selected-cellular/SHA256SUMS"
+            "tests/public-contracts/selected-cellular/SHA256SUMS"
           ],
           "basis": "Five complete asserted public scripts froze all nine scientific mechanisms before runtime at f926a58; unchanged hashes verified by root."
         },
@@ -12791,7 +12791,7 @@
           "done": true,
           "evidence": [
             "models/catalog/acceptance/selected-cellular-plan.md",
-            "examples/selected-cellular/SHA256SUMS"
+            "tests/public-contracts/selected-cellular/SHA256SUMS"
           ],
           "basis": "Five complete asserted public scripts froze all nine scientific mechanisms before runtime at f926a58; unchanged hashes verified by root."
         },
@@ -12875,7 +12875,7 @@
           "done": true,
           "evidence": [
             "models/catalog/acceptance/selected-cellular-plan.md",
-            "examples/selected-cellular/SHA256SUMS"
+            "tests/public-contracts/selected-cellular/SHA256SUMS"
           ],
           "basis": "Five complete asserted public scripts froze all nine scientific mechanisms before runtime at f926a58; unchanged hashes verified by root."
         },
@@ -12959,7 +12959,7 @@
           "done": true,
           "evidence": [
             "models/catalog/acceptance/selected-cellular-plan.md",
-            "examples/selected-cellular/SHA256SUMS"
+            "tests/public-contracts/selected-cellular/SHA256SUMS"
           ],
           "basis": "Five complete asserted public scripts froze all nine scientific mechanisms before runtime at f926a58; unchanged hashes verified by root."
         },
@@ -13043,7 +13043,7 @@
           "done": true,
           "evidence": [
             "docs/development/netlogo-grid-batch-contract.md",
-            "examples/netlogo-grid-batch/SHA256SUMS"
+            "tests/public-contracts/netlogo-grid-batch/SHA256SUMS"
           ],
           "basis": "242cc12 precedes runtime"
         },
@@ -13148,7 +13148,7 @@
           "done": true,
           "evidence": [
             "models/catalog/acceptance/selected-cellular-plan.md",
-            "examples/selected-cellular/SHA256SUMS"
+            "tests/public-contracts/selected-cellular/SHA256SUMS"
           ],
           "basis": "Five complete asserted public scripts froze all nine scientific mechanisms before runtime at f926a58; unchanged hashes verified by root."
         },
@@ -13232,7 +13232,7 @@
           "done": true,
           "evidence": [
             "models/catalog/acceptance/selected-cellular-plan.md",
-            "examples/selected-cellular/SHA256SUMS"
+            "tests/public-contracts/selected-cellular/SHA256SUMS"
           ],
           "basis": "Five complete asserted public scripts froze all nine scientific mechanisms before runtime at f926a58; unchanged hashes verified by root."
         },
@@ -13316,7 +13316,7 @@
           "done": true,
           "evidence": [
             "models/catalog/acceptance/selected-cellular-plan.md",
-            "examples/selected-cellular/SHA256SUMS"
+            "tests/public-contracts/selected-cellular/SHA256SUMS"
           ],
           "basis": "Five complete asserted public scripts froze all nine scientific mechanisms before runtime at f926a58; unchanged hashes verified by root."
         },
@@ -13400,7 +13400,7 @@
           "done": true,
           "evidence": [
             "models/catalog/acceptance/selected-cellular-plan.md",
-            "examples/selected-cellular/SHA256SUMS"
+            "tests/public-contracts/selected-cellular/SHA256SUMS"
           ],
           "basis": "Five complete asserted public scripts froze all nine scientific mechanisms before runtime at f926a58; unchanged hashes verified by root."
         },
@@ -13484,7 +13484,7 @@
           "done": true,
           "evidence": [
             "models/catalog/acceptance/selected-cellular-plan.md",
-            "examples/selected-cellular/SHA256SUMS"
+            "tests/public-contracts/selected-cellular/SHA256SUMS"
           ],
           "basis": "Five complete asserted public scripts froze all nine scientific mechanisms before runtime at f926a58; unchanged hashes verified by root."
         },

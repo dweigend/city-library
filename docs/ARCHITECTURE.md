@@ -166,7 +166,9 @@ src/
 
 index.ts                        # Existing public root entry
 tests/                          # Domain contract and integration tests
-examples/                       # Executable public examples
+tests/public-contracts/         # Executable public API contracts
+tests/ui/                       # Public UI consumer fixtures
+tests/targets/                  # Unmet public contracts
 docs/agent-loom/                 # Phase-one API specification
 ```
 

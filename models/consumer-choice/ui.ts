@@ -12,23 +12,16 @@ const binding = defineUI(model, {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Consumer%20Choice.nlogox",
     label: "Source attribution · Jager & Wang · CC BY-NC-SA 3.0",
   },
+  change: (instance, changes) => instance.setParameters(changes),
   live: {
-    normInfluence: {
-      set: (m, v) => m.setParameters({ normInfluence: v }),
-    },
-    informationExchange: {
-      set: (m, v) => m.setParameters({ informationExchange: v }),
-    },
-    exploration: {
-      set: (m, v) => m.setParameters({ exploration: v }),
-    },
+    normInfluence: {},
+    informationExchange: {},
+    exploration: {},
     qualityOrange: {
       label: "Orange quality",
-      set: (m, v) => m.setParameters({ qualityOrange: v }),
     },
     qualityBlue: {
       label: "Blue quality",
-      set: (m, v) => m.setParameters({ qualityBlue: v }),
     },
   },
   monitors: [

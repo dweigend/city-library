@@ -13,25 +13,14 @@ export const ui = defineUI(model, {
     url: "https://ccl.northwestern.edu/netlogo/models/InterstitialDiffusion",
     label: "Source attribution · Uri Wilensky · CC BY-NC-SA 3.0",
   },
+  change: (instance, changes) => instance.setRules(changes),
   live: {
-    maxTicks: {
-      set: (m, v) => m.setRules({ maxTicks: v }),
-    },
-    constantLeftSurface: {
-      set: (m, v) => m.setRules({ constantLeftSurface: v }),
-    },
-    leftSurfaceConcentration: {
-      set: (m, v) => m.setRules({ leftSurfaceConcentration: v }),
-    },
-    constantRightSurface: {
-      set: (m, v) => m.setRules({ constantRightSurface: v }),
-    },
-    rightSurfaceConcentration: {
-      set: (m, v) => m.setRules({ rightSurfaceConcentration: v }),
-    },
-    goMode: {
-      set: (m, v) => m.setRules({ goMode: v }),
-    },
+    maxTicks: {},
+    constantLeftSurface: {},
+    leftSurfaceConcentration: {},
+    constantRightSurface: {},
+    rightSurfaceConcentration: {},
+    goMode: {},
   },
   actions: [
     { label: "Show/hide lattice atoms", run: (m) => m.toggleLattice() },

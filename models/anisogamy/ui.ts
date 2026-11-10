@@ -3,28 +3,15 @@ import { defineUI, indexedColor, type Observation, type SpatialData } from "../.
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
   setup: ["seed"],
+  change: (instance, changes) => instance.setParameters(changes),
   live: {
-    worldSize: {
-      set: (m, value) => m.setParameters({ worldSize: value }),
-    },
-    maxAdults: {
-      set: (m, value) => m.setParameters({ maxAdults: value }),
-    },
-    zygoteFitnessThreshold: {
-      set: (m, value) => m.setParameters({ zygoteFitnessThreshold: value }),
-    },
-    gameteFitnessThreshold: {
-      set: (m, value) => m.setParameters({ gameteFitnessThreshold: value }),
-    },
-    mutationSigma: {
-      set: (m, value) => m.setParameters({ mutationSigma: value }),
-    },
-    speedSizeCorrelation: {
-      set: (m, value) => m.setParameters({ speedSizeCorrelation: value }),
-    },
-    allowAssortativeFusion: {
-      set: (m, value) => m.setParameters({ allowAssortativeFusion: value }),
-    },
+    worldSize: {},
+    maxAdults: {},
+    zygoteFitnessThreshold: {},
+    gameteFitnessThreshold: {},
+    mutationSigma: {},
+    speedSizeCorrelation: {},
+    allowAssortativeFusion: {},
   },
   actions: [
     {

@@ -10,57 +10,44 @@ export const ui = defineUI(model, {
   actions: [
     { label: "Setup example", run: (instance) => instance.setupExample() },
   ],
+  change: (instance, changes) => instance.setConfiguration(changes),
   live: {
-    example: {
-      set: (instance, value) => instance.setConfiguration({ example: value }),
-    },
+    example: {},
     off0Turn: {
       label: `${"off0Turn".startsWith("off") ? "Off" : "On"} / state ${"off0Turn".includes("0") ? 0 : 1}: ${"off0Turn".endsWith("Turn") ? "turn" : "off0Turn".endsWith("State") ? "next state" : "write on"}`,
-      set: (instance, value) => instance.setConfiguration({ off0Turn: value }),
     },
     off0State: {
       label: `${"off0State".startsWith("off") ? "Off" : "On"} / state ${"off0State".includes("0") ? 0 : 1}: ${"off0State".endsWith("Turn") ? "turn" : "off0State".endsWith("State") ? "next state" : "write on"}`,
-      set: (instance, value) => instance.setConfiguration({ off0State: value }),
     },
     off0On: {
       label: `${"off0On".startsWith("off") ? "Off" : "On"} / state ${"off0On".includes("0") ? 0 : 1}: ${"off0On".endsWith("Turn") ? "turn" : "off0On".endsWith("State") ? "next state" : "write on"}`,
-      set: (instance, value) => instance.setConfiguration({ off0On: value }),
     },
     off1Turn: {
       label: `${"off1Turn".startsWith("off") ? "Off" : "On"} / state ${"off1Turn".includes("0") ? 0 : 1}: ${"off1Turn".endsWith("Turn") ? "turn" : "off1Turn".endsWith("State") ? "next state" : "write on"}`,
-      set: (instance, value) => instance.setConfiguration({ off1Turn: value }),
     },
     off1State: {
       label: `${"off1State".startsWith("off") ? "Off" : "On"} / state ${"off1State".includes("0") ? 0 : 1}: ${"off1State".endsWith("Turn") ? "turn" : "off1State".endsWith("State") ? "next state" : "write on"}`,
-      set: (instance, value) => instance.setConfiguration({ off1State: value }),
     },
     off1On: {
       label: `${"off1On".startsWith("off") ? "Off" : "On"} / state ${"off1On".includes("0") ? 0 : 1}: ${"off1On".endsWith("Turn") ? "turn" : "off1On".endsWith("State") ? "next state" : "write on"}`,
-      set: (instance, value) => instance.setConfiguration({ off1On: value }),
     },
     on0Turn: {
       label: `${"on0Turn".startsWith("off") ? "Off" : "On"} / state ${"on0Turn".includes("0") ? 0 : 1}: ${"on0Turn".endsWith("Turn") ? "turn" : "on0Turn".endsWith("State") ? "next state" : "write on"}`,
-      set: (instance, value) => instance.setConfiguration({ on0Turn: value }),
     },
     on0State: {
       label: `${"on0State".startsWith("off") ? "Off" : "On"} / state ${"on0State".includes("0") ? 0 : 1}: ${"on0State".endsWith("Turn") ? "turn" : "on0State".endsWith("State") ? "next state" : "write on"}`,
-      set: (instance, value) => instance.setConfiguration({ on0State: value }),
     },
     on0On: {
       label: `${"on0On".startsWith("off") ? "Off" : "On"} / state ${"on0On".includes("0") ? 0 : 1}: ${"on0On".endsWith("Turn") ? "turn" : "on0On".endsWith("State") ? "next state" : "write on"}`,
-      set: (instance, value) => instance.setConfiguration({ on0On: value }),
     },
     on1Turn: {
       label: `${"on1Turn".startsWith("off") ? "Off" : "On"} / state ${"on1Turn".includes("0") ? 0 : 1}: ${"on1Turn".endsWith("Turn") ? "turn" : "on1Turn".endsWith("State") ? "next state" : "write on"}`,
-      set: (instance, value) => instance.setConfiguration({ on1Turn: value }),
     },
     on1State: {
       label: `${"on1State".startsWith("off") ? "Off" : "On"} / state ${"on1State".includes("0") ? 0 : 1}: ${"on1State".endsWith("Turn") ? "turn" : "on1State".endsWith("State") ? "next state" : "write on"}`,
-      set: (instance, value) => instance.setConfiguration({ on1State: value }),
     },
     on1On: {
       label: `${"on1On".startsWith("off") ? "Off" : "On"} / state ${"on1On".includes("0") ? 0 : 1}: ${"on1On".endsWith("Turn") ? "turn" : "on1On".endsWith("State") ? "next state" : "write on"}`,
-      set: (instance, value) => instance.setConfiguration({ on1On: value }),
     },
   },
   monitors: [

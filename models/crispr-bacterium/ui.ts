@@ -5,21 +5,12 @@ import { model } from "./model.ts";
 
 const binding = defineUI(model, {
   setup: ["seed", "initialArraySize", "maxVirusTypes"],
+  change: (instance, changes) => instance.setParameters(changes),
   live: {
-    guideUnbindChance: {
-      set: (instance, value) =>
-        instance.setParameters({ guideUnbindChance: value }),
-    },
-    processivity: {
-      set: (instance, value) => instance.setParameters({ processivity: value }),
-    },
-    crisprFunction: {
-      set: (instance, value) =>
-        instance.setParameters({ crisprFunction: value }),
-    },
-    labels: {
-      set: (instance, value) => instance.setParameters({ labels: value }),
-    },
+    guideUnbindChance: {},
+    processivity: {},
+    crisprFunction: {},
+    labels: {},
   },
   actions: [
     {

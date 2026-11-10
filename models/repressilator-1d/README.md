@@ -50,4 +50,4 @@ The [UI binding](ui.ts) presents `Tick`, `Signal`, `Mean on duration`, `Mean off
 
 Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
 
-[Local evidence](evidence/) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `repressilator-1d` and links any shared checks.
+[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `repressilator-1d` and links any shared checks.

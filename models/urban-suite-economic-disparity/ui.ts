@@ -41,36 +41,25 @@ export const ui = defineUI(model, {
       pressed: (state) => state.viewMode === "rich-utility",
     },
   ],
+  change: (instance, changes) => instance.setRules(changes),
   live: {
     numberOfTests: {
       label: "Location tests",
-      set: (instance, value) => instance.setRules({ numberOfTests: value }),
     },
-    residentsPerJob: {
-      set: (instance, value) => instance.setRules({ residentsPerJob: value }),
-    },
+    residentsPerJob: {},
     poorPerStep: {
       label: "Poor births per step",
-      set: (instance, value) => instance.setRules({ poorPerStep: value }),
     },
     richPerStep: {
       label: "Rich births per step",
-      set: (instance, value) => instance.setRules({ richPerStep: value }),
     },
-    poorPricePriority: {
-      set: (instance, value) => instance.setRules({ poorPricePriority: value }),
-    },
-    richQualityPriority: {
-      set: (instance, value) =>
-        instance.setRules({ richQualityPriority: value }),
-    },
+    poorPricePriority: {},
+    richQualityPriority: {},
     maxJobs: {
       label: "Maximum jobs",
-      set: (instance, value) => instance.setRules({ maxJobs: value }),
     },
     deathRate: {
       label: "Oldest residents removed",
-      set: (instance, value) => instance.setRules({ deathRate: value }),
     },
   },
   monitors: [

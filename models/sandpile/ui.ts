@@ -7,16 +7,12 @@ export const ui = defineUI(model, {
     url: "https://ccl.northwestern.edu/netlogo/models/Sandpile",
     label: "Source attribution · Weintrop et al. / Wilensky · CC0",
   },
+  change: (instance, changes) => instance.setLive(changes),
   live: {
-    grainsPerField: {
-      set: (m, v) => m.setLive({ grainsPerField: v }),
-    },
-    dropLocation: {
-      set: (m, v) => m.setLive({ dropLocation: v }),
-    },
+    grainsPerField: {},
+    dropLocation: {},
     animateAvalanches: {
       label: "Highlight avalanches",
-      set: (m, v) => m.setLive({ animateAvalanches: v }),
     },
   },
   actions: [

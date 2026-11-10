@@ -7,21 +7,12 @@ const numbers = new Intl.NumberFormat("en", { maximumFractionDigits: 3 });
 
 const binding = defineUI(model, {
   setup: ["seed", "initialBacteria", "initialViruses", "maxVirusTypes"],
+  change: (instance, changes) => instance.setParameters(changes),
   live: {
-    infectionChance: {
-      set: (instance, value) =>
-        instance.setParameters({ infectionChance: value }),
-    },
-    spacerLossChance: {
-      set: (instance, value) =>
-        instance.setParameters({ spacerLossChance: value }),
-    },
-    crispr: {
-      set: (instance, value) => instance.setParameters({ crispr: value }),
-    },
-    plottedVirus: {
-      set: (instance, value) => instance.setParameters({ plottedVirus: value }),
-    },
+    infectionChance: {},
+    spacerLossChance: {},
+    crispr: {},
+    plottedVirus: {},
   },
   actions: [
     { label: "Plot new virus", run: (instance) => instance.plotNewVirus() },

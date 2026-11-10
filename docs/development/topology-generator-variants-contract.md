@@ -8,7 +8,7 @@ Use opt-in **profile:"ordered-topology/1"** on `Graph.generate`. This selects th
 
 - kind:"kleinberg", required profile, nodes, shape:[columns,rows], clusteringExponent, random; optional wrap/directed false.
 - kind:"preferential", required profile, nodes, edgesPerNode, random; optional directed false.
-- kind:"smallWorld", required profile, nodes, neighborsPerSide, probability, random; optional directed false.
+- kind:"small-world", required profile, nodes, neighborsPerSide, probability, random; optional directed false.
 - kind:"wheel", required profile, nodes; optional directed false and spokes:"in"|"out", default in.
 - kind:"lattice", required profile, nodes, shape:[columns,rows]; optional wrap/directed false.
 

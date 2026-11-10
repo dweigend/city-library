@@ -16,7 +16,7 @@
 | Only worktree `/home/david/.codex/worktrees/city-library-example-contracts` reviewed | Confirmed (`HEAD` at `cf9baea` on `docs/example-first-contracts`). |
 | Original 3 scripts + `SCRIPT-SHA256SUMS` byte-identical | Verified via `sha256sum -c docs/development/example-first/SCRIPT-SHA256SUMS` (exit `0`, all 3 `OK`) and `git status --short` (no modifications to `01`, `02`, `03`, or `SCRIPT-SHA256SUMS`). |
 | Separate `INTEGRATION-SCRIPT-SHA256SUMS` matches new probes | Verified via `sha256sum -c docs/development/example-first/INTEGRATION-SCRIPT-SHA256SUMS` (exit `0`, both `04-scarce-resource.ts` and `05-shared-machine.ts` `OK`). |
-| Zero modifications to `src/` or `index.ts`; no new public API | Confirmed via `git status --short -uall` and `git diff cf9baea`. Only `PLAN.md`, `docs/development/example-first/*`, `examples/city-simulation/*`, `scripts/city-examples.ts`, `scripts/examples.ts`, `tsconfig.city-examples.json`, and `tsconfig.dev.json` are touched. |
+| Zero modifications to `src/` or `index.ts`; no new public API | Confirmed via `git status --short -uall` and `git diff cf9baea`. Only `PLAN.md`, `docs/development/example-first/*`, `tests/public-contracts/city-simulation/*`, `scripts/city-examples.ts`, `scripts/examples.ts`, `tsconfig.city-examples.json`, and `tsconfig.dev.json` are touched. |
 | No premature abstraction (`Resource`, `Reservation`, `ClockManager`, transaction DSL) | Confirmed. Both probes use only existing public root imports (`Agent`, `World` from `"city-library"`) and local model functions. |
 | Concurrent `docs/model-research-integration` worktree preserved | Confirmed clean at `13d934a` with zero modifications; semantic merge guidance is explicitly documented in `docs/development/example-first/PLAN.md` and `INTEGRATION-VERIFICATION.md`. |
 | Source research docs in `city_game` untouched | Confirmed read-only inspection. |
@@ -25,7 +25,7 @@
 
 ## 2. Mathematical Invariants, Guard Atomicity & Semantic Review of New Probes
 
-### 2.1 `examples/city-simulation/04-scarce-resource.ts`
+### 2.1 `tests/public-contracts/city-simulation/04-scarce-resource.ts`
 - **Scenario & Priorities:** Models one indivisible inventory unit (`quantity: 1`) and two applicants (`alice`, `bob`, each `received: 0, eligible: true`) across three independent model instances (`first`, `reversed`, `invalidated`).
   - Priority `[alice, bob]` (`first`) yields `{ inventory: 0, alice: 1, bob: 0, unmet: 1 }`.
   - Reversed priority `[bob, alice]` (`reversed`) yields `{ inventory: 0, alice: 0, bob: 1, unmet: 1 }`.
@@ -44,7 +44,7 @@
   - Repeated `observe(first)` calls return identical snapshots without mutating state.
   - Distinct canonical `Agent` identities verified (`assert.notEqual(first.inventory, reversed.inventory)`, `assert.notEqual(first.alice, reversed.alice)`).
 
-### 2.2 `examples/city-simulation/05-shared-machine.ts`
+### 2.2 `tests/public-contracts/city-simulation/05-shared-machine.ts`
 - **No Duplicated Writable Availability State:**
   - `inventory` stores only `{ quantity: 2, consumed: 0 }`.
   - `available` is strictly derived in `observe(model)` as `model.inventory.quantity - Number(model.machine.phase === "reserved")`. Reservation never mutates `inventory.quantity` or maintains a second writable availability field.
@@ -75,7 +75,7 @@
 
 ## 3. Architecture, Plan & Documentation Review
 
-- **Explicit Model Helper Policy & Generalization Gate (`docs/development/example-first/PLAN.md`, `examples/city-simulation/README.md`):**
+- **Explicit Model Helper Policy & Generalization Gate (`docs/development/example-first/PLAN.md`, `tests/public-contracts/city-simulation/README.md`):**
   - Clearly establishes that the six operation families (`state/balances`, `transformation`, `choice/allocation/settlement`, `connections/transport`, `time/execution`, `observation/comparison`) are analytical questions rather than six packages or managers.
   - Defines a 6-step generalization gate requiring a concrete need across at least two contrasting author tasks, comparison against existing exports and ordinary TypeScript first, and matched ownership/unit/timing/failure semantics before extracting any public operation.
   - Retains `02-neighborhood-heat.ts` as an explicit non-resource counterexample (grid diffusion without resource reservation/allocation).
@@ -83,7 +83,7 @@
   - Explicitly decouples geometry (`E1`–`E5`) and Townscaper (`E3`) from economy/resource model probes so neither blocks the other.
   - Preserves all 49 source catalogue rows, 58 integrated operation/property entries, the `E0`–`E6` delivery sequence, and the requirement for 4–5 asserted public example scripts per actual API expansion phase.
 - **Link & Checksum Integrity:**
-  - Every relative markdown link across `PLAN.md`, `docs/development/example-first/PLAN.md`, `examples/city-simulation/README.md`, and `docs/development/example-first/INTEGRATION-VERIFICATION.md` was programmatically checked and resolves to an existing file/anchor.
+  - Every relative markdown link across `PLAN.md`, `docs/development/example-first/PLAN.md`, `tests/public-contracts/city-simulation/README.md`, and `docs/development/example-first/INTEGRATION-VERIFICATION.md` was programmatically checked and resolves to an existing file/anchor.
 
 ---
 
@@ -95,12 +95,12 @@ All verification commands were executed read-only against `/home/david/.codex/wo
 | --- | --- | --- |
 | `sha256sum -c docs/development/example-first/SCRIPT-SHA256SUMS` | `0` | `01`, `02`, `03` `OK` (byte-identical to `cf9baea`). |
 | `sha256sum -c docs/development/example-first/INTEGRATION-SCRIPT-SHA256SUMS` | `0` | `04`, `05` `OK`. |
-| `bun run examples:city` | `0` | Runs `01`, `02`, `04`, `05` with all assertions active and expected console outputs. |
+| `bun run contracts:city` | `0` | Runs `01`, `02`, `04`, `05` with all assertions active and expected console outputs. |
 | `bun run typecheck:city` | `0` | Clean strict TypeScript check across `index.ts`, `src/**/*.ts`, and `01`, `02`, `04`, `05`. |
 | `bun run typecheck` | `0` | Full project typecheck (`tsc --noEmit`, `tsconfig.dev.json`, UI tsconfigs, and `svelte-check`: `0 errors and 0 warnings`). |
-| `bun run examples:city:targets` | `1` | Runs `01`, `02`, `04`, `05`, then fails honestly at `03-generative-quarter.ts:36:24` (`TypeError: geometry.corridor is not a function`). No mock, skip, or expected-failure catch. |
+| `bun run contracts:city:targets` | `1` | Runs `01`, `02`, `04`, `05`, then fails honestly at `03-generative-quarter.ts:36:24` (`TypeError: geometry.corridor is not a function`). No mock, skip, or expected-failure catch. |
 | `bun run typecheck:city:targets` | `1` | Fails honestly with 8 errors in `03-generative-quarter.ts` (`TS2339` for missing `corridor`, `subtract`, `subdivide` + 5 downstream `TS7006` implicit-`any` errors). |
-| `bun run examples` log (`/tmp/city-integration-examples.log` & `integration-examples-console.txt`) | `0` | Parent's full registered examples run has already completed (exit `0`) and is identically recorded in `docs/development/example-first/integration-examples-console.txt` (`7132` bytes, byte-identical to `/tmp/city-integration-examples.log`). |
+| `bun run contracts` log (`/tmp/city-integration-examples.log` & `integration-examples-console.txt`) | `0` | Parent's full registered examples run has already completed (exit `0`) and is identically recorded in `docs/development/example-first/integration-examples-console.txt` (`7132` bytes, byte-identical to `/tmp/city-integration-examples.log`). |
 
 ---
 

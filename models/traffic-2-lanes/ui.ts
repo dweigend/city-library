@@ -4,19 +4,12 @@ import { model } from "./model.ts";
 
 const binding = defineUI(model, {
   setup: ["seed"],
+  change: (instance, changes) => instance.setParameters(changes),
   live: {
-    numberOfCars: {
-      set: (instance, value) => instance.setParameters({ numberOfCars: value }),
-    },
-    acceleration: {
-      set: (instance, value) => instance.setParameters({ acceleration: value }),
-    },
-    deceleration: {
-      set: (instance, value) => instance.setParameters({ deceleration: value }),
-    },
-    maxPatience: {
-      set: (instance, value) => instance.setParameters({ maxPatience: value }),
-    },
+    numberOfCars: {},
+    acceleration: {},
+    deceleration: {},
+    maxPatience: {},
   },
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Traffic%202%20Lanes.nlogox",

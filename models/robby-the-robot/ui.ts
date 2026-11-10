@@ -8,18 +8,16 @@ export const ui = defineUI(model, {
     label:
       "Source attribution \u00B7 Mitchell, Tisue and Wilensky \u00B7 CC0",
   },
+  change: (instance, changes) => instance.setParameters(changes),
   live: {
     populationSize: {
       label: "Next population",
-      set: (m, v) => m.setParameters({ populationSize: v }),
     },
     mutationRate: {
       label: "Mutation probability",
-      set: (m, v) => m.setParameters({ mutationRate: v }),
     },
     numberOfGenerations: {
       label: "Generation limit",
-      set: (m, v) => m.setParameters({ numberOfGenerations: v }),
     },
   },
   actions: [

@@ -50,12 +50,25 @@ export interface GridData {
   readonly cells: readonly Cell[];
 }
 export interface SpatialAgent extends GraphNodeData {
+  /** Presentation-only decoration may opt out of pointer and keyboard selection. */
+  readonly selectable?: boolean;
   /** Symbol diameter in CSS pixels, consistent with GraphNodeData. */
   readonly size?: number;
   readonly x: number;
   readonly y: number;
   readonly heading?: number;
-  readonly shape?: "circle" | "triangle";
+  readonly shape?: "circle" | "triangle" | "rectangle" | "diamond";
+  /** Full rectangle dimensions in centered scene coordinates; exclusive with size. */
+  readonly extent?: { readonly width: number; readonly height: number };
+  readonly filled?: boolean;
+  readonly stroke?: string;
+  /** Nonnegative outline width in CSS pixels, default 1. */
+  readonly strokeWidth?: number;
+}
+export interface SpatialLabel {
+  readonly x: number;
+  readonly y: number;
+  readonly text: string;
 }
 export interface SpatialSegment {
   /** Detached endpoints in finite, centered two-dimensional world coordinates. */
@@ -67,6 +80,10 @@ export interface SpatialSegment {
   readonly width?: number;
 }
 export interface SpatialData {
+  /** Plain-text scene meaning and quantities; never another model-state owner. */
+  readonly description?: string;
+  /** Fixed nonselectable annotations in centered scene coordinates. */
+  readonly labels?: readonly SpatialLabel[];
   /** Controlled label visibility; omit to retain the host Labels checkbox. */
   readonly showLabels?: boolean;
   readonly width: number;
@@ -157,20 +174,25 @@ export interface LegacyLiveField<P extends object, M extends ModelInstance> {
   readonly set: (model: M, value: string | number | boolean) => void;
   readonly enabled?: (state: Snapshot<M>) => boolean;
 }
-type KeyedField<P extends object, M extends ModelInstance, K extends keyof P> = {
+type KeyedField<P extends object, M extends ModelInstance, K extends keyof P, DefaultWrite extends boolean> = {
   readonly label?: string;
   readonly widget?: "color";
   readonly group?: string;
-  readonly set: (model: M, value: P[K]) => void;
   readonly enabled?: (state: Snapshot<M>) => boolean;
-} & ([Snapshot<M>] extends [{ readonly parameters: { readonly [F in K]-?: P[F] } }]
+} & (DefaultWrite extends true
+  ? { readonly set?: (model: M, value: P[K]) => void }
+  : { readonly set: (model: M, value: P[K]) => void })
+  & ([Snapshot<M>] extends [{ readonly parameters: { readonly [F in K]-?: P[F] } }]
   ? { readonly value?: (state: Snapshot<M>) => P[K] }
   : { readonly value: (state: Snapshot<M>) => P[K] });
-export type KeyedLive<P extends object, M extends ModelInstance> = {
-  readonly [K in Extract<keyof P, string>]?: KeyedField<P, M, K>;
+export type KeyedLive<P extends object, M extends ModelInstance, DefaultWrite extends boolean = false> = {
+  readonly [K in Extract<keyof P, string>]?: KeyedField<P, M, K, DefaultWrite>;
 };
 
-export interface UISpec<P extends object, M extends ModelInstance> {
+/** A default live write receives one decoded parameter change per invocation. */
+export type LiveChanges<P extends object> = Partial<P>;
+
+interface UISpecBase<P extends object, M extends ModelInstance> {
   readonly drawing?: {
     /** Optional host-owned mode toggle, initially off for each mounted instance. */
     readonly toggleLabel?: string;
@@ -186,12 +208,23 @@ export interface UISpec<P extends object, M extends ModelInstance> {
     /** Independent host cadence; never scientific model time. */
     readonly repeat?: { readonly label: string; readonly intervalMs: number };
   }[];
-  readonly live?: readonly LegacyLiveField<P, M>[] | KeyedLive<P, M>;
   readonly monitors?: readonly Monitor<Snapshot<M>>[];
   readonly complete?: (state: Snapshot<M>) => boolean;
   readonly source?: { readonly url: string; readonly label: string };
   readonly views: readonly (View<Snapshot<M>> | Inspector<Snapshot<M>>)[];
 }
+/** Existing authoring form remains interface-extensible for downstream consumers. */
+export interface UISpec<P extends object, M extends ModelInstance> extends UISpecBase<P, M> {
+  readonly change?: undefined;
+  readonly live?: readonly LegacyLiveField<P, M>[] | KeyedLive<P, M>;
+}
+
+/** The same flat declaration with an explicit default write for keyed live fields. */
+export interface ChangeUISpec<P extends object, M extends ModelInstance> extends UISpecBase<P, M> {
+  readonly change: (model: M, changes: LiveChanges<P>) => void;
+  readonly live?: KeyedLive<P, M, true>;
+}
+
 export interface BoundEntry {
   readonly title: string;
   readonly description?: string;

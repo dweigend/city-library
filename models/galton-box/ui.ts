@@ -3,17 +3,13 @@ import { model } from "./model.ts";
 export const ui = defineUI(model, {
   setup: ["seed", "numberOfRows"],
   complete: (s) => s.done,
+  change: (instance, changes) => instance.setRules(changes),
   live: {
-    numberOfBalls: {
-      set: (m, v) => m.setRules({ numberOfBalls: v }),
-    },
+    numberOfBalls: {},
     chanceOfBouncingRight: {
       label: "Bounce right (%)",
-      set: (m, v) => m.setRules({ chanceOfBouncingRight: v }),
     },
-    pileUp: {
-      set: (m, v) => m.setRules({ pileUp: v }),
-    },
+    pileUp: {},
   },
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/GaltonBox",

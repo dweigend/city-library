@@ -4,38 +4,17 @@ import { model } from "./model.ts";
 
 const binding = defineUI(model, {
   setup: ["seed", "initialTF0s", "initialTF1s", "initialTF2s"],
+  change: (instance, changes) => instance.setParameters(changes),
   live: {
-    tfsPerMRNA: {
-      set: (instance, value) => instance.setParameters({ tfsPerMRNA: value }),
-    },
-    maxTFSynergy: {
-      set: (instance, value) => instance.setParameters({ maxTFSynergy: value }),
-    },
-    mrnaDecayProb: {
-      set: (instance, value) =>
-        instance.setParameters({ mrnaDecayProb: value }),
-    },
-    signalDecayProb: {
-      set: (instance, value) =>
-        instance.setParameters({ signalDecayProb: value }),
-    },
-    signalTFUnbindProb: {
-      set: (instance, value) =>
-        instance.setParameters({ signalTFUnbindProb: value }),
-    },
-    signalTFBindProb: {
-      set: (instance, value) =>
-        instance.setParameters({ signalTFBindProb: value }),
-    },
-    tfBindProb: {
-      set: (instance, value) => instance.setParameters({ tfBindProb: value }),
-    },
-    tfUnbindProb: {
-      set: (instance, value) => instance.setParameters({ tfUnbindProb: value }),
-    },
-    tfDecayProb: {
-      set: (instance, value) => instance.setParameters({ tfDecayProb: value }),
-    },
+    tfsPerMRNA: {},
+    maxTFSynergy: {},
+    mrnaDecayProb: {},
+    signalDecayProb: {},
+    signalTFUnbindProb: {},
+    signalTFBindProb: {},
+    tfBindProb: {},
+    tfUnbindProb: {},
+    tfDecayProb: {},
   },
   actions: [],
   complete: (state) => state.stopped,

@@ -4,31 +4,16 @@ import { model } from "./model.ts";
 
 const binding = defineUI(model, {
   setup: ["seed"],
+  change: (instance, changes) => instance.setParameters(changes),
   live: {
-    auto: {
-      set: (instance, value) => instance.setParameters({ auto: value }),
-    },
-    speedLimit: {
-      set: (instance, value) => instance.setParameters({ speedLimit: value }),
-    },
-    maxAccel: {
-      set: (instance, value) => instance.setParameters({ maxAccel: value }),
-    },
-    maxBrake: {
-      set: (instance, value) => instance.setParameters({ maxBrake: value }),
-    },
-    freqNorth: {
-      set: (instance, value) => instance.setParameters({ freqNorth: value }),
-    },
-    freqEast: {
-      set: (instance, value) => instance.setParameters({ freqEast: value }),
-    },
-    greenLength: {
-      set: (instance, value) => instance.setParameters({ greenLength: value }),
-    },
-    yellowLength: {
-      set: (instance, value) => instance.setParameters({ yellowLength: value }),
-    },
+    auto: {},
+    speedLimit: {},
+    maxAccel: {},
+    maxBrake: {},
+    freqNorth: {},
+    freqEast: {},
+    greenLength: {},
+    yellowLength: {},
   },
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Unverified/Traffic%20Intersection.nlogox",

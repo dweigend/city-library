@@ -50,6 +50,7 @@ export function create(options: Partial<BufferParameters> = {}) {
         tick: agenda.time, parameters: { ...settings }, produced, stored: store.items.length,
         blocked: store.waitingPuts.length, collected: collected.length,
         crates: store.items.map((crate) => ({ ...crate })),
+        blockedCrates: store.waitingPuts.map((request) => ({ ...request.value })),
         deliveries: collected.map((crate) => ({ ...crate })),
         history: history.map((point) => ({ ...point })),
       };

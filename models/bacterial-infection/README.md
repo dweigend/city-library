@@ -54,4 +54,4 @@ The [UI binding](ui.ts) presents `Manual dose A`, `Manual dose B`, `Minutes`, `H
 
 Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
 
-[Local evidence](evidence/) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `bacterial-infection` and links any shared checks.
+[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `bacterial-infection` and links any shared checks.

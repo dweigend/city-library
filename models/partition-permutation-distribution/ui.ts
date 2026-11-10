@@ -7,20 +7,14 @@ export const ui = defineUI(model, {
     label: "Wilensky (2004) · CC BY-NC-SA 3.0",
   },
   complete: (s) => s.done,
+  change: (instance, changes) => instance.setRules(changes),
   live: {
-    targetTotal: {
-      set: (m, v) => m.setRules({ targetTotal: v }),
-    },
+    targetTotal: {},
     successCount: {
       label: "Number of successes",
-      set: (m, v) => m.setRules({ successCount: v }),
     },
-    diminishingSampleSpace: {
-      set: (m, v) => m.setRules({ diminishingSampleSpace: v }),
-    },
-    waitAtFull: {
-      set: (m, v) => m.setRules({ waitAtFull: v }),
-    },
+    diminishingSampleSpace: {},
+    waitAtFull: {},
   },
   monitors: [
     { label: "Tick", value: (s) => s.tick },

@@ -10,7 +10,7 @@ Below are exact excerpts from the current ui.ts files and actual final desktop-l
 
 Actual Grid fields, fixed0–30 heat-index colors and separate shade hatching.
 
-[model.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/neighborhood-heat-intervention/model.ts) · [ui.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/neighborhood-heat-intervention/ui.ts)
+[model.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/studies/neighborhood-heat-intervention/model.ts) · [ui.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/studies/neighborhood-heat-intervention/ui.ts)
 
 Excerpt:
 
@@ -34,7 +34,7 @@ export function heatMap(state: Observation<typeof model>): SpatialData {
 
 Identical household outlines show current base/appliance load through size and color.
 
-[model.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/household-energy-demand/model.ts) · [ui.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/household-energy-demand/ui.ts)
+[model.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/studies/household-energy-demand/model.ts) · [ui.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/studies/household-energy-demand/ui.ts)
 
 Excerpt:
 
@@ -47,7 +47,7 @@ function householdsData(state: State): SpatialData {
   const homes = Array.from({ length: state.parameters.households }, (_, index) => ({
     id: `household:${index}`, x: index % columns - (columns - 1) / 2,
     y: (rows - 1) / 2 - Math.floor(index / columns),
-    color: netLogoColor(loadFraction > 0 ? 25 : 105), size: 7 + 13 * loadFraction,
+    color: indexedColor(loadFraction > 0 ? 25 : 105), size: 7 + 13 * loadFraction,
 ```
 
 ![Household energy: actual corrected model view](visual-evidence/household-energy-demand-desktop-light.png)
@@ -58,7 +58,7 @@ function householdsData(state: State): SpatialData {
 
 Resource-owned grants occupy dwelling slots; waiters and moved-out households remain distinct.
 
-[model.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/residential-occupancy/model.ts) · [ui.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/residential-occupancy/ui.ts)
+[model.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/studies/residential-occupancy/model.ts) · [ui.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/studies/residential-occupancy/ui.ts)
 
 Excerpt:
 
@@ -68,7 +68,7 @@ export function housingData(state: HousingObservation): SpatialData {
   const height = Math.max(8, rows * 1.5 + 2);
   const slotPosition = (index: number) => ({ x: -1.5 + (index % 5) * 1.5, y: height / 2 - 1.5 - Math.floor(index / 5) * 1.5 });
   const cells = Array.from({ length: state.parameters.slots }, (_, index) => ({
-    id: `view:slot:${index}`, ...slotPosition(index), color: netLogoColor(index < state.occupied ? 57 : 8),
+    id: `view:slot:${index}`, ...slotPosition(index), color: indexedColor(index < state.occupied ? 57 : 8),
   }));
   const statusCounts = { waiting: 0, granted: 0, released: 0, cancelled: 0 };
   const agents = state.households.map((household, index) => {
@@ -82,7 +82,7 @@ export function housingData(state: HousingObservation): SpatialData {
 
 Road, signal and cohort positions expose waiting, crossing and arrived stages.
 
-[model.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/pedestrian-crossing-phases/model.ts) · [ui.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/pedestrian-crossing-phases/ui.ts)
+[model.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/studies/pedestrian-crossing-phases/model.ts) · [ui.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/studies/pedestrian-crossing-phases/ui.ts)
 
 Excerpt:
 
@@ -91,10 +91,10 @@ export function crossingData(state: CrossingObservation): SpatialData {
   const height = Math.max(8, Math.ceil(state.people.length / 4) * 0.65 + 3);
   const cells = [];
   for (let y = -Math.floor(height / 2); y <= Math.floor(height / 2); y += 1) {
-    for (const x of [-1, 0, 1]) cells.push({ id: `view:road:${x}:${y}`, x, y, color: netLogoColor(3) });
+    for (const x of [-1, 0, 1]) cells.push({ id: `view:road:${x}:${y}`, x, y, color: indexedColor(3) });
   }
   for (const x of [-1, 0, 1]) for (const y of [-2, 0, 2])
-    cells.push({ id: `view:stripe:${x}:${y}`, x, y, color: netLogoColor(9) });
+    cells.push({ id: `view:stripe:${x}:${y}`, x, y, color: indexedColor(9) });
   const centers = { waiting: -4.5, crossing: 0, arrived: 4.5 };
 ```
 
@@ -106,7 +106,7 @@ export function crossingData(state: CrossingObservation): SpatialData {
 
 Rounded energy blocks, reserve line and explicitly labelled completed-interval flows.
 
-[model.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/solar-battery-microgrid/model.ts) · [ui.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/solar-battery-microgrid/ui.ts)
+[model.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/studies/solar-battery-microgrid/model.ts) · [ui.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/studies/solar-battery-microgrid/ui.ts)
 
 Excerpt:
 
@@ -118,7 +118,7 @@ function microgridData(state: State): SpatialData {
     width: 18, height: 12, showLabels: true,
     cells: Array.from({ length: 40 }, (_, index) => ({
       id: `battery-block:${index}`, x: index % 4 - 1.5, y: Math.floor(index / 4) - 4.5,
-      color: netLogoColor(index < Math.round(state.energyKwh / state.capacityKwh * 40) ? 55 : 8),
+      color: indexedColor(index < Math.round(state.energyKwh / state.capacityKwh * 40) ? 55 : 8),
     })),
 ```
 
@@ -130,7 +130,7 @@ function microgridData(state: State): SpatialData {
 
 Real catchment Grid feeds a schematic volume gauge, drain and red overflow.
 
-[model.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/stormwater-retention/model.ts) · [ui.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/stormwater-retention/ui.ts)
+[model.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/studies/stormwater-retention/model.ts) · [ui.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/studies/stormwater-retention/ui.ts)
 
 Excerpt:
 
@@ -142,7 +142,7 @@ function retentionData(state: State): SpatialData {
     width: 18, height: 14, showLabels: true,
     cells: [
       ...state.catchment.fields.map(field => ({ id: field.id, x: field.x - 5, y: field.y,
-        color: netLogoColor(state.parameters.rainMmPerHour > 0 ? 105 : 8) })),
+        color: indexedColor(state.parameters.rainMmPerHour > 0 ? 105 : 8) })),
       ...Array.from({ length: 40 }, (_, index) => ({ id: `basin-block:${index}`,
 ```
 
@@ -154,7 +154,7 @@ function retentionData(state: State): SpatialData {
 
 Tree crown size and fixed-domain color show moisture; blue marks show actual water allocation.
 
-[model.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/urban-tree-watering/model.ts) · [ui.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/urban-tree-watering/ui.ts)
+[model.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/studies/urban-tree-watering/model.ts) · [ui.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/studies/urban-tree-watering/ui.ts)
 
 Excerpt:
 
@@ -178,15 +178,15 @@ export function treesData(state: State): SpatialData {
 
 Actual ring edges and fixed view-only positions show green adoption spreading among orange households.
 
-[model.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/household-recycling-behavior/model.ts) · [ui.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/household-recycling-behavior/ui.ts)
+[model.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/studies/household-recycling-behavior/model.ts) · [ui.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/studies/household-recycling-behavior/ui.ts)
 
 Excerpt:
 
 ```ts
-export function recyclingNodes(state: Observation<typeof model>): readonly NetworkNode[] {
+export function recyclingNodes(state: Observation<typeof model>): readonly GraphNodeData[] {
   return state.nodes.map((node, index) => {
     const angle = 2 * Math.PI * index / state.nodes.length - Math.PI / 2;
-    return { id: node.id, label: `H${index + 1}`, color: netLogoColor(node.recycling ? 55 : 25), size: node.recycling ? 18 : 13,
+    return { id: node.id, label: `H${index + 1}`, color: indexedColor(node.recycling ? 55 : 25), size: node.recycling ? 18 : 13,
       position: { x: Math.cos(angle) * 150, y: Math.sin(angle) * 150 } };
   });
 }
@@ -200,7 +200,7 @@ export function recyclingNodes(state: Observation<typeof model>): readonly Netwo
 
 Actual planned capacities and completed outcomes form aggregate dwelling-slot panels.
 
-[model.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/zoning-scenario-comparison/model.ts) · [ui.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/zoning-scenario-comparison/ui.ts)
+[model.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/studies/zoning-scenario-comparison/model.ts) · [ui.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/studies/zoning-scenario-comparison/ui.ts)
 
 Excerpt:
 
@@ -224,20 +224,20 @@ export function zoningData(state: ZoningObservation): SpatialData {
 
 Actual membership edges join explicit home, resident and workplace columns.
 
-[model.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/workplace-household-membership/model.ts) · [ui.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/experiments/workplace-household-membership/ui.ts)
+[model.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/studies/workplace-household-membership/model.ts) · [ui.ts](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/studies/workplace-household-membership/ui.ts)
 
 Excerpt:
 
 ```ts
-export function membershipNodes(state: Observation<typeof model>): readonly NetworkNode[] {
+export function membershipNodes(state: Observation<typeof model>): readonly GraphNodeData[] {
   return state.nodes.map(node => {
     const residentIndex = state.people.findIndex(person => person.id === node.id);
-    if (residentIndex >= 0) return { id: node.id, label: `R${residentIndex + 1}`, color: netLogoColor(75), size: 16,
+    if (residentIndex >= 0) return { id: node.id, label: `R${residentIndex + 1}`, color: indexedColor(75), size: 16,
       position: { x: 0, y: (residentIndex - (state.people.length - 1) / 2) * 32 } };
     const household = node.kind === "household";
     const first = node.id.endsWith("-a");
     return { id: node.id, label: `${household ? "Home" : "Work"} ${first ? "A" : "B"}`,
-      color: netLogoColor(household ? 105 : 125), size: 30,
+      color: indexedColor(household ? 105 : 125), size: 30,
 ```
 
 ![Household/workplace membership: actual corrected model view](visual-evidence/workplace-household-membership-desktop-light.png)

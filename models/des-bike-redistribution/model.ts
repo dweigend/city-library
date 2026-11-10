@@ -18,7 +18,8 @@ export function create(options: Partial<BikeParameters> = {}) {
   graph.edges.add({ from: stations[0]!, to: stations[1]! });
   graph.edges.add({ from: stations[1]!, to: stations[2]! });
   const distance = graph.distances({ from: stations[0]! });
-  const inventory = stations.map(() => Store.create<{ number: number }>({ capacity: 18 }));
+  const stationCapacity = 18;
+  const inventory = stations.map(() => Store.create<{ number: number }>({ capacity: stationCapacity }));
   for (let number = 1; number <= settings.targetBikes * 3; number++) inventory[0]!.put({ number });
   const agenda = Agenda.create<{ kind: "load" | "deliver"; destination: number }>();
   let cargo: { number: number }[] = [];
@@ -70,7 +71,7 @@ export function create(options: Partial<BikeParameters> = {}) {
       return {
         tick: world.tick.value, time: agenda.time, parameters: { ...settings }, done, delivered,
         inTransit: cargo.length, totalBikes: inventory.reduce((sum, store) => sum + store.items.length, cargo.length),
-        stations: stations.map((station, index) => ({ id: station.id, label: station.label, x: station.x, y: station.y, bikes: inventory[index]!.items.length })),
+        stations: stations.map((station, index) => ({ id: station.id, label: station.label, x: station.x, y: station.y, bikes: inventory[index]!.items.length, capacity: stationCapacity })),
         truck: { id: truck.id, x: truck.x, y: truck.y }, trips: trips.map((trip) => ({ ...trip })),
       };
     },

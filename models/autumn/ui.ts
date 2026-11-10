@@ -4,24 +4,13 @@ import { model } from "./model.ts";
 
 const binding = defineUI(model, {
   setup: ["seed", "numberOfLeaves", "startSugarMean", "startSugarStddev"],
+  change: (instance, changes) => instance.setParameters(changes),
   live: {
-    windFactor: {
-      set: (instance, value) => instance.setParameters({ windFactor: value }),
-    },
-    temperature: {
-      set: (instance, value) => instance.setParameters({ temperature: value }),
-    },
-    rainIntensity: {
-      set: (instance, value) =>
-        instance.setParameters({ rainIntensity: value }),
-    },
-    sunIntensity: {
-      set: (instance, value) => instance.setParameters({ sunIntensity: value }),
-    },
-    leafDisplayMode: {
-      set: (instance, value) =>
-        instance.setParameters({ leafDisplayMode: value }),
-    },
+    windFactor: {},
+    temperature: {},
+    rainIntensity: {},
+    sunIntensity: {},
+    leafDisplayMode: {},
   },
   complete: (state) => state.stopped,
   source: {

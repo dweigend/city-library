@@ -1,4 +1,4 @@
-import type { MonitorSpec, RuntimeSpec } from "./authoring.ts";
+import type { AuthoringSpec, MonitorSpec, RuntimeSpec } from "./authoring.ts";
 import type { LegacyLiveField } from "./definition.ts";
 import { flushSync, mount, unmount } from "svelte";
 import type { Definition } from "../models/definition.ts";
@@ -9,13 +9,14 @@ import { createSession } from "./svelte/session.ts";
 /** Svelte adapter; the public authoring contract remains framework independent. */
 export function defineUI<P extends object, M>(
   definition: Definition<P, M> & { readonly create: (options?: Partial<P>) => ModelInstance },
-  spec: Omit<UISpec<NoInfer<P>, Extract<NoInfer<M>, ModelInstance>>, 'live'> & {
+  spec: Omit<UISpec<NoInfer<P>, Extract<NoInfer<M>, ModelInstance>>, 'live' | 'change'> & {
+    readonly change?: undefined;
     readonly live?: readonly LegacyLiveField<NoInfer<P>, Extract<NoInfer<M>, ModelInstance>>[];
   },
 ): BoundEntry;
 export function defineUI<P extends object, M>(
   definition: Definition<P, M> & { readonly create: (options?: Partial<P>) => ModelInstance },
-  spec: UISpec<NoInfer<P>, Extract<NoInfer<M>, ModelInstance>>,
+  spec: AuthoringSpec<NoInfer<P>, Extract<NoInfer<M>, ModelInstance>>,
 ): BoundEntry;
 export function defineUI<
   P extends object,
@@ -23,7 +24,8 @@ export function defineUI<
   const T extends NonNullable<RuntimeSpec<NoInfer<P>, Extract<NoInfer<M>, ModelInstance>>['monitors']>,
 >(
   definition: Definition<P, M> & { readonly create: (options?: Partial<P>) => ModelInstance },
-  spec: Omit<MonitorSpec<NoInfer<P>, Extract<NoInfer<M>, ModelInstance>, T>, 'live'> & {
+  spec: Omit<MonitorSpec<NoInfer<P>, Extract<NoInfer<M>, ModelInstance>, T>, 'live' | 'change'> & {
+    readonly change?: undefined;
     readonly live?: readonly LegacyLiveField<NoInfer<P>, Extract<NoInfer<M>, ModelInstance>>[];
   },
 ): BoundEntry;

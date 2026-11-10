@@ -4,36 +4,16 @@ import { model } from "./model.ts";
 
 const binding = defineUI(model, {
   setup: ["seed", "lacINumber", "rnapNumber"],
+  change: (instance, changes) => instance.setParameters(changes),
   live: {
-    lactose: {
-      set: (instance, value) => instance.setParameters({ lactose: value }),
-    },
-    glucose: {
-      set: (instance, value) => instance.setParameters({ glucose: value }),
-    },
-    levelSpace: {
-      set: (instance, value) => instance.setParameters({ levelSpace: value }),
-    },
-    lacIBondLeakage: {
-      set: (instance, value) =>
-        instance.setParameters({ lacIBondLeakage: value }),
-    },
-    lacILactoseBindingChance: {
-      set: (instance, value) =>
-        instance.setParameters({ lacILactoseBindingChance: value }),
-    },
-    lacILactoseSeparationChance: {
-      set: (instance, value) =>
-        instance.setParameters({ lacILactoseSeparationChance: value }),
-    },
-    lacYDegradationChance: {
-      set: (instance, value) =>
-        instance.setParameters({ lacYDegradationChance: value }),
-    },
-    lacZDegradationChance: {
-      set: (instance, value) =>
-        instance.setParameters({ lacZDegradationChance: value }),
-    },
+    lactose: {},
+    glucose: {},
+    levelSpace: {},
+    lacIBondLeakage: {},
+    lacILactoseBindingChance: {},
+    lacILactoseSeparationChance: {},
+    lacYDegradationChance: {},
+    lacZDegradationChance: {},
   },
   actions: [{ label: "Reset parameters", run: (instance) => instance.reset() }],
   complete: (state) => state.stopped,

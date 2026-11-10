@@ -10,7 +10,7 @@ The comparison baseline was Git revision `44272279e22a82deb162589f892ec058c50994
 
 ## Independent trajectory and purity comparison
 
-For each of the ten entries, the verifier loaded the baseline model from `git show 4427227:experiments/<slug>/model.ts` into a temporary file outside the repository. Only import locations were remapped to the same repository's unchanged root library, definition types and parameter validation. The file was removed in a finally block. No extra checkout was created and no actual `model.ts` was replaced.
+For each of the ten entries, the verifier loaded the baseline model from `git show 4427227:studies/<slug>/model.ts` into a temporary file outside the repository. Only import locations were remapped to the same repository's unchanged root library, definition types and parameter validation. The file was removed in a finally block. No extra checkout was created and no actual `model.ts` was replaced.
 
 Baseline and current captures ran in separate fresh Bun processes with identical inputs: seed17 where the model accepts a seed, otherwise its defaults. They recorded JSON-compatible detached observations after cumulative requested advances of 0,1,3,10,30,130. Finite models retain their normal terminal tick instead of being forced past completion. Every original key, array length and scalar value was compared recursively, including opaque object IDs without normalization. Added current keys were allowed.
 
@@ -35,7 +35,7 @@ The independent temporary harness and capture files are under `/tmp/mesa-visual-
 
 ## Contract checks
 
-Source inspection of all ten headless model imports found only public headless library contracts and the existing experiment definition/parameter modules. No UI, DOM, Canvas, Svelte, SpatialData or NetworkNode import/type was introduced into these models. Their added observations expose ordinary detached values: actual Grid coordinates, capacities, model-owned interval balances, tree moisture capacity, actual planned runs and semantic node kinds.
+Source inspection of all ten headless model imports found only public headless library contracts and the existing experiment definition/parameter modules. No UI, DOM, Canvas, Svelte, SpatialData or GraphNodeData import/type was introduced into these models. Their added observations expose ordinary detached values: actual Grid coordinates, capacities, model-owned interval balances, tree moisture capacity, actual planned runs and semantic node kinds.
 
 The focused tests verify actual centered field geometry and detached snapshots; a fixed heat color domain across widths/time; fixed moisture colors across populations; household aggregate/per-household agreement; battery and basin interval conservation; readonly catchment observations; repeated-read seeded continuation; sole Resource reservation status ownership; crossing stage positions; stable recycling layout; exact completed zoning slot counts and actual plan metadata; and membership reassignment changing canonical edges without moving model geography. These are bounded behavior checks, not scientific validation.
 
@@ -44,7 +44,7 @@ The focused tests verify actual centered field geometry and detached snapshots; 
 - `python3 /tmp/mesa-visual-independent/compare.py`: all ten baseline/trajectory/read/projection comparisons passed at the six requested boundaries, with no ID normalization.
 - `bun run typecheck`: passed all configured TypeScript projects and Svelte checks; Svelte reported 0 errors and 0 warnings.
 - `bun test tests/heat-projection.test.ts tests/resource-projection.test.ts tests/social-projection.test.ts tests/spatial-models.test.ts tests/model-occupancy.test.ts tests/domain-integration.test.ts`: **43 tests passed, 0 failed, 403 assertions**.
-- Each unchanged script in `examples/model-measurements`, `examples/model-dynamics` and `examples/graph-attachment` executed through Bun: **all 14 public scripts passed**.
+- Each unchanged script in `tests/public-contracts/model-measurements`, `tests/public-contracts/model-dynamics` and `tests/public-contracts/graph-attachment` executed through Bun: **all 14 public scripts passed**.
 - `CITY_LIBRARY_UI_RUNTIME=svelte bun run build:ui:svelte`: passed in 1.85 seconds, then passed again in1.42 seconds after the late Zoning panel/caption change. The existing chunk-size advisory remains; it is not a build failure.
 - A direct import/source scan found no UI/browser dependencies in the ten headless model files. UI imports were also executed in the fresh Bun comparison processes without DOM globals.
 

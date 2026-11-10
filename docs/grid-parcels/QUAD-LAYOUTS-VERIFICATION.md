@@ -23,9 +23,9 @@ cherry-picked as `2df94d1`, preserving all concurrent untracked preparation.
 Executed after integration:
 
 - `sha256sum -c docs/development/example-first/SCRIPT-SHA256SUMS`: all three match.
-- `bun run examples:city`: passed, balance 19000 and heat total 188.
+- `bun run contracts:city`: passed, balance 19000 and heat total 188.
 - `bun run typecheck:city`: passed.
-- `bun run examples:city:targets`: exit 1 at absent `geometry.corridor`.
+- `bun run contracts:city:targets`: exit 1 at absent `geometry.corridor`.
 - `bun run typecheck:city:targets`: exit 1 for absent corridor/subtract/subdivide
   and five dependent implicit-any diagnostics.
 - Source package SHA-256 verification: all 28 transferred files match.
@@ -56,14 +56,14 @@ Coordinator checks on 8 November 2026, Bun 1.4.2 and Node 26.8.2:
 | Executed command | Result |
 | --- | --- |
 | `bun run typecheck:townscaper` | Passed, including mixed named-variable option and regular-only Grid negative type cases. |
-| `bun run examples:townscaper` | All five frozen public scripts passed unchanged. |
-| `bun test tests/quad-layouts.test.ts tests/grid-parcels-topology.test.ts tests/grid-parcels-grid.test.ts` | 27 tests passed, 31815 expectations. |
+| `bun run contracts:townscaper` | All five frozen public scripts passed unchanged. |
+| `bun test tests/townscaper-grid.test.ts tests/grid-parcels-topology.test.ts tests/grid-parcels-grid.test.ts` | 27 tests passed, 31815 expectations. |
 | `bun run check` | Exit 0: complete TypeScript/Svelte checking, 619 tests / 183339 expectations across 73 files, all 241 registered public scripts, library bundle/declarations and packed consumers. |
 | Packed consumer within `bun run check` | Bun, Node ESM and ambient-free strict TypeScript passed, exercising both new APIs, RNG purity, area, revision/incidence identity, explicit Field copy and mixed options. |
 | `bun run build:ui:svelte` | Exit 0; existing chunk-size warning remains. No UI source changed. |
 | Four `sha256sum -c` manifests | All E3 (5), foundation (5), E0 (3) scripts and 28 archived source files unchanged. |
 | `git diff --check` | Passed. |
-| `bun run examples:city:targets` | Exit 1 at absent corridor; ready budget/heat scripts still pass. |
+| `bun run contracts:city:targets` | Exit 1 at absent corridor; ready budget/heat scripts still pass. |
 | `bun run typecheck:city:targets` | Exit 1: three missing E1/E2 methods and five dependent implicit-any diagnostics, unchanged from the accepted red checkpoint. |
 
 The separate reviewer ran 35 focused tests / 32548 expectations, the five

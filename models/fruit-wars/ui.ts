@@ -13,31 +13,21 @@ export const ui = defineUI(model, {
     { field: "initialFruitBushes", label: "Initial bushes" },
     "initialForagers",
   ],
+  change: (instance, changes) => instance.setRules(changes),
   live: {
-    ticksToFlee: {
-      set: (m, v) => m.setRules({ ticksToFlee: v }),
-    },
+    ticksToFlee: {},
     rateOfMutation: {
       label: "Mutation rate (%)",
-      set: (m, v) => m.setRules({ rateOfMutation: v }),
     },
-    collaborationBonus: {
-      set: (m, v) => m.setRules({ collaborationBonus: v }),
-    },
+    collaborationBonus: {},
     maxAge: {
       label: "Maximum age",
-      set: (m, v) => m.setRules({ maxAge: v }),
     },
     bushGrowthChance: {
       label: "Bush growth chance (%)",
-      set: (m, v) => m.setRules({ bushGrowthChance: v }),
     },
-    showEnergy: {
-      set: (m, v) => m.setRules({ showEnergy: v }),
-    },
-    visualization: {
-      set: (m, v) => m.setRules({ visualization: v }),
-    },
+    showEnergy: {},
+    visualization: {},
   },
   complete: (s) => s.done,
   source: {

@@ -51,7 +51,7 @@ Use network for scientific subject matter when appropriate; use Graph for the AP
 | breed for general execution classification | group |
 | experiment for model selection or the study API | model or study according to the task |
 | opaque phase codes and source-project abbreviations | the actual capability |
-| `numAgents` and other `num*` count keys | `agentCount` and the corresponding singular noun plus `Count` |
+| `agentCount` and other `num*` count keys | `agentCount` and the corresponding singular noun plus `Count` |
 
 ## Spelling and structure
 

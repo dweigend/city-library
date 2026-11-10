@@ -1576,7 +1576,7 @@ type GeneratorOptions<N> =
       wrap?: boolean; directed?: boolean }
   | { kind: "random"; nodes: readonly N[]; probability: number;
       directed?: boolean; random: Random }
-  | { kind: "smallWorld"; nodes: readonly N[]; neighbors: number;
+  | { kind: "small-world"; nodes: readonly N[]; neighbors: number;
       probability: number; random: Random }
   | { kind: "preferential"; nodes: readonly N[]; links: number;
       random: Random }

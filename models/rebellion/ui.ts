@@ -12,21 +12,17 @@ const binding = defineUI(model, {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Rebellion.nlogox",
     label: "Source attribution · Wilensky · CC BY-NC-SA 3.0",
   },
+  change: (instance, changes) => instance.setParameters(changes),
   live: {
-    governmentLegitimacy: {
-      set: (m, v) => m.setParameters({ governmentLegitimacy: v }),
-    },
+    governmentLegitimacy: {},
     maxJailTerm: {
       label: "Maximum jail term",
-      set: (m, v) => m.setParameters({ maxJailTerm: v }),
     },
     movement: {
       label: "Citizen movement",
-      set: (m, v) => m.setParameters({ movement: v }),
     },
     visualization: {
       label: "Symbols",
-      set: (m, v) => m.setParameters({ visualization: v }),
     },
   },
   actions: [{ label: "Watch one", run: (m) => m.watchOne() }],

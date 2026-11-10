@@ -107,7 +107,7 @@ Unresolved **source-browser and binding boundaries**, not convenient repairs: ne
 
 ## Public model examples
 
-Public scripts in `examples/selected-urban-remaining/` cover Structure1's toroidal impulse, Structure2's sticky activation, Sprawl's same-tick house phase and cached threshold, and Economic Disparity's removal/threshold/median rules. Preserve their assertions and SHA256SUMS. Tijuana uses its own lifecycle examples in `examples/selected-tijuana/`.
+Public scripts in `tests/public-contracts/selected-urban-remaining/` cover Structure1's toroidal impulse, Structure2's sticky activation, Sprawl's same-tick house phase and cached threshold, and Economic Disparity's removal/threshold/median rules. Preserve their assertions and SHA256SUMS. Tijuana uses its own lifecycle examples in `tests/public-contracts/selected-tijuana/`.
 
 Further tests must cover interrupted setup and error effects, empty-search stopping, integer coercions, house order/counters, threshold stickiness and stochastic draw schedules.
 

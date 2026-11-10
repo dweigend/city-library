@@ -9,10 +9,10 @@ Start with a small rule you can run and inspect. An experiment pairs a headless 
 Run its public-API assertions from the repository root:
 
 ```sh
-bun examples/lab/01-headless-network-entry.ts
+bun tests/public-contracts/lab/01-headless-network-entry.ts
 ```
 
-The example runs without a browser. This excerpt uses paths relative to `examples/lab/`:
+The example runs without a browser. This excerpt uses paths relative to `tests/public-contracts/lab/`:
 
 ```ts
 import assert from "node:assert/strict";

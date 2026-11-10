@@ -38,7 +38,7 @@ This inventory and the [UI API reference](api-reference.md) form the binding UI 
 
 ## Views
 
-Every view requires `type` and `label`; labels are currently explicit. All callbacks consume the same typed model observation. `View<S>` is publicly re-exported. Inspector is accepted in `UISpec.views` and its named type is re-exported by both UI entrypoints.
+Every view requires `type` and `label`; labels are currently explicit. All callbacks consume the same typed model observation. `View<S>` is publicly re-exported. Inspector is accepted in `UISpec.views` and its named type is re-exported by the public UI entry and its secondary import.
 
 | ID | Discriminant and required data callback | Data contract | Scope | Reference |
 | --- | --- | --- | --- | --- |
@@ -60,12 +60,15 @@ Every view requires `type` and `label`; labels are currently explicit. All callb
 | UI-043 | Edge `directed?: boolean`, `color?: string`, `width?: number` | Undirected when omitted; host color; positive finite CSS-pixel width, default 1. | Supported | [Network](api-reference.md#network) |
 | UI-044 | `Cell`: `id: string`, `x: number`, `y: number`, `color: string` | Rendered cell record, not domain `Field`. Named type is exported by the UI entry in the public contract. | Supported | [Grid](api-reference.md#grid) |
 | UI-045 | `GridData`: `width: number`, `height: number`, `cells: readonly Cell[]` | All required; dimensions and coordinates describe presentation extent. | Supported | [Grid](api-reference.md#grid) |
-| UI-046 | `SpatialAgent extends GraphNodeData`: `x: number`, `y: number`, `heading?: number`, `shape?: "circle" \| "triangle"` | Required position; heading defaults 0 degrees; shape defaults circle. Named type is exported by the UI entry in the public contract. | Supported | [Spatial](api-reference.md#spatial) |
+| UI-046 | `SpatialAgent extends GraphNodeData`: `x: number`, `y: number`, `heading?: number`, `shape?: "circle" \| "triangle" \| "rectangle" \| "diamond"` | Required position; heading defaults 0 degrees; shape defaults circle. Named type is exported by the UI entry in the public contract. | Supported | [Spatial](api-reference.md#spatial) |
 | UI-047 | `SpatialData`: `width: number`, `height: number`, `agents: readonly SpatialAgent[]`, `cells?: readonly Cell[]` | Required extent/agents; omission gives no cell backdrop. | Supported | [Spatial](api-reference.md#spatial) |
 | UI-048 | `SpatialData.showLabels?: boolean` | Controlled label visibility when supplied; omission retains host Labels control. | Supported | [Spatial](api-reference.md#spatial) |
 | UI-049 | `SpatialData.segments?: readonly SpatialSegment[]` | Ordered strokes above cells and below agents/selection/labels; omitted means no strokes. | Supported | [Spatial](api-reference.md#spatial) |
 | UI-050 | `SpatialSegment`: `from/to: { x: number; y: number }`, `color?: string`, `width?: number` | Detached finite centered world endpoints; nonnegative finite CSS-pixel width defaults 1, zero omits stroke. Color defaults to host foreground. | Supported | [Spatial](api-reference.md#spatial) |
 | UI-051 | `Series`: `label: string`, `color?: string`, `points: readonly { x: number; y: number }[]` | Label/points required; host palette when color omitted. No model history is inferred or recorded by the view. | Supported | [Charts](api-reference.md#charts) |
+| UI-052 | `SpatialAgent.extent?`, `filled?`, `stroke?`, `strokeWidth?` | Positive finite diagram dimensions only for rectangles and exclusive with CSS size; fill defaults true; outline width is nonnegative CSS pixels. | Supported | [Spatial](api-reference.md#spatial) |
+| UI-053 | `SpatialLabel`; `SpatialData.labels?: readonly SpatialLabel[]` | Nonselectable annotations with finite x/y and text, using shared foreground/font. | Supported | [Spatial](api-reference.md#spatial) |
+| UI-054 | `SpatialData.description?: string` | Nonempty accessible scene meaning and quantities; omission retains count description. Invalid candidate geometry preserves the previous valid projection. | Supported | [Spatial](api-reference.md#spatial) |
 
 ## Drawing and palette
 
@@ -74,6 +77,7 @@ Every view requires `type` and `label`; labels are currently explicit. All callb
 | UI-060 | `drawing?: { toggleLabel?: string; enabled: (state: S) => boolean; intent: (model: M, intent: DrawingIntent) => void }` | Omitted means no drawing binding; explicit enable predicate and model action required. Optional toggle starts off per mounted instance. Without toggle label, predicate alone gates drawing. | Supported | [Drawing](api-reference.md#drawing) |
 | UI-061 | `DrawingIntent` | `{ phase: "begin" \| "move"; position: { x: number; y: number } }` or `{ phase: "end"; position?: never }`; named type not re-exported by UI entry. | Supported | [Drawing](api-reference.md#drawing) |
 | UI-062 | `indexedColor(color: number): string` | Public experimental helper; finite numeric colors wrap modulo 140 and select observed tenth-color bins. Non-number throws TypeError; nonfinite number throws RangeError. | Supported | [Palette](api-reference.md#palette) |
+| UI-063 | `scientificPalette` | Shared readonly neutral/waiting/active/completed/unavailable presentation colors; shape/text must also convey state. | Supported | [Palette](api-reference.md#palette) |
 
 ## Design rules and planned extensions
 
@@ -99,6 +103,16 @@ Do not treat internal renderer mounts, Svelte components, theme bridges, catalog
 
 | ID | Contract | Availability | Reference |
 | --- | --- | --- | --- |
-| UI-078 | `Observation<T>` infers the detached observation from a definition or model instance; exported by both UI entrypoints. | Public type | [Model](api-reference.md#model) |
+| UI-078 | `Observation<T>` infers the detached observation from a definition or model instance; exported by the public UI entry and its secondary import. | Public type | [Model](api-reference.md#model) |
 | UI-079 | `Monitor<S, V>` types an extracted monitor with observation `S` and scalar `V`; scalar formatter arguments must accept the paired getter result. | Public type | [Monitors](api-reference.md#monitors) |
 | UI-080 | Selection retains string/null and one semantic presentation ID per entity across views; authors namespace overlapping source IDs. | Authoring contract | [Inspector](api-reference.md#inspector) |
+
+## Universal authoring additions
+
+| ID | Public operation | Defaults and ownership | Reference |
+| --- | --- | --- | --- |
+| UI-081 | `change?: (instance, changes: LiveChanges<P>) => void` | Explicit common action for keyed fields without local setters; one decoded key, local override wins; legacy arrays retain setters | [Live](api-reference.md#live) |
+| UI-082 | `collectionDiagram(rows: readonly CollectionRow[]): SpatialData` | Pure existing-spatial projection; discriminated identified items, anonymous count and unit capacity; shared layout defaults, complete identities, empty/overflow explicit | [Collection diagrams](api-reference.md#collection-diagrams) |
+| UI-083 | `SpatialAgent.selectable?: boolean` | Omitted true; false excludes decoration from pointer/nearest/keyboard selection | [Spatial](api-reference.md#spatial) |
+| UI-084 | Existing table paging | 200-row pages, all rows reachable; range/total, shrink clamp and Setup reset; host-only state | [Table](api-reference.md#table) |
+| UI-085 | Existing chart default colors | Unique labels retain palette slots during a mounted view; explicit colors win, duplicate labels positional | [Charts](api-reference.md#charts) |

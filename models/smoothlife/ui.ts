@@ -22,31 +22,16 @@ export const ui = defineUI(model, {
       },
     },
   ],
+  change: (instance, changes) => instance.setRules(changes),
   live: {
-    minBirth: {
-      set: (instance, value) => instance.setRules({ minBirth: value }),
-    },
-    maxBirth: {
-      set: (instance, value) => instance.setRules({ maxBirth: value }),
-    },
-    minSurvive: {
-      set: (instance, value) => instance.setRules({ minSurvive: value }),
-    },
-    maxSurvive: {
-      set: (instance, value) => instance.setRules({ maxSurvive: value }),
-    },
-    innerStepWidth: {
-      set: (instance, value) => instance.setRules({ innerStepWidth: value }),
-    },
-    outerStepWidth: {
-      set: (instance, value) => instance.setRules({ outerStepWidth: value }),
-    },
-    paintValue: {
-      set: (instance, value) => instance.setRules({ paintValue: value }),
-    },
-    paintRadius: {
-      set: (instance, value) => instance.setRules({ paintRadius: value }),
-    },
+    minBirth: {},
+    maxBirth: {},
+    minSurvive: {},
+    maxSurvive: {},
+    innerStepWidth: {},
+    outerStepWidth: {},
+    paintValue: {},
+    paintRadius: {},
   },
   drawing: {
     enabled: (state) => state.drawing,

@@ -14,22 +14,19 @@ export const ui = defineUI(model, {
     label: "Source attribution · Stonedahl and Wilensky · CC BY-NC-SA 3.0",
   },
   complete: (state) => state.done,
+  change: (instance, changes) => instance.setRules(changes),
   live: {
     spreadChance: {
       label: "Spread chance (%)",
-      set: (instance, value) => instance.setRules({ spreadChance: value }),
     },
     recoveryChance: {
       label: "Recovery chance (%)",
-      set: (instance, value) => instance.setRules({ recoveryChance: value }),
     },
     resistanceChance: {
       label: "Gain resistance (%)",
-      set: (instance, value) => instance.setRules({ resistanceChance: value }),
     },
     checkFrequency: {
       label: "Check frequency (ticks)",
-      set: (instance, value) => instance.setRules({ checkFrequency: value }),
     },
   },
   monitors: [

@@ -3,20 +3,12 @@ import { model } from "./model.ts";
 
 const binding = defineUI(model, {
   setup: ["seed", "androidCount"],
+  change: (instance, changes) => instance.setParameters(changes),
   live: {
-    infectionChance: {
-      set: (instance, value) =>
-        instance.setParameters({ infectionChance: value }),
-    },
-    stepSize: {
-      set: (instance, value) => instance.setParameters({ stepSize: value }),
-    },
-    avoid: {
-      set: (instance, value) => instance.setParameters({ avoid: value }),
-    },
-    chase: {
-      set: (instance, value) => instance.setParameters({ chase: value }),
-    },
+    infectionChance: {},
+    stepSize: {},
+    avoid: {},
+    chase: {},
   },
   actions: [
     { label: "Infect", run: (instance) => instance.infect() },
@@ -30,7 +22,7 @@ const binding = defineUI(model, {
   complete: (state) => state.stopped,
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Disease%20Solo.nlogox",
-    label: "Source attribution · source notices",
+    label: "Source attribution · NetLogo model · source notices",
   },
   monitors: [
     { label: "Tick", value: (state) => state.tick },

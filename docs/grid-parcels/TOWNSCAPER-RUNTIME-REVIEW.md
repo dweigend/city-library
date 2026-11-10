@@ -20,9 +20,9 @@
   - Both earlier `P3` design-review implementation guards (`F1`: explicit `undefined` and extra argument `TypeError` rejection before defaults/draws; `F2`: canonical CCW + lexicographically smallest `(x, y)` start normalization and fresh snapshot allocation on `iterations: 0` and stationary steps) are accurately implemented and verified.
   - The post-freeze author boundary finding (`rings: 7, edgeLength: 1e6 / 7` evaluating corner `7 * (1e6 / 7) = 1000000.0000000001 > 1e6` in IEEE 754 binary64) is handled cleanly by the pre-draw `validateSource` preflight (`RangeError` before any RNG draw), with no coordinate snapping, no hidden rounding, and no modification to any frozen script.
 - **Frozen Script & Archive Integrity Verdict:** **VERIFIED UNCHANGED.**
-  - All 5 `examples/townscaper-grid/*.ts` scripts, all 5 `examples/grid-parcels/*.ts` scripts, all 3 `examples/city-simulation/*.ts` scripts, and all 28 `docs/library-handover/parcel-proposal/**` archive files pass `sha256sum -c` with zero byte changes since their respective freeze commits.
+  - All 5 `tests/public-contracts/townscaper-grid/*.ts` scripts, all 5 `tests/public-contracts/grid-parcels/*.ts` scripts, all 3 `tests/public-contracts/city-simulation/*.ts` scripts, and all 28 `docs/library-handover/parcel-proposal/**` archive files pass `sha256sum -c` with zero byte changes since their respective freeze commits.
 - **Target Capability Verdict (`03-generative-quarter.ts`, `E1`/`E2`):** **HONESTLY RED (by design).**
-  - `bun run examples:city:targets` and `bun run typecheck:city:targets` continue to fail honestly at missing `geometry.corridor`, `geometry.subtract`, and `geometry.subdivide`. No mocks, placeholders, or expected-failure wrappers were introduced.
+  - `bun run contracts:city:targets` and `bun run typecheck:city:targets` continue to fail honestly at missing `geometry.corridor`, `geometry.subtract`, and `geometry.subdivide`. No mocks, placeholders, or expected-failure wrappers were introduced.
 - **Scope & Verification Boundary:**
   - This review approves the headless `E3` runtime implementation and focused verification checks executed below. The coordinator is running the full `bun run check` workflow, UI build, and packed consumer execution separately; this review does not claim those coordinator-owned runs are already completed. No UI or browser-facing flow is added in this slice, and no original-game visual or scientific fidelity is claimed.
 
@@ -34,18 +34,18 @@ All commands below were executed directly in `/home/david/.t3/worktrees/city-lib
 
 | Check / Command | Observed Result | Verified Details |
 | --- | --- | --- |
-| `sha256sum -c examples/townscaper-grid/SHA256SUMS` | Exit `0` (5/5 `OK`) | All 5 frozen `E3` public scripts are byte-identical to pre-runtime freeze `9fca840`. |
-| `sha256sum -c examples/grid-parcels/SHA256SUMS` | Exit `0` (5/5 `OK`) | All 5 frozen grid/parcel foundation scripts are untouched. |
+| `bun run check:migration` | Exit `0` (5/5 `OK`) | All 5 frozen `E3` public scripts are byte-identical to pre-runtime freeze `9fca840`. |
+| `bun run check:migration` | Exit `0` (5/5 `OK`) | All 5 frozen grid/parcel foundation scripts are untouched. |
 | `sha256sum -c docs/development/example-first/SCRIPT-SHA256SUMS` | Exit `0` (3/3 `OK`) | All 3 accepted `E0` city simulation scripts are untouched. |
 | `sha256sum -c docs/grid-parcels/TOWNSCAPER-PACKAGE-SHA256SUMS` | Exit `0` (28/28 `OK`) | All 28 source archive files (`49`-row roadmap, `58` signature sections, `27` shared types, 5 attributed paper PNGs, 1 SVG) are untouched. |
-| `bun run examples:townscaper` | Exit `0` | All 5 frozen `examples/townscaper-grid/01..05` scripts execute and pass all assertions (`smallCells: 14`, `largeCells: 122`, first-step `[1.1875, 0.8125]`, halving attempt 2 `[1.248546875, 1.6424375000000002]`, `replayedCells: 122`). |
+| `bun run contracts:townscaper` | Exit `0` | All 5 frozen `tests/public-contracts/townscaper-grid/01..05` scripts execute and pass all assertions (`smallCells: 14`, `largeCells: 122`, first-step `[1.1875, 0.8125]`, halving attempt 2 `[1.248546875, 1.6424375000000002]`, `replayedCells: 122`). |
 | `bun run typecheck:townscaper` | Exit `0` | Strict TypeScript passes on all 5 `E3` scripts and `tests/townscaper-grid-types.ts` (including `@ts-expect-error` negative checks on literals and named variables). |
 | `bun test tests/townscaper-grid.test.ts` | Exit `0` (`14 pass, 0 fail`, `31,183` `expect()` calls) | Covers primitive construction oracles, radii `1..7` area/ownership/budgets/RNG draw counts, malformed/accessor/symbol/undefined preflight, extreme `edgeLength` (`2 ** -400`, `1e6`), `7 * (1e6 / 7)` pre-draw coordinate cap rejection, Gaussian cache continuation, stationary fixed points, multi-vertex diagonal oracle, 2-halving acceptance, 17-attempt exhaustion, underflow stagnation rejection, disconnected components/holes, and `Grid`/`Field` state isolation. |
 | `bun test tests/grid-parcels-topology.test.ts tests/grid-parcels-grid.test.ts tests/grid-parcels-geometry.test.ts tests/grid-parcels-conservation.test.ts tests/townscaper-grid.test.ts` | Exit `0` (`35 pass, 0 fail`, `32,548` `expect()` calls) | Full grid-parcel foundation + `E3` test suite passes without regression. |
-| `for f in examples/grid-parcels/*.ts; do bun "$f"; done` | Exit `0` (5/5 pass) | All 5 foundation public scripts pass unchanged. |
-| `tsc --noEmit && tsc -p tsconfig.dev.json` | Exit `0` | Root library and dev/example/test TypeScript projects (now including `examples/townscaper-grid/**/*.ts`) typecheck cleanly. |
-| `bun run examples:city && bun run typecheck:city` | Exit `0` / Exit `0` | Ready `E0` scripts (`01-household-budget.ts` -> `19000`, `02-neighborhood-heat.ts` -> `{ tick: 1, centerTemperature: 20, totalTemperature: 188 }`) pass and typecheck. |
-| `bun run examples:city:targets` / `bun run typecheck:city:targets` | Exit `1` / Exit `1` | `03-generative-quarter.ts` remains genuinely red at missing `E1`/`E2` APIs (`geometry.corridor`, `geometry.subtract`, `geometry.subdivide`). |
+| `for f in tests/public-contracts/grid-parcels/*.ts; do bun "$f"; done` | Exit `0` (5/5 pass) | All 5 foundation public scripts pass unchanged. |
+| `tsc --noEmit && tsc -p tsconfig.dev.json` | Exit `0` | Root library and dev/example/test TypeScript projects (now including `tests/public-contracts/townscaper-grid/**/*.ts`) typecheck cleanly. |
+| `bun run contracts:city && bun run typecheck:city` | Exit `0` / Exit `0` | Ready `E0` scripts (`01-household-budget.ts` -> `19000`, `02-neighborhood-heat.ts` -> `{ tick: 1, centerTemperature: 20, totalTemperature: 188 }`) pass and typecheck. |
+| `bun run contracts:city:targets` / `bun run typecheck:city:targets` | Exit `1` / Exit `1` | `03-generative-quarter.ts` remains genuinely red at missing `E1`/`E2` APIs (`geometry.corridor`, `geometry.subtract`, `geometry.subdivide`). |
 
 ---
 

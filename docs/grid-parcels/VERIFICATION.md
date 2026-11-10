@@ -42,7 +42,7 @@ Executed author checks:
   tests / 648 expectations passed across varying convex vertex counts, scales,
   windings, cut directions, and square/hex unions.
 - Each of the five frozen public scripts: passed with assertions enabled.
-- `sha256sum -c examples/grid-parcels/SHA256SUMS`: all five unchanged.
+- `bun run check:migration`: all five unchanged.
 - `cmp docs/grid-parcels/API.md /home/david/Projekte/city_game/docs/library-handover/GRID-PARCELS-API.md`: identical complete saved catalogue.
 - `bunx tsc -p tsconfig.dev.json`: passed after the added integration tests.
 - `git diff --check`: passed.

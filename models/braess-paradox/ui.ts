@@ -2,24 +2,17 @@ import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
   setup: ["seed"],
+  change: (instance, changes) => instance.setRules(changes),
   live: {
     middleOn: {
       label: "Middle road",
-      set: (m, value) => m.setRules({ middleOn: value }),
     },
-    spawnRate: {
-      set: (m, value) => m.setRules({ spawnRate: value }),
-    },
-    smoothing: {
-      set: (m, value) => m.setRules({ smoothing: value }),
-    },
+    spawnRate: {},
+    smoothing: {},
     mode: {
       label: "Route choice",
-      set: (m, value) => m.setRules({ mode: value }),
     },
-    randomness: {
-      set: (m, value) => m.setRules({ randomness: value }),
-    },
+    randomness: {},
   },
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Economics/Braess%20Paradox.nlogox",

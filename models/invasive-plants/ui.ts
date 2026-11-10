@@ -7,31 +7,16 @@ export const ui = defineUI(model, {
     url: "https://ccl.northwestern.edu/netlogo/models/InvasivePlants",
     label: "Source attribution · Wilensky · CC BY-NC-SA 3.0",
   },
+  change: (instance, changes) => instance.setRules(changes),
   live: {
-    seedProductionRate: {
-      set: (m, v) => m.setRules({ seedProductionRate: v }),
-    },
-    spreadDistance: {
-      set: (m, v) => m.setRules({ spreadDistance: v }),
-    },
-    weedKillerThreshold: {
-      set: (m, v) => m.setRules({ weedKillerThreshold: v }),
-    },
-    weedKillerEffectiveness: {
-      set: (m, v) => m.setRules({ weedKillerEffectiveness: v }),
-    },
-    weedKillerRate: {
-      set: (m, v) => m.setRules({ weedKillerRate: v }),
-    },
-    showSeeds: {
-      set: (m, v) => m.setRules({ showSeeds: v }),
-    },
-    drawMode: {
-      set: (m, v) => m.setRules({ drawMode: v }),
-    },
-    drawValue: {
-      set: (m, v) => m.setRules({ drawValue: v }),
-    },
+    seedProductionRate: {},
+    spreadDistance: {},
+    weedKillerThreshold: {},
+    weedKillerEffectiveness: {},
+    weedKillerRate: {},
+    showSeeds: {},
+    drawMode: {},
+    drawValue: {},
   },
   actions: [
     { label: "Clear fields", run: (m) => m.clearFields() },

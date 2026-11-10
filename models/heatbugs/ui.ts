@@ -8,30 +8,20 @@ export const ui = defineUI(model, {
     label: "Source attribution · Wilensky · CC BY-NC-SA 3.0",
   },
   complete: (s) => s.done,
+  change: (instance, changes) => instance.setRules(changes),
   live: {
-    maxOutputHeat: {
-      set: (m, v) => m.setRules({ maxOutputHeat: v }),
-    },
-    minOutputHeat: {
-      set: (m, v) => m.setRules({ minOutputHeat: v }),
-    },
+    maxOutputHeat: {},
+    minOutputHeat: {},
     maxIdealTemp: {
       label: "Max ideal temperature",
-      set: (m, v) => m.setRules({ maxIdealTemp: v }),
     },
     minIdealTemp: {
       label: "Min ideal temperature",
-      set: (m, v) => m.setRules({ minIdealTemp: v }),
     },
-    evaporationRate: {
-      set: (m, v) => m.setRules({ evaporationRate: v }),
-    },
-    diffusionRate: {
-      set: (m, v) => m.setRules({ diffusionRate: v }),
-    },
+    evaporationRate: {},
+    diffusionRate: {},
     randomMoveChance: {
       label: "Random move chance (%)",
-      set: (m, v) => m.setRules({ randomMoveChance: v }),
     },
   },
   actions: [

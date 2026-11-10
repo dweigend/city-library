@@ -1,0 +1,22 @@
+import assert from "node:assert/strict";
+import { create } from "../../../models/diffusion-on-a-directed-network/model.ts";
+
+const model = create({ gridSize: 3, diffusionRate: 50 });
+model.setActiveEdges([]);
+const before = model.read();
+model.rewire();
+assert.deepEqual(model.read(), before);
+model.advance(2);
+assert.equal(model.read().tick, 2);
+assert.deepEqual(model.read().nodes.map(node => node.value), Array(9).fill(1));
+assert.equal(model.read().done, false);
+model.setActiveEdges([{ from: 0, to: 1 }, { from: 1, to: 0 }]);
+model.advance();
+const ready = model.read();
+model.rewire();
+const rewired = model.read();
+assert.equal(rewired.tick, ready.tick);
+assert.equal(rewired.counts.activeEdges, 2);
+assert.deepEqual(rewired.edges.map(edge => [edge.id, edge.currentFlow]), ready.edges.map(edge => [edge.id, edge.currentFlow]));
+assert.deepEqual(rewired.nodes, ready.nodes);
+assert.equal(rewired.history.length, ready.history.length);

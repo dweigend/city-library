@@ -6,16 +6,11 @@ export const ui = defineUI(model, {
     url: "https://ccl.northwestern.edu/netlogo/models/SimpleBirthRates",
     label: "Source attribution · Wilensky · CC BY-NC-SA 3.0",
   },
+  change: (instance, changes) => instance.setRules(changes),
   live: {
-    carryingCapacity: {
-      set: (m, v) => m.setRules({ carryingCapacity: v }),
-    },
-    redFertility: {
-      set: (m, v) => m.setRules({ redFertility: v }),
-    },
-    blueFertility: {
-      set: (m, v) => m.setRules({ blueFertility: v }),
-    },
+    carryingCapacity: {},
+    redFertility: {},
+    blueFertility: {},
   },
   actions: [
     {

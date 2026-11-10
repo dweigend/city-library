@@ -3,31 +3,16 @@ import { defineUI, indexedColor, type Observation, type SpatialData } from "../.
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
   setup: ["seed", "startBlacks", "startWhites"],
+  change: (instance, changes) => instance.setRules(changes),
   live: {
-    scenario: {
-      set: (m, v) => m.setRules({ scenario: v }),
-    },
-    solarLuminosity: {
-      set: (m, v) => m.setRules({ solarLuminosity: v }),
-    },
-    albedoSurface: {
-      set: (m, v) => m.setRules({ albedoSurface: v }),
-    },
-    albedoBlacks: {
-      set: (m, v) => m.setRules({ albedoBlacks: v }),
-    },
-    albedoWhites: {
-      set: (m, v) => m.setRules({ albedoWhites: v }),
-    },
-    showTempMap: {
-      set: (m, v) => m.setRules({ showTempMap: v }),
-    },
-    showDaisies: {
-      set: (m, v) => m.setRules({ showDaisies: v }),
-    },
-    paintDaisiesAs: {
-      set: (m, v) => m.setRules({ paintDaisiesAs: v }),
-    },
+    scenario: {},
+    solarLuminosity: {},
+    albedoSurface: {},
+    albedoBlacks: {},
+    albedoWhites: {},
+    showTempMap: {},
+    showDaisies: {},
+    paintDaisiesAs: {},
   },
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/Daisyworld",

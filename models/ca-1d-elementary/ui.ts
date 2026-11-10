@@ -26,19 +26,12 @@ export const ui = defineUI(model, {
         s.rules.find((r) => r.pattern === pattern)!.next,
     })),
   ],
+  change: (instance, changes) => instance.setRules(changes),
   live: {
-    rule: {
-      set: (m, v) => m.setRules({ rule: v }),
-    },
-    autoContinue: {
-      set: (m, v) => m.setRules({ autoContinue: v }),
-    },
-    foreground: {
-      set: (m, v) => m.setRules({ foreground: v }),
-    },
-    background: {
-      set: (m, v) => m.setRules({ background: v }),
-    },
+    rule: {},
+    autoContinue: {},
+    foreground: {},
+    background: {},
   },
   complete: (s) => s.done,
   monitors: [

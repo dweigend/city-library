@@ -7,34 +7,21 @@ const binding = defineUI(model, {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Ethnocentrism.nlogox",
     label: "Source attribution · Wilensky · CC BY-NC-SA 3.0",
   },
+  change: (instance, changes) => instance.setParameters(changes),
   live: {
-    immigrantsPerDay: {
-      set: (m, v) => m.setParameters({ immigrantsPerDay: v }),
-    },
+    immigrantsPerDay: {},
     initialPtr: {
       label: "Initial reproduction probability",
-      set: (m, v) => m.setParameters({ initialPtr: v }),
     },
-    costOfGiving: {
-      set: (m, v) => m.setParameters({ costOfGiving: v }),
-    },
-    gainOfReceiving: {
-      set: (m, v) => m.setParameters({ gainOfReceiving: v }),
-    },
-    mutationRate: {
-      set: (m, v) => m.setParameters({ mutationRate: v }),
-    },
-    deathRate: {
-      set: (m, v) => m.setParameters({ deathRate: v }),
-    },
+    costOfGiving: {},
+    gainOfReceiving: {},
+    mutationRate: {},
+    deathRate: {},
     immigrantChanceCooperateWithSame: {
       label: "Immigrant cooperation with same tag",
-      set: (m, v) => m.setParameters({ immigrantChanceCooperateWithSame: v }),
     },
     immigrantChanceCooperateWithDifferent: {
       label: "Immigrant cooperation with different tag",
-      set: (m, v) =>
-        m.setParameters({ immigrantChanceCooperateWithDifferent: v }),
     },
   },
   actions: [

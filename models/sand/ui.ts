@@ -7,17 +7,14 @@ export const ui = defineUI(model, {
     url: "https://ccl.northwestern.edu/netlogo/models/Sand",
     label: "Source attribution · Uri Wilensky · CC BY-NC-SA 3.0",
   },
+  change: (instance, changes) => instance.setLive(changes),
   live: {
     releaseChance: {
       label: "Release chance (%)",
-      set: (m, v) => m.setLive({ releaseChance: v }),
     },
-    spacing: {
-      set: (m, v) => m.setLive({ spacing: v }),
-    },
+    spacing: {},
     density: {
       label: "Dump density (%)",
-      set: (m, v) => m.setLive({ density: v }),
     },
   },
   actions: [{ label: "Dump sand", run: (m) => m.dumpSand() }],

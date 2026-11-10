@@ -2,16 +2,11 @@ import { defineUI, indexedColor, type Observation } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
   setup: ["seed"],
+  change: (instance, changes) => instance.setParameters(changes),
   live: {
-    memoryDuration: {
-      set: (m, value) => m.setParameters({ memoryDuration: value }),
-    },
-    mutationRate: {
-      set: (m, value) => m.setParameters({ mutationRate: value }),
-    },
-    memorySize: {
-      set: (m, value) => m.setParameters({ memorySize: value }),
-    },
+    memoryDuration: {},
+    mutationRate: {},
+    memorySize: {},
   },
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Evolution/Mimicry.nlogox",
