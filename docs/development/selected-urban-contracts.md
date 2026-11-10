@@ -18,10 +18,10 @@ The reviewed implementation surfaces are `index.ts`, public `Agent`, `World/run`
 
 | Mechanism | Actual public closure and composition boundary |
 | --- | --- |
-| Toroidal continuous pedestrian motion | `World.add(space,{random})`, `Agent.add(state,{position,orientation})`, `agent.move(1)`, `agent.rotate(angle)`; rotate is clockwise heading, so source left is negative. |
-| Patch state and Moore adjacency | `Grid.add(space,{state})`, `grid.fields`, `grid.fieldAt(agent)`, `grid.neighbors(field,{neighborhood:"moore"})`. Field x/y centers belong to Grid; no private cell-coordinate/topology engine. |
+| Toroidal continuous pedestrian motion | `World.create(space,{random})`, `Agent.create(state,{position,orientation})`, `agent.move(1)`, `agent.rotate(angle)`; rotate is clockwise heading, so source left is negative. |
+| Patch state and Moore adjacency | `Grid.create(space,{state})`, `grid.fields`, `grid.fieldAt(agent)`, `grid.neighbors(field,{neighborhood:"moore"})`. Field x/y centers belong to Grid; no private cell-coordinate/topology engine. |
 | Same-cell conversations and occupancy | Attach Grid to World and call `grid.agentsAt(field)` using canonical current agent positions. Filter the returned snapshot for the appropriate kind/status; no second occupancy authority. |
-| Random activation, one-of, n-of, integer/continuous trials | `Random.add`, `random.sample(source,{count})`, `random.number()` and explicit `Math.floor(draw*n)` for source integer trials. Snapshot participants at each source ask entry; sample for order where outcomes depend on it. |
+| Random activation, one-of, n-of, integer/continuous trials | `Random.create`, `random.sample(source,{count})`, `random.number()` and explicit `Math.floor(draw*n)` for source integer trials. Snapshot participants at each source ask entry; sample for order where outcomes depend on it. |
 | Births, hatch, death | `agent.copy()` preserves heading, position and typed state; then explicitly set newborn health/kind and `world.add(child)`. `agent.delete()` removes canonical membership. Store kind as ordinary typed model state, not a parallel breed registry. |
 | Pollution diffusion | `grid.diffuse("pollution",{rate:0.8,neighborhood:"moore"})` is simultaneous conservative eight-direction diffusion. Do not use its faces default. |
 | Reports and histories | Pure reductions over canonical state, then detached frozen records; no missing generic statistics API is required for these sums/means and model-specific thresholds. |

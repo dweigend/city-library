@@ -4,7 +4,7 @@ Use the root `city-library` entry to compose event-driven models without World o
 
 | Official Salabim concept | Delivered City Library surface | Boundary / evidence |
 | --- | --- | --- |
-| Event scheduling | `Agenda.add`, event add/delete, batch advance, causal `next`, time/size | Public example 01 covers event-time dispatch, last-event causality, ties and budgets. Standalone or explicitly World-attached; no automatic World tick or dispatch. |
+| Event scheduling | `Agenda.create`, event add/delete, batch advance, causal `next`, time/size | Public example 01 covers event-time dispatch, last-event causality, ties and budgets. Standalone or explicitly World-attached; no automatic World tick or dispatch. |
 | Queues | `ServiceQueue` FIFO or stable lower-first priority, issued handles, snapshots | Public example 02 and adversarial tests. No linked-list complexity promise or complete upstream queue algebra. |
 | Resource requests | `Resource.request`, release/cancel, live outcome tickets, used/available/waiting | One owner for requests and occupancy; strict head-of-line admission; integer capacity and units. Duplicate-Agent lifecycle tests. |
 | Capacity changes | `setCapacity` with reject or retain occupied claims | No preemption; shrink can temporarily retain overcapacity or a blocked oversized waiter. Fractional/negative capacity, anonymous and simultaneous multi-resource claims are unsupported. |

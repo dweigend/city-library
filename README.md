@@ -2,13 +2,13 @@
 
 City Library is an open, modular library for building simulations and games about future cities. Try a rule, watch what happens, change it and try again.
 
-## A toolkit for experiments
+## A toolkit for studies
 
 Cities face difficult questions about climate, biodiversity, mobility and resources. Simulations and games let us explore alternatives and learn through play. Fun is just another name for learning.
 
 Combine agents, space, networks and measurements in TypeScript. Use a graph on its own, add agents when needed, or pair a grid with a local rule. Each part should work independently and make its assumptions easy to inspect.
 
-TypeScript brings these experiments to the web, with an ecosystem of useful game libraries.
+TypeScript brings these studies to the web, with an ecosystem of useful game libraries.
 
 NetLogo inspires the scripting approach: a short script should be enough to get an idea running. Bits UI and shadcn-svelte inspire the modular approach: small building blocks with useful defaults and room to make something your own.
 

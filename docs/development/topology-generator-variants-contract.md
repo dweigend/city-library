@@ -1,13 +1,13 @@
 # NetLogo Web topology profile
 
-Some experiments need the topology rules of a particular NetLogo Web edition rather than a generic graph with the same name. The opt-in `profile:"nw-web-topology/1"` on `Graph.generate` identifies that pinned protocol. It covers topology only: it does not promise NetLogo random-stream, agent-birth, layout or full-model compatibility. The five frozen scenarios and their independent topology/draw oracles define the comparison.
+Some studies need the topology rules of a particular NetLogo Web edition rather than a generic graph with the same name. The opt-in `profile:"nw-web-topology/1"` on `Graph.generate` identifies that pinned protocol. It covers topology only: it does not promise NetLogo random-stream, agent-birth, layout or full-model compatibility. The five frozen scenarios and their independent topology/draw oracles define the comparison.
 
 ## Public vocabulary, edition and ownership
 
 Use opt-in **profile:"nw-web-topology/1"** on `Graph.generate`. This names a pinned TOPOLOGY protocol, not NetLogo engine/MT/birth/layout/full-model compatibility. Edition1 is based on actual served functions and pinned Tortoise6168dd20/Galapagos90be931 in the source audit. No automatic upstream tracking. New branches:
 
 - kind:"kleinberg", required profile, nodes, shape:[columns,rows], clusteringExponent, random; optional wrap/directed false.
-- kind:"preferential", required profile, nodes, links, random; optional directed false.
+- kind:"preferential", required profile, nodes, edgesPerNode, random; optional directed false.
 - kind:"smallWorld", required profile, nodes, neighborsPerSide, probability, random; optional directed false.
 - kind:"wheel", required profile, nodes; optional directed false and spokes:"in"|"out", default in.
 - kind:"lattice", required profile, nodes, shape:[columns,rows]; optional wrap/directed false.
@@ -16,7 +16,7 @@ Extend existing GeneratorOptions union only; retain the same readonly Edge resul
 
 ## Shapes, numbers and caps
 
-Both profile lattice/Kleinberg axes are finite integers>=2 with product equal to selected-node count. Row-major means x-fastest, index=row*columns+column. Wheel has at least4nodes. PA links is an integer1..n-1. WS has positive n, neighborsPerSide an integer0..floor((n-1)/2), probability finite[0,1]; n1/n2 k0 is valid. Finite scalar validation follows the existing generator TypeError convention, numeric-domain violations RangeError. Flags are booleans. Directed PA/WS is legal only in these opt-in branches.
+Both profile lattice/Kleinberg axes are finite integers>=2 with product equal to selected-node count. Row-major means x-fastest, index=row*columns+column. Wheel has at least4nodes. PA edgesPerNode is an integer1..n-1. WS has positive n, neighborsPerSide an integer0..floor((n-1)/2), probability finite[0,1]; n1/n2 k0 is valid. Finite scalar validation follows the existing generator TypeError convention, numeric-domain violations RangeError. Flags are booleans. Directed PA/WS is legal only in these opt-in branches.
 
 Reuse the exact existing entry snapshots/canonical-node membership/induced-edgeless/default-clone/reentrancy/liveness contracts. Inherit100000 SELECTED nodes and1000000 NEW edges, never total-Graph or candidate-work limits. Preflight deterministic output bounds before any draw, including PA seed+growth and WS n*k; no hidden new cap. Wheel/lattice are deterministic. Kleinberg has at most base+n new edges, within the existing cap for admitted nodes. Rejection trial work is not output size. No arbitrary PA/WS retry cap or shortened stochastic protocol. Failed planning/cloning publishes no edges and does not advance automatic key cursor; consumed Random draws are retained as before. Use efficient existing owner batches, not repeated public edges.add scans.
 

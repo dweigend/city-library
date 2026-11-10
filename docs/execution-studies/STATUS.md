@@ -6,7 +6,7 @@ The headless library provides the bounded capabilities below. Twenty illustrativ
 | --- | --- | --- |
 | Pure measurements | `measurements.define(project).read(model)` | `examples/mesa-measurements` |
 | Bounded explicit history | `storage.history`, `add`, `samples`, `delete` | `examples/mesa-measurements` |
-| Scenarios and serial studies | `experiments` design, replication, execution budgets and summary | `examples/mesa-measurements` |
+| Scenarios and serial studies | `studies` design, replication, execution budgets and summary | `examples/mesa-measurements` |
 | Activation and lifecycle | World fixed, shuffle and priority activation; canonical membership | `examples/mesa-dynamics` |
 | Two-phase updates | Explicit synchronous compute, then commit | `examples/mesa-dynamics` |
 | Linear thresholds | Explicit units, strict start/inclusive end | `examples/mesa-dynamics` |

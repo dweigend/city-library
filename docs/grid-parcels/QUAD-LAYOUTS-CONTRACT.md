@@ -139,7 +139,7 @@ snapshots without executing any force iteration. No RNG draws occur in relaxatio
 Cell order, local keys, shared vertex/edge incidence and ascending-key neighbors
 correspond to the input revision. Coordinates, polygon snapshots and lookup
 results can change. Keys are still layout-local, not global parcel IDs. Old query
-snapshots remain valid and unchanged. `Grid.add` on the result makes a distinct
+snapshots remain valid and unchanged. `Grid.create` on the result makes a distinct
 Grid and distinct Fields; copying selected state is explicit caller policy.
 
 ## Architecture, evidence and remaining work

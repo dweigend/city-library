@@ -19,7 +19,7 @@ There is one capacity owner: Resource. Mesa composes Resource rather than implem
 ## Agenda: frozen public surface
 
 ```ts
-Agenda.add<E = unknown>(): Agenda<E>
+Agenda.create<E = unknown>(): Agenda<E>
 agenda.time: number
 agenda.size: number
 agenda.add(options: { at: number; data: E; priority?: number }): EventHandle<E>
