@@ -1,10 +1,12 @@
 import { issueId, registerFramework } from "../agent/lifecycle.ts";
 import { cloneSupported, validateOptions } from "../agent/state.ts";
 
+/** Opaque cancellation handle issued by one Agenda. */
 export interface EventHandle<E = unknown> {
   readonly id: string;
   readonly agenda: Agenda<E>;
 }
+/** Detached, frozen event; `sequence` is the insertion order that breaks ties. */
 export interface Event<E = unknown> {
   readonly id: string;
   readonly at: number;
@@ -12,14 +14,33 @@ export interface Event<E = unknown> {
   readonly sequence: number;
   readonly data: E;
 }
+/**
+ * Event queue with its own time cursor, independent of World tick. Events
+ * are ordered by `at`, then lower `priority`, then insertion order.
+ */
 export interface Agenda<E = unknown> {
+  /** Agenda time; starts at 0 and never decreases. */
   readonly time: number;
+  /** Pending event count. */
   readonly size: number;
+  /** Schedules a detached copy of `data` at `at` ≥ time; priority defaults to 0. */
   add(options: { at: number; data: E; priority?: number }): EventHandle<E>;
+  /** Removes a pending event; an already removed event is a no-op. */
   delete(handle: EventHandle<E>): void;
+  /**
+   * Removes and returns up to `maxEvents` (default 1000) due events. Time
+   * stops at the last returned event while due events remain, otherwise
+   * advances to `until`.
+   */
   advance(options: { until: number; maxEvents?: number }): readonly Event<E>[];
+  /**
+   * Removes at most one due event and sets time to its `at`; without a due
+   * event, advances time to `until` and returns undefined.
+   */
   next(options: { until: number }): Event<E> | undefined;
 }
+
+const defaultEventBudget = 1000;
 
 function finiteTime(value: unknown, earliest: number): number {
   if (typeof value !== "number") throw new TypeError("Agenda time must be a number.");
@@ -37,11 +58,24 @@ function comesBefore<E>(left: Event<E>, right: Event<E>): boolean {
   if (left.priority !== right.priority) return left.priority < right.priority;
   return left.sequence < right.sequence;
 }
+/** Binary search for the position that keeps `pending` ordered after insertion. */
+function insertionIndex<E>(pending: readonly Event<E>[], event: Event<E>): number {
+  let low = 0;
+  let high = pending.length;
+  while (low < high) {
+    const middle = Math.floor((low + high) / 2);
+    // The binary-search bounds guarantee an existing element at middle.
+    if (comesBefore(pending[middle]!, event)) low = middle + 1;
+    else high = middle;
+  }
+  return low;
+}
 function detachedEvent<E>(event: Event<E>): Event<E> {
   // Supported copying preserves the supplied data type and canonical framework references.
   return Object.freeze({ ...event, data: cloneSupported(event.data) as E });
 }
 
+/** Creates an empty Agenda at time 0. */
 function add<E = unknown>(): Agenda<E> {
   if (arguments.length) throw new TypeError("Agenda.add accepts no options.");
   const pending: Event<E>[] = [];
@@ -62,15 +96,7 @@ function add<E = unknown>(): Agenda<E> {
       const id = issueId();
       const event = Object.freeze({ id, at, priority, sequence, data });
       const handle = Object.freeze({ id, agenda });
-      let low = 0;
-      let high = pending.length;
-      while (low < high) {
-        const middle = Math.floor((low + high) / 2);
-        // The binary-search bounds guarantee an existing element at middle.
-        if (comesBefore(pending[middle]!, event)) low = middle + 1;
-        else high = middle;
-      }
-      pending.splice(low, 0, event);
+      pending.splice(insertionIndex(pending, event), 0, event);
       handles.add(handle);
       sequence++;
       return handle;
@@ -85,7 +111,7 @@ function add<E = unknown>(): Agenda<E> {
       if (arguments.length !== 1) throw new TypeError("Agenda.advance requires one options record.");
       const values = validateOptions(options, ["until", "maxEvents"]);
       const until = finiteTime(values.until, time);
-      const maxEvents = values.maxEvents === undefined ? 1000 : values.maxEvents;
+      const maxEvents = values.maxEvents === undefined ? defaultEventBudget : values.maxEvents;
       if (typeof maxEvents !== "number") throw new TypeError("Agenda event budget must be a number.");
       if (!Number.isSafeInteger(maxEvents) || maxEvents <= 0)
         throw new RangeError("Agenda event budget must be a positive safe integer.");

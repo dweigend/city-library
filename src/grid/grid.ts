@@ -1,17 +1,11 @@
 import type { Agent } from "../agent/agent.ts";
-import { createOccupancyIndex } from "./occupancy.ts";
+import { createOccupancyIndex, readAgentSource } from "./occupancy.ts";
 import { createField, reservedFieldKeys, type Field } from "./field.ts";
 import { gridIdentity, type GridMembership } from "./membership.ts";
 import { addLayoutGrid, type LayoutGrid } from "./layout-grid.ts";
+import { diffuseValues } from "./algorithms/diffusion.ts";
 import type { Layout } from "./topology/index.ts";
-export type { Field } from "./field.ts";
-export type { GridMembership } from "./membership.ts";
-export type { LayoutGrid, LayoutField } from "./layout-grid.ts";
-import {
-  frameworkRecord,
-  registerFramework,
-  requireAgent,
-} from "../agent/lifecycle.ts";
+import { frameworkRecord, registerFramework } from "../agent/lifecycle.ts";
 import { cloneModelState, validateOptions } from "../agent/state.ts";
 import {
   axes,
@@ -23,29 +17,58 @@ import {
   type Position,
   type Space,
 } from "../geometry/space.ts";
+export type { Field } from "./field.ts";
+export type { GridMembership } from "./membership.ts";
+export type { LayoutGrid, LayoutField } from "./layout-grid.ts";
+
 type NumericKey<F> = Extract<
   { [K in keyof F]-?: F[K] extends number ? K : never }[keyof F],
   string
 >;
+/** Regular centered 2D or 3D cells over a Space; Fields are canonical identities. */
 export interface Grid<F extends object = {}> extends GridMembership {
   readonly space: NormalizedSpace;
   readonly cellSize: number;
+  /** Detached array of all Fields, x fastest, then y, then z. */
   readonly fields: readonly Field<F>[];
+  /**
+   * The Field containing the position. Wrapped axes wrap the position;
+   * hard axes return undefined outside the Space. Upper bounds belong to the last cell.
+   */
   fieldAt(position: Position): Field<F> | undefined;
+  /** Distinct adjacent Fields, wrapping across wrapped axes; neighborhood defaults to "moore". */
   neighbors(
     field: Field<F>,
     options?: { neighborhood?: "faces" | "moore" },
   ): readonly Field<F>[];
+  /** Living Agents of an explicit source located in the Field, in first-seen order. */
   agentsAt<T extends Agent>(
     field: Field<F>,
     options: { source: Iterable<T> },
   ): readonly T[];
+  /** Agents of the attached World located in the Field, in admission order. */
   agentsAt(field: Field<F>): readonly Agent[];
+  /**
+   * One explicit diffusion step for an own writable numeric Field property.
+   * Each Field keeps (1 - rate) of its value and shares the rest equally among
+   * its neighborhood slots; a slot beyond a hard boundary returns its share.
+   * Defaults: rate 0.25, neighborhood "faces". Every value is validated before
+   * any Field changes.
+   */
   diffuse(
     property: NumericKey<F>,
     options?: { rate?: number; neighborhood?: "faces" | "moore" },
   ): void;
 }
+const defaultSpace: Space = Object.freeze({ x: 40, y: 40 });
+const maximumFields = 1_000_000;
+const defaultDiffusionRate = 0.25;
+
+/**
+ * Adds a detached Grid. A `{ layout, state }` record creates a LayoutGrid;
+ * otherwise the Space (default 40 by 40) must contain whole cells of
+ * `cellSize` (default 1), with at most one million Fields.
+ */
 function add<F extends object>(options: { layout: Layout; state: F }): LayoutGrid<F>;
 function add<F extends object>(
   space: Space,
@@ -56,7 +79,7 @@ function add(
   options?: { cellSize?: number; boundary?: Space["boundary"] },
 ): Grid<{}>;
 function add<F extends object>(
-  input: Space | { layout: Layout; state: F } = { x: 40, y: 40 },
+  input: Space | { layout: Layout; state: F } = defaultSpace,
   options: { state?: F; cellSize?: number; boundary?: Space["boundary"] } = {},
 ): Grid<F> | LayoutGrid<F> {
   if (
@@ -81,9 +104,10 @@ function add<F extends object>(
   if (counts.some((count) => !Number.isSafeInteger(count) || count <= 0))
     throw new RangeError("Space must contain whole cells.");
   const size = counts.reduce((a, b) => a * b, 1);
-  if (!Number.isSafeInteger(size) || size > 1_000_000)
+  if (!Number.isSafeInteger(size) || size > maximumFields)
     throw new RangeError("Too many fields.");
   const initial = (Object.hasOwn(opts, "state") ? opts.state : {}) as F;
+  // Validate the initial state once before allocation; every Field clones it again.
   cloneModelState(initial, reservedFieldKeys, "Field");
   const fields: Field<F>[] = [];
   const indices = new Map<Field<F>, number>();
@@ -147,11 +171,8 @@ function add<F extends object>(
   // Neighbor queries separately deduplicate canonical identities.
   function slots(neighborhood: "faces" | "moore"): number[][] {
     const result: number[][] = [];
-    for (
-      let z = space.dimensions === 3 ? -1 : 0;
-      z <= (space.dimensions === 3 ? 1 : 0);
-      z++
-    )
+    const zReach = space.dimensions === 3 ? 1 : 0;
+    for (let z = -zReach; z <= zReach; z++)
       for (let y = -1; y <= 1; y++)
         for (let x = -1; x <= 1; x++) {
           if (x === 0 && y === 0 && z === 0) continue;
@@ -179,8 +200,8 @@ function add<F extends object>(
     },
     fieldAt(value) {
       checkArguments(arguments, 1, 1);
-      const coordinates = position(value, space.dimensions);
-      return fieldAtCoordinates(coordinates.x, coordinates.y, coordinates.z);
+      const point = position(value, space.dimensions);
+      return fieldAtCoordinates(point.x, point.y, point.z);
     },
     neighbors(field, options = {}) {
       checkArguments(arguments, 1, 2);
@@ -210,19 +231,7 @@ function add<F extends object>(
             (agent) => fieldAtCoordinates(agent.x, agent.y, agent.z));
         return occupancy.query(field);
       }
-      const source = opts.source;
-      if (
-        (typeof source !== "object" && typeof source !== "function") ||
-        source === null ||
-        typeof (source as Iterable<Agent>)[Symbol.iterator] !== "function"
-      )
-        throw new TypeError("Expected an iterable Agent source.");
-      const candidates = [...new Set(source as Iterable<Agent>)];
-      for (const agent of candidates) {
-        requireAgent(agent);
-        if ((agent.z === undefined ? 2 : 3) !== space.dimensions)
-          throw new TypeError("Agent dimensions disagree with Grid.");
-      }
+      const candidates = readAgentSource(opts.source, space.dimensions);
       return Object.freeze(
         candidates.filter(
           (agent) => agent.alive &&
@@ -235,7 +244,7 @@ function add<F extends object>(
     diffuse(property, options = {}) {
       checkArguments(arguments, 1, 2);
       const opts = validateOptions(options, ["rate", "neighborhood"]);
-      const rate = finite(opts.rate ?? 0.25);
+      const rate = finite(opts.rate ?? defaultDiffusionRate);
       if (rate < 0 || rate > 1)
         throw new RangeError("Diffusion rate must be in [0,1].");
       const offsets = slots(neighborhood(opts.neighborhood, "faces"));
@@ -249,16 +258,13 @@ function add<F extends object>(
         return finite(descriptor.value);
       });
       if (rate === 0) return;
-      const next = old.map((value) => finite(value * (1 - rate)));
-      for (let source = 0; source < fields.length; source++) {
-        const index = coordinates(source),
-          share = finite((old[source]! * rate) / offsets.length);
-        for (const offset of offsets) {
+      const next = diffuseValues(old, rate, (source) => {
+        const index = coordinates(source);
+        return offsets.map((offset) => {
           const target = at(index.map((value, i) => value + offset[i]!));
-          const targetIndex = target ? indices.get(target)! : source;
-          next[targetIndex] = finite(next[targetIndex]! + share);
-        }
-      }
+          return target ? indices.get(target)! : source;
+        });
+      });
       for (let index = 0; index < fields.length; index++)
         Object.defineProperty(fields[index]!, property, { value: next[index] });
     },

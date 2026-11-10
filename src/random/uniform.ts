@@ -7,6 +7,7 @@ export interface UniformOptions {
   integer?: boolean;
 }
 
+/** The largest binary64 value below `value`. */
 function nextDown(value: number): number {
   if (value === 0) return -Number.MIN_VALUE;
   const view = new DataView(new ArrayBuffer(8));
@@ -15,6 +16,7 @@ function nextDown(value: number): number {
   return view.getFloat64(0);
 }
 
+/** Uniform [min, max) or integer min <= n < max from exactly one draw. */
 export function uniformDraw(options: unknown, draw: () => number): number {
   const values = validateOptions(options, ["distribution", "min", "max", "integer"]);
   if (values.distribution !== undefined && values.distribution !== "uniform") throw new TypeError("This slice supports uniform draws only.");
@@ -28,12 +30,17 @@ export function uniformDraw(options: unknown, draw: () => number): number {
     throw new RangeError("Integer bounds and range must be safe integers.");
   }
   const unit = draw();
-  // Finite opposite extremes can have an infinite difference. Interpolate
-  // their finite weighted endpoints without changing the stream schedule.
-  let value = integer ? min + Math.floor(unit * span)
-    : Number.isFinite(span) ? min + unit * span : (1 - unit) * min + unit * max;
+  let value = scaleUnit(unit, min, max, span, integer);
   if (!Number.isFinite(value)) throw new RangeError("Uniform result is not finite.");
   // IEEE rounding must not publish the excluded upper endpoint.
   if (value >= max) value = integer ? max - 1 : nextDown(max);
   return Math.max(min, value);
+}
+
+function scaleUnit(unit: number, min: number, max: number, span: number, integer: boolean): number {
+  if (integer) return min + Math.floor(unit * span);
+  if (Number.isFinite(span)) return min + unit * span;
+  // Finite opposite extremes can have an infinite difference. Interpolate
+  // their finite weighted endpoints without changing the stream schedule.
+  return (1 - unit) * min + unit * max;
 }

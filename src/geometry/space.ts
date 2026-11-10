@@ -36,8 +36,9 @@ export function finite(value: unknown, name = "Value"): number {
   if (!Number.isFinite(value)) throw new RangeError(`${name} must be finite.`);
   return value;
 }
+/** Validates a Space record; an explicit `boundary` argument overrides `value.boundary`. */
 export function normalizeSpace(
-  value: Space,
+  value: unknown,
   boundary?: Space["boundary"],
 ): NormalizedSpace {
   const input = validateOptions(value, [
@@ -129,22 +130,24 @@ export function wrap(value: number, extent: number): number {
   else if (result >= half) result -= extent;
   return Object.is(result, -0) ? 0 : result;
 }
-export function normalizePosition(
-  value: Position,
-  space: NormalizedSpace,
-  reject = true,
-): Position | undefined {
+/** Normalizes a position into Space; throws when a hard-boundary coordinate lies outside. */
+export function normalizePosition(value: Position, space: NormalizedSpace): Position {
+  const normalized = tryNormalizePosition(value, space);
+  if (normalized === undefined) throw new RangeError("Position outside hard boundary.");
+  return normalized;
+}
+/** Wraps wrap-boundary axes; returns undefined when a hard-boundary coordinate lies outside. */
+export function tryNormalizePosition(value: Position, space: NormalizedSpace): Position | undefined {
   const input = position(value, space.dimensions);
   const output = { ...input };
   for (const axis of axes.slice(0, space.dimensions)) {
     const coordinate = input[axis]!;
     const extent = space[axis]!;
-    if (space.boundary[axis] === "wrap")
+    if (space.boundary[axis] === "wrap") {
       output[axis] = finite(wrap(coordinate, extent));
-    else if (coordinate < -extent / 2 || coordinate > extent / 2) {
-      if (reject) throw new RangeError("Position outside hard boundary.");
-      return undefined;
+      continue;
     }
+    if (coordinate < -extent / 2 || coordinate > extent / 2) return undefined;
   }
   return output;
 }
@@ -168,6 +171,10 @@ export function displacement(
   }
   return result;
 }
+/**
+ * Moves `from` by `by`. With a Space, movement stops at the first hard boundary it
+ * reaches and wrap axes are normalized; the start must lie inside hard bounds.
+ */
 export function relativePosition(
   from: Position,
   by: Position,
@@ -176,41 +183,55 @@ export function relativePosition(
   const start = position(from);
   const dim = dimension(start);
   const delta = position(by, dim);
+  if (!space) return moveBy(start, delta, 1, dim);
+  return normalizePosition(moveWithinHardBoundary(start, delta, dim, space), space);
+}
+function moveBy(
+  start: Position,
+  delta: Position,
+  fraction: number,
+  dim: 2 | 3,
+): { x: number; y: number; z?: number } {
+  return {
+    x: finite(start.x + delta.x * fraction),
+    y: finite(start.y + delta.y * fraction),
+    ...(dim === 3 ? { z: finite(start.z! + delta.z! * fraction) } : {}),
+  };
+}
+/** Shortens the movement to the earliest hard-boundary intersection. */
+function moveWithinHardBoundary(
+  start: Position,
+  delta: Position,
+  dim: 2 | 3,
+  space: NormalizedSpace,
+): Position {
   let fraction = 1;
   const intersections = new Map<
     (typeof axes)[number],
     { fraction: number; boundary: number }
   >();
-  if (space) {
-    for (const axis of axes.slice(0, dim)) {
-      if (space.boundary[axis] !== "hard") continue;
-      const half = space[axis]! / 2;
-      if (start[axis]! < -half || start[axis]! > half) {
-        throw new RangeError("Relative movement starts outside hard Space.");
-      }
-      if (delta[axis] === 0) continue;
-      const boundary = delta[axis]! > 0 ? half : -half;
-      const intersection = (boundary - start[axis]!) / delta[axis]!;
-      intersections.set(axis, { fraction: intersection, boundary });
-      fraction = Math.min(fraction, intersection);
+  for (const axis of axes.slice(0, dim)) {
+    if (space.boundary[axis] !== "hard") continue;
+    const half = space[axis]! / 2;
+    if (start[axis]! < -half || start[axis]! > half) {
+      throw new RangeError("Relative movement starts outside hard Space.");
     }
+    if (delta[axis] === 0) continue;
+    const boundary = delta[axis]! > 0 ? half : -half;
+    const intersection = (boundary - start[axis]!) / delta[axis]!;
+    intersections.set(axis, { fraction: intersection, boundary });
+    fraction = Math.min(fraction, intersection);
   }
-  const result: { x: number; y: number; z?: number } = {
-    x: finite(start.x + delta.x * fraction),
-    y: finite(start.y + delta.y * fraction),
-    ...(dim === 3 ? { z: finite(start.z! + delta.z! * fraction) } : {}),
-  };
-  if (space) {
-    for (const axis of axes.slice(0, dim)) {
-      if (space.boundary[axis] !== "hard") continue;
-      const intersection = intersections.get(axis);
-      const half = space[axis]! / 2;
-      // A limiting coordinate is exact; other coordinates only clamp clip roundoff.
-      result[axis] =
-        intersection?.fraction === fraction
-          ? intersection.boundary
-          : Math.max(-half, Math.min(half, result[axis]!));
-    }
+  const result = moveBy(start, delta, fraction, dim);
+  for (const axis of axes.slice(0, dim)) {
+    if (space.boundary[axis] !== "hard") continue;
+    const intersection = intersections.get(axis);
+    const half = space[axis]! / 2;
+    // A limiting coordinate is exact; other coordinates only clamp clip roundoff.
+    result[axis] =
+      intersection?.fraction === fraction
+        ? intersection.boundary
+        : Math.max(-half, Math.min(half, result[axis]!));
   }
-  return space ? normalizePosition(result, space)! : result;
+  return result;
 }

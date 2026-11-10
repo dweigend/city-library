@@ -1,11 +1,11 @@
 import type { Agent } from "../agent/agent.ts";
-import { frameworkRecord, registerFramework, requireAgent } from "../agent/lifecycle.ts";
+import { frameworkRecord, registerFramework } from "../agent/lifecycle.ts";
 import { cloneModelState, validateOptions } from "../agent/state.ts";
 import { position, type Position } from "../geometry/space.ts";
 import type { PlanarPolygon } from "../geometry/planar/types.ts";
 import { createField, reservedFieldKeys, type Field } from "./field.ts";
 import { gridIdentity, type GridMembership } from "./membership.ts";
-import { createOccupancyIndex } from "./occupancy.ts";
+import { createOccupancyIndex, readAgentSource } from "./occupancy.ts";
 import type { Layout } from "./topology/index.ts";
 import { requireLayout } from "./topology/layout.ts";
 
@@ -14,10 +14,15 @@ export type LayoutField<F extends object = {}> = Field<F, LayoutGrid<F>>;
 /** Immutable topology with canonical mutable Fields; no regular diffusion contract. */
 export interface LayoutGrid<F extends object = {}> extends GridMembership {
   readonly layout: Layout;
+  /** Detached array with one Field per layout cell, in cell order. */
   readonly fields: readonly LayoutField<F>[];
+  /** The Field whose cell contains the XY position, or undefined outside the layout. */
   fieldAt(position: Position): LayoutField<F> | undefined;
+  /** Fields of cells that share a boundary edge, in ascending cell order. */
   neighbors(field: LayoutField<F>): readonly LayoutField<F>[];
+  /** Living Agents of an explicit source located in the Field, in first-seen order. */
   agentsAt<T extends Agent>(field: LayoutField<F>, options: { source: Iterable<T> }): readonly T[];
+  /** Agents of the attached World located in the Field, in admission order. */
   agentsAt(field: LayoutField<F>): readonly Agent[];
 }
 
@@ -56,6 +61,7 @@ export function addLayoutGrid<F extends object>(input: { layout: Layout; state: 
   const options = validateOptions(input, ["layout", "state"]);
   const layout = requireLayout(options.layout);
   const initial = options.state as F;
+  // Validate the initial state once before any geometry work; every Field clones it again.
   cloneModelState(initial, reservedFieldKeys, "Field");
   // Resolve all geometry before publishing/registering any canonical identities.
   const positions = layout.cells.map(cell => centroid(layout.polygon({ cell })));
@@ -96,15 +102,7 @@ export function addLayoutGrid<F extends object>(input: { layout: Layout; state: 
           occupancy = createOccupancyIndex(world, grid, 2, fieldAt);
         return occupancy.query(field);
       }
-      const source = values.source;
-      if ((typeof source !== "object" && typeof source !== "function") || source === null ||
-        typeof (source as Iterable<Agent>)[Symbol.iterator] !== "function")
-        throw new TypeError("Expected an iterable Agent source.");
-      const candidates = [...new Set(source as Iterable<Agent>)];
-      for (const agent of candidates) {
-        requireAgent(agent);
-        if (agent.z !== undefined) throw new TypeError("Agent dimensions disagree with Grid.");
-      }
+      const candidates = readAgentSource(values.source, 2);
       return Object.freeze(candidates.filter(agent => agent.alive && fieldAt(agent) === field));
     } as LayoutGrid<F>["agentsAt"],
   };

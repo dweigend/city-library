@@ -3,14 +3,26 @@ import type { Edge } from "../edge.ts";
 import { addCosts, dyadic, roundedCost, unitCost } from "./dyadic-costs.ts";
 
 type Algorithm = "auto" | "breadth" | "dijkstra" | "bellman-ford";
+type ResolvedAlgorithm = Exclude<Algorithm, "auto">;
+/**
+ * Shortest-path settings. Without `cost` every edge costs 1. "auto" (default)
+ * uses breadth-first search without costs and Dijkstra with costs; negative
+ * costs require "bellman-ford", which rejects reachable negative cycles.
+ */
 export interface DistanceOptions<N extends object, E extends object> {
   cost?: (edge: Edge<N, E>) => number;
   algorithm?: Algorithm;
 }
+/** Nonnegative costs only; "reject" throws when any ordered pair is unreachable. */
 export interface SummaryOptions<N extends object, E extends object> {
   cost?: (edge: Edge<N, E>) => number;
   disconnected?: "reachable" | "reject";
 }
+/**
+ * Statistics over reachable ordered node pairs. `mean` is absent without such
+ * pairs; `diameter` and `radius` are absent for an empty graph. Eccentricity
+ * is the largest reachable distance from each node.
+ */
 export interface DistanceSummary<N extends object> {
   readonly mean?: number;
   readonly diameter?: number;
@@ -19,27 +31,32 @@ export interface DistanceSummary<N extends object> {
   readonly reachablePairs: number;
 }
 export interface Arc<N> { to: N; cost: bigint }
-export interface Prepared<N> { nodes: readonly N[]; adjacency: Map<N, Arc<N>[]> }
+/** Query-owned arc lists with exact dyadic costs. */
+export interface CostGraph<N> { nodes: readonly N[]; adjacency: Map<N, Arc<N>[]> }
 type Cost<N extends object, E extends object> = (edge: Edge<N, E>) => number;
 
 function costOption<N extends object, E extends object>(value: unknown): Cost<N, E> | undefined {
   if (value !== undefined && typeof value !== "function") throw new TypeError("Cost must be a function.");
   return value as Cost<N, E> | undefined;
 }
-function algorithmOption(value: unknown, cost: unknown): Exclude<Algorithm, "auto"> {
+function algorithmOption(value: unknown, cost: unknown): ResolvedAlgorithm {
   if (value !== undefined && value !== "auto" && value !== "breadth" && value !== "dijkstra" && value !== "bellman-ford")
     throw new TypeError("Invalid distance algorithm.");
   if (value === "breadth" && cost !== undefined) throw new TypeError("Breadth does not accept explicit costs.");
-  return value === undefined || value === "auto" ? cost === undefined ? "breadth" : "dijkstra" : value;
+  if (value === undefined || value === "auto") return automaticAlgorithm(cost);
+  return value;
+}
+function automaticAlgorithm(cost: unknown): "breadth" | "dijkstra" {
+  return cost === undefined ? "breadth" : "dijkstra";
 }
 /** Consume the actual guarded collection, keeping callbacks inside its read lock.
  * Each top-level query owns this snapshot; no weights survive between queries. */
-function prepare<N extends object, E extends object>(nodes: readonly N[], edges: Iterable<Edge<N, E>>, cost: Cost<N, E> | undefined, signed: boolean): Prepared<N> {
+function prepare<N extends object, E extends object>(nodes: readonly N[], edges: Iterable<Edge<N, E>>, cost: Cost<N, E> | undefined, algorithm: ResolvedAlgorithm): CostGraph<N> {
   const adjacency = new Map(nodes.map(node => [node, [] as Arc<N>[]]));
   for (const edge of edges) {
     const weight = cost === undefined ? 1 : cost(edge);
     if (typeof weight !== "number" || !Number.isFinite(weight)) throw new TypeError("Edge cost must be a finite number.");
-    if (!signed && weight < 0) throw new RangeError("Negative costs require explicit Bellman–Ford.");
+    if (algorithm !== "bellman-ford" && weight < 0) throw new RangeError("Negative costs require explicit Bellman–Ford.");
     const exact = cost === undefined ? unitCost : dyadic(weight);
     adjacency.get(edge.from)!.push({ to: edge.to, cost: exact });
     if (!edge.directed && edge.from !== edge.to) adjacency.get(edge.to)!.push({ to: edge.from, cost: exact });
@@ -51,7 +68,7 @@ function sum(a: number, b: number): number {
   if (!Number.isFinite(result)) throw new RangeError("Accumulated distance must remain finite.");
   return result;
 }
-function breadth<N>(graph: Prepared<N>, from: N): Map<N, number> {
+function breadth<N>(graph: CostGraph<N>, from: N): Map<N, number> {
   const result = new Map([[from, 0]]);
   const queue = [from];
   for (let index = 0; index < queue.length; index++) {
@@ -64,7 +81,7 @@ function breadth<N>(graph: Prepared<N>, from: N): Map<N, number> {
   return result;
 }
 /** Lazy binary min heap: stale improvements are discarded when popped. */
-export function dijkstra<N>(graph: Prepared<N>, from: N): Map<N, bigint> {
+export function dijkstra<N>(graph: CostGraph<N>, from: N): Map<N, bigint> {
   const result = new Map([[from, 0n]]);
   const heap: { node: N; value: bigint }[] = [];
   function push(node: N, value: bigint) {
@@ -109,7 +126,7 @@ export function dijkstra<N>(graph: Prepared<N>, from: N): Map<N, bigint> {
   }
   return result;
 }
-function bellmanFord<N>(graph: Prepared<N>, from: N): Map<N, bigint> {
+function bellmanFord<N>(graph: CostGraph<N>, from: N): Map<N, bigint> {
   const result = new Map([[from, 0n]]);
   for (let pass = 0; pass < graph.nodes.length; pass++) {
     let changed = false;
@@ -130,7 +147,7 @@ function bellmanFord<N>(graph: Prepared<N>, from: N): Map<N, bigint> {
   }
   return result;
 }
-function run<N>(graph: Prepared<N>, from: N, algorithm: Exclude<Algorithm, "auto">): Map<N, number> {
+function distancesFrom<N>(graph: CostGraph<N>, from: N, algorithm: ResolvedAlgorithm): Map<N, number> {
   if (algorithm === "breadth") return breadth(graph, from);
   const exact = algorithm === "dijkstra" ? dijkstra(graph, from) : bellmanFord(graph, from);
   return new Map([...exact].map(([node, value]) => [node, roundedCost(value)]));
@@ -140,26 +157,27 @@ export function distances<N extends object, E extends object>(nodes: readonly N[
   if (!nodes.includes(settings.from as N)) throw new TypeError("Expected a current graph node.");
   const cost = costOption<N, E>(settings.cost);
   const algorithm = algorithmOption(settings.algorithm, cost);
-  return run(prepare(nodes, edges, cost, algorithm === "bellman-ford"), settings.from as N, algorithm);
+  return distancesFrom(prepare(nodes, edges, cost, algorithm), settings.from as N, algorithm);
 }
 export function allDistances<N extends object, E extends object>(nodes: readonly N[], edges: Iterable<Edge<N, E>>, options: DistanceOptions<N, E>): ReadonlyMap<N, ReadonlyMap<N, number>> {
   const settings = validateOptions(options, ["cost", "algorithm"]);
   const cost = costOption<N, E>(settings.cost);
   const algorithm = algorithmOption(settings.algorithm, cost);
-  const graph = prepare(nodes, edges, cost, algorithm === "bellman-ford");
-  return new Map(nodes.map(from => [from, run(graph, from, algorithm)]));
+  const graph = prepare(nodes, edges, cost, algorithm);
+  return new Map(nodes.map(from => [from, distancesFrom(graph, from, algorithm)]));
 }
 export function distanceSummary<N extends object, E extends object>(nodes: readonly N[], edges: Iterable<Edge<N, E>>, options: SummaryOptions<N, E>): DistanceSummary<N> {
   const settings = validateOptions(options, ["cost", "disconnected"]);
   const cost = costOption<N, E>(settings.cost);
   if (settings.disconnected !== undefined && settings.disconnected !== "reachable" && settings.disconnected !== "reject")
     throw new TypeError("Invalid disconnected policy.");
-  const graph = prepare(nodes, edges, cost, false);
+  const algorithm = automaticAlgorithm(cost);
+  const graph = prepare(nodes, edges, cost, algorithm);
   const eccentricity = new Map<N, number>();
   let total = 0n;
   let reachablePairs = 0, diameter = 0, radius = Infinity;
   for (const from of nodes) {
-    const result = run(graph, from, cost === undefined ? "breadth" : "dijkstra");
+    const result = distancesFrom(graph, from, algorithm);
     if (settings.disconnected === "reject" && result.size !== nodes.length) throw new RangeError("Graph has unreachable pairs.");
     let maximum = 0;
     for (const [to, distance] of result) if (to !== from) {

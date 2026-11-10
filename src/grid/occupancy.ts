@@ -1,6 +1,30 @@
 import type { Agent } from "../agent/agent.ts";
-import { frameworkRecord, observeWorld } from "../agent/lifecycle.ts";
+import { frameworkRecord, observeWorld, requireAgent } from "../agent/lifecycle.ts";
 import type { World } from "../world/world.ts";
+
+/** Number of coordinate axes an Agent currently uses. */
+export function agentDimensions(agent: Agent): 2 | 3 {
+  return agent.z === undefined ? 2 : 3;
+}
+
+/**
+ * Validates an explicit `agentsAt` source: distinct Agents in first-seen order,
+ * each a framework Agent with the Grid's dimensions. Consumes the source once.
+ */
+export function readAgentSource(source: unknown, dimensions: 2 | 3): Agent[] {
+  if (
+    (typeof source !== "object" && typeof source !== "function") ||
+    source === null ||
+    typeof (source as Iterable<Agent>)[Symbol.iterator] !== "function"
+  )
+    throw new TypeError("Expected an iterable Agent source.");
+  const candidates = [...new Set(source as Iterable<Agent>)];
+  for (const agent of candidates) {
+    requireAgent(agent);
+    if (agentDimensions(agent) !== dimensions) throw new TypeError("Agent dimensions disagree with Grid.");
+  }
+  return candidates;
+}
 
 /** Derived acceleration for the existing implicit-World source only.
  * Agent coordinates and World insertion membership remain canonical.
@@ -27,7 +51,7 @@ export function createOccupancyIndex<F extends object>(
     incompatible.delete(agent);
   }
   function place(agent: Agent, admissionOrder: bigint) {
-    if ((agent.z === undefined ? 2 : 3) !== dimensions) {
+    if (agentDimensions(agent) !== dimensions) {
       incompatible.add(agent);
       entries.set(agent, { field: undefined, order: admissionOrder });
       return;

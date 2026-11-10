@@ -4,9 +4,13 @@ import { retainParticipant } from "./participation.ts";
 
 export type QueuePolicy = "fifo" | "priority";
 export interface QueueHandle<T> { readonly id: string; readonly value: T }
+/** Waiting line; the "priority" policy serves lower priority first, stable for ties. */
 export interface ServiceQueue<T> {
+  /** Enqueues `value`; priority defaults to 0. */
   add(value: T, options?: { priority?: number }): QueueHandle<T>;
+  /** Removes and returns the first value; undefined when empty. */
   take(): T | undefined;
+  /** Removes a queued value; an already removed value is a no-op. */
   delete(handle: QueueHandle<T>): void;
   readonly entries: readonly T[];
 }

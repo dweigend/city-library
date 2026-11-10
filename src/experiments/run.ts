@@ -1,49 +1,209 @@
 import { run as runWorld } from "../world/index.ts";
 import { worldClock } from "../world/world.ts";
-import type { ExperimentModel, ExperimentOptions, PlannedRun, StudyError, StudyOutcome, StudyPhase, StudyResult, StudySample, StudyTerminal } from "./types.ts";
+import type {
+  ExperimentModel,
+  ExperimentOptions,
+  PlannedRun,
+  StudyError,
+  StudyOutcome,
+  StudyPhase,
+  StudyResult,
+  StudySample,
+  StudyTerminal,
+} from "./types.ts";
 import { replicate } from "./design.ts";
-import { callback, cloneData, integer, name, studyLimits, synchronous, validateOptions } from "./validation.ts";
+import {
+  cloneData,
+  requireCallback,
+  requireInteger,
+  requireStudyName,
+  requireSynchronous,
+  studyLimits,
+  validateOptions,
+} from "./validation.ts";
+
+type SkipReason = "fail-fast" | "before-error";
+
+const runOptionKeys = [
+  "parameters", "seeds", "plan", "create", "steps", "measure", "every", "sampleInitial", "sampleFinal",
+  "sampleWhen", "stopWhen", "onError", "before", "after", "provenance", "maxTotalSteps", "maxTotalSamples", "host",
+];
 
 function errorDetails(error: unknown): { name: string; message: string } {
-  return error instanceof Error ? { name: error.name, message: error.message } : { name: "Error", message: String(error) };
+  if (error instanceof Error) return { name: error.name, message: error.message };
+  return { name: "Error", message: String(error) };
 }
-function copyPlan<Parameters>(options: Pick<ExperimentOptions<Parameters, ExperimentModel, unknown>, "parameters" | "seeds" | "plan">): readonly PlannedRun<Parameters>[] {
+
+function skippedOutcome<Parameters, Measurements>(
+  identity: PlannedRun<Parameters>,
+  reason: SkipReason,
+): StudyOutcome<Parameters, Measurements> {
+  return Object.freeze({ status: "skipped", reason, run: identity, completedSteps: 0, samples: Object.freeze([]) });
+}
+
+/**
+ * Runs each planned simulation serially and returns a frozen, versioned study result.
+ * Runs come from `parameters` × `seeds` or from an explicit `plan`. Each run creates a
+ * model, samples it, then advances its World one tick per completed step until the
+ * horizon, a stop condition or a host stop. Budgets are checked before any model exists.
+ * A failed run skips the remaining runs unless `onError` is "continue".
+ * Errors from `before`/`after` are reported as `studyError` instead of thrown.
+ */
+export function run<Parameters, Model extends ExperimentModel, Measurements>(
+  options: ExperimentOptions<Parameters, Model, Measurements>,
+): StudyResult<Parameters, Measurements> {
+  validateOptions(options, runOptionKeys);
+  requireCallback(options.create, "create");
+  requireCallback(options.measure, "measure");
+  for (const key of ["sampleWhen", "stopWhen", "before", "after"] as const) {
+    if (options[key] !== undefined) requireCallback(options[key], key);
+  }
+  if (options.host !== undefined) {
+    validateOptions(options.host, ["advance"]);
+    requireCallback(options.host.advance, "host.advance");
+  }
+  const steps = requireInteger(options.steps, "Steps", studyLimits.steps);
+  const every = requireInteger(options.every ?? 1, "Sampling interval", Number.MAX_SAFE_INTEGER, 1);
+  for (const key of ["sampleInitial", "sampleFinal"] as const) {
+    if (options[key] !== undefined && typeof options[key] !== "boolean") throw new TypeError(`${key} must be boolean.`);
+  }
+  if (options.onError !== undefined && options.onError !== "stop" && options.onError !== "continue") {
+    throw new TypeError("Unknown onError policy.");
+  }
+  const plan = copyPlan(options);
+  requireExecutionBudget(options, plan.length, steps, every);
+  const provenance = readProvenance(options.provenance);
+
+  if (options.before) {
+    try {
+      requireSynchronous(options.before(cloneData(plan)));
+    } catch (error) {
+      const outcomes = plan.map(identity => skippedOutcome<Parameters, Measurements>(identity, "before-error"));
+      return Object.freeze({
+        version: 1,
+        provenance,
+        outcomes: Object.freeze(outcomes),
+        studyError: { phase: "before" as const, ...errorDetails(error) },
+      });
+    }
+  }
+
+  const outcomes: StudyOutcome<Parameters, Measurements>[] = [];
+  let failFast = false;
+  for (const identity of plan) {
+    if (failFast) {
+      outcomes.push(skippedOutcome(identity, "fail-fast"));
+      continue;
+    }
+    const outcome = execute(identity, options, every);
+    outcomes.push(outcome);
+    failFast = outcome.status === "failed" && options.onError !== "continue";
+  }
+  const result: StudyResult<Parameters, Measurements> = Object.freeze({
+    version: 1,
+    provenance,
+    outcomes: Object.freeze(outcomes),
+  });
+
+  if (options.after) {
+    try {
+      requireSynchronous(options.after(cloneData(result)));
+    } catch (error) {
+      return Object.freeze({ ...result, studyError: { phase: "after" as const, ...errorDetails(error) } });
+    }
+  }
+  return result;
+}
+
+function copyPlan<Parameters>(
+  options: Pick<ExperimentOptions<Parameters, ExperimentModel, unknown>, "parameters" | "seeds" | "plan">,
+): readonly PlannedRun<Parameters>[] {
   if (options.plan === undefined) {
     if (!Array.isArray(options.parameters)) throw new TypeError("Study parameters must be an array.");
-    return replicate(options.parameters.map((parameters, index) => ({ id: `scenario-${index}`, index, parameters })), options.seeds!);
+    const scenarios = options.parameters.map((parameters, index) => ({ id: `scenario-${index}`, index, parameters }));
+    // ExperimentPlan pairs parameters with seeds; replicate validates the runtime value.
+    return replicate(scenarios, options.seeds!);
   }
-  if (options.parameters !== undefined || options.seeds !== undefined || !Array.isArray(options.plan))
+  if (options.parameters !== undefined || options.seeds !== undefined || !Array.isArray(options.plan)) {
     throw new TypeError("Provide either plan or parameters/seeds.");
+  }
   if (options.plan.length > studyLimits.runs) throw new RangeError("Run budget exceeded.");
+
   const ids = new Set<string>();
   const positions = new Set<string>();
   const scenarios = new Map<string, { index: number; seeds: Set<number> }>();
-  const indices = new Map<number, string>();
+  const scenarioIds = new Map<number, string>();
   return Object.freeze(options.plan.map(run => {
     validateOptions(run, ["id", "scenarioId", "scenarioIndex", "replicationIndex", "seed", "parameters"]);
-    name(run.id); name(run.scenarioId);
-    integer(run.scenarioIndex, "Scenario index", Number.MAX_SAFE_INTEGER);
-    integer(run.replicationIndex, "Replication index", Number.MAX_SAFE_INTEGER);
-    integer(run.seed, "Seed", Number.MAX_SAFE_INTEGER, Number.MIN_SAFE_INTEGER);
+    requireStudyName(run.id);
+    requireStudyName(run.scenarioId);
+    requireInteger(run.scenarioIndex, "Scenario index", Number.MAX_SAFE_INTEGER);
+    requireInteger(run.replicationIndex, "Replication index", Number.MAX_SAFE_INTEGER);
+    requireInteger(run.seed, "Seed", Number.MAX_SAFE_INTEGER, Number.MIN_SAFE_INTEGER);
+
     const position = `${run.scenarioIndex}:${run.replicationIndex}`;
     const scenario = scenarios.get(run.scenarioId);
-    if (ids.has(run.id) || positions.has(position) || (scenario && (scenario.index !== run.scenarioIndex || scenario.seeds.has(run.seed))) ||
-      (indices.has(run.scenarioIndex) && indices.get(run.scenarioIndex) !== run.scenarioId))
+    const conflictsWithScenario =
+      scenario !== undefined && (scenario.index !== run.scenarioIndex || scenario.seeds.has(run.seed));
+    const conflictsWithIndex =
+      scenarioIds.has(run.scenarioIndex) && scenarioIds.get(run.scenarioIndex) !== run.scenarioId;
+    if (ids.has(run.id) || positions.has(position) || conflictsWithScenario || conflictsWithIndex) {
       throw new TypeError("Study run identities must be unique and consistent.");
-    ids.add(run.id); positions.add(position); indices.set(run.scenarioIndex, run.scenarioId);
+    }
+
+    ids.add(run.id);
+    positions.add(position);
+    scenarioIds.set(run.scenarioIndex, run.scenarioId);
     const entry = scenario ?? { index: run.scenarioIndex, seeds: new Set<number>() };
-    entry.seeds.add(run.seed); scenarios.set(run.scenarioId, entry);
+    entry.seeds.add(run.seed);
+    scenarios.set(run.scenarioId, entry);
     return Object.freeze({ ...run, parameters: cloneData(run.parameters) });
   }));
 }
-function booleanResult(value: unknown): boolean {
-  synchronous(value);
+
+function requireExecutionBudget(
+  options: Pick<ExperimentOptions<unknown, ExperimentModel, unknown>, "maxTotalSteps" | "maxTotalSamples" | "sampleInitial" | "sampleFinal">,
+  runCount: number,
+  steps: number,
+  every: number,
+): void {
+  const maxSteps = requireInteger(options.maxTotalSteps ?? studyLimits.totalSteps, "Total step budget", studyLimits.totalSteps);
+  const maxSamples = requireInteger(
+    options.maxTotalSamples ?? studyLimits.totalSamples,
+    "Total sample budget",
+    studyLimits.totalSamples,
+  );
+  // Early stopping may add one final sample, but each completed boundary is sampled at most once.
+  const initialSamples = options.sampleInitial !== false ? 1 : 0;
+  const finalSamples = options.sampleFinal !== false ? 1 : 0;
+  const perRunSamples = Math.min(steps + 1, Math.floor(steps / every) + initialSamples + finalSamples);
+  if (runCount * steps > maxSteps || runCount * perRunSamples > maxSamples) {
+    throw new RangeError("Study execution budget exceeded before model creation.");
+  }
+}
+
+function readProvenance(supplied: Readonly<Record<string, string>> | undefined): Readonly<Record<string, string>> {
+  const provenanceData = validateOptions(supplied ?? {}, Object.keys(supplied ?? {}));
+  if (Object.values(provenanceData).some(value => typeof value !== "string")) {
+    throw new TypeError("Provenance must contain strings.");
+  }
+  return Object.freeze({ ...provenanceData }) as Readonly<Record<string, string>>;
+}
+
+function requireBooleanResult(value: unknown): boolean {
+  requireSynchronous(value);
   if (typeof value !== "boolean") throw new TypeError("Study predicates must return booleans.");
   return value;
 }
 
+/**
+ * Executes one planned run. `phase` names the callback in progress so a failure
+ * reports where it happened; dispose always runs once a model was created.
+ */
 function execute<Parameters, Model extends ExperimentModel, Measurements>(
-  identity: PlannedRun<Parameters>, options: ExperimentOptions<Parameters, Model, Measurements>, every: number,
+  identity: PlannedRun<Parameters>,
+  options: ExperimentOptions<Parameters, Model, Measurements>,
+  every: number,
 ): StudyOutcome<Parameters, Measurements> {
   let phase: StudyPhase = "create";
   let model: Model | undefined;
@@ -51,103 +211,69 @@ function execute<Parameters, Model extends ExperimentModel, Measurements>(
   let completedSteps = 0;
   const samples: StudySample<Measurements>[] = [];
   let terminal: StudyTerminal = { status: "completed", reason: "horizon" };
+  // Thrown out of the World step callback so a host stop ends the run without counting as a failure.
   const adapterStopped = Symbol("adapter-stopped");
-  function observe(force = false): void {
-    phase = "sample";
-    if (!force && options.sampleWhen && !booleanResult(options.sampleWhen(model!, completedSteps))) return;
+
+  // The model helpers below run only after create has returned a model.
+  function measure(): void {
     phase = "measure";
-    const measurement = cloneData(synchronous(options.measure(model!)));
+    const measurement = cloneData(requireSynchronous(options.measure(model!)));
     samples.push(Object.freeze({ step: completedSteps, measurement }));
   }
-  function stopped(): boolean {
-    phase = "stop";
-    return options.stopWhen ? booleanResult(options.stopWhen(model!, completedSteps)) : false;
+  function sampleIfSelected(): void {
+    phase = "sample";
+    if (options.sampleWhen && !requireBooleanResult(options.sampleWhen(model!, completedSteps))) return;
+    measure();
   }
+  function stopConditionMet(): boolean {
+    phase = "stop";
+    return options.stopWhen ? requireBooleanResult(options.stopWhen(model!, completedSteps)) : false;
+  }
+  function advanceModel(): void {
+    if (!options.host) return requireSynchronous(model!.step());
+    const result = requireSynchronous(options.host.advance(model!));
+    if (result === "stopped") throw adapterStopped;
+    if (result !== undefined) throw new TypeError("host.advance must return void or stopped.");
+  }
+
   try {
-    model = synchronous(options.create(cloneData(identity.parameters), identity.seed, cloneData(identity)));
+    model = requireSynchronous(options.create(cloneData(identity.parameters), identity.seed, cloneData(identity)));
     created = true;
     if (model === null || typeof model !== "object") throw new TypeError("create must return an ExperimentModel.");
     worldClock(model.world);
-    callback(model.step, "Model step");
-    if (model.dispose !== undefined) callback(model.dispose, "Model dispose");
-    if (options.sampleInitial !== false) observe();
-    if (stopped()) terminal = { status: "stopped", reason: "stop-condition" };
+    requireCallback(model.step, "Model step");
+    if (model.dispose !== undefined) requireCallback(model.dispose, "Model dispose");
+
+    if (options.sampleInitial !== false) sampleIfSelected();
+    if (stopConditionMet()) terminal = { status: "stopped", reason: "stop-condition" };
     while (completedSteps < options.steps && terminal.status === "completed") {
       phase = "step";
-      runWorld(model.world, () => {
-        if (!options.host) return synchronous(model!.step());
-        const result = synchronous(options.host.advance(model!));
-        if (result === "stopped") throw adapterStopped;
-        if (result !== undefined) throw new TypeError("host.advance must return void or stopped.");
-      });
+      runWorld(model.world, advanceModel);
       completedSteps += 1;
-      if (completedSteps % every === 0) observe();
-      if (stopped()) terminal = { status: "stopped", reason: "stop-condition" };
+      if (completedSteps % every === 0) sampleIfSelected();
+      if (stopConditionMet()) terminal = { status: "stopped", reason: "stop-condition" };
     }
-    if (options.sampleFinal !== false && samples.at(-1)?.step !== completedSteps) observe(true);
+    // The final boundary is measured regardless of sampleWhen unless it was already sampled.
+    if (options.sampleFinal !== false && samples.at(-1)?.step !== completedSteps) {
+      phase = "sample";
+      measure();
+    }
   } catch (error) {
     terminal = error === adapterStopped
       ? { status: "stopped", reason: "adapter-stopped" }
       : { status: "failed", reason: "error", error: { phase, ...errorDetails(error) } };
   } finally {
     if (created && model?.dispose !== undefined) {
-      try { callback(model.dispose, "Model dispose"); synchronous(model.dispose()); }
-      catch (error) {
+      try {
+        requireCallback(model.dispose, "Model dispose");
+        requireSynchronous(model.dispose());
+      } catch (error) {
         const cleanupError: StudyError = { phase: "dispose", ...errorDetails(error) };
-        terminal = terminal.status === "failed" ? { ...terminal, cleanupError }
+        terminal = terminal.status === "failed"
+          ? { ...terminal, cleanupError }
           : { status: "failed", reason: "error", error: cleanupError };
       }
     }
   }
   return Object.freeze({ ...terminal, run: identity, completedSteps, samples: Object.freeze(samples) });
-}
-
-export function run<Parameters, Model extends ExperimentModel, Measurements>(options: ExperimentOptions<Parameters, Model, Measurements>): StudyResult<Parameters, Measurements> {
-  validateOptions(options, ["parameters", "seeds", "plan", "create", "steps", "measure", "every", "sampleInitial", "sampleFinal", "sampleWhen", "stopWhen", "onError", "before", "after", "provenance", "maxTotalSteps", "maxTotalSamples", "host"]);
-  callback(options.create, "create"); callback(options.measure, "measure");
-  for (const key of ["sampleWhen", "stopWhen", "before", "after"] as const)
-    if (options[key] !== undefined) callback(options[key], key);
-  if (options.host !== undefined) {
-    validateOptions(options.host, ["advance"]); callback(options.host.advance, "host.advance");
-  }
-  const steps = integer(options.steps, "Steps", studyLimits.steps);
-  const every = integer(options.every ?? 1, "Sampling interval", Number.MAX_SAFE_INTEGER, 1);
-  for (const key of ["sampleInitial", "sampleFinal"] as const)
-    if (options[key] !== undefined && typeof options[key] !== "boolean") throw new TypeError(`${key} must be boolean.`);
-  if (options.onError !== undefined && options.onError !== "stop" && options.onError !== "continue") throw new TypeError("Unknown onError policy.");
-  const plan = copyPlan(options);
-  const maxSteps = integer(options.maxTotalSteps ?? studyLimits.totalSteps, "Total step budget", studyLimits.totalSteps);
-  const maxSamples = integer(options.maxTotalSamples ?? studyLimits.totalSamples, "Total sample budget", studyLimits.totalSamples);
-  // Early stopping may add one final sample, but each completed boundary is sampled at most once.
-  const perRunSamples = Math.min(steps + 1,
-    Math.floor(steps / every) + (options.sampleInitial !== false ? 1 : 0) + (options.sampleFinal !== false ? 1 : 0));
-  if (plan.length * steps > maxSteps || plan.length * perRunSamples > maxSamples)
-    throw new RangeError("Study execution budget exceeded before model creation.");
-  const provenanceData = validateOptions(options.provenance ?? {}, Object.keys(options.provenance ?? {}));
-  if (Object.values(provenanceData).some(value => typeof value !== "string")) throw new TypeError("Provenance must contain strings.");
-  const provenance = Object.freeze({ ...provenanceData }) as Readonly<Record<string, string>>;
-  const outcomes: StudyOutcome<Parameters, Measurements>[] = [];
-  if (options.before) {
-    try { synchronous(options.before(cloneData(plan))); }
-    catch (error) {
-      return Object.freeze({ version: 1, provenance, outcomes: Object.freeze(plan.map(identity => Object.freeze({
-        status: "skipped" as const, reason: "before-error" as const, run: identity, completedSteps: 0, samples: Object.freeze([]),
-      }))), studyError: { phase: "before" as const, ...errorDetails(error) } });
-    }
-  }
-  let failFast = false;
-  for (const identity of plan) {
-    if (failFast) outcomes.push(Object.freeze({ status: "skipped", reason: "fail-fast", run: identity, completedSteps: 0, samples: Object.freeze([]) }));
-    else {
-      const outcome = execute(identity, options, every);
-      outcomes.push(outcome);
-      failFast = outcome.status === "failed" && options.onError !== "continue";
-    }
-  }
-  const result: StudyResult<Parameters, Measurements> = Object.freeze({ version: 1, provenance, outcomes: Object.freeze(outcomes) });
-  if (options.after) {
-    try { synchronous(options.after(cloneData(result))); }
-    catch (error) { return Object.freeze({ ...result, studyError: { phase: "after" as const, ...errorDetails(error) } }); }
-  }
-  return result;
 }

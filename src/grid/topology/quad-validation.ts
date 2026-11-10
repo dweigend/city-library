@@ -1,7 +1,7 @@
 import { orient, point } from "../../geometry/planar/predicates.ts";
 import type { PlanarPolygon, PlanarXY } from "../../geometry/planar/types.ts";
+import { coordinateLimit } from "./layout.ts";
 
-const coordinateLimit = 1e6;
 const minimumRelativeTurn = 1e-12;
 
 export function coordinateKey(position: PlanarXY): string {
@@ -20,13 +20,20 @@ export function canonicalQuad(corners: readonly PlanarXY[]): PlanarXY[] {
   const exact = ordered.map(([x, y]) => point(x, y));
   if (orient(exact[0]!, exact[1]!, exact[2]!) < 0) ordered.reverse();
   requireQuality(ordered);
-  let first = 0;
-  for (let index = 1; index < 4; index++) if (before(ordered[index]!, ordered[first]!)) first = index;
-  return [...ordered.slice(first), ...ordered.slice(0, first)];
+  return startAtLowestCorner(ordered, corner => corner);
 }
 
-function before(first: PlanarXY, second: PlanarXY): boolean {
-  return first[0] < second[0] || (first[0] === second[0] && first[1] < second[1]);
+/**
+ * Rotates a corner cycle without a repeated endpoint to its lexicographically lowest
+ * (x, then y) position; the first such corner wins ties. Order is preserved.
+ */
+export function startAtLowestCorner<T>(corners: readonly T[], coordinate: (corner: T) => PlanarXY): T[] {
+  let start = 0;
+  for (let index = 1; index < corners.length; index++) {
+    const candidate = coordinate(corners[index]!), current = coordinate(corners[start]!);
+    if (candidate[0] < current[0] || (candidate[0] === current[0] && candidate[1] < current[1])) start = index;
+  }
+  return [...corners.slice(start), ...corners.slice(0, start)];
 }
 
 function requireQuality(corners: readonly PlanarXY[]): void {

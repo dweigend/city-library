@@ -1,8 +1,17 @@
+/** World-owned model time; not wall-clock time and not a step counter. */
 export interface Tick {
+  /** Current finite, nonnegative value; starts at 0 and may be fractional. */
   readonly value: number;
+  /**
+   * Adds a finite nonnegative amount (default 1); rejected while the World runs.
+   * @throws TypeError while running or for a nonnumeric amount.
+   * @throws RangeError for a negative or nonfinite amount or result.
+   */
   advance(amount?: number): void;
+  /** Sets the value to 0; rejected while the World runs. */
   reset(): void;
 }
+/** Private World clock: `run` owns `running` and calls `completeStep` once per successful step. */
 export interface Clock {
   readonly tick: Tick;
   running: boolean;

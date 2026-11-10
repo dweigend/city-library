@@ -10,10 +10,22 @@ export interface ResourceRequest<T> {
   readonly units: number;
   readonly status: ResourceStatus;
 }
+/**
+ * Counted capacity with a waiting line. Admission is head-of-line: the first
+ * waiter blocks later ones until its units fit. The "priority" policy orders
+ * waiters by lower priority first, stable for ties, and never preempts holders.
+ */
 export interface Resource<T> {
+  /** Requests `units` (default 1, at most current capacity); grants immediately when admissible. */
   request(options: { owner: T; units?: number; priority?: number }): ResourceRequest<T>;
+  /**
+   * Returns granted units; releasing again is a no-op.
+   * @throws TypeError for foreign, waiting or cancelled requests.
+   */
   release(ticket: ResourceRequest<T>): void;
+  /** Withdraws a waiting or granted request; finished requests are ignored. */
   cancel(ticket: ResourceRequest<T>): void;
+  /** "reject" (default) refuses to shrink below used units; "retain" keeps current holders. */
   setCapacity(capacity: number, options?: { occupied?: "reject" | "retain" }): void;
   readonly capacity: number;
   readonly used: number;
@@ -25,6 +37,9 @@ interface Entry<T> {
   status: ResourceStatus;
   priority: number;
   release: () => void;
+}
+function isRequestUnits(value: unknown, capacity: number): value is number {
+  return typeof value === "number" && Number.isSafeInteger(value) && value >= 1 && value <= capacity;
 }
 function validCapacity(value: unknown): number {
   if (typeof value !== "number") throw new TypeError("Resource capacity must be numeric.");
@@ -66,13 +81,15 @@ function add<T>(options: { capacity: number; policy?: QueuePolicy }): Resource<T
       if (!Object.hasOwn(settings, "owner")) throw new TypeError("A resource request needs an owner.");
       const units = settings.units === undefined ? 1 : settings.units;
       const priority = settings.priority === undefined ? 0 : settings.priority;
-      if (typeof units !== "number" || !Number.isSafeInteger(units) || units < 1 || units > capacity) throw new RangeError("Request units must be positive safe integers within current capacity.");
-      if (typeof priority !== "number" || !Number.isSafeInteger(priority)) throw new RangeError("Resource priority must be a signed safe integer.");
+      if (!isRequestUnits(units, capacity))
+        throw new RangeError("Request units must be positive safe integers within current capacity.");
+      if (typeof priority !== "number" || !Number.isSafeInteger(priority))
+        throw new RangeError("Resource priority must be a signed safe integer.");
       const owner = settings.owner as T;
       const release = retainParticipant(owner);
-      const entry: Entry<T> = { ticket: undefined!, status: "waiting", priority, release };
+      // The status getter reads `entry` lazily, after it has been initialized.
       const ticket = Object.freeze({ id: issueId(), owner, units, get status() { return entry.status; } });
-      entry.ticket = ticket;
+      const entry: Entry<T> = { ticket, status: "waiting", priority, release };
       issued.set(ticket, entry);
       waiting.push(entry);
       // Reorder waiters only; priority never preempts an existing holder.

@@ -1,7 +1,7 @@
 import { validateOptions } from "../../agent/state.ts";
 import type { PlanarXY } from "../../geometry/planar/types.ts";
 import { createLayout, requireLayout, type Layout } from "./layout.ts";
-import { canonicalQuad, coordinateKey, quadPolygons } from "./quad-validation.ts";
+import { canonicalQuad, coordinateKey, quadPolygons, startAtLowestCorner } from "./quad-validation.ts";
 
 interface RelaxOptions {
   layout: Layout;
@@ -86,7 +86,7 @@ function readIncidence(layout: Layout): Incidence {
 function squareForces(vertices: readonly PlanarXY[], faces: readonly (readonly number[])[]): [number, number][] {
   const forces: [number, number][] = vertices.map(() => [0, 0]);
   for (const face of faces) {
-    const ordered = canonicalFace(face, vertices);
+    const ordered = startAtLowestCorner(face, vertex => vertices[vertex]!);
     const corners = ordered.map(vertex => vertices[vertex]!);
     const center: PlanarXY = [corners.reduce((sum, p) => sum + p[0], 0) / 4, corners.reduce((sum, p) => sum + p[1], 0) / 4];
     const aligned = corners.map((p, index) => rotate([p[0] - center[0], p[1] - center[1]], (4 - index) % 4));
@@ -98,15 +98,6 @@ function squareForces(vertices: readonly PlanarXY[], faces: readonly (readonly n
     }
   }
   return forces;
-}
-
-function canonicalFace(face: readonly number[], vertices: readonly PlanarXY[]): number[] {
-  let first = 0;
-  for (let index = 1; index < 4; index++) {
-    const a = vertices[face[index]!]!, b = vertices[face[first]!]!;
-    if (a[0] < b[0] || (a[0] === b[0] && a[1] < b[1])) first = index;
-  }
-  return [...face.slice(first), ...face.slice(0, first)];
 }
 
 function rotate([x, y]: PlanarXY, quarterTurns: number): PlanarXY {
