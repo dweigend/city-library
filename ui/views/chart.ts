@@ -41,14 +41,16 @@ export function prepareChartData(mode: Mode, input: readonly (Series | BarSeries
   }));
   const points = series.flatMap(line => [...line.points]);
   const [minX, maxX] = extent(points.map(point => point.x));
-  const [minY, maxY] = extent(points.map(point => point.y));
+  // Bar lengths encode magnitude, so bar charts always include zero; lines and points need not.
+  const [minY, maxY] = extent(mode === "bar" ? [0, ...points.map(point => point.y)] : points.map(point => point.y));
   return { categorical, categories, series, minX, maxX, minY, maxY };
 }
 
-/** Data extent anchored at zero; an empty or flat extent keeps a unit span. */
+/** Data extent; an empty extent is 0–1 and a flat one keeps a unit span. */
 function extent(values: readonly number[]): [number, number] {
-  const min = Math.min(0, ...values);
-  const max = Math.max(0, ...values);
+  if (values.length === 0) return [0, 1];
+  const min = Math.min(...values);
+  const max = Math.max(...values);
   return max > min ? [min, max] : [min, min + 1];
 }
 
@@ -87,12 +89,14 @@ export function chartGeometry(data: ReturnType<typeof prepareChartData>, left = 
   const barWidth = groupWidth / Math.max(1, data.series.length);
   const categoryX = (index: number) => left + slot * (index + 0.5);
   const numericBarWidth = Math.max(2, (x(data.minX + numericSpacing(data)) - x(data.minX)) * 0.8);
+  const dodgedBarWidth = numericBarWidth / Math.max(1, data.series.length);
+  /** Bars of different series at one x sit side by side, never on top of each other. */
   function bar(point: PlotPoint, seriesIndex: number) {
-    const width = data.categorical ? barWidth : numericBarWidth;
+    const width = data.categorical ? barWidth : dodgedBarWidth;
     return {
       x: data.categorical
         ? categoryX(point.x) - groupWidth / 2 + seriesIndex * barWidth
-        : x(point.x) - width / 2,
+        : x(point.x) - numericBarWidth / 2 + seriesIndex * dodgedBarWidth,
       y: Math.min(y(0), y(point.y)),
       width,
       height: Math.abs(y(0) - y(point.y)),
@@ -156,17 +160,22 @@ export function mountChart<M extends Mode = "line">(
   }
   /** Approximate rendered width; SVG text is not measured to keep rendering synchronous. */
   function textWidth(value: string, fontSize: number) { return value.length * fontSize * 0.6; }
-  /** Category labels wrap onto at most two lines; labels that still collide are thinned. */
+  /**
+   * Category labels wrap onto two lines when that makes every label fit; otherwise they
+   * stay on one line and only every n-th label is shown.
+   */
   function categoryLines(categories: readonly string[], slot: number, fontSize: number) {
+    const every = (labels: readonly (readonly string[])[]) =>
+      Math.max(1, Math.ceil((Math.max(0, ...labels.flat().map(part => textWidth(part, fontSize))) + 8) / Math.max(1, slot)));
     const wrapped = categories.map(category => {
-      if (textWidth(category, fontSize) <= slot - 4) return [category];
+      if (textWidth(category, fontSize) <= slot - 8) return [category];
       const words = category.split(" ");
       const split = Math.ceil(words.length / 2);
       return words.length > 1 ? [words.slice(0, split).join(" "), words.slice(split).join(" ")] : [category];
     });
-    const widest = Math.max(0, ...wrapped.flat().map(part => textWidth(part, fontSize)));
-    const every = Math.max(1, Math.ceil((widest + 8) / Math.max(1, slot)));
-    return { wrapped, every, lines: Math.max(1, ...wrapped.map(parts => parts.length)) };
+    if (every(wrapped) === 1) return { wrapped, every: 1, lines: Math.max(1, ...wrapped.map(parts => parts.length)) };
+    const single = categories.map(category => [category]);
+    return { wrapped: single, every: every(single), lines: 1 };
   }
   function render(data: ReturnType<typeof prepareChartData>) {
       const fontSize = parseFloat(getComputedStyle(svg).fontSize) || 12;
@@ -208,10 +217,17 @@ export function mountChart<M extends Mode = "line">(
           });
         });
       } else {
-        const xTickCount = Math.max(1, Math.min(8, Math.floor((right - left) / 80), pad ? (data.maxX - data.minX) / (2 * pad) : Infinity));
-        const xTicks = niceTicks(data.minX, data.maxX, xTickCount, values.every(point => Number.isInteger(point.x)) ? 1 : 0);
+        const minimumXStep = values.every(point => Number.isInteger(point.x)) ? 1 : 0;
+        const inRange = (value: number) => value >= data.minX - 1e-9 && value <= data.maxX + 1e-9;
+        // Narrow plots ask for few ticks; add intervals until at least two fall inside the data.
+        let xTickCount = Math.max(1, Math.min(8, Math.floor((right - left) / 80), pad ? (data.maxX - data.minX) / (2 * pad) : Infinity));
+        let xTicks = niceTicks(data.minX, data.maxX, xTickCount, minimumXStep);
+        while (xTicks.values.filter(inRange).length < 2 && xTickCount < 10) {
+          xTickCount++;
+          xTicks = niceTicks(data.minX, data.maxX, xTickCount, minimumXStep);
+        }
         for (const value of xTicks.values) {
-          if (value < data.minX - 1e-9 || value > data.maxX + 1e-9) continue;
+          if (!inRange(value)) continue;
           const x = geometry.x(value);
           const label = tickText(value, xTicks.step);
           const half = textWidth(label, fontSize) / 2;

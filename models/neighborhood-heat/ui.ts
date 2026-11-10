@@ -8,7 +8,7 @@ export const ui = defineUI(model, {
     { label: "Temperature sum", value: state => state.totalTemperature, format: (value: number) => value.toFixed(2) },
   ],
   views: [
-    { type: "spatial", label: "Field temperatures · blue 20 → red 28", data: temperatureMap },
+    { type: "spatial", label: "Field temperatures · blue 20 → red 24 or more", data: temperatureMap },
   ],
 });
 
@@ -26,12 +26,13 @@ function temperatureMap(state: Observation<typeof model>): SpatialData {
 
 function temperatureColor(temperature: number): string {
   const hotPercent = 100 * Math.max(0, Math.min(1, (temperature - coolestTemperature) / (hottestTemperature - coolestTemperature)));
-  return `color-mix(in srgb, ${coolColor} ${100 - hotPercent}%, ${hotColor} ${hotPercent}%)`;
+  return `color-mix(in oklab, ${coolColor} ${100 - hotPercent}%, ${hotColor} ${hotPercent}%)`;
 }
 
-// The initial field temperatures (20 and 28) fix the color scale across ticks.
+// A fixed scale keeps colors comparable across ticks. Fields settle between 20 and about
+// 22 within a few ticks, so the hot end sits at 24 (the 28-degree start clamps to it).
 const gridSize = 3;
 const coolestTemperature = 20;
-const hottestTemperature = 28;
+const hottestTemperature = 24;
 const coolColor = indexedColor(105);
 const hotColor = indexedColor(15);

@@ -47,7 +47,7 @@ export const ui = defineUI(model, {
       type: "line",
       label: "Agent populations",
       series: (s) =>
-        agentColors.map(({ color, name }, i) => ({
+        agentColors.slice(0, s.parameters.colorCount).map(({ color, name }, i) => ({
           label: name,
           color: indexedColor(color),
           points: s.history.map((p) => ({ x: p.tick, y: p.counts[i]! })),

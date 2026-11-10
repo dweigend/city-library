@@ -66,7 +66,7 @@ export const ui = defineUI(model, {
       label: "Luminosity",
       series: (s) => [
         {
-          label: "solar luminosity",
+          label: "Solar luminosity",
           points: s.history.map((p) => ({
             x: p.tick,
             y: p.luminosity,
@@ -79,7 +79,7 @@ export const ui = defineUI(model, {
       label: "Global temperature",
       series: (s) => [
         {
-          label: "temperature",
+          label: "Temperature",
           points: s.history.map((p) => ({
             x: p.tick,
             y: p.temperature,
@@ -92,7 +92,7 @@ export const ui = defineUI(model, {
       label: "Population",
       series: (s) =>
         (["blackDaisyCount", "whiteDaisyCount"] as const).map((key) => ({
-          label: key === "blackDaisyCount" ? "Black" : "White",
+          label: key === "blackDaisyCount" ? "Black daisies" : "White daisies",
           points: s.history.map((p) => ({
             x: p.tick,
             y: p[key],

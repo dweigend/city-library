@@ -67,10 +67,9 @@ type UIObservation = Observation<typeof model>;
 function hexCellsData(state: UIObservation): SpatialData {
   const alive = state.cells.filter((cell) => cell.alive);
   const reach = Math.max(0, ...alive.map((cell) => Math.max(Math.abs(cell.x), Math.abs(cell.displayY))));
-  const frame = framedExtent(reach, state.width);
   return {
-    width: frame,
-    height: frame + 1,
+    width: framedExtent(reach, state.width),
+    height: framedExtent(reach, state.height) + 1,
     cells: alive.map((cell) => ({
       id: cell.id,
       x: cell.x,
@@ -83,13 +82,13 @@ function hexCellsData(state: UIObservation): SpatialData {
 }
 
 /**
- * An odd cell count around the centre cell that holds the aggregate with a margin,
- * at least a third of the world and at most all of it.
+ * An odd cell count along one axis around the centre cell that holds the aggregate
+ * with a margin, at least a third of that axis and at most all of it.
  */
-function framedExtent(reach: number, worldWidth: number) {
-  const wanted = Math.max(Math.ceil(worldWidth / 3), 2 * (reach + frameMargin) + 1);
+function framedExtent(reach: number, worldSize: number) {
+  const wanted = Math.max(Math.ceil(worldSize / 3), 2 * (reach + frameMargin) + 1);
   const odd = wanted % 2 === 0 ? wanted + 1 : wanted;
-  return Math.min(worldWidth, odd);
+  return Math.min(worldSize, odd);
 }
 
 // Cells of empty space kept around the aggregate.

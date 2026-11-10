@@ -96,7 +96,8 @@ export const ui = defineUI(model, {
 
 /** Positive weights are red and negative weights blue, as in the source model. */
 function weightColor(weight: number) {
-  return indexedColor(weight > 0 ? 15 : 105);
+  // Blue is one shade lighter than the source so it stays visible on dark surfaces.
+  return indexedColor(weight > 0 ? 15 : 106);
 }
 
 /** Activation 0…1 as a dark-to-light amber fill that stays visible in both themes. */

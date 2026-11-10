@@ -12,8 +12,7 @@ export const ui = defineUI(model, {
       ] },
     ] },
   ],
-  // Playback never allocates (no invented priority), so only the allocation actions apply.
-  complete: () => true,
+  complete: state => state.inventoryUnitCount === 0,
   actions: [
     { label: "Allocate to A", run: instance => { instance.allocate("A"); }, enabled: state => state.inventoryUnitCount > 0 },
     { label: "Allocate to B", run: instance => { instance.allocate("B"); }, enabled: state => state.inventoryUnitCount > 0 },

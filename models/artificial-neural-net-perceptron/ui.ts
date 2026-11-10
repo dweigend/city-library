@@ -1,4 +1,4 @@
-import { defineUI, indexedColor, type Observation, type SpatialData } from "../../ui/index.ts";
+import { defineUI, indexedColor, scientificPalette, type Observation, type SpatialData } from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
@@ -63,7 +63,8 @@ export const ui = defineUI(model, {
           from: String(e.from),
           to: String(e.to),
           directed: true,
-          color: indexedColor(e.weight > 0 ? 15 : 105),
+          // Source red/blue; blue one shade lighter so negative weights stay visible on dark surfaces.
+          color: indexedColor(e.weight > 0 ? 15 : 106),
           width: Math.max(0.5, 0.2 * Math.abs(e.weight) * 20),
         })),
     },
@@ -135,7 +136,7 @@ function boundaryAcrossPlane(first: { x: number; y: number }, last: { x: number;
   return {
     from: { x: (middle.x - direction.x) * planeScale, y: (middle.y - direction.y) * planeScale },
     to: { x: (middle.x + direction.x) * planeScale, y: (middle.y + direction.y) * planeScale },
-    color: "#e5e7eb",
+    color: scientificPalette.neutral,
     width: 2,
   };
 }

@@ -7,8 +7,6 @@ export const ui = defineUI(model, {
     url: "https://ccl.northwestern.edu/netlogo/models/CentralLimitTheorem",
     label: "Wilensky (2005) · CC BY-NC-SA 3.0",
   },
-  // Sampling needs a population of at least one sample; create one first, as in the source.
-  complete: (s) => s.population < s.parameters.sampleSize,
   change: (instance, changes) => instance.setRules(changes),
   live: {
     sampleSize: {},

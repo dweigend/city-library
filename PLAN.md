@@ -158,6 +158,8 @@ The first-generator contract and city-domain admission/replacement remain later 
 
 The [Markdown API specification](docs/agent-loom/README.md) defines the required core scope: all 309 operation/type entries across 16 reference areas, including behavior profiles, codecs, advanced algorithms, limits and shared types. Completion requires a delivered public export, contract, executable example and target evidence for each entry. Deferred operations remain open; exclusions or scope changes require an explicit recorded decision. The regular Agent Loom Grid contract remains square/cubic. Finite hexagonal layouts and layout-backed Grids are available through the additive topology API; broader hexagonal behavior remains outside that regular Grid contract. Track implementation status against public examples and behavior checks, not source-project results.
 
+The UI contract has no readiness state for playback. `complete` means a finished run, so models whose playback needs a prior user action (Central Limit Theorem, Random Combinations and Permutations) or never acts (Scarce Resource) keep Run enabled; their monitors and action buttons show the next step. A separate readiness predicate needs an example-first decision before use.
+
 ## Code quality
 
 Follow the [coding standards](docs/CODING_STANDARDS.md) for library and readable reference scripts. Configure focused Biome commands as separate future tooling work; no Biome checks are configured or claimed.

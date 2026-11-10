@@ -34,7 +34,7 @@ export const ui = defineUI(model, {
     { label: "Dark ratio", value: (s) => s.darkRatioValue, format: (value: number | string) => (typeof value === "number" ? value.toFixed(2) : value) },
     { label: "Light ratio", value: (s) => s.lightRatioValue },
     { label: "Genotype", value: (s) => s.selectedGenotype ?? "Select a mouse" },
-    { label: "Message", value: (s) => s.message },
+    { label: "Message", value: (s) => s.message || "—" },
   ],
   views: [
     {

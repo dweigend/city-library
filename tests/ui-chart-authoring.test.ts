@@ -107,8 +107,18 @@ describe("chart authoring data and geometry", () => {
 
   test("flat or empty data keeps a unit span and numeric bars share the smallest bin spacing", () => {
     expect(prepareChartData("line", [{ label: "Flat", points: [{ x: 0, y: 0 }] }])).toMatchObject({ minY: 0, maxY: 1 });
-    const small = prepareChartData("line", [{ label: "Small", points: [{ x: 0, y: 0.2 }, { x: 4, y: 0.35 }] }]);
-    expect([small.minY, small.maxY]).toEqual([0, 0.35]);
+    const prices = prepareChartData("line", [{ label: "Price", points: [{ x: 10, y: 16 }, { x: 20, y: 17.5 }] }]);
+    expect([prices.minX, prices.maxX, prices.minY, prices.maxY]).toEqual([10, 20, 16, 17.5]);
+    const counts = prepareChartData("bar", [{ label: "Counts", points: [{ x: "A", y: 4 }, { x: "B", y: 9 }] }]);
+    expect([counts.minY, counts.maxY]).toEqual([0, 9]);
+    const dodged = prepareChartData("bar", [
+      { label: "First", points: [{ x: 1, y: 2 }] },
+      { label: "Second", points: [{ x: 1, y: 3 }] },
+    ]);
+    const geometry = chartGeometry(dodged);
+    const first = geometry.bar(dodged.series[0]!.points[0]!, 0);
+    const second = geometry.bar(dodged.series[1]!.points[0]!, 1);
+    expect(first.x + first.width).toBeLessThanOrEqual(second.x + 1e-9);
     expect(numericSpacing(prepareChartData("bar", [{ label: "Bins", points: [{ x: 0, y: 1 }, { x: 2, y: 3 }, { x: 3, y: 1 }] }]))).toBe(1);
   });
 });

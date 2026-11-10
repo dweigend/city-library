@@ -114,7 +114,7 @@ Each view has a discriminant `type`, a required `label` and one data projection.
 
 Experimental nodes add optional initial `position: { x, y }`; later dragging and layout remain presentation-owned. Experimental edges add `directed`, `color` and positive finite CSS-pixel `width`. Do not infer graph weights or mutate graph state from renderer positions.
 
-Node labels keep a constant screen size. Where a label would overlap another label or node, the host hides it, keeping the selected node and then larger nodes labelled; zooming in, selecting a node or the node chooser reveals the rest. Graphs with more than 80 nodes show no labels.
+Node labels keep a constant screen size. Where a label would overlap another label or node, the host hides it, keeping the selected node and then larger nodes labelled. Zooming in reveals more labels; a selected node always shows its own label, and the node chooser lists every label. Graphs with more than 80 nodes show no labels.
 
 ### Grid
 
@@ -152,7 +152,7 @@ Line and scatter views project numeric `Series[]`: each series has `label`, opti
 
 Categorical bars use first-seen category order and place series side by side. A repeated category within one series fails; missing categories leave empty slots rather than invented zero measurements. Signed finite values use a zero baseline, zero values remain in accessible text, and empty data invents no categories. Existing numeric bar positions retain their compatibility semantics.
 
-Optional `xAxis` and `yAxis` contain `label?` and `unit?`. Together they display as `label (unit)`; a unit alone displays as the unit. Names, units and categories are included in accessible chart text. Units are labels, not numerical conversions. Omitted colors use the shared eight-color palette; more than eight series repeat colors, so fold the rest into one explicitly colored series. Axes start at zero and show rounded ticks with gridlines; numeric bars are centered on their x values with a width set by the closest x spacing. Long category labels wrap onto two lines and are thinned when they still collide.
+Optional `xAxis` and `yAxis` contain `label?` and `unit?`. Together they display as `label (unit)`; a unit alone displays as the unit. Names, units and categories are included in accessible chart text. Units are labels, not numerical conversions. Omitted colors use the shared eight-color palette; more than eight series repeat colors, so fold the rest into one explicitly colored series. Bar axes include zero; line and scatter axes follow the data. Axes show rounded ticks with gridlines, and count data never shows fractional ticks. Numeric bars are centered on their x values with a width set by the closest x spacing; bars of several series at one x sit side by side. Long category labels wrap onto two lines when that makes all of them fit, otherwise only every n-th label is shown.
 
 ### Table
 

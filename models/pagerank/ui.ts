@@ -19,12 +19,12 @@ export const ui = defineUI(model, {
     {
       label: "Total rank",
       value: (s) => s.totalRank,
-      format: (value: number) => value.toFixed(6),
+      format: (value: number) => value.toFixed(3),
     },
     {
       label: "Maximum rank",
       value: (s) => s.maxRank,
-      format: (value: number) => value.toFixed(6),
+      format: (value: number) => value.toFixed(3),
     },
     { label: "Surfers", value: (s) => s.surfers.length },
   ],

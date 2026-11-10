@@ -15,8 +15,7 @@ export const ui = defineUI(model, {
     url: "https://ccl.northwestern.edu/netlogo/models/RandomCombinationsandPermutations",
     label: "Wilensky (2004) · CC BY-NC-SA 3.0",
   },
-  // Searching needs a finished combination, as in the source's Create Combi → Go order.
-  complete: (s) => s.done || !s.exists || s.creating,
+  complete: (s) => s.done,
   change: (instance, changes) => instance.setRules(changes),
   live: {
     singleSuccess: {},

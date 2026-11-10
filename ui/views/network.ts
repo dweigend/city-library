@@ -127,7 +127,8 @@ export function mountNetwork(
     const ordered = labelled.sort((a, b) =>
       Number(b.hasClass("selected")) - Number(a.hasClass("selected")) || b.data("size") - a.data("size"));
     type Box = { x1: number; x2: number; y1: number; y2: number };
-    const margin = 2 / zoom;
+    // Screen-pixel gap so neighbouring labels never read as one string.
+    const margin = 6 / zoom;
     const intersects = (box: Box, other: Box) =>
       box.x1 - margin < other.x2 && box.x2 + margin > other.x1 && box.y1 - margin < other.y2 && box.y2 + margin > other.y1;
     // Node symbols are obstacles too, so a label never covers another node.

@@ -38,13 +38,13 @@ export const ui = { ...binding, model };
 
 /**
  * The pattern grows outward from the centre over hundreds of ticks. The view frames the
- * grown pattern (at least a quarter of the world) and scales particles with that zoom,
+ * grown pattern (at least an eighth of the world) and scales particles with that zoom,
  * so early spirals are as legible as the finished head.
  */
 function sunflowerData(state: Observation<typeof model>): SpatialData {
   const particles = [...state.temporaryParticles, ...state.particles];
   const radius = Math.max(0, ...particles.map((particle) => Math.hypot(particle.x, particle.y)));
-  const extent = Math.min(state.width, Math.max(state.width / 4, (radius + framePadding) * 2));
+  const extent = Math.min(state.width, Math.max(state.width / 8, (radius + framePadding) * 2));
   const zoom = state.width / extent;
   return {
     width: extent,
