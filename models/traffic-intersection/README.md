@@ -1,12 +1,17 @@
 # Traffic Intersection
 
-Two crossing flows obey signal schedules and bounded acceleration/braking rules; modeled collisions remove vehicles. Waiting and crash counters describe this one intersection rather than a complete safety assessment.
+Can a traffic light reduce waiting without causing crashes? Cars arrive from the north and from the east with frequencies `freqNorth` and `freqEast`. They accelerate and brake within limits and stop for red lights, with green and yellow phases of chosen length. Cars that collide are removed and counted.
+
+Things to try:
+
+- Change `greenLength` and compare the waiting counts.
+- Set `yellowLength` to 0. Do crashes appear?
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Traffic Intersection`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Choose **Traffic Intersection** in [Agent Lab](../../ui/agent-lab/README.md).
 
-Headless, from a script in the repository root:
+From a script in the repository root:
 
 ```ts
 import { create } from "./models/traffic-intersection/model.ts";
@@ -18,7 +23,7 @@ const observation = simulation.read();
 
 ## Parameters
 
-`create(options)` accepts these input keys. The [UI binding](ui.ts) distinguishes setup controls from live changes; [model.ts](model.ts) defines additional validation.
+`create(options)` accepts these inputs. [ui.ts](ui.ts) decides which are setup controls and which can change during a run; [model.ts](model.ts) adds further validation.
 
 | Input | Default | Declared values |
 | --- | --- | --- |
@@ -34,16 +39,16 @@ const observation = simulation.read();
 
 ## Actions and observations
 
-Use `advance(...)` for progress and `read()` for observations; the model defines how work advances its tick.
+Call `advance()` with an optional step count to run the model; the model defines how a step advances its tick. Call `read()` for a detached snapshot.
 
-Other instance procedures: `step`, `snapshot`, `setParameters`, `changeToYellow`, `changeToRed`, `elapsed`, `brakingDistanceAt`, `nextBlockedField`, `isBlocked`, `adjustSpeed`, `move`, `checkForCollisions`, `makeNewCar`. See their typed arguments in [model.ts](model.ts).
+Other actions: `step`, `snapshot`, `setParameters`, `changeToYellow`, `changeToRed`, `elapsed`, `brakingDistanceAt`, `nextBlockedField`, `isBlocked`, `adjustSpeed`, `move`, `checkForCollisions`, `makeNewCar`. Their typed arguments are in [model.ts](model.ts).
 
 Model-specific `read()` fields include `ticksAtLastChange`, `cells`, `cars`, `lights`, `accidents`.
 
-The [UI binding](ui.ts) presents `Switch`, `Tick`, `Waiting overall`, `Accidents`, `Intersection`, `Waiting cars`, `Car`, `Overall`, `Northbound`, `Eastbound`.
+## Sources and limits
 
-## Sources and acceptance
+Adapted from the NetLogo *Traffic Intersection* model by Wilensky (1998). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](original.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](original.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+Wait and crash counts describe this single intersection, not a safety assessment. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 
-[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `traffic-intersection` and links any shared checks.
+[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) records the acceptance stages for `traffic-intersection`.

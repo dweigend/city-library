@@ -1,12 +1,17 @@
 # CA Continuous
 
-Each new row averages three parent values, adds a constant and retains the fractional part at the chosen precision. Finite precision matters: a visually irregular image is not evidence of random forcing or physical diffusion.
+What happens when a cellular rule works with real numbers instead of bits? Each cell holds a value. The next row takes the average of a cell and its two neighbors, adds `addConstant` and keeps only the fractional part, at the chosen `precisionLevel`.
+
+Things to try:
+
+- Change `addConstant` slightly and compare the images.
+- Lower `precisionLevel`. Does the pattern become regular?
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `CA Continuous`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Choose **CA Continuous** in [Agent Lab](../../ui/agent-lab/README.md).
 
-Headless, from a script in the repository root:
+From a script in the repository root:
 
 ```ts
 import { create } from "./models/ca-continuous/model.ts";
@@ -20,7 +25,7 @@ Each progress step writes one generation as a display row. When the display fill
 
 ## Parameters
 
-`create(options)` accepts these input keys. The [UI binding](ui.ts) distinguishes setup controls from live changes; [model.ts](model.ts) defines additional validation.
+`create(options)` accepts these inputs. [ui.ts](ui.ts) decides which are setup controls and which can change during a run; [model.ts](model.ts) adds further validation.
 
 | Input | Default | Declared values |
 | --- | --- | --- |
@@ -35,16 +40,16 @@ Each progress step writes one generation as a display row. When the display fill
 
 ## Actions and observations
 
-Use `advance(...)` for progress and `read()` for observations; the model defines how work advances its tick.
+Call `advance()` with an optional step count to run the model; the model defines how a step advances its tick. Call `read()` for a detached snapshot.
 
-Other instance procedures: `setupSingle`, `setupRandom`, `continueRun`, `setRules`. See their typed arguments in [model.ts](model.ts).
+Other actions: `setupSingle`, `setupRandom`, `continueRun`, `setRules`. Their typed arguments are in [model.ts](model.ts).
 
 Model-specific `read()` fields include `row`, `cells`.
 
-The [UI binding](ui.ts) presents `Setup single`, `Setup random`, `Continue`, `Tick`, `Row`, `Rows`.
+## Sources and limits
 
-## Sources and acceptance
+Adapted from the NetLogo *CA Continuous* model by Wilensky (2003). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+Finite precision matters. An irregular-looking image is not evidence of randomness or physical diffusion. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 
-[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `ca-continuous` and links any shared checks.
+[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) records the acceptance stages for `ca-continuous`.

@@ -1,12 +1,17 @@
 # Taxi Cabs
 
-Taxi agents serve zonal demand using distinct pickup, delivery and roaming branches with explicit trip accounting. Demand periods select different trip probabilities; the dispatch rules are not a calibrated city fleet study.
+How do taxis find passengers in a city whose demand changes over the day? The street grid is divided into a central business district, commercial and residential areas. Passengers appear with origin–destination probabilities that depend on the time of day, from the morning peak to early morning, and wait for a cab. Cabs cruise, pick up passengers, drive them to their destination under traffic lights and collect trip income set by the fare inputs (`firstPassengerCost`, `eachGridCost` and others).
+
+Things to try:
+
+- Change `taxicabCount` and compare passenger waiting with total income.
+- Raise the probabilities for trips into the business district in the morning peak and watch where cabs end up.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Taxi Cabs`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Choose **Taxi Cabs** in [Agent Lab](../../ui/agent-lab/README.md).
 
-Headless, from a script in the repository root:
+From a script in the repository root:
 
 ```ts
 import { create } from "./models/taxi-cabs/model.ts";
@@ -20,7 +25,7 @@ Each `advance(1)` (also `step(1)`) updates signals, demand and passenger waiting
 
 ## Parameters
 
-`create(options)` accepts these input keys. The [UI binding](ui.ts) distinguishes setup controls from live changes; [model.ts](model.ts) defines additional validation.
+`create(options)` accepts these inputs. [ui.ts](ui.ts) decides which are setup controls and which can change during a run; [model.ts](model.ts) adds further validation.
 
 | Input | Default | Declared values |
 | --- | --- | --- |
@@ -82,16 +87,16 @@ Each `advance(1)` (also `step(1)`) updates signals, demand and passenger waiting
 
 ## Actions and observations
 
-Use `advance(...)` for progress and `read()` for observations; the model defines how work advances its tick.
+Call `advance()` with an optional step count to run the model; the model defines how a step advances its tick. Call `read()` for a detached snapshot.
 
-Other instance procedures: `step`, `snapshot`, `setParameters`, `cabs`, `passengers`, `startTrafficLight`, `changeTrafficLightColors`, `reportCurrentPhase`, `generateDemand`, `taxiDemandAtField`, `passengersWaitForRide`, `updateDeliveryAndIncome`, `stopForRedElseGo`, `moveUp`, `moveDown`, `moveRight`, `moveLeft`, `moveStraight`, `makeUTurn`, `updateDestinationCoordinates`, `highlightDestinationFields`, `deliveryRelation`, `changeDirectionForDelivery`, `pickupPassengers`, `taxicabMoveRandom`, `resetCabAfterTrip`, `dropoffPassenger`, `taxicabMoveDeliver`, `go`. See their typed arguments in [model.ts](model.ts).
+Other actions: `step`, `snapshot`, `setParameters`, `cabs`, `passengers`, `startTrafficLight`, `changeTrafficLightColors`, `reportCurrentPhase`, `generateDemand`, `taxiDemandAtField`, `passengersWaitForRide`, `updateDeliveryAndIncome`, `stopForRedElseGo`, `moveUp`, `moveDown`, `moveRight`, `moveLeft`, `moveStraight`, `makeUTurn`, `updateDestinationCoordinates`, `highlightDestinationFields`, `deliveryRelation`, `changeDirectionForDelivery`, `pickupPassengers`, `taxicabMoveRandom`, `resetCabAfterTrip`, `dropoffPassenger`, `taxicabMoveDeliver`, `go`. Their typed arguments are in [model.ts](model.ts).
 
-Model-specific `read()` fields include `occupiedCabs`, `totalIncome`, `currentPhase`, `currentPhaseAbbreviation`, `phaseCounter`, `rowGreen`, `columnGreen`, `cells`, `cabs`, `passengers`, `tripDistances`, `tripIncomes`, `tripDurations`.
+Model-specific `read()` fields include `occupiedCabCount`, `totalIncome`, `currentPhase`, `currentPhaseAbbreviation`, `phaseCounter`, `rowGreen`, `columnGreen`, `cells`, `cabs`, `passengers`, `tripDistances`, `tripIncomes`, `tripDurations`.
 
-The [UI binding](ui.ts) presents `cbd · cbd · AM`, `res · com · AM`, `res · cbd · AM`, `res · res · AM`, `com · res · AM`, `com · cbd · AM`, `com · com · AM`, `cbd · res · AM`, `cbd · com · AM`, `cbd · cbd · MD` and further views or controls.
+## Sources and limits
 
-## Sources and acceptance
+Adapted from the NetLogo *Taxi Cabs* model by Dongping and Wilensky (2019). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](original.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](original.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+Demand probabilities, fares and costs are inputs of the teaching model, not calibrated values for a real city. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 
-[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `taxi-cabs` and links any shared checks.
+[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) records the acceptance stages for `taxi-cabs`.

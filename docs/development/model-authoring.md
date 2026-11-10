@@ -1,6 +1,6 @@
 # Write a model
 
-Start with a small rule you can run and inspect. A model pairs a headless model with a UI declaration that reads observations and calls public actions. This guide follows a growing-network model, then shows how to add your own.
+Start with a small rule you can run and inspect. A model pairs a headless model with a UI declaration that reads observations and calls public actions. This guide follows a growing-network model, then shows how to add your own. If you have not built a model yet, start with [Your first model](../first-model.md).
 
 ## Follow a growing network
 
@@ -12,7 +12,7 @@ Run its public-API assertions from the repository root:
 bun tests/public-contracts/lab/01-headless-network-entry.ts
 ```
 
-The example runs without a browser. This excerpt uses paths relative to `tests/public-contracts/lab/`:
+The example runs without a browser. This shortened version of its first assertions runs from the same folder, `tests/public-contracts/lab/`:
 
 ```ts
 import assert from "node:assert/strict";

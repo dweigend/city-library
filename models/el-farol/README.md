@@ -1,12 +1,17 @@
 # El Farol
 
-Each person scores prediction strategies against attendance history and uses a selected forecast to decide whether to attend. A capacity threshold and adaptive forecasts create coordination pressure without proving convergence to one optimal attendance pattern.
+Can people coordinate without talking to each other? Everyone wants to go to a bar, but only if it is not crowded. Each person holds `strategyCount` simple predictors of attendance based on the last `memorySize` weeks, uses the one that has been most accurate and goes if it predicts fewer than `overcrowdingThreshold` guests.
+
+Things to try:
+
+- Change `memorySize` and compare how strongly attendance swings around the threshold.
+- Give each person only one strategy. What changes?
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `El Farol`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Choose **El Farol** in [Agent Lab](../../ui/agent-lab/README.md).
 
-Headless, from a script in the repository root:
+From a script in the repository root:
 
 ```ts
 import { create } from "./models/el-farol/model.ts";
@@ -18,7 +23,7 @@ const observation = simulation.read();
 
 ## Parameters
 
-`create(options)` accepts these input keys. The [UI binding](ui.ts) distinguishes setup controls from live changes; [model.ts](model.ts) defines additional validation.
+`create(options)` accepts these inputs. [ui.ts](ui.ts) decides which are setup controls and which can change during a run; [model.ts](model.ts) adds further validation.
 
 | Input | Default | Declared values |
 | --- | --- | --- |
@@ -29,16 +34,16 @@ const observation = simulation.read();
 
 ## Actions and observations
 
-Use `advance(...)` for progress and `read()` for observations; the model defines how work advances its tick.
+Call `advance()` with an optional step count to run the model; the model defines how a step advances its tick. Call `read()` for a detached snapshot.
 
-Other instance procedures: `setup`, `randomStrategy`, `updateStrategies`, `moveToEmptyOneOf`, `setRules`. See their typed arguments in [model.ts](model.ts).
+Other actions: `setup`, `randomStrategy`, `updateStrategies`, `moveToEmptyOneOf`, `setRules`. Their typed arguments are in [model.ts](model.ts).
 
 Model-specific `read()` fields include `attendance`, `crowded`, `plotHistory`, `people`, `cells`.
 
-The [UI binding](ui.ts) presents `Number of strategies`, `Week`, `Attendance`, `Crowded`, `Homes and bar`, `Bar attendance`, `Patron`, `Threshold`.
+## Sources and limits
 
-## Sources and acceptance
+Adapted from the NetLogo *El Farol* model by Rand and Wilensky (2007). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+Attendance near the threshold in a run does not prove convergence to an optimal pattern. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 
-The [catalog ledger](../catalog/progress.json) owns acceptance stages for `el-farol` and links the retained checks.
+The [catalog ledger](../catalog/progress.json) records the acceptance stages for `el-farol`.

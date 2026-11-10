@@ -1,12 +1,17 @@
 # CRISPR Ecosystem
 
-Bacteria consume food, reproduce and carry spacer arrays; viruses infect, replicate and may change. Innate protection, spacer loss and adaptive memory are selected ecological assumptions, not fitted marine-community rates.
+How does adaptive immunity in bacteria change their competition with viruses? Bacteria eat, reproduce and carry CRISPR arrays of remembered virus types. Viruses infect bacteria with `infectionChance`, replicate and can change type. A bacterium whose array matches a virus can defend itself; spacers can be lost with `spacerLossChance`. Switch `crispr` off to compare with bacteria that have only innate protection.
+
+Things to try:
+
+- Compare `crispr` on and off with the same seed. How do the bacteria counts differ?
+- Raise `maxVirusTypeCount`. Does adaptive memory still help?
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `CRISPR Ecosystem`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Choose **CRISPR Ecosystem** in [Agent Lab](../../ui/agent-lab/README.md).
 
-Headless, from a script in the repository root:
+From a script in the repository root:
 
 ```ts
 import { create } from "./models/crispr-ecosystem/model.ts";
@@ -18,7 +23,7 @@ const observation = simulation.read();
 
 ## Parameters
 
-`create(options)` accepts these input keys. The [UI binding](ui.ts) distinguishes setup controls from live changes; [model.ts](model.ts) defines additional validation.
+`create(options)` accepts these inputs. [ui.ts](ui.ts) decides which are setup controls and which can change during a run; [model.ts](model.ts) adds further validation.
 
 | Input | Default | Declared values |
 | --- | --- | --- |
@@ -33,16 +38,16 @@ const observation = simulation.read();
 
 ## Actions and observations
 
-Use `advance(...)` for progress and `read()` for observations; the model defines how work advances its tick.
+Call `advance()` with an optional step count to run the model; the model defines how a step advances its tick. Call `read()` for a detached snapshot.
 
-Other instance procedures: `setup`, `setupWorld`, `setupVirusPlot`, `updateVirusPlot`, `plotNewVirus`, `focalVirusPercent`, `focalArrayPercent`, `averageArrayLength`, `stdDevArrayLength`, `randomPosition`, `moveBacteria`, `bacteriaEatFood`, `reproduceBacteria`, `spacerLoss`, `bacteriaLive`, `moveVirus`, `infect`, `replicate`, `maybeDegrade`, `virusesLive`, `replenishFood`, `growFood`, `go`, `setParameters`. See their typed arguments in [model.ts](model.ts).
+Other actions: `setup`, `setupWorld`, `setupVirusPlot`, `updateVirusPlot`, `plotNewVirus`, `focalVirusPercent`, `focalArrayPercent`, `averageArrayLength`, `stdDevArrayLength`, `randomPosition`, `moveBacteria`, `bacteriaEatFood`, `reproduceBacteria`, `spacerLoss`, `bacteriaLive`, `moveVirus`, `infect`, `replicate`, `maybeDegrade`, `virusesLive`, `replenishFood`, `growFood`, `go`, `setParameters`. Their typed arguments are in [model.ts](model.ts).
 
 Model-specific `read()` fields include `plotVirus`, `focalVirusPercent`, `focalArrayPercent`, `averageArrayLength`, `stdDevArrayLength`, `virusSequences`, `arraySequences`, `arrayLengths`, `bacteriaCount`, `virusCount`, `coevolutionHistory`, `cells`, `agents`.
 
-The [UI binding](ui.ts) presents `Plot new virus`, `Mean array length`, `Array standard deviation`, `Focal virus %`, `Focal array %`, `Tick`, `Bacteria`, `Viruses`, `CRISPR Ecosystem`, `CRISPR-virus coevolution` and further views or controls.
+## Sources and limits
 
-## Sources and acceptance
+Adapted from the NetLogo *CRISPR Ecosystem* model by Woods and Wilensky (2019). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+Encounter rules and rates are chosen assumptions, not fitted to a real microbial community. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 
-[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `crispr-ecosystem` and links any shared checks.
+[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) records the acceptance stages for `crispr-ecosystem`.

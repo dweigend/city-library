@@ -1,12 +1,17 @@
 # GenEvo 1 Genetic Switch
 
-Repressors, RNA polymerase, lactose and expressed proteins move and interact around the lac operon. Binding, transport, energy and division rules expose a constructed gene switch, without calibrated reaction kinetics.
+How can a cell switch a gene on only when it needs it? This model follows the lac operon in an E. coli-like cell. A repressor (LacI) blocks the gene; lactose can bind the repressor and free the gene, so RNA polymerase can produce LacZ and LacY. Glucose availability, energy and cell division are part of the picture, and you can switch `lactose` and `glucose` on or off.
+
+Things to try:
+
+- Switch `lactose` on and `glucose` off. How do the LacZ and LacY counts change?
+- Raise `lacIBondLeakage`. Does the gene still stay off without lactose?
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `GenEvo 1 Genetic Switch`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Choose **GenEvo 1 Genetic Switch** in [Agent Lab](../../ui/agent-lab/README.md).
 
-Headless, from a script in the repository root:
+From a script in the repository root:
 
 ```ts
 import { create } from "./models/genevo-1-genetic-switch/model.ts";
@@ -18,7 +23,7 @@ const observation = simulation.read();
 
 ## Parameters
 
-`create(options)` accepts these input keys. The [UI binding](ui.ts) distinguishes setup controls from live changes; [model.ts](model.ts) defines additional validation.
+`create(options)` accepts these inputs. [ui.ts](ui.ts) decides which are setup controls and which can change during a run; [model.ts](model.ts) adds further validation.
 
 | Input | Default | Declared values |
 | --- | --- | --- |
@@ -36,16 +41,16 @@ const observation = simulation.read();
 
 ## Actions and observations
 
-Use `advance(...)` for progress and `read()` for observations; the model defines how work advances its tick.
+Call `advance()` with an optional step count to run the model; the model defines how a step advances its tick. Call `read()` for a detached snapshot.
 
-Other instance procedures: `setup`, `reset`, `drawCell`, `setCellColor`, `showSwitchColor`, `updateLactose`, `move`, `genXYInsideInside`, `genXYInsideOutside`, `dissociateFromOperator`, `goLacIs`, `goLacYs`, `goLacZs`, `goLactoses`, `goRNAPs`, `synthesizeProteins`, `divideCell`, `go`, `setParameters`, `setInitialVariables`, `sendVariablesList`. See their typed arguments in [model.ts](model.ts).
+Other actions: `setup`, `reset`, `drawCell`, `setCellColor`, `showSwitchColor`, `updateLactose`, `move`, `genXYInsideInside`, `genXYInsideOutside`, `dissociateFromOperator`, `goLacIs`, `goLacYs`, `goLacZs`, `goLactoses`, `goRNAPs`, `synthesizeProteins`, `divideCell`, `go`, `setParameters`, `setInitialVariables`, `sendVariablesList`. Their typed arguments are in [model.ts](model.ts).
 
-Model-specific `read()` fields include `message`, `energy`, `initialEnergy`, `divisionNumber`, `cellDivisionTime`, `inhibited`, `lacZCount`, `lacYCount`, `lacICount`, `rnapCount`, `lactoseCount`, `pumpCount`, `cells`, `agents`.
+Model-specific `read()` fields include `message`, `energy`, `initialEnergy`, `divisionCount`, `cellDivisionTime`, `inhibited`, `lacZCount`, `lacYCount`, `lacICount`, `rnapCount`, `lactoseCount`, `pumpCount`, `cells`, `agents`.
 
-The [UI binding](ui.ts) presents `Reset parameters`, `Tick`, `Energy`, `LacZ`, `LacY`, `Message`, `Divisions`, `GenEvo 1 Genetic Switch`, `History`.
+## Sources and limits
 
-## Sources and acceptance
+Adapted from the NetLogo *GenEvo 1 Genetic Switch* model by Dabholkar, Bain and Wilensky (2016). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+Binding chances and counts are constructed rules, not calibrated reaction kinetics. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 
-[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `genevo-1-genetic-switch` and links any shared checks.
+[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) records the acceptance stages for `genevo-1-genetic-switch`.

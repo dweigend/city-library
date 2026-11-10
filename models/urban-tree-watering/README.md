@@ -1,25 +1,40 @@
 # Urban Tree Watering
 
-Illustrative stable moisture-priority watering under a daily allowance; no irrigation recommendation.
+How should a fixed amount of water be shared among street trees? Each step is one day. Trees start with random soil moisture. The day's allowance of `dailyLiters` goes to the driest trees first, each filled up to 12 liters until the water runs out; ties keep a stable order. Afterwards every tree loses 2 liters.
 
-Run `bun run dev` and choose **Urban Tree Watering**. Setup creates the model; step or Run/Pause advances it. These synthetic scenarios are not calibrated city forecasts.
+Things to try:
 
-Headless, from a repository script:
+- Lower `dailyLiters` with `setDailyLiters`. Which trees go without water?
+- Find the allowance that keeps `meanMoisture` steady for the default ten trees.
+
+## Use
+
+Choose **Urban Tree Watering** in [Agent Lab](../../ui/agent-lab/README.md).
+
+From a script in the repository root:
 
 ```ts
 import { create } from "./models/urban-tree-watering/model.ts";
 
-const simulation = create();
-simulation.advance(1);
-const observation = simulation.read();
+const trees = create({ treeCount: 10, dailyLiters: 20, seed: 1 });
+trees.advance(7);
+const { meanMoisture, totalWaterLiters } = trees.read();
 ```
 
-## Inputs
+## Parameters
 
-| Input | Default |
-| --- | --- |
-| `treeCount` | `10` |
-| `dailyLiters` | `20` |
-| `seed` | `1` |
+`create(options)` accepts these inputs; [model.ts](model.ts) validates them.
 
-[model.ts](model.ts) owns validation, actions and detached observations; [ui.ts](ui.ts) binds those public operations. The [scenario contract](../../docs/execution-studies/models.md) defines assumptions, units and expected behavior. [Lab usage](../../ui/agent-lab/README.md) covers controls and model switching.
+| Input | Default | Declared values | Meaning |
+| --- | --- | --- | --- |
+| `treeCount` | `10` | integer; ≥ 2; ≤ 40 | Number of trees |
+| `dailyLiters` | `20` | integer; ≥ 0; ≤ 100 | Water allowance per day |
+| `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 | Draws the initial moisture |
+
+## Actions and observations
+
+`advance()` runs days; `setDailyLiters(liters)` changes the allowance. `read()` reports `meanMoisture`, the water given today and in total, each tree's moisture and a bounded `history`.
+
+## Sources and limits
+
+An original City Library teaching model with invented numbers. The [scenario description](../../docs/execution-studies/models.md) lists its assumptions, units and asserted behavior; the mechanism checks are in [spatial-models.test.ts](../../tests/spatial-models.test.ts) and [resource-projection.test.ts](../../tests/resource-projection.test.ts). Passing them shows that the mechanism works as described, not that the model is an irrigation recommendation.

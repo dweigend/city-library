@@ -1,12 +1,17 @@
 # Paths
 
-Travelers pursue destinations while reinforcing the popularity of fields they cross and favoring established routes. Popularity and thresholds are path-formation assumptions rather than construction costs or a global network optimum.
+How do footpaths form across a lawn? Walkers head toward random destinations. Every step they take makes the ground a little more popular (`popularityPerStep`), and popularity fades over time (`popularityDecayRate`). Walkers prefer nearby popular ground within `walkerVisionDist`, and ground that passes `minimumRoutePopularity` becomes a path.
+
+Things to try:
+
+- Raise `popularityDecayRate`. Do fewer paths survive?
+- Place buildings with `toggleBuilding` and watch how the paths route around them.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Paths`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Choose **Paths** in [Agent Lab](../../ui/agent-lab/README.md).
 
-Headless, from a script in the repository root:
+From a script in the repository root:
 
 ```ts
 import { create } from "./models/paths/model.ts";
@@ -18,7 +23,7 @@ const observation = simulation.read();
 
 ## Parameters
 
-`create(options)` accepts these input keys. The [UI binding](ui.ts) distinguishes setup controls from live changes; [model.ts](model.ts) defines additional validation.
+`create(options)` accepts these inputs. [ui.ts](ui.ts) decides which are setup controls and which can change during a run; [model.ts](model.ts) adds further validation.
 
 | Input | Default | Declared values |
 | --- | --- | --- |
@@ -32,16 +37,16 @@ const observation = simulation.read();
 
 ## Actions and observations
 
-Use `advance(...)` for progress and `read()` for observations; the model defines how work advances its tick.
+Call `advance()` with an optional step count to run the model; the model defines how a step advances its tick. Call `read()` for a detached snapshot.
 
-Other instance procedures: `step`, `snapshot`, `setParameters`, `toggleBuilding`, `bestWayTo`, `becomeMorePopular`, `walkTowardsGoal`, `moveWalkers`, `decayPopularity`. See their typed arguments in [model.ts](model.ts).
+Other actions: `step`, `snapshot`, `setParameters`, `toggleBuilding`, `bestWayTo`, `becomeMorePopular`, `walkTowardsGoal`, `moveWalkers`, `decayPopularity`. Their typed arguments are in [model.ts](model.ts).
 
 Model-specific `read()` fields include `cells`, `walkers`, `buildings`.
 
-The [UI binding](ui.ts) presents `Tick`, `Walkers`, `Buildings`, `Paths`, `ModelField`.
+## Sources and limits
 
-## Sources and acceptance
+Adapted from the NetLogo *Paths* model by Grider and Wilensky (2015). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](original.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](original.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+Popularity and thresholds are path-formation assumptions, not construction costs or an optimal network. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 
-[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `paths` and links any shared checks.
+[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) records the acceptance stages for `paths`.

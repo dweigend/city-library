@@ -4,11 +4,11 @@ Agent Loom defines City Library's modeling core: agents, worlds, spatial operati
 
 Describe individuals, their space and their interactions without choosing a renderer. Use the parts separately: a graph does not need a World, and an agent model does not need a grid.
 
-The specification defines the required core API. Implemented subsets cover agents, randomness, spatial operations, grids, graphs, geometry and statistics. Use the [work plan](../../PLAN.md), public exports and runnable examples to check availability. The package is not published.
+This specification is the target: it defines the required core API, including much that is not built yet. Implemented subsets cover agents, randomness, spatial operations, grids, graphs, geometry, statistics and parts of events, studies and storage. [What works today](../development/coverage.md) lists them; public exports and runnable examples decide availability. The package is not published.
 
 ## Read the API
 
-- [API inventory](api-table.md): all 309 operation/type entries in 16 areas, with exact signatures and compact contracts.
+- [API inventory](api-table.md): all 309 declared operation/type entries in 16 areas, with exact signatures and compact contracts. Its heading count does not yet match that number; [coverage](../development/coverage.md#source-reconciliation-and-remaining-scope) keeps the reconciliation open.
 - [API reference](api-reference.md): detailed behavior, defaults, validation, errors and examples.
 - [Architecture](../ARCHITECTURE.md): state ownership, dependencies, domain layout and extension rules.
 - [Work plan](../../PLAN.md): next goals and acceptance criteria.
@@ -31,7 +31,7 @@ The specification defines the required core API. Implemented subsets cover agent
 | limits | Resource ceilings for named operations and adapters |
 | Exports and shared types | Public entry contracts and structural TypeScript types |
 
-These groups cover all 16 inventory areas; Field, Node and Edge have individual inventory sections. Advanced algorithms, compatibility profiles, codecs and continuation are included in the required core scope. Hexagonal grids are a future extension.
+These groups cover all 16 inventory areas; Field, Node and Edge have individual inventory sections. Advanced algorithms, compatibility profiles, codecs and continuation are included in the required core scope. The regular Grid contract stays square/cubic. Finite hexagonal and authored planar layouts are available separately through the additive [layout API](../grid-parcels/STATUS.md); wrapping, volume and irregular-diffusion layouts remain future extensions.
 
 ## Reading conventions
 

@@ -1,12 +1,17 @@
 # Traffic 2 Lanes
 
-Cars accelerate, brake behind other cars and change lanes after patience is exhausted when the switching rule allows. The wrapping two-lane road omits merges and measured driver heterogeneity.
+Do lane changes help or hurt traffic flow? Cars drive on a two-lane ring road. They speed up when there is room and brake behind slower cars. A car that is held up loses patience and changes lanes once its patience (`maxPatience`) runs out and the other lane is free.
+
+Things to try:
+
+- Change `maxPatience` and compare the average speed.
+- Raise `carCount` until jams form. Does lane changing still help?
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Traffic 2 Lanes`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Choose **Traffic 2 Lanes** in [Agent Lab](../../ui/agent-lab/README.md).
 
-Headless, from a script in the repository root:
+From a script in the repository root:
 
 ```ts
 import { create } from "./models/traffic-2-lanes/model.ts";
@@ -18,7 +23,7 @@ const observation = simulation.read();
 
 ## Parameters
 
-`create(options)` accepts these input keys. The [UI binding](ui.ts) distinguishes setup controls from live changes; [model.ts](model.ts) defines additional validation.
+`create(options)` accepts these inputs. [ui.ts](ui.ts) decides which are setup controls and which can change during a run; [model.ts](model.ts) adds further validation.
 
 | Input | Default | Declared values |
 | --- | --- | --- |
@@ -30,16 +35,16 @@ const observation = simulation.read();
 
 ## Actions and observations
 
-Use `advance(...)` for progress and `read()` for observations; the model defines how work advances its tick.
+Call `advance()` with an optional step count to run the model; the model defines how a step advances its tick. Call `read()` for a detached snapshot.
 
-Other instance procedures: `step`, `snapshot`, `setParameters`, `selectCar`, `selectCarAt`, `setPerspective`, `createOrRemoveCars`, `speedUpCar`, `slowDownCar`, `moveForward`, `chooseNewLane`, `moveToTargetLane`. See their typed arguments in [model.ts](model.ts).
+Other actions: `step`, `snapshot`, `setParameters`, `selectCar`, `selectCarAt`, `setPerspective`, `createOrRemoveCars`, `speedUpCar`, `slowDownCar`, `moveForward`, `chooseNewLane`, `moveToTargetLane`. Their typed arguments are in [model.ts](model.ts).
 
 Model-specific `read()` fields include `selectedCarId`, `perspective`, `cells`, `cars`.
 
-The [UI binding](ui.ts) presents `Watch selected car`, `Follow selected car`, `Reset perspective`, `Tick`, `Selected speed`, `Two lanes`, `Car speeds`, `Driver patience`, `Cars per lane`, `Car` and further views or controls.
+## Sources and limits
 
-## Sources and acceptance
+Adapted from the NetLogo *Traffic 2 Lanes* model by Wilensky and Payette (1998). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](original.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](original.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+The ring road has no merges or exits, and all drivers follow the same rules. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 
-[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `traffic-2-lanes` and links any shared checks.
+[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) records the acceptance stages for `traffic-2-lanes`.

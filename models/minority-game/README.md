@@ -1,12 +1,17 @@
 # Minority Game
 
-Agents select between two choices using remembered strategies and score the minority outcome. Strategy memory, crowd composition and payoff rules determine performance; winning does not establish a universally optimal trading strategy.
+Can agents learn to avoid the crowd? In each round, every player chooses one of two sides, and those on the smaller side win. Each player has `strategiesPerAgent` strategies that map the last `memory` outcomes to a choice. Players use their best-scoring strategy and keep scoring all their strategies on what would have happened.
+
+Things to try:
+
+- Change `memory` and compare how much the attendance on each side fluctuates.
+- Give each player only one strategy. What changes?
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Minority Game`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Choose **Minority Game** in [Agent Lab](../../ui/agent-lab/README.md).
 
-Headless, from a script in the repository root:
+From a script in the repository root:
 
 ```ts
 import { create } from "./models/minority-game/model.ts";
@@ -18,7 +23,7 @@ const observation = simulation.read();
 
 ## Parameters
 
-`create(options)` accepts these input keys. The [UI binding](ui.ts) distinguishes setup controls from live changes; [model.ts](model.ts) defines additional validation.
+`create(options)` accepts these inputs. [ui.ts](ui.ts) decides which are setup controls and which can change during a run; [model.ts](model.ts) adds further validation.
 
 | Input | Default | Declared values |
 | --- | --- | --- |
@@ -30,16 +35,16 @@ const observation = simulation.read();
 
 ## Actions and observations
 
-Use `advance(...)` for progress and `read()` for observations; the model defines how work advances its tick.
+Call `advance()` with an optional step count to run the model; the model defines how a step advances its tick. Call `read()` for a detached snapshot.
 
-Other instance procedures: `setParameters`. See their typed arguments in [model.ts](model.ts).
+Other actions: `setParameters`. Their typed arguments are in [model.ts](model.ts).
 
 Model-specific `read()` fields include `diagnostic`, `fullHistory`, `minority`, `avgScore`, `stdevScore`, `zeroCount`, `agents`, `successHistogram`, `scoreHistory`.
 
-The [UI binding](ui.ts) presents `Tick`, `History`, `Minority`, `Average score`, `Movement`, `Players`, `Scores`, `Success histogram`, `Success rate`, `Number picking zero` and further views or controls.
+## Sources and limits
 
-## Sources and acceptance
+Adapted from the NetLogo *Minority Game* model (© 2004 Uri Wilensky). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+Winning here depends on memory, crowd and payoff rules; it does not identify a good trading strategy. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 
-[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `minority-game` and links any shared checks.
+[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) records the acceptance stages for `minority-game`.

@@ -1,12 +1,19 @@
 # Preferential Attachment
 
-A new node chooses an existing node with probability proportional to degree and adds a link. Finite degree distributions illustrate cumulative attachment without demonstrating that a real network grew by this mechanism.
+Why do some nodes in a growing network collect far more links than others? The network starts with two linked nodes. Each step adds one new node, which links to an existing node chosen with a probability proportional to that node's number of links. Well-connected nodes therefore keep attracting new links.
+
+The degree distribution, also on a log scale, shows how the links are spread. This model is also the worked example in the [model authoring guide](../../docs/development/model-authoring.md).
+
+Things to try:
+
+- Run a few hundred steps with two seeds. Do the same early nodes become hubs?
+- Compare the log-scale degree distribution after 100 and after 1000 steps.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Preferential Attachment`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Choose **Preferential Attachment** in [Agent Lab](../../ui/agent-lab/README.md).
 
-Headless, from a script in the repository root:
+From a script in the repository root:
 
 ```ts
 import { create } from "./models/preferential-attachment/model.ts";
@@ -18,7 +25,7 @@ const observation = simulation.read();
 
 ## Parameters
 
-`create(options)` accepts these input keys. The [UI binding](ui.ts) distinguishes setup controls from live changes; [model.ts](model.ts) defines additional validation.
+`create(options)` accepts these inputs. [ui.ts](ui.ts) decides which are setup controls and which can change during a run; [model.ts](model.ts) adds further validation.
 
 | Input | Default | Declared values |
 | --- | --- | --- |
@@ -26,14 +33,14 @@ const observation = simulation.read();
 
 ## Actions and observations
 
-Use `advance(...)` for progress and `read()` for observations; the model defines how work advances its tick.
+Call `advance()` with an optional step count to run the model; the model defines how a step advances its tick. Call `read()` for a detached snapshot.
 
 Model-specific `read()` fields include `nodeCount`, `edgeCount`, `nodes`, `edges`, `distribution`, `logDistribution`.
 
-The [UI binding](ui.ts) presents `Tick`, `Nodes`, `Edges`, `Selected`, `Network`, `Degree distribution`, `Degree distribution · log₁₀`, `log count`.
+## Sources and limits
 
-## Sources and acceptance
+Adapted from the NetLogo *Preferential Attachment* model by Wilensky (2005). Attribution and adaptation notes are in the comments of [model.ts](model.ts) and the retained source notices; the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
 
-Attribution and rights: [adaptation comments](model.ts) and the retained source notices. Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+A finite degree distribution illustrates cumulative attachment. It does not show that any real network grew by this mechanism. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 
-The [catalog ledger](../catalog/progress.json) owns acceptance stages for `preferential-attachment` and links any shared checks.
+The [catalog ledger](../catalog/progress.json) records the acceptance stages for `preferential-attachment`.
