@@ -21,9 +21,9 @@ interface ParcelJourney {
 }
 export function create(options: Partial<ParcelParameters> = {}) {
   const settings = parameters(inputs, options);
-  const world = World.add();
-  const agenda = Agenda.add<{ kind: "deliver" | "return"; parcel: number }>();
-  const graph = Graph.add<{ id: string; label: string }, { minutes: number }>({ edgeState: { minutes: 1 } });
+  const world = World.create();
+  const agenda = Agenda.create<{ kind: "deliver" | "return"; parcel: number }>();
+  const graph = Graph.create<{ id: string; label: string }, { minutes: number }>({ edgeState: { minutes: 1 } });
   const depot = graph.nodes.add({ id: "place:depot", label: "Depot" });
   const east = graph.nodes.add({ id: "place:east", label: "East" });
   const west = graph.nodes.add({ id: "place:west", label: "West" });
@@ -31,8 +31,8 @@ export function create(options: Partial<ParcelParameters> = {}) {
   graph.edges.add({ from: depot, to: west, state: { minutes: 3 } });
   graph.edges.add({ from: east, to: west, state: { minutes: 4 } });
   const distances = graph.distances({ from: depot, cost: (edge) => edge.minutes });
-  const buffer = Store.add<Parcel>({ capacity: settings.depotCapacity });
-  const van = Resource.add<Parcel>({ capacity: 1 });
+  const buffer = Store.create<Parcel>({ capacity: settings.depotCapacity });
+  const van = Resource.create<Parcel>({ capacity: 1 });
   const parcels: ParcelJourney[] = [];
   const history: { x: number; y: number }[] = [{ x: 0, y: 0 }];
   function dispatch() {
@@ -47,7 +47,7 @@ export function create(options: Partial<ParcelParameters> = {}) {
   function addParcel() {
     const number = parcels.length + 1;
     const destination = number % 2 === 1 ? east : west;
-    const agent = world.add(Agent.add({ number, destination: destination.label }));
+    const agent = world.add(Agent.create({ number, destination: destination.label }));
     parcels.push({ agent, minutes: distances.get(destination)! });
     buffer.put(agent);
     dispatch();

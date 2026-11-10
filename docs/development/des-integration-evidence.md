@@ -38,12 +38,12 @@ Successful single-event extraction keeps Agenda time at the event timestamp, inc
 | Independent refactor | Commit `7773dd9`: all forty pre/post observations match, ten scripts and 49 focused tests pass. Full typecheck passed. |
 | `CITY_LIBRARY_UI_RUNTIME=svelte bun run build:ui:svelte` | Passed; existing bundle-size warning remains. |
 | `bun run check` | Typecheck, 699 tests across 78 files, all registered examples and library build passed. The command failed only at packed-consumer TypeScript checking after Bun/Node execution because a prior literal narrowing survived a twoPhase callback. The normally merged Mesa correction reads a fresh measurement; `bun run consumer` then passed Bun, Node ESM and ambient-free TypeScript. This is a repaired component gate, not a claim that the original failed command passed. |
-| Post-merge `bun test tests/mesa-integration.test.ts` | 8 passed, 41 assertions; covers cross-track event/activation/History composition and budget exhaustion without a completed interval. Together with the prior test run this verifies all 707 integrated tests in two runs. |
+| Post-merge `bun test tests/domain-integration.test.ts` | 8 passed, 41 assertions; covers cross-track event/activation/History composition and budget exhaustion without a completed interval. Together with the prior test run this verifies all 707 integrated tests in two runs. |
 | Final `bun run typecheck` and explicit Svelte build after the sole maintenance-label edit | Passed, Svelte 0 errors / 0 warnings; build passed in 2.21s with the existing bundle-size warning. |
 
 `scripts/examples.ts` now runs all fifteen DES scripts; the development typecheck includes both example directories. Packed consumer coverage exercises every new public kernel, causal successor scheduling, World attachment, lifecycle, time weighting, event diagnostics and gamma continuation in Bun, Node and ambient-free TypeScript. Both tracks' packed-consumer blocks remain active after normal merges.
 
-Mesa independently reports one complete `bun run check` passing all 707 tests, examples, build and consumers on the combined implementation; its [testing record](../mesa-expansion/independent-testing.md) is counterpart evidence, separate from the executions above. The later merge contains only documentation and presentation corrections, with affected type/build/browser checks rerun rather than repeating the costly unchanged baseline examples.
+Mesa independently reports one complete `bun run check` passing all 707 tests, examples, build and consumers on the combined implementation; its [testing record](../execution-studies/independent-testing.md) is counterpart evidence, separate from the executions above. The later merge contains only documentation and presentation corrections, with affected type/build/browser checks rerun rather than repeating the costly unchanged baseline examples.
 
 ## Independent review and browser status
 

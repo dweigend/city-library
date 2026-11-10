@@ -9,4 +9,4 @@ The catalog selects and tracks NetLogo source models. Runnable implementations l
 - [Acceptance records](acceptance/README.md) retain checks that cover several catalog models once. Model-specific probes and screenshots live with the owning model.
 - `record-paths.json` resolves immutable research/source references and frozen selection-manifest paths, preserving original SHA-256 values. Acceptance reports link directly to their current owner or a pinned Git revision. It preserves provenance without changing acceptance stages.
 
-A source audit, literature record, passing implementation check and independent review establish different things. The [model acceptance contract](../../docs/development/netlogo-model-acceptance.md) defines the required gates; `progress.json` records which evidence is currently claimed for each model.
+A source audit, literature record, passing implementation check and independent review establish different things. The [model acceptance contract](../../docs/development/model-acceptance.md) defines the required gates; `progress.json` records which evidence is currently claimed for each model.

@@ -10,8 +10,8 @@ export const inputs: Inputs<BatteryParameters> = {
 };
 export function create(options: Partial<BatteryParameters> = {}) {
   const settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
-  const world = World.add({ random });
+  const random = Random.create({ seed: settings.seed });
+  const world = World.create({ random });
   const solarPhase = Math.floor(random.number() * 24);
   const capacityKwh = 10;
   const reserveKwh = 2;

@@ -23,7 +23,7 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer |
-| `numAndroids` | `60` | integer; ≥ 1; ≤ 300 |
+| `androidCount` | `60` | integer; ≥ 1; ≤ 300 |
 | `infectionChance` | `100` | number; ≥ 0; ≤ 100 |
 | `stepSize` | `1` | integer; ≥ 1; ≤ 5 |
 | `chase` | `false` | boolean |
@@ -35,12 +35,12 @@ Use `advance(...)` for progress and `read()` for observations; the model defines
 
 Other instance procedures: `go`, `setParameters`, `setupClear`, `setupKeep`, `setupWorld`, `infect`, `move`, `createSomeAndroids`, `createUser`, `androidsWander`, `avoid`, `chase`, `spreadDisease`, `maybeGetSick`, `getSick`. See their typed arguments in [model.ts](model.ts).
 
-Model-specific `read()` fields include `numSick`, `runNumber`, `delay`, `agents`.
+Model-specific `read()` fields include `sickCount`, `runNumber`, `delay`, `agents`.
 
 The [UI binding](ui.ts) presents `Infect`, `Keep plots`, `Clear plots`, `Up`, `Right`, `Down`, `Left`, `Tick`, `Sick`, `Run` and further views or controls.
 
 ## Sources and acceptance
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained NetLogo source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
 
 [Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `disease-solo` and links any shared checks.

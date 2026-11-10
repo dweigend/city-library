@@ -73,14 +73,14 @@ type Bug = Agent<{
 }>;
 export function create(options: Partial<HeatbugsParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const width = 100,
     height = 100;
-  const world = World.add(
+  const world = World.create(
     { x: width, y: height, boundary: "wrap" },
     { random },
   );
-  const grid = Grid.add(
+  const grid = Grid.create(
     { x: width, y: height, boundary: "wrap" },
     { state: { temp: 0 } },
   );
@@ -106,7 +106,7 @@ export function create(options: Partial<HeatbugsParameters> = {}) {
   for (const field of random.sample(grid.fields, {
     count: settings.bugCount,
   })) {
-    const bug = Agent.add(
+    const bug = Agent.create(
       {
         idealTemp:
           settings.minIdealTemp +
@@ -173,7 +173,7 @@ export function create(options: Partial<HeatbugsParameters> = {}) {
           for (const f of grid.fields) f.temp *= 1 - settings.evaporationRate;
           for (const b of random.sample(bugs(), {
             count: bugs().length,
-            compatibility: "legacy-shuffle",
+            algorithm: "fisher-yates-descending",
           }))
             step(b);
         });

@@ -5,7 +5,7 @@ export const ui = defineUI(model, {
   setup: ["seed", "bugCount"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/Heatbugs",
-    label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Wilensky · CC BY-NC-SA 3.0",
   },
   complete: (s) => s.done,
   change: (instance, changes) => instance.setRules(changes),

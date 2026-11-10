@@ -1,11 +1,11 @@
-import { defineUI, netLogoColor, type Observation, type Series } from "../../ui/index.ts";
+import { defineUI, indexedColor, type Observation, type Series } from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
   setup: ["seed"],
   change: (instance, changes) => instance.setParameters(changes),
   live: {
-    numMoths: {},
+    mothCount: {},
     speed: {},
     mutation: {},
     selection: {},
@@ -17,7 +17,7 @@ export const ui = defineUI(model, {
   ],
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Evolution/Peppered%20Moths.nlogox",
-    label: "NetLogo Peppered Moths · Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Peppered Moths · Wilensky · CC BY-NC-SA 3.0",
   },
   monitors: [
     { label: "Tick", value: (s) => s.tick },
@@ -33,10 +33,10 @@ export const ui = defineUI(model, {
       data: (s) => ({
         width: s.width,
         height: s.height,
-        cells: s.cells.map((c) => ({ ...c, color: netLogoColor(c.color) })),
+        cells: s.cells.map((c) => ({ ...c, color: indexedColor(c.color) })),
         agents: s.moths.map((a) => ({
           ...a,
-          color: netLogoColor(a.color),
+          color: indexedColor(a.color),
           size: 6,
         })),
       }),

@@ -1,6 +1,6 @@
 import {
   defineUI,
-  netLogoColor,
+  indexedColor,
   type Observation,
   type SpatialData,
   type Series,
@@ -32,7 +32,7 @@ export const ui = defineUI(model, {
   complete: (s) => s.done,
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Economics/Fruit%20Wars.nlogox",
-    label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Wilensky · CC BY-NC-SA 3.0",
   },
   monitors: [
     { label: "Tick", value: (s) => s.tick },
@@ -96,7 +96,7 @@ function foragersAndFruitBushesData(s: UIObservation): SpatialData {
     agents: [
       ...s.bushes.map((b) => ({
         ...b,
-        color: netLogoColor(b.color),
+        color: indexedColor(b.color),
         size: 13,
       })),
       ...s.deaths.map((d) => ({

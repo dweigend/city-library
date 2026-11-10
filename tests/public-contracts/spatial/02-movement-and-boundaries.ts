@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { Agent } from "city-library";
 
-const agent = Agent.add({}, { position: { x: 0, y: 0 } });
+const agent = Agent.create({}, { position: { x: 0, y: 0 } });
 agent.move(1);
 assert.equal(agent.y, 1);
 agent.rotate(90);

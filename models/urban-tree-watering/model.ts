@@ -10,9 +10,9 @@ export const inputs: Inputs<TreeParameters> = {
 };
 export function create(options: Partial<TreeParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
-  const world = World.add({ random });
-  const trees = Array.from({ length: settings.trees }, (_, index) => world.add(Agent.add({
+  const random = Random.create({ seed: settings.seed });
+  const world = World.create({ random });
+  const trees = Array.from({ length: settings.trees }, (_, index) => world.add(Agent.create({
     label: `Tree ${index + 1}`, moistureLiters: Math.floor(random.number() * 10), receivedLiters: 0,
   })));
   const moistureCapacityLiters = 12;

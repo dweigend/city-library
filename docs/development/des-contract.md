@@ -4,7 +4,7 @@ Status: the bounded Agenda, service queue, Resource, Store, Signal, trace and ti
 
 ## Time and causality
 
-`Agenda.add<E>()` implements the binding `add`, `delete`, `time` and `advance({until,maxEvents})` API unchanged. Event order is ascending `(at, priority, sequence)`. Priorities are signed safe integers. Time is finite, nonnegative model time. Events contain supported detached data and preserve canonical framework references; callbacks, accessors and thenables are unsupported event data. Handles are issued by one Agenda; forged or foreign handles reject, and repeated deletion of a valid issued handle is a no-op. `size` is the pending event count.
+`Agenda.create<E>()` implements the binding `add`, `delete`, `time` and `advance({until,maxEvents})` API unchanged. Event order is ascending `(at, priority, sequence)`. Priorities are signed safe integers. Time is finite, nonnegative model time. Events contain supported detached data and preserve canonical framework references; callbacks, accessors and thenables are unsupported event data. Handles are issued by one Agenda; forged or foreign handles reject, and repeated deletion of a valid issued handle is a no-op. `size` is the pending event count.
 
 The additive operation `agenda.next({until}): Event<E> | undefined` removes at most one due event. On success, it sets `time` to that event's `at`, **including when that was the last due event**. On absence, it sets `time` to `until`. `until` must be finite and at least current time. This permits a handler at time 2 to schedule time 3 before reaching horizon 10. The batch `advance` still moves to the horizon when no due work remains; dispatching its returned batch is unsuitable for causal chains that create earlier follow-up events.
 
@@ -87,7 +87,7 @@ Each ticket, queue entry and store occupancy slot registers its own deletion par
 ## Observations, trace data and random draws
 
 ```ts
-TimeWeighted.add({ at?: number, value: number }): TimeWeighted
+TimeWeighted.create({ at?: number, value: number }): TimeWeighted
 weighted.set({ at: number, value: number }): void
 weighted.read({ until: number }): { duration: number; integral: number; mean: number | undefined }
 EventTrace.add<T>({ capacity: number }): EventTrace<T>

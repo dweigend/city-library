@@ -32,9 +32,9 @@ interface PollutionSample { readonly tick: number; readonly people: number; read
 export function create(options: Partial<PollutionParameters> = {}) {
   let settings = parameters(inputs, options);
   const width = 71, height = 63;
-  const random = Random.add({ seed: settings.seed });
-  const world = World.add({ x: width, y: height, boundary: "wrap" }, { random });
-  const grid = Grid.add({ x: width, y: height, boundary: "wrap" }, { state: { pollution: 0, powerPlant: false } });
+  const random = Random.create({ seed: settings.seed });
+  const world = World.create({ x: width, y: height, boundary: "wrap" }, { random });
+  const grid = Grid.create({ x: width, y: height, boundary: "wrap" }, { state: { pollution: 0, powerPlant: false } });
   world.add(grid);
   const fields = grid.fields;
   const history: Readonly<PollutionSample>[] = [];
@@ -44,7 +44,7 @@ export function create(options: Partial<PollutionParameters> = {}) {
   const integer = (upper: number) => Math.floor(random.number() * upper);
   // Uniform Fisher-Yates on full ask snapshots; no source RNG equivalence implied.
   function activation<T>(snapshot: readonly T[]) {
-    return random.sample(snapshot, { count: snapshot.length, compatibility: "legacy-shuffle" });
+    return random.sample(snapshot, { count: snapshot.length, algorithm: "fisher-yates-descending" });
   }
   function pollute() {
     for (const field of fields) if (field.powerPlant) field.pollution = settings.pollutingRate;
@@ -109,7 +109,7 @@ export function create(options: Partial<PollutionParameters> = {}) {
   pollute();
   for (let i = 0; i < settings.initialPopulation; i++) {
     const heading = integer(360), x = integer(width) - 35, y = integer(height) - 31;
-    world.add(Agent.add({ kind: "person", health: 5 } as { kind: "person" | "tree"; health: number }, { position: { x, y }, orientation: { heading } }));
+    world.add(Agent.create({ kind: "person", health: 5 } as { kind: "person" | "tree"; health: number }, { position: { x, y }, orientation: { heading } }));
   }
   record();
 
@@ -129,7 +129,7 @@ export function create(options: Partial<PollutionParameters> = {}) {
     }
     for (const individual of individuals().filter(individual => individual.kind === kind)) individual.delete();
     for (const individual of copied)
-      world.add(Agent.add({ kind, health: individual.health }, { position: { x: individual.x, y: individual.y }, orientation: { heading: individual.heading } }));
+      world.add(Agent.create({ kind, health: individual.health }, { position: { x: individual.x, y: individual.y }, orientation: { heading: individual.heading } }));
     record();
   }
   function observeIndividual(individual: Individual) {

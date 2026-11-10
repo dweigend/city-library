@@ -1,6 +1,6 @@
 import { strict as assert } from "node:assert";
 import { Random } from "city-library";
-const random = Random.add({ seed: 31 });
+const random = Random.create({ seed: 31 });
 random.number({ distribution: "normal" });
 const state = random.state, control = random.copy();
 assert.throws(() => random.local(() => {
@@ -12,5 +12,5 @@ assert.deepEqual(random.state, state);
 assert.equal(random.number({ distribution: "normal" }), control.number({ distribution: "normal" }));
 random.reseed(31);
 assert.equal(random.state.continuation.gaussian, null);
-const fresh = Random.add({ seed: 31 });
+const fresh = Random.create({ seed: 31 });
 assert.equal(random.number({ distribution: "normal" }), fresh.number({ distribution: "normal" }));

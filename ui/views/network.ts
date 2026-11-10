@@ -1,6 +1,6 @@
 import type { RendererOptions } from "./appearance.ts";
 import cytoscape from "cytoscape";
-import type { NetworkEdge, NetworkNode } from "../definition.ts";
+import type { GraphEdgeData, GraphNodeData } from "../definition.ts";
 
 export function mountNetwork(
   container: HTMLElement,
@@ -140,8 +140,8 @@ export function mountNetwork(
   resize.observe(canvas);
   return {
     update(
-      nodes: readonly NetworkNode[],
-      edges: readonly NetworkEdge[],
+      nodes: readonly GraphNodeData[],
+      edges: readonly GraphEdgeData[],
       selected: string | null,
     ) {
       // Validate the complete projection before touching the currently displayed graph.

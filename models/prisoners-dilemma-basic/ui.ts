@@ -11,7 +11,7 @@ export const ui = defineUI(model, {
   actions: [{ label: "Answer", run: (m) => m.answer() }],
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Prisoner's%20Dilemma/Prisoner's%20Dilemma%20Basic.nlogox",
-    label: "Original NetLogo model · Uri Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Uri Wilensky · CC BY-NC-SA 3.0",
   },
   monitors: [
     { label: "Answers (no native clock)", value: (s) => s.rounds },

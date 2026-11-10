@@ -46,7 +46,7 @@ describe("selected materials source mechanisms", () => {
     atom.advance();
     expect(atom.read().atoms[0]!.temp).toBe(390);
     expect(atom.read().tempRange).toBeCloseTo(1000 / 6, 12);
-    expect(atom.read().numFrozen).toBe(0); // source <0 color index, not temp<melting
+    expect(atom.read().frozenCount).toBe(0); // source <0 color index, not temp<melting
     expect(atom.read().atoms[0]!.colorIndex).toBe(0);
     expect(atom.read().atoms[0]!.color).toBe(8.9);
     atom.advance(5);
@@ -54,7 +54,7 @@ describe("selected materials source mechanisms", () => {
     expect(atom.read().done).toBe(true);
     const colder = crystal({ width: 1, height: 1, meltingTemp: 600 });
     colder.advance();
-    expect(colder.read().numFrozen).toBe(1);
+    expect(colder.read().frozenCount).toBe(1);
   });
   test("crystallization cooling sees preceding atom writes within the pass", () => {
     const metal = crystal({ width: 3, height: 1 });

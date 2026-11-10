@@ -23,10 +23,10 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer |
-| `numPop` | `200` | integer; ≥ 1; ≤ 500 |
+| `populationSize` | `200` | integer; ≥ 1; ≤ 500 |
 | `geneLength` | `30` | integer; ≥ 1; ≤ 100 |
 | `plasticity` | `0.5` | number; ≥ 0; ≤ 1 |
-| `numTrials` | `20` | integer; ≥ 1; ≤ 100 |
+| `trialCount` | `20` | integer; ≥ 1; ≤ 100 |
 | `mutationRate` | `5` | number; ≥ 0; ≤ 10 |
 | `smoothness` | `0.15` | number; ≥ 0; ≤ 1 |
 
@@ -42,6 +42,6 @@ The [UI binding](ui.ts) presents `Generation`, `Fitness and inherited matches`, 
 
 ## Sources and acceptance
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained NetLogo source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
 
 [Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `baldwin-effect` and links any shared checks.

@@ -1,21 +1,21 @@
-import { defineUI, netLogoColor, type Observation, type SpatialData } from "../../ui/index.ts";
+import { defineUI, indexedColor, type Observation, type SpatialData } from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: ["seed", { field: "numDataPoints", label: "Requested points" }],
+  setup: ["seed", { field: "dataPointCount", label: "Requested points" }],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/K-MeansClustering",
     label:
-      "Original NetLogo model \u00B7 Hjorth, Head and Wilensky \u00B7 CC BY-NC-SA 3.0",
+      "Source attribution \u00B7 Hjorth, Head and Wilensky \u00B7 CC BY-NC-SA 3.0",
   },
   live: {
-    numClusters: {
+    clusterCount: {
       label: "Generated clusters / plot multiplier",
-      set: (m, v) => m.setParameters({ numClusters: v }),
+      set: (m, v) => m.setParameters({ clusterCount: v }),
     },
-    numCentroids: {
+    centroidCount: {
       label: "Centroids on reset",
-      set: (m, v) => m.setParameters({ numCentroids: v }),
+      set: (m, v) => m.setParameters({ centroidCount: v }),
     },
   },
   actions: [
@@ -45,7 +45,7 @@ export const ui = defineUI(model, {
       series: (s) =>
         s.centroids.map((c, i) => ({
           label: `Centroid ${i}`,
-          color: netLogoColor(c.color),
+          color: indexedColor(c.color),
           points: s.history.map((p) => ({
             x: p.tick,
             y: p.deviations[i] ?? 0,
@@ -67,13 +67,13 @@ function clustersData(s: UIObservation): SpatialData {
         color:
           p.cluster === null
             ? "#888888"
-            : netLogoColor((s.centroids[p.cluster]?.color ?? 7) - 2),
+            : indexedColor((s.centroids[p.cluster]?.color ?? 7) - 2),
         size: 5,
       })),
       ...s.centroids.map((c) => ({
         ...c,
         label: String(c.index),
-        color: netLogoColor(c.color),
+        color: indexedColor(c.color),
         size: 14,
         shape: "triangle" as const,
       })),

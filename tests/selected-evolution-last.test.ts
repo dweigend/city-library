@@ -58,7 +58,7 @@ test("sex-ratio gestation equality births before increment and hatch inherits ad
   expect(s.males[0]!.adult).toBe(true);
   expect(s.males[0]!.age).toBe(0);
   expect(mother.carrying).toBe(false);
-  expect(mother.numOfChildren).toBe(1);
+  expect(mother.childCount).toBe(1);
   expect(s.tick).toBe(0);
 });
 
@@ -72,8 +72,8 @@ test("sex-ratio partner search requires exactly one eligible female and no rival
   expect(female.carrying).toBe(true);
   expect(female.partner).toBe(male);
   expect(male.partner).toBe(null);
-  expect(male.numOfExes).toBe(1);
-  expect(female.numOfExes).toBe(1);
+  expect(male.formerPartnerCount).toBe(1);
+  expect(female.formerPartnerCount).toBe(1);
 });
 
 const noBacteria = {

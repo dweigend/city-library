@@ -32,9 +32,9 @@ export function create(options: Partial<SprawlParameters> = {}) {
   let settings = parameters(inputs, options);
   const width = 35, height = 35;
   const space = { x: width, y: height, boundary: "wrap" as const };
-  const random = Random.add({ seed: settings.seed });
-  const world = World.add(space, { random });
-  const grid = Grid.add(space, { state: { attraction: 0, colorNumber: 50 } });
+  const random = Random.create({ seed: settings.seed });
+  const world = World.create(space, { random });
+  const grid = Grid.create(space, { state: { attraction: 0, colorNumber: 50 } });
   world.add(grid);
   const fields = grid.fields;
   const buildThreshold = Math.floor(settings.maxAttraction / 2);
@@ -46,7 +46,7 @@ export function create(options: Partial<SprawlParameters> = {}) {
     return random.number({ min: 0, max: Math.ceil(attraction), integer: true });
   }
   function activation<T>(snapshot: readonly T[]) {
-    return random.sample(snapshot, { count: snapshot.length, compatibility: "legacy-shuffle" });
+    return random.sample(snapshot, { count: snapshot.length, algorithm: "fisher-yates-descending" });
   }
   function recolorLand() {
     // Source scale-color green attraction 2.5 10, clamped to green's 10-unit band.
@@ -106,7 +106,7 @@ export function create(options: Partial<SprawlParameters> = {}) {
   for (const field of fields) field.attraction = attractionTrial(settings.maxAttraction);
   for (let i = 0; i < settings.smoothness; i++) grid.diffuse("attraction", { rate: 0.4, neighborhood: "moore" });
   recolorLand();
-  for (let i = 0; i < settings.population; i++) world.add(Agent.add({ kind: "seeker" as SprawlKind, patienceCounter: settings.seekerPatience, stayCounter: 0 }, { position: { x: 0, y: 0 }, orientation: { heading: random.number({ min: 0, max: 360, integer: true }) } }));
+  for (let i = 0; i < settings.population; i++) world.add(Agent.create({ kind: "seeker" as SprawlKind, patienceCounter: settings.seekerPatience, stayCounter: 0 }, { position: { x: 0, y: 0 }, orientation: { heading: random.number({ min: 0, max: 360, integer: true }) } }));
   record();
   return {
     advance(count = 1) { stepCount(count); for (let i = 0; i < count; i++) { run(world, go); record(); } },
@@ -139,7 +139,7 @@ export function create(options: Partial<SprawlParameters> = {}) {
         copied.push({ kind: person.kind, x: person.x, y: person.y, heading: person.heading, patienceCounter: person.patienceCounter, stayCounter: person.stayCounter });
       }
       for (const person of residents()) person.delete();
-      for (const person of copied) world.add(Agent.add({ kind: person.kind, patienceCounter: person.patienceCounter, stayCounter: person.stayCounter }, { position: { x: person.x, y: person.y }, orientation: { heading: person.heading } }));
+      for (const person of copied) world.add(Agent.create({ kind: person.kind, patienceCounter: person.patienceCounter, stayCounter: person.stayCounter }, { position: { x: person.x, y: person.y }, orientation: { heading: person.heading } }));
       record();
     },
     read() {

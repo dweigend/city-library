@@ -1,4 +1,4 @@
-import { defineUI, netLogoColor, type Observation, type GridData } from "../../ui/index.ts";
+import { defineUI, indexedColor, type Observation, type GridData } from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
@@ -10,7 +10,7 @@ export const ui = defineUI(model, {
   ],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/HeatDiffusion",
-    label: "Original NetLogo model · Uri Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Uri Wilensky · CC BY-NC-SA 3.0",
   },
   change: (instance, changes) => instance.setRules(changes),
   live: {
@@ -66,7 +66,7 @@ function plateTemperatureData(s: UIObservation): GridData {
         y: c.y,
         color:
           c.inPlate || c.legendLevel >= 0
-            ? netLogoColor(10 + Math.min(9.9, fraction * 10))
+            ? indexedColor(10 + Math.min(9.9, fraction * 10))
             : "#8d8d8d",
       };
     }),

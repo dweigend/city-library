@@ -27,10 +27,10 @@ export const inputs: Inputs<Parameters> = {
 type Store = Agent<{ price: number; areaCount: number; color: number }>;
 export function create(options: Partial<Parameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed }),
+  const random = Random.create({ seed: settings.seed }),
     space = { x: 41, y: 41, boundary: "hard" as const },
-    world = World.add(space, { random }),
-    grid = Grid.add(space, { state: { preferredStore: "" } });
+    world = World.create(space, { random }),
+    grid = Grid.create(space, { state: { preferredStore: "" } });
   world.add(grid);
   const stores = () => world.agents as readonly Store[];
   const consumers = grid.fields.filter(
@@ -41,7 +41,7 @@ export function create(options: Partial<Parameters> = {}) {
     stores: { id: string; price: number; areaCount: number; revenue: number }[];
   }[] = [];
   const shuffle = <T>(a: readonly T[]) =>
-    random.sample(a, { count: a.length, compatibility: "legacy-shuffle" });
+    random.sample(a, { count: a.length, algorithm: "fisher-yates-descending" });
   function chooseStoreAt(x: number, y: number) {
     let best = Infinity;
     let candidates: Store[] = [];
@@ -101,7 +101,7 @@ export function create(options: Partial<Parameters> = {}) {
     { count: settings.numberOfStores },
   )) {
     const f = random.sample(consumers)[0]!;
-    world.add(Agent.add({ price: 10, areaCount: 0, color }, { position: f }));
+    world.add(Agent.create({ price: 10, areaCount: 0, color }, { position: f }));
   }
   recalculateArea();
   record();

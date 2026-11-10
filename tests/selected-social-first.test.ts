@@ -7,7 +7,7 @@ import { create as ethnicity } from "../models/ethnocentrism/model.ts";
 
 test("consumer utilities combine retained experience and current neighbors only after consumption", () => {
   const m = choice({
-    numConsumers: 10,
+    consumerCount: 10,
     avgConnections: 2,
     initialOrangePercent: 100,
     qualityOrange: 1,
@@ -33,8 +33,8 @@ test("consumer utilities combine retained experience and current neighbors only 
     m.read().consumers.every((a) => a.choice === 0 && a.satisfaction[0] === 0),
   ).toBe(true);
   expect(m.read().cluster).toBe(1);
-  expect(() => choice({ numConsumers: 2, avgConnections: 5 })).toThrow();
-  const empty = choice({ numConsumers: 0 });
+  expect(() => choice({ consumerCount: 2, avgConnections: 5 })).toThrow();
+  const empty = choice({ consumerCount: 0 });
   empty.advance();
   expect(empty.read().cluster).toBeNull();
   expect(empty.read().tick).toBe(1);
@@ -87,7 +87,7 @@ test("Rebellion mixed turns preserve population and legal torus cells", () => {
 
 test("language redistribution truncates n-of fractions and retains topology; reset retains spoken output", () => {
   const m = language({
-    numNodes: 3,
+    nodeCount: 3,
     percentGrammar1: 50,
     updateAlgorithm: "threshold",
     thresholdVal: 0,
@@ -115,7 +115,7 @@ test("language redistribution truncates n-of fractions and retains topology; res
 });
 
 test("party stale happiness stops before a changed tolerance is applied; groups are atomic", () => {
-  const m = party({ number: 0, numGroups: 5, tolerance: 99 });
+  const m = party({ number: 0, groupCount: 5, tolerance: 99 });
   m.setGroups([["male", "female"], [], [], [], []]);
   expect(m.read().happyCount).toBe(2);
   m.setParameters({ tolerance: 0 });
@@ -191,9 +191,9 @@ test("ethnocentrism death includes new immigrants and newborns", () => {
 
 test("all first-five live updates validate atomically and reads detach nested data", () => {
   for (const m of [
-    choice({ numConsumers: 10, avgConnections: 0 }),
+    choice({ consumerCount: 10, avgConnections: 0 }),
     rebellion({ initialAgentDensity: 1 }),
-    language({ numNodes: 3 }),
+    language({ nodeCount: 3 }),
     party({ number: 3 }),
     ethnicity(),
   ]) {
@@ -216,7 +216,7 @@ test("all first-five live updates validate atomically and reads detach nested da
     expect(Object.isFrozen(before)).toBe(true);
     expect(Object.isFrozen(before.history)).toBe(true);
   }
-  const m = choice({ numConsumers: 10, avgConnections: 0 });
+  const m = choice({ consumerCount: 10, avgConnections: 0 });
   const s = m.read();
   expect(Object.isFrozen(s.consumers[0]!.personalExperience)).toBe(true);
   m.advance();

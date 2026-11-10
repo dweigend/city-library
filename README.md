@@ -2,15 +2,15 @@
 
 City Library is an open, modular library for building simulations and games about future cities. Try a rule, watch what happens, change it and try again.
 
-## A toolkit for experiments
+## A toolkit for studies
 
 Cities face difficult questions about climate, biodiversity, mobility and resources. Simulations and games let us explore alternatives and learn through play. Fun is just another name for learning.
 
 Combine agents, space, networks and measurements in TypeScript. Use a graph on its own, add agents when needed, or pair a grid with a local rule. Each part should work independently and make its assumptions easy to inspect.
 
-TypeScript brings these experiments to the web, with an ecosystem of useful game libraries.
+TypeScript brings these studies to the web, with an ecosystem of useful game libraries.
 
-NetLogo inspires the scripting approach: a short script should be enough to get an idea running. Bits UI and shadcn-svelte inspire the modular approach: small building blocks with useful defaults and room to make something your own.
+A short script should be enough to get an idea running. Small, independent building blocks provide useful defaults and room to make something your own.
 
 Agent Loom provides the headless modeling core. Agent Lab adds browser controls and views; the same model also runs in a script. Applying its results to a real city still requires evidence.
 
@@ -68,4 +68,4 @@ This is a composition map, not a required startup sequence. A graph needs no coo
 
 `bun run check` runs TypeScript/Svelte checks, tests, public examples, the library build and a packed Bun/Node/TypeScript consumer. The consumer requires Node 26.8.2. `bun run build:ui` builds the Vite host.
 
-Keep model state under one owner, use public actions for changes and keep rendering outside the headless library. New capabilities start with asserted public examples. [Architecture](docs/ARCHITECTURE.md) and [UI design](docs/DESIGN.md) define the binding rules.
+Keep model state under one owner, use public actions for changes and keep rendering outside the headless library. New capabilities start with asserted public examples. [Architecture](docs/ARCHITECTURE.md), [naming conventions](docs/NAMING_CONVENTIONS.md) and [UI design](docs/DESIGN.md) define the binding rules.

@@ -1,4 +1,4 @@
-import { defineUI, netLogoColor, type Observation, type SpatialData } from "../../ui/index.ts";
+import { defineUI, indexedColor, type Observation, type SpatialData } from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
@@ -22,7 +22,7 @@ export const ui = defineUI(model, {
   complete: (s) => s.done,
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Evolution/Anisogamy.nlogox",
-    label: "NetLogo Anisogamy · Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Anisogamy · Wilensky · CC BY-NC-SA 3.0",
   },
   monitors: [
     { label: "Tick", value: (s) => s.tick },
@@ -96,17 +96,17 @@ function adultsGametesAndZygotesData(s: UIObservation): SpatialData {
   return {
     width: s.width,
     height: s.height,
-    cells: s.cells.map((c) => ({ ...c, color: netLogoColor(c.color) })),
+    cells: s.cells.map((c) => ({ ...c, color: indexedColor(c.color) })),
     agents: [...s.adults, ...s.gametes, ...s.zygotes].map((a) => ({
       ...a,
-      color: netLogoColor(
+      color: indexedColor(
         a.matingTypeTrait +
-          (a.breed === "adult" ? 1 : a.breed === "gamete" ? -1 : 3),
+          (a.group === "adult" ? 1 : a.group === "gamete" ? -1 : 3),
       ),
       size:
-        a.breed === "gamete"
+        a.group === "gamete"
           ? Math.max(2, a.size * 8)
-          : a.breed === "zygote"
+          : a.group === "zygote"
             ? 5
             : 7,
     })),
@@ -120,7 +120,7 @@ function inheritedStrategyInspector(
   const a = [...s.adults, ...s.gametes, ...s.zygotes].find((a) => a.id === id);
   return a
     ? {
-        breed: a.breed,
+        group: a.group,
         matingType: a.matingTypeTrait,
         massTrait: a.gameteSizeTrait,
         life: a.life,

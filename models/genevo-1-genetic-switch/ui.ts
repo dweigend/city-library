@@ -19,7 +19,7 @@ const binding = defineUI(model, {
   complete: (state) => state.stopped,
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/GenEvo/GenEvo%201%20Genetic%20Switch.nlogox",
-    label: "Original NetLogo model · source notices",
+    label: "Source attribution · source notices",
   },
   monitors: [
     { label: "Tick", value: (state) => state.tick },

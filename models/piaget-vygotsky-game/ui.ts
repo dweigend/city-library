@@ -1,4 +1,4 @@
-import { defineUI, netLogoColor, type Observation, type SpatialData } from "../../ui/index.ts";
+import { defineUI, indexedColor, type Observation, type SpatialData } from "../../ui/index.ts";
 
 import { model, type Strategy } from "./model.ts";
 const colors: Record<Strategy, string> = {
@@ -22,7 +22,7 @@ const binding = defineUI(model, {
   },
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Psychology/Piaget-Vygotsky%20Game.nlogox",
-    label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Wilensky · CC BY-NC-SA 3.0",
   },
   complete: (s) => s.stopped,
   actions: [
@@ -91,13 +91,13 @@ function targetThrowsData(s: UIObservation): SpatialData {
     height: s.height,
     cells: s.cells.map((c) => ({
       ...c,
-      color: c.target ? colors[s.strategy] : netLogoColor(c.trailColor),
+      color: c.target ? colors[s.strategy] : indexedColor(c.trailColor),
     })),
     agents: s.players.map((p) => ({
       ...p,
       size: 8,
       shape: "triangle" as const,
-      color: netLogoColor(p.color),
+      color: indexedColor(p.color),
     })),
   };
 }

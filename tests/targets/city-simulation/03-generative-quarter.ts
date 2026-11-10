@@ -7,7 +7,7 @@ import {
 } from "city-library";
 
 // Lengths in metres; areas in square metres. The missing exports are intentional.
-const random = Random.add({
+const random = Random.create({
   seed: 42,
 });
 

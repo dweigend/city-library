@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { Graph } from "../../../index.ts";
-const graph = Graph.add<{ id: string }, { weight: number }>({ edgeState: { weight: 1 } });
+const graph = Graph.create<{ id: string }, { weight: number }>({ edgeState: { weight: 1 } });
 const [a,b,c,d,e] = ["a","b","c","d","e"].map(id => graph.nodes.add({ id }));
 graph.edges.add({ from: a!, to: b!, directed: true, state: { weight: 4 } });
 graph.edges.add({ from: a!, to: c!, directed: true, state: { weight: 5 } });
@@ -14,7 +14,7 @@ assert.throws(() => graph.distances({ from: a!, cost }), RangeError);
 assert.throws(() => graph.allDistances({ cost, algorithm: "bellman-ford" }), RangeError);
 graph.edges.add({ from: c!, to: b!, directed: true, state: { weight: 1 } });
 assert.throws(() => graph.distances({ from: a!, cost, algorithm: "bellman-ford" }), RangeError);
-const undirected = Graph.add<object, { weight: number }>({ edgeState: { weight: -1 } });
+const undirected = Graph.create<object, { weight: number }>({ edgeState: { weight: -1 } });
 const x = undirected.nodes.add({}), y = undirected.nodes.add({});
 undirected.edges.add({ from: x, to: y });
 assert.throws(() => undirected.distances({ from: x, cost, algorithm: "bellman-ford" }), RangeError);

@@ -43,10 +43,10 @@ export function create(options: Partial<BrainParameters> = {}) {
   if (settings.width % 2 !== 1 || settings.height % 2 !== 1)
     throw new RangeError("Use odd centered dimensions.");
   const { width, height } = settings,
-    random = Random.add({ seed: settings.seed }),
+    random = Random.create({ seed: settings.seed }),
     space = { x: width, y: height, boundary: "wrap" as const };
-  const world = World.add(space, { random }),
-    grid = Grid.add(space, { state: { state: 0 } });
+  const world = World.create(space, { random }),
+    grid = Grid.create(space, { state: { state: 0 } });
   world.add(grid);
   let drawing = false,
     brush: 1 | 2 = 1,

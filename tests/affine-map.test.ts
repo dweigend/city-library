@@ -43,9 +43,9 @@ test("archived world ASC envelope and Murmansk record give the pinned affine fix
 });
 
 test("canonical Agent/Field positions return detached immutable XY without state or RNG effects", () => {
-  const random = Random.add({ seed: 4 }), world = World.add({ x: 10, y: 10, boundary: "hard" }, { random });
-  const agent = world.add(Agent.add({ energy: 2 }, { position: { x: 2, y: -1 } }));
-  const grid = Grid.add({ x: 10, y: 10, boundary: "hard" }, { state: { heat: 3 } });
+  const random = Random.create({ seed: 4 }), world = World.create({ x: 10, y: 10, boundary: "hard" }, { random });
+  const agent = world.add(Agent.create({ energy: 2 }, { position: { x: 2, y: -1 } }));
+  const grid = Grid.create({ x: 10, y: 10, boundary: "hard" }, { state: { heat: 3 } });
   world.add(grid);
   const field = grid.fieldAt({ x: 1.5, y: -0.5 })!;
   const state = random.state;

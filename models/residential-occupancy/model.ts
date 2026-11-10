@@ -9,17 +9,17 @@ export const inputs: Inputs<OccupancyParameters> = {
 };
 export function create(options: Partial<OccupancyParameters> = {}) {
   let settings = parameters(inputs, options);
-  const world = World.add();
-  const applicants = Array.from({ length: settings.applicants }, (_, index) => world.add(Agent.add({ label: `Household ${index + 1}` })));
+  const world = World.create();
+  const applicants = Array.from({ length: settings.applicants }, (_, index) => world.add(Agent.create({ label: `Household ${index + 1}` })));
   const building = { id: "building", label: "Dwelling slots" };
-  const eligibility = Graph.add<(typeof applicants)[number] | typeof building>();
+  const eligibility = Graph.create<(typeof applicants)[number] | typeof building>();
   eligibility.nodes.add(building);
   for (const applicant of applicants) {
     eligibility.nodes.add(applicant);
     eligibility.edges.add({ from: applicant, to: building });
   }
   // Resource tickets are the sole authority for waiting, granted and released allocations.
-  const housing = Resource.add<(typeof applicants)[number]>({ capacity: settings.slots, policy: "fifo" });
+  const housing = Resource.create<(typeof applicants)[number]>({ capacity: settings.slots, policy: "fifo" });
   const tickets = applicants.map(owner => housing.request({ owner }));
   const measure = measurements.define((resource: typeof housing) => ({
     occupied: resource.used,

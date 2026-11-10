@@ -26,9 +26,9 @@ export function create(options: Partial<IsingParameters> = {}) {
   let settings = parameters(inputs, options);
   if (settings.width % 2 !== 1 || settings.height % 2 !== 1)
     throw new RangeError("Use odd lattice dimensions.");
-  const random = Random.add({ seed: settings.seed }),
-    world = World.add({ random });
-  const grid = Grid.add(
+  const random = Random.create({ seed: settings.seed }),
+    world = World.create({ random });
+  const grid = Grid.create(
     { x: settings.width, y: settings.height, boundary: "wrap" },
     { state: { spin: 1 } },
   );
@@ -49,7 +49,7 @@ export function create(options: Partial<IsingParameters> = {}) {
   function setup() {
     for (const f of random.sample(fields, {
       count: fields.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     }))
       f.spin =
         Math.floor(random.number() * 100) < settings.probabilityOfSpinUp

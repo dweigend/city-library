@@ -23,19 +23,19 @@ export const inputs: Inputs<BloodSugarParameters> = {
   insulinSensitivity: { kind: "number", default: 0.75, min: 0, max: 1 },
   glucagonSensitivity: { kind: "number", default: 0.75, min: 0, max: 1 },
 };
-type Breed = "liver" | "pancreas" | "glucose" | "insulin" | "glucagon";
+type AgentGroup = "liver" | "pancreas" | "glucose" | "insulin" | "glucagon";
 type Cell = Agent<{
   who: number;
-  breed: Breed;
+  group: AgentGroup;
   glucoseStore: number;
   lifetime: number;
 }>;
 export function create(options: Partial<BloodSugarParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const space = { x: 33, y: 33, boundary: "wrap" } as const;
-  const world = World.add(space, { random });
-  const grid = Grid.add(space);
+  const world = World.create(space, { random });
+  const grid = Grid.create(space);
   world.add(grid);
   const hormoneMeanLife = 2 / Math.log(2);
   const glucoseBaseline = 3;
@@ -55,11 +55,11 @@ export function create(options: Partial<BloodSugarParameters> = {}) {
     total: number;
   }[] = [];
   const all = () => world.agents as readonly Cell[];
-  const breed = (kind: Breed) => all().filter((cell) => cell.breed === kind);
+  const group = (kind: AgentGroup) => all().filter((cell) => cell.group === kind);
   const shuffled = (cells: readonly Cell[]) =>
     random.sample(cells, {
       count: cells.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     });
 
   function randomPosition(cell: Cell) {
@@ -69,10 +69,10 @@ export function create(options: Partial<BloodSugarParameters> = {}) {
     });
   }
 
-  function createCell(kind: Breed, x = 0, y = 0) {
+  function createCell(kind: AgentGroup, x = 0, y = 0) {
     return world.add(
-      Agent.add(
-        { who: nextWho++, breed: kind, glucoseStore: 0, lifetime: 0 },
+      Agent.create(
+        { who: nextWho++, group: kind, glucoseStore: 0, lifetime: 0 },
         {
           position: { x, y },
           orientation: {
@@ -107,7 +107,7 @@ export function create(options: Partial<BloodSugarParameters> = {}) {
   function makeLiver() {
     for (const field of random.sample(
       grid.fields.filter((field) => field.x < 8),
-      { count: 792, compatibility: "legacy-shuffle" },
+      { count: 792, algorithm: "fisher-yates-descending" },
     )) {
       const liver = createCell("liver", field.x, field.y);
       liver.glucoseStore = random.number({
@@ -120,15 +120,15 @@ export function create(options: Partial<BloodSugarParameters> = {}) {
   function makePancreas() {
     for (const field of random.sample(
       grid.fields.filter((field) => field.x >= 8),
-      { count: 297, compatibility: "legacy-shuffle" },
+      { count: 297, algorithm: "fisher-yates-descending" },
     ))
       createCell("pancreas", field.x, field.y);
   }
 
   function updateTotalGlucose() {
     totalGlucose =
-      breed("glucose").length +
-      stats.describe(breed("liver").map((cell) => cell.glucoseStore)).sum;
+      group("glucose").length +
+      stats.describe(group("liver").map((cell) => cell.glucoseStore)).sum;
   }
 
   function setup() {
@@ -171,7 +171,7 @@ export function create(options: Partial<BloodSugarParameters> = {}) {
   }
 
   function addGlucose() {
-    // Chromium NetLogo Web creates 412 for 7000/17 (nearest integer).
+    // Chromium source runtime creates 412 for 7000/17 (nearest integer).
     createSignals("glucose", mealSize / mealLength);
     eatTime--;
     if (eatTime < 1) eating = false;
@@ -180,11 +180,11 @@ export function create(options: Partial<BloodSugarParameters> = {}) {
   function adjustGlucose(liver: Cell) {
     const local = grid.agentsAt(grid.fieldAt(liver)!) as readonly Cell[];
     const insulinCount = randomBinomial(
-      local.filter((cell) => cell.breed === "insulin").length,
+      local.filter((cell) => cell.group === "insulin").length,
       settings.insulinSensitivity,
     );
     const glucagonCount = randomBinomial(
-      local.filter((cell) => cell.breed === "glucagon").length,
+      local.filter((cell) => cell.group === "glucagon").length,
       settings.glucagonSensitivity,
     );
     const netSignal = glucagonCount - insulinCount;
@@ -194,7 +194,7 @@ export function create(options: Partial<BloodSugarParameters> = {}) {
       liver.glucoseStore -= released;
     }
     if (netSignal < 0) {
-      const glucoses = breed("glucose");
+      const glucoses = group("glucose");
       const absorbed = Math.min(glucoses.length, -netSignal);
       liver.glucoseStore += absorbed;
       for (const glucose of random.sample(glucoses, { count: absorbed }))
@@ -205,7 +205,7 @@ export function create(options: Partial<BloodSugarParameters> = {}) {
   function adjustHormones(pancreas: Cell) {
     const local = grid.agentsAt(grid.fieldAt(pancreas)!) as readonly Cell[];
     const glucoseCount = randomBinomial(
-      local.filter((cell) => cell.breed === "glucose").length,
+      local.filter((cell) => cell.group === "glucose").length,
       settings.glucoseSensitivity,
     );
     const signalCount = Math.abs(glucoseBaseline - glucoseCount);
@@ -216,7 +216,7 @@ export function create(options: Partial<BloodSugarParameters> = {}) {
   }
 
   function metabolizeGlucose() {
-    const glucoses = breed("glucose");
+    const glucoses = group("glucose");
     for (const glucose of random.sample(glucoses, {
       count: Math.min(glucoses.length, settings.metabolicRate),
     }))
@@ -225,8 +225,8 @@ export function create(options: Partial<BloodSugarParameters> = {}) {
 
   function signalDegradation() {
     for (const hormone of [
-      ...shuffled(breed("insulin")),
-      ...shuffled(breed("glucagon")),
+      ...shuffled(group("insulin")),
+      ...shuffled(group("glucagon")),
     ]) {
       hormone.lifetime--;
       if (hormone.lifetime <= 0) hormone.delete();
@@ -241,13 +241,13 @@ export function create(options: Partial<BloodSugarParameters> = {}) {
 
   function go() {
     if (eating) addGlucose();
-    for (const liver of shuffled(breed("liver"))) adjustGlucose(liver);
-    for (const pancreas of shuffled(breed("pancreas")))
+    for (const liver of shuffled(group("liver"))) adjustGlucose(liver);
+    for (const pancreas of shuffled(group("pancreas")))
       adjustHormones(pancreas);
     metabolizeGlucose();
     signalDegradation();
     for (const kind of ["insulin", "glucagon", "glucose"] as const) {
-      for (const signal of shuffled(breed(kind))) move(signal);
+      for (const signal of shuffled(group(kind))) move(signal);
     }
     updateTotalGlucose();
   }
@@ -255,10 +255,10 @@ export function create(options: Partial<BloodSugarParameters> = {}) {
   function record() {
     history.push({
       tick: world.tick.value,
-      glucose: breed("glucose").length,
-      insulin: breed("insulin").length,
-      glucagon: breed("glucagon").length,
-      stored: stats.describe(breed("liver").map((cell) => cell.glucoseStore))
+      glucose: group("glucose").length,
+      insulin: group("insulin").length,
+      glucagon: group("glucagon").length,
+      stored: stats.describe(group("liver").map((cell) => cell.glucoseStore))
         .sum,
       total: totalGlucose,
     });
@@ -291,33 +291,33 @@ export function create(options: Partial<BloodSugarParameters> = {}) {
   }
 
   function followGlucose() {
-    followingId = random.sample(breed("glucose"))[0]?.id ?? null;
+    followingId = random.sample(group("glucose"))[0]?.id ?? null;
   }
   function followInsulin() {
-    followingId = random.sample(breed("insulin"))[0]?.id ?? null;
+    followingId = random.sample(group("insulin"))[0]?.id ?? null;
   }
   function followGlucagon() {
-    followingId = random.sample(breed("glucagon"))[0]?.id ?? null;
+    followingId = random.sample(group("glucagon"))[0]?.id ?? null;
   }
 
   function read() {
     const agents = all().map((cell) => ({
       id: cell.id,
       who: cell.who,
-      breed: cell.breed,
+      group: cell.group,
       x: cell.x,
       y: cell.y,
       heading: cell.heading,
       glucoseStore: cell.glucoseStore,
       lifetime: cell.lifetime,
       color:
-        cell.breed === "liver"
+        cell.group === "liver"
           ? "#a86a3d"
-          : cell.breed === "pancreas"
+          : cell.group === "pancreas"
             ? "#d4bd25"
-            : cell.breed === "insulin"
+            : cell.group === "insulin"
               ? "#58b8ed"
-              : cell.breed === "glucagon"
+              : cell.group === "glucagon"
                 ? "#e43838"
                 : "#ffffff",
     }));
@@ -331,14 +331,14 @@ export function create(options: Partial<BloodSugarParameters> = {}) {
       totalGlucose,
       stopped: totalGlucose === 0,
       followingId,
-      glucoseCount: agents.filter((cell) => cell.breed === "glucose").length,
-      insulinCount: agents.filter((cell) => cell.breed === "insulin").length,
-      glucagonCount: agents.filter((cell) => cell.breed === "glucagon").length,
-      liverCells: agents.filter((cell) => cell.breed === "liver"),
-      pancreaticCells: agents.filter((cell) => cell.breed === "pancreas"),
+      glucoseCount: agents.filter((cell) => cell.group === "glucose").length,
+      insulinCount: agents.filter((cell) => cell.group === "insulin").length,
+      glucagonCount: agents.filter((cell) => cell.group === "glucagon").length,
+      liverCells: agents.filter((cell) => cell.group === "liver"),
+      pancreaticCells: agents.filter((cell) => cell.group === "pancreas"),
       storedGlucose: stats.describe(
         agents
-          .filter((cell) => cell.breed === "liver")
+          .filter((cell) => cell.group === "liver")
           .map((cell) => cell.glucoseStore),
       ).sum,
       agents,

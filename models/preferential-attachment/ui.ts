@@ -3,7 +3,7 @@ import { model } from "./model.ts";
 export const ui = defineUI(model, {
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/PreferentialAttachment",
-    label: "Original NetLogo model · Uri Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Uri Wilensky · CC BY-NC-SA 3.0",
   },
   monitors: [
     { label: "Tick", value: (state) => state.tick },

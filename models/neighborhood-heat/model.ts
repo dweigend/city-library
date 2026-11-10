@@ -5,8 +5,8 @@ import { stepCount } from "../parameters.ts";
 /** Equal capacities and a closed boundary preserve the temperature sum. */
 export function create() {
   const initialState = { temperature: 20 };
-  const grid = Grid.add({ x: 3, y: 3 }, { state: initialState });
-  const world = World.add();
+  const grid = Grid.create({ x: 3, y: 3 }, { state: initialState });
+  const world = World.create();
   const center = grid.fieldAt({ x: 0, y: 0 });
   if (center === undefined) throw new Error("Missing center field.");
   center.temperature = 28;

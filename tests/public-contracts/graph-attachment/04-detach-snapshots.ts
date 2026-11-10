@@ -1,0 +1,15 @@
+import assert from "node:assert/strict";
+import { Agenda, World } from "city-library";
+const first = World.create();
+const second = World.create();
+const local = first.add(Agenda.create<string>());
+const foreign = second.add(Agenda.create());
+local.add({ at: 1, data: "kept" });
+const snapshot = first.agendas;
+assert.equal(Object.isFrozen(snapshot), true);
+assert.throws(() => first.delete([local, foreign]), TypeError);
+assert.equal(first.agendas[0], local);
+first.delete([local, local]);
+assert.equal(first.agendas.length, 0);
+assert.equal(snapshot[0], local);
+assert.equal(local.advance({ until: 1 })[0]?.data, "kept");

@@ -13,7 +13,7 @@ import {
   type Rule,
 } from "../models/turing-machine-2d/model.ts";
 
-describe("selected B19 SmoothLife source equation", () => {
+describe("selected SmoothLife source equation", () => {
   test("discrete Euclidean disk and annulus have exact normalizers, include self and wrap", () => {
     const m = smooth({ width: 9, height: 9, innerRadius: 1, outerRadius: 2 });
     expect(m.read().innerCount).toBe(5);
@@ -84,7 +84,7 @@ describe("selected B19 SmoothLife source equation", () => {
   });
 });
 
-describe("selected B19 bounded hex aggregation", () => {
+describe("selected bounded hex aggregation", () => {
   test("six source offset neighbors are reciprocal and bounded", () => {
     const m = hex({ width: 9, height: 9 });
     const state = m.read();
@@ -150,10 +150,10 @@ describe("selected B19 bounded hex aggregation", () => {
   });
 });
 
-describe("selected B19 Vants", () => {
+describe("selected Vants", () => {
   test("long forward/reverse trajectories exactly recover shared tape and all cardinal orientations", () => {
     for (const seed of [1, 7, 100]) {
-      const m = vants({ width: 9, height: 7, numVants: 4, seed });
+      const m = vants({ width: 9, height: 7, vantCount: 4, seed });
       const before = m.read();
       m.advance(250);
       m.reverse(250);
@@ -183,7 +183,7 @@ describe("selected B19 Vants", () => {
   });
 });
 
-describe("selected B19 two-dimensional Turing machine", () => {
+describe("selected two-dimensional Turing machine", () => {
   test("source default differs from example 1, which resets tape and clock", () => {
     const m = turing({ width: 9, height: 9, heads: 1 });
     expect(m.read().rules).toEqual([

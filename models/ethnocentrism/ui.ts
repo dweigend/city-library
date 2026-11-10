@@ -5,7 +5,7 @@ const binding = defineUI(model, {
   setup: ["seed", { field: "setup", label: "Initial population" }],
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Ethnocentrism.nlogox",
-    label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Wilensky · CC BY-NC-SA 3.0",
   },
   change: (instance, changes) => instance.setParameters(changes),
   live: {

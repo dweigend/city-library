@@ -10,7 +10,7 @@ test("birth source odd-capacity split, empty go and experiment restart", () => {
   expect(m.read().blueCount).toBe(1);
   m.advance(4);
   expect(m.read().tick).toBe(4);
-  m.experimentStep();
+  m.advanceUntilRestart();
   expect(m.read().tick).toBe(0);
   expect(m.read().output).toEqual(["red extinct after 5 generations"]);
   expect(m.read().blueCount).toBe(1);
@@ -121,7 +121,7 @@ test("observations are detached and do not draw RNG; live validation is atomic",
     birth({ carryingCapacity: 5 }),
     daisy(),
     termites({ number: 1 }),
-    shepherds({ numSheep: 5 }),
+    shepherds({ sheepCount: 5 }),
     rabbits({ number: 5 }),
   ]) {
     const s = m.read();

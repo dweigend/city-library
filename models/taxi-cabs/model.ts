@@ -21,24 +21,24 @@ interface FieldState {
   right: boolean;
   up: boolean;
   down: boolean;
-  numDirections: number;
+  directionCount: number;
   greenLightUp: boolean;
   zone: Zone;
   color: string;
 }
 type ModelField = Field<FieldState>;
 type Cab = Agent<{
-  breed: "cab";
+  group: "cab";
   who: number;
   vacancy: boolean;
   prevIntersection: number;
-  numPassengersOnboard: number;
-  numTotalMiles: number;
-  numBusinessMiles: number;
-  numDeadMiles: number;
-  numGridsTraveledCurrentTrip: number;
+  onboardPassengerCount: number;
+  totalDistanceMiles: number;
+  businessDistanceMiles: number;
+  deadheadDistanceMiles: number;
+  currentTripFieldCount: number;
   tripDistances: number[];
-  numTotalTrips: number;
+  totalTripCount: number;
   totalIncome: number;
   currentTripIncome: number;
   tripIncomes: number[];
@@ -56,14 +56,14 @@ type Cab = Agent<{
   color: string;
 }>;
 type Passenger = Agent<{
-  breed: "passenger";
+  group: "passenger";
   who: number;
   patienceToWait: number;
   beenWaiting: number;
   destination: ModelField | null;
   destinationX: number;
   destinationY: number;
-  numPassengersWaiting: number;
+  waitingPassengerCount: number;
 }>;
 
 export function create(options: Partial<TaxiParameters> = {}) {
@@ -92,9 +92,9 @@ export function create(options: Partial<TaxiParameters> = {}) {
 
   // Rules, demand phase and history belong here; World/Grid own agents and road fields.
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
-  const world = World.add({ x: 65, y: 65, boundary: "wrap" }, { random });
-  const grid = Grid.add(
+  const random = Random.create({ seed: settings.seed });
+  const world = World.create({ x: 65, y: 65, boundary: "wrap" }, { random });
+  const grid = Grid.create(
     { x: 65, y: 65, boundary: "wrap" },
     {
       state: {
@@ -105,7 +105,7 @@ export function create(options: Partial<TaxiParameters> = {}) {
         right: false,
         up: false,
         down: false,
-        numDirections: 0,
+        directionCount: 0,
         greenLightUp: false,
         zone: "res" as Zone,
         color: "#cfcfcf",
@@ -115,11 +115,11 @@ export function create(options: Partial<TaxiParameters> = {}) {
   world.add(grid);
   const cabs = () =>
     world.agents.filter(
-      (agent) => (agent as Cab | Passenger).breed === "cab",
+      (agent) => (agent as Cab | Passenger).group === "cab",
     ) as Cab[];
   const passengers = () =>
     world.agents.filter(
-      (agent) => (agent as Cab | Passenger).breed === "passenger",
+      (agent) => (agent as Cab | Passenger).group === "passenger",
     ) as Passenger[];
   const fieldId = (field: ModelField) => `${field.x},${field.y}`;
   const cabId = (cab: Cab) => `cab-${cab.who}`;
@@ -183,7 +183,7 @@ export function create(options: Partial<TaxiParameters> = {}) {
       field.down = false;
       field.right = true;
     }
-    field.numDirections =
+    field.directionCount =
       Number(field.up) +
       Number(field.down) +
       Number(field.left) +
@@ -231,25 +231,25 @@ export function create(options: Partial<TaxiParameters> = {}) {
     cab.rotate(heading - cab.heading);
   }
   function setupCabs() {
-    for (let who = 0; who < settings.numTaxicab; who++) {
+    for (let who = 0; who < settings.taxicabCount; who++) {
       const field = choose(
         roads.filter(
           (field) => grid.agentsAt(field, { source: cabs() }).length === 0,
         ),
       );
-      const cab = Agent.add(
+      const cab = Agent.create(
         {
-          breed: "cab" as const,
+          group: "cab" as const,
           who,
           vacancy: true,
           prevIntersection: 0,
-          numPassengersOnboard: 0,
-          numTotalMiles: 0,
-          numBusinessMiles: 0,
-          numDeadMiles: 0,
-          numGridsTraveledCurrentTrip: 0,
+          onboardPassengerCount: 0,
+          totalDistanceMiles: 0,
+          businessDistanceMiles: 0,
+          deadheadDistanceMiles: 0,
+          currentTripFieldCount: 0,
           tripDistances: [] as number[],
-          numTotalTrips: 0,
+          totalTripCount: 0,
           totalIncome: 0,
           currentTripIncome: 0,
           tripIncomes: [] as number[],
@@ -304,7 +304,7 @@ export function create(options: Partial<TaxiParameters> = {}) {
     changeTrafficLightColors();
     if (settings.lengthOfGreenLight === 0)
       throw new RangeError(
-        "NetLogo source modulo by zero: length-of-green-light = 0.",
+        "Green-light duration must be greater than zero.",
       );
     if (world.tick.value % settings.lengthOfGreenLight === 0) {
       rowGreen = !rowGreen;
@@ -346,9 +346,9 @@ export function create(options: Partial<TaxiParameters> = {}) {
     if (random.number() >= settings[key]) return;
     const field = choose(pickupByZone[origin]);
     const destinationField = choose(dropoffByZone[destination]);
-    const passenger = Agent.add(
+    const passenger = Agent.create(
       {
-        breed: "passenger" as const,
+        group: "passenger" as const,
         who: passengerWho++,
         patienceToWait: random.number({
           distribution: "normal",
@@ -359,7 +359,7 @@ export function create(options: Partial<TaxiParameters> = {}) {
         destination: null as ModelField | null,
         destinationX: destinationField.x,
         destinationY: destinationField.y,
-        numPassengersWaiting: 1 + Math.floor(random.number() * 4),
+        waitingPassengerCount: 1 + Math.floor(random.number() * 4),
       },
       { position: field },
     );
@@ -385,11 +385,11 @@ export function create(options: Partial<TaxiParameters> = {}) {
     }
   }
   function updateDeliveryAndIncome(cab: Cab) {
-    cab.numTotalMiles++;
-    if (cab.vacancy) cab.numDeadMiles++;
+    cab.totalDistanceMiles++;
+    if (cab.vacancy) cab.deadheadDistanceMiles++;
     else {
-      cab.numBusinessMiles++;
-      cab.numGridsTraveledCurrentTrip++;
+      cab.businessDistanceMiles++;
+      cab.currentTripFieldCount++;
       cab.currentTripIncome += settings.eachGridCost + settings.eachTickCost;
       cab.currentTripDuration = world.tick.value - cab.tickAtPickup;
     }
@@ -523,14 +523,14 @@ export function create(options: Partial<TaxiParameters> = {}) {
     const passenger = choose(waiting);
     cab.vacancy = false;
     cab.color = "#b749d4";
-    cab.numPassengersOnboard = passenger.numPassengersWaiting;
+    cab.onboardPassengerCount = passenger.waitingPassengerCount;
     cab.currentTripIncome =
       settings.firstPassengerCost +
-      (cab.numPassengersOnboard - 1) * settings.eachAdditionalPassengerCost;
+      (cab.onboardPassengerCount - 1) * settings.eachAdditionalPassengerCost;
     cab.tickAtPickup = world.tick.value;
     cab.pickupX = cab.x;
     cab.pickupY = cab.y;
-    cab.numTotalTrips++;
+    cab.totalTripCount++;
     cab.destinationX = passenger.destinationX;
     cab.destinationY = passenger.destinationY;
     passenger.delete();
@@ -543,7 +543,7 @@ export function create(options: Partial<TaxiParameters> = {}) {
   }
   function taxicabMoveRandom(cab: Cab) {
     const field = grid.fieldAt(cab)!;
-    if (field.numDirections === 1) {
+    if (field.directionCount === 1) {
       cab.prevIntersection = 0;
       if (field.right) moveRight(cab);
       else if (field.left) moveLeft(cab);
@@ -573,8 +573,8 @@ export function create(options: Partial<TaxiParameters> = {}) {
   function resetCabAfterTrip(cab: Cab) {
     cab.vacancy = true;
     cab.color = "#f5db33";
-    cab.numPassengersOnboard = 0;
-    cab.numGridsTraveledCurrentTrip = 0;
+    cab.onboardPassengerCount = 0;
+    cab.currentTripFieldCount = 0;
     cab.currentTripIncome = 0;
     cab.currentTripDuration = 0;
     highlightDestinationFields(cab, "#000000");
@@ -582,7 +582,7 @@ export function create(options: Partial<TaxiParameters> = {}) {
     cab.destinationX2 = 0;
     cab.destinationY = 0;
     cab.destinationY2 = 0;
-    // NetLogo assigns numeric zero to these flags; false preserves subsequent conditional meaning.
+    // source model assigns numeric zero to these flags; false preserves subsequent conditional meaning.
     cab.pickupOnHorizontal = false;
     cab.pickupOnVertical = false;
   }
@@ -592,7 +592,7 @@ export function create(options: Partial<TaxiParameters> = {}) {
       (cab.y === cab.destinationY || cab.y === cab.destinationY2)
     ) {
       cab.totalIncome += cab.currentTripIncome;
-      cab.tripDistances.push(cab.numGridsTraveledCurrentTrip);
+      cab.tripDistances.push(cab.currentTripFieldCount);
       cab.tripIncomes.push(cab.currentTripIncome);
       cab.tripDurations.push(cab.currentTripDuration);
       resetCabAfterTrip(cab);
@@ -678,9 +678,9 @@ export function create(options: Partial<TaxiParameters> = {}) {
   function record() {
     history.push({
       tick: world.tick.value,
-      totalMiles: cabs().reduce((sum, cab) => sum + cab.numTotalMiles, 0),
-      businessMiles: cabs().reduce((sum, cab) => sum + cab.numBusinessMiles, 0),
-      deadMiles: cabs().reduce((sum, cab) => sum + cab.numDeadMiles, 0),
+      totalMiles: cabs().reduce((sum, cab) => sum + cab.totalDistanceMiles, 0),
+      businessMiles: cabs().reduce((sum, cab) => sum + cab.businessDistanceMiles, 0),
+      deadMiles: cabs().reduce((sum, cab) => sum + cab.deadheadDistanceMiles, 0),
       waitingPassengers: passengers().length,
       occupiedCabs: cabs().filter((cab) => !cab.vacancy).length,
       totalIncome: cabs().reduce((sum, cab) => sum + cab.totalIncome, 0),
@@ -690,7 +690,7 @@ export function create(options: Partial<TaxiParameters> = {}) {
   function setParameters(values: Partial<TaxiParameters>) {
     if (
       Reflect.ownKeys(values).some((key) =>
-        ["seed", "numTaxicab"].includes(String(key)),
+        ["seed", "taxicabCount"].includes(String(key)),
       )
     ) {
       throw new TypeError("Seed and taxi population are setup-only.");
@@ -732,15 +732,15 @@ export function create(options: Partial<TaxiParameters> = {}) {
         heading: cab.heading,
         color: cab.color,
         vacancy: cab.vacancy,
-        numPassengersOnboard: cab.numPassengersOnboard,
-        numTotalMiles: cab.numTotalMiles,
-        numBusinessMiles: cab.numBusinessMiles,
-        numDeadMiles: cab.numDeadMiles,
-        numTotalTrips: cab.numTotalTrips,
+        onboardPassengerCount: cab.onboardPassengerCount,
+        totalDistanceMiles: cab.totalDistanceMiles,
+        businessDistanceMiles: cab.businessDistanceMiles,
+        deadheadDistanceMiles: cab.deadheadDistanceMiles,
+        totalTripCount: cab.totalTripCount,
         totalIncome: cab.totalIncome,
         currentTripIncome: cab.currentTripIncome,
         currentTripDuration: cab.currentTripDuration,
-        numGridsTraveledCurrentTrip: cab.numGridsTraveledCurrentTrip,
+        currentTripFieldCount: cab.currentTripFieldCount,
         destinationX: cab.destinationX,
         destinationX2: cab.destinationX2,
         destinationY: cab.destinationY,
@@ -759,7 +759,7 @@ export function create(options: Partial<TaxiParameters> = {}) {
         patienceToWait: passenger.patienceToWait,
         destinationX: passenger.destinationX,
         destinationY: passenger.destinationY,
-        numPassengersWaiting: passenger.numPassengersWaiting,
+        waitingPassengerCount: passenger.waitingPassengerCount,
       })),
       tripDistances: cabs().flatMap((cab) => cab.tripDistances),
       tripIncomes: cabs().flatMap((cab) => cab.tripIncomes),

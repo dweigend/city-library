@@ -23,7 +23,7 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
-| `numPhilosophers` | `20` | integer; ≥ 2; ≤ 40 |
+| `philosopherCount` | `20` | integer; ≥ 2; ≤ 40 |
 | `hungryChance` | `0.5` | number; ≥ 0; ≤ 1 |
 | `fullChance` | `0.5` | number; ≥ 0; ≤ 1 |
 | `cooperation` | `false` | boolean |
@@ -40,6 +40,6 @@ The [UI binding](ui.ts) presents `Philosophers`, `Tick`, `Thinking`, `Hungry`, `
 
 ## Sources and acceptance
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained NetLogo source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
 
 [Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `dining-philosophers` and links any shared checks.

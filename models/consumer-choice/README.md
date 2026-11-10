@@ -23,7 +23,7 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
-| `numConsumers` | `100` | integer; ≥ 0; ≤ 1000 |
+| `consumerCount` | `100` | integer; ≥ 0; ≤ 1000 |
 | `avgConnections` | `5` | integer; ≥ 0; ≤ 10 |
 | `initialOrangePercent` | `50` | number; ≥ 0; ≤ 100 |
 | `normInfluence` | `0.15` | number; ≥ 0; ≤ 1 |
@@ -44,6 +44,6 @@ The [UI binding](ui.ts) presents `Consumers`, `Average connections`, `Initial or
 
 ## Sources and acceptance
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained NetLogo source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
 
 [Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `consumer-choice` and links any shared checks.

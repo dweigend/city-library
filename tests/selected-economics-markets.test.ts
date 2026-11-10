@@ -15,7 +15,7 @@ import {
 import { create as stores } from "../models/hotellings-law/model.ts";
 import { create as traffic } from "../models/braess-paradox/model.ts";
 
-describe("selected B03 market and foraging source mechanisms", () => {
+describe("selected market and foraging source mechanisms", () => {
   test("Fruit traits derive from all four genome partitions and extinction stops before another tick", () => {
     const genome = Array<number>(240).fill(0);
     genome.fill(1, 0, 20);
@@ -103,7 +103,7 @@ describe("selected B03 market and foraging source mechanisms", () => {
 
   test("Bidding odd starting-money uses the native ceil integer bound", () => {
     const market = bidding({ startingMoney: 25, seed: 1 });
-    const random = Random.add({ seed: 1 });
+    const random = Random.create({ seed: 1 });
     // Source setup: 50 even-distribution sellers consume supply and ask draws.
     for (let i = 0; i < 100; i++) random.number();
     random.number(); // First buyer demand precedes its money draw.

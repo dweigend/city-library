@@ -40,7 +40,7 @@ test("Path repeats every search attempt after certain settlement and retains car
   model.setQualities(model.read().cells.map(() => 1));
   model.setFirms([{ x: 0, y: 0, heading: 0, movedIn: false }]);
   model.advance();
-  const stream = Random.add({ seed: 12 });
+  const stream = Random.create({ seed: 12 });
   for (let i = 0; i < 121 + 3 * 3; i++) stream.number(); // setup qualities, then 2 turns + acceptance per attempt
   expect(model.read().randomState).toEqual(stream.state);
   expect(model.read().counts).toEqual({ firms: 1, settled: 1, searching: 0 });
@@ -124,7 +124,7 @@ test("Cells probability endpoints consume qualifying trials but no trial for imp
   for (const probability of [0, 100]) {
     const model = cells({ seed: 19, probability, ageLimit: 0 });
     model.advance();
-    const oracle = Random.add({ seed: 19 });
+    const oracle = Random.create({ seed: 19 });
     for (let i = 0; i < 4; i++) oracle.number();
     expect(model.read().randomState).toEqual(oracle.state);
     expect(model.read().counts.on).toBe(probability === 0 ? 1 : 5);

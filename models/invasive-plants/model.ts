@@ -69,14 +69,14 @@ export const inputs: Inputs<InvasivePlantsParameters> = {
 type Seed = Agent<{ kind: "seed"; hidden: boolean }>;
 export function create(options: Partial<InvasivePlantsParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const width = 33,
     height = 33;
-  const world = World.add(
+  const world = World.create(
     { x: width, y: height, boundary: "hard" },
     { random },
   );
-  const grid = Grid.add(
+  const grid = Grid.create(
     { x: width, y: height, boundary: "hard" },
     { state: { infestation: 0, resistance: 0, hasResistanceBlock: true } },
   );
@@ -109,7 +109,7 @@ export function create(options: Partial<InvasivePlantsParameters> = {}) {
   function germinate() {
     for (const seed of random.sample(seeds(), {
       count: seeds().length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       const field = grid.fieldAt(seed)!;
       if (Math.floor(random.number() * 100) > field.resistance)
@@ -140,7 +140,7 @@ export function create(options: Partial<InvasivePlantsParameters> = {}) {
   function generate() {
     for (const field of random.sample(grid.fields, {
       count: grid.fields.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       const mean = settings.seedProductionRate * field.infestation;
       if (mean > 0) {
@@ -152,7 +152,7 @@ export function create(options: Partial<InvasivePlantsParameters> = {}) {
         );
         for (let i = 0; i < n; i++)
           world.add(
-            Agent.add(
+            Agent.create(
               { kind: "seed" as const, hidden: false },
               {
                 position: { x: field.x, y: field.y },
@@ -166,12 +166,12 @@ export function create(options: Partial<InvasivePlantsParameters> = {}) {
   function spread() {
     for (const seed of random.sample(seeds(), {
       count: seeds().length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       seed.hidden = !settings.showSeeds;
       let remaining = random.number() * settings.spreadDistance;
       const direction = geometry.direction({ heading: seed.heading });
-      // NetLogo forward performs full unit moves followed by a fractional
+      // source model forward performs full unit moves followed by a fractional
       // remainder. A blocked unit stops this seed, retaining prior progress.
       while (remaining > 0) {
         const distance = Math.min(1, remaining);

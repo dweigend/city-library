@@ -5,7 +5,7 @@ export const ui = defineUI(model, {
   setup: ["seed", "mode", "initialSheep", "initialWolves"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/WolfSheepPredation",
-    label: "Original NetLogo model · Uri Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Uri Wilensky · CC BY-NC-SA 3.0",
   },
   complete: (state) => state.done,
   change: (instance, changes) => instance.setRules(changes),

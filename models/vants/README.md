@@ -25,7 +25,7 @@ const observation = simulation.read();
 | `width` | `241` | integer; ≥ 3; ≤ 301 |
 | `height` | `241` | integer; ≥ 3; ≤ 301 |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
-| `numVants` | `1` | integer; ≥ 1; ≤ 16 |
+| `vantCount` | `1` | integer; ≥ 1; ≤ 16 |
 
 ## Actions and observations
 
@@ -39,6 +39,6 @@ The [UI binding](ui.ts) presents `Reverse step`, `Run reverse`, `Tick`, `Black c
 
 ## Sources and acceptance
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained NetLogo source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
 
 [Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `vants` and links any shared checks.

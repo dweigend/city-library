@@ -57,7 +57,7 @@ export const inputs: Inputs<AutumnParameters> = {
   },
 };
 type Organism = Agent<{
-  breed: "leaf" | "dead-leaf" | "raindrop" | "sun";
+  group: "leaf" | "dead-leaf" | "raindrop" | "sun";
   waterLevel: number;
   sugarLevel: number;
   attachedness: number;
@@ -85,18 +85,18 @@ const organismState = {
 };
 export function create(options: Partial<AutumnParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const space = { x: 35, y: 35, boundary: "hard" } as const;
-  const world = World.add(space, { random });
-  const grid = Grid.add(space, {
+  const world = World.create(space, { random });
+  const grid = Grid.create(space, {
     state: { terrain: "sky" as "sky" | "ground" | "tree" },
   });
   world.add(grid);
   const organisms = () => world.agents as readonly Organism[];
   const leaves = () =>
-    organisms().filter((organism) => organism.breed === "leaf");
+    organisms().filter((organism) => organism.group === "leaf");
   const raindrops = () =>
-    organisms().filter((organism) => organism.breed === "raindrop");
+    organisms().filter((organism) => organism.group === "raindrop");
   const bottomLine = -16;
   let stopped = false;
   const history: {
@@ -179,10 +179,10 @@ export function create(options: Partial<AutumnParameters> = {}) {
       if (field.y < -15) field.terrain = "ground";
     }
     for (let index = 0; index < settings.numberOfLeaves; index++) {
-      const leaf = Agent.add(
+      const leaf = Agent.create(
         {
           ...organismState,
-          breed: "leaf" as const,
+          group: "leaf" as const,
           chlorophyll: 50 + random.number({ min: 0, max: 50, integer: true }),
           waterLevel: 75 + random.number({ min: 0, max: 25, integer: true }),
           sugarLevel: random.number({
@@ -212,8 +212,8 @@ export function create(options: Partial<AutumnParameters> = {}) {
       )
         field.terrain = "tree";
     }
-    const sun = Agent.add(
-      { ...organismState, breed: "sun" as const },
+    const sun = Agent.create(
+      { ...organismState, group: "sun" as const },
       { position: { x: 15, y: 14 } },
     );
     world.add(sun);
@@ -225,7 +225,7 @@ export function create(options: Partial<AutumnParameters> = {}) {
   function makeWindBlow() {
     for (const leaf of random.sample(leaves(), {
       count: leaves().length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       leaf.rotate(
         (random.number({ min: 0, max: 2, integer: true }) === 1 ? 1 : -1) *
@@ -237,10 +237,10 @@ export function create(options: Partial<AutumnParameters> = {}) {
   }
   function makeRainFall() {
     for (let index = 0; index < settings.rainIntensity; index++) {
-      const drop = Agent.add(
+      const drop = Agent.create(
         {
           ...organismState,
-          breed: "raindrop" as const,
+          group: "raindrop" as const,
           amountOfWater: 10,
           size: 0.3,
         },
@@ -254,7 +254,7 @@ export function create(options: Partial<AutumnParameters> = {}) {
     }
     for (const drop of random.sample(raindrops(), {
       count: raindrops().length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     }))
       forwardWeather(drop, random.number() * 2);
   }
@@ -359,13 +359,13 @@ export function create(options: Partial<AutumnParameters> = {}) {
     makeRainFall();
     moveWater();
     for (const sun of organisms().filter(
-      (organism) => organism.breed === "sun",
+      (organism) => organism.group === "sun",
     ))
       showIntensity(sun);
     const attached = attachedLeaves();
     for (const leaf of random.sample(attached, {
       count: attached.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       adjustWater(leaf);
       adjustChlorophyll(leaf);
@@ -375,11 +375,11 @@ export function create(options: Partial<AutumnParameters> = {}) {
     }
     for (const leaf of random.sample(leaves(), {
       count: leaves().length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     }))
       fallIfNecessary(leaf);
     for (const leaf of leaves().filter((leaf) => leaf.y <= bottomLine))
-      leaf.breed = "dead-leaf";
+      leaf.group = "dead-leaf";
     for (const leaf of leaves().filter((leaf) => leaf.waterLevel < 1))
       leaf.attachedness = 0;
     for (const leaf of leaves()) {
@@ -397,7 +397,7 @@ export function create(options: Partial<AutumnParameters> = {}) {
       tick: world.tick.value,
       leaves: living.length,
       deadLeaves: organisms().filter(
-        (organism) => organism.breed === "dead-leaf",
+        (organism) => organism.group === "dead-leaf",
       ).length,
       temperature: settings.temperature,
       rain: settings.rainIntensity,
@@ -450,7 +450,7 @@ export function create(options: Partial<AutumnParameters> = {}) {
   function read() {
     const snapshot = organisms().map((organism) => ({
       id: organism.id,
-      breed: organism.breed,
+      group: organism.group,
       x: organism.x,
       y: organism.y,
       heading: organism.heading,
@@ -472,10 +472,10 @@ export function create(options: Partial<AutumnParameters> = {}) {
       height: 35,
       parameters: { ...settings },
       stopped,
-      leaves: snapshot.filter((organism) => organism.breed === "leaf"),
-      deadLeaves: snapshot.filter((organism) => organism.breed === "dead-leaf"),
-      raindrops: snapshot.filter((organism) => organism.breed === "raindrop"),
-      suns: snapshot.filter((organism) => organism.breed === "sun"),
+      leaves: snapshot.filter((organism) => organism.group === "leaf"),
+      deadLeaves: snapshot.filter((organism) => organism.group === "dead-leaf"),
+      raindrops: snapshot.filter((organism) => organism.group === "raindrop"),
+      suns: snapshot.filter((organism) => organism.group === "sun"),
       cells: grid.fields.map((field) => ({
         id: field.id,
         x: field.x,

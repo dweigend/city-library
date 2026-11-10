@@ -67,7 +67,7 @@ type Rabbit = Agent<{
 }>;
 export function create(options: Partial<Parameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({
+  const random = Random.create({
     seed: settings.seed,
   });
   const space = {
@@ -75,10 +75,10 @@ export function create(options: Partial<Parameters> = {}) {
     y: 41,
     boundary: "wrap" as const,
   };
-  const world = World.add(space, {
+  const world = World.create(space, {
     random,
   });
-  const grid = Grid.add(space, {
+  const grid = Grid.create(space, {
     state: {
       cover: "empty" as "empty" | "grass" | "weeds",
     },
@@ -94,7 +94,7 @@ export function create(options: Partial<Parameters> = {}) {
   function grow() {
     for (const f of random.sample(grid.fields, {
       count: grid.fields.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     }))
       if (f.cover === "empty") {
         if (random.number() * 1000 < settings.weedsGrowRate) f.cover = "weeds";
@@ -115,7 +115,7 @@ export function create(options: Partial<Parameters> = {}) {
   grow();
   for (let i = 0; i < settings.number; i++)
     world.add(
-      Agent.add(
+      Agent.create(
         {
           energy: Math.floor(random.number() * 10),
         },
@@ -136,7 +136,7 @@ export function create(options: Partial<Parameters> = {}) {
     const old = population();
     for (const a of random.sample(old, {
       count: old.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       a.rotate(Math.floor(random.number() * 50));
       a.rotate(-Math.floor(random.number() * 50));

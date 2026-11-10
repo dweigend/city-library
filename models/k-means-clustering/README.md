@@ -23,9 +23,9 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer |
-| `numClusters` | `7` | integer; ≥ 1; ≤ 14 |
-| `numCentroids` | `7` | integer; ≥ 1; ≤ 14 |
-| `numDataPoints` | `138` | integer; ≥ 2; ≤ 1000 |
+| `clusterCount` | `7` | integer; ≥ 1; ≤ 14 |
+| `centroidCount` | `7` | integer; ≥ 1; ≤ 14 |
+| `dataPointCount` | `138` | integer; ≥ 2; ≤ 1000 |
 
 ## Actions and observations
 
@@ -39,6 +39,6 @@ The [UI binding](ui.ts) presents `Requested points`, `Generated clusters / plot 
 
 ## Sources and acceptance
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained NetLogo source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
 
 [Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `k-means-clustering` and links any shared checks.

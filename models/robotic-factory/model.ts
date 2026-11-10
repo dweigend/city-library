@@ -77,9 +77,9 @@ export interface EntitySnapshot {
 export function create(options: Partial<FactoryParameters> = {}) {
   let settings = parameters(inputs, options);
   const space = { x: 33, y: 33, boundary: "hard" as const },
-    random = Random.add({ seed: settings.seed }),
-    world = World.add(space, { random }),
-    grid = Grid.add(space);
+    random = Random.create({ seed: settings.seed }),
+    world = World.create(space, { random }),
+    grid = Grid.create(space);
   world.add(grid);
   let entities: Entity[] = [],
     nextId = 0,
@@ -114,7 +114,7 @@ export function create(options: Partial<FactoryParameters> = {}) {
     initial: Partial<EntityState> = {},
   ) {
     const a = world.add(
-      Agent.add<EntityState>(
+      Agent.create<EntityState>(
         {
           sourceId: nextId++,
           kind,
@@ -148,7 +148,7 @@ export function create(options: Partial<FactoryParameters> = {}) {
   const shuffle = (items: readonly Entity[]) =>
     random.sample(items, {
       count: items.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     });
   function one(items: readonly Entity[]) {
     return items.length

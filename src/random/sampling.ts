@@ -5,7 +5,7 @@ export interface SampleOptions<T> {
   replace?: boolean;
   weight?: (value: T) => number;
   order?: "draw" | "source";
-  compatibility?: "legacy-shuffle";
+  algorithm?: "fisher-yates-descending";
 }
 
 function synchronousWeight(value: unknown): asserts value is ((item: unknown) => number) | undefined {
@@ -16,14 +16,14 @@ function synchronousWeight(value: unknown): asserts value is ((item: unknown) =>
 }
 
 export function sample<T>(source: Iterable<T>, options: unknown, draw: () => number): T[] {
-  const values = validateOptions(options, ["count", "replace", "weight", "order", "compatibility"]);
+  const values = validateOptions(options, ["count", "replace", "weight", "order", "algorithm"]);
   const count = values.count === undefined ? 1 : values.count;
   const replace = values.replace === undefined ? false : values.replace;
   const order = values.order === undefined ? "draw" : values.order;
   if (typeof count !== "number" || typeof replace !== "boolean") throw new TypeError("Invalid sampling option types.");
   if (!Number.isSafeInteger(count) || count < 0) throw new RangeError("Count must be a nonnegative safe integer.");
   if (order !== "draw" && order !== "source") throw new TypeError("Invalid sample ordering.");
-  if (values.compatibility !== undefined && values.compatibility !== "legacy-shuffle") throw new TypeError("Unknown sampling compatibility.");
+  if (values.algorithm !== undefined && values.algorithm !== "fisher-yates-descending") throw new TypeError("Unknown sampling algorithm.");
   synchronousWeight(values.weight);
   if (source == null) throw new TypeError("Expected an iterable population.");
   const iterator = (source as { [Symbol.iterator]?: unknown })[Symbol.iterator];
@@ -31,8 +31,8 @@ export function sample<T>(source: Iterable<T>, options: unknown, draw: () => num
   const items = Array.from<T>({
     [Symbol.iterator]() { return Reflect.apply(iterator, source, []) as Iterator<T>; },
   });
-  if (values.compatibility === "legacy-shuffle") {
-    if (count !== items.length || replace || Object.hasOwn(values, "weight") || Object.hasOwn(values, "order")) throw new TypeError("Legacy shuffle requires the complete source without weights or order.");
+  if (values.algorithm === "fisher-yates-descending") {
+    if (count !== items.length || replace || Object.hasOwn(values, "weight") || Object.hasOwn(values, "order")) throw new TypeError("Descending Fisher-Yates shuffle requires the complete source without weights or order.");
     for (let index = items.length - 1; index > 0; index -= 1) {
       const chosen = Math.floor(draw() * (index + 1));
       [items[index], items[chosen]] = [items[chosen]!, items[index]!];

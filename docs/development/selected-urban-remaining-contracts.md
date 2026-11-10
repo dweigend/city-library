@@ -20,7 +20,7 @@ Procedures, Widgets and Info define the source baseline. **No extensions, includ
 
 Use one World, attached Grid and Random per model; Agent owns each mobile individual's coordinates/kind/state, Fields own all land/potential/utility caches. World.tick is the only scientific clock. Kind changes preserve Agent identity. Temporary activation snapshots/staged arrays/canonical-neighbor projections do not own a competing population or topology. Reads return deeply frozen detached records and consume no RNG; IDs are opaque.
 
-Existing public closure: Grid.fields/neighbors/fieldAt/agentsAt/diffuse; Agent.add/move/rotate/distanceTo/copy/delete; World.add/agents/tick; run; Random.number uniform and sample; stats.histogram. Toroidal centers and hard geometry come from public Grid/Space, not a private offset/distance engine. Structure averaging should stage the explicit `(self+sumFaces)/5` expression to preserve its equation/grouping; it is not global normalization. Generic diffuse(rate0.8) is mathematically related but has a different floating operation schedule.
+Existing public closure: Grid.fields/neighbors/fieldAt/agentsAt/diffuse; Agent.create/move/rotate/distanceTo/copy/delete; World.create/agents/tick; run; Random.number uniform and sample; stats.histogram. Toroidal centers and hard geometry come from public Grid/Space, not a private offset/distance engine. Structure averaging should stage the explicit `(self+sumFaces)/5` expression to preserve its equation/grouping; it is not global normalization. Generic diffuse(rate0.8) is mathematically related but has a different floating operation schedule.
 
 The shared normal sampler, statistical summary and pure spatial probes supply the reusable operations these models need:
 
@@ -67,7 +67,7 @@ Live setRules accepts maxAttraction,seekerSearchAngle,seekerPatience,waitBetween
 
 ### Economic Disparity
 
-89² **hard** world,centers−44..44. Setup job at(0,0),all Fields price=quality40,sdDistance=nearestJobDistance (no0.01 offset initially). Create five rich then five poor at continuous x/y=`5-random-float10`; sequential residents immediately multiply price and quality in nested radius shells, so setup land is not uniform despite Info's initial summary. Store jobs/rich/poor as canonical Agent kinds, utility and age/insertion order on their owner; no separate breed registry or who-ID parsing.
+89² **hard** world,centers−44..44. Setup job at(0,0),all Fields price=quality40,sdDistance=nearestJobDistance (no0.01 offset initially). Create five rich then five poor at continuous x/y=`5-random-float10`; sequential residents immediately multiply price and quality in nested radius shells, so setup land is not uniform despite Info's initial summary. Store jobs/rich/poor as canonical Agent kinds, utility and age/insertion order on their owner; no separate group registry or who-ID parsing.
 
 Live defaults/bounds: numberOfTests15(integer0..30);residentsPerJob100(0..500 step10);poorPerStep5/richPerStep5(integer0..15);poorPricePriority0/richQualityPriority0(−1..1 step0.1);maxJobs10(integer5..20);deathRate4(integer0..15). View mode starts quality; source price/quality/distance/poor-utility/rich-utility buttons update the display immediately without a scientific tick.
 

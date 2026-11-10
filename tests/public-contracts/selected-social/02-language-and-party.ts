@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { create as language } from '../../../models/language-change/model.ts';
 import { create as party } from '../../../models/party/model.ts';
-const grammar = language({ numNodes: 10, percentGrammar1: 0, updateAlgorithm: 'threshold', thresholdVal: 0, sinkState1: false });
+const grammar = language({ nodeCount: 10, percentGrammar1: 0, updateAlgorithm: 'threshold', thresholdVal: 0, sinkState1: false });
 assert.equal(grammar.read().nodes.length, 10); assert.equal(grammar.read().edges.length, 9);
 const edges = grammar.read().edges;
 grammar.advance(); assert.ok(grammar.read().nodes.every(n => n.state === 1));
@@ -11,7 +11,7 @@ grammar.setParameters({ percentGrammar1: 100, updateAlgorithm: 'reward' });
 grammar.redistributeGrammars(); assert.ok(grammar.read().nodes.every(n => n.state === 1 && n.origState === 1 && n.spokenState === 1));
 grammar.advance(3); assert.ok(grammar.read().nodes.every(n => n.state === 1));
 // Group happiness is computed before migration and retained until the next call.
-const gathering = party({ numGroups: 5, number: 0, tolerance: 0 });
+const gathering = party({ groupCount: 5, number: 0, tolerance: 0 });
 gathering.setGroups([['male','female'], [], [], [], []]);
 assert.equal(gathering.read().happyCount, 0); assert.equal(gathering.read().boringGroups, 0);
 gathering.advance(); assert.equal(gathering.read().tick, 1);

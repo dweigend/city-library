@@ -40,4 +40,4 @@ f.setScenario({robots:[{...current,x:room.x,y:room.y,product:1,energy:0,destinat
 f.advance();current=f.read().robots.find(x=>x.id===robot.id)!;
 assert.equal(current.product,0);assert.equal(current.energy,3); // movement loses2 then recharge+5.
 assert.equal(f.read().tick,3);
-console.log('B18 anisotropic energy, source acceptance/cooling and factory ordering/quirks passed');
+console.log('anisotropic energy, source acceptance/cooling and factory ordering/quirks passed');

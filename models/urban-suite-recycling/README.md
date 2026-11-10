@@ -23,8 +23,8 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
-| `numRecyclers` | `25` | integer; ≥ 0; ≤ 50 |
-| `numWastefuls` | `25` | integer; ≥ 0; ≤ 50 |
+| `recyclerCount` | `25` | integer; ≥ 0; ≤ 50 |
+| `wastefulCount` | `25` | integer; ≥ 0; ≤ 50 |
 | `maxStoredEnergy` | `50` | integer; ≥ 10; ≤ 100 |
 | `recyclingWasteCost` | `0.5` | number; ≥ 0; ≤ 2 |
 | `resourceRegeneration` | `25` | integer; ≥ 0; ≤ 100 |
@@ -43,6 +43,6 @@ The [UI binding](ui.ts) presents `Recyclers`, `Wastefuls`, `Maximum energy`, `Wa
 
 ## Sources and acceptance
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained NetLogo source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
 
 [Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `urban-suite-recycling` and links any shared checks.

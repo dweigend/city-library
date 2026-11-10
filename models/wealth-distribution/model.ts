@@ -84,10 +84,10 @@ export function create(options: Partial<WealthParameters> = {}) {
   let settings = parameters(inputs, options);
   if (settings.minLife > settings.maxLife)
     throw new RangeError("Minimum life cannot exceed maximum life.");
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const space = { x: 51, y: 51, boundary: "wrap" as const };
-  const world = World.add(space, { random });
-  const grid = Grid.add(space, { state: { grain: 0, capacity: 0 } });
+  const world = World.create(space, { random });
+  const grid = Grid.create(space, { state: { grain: 0, capacity: 0 } });
   world.add(grid);
   const fields = grid.fields;
   const integer = (upper: number) =>
@@ -117,7 +117,7 @@ export function create(options: Partial<WealthParameters> = {}) {
   }
   for (let i = 0; i < settings.people; i += 1) {
     const field = random.sample(fields)[0]!;
-    const person = Agent.add(
+    const person = Agent.create(
       { age: 0, wealth: 0, life: 1, metabolism: 1, vision: 1 },
       { position: { x: field.x, y: field.y } },
     );

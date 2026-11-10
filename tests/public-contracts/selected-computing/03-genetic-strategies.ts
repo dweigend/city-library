@@ -32,4 +32,4 @@ r.advance();assert.equal(r.read().tick,1); // real20×100 fitness evaluation, to
 r.showEnvironment();assert.equal(r.read().stepCounter,1);
 r.trialStep();assert.equal(r.read().stepCounter,2);
 r.showStrategies();assert.equal(r.read().robot,null);
-console.log('B18 tournament genetics, all-ones stop and actual Robby strategy actions passed');
+console.log('tournament genetics, all-ones stop and actual Robby strategy actions passed');

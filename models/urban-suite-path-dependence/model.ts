@@ -28,9 +28,9 @@ interface PathSample { readonly tick: number; readonly firms: number; readonly s
 export function create(options: Partial<PathParameters> = {}) {
   let settings = parameters(inputs, options);
   const width = 11, height = 11;
-  const random = Random.add({ seed: settings.seed });
-  const world = World.add({ x: width, y: height, boundary: "wrap" }, { random });
-  const grid = Grid.add({ x: width, y: height, boundary: "wrap" }, { state: { quality: 0 } });
+  const random = Random.create({ seed: settings.seed });
+  const world = World.create({ x: width, y: height, boundary: "wrap" }, { random });
+  const grid = Grid.create({ x: width, y: height, boundary: "wrap" }, { state: { quality: 0 } });
   world.add(grid);
   const fields = grid.fields;
   const firms = () => world.agents as readonly Firm[];
@@ -38,10 +38,10 @@ export function create(options: Partial<PathParameters> = {}) {
   const history: Readonly<PathSample>[] = [];
   let largestPopulation = 0;
   const integer = (upper: number) => Math.floor(random.number() * upper);
-  const activation = <T>(snapshot: readonly T[]) => random.sample(snapshot, { count: snapshot.length, compatibility: "legacy-shuffle" });
+  const activation = <T>(snapshot: readonly T[]) => random.sample(snapshot, { count: snapshot.length, algorithm: "fisher-yates-descending" });
 
   function regionalPopulation(at: { readonly x: number; readonly y: number }) {
-    // Source movement remains on exact patch centers. At radius0 the public
+    // Source movement remains on exact field centers. At radius0 the public
     // canonical occupancy query is the same all-firm/self-inclusive population.
     if (settings.regionSize === 0) return grid.agentsAt(grid.fieldAt(at)!).length;
     return firms().filter(firm => firm.distanceTo(at, { space: world.space }) <= settings.regionSize).length;
@@ -61,7 +61,7 @@ export function create(options: Partial<PathParameters> = {}) {
     if (history.length > 1001) history.splice(1, 1);
   }
   function immigrate(position: { readonly x: number; readonly y: number }) {
-    const firm = Agent.add({ movedIn: false }, { position, orientation: { heading: integer(4) * 90 } });
+    const firm = Agent.create({ movedIn: false }, { position, orientation: { heading: integer(4) * 90 } });
     world.add(firm);
     return firm;
   }
@@ -73,7 +73,7 @@ export function create(options: Partial<PathParameters> = {}) {
     firm.rotate(integer(2) * 90);
     firm.rotate(-integer(2) * 90);
     firm.move(1);
-    // Eliminate trig roundoff while retaining the source's cardinal patch walk.
+    // Eliminate trig roundoff while retaining the source's cardinal field walk.
     firm.move({ to: grid.fieldAt(firm)! });
   }
   function search(firm: Firm) {
@@ -100,14 +100,14 @@ export function create(options: Partial<PathParameters> = {}) {
 
   if (settings.distribute) {
     if (settings.initialFirms > fields.length) {
-      // The first source repeat fills all patches; subsequent empty repeats do nothing.
+      // The first source repeat fills all fields; subsequent empty repeats do nothing.
       for (const field of activation(fields)) immigrate(field);
     } else warnings.push("Can't distribute, fewer fields than people.");
   } else {
     for (let i = 0; i < settings.initialFirms; i++) {
       const heading = integer(4) * 90;
       const x = integer(width) - 5, y = integer(height) - 5;
-      world.add(Agent.add({ movedIn: false }, { position: { x, y }, orientation: { heading } }));
+      world.add(Agent.create({ movedIn: false }, { position: { x, y }, orientation: { heading } }));
     }
   }
   updateLargestPopulation();
@@ -145,7 +145,7 @@ export function create(options: Partial<PathParameters> = {}) {
         copied.push({ x: firm.x, y: firm.y, heading: firm.heading, movedIn: firm.movedIn });
       }
       for (const firm of firms()) firm.delete();
-      for (const firm of copied) world.add(Agent.add({ movedIn: firm.movedIn }, { position: { x: firm.x, y: firm.y }, orientation: { heading: firm.heading } }));
+      for (const firm of copied) world.add(Agent.create({ movedIn: firm.movedIn }, { position: { x: firm.x, y: firm.y }, orientation: { heading: firm.heading } }));
       updateLargestPopulation(); record();
     },
     setQualities(values: readonly number[]) {

@@ -4,7 +4,7 @@ import { Agent, Grid, World, topology, type PlanarPolygon } from "city-library";
 test("layout Fields retain canonical owner and independent direct state", () => {
   const layout = topology.square({ columns: 2, rows: 1, cellSize: 2 });
   const initial = { temperature: 10, samples: [1], nested: { enabled: true } };
-  const grid = Grid.add({ layout, state: initial });
+  const grid = Grid.create({ layout, state: initial });
   const first = grid.fields[0]!;
   const second = grid.fields[1]!;
   expect(grid.layout).toBe(layout);
@@ -24,24 +24,24 @@ test("layout Fields retain canonical owner and independent direct state", () => 
   expect(grid.fieldAt({ x: 4.1, y: 1 })).toBeUndefined();
   expect(grid.neighbors(first)).toEqual([second]);
   expect("space" in grid || "cellSize" in grid || "diffuse" in grid).toBe(false);
-  expect(Reflect.set(first, "grid", Grid.add())).toBe(false);
+  expect(Reflect.set(first, "grid", Grid.create())).toBe(false);
   expect(first.grid).toBe(grid);
 });
 
 test("authored Field position uses polygon area rather than a regular address", () => {
   const polygon: PlanarPolygon = { type: "Polygon", coordinates: [[[2, 4], [8, 4], [2, 10], [2, 4]]] };
-  const grid = Grid.add({ layout: topology.fromPolygons({ polygons: [polygon] }), state: {} });
+  const grid = Grid.create({ layout: topology.fromPolygons({ polygons: [polygon] }), state: {} });
   expect([grid.fields[0]!.x, grid.fields[0]!.y]).toEqual([4, 6]);
   expect(grid.fieldAt(grid.fields[0]!)).toBe(grid.fields[0]!);
 });
 
 test("layout occupancy follows current positions, canonical identities and admission order", () => {
   const layout = topology.hex({ columns: 3, rows: 2 });
-  const world = World.add();
-  const grid = world.add(Grid.add({ layout, state: { value: 0 } }));
+  const world = World.create();
+  const grid = world.add(Grid.create({ layout, state: { value: 0 } }));
   const firstField = grid.fields[0]!;
   const secondField = grid.fields[1]!;
-  const first = world.add(Agent.add({ label: "first" }, { position: firstField }));
+  const first = world.add(Agent.create({ label: "first" }, { position: firstField }));
   const second = world.add(first.copy());
   const saved = grid.agentsAt(firstField);
   expect(saved).toEqual([first, second]);
@@ -65,14 +65,14 @@ test("layout occupancy follows current positions, canonical identities and admis
 });
 
 test("layout occupancy invalidates incompatible sources and rebuilds after detach", () => {
-  const firstWorld = World.add();
-  const secondWorld = World.add();
-  const grid = firstWorld.add(Grid.add({ layout: topology.square({ columns: 1, rows: 1 }), state: {} }));
+  const firstWorld = World.create();
+  const secondWorld = World.create();
+  const grid = firstWorld.add(Grid.create({ layout: topology.square({ columns: 1, rows: 1 }), state: {} }));
   const field = grid.fields[0]!;
-  const first = firstWorld.add(Agent.add({}, { position: field }));
-  const second = secondWorld.add(Agent.add({}, { position: field }));
+  const first = firstWorld.add(Agent.create({}, { position: field }));
+  const second = secondWorld.add(Agent.create({}, { position: field }));
   expect(grid.agentsAt(field)).toEqual([first]);
-  const incompatible = firstWorld.add(Agent.add({}, { position: { x: 0, y: 0, z: 0 } }));
+  const incompatible = firstWorld.add(Agent.create({}, { position: { x: 0, y: 0, z: 0 } }));
   expect(() => grid.agentsAt(field)).toThrow(TypeError);
   expect(grid.agentsAt(field, { source: [first] })).toEqual([first]);
   expect(() => grid.agentsAt(field, { source: [first, incompatible] })).toThrow(TypeError);
@@ -92,32 +92,32 @@ test("layout occupancy invalidates incompatible sources and rebuilds after detac
 
 test("layout Grid admission checks actual geometry without fabricated Space", () => {
   const layout = topology.square({ columns: 2, rows: 1 });
-  const grid = Grid.add({ layout, state: {} });
-  const adequate = World.add({ x: 4, y: 2 });
+  const grid = Grid.create({ layout, state: {} });
+  const adequate = World.create({ x: 4, y: 2 });
   adequate.add(grid);
   expect(adequate.grids[0]).toBe(grid);
   adequate.delete(grid);
-  const small = World.add({ x: 2, y: 2 });
-  const wrap = World.add({ x: 10, y: 10, boundary: "wrap" });
-  const volume = World.add({ x: 10, y: 10, z: 10 });
+  const small = World.create({ x: 2, y: 2 });
+  const wrap = World.create({ x: 10, y: 10, boundary: "wrap" });
+  const volume = World.create({ x: 10, y: 10, z: 10 });
   for (const world of [small, wrap, volume]) {
     expect(() => world.add(grid)).toThrow(TypeError);
     expect(world.grids).toHaveLength(0);
   }
-  const other = World.add();
+  const other = World.create();
   other.add(grid);
   expect(() => adequate.add(grid)).toThrow(TypeError);
   expect(adequate.grids).toHaveLength(0);
-  const agent = Agent.add();
+  const agent = Agent.create();
   expect(() => adequate.add([agent, grid])).toThrow(TypeError);
   expect(agent.world).toBeUndefined();
 });
 
 test("layout Grid rejects malformed options and foreign canonical Fields", () => {
   const layout = topology.square({ columns: 1, rows: 1 });
-  const grid = Grid.add({ layout, state: {} });
-  const foreign = Grid.add({ layout, state: {} });
-  const callAdd = (...args: unknown[]) => Reflect.apply(Grid.add, Grid, args);
+  const grid = Grid.create({ layout, state: {} });
+  const foreign = Grid.create({ layout, state: {} });
+  const callAdd = (...args: unknown[]) => Reflect.apply(Grid.create, Grid, args);
   expect(() => callAdd({ layout, state: {} }, {})).toThrow(TypeError);
   expect(() => callAdd({ layout })).toThrow(TypeError);
   expect(() => callAdd({ layout, state: {}, cellSize: 1 })).toThrow(TypeError);

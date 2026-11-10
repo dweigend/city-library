@@ -5,13 +5,13 @@ import { polarGaussian } from "../src/random/normal.ts";
 const normal = { distribution: "normal" } as const;
 
 test("normal draws reject the first seed1 pair and cache the second pair's standard companion", () => {
-  const oracle = Random.add({ seed: 1 });
+  const oracle = Random.create({ seed: 1 });
   const [a, b, c, d] = Array.from({ length: 4 }, () => 2 * oracle.number() - 1);
   expect(a! * a! + b! * b!).toBeGreaterThan(1);
   const radius = c! * c! + d! * d!;
   expect(radius).toBeLessThan(1);
   const factor = Math.sqrt(-2 * Math.log(radius) / radius);
-  const random = Random.add({ seed: 1 });
+  const random = Random.create({ seed: 1 });
   expect(random.number(normal)).toBe(c! * factor);
   expect(random.state.continuation.word).toBe(oracle.state.continuation.word);
   expect(random.state.continuation.gaussian).toBe(d! * factor);
@@ -34,7 +34,7 @@ test("polar rejection excludes origin and unit boundary and has a consumed-attem
 });
 
 test("normal parameters validate fully before touching a pending cache or invoking getters", () => {
-  const random = Random.add({ seed: 17 });
+  const random = Random.create({ seed: 17 });
   random.number(normal);
   const before = random.state;
   let accessed = 0;
@@ -59,10 +59,10 @@ test("normal parameters validate fully before touching a pending cache or invoki
 });
 
 test("copy and JSON continuation retain an unscaled companion across uniform and sample draws", () => {
-  const random = Random.add({ seed: 57 });
+  const random = Random.create({ seed: 57 });
   random.number({ ...normal, mean: 100, deviation: 7 });
   const checkpoint = random.state;
-  const copied = random.copy(), restored = Random.add({ seed: 0 });
+  const copied = random.copy(), restored = Random.create({ seed: 0 });
   restored.state = JSON.parse(JSON.stringify(checkpoint)) as RandomState;
   const cached = checkpoint.continuation.gaussian!;
   random.number(); random.sample(["only"], { count: 1 });
@@ -75,7 +75,7 @@ test("copy and JSON continuation retain an unscaled companion across uniform and
 });
 
 test("nested local scopes use the main cached checkpoint and restore word/cache on every exit", () => {
-  const random = Random.add({ seed: 99 });
+  const random = Random.create({ seed: 99 });
   random.number(normal);
   const before = random.state, control = random.copy();
   random.local(() => {
@@ -92,24 +92,24 @@ test("nested local scopes use the main cached checkpoint and restore word/cache 
   random.number(normal);
   expect(random.state.continuation.gaussian).not.toBeNull();
   random.reseed(99);
-  expect(random.state).toEqual(Random.add({ seed: 99 }).state);
+  expect(random.state).toEqual(Random.create({ seed: 99 }).state);
 });
 
 test("finite output overflow consumes its sample and does not rewind words or companion", () => {
-  const cached = Random.add({ seed: 1 });
+  const cached = Random.create({ seed: 1 });
   const initial = cached.state;
   cached.state = { ...initial, continuation: { ...initial.continuation, gaussian: 2 } };
   expect(() => cached.number({ ...normal, mean: Number.MAX_VALUE, deviation: Number.MAX_VALUE })).toThrow(RangeError);
   expect(cached.state.continuation.word).toBe(initial.continuation.word);
   expect(cached.state.continuation.gaussian).toBeNull();
-  const drawn = Random.add({ seed: 1 });
+  const drawn = Random.create({ seed: 1 });
   expect(() => drawn.number({ ...normal, mean: Number.MAX_VALUE, deviation: Number.MAX_VALUE })).toThrow(RangeError);
   expect(drawn.state.continuation.word).not.toBe(initial.continuation.word);
   expect(drawn.state.continuation.gaussian).not.toBeNull();
 });
 
 test("a deterministic normal sample has finite values and plausible first two moments", () => {
-  const random = Random.add({ seed: 2026 });
+  const random = Random.create({ seed: 2026 });
   let sum = 0, squareSum = 0, finite = true;
   const count = 50_000;
   for (let i = 0; i < count; i++) {

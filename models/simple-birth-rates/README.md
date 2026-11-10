@@ -31,14 +31,14 @@ const observation = simulation.read();
 
 Use `advance(...)` for progress and `read()` for observations; the model defines how work advances its tick.
 
-Other instance procedures: `experimentStep`, `setupExperiment`, `setRules`. See their typed arguments in [model.ts](model.ts).
+Other instance procedures: `advanceUntilRestart`, `initializePopulation`, `setRules`. See their typed arguments in [model.ts](model.ts).
 
 Model-specific `read()` fields include `agents`, `output`.
 
-The [UI binding](ui.ts) presents `Run experiment`, `Repeat experiment`, `Setup experiment`, `Generation`, `Reds`, `Blues`, `Population`, `Populations`, `Experiment output`.
+The [UI binding](ui.ts) presents `Advance population`, `Repeat experiment`, `Initialize population`, `Generation`, `Reds`, `Blues`, `Population`, `Populations`, `Experiment output`.
 
 ## Sources and acceptance
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained NetLogo source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
 
 [Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `simple-birth-rates` and links any shared checks.

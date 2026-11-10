@@ -29,12 +29,12 @@ function plotHistogram(values: readonly number[]) {
 }
 export function create(options: Partial<Parameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
-  const grid = Grid.add(
+  const random = Random.create({ seed: settings.seed });
+  const grid = Grid.create(
     { x: 31, y: 31, boundary: "wrap" },
     { state: { active: false } },
   );
-  const world = World.add(grid.space, { random });
+  const world = World.create(grid.space, { random });
   world.add(grid);
   const fields = grid.fields;
   let ranger = 0,
@@ -61,7 +61,7 @@ export function create(options: Partial<Parameters> = {}) {
   function sproutPerson(x: number, y: number) {
     const field = grid.fieldAt({ x, y })!;
     world.add(
-      Agent.add(
+      Agent.create(
         { sourceIndex: nextSourceIndex++, chosen: false },
         { position: field },
       ),
@@ -198,7 +198,7 @@ export function create(options: Partial<Parameters> = {}) {
         sums: Object.freeze([...sums]),
         meanHistogram: plotHistogram(means),
         sumHistogram: plotHistogram(sums),
-        numSamples: means.length,
+        sampleCount: means.length,
         expectedValue:
           settings.showEV && people().length
             ? people().reduce((a, p) => a + p.x + 15, 0) / people().length

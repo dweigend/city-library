@@ -1,5 +1,5 @@
 /** Headless adaptation of Wilensky (2007), CC BY-NC-SA 3.0; see NOTICE.md.
- * Explicit target schedule: legacy-shuffled asks, integer birth headings, omitted
+ * Explicit target schedule: fisher-yates-descendingd asks, integer birth headings, omitted
  * overwritten default-color draws; CLEAR/display are RNG neutral. */
 import { Agent, Grid, Random, World, geometry, stats } from "city-library";
 import type { RandomState, Field, Position } from "city-library";
@@ -497,9 +497,9 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
   // One factory owns globals and observations; World/Grid own canonical agents and fields.
   let settings = parameters(inputs, options);
   const space = { x: 171, y: 115, boundary: "hard" as const };
-  const random = Random.add({ seed: settings.seed });
-  const world = World.add(space, { random });
-  const grid = Grid.add(space, { state: fieldDefaults() });
+  const random = Random.create({ seed: settings.seed });
+  const world = World.create(space, { random });
+  const grid = Grid.create(space, { state: fieldDefaults() });
   world.add(grid);
   const fields = grid.fields;
   const neighbors = new Map(
@@ -513,11 +513,11 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
     warnings: string[] = [];
   let lastFailure: FailedCall | null = null;
   const all = () => world.agents as readonly ModelAgent[];
-  const breed = (kind: Kind) => all().filter((a) => a.kind === kind);
+  const group = (kind: Kind) => all().filter((a) => a.kind === kind);
   const ask = <T>(items: readonly T[], action: (item: T) => void) => {
     for (const item of random.sample(items, {
       count: items.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     }))
       if (
         !(typeof item === "object" && item !== null && "alive" in item) ||
@@ -568,7 +568,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
     return result;
   }
   const nearAgents = (a: Position, r: number, kind: Kind) =>
-    breed(kind).filter((b) => distance(a, b) <= r);
+    group(kind).filter((b) => distance(a, b) <= r);
   const at = (f: ModelField, kind: Kind) =>
     grid.agentsAt(f).filter((a) => (a as ModelAgent).kind === kind) as ModelAgent[];
   function sample<T>(items: readonly T[], count: number): T[] {
@@ -668,7 +668,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
         )
           Object.assign(scalar, { [key]: parent[key] });
     }
-    const a = Agent.add(scalar, {
+    const a = Agent.create(scalar, {
       position: { x: p.x, y: p.y },
       orientation: { heading: parent ? parent.heading : integer(360) },
     });
@@ -707,10 +707,10 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
     const f = here(a);
     const works = a.works === 0 ? [] : a.works;
     const workplace = one(
-      breed("employment-center").filter((w) => works.includes(w)),
+      group("employment-center").filter((w) => works.includes(w)),
     );
     const service = required(
-      one(breed("service-center")),
+      one(group("service-center")),
       "get-costs service distance",
     );
     if (!workplace)
@@ -729,7 +729,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
       8;
   }
   function colorMigrants(expansion = false) {
-    for (const a of breed("migrant")) {
+    for (const a of group("migrant")) {
       if (settings.colorCode) {
         const colors = { oaxaca: 135, jalisco: 25, zacatecas: 105, mexico: 55 };
         if (typeof a.origin === "string") a.colorNumber = colors[a.origin];
@@ -829,7 +829,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
           a.label = a.birthOrdinal + 1;
           heading(
             a,
-            normal(a.label * (360 / breed("first-builder").length), 20),
+            normal(a.label * (360 / group("first-builder").length), 20),
           );
           a.energy = normal(75, 15);
           a.blockSize = round(normal(2, 0.15));
@@ -839,17 +839,17 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
         });
       },
     );
-    ask(breed("service-center"), (s) =>
+    ask(group("service-center"), (s) =>
       ask(
         at(here(s), "first-builder"),
         (b) => (b.origin = { kind: "services", agents: [s] }),
       ),
     );
     if (settings.serviceCenters > 1)
-      ask(breed("service-center"), (s) => {
+      ask(group("service-center"), (s) => {
         const b = required(
           one(
-            breed("first-builder").filter(
+            group("first-builder").filter(
               (b) =>
                 typeof b.origin === "object" &&
                 b.origin.kind === "services" &&
@@ -859,7 +859,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
           "towards-other-centers road",
         );
         const other = required(
-          one(breed("service-center").filter((o) => o !== s)),
+          one(group("service-center").filter((o) => o !== s)),
           "towards-other-centers destination",
         );
         b.rotate({ towards: other });
@@ -908,7 +908,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
     const serviceDistance = () =>
       distance(
         a,
-        required(one(breed("service-center")), "builder service distance"),
+        required(one(group("service-center")), "builder service distance"),
       );
     if (f.ctr === "+" && serviceDistance() < 60) a.energy -= 0.5;
     if (f.ctr !== "+") {
@@ -994,7 +994,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
       });
       const f = one(
         candidates.filter(
-          (p) => !breed("employment-center").some((j) => distance(j, p) < 5),
+          (p) => !group("employment-center").some((j) => distance(j, p) < 5),
         ),
       );
       if (f) moveTo(a, f);
@@ -1004,7 +1004,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
         transport: "0.0",
       });
     });
-    ask(breed("employment-center"), (a) =>
+    ask(group("employment-center"), (a) =>
       ask(
         at(here(a), "employment-center").filter((b) => b !== a),
         (b) => b.delete(),
@@ -1026,26 +1026,26 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
     for (const f of fields)
       f.landValue = precision(Math.max(0, f.landValue), 2);
     globals.values = mean(
-      breed("third-builder").map((a) => here(a).landValue),
+      group("third-builder").map((a) => here(a).landValue),
       "adjust values",
     );
     globals.weights = mean(
-      breed("third-builder").map((a) => a.weight),
+      group("third-builder").map((a) => a.weight),
       "adjust weights",
     );
     globals.marginalValue = globals.values;
     globals.marginalWeight = globals.weights;
-    ask(breed("third-builder"), (a) => a.delete());
+    ask(group("third-builder"), (a) => a.delete());
     if (settings.serviceCenters > 1)
       ask(
-        breed("service-center"),
+        group("service-center"),
         (a) => (a.size = Math.max(2, round(here(a).landValue - 3))),
       );
     maquiladoras();
   }
   function generateCityscape() {
     if (world.tick.value === 1) initializeRoads();
-    ask(breed("first-builder"), (a) => {
+    ask(group("first-builder"), (a) => {
       a.tooClose = [];
       forward(a, 1);
       a.colorNumber = 6;
@@ -1058,7 +1058,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
       });
       for (const f of radius(a, 8)) f.ctr = "+";
     });
-    ask(breed("first-builder"), (a) => {
+    ask(group("first-builder"), (a) => {
       if ([1, 3, 7, 10].map((n) => n * a.blockSize).includes(world.tick.value))
         generateSecondOrder(a);
       const p = ahead(a, 2);
@@ -1072,10 +1072,10 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
       }
     });
     const limit = round(normal(100, 10));
-    ask(breed("second-builder"), (a) =>
+    ask(group("second-builder"), (a) =>
       roadBuilder(a, "second-builder", limit),
     );
-    ask(breed("third-builder"), (a) => roadBuilder(a, "third-builder", limit));
+    ask(group("third-builder"), (a) => roadBuilder(a, "third-builder", limit));
     ask(
       all().filter(
         (a) =>
@@ -1086,20 +1086,20 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
       ),
       (a) => a.delete(),
     );
-    if (world.tick.value > 10 && breed("third-builder").length) {
+    if (world.tick.value > 10 && group("third-builder").length) {
       globals.values = mean(
-        breed("third-builder").map((a) => here(a).landValue),
+        group("third-builder").map((a) => here(a).landValue),
         "road values",
       );
       globals.weights = mean(
-        breed("third-builder").map((a) => a.weight),
+        group("third-builder").map((a) => a.weight),
         "road weights",
       );
     }
     if (
-      !breed("first-builder").length &&
-      breed("third-builder").length &&
-      breed("third-builder").every((a) => a.energy === 0)
+      !group("first-builder").length &&
+      group("third-builder").length &&
+      group("third-builder").every((a) => a.energy === 0)
     )
       adjust();
   }
@@ -1113,7 +1113,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
     here(a).occupied = a.origin;
     a.works = [
       required(
-        nearest(breed("employment-center"), a),
+        nearest(group("employment-center"), a),
         "nearest employment-center",
       ),
     ];
@@ -1142,7 +1142,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
     );
   }
   function initialCondition2() {
-    const seed = one(breed("migrant").filter((a) => a.size === 0.65));
+    const seed = one(group("migrant").filter((a) => a.size === 0.65));
     if (seed) {
       seed.size = 0.6;
       for (let i = 0; i < 4; i++) {
@@ -1160,16 +1160,16 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
       }
     }
     colorMigrants(true);
-    ask(breed("migrant"), (a) => (here(a).occupied = a.origin as Origin));
-    if (!breed("migrant").some((a) => a.size === 0.65))
+    ask(group("migrant"), (a) => (here(a).occupied = a.origin as Origin));
+    if (!group("migrant").some((a) => a.size === 0.65))
       globals.thirdPhase = "go";
   }
   function economics() {
-    ask(breed("migrant"), (a) => {
+    ask(group("migrant"), (a) => {
       for (const f of radius(a, 4 - settings.coloniaSize / 2)) f.colonia -= 0.5;
       getCosts(a);
       globals.maxCost = max(
-        breed("migrant").map((a) => a.livingExpenses),
+        group("migrant").map((a) => a.livingExpenses),
         "economics max costs",
       );
       a.income = precision(normal(globals.maxCost, 3), 2);
@@ -1177,19 +1177,19 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
       a.livingExpenses = precision(a.livingExpenses, 2);
     });
     ask(
-      breed("migrant").filter((a) => a.income < a.livingExpenses),
+      group("migrant").filter((a) => a.income < a.livingExpenses),
       (a) => {
         while (a.income < a.livingExpenses) a.livingExpenses -= 1;
       },
     );
-    if (!breed("migrant").some((a) => a.income < a.livingExpenses))
+    if (!group("migrant").some((a) => a.income < a.livingExpenses))
       globals.thirdPhase = "stop";
   }
   function setup() {
     generateCityscape();
-    if (breed("employment-center").length && !breed("migrant").length)
+    if (group("employment-center").length && !group("migrant").length)
       initialCondition();
-    if (breed("migrant").some((a) => a.size === 0.65)) {
+    if (group("migrant").some((a) => a.size === 0.65)) {
       for (const f of fields) f.landValue = precision(f.landValue, 2);
       initialCondition2();
     }
@@ -1202,7 +1202,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
     }
   }
   function migrateStatic() {
-    const a = required(one(breed("migrant")), "migrate-static migrant");
+    const a = required(one(group("migrant")), "migrate-static migrant");
     const home = here(a);
     const f = one(
       radius(a, 1.5).filter(
@@ -1226,7 +1226,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
     }
   }
   function regulate() {
-    ask(breed("third-builder"), (a) => {
+    ask(group("third-builder"), (a) => {
       const p = ahead(a, 1);
       if (!p) {
         a.delete();
@@ -1251,7 +1251,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
     });
   }
   function growCity() {
-    ask(breed("third-builder"), (a) => {
+    ask(group("third-builder"), (a) => {
       forward(a, 0.75);
       a.penDown = true;
       a.penSize = 1;
@@ -1276,14 +1276,14 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
           neighbors.get(f)!.some((p) => at(p, "migrant").length) &&
           f.x < 81 &&
           f.y < 53 &&
-          !breed("ring").some((a) => distance(a, f) < 15),
+          !group("ring").some((a) => distance(a, f) < 15),
       ),
     );
-    if (breed("ring").length < 5 && f)
+    if (group("ring").length < 5 && f)
       batch("ring", 1, f, (a) =>
         Object.assign(a, { colorNumber: 27, shape: "loop" }),
       );
-    ask(breed("ring"), (a) => {
+    ask(group("ring"), (a) => {
       a.size =
         Math.abs(
           mean(
@@ -1316,7 +1316,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
             b.weight = globals.marginalWeight;
             b.rotate({
               towards: required(
-                nearest(breed("migrant"), b),
+                nearest(group("migrant"), b),
                 "regularize nearest migrant",
               ),
             });
@@ -1327,7 +1327,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
   }
   function cross() {
     if (world.tick.value % settings.crossingTicks === 0) {
-      const a = required(one(breed("migrant")), "cross migrant");
+      const a = required(one(group("migrant")), "cross migrant");
       a.colorNumber = 108;
       a.size = 15;
       a.delete();
@@ -1336,7 +1336,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
   }
   function move() {
     ask(
-      breed("migrant").filter((a) => a.residentSince > 5),
+      group("migrant").filter((a) => a.residentSince > 5),
       (a) => {
         if (here(a).water === 10 && a.savings > settings.requiredCapital) {
           const f = one(
@@ -1360,33 +1360,33 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
     );
   }
   function go() {
-    if (breed("third-builder").length) {
+    if (group("third-builder").length) {
       globals.values = mean(
-        breed("third-builder").map((a) => here(a).landValue),
+        group("third-builder").map((a) => here(a).landValue),
         "go values",
       );
       globals.weights = mean(
-        breed("third-builder").map((a) => a.weight),
+        group("third-builder").map((a) => a.weight),
         "go weights",
       );
     }
     globals.maxCost = max(
-      breed("migrant").map((a) => a.livingExpenses),
+      group("migrant").map((a) => a.livingExpenses),
       "go max costs",
     );
     updateDisplayImpl();
-    ask(breed("migrant"), (a) => {
+    ask(group("migrant"), (a) => {
       a.savings = precision(a.savings, 2);
       a.livingExpenses = precision(a.livingExpenses, 2);
     });
     if (world.tick.value % settings.migrationTicks === 0) migrateStatic();
-    ask(breed("migrant"), (a) => (here(a).occupied = a.origin as Origin));
+    ask(group("migrant"), (a) => (here(a).occupied = a.origin as Origin));
     if (world.tick.value % 15 === 0)
       ask(
-        breed("migrant"),
+        group("migrant"),
         (a) => (a.residentSince = round(a.residentSince + 1)),
       );
-    ask(breed("third-builder"), (a) => (a.hidden = !settings.cityGrowth));
+    ask(group("third-builder"), (a) => (a.hidden = !settings.cityGrowth));
     if (settings.cityGrowth) regulate();
     if (
       settings.cityGrowth &&
@@ -1397,7 +1397,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
       settings.cityGrowth &&
       modulo(world.tick.value, settings.buildingTicks * 2) === 0
     )
-      ask(breed("third-builder"), (a) => {
+      ask(group("third-builder"), (a) => {
         for (const angle of [90, -90]) {
           const b = birth("third-builder", a, a);
           b.rotate(angle);
@@ -1418,7 +1418,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
     );
     regularize();
     cross();
-    ask(breed("migrant"), (a) => {
+    ask(group("migrant"), (a) => {
       a.savings = precision(a.savings + a.income - a.livingExpenses, 2);
       if (a.savings < 7) a.savings = 0;
     });
@@ -1426,18 +1426,18 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
   }
   function counts(): TijuanaCounts {
     return {
-      serviceCenters: breed("service-center").length,
-      employmentCenters: breed("employment-center").length,
-      firstBuilders: breed("first-builder").length,
-      secondBuilders: breed("second-builder").length,
-      thirdBuilders: breed("third-builder").length,
-      migrants: breed("migrant").length,
-      rings: breed("ring").length,
-      nodes: breed("node").length,
+      serviceCenters: group("service-center").length,
+      employmentCenters: group("employment-center").length,
+      firstBuilders: group("first-builder").length,
+      secondBuilders: group("second-builder").length,
+      thirdBuilders: group("third-builder").length,
+      migrants: group("migrant").length,
+      rings: group("ring").length,
+      nodes: group("node").length,
     };
   }
   const seedMigrants = () =>
-    breed("migrant").filter((a) => a.size === 0.65).length;
+    group("migrant").filter((a) => a.size === 0.65).length;
   function boundary<R>(action: FailedCall["action"], fn: () => R): R {
     try {
       return fn();
@@ -1502,7 +1502,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
           ),
           (p) => {
             Object.assign(p, { water: 2, electricity: 3, transport: 1 });
-            const node = required(nearest(breed("node"), p), "node nearest");
+            const node = required(nearest(group("node"), p), "node nearest");
             p.landValue =
               globals.weights -
               (distance(p, node) / settings.carryingCapacity) * 0.15;
@@ -1596,7 +1596,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
         throw new TypeError("Expected agent input");
       const descriptor = Object.getOwnPropertyDescriptor(a, "kind");
       if (!descriptor || !("value" in descriptor))
-        throw new TypeError("Expected breed data");
+        throw new TypeError("Expected group data");
       const extras =
         a.kind === "first-builder"
           ? ["energy", "weight", "blockSize", "tooClose", "origin"]
@@ -1619,7 +1619,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
                   ].includes(a.kind)
                 ? []
                 : null;
-      if (!extras) throw new TypeError("Invalid breed");
+      if (!extras) throw new TypeError("Invalid group");
       record(a, [...agentKeys, ...extras]);
       if (typeof a.key !== "string" || !a.key || keys.has(a.key))
         throw new TypeError("Unique nonempty fixture key required");
@@ -1895,7 +1895,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
     }
   }
   function read(): TijuanaRead {
-    const migrants = breed("migrant"),
+    const migrants = group("migrant"),
       ordinary = migrants.filter((a) => a.size === 0.6),
       relocated = migrants.filter((a) => a.size === 0.8);
     const equippedFieldCount = fields.filter(
@@ -1945,7 +1945,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
         ? "ready"
         : seedMigrants()
           ? "expanding"
-          : breed("employment-center").length
+          : group("employment-center").length
             ? "seeding"
             : world.tick.value
               ? "generating"

@@ -23,7 +23,7 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer |
-| `numMoths` | `100` | integer; ≥ 0; ≤ 200 |
+| `mothCount` | `100` | integer; ≥ 0; ≤ 200 |
 | `speed` | `41` | number; ≥ 1; ≤ 100 |
 | `mutation` | `15` | number; ≥ 0; ≤ 100 |
 | `selection` | `50` | number; ≥ 0; ≤ 100 |
@@ -41,6 +41,6 @@ The [UI binding](ui.ts) presents `Pollute`, `Clean up`, `Tick`, `Light`, `Medium
 
 ## Sources and acceptance
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained NetLogo source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
 
 [Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `peppered-moths` and links any shared checks.

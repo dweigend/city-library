@@ -1,4 +1,4 @@
-import { defineUI, netLogoColor, type Observation, type SpatialData } from "../../ui/index.ts";
+import { defineUI, indexedColor, type Observation, type SpatialData } from "../../ui/index.ts";
 
 import { model, actionSymbol } from "./model.ts";
 export const ui = defineUI(model, {
@@ -6,7 +6,7 @@ export const ui = defineUI(model, {
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/RobbytheRobot",
     label:
-      "Original NetLogo model \u00B7 Mitchell, Tisue and Wilensky \u00B7 CC0",
+      "Source attribution \u00B7 Mitchell, Tisue and Wilensky \u00B7 CC0",
   },
   change: (instance, changes) => instance.setParameters(changes),
   live: {
@@ -63,7 +63,7 @@ export const ui = defineUI(model, {
       series: (s) => [
         {
           label: "Strategies",
-          color: netLogoColor(15),
+          color: indexedColor(15),
           points: s.population.map((p) => ({
             x: p.fitness,
             y: p.displayDistance,

@@ -56,14 +56,14 @@ export function hammingDistance(a: readonly number[], b: readonly number[]) {
 }
 export function create(options: Partial<Parameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed }),
-    world = World.add({ random });
+  const random = Random.create({ seed: settings.seed }),
+    world = World.create({ random });
   type Individual = Agent<{ who: number; bits: number[]; fitness: number }>;
   let nextWho = 0;
   const population = () => world.agents as readonly Individual[];
   function add(bits: readonly number[]) {
     return world.add(
-      Agent.add({
+      Agent.create({
         who: nextWho++,
         bits: [...bits],
         fitness: calculateFitness(bits),

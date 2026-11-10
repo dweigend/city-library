@@ -5,12 +5,12 @@ import { model } from "./model.ts";
 export const ui = defineUI(model, {
   setup: [
     "seed",
-    { field: "numRecyclers", label: "Recyclers" },
-    { field: "numWastefuls", label: "Wastefuls" },
+    { field: "recyclerCount", label: "Recyclers" },
+    { field: "wastefulCount", label: "Wastefuls" },
   ],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/UrbanSuite-Recycling",
-    label: "Original NetLogo model · Felsen and Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Felsen and Wilensky · CC BY-NC-SA 3.0",
   },
   change: (instance, changes) => instance.setRules(changes),
   live: {

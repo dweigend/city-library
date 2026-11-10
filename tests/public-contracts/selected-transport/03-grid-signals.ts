@@ -1,12 +1,12 @@
 import assert from 'node:assert/strict';
 import { create } from '../../../models/traffic-grid/model.ts';
 
-const traffic = create({ seed: 1, numCars: 1, ticksPerCycle: 2 });
+const traffic = create({ seed: 1, carCount: 1, ticksPerCycle: 2 });
 const initial = traffic.snapshot();
 assert.equal(initial.tick, 0);
 assert.equal(initial.cars.length, 1);
 assert.equal(initial.intersections.length, 25);
-assert.equal(initial.numCarsStopped, 1);
+assert.equal(initial.stoppedCarCount, 1);
 assert.equal(initial.cars[0]!.waitTime, 1);
 const selected = initial.currentIntersectionId;
 traffic.changeLight();

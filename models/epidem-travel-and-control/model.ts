@@ -63,11 +63,11 @@ type Person = Agent<{
 }>;
 export function create(options: Partial<TravelParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const space = { x: 25, y: 25, boundary: "hard" } as const;
-  const world = World.add(space, { random });
-  const grid = Grid.add(space, { state: { color: "#111111" } });
-  const graph = Graph.add<Person>();
+  const world = World.create(space, { random });
+  const grid = Grid.create(space, { state: { color: "#111111" } });
+  const graph = Graph.create<Person>();
   world.add(grid);
   let stopped = false;
   let betaN = 0;
@@ -85,7 +85,7 @@ export function create(options: Partial<TravelParameters> = {}) {
   }[] = [];
   const people = () => world.agents as readonly Person[];
   const shuffled = (p: readonly Person[]) =>
-    random.sample(p, { count: p.length, compatibility: "legacy-shuffle" });
+    random.sample(p, { count: p.length, algorithm: "fisher-yates-descending" });
   const normalTendency = (mean: number) =>
     Math.max(
       0,
@@ -116,7 +116,7 @@ export function create(options: Partial<TravelParameters> = {}) {
       : -12.5 + random.number() * 25;
     const y = ambulance ? 0 : -12.5 + random.number() * 25;
     const person = world.add(
-      Agent.add(
+      Agent.create(
         {
           who,
           ambulance,
@@ -413,7 +413,7 @@ export function create(options: Partial<TravelParameters> = {}) {
         x: p.x,
         y: p.y,
         heading: p.heading,
-        breed: p.ambulance ? "ambulance" : "person",
+        group: p.ambulance ? "ambulance" : "person",
         color: p.ambulance
           ? "#e4cf33"
           : p.cured

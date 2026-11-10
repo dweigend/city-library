@@ -31,7 +31,7 @@ describe("selected biology A source mechanisms", () => {
   });
 
   test("Honeycomb's diffusion cadence starts at preincrement tick zero", () => {
-    const model = createHoneycomb({ numBees: 1, seed: 1 });
+    const model = createHoneycomb({ beeCount: 1, seed: 1 });
     model.advance();
     expect(model.read().chemicalTotal).toBeCloseTo(1.8, 10);
     model.advance(9);
@@ -74,10 +74,10 @@ describe("selected biology A source mechanisms", () => {
     cell.advance(200);
     const state = cell.read();
     expect(
-      state.agents.filter((agent) => agent.breed === "water").length,
+      state.agents.filter((agent) => agent.group === "water").length,
     ).toBeGreaterThan(0);
     expect(state.flowEdges.length).toBe(
-      state.agents.filter((agent) => agent.breed === "water").length,
+      state.agents.filter((agent) => agent.group === "water").length,
     );
     expect(state.oxygen).toBe(0);
     expect(state.glucoseProduced).toBe(0);
@@ -92,12 +92,12 @@ describe("selected biology A source mechanisms", () => {
     expect(state.oxygen).toBeGreaterThan(0);
     expect(state.glucoseProduced).toBeGreaterThan(0);
     expect(state.carbonDioxide).toBe(
-      state.agents.filter((agent) => agent.breed === "co2").length,
+      state.agents.filter((agent) => agent.group === "co2").length,
     );
     expect(state.atpSites.length).toBe(18);
     expect(
       state.carbonDioxide +
-        state.agents.filter((agent) => agent.breed === "carbon").length +
+        state.agents.filter((agent) => agent.group === "carbon").length +
         state.glucoseProduced * 6,
     ).toBe(100);
     cell.setParameters({ autoStop: true, stopAt: 1000 });

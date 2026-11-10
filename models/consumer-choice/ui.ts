@@ -4,13 +4,13 @@ import { model } from "./model.ts";
 const binding = defineUI(model, {
   setup: [
     "seed",
-    { field: "numConsumers", label: "Consumers" },
+    { field: "consumerCount", label: "Consumers" },
     { field: "avgConnections", label: "Average connections" },
     { field: "initialOrangePercent", label: "Initial orange (%)" },
   ],
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Consumer%20Choice.nlogox",
-    label: "Original NetLogo model · Jager & Wang · CC BY-NC-SA 3.0",
+    label: "Source attribution · Jager & Wang · CC BY-NC-SA 3.0",
   },
   change: (instance, changes) => instance.setParameters(changes),
   live: {

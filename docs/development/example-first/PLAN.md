@@ -75,7 +75,7 @@ The current scarcity and machine probes do not yet demonstrate a missing public 
 | E5 | Add other catalogue capabilities one user task at a time | Grouping, strips, Voronoi, measurement and skeleton phases each get their own four/five scripts | Preserve supported shape boundaries, method-specific work/RNG rules and all earlier scripts; no placeholder exports |
 | E6 | Broader city generation and live models | Distinct scripts for a historical core, later extension and peripheral district; separate network/legal access, occupancy and replacement tasks | Meaningful outputs and declared assumptions; technical tests and visual judgement remain separate |
 
-Stages describe dependency order, not a promise to ship the entire catalogue in one PR. E3 is algorithmically independent and already delivered in its bounded form; preserve its [accepted contract and verification](../../grid-parcels/TOWNSCAPER-CONTRACT.md). It does not satisfy E1/E2. Additional topology algorithms need their own example-first contract, including numerical constants and exact RNG consumption. Do not ask the user to approve every routine internal choice; preserve their agreed public contracts.
+Stages describe dependency order, not a promise to ship the entire catalogue in one PR. E3 is algorithmically independent and already delivered in its bounded form; preserve its [accepted contract and verification](../../grid-parcels/QUAD-LAYOUTS-CONTRACT.md). It does not satisfy E1/E2. Additional topology algorithms need their own example-first contract, including numerical constants and exact RNG consumption. Do not ask the user to approve every routine internal choice; preserve their agreed public contracts.
 
 ## Research-to-test trace
 
@@ -115,7 +115,7 @@ Each lesson links one canonical source file and states its assumptions, run comm
 
 ## Source, ownership and remaining work
 
-The [verification and script hashes](VERIFICATION.md) and [integration checks](INTEGRATION-VERIFICATION.md) retain the accepted city-script evidence. The [topology contract](../../grid-parcels/TOWNSCAPER-CONTRACT.md) owns delivered finite quad generation and square-target relaxation. Do not duplicate those implementations or infer corridor/subdivision from them.
+The [verification and script hashes](VERIFICATION.md) and [integration checks](INTEGRATION-VERIFICATION.md) retain the accepted city-script evidence. The [topology contract](../../grid-parcels/QUAD-LAYOUTS-CONTRACT.md) owns delivered finite quad generation and square-target relaxation. Do not duplicate those implementations or infer corridor/subdivision from them.
 
 The 49 source catalog rows and 58 operation/property entries remain the geometry roadmap; inclusion does not mean availability. For every further slice compare exact source candidates, dependency reuse and a focused implementation, preserving provenance and supported shape boundaries. Keep source quotations and frozen assertions intact, with current availability tracked separately.
 

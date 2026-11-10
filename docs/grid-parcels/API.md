@@ -95,8 +95,8 @@ City usage/density/regulatory rules are outside these mathematical mechanisms.
 
 | Operation | Call | Status / contract |
 | --- | --- | --- |
-| Regular grid | `Grid.add(space, options?)` / `Grid.add()` | Existing; preserve defaults |
-| Layout grid | `Grid.add({ layout, state })` | New; honest layout-specific capabilities/type required |
+| Regular grid | `Grid.create(space, options?)` / `Grid.create()` | Existing; preserve defaults |
+| Layout grid | `Grid.create({ layout, state })` | New; honest layout-specific capabilities/type required |
 | Fields | `grid.fields` | Existing canonical identities |
 | Locate field | `grid.fieldAt(position)` | Existing; adapt for layouts |
 | Neighbors | `grid.neighbors(field, options?)` | Preserve regular Moore/faces ordering and defaults |

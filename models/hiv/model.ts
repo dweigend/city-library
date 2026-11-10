@@ -42,10 +42,10 @@ type Person = Agent<PersonState>;
 export function create(options: Partial<HIVParameters> = {}) {
   let settings = parameters(inputs, options);
   let checked = settings;
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const space = { x: 25, y: 25, boundary: "wrap" } as const;
-  const world = World.add(space, { random });
-  const grid = Grid.add(space, { state: { coupled: false } });
+  const world = World.create(space, { random });
+  const grid = Grid.create(space, { state: { coupled: false } });
   world.add(grid);
   const infectionChance = 50;
   const symptomsShow = 200;
@@ -60,7 +60,7 @@ export function create(options: Partial<HIVParameters> = {}) {
   const shuffled = (people: readonly Person[]) =>
     random.sample(people, {
       count: people.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     });
   function randomNear(center: number) {
     let result = 0;
@@ -82,7 +82,7 @@ export function create(options: Partial<HIVParameters> = {}) {
   function setupPeople() {
     for (let who = 0; who < settings.initialPeople; who++) {
       const person = world.add(
-        Agent.add<PersonState>(
+        Agent.create<PersonState>(
           {
             who,
             infected: who < settings.initialPeople * 0.025,
@@ -261,7 +261,7 @@ export function create(options: Partial<HIVParameters> = {}) {
       agents: all().map((person) => ({
         id: person.id,
         who: person.who,
-        breed: "person",
+        group: "person",
         x: person.x,
         y: person.y,
         heading: person.heading,

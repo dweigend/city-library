@@ -22,8 +22,8 @@ export const inputs: Inputs<SignalingParameters> = {
 };
 export function create(options: Partial<SignalingParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed }),
-    world = World.add({ random });
+  const random = Random.create({ seed: settings.seed }),
+    world = World.create({ random });
   const senderUrns = Array.from({ length: settings.numberOfStates }, () =>
     Array<number>(settings.numberOfSignals).fill(1),
   );

@@ -11,7 +11,7 @@ export const ui = defineUI(model, {
   ],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/VirusonaNetwork",
-    label: "Original NetLogo model · Stonedahl and Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Stonedahl and Wilensky · CC BY-NC-SA 3.0",
   },
   complete: (state) => state.done,
   change: (instance, changes) => instance.setRules(changes),

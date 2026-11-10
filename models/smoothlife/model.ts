@@ -92,14 +92,14 @@ export function create(options: Partial<SmoothLifeParameters> = {}) {
   let settings = parameters(inputs, options);
   if (settings.innerRadius >= settings.outerRadius)
     throw new RangeError("Outer radius must exceed inner radius.");
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const space = {
     x: settings.width,
     y: settings.height,
     boundary: "wrap" as const,
   };
-  const world = World.add(space, { random });
-  const grid = Grid.add(space, { state: { value: 0 } });
+  const world = World.create(space, { random });
+  const grid = Grid.create(space, { state: { value: 0 } });
   world.add(grid);
   const fields = grid.fields;
   type Cell = (typeof fields)[number];
@@ -237,7 +237,7 @@ export function create(options: Partial<SmoothLifeParameters> = {}) {
       exactField(point);
       if (drawing) paint(point);
     },
-    /** Detached replacement for the desktop transition plot, disabled in NetLogo Web. */
+    /** Detached replacement for the desktop transition plot, disabled in source runtime. */
     visualizeTransition(resolution = 20) {
       if (
         !Number.isSafeInteger(resolution) ||

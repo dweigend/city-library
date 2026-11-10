@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { Graph } from "city-library";
-const graph=Graph.add<{name:string}>();
+const graph=Graph.create<{name:string}>();
 const [a,b,c,d]=["a","b","c","d"].map(name=>graph.nodes.add({name}));
 for(const [from,to] of [[a,b],[b,a],[b,c]])graph.edges.add({from:from!,to:to!,directed:true});
 assert.deepEqual(graph.components(),[[a,b,c],[d]]);

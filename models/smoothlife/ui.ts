@@ -4,7 +4,7 @@ export const ui = defineUI(model, {
   setup: ["width", "height", "seed", "innerRadius", "outerRadius"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/SmoothLife",
-    label: "Original NetLogo model · Head & Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Head & Wilensky · CC BY-NC-SA 3.0",
   },
   actions: [
     { label: "Erase all", run: (instance) => instance.eraseAll() },

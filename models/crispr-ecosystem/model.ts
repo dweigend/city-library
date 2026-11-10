@@ -42,17 +42,17 @@ export const inputs: Inputs<EcosystemParameters> = {
 };
 type Organism = Agent<{
   who: number;
-  breed: "bacterium" | "virus";
+  group: "bacterium" | "virus";
   energy: number;
   array: number[];
   sequence: number;
 }>;
 export function create(options: Partial<EcosystemParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const space = { x: 33, y: 33, boundary: "wrap" } as const;
-  const world = World.add(space, { random });
-  const grid = Grid.add(space, { state: { foodEnergy: 50, countdown: 0 } });
+  const world = World.create(space, { random });
+  const grid = Grid.create(space, { state: { foodEnergy: 50, countdown: 0 } });
   world.add(grid);
   let who = 0;
   let stopped = false;
@@ -72,22 +72,22 @@ export function create(options: Partial<EcosystemParameters> = {}) {
     focalArrayPercent: number;
   }[] = [];
   const all = () => world.agents as readonly Organism[];
-  const bacteria = () => all().filter((p) => p.breed === "bacterium");
-  const viruses = () => all().filter((p) => p.breed === "virus");
+  const bacteria = () => all().filter((p) => p.group === "bacterium");
+  const viruses = () => all().filter((p) => p.group === "virus");
   const shuffled = (values: readonly Organism[]) =>
     random.sample(values, {
       count: values.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     });
   function randomPosition(p: Organism) {
     p.move({
       to: { x: -16 + random.number() * 32, y: -16 + random.number() * 32 },
     });
   }
-  function addOrganism(breed: Organism["breed"], energy = 0, sequence = 0) {
+  function addOrganism(group: Organism["group"], energy = 0, sequence = 0) {
     const p = world.add(
-      Agent.add(
-        { who: who++, breed, energy, sequence, array: [] as number[] },
+      Agent.create(
+        { who: who++, group, energy, sequence, array: [] as number[] },
         {
           orientation: {
             heading: random.number({ min: 0, max: 360, integer: true }),
@@ -203,10 +203,10 @@ export function create(options: Partial<EcosystemParameters> = {}) {
     if (p.energy <= 100) return;
     p.energy /= 2;
     const child = world.add(
-      Agent.add(
+      Agent.create(
         {
           who: who++,
-          breed: "bacterium" as const,
+          group: "bacterium" as const,
           energy: p.energy,
           sequence: p.sequence,
           array: [...p.array],
@@ -244,10 +244,10 @@ export function create(options: Partial<EcosystemParameters> = {}) {
       });
     for (let i = 0; i < 19; i++)
       world.add(
-        Agent.add(
+        Agent.create(
           {
             who: who++,
-            breed: "virus" as const,
+            group: "virus" as const,
             energy: 0,
             array: [] as number[],
             sequence: p.sequence,
@@ -370,12 +370,12 @@ export function create(options: Partial<EcosystemParameters> = {}) {
       agents: all().map((p) => ({
         id: p.id,
         who: p.who,
-        breed: p.breed,
+        group: p.group,
         x: p.x,
         y: p.y,
         heading: p.heading,
-        color: p.breed === "bacterium" ? "#ee952c" : "#a855cc",
-        size: p.breed === "bacterium" ? 5 : 3,
+        color: p.group === "bacterium" ? "#ee952c" : "#a855cc",
+        size: p.group === "bacterium" ? 5 : 3,
         energy: p.energy,
         sequence: p.sequence,
         array: [...p.array],

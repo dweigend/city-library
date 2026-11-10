@@ -34,12 +34,12 @@ export const inputs: Inputs<Parameters> = {
 };
 export function create(options: Partial<Parameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
-  const world = World.add(
+  const random = Random.create({ seed: settings.seed });
+  const world = World.create(
     { x: 45, y: 45, boundary: { x: "wrap", y: "hard" } },
     { random },
   );
-  const grid = Grid.add(
+  const grid = Grid.create(
     { x: 45, y: 45, boundary: { x: "wrap", y: "hard" } },
     { state: { agentQuant: 0 } },
   );
@@ -48,11 +48,11 @@ export function create(options: Partial<Parameters> = {}) {
   const fields = grid.fields;
   type Rabbit = Agent<{ displayId: string; total: number; step: number }>;
   const rabbits = () => world.agents as readonly Rabbit[];
-  // NetLogo's y=0..44 is translated to the library's centered y=-22..22.
+  // source model's y=0..44 is translated to the library's centered y=-22..22.
   // Unwrapped displacement is a scientific scalar; Agent.move owns its wrapped position.
   for (let i = 0; i < settings.number; i++)
     world.add(
-      Agent.add(
+      Agent.create(
         { displayId: `rabbit-${i}`, total: 0, step: 0 },
         { position: { x: 0, y: -22 } },
       ),
@@ -80,7 +80,7 @@ export function create(options: Partial<Parameters> = {}) {
     const population = rabbits();
     for (const rabbit of random.sample(population, {
       count: population.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       setStep(rabbit);
       rabbit.total += rabbit.step;

@@ -37,12 +37,12 @@ Use `advance(...)` for progress and `read()` for observations; the model defines
 
 Other instance procedures: `setup`, `coolAgents`, `rotate`, `recolor`, `setColor`, `setRules`. See their typed arguments in [model.ts](model.ts).
 
-Model-specific `read()` fields include `tempRange`, `averageMetalTemp`, `numFrozen`, `atoms`, `histogram`.
+Model-specific `read()` fields include `tempRange`, `averageMetalTemp`, `frozenCount`, `atoms`, `histogram`.
 
 The [UI binding](ui.ts) presents `Metal width`, `Metal height`, `Initial metal temperature`, `Tick`, `Average metal temperature`, `Source frozen count`, `Metal atoms`, `Temperatures`, `${Math.round(bin.lower)}–${Math.round(bin.upper)}`, `Number solidified` and further views or controls.
 
 ## Sources and acceptance
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained NetLogo source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
 
 [Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `crystallization-basic` and links any shared checks.

@@ -8,4 +8,4 @@ Source-specific public named procedure actions and readback spellings are fixed 
 
 Frozen scenarios cover open-boundary avalanches and unique-site/lifetime counts; signed Metropolis energy and attempted-flip time; old/next sand phase barrier and tick-zero spout; vacancy conservation and canonical occupancy; interstitial blocked hops, reservoirs, profile editing and stop; thermal equation/material action; self-inclusive crystallization cooling and terminal barrier; DLA radial motion, birth throttle, natural growth and stop. Stochastic checks assert mechanisms/invariants only.
 
-Crystallization example 04 expects `numFrozen = 0` after its one-atom cooling step, even though the observed temperature is below the melting point. Preserve the source counter timing rather than deriving this reporter from the current temperature.
+Crystallization example 04 expects `frozenCount = 0` after its one-atom cooling step, even though the observed temperature is below the melting point. Preserve the source counter timing rather than deriving this reporter from the current temperature.

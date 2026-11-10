@@ -1,8 +1,8 @@
 import assert from "node:assert/strict";
 import { Agent, Graph, Random, World } from "city-library";
-const random=Random.add({seed:42}),world=World.add({random});
-const a=world.add(Agent.add({energy:4})),b=world.add(Agent.add({energy:8}));
-const graph=Graph.add<typeof a>();
+const random=Random.create({seed:42}),world=World.create({random});
+const a=world.add(Agent.create({energy:4})),b=world.add(Agent.create({energy:8}));
+const graph=Graph.create<typeof a>();
 graph.nodes.add(a);graph.nodes.add(b);
 const edge=graph.edges.add({from:a,to:b});
 const state=random.state;

@@ -30,15 +30,15 @@ export const inputs: Inputs<SunflowerParameters> = {
 type Particle = Agent<{ temporary: boolean; size: number }>;
 export function create(options: Partial<SunflowerParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
-  const world = World.add({ x: 161, y: 161, boundary: "hard" }, { random });
+  const random = Random.create({ seed: settings.seed });
+  const world = World.create({ x: 161, y: 161, boundary: "hard" }, { random });
   const particles = () =>
     (world.agents as readonly Particle[]).filter(
       (particle) => !particle.temporary,
     );
-  let numTempParticles = 0;
+  let temporaryParticleCount = 0;
   let stopped = false;
-  // NetLogo tick occurs while the temporary candidates are still visible.
+  // source model tick occurs while the temporary candidates are still visible.
   // Retain that exact detached view frame without retaining a second live population.
   let tempFrame: {
     id: string;
@@ -50,7 +50,7 @@ export function create(options: Partial<SunflowerParameters> = {}) {
   }[] = [];
 
   function createParticle(radius: number, temporary: boolean) {
-    const particle = Agent.add(
+    const particle = Agent.create(
       { temporary, size: temporary ? 1 : settings.particleSize },
       {
         orientation: {
@@ -64,7 +64,7 @@ export function create(options: Partial<SunflowerParameters> = {}) {
   }
   function potentialEnergy(candidate: Particle) {
     if (settings.energyApproximation === "exponential" && settings.beta === 0)
-      throw new RangeError("NetLogo exponential energy divides by beta = 0.");
+      throw new RangeError("Exponential energy divides by beta = 0.");
     return stats.describe(
       particles().map((particle) => {
         const distance = candidate.distanceTo(particle);
@@ -80,7 +80,7 @@ export function create(options: Partial<SunflowerParameters> = {}) {
     const temporary: Particle[] = [];
     for (let index = 0; index < count; index++)
       temporary.push(createParticle(distance, true));
-    numTempParticles = temporary.length;
+    temporaryParticleCount = temporary.length;
     let minimum = Infinity;
     let winners: Particle[] = [];
     for (const candidate of temporary) {
@@ -133,7 +133,7 @@ export function create(options: Partial<SunflowerParameters> = {}) {
       height: 161,
       parameters: { ...settings },
       stopped,
-      numTempParticles,
+      temporaryParticleCount,
       particles: particles().map((particle) => ({
         id: particle.id,
         x: particle.x,

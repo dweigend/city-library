@@ -1,10 +1,14 @@
 # System architecture
 
+The [naming migration contracts](../PLAN.md#naming-migration-contracts) authorize only their recorded naming changes as an exception to API-name preservation rules in this document, including static factory names and target study entries. Preserve behavior, assertions, identity, ordering and random sequences; migrate consumers together.
+
 A model should remain understandable when you remove its UI. City Library therefore keeps domain rules, state and execution in a headless library. Applications read observations and call public actions; they do not become a second model.
 
 A graph can work without coordinates, a field calculation without agents, and a generator without a running world. The caller chooses how to combine them.
 
 This document defines the required architecture, including parts still to be built. [PLAN](../PLAN.md) tracks available capabilities and next goals; the [Agent Loom specification](agent-loom/README.md) defines detailed target contracts. The current public package exposes its root entry only.
+
+Use the system-wide [naming conventions](NAMING_CONVENTIONS.md) for domains, public contracts and module names.
 
 ## Reading this document
 
@@ -76,7 +80,7 @@ For every implementation slice, verify public headless access, dependency direct
 
 Organize source by domain. The [API specification](agent-loom/README.md) defines public operations; the layout below defines their boundaries. A directory does not imply a working public export.
 
-The tree below defines intended domain boundaries and planned responsibilities, not the current filesystem inventory. Create a directory only with its first working slice; do not retain empty directories or `.gitkeep` scaffolding. Planned filenames are not a complete list of existing modules. Add each domain's `index.ts` with its first working public capability. The root `index.ts` exports Agent, World, run, Random, Graph, Grid, topology, stats and geometry, plus the bounded expansion values measurements, storage, experiments, twoPhase, continuous, Agenda, ServiceQueue, Resource, Store, Signal, EventTrace and TimeWeighted. The [expansion inventory](mesa-expansion/STATUS.md) records delivered subsets, decisions and separate acceptance evidence. Public types include Tick, RandomState, Edge, GeneratorOptions, Field, Layout, BoundarySegment, LayoutGrid, LayoutField, Space, Position, Vector, Orientation, Histogram, Summary, Bounds and the planar geometry/data types listed in that entry. Current Graph methods include membership, connectivity, distances, analysis, generation and copy; stats exposes histogram, gini and describe. These exports cover part of the graph, geometry, statistics and Agent Loom contracts. Consult the public entry and executable examples for exact supported options; planned directories establish no additional exports.
+The tree below defines intended domain boundaries and planned responsibilities, not the current filesystem inventory. Create a directory only with its first working slice; do not retain empty directories or `.gitkeep` scaffolding. Planned filenames are not a complete list of existing modules. Add each domain's `index.ts` with its first working public capability. The root `index.ts` exports Agent, World, run, Random, Graph, Grid, topology, stats and geometry, plus the bounded expansion values measurements, storage, studies, twoPhase, continuous, Agenda, ServiceQueue, Resource, Store, Signal, EventTrace and TimeWeighted. The [expansion inventory](execution-studies/STATUS.md) records delivered subsets, decisions and separate acceptance evidence. Public types include Tick, RandomState, Edge, GeneratorOptions, Field, Layout, BoundarySegment, LayoutGrid, LayoutField, Space, Position, Vector, Orientation, Histogram, Summary, Bounds and the planar geometry/data types listed in that entry. Current Graph methods include membership, connectivity, distances, analysis, generation and copy; stats exposes histogram, gini and describe. These exports cover part of the graph, geometry, statistics and Agent Loom contracts. Consult the public entry and executable examples for exact supported options; planned directories establish no additional exports.
 
 ```text
 src/
@@ -142,14 +146,14 @@ src/
 ├── agenda/
 ├── input/
 ├── stats/
-├── experiments/
+├── studies/
 │   ├── design.ts
 │   ├── replication.ts
 │   ├── run.ts
 │   ├── summarize.ts
 │   ├── calibration/
 │   ├── continuation.ts
-│   ├── behaviorspace.ts
+│   ├── study-xml.ts
 │   └── node/                   # Separate host entry and worker implementation
 ├── storage/
 │   ├── snapshot.ts
@@ -184,11 +188,11 @@ Grid topology is distinct from Field state, occupancy queries and update algorit
 
 Diffusion consumes the declared neighbors and applicable weights rather than calculating square-grid offsets itself. Its update rule still defines ordering, units, supported topologies and conservation tolerance. A reusable neighborhood algorithm does not establish a physical process or prove that identical weights are valid on every topology. Pure `geometry.neighbors` and orthogonal Grid neighborhoods must share the required square/cubic semantics rather than duplicating conflicting offset or boundary rules.
 
-The original Agent Loom phase-one Grid remains square/cubic with `faces | moore` neighborhoods and its recorded defaults. The additive [grid/parcel phase](grid-parcels/STATUS.md#bounded-layout-contract) defines detached square, hexagonal and authored planar layouts and `Grid.add({ layout, state })`. Layout-backed Grids have their own accurate capability type: shared-edge neighbors and polygon lookup, without regular `Space`, `cellSize` or diffusion. The bounded layout contract freezes hex radius, orientation, finite boundaries and deterministic edge ties. This extension preserves the original regular Grid contract; it does not introduce arbitrary-layout diffusion or volume topology.
+The original Agent Loom phase-one Grid remains square/cubic with `faces | moore` neighborhoods and its recorded defaults. The additive [grid/parcel phase](grid-parcels/STATUS.md#bounded-layout-contract) defines detached square, hexagonal and authored planar layouts and `Grid.create({ layout, state })`. Layout-backed Grids have their own accurate capability type: shared-edge neighbors and polygon lookup, without regular `Space`, `cellSize` or diffusion. The bounded layout contract freezes hex radius, orientation, finite boundaries and deterministic edge ties. This extension preserves the original regular Grid contract; it does not introduce arbitrary-layout diffusion or volume topology.
 
 Treat topology as immutable for a delivered slice unless that slice explicitly defines topology mutation and revision/invalidated-cache behavior. A cached neighborhood must never silently outlive the topology it represents. Respect the extension boundary now, but establish a broader shared topology interface through real variants rather than speculative universal capabilities.
 
-The [finite quadrilateral extension](grid-parcels/TOWNSCAPER-CONTRACT.md) uses
+The [finite quadrilateral extension](grid-parcels/QUAD-LAYOUTS-CONTRACT.md) uses
 these same Layout/Polygon/Random contracts. Generation returns an unrelaxed
 hexagonal patch; `squareTarget` relaxation is a separate pure operation returning
 a fresh immutable Layout, including zero iterations. It preserves local cell
@@ -201,14 +205,14 @@ solver, and the older arbitrary-domain/Lloyd proposals remain research.
 ### State, hosts and verification
 
 - Preserve one authority per live value: Agent owns spatial state and path progress; Grid owns topology and Field identities; Graph owns topology and Edge identities; World owns membership and Tick. Shared references retain their canonical identities. Observation buffers own samples, not simulation state.
-- Load Node worker execution only through the explicit `experiments/node` host entry. Generic/root imports remain headless and must not eagerly import Node workers, browser globals or I/O. Core Storage encodes supplied data without performing file/database/network access. UI and host adapters remain separate from the library logic.
+- Load Node worker execution only through the explicit `studies/node` host entry. Generic/root imports remain headless and must not eagerly import Node workers, browser globals or I/O. Core Storage encodes supplied data without performing file/database/network access. UI and host adapters remain separate from the library logic.
 - Preserve the binding root, Storage and Node experiment entry contracts. The reference root name `agent-loom` maps explicitly to the existing `city-library` package root. Storage and Node experiment subpath mappings remain future decisions; do not silently rename or widen those contracts. A domain's internal `index.ts` is not automatically a new package subpath.
 - Test public behavior rather than file layout or helper implementation. Each delivered variant must satisfy the applicable shared contracts for identity, deterministic order, boundaries, mutations, failures, time and RNG effects, plus its own explicit requirements. Verify quantity conservation only for update rules that promise it. Run composition tests for ties/lifecycle and continuation where those features are delivered.
 - Keep the complete 309-row operation/type inventory accountable across the 16 reference areas. Layout prepares extension points; executable public examples, behavior checks and consumer evidence establish actual delivery. Future features outside this specification need their own accepted scope.
 
 ## One library, independent capabilities
 
-City Library is one engine organized into six areas: Simulation, Spatial Structures, Graphs, Generation, City Models, and Data & Experiments. Agent Loom supplies the design lineage for reusable modeling capabilities across these areas, not a separate product, import requirement or second engine. Its execution concepts belong to Simulation; its grid, graph and data contracts inform the corresponding areas. No consumer must initialize World or load every capability.
+City Library is one engine organized into six areas: Simulation, Spatial Structures, Graphs, Generation, City Models, and Data & Studies. Agent Loom supplies the design lineage for reusable modeling capabilities across these areas, not a separate product, import requirement or second engine. Its execution concepts belong to Simulation; its grid, graph and data contracts inform the corresponding areas. No consumer must initialize World or load every capability.
 
 The six areas own the following responsibilities:
 
@@ -219,7 +223,7 @@ The six areas own the following responsibilities:
 | Graphs | Graphs, nodes, edges, traversal/routing, network generation and analysis | Supports non-spatial use; topology does not guarantee access, path geometry or domain flow |
 | Generation | Terrain, streets, parcels, zoning, buildings, assemblies and planning/feasibility variants | Produces descriptions; no implicit residents, traffic or supply state |
 | City Models | Traffic, households, allocation, economy, decisions and supply | Owns domain policies, units and mutable quantities; reuses generic structures |
-| Data & Experiments | Parameters/Input, measurements, statistics, History, studies and one storage area | Shares model values explicitly; loading is a write and measurements are not model continuation |
+| Data & Studies | Parameters/Input, measurements, statistics, History, studies and one storage area | Shares model values explicitly; loading is a write and measurements are not model continuation |
 
 The following roles describe composition size and usage, not additional top-level areas:
 
@@ -236,11 +240,11 @@ Start with the smallest useful author script and its invariants. Select only the
 
 ## Reference basis and usage organization
 
-The binding Agent Loom [API table](agent-loom/api-table.md) supplies the operation/type inventory: **World, Agent, Grid, Field, Graph, Node, Edge, Random, Input, stats, geometry, Agenda, experiments, storage, limits, Exports and shared types** (reference order, not a required implementation order). The companion [API reference](agent-loom/api-reference.md) expands vocabulary, examples, inputs/defaults, effects and errors. Both Markdown documents define the required core target. [Specification overview](agent-loom/README.md) explains scope, status and unresolved package entries.
+The binding Agent Loom [API table](agent-loom/api-table.md) supplies the operation/type inventory: **World, Agent, Grid, Field, Graph, Node, Edge, Random, Input, stats, geometry, Agenda, studies, storage, limits, Exports and shared types** (reference order, not a required implementation order). The companion [API reference](agent-loom/api-reference.md) expands vocabulary, examples, inputs/defaults, effects and errors. Both Markdown documents define the required core target. [Specification overview](agent-loom/README.md) explains scope, status and unresolved package entries.
 
 Keep future reference pages task-oriented. Each entry identifies an operation, summarizes its contract and links to detailed usage. Within an object area, prefer creation, readable properties, mutations, queries, advanced operations and types where applicable. Keep naturally related actions together. Field has no independent constructor; statistics and geometry are primarily functions; experiment design and execution have their own workflow. Do not manufacture lifecycle methods to fill a rigid template.
 
-The following tables summarize responsibilities and usage progression; they do not replace the binding API signatures or narrow their scope. Advanced features, compatibility profiles and codecs specified there remain target work, delivered through bounded implementation slices. Report conflicting or unspecified behavior rather than silently changing the contract.
+The following tables summarize responsibilities and usage progression; they do not replace the binding API signatures or narrow their scope. Advanced features, behavior profiles and codecs specified there remain target work, delivered through bounded implementation slices. Report conflicting or unspecified behavior rather than silently changing the contract.
 
 ## General modeling boundaries
 
@@ -255,9 +259,9 @@ The following tables summarize responsibilities and usage progression; they do n
 | stats | Describe values, histogram, inequality and heading alignment; inspect detached results | Pure measurements over supplied values. No recorder, runtime, drawing or implicit sampling. Domain metrics select their own quantities and units first. |
 | geometry | Containment, normalization, displacement/distance/bearing, cell neighbors, orientation, path splitting, bounds and mapping | Pure spatial functions and structural data, with explicit dimensions/context. No Agent/Grid allocation or renderer. The specified planar GIS subset does not establish arbitrary solid geometry, polygon booleans or geodesy. |
 | Agenda | Create; inspect time; queue/cancel event data; advance to a horizon within a budget; explicitly handle returned events | Owns pending event data, handles, insertion order and its own time. No automatic callbacks, World step or wall-clock timer. |
-| experiments | Design scenarios; replicate seeds; create/run independent models; measure/summarize; optionally evaluate, select, hold out or resume | Owns study plan, budgets and outcomes; each model owns its state. The reference execution contract uses World plus a step procedure. Host workers and compatibility bindings are explicit optional integrations, not requirements for static tools. |
+| studies | Design scenarios; replicate seeds; create/run independent models; measure/summarize; optionally evaluate, select, hold out or resume | Owns study plan, budgets and outcomes; each model owns its state. The reference execution contract uses World plus a step procedure. Host workers and compatibility bindings are explicit optional integrations, not requirements for static tools. |
 | storage | Save/load supplied supported data; explicitly encode/decode; create and record bounded History; validate restored data | Owns snapshot/codec contracts and History buffers. Depends only on the selected data/component contracts; no file/database I/O in core. One area covers selected data and declared model state, with distinct guarantees. |
-| limits | Read documented resource budgets for specific operations or adapters | Immutable policy data, not a global allocation manager. Specified profiles include NetLogo, GeoJSON, legacy networks, BehaviorSpace and studies; their ceilings do not become universal model limits. |
+| limits | Read documented resource budgets for specific operations or adapters | Immutable policy data, not a global allocation manager. Target budgets cover declarations, planar geometry interchange, simple-network imports, finite study XML and study execution; their ceilings do not become universal model limits. |
 | Exports and shared types | Discover delivered public entry points and the structural types required by accepted calls | A documentation and compatibility responsibility, not a catch-all module. The reference root maps to `city-library`; future Storage and Node experiment subpaths still require explicit mapping decisions. Do not silently discard or rename target entry contracts. |
 
 Field and Edge remain visible reference categories even if implemented alongside their owning Grid and Graph. Do not split them into competing ownership systems merely to obtain a module per heading. Likewise, detached graph and grid capabilities may be stateful objects: independent use does not require converting every capability into stateless functions.
@@ -292,7 +296,7 @@ Runtime and distribution choices remain implementation decisions only where the 
 
 ## Authoring vocabulary and canonical state
 
-Use ordinary TypeScript, direct typed properties, native arrays/sets/maps and explicit composition. Reference examples use `Agent.add(...)`, `World.add(...)`, `world.add(...)` and `run(world, step, steps)`. Model values remain `agent.energy`, not a generic `.value` wrapper. Use `Position` and `Space`, not parallel public `Like`/`Context` synonyms. Native array queries remain the ordinary selection path; specialized World activation is an explicit advanced scheduling operation.
+Use ordinary TypeScript, direct typed properties, native arrays/sets/maps and explicit composition. Reference examples use `Agent.create(...)`, `World.create(...)`, `world.add(...)` and `run(world, step, steps)`. Model values remain `agent.energy`, not a generic `.value` wrapper. Use `Position` and `Space`, not parallel public `Like`/`Context` synonyms. Native array queries remain the ordinary selection path; specialized World activation is an explicit advanced scheduling operation.
 
 Creation/copy semantics and later assignments are distinct. The reference clones supported initial custom data but retains framework references; later assignments use ordinary TypeScript reference semantics. An agent copy is detached; a graph copy owns independent edges while retaining node identities. Do not promise a deep model clone from the word `copy` alone. Reserved built-in keys, supported data and failures need delivered contracts.
 
@@ -358,7 +362,7 @@ These gates define evidence requirements without claiming completion. Use these 
 
 ## Open contracts
 
-- **Package entries:** the specification uses `agent-loom`, `agent-loom/storage` and `agent-loom/experiments/node`. The root mapping to `city-library` is already decided and used by public examples. Storage and Node experiment subpath mappings remain open before their delivery; the current package exposes only its root. Preserve specified serialization identifiers separately from package naming.
+- **Package entries:** the specification uses `agent-loom`, `agent-loom/storage` and `agent-loom/studies/node`. The root mapping to `city-library` is already decided and used by public examples. Storage and Node experiment subpath mappings remain open before their delivery; the current package exposes only its root. Preserve specified serialization identifiers separately from package naming.
 - **Shared lifecycle:** define the private coordination contract for identity, state copying, coupled movement and membership before implementing those interactions. Keep one owner and acyclic dependencies.
 - **Further topology:** the [grid/parcel phase](grid-parcels/STATUS.md#bounded-layout-contract) freezes finite planar hexagonal/layout semantics. Wrapping layouts, irregular diffusion, volume layouts and their storage representations require later explicit contracts. Preserve original square/cubic behavior.
 

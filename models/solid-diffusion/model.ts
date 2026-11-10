@@ -17,16 +17,16 @@ export function create(options: Partial<SolidParameters> = {}) {
   const settings = parameters(inputs, options);
   if (settings.width % 2 !== 1 || settings.height % 2 !== 1)
     throw new RangeError("Use odd lattice dimensions.");
-  const random = Random.add({ seed: settings.seed }),
+  const random = Random.create({ seed: settings.seed }),
     space = {
       x: settings.width,
       y: settings.height,
       boundary: "hard" as const,
     },
-    world = World.add(space, { random }),
-    grid = Grid.add(space);
+    world = World.create(space, { random }),
+    grid = Grid.create(space);
   world.add(grid);
-  type Atom = ReturnType<typeof Agent.add<{ color: Color }>>;
+  type Atom = ReturnType<typeof Agent.create<{ color: Color }>>;
   const fields = grid.fields,
     history: { tick: number; distanceSquared: number | null }[] = [];
   function atoms() {
@@ -53,7 +53,7 @@ export function create(options: Partial<SolidParameters> = {}) {
     if (history.length > 1001) history.splice(1, 1);
   }
   function put(x: number, y: number, color: Color) {
-    const atom = Agent.add({ color }, { position: { x, y } });
+    const atom = Agent.create({ color }, { position: { x, y } });
     world.add(atom);
   }
   function setup() {
@@ -85,7 +85,7 @@ export function create(options: Partial<SolidParameters> = {}) {
     const vacancies = fields.filter((f) => grid.agentsAt(f).length === 0);
     for (const f of random.sample(vacancies, {
       count: vacancies.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     }))
       moveAtomToHere(f.x, f.y);
   }

@@ -2,7 +2,7 @@ import { defineUI, type Observation, type SpatialData, type Series } from "../..
 
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: [{ field: "numPhilosophers", label: "Philosophers" }, "seed"],
+  setup: [{ field: "philosopherCount", label: "Philosophers" }, "seed"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/DiningPhilosophers",
     label: "Wilensky · CC BY-NC-SA 3.0",

@@ -76,8 +76,8 @@ export function floorToUnit(value: number, unit: number) {
 }
 export function create(options: Partial<Parameters> = {}) {
   const settings = parameters(inputs, options),
-    random = Random.add({ seed: settings.seed }),
-    world = World.add({ x: 41, y: 41, boundary: "hard" }, { random });
+    random = Random.create({ seed: settings.seed }),
+    world = World.create({ x: 41, y: 41, boundary: "hard" }, { random });
   const traders = () => world.agents as readonly Trader[];
   const orders: Order[] = [];
   let asks: Order[] = [],
@@ -97,7 +97,7 @@ export function create(options: Partial<Parameters> = {}) {
     priceToDate = 0;
   const amount = (n: number) => Math.floor(random.number() * n) * 0.5 + n * 0.5;
   const shuffle = <T>(a: readonly T[]) =>
-    random.sample(a, { count: a.length, compatibility: "legacy-shuffle" });
+    random.sample(a, { count: a.length, algorithm: "fisher-yates-descending" });
   for (
     let index = 0;
     index < settings.honestTraders + settings.cunningTraders;
@@ -110,7 +110,7 @@ export function create(options: Partial<Parameters> = {}) {
       stockpile = amount(settings.initialTokens),
       belief = amount(settings.initialBelief),
       utility = cash + belief * stockpile;
-    const t = Agent.add(
+    const t = Agent.create(
       {
         strategy:
           index < settings.honestTraders

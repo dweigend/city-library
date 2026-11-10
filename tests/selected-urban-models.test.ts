@@ -108,32 +108,32 @@ test("Pollution Moore diffusion wraps an impulse and live plant rates wait for t
 });
 
 test("Recycling quantizes regeneration and preserves the conditional waste draw", () => {
-  const restored = recycling({ seed: 183, numRecyclers: 0, numWastefuls: 0, resourceRegeneration: 25 });
+  const restored = recycling({ seed: 183, recyclerCount: 0, wastefulCount: 0, resourceRegeneration: 25 });
   restored.setResources(restored.read().cells.map(field => field.x === 0 && field.y === 0 ? "recycled" : "new"));
   restored.advance();
   // First draw .027219: integer100=2<2.5 passes, continuous2.7219 would fail.
   expect(restored.read().landPercentages.new).toBe(100);
 
-  const waste = recycling({ seed: 2149, numRecyclers: 0, numWastefuls: 0, resourceRegeneration: 25 });
+  const waste = recycling({ seed: 2149, recyclerCount: 0, wastefulCount: 0, resourceRegeneration: 25 });
   waste.setResources(waste.read().cells.map(field => field.x === 0 && field.y === 0 ? "waste" : "new"));
   waste.advance();
   // First integer5=0; second draw .025202 gives integer100=2, also passing.
   expect(waste.read().landPercentages.new).toBe(100);
 
-  const noTrial = recycling({ seed: 1, numRecyclers: 0, numWastefuls: 0 });
+  const noTrial = recycling({ seed: 1, recyclerCount: 0, wastefulCount: 0 });
   noTrial.setResources(noTrial.read().cells.map(field => field.x === 0 && field.y === 0 ? "waste" : "new"));
   noTrial.advance();
-  const stream = Random.add({ seed: 1 });
+  const stream = Random.create({ seed: 1 });
   expect(stream.number()).toBeGreaterThan(0.2);
   expect(noTrial.read().randomState).toEqual(stream.state); // first trial fails; no second draw
   expect(noTrial.read().landPercentages.waste).toBeCloseTo(100 / 1225, 12);
 });
 
 test("Recycling zero regeneration still consumes source trials and empty populations keep ticking", () => {
-  const model = recycling({ seed: 183, numRecyclers: 0, numWastefuls: 0, resourceRegeneration: 0 });
+  const model = recycling({ seed: 183, recyclerCount: 0, wastefulCount: 0, resourceRegeneration: 0 });
   model.setResources(model.read().cells.map(field => field.x === 0 && field.y === 0 ? "recycled" : "new"));
   model.advance();
-  const stream = Random.add({ seed: 183 }); stream.number();
+  const stream = Random.create({ seed: 183 }); stream.number();
   expect(model.read().randomState).toEqual(stream.state);
   expect(model.read().landPercentages.recycled).toBeCloseTo(100 / 1225, 12);
   expect(model.read().tick).toBe(1);
@@ -141,7 +141,7 @@ test("Recycling zero regeneration still consumes source trials and empty populat
 });
 
 test("Recycling seeking crosses the torus, harvests origin first and refuses over-cap consumption", () => {
-  const model = recycling({ numRecyclers: 0, numWastefuls: 0, resourceRegeneration: 0, agentsSeekResources: true });
+  const model = recycling({ recyclerCount: 0, wastefulCount: 0, resourceRegeneration: 0, agentsSeekResources: true });
   model.setResources(model.read().cells.map(field => field.x === -17 && field.y === 0 ? "new" : "waste"));
   model.setPeople([{ kind: "wasteful", x: 17, y: 0, heading: 0, energy: 1 }]);
   model.advance();
@@ -156,7 +156,7 @@ test("Recycling seeking crosses the torus, harvests origin first and refuses ove
 });
 
 test("Urban models isolate pure detached observations and retain setup plus the latest1000 ticks", () => {
-  for (const model of [awareness({ people: 0, centers: 0 }), recycling({ numRecyclers: 0, numWastefuls: 0 })]) {
+  for (const model of [awareness({ people: 0, centers: 0 }), recycling({ recyclerCount: 0, wastefulCount: 0 })]) {
     const before = model.read();
     expect(model.read()).toEqual(before);
     expect(Object.isFrozen(before.cells[0])).toBe(true);

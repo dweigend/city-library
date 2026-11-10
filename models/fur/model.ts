@@ -25,10 +25,10 @@ export const inputs: Inputs<FurParameters> = {
 type Pigment = Field<{ white: boolean; newWhite: boolean }>;
 export function create(options: Partial<FurParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const space = { x: 61, y: 61, boundary: "wrap" } as const;
-  const world = World.add(space, { random });
-  const grid = Grid.add(space, { state: { white: false, newWhite: false } });
+  const world = World.create(space, { random });
+  const grid = Grid.create(space, { state: { white: false, newWhite: false } });
   world.add(grid);
   const neighborhoods = new Map<
     Pigment,
@@ -73,7 +73,7 @@ export function create(options: Partial<FurParameters> = {}) {
   function restart() {
     for (const field of random.sample(grid.fields, {
       count: grid.fields.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       field.white = random.number() * 100 < settings.initialDensity;
     }

@@ -23,8 +23,8 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer |
-| `numWater` | `750` | integer; ≥ 0; ≤ 1000 |
-| `numLipids` | `250` | integer; ≥ 1; ≤ 500 |
+| `waterCount` | `750` | integer; ≥ 0; ≤ 1000 |
+| `lipidCount` | `250` | integer; ≥ 1; ≤ 500 |
 | `waterWaterForce` | `0.2` | number; ≥ 0; ≤ 2 |
 | `waterOilForce` | `-0.7` | number; ≥ -2; ≤ 0 |
 | `tooCloseForce` | `-0.3` | number; ≥ -2; ≤ 0 |
@@ -42,6 +42,6 @@ The [UI binding](ui.ts) presents `Tick`, `Molecules`, `Lipids`, `Hydrophobic iso
 
 ## Sources and acceptance
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained NetLogo source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
 
 [Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `membrane-formation` and links any shared checks.

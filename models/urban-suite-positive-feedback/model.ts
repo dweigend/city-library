@@ -18,9 +18,9 @@ interface FeedbackSample { readonly tick: number; readonly totalActivity: number
 export function create(options: Partial<FeedbackParameters> = {}) {
   let settings = parameters(inputs, options);
   const width = 21, height = 21;
-  const random = Random.add({ seed: settings.seed });
-  const world = World.add({ x: width, y: height, boundary: "wrap" }, { random });
-  const grid = Grid.add({ x: width, y: height, boundary: "wrap" }, { state: { activity: 0 } });
+  const random = Random.create({ seed: settings.seed });
+  const world = World.create({ x: width, y: height, boundary: "wrap" }, { random });
+  const grid = Grid.create({ x: width, y: height, boundary: "wrap" }, { state: { activity: 0 } });
   world.add(grid);
   const fields = grid.fields;
   const history: Readonly<FeedbackSample>[] = [];

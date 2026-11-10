@@ -1,4 +1,4 @@
-import { defineUI, netLogoColor } from "../../ui/index.ts";
+import { defineUI, indexedColor } from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
@@ -11,7 +11,7 @@ export const ui = defineUI(model, {
   ],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/CrystallizationBasic",
-    label: "Original NetLogo model · Uri Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Uri Wilensky · CC BY-NC-SA 3.0",
   },
   change: (instance, changes) => instance.setRules(changes),
   live: {
@@ -27,7 +27,7 @@ export const ui = defineUI(model, {
       value: (s) => s.averageMetalTemp,
       format: (value: number) => value.toFixed(3),
     },
-    { label: "Source frozen count", value: (s) => s.numFrozen },
+    { label: "Source frozen count", value: (s) => s.frozenCount },
   ],
   views: [
     {
@@ -38,7 +38,7 @@ export const ui = defineUI(model, {
         height: s.height,
         agents: s.atoms.map((a) => ({
           ...a,
-          color: netLogoColor(a.color),
+          color: indexedColor(a.color),
           shape: "triangle" as const,
           size: 7,
         })),
@@ -51,7 +51,7 @@ export const ui = defineUI(model, {
         s.parameters.histogram
           ? s.histogram.map((bin) => ({
               label: `${Math.round(bin.lower)}–${Math.round(bin.upper)}`,
-              color: netLogoColor(bin.color),
+              color: indexedColor(bin.color),
               points: [{ x: bin.index, y: bin.count }],
             }))
           : [],
@@ -62,7 +62,7 @@ export const ui = defineUI(model, {
       series: (s) => [
         {
           label: "Source frozen count",
-          points: s.history.map((p) => ({ x: p.tick, y: p.numFrozen })),
+          points: s.history.map((p) => ({ x: p.tick, y: p.frozenCount })),
         },
       ],
     },

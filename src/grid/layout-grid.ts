@@ -52,7 +52,7 @@ function checkArguments(args: IArguments, minimum: number, maximum: number) {
     throw new TypeError("Invalid layout Grid arguments or undefined placeholder.");
 }
 
-export function addLayoutGrid<F extends object>(input: { layout: Layout; state: F }): LayoutGrid<F> {
+export function createLayoutGrid<F extends object>(input: { layout: Layout; state: F }): LayoutGrid<F> {
   const options = validateOptions(input, ["layout", "state"]);
   const layout = requireLayout(options.layout);
   const initial = options.state as F;

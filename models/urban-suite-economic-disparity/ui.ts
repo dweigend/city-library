@@ -1,6 +1,6 @@
 import {
   defineUI,
-  netLogoColor,
+  indexedColor,
   type Observation,
   type SpatialData,
   type Series,
@@ -12,7 +12,7 @@ export const ui = defineUI(model, {
   setup: ["seed"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/UrbanSuite-EconomicDisparity",
-    label: "Original NetLogo model · Felsen and Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Felsen and Wilensky · CC BY-NC-SA 3.0",
   },
   actions: [
     {
@@ -109,7 +109,7 @@ function residentsJobsAndLandData(state: UIObservation): SpatialData {
       id: cell.id,
       x: cell.x,
       y: cell.y,
-      color: netLogoColor(cell.colorNumber),
+      color: indexedColor(cell.colorNumber),
     })),
     agents: state.agents.map((agent) => ({
       ...agent,

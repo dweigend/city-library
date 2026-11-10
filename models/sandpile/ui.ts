@@ -5,7 +5,7 @@ export const ui = defineUI(model, {
   setup: ["width", "height", "seed", "initial"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/Sandpile",
-    label: "Original NetLogo model · Weintrop et al. / Wilensky · CC0",
+    label: "Source attribution · Weintrop et al. / Wilensky · CC0",
   },
   change: (instance, changes) => instance.setLive(changes),
   live: {

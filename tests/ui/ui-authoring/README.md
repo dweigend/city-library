@@ -21,7 +21,7 @@ bun tests/ui/ui-authoring/01-defaults-and-inert-entry.ts
 bun tests/ui/ui-authoring/02-ordered-setup-and-numeric-live.ts
 bun tests/ui/ui-authoring/03-alternate-observation.ts
 bun tests/ui/ui-authoring/04-groups-format-and-categories.ts
-bun tests/ui/ui-authoring/05-independent-actions-and-legacy.ts
+bun tests/ui/ui-authoring/05-independent-actions-and-scalar-setters.ts
 bun run check:migration
 ```
 

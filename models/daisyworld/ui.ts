@@ -1,4 +1,4 @@
-import { defineUI, netLogoColor, type Observation, type SpatialData } from "../../ui/index.ts";
+import { defineUI, indexedColor, type Observation, type SpatialData } from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
@@ -16,7 +16,7 @@ export const ui = defineUI(model, {
   },
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/Daisyworld",
-    label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Wilensky · CC BY-NC-SA 3.0",
   },
   drawing: {
     toggleLabel: "Paint daisies",
@@ -111,7 +111,7 @@ function daisyworldData(s: UIObservation): SpatialData {
     cells: s.cells.map((c) => ({
       ...c,
       color: s.parameters.showTempMap
-        ? netLogoColor(
+        ? indexedColor(
             10 + 9.999 * Math.max(0, Math.min(1, (c.temperature + 50) / 160)),
           )
         : "#8d8d8d",

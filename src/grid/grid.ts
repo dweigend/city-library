@@ -2,7 +2,7 @@ import type { Agent } from "../agent/agent.ts";
 import { createOccupancyIndex } from "./occupancy.ts";
 import { createField, reservedFieldKeys, type Field } from "./field.ts";
 import { gridIdentity, type GridMembership } from "./membership.ts";
-import { addLayoutGrid, type LayoutGrid } from "./layout-grid.ts";
+import { createLayoutGrid, type LayoutGrid } from "./layout-grid.ts";
 import type { Layout } from "./topology/index.ts";
 export type { Field } from "./field.ts";
 export type { GridMembership } from "./membership.ts";
@@ -46,16 +46,16 @@ export interface Grid<F extends object = {}> extends GridMembership {
     options?: { rate?: number; neighborhood?: "faces" | "moore" },
   ): void;
 }
-function add<F extends object>(options: { layout: Layout; state: F }): LayoutGrid<F>;
-function add<F extends object>(
+function create<F extends object>(options: { layout: Layout; state: F }): LayoutGrid<F>;
+function create<F extends object>(
   space: Space,
   options: { state: F; cellSize?: number; boundary?: Space["boundary"] },
 ): Grid<F>;
-function add(
+function create(
   space?: Space,
   options?: { cellSize?: number; boundary?: Space["boundary"] },
 ): Grid<{}>;
-function add<F extends object>(
+function create<F extends object>(
   input: Space | { layout: Layout; state: F } = { x: 40, y: 40 },
   options: { state?: F; cellSize?: number; boundary?: Space["boundary"] } = {},
 ): Grid<F> | LayoutGrid<F> {
@@ -65,11 +65,11 @@ function add<F extends object>(
     (arguments.length > 1 && arguments[1] === undefined)
   )
     throw new TypeError(
-      "Grid.add accepts Space and options without placeholders.",
+      "Grid.create accepts Space and options without placeholders.",
     );
   if (typeof input === "object" && input !== null && Object.hasOwn(input, "layout")) {
-    if (arguments.length !== 1) throw new TypeError("Layout Grid.add accepts one options record.");
-    return addLayoutGrid<F>(input as { layout: Layout; state: F });
+    if (arguments.length !== 1) throw new TypeError("Layout Grid.create accepts one options record.");
+    return createLayoutGrid<F>(input as { layout: Layout; state: F });
   }
   const opts = validateOptions(options, ["state", "cellSize", "boundary"]);
   const space = normalizeSpace(input as Space, opts.boundary as Space["boundary"]);
@@ -278,4 +278,4 @@ function add<F extends object>(
   }
   return Object.freeze(grid);
 }
-export const Grid = Object.freeze({ add });
+export const Grid = Object.freeze({ create });

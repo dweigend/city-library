@@ -43,4 +43,4 @@ Use the existing `defineUI(model, spec)` contract. Keep short property projectio
 4. Bind observations and explicit actions in `ui.ts`. Do not add host DOM access, framework lifecycle wiring or another state owner.
 5. Run the relevant examples, behavior tests and typechecks. For changed browser flows, exercise the actual controls and inspect the required screenshots independently. Record results and remaining acceptance limits separately.
 
-The [architecture](../ARCHITECTURE.md) defines domain ownership; [UI design](../DESIGN.md) defines authoring and presentation rules. For adapted reference models, use the [per-model acceptance contract](netlogo-model-acceptance.md). Passing an example establishes its assertions, not scientific equivalence or complete library coverage.
+The [architecture](../ARCHITECTURE.md) defines domain ownership; [UI design](../DESIGN.md) defines authoring and presentation rules. For adapted reference models, use the [per-model acceptance contract](model-acceptance.md). Passing an example establishes its assertions, not scientific equivalence or complete library coverage.

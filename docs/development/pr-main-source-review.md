@@ -7,7 +7,7 @@ Reviewer: Antigravity (Gemini 3.8 Flash, HIGH reasoning).
 
 - Target branch: `feat/salabim-concepts` at `1f67f58bdadef109ae0e7dc63627e925a14edf0d`.
 - Merge commit: `b5977bb`, merging feature `754e4cc0bb1afb5b417aeda1d918d3b654c8c85f` and `origin/main` (`429fd627724b0db9fff4da9c81d45ebde4e07fbc`). Post-merge commits `1e97878` and `1f67f58` are documentation only.
-- Final diff against `origin/main`: 170 files (+4378 / -1376). No diffs in `src/`, root `package.json`, `bun.lock`, root `tsconfig.json`, `.github/`, or `README.md`. Root `experiments/` model tree is cleanly retired; 146 model/ui pairs reside under `models/`.
+- Final diff against `origin/main`: 170 files (+4378 / -1376). No diffs in `src/`, root `package.json`, `bun.lock`, root `tsconfig.json`, `.github/`, or `README.md`. Root `studies/` model tree is cleanly retired; 146 model/ui pairs reside under `models/`.
 - Prior approvals pinned to `754e4cc` were not reused; all evaluations were executed against the merged head.
 
 ## Verification Commands and Target Evidence

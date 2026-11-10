@@ -65,9 +65,9 @@ interface Encounters {
 }
 export function create(options: Partial<EthnocentrismParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed }),
-    world = World.add({ x: 51, y: 51, boundary: 'wrap' }, { random }),
-    grid = Grid.add({ x: 51, y: 51, boundary: 'wrap' });
+  const random = Random.create({ seed: settings.seed }),
+    world = World.create({ x: 51, y: 51, boundary: 'wrap' }, { random }),
+    grid = Grid.create({ x: 51, y: 51, boundary: 'wrap' });
   world.add(grid);
   const agents = () => world.agents as readonly Person[];
   const neighborhoods = new Map(
@@ -119,7 +119,7 @@ export function create(options: Partial<EthnocentrismParameters> = {}) {
   }
   function immigrant(f: { x: number; y: number }) {
     return world.add(
-      Agent.add(
+      Agent.create(
         {
           who: who++,
           tag: Math.floor(random.number() * 4),
@@ -144,7 +144,7 @@ export function create(options: Partial<EthnocentrismParameters> = {}) {
     if (full)
       for (const f of random.sample(grid.fields, {
         count: grid.fields.length,
-        compatibility: 'legacy-shuffle',
+        algorithm: 'fisher-yates-descending',
       }))
         immigrant(f);
     record();
@@ -173,14 +173,14 @@ export function create(options: Partial<EthnocentrismParameters> = {}) {
           for (const a of agents()) a.ptr = settings.initialPtr;
           for (const a of random.sample(agents(), {
             count: agents().length,
-            compatibility: 'legacy-shuffle',
+            algorithm: 'fisher-yates-descending',
           })) {
             const ns = neighborhoods
               .get(grid.fieldAt(a)!)!
               .flatMap((f) => grid.agentsAt(f) as readonly Person[]);
             for (const b of random.sample(ns, {
               count: ns.length,
-              compatibility: 'legacy-shuffle',
+              algorithm: 'fisher-yates-descending',
             })) {
               turn.meet++;
               cumulative.meet++;
@@ -210,7 +210,7 @@ export function create(options: Partial<EthnocentrismParameters> = {}) {
           }
           const parents = random.sample(agents(), {
             count: agents().length,
-            compatibility: 'legacy-shuffle',
+            algorithm: 'fisher-yates-descending',
           });
           for (const a of parents)
             if (random.number() < a.ptr) {
@@ -235,7 +235,7 @@ export function create(options: Partial<EthnocentrismParameters> = {}) {
             }
           for (const a of random.sample(agents(), {
             count: agents().length,
-            compatibility: 'legacy-shuffle',
+            algorithm: 'fisher-yates-descending',
           }))
             if (random.number() < settings.deathRate) a.delete();
           last100.push(Object.freeze({ ...turn, ...genotypes() }));

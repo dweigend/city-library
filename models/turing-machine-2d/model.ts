@@ -119,14 +119,14 @@ export function create(options: Partial<TuringParameters> = {}) {
   let settings = parameters(inputs, options);
   if (settings.width % 2 !== 1 || settings.height % 2 !== 1)
     throw new RangeError("Turing source coordinates require odd dimensions.");
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const space = {
     x: settings.width,
     y: settings.height,
     boundary: "wrap" as const,
   };
-  const world = World.add(space, { random });
-  const grid = Grid.add(space, { state: { on: false, colorNumber: 0 } });
+  const world = World.create(space, { random });
+  const grid = Grid.create(space, { state: { on: false, colorNumber: 0 } });
   world.add(grid);
   const agents: Agent<{
     who: number;
@@ -167,7 +167,7 @@ export function create(options: Partial<TuringParameters> = {}) {
     }
     for (let who = 0; who < settings.heads; who++) {
       const color = 5 + 10 * random.number({ min: 0, max: 14, integer: true });
-      const agent = Agent.add(
+      const agent = Agent.create(
         {
           who,
           state: 0 as HeadState,
@@ -198,7 +198,7 @@ export function create(options: Partial<TuringParameters> = {}) {
     for (const agent of agents) agent.ruleSet = findRule(agent, table);
     for (const agent of random.sample(agents, {
       count: agents.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       const cell = grid.fieldAt(agent)!;
       cell.on = agent.ruleSet![2];

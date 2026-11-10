@@ -8,8 +8,8 @@ export type {
   LiveChanges,
   View,
   ModelInstance,
-  NetworkNode,
-  NetworkEdge,
+  GraphNodeData,
+  GraphEdgeData,
   GridData,
   SpatialData,
   SpatialSegment,
@@ -21,7 +21,7 @@ export type {
   SpatialLabel,
   Inspector,
 } from "./definition.ts";
-export { netLogoColor } from "./palette/netlogo-color.ts";
+export { indexedColor } from "./palette/indexed-color.ts";
 export { scientificPalette } from "./palette/scientific.ts";
 export { collectionDiagram } from "./views/collections.ts";
 export type { CollectionRow, CollectionItem } from "./views/collections.ts";

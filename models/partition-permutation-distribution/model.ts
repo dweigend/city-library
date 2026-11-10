@@ -5,14 +5,14 @@ import { parameters, stepCount } from "../parameters.ts";
 export interface Parameters {
   seed: number;
   targetTotal: number;
-  numSuccesses: number;
+  successCount: number;
   diminishingSampleSpace: boolean;
   waitAtFull: boolean;
 }
 export const inputs: Inputs<Parameters> = {
   seed: { kind: "number", default: 1, integer: true },
   targetTotal: { kind: "number", default: 72, min: 2, max: 100, integer: true },
-  numSuccesses: {
+  successCount: {
     kind: "number",
     default: 10000,
     min: 0,
@@ -35,8 +35,8 @@ function plotHistogram(values: readonly number[]) {
 }
 export function create(options: Partial<Parameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
-  const world = World.add({ random });
+  const random = Random.create({ seed: settings.seed });
+  const world = World.create({ random });
   let successes = 0,
     seriesTrials = 0,
     addend: number | string = 0;
@@ -50,7 +50,7 @@ export function create(options: Partial<Parameters> = {}) {
     const space = settings.diminishingSampleSpace
       ? settings.targetTotal - total
       : settings.targetTotal;
-    // NetLogo random accepts negative bounds: integers toward zero, excluding
+    // source model random accepts negative bounds: integers toward zero, excluding
     // the bound itself. Live target changes can make the remaining gap <= 0.
     const draw = Math.floor(random.number() * Math.abs(space));
     addend = 1 + (space < 0 ? -draw : draw);
@@ -73,7 +73,7 @@ export function create(options: Partial<Parameters> = {}) {
     }
   }
   function go() {
-    if (successes >= settings.numSuccesses) return;
+    if (successes >= settings.successCount) return;
     randomGuessAndUpdateTotal();
     world.tick.advance();
     finishUp();
@@ -84,13 +84,13 @@ export function create(options: Partial<Parameters> = {}) {
     },
     advance(count = 1) {
       stepCount(count);
-      for (let i = 0; i < count && successes < settings.numSuccesses; i++) go();
+      for (let i = 0; i < count && successes < settings.successCount; i++) go();
     },
     setRules(
       change: Partial<
         Pick<
           Parameters,
-          | "numSuccesses"
+          | "successCount"
           | "diminishingSampleSpace"
           | "waitAtFull"
           | "targetTotal"
@@ -114,7 +114,7 @@ export function create(options: Partial<Parameters> = {}) {
         addendHistogram: plotHistogram(all),
         seriesHistogram: plotHistogram(series),
         runningTotal: short.reduce((a, b) => a + b, 0),
-        done: successes >= settings.numSuccesses,
+        done: successes >= settings.successCount,
         randomState: random.state,
       });
     },

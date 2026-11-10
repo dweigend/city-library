@@ -84,9 +84,9 @@ export interface TrialInput {
 }
 export function create(options: Partial<RobbyParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed }),
-    world = World.add({ x: 10, y: 10, boundary: "hard" }, { random }),
-    grid = Grid.add(
+  const random = Random.create({ seed: settings.seed }),
+    world = World.create({ x: 10, y: 10, boundary: "hard" }, { random }),
+    grid = Grid.create(
       { x: 10, y: 10, boundary: "hard" },
       { state: { can: false, collected: false } },
     );
@@ -95,7 +95,7 @@ export function create(options: Partial<RobbyParameters> = {}) {
   let nextId = 0;
   function individual(chromosome: readonly RobbyAction[]) {
     return world.add(
-      Agent.add({
+      Agent.create({
         sourceId: nextId++,
         chromosome: [...chromosome],
         fitness: 0,
@@ -134,7 +134,7 @@ export function create(options: Partial<RobbyParameters> = {}) {
   function initializeRobot(strategy: readonly RobbyAction[]) {
     if (robot) robot.delete();
     robot = world.add(
-      Agent.add(
+      Agent.create(
         { kind: "robot", score: 0, strategy: [...strategy] },
         { position: { x: -4.5, y: -4.5 } },
       ),
@@ -147,7 +147,7 @@ export function create(options: Partial<RobbyParameters> = {}) {
   function distributeCans() {
     for (const f of random.sample(fields, {
       count: fields.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       f.can = random.number() < 0.5;
       f.collected = false;
@@ -274,7 +274,7 @@ export function create(options: Partial<RobbyParameters> = {}) {
     population = children;
     for (const p of random.sample(population, {
       count: population.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     }))
       mutate(p);
   }

@@ -29,10 +29,10 @@ export const inputs: Inputs<SlimeParameters> = {
 type Slime = Agent<{ who: number }>;
 export function create(options: Partial<SlimeParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const space = { x: 81, y: 81, boundary: "wrap" } as const;
-  const world = World.add(space, { random });
-  const grid = Grid.add(space, { state: { chemical: 0 } });
+  const world = World.create(space, { random });
+  const grid = Grid.create(space, { state: { chemical: 0 } });
   world.add(grid);
   const population = () => world.agents as readonly Slime[];
 
@@ -41,7 +41,7 @@ export function create(options: Partial<SlimeParameters> = {}) {
     for (const field of grid.fields) field.chemical = 0;
     for (let who = 0; who < settings.population; who++) {
       world.add(
-        Agent.add(
+        Agent.create(
           { who },
           {
             position: {
@@ -78,7 +78,7 @@ export function create(options: Partial<SlimeParameters> = {}) {
   function go() {
     for (const slime of random.sample(population(), {
       count: population().length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       if (grid.fieldAt(slime)!.chemical > settings.sniffThreshold)
         turnTowardChemical(slime);

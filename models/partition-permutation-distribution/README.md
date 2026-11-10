@@ -24,7 +24,7 @@ const observation = simulation.read();
 | --- | --- | --- |
 | `seed` | `1` | integer |
 | `targetTotal` | `72` | integer; ≥ 2; ≤ 100 |
-| `numSuccesses` | `10000` | integer; ≥ 0; ≤ 10000 |
+| `successCount` | `10000` | integer; ≥ 0; ≤ 10000 |
 | `diminishingSampleSpace` | `true` | boolean |
 | `waitAtFull` | `true` | boolean |
 
@@ -42,6 +42,6 @@ The [UI binding](ui.ts) presents `Number of successes`, `Tick`, `Successes`, `Ru
 
 ## Sources and acceptance
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained NetLogo source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
 
 [Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `partition-permutation-distribution` and links any shared checks.

@@ -15,22 +15,22 @@ function noDemand(): Partial<TaxiParameters> {
   );
 }
 
-describe("selected B04 city traffic public contracts", () => {
+describe("selected city traffic public contracts", () => {
   test("grid initial stopped accounting precedes initial speed assignment", () => {
-    const model = grid({ seed: 2, numCars: 12 });
+    const model = grid({ seed: 2, carCount: 12 });
     const initial = model.snapshot();
-    expect(initial.numCarsStopped).toBe(12);
+    expect(initial.stoppedCarCount).toBe(12);
     expect(initial.cars.every((car) => car.waitTime === 1)).toBe(true);
     expect(initial.intersections.length).toBe(25);
     expect(new Set(initial.cars.map((car) => `${car.x},${car.y}`)).size).toBe(
       12,
     );
-    expect(initial.history[0]!.numCarsStopped).toBe(12);
+    expect(initial.history[0]!.stoppedCarCount).toBe(12);
     expect(initial.cars.some((car) => car.speed > 0)).toBe(true);
   });
 
   test("signal phase uses equality before advancing; power changes have deferred recoloring", () => {
-    const model = grid({ numCars: 1, ticksPerCycle: 3 });
+    const model = grid({ carCount: 1, ticksPerCycle: 3 });
     const initial = model.snapshot();
     const selected = initial.currentIntersectionId;
     model.setParameters({ power: false, currentAuto: false });
@@ -55,8 +55,8 @@ describe("selected B04 city traffic public contracts", () => {
   });
 
   test("grid selection accepts an actual intersection; goal selection takes nearest", () => {
-    const plain = grid({ numCars: 1 });
-    const targeted = goal({ numCars: 1 });
+    const plain = grid({ carCount: 1 });
+    const targeted = goal({ carCount: 1 });
     const background = plain
       .snapshot()
       .cells.find((cell) => !cell.intersection)!;
@@ -68,7 +68,7 @@ describe("selected B04 city traffic public contracts", () => {
   });
 
   test("goal work/home references remain distinct and watch cleanup preserves enlarged source car", () => {
-    const model = goal({ seed: 4, numCars: 8 });
+    const model = goal({ seed: 4, carCount: 8 });
     const initial = model.snapshot();
     expect(
       initial.cars.every(
@@ -103,11 +103,11 @@ describe("selected B04 city traffic public contracts", () => {
     expect(demandKeys.length).toBe(45);
     expect(inputs["prob-res-cbd-AM"].default).toBe(1);
     expect(inputs["prob-cbd-cbd-MD"].default).toBe(0.97);
-    const model = taxi({ numTaxicab: 4, ...noDemand() });
+    const model = taxi({ taxicabCount: 4, ...noDemand() });
     const initial = model.snapshot();
     expect(initial.passengers.length).toBe(0);
     expect(
-      initial.cabs.every((cab) => cab.numTotalTrips === 0 && cab.vacancy),
+      initial.cabs.every((cab) => cab.totalTripCount === 0 && cab.vacancy),
     ).toBe(true);
     model.step(100);
     expect(model.snapshot().passengers.length).toBe(0);
@@ -116,14 +116,14 @@ describe("selected B04 city traffic public contracts", () => {
         .snapshot()
         .cabs.every(
           (cab) =>
-            cab.numBusinessMiles === 0 &&
-            cab.numTotalMiles === cab.numDeadMiles,
+            cab.businessDistanceMiles === 0 &&
+            cab.totalDistanceMiles === cab.deadheadDistanceMiles,
         ),
     ).toBe(true);
   });
 
   test("taxi phase changes at source pre-step period boundary and wraps all five phases", () => {
-    const model = taxi({ numTaxicab: 1, lengthOfTimePeriod: 2, ...noDemand() });
+    const model = taxi({ taxicabCount: 1, lengthOfTimePeriod: 2, ...noDemand() });
     model.step(2);
     expect(model.snapshot().currentPhase).toBe("AM Peak");
     model.step(1);
@@ -140,14 +140,14 @@ describe("selected B04 city traffic public contracts", () => {
 
   test("source zero-length green control raises an explicit error without completing tick", () => {
     const model = taxi({ lengthOfGreenLight: 0 });
-    expect(() => model.step()).toThrow("modulo by zero");
+    expect(() => model.step()).toThrow("Green-light duration must be greater than zero.");
     expect(model.snapshot().tick).toBe(0);
   });
 
   test("taxi current passenger count and completed-trip samples conserve accounting", () => {
     const model = taxi({
       seed: 8,
-      numTaxicab: 25,
+      taxicabCount: 25,
       waitTimeMean: 200,
       waitTimeSd: 0,
     });
@@ -156,14 +156,14 @@ describe("selected B04 city traffic public contracts", () => {
     expect(state.cabs.length).toBe(25);
     expect(state.cabs.some((cab) => cab.tripIncomes.length > 0)).toBe(true);
     for (const cab of state.cabs) {
-      expect(cab.numTotalMiles).toBe(cab.numBusinessMiles + cab.numDeadMiles);
+      expect(cab.totalDistanceMiles).toBe(cab.businessDistanceMiles + cab.deadheadDistanceMiles);
       expect(cab.tripIncomes.length).toBe(cab.tripDistances.length);
       expect(cab.tripIncomes.length).toBe(cab.tripDurations.length);
       expect(cab.totalIncome).toBeCloseTo(
         cab.tripIncomes.reduce((sum, value) => sum + value, 0),
         10,
       );
-      expect(cab.numTotalTrips).toBe(
+      expect(cab.totalTripCount).toBe(
         cab.tripIncomes.length + (cab.vacancy ? 0 : 1),
       );
     }
@@ -171,8 +171,8 @@ describe("selected B04 city traffic public contracts", () => {
 
   test("read models are detached and observation never changes RNG continuation", () => {
     for (const factory of [grid, goal]) {
-      const observed = factory({ seed: 2, numCars: 5 });
-      const control = factory({ seed: 2, numCars: 5 });
+      const observed = factory({ seed: 2, carCount: 5 });
+      const control = factory({ seed: 2, carCount: 5 });
       const read = observed.snapshot();
       read.cells[0]!.color = "mutated observation";
       read.cars[0]!.speed = 999;
@@ -180,8 +180,8 @@ describe("selected B04 city traffic public contracts", () => {
       control.step(10);
       expect(observed.snapshot()).toEqual(control.snapshot());
     }
-    const observed = taxi({ seed: 3, numTaxicab: 3 });
-    const control = taxi({ seed: 3, numTaxicab: 3 });
+    const observed = taxi({ seed: 3, taxicabCount: 3 });
+    const control = taxi({ seed: 3, taxicabCount: 3 });
     observed.snapshot().cabs[0]!.tripIncomes.push(999);
     observed.snapshot();
     observed.step(10);
@@ -190,19 +190,19 @@ describe("selected B04 city traffic public contracts", () => {
   });
 
   test("setup-only controls reject live mutation without changing state", () => {
-    const model = grid({ numCars: 1 });
-    expect(() => model.setParameters({ numCars: 2 })).toThrow("setup-only");
-    expect(model.snapshot().parameters.numCars).toBe(1);
-    const service = taxi({ numTaxicab: 1 });
-    expect(() => service.setParameters({ numTaxicab: 2 })).toThrow(
+    const model = grid({ carCount: 1 });
+    expect(() => model.setParameters({ carCount: 2 })).toThrow("setup-only");
+    expect(model.snapshot().parameters.carCount).toBe(1);
+    const service = taxi({ taxicabCount: 1 });
+    expect(() => service.setParameters({ taxicabCount: 2 })).toThrow(
       "setup-only",
     );
-    expect(service.snapshot().parameters.numTaxicab).toBe(1);
+    expect(service.snapshot().parameters.taxicabCount).toBe(1);
   });
 });
 
 test("public Grid speed procedures retain overshoot and negative following-speed source boundaries", () => {
-  const model = grid({ numCars: 2 });
+  const model = grid({ carCount: 2 });
   const [first, second] = model.cars();
   const location = model.roads.find(
     (field) =>
@@ -225,7 +225,7 @@ test("public Grid speed procedures retain overshoot and negative following-speed
 
 test("Taxi U-turn bypasses occupancy while ordinary movement waits, and only movement charges fare", () => {
   const model = taxi({
-    numTaxicab: 2,
+    taxicabCount: 2,
     ...noDemand(),
     eachGridCost: 1,
     eachTickCost: 0.5,
@@ -235,7 +235,7 @@ test("Taxi U-turn bypasses occupancy while ordinary movement waits, and only mov
   second!.move({ to: { x: 3, y: 4 } });
   first!.rotate(0 - first!.heading);
   model.moveUp(first!);
-  expect(first!.numTotalMiles).toBe(0);
+  expect(first!.totalDistanceMiles).toBe(0);
   first!.rotate(90 - first!.heading);
   first!.vacancy = false;
   first!.currentTripIncome = 2;
@@ -243,7 +243,7 @@ test("Taxi U-turn bypasses occupancy while ordinary movement waits, and only mov
   expect(first!.x).toBe(3);
   expect(first!.y).toBe(4);
   expect(first!.heading).toBe(270);
-  expect(first!.numBusinessMiles).toBe(1);
+  expect(first!.businessDistanceMiles).toBe(1);
   expect(first!.currentTripIncome).toBe(3.5);
   first!.destinationX = 3;
   first!.destinationX2 = 3;
@@ -257,7 +257,7 @@ test("Taxi U-turn bypasses occupancy while ordinary movement waits, and only mov
 
 test("Taxi generated passengers age before pickup and zero patience removes them immediately", () => {
   const model = taxi({
-    numTaxicab: 1,
+    taxicabCount: 1,
     waitTimeMean: 0,
     waitTimeSd: 0,
     ...noDemand(),
@@ -272,7 +272,7 @@ test("Taxi generated passengers age before pickup and zero patience removes them
 });
 
 test("Goal faces its local choice before speed lookup while retaining the setup upCar flag", () => {
-  const model = goal({ numCars: 2 });
+  const model = goal({ carCount: 2 });
   const [commuter, blocker] = model.cars();
   const junction = model.intersections.find(
     (field) => field.x > -10 && field.x < 10 && field.y > -10 && field.y < 10,
@@ -305,7 +305,7 @@ test("Goal faces its local choice before speed lookup while retaining the setup 
 });
 
 test("Goal applies both source adjacency checks instead of an else-if destination toggle", () => {
-  const model = goal({ numCars: 1 });
+  const model = goal({ carCount: 1 });
   const commuter = model.cars()[0]!;
   const junction = model.intersections.find(
     (field) => field.x > -10 && field.x < 10 && field.y > -10 && field.y < 10,
@@ -326,8 +326,8 @@ test("Goal applies both source adjacency checks instead of an else-if destinatio
 });
 
 test("explicit Grid and Goal compositions retain separate canonical state and caller-owned clocks", () => {
-  const plain = grid({ seed: 4, numCars: 4 });
-  const commuters = goal({ seed: 4, numCars: 4 });
+  const plain = grid({ seed: 4, carCount: 4 });
+  const commuters = goal({ seed: 4, carCount: 4 });
   const goalBefore = commuters.snapshot();
   const canonicalRoad = plain.roads[0]!;
   expect(plain.grid.fields).toContain(canonicalRoad);

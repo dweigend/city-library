@@ -1,10 +1,10 @@
 import { strict as assert } from "node:assert";
 import { Grid, Agent, World, geometry } from "city-library";
-const world = World.add({ x: 11, y: 11, boundary: "wrap" });
-const grid = Grid.add(world.space!, { state: { quality: 1 } }); world.add(grid);
+const world = World.create({ x: 11, y: 11, boundary: "wrap" });
+const grid = Grid.create(world.space!, { state: { quality: 1 } }); world.add(grid);
 const road = grid.fieldAt({ x: -5, y: 0 })!, lot = grid.fieldAt({ x: 5, y: 0 })!;
 assert.equal(geometry.distance(road, lot, { space: grid.space }), 1);
-const builder = Agent.add({ kind: "builder" }, { position: { x: 5, y: 0 } }); world.add(builder);
+const builder = Agent.create({ kind: "builder" }, { position: { x: 5, y: 0 } }); world.add(builder);
 assert.equal(geometry.distance(builder, road, { space: world.space! }), builder.distanceTo(road));
 assert.equal(world.agents.length, 1); assert.equal(world.tick.value, 0);
 assert.equal(road.quality, 1);

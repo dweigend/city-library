@@ -1,10 +1,10 @@
 # UI API reference
 
-Use `defineUI` to describe what an experiment shows and which model actions its controls call. The model remains responsible for state, validation and time. This reference covers each part of that declaration.
+Use `defineUI` to describe what a model shows and which model actions its controls call. The model remains responsible for state, validation and time. This reference covers each part of that declaration.
 
 ## Status
 
-This reference and the [API table](api-table.md) define the repository UI contract supported by the Svelte adapter. Array declarations remain compatibility syntax. [PLAN](../../PLAN.md) identifies remaining acceptance work. The package has not been published.
+This reference and the [API table](api-table.md) define the repository UI contract supported by the Svelte adapter. Array control declarations remain supported syntax. [PLAN](../../PLAN.md) identifies remaining acceptance work. The package has not been published.
 
 ## Principles
 
@@ -13,7 +13,7 @@ The five [binding UI authoring rules](../DESIGN.md#binding-ui-authoring-rules) g
 1. Ordinary `ui.ts` files read as flat TypeScript data descriptions. Use one familiar spelling, short callbacks and named projections when a callback obscures the description.
 2. The model owns scientific state, validation, defaults and actions. The UI reads observations and invokes public actions; it never duplicates scientific rules or mutates observations.
 3. Model input descriptors supply defaults, numeric limits, granularity and choices. The shared host supplies typography, theme, spacing, layout, accessible controls and renderer styling.
-4. Customization belongs next to the affected binding and is optional. Do not require renderer selection, DOM work, lifecycle plumbing or style configuration for a normal experiment.
+4. Customization belongs next to the affected binding and is optional. Do not require renderer selection, DOM work, lifecycle plumbing or style configuration for a normal model.
 5. Follow [Agent Loom terminology](../agent-loom/terminology.md). Domain `Field` and detached UI `Cell`/`cells` have different responsibilities. A step invokes a model procedure; tick is model time; host cadence is neither.
 
 ## Define UI
@@ -37,9 +37,9 @@ export const ui = defineUI(model, {
 
 ## Model
 
-`Definition<P, M>` supplies `title`, optional `description`, canonical `inputs` and `create(parameters)`. Inputs are descriptors for number, boolean, choice or text, each with `default`; numbers may specify `min`, `max`, `step`, `integer`, and choices specify `options`. This is the experiment definition contract, not the future live-property core `Input` API.
+`Definition<P, M>` supplies `title`, optional `description`, canonical `inputs` and `create(parameters)`. Inputs are descriptors for number, boolean, choice or text, each with `default`; numbers may specify `min`, `max`, `step`, `integer`, and choices specify `options`. This is the model definition contract, not the future live-property core `Input` API.
 
-`M` implements `read(): unknown`, `advance(steps?: number): void` and optionally `dispose(): void`. Callback observations are inferred from `read()`. Import the public type `Observation<typeof model>` for a named projection, or `Observation<Instance>` when an instance type is already available. The public UI entry and its compatibility import export the same alias; it creates no wrapper or new state. The factory and actions own runtime validation, including cross-field constraints. UI constraints complement that validation. Observers and rendering projections must be side-effect-free and must not advance model time or consume model randomness.
+`M` implements `read(): unknown`, `advance(steps?: number): void` and optionally `dispose(): void`. Callback observations are inferred from `read()`. Import the public type `Observation<typeof model>` for a named projection, or `Observation<Instance>` when an instance type is already available. The public UI entry and its secondary import export the same alias; it creates no wrapper or new state. The factory and actions own runtime validation, including cross-field constraints. UI constraints complement that validation. Observers and rendering projections must be side-effect-free and must not advance model time or consume model randomness.
 
 ## Setup
 
@@ -102,7 +102,7 @@ A text getter supports `(value: string) => ...`. `defineUI` rejects incompatible
 
 The public `Monitor<S, V>` type describes an extracted record with observation `S` and scalar `V`. For example, use `satisfies Monitor<Observation<typeof model>, number>` on a standalone numeric monitor. Existing `UISpec<P, M>` retains its broad compatibility formatter context; an extracted scalar-specific spec can keep its own annotations and be passed directly to `defineUI` without that broad annotation.
 
-Changing display precision belongs in `format`; it must not round or overwrite scientific values. Preserve existing units, unavailable-value text and trailing-zero behavior when migrating an experiment.
+Changing display precision belongs in `format`; it must not round or overwrite scientific values. Preserve existing units, unavailable-value text and trailing-zero behavior when migrating a model.
 
 ## Views
 
@@ -110,7 +110,7 @@ Each view has a discriminant `type`, a required `label` and one data projection.
 
 ### Network
 
-`{ type: "network", label, nodes, edges }` projects arrays of `NetworkNode` and `NetworkEdge`. Nodes require string `id`; optional `label`, `color`, `size` customize presentation. Size is symbol diameter in CSS pixels, not a physical collision radius. Edges require `id`, `from`, `to` referencing node IDs.
+`{ type: "network", label, nodes, edges }` projects arrays of `GraphNodeData` and `GraphEdgeData`. Nodes require string `id`; optional `label`, `color`, `size` customize presentation. Size is symbol diameter in CSS pixels, not a physical collision radius. Edges require `id`, `from`, `to` referencing node IDs.
 
 Experimental nodes add optional initial `position: { x, y }`; later dragging and layout remain presentation-owned. Experimental edges add `directed`, `color` and positive finite CSS-pixel `width`. Do not infer graph weights or mutate graph state from renderer positions.
 
@@ -134,7 +134,7 @@ Mixed diagrams containing rectangles or diamonds pick the topmost painted symbol
 
 ### Collection diagrams
 
-`collectionDiagram(rows): SpatialData` is a pure, detached projection exported by the public UI entry and its compatibility import. Use it inside the existing spatial view for abstract collections; it creates no view kind, renderer, model or clock. Shared defaults own spacing, wrapping, glyph sizes and annotations. Authors supply no layout numbers.
+`collectionDiagram(rows): SpatialData` is a pure, detached projection exported by the public UI entry and its secondary import. Use it inside the existing spatial view for abstract collections; it creates no view kind, renderer, model or clock. Shared defaults own spacing, wrapping, glyph sizes and annotations. Authors supply no layout numbers.
 
 Each row has a unique nonempty `id`, visible `label` and optional `color`, defaulting to `scientificPalette.neutral`. Its discriminant defines one fact:
 
@@ -160,7 +160,7 @@ Optional `xAxis` and `yAxis` contain `label?` and `unit?`. Together they display
 
 `{ type: "inspector", label, value(observation, selected) }` returns a scalar record or `undefined`. Undefined hides the inspector; returning a record displays its entries. Selection is presentation-owned and starts as `null`; setup clears it. Resolve IDs against the current observation and handle stale/missing IDs. Inspectors do not grant write access to the model.
 
-Within a mounted experiment, a projected ID must identify one semantic entity consistently across views. Two views of the same entity reuse its ID; unrelated entities must use different IDs. If source kinds overlap, project namespaced IDs such as `agent:${id}` and `cell:${id}`, then resolve those IDs against the current observation in the inspector and selection-dependent action. Do not change domain IDs or introduce a second allocator. This is an authoring contract: the host cannot infer whether two arbitrary projections represent the same entity. Selection remains `string | null`, and a missing target must not trigger a model action. The [namespaced example](../../tests/ui/ui-authoring-next/03-namespaced-selection.ts) covers collisions, shared selection, disappearance and restart.
+Within a mounted model, a projected ID must identify one semantic entity consistently across views. Two views of the same entity reuse its ID; unrelated entities must use different IDs. If source kinds overlap, project namespaced IDs such as `agent:${id}` and `cell:${id}`, then resolve those IDs against the current observation in the inspector and selection-dependent action. Do not change domain IDs or introduce a second allocator. This is an authoring contract: the host cannot infer whether two arbitrary projections represent the same entity. Selection remains `string | null`, and a missing target must not trigger a model action. The [namespaced example](../../tests/ui/ui-composition/03-namespaced-selection.ts) covers collisions, shared selection, disappearance and restart.
 
 ## Drawing
 
@@ -170,10 +170,10 @@ When a toggle is supplied it begins off for each mounted instance; without a tog
 
 ## Palette
 
-The public UI entry and its compatibility import export `scientificPalette`: `neutral`, `waiting`, `active`, `completed` and `unavailable`. Use these shared semantic colors together with shape, position or labels; color alone must not carry the state distinction. They are presentation constants, not model state.
+The public UI entry and its secondary import export `scientificPalette`: `neutral`, `waiting`, `active`, `completed` and `unavailable`. Use these shared semantic colors together with shape, position or labels; color alone must not carry the state distinction. They are presentation constants, not model state.
 
 
-Experimental export `netLogoColor(color: number): string` converts finite numeric NetLogo colors using the observed official tenth-color bins. Values wrap modulo 140 and select the lower tenth bin. Nonnumeric values throw `TypeError`; nonfinite values throw `RangeError`. Use it for compatibility presentation, not as a second scientific state variable. This export is absent from the main baseline.
+Experimental export `indexedColor(color: number): string` converts finite numeric indexed palette colors using the observed official tenth-color bins. Values wrap modulo 140 and select the lower tenth bin. Nonnumeric values throw `TypeError`; nonfinite values throw `RangeError`. Use it for compatibility presentation, not as a second scientific state variable. This export is absent from the main baseline.
 
 ## Lifecycle
 

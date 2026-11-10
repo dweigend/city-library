@@ -62,9 +62,9 @@ type Player = Agent<{
 }>;
 export function create(options: Partial<DevelopmentParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed }),
-    world = World.add({ x: 121, y: 51, boundary: 'hard' }, { random });
-  const grid = Grid.add(
+  const random = Random.create({ seed: settings.seed }),
+    world = World.create({ x: 121, y: 51, boundary: 'hard' }, { random });
+  const grid = Grid.create(
     { x: 121, y: 51, boundary: 'hard' },
     { state: { trailColor: 0 } },
   );
@@ -86,7 +86,7 @@ export function create(options: Partial<DevelopmentParameters> = {}) {
   }>[] = [];
   for (let who = 0; who < settings.numberOfPlayers; who++)
     world.add(
-      Agent.add(
+      Agent.create(
         {
           who,
           color: 5 + 10 * Math.floor(random.number() * 14) + 0.1,
@@ -115,7 +115,7 @@ export function create(options: Partial<DevelopmentParameters> = {}) {
       });
     for (const p of random.sample(players(), {
       count: players().length,
-      compatibility: 'legacy-shuffle',
+      algorithm: 'fisher-yates-descending',
     })) {
       p.score = 122;
       p.bestScore = 122;
@@ -161,7 +161,7 @@ export function create(options: Partial<DevelopmentParameters> = {}) {
             const moving = players().filter((p) => p.movesLeft > 0);
             for (const p of random.sample(moving, {
               count: moving.length,
-              compatibility: 'legacy-shuffle',
+              algorithm: 'fisher-yates-descending',
             })) {
               p.movesLeft--;
               p.move(1);
@@ -178,7 +178,7 @@ export function create(options: Partial<DevelopmentParameters> = {}) {
           for (const p of players()) p.score = Math.abs(p.x);
           for (const p of random.sample(players(), {
             count: players().length,
-            compatibility: 'legacy-shuffle',
+            algorithm: 'fisher-yates-descending',
           })) {
             if (settings.strategy === 'Random') {
               p.bestMaxMoves =

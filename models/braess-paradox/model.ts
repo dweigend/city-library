@@ -32,10 +32,10 @@ export const inputs: Inputs<Parameters> = {
 type Commuter = Agent<{ birthTick: number; ticksHere: number; route: number }>;
 export function create(options: Partial<Parameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const space = { x: 49, y: 49, boundary: "hard" as const };
-  const world = World.add(space, { random });
-  const grid = Grid.add(space, {
+  const world = World.create(space, { random });
+  const grid = Grid.create(space, {
     state: {
       delay: 0,
       baseDelay: 0,
@@ -50,7 +50,7 @@ export function create(options: Partial<Parameters> = {}) {
   const commuters = () => world.agents as readonly Commuter[];
   const integer = (n: number) => Math.floor(random.number() * n);
   const shuffle = <T>(a: readonly T[]) =>
-    random.sample(a, { count: a.length, compatibility: "legacy-shuffle" });
+    random.sample(a, { count: a.length, algorithm: "fisher-yates-descending" });
   const topLeft = grid.fieldAt({ x: -22, y: 22 })!;
   const topRight = grid.fieldAt({ x: 22, y: 22 })!;
   const bottomLeft = grid.fieldAt({ x: -22, y: -22 })!;
@@ -83,7 +83,7 @@ export function create(options: Partial<Parameters> = {}) {
       x: field.x + vector.x * distance,
       y: field.y + vector.y * distance,
     });
-    if (!target) throw new Error("Source road operation left the patch world.");
+    if (!target) throw new Error("Source road operation left the field world.");
     return target;
   }
   function drawRoad(type: number, originalStart: ModelField, originalFinish: ModelField) {
@@ -239,7 +239,7 @@ export function create(options: Partial<Parameters> = {}) {
   function spawnCommuters() {
     if (spawnTime > 250 / settings.spawnRate) {
       const route = newRoute();
-      const agent = Agent.add(
+      const agent = Agent.create(
         { birthTick: world.tick.value, ticksHere: 1, route },
         { position: topLeft },
       );

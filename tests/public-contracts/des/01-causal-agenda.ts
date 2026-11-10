@@ -2,8 +2,8 @@ import assert from "node:assert/strict";
 import { Agenda, World } from "city-library";
 
 // Minutes; one callback can schedule another event before the current horizon.
-const agenda = Agenda.add<{ kind: string }>();
-const world = World.add();
+const agenda = Agenda.create<{ kind: string }>();
+const world = World.create();
 world.add(agenda);
 assert.equal(world.agendas[0], agenda);
 agenda.add({ at: 2, data: { kind: "arrival" } });
@@ -17,7 +17,7 @@ assert.equal(agenda.next({ until: 10 }), undefined);
 assert.equal(agenda.time, 10);
 assert.equal(world.tick.value, 0);
 
-const ties = Agenda.add<string>();
+const ties = Agenda.create<string>();
 ties.add({ at: 1, priority: 1, data: "late-priority" });
 ties.add({ at: 1, priority: -1, data: "first" });
 ties.add({ at: 1, priority: -1, data: "second" });
@@ -26,7 +26,7 @@ assert.equal(ties.time, 1);
 assert.deepEqual(ties.advance({ until: 4 }).map(event => event.data), ["late-priority"]);
 assert.equal(ties.time, 4);
 
-const zeroDelay = Agenda.add<number>();
+const zeroDelay = Agenda.create<number>();
 zeroDelay.add({ at: 0, data: 0 });
 for (let handled = 0; handled < 5; handled++) {
   const event = zeroDelay.next({ until: 1 });

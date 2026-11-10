@@ -5,7 +5,7 @@ export const ui = defineUI(model, {
   setup: ["width", "height", "seed"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/HexCellAggregation",
-    label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Wilensky · CC BY-NC-SA 3.0",
   },
   complete: (state) => state.done,
   actions: [

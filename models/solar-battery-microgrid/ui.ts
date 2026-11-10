@@ -1,4 +1,4 @@
-import { defineUI, netLogoColor, type Observation, type SpatialData } from "../../ui/index.ts";
+import { defineUI, indexedColor, type Observation, type SpatialData } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
   monitors: [{ label: "Hour", value: state => state.tick }, { label: "Stored (kWh)", value: state => state.energyKwh },
@@ -14,12 +14,12 @@ export const ui = defineUI(model, {
 
 type State = Observation<typeof model>;
 const BATTERY_BLOCK_COUNT = 40;
-const STORED_ENERGY_COLOR = netLogoColor(55);
-const INACTIVE_COLOR = netLogoColor(8);
-const SOLAR_COLOR = netLogoColor(45);
-const DEMAND_COLOR = netLogoColor(25);
-const GRID_COLOR = netLogoColor(105);
-const RESERVE_COLOR = netLogoColor(15);
+const STORED_ENERGY_COLOR = indexedColor(55);
+const INACTIVE_COLOR = indexedColor(8);
+const SOLAR_COLOR = indexedColor(45);
+const DEMAND_COLOR = indexedColor(25);
+const GRID_COLOR = indexedColor(105);
+const RESERVE_COLOR = indexedColor(15);
 
 function microgridData(state: State): SpatialData {
   // Fixed diagram coordinates express connections and a storage gauge, not geography.

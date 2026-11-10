@@ -42,4 +42,4 @@ assert.equal(s.weights[8], sign * .03125);
 assert.equal(s.activations[5], .5); // activation from BEFORE final update.
 assert.equal(n.test(1,0).expected, 1);
 assert.equal(n.read().tick, 1);
-console.log('B18 neural equations, phase barrier, truth functions and non-ticking tests passed');
+console.log('neural equations, phase barrier, truth functions and non-ticking tests passed');

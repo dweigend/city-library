@@ -1,0 +1,13 @@
+import assert from "node:assert/strict";
+import { Agent, Agenda, World } from "city-library";
+const first = World.create();
+const second = World.create();
+const agenda = first.add(Agenda.create());
+const resident = Agent.create();
+assert.throws(() => second.add([resident, agenda]), TypeError);
+assert.equal(second.agents.length, 0);
+assert.equal(second.agendas.length, 0);
+assert.equal(first.agendas[0], agenda);
+first.delete(agenda);
+assert.equal(second.add(agenda), agenda);
+assert.equal(first.agendas.length, 0);

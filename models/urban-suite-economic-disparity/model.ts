@@ -37,9 +37,9 @@ export function create(options: Partial<EconomicParameters> = {}) {
   let settings = parameters(inputs, options);
   const width = 89, height = 89;
   const space = { x: width, y: height, boundary: "hard" as const };
-  const random = Random.add({ seed: settings.seed });
-  const world = World.add(space, { random });
-  const grid = Grid.add(space, { state: { price: 40, quality: 40, sdDistance: 0, colorNumber: 50 } });
+  const random = Random.create({ seed: settings.seed });
+  const world = World.create(space, { random });
+  const grid = Grid.create(space, { state: { price: 40, quality: 40, sdDistance: 0, colorNumber: 50 } });
   world.add(grid);
   const fields = grid.fields;
   let counter = 0;
@@ -47,12 +47,12 @@ export function create(options: Partial<EconomicParameters> = {}) {
   let utilityRanges: Readonly<{ minPoor: number; maxPoor: number; minRich: number; maxRich: number }> = Object.freeze({ minPoor: 0, maxPoor: 0, minRich: 0, maxRich: 0 });
   const history: Readonly<EconomicSample>[] = [];
   const residents = () => world.agents as readonly Resident[];
-  const breed = (kind: EconomicKind) => residents().filter(person => person.kind === kind);
+  const group = (kind: EconomicKind) => residents().filter(person => person.kind === kind);
   function activation<T>(snapshot: readonly T[]) {
-    return random.sample(snapshot, { count: snapshot.length, compatibility: "legacy-shuffle" });
+    return random.sample(snapshot, { count: snapshot.length, algorithm: "fisher-yates-descending" });
   }
   function createResident(kind: EconomicKind, x = 0, y = 0, utility = 0) {
-    const person = Agent.add({ kind, utility }, { position: { x, y } });
+    const person = Agent.create({ kind, utility }, { position: { x, y } });
     world.add(person); return person;
   }
   function poorUtility(field: typeof fields[number]) {
@@ -62,17 +62,17 @@ export function create(options: Partial<EconomicParameters> = {}) {
     return (1 / (field.sdDistance + 0.1)) ** (1 - settings.richQualityPriority) * field.quality ** (1 + settings.richQualityPriority);
   }
   function nearestJobDistance(point: { readonly x: number; readonly y: number }) {
-    const jobs = breed("job");
+    const jobs = group("job");
     if (!jobs.length) throw new RangeError("Nearest-job distance requires a job.");
     return Math.min(...jobs.map(job => geometry.distance(point, job, { space })));
   }
   function refreshJobDistances(offset: number) {
-    const jobs = breed("job");
+    const jobs = group("job");
     if (!jobs.length) throw new RangeError("Nearest-job distance requires a job.");
     for (const field of fields) field.sdDistance = Math.min(...jobs.map(job => geometry.distance(field, job, { space }))) + offset;
   }
   // The source's nested radii overlap. Continuous Agent positions, not rounded
-  // patch centers, determine all five radius memberships.
+  // field centers, determine all five radius memberships.
   function affectLand(person: Resident, property: "price" | "quality", increase: boolean) {
     const here = grid.fieldAt(person)!;
     here[property] *= increase ? 1.05 : 0.95;
@@ -115,7 +115,7 @@ export function create(options: Partial<EconomicParameters> = {}) {
   }
   function removeOldest(kind: EconomicKind, count: number) {
     // Canonical World insertion order is birth order, independent of opaque IDs.
-    for (const person of breed(kind).slice(0, count)) person.delete();
+    for (const person of group(kind).slice(0, count)) person.delete();
   }
   function updateView() {
     if (viewMode === "poor-utility" || viewMode === "rich-utility") {
@@ -140,7 +140,7 @@ export function create(options: Partial<EconomicParameters> = {}) {
     }
   }
   function measurements() {
-    const rich = breed("rich"), poor = breed("poor"), jobs = breed("job");
+    const rich = group("rich"), poor = group("poor"), jobs = group("job");
     // Empty class median is unavailable (undefined), never a fabricated zero.
     const medianTravelDistance = { rich: stats.describe(rich.map(nearestJobDistance)).median, poor: stats.describe(poor.map(nearestJobDistance)).median };
     return { counts: { rich: rich.length, poor: poor.length, jobs: jobs.length }, medianTravelDistance };
@@ -154,9 +154,9 @@ export function create(options: Partial<EconomicParameters> = {}) {
   function go() {
     locateResidents("poor", settings.poorPerStep); locateResidents("rich", settings.richPerStep);
     if (counter > settings.residentsPerJob) { locateService(); counter = 0; }
-    if (breed("rich").length >= 20) removeOldest("rich", settings.deathRate);
-    if (breed("poor").length >= 20) removeOldest("poor", settings.deathRate);
-    if (breed("job").length >= settings.maxJobs) { removeOldest("job", 1); refreshJobDistances(0.01); }
+    if (group("rich").length >= 20) removeOldest("rich", settings.deathRate);
+    if (group("poor").length >= 20) removeOldest("poor", settings.deathRate);
+    if (group("job").length >= settings.maxJobs) { removeOldest("job", 1); refreshJobDistances(0.01); }
     updateView();
   }
   createResident("job"); refreshJobDistances(0);

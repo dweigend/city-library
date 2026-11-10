@@ -4,7 +4,7 @@ export const ui = defineUI(model, {
   setup: ["seed"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/SimpleBirthRates",
-    label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Wilensky · CC BY-NC-SA 3.0",
   },
   change: (instance, changes) => instance.setRules(changes),
   live: {
@@ -14,16 +14,16 @@ export const ui = defineUI(model, {
   },
   actions: [
     {
-      label: "Run experiment",
-      run: (m) => m.experimentStep(),
+      label: "Advance population",
+      run: (m) => m.advanceUntilRestart(),
       repeat: {
-        label: "Repeat experiment",
+        label: "Repeat population step",
         intervalMs: 100,
       },
     },
     {
-      label: "Setup experiment",
-      run: (m) => m.setupExperiment(),
+      label: "Initialize population",
+      run: (m) => m.initializePopulation(),
     },
   ],
   monitors: [
@@ -70,7 +70,7 @@ export const ui = defineUI(model, {
     },
     {
       type: "table",
-      label: "Experiment output",
+      label: "Population output",
       rows: (s) =>
         s.output.map((message) => ({
           message,
