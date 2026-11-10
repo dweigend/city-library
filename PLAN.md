@@ -115,6 +115,10 @@ Initially, examples may fail because their planned public exports do not exist. 
 
 A phase is complete only when all of its four or five scripts typecheck and run through public imports with their assertions enabled, alongside focused behavior and type tests. Keep earlier phases' examples passing as regression checks. Example execution does not replace edge-case tests or establish browser compatibility. Record actual commands and outcomes. Do not claim example acceptance while public entry-name mapping remains unresolved.
 
+## Library readability refactor
+
+All 89 baseline source files have been assessed and the combined refactor is implemented on the working branch. Public behavior and asserted examples are preserved; no new API expansion is claimed. The [verification record](docs/development/library-refactor.md) distinguishes executed full checks, independent reviews and remaining acceptance limits. The combined `bun run check` and UI build pass. All three packages have independent Opus 5.5 and Gemini 3.8 Flash source-review acceptance. Catalog-wide browser smoke checks passed in shared T3 Chromium (144 standard Setup/step flows and the custom Tijuana Cityscape flow), with additional transport and viewport checks. After the sandbox helper reached root:root mode 4755, all 145 catalog smoke flows also passed in the configured headless Playwright MCP. These results do not establish model scientific acceptance or main integration.
+
 ## Acceptance for every implementation slice
 
 1. Apply the example-first delivery gate: write and freeze the phase's four or five public scripts before runtime implementation; define the slice's author task and freeze inputs/results, units, bounds, defaults, mutation and failure behavior.

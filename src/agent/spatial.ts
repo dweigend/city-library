@@ -16,23 +16,36 @@ import {
   type Space,
   type Vector,
 } from "../geometry/space.ts";
-import { basis, turn } from "./orientation.ts";
+import { basis, degrees, normalizeDegrees } from "./orientation.ts";
+
+/** Absorbs rounding at the edge of a perception cone. */
+const perceptionConeTolerance = 1e-12;
+/** Construction-only Agent placement; position defaults to the XY origin. */
 export interface SpatialOptions {
   position?: Position;
   orientation?: { heading?: number; pitch?: number; roll?: number };
 }
+/** Spatial Agent methods; all reject deleted Agents and undefined placeholders. */
 export interface SpatialMethods {
+  /** Moves forward by `distance` (default 1), by a vector or to a position. */
   move(distance?: number, options?: { space?: Space }): void;
   move(
     options: { by: Vector; space?: Space } | { to: Position; space?: Space },
   ): void;
+  /** Rotates by degrees about a local axis (default "z"), or faces `towards`. */
   rotate(angle?: number, options?: { axis?: "x" | "y" | "z" }): void;
   rotate(options: { towards: Position; space?: Space }): void;
   distanceTo(target: Position, options?: { space?: Space }): number;
+  /** Heading (and pitch in XYZ) towards target; undefined at zero distance. */
   directionTo(
     target: Position,
     options?: { space?: Space },
   ): Readonly<{ heading: number; pitch?: number }> | undefined;
+  /**
+   * Living Agents within `radius` (default 1) and the forward perception
+   * cone of `angle` degrees (default 360), excluding this Agent. Without
+   * `source`, an attached Agent searches its World's agents.
+   */
   neighbors<T extends Agent>(options: {
     source: Iterable<T>;
     radius?: number;
@@ -45,6 +58,7 @@ export interface SpatialMethods {
     space?: Space;
   }): readonly Agent[];
 }
+/** Owns one Agent's coordinates and orientation frame. */
 export function createSpatial(agent: Agent, options: SpatialOptions) {
   let coordinates = position(
     options.position === undefined ? { x: 0, y: 0 } : options.position,
@@ -57,6 +71,7 @@ export function createSpatial(agent: Agent, options: SpatialOptions) {
     ),
     dim,
   );
+  /** World Space wins; an explicit Space must agree with it. */
   function context(explicit?: Space): NormalizedSpace | undefined {
     const active = agent.world?.space;
     const supplied =
@@ -86,21 +101,18 @@ export function createSpatial(agent: Agent, options: SpatialOptions) {
     return displacement(coordinates, position(target, dim), context(space));
   }
   function direction(target: Position, space?: Space) {
-    const d = delta(target, space),
-      length = finite(Math.hypot(d.x, d.y, d.z ?? 0));
+    const offset = delta(target, space);
+    const length = finite(Math.hypot(offset.x, offset.y, offset.z ?? 0));
     if (length === 0) return undefined;
+    // A purely vertical target keeps the current heading.
     const heading =
-      d.x === 0 && d.y === 0
+      offset.x === 0 && offset.y === 0
         ? orientation.read().heading
-        : turn((Math.atan2(d.x, d.y) * 180) / Math.PI);
-    return Object.freeze(
-      dim === 2
-        ? { heading }
-        : {
-            heading,
-            pitch: (Math.atan2(d.z!, Math.hypot(d.x, d.y)) * 180) / Math.PI,
-          },
-    );
+        : normalizeDegrees(degrees(Math.atan2(offset.x, offset.y)));
+    if (dim === 2) return Object.freeze({ heading });
+    // XYZ positions always carry z.
+    const pitch = degrees(Math.atan2(offset.z!, Math.hypot(offset.x, offset.y)));
+    return Object.freeze({ heading, pitch });
   }
   const move: SpatialMethods["move"] = function move(
     input: number | { by?: Vector; to?: Position; space?: Space } = 1,
@@ -114,23 +126,23 @@ export function createSpatial(agent: Agent, options: SpatialOptions) {
     let to: Position | undefined;
     let space: NormalizedSpace | undefined;
     if (typeof input === "number") {
-      const opts = validateOptions(extra, ["space"]);
-      space = context(opts.space as Space | undefined);
+      const settings = validateOptions(extra, ["space"]);
+      space = context(settings.space as Space | undefined);
       const distance = finite(input);
-      const f = orientation.forward();
+      const forward = orientation.forward();
       by = {
-        x: f.x * distance,
-        y: f.y * distance,
-        ...(dim === 3 ? { z: f.z! * distance } : {}),
+        x: forward.x * distance,
+        y: forward.y * distance,
+        ...(dim === 3 ? { z: forward.z! * distance } : {}),
       };
     } else {
-      const opts = validateOptions(input, ["by", "to", "space"]);
-      if ((opts.by === undefined) === (opts.to === undefined))
+      const settings = validateOptions(input, ["by", "to", "space"]);
+      if ((settings.by === undefined) === (settings.to === undefined))
         throw new TypeError("Choose exactly one move mode.");
-      space = context(opts.space as Space | undefined);
-      if (opts.to !== undefined) to = position(opts.to as Position, dim);
+      space = context(settings.space as Space | undefined);
+      if (settings.to !== undefined) to = position(settings.to as Position, dim);
       else {
-        const vector = validateOptions(opts.by, axes.slice(0, dim));
+        const vector = validateOptions(settings.by, axes.slice(0, dim));
         by = {
           x: finite(vector.x ?? 0),
           y: finite(vector.y ?? 0),
@@ -138,12 +150,15 @@ export function createSpatial(agent: Agent, options: SpatialOptions) {
         };
       }
     }
-    const next = to
-      ? space
-        ? normalizePosition(to, space)!
-        : to
-      : relativePosition(coordinates, by!, space);
-    coordinates = next;
+    if (to === undefined) {
+      // Every branch without a target position computes `by`.
+      coordinates = relativePosition(coordinates, by!, space);
+    } else if (space) {
+      // Rejecting normalization throws instead of returning undefined.
+      coordinates = normalizePosition(to, space)!;
+    } else {
+      coordinates = to;
+    }
     notifyMovement(agent);
   } as SpatialMethods["move"];
   const methods: SpatialMethods = {
@@ -157,16 +172,16 @@ export function createSpatial(agent: Agent, options: SpatialOptions) {
         throw new TypeError("Options-form rotate accepts one argument.");
       requireLive();
       if (typeof input === "number") {
-        const opts = validateOptions(extra, ["axis"]);
-        const axis = opts.axis ?? "z";
+        const settings = validateOptions(extra, ["axis"]);
+        const axis = settings.axis ?? "z";
         if (!["x", "y", "z"].includes(axis as string))
           throw new TypeError("Invalid axis.");
         orientation.rotate(finite(input), axis as "x" | "y" | "z");
       } else {
-        const opts = validateOptions(input, ["towards", "space"]);
+        const settings = validateOptions(input, ["towards", "space"]);
         const facing = direction(
-          opts.towards as Position,
-          opts.space as Space | undefined,
+          settings.towards as Position,
+          settings.space as Space | undefined,
         );
         if (facing) orientation = basis(facing, dim);
       }
@@ -174,8 +189,8 @@ export function createSpatial(agent: Agent, options: SpatialOptions) {
     distanceTo(target, opts = {}) {
       checkArguments(arguments, 1, 2);
       const values = validateOptions(opts, ["space"]);
-      const d = delta(target, values.space as Space | undefined);
-      return finite(Math.hypot(d.x, d.y, d.z ?? 0));
+      const offset = delta(target, values.space as Space | undefined);
+      return finite(Math.hypot(offset.x, offset.y, offset.z ?? 0));
     },
     directionTo(target, opts = {}) {
       checkArguments(arguments, 1, 2);
@@ -192,8 +207,8 @@ export function createSpatial(agent: Agent, options: SpatialOptions) {
         "space",
       ]);
       const space = context(values.space as Space | undefined);
-      const radius = finite(values.radius ?? 1),
-        angle = finite(values.angle ?? 360);
+      const radius = finite(values.radius ?? 1);
+      const angle = finite(values.angle ?? 360);
       if (radius < 0 || angle < 0 || angle > 360)
         throw new RangeError("Invalid perception bounds.");
       const source =
@@ -212,23 +227,20 @@ export function createSpatial(agent: Agent, options: SpatialOptions) {
         position(candidate, dim);
       }
       const forward = orientation.forward();
-      return Object.freeze(
-        population.filter((candidate) => {
-          if (candidate === agent || !candidate.alive) return false;
-          const d = displacement(coordinates, candidate, space),
-            length = finite(Math.hypot(d.x, d.y, d.z ?? 0));
-          if (length > radius) return false;
-          return (
-            length === 0 ||
-            angle === 360 ||
-            (d.x * forward.x +
-              d.y * forward.y +
-              (d.z ?? 0) * (forward.z ?? 0)) /
-              length >=
-              Math.cos((angle * Math.PI) / 360) - 1e-12
-          );
-        }),
-      );
+      // `angle` spans the whole cone, so its edge lies at half the angle from forward.
+      const halfAngleRadians = (angle * Math.PI) / 360;
+      const minimumCosine = Math.cos(halfAngleRadians) - perceptionConeTolerance;
+      function perceives(candidate: Agent): boolean {
+        if (candidate === agent || !candidate.alive) return false;
+        const offset = displacement(coordinates, candidate, space);
+        const length = finite(Math.hypot(offset.x, offset.y, offset.z ?? 0));
+        if (length > radius) return false;
+        if (length === 0 || angle === 360) return true;
+        const forwardProjection =
+          offset.x * forward.x + offset.y * forward.y + (offset.z ?? 0) * (forward.z ?? 0);
+        return forwardProjection / length >= minimumCosine;
+      }
+      return Object.freeze(population.filter(perceives));
     } as SpatialMethods["neighbors"],
   };
   return {

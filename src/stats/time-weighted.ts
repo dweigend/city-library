@@ -5,8 +5,11 @@ export interface TimeWeightedSummary {
   readonly integral: number;
   readonly mean: number | undefined;
 }
+/** Integrates a piecewise-constant value over nondecreasing time. */
 export interface TimeWeighted {
+  /** Closes the current interval at `at` and holds `value` from then on. */
   set(sample: { at: number; value: number }): void;
+  /** Integral and mean from the start time until `until`, without changing state; mean is undefined for zero duration. */
   read(options: { until: number }): TimeWeightedSummary;
 }
 
@@ -26,6 +29,7 @@ function accumulated(integral: number, elapsed: number, value: number): number {
   return result;
 }
 
+/** Starts at `at` (default 0) holding `value`. */
 function create(options: { at?: number; value: number }): TimeWeighted {
   if (arguments.length !== 1) throw new TypeError("TimeWeighted.create requires one options record.");
   const values = validateOptions(options, ["at", "value"]);

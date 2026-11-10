@@ -4,7 +4,8 @@ import { polygonArea } from "../../geometry/planar/parcel-input.ts";
 import { orient, point } from "../../geometry/planar/predicates.ts";
 import type { PlanarPolygon, PlanarXY } from "../../geometry/planar/types.ts";
 import { isRandom, type Random } from "../../random/random.ts";
-import { createLayout, type Layout } from "./layout.ts";
+import { coordinateLimit, createLayout, maximumCells, maximumPositions, type Layout } from "./layout.ts";
+import { startAtLowestCorner } from "./quad-validation.ts";
 
 interface QuadrilateralOptions {
   rings: number;
@@ -23,7 +24,9 @@ interface Patch {
 }
 const maximumRings = 7;
 const minimumEdgeLength = 2 ** -400;
-const coordinateLimit = 1e6;
+// Each source triangle refines into at most three closed quads of five positions.
+const childrenPerTriangle = 3;
+const closedQuadPositions = 5;
 
 /** Finite hexagonal triangle pairing followed by complete three/four-quad refinement. */
 export function quadrilaterals(options: QuadrilateralOptions): Layout {
@@ -87,8 +90,8 @@ function triangularPatch(rings: number, edgeLength: number): Patch {
 function validateSource(patch: Patch, rings: number): void {
   if (patch.triangles.length !== 6 * rings ** 2 || patch.candidates.length !== 9 * rings ** 2 - 3 * rings)
     throw new RangeError("Incomplete triangular patch construction.");
-  const maximumChildren = 3 * patch.triangles.length;
-  if (maximumChildren > 1024 || maximumChildren * 5 > 8192) throw new RangeError("Quadrilateral layout budget exceeded.");
+  const maximumChildren = childrenPerTriangle * patch.triangles.length;
+  if (maximumChildren > maximumCells || maximumChildren * closedQuadPositions > maximumPositions) throw new RangeError("Quadrilateral layout budget exceeded.");
   const sourcePolygons = patch.triangles.map(corners => closed(corners.map(id => patch.vertices[id]!)));
   for (const shape of sourcePolygons) polygonArea(shape);
   createLayout(sourcePolygons, true);
@@ -132,14 +135,6 @@ function mixedFace(first: Triangle, second: Triangle | undefined): number[] {
   return result;
 }
 
-function canonicalStart<T>(corners: readonly T[], coordinate: (corner: T) => PlanarXY): T[] {
-  let start = 0;
-  for (let index = 1; index < corners.length; index++) {
-    const candidate = coordinate(corners[index]!), current = coordinate(corners[start]!);
-    if (candidate[0] < current[0] || (candidate[0] === current[0] && candidate[1] < current[1])) start = index;
-  }
-  return [...corners.slice(start), ...corners.slice(0, start)];
-}
 function closed(corners: readonly PlanarXY[]): PlanarPolygon {
   return { type: "Polygon", coordinates: [[...corners, corners[0]!]] };
 }
@@ -156,12 +151,12 @@ function refineFaces(patch: Patch, partners: readonly number[]): PlanarPolygon[]
   patch.triangles.forEach((triangle, cell) => {
     const partner = partners[cell]!;
     if (partner >= 0 && partner < cell) return;
-    const face = canonicalStart(mixedFace(triangle, partner < 0 ? undefined : patch.triangles[partner]), id => patch.vertices[id]!);
+    const face = startAtLowestCorner(mixedFace(triangle, partner < 0 ? undefined : patch.triangles[partner]), id => patch.vertices[id]!);
     const coordinates = face.map(id => patch.vertices[id]!);
     const center: PlanarXY = [coordinates.reduce((sum, [x]) => sum + x, 0) / face.length, coordinates.reduce((sum, [, y]) => sum + y, 0) / face.length];
     face.forEach((corner, index) => {
       const corners = [patch.vertices[corner]!, midpoint(corner, face[(index + 1) % face.length]!), center, midpoint(face[(index + face.length - 1) % face.length]!, corner)];
-      const canonical = canonicalStart(corners, value => value);
+      const canonical = startAtLowestCorner(corners, value => value);
       const exact = canonical.map(([x, y]) => point(x, y));
       for (let turn = 0; turn < 4; turn++) if (orient(exact[turn]!, exact[(turn + 1) % 4]!, exact[(turn + 2) % 4]!) <= 0)
         throw new RangeError("Refinement produced a nonconvex quad.");

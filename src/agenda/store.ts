@@ -6,11 +6,20 @@ export type PutStatus = "waiting" | "stored" | "cancelled";
 export type GetStatus = "waiting" | "received" | "cancelled";
 export interface PutRequest<T> { readonly id: string; readonly value: T; readonly status: PutStatus }
 export interface GetRequest<T> { readonly id: string; readonly value: T | undefined; readonly status: GetStatus }
+/**
+ * Bounded FIFO store with waiting producers and consumers. Waiting consumers
+ * receive stored items first, then values of waiting producers.
+ */
 export interface Store<T> {
+  /** Stores `value` when capacity allows; otherwise the producer waits. */
   put(value: T): PutRequest<T>;
+  /** Receives the oldest available value, or waits for one. */
   get(): GetRequest<T>;
+  /** Receives a stored item immediately; undefined when none is stored. */
   take(): T | undefined;
+  /** Withdraws a waiting producer; finished requests are ignored. */
   cancelPut(ticket: PutRequest<T>): void;
+  /** Withdraws a waiting consumer; finished requests are ignored. */
   cancelGet(ticket: GetRequest<T>): void;
   readonly items: readonly T[];
   readonly waitingPuts: readonly PutRequest<T>[];
@@ -19,12 +28,15 @@ export interface Store<T> {
 interface PutEntry<T> { ticket: PutRequest<T>; status: PutStatus; release: () => void }
 interface GetEntry<T> { ticket: GetRequest<T>; status: GetStatus; value: T | undefined }
 
+function validCapacity(value: unknown): number {
+  if (typeof value !== "number") throw new TypeError("Store capacity must be numeric.");
+  if (!Number.isSafeInteger(value) || value < 1) throw new RangeError("Store capacity must be a positive safe integer.");
+  return value;
+}
+
 function create<T>(options: { capacity: number }): Store<T> {
   const settings = validateOptions(options, ["capacity"]);
-  const suppliedCapacity = settings.capacity;
-  if (typeof suppliedCapacity !== "number") throw new TypeError("Store capacity must be numeric.");
-  const capacity = suppliedCapacity;
-  if (!Number.isSafeInteger(capacity) || capacity < 1) throw new RangeError("Store capacity must be a positive safe integer.");
+  const capacity = validCapacity(settings.capacity);
   const items: PutEntry<T>[] = [];
   const producers: PutEntry<T>[] = [];
   const consumers: GetEntry<T>[] = [];
@@ -37,6 +49,7 @@ function create<T>(options: { capacity: number }): Store<T> {
     put.release();
   }
   function settle() {
+    // Loop conditions guarantee that every shift below returns an entry.
     while (consumers.length > 0 && (items.length > 0 || producers.length > 0)) {
       const put = items.shift() ?? producers.shift()!;
       transfer(put, consumers.shift()!);
@@ -48,9 +61,9 @@ function create<T>(options: { capacity: number }): Store<T> {
     }
   }
   function get(): GetRequest<T> {
-    const entry: GetEntry<T> = { ticket: undefined!, status: "waiting", value: undefined };
+    // The getters read `entry` lazily, after it has been initialized.
     const ticket = Object.freeze({ id: issueId(), get value() { return entry.value; }, get status() { return entry.status; } });
-    entry.ticket = ticket;
+    const entry: GetEntry<T> = { ticket, status: "waiting", value: undefined };
     getTickets.set(ticket, entry);
     consumers.push(entry);
     settle();
@@ -59,9 +72,9 @@ function create<T>(options: { capacity: number }): Store<T> {
   return Object.freeze({
     put(value: T) {
       const release = retainParticipant(value);
-      const entry: PutEntry<T> = { ticket: undefined!, status: "waiting", release };
+      // The status getter reads `entry` lazily, after it has been initialized.
       const ticket = Object.freeze({ id: issueId(), value, get status() { return entry.status; } });
-      entry.ticket = ticket;
+      const entry: PutEntry<T> = { ticket, status: "waiting", release };
       putTickets.set(ticket, entry);
       producers.push(entry);
       settle();

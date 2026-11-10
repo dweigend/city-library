@@ -1,6 +1,13 @@
 import { validateOptions } from "../agent/state.ts";
 
-/** Compute all proposals before committing any; callbacks own their external effects. */
+const unsupportedCallbackTags = ["[object AsyncFunction]", "[object GeneratorFunction]", "[object AsyncGeneratorFunction]"];
+
+/**
+ * Computes every proposal before committing any. Members are deduplicated by
+ * identity and visited in source order in both phases. Callbacks own their
+ * external effects; a failure stops without rollback.
+ * @throws TypeError for invalid actions, non-synchronous callbacks or thenable results.
+ */
 export function twoPhase<T, Proposal>(source: Iterable<T>, actions: {
   compute(member: T): Proposal;
   commit(member: T, proposal: Proposal): unknown;
@@ -16,12 +23,13 @@ export function twoPhase<T, Proposal>(source: Iterable<T>, actions: {
     return proposal;
   });
   members.forEach((member, index) => {
+    // proposals were mapped from members, so every index exists.
     rejectThenable(callbacks.commit(member, proposals[index]!));
   });
 }
 
 function requireSynchronous(callback: unknown): void {
-  if (typeof callback !== "function" || ["[object AsyncFunction]", "[object GeneratorFunction]", "[object AsyncGeneratorFunction]"].includes(Object.prototype.toString.call(callback)))
+  if (typeof callback !== "function" || unsupportedCallbackTags.includes(Object.prototype.toString.call(callback)))
     throw new TypeError("Expected a synchronous callback.");
 }
 function rejectThenable(value: unknown): void {

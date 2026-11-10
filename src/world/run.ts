@@ -1,4 +1,9 @@
 import { worldClock, type World } from "./world.ts";
+
+/**
+ * Rejects before the first step unless every planned `+1` clock increment
+ * yields a finite value strictly greater than its predecessor.
+ */
 function preflightProgress(tick: number, steps: number): void {
   if (!Number.isFinite(tick + steps)) throw new RangeError("Tick would overflow.");
   let remaining = steps;
@@ -20,21 +25,49 @@ function preflightProgress(tick: number, steps: number): void {
     remaining -= exactSteps;
   }
 }
-export function run<R>(world: World, step: (() => R) &
-  ([Extract<R, PromiseLike<unknown>>] extends [never] ? unknown : never), steps = 1): void {
+
+function isThenable(value: unknown): boolean {
+  return (
+    value !== null &&
+    (typeof value === "object" || typeof value === "function") &&
+    typeof (value as { then?: unknown }).then === "function"
+  );
+}
+
+/**
+ * Invokes the synchronous `step` callback `steps` times (default 1) and
+ * advances `world.tick.value` by 1 after each successful step. A throwing step
+ * stops the run, keeps earlier effects and does not advance the tick.
+ * All arguments and tick progress are validated before the first step.
+ *
+ * The conditional parameter type rejects steps whose inferred result can be
+ * a PromiseLike; runtime checks still reject async functions and thenables.
+ * @throws TypeError for a non-World, reentry, a non-function or async step,
+ *   nonnumeric steps or a thenable step result.
+ * @throws RangeError for invalid steps or unrepresentable tick progress.
+ */
+export function run<R>(
+  world: World,
+  step: (() => R) & ([Extract<R, PromiseLike<unknown>>] extends [never] ? unknown : never),
+  steps = 1,
+): void {
   const clock = worldClock(world);
   if (clock.running) throw new TypeError("Cannot reenter the same World.");
   if (typeof step !== "function") throw new TypeError("Expected a synchronous function.");
-  if (Object.prototype.toString.call(step) === "[object AsyncFunction]") throw new TypeError("Async callbacks are unsupported.");
+  if (Object.prototype.toString.call(step) === "[object AsyncFunction]")
+    throw new TypeError("Async callbacks are unsupported.");
   if (typeof steps !== "number") throw new TypeError("Steps must be numeric.");
-  if (!Number.isSafeInteger(steps) || steps < 0) throw new RangeError("Steps must be a nonnegative safe integer.");
+  if (!Number.isSafeInteger(steps) || steps < 0)
+    throw new RangeError("Steps must be a nonnegative safe integer.");
   preflightProgress(clock.tick.value, steps);
   clock.running = true;
   try {
     for (let index = 0; index < steps; index += 1) {
       const result = step();
-      if (result !== null && (typeof result === "object" || typeof result === "function") && typeof (result as { then?: unknown }).then === "function") throw new TypeError("Thenable callback results are unsupported.");
+      if (isThenable(result)) throw new TypeError("Thenable callback results are unsupported.");
       clock.completeStep();
     }
-  } finally { clock.running = false; }
+  } finally {
+    clock.running = false;
+  }
 }

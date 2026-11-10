@@ -16,10 +16,30 @@ function durationValue(input: unknown): number {
   if (value < 0) throw new RangeError("Duration must be nonnegative.");
   return value;
 }
+/** Reaching the threshold counts as crossing; leaving it does not. */
+function crossingDirection(from: number, to: number, threshold: number): CrossingDirection | undefined {
+  if (from < threshold && to >= threshold) return "rising";
+  if (from > threshold && to <= threshold) return "falling";
+  return undefined;
+}
+/**
+ * Returns `value + rate * duration` for finite inputs and a nonnegative duration.
+ * @throws TypeError for invalid options or nonnumeric inputs.
+ * @throws RangeError for nonfinite inputs or result, or a negative duration.
+ */
 function linear(input: { value: number; rate: number; duration: number }): number {
   const values = validateOptions(input, ["value", "rate", "duration"]);
   return finite(finite(values.value) + finite(values.rate) * durationValue(values.duration));
 }
+/**
+ * Finds where a linear change from `from` to `to` over `duration` reaches
+ * `threshold`. Returns undefined for zero duration, no crossing or a crossing
+ * outside the requested direction (default "either"). `elapsed` is linearly
+ * interpolated and clamped to [0, duration]; it equals duration when `to`
+ * equals the threshold.
+ * @throws TypeError for invalid options, nonnumeric inputs or an unknown direction.
+ * @throws RangeError for nonfinite inputs or a negative duration.
+ */
 function crossing(input: {
   from: number; to: number; threshold: number; duration: number;
   direction?: CrossingDirection | "either";
@@ -33,8 +53,7 @@ function crossing(input: {
   if (selected !== "rising" && selected !== "falling" && selected !== "either")
     throw new TypeError("Unknown crossing direction.");
   if (duration === 0) return undefined;
-  const direction = from < threshold && to >= threshold ? "rising"
-    : from > threshold && to <= threshold ? "falling" : undefined;
+  const direction = crossingDirection(from, to, threshold);
   if (direction === undefined || (selected !== "either" && selected !== direction)) return undefined;
   // Scale before subtraction so finite endpoints near opposite extremes do not overflow.
   const scale = Math.max(Math.abs(from), Math.abs(to), Math.abs(threshold), 1);

@@ -1,85 +1,112 @@
 import { finite, type Orientation, type Position } from "../geometry/space.ts";
-type V = [number, number, number];
-const dot = (a: V, b: V) =>
-  a.reduce((sum, value, index) => sum + value * b[index]!, 0);
-const cross = (a: V, b: V): V => [
-  a[1] * b[2] - a[2] * b[1],
-  a[2] * b[0] - a[0] * b[2],
-  a[0] * b[1] - a[1] * b[0],
-];
-const unit = (v: V): V => {
-  const n = Math.hypot(...v);
-  return v.map((x) => x / n) as V;
-};
-const radians = (a: number) => (a * Math.PI) / 180;
-const degrees = (a: number) => (a * 180) / Math.PI;
-export const turn = (a: number) => ((a % 360) + 360) % 360;
-export function basis(orientation: Partial<Orientation>, dim: 2 | 3) {
-  let right: V = [1, 0, 0],
-    forward: V = [0, 1, 0],
-    up: V = [0, 0, 1];
-  function rotate(angle: number, axis: "x" | "y" | "z") {
+
+/** Cartesian [x, y, z] components of a frame vector. */
+type Vector3 = [number, number, number];
+type RotationAxis = "x" | "y" | "z";
+
+/** At or below this |cos(pitch)| the forward vector counts as vertical. */
+const gimbalLockTolerance = 1e-12;
+
+function dot(left: Vector3, right: Vector3): number {
+  return left.reduce((sum, value, index) => sum + value * right[index]!, 0);
+}
+function cross(left: Vector3, right: Vector3): Vector3 {
+  return [
+    left[1] * right[2] - left[2] * right[1],
+    left[2] * right[0] - left[0] * right[2],
+    left[0] * right[1] - left[1] * right[0],
+  ];
+}
+function unit(vector: Vector3): Vector3 {
+  const length = Math.hypot(...vector);
+  return vector.map((component) => component / length) as Vector3;
+}
+function radians(angle: number): number {
+  return (angle * Math.PI) / 180;
+}
+export function degrees(angle: number): number {
+  return (angle * 180) / Math.PI;
+}
+/** Normalizes degrees into [0, 360). */
+export function normalizeDegrees(angle: number): number {
+  return ((angle % 360) + 360) % 360;
+}
+/** Normalizes degrees into [-180, 180). */
+function normalizeSignedDegrees(angle: number): number {
+  return normalizeDegrees(angle + 180) - 180;
+}
+
+/**
+ * Orthonormal right/forward/up frame in degrees. Construction applies
+ * heading about z, then pitch about x and roll about y; XY frames support
+ * only heading. `rotate` turns the current frame about one local axis.
+ */
+export function basis(orientation: Partial<Orientation>, dimensions: 2 | 3) {
+  let right: Vector3 = [1, 0, 0];
+  let forward: Vector3 = [0, 1, 0];
+  let up: Vector3 = [0, 0, 1];
+
+  function rotate(angle: number, axis: RotationAxis) {
     finite(angle);
-    if (dim === 2 && axis !== "z")
+    if (dimensions === 2 && axis !== "z")
       throw new TypeError("XY supports only z rotation.");
     if (angle % 360 === 0) return;
-    const a = radians(angle % 360),
-      c = Math.cos(a),
-      s = Math.sin(a);
-    const mix = (v: V, w: V, k: number): V =>
-      v.map((x, i) => x * c + w[i]! * s * k) as V;
+    const angleRadians = radians(angle % 360);
+    const cosine = Math.cos(angleRadians);
+    const sine = Math.sin(angleRadians);
+    // Rotates `vector` within its plane with `other`; `sign` selects the turn direction.
+    const mix = (vector: Vector3, other: Vector3, sign: number): Vector3 =>
+      vector.map((component, index) => component * cosine + other[index]! * sine * sign) as Vector3;
     if (axis === "z") {
-      const r = right;
+      const previousRight = right;
       right = mix(right, forward, -1);
-      forward = mix(forward, r, 1);
+      forward = mix(forward, previousRight, 1);
     } else if (axis === "x") {
-      const f = forward;
+      const previousForward = forward;
       forward = mix(forward, up, 1);
-      up = mix(up, f, -1);
+      up = mix(up, previousForward, -1);
     } else {
-      const r = right;
+      const previousRight = right;
       right = mix(right, up, -1);
-      up = mix(up, r, 1);
+      up = mix(up, previousRight, 1);
     }
+    // Re-orthonormalize so rounding cannot accumulate into a skewed frame.
     forward = unit(forward);
     right = unit(right);
     up = unit(cross(right, forward));
     right = unit(cross(forward, up));
   }
+
   rotate(orientation.heading ?? 0, "z");
-  if (dim === 3) {
+  if (dimensions === 3) {
     rotate(orientation.pitch ?? 0, "x");
     rotate(orientation.roll ?? 0, "y");
   } else if (orientation.pitch !== undefined || orientation.roll !== undefined)
     throw new TypeError("XY has no pitch or roll.");
+
   function read(): Orientation {
     const pitch = Math.asin(Math.max(-1, Math.min(1, forward[2])));
-    const heading = turn(
-      degrees(
-        Math.abs(Math.cos(pitch)) <= 1e-12
-          ? Math.atan2(-right[1], right[0])
-          : Math.atan2(forward[0], forward[1]),
-      ),
-    );
-    const h = radians(heading),
-      r0: V = [Math.cos(h), -Math.sin(h), 0],
-      u0 = cross(r0, forward);
-    const roll =
-      Math.abs(Math.cos(pitch)) <= 1e-12
-        ? 0
-        : ((((degrees(Math.atan2(-dot(right, u0), dot(right, r0))) + 180) %
-            360) +
-            360) %
-            360) -
-          180;
-    return dim === 2 ? { heading } : { heading, pitch: degrees(pitch), roll };
+    const vertical = Math.abs(Math.cos(pitch)) <= gimbalLockTolerance;
+    // A vertical forward vector has no horizontal heading; derive it from right instead.
+    const headingSource = vertical
+      ? Math.atan2(-right[1], right[0])
+      : Math.atan2(forward[0], forward[1]);
+    const heading = normalizeDegrees(degrees(headingSource));
+    // Roll is measured against the unrolled frame with the same heading and pitch.
+    const headingRadians = radians(heading);
+    const unrolledRight: Vector3 = [Math.cos(headingRadians), -Math.sin(headingRadians), 0];
+    const unrolledUp = cross(unrolledRight, forward);
+    const roll = vertical
+      ? 0
+      : normalizeSignedDegrees(degrees(Math.atan2(-dot(right, unrolledUp), dot(right, unrolledRight))));
+    if (dimensions === 2) return { heading };
+    return { heading, pitch: degrees(pitch), roll };
   }
-  return {
-    rotate,
-    read,
-    forward: (): Position =>
-      dim === 2
-        ? { x: forward[0], y: forward[1] }
-        : { x: forward[0], y: forward[1], z: forward[2] },
-  };
+
+  function forwardDirection(): Position {
+    if (dimensions === 2) return { x: forward[0], y: forward[1] };
+    return { x: forward[0], y: forward[1], z: forward[2] };
+  }
+
+  return { rotate, read, forward: forwardDirection };
 }

@@ -1,6 +1,8 @@
-import { isRandom, type Random } from "../../random/random.ts";
-import type { GeneratorSpec } from "./options.ts";
-import { boolean, dense, edgeLimit, integer, number } from "./validation.ts";
+import type { Random } from "../../random/random.ts";
+import {
+  preferentialEdgeCount, readDenseArray, readFiniteNumber, readFlag, readNodes, readPositiveInteger,
+  readPreferentialEdgesPerNode, readProbability, readRandom, requireEdgeBudget, requireWheelSize,
+} from "./validation.ts";
 
 type Profile = "ordered-topology/1";
 export type TopologyGeneratorOptions<N> =
@@ -9,57 +11,93 @@ export type TopologyGeneratorOptions<N> =
   | { kind: "small-world"; profile: Profile; nodes: readonly N[]; neighborsPerSide: number; probability: number; directed?: boolean; random: Random }
   | { kind: "wheel"; profile: Profile; nodes: readonly N[]; directed?: boolean; spokes?: "in" | "out" }
   | { kind: "lattice"; profile: Profile; nodes: readonly N[]; shape: readonly [number, number]; wrap?: boolean; directed?: boolean };
-const keys = {
+const optionsByKind = {
   kleinberg: ["shape", "clusteringExponent", "wrap", "directed", "random"],
   preferential: ["edgesPerNode", "directed", "random"],
   "small-world": ["neighborsPerSide", "probability", "directed", "random"],
   wheel: ["directed", "spokes"],
   lattice: ["shape", "wrap", "directed"],
 } as const;
+type TopologyKind = keyof typeof optionsByKind;
 
-export function validateTopologyGenerator<N>(supplied: Record<string, unknown>): GeneratorSpec<N> {
+/** Validated ordered topology profile settings; each kind carries only its own parameters. */
+export type TopologyGeneratorSpec<N> = { readonly profile: Profile; readonly nodes: readonly N[]; readonly directed: boolean } & (
+  | { readonly kind: "wheel"; readonly spokes: "in" | "out" }
+  | { readonly kind: "lattice"; readonly shape: readonly [number, number]; readonly wrap: boolean }
+  | {
+    readonly kind: "kleinberg";
+    readonly shape: readonly [number, number];
+    readonly wrap: boolean;
+    readonly clusteringExponent: number;
+    readonly random: Random;
+  }
+  | { readonly kind: "preferential"; readonly edgesPerNode: number; readonly random: Random }
+  | { readonly kind: "small-world"; readonly neighborsPerSide: number; readonly probability: number; readonly random: Random }
+);
+
+/** Same failure order as generic generators, preceded by the profile check. */
+export function validateTopologyGenerator<N>(supplied: Record<string, unknown>): TopologyGeneratorSpec<N> {
   if (supplied.profile !== "ordered-topology/1") throw new TypeError("Unknown topology profile.");
-  if (typeof supplied.kind !== "string" || !Object.hasOwn(keys, supplied.kind)) throw new TypeError("Generator has no ordered topology profile.");
-  const kind = supplied.kind as keyof typeof keys;
-  const allowed: readonly string[] = ["kind", "nodes", "profile", ...keys[kind]];
+  if (typeof supplied.kind !== "string" || !Object.hasOwn(optionsByKind, supplied.kind)) throw new TypeError("Generator has no ordered topology profile.");
+  const kind = supplied.kind as TopologyKind;
+  const allowed: readonly string[] = ["kind", "nodes", "profile", ...optionsByKind[kind]];
   if (Object.keys(supplied).some(key => !allowed.includes(key))) throw new TypeError("Inapplicable topology profile option.");
-  const nodes = dense(supplied.nodes, 100_000) as N[];
-  if (new Set(nodes).size !== nodes.length) throw new TypeError("Generator nodes must be unique.");
-  const count = nodes.length;
-  const config: GeneratorSpec<N> = { profile: "ordered-topology/1", kind, nodes, directed: boolean(supplied.directed),
-    branching: 2, shape: [], wrap: false, probability: 0, neighbors: 0, edgesPerNode: 0, radius: 0 };
-  let knownEdges = 0;
-  if (kind === "wheel") {
-    if (count < 4) throw new RangeError("Wheel requires at least four nodes.");
-    config.spokes = supplied.spokes === undefined ? "in" : supplied.spokes as "in" | "out";
-    if (config.spokes !== "in" && config.spokes !== "out") throw new TypeError("Invalid wheel spokes direction.");
-    knownEdges = 2 * (count - 1);
-  } else if (kind === "lattice" || kind === "kleinberg") {
-    config.shape = dense(supplied.shape, 2).map(integer);
-    if (config.shape.length !== 2 || config.shape.some(axis => axis < 2) || config.shape[0]! * config.shape[1]! !== count)
-      throw new RangeError("Ordered lattice requires two axes of at least two matching node count.");
-    config.wrap = boolean(supplied.wrap);
-    knownEdges = config.shape.reduce((sum, axis) => sum + (config.wrap && axis > 2 ? count : count / axis * (axis - 1)), 0);
-    if (kind === "kleinberg") {
-      config.clusteringExponent = number(supplied.clusteringExponent);
-      if (config.clusteringExponent < 0) throw new RangeError("Clustering exponent must be nonnegative.");
+  const nodes = readNodes<N>(supplied.nodes);
+  const directed = readFlag(supplied.directed);
+  return readTopologyKind(kind, supplied, { profile: "ordered-topology/1", nodes, directed });
+}
+
+function readTopologyKind<N>(
+  kind: TopologyKind, supplied: Record<string, unknown>, base: { profile: Profile; nodes: readonly N[]; directed: boolean },
+): TopologyGeneratorSpec<N> {
+  const count = base.nodes.length;
+  switch (kind) {
+    case "wheel": {
+      requireWheelSize(count);
+      const spokes = supplied.spokes === undefined ? "in" : supplied.spokes;
+      if (spokes !== "in" && spokes !== "out") throw new TypeError("Invalid wheel spokes direction.");
+      requireEdgeBudget(2 * (count - 1));
+      return { ...base, kind, spokes };
     }
-  } else if (kind === "preferential") {
-    config.edgesPerNode = integer(supplied.edgesPerNode);
-    if (config.edgesPerNode >= count) throw new RangeError("Preferential edgesPerNode must be less than node count.");
-    knownEdges = config.edgesPerNode * (config.edgesPerNode + 1) / 2 + (count - config.edgesPerNode - 1) * config.edgesPerNode;
-  } else {
-    config.neighbors = number(supplied.neighborsPerSide);
-    if (count < 1 || !Number.isInteger(config.neighbors) || config.neighbors < 0 || config.neighbors > Math.floor((count - 1) / 2))
-      throw new RangeError("Invalid per-side neighborhood.");
-    config.probability = number(supplied.probability);
-    if (config.probability < 0 || config.probability > 1) throw new RangeError("Probability must lie in [0,1].");
-    knownEdges = count * config.neighbors;
+    case "lattice": {
+      const shape = readShape(supplied.shape, count);
+      const wrap = readFlag(supplied.wrap);
+      requireEdgeBudget(latticeEdgeCount(shape, count, wrap));
+      return { ...base, kind, shape, wrap };
+    }
+    case "kleinberg": {
+      const shape = readShape(supplied.shape, count);
+      const wrap = readFlag(supplied.wrap);
+      const clusteringExponent = readFiniteNumber(supplied.clusteringExponent);
+      if (clusteringExponent < 0) throw new RangeError("Clustering exponent must be nonnegative.");
+      requireEdgeBudget(latticeEdgeCount(shape, count, wrap));
+      return { ...base, kind, shape, wrap, clusteringExponent, random: readRandom(supplied.random) };
+    }
+    case "preferential": {
+      const edgesPerNode = readPreferentialEdgesPerNode(supplied.edgesPerNode, count);
+      requireEdgeBudget(preferentialEdgeCount(edgesPerNode, count));
+      return { ...base, kind, edgesPerNode, random: readRandom(supplied.random) };
+    }
+    case "small-world": {
+      const neighborsPerSide = readFiniteNumber(supplied.neighborsPerSide);
+      if (count < 1 || !Number.isInteger(neighborsPerSide) || neighborsPerSide < 0 || neighborsPerSide > Math.floor((count - 1) / 2))
+        throw new RangeError("Invalid per-side neighborhood.");
+      const probability = readProbability(supplied.probability);
+      requireEdgeBudget(count * neighborsPerSide);
+      return { ...base, kind, neighborsPerSide, probability, random: readRandom(supplied.random) };
+    }
   }
-  if (knownEdges > edgeLimit) throw new RangeError("Generated edge count exceeds limit.");
-  if (kind === "kleinberg" || kind === "preferential" || kind === "small-world") {
-    if (!isRandom(supplied.random)) throw new TypeError("Generator requires a library Random.");
-    config.random = supplied.random;
-  }
-  return config;
+}
+
+/** Columns then rows; both axes need at least two nodes and must cover the selection. */
+function readShape(value: unknown, count: number): readonly [number, number] {
+  const [columns, rows] = readDenseArray(value, 2).map(readPositiveInteger);
+  if (columns === undefined || rows === undefined || columns < 2 || rows < 2 || columns * rows !== count)
+    throw new RangeError("Ordered lattice requires two axes of at least two matching node count.");
+  return [columns, rows];
+}
+
+/** Wrapped axes close a ring only above two nodes, so no edge repeats. */
+function latticeEdgeCount(shape: readonly [number, number], count: number, wrap: boolean): number {
+  return shape.reduce((sum, axis) => sum + (wrap && axis > 2 ? count : count / axis * (axis - 1)), 0);
 }

@@ -1,14 +1,25 @@
 import { distributionMean } from "./mean-options.ts";
 
-const logFactorials = [0];
-for (let value = 1; value <= 255; value++) logFactorials.push(logFactorials[value - 1]! + Math.log(value));
+const maximumPoissonMean = 100000;
+/** Below this mean, multiply uniforms (Knuth); at or above it use Hörmann's PTRS. */
+const productMethodMeanLimit = 30;
+const largestTabulatedFactorial = 255;
+const logSqrtTwoPi = 0.9189385332046727;
 
-/** Contract-pinned binary64 approximation, not an exact real factorial identity. */
+const logFactorials = [0];
+for (let value = 1; value <= largestTabulatedFactorial; value++) {
+  logFactorials.push(logFactorials[value - 1]! + Math.log(value));
+}
+
+/**
+ * Contract-pinned binary64 approximation, not an exact real factorial identity.
+ * Tabulated sums up to 255, then Stirling's series.
+ */
 export function logFactorial(value: number): number {
   if (value < logFactorials.length) return logFactorials[value]!;
   const z = 1 / value;
   const z2 = z * z;
-  return (value + 0.5) * Math.log(value) - value + 0.9189385332046727
+  return (value + 0.5) * Math.log(value) - value + logSqrtTwoPi
     + z * (1 / 12 + z2 * (-1 / 360 + z2 * (1 / 1260 + z2 * (-1 / 1680))));
 }
 
@@ -19,9 +30,9 @@ function accepted(value: number): number {
 
 /** Independently written from the accepted mathematical PTRS/product contract. */
 export function poissonDraw(options: unknown, draw: () => number): number {
-  const mean = distributionMean(options, "poisson", 100000);
+  const mean = distributionMean(options, "poisson", maximumPoissonMean);
   if (mean === 0) return 0;
-  if (mean < 30) {
+  if (mean < productMethodMeanLimit) {
     const threshold = Math.exp(-mean);
     let product = 1;
     let count = 0;
@@ -47,7 +58,8 @@ export function poissonDraw(options: unknown, draw: () => number): number {
     if (us >= 0.07 && v <= vr) return accepted(k);
     if (k < 0) continue;
     if (us < 0.013 && v > us) continue;
-    if (Math.log(v * invAlpha / (a / (us * us) + b)) <= -mean + k * logMean - logFactorial(k))
+    if (Math.log(v * invAlpha / (a / (us * us) + b)) <= -mean + k * logMean - logFactorial(k)) {
       return accepted(k);
+    }
   }
 }

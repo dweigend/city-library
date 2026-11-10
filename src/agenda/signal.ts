@@ -2,10 +2,17 @@ import { issueId } from "../agent/lifecycle.ts";
 
 export type WaitStatus = "waiting" | "satisfied" | "cancelled";
 export interface WaitRequest { readonly id: string; readonly status: WaitStatus }
+/** Observable value with predicate waits; predicates must not call set, wait or cancel. */
 export interface Signal<T> {
   readonly value: T;
+  /**
+   * Evaluates every waiting predicate against `value` before committing.
+   * A throwing predicate leaves value and waits unchanged.
+   */
   set(value: T): void;
+  /** Returns a satisfied request if `predicate` already holds; otherwise waits. */
   wait(predicate: (value: T) => boolean): WaitRequest;
+  /** Cancels a waiting request; finished requests are ignored. */
   cancel(ticket: WaitRequest): void;
 }
 interface Entry<T> { ticket: WaitRequest; status: WaitStatus; predicate: (value: T) => boolean }
@@ -23,18 +30,25 @@ function create<T>(initial: T): Signal<T> {
     if (typeof result !== "boolean") throw new TypeError("Signal predicates must return a synchronous boolean.");
     return result;
   }
+  /** Runs predicate evaluation with mutation methods locked against reentry. */
+  function whileEvaluating<R>(evaluation: () => R): R {
+    evaluating = true;
+    try {
+      return evaluation();
+    } finally {
+      evaluating = false;
+    }
+  }
   return Object.freeze({
     get value() { return value; },
     set(proposed: T) {
       guard();
-      let satisfied: boolean[];
-      evaluating = true;
-      try { satisfied = pending.map((entry) => evaluate(entry.predicate, proposed)); }
-      finally { evaluating = false; }
+      const satisfied = whileEvaluating(() => pending.map((entry) => evaluate(entry.predicate, proposed)));
       // Commit only after every predicate succeeds, preserving atomic failure.
       value = proposed;
       for (let index = pending.length - 1; index >= 0; index -= 1) {
         if (!satisfied[index]) continue;
+        // Iterating existing indices downward keeps every index in bounds.
         pending[index]!.status = "satisfied";
         pending.splice(index, 1);
       }
@@ -43,13 +57,10 @@ function create<T>(initial: T): Signal<T> {
       guard();
       if (typeof predicate !== "function") throw new TypeError("Signal wait requires a predicate.");
       if (Object.prototype.toString.call(predicate) === "[object AsyncFunction]") throw new TypeError("Signal predicates must be synchronous.");
-      let satisfied: boolean;
-      evaluating = true;
-      try { satisfied = evaluate(predicate, value); }
-      finally { evaluating = false; }
-      const entry: Entry<T> = { ticket: undefined!, status: satisfied ? "satisfied" : "waiting", predicate };
+      const satisfied = whileEvaluating(() => evaluate(predicate, value));
+      // The status getter reads `entry` lazily, after it has been initialized.
       const ticket = Object.freeze({ id: issueId(), get status() { return entry.status; } });
-      entry.ticket = ticket;
+      const entry: Entry<T> = { ticket, status: satisfied ? "satisfied" : "waiting", predicate };
       issued.set(ticket, entry);
       if (!satisfied) pending.push(entry);
       return ticket;

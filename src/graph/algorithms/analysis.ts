@@ -1,9 +1,17 @@
 import { validateOptions } from "../../agent/state.ts";
 import type { Edge } from "../edge.ts";
-import { dijkstra, type Prepared } from "./distances.ts";
+import { dijkstra, type CostGraph } from "./distances.ts";
 import { addCosts, dyadic, roundedCost, unitCost } from "./dyadic-costs.ts";
 import { one, plus, quotient, timesRatio, zero, type Rational } from "./rational.ts";
 
+/**
+ * One node centrality measure. Applicable options depend on `measure`:
+ * degree (direction incl. "all", normalized, weight), closeness (direction,
+ * disconnected, cost), betweenness (normalized, cost), eigenvector (weight,
+ * tolerance, maxIterations) and pageRank (additionally damping).
+ * Defaults: direction "out", normalized false, disconnected "reachable",
+ * unit edge values, damping 0.85, tolerance 1e-9 and maxIterations 1000.
+ */
 export interface AnalysisOptions<N extends object, E extends object> {
   measure: "degree" | "closeness" | "betweenness" | "eigenvector" | "pageRank";
   direction?: "out" | "in" | "all";
@@ -15,14 +23,19 @@ export interface AnalysisOptions<N extends object, E extends object> {
   tolerance?: number;
   maxIterations?: number;
 }
-const fields = {
+type AnalysisDirection = NonNullable<AnalysisOptions<object, object>["direction"]>;
+const optionsByMeasure = {
   degree: ["measure", "direction", "normalized", "weight"],
   closeness: ["measure", "direction", "disconnected", "cost"],
   betweenness: ["measure", "normalized", "cost"],
   eigenvector: ["measure", "weight", "tolerance", "maxIterations"],
   pageRank: ["measure", "weight", "damping", "tolerance", "maxIterations"],
 } as const;
+type Measure = keyof typeof optionsByMeasure;
 interface Captured<N> { from: N; to: N; directed: boolean; value: bigint }
+const defaultTolerance = 1e-9;
+const defaultMaxIterations = 1000;
+const defaultDamping = 0.85;
 
 function numeric(value: unknown, fallback: number): number {
   if (value === undefined) return fallback;
@@ -36,8 +49,8 @@ function finite(value: number): number {
 function settings<N extends object, E extends object>(options: AnalysisOptions<N, E>) {
   const values = validateOptions(options, ["measure", "direction", "normalized", "disconnected", "cost", "weight", "damping", "tolerance", "maxIterations"]);
   const measure = values.measure;
-  if (typeof measure !== "string" || !Object.hasOwn(fields, measure)) throw new TypeError("Invalid graph analysis measure.");
-  const allowed: readonly string[] = fields[measure as keyof typeof fields];
+  if (typeof measure !== "string" || !Object.hasOwn(optionsByMeasure, measure)) throw new TypeError("Invalid graph analysis measure.");
+  const allowed: readonly string[] = optionsByMeasure[measure as Measure];
   if (Object.keys(values).some(key => !allowed.includes(key))) throw new TypeError("Inapplicable graph analysis option.");
   const direction = values.direction === undefined ? "out" : values.direction;
   if (direction !== "out" && direction !== "in" && !(measure === "degree" && direction === "all")) throw new TypeError("Invalid analysis direction.");
@@ -47,10 +60,12 @@ function settings<N extends object, E extends object>(options: AnalysisOptions<N
   if (disconnected !== "reachable" && disconnected !== "discount") throw new TypeError("Invalid disconnected policy.");
   const callback = measure === "closeness" || measure === "betweenness" ? values.cost : values.weight;
   if (callback !== undefined && typeof callback !== "function") throw new TypeError("Analysis cost or weight must be a function.");
-  const tolerance = numeric(values.tolerance, 1e-9), maxIterations = numeric(values.maxIterations, 1000), damping = numeric(values.damping, 0.85);
+  const tolerance = numeric(values.tolerance, defaultTolerance);
+  const maxIterations = numeric(values.maxIterations, defaultMaxIterations);
+  const damping = numeric(values.damping, defaultDamping);
   if (tolerance <= 0 || maxIterations <= 0 || !Number.isInteger(maxIterations) || damping <= 0 || damping >= 1)
     throw new RangeError("Analysis iteration parameters are outside their supported range.");
-  return { measure: measure as keyof typeof fields, direction, normalized, disconnected,
+  return { measure: measure as Measure, direction: direction as AnalysisDirection, normalized, disconnected,
     callback: callback as ((edge: Edge<N, E>) => number) | undefined, tolerance, maxIterations, damping };
 }
 
@@ -65,17 +80,22 @@ function capture<N extends object, E extends object>(edges: Iterable<Edge<N, E>>
   }
   return result;
 }
-function topology<N>(nodes: readonly N[], edges: readonly Captured<N>[], reverse = false, doubleLoops = false): Prepared<N> {
+/**
+ * Arc lists for path and spectral measures. `reverseDirected` follows incoming
+ * arcs; `undirectedLoopsTwice` lets an undirected loop contribute both arc
+ * directions, as in the spectral adjacency operator.
+ */
+function costGraph<N>(nodes: readonly N[], edges: readonly Captured<N>[], layout: { reverseDirected: boolean; undirectedLoopsTwice: boolean }): CostGraph<N> {
   const adjacency = new Map(nodes.map(node => [node, [] as { to: N; cost: bigint }[]]));
   for (const edge of edges) {
-    const from = reverse && edge.directed ? edge.to : edge.from;
-    const to = reverse && edge.directed ? edge.from : edge.to;
+    const from = layout.reverseDirected && edge.directed ? edge.to : edge.from;
+    const to = layout.reverseDirected && edge.directed ? edge.from : edge.to;
     adjacency.get(from)!.push({ to, cost: edge.value });
-    if (!edge.directed && (doubleLoops || from !== to)) adjacency.get(to)!.push({ to: from, cost: edge.value });
+    if (!edge.directed && (layout.undirectedLoopsTwice || from !== to)) adjacency.get(to)!.push({ to: from, cost: edge.value });
   }
   return { nodes, adjacency };
 }
-function degree<N>(nodes: readonly N[], edges: readonly Captured<N>[], direction: string, normalized: boolean): Map<N, number> {
+function degree<N>(nodes: readonly N[], edges: readonly Captured<N>[], direction: AnalysisDirection, normalized: boolean): Map<N, number> {
   const scores = new Map(nodes.map(node => [node, 0n]));
   for (const edge of edges) {
     if (!edge.directed || direction !== "in") scores.set(edge.from, addCosts(scores.get(edge.from)!, edge.value));
@@ -84,7 +104,7 @@ function degree<N>(nodes: readonly N[], edges: readonly Captured<N>[], direction
   const divisor = normalized ? Math.max(1, nodes.length - 1) : 1;
   return new Map(nodes.map(node => [node, roundedCost(scores.get(node)!) / divisor]));
 }
-function closeness<N>(graph: Prepared<N>, discount: boolean): Map<N, number> {
+function closeness<N>(graph: CostGraph<N>, discount: boolean): Map<N, number> {
   const scores = new Map<N, number>();
   for (const source of graph.nodes) {
     const distances = dijkstra(graph, source);
@@ -96,18 +116,20 @@ function closeness<N>(graph: Prepared<N>, discount: boolean): Map<N, number> {
   }
   return scores;
 }
-function betweenness<N>(graph: Prepared<N>, undirected: boolean, normalized: boolean): Map<N, number> {
+/** Brandes dependency accumulation with exact path counts and rational dependencies. */
+function betweenness<N>(graph: CostGraph<N>, undirected: boolean, normalized: boolean): Map<N, number> {
   const scores = new Map(graph.nodes.map(node => [node, zero]));
   for (const source of graph.nodes) {
     const distances = dijkstra(graph, source);
-    const order = [...distances.keys()].sort((a, b) => distances.get(a)! < distances.get(b)! ? -1 : distances.get(a)! > distances.get(b)! ? 1 : 0);
+    // Stable sort keeps discovery order among equal distances.
+    const order = [...distances.keys()].sort((a, b) => compareCosts(distances.get(a)!, distances.get(b)!));
     const counts = new Map<N, bigint>([[source, 1n]]);
     const predecessors = new Map(order.map(node => [node, new Map<N, bigint>()]));
     for (const from of order) for (const arc of graph.adjacency.get(from)!) {
       if (addCosts(distances.get(from)!, arc.cost) !== distances.get(arc.to)) continue;
       counts.set(arc.to, (counts.get(arc.to) ?? 0n) + counts.get(from)!);
-      const links = predecessors.get(arc.to)!;
-      links.set(from, (links.get(from) ?? 0n) + 1n);
+      const shortestArcs = predecessors.get(arc.to)!;
+      shortestArcs.set(from, (shortestArcs.get(from) ?? 0n) + 1n);
     }
     const dependency = new Map<N, Rational>();
     for (let index = order.length - 1; index >= 0; index--) {
@@ -132,6 +154,11 @@ function betweenness<N>(graph: Prepared<N>, undirected: boolean, normalized: boo
     return [node, quotient(score.numerator, score.denominator)];
   }));
 }
+function compareCosts(first: bigint, second: bigint): number {
+  if (first < second) return -1;
+  if (first > second) return 1;
+  return 0;
+}
 /** Compensated finite Number sum for bounded spectral values. */
 function stableSum(values: Iterable<number>): number {
   let sum = 0, correction = 0;
@@ -142,7 +169,7 @@ function stableSum(values: Iterable<number>): number {
   }
   return finite(sum + correction);
 }
-function eigenvector<N>(graph: Prepared<N>, edgeCount: number, tolerance: number, maxIterations: number): Map<N, number> {
+function eigenvector<N>(graph: CostGraph<N>, edgeCount: number, tolerance: number, maxIterations: number): Map<N, number> {
   const nodes = graph.nodes;
   if (!edgeCount) return new Map(nodes.map(node => [node, 0]));
   let current = new Map(nodes.map(node => [node, 1 / Math.sqrt(nodes.length)]));
@@ -165,7 +192,7 @@ function eigenvector<N>(graph: Prepared<N>, edgeCount: number, tolerance: number
   }
   throw new Error("Eigenvector analysis did not converge.");
 }
-function pageRank<N>(graph: Prepared<N>, damping: number, tolerance: number, maxIterations: number): Map<N, number> {
+function pageRank<N>(graph: CostGraph<N>, damping: number, tolerance: number, maxIterations: number): Map<N, number> {
   const nodes = graph.nodes;
   const rows = new Map<N, { to: N; probability: number }[]>();
   for (const from of nodes) {
@@ -193,12 +220,22 @@ function pageRank<N>(graph: Prepared<N>, damping: number, tolerance: number, max
   }
   throw new Error("PageRank analysis did not converge.");
 }
+/**
+ * Captures edge values once through the guarded edge iterable, then scores
+ * every node. Path costs and edge weights are exact dyadic values.
+ * @throws TypeError for invalid or inapplicable options and non-finite edge values.
+ * @throws RangeError for unsupported edge values, parameter ranges or non-finite results.
+ * @throws Error when an iterative measure does not converge within maxIterations.
+ */
 export function analyze<N extends object, E extends object>(nodes: readonly N[], edges: Iterable<Edge<N, E>>, options: AnalysisOptions<N, E>): ReadonlyMap<N, number> {
   const config = settings(options);
   const captured = capture(edges, config.callback, config.measure === "closeness" || config.measure === "betweenness");
   if (!nodes.length) return new Map();
   if (config.measure === "degree") return degree(nodes, captured, config.direction, config.normalized);
-  const graph = topology(nodes, captured, config.measure === "closeness" && config.direction === "in", config.measure === "eigenvector" || config.measure === "pageRank");
+  const graph = costGraph(nodes, captured, {
+    reverseDirected: config.measure === "closeness" && config.direction === "in",
+    undirectedLoopsTwice: config.measure === "eigenvector" || config.measure === "pageRank",
+  });
   if (config.measure === "closeness") return closeness(graph, config.disconnected === "discount");
   if (config.measure === "betweenness") return betweenness(graph, captured.every(edge => !edge.directed), config.normalized);
   if (config.measure === "eigenvector") return eigenvector(graph, captured.length, config.tolerance, config.maxIterations);

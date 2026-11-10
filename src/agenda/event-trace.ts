@@ -4,8 +4,11 @@ export interface TraceEvent<T> {
   readonly at: number;
   readonly value: T;
 }
+/** Bounded observation log; the oldest event is dropped beyond capacity. */
 export interface EventTrace<T> {
+  /** Records a detached copy of `value`; `at` must be finite and nondecreasing from 0. */
   record(event: { at: number; value: T }): void;
+  /** Returns detached copies in recording order. */
   read(): readonly TraceEvent<T>[];
 }
 

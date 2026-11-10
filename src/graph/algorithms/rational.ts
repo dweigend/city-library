@@ -2,12 +2,17 @@
 export interface Rational { readonly numerator: bigint; readonly denominator: bigint }
 export const zero: Rational = { numerator: 0n, denominator: 1n };
 export const one: Rational = { numerator: 1n, denominator: 1n };
+// binary64 exponent range and the 2^-1074 subnormal unit.
+const maximumExponent = 1023;
+const minimumNormalExponent = -1022;
+const fractionBits = 52;
+const subnormalUnitShift = 1074n;
 
 function gcd(a: bigint, b: bigint): bigint {
   while (b !== 0n) { const remainder = a % b; a = b; b = remainder; }
   return a < 0n ? -a : a;
 }
-export function rational(numerator: bigint, denominator = 1n): Rational {
+function rational(numerator: bigint, denominator = 1n): Rational {
   if (numerator === 0n) return zero;
   const divisor = gcd(numerator, denominator);
   return { numerator: numerator / divisor, denominator: denominator / divisor };
@@ -44,14 +49,14 @@ export function quotient(numerator: bigint, denominator: bigint): number {
   const magnitude = negative ? -numerator : numerator;
   let exponent = magnitude.toString(2).length - denominator.toString(2).length;
   if (exponent >= 0 ? magnitude < (denominator << BigInt(exponent)) : (magnitude << BigInt(-exponent)) < denominator) exponent--;
-  if (exponent > 1023) throw new RangeError("Graph score must round to a finite number.");
+  if (exponent > maximumExponent) throw new RangeError("Graph score must round to a finite number.");
   let result: number;
-  if (exponent < -1022) {
-    result = Number(nearest(magnitude << 1074n, denominator)) * Number.MIN_VALUE;
+  if (exponent < minimumNormalExponent) {
+    result = Number(nearest(magnitude << subnormalUnitShift, denominator)) * Number.MIN_VALUE;
   } else {
-    const shift = 52 - exponent;
+    const shift = fractionBits - exponent;
     const significand = shift >= 0 ? nearest(magnitude << BigInt(shift), denominator) : nearest(magnitude, denominator << BigInt(-shift));
-    result = Number(significand) * 2 ** (exponent - 52);
+    result = Number(significand) * 2 ** (exponent - fractionBits);
   }
   if (!Number.isFinite(result)) throw new RangeError("Graph score must round to a finite number.");
   return negative ? -result : result;

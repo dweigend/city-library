@@ -1,15 +1,23 @@
 import { frameworkRecord } from "../agent/lifecycle.ts";
 import { validateOptions } from "../agent/state.ts";
-import { cloneEdgeState, type Edge } from "./edge.ts";
+import { cloneEdgeState, edgeMemberKeys, type Edge, type EdgeDraft } from "./edge.ts";
 
-export interface PreparedCopy<N extends object, E extends object> {
+/** Current structure and policy of the source graph. */
+export interface CopySource<N extends object, E extends object> {
   readonly nodes: readonly N[];
-  readonly edges: readonly { from: N; to: N; directed: boolean; key: string | undefined; state: E }[];
+  readonly edges: readonly Edge<N, E>[];
   readonly defaults: E;
   readonly parallel: boolean;
   readonly selfLoops: boolean;
 }
-const edgeMembers = new Set(["id", "graph", "alive", "from", "to", "directed", "key", "path", "delete"]);
+/** Fully detached copy input; materializing it runs no caller code. */
+export interface PreparedCopy<N extends object, E extends object> {
+  readonly nodes: readonly N[];
+  readonly edges: readonly EdgeDraft<N, E>[];
+  readonly defaults: E;
+  readonly parallel: boolean;
+  readonly selfLoops: boolean;
+}
 
 function selection(value: unknown): unknown[] {
   if (!Array.isArray(value) || Reflect.ownKeys(value).length !== value.length + 1) throw new TypeError("Copy selections require dense data arrays.");
@@ -24,7 +32,7 @@ function selection(value: unknown): unknown[] {
 function modelState<N extends object, E extends object>(edge: Edge<N, E>): E {
   const state = Object.create(Object.getPrototypeOf(edge)) as E;
   for (const key of Reflect.ownKeys(edge)) {
-    if (typeof key === "string" && edgeMembers.has(key)) continue;
+    if (typeof key === "string" && edgeMemberKeys.has(key)) continue;
     Object.defineProperty(state, key, Object.getOwnPropertyDescriptor(edge, key)!);
   }
   // In particular, a reference back to a registered source Edge stays canonical.
@@ -50,35 +58,29 @@ function validateReferences(value: unknown, seen: Set<object>): void {
     for (const key of Reflect.ownKeys(value)) validateReferences(Object.getOwnPropertyDescriptor(value, key)!.value, seen);
   }
 }
-export function prepareCopy<N extends object, E extends object>(
-  sourceNodes: readonly N[], sourceEdges: readonly Edge<N, E>[], defaults: E,
-  parallel: boolean, selfLoops: boolean, options: unknown,
-): PreparedCopy<N, E> {
+/**
+ * Validates copy options and detaches all selected structure and state.
+ * Undirected simple copies switch to parallel mode when two selected edges
+ * would join the same node pair.
+ */
+export function prepareCopy<N extends object, E extends object>(source: CopySource<N, E>, options: unknown): PreparedCopy<N, E> {
+  const sourceNodes = source.nodes, sourceEdges = source.edges;
   const settings = validateOptions(options, ["nodes", "edges", "direction"]);
   const direction = settings.direction === undefined ? "original" : settings.direction;
   if (direction !== "original" && direction !== "reverse" && direction !== "undirected") throw new TypeError("Invalid copy direction.");
   // Validate BOTH array shapes before membership or any edge-state reflection.
   const suppliedNodes = settings.nodes === undefined ? sourceNodes : selection(settings.nodes);
   const suppliedEdges = settings.edges === undefined ? undefined : selection(settings.edges);
-  const members = new Set(sourceNodes), links = new Set(sourceEdges);
+  const members = new Set(sourceNodes), memberEdges = new Set(sourceEdges);
   for (const node of suppliedNodes) if (!members.has(node as N) || frameworkRecord(node)?.alive === false) throw new TypeError("Copy node must be a living current source member.");
-  if (suppliedEdges) for (const edge of suppliedEdges) if (!links.has(edge as Edge<N, E>) || frameworkRecord(edge)?.alive === false) throw new TypeError("Copy edge must be a living current source edge.");
+  if (suppliedEdges) for (const edge of suppliedEdges) if (!memberEdges.has(edge as Edge<N, E>) || frameworkRecord(edge)?.alive === false) throw new TypeError("Copy edge must be a living current source edge.");
   const selected = new Set(suppliedNodes);
   const nodes = sourceNodes.filter(node => selected.has(node));
   if (suppliedEdges) for (const edge of suppliedEdges as Edge<N, E>[]) if (!selected.has(edge.from) || !selected.has(edge.to)) throw new TypeError("Copy edge endpoints must be selected.");
   const requested = suppliedEdges === undefined ? undefined : new Set(suppliedEdges);
   const edges = sourceEdges.filter(edge => requested === undefined ? selected.has(edge.from) && selected.has(edge.to) : requested.has(edge));
-  if (!parallel && direction === "undirected") {
-    const order = new Map(nodes.map((node, index) => [node, index]));
-    const pairs = new Map<N, Set<N>>();
-    for (const edge of edges) {
-      const [a, b] = order.get(edge.from)! <= order.get(edge.to)! ? [edge.from, edge.to] : [edge.to, edge.from];
-      const targets = pairs.get(a) ?? new Set<N>();
-      if (targets.has(b)) { parallel = true; break; }
-      targets.add(b); pairs.set(a, targets);
-    }
-  }
-  const copiedDefaults = cloneEdgeState(defaults);
+  const parallel = source.parallel || (direction === "undirected" && sharesNodePair(nodes, edges));
+  const copiedDefaults = cloneEdgeState(source.defaults);
   const preparedEdges = edges.map((edge, index) => ({
     from: direction === "reverse" && edge.directed ? edge.to : edge.from,
     to: direction === "reverse" && edge.directed ? edge.from : edge.to,
@@ -90,5 +92,17 @@ export function prepareCopy<N extends object, E extends object>(
   const checked = new Set<object>();
   validateReferences(copiedDefaults, checked);
   for (const edge of preparedEdges) validateReferences(edge.state, checked);
-  return { nodes, edges: preparedEdges, defaults: copiedDefaults, parallel, selfLoops };
+  return { nodes, edges: preparedEdges, defaults: copiedDefaults, parallel, selfLoops: source.selfLoops };
+}
+/** True when two edges join the same unordered node pair. */
+function sharesNodePair<N extends object, E extends object>(nodes: readonly N[], edges: readonly Edge<N, E>[]): boolean {
+  const order = new Map(nodes.map((node, index) => [node, index]));
+  const pairs = new Map<N, Set<N>>();
+  for (const edge of edges) {
+    const [a, b] = order.get(edge.from)! <= order.get(edge.to)! ? [edge.from, edge.to] : [edge.to, edge.from];
+    const targets = pairs.get(a) ?? new Set<N>();
+    if (targets.has(b)) return true;
+    targets.add(b); pairs.set(a, targets);
+  }
+  return false;
 }

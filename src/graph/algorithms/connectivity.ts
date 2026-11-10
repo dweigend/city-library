@@ -25,6 +25,7 @@ function weakParts(adjacency: readonly (readonly number[])[]): number[][] {
   return parts;
 }
 
+/** Kosaraju: iterative finish order on the graph, then collection on its reverse. */
 function strongParts(adjacency: readonly (readonly number[])[], reverse: readonly (readonly number[])[]): number[][] {
   const seen = new Uint8Array(adjacency.length);
   const finished: number[] = [];
@@ -56,6 +57,7 @@ function strongParts(adjacency: readonly (readonly number[])[], reverse: readonl
   return parts;
 }
 
+/** Hopcroft–Tarjan vertex blocks from an iterative DFS edge stack; isolated nodes form singletons. */
 function biconnectedParts(size: number, endpoints: readonly (readonly [number, number])[]): number[][] {
   const adjacency: { node: number; edge: number }[][] = Array.from({ length: size }, () => []);
   endpoints.forEach(([from, to], edge) => {
@@ -113,6 +115,10 @@ function biconnectedParts(size: number, endpoints: readonly (readonly [number, n
   return parts;
 }
 
+/**
+ * Weak, strong or biconnected node groups. Members and groups are ordered by
+ * node position in `nodes`. Biconnected groups may share articulation nodes.
+ */
 export function components<N extends object>(nodes: readonly N[], edges: readonly Connection<N>[], mode: ComponentMode): readonly (readonly N[])[] {
   if (mode === "biconnected" && edges.some(edge => edge.directed))
     throw new TypeError("Biconnected components require undirected edges.");

@@ -8,21 +8,35 @@ import { exponentialDraw } from "./distributions/exponential.ts";
 import { poissonDraw } from "./distributions/poisson.ts";
 import type { MeanOptions } from "./distributions/mean-options.ts";
 import { bernoulliDraw, triangularDraw, gammaDraw, type DesDistributionOptions } from "./distributions/des.ts";
+/** A seeded Mulberry32 stream; the same seed and operation order reproduce the same draws. */
 export interface Random {
   readonly algorithm: "mulberry32";
   readonly seed: number;
+  /** Detached frozen continuation on read; validated atomic restore on write, without drawing. */
   state: RandomState;
+  /** Uniform [0, 1) by default; distribution options select one documented variant. */
   number(): number;
   number(options: UniformOptions): number;
   number(options: NormalOptions): number;
   number(options: MeanOptions): number;
   number(options: DesDistributionOptions): number;
+  /** Returns source references in draw order unless `order` is "source"; never mutates source. */
   sample<T>(source: Iterable<T>, options?: SampleOptions<T>): T[];
+  /** Restarts the stream from a new seed and clears the Gaussian cache. */
   reseed(seed: number): void;
+  /** An independent generator continuing from this stream's current state. */
   copy(): Random;
+  /**
+   * Runs a synchronous action on a temporary stream that starts from the outermost
+   * local checkpoint, then restores this stream's prior state.
+   */
   local<R>(action: () => R): R;
+  /** One unscaled Mulberry32 double in [0, 1). */
   raw(options: { kind: "double" }): number;
 }
+
+const nonSynchronousFunctionTags = ["[object AsyncFunction]", "[object GeneratorFunction]", "[object AsyncGeneratorFunction]"];
+
 function create(options: { seed?: number; algorithm?: "mulberry32" } = {}): Random {
   if (arguments.length > 1) throw new TypeError("Unexpected Random arguments.");
   const values = validateOptions(options, ["seed", "algorithm"]);
@@ -83,14 +97,23 @@ function create(options: { seed?: number; algorithm?: "mulberry32" } = {}): Rand
     },
     local<R>(action: () => R): R {
       if (arguments.length !== 1) throw new TypeError("Local requires one callback.");
-      if (typeof action !== "function" || ["[object AsyncFunction]", "[object GeneratorFunction]", "[object AsyncGeneratorFunction]"].includes(Object.prototype.toString.call(action))) throw new TypeError("Expected a synchronous local callback.");
+      if (typeof action !== "function" || nonSynchronousFunctionTags.includes(Object.prototype.toString.call(action))) {
+        throw new TypeError("Expected a synchronous local callback.");
+      }
       const predecessor = { ...state };
+      // Nested locals all start from the main stream state captured by the outermost local.
       const outermost = mainCheckpoint === undefined;
       if (outermost) mainCheckpoint = { ...predecessor };
       state = { ...mainCheckpoint! };
       try {
         const result = action();
-        if (result !== null && (typeof result === "object" || typeof result === "function") && typeof (result as { then?: unknown }).then === "function") throw new TypeError("Thenable local results are unsupported.");
+        if (
+          result !== null &&
+          (typeof result === "object" || typeof result === "function") &&
+          typeof (result as { then?: unknown }).then === "function"
+        ) {
+          throw new TypeError("Thenable local results are unsupported.");
+        }
         return result;
       } finally {
         state = predecessor;

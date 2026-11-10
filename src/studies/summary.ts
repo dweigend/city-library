@@ -1,32 +1,74 @@
-import type { ReplicationSummary, StudyOutcome, StudyResult } from "./types.ts";
-import { callback, cloneData, synchronous } from "./validation.ts";
+import type { ReplicationSummary, StudyOutcome, StudyResult, StudyStatus } from "./types.ts";
+import { cloneData, requireCallback, requireSynchronous } from "./validation.ts";
 
-export function summarize<Parameters, Measurements>(result: StudyResult<Parameters, Measurements>, select: (outcome: StudyOutcome<Parameters, Measurements>) => number | undefined): readonly ReplicationSummary[] {
-  callback(select, "Summary selector");
+/**
+ * Summarizes replications per scenario, in first-appearance order.
+ * `select` receives a detached copy of each completed or stopped outcome and returns a
+ * finite number or undefined; failed and skipped runs count as missing.
+ * `mean` is null without values; `sampleSd` uses n - 1 and is null below two values.
+ */
+export function summarize<Parameters, Measurements>(
+  result: StudyResult<Parameters, Measurements>,
+  select: (outcome: StudyOutcome<Parameters, Measurements>) => number | undefined,
+): readonly ReplicationSummary[] {
+  requireCallback(select, "Summary selector");
   const scenarios = new Map<string, StudyOutcome<Parameters, Measurements>[]>();
   for (const outcome of result.outcomes) {
     const group = scenarios.get(outcome.run.scenarioId) ?? [];
-    group.push(outcome); scenarios.set(outcome.run.scenarioId, group);
+    group.push(outcome);
+    scenarios.set(outcome.run.scenarioId, group);
   }
   return Object.freeze([...scenarios].map(([scenarioId, outcomes]) => {
     const values = outcomes.map(outcome => {
-      const selected = outcome.status === "completed" || outcome.status === "stopped" ? synchronous(select(cloneData(outcome))) : undefined;
-      if (selected !== undefined && typeof selected !== "number") throw new TypeError("Summary selections must be numeric or undefined.");
-      if (selected !== undefined && !Number.isFinite(selected)) throw new RangeError("Summary selections must be finite.");
+      const selected = selectValue(outcome, select);
       return Object.freeze({ runId: outcome.run.id, seed: outcome.run.seed, status: outcome.status, value: selected ?? null });
     });
     const observed = values.flatMap(entry => entry.value === null ? [] : [entry.value]);
-    const mean = observed.length ? observed.reduce((total, value) => total + value / observed.length, 0) : null;
-    const sampleSd = observed.length < 2 || mean === null ? null
-      : Math.sqrt(observed.reduce((total, value) => total + (value - mean) ** 2 / (observed.length - 1), 0));
-    if ((mean !== null && !Number.isFinite(mean)) || (sampleSd !== null && !Number.isFinite(sampleSd)))
+    const mean = replicationMean(observed);
+    const sampleSd = sampleStandardDeviation(observed, mean);
+    if ((mean !== null && !Number.isFinite(mean)) || (sampleSd !== null && !Number.isFinite(sampleSd))) {
       throw new RangeError("Replication summary overflowed.");
-    return Object.freeze({ scenarioId, scenarioIndex: outcomes[0]!.run.scenarioIndex,
-      requested: outcomes.length, completed: outcomes.filter(value => value.status === "completed").length,
-      stopped: outcomes.filter(value => value.status === "stopped").length,
-      failed: outcomes.filter(value => value.status === "failed").length,
-      skipped: outcomes.filter(value => value.status === "skipped").length,
-      valid: observed.length, missing: outcomes.length - observed.length, mean, sampleSd, values: Object.freeze(values),
+    }
+    const countStatus = (status: StudyStatus) => outcomes.filter(outcome => outcome.status === status).length;
+    return Object.freeze({
+      scenarioId,
+      // Every group holds at least the outcome that created it.
+      scenarioIndex: outcomes[0]!.run.scenarioIndex,
+      requested: outcomes.length,
+      completed: countStatus("completed"),
+      stopped: countStatus("stopped"),
+      failed: countStatus("failed"),
+      skipped: countStatus("skipped"),
+      valid: observed.length,
+      missing: outcomes.length - observed.length,
+      mean,
+      sampleSd,
+      values: Object.freeze(values),
     });
   }));
+}
+
+function selectValue<Parameters, Measurements>(
+  outcome: StudyOutcome<Parameters, Measurements>,
+  select: (outcome: StudyOutcome<Parameters, Measurements>) => number | undefined,
+): number | undefined {
+  if (outcome.status !== "completed" && outcome.status !== "stopped") return undefined;
+  const selected = requireSynchronous(select(cloneData(outcome)));
+  if (selected !== undefined && typeof selected !== "number") {
+    throw new TypeError("Summary selections must be numeric or undefined.");
+  }
+  if (selected !== undefined && !Number.isFinite(selected)) throw new RangeError("Summary selections must be finite.");
+  return selected;
+}
+
+/** Each term is divided before summing so large finite values do not overflow the total. */
+function replicationMean(observed: readonly number[]): number | null {
+  if (!observed.length) return null;
+  return observed.reduce((total, value) => total + value / observed.length, 0);
+}
+
+function sampleStandardDeviation(observed: readonly number[], mean: number | null): number | null {
+  if (observed.length < 2 || mean === null) return null;
+  const variance = observed.reduce((total, value) => total + (value - mean) ** 2 / (observed.length - 1), 0);
+  return Math.sqrt(variance);
 }
