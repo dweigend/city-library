@@ -89,7 +89,7 @@ export const ui = defineUI(model, {
           .map((edge) => ({
             from: edge.fromIndex,
             to: edge.toIndex,
-            flow: edge.currentFlow,
+            flow: edge.currentFlow.toFixed(4),
           })),
     },
   ],

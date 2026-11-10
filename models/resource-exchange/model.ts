@@ -127,8 +127,8 @@ export type ExchangeSnapshot = ReturnType<ReturnType<typeof createExchangeModel>
 
 export const create = createExchangeModel;
 export const model: Definition<Required<ExchangeOptions>, ReturnType<typeof create>> = {
-  title: "Resource exchange",
-  description: "Seeded one-unit transfers between independently sampled agents.",
+  title: "Resource Exchange",
+  description: "Each tick one randomly chosen agent gives one unit of energy to another. The total stays the same while individual amounts drift apart.",
   inputs,
   create,
 };

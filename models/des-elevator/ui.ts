@@ -15,7 +15,7 @@ export const ui = defineUI(model, {
   ],
   views: [
     { type: "spatial", label: "Elevators", data: elevatorScene },
-    { type: "table", label: "Passengers", rows: state => state.passengers },
+    { type: "table", label: "Passengers", rows: passengerRows },
   ],
 });
 
@@ -76,4 +76,19 @@ export function elevatorScene(state: Observation<typeof model>): SpatialData {
   });
   return { width, height, agents, segments, labels, showLabels: false,
     description: `${state.parameters.floors} floors, ${state.cars.length} cars with ${state.parameters.capacity} slots each. ${state.waiting} amber floor dots waiting, ${state.riding} teal cabin dots riding, ${state.arrived} passengers have arrived and left the scene. Triangles indicate requested and car directions. Diagram coordinates; time ${state.time} seconds.` };
+}
+
+/** Times are seconds; a dash replaces the model's -1 for "not yet" (boarded, arrived, car). */
+function passengerRows(state: Observation<typeof model>) {
+  const known = (value: number) => (value >= 0 ? value : "—");
+  return state.passengers.map(passenger => ({
+    passenger: passenger.number,
+    from: passenger.from,
+    to: passenger.to,
+    requested: passenger.requested,
+    boarded: known(passenger.boarded),
+    arrived: known(passenger.arrived),
+    car: known(passenger.car),
+    status: passenger.status,
+  }));
 }

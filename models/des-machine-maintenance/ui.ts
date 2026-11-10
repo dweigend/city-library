@@ -13,7 +13,16 @@ export const ui = defineUI(model, {
   ],
   views: [
     { type: "spatial", label: "Machines and repair teams", data: scene },
-    { type: "table", label: "Machine ledger", rows: (state) => state.machines },
+    {
+      type: "table",
+      label: "Machine ledger",
+      rows: (state) => state.machines.map((machine) => ({
+        machine: machine.number,
+        status: machine.status,
+        repairs: machine.repairs,
+        availability: machine.availability.toFixed(3),
+      })),
+    },
     { type: "table", label: "Event trace", rows: (state) => state.trace },
   ],
 });

@@ -1,4 +1,4 @@
-import { defineUI, type Observation, type Series } from "../../ui/index.ts";
+import { defineUI, indexedColor, type Observation, type SpatialData } from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
@@ -52,9 +52,9 @@ export const ui = defineUI(model, {
       nodes: (s) =>
         s.nodes.map((n) => ({
           id: String(n.id),
-          label: `${n.kind}: ${n.activation}`,
-          color: n.activation === 1 ? "#eeeeee" : "#242424",
-          position: { x: n.x * 20, y: -n.y * 20 },
+          label: `${nodeName(n.kind)} · ${n.activation}`,
+          color: indexedColor(n.activation === 1 ? 28 : 23),
+          position: { x: n.x * 40, y: -n.y * 40 },
           size: n.kind === "output" ? 32 : 26,
         })),
       edges: (s) =>
@@ -63,7 +63,7 @@ export const ui = defineUI(model, {
           from: String(e.from),
           to: String(e.to),
           directed: true,
-          color: e.weight > 0 ? "#d74343" : "#3975bc",
+          color: indexedColor(e.weight > 0 ? 15 : 105),
           width: Math.max(0.5, 0.2 * Math.abs(e.weight) * 20),
         })),
     },
@@ -78,38 +78,73 @@ export const ui = defineUI(model, {
       ],
     },
     {
-      type: "scatter",
-      label: "Rule learned",
-      series: ruleLearnedSeries,
+      type: "spatial",
+      label: "Rule learned · green = true, red = false, line = decision boundary",
+      data: ruleLearnedScene,
     },
     {
-      type: "table",
+      // Like the source's link labels, weights appear only while Show Weights is on.
+      type: "inspector",
       label: "Weights",
-      rows: (s) =>
+      value: (s) =>
         s.parameters.showWeights
-          ? s.edges.map((e) => ({
-              input: s.nodes[e.from]!.kind,
-              weight: e.weight,
-            }))
-          : [],
+          ? Object.fromEntries(s.edges.map((e) => [`${nodeName(s.nodes[e.from]!.kind)} → Output`, e.weight.toFixed(3)]))
+          : undefined,
     },
   ],
 });
 
 type UIObservation = Observation<typeof model>;
 
-function ruleLearnedSeries(s: UIObservation): readonly Series[] {
-  return [
-    {
-      label: "Positive",
-      color: "#47a66a",
-      points: s.truthPoints.filter((p) => p.target === 1),
-    },
-    {
-      label: "Negative",
-      color: "#d74343",
-      points: s.truthPoints.filter((p) => p.target === -1),
-    },
-    { label: "Boundary", color: "#8a8a8a", points: s.boundary.points },
-  ];
+/**
+ * The input plane from -2.5 to 2.5 on both axes: the four training inputs colored by
+ * their target, and the model's decision boundary drawn as one straight line.
+ */
+function ruleLearnedScene(s: UIObservation): SpatialData {
+  const scaled = (point: { x: number; y: number }) => ({ x: point.x * planeScale, y: point.y * planeScale });
+  const boundary = s.boundary.points;
+  const axisColor = "#5c5c5c";
+  return {
+    width: planeExtent * planeScale,
+    height: planeExtent * planeScale,
+    segments: [
+      { from: scaled({ x: -planeExtent / 2, y: 0 }), to: scaled({ x: planeExtent / 2, y: 0 }), color: axisColor },
+      { from: scaled({ x: 0, y: -planeExtent / 2 }), to: scaled({ x: 0, y: planeExtent / 2 }), color: axisColor },
+      ...(boundary.length >= 2 ? [boundaryAcrossPlane(boundary[0]!, boundary.at(-1)!)] : []),
+    ],
+    labels: [
+      { ...scaled({ x: 2.1, y: -0.25 }), text: "Input 1" },
+      { ...scaled({ x: 0.55, y: 2.2 }), text: "Input 2" },
+    ],
+    showLabels: true,
+    agents: s.truthPoints.map((point) => ({
+      id: `input-${point.x}-${point.y}`,
+      ...scaled(point),
+      label: `(${point.x}, ${point.y})`,
+      color: point.target === 1 ? "#47a66a" : "#d74343",
+      size: 14,
+    })),
+    description: `Decision boundary: ${s.boundary.kind}. ${s.truthPoints.filter((point) => point.target === 1).length} of 4 inputs are true.`,
+  };
+}
+
+/** The model samples the boundary inside ±2; extend that straight line past the plane edges. */
+function boundaryAcrossPlane(first: { x: number; y: number }, last: { x: number; y: number }) {
+  const middle = { x: (first.x + last.x) / 2, y: (first.y + last.y) / 2 };
+  const direction = { x: last.x - first.x, y: last.y - first.y };
+  return {
+    from: { x: (middle.x - direction.x) * planeScale, y: (middle.y - direction.y) * planeScale },
+    to: { x: (middle.x + direction.x) * planeScale, y: (middle.y + direction.y) * planeScale },
+    color: "#e5e7eb",
+    width: 2,
+  };
+}
+
+// Input values are ±1; the plane shows ±2.5 at four scene units per input unit.
+const planeExtent = 5;
+const planeScale = 4;
+
+function nodeName(kind: string) {
+  return kind.replace(/^([a-z]+)(\d?)$/, (_, name: string, index: string) =>
+    `${name[0]!.toUpperCase()}${name.slice(1)}${index ? ` ${index}` : ""}`);
 }

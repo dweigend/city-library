@@ -15,6 +15,15 @@ export const ui = defineUI(model, {
       { label: "Demand", points: state.districts.map((district) => ({ x: district.name, y: district.demand })) },
       { label: "Supplied", points: state.districts.map((district) => ({ x: district.name, y: district.supplied })) },
     ] },
-    { type: "table", label: "Allocation ledger", rows: (state) => state.districts },
+    {
+      type: "table",
+      label: "Allocation ledger",
+      rows: (state) => state.districts.map((district) => ({
+        district: district.name,
+        demand: district.demand,
+        supplied: district.supplied,
+        status: district.status,
+      })),
+    },
   ],
 });

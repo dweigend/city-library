@@ -1,4 +1,4 @@
-import { defineUI } from "../../ui/index.ts";
+import { defineUI, indexedColor } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
   setup: ["seed"],
@@ -54,10 +54,10 @@ export const ui = defineUI(model, {
       nodes: (s) =>
         s.nodes.map((n) => ({
           id: String(n.id),
-          label: `${n.kind}: ${n.activation.toFixed(2)}`,
-          color: n.activation > 0.5 ? "#eeeeee" : "#242424",
-          position: { x: n.x * 20, y: -n.y * 20 },
-          size: 28,
+          label: `${nodeName(n.kind)} · ${n.activation.toFixed(2)}`,
+          color: activationColor(n.activation),
+          position: { x: n.x * 40, y: -n.y * 40 },
+          size: 30,
         })),
       edges: (s) =>
         s.edges.map((e) => ({
@@ -65,7 +65,7 @@ export const ui = defineUI(model, {
           from: String(e.from),
           to: String(e.to),
           directed: true,
-          color: e.weight > 0 ? "#d74343" : "#3975bc",
+          color: weightColor(e.weight),
           width: Math.max(0.5, 0.05 * Math.abs(e.weight) * 20),
         })),
     },
@@ -80,16 +80,31 @@ export const ui = defineUI(model, {
       ],
     },
     {
-      type: "table",
+      // Like the source's link labels, weights appear only while Show Weights is on.
+      type: "inspector",
       label: "Weights",
-      rows: (s) =>
+      value: (s) =>
         s.parameters.showWeights
-          ? s.edges.map((e) => ({
-              from: s.nodes[e.from]!.kind,
-              to: s.nodes[e.to]!.kind,
-              weight: e.weight,
-            }))
-          : [],
+          ? Object.fromEntries(s.edges.map((e) => [
+              `${nodeName(s.nodes[e.from]!.kind)} → ${nodeName(s.nodes[e.to]!.kind)}`,
+              e.weight.toFixed(3),
+            ]))
+          : undefined,
     },
   ],
 });
+
+/** Positive weights are red and negative weights blue, as in the source model. */
+function weightColor(weight: number) {
+  return indexedColor(weight > 0 ? 15 : 105);
+}
+
+/** Activation 0…1 as a dark-to-light amber fill that stays visible in both themes. */
+function activationColor(activation: number) {
+  return indexedColor(23 + 5 * Math.min(1, Math.max(0, activation)));
+}
+
+function nodeName(kind: string) {
+  return kind.replace(/^([a-z]+)(\d?)$/, (_, name: string, index: string) =>
+    `${name[0]!.toUpperCase()}${name.slice(1)}${index ? ` ${index}` : ""}`);
+}

@@ -530,8 +530,9 @@
       "source": "models/resource-exchange/model.ts",
       "destination": "models/resource-exchange/model.ts",
       "sourceSha256": "b442ea0d1086c4bdf303f3d4ad17beb844aa619fe34f694f5ac19d94e5094d5a",
-      "destinationSha256": "d2965253fd40853fe39ca2332213605666a774d838e309cf8984d064dc79ddbb",
-      "assertions": 0
+      "destinationSha256": "a41ee7df4196d4ecd6257a5fea67a64c71576835e6833ba98a81380ca8a87da4",
+      "assertions": 0,
+      "note": "2026-11-10: display title capitalized and description rewritten in plain language; model behavior, inputs and assertions unchanged."
     },
     {
       "source": "tests/public-contracts/netlogo-grid-batch/01-life-synchronous-blinker.ts",

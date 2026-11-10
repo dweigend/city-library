@@ -17,28 +17,16 @@ export const ui = defineUI(model, {
   },
   monitors: [
     { label: "Tick", value: (s) => s.tick },
-    { label: "Latest price", value: (s) => s.latestPrice },
-    { label: "Latest volume ($)", value: (s) => s.latestVolume },
-    { label: "Price to date", value: (s) => s.priceToDate },
-    { label: "Total cash", value: (s) => s.globalCash },
+    { label: "Latest price", value: (s) => s.latestPrice, format: twoDecimals },
+    { label: "Latest volume ($)", value: (s) => s.latestVolume, format: twoDecimals },
+    { label: "Price to date", value: (s) => s.priceToDate, format: twoDecimals },
+    { label: "Total cash", value: (s) => s.globalCash, format: twoDecimals },
     { label: "Circulating tokens", value: (s) => s.globalTokens },
-    { label: "Total utilities", value: (s) => s.totalUtility },
-    {
-      label: "Average utilities",
-      value: (s) => s.averageUtility ?? "Undefined",
-    },
-    {
-      label: "Average honest utility",
-      value: (s) => s.averageHonestUtility ?? "Undefined",
-    },
-    {
-      label: "Average cunning utility",
-      value: (s) => s.averageCunningUtility ?? "Undefined",
-    },
-    {
-      label: "Cunning / honest (%)",
-      value: (s) => s.cunningHonestPercent ?? "Undefined",
-    },
+    { label: "Total utilities", value: (s) => s.totalUtility, format: twoDecimals },
+    { label: "Average utilities", value: (s) => s.averageUtility ?? "Undefined", format: twoDecimalsOrText },
+    { label: "Average honest utility", value: (s) => s.averageHonestUtility ?? "Undefined", format: twoDecimalsOrText },
+    { label: "Average cunning utility", value: (s) => s.averageCunningUtility ?? "Undefined", format: twoDecimalsOrText },
+    { label: "Cunning / honest (%)", value: (s) => s.cunningHonestPercent ?? "Undefined", format: twoDecimalsOrText },
   ],
   views: [
     {
@@ -67,17 +55,8 @@ export const ui = defineUI(model, {
     },
     {
       type: "table",
-      label: "Orders",
-      rows: (s) =>
-        s.orders
-          .filter((o) => !o.removed)
-          .map((o) => ({
-            side: o.buySide ? "Bid" : "Ask",
-            owner: o.owner,
-            price: o.price,
-            remaining: o.remaining,
-            pending: o.pending,
-          })),
+      label: "Order book by price level",
+      rows: orderBookLevels,
     },
   ],
 });
@@ -128,4 +107,34 @@ function averageUtilityGainSeries(s: UIObservation): readonly Series[] {
       ),
     },
   ];
+}
+
+/**
+ * The conventional price ladder: open orders grouped by side and price, asks above bids,
+ * both sorted from high to low price so the spread sits in the middle.
+ */
+function orderBookLevels(s: UIObservation) {
+  const levels = new Map<string, { side: "Ask" | "Bid"; price: number; orders: number; quantity: number }>();
+  for (const order of s.orders) {
+    if (order.removed) continue;
+    const side = order.buySide ? "Bid" : "Ask";
+    // Group by the displayed cent price so float noise never splits one level.
+    const key = `${side}:${order.price.toFixed(2)}`;
+    const level = levels.get(key) ?? { side, price: order.price, orders: 0, quantity: 0 };
+    level.orders += 1;
+    level.quantity += order.remaining;
+    levels.set(key, level);
+  }
+  const sideOrder = { Ask: 0, Bid: 1 };
+  return [...levels.values()]
+    .sort((a, b) => sideOrder[a.side] - sideOrder[b.side] || b.price - a.price)
+    .map((level) => ({ side: level.side, price: level.price.toFixed(2), quantity: level.quantity, orders: level.orders }));
+}
+
+function twoDecimals(value: number) {
+  return value.toFixed(2);
+}
+
+function twoDecimalsOrText(value: number | string) {
+  return typeof value === "number" ? value.toFixed(2) : value;
 }

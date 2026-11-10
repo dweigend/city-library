@@ -11,6 +11,12 @@ export const ui = defineUI(model, {
     { label: "Maximum energy", value: state => state.maximumEnergy },
   ],
   views: [{
+    type: "bar",
+    label: "Energy distribution",
+    xAxis: { label: "Energy" },
+    yAxis: { label: "Agents" },
+    series: state => [{ label: "Agents", points: energyHistogram(state.agents.map(agent => agent.energy)) }],
+  }, {
     type: "table",
     label: "Exchange ledger",
     rows: state => state.agents.map(agent => ({
@@ -21,3 +27,10 @@ export const ui = defineUI(model, {
     })),
   }],
 });
+
+/** Number of agents holding each energy amount, in ascending energy order. */
+function energyHistogram(energies: readonly number[]) {
+  const counts = new Map<number, number>();
+  for (const energy of energies) counts.set(energy, (counts.get(energy) ?? 0) + 1);
+  return [...counts].sort(([a], [b]) => a - b).map(([energy, agents]) => ({ x: energy, y: agents }));
+}

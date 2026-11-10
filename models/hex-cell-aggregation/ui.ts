@@ -47,7 +47,7 @@ export const ui = defineUI(model, {
   views: [
     {
       type: "spatial",
-      label: "Hex cells",
+      label: "Hex cells · view grows with the aggregate",
       data: hexCellsData,
     },
     {
@@ -60,21 +60,40 @@ export const ui = defineUI(model, {
 
 type UIObservation = Observation<typeof model>;
 
+/**
+ * Hexagons in offset columns: every second column sits half a cell lower, so each
+ * live cell is one filled tile that touches its six neighbours.
+ */
 function hexCellsData(state: UIObservation): SpatialData {
+  const alive = state.cells.filter((cell) => cell.alive);
+  const reach = Math.max(0, ...alive.map((cell) => Math.max(Math.abs(cell.x), Math.abs(cell.displayY))));
+  const frame = framedExtent(reach, state.width);
   return {
-    width: state.width,
-    height: state.height + 1,
-    agents: state.cells
-      .filter((cell) => cell.alive)
-      .map((cell) => ({
-        id: cell.id,
-        x: cell.x,
-        y: cell.displayY,
-        color: cell.liveNeighborCount === 6 ? "#d73027" : "#f28e2b",
-        size: 4,
-      })),
+    width: frame,
+    height: frame + 1,
+    cells: alive.map((cell) => ({
+      id: cell.id,
+      x: cell.x,
+      y: cell.displayY,
+      color: cell.liveNeighborCount === 6 ? "#d73027" : "#f28e2b",
+    })),
+    agents: [],
+    description: `${alive.length} live hexagonal cells; red cells have six live neighbours.`,
   };
 }
+
+/**
+ * An odd cell count around the centre cell that holds the aggregate with a margin,
+ * at least a third of the world and at most all of it.
+ */
+function framedExtent(reach: number, worldWidth: number) {
+  const wanted = Math.max(Math.ceil(worldWidth / 3), 2 * (reach + frameMargin) + 1);
+  const odd = wanted % 2 === 0 ? wanted + 1 : wanted;
+  return Math.min(worldWidth, odd);
+}
+
+// Cells of empty space kept around the aggregate.
+const frameMargin = 4;
 
 function cellInspector(
   state: UIObservation,

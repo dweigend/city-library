@@ -78,16 +78,7 @@ const binding = defineUI(model, {
     {
       type: "line",
       label: "Virus relative abundance",
-      series: (state) =>
-        (state.history.at(-1)?.relativeAbundance ?? []).map(({ sequence }) => ({
-          label: `Virus ${sequence}`,
-          points: state.history.map((p) => ({
-            x: p.tick,
-            y:
-              p.relativeAbundance.find((x) => x.sequence === sequence)
-                ?.percentage ?? 0,
-          })),
-        })),
+      series: virusAbundanceSeries,
     },
     {
       type: "line",
@@ -103,6 +94,38 @@ export const sourceMarker =
 export const ui = { ...binding, model, sourceMarker };
 
 type UIObservation = Observation<typeof model>;
+
+/** Distinct lines stay readable for a handful of types; one gray line tracks the largest remaining type. */
+const highlightedVirusTypes = 7;
+
+function virusAbundanceSeries(state: UIObservation): readonly Series[] {
+  const peaks = new Map<number, number>();
+  for (const sample of state.history)
+    for (const { sequence, percentage } of sample.relativeAbundance)
+      peaks.set(sequence, Math.max(peaks.get(sequence) ?? 0, percentage));
+  const highlighted = [...peaks]
+    .sort(([sequenceA, peakA], [sequenceB, peakB]) => peakB - peakA || sequenceA - sequenceB)
+    .slice(0, highlightedVirusTypes)
+    .map(([sequence]) => sequence);
+  const percentage = (sample: UIObservation["history"][number], sequence: number) =>
+    sample.relativeAbundance.find((entry) => entry.sequence === sequence)?.percentage ?? 0;
+  const lines: Series[] = highlighted.map((sequence) => ({
+    label: `Virus ${sequence}`,
+    points: state.history.map((sample) => ({ x: sample.tick, y: percentage(sample, sequence) })),
+  }));
+  if (peaks.size > highlighted.length)
+    lines.push({
+      label: "Largest other type",
+      color: "#8a8a8a",
+      points: state.history.map((sample) => ({
+        x: sample.tick,
+        y: Math.max(0, ...sample.relativeAbundance
+          .filter((entry) => !highlighted.includes(entry.sequence))
+          .map((entry) => entry.percentage)),
+      })),
+    });
+  return lines;
+}
 
 function cRISPRVirusCoevolutionSeries(state: UIObservation): readonly Series[] {
   return [

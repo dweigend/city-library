@@ -15,7 +15,8 @@ export const ui = defineUI(model, {
     url: "https://ccl.northwestern.edu/netlogo/models/RandomCombinationsandPermutations",
     label: "Wilensky (2004) · CC BY-NC-SA 3.0",
   },
-  complete: (s) => s.done,
+  // Searching needs a finished combination, as in the source's Create Combi → Go order.
+  complete: (s) => s.done || !s.exists || s.creating,
   change: (instance, changes) => instance.setRules(changes),
   live: {
     singleSuccess: {},
@@ -41,8 +42,8 @@ export const ui = defineUI(model, {
       enabled: (s) => s.exists,
     },
   ],
+  // While Create Combi is active, clicking a square cycles its value.
   drawing: {
-    toggleLabel: "Edit combination",
     enabled: (s) => s.creating,
     intent: (m, intent) => {
       if (intent.phase === "begin")
@@ -50,6 +51,7 @@ export const ui = defineUI(model, {
     },
   },
   monitors: [
+    { label: "Instructions", value: (s) => s.instructions },
     { label: "Search attempts", value: (s) => s.attempts },
     { label: "Steps in sample", value: (s) => s.countSteps },
     { label: "Samples", value: (s) => s.samplesCounter },
@@ -73,7 +75,6 @@ export const ui = defineUI(model, {
       format: (value: number | string) =>
         typeof value === "number" ? value.toFixed(2) : value,
     },
-    { label: "Instructions", value: (s) => s.instructions },
   ],
   views: [
     {

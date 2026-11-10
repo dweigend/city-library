@@ -49,8 +49,9 @@ function aggregateAndWalkersData(s: UIObservation): SpatialData {
     })),
     agents: s.agents.map((a) => ({
       ...a,
-      color: "#e4413b",
-      size: 3,
+      // Slightly larger than one 3-pixel source patch so walkers stay visible on black.
+      color: "#ff6b5e",
+      size: 4,
       shape: "circle" as const,
     })),
   };

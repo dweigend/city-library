@@ -35,7 +35,7 @@ export const ui = defineUI(model, {
       nodes: (s) =>
         s.pages.map((p) => ({
           id: String(p.id),
-          label: `${p.id}${s.parameters.showPageRanks ? `: ${p.rank.toFixed(3)}` : ""}${s.parameters.watchSurfers && p.surferCount ? ` [${p.surferCount} surfers]` : ""}`,
+          label: `${p.id}${s.parameters.showPageRanks ? `: ${p.rank.toFixed(3)}` : ""}${s.parameters.watchSurfers && p.surferCount ? ` [${p.surferCount} ${p.surferCount === 1 ? "surfer" : "surfers"}]` : ""}`,
           color: p.color,
           size: Math.max(8, p.size * 10),
           position: { x: p.x * 20, y: -p.y * 20 },

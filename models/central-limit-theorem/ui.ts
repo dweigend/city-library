@@ -7,6 +7,8 @@ export const ui = defineUI(model, {
     url: "https://ccl.northwestern.edu/netlogo/models/CentralLimitTheorem",
     label: "Wilensky (2005) · CC BY-NC-SA 3.0",
   },
+  // Sampling needs a population of at least one sample; create one first, as in the source.
+  complete: (s) => s.population < s.parameters.sampleSize,
   change: (instance, changes) => instance.setRules(changes),
   live: {
     sampleSize: {},
@@ -32,6 +34,13 @@ export const ui = defineUI(model, {
     },
   },
   monitors: [
+    {
+      label: "State",
+      value: (s) =>
+        s.population < s.parameters.sampleSize
+          ? "Create people first: random, a preset, or draw your own"
+          : s.message || "Ready",
+    },
     { label: "Tick", value: (s) => s.tick },
     { label: "Population", value: (s) => s.population },
     { label: "Samples", value: (s) => s.sampleCount },
@@ -53,7 +62,6 @@ export const ui = defineUI(model, {
       format: (value: number | string) =>
         typeof value === "number" ? value.toFixed(3) : value,
     },
-    { label: "State", value: (s) => s.message || "Ready" },
   ],
   views: [
     {

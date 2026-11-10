@@ -18,7 +18,7 @@ export const ui = defineUI(model, {
   },
   monitors: [
     { label: "Months", value: (s) => s.tick },
-    { label: "Years", value: (s) => s.years },
+    { label: "Years", value: (s) => s.years, format: (value: number) => value.toFixed(2) },
     { label: "Mammoths", value: (s) => s.mammoths.length },
     { label: "Humans", value: (s) => s.humans.length },
     { label: "Hunting deaths", value: (s) => s.mammothsKilledByHumans },
