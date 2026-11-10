@@ -39,8 +39,8 @@ export function create(options: Partial<VirusParameters> = {}) {
   let settings = parameters(inputs, options);
   if (settings.averageNodeDegree > settings.numberOfNodes - 1 || settings.initialOutbreakSize > settings.numberOfNodes)
     throw new RangeError("Degree and outbreak must fit the setup population.");
-  const random = Random.add({ seed: settings.seed });
-  const world = World.add({ x: 41, y: 41 }, { random });
+  const random = Random.create({ seed: settings.seed });
+  const world = World.create({ x: 41, y: 41 }, { random });
   const graph = Graph.add<VirusNode>();
   const nodes: VirusNode[] = [];
   const history: Readonly<VirusSample>[] = [];
@@ -50,7 +50,7 @@ export function create(options: Partial<VirusParameters> = {}) {
     for (let index = 0; index < settings.numberOfNodes; index++) {
       const x = (random.number() * 41 - 20.5) * 0.95;
       const y = (random.number() * 41 - 20.5) * 0.95;
-      const node = world.add(Agent.add({ index, status: "susceptible" as InfectionStatus, checkTimer: integer(settings.checkFrequency) }, { position: { x, y } }));
+      const node = world.add(Agent.create({ index, status: "susceptible" as InfectionStatus, checkTimer: integer(settings.checkFrequency) }, { position: { x, y } }));
       graph.nodes.add(node);
       nodes.push(node);
     }

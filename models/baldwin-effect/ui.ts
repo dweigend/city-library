@@ -4,8 +4,8 @@ import { model } from "./model.ts";
 export const ui = defineUI(model, {
   setup: ["seed"],
   live: {
-    numPop: {
-      set: (m, value) => m.setParameters({ numPop: value }),
+    populationSize: {
+      set: (m, value) => m.setParameters({ populationSize: value }),
     },
     geneLength: {
       set: (m, value) => m.setParameters({ geneLength: value }),
@@ -13,8 +13,8 @@ export const ui = defineUI(model, {
     plasticity: {
       set: (m, value) => m.setParameters({ plasticity: value }),
     },
-    numTrials: {
-      set: (m, value) => m.setParameters({ numTrials: value }),
+    trialCount: {
+      set: (m, value) => m.setParameters({ trialCount: value }),
     },
     mutationRate: {
       set: (m, value) => m.setParameters({ mutationRate: value }),

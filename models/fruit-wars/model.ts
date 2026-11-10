@@ -98,10 +98,10 @@ type Bush = Agent<{ kind: "bush"; amount: number; color: number }>;
 type Death = Agent<{ kind: "death"; age: number }>;
 export function create(options: Partial<Parameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed }),
+  const random = Random.create({ seed: settings.seed }),
     space = { x: 65, y: 65, boundary: "wrap" as const },
-    world = World.add(space, { random }),
-    grid = Grid.add(space);
+    world = World.create(space, { random }),
+    grid = Grid.create(space);
   world.add(grid);
   const foragers = () =>
       world.agents.filter(
@@ -123,7 +123,7 @@ export function create(options: Partial<Parameters> = {}) {
     starvationCount = 0,
     ageDeathCount = 0,
     totalForaged = 0,
-    numForages = 0,
+    forageCount = 0,
     totalPopulation = 0,
     averagePopulation = 0,
     avgForage = 0;
@@ -139,10 +139,10 @@ export function create(options: Partial<Parameters> = {}) {
         !grid.agentsAt(f, { source: bushes() }).length,
     );
     if (count > sites.length)
-      throw new Error("Source grow-fruit-bushes: not enough eligible patches.");
+      throw new Error("Source grow-fruit-bushes: not enough eligible fields.");
     for (const f of random.sample(sites, { count }))
       world.add(
-        Agent.add(
+        Agent.create(
           {
             kind: "bush" as const,
             amount: 500 + integer(501),
@@ -157,7 +157,7 @@ export function create(options: Partial<Parameters> = {}) {
     position: { x: number; y: number },
     heading: number,
   ) {
-    const f = Agent.add(
+    const f = Agent.create(
       {
         kind: "forager" as const,
         genome: [...genome],
@@ -175,7 +175,7 @@ export function create(options: Partial<Parameters> = {}) {
   }
   function markDeath(a: Forager) {
     world.add(
-      Agent.add(
+      Agent.create(
         { kind: "death" as const, age: 0 },
         { position: { x: a.x, y: a.y } },
       ),
@@ -244,7 +244,7 @@ export function create(options: Partial<Parameters> = {}) {
     b.amount -= 10;
     if (b.amount < 0) b.delete();
     a.energy += rate;
-    numForages++;
+    forageCount++;
     totalForaged += rate;
   }
   function moveForager(a: Forager) {
@@ -352,7 +352,7 @@ export function create(options: Partial<Parameters> = {}) {
     }
     if (integer(100) < settings.bushGrowthChance) growFruitBushes(1);
     for (const f of shuffle(foragers())) moveForager(f);
-    avgForage = numForages ? totalForaged / numForages : 0;
+    avgForage = forageCount ? totalForaged / forageCount : 0;
     totalPopulation += foragers().length;
     averagePopulation =
       world.tick.value === 0 ? 0 : totalPopulation / world.tick.value;
@@ -393,7 +393,7 @@ export function create(options: Partial<Parameters> = {}) {
         ageDeathCount,
         deathCount: 0,
         totalForaged,
-        numForages,
+        forageCount,
         totalPopulation,
         averagePopulation,
         avgForage,

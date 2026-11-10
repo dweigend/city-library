@@ -25,9 +25,9 @@ interface StructureSample {
 export function create(options: Partial<StructureParameters> = {}) {
   let settings = parameters(inputs, options);
   const width = 130, height = 130;
-  const random = Random.add({ seed: settings.seed });
-  const world = World.add({ x: width, y: height, boundary: "wrap" }, { random });
-  const grid = Grid.add({ x: width, y: height, boundary: "wrap" }, { state: { potential: 0, newPotential: 0, activated: false } });
+  const random = Random.create({ seed: settings.seed });
+  const world = World.create({ x: width, y: height, boundary: "wrap" }, { random });
+  const grid = Grid.create({ x: width, y: height, boundary: "wrap" }, { state: { potential: 0, newPotential: 0, activated: false } });
   world.add(grid);
   const fields = grid.fields;
   const faces = fields.map(field => grid.neighbors(field, { neighborhood: "faces" }));
@@ -72,7 +72,7 @@ export function create(options: Partial<StructureParameters> = {}) {
     return copied;
   }
 
-  // Source setup leaves every patch black, independent of the initial threshold.
+  // Source setup leaves every field black, independent of the initial threshold.
   for (const field of fields) field.potential = random.sample([1, -1])[0]!;
   recordCompletedState();
   return {

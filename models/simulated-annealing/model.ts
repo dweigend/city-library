@@ -44,9 +44,9 @@ export function create(options: Partial<AnnealingParameters> = {}) {
     throw new RangeError(
       "An even number of fields is required for exact half initialization.",
     );
-  const random = Random.add({ seed: settings.seed }),
-    world = World.add({ random });
-  const grid = Grid.add(
+  const random = Random.create({ seed: settings.seed }),
+    world = World.create({ random });
+  const grid = Grid.create(
     { x: width, y: height, boundary: "wrap" },
     { state: { brightness: 0 } },
   );

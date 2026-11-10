@@ -14,9 +14,9 @@ export const inputs: Inputs<RecyclingParameters> = {
 };
 export function create(options: Partial<RecyclingParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
-  const world = World.add({ random });
-  const households = Array.from({ length: settings.households }, (_, index) => world.add(Agent.add({
+  const random = Random.create({ seed: settings.seed });
+  const world = World.create({ random });
+  const households = Array.from({ length: settings.households }, (_, index) => world.add(Agent.create({
     label: `Household ${index + 1}`, recycling: index === 0,
   })));
   const graph = Graph.add<(typeof households)[number]>();

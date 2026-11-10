@@ -74,8 +74,8 @@ export function strategyAction(
 }
 export function create(options: Partial<IteratedParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed }),
-    world = World.add({ random });
+  const random = Random.create({ seed: settings.seed }),
+    world = World.create({ random });
   const human = Agent.add<Player>({
     score: 3,
     defectNow: false,

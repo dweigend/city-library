@@ -33,7 +33,7 @@ export const inputs: Inputs<RepressilatorParameters> = {
   signalDecayProb: { kind: "number", default: 0.2, min: 0, max: 1 },
 };
 type Molecule = Agent<{
-  breed: "tf" | "mrna";
+  group: "tf" | "mrna";
   geneId: number;
   inhibitsGeneId: number;
   age: number;
@@ -42,10 +42,10 @@ type Molecule = Agent<{
 }>;
 export function create(options: Partial<RepressilatorParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const space = { x: 3, y: 1, boundary: "wrap" } as const;
-  const world = World.add(space, { random });
-  const grid = Grid.add(space, {
+  const world = World.create(space, { random });
+  const grid = Grid.create(space, {
     state: { geneId: 0, inhibitedByGeneId: 0, inhibited: false },
   });
   world.add(grid);
@@ -54,7 +54,7 @@ export function create(options: Partial<RepressilatorParameters> = {}) {
     field.inhibitedByGeneId = getTFDNAIsInhibitedBy(field.geneId);
   }
   const signal = world.add(
-    Agent.add(
+    Agent.create(
       { bound: false, on: true, wasOn: true, intervalStart: 0 },
       { position: { x: 1.425, y: -0.39 } },
     ),
@@ -77,8 +77,8 @@ export function create(options: Partial<RepressilatorParameters> = {}) {
     (world.agents as readonly Molecule[]).filter(
       (agent) => agent.id !== signal.id,
     );
-  const tfs = () => molecules().filter((agent) => agent.breed === "tf");
-  const mrnas = () => molecules().filter((agent) => agent.breed === "mrna");
+  const tfs = () => molecules().filter((agent) => agent.group === "tf");
+  const mrnas = () => molecules().filter((agent) => agent.group === "mrna");
   const shuffled = <T>(values: readonly T[]) =>
     random.sample(values, {
       count: values.length,
@@ -120,9 +120,9 @@ export function create(options: Partial<RepressilatorParameters> = {}) {
   }
   function initializeTF(geneId: number, x: number, y: number) {
     const tf = world.add(
-      Agent.add(
+      Agent.create(
         {
-          breed: "tf" as const,
+          group: "tf" as const,
           geneId,
           inhibitsGeneId: getDNATFInhibits(geneId),
           age: 0,
@@ -137,9 +137,9 @@ export function create(options: Partial<RepressilatorParameters> = {}) {
   }
   function initializeMRNA(geneId: number) {
     const molecule = world.add(
-      Agent.add(
+      Agent.create(
         {
-          breed: "mrna" as const,
+          group: "mrna" as const,
           geneId,
           inhibitsGeneId: 0,
           age: 0,
@@ -399,7 +399,7 @@ export function create(options: Partial<RepressilatorParameters> = {}) {
       agents: [
         ...molecules().map((molecule) => ({
           id: molecule.id,
-          breed: molecule.breed as string,
+          group: molecule.group as string,
           geneId: molecule.geneId,
           x: molecule.x,
           y: molecule.y,
@@ -412,7 +412,7 @@ export function create(options: Partial<RepressilatorParameters> = {}) {
         })),
         {
           id: signal.id,
-          breed: "signal",
+          group: "signal",
           geneId: 2,
           x: signal.x,
           y: signal.y,

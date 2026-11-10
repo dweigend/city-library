@@ -69,14 +69,14 @@ export const inputs: Inputs<InvasivePlantsParameters> = {
 type Seed = Agent<{ kind: "seed"; hidden: boolean }>;
 export function create(options: Partial<InvasivePlantsParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const width = 33,
     height = 33;
-  const world = World.add(
+  const world = World.create(
     { x: width, y: height, boundary: "hard" },
     { random },
   );
-  const grid = Grid.add(
+  const grid = Grid.create(
     { x: width, y: height, boundary: "hard" },
     { state: { infestation: 0, resistance: 0, hasResistanceBlock: true } },
   );
@@ -152,7 +152,7 @@ export function create(options: Partial<InvasivePlantsParameters> = {}) {
         );
         for (let i = 0; i < n; i++)
           world.add(
-            Agent.add(
+            Agent.create(
               { kind: "seed" as const, hidden: false },
               {
                 position: { x: field.x, y: field.y },

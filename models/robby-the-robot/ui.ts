@@ -1,4 +1,4 @@
-import { defineUI, netLogoColor, type Observation, type SpatialData } from "../../ui/index.ts";
+import { defineUI, indexedColor, type Observation, type SpatialData } from "../../ui/index.ts";
 
 import { model, actionSymbol } from "./model.ts";
 export const ui = defineUI(model, {
@@ -65,7 +65,7 @@ export const ui = defineUI(model, {
       series: (s) => [
         {
           label: "Strategies",
-          color: netLogoColor(15),
+          color: indexedColor(15),
           points: s.population.map((p) => ({
             x: p.fitness,
             y: p.displayDistance,

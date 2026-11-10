@@ -33,9 +33,9 @@ export const inputs: Inputs<Parameters> = {
 };
 export function create(options: Partial<Parameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
-  const world = World.add({ x: 21, y: 21, boundary: "wrap" }, { random });
-  const grid = Grid.add(
+  const random = Random.create({ seed: settings.seed });
+  const world = World.create({ x: 21, y: 21, boundary: "wrap" }, { random });
+  const grid = Grid.create(
     { x: 21, y: 21, boundary: "wrap" },
     { state: { displayId: "", inBlock: false, target: false, drawn: false } },
   );
@@ -44,7 +44,7 @@ export function create(options: Partial<Parameters> = {}) {
   const fields = grid.fields;
   const half = (settings.blockSide - 1) / 2;
   fields.forEach((field, i) => {
-    field.displayId = `patch-${i}`;
+    field.displayId = `field-${i}`;
     field.inBlock = Math.abs(field.x) <= half && Math.abs(field.y) <= half;
   });
   const block = fields.filter((field) => field.inBlock);

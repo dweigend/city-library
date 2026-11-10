@@ -1,4 +1,4 @@
-import { defineUI, netLogoColor, type Observation, type SpatialData } from "../../ui/index.ts";
+import { defineUI, indexedColor, type Observation, type SpatialData } from "../../ui/index.ts";
 import { model } from "./model.ts";
 
 export const ui = defineUI(model, {
@@ -40,7 +40,7 @@ export function heatColor(heatIndex: number): string {
 const hatchOffset = 0.16;
 const hatchExtent = 0.2;
 const hatchWidth = 1.6;
-const shadeColor = netLogoColor(65);
+const shadeColor = indexedColor(65);
 const maximumHeatIndex = 30;
-const coolColor = netLogoColor(105);
-const hotColor = netLogoColor(15);
+const coolColor = indexedColor(105);
+const hotColor = indexedColor(15);

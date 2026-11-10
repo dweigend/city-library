@@ -1,5 +1,5 @@
 /** Original synthetic zoning-cap comparison. No planning-compliance or housing-demand claim. */
-import { Random, World, run, experiments, measurements } from "city-library";
+import { Random, World, run, studies, measurements } from "city-library";
 import type { StudyOutcome } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
 import { parameters, stepCount } from "../parameters.ts";
@@ -23,19 +23,19 @@ export const capacityMeasurement = measurements.define((state: { slots: number; 
 
 export function create(options: Partial<ZoningParameters> = {}) {
   const settings = parameters(inputs, options);
-  const world = World.add();
-  const scenarios = experiments.design({
+  const world = World.create();
+  const scenarios = studies.design({
     defaults: { cap: settings.baseCap, parcels: settings.parcels },
     axes: [{ name: "cap", values: [settings.baseCap, settings.baseCap + 2] }],
   });
-  const plan = experiments.replicate(scenarios, [settings.seed, settings.seed + 1, settings.seed + 2]);
+  const plan = studies.replicate(scenarios, [settings.seed, settings.seed + 1, settings.seed + 2]);
   const completed: StudyOutcome<{ cap: number; parcels: number }, { slots: number; evaluated: number }>[] = [];
 
   function createReplication(parameters: { cap: number; parcels: number }, seed: number) {
-    const random = Random.add({ seed });
+    const random = Random.create({ seed });
     const state = { slots: 0, evaluated: 0 };
     return {
-      world: World.add({ random }),
+      world: World.create({ random }),
       state,
       step() {
         state.slots += random.number() < 0.8 ? parameters.cap : 0;
@@ -48,7 +48,7 @@ export function create(options: Partial<ZoningParameters> = {}) {
   function step() {
     const planned = plan[completed.length];
     if (!planned) return;
-    const result = experiments.run({
+    const result = studies.run({
       plan: [planned],
       steps: settings.parcels,
       create: createReplication,
@@ -79,7 +79,7 @@ export function create(options: Partial<ZoningParameters> = {}) {
         reason: outcome.reason,
       }));
       // Summaries aggregate independent terminal outcomes, never pool time samples.
-      const summaries = experiments.summarize(
+      const summaries = studies.summarize(
         { version: 1, provenance: {}, outcomes: completed },
         entry => entry.samples.at(-1)?.measurement.slots,
       ).map(summary => Object.freeze({

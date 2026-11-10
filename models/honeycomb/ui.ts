@@ -2,7 +2,7 @@ import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 
 const binding = defineUI(model, {
-  setup: ["seed", "numBees"],
+  setup: ["seed", "beeCount"],
   live: {},
   actions: [
     { label: "Hide bees", run: (instance) => instance.hideBees() },

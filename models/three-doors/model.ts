@@ -20,8 +20,8 @@ export const inputs: Inputs<Parameters> = {
 };
 export function create(options: Partial<Parameters> = {}) {
   const settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
-  const world = World.add(
+  const random = Random.create({ seed: settings.seed });
+  const world = World.create(
     { x: 71, y: 71, boundary: { x: "wrap", y: "hard" } },
     { random },
   );
@@ -41,7 +41,7 @@ export function create(options: Partial<Parameters> = {}) {
       ? 100 * random.number()
       : 100 * Math.floor(2 * random.number());
     world.add(
-      Agent.add(
+      Agent.create(
         {
           displayId: `racer-${i}`,
           hunch,

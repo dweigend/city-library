@@ -12,8 +12,8 @@ export const inputs: Inputs<CrossingParameters> = {
 };
 export function create(options: Partial<CrossingParameters> = {}) {
   const settings = parameters(inputs, options);
-  const world = World.add();
-  const walkers = Array.from({ length: settings.pedestrians }, (_, index) => world.add(Agent.add({
+  const world = World.create();
+  const walkers = Array.from({ length: settings.pedestrians }, (_, index) => world.add(Agent.create({
     label: `Walker ${index + 1}`, stage: "waiting" as "waiting" | "crossing" | "arrived",
   })));
   const measure = measurements.define((people: typeof walkers) => ({

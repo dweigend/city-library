@@ -1,6 +1,6 @@
 import {
   defineUI,
-  netLogoColor,
+  indexedColor,
   type Observation,
   type SpatialData,
   type Series,
@@ -106,7 +106,7 @@ function foragersAndFruitBushesData(s: UIObservation): SpatialData {
     agents: [
       ...s.bushes.map((b) => ({
         ...b,
-        color: netLogoColor(b.color),
+        color: indexedColor(b.color),
         size: 13,
       })),
       ...s.deaths.map((d) => ({

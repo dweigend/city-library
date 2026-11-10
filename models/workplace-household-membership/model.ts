@@ -13,9 +13,9 @@ export const inputs: Inputs<MembershipParameters> = {
 
 export function create(options: Partial<MembershipParameters> = {}) {
   const settings = parameters(inputs, options);
-  const world = World.add();
+  const world = World.create();
   const residents = Array.from({ length: settings.residents }, (_, index) =>
-    world.add(Agent.add({ label: `Resident ${index + 1}` })),
+    world.add(Agent.create({ label: `Resident ${index + 1}` })),
   );
   const householdA = { id: "household-a", label: "Household A", kind: "household" };
   const householdB = { id: "household-b", label: "Household B", kind: "household" };

@@ -35,10 +35,10 @@ type Person = Agent<{
 }>;
 export function create(options: Partial<EpidemParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const space = { x: 25, y: 25, boundary: "wrap" } as const;
-  const world = World.add(space, { random });
-  const grid = Grid.add(space);
+  const world = World.create(space, { random });
+  const grid = Grid.create(space);
   world.add(grid);
   let stopped = false;
   let betaN = 0;
@@ -74,7 +74,7 @@ export function create(options: Partial<EpidemParameters> = {}) {
       );
       const infected = random.number() * 100 < 5;
       world.add(
-        Agent.add(
+        Agent.create(
           {
             who,
             infected,
@@ -186,7 +186,7 @@ export function create(options: Partial<EpidemParameters> = {}) {
       infect(person);
       maybeRecover(person);
     }
-    // Source invokes calculate-r0 once for every turtle, with unchanged aggregate data.
+    // Source invokes calculate-r0 once for every agent, with unchanged aggregate data.
     for (const _person of shuffled(people())) calculateR0();
   }
   function advance(count = 1) {
@@ -235,7 +235,7 @@ export function create(options: Partial<EpidemParameters> = {}) {
       agents: people().map((p) => ({
         id: p.id,
         who: p.who,
-        breed: "person",
+        group: "person",
         x: p.x,
         y: p.y,
         heading: p.heading,

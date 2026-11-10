@@ -23,7 +23,7 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer |
-| `numMoths` | `100` | integer; ≥ 0; ≤ 200 |
+| `mothCount` | `100` | integer; ≥ 0; ≤ 200 |
 | `speed` | `41` | number; ≥ 1; ≤ 100 |
 | `mutation` | `15` | number; ≥ 0; ≤ 100 |
 | `selection` | `50` | number; ≥ 0; ≤ 100 |

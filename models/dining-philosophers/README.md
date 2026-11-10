@@ -23,7 +23,7 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
-| `numPhilosophers` | `20` | integer; ≥ 2; ≤ 40 |
+| `philosopherCount` | `20` | integer; ≥ 2; ≤ 40 |
 | `hungryChance` | `0.5` | number; ≥ 0; ≤ 1 |
 | `fullChance` | `0.5` | number; ≥ 0; ≤ 1 |
 | `cooperation` | `false` | boolean |

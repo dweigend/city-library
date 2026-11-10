@@ -23,9 +23,9 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer |
-| `numClusters` | `7` | integer; ≥ 1; ≤ 14 |
-| `numCentroids` | `7` | integer; ≥ 1; ≤ 14 |
-| `numDataPoints` | `138` | integer; ≥ 2; ≤ 1000 |
+| `clusterCount` | `7` | integer; ≥ 1; ≤ 14 |
+| `centroidCount` | `7` | integer; ≥ 1; ≤ 14 |
+| `dataPointCount` | `138` | integer; ≥ 2; ≤ 1000 |
 
 ## Actions and observations
 

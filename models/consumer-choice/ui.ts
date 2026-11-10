@@ -4,7 +4,7 @@ import { model } from "./model.ts";
 const binding = defineUI(model, {
   setup: [
     "seed",
-    { field: "numConsumers", label: "Consumers" },
+    { field: "consumerCount", label: "Consumers" },
     { field: "avgConnections", label: "Average connections" },
     { field: "initialOrangePercent", label: "Initial orange (%)" },
   ],

@@ -25,7 +25,7 @@ const observation = simulation.read();
 | `width` | `241` | integer; ≥ 3; ≤ 301 |
 | `height` | `241` | integer; ≥ 3; ≤ 301 |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
-| `numVants` | `1` | integer; ≥ 1; ≤ 16 |
+| `vantCount` | `1` | integer; ≥ 1; ≤ 16 |
 
 ## Actions and observations
 

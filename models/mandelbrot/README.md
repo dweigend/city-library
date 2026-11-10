@@ -25,7 +25,7 @@ Setup creates workers and the initial complex plane, not a finished image. Each 
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer |
-| `numAgents` | `1500` | integer; ≥ 0; ≤ 1500 |
+| `agentCount` | `1500` | integer; ≥ 0; ≤ 1500 |
 | `throw` | `10` | integer; ≥ 0; ≤ 99 |
 | `scaleFactor` | `100` | integer; ≥ 1; ≤ 500 |
 

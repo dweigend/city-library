@@ -1,6 +1,6 @@
 import {
   defineUI,
-  netLogoColor,
+  indexedColor,
   type Observation,
   type SpatialData,
   type Series,
@@ -77,7 +77,7 @@ function seekersHousesAndAttractionData(state: UIObservation): SpatialData {
       id: cell.id,
       x: cell.x,
       y: cell.y,
-      color: netLogoColor(cell.colorNumber),
+      color: indexedColor(cell.colorNumber),
     })),
     agents: state.agents.map((agent) => ({
       ...agent,

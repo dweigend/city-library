@@ -25,7 +25,7 @@ const observation = simulation.read();
 | `seed` | `1` | integer |
 | `gridSizeX` | `5` | integer; ≥ 1; ≤ 9 |
 | `gridSizeY` | `5` | integer; ≥ 1; ≤ 9 |
-| `numCars` | `200` | integer; ≥ 1; ≤ 400 |
+| `carCount` | `200` | integer; ≥ 1; ≤ 400 |
 | `speedLimit` | `1` | number; ≥ 0.1; ≤ 1 |
 | `ticksPerCycle` | `20` | integer; ≥ 1; ≤ 100 |
 | `currentPhase` | `0` | integer; ≥ 0; ≤ 99 |
@@ -38,7 +38,7 @@ Use `advance(...)` for progress and `read()` for observations; the model defines
 
 Other instance procedures: `step`, `snapshot`, `setParameters`, `selectIntersection`, `changeLight`, `watchCar`, `stopWatching`, `cars`, `setSignalColors`, `recordData`, `setCarColor`, `setCarSpeed`, `nextField`, `updateCurrent`, `setSignals`, `nextPhase`, `go`. See their typed arguments in [model.ts](model.ts).
 
-Model-specific `read()` fields include `phase`, `numCarsStopped`, `currentIntersectionId`, `watchedCarId`, `cars`, `intersections`, `cells`.
+Model-specific `read()` fields include `phase`, `stoppedCarCount`, `currentIntersectionId`, `watchedCarId`, `cars`, `intersections`, `cells`.
 
 The [UI binding](ui.ts) presents `Change light`, `Watch a car`, `Stop watching`, `Tick`, `Phase`, `Stopped cars`, `Traffic grid`, `Average speed of cars`, `Average wait time of cars`, `Car`.
 

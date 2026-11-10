@@ -40,9 +40,9 @@ export function create(options: Partial<RebellionParameters> = {}) {
   let settings = parameters(inputs, options);
   if (settings.initialCopDensity + settings.initialAgentDensity > 100)
     throw new RangeError('Initial densities must sum to at most100%.');
-  const random = Random.add({ seed: settings.seed }),
-    world = World.add({ x: 40, y: 40, boundary: 'wrap' }, { random }),
-    grid = Grid.add({ x: 40, y: 40, boundary: 'wrap' });
+  const random = Random.create({ seed: settings.seed }),
+    world = World.create({ x: 40, y: 40, boundary: 'wrap' }, { random }),
+    grid = Grid.create({ x: 40, y: 40, boundary: 'wrap' });
   world.add(grid);
   const agents = () => world.agents as readonly Citizen[];
   // The torus is translation-invariant. Measure one canonical neighborhood, then
@@ -64,13 +64,13 @@ export function create(options: Partial<RebellionParameters> = {}) {
     citizen: Math.round(settings.initialAgentDensity * 0.01 * 1600),
   };
   if (counts.cop + counts.citizen > 1600)
-    throw new RangeError('Rounded initial counts exceed available patches.');
+    throw new RangeError('Rounded initial counts exceed available fields.');
   let who = 0;
   for (const kind of ['cop', 'citizen'] as const)
     for (let i = 0; i < counts[kind]; i++) {
       const f = random.sample(grid.fields.filter((f) => !grid.agentsAt(f).length))[0]!;
       world.add(
-        Agent.add(
+        Agent.create(
           {
             who: who++,
             kind,

@@ -36,7 +36,7 @@ Other instance procedures: `setup`, `createPopulation`, `preset`, `drawYourOwnPe
 
 Additional instance accessors: `world`, `grid`. See [model.ts](model.ts) for the returned live references.
 
-Model-specific `read()` fields include `ranger`, `background`, `message`, `population`, `cells`, `people`, `means`, `sums`, `meanHistogram`, `sumHistogram`, `numSamples`, `expectedValue`, `stdDevMeans`, `stdDevSums`.
+Model-specific `read()` fields include `ranger`, `background`, `message`, `population`, `cells`, `people`, `means`, `sums`, `meanHistogram`, `sumHistogram`, `sampleCount`, `expectedValue`, `stdDevMeans`, `stdDevSums`.
 
 The [UI binding](ui.ts) presents `Show expected value`, `Create random people`, `Preset ${n}`, `Tick`, `Population`, `Samples`, `Expected value`, `Std dev means`, `Std dev sums`, `State` and further views or controls.
 

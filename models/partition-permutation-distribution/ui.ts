@@ -11,9 +11,9 @@ export const ui = defineUI(model, {
     targetTotal: {
       set: (m, v) => m.setRules({ targetTotal: v }),
     },
-    numSuccesses: {
+    successCount: {
       label: "Number of successes",
-      set: (m, v) => m.setRules({ numSuccesses: v }),
+      set: (m, v) => m.setRules({ successCount: v }),
     },
     diminishingSampleSpace: {
       set: (m, v) => m.setRules({ diminishingSampleSpace: v }),

@@ -43,10 +43,10 @@ type ModelAgent = Agent<{
 }>;
 export function create(options: Partial<Parameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({
+  const random = Random.create({
     seed: settings.seed,
   });
-  const world = World.add(
+  const world = World.create(
     {
       x: 101,
       y: 101,
@@ -84,7 +84,7 @@ export function create(options: Partial<Parameters> = {}) {
     for (const a of [...population()]) a.delete();
     for (let i = 0; i < settings.carryingCapacity; i++)
       world.add(
-        Agent.add(
+        Agent.create(
           {
             color:
               i < settings.carryingCapacity / 2
@@ -203,7 +203,7 @@ export function create(options: Partial<Parameters> = {}) {
 export const model = {
   title: "Simple Birth Rates",
   description:
-    "Fertility, demographic sampling and extinction experiments. Wilensky (1997), CC BY-NC-SA 3.0.",
+    "Fertility, demographic sampling and extinction studies. Wilensky (1997), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<Parameters, ReturnType<typeof create>>;

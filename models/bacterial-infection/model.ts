@@ -76,12 +76,12 @@ interface FieldState {
   myBacteria: Bacteria | null;
 }
 export type Bacteria = Agent<{
-  breed: "bacteria";
+  group: "bacteria";
   variation: number;
   age: number;
   target: Field<FieldState> | null;
 }>;
-export type Antibiotic = Agent<{ breed: "antibiotic" }>;
+export type Antibiotic = Agent<{ group: "antibiotic" }>;
 export function giveDose(
   tick: number,
   doseEvery: number,
@@ -100,10 +100,10 @@ export function giveDose(
 }
 export function create(options: Partial<Parameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const space = { x: 49, y: 21, boundary: "wrap" as const };
-  const world = World.add(space, { random });
-  const grid = Grid.add(space, {
+  const world = World.create(space, { random });
+  const grid = Grid.create(space, {
     state: {
       region: null as Region | null,
       portType: "none" as FieldState["portType"],
@@ -113,12 +113,12 @@ export function create(options: Partial<Parameters> = {}) {
   world.add(grid);
   const bacteria = () =>
     world.agents.filter(
-      (a): a is Bacteria => (a as Bacteria | Antibiotic).breed === "bacteria",
+      (a): a is Bacteria => (a as Bacteria | Antibiotic).group === "bacteria",
     );
   const antibiotics = () =>
     world.agents.filter(
       (a): a is Antibiotic =>
-        (a as Bacteria | Antibiotic).breed === "antibiotic",
+        (a as Bacteria | Antibiotic).group === "antibiotic",
     );
   let dosesGivenToA = 0;
   let dosesGivenToB = 0;
@@ -160,10 +160,10 @@ export function create(options: Partial<Parameters> = {}) {
         grid.fields.filter((f) => f.region === region && !f.myBacteria?.alive),
       )[0];
       if (!target)
-        throw new RangeError("No available patch in the source region.");
-      const agent = Agent.add(
+        throw new RangeError("No available field in the source region.");
+      const agent = Agent.create(
         {
-          breed: "bacteria" as const,
+          group: "bacteria" as const,
           variation,
           age: settings.reproduceEvery * 60,
           target: target as Field<FieldState> | null,
@@ -246,7 +246,7 @@ export function create(options: Partial<Parameters> = {}) {
   }
   function moveBacteria(agent: Bacteria) {
     if (!agent.target)
-      throw new TypeError("Bacteria has no source target patch.");
+      throw new TypeError("Bacteria has no source target field.");
     if (agent.distanceTo(agent.target) > 0.2) {
       agent.rotate({ towards: agent.target });
       agent.move(0.015);
@@ -256,9 +256,9 @@ export function create(options: Partial<Parameters> = {}) {
     agent.age++;
   }
   function bacteriaDeath(agent: Bacteria) {
-    // is-patch-set? on the single source patch is false: no explicit reservation clear.
+    // is-field-set? on the single source field is false: no explicit reservation clear.
     agent.delete();
-    // NetLogo dead turtle references compare as nobody; availability uses .alive above.
+    // NetLogo dead agent references compare as nobody; availability uses .alive above.
   }
   function doseRegion(region: Region, dosage?: number) {
     if (region !== "A" && region !== "B")
@@ -272,8 +272,8 @@ export function create(options: Partial<Parameters> = {}) {
     );
     for (let n = 0; n < amount; n++) {
       const field = random.sample(inputs)[0]!;
-      const agent = Agent.add(
-        { breed: "antibiotic" as const },
+      const agent = Agent.create(
+        { group: "antibiotic" as const },
         {
           position: {
             x: field.x - 0.5 + random.number(),

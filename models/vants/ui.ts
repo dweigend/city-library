@@ -2,7 +2,7 @@ import { defineUI, type Observation, type SpatialData } from "../../ui/index.ts"
 
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: ["width", "height", "seed", "numVants"],
+  setup: ["width", "height", "seed", "vantCount"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/Vants",
     label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",

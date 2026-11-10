@@ -4,15 +4,15 @@ import type { Definition, Inputs } from "../definition.ts";
 import { parameters, stepCount } from "../parameters.ts";
 export interface ClusteringParameters {
   seed: number;
-  numClusters: number;
-  numCentroids: number;
-  numDataPoints: number;
+  clusterCount: number;
+  centroidCount: number;
+  dataPointCount: number;
 }
 export const inputs: Inputs<ClusteringParameters> = {
   seed: { kind: "number", default: 1, integer: true },
-  numClusters: { kind: "number", default: 7, min: 1, max: 14, integer: true },
-  numCentroids: { kind: "number", default: 7, min: 1, max: 14, integer: true },
-  numDataPoints: {
+  clusterCount: { kind: "number", default: 7, min: 1, max: 14, integer: true },
+  centroidCount: { kind: "number", default: 7, min: 1, max: 14, integer: true },
+  dataPointCount: {
     kind: "number",
     default: 138,
     min: 2,
@@ -34,11 +34,11 @@ export const centroidColors = [
 ] as const;
 export function create(options: Partial<ClusteringParameters> = {}) {
   let settings = parameters(inputs, options);
-  if (settings.numDataPoints <= settings.numCentroids)
+  if (settings.dataPointCount <= settings.centroidCount)
     throw new RangeError("Data points must exceed centroids.");
-  const random = Random.add({ seed: settings.seed }),
+  const random = Random.create({ seed: settings.seed }),
     space = { x: 101, y: 101, boundary: "hard" as const },
-    world = World.add(space, { random });
+    world = World.create(space, { random });
   type P = ReturnType<typeof point>;
   type C = ReturnType<typeof centroid>;
   let points: P[] = [],
@@ -55,7 +55,7 @@ export function create(options: Partial<ClusteringParameters> = {}) {
   let nextId = 0;
   function point(p: PointInput) {
     return world.add(
-      Agent.add(
+      Agent.create(
         {
           sourceId: nextId++,
           kind: "point" as const,
@@ -67,7 +67,7 @@ export function create(options: Partial<ClusteringParameters> = {}) {
   }
   function centroid(p: CentroidInput, index: number) {
     return world.add(
-      Agent.add(
+      Agent.create(
         {
           sourceId: nextId++,
           kind: "centroid" as const,
@@ -110,7 +110,7 @@ export function create(options: Partial<ClusteringParameters> = {}) {
   function record(phase: string) {
     history.push({
       tick: world.tick.value,
-      deviations: deviations.map((x) => x * settings.numClusters),
+      deviations: deviations.map((x) => x * settings.clusterCount),
       mean: stats.describe(deviations).mean ?? 0,
       phase,
     });
@@ -145,7 +145,7 @@ export function create(options: Partial<ClusteringParameters> = {}) {
     for (const c of centroids) c.delete();
     centroids = [];
     for (const p of points) p.cluster = null;
-    for (let i = 0; i < settings.numCentroids; i++) {
+    for (let i = 0; i < settings.centroidCount; i++) {
       const p = points[Math.floor(random.number() * points.length)]!;
       centroids.push(centroid(p, i));
     }
@@ -200,8 +200,8 @@ export function create(options: Partial<ClusteringParameters> = {}) {
     squareDeviations();
     record("scenario");
   }
-  const perCluster = Math.round(settings.numDataPoints / settings.numClusters);
-  for (let i = 0; i < settings.numClusters; i++) {
+  const perCluster = Math.round(settings.dataPointCount / settings.clusterCount);
+  for (let i = 0; i < settings.clusterCount; i++) {
     const cx = (random.number() * 101 - 50.5) / 1.5,
       cy = (random.number() * 101 - 50.5) / 1.5;
     for (let j = 0; j < perCluster; j++) {
@@ -210,7 +210,7 @@ export function create(options: Partial<ClusteringParameters> = {}) {
           random.number({
             distribution: "normal",
             mean: 0,
-            deviation: (20 - settings.numClusters) / 2,
+            deviation: (20 - settings.clusterCount) / 2,
           }),
         );
       const a = point({ x: cx, y: cy });
@@ -247,7 +247,7 @@ export function create(options: Partial<ClusteringParameters> = {}) {
     setParameters(changes: Partial<ClusteringParameters>) {
       if (
         Reflect.ownKeys(changes).some(
-          (k) => !["numClusters", "numCentroids"].includes(String(k)),
+          (k) => !["clusterCount", "centroidCount"].includes(String(k)),
         )
       )
         throw new TypeError("Setup-only parameter.");

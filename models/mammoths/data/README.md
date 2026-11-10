@@ -16,6 +16,6 @@ The [source comparison record](../evidence/selected-evolution-evidence/mammoths-
 
 ## Verify or refresh the source data
 
-Run `bun experiments/mammoths/data/verify.mjs` to verify the input hashes and every mask bit against both full native readbacks.
+Run `bun studies/mammoths/data/verify.mjs` to verify the input hashes and every mask bit against both full native readbacks.
 
 For a fresh source comparison, load the pinned original in T3 Chromium and evaluate `native-capture.js` in its same-origin iframe. The script calls compiled native NetLogo procedures and reorders native north-first fields into the south-first layout above; it does not implement a second decoder, resampler or palette. Retain the result and compare its digests and mismatch counts. A Node-only reimplementation cannot substitute for native source evidence. Model controls and rendered behavior require their own acceptance checks.

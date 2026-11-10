@@ -1,4 +1,4 @@
-import { defineUI, netLogoColor, type Observation, type SpatialData } from "../../ui/index.ts";
+import { defineUI, indexedColor, type Observation, type SpatialData } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
   live: { rainMmPerHour: { label: "Rain (mm/h)", set: (instance, value) => instance.setRain(value) } },
@@ -14,9 +14,9 @@ export const ui = defineUI(model, {
 type State = Observation<typeof model>;
 const BASIN_BLOCK_COUNT = 40;
 const CATCHMENT_X_OFFSET = -5;
-const WATER_COLOR = netLogoColor(105);
-const INACTIVE_COLOR = netLogoColor(8);
-const OVERFLOW_COLOR = netLogoColor(15);
+const WATER_COLOR = indexedColor(105);
+const INACTIVE_COLOR = indexedColor(8);
+const OVERFLOW_COLOR = indexedColor(15);
 
 function retentionData(state: State): SpatialData {
   const storedBlocks = Math.round(state.storedM3 / state.parameters.capacityM3 * BASIN_BLOCK_COUNT);

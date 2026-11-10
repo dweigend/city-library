@@ -5,7 +5,7 @@ import { parameters, stepCount } from "../parameters.ts";
 export type PhilosopherState = "THINKING" | "HUNGRY" | "EATING";
 export interface Parameters {
   seed: number;
-  numPhilosophers: number;
+  philosopherCount: number;
   hungryChance: number;
   fullChance: number;
   cooperation: boolean;
@@ -18,7 +18,7 @@ export const inputs: Inputs<Parameters> = {
     max: 4294967295,
     integer: true,
   },
-  numPhilosophers: {
+  philosopherCount: {
     kind: "number",
     default: 20,
     min: 2,
@@ -31,9 +31,9 @@ export const inputs: Inputs<Parameters> = {
 };
 export function create(options: Partial<Parameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed }),
-    world = World.add({ x: 1, y: 1, boundary: "hard" }, { random });
-  const n = settings.numPhilosophers;
+  const random = Random.create({ seed: settings.seed }),
+    world = World.create({ x: 1, y: 1, boundary: "hard" }, { random });
+  const n = settings.philosopherCount;
   type Philosopher = Agent<{
     who: number;
     state: PhilosopherState;
@@ -54,7 +54,7 @@ export function create(options: Partial<Parameters> = {}) {
       angle = (heading * Math.PI) / 180;
     philosophers.push(
       world.add(
-        Agent.add(
+        Agent.create(
           { who: i, state: "THINKING" as PhilosopherState, totalEaten: 0 },
           {
             position: { x: 0.35 * Math.sin(angle), y: 0.35 * Math.cos(angle) },
@@ -71,7 +71,7 @@ export function create(options: Partial<Parameters> = {}) {
       homeHeading = ((360 * i) / n + 180 / n + 180) % 360;
     forks.push(
       world.add(
-        Agent.add(
+        Agent.create(
           {
             who: i + n,
             owner: null as Philosopher | null,
@@ -180,12 +180,12 @@ export function create(options: Partial<Parameters> = {}) {
         activate(random.sample(philosophers)[0]!.who);
     },
     setParameters(
-      changes: Partial<Omit<Parameters, "seed" | "numPhilosophers">>,
+      changes: Partial<Omit<Parameters, "seed" | "philosopherCount">>,
     ) {
       parameters(inputs, changes);
       if (
         Reflect.ownKeys(changes).some(
-          (k) => k === "seed" || k === "numPhilosophers",
+          (k) => k === "seed" || k === "philosopherCount",
         )
       )
         throw new TypeError("Population and seed are setup-only.");

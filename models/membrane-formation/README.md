@@ -23,8 +23,8 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer |
-| `numWater` | `750` | integer; ≥ 0; ≤ 1000 |
-| `numLipids` | `250` | integer; ≥ 1; ≤ 500 |
+| `waterCount` | `750` | integer; ≥ 0; ≤ 1000 |
+| `lipidCount` | `250` | integer; ≥ 1; ≤ 500 |
 | `waterWaterForce` | `0.2` | number; ≥ 0; ≤ 2 |
 | `waterOilForce` | `-0.7` | number; ≥ -2; ≤ 0 |
 | `tooCloseForce` | `-0.3` | number; ≥ -2; ≤ 0 |

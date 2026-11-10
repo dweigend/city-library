@@ -34,8 +34,8 @@ export function create(options: Partial<MinorityParameters> = {}) {
   let settings = parameters(inputs, options);
   if (settings.memory === 1 && settings.strategiesPerAgent > 4)
     throw new RangeError('Memory 1 supports at most four distinct strategies.');
-  const random = Random.add({ seed: settings.seed }),
-    world = World.add({ x: 35, y: 35, boundary: 'wrap' }, { random });
+  const random = Random.create({ seed: settings.seed }),
+    world = World.create({ x: 35, y: 35, boundary: 'wrap' }, { random });
   const agents = () => world.agents as readonly Player[];
   let history = Math.floor(random.number() * 2 ** settings.memory),
     minority = 0,
@@ -67,7 +67,7 @@ export function create(options: Partial<MinorityParameters> = {}) {
     );
     const currentStrategy = Math.floor(random.number() * settings.strategiesPerAgent);
     world.add(
-      Agent.add(
+      Agent.create(
         {
           who,
           score: 0,
@@ -147,7 +147,7 @@ export function create(options: Partial<MinorityParameters> = {}) {
         record();
         if (avgScore === 0) {
           diagnostic =
-            'Source move-turtles divides by zero after scoring and tick; movement omitted.';
+            'Source move-agents divides by zero after scoring and tick; movement omitted.';
           break;
         }
         for (const a of random.sample(agents(), {

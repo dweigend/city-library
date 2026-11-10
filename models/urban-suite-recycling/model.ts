@@ -9,8 +9,8 @@ import { parameters, stepCount } from "../parameters.ts";
 
 export interface RecyclingParameters {
   seed: number;
-  numRecyclers: number;
-  numWastefuls: number;
+  recyclerCount: number;
+  wastefulCount: number;
   maxStoredEnergy: number;
   recyclingWasteCost: number;
   resourceRegeneration: number;
@@ -19,8 +19,8 @@ export interface RecyclingParameters {
 }
 export const inputs: Inputs<RecyclingParameters> = {
   seed: { kind: "number", default: 1, min: -2147483648, max: 4294967295, integer: true },
-  numRecyclers: { kind: "number", default: 25, min: 0, max: 50, integer: true },
-  numWastefuls: { kind: "number", default: 25, min: 0, max: 50, integer: true },
+  recyclerCount: { kind: "number", default: 25, min: 0, max: 50, integer: true },
+  wastefulCount: { kind: "number", default: 25, min: 0, max: 50, integer: true },
   maxStoredEnergy: { kind: "number", default: 50, min: 10, max: 100, step: 5, integer: true },
   recyclingWasteCost: { kind: "number", default: 0.5, min: 0, max: 2, step: 0.25 },
   resourceRegeneration: { kind: "number", default: 25, min: 0, max: 100, integer: true },
@@ -44,9 +44,9 @@ interface RecyclingSample {
 export function create(options: Partial<RecyclingParameters> = {}) {
   let settings = parameters(inputs, options);
   const width = 35, height = 35;
-  const random = Random.add({ seed: settings.seed });
-  const world = World.add({ x: width, y: height, boundary: "wrap" }, { random });
-  const grid = Grid.add({ x: width, y: height, boundary: "wrap" }, { state: { resource: "new" as Resource } });
+  const random = Random.create({ seed: settings.seed });
+  const world = World.create({ x: width, y: height, boundary: "wrap" }, { random });
+  const grid = Grid.create({ x: width, y: height, boundary: "wrap" }, { state: { resource: "new" as Resource } });
   world.add(grid);
   const fields = grid.fields;
   const history: Readonly<RecyclingSample>[] = [];
@@ -59,7 +59,7 @@ export function create(options: Partial<RecyclingParameters> = {}) {
   function initializePeople(kind: PersonKind, count: number) {
     for (let i = 0; i < count; i++) {
       const heading = integer(360), x = integer(width) - 17, y = integer(height) - 17;
-      world.add(Agent.add({ kind, energy: settings.maxStoredEnergy / 2 }, { position: { x, y }, orientation: { heading } }));
+      world.add(Agent.create({ kind, energy: settings.maxStoredEnergy / 2 }, { position: { x, y }, orientation: { heading } }));
     }
   }
   function measurement() {
@@ -130,8 +130,8 @@ export function create(options: Partial<RecyclingParameters> = {}) {
     movePeople(); regenerateResources();
   }
 
-  initializePeople("recycler", settings.numRecyclers);
-  initializePeople("wasteful", settings.numWastefuls);
+  initializePeople("recycler", settings.recyclerCount);
+  initializePeople("wasteful", settings.wastefulCount);
   record();
 
   return {
@@ -163,7 +163,7 @@ export function create(options: Partial<RecyclingParameters> = {}) {
         copied.push({ kind: person.kind, x: person.x, y: person.y, heading: person.heading, energy: person.energy });
       }
       for (const person of people()) person.delete();
-      for (const person of copied) world.add(Agent.add({ kind: person.kind, energy: person.energy }, { position: { x: person.x, y: person.y }, orientation: { heading: person.heading } }));
+      for (const person of copied) world.add(Agent.create({ kind: person.kind, energy: person.energy }, { position: { x: person.x, y: person.y }, orientation: { heading: person.heading } }));
       record();
     },
     setResources(values: readonly Resource[]) {

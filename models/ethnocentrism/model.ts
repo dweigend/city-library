@@ -65,9 +65,9 @@ interface Encounters {
 }
 export function create(options: Partial<EthnocentrismParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed }),
-    world = World.add({ x: 51, y: 51, boundary: 'wrap' }, { random }),
-    grid = Grid.add({ x: 51, y: 51, boundary: 'wrap' });
+  const random = Random.create({ seed: settings.seed }),
+    world = World.create({ x: 51, y: 51, boundary: 'wrap' }, { random }),
+    grid = Grid.create({ x: 51, y: 51, boundary: 'wrap' });
   world.add(grid);
   const agents = () => world.agents as readonly Person[];
   const neighborhoods = new Map(
@@ -119,7 +119,7 @@ export function create(options: Partial<EthnocentrismParameters> = {}) {
   }
   function immigrant(f: { x: number; y: number }) {
     return world.add(
-      Agent.add(
+      Agent.create(
         {
           who: who++,
           tag: Math.floor(random.number() * 4),

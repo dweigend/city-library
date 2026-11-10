@@ -23,7 +23,7 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer |
-| `numBees` | `250` | integer; ≥ 1; ≤ 500 |
+| `beeCount` | `250` | integer; ≥ 1; ≤ 500 |
 
 ## Actions and observations
 

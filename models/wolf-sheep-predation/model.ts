@@ -67,10 +67,10 @@ export const inputs: Inputs<WolfSheepParameters> = {
 type Animal = Agent<{ species: "sheep" | "wolf"; energy: number }>;
 export function create(options: Partial<WolfSheepParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const space = { x: 51, y: 51, boundary: "wrap" as const };
-  const world = World.add(space, { random });
-  const grid = Grid.add(space, { state: { grass: true, countdown: 0 } });
+  const world = World.create(space, { random });
+  const grid = Grid.create(space, { state: { grass: true, countdown: 0 } });
   world.add(grid);
   const fields = grid.fields;
   const integer = (upper: number) =>
@@ -93,7 +93,7 @@ export function create(options: Partial<WolfSheepParameters> = {}) {
     const gain = species === "sheep" ? settings.sheepGain : settings.wolfGain;
     for (let i = 0; i < count; i += 1)
       world.add(
-        Agent.add(
+        Agent.create(
           { species, energy: integer(2 * gain) },
           {
             position: {

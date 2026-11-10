@@ -78,7 +78,7 @@ function autumnData(state: UIObservation): SpatialData {
       ...agent,
       size: agent.size * 12 * Math.sqrt(agent.fillFraction),
       shape:
-        agent.breed === "leaf" || agent.breed === "dead-leaf"
+        agent.group === "leaf" || agent.group === "dead-leaf"
           ? ("triangle" as const)
           : ("circle" as const),
     })),

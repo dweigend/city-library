@@ -5,7 +5,7 @@ import { parameters, stepCount } from '../parameters.ts';
 export interface PartyParameters {
   seed: number;
   number: number;
-  numGroups: number;
+  groupCount: number;
   tolerance: number;
 }
 export const inputs: Inputs<PartyParameters> = {
@@ -17,7 +17,7 @@ export const inputs: Inputs<PartyParameters> = {
     integer: true,
   },
   number: { kind: 'number', default: 70, min: 0, max: 300, integer: true },
-  numGroups: { kind: 'number', default: 10, min: 5, max: 20, integer: true },
+  groupCount: { kind: 'number', default: 10, min: 5, max: 20, integer: true },
   tolerance: { kind: 'number', default: 25, min: 0, max: 99 },
 };
 type Person = Agent<{
@@ -28,21 +28,21 @@ type Person = Agent<{
 }>;
 export function create(options: Partial<PartyParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed }),
-    world = World.add(
+  const random = Random.create({ seed: settings.seed }),
+    world = World.create(
       { x: 82, y: 111, boundary: { x: 'wrap', y: 'hard' } },
       { random },
     ),
-    grid = Grid.add({ x: 82, y: 111, boundary: { x: 'wrap', y: 'hard' } });
+    grid = Grid.create({ x: 82, y: 111, boundary: { x: 'wrap', y: 'hard' } });
   world.add(grid);
-  const interval = Math.floor(82 / settings.numGroups);
+  const interval = Math.floor(82 / settings.groupCount);
   // Sorted by source x coordinate: indices are stable public group identities.
   const sites = grid.fields.filter(
     (f) =>
       f.y === 0 &&
       f.x - 39.5 <= 0 &&
       (f.x - 39.5) % interval === 0 &&
-      Math.floor(-(f.x - 39.5) / interval) < settings.numGroups,
+      Math.floor(-(f.x - 39.5) / interval) < settings.groupCount,
   );
   const people = () => world.agents as readonly Person[];
   function happiness() {
@@ -106,7 +106,7 @@ export function create(options: Partial<PartyParameters> = {}) {
     const group = Math.floor(random.number() * sites.length),
       f = sites[group]!;
     world.add(
-      Agent.add(
+      Agent.create(
         {
           who,
           group,
@@ -210,7 +210,7 @@ export function create(options: Partial<PartyParameters> = {}) {
       copied.forEach((row, group) => {
         for (const sex of row)
           world.add(
-            Agent.add(
+            Agent.create(
               { who: who++, sex, group, happy: false },
               { position: sites[group]! },
             ),

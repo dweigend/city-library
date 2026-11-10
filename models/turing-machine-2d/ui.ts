@@ -1,4 +1,4 @@
-import { defineUI, netLogoColor, type Observation, type SpatialData } from "../../ui/index.ts";
+import { defineUI, indexedColor, type Observation, type SpatialData } from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
@@ -104,11 +104,11 @@ function tapeAndHeadsData(state: UIObservation): SpatialData {
     height: state.height,
     cells: state.cells.map((cell) => ({
       ...cell,
-      color: netLogoColor(cell.colorNumber),
+      color: indexedColor(cell.colorNumber),
     })),
     agents: state.agents.map((agent) => ({
       ...agent,
-      color: netLogoColor(agent.foreground),
+      color: indexedColor(agent.foreground),
       size: 7,
       shape: "triangle" as const,
     })),

@@ -26,9 +26,9 @@ export const inputs: Inputs<FireParameters> = {
 type Status = "empty" | "tree" | "fire" | "ember" | "burned";
 export function create(options: Partial<FireParameters> = {}) {
   const settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
-  const world = World.add({ random });
-  const grid = Grid.add(
+  const random = Random.create({ seed: settings.seed });
+  const world = World.create({ random });
+  const grid = Grid.create(
     { x: settings.width, y: settings.height, boundary: "hard" },
     { state: { status: "empty" as Status, emberColor: 0 } },
   );

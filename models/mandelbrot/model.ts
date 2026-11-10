@@ -4,13 +4,13 @@ import type { Definition, Inputs } from "../definition.ts";
 import { parameters, stepCount } from "../parameters.ts";
 export interface Parameters {
   seed: number;
-  numAgents: number;
+  agentCount: number;
   throw: number;
   scaleFactor: number;
 }
 export const inputs: Inputs<Parameters> = {
   seed: { kind: "number", default: 1, integer: true },
-  numAgents: {
+  agentCount: {
     kind: "number",
     default: 1500,
     min: 0,
@@ -34,16 +34,16 @@ type ModelAgent = Agent<{
 }>;
 export function create(options: Partial<Parameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
-  const grid = Grid.add(
+  const random = Random.create({ seed: settings.seed });
+  const grid = Grid.create(
     { x: 301, y: 301, boundary: "hard" },
     { state: { cReal: 0, cImaginary: 0, zReal: 0, zImaginary: 0, counter: 0 } },
   );
-  const world = World.add(grid.space, { random });
+  const world = World.create(grid.space, { random });
   world.add(grid);
   const fields = grid.fields;
   const setupScale = settings.scaleFactor;
-  // All90601 canonical Fields are eagerly initialized, including unvisited patches.
+  // All90601 canonical Fields are eagerly initialized, including unvisited fields.
   for (const field of fields) {
     field.cReal = field.x / setupScale;
     field.cImaginary = field.y / setupScale;
@@ -55,12 +55,12 @@ export function create(options: Partial<Parameters> = {}) {
     return random.number() * 301 - 150.5;
   }
   function setupAgents() {
-    for (let i = 0; i < settings.numAgents; i++) {
+    for (let i = 0; i < settings.agentCount; i++) {
       const heading = Math.floor(random.number() * 360),
         x = randomCoordinate(),
         y = randomCoordinate();
       world.add(
-        Agent.add(
+        Agent.create(
           { sourceIndex: i, previousCount: 0, color: "#16a34a", hidden: false },
           { position: { x, y }, orientation: { heading } },
         ),
@@ -160,7 +160,7 @@ export function create(options: Partial<Parameters> = {}) {
       for (const t of agents()) t.hidden = true;
     },
     setRules(
-      change: Partial<Pick<Parameters, "throw" | "scaleFactor" | "numAgents">>,
+      change: Partial<Pick<Parameters, "throw" | "scaleFactor" | "agentCount">>,
     ) {
       settings = parameters(inputs, { ...settings, ...change });
     },

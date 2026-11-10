@@ -48,15 +48,15 @@ export const inputs: Inputs<InterstitialParameters> = {
 export function create(options: Partial<InterstitialParameters> = {}) {
   let settings = parameters(inputs, options);
   if (settings.width % 2 !== 1 || settings.height % 2 !== 1)
-    throw new RangeError("Use odd cell dimensions for integer native patches.");
-  const random = Random.add({ seed: settings.seed });
+    throw new RangeError("Use odd cell dimensions for integer native fields.");
+  const random = Random.create({ seed: settings.seed });
   const space = {
     x: settings.width,
     y: settings.height,
     boundary: { x: "hard" as const, y: "wrap" as const },
   };
-  const world = World.add(space, { random });
-  const grid = Grid.add(space);
+  const world = World.create(space, { random });
+  const grid = Grid.create(space);
   world.add(grid);
   const minX = -(settings.width - 1) / 2;
   const maxY = (settings.height - 1) / 2;
@@ -98,7 +98,7 @@ export function create(options: Partial<InterstitialParameters> = {}) {
   }
   function createDAtom(field: (typeof grid.fields)[number]) {
     return world.add(
-      Agent.add(
+      Agent.create(
         {},
         {
           position: { x: field.x, y: field.y },

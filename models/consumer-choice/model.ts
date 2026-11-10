@@ -4,7 +4,7 @@ import type { Definition, Inputs } from '../definition.ts';
 import { parameters, stepCount } from '../parameters.ts';
 export interface ConsumerChoiceParameters {
   seed: number;
-  numConsumers: number;
+  consumerCount: number;
   avgConnections: number;
   initialOrangePercent: number;
   normInfluence: number;
@@ -21,7 +21,7 @@ export const inputs: Inputs<ConsumerChoiceParameters> = {
     max: 4294967295,
     integer: true,
   },
-  numConsumers: {
+  consumerCount: {
     kind: 'number',
     default: 100,
     min: 0,
@@ -60,22 +60,22 @@ type Live = Pick<
 export function create(options: Partial<ConsumerChoiceParameters> = {}) {
   let settings = parameters(inputs, options);
   if (
-    Math.ceil((settings.avgConnections * settings.numConsumers) / 2) >
-    (settings.numConsumers * (settings.numConsumers - 1)) / 2
+    Math.ceil((settings.avgConnections * settings.consumerCount) / 2) >
+    (settings.consumerCount * (settings.consumerCount - 1)) / 2
   )
     throw new RangeError('Requested connections exceed the complete graph.');
-  const random = Random.add({ seed: settings.seed }),
-    world = World.add({ x: 51, y: 51, boundary: 'hard' }, { random }),
+  const random = Random.create({ seed: settings.seed }),
+    world = World.create({ x: 51, y: 51, boundary: 'hard' }, { random }),
     graph = Graph.add<Consumer>();
   const consumers: Consumer[] = [];
   const qualities = () => [settings.qualityOrange, settings.qualityBlue];
   const satisfaction = (choice: number) =>
     [0, 1].map((i) => (i === choice ? Math.log10(1 + 9 * qualities()[i]!) : 0));
-  for (let who = 0; who < settings.numConsumers; who++) {
+  for (let who = 0; who < settings.consumerCount; who++) {
     const choice =
       Math.floor(random.number() * 100) < settings.initialOrangePercent ? 0 : 1;
     const a = world.add(
-      Agent.add(
+      Agent.create(
         {
           who,
           choice,
@@ -94,7 +94,7 @@ export function create(options: Partial<ConsumerChoiceParameters> = {}) {
     consumers.push(a);
     graph.nodes.add(a);
   }
-  const target = (settings.avgConnections * settings.numConsumers) / 2;
+  const target = (settings.avgConnections * settings.consumerCount) / 2;
   while (graph.edges.size < target) {
     const a = random.sample(consumers)[0]!;
     const candidates = consumers.filter((b) => b !== a && !graph.hasEdge(a, b));

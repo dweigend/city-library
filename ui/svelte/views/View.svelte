@@ -5,7 +5,7 @@
   import { Label } from "$lib/components/ui/label/index.js";
   import * as Select from "$lib/components/ui/select/index.js";
   import * as Table from "$lib/components/ui/table/index.js";
-  import type { DrawingIntent, Inspector, NetworkNode, View as ViewSpec } from "../../definition.ts";
+  import type { DrawingIntent, Inspector, GraphNodeData, View as ViewSpec } from "../../definition.ts";
   import { mountCanvas } from "../../views/canvas.ts";
   import { mountNetwork } from "../../views/network.ts";
   import { mountChart } from "../../views/chart.ts";
@@ -31,7 +31,7 @@
   const labelId = $props.id();
   let host = $state<HTMLDivElement>();
   let renderer = $state.raw<Renderer>();
-  let nodes = $state<readonly NetworkNode[]>([]);
+  let nodes = $state<readonly GraphNodeData[]>([]);
   let labelControl = $state(false);
   let labels = $state(false);
   let rows = $state<readonly Readonly<Record<string, string | number | boolean>>[]>([]);

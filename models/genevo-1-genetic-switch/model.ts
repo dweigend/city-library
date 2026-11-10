@@ -40,7 +40,7 @@ export const inputs: Inputs<SwitchParameters> = {
 };
 interface MoleculeData {
   who: number;
-  breed: "lacI" | "lacY" | "lacZ" | "rnap" | "lactose";
+  group: "lacI" | "lacY" | "lacZ" | "rnap" | "lactose";
   partner: Molecule | null;
   boundToOperator: boolean;
   onDNA: boolean;
@@ -49,10 +49,10 @@ interface MoleculeData {
 type Molecule = Agent<MoleculeData>;
 export function create(options: Partial<SwitchParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const space = { x: 121, y: 67, boundary: "wrap" } as const;
-  const world = World.add(space, { random });
-  const grid = Grid.add(space, { state: { color: "#111111", pump: false } });
+  const world = World.create(space, { random });
+  const grid = Grid.create(space, { state: { color: "#111111", pump: false } });
   world.add(grid);
   let who = 0;
   let energy = 1000;
@@ -73,8 +73,8 @@ export function create(options: Partial<SwitchParameters> = {}) {
     cellDivisionTime: number;
   }[] = [];
   const all = () => world.agents as readonly Molecule[];
-  const breed = (kind: Molecule["breed"]) =>
-    all().filter((p) => p.breed === kind);
+  const group = (kind: Molecule["group"]) =>
+    all().filter((p) => p.group === kind);
   const shuffled = (values: readonly Molecule[]) =>
     random.sample(values, {
       count: values.length,
@@ -122,12 +122,12 @@ export function create(options: Partial<SwitchParameters> = {}) {
       cellWall(grid.fieldAt(p)!.x, grid.fieldAt(p)!.y)
     );
   }
-  function addMolecule(kind: Molecule["breed"], inside = true) {
+  function addMolecule(kind: Molecule["group"], inside = true) {
     const p: Molecule = world.add(
       Agent.add<MoleculeData>(
         {
           who: who++,
-          breed: kind,
+          group: kind,
           partner: null,
           boundToOperator: false,
           onDNA: false,
@@ -153,7 +153,7 @@ export function create(options: Partial<SwitchParameters> = {}) {
       }
   }
   function showSwitchColor() {
-    const count = breed("lacZ").length;
+    const count = group("lacZ").length;
     const color =
       count <= 10
         ? "#ffffff"
@@ -181,7 +181,7 @@ export function create(options: Partial<SwitchParameters> = {}) {
   function updateLactose(upperLimit = 1500) {
     if (!Number.isSafeInteger(upperLimit) || upperLimit < 0)
       throw new RangeError("Lactose upper limit must be nonnegative.");
-    const outside = breed("lactose").filter((p) => !p.inside);
+    const outside = group("lactose").filter((p) => !p.inside);
     if (outside.length > upperLimit)
       for (const p of random.sample(outside, {
         count: outside.length - upperLimit,
@@ -195,8 +195,8 @@ export function create(options: Partial<SwitchParameters> = {}) {
     history.push({
       tick: world.tick.value,
       energy,
-      lacZ: breed("lacZ").length,
-      lacY: breed("lacY").length,
+      lacZ: group("lacZ").length,
+      lacY: group("lacY").length,
       divisions: divisionNumber,
       cellDivisionTime,
     });
@@ -250,9 +250,9 @@ export function create(options: Partial<SwitchParameters> = {}) {
     p.move(3);
   }
   function goLacIs() {
-    for (const p of shuffled(breed("lacI").filter((p) => p.boundToOperator)))
+    for (const p of shuffled(group("lacI").filter((p) => p.boundToOperator)))
       if (random.number() < settings.lacIBondLeakage) dissociateFromOperator(p);
-    for (const p of shuffled(breed("lacI").filter((p) => p.partner !== null))) {
+    for (const p of shuffled(group("lacI").filter((p) => p.partner !== null))) {
       if (random.number() < settings.lacILactoseSeparationChance) {
         const partner = p.partner!;
         partner.partner = null;
@@ -262,7 +262,7 @@ export function create(options: Partial<SwitchParameters> = {}) {
         p.move(-1);
       }
     }
-    for (const p of shuffled(breed("lacI").filter((p) => p.partner === null))) {
+    for (const p of shuffled(group("lacI").filter((p) => p.partner === null))) {
       const here = grid.fieldAt(p)!;
       const ahead = fieldAhead(p, 1);
       if (
@@ -274,7 +274,7 @@ export function create(options: Partial<SwitchParameters> = {}) {
         p.rotate(-p.heading);
         p.move({ to: { x: -12, y: 1 } });
       } else {
-        const freeLactose = breed("lactose").filter(
+        const freeLactose = group("lactose").filter(
           (q) => q.partner === null && grid.fieldAt(q) === here,
         );
         if (
@@ -288,11 +288,11 @@ export function create(options: Partial<SwitchParameters> = {}) {
         }
       }
     }
-    for (const p of shuffled(breed("lacI").filter((p) => !p.boundToOperator)))
+    for (const p of shuffled(group("lacI").filter((p) => !p.boundToOperator)))
       move(p);
   }
   function goLacYs() {
-    for (const p of shuffled(breed("lacY"))) {
+    for (const p of shuffled(group("lacY"))) {
       const f = fieldAhead(p, 2);
       if (cellWall(f.x, f.y)) {
         f.pump = true;
@@ -308,32 +308,32 @@ export function create(options: Partial<SwitchParameters> = {}) {
   }
   function goLacZs() {
     for (const p of shuffled(
-      breed("lacZ").filter(
+      group("lacZ").filter(
         (p) =>
           p.neighbors({
             radius: 1,
-            source: breed("lactose").filter((q) => q.partner === null),
+            source: group("lactose").filter((q) => q.partner === null),
           }).length > 0,
       ),
     )) {
       for (const lactose of shuffled(
         p.neighbors({
           radius: 2,
-          source: breed("lactose").filter((q) => q.partner === null),
+          source: group("lactose").filter((q) => q.partner === null),
         }) as readonly Molecule[],
       )) {
         energy += 10;
         lactose.delete();
       }
     }
-    for (const p of shuffled(breed("lacZ"))) {
+    for (const p of shuffled(group("lacZ"))) {
       move(p);
       if (random.number() < settings.lacZDegradationChance) p.delete();
     }
   }
   function goLactoses() {
     for (const p of shuffled(
-      breed("lactose").filter((p) => !p.inside && fieldAhead(p, 2).pump),
+      group("lactose").filter((p) => !p.inside && fieldAhead(p, 2).pump),
     )) {
       p.move({ to: fieldAhead(p, 2) });
       const heading = (Math.atan2(-p.x, -p.y) * 180) / Math.PI;
@@ -341,7 +341,7 @@ export function create(options: Partial<SwitchParameters> = {}) {
       p.move(3);
       p.inside = true;
     }
-    for (const p of shuffled(breed("lactose"))) move(p);
+    for (const p of shuffled(group("lactose"))) move(p);
   }
   function synthesizeProteins(_parent?: Molecule) {
     for (let i = 0; i < 5; i++) addMolecule("lacY");
@@ -351,7 +351,7 @@ export function create(options: Partial<SwitchParameters> = {}) {
   function goRNAPs() {
     if (!inhibited)
       for (const p of shuffled(
-        breed("rnap").filter((p) =>
+        group("rnap").filter((p) =>
           [0, 1, 2].some((distance) => {
             const f =
               distance === 0 ? grid.fieldAt(p)! : fieldAhead(p, distance);
@@ -365,7 +365,7 @@ export function create(options: Partial<SwitchParameters> = {}) {
           p.onDNA = true;
         }
       }
-    for (const p of shuffled(breed("rnap").filter((p) => p.onDNA))) {
+    for (const p of shuffled(group("rnap").filter((p) => p.onDNA))) {
       p.move(1);
       const f = grid.fieldAt(p)!;
       if (terminator(f.x, f.y)) {
@@ -374,16 +374,16 @@ export function create(options: Partial<SwitchParameters> = {}) {
         genXYInsideInside(p);
       }
     }
-    for (const p of shuffled(breed("rnap").filter((p) => !p.onDNA))) {
+    for (const p of shuffled(group("rnap").filter((p) => !p.onDNA))) {
       move(p);
       if (Math.abs(p.x) > 41) genXYInsideInside(p);
     }
   }
   function divideCell() {
-    const freeInside = breed("lactose").filter(
+    const freeInside = group("lactose").filter(
       (p) => p.inside && p.partner === null,
     );
-    for (const collection of [freeInside, breed("lacY"), breed("lacZ")])
+    for (const collection of [freeInside, group("lacY"), group("lacZ")])
       for (const p of random.sample(collection, {
         count: Math.round(collection.length / 2),
       }))
@@ -408,7 +408,7 @@ export function create(options: Partial<SwitchParameters> = {}) {
     goRNAPs();
     if (settings.glucose) energy += 10;
     energy -=
-      (breed("rnap").length + breed("lacI").length + breed("lacZ").length) /
+      (group("rnap").length + group("lacI").length + group("lacZ").length) /
       100;
     if (!settings.levelSpace) {
       if (settings.lactose) updateLactose();
@@ -463,7 +463,7 @@ export function create(options: Partial<SwitchParameters> = {}) {
     for (let i = 0; i < numberAt(2); i++) addMolecule("lacY");
     for (let i = 0; i < numberAt(4); i++) addMolecule("lacZ");
     for (let i = 0; i < numberAt(6); i++) addMolecule("lactose");
-    for (const p of random.sample(breed("lacI"), {
+    for (const p of random.sample(group("lacI"), {
       count: Math.round(numberAt(5)),
     })) {
       const partner = addMolecule("lactose");
@@ -475,12 +475,12 @@ export function create(options: Partial<SwitchParameters> = {}) {
   function sendVariablesList() {
     return [
       energy,
-      breed("lacY").length,
+      group("lacY").length,
       grid.fields.filter((f) => f.pump).length,
-      breed("lacZ").length,
-      breed("lacI").filter((p) => p.partner !== null).length,
-      breed("lactose").filter((p) => p.inside && p.partner === null).length,
-      breed("lactose").filter((p) => !p.inside).length,
+      group("lacZ").length,
+      group("lacI").filter((p) => p.partner !== null).length,
+      group("lactose").filter((p) => p.inside && p.partner === null).length,
+      group("lactose").filter((p) => !p.inside).length,
     ];
   }
   function read() {
@@ -496,11 +496,11 @@ export function create(options: Partial<SwitchParameters> = {}) {
       divisionNumber,
       cellDivisionTime,
       inhibited,
-      lacZCount: breed("lacZ").length,
-      lacYCount: breed("lacY").length,
-      lacICount: breed("lacI").length,
-      rnapCount: breed("rnap").length,
-      lactoseCount: breed("lactose").length,
+      lacZCount: group("lacZ").length,
+      lacYCount: group("lacY").length,
+      lacICount: group("lacI").length,
+      rnapCount: group("rnap").length,
+      lactoseCount: group("lactose").length,
       pumpCount: grid.fields.filter((f) => f.pump).length,
       history: history.map((p) => ({ ...p })),
       cells: grid.fields.map((f) => ({
@@ -513,20 +513,20 @@ export function create(options: Partial<SwitchParameters> = {}) {
       agents: all().map((p) => ({
         id: p.id,
         who: p.who,
-        breed: p.breed,
+        group: p.group,
         x: p.x,
         y: p.y,
         heading: p.heading,
         color:
-          p.breed === "lacI"
+          p.group === "lacI"
             ? "#d98729"
-            : p.breed === "rnap"
+            : p.group === "rnap"
               ? "#956834"
-              : p.breed === "lactose"
+              : p.group === "lactose"
                 ? "#ccccdd"
                 : "#e96767",
-        size: p.breed === "lactose" ? 3 : 5,
-        hidden: p.breed === "lactose" && p.partner !== null,
+        size: p.group === "lactose" ? 3 : 5,
+        hidden: p.group === "lactose" && p.partner !== null,
         partnerId: p.partner?.id ?? null,
         boundToOperator: p.boundToOperator,
         onDNA: p.onDNA,

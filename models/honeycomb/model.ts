@@ -5,28 +5,28 @@ import { parameters, stepCount } from "../parameters.ts";
 
 export interface HoneycombParameters {
   seed: number;
-  numBees: number;
+  beeCount: number;
 }
 export const inputs: Inputs<HoneycombParameters> = {
   seed: { kind: "number", default: 1, integer: true },
-  numBees: { kind: "number", default: 250, min: 1, max: 500, integer: true },
+  beeCount: { kind: "number", default: 250, min: 1, max: 500, integer: true },
 };
 type Bee = Agent<{ who: number; shade: number; hidden: boolean }>;
 export function create(options: Partial<HoneycombParameters> = {}) {
   const settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const space = { x: 81, y: 81, boundary: "wrap" } as const;
-  const world = World.add(space, { random });
-  const grid = Grid.add(space, { state: { chemical: 0 } });
+  const world = World.create(space, { random });
+  const grid = Grid.create(space, { state: { chemical: 0 } });
   world.add(grid);
   const bees = () => world.agents as readonly Bee[];
 
   function setup() {
     world.delete(bees());
     for (const field of grid.fields) field.chemical = 0;
-    for (let who = 0; who < settings.numBees; who++) {
+    for (let who = 0; who < settings.beeCount; who++) {
       world.add(
-        Agent.add(
+        Agent.create(
           {
             who,
             shade: random.number({ min: 0, max: 7, integer: true }),

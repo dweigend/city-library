@@ -9,9 +9,9 @@ export const inputs: Inputs<BikeParameters> = {
 };
 export function create(options: Partial<BikeParameters> = {}) {
   const settings = parameters(inputs, options);
-  const world = World.add();
-  const stations = ["Depot", "Market", "Park"].map((label, index) => Agent.add({ label }, { position: { x: index * 2 - 2, y: 0 } }));
-  const truck = Agent.add({ label: "Redistribution truck" }, { position: { x: -2, y: 0 } });
+  const world = World.create();
+  const stations = ["Depot", "Market", "Park"].map((label, index) => Agent.create({ label }, { position: { x: index * 2 - 2, y: 0 } }));
+  const truck = Agent.create({ label: "Redistribution truck" }, { position: { x: -2, y: 0 } });
   world.add([...stations, truck]);
   const graph = Graph.add<typeof stations[number]>();
   for (const site of stations) graph.nodes.add(site);

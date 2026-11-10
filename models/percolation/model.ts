@@ -33,9 +33,9 @@ export const inputs: Inputs<PercolationParameters> = {
 type Kind = "soil" | "rock" | "oil" | "saturated";
 export function create(options: Partial<PercolationParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
-  const world = World.add({ random });
-  const grid = Grid.add(
+  const random = Random.create({ seed: settings.seed });
+  const world = World.create({ random });
+  const grid = Grid.create(
     {
       x: settings.width,
       y: settings.height,

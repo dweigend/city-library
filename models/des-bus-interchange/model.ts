@@ -11,7 +11,7 @@ export const inputs: Inputs<BusParameters> = {
 };
 export function create(options: Partial<BusParameters> = {}) {
   let settings = parameters(inputs, options);
-  const world = World.add();
+  const world = World.create();
   const agenda = Agenda.add<{ kind: "arrive" | "depart"; bus: number }>();
   const graph = Graph.add<{ id: string; label: string }, { minutes: number }>({ edgeState: { minutes: 1 } });
   const origin = graph.nodes.add({ id: "stop:origin", label: "District" });
@@ -26,7 +26,7 @@ export function create(options: Partial<BusParameters> = {}) {
   const history: { x: number; y: number }[] = [{ x: 0, y: 0 }];
   function addBus() {
     const number = buses.length + 1;
-    const agent = world.add(Agent.add({ number }));
+    const agent = world.add(Agent.create({ number }));
     buses.push({ agent });
     agenda.add({ at: agenda.time + travelMinutes, data: { kind: "arrive", bus: number } });
   }

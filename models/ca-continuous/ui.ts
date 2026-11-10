@@ -1,4 +1,4 @@
-import { defineUI, netLogoColor } from "../../ui/index.ts";
+import { defineUI, indexedColor } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
   setup: ["width", "height", "seed", "initialization", "maxValue"],
@@ -36,7 +36,7 @@ export const ui = defineUI(model, {
         height: s.height,
         cells: s.cells.map((c) => ({
           ...c,
-          color: netLogoColor(c.colorNumber),
+          color: indexedColor(c.colorNumber),
         })),
       }),
     },

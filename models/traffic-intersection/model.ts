@@ -32,10 +32,10 @@ type Accident = Agent<{ kind: "accident"; clearIn: number }>;
 
 export function create(options: Partial<TrafficIntersectionParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const space = { x: 35, y: 35, boundary: "hard" } as const;
-  const world = World.add(space, { random });
-  const grid = Grid.add(space);
+  const world = World.create(space, { random });
+  const grid = Grid.create(space);
   world.add(grid);
   const cars = () =>
     world.agents.filter((agent) => (agent as Car).kind === "car") as Car[];
@@ -56,13 +56,13 @@ export function create(options: Partial<TrafficIntersectionParameters> = {}) {
     accidents: number;
   }[] = [];
   world.add(
-    Agent.add(
+    Agent.create(
       { kind: "light" as const, color: "green" as const },
       { position: { x: 0, y: -1 } },
     ),
   );
   world.add(
-    Agent.add(
+    Agent.create(
       { kind: "light" as const, color: "red" as const },
       { position: { x: -1, y: 0 } },
     ),
@@ -140,7 +140,7 @@ export function create(options: Partial<TrafficIntersectionParameters> = {}) {
       const crashed = grid.agentsAt(field, { source: cars() });
       if (crashed.length > 1) {
         world.add(
-          Agent.add(
+          Agent.create(
             { kind: "accident" as const, clearIn: 5 },
             { position: field },
           ),
@@ -164,7 +164,7 @@ export function create(options: Partial<TrafficIntersectionParameters> = {}) {
       ["#d33d3d", "#335dd9", "#d8bb25", "#be4cd2", "#f19a26", "#43a4b9"],
       { count: 1 },
     )[0]!;
-    const car = Agent.add(
+    const car = Agent.create(
       { kind: "car" as const, speed: 0, color },
       { position: { x, y }, orientation: { heading } },
     );

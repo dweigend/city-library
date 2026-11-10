@@ -67,7 +67,7 @@ function bloodSugarRegulationData(state: UIObservation): SpatialData {
     width: state.width,
     height: state.height,
     agents: state.agents
-      .filter((agent) => agent.breed !== "liver" && agent.breed !== "pancreas")
+      .filter((agent) => agent.group !== "liver" && agent.group !== "pancreas")
       .map((agent) => ({
         ...agent,
         size: agent.id === state.followingId ? 9 : 3,

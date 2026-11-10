@@ -24,7 +24,7 @@ const observation = simulation.read();
 | --- | --- | --- |
 | `seed` | `1` | integer |
 | `targetTotal` | `72` | integer; ≥ 2; ≤ 100 |
-| `numSuccesses` | `10000` | integer; ≥ 0; ≤ 10000 |
+| `successCount` | `10000` | integer; ≥ 0; ≤ 10000 |
 | `diminishingSampleSpace` | `true` | boolean |
 | `waitAtFull` | `true` | boolean |
 

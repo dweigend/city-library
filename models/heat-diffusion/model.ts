@@ -43,10 +43,10 @@ export const inputs: Inputs<HeatParameters> = {
 export function create(options: Partial<HeatParameters> = {}) {
   let settings = parameters(inputs, options);
   if (settings.width % 2 !== 1 || settings.height % 2 !== 1)
-    throw new RangeError("Use odd cell dimensions for integer native patches.");
-  const random = Random.add({ seed: settings.seed });
-  const world = World.add({ random });
-  const grid = Grid.add(
+    throw new RangeError("Use odd cell dimensions for integer native fields.");
+  const random = Random.create({ seed: settings.seed });
+  const world = World.create({ random });
+  const grid = Grid.create(
     { x: settings.width, y: settings.height, boundary: "wrap" },
     { state: { temperature: 0, oldTemperature: 0, legendLevel: -1 } },
   );
@@ -135,13 +135,13 @@ export function create(options: Partial<HeatParameters> = {}) {
           .reduce((sum, neighbor) => sum + neighbor.oldTemperature, 0) +
       (1 - 4 * d) * field.oldTemperature;
     setEdgeTemperatures(field);
-    // This write is intentionally inside the randomized patch pass. Later
-    // patches see it: replacing this with Grid.diffuse would change the model.
+    // This write is intentionally inside the randomized field pass. Later
+    // fields see it: replacing this with Grid.diffuse would change the model.
     field.oldTemperature = field.temperature;
   }
   function updateFieldAt(x: number, y: number) {
     const field = fields.find((f) => f.x === x && f.y === y);
-    if (!field) throw new RangeError("Expected a native patch center.");
+    if (!field) throw new RangeError("Expected a native field center.");
     updateField(field);
   }
   function go() {

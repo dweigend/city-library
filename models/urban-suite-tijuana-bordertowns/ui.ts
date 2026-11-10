@@ -1,4 +1,4 @@
-import { defineUI, netLogoColor, type Observation, type SpatialData } from "../../ui/index.ts";
+import { defineUI, indexedColor, type Observation, type SpatialData } from "../../ui/index.ts";
 
 import { model, type TijuanaRead } from "./model.ts";
 
@@ -203,12 +203,12 @@ function spatial(state: TijuanaRead): SpatialData {
       id: cell.id,
       x: cell.x,
       y: cell.y,
-      color: netLogoColor(cell.colorNumber),
+      color: indexedColor(cell.colorNumber),
     })),
     segments: state.traces.map((trace) => ({
       from: trace.from,
       to: trace.to,
-      color: netLogoColor(trace.colorNumber),
+      color: indexedColor(trace.colorNumber),
       width: trace.width,
     })),
     agents: state.agents
@@ -218,7 +218,7 @@ function spatial(state: TijuanaRead): SpatialData {
         x: agent.x,
         y: agent.y,
         heading: agent.heading,
-        color: netLogoColor(agent.colorNumber),
+        color: indexedColor(agent.colorNumber),
         size: Math.max(0, agent.size) * 4,
         shape:
           agent.shape === "default"

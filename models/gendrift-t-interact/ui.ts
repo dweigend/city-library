@@ -1,4 +1,4 @@
-import { defineUI, netLogoColor, type Observation, type SpatialData } from "../../ui/index.ts";
+import { defineUI, indexedColor, type Observation, type SpatialData } from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
@@ -49,7 +49,7 @@ export const ui = defineUI(model, {
       series: (s) =>
         [5, 15, 25, 35, 45, 55, 65, 125, 85, 95].map((c, i) => ({
           label: `Color ${c}`,
-          color: netLogoColor(c),
+          color: indexedColor(c),
           points: s.history.map((p) => ({ x: p.tick, y: p.counts[i]! })),
         })),
     },
@@ -73,7 +73,7 @@ function geneticDriftAndWallsData(s: UIObservation): SpatialData {
     })),
     agents: s.agents.map((a) => ({
       ...a,
-      color: netLogoColor(a.colorNumber),
+      color: indexedColor(a.colorNumber),
       size: 6,
       shape: "triangle" as const,
     })),

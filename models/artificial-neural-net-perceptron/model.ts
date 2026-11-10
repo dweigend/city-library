@@ -75,8 +75,8 @@ export function sign(value: number, threshold = 0) {
 }
 export function create(options: Partial<Parameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed }),
-    world = World.add({ random });
+  const random = Random.create({ seed: settings.seed }),
+    world = World.create({ random });
   const graph = Graph.add<
     { id: number; kind: string; activation: number; x: number; y: number },
     { weight: number }

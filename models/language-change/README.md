@@ -23,7 +23,7 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
-| `numNodes` | `100` | integer; ≥ 2; ≤ 100 |
+| `nodeCount` | `100` | integer; ≥ 2; ≤ 100 |
 | `percentGrammar1` | `60` | number; ≥ 0; ≤ 100 |
 | `updateAlgorithm` | `"individual"` | `individual`, `threshold`, `reward` |
 | `thresholdVal` | `0.3` | number; ≥ 0; ≤ 1 |
