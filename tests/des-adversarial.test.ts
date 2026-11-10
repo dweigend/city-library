@@ -3,7 +3,7 @@ import { Agent, Agenda, EventTrace, Random, Resource, ServiceQueue, Signal, Stor
 
 describe("DES causal execution through public imports", () => {
   test("the last event leaves room for a causal successor before the horizon", () => {
-    const agenda = Agenda.add<string>();
+    const agenda = Agenda.create<string>();
     agenda.add({ at: 2, data: "arrival" });
     expect(agenda.next({ until: 10 })?.data).toBe("arrival");
     expect(agenda.time).toBe(2);
@@ -15,7 +15,7 @@ describe("DES causal execution through public imports", () => {
   });
 
   test("priority precedes insertion ties while batch budget preserves remaining work", () => {
-    const agenda = Agenda.add<string>();
+    const agenda = Agenda.create<string>();
     for (const [priority, data] of [[1, "last"], [-2, "first"], [-2, "second"]] as const)
       agenda.add({ at: 0.5, priority, data });
     expect(agenda.advance({ until: 9, maxEvents: 2 }).map(event => event.data)).toEqual(["first", "second"]);
@@ -26,7 +26,7 @@ describe("DES causal execution through public imports", () => {
   });
 
   test("a caller's finite limit bounds a zero-delay chain without discarding it", () => {
-    const agenda = Agenda.add<number>();
+    const agenda = Agenda.create<number>();
     agenda.add({ at: 0, data: 0 });
     for (let count = 0; count < 7; count++) {
       const event = agenda.next({ until: 1 });
@@ -40,7 +40,7 @@ describe("DES causal execution through public imports", () => {
   });
 
   test("invalid horizons, priorities and budgets leave pending events intact", () => {
-    const agenda = Agenda.add<number>();
+    const agenda = Agenda.create<number>();
     agenda.add({ at: 2, data: 1 });
     for (const until of [-1, NaN, Infinity]) expect(() => agenda.next({ until })).toThrow();
     for (const maxEvents of [0, -1, 0.5, Infinity]) expect(() => agenda.advance({ until: 3, maxEvents })).toThrow();
@@ -51,7 +51,7 @@ describe("DES causal execution through public imports", () => {
   });
 
   test("default batch budget is finite and exact-horizon behavior remains explicit", () => {
-    const agenda = Agenda.add<number>();
+    const agenda = Agenda.create<number>();
     for (let index = 0; index < 1001; index++) agenda.add({ at: 0, data: index });
     expect(agenda.advance({ until: 5 })).toHaveLength(1000);
     expect(agenda.time).toBe(0);
@@ -63,7 +63,7 @@ describe("DES causal execution through public imports", () => {
   });
 
   test("Agenda rejects accessor options without invoking them", () => {
-    const agenda = Agenda.add<number>();
+    const agenda = Agenda.create<number>();
     let reads = 0;
     const invalid = { get until() { reads++; return 5; } };
     expect(() => agenda.next(invalid)).toThrow(TypeError);
@@ -75,10 +75,10 @@ describe("DES causal execution through public imports", () => {
   });
 
   test("forged and foreign cancellation handles cannot remove an issued event", () => {
-    const agenda = Agenda.add<number>();
+    const agenda = Agenda.create<number>();
     const handle = agenda.add({ at: 1, data: 5 });
     expect(() => agenda.delete({ ...handle })).toThrow();
-    expect(() => Agenda.add<number>().delete(handle)).toThrow();
+    expect(() => Agenda.create<number>().delete(handle)).toThrow();
     expect(agenda.size).toBe(1);
     agenda.delete(handle);
     agenda.delete(handle);
@@ -86,9 +86,9 @@ describe("DES causal execution through public imports", () => {
   });
 
   test("event payloads detach plain data while retaining canonical Agents", () => {
-    const person = Agent.add({ label: "resident" });
+    const person = Agent.create({ label: "resident" });
     const payload = { nested: { value: 1 }, person };
-    const agenda = Agenda.add<typeof payload>();
+    const agenda = Agenda.create<typeof payload>();
     agenda.add({ at: 1, data: payload });
     payload.nested.value = 99;
     const event = agenda.next({ until: 2 });
@@ -99,10 +99,10 @@ describe("DES causal execution through public imports", () => {
   });
 
   test("World attachment is atomic and does not couple its fractional tick to Agenda", () => {
-    const first = World.add();
-    const other = World.add();
-    const fresh = Agenda.add();
-    const owned = Agenda.add();
+    const first = World.create();
+    const other = World.create();
+    const fresh = Agenda.create();
+    const owned = Agenda.create();
     other.add(owned);
     expect(() => first.add([fresh, owned])).toThrow();
     expect(first.agendas).toEqual([]);
@@ -181,8 +181,8 @@ describe("single-owner queue, capacity and lifecycle contracts", () => {
   });
 
   test("all Agent participations must end before atomic deletion can succeed", () => {
-    const person = Agent.add({ label: "resident" });
-    const world = World.add();
+    const person = Agent.create({ label: "resident" });
+    const world = World.create();
     world.add(person);
     const queue = ServiceQueue.add<typeof person>();
     const queued = queue.add(person);
@@ -203,7 +203,7 @@ describe("single-owner queue, capacity and lifecycle contracts", () => {
   });
 
   test("duplicate queue participation protects the Agent until the last entry leaves", () => {
-    const person = Agent.add({ label: "same resident" });
+    const person = Agent.create({ label: "same resident" });
     const queue = ServiceQueue.add<typeof person>();
     queue.add(person);
     queue.add(person);
@@ -216,7 +216,7 @@ describe("single-owner queue, capacity and lifecycle contracts", () => {
   });
 
   test("multiple requests by one Agent retain independent lifecycle participation", () => {
-    const person = Agent.add({ label: "same requester" });
+    const person = Agent.create({ label: "same requester" });
     const capacity = Resource.add<typeof person>({ capacity: 1 });
     const first = capacity.request({ owner: person });
     const second = capacity.request({ owner: person });
@@ -231,7 +231,7 @@ describe("single-owner queue, capacity and lifecycle contracts", () => {
 
 describe("bounded producer-consumer transfer", () => {
   test("undefined is a completed payload when get status is received", () => {
-    const store = Store.add<undefined>({ capacity: 1 });
+    const store = Store.create<undefined>({ capacity: 1 });
     const consumer = store.get();
     expect(consumer.status).toBe("waiting");
     const producer = store.put(undefined);
@@ -246,7 +246,7 @@ describe("bounded producer-consumer transfer", () => {
   });
 
   test("waiting producer cancellation preserves FIFO and never removes a completed item", () => {
-    const store = Store.add<string>({ capacity: 1 });
+    const store = Store.create<string>({ capacity: 1 });
     const first = store.put("first");
     const cancelled = store.put("cancelled");
     const next = store.put("next");
@@ -259,11 +259,11 @@ describe("bounded producer-consumer transfer", () => {
   });
 
   test("waiting consumer cancellation preserves FIFO and receiver provenance", () => {
-    const store = Store.add<string>({ capacity: 1 });
+    const store = Store.create<string>({ capacity: 1 });
     const cancelled = store.get();
     const next = store.get();
     expect(() => store.cancelGet({ ...next })).toThrow();
-    expect(() => Store.add<string>({ capacity: 1 }).cancelGet(next)).toThrow();
+    expect(() => Store.create<string>({ capacity: 1 }).cancelGet(next)).toThrow();
     store.cancelGet(cancelled);
     store.put("next");
     expect(cancelled.status).toBe("cancelled");
@@ -272,9 +272,9 @@ describe("bounded producer-consumer transfer", () => {
   });
 
   test("stored and blocked Agent values both protect deletion until removal", () => {
-    const first = Agent.add({ number: 1 });
-    const second = Agent.add({ number: 2 });
-    const store = Store.add<typeof first>({ capacity: 1 });
+    const first = Agent.create({ number: 1 });
+    const second = Agent.create({ number: 2 });
+    const store = Store.create<typeof first>({ capacity: 1 });
     store.put(first);
     const blocked = store.put(second);
     expect(() => first.delete()).toThrow();
@@ -287,8 +287,8 @@ describe("bounded producer-consumer transfer", () => {
   });
 
   test("duplicate stored and blocked Agent values protect until the final consumption", () => {
-    const item = Agent.add({ number: 1 });
-    const store = Store.add<typeof item>({ capacity: 1 });
+    const item = Agent.create({ number: 1 });
+    const store = Store.create<typeof item>({ capacity: 1 });
     store.put(item);
     const blocked = store.put(item);
     expect(store.take()).toBe(item);
@@ -302,7 +302,7 @@ describe("bounded producer-consumer transfer", () => {
 
 describe("explicit conditions and observation", () => {
   test("Signal evaluates every proposed predicate before committing satisfaction", () => {
-    const signal = Signal.add(0);
+    const signal = Signal.create(0);
     const satisfied = signal.wait(value => value === 1);
     const error = new Error("predicate failed");
     signal.wait(value => { if (value === 1) throw error; return false; });
@@ -312,7 +312,7 @@ describe("explicit conditions and observation", () => {
   });
 
   test("Signal rejects asynchronous predicates instead of treating Promise as true", () => {
-    const signal = Signal.add(0);
+    const signal = Signal.create(0);
     const asyncPredicate = (async () => true) as unknown as (value: number) => boolean;
     expect(() => signal.wait(asyncPredicate)).toThrow();
     const thenablePredicate = (() => Promise.resolve(true)) as unknown as (value: number) => boolean;
@@ -321,7 +321,7 @@ describe("explicit conditions and observation", () => {
   });
 
   test("a predicate that becomes asynchronous cannot partially commit Signal.set", () => {
-    const signal = Signal.add(0);
+    const signal = Signal.create(0);
     const first = signal.wait(value => value === 1);
     const changing = ((value: number) => value === 0 ? false : Promise.resolve(true)) as unknown as (value: number) => boolean;
     const second = signal.wait(changing);
@@ -332,12 +332,12 @@ describe("explicit conditions and observation", () => {
   });
 
   test("Signal satisfaction is one shot and issued cancellation is receiver-specific", () => {
-    const signal = Signal.add(0);
+    const signal = Signal.create(0);
     const immediate = signal.wait(value => value === 0);
     const delayed = signal.wait(value => value === 1);
     expect(immediate.status).toBe("satisfied");
     expect(() => signal.cancel({ ...delayed })).toThrow();
-    expect(() => Signal.add(0).cancel(delayed)).toThrow();
+    expect(() => Signal.create(0).cancel(delayed)).toThrow();
     signal.set(1);
     signal.set(0);
     signal.cancel(delayed);
@@ -345,7 +345,7 @@ describe("explicit conditions and observation", () => {
   });
 
   test("time weighting uses explicit intervals, equal-time replacement and pure reads", () => {
-    const weighted = TimeWeighted.add({ at: 2, value: 3 });
+    const weighted = TimeWeighted.create({ at: 2, value: 3 });
     weighted.set({ at: 5, value: 9 });
     weighted.set({ at: 5, value: 1 });
     const expected = { duration: 8, integral: 14, mean: 1.75 };
@@ -354,11 +354,11 @@ describe("explicit conditions and observation", () => {
     expect(() => weighted.set({ at: 4, value: 100 })).toThrow();
     expect(() => weighted.set({ at: 6, value: Infinity })).toThrow();
     expect(weighted.read({ until: 10 })).toEqual(expected);
-    expect(TimeWeighted.add({ value: 1 }).read({ until: 0 })).toEqual({ duration: 0, integral: 0, mean: undefined });
+    expect(TimeWeighted.create({ value: 1 }).read({ until: 0 })).toEqual({ duration: 0, integral: 0, mean: undefined });
   });
 
   test("nonfinite time-weighted arithmetic rejects without publishing a partial set", () => {
-    const weighted = TimeWeighted.add({ value: Number.MAX_VALUE });
+    const weighted = TimeWeighted.create({ value: Number.MAX_VALUE });
     expect(() => weighted.set({ at: 2, value: 0 })).toThrow();
     expect(weighted.read({ until: 0 })).toEqual({ duration: 0, integral: 0, mean: undefined });
   });
@@ -383,7 +383,7 @@ describe("explicit conditions and observation", () => {
 describe("explicit random draws", () => {
   test("nonconstant triangular draws use one uniform and the inverse distribution", () => {
     for (const mode of [-3, 1, 9]) {
-      const random = Random.add({ seed: 41 });
+      const random = Random.create({ seed: 41 });
       const copy = random.copy();
       const uniform = copy.number();
       const min = -3;
@@ -398,7 +398,7 @@ describe("explicit random draws", () => {
   });
 
   test("invalid and degenerate distribution calls preserve complete Random continuation", () => {
-    const random = Random.add({ seed: 31 });
+    const random = Random.create({ seed: 31 });
     random.number({ distribution: "normal" });
     const before = random.state;
     for (const probability of [0, 1]) expect(random.number({ distribution: "bernoulli", probability })).toBe(probability);
@@ -410,7 +410,7 @@ describe("explicit random draws", () => {
   });
 
   test("copied cached streams reproduce both gamma regimes without sharing state", () => {
-    const random = Random.add({ seed: 37 });
+    const random = Random.create({ seed: 37 });
     random.number({ distribution: "normal" });
     const copy = random.copy();
     for (const shape of [0.25, 1, 4]) {
@@ -429,7 +429,7 @@ describe("explicit random draws", () => {
     const count = 20_000;
     const rate = 2;
     for (const shape of [0.5, 2, 5]) {
-      const random = Random.add({ seed: 47 + shape * 2 });
+      const random = Random.create({ seed: 47 + shape * 2 });
       let sum = 0;
       let squaredSum = 0;
       for (let index = 0; index < count; index++) {

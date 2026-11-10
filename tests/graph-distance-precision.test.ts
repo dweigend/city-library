@@ -2,7 +2,7 @@ import { expect, test } from "bun:test";
 import { Graph } from "city-library";
 
 test("single captured costs preserve binary64 bits across exponent and significand boundaries", () => {
-  const graph = Graph.add<object, { cost: number }>({ edgeState: { cost: 0 } });
+  const graph = Graph.create<object, { cost: number }>({ edgeState: { cost: 0 } });
   const a = graph.nodes.add({}), b = graph.nodes.add({});
   const edge = graph.edges.add({ from: a, to: b, directed: true });
   const view = new DataView(new ArrayBuffer(8));
@@ -26,7 +26,7 @@ test("single captured costs preserve binary64 bits across exponent and significa
 test("fractional weighted paths match a fixed-lattice integer oracle in either insertion order", () => {
   const scale = 2 ** -20;
   for (const signed of [false, true]) for (const reverse of [false, true]) {
-    const graph = Graph.add<{ index: number }, { cost: number }>({ parallel: true, edgeState: { cost: 0 } });
+    const graph = Graph.create<{ index: number }, { cost: number }>({ parallel: true, edgeState: { cost: 0 } });
     const nodes = Array.from({ length: 9 }, (_, index) => graph.nodes.add({ index }));
     const coefficients = signed ? [1n << 80n, 1n, 3n, -(1n << 80n), -5n, 0n] : [1n << 80n, 1n, 3n, 7n, 0n];
     const edges: { from: number; to: number; units: bigint }[] = [];
@@ -57,7 +57,7 @@ test("fractional weighted paths match a fixed-lattice integer oracle in either i
 
 test("captured fractional binary64 values are summed exactly rather than as decimal rationals", () => {
   const weights = [0.1, 0.2, 0.3, -0.2, -0.1, 0.125, -0.125];
-  const graph = Graph.add<object, { cost: number }>({ edgeState: { cost: 0 } });
+  const graph = Graph.create<object, { cost: number }>({ edgeState: { cost: 0 } });
   const nodes = Array.from({ length: weights.length + 1 }, () => graph.nodes.add({}));
   weights.forEach((cost, index) => graph.edges.add({ from: nodes[index]!, to: nodes[index + 1]!, directed: true, state: { cost } }));
   const result = graph.distances({ from: nodes[0]!, algorithm: "bellman-ford", cost: edge => edge.cost });
@@ -71,7 +71,7 @@ test("captured fractional binary64 values are summed exactly rather than as deci
 test("rounding handles both signs, normal exponent carries and ties to even", () => {
   for (const sign of [1, -1]) for (const exponent of [-1021, -200, 0, 53, 500, 970]) {
     const base = 2 ** exponent, halfUlp = 2 ** (exponent - 53);
-    const graph = Graph.add<object, { cost: number }>({ edgeState: { cost: sign * halfUlp } });
+    const graph = Graph.create<object, { cost: number }>({ edgeState: { cost: sign * halfUlp } });
     const nodes = Array.from({ length: 5 }, () => graph.nodes.add({}));
     graph.edges.add({ from: nodes[0]!, to: nodes[1]!, directed: true, state: { cost: sign * base } });
     for (let index = 1; index < 4; index++) graph.edges.add({ from: nodes[index]!, to: nodes[index + 1]!, directed: true });
@@ -80,7 +80,7 @@ test("rounding handles both signs, normal exponent carries and ties to even", ()
     expect(result.get(nodes[3]!)).toBe(sign * (base + 2 * halfUlp));
     expect(result.get(nodes[4]!)).toBe(sign * (base + 4 * halfUlp));
   }
-  const graph = Graph.add<object, { cost: number }>({ edgeState: { cost: 1 } });
+  const graph = Graph.create<object, { cost: number }>({ edgeState: { cost: 1 } });
   const a = graph.nodes.add({}), b = graph.nodes.add({}), c = graph.nodes.add({});
   graph.edges.add({ from: a, to: b, directed: true, state: { cost: 2 ** 54 - 2 } });
   graph.edges.add({ from: b, to: c, directed: true });
@@ -90,7 +90,7 @@ test("rounding handles both signs, normal exponent carries and ties to even", ()
 test("tiny values survive large signed prefixes and the normal/subnormal boundary", () => {
   const tiny = Number.MIN_VALUE, normal = 2 ** -1022;
   for (const sign of [1, -1]) for (const prefix of [2 ** 100, Number.MAX_VALUE]) {
-    const graph = Graph.add<object, { cost: number }>({ edgeState: { cost: 0 } });
+    const graph = Graph.create<object, { cost: number }>({ edgeState: { cost: 0 } });
     const weights = [sign * prefix, sign * tiny, -sign * prefix, sign * (normal - tiny), sign * tiny];
     const nodes = Array.from({ length: weights.length + 1 }, () => graph.nodes.add({}));
     weights.forEach((cost, index) => graph.edges.add({ from: nodes[index]!, to: nodes[index + 1]!, directed: true, state: { cost } }));
@@ -103,7 +103,7 @@ test("tiny values survive large signed prefixes and the normal/subnormal boundar
 
 test("a subnormal negative cycle stays detectable behind enormous prefixes", () => {
   for (const reverse of [false, true]) for (const prefix of [2 ** 53, Number.MAX_VALUE]) {
-    const graph = Graph.add<object, { cost: number }>({ edgeState: { cost: 0 } });
+    const graph = Graph.create<object, { cost: number }>({ edgeState: { cost: 0 } });
     const [start, a, b, isolate] = Array.from({ length: 4 }, () => graph.nodes.add({}));
     const edges = [
       { from: start!, to: a!, directed: true, state: { cost: prefix } },
@@ -120,7 +120,7 @@ test("a subnormal negative cycle stays detectable behind enormous prefixes", () 
 
 test("finite-rounded overflow includes discarded candidates and allows MAX_VALUE plus a tiny tail", () => {
   for (const sign of [1, -1]) for (const tail of [1, Number.MIN_VALUE, 2 ** 969, 2 ** 970]) {
-    const graph = Graph.add<object, { cost: number }>({ edgeState: { cost: sign * tail } });
+    const graph = Graph.create<object, { cost: number }>({ edgeState: { cost: sign * tail } });
     const a = graph.nodes.add({}), b = graph.nodes.add({}), c = graph.nodes.add({});
     graph.edges.add({ from: a, to: b, directed: true, state: { cost: sign * Number.MAX_VALUE } });
     graph.edges.add({ from: b, to: c, directed: true });
@@ -131,7 +131,7 @@ test("finite-rounded overflow includes discarded candidates and allows MAX_VALUE
     }
   }
   for (const algorithm of ["auto", "dijkstra", "bellman-ford"] as const) {
-    const graph = Graph.add<object, { cost: number }>({ edgeState: { cost: Number.MAX_VALUE } });
+    const graph = Graph.create<object, { cost: number }>({ edgeState: { cost: Number.MAX_VALUE } });
     const a = graph.nodes.add({}), b = graph.nodes.add({}), c = graph.nodes.add({});
     graph.edges.add({ from: a, to: b, directed: true });
     graph.edges.add({ from: a, to: c, directed: true, state: { cost: 0 } });
@@ -142,7 +142,7 @@ test("finite-rounded overflow includes discarded candidates and allows MAX_VALUE
 
 test("summary sums published distances exactly, independent of summand order and before division", () => {
   for (const weights of [[2 ** 53, 1, 1], [1, 1, 2 ** 53], [Number.MIN_VALUE, Number.MIN_VALUE, 2 * Number.MIN_VALUE]]) {
-    const graph = Graph.add<object, { cost: number }>({ edgeState: { cost: 0 } });
+    const graph = Graph.create<object, { cost: number }>({ edgeState: { cost: 0 } });
     for (const cost of weights) {
       const from = graph.nodes.add({}), to = graph.nodes.add({});
       graph.edges.add({ from, to, directed: true, state: { cost } });
@@ -152,7 +152,7 @@ test("summary sums published distances exactly, independent of summand order and
     expect(summary.mean).toBe(weights[0] === Number.MIN_VALUE ? 4 * Number.MIN_VALUE / 3 : (2 ** 53 + 2) / 3);
   }
   for (const tail of [1, 2 ** 970]) {
-    const graph = Graph.add<object, { cost: number }>({ edgeState: { cost: 0 } });
+    const graph = Graph.create<object, { cost: number }>({ edgeState: { cost: 0 } });
     for (const cost of [Number.MAX_VALUE, tail]) {
       const from = graph.nodes.add({}), to = graph.nodes.add({});
       graph.edges.add({ from, to, directed: true, state: { cost } });

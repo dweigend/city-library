@@ -1,6 +1,6 @@
 import { strict as assert } from "node:assert";
 import { Random } from "city-library";
-const standard = Random.add({ seed: 19 }), scaled = Random.add({ seed: 19 });
+const standard = Random.create({ seed: 19 }), scaled = Random.create({ seed: 19 });
 for (let i = 0; i < 6; i++) {
   const z = standard.number({ distribution: "normal" });
   assert.ok(Number.isFinite(z));

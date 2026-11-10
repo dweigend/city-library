@@ -3,13 +3,13 @@ import { Agent, World, run } from "city-library";
 
 const months = 12;
 
-const household = Agent.add({
+const household = Agent.create({
   balance: 1000,
   income: 2400,
   rent: 900,
 });
 
-const world = World.add();
+const world = World.create();
 
 world.add(household);
 

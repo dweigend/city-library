@@ -99,9 +99,9 @@ type Phase = "idle" | "reserved" | "running" | "repair";
 type Workshop = ReturnType<typeof createWorkshop>;
 
 function createWorkshop() {
-  const world = World.add();
-  const inventory = Agent.add({ quantity: 2, consumed: 0 });
-  const machine = Agent.add<{
+  const world = World.create();
+  const inventory = Agent.create({ quantity: 2, consumed: 0 });
+  const machine = Agent.create<{
     phase: Phase; occupant: User | null; readyAt: number; completed: number;
   }>({ phase: "idle", occupant: null, readyAt: 0, completed: 0 });
 

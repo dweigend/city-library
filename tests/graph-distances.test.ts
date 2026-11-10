@@ -3,7 +3,7 @@ import { Agent, Graph, Random, World } from "city-library";
 
 test("all algorithms agree with independent Floyd–Warshall on mixed multigraphs", () => {
   for (let fixture = 0; fixture < 64; fixture++) {
-    const graph = Graph.add<{ index: number }, { weight: number }>({ parallel: true, selfLoops: true, edgeState: { weight: 1 } });
+    const graph = Graph.create<{ index: number }, { weight: number }>({ parallel: true, selfLoops: true, edgeState: { weight: 1 } });
     const nodes = Array.from({ length: 7 }, (_, index) => graph.nodes.add({ index }));
     const oracle = Array.from({ length: 7 }, (_, from) => Array.from({ length: 7 }, (_, to) => from === to ? 0 : Infinity));
     let seed = fixture + 1;
@@ -41,7 +41,7 @@ test("all algorithms agree with independent Floyd–Warshall on mixed multigraph
 });
 
 test("signed acyclic distances agree with independent dynamic recurrence", () => {
-  const graph = Graph.add<{ index: number }, { weight: number }>({ parallel: true, edgeState: { weight: 1 } });
+  const graph = Graph.create<{ index: number }, { weight: number }>({ parallel: true, edgeState: { weight: 1 } });
   const nodes = Array.from({ length: 24 }, (_, index) => graph.nodes.add({ index }));
   for (let from = 0; from < nodes.length; from++) for (let to = from + 1; to < nodes.length; to++)
     if ((from + to) % 3 !== 0) graph.edges.add({ from: nodes[from]!, to: nodes[to]!, directed: true, state: { weight: (from * 3 + to) % 9 - 4 } });
@@ -57,7 +57,7 @@ test("signed acyclic distances agree with independent dynamic recurrence", () =>
 });
 
 test("negative cycles reject exactly the affected single sources and every all-pairs query", () => {
-  const graph = Graph.add<object, { weight: number }>({ parallel: true, selfLoops: true, edgeState: { weight: 1 } });
+  const graph = Graph.create<object, { weight: number }>({ parallel: true, selfLoops: true, edgeState: { weight: 1 } });
   const [a, b, c, isolated] = Array.from({ length: 4 }, () => graph.nodes.add({}));
   graph.edges.add({ from: a!, to: b!, directed: true });
   const cycle = graph.edges.add({ from: c!, to: c!, directed: true, state: { weight: -1 } });
@@ -74,14 +74,14 @@ test("negative cycles reject exactly the affected single sources and every all-p
   expect(graph.distances({ from: a!, ...options }).get(c!)).toBe(-2);
   graph.edges.add({ from: c!, to: b!, directed: true });
   expect(() => graph.distances({ from: a!, ...options })).toThrow(RangeError);
-  const undirected = Graph.add({ selfLoops: true });
+  const undirected = Graph.create({ selfLoops: true });
   const first = undirected.nodes.add({}), second = undirected.nodes.add({});
   undirected.edges.add({ from: first, to: second });
   expect(() => undirected.distances({ from: first, cost: () => -1, algorithm: "bellman-ford" })).toThrow(RangeError);
 });
 
 test("every query captures costs once in current insertion order and permits nested pure queries", () => {
-  const graph = Graph.add<object, { weight: number }>({ parallel: true, edgeState: { weight: 2 } });
+  const graph = Graph.create<object, { weight: number }>({ parallel: true, edgeState: { weight: 2 } });
   const a = graph.nodes.add({}), b = graph.nodes.add({}), c = graph.nodes.add({});
   const first = graph.edges.add({ from: a, to: b });
   const deleted = graph.edges.add({ from: b, to: c });
@@ -113,7 +113,7 @@ test("every query captures costs once in current insertion order and permits nes
 });
 
 test("invalid options and endpoints fail before callbacks, without reading accessors", () => {
-  const graph = Graph.add({ selfLoops: true });
+  const graph = Graph.create({ selfLoops: true });
   const node = graph.nodes.add({});
   graph.edges.add({ from: node, to: node });
   let calls = 0, reads = 0;
@@ -142,7 +142,7 @@ test("invalid options and endpoints fail before callbacks, without reading acces
 });
 
 test("bad callback values reject, exceptions retain identity and guards release after failure", () => {
-  const graph = Graph.add();
+  const graph = Graph.create();
   const a = graph.nodes.add({}), b = graph.nodes.add({});
   graph.edges.add({ from: a, to: b });
   for (const value of [NaN, Infinity, -Infinity, undefined, null, "1", 1n, {}, Promise.resolve(1), { then() {} }])
@@ -155,11 +155,11 @@ test("bad callback values reject, exceptions retain identity and guards release 
 });
 
 test("cost callbacks cannot change graph structure, including canonical Agent deletion", () => {
-  const graph = Graph.add<ReturnType<typeof Agent.add>>();
-  const a = graph.nodes.add(Agent.add()), b = graph.nodes.add(Agent.add()), c = graph.nodes.add(Agent.add());
+  const graph = Graph.create<ReturnType<typeof Agent.create>>();
+  const a = graph.nodes.add(Agent.create()), b = graph.nodes.add(Agent.create()), c = graph.nodes.add(Agent.create());
   const edge = graph.edges.add({ from: a, to: b });
   for (const mutate of [
-    () => graph.nodes.add(Agent.add()), () => graph.nodes.delete(b), () => edge.delete(),
+    () => graph.nodes.add(Agent.create()), () => graph.nodes.delete(b), () => edge.delete(),
     () => graph.delete(), () => graph.delete({ edgesOnly: true }), () => b.delete(),
     () => graph.edges.add({ from: a, to: c, directed: true }),
   ]) {
@@ -173,7 +173,7 @@ test("cost callbacks cannot change graph structure, including canonical Agent de
 });
 
 test("distance arithmetic rejects overflow in every weighted algorithm and summaries", () => {
-  const graph = Graph.add();
+  const graph = Graph.create();
   const a = graph.nodes.add({}), b = graph.nodes.add({}), c = graph.nodes.add({});
   graph.edges.add({ from: a, to: b, directed: true });
   graph.edges.add({ from: b, to: c, directed: true });
@@ -184,10 +184,10 @@ test("distance arithmetic rejects overflow in every weighted algorithm and summa
 });
 
 test("pure public observations preserve World/RNG authority and independent instances", () => {
-  const random = Random.add({ seed: 9 });
-  const world = World.add({ random });
-  const a = world.add(Agent.add({ energy: 1 })), b = world.add(Agent.add({ energy: 2 }));
-  const graph = Graph.add<typeof a>();
+  const random = Random.create({ seed: 9 });
+  const world = World.create({ random });
+  const a = world.add(Agent.create({ energy: 1 })), b = world.add(Agent.create({ energy: 2 }));
+  const graph = Graph.create<typeof a>();
   graph.nodes.add(a); graph.nodes.add(b); graph.edges.add({ from: a, to: b });
   const state = random.state;
   expect(graph.distanceSummary().mean).toBe(1);
@@ -195,7 +195,7 @@ test("pure public observations preserve World/RNG authority and independent inst
   expect(graph.distances({ from: a }).keys().next().value).toBe(a);
   expect(random.state).toEqual(state); expect(world.tick.value).toBe(0);
   expect(a.energy).toBe(1); expect(b.energy).toBe(2);
-  const independent = Graph.add<typeof a>();
+  const independent = Graph.create<typeof a>();
   independent.nodes.add(a);
   expect(independent.distanceSummary().reachablePairs).toBe(0);
   graph.delete();
@@ -204,7 +204,7 @@ test("pure public observations preserve World/RNG authority and independent inst
 });
 
 test("iterative breadth and heap Dijkstra handle a long directed chain", () => {
-  const graph = Graph.add<{ index: number }>({ parallel: true });
+  const graph = Graph.create<{ index: number }>({ parallel: true });
   const nodes = Array.from({ length: 12000 }, (_, index) => graph.nodes.add({ index }));
   for (let index = 1; index < nodes.length; index++) graph.edges.add({ from: nodes[index - 1]!, to: nodes[index]!, directed: true });
   expect(graph.distances({ from: nodes[0]! }).get(nodes.at(-1)!)).toBe(11999);

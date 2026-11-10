@@ -23,12 +23,12 @@ describe("selected transport source rules", () => {
       walkerVisionDist: 30,
     });
     model.step(3);
-    const destinationGrid = Grid.add(
+    const destinationGrid = Grid.create(
       { x: 101, y: 101, boundary: "wrap" },
       { state: { popularity: 0, route: false } },
     );
     const destination = destinationGrid.fieldAt({ x: 30, y: 0 })!;
-    const walker = Agent.add({ kind: "walker" as const, goal: destination });
+    const walker = Agent.create({ kind: "walker" as const, goal: destination });
     const choices = Array.from({ length: 100 }, () =>
       model.bestWayTo(walker, destination),
     );

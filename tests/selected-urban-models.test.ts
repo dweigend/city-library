@@ -123,7 +123,7 @@ test("Recycling quantizes regeneration and preserves the conditional waste draw"
   const noTrial = recycling({ seed: 1, numRecyclers: 0, numWastefuls: 0 });
   noTrial.setResources(noTrial.read().cells.map(field => field.x === 0 && field.y === 0 ? "waste" : "new"));
   noTrial.advance();
-  const stream = Random.add({ seed: 1 });
+  const stream = Random.create({ seed: 1 });
   expect(stream.number()).toBeGreaterThan(0.2);
   expect(noTrial.read().randomState).toEqual(stream.state); // first trial fails; no second draw
   expect(noTrial.read().landPercentages.waste).toBeCloseTo(100 / 1225, 12);
@@ -133,7 +133,7 @@ test("Recycling zero regeneration still consumes source trials and empty populat
   const model = recycling({ seed: 183, numRecyclers: 0, numWastefuls: 0, resourceRegeneration: 0 });
   model.setResources(model.read().cells.map(field => field.x === 0 && field.y === 0 ? "recycled" : "new"));
   model.advance();
-  const stream = Random.add({ seed: 183 }); stream.number();
+  const stream = Random.create({ seed: 183 }); stream.number();
   expect(model.read().randomState).toEqual(stream.state);
   expect(model.read().landPercentages.recycled).toBeCloseTo(100 / 1225, 12);
   expect(model.read().tick).toBe(1);

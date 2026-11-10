@@ -26,7 +26,7 @@ function logSum(n: number): number {
 }
 
 test("both closed option branches reject wrong types/ranges/keys before word or normal cache changes", () => {
-  const random = Random.add({ seed: 81 });
+  const random = Random.create({ seed: 81 });
   random.number({ distribution: "normal" });
   const before = random.state;
   for (const distribution of ["exponential", "poisson"] as const) {
@@ -71,7 +71,7 @@ test("exponential keeps literal log transform, signed zero, finite underflow and
   const endpoint = supplied([1 - 2 ** -32]);
   expect(exponentialDraw({ distribution: "exponential", mean: 2 / Math.LN2 }, endpoint.draw)).toBe((-2 / Math.LN2) * Math.log(2 ** -32));
   expect(endpoint.count).toBe(1);
-  const random = Random.add({ seed: 2 }), control = random.copy();
+  const random = Random.create({ seed: 2 }), control = random.copy();
   control.number();
   expect(() => random.number({ distribution: "exponential", mean: Number.MAX_VALUE })).toThrow(RangeError);
   expect(random.state).toEqual(control.state);
@@ -155,8 +155,8 @@ test("PTRS has no inherited million-attempt retry cap", () => {
 });
 
 test("mixed distributions preserve cached normal, copy/local/state and World ownership", () => {
-  const random = Random.add({ seed: 2026 }); random.number({ distribution: "normal" });
-  const before = random.state, twin = random.copy(), world = World.add({ random });
+  const random = Random.create({ seed: 2026 }); random.number({ distribution: "normal" });
+  const before = random.state, twin = random.copy(), world = World.create({ random });
   const values = random.local(() => [random.number({ distribution: "poisson", mean: 150 }), random.number({ distribution: "exponential", mean: 2 / Math.LN2 })]);
   expect(values).toEqual([twin.number({ distribution: "poisson", mean: 150 }), twin.number({ distribution: "exponential", mean: 2 / Math.LN2 })]);
   expect(random.state).toEqual(before);
@@ -172,7 +172,7 @@ test("mixed distributions preserve cached normal, copy/local/state and World own
 
 test("high-mean Poisson samples match independently computed mode masses and analytical moments", () => {
   for (const mean of [30, 150, 100000]) {
-    const random = Random.add({ seed: 20261106 });
+    const random = Random.create({ seed: 20261106 });
     const count = 80000;
     let sum = 0, squares = 0, modeCount = 0, supported = true;
     for (let index = 0; index < count; index++) {

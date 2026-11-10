@@ -48,7 +48,7 @@ test("Structure1 naturally reaches a zero recolor error after committing activit
 
 test("Structure setup/noise consume explicit public choices and pure reads do not", () => {
   const one = structureOne({ seed: 19 }), two = structureTwo({ seed: 19 });
-  const stream = Random.add({ seed: 19 });
+  const stream = Random.create({ seed: 19 });
   for (let i = 0; i < 16900; i++) stream.sample([-1, 1]);
   expect(one.read().randomState).toEqual(stream.state);
   expect(two.read().randomState).toEqual(stream.state);

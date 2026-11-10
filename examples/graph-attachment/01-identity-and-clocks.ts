@@ -1,0 +1,14 @@
+import assert from "node:assert/strict";
+import { Agenda, World } from "city-library";
+const world = World.create();
+const agenda = Agenda.create<string>();
+agenda.add({ at: 2, data: "arrival" });
+assert.equal(world.add(agenda), agenda);
+world.add(agenda);
+assert.deepEqual(world.agendas, [agenda]);
+assert.equal(agenda.time, 0);
+assert.equal(world.tick.value, 0);
+agenda.advance({ until: 3 });
+assert.equal(world.tick.value, 0);
+world.tick.advance(4);
+assert.equal(agenda.time, 3);

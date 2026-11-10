@@ -14,9 +14,9 @@ const diffusion = {
   rate: 1,
 };
 
-const world = World.add();
+const world = World.create();
 
-const grid = Grid.add(space, {
+const grid = Grid.create(space, {
   state: initialState,
 });
 

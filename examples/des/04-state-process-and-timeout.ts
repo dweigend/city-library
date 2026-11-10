@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { Agenda, Resource, Signal } from "city-library";
 
-const signal = Signal.add("red");
+const signal = Signal.create("red");
 const wait = signal.wait(value => value === "green");
 assert.equal(wait.status, "waiting");
 signal.set("green");
@@ -10,7 +10,7 @@ signal.cancel(wait);
 assert.equal(wait.status, "satisfied");
 
 // Ordinary model state owns the stage; Agenda owns only pending event data.
-const agenda = Agenda.add<{ kind: "resume"; generation: number }>();
+const agenda = Agenda.create<{ kind: "resume"; generation: number }>();
 let stage = 0;
 let generation = 0;
 let status: "passive" | "scheduled" | "cancelled" = "passive";
@@ -58,7 +58,7 @@ assert.equal(status, "cancelled");
 assert.throws(() => schedule(agenda.time));
 
 // At equal time first-dispatched wins. No timer or Promise participates.
-const races = Agenda.add<"release" | "timeout">();
+const races = Agenda.create<"release" | "timeout">();
 const desk = Resource.add<string>({ capacity: 1 });
 const holder = desk.request({ owner: "resident A" });
 const waiter = desk.request({ owner: "resident B" });
@@ -73,7 +73,7 @@ for (let remaining = 2; remaining > 0; remaining--) {
 assert.equal(waiter.status, "cancelled");
 assert.equal(desk.used, 0);
 
-const releaseFirst = Agenda.add<"release" | "timeout">();
+const releaseFirst = Agenda.create<"release" | "timeout">();
 const reverseDesk = Resource.add<string>({ capacity: 1 });
 const reverseHolder = reverseDesk.request({ owner: "resident A" });
 const reverseWaiter = reverseDesk.request({ owner: "resident B" });

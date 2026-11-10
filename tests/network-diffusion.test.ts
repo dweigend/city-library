@@ -129,7 +129,7 @@ describe("headless network diffusion", () => {
     const model = createNetworkDiffusionModel({ count: 6, topology: "ring", transmission: 0.5, seed: 1 });
     model.select(model.read().agents[2]!.id);
     model.seedSelected();
-    const random = Random.add({ seed: 1 });
+    const random = Random.create({ seed: 1 });
     const expected = [random.number() < 0.75, random.number() < 0.5, random.number() < 0.5];
     model.advance();
     const after = model.read();
