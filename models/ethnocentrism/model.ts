@@ -337,9 +337,8 @@ export function create(options: Partial<EthnocentrismParameters> = {}) {
   };
 }
 export const model = {
-  title: 'Ethnocentrism',
-  description:
-    'Local cooperation, immigration, inheritance and mutation. Wilensky (2003), CC BY-NC-SA 3.0.',
+  title: "Ethnocentrism",
+  description: "Agents choose whether to help neighbors of their own or other groups; strategies spread by reproduction. Wilensky (2003), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<EthnocentrismParameters, ReturnType<typeof create>>;

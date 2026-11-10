@@ -1,10 +1,10 @@
-# Fur
+# Fur Patterns
 
 Pigment cells compare short-range activation with longer-range inhibition in elliptical neighborhoods. Fixed geometry and binary pigment states can create spots or stripes without modeling tissue growth or species-specific genetics.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Fur`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Fur Patterns`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
 
 Headless, from a script in the repository root:
 

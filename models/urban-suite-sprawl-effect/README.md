@@ -1,10 +1,10 @@
-# Urban Suite - Sprawl Effect
+# Urban Sprawl
 
 Seekers follow attraction, settle probabilistically and modify the shared landscape; heavily used sites can reset abruptly. The source's reset rule illustrates feedback rather than realistic land-market clearing or zoning.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Urban Suite - Sprawl Effect`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Urban Sprawl`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
 
 Headless, from a script in the repository root:
 

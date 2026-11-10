@@ -52,7 +52,7 @@ export function create() {
 
 export const model = {
   title: "Scarce Resource",
-  description: "One indivisible unit and two applicants; explicit priority decides allocation.",
+  description: "Two applicants want one indivisible unit; you decide who receives it.",
   inputs: {},
   create,
 } satisfies Definition<Record<string, never>, ReturnType<typeof create>>;

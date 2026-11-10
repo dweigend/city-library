@@ -67,5 +67,5 @@ export function create(options: Partial<BatteryParameters> = {}) {
   };
 }
 export const model = { title: "Solar Battery Microgrid",
-  description: "Illustrative lossless hourly storage with linear reserve crossings; no grid engineering forecast.", inputs, create,
+  description: "Daytime solar power charges a battery that covers household demand at night. Illustrative only.", inputs, create,
 } satisfies Definition<BatteryParameters, ReturnType<typeof create>>;

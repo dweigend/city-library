@@ -1,10 +1,10 @@
-# Traffic Basic
+# Traffic on One Lane
 
 Cars circulate on a closed lane, accelerating in free space and braking behind nearby vehicles. Stop-and-go waves can arise without an external bottleneck under these simplified following rules.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Traffic Basic`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Traffic on One Lane`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
 
 Headless, from a script in the repository root:
 

@@ -32,7 +32,7 @@ const binding = defineUI(model, {
   views: [
     {
       type: "spatial",
-      label: "GenEvo 1 Genetic Switch",
+      label: "Lac Operon Genetic Switch",
       data: (state) => ({
         width: state.width,
         height: state.height,

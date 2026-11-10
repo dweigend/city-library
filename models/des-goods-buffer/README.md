@@ -1,4 +1,4 @@
-# DES Urban Goods Buffer
+# Urban Goods Buffer
 
 A bounded consolidation store with producer backpressure and timed collections. Minutes and indivisible crates.
 

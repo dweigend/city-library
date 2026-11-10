@@ -1,10 +1,10 @@
-# epiDEM Basic
+# Basic Epidemic
 
 Moving susceptible people can become infected and later recover in a closed population. Reported epidemic counts and R0 use the model's own infection history; they are not fitted estimates for a named disease.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `epiDEM Basic`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Basic Epidemic`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
 
 Headless, from a script in the repository root:
 
@@ -36,7 +36,7 @@ Other instance procedures: `setup`, `setupPeople`, `move`, `clearCount`, `infect
 
 Model-specific `read()` fields include `betaN`, `gamma`, `r0`, `nbInfectedPrevious`, `infectedCount`, `curedCount`, `cells`, `agents`.
 
-The [UI binding](ui.ts) presents `Tick`, `Infected`, `Recovered`, `R0`, `Infection rate`, `Recovery rate`, `epiDEM Basic`, `History`.
+The [UI binding](ui.ts) presents `Tick`, `Infected`, `Recovered`, `R0`, `Infection rate`, `Recovery rate`, `Basic Epidemic`, `History`.
 
 ## Sources and acceptance
 

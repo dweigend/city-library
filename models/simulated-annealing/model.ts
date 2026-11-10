@@ -231,8 +231,7 @@ export function create(options: Partial<AnnealingParameters> = {}) {
 }
 export const model = {
   title: "Simulated Annealing",
-  description:
-    "Anisotropic image energy and temperature-only swap acceptance. Stonedahl and Wilensky (2009), CC BY-NC-SA 3.0.",
+  description: "Image pieces swap places while a falling temperature lets the picture settle into order. Stonedahl and Wilensky (2009), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<AnnealingParameters, ReturnType<typeof create>>;

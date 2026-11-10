@@ -1,10 +1,10 @@
-# Life
+# Game of Life
 
 All cells count the old generation on a toroidal grid before births and deaths are committed. The familiar birth-at-three and survival-at-two-or-three rule is deterministic; initialization alone supplies variation.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Life`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Game of Life`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
 
 Headless, from a script in the repository root:
 

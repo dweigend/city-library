@@ -13,7 +13,7 @@ export const ui = defineUI(model, {
   },
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/GaltonBox",
-    label: "Source attribution · · Uri Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Uri Wilensky · CC BY-NC-SA 3.0",
   },
   monitors: [
     { label: "Tick", value: (s) => s.tick },

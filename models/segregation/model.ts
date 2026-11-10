@@ -217,7 +217,7 @@ export function create(options: Partial<SegregationParameters> = {}) {
 }
 export const model = {
   title: "Segregation",
-  description: "Local similarity preferences and sequential relocation. Adapted from Uri Wilensky (1997), CC BY-NC-SA 3.0.",
+  description: "Agents move when too few neighbors are like them; mild preferences create strong segregation. Adapted from Uri Wilensky (1997), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<SegregationParameters, ReturnType<typeof create>>;

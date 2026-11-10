@@ -213,7 +213,7 @@ export function create(options: Partial<Parameters> = {}) {
 }
 export const model = {
   title: "Hotelling's Law",
-  description: "Spatial price competition · Wilensky · CC BY-NC-SA 3.0",
+  description: "Stores compete for nearby customers by changing location or price. Wilensky, CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<Parameters, ReturnType<typeof create>>;

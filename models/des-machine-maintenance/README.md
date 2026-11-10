@@ -1,4 +1,4 @@
-# DES Machine Maintenance
+# Machine Maintenance
 
 Spatial machines fail, wait for repair teams and record time-weighted availability. Minutes; synthetic failure cycles.
 

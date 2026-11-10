@@ -1,10 +1,10 @@
-# Fire
+# Forest Fire
 
 Fire spreads only from the old burning membership to orthogonal tree neighbors, then becomes fading embers. Empty cells interrupt the front; the forest has no wind, fuel variation or regrowth.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Fire`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Forest Fire`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
 
 Headless, from a script in the repository root:
 

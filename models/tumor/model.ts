@@ -206,7 +206,7 @@ export function create(options: Partial<TumorParameters> = {}) {
     go,
   };
 }
-export const model = { title: "Tumor", inputs, create } satisfies Definition<
+export const model = { title: "Tumor Growth", description: "Stem cells and short-lived cells divide into a tumor, which treatments can target.", inputs, create } satisfies Definition<
   TumorParameters,
   ReturnType<typeof create>
 >;

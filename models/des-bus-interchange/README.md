@@ -1,4 +1,4 @@
-# DES Bus Interchange
+# Bus Interchange
 
 Graph-derived bus travel followed by FIFO berth service. World steps and Agenda minutes remain explicit.
 

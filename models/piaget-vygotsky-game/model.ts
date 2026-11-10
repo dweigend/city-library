@@ -316,9 +316,8 @@ export function create(options: Partial<DevelopmentParameters> = {}) {
   };
 }
 export const model = {
-  title: 'Piaget-Vygotsky Game',
-  description:
-    'Individual memory and socially bounded learning in repeated target throws. Wilensky (2005), CC BY-NC-SA 3.0.',
+  title: "Piaget-Vygotsky Game",
+  description: "Players learn to throw at a target alone or with help from better players nearby. Wilensky (2005), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<DevelopmentParameters, ReturnType<typeof create>>;

@@ -1,10 +1,10 @@
-# Urban Suite - Pollution
+# Urban Pollution and Health
 
 Plants reset local pollutant sources, trees remove pollution and moving people gain or lose health under the configured rules. The field and health measures are abstract rather than air-quality units or epidemiological risk estimates.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Urban Suite - Pollution`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Urban Pollution and Health`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
 
 Headless, from a script in the repository root:
 

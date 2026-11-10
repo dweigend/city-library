@@ -256,9 +256,8 @@ export function create(options: Partial<Parameters> = {}) {
   };
 }
 export const model = {
-  title: "Artificial Neural Net - Multilayer",
-  description:
-    "Sigmoid propagation and backpropagation. Wilensky (2006), CC BY-NC-SA 3.0.",
+  title: "Multilayer Neural Network",
+  description: "A two-input network with one hidden layer learns a logic function by backpropagation. Wilensky (2006), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<Parameters, ReturnType<typeof create>>;

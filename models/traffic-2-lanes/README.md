@@ -1,10 +1,10 @@
-# Traffic 2 Lanes
+# Two-Lane Traffic
 
 Cars accelerate, brake behind other cars and change lanes after patience is exhausted when the switching rule allows. The wrapping two-lane road omits merges and measured driver heterogeneity.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Traffic 2 Lanes`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Two-Lane Traffic`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
 
 Headless, from a script in the repository root:
 

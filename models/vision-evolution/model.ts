@@ -387,6 +387,7 @@ export function create(options: Partial<Parameters> = {}) {
 }
 export const model: Definition<Parameters, ReturnType<typeof create>> = {
   title: "Vision Evolution",
+  description: "Eye size changes how far creatures see in water and on land; selection changes eye size over generations.",
   inputs,
   create,
 };

@@ -1,10 +1,10 @@
-# Urban Suite - Structure from Randomness 2
+# Structure from Random Thresholds
 
 Staged potential averaging and signed noise feed a threshold whose activation persists. The irreversible displayed state and the changing potential are separate quantities, without buildings or resource budgets.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Urban Suite - Structure from Randomness 2`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Structure from Random Thresholds`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
 
 Headless, from a script in the repository root:
 

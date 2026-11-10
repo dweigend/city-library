@@ -1,4 +1,4 @@
-# DES Bike Redistribution
+# Bike Share Redistribution
 
 A closed bike fleet moves between bounded station stores along graph travel times. Bikes and minutes; synthetic demand.
 

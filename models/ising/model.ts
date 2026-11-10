@@ -134,9 +134,8 @@ export function create(options: Partial<IsingParameters> = {}) {
   };
 }
 export const model = {
-  title: "Ising",
-  description:
-    "Sequential Metropolis spin flips · Uri Wilensky · CC BY-NC-SA 3.0",
+  title: "Ising Model",
+  description: "Magnetic spins flip to match their neighbors; temperature decides whether order forms. Uri Wilensky, CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<IsingParameters, ReturnType<typeof create>>;

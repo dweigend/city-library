@@ -1,4 +1,4 @@
-# DES Civic Office
+# Civic Office Queue
 
 A finite morning queue, FIFO desks and explicit capacity changes. Minutes; synthetic scenario.
 

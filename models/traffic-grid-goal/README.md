@@ -1,10 +1,10 @@
-# Traffic Grid Goal
+# Traffic Grid with Destinations
 
 Cars choose local moves toward assigned destinations while respecting source-specific signals and following constraints. Local goal seeking is distinct from globally shortest or equilibrium routing.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Traffic Grid Goal`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Traffic Grid with Destinations`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
 
 Headless, from a script in the repository root:
 

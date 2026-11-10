@@ -1,10 +1,10 @@
-# Urban Suite - Awareness
+# Civic Awareness Spread
 
 People gain awareness through information centers and informed contacts, lose it through disuse and can become activists. Awareness points and thresholds are invented operational measures rather than observed attitudes.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Urban Suite - Awareness`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Civic Awareness Spread`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
 
 Headless, from a script in the repository root:
 

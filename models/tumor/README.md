@@ -1,10 +1,10 @@
-# Tumor
+# Tumor Growth
 
 Self-renewing stem cells and limited-lived transitory cells divide under different rules, with explicit treatment actions. Persistence after removing one compartment is a consequence of those selected cell hierarchies, not a clinical prediction.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Tumor`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Tumor Growth`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
 
 Headless, from a script in the repository root:
 

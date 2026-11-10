@@ -187,9 +187,8 @@ export function create(options: Partial<DLAParameters> = {}) {
   };
 }
 export const model = {
-  title: "DLA",
-  description:
-    "Off-lattice random walkers deposit onto a lattice aggregate. Wilensky (1997), CC BY-NC-SA 3.0.",
+  title: "Diffusion-Limited Aggregation",
+  description: "Randomly wandering particles stick to a growing cluster, which forms branching patterns. Wilensky (1997), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<DLAParameters, ReturnType<typeof create>>;

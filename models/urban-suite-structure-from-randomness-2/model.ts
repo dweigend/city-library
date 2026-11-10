@@ -108,7 +108,7 @@ export function create(options: Partial<StructureParameters> = {}) {
   };
 }
 export const model = {
-  title: "Urban Suite - Structure from Randomness 2",
-  description: "Noisy staged potential averaging with persistent threshold activation. Adapted from Wilensky (2007), CC BY-NC-SA3.0.",
+  title: "Structure from Random Thresholds",
+  description: "Averaged random potential activates cells above a threshold, and they stay active. Adapted from Wilensky (2007), CC BY-NC-SA 3.0.",
   inputs, create,
 } satisfies Definition<StructureParameters, ReturnType<typeof create>>;

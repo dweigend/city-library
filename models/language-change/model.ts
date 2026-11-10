@@ -216,9 +216,8 @@ export function create(options: Partial<LanguageChangeParameters> = {}) {
   };
 }
 export const model = {
-  title: 'Language Change',
-  description:
-    'Asynchronous grammar adoption on a preferential-attachment tree. Wilensky (2007), CC BY-NC-SA 3.0.',
+  title: "Language Change",
+  description: "Speakers in a social network adopt one of two grammars from their neighbors. Wilensky (2007), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<LanguageChangeParameters, ReturnType<typeof create>>;

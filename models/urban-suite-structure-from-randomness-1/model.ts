@@ -98,7 +98,7 @@ export function create(options: Partial<StructureParameters> = {}) {
   };
 }
 export const model = {
-  title: "Urban Suite - Structure from Randomness 1",
-  description: "Staged self-and-four-face averaging with optional signed noise and relative grayscale. Adapted from Wilensky (2007), CC BY-NC-SA3.0.",
+  title: "Structure from Random Averaging",
+  description: "Repeated neighborhood averaging of random values turns noise into smooth regions. Adapted from Wilensky (2007), CC BY-NC-SA 3.0.",
   inputs, create,
 } satisfies Definition<StructureParameters, ReturnType<typeof create>>;

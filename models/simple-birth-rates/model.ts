@@ -202,8 +202,7 @@ export function create(options: Partial<Parameters> = {}) {
 }
 export const model = {
   title: "Simple Birth Rates",
-  description:
-    "Fertility, demographic sampling and extinction studies. Wilensky (1997), CC BY-NC-SA 3.0.",
+  description: "Red and blue populations with different fertility share a limited carrying capacity. Wilensky (1997), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<Parameters, ReturnType<typeof create>>;

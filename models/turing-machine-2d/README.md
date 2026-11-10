@@ -1,10 +1,10 @@
-# Turing Machine 2D
+# Two-Dimensional Turing Machine
 
 Each moving head reads a binary field, follows one of four explicit state/symbol rules, writes and moves. Multiple heads share the tape, so activation order matters; a complex trace does not prove universal computation.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Turing Machine 2D`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Two-Dimensional Turing Machine`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
 
 Headless, from a script in the repository root:
 

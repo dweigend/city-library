@@ -1,4 +1,4 @@
-# DES Waste Collection
+# Waste Collection Tour
 
 A grid collection tour with a bounded truck and depot service. Load units and minutes; synthetic scenario.
 

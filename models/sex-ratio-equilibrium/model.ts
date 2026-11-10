@@ -367,6 +367,7 @@ export function create(options: Partial<Parameters> = {}) {
 }
 export const model: Definition<Parameters, ReturnType<typeof create>> = {
   title: "Sex Ratio Equilibrium",
+  description: "Inherited tendencies to have sons or daughters evolve toward a balanced sex ratio.",
   inputs,
   create,
 };

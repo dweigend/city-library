@@ -1,10 +1,10 @@
-# GenDrift T interact
+# Genetic Drift by Contact
 
 Moving agents copy colors after local encounters, while walls can divide the interaction space. A lost color cannot return through selection alone; color copying represents neutral drift rather than explicit mating or chromosomes.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `GenDrift T interact`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Genetic Drift by Contact`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
 
 Headless, from a script in the repository root:
 

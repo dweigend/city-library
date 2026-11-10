@@ -808,6 +808,5 @@ export const model = {
   title: "Taxi Cabs",
   inputs,
   create,
-  description:
-    "Zonal taxi demand, source-specific delivery branches and trip accounting. Dongping and Wilensky (2019), CC BY-NC-SA 3.0.",
+  description: "Taxis pick up and drop off passengers across city zones as demand changes over the day. Dongping and Wilensky (2019), CC BY-NC-SA 3.0.",
 } satisfies Definition<TaxiParameters, ReturnType<typeof create>>;

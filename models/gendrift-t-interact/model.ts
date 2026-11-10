@@ -211,7 +211,8 @@ export function create(options: Partial<Parameters> = {}) {
   };
 }
 export const model: Definition<Parameters, ReturnType<typeof create>> = {
-  title: "GenDrift T interact",
+  title: "Genetic Drift by Contact",
+  description: "Moving agents copy the color of agents they meet; colors drift until one remains.",
   inputs,
   create,
 };

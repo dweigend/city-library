@@ -142,7 +142,8 @@ export function create(options: Partial<TrafficBasicParameters> = {}) {
   };
 }
 export const model = {
-  title: "Traffic Basic",
+  title: "Traffic on One Lane",
+  description: "Cars on a circular road speed up and brake, and traffic jams form without a cause.",
   inputs,
   create,
 } satisfies Definition<TrafficBasicParameters, ReturnType<typeof create>>;

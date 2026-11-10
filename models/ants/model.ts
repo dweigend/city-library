@@ -227,8 +227,7 @@ export function create(options: Partial<AntsParameters> = {}) {
 }
 export const model = {
   title: "Ants",
-  description:
-    "Food foraging, pheromone deposition and delayed departure. Wilensky (1997), CC BY-NC-SA 3.0.",
+  description: "Ants search for food, carry it home and lay pheromone trails that guide others to three food piles. Wilensky (1997), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<AntsParameters, ReturnType<typeof create>>;

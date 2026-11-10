@@ -125,8 +125,7 @@ export function create(options: Partial<Parameters> = {}) {
 }
 export const model = {
   title: "Three Doors",
-  description:
-    "Monty Hall switching strategies race to the finish. Uri Wilensky (1998), CC BY-NC-SA 3.0.",
+  description: "The Monty Hall game: compare staying with your first door against switching. Uri Wilensky (1998), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<Parameters, ReturnType<typeof create>>;

@@ -459,6 +459,7 @@ export function create(options: Partial<Parameters> = {}) {
 }
 export const model: Definition<Parameters, ReturnType<typeof create>> = {
   title: "Bacterial Infection",
+  description: "Bacteria grow while antibiotic particles and fever act on them, selecting for resistance.",
   inputs,
   create,
 };

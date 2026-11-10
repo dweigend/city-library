@@ -292,6 +292,7 @@ export function create(options: Partial<TrafficIntersectionParameters> = {}) {
 }
 export const model = {
   title: "Traffic Intersection",
+  description: "Two streams of cars cross at a signalized intersection; poor timing causes crashes.",
   inputs,
   create,
 } satisfies Definition<

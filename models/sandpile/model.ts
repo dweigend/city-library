@@ -239,8 +239,7 @@ export function create(options: Partial<SandpileParameters> = {}) {
 }
 export const model = {
   title: "Sandpile",
-  description:
-    "Open-boundary sandpile avalanches · Weintrop et al. / Wilensky · CC0",
+  description: "Grains are added until piles topple, causing avalanches of every size. Weintrop et al. / Wilensky, CC0.",
   inputs,
   create,
 } satisfies Definition<SandpileParameters, ReturnType<typeof create>>;

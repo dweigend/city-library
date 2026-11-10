@@ -337,8 +337,7 @@ export function create(options: Partial<InterstitialParameters> = {}) {
 }
 export const model = {
   title: "Interstitial Diffusion",
-  description:
-    "Exclusion random walks on a mixed-boundary lattice with optional reservoirs. Wilensky (2025), CC BY-NC-SA 3.0.",
+  description: "Small atoms hop between the gaps of a crystal lattice and spread from a source. Wilensky (2025), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<InterstitialParameters, ReturnType<typeof create>>;

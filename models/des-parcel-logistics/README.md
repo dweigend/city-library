@@ -1,4 +1,4 @@
-# DES Parcel Logistics
+# Parcel Logistics
 
 A bounded depot feeds a single van; delivery and return follow weighted network costs. Synthetic minutes.
 

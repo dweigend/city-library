@@ -86,7 +86,7 @@ export function create(options: Partial<FeedbackParameters> = {}) {
   };
 }
 export const model = {
-  title: "Urban Suite - Positive Feedback",
-  description: "Nonlinear local activity and global maximum normalization. Adapted from Wilensky (2007), CC BY-NC-SA3.0.",
+  title: "Positive Feedback Growth",
+  description: "Active places grow faster than quiet ones, so activity concentrates in a few centers. Adapted from Wilensky (2007), CC BY-NC-SA 3.0.",
   inputs, create,
 } satisfies Definition<FeedbackParameters, ReturnType<typeof create>>;

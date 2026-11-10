@@ -1,10 +1,10 @@
-# CA 1D Elementary
+# Elementary Cellular Automaton
 
 Eight binary three-cell neighborhoods select the next bit, and successive rows display time. Single-seed, random-seed and continuation actions preserve the distinction between spatial width and the displayed generation history.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `CA 1D Elementary`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Elementary Cellular Automaton`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
 
 Headless, from a script in the repository root:
 

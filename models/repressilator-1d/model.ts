@@ -486,9 +486,8 @@ export const model: Definition<
   RepressilatorParameters,
   ReturnType<typeof create>
 > = {
-  title: "Repressilator 1D",
-  description:
-    "Cyclic transcription-factor inhibition and a stochastic molecular signal.",
+  title: "Repressilator",
+  description: "Three genes repress each other in a ring, so their protein levels oscillate.",
   inputs,
   create,
 };

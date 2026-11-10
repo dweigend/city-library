@@ -253,9 +253,8 @@ export function create(options: Partial<PartyParameters> = {}) {
   };
 }
 export const model = {
-  title: 'Party',
-  description:
-    'Tolerance and migration among social groups. Wilensky (1997), CC BY-NC-SA 3.0.',
+  title: "Party",
+  description: "Guests leave a group when it has too many people of the other sex and look for a better one. Wilensky (1997), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<PartyParameters, ReturnType<typeof create>>;

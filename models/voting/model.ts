@@ -140,8 +140,7 @@ export function create(options: Partial<VotingParameters> = {}) {
 }
 export const model = {
   title: "Voting",
-  description:
-    "Synchronous local voting on a wrapped grid. Adapted from Uri Wilensky (1998), CC BY-NC-SA 3.0.",
+  description: "Each cell adopts the majority vote of its neighbors, forming stable voting blocs. Adapted from Uri Wilensky (1998), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<VotingParameters, ReturnType<typeof create>>;

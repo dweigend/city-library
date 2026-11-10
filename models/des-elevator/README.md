@@ -1,4 +1,4 @@
-# DES Elevator
+# Elevator Service
 
 A synthetic, deterministic elevator model with six floors, two cars and four passenger places per car by default. Time is measured in seconds. Initial demand and optional scheduled arrivals are finite.
 

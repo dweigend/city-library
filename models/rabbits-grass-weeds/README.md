@@ -1,10 +1,10 @@
-# Rabbits Grass Weeds
+# Rabbits, Grass and Weeds
 
 Rabbits move, eat growing resources, lose energy and reproduce when the configured conditions allow. Resource growth and consumption are sequential, so population cycles depend on the explicit local order and energy assumptions.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Rabbits Grass Weeds`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Rabbits, Grass and Weeds`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
 
 Headless, from a script in the repository root:
 

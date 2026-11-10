@@ -515,7 +515,7 @@ export function create(options: Partial<AutumnParameters> = {}) {
     go,
   };
 }
-export const model = { title: "Autumn", inputs, create } satisfies Definition<
+export const model = { title: "Autumn Leaves", description: "Weather changes the water, chlorophyll and sugar in leaves, which change color and fall.", inputs, create } satisfies Definition<
   AutumnParameters,
   ReturnType<typeof create>
 >;

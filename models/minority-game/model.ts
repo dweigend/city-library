@@ -209,9 +209,8 @@ export function create(options: Partial<MinorityParameters> = {}) {
   };
 }
 export const model = {
-  title: 'Minority Game',
-  description:
-    'Adaptive competition through scored binary strategies. Wilensky (2004), CC BY-NC-SA 3.0.',
+  title: "Minority Game",
+  description: "Each round agents pick one of two sides; those in the minority win. Wilensky (2004), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<MinorityParameters, ReturnType<typeof create>>;

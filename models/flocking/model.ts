@@ -203,8 +203,7 @@ export function create(options: Partial<FlockingParameters> = {}) {
 }
 export const model = {
   title: "Flocking",
-  description:
-    "Sequential separation, circular alignment and cohesion. Wilensky (1998), CC BY-NC-SA 3.0.",
+  description: "Birds keep their distance, align their heading and stay together, forming flocks. Wilensky (1998), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<FlockingParameters, ReturnType<typeof create>>;

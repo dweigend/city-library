@@ -103,7 +103,7 @@ export function create(options: Partial<MembershipParameters> = {}) {
 
 export const model = {
   title: "Workplace and Household Membership",
-  description: "Illustrative canonical resident/place membership in one Graph; no demographic forecast.",
+  description: "Residents belong to households and workplaces in one graph. Illustrative only.",
   inputs,
   create,
 } satisfies Definition<MembershipParameters, ReturnType<typeof create>>;

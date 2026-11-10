@@ -1,10 +1,10 @@
-# Urban Suite - Economic Disparity
+# Rich and Poor Residential Choice
 
 Rich and poor entrants search using different utilities and alter nearby price and quality; services can move or disappear. Binary incomes and the assumed attraction of jobs to valuable land are propositions rather than calibrated urban laws.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Urban Suite - Economic Disparity`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Rich and Poor Residential Choice`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
 
 Headless, from a script in the repository root:
 

@@ -23,7 +23,7 @@ export const ui = defineUI(model, {
   actions: [{ label: "Go one hop", run: (m) => m.goOneHop() }],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/BinomialRabbits",
-    label: "Source attribution · · Uri Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Uri Wilensky · CC BY-NC-SA 3.0",
   },
   monitors: [
     { label: "Tick", value: (s) => s.tick },

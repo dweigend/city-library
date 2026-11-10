@@ -78,5 +78,5 @@ export function create(options: Partial<BikeParameters> = {}) {
   };
 }
 export const model = {
-  title: "DES Bike Redistribution", description: "A closed bike fleet moves between bounded station stores along graph travel times. Bikes and minutes; synthetic demand.", inputs, create,
+  title: "Bike Share Redistribution", description: "Shared bikes travel between docking stations with limited space; a truck moves bikes to rebalance them.", inputs, create,
 } satisfies Definition<BikeParameters, ReturnType<typeof create>>;

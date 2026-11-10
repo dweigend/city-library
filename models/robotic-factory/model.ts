@@ -611,8 +611,7 @@ export function create(options: Partial<FactoryParameters> = {}) {
 }
 export const model = {
   title: "Robotic Factory",
-  description:
-    "Native garment-machine routing, finite energy, charging and stochastic orders. Martin and Wilensky (2021), CC BY-NC-SA 3.0.",
+  description: "Robots carry garments between machines, recharge their batteries and fill random orders. Martin and Wilensky (2021), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<FactoryParameters, ReturnType<typeof create>>;

@@ -492,8 +492,7 @@ export function create(options: Partial<CRISPRParameters> = {}) {
 }
 export const model: Definition<CRISPRParameters, ReturnType<typeof create>> = {
   title: "CRISPR Bacterium",
-  description:
-    "Intracellular guide recognition, spacer acquisition and viral invasion.",
+  description: "Inside one bacterium, CRISPR guides recognize viral DNA and cut it before the virus takes over.",
   inputs,
   create,
 };

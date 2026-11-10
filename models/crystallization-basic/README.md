@@ -1,10 +1,10 @@
-# Crystallization Basic
+# Crystallization
 
 Atoms cool and then update crystal orientations in separate phases. Freezing counts and temperature distributions describe this staged local rule, without establishing an atomistic material model.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Crystallization Basic`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Crystallization`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
 
 Headless, from a script in the repository root:
 

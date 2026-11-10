@@ -1,10 +1,10 @@
-# GenEvo 1 Genetic Switch
+# Lac Operon Genetic Switch
 
 Repressors, RNA polymerase, lactose and expressed proteins move and interact around the lac operon. Binding, transport, energy and division rules expose a constructed gene switch, without calibrated reaction kinetics.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `GenEvo 1 Genetic Switch`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Lac Operon Genetic Switch`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
 
 Headless, from a script in the repository root:
 
@@ -42,7 +42,7 @@ Other instance procedures: `setup`, `reset`, `drawCell`, `setCellColor`, `showSw
 
 Model-specific `read()` fields include `message`, `energy`, `initialEnergy`, `divisionNumber`, `cellDivisionTime`, `inhibited`, `lacZCount`, `lacYCount`, `lacICount`, `rnapCount`, `lactoseCount`, `pumpCount`, `cells`, `agents`.
 
-The [UI binding](ui.ts) presents `Reset parameters`, `Tick`, `Energy`, `LacZ`, `LacY`, `Message`, `Divisions`, `GenEvo 1 Genetic Switch`, `History`.
+The [UI binding](ui.ts) presents `Reset parameters`, `Tick`, `Energy`, `LacZ`, `LacY`, `Message`, `Divisions`, `Lac Operon Genetic Switch`, `History`.
 
 ## Sources and acceptance
 

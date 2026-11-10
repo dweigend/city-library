@@ -265,8 +265,7 @@ export function create(options: Partial<HeatbugsParameters> = {}) {
 }
 export const model = {
   title: "Heatbugs",
-  description:
-    "Heat-seeking agents with exclusion, emission and diffusion. Wilensky (2004), CC BY-NC-SA 3.0.",
+  description: "Bugs emit heat and move toward their preferred temperature, forming clusters. Wilensky (2004), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<HeatbugsParameters, ReturnType<typeof create>>;

@@ -162,6 +162,6 @@ export function create(options: Partial<DiffusionParameters> = {}) {
 }
 export const model = {
   title: "Diffusion on a Directed Network",
-  description: "Conservative staged transport through active directed links. Adapted from Stonedahl and Wilensky (2008), CC BY-NC-SA 3.0.",
+  description: "A quantity flows along one-way links between nodes while the total stays the same. Adapted from Stonedahl and Wilensky (2008), CC BY-NC-SA 3.0.",
   inputs, create,
 } satisfies Definition<DiffusionParameters, ReturnType<typeof create>>;

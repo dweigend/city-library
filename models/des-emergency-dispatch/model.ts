@@ -69,5 +69,5 @@ export function create(options: Partial<DispatchParameters> = {}) {
   };
 }
 export const model = {
-  title: "DES Emergency Dispatch", description: "Nonpreemptive priority on graph-derived service trips. Minutes; no clinical or operational calibration.", inputs, create,
+  title: "Emergency Dispatch", description: "Emergency calls are served by priority; units travel along a road network to each incident.", inputs, create,
 } satisfies Definition<DispatchParameters, ReturnType<typeof create>>;

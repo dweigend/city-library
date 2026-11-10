@@ -301,8 +301,7 @@ export function create(options: Partial<WealthParameters> = {}) {
 }
 export const model = {
   title: "Wealth Distribution",
-  description:
-    "Resources, metabolism and unequal holdings. Adapted from Uri Wilensky (1998), CC BY-NC-SA 3.0.",
+  description: "Agents collect and spend grain; small differences grow into unequal wealth. Adapted from Uri Wilensky (1998), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<WealthParameters, ReturnType<typeof create>>;

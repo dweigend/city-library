@@ -230,9 +230,8 @@ export function create(options: Partial<ConsumerChoiceParameters> = {}) {
   };
 }
 export const model = {
-  title: 'Consumer Choice',
-  description:
-    'Experience, information and norms in product choice. Jager & Wang (2024), CC BY-NC-SA 3.0.',
+  title: "Consumer Choice",
+  description: "Consumers choose between two products using their own experience, friends and social norms. Jager & Wang (2024), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<ConsumerChoiceParameters, ReturnType<typeof create>>;

@@ -1,10 +1,10 @@
-# Urban Suite - Positive Feedback
+# Positive Feedback Growth
 
 Activity is raised to a selected exponent, optionally after neighborhood averaging, and normalized by the global maximum. Normalization preserves relative comparison rather than a conserved population or economic quantity.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Urban Suite - Positive Feedback`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Positive Feedback Growth`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
 
 Headless, from a script in the repository root:
 

@@ -1,4 +1,4 @@
-# DES Water Allocation
+# Water Allocation
 
 FIFO allocation of finite supply units to four grid districts. Allocation only; no hydraulic pressure or flow claims.
 

@@ -564,7 +564,8 @@ export function create(options: Partial<SwitchParameters> = {}) {
   };
 }
 export const model = {
-  title: "GenEvo 1 Genetic Switch",
+  title: "Lac Operon Genetic Switch",
+  description: "A repressor and lactose switch a bacterium's lac genes on or off.",
   inputs,
   create,
 } satisfies Definition<SwitchParameters, ReturnType<typeof create>>;

@@ -323,8 +323,7 @@ export function create(options: Partial<InvasivePlantsParameters> = {}) {
 }
 export const model = {
   title: "Invasive Plants",
-  description:
-    "Seed dispersal, resistance and targeted herbicide runoff. Wilensky (2025), CC BY-NC-SA 3.0.",
+  description: "An invasive plant spreads its seeds across the landscape; herbicide can contain it. Wilensky (2025), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<InvasivePlantsParameters, ReturnType<typeof create>>;

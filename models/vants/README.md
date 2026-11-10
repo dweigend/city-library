@@ -1,10 +1,10 @@
-# Vants
+# Virtual Ants
 
 Virtual ants move, inspect and toggle a binary field, and turn according to the encountered value in a fixed order. Reverse execution is explicit; deterministic irregular traces should not be interpreted as random forcing.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Vants`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Virtual Ants`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
 
 Headless, from a script in the repository root:
 
@@ -35,7 +35,7 @@ Other instance procedures: `reverse`. See their typed arguments in [model.ts](mo
 
 Model-specific `read()` fields include `cells`, `agents`.
 
-The [UI binding](ui.ts) presents `Reverse step`, `Run reverse`, `Tick`, `Black cells`, `Vants`, `Vant`.
+The [UI binding](ui.ts) presents `Reverse step`, `Run reverse`, `Tick`, `Black cells`, `Virtual Ants`, `Vant`.
 
 ## Sources and acceptance
 

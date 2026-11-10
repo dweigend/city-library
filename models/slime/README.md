@@ -1,10 +1,10 @@
-# Slime
+# Slime Mold Aggregation
 
 Mobile cells sense and contribute to a chemical field that diffuses and decays. Local attraction can create aggregates without a pacemaker, while differentiation and a complete slime-mold life cycle are outside the model.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Slime`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Slime Mold Aggregation`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
 
 Headless, from a script in the repository root:
 

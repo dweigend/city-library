@@ -37,7 +37,7 @@ export const ui = defineUI(model, {
   monitors: [
     { label: "Tick", value: (s) => s.tick },
     { label: "Population", value: (s) => s.foragers.length },
-    { label: "Average population", value: (s) => s.averagePopulation },
+    { label: "Average population", value: (s) => s.averagePopulation, format: (value: number) => value.toFixed(3) },
     { label: "Average forage", value: (s) => s.avgForage },
     { label: "Murders", value: (s) => s.murderCount },
     { label: "Starvation deaths", value: (s) => s.starvationCount },

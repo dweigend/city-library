@@ -236,9 +236,8 @@ export function create(options: Partial<HeroesParameters> = {}) {
   };
 }
 export const model = {
-  title: 'Heroes and Cowards',
-  description:
-    'Friend–enemy midpoint and avoidance movement. Wilensky (2014), CC BY-NC-SA 3.0.',
+  title: "Heroes and Cowards",
+  description: "Each person moves relative to a friend and an enemy, either protecting or hiding. Wilensky (2014), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<HeroesParameters, ReturnType<typeof create>>;

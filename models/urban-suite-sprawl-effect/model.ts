@@ -150,4 +150,4 @@ export function create(options: Partial<SprawlParameters> = {}) {
     },
   };
 }
-export const model = { title: "Urban Suite - Sprawl Effect", description: "Seekers settle, return to searching and alter a shared attraction landscape. Adapted from Felsen and Wilensky (2007), CC BY-NC-SA3.0.", inputs, create } satisfies Definition<SprawlParameters, ReturnType<typeof create>>;
+export const model = { title: "Urban Sprawl", description: "Settlers search for attractive land, build there and change its attractiveness, spreading the city. Adapted from Felsen and Wilensky (2007), CC BY-NC-SA 3.0.", inputs, create } satisfies Definition<SprawlParameters, ReturnType<typeof create>>;

@@ -1,10 +1,10 @@
-# Autumn
+# Autumn Leaves
 
 Weather drives leaf water, chlorophyll and sugar changes, with separate color, shape and falling rules. The displayed pigments and weather responses are illustrative quantities rather than a calibrated forecast of leaf fall.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Autumn`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Autumn Leaves`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
 
 Headless, from a script in the repository root:
 

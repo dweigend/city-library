@@ -104,6 +104,7 @@ export function create(options: Partial<HoneycombParameters> = {}) {
 }
 export const model = {
   title: "Honeycomb",
+  description: "Bees deposit a spreading chemical that guides their movement into a honeycomb-like pattern.",
   inputs,
   create,
 } satisfies Definition<HoneycombParameters, ReturnType<typeof create>>;

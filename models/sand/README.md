@@ -1,10 +1,10 @@
-# Sand
+# Falling Sand
 
 Falling sand uses staged local rules so a generation reads a consistent old field before movement is committed. Pile geometry is the consequence of a cellular rule rather than a granular-mechanics solver.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Sand`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Falling Sand`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
 
 Headless, from a script in the repository root:
 

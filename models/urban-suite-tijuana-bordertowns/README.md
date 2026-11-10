@@ -1,10 +1,10 @@
-# Urban Suite - Tijuana Bordertowns
+# Border Town Settlement
 
 Migrants seek compatriots and affordable serviced sites while earnings, spending, settlement density and infrastructure interact. These stylized rules form a pedagogical border-town scenario rather than a contemporary Tijuana forecast.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Urban Suite - Tijuana Bordertowns`. Press Setup to create a cleared instance. Build the city with Cityscape step, 100 cityscape calls, or Cityscape continue / Keep building. Use Step or Run/Pause only when the Phase monitor becomes `ready`; the shared GO controls are guarded until then. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Border Town Settlement`. Press Setup to create a cleared instance. Build the city with Cityscape step, 100 cityscape calls, or Cityscape continue / Keep building. Use Step or Run/Pause only when the Phase monitor becomes `ready`; the shared GO controls are guarded until then. See [Lab usage](../../ui/agent-lab/README.md) for host options.
 
 Headless, from a script in the repository root:
 

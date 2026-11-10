@@ -1,10 +1,10 @@
-# DLA
+# Diffusion-Limited Aggregation
 
 Off-lattice random walkers attach to a lattice aggregate when they meet the growth condition. The deposited pattern and its radius depend on the finite world and stopping rule; resemblance to a natural aggregate is not a material calibration.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `DLA`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Diffusion-Limited Aggregation`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
 
 Headless, from a script in the repository root:
 

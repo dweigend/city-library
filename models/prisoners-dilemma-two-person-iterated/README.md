@@ -1,10 +1,10 @@
-# Prisoner's Dilemma Two Person Iterated
+# Iterated Prisoner's Dilemma
 
 Two strategies repeatedly choose cooperation or defection, retain memory and accumulate payoffs. The selected strategy pair and finite horizon determine the comparison; success against one opponent is not universal dominance.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Prisoner's Dilemma Two Person Iterated`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Iterated Prisoner's Dilemma`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
 
 Headless, from a script in the repository root:
 

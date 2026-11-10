@@ -196,7 +196,7 @@ export function create(options: Partial<PathsParameters> = {}) {
     decayPopularity,
   };
 }
-export const model = { title: "Paths", inputs, create } satisfies Definition<
+export const model = { title: "Path Formation", description: "Walkers wear down the ground they cross, and popular routes become paths.", inputs, create } satisfies Definition<
   PathsParameters,
   ReturnType<typeof create>
 >;

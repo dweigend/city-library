@@ -188,6 +188,6 @@ export function create(options: Partial<VirusParameters> = {}) {
 }
 export const model = {
   title: "Virus on a Network",
-  description: "Infection, timed checks and permanent resistance on a proximity-built network. Adapted from Stonedahl and Wilensky (2008), CC BY-NC-SA 3.0.",
+  description: "A virus spreads along network links; virus checks can cure nodes and make them resistant. Adapted from Stonedahl and Wilensky (2008), CC BY-NC-SA 3.0.",
   inputs, create,
 } satisfies Definition<VirusParameters, ReturnType<typeof create>>;

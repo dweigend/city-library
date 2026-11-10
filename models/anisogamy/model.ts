@@ -363,6 +363,7 @@ export function create(options: Partial<Parameters> = {}) {
 }
 export const model = {
   title: "Anisogamy",
+  description: "Adults release gametes of different sizes; fusing gametes form zygotes that grow under limited space.",
   inputs,
   create,
 } satisfies Definition<Parameters, ReturnType<typeof create>>;

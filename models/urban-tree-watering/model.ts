@@ -72,5 +72,5 @@ export function create(options: Partial<TreeParameters> = {}) {
   };
 }
 export const model = { title: "Urban Tree Watering",
-  description: "Illustrative stable moisture-priority watering under a daily allowance; no irrigation recommendation.", inputs, create,
+  description: "A daily water allowance goes to the driest street trees first. Illustrative only.", inputs, create,
 } satisfies Definition<TreeParameters, ReturnType<typeof create>>;

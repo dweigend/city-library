@@ -83,6 +83,6 @@ export function create(options: Partial<RecyclingParameters> = {}) {
 }
 export const model = {
   title: "Household Recycling Behavior",
-  description: "Illustrative seeded synchronous peer adoption on a ring; no empirical behavior prediction.", inputs,
+  description: "Households on a ring start recycling when enough neighbors do. Illustrative, not a prediction.", inputs,
   create,
 } satisfies Definition<RecyclingParameters, ReturnType<typeof create>>;

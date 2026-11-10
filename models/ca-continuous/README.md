@@ -1,10 +1,10 @@
-# CA Continuous
+# Continuous Cellular Automaton
 
 Each new row averages three parent values, adds a constant and retains the fractional part at the chosen precision. Finite precision matters: a visually irregular image is not evidence of random forcing or physical diffusion.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `CA Continuous`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Continuous Cellular Automaton`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
 
 Headless, from a script in the repository root:
 

@@ -1,10 +1,10 @@
-# Urban Suite - Cells
+# Urban Growth Cells
 
 Cells activate from a snapshot of neighboring membership and age according to the source's strict time rule. Optional expiration changes growth form; the lattice contains no households, prices or transport demand.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Urban Suite - Cells`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Urban Growth Cells`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
 
 Headless, from a script in the repository root:
 

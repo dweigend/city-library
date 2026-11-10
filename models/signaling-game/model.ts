@@ -173,9 +173,8 @@ export function create(options: Partial<SignalingParameters> = {}) {
   };
 }
 export const model = {
-  title: 'Signaling Game',
-  description:
-    'Two-sided urn reinforcement learns shared signals. Wilensky (2016), CC BY-NC-SA 3.0.',
+  title: "Signaling Game",
+  description: "A sender and a receiver learn a shared meaning for signals through rewarded guesses. Wilensky (2016), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<SignalingParameters, ReturnType<typeof create>>;

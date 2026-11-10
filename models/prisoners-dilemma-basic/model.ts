@@ -111,8 +111,8 @@ export function create(options: Partial<BasicParameters> = {}) {
   };
 }
 export const model = {
-  title: "Prisoner's Dilemma Basic",
-  description: "Four one-shot outcomes · Uri Wilensky · CC BY-NC-SA 3.0",
+  title: "Prisoner's Dilemma",
+  description: "Two players cooperate or defect once and receive one of four payoffs. Uri Wilensky, CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<BasicParameters, ReturnType<typeof create>>;

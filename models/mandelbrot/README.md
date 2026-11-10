@@ -1,10 +1,10 @@
-# Mandelbrot
+# Mandelbrot Set
 
 Moving agents distribute complex-number iteration work across fields and record escape behavior. The finite iteration limit and sampling grid determine the image; undecided points are not a proof of set membership.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Mandelbrot`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Mandelbrot Set`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
 
 Headless, from a script in the repository root:
 

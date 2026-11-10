@@ -1,10 +1,10 @@
-# CA Stochastic
+# Stochastic Cellular Automaton
 
 The eight binary neighborhoods each select a Bernoulli activation probability for the next row. Zero and one give deterministic transitions; intermediate probabilities change trajectories even with the same starting field.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `CA Stochastic`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Stochastic Cellular Automaton`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
 
 Headless, from a script in the repository root:
 

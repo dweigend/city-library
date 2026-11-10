@@ -1,10 +1,10 @@
-# Ising
+# Ising Model
 
 Random sequential Metropolis proposals flip individual spins according to local energy and temperature. Magnetization describes this finite lattice; a single run does not locate a thermodynamic critical point.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Ising`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Ising Model`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
 
 Headless, from a script in the repository root:
 

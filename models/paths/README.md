@@ -1,10 +1,10 @@
-# Paths
+# Path Formation
 
 Travelers pursue destinations while reinforcing the popularity of fields they cross and favoring established routes. Popularity and thresholds are path-formation assumptions rather than construction costs or a global network optimum.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Paths`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Path Formation`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
 
 Headless, from a script in the repository root:
 

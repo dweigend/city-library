@@ -1,10 +1,10 @@
-# Cyclic CA
+# Cyclic Cellular Automaton
 
 Cells switch toward a cyclic successor state when the selected neighborhood meets a threshold. Neighborhood geometry, state count and periodic boundaries determine which waves can propagate.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Cyclic CA`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Cyclic Cellular Automaton`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
 
 Headless, from a script in the repository root:
 

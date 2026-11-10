@@ -63,7 +63,7 @@ const binding = defineUI(model, {
   },
   monitors: [
     { label: "Tick", value: (state) => state.tick },
-    { label: "Source attribution · genes", value: (state) => state.originalGenes.length },
+    { label: "Original genes", value: (state) => state.originalGenes.length },
     { label: "Copied genes", value: (state) => state.duplicateGenes.length },
     { label: "Proteins", value: (state) => state.proteins.length },
     { label: "Instruction", value: (state) => state.currentInstruction },

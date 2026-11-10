@@ -34,7 +34,7 @@ const binding = defineUI(model, {
         agents: state.agents.map((agent) => ({ ...agent, size: 6 })),
         segments: state.edges.map((edge) => ({
           from: edge.from,
-          to: edge.to,
+          to: nearestWrappedImage(edge.from, edge.to, state),
           color: "#888888",
           width: 1,
         })),
@@ -55,6 +55,19 @@ const binding = defineUI(model, {
     },
   ],
 });
+
+/** Draw a lipid bond across the torus edge as a short line instead of across the whole world. */
+function nearestWrappedImage(
+  from: { x: number; y: number },
+  to: { x: number; y: number },
+  world: { width: number; height: number },
+) {
+  const unwrap = (offset: number, size: number) => offset - size * Math.round(offset / size);
+  return {
+    x: from.x + unwrap(to.x - from.x, world.width),
+    y: from.y + unwrap(to.y - from.y, world.height),
+  };
+}
 
 export { model };
 export const sourceMarker =

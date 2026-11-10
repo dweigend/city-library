@@ -160,9 +160,8 @@ export function create(options: Partial<FireParameters> = {}) {
   };
 }
 export const model = {
-  title: "Fire",
-  description:
-    "Four-neighbor forest fire with fading embers. Uri Wilensky (1997), CC BY-NC-SA 3.0.",
+  title: "Forest Fire",
+  description: "Fire spreads from tree to neighboring tree; the tree density decides whether it crosses the forest. Uri Wilensky (1997), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<FireParameters, ReturnType<typeof create>>;

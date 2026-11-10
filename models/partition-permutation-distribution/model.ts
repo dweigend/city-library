@@ -122,8 +122,7 @@ export function create(options: Partial<Parameters> = {}) {
 }
 export const model = {
   title: "Partition Permutation Distribution",
-  description:
-    "Random addends with retained overshoot trials. Wilensky (2004), CC BY-NC-SA 3.0.",
+  description: "Random numbers are added until a target is reached; the outcomes form a distribution. Wilensky (2004), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<Parameters, ReturnType<typeof create>>;

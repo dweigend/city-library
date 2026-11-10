@@ -31,7 +31,7 @@ const binding = defineUI(model, {
   views: [
     {
       type: "spatial",
-      label: "Repressilator 1D",
+      label: "Repressilator",
       data: (state) => ({
         width: state.width,
         height: state.height,

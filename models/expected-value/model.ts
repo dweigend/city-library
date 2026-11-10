@@ -210,8 +210,7 @@ export function create(options: Partial<Parameters> = {}) {
 }
 export const model = {
   title: "Expected Value",
-  description:
-    "Tile population and correlated wandering samples. Abrahamson & Wilensky (2004), CC BY-NC-SA 3.0.",
+  description: "A walker samples values from colored tiles; the running average approaches the expected value. Abrahamson & Wilensky (2004), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<Parameters, ReturnType<typeof create>>;

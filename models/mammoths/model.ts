@@ -337,7 +337,7 @@ export function create(options: Partial<Parameters> = {}) {
     },
   };
 }
-export const model = { title: "Mammoths", inputs, create } satisfies Definition<
+export const model = { title: "Mammoth Extinction", description: "Mammoth herds face human hunters and a changing climate.", inputs, create } satisfies Definition<
   Parameters,
   ReturnType<typeof create>
 >;

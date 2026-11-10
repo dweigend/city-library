@@ -353,7 +353,7 @@ export function create(options: Partial<BankParameters> = {}) {
 }
 export const model = {
   title: "Cash Flow",
-  description: "Source banking phases · Uri Wilensky · CC BY-NC-SA 3.0",
+  description: "People exchange money through wallets, savings and loans held by one bank. Uri Wilensky, CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<BankParameters, ReturnType<typeof create>>;

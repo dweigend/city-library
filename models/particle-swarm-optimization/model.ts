@@ -345,8 +345,7 @@ export function create(options: Partial<SwarmParameters> = {}) {
 }
 export const model = {
   title: "Particle Swarm Optimization",
-  description:
-    "Toroidal landscape search with personal and global memory. Stonedahl and Wilensky (2008), CC BY-NC-SA 3.0.",
+  description: "Particles search a landscape for its highest point using their own and the swarm's best finds. Stonedahl and Wilensky (2008), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<SwarmParameters, ReturnType<typeof create>>;

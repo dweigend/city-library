@@ -158,8 +158,7 @@ export function create(options: Partial<Parameters> = {}) {
 }
 export const model = {
   title: "Binomial Rabbits",
-  description:
-    "Weighted rabbit hops and their wrapped distribution. Uri Wilensky (1997), CC BY-NC-SA 3.0.",
+  description: "Rabbits hop left or right by chance, and their positions build up a distribution. Uri Wilensky (1997), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<Parameters, ReturnType<typeof create>>;

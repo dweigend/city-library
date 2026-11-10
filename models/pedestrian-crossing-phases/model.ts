@@ -73,6 +73,6 @@ export function create(options: Partial<CrossingParameters> = {}) {
 }
 export const model = {
   title: "Pedestrian Crossing Phases",
-  description: "Illustrative synchronous signal/cohort transitions; no traffic-safety predictions.", inputs,
+  description: "Pedestrian groups wait and cross as a signal cycles through its phases. Illustrative only.", inputs,
   create,
 } satisfies Definition<CrossingParameters, ReturnType<typeof create>>;

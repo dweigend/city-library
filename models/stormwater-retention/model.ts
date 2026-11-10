@@ -77,5 +77,5 @@ export function create(options: Partial<StormwaterParameters> = {}) {
   };
 }
 export const model = { title: "Stormwater Retention",
-  description: "Illustrative catchment mass balance and linear capacity crossings; synthetic rainfall and outflow.", inputs, create,
+  description: "Rain fills a retention store that drains slowly and overflows when full. Synthetic rainfall.", inputs, create,
 } satisfies Definition<StormwaterParameters, ReturnType<typeof create>>;

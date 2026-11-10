@@ -316,8 +316,8 @@ export function create(options: Partial<HIVParameters> = {}) {
   };
 }
 export const model: Definition<HIVParameters, ReturnType<typeof create>> = {
-  title: "HIV",
-  description: "Coupling, testing and a simplified infection process.",
+  title: "HIV Transmission",
+  description: "People form and end couples, use condoms and get tested, which shapes how HIV spreads.",
   inputs,
   create,
 };

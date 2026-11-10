@@ -1,10 +1,10 @@
-# Artificial Neural Net - Multilayer
+# Multilayer Neural Network
 
 A small hidden layer propagates sigmoid activations and changes weights by backpropagation against the selected Boolean target. Training error and a direct test are separate observations; fitting these few examples does not establish generalization.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Artificial Neural Net - Multilayer`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Multilayer Neural Network`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
 
 Headless, from a script in the repository root:
 

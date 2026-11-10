@@ -1,10 +1,10 @@
-# Urban Suite - Structure from Randomness 1
+# Structure from Random Averaging
 
 A cell and its four face neighbors contribute to a staged average, optionally with signed noise. Relative grayscale shows an abstract activity field, not measured urban land use.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Urban Suite - Structure from Randomness 1`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Structure from Random Averaging`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
 
 Headless, from a script in the repository root:
 

@@ -1,10 +1,10 @@
-# Repressilator 1D
+# Repressilator
 
 Three transcription-factor types inhibit one another in a cyclic molecular system. Stochastic creation and degradation create the observed signal; these counts do not specify calibrated gene-expression kinetics.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Repressilator 1D`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Repressilator`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
 
 Headless, from a script in the repository root:
 
@@ -44,7 +44,7 @@ Other instance procedures: `go`, `setParameters`, `initializeTF`, `initializeMRN
 
 Model-specific `read()` fields include `tfCounts`, `mrnaCounts`, `genes`, `agents`, `signalOn`, `signalBound`, `completedSignalOnLength`, `completedSignalOffLength`, `signalOnLengths`, `signalOffLengths`, `meanOnDuration`, `meanOffDuration`, `onOffHarmonicMean`.
 
-The [UI binding](ui.ts) presents `Tick`, `Signal`, `Mean on duration`, `Mean off duration`, `Repressilator 1D`, `Completed signal durations`, `History`, `On`, `Off`, `mRNA ${gene}` and further views or controls.
+The [UI binding](ui.ts) presents `Tick`, `Signal`, `Mean on duration`, `Mean off duration`, `Repressilator`, `Completed signal durations`, `History`, `On`, `Off`, `mRNA ${gene}` and further views or controls.
 
 ## Sources and acceptance
 

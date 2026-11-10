@@ -1,4 +1,4 @@
-# DES EV Charging
+# EV Charging Queue
 
 Priority charging queue, heterogeneous session durations and cancellation. Minutes; no battery physics.
 

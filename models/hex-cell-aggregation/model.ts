@@ -196,8 +196,7 @@ export function create(options: Partial<HexParameters> = {}) {
 }
 export const model = {
   title: "Hex Cell Aggregation",
-  description:
-    "Single-cell growth on a bounded six-neighbor hex lattice. Wilensky (2007), CC BY-NC-SA 3.0.",
+  description: "Cells grow one at a time on a hexagonal grid according to how many neighbors they have. Wilensky (2007), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<HexParameters, ReturnType<typeof create>>;

@@ -183,7 +183,7 @@ export function create(options: Partial<PollutionParameters> = {}) {
   };
 }
 export const model = {
-  title: "Urban Suite - Pollution",
-  description: "Moving people, plant-reset pollution and tree cleanup. Adapted from Felsen and Wilensky (2007), CC BY-NC-SA3.0.",
+  title: "Urban Pollution and Health",
+  description: "Power plants pollute, trees clean the air and residents' health rises or falls. Adapted from Felsen and Wilensky (2007), CC BY-NC-SA 3.0.",
   inputs, create,
 } satisfies Definition<PollutionParameters, ReturnType<typeof create>>;

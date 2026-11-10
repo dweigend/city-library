@@ -385,6 +385,5 @@ export const model = {
   title: "Traffic Grid",
   inputs,
   create,
-  description:
-    "Sequential car following on a signal-controlled road grid. Wilensky (2003), CC BY-NC-SA 3.0.",
+  description: "Cars drive through a grid of streets with traffic lights at every crossing. Wilensky (2003), CC BY-NC-SA 3.0.",
 } satisfies Definition<TrafficParameters, ReturnType<typeof create>>;

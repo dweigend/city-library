@@ -1,10 +1,10 @@
-# Urban Suite - Path Dependence
+# Firm Location Path Dependence
 
 Firm settlement probabilities respond to regional quality and existing firms under alternative decision branches. Different random histories can reinforce different locations; one run cannot establish the frequency of lock-in.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Urban Suite - Path Dependence`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Firm Location Path Dependence`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
 
 Headless, from a script in the repository root:
 

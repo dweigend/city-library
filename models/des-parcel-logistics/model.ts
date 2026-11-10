@@ -93,4 +93,4 @@ export function create(options: Partial<ParcelParameters> = {}) {
     },
   };
 }
-export const model = { title: "DES Parcel Logistics", description: "A bounded depot feeds a single van; delivery and return follow weighted network costs. Synthetic minutes.", inputs, create } satisfies Definition<ParcelParameters, ReturnType<typeof create>>;
+export const model = { title: "Parcel Logistics", description: "A depot loads parcels into one van, which delivers them along a road network and returns.", inputs, create } satisfies Definition<ParcelParameters, ReturnType<typeof create>>;

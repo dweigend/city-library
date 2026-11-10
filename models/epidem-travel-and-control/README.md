@@ -1,10 +1,10 @@
-# epiDEM Travel and Control
+# Epidemic Travel and Control
 
 Travel tendencies and social links combine with isolation, hospital, inoculation and recovery rules. Perfect recovered immunity and simplified intervention behavior constrain any comparison of policies.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `epiDEM Travel and Control`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Epidemic Travel and Control`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
 
 Headless, from a script in the repository root:
 

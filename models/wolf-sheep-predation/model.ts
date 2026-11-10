@@ -273,8 +273,7 @@ export function create(options: Partial<WolfSheepParameters> = {}) {
 }
 export const model = {
   title: "Wolf Sheep Predation",
-  description:
-    "Predation, reproduction and optional regrowing grass. Adapted from Uri Wilensky (1997), CC BY-NC-SA 3.0.",
+  description: "Wolves eat sheep and sheep eat grass; the populations rise and fall in cycles. Adapted from Uri Wilensky (1997), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<WolfSheepParameters, ReturnType<typeof create>>;

@@ -271,9 +271,8 @@ export function create(options: Partial<ElFarolParameters> = {}) {
   };
 }
 export const model = {
-  title: "El Farol",
-  description:
-    "Adaptive attendance predictions · Rand & Wilensky · CC BY-NC-SA 3.0",
+  title: "El Farol Bar",
+  description: "People predict whether a bar will be crowded and go only when they expect space. Rand & Wilensky, CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<ElFarolParameters, ReturnType<typeof create>>;

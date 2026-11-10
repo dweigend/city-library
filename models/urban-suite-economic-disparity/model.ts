@@ -220,4 +220,4 @@ export function create(options: Partial<EconomicParameters> = {}) {
     },
   };
 }
-export const model = { title: "Urban Suite - Economic Disparity", description: "Residential search, local land impacts and service turnover. Adapted from Felsen and Wilensky (2007), CC BY-NC-SA3.0.", inputs, create } satisfies Definition<EconomicParameters, ReturnType<typeof create>>;
+export const model = { title: "Rich and Poor Residential Choice", description: "Rich and poor residents choose where to live, changing land prices and nearby services. Adapted from Felsen and Wilensky (2007), CC BY-NC-SA 3.0.", inputs, create } satisfies Definition<EconomicParameters, ReturnType<typeof create>>;

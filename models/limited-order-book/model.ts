@@ -433,8 +433,8 @@ export function create(options: Partial<Parameters> = {}) {
   };
 }
 export const model = {
-  title: "Limited Order Book",
-  description: "Strict crossing limit orders · Wilensky · CC BY-NC-SA 3.0",
+  title: "Limit Order Book",
+  description: "Traders post buy and sell limit orders; trades occur when prices cross. Wilensky, CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<Parameters, ReturnType<typeof create>>;

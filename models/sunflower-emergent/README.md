@@ -1,10 +1,10 @@
-# Sunflower Emergent
+# Sunflower Spirals
 
 New particles are placed on successive rings by comparing approximate repulsive energy. Spiral structure follows this sequential placement rule, without specifying a golden angle or modeling complete plant development.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Sunflower Emergent`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Sunflower Spirals`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
 
 Headless, from a script in the repository root:
 
@@ -39,7 +39,7 @@ Other instance procedures: `setParameters`, `potentialEnergy`, `createParticle`,
 
 Model-specific `read()` fields include `temporaryParticleCount`, `particles`, `temporaryParticles`.
 
-The [UI binding](ui.ts) presents `Tick`, `Particles`, `Temporary candidates`, `Sunflower Emergent`.
+The [UI binding](ui.ts) presents `Tick`, `Particles`, `Temporary candidates`, `Sunflower Spirals`.
 
 ## Sources and acceptance
 

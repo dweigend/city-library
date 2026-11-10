@@ -223,9 +223,8 @@ export function create(options: Partial<Parameters> = {}) {
   };
 }
 export const model = {
-  title: "Rabbits Grass Weeds",
-  description:
-    "Sequential resource growth, consumption and energy-limited reproduction. Wilensky (2001), CC BY-NC-SA 3.0.",
+  title: "Rabbits, Grass and Weeds",
+  description: "Rabbits eat regrowing grass and weeds, gain energy and reproduce. Wilensky (2001), CC BY-NC-SA 3.0.",
   inputs,
   create,
 } satisfies Definition<Parameters, ReturnType<typeof create>>;
