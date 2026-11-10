@@ -1,6 +1,6 @@
 # Independent graph copies
 
-A graph copy gives an experiment its own topology while preserving the selected node identities. This contract defines independent `Graph.copy` results, edge-state cloning, selection and validation. It does not define `Graph.view` or a read-only graph facade. The public examples in `examples/graph-copy-proposal/` assert the behavior below.
+A graph copy gives an experiment its own topology while preserving the selected node identities. This contract defines independent `Graph.copy` results, edge-state cloning, selection and validation. It does not define `Graph.view` or a read-only graph facade. The public examples in `tests/public-contracts/graph-copy-proposal/` assert the behavior below.
 
 Copies must meet these requirements:
 

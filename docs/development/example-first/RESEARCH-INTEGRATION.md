@@ -2,7 +2,7 @@
 
 The accepted scripts lead library development. Mesa and circular-economy research provide questions and contrasting cases for these scripts; they do not create a second implementation roadmap. The [example-first plan](PLAN.md) owns sequence and acceptance. [Architecture](../../ARCHITECTURE.md) and the Agent Loom reference retain their binding contracts.
 
-Four scripts run with delivered APIs: household budget, neighborhood heat, scarce resource and shared machine. The generative quarter remains an unmet geometry target. See the [example index](../../../examples/city-simulation/README.md) for commands and acceptance.
+Four scripts run with delivered APIs: household budget, neighborhood heat, scarce resource and shared machine. The generative quarter remains an unmet geometry target. See the [example index](../../../tests/public-contracts/city-simulation/README.md) for commands and acceptance.
 
 ## One authoring rule
 
@@ -14,9 +14,9 @@ Use existing operations first. Below each future draft, list any genuinely missi
 
 | Canonical script | Integrated responsibilities | Established expectation | What it does not establish |
 | --- | --- | --- | --- |
-| [Household budget](../../../examples/city-simulation/01-household-budget.ts) | Agent identity, explicit membership, caller rule and World execution. | Balance 19000 after 12 successful steps. | Closed money conservation, settlement between accounts, insolvency or allocation. Income and rent cross the model boundary. |
-| [Neighborhood heat](../../../examples/city-simulation/02-neighborhood-heat.ts) | Canonical Fields, a local update rule, execution and observation. | Center 20, four face neighbors 22, sum 188 after one step. | General heat physics or irregular-grid diffusion. Temperature sum is an energy proxy only under the declared equal-capacity assumptions. |
-| [Generative quarter](../../../examples/city-simulation/03-generative-quarter.ts) | Script-generated lines, geometric corridors, subtraction, subdivision and retained results. | Site 10000 m², road union 1536 m², four blocks totaling 8464 m²; supported fixture fully subdivides. | Legal/network access, historic realism, geometric state migration or traffic. Its three missing geometry operations remain explicit targets. |
+| [Household budget](../../../tests/public-contracts/city-simulation/01-household-budget.ts) | Agent identity, explicit membership, caller rule and World execution. | Balance 19000 after 12 successful steps. | Closed money conservation, settlement between accounts, insolvency or allocation. Income and rent cross the model boundary. |
+| [Neighborhood heat](../../../tests/public-contracts/city-simulation/02-neighborhood-heat.ts) | Canonical Fields, a local update rule, execution and observation. | Center 20, four face neighbors 22, sum 188 after one step. | General heat physics or irregular-grid diffusion. Temperature sum is an energy proxy only under the declared equal-capacity assumptions. |
+| [Generative quarter](../../../tests/targets/city-simulation/03-generative-quarter.ts) | Script-generated lines, geometric corridors, subtraction, subdivision and retained results. | Site 10000 m², road union 1536 m², four blocks totaling 8464 m²; supported fixture fully subdivides. | Legal/network access, historic realism, geometric state migration or traffic. Its three missing geometry operations remain explicit targets. |
 
 These are accepted reference tasks of different sizes, not competing universal model templates. Preserve their public syntax and expectations. Add contrasts in separate scripts instead of making the original examples harder to read.
 
@@ -45,7 +45,7 @@ State/balances, transformation, allocation/settlement, connections/transport, ti
 
 ## Delivered contrasts and future research
 
-Scarcity and machine lifecycle are implemented in the [scarce-resource](../../../examples/city-simulation/04-scarce-resource.ts) and [shared-machine](../../../examples/city-simulation/05-shared-machine.ts) probes. The following table distinguishes those delivered contrasts from future graph and recovered-component work. Circular-economy comparisons remain future research. These do not change the quarter geometry target or Townscaper contracts.
+Scarcity and machine lifecycle are implemented in the [scarce-resource](../../../tests/public-contracts/city-simulation/04-scarce-resource.ts) and [shared-machine](../../../tests/public-contracts/city-simulation/05-shared-machine.ts) probes. The following table distinguishes those delivered contrasts from future graph and recovered-component work. Circular-economy comparisons remain future research. These do not change the quarter geometry target or Townscaper contracts.
 
 | Contrast | Prescribed starting point and result | Question tested |
 | --- | --- | --- |

@@ -9,10 +9,10 @@ if (!["declarations", "city-targets", "giant-component-targets", "targets"].incl
 const files: string[] = [];
 if (mode === "declarations") files.push("index.ts");
 if (mode === "city-targets" || mode === "targets") {
-  files.push("examples/city-simulation/03-generative-quarter.ts");
+  files.push("tests/targets/city-simulation/03-generative-quarter.ts");
 }
 if (mode === "giant-component-targets" || mode === "targets") {
-  files.push(...new Bun.Glob("examples/giant-component/*.ts").scanSync("."));
+  files.push(...new Bun.Glob("tests/targets/giant-component/*.ts").scanSync("."));
 }
 
 // TypeScript cannot combine --project with explicit entry files. This transient

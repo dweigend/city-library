@@ -1,0 +1,13 @@
+import assert from "node:assert/strict";
+import { create } from "../../../models/segregation/model.ts";
+const m=create({width:5,height:5});
+const before=m.read();
+assert.deepEqual(m.read(),before);
+assert.throws(()=>m.advance(-1));
+assert.throws(()=>m.setRules({similarWanted:101}));
+assert.throws(()=>m.setResidents([{x:0,y:0,group:"blue"},{x:0,y:0,group:"orange"}]));
+assert.throws(()=>m.setResidents([{x:0.25,y:0,group:"blue"}]));
+assert.deepEqual(m.read(),before);
+assert.ok(Object.isFrozen(before.residents));
+assert.ok(Object.isFrozen(before.residents[0]));
+assert.throws(()=>create({density:100}));

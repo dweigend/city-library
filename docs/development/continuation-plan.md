@@ -21,6 +21,6 @@ Vor jedem betroffenen Bibliotheks- oder Modellschritt die Refactor-Skills und ge
 
 Architekturregeln zu Headless-Code, Abhängigkeitsrichtung, Identität und einem Zustandsowner bei jedem wesentlichen Schritt prüfen. Bei UI-Arbeit zusätzlich Design-Skills, Designregeln und echte Browser-/Screenshot-Abnahme anwenden. Bestehende öffentliche Syntax, RNG-Reihenfolge und Tick-/Fehlersemantik nicht als Vereinfachung verändern. Neue APIs beginnen mit vier oder fünf eingefrorenen öffentlichen Beispielen.
 
-`bun run check`, `bun run build:ui` und `bun models/catalog/progress.ts verify` sind die regulären technischen Prüfungen. Quartier und Giant haben bis zur tatsächlichen Umsetzung getrennte rote Zielprüfungen: `bun run typecheck:city:targets`, `bun run examples:city:targets` und `bun run typecheck:giant-component:targets`. Erfüllte Ziele erst nach echter Abnahme in das Standardgate aufnehmen.
+`bun run check`, `bun run build:ui` und `bun models/catalog/progress.ts verify` sind die regulären technischen Prüfungen. Quartier und Giant haben bis zur tatsächlichen Umsetzung getrennte rote Zielprüfungen: `bun run typecheck:city:targets`, `bun run contracts:city:targets` und `bun run typecheck:giant-component:targets`. Erfüllte Ziele erst nach echter Abnahme in das Standardgate aufnehmen.
 
 Jeder konkrete PR benötigt den unabhängig geprüften endgültigen Diff, grüne GitHub-Prüfungen und eine ausdrückliche Mergefreigabe. Veröffentlichung und das Löschen aktiver Worktrees bleiben eigene Entscheidungen.

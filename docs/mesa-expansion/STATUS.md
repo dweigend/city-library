@@ -4,16 +4,16 @@ The headless library provides the bounded capabilities below. Twenty illustrativ
 
 | Capability | Public contract | Executable examples |
 | --- | --- | --- |
-| Pure measurements | `measurements.define(project).read(model)` | `examples/mesa-measurements` |
-| Bounded explicit history | `storage.history`, `add`, `samples`, `delete` | `examples/mesa-measurements` |
-| Scenarios and serial studies | `experiments` design, replication, execution budgets and summary | `examples/mesa-measurements` |
-| Activation and lifecycle | World fixed, shuffle and priority activation; canonical membership | `examples/mesa-dynamics` |
-| Two-phase updates | Explicit synchronous compute, then commit | `examples/mesa-dynamics` |
-| Linear thresholds | Explicit units, strict start/inclusive end | `examples/mesa-dynamics` |
-| Causal event dispatch | Agenda time, priority, sequence and event limits | `examples/des` |
-| Capacity and waiting | Resource, Store, ServiceQueue and Signal own their grants/tickets | `examples/des` |
-| World/Agenda attachment | Explicit clock and identity coordination | `examples/mesa-attachment` |
-| Event observation | TimeWeighted and EventTrace | `examples/des` |
+| Pure measurements | `measurements.define(project).read(model)` | `tests/public-contracts/mesa-measurements` |
+| Bounded explicit history | `storage.history`, `add`, `samples`, `delete` | `tests/public-contracts/mesa-measurements` |
+| Scenarios and serial studies | `experiments` design, replication, execution budgets and summary | `tests/public-contracts/mesa-measurements` |
+| Activation and lifecycle | World fixed, shuffle and priority activation; canonical membership | `tests/public-contracts/mesa-dynamics` |
+| Two-phase updates | Explicit synchronous compute, then commit | `tests/public-contracts/mesa-dynamics` |
+| Linear thresholds | Explicit units, strict start/inclusive end | `tests/public-contracts/mesa-dynamics` |
+| Causal event dispatch | Agenda time, priority, sequence and event limits | `tests/public-contracts/des` |
+| Capacity and waiting | Resource, Store, ServiceQueue and Signal own their grants/tickets | `tests/public-contracts/des` |
+| World/Agenda attachment | Explicit clock and identity coordination | `tests/public-contracts/mesa-attachment` |
+| Event observation | TimeWeighted and EventTrace | `tests/public-contracts/des` |
 
 History’s recording coordinate does not advance World or Agenda. Same-time numeric measurements must be aggregated before History records them; EventTrace permits distinct events with tied times. Resource and Store remain the sole allocation owners; model ledgers describe outcomes.
 

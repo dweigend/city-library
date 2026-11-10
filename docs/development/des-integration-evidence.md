@@ -33,7 +33,7 @@ Successful single-event extraction keeps Agenda time at the event timestamp, inc
 | --- | --- |
 | `bun run typecheck` | Passed, including Svelte: 0 errors, 0 warnings. |
 | `bun test tests/des-adversarial.test.ts tests/random-normal.test.ts tests/random-exponential-poisson.test.ts` | 49 passed, 417 assertions after World attachment. |
-| Five `examples/des/` scripts and ten numbered `examples/des-models/` scripts | All pass with original expected-result assertions. |
+| Five `tests/public-contracts/des/` scripts and ten numbered `tests/public-contracts/des-models/` scripts | All pass with original expected-result assertions. |
 | `bun scripts/des-mm1-check.ts` | Eight predeclared replications; all five engineering tolerances passed. Utilization's 95% interval excludes the analytic target and is reported without changing seeds/tolerances. See the scientific report. |
 | Independent refactor | Commit `7773dd9`: all forty pre/post observations match, ten scripts and 49 focused tests pass. Full typecheck passed. |
 | `CITY_LIBRARY_UI_RUNTIME=svelte bun run build:ui:svelte` | Passed; existing bundle-size warning remains. |

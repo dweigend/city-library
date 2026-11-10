@@ -160,7 +160,7 @@ Optional `xAxis` and `yAxis` contain `label?` and `unit?`. Together they display
 
 `{ type: "inspector", label, value(observation, selected) }` returns a scalar record or `undefined`. Undefined hides the inspector; returning a record displays its entries. Selection is presentation-owned and starts as `null`; setup clears it. Resolve IDs against the current observation and handle stale/missing IDs. Inspectors do not grant write access to the model.
 
-Within a mounted experiment, a projected ID must identify one semantic entity consistently across views. Two views of the same entity reuse its ID; unrelated entities must use different IDs. If source kinds overlap, project namespaced IDs such as `agent:${id}` and `cell:${id}`, then resolve those IDs against the current observation in the inspector and selection-dependent action. Do not change domain IDs or introduce a second allocator. This is an authoring contract: the host cannot infer whether two arbitrary projections represent the same entity. Selection remains `string | null`, and a missing target must not trigger a model action. The [namespaced example](../../examples/ui-authoring-next/03-namespaced-selection.ts) covers collisions, shared selection, disappearance and restart.
+Within a mounted experiment, a projected ID must identify one semantic entity consistently across views. Two views of the same entity reuse its ID; unrelated entities must use different IDs. If source kinds overlap, project namespaced IDs such as `agent:${id}` and `cell:${id}`, then resolve those IDs against the current observation in the inspector and selection-dependent action. Do not change domain IDs or introduce a second allocator. This is an authoring contract: the host cannot infer whether two arbitrary projections represent the same entity. Selection remains `string | null`, and a missing target must not trigger a model action. The [namespaced example](../../tests/ui/ui-authoring-next/03-namespaced-selection.ts) covers collisions, shared selection, disappearance and restart.
 
 ## Drawing
 
@@ -197,7 +197,7 @@ Setup-string and keyed-live forms are supported, with legacy arrays preserved fo
 
 ## Author examples
 
-The [five public author examples](../../examples/ui-authoring/README.md) cover defaults and inert declaration, ordered overrides and numeric bindings, alternate observations and getter precedence, grouping/format/categories, and independent actions/legacy/disposal. Compile-only cases cover incorrect field types and incomplete observation shapes. Headless assertions and real-browser checks are separate gates; the browser harness exercises the Svelte adapter and waits for settled rendering.
+The [five public author examples](../../tests/ui/ui-authoring/README.md) cover defaults and inert declaration, ordered overrides and numeric bindings, alternate observations and getter precedence, grouping/format/categories, and independent actions/legacy/disposal. Compile-only cases cover incorrect field types and incomplete observation shapes. Headless assertions and real-browser checks are separate gates; the browser harness exercises the Svelte adapter and waits for settled rendering.
 
 ## Extensions
 

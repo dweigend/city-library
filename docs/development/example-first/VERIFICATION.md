@@ -5,12 +5,12 @@ Date: 8 November 2026. Code baseline: City Library feat/grid-parcel-foundations 
 ## Executed checks
 
 - bun install --frozen-lockfile: passed, no dependency/lockfile changes.
-- bun run examples:city: passed; balance 19000, heat tick 1, center 20, total 188; all appended assertions enabled.
+- bun run contracts:city: passed; balance 19000, heat tick 1, center 20, total 188; all appended assertions enabled.
 - bun run typecheck:city: passed.
 - bun run typecheck: passed, including the newly registered ready scripts; Svelte diagnostics 0 errors/0 warnings. This is a typecheck, not browser interaction acceptance.
-- bun run examples:city:targets: exit 1 at actual missing geometry.corridor; two preceding scripts pass. No expected-error catch or skipped assertion converts this to success.
+- bun run contracts:city:targets: exit 1 at actual missing geometry.corridor; two preceding scripts pass. No expected-error catch or skipped assertion converts this to success.
 - bun run typecheck:city:targets: exit 1 for missing corridor/subtract/subdivide plus downstream implicit-any diagnostics from absent public return types. No type assertions or ambient fake exports hide the unmet contract.
-- bun run examples: passed (exit 0), including the existing complete registered example suite and the two ready city scripts. Full console log: [examples-console.txt](examples-console.txt). The unmet quarter target remains in its explicitly separate red gate.
+- bun run contracts: passed (exit 0), including the existing complete registered example suite and the two ready city scripts. Full console log: [examples-console.txt](examples-console.txt). The unmet quarter target remains in its explicitly separate red gate.
 
 The quarter invariants are independent analytical expectations and have not run past the missing API. No quarter runtime/build/package-consumer/browser acceptance is claimed. No unit or integration runtime suite is claimed from these checks. Fresh independent Gemini 4 Argon review approved the E0 test/plan checkpoint, with one required final log update now applied. See [review](REVIEW.md) and [response](REVIEW-RESPONSE.md).
 
