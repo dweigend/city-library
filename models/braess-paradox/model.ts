@@ -50,7 +50,7 @@ export function create(options: Partial<Parameters> = {}) {
   const commuters = () => world.agents as readonly Commuter[];
   const integer = (n: number) => Math.floor(random.number() * n);
   const shuffle = <T>(a: readonly T[]) =>
-    random.sample(a, { count: a.length, compatibility: "legacy-shuffle" });
+    random.sample(a, { count: a.length, algorithm: "fisher-yates-descending" });
   const topLeft = grid.fieldAt({ x: -22, y: 22 })!;
   const topRight = grid.fieldAt({ x: 22, y: 22 })!;
   const bottomLeft = grid.fieldAt({ x: -22, y: -22 })!;

@@ -85,7 +85,7 @@ export function create(options: Partial<TravelParameters> = {}) {
   }[] = [];
   const people = () => world.agents as readonly Person[];
   const shuffled = (p: readonly Person[]) =>
-    random.sample(p, { count: p.length, compatibility: "legacy-shuffle" });
+    random.sample(p, { count: p.length, algorithm: "fisher-yates-descending" });
   const normalTendency = (mean: number) =>
     Math.max(
       0,

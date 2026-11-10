@@ -56,7 +56,7 @@ export function create(options: Partial<EpidemParameters> = {}) {
   const shuffled = (values: readonly Person[]) =>
     random.sample(values, {
       count: values.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     });
 
   function setupPeople() {

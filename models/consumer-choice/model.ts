@@ -139,7 +139,7 @@ export function create(options: Partial<ConsumerChoiceParameters> = {}) {
         run(world, () => {
           for (const a of random.sample(consumers, {
             count: consumers.length,
-            compatibility: 'legacy-shuffle',
+            algorithm: 'fisher-yates-descending',
           })) {
             if (random.number() < a.satisfaction[a.choice]!) {
               /* retain satisfied choice */
@@ -150,7 +150,7 @@ export function create(options: Partial<ConsumerChoiceParameters> = {}) {
           }
           for (const a of random.sample(consumers, {
             count: consumers.length,
-            compatibility: 'legacy-shuffle',
+            algorithm: 'fisher-yates-descending',
           })) {
             const neighbors = graph.neighbors(a);
             for (const option of [0, 1]) {

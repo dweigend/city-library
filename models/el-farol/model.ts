@@ -178,7 +178,7 @@ export function create(options: Partial<ElFarolParameters> = {}) {
     crowded = false;
     for (const p of random.sample(people(), {
       count: people().length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       p.prediction = predictAttendance(
         p.strategies[p.bestStrategy]!,
@@ -188,7 +188,7 @@ export function create(options: Partial<ElFarolParameters> = {}) {
     }
     for (const p of random.sample(people(), {
       count: people().length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     }))
       moveToEmptyOneOf(p.id, p.attend ? "bar" : "home");
     attendance = bar.reduce(
@@ -200,7 +200,7 @@ export function create(options: Partial<ElFarolParameters> = {}) {
     history.pop();
     for (const p of random.sample(people(), {
       count: people().length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     }))
       updateStrategies(p.id);
   }

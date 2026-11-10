@@ -81,7 +81,7 @@ export function create(options: Partial<Parameters> = {}) {
     const population = racers();
     for (const racer of random.sample(population, {
       count: population.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       makeChoices(racer);
       doSwitch(racer);

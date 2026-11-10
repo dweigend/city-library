@@ -173,7 +173,7 @@ export function create(options: Partial<HeatbugsParameters> = {}) {
           for (const f of grid.fields) f.temp *= 1 - settings.evaporationRate;
           for (const b of random.sample(bugs(), {
             count: bugs().length,
-            compatibility: "legacy-shuffle",
+            algorithm: "fisher-yates-descending",
           }))
             step(b);
         });

@@ -60,7 +60,7 @@ export function create(options: Partial<HIVParameters> = {}) {
   const shuffled = (people: readonly Person[]) =>
     random.sample(people, {
       count: people.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     });
   function randomNear(center: number) {
     let result = 0;

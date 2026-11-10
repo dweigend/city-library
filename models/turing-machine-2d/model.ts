@@ -198,7 +198,7 @@ export function create(options: Partial<TuringParameters> = {}) {
     for (const agent of agents) agent.ruleSet = findRule(agent, table);
     for (const agent of random.sample(agents, {
       count: agents.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       const cell = grid.fieldAt(agent)!;
       cell.on = agent.ruleSet![2];

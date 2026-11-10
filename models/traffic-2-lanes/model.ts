@@ -155,19 +155,19 @@ export function create(options: Partial<TrafficLanesParameters> = {}) {
     createOrRemoveCars();
     for (const car of random.sample(cars(), {
       count: cars().length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     }))
       moveForward(car);
     const impatient = cars().filter((car) => car.patience <= 0);
     for (const car of random.sample(impatient, {
       count: impatient.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     }))
       chooseNewLane(car);
     const changing = cars().filter((car) => car.y !== car.targetLane);
     for (const car of random.sample(changing, {
       count: changing.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     }))
       moveToTargetLane(car);
   }

@@ -220,7 +220,7 @@ export function create(options: Partial<DNAParameters> = {}) {
   const shuffled = (values: readonly Molecule[]) =>
     random.sample(values, {
       count: values.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     });
   const yDNA = (strand: Strand) => (strand === "original" ? 1 : -2);
   const yRibosome = (strand: Strand) => (strand === "original" ? 4 : -7);

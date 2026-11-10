@@ -76,7 +76,7 @@ export function create(options: Partial<Parameters> = {}) {
         eligible.push(...(grid.agentsAt(field) as readonly ModelAgent[]));
     for (const t of random.sample(eligible, {
       count: eligible.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       const p = grid.fieldAt(t)!,
         oldReal = p.zReal;
@@ -89,7 +89,7 @@ export function create(options: Partial<Parameters> = {}) {
     const population = agents();
     for (const agent of random.sample(population, {
       count: population.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       const direction = geometry.direction({ heading: agent.heading });
       const position = geometry.normalize(
@@ -105,7 +105,7 @@ export function create(options: Partial<Parameters> = {}) {
     const population = agents();
     for (const agent of random.sample(population, {
       count: population.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       agent.rotate(Math.floor(random.number() * 10));
       agent.rotate(-Math.floor(random.number() * 10));
@@ -115,7 +115,7 @@ export function create(options: Partial<Parameters> = {}) {
     const population = agents();
     for (const agent of random.sample(population, {
       count: population.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       const field = grid.fieldAt(agent)!;
       if (field.counter >= agent.previousCount) {

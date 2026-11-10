@@ -56,7 +56,7 @@ export function create(options: Partial<SandParameters> = {}) {
       );
       for (const f of random.sample(eligible, {
         count: eligible.length,
-        compatibility: "legacy-shuffle",
+        algorithm: "fisher-yates-descending",
       }))
         grid.fieldAt({ x: f.x, y: f.y - 1 })!.status = "sand";
     }
@@ -66,7 +66,7 @@ export function create(options: Partial<SandParameters> = {}) {
     const grains = fields.filter((f) => f.status === "sand");
     for (const f of random.sample(grains, {
       count: grains.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       const down = grid.fieldAt({ x: f.x, y: f.y - 1 }),
         left = grid.fieldAt({ x: f.x - 1, y: f.y - 1 }),
@@ -90,7 +90,7 @@ export function create(options: Partial<SandParameters> = {}) {
     const eligible = fields.filter((f) => f.y < spoutY && f.y > surfaceY);
     for (const f of random.sample(eligible, {
       count: eligible.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     }))
       if (random.number() * 100 < settings.density) f.status = "sand";
   }

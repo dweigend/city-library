@@ -48,7 +48,7 @@ export function create(options: Partial<AwarenessParameters> = {}) {
   // Full activation snapshots use the public uniform Fisher-Yates variant.
   // Mulberry/order differ from NetLogo; rendering-only asks consume no draws.
   function activation<T>(snapshot: readonly T[]) {
-    return random.sample(snapshot, { count: snapshot.length, compatibility: "legacy-shuffle" });
+    return random.sample(snapshot, { count: snapshot.length, algorithm: "fisher-yates-descending" });
   }
   function initializePeople() {
     for (let i = 0; i < settings.people; i++) {

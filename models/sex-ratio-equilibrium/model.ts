@@ -250,12 +250,12 @@ export function create(options: Partial<Parameters> = {}) {
       if (!population().length) break;
       for (const a of random.sample(population(), {
         count: population().length,
-        compatibility: "legacy-shuffle",
+        algorithm: "fisher-yates-descending",
       }))
         checkIfDead(a);
       for (const a of random.sample(males(), {
         count: males().length,
-        compatibility: "legacy-shuffle",
+        algorithm: "fisher-yates-descending",
       })) {
         move(a);
         if (a.age > adultAge) a.adult = true;
@@ -264,13 +264,13 @@ export function create(options: Partial<Parameters> = {}) {
         males().filter((a) => a.adult),
         {
           count: males().filter((a) => a.adult).length,
-          compatibility: "legacy-shuffle",
+          algorithm: "fisher-yates-descending",
         },
       ))
         searchForAnAdultPartner(a);
       for (const a of random.sample(females(), {
         count: females().length,
-        compatibility: "legacy-shuffle",
+        algorithm: "fisher-yates-descending",
       })) {
         if (!a.carrying) move(a);
         if (a.age > adultAge) a.adult = true;
@@ -278,7 +278,7 @@ export function create(options: Partial<Parameters> = {}) {
       const fertile = females().filter((a) => a.adult);
       for (const a of random.sample(fertile, {
         count: fertile.length,
-        compatibility: "legacy-shuffle",
+        algorithm: "fisher-yates-descending",
       }))
         reproduce(a);
       adultSexRatioHistory.push(adultSexRatio(population()));

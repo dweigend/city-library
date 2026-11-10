@@ -49,7 +49,7 @@ export function create(options: Partial<EconomicParameters> = {}) {
   const residents = () => world.agents as readonly Resident[];
   const group = (kind: EconomicKind) => residents().filter(person => person.kind === kind);
   function activation<T>(snapshot: readonly T[]) {
-    return random.sample(snapshot, { count: snapshot.length, compatibility: "legacy-shuffle" });
+    return random.sample(snapshot, { count: snapshot.length, algorithm: "fisher-yates-descending" });
   }
   function createResident(kind: EconomicKind, x = 0, y = 0, utility = 0) {
     const person = Agent.create({ kind, utility }, { position: { x, y } });

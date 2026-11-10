@@ -77,7 +77,7 @@ export function create(options: Partial<EcosystemParameters> = {}) {
   const shuffled = (values: readonly Organism[]) =>
     random.sample(values, {
       count: values.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     });
   function randomPosition(p: Organism) {
     p.move({

@@ -116,7 +116,7 @@ export function create(options: Partial<DLAParameters> = {}) {
     const walkers = world.agents;
     for (const agent of random.sample(walkers, {
       count: walkers.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       wander(agent.id);
       if (!agent.alive) continue;

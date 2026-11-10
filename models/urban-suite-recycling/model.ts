@@ -54,7 +54,7 @@ export function create(options: Partial<RecyclingParameters> = {}) {
   const integer = (upper: number) => Math.floor(random.number() * upper);
   // Explicit target ask policy: uniform Fisher-Yates snapshots through public Random.
   function activation<T>(snapshot: readonly T[]) {
-    return random.sample(snapshot, { count: snapshot.length, compatibility: "legacy-shuffle" });
+    return random.sample(snapshot, { count: snapshot.length, algorithm: "fisher-yates-descending" });
   }
   function initializePeople(kind: PersonKind, count: number) {
     for (let i = 0; i < count; i++) {

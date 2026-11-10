@@ -126,7 +126,7 @@ export function create(options: Partial<MinorityParameters> = {}) {
         run(world, () => {
           for (const a of random.sample(agents(), {
             count: agents().length,
-            compatibility: 'legacy-shuffle',
+            algorithm: 'fisher-yates-descending',
           })) {
             a.strategyScores = a.strategyScores.map(
               (s, j) => s + Number(a.strategies[j]![history] === minority),
@@ -139,7 +139,7 @@ export function create(options: Partial<MinorityParameters> = {}) {
           history = (history * 2 + minority) % 2 ** settings.memory;
           for (const a of random.sample(agents(), {
             count: agents().length,
-            compatibility: 'legacy-shuffle',
+            algorithm: 'fisher-yates-descending',
           }))
             a.choice = a.strategies[a.currentStrategy]![history]!;
         });
@@ -152,7 +152,7 @@ export function create(options: Partial<MinorityParameters> = {}) {
         }
         for (const a of random.sample(agents(), {
           count: agents().length,
-          compatibility: 'legacy-shuffle',
+          algorithm: 'fisher-yates-descending',
         }))
           a.move(a.score / avgScore);
       }

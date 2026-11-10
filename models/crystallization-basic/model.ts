@@ -78,7 +78,7 @@ export function create(options: Partial<CrystalParameters> = {}) {
     );
     for (const field of random.sample(sites, {
       count: sites.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       const atom = world.add(
         Agent.create(
@@ -150,17 +150,17 @@ export function create(options: Partial<CrystalParameters> = {}) {
     // then complete color assignment, then orientation changes.
     for (const atom of random.sample(population, {
       count: population.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     }))
       coolAtom(atom);
     for (const atom of random.sample(population, {
       count: population.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     }))
       setColor(atom);
     for (const atom of random.sample(population, {
       count: population.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     }))
       rotateAtom(atom);
     averageMetalTemp = stats.describe(population.map((a) => a.temp)).mean ?? 0;

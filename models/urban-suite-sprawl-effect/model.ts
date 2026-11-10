@@ -46,7 +46,7 @@ export function create(options: Partial<SprawlParameters> = {}) {
     return random.number({ min: 0, max: Math.ceil(attraction), integer: true });
   }
   function activation<T>(snapshot: readonly T[]) {
-    return random.sample(snapshot, { count: snapshot.length, compatibility: "legacy-shuffle" });
+    return random.sample(snapshot, { count: snapshot.length, algorithm: "fisher-yates-descending" });
   }
   function recolorLand() {
     // Source scale-color green attraction 2.5 10, clamped to green's 10-unit band.

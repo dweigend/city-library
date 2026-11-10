@@ -206,7 +206,7 @@ export function create(options: Partial<Parameters> = {}) {
     const old = population();
     for (const a of random.sample(old, {
       count: old.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       a.age++;
       if (a.age >= 25) {

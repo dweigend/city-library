@@ -50,7 +50,7 @@ export function create(options: Partial<HoneycombParameters> = {}) {
   function go() {
     for (const bee of random.sample(bees(), {
       count: bees().length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       const chemical = grid.fieldAt(bee)!.chemical;
       bee.rotate(4 * chemical);

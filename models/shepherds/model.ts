@@ -69,7 +69,7 @@ export function create(options: Partial<Parameters> = {}) {
   world.add(grid);
   for (const f of random.sample(grid.fields, {
     count: grid.fields.length,
-    compatibility: "legacy-shuffle",
+    algorithm: "fisher-yates-descending",
   }))
     f.green = 55 + random.number() * 0.8 - 0.4;
   const sheep = () =>
@@ -162,7 +162,7 @@ export function create(options: Partial<Parameters> = {}) {
     const old = shepherds();
     for (const s of random.sample(old, {
       count: old.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       const here = () =>
         grid.agentsAt(grid.fieldAt(s)!, {
@@ -197,7 +197,7 @@ export function create(options: Partial<Parameters> = {}) {
     const moving = sheep().filter((a) => !a.hidden);
     for (const a of random.sample(moving, {
       count: moving.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       wiggle(a);
       a.move(settings.sheepSpeed);

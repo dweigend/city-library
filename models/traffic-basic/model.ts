@@ -57,7 +57,7 @@ export function create(options: Partial<TrafficBasicParameters> = {}) {
   function go() {
     for (const car of random.sample(cars(), {
       count: cars().length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       const positionAhead = geometry.normalize(
         { x: car.x + 1, y: car.y },

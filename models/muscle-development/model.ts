@@ -64,7 +64,7 @@ export function create(options: Partial<MuscleParameters> = {}) {
   function newMuscleFibers() {
     for (const field of random.sample(grid.fields, {
       count: grid.fields.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       let maxSize = 4;
       for (let trial = 0; trial < 20; trial++) {
@@ -88,7 +88,7 @@ export function create(options: Partial<MuscleParameters> = {}) {
   function liftWeights() {
     for (const fiber of random.sample(fibers(), {
       count: fibers().length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       if (random.number() < (settings.intensity / 100) ** 2) {
         const field = grid.fieldAt(fiber)!;

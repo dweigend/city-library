@@ -231,7 +231,7 @@ export function create(options: Partial<Parameters> = {}) {
     const group = population(group);
     const shuffled = random.sample(group, {
       count: group.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     });
     shuffled.sort((a, b) => a.fitness - b.fitness);
     for (const a of shuffled.slice(0, Math.ceil(settings.populationSize * 0.2)))
@@ -290,7 +290,7 @@ export function create(options: Partial<Parameters> = {}) {
         const group = population(group);
         for (const a of random.sample(group, {
           count: group.length,
-          compatibility: "legacy-shuffle",
+          algorithm: "fisher-yates-descending",
         })) {
           if (group === "randomLearner") randomLearn(a);
           else if (group === "smartLearner") smartLearn(a);

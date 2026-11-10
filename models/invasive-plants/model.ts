@@ -109,7 +109,7 @@ export function create(options: Partial<InvasivePlantsParameters> = {}) {
   function germinate() {
     for (const seed of random.sample(seeds(), {
       count: seeds().length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       const field = grid.fieldAt(seed)!;
       if (Math.floor(random.number() * 100) > field.resistance)
@@ -140,7 +140,7 @@ export function create(options: Partial<InvasivePlantsParameters> = {}) {
   function generate() {
     for (const field of random.sample(grid.fields, {
       count: grid.fields.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       const mean = settings.seedProductionRate * field.infestation;
       if (mean > 0) {
@@ -166,7 +166,7 @@ export function create(options: Partial<InvasivePlantsParameters> = {}) {
   function spread() {
     for (const seed of random.sample(seeds(), {
       count: seeds().length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       seed.hidden = !settings.showSeeds;
       let remaining = random.number() * settings.spreadDistance;

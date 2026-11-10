@@ -148,7 +148,7 @@ export function create(options: Partial<Parameters> = {}) {
       const old = population();
       for (const moth of random.sample(old, {
         count: old.length,
-        compatibility: "legacy-shuffle",
+        algorithm: "fisher-yates-descending",
       })) {
         mothsMate(moth);
         mothsGrimReaper(moth);

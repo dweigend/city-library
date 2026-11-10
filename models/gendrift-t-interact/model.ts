@@ -137,7 +137,7 @@ export function create(options: Partial<Parameters> = {}) {
         break;
       for (const agent of random.sample(agents(), {
         count: agents().length,
-        compatibility: "legacy-shuffle",
+        algorithm: "fisher-yates-descending",
       })) {
         agent.rotate(
           random.number({ min: 0, max: 50, integer: true }) -

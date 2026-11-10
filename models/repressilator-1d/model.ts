@@ -82,7 +82,7 @@ export function create(options: Partial<RepressilatorParameters> = {}) {
   const shuffled = <T>(values: readonly T[]) =>
     random.sample(values, {
       count: values.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     });
   const integer = (upper: number) =>
     random.number({ min: 0, max: upper, integer: true });

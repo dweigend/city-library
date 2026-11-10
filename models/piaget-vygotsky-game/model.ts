@@ -115,7 +115,7 @@ export function create(options: Partial<DevelopmentParameters> = {}) {
       });
     for (const p of random.sample(players(), {
       count: players().length,
-      compatibility: 'legacy-shuffle',
+      algorithm: 'fisher-yates-descending',
     })) {
       p.score = 122;
       p.bestScore = 122;
@@ -161,7 +161,7 @@ export function create(options: Partial<DevelopmentParameters> = {}) {
             const moving = players().filter((p) => p.movesLeft > 0);
             for (const p of random.sample(moving, {
               count: moving.length,
-              compatibility: 'legacy-shuffle',
+              algorithm: 'fisher-yates-descending',
             })) {
               p.movesLeft--;
               p.move(1);
@@ -178,7 +178,7 @@ export function create(options: Partial<DevelopmentParameters> = {}) {
           for (const p of players()) p.score = Math.abs(p.x);
           for (const p of random.sample(players(), {
             count: players().length,
-            compatibility: 'legacy-shuffle',
+            algorithm: 'fisher-yates-descending',
           })) {
             if (settings.strategy === 'Random') {
               p.bestMaxMoves =

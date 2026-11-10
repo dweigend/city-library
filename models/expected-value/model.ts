@@ -101,7 +101,7 @@ export function create(options: Partial<Parameters> = {}) {
       for (let pass = 0; pass < 56; pass++)
         for (const tile of random.sample(tiles, {
           count: tiles.length,
-          compatibility: "legacy-shuffle",
+          algorithm: "fisher-yates-descending",
         })) {
           const neighbor = grid.neighbors(tile, { neighborhood: "faces" })[
             Math.floor(random.number() * 4)

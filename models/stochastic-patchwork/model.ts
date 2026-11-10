@@ -53,7 +53,7 @@ export function create(options: Partial<Parameters> = {}) {
   function go() {
     for (const field of random.sample(block, {
       count: block.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       field.target = random.number() * 100 < settings.targetPercent;
       field.drawn = true;

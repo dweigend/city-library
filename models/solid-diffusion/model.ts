@@ -85,7 +85,7 @@ export function create(options: Partial<SolidParameters> = {}) {
     const vacancies = fields.filter((f) => grid.agentsAt(f).length === 0);
     for (const f of random.sample(vacancies, {
       count: vacancies.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     }))
       moveAtomToHere(f.x, f.y);
   }

@@ -175,7 +175,7 @@ export function create(options: Partial<Parameters> = {}) {
     const land = grid.fields.filter((field) => field.terrain === "land");
     for (const field of random.sample(land, {
       count: land.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       if (random.number() * 100 < settings.climateChangeDecayChance)
         field.terrain = "changed";
@@ -185,7 +185,7 @@ export function create(options: Partial<Parameters> = {}) {
     const mammoths = population("mammoth");
     for (const mammoth of random.sample(mammoths, {
       count: mammoths.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       move(mammoth, settings.mammothSpeed);
       reproduce(mammoth, 3 * 12, settings.mammothBirthRate);
@@ -195,7 +195,7 @@ export function create(options: Partial<Parameters> = {}) {
     const humans = population("human");
     for (const human of random.sample(humans, {
       count: humans.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       const nearby = human.neighbors({
         source: population("mammoth"),
@@ -210,7 +210,7 @@ export function create(options: Partial<Parameters> = {}) {
         if (nearby.length) {
           const shuffled = random.sample(nearby, {
             count: nearby.length,
-            compatibility: "legacy-shuffle",
+            algorithm: "fisher-yates-descending",
           });
           shuffled.sort((a, b) => human.distanceTo(a) - human.distanceTo(b));
           human.rotate({ towards: shuffled[0]! });
@@ -239,7 +239,7 @@ export function create(options: Partial<Parameters> = {}) {
       const group = population(group);
       for (const resident of random.sample(group, {
         count: group.length,
-        compatibility: "legacy-shuffle",
+        algorithm: "fisher-yates-descending",
       })) {
         if (
           resident.age > (group === "human" ? 50 : 30) * 12 &&

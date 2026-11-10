@@ -56,7 +56,7 @@ export function create(options: Partial<Parameters> = {}) {
   world.add(grid);
   for (const f of random.sample(grid.fields, {
     count: grid.fields.length,
-    compatibility: "legacy-shuffle",
+    algorithm: "fisher-yates-descending",
   }))
     f.chip = random.number() * 100 < settings.density;
   for (let i = 0; i < settings.number; i++)
@@ -131,7 +131,7 @@ export function create(options: Partial<Parameters> = {}) {
         const old = population();
         for (const a of random.sample(old, {
           count: old.length,
-          compatibility: "legacy-shuffle",
+          algorithm: "fisher-yates-descending",
         }))
           activate(a);
         work++;

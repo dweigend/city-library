@@ -94,7 +94,7 @@ export function create(options: Partial<Parameters> = {}) {
   function grow() {
     for (const f of random.sample(grid.fields, {
       count: grid.fields.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     }))
       if (f.cover === "empty") {
         if (random.number() * 1000 < settings.weedsGrowRate) f.cover = "weeds";
@@ -136,7 +136,7 @@ export function create(options: Partial<Parameters> = {}) {
     const old = population();
     for (const a of random.sample(old, {
       count: old.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       a.rotate(Math.floor(random.number() * 50));
       a.rotate(-Math.floor(random.number() * 50));

@@ -78,7 +78,7 @@ export function create(options: Partial<SlimeParameters> = {}) {
   function go() {
     for (const slime of random.sample(population(), {
       count: population().length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       if (grid.fieldAt(slime)!.chemical > settings.sniffThreshold)
         turnTowardChemical(slime);

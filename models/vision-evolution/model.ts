@@ -304,7 +304,7 @@ export function create(options: Partial<Parameters> = {}) {
       if (!fish().length) break;
       for (const agent of random.sample(fish(), {
         count: fish().length,
-        compatibility: "legacy-shuffle",
+        algorithm: "fisher-yates-descending",
       })) {
         move(agent);
         consumeEnergy(agent);

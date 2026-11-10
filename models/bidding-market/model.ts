@@ -89,7 +89,7 @@ export function create(options: Partial<Parameters> = {}) {
         (a): a is Buyer => (a as Seller | Buyer).kind === "buyer",
       );
   const shuffle = <T>(a: readonly T[]) =>
-    random.sample(a, { count: a.length, compatibility: "legacy-shuffle" });
+    random.sample(a, { count: a.length, algorithm: "fisher-yates-descending" });
   const amount = (d: Distribution, a: Amount) => {
     const n = a === "high" ? 50 : 25;
     return d === "even"

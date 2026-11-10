@@ -73,7 +73,7 @@ export function create(options: Partial<FurParameters> = {}) {
   function restart() {
     for (const field of random.sample(grid.fields, {
       count: grid.fields.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       field.white = random.number() * 100 < settings.initialDensity;
     }

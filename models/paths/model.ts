@@ -109,7 +109,7 @@ export function create(options: Partial<PathsParameters> = {}) {
     const active = walkers();
     for (const walker of random.sample(active, {
       count: active.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       if (grid.fieldAt(walker) === walker.goal) {
         const destinations = buildings();

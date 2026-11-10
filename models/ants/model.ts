@@ -119,7 +119,7 @@ export function create(options: Partial<AntsParameters> = {}) {
   function go() {
     for (const ant of random.sample(ants(), {
       count: ants().length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       if (ant.who >= world.tick.value) continue;
       const field = grid.fieldAt(ant)!;

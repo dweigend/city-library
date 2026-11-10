@@ -75,7 +75,7 @@ export function create(options: Partial<ChloroplastParameters> = {}) {
   const shuffled = (source: readonly Molecule[]) =>
     random.sample(source, {
       count: source.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     });
 
   function createMolecule(

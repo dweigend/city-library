@@ -122,7 +122,7 @@ export function create(options: Partial<RebellionParameters> = {}) {
         run(world, () => {
           for (const a of random.sample(agents(), {
             count: agents().length,
-            compatibility: 'legacy-shuffle',
+            algorithm: 'fisher-yates-descending',
           })) {
             if (a.kind === 'cop' || a.jailTerm === 0) {
               if (settings.movement || a.kind === 'cop') {

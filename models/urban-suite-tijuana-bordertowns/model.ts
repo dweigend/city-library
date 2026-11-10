@@ -517,7 +517,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
   const ask = <T>(items: readonly T[], action: (item: T) => void) => {
     for (const item of random.sample(items, {
       count: items.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     }))
       if (
         !(typeof item === "object" && item !== null && "alive" in item) ||

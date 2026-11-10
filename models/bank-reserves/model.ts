@@ -244,7 +244,7 @@ export function create(options: Partial<BankParameters> = {}) {
     pollClass();
     const ordered = random.sample(people(), {
       count: people().length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     });
     for (const p of ordered) {
       if (world.tick.value % 3 === 0) doBusiness(p.id);

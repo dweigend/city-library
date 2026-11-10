@@ -131,7 +131,7 @@ export function create(options: Partial<TrafficIntersectionParameters> = {}) {
     const existing = accidents();
     for (const accident of random.sample(existing, {
       count: existing.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       accident.clearIn--;
       if (accident.clearIn === 0) accident.delete();
@@ -192,7 +192,7 @@ export function create(options: Partial<TrafficIntersectionParameters> = {}) {
     const active = cars();
     for (const car of random.sample(active, {
       count: active.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     }))
       move(car);
     checkForCollisions();

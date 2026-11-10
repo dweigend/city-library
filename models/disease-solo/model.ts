@@ -37,7 +37,7 @@ export function create(options: Partial<DiseaseParameters> = {}) {
   const shuffled = (people: readonly Person[]) =>
     random.sample(people, {
       count: people.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     });
   const integer = (upper: number) =>
     random.number({ min: 0, max: upper, integer: true });

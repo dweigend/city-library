@@ -119,14 +119,14 @@ export function create(options: Partial<ClusteringParameters> = {}) {
   function assignClusters() {
     for (const p of random.sample(points, {
       count: points.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     }))
       p.cluster = closestCentroid(p).index;
   }
   function updateClusters() {
     for (const c of random.sample(centroids, {
       count: centroids.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       const own = points.filter((p) => p.cluster === c.index);
       if (own.length) {

@@ -147,7 +147,7 @@ export function create(options: Partial<HeatParameters> = {}) {
   function go() {
     for (const field of random.sample(fields, {
       count: fields.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     }))
       updateField(field);
   }

@@ -86,7 +86,7 @@ export function create(options: Partial<CRISPRParameters> = {}) {
   const shuffled = (molecules: readonly Molecule[]) =>
     random.sample(molecules, {
       count: molecules.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     });
   const integer = (upper: number) =>
     random.number({ min: 0, max: upper, integer: true });

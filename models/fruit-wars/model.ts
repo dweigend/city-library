@@ -117,7 +117,7 @@ export function create(options: Partial<Parameters> = {}) {
       );
   const integer = (n: number) => Math.floor(random.number() * n),
     shuffle = <T>(a: readonly T[]) =>
-      random.sample(a, { count: a.length, compatibility: "legacy-shuffle" }),
+      random.sample(a, { count: a.length, algorithm: "fisher-yates-descending" }),
     pick = <T>(a: readonly T[]) => random.sample(a)[0]!;
   let murderCount = 0,
     starvationCount = 0,

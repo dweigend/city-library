@@ -55,7 +55,7 @@ export function create(options: Partial<RumorParameters> = {}) {
       grid.fields.filter((f) => f.timesHeard === 0),
       {
         count: grid.fields.filter((f) => f.timesHeard === 0).length,
-        compatibility: 'legacy-shuffle',
+        algorithm: 'fisher-yates-descending',
       },
     ))
       if (random.number() * 100 < settings.initClique)
@@ -98,7 +98,7 @@ export function create(options: Partial<RumorParameters> = {}) {
           const sources = grid.fields.filter((f) => f.timesHeard > 0);
           for (const f of random.sample(sources, {
             count: sources.length,
-            compatibility: 'legacy-shuffle',
+            algorithm: 'fisher-yates-descending',
           })) {
             const candidates = grid.neighbors(f, {
               neighborhood: settings.eightMode ? 'moore' : 'faces',

@@ -44,7 +44,7 @@ export function create(options: Partial<PollutionParameters> = {}) {
   const integer = (upper: number) => Math.floor(random.number() * upper);
   // Uniform Fisher-Yates on full ask snapshots; no source RNG equivalence implied.
   function activation<T>(snapshot: readonly T[]) {
-    return random.sample(snapshot, { count: snapshot.length, compatibility: "legacy-shuffle" });
+    return random.sample(snapshot, { count: snapshot.length, algorithm: "fisher-yates-descending" });
   }
   function pollute() {
     for (const field of fields) if (field.powerPlant) field.pollution = settings.pollutingRate;

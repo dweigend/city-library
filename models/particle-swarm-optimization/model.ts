@@ -128,7 +128,7 @@ export function create(options: Partial<SwarmParameters> = {}) {
   function updateBests() {
     for (const p of random.sample(particles, {
       count: particles.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       const val = grid.fieldAt(p)!.val;
       if (val > p.personalBestValue) {
@@ -150,7 +150,7 @@ export function create(options: Partial<SwarmParameters> = {}) {
     if (settings.trailsMode !== "Traces") trails.length = 0;
     for (const p of random.sample(particles, {
       count: particles.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       const from = { x: p.x, y: p.y };
       p.vx *= settings.particleInertia;

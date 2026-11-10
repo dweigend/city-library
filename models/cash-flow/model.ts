@@ -243,12 +243,12 @@ export function create(options: Partial<BankParameters> = {}) {
   function go() {
     for (const p of random.sample(people(), {
       count: people().length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     }))
       doBusiness(p.id);
     for (const p of random.sample(people(), {
       count: people().length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       balanceBooks(p.id);
       updateAppearance(p.id);

@@ -119,7 +119,7 @@ export function create(options: Partial<TumorParameters> = {}) {
   function go() {
     for (const cell of random.sample(cells(), {
       count: cells().length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       cell.penDown = settings.leaveTrail;
       if (cell.who === 1 && cell.x < 25) forwardCell(cell, 1);

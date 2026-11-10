@@ -95,7 +95,7 @@ export function create(options: Partial<SandpileParameters> = {}) {
       if (overloaded.length) lifetime++;
       for (const f of random.sample(overloaded, {
         count: overloaded.length,
-        compatibility: "legacy-shuffle",
+        algorithm: "fisher-yates-descending",
       })) {
         updateN(f, -4);
         for (const neighbor of neighbors.get(f)!) updateN(neighbor, 1);
@@ -119,7 +119,7 @@ export function create(options: Partial<SandpileParameters> = {}) {
       throw new RangeError("Grains per field must be 0..3.");
     for (const f of random.sample(fields, {
       count: fields.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     }))
       f.n = mode === "random" ? Math.floor(random.number() * 4) : n;
     stabilize();

@@ -41,7 +41,7 @@ export function create(options: Partial<Parameters> = {}) {
     stores: { id: string; price: number; areaCount: number; revenue: number }[];
   }[] = [];
   const shuffle = <T>(a: readonly T[]) =>
-    random.sample(a, { count: a.length, compatibility: "legacy-shuffle" });
+    random.sample(a, { count: a.length, algorithm: "fisher-yates-descending" });
   function chooseStoreAt(x: number, y: number) {
     let best = Infinity;
     let candidates: Store[] = [];

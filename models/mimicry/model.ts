@@ -114,7 +114,7 @@ export function create(options: Partial<Parameters> = {}) {
   function birdsMove() {
     for (const bird of random.sample(population("bird"), {
       count: population("bird").length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       bird.rotate(
         180 + random.number({ max: 180, integer: true }) - bird.heading,
@@ -126,7 +126,7 @@ export function create(options: Partial<Parameters> = {}) {
     const butterflies = population().filter((a) => a.group !== "bird");
     for (const butterfly of random.sample(butterflies, {
       count: butterflies.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       butterfly.rotate(random.number({ max: 100, integer: true }));
       butterfly.rotate(-random.number({ max: 100, integer: true }));
@@ -137,7 +137,7 @@ export function create(options: Partial<Parameters> = {}) {
     const butterflies = population().filter((a) => a.group !== "bird");
     for (const butterfly of random.sample(butterflies, {
       count: butterflies.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       const field = grid.fieldAt(butterfly)!;
       const birds = grid.agentsAt(field, { source: population("bird") });
@@ -157,7 +157,7 @@ export function create(options: Partial<Parameters> = {}) {
     const birds = population("bird");
     for (const bird of random.sample(birds, {
       count: birds.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     }))
       bird.memory = forgetColors(bird.memory, settings.memoryDuration);
   }
@@ -165,7 +165,7 @@ export function create(options: Partial<Parameters> = {}) {
     const butterflies = population().filter((a) => a.group !== "bird");
     for (const butterfly of random.sample(butterflies, {
       count: butterflies.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       const count = population(butterfly.group).length;
       if (

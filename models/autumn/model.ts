@@ -225,7 +225,7 @@ export function create(options: Partial<AutumnParameters> = {}) {
   function makeWindBlow() {
     for (const leaf of random.sample(leaves(), {
       count: leaves().length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       leaf.rotate(
         (random.number({ min: 0, max: 2, integer: true }) === 1 ? 1 : -1) *
@@ -254,7 +254,7 @@ export function create(options: Partial<AutumnParameters> = {}) {
     }
     for (const drop of random.sample(raindrops(), {
       count: raindrops().length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     }))
       forwardWeather(drop, random.number() * 2);
   }
@@ -365,7 +365,7 @@ export function create(options: Partial<AutumnParameters> = {}) {
     const attached = attachedLeaves();
     for (const leaf of random.sample(attached, {
       count: attached.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       adjustWater(leaf);
       adjustChlorophyll(leaf);
@@ -375,7 +375,7 @@ export function create(options: Partial<AutumnParameters> = {}) {
     }
     for (const leaf of random.sample(leaves(), {
       count: leaves().length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     }))
       fallIfNecessary(leaf);
     for (const leaf of leaves().filter((leaf) => leaf.y <= bottomLine))

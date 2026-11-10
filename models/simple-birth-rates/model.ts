@@ -110,7 +110,7 @@ export function create(options: Partial<Parameters> = {}) {
     const old = population();
     for (const parent of random.sample(old, {
       count: old.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       const fertility =
         parent.color === "red" ? settings.redFertility : settings.blueFertility;
@@ -130,7 +130,7 @@ export function create(options: Partial<Parameters> = {}) {
     const chance = (old.length - settings.carryingCapacity) / old.length;
     for (const a of random.sample(old, {
       count: old.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     }))
       if (random.number() < chance) a.delete();
   }

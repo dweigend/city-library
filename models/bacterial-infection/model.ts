@@ -230,7 +230,7 @@ export function create(options: Partial<Parameters> = {}) {
     if (!settings.reproduce) return;
     for (const agent of random.sample(eligible, {
       count: eligible.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       const available = grid
         .neighbors(grid.fieldAt(agent)!, { neighborhood: "moore" })
@@ -320,7 +320,7 @@ export function create(options: Partial<Parameters> = {}) {
   function moveAntibiotics() {
     for (const agent of random.sample(antibiotics(), {
       count: antibiotics().length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       agent.move(antibioticFlowRate);
       checkBounceOffWalls(agent);
@@ -371,7 +371,7 @@ export function create(options: Partial<Parameters> = {}) {
       reproduceBacteriaIntoAvailableSpace();
       for (const agent of random.sample(bacteria(), {
         count: bacteria().length,
-        compatibility: "legacy-shuffle",
+        algorithm: "fisher-yates-descending",
       }))
         moveBacteria(agent);
       moveAntibiotics();

@@ -135,7 +135,7 @@ export function create(options: Partial<MembraneParameters> = {}) {
   function go() {
     for (const molecule of random.sample(molecules(), {
       count: molecules().length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       interactWithNeighbor(molecule);
       repelTooCloseNeighbor(molecule);

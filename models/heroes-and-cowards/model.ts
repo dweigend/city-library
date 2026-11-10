@@ -71,7 +71,7 @@ export function create(options: Partial<HeroesParameters> = {}) {
       );
     for (const a of random.sample(actors(), {
       count: actors().length,
-      compatibility: 'legacy-shuffle',
+      algorithm: 'fisher-yates-descending',
     })) {
       a.move({
         to: { x: random.number() * 33 - 16.5, y: random.number() * 33 - 16.5 },
@@ -98,7 +98,7 @@ export function create(options: Partial<HeroesParameters> = {}) {
         run(world, () => {
           for (const a of random.sample(actors(), {
             count: actors().length,
-            compatibility: 'legacy-shuffle',
+            algorithm: 'fisher-yates-descending',
           })) {
             const friend = actors()[a.friend]!,
               enemy = actors()[a.enemy]!;

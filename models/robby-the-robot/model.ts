@@ -147,7 +147,7 @@ export function create(options: Partial<RobbyParameters> = {}) {
   function distributeCans() {
     for (const f of random.sample(fields, {
       count: fields.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       f.can = random.number() < 0.5;
       f.collected = false;
@@ -274,7 +274,7 @@ export function create(options: Partial<RobbyParameters> = {}) {
     population = children;
     for (const p of random.sample(population, {
       count: population.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     }))
       mutate(p);
   }

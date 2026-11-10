@@ -148,7 +148,7 @@ export function create(options: Partial<FactoryParameters> = {}) {
   const shuffle = (items: readonly Entity[]) =>
     random.sample(items, {
       count: items.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     });
   function one(items: readonly Entity[]) {
     return items.length

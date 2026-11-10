@@ -49,7 +49,7 @@ export function create(options: Partial<IsingParameters> = {}) {
   function setup() {
     for (const f of random.sample(fields, {
       count: fields.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     }))
       f.spin =
         Math.floor(random.number() * 100) < settings.probabilityOfSpinUp

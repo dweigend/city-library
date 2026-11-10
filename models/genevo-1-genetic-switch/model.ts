@@ -78,7 +78,7 @@ export function create(options: Partial<SwitchParameters> = {}) {
   const shuffled = (values: readonly Molecule[]) =>
     random.sample(values, {
       count: values.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     });
   const cellWall = (x: number, y: number) =>
     (Math.abs(y) === 16 && Math.abs(x) <= 44) ||

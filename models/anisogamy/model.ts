@@ -109,7 +109,7 @@ export function create(options: Partial<Parameters> = {}) {
     history.length = 0;
     for (const field of random.sample(grid.fields, {
       count: grid.fields.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       field.color = 89 + random.number() - random.number() * 2;
     }
@@ -140,7 +140,7 @@ export function create(options: Partial<Parameters> = {}) {
     const adults = population("adult");
     for (const adult of random.sample(adults, {
       count: adults.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       adult.move({
         to: {
@@ -243,7 +243,7 @@ export function create(options: Partial<Parameters> = {}) {
         const adults = population("adult");
         for (const adult of random.sample(adults, {
           count: adults.length,
-          compatibility: "legacy-shuffle",
+          algorithm: "fisher-yates-descending",
         })) {
           adult.rotate(random.number() * 360 - adult.heading);
           adult.move(1);
@@ -254,7 +254,7 @@ export function create(options: Partial<Parameters> = {}) {
         const zygotes = population("zygote");
         for (const zygote of random.sample(zygotes, {
           count: zygotes.length,
-          compatibility: "legacy-shuffle",
+          algorithm: "fisher-yates-descending",
         })) {
           zygote.incubationTime--;
           if (zygote.incubationTime < 1) becomeAdult(zygote);
@@ -266,7 +266,7 @@ export function create(options: Partial<Parameters> = {}) {
       const gametes = population("gamete");
       for (const gamete of random.sample(gametes, {
         count: gametes.length,
-        compatibility: "legacy-shuffle",
+        algorithm: "fisher-yates-descending",
       })) {
         if (!gamete.alive) continue;
         gamete.rotate(

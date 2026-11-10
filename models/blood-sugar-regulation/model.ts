@@ -59,7 +59,7 @@ export function create(options: Partial<BloodSugarParameters> = {}) {
   const shuffled = (cells: readonly Cell[]) =>
     random.sample(cells, {
       count: cells.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     });
 
   function randomPosition(cell: Cell) {
@@ -107,7 +107,7 @@ export function create(options: Partial<BloodSugarParameters> = {}) {
   function makeLiver() {
     for (const field of random.sample(
       grid.fields.filter((field) => field.x < 8),
-      { count: 792, compatibility: "legacy-shuffle" },
+      { count: 792, algorithm: "fisher-yates-descending" },
     )) {
       const liver = createCell("liver", field.x, field.y);
       liver.glucoseStore = random.number({
@@ -120,7 +120,7 @@ export function create(options: Partial<BloodSugarParameters> = {}) {
   function makePancreas() {
     for (const field of random.sample(
       grid.fields.filter((field) => field.x >= 8),
-      { count: 297, compatibility: "legacy-shuffle" },
+      { count: 297, algorithm: "fisher-yates-descending" },
     ))
       createCell("pancreas", field.x, field.y);
   }

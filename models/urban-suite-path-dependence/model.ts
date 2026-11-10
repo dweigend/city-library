@@ -38,7 +38,7 @@ export function create(options: Partial<PathParameters> = {}) {
   const history: Readonly<PathSample>[] = [];
   let largestPopulation = 0;
   const integer = (upper: number) => Math.floor(random.number() * upper);
-  const activation = <T>(snapshot: readonly T[]) => random.sample(snapshot, { count: snapshot.length, compatibility: "legacy-shuffle" });
+  const activation = <T>(snapshot: readonly T[]) => random.sample(snapshot, { count: snapshot.length, algorithm: "fisher-yates-descending" });
 
   function regionalPopulation(at: { readonly x: number; readonly y: number }) {
     // Source movement remains on exact field centers. At radius0 the public

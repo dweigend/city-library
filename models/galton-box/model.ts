@@ -138,7 +138,7 @@ export function create(options: Partial<Parameters> = {}) {
     const falling = balls().filter((ball) => !ball.piled);
     for (const ball of random.sample(falling, {
       count: falling.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     }))
       fall(ball);
     for (const ball of balls())

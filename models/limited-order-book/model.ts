@@ -97,7 +97,7 @@ export function create(options: Partial<Parameters> = {}) {
     priceToDate = 0;
   const amount = (n: number) => Math.floor(random.number() * n) * 0.5 + n * 0.5;
   const shuffle = <T>(a: readonly T[]) =>
-    random.sample(a, { count: a.length, compatibility: "legacy-shuffle" });
+    random.sample(a, { count: a.length, algorithm: "fisher-yates-descending" });
   for (
     let index = 0;
     index < settings.honestTraders + settings.cunningTraders;

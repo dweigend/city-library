@@ -110,7 +110,7 @@ export function create(options: Partial<LanguageChangeParameters> = {}) {
         run(world, () => {
           for (const a of random.sample(nodes, {
             count: nodes.length,
-            compatibility: 'legacy-shuffle',
+            algorithm: 'fisher-yates-descending',
           })) {
             const neighbors = graph.neighbors(a);
             if (settings.updateAlgorithm === 'individual')
@@ -129,7 +129,7 @@ export function create(options: Partial<LanguageChangeParameters> = {}) {
               a.spokenState = random.number() <= p ? 1 : 0;
               for (const listener of random.sample(neighbors, {
                 count: neighbors.length,
-                compatibility: 'legacy-shuffle',
+                algorithm: 'fisher-yates-descending',
               })) {
                 const choseOne = random.number() <= listener.state;
                 if (choseOne)

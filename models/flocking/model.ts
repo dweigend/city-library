@@ -102,7 +102,7 @@ export function create(options: Partial<FlockingParameters> = {}) {
   const shuffle = () =>
     random.sample(birds(), {
       count: birds().length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     });
   function turn(bird: Bird, angle: number, limit: number) {
     bird.rotate(Math.max(-limit, Math.min(limit, angle)));

@@ -100,7 +100,7 @@ export function create(options: Partial<FirefliesParameters> = {}) {
           );
           for (const f of random.sample(fireflies(), {
             count: fireflies().length,
-            compatibility: "legacy-shuffle",
+            algorithm: "fisher-yates-descending",
           })) {
             f.rotate(random.number() * 90 - random.number() * 90);
             f.move(1);

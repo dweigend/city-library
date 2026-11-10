@@ -80,7 +80,7 @@ export function create(options: Partial<Parameters> = {}) {
     const population = rabbits();
     for (const rabbit of random.sample(population, {
       count: population.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       setStep(rabbit);
       rabbit.total += rabbit.step;

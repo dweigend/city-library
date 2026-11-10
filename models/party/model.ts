@@ -56,7 +56,7 @@ export function create(options: Partial<PartyParameters> = {}) {
   function spread() {
     for (const a of random.sample(people(), {
       count: people().length,
-      compatibility: 'legacy-shuffle',
+      algorithm: 'fisher-yates-descending',
     })) {
       a.rotate({ towards: { x: a.x, y: a.y + (a.sex === 'female' ? -1 : 1) } });
       a.move(4);
@@ -134,7 +134,7 @@ export function create(options: Partial<PartyParameters> = {}) {
           happiness();
           for (const a of random.sample(people(), {
             count: people().length,
-            compatibility: 'legacy-shuffle',
+            algorithm: 'fisher-yates-descending',
           }))
             if (!a.happy) {
               a.rotate({
@@ -146,7 +146,7 @@ export function create(options: Partial<PartyParameters> = {}) {
           while (malcontents.length) {
             for (const a of random.sample(malcontents, {
               count: malcontents.length,
-              compatibility: 'legacy-shuffle',
+              algorithm: 'fisher-yates-descending',
             }))
               a.move(1);
             malcontents = people().filter((a) => !sites.includes(grid.fieldAt(a)!));

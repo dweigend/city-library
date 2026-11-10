@@ -110,7 +110,7 @@ export function create(options: Partial<InterstitialParameters> = {}) {
   function setSurface(index: number, concentration: number) {
     for (const field of random.sample(columns[index]!, {
       count: settings.height,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     })) {
       world.delete(grid.agentsAt(field));
       if (random.number() < concentration) createDAtom(field);
@@ -129,7 +129,7 @@ export function create(options: Partial<InterstitialParameters> = {}) {
     );
     for (const field of random.sample(initialSites, {
       count: initialSites.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     }))
       if (random.number() < settings.initialBulkConcentration)
         createDAtom(field);
@@ -165,7 +165,7 @@ export function create(options: Partial<InterstitialParameters> = {}) {
     const population = world.agents;
     for (const atom of random.sample(population, {
       count: population.length,
-      compatibility: "legacy-shuffle",
+      algorithm: "fisher-yates-descending",
     }))
       randomWalk(atom.id);
     if (settings.constantLeftSurface) setConstantLeftSurface();
