@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { create as createVirus } from "../../../models/virus-on-a-network/model.ts";
 import { create as createDiffusion } from "../../../models/diffusion-on-a-directed-network/model.ts";
 
-const virus = createVirus({ numberOfNodes: 10, averageNodeDegree: 1, initialOutbreakSize: 1 });
+const virus = createVirus({ nodeCount: 10, averageNodeDegree: 1, initialOutbreakSize: 1 });
 const original = virus.read();
 assert.throws(() => virus.setStates([]));
 assert.throws(() => virus.setConnections([{ from: 0, to: 1 }, { from: 1, to: 0 }]));

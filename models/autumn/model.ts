@@ -1,11 +1,11 @@
 /** NetLogo Autumn (Wilensky, 2005). Complete notices: NOTICE.md. */
 import { Agent, Grid, Random, World, geometry, run, stats } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 
 export interface AutumnParameters {
   seed: number;
-  numberOfLeaves: number;
+  leafCount: number;
   startSugarMean: number;
   startSugarStddev: number;
   windFactor: number;
@@ -23,7 +23,7 @@ export interface AutumnParameters {
 }
 export const inputs: Inputs<AutumnParameters> = {
   seed: { kind: "number", default: 1, integer: true },
-  numberOfLeaves: {
+  leafCount: {
     kind: "number",
     default: 278,
     min: 1,
@@ -64,7 +64,7 @@ type Organism = Agent<{
   chlorophyll: number;
   carotene: number;
   anthocyanin: number;
-  location: "falling" | "in roots" | "in trunk" | "in leaves";
+  location: "falling" | "in-roots" | "in-trunk" | "in-leaves";
   amountOfWater: number;
   color: string;
   fillFraction: number;
@@ -84,7 +84,7 @@ const organismState = {
   size: 1,
 };
 export function create(options: Partial<AutumnParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const space = { x: 35, y: 35, boundary: "hard" } as const;
   const world = World.create(space, { random });
@@ -101,8 +101,8 @@ export function create(options: Partial<AutumnParameters> = {}) {
   let stopped = false;
   const history: {
     tick: number;
-    leaves: number;
-    deadLeaves: number;
+    leafCount: number;
+    deadLeafCount: number;
     temperature: number;
     rain: number;
     wind: number;
@@ -178,7 +178,7 @@ export function create(options: Partial<AutumnParameters> = {}) {
     for (const field of grid.fields) {
       if (field.y < -15) field.terrain = "ground";
     }
-    for (let index = 0; index < settings.numberOfLeaves; index++) {
+    for (let index = 0; index < settings.leafCount; index++) {
       const leaf = Agent.create(
         {
           ...organismState,
@@ -224,7 +224,7 @@ export function create(options: Partial<AutumnParameters> = {}) {
   }
   function makeWindBlow() {
     for (const leaf of random.sample(leaves(), {
-      count: leaves().length,
+      sampleCount: leaves().length,
       algorithm: "fisher-yates-descending",
     })) {
       leaf.rotate(
@@ -253,7 +253,7 @@ export function create(options: Partial<AutumnParameters> = {}) {
       forwardWeather(drop, 0.5 - random.number());
     }
     for (const drop of random.sample(raindrops(), {
-      count: raindrops().length,
+      sampleCount: raindrops().length,
       algorithm: "fisher-yates-descending",
     }))
       forwardWeather(drop, random.number() * 2);
@@ -263,35 +263,35 @@ export function create(options: Partial<AutumnParameters> = {}) {
       (drop) =>
         drop.location === "falling" && grid.fieldAt(drop)!.terrain === "ground",
     )) {
-      drop.location = "in roots";
+      drop.location = "in-roots";
       drop.rotate({ towards: grid.fieldAt({ x: 0, y: drop.y })! });
     }
     for (const drop of raindrops().filter(
       (drop) =>
-        drop.location === "in roots" && grid.fieldAt(drop)!.terrain === "tree",
+        drop.location === "in-roots" && grid.fieldAt(drop)!.terrain === "tree",
     )) {
       drop.rotate({ towards: { x: 0, y: 0 } });
-      drop.location = "in trunk";
+      drop.location = "in-trunk";
     }
     for (const drop of raindrops().filter(
       (drop) =>
-        drop.location === "in trunk" &&
+        drop.location === "in-trunk" &&
         grid.fieldAt(drop) === grid.fieldAt({ x: 0, y: 0 }),
     )) {
-      drop.location = "in leaves";
+      drop.location = "in-leaves";
       drop.rotate(
         random.number({ min: 0, max: 360, integer: true }) - drop.heading,
       );
     }
     for (const drop of raindrops().filter(
-      (drop) => drop.location === "in leaves" && drop.amountOfWater <= 0.5,
+      (drop) => drop.location === "in-leaves" && drop.amountOfWater <= 0.5,
     ))
       drop.delete();
     const xBounds = stats.describe(leaves().map((leaf) => leaf.x));
     const yBounds = stats.describe(leaves().map((leaf) => leaf.y));
     for (const drop of raindrops().filter(
       (drop) =>
-        (drop.location === "in trunk" || drop.location === "in leaves") &&
+        (drop.location === "in-trunk" || drop.location === "in-leaves") &&
         (drop.y > yBounds.max! ||
           drop.x > xBounds.max! ||
           drop.x < xBounds.min!),
@@ -303,7 +303,7 @@ export function create(options: Partial<AutumnParameters> = {}) {
     const nearby = leaf
       .neighbors({ source: raindrops(), radius: 2 })
       .filter(
-        (drop) => drop.location === "in leaves" && drop.amountOfWater >= 0,
+        (drop) => drop.location === "in-leaves" && drop.amountOfWater >= 0,
       );
     if (nearby.length) {
       const distance = Math.min(...nearby.map((drop) => leaf.distanceTo(drop)));
@@ -364,7 +364,7 @@ export function create(options: Partial<AutumnParameters> = {}) {
       showIntensity(sun);
     const attached = attachedLeaves();
     for (const leaf of random.sample(attached, {
-      count: attached.length,
+      sampleCount: attached.length,
       algorithm: "fisher-yates-descending",
     })) {
       adjustWater(leaf);
@@ -374,7 +374,7 @@ export function create(options: Partial<AutumnParameters> = {}) {
       changeShape(leaf);
     }
     for (const leaf of random.sample(leaves(), {
-      count: leaves().length,
+      sampleCount: leaves().length,
       algorithm: "fisher-yates-descending",
     }))
       fallIfNecessary(leaf);
@@ -395,8 +395,8 @@ export function create(options: Partial<AutumnParameters> = {}) {
     const living = leaves();
     history.push({
       tick: world.tick.value,
-      leaves: living.length,
-      deadLeaves: organisms().filter(
+      leafCount: living.length,
+      deadLeafCount: organisms().filter(
         (organism) => organism.group === "dead-leaf",
       ).length,
       temperature: settings.temperature,
@@ -413,9 +413,9 @@ export function create(options: Partial<AutumnParameters> = {}) {
     });
     if (history.length > 1001) history.splice(1, 1);
   }
-  function advance(count = 1) {
-    stepCount(count);
-    for (let index = 0; index < count; index++) {
+  function advance(stepCount = 1) {
+    validateStepCount(stepCount);
+    for (let index = 0; index < stepCount; index++) {
       if (!leaves().length) {
         stopped = true;
         break;
@@ -428,7 +428,7 @@ export function create(options: Partial<AutumnParameters> = {}) {
     update: Partial<
       Omit<
         AutumnParameters,
-        "seed" | "numberOfLeaves" | "startSugarMean" | "startSugarStddev"
+        "seed" | "leafCount" | "startSugarMean" | "startSugarStddev"
       >
     >,
   ) {
@@ -445,7 +445,7 @@ export function create(options: Partial<AutumnParameters> = {}) {
       )
     )
       throw new TypeError("Only weather and display fields are live.");
-    settings = parameters(inputs, { ...settings, ...update });
+    settings = parseParameters(inputs, { ...settings, ...update });
   }
   function read() {
     const snapshot = organisms().map((organism) => ({

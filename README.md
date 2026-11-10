@@ -64,6 +64,23 @@ flowchart TD
 
 This is a composition map, not a required startup sequence. A graph needs no coordinates, an agent model needs no grid, and a building generator need not create residents. Broader building generation and city-domain models remain delivery goals.
 
+## Repository structure
+
+The repository groups files by responsibility:
+
+```text
+library/   Headless domain modules, including Agent Loom
+models/    Executable models and their source records
+ui/        Shared UI and the Agent Lab host
+tests/     Behavior checks and public contract scripts
+docs/      Guides, contracts and development evidence
+index.ts   Public package entry
+```
+
+Library build tools live in `library/development/`, executable checks in `tests/` and migration evidence in `docs/development/`. Required configuration stays at the root.
+
+The [naming conventions](docs/NAMING_CONVENTIONS.md#repository-structure) define placement rules; [architecture](docs/ARCHITECTURE.md#binding-domain-layout-and-extension-rules) defines domain boundaries. No additional package layer or nested `src/` folder is needed.
+
 ## Development
 
 `bun run check` runs TypeScript/Svelte checks, tests, public examples, the library build and a packed Bun/Node/TypeScript consumer. The consumer requires Node 26.8.2. `bun run build:ui` builds the Vite host.

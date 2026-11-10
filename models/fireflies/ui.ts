@@ -2,7 +2,7 @@ import { defineUI, type Observation, type SpatialData } from "../../ui/index.ts"
 
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: ["seed", "number"],
+  setup: ["seed", "fireflyCount"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/Fireflies",
     label: "Source attribution · Wilensky · CC BY-NC-SA 3.0",
@@ -12,7 +12,7 @@ export const ui = defineUI(model, {
     strategy: {},
     flashLength: {},
     cycleLength: {},
-    flashesToReset: {},
+    flashCountToReset: {},
     showDarkFireflies: {},
   },
   monitors: [
@@ -38,7 +38,7 @@ export const ui = defineUI(model, {
         {
           label: "Flashing",
           color: "#bf3030",
-          points: s.history.map((p) => ({ x: p.tick, y: p.flashing })),
+          points: s.history.map((p) => ({ x: p.tick, y: p.flashingFireflyCount })),
         },
       ],
     },

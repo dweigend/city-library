@@ -27,7 +27,7 @@ Use Make F1 generation (`makeF1Generation()`) for a litter trial; `advance(...)`
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
 | `maleGenotype` | `"Aa"` | `AA`, `Aa`, `aa` |
 | `femaleGenotype` | `"Aa"` | `AA`, `Aa`, `aa` |
-| `numberOfOffspring` | `6` | integer; ≥ 0; ≤ 10 |
+| `offspringCount` | `6` | integer; ≥ 0; ≤ 10 |
 
 ## Actions and observations
 

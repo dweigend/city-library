@@ -1,13 +1,13 @@
-import Content from "./field-content.svelte";
-import Description from "./field-description.svelte";
-import Error from "./field-error.svelte";
-import Group from "./field-group.svelte";
-import Label from "./field-label.svelte";
-import Legend from "./field-legend.svelte";
-import Separator from "./field-separator.svelte";
-import Set from "./field-set.svelte";
-import Title from "./field-title.svelte";
-import Field from "./field.svelte";
+import Content from "./FieldContent.svelte";
+import Description from "./FieldDescription.svelte";
+import Error from "./FieldError.svelte";
+import Group from "./FieldGroup.svelte";
+import Label from "./FieldLabel.svelte";
+import Legend from "./FieldLegend.svelte";
+import Separator from "./FieldSeparator.svelte";
+import Set from "./FieldSet.svelte";
+import Title from "./FieldTitle.svelte";
+import Field from "./Field.svelte";
 
 export {
 	Field,

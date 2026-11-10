@@ -23,9 +23,9 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer |
-| `initialTF0s` | `0` | integer; ≥ 0; ≤ 200 |
-| `initialTF1s` | `0` | integer; ≥ 0; ≤ 200 |
-| `initialTF2s` | `0` | integer; ≥ 0; ≤ 200 |
+| `initialTf0Count` | `0` | integer; ≥ 0; ≤ 200 |
+| `initialTf1Count` | `0` | integer; ≥ 0; ≤ 200 |
+| `initialTf2Count` | `0` | integer; ≥ 0; ≤ 200 |
 | `tfsPerMRNA` | `2` | number; ≥ 0; ≤ 10 |
 | `maxTFSynergy` | `4` | number; ≥ 0; ≤ 4 |
 | `mrnaDecayProb` | `0.25` | number; ≥ 0; ≤ 1 |

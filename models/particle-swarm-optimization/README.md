@@ -31,8 +31,8 @@ const observation = simulation.read();
 | `particleSpeedLimit` | `10` | integer; ≥ 1; ≤ 20 |
 | `attractionToPersonalBest` | `2` | number; ≥ 0; ≤ 2 |
 | `attractionToGlobalBest` | `1` | number; ≥ 0; ≤ 2 |
-| `highlightMode` | `"None"` | `None`, `Best found`, `True best` |
-| `trailsMode` | `"None"` | `None`, `Tails`, `Traces` |
+| `highlightMode` | `"none"` | `none`, `best-found`, `true-best` |
+| `trailsMode` | `"none"` | `none`, `tails`, `traces` |
 
 ## Actions and observations
 

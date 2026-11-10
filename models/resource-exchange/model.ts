@@ -43,7 +43,7 @@ export function createExchangeModel(options: ExchangeOptions = {}) {
   function step() {
     const population = world.agents;
     if (population.length < 2) { lastPair = Object.freeze([]); return; }
-    const [donor, receiver] = random.sample(population, { count: 2 });
+    const [donor, receiver] = random.sample(population, { sampleCount: 2 });
     if (!donor || !receiver) throw new Error("Expected two sampled population members.");
     // A typed caller population retains the canonical identities selected by Random.
     const from = agents.find((agent) => agent === donor)!;
@@ -57,7 +57,7 @@ export function createExchangeModel(options: ExchangeOptions = {}) {
   }
 
   return {
-    advance(steps = 1) { run(world, step, steps); },
+    advance(stepCount = 1) { run(world, step, stepCount); },
     select(id: string) {
       const found = agents.find((agent) => agent.id === id);
       if (!found) throw new RangeError("Select an agent from this exchange model.");

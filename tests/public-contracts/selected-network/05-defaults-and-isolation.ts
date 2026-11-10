@@ -4,7 +4,7 @@ import { create as createDiffusion } from "../../../models/diffusion-on-a-direct
 
 const virus = createVirus();
 const state = virus.read();
-assert.equal(state.parameters.numberOfNodes, 150);
+assert.equal(state.parameters.nodeCount, 150);
 assert.equal(state.parameters.averageNodeDegree, 6);
 assert.equal(state.parameters.initialOutbreakSize, 3);
 assert.equal(state.parameters.spreadChance, 2.5);
@@ -13,7 +13,7 @@ assert.equal(state.parameters.resistanceChance, 5);
 assert.equal(state.parameters.checkFrequency, 1);
 assert.equal(state.nodes.length, 150);
 assert.equal(state.edges.length, 450);
-assert.deepEqual(state.counts, { susceptible: 147, infected: 3, resistant: 0 });
+assert.deepEqual(state.counts, { susceptibleNodeCount: 147, infectedNodeCount: 3, resistantNodeCount: 0 });
 assert.ok(Object.isFrozen(state.nodes));
 assert.ok(Object.isFrozen(state.nodes[0]));
 const first = createDiffusion();
@@ -22,7 +22,7 @@ const before = second.read();
 assert.equal(before.parameters.gridSize, 9);
 assert.equal(before.parameters.edgeChance, 50);
 assert.equal(before.parameters.diffusionRate, 10);
-assert.deepEqual(before.counts, { nodes: 81, candidateEdges: 288, activeEdges: before.counts.activeEdges });
+assert.deepEqual(before.counts, { nodeCount: 81, candidateEdgeCount: 288, activeEdgeCount: before.counts.activeEdgeCount });
 assert.equal(before.totalValue, 81);
 assert.deepEqual(first.read().edges.map(edge => [edge.fromIndex, edge.toIndex, edge.active]), before.edges.map(edge => [edge.fromIndex, edge.toIndex, edge.active]));
 first.advance();

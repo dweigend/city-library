@@ -1,11 +1,11 @@
 /** NetLogo epiDEM Travel and Control. Toy mechanism, not health guidance. */
 import { Agent, Graph, Grid, Random, World, geometry, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface TravelParameters {
   seed: number;
-  initialPeople: number;
-  initialAmbulance: number;
+  initialPersonCount: number;
+  initialAmbulanceCount: number;
   infectionChance: number;
   recoveryChance: number;
   averageRecoveryTime: number;
@@ -19,14 +19,14 @@ export interface TravelParameters {
 }
 export const inputs: Inputs<TravelParameters> = {
   seed: { kind: "number", default: 1, integer: true },
-  initialPeople: {
+  initialPersonCount: {
     kind: "number",
     default: 250,
     min: 50,
     max: 400,
     integer: true,
   },
-  initialAmbulance: {
+  initialAmbulanceCount: {
     kind: "number",
     default: 2,
     min: 0,
@@ -58,11 +58,11 @@ type Person = Agent<{
   isolationTendency: number;
   hospitalGoingTendency: number;
   continent: number;
-  nbInfected: number;
-  nbRecovered: number;
+  newlyInfectedPersonCount: number;
+  newlyRecoveredPersonCount: number;
 }>;
 export function create(options: Partial<TravelParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const space = { x: 25, y: 25, boundary: "hard" } as const;
   const world = World.create(space, { random });
@@ -73,19 +73,19 @@ export function create(options: Partial<TravelParameters> = {}) {
   let betaN = 0;
   let gamma = 0;
   let r0 = 0;
-  let nbInfectedPrevious = 0;
+  let previousNewlyInfectedPersonCount = 0;
   const history: {
     tick: number;
-    infected: number;
-    cured: number;
-    inoculated: number;
-    isolated: number;
-    hospitalized: number;
+    infectedPersonCount: number;
+    recoveredPersonCount: number;
+    inoculatedPersonCount: number;
+    isolatedPersonCount: number;
+    hospitalizedPersonCount: number;
     r0: number;
   }[] = [];
   const people = () => world.agents as readonly Person[];
   const shuffled = (p: readonly Person[]) =>
-    random.sample(p, { count: p.length, algorithm: "fisher-yates-descending" });
+    random.sample(p, { sampleCount: p.length, algorithm: "fisher-yates-descending" });
   const normalTendency = (mean: number) =>
     Math.max(
       0,
@@ -131,8 +131,8 @@ export function create(options: Partial<TravelParameters> = {}) {
           isolationTendency: 0,
           hospitalGoingTendency: 0,
           continent: x <= 0 ? 1 : 2,
-          nbInfected: 0,
-          nbRecovered: 0,
+          newlyInfectedPersonCount: 0,
+          newlyRecoveredPersonCount: 0,
         },
         {
           position: { x, y },
@@ -163,13 +163,13 @@ export function create(options: Partial<TravelParameters> = {}) {
     return person;
   }
   function setupPeople() {
-    for (let who = 0; who < settings.initialPeople; who++)
+    for (let who = 0; who < settings.initialPersonCount; who++)
       addPerson(who, false);
     if (settings.edges) makeNetwork();
   }
   function setupAmbulance() {
-    for (let i = 0; i < settings.initialAmbulance; i++)
-      addPerson(settings.initialPeople + i, true);
+    for (let i = 0; i < settings.initialAmbulanceCount; i++)
+      addPerson(settings.initialPersonCount + i, true);
   }
   function neighbors(person: Person) {
     const adjacent = new Set(
@@ -185,11 +185,11 @@ export function create(options: Partial<TravelParameters> = {}) {
   function record() {
     history.push({
       tick: world.tick.value,
-      infected: people().filter((p) => p.infected).length,
-      cured: people().filter((p) => p.cured).length,
-      inoculated: people().filter((p) => p.inoculated).length,
-      isolated: people().filter((p) => p.isolated).length,
-      hospitalized: people().filter((p) => p.hospitalized).length,
+      infectedPersonCount: people().filter((p) => p.infected).length,
+      recoveredPersonCount: people().filter((p) => p.cured).length,
+      inoculatedPersonCount: people().filter((p) => p.inoculated).length,
+      isolatedPersonCount: people().filter((p) => p.isolated).length,
+      hospitalizedPersonCount: people().filter((p) => p.hospitalized).length,
       r0,
     });
   }
@@ -202,7 +202,7 @@ export function create(options: Partial<TravelParameters> = {}) {
     betaN = 0;
     gamma = 0;
     r0 = 0;
-    nbInfectedPrevious = 0;
+    previousNewlyInfectedPersonCount = 0;
     setupGlobals();
     setupPeople();
     setupAmbulance();
@@ -254,8 +254,8 @@ export function create(options: Partial<TravelParameters> = {}) {
     }
   }
   function clearCount(person: Person) {
-    person.nbInfected = 0;
-    person.nbRecovered = 0;
+    person.newlyInfectedPersonCount = 0;
+    person.newlyRecoveredPersonCount = 0;
   }
   function infect(person: Person) {
     for (const target of shuffled(
@@ -265,7 +265,7 @@ export function create(options: Partial<TravelParameters> = {}) {
         settings.infectionChance * (graph.hasEdge(person, target) ? 2 : 1);
       if (random.number({ min: 0, max: 100, integer: true }) < chance) {
         target.infected = true;
-        target.nbInfected++;
+        target.newlyInfectedPersonCount++;
       }
     }
   }
@@ -297,29 +297,29 @@ export function create(options: Partial<TravelParameters> = {}) {
     ) {
       person.infected = false;
       person.cured = true;
-      person.nbRecovered++;
+      person.newlyRecoveredPersonCount++;
     }
   }
   function calculateR0() {
-    const newlyInfected = people().reduce((s, p) => s + p.nbInfected, 0);
-    const newlyRecovered = people().reduce((s, p) => s + p.nbRecovered, 0);
+    const newlyInfected = people().reduce((s, p) => s + p.newlyInfectedPersonCount, 0);
+    const newlyRecovered = people().reduce((s, p) => s + p.newlyRecoveredPersonCount, 0);
     const infected = people().filter((p) => p.infected).length;
-    nbInfectedPrevious = infected + newlyRecovered - newlyInfected;
-    betaN = nbInfectedPrevious < 10 ? 0 : newlyInfected / nbInfectedPrevious;
-    gamma = nbInfectedPrevious < 5 ? 0 : newlyRecovered / nbInfectedPrevious;
+    previousNewlyInfectedPersonCount = infected + newlyRecovered - newlyInfected;
+    betaN = previousNewlyInfectedPersonCount < 10 ? 0 : newlyInfected / previousNewlyInfectedPersonCount;
+    gamma = previousNewlyInfectedPersonCount < 5 ? 0 : newlyRecovered / previousNewlyInfectedPersonCount;
     const susceptibleT =
-      settings.initialPeople -
+      settings.initialPersonCount -
       infected -
       people().filter((p) => p.cured).length;
     const s0 = people().filter((p) => p.susceptible).length;
-    if (settings.initialPeople - susceptibleT !== 0 && susceptibleT !== 0) {
+    if (settings.initialPersonCount - susceptibleT !== 0 && susceptibleT !== 0) {
       if (s0 / susceptibleT <= 0)
         throw new RangeError(
           "Source R0 logarithm requires a positive argument.",
         );
       r0 =
         (Math.log(s0 / susceptibleT) /
-          (settings.initialPeople - susceptibleT)) *
+          (settings.initialPersonCount - susceptibleT)) *
         s0;
     }
   }
@@ -357,9 +357,9 @@ export function create(options: Partial<TravelParameters> = {}) {
       if ((p.isolated || p.hospitalized) && p.cured) unisolate(p);
     for (const _p of shuffled(people())) calculateR0();
   }
-  function advance(count = 1) {
-    stepCount(count);
-    for (let i = 0; i < count; i++) {
+  function advance(stepCount = 1) {
+    validateStepCount(stepCount);
+    for (let i = 0; i < stepCount; i++) {
       if (!people().some((p) => p.infected)) {
         stopped = true;
         break;
@@ -371,16 +371,16 @@ export function create(options: Partial<TravelParameters> = {}) {
   }
   function setParameters(
     update: Partial<
-      Omit<TravelParameters, "seed" | "initialPeople" | "initialAmbulance">
+      Omit<TravelParameters, "seed" | "initialPersonCount" | "initialAmbulanceCount">
     >,
   ) {
     if (
       Object.keys(update).some((k) =>
-        ["seed", "initialPeople", "initialAmbulance"].includes(k),
+        ["seed", "initialPersonCount", "initialAmbulanceCount"].includes(k),
       )
     )
       throw new TypeError("Setup parameters are immutable.");
-    settings = parameters(inputs, { ...settings, ...update });
+    settings = parseParameters(inputs, { ...settings, ...update });
   }
   function read() {
     return {
@@ -392,7 +392,7 @@ export function create(options: Partial<TravelParameters> = {}) {
       betaN,
       gamma,
       r0,
-      nbInfectedPrevious,
+      previousNewlyInfectedPersonCount: previousNewlyInfectedPersonCount,
       infectedCount: people().filter((p) => p.infected).length,
       curedCount: people().filter((p) => p.cured).length,
       history: history.map((p) => ({ ...p })),

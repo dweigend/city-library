@@ -23,8 +23,8 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
-| `number` | `2400` | integer; ≥ 1; ≤ 4000 |
-| `hops` | `20` | integer; ≥ 0; ≤ 99 |
+| `rabbitCount` | `2400` | integer; ≥ 1; ≤ 4000 |
+| `hopCount` | `20` | integer; ≥ 0; ≤ 99 |
 | `xScaling` | `1` | integer; ≥ 1; ≤ 10 |
 | `hop1` | `1` | integer; ≥ -5; ≤ 5 |
 | `hop2` | `-1` | integer; ≥ -5; ≤ 5 |

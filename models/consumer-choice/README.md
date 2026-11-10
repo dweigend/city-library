@@ -24,7 +24,7 @@ const observation = simulation.read();
 | --- | --- | --- |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
 | `consumerCount` | `100` | integer; ≥ 0; ≤ 1000 |
-| `avgConnections` | `5` | integer; ≥ 0; ≤ 10 |
+| `meanConnectionCount` | `5` | integer; ≥ 0; ≤ 10 |
 | `initialOrangePercent` | `50` | number; ≥ 0; ≤ 100 |
 | `normInfluence` | `0.15` | number; ≥ 0; ≤ 1 |
 | `informationExchange` | `0.05` | number; ≥ 0; ≤ 1 |

@@ -2,7 +2,7 @@ import { defineUI, indexedColor, type Observation, type SpatialData } from "../.
 
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: ["seed", { field: "numberOfStores", label: "Stores" }, "layout"],
+  setup: ["seed", { field: "storeCount", label: "Stores" }, "layout"],
   live: {
     rules: {
       set: (m, v) => m.setRules({ rules: v }),

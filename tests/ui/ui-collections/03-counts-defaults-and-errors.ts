@@ -2,7 +2,7 @@ import { collectionDiagram, defineUI, scientificPalette, type CollectionRow } fr
 import { assert, equal, button, settle } from '../ui-authoring/assertions.ts';
 
 export const rows: readonly CollectionRow[] = [
-  { id: 'completed', label: 'Completed residents', kind: 'count', count: 0 },
+  { id: 'completed', label: 'Completed residents', kind: 'count', itemCount: 0 },
   { id: 'water', label: 'Synthetic allocation', kind: 'capacity', used: 2.5, capacity: 2, unit: 'allocation units' },
   { id: 'empty', label: 'Empty waiting set', kind: 'items', items: [] },
   { id: 'identified', label: 'Identified residents', kind: 'items', items: [{ id: 'resident:7' }] },
@@ -27,13 +27,13 @@ function rejects(input: unknown, kind: typeof TypeError | typeof RangeError) {
   try { collectionDiagram(input as never); } catch (error) { correct = error instanceof kind; }
   assert(correct, `Invalid public collection input must throw ${kind.name}`);
 }
-for (const count of [-1, 0.5, NaN, Infinity, Number.MAX_SAFE_INTEGER + 1]) rejects([{ id: 'n', label: 'Count', kind: 'count', count }], RangeError);
-rejects([{ id: 'n', label: 'Count', kind: 'count', count: '2' }], TypeError);
-rejects([{ id: 'n', label: 'Wrong mixture', kind: 'count', count: 2, items: [] }], TypeError);
+for (const count of [-1, 0.5, NaN, Infinity, Number.MAX_SAFE_INTEGER + 1]) rejects([{ id: 'n', label: 'Count', kind: 'count', itemCount: count }], RangeError);
+rejects([{ id: 'n', label: 'Count', kind: 'count', itemCount: '2' }], TypeError);
+rejects([{ id: 'n', label: 'Wrong mixture', kind: 'count', itemCount: 2, items: [] }], TypeError);
 rejects([{ id: 'n', label: 'Wrong kind', kind: 'unknown', count: 2 }], TypeError);
 rejects([{ id: 'n', label: 'Wrong order', kind: 'items', order: 'fifo', items: [] }], TypeError);
 rejects([{ id: 'n', label: 'Wrong shape', kind: 'items', items: [{ id: 'person', shape: 'hexagon' }] }], TypeError);
-rejects([{ id: 'n', label: 'One', kind: 'count', count: 1 }, { id: 'n', label: 'Two', kind: 'count', count: 2 }], RangeError);
+rejects([{ id: 'n', label: 'One', kind: 'count', itemCount: 1 }, { id: 'n', label: 'Two', kind: 'count', itemCount: 2 }], RangeError);
 rejects([{ id: 'a', label: 'One', kind: 'items', items: [{ id: 'same' }] }, { id: 'b', label: 'Two', kind: 'items', items: [{ id: 'same' }] }], RangeError);
 rejects([{ id: 'capacity', label: 'Capacity', kind: 'capacity', used: 1, capacity: 2, unit: '' }], TypeError);
 rejects([{ id: 'capacity', label: 'Capacity', kind: 'capacity', used: -1, capacity: 2, unit: 'units' }], RangeError);

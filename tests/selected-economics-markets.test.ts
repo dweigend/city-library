@@ -31,8 +31,8 @@ describe("selected market and foraging source mechanisms", () => {
     });
     expect(() => genomeTraits([0, 1])).toThrow();
     const f = fruit({
-      initialForagers: 1,
-      initialFruitBushes: 0,
+      initialForagerCount: 1,
+      initialFruitBushCount: 0,
       bushGrowthChance: 0,
       maxAge: 1,
     });
@@ -60,14 +60,14 @@ describe("selected market and foraging source mechanisms", () => {
   });
 
   test("Orderbook equal quotes never cross; strict quotes trade at the lower ask and conserve assets", () => {
-    const equal = book({ honestTraders: 2, cunningTraders: 0 });
+    const equal = book({ honestTraderCount: 2, cunningTraderCount: 0 });
     equal.submitOrder(0, true, 10, 1);
     equal.submitOrder(1, false, 10, 1);
     equal.matchmakeAll();
     expect(equal.read().latestAmount).toBe(0);
     expect(equal.read().bids.length).toBe(1);
     expect(equal.read().asks.length).toBe(1);
-    const crossed = book({ honestTraders: 2, cunningTraders: 0 });
+    const crossed = book({ honestTraderCount: 2, cunningTraderCount: 0 });
     const before = crossed.read();
     crossed.submitOrder(0, true, 12, 1);
     crossed.submitOrder(1, false, 10, 1);
@@ -95,7 +95,7 @@ describe("selected market and foraging source mechanisms", () => {
         .read()
         .traders.some((t) => t.cash + t.belief * t.stockpile !== t.utility),
     ).toBe(true);
-    const isolated = book({ honestTraders: 1, cunningTraders: 0 });
+    const isolated = book({ honestTraderCount: 1, cunningTraderCount: 0 });
     expect(() => isolated.advance()).toThrow("division by zero");
     expect(isolated.read().tick).toBe(0);
     expect(() => isolated.submitOrder(0, true, 0, 1)).toThrow();
@@ -121,9 +121,9 @@ describe("selected market and foraging source mechanisms", () => {
     const first = m.read();
     m.advance();
     const second = m.read();
-    expect(second.totalSales).toBe(0);
-    expect(second.remainingSupply).toBe(
-      first.sellers.reduce((n, s) => n + s.itemsForSale, 0),
+    expect(second.saleCount).toBe(0);
+    expect(second.remainingSupplyItemCount).toBe(
+      first.sellers.reduce((n, s) => n + s.saleItemCount, 0),
     );
     expect(second.sellers[0]!.askingPrice).toBe(
       changePrice(first.sellers[0]!.askingPrice, -2),
@@ -143,27 +143,27 @@ describe("selected market and foraging source mechanisms", () => {
     const m = bidding({
       supplyDistribution: "concentrated",
       demandDistribution: "concentrated",
-      sellerBehavior: "mix of all",
-      buyerBehavior: "mix of all",
+      sellerBehavior: "mixed",
+      buyerBehavior: "mixed",
       seed: 42,
     });
     const initial = m.read();
     m.advance(300);
     const after = m.read();
-    expect(after.totalSales).toBe(
-      after.sellers.reduce((n, s) => n + s.sold, 0),
+    expect(after.saleCount).toBe(
+      after.sellers.reduce((n, s) => n + s.soldItemCount, 0),
     );
-    expect(after.totalSales).toBe(
-      after.buyers.reduce((n, b) => n + b.bought, 0),
+    expect(after.saleCount).toBe(
+      after.buyers.reduce((n, b) => n + b.purchasedItemCount, 0),
     );
-    expect(after.sellers.reduce((n, s) => n + s.itemsForSale + s.sold, 0)).toBe(
-      initial.sellers.reduce((n, s) => n + s.itemsForSale, 0),
+    expect(after.sellers.reduce((n, s) => n + s.saleItemCount + s.soldItemCount, 0)).toBe(
+      initial.sellers.reduce((n, s) => n + s.saleItemCount, 0),
     );
-    expect(after.buyers.reduce((n, b) => n + b.wantToBuy + b.bought, 0)).toBe(
-      initial.buyers.reduce((n, b) => n + b.wantToBuy, 0),
+    expect(after.buyers.reduce((n, b) => n + b.desiredItemCount + b.purchasedItemCount, 0)).toBe(
+      initial.buyers.reduce((n, b) => n + b.desiredItemCount, 0),
     );
     expect(
-      after.buyers.every((b) => b.wantToBuy === 0 || b.willingToPay <= b.money),
+      after.buyers.every((b) => b.desiredItemCount === 0 || b.willingToPay <= b.money),
     ).toBe(true);
   });
 
@@ -188,15 +188,15 @@ describe("selected market and foraging source mechanisms", () => {
 
   test("Braess strict spawn timing, road-type semantics and all three policies execute", () => {
     for (const mode of [
-      "Probabilistic Greedy",
-      "Empirical Analytical",
-      "Best Known /w Random Deviation",
+      "probabilistic-greedy",
+      "empirical-analytical",
+      "best-known-with-random-deviation",
     ] as const) {
       const b = traffic({ mode });
       b.advance(26);
-      expect(b.read().carsSpawned).toBe(0);
+      expect(b.read().spawnedCarCount).toBe(0);
       b.advance();
-      expect(b.read().carsSpawned).toBe(1);
+      expect(b.read().spawnedCarCount).toBe(1);
       expect(b.read().commuters[0]!.ticksHere).toBe(2);
       expect(
         b.read().cells.find((p) => p.x === 0 && p.y === 22)?.roadType,
@@ -206,8 +206,8 @@ describe("selected market and foraging source mechanisms", () => {
       );
       b.advance(1500);
       const after = b.read();
-      expect(after.completed).toBeGreaterThan(0);
-      expect(after.carsSpawned).toBe(after.completed + after.commuters.length);
+      expect(after.completedCarCount).toBeGreaterThan(0);
+      expect(after.spawnedCarCount).toBe(after.completedCarCount + after.commuters.length);
       expect(
         after.commuters.every(
           (a) => Number.isInteger(a.x) && Number.isInteger(a.y),
@@ -217,7 +217,7 @@ describe("selected market and foraging source mechanisms", () => {
   });
 
   test("Braess closing middle road waits for its existing commuters, then prevents further middle routes", () => {
-    const b = traffic({ mode: "Empirical Analytical" });
+    const b = traffic({ mode: "empirical-analytical" });
     b.advance(100);
     expect(b.read().commuters.some((a) => a.route === 2)).toBe(true);
     b.setRules({ middleOn: false });

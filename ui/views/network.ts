@@ -53,7 +53,7 @@ export function mountNetwork(
       style: { "target-arrow-shape": "triangle", "arrow-scale": 1 },
     },
   ]);
-  let first = true;
+  let isFirstRender = true;
   let fitted = true;
   let adjusting = false;
   let disposed = false;
@@ -213,8 +213,8 @@ export function mountNetwork(
           chooser.add(new Option(node.label ?? `Node ${index + 1}`, node.id));
       }
       chooser.value = selected ?? "";
-      if ((first || fitted) && nodes.length) {
-        first = false;
+      if ((isFirstRender || fitted) && nodes.length) {
+        isFirstRender = false;
         fit();
       }
       canvas.setAttribute(

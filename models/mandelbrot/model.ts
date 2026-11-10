@@ -1,7 +1,7 @@
 /** Mandelbrot, Wilensky (1997), CC BY-NC-SA 3.0. Full source and notices: source.nlogox / NOTICE.md. */
 import { Agent, Grid, Random, World, geometry } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface Parameters {
   seed: number;
   agentCount: number;
@@ -33,7 +33,7 @@ type ModelAgent = Agent<{
   hidden: boolean;
 }>;
 export function create(options: Partial<Parameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const grid = Grid.create(
     { x: 301, y: 301, boundary: "hard" },
@@ -75,7 +75,7 @@ export function create(options: Partial<Parameters> = {}) {
       if (Math.hypot(field.zReal, field.zImaginary) <= 2 && field.counter < 115)
         eligible.push(...(grid.agentsAt(field) as readonly ModelAgent[]));
     for (const t of random.sample(eligible, {
-      count: eligible.length,
+      sampleCount: eligible.length,
       algorithm: "fisher-yates-descending",
     })) {
       const p = grid.fieldAt(t)!,
@@ -88,7 +88,7 @@ export function create(options: Partial<Parameters> = {}) {
   function step() {
     const population = agents();
     for (const agent of random.sample(population, {
-      count: population.length,
+      sampleCount: population.length,
       algorithm: "fisher-yates-descending",
     })) {
       const direction = geometry.direction({ heading: agent.heading });
@@ -104,7 +104,7 @@ export function create(options: Partial<Parameters> = {}) {
   function wiggle() {
     const population = agents();
     for (const agent of random.sample(population, {
-      count: population.length,
+      sampleCount: population.length,
       algorithm: "fisher-yates-descending",
     })) {
       agent.rotate(Math.floor(random.number() * 10));
@@ -114,7 +114,7 @@ export function create(options: Partial<Parameters> = {}) {
   function climb() {
     const population = agents();
     for (const agent of random.sample(population, {
-      count: population.length,
+      sampleCount: population.length,
       algorithm: "fisher-yates-descending",
     })) {
       const field = grid.fieldAt(agent)!;
@@ -152,9 +152,9 @@ export function create(options: Partial<Parameters> = {}) {
     get grid() {
       return grid;
     },
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) go();
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) go();
     },
     hideAgents() {
       for (const t of agents()) t.hidden = true;
@@ -162,7 +162,7 @@ export function create(options: Partial<Parameters> = {}) {
     setRules(
       change: Partial<Pick<Parameters, "throw" | "scaleFactor" | "agentCount">>,
     ) {
-      settings = parameters(inputs, { ...settings, ...change });
+      settings = parseParameters(inputs, { ...settings, ...change });
     },
     read() {
       return Object.freeze({
@@ -171,7 +171,7 @@ export function create(options: Partial<Parameters> = {}) {
         height: 301,
         parameters: settings,
         setupScale,
-        maxIterations: 115,
+        maxIterationCount: 115,
         // Sparse display records are derived from the full canonical Grid.
         fields: Object.freeze(
           fields
@@ -202,8 +202,8 @@ export function create(options: Partial<Parameters> = {}) {
             }),
           ),
         ),
-        computedFields: fields.filter((p) => p.counter > 0).length,
-        iterations: fields.reduce((n, p) => n + p.counter, 0),
+        computedFieldCount: fields.filter((p) => p.counter > 0).length,
+        iterationCount: fields.reduce((n, p) => n + p.counter, 0),
         randomState: random.state,
       });
     },

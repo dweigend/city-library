@@ -16,7 +16,7 @@ simulation.advance(1);
 const observation = simulation.read();
 ```
 
-One `advance(1)` completes one movement attempt, including the players’ internal move loops. `attemptsPerRun` groups these attempts into runs. If `stopAfterEachRun` is enabled, use Next run (an explicit `advance()` call) to resume after `stopped`; a stopped run is not an unfinished individual move.
+One `advance(1)` completes one movement attempt, including the players’ internal move loops. `attemptCountPerRun` groups these attempts into runs. If `stopAfterEachRun` is enabled, use Next run (an explicit `advance()` call) to resume after `stopped`; a stopped run is not an unfinished individual move.
 
 ## Parameters
 
@@ -25,14 +25,14 @@ One `advance(1)` completes one movement attempt, including the players’ intern
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
-| `numberOfPlayers` | `30` | integer; ≥ 10; ≤ 50 |
-| `attemptsPerRun` | `30` | integer; ≥ 1; ≤ 100 |
-| `strategy` | `"Vygotskiian"` | `Random`, `Piagetian`, `Vygotskiian`, `P-V` |
+| `playerCount` | `30` | integer; ≥ 10; ≤ 50 |
+| `attemptCountPerRun` | `30` | integer; ≥ 1; ≤ 100 |
+| `strategy` | `"vygotskiian"` | `random`, `piagetian`, `vygotskiian`, `piaget-vygotsky` |
 | `randomizeStrategyEachRun` | `true` | boolean |
 | `stopAfterEachRun` | `false` | boolean |
 | `trails` | `true` | boolean |
 | `zpd` | `15` | number; ≥ 0; ≤ 60 |
-| `vygotskiianNeighbors` | `4` | integer; ≥ 2; ≤ 18 |
+| `vygotskiianNeighborCount` | `4` | integer; ≥ 2; ≤ 18 |
 | `moveError` | `4` | number; ≥ 0; ≤ 30 |
 
 ## Actions and observations

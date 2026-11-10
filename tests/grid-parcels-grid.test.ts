@@ -2,7 +2,7 @@ import { expect, test } from "bun:test";
 import { Agent, Grid, World, topology, type PlanarPolygon } from "city-library";
 
 test("layout Fields retain canonical owner and independent direct state", () => {
-  const layout = topology.square({ columns: 2, rows: 1, cellSize: 2 });
+  const layout = topology.square({ columnCount: 2, rowCount: 1, cellSize: 2 });
   const initial = { temperature: 10, samples: [1], nested: { enabled: true } };
   const grid = Grid.create({ layout, state: initial });
   const first = grid.fields[0]!;
@@ -36,7 +36,7 @@ test("authored Field position uses polygon area rather than a regular address", 
 });
 
 test("layout occupancy follows current positions, canonical identities and admission order", () => {
-  const layout = topology.hex({ columns: 3, rows: 2 });
+  const layout = topology.hex({ columnCount: 3, rowCount: 2 });
   const world = World.create();
   const grid = world.add(Grid.create({ layout, state: { value: 0 } }));
   const firstField = grid.fields[0]!;
@@ -67,7 +67,7 @@ test("layout occupancy follows current positions, canonical identities and admis
 test("layout occupancy invalidates incompatible sources and rebuilds after detach", () => {
   const firstWorld = World.create();
   const secondWorld = World.create();
-  const grid = firstWorld.add(Grid.create({ layout: topology.square({ columns: 1, rows: 1 }), state: {} }));
+  const grid = firstWorld.add(Grid.create({ layout: topology.square({ columnCount: 1, rowCount: 1 }), state: {} }));
   const field = grid.fields[0]!;
   const first = firstWorld.add(Agent.create({}, { position: field }));
   const second = secondWorld.add(Agent.create({}, { position: field }));
@@ -91,7 +91,7 @@ test("layout occupancy invalidates incompatible sources and rebuilds after detac
 });
 
 test("layout Grid admission checks actual geometry without fabricated Space", () => {
-  const layout = topology.square({ columns: 2, rows: 1 });
+  const layout = topology.square({ columnCount: 2, rowCount: 1 });
   const grid = Grid.create({ layout, state: {} });
   const adequate = World.create({ x: 4, y: 2 });
   adequate.add(grid);
@@ -114,7 +114,7 @@ test("layout Grid admission checks actual geometry without fabricated Space", ()
 });
 
 test("layout Grid rejects malformed options and foreign canonical Fields", () => {
-  const layout = topology.square({ columns: 1, rows: 1 });
+  const layout = topology.square({ columnCount: 1, rowCount: 1 });
   const grid = Grid.create({ layout, state: {} });
   const foreign = Grid.create({ layout, state: {} });
   const callAdd = (...args: unknown[]) => Reflect.apply(Grid.create, Grid, args);

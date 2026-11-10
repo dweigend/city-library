@@ -6,7 +6,7 @@
  */
 import { Grid, Random, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 
 export interface StructureParameters { seed: number; keepAddingRandomness: boolean }
 export const inputs: Inputs<StructureParameters> = {
@@ -16,7 +16,7 @@ export const inputs: Inputs<StructureParameters> = {
 interface StructureSample { readonly tick: number; readonly totalActivity: number; readonly maxAbsoluteActivity: number }
 
 export function create(options: Partial<StructureParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const width = 130, height = 130;
   const random = Random.create({ seed: settings.seed });
   const world = World.create({ x: width, y: height, boundary: "wrap" }, { random });
@@ -60,15 +60,15 @@ export function create(options: Partial<StructureParameters> = {}) {
   recolorFields();
   recordCompletedState();
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) { run(world, averageAddNoiseAndCommit); recordCompletedState(); }
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) { run(world, averageAddNoiseAndCommit); recordCompletedState(); }
     },
     setRules(rules: Partial<Pick<StructureParameters, "keepAddingRandomness">>) {
       if (typeof rules !== "object" || rules === null || ![Object.prototype, null].includes(Object.getPrototypeOf(rules)) ||
         Reflect.ownKeys(rules).some(key => key !== "keepAddingRandomness" || !("value" in Object.getOwnPropertyDescriptor(rules, key)!)))
         throw new TypeError("Supply only the live randomness rule as data.");
-      settings = parameters(inputs, { ...settings, ...rules });
+      settings = parseParameters(inputs, { ...settings, ...rules });
       recordCompletedState();
     },
     setActivities(values: readonly number[]) {

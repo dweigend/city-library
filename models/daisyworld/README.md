@@ -23,16 +23,16 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
-| `startBlacks` | `20` | integer; ≥ 0; ≤ 50 |
-| `startWhites` | `20` | integer; ≥ 0; ≤ 50 |
+| `initialBlackDaisyCount` | `20` | integer; ≥ 0; ≤ 50 |
+| `initialWhiteDaisyCount` | `20` | integer; ≥ 0; ≤ 50 |
 | `solarLuminosity` | `0.8` | number; ≥ 0.001; ≤ 3 |
 | `albedoSurface` | `0.4` | number; ≥ 0; ≤ 1 |
 | `albedoBlacks` | `0.25` | number; ≥ 0; ≤ 0.99 |
 | `albedoWhites` | `0.75` | number; ≥ 0; ≤ 0.99 |
-| `scenario` | `"maintain current luminosity"` | `ramp-up-ramp-down`, `maintain current luminosity`, `low solar luminosity`, `our solar luminosity`, `high solar luminosity` |
+| `scenario` | `"maintain-current-luminosity"` | `ramp-up-ramp-down`, `maintain-current-luminosity`, `low-solar-luminosity`, `our-solar-luminosity`, `high-solar-luminosity` |
 | `showTempMap` | `true` | boolean |
 | `showDaisies` | `true` | boolean |
-| `paintDaisiesAs` | `"remove"` | `add black`, `add white`, `remove` |
+| `paintDaisiesAs` | `"remove"` | `add-black`, `add-white`, `remove` |
 
 ## Actions and observations
 

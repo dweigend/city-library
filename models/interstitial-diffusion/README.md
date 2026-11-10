@@ -28,7 +28,7 @@ Use `goMode: "simulate"` for diffusion progress. In `"draw-profile"` mode, `adva
 | `height` | `201` | integer; ≥ 3; ≤ 301 |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
 | `initialBulkConcentration` | `0.8` | number; ≥ 0; ≤ 1 |
-| `initialColumnsPopulated` | `10` | integer; ≥ 0; ≤ 100 |
+| `initialPopulatedColumnCount` | `10` | integer; ≥ 0; ≤ 100 |
 | `maxTicks` | `1000` | number; ≥ 0; ≤ 1000000 |
 | `constantLeftSurface` | `false` | boolean |
 | `leftSurfaceConcentration` | `0.7` | number; ≥ 0; ≤ 1 |

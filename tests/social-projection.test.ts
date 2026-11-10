@@ -19,7 +19,7 @@ function withoutIdentities(value: unknown): unknown {
 
 describe("mechanism-specific social visual projections", () => {
   test("housing shows the actual Resource reservations moving from queue into available slots", () => {
-    const instance = createHousing({ applicants: 5, slots: 2 });
+    const instance = createHousing({ applicantCount: 5, slotCount: 2 });
     const before = instance.read();
     const initial = housingData(before);
     expect(initial.cells?.length).toBe(2);
@@ -28,14 +28,14 @@ describe("mechanism-specific social visual projections", () => {
     instance.moveOut();
     const after = instance.read();
     const changed = housingData(after);
-    expect(after.occupied).toBe(2);
-    expect(after.waiting).toBe(2);
+    expect(after.occupiedSlotCount).toBe(2);
+    expect(after.waitingHouseholdCount).toBe(2);
     expect(changed.agents.filter(person => person.x > 5).length).toBe(1);
     expect(instance.read()).toEqual(after);
   });
 
   test("cohort stage changes visibly cross the road without inventing intermediate motion", () => {
-    const instance = createCrossing({ pedestrians: 4 });
+    const instance = createCrossing({ pedestrianCount: 4 });
     const initial = crossingData(instance.read());
     expect(initial.agents.slice(0, 4).every(person => person.x < -3)).toBe(true);
     instance.advance(4);
@@ -46,8 +46,8 @@ describe("mechanism-specific social visual projections", () => {
   });
 
   test("recycling colors change with adoption while ring layout stays fixed and seeded reads stay inert", () => {
-    const visible = createRecycling({ households: 6, influence: 1, seed: 17 });
-    const baseline = createRecycling({ households: 6, influence: 1, seed: 17 });
+    const visible = createRecycling({ householdCount: 6, influence: 1, seed: 17 });
+    const baseline = createRecycling({ householdCount: 6, influence: 1, seed: 17 });
     const initial = recyclingNodes(visible.read());
     const initialColors = initial.map(node => node.color);
     for (let step = 0; step < 6; step += 1) {
@@ -64,7 +64,7 @@ describe("mechanism-specific social visual projections", () => {
   });
 
   test("zoning depicts exactly the completed capacity, leaving pending runs unbuilt", () => {
-    const instance = createZoning({ parcels: 5, seed: 17 });
+    const instance = createZoning({ parcelCount: 5, seed: 17 });
     const before = instance.read();
     const initial = zoningData(before);
     expect(initial.agents.length).toBe(6);
@@ -76,12 +76,12 @@ describe("mechanism-specific social visual projections", () => {
     const state = instance.read();
     const visual = zoningData(state);
     expect(visual.cells?.filter(cell => cell.id.startsWith("view:slot:")).length)
-      .toBe(state.outcomes.reduce((sum, outcome) => sum + outcome.slots, 0));
+      .toBe(state.outcomes.reduce((sum, outcome) => sum + outcome.slotCount, 0));
     expect(instance.read()).toEqual(state);
   });
 
   test("zoning projection reads planned scenario metadata rather than guessing replication boundaries", () => {
-    const state = createZoning({ parcels: 2 }).read();
+    const state = createZoning({ parcelCount: 2 }).read();
     const reordered = { ...state, runPlan: [state.runPlan[3]!, state.runPlan[0]!] };
     const visual = zoningData(reordered);
     expect(visual.agents.map(agent => agent.label)).toEqual([
@@ -92,7 +92,7 @@ describe("mechanism-specific social visual projections", () => {
   });
 
   test("membership positions are presentation-only and reassignment changes real edges", () => {
-    const instance = createMembership({ residents: 4 });
+    const instance = createMembership({ residentCount: 4 });
     const state = instance.read();
     const initial = membershipNodes(state);
     expect(initial.filter(node => node.position?.x === 0).length).toBe(4);

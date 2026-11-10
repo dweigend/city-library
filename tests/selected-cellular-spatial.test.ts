@@ -185,7 +185,7 @@ describe("selected Vants", () => {
 
 describe("selected two-dimensional Turing machine", () => {
   test("source default differs from example 1, which resets tape and clock", () => {
-    const m = turing({ width: 9, height: 9, heads: 1 });
+    const m = turing({ width: 9, height: 9, headCount: 1 });
     expect(m.read().rules).toEqual([
       [1, 180, true],
       [0, 90, true],
@@ -205,7 +205,7 @@ describe("selected two-dimensional Turing machine", () => {
     expect(m.read().agents[0]!.state).toBe(0);
   });
   test("all four combinations select their own rule, and writes precede movement", () => {
-    const m = turing({ width: 9, height: 9, heads: 1, colorPaths: false });
+    const m = turing({ width: 9, height: 9, headCount: 1, colorPaths: false });
     const table: readonly Rule[] = [
       [1, 90, true],
       [0, 180, true],
@@ -234,7 +234,7 @@ describe("selected two-dimensional Turing machine", () => {
     expect([...visited].sort()).toEqual([0, 1, 2, 3]);
   });
   test("multiple heads all read the old tape before source-ordered conflicting writes", () => {
-    const m = turing({ width: 5, height: 3, heads: 8, seed: 4 });
+    const m = turing({ width: 5, height: 3, headCount: 8, seed: 4 });
     const table: readonly Rule[] = [
       [1, 90, true],
       [0, 180, false],
@@ -280,7 +280,7 @@ describe("selected two-dimensional Turing machine", () => {
     }
   });
   test("rule validation, no draws on observation, explicit cardinal conversion", () => {
-    const m = turing({ width: 9, height: 9, heads: 2 });
+    const m = turing({ width: 9, height: 9, headCount: 2 });
     const before = m.read();
     expect(m.read()).toEqual(before);
     expect(() => m.setRules([[0, 0, false]])).toThrow();
@@ -296,7 +296,7 @@ describe("selected two-dimensional Turing machine", () => {
     expect(() => m.setConfiguration({ off0State: 2 })).toThrow();
     expect(() => m.setupExample(6)).toThrow();
     expect(m.read()).toEqual(before);
-    for (const direction of ["--", "Right", "Backwards", "Left"] as const)
+    for (const direction of ["straight", "right", "backwards", "left"] as const)
       expect(numberToDirection(directionToNumber(direction))).toBe(direction);
   });
 });

@@ -23,8 +23,8 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
-| `people` | `60` | integer; ≥ 0; ≤ 300 |
-| `centers` | `20` | integer; ≥ 0; ≤ 100 |
+| `personCount` | `60` | integer; ≥ 0; ≤ 300 |
+| `centerCount` | `20` | integer; ≥ 0; ≤ 100 |
 | `nonUsageLimit` | `100` | integer; ≥ 0; ≤ 500 |
 
 ## Actions and observations
@@ -33,7 +33,7 @@ Use `advance(...)` for progress and `read()` for observations; the model defines
 
 Other instance procedures: `setRules`, `setPeople`, `setCenters`, `placeCenter`. See their typed arguments in [model.ts](model.ts).
 
-Model-specific `read()` fields include `people`, `cells`, `counts`, `meanAwareness`, `meanNonUsage`.
+Model-specific `read()` fields include `personCount`, `cells`, `counts`, `meanAwareness`, `meanNonUsage`.
 
 The [UI binding](ui.ts) presents `Non-usage limit`, `Tick`, `Unaware`, `Aware`, `Well-informed`, `Activists`, `Centers`, `Mean awareness`, `Mean non-usage`, `Selected` and further views or controls.
 

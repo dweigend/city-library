@@ -1,0 +1,21 @@
+{
+  "model": "mimicry",
+  "markers": [
+    {
+      "sourceMarker": "B08-mimicry-native-composition-v1",
+      "originalLocations": [
+        {
+          "path": "models/mimicry/model.ts",
+          "line": 5,
+          "kind": "model-export"
+        },
+        {
+          "path": "models/mimicry/model.ts",
+          "line": 206,
+          "kind": "observation-shorthand",
+          "reference": "sourceMarker"
+        }
+      ]
+    }
+  ]
+}

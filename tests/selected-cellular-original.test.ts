@@ -69,7 +69,7 @@ describe("selected cellular executed-original probes", () => {
     expect(model.read().cells.every(cell => !cell.on)).toBe(true);
   });
   test("Turing example1 agrees with original tape write, next state and oriented movement", () => {
-    const original = source("turing-machine-2d"), model = turing({ width: 9, height: 9, heads: 1 });
+    const original = source("turing-machine-2d"), model = turing({ width: 9, height: 9, headCount: 1 });
     model.setupExample(1); model.advance();
     const head = model.read().agents[0]!;
     const originalHead = original.heads[0]!;
@@ -95,12 +95,12 @@ describe("selected cellular executed-original probes", () => {
     const original = source("brians-brain"), model = brain({ width: 5, height: 5, initialization: "blank" });
     model.setCells(model.read().cells.map(cell => cell.y === 0 && Math.abs(cell.x) === 1 ? 1 : 0));
     model.advance();
-    expect(model.read().counts.firing).toBe(original.values["firing?"]!.trueCount);
-    expect(model.read().counts.refractory).toBe(original.values["refractory?"]!.trueCount);
+    expect(model.read().counts.firingFieldCount).toBe(original.values["firing?"]!.trueCount);
+    expect(model.read().counts.refractoryFieldCount).toBe(original.values["refractory?"]!.trueCount);
     expect(model.read().tick).toBe(original.tick);
   });
   test("cyclic single-successor spread agrees with the original synchronous phase", () => {
-    const original = source("cyclic-ca"), model = cyclic({ width: 5, height: 5, preset: "custom", radius: 1, stateCount: 3, threshold: 1, neighborhood: "Moore" });
+    const original = source("cyclic-ca"), model = cyclic({ width: 5, height: 5, preset: "custom", radius: 1, stateCount: 3, threshold: 1, neighborhood: "moore" });
     model.setCells(model.read().cells.map(cell => cell.x === 1 && cell.y === 0 ? 1 : 0));
     model.advance();
     expect(model.read().cells.filter(cell => cell.state === 1).length).toBe(original.successorCells!);

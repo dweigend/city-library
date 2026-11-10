@@ -4,17 +4,17 @@
  */
 import { Agent, Grid, Random, World, geometry, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 
 export interface SprawlParameters {
-  seed: number; smoothness: number; maxAttraction: number; population: number;
+  seed: number; smoothness: number; maxAttraction: number; personCount: number;
   seekerSearchAngle: number; seekerPatience: number; waitBetweenSeeking: number;
 }
 export const inputs: Inputs<SprawlParameters> = {
   seed: { kind: "number", default: 1, min: -2147483648, max: 4294967295, integer: true },
   smoothness: { kind: "number", default: 15, min: 1, max: 20, integer: true },
   maxAttraction: { kind: "number", default: 15, min: 0, max: 30, integer: true },
-  population: { kind: "number", default: 200, min: 1, max: 750, integer: true },
+  personCount: { kind: "number", default: 200, min: 1, max: 750, integer: true },
   seekerSearchAngle: { kind: "number", default: 84, min: 1, max: 360, integer: true },
   seekerPatience: { kind: "number", default: 60, min: 0, max: 120, integer: true },
   waitBetweenSeeking: { kind: "number", default: 15, min: 5, max: 60, integer: true },
@@ -26,10 +26,10 @@ export interface SprawlAgentInput {
 }
 type Resident = Agent<{ kind: SprawlKind; patienceCounter: number; stayCounter: number }>;
 type LiveRules = Pick<SprawlParameters, "maxAttraction" | "seekerSearchAngle" | "seekerPatience" | "waitBetweenSeeking">;
-interface SprawlSample { readonly tick: number; readonly seekers: number; readonly houses: number; readonly totalAttraction: number }
+interface SprawlSample { readonly tick: number; readonly seekerCount: number; readonly houseCount: number; readonly totalAttraction: number }
 
 export function create(options: Partial<SprawlParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const width = 35, height = 35;
   const space = { x: width, y: height, boundary: "wrap" as const };
   const random = Random.create({ seed: settings.seed });
@@ -46,15 +46,15 @@ export function create(options: Partial<SprawlParameters> = {}) {
     return random.number({ min: 0, max: Math.ceil(attraction), integer: true });
   }
   function activation<T>(snapshot: readonly T[]) {
-    return random.sample(snapshot, { count: snapshot.length, algorithm: "fisher-yates-descending" });
+    return random.sample(snapshot, { sampleCount: snapshot.length, algorithm: "fisher-yates-descending" });
   }
   function recolorLand() {
     // Source scale-color green attraction 2.5 10, clamped to green's 10-unit band.
     for (const field of fields) field.colorNumber = 50 + Math.min(9.9999, Math.max(0, (field.attraction - 2.5) / 7.5 * 10));
   }
   function counts() {
-    const result = { seekers: 0, houses: 0 };
-    for (const person of residents()) if (person.kind === "seeker") result.seekers++; else result.houses++;
+    const result = { seekerCount: 0, houseCount: 0 };
+    for (const person of residents()) if (person.kind === "seeker") result.seekerCount++; else result.houseCount++;
     return result;
   }
   function totalAttraction() { return fields.reduce((sum, field) => sum + field.attraction, 0); }
@@ -106,14 +106,14 @@ export function create(options: Partial<SprawlParameters> = {}) {
   for (const field of fields) field.attraction = attractionTrial(settings.maxAttraction);
   for (let i = 0; i < settings.smoothness; i++) grid.diffuse("attraction", { rate: 0.4, neighborhood: "moore" });
   recolorLand();
-  for (let i = 0; i < settings.population; i++) world.add(Agent.create({ kind: "seeker" as SprawlKind, patienceCounter: settings.seekerPatience, stayCounter: 0 }, { position: { x: 0, y: 0 }, orientation: { heading: random.number({ min: 0, max: 360, integer: true }) } }));
+  for (let i = 0; i < settings.personCount; i++) world.add(Agent.create({ kind: "seeker" as SprawlKind, patienceCounter: settings.seekerPatience, stayCounter: 0 }, { position: { x: 0, y: 0 }, orientation: { heading: random.number({ min: 0, max: 360, integer: true }) } }));
   record();
   return {
-    advance(count = 1) { stepCount(count); for (let i = 0; i < count; i++) { run(world, go); record(); } },
+    advance(stepCount = 1) { validateStepCount(stepCount); for (let i = 0; i < stepCount; i++) { run(world, go); record(); } },
     setRules(rules: Partial<LiveRules>) {
       if (typeof rules !== "object" || rules === null || ![Object.prototype, null].includes(Object.getPrototypeOf(rules)) ||
         Reflect.ownKeys(rules).some(key => typeof key !== "string" || !["maxAttraction", "seekerSearchAngle", "seekerPatience", "waitBetweenSeeking"].includes(key) || !("value" in Object.getOwnPropertyDescriptor(rules, key)!))) throw new TypeError("Supply only live Sprawl rule data.");
-      settings = parameters(inputs, { ...settings, ...rules }); record();
+      settings = parseParameters(inputs, { ...settings, ...rules }); record();
     },
     setAttractions(values: readonly number[]) {
       if (!Array.isArray(values) || Object.getPrototypeOf(values) !== Array.prototype || Reflect.ownKeys(values).some(key => key !== "length" && (typeof key !== "string" || !/^(0|[1-9][0-9]*)$/.test(key) || Number(key) >= values.length)) || values.length !== fields.length) throw new RangeError("Supply one attraction per field.");

@@ -3,14 +3,14 @@
  */
 import { Agent, Grid, Random, World, run, stats } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface BankParameters {
-  people: number;
+  personCount: number;
   reserves: number;
   seed: number;
 }
 export const inputs: Inputs<BankParameters> = {
-  people: { kind: "number", default: 473, min: 0, max: 500, integer: true },
+  personCount: { kind: "number", default: 473, min: 0, max: 500, integer: true },
   reserves: { kind: "number", default: 21, min: 0, max: 100 },
   seed: {
     kind: "number",
@@ -38,7 +38,7 @@ export interface AccountFixture {
   heading?: number;
 }
 export function create(options: Partial<BankParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const space = { x: 17, y: 17, boundary: "wrap" as const };
   const world = World.create(space, { random });
@@ -50,16 +50,16 @@ export function create(options: Partial<BankParameters> = {}) {
     bankLoans = 0,
     bankReserves = 0,
     bankToLoan = 0;
-  let rich = 0,
-    poor = 0,
-    middleClass = 0;
+  let richPersonCount = 0,
+    poorPersonCount = 0,
+    middleClassPersonCount = 0;
   let histogramRange: [number, number] = [-50, 50];
   let wealthHistogram: readonly Readonly<{ x: number; y: number }>[] = [];
   const history: Readonly<{
     tick: number;
-    rich: number;
-    poor: number;
-    middleClass: number;
+    richPersonCount: number;
+    poorPersonCount: number;
+    middleClassPersonCount: number;
     savingsTotal: number;
     walletsTotal: number;
     loansTotal: number;
@@ -88,9 +88,9 @@ export function create(options: Partial<BankParameters> = {}) {
     return value;
   }
   function pollClass() {
-    rich = people().filter((p) => p.savings > 10).length;
-    poor = people().filter((p) => p.loans > 10).length;
-    middleClass = people().length - rich - poor;
+    richPersonCount = people().filter((p) => p.savings > 10).length;
+    poorPersonCount = people().filter((p) => p.loans > 10).length;
+    middleClassPersonCount = people().length - richPersonCount - poorPersonCount;
   }
   function bankBalanceSheet() {
     bankDeposits = sum("savings");
@@ -173,9 +173,9 @@ export function create(options: Partial<BankParameters> = {}) {
     history.push(
       Object.freeze({
         tick: world.tick.value,
-        rich,
-        poor,
-        middleClass,
+        richPersonCount: richPersonCount,
+        poorPersonCount: poorPersonCount,
+        middleClassPersonCount: middleClassPersonCount,
         ...totals(),
       }),
     );
@@ -223,12 +223,12 @@ export function create(options: Partial<BankParameters> = {}) {
   }
   function setup() {
     for (const p of [...people()]) p.delete();
-    rich = poor = middleClass = 0;
+    richPersonCount = poorPersonCount = middleClassPersonCount = 0;
     bankDeposits = bankLoans = bankReserves = bankToLoan = 0;
     history.length = 0;
     histogramRange = [-50, 50];
     wealthHistogram = [];
-    for (let i = 0; i < settings.people; i++)
+    for (let i = 0; i < settings.personCount; i++)
       addPerson({
         x: random.number({ min: -8.5, max: 8.5 }),
         y: random.number({ min: -8.5, max: 8.5 }),
@@ -242,12 +242,12 @@ export function create(options: Partial<BankParameters> = {}) {
   }
   function go() {
     for (const p of random.sample(people(), {
-      count: people().length,
+      sampleCount: people().length,
       algorithm: "fisher-yates-descending",
     }))
       doBusiness(p.id);
     for (const p of random.sample(people(), {
-      count: people().length,
+      sampleCount: people().length,
       algorithm: "fisher-yates-descending",
     })) {
       balanceBooks(p.id);
@@ -269,7 +269,7 @@ export function create(options: Partial<BankParameters> = {}) {
     updateAppearance,
     doBusiness,
     setRules(changes: Partial<Pick<BankParameters, "reserves">>) {
-      settings = parameters(inputs, { ...settings, ...changes });
+      settings = parseParameters(inputs, { ...settings, ...changes });
     },
     setAccounts(fixtures: readonly AccountFixture[]) {
       if (
@@ -290,9 +290,9 @@ export function create(options: Partial<BankParameters> = {}) {
         bankLoans =
         bankReserves =
         bankToLoan =
-        rich =
-        poor =
-        middleClass =
+        richPersonCount =
+        poorPersonCount =
+        middleClassPersonCount =
           0;
       world.tick.reset();
       history.length = 0;
@@ -300,9 +300,9 @@ export function create(options: Partial<BankParameters> = {}) {
       wealthHistogram = [];
       record();
     },
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) {
         run(world, go);
         record();
       }
@@ -310,7 +310,7 @@ export function create(options: Partial<BankParameters> = {}) {
     read() {
       const wealth = people().map((p) => p.wealth);
       return Object.freeze({
-        sourceMarker: "cash-flow:source-v1",
+
         tick: world.tick.value,
         phase: "Business → balance books → bank sheet",
         width: 17,
@@ -320,9 +320,9 @@ export function create(options: Partial<BankParameters> = {}) {
         bankLoans,
         bankReserves,
         bankToLoan,
-        rich,
-        poor,
-        middleClass,
+        richPersonCount: richPersonCount,
+        poorPersonCount: poorPersonCount,
+        middleClassPersonCount: middleClassPersonCount,
         ...totals(),
         meanWealth: stats.describe(wealth).mean,
         people: Object.freeze(

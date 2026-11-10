@@ -6,18 +6,18 @@ type Observation = ReturnType<Elevator["read"]>;
 
 /** Public state must describe one conserved population and one owner per rider. */
 function checkPopulation(state: Observation): void {
-  expect(state.created).toBe(state.passengers.length);
-  expect(state.waiting + state.riding + state.arrived).toBe(state.created);
-  expect(new Set(state.passengers.map(passenger => passenger.id)).size).toBe(state.created);
+  expect(state.createdPassengerCount).toBe(state.passengers.length);
+  expect(state.waitingPassengerCount + state.ridingPassengerCount + state.arrivedPassengerCount).toBe(state.createdPassengerCount);
+  expect(new Set(state.passengers.map(passenger => passenger.id)).size).toBe(state.createdPassengerCount);
   const waiting = state.floorQueues.flatMap(line => line.passengers);
   const riding = state.cars.flatMap(car => car.passengers);
   expect(new Set([...waiting, ...riding]).size).toBe(waiting.length + riding.length);
-  expect(waiting.length).toBe(state.waiting);
-  expect(riding.length).toBe(state.riding);
+  expect(waiting.length).toBe(state.waitingPassengerCount);
+  expect(riding.length).toBe(state.ridingPassengerCount);
   for (const car of state.cars) {
     expect(Number.isInteger(car.floor)).toBe(true);
     expect(car.floor).toBeGreaterThanOrEqual(0);
-    expect(car.floor).toBeLessThan(state.parameters.floors);
+    expect(car.floor).toBeLessThan(state.parameters.floorCount);
     expect([-1, 0, 1]).toContain(car.direction);
     expect(car.used).toBe(car.passengers.length);
     expect(car.used).toBeGreaterThanOrEqual(0);
@@ -43,8 +43,8 @@ function checkPopulation(state: Observation): void {
     expect(passenger.from).not.toBe(passenger.to);
     expect(passenger.from).toBeGreaterThanOrEqual(0);
     expect(passenger.to).toBeGreaterThanOrEqual(0);
-    expect(passenger.from).toBeLessThan(state.parameters.floors);
-    expect(passenger.to).toBeLessThan(state.parameters.floors);
+    expect(passenger.from).toBeLessThan(state.parameters.floorCount);
+    expect(passenger.to).toBeLessThan(state.parameters.floorCount);
     if (passenger.status === "arrived") {
       expect(waiting).not.toContain(passenger.number);
       expect(riding).not.toContain(passenger.number);
@@ -58,7 +58,7 @@ function finish(model: Elevator, maximumSeconds: number): Observation {
   for (let second = 0; second < maximumSeconds; second++) {
     const state = model.read();
     checkPopulation(state);
-    if (state.generated === state.parameters.arrivalLimit && state.arrived === state.created && state.pendingEvents === 0)
+    if (state.generatedPassengerCount === state.parameters.arrivalCountLimit && state.arrivedPassengerCount === state.createdPassengerCount && state.pendingEventCount === 0)
       return state;
     model.advance();
   }
@@ -75,10 +75,10 @@ function semanticTrace(state: Observation) {
 
 describe("independent elevator public-contract adversaries", () => {
   test("idle time has no polling events and a later request wakes explicitly without ticking", () => {
-    const model = create({ initialPassengers: 0 });
+    const model = create({ initialPassengerCount: 0 });
     model.advance(100);
     const idle = model.read();
-    expect(idle.pendingEvents).toBe(0);
+    expect(idle.pendingEventCount).toBe(0);
     expect(idle.cars.every(car => car.status === "idle" && car.floor === 0 && car.direction === 0)).toBe(true);
     expect(model.addPassenger()).toBe(1);
     expect(model.read().tick).toBe(100);
@@ -91,7 +91,7 @@ describe("independent elevator public-contract adversaries", () => {
   });
 
   test("a full directional call retains FIFO age while distinct calls use distinct cars", () => {
-    const model = create({ floors: 4, elevators: 2, capacity: 1, initialPassengers: 0, travelTime: 1 });
+    const model = create({ floorCount: 4, elevatorCount: 2, capacity: 1, initialPassengerCount: 0, travelTimeSeconds: 1 });
     model.addPassenger(0, 3);
     model.addPassenger(0, 3);
     model.addPassenger(3, 0);
@@ -110,7 +110,7 @@ describe("independent elevator public-contract adversaries", () => {
   });
 
   test("opposite calls survive a same-floor alight then eligible boarding boundary", () => {
-    const model = create({ floors: 3, elevators: 1, capacity: 1, travelTime: 1, initialPassengers: 0 });
+    const model = create({ floorCount: 3, elevatorCount: 1, capacity: 1, travelTimeSeconds: 1, initialPassengerCount: 0 });
     model.addPassenger(0, 1);
     model.addPassenger(1, 2);
     model.addPassenger(1, 0);
@@ -124,27 +124,27 @@ describe("independent elevator public-contract adversaries", () => {
     expect(model.read().floorQueues.find(line => line.floor === 1 && line.direction === -1)!.passengers).toEqual([3]);
     const end = finish(model, 100);
     expect(end.passengers.map(passenger => passenger.arrived)).toEqual([6, 11, 19]);
-    expect(end.meanSystem).toBe(end.meanWait + end.meanRide);
+    expect(end.meanSystemSeconds).toBe(end.meanWaitSeconds + end.meanRideSeconds);
     model.dispose();
   });
 
   test("same-time zero-duration chains remain conserved and finite for multiple cars", () => {
-    const model = create({ floors: 5, elevators: 4, capacity: 3, initialPassengers: 30,
-      arrivalInterval: 1, arrivalLimit: 30, travelTime: 1, doorTime: 0, transferTime: 0 });
+    const model = create({ floorCount: 5, elevatorCount: 4, capacity: 3, initialPassengerCount: 30,
+      arrivalIntervalSeconds: 1, arrivalCountLimit: 30, travelTimeSeconds: 1, doorTimeSeconds: 0, transferTimeSeconds: 0 });
     const end = finish(model, 1000);
-    expect(end.created).toBe(60);
-    expect(end.generated).toBe(30);
-    expect(end.arrived).toBe(60);
+    expect(end.createdPassengerCount).toBe(60);
+    expect(end.generatedPassengerCount).toBe(30);
+    expect(end.arrivedPassengerCount).toBe(60);
     expect(end.cars.every(car => car.used === 0 && car.status === "idle")).toBe(true);
     model.dispose();
   });
 
   test("declared maximum topology and bounded demand complete without losing or duplicating riders", () => {
-    const model = create({ floors: 12, elevators: 4, capacity: 8, initialPassengers: 100,
-      arrivalInterval: 1, arrivalLimit: 100, travelTime: 1, doorTime: 0, transferTime: 0 });
+    const model = create({ floorCount: 12, elevatorCount: 4, capacity: 8, initialPassengerCount: 100,
+      arrivalIntervalSeconds: 1, arrivalCountLimit: 100, travelTimeSeconds: 1, doorTimeSeconds: 0, transferTimeSeconds: 0 });
     const end = finish(model, 4000);
-    expect(end.created).toBe(200);
-    expect(end.arrived).toBe(200);
+    expect(end.createdPassengerCount).toBe(200);
+    expect(end.arrivedPassengerCount).toBe(200);
     expect(end.floorQueues.every(line => line.passengers.length === 0)).toBe(true);
     model.dispose();
   });
@@ -152,10 +152,10 @@ describe("independent elevator public-contract adversaries", () => {
   test("invalid setup and actions preserve the complete prior observation", () => {
     for (const options of [
       { floors: 1 }, { floors: 13 }, { elevators: 0 }, { elevators: 5 }, { capacity: 0 },
-      { capacity: 9 }, { travelTime: 0 }, { doorTime: -1 }, { transferTime: NaN },
-      { initialPassengers: 101 }, { arrivalInterval: 0, arrivalLimit: 1 }, { maxEventsPerStep: 0 },
+      { capacity: 9 }, { travelTimeSeconds: 0 }, { doorTimeSeconds: -1 }, { transferTimeSeconds: NaN },
+      { initialPassengerCount: 101 }, { arrivalIntervalSeconds: 0, arrivalCountLimit: 1 }, { maxEventsPerStep: 0 },
     ]) expect(() => create(options)).toThrow();
-    const model = create({ initialPassengers: 0 });
+    const model = create({ initialPassengerCount: 0 });
     const before = model.read();
     for (const [from, to] of [[0, 0], [-1, 2], [0, 6], [1.5, 2], [NaN, 2], [0, Infinity]]) {
       expect(() => model.addPassenger(from, to)).toThrow(RangeError);
@@ -169,11 +169,11 @@ describe("independent elevator public-contract adversaries", () => {
   });
 
   test("a tiny event budget exposes partial effects but never completes the failed World step", () => {
-    const model = create({ floors: 3, elevators: 1, initialPassengers: 0,
-      travelTime: 1, doorTime: 0, transferTime: 0, maxEventsPerStep: 1 });
+    const model = create({ floorCount: 3, elevatorCount: 1, initialPassengerCount: 0,
+      travelTimeSeconds: 1, doorTimeSeconds: 0, transferTimeSeconds: 0, maxEventCountPerStep: 1 });
     model.addPassenger(0, 2);
     let failures = 0;
-    for (let event = 0; event < 50 && model.read().pendingEvents > 0; event++) {
+    for (let event = 0; event < 50 && model.read().pendingEventCount > 0; event++) {
       const before = model.read();
       try { model.advance(); }
       catch (error) {
@@ -184,14 +184,14 @@ describe("independent elevator public-contract adversaries", () => {
       checkPopulation(model.read());
     }
     expect(failures).toBeGreaterThan(0);
-    expect(model.read().arrived).toBe(1);
-    expect(model.read().pendingEvents).toBe(0);
+    expect(model.read().arrivedPassengerCount).toBe(1);
+    expect(model.read().pendingEventCount).toBe(0);
     model.dispose();
   });
 
   test("independent instances and detached reads reproduce the same semantic event trace", () => {
-    const first = create({ floors: 4, initialPassengers: 12, arrivalInterval: 2, arrivalLimit: 8 });
-    const second = create({ floors: 4, initialPassengers: 12, arrivalInterval: 2, arrivalLimit: 8 });
+    const first = create({ floorCount: 4, initialPassengerCount: 12, arrivalIntervalSeconds: 2, arrivalCountLimit: 8 });
+    const second = create({ floorCount: 4, initialPassengerCount: 12, arrivalIntervalSeconds: 2, arrivalCountLimit: 8 });
     const original = first.read();
     const detached = first.read();
     detached.cars[0]!.floor = 999;
@@ -206,15 +206,15 @@ describe("independent elevator public-contract adversaries", () => {
   });
 
   test("disposal during active service cancels work and returns detached historical data", () => {
-    const model = create({ initialPassengers: 20 });
+    const model = create({ initialPassengerCount: 20 });
     model.advance(4);
     const active = model.read();
-    expect(active.pendingEvents).toBeGreaterThan(0);
+    expect(active.pendingEventCount).toBeGreaterThan(0);
     model.dispose(); model.dispose();
     const final = model.read();
-    expect(final.pendingEvents).toBe(0);
-    expect(final.created).toBe(active.created);
-    expect(final.waiting + final.riding + final.arrived).toBe(final.created);
+    expect(final.pendingEventCount).toBe(0);
+    expect(final.createdPassengerCount).toBe(active.createdPassengerCount);
+    expect(final.waitingPassengerCount + final.ridingPassengerCount + final.arrivedPassengerCount).toBe(final.createdPassengerCount);
     expect(() => model.addPassenger()).toThrow(TypeError);
     expect(() => model.advance(0)).toThrow(TypeError);
     final.cars[0]!.passengers.push(999);

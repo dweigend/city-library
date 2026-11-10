@@ -1,10 +1,10 @@
 /** NetLogo Three Doors, Uri Wilensky (1998), CC BY-NC-SA 3.0. Full notices: NOTICE.md. */
 import { Agent, Random, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface Parameters {
   seed: number;
-  number: number;
+  contestantCount: number;
   gradation: boolean;
 }
 export const inputs: Inputs<Parameters> = {
@@ -15,11 +15,11 @@ export const inputs: Inputs<Parameters> = {
     max: 4294967295,
     integer: true,
   },
-  number: { kind: "number", default: 300, min: 1, max: 1000, integer: true },
+  contestantCount: { kind: "number", default: 300, min: 1, max: 1000, integer: true },
   gradation: { kind: "boolean", default: false },
 };
 export function create(options: Partial<Parameters> = {}) {
-  const settings = parameters(inputs, options);
+  const settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const world = World.create(
     { x: 71, y: 71, boundary: { x: "wrap", y: "hard" } },
@@ -31,12 +31,12 @@ export function create(options: Partial<Parameters> = {}) {
     prize: number;
     guess: number;
     otherDoor: number;
-    wins: number;
-    games: number;
+    winCount: number;
+    gameCount: number;
   }>;
   const racers = () => world.agents as readonly Racer[];
   let done = false;
-  for (let i = 0; i < settings.number; i++) {
+  for (let i = 0; i < settings.contestantCount; i++) {
     const hunch = settings.gradation
       ? 100 * random.number()
       : 100 * Math.floor(2 * random.number());
@@ -48,8 +48,8 @@ export function create(options: Partial<Parameters> = {}) {
           prize: 0,
           guess: 0,
           otherDoor: 0,
-          wins: 0,
-          games: 0,
+          winCount: 0,
+          gameCount: 0,
         },
         {
           position: { x: 71 * random.number() - 35.5, y: -35 },
@@ -70,9 +70,9 @@ export function create(options: Partial<Parameters> = {}) {
     if (100 * random.number() < racer.hunch) racer.guess = racer.otherDoor;
   }
   function awardPrizes(racer: Racer) {
-    racer.games++;
+    racer.gameCount++;
     if (racer.guess === racer.prize) {
-      racer.wins++;
+      racer.winCount++;
       if (!done) racer.move(1);
     }
     if (racer.y === 35) done = true;
@@ -80,7 +80,7 @@ export function create(options: Partial<Parameters> = {}) {
   function go() {
     const population = racers();
     for (const racer of random.sample(population, {
-      count: population.length,
+      sampleCount: population.length,
       algorithm: "fisher-yates-descending",
     })) {
       makeChoices(racer);
@@ -92,9 +92,9 @@ export function create(options: Partial<Parameters> = {}) {
     get world() {
       return world;
     },
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count && !done; i++) run(world, go);
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount && !done; i++) run(world, go);
     },
     read() {
       return Object.freeze({
@@ -113,8 +113,8 @@ export function create(options: Partial<Parameters> = {}) {
               prize: racer.prize,
               guess: racer.guess,
               otherDoor: racer.otherDoor,
-              wins: racer.wins,
-              games: racer.games,
+              winCount: racer.winCount,
+              gameCount: racer.gameCount,
             }),
           ),
         ),

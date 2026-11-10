@@ -25,7 +25,7 @@ One `advance(1)` performs one bounded activation sweep and increments `work`; se
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
-| `number` | `400` | integer; ≥ 1; ≤ 2000 |
+| `termiteCount` | `400` | integer; ≥ 1; ≤ 2000 |
 | `density` | `20` | integer; ≥ 0; ≤ 100 |
 
 ## Actions and observations

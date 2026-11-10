@@ -10,12 +10,12 @@ assert.equal(f.read().parameters.mooreNeighborhood, false);
 assert.ok(f.read().maxActivity < 1); // setup is random and is not maximum-normalized yet
 const p = path();
 assert.equal(p.read().cells.length, 11 * 11);
-assert.deepEqual(p.read().counts, { firms: 200, settled: 0, searching: 200 });
+assert.deepEqual(p.read().counts, { firmCount: 200, settledFirmCount: 0, searchingFirmCount: 200 });
 assert.equal(p.read().parameters.regionSize, 0);
 const c = cells();
 assert.equal(c.read().cells.length, 81 * 81);
 assert.equal(c.read().parameters.neighborhood, "von-neumann");
-assert.equal(c.read().parameters.countRule, "= 1");
+assert.equal(c.read().parameters.countRule, "exactly-one");
 assert.equal(c.read().parameters.ageLimit, 55);
 
 for (const mutate of [

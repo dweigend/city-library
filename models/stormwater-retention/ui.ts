@@ -3,7 +3,7 @@ import { model } from "./model.ts";
 export const ui = defineUI(model, {
   live: { rainMmPerHour: { label: "Rain (mm/h)", set: (instance, value) => instance.setRain(value) } },
   monitors: [{ label: "Hour", value: state => state.tick }, { label: "Stored (m³)", value: state => state.storedM3, format: (value: number) => value.toFixed(2) },
-    { label: "Overflow (m³)", value: state => state.overflowM3, format: (value: number) => value.toFixed(2) }, { label: "Capacity crossings", value: state => state.capacityCrossings }],
+    { label: "Overflow (m³)", value: state => state.overflowM3, format: (value: number) => value.toFixed(2) }, { label: "Capacity crossings", value: state => state.capacityCrossingCount }],
   views: [
     { type: "spatial", label: "Catchment → basin · blue stored water / red overflow", data: retentionData },
     { type: "line", label: "Retention balance", xAxis: { unit: "h" }, yAxis: { unit: "m³" },

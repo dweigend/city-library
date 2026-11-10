@@ -2,20 +2,20 @@
 import { Agent, Grid, Random, World, geometry } from "city-library";
 import type { Field } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
-export const sourceMarker = "b08-bacterial-infection-source-composition-v1";
+import { parseParameters, validateStepCount } from "../parameters.ts";
+
 export type Dosing =
-  | "no, skip all dosing"
-  | "yes, skip no doses"
-  | "yes, but skip dose 2"
-  | "yes, but skip dose 3"
-  | "yes, but skip dose 4";
+  | "skip-all-doses"
+  | "take-all-doses"
+  | "skip-dose-2"
+  | "skip-dose-3"
+  | "skip-dose-4";
 const dosingOptions: readonly Dosing[] = [
-  "no, skip all dosing",
-  "yes, skip no doses",
-  "yes, but skip dose 2",
-  "yes, but skip dose 3",
-  "yes, but skip dose 4",
+  "skip-all-doses",
+  "take-all-doses",
+  "skip-dose-2",
+  "skip-dose-3",
+  "skip-dose-4",
 ];
 export interface Parameters {
   seed: number;
@@ -27,14 +27,14 @@ export interface Parameters {
   bDosage: number;
   doseAEvery: number;
   doseBEvery: number;
-  init3PoresA: number;
-  init4PoresA: number;
-  init5PoresA: number;
-  init6PoresA: number;
-  init3PoresB: number;
-  init4PoresB: number;
-  init5PoresB: number;
-  init6PoresB: number;
+  initialThreePoreBacteriumCountA: number;
+  initialFourPoreBacteriumCountA: number;
+  initialFivePoreBacteriumCountA: number;
+  initialSixPoreBacteriumCountA: number;
+  initialThreePoreBacteriumCountB: number;
+  initialFourPoreBacteriumCountB: number;
+  initialFivePoreBacteriumCountB: number;
+  initialSixPoreBacteriumCountB: number;
 }
 export const inputs: Inputs<Parameters> = {
   seed: {
@@ -48,26 +48,26 @@ export const inputs: Inputs<Parameters> = {
   reproduceEvery: { kind: "number", default: 2, min: 0.5, max: 4, step: 0.5 },
   autoDoseA: {
     kind: "choice",
-    default: "yes, but skip dose 4",
+    default: "skip-dose-4",
     options: dosingOptions,
   },
   autoDoseB: {
     kind: "choice",
-    default: "yes, but skip dose 4",
+    default: "skip-dose-4",
     options: dosingOptions,
   },
   aDosage: { kind: "number", default: 50, min: 50, max: 200, step: 50 },
   bDosage: { kind: "number", default: 50, min: 50, max: 200, step: 50 },
   doseAEvery: { kind: "number", default: 4, min: 4, max: 24, step: 2 },
   doseBEvery: { kind: "number", default: 4, min: 4, max: 24, step: 4 },
-  init3PoresA: { kind: "number", default: 4, min: 0, max: 16, integer: true },
-  init4PoresA: { kind: "number", default: 4, min: 0, max: 16, integer: true },
-  init5PoresA: { kind: "number", default: 4, min: 0, max: 16, integer: true },
-  init6PoresA: { kind: "number", default: 4, min: 0, max: 16, integer: true },
-  init3PoresB: { kind: "number", default: 4, min: 0, max: 16, integer: true },
-  init4PoresB: { kind: "number", default: 4, min: 0, max: 16, integer: true },
-  init5PoresB: { kind: "number", default: 4, min: 0, max: 16, integer: true },
-  init6PoresB: { kind: "number", default: 4, min: 0, max: 16, integer: true },
+  initialThreePoreBacteriumCountA: { kind: "number", default: 4, min: 0, max: 16, integer: true },
+  initialFourPoreBacteriumCountA: { kind: "number", default: 4, min: 0, max: 16, integer: true },
+  initialFivePoreBacteriumCountA: { kind: "number", default: 4, min: 0, max: 16, integer: true },
+  initialSixPoreBacteriumCountA: { kind: "number", default: 4, min: 0, max: 16, integer: true },
+  initialThreePoreBacteriumCountB: { kind: "number", default: 4, min: 0, max: 16, integer: true },
+  initialFourPoreBacteriumCountB: { kind: "number", default: 4, min: 0, max: 16, integer: true },
+  initialFivePoreBacteriumCountB: { kind: "number", default: 4, min: 0, max: 16, integer: true },
+  initialSixPoreBacteriumCountB: { kind: "number", default: 4, min: 0, max: 16, integer: true },
 };
 export type Region = "A" | "B";
 interface FieldState {
@@ -92,14 +92,14 @@ export function giveDose(
   return (
     tick % (doseEvery * 60) === 0 &&
     !wipedOut &&
-    (autoDose === "yes, skip no doses" ||
-      (autoDose === "yes, but skip dose 2" && dosesGiven !== 1) ||
-      (autoDose === "yes, but skip dose 3" && dosesGiven !== 2) ||
-      (autoDose === "yes, but skip dose 4" && dosesGiven !== 3))
+    (autoDose === "take-all-doses" ||
+      (autoDose === "skip-dose-2" && dosesGiven !== 1) ||
+      (autoDose === "skip-dose-3" && dosesGiven !== 2) ||
+      (autoDose === "skip-dose-4" && dosesGiven !== 3))
   );
 }
 export function create(options: Partial<Parameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const space = { x: 49, y: 21, boundary: "wrap" as const };
   const world = World.create(space, { random });
@@ -120,8 +120,8 @@ export function create(options: Partial<Parameters> = {}) {
       (a): a is Antibiotic =>
         (a as Bacteria | Antibiotic).group === "antibiotic",
     );
-  let dosesGivenToA = 0;
-  let dosesGivenToB = 0;
+  let doseCountA = 0;
+  let doseCountB = 0;
   let aWipedOut = false;
   let bWipedOut = false;
   let feverFactor = false;
@@ -184,8 +184,8 @@ export function create(options: Partial<Parameters> = {}) {
   function setup() {
     world.delete(world.agents);
     world.tick.reset();
-    dosesGivenToA = 0;
-    dosesGivenToB = 0;
+    doseCountA = 0;
+    doseCountB = 0;
     aWipedOut = false;
     bWipedOut = false;
     feverFactor = false;
@@ -193,7 +193,7 @@ export function create(options: Partial<Parameters> = {}) {
     setupRegions();
     for (const region of ["A", "B"] as const) {
       for (const variation of [3, 4, 5, 6] as const) {
-        const key = `init${variation}Pores${region}` as keyof Parameters;
+        const key = `initial${({ 3: "Three", 4: "Four", 5: "Five", 6: "Six" } as const)[variation as 3 | 4 | 5 | 6]}PoreBacteriumCount${region}` as keyof Parameters;
         makeBacteria(settings[key] as number, variation, region);
       }
     }
@@ -229,7 +229,7 @@ export function create(options: Partial<Parameters> = {}) {
     const eligible = bacteria().filter((a) => canReproduce(a, total));
     if (!settings.reproduce) return;
     for (const agent of random.sample(eligible, {
-      count: eligible.length,
+      sampleCount: eligible.length,
       algorithm: "fisher-yates-descending",
     })) {
       const available = grid
@@ -289,8 +289,8 @@ export function create(options: Partial<Parameters> = {}) {
       );
       world.add(agent);
     }
-    if (region === "A") dosesGivenToA++;
-    else dosesGivenToB++;
+    if (region === "A") doseCountA++;
+    else doseCountB++;
   }
   function killThisBacteria(agent: Bacteria) {
     return (
@@ -319,7 +319,7 @@ export function create(options: Partial<Parameters> = {}) {
   }
   function moveAntibiotics() {
     for (const agent of random.sample(antibiotics(), {
-      count: antibiotics().length,
+      sampleCount: antibiotics().length,
       algorithm: "fisher-yates-descending",
     })) {
       agent.move(antibioticFlowRate);
@@ -334,7 +334,7 @@ export function create(options: Partial<Parameters> = {}) {
         settings.doseAEvery,
         aWipedOut,
         settings.autoDoseA,
-        dosesGivenToA,
+        doseCountA,
       )
     )
       doseRegion("A");
@@ -344,7 +344,7 @@ export function create(options: Partial<Parameters> = {}) {
         settings.doseBEvery,
         bWipedOut,
         settings.autoDoseB,
-        dosesGivenToB,
+        doseCountB,
       )
     )
       doseRegion("B");
@@ -365,12 +365,12 @@ export function create(options: Partial<Parameters> = {}) {
     history.push({ tick: world.tick.value, a: counts("A"), b: counts("B") });
     if (history.length > 1001) history.splice(1, 1);
   }
-  function advance(steps = 1) {
-    stepCount(steps);
-    for (let n = 0; n < steps; n++) {
+  function advance(stepCount = 1) {
+    validateStepCount(stepCount);
+    for (let n = 0; n < stepCount; n++) {
       reproduceBacteriaIntoAvailableSpace();
       for (const agent of random.sample(bacteria(), {
-        count: bacteria().length,
+        sampleCount: bacteria().length,
         algorithm: "fisher-yates-descending",
       }))
         moveBacteria(agent);
@@ -382,7 +382,7 @@ export function create(options: Partial<Parameters> = {}) {
   }
   function read() {
     return {
-      sourceMarker,
+
       parameters: { ...settings },
       randomState: random.state,
       width: 49,
@@ -393,8 +393,8 @@ export function create(options: Partial<Parameters> = {}) {
       days: Math.floor(Math.floor(world.tick.value / 60) / 2.4) / 10,
       antibioticFlowRate,
       feverFactor,
-      dosesGivenToA,
-      dosesGivenToB,
+      doseCountA: doseCountA,
+      doseCountB: doseCountB,
       aWipedOut,
       bWipedOut,
       bacteriaCountsRegionA: counts("A"),
@@ -429,7 +429,7 @@ export function create(options: Partial<Parameters> = {}) {
     };
   }
   function setParameters(change: Partial<Parameters>) {
-    settings = parameters(inputs, { ...settings, ...change });
+    settings = parseParameters(inputs, { ...settings, ...change });
   }
   function setFeverFactor(value: boolean) {
     if (typeof value !== "boolean")

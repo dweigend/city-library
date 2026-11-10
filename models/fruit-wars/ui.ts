@@ -10,8 +10,8 @@ import { model, type Parameters } from "./model.ts";
 export const ui = defineUI(model, {
   setup: [
     "seed",
-    { field: "initialFruitBushes", label: "Initial bushes" },
-    "initialForagers",
+    { field: "initialFruitBushCount", label: "Initial bushes" },
+    "initialForagerCount",
   ],
   change: (instance, changes) => instance.setRules(changes),
   live: {
@@ -108,16 +108,16 @@ function foragersAndFruitBushesData(s: UIObservation): SpatialData {
       ...s.foragers.map((a) => {
         const key = (
           {
-            Strength: "strength",
-            Speed: "speed",
-            Intelligence: "intelligence",
-            "Reactive Aggression": "reactiveAggression",
-            "Proactive Aggression": "proactiveAggression",
+            strength: "strength",
+            speed: "speed",
+            intelligence: "intelligence",
+            "reactive-aggression": "reactiveAggression",
+            "proactive-aggression": "proactiveAggression",
           } as const
         )[
           s.parameters.visualization as Exclude<
             Parameters["visualization"],
-            "None"
+            "none"
           >
         ];
         return {

@@ -18,7 +18,7 @@ const observation = simulation.read();
 
 | Input | Default |
 | --- | --- |
-| `parcels` | `2` |
+| `parcelCount` | `2` |
 | `depotCapacity` | `1` |
 | `loadingMinutes` | `1` |
 

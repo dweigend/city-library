@@ -4,7 +4,7 @@ import { model } from "./model.ts";
 const binding = defineUI(model, {
   setup: [
     "seed",
-    { field: "number", label: "People" },
+    { field: "personCount", label: "People" },
     { field: "groupCount", label: "Groups" },
   ],
   source: {
@@ -21,7 +21,7 @@ const binding = defineUI(model, {
   monitors: [
     { label: "Tick", value: (s) => s.tick },
     { label: "Happy", value: (s) => s.happyCount },
-    { label: "Single-sex groups", value: (s) => s.boringGroups },
+    { label: "Single-sex groups", value: (s) => s.singleSexGroupCount },
   ],
   views: [
     {
@@ -57,7 +57,7 @@ const binding = defineUI(model, {
         {
           label: "Single-sex groups",
           color: "#cc5555",
-          points: s.history.map((p) => ({ x: p.tick, y: p.boringGroups })),
+          points: s.history.map((p) => ({ x: p.tick, y: p.singleSexGroupCount })),
         },
       ],
     },
@@ -65,11 +65,10 @@ const binding = defineUI(model, {
 });
 
 export { model };
-export const sourceMarker =
-  "selected-social-b02:party:a86f4b7e1d631f69bf9db2a4ff54d77387a8de802487d536c3f0c1f984ebf272";
+
 
 /** Public headless definition and provenance remain inspectable in the loaded binding. */
-export const ui = { ...binding, model, sourceMarker };
+export const ui = { ...binding, model };
 
 type UIObservation = Observation<typeof model>;
 
@@ -91,7 +90,7 @@ function partyGroupsData(s: UIObservation): SpatialData {
         id: g.id,
         x: g.x + 39.5,
         y: 0,
-        label: String(g.count),
+        label: String(g.personCount),
         color: g.boring ? "#888888" : "#b8b8b8",
         size: 3,
         shape: "circle" as const,

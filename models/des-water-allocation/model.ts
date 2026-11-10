@@ -1,18 +1,18 @@
 /** Allocation of finite service entitlements, not a hydraulic model. Time is minutes. */
 import { Agenda, Grid, Resource, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
-export interface WaterParameters { supplyUnits: number; transferMinutes: number }
+import { parseParameters, validateStepCount } from "../parameters.ts";
+export interface WaterParameters { supplyUnitCount: number; transferMinutes: number }
 export const inputs: Inputs<WaterParameters> = {
-  supplyUnits: { kind: "number", default: 6, min: 3, max: 12, step: 3, integer: true },
+  supplyUnitCount: { kind: "number", default: 6, min: 3, max: 12, step: 3, integer: true },
   transferMinutes: { kind: "number", default: 1, min: 1, max: 10, integer: true },
 };
 export function create(options: Partial<WaterParameters> = {}) {
-  const settings = parameters(inputs, options);
+  const settings = parseParameters(inputs, options);
   const world = World.create();
   const districts = Grid.create({ x: 2, y: 2 }, { state: { demand: 3, supplied: 0 } });
   world.add(districts);
-  const entitlements = Resource.create<typeof districts.fields[number]>({ capacity: settings.supplyUnits });
+  const entitlements = Resource.create<typeof districts.fields[number]>({ capacity: settings.supplyUnitCount });
   const agenda = Agenda.create<{ district: number }>();
   const requests = districts.fields.map((field) => ({ ticket: entitlements.request({ owner: field, units: field.demand }), scheduled: false }));
   function scheduleTransfers() {
@@ -30,8 +30,8 @@ export function create(options: Partial<WaterParameters> = {}) {
       entitlements.setCapacity(entitlements.capacity + units);
       scheduleTransfers();
     },
-    advance(count = 1) {
-      stepCount(count);
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
       run(world, () => {
         const until = agenda.time + 1;
         let events = 0;
@@ -43,7 +43,7 @@ export function create(options: Partial<WaterParameters> = {}) {
           field.supplied = field.demand;
           // Retained claims represent consumed entitlements; release would reuse the same water.
         }
-      }, count);
+      }, stepCount);
     },
     read() {
       const supplied = districts.fields.reduce((sum, field) => sum + field.supplied, 0);

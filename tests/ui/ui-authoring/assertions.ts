@@ -16,7 +16,7 @@ function labelledControl(root: HTMLElement, label: HTMLLabelElement): HTMLElemen
   return label.querySelector<HTMLElement>('input, select, button[role="checkbox"], button[role="combobox"]');
 }
 function labelText(label: HTMLLabelElement) {
-  // Nested legacy select options are not part of its accessible label text.
+  // Nested select options are not part of its accessible label text.
   return [...label.childNodes].filter(node => node.nodeType === Node.TEXT_NODE).map(node => node.textContent).join('').trim() || label.textContent?.trim();
 }
 export function labels(root: HTMLElement, descriptorFields: readonly string[]) {

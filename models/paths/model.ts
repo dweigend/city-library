@@ -2,7 +2,7 @@
 import { Agent, Grid, Random, World, geometry, run } from "city-library";
 import type { Field, Position } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 
 export interface PathsParameters {
   seed: number;
@@ -34,7 +34,7 @@ type Walker = Agent<{ kind: "walker"; goal: ModelField }>;
 type Building = Agent<{ kind: "building" }>;
 
 export function create(options: Partial<PathsParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const space = { x: 101, y: 101, boundary: "wrap" } as const;
   const world = World.create(space, { random });
@@ -49,7 +49,7 @@ export function create(options: Partial<PathsParameters> = {}) {
       (agent) => (agent as Building).kind === "building",
     ) as Building[];
   function choose<T>(values: readonly T[]): T {
-    const selected = random.sample(values, { count: 1 })[0];
+    const selected = random.sample(values, { sampleCount: 1 })[0];
     if (selected === undefined)
       throw new RangeError("Cannot choose from an empty set.");
     return selected;
@@ -108,7 +108,7 @@ export function create(options: Partial<PathsParameters> = {}) {
   function moveWalkers() {
     const active = walkers();
     for (const walker of random.sample(active, {
-      count: active.length,
+      sampleCount: active.length,
       algorithm: "fisher-yates-descending",
     })) {
       if (grid.fieldAt(walker) === walker.goal) {
@@ -130,14 +130,14 @@ export function create(options: Partial<PathsParameters> = {}) {
       }
     }
   }
-  function step(count = 1) {
-    stepCount(count);
-    for (let index = 0; index < count; index++)
+  function step(stepCount = 1) {
+    validateStepCount(stepCount);
+    for (let index = 0; index < stepCount; index++)
       run(world, () => {
         moveWalkers();
         decayPopularity();
       });
-    return count;
+    return stepCount;
   }
   function setParameters(
     update: Partial<Omit<PathsParameters, "seed" | "walkerCount">>,
@@ -146,7 +146,7 @@ export function create(options: Partial<PathsParameters> = {}) {
       Object.keys(update).some((key) => key === "seed" || key === "walkerCount")
     )
       throw new TypeError("Only live parameters may change.");
-    settings = parameters(inputs, { ...settings, ...update });
+    settings = parseParameters(inputs, { ...settings, ...update });
   }
   function snapshot() {
     return {

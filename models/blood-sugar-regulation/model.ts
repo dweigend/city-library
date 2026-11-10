@@ -1,7 +1,7 @@
 /** NetLogo Blood Sugar Regulation, Wilensky (2017). See source.nlogox and NOTICE.md. */
 import { Agent, Grid, Random, World, stats, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 
 export interface BloodSugarParameters {
   seed: number;
@@ -31,7 +31,7 @@ type Cell = Agent<{
   lifetime: number;
 }>;
 export function create(options: Partial<BloodSugarParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const space = { x: 33, y: 33, boundary: "wrap" } as const;
   const world = World.create(space, { random });
@@ -58,7 +58,7 @@ export function create(options: Partial<BloodSugarParameters> = {}) {
   const group = (kind: AgentGroup) => all().filter((cell) => cell.group === kind);
   const shuffled = (cells: readonly Cell[]) =>
     random.sample(cells, {
-      count: cells.length,
+      sampleCount: cells.length,
       algorithm: "fisher-yates-descending",
     });
 
@@ -107,7 +107,7 @@ export function create(options: Partial<BloodSugarParameters> = {}) {
   function makeLiver() {
     for (const field of random.sample(
       grid.fields.filter((field) => field.x < 8),
-      { count: 792, algorithm: "fisher-yates-descending" },
+      { sampleCount: 792, algorithm: "fisher-yates-descending" },
     )) {
       const liver = createCell("liver", field.x, field.y);
       liver.glucoseStore = random.number({
@@ -120,7 +120,7 @@ export function create(options: Partial<BloodSugarParameters> = {}) {
   function makePancreas() {
     for (const field of random.sample(
       grid.fields.filter((field) => field.x >= 8),
-      { count: 297, algorithm: "fisher-yates-descending" },
+      { sampleCount: 297, algorithm: "fisher-yates-descending" },
     ))
       createCell("pancreas", field.x, field.y);
   }
@@ -197,7 +197,7 @@ export function create(options: Partial<BloodSugarParameters> = {}) {
       const glucoses = group("glucose");
       const absorbed = Math.min(glucoses.length, -netSignal);
       liver.glucoseStore += absorbed;
-      for (const glucose of random.sample(glucoses, { count: absorbed }))
+      for (const glucose of random.sample(glucoses, { sampleCount: absorbed }))
         glucose.delete();
     }
   }
@@ -218,7 +218,7 @@ export function create(options: Partial<BloodSugarParameters> = {}) {
   function metabolizeGlucose() {
     const glucoses = group("glucose");
     for (const glucose of random.sample(glucoses, {
-      count: Math.min(glucoses.length, settings.metabolicRate),
+      sampleCount: Math.min(glucoses.length, settings.metabolicRate),
     }))
       glucose.delete();
   }
@@ -265,9 +265,9 @@ export function create(options: Partial<BloodSugarParameters> = {}) {
     if (history.length > 1001) history.splice(1, 1);
   }
 
-  function advance(count = 1) {
-    stepCount(count);
-    for (let index = 0; index < count; index++) {
+  function advance(stepCount = 1) {
+    validateStepCount(stepCount);
+    for (let index = 0; index < stepCount; index++) {
       if (totalGlucose === 0) break;
       run(world, go);
       record();
@@ -287,7 +287,7 @@ export function create(options: Partial<BloodSugarParameters> = {}) {
       )
     )
       throw new TypeError("Only live parameters may change.");
-    settings = parameters(inputs, { ...settings, ...update });
+    settings = parseParameters(inputs, { ...settings, ...update });
   }
 
   function followGlucose() {

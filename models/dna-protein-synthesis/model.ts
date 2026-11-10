@@ -1,19 +1,19 @@
 /** NetLogo DNA Protein Synthesis: source-specific sequences and event procedures. */
 import { Agent, Graph, Grid, Random, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export type Strand = "original" | "duplicate";
 export type DNAPreset =
-  | "from user-created-code"
-  | "no genes (short strand)"
-  | "no genes (long strand)"
-  | "1 short gene"
-  | "1 long gene"
-  | "2 sequential genes"
-  | "2 nested genes"
-  | "3 sequential genes"
-  | "random (short strand)"
-  | "random (long strand)";
+  | "user-created-code"
+  | "no-genes-short-strand"
+  | "no-genes-long-strand"
+  | "one-short-gene"
+  | "one-long-gene"
+  | "two-sequential-genes"
+  | "two-nested-genes"
+  | "three-sequential-genes"
+  | "random-short-strand"
+  | "random-long-strand";
 export interface DNAParameters {
   seed: number;
   initialDNAString: DNAPreset;
@@ -26,18 +26,18 @@ export const inputs: Inputs<DNAParameters> = {
   seed: { kind: "number", default: 1, integer: true },
   initialDNAString: {
     kind: "choice",
-    default: "1 long gene",
+    default: "one-long-gene",
     options: [
-      "from user-created-code",
-      "no genes (short strand)",
-      "no genes (long strand)",
-      "1 short gene",
-      "1 long gene",
-      "2 sequential genes",
-      "2 nested genes",
-      "3 sequential genes",
-      "random (short strand)",
-      "random (long strand)",
+      "user-created-code",
+      "no-genes-short-strand",
+      "no-genes-long-strand",
+      "one-short-gene",
+      "one-long-gene",
+      "two-sequential-genes",
+      "two-nested-genes",
+      "three-sequential-genes",
+      "random-short-strand",
+      "random-long-strand",
     ],
   },
   userCreatedCode: { kind: "text", default: "AAAAA" },
@@ -166,15 +166,15 @@ interface MoleculeData {
 }
 type Molecule = Agent<MoleculeData>;
 const presets: Partial<Record<DNAPreset, string>> = {
-  "no genes (short strand)": "ATTATATCGTAG",
-  "no genes (long strand)":
+  "no-genes-short-strand": "ATTATATCGTAG",
+  "no-genes-long-strand":
     "GATATTTGGTAGCCCGAGAAGTGGTTTTTCAGATAACAGAGGTGGAGCAGCTTTTAG",
-  "1 short gene": "ATTATGTGGTAG",
-  "1 long gene": "GGGATGGACACCTTATCATTTGCTACTAGCGACCAGTTTGAGTAGCTTCGTCGGTGA",
-  "2 sequential genes":
+  "one-short-gene": "ATTATGTGGTAG",
+  "one-long-gene": "GGGATGGACACCTTATCATTTGCTACTAGCGACCAGTTTGAGTAGCTTCGTCGGTGA",
+  "two-sequential-genes":
     "AGTATGAAAACCCACGAGTGGTAGCCCGAGATTGAGATGTGGTTTTTCAGATAACAG",
-  "2 nested genes": "GTTATGAGGGGGACCCGAGATGTGGTTTTTGAAATAGACAAGTAGACCCTAATAGAC",
-  "3 sequential genes":
+  "two-nested-genes": "GTTATGAGGGGGACCCGAGATGTGGTTTTTGAAATAGACAAGTAGACCCTAATAGAC",
+  "three-sequential-genes":
     "GATATGTGGTAGCCCGAGATGTGGTTTTTCAGATAACAGATGTGGAGCAGCTTTTAG",
 };
 const instructions = [
@@ -191,7 +191,7 @@ const instructions = [
   "Choose user-created code to explore a custom sequence of A, G, T and C.",
 ] as const;
 export function create(options: Partial<DNAParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const space = { x: 31, y: 16, boundary: "wrap" } as const;
   const world = World.create(space, { random });
@@ -209,8 +209,8 @@ export function create(options: Partial<DNAParameters> = {}) {
   const completed = new Set<number>();
   const history: {
     tick: number;
-    originalProteins: number;
-    duplicateProteins: number;
+    originalProteinCount: number;
+    duplicateProteinCount: number;
   }[] = [];
   const all = () => world.agents as readonly Molecule[];
   const molecules = (kind: Molecule["group"], strand?: Strand) =>
@@ -219,7 +219,7 @@ export function create(options: Partial<DNAParameters> = {}) {
     );
   const shuffled = (values: readonly Molecule[]) =>
     random.sample(values, {
-      count: values.length,
+      sampleCount: values.length,
       algorithm: "fisher-yates-descending",
     });
   const yDNA = (strand: Strand) => (strand === "original" ? 1 : -2);
@@ -274,13 +274,13 @@ export function create(options: Partial<DNAParameters> = {}) {
     return [...dna].map(replaceNonNucleotideCharacter).join("").slice(0, 64);
   }
   function setupDNAString() {
-    if (settings.initialDNAString === "from user-created-code")
+    if (settings.initialDNAString === "user-created-code")
       originalDNAString = dnaStringWithNonNucleotideCharactersReplaced(
         settings.userCreatedCode,
       );
     else if (settings.initialDNAString.startsWith("random")) {
       const length =
-        settings.initialDNAString === "random (short strand)" ? 12 : 56;
+        settings.initialDNAString === "random-short-strand" ? 12 : 56;
       originalDNAString = Array.from({ length }, randomBaseLetterDNA).join("");
     } else originalDNAString = presets[settings.initialDNAString]!;
   }
@@ -768,8 +768,8 @@ export function create(options: Partial<DNAParameters> = {}) {
   function record() {
     history.push({
       tick: world.tick.value,
-      originalProteins: molecules("protein", "original").length,
-      duplicateProteins: molecules("protein", "duplicate").length,
+      originalProteinCount: molecules("protein", "original").length,
+      duplicateProteinCount: molecules("protein", "duplicate").length,
     });
   }
   function setup() {
@@ -789,9 +789,9 @@ export function create(options: Partial<DNAParameters> = {}) {
     showInstruction(1);
     record();
   }
-  function advance(count = 1) {
-    stepCount(count);
-    for (let i = 0; i < count; i++) {
+  function advance(stepCount = 1) {
+    validateStepCount(stepCount);
+    for (let i = 0; i < stepCount; i++) {
       run(world, go);
       record();
     }
@@ -799,7 +799,7 @@ export function create(options: Partial<DNAParameters> = {}) {
   function setParameters(update: Partial<Omit<DNAParameters, "seed">>) {
     if (Object.hasOwn(update, "seed"))
       throw new TypeError("Seed is setup-only.");
-    settings = parameters(inputs, { ...settings, ...update });
+    settings = parseParameters(inputs, { ...settings, ...update });
   }
   function snapshot(p: Molecule) {
     return {

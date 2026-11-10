@@ -6,13 +6,13 @@
  */
 import { Agent, Grid, Random, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 
 export interface WolfSheepParameters {
   seed: number;
   mode: "sheep-wolves" | "sheep-wolves-grass";
-  initialSheep: number;
-  initialWolves: number;
+  initialSheepCount: number;
+  initialWolfCount: number;
   sheepGain: number;
   wolfGain: number;
   sheepReproduce: number;
@@ -32,14 +32,14 @@ export const inputs: Inputs<WolfSheepParameters> = {
     default: "sheep-wolves",
     options: ["sheep-wolves", "sheep-wolves-grass"],
   },
-  initialSheep: {
+  initialSheepCount: {
     kind: "number",
     default: 100,
     min: 0,
     max: 250,
     integer: true,
   },
-  initialWolves: {
+  initialWolfCount: {
     kind: "number",
     default: 50,
     min: 0,
@@ -66,7 +66,7 @@ export const inputs: Inputs<WolfSheepParameters> = {
 };
 type Animal = Agent<{ species: "sheep" | "wolf"; energy: number }>;
 export function create(options: Partial<WolfSheepParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const space = { x: 51, y: 51, boundary: "wrap" as const };
   const world = World.create(space, { random });
@@ -89,7 +89,7 @@ export function create(options: Partial<WolfSheepParameters> = {}) {
   }
   for (const species of ["sheep", "wolf"] as const) {
     const count =
-      species === "sheep" ? settings.initialSheep : settings.initialWolves;
+      species === "sheep" ? settings.initialSheepCount : settings.initialWolfCount;
     const gain = species === "sheep" ? settings.sheepGain : settings.wolfGain;
     for (let i = 0; i < count; i += 1)
       world.add(
@@ -107,16 +107,16 @@ export function create(options: Partial<WolfSheepParameters> = {}) {
   }
   const history: {
     tick: number;
-    sheep: number;
-    wolves: number;
-    grass: number;
+    sheepCount: number;
+    wolfCount: number;
+    grassFieldCount: number;
     grassAvailable: boolean;
   }[] = [];
   function counts() {
     return {
-      sheep: population("sheep").length,
-      wolves: population("wolf").length,
-      grass:
+      sheepCount: population("sheep").length,
+      wolfCount: population("wolf").length,
+      grassFieldCount:
         settings.mode === "sheep-wolves-grass"
           ? fields.filter((field) => field.grass).length
           : 0,
@@ -132,9 +132,9 @@ export function create(options: Partial<WolfSheepParameters> = {}) {
   }
   function stopReason(): string | null {
     const current = counts();
-    return current.sheep + current.wolves === 0
+    return current.sheepCount + current.wolfCount === 0
       ? "No animals remain."
-      : current.wolves === 0 && current.sheep > 10000
+      : current.wolfCount === 0 && current.sheepCount > 10000
         ? "The sheep have inherited the earth (Web population limit)."
         : null;
   }
@@ -154,7 +154,7 @@ export function create(options: Partial<WolfSheepParameters> = {}) {
   function rules() {
     // Each source ask has its own captured population and random visitation order.
     for (const sheep of random.sample(population("sheep"), {
-      count: population("sheep").length,
+      sampleCount: population("sheep").length,
     })) {
       if (!sheep.alive) continue;
       move(sheep);
@@ -173,7 +173,7 @@ export function create(options: Partial<WolfSheepParameters> = {}) {
       reproduce(sheep, settings.sheepReproduce);
     }
     const wolves = population("wolf");
-    for (const wolf of random.sample(wolves, { count: wolves.length })) {
+    for (const wolf of random.sample(wolves, { sampleCount: wolves.length })) {
       if (!wolf.alive) continue;
       move(wolf);
       wolf.energy -= 1;
@@ -201,9 +201,9 @@ export function create(options: Partial<WolfSheepParameters> = {}) {
   }
   record();
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i += 1) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i += 1) {
         if (stopReason()) break;
         run(world, rules);
         record();
@@ -211,7 +211,7 @@ export function create(options: Partial<WolfSheepParameters> = {}) {
     },
     setRules(
       rules: Partial<
-        Omit<WolfSheepParameters, "seed" | "initialSheep" | "initialWolves">
+        Omit<WolfSheepParameters, "seed" | "initialSheepCount" | "initialWolfCount">
       >,
     ) {
       if (
@@ -230,7 +230,7 @@ export function create(options: Partial<WolfSheepParameters> = {}) {
         )
       )
         throw new TypeError("Unknown live rule.");
-      settings = parameters(inputs, { ...settings, ...rules });
+      settings = parseParameters(inputs, { ...settings, ...rules });
     },
     read() {
       const reason = stopReason();

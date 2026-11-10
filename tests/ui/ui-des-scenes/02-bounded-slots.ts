@@ -16,15 +16,15 @@ export const scene: SpatialData = {
       stroke: scientificPalette.neutral, strokeWidth: 1,
     })),
     ...state.crates.map((crate, index) => ({ id: `crate:${crate.crate}`, x: index * 2, y: 0, shape: "rectangle" as const, size: 14, color: scientificPalette.active })),
-    ...Array.from({ length: state.blocked }, (_, index) => ({ id: `blocked:${index}`, x: -4 - index, y: 0, shape: "rectangle" as const, size: 14, color: scientificPalette.waiting })),
+    ...Array.from({ length: state.blockedLotCount }, (_, index) => ({ id: `blocked:${index}`, x: -4 - index, y: 0, shape: "rectangle" as const, size: 14, color: scientificPalette.waiting })),
   ],
 };
 assert.equal(scene.agents.filter(agent => agent.extent).length, state.parameters.capacity);
-assert.equal(scene.agents.filter(agent => agent.color === scientificPalette.active).length, state.stored);
-assert.equal(scene.agents.filter(agent => agent.color === scientificPalette.waiting).length, state.blocked);
+assert.equal(scene.agents.filter(agent => agent.color === scientificPalette.active).length, state.storedLotCount);
+assert.equal(scene.agents.filter(agent => agent.color === scientificPalette.waiting).length, state.blockedLotCount);
 assert.equal(scene.agents.find(agent => agent.id === "slot:0")!.extent!.width, 1.8);
 assert.equal(scene.agents.find(agent => agent.id === "crate:1")!.size, 14);
 assert.deepEqual(state, before);
 buffer.collect();
-assert.equal(buffer.read().blocked, 0);
-assert.equal(buffer.read().stored, 2);
+assert.equal(buffer.read().blockedLotCount, 0);
+assert.equal(buffer.read().storedLotCount, 2);

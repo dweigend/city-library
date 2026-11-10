@@ -1,10 +1,10 @@
 /** NetLogo Termites (Wilensky, 1997), CC BY-NC-SA 3.0; see NOTICE.md. */
 import { Agent, Grid, Random, World } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface Parameters {
   seed: number;
-  number: number;
+  termiteCount: number;
   density: number;
 }
 export const inputs: Inputs<Parameters> = {
@@ -15,7 +15,7 @@ export const inputs: Inputs<Parameters> = {
     max: 4294967295,
     integer: true,
   },
-  number: {
+  termiteCount: {
     kind: "number",
     default: 400,
     min: 1,
@@ -33,10 +33,10 @@ export const inputs: Inputs<Parameters> = {
 type Termite = Agent<{
   phase: "search" | "find-pile" | "drop" | "escape";
   carrying: boolean;
-  cycles: number;
+  cycleCount: number;
 }>;
 export function create(options: Partial<Parameters> = {}) {
-  const settings = parameters(inputs, options);
+  const settings = parseParameters(inputs, options);
   const random = Random.create({
     seed: settings.seed,
   });
@@ -55,17 +55,17 @@ export function create(options: Partial<Parameters> = {}) {
   });
   world.add(grid);
   for (const f of random.sample(grid.fields, {
-    count: grid.fields.length,
+    sampleCount: grid.fields.length,
     algorithm: "fisher-yates-descending",
   }))
     f.chip = random.number() * 100 < settings.density;
-  for (let i = 0; i < settings.number; i++)
+  for (let i = 0; i < settings.termiteCount; i++)
     world.add(
       Agent.create(
         {
           phase: "search" as const,
           carrying: false,
-          cycles: 0,
+          cycleCount: 0,
         },
         {
           position: {
@@ -118,19 +118,19 @@ export function create(options: Partial<Parameters> = {}) {
           a.rotate(Math.floor(random.number() * 360));
           a.move(20);
         } else {
-          a.cycles++;
+          a.cycleCount++;
           a.phase = "search";
         }
         break;
     }
   }
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) {
         const old = population();
         for (const a of random.sample(old, {
-          count: old.length,
+          sampleCount: old.length,
           algorithm: "fisher-yates-descending",
         }))
           activate(a);
@@ -155,7 +155,7 @@ export function create(options: Partial<Parameters> = {}) {
               heading: a.heading,
               carrying: a.carrying,
               phase: a.phase,
-              cycles: a.cycles,
+              cycleCount: a.cycleCount,
             }),
           ),
         ),

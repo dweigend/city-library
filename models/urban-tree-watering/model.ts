@@ -1,18 +1,18 @@
 /** Original daily priority-allocation teaching model; liters are synthetic moisture equivalents. */
 import { Agent, Random, World, run, measurements, storage } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
-export interface TreeParameters { trees: number; dailyLiters: number; seed: number }
+import { parseParameters, validateStepCount } from "../parameters.ts";
+export interface TreeParameters { treeCount: number; dailyLiters: number; seed: number }
 export const inputs: Inputs<TreeParameters> = {
-  trees: { kind: "number", default: 10, min: 2, max: 40, integer: true },
+  treeCount: { kind: "number", default: 10, min: 2, max: 40, integer: true },
   dailyLiters: { kind: "number", default: 20, min: 0, max: 100, integer: true },
   seed: { kind: "number", default: 1, min: -2147483648, max: 4294967295, integer: true },
 };
 export function create(options: Partial<TreeParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const world = World.create({ random });
-  const trees = Array.from({ length: settings.trees }, (_, index) => world.add(Agent.create({
+  const trees = Array.from({ length: settings.treeCount }, (_, index) => world.add(Agent.create({
     label: `Tree ${index + 1}`, moistureLiters: Math.floor(random.number() * 10), receivedLiters: 0,
   })));
   const moistureCapacityLiters = 12;
@@ -42,15 +42,15 @@ export function create(options: Partial<TreeParameters> = {}) {
   }
   record();
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let index = 0; index < count; index += 1) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let index = 0; index < stepCount; index += 1) {
         run(world, step);
         record();
       }
     },
     setDailyLiters(value: number) {
-      settings = parameters(inputs, { ...settings, dailyLiters: value });
+      settings = parseParameters(inputs, { ...settings, dailyLiters: value });
     },
     read() {
       return Object.freeze({

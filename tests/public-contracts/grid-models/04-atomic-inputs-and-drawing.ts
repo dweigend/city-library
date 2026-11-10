@@ -13,7 +13,7 @@ assert.throws(() => life.setCells([true]));
 assert.throws(() => life.setCell({ x: 0.2, y: 0 }, true));
 assert.deepEqual(life.read(), lifeBefore);
 life.setCell({ x: 0, y: 0 }, true);
-assert.equal(life.read().counts.living, 1);
+assert.equal(life.read().counts.livingFieldCount, 1);
 assert.equal(life.read().tick, 0);
 assert.equal(life.read().history.length, 1);
 assert.deepEqual(life.read().randomState, lifeBefore.randomState);

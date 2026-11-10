@@ -4,7 +4,7 @@ import { assert, equal, labels, button, settle } from './assertions.ts';
 
 type Instance = ReturnType<typeof model.create>;
 export const spec = {
-  setup: ['seed', 'people'],
+  setup: ['seed', 'personCount'],
   live: {
     growthAmount: { group: 'Resources', set: (instance, value) => instance.setRules({ growthAmount: value }) },
     minLife: { group: 'Lifespan', set: (instance, value) => instance.setRules({ minLife: value }) },
@@ -18,9 +18,9 @@ export const spec = {
     type: 'bar', label: 'Current wealth classes',
     xAxis: { label: 'Wealth class' }, yAxis: { label: 'Population', unit: 'people' },
     series: state => [{ label: 'Population', points: [
-      { x: 'Low', y: state.classes.low },
-      { x: 'Middle', y: state.classes.middle },
-      { x: 'High', y: state.classes.high },
+      { x: 'Low', y: state.classes.lowWealthPersonCount },
+      { x: 'Middle', y: state.classes.middleWealthPersonCount },
+      { x: 'High', y: state.classes.highWealthPersonCount },
     ] }],
   }, {
     type: 'bar', label: 'Field coordinates',
@@ -36,14 +36,14 @@ export const spec = {
   }],
 } as const satisfies UISpec<WealthParameters, Instance>;
 export const ui = defineUI(model, spec);
-const actual = model.create({ seed: 31, people: 2 });
+const actual = model.create({ seed: 31, personCount: 2 });
 const before = actual.read();
 const value = spec.monitors[0].value(before);
 equal(typeof value, 'number', 'The scientific observation stays numeric');
 equal(spec.monitors[0].format(value), before.gini.toFixed(3), 'Formatting is a separate presentation callback');
 const points = spec.views[0].series(before)[0]!.points;
 equal(points.map(point => point.x), ['Low', 'Middle', 'High'], 'Categories carry their own readable names');
-equal(points.reduce((sum, point) => sum + point.y, 0), before.peopleCount, 'Chart projects existing headless class reporters');
+equal(points.reduce((sum, point) => sum + point.y, 0), before.personCount, 'Chart projects existing headless class reporters');
 const coordinates = spec.views[1].series(before);
 equal(coordinates.map(series => series.points.map(point => point.y)), [[0, -1], [0, 0]], 'Real field coordinates exercise signed/zero values and shared categories without aggregation');
 equal(actual.read().randomState, before.randomState, 'Presentation consumes no model RNG');

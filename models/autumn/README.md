@@ -23,7 +23,7 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer |
-| `numberOfLeaves` | `278` | integer; ≥ 1; ≤ 2500 |
+| `leafCount` | `278` | integer; ≥ 1; ≤ 2500 |
 | `startSugarMean` | `50` | number; ≥ 0; ≤ 100 |
 | `startSugarStddev` | `25` | number; ≥ 0; ≤ 50 |
 | `windFactor` | `3` | number; ≥ 0; ≤ 10 |
@@ -38,7 +38,7 @@ Use `advance(...)` for progress and `read()` for observations; the model defines
 
 Other instance procedures: `setParameters`, `clip`, `forwardWeather`, `changeColor`, `changeShape`, `setShapeForValue`, `showIntensity`, `attachedLeaves`, `setupTree`, `makeWindBlow`, `makeRainFall`, `moveWater`, `adjustWater`, `adjustChlorophyll`, `adjustSugar`, `fallIfNecessary`, `go`. See their typed arguments in [model.ts](model.ts).
 
-Model-specific `read()` fields include `leaves`, `deadLeaves`, `raindrops`, `suns`, `cells`.
+Model-specific `read()` fields include `leafCount`, `deadLeaves`, `raindrops`, `suns`, `cells`.
 
 The [UI binding](ui.ts) presents `Tick`, `Leaves`, `Dead leaves`, `Raindrops`, `Autumn`, `Weather`, `Leaf averages`, `Live`, `Dead`, `Temperature` and further views or controls.
 

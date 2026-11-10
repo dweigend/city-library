@@ -1,0 +1,21 @@
+{
+  "model": "baldwin-effect",
+  "markers": [
+    {
+      "sourceMarker": "B08-baldwin-effect-native-composition-v1",
+      "originalLocations": [
+        {
+          "path": "models/baldwin-effect/model.ts",
+          "line": 5,
+          "kind": "model-export"
+        },
+        {
+          "path": "models/baldwin-effect/model.ts",
+          "line": 328,
+          "kind": "observation-shorthand",
+          "reference": "sourceMarker"
+        }
+      ]
+    }
+  ]
+}

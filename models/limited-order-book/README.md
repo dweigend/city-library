@@ -24,8 +24,8 @@ const observation = simulation.read();
 | --- | --- | --- |
 | `seed` | `1` | integer |
 | `tradePrecision` | `0` | integer; ≥ 0; ≤ 3 |
-| `honestTraders` | `50` | integer; ≥ 0; ≤ 100 |
-| `cunningTraders` | `50` | integer; ≥ 0; ≤ 100 |
+| `honestTraderCount` | `50` | integer; ≥ 0; ≤ 100 |
+| `cunningTraderCount` | `50` | integer; ≥ 0; ≤ 100 |
 | `initialCash` | `1000` | integer; ≥ 0; ≤ 2000 |
 | `initialTokens` | `50` | integer; ≥ 0; ≤ 200 |
 | `initialBelief` | `25` | integer; ≥ 0; ≤ 100 |

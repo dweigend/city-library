@@ -23,8 +23,8 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
-| `numberOfRows` | `11` | integer; ≥ 1; ≤ 15 |
-| `numberOfBalls` | `75` | integer; ≥ 1; ≤ 1000 |
+| `rowCount` | `11` | integer; ≥ 1; ≤ 15 |
+| `ballCount` | `75` | integer; ≥ 1; ≤ 1000 |
 | `chanceOfBouncingRight` | `50` | integer; ≥ 0; ≤ 100 |
 | `pileUp` | `true` | boolean |
 
@@ -36,7 +36,7 @@ Other instance procedures: `setRules`. See their typed arguments in [model.ts](m
 
 Additional instance accessors: `world`, `grid`. See [model.ts](model.ts) for the returned live references.
 
-Model-specific `read()` fields include `balls`, `particles`, `pegs`, `counters`, `full`.
+Model-specific `read()` fields include `ballCount`, `particles`, `pegs`, `counters`, `isFull`.
 
 The [UI binding](ui.ts) presents `Bounce right (%)`, `Tick`, `Balls`, `State`, `Galton box`, `Counters`.
 

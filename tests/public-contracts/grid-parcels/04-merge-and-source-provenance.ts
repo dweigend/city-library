@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { geometry, topology, type PlanarPolygon } from "city-library";
 
-const layout = topology.square({ columns: 3, rows: 1 });
+const layout = topology.square({ columnCount: 3, rowCount: 1 });
 const before = layout.cells.map(cell => structuredClone(layout.polygon({ cell })));
 const merged = geometry.merge({ layout, cells: [layout.cells[1]!, layout.cells[0]!] });
 assert.equal(merged.status, "ok");

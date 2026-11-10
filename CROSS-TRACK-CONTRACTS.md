@@ -24,7 +24,7 @@ agenda.time: number
 agenda.size: number
 agenda.add(options: { at: number; data: E; priority?: number }): EventHandle<E>
 agenda.delete(handle: EventHandle<E>): void
-agenda.advance(options: { until: number; maxEvents?: number }): readonly Event<E>[]
+agenda.advance(options: { until: number; maxEventCount?: number }): readonly Event<E>[]
 agenda.next(options: { until: number }): Event<E> | undefined
 type EventHandle<E> = { readonly id: string; readonly agenda: Agenda<E> }
 type Event<E> = {
@@ -35,11 +35,11 @@ type Event<E> = {
 
 The binding batch API is preserved. Time starts at zero; event time is finite and at least current Agenda time. Priority defaults to zero, signed safe integer; sort by time, lower priority, then insertion sequence. `until` is finite and at least current time. Event data is detached supported data with canonical framework references. Issued handles are receiver-specific; forged/foreign handles reject, repeated deletion of an issued absent event is a no-op.
 
-**Causal dispatch:** successful `next` removes one event and sets time to `event.at`, even for the last due event. Empty `next` returns undefined and advances time to `until`. Caller dispatches each result before the next extraction. A handler at 2 can schedule 3 within horizon 10. Batch `advance` is unsuitable for causal callback dispatch because it can already have advanced to 10. Its positive integer `maxEvents` defaults to 1000: stop at last extracted event if due work remains, otherwise advance to horizon.
+**Causal dispatch:** successful `next` removes one event and sets time to `event.at`, even for the last due event. Empty `next` returns undefined and advances time to `until`. Caller dispatches each result before the next extraction. A handler at 2 can schedule 3 within horizon 10. Batch `advance` is unsuitable for causal callback dispatch because it can already have advanced to 10. Its positive integer `maxEventCount` defaults to 1000: stop at last extracted event if due work remains, otherwise advance to horizon.
 
 The caller's per-call event limit counts equal-time events and zero-delay chains. Exhaustion leaves the clock at the last event; no hidden skipping, World tick update or global run-budget consumption occurs. Mesa global run budgets count their separately defined execution unit. Neither budget silently substitutes for the other.
 
-Agenda is usable standalone and World-attached. Mesa owns `src/world/world.ts` and `src/world/activation/`; Salabim will not edit those. Binding attachment is `world.add(agenda)`, `world.delete(agenda)`, `world.agendas: readonly Agenda[]`, sharing existing atomic membership and single-World ownership without implicit dispatch. Mesa implemented that seam in 69ed507; attachment/clock/identity checks now pass on the merged target.
+Agenda is usable standalone and World-attached. Mesa owns `library/world/world.ts` and `library/world/activation/`; Salabim will not edit those. Binding attachment is `world.add(agenda)`, `world.delete(agenda)`, `world.agendas: readonly Agenda[]`, sharing existing atomic membership and single-World ownership without implicit dispatch. Mesa implemented that seam in 69ed507; attachment/clock/identity checks now pass on the merged target.
 
 ## Process interaction and activation
 
@@ -99,7 +99,7 @@ Store capacity is positive safe integer. Producers and consumers are FIFO. Put s
 
 Canonical Agent references are retained. Queue entries, resource owners and stored/waiting-producer Agent values use existing `deletionParticipants`. Agent deletion rejects atomically while participation remains. Removal, consumption, release or cancellation unregisters the relevant participant. Dead Agents reject on admission; World detachment alone does not clean up domain participation. No second identity registry or shadow occupancy is allowed.
 
-Salabim may add a focused private helper using `frameworkRecord`/`requireLivingAgent`; Mesa activation uses the existing hooks. Any needed change to `src/agent/lifecycle.ts` must be communicated before integration. Salabim currently needs no change to that file for queue/resource/store participation. World Agenda attachment would need the `agenda` framework kind and is coordinated with Mesa rather than edited concurrently.
+Salabim may add a focused private helper using `frameworkRecord`/`requireLivingAgent`; Mesa activation uses the existing hooks. Any needed change to `library/agent/lifecycle.ts` must be communicated before integration. Salabim currently needs no change to that file for queue/resource/store participation. World Agenda attachment would need the `agenda` framework kind and is coordinated with Mesa rather than edited concurrently.
 
 ## Time-weighted measurement and History bridge
 

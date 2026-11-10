@@ -1,7 +1,7 @@
 /** Adapted from Wilensky (2003), CC BY-NC-SA 3.0; exact source/notices adjacent. */
 import { Grid, Random, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export const patterns = [
   "OOO",
   "OOI",
@@ -74,7 +74,7 @@ export function entropy(probabilities: readonly number[]) {
   });
 }
 export function create(options: Partial<StochasticParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   if (settings.width % 2 !== 1 || settings.height % 2 !== 1)
     throw new RangeError("Use odd centered dimensions.");
   const { width, height } = settings,
@@ -158,9 +158,9 @@ export function create(options: Partial<StochasticParameters> = {}) {
   initialize();
   record();
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) {
         if (row === bottom) {
           if (settings.autoContinue) {
             const active = rowFields(row).filter((f) => f.on).length;
@@ -197,7 +197,7 @@ export function create(options: Partial<StochasticParameters> = {}) {
     setRules(
       field: Partial<Omit<StochasticParameters, "width" | "height" | "seed">>,
     ) {
-      parameters(inputs, field);
+      parseParameters(inputs, field);
       const allowed = [
         ...patterns,
         "autoContinue",
@@ -214,7 +214,7 @@ export function create(options: Partial<StochasticParameters> = {}) {
         )
       )
         throw new TypeError("Unknown live rule.");
-      settings = parameters(inputs, { ...settings, ...field });
+      settings = parseParameters(inputs, { ...settings, ...field });
     },
     setupExample() {
       const table = [
@@ -225,7 +225,7 @@ export function create(options: Partial<StochasticParameters> = {}) {
         [0, 66, 0, 100, 66, 0, 100, 0],
       ];
       const values = table[settings.example - 1]!;
-      settings = parameters(inputs, {
+      settings = parseParameters(inputs, {
         ...settings,
         ...Object.fromEntries(patterns.map((p, i) => [p, values[i]])),
         density: 25,

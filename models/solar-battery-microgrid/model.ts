@@ -1,7 +1,7 @@
 /** Original hourly energy-balance teaching model. Lossless storage, synthetic solar cycle. */
 import { Random, World, run, continuous, measurements, storage } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface BatteryParameters { seed: number; solarKw: number; demandKw: number }
 export const inputs: Inputs<BatteryParameters> = {
   seed: { kind: "number", default: 1, min: -2147483648, max: 4294967295, integer: true },
@@ -9,13 +9,13 @@ export const inputs: Inputs<BatteryParameters> = {
   demandKw: { kind: "number", default: 2, min: 0, max: 8, step: 0.5 },
 };
 export function create(options: Partial<BatteryParameters> = {}) {
-  const settings = parameters(inputs, options);
+  const settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const world = World.create({ random });
   const solarPhase = Math.floor(random.number() * 24);
   const capacityKwh = 10;
   const reserveKwh = 2;
-  const state = { energyKwh: 5, importedKwh: 0, exportedKwh: 0, reserveCrossings: 0 };
+  const state = { energyKwh: 5, importedKwh: 0, exportedKwh: 0, reserveCrossingCount: 0 };
   let lastCrossingHour: number | undefined;
   const measure = measurements.define((values: typeof state) => ({ ...values }));
   const history = storage.history({ capacity: 120 });
@@ -28,7 +28,7 @@ export function create(options: Partial<BatteryParameters> = {}) {
     const unconstrainedEnergyKwh = continuous.linear({ value: state.energyKwh, rate: solarKw - settings.demandKw, duration: 1 });
     const crossing = continuous.crossing({ from: state.energyKwh, to: unconstrainedEnergyKwh, threshold: reserveKwh, duration: 1, direction: "falling" });
     if (crossing) {
-      state.reserveCrossings += 1;
+      state.reserveCrossingCount += 1;
       lastCrossingHour = world.tick.value + crossing.elapsed;
     }
     state.importedKwh += Math.max(0, reserveKwh - unconstrainedEnergyKwh);
@@ -37,9 +37,9 @@ export function create(options: Partial<BatteryParameters> = {}) {
   }
   record();
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let index = 0; index < count; index += 1) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let index = 0; index < stepCount; index += 1) {
         run(world, step);
         record();
       }

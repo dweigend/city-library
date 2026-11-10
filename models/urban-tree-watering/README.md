@@ -18,7 +18,7 @@ const observation = simulation.read();
 
 | Input | Default |
 | --- | --- |
-| `trees` | `10` |
+| `treeCount` | `10` |
 | `dailyLiters` | `20` |
 | `seed` | `1` |
 

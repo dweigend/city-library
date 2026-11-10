@@ -23,7 +23,7 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `memorySize` | `5` | integer; ≥ 1; ≤ 10 |
-| `numberStrategies` | `10` | integer; ≥ 1; ≤ 20 |
+| `strategyCount` | `10` | integer; ≥ 1; ≤ 20 |
 | `overcrowdingThreshold` | `60` | integer; ≥ 0; ≤ 100 |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
 

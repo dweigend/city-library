@@ -1,12 +1,12 @@
 /** NetLogo Limited Order Book, Wilensky 2021, CC BY-NC-SA 3.0. */
 import { Agent, Random, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface Parameters {
   seed: number;
   tradePrecision: number;
-  honestTraders: number;
-  cunningTraders: number;
+  honestTraderCount: number;
+  cunningTraderCount: number;
   initialCash: number;
   initialTokens: number;
   initialBelief: number;
@@ -14,14 +14,14 @@ export interface Parameters {
 export const inputs: Inputs<Parameters> = {
   seed: { kind: "number", default: 1, integer: true },
   tradePrecision: { kind: "number", default: 0, min: 0, max: 3, integer: true },
-  honestTraders: {
+  honestTraderCount: {
     kind: "number",
     default: 50,
     min: 0,
     max: 100,
     integer: true,
   },
-  cunningTraders: {
+  cunningTraderCount: {
     kind: "number",
     default: 50,
     min: 0,
@@ -75,7 +75,7 @@ export function floorToUnit(value: number, unit: number) {
   return Math.floor(value / unit) * unit;
 }
 export function create(options: Partial<Parameters> = {}) {
-  const settings = parameters(inputs, options),
+  const settings = parseParameters(inputs, options),
     random = Random.create({ seed: settings.seed }),
     world = World.create({ x: 41, y: 41, boundary: "hard" }, { random });
   const traders = () => world.agents as readonly Trader[];
@@ -97,15 +97,15 @@ export function create(options: Partial<Parameters> = {}) {
     priceToDate = 0;
   const amount = (n: number) => Math.floor(random.number() * n) * 0.5 + n * 0.5;
   const shuffle = <T>(a: readonly T[]) =>
-    random.sample(a, { count: a.length, algorithm: "fisher-yates-descending" });
+    random.sample(a, { sampleCount: a.length, algorithm: "fisher-yates-descending" });
   for (
     let index = 0;
-    index < settings.honestTraders + settings.cunningTraders;
+    index < settings.honestTraderCount + settings.cunningTraderCount;
     index++
   ) {
     const a =
         (index * 2 * Math.PI) /
-        (settings.honestTraders + settings.cunningTraders),
+        (settings.honestTraderCount + settings.cunningTraderCount),
       cash = amount(settings.initialCash),
       stockpile = amount(settings.initialTokens),
       belief = amount(settings.initialBelief),
@@ -113,7 +113,7 @@ export function create(options: Partial<Parameters> = {}) {
     const t = Agent.create(
       {
         strategy:
-          index < settings.honestTraders
+          index < settings.honestTraderCount
             ? ("honest" as const)
             : ("cunning" as const),
         cash,
@@ -355,9 +355,9 @@ export function create(options: Partial<Parameters> = {}) {
   }
   record();
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) {
         run(world, go);
         record();
       }
@@ -369,7 +369,7 @@ export function create(options: Partial<Parameters> = {}) {
         tick: world.tick.value,
         width: 41,
         height: 41,
-        sourceMarker: "limited-order-book:source-v1",
+
         parameters: settings,
         done: false,
         tradeUnit,

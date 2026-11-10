@@ -5,7 +5,7 @@
  */
 import { Agent, Grid, Random, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 
 export interface RecyclingParameters {
   seed: number;
@@ -34,15 +34,15 @@ type Person = Agent<{ kind: PersonKind; energy: number }>;
 type LiveRules = Pick<RecyclingParameters, "maxStoredEnergy" | "recyclingWasteCost" | "resourceRegeneration" | "agentsSeekResources" | "showEnergy">;
 interface RecyclingSample {
   readonly tick: number;
-  readonly recyclers: number;
-  readonly wastefuls: number;
+  readonly recyclerCount: number;
+  readonly wastefulPersonCount: number;
   readonly new: number;
   readonly recycled: number;
   readonly waste: number;
 }
 
 export function create(options: Partial<RecyclingParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const width = 35, height = 35;
   const random = Random.create({ seed: settings.seed });
   const world = World.create({ x: width, y: height, boundary: "wrap" }, { random });
@@ -54,7 +54,7 @@ export function create(options: Partial<RecyclingParameters> = {}) {
   const integer = (upper: number) => Math.floor(random.number() * upper);
   // Explicit target ask policy: uniform Fisher-Yates snapshots through public Random.
   function activation<T>(snapshot: readonly T[]) {
-    return random.sample(snapshot, { count: snapshot.length, algorithm: "fisher-yates-descending" });
+    return random.sample(snapshot, { sampleCount: snapshot.length, algorithm: "fisher-yates-descending" });
   }
   function initializePeople(kind: PersonKind, count: number) {
     for (let i = 0; i < count; i++) {
@@ -63,8 +63,8 @@ export function create(options: Partial<RecyclingParameters> = {}) {
     }
   }
   function measurement() {
-    const counts = { recyclers: 0, wastefuls: 0 };
-    for (const person of people()) if (person.kind === "recycler") counts.recyclers++; else counts.wastefuls++;
+    const counts = { recyclerCount: 0, wastefulPersonCount: 0 };
+    for (const person of people()) if (person.kind === "recycler") counts.recyclerCount++; else counts.wastefulPersonCount++;
     const resources = { new: 0, recycled: 0, waste: 0 };
     for (const field of fields) resources[field.resource]++;
     return {
@@ -135,21 +135,21 @@ export function create(options: Partial<RecyclingParameters> = {}) {
   record();
 
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) { run(world, go); record(); }
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) { run(world, go); record(); }
     },
     setRules(rules: Partial<LiveRules>) {
       if (typeof rules !== "object" || rules === null || ![Object.prototype, null].includes(Object.getPrototypeOf(rules)) ||
         Reflect.ownKeys(rules).some(key => typeof key !== "string" || !["maxStoredEnergy", "recyclingWasteCost", "resourceRegeneration", "agentsSeekResources", "showEnergy"].includes(key) || !("value" in Object.getOwnPropertyDescriptor(rules, key)!)))
         throw new TypeError("Supply only live recycling rule data.");
-      settings = parameters(inputs, { ...settings, ...rules });
+      settings = parseParameters(inputs, { ...settings, ...rules });
       record();
     },
     setPeople(values: readonly RecyclingPersonInput[]) {
       if (!Array.isArray(values) || Object.getPrototypeOf(values) !== Array.prototype) throw new TypeError("Supply a people array.");
       const copied: RecyclingPersonInput[] = [];
-      const counts = { recycler: 0, wasteful: 0 };
+      const counts = { recyclerCount: 0, wastefulPersonCount: 0 };
       for (let i = 0; i < values.length; i++) {
         const item = Object.getOwnPropertyDescriptor(values, String(i));
         const value: unknown = item && "value" in item ? item.value : undefined;
@@ -158,7 +158,7 @@ export function create(options: Partial<RecyclingParameters> = {}) {
           throw new TypeError("Supply kind/x/y/heading/energy person data.");
         const person = value as RecyclingPersonInput;
         if (!["recycler", "wasteful"].includes(person.kind) || ![person.x, person.y, person.heading, person.energy].every(Number.isFinite) ||
-          !Number.isInteger(person.x) || person.x < -17 || person.x > 17 || !Number.isInteger(person.y) || person.y < -17 || person.y > 17 || ++counts[person.kind] > 50)
+          !Number.isInteger(person.x) || person.x < -17 || person.x > 17 || !Number.isInteger(person.y) || person.y < -17 || person.y > 17 || ++counts[person.kind === "recycler" ? "recyclerCount" : "wastefulPersonCount"] > 50)
           throw new RangeError("Invalid discrete person state or kind count.");
         copied.push({ kind: person.kind, x: person.x, y: person.y, heading: person.heading, energy: person.energy });
       }

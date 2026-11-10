@@ -1,8 +1,8 @@
 /** NetLogo Sex Ratio Equilibrium, Wilensky (2020), CC BY-NC-SA 3.0; see NOTICE.md. */
 import { Agent, Random, World, stats } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
-export const sourceMarker = "b08-sex-ratio-equilibrium-source-composition-v1";
+import { parseParameters, validateStepCount } from "../parameters.ts";
+
 export interface Parameters {
   seed: number;
   initialPopulationSize: number;
@@ -83,7 +83,7 @@ export function adultSexRatio(
     : 0;
 }
 export function create(options: Partial<Parameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const world = World.create({ x: 33, y: 21, boundary: "wrap" }, { random });
   const population = () => world.agents as readonly Individual[];
@@ -94,10 +94,10 @@ export function create(options: Partial<Parameters> = {}) {
   const ageList: number[] = [];
   const history: {
     tick: number;
-    males: number;
-    females: number;
-    pregnant: number;
-    nonPregnant: number;
+    maleCount: number;
+    femaleCount: number;
+    pregnantFemaleCount: number;
+    nonPregnantFemaleCount: number;
     matingRatio: number | null;
     chance: number;
   }[] = [];
@@ -229,10 +229,10 @@ export function create(options: Partial<Parameters> = {}) {
   function record() {
     history.push({
       tick: world.tick.value,
-      males: males().length,
-      females: females().length,
-      pregnant: females().filter((a) => a.carrying).length,
-      nonPregnant: females().filter((a) => !a.carrying).length,
+      maleCount: males().length,
+      femaleCount: females().length,
+      pregnantFemaleCount: females().filter((a) => a.carrying).length,
+      nonPregnantFemaleCount: females().filter((a) => !a.carrying).length,
       matingRatio:
         males().length && females().length && matingSuccess("female") !== 0
           ? Math.round(
@@ -244,17 +244,17 @@ export function create(options: Partial<Parameters> = {}) {
     });
     if (history.length > 1001) history.splice(1, 1);
   }
-  function advance(steps = 1) {
-    stepCount(steps);
-    for (let n = 0; n < steps; n++) {
+  function advance(stepCount = 1) {
+    validateStepCount(stepCount);
+    for (let n = 0; n < stepCount; n++) {
       if (!population().length) break;
       for (const a of random.sample(population(), {
-        count: population().length,
+        sampleCount: population().length,
         algorithm: "fisher-yates-descending",
       }))
         checkIfDead(a);
       for (const a of random.sample(males(), {
-        count: males().length,
+        sampleCount: males().length,
         algorithm: "fisher-yates-descending",
       })) {
         move(a);
@@ -263,13 +263,13 @@ export function create(options: Partial<Parameters> = {}) {
       for (const a of random.sample(
         males().filter((a) => a.adult),
         {
-          count: males().filter((a) => a.adult).length,
+          sampleCount: males().filter((a) => a.adult).length,
           algorithm: "fisher-yates-descending",
         },
       ))
         searchForAnAdultPartner(a);
       for (const a of random.sample(females(), {
-        count: females().length,
+        sampleCount: females().length,
         algorithm: "fisher-yates-descending",
       })) {
         if (!a.carrying) move(a);
@@ -277,7 +277,7 @@ export function create(options: Partial<Parameters> = {}) {
       }
       const fertile = females().filter((a) => a.adult);
       for (const a of random.sample(fertile, {
-        count: fertile.length,
+        sampleCount: fertile.length,
         algorithm: "fisher-yates-descending",
       }))
         reproduce(a);
@@ -322,7 +322,7 @@ export function create(options: Partial<Parameters> = {}) {
         ? stats.describe(adultSexRatioHistory.slice(-1000), { sample: true })
         : undefined;
     return {
-      sourceMarker,
+
       parameters: { ...settings },
       randomState: random.state,
       width: 33,
@@ -349,7 +349,7 @@ export function create(options: Partial<Parameters> = {}) {
     };
   }
   function setParameters(change: Partial<Parameters>) {
-    settings = parameters(inputs, { ...settings, ...change });
+    settings = parseParameters(inputs, { ...settings, ...change });
   }
   setup();
   return {

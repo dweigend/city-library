@@ -2,7 +2,7 @@ import { defineUI, type Observation, type SpatialData } from "../../ui/index.ts"
 
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: ["seed", { field: "number", label: "Racers" }, "gradation"],
+  setup: ["seed", { field: "contestantCount", label: "Racers" }, "gradation"],
   complete: (s) => s.done,
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/ThreeDoors",
@@ -24,7 +24,7 @@ export const ui = defineUI(model, {
       series: (s) => [
         {
           label: "Racers",
-          points: s.racers.map((r) => ({ x: r.hunch, y: r.wins })),
+          points: s.racers.map((r) => ({ x: r.hunch, y: r.winCount })),
         },
       ],
     },

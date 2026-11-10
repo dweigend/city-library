@@ -1,0 +1,21 @@
+{
+  "model": "gendrift-t-interact",
+  "markers": [
+    {
+      "sourceMarker": "b08-gendrift-t-interact-source-composition-v1",
+      "originalLocations": [
+        {
+          "path": "models/gendrift-t-interact/model.ts",
+          "line": 5,
+          "kind": "model-export"
+        },
+        {
+          "path": "models/gendrift-t-interact/model.ts",
+          "line": 169,
+          "kind": "observation-shorthand",
+          "reference": "sourceMarker"
+        }
+      ]
+    }
+  ]
+}

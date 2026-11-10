@@ -5,7 +5,7 @@ import { model } from "./model.ts";
 export const ui = defineUI(model, {
   setup: [
     "seed",
-    { field: "numberOfNodes", label: "Nodes" },
+    { field: "nodeCount", label: "Nodes" },
     { field: "averageNodeDegree", label: "Mean degree" },
     { field: "initialOutbreakSize", label: "Initial infected" },
   ],
@@ -31,9 +31,9 @@ export const ui = defineUI(model, {
   },
   monitors: [
     { label: "Tick", value: (state) => state.tick },
-    { label: "Susceptible", value: (state) => state.counts.susceptible },
-    { label: "Infected", value: (state) => state.counts.infected },
-    { label: "Resistant", value: (state) => state.counts.resistant },
+    { label: "Susceptible", value: (state) => state.counts.susceptibleNodeCount },
+    { label: "Infected", value: (state) => state.counts.infectedNodeCount },
+    { label: "Resistant", value: (state) => state.counts.resistantNodeCount },
   ],
   views: [
     {
@@ -76,7 +76,7 @@ function networkStatusSeries(state: UIObservation): readonly Series[] {
       color: "#355fa5",
       points: state.history.map((point) => ({
         x: point.tick,
-        y: point.susceptible,
+        y: point.susceptibleNodeCount,
       })),
     },
     {
@@ -84,7 +84,7 @@ function networkStatusSeries(state: UIObservation): readonly Series[] {
       color: "#c84332",
       points: state.history.map((point) => ({
         x: point.tick,
-        y: point.infected,
+        y: point.infectedNodeCount,
       })),
     },
     {
@@ -92,7 +92,7 @@ function networkStatusSeries(state: UIObservation): readonly Series[] {
       color: "#888888",
       points: state.history.map((point) => ({
         x: point.tick,
-        y: point.resistant,
+        y: point.resistantNodeCount,
       })),
     },
   ];

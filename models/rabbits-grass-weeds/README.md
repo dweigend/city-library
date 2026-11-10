@@ -23,7 +23,7 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
-| `number` | `150` | integer; ≥ 0; ≤ 500 |
+| `rabbitCount` | `150` | integer; ≥ 0; ≤ 500 |
 | `birthThreshold` | `15` | integer; ≥ 0; ≤ 20 |
 | `weedEnergy` | `0` | number; ≥ 0; ≤ 10 |
 | `weedsGrowRate` | `0` | integer; ≥ 0; ≤ 20 |
@@ -36,7 +36,7 @@ Use `advance(...)` for progress and `read()` for observations; the model defines
 
 Other instance procedures: `setRules`. See their typed arguments in [model.ts](model.ts).
 
-Model-specific `read()` fields include `rabbits`, `cells`.
+Model-specific `read()` fields include `rabbitCount`, `cells`.
 
 The [UI binding](ui.ts) presents `Tick`, `Rabbits`, `Rabbits and resources`, `Populations (resources / 4)`.
 

@@ -25,7 +25,7 @@ const observation = simulation.read();
 | `seed` | `1` | integer |
 | `width` | `3` | integer; ≥ 1; ≤ 5 |
 | `height` | `1` | integer; ≥ 1; ≤ 2 |
-| `choices` | `2` | integer; ≥ 2; ≤ 6 |
+| `choiceCount` | `2` | integer; ≥ 2; ≤ 6 |
 | `dice` | `true` | boolean |
 | `singleSuccess` | `false` | boolean |
 | `analysisType` | `"both"` | `combination`, `permutations`, `both` |

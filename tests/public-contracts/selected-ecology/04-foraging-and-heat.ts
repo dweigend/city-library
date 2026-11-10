@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { create as ants } from "../../../models/ants/model.ts";
 import { create as bugs } from "../../../models/heatbugs/model.ts";
-const colony = ants({ population: 2, seed: 9 });
+const colony = ants({ antCount: 2, seed: 9 });
 const setup = colony.read();
 assert.equal(setup.ants.length, 2);
 assert.ok(setup.ants.every(a => a.x === 0 && a.y === 0));

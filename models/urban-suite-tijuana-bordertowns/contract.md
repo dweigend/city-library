@@ -23,8 +23,8 @@ The future `models/urban-suite-tijuana-bordertowns/model.ts` exports `inputs`, `
 ```ts
 import type { RandomState } from "city-library";
 
-type VisualUpdate = "off" | "elevation" | "land value gradient" | "colonias"
-  | "units with no water" | "units with no electricity";
+type VisualUpdate = "off" | "elevation" | "land-value-gradient" | "colonias"
+  | "units-with-no-water" | "units-with-no-electricity";
 interface TijuanaRules {
   maquiladoras: number; serviceCenters: number;
   migrationTicks: number; crossingTicks: number; buildingTicks: number;

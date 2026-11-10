@@ -39,7 +39,7 @@ test("voting fixed point stops before tick and live rule changes can restart a t
   instance.setRules({ awardCloseCallsToLoser: false });
   instance.advance(1);
   expect(instance.read().tick).toBe(1);
-  expect(instance.read().counts.zero).toBe(9);
+  expect(instance.read().counts.zeroVoteCount).toBe(9);
   const state = instance.read();
   expect(() => instance.setVotes(Array<number>(9))).toThrow();
   expect(() => instance.setRules({ changeVote: 1 } as never)).toThrow();
@@ -47,20 +47,20 @@ test("voting fixed point stops before tick and live rule changes can restart a t
 });
 
 test("wolf source termination and zero-energy boundary retain successful-step clocks", () => {
-  const empty = wolf.create({ initialSheep: 0, initialWolves: 0 });
+  const empty = wolf.create({ initialSheepCount: 0, initialWolfCount: 0 });
   empty.advance(100);
   expect(empty.read().tick).toBe(0);
   expect(empty.read().done).toBe(true);
   const lone = wolf.create({
-    initialSheep: 0,
-    initialWolves: 1,
+    initialSheepCount: 0,
+    initialWolfCount: 1,
     wolfGain: 0,
     wolfReproduce: 0,
   });
   expect(lone.read().agents[0]!.energy).toBe(0);
   lone.advance(100);
   expect(lone.read().tick).toBe(1);
-  expect(lone.read().counts.wolves).toBe(0);
+  expect(lone.read().counts.wolfCount).toBe(0);
   expect(lone.read().history.map((point) => point.tick)).toEqual([0, 1]);
 });
 
@@ -68,14 +68,14 @@ test("both wolf modes are deterministic per seed and observations are detached",
   for (const mode of ["sheep-wolves", "sheep-wolves-grass"] as const) {
     const first = wolf.create({
       mode,
-      initialSheep: 20,
-      initialWolves: 10,
+      initialSheepCount: 20,
+      initialWolfCount: 10,
       seed: 17,
     });
     const second = wolf.create({
       mode,
-      initialSheep: 20,
-      initialWolves: 10,
+      initialSheepCount: 20,
+      initialWolfCount: 10,
       seed: 17,
     });
     const captured = first.read();
@@ -107,11 +107,11 @@ test("voting validates and commits the same materialized input", () => {
   instance.setVotes(votes);
   expect(reads).toBe(1);
   expect(instance.read().cells[0]!.vote).toBe(0);
-  expect(instance.read().counts).toEqual({ zero: 1, one: 0 });
+  expect(instance.read().counts).toEqual({ zeroVoteCount: 1, oneVoteCount: 0 });
 });
 
 test("grass recording preserves missing samples across mode interventions", () => {
-  const instance = wolf.create({ initialSheep: 10, initialWolves: 0, sheepReproduce: 1 });
+  const instance = wolf.create({ initialSheepCount: 10, initialWolfCount: 0, sheepReproduce: 1 });
   instance.advance(2);
   expect(instance.read().history.every((point) => !point.grassAvailable)).toBe(true);
   instance.setRules({ mode: "sheep-wolves-grass" });
@@ -134,20 +134,20 @@ test("wealth equations retain cardinal tie order, fractional sharing floor and c
 });
 
 test("wealth rebirth preserves identities and population, with finite headless inequality", () => {
-  const first = wealth.create({ people: 12, minLife: 1, maxLife: 1, seed: 9 });
-  const second = wealth.create({ people: 12, minLife: 1, maxLife: 1, seed: 9 });
+  const first = wealth.create({ personCount: 12, minLife: 1, maxLife: 1, seed: 9 });
+  const second = wealth.create({ personCount: 12, minLife: 1, maxLife: 1, seed: 9 });
   const captured = first.read();
   const ids = captured.agents.map((agent) => agent.id);
   first.advance(3);
   second.advance(3);
   const state = first.read();
   expect(state.agents.map((agent) => agent.id)).toEqual(ids);
-  expect(state.peopleCount).toBe(12);
+  expect(state.personCount).toBe(12);
   expect(state.agents.map((agent) => agent.wealth)).toEqual(
     second.read().agents.map((agent) => agent.wealth),
   );
   expect(state.randomState).toEqual(second.read().randomState);
-  expect(state.classes.low + state.classes.middle + state.classes.high).toBe(
+  expect(state.classes.lowWealthPersonCount + state.classes.middleWealthPersonCount + state.classes.highWealthPersonCount).toBe(
     12,
   );
   expect(state.gini).toBeGreaterThanOrEqual(0);

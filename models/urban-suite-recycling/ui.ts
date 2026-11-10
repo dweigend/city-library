@@ -28,8 +28,8 @@ export const ui = defineUI(model, {
   },
   monitors: [
     { label: "Tick", value: (state) => state.tick },
-    { label: "Recyclers", value: (state) => state.counts.recyclers },
-    { label: "Wastefuls", value: (state) => state.counts.wastefuls },
+    { label: "Recyclers", value: (state) => state.counts.recyclerCount },
+    { label: "Wastefuls", value: (state) => state.counts.wastefulPersonCount },
     {
       label: "New (%)",
       value: (state) => state.landPercentages.new,
@@ -107,7 +107,7 @@ function populationsSeries(state: UIObservation): readonly Series[] {
       color: "#234f9b",
       points: state.history.map((point) => ({
         x: point.tick,
-        y: point.recyclers,
+        y: point.recyclerCount,
       })),
     },
     {
@@ -115,7 +115,7 @@ function populationsSeries(state: UIObservation): readonly Series[] {
       color: "#a4212b",
       points: state.history.map((point) => ({
         x: point.tick,
-        y: point.wastefuls,
+        y: point.wastefulPersonCount,
       })),
     },
   ];

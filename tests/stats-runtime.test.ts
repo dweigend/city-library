@@ -55,8 +55,8 @@ test("histogram handles final endpoint, outliers and one-pass iterables", () => 
   expect(stats.histogram(input(), { edges: [0, 1, 2] })).toEqual({
     edges: [0, 1, 2],
     counts: [2, 2],
-    underflow: 1,
-    overflow: 1,
+    underflowValueCount: 1,
+    overflowValueCount: 1,
   });
   expect(visits).toBe(6);
 });

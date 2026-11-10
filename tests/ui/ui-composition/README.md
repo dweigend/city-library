@@ -14,7 +14,7 @@ The [UI reference](../../../docs/ui/api-reference.md) defines the supported API;
 | `04-formatter-errors-and-recovery.ts` | Real Voting advancement retains a numeric scientific tick | Formatter errors reach the existing host error path; pending setup edits preserve primary error; restart recovers |
 | `05-independent-mounts-and-legacy.ts` | Independent real Voting instances and RNG, existing extracted `UISpec`/legacy live syntax | Two mounts stay independent; disposing one does not alter the other; stale button does not affect another owner |
 
-`authoring.types.ts` is compile-only. It checks incorrect scalar/union formatters, both hosts, extracted specs, invalid observation inputs, concrete observation members and compatible string/null selection. `assertions.ts` only reuses accessible real-DOM queries and assertions, plus a monitor query. It never supplies a replacement DOM, simulation or runtime introspection API.
+`authoring-types.ts` is compile-only. It checks incorrect scalar/union formatters, both hosts, extracted specs, invalid observation inputs, concrete observation members and compatible string/null selection. `assertions.ts` only reuses accessible real-DOM queries and assertions, plus a monitor query. It never supplies a replacement DOM, simulation or runtime introspection API.
 
 ## Typed formatting
 

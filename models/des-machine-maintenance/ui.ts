@@ -3,12 +3,12 @@ import { model } from "./model.ts";
 import { scene } from "./scene.ts";
 export const ui = defineUI(model, {
   setup: ["repairMinutes", "failureMinutes"],
-  live: { repairTeams: { set: (instance, value) => instance.setRepairTeams(value) } },
+  live: { repairTeamCount: { set: (instance, value) => instance.setRepairTeams(value) } },
   monitors: [
     { label: "Time (min)", value: (state) => state.time },
-    { label: "Operational machines", value: (state) => state.operational },
-    { label: "Waiting repairs", value: (state) => state.waiting },
-    { label: "Completed repairs", value: (state) => state.completedRepairs },
+    { label: "Operational machines", value: (state) => state.operationalMachineCount },
+    { label: "Waiting repairs", value: (state) => state.waitingMachineCount },
+    { label: "Completed repairs", value: (state) => state.completedRepairCount },
     { label: "Availability", value: (state) => state.availability, format: (value: number) => value.toFixed(3) },
   ],
   views: [

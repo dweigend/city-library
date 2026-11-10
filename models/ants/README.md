@@ -23,7 +23,7 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
-| `population` | `125` | integer; ≥ 0; ≤ 200 |
+| `antCount` | `125` | integer; ≥ 0; ≤ 200 |
 | `diffusionRate` | `50` | integer; ≥ 0; ≤ 99 |
 | `evaporationRate` | `10` | integer; ≥ 0; ≤ 99 |
 

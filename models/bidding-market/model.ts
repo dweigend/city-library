@@ -1,10 +1,10 @@
 /** NetLogo Bidding Market, Wilensky 2017; CC BY-NC-SA 3.0, see NOTICE.md. */
 import { Agent, Random, World, run, stats } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 type Amount = "high" | "low";
 type Distribution = "even" | "concentrated";
-type Behavior = "normal" | "desperate" | "random" | "mix of all";
+type Behavior = "normal" | "desperate" | "random" | "mixed";
 export interface Parameters {
   seed: number;
   startingMoney: number;
@@ -35,12 +35,12 @@ export const inputs: Inputs<Parameters> = {
   sellerBehavior: {
     kind: "choice",
     default: "normal",
-    options: ["normal", "desperate", "random", "mix of all"],
+    options: ["normal", "desperate", "random", "mixed"],
   },
   buyerBehavior: {
     kind: "choice",
     default: "normal",
-    options: ["normal", "desperate", "random", "mix of all"],
+    options: ["normal", "desperate", "random", "mixed"],
   },
   sellersIgnoreFullBuyers: { kind: "boolean", default: false },
   stars: { kind: "boolean", default: true },
@@ -58,24 +58,24 @@ type Seller = Agent<{
   kind: "seller";
   index: number;
   money: number;
-  itemsForSale: number;
-  startingSupply: number;
+  saleItemCount: number;
+  initialSupplyItemCount: number;
   askingPrice: number;
-  sold: number;
-  behavior: Exclude<Behavior, "mix of all">;
+  soldItemCount: number;
+  behavior: Exclude<Behavior, "mixed">;
 }>;
 type Buyer = Agent<{
   kind: "buyer";
   index: number;
   money: number;
-  wantToBuy: number;
-  startingDemand: number;
+  desiredItemCount: number;
+  initialDemandItemCount: number;
   willingToPay: number;
-  bought: number;
-  behavior: Exclude<Behavior, "mix of all">;
+  purchasedItemCount: number;
+  behavior: Exclude<Behavior, "mixed">;
 }>;
 export function create(options: Partial<Parameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed }),
     world = World.create({ x: 29, y: 29, boundary: "hard" }, { random });
   const integer = (n: number) => Math.floor(random.number() * n),
@@ -89,7 +89,7 @@ export function create(options: Partial<Parameters> = {}) {
         (a): a is Buyer => (a as Seller | Buyer).kind === "buyer",
       );
   const shuffle = <T>(a: readonly T[]) =>
-    random.sample(a, { count: a.length, algorithm: "fisher-yates-descending" });
+    random.sample(a, { sampleCount: a.length, algorithm: "fisher-yates-descending" });
   const amount = (d: Distribution, a: Amount) => {
     const n = a === "high" ? 50 : 25;
     return d === "even"
@@ -99,13 +99,13 @@ export function create(options: Partial<Parameters> = {}) {
   // source model random rounds a positive fractional bound upward before its integer draw.
   const initial = (n: number) =>
     n === 0 ? 0 : round(n / 2 + integer(Math.ceil(n / 2)));
-  const behavior = (b: Behavior): Exclude<Behavior, "mix of all"> =>
-    b === "mix of all"
+  const behavior = (b: Behavior): Exclude<Behavior, "mixed"> =>
+    b === "mixed"
       ? (["normal", "desperate", "random"] as const)[integer(3)]!
       : b;
-  let totalSales = 0,
-    salesPerTick = 0,
-    remainingSupply = 0;
+  let saleCount = 0,
+    saleCountPerTick = 0,
+    remainingSupplyItemCount = 0;
   const edges: { seller: string; buyer: string; sale: boolean }[] = [];
   for (let index = 0; index < 50; index++) {
     const a = (index * 2 * Math.PI) / 50,
@@ -116,10 +116,10 @@ export function create(options: Partial<Parameters> = {}) {
           kind: "seller" as const,
           index,
           money: 0,
-          itemsForSale: items,
-          startingSupply: items,
+          saleItemCount: items,
+          initialSupplyItemCount: items,
           askingPrice: initial(100),
-          sold: 0,
+          soldItemCount: 0,
           behavior: behavior(settings.sellerBehavior),
         },
         { position: { x: 8 * Math.sin(a), y: 8 * Math.cos(a) } },
@@ -135,10 +135,10 @@ export function create(options: Partial<Parameters> = {}) {
           kind: "buyer" as const,
           index,
           money: initial(settings.startingMoney),
-          wantToBuy: want,
-          startingDemand: want,
+          desiredItemCount: want,
+          initialDemandItemCount: want,
           willingToPay: initial(10),
-          bought: 0,
+          purchasedItemCount: 0,
           behavior: behavior(settings.buyerBehavior),
         },
         { position: { x: 13 * Math.sin(a), y: 13 * Math.cos(a) } },
@@ -148,10 +148,10 @@ export function create(options: Partial<Parameters> = {}) {
   const startingMoneyActual = buyers().reduce((n, b) => n + b.money, 0);
   function quoteSummary() {
     const asking = sellers()
-      .filter((s) => s.itemsForSale > 0)
+      .filter((s) => s.saleItemCount > 0)
       .map((s) => s.askingPrice);
     const willing = buyers()
-      .filter((b) => b.wantToBuy > 0 && b.money > 0)
+      .filter((b) => b.desiredItemCount > 0 && b.money > 0)
       .map((b) => b.willingToPay);
     const sellerSummary = stats.describe(asking);
     const buyerSummary = stats.describe(willing);
@@ -162,13 +162,13 @@ export function create(options: Partial<Parameters> = {}) {
       willingMin: buyerSummary.min ?? 0,
       willingMean: buyerSummary.mean ?? 0,
       willingMax: buyerSummary.max ?? 0,
-      itemsForSale: sellers().reduce((n, s) => n + s.itemsForSale, 0),
-      wantToBuy: buyers().reduce((n, b) => n + b.wantToBuy, 0),
+      saleItemCount: sellers().reduce((n, s) => n + s.saleItemCount, 0),
+      desiredItemCount: buyers().reduce((n, b) => n + b.desiredItemCount, 0),
     };
   }
   const history: (ReturnType<typeof quoteSummary> & {
     tick: number;
-    totalSales: number;
+    saleCount: number;
     sellerCash: number;
     averagePrice: number;
     percentMoneyTaken: number;
@@ -182,46 +182,46 @@ export function create(options: Partial<Parameters> = {}) {
     history.push({
       tick: world.tick.value,
       ...quoteSummary(),
-      totalSales,
+      saleCount,
       sellerCash: cash,
-      averagePrice: totalSales === 0 ? 0 : round(cash / totalSales),
+      averagePrice: saleCount === 0 ? 0 : round(cash / saleCount),
       percentMoneyTaken: percent(cash, startingMoneyActual) ?? 0,
       percentItemsSold:
         percent(
-          totalSales,
-          sellers().reduce((n, s) => n + s.startingSupply, 0),
+          saleCount,
+          sellers().reduce((n, s) => n + s.initialSupplyItemCount, 0),
         ) ?? 0,
       percentDemandSatisfied:
         percent(
-          totalSales,
-          buyers().reduce((n, b) => n + b.startingDemand, 0),
+          saleCount,
+          buyers().reduce((n, b) => n + b.initialDemandItemCount, 0),
         ) ?? 0,
     });
     if (history.length > 1001) history.splice(1, 1);
   }
-  const done = () =>
-    sellers().every((s) => s.itemsForSale === 0) ||
-    buyers().every((b) => b.money <= 0 || b.wantToBuy <= 0);
+  const isMarketComplete = () =>
+    sellers().every((s) => s.saleItemCount === 0) ||
+    buyers().every((b) => b.money <= 0 || b.desiredItemCount <= 0);
   function commerce(b: Buyer, s: Seller) {
     const sale =
-      s.itemsForSale > 0 &&
-      b.wantToBuy > 0 &&
+      s.saleItemCount > 0 &&
+      b.desiredItemCount > 0 &&
       s.askingPrice <= b.money &&
       s.askingPrice <= b.willingToPay;
     edges.push({ seller: s.id, buyer: b.id, sale });
     if (sale) {
-      salesPerTick++;
-      b.wantToBuy--;
+      saleCountPerTick++;
+      b.desiredItemCount--;
       b.money = round(b.money - s.askingPrice);
       if (b.money < 0.01) b.money = 0;
-      b.bought++;
-      s.itemsForSale--;
+      b.purchasedItemCount++;
+      s.saleItemCount--;
       s.money = round(s.money + s.askingPrice);
-      s.sold++;
+      s.soldItemCount++;
     }
     if (s.behavior === "random")
       s.askingPrice = changePrice(s.askingPrice, integer(11) - 5);
-    else if (sale || !settings.sellersIgnoreFullBuyers || b.wantToBuy !== 0)
+    else if (sale || !settings.sellersIgnoreFullBuyers || b.desiredItemCount !== 0)
       s.askingPrice = changePrice(
         s.askingPrice,
         s.behavior === "normal" ? (sale ? 2.5 : -2) : sale ? 0.7 : -5,
@@ -239,26 +239,26 @@ export function create(options: Partial<Parameters> = {}) {
     b.willingToPay = Math.min(b.money, changePrice(b.willingToPay, change));
   }
   function go() {
-    salesPerTick = 0;
+    saleCountPerTick = 0;
     edges.length = 0;
     const positions = buyers().map((b) => ({ x: b.x, y: b.y }));
     for (const b of shuffle(buyers()))
       b.move({ to: positions[(b.index + 49) % 50]! });
-    remainingSupply = sellers().reduce((n, s) => n + s.itemsForSale, 0);
+    remainingSupplyItemCount = sellers().reduce((n, s) => n + s.saleItemCount, 0);
     const offset = 1 + (world.tick.value % 50);
     for (let i = 0; i < 50; i++)
       commerce(buyers()[(i + offset) % 50]!, sellers()[i]!);
-    totalSales += salesPerTick;
-    if (buyers().some((b) => b.wantToBuy > 0 && b.willingToPay > b.money))
+    saleCount += saleCountPerTick;
+    if (buyers().some((b) => b.desiredItemCount > 0 && b.willingToPay > b.money))
       throw new Error(
         "Cannot have agents that want to pay more than their cash!",
       );
   }
   record();
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count && !done(); i++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount && !isMarketComplete(); i++) {
         run(world, go);
         record();
       }
@@ -266,7 +266,7 @@ export function create(options: Partial<Parameters> = {}) {
     setRules(
       value: Pick<Partial<Parameters>, "sellersIgnoreFullBuyers" | "stars">,
     ) {
-      settings = parameters(inputs, { ...settings, ...value });
+      settings = parseParameters(inputs, { ...settings, ...value });
     },
     read() {
       return Object.freeze({
@@ -274,23 +274,23 @@ export function create(options: Partial<Parameters> = {}) {
         parameters: settings,
         width: 29,
         height: 29,
-        sourceMarker: "bidding-market:source-v1",
-        done: done(),
-        totalSales,
-        salesPerTick,
-        remainingSupply,
+
+        done: isMarketComplete(),
+        saleCount,
+        saleCountPerTick: saleCountPerTick,
+        remainingSupplyItemCount: remainingSupplyItemCount,
         startingMoneyActual,
         quotes: Object.freeze(quoteSummary()),
         sellerCash: sellerCash(),
-        averagePrice: totalSales === 0 ? 0 : round(sellerCash() / totalSales),
+        averagePrice: saleCount === 0 ? 0 : round(sellerCash() / saleCount),
         percentMoneyTaken: percent(sellerCash(), startingMoneyActual),
         percentItemsSold: percent(
-          totalSales,
-          sellers().reduce((n, s) => n + s.startingSupply, 0),
+          saleCount,
+          sellers().reduce((n, s) => n + s.initialSupplyItemCount, 0),
         ),
         percentDemandSatisfied: percent(
-          totalSales,
-          buyers().reduce((n, b) => n + b.startingDemand, 0),
+          saleCount,
+          buyers().reduce((n, b) => n + b.initialDemandItemCount, 0),
         ),
         sellers: Object.freeze(
           sellers().map((s) =>
@@ -300,10 +300,10 @@ export function create(options: Partial<Parameters> = {}) {
               y: s.y,
               index: s.index,
               money: s.money,
-              itemsForSale: s.itemsForSale,
-              startingSupply: s.startingSupply,
+              saleItemCount: s.saleItemCount,
+              initialSupplyItemCount: s.initialSupplyItemCount,
               askingPrice: s.askingPrice,
-              sold: s.sold,
+              soldItemCount: s.soldItemCount,
               behavior: s.behavior,
             }),
           ),
@@ -316,10 +316,10 @@ export function create(options: Partial<Parameters> = {}) {
               y: b.y,
               index: b.index,
               money: b.money,
-              wantToBuy: b.wantToBuy,
-              startingDemand: b.startingDemand,
+              desiredItemCount: b.desiredItemCount,
+              initialDemandItemCount: b.initialDemandItemCount,
               willingToPay: b.willingToPay,
-              bought: b.bought,
+              purchasedItemCount: b.purchasedItemCount,
               behavior: b.behavior,
             }),
           ),

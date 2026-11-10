@@ -5,11 +5,11 @@ import { model, type VirusParameters } from "../../../models/virus-on-a-network/
 const spec = { views: [
   { type: "network", label: "Network", nodes: state => state.nodes, edges: state => state.edges },
   { type: "line", label: "Infected (%)", series: state => [
-    { label: "Infected", points: state.history.map(point => ({ x: point.tick, y: point.infected })) },
+    { label: "Infected", points: state.history.map(point => ({ x: point.tick, y: point.infectedNodeCount })) },
   ] },
 ] } as const satisfies UISpec<VirusParameters, ReturnType<typeof model.create>>;
 export const ui = defineUI(model, spec);
-const instance = model.create({ numberOfNodes: 10 });
+const instance = model.create({ nodeCount: 10 });
 const before = instance.read();
 const network = spec.views[0];
 const chart = spec.views[1];

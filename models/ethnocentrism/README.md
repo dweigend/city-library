@@ -24,7 +24,7 @@ const observation = simulation.read();
 | --- | --- | --- |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
 | `setup` | `"empty"` | `empty`, `full` |
-| `immigrantsPerDay` | `1` | integer; ≥ 0; ≤ 100 |
+| `immigrantCountPerDay` | `1` | integer; ≥ 0; ≤ 100 |
 | `initialPtr` | `0.12` | number; ≥ 0; ≤ 1 |
 | `costOfGiving` | `0.01` | number; ≥ 0; ≤ 1 |
 | `gainOfReceiving` | `0.03` | number; ≥ 0; ≤ 1 |

@@ -2,7 +2,7 @@ import { defineUI } from "../../ui/index.ts";
 import { model, presets } from "./model.ts";
 const binding = defineUI(model, {
   complete: (s) => Boolean(s.diagnostic),
-  setup: ["seed", "number", "personalities"],
+  setup: ["seed", "personCount", "personalities"],
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/IABM%20Textbook/chapter%202/Heroes%20and%20Cowards.nlogox",
     label: "Source attribution · Wilensky · CC BY-NC-SA 3.0",
@@ -40,8 +40,7 @@ const binding = defineUI(model, {
 });
 
 export { model };
-export const sourceMarker =
-  "selected-social-b02:heroes-and-cowards:dc605f80d321c18a7e6711f85f1c5e58ea2e4780451369b94977a49a7d87c280";
+
 
 /** Public headless definition and provenance remain inspectable in the loaded binding. */
-export const ui = { ...binding, model, sourceMarker };
+export const ui = { ...binding, model };

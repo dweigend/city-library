@@ -4,7 +4,7 @@ const graph = Graph.create<{ id: number }>();
 const nodes = Array.from({ length: 100 }, (_, id) => graph.nodes.add({ id }));
 for (let i = 0; i < nodes.length; i++) graph.edges.add({ from: nodes[i]!, to: nodes[(i + 1) % nodes.length]! });
 const summary = graph.distanceSummary();
-assert.equal(summary.reachablePairs, 9900);
+assert.equal(summary.reachablePairCount, 9900);
 assert.equal(summary.diameter, 50);
 assert.equal(summary.radius, 50);
 // Actual pinned NW original Ring reporter: 25.252525252525253.
@@ -16,7 +16,7 @@ assert.deepEqual([...all.keys()], nodes);
 assert.equal(all.get(nodes[1]!)!.get(nodes[0]!), 1);
 const isolated = graph.nodes.add({ id: 100 });
 const disconnected = graph.distanceSummary();
-assert.equal(disconnected.reachablePairs, 9900);
+assert.equal(disconnected.reachablePairCount, 9900);
 assert.equal(disconnected.radius, 0);
 assert.equal(disconnected.eccentricity.get(isolated), 0);
 assert.throws(() => graph.distanceSummary({ disconnected: "reject" }), RangeError);

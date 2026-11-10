@@ -7,7 +7,7 @@ import { assert, equal, button, restart, monitor, settle } from './assertions.ts
 export const model = {
   ...wealth,
   create(options?: Parameters<typeof wealth.create>[0]) {
-    const actual = wealth.create({ ...options, people: 2 });
+    const actual = wealth.create({ ...options, personCount: 2 });
     return {
       ...actual,
       read() {

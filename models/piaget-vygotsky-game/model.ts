@@ -1,18 +1,18 @@
 /** Source: Wilensky (2005), CC BY-NC-SA 3.0; exact source and attribution beside this file. */
 import { Agent, Grid, Random, World, run } from 'city-library';
 import type { Definition, Inputs } from '../definition.ts';
-import { parameters, stepCount } from '../parameters.ts';
-export type Strategy = 'Random' | 'Piagetian' | 'Vygotskiian' | 'P-V';
+import { parseParameters, validateStepCount } from '../parameters.ts';
+export type Strategy = 'random' | 'piagetian' | 'vygotskiian' | 'piaget-vygotsky';
 export interface DevelopmentParameters {
   seed: number;
-  numberOfPlayers: number;
-  attemptsPerRun: number;
+  playerCount: number;
+  attemptCountPerRun: number;
   strategy: Strategy;
   randomizeStrategyEachRun: boolean;
   stopAfterEachRun: boolean;
   trails: boolean;
   zpd: number;
-  vygotskiianNeighbors: number;
+  vygotskiianNeighborCount: number;
   moveError: number;
 }
 export const inputs: Inputs<DevelopmentParameters> = {
@@ -23,7 +23,7 @@ export const inputs: Inputs<DevelopmentParameters> = {
     max: 4294967295,
     integer: true,
   },
-  numberOfPlayers: {
+  playerCount: {
     kind: 'number',
     default: 30,
     min: 10,
@@ -31,17 +31,17 @@ export const inputs: Inputs<DevelopmentParameters> = {
     step: 10,
     integer: true,
   },
-  attemptsPerRun: { kind: 'number', default: 30, min: 1, max: 100, integer: true },
+  attemptCountPerRun: { kind: 'number', default: 30, min: 1, max: 100, integer: true },
   strategy: {
     kind: 'choice',
-    default: 'Vygotskiian',
-    options: ['Random', 'Piagetian', 'Vygotskiian', 'P-V'],
+    default: 'vygotskiian',
+    options: ['random', 'piagetian', 'vygotskiian', 'piaget-vygotsky'],
   },
   randomizeStrategyEachRun: { kind: 'boolean', default: true },
   stopAfterEachRun: { kind: 'boolean', default: false },
   trails: { kind: 'boolean', default: true },
   zpd: { kind: 'number', default: 15, min: 0, max: 60 },
-  vygotskiianNeighbors: {
+  vygotskiianNeighborCount: {
     kind: 'number',
     default: 4,
     min: 2,
@@ -54,14 +54,14 @@ export const inputs: Inputs<DevelopmentParameters> = {
 type Player = Agent<{
   who: number;
   color: number;
-  maxMoves: number;
-  bestMaxMoves: number;
-  movesLeft: number;
+  maxMoveCount: number;
+  bestMaxMoveCount: number;
+  remainingMoveCount: number;
   score: number;
   bestScore: number;
 }>;
 export function create(options: Partial<DevelopmentParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed }),
     world = World.create({ x: 121, y: 51, boundary: 'hard' }, { random });
   const grid = Grid.create(
@@ -70,13 +70,13 @@ export function create(options: Partial<DevelopmentParameters> = {}) {
   );
   world.add(grid);
   const players = () => world.agents as readonly Player[];
-  let attempts = 0,
+  let attemptCount = 0,
     stopped = false;
   const results: Record<Strategy, number[]> = {
-    Random: [],
-    Piagetian: [],
-    Vygotskiian: [],
-    'P-V': [],
+    random: [],
+    piagetian: [],
+    vygotskiian: [],
+    'piaget-vygotsky': [],
   };
   const history: Readonly<{
     tick: number;
@@ -84,42 +84,42 @@ export function create(options: Partial<DevelopmentParameters> = {}) {
     strategy: Strategy;
     meanScore: number;
   }>[] = [];
-  for (let who = 0; who < settings.numberOfPlayers; who++)
+  for (let who = 0; who < settings.playerCount; who++)
     world.add(
       Agent.create(
         {
           who,
           color: 5 + 10 * Math.floor(random.number() * 14) + 0.1,
-          maxMoves: 0,
-          bestMaxMoves: 0,
-          movesLeft: 0,
+          maxMoveCount: 0,
+          bestMaxMoveCount: 0,
+          remainingMoveCount: 0,
           score: 0,
           bestScore: 0,
         },
         {
           position: {
             x: 0,
-            y: Math.floor(-25.5 + (51 / settings.numberOfPlayers) * (who + 0.5) + 0.5),
+            y: Math.floor(-25.5 + (51 / settings.playerCount) * (who + 0.5) + 0.5),
           },
         },
       ),
     );
   function setupRun() {
-    attempts = 0;
+    attemptCount = 0;
     if (settings.randomizeStrategyEachRun)
-      settings = parameters(inputs, {
+      settings = parseParameters(inputs, {
         ...settings,
-        strategy: (['Random', 'Piagetian', 'Vygotskiian', 'P-V'] as const)[
+        strategy: (['random', 'piagetian', 'vygotskiian', 'piaget-vygotsky'] as const)[
           Math.floor(random.number() * 4)
         ]!,
       });
     for (const p of random.sample(players(), {
-      count: players().length,
+      sampleCount: players().length,
       algorithm: 'fisher-yates-descending',
     })) {
       p.score = 122;
       p.bestScore = 122;
-      p.maxMoves = Math.floor(random.number() * 121);
+      p.maxMoveCount = Math.floor(random.number() * 121);
     }
   }
   function setupAttempt() {
@@ -137,7 +137,7 @@ export function create(options: Partial<DevelopmentParameters> = {}) {
     history.push(
       Object.freeze({
         tick: world.tick.value,
-        attempt: attempts,
+        attempt: attemptCount,
         strategy: settings.strategy,
         meanScore: mean(),
       }),
@@ -148,22 +148,22 @@ export function create(options: Partial<DevelopmentParameters> = {}) {
   setupAttempt();
   record();
   return {
-    advance(count = 1) {
-      stepCount(count);
-      if (count === 0) return;
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      if (stepCount === 0) return;
       stopped = false;
-      for (let iteration = 0; iteration < count; iteration++) {
+      for (let iteration = 0; iteration < stepCount; iteration++) {
         run(world, () => {
-          if (attempts >= settings.attemptsPerRun) setupRun();
+          if (attemptCount >= settings.attemptCountPerRun) setupRun();
           setupAttempt();
-          for (const p of players()) p.movesLeft = legal(p.maxMoves);
-          while (players().some((p) => p.movesLeft > 0)) {
-            const moving = players().filter((p) => p.movesLeft > 0);
+          for (const p of players()) p.remainingMoveCount = legal(p.maxMoveCount);
+          while (players().some((p) => p.remainingMoveCount > 0)) {
+            const moving = players().filter((p) => p.remainingMoveCount > 0);
             for (const p of random.sample(moving, {
-              count: moving.length,
+              sampleCount: moving.length,
               algorithm: 'fisher-yates-descending',
             })) {
-              p.movesLeft--;
+              p.remainingMoveCount--;
               p.move(1);
               if (Math.floor(p.x + 0.5) >= 59) {
                 p.rotate(270 - p.heading);
@@ -172,39 +172,39 @@ export function create(options: Partial<DevelopmentParameters> = {}) {
               }
               if (settings.trails)
                 grid.fieldAt(p)!.trailColor =
-                  p.color - 5 + (10 * (p.maxMoves - p.movesLeft)) / p.maxMoves;
+                  p.color - 5 + (10 * (p.maxMoveCount - p.remainingMoveCount)) / p.maxMoveCount;
             }
           }
           for (const p of players()) p.score = Math.abs(p.x);
           for (const p of random.sample(players(), {
-            count: players().length,
+            sampleCount: players().length,
             algorithm: 'fisher-yates-descending',
           })) {
-            if (settings.strategy === 'Random') {
-              p.bestMaxMoves =
+            if (settings.strategy === 'random') {
+              p.bestMaxMoveCount =
                 Math.abs(Math.floor(p.x + 0.5)) > 0
                   ? Math.floor(random.number() * 121)
                   : 121 / 2 - 1;
-              p.maxMoves = p.bestMaxMoves;
+              p.maxMoveCount = p.bestMaxMoveCount;
               continue;
             }
             let fellow: Player | undefined;
-            if (settings.strategy === 'Vygotskiian' || settings.strategy === 'P-V') {
+            if (settings.strategy === 'vygotskiian' || settings.strategy === 'piaget-vygotsky') {
               do {
                 fellow =
                   players()[
                     p.who -
-                      settings.vygotskiianNeighbors / 2 +
-                      Math.floor(random.number() * (1 + settings.vygotskiianNeighbors))
+                      settings.vygotskiianNeighborCount / 2 +
+                      Math.floor(random.number() * (1 + settings.vygotskiianNeighborCount))
                   ];
               } while (!fellow || fellow === p);
             }
             if (
-              (settings.strategy === 'Piagetian' || settings.strategy === 'P-V') &&
+              (settings.strategy === 'piagetian' || settings.strategy === 'piaget-vygotsky') &&
               p.score < p.bestScore
             ) {
               p.bestScore = p.score;
-              p.bestMaxMoves = p.maxMoves;
+              p.bestMaxMoveCount = p.maxMoveCount;
             }
             if (fellow) {
               if (
@@ -212,10 +212,10 @@ export function create(options: Partial<DevelopmentParameters> = {}) {
                 p.bestScore - settings.zpd <= fellow.bestScore
               ) {
                 p.bestScore = fellow.bestScore;
-                p.bestMaxMoves = fellow.bestMaxMoves;
-              } else if (settings.strategy === 'Vygotskiian') {
+                p.bestMaxMoveCount = fellow.bestMaxMoveCount;
+              } else if (settings.strategy === 'vygotskiian') {
                 p.bestScore = p.score;
-                p.bestMaxMoves = p.maxMoves;
+                p.bestMaxMoveCount = p.maxMoveCount;
               }
             }
             const noise = random.number({
@@ -223,33 +223,33 @@ export function create(options: Partial<DevelopmentParameters> = {}) {
               mean: 0,
               deviation: (settings.moveError * p.bestScore) / 121,
             });
-            p.maxMoves = legal(
-              p.bestMaxMoves +
-                (settings.strategy === 'Vygotskiian'
+            p.maxMoveCount = legal(
+              p.bestMaxMoveCount +
+                (settings.strategy === 'vygotskiian'
                   ? noise
                   : p.x > 0
                     ? -Math.abs(noise)
                     : Math.abs(noise)),
             );
           }
-          attempts++;
-          if (attempts === Math.floor(settings.attemptsPerRun / 2 + 0.5))
+          attemptCount++;
+          if (attemptCount === Math.floor(settings.attemptCountPerRun / 2 + 0.5))
             results[settings.strategy].push(mean());
         });
         record();
-        if (attempts >= settings.attemptsPerRun && settings.stopAfterEachRun) {
+        if (attemptCount >= settings.attemptCountPerRun && settings.stopAfterEachRun) {
           stopped = true;
           break;
         }
       }
     },
-    setParameters(p: Partial<Omit<DevelopmentParameters, 'seed' | 'numberOfPlayers'>>) {
-      parameters(inputs, p);
+    setParameters(p: Partial<Omit<DevelopmentParameters, 'seed' | 'playerCount'>>) {
+      parseParameters(inputs, p);
       if (
-        Reflect.ownKeys(p).some((k) => ['seed', 'numberOfPlayers'].includes(String(k)))
+        Reflect.ownKeys(p).some((k) => ['seed', 'playerCount'].includes(String(k)))
       )
         throw new TypeError('Population and seed are setup-only.');
-      settings = parameters(inputs, { ...settings, ...p });
+      settings = parseParameters(inputs, { ...settings, ...p });
       stopped = false;
     },
     read() {
@@ -259,7 +259,7 @@ export function create(options: Partial<DevelopmentParameters> = {}) {
         height: 51,
         parameters: settings,
         stopped,
-        attempts,
+        attemptCount: attemptCount,
         strategy: settings.strategy,
         meanScore: mean(),
         players: Object.freeze(
@@ -271,9 +271,9 @@ export function create(options: Partial<DevelopmentParameters> = {}) {
               y: p.y,
               heading: p.heading,
               color: p.color,
-              maxMoves: p.maxMoves,
-              bestMaxMoves: p.bestMaxMoves,
-              movesLeft: p.movesLeft,
+              maxMoveCount: p.maxMoveCount,
+              bestMaxMoveCount: p.bestMaxMoveCount,
+              remainingMoveCount: p.remainingMoveCount,
               score: p.score,
               bestScore: p.bestScore,
             }),
@@ -293,7 +293,7 @@ export function create(options: Partial<DevelopmentParameters> = {}) {
             ),
         ),
         strategyAverages: Object.freeze(
-          (['Random', 'Piagetian', 'Vygotskiian', 'P-V'] as const).map((strategy) =>
+          (['random', 'piagetian', 'vygotskiian', 'piaget-vygotsky'] as const).map((strategy) =>
             Object.freeze({
               strategy,
               mean: results[strategy].length
@@ -304,10 +304,10 @@ export function create(options: Partial<DevelopmentParameters> = {}) {
           ),
         ),
         results: Object.freeze({
-          Random: Object.freeze([...results.Random]),
-          Piagetian: Object.freeze([...results.Piagetian]),
-          Vygotskiian: Object.freeze([...results.Vygotskiian]),
-          'P-V': Object.freeze([...results['P-V']]),
+          random: Object.freeze([...results.random]),
+          piagetian: Object.freeze([...results.piagetian]),
+          vygotskiian: Object.freeze([...results.vygotskiian]),
+          'piaget-vygotsky': Object.freeze([...results['piaget-vygotsky']]),
         }),
         history: Object.freeze([...history]),
         randomState: random.state,

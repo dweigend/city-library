@@ -23,7 +23,7 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
-| `people` | `250` | integer; ≥ 2; ≤ 1000 |
+| `personCount` | `250` | integer; ≥ 2; ≤ 1000 |
 | `maxVision` | `5` | integer; ≥ 1; ≤ 15 |
 | `metabolismMax` | `15` | integer; ≥ 1; ≤ 25 |
 | `bestLand` | `10` | integer; ≥ 5; ≤ 25 |
@@ -38,7 +38,7 @@ Use `advance(...)` for progress and `read()` for observations; the model defines
 
 Other instance procedures: `setRules`. See their typed arguments in [model.ts](model.ts).
 
-Model-specific `read()` fields include `peopleCount`, `totalWealth`, `classes`, `gini`, `lorenz`, `agents`, `cells`.
+Model-specific `read()` fields include `personCount`, `totalWealth`, `classes`, `gini`, `lorenz`, `agents`, `cells`.
 
 The [UI binding](ui.ts) presents `Maximum vision`, `Maximum metabolism`, `Minimum life`, `Maximum life`, `Tick`, `People`, `Total wealth`, `Gini`, `Selected`, `Resources and wealth classes` and further views or controls.
 

@@ -9,7 +9,7 @@ import {
 import { model } from "./model.ts";
 const colors = { low: "#d94838", middle: "#60ad2c", high: "#355fa5" };
 export const ui = defineUI(model, {
-  setup: ["seed", "people", "bestLand"],
+  setup: ["seed", { field: "personCount", label: "People" }, "bestLand"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/WealthDistribution",
     label: "Source attribution · Uri Wilensky · CC BY-NC-SA 3.0",
@@ -33,7 +33,7 @@ export const ui = defineUI(model, {
   },
   monitors: [
     { label: "Tick", value: (state) => state.tick },
-    { label: "People", value: (state) => state.peopleCount },
+    { label: "People", value: (state) => state.personCount },
     { label: "Total wealth", value: (state) => state.totalWealth },
     {
       label: "Gini",
@@ -65,9 +65,9 @@ export const ui = defineUI(model, {
       type: "line",
       label: "Wealth classes",
       series: (state) =>
-        (["low", "middle", "high"] as const).map((key) => ({
-          label: key,
-          color: colors[key],
+        (["lowWealthPersonCount", "middleWealthPersonCount", "highWealthPersonCount"] as const).map((key) => ({
+          label: key === "lowWealthPersonCount" ? "Low" : key === "middleWealthPersonCount" ? "Middle" : "High",
+          color: key === "lowWealthPersonCount" ? colors.low : key === "middleWealthPersonCount" ? colors.middle : colors.high,
           points: state.history.map((point) => ({
             x: point.tick,
             y: point[key],
@@ -136,9 +136,9 @@ function wealthClassSeries(state: UIObservation): readonly BarSeries[] {
       label: "People",
       color: "#355fa5",
       points: [
-        { x: "Low", y: state.classes.low },
-        { x: "Middle", y: state.classes.middle },
-        { x: "High", y: state.classes.high },
+        { x: "Low", y: state.classes.lowWealthPersonCount },
+        { x: "Middle", y: state.classes.middleWealthPersonCount },
+        { x: "High", y: state.classes.highWealthPersonCount },
       ],
     },
   ];

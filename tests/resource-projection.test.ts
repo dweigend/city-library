@@ -7,8 +7,8 @@ import { treesData } from "../models/urban-tree-watering/ui.ts";
 
 describe("detached observations for city resource visuals", () => {
   test("tree moisture colors use a fixed domain independent of display population", () => {
-    const small = createTrees({ seed: 17, trees: 2, dailyLiters: 0 });
-    const large = createTrees({ seed: 17, trees: 40, dailyLiters: 0 });
+    const small = createTrees({ seed: 17, treeCount: 2, dailyLiters: 0 });
+    const large = createTrees({ seed: 17, treeCount: 40, dailyLiters: 0 });
     const first = small.read();
     const larger = large.read();
     expect(larger.trees[0]!.moistureLiters).toBe(first.trees[0]!.moistureLiters);
@@ -20,10 +20,10 @@ describe("detached observations for city resource visuals", () => {
     expect(small.read().tick).toBe(1);
   });
   test("household display quantities retain the aggregate load and completed interval", () => {
-    const instance = createEnergy({ households: 10, shiftedShare: 1 });
+    const instance = createEnergy({ householdCount: 10, shiftedShare: 1 });
     instance.advance(13);
     const observation = instance.read();
-    expect(observation.householdDemandKw * observation.parameters.households).toBeCloseTo(observation.demandKw, 12);
+    expect(observation.householdDemandKw * observation.parameters.householdCount).toBeCloseTo(observation.demandKw, 12);
     expect(observation.householdBaseKw).toBe(0.3);
     expect(observation.householdPeakKw).toBe(1.2);
     expect(observation.demandHour).toBe(12);

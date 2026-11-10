@@ -18,7 +18,7 @@ const observation = simulation.read();
 
 | Input | Default |
 | --- | --- |
-| `households` | `12` |
+| `householdCount` | `12` |
 | `influence` | `0.5` |
 | `seed` | `1` |
 

@@ -1,7 +1,7 @@
 import type { Inputs } from "./definition.ts";
 
 /** Validate factory setup against the same canonical descriptors used by forms. */
-export function parameters<P extends object>(
+export function parseParameters<P extends object>(
   inputs: Inputs<P>,
   options: Partial<P> = {},
 ): P {
@@ -62,7 +62,7 @@ export function parameters<P extends object>(
   return Object.freeze(result) as P;
 }
 
-export function stepCount(value: number): void {
+export function validateStepCount(value: number): void {
   if (!Number.isSafeInteger(value) || value < 0 || value > 1_000_000)
     throw new RangeError("Steps must be an integer from 0 to 1,000,000.");
 }

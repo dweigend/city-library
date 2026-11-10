@@ -1,0 +1,2523 @@
+{
+  "description": "Coordinated naming completion. Prior migration receipts and frozen evidence remain unchanged; executable assertions retain their original counts. Paths map historical identities to current files.",
+  "paths": {
+    "tests/selected-biology-a.test.ts": "tests/biology-regulation-and-patterns.test.ts",
+    "tests/selected-biology-b.test.ts": "tests/biology-seasonal-and-development.test.ts",
+    "tests/selected-disease-gene-a.test.ts": "tests/disease-contact-and-cell-regulation.test.ts",
+    "tests/selected-disease-gene-b.test.ts": "tests/disease-control-and-gene-expression.test.ts",
+    "tests/selected-materials-a.test.ts": "tests/materials-lattice-and-particle-rules.test.ts",
+    "tests/selected-materials-b.test.ts": "tests/materials-thermal-and-growth-rules.test.ts",
+    "tests/des-scenes-a.test.ts": "tests/service-and-transport-scenes.test.ts",
+    "tests/des-scenes-b.test.ts": "tests/infrastructure-and-allocation-scenes.test.ts",
+    "tests/selected-social-first.test.ts": "tests/social-choice-and-cooperation.test.ts",
+    "tests/selected-social-last.test.ts": "tests/social-signals-and-development.test.ts",
+    "tests/selected-probability-first.test.ts": "tests/probability-sampling-and-trials.test.ts",
+    "tests/selected-probability-last.test.ts": "tests/probability-distributions-and-expectations.test.ts",
+    "tests/selected-evolution-first.test.ts": "tests/evolution-adaptation-and-learning.test.ts",
+    "tests/selected-evolution-last.test.ts": "tests/evolution-inheritance-and-interaction.test.ts",
+    "tests/ui/ui-live-changes/04-drafts-errors-and-legacy.ts": "tests/ui/ui-live-changes/04-drafts-errors-and-array-fields.ts",
+    "tests/ui/ui-des-scenes/03-labels-and-legacy-defaults.ts": "tests/ui/ui-des-scenes/03-labels-and-symbol-defaults.ts",
+    "tests/public-contracts/topology-variants/03-watts-strogatz-old-target-and-domains.ts": "tests/public-contracts/topology-variants/03-watts-strogatz-endpoint-rewiring-and-domains.ts",
+    "tests/ui-composition.types.ts": "tests/ui-composition-types.ts",
+    "tests/universal-live-changes.types.ts": "tests/universal-live-changes-types.ts",
+    "tests/ui/ui-authoring/authoring.types.ts": "tests/ui/ui-authoring/authoring-types.ts",
+    "tests/ui/ui-composition/authoring.types.ts": "tests/ui/ui-composition/authoring-types.ts",
+    "tests/ui/ui-collections/authoring.types.ts": "tests/ui/ui-collections/authoring-types.ts",
+    "tests/ui/ui-live-changes/authoring.types.ts": "tests/ui/ui-live-changes/authoring-types.ts",
+    "tests/public-contracts/selected-urban-remaining/05-defaults-isolation-and-preflight.ts": "tests/public-contracts/urban-structure-and-economy/05-defaults-isolation-and-preflight.ts",
+    "tests/public-contracts/selected-urban-remaining/03-sprawl-conversion-and-cached-threshold.ts": "tests/public-contracts/urban-structure-and-economy/03-sprawl-conversion-and-cached-threshold.ts",
+    "tests/public-contracts/selected-urban-remaining/04-economic-oldest-removal-and-median.ts": "tests/public-contracts/urban-structure-and-economy/04-economic-oldest-removal-and-median.ts",
+    "tests/public-contracts/selected-urban-remaining/01-structure-one-impulse-and-noise.ts": "tests/public-contracts/urban-structure-and-economy/01-structure-one-impulse-and-noise.ts",
+    "tests/public-contracts/selected-urban-remaining/02-structure-two-sticky-activation.ts": "tests/public-contracts/urban-structure-and-economy/02-structure-two-sticky-activation.ts",
+    "tests/public-contracts/selected-urban-remaining/SHA256SUMS": "tests/public-contracts/urban-structure-and-economy/SHA256SUMS",
+    "tests/public-contracts/des-models/phase-a.ts": "docs/development/verification/des-model-contract-runner.txt",
+    "docs/development/selected-urban-remaining-contracts.md": "docs/development/urban-structure-and-economy-contracts.md",
+    "docs/development/selected-probability-first-contract.md": "docs/development/probability-trials-and-distributions-contract.md",
+    "docs/development/selected-probability-last-contract.md": "docs/development/sampling-combinations-and-mandelbrot-contract.md",
+    "docs/development/selected-grid-batch-interaction-contract.md": "docs/development/grid-interaction-contract.md",
+    "scripts/public-contracts.ts": "tests/public-contracts.ts",
+    "ui/authoring.types.ts": "tests/ui-authoring-types.ts",
+    "ui/urban-authoring.types.ts": "tests/ui-urban-authoring-types.ts",
+    "ui/network-action-authoring.types.ts": "tests/ui-network-action-authoring-types.ts",
+    "src": "library",
+    "ui/components/ui/input/input.svelte": "ui/components/ui/input/Input.svelte",
+    "ui/components/ui/slider/slider.svelte": "ui/components/ui/slider/Slider.svelte",
+    "ui/components/ui/table/table-body.svelte": "ui/components/ui/table/TableBody.svelte",
+    "ui/components/ui/table/table-footer.svelte": "ui/components/ui/table/TableFooter.svelte",
+    "ui/components/ui/table/table-caption.svelte": "ui/components/ui/table/TableCaption.svelte",
+    "ui/components/ui/table/table-head.svelte": "ui/components/ui/table/TableHead.svelte",
+    "ui/components/ui/table/table-row.svelte": "ui/components/ui/table/TableRow.svelte",
+    "ui/components/ui/table/table-cell.svelte": "ui/components/ui/table/TableCell.svelte",
+    "ui/components/ui/table/table.svelte": "ui/components/ui/table/Table.svelte",
+    "ui/components/ui/table/table-header.svelte": "ui/components/ui/table/TableHeader.svelte",
+    "ui/components/ui/button/button.svelte": "ui/components/ui/button/Button.svelte",
+    "ui/components/ui/label/label.svelte": "ui/components/ui/label/Label.svelte",
+    "ui/components/ui/select/select.svelte": "ui/components/ui/select/Select.svelte",
+    "ui/components/ui/select/select-portal.svelte": "ui/components/ui/select/SelectPortal.svelte",
+    "ui/components/ui/select/select-group.svelte": "ui/components/ui/select/SelectGroup.svelte",
+    "ui/components/ui/select/select-item.svelte": "ui/components/ui/select/SelectItem.svelte",
+    "ui/components/ui/select/select-scroll-up-button.svelte": "ui/components/ui/select/SelectScrollUpButton.svelte",
+    "ui/components/ui/select/select-label.svelte": "ui/components/ui/select/SelectLabel.svelte",
+    "ui/components/ui/select/select-separator.svelte": "ui/components/ui/select/SelectSeparator.svelte",
+    "ui/components/ui/select/select-trigger.svelte": "ui/components/ui/select/SelectTrigger.svelte",
+    "ui/components/ui/select/select-scroll-down-button.svelte": "ui/components/ui/select/SelectScrollDownButton.svelte",
+    "ui/components/ui/select/select-group-heading.svelte": "ui/components/ui/select/SelectGroupHeading.svelte",
+    "ui/components/ui/select/select-content.svelte": "ui/components/ui/select/SelectContent.svelte",
+    "ui/components/ui/select/select-value.svelte": "ui/components/ui/select/SelectValue.svelte",
+    "ui/components/ui/field/field-content.svelte": "ui/components/ui/field/FieldContent.svelte",
+    "ui/components/ui/field/field-separator.svelte": "ui/components/ui/field/FieldSeparator.svelte",
+    "ui/components/ui/field/field-legend.svelte": "ui/components/ui/field/FieldLegend.svelte",
+    "ui/components/ui/field/field-set.svelte": "ui/components/ui/field/FieldSet.svelte",
+    "ui/components/ui/field/field-error.svelte": "ui/components/ui/field/FieldError.svelte",
+    "ui/components/ui/field/field-title.svelte": "ui/components/ui/field/FieldTitle.svelte",
+    "ui/components/ui/field/field.svelte": "ui/components/ui/field/Field.svelte",
+    "ui/components/ui/field/field-label.svelte": "ui/components/ui/field/FieldLabel.svelte",
+    "ui/components/ui/field/field-group.svelte": "ui/components/ui/field/FieldGroup.svelte",
+    "ui/components/ui/field/field-description.svelte": "ui/components/ui/field/FieldDescription.svelte",
+    "ui/components/ui/separator/separator.svelte": "ui/components/ui/separator/Separator.svelte",
+    "ui/components/ui/checkbox/checkbox.svelte": "ui/components/ui/checkbox/Checkbox.svelte",
+    "ui/components/ui/collapsible/collapsible.svelte": "ui/components/ui/collapsible/Collapsible.svelte",
+    "ui/components/ui/collapsible/collapsible-trigger.svelte": "ui/components/ui/collapsible/CollapsibleTrigger.svelte",
+    "ui/components/ui/collapsible/collapsible-content.svelte": "ui/components/ui/collapsible/CollapsibleContent.svelte"
+  },
+  "names": {
+    "library": {
+      "graph/algorithms/analysis.ts": {
+        "maxIterations": "maxIterationCount",
+        "defaultMaxIterations": "defaultMaxIterationCount",
+        "\"pageRank\"": "\"page-rank\""
+      },
+      "grid/topology/relax.ts": {
+        "iterations": "iterationCount",
+        "maximumIterations": "maximumIterationCount",
+        "\"squareTarget\"": "\"square-target\""
+      },
+      "studies/types.ts": {
+        "completedSteps": "completedStepCount",
+        "steps": "stepCount",
+        "maxTotalSteps": "maxTotalStepCount",
+        "maxTotalSamples": "maxTotalSampleCount",
+        "sampleSd": "sampleStandardDeviation",
+        "requested": "requestedRunCount",
+        "completed": "completedRunCount",
+        "stopped": "stoppedRunCount",
+        "failed": "failedRunCount",
+        "skipped": "skippedRunCount",
+        "valid": "validRunCount",
+        "missing": "missingRunCount",
+        "every": "sampleIntervalSteps"
+      },
+      "studies/run.ts": {
+        "completedSteps": "completedStepCount",
+        "steps": "stepCount",
+        "maxTotalSteps": "maxTotalStepCount",
+        "maxTotalSamples": "maxTotalSampleCount",
+        "every": "sampleIntervalSteps"
+      },
+      "studies/summary.ts": {
+        "sampleSd": "sampleStandardDeviation"
+      },
+      "stats/describe.ts": {
+        "count": "valueCount"
+      },
+      "random/sampling.ts": {
+        "count": "sampleCount"
+      },
+      "agenda/agenda.ts": {
+        "maxEvents": "maxEventCount"
+      },
+      "studies/design.ts": {
+        "maxScenarios": "maxScenarioCount",
+        "maxRuns": "maxRunCount"
+      },
+      "grid/topology/index.ts": {
+        "columns": "columnCount",
+        "rows": "rowCount"
+      },
+      "grid/topology/layout.ts": {
+        "columns": "columnCount",
+        "rows": "rowCount"
+      },
+      "grid/topology/quadrilaterals.ts": {
+        "rings": "ringCount",
+        "maximumRings": "maximumRingCount",
+        "relaxationIterations": "relaxationIterationCount"
+      },
+      "graph/generators/options.ts": {
+        "neighbors": "neighborCount",
+        "neighborsPerSide": "neighborCountPerSide"
+      },
+      "graph/generators/planning.ts": {
+        "neighbors": "neighborCount"
+      },
+      "graph/generators/topology-options.ts": {
+        "neighborsPerSide": "neighborCountPerSide"
+      },
+      "graph/generators/topology-planning.ts": {
+        "neighborsPerSide": "neighborCountPerSide"
+      },
+      "graph/algorithms/distances.ts": {
+        "reachablePairs": "reachablePairCount"
+      },
+      "stats/histogram.ts": {
+        "underflow": "underflowValueCount",
+        "overflow": "overflowValueCount"
+      },
+      "graph/graph.ts": {
+        "connected": "isConnected"
+      },
+      "random/random.ts": {
+        "DesDistributionOptions": "ScalarDistributionOptions",
+        "./distributions/des.ts": "./distributions/scalar-distributions.ts"
+      }
+    },
+    "models": {
+      "identifiers": {
+        "ants": {
+          "population": "antCount"
+        },
+        "slime": {
+          "population": "agentCount"
+        },
+        "flocking": {
+          "population": "birdCount"
+        },
+        "rabbits-grass-weeds": {
+          "number": "rabbitCount"
+        },
+        "party": {
+          "number": "personCount"
+        },
+        "minority-game": {
+          "number": "playerCount"
+        },
+        "termites": {
+          "number": "termiteCount"
+        },
+        "heroes-and-cowards": {
+          "number": "personCount"
+        },
+        "fireflies": {
+          "number": "fireflyCount"
+        },
+        "gendrift-t-interact": {
+          "number": "agentCount"
+        },
+        "three-doors": {
+          "number": "contestantCount"
+        },
+        "binomial-rabbits": {
+          "number": "rabbitCount"
+        },
+        "virus": {
+          "numberPeople": "personCount"
+        },
+        "traffic-2-lanes": {
+          "numberOfCars": "carCount"
+        },
+        "traffic-basic": {
+          "numberOfCars": "carCount"
+        },
+        "pagerank": {
+          "numberOfSurfers": "surferCount"
+        },
+        "mammoths": {
+          "numberOfMammoths": "mammothCount",
+          "numberOfHumans": "humanCount"
+        },
+        "robby-the-robot": {
+          "numberOfGenerations": "generationCount"
+        },
+        "galton-box": {
+          "numberOfRows": "rowCount",
+          "numberOfBalls": "ballCount"
+        },
+        "el-farol": {
+          "numberStrategies": "strategyCount"
+        },
+        "virus-on-a-network": {
+          "numberOfNodes": "nodeCount"
+        },
+        "hotellings-law": {
+          "numberOfStores": "storeCount"
+        },
+        "mendelian-inheritance": {
+          "numberOfOffspring": "offspringCount"
+        },
+        "robotic-factory": {
+          "numberOfRobots": "robotCount"
+        },
+        "autumn": {
+          "numberOfLeaves": "leafCount"
+        },
+        "signaling-game": {
+          "numberOfStates": "stateCount",
+          "numberOfSignals": "signalCount"
+        },
+        "piaget-vygotsky-game": {
+          "numberOfPlayers": "playerCount"
+        },
+        "genevo-1-genetic-switch": {
+          "lacINumber": "lacICount",
+          "rnapNumber": "rnapCount"
+        },
+        "turing-machine-2d": {
+          "heads": "headCount"
+        },
+        "epidem-basic": {
+          "initialPeople": "initialPersonCount"
+        },
+        "epidem-travel-and-control": {
+          "initialPeople": "initialPersonCount",
+          "initialAmbulance": "initialAmbulanceCount"
+        },
+        "hiv": {
+          "initialPeople": "initialPersonCount"
+        },
+        "crispr-ecosystem": {
+          "initialBacteria": "initialBacteriumCount",
+          "initialViruses": "initialVirusCount"
+        },
+        "chloroplasts-and-food": {
+          "initialChloroplasts": "initialChloroplastCount",
+          "initialCarbonDioxide": "initialCarbonDioxideCount"
+        },
+        "wolf-sheep-predation": {
+          "initialSheep": "initialSheepCount",
+          "initialWolves": "initialWolfCount"
+        },
+        "vision-evolution": {
+          "initialNumberFish": "initialFishCount",
+          "initialNumberFood": "initialFoodCount"
+        },
+        "urban-suite-pollution": {
+          "initialPopulation": "initialPersonCount"
+        },
+        "des-elevator": {
+          "initialPassengers": "initialPassengerCount"
+        },
+        "interstitial-diffusion": {
+          "initialColumnsPopulated": "initialPopulatedColumnCount"
+        },
+        "repressilator-1d": {
+          "initialTF0s": "initialTf0Count",
+          "initialTF1s": "initialTf1Count",
+          "initialTF2s": "initialTf2Count"
+        },
+        "fruit-wars": {
+          "initialFruitBushes": "initialFruitBushCount",
+          "initialForagers": "initialForagerCount"
+        },
+        "daisyworld": {
+          "startBlacks": "initialBlackDaisyCount",
+          "startWhites": "initialWhiteDaisyCount"
+        },
+        "urban-suite-tijuana-bordertowns": {
+          "updateDisplayImpl": "updateDisplayState"
+        }
+      },
+      "stringValues": {
+        "pagerank": {
+          "Example 1": "example-1",
+          "Example 2": "example-2",
+          "Preferential Attachment": "preferential-attachment"
+        },
+        "particle-swarm-optimization": {
+          "None": "none",
+          "Best found": "best-found",
+          "True best": "true-best",
+          "Tails": "tails",
+          "Traces": "traces"
+        },
+        "bidding-market": {
+          "mix of all": "mixed"
+        },
+        "cyclic-ca": {
+          "Moore": "moore",
+          "von Neumann": "von-neumann",
+          "3-color bootstrap": "3-color-bootstrap",
+          "black and white": "black-and-white",
+          "diamond spirals": "diamond-spirals",
+          "cyclic spirals": "cyclic-spirals",
+          "fossil debris": "fossil-debris",
+          "percolation mix": "percolation-mix",
+          "weak spirals": "weak-spirals",
+          "Greenberg\u2013Hastings": "greenberg-hastings",
+          "lava lamp": "lava-lamp",
+          "squarish spirals": "squarish-spirals",
+          "turbulent phase": "turbulent-phase"
+        },
+        "urban-suite-cells": {
+          "> 0": "positive",
+          "= 1": "exactly-one",
+          "<= 2": "at-most-two"
+        },
+        "rebellion": {
+          "2D": "2d",
+          "3D": "3d"
+        },
+        "autumn": {
+          "in roots": "in-roots",
+          "in trunk": "in-trunk",
+          "in leaves": "in-leaves"
+        },
+        "sunflower-emergent": {
+          "inverse distance": "inverse-distance"
+        },
+        "daisyworld": {
+          "maintain current luminosity": "maintain-current-luminosity",
+          "low solar luminosity": "low-solar-luminosity",
+          "our solar luminosity": "our-solar-luminosity",
+          "high solar luminosity": "high-solar-luminosity",
+          "add black": "add-black",
+          "add white": "add-white"
+        },
+        "fruit-wars": {
+          "None": "none",
+          "Reactive Aggression": "reactive-aggression",
+          "Proactive Aggression": "proactive-aggression",
+          "Strength": "strength",
+          "Speed": "speed",
+          "Intelligence": "intelligence"
+        },
+        "piaget-vygotsky-game": {
+          "Random": "random",
+          "Piagetian": "piagetian",
+          "Vygotskiian": "vygotskiian",
+          "P-V": "piaget-vygotsky"
+        },
+        "turing-machine-2d": {
+          "--": "straight",
+          "Right": "right",
+          "Backwards": "backwards",
+          "Left": "left"
+        },
+        "braess-paradox": {
+          "Best Known /w Random Deviation": "best-known-with-random-deviation",
+          "Empirical Analytical": "empirical-analytical",
+          "Probabilistic Greedy": "probabilistic-greedy"
+        },
+        "dna-protein-synthesis": {
+          "from user-created-code": "user-created-code",
+          "no genes (short strand)": "no-genes-short-strand",
+          "no genes (long strand)": "no-genes-long-strand",
+          "1 short gene": "one-short-gene",
+          "1 long gene": "one-long-gene",
+          "2 sequential genes": "two-sequential-genes",
+          "2 nested genes": "two-nested-genes",
+          "3 sequential genes": "three-sequential-genes",
+          "random (short strand)": "random-short-strand",
+          "random (long strand)": "random-long-strand"
+        },
+        "dining-philosophers": {
+          "THINKING": "thinking",
+          "HUNGRY": "hungry",
+          "EATING": "eating"
+        },
+        "baldwin-effect": {
+          "nonLearner": "non-learner",
+          "randomLearner": "random-learner",
+          "smartLearner": "smart-learner"
+        },
+        "bacterial-infection": {
+          "no, skip all dosing": "skip-all-doses",
+          "yes, skip no doses": "take-all-doses",
+          "yes, but skip dose 2": "skip-dose-2",
+          "yes, but skip dose 3": "skip-dose-3",
+          "yes, but skip dose 4": "skip-dose-4"
+        },
+        "urban-suite-tijuana-bordertowns": {
+          "land value gradient": "land-value-gradient",
+          "units with no water": "units-with-no-water",
+          "units with no electricity": "units-with-no-electricity"
+        }
+      },
+      "parameterKeys": {
+        "workplace-household-membership": {
+          "residents": "residentCount"
+        },
+        "zoning-scenario-comparison": {
+          "parcels": "parcelCount"
+        },
+        "limited-order-book": {
+          "honestTraders": "honestTraderCount",
+          "cunningTraders": "cunningTraderCount"
+        },
+        "des-civic-office": {
+          "residents": "residentCount",
+          "clerks": "clerkCount"
+        },
+        "random-combinations-and-permutations": {
+          "choices": "choiceCount"
+        },
+        "crispr-bacterium": {
+          "maxVirusTypes": "maxVirusTypeCount"
+        },
+        "crispr-ecosystem": {
+          "maxVirusTypes": "maxVirusTypeCount"
+        },
+        "gendrift-t-interact": {
+          "colors": "colorCount"
+        },
+        "des-emergency-dispatch": {
+          "responders": "responderCount"
+        },
+        "des-goods-buffer": {
+          "lots": "lotCount"
+        },
+        "des-parcel-logistics": {
+          "parcels": "parcelCount"
+        },
+        "des-elevator": {
+          "floors": "floorCount",
+          "elevators": "elevatorCount",
+          "maxEventsPerStep": "maxEventCountPerStep"
+        },
+        "des-bus-interchange": {
+          "buses": "busCount",
+          "berths": "berthCount"
+        },
+        "urban-suite-economic-disparity": {
+          "numberOfTests": "testCount",
+          "maxJobs": "maxJobCount"
+        },
+        "consumer-choice": {
+          "avgConnections": "meanConnectionCount"
+        },
+        "pedestrian-crossing-phases": {
+          "pedestrians": "pedestrianCount"
+        },
+        "residential-occupancy": {
+          "applicants": "applicantCount",
+          "slots": "slotCount"
+        },
+        "urban-suite-sprawl-effect": {
+          "population": "personCount"
+        },
+        "urban-suite-pollution": {
+          "powerPlants": "powerPlantCount"
+        },
+        "household-energy-demand": {
+          "households": "householdCount"
+        },
+        "muscle-development": {
+          "slowTwitchFibers": "slowTwitchFiberPercent"
+        }
+      },
+      "scalarProperties": {
+        "party": {
+          "boringGroups": "singleSexGroupCount",
+          "count": "personCount",
+          "male": "maleCount",
+          "female": "femaleCount"
+        },
+        "pagerank": {
+          "visits": "visitCount"
+        },
+        "termites": {
+          "cycles": "cycleCount"
+        },
+        "three-doors": {
+          "wins": "winCount",
+          "games": "gameCount"
+        },
+        "genevo-1-genetic-switch": {
+          "divisionNumber": "divisionCount",
+          "divisions": "divisionCount",
+          "lacZ": "lacZCount",
+          "lacY": "lacYCount"
+        },
+        "baldwin-effect": {
+          "nonLearners": "nonLearnerCount",
+          "randomLearners": "randomLearnerCount",
+          "smartLearners": "smartLearnerCount"
+        },
+        "sex-ratio-equilibrium": {
+          "males": "maleCount",
+          "females": "femaleCount",
+          "pregnant": "pregnantFemaleCount",
+          "nonPregnant": "nonPregnantFemaleCount"
+        },
+        "bank-reserves": {
+          "people": "personCount",
+          "rich": "richPersonCount",
+          "poor": "poorPersonCount",
+          "middleClass": "middleClassPersonCount"
+        },
+        "cash-flow": {
+          "people": "personCount",
+          "rich": "richPersonCount",
+          "poor": "poorPersonCount",
+          "middleClass": "middleClassPersonCount"
+        },
+        "fire": {
+          "trees": "treeCount",
+          "fires": "fireCount",
+          "embers": "emberCount",
+          "initialTrees": "initialTreeCount",
+          "burnedTrees": "burnedTreeCount"
+        },
+        "urban-suite-recycling": {
+          "recyclers": "recyclerCount",
+          "wastefuls": "wastefulPersonCount",
+          "recycler": "recyclerCount",
+          "wasteful": "wastefulPersonCount"
+        },
+        "disease-solo": {
+          "sick": "sickPersonCount"
+        },
+        "zoning-scenario-comparison": {
+          "slots": "slotCount",
+          "evaluated": "evaluatedParcelCount",
+          "parcels": "parcelCount",
+          "replications": "replicationCount",
+          "plannedRuns": "plannedRunCount",
+          "completedRuns": "completedRunCount"
+        },
+        "virus": {
+          "population": "personCount",
+          "infected": "infectedPersonCount",
+          "immune": "immunePersonCount"
+        },
+        "simulated-annealing": {
+          "attempts": "attemptCount",
+          "accepted": "acceptedSwapCount"
+        },
+        "chloroplasts-and-food": {
+          "carbonDioxide": "carbonDioxideCount",
+          "oxygen": "oxygenCount",
+          "glucoseProduced": "producedGlucoseCount"
+        },
+        "wealth-distribution": {
+          "people": "personCount",
+          "low": "lowWealthPersonCount",
+          "middle": "middleWealthPersonCount",
+          "high": "highWealthPersonCount",
+          "peopleCount": "personCount"
+        },
+        "prisoners-dilemma-basic": {
+          "rounds": "roundCount"
+        },
+        "crispr-bacterium": {
+          "guides": "guideCount",
+          "dimers": "dimerCount",
+          "viruses": "virusCount",
+          "spacers": "spacerCount",
+          "cas9": "cas9Count"
+        },
+        "wolf-sheep-predation": {
+          "sheep": "sheepCount",
+          "wolves": "wolfCount",
+          "grass": "grassFieldCount"
+        },
+        "bacterial-infection": {
+          "init3PoresA": "initialThreePoreBacteriumCountA",
+          "init4PoresA": "initialFourPoreBacteriumCountA",
+          "init5PoresA": "initialFivePoreBacteriumCountA",
+          "init6PoresA": "initialSixPoreBacteriumCountA",
+          "init3PoresB": "initialThreePoreBacteriumCountB",
+          "init4PoresB": "initialFourPoreBacteriumCountB",
+          "init5PoresB": "initialFivePoreBacteriumCountB",
+          "init6PoresB": "initialSixPoreBacteriumCountB",
+          "dosesGivenToA": "doseCountA",
+          "dosesGivenToB": "doseCountB"
+        },
+        "simple-birth-rates": {
+          "red": "redPersonCount",
+          "blue": "bluePersonCount",
+          "total": "personCount"
+        },
+        "language-change": {
+          "grammar0": "grammar0SpeakerCount",
+          "grammar1": "grammar1SpeakerCount"
+        },
+        "rabbits-grass-weeds": {
+          "rabbits": "rabbitCount",
+          "grass": "grassFieldCount",
+          "weeds": "weedFieldCount"
+        },
+        "diffusion-on-a-directed-network": {
+          "nodes": "nodeCount",
+          "candidateEdges": "candidateEdgeCount",
+          "activeEdges": "activeEdgeCount"
+        },
+        "virus-on-a-network": {
+          "susceptible": "susceptibleNodeCount",
+          "infected": "infectedNodeCount",
+          "resistant": "resistantNodeCount"
+        },
+        "epidem-basic": {
+          "nbInfected": "newlyInfectedPersonCount",
+          "nbRecovered": "newlyRecoveredPersonCount",
+          "infected": "infectedPersonCount",
+          "cured": "recoveredPersonCount",
+          "susceptible": "susceptiblePersonCount",
+          "nbInfectedPrevious": "previousNewlyInfectedPersonCount"
+        },
+        "epidem-travel-and-control": {
+          "nbInfected": "newlyInfectedPersonCount",
+          "nbRecovered": "newlyRecoveredPersonCount",
+          "infected": "infectedPersonCount",
+          "cured": "recoveredPersonCount",
+          "inoculated": "inoculatedPersonCount",
+          "isolated": "isolatedPersonCount",
+          "hospitalized": "hospitalizedPersonCount",
+          "nbInfectedPrevious": "previousNewlyInfectedPersonCount"
+        },
+        "urban-suite-pollution": {
+          "people": "personCount",
+          "trees": "treeCount",
+          "powerPlants": "powerPlantCount"
+        },
+        "fireflies": {
+          "flashesToReset": "flashCountToReset",
+          "flashing": "flashingFireflyCount"
+        },
+        "mendelian-inheritance": {
+          "numberOfDarkOffspring": "darkOffspringCount",
+          "numberOfLightOffspring": "lightOffspringCount",
+          "previousNumberOfDarkOffspring": "previousDarkOffspringCount",
+          "previousNumberOfLightOffspring": "previousLightOffspringCount"
+        },
+        "brians-brain": {
+          "firing": "firingFieldCount",
+          "refractory": "refractoryFieldCount",
+          "off": "inactiveFieldCount"
+        },
+        "birthdays": {
+          "successes": "successCount"
+        },
+        "life": {
+          "living": "livingFieldCount",
+          "dead": "deadFieldCount"
+        },
+        "segregation": {
+          "similarNearby": "similarNeighborCount",
+          "otherNearby": "otherNeighborCount",
+          "totalNearby": "neighborCount",
+          "population": "personCount",
+          "unhappy": "unhappyPersonCount",
+          "blue": "bluePersonCount",
+          "orange": "orangePersonCount"
+        },
+        "hiv": {
+          "infected": "infectedPersonCount",
+          "known": "diagnosedPersonCount",
+          "coupled": "coupledPersonCount"
+        },
+        "dining-philosophers": {
+          "totalEaten": "mealCount",
+          "thinking": "thinkingPhilosopherCount",
+          "hungry": "hungryPhilosopherCount",
+          "eating": "eatingPhilosopherCount"
+        },
+        "ethnocentrism": {
+          "immigrantsPerDay": "immigrantCountPerDay",
+          "population": "personCount"
+        },
+        "stormwater-retention": {
+          "capacityCrossings": "capacityCrossingCount"
+        },
+        "solar-battery-microgrid": {
+          "reserveCrossings": "reserveCrossingCount"
+        },
+        "urban-suite-economic-disparity": {
+          "poorPerStep": "poorPersonCountPerStep",
+          "richPerStep": "richPersonCountPerStep",
+          "rich": "richPersonCount",
+          "poor": "poorPersonCount",
+          "jobs": "jobCount",
+          "minPoor": "minPoorPersonCount",
+          "maxPoor": "maxPoorPersonCount",
+          "minRich": "minRichPersonCount",
+          "maxRich": "maxRichPersonCount"
+        },
+        "urban-suite-sprawl-effect": {
+          "seekers": "seekerCount",
+          "houses": "houseCount"
+        },
+        "taxi-cabs": {
+          "waitingPassengers": "waitingPassengerCount",
+          "occupiedCabs": "occupiedCabCount"
+        },
+        "des-machine-maintenance": {
+          "repairTeams": "repairTeamCount",
+          "repairs": "repairCount",
+          "completedRepairs": "completedRepairCount",
+          "operational": "operationalMachineCount",
+          "busy": "busyRepairTeamCount",
+          "waiting": "waitingMachineCount"
+        },
+        "dla": {
+          "maxParticles": "maxParticleCount",
+          "occupied": "occupiedFieldCount",
+          "walkers": "walkerCount"
+        },
+        "anisogamy": {
+          "maxAdults": "maxAdultCount",
+          "adults": "adultCount",
+          "gametes": "gameteCount",
+          "zygotes": "zygoteCount",
+          "blueAdults": "blueAdultCount",
+          "redAdults": "redAdultCount",
+          "blueGametes": "blueGameteCount",
+          "redGametes": "redGameteCount"
+        },
+        "traffic-intersection": {
+          "waiting": "waitingCarCount",
+          "waitingNorth": "waitingNorthCarCount",
+          "waitingEast": "waitingEastCarCount",
+          "accidents": "accidentCount"
+        },
+        "voting": {
+          "zero": "zeroVoteCount",
+          "one": "oneVoteCount"
+        },
+        "daisyworld": {
+          "black": "blackDaisyCount",
+          "white": "whiteDaisyCount"
+        },
+        "mimicry": {
+          "monarchs": "monarchCount",
+          "viceroys": "viceroyCount"
+        },
+        "urban-tree-watering": {
+          "trees": "treeCount"
+        },
+        "household-recycling-behavior": {
+          "households": "householdCount",
+          "adopters": "adopterCount"
+        },
+        "expected-value": {
+          "runs": "runCount"
+        },
+        "dna-protein-synthesis": {
+          "originalProteins": "originalProteinCount",
+          "duplicateProteins": "duplicateProteinCount"
+        },
+        "galton-box": {
+          "balls": "ballCount"
+        },
+        "mammoths": {
+          "mammoths": "mammothCount",
+          "humans": "humanCount",
+          "mammothsKilledByHumans": "humanKilledMammothCount",
+          "mammothsKilledByClimateChange": "climateKilledMammothCount"
+        },
+        "urban-suite-awareness": {
+          "people": "personCount",
+          "centers": "centerCount",
+          "activists": "activistCount",
+          "wellInformed": "wellInformedPersonCount",
+          "aware": "awarePersonCount",
+          "unaware": "unawarePersonCount"
+        },
+        "piaget-vygotsky-game": {
+          "attemptsPerRun": "attemptCountPerRun",
+          "vygotskiianNeighbors": "vygotskiianNeighborCount",
+          "maxMoves": "maxMoveCount",
+          "bestMaxMoves": "bestMaxMoveCount",
+          "movesLeft": "remainingMoveCount",
+          "attempts": "attemptCount"
+        },
+        "autumn": {
+          "leaves": "leafCount",
+          "deadLeaves": "deadLeafCount"
+        },
+        "solid-diffusion": {
+          "greens": "greenParticleCount",
+          "blues": "blueParticleCount",
+          "vacancies": "vacancyCount"
+        },
+        "urban-suite-path-dependence": {
+          "initialFirms": "initialFirmCount",
+          "attempts": "attemptCount",
+          "firms": "firmCount",
+          "settled": "settledFirmCount",
+          "searching": "searchingFirmCount",
+          "largestPopulation": "largestFirmCount",
+          "occupants": "occupantCount",
+          "maximumOccupants": "maxOccupantCount"
+        },
+        "crispr-ecosystem": {
+          "bacteria": "bacteriumCount",
+          "viruses": "virusCount"
+        },
+        "random-combinations-and-permutations": {
+          "countSteps": "stepCount",
+          "countCombiSuccesses": "combinationSuccessCount",
+          "countPermisSuccesses": "permutationSuccessCount",
+          "attempts": "attemptCount"
+        },
+        "mandelbrot": {
+          "maxIterations": "maxIterationCount",
+          "computedFields": "computedFieldCount",
+          "iterations": "iterationCount"
+        },
+        "partition-permutation-distribution": {
+          "successes": "successCount",
+          "seriesTrials": "seriesTrialCount"
+        },
+        "neighborhood-heat-intervention": {
+          "shadedFields": "shadedFieldCount"
+        },
+        "traffic-2-lanes": {
+          "lane1": "lane1CarCount",
+          "lane2": "lane2CarCount"
+        },
+        "des-emergency-dispatch": {
+          "busy": "busyResponderCount",
+          "waiting": "waitingCallCount",
+          "completed": "completedCallCount"
+        },
+        "des-goods-buffer": {
+          "firstCollection": "firstCollectionTime",
+          "produced": "producedLotCount",
+          "collected": "collectedLotCount",
+          "stored": "storedLotCount",
+          "blocked": "blockedLotCount"
+        },
+        "des-civic-office": {
+          "waiting": "waitingResidentCount",
+          "busy": "busyClerkCount",
+          "totalWait": "totalWaitMinutes",
+          "completed": "completedResidentCount"
+        },
+        "des-elevator": {
+          "waiting": "waitingPassengerCount",
+          "riding": "ridingPassengerCount",
+          "generated": "generatedPassengerCount",
+          "pendingEvents": "pendingEventCount",
+          "meanWait": "meanWaitSeconds",
+          "meanRide": "meanRideSeconds",
+          "meanSystem": "meanSystemSeconds",
+          "created": "createdPassengerCount",
+          "arrived": "arrivedPassengerCount",
+          "travelTime": "travelTimeSeconds",
+          "doorTime": "doorTimeSeconds",
+          "transferTime": "transferTimeSeconds",
+          "arrivalInterval": "arrivalIntervalSeconds",
+          "arrivalLimit": "arrivalCountLimit"
+        },
+        "des-parcel-logistics": {
+          "queued": "queuedParcelCount",
+          "blocked": "blockedParcelCount",
+          "vanBusy": "busyVanCount",
+          "delivered": "deliveredParcelCount"
+        },
+        "des-bike-redistribution": {
+          "targetBikes": "targetBikeCount",
+          "totalBikes": "totalBikeCount",
+          "bikes": "bikeCount",
+          "delivered": "deliveredBikeCount",
+          "inTransit": "inTransitBikeCount"
+        },
+        "des-waste-collection": {
+          "remaining": "remainingWasteUnitCount",
+          "carried": "carriedWasteUnitCount",
+          "delivered": "deliveredWasteUnitCount",
+          "depotBusy": "busyDepotCount"
+        },
+        "des-ev-charging": {
+          "chargers": "chargerCount",
+          "vehicles": "vehicleCount",
+          "active": "activeVehicleCount",
+          "waiting": "waitingVehicleCount",
+          "completed": "completedVehicleCount"
+        },
+        "des-bus-interchange": {
+          "waiting": "waitingBusCount",
+          "occupied": "occupiedBerthCount",
+          "departed": "departedBusCount"
+        },
+        "pedestrian-crossing-phases": {
+          "waiting": "waitingPedestrianCount",
+          "crossing": "crossingPedestrianCount",
+          "arrived": "arrivedPedestrianCount"
+        },
+        "residential-occupancy": {
+          "occupied": "occupiedSlotCount",
+          "available": "availableSlotCount",
+          "waiting": "waitingHouseholdCount"
+        },
+        "urban-suite-tijuana-bordertowns": {
+          "maquiladoras": "maquiladoraCount",
+          "serviceCenters": "serviceCenterCount",
+          "employmentCenters": "employmentCenterCount",
+          "firstBuilders": "firstBuilderCount",
+          "secondBuilders": "secondBuilderCount",
+          "thirdBuilders": "thirdBuilderCount",
+          "migrants": "migrantCount",
+          "rings": "ringCount",
+          "nodes": "nodeCount",
+          "completed": "completedStepCount"
+        },
+        "workplace-household-membership": {
+          "memberships": "membershipCount",
+          "householdA": "householdAMemberCount",
+          "workplaceA": "workplaceAMemberCount"
+        },
+        "robotic-factory": {
+          "agentsPresent": "presentAgentCount",
+          "idle": "idleRobotCount",
+          "orders": "orderCount",
+          "deluxe": "deluxeOrderCount",
+          "standard": "standardOrderCount",
+          "cutters": "cutterCount",
+          "stitchers": "stitcherCount",
+          "finishers": "finisherCount",
+          "newSheets": "newSheetCount",
+          "productsReady": "readyProductCount"
+        },
+        "shepherds": {
+          "sheepNearby": "nearbySheepCount",
+          "sheeplessNeighborhoods": "sheeplessNeighborhoodCount"
+        },
+        "bidding-market": {
+          "itemsForSale": "saleItemCount",
+          "startingSupply": "initialSupplyItemCount",
+          "wantToBuy": "desiredItemCount",
+          "startingDemand": "initialDemandItemCount",
+          "sold": "soldItemCount",
+          "bought": "purchasedItemCount",
+          "totalSales": "saleCount",
+          "salesPerTick": "saleCountPerTick",
+          "remainingSupply": "remainingSupplyItemCount"
+        },
+        "shared-machine": {
+          "quantity": "unitCount",
+          "consumed": "consumedUnitCount",
+          "completed": "completedJobCount",
+          "inventory": "inventoryUnitCount",
+          "available": "availableUnitCount"
+        },
+        "scarce-resource": {
+          "quantity": "unitCount",
+          "received": "receivedUnitCount",
+          "inventory": "inventoryUnitCount",
+          "alice": "aliceReceivedUnitCount",
+          "bob": "bobReceivedUnitCount",
+          "unmet": "unmetUnitCount"
+        },
+        "percolation": {
+          "front": "frontFieldCount"
+        },
+        "binomial-rabbits": {
+          "hops": "hopCount"
+        },
+        "des-water-allocation": {
+          "supplyUnits": "supplyUnitCount"
+        },
+        "braess-paradox": {
+          "carsSpawned": "spawnedCarCount",
+          "completed": "completedCarCount"
+        }
+      },
+      "sharedHelpers": {
+        "models/parameters.ts": {
+          "parameters": "parseParameters",
+          "stepCount": "validateStepCount"
+        }
+      },
+      "operationNames": {
+        "mimicry": {
+          "colorInMemory": "isColorInMemory"
+        },
+        "dla": {
+          "done": "isComplete"
+        },
+        "interstitial-diffusion": {
+          "done": "isComplete"
+        },
+        "bidding-market": {
+          "done": "isMarketComplete"
+        },
+        "galton-box": {
+          "full": "isFull"
+        },
+        "mammoths": {
+          "landAhead": "hasLandAhead"
+        }
+      }
+    },
+    "ui": {
+      "LegacyLiveField": "LiveField",
+      "hitSceneSymbol": "isPointInSceneSymbol",
+      "symbolPath": "traceSymbolPath",
+      "tablePage.previous": "tablePage.hasPreviousPage",
+      "tablePage.next": "tablePage.hasNextPage",
+      "tablePage.paged": "tablePage.isPaged",
+      "SessionState.error": "SessionState.hasError",
+      "CollectionRow.count": "CollectionRow.itemCount"
+    },
+    "fixtures": {
+      "network-diffusion": {
+        "count": "agentCount",
+        "activeTicks": "activeDurationTicks",
+        "activeAge": "activeAgeTicks",
+        "newActivations": "newActivationCount",
+        "done": "isComplete",
+        "bridges": "hasBridges",
+        "steps": "stepCount",
+        "counts.unaware": "counts.unawareAgentCount",
+        "counts.active": "counts.activeAgentCount",
+        "counts.settled": "counts.settledAgentCount",
+        "history[].unaware": "history[].unawareAgentCount",
+        "history[].active": "history[].activeAgentCount",
+        "history[].settled": "history[].settledAgentCount"
+      },
+      "agent-lab-model": {
+        "advance(steps)": "advance(stepCount)"
+      }
+    },
+    "targets": {
+      "labelPropagation": "label-propagation",
+      "maxEdges": "maxEdgeCount",
+      "maxAugmentations": "maxAugmentationCount",
+      "consumedSteps": "consumedStepCount",
+      "consumedSamples": "consumedSampleCount",
+      "turtleBreeds": "agentGroups",
+      "linkBreeds": "edgeGroups",
+      "turtleMembership": "agentMembership",
+      "linkMembership": "edgeMembership",
+      "nextTurtleId": "nextAgentId",
+      "nextLinkId": "nextEdgeId"
+    },
+    "reviewCorrections": {
+      "library/graph/generators/planning.ts": {
+        "local neighborCount (not config.neighborCount)": "neighborsByNode",
+        "old": "previousTarget"
+      },
+      "library/graph/graph.ts": {
+        "flag": "readFlag"
+      },
+      "library/geometry/planar/validation.ts": {
+        "ringsContact": "haveRingContact"
+      },
+      "library/studies/run.ts": {
+        "maxSteps": "maxStepCount",
+        "maxSamples": "maxSampleCount",
+        "initialSamples": "initialSampleCount",
+        "finalSamples": "finalSampleCount",
+        "perRunSamples": "sampleCountPerRun"
+      },
+      "currentDocs": {
+        "frozenQuadSignatureMap": "docs/grid-parcels/STATUS.md",
+        "elevatorParameterKeys": {
+          "travelTime": "travelTimeSeconds",
+          "doorTime": "doorTimeSeconds",
+          "transferTime": "transferTimeSeconds",
+          "arrivalInterval": "arrivalIntervalSeconds"
+        },
+        "binomial-rabbits.hops": "hopCount"
+      }
+    },
+    "provenance": {
+      "summary": {
+        "sourceRecords": 57,
+        "removedExecutableLocations": 103,
+        "observationModels": 20
+      },
+      "sourceRecords": [
+        {
+          "path": "models/anisogamy/source-markers.json",
+          "sha256": "b234e8248a908d67d2df468e644953200c58ff93dab0d63ed912bf9d7ed6a5a0"
+        },
+        {
+          "path": "models/autumn/source-markers.json",
+          "sha256": "bb6573e1dc592ae7e9d15d0c3b9f4d1d608ada8a196968ae3468f4067b9580d5"
+        },
+        {
+          "path": "models/bacterial-infection/source-markers.json",
+          "sha256": "f1b091d3b57207364d401680d7f4dc85625f60d2c61a6c5b96fc9925710715a1"
+        },
+        {
+          "path": "models/baldwin-effect/source-markers.json",
+          "sha256": "7ced07452b6d59317833da00958b12773902dfa58f2ea18abeeea9fb1284f545"
+        },
+        {
+          "path": "models/bank-reserves/source-markers.json",
+          "sha256": "42420c5c3ae715a0b1e4d9c3326b25057399be6890207a7d51eba9cb2693ab2c"
+        },
+        {
+          "path": "models/bidding-market/source-markers.json",
+          "sha256": "27960a297ae6e3a51e95ac6c16f052f0811a4ae62593995d363452b7b0171ce1"
+        },
+        {
+          "path": "models/blood-sugar-regulation/source-markers.json",
+          "sha256": "c9aa572db1ab07440a9d7553bc349dedac53a1ff01008282a23b7efef7c8ea69"
+        },
+        {
+          "path": "models/braess-paradox/source-markers.json",
+          "sha256": "630babb9cd9781f5f5c2d05fd06a05ba986d305fccd9ac1dcd67d11e3ea918a7"
+        },
+        {
+          "path": "models/cash-flow/source-markers.json",
+          "sha256": "a79e79628b854fe4f9e821a39347674bf19924029a7ec9281c6b92bc36a56361"
+        },
+        {
+          "path": "models/chloroplasts-and-food/source-markers.json",
+          "sha256": "4692c21bc248819dc4ca67d9a38d29f27c36f79af33c42d226c31022939ccacd"
+        },
+        {
+          "path": "models/consumer-choice/source-markers.json",
+          "sha256": "c59a0bae2cd9e481cb17fbf6aa6b882c1ed7abe03d1f1b03e2ccae74d0102f9f"
+        },
+        {
+          "path": "models/crispr-bacterium/source-markers.json",
+          "sha256": "e613575f404dee7d530e704a533690c4a637265daeab1afbf5f67bb77e3976a4"
+        },
+        {
+          "path": "models/crispr-ecosystem/source-markers.json",
+          "sha256": "9ec7a2f3d2d9ed2a3e464ca388395ce9461a7fac17de3f72f9a8074a931c623b"
+        },
+        {
+          "path": "models/disease-solo/source-markers.json",
+          "sha256": "498f2756bb1ccd3505eff30f04e2e45a06a748cf582fb3f5064775afda8e894a"
+        },
+        {
+          "path": "models/dna-protein-synthesis/source-markers.json",
+          "sha256": "90b6b181596fa9e32bf6993c0b47287f2249d8171268adc6b56ff158f7e9d205"
+        },
+        {
+          "path": "models/el-farol/source-markers.json",
+          "sha256": "aa05c624d98443b1e7088463e2e755319cd3068964fd7992ba0a857033806ab4"
+        },
+        {
+          "path": "models/epidem-basic/source-markers.json",
+          "sha256": "26a9b35056f13ea54962d4c1b164bbb4069ed75885511fe17b9c4429e320a114"
+        },
+        {
+          "path": "models/epidem-travel-and-control/source-markers.json",
+          "sha256": "2b270098b67336406820dbc2ca207e801ed96617b3557aef194924a0173ee493"
+        },
+        {
+          "path": "models/ethnocentrism/source-markers.json",
+          "sha256": "0f54d43ec22044aec5159a93f6e78158e383bee75dafa5df4e43b19076632d24"
+        },
+        {
+          "path": "models/fruit-wars/source-markers.json",
+          "sha256": "b8529fecdc096e10f4e9a4e55ae1003c41dd301cbde8bbb76851966e7877f285"
+        },
+        {
+          "path": "models/fur/source-markers.json",
+          "sha256": "5d0b2e193c2d90c84a68663c47540f73654770d96d670da7b3052ca0aee1f71c"
+        },
+        {
+          "path": "models/gendrift-t-interact/source-markers.json",
+          "sha256": "3f8efd45f9001dbec230523ea29e7adae78504232f5ca962bdf295e611feea50"
+        },
+        {
+          "path": "models/genevo-1-genetic-switch/source-markers.json",
+          "sha256": "db238c5eaf0f09b2f7927e4e2ba2d5ce25225cb0e7b963be08df476a48e08ce6"
+        },
+        {
+          "path": "models/heroes-and-cowards/source-markers.json",
+          "sha256": "a6274abafd280595e658efe3783486617cbf2f38782ec19292812537c5833275"
+        },
+        {
+          "path": "models/hiv/source-markers.json",
+          "sha256": "b3bc01fc9413207fea95192e592eab314189305017c959979daaf8b7821a324d"
+        },
+        {
+          "path": "models/honeycomb/source-markers.json",
+          "sha256": "1283d14a84c9e26396323fba0de0c9b2e152520225131abba749150c33efac08"
+        },
+        {
+          "path": "models/hotellings-law/source-markers.json",
+          "sha256": "c2d5ac90292d9a44b58d942bead74ee73201f08ca73cae10e43ba3a5487f9293"
+        },
+        {
+          "path": "models/language-change/source-markers.json",
+          "sha256": "1e6cfb896f5885a44a2d91d454e8b87ca87ee0e14626cc88a9e00897c998c287"
+        },
+        {
+          "path": "models/limited-order-book/source-markers.json",
+          "sha256": "2def71a0e50d9c5c4a780eff51790f2a20f315d0362d70dbe5db82c38372dcef"
+        },
+        {
+          "path": "models/mammoths/source-markers.json",
+          "sha256": "8211ed2cf0125bd9d3ba63177284867c909ffd9529cab37669f97f14622ef12c"
+        },
+        {
+          "path": "models/membrane-formation/source-markers.json",
+          "sha256": "a90a922baf96673e9a125c3e3f87c6c03f25cc6069d18e7e5e41c3c31c5411e8"
+        },
+        {
+          "path": "models/mendelian-inheritance/source-markers.json",
+          "sha256": "ce2e70d18bbbef2e4c6c69769e2e916b5c52c578110d6024e7d0d17dc3c668dc"
+        },
+        {
+          "path": "models/mimicry/source-markers.json",
+          "sha256": "cbc5c412b66492cc689f090597a95f97e061c6405ba0f617a8f34af56175ae2c"
+        },
+        {
+          "path": "models/minority-game/source-markers.json",
+          "sha256": "1faf49869f2bc92bc6c8c65e6b384435cb33d13cafe10754fa65e63f18094cc2"
+        },
+        {
+          "path": "models/muscle-development/source-markers.json",
+          "sha256": "78601ece5efcc63beb020539a72d5950e65098c4f1f09c008ed27ec754917cc7"
+        },
+        {
+          "path": "models/party/source-markers.json",
+          "sha256": "75f79f3401a0c7adb82e3235a087337a3f074bb2704265590a483b5fc38eccf9"
+        },
+        {
+          "path": "models/paths/source-markers.json",
+          "sha256": "215ec47b6b3436161c4cd49e5332f0491c195f98d6c30fb938163d3c38fa979f"
+        },
+        {
+          "path": "models/peppered-moths/source-markers.json",
+          "sha256": "b41dd19a3681b4d398dd1ac21561c1b540c954b97d03f60ba60e993f0b3571a7"
+        },
+        {
+          "path": "models/piaget-vygotsky-game/source-markers.json",
+          "sha256": "3677fbdbf10032dd79dab3200fe1cddb3efa93d8402519bc62335b6d9c47f973"
+        },
+        {
+          "path": "models/prisoners-dilemma-basic/source-markers.json",
+          "sha256": "8d71f387c49eb074ea1efe5a6f7e2b09d4184c9bd8b1d43f07c933d608095caf"
+        },
+        {
+          "path": "models/prisoners-dilemma-two-person-iterated/source-markers.json",
+          "sha256": "d24f7dac1a1d65743d635ac02549982edf79f0f929585513d70a5a4fdfd55b95"
+        },
+        {
+          "path": "models/rebellion/source-markers.json",
+          "sha256": "11f76dd78befed740f7f02155b5a8e49e5d83d9123972678bd2d2a56d29fe119"
+        },
+        {
+          "path": "models/repressilator-1d/source-markers.json",
+          "sha256": "f0dbbd47d1ce5b222550cafb471986ca3493b2f19319bca579d94aa054ea2daf"
+        },
+        {
+          "path": "models/rumor-mill/source-markers.json",
+          "sha256": "447b2f012db28e674f4e0e6e9cc854f7d59f8fd3dbc8f4412866a5a1ba3757b6"
+        },
+        {
+          "path": "models/sex-ratio-equilibrium/source-markers.json",
+          "sha256": "ad6cb6b5d83378448d5fe3bfc551d915c77cb115b10e4cf9b99ef76b8db19b5c"
+        },
+        {
+          "path": "models/signaling-game/source-markers.json",
+          "sha256": "9aac32601976b7b4282f74b6b7f970dc1da03610900d5d36f9ba08e447780ec3"
+        },
+        {
+          "path": "models/slime/source-markers.json",
+          "sha256": "0914ba9be87d50e1c2ec214aff40937bb651d49270391d9ba331335a8d49c889"
+        },
+        {
+          "path": "models/sunflower-emergent/source-markers.json",
+          "sha256": "a8b820a972445a2752ff16712d4941c7f8918c5217340af46108b9ac2e57c2e0"
+        },
+        {
+          "path": "models/taxi-cabs/source-markers.json",
+          "sha256": "29c390372f4808083db3982ccf179af295ab6460f43380c2bcb4b8ddbb1d37b9"
+        },
+        {
+          "path": "models/traffic-2-lanes/source-markers.json",
+          "sha256": "b35db49ac8fdb3847a16fdea7739c07b673b4123e154026983c29530535d6d04"
+        },
+        {
+          "path": "models/traffic-basic/source-markers.json",
+          "sha256": "22709c40ba57d1448604af27e354bcf45fa673072a73be45d707c981e8e7bd3f"
+        },
+        {
+          "path": "models/traffic-grid/source-markers.json",
+          "sha256": "5cb576b22a25341e0fec1a0134d81ec83288aa82577f81400112ce8fc6050643"
+        },
+        {
+          "path": "models/traffic-grid-goal/source-markers.json",
+          "sha256": "3c9f8590c53ab4cc80fb20753ee719af129f7e526589379fe675b8634f07dacb"
+        },
+        {
+          "path": "models/traffic-intersection/source-markers.json",
+          "sha256": "d733f45d7344979dd1542d61a474b11602a698f1cbbd79e86a7e7391234f1d5f"
+        },
+        {
+          "path": "models/tumor/source-markers.json",
+          "sha256": "7a6175e1e0095345278375c32bcbd6ce6d5dcfe8034a83361124c36bd85044bd"
+        },
+        {
+          "path": "models/virus/source-markers.json",
+          "sha256": "69d05f68f409d2fa4bf7c01b1067f9d08701a2330d314c359ab3663ce8fd8d80"
+        },
+        {
+          "path": "models/vision-evolution/source-markers.json",
+          "sha256": "a085388ff48c804ddc24e254e1839bebd45810c5212c3487d749aa2560abee81"
+        }
+      ]
+    }
+  },
+  "verification": {
+    "baseline": {
+      "baselineRevision": "4695091fdf64b582918a6145bea32aec1e62d23d",
+      "modelCount": 151,
+      "snapshotCountPerSide": 453,
+      "stages": [
+        "setup",
+        "advance-1",
+        "advance-5"
+      ],
+      "seed": 1,
+      "renameMapSha256": "ce2411e5badd1b1679a81054e49f6d2b69b1cc08fe0bfb158f7fb4eb2e3eaa30",
+      "allComparisonsEqual": true,
+      "baselineExecutionErrors": 0,
+      "finalRefresh": "All 151 current models freshly collected after corrective renames and provenance relocation; removed observation metadata verified against source records.",
+      "provenanceSourceRecordsVerified": 57,
+      "observationMarkerModelsVerified": 20,
+      "observationMarkerValuesVerified": 60,
+      "allCurrentModelsFreshlyCollectedAfterProvenanceRelocation": true,
+      "immutableSourceAndEvidenceFilesVerified": 945
+    },
+    "browser": {
+      "modelSetupAndStepCount": 151,
+      "publicBrowserFlowCount": 22,
+      "screenshotsIndependentlyApproved": true,
+      "screenshots": [
+        {
+          "path": "docs/development/verification/naming-completion/desktop-light.png",
+          "sha256": "2199339ccc4ae336b774ec2cb7d46a73649ef0eb15733dcb26e0be5309c6e6c5",
+          "viewport": {
+            "width": 1366,
+            "height": 768
+          },
+          "theme": "light",
+          "independentApproval": true
+        },
+        {
+          "path": "docs/development/verification/naming-completion/desktop-dark.png",
+          "sha256": "d9df29682da94ee6f409b10fa903d64e2b91abf457a0ca59f52649e69ebaa18c",
+          "viewport": {
+            "width": 1366,
+            "height": 768
+          },
+          "theme": "dark",
+          "independentApproval": true
+        },
+        {
+          "path": "docs/development/verification/naming-completion/mobile-light.png",
+          "sha256": "daa68292850daebef87aaf33fbaeba39f7b6e82a9c0ef3ef52cd42ad464ddf42",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "theme": "light",
+          "independentApproval": true
+        },
+        {
+          "path": "docs/development/verification/naming-completion/mobile-dark.png",
+          "sha256": "9815bc34710001b744d58f3f867004c84c6ac7ef72b2289516070b09d3f10759",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "theme": "dark",
+          "independentApproval": true
+        }
+      ]
+    },
+    "checks": {
+      "typecheck": "passed",
+      "runtimeTests": 773,
+      "runtimeAssertions": 707999,
+      "publicScripts": 292,
+      "migrationFiles": 355,
+      "preservedMigrationAssertions": 3413,
+      "sourceRecords": 57,
+      "libraryBuild": "passed",
+      "uiBuild": "passed",
+      "packedConsumers": [
+        "Bun",
+        "Node ESM",
+        "ambient-free TypeScript"
+      ]
+    },
+    "reviews": {
+      "finalSlice": {
+        "model": "claude-opus-5-5",
+        "effort": "medium",
+        "result": "approved",
+        "scope": "Naming implementation and repository screenshot evidence"
+      },
+      "substantialCorrectiveAudit": {
+        "model": "gemini-3.8-flash",
+        "result": "approved"
+      }
+    }
+  },
+  "records": [
+    {
+      "source": "tests/public-contracts/agent-selection/02-population-selection.ts",
+      "destination": "tests/public-contracts/agent-selection/02-population-selection.ts",
+      "sourceSha256": "5e0b3efcabd16ee47ae257f4f5c76202a645c955d7e6a3a39205d6132c9aa556",
+      "destinationSha256": "897daed1ad7856626d4724d95a55b03fb825c8939e9316db1c1c219856d0a680",
+      "assertions": 13
+    },
+    {
+      "source": "tests/public-contracts/city-simulation/04-scarce-resource.ts",
+      "destination": "tests/public-contracts/city-simulation/04-scarce-resource.ts",
+      "sourceSha256": "ec503266d8f9b3fc500a530a28852bda670e487328be599ae725afe2209d8eef",
+      "destinationSha256": "2dc06dc4a95459874c4c5295ad725ced6dfd5a372a3b782627880854d92d5d17",
+      "assertions": 18
+    },
+    {
+      "source": "tests/public-contracts/city-simulation/05-shared-machine.ts",
+      "destination": "tests/public-contracts/city-simulation/05-shared-machine.ts",
+      "sourceSha256": "628ad207214a7e4d5b82d61cd8edfb2ca1e4e96d3531e12efe8bcde7c9612352",
+      "destinationSha256": "013c894543e596b624e572415a6b15b1b76fde3ee8b7c74efb4b28af27a09413",
+      "assertions": 35
+    },
+    {
+      "source": "tests/public-contracts/connectivity/01-weak-merge-lifecycle.ts",
+      "destination": "tests/public-contracts/connectivity/01-weak-merge-lifecycle.ts",
+      "sourceSha256": "e7c91bcac2d1cadd422698d00c294c68291962be24178ded5e0049245b6847eb",
+      "destinationSha256": "0f2a80a5de728f17d229bdc44bd97cbdf057868b93ae703c4db6cc66f2f4a80f",
+      "assertions": 7
+    },
+    {
+      "source": "tests/public-contracts/connectivity/02-directed-strong-parts.ts",
+      "destination": "tests/public-contracts/connectivity/02-directed-strong-parts.ts",
+      "sourceSha256": "124b38dc59afd7310167887f5c0747c9f93624243cfd2da58cfb62fc04d0e3f1",
+      "destinationSha256": "26c0866117c5b54f2b46eb5ecaddf19526fab26f5e7b3f77cb89ba19afc18c10",
+      "assertions": 6
+    },
+    {
+      "source": "tests/public-contracts/connectivity/04-empty-and-invalid.ts",
+      "destination": "tests/public-contracts/connectivity/04-empty-and-invalid.ts",
+      "sourceSha256": "bd25a83c818522adde7462cbf47f670f9731722f3bbe166637d3fdfcb8025cbf",
+      "destinationSha256": "e877753f5011f6dd3e297546b6721fb303faa6566c69bcecab89fd36eae4c6f8",
+      "assertions": 10
+    },
+    {
+      "source": "tests/public-contracts/connectivity/05-canonical-pure-observation.ts",
+      "destination": "tests/public-contracts/connectivity/05-canonical-pure-observation.ts",
+      "sourceSha256": "cb198149af8933e453050e92471a707b1fa99fe38791919df6e3f91307fe1d31",
+      "destinationSha256": "bd47ce6e669457a2c1f96145013e55d81ebb7a95f9f8a60a116620a8943c22aa",
+      "assertions": 9
+    },
+    {
+      "source": "tests/public-contracts/des-elevator/01-single-trip.ts",
+      "destination": "tests/public-contracts/des-elevator/01-single-trip.ts",
+      "sourceSha256": "c449b88de2e2ffc6e13574bc008a4308ac75b437c5d9d7a60d585e08aeeaa686",
+      "destinationSha256": "2d2ce4daf0c8b4c58511f903b5c2b64e8b810a818a299c48cf5293003ccf211f",
+      "assertions": 15
+    },
+    {
+      "source": "tests/public-contracts/des-elevator/02-full-call-persists.ts",
+      "destination": "tests/public-contracts/des-elevator/02-full-call-persists.ts",
+      "sourceSha256": "c2dca5cd82fa24a57e72c43b9dcc499cd7b954e5aacb84be6b2ed2286538657e",
+      "destinationSha256": "3cafc5088f2a38ba2bb5e8da7c2f2ce87299f631ec7fa90f82ab35aeda2e8a57",
+      "assertions": 11
+    },
+    {
+      "source": "tests/public-contracts/des-elevator/03-alight-before-board.ts",
+      "destination": "tests/public-contracts/des-elevator/03-alight-before-board.ts",
+      "sourceSha256": "78f264d744d496b5169de5bf8f73e173566b5da3a53fe091b5d666d6d21eff61",
+      "destinationSha256": "71efe2cc5f8b0e7402d6d7db82d2ed0382957cfcd058964232909eb315ee321a",
+      "assertions": 10
+    },
+    {
+      "source": "tests/public-contracts/des-elevator/04-multiple-cars-and-oldest-call.ts",
+      "destination": "tests/public-contracts/des-elevator/04-multiple-cars-and-oldest-call.ts",
+      "sourceSha256": "ac39aa4102f2af68fa94634f50c1bc10592ee23f161837377225df5f114151c9",
+      "destinationSha256": "269cb4dbe7c8c7d06bc4661be26375dc2ab60733097560ad9f0a7c3382f86a6c",
+      "assertions": 7
+    },
+    {
+      "source": "tests/public-contracts/des-elevator/05-validation-arrivals-and-budget.ts",
+      "destination": "tests/public-contracts/des-elevator/05-validation-arrivals-and-budget.ts",
+      "sourceSha256": "3de8a41b14e5bf008efdbf1142f7a1aca9ae4ef827f82bfba7ca3289047ab9aa",
+      "destinationSha256": "c3383b61e5a172497b111e24bb703b282115b96850d2f1a4141dafc1404a8f34",
+      "assertions": 21
+    },
+    {
+      "source": "tests/public-contracts/des-models/01-civic-office.ts",
+      "destination": "tests/public-contracts/des-models/01-civic-office.ts",
+      "sourceSha256": "c5c3d1a0f9269106e290b73e5eb99fa763d1fc382f2b7700f0d8aa7a5d502bf5",
+      "destinationSha256": "20d35730af4274f486b9a1dabae02cea5625172c4b429b04ba556654e79ce854",
+      "assertions": 6
+    },
+    {
+      "source": "tests/public-contracts/des-models/02-ev-charging.ts",
+      "destination": "tests/public-contracts/des-models/02-ev-charging.ts",
+      "sourceSha256": "774ed8313dd2bf73e2ea7fc21c548b68b6558aafc8fce3b19c1c0dd9e858259f",
+      "destinationSha256": "ae042db070acdedc0c7bdfe714bf663f9dd11f72b4bd9ec4c64c40c69b650959",
+      "assertions": 6
+    },
+    {
+      "source": "tests/public-contracts/des-models/03-goods-buffer.ts",
+      "destination": "tests/public-contracts/des-models/03-goods-buffer.ts",
+      "sourceSha256": "04fcf8e838aa216db30490b286a43b5517a6054c2f7b30631f9a3af3d9072238",
+      "destinationSha256": "a0ead24573898d539c44fcbbcaf2533de47aaf85a6b43e150ebf69ee7603bc70",
+      "assertions": 8
+    },
+    {
+      "source": "tests/public-contracts/des-models/04-bus-interchange.ts",
+      "destination": "tests/public-contracts/des-models/04-bus-interchange.ts",
+      "sourceSha256": "4e4e42b9adf81c1c8fe9dadc016ea1544ae5a703b65bcde4b00c563634bd8ec4",
+      "destinationSha256": "f61e99a578bd311cc6bd5159cad7ae0db796d7822a924662c4ec26ff58503658",
+      "assertions": 7
+    },
+    {
+      "source": "tests/public-contracts/des-models/05-parcel-logistics.ts",
+      "destination": "tests/public-contracts/des-models/05-parcel-logistics.ts",
+      "sourceSha256": "c37d5112f29107e4854072ebe3b97837a059a20d17030287c6c7152295da7001",
+      "destinationSha256": "7e41ac3d390a4e9715adf611c3e2fc85c1177556142726d895759626a16d306c",
+      "assertions": 6
+    },
+    {
+      "source": "tests/public-contracts/des-models/06-waste-collection.ts",
+      "destination": "tests/public-contracts/des-models/06-waste-collection.ts",
+      "sourceSha256": "420476eaf2b8660fc01c112c8c8c82dd47d1a8ef91ca463ccf19919aeb01282a",
+      "destinationSha256": "0141d9b6469872c6c369cdaa279d687787a2c942c1144a3b9cc297954287df8f",
+      "assertions": 15
+    },
+    {
+      "source": "tests/public-contracts/des-models/07-emergency-dispatch.ts",
+      "destination": "tests/public-contracts/des-models/07-emergency-dispatch.ts",
+      "sourceSha256": "40db76bde50634304ddeaff4738979aae21949fefe5dc90112c603ec29ee303c",
+      "destinationSha256": "7dfa6b10817757cc8669095184674c519e8b04a913daf9a99d309298d374e69a",
+      "assertions": 15
+    },
+    {
+      "source": "tests/public-contracts/des-models/08-bike-redistribution.ts",
+      "destination": "tests/public-contracts/des-models/08-bike-redistribution.ts",
+      "sourceSha256": "64d6071d453b23ab9aca40384bf015b8aa600c6b3bcbd220c1e17a44b7b49d18",
+      "destinationSha256": "ce5611c39055923470daa941a3e6076148a79adf3e007185a0decea8d8a8321f",
+      "assertions": 13
+    },
+    {
+      "source": "tests/public-contracts/des-models/10-machine-maintenance.ts",
+      "destination": "tests/public-contracts/des-models/10-machine-maintenance.ts",
+      "sourceSha256": "b0476b654a21238c07b1751ca0bb6e6e7da18e2b9bff7d7f1f844d2011e729d5",
+      "destinationSha256": "e2da1f8f456cb57c4467dfbc8a0563ae27380861cfa4974de5e8ef6bb3f34898",
+      "assertions": 17
+    },
+    {
+      "source": "tests/public-contracts/des-models/phase-a.ts",
+      "destination": "docs/development/verification/des-model-contract-runner.txt",
+      "sourceSha256": "12e02118cd20de9003044337dd59b1af4814f4b3bfc3c19d64d023ff0b3d592a",
+      "destinationSha256": "12e02118cd20de9003044337dd59b1af4814f4b3bfc3c19d64d023ff0b3d592a",
+      "assertions": 0
+    },
+    {
+      "source": "tests/public-contracts/des/01-causal-agenda.ts",
+      "destination": "tests/public-contracts/des/01-causal-agenda.ts",
+      "sourceSha256": "d2421c1da5c1dc9a812e8520c9076f9df75c30b326d0b0c4d86bb78318f36d56",
+      "destinationSha256": "9e646ce0db46037db782a39256d136bf220105e887d760dff9904d3feb3c566a",
+      "assertions": 23
+    },
+    {
+      "source": "tests/public-contracts/graph-copy/05-strict-options-and-independent-current-graph.ts",
+      "destination": "tests/public-contracts/graph-copy/05-strict-options-and-independent-current-graph.ts",
+      "sourceSha256": "8e8c9c7e8200fe3398d6953361b2e3684dbbf8499497b8d62689037672328efd",
+      "destinationSha256": "e92ea03fd604a7aed60c0d7ad78150324f293407715353d662539fa939533470",
+      "assertions": 28
+    },
+    {
+      "source": "tests/public-contracts/graph-distances/01-native-ring-summary.ts",
+      "destination": "tests/public-contracts/graph-distances/01-native-ring-summary.ts",
+      "sourceSha256": "03f9543f5d26089fd40c423fe3cd4d9c80bff914cbe6df6e06aa3b1ec1bc1252",
+      "destinationSha256": "b4919a75b41c90e27bccf6f9e5a9dd7099b85593f9cf8339592aa7728cf3cbc6",
+      "assertions": 12
+    },
+    {
+      "source": "tests/public-contracts/graph-distances/05-empty-directed-summaries.ts",
+      "destination": "tests/public-contracts/graph-distances/05-empty-directed-summaries.ts",
+      "sourceSha256": "e368a51d7837e458050bdb14321c48e029af3d4665fbf02b9a814cfcf23dce59",
+      "destinationSha256": "9eb731442e55479bb164a8180f6597eab768e27f1a8f607212cd54eaf1946c4a",
+      "assertions": 22
+    },
+    {
+      "source": "tests/public-contracts/graph-generators/04-small-world-and-preferential.ts",
+      "destination": "tests/public-contracts/graph-generators/04-small-world-and-preferential.ts",
+      "sourceSha256": "2a22880dfca349191387d27aa42da7f1972db2cd3419ba600b354a55d49805b2",
+      "destinationSha256": "128281b9ffdeb9d04cd7310cf786c2ec969cd1d885ed002ee844c8696fa3f485",
+      "assertions": 16
+    },
+    {
+      "source": "tests/public-contracts/grid-parcels/01-regular-regression-and-tiny-wraps.ts",
+      "destination": "tests/public-contracts/grid-parcels/01-regular-regression-and-tiny-wraps.ts",
+      "sourceSha256": "f0bcaa6b086e58fb0667f2e7499f2b704bbfac8b6278be04978f577b2bbc6568",
+      "destinationSha256": "58e62d7677d0bae933abacd25e45109fb520299ed07ed1a01ff9f58ee545918d",
+      "assertions": 14
+    },
+    {
+      "source": "tests/public-contracts/grid-parcels/02-square-and-hex-field-rule.ts",
+      "destination": "tests/public-contracts/grid-parcels/02-square-and-hex-field-rule.ts",
+      "sourceSha256": "098374c80ace8a75a1d254fb51a42256bec1ef7d5e8babc478756b2abf8adba1",
+      "destinationSha256": "1a6e96481cac93558ae1f1f139bc53d5d767eede5b42f88d8d3813db1c111866",
+      "assertions": 17
+    },
+    {
+      "source": "tests/public-contracts/grid-parcels/04-merge-and-source-provenance.ts",
+      "destination": "tests/public-contracts/grid-parcels/04-merge-and-source-provenance.ts",
+      "sourceSha256": "345eacb87ac21404f08cc7b05db57948938d3f17683a7d36577cd2cacac311cf",
+      "destinationSha256": "199937cc47b0348501182ecd143506e6283838bac89f87d95524a5fe3c5a3148",
+      "assertions": 16
+    },
+    {
+      "source": "tests/public-contracts/lab/04-voting-interventions-and-stop.ts",
+      "destination": "tests/public-contracts/lab/04-voting-interventions-and-stop.ts",
+      "sourceSha256": "b243f9547c1f45677af5026ac1688556d8c905a791c6a6d9f9c4abd2438f9c9d",
+      "destinationSha256": "36879e256ee784fc2e7846510ed136e7a68ea93f6446d0e0c6b2e5d45ff239f3",
+      "assertions": 14
+    },
+    {
+      "source": "tests/public-contracts/lab/05-synchronous-voting-and-rules.ts",
+      "destination": "tests/public-contracts/lab/05-synchronous-voting-and-rules.ts",
+      "sourceSha256": "5a7903e7a8a939e429114bec65921c3baa43f83d3917aac360a55b3cdbf40911",
+      "destinationSha256": "a9cc2ff1dc35cb4ba4fcc9bea09979448604a2dac923e799539e3c055d64949c",
+      "assertions": 13
+    },
+    {
+      "source": "tests/public-contracts/model-measurements/03-scenarios-and-replications.ts",
+      "destination": "tests/public-contracts/model-measurements/03-scenarios-and-replications.ts",
+      "sourceSha256": "c5ba5cc369c80ad90953cf255bcb9303d8e819567c5e3dcb55c84f0297062f4d",
+      "destinationSha256": "93241888a705fbd8315d2bb973a40f28ffc46e6e79c814738718d53e540a6e85",
+      "assertions": 6
+    },
+    {
+      "source": "tests/public-contracts/model-measurements/04-run-stop-and-summary.ts",
+      "destination": "tests/public-contracts/model-measurements/04-run-stop-and-summary.ts",
+      "sourceSha256": "c434dba1a6ee35aebb54098b6651b114d2d73497fd444c150a8a60cf6ea397e7",
+      "destinationSha256": "ab55b31556b93856592f1cb76316f64cdd8db24dbc0c0e0aaced81f18d2582b1",
+      "assertions": 5
+    },
+    {
+      "source": "tests/public-contracts/model-measurements/05-failure-and-budget.ts",
+      "destination": "tests/public-contracts/model-measurements/05-failure-and-budget.ts",
+      "sourceSha256": "047d963f519b096d2d3a83b5a7aa5e29f214cbc2e541980faf853fc11b4c5450",
+      "destinationSha256": "5e5af4cd80969614c31be6156ddb8510b21a745120d7239796c77a2916c199c8",
+      "assertions": 6
+    },
+    {
+      "source": "tests/public-contracts/model-authoring/01-taxi-reporters.ts",
+      "destination": "tests/public-contracts/model-authoring/01-taxi-reporters.ts",
+      "sourceSha256": "e5907b2bcbb3abc00f0aef829996e4dec4921a3252500f13b7b30e750adef660",
+      "destinationSha256": "258cffb951e5fc22ae837cb5cb20a5d3b28d8d83ef6998de188da5107094f58e",
+      "assertions": 5
+    },
+    {
+      "source": "tests/public-contracts/model-authoring/02-taxi-observation-purity.ts",
+      "destination": "tests/public-contracts/model-authoring/02-taxi-observation-purity.ts",
+      "sourceSha256": "0241afac8c2f5b3f75d9c386ac4ac87718fc2dc7495212e90923927470251aae",
+      "destinationSha256": "2f519a64f3ffa1e1f1cfa6c8811d173c9be16da50f6576264b8b365f87dcbc1d",
+      "assertions": 8
+    },
+    {
+      "source": "tests/public-contracts/model-authoring/03-taxi-intervention-isolation.ts",
+      "destination": "tests/public-contracts/model-authoring/03-taxi-intervention-isolation.ts",
+      "sourceSha256": "c4317809578599d505c4028c4a31f3ab8768bb3fcfd42cae9962ea1a8d3e543c",
+      "destinationSha256": "110eceb79b93ebdc0ec56d44e7e6c8a31ba19b8fb5970510a023d0876ea32437",
+      "assertions": 7
+    },
+    {
+      "source": "tests/public-contracts/model-authoring/04-taxi-replay-accounting.ts",
+      "destination": "tests/public-contracts/model-authoring/04-taxi-replay-accounting.ts",
+      "sourceSha256": "27a8b7dcc6494e904cc162037e8c295ba9d16f8945986147088f7749ece4463e",
+      "destinationSha256": "8eec4205cd75a6003ad92f73a9b4a3fd75ff8ffad0b16d98b29ddaf163a663af",
+      "assertions": 9
+    },
+    {
+      "source": "models/resource-exchange/model.ts",
+      "destination": "models/resource-exchange/model.ts",
+      "sourceSha256": "d2965253fd40853fe39ca2332213605666a774d838e309cf8984d064dc79ddbb",
+      "destinationSha256": "a5ad11119704a4ab0cd0afc21d54448a04189071c1568516bdef6ec797c2ac36",
+      "assertions": 0
+    },
+    {
+      "source": "tests/public-contracts/grid-models/01-life-synchronous-blinker.ts",
+      "destination": "tests/public-contracts/grid-models/01-life-synchronous-blinker.ts",
+      "sourceSha256": "470cd4e5e249116f8211d47024b72b60d9c8456742a94cebd5b01b4ca9586041",
+      "destinationSha256": "432948e2ff158348f62c736a1341a6bc715b599d8f8cd7fff8275b80ee00a3ae",
+      "assertions": 9
+    },
+    {
+      "source": "tests/public-contracts/grid-models/02-fire-front-and-embers.ts",
+      "destination": "tests/public-contracts/grid-models/02-fire-front-and-embers.ts",
+      "sourceSha256": "6e250bc898e632804cc1d1276ccb00bb8ccbe3bf6b3acc4f2cb8bbbbc812978e",
+      "destinationSha256": "bc33f9a1d62f2214b20517dcdcb93b9bda81aa682058cb12a69dbcff65c9ed5b",
+      "assertions": 14
+    },
+    {
+      "source": "tests/public-contracts/grid-models/03-percolation-stop-and-wrap.ts",
+      "destination": "tests/public-contracts/grid-models/03-percolation-stop-and-wrap.ts",
+      "sourceSha256": "0d9800014f0ab52f8ac5f098a9448758c1f730af4585bef6e0505d49d7d37611",
+      "destinationSha256": "2563a950310bb2070e3b21735aff3028e05e466a6041fd52d09f4cff6fdbb530",
+      "assertions": 14
+    },
+    {
+      "source": "tests/public-contracts/grid-models/04-atomic-inputs-and-drawing.ts",
+      "destination": "tests/public-contracts/grid-models/04-atomic-inputs-and-drawing.ts",
+      "sourceSha256": "bf65f3b151ea65a073d482665016393e4ee357c2f697b51da6f7578dc4060f46",
+      "destinationSha256": "479c107ab8afac02e742cbb589d7917730c4ef96d097401442c3a5a06ec04e4f",
+      "assertions": 16
+    },
+    {
+      "source": "tests/public-contracts/grid-models/05-defaults-and-isolation.ts",
+      "destination": "tests/public-contracts/grid-models/05-defaults-and-isolation.ts",
+      "sourceSha256": "80d94b153e45182357024c1a822c6099098e3cb10765d6658d015b3562e89f47",
+      "destinationSha256": "60eb3b43512ddb34615a070d79849b004d2e3733d064b8f68c2a862404367f3a",
+      "assertions": 20
+    },
+    {
+      "source": "tests/public-contracts/graph-analysis/01-degree-incidence-and-options.ts",
+      "destination": "tests/public-contracts/graph-analysis/01-degree-incidence-and-options.ts",
+      "sourceSha256": "830046080baf7ad32cfa486f0f36d451cf7f57d22feb142b5305b0ad5a77b516",
+      "destinationSha256": "4b3cfd4e2ff5bd8e34e1b7e5b74052b340eedae4fd446a2ec31c099793d8e760",
+      "assertions": 43
+    },
+    {
+      "source": "tests/public-contracts/graph-analysis/02-closeness-directed-costs.ts",
+      "destination": "tests/public-contracts/graph-analysis/02-closeness-directed-costs.ts",
+      "sourceSha256": "1512a30cb08787568dddbda670acf3039c87cd18f1a7d9638f26be88c28f6dbd",
+      "destinationSha256": "fc89aef5a59793e060674bf336f312c8f9795cf7d552d74e2995f141716a3212",
+      "assertions": 21
+    },
+    {
+      "source": "tests/public-contracts/graph-analysis/03-betweenness-parallel-paths.ts",
+      "destination": "tests/public-contracts/graph-analysis/03-betweenness-parallel-paths.ts",
+      "sourceSha256": "a25c841491b69c7c4ac0923632abdeb81d678942d070a712c4e0c1037ee9a92d",
+      "destinationSha256": "90206e3c04b3569387ee74fbb126ee0b1a802f0c91105cde791d86670e812f4e",
+      "assertions": 14
+    },
+    {
+      "source": "tests/public-contracts/graph-analysis/04-eigenvector-incoming-l2.ts",
+      "destination": "tests/public-contracts/graph-analysis/04-eigenvector-incoming-l2.ts",
+      "sourceSha256": "4aae2f675223b665a8552981f957c5bc1bbc7b3813656269665b6b16f6eb1511",
+      "destinationSha256": "576b842fb6a2c76978d23d7efd8349fe88496ed4031120015ce5c1b03cf0468a",
+      "assertions": 20
+    },
+    {
+      "source": "tests/public-contracts/graph-analysis/05-pagerank-stationary-and-errors.ts",
+      "destination": "tests/public-contracts/graph-analysis/05-pagerank-stationary-and-errors.ts",
+      "sourceSha256": "98162da5b42186fe0cc1e5a8566bde0c2a7ea836ed13d0d949d054623f2c224d",
+      "destinationSha256": "ad05d95af9b328b5450c63c38e40572e3f7c4c2e2ee317a1169281aa854ec37a",
+      "assertions": 17
+    },
+    {
+      "source": "tests/public-contracts/topology-variants/03-watts-strogatz-old-target-and-domains.ts",
+      "destination": "tests/public-contracts/topology-variants/03-watts-strogatz-endpoint-rewiring-and-domains.ts",
+      "sourceSha256": "027e23eb86bb23b9713b304b6062a6609672f99a11a91d6b96dc2fda85a0f2a6",
+      "destinationSha256": "e9d723c429434522d3472a971e88a87390133d87fac4813334b628838519eff6",
+      "assertions": 18
+    },
+    {
+      "source": "tests/public-contracts/topology-variants/05-model-actions-and-rng-boundaries.ts",
+      "destination": "tests/public-contracts/topology-variants/05-model-actions-and-rng-boundaries.ts",
+      "sourceSha256": "d466a61f5af4cc0695e118f79db6a70a9a030599deb8b9cf6b3e74019d7adcfa",
+      "destinationSha256": "df6f7f4f54a2af1e1676659d6dbe7ec9ec456a6aa696e2ebdba2875b56b55065",
+      "assertions": 29
+    },
+    {
+      "source": "scripts/public-contracts.ts",
+      "destination": "tests/public-contracts.ts",
+      "sourceSha256": "321d8e3259edf1e397514cf9b3561b9a013c3ef8c6a203bec8b5411bae624b18",
+      "destinationSha256": "321d8e3259edf1e397514cf9b3561b9a013c3ef8c6a203bec8b5411bae624b18",
+      "assertions": 0
+    },
+    {
+      "source": "tests/public-contracts/segregation/01-setup.ts",
+      "destination": "tests/public-contracts/segregation/01-setup.ts",
+      "sourceSha256": "b145c845f3cd3689c9c2dbe91d6d8efde378ee3384f2f6deecd73df130543ec0",
+      "destinationSha256": "6fdeb316853e2187e0910af34e1e41d862eb7e0734998d539cc5130861c6679a",
+      "assertions": 8
+    },
+    {
+      "source": "tests/public-contracts/segregation/02-neighbor-metrics.ts",
+      "destination": "tests/public-contracts/segregation/02-neighbor-metrics.ts",
+      "sourceSha256": "e7018aef5f3abd2897c65111b6913fa216c7fc256ef1ec4f338a2bb5e6aed90b",
+      "destinationSha256": "fefd03323ad5cae6e591e2de503ef64d0abed0b28302391bcbb11a6e9878cce5",
+      "assertions": 5
+    },
+    {
+      "source": "tests/public-contracts/segregation/03-terminal-intervention.ts",
+      "destination": "tests/public-contracts/segregation/03-terminal-intervention.ts",
+      "sourceSha256": "f58349a3a44bad33aee13fef4d118346e313c87ad26bf27278f4ef511f1a1e08",
+      "destinationSha256": "619a4d47b007338cd303280edc9a95f400b87986c1ed878587f6aaf3721e35dc",
+      "assertions": 9
+    },
+    {
+      "source": "tests/public-contracts/selected-biology/01-photosynthesis-and-signaling.ts",
+      "destination": "tests/public-contracts/selected-biology/01-photosynthesis-and-signaling.ts",
+      "sourceSha256": "75cc6bcd71dd088844070432a987833c9ee422be5784c717419bc5a0cde4a933",
+      "destinationSha256": "b6c678bc3267aa6c819aef6c0050809d9be260206048a12d818e151f849d0f87",
+      "assertions": 16
+    },
+    {
+      "source": "tests/public-contracts/selected-biology/03-homeostasis-and-exercise.ts",
+      "destination": "tests/public-contracts/selected-biology/03-homeostasis-and-exercise.ts",
+      "sourceSha256": "492b4da342dde23ef78c25b9d879387677cf88569562014c73aee4f9f3eccfd6",
+      "destinationSha256": "ea334bb181b8e85dac070b5d8dc8a169e5673ea2fac04194d098bee5bc12f730",
+      "assertions": 16
+    },
+    {
+      "source": "tests/public-contracts/selected-biology/04-season-and-self-assembly.ts",
+      "destination": "tests/public-contracts/selected-biology/04-season-and-self-assembly.ts",
+      "sourceSha256": "a1183005355e4b6b33f77efd331598bdd264561c604875a4a5767da85584a145",
+      "destinationSha256": "0d646bdff38767d1b4d4f8c489b24d43a7b0e4721249005390c5a37358df9bf8",
+      "assertions": 15
+    },
+    {
+      "source": "tests/public-contracts/selected-cellular/03-moving-vants-and-turing-head.ts",
+      "destination": "tests/public-contracts/selected-cellular/03-moving-vants-and-turing-head.ts",
+      "sourceSha256": "57c5a1d81d242c1ae01586263599385c188d8fb838a521c0bf7f03ed89ef25d5",
+      "destinationSha256": "1c483682f29e63abaf9c8ff755fd41217e560eade47988b79fa38f66ae1ea6b8",
+      "assertions": 9
+    },
+    {
+      "source": "tests/public-contracts/selected-cellular/05-refractory-cycle-and-stochastic-extremes.ts",
+      "destination": "tests/public-contracts/selected-cellular/05-refractory-cycle-and-stochastic-extremes.ts",
+      "sourceSha256": "9dc2e4e16b127ec7b9868d4c75390780ffe9013bebcf507717dd87337c3e8998",
+      "destinationSha256": "4736da4f918b6749fd8662cac3f4ebde5f0d3c6ef88c908460ef00780514b44a",
+      "assertions": 8
+    },
+    {
+      "source": "tests/public-contracts/selected-computing/02-resources-and-ranking.ts",
+      "destination": "tests/public-contracts/selected-computing/02-resources-and-ranking.ts",
+      "sourceSha256": "6b6d8b05f4a259c25da6979ad2ad39262ef8ea3cf53e542f2d067692a6e37b37",
+      "destinationSha256": "0c48dd5843748c5fe778d205603c024d93c0df0a01e0218514ffba6ee5550094",
+      "assertions": 19
+    },
+    {
+      "source": "tests/public-contracts/selected-computing/05-annealing-and-factory.ts",
+      "destination": "tests/public-contracts/selected-computing/05-annealing-and-factory.ts",
+      "sourceSha256": "b7eb241ced63e3374644feb864786b1a2c009005e90fdfb6f32df2a182673153",
+      "destinationSha256": "96d73b74d068f0691b04a58da146f1bc4c9f95cb92a0984d8b124f025f4925a6",
+      "assertions": 22
+    },
+    {
+      "source": "tests/public-contracts/selected-disease-gene/01-contact-and-immunity.ts",
+      "destination": "tests/public-contracts/selected-disease-gene/01-contact-and-immunity.ts",
+      "sourceSha256": "e0c88d04cd86d8fa99993754ea17d03c8e091ec1ad1b74f4ebbc2c11598e3620",
+      "destinationSha256": "3bc44c90692f8969c2fe3d847bd5b88bacea1f213bb6bc0ab48e3601f9aea204",
+      "assertions": 18
+    },
+    {
+      "source": "tests/public-contracts/selected-disease-gene/02-coupling-and-recovery.ts",
+      "destination": "tests/public-contracts/selected-disease-gene/02-coupling-and-recovery.ts",
+      "sourceSha256": "2688ac23517eb8833befeae599772d9f24cae4ac5ba4f47b3ec91ad6bcc3a8ed",
+      "destinationSha256": "c58b7c60bdd0ca26e8b60185aa22276b16b36f5d03ad6414ca33b23afa8caf1f",
+      "assertions": 13
+    },
+    {
+      "source": "tests/public-contracts/selected-disease-gene/03-regulation-and-energy.ts",
+      "destination": "tests/public-contracts/selected-disease-gene/03-regulation-and-energy.ts",
+      "sourceSha256": "fb72757e5578858690b725be69a6212c192ecfc7949b88a34eaa2894aec593d7",
+      "destinationSha256": "f7b668b5f4cece40b322bfce599d93e4ede48e8885135377de7ed6d7715b0468",
+      "assertions": 15
+    },
+    {
+      "source": "tests/public-contracts/selected-disease-gene/04-crispr-defense-and-ecology.ts",
+      "destination": "tests/public-contracts/selected-disease-gene/04-crispr-defense-and-ecology.ts",
+      "sourceSha256": "5eb841346d8a914bcbf56e84baf3288192fcf1a4a2a46d78e6c8694f29452351",
+      "destinationSha256": "4db4ae0fb32f576a1b79258d6ec6f37c332ace65119e82f2f7e530fdc57743aa",
+      "assertions": 16
+    },
+    {
+      "source": "tests/public-contracts/selected-disease-gene/05-control-and-protein-synthesis.ts",
+      "destination": "tests/public-contracts/selected-disease-gene/05-control-and-protein-synthesis.ts",
+      "sourceSha256": "8c6c518593f05c613e3e5fa083ee666af7ce035e733ff9cc4b12a85ff97bc524",
+      "destinationSha256": "c45dce68bde8e973efc63c31ed8c3440e56c4b4b97a6a6a9358a155d65ac99c2",
+      "assertions": 18
+    },
+    {
+      "source": "tests/public-contracts/selected-ecology/01-birth-and-temperature.ts",
+      "destination": "tests/public-contracts/selected-ecology/01-birth-and-temperature.ts",
+      "sourceSha256": "0b163d38e4c7c0c18ec8e21cf82643e56bfcf0f90839054f32b39d553a62d9da",
+      "destinationSha256": "a0f3816b154ceae848291b6c8ecff666599eff37b91db418baf0d382b8bf5aec",
+      "assertions": 10
+    },
+    {
+      "source": "tests/public-contracts/selected-ecology/02-transport-and-herding.ts",
+      "destination": "tests/public-contracts/selected-ecology/02-transport-and-herding.ts",
+      "sourceSha256": "c2fc2ed81d982d8e832682a2fd0f2ec2d1ece56905069cff88bb384bc789ff78",
+      "destinationSha256": "68801401115f61b13a114751b0b9b6b6337391775a53a1addb32ed16536d13a0",
+      "assertions": 9
+    },
+    {
+      "source": "tests/public-contracts/selected-ecology/03-resources-and-invasion.ts",
+      "destination": "tests/public-contracts/selected-ecology/03-resources-and-invasion.ts",
+      "sourceSha256": "613c7571bf193fc96f8525b14b9bcc22a1a72bb99ae754ec60e7d8465af0836d",
+      "destinationSha256": "f0ffee969ebf7cdfc8843b662382cb6566a496da901abe535bed470f70c24344",
+      "assertions": 10
+    },
+    {
+      "source": "tests/public-contracts/selected-ecology/04-foraging-and-heat.ts",
+      "destination": "tests/public-contracts/selected-ecology/04-foraging-and-heat.ts",
+      "sourceSha256": "d19006755b289ca772647ee531b1a0215ac4757f09b5f04cf3e6c521dec1d30f",
+      "destinationSha256": "2b21cfa860b158a6830ae72e7eaf7fbcbe57719df86c11a54c8195f2cebd5942",
+      "assertions": 12
+    },
+    {
+      "source": "tests/public-contracts/selected-ecology/05-flocking-and-flashes.ts",
+      "destination": "tests/public-contracts/selected-ecology/05-flocking-and-flashes.ts",
+      "sourceSha256": "bfbc712f5424bfbee1d045ee4e7227a0fa594ab67e892268d6a35be43d86c5a1",
+      "destinationSha256": "6faf724c78c17dd37c43a44b7fb300609e7e4b45f858be04ce6a7e5ae26beca0",
+      "assertions": 9
+    },
+    {
+      "source": "tests/public-contracts/selected-economics/01-foraging-and-attendance.ts",
+      "destination": "tests/public-contracts/selected-economics/01-foraging-and-attendance.ts",
+      "sourceSha256": "f433e1878c71b6da983c2c76e24a738186d4d5962d5e580e48e2269afc16c277",
+      "destinationSha256": "1d40855f958afb25bde2aee909ec42ce920f3a85a6de66fe5c1e937838752b3f",
+      "assertions": 19
+    },
+    {
+      "source": "tests/public-contracts/selected-economics/02-exchange-markets.ts",
+      "destination": "tests/public-contracts/selected-economics/02-exchange-markets.ts",
+      "sourceSha256": "d09d8eb92d3d8d1c630a8c4d71556af89ac10e60acda42fe0aefe145e998e70b",
+      "destinationSha256": "2f72289b65c6e92131b894ffb3cbede5520af2975218a91ffb7a0da810b140b8",
+      "assertions": 13
+    },
+    {
+      "source": "tests/public-contracts/selected-economics/03-location-and-traffic.ts",
+      "destination": "tests/public-contracts/selected-economics/03-location-and-traffic.ts",
+      "sourceSha256": "98f400155a722a8cb18f8c62ccce43417b0b04cbcb9752a687ed8515c7853b48",
+      "destinationSha256": "1af90f04fff4095667c18fa6c153ed5baf33e230de8e8c03c9ba2aa1d7da9151",
+      "assertions": 15
+    },
+    {
+      "source": "tests/public-contracts/selected-economics/04-banking-phases.ts",
+      "destination": "tests/public-contracts/selected-economics/04-banking-phases.ts",
+      "sourceSha256": "c665ff0613dc0b8cea3968230204b20b2070126b66f3ff219317d5a6abf06306",
+      "destinationSha256": "a0de94a448227bd90799e0605b0ac839e49825542c83198c2bdcd7e350ea6a5b",
+      "assertions": 22
+    },
+    {
+      "source": "tests/public-contracts/selected-evolution/01-memory-and-pollution.ts",
+      "destination": "tests/public-contracts/selected-evolution/01-memory-and-pollution.ts",
+      "sourceSha256": "59e519ea6059dab27ede1d25991cb87a7c5bda42a6c0674597edcecbf396d6ba",
+      "destinationSha256": "98de58c6b96b4b192c51367b9e2028c4e5f3588d5e6ccd0f236485dce60e861c",
+      "assertions": 23
+    },
+    {
+      "source": "tests/public-contracts/selected-evolution/02-gametes-and-sex-ratio.ts",
+      "destination": "tests/public-contracts/selected-evolution/02-gametes-and-sex-ratio.ts",
+      "sourceSha256": "3754b5b90d80f2abc6d29e6f0c53423c9e2a7170954c1b686cd40b5b8a1e3d1d",
+      "destinationSha256": "7faaa8fae85cb4ec02713a0e235e4c938a8b3bfa658a1a0d568da8d23717a764",
+      "assertions": 20
+    },
+    {
+      "source": "tests/public-contracts/selected-evolution/03-learning-and-mammoths.ts",
+      "destination": "tests/public-contracts/selected-evolution/03-learning-and-mammoths.ts",
+      "sourceSha256": "bca06123ebe87a8ff2b51ef49c2d345f9de120b03523e32650678022fe9d2dda",
+      "destinationSha256": "721c9e91f2d98d60664cfc2b05990363cbd23c62a73901283eae73787638ebb6",
+      "assertions": 24
+    },
+    {
+      "source": "tests/public-contracts/selected-evolution/04-infection-and-vision.ts",
+      "destination": "tests/public-contracts/selected-evolution/04-infection-and-vision.ts",
+      "sourceSha256": "b8bbe6486c35af07b5ffdab1d77a8843fef2a038ac09f6081aae62e59c9654df",
+      "destinationSha256": "e6f6246b5ca4f87efc2db147bfd52363d5698e67bc27a72d8ec113c0a77009dd",
+      "assertions": 23
+    },
+    {
+      "source": "tests/public-contracts/selected-evolution/05-drift-and-inheritance.ts",
+      "destination": "tests/public-contracts/selected-evolution/05-drift-and-inheritance.ts",
+      "sourceSha256": "fcf0d15fe40205286c32d41ef2e11b67bb6443236dbfc64c5ec089b1ad14dc74",
+      "destinationSha256": "cd4345c45fc97ccd138f42890084712c6f3f60d13d6f9ff213596d2b99a36d19",
+      "assertions": 22
+    },
+    {
+      "source": "tests/public-contracts/selected-materials/03-atomic-diffusion.ts",
+      "destination": "tests/public-contracts/selected-materials/03-atomic-diffusion.ts",
+      "sourceSha256": "7aaf8286c70d4d795ffb69f328e4241622486a7162b8598c25e4b408f37bcab1",
+      "destinationSha256": "b0faa1257d71ad060a859ede3de2a2cc2d6b2b632ead372a5114042ca1e6e948",
+      "assertions": 17
+    },
+    {
+      "source": "tests/public-contracts/selected-materials/05-dla.ts",
+      "destination": "tests/public-contracts/selected-materials/05-dla.ts",
+      "sourceSha256": "c9e6350aaccbfb75220bf4039f288985f07939c799e71f37c644a2747dee3727",
+      "destinationSha256": "e67375b7733ffac3b80472df9489c08b1e658e8eaba8ebe154ab991cf0ad9149",
+      "assertions": 13
+    },
+    {
+      "source": "tests/public-contracts/selected-network/02-rewire-and-no-links.ts",
+      "destination": "tests/public-contracts/selected-network/02-rewire-and-no-links.ts",
+      "sourceSha256": "57266963f3793874dab01a55837189f7c8b59bb60c2b7a562abfb0ca4832a935",
+      "destinationSha256": "6b64ed295c3981cca0609e5cf9464f544c5ed06e68f39d992f1ebcf99ba3db5b",
+      "assertions": 9
+    },
+    {
+      "source": "tests/public-contracts/selected-network/03-virus-phase-and-stop.ts",
+      "destination": "tests/public-contracts/selected-network/03-virus-phase-and-stop.ts",
+      "sourceSha256": "1704a9b37657cf7b930e1c5542f8ca0ac5c2db834d9f5ebefed52168be021a10",
+      "destinationSha256": "810c5e18247df3c3191e95f9bf5a9d2db0bc743d9347c38ca3fead1535c91c07",
+      "assertions": 9
+    },
+    {
+      "source": "tests/public-contracts/selected-network/04-atomic-fixtures.ts",
+      "destination": "tests/public-contracts/selected-network/04-atomic-fixtures.ts",
+      "sourceSha256": "af17ee93effbc79b7a3ca7128531bdd18696d9b0f95b2ccc78cfe3dc2a9dbe26",
+      "destinationSha256": "b655543d1f774cf753d9d4ce8ea6f05aa8b1108826e0f444967483ce022f81f8",
+      "assertions": 11
+    },
+    {
+      "source": "tests/public-contracts/selected-network/05-defaults-and-isolation.ts",
+      "destination": "tests/public-contracts/selected-network/05-defaults-and-isolation.ts",
+      "sourceSha256": "3c3d2cffec56ff8fc55e9b201886ff6596940a24b11f70e8bd3927d50c04f58c",
+      "destinationSha256": "cce5b08bfa1bbefe23c467efee10ce23d4b6e0bb7317e7b9bef2adbbda7f2131",
+      "assertions": 20
+    },
+    {
+      "source": "tests/public-contracts/selected-social/01-choice-and-rebellion.ts",
+      "destination": "tests/public-contracts/selected-social/01-choice-and-rebellion.ts",
+      "sourceSha256": "9ea31c7bf3b2b3319fbaf5e71da62e7040c7e198c37588051ce73369d5ab3b24",
+      "destinationSha256": "03655375f6d21c26fa6f7dbf3c12b9b0535167995d5b6e1bd8f78dc96302ef8a",
+      "assertions": 16
+    },
+    {
+      "source": "tests/public-contracts/selected-social/02-language-and-party.ts",
+      "destination": "tests/public-contracts/selected-social/02-language-and-party.ts",
+      "sourceSha256": "39a5b6df14d9ca0353a68c590cc5ac2ae928f9d82281b586bc4f8e9be1464d78",
+      "destinationSha256": "4a4903e7cc32183e6e3e843a882ddd1577e6eee0660b27e13e7b31aa350cc201",
+      "assertions": 18
+    },
+    {
+      "source": "tests/public-contracts/selected-social/03-cooperation-and-minority.ts",
+      "destination": "tests/public-contracts/selected-social/03-cooperation-and-minority.ts",
+      "sourceSha256": "570d7f52504a18ba47e0ec7a359ea7ecd13165b9699af87f74f518cf6403d649",
+      "destinationSha256": "2a8f1c22dbf4af17ce7ee6d10c8eb5865298f5f54874e762d0c3aa7b1ff02ac4",
+      "assertions": 16
+    },
+    {
+      "source": "tests/public-contracts/selected-social/04-rumors-and-signals.ts",
+      "destination": "tests/public-contracts/selected-social/04-rumors-and-signals.ts",
+      "sourceSha256": "f73c72aefd2a1e83e9219bdf44e4073a64bb2be31de4a1c69f69b93e40059984",
+      "destinationSha256": "ee0f8dcabbf3e953c25a7a7ed901f6ba8aece77b721ac268d5c9853c87030fed",
+      "assertions": 20
+    },
+    {
+      "source": "tests/public-contracts/selected-social/05-development-and-personalities.ts",
+      "destination": "tests/public-contracts/selected-social/05-development-and-personalities.ts",
+      "sourceSha256": "54bc0844605c49d4504878057f8a112fb5a6249248d7bcd8bc4e68ecccacaed2",
+      "destinationSha256": "a20d8a28c9b64f28ba6aba3465dd24ba5a60317b9c16878e42c0f8284bd78b9d",
+      "assertions": 18
+    },
+    {
+      "source": "tests/public-contracts/selected-tijuana/01-natural-cityscape-and-replay.ts",
+      "destination": "tests/public-contracts/selected-tijuana/01-natural-cityscape-and-replay.ts",
+      "sourceSha256": "c4b6709c8991be87868234b62636132258f78e6b283e7c428499c6926f72e808",
+      "destinationSha256": "14f6725a2ed20cf6482b6f38c393ccdd5a854b0980d9e93c9c74e66203aa31d9",
+      "assertions": 37
+    },
+    {
+      "source": "tests/public-contracts/selected-tijuana/02-final-seed-economics-and-reset.ts",
+      "destination": "tests/public-contracts/selected-tijuana/02-final-seed-economics-and-reset.ts",
+      "sourceSha256": "22014d6920f90a1a3d484a1ad4608735140014949661136ddda53929450e5e89",
+      "destinationSha256": "e88e0b969746ed3b6ba9d818fc747b99707317d21dac0a6dbd80c211fa00e8b5",
+      "assertions": 20
+    },
+    {
+      "source": "tests/public-contracts/selected-tijuana/03-migration-crossing-and-partial-errors.ts",
+      "destination": "tests/public-contracts/selected-tijuana/03-migration-crossing-and-partial-errors.ts",
+      "sourceSha256": "07b9c435c9bc4df56af89c4f6a72c859a95cd22887a10b173c66ae4a0e295595",
+      "destinationSha256": "b9dd8e54f19efb20b64b0a4a988d497148f9de49fecf8109a41a078edbcd9f78",
+      "assertions": 31
+    },
+    {
+      "source": "tests/public-contracts/selected-tijuana/04-domain-display-and-node-intervention.ts",
+      "destination": "tests/public-contracts/selected-tijuana/04-domain-display-and-node-intervention.ts",
+      "sourceSha256": "ef0fe18d4214c6059699a448a5eee1a9ae8bf3015dae03f4e7882304072c2d81",
+      "destinationSha256": "7c929cea4137e8e01f13c43458f6beb8360578e9889a52333dcc04b820b01e13",
+      "assertions": 28
+    },
+    {
+      "source": "tests/public-contracts/selected-tijuana/05-growth-reports-and-delayed-errors.ts",
+      "destination": "tests/public-contracts/selected-tijuana/05-growth-reports-and-delayed-errors.ts",
+      "sourceSha256": "98eed9eacd12e70ecfb78c836733d6d4b7823b775f2337b32fc162c2a0ed7ae4",
+      "destinationSha256": "58197764ec977987672373188218f44b22ca98016f24554564fb203635888e98",
+      "assertions": 51
+    },
+    {
+      "source": "tests/public-contracts/selected-transport/02-basic-and-lanes.ts",
+      "destination": "tests/public-contracts/selected-transport/02-basic-and-lanes.ts",
+      "sourceSha256": "6f9979292121a45f02247e5768aafcecbfe1900a7a77f3f893adc65e91901c16",
+      "destinationSha256": "88743504833979095eca66266adbc11755cf8101064e7e8a0f3fe227502622f7",
+      "assertions": 10
+    },
+    {
+      "source": "tests/public-contracts/selected-urban-feedback/03-path-source-setup-and-disturb.ts",
+      "destination": "tests/public-contracts/selected-urban-feedback/03-path-source-setup-and-disturb.ts",
+      "sourceSha256": "f6cf3ce8da4c1c0ea5bc613fc8d80e9e8c23d042fe89337facfdb705ea553010",
+      "destinationSha256": "b8e3966862206481da50c7ad05af1659141aa12546c8b74e1a23a023f91ce587",
+      "assertions": 16
+    },
+    {
+      "source": "tests/public-contracts/selected-urban-feedback/04-cells-snapshot-and-strict-age.ts",
+      "destination": "tests/public-contracts/selected-urban-feedback/04-cells-snapshot-and-strict-age.ts",
+      "sourceSha256": "9bf39776e63ef1c269bafee36809cdf84bb142b962b1650c48e1bfb45f4ce316",
+      "destinationSha256": "31bf07bf20a3bb9bee2e2b1875da22031c9e58c993d25dc1e9bf432f74cd70ef",
+      "assertions": 20
+    },
+    {
+      "source": "tests/public-contracts/selected-urban-feedback/05-defaults-isolation-and-atomic-fixtures.ts",
+      "destination": "tests/public-contracts/selected-urban-feedback/05-defaults-isolation-and-atomic-fixtures.ts",
+      "sourceSha256": "088b607b2dd71bcd25ce128ee246dc1ff7bf1bbdbdff3787ab9f92a1a898e8e5",
+      "destinationSha256": "a4ad2ac507eb321ba79f13f454b92a7e8d69d58541e6ca5aff4d29a4366eb349",
+      "assertions": 16
+    },
+    {
+      "source": "tests/public-contracts/selected-urban-remaining/01-structure-one-impulse-and-noise.ts",
+      "destination": "tests/public-contracts/urban-structure-and-economy/01-structure-one-impulse-and-noise.ts",
+      "sourceSha256": "3b13d0fa6fbc883dd4e05a96dbdda4e77100ef3ba52b11399795d82dcafbe7b8",
+      "destinationSha256": "3b13d0fa6fbc883dd4e05a96dbdda4e77100ef3ba52b11399795d82dcafbe7b8",
+      "assertions": 11
+    },
+    {
+      "source": "tests/public-contracts/selected-urban-remaining/02-structure-two-sticky-activation.ts",
+      "destination": "tests/public-contracts/urban-structure-and-economy/02-structure-two-sticky-activation.ts",
+      "sourceSha256": "1fa3c9b1ca281b9d86638c66a90344b71c6847bdc508ff8a12ef085bc1b0dd5f",
+      "destinationSha256": "1fa3c9b1ca281b9d86638c66a90344b71c6847bdc508ff8a12ef085bc1b0dd5f",
+      "assertions": 10
+    },
+    {
+      "source": "tests/public-contracts/selected-urban-remaining/03-sprawl-conversion-and-cached-threshold.ts",
+      "destination": "tests/public-contracts/urban-structure-and-economy/03-sprawl-conversion-and-cached-threshold.ts",
+      "sourceSha256": "768f91a78790e77804e3e53d1f89c777042fc24f9abe0d755d324b6f572078db",
+      "destinationSha256": "b8642e55c8bb87370e36fb91e3bb1934420e5768db3177ddca189b909a1be465",
+      "assertions": 14
+    },
+    {
+      "source": "tests/public-contracts/selected-urban-remaining/04-economic-oldest-removal-and-median.ts",
+      "destination": "tests/public-contracts/urban-structure-and-economy/04-economic-oldest-removal-and-median.ts",
+      "sourceSha256": "d3c598b973bd4a751a1c46dcad95c0a0ec4c3d134a45b6ad498a4c76608670ea",
+      "destinationSha256": "3af3d1391e3124a045c7c4ea24583c2162b065f535c50e3ec957fdc4b3dffead",
+      "assertions": 7
+    },
+    {
+      "source": "tests/public-contracts/selected-urban-remaining/05-defaults-isolation-and-preflight.ts",
+      "destination": "tests/public-contracts/urban-structure-and-economy/05-defaults-isolation-and-preflight.ts",
+      "sourceSha256": "82b9d38e42b85178c762f3867cc07fa6c1447c9ad016b83933c19d76402d4e24",
+      "destinationSha256": "4bcda6c2c6d2092a47e7e7b1f24a7d4d0427834e4c7ad33b977a612df6f65a3b",
+      "assertions": 12
+    },
+    {
+      "source": "tests/public-contracts/selected-urban-remaining/SHA256SUMS",
+      "destination": "tests/public-contracts/urban-structure-and-economy/SHA256SUMS",
+      "sourceSha256": "5ddea4afdafbea49c194c5bda77e7db50f01815b99cd11a0e60a2530c54c9d71",
+      "destinationSha256": "5ddea4afdafbea49c194c5bda77e7db50f01815b99cd11a0e60a2530c54c9d71",
+      "assertions": 0
+    },
+    {
+      "source": "tests/public-contracts/selected-urban/01-awareness-contact-and-expiry.ts",
+      "destination": "tests/public-contracts/selected-urban/01-awareness-contact-and-expiry.ts",
+      "sourceSha256": "3d38e88cf50ebeee6fad5c43adc7805d5e4a8480813636cf24033cfe8a0b8353",
+      "destinationSha256": "7d758816903139be2c4044f0c49acd7a754d87f7b588e1f8a9d813b5fceaaac7",
+      "assertions": 13
+    },
+    {
+      "source": "tests/public-contracts/selected-urban/02-pollution-phases-and-stop.ts",
+      "destination": "tests/public-contracts/selected-urban/02-pollution-phases-and-stop.ts",
+      "sourceSha256": "bf88bc851d1d97e2c851a3ff66036b4ecccd8c73fb05ba96ad97a91fa05de627",
+      "destinationSha256": "9906bdcde18b4a28422b3be3d53a1ea63726129e9c21df873b836d46ee6f72e5",
+      "assertions": 7
+    },
+    {
+      "source": "tests/public-contracts/selected-urban/03-recycling-order-and-energy.ts",
+      "destination": "tests/public-contracts/selected-urban/03-recycling-order-and-energy.ts",
+      "sourceSha256": "ec0f85f1e647d396af6aab8e1cde03bd1df6eac18f2ad78f457c19a8192c60ce",
+      "destinationSha256": "750c138cca2fa10d04a0f3fd0575cb6de9fef51f6fea61df8451baface6a994f",
+      "assertions": 9
+    },
+    {
+      "source": "tests/public-contracts/selected-urban/04-defaults-isolation-and-validation.ts",
+      "destination": "tests/public-contracts/selected-urban/04-defaults-isolation-and-validation.ts",
+      "sourceSha256": "9424e4b4fe1861673d4ba84c78884b4e86cc5f93671fc602ee46fb4409fa6a5b",
+      "destinationSha256": "df7152946f66b4d4fc70f93efc3c327086536219719b515c36884f582bd15c55",
+      "assertions": 17
+    },
+    {
+      "source": "tests/public-contracts/stats/01-histogram-boundaries.ts",
+      "destination": "tests/public-contracts/stats/01-histogram-boundaries.ts",
+      "sourceSha256": "b7360e47930a2b093a72c3220a9e258679a1bbf7fc317598f783be29e78644a0",
+      "destinationSha256": "5e9e86a8a8c43242debbe9db4bceb3ab586ebddb83d5035ad79c0b5ba27902ef",
+      "assertions": 3
+    },
+    {
+      "source": "tests/public-contracts/stats/05-detached-distributions.ts",
+      "destination": "tests/public-contracts/stats/05-detached-distributions.ts",
+      "sourceSha256": "ac4a29561fde13ee318e3aa15d847cd7333ac1fb9b81b7e4f65e0ae1cea99b5e",
+      "destinationSha256": "82e72fe8cce1e7ef361ea8f1699892438236252e7269faab4497dbdb8c19bb96",
+      "assertions": 3
+    },
+    {
+      "source": "tests/public-contracts/summary/01-population-and-median.ts",
+      "destination": "tests/public-contracts/summary/01-population-and-median.ts",
+      "sourceSha256": "9e770e7b8516f87d7ece86747dd4b733831dfe56d215eb67c9b02ba82bded98a",
+      "destinationSha256": "c0272425768f75ed830d6a9ddbe5f2ce98216211081c16238e785080858f4543",
+      "assertions": 3
+    },
+    {
+      "source": "tests/public-contracts/summary/02-sample-and-empty.ts",
+      "destination": "tests/public-contracts/summary/02-sample-and-empty.ts",
+      "sourceSha256": "02e703bf04a8945d304477152c27365ee31cde114d8abdd746fdbb783cadb043",
+      "destinationSha256": "6ac474952c97aebb1ec90bb89d154f168e020a58eb7da9f451a50ef8c867a6fb",
+      "assertions": 6
+    },
+    {
+      "source": "tests/public-contracts/summary/03-single-pass-and-detachment.ts",
+      "destination": "tests/public-contracts/summary/03-single-pass-and-detachment.ts",
+      "sourceSha256": "6b3cd6f0e5efd3c7ea31a64811e97d50ee7570d97c245577711b786394ac29c8",
+      "destinationSha256": "701d6bb5c66a7c5098b4232364b7a93da9dd46435e212dce3a390115f1c32b46",
+      "assertions": 4
+    },
+    {
+      "source": "tests/public-contracts/quad-layouts/01-finite-hex-refinement.ts",
+      "destination": "tests/public-contracts/quad-layouts/01-finite-hex-refinement.ts",
+      "sourceSha256": "462acd5c97acc6398796b8a5d1a6f26114d416847a7ec53fd386637babbbc086",
+      "destinationSha256": "9d7df796bbc731e4ddc31cce6c200f6e0ec5490b150f0cf7b48c8708fc278c50",
+      "assertions": 14
+    },
+    {
+      "source": "tests/public-contracts/quad-layouts/02-square-target-first-step.ts",
+      "destination": "tests/public-contracts/quad-layouts/02-square-target-first-step.ts",
+      "sourceSha256": "0b5d50ce73b98051739055970f510a39596ce3056e385a4c2d6ad53c31df43fe",
+      "destinationSha256": "576917ef7a68b7c622d3a4df6a1bf22f4232ec72a47f4b76b464aa6988473daf",
+      "assertions": 7
+    },
+    {
+      "source": "tests/public-contracts/quad-layouts/03-validation-and-failure.ts",
+      "destination": "tests/public-contracts/quad-layouts/03-validation-and-failure.ts",
+      "sourceSha256": "cc64741316d84f7eb2791b7d91fdad8684a6c1ca4029633797dd86ecd39c9918",
+      "destinationSha256": "b1cd0e8486f603c30629f2091ed035c25d16f0b51317649a40d4129a5fb1c624",
+      "assertions": 12
+    },
+    {
+      "source": "tests/public-contracts/quad-layouts/04-continuation-and-revisions.ts",
+      "destination": "tests/public-contracts/quad-layouts/04-continuation-and-revisions.ts",
+      "sourceSha256": "595a403be6f177b93c982e178a9f16b0814c57ccbd48628aad42a6c309637727",
+      "destinationSha256": "d3d30e887c97376684bcb8228871fd208a5f2d7a95ffa7cb89b60cebe615d107",
+      "assertions": 17
+    },
+    {
+      "source": "tests/public-contracts/quad-layouts/05-explicit-grid-state-copy.ts",
+      "destination": "tests/public-contracts/quad-layouts/05-explicit-grid-state-copy.ts",
+      "sourceSha256": "36986643335f0b1ebeab796f94b3244c2e34a2453852d40daec8972cdba40454",
+      "destinationSha256": "35e27a0816e556a157b3bd684f4d70947ccfb4820aca592606bc63a88031bf39",
+      "assertions": 17
+    },
+    {
+      "source": "tests/ui/ui-composition/02-readable-observation-projections.ts",
+      "destination": "tests/ui/ui-composition/02-readable-observation-projections.ts",
+      "sourceSha256": "5f957bdda4c6feb92853a9492733227dd99b6bc90b58009e62cb835acf0415c8",
+      "destinationSha256": "21017c7f5d632b6612210a2c1eeb289cf9afac6464159c9a43079d55c44ebc57",
+      "assertions": 2
+    },
+    {
+      "source": "tests/ui/ui-composition/03-namespaced-selection.ts",
+      "destination": "tests/ui/ui-composition/03-namespaced-selection.ts",
+      "sourceSha256": "ce0a523ca48a0e7ee904020eb3a1e55ff3b181ea9d7a3a83a08c3afc523b986e",
+      "destinationSha256": "16b4e34fbb76a9fd9addf0cf524f5e9664712cfdd4825398d31f19351a70ed25",
+      "assertions": 7
+    },
+    {
+      "source": "tests/ui/ui-composition/05-independent-mounts-and-scalar-setters.ts",
+      "destination": "tests/ui/ui-composition/05-independent-mounts-and-scalar-setters.ts",
+      "sourceSha256": "d6c999cdf299001214aeb0ee623b35c865b88e7a8a6060d16b19f89edf6b8512",
+      "destinationSha256": "2edf9f2fad182db976db47cc6ddd418ea333eeeef35418c476b416b4e3d157d6",
+      "assertions": 1
+    },
+    {
+      "source": "tests/ui/ui-composition/README.md",
+      "destination": "tests/ui/ui-composition/README.md",
+      "sourceSha256": "437e40291edf7b724ae4e88184654ccdedde1752c7b68a07fa722f915e56a78b",
+      "destinationSha256": "f4d7e358b9f780d7c5ec2b7ca17246cb4e07dd770b3d8e71c2e680af032b5a7c",
+      "assertions": 0
+    },
+    {
+      "source": "tests/ui/ui-composition/authoring.types.ts",
+      "destination": "tests/ui/ui-composition/authoring-types.ts",
+      "sourceSha256": "0fc112cf50f96f85a0a5a3e0cbf757a614bf7d1a98b879f741a8cac12fef4e1b",
+      "destinationSha256": "0fc112cf50f96f85a0a5a3e0cbf757a614bf7d1a98b879f741a8cac12fef4e1b",
+      "assertions": 0
+    },
+    {
+      "source": "tests/ui/ui-authoring/02-ordered-setup-and-numeric-live.ts",
+      "destination": "tests/ui/ui-authoring/02-ordered-setup-and-numeric-live.ts",
+      "sourceSha256": "273a3e2e83e6902ddbfa7a823f48c1dfc8a40a8e60e9c595d3757d81f545827c",
+      "destinationSha256": "4e92752915e8f2d9c584947f13a61275cf7258fbe81161504cc3bce477b7fffb",
+      "assertions": 0
+    },
+    {
+      "source": "tests/ui/ui-authoring/04-groups-format-and-categories.ts",
+      "destination": "tests/ui/ui-authoring/04-groups-format-and-categories.ts",
+      "sourceSha256": "0b876f87457011fab1d760a157469357f42fda351089c19858878ec50059223e",
+      "destinationSha256": "d3a6753d40d2d5406dedf7e0b2b65a403e0589aa91d964d21779d10afc3c5439",
+      "assertions": 5
+    },
+    {
+      "source": "tests/ui/ui-authoring/05-independent-actions-and-scalar-setters.ts",
+      "destination": "tests/ui/ui-authoring/05-independent-actions-and-scalar-setters.ts",
+      "sourceSha256": "316286e5f157d36f4f2f36c259fc1f07f480a73b1e783da464c6170e9babe8c8",
+      "destinationSha256": "02945d3367e006ed4b3d6800969ab5867834321a4c59e4a637e565fa2d1a4380",
+      "assertions": 1
+    },
+    {
+      "source": "tests/ui/ui-authoring/README.md",
+      "destination": "tests/ui/ui-authoring/README.md",
+      "sourceSha256": "8a54fca4b787962fcd6dde4ac43a1f7a54f71b81ef331d0a75d913fd15c9cf03",
+      "destinationSha256": "339b805e44079b3a66006a70979a619c3308ff578788e9c388e6f5b46b35fbd2",
+      "assertions": 0
+    },
+    {
+      "source": "tests/ui/ui-authoring/assertions.ts",
+      "destination": "tests/ui/ui-authoring/assertions.ts",
+      "sourceSha256": "0eff67ed97fd44529b50422bbc27db16eb61c6fb8d236898f59dbef3d3da34f1",
+      "destinationSha256": "e1e5e2f3f9b6f626cdbbd2ff013df237f9e4d9df19e52fcd4768e1f34dad21c2",
+      "assertions": 7
+    },
+    {
+      "source": "tests/ui/ui-authoring/authoring.types.ts",
+      "destination": "tests/ui/ui-authoring/authoring-types.ts",
+      "sourceSha256": "da695a8c4b011c2d1b4729dd290a9e7145de9723b5d024b825a8e9892117951e",
+      "destinationSha256": "da695a8c4b011c2d1b4729dd290a9e7145de9723b5d024b825a8e9892117951e",
+      "assertions": 0
+    },
+    {
+      "source": "tests/ui/ui-collections/01-store-items.ts",
+      "destination": "tests/ui/ui-collections/01-store-items.ts",
+      "sourceSha256": "39f67eae1b09e496488cf1d150aba3d7ef3f92ceb3cd7e5bdd60e0017879b4f3",
+      "destinationSha256": "c400855d8727fb2ff845adbe63e19000cd6e18b3779f384a48cb9aba67c99b9b",
+      "assertions": 5
+    },
+    {
+      "source": "tests/ui/ui-collections/02-priority-and-retained-capacity.ts",
+      "destination": "tests/ui/ui-collections/02-priority-and-retained-capacity.ts",
+      "sourceSha256": "4bdf263d5676723027bcf092f07908378dd150eab4fb4c8babd1f0f7a1407fe8",
+      "destinationSha256": "a1b6aa0d57f5c735366c948e39843d0e038004eef2aa5fb38a22964ffb497bc7",
+      "assertions": 4
+    },
+    {
+      "source": "tests/ui/ui-collections/03-counts-defaults-and-errors.ts",
+      "destination": "tests/ui/ui-collections/03-counts-defaults-and-errors.ts",
+      "sourceSha256": "b52133a9744c2d736bcd0130fbc95be8219f32ac4714754dbd2132e68b93d3dd",
+      "destinationSha256": "985736418e66c0d7fd260bc6c156fcc3e5b9d840c3bd14d5e1d28cf08ca8a646",
+      "assertions": 8
+    },
+    {
+      "source": "tests/ui/ui-collections/04-selection-and-lifecycle.ts",
+      "destination": "tests/ui/ui-collections/04-selection-and-lifecycle.ts",
+      "sourceSha256": "a503e0d01580722dddd3365fc0e414f5aad0a85fbe5710b5c4242195d74a2022",
+      "destinationSha256": "33338668f965d3330caf1b0c41d0042329ce4fb945d6bccdc0d05849e2043dc0",
+      "assertions": 6
+    },
+    {
+      "source": "tests/ui/ui-collections/README.md",
+      "destination": "tests/ui/ui-collections/README.md",
+      "sourceSha256": "4ced96011d77f4ca4dd831477d09f6667b860ef71eeeb604ba47d0cc3aed5bf8",
+      "destinationSha256": "33a690c311636364027299c98209b1c927d33f798ddaddc72e783f906f63fac2",
+      "assertions": 0
+    },
+    {
+      "source": "tests/ui/ui-collections/authoring.types.ts",
+      "destination": "tests/ui/ui-collections/authoring-types.ts",
+      "sourceSha256": "87398ba78b8ba3694d8b0a917b40658802710505ad0a36a86562f43dbb60106d",
+      "destinationSha256": "87398ba78b8ba3694d8b0a917b40658802710505ad0a36a86562f43dbb60106d",
+      "assertions": 0
+    },
+    {
+      "source": "tests/ui/ui-des-scenes/01-residents-and-clerks.ts",
+      "destination": "tests/ui/ui-des-scenes/01-residents-and-clerks.ts",
+      "sourceSha256": "b6ed9e19a8b88993bdba6cf274f7100b7d36f339e75088ecba5a7882bffec10b",
+      "destinationSha256": "67f99c62709592056e3362b40268166d48f1aa5dc95ae3220087592be7b656dd",
+      "assertions": 7
+    },
+    {
+      "source": "tests/ui/ui-des-scenes/02-bounded-slots.ts",
+      "destination": "tests/ui/ui-des-scenes/02-bounded-slots.ts",
+      "sourceSha256": "c1b591db6ac66bbf802261c2ebdfe758b5a8685f07aea3289059f5709a43c750",
+      "destinationSha256": "0f239a8c985091266d8838f4e39c971ee22558c11d280f2ce396d562c8bde58e",
+      "assertions": 8
+    },
+    {
+      "source": "tests/ui/ui-des-scenes/03-labels-and-legacy-defaults.ts",
+      "destination": "tests/ui/ui-des-scenes/03-labels-and-symbol-defaults.ts",
+      "sourceSha256": "fa5248134a2c62e2558b467fbcedc78247dfad353d419063a1ab5c02daeff7ff",
+      "destinationSha256": "ac2d1b3ffe32c5c885102b2b7cb60c5ea6c7535c72d7b767f0ecb6dd3fb02f87",
+      "assertions": 7
+    },
+    {
+      "source": "tests/ui/ui-live-changes/01-shared-change.ts",
+      "destination": "tests/ui/ui-live-changes/01-shared-change.ts",
+      "sourceSha256": "5fdeccfd136886d5c61cd12ef993a2bcd2ecdf38e700132dd707ca783f797dcd",
+      "destinationSha256": "28b61eee3da754ef072709cde2bc4e60daff1c9017e78b99b4e0a5341df6b409",
+      "assertions": 1
+    },
+    {
+      "source": "tests/ui/ui-live-changes/02-binding-override.ts",
+      "destination": "tests/ui/ui-live-changes/02-binding-override.ts",
+      "sourceSha256": "990ae5306adcd811221f8c68d72d9d5d868f1c4b5769b15365b210e9a1503a9c",
+      "destinationSha256": "850ab20f06560c4486f355b63740bf98af4f5dcf57bd47e5ed11d4596fdd5d1d",
+      "assertions": 1
+    },
+    {
+      "source": "tests/ui/ui-live-changes/04-drafts-errors-and-legacy.ts",
+      "destination": "tests/ui/ui-live-changes/04-drafts-errors-and-array-fields.ts",
+      "sourceSha256": "6dff22a08a99a2da44defba5500c618efe0d6b32327b28073da2b0e4d2507ab1",
+      "destinationSha256": "6dff22a08a99a2da44defba5500c618efe0d6b32327b28073da2b0e4d2507ab1",
+      "assertions": 3
+    },
+    {
+      "source": "tests/ui/ui-live-changes/README.md",
+      "destination": "tests/ui/ui-live-changes/README.md",
+      "sourceSha256": "089d5a9a3b39a2c0144c590d90f79edfda685b1de68e68fb4102e688b13a72f8",
+      "destinationSha256": "fd8d7a4d2b2c2049c5134c233fabeb2f28bf1cb313edd0db5db9328612dbcee1",
+      "assertions": 0
+    },
+    {
+      "source": "tests/ui/ui-live-changes/authoring.types.ts",
+      "destination": "tests/ui/ui-live-changes/authoring-types.ts",
+      "sourceSha256": "d769b83eb656626c5496c9f885bb4aef9d89c53431d270c6ee5147a6a0f454b4",
+      "destinationSha256": "1030659683f7d69eb8e485a9d3e431cd5e6765a46f96c5889bf3c128a4c6f76d",
+      "assertions": 0
+    },
+    {
+      "source": "tests/ui/ui-migration/01-inert-entry.ts",
+      "destination": "tests/ui/ui-migration/01-inert-entry.ts",
+      "sourceSha256": "075bfea17e6fcdac1a2464906876610f05df4b87248086672e91591ef9e3eab4",
+      "destinationSha256": "f1d53554220afcc55770f93692f2bad73b35efd610576f636c4d15e911bb935e",
+      "assertions": 3
+    },
+    {
+      "source": "tests/ui/ui-migration/02-setup-draft.ts",
+      "destination": "tests/ui/ui-migration/02-setup-draft.ts",
+      "sourceSha256": "d3ba40f9f32911f26798499c1d5a88f1ca915efdf8f7bc78b83caa4a528d6d91",
+      "destinationSha256": "79e7419750c3af55b181f8b558a8408144196bec62673058121bf4ff91095c9a",
+      "assertions": 3
+    },
+    {
+      "source": "tests/ui/ui-migration/03-actions-and-live-rules.ts",
+      "destination": "tests/ui/ui-migration/03-actions-and-live-rules.ts",
+      "sourceSha256": "0b27a0813730364bdb1dec541809fa8f7bb8f22ead3cded692e7f9fdea7cffa8",
+      "destinationSha256": "fd8fc27625b8b5f8480cc7d58249ed60d0b6ee79b348028f18a1d43c39e74e55",
+      "assertions": 3
+    },
+    {
+      "source": "tests/ui/ui-migration/04-observation-views.ts",
+      "destination": "tests/ui/ui-migration/04-observation-views.ts",
+      "sourceSha256": "543502e95f01011c11ce0f85aa66dedcf69f1d7bda7845956910d2dc498c30e7",
+      "destinationSha256": "bf5cbb7e4efc31905e595fa55f0c6f25e05426144bf8ce2505ac64282ed93fe1",
+      "assertions": 6
+    },
+    {
+      "source": "tests/ui/ui-migration/05-invalid-rule-and-instance-isolation.ts",
+      "destination": "tests/ui/ui-migration/05-invalid-rule-and-instance-isolation.ts",
+      "sourceSha256": "793620cb1c4b155a72a58713496128eb11e3eea36af3436b4924cd2cb91d4c80",
+      "destinationSha256": "e0a2d535c0579642bc51379555f280a7fe73d1ab5101599f8588c78cae8443f8",
+      "assertions": 4
+    },
+    {
+      "source": "tests/ui/ui-segments/05-optional-empty-and-zero-width.ts",
+      "destination": "tests/ui/ui-segments/05-optional-empty-and-zero-width.ts",
+      "sourceSha256": "44293bd5b8bdcaa5f6777c318c5f55f69e983f531bbab3954689b8b3ce3efa57",
+      "destinationSha256": "f7a49645ad225ae59585602a2e236d347d95baed9b08fe1f53042a5d91611e17",
+      "assertions": 4
+    }
+  ]
+}

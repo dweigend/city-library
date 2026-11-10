@@ -1,7 +1,7 @@
 /** NetLogo Membrane Formation (Wilensky, 2013). Complete notices: NOTICE.md. */
 import { Agent, Graph, Random, World, run, stats } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 
 export interface MembraneParameters {
   seed: number;
@@ -23,7 +23,7 @@ export const inputs: Inputs<MembraneParameters> = {
 };
 type Molecule = Agent<{ group: "water" | "oil"; hydrophilic: boolean }>;
 export function create(options: Partial<MembraneParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const world = World.create({ x: 51, y: 51, boundary: "wrap" }, { random });
   const graph = Graph.create<Molecule>();
@@ -134,7 +134,7 @@ export function create(options: Partial<MembraneParameters> = {}) {
   }
   function go() {
     for (const molecule of random.sample(molecules(), {
-      count: molecules().length,
+      sampleCount: molecules().length,
       algorithm: "fisher-yates-descending",
     })) {
       interactWithNeighbor(molecule);
@@ -142,9 +142,9 @@ export function create(options: Partial<MembraneParameters> = {}) {
       interactWithPartner(molecule);
     }
   }
-  function advance(count = 1) {
-    stepCount(count);
-    for (let index = 0; index < count; index++) {
+  function advance(stepCount = 1) {
+    validateStepCount(stepCount);
+    for (let index = 0; index < stepCount; index++) {
       run(world, go);
       record();
     }
@@ -166,7 +166,7 @@ export function create(options: Partial<MembraneParameters> = {}) {
       )
     )
       throw new TypeError("Only forces are live.");
-    settings = parameters(inputs, { ...settings, ...update });
+    settings = parseParameters(inputs, { ...settings, ...update });
   }
   function read() {
     return {

@@ -3,7 +3,7 @@
  */
 import { Grid, Random, World, geometry, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 
 export interface SmoothLifeParameters {
   width: number;
@@ -89,7 +89,7 @@ export function transition(
   );
 }
 export function create(options: Partial<SmoothLifeParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   if (settings.innerRadius >= settings.outerRadius)
     throw new RangeError("Outer radius must exceed inner radius.");
   const random = Random.create({ seed: settings.seed });
@@ -171,9 +171,9 @@ export function create(options: Partial<SmoothLifeParameters> = {}) {
   }
   for (const field of fields) field.value = random.number() * 0.75;
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) run(world, go);
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) run(world, go);
     },
     setCells(values: readonly number[]) {
       if (!Array.isArray(values) || values.length !== fields.length)
@@ -222,7 +222,7 @@ export function create(options: Partial<SmoothLifeParameters> = {}) {
         )
       )
         throw new TypeError("Supply only live transition/paint values.");
-      settings = parameters(inputs, { ...settings, ...field });
+      settings = parseParameters(inputs, { ...settings, ...field });
     },
     eraseAll() {
       for (const field of fields) field.value = 0;

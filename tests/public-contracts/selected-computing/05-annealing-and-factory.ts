@@ -15,10 +15,10 @@ assert.equal(a.attemptSwap(0,0,1,0),true); // source always accepts atT1 regardl
 const ones=a.read().brightness.reduce((x,y)=>x+y,0);
 a.advance();assert.equal(a.read().tick,1);assert.equal(a.read().temperature,.9);
 assert.equal(a.read().brightness.reduce((x,y)=>x+y,0),ones);
-assert.equal(a.read().attempts,1001); // one explicit attempt since scenario reset +1000 native attempts.
+assert.equal(a.read().attemptCount,1001); // one explicit attempt since scenario reset +1000 native attempts.
 assert.equal(a.read().globalEnergy,Array.from({length:16},(_,i)=>a.energyAt(i%4,Math.floor(i/4))).reduce((x,y)=>x+y,0));
 
-const f=factory({seed:4,numberOfRobots:3,fullCharge:350,makeTrails:false});
+const f=factory({seed:4,robotCount:3,fullCharge:350,makeTrails:false});
 const initial=f.read();assert.equal(initial.robots.length,3);
 assert.equal(initial.machines.length,9);
 assert.equal(initial.machines.find(x=>x.kind==='loading-dock')!.supply,10);

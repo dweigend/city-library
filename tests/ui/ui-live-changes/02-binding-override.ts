@@ -12,7 +12,7 @@ export const spec = {
   monitors: [{ label: 'Duration', value: state => state.parameters.duration }], views: [],
 } as const satisfies ChangeUISpec<VirusParameters, Instance>;
 export const ui = defineUI(model, spec);
-const actual = model.create({ numberPeople: 10, seed: 9 });
+const actual = model.create({ personCount: 10, seed: 9 });
 spec.live.duration.set(actual, 12);
 equal(actual.read().parameters.duration, 13, 'A binding-specific transform remains an explicit public action');
 spec.change(actual, { infectiousness: 40 });
@@ -20,7 +20,7 @@ equal(actual.read().parameters.infectiousness, 40, 'Other fields can use the com
 
 export async function browserChecks(container: HTMLElement, bind: typeof defineUI = defineUI) {
   let defaults = 0;
-  const tracked = { ...model, create: (options?: Partial<VirusParameters>) => model.create({ numberPeople: 10, ...options }) };
+  const tracked = { ...model, create: (options?: Partial<VirusParameters>) => model.create({ personCount: 10, ...options }) };
   const mounted = bind(tracked, { ...spec, change(instance, changes) { defaults++; instance.setParameters(changes); } }).mount(container);
   try {
     await settle(container); button(container, 'Setup').click(); await settle(container);

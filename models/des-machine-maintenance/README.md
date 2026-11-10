@@ -18,7 +18,7 @@ const observation = simulation.read();
 
 | Input | Default |
 | --- | --- |
-| `repairTeams` | `1` |
+| `repairTeamCount` | `1` |
 | `repairMinutes` | `3` |
 | `failureMinutes` | `4` |
 

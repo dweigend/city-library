@@ -57,6 +57,5 @@ const binding = defineUI(model, {
 });
 
 export { model };
-export const sourceMarker =
-  "selected-biology-b07:membrane-formation:4f3a41013090830c53ee055eac6625b1d3fcba981df7ab8d67822af037f7733d";
-export const ui = { ...binding, model, sourceMarker };
+
+export const ui = { ...binding, model };

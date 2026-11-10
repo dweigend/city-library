@@ -1,6 +1,6 @@
 # Turing Machine 2D
 
-Each moving head reads a binary field, follows one of four explicit state/symbol rules, writes and moves. Multiple heads share the tape, so activation order matters; a complex trace does not prove universal computation.
+Each moving head reads a binary field, follows one of four explicit state/symbol rules, writes and moves. Multiple headCount share the tape, so activation order matters; a complex trace does not prove universal computation.
 
 ## Use
 
@@ -25,20 +25,20 @@ const observation = simulation.read();
 | `width` | `151` | integer; ≥ 3; ≤ 301 |
 | `height` | `151` | integer; ≥ 3; ≤ 301 |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
-| `heads` | `32` | integer; ≥ 1; ≤ 256 |
+| `headCount` | `32` | integer; ≥ 1; ≤ 256 |
 | `colorPaths` | `true` | boolean |
 | `example` | `1` | integer; ≥ 1; ≤ 5 |
 | `off0State` | `1` | integer; ≥ 0; ≤ 1 |
-| `off0Turn` | `"Backwards"` | `--`, `Right`, `Backwards`, `Left` |
+| `off0Turn` | `"backwards"` | `straight`, `right`, `backwards`, `left` |
 | `off0On` | `true` | boolean |
 | `off1State` | `0` | integer; ≥ 0; ≤ 1 |
-| `off1Turn` | `"Right"` | `--`, `Right`, `Backwards`, `Left` |
+| `off1Turn` | `"right"` | `straight`, `right`, `backwards`, `left` |
 | `off1On` | `true` | boolean |
 | `on0State` | `0` | integer; ≥ 0; ≤ 1 |
-| `on0Turn` | `"--"` | `--`, `Right`, `Backwards`, `Left` |
+| `on0Turn` | `"straight"` | `straight`, `right`, `backwards`, `left` |
 | `on0On` | `true` | boolean |
 | `on1State` | `1` | integer; ≥ 0; ≤ 1 |
-| `on1Turn` | `"Left"` | `--`, `Right`, `Backwards`, `Left` |
+| `on1Turn` | `"left"` | `straight`, `right`, `backwards`, `left` |
 | `on1On` | `true` | boolean |
 
 ## Actions and observations
@@ -49,7 +49,7 @@ Other instance procedures: `setRules`, `setConfiguration`, `setupExample`. See t
 
 Model-specific `read()` fields include `rules`, `cells`, `agents`.
 
-The [UI binding](ui.ts) presents `Setup example`, `${`, `Tick`, `On cells`, `Tape and heads`, `Head`, `Transition rules`.
+The [UI binding](ui.ts) presents `Setup example`, `${`, `Tick`, `On cells`, `Tape and headCount`, `Head`, `Transition rules`.
 
 ## Sources and acceptance
 

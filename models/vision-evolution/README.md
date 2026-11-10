@@ -23,8 +23,8 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
-| `initialNumberFish` | `50` | integer; ≥ 0; ≤ 250 |
-| `initialNumberFood` | `80` | integer; ≥ 0; ≤ 250 |
+| `initialFishCount` | `50` | integer; ≥ 0; ≤ 250 |
+| `initialFoodCount` | `80` | integer; ≥ 0; ≤ 250 |
 | `energyGainFromFood` | `100` | integer; ≥ 0; ≤ 300 |
 | `foodReplenishRate` | `65` | integer; ≥ 0; ≤ 100 |
 | `mutationRate` | `0.1` | number; ≥ 0; ≤ 1 |

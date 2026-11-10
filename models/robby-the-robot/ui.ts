@@ -16,7 +16,7 @@ export const ui = defineUI(model, {
     mutationRate: {
       label: "Mutation probability",
     },
-    numberOfGenerations: {
+    generationCount: {
       label: "Generation limit",
     },
   },
@@ -24,7 +24,7 @@ export const ui = defineUI(model, {
     {
       label: "One generation to limit",
       run: (m) => m.advanceToLimit(),
-      enabled: (s) => s.tick < s.parameters.numberOfGenerations,
+      enabled: (s) => s.tick < s.parameters.generationCount,
       repeat: { label: "Run to limit", intervalMs: 300 },
     },
     {

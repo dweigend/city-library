@@ -66,25 +66,25 @@ test("no-active and zero-total diffusion keep finite observations and successful
 
 test("Virus allows newly infected nodes to recover in the same completed tick", () => {
   // This target-seed fixture is not a cross-engine seed assertion.
-  const model = createVirus({ seed: 15, numberOfNodes: 10, averageNodeDegree: 1, initialOutbreakSize: 1, spreadChance: 10, recoveryChance: 10, resistanceChance: 100 });
+  const model = createVirus({ seed: 15, nodeCount: 10, averageNodeDegree: 1, initialOutbreakSize: 1, spreadChance: 10, recoveryChance: 10, resistanceChance: 100 });
   model.setConnections([{ from: 0, to: 1 }]);
   model.setStates(Array.from({ length: 10 }, (_, index) => ({ status: index === 0 ? "infected" : index === 1 ? "susceptible" : "resistant", checkTimer: 0 })));
   model.advance();
   expect(model.read().tick).toBe(1);
   expect(model.read().nodes[0]!.status).toBe("infected");
   expect(model.read().nodes[1]!.status).toBe("resistant");
-  expect(model.read().counts).toEqual({ susceptible: 0, infected: 1, resistant: 9 });
+  expect(model.read().counts).toEqual({ susceptibleNodeCount: 0, infectedNodeCount: 1, resistantNodeCount: 9 });
 });
 
 test("Virus freezes spread senders and quantizes fractional recovery with integer draws", () => {
-  const chain = createVirus({ seed: 15, numberOfNodes: 10, averageNodeDegree: 1, initialOutbreakSize: 1, spreadChance: 10, recoveryChance: 0 });
+  const chain = createVirus({ seed: 15, nodeCount: 10, averageNodeDegree: 1, initialOutbreakSize: 1, spreadChance: 10, recoveryChance: 0 });
   chain.setConnections([{ from: 0, to: 1 }, { from: 1, to: 2 }]);
   chain.setStates(Array.from({ length: 10 }, (_, index) => ({ status: index === 0 ? "infected" : index <= 2 ? "susceptible" : "resistant", checkTimer: 0 })));
   chain.advance();
   expect(chain.read().nodes[1]!.status).toBe("infected");
   expect(chain.read().nodes[2]!.status).toBe("susceptible");
-  const fractional = createVirus({ numberOfNodes: 10, averageNodeDegree: 1, initialOutbreakSize: 1, spreadChance: 0, recoveryChance: 0.1, resistanceChance: 100 });
-  const integer = createVirus({ numberOfNodes: 10, averageNodeDegree: 1, initialOutbreakSize: 1, spreadChance: 0, recoveryChance: 1, resistanceChance: 100 });
+  const fractional = createVirus({ nodeCount: 10, averageNodeDegree: 1, initialOutbreakSize: 1, spreadChance: 0, recoveryChance: 0.1, resistanceChance: 100 });
+  const integer = createVirus({ nodeCount: 10, averageNodeDegree: 1, initialOutbreakSize: 1, spreadChance: 0, recoveryChance: 1, resistanceChance: 100 });
   for (const model of [fractional, integer]) {
     model.setConnections([]);
     model.setStates(Array.from({ length: 10 }, () => ({ status: "infected", checkTimer: 0 })));
@@ -92,20 +92,20 @@ test("Virus freezes spread senders and quantizes fractional recovery with intege
   }
   expect(fractional.read().nodes.map(node => [node.status, node.checkTimer])).toEqual(integer.read().nodes.map(node => [node.status, node.checkTimer]));
   expect(fractional.read().randomState).toEqual(integer.read().randomState);
-  expect(fractional.read().counts.resistant).toBeGreaterThan(0);
+  expect(fractional.read().counts.resistantNodeCount).toBeGreaterThan(0);
 });
 
 test("Virus extinction is preflight-only; rule changes preserve timers and permanent resistance", () => {
-  const model = createVirus({ numberOfNodes: 10, averageNodeDegree: 1, initialOutbreakSize: 1, checkFrequency: 20, spreadChance: 10, recoveryChance: 0 });
+  const model = createVirus({ nodeCount: 10, averageNodeDegree: 1, initialOutbreakSize: 1, checkFrequency: 20, spreadChance: 10, recoveryChance: 0 });
   model.setConnections([{ from: 0, to: 1 }]);
   model.setStates(Array.from({ length: 10 }, (_, index) => ({ status: index === 0 ? "infected" : "resistant", checkTimer: 19 })));
   model.setRules({ checkFrequency: 2 });
   expect(model.read().nodes.every(node => node.checkTimer === 19)).toBe(true);
   const identity = model.read().nodes.map(node => node.id);
   model.advance(5);
-  expect(model.read().counts.resistant).toBe(9);
+  expect(model.read().counts.resistantNodeCount).toBe(9);
   expect(model.read().nodes.map(node => node.id)).toEqual(identity);
-  expect(model.read().counts.infected).toBe(1);
+  expect(model.read().counts.infectedNodeCount).toBe(1);
   model.setStates(Array.from({ length: 10 }, () => ({ status: "resistant", checkTimer: 19 })));
   const stopped = model.read();
   model.advance(10);
@@ -113,7 +113,7 @@ test("Virus extinction is preflight-only; rule changes preserve timers and perma
 });
 
 test("network fixtures reject sparse/accessor/malformed data before any mutation or RNG draw", () => {
-  const virus = createVirus({ numberOfNodes: 10, averageNodeDegree: 1, initialOutbreakSize: 1 });
+  const virus = createVirus({ nodeCount: 10, averageNodeDegree: 1, initialOutbreakSize: 1 });
   const original = virus.read();
   expect(() => virus.setStates(Array(10))).toThrow();
   const states = Array.from({ length: 10 }, () => ({ status: "infected" as const, checkTimer: 0 }));
@@ -121,8 +121,8 @@ test("network fixtures reject sparse/accessor/malformed data before any mutation
   expect(() => virus.setStates(states)).toThrow(TypeError);
   expect(() => virus.setConnections([{ from: 0, to: 1 }, { from: 1, to: 0 }])).toThrow();
   expect(() => virus.setRules({ recoveryChance: 0.15 })).toThrow();
-  expect(() => createVirus({ numberOfNodes: 10, averageNodeDegree: 10 })).toThrow();
-  expect(() => createVirus({ numberOfNodes: 10, initialOutbreakSize: 11 })).toThrow();
+  expect(() => createVirus({ nodeCount: 10, averageNodeDegree: 10 })).toThrow();
+  expect(() => createVirus({ nodeCount: 10, initialOutbreakSize: 11 })).toThrow();
   expect(virus.read()).toEqual(original);
   const diffusion = createDiffusion({ gridSize: 3 });
   const before = diffusion.read();

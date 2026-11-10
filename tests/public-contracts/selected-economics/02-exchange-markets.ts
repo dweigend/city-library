@@ -14,13 +14,13 @@ assert.ok(after.totalAmount > 0);
 assert.ok(after.traders.every(t => t.cash >= -1e-8 && t.stockpile >= 0));
 const m = bidding({ seed: 1 }); const before = m.read();
 assert.equal(before.buyers.length, 50); assert.equal(before.sellers.length, 50);
-const supply = before.sellers.reduce((n, s) => n + s.itemsForSale, 0);
-const demand = before.buyers.reduce((n, b) => n + b.wantToBuy, 0);
+const supply = before.sellers.reduce((n, s) => n + s.saleItemCount, 0);
+const demand = before.buyers.reduce((n, b) => n + b.desiredItemCount, 0);
 m.advance(); const first = m.read();
-assert.equal(first.tick, 1); assert.equal(first.totalSales, 0); // initial asks >=50, willingness<=9
-assert.equal(first.sellers.reduce((n, s) => n + s.itemsForSale + s.sold, 0), supply);
+assert.equal(first.tick, 1); assert.equal(first.saleCount, 0); // initial asks >=50, willingness<=9
+assert.equal(first.sellers.reduce((n, s) => n + s.saleItemCount + s.soldItemCount, 0), supply);
 m.advance(99); const last = m.read();
-assert.equal(last.sellers.reduce((n, s) => n + s.itemsForSale + s.sold, 0), supply);
-assert.equal(last.buyers.reduce((n, b) => n + b.wantToBuy + b.bought, 0), demand);
-assert.equal(last.totalSales, last.buyers.reduce((n, b) => n + b.bought, 0));
+assert.equal(last.sellers.reduce((n, s) => n + s.saleItemCount + s.soldItemCount, 0), supply);
+assert.equal(last.buyers.reduce((n, b) => n + b.desiredItemCount + b.purchasedItemCount, 0), demand);
+assert.equal(last.saleCount, last.buyers.reduce((n, b) => n + b.purchasedItemCount, 0));
 console.log("exchange-markets: strict initial no-sale and canonical asset/item accounting");

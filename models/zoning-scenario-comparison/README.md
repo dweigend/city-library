@@ -18,7 +18,7 @@ const observation = simulation.read();
 
 | Input | Default |
 | --- | --- |
-| `parcels` | `12` |
+| `parcelCount` | `12` |
 | `baseCap` | `2` |
 | `seed` | `1` |
 

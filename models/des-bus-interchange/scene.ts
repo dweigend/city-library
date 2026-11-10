@@ -12,10 +12,10 @@ const stops: Readonly<Record<string, DiagramPoint>> = {
 /** Travel progress maps declared route minutes into diagram coordinates only. */
 export function busScene(state: Observation<typeof model>): SpatialData {
   const waiting = state.buses.filter(bus => bus.arrived >= 0 && bus.started < 0);
-  const active = state.buses.filter(bus => bus.started >= 0 && bus.departed < 0);
-  const departed = state.buses.filter(bus => bus.departed >= 0);
+  const active = state.buses.filter(bus => bus.started >= 0 && bus.departedAtMinutes < 0);
+  const departed = state.buses.filter(bus => bus.departedAtMinutes >= 0);
   const traveling = state.buses.filter(bus => bus.arrived < 0);
-  const capacity = state.parameters.berths;
+  const capacity = state.parameters.berthCount;
   const height = Math.max(12, state.buses.length * 0.45 + 5);
   const berthPoint = (index: number) => ({ x: 7 + (index % 2) * 2,
     y: 2 - Math.floor(index / 2) * 1.3 });
@@ -37,7 +37,7 @@ export function busScene(state: Observation<typeof model>): SpatialData {
       const index = waiting.indexOf(bus);
       position = { x: 4.8 + (index % 7) * 0.85, y: -2.5 - Math.floor(index / 7) * 0.8 };
       color = scientificPalette.waiting;
-    } else if (bus.departed < 0) {
+    } else if (bus.departedAtMinutes < 0) {
       const index = active.indexOf(bus);
       position = index < capacity ? berthPoint(index) : { x: 6 + (index - capacity) * 1.3, y: -0.8 };
       color = scientificPalette.active;
@@ -51,7 +51,7 @@ export function busScene(state: Observation<typeof model>): SpatialData {
   }
   return {
     width: 26, height, showLabels: false,
-    description: `${traveling.length} buses traveling on the ${state.travelMinutes}-minute route; ${state.waiting} waiting; ${state.occupied} at berth; ${capacity} berth slots; ${state.departed} departed.`,
+    description: `${traveling.length} buses traveling on the ${state.travelMinutes}-minute route; ${state.waitingBusCount} waiting; ${state.occupiedBerthCount} at berth; ${capacity} berth slots; ${state.departedBusCount} departed.`,
     agents,
     segments: state.edges.map(edge => ({ from: stops[edge.from]!, to: stops[edge.to]!, color: scientificPalette.neutral })),
     labels: [
@@ -62,7 +62,7 @@ export function busScene(state: Observation<typeof model>): SpatialData {
         text: String(state.edgeCosts.find(cost => cost.id === edge.id)!.minutes),
       })),
       { x: 8, y: 3.3, text: "Berths" },
-      ...(state.occupied > capacity ? [{ x: 8, y: 0, text: "Retained service" }] : []),
+      ...(state.occupiedBerthCount > capacity ? [{ x: 8, y: 0, text: "Retained service" }] : []),
     ],
   };
 }

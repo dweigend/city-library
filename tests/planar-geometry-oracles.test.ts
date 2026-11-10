@@ -8,7 +8,7 @@ type P = readonly [number, number];
 const cross = (a: P, b: P) => a[0] * b[1] - a[1] * b[0];
 const sub = (a: P, b: P): P => [a[0] - b[0], a[1] - b[1]];
 const dot = (a: P, b: P) => a[0] * b[0] + a[1] * b[1];
-function segmentIntersection(a: P, b: P, c: P, d: P): boolean {
+function hasSegmentIntersection(a: P, b: P, c: P, d: P): boolean {
   const r = sub(b, a), s = sub(d, c), offset = sub(c, a), denominator = cross(r, s);
   if (denominator !== 0) {
     const t = cross(offset, s) * Math.sign(denominator), u = cross(offset, r) * Math.sign(denominator);
@@ -18,7 +18,7 @@ function segmentIntersection(a: P, b: P, c: P, d: P): boolean {
   const length = dot(r, r), t0 = dot(offset, r), t1 = dot(sub(d, a), r);
   return Math.max(0, Math.min(t0, t1)) <= Math.min(length, Math.max(t0, t1));
 }
-function simple(vertices: readonly P[]): boolean {
+function isSimplePolygon(vertices: readonly P[]): boolean {
   let area2 = 0;
   for (let i = 0; i < vertices.length; i++) {
     const a = vertices[i]!, b = vertices[(i + 1) % vertices.length]!, c = vertices[(i + 2) % vertices.length]!;
@@ -27,7 +27,7 @@ function simple(vertices: readonly P[]): boolean {
     if (cross(sub(b, a), sub(c, b)) === 0 && dot(sub(b, a), sub(c, b)) <= 0) return false;
     for (let j = i + 2; j < vertices.length; j++) {
       if (i === 0 && j === vertices.length - 1) continue;
-      if (segmentIntersection(a, b, vertices[j]!, vertices[(j + 1) % vertices.length]!)) return false;
+      if (hasSegmentIntersection(a, b, vertices[j]!, vertices[(j + 1) % vertices.length]!)) return false;
     }
   }
   return area2 !== 0;
@@ -45,7 +45,7 @@ function winding(vertices: readonly P[], query: P): "boundary" | "inside" | "out
 }
 function exercise(vertices: readonly P[], queries: readonly P[]): void {
   const polygon: PlanarPolygon = { type: "Polygon", coordinates: [[...vertices, vertices[0]!]] };
-  const valid = simple(vertices);
+  const valid = isSimplePolygon(vertices);
   if (!valid) {
     expect(() => geometry.bounds([{ type: "Feature", geometry: polygon, properties: null }])).toThrow(RangeError);
     expect(() => geometry.contains(polygon, { x: -100, y: -100 })).toThrow(RangeError);

@@ -16,8 +16,8 @@ export const spec = {
   views: [],
 } as const satisfies ChangeUISpec<WolfSheepParameters, Instance>;
 export const ui = defineUI(model, spec);
-const actual = model.create({ initialSheep: 2, initialWolves: 1, seed: 17 });
-const independent = model.create({ initialSheep: 2, initialWolves: 1, seed: 17 });
+const actual = model.create({ initialSheepCount: 2, initialWolfCount: 1, seed: 17 });
+const independent = model.create({ initialSheepCount: 2, initialWolfCount: 1, seed: 17 });
 const before = independent.read();
 spec.change(actual, { sheepGain: 7 });
 equal(actual.read().parameters.sheepGain, 7, 'One explicit public action changes food gain');
@@ -26,7 +26,7 @@ equal(independent.read().randomState, before.randomState, 'An independent model 
 
 export async function browserChecks(container: HTMLElement, bind: typeof defineUI = defineUI) {
   const calls: Partial<WolfSheepParameters>[] = [];
-  const tracked = { ...model, create: (options?: Partial<WolfSheepParameters>) => model.create({ initialSheep: 2, initialWolves: 1, ...options }) };
+  const tracked = { ...model, create: (options?: Partial<WolfSheepParameters>) => model.create({ initialSheepCount: 2, initialWolfCount: 1, ...options }) };
   const mounted = bind(tracked, { ...spec, change(instance, changes) {
     calls.push({ ...changes }); instance.setRules(changes);
   } }).mount(container);

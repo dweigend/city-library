@@ -1,7 +1,7 @@
 /** NetLogo Language Change (2007), Uri Wilensky, CC BY-NC-SA 3.0; see NOTICE.md. */
 import { Agent, Graph, Random, World, run } from 'city-library';
 import type { Definition, Inputs } from '../definition.ts';
-import { parameters, stepCount } from '../parameters.ts';
+import { parseParameters, validateStepCount } from '../parameters.ts';
 export interface LanguageChangeParameters {
   seed: number;
   nodeCount: number;
@@ -39,7 +39,7 @@ type Node = Agent<{
   spokenState: number;
 }>;
 export function create(options: Partial<LanguageChangeParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed }),
     world = World.create({ x: 91, y: 91, boundary: 'hard' }, { random }),
     graph = Graph.create<Node>();
@@ -64,7 +64,7 @@ export function create(options: Partial<LanguageChangeParameters> = {}) {
   function distribute() {
     for (const a of nodes) a.state = 0;
     for (const a of random.sample(nodes, {
-      count: Math.floor((settings.percentGrammar1 / 100) * settings.nodeCount),
+      sampleCount: Math.floor((settings.percentGrammar1 / 100) * settings.nodeCount),
     }))
       a.state = 1;
     for (const a of nodes) {
@@ -87,14 +87,14 @@ export function create(options: Partial<LanguageChangeParameters> = {}) {
   }
   const history: Readonly<{
     tick: number;
-    grammar0: number;
-    grammar1: number;
+    grammar0SpeakerCount: number;
+    grammar1SpeakerCount: number;
     meanState: number;
   }>[] = [];
   function counts() {
     return {
-      grammar0: nodes.filter((a) => a.state === 0).length,
-      grammar1: nodes.filter((a) => a.state === 1).length,
+      grammar0SpeakerCount: nodes.filter((a) => a.state === 0).length,
+      grammar1SpeakerCount: nodes.filter((a) => a.state === 1).length,
       meanState: nodes.reduce((s, a) => s + a.state, 0) / nodes.length,
     };
   }
@@ -104,12 +104,12 @@ export function create(options: Partial<LanguageChangeParameters> = {}) {
   }
   record();
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) {
         run(world, () => {
           for (const a of random.sample(nodes, {
-            count: nodes.length,
+            sampleCount: nodes.length,
             algorithm: 'fisher-yates-descending',
           })) {
             const neighbors = graph.neighbors(a);
@@ -128,7 +128,7 @@ export function create(options: Partial<LanguageChangeParameters> = {}) {
                 : Math.min(1, 1.5 * a.state);
               a.spokenState = random.number() <= p ? 1 : 0;
               for (const listener of random.sample(neighbors, {
-                count: neighbors.length,
+                sampleCount: neighbors.length,
                 algorithm: 'fisher-yates-descending',
               })) {
                 const choseOne = random.number() <= listener.state;
@@ -183,7 +183,7 @@ export function create(options: Partial<LanguageChangeParameters> = {}) {
         )
       )
         throw new TypeError('Supply only live parameter data.');
-      settings = parameters(inputs, { ...settings, ...values });
+      settings = parseParameters(inputs, { ...settings, ...values });
     },
     read() {
       return Object.freeze({

@@ -9,7 +9,7 @@ assert.equal(model.read().counts.on, 5); // four faces, frozen predicate selecti
 assert.equal(model.read().tick, 1);
 assert.ok(model.read().cells.filter(cell => cell.on).every(cell => cell.onTime === 0));
 model.advance();
-assert.equal(model.read().counts.on, 9); // diagonals have two on neighbors, excluded by '= 1'
+assert.equal(model.read().counts.on, 9); // diagonals have two on neighbors, excluded by 'exactly-one'
 
 const aging = create({ probability: 0, ageLimit: 1 });
 aging.advance(2);

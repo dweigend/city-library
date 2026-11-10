@@ -22,7 +22,7 @@ describe("Simulated Annealing native rules", () => {
     expect(fieldEnergy(0, 1, 1, 0, 0)).toBe(4);
     expect(fieldEnergy(0, 0, 0, 1, 1)).toBe(0);
     a.advance(3);
-    expect(a.read().attempts).toBe(3000);
+    expect(a.read().attemptCount).toBe(3000);
     expect(a.read().temperature).toBeCloseTo(0.99 ** 3, 14);
     expect(a.read().brightness.reduce((x, y) => x + y, 0)).toBe(450);
   });
@@ -243,8 +243,8 @@ describe("Robotic Factory canonical source quirks", () => {
     expect(s.machines).toHaveLength(9);
     expect(s.robots).toHaveLength(5);
     expect(s.robots.every((r) => r.energy === 350)).toBe(true);
-    expect(s.newSheets).toBe(10);
-    expect(s.productsReady).toBe(0);
+    expect(s.newSheetCount).toBe(10);
+    expect(s.readyProductCount).toBe(0);
     expect(s.tick).toBe(0);
     const r = s.robots[0]!,
       d = s.machines.find((m) => m.kind === "loading-dock")!;
@@ -268,7 +268,7 @@ describe("Robotic Factory canonical source quirks", () => {
     expect(now.energy).toBe(98);
   });
   test("finisher queued>1 startup and four/seven countdown; finish called publicly has no tick", () => {
-    const f = factory({ numberOfRobots: 3 });
+    const f = factory({ robotCount: 3 });
     const fin = f
       .read()
       .machines.find((m) => m.kind === "finisher" && m.deluxeLevel === 1)!;
@@ -292,7 +292,7 @@ describe("Robotic Factory canonical source quirks", () => {
     expect(f.read().tick).toBe(0);
   });
   test("invalid destination errors retain partial state and do not tick", () => {
-    const f = factory({ numberOfRobots: 3 });
+    const f = factory({ robotCount: 3 });
     const s = f.read(),
       r = s.robots[0]!,
       c = s.machines.find((m) => m.kind === "cutter")!;
@@ -306,7 +306,7 @@ describe("Robotic Factory canonical source quirks", () => {
     expect(f.read().machines.find((m) => m.id === c.id)!.product).toBe(1);
   });
   test("read and rejected intervention preserve canonical state/RNG; fullCharge is live", () => {
-    const f = factory({ numberOfRobots: 3 }),
+    const f = factory({ robotCount: 3 }),
       s = f.read();
     expect(() =>
       f.setScenario({ robots: [{ ...s.robots[0]!, x: 100 }] }),
@@ -317,6 +317,6 @@ describe("Robotic Factory canonical source quirks", () => {
     f.setParameters({ fullCharge: 5 });
     expect(f.read().robots.every((r) => r.energy === 350)).toBe(true);
     expect(f.read().parameters.fullCharge).toBe(5);
-    expect(() => f.setParameters({ numberOfRobots: 4 })).toThrow();
+    expect(() => f.setParameters({ robotCount: 4 })).toThrow();
   });
 });

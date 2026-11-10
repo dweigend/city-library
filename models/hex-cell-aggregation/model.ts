@@ -3,7 +3,7 @@
  */
 import { Grid, Random, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 
 export interface HexParameters {
   width: number;
@@ -42,7 +42,7 @@ export const inputs: Inputs<HexParameters> = {
   sixNeighbors: { kind: "boolean", default: true },
 };
 export function create(options: Partial<HexParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   if (settings.width % 2 !== 1 || settings.height % 2 !== 1)
     throw new RangeError("Hex source coordinates require odd dimensions.");
   const random = Random.create({ seed: settings.seed });
@@ -137,9 +137,9 @@ export function create(options: Partial<HexParameters> = {}) {
   for (const field of fields) updateEligibility(field);
   becomeAlive(grid.fieldAt({ x: 0, y: 0 })!);
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count && eligibles.size; i++)
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount && eligibles.size; i++)
         run(world, () => {
           // Source one-of eligibles: uniform over eligible identities, one activation.
           becomeAlive(random.sample(eligibles)[0]!);
@@ -161,7 +161,7 @@ export function create(options: Partial<HexParameters> = {}) {
         )
       )
         throw new TypeError("Supply only pending neighbor switches.");
-      settings = parameters(inputs, { ...settings, ...field });
+      settings = parseParameters(inputs, { ...settings, ...field });
       // Source edits do not apply until read-switches or setup.
     },
     read() {

@@ -1,0 +1,21 @@
+{
+  "model": "sex-ratio-equilibrium",
+  "markers": [
+    {
+      "sourceMarker": "b08-sex-ratio-equilibrium-source-composition-v1",
+      "originalLocations": [
+        {
+          "path": "models/sex-ratio-equilibrium/model.ts",
+          "line": 5,
+          "kind": "model-export"
+        },
+        {
+          "path": "models/sex-ratio-equilibrium/model.ts",
+          "line": 325,
+          "kind": "observation-shorthand",
+          "reference": "sourceMarker"
+        }
+      ]
+    }
+  ]
+}

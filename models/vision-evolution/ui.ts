@@ -2,7 +2,7 @@ import { defineUI, type Observation, type SpatialData, type Series } from "../..
 
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: ["seed", "initialNumberFish", "initialNumberFood"],
+  setup: ["seed", "initialFishCount", "initialFoodCount"],
   change: (instance, changes) => instance.setParameters(changes),
   live: {
     energyGainFromFood: {},

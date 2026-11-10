@@ -39,12 +39,12 @@ describe("selected transport source rules", () => {
   });
 
   test("Basic clamps speed and respects setup-only population", () => {
-    const model = basic({ seed: 1, numberOfCars: 1, acceleration: 0.0099 });
+    const model = basic({ seed: 1, carCount: 1, acceleration: 0.0099 });
     model.step(200);
     expect(model.snapshot().cars[0]!.speed).toBe(1);
     expect(model.snapshot().cars[0]!.x).toBeGreaterThanOrEqual(-25.5);
     expect(model.snapshot().cars[0]!.x).toBeLessThan(25.5);
-    expect(() => model.setParameters({ numberOfCars: 2 } as never)).toThrow();
+    expect(() => model.setParameters({ carCount: 2 } as never)).toThrow();
     const before = model.snapshot();
     expect(model.snapshot()).toEqual(before);
     expect(model.step(0)).toBe(0);
@@ -52,14 +52,14 @@ describe("selected transport source rules", () => {
   });
 
   test("Two lanes preserves selected car when shrinking a live population", () => {
-    const model = lanes({ numberOfCars: 10 });
+    const model = lanes({ carCount: 10 });
     const selected = model.snapshot().cars[3]!.id;
     model.selectCar(selected);
-    model.setParameters({ numberOfCars: 1 });
+    model.setParameters({ carCount: 1 });
     model.step();
     expect(model.snapshot().cars.map((car) => car.id)).toEqual([selected]);
     expect(model.snapshot().selectedCarId).toBe(selected);
-    model.setParameters({ numberOfCars: 82 });
+    model.setParameters({ carCount: 82 });
     model.step();
     expect(model.snapshot().cars).toHaveLength(82);
     expect(

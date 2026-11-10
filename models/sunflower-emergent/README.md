@@ -27,7 +27,7 @@ const observation = simulation.read();
 | `particleSize` | `1.8` | number; ≥ 0.1; ≤ 3 |
 | `fixedTemps` | `false` | boolean |
 | `showTemps` | `true` | boolean |
-| `energyApproximation` | `"inverse distance"` | `inverse distance`, `exponential` |
+| `energyApproximation` | `"inverse-distance"` | `inverse-distance`, `exponential` |
 | `alpha` | `3` | number; ≥ 1; ≤ 3 |
 | `beta` | `0.6` | number; ≥ 0; ≤ 1 |
 

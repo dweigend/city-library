@@ -47,8 +47,8 @@ assert.equal(replacement, invalidated.bob);
 assert.equal(replacementAccepted, true);
 assert.equal(duplicateAccepted, false);
 assert.deepEqual(untouchedReversed, initial);
-assert.deepEqual(firstResult, { inventory: 0, alice: 1, bob: 0, unmet: 1 });
-assert.deepEqual(reversedResult, { inventory: 0, alice: 0, bob: 1, unmet: 1 });
+assert.deepEqual(firstResult, { inventoryUnitCount: 0, aliceReceivedUnitCount: 1, bobReceivedUnitCount: 0, unmetUnitCount: 1 });
+assert.deepEqual(reversedResult, { inventoryUnitCount: 0, aliceReceivedUnitCount: 0, bobReceivedUnitCount: 1, unmetUnitCount: 1 });
 assert.deepEqual(invalidatedResult, reversedResult);
 assert.deepEqual(observe(first), firstResult);
 assert.deepEqual(observe(first), firstResult);
@@ -60,7 +60,7 @@ for (const model of [first, reversed, invalidated]) assertBalance(model);
 function assertBalance(model: Allocation) {
   const result = observe(model);
 
-  assert.equal(result.inventory + result.alice + result.bob, 1);
-  assert.ok(result.inventory >= 0 && result.alice >= 0 && result.bob >= 0);
-  assert.ok(result.alice + result.bob <= 1);
+  assert.equal(result.inventoryUnitCount + result.aliceReceivedUnitCount + result.bobReceivedUnitCount, 1);
+  assert.ok(result.inventoryUnitCount >= 0 && result.aliceReceivedUnitCount >= 0 && result.bobReceivedUnitCount >= 0);
+  assert.ok(result.aliceReceivedUnitCount + result.bobReceivedUnitCount <= 1);
 }

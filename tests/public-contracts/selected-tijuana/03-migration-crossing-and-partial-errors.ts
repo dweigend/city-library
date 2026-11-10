@@ -13,7 +13,7 @@ model.setScenario(scene(model, {
 }));
 const parentId = model.read().agents.find(item => item.kind === "migrant")!.id;
 model.advance(); const state = model.read();
-assert.equal(state.tick, 1); assert.equal(state.counts.migrants, 2);
+assert.equal(state.tick, 1); assert.equal(state.counts.migrantCount, 2);
 const parent = state.agents.find(item => item.id === parentId)!;
 const child = state.agents.find(item => item.kind === "migrant" && item.id !== parentId)!;
 assert.ok(parent.kind === "migrant" && child.kind === "migrant");
@@ -33,7 +33,7 @@ crossed.setScenario(scene(crossed, {
   globals: globals({ crossed: 0 }), agents: [service(), job(), migrant()],
 }));
 crossed.advance(); assert.equal(crossed.read().tick, 1);
-assert.equal(crossed.read().counts.migrants, 0); assert.equal(crossed.read().globals.crossed, 1);
+assert.equal(crossed.read().counts.migrantCount, 0); assert.equal(crossed.read().globals.crossed, 1);
 const successfulHistory = crossed.read().history.length;
 assert.throws(() => crossed.advance(), /empty|max/i);
 const failed = crossed.read();

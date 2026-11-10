@@ -1,20 +1,20 @@
 /** Original bipartite membership teaching example; no demographic or commuting inference. */
 import { Agent, Graph, World, run, measurements, storage } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 
 export interface MembershipParameters {
-  residents: number;
+  residentCount: number;
 }
 
 export const inputs: Inputs<MembershipParameters> = {
-  residents: { kind: "number", default: 6, min: 2, max: 20, integer: true },
+  residentCount: { kind: "number", default: 6, min: 2, max: 20, integer: true },
 };
 
 export function create(options: Partial<MembershipParameters> = {}) {
-  const settings = parameters(inputs, options);
+  const settings = parseParameters(inputs, options);
   const world = World.create();
-  const residents = Array.from({ length: settings.residents }, (_, index) =>
+  const residents = Array.from({ length: settings.residentCount }, (_, index) =>
     world.add(Agent.create({ label: `Resident ${index + 1}` })),
   );
   const householdA = { id: "household-a", label: "Household A", kind: "household" };
@@ -33,9 +33,9 @@ export function create(options: Partial<MembershipParameters> = {}) {
     membership.edges.add({ from: resident, to: firstGroup ? workplaceA : workplaceB });
   });
   const measure = measurements.define((graph: typeof membership) => ({
-    memberships: graph.edges.size,
-    householdA: graph.neighbors(householdA).length,
-    workplaceA: graph.neighbors(workplaceA).length,
+    membershipCount: graph.edges.size,
+    householdAMemberCount: graph.neighbors(householdA).length,
+    workplaceAMemberCount: graph.neighbors(workplaceA).length,
   }));
   const history = storage.history({ capacity: 120 });
   function record() {
@@ -53,9 +53,9 @@ export function create(options: Partial<MembershipParameters> = {}) {
   }
   record();
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let index = 0; index < count; index += 1) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let index = 0; index < stepCount; index += 1) {
         run(world, () => {
           reassignResident(world.tick.value % residents.length);
         });

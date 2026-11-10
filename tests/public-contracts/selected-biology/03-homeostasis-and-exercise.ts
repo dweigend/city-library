@@ -21,7 +21,7 @@ body.setParameters({ metabolicRate: 100 });
 body.advance();
 assert.equal(body.read().totalGlucose, total + 724);
 
-const tissue = muscle({ seed: 4, slowTwitchFibers: 100, lift: false });
+const tissue = muscle({ seed: 4, slowTwitchFiberPercent: 100, lift: false });
 assert.equal(tissue.read().fibers.length, 289);
 assert.ok(tissue.read().fibers.every(fiber => fiber.maxSize === 4 && fiber.fiberSize >= 1 && fiber.fiberSize <= 4));
 tissue.advance(5);

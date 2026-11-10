@@ -1,7 +1,7 @@
 /** Rand & Wilensky (2006), CC BY-NC-SA 3.0. Exact source and notices adjacent. */
 import { Graph, Random, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export type TruthFunction = "or" | "xor" | "and" | "nor" | "nand";
 export interface Parameters {
   seed: number;
@@ -74,7 +74,7 @@ export function sign(value: number, threshold = 0) {
   return value > threshold ? 1 : -1;
 }
 export function create(options: Partial<Parameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed }),
     world = World.create({ random });
   const graph = Graph.create<
@@ -184,19 +184,19 @@ export function create(options: Partial<Parameters> = {}) {
     updateWeights,
     trainExample,
     decisionBoundary,
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) {
         run(world, train);
         history.push({ tick: world.tick.value, error: epochError });
         if (history.length > 1001) history.shift();
       }
     },
     setParameters(changes: Partial<Omit<Parameters, "seed">>) {
-      parameters(inputs, changes);
+      parseParameters(inputs, changes);
       if (Object.hasOwn(changes, "seed"))
         throw new TypeError("Seed is setup-only.");
-      settings = parameters(inputs, { ...settings, ...changes });
+      settings = parseParameters(inputs, { ...settings, ...changes });
     },
     setScenario(s: { weights: readonly number[]; inputs: readonly number[] }) {
       if (

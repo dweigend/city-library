@@ -1,6 +1,6 @@
 # Write a model
 
-Start with a small rule you can run and inspect. An experiment pairs a headless model with a UI declaration that reads observations and calls public actions. This guide follows a growing-network model, then shows how to add your own.
+Start with a small rule you can run and inspect. A model pairs a headless model with a UI declaration that reads observations and calls public actions. This guide follows a growing-network model, then shows how to add your own.
 
 ## Follow a growing network
 
@@ -16,12 +16,12 @@ The example runs without a browser. This excerpt uses paths relative to `tests/p
 
 ```ts
 import assert from "node:assert/strict";
-import { model } from "../../models/preferential-attachment/model.ts";
+import { model } from "../../../models/preferential-attachment/model.ts";
 
-const simulation = model.create({ seed: 7 });
-assert.equal(simulation.read().nodeCount, 2);
-simulation.advance(8);
-const observation = simulation.read();
+const modelInstance = model.create({ seed: 7 });
+assert.equal(modelInstance.read().nodeCount, 2);
+modelInstance.advance(8);
+const observation = modelInstance.read();
 assert.equal(observation.tick, 8);
 assert.equal(observation.nodeCount, 10);
 assert.equal(observation.edgeCount, 9);
@@ -35,7 +35,7 @@ assert.equal(observation.edgeCount, 9);
 
 Use the existing `defineUI(model, spec)` contract. Keep short property projections inline and place longer named projections below the declaration. Use `Observation<typeof model>` from the public UI entrypoint to type a named projection. Keep public actions explicit and typed. Keep numeric measurements in monitor getters and format only the display, for example `format: (value: number) => value.toFixed(3)`. Give unrelated projected entities different IDs; use kind prefixes when source IDs overlap. [The UI reference](../ui/api-reference.md) explains the public contracts and compatibility forms.
 
-## Add a bounded experiment
+## Add a bounded model
 
 1. State what setup creates, what one step does, how it advances tick and what can be changed while running. Record units, boundaries, random draws and failure behavior.
 2. Write and freeze four or five asserted public examples for the capability before new runtime capabilities. Follow [the example-first gate](../../PLAN.md#example-first-delivery-gate); reuse existing public capabilities where they already express the model.

@@ -26,8 +26,8 @@ Call `advanceCityscape(count)` in bounded batches and inspect `read().setupDone`
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
-| `maquiladoras` | `8` | integer; ≥ 1; ≤ 8 |
-| `serviceCenters` | `3` | integer; ≥ 1; ≤ 3 |
+| `maquiladoraCount` | `8` | integer; ≥ 1; ≤ 8 |
+| `serviceCenterCount` | `3` | integer; ≥ 1; ≤ 3 |
 | `migrationTicks` | `3` | integer; ≥ 1; ≤ 20 |
 | `crossingTicks` | `15` | integer; ≥ 1; ≤ 20 |
 | `buildingTicks` | `6` | number; ≥ 0.5; ≤ 6 |
@@ -35,7 +35,7 @@ Call `advanceCityscape(count)` in bounded batches and inspect `read().setupDone`
 | `coloniaSize` | `2` | number; ≥ 0; ≤ 2 |
 | `requiredCapital` | `500` | number; ≥ 150; ≤ 1200 |
 | `carryingCapacity` | `6` | integer; ≥ 1; ≤ 6 |
-| `visualUpdate` | `"off"` | `off`, `elevation`, `land value gradient`, `colonias`, `units with no water`, `units with no electricity` |
+| `visualUpdate` | `"off"` | `off`, `elevation`, `land-value-gradient`, `colonias`, `units-with-no-water`, `units-with-no-electricity` |
 | `colorCode` | `true` | boolean |
 | `cityGrowth` | `false` | boolean |
 

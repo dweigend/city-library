@@ -1,7 +1,7 @@
 /** Synthetic collection tour. Six fields start with two load units each; time is minutes. */
 import { Agent, Agenda, Grid, Resource, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 
 export interface WasteParameters { loadCapacity: number; unloadMinutes: number }
 export const inputs: Inputs<WasteParameters> = {
@@ -9,7 +9,7 @@ export const inputs: Inputs<WasteParameters> = {
   unloadMinutes: { kind: "number", default: 2, min: 1, max: 10, integer: true },
 };
 export function create(options: Partial<WasteParameters> = {}) {
-  const settings = parameters(inputs, options);
+  const settings = parseParameters(inputs, options);
   const world = World.create();
   const grid = Grid.create({ x: 3, y: 2 }, { state: { waste: 2 } });
   const truck = Agent.create({ load: 0 });
@@ -18,7 +18,7 @@ export function create(options: Partial<WasteParameters> = {}) {
   const depot = Resource.create<typeof truck>({ capacity: 1 });
   let unloading: ReturnType<typeof depot.request> | undefined;
   let fieldIndex = 0;
-  let delivered = 0;
+  let deliveredWasteUnitCount = 0;
   let done = false;
   const history: { x: number; y: number }[] = [];
   agenda.add({ at: 1, data: { kind: "collect" } });
@@ -38,8 +38,8 @@ export function create(options: Partial<WasteParameters> = {}) {
     } else agenda.add({ at: agenda.time + 1, data: { kind: "collect" } });
   }
   return {
-    advance(count = 1) {
-      stepCount(count);
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
       run(world, () => {
         const until = agenda.time + 1;
         let events = 0;
@@ -49,7 +49,7 @@ export function create(options: Partial<WasteParameters> = {}) {
           if (!event) break;
           if (event.data.kind === "collect") collect();
           else {
-            delivered += truck.load;
+            deliveredWasteUnitCount += truck.load;
             truck.load = 0;
             depot.release(unloading!);
             unloading = undefined;
@@ -57,15 +57,15 @@ export function create(options: Partial<WasteParameters> = {}) {
             if (!done) agenda.add({ at: agenda.time + 1, data: { kind: "collect" } });
           }
         }
-        history.push({ x: agenda.time, y: delivered });
+        history.push({ x: agenda.time, y: deliveredWasteUnitCount });
         if (history.length > 300) history.shift();
-      }, count);
+      }, stepCount);
     },
     read() {
       return {
         tick: world.tick.value, time: agenda.time, parameters: { ...settings }, done,
-        remaining: grid.fields.reduce((sum, field) => sum + field.waste, 0),
-        carried: truck.load, delivered, depotBusy: depot.used,
+        remainingWasteUnitCount: grid.fields.reduce((sum, field) => sum + field.waste, 0),
+        carriedWasteUnitCount: truck.load, deliveredWasteUnitCount: deliveredWasteUnitCount, busyDepotCount: depot.used,
         truck: { id: truck.id, x: truck.x, y: truck.y },
         fields: grid.fields.map((field) => ({ id: field.id, x: field.x, y: field.y, waste: field.waste })),
         history: history.map((point) => ({ ...point })),

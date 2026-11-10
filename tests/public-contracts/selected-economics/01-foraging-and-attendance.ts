@@ -4,7 +4,7 @@ import { create as bar, predictAttendance } from "../../../models/el-farol/model
 // Source genome partitions: intelligence=min(A,B), speed=|A-B|, strength=60-max(A,B).
 assert.deepEqual(genomeTraits(Array(240).fill(0)), { intelligence: 0, speed: 0, strength: 60, reactiveAggression: 0, proactiveAggression: 0 });
 assert.deepEqual(genomeTraits(Array(240).fill(1)), { intelligence: 60, speed: 0, strength: 0, reactiveAggression: 60, proactiveAggression: 60 });
-const f = fruit({ initialForagers: 1, initialFruitBushes: 0, bushGrowthChance: 0, maxAge: 1, seed: 1 });
+const f = fruit({ initialForagerCount: 1, initialFruitBushCount: 0, bushGrowthChance: 0, maxAge: 1, seed: 1 });
 assert.equal(f.read().foragers.length, 1);
 f.advance(); assert.equal(f.read().tick, 1); assert.equal(f.read().foragers.length, 1);
 f.advance(); assert.equal(f.read().tick, 2); assert.equal(f.read().foragers.length, 0);

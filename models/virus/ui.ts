@@ -5,7 +5,7 @@ import { model } from "./model.ts";
 const numbers = new Intl.NumberFormat("en", { maximumFractionDigits: 3 });
 
 const binding = defineUI(model, {
-  setup: ["seed", "numberPeople"],
+  setup: ["seed", "personCount"],
   change: (instance, changes) => instance.setParameters(changes),
   live: {
     infectiousness: {},
@@ -50,9 +50,8 @@ const binding = defineUI(model, {
 });
 
 export { model };
-export const sourceMarker =
-  "selected-disease-gene-b09:virus:43e370765de7a5601d5b39e40904372016289974c24c94de32634132c3692683";
-export const ui = { ...binding, model, sourceMarker };
+
+export const ui = { ...binding, model };
 
 type UIObservation = Observation<typeof model>;
 
@@ -76,7 +75,7 @@ function historySeries(state: UIObservation): readonly Series[] {
       color: "#408dde",
       points: state.history.map((point) => ({
         x: point.tick,
-        y: Number(point.population),
+        y: Number(point.personCount),
       })),
     },
     {
@@ -84,7 +83,7 @@ function historySeries(state: UIObservation): readonly Series[] {
       color: "#df4545",
       points: state.history.map((point) => ({
         x: point.tick,
-        y: Number(point.infected),
+        y: Number(point.infectedPersonCount),
       })),
     },
     {
@@ -92,7 +91,7 @@ function historySeries(state: UIObservation): readonly Series[] {
       color: "#888888",
       points: state.history.map((point) => ({
         x: point.tick,
-        y: Number(point.immune),
+        y: Number(point.immunePersonCount),
       })),
     },
   ];

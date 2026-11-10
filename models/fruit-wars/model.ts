@@ -1,18 +1,18 @@
 /** NetLogo Fruit Wars, Wilensky 2019; CC BY-NC-SA 3.0, see NOTICE.md. */
 import { Agent, Grid, Random, World, run, stats } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 type Visualization =
-  | "None"
-  | "Reactive Aggression"
-  | "Proactive Aggression"
-  | "Strength"
-  | "Speed"
-  | "Intelligence";
+  | "none"
+  | "reactive-aggression"
+  | "proactive-aggression"
+  | "strength"
+  | "speed"
+  | "intelligence";
 export interface Parameters {
   seed: number;
-  initialFruitBushes: number;
-  initialForagers: number;
+  initialFruitBushCount: number;
+  initialForagerCount: number;
   ticksToFlee: number;
   rateOfMutation: number;
   collaborationBonus: number;
@@ -23,14 +23,14 @@ export interface Parameters {
 }
 export const inputs: Inputs<Parameters> = {
   seed: { kind: "number", default: 1, integer: true },
-  initialFruitBushes: {
+  initialFruitBushCount: {
     kind: "number",
     default: 40,
     min: 0,
     max: 40,
     integer: true,
   },
-  initialForagers: {
+  initialForagerCount: {
     kind: "number",
     default: 40,
     min: 1,
@@ -57,14 +57,14 @@ export const inputs: Inputs<Parameters> = {
   showEnergy: { kind: "boolean", default: false },
   visualization: {
     kind: "choice",
-    default: "Reactive Aggression",
+    default: "reactive-aggression",
     options: [
-      "None",
-      "Reactive Aggression",
-      "Proactive Aggression",
-      "Strength",
-      "Speed",
-      "Intelligence",
+      "none",
+      "reactive-aggression",
+      "proactive-aggression",
+      "strength",
+      "speed",
+      "intelligence",
     ],
   },
 };
@@ -97,7 +97,7 @@ type Forager = Agent<
 type Bush = Agent<{ kind: "bush"; amount: number; color: number }>;
 type Death = Agent<{ kind: "death"; age: number }>;
 export function create(options: Partial<Parameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed }),
     space = { x: 65, y: 65, boundary: "wrap" as const },
     world = World.create(space, { random }),
@@ -117,7 +117,7 @@ export function create(options: Partial<Parameters> = {}) {
       );
   const integer = (n: number) => Math.floor(random.number() * n),
     shuffle = <T>(a: readonly T[]) =>
-      random.sample(a, { count: a.length, algorithm: "fisher-yates-descending" }),
+      random.sample(a, { sampleCount: a.length, algorithm: "fisher-yates-descending" }),
     pick = <T>(a: readonly T[]) => random.sample(a)[0]!;
   let murderCount = 0,
     starvationCount = 0,
@@ -140,7 +140,7 @@ export function create(options: Partial<Parameters> = {}) {
     );
     if (count > sites.length)
       throw new Error("Source grow-fruit-bushes: not enough eligible fields.");
-    for (const f of random.sample(sites, { count }))
+    for (const f of random.sample(sites, { sampleCount: count }))
       world.add(
         Agent.create(
           {
@@ -337,8 +337,8 @@ export function create(options: Partial<Parameters> = {}) {
     });
     if (history.length > 1001) history.splice(1, 1);
   }
-  growFruitBushes(settings.initialFruitBushes);
-  for (let i = 0; i < settings.initialForagers; i++)
+  growFruitBushes(settings.initialFruitBushCount);
+  for (let i = 0; i < settings.initialForagerCount; i++)
     spawn(
       Array.from({ length: 240 }, () => integer(2)),
       { x: random.number() * 65 - 32.5, y: random.number() * 65 - 32.5 },
@@ -358,9 +358,9 @@ export function create(options: Partial<Parameters> = {}) {
       world.tick.value === 0 ? 0 : totalPopulation / world.tick.value;
   }
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count && foragers().length; i++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount && foragers().length; i++) {
         run(world, go);
         record();
       }
@@ -378,7 +378,7 @@ export function create(options: Partial<Parameters> = {}) {
         | "visualization"
       >,
     ) {
-      settings = parameters(inputs, { ...settings, ...value });
+      settings = parseParameters(inputs, { ...settings, ...value });
     },
     read() {
       return Object.freeze({
@@ -386,7 +386,7 @@ export function create(options: Partial<Parameters> = {}) {
         width: 65,
         height: 65,
         parameters: settings,
-        sourceMarker: "fruit-wars:source-v1",
+
         done: foragers().length === 0,
         murderCount,
         starvationCount,

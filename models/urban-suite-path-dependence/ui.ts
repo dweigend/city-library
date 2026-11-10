@@ -11,7 +11,7 @@ import { model } from "./model.ts";
 export const ui = defineUI(model, {
   setup: [
     "seed",
-    "initialFirms",
+    "initialFirmCount",
     { field: "distribute", label: "Distribute firms" },
   ],
   source: {
@@ -25,23 +25,23 @@ export const ui = defineUI(model, {
       label: "Region radius",
     },
     increasingReturns: {},
-    attempts: {
+    attemptCount: {
       label: "Search attempts",
     },
     birth: {},
   },
   monitors: [
     { label: "Tick", value: (state) => state.tick },
-    { label: "Firms", value: (state) => state.counts.firms },
-    { label: "Settled", value: (state) => state.counts.settled },
-    { label: "Searching", value: (state) => state.counts.searching },
+    { label: "Firms", value: (state) => state.counts.firmCount },
+    { label: "Settled", value: (state) => state.counts.settledFirmCount },
+    { label: "Searching", value: (state) => state.counts.searchingFirmCount },
     {
       label: "Largest regional population",
-      value: (state) => state.largestPopulation,
+      value: (state) => state.largestFirmCount,
     },
     {
       label: "Maximum cell occupancy",
-      value: (state) => state.maximumOccupants,
+      value: (state) => state.maxOccupantCount,
     },
     {
       label: "Setup warning",

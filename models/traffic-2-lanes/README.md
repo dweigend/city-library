@@ -23,7 +23,7 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer |
-| `numberOfCars` | `40` | integer; ≥ 1; ≤ 82 |
+| `carCount` | `40` | integer; ≥ 1; ≤ 82 |
 | `acceleration` | `0.005` | number; ≥ 0.001; ≤ 0.01 |
 | `deceleration` | `0.02` | number; ≥ 0.01; ≤ 0.1 |
 | `maxPatience` | `50` | integer; ≥ 1; ≤ 100 |

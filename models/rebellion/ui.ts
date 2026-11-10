@@ -58,11 +58,10 @@ const binding = defineUI(model, {
 });
 
 export { model };
-export const sourceMarker =
-  "selected-social-b02:rebellion:859b52417ee69fda8f0f193be666828f9023bef4fce6b84f1d07e09836a53fce";
+
 
 /** Public headless definition and provenance remain inspectable in the loaded binding. */
-export const ui = { ...binding, model, sourceMarker };
+export const ui = { ...binding, model };
 
 type UIObservation = Observation<typeof model>;
 
@@ -86,7 +85,7 @@ function citizensAndPoliceData(s: UIObservation): SpatialData {
                 ? "#696969"
                 : `hsl(120 50% ${30 + 35 * (1 - a.grievance)}%)`,
         shape: a.kind === "cop" ? ("triangle" as const) : ("circle" as const),
-        size: s.parameters.visualization === "3D" ? 10 : 7,
+        size: s.parameters.visualization === "3d" ? 10 : 7,
       })),
   };
 }

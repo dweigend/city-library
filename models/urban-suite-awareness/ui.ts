@@ -3,7 +3,7 @@ import { defineUI, type Observation, type SpatialData, type Series } from "../..
 import { model } from "./model.ts";
 
 export const ui = defineUI(model, {
-  setup: ["seed", "people", "centers"],
+  setup: ["seed", "personCount", "centerCount"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/UrbanSuite-Awareness",
     label: "Source attribution · Felsen and Wilensky · CC BY-NC-SA 3.0",
@@ -23,11 +23,11 @@ export const ui = defineUI(model, {
   },
   monitors: [
     { label: "Tick", value: (state) => state.tick },
-    { label: "Unaware", value: (state) => state.counts.unaware },
-    { label: "Aware", value: (state) => state.counts.aware },
-    { label: "Well-informed", value: (state) => state.counts.wellInformed },
-    { label: "Activists", value: (state) => state.counts.activists },
-    { label: "Centers", value: (state) => state.counts.centers },
+    { label: "Unaware", value: (state) => state.counts.unawarePersonCount },
+    { label: "Aware", value: (state) => state.counts.awarePersonCount },
+    { label: "Well-informed", value: (state) => state.counts.wellInformedPersonCount },
+    { label: "Activists", value: (state) => state.counts.activistCount },
+    { label: "Centers", value: (state) => state.counts.centerCount },
     {
       label: "Mean awareness",
       value: (state) => state.meanAwareness ?? "—",
@@ -85,7 +85,7 @@ export const ui = defineUI(model, {
           color: "#355fa5",
           points: state.history.map((point) => ({
             x: point.tick,
-            y: point.centers,
+            y: point.centerCount,
           })),
         },
       ],
@@ -126,7 +126,7 @@ function awarenessLevelsSeries(state: UIObservation): readonly Series[] {
       color: "#777777",
       points: state.history.map((point) => ({
         x: point.tick,
-        y: point.unaware,
+        y: point.unawarePersonCount,
       })),
     },
     {
@@ -134,7 +134,7 @@ function awarenessLevelsSeries(state: UIObservation): readonly Series[] {
       color: "#b4c68a",
       points: state.history.map((point) => ({
         x: point.tick,
-        y: point.aware,
+        y: point.awarePersonCount,
       })),
     },
     {
@@ -142,7 +142,7 @@ function awarenessLevelsSeries(state: UIObservation): readonly Series[] {
       color: "#61a76a",
       points: state.history.map((point) => ({
         x: point.tick,
-        y: point.wellInformed,
+        y: point.wellInformedPersonCount,
       })),
     },
     {
@@ -150,7 +150,7 @@ function awarenessLevelsSeries(state: UIObservation): readonly Series[] {
       color: "#26733b",
       points: state.history.map((point) => ({
         x: point.tick,
-        y: point.activists,
+        y: point.activistCount,
       })),
     },
   ];

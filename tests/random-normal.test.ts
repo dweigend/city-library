@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
 import { Random, type RandomState } from "city-library";
-import { polarGaussian } from "../src/random/normal.ts";
+import { polarGaussian } from "../library/random/normal.ts";
 
 const normal = { distribution: "normal" } as const;
 
@@ -65,7 +65,7 @@ test("copy and JSON continuation retain an unscaled companion across uniform and
   const copied = random.copy(), restored = Random.create({ seed: 0 });
   restored.state = JSON.parse(JSON.stringify(checkpoint)) as RandomState;
   const cached = checkpoint.continuation.gaussian!;
-  random.number(); random.sample(["only"], { count: 1 });
+  random.number(); random.sample(["only"], { sampleCount: 1 });
   expect(random.state.continuation.gaussian).toBe(cached);
   expect(random.number({ ...normal, mean: -5, deviation: 3 })).toBe(-5 + 3 * cached);
   expect(copied.number({ ...normal, mean: -5, deviation: 3 })).toBe(-5 + 3 * cached);

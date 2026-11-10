@@ -5,7 +5,7 @@ import { model } from "./model.ts";
 const numbers = new Intl.NumberFormat("en", { maximumFractionDigits: 3 });
 
 const binding = defineUI(model, {
-  setup: ["seed", "initialPeople"],
+  setup: ["seed", "initialPersonCount"],
   change: (instance, changes) => instance.setParameters(changes),
   live: {
     averageCommitment: {},
@@ -46,9 +46,8 @@ const binding = defineUI(model, {
 });
 
 export { model };
-export const sourceMarker =
-  "selected-disease-gene-b09:hiv:ed3e832a9fadd101ff65eb20a313ee0941496db02d6d3cf15371568745f997d5";
-export const ui = { ...binding, model, sourceMarker };
+
+export const ui = { ...binding, model };
 
 type UIObservation = Observation<typeof model>;
 
@@ -59,7 +58,7 @@ function historySeries(state: UIObservation): readonly Series[] {
       color: "#df4545",
       points: state.history.map((point) => ({
         x: point.tick,
-        y: Number(point.infected),
+        y: Number(point.infectedPersonCount),
       })),
     },
     {
@@ -67,7 +66,7 @@ function historySeries(state: UIObservation): readonly Series[] {
       color: "#408dde",
       points: state.history.map((point) => ({
         x: point.tick,
-        y: Number(point.known),
+        y: Number(point.diagnosedPersonCount),
       })),
     },
     {
@@ -75,7 +74,7 @@ function historySeries(state: UIObservation): readonly Series[] {
       color: "#888888",
       points: state.history.map((point) => ({
         x: point.tick,
-        y: Number(point.coupled),
+        y: Number(point.coupledPersonCount),
       })),
     },
   ];

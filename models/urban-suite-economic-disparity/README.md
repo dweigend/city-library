@@ -23,13 +23,13 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
-| `numberOfTests` | `15` | integer; ≥ 0; ≤ 30 |
+| `testCount` | `15` | integer; ≥ 0; ≤ 30 |
 | `residentsPerJob` | `100` | integer; ≥ 0; ≤ 500 |
-| `poorPerStep` | `5` | integer; ≥ 0; ≤ 15 |
-| `richPerStep` | `5` | integer; ≥ 0; ≤ 15 |
+| `poorPersonCountPerStep` | `5` | integer; ≥ 0; ≤ 15 |
+| `richPersonCountPerStep` | `5` | integer; ≥ 0; ≤ 15 |
 | `poorPricePriority` | `0` | number; ≥ -1; ≤ 1 |
 | `richQualityPriority` | `0` | number; ≥ -1; ≤ 1 |
-| `maxJobs` | `10` | integer; ≥ 5; ≤ 20 |
+| `maxJobCount` | `10` | integer; ≥ 5; ≤ 20 |
 | `deathRate` | `4` | integer; ≥ 0; ≤ 15 |
 
 ## Actions and observations

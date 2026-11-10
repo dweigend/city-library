@@ -3,7 +3,7 @@ import { defineUI, type Observation, type BarSeries, type Series } from "../../u
 import { model } from "./model.ts";
 
 const binding = defineUI(model, {
-  setup: ["seed", "initialTF0s", "initialTF1s", "initialTF2s"],
+  setup: ["seed", "initialTf0Count", "initialTf1Count", "initialTf2Count"],
   change: (instance, changes) => instance.setParameters(changes),
   live: {
     tfsPerMRNA: {},
@@ -56,9 +56,8 @@ const binding = defineUI(model, {
 });
 
 export { model };
-export const sourceMarker =
-  "selected-disease-gene-b09:repressilator-1d:e222752e0f629c0ae1f6df4f6858fcecb5629868ffd6a52ed602e172084f1315";
-export const ui = { ...binding, model, sourceMarker };
+
+export const ui = { ...binding, model };
 
 type UIObservation = Observation<typeof model>;
 

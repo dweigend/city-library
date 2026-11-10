@@ -1,11 +1,11 @@
 import assert from "node:assert/strict";
 import { create as rabbits } from "../../../models/rabbits-grass-weeds/model.ts";
 import { create as plants } from "../../../models/invasive-plants/model.ts";
-const extinct = rabbits({ number: 0, grassGrowRate: 0, weedsGrowRate: 0 });
+const extinct = rabbits({ rabbitCount: 0, grassGrowRate: 0, weedsGrowRate: 0 });
 extinct.advance(5);
 assert.equal(extinct.read().tick, 0); // preflight stop occurs before growth and tick
 assert.equal(extinct.read().rabbits.length, 0);
-const hunger = rabbits({ number: 3, grassGrowRate: 0, weedsGrowRate: 0, seed: 4 });
+const hunger = rabbits({ rabbitCount: 3, grassGrowRate: 0, weedsGrowRate: 0, seed: 4 });
 hunger.advance(30);
 assert.equal(hunger.read().rabbits.length, 0);
 assert.ok(hunger.read().tick <= 19);

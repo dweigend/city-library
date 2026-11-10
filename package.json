@@ -13,7 +13,7 @@
   },
   "files": [
     "index.ts",
-    "src/**/*.ts",
+    "library/**/*.ts",
     "dist"
   ],
   "packageManager": "bun@1.4.2",
@@ -39,24 +39,24 @@
   "scripts": {
     "typecheck": "bun run check:ui:svelte",
     "test": "bun test tests models",
-    "build": "bun build index.ts --target browser --format esm --outdir dist && bun scripts/typescript.ts declarations",
+    "build": "bun build index.ts --target browser --format esm --outdir dist && bun library/development/typescript.ts declarations",
     "consumer": "bun tests/package-consumer.ts",
     "check": "bun run typecheck && bun run test && bun run check:migration && bun run contracts && bun run build && bun run consumer",
     "check:ui:svelte": "bun run --cwd ui/agent-lab check",
     "typecheck:quad-layouts": "bun run typecheck",
     "typecheck:city": "bun run typecheck",
-    "typecheck:city:targets": "bun scripts/typescript.ts city-targets",
-    "typecheck:targets": "bun scripts/typescript.ts targets",
-    "typecheck:giant-component:targets": "bun scripts/typescript.ts giant-component-targets",
+    "typecheck:city:targets": "bun library/development/typescript.ts city-targets",
+    "typecheck:targets": "bun library/development/typescript.ts targets",
+    "typecheck:giant-component:targets": "bun library/development/typescript.ts giant-component-targets",
     "dev": "bun --bun run vite --config vite.config.ts",
     "build:ui": "bun --bun run vite build --config vite.config.ts",
     "preview": "bun --bun run vite preview --config vite.config.ts",
-    "contracts": "bun scripts/public-contracts.ts",
-    "contracts:quad-layouts": "bun scripts/public-contracts.ts --quad-layouts",
-    "contracts:city": "bun scripts/public-contracts.ts --city",
-    "contracts:city:targets": "bun scripts/public-contracts.ts --city --targets",
-    "contracts:targets": "bun scripts/public-contracts.ts --targets",
-    "check:migration": "bun scripts/check-examples-migration.ts"
+    "contracts": "bun tests/public-contracts.ts",
+    "contracts:quad-layouts": "bun tests/public-contracts.ts --quad-layouts",
+    "contracts:city": "bun tests/public-contracts.ts --city",
+    "contracts:city:targets": "bun tests/public-contracts.ts --city --targets",
+    "contracts:targets": "bun tests/public-contracts.ts --targets",
+    "check:migration": "bun tests/check-examples-migration.ts"
   },
   "workspaces": [
     "ui/agent-lab"

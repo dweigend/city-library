@@ -4,7 +4,7 @@
  */
 import { Grid, Random, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface FireParameters {
   width: number;
   height: number;
@@ -25,7 +25,7 @@ export const inputs: Inputs<FireParameters> = {
 };
 type Status = "empty" | "tree" | "fire" | "ember" | "burned";
 export function create(options: Partial<FireParameters> = {}) {
-  const settings = parameters(inputs, options);
+  const settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const world = World.create({ random });
   const grid = Grid.create(
@@ -40,28 +40,28 @@ export function create(options: Partial<FireParameters> = {}) {
       grid.neighbors(field, { neighborhood: "faces" }),
     ]),
   );
-  let initialTrees = 0,
-    burnedTrees = 0;
+  let initialTreeCount = 0,
+    burnedTreeCount = 0;
   const history: Readonly<{
     tick: number;
-    trees: number;
-    fires: number;
-    embers: number;
+    treeCount: number;
+    fireCount: number;
+    emberCount: number;
     percentBurned: number;
   }>[] = [];
   function counts() {
-    let trees = 0,
-      fires = 0,
-      embers = 0;
+    let treeCount = 0,
+      fireCount = 0,
+      emberCount = 0;
     for (const field of fields) {
-      if (field.status === "tree") trees++;
-      else if (field.status === "fire") fires++;
-      else if (field.status === "ember") embers++;
+      if (field.status === "tree") treeCount++;
+      else if (field.status === "fire") fireCount++;
+      else if (field.status === "ember") emberCount++;
     }
-    return { trees, fires, embers };
+    return { treeCount: treeCount, fireCount: fireCount, emberCount: emberCount };
   }
   function percentBurned() {
-    return initialTrees === 0 ? 0 : (100 * burnedTrees) / initialTrees;
+    return initialTreeCount === 0 ? 0 : (100 * burnedTreeCount) / initialTreeCount;
   }
   function record() {
     history.push(
@@ -76,7 +76,7 @@ export function create(options: Partial<FireParameters> = {}) {
   function ignite(field: (typeof fields)[number]) {
     field.status = "fire";
     field.emberColor = 15;
-    burnedTrees++;
+    burnedTreeCount++;
   }
   function setup(trees: readonly boolean[]) {
     fields.forEach((field, i) => {
@@ -84,8 +84,8 @@ export function create(options: Partial<FireParameters> = {}) {
       field.emberColor = 0;
     });
     for (const field of fields) if (field.x === fields[0]!.x) ignite(field);
-    initialTrees = counts().trees;
-    burnedTrees = 0;
+    initialTreeCount = counts().treeCount;
+    burnedTreeCount = 0;
     world.tick.reset();
     history.length = 0;
     record();
@@ -118,11 +118,11 @@ export function create(options: Partial<FireParameters> = {}) {
 
   setup(fields.map(() => random.number() * 100 < settings.density));
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) {
         const c = counts();
-        if (c.fires + c.embers === 0) break;
+        if (c.fireCount + c.emberCount === 0) break;
         run(world, spreadAndFade);
         record();
       }
@@ -148,11 +148,11 @@ export function create(options: Partial<FireParameters> = {}) {
             }),
           ),
         ),
-        initialTrees,
-        burnedTrees,
+        initialTreeCount: initialTreeCount,
+        burnedTreeCount: burnedTreeCount,
         percentBurned: percentBurned(),
         counts: Object.freeze(c),
-        done: c.fires + c.embers === 0,
+        done: c.fireCount + c.emberCount === 0,
         history: Object.freeze([...history]),
         randomState: random.state,
       });

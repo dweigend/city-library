@@ -4,7 +4,7 @@
  */
 import { Grid, Random, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface PercolationParameters {
   width: number;
   height: number;
@@ -32,7 +32,7 @@ export const inputs: Inputs<PercolationParameters> = {
 };
 type Kind = "soil" | "rock" | "oil" | "saturated";
 export function create(options: Partial<PercolationParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const world = World.create({ random });
   const grid = Grid.create(
@@ -50,7 +50,7 @@ export function create(options: Partial<PercolationParameters> = {}) {
   const row = (field: typeof origin) => field.y - origin.y;
   let currentRow = settings.height - 1,
     totalOil = 0;
-  const history: Readonly<{ tick: number; totalOil: number; front: number }>[] =
+  const history: Readonly<{ tick: number; totalOil: number; frontFieldCount: number }>[] =
     [];
   function front() {
     return fields.filter(
@@ -65,7 +65,7 @@ export function create(options: Partial<PercolationParameters> = {}) {
       Object.freeze({
         tick: world.tick.value,
         totalOil,
-        front: front().length,
+        frontFieldCount: front().length,
       }),
     );
     if (history.length > 1001) history.splice(1, 1);
@@ -82,13 +82,13 @@ export function create(options: Partial<PercolationParameters> = {}) {
   }
   function percolate() {
     const parents = front();
-    for (const parent of random.sample(parents, { count: parents.length })) {
+    for (const parent of random.sample(parents, { sampleCount: parents.length })) {
       // Public Grid owns hard-edge lookup. Canonical fields are updated immediately,
       // so a failed first trial leaves soil available for the next parent to retry.
       const targets = [-1, 1]
         .map((dx) => grid.fieldAt({ x: parent.x + dx, y: parent.y - 1 }))
         .filter((field): field is typeof origin => field !== undefined);
-      for (const target of random.sample(targets, { count: targets.length }))
+      for (const target of random.sample(targets, { sampleCount: targets.length }))
         if (target.kind === "soil" && random.number() * 100 < settings.porosity)
           target.kind = "oil";
       parent.kind = "saturated";
@@ -110,9 +110,9 @@ export function create(options: Partial<PercolationParameters> = {}) {
     ),
   );
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) {
         if (front().length === 0) break;
         run(world, () => {
           percolate();
@@ -133,7 +133,7 @@ export function create(options: Partial<PercolationParameters> = {}) {
         )
       )
         throw new TypeError("Supply only porosity data.");
-      settings = parameters(inputs, { ...settings, ...rules });
+      settings = parseParameters(inputs, { ...settings, ...rules });
     },
     setFront(columns: readonly number[]) {
       if (!Array.isArray(columns))
@@ -176,7 +176,7 @@ export function create(options: Partial<PercolationParameters> = {}) {
         ),
         currentRow,
         totalOil,
-        counts: Object.freeze({ front: count }),
+        counts: Object.freeze({ frontFieldCount: count }),
         done: count === 0,
         history: Object.freeze([...history]),
         randomState: random.state,

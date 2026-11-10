@@ -27,7 +27,7 @@ const observation = simulation.read();
 | `hoursOfSleep` | `8` | number; ≥ 0; ≤ 12 |
 | `intensity` | `95` | number; ≥ 50; ≤ 100 |
 | `lift` | `true` | boolean |
-| `slowTwitchFibers` | `50` | number; ≥ 0; ≤ 100 |
+| `slowTwitchFiberPercent` | `50` | number; ≥ 0; ≤ 100 |
 
 ## Actions and observations
 

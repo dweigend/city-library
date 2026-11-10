@@ -124,52 +124,52 @@ describe("philosopher asynchronous resource protocol", () => {
     const d = dining();
     expect(d.read().philosophers).toHaveLength(20);
     expect(d.read().forks.filter((f) => f.marked)).toHaveLength(1);
-    expect(d.read().thinking).toBe(20);
+    expect(d.read().thinkingPhilosopherCount).toBe(20);
     d.setParameters({ hungryChance: 1, fullChance: 1 });
     d.activate(0);
-    expect(d.read().philosophers[0]!.state).toBe("HUNGRY");
+    expect(d.read().philosophers[0]!.state).toBe("hungry");
     d.activate(0);
-    expect(d.read().philosophers[0]!.state).toBe("EATING");
-    expect(d.read().philosophers[0]!.totalEaten).toBe(0);
+    expect(d.read().philosophers[0]!.state).toBe("eating");
+    expect(d.read().philosophers[0]!.mealCount).toBe(0);
     d.activate(0);
-    expect(d.read().philosophers[0]!.totalEaten).toBe(1);
-    expect(d.read().philosophers[0]!.state).toBe("THINKING");
+    expect(d.read().philosophers[0]!.mealCount).toBe(1);
+    expect(d.read().philosophers[0]!.state).toBe("thinking");
     expect(d.read().tick).toBe(3);
   });
   test("native deadlock continues ticking without hidden reset or repair", () => {
     const d = dining({ philosopherCount: 3 });
     d.setScenario({
-      states: ["HUNGRY", "HUNGRY", "HUNGRY"],
+      states: ["hungry", "hungry", "hungry"],
       owners: [0, 1, 2],
       marked: [true, false, false],
     });
     d.advance(100);
     expect(d.read().tick).toBe(100);
-    expect(d.read().hungry).toBe(3);
-    expect(d.read().eating).toBe(0);
+    expect(d.read().hungryPhilosopherCount).toBe(3);
+    expect(d.read().eatingPhilosopherCount).toBe(0);
     expect(d.read().forks.map((f) => f.owner)).toEqual([0, 1, 2]);
     d.setParameters({ cooperation: true });
     d.advance(10);
-    expect(d.read().hungry).toBe(3); // toggling does not release held resources.
+    expect(d.read().hungryPhilosopherCount).toBe(3); // toggling does not release held resources.
   });
   test("one marked fork and adjacent exclusive ownership across cooperative activation", () => {
     const d = dining({ philosopherCount: 5, cooperation: true, seed: 18 });
-    let previous = d.read().philosophers.map((p) => p.totalEaten);
+    let previous = d.read().philosophers.map((p) => p.mealCount);
     for (let i = 0; i < 500; i++) {
       d.advance();
       const s = d.read();
-      expect(s.thinking + s.hungry + s.eating).toBe(5);
+      expect(s.thinkingPhilosopherCount + s.hungryPhilosopherCount + s.eatingPhilosopherCount).toBe(5);
       expect(s.forks.filter((f) => f.marked)).toHaveLength(1);
       for (const f of s.forks)
         if (f.owner !== null) expect([f.id, (f.id + 1) % 5]).toContain(f.owner);
       for (const p of s.philosophers) {
-        expect(p.totalEaten).toBeGreaterThanOrEqual(previous[p.id]!);
-        if (p.state === "EATING") {
+        expect(p.mealCount).toBeGreaterThanOrEqual(previous[p.id]!);
+        if (p.state === "eating") {
           expect(s.forks[p.id]!.owner).toBe(p.id);
           expect(s.forks[(p.id + 4) % 5]!.owner).toBe(p.id);
         }
       }
-      previous = s.philosophers.map((p) => p.totalEaten);
+      previous = s.philosophers.map((p) => p.mealCount);
     }
   });
   test("invalid fork ownership and population changes leave state untouched", () => {
@@ -177,7 +177,7 @@ describe("philosopher asynchronous resource protocol", () => {
       before = d.read();
     expect(() =>
       d.setScenario({
-        states: ["THINKING", "THINKING", "THINKING"],
+        states: ["thinking", "thinking", "thinking"],
         owners: [2, null, null],
         marked: [true, false, false],
       }),
@@ -200,10 +200,10 @@ describe("PageRank canonical directed networks", () => {
     expect(a.totalRank).toBeCloseTo(1, 14);
     expect(a.edges.filter((e) => e.to === 0).map((e) => e.from)).toEqual([3]);
     expect(a.edges.filter((e) => e.from === 0)).toHaveLength(0);
-    const b = pagerank({ networkChoice: "Example 2" }).read();
+    const b = pagerank({ networkChoice: "example-2" }).read();
     expect(b.pages.map((p) => p.id)).toEqual([1, 2, 3, 4, 5, 6, 7]);
     expect(b.edges).toHaveLength(18);
-    const c = pagerank({ networkChoice: "Preferential Attachment" }).read();
+    const c = pagerank({ networkChoice: "preferential-attachment" }).read();
     expect(c.pages).toHaveLength(100);
     expect(c.edges).toHaveLength(196);
     expect(
@@ -237,7 +237,7 @@ describe("PageRank canonical directed networks", () => {
     expect(p.read().totalRank).toBeCloseTo(1, 14);
   });
   test("surfers increment OLD page visits and method changes keep cumulative visits", () => {
-    const p = pagerank({ dampingFactor: 1, numberOfSurfers: 1 });
+    const p = pagerank({ dampingFactor: 1, surferCount: 1 });
     p.setScenario({
       pages: [
         { id: 0, rank: 0.5 },
@@ -250,18 +250,18 @@ describe("PageRank canonical directed networks", () => {
       surfers: [{ currentPage: 0 }],
     });
     p.advance();
-    expect(p.read().pages.map((p) => p.visits)).toEqual([1, 0]);
+    expect(p.read().pages.map((p) => p.visitCount)).toEqual([1, 0]);
     expect(p.read().surfers[0]!.currentPage).toBe(1);
     expect(p.read().pages.map((p) => p.rank)).toEqual([1, 0]);
     p.advance();
-    expect(p.read().pages.map((p) => p.visits)).toEqual([1, 1]);
+    expect(p.read().pages.map((p) => p.visitCount)).toEqual([1, 1]);
     p.setParameters({ calculationMethod: "diffusion" });
     p.advance();
     expect(p.read().surfers).toHaveLength(0);
-    expect(p.read().pages.map((p) => p.visits)).toEqual([1, 1]);
-    p.setParameters({ calculationMethod: "random-surfer", numberOfSurfers: 5 });
+    expect(p.read().pages.map((p) => p.visitCount)).toEqual([1, 1]);
+    p.setParameters({ calculationMethod: "random-surfer", surferCount: 5 });
     p.advance();
-    expect(p.read().pages.reduce((s, p) => s + p.visits, 0)).toBe(7);
+    expect(p.read().pages.reduce((s, p) => s + p.visitCount, 0)).toBe(7);
   });
   test("invalid network fixtures do not mutate live graph or random state", () => {
     const p = pagerank(),
@@ -278,7 +278,7 @@ describe("PageRank canonical directed networks", () => {
     ).toThrow();
     expect(p.read()).toEqual(before);
     expect(() =>
-      p.setParameters({ networkChoice: "Example 2" } as never),
+      p.setParameters({ networkChoice: "example-2" } as never),
     ).toThrow();
     expect(p.read()).toEqual(before);
   });

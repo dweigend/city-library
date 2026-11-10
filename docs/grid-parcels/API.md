@@ -22,15 +22,15 @@ adaptation; New = new contract; Research = additional algorithm/robustness work.
 
 | Operation | Call | Contract | Status |
 | --- | --- | --- | --- |
-| Square | `topology.square({ columns, rows, cellSize? })` | Equal squares | Source |
-| Hexagon | `topology.hex({ columns, rows, cellRadius?, orientation? })` | Radius is center-to-corner; orientation explicit | Source |
-| Triangle | `topology.triangle({ columns, rows, edgeLength? })` | Regular triangles | Source |
-| Trihex | `topology.trihex({ columns, rows, edgeLength? })` | Mixed triangles and hexagons | Source |
-| Rectangles | `topology.rectangles({ columns, rows, cellSize?, variation?, random? })` | Unequal rectangles with explicit random input | Source |
+| Square | `topology.square({ columnCount, rowCount, cellSize? })` | Equal squares | Source |
+| Hexagon | `topology.hex({ columnCount, rowCount, cellRadius?, orientation? })` | Radius is center-to-corner; orientation explicit | Source |
+| Triangle | `topology.triangle({ columnCount, rowCount, edgeLength? })` | Regular triangles | Source |
+| Trihex | `topology.trihex({ columnCount, rowCount, edgeLength? })` | Mixed triangles and hexagons | Source |
+| Rectangles | `topology.rectangles({ columnCount, rowCount, cellSize?, variation?, random? })` | Unequal rectangles with explicit random input | Source |
 | Voronoi | `topology.voronoi({ points, boundary })` | Explicit sites and boundary | Source |
-| Organic quads | `topology.quadrilaterals({ boundary, pointSpacing, relaxationIterations?, random? })` | Named irregular quad procedure | Source / New |
+| Organic quads | `topology.quadrilaterals({ boundary, pointSpacing, relaxationIterationCount?, random? })` | Named irregular quad procedure | Source / New |
 | Polygon import | `topology.fromPolygons({ polygons })` | Initially conforming full edges | Source |
-| Relaxation | `topology.relax({ layout, method, iterations })` | New layout; named method | Source / New |
+| Relaxation | `topology.relax({ layout, method, iterationCount })` | New layout; named method | Source / New |
 | Validation | `topology.validate({ layout })` | Check shapes, overlaps and relationships | New |
 
 Proposed regular defaults: size 1, hard boundary, no display normalization.

@@ -10,7 +10,7 @@ const colors = [
   "#eab308",
 ];
 export const ui = defineUI(model, {
-  setup: ["seed", "width", "height", "choices", "dice"],
+  setup: ["seed", "width", "height", "choiceCount", "dice"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/RandomCombinationsandPermutations",
     label: "Wilensky (2004) · CC BY-NC-SA 3.0",
@@ -50,11 +50,11 @@ export const ui = defineUI(model, {
     },
   },
   monitors: [
-    { label: "Search attempts", value: (s) => s.attempts },
-    { label: "Steps in sample", value: (s) => s.countSteps },
+    { label: "Search attempts", value: (s) => s.attemptCount },
+    { label: "Steps in sample", value: (s) => s.stepCount },
     { label: "Samples", value: (s) => s.samplesCounter },
-    { label: "Combination successes", value: (s) => s.countCombiSuccesses },
-    { label: "Permutation successes", value: (s) => s.countPermisSuccesses },
+    { label: "Combination successes", value: (s) => s.combinationSuccessCount },
+    { label: "Permutation successes", value: (s) => s.permutationSuccessCount },
     {
       label: "Mean combination",
       value: (s) => s.combiMean ?? "N/A",

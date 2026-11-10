@@ -23,7 +23,7 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
-| `population` | `300` | integer; ≥ 1; ≤ 1000 |
+| `birdCount` | `300` | integer; ≥ 1; ≤ 1000 |
 | `vision` | `5` | number; ≥ 0; ≤ 10 |
 | `minimumSeparation` | `1` | number; ≥ 0; ≤ 5 |
 | `maxAlignTurn` | `5` | number; ≥ 0; ≤ 20 |

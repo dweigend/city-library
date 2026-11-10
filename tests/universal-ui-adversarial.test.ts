@@ -75,12 +75,12 @@ describe("independent universal UI public consumers", () => {
     expect(writes).toHaveLength(2);
     expect(overrides).toBe(1);
     expect(() => normalizeAuthoring(rules, { change() {}, live: { missing: {} }, views: [] } as never)).toThrow("Unknown input: missing");
-    const legacy = {
+    const arraySpec = {
       live: [{ field: "flow-rate" as const, value: (state: ReturnType<ReturnType<typeof createRules>["read"]>) => state.parameters["flow-rate"],
         set: (instance: ReturnType<typeof createRules>, value: string | number | boolean) => instance.apply({ "flow-rate": Number(value) }) }], views: [],
     };
-    expect(() => normalizeAuthoring(rules, { ...legacy, change() {} } as never)).toThrow(TypeError);
-    const old = normalizeAuthoring(rules, legacy);
+    expect(() => normalizeAuthoring(rules, { ...arraySpec, change() {} } as never)).toThrow(TypeError);
+    const old = normalizeAuthoring(rules, arraySpec);
     old.live[0]!.set(first, 1);
     expect(first.read().parameters["flow-rate"]).toBe(1);
     expect(writes).toHaveLength(2);
@@ -89,26 +89,26 @@ describe("independent universal UI public consumers", () => {
   test("collection schema rejects unions, unknown fields, sparse arrays and accessors atomically", () => {
     let reads = 0;
     const inherited = Object.create({ get id() { reads++; return "inherited"; } });
-    Object.assign(inherited, { label: "No inherited identity", kind: "count", count: 1 });
+    Object.assign(inherited, { label: "No inherited identity", kind: "count", itemCount: 1 });
     const getter = Object.defineProperty({ label: "Getter", kind: "items", items: [] }, "id", { get() { reads++; return "getter"; } });
     const itemGetter = { id: "items", label: "Items", kind: "items", items: [Object.defineProperty({}, "id", { get() { reads++; return "person"; } })] };
     const indexedGetter: unknown[] = [];
-    Object.defineProperty(indexedGetter, "0", { get() { reads++; return { id: "n", label: "Count", kind: "count", count: 0 }; } });
-    const symbolField = { id: "n", label: "Count", kind: "count", count: 0, [Symbol("hidden")]: 1 };
+    Object.defineProperty(indexedGetter, "0", { get() { reads++; return { id: "n", label: "Count", kind: "count", itemCount: 0 }; } });
+    const symbolField = { id: "n", label: "Count", kind: "count", itemCount: 0, [Symbol("hidden")]: 1 };
     const invalid: unknown[] = [
       undefined, null, {}, [undefined], [inherited], [getter], [itemGetter], indexedGetter, new Array(2), [symbolField],
-      [{ id: "n", label: "Count", kind: "count", count: 1, capacity: undefined }],
+      [{ id: "n", label: "Count", kind: "count", itemCount: 1, capacity: undefined }],
       [{ id: "n", label: "Capacity", kind: "capacity", used: 1, capacity: 1, unit: "units", items: undefined }],
       [{ id: "n", label: "Items", kind: "items", items: [], order: "priority" }],
       [{ id: "n", label: "Items", kind: "items", items: [{ id: "p", selectable: false }] }],
       [{ id: "n", label: "Items", kind: "items", items: [{ id: "p", shape: "star" }] }],
-      [{ id: "n", label: " ", kind: "count", count: 0 }],
+      [{ id: "n", label: " ", kind: "count", itemCount: 0 }],
       [{ id: "n", label: "Kind", kind: new String("count"), count: 0 }],
     ];
     for (const input of invalid) expect(() => collectionDiagram(input as never)).toThrow(TypeError);
     expect(reads).toBe(0);
     expect(() => collectionDiagram([{ id: "same", label: "One", kind: "items", items: [{ id: "p" }, { id: "p" }] }])).toThrow(RangeError);
-    const scene = collectionDiagram([{ id: "n", label: "Count", kind: "count", count: 0 }]);
+    const scene = collectionDiagram([{ id: "n", label: "Count", kind: "count", itemCount: 0 }]);
     expect(scene.description).toBe("Count: 0.");
     expect(identified(scene)).toEqual([]);
   });
@@ -177,12 +177,12 @@ describe("independent universal UI public consumers", () => {
       expect(rows).toEqual(before);
     }
     for (const count of [0, 1200, Number.MAX_SAFE_INTEGER]) {
-      const scene = collectionDiagram([{ id: "count", label: "Completed", kind: "count", count }]);
+      const scene = collectionDiagram([{ id: "count", label: "Completed", kind: "count", itemCount: count }]);
       expect(scene.description).toContain(String(count));
       expect(scene.agents).toEqual([]);
     }
     for (const value of [-1, -Infinity, Infinity, NaN, Number.MAX_SAFE_INTEGER + 1, 0.25])
-      expect(() => collectionDiagram([{ id: "count", label: "Count", kind: "count", count: value }])).toThrow(RangeError);
+      expect(() => collectionDiagram([{ id: "count", label: "Count", kind: "count", itemCount: value }])).toThrow(RangeError);
     expect(collectionDiagram([]).description).toBe("No collections");
   });
 
@@ -223,9 +223,9 @@ describe("shared host-boundary regressions, separate from public browser accepta
         const visible = tablePage(rows, page);
         collected.push(...visible.rows);
         expect(visible.page).toBe(page);
-        expect(visible.previous).toBe(page > 0);
-        expect(visible.next).toBe(page + 1 < pages);
-        expect(visible.paged).toBe(count > 200);
+        expect(visible.hasPreviousPage).toBe(page > 0);
+        expect(visible.hasNextPage).toBe(page + 1 < pages);
+        expect(visible.isPaged).toBe(count > 200);
         expect(visible.rows.length).toBe(Math.min(200, Math.max(0, count - page * 200)));
         expect(visible.range).toBe(count ? `${page * 200 + 1}–${Math.min((page + 1) * 200, count)} of ${count}` : "No rows");
         expect(visible.rows).not.toBe(rows);

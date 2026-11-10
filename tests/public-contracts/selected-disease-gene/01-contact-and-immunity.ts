@@ -21,7 +21,7 @@ assert.equal(contact.read().tick, 0);
 assert.equal(contact.read().runNumber, 2);
 assert.equal(contact.read().sickCount, 0);
 
-const illness = virus({ seed: 12, numberPeople: 40, infectiousness: 0, duration: 0, chanceRecover: 0 });
+const illness = virus({ seed: 12, personCount: 40, infectiousness: 0, duration: 0, chanceRecover: 0 });
 assert.equal(illness.read().agents.length, 40);
 assert.equal(illness.read().agents.filter(agent => agent.sick).length, 10);
 illness.advance();
@@ -29,5 +29,5 @@ assert.equal(illness.read().tick, 1);
 assert.equal(illness.read().agents.filter(agent => agent.sick).length, 0);
 assert.ok(illness.read().agents.length <= 60);
 assert.ok(illness.read().agents.every(agent => agent.remainingImmunity === 0));
-assert.throws(() => virus({ numberPeople: 9 }), RangeError);
+assert.throws(() => virus({ personCount: 9 }), RangeError);
 console.log("contact and immunity passed");

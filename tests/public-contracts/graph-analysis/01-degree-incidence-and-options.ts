@@ -31,7 +31,7 @@ edges[0]!.weight = 0;
 assert.equal(defaults.get(a), 4); // Previous result is a detached observation.
 assert.deepEqual([...graph.analyze({ measure: "degree", weight: (edge: Edge<Node, { weight: number }>) => edge.weight }).values()], [19, 14, 0]);
 assert.deepEqual([...graph.analyze({ measure: "degree", direction: undefined, normalized: undefined, weight: undefined }).values()], [4, 3, 0]);
-for (const field of ["cost", "disconnected", "damping", "tolerance", "maxIterations"]) {
+for (const field of ["cost", "disconnected", "damping", "tolerance", "maxIterationCount"]) {
   assert.throws(() => graph.analyze({ measure: "degree", [field]: field === "cost" ? () => 1 : 1 } as never), TypeError);
   assert.throws(() => graph.analyze({ measure: "degree", [field]: undefined } as never), TypeError); // Root provisional closure: disallowed own key rejects even undefined.
 }
@@ -80,7 +80,7 @@ assert.throws(() => threshold.analyze({ measure: "degree", weight: readWeight })
 assert.throws(() => threshold.analyze({ measure: "degree", normalized: true, weight: readWeight }), RangeError); // reject BEFORE divide2
 // Every measure preflights keys/shapes/values before empty-shortcuts or callbacks.
 const empty = Graph.create<Node>(); let emptyCalls = 0;
-for (const measure of ["degree", "closeness", "betweenness", "eigenvector", "pageRank"] as const) {
+for (const measure of ["degree", "closeness", "betweenness", "eigenvector", "page-rank"] as const) {
   const callbackField = measure === "closeness" || measure === "betweenness" ? "cost" : "weight";
   const prohibited = callbackField === "cost" ? "weight" : "cost";
   const callback = () => { emptyCalls++; return 1; };
@@ -89,7 +89,7 @@ for (const measure of ["degree", "closeness", "betweenness", "eigenvector", "pag
   assert.throws(() => empty.analyze({ measure, [callbackField]: callback, [prohibited]: undefined } as never), TypeError);
   assert.throws(() => empty.analyze({ measure, unknown: undefined } as never), TypeError);
 }
-assert.throws(() => empty.analyze({ measure: "pageRank", damping: 1 }));
-assert.throws(() => empty.analyze({ measure: "eigenvector", maxIterations: 0 }));
+assert.throws(() => empty.analyze({ measure: "page-rank", damping: 1 }));
+assert.throws(() => empty.analyze({ measure: "eigenvector", maxIterationCount: 0 }));
 assert.equal(emptyCalls, 0);
 console.log("analysis proposal01: degree incidence, canonical keys, weights and closed options");

@@ -41,12 +41,12 @@ export async function browserChecks(container: HTMLElement, bind: typeof defineU
     equal(container.querySelector('canvas'), null, 'Dispose detaches the canvas');
     equal([canvas.width, canvas.height], [width, height], 'A later resize cannot rewrite disposed buffer dimensions');
   } finally { mounted.dispose(); }
-  const legacy = { ...scene, agents: [{ id: 'near', x: 0, y: 0, size: 2 }, { id: 'ignored', x: 1, y: 0, size: 2, selectable: false }] };
-  const old = bind({ ...model, create: () => ({ read: () => legacy, advance() {} }) }, { views: [{ type: 'spatial', label: 'Legacy nearest', data: state => state }] }).mount(container);
+  const circularScene = { ...scene, agents: [{ id: 'near', x: 0, y: 0, size: 2 }, { id: 'ignored', x: 1, y: 0, size: 2, selectable: false }] };
+  const old = bind({ ...model, create: () => ({ read: () => circularScene, advance() {} }) }, { views: [{ type: 'spatial', label: 'Circular nearest', data: state => state }] }).mount(container);
   try {
     await settle(container); button(container, 'Setup').click(); await settle(container);
-    const canvas = container.querySelector('canvas'); assert(canvas, 'Legacy circles use the same renderer');
+    const canvas = container.querySelector('canvas'); assert(canvas, 'Circular symbols use the same renderer');
     canvas.dispatchEvent(new KeyboardEvent('keydown', { key: 'End', bubbles: true })); await settle(container);
-    assert(canvas.getAttribute('aria-label')?.includes('near'), 'Legacy nearest/keyboard compatibility excludes explicitly ignored symbols');
+    assert(canvas.getAttribute('aria-label')?.includes('near'), 'Circular nearest/keyboard compatibility excludes explicitly ignored symbols');
   } finally { old.dispose(); }
 }

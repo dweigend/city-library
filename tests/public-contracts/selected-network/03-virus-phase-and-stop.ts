@@ -1,11 +1,11 @@
 import assert from "node:assert/strict";
 import { create } from "../../../models/virus-on-a-network/model.ts";
 
-const model = create({ numberOfNodes: 10, averageNodeDegree: 1, initialOutbreakSize: 1, checkFrequency: 3, spreadChance: 0, recoveryChance: 0 });
+const model = create({ nodeCount: 10, averageNodeDegree: 1, initialOutbreakSize: 1, checkFrequency: 3, spreadChance: 0, recoveryChance: 0 });
 model.setStates(Array.from({ length: 10 }, () => ({ status: "infected" as const, checkTimer: 2 })));
 model.advance();
 assert.equal(model.read().tick, 1);
-assert.equal(model.read().counts.infected, 10);
+assert.equal(model.read().counts.infectedNodeCount, 10);
 assert.ok(model.read().nodes.every(node => node.checkTimer === 0));
 model.setStates(Array.from({ length: 10 }, () => ({ status: "susceptible" as const, checkTimer: 1 })));
 const stopped = model.read();
@@ -17,5 +17,5 @@ model.setRules({ checkFrequency: 2 });
 assert.ok(model.read().nodes.every(node => node.checkTimer === 5));
 model.advance();
 assert.equal(model.read().tick, 2);
-assert.equal(model.read().counts.infected, 1);
+assert.equal(model.read().counts.infectedNodeCount, 1);
 assert.ok(model.read().nodes.every(node => node.checkTimer === 0));

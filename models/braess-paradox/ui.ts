@@ -21,8 +21,8 @@ export const ui = defineUI(model, {
   monitors: [
     { label: "Tick", value: (s) => s.tick },
     { label: "Active commuters", value: (s) => s.commuters.length },
-    { label: "Cars spawned", value: (s) => s.carsSpawned },
-    { label: "Completed", value: (s) => s.completed },
+    { label: "Cars spawned", value: (s) => s.spawnedCarCount },
+    { label: "Completed", value: (s) => s.completedCarCount },
     { label: "Last travel time", value: (s) => s.travelTime },
     { label: "Average travel time", value: (s) => s.avg },
   ],

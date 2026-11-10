@@ -4,7 +4,7 @@ import { equal, labels, button, changeNumber, control, controls, changeInput, se
 
 type Instance = ReturnType<typeof model.create>;
 export const spec = {
-  setup: ['seed', { field: 'people', label: 'Population' }, 'bestLand'],
+  setup: ['seed', { field: 'personCount', label: 'Population' }, 'bestLand'],
   live: {
     growthAmount: { set: (instance, value) => instance.setRules({ growthAmount: value }) },
   },
@@ -12,7 +12,7 @@ export const spec = {
   views: [],
 } as const satisfies UISpec<WealthParameters, Instance>;
 export const ui = defineUI(model, spec);
-const actual = model.create({ people: 2, seed: 21 });
+const actual = model.create({ personCount: 2, seed: 21 });
 spec.live.growthAmount.set(actual, 6);
 equal(actual.read().parameters.growthAmount, 6, 'Numeric live setter needs no coercion');
 equal(actual.read().tick, 0, 'A live action is not a model step');
@@ -31,12 +31,12 @@ export async function browserChecks(container: HTMLElement, bind: typeof defineU
 
 /** Separate presentation drafts: live reader wins regardless of edit order. */
 export async function overlapBrowserChecks(container: HTMLElement, bind: typeof defineUI = defineUI) {
-  for (const legacy of [false, true]) for (const initialized of [false, true]) for (const liveFirst of [false, true]) {
+  for (const usesArrayFields of [false, true]) for (const initialized of [false, true]) for (const liveFirst of [false, true]) {
     const instances: Instance[] = [];
     const tracked = { ...model, create(options?: Partial<WealthParameters>) {
       const actual = model.create(options); instances.push(actual); return actual;
     } };
-    const live = legacy ? [{ field: 'growthAmount' as const,
+    const live = usesArrayFields ? [{ field: 'growthAmount' as const,
       value: (state: ReturnType<Instance['read']>) => state.parameters.growthAmount,
       set: (instance: Instance, value: string | number | boolean) => instance.setRules({ growthAmount: Number(value) }),
     }] : { growthAmount: { set: (instance: Instance, value: number) => instance.setRules({ growthAmount: value }) } };

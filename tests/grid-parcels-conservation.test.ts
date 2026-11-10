@@ -31,7 +31,7 @@ test("varied convex cuts retain whole input or publish two conserved valid parts
 });
 
 test("concave conforming unions and hex unions conserve all selected source area", () => {
-  for (const layout of [topology.square({ columns: 4, rows: 3 }), topology.hex({ columns: 4, rows: 3, cellRadius: 0.3 })]) {
+  for (const layout of [topology.square({ columnCount: 4, rowCount: 3 }), topology.hex({ columnCount: 4, rowCount: 3, cellRadius: 0.3 })]) {
     for (const cells of [[0, 1, 4], [0, 1, 2, 4, 5, 6], [...layout.cells]]) {
       const expected = cells.reduce((sum, cell) => sum + geometry.area({ shape: layout.polygon({ cell }) }), 0);
       const result = geometry.merge({ layout, cells });

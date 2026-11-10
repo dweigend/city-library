@@ -5,7 +5,7 @@
  */
 import { Grid, Random, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 
 export interface VotingParameters {
   width: number;
@@ -28,7 +28,7 @@ export const inputs: Inputs<VotingParameters> = {
   awardCloseCallsToLoser: { kind: "boolean", default: false },
 };
 export function create(options: Partial<VotingParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const world = World.create({ random });
   const grid = Grid.create(
@@ -38,10 +38,10 @@ export function create(options: Partial<VotingParameters> = {}) {
   const fields = grid.fields;
   const neighbors = fields.map((field) => grid.neighbors(field));
   for (const field of fields) field.vote = Math.floor(random.number() * 2);
-  const history: { tick: number; zero: number; one: number }[] = [];
+  const history: { tick: number; zeroVoteCount: number; oneVoteCount: number }[] = [];
   function counts() {
-    const one = fields.reduce((sum, field) => sum + field.vote, 0);
-    return { zero: fields.length - one, one };
+    const oneVoteCount = fields.reduce((sum, field) => sum + field.vote, 0);
+    return { zeroVoteCount: fields.length - oneVoteCount, oneVoteCount: oneVoteCount };
   }
   function record() {
     const point = Object.freeze({ tick: world.tick.value, ...counts() });
@@ -66,9 +66,9 @@ export function create(options: Partial<VotingParameters> = {}) {
   let done = false;
   record();
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i += 1) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i += 1) {
         if (done) break;
         const next = candidate();
         if (next.every((vote, index) => vote === fields[index]!.vote)) {
@@ -111,7 +111,7 @@ export function create(options: Partial<VotingParameters> = {}) {
         )
       )
         throw new TypeError("Unknown voting rule.");
-      settings = parameters(inputs, { ...settings, ...rules });
+      settings = parseParameters(inputs, { ...settings, ...rules });
       done = false;
     },
     read() {

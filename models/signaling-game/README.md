@@ -23,8 +23,8 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
-| `numberOfStates` | `2` | integer; ≥ 2; ≤ 8 |
-| `numberOfSignals` | `2` | integer; ≥ 2; ≤ 8 |
+| `stateCount` | `2` | integer; ≥ 2; ≤ 8 |
+| `signalCount` | `2` | integer; ≥ 2; ≤ 8 |
 | `printProbabilities` | `true` | boolean |
 
 ## Actions and observations

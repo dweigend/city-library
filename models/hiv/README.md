@@ -23,7 +23,7 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer |
-| `initialPeople` | `300` | integer; ≥ 50; ≤ 500 |
+| `initialPersonCount` | `300` | integer; ≥ 50; ≤ 500 |
 | `averageCommitment` | `50` | number; ≥ 1; ≤ 200 |
 | `averageCouplingTendency` | `5` | number; ≥ 0; ≤ 10 |
 | `averageCondomUse` | `0` | number; ≥ 0; ≤ 10 |

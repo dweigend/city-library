@@ -1,14 +1,14 @@
 import { Agent, Grid, World, topology, type Field } from "city-library";
 
-const layout = topology.hex({ columns: 2, rows: 2 });
+const layout = topology.hex({ columnCount: 2, rowCount: 2 });
 const grid = Grid.create({ layout, state: { temperature: 12 } });
 const attached = World.create().add(grid);
 const field = attached.fields[0]!;
 const temperature: number = field.temperature;
 const ownerLayout = field.grid.layout;
 const regular = Grid.create({ x: 2, y: 2 }, { state: { temperature: 0 } });
-const legacyField: Field<{ temperature: number }> = regular.fields[0]!;
-const ownerCellSize: number = legacyField.grid.cellSize;
+const regularField: Field<{ temperature: number }> = regular.fields[0]!;
+const ownerCellSize: number = regularField.grid.cellSize;
 const source = [Agent.create({ name: "typed" })];
 const named = grid.agentsAt(field, { source });
 const name: string | undefined = named[0]?.name;
@@ -27,6 +27,6 @@ attached.fields[0]!.temperature = "invalid";
 // @ts-expect-error Field.grid preserves the actual layout owner.
 field.grid.cellSize;
 // @ts-expect-error Regular Fields cannot be confused with layout Fields.
-grid.neighbors(legacyField);
+grid.neighbors(regularField);
 // @ts-expect-error The additive overload requires explicit state.
 Grid.create({ layout });

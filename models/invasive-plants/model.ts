@@ -1,7 +1,7 @@
 /** NetLogo Invasive Plants, Wilensky (2025), CC BY-NC-SA 3.0. Exact source and notices retained. */
 import { Agent, Grid, Random, World, run, stats, geometry } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface InvasivePlantsParameters {
   seed: number;
   initialDensity: number;
@@ -68,7 +68,7 @@ export const inputs: Inputs<InvasivePlantsParameters> = {
 };
 type Seed = Agent<{ kind: "seed"; hidden: boolean }>;
 export function create(options: Partial<InvasivePlantsParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const width = 33,
     height = 33;
@@ -108,7 +108,7 @@ export function create(options: Partial<InvasivePlantsParameters> = {}) {
   }
   function germinate() {
     for (const seed of random.sample(seeds(), {
-      count: seeds().length,
+      sampleCount: seeds().length,
       algorithm: "fisher-yates-descending",
     })) {
       const field = grid.fieldAt(seed)!;
@@ -122,7 +122,7 @@ export function create(options: Partial<InvasivePlantsParameters> = {}) {
       (f) => f.infestation > settings.weedKillerThreshold,
     );
     for (const target of random.sample(targets, {
-      count: Math.min(settings.weedKillerRate, targets.length),
+      sampleCount: Math.min(settings.weedKillerRate, targets.length),
     })) {
       target.infestation = Math.max(
         0,
@@ -139,7 +139,7 @@ export function create(options: Partial<InvasivePlantsParameters> = {}) {
   }
   function generate() {
     for (const field of random.sample(grid.fields, {
-      count: grid.fields.length,
+      sampleCount: grid.fields.length,
       algorithm: "fisher-yates-descending",
     })) {
       const mean = settings.seedProductionRate * field.infestation;
@@ -165,7 +165,7 @@ export function create(options: Partial<InvasivePlantsParameters> = {}) {
   }
   function spread() {
     for (const seed of random.sample(seeds(), {
-      count: seeds().length,
+      sampleCount: seeds().length,
       algorithm: "fisher-yates-descending",
     })) {
       seed.hidden = !settings.showSeeds;
@@ -219,9 +219,9 @@ export function create(options: Partial<InvasivePlantsParameters> = {}) {
   }
   record();
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) {
         run(world, () => {
           germinate();
           weedKiller();
@@ -279,7 +279,7 @@ export function create(options: Partial<InvasivePlantsParameters> = {}) {
         )
       )
         throw new TypeError("Supply only live rule data.");
-      settings = parameters(inputs, { ...settings, ...rules });
+      settings = parseParameters(inputs, { ...settings, ...rules });
     },
     read() {
       return Object.freeze({

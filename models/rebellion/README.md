@@ -29,7 +29,7 @@ const observation = simulation.read();
 | `governmentLegitimacy` | `0.82` | number; ≥ 0; ≤ 1 |
 | `maxJailTerm` | `30` | integer; ≥ 0; ≤ 50 |
 | `movement` | `true` | boolean |
-| `visualization` | `"2D"` | `2D`, `3D` |
+| `visualization` | `"2d"` | `2d`, `3d` |
 
 ## Actions and observations
 

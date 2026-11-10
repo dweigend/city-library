@@ -4,7 +4,7 @@ import { stats } from "city-library";
 import { model } from "./model.ts";
 
 const binding = defineUI(model, {
-  setup: ["seed", "initialArraySize", "maxVirusTypes"],
+  setup: ["seed", "initialArraySize", "maxVirusTypeCount"],
   change: (instance, changes) => instance.setParameters(changes),
   live: {
     guideUnbindChance: {},
@@ -60,9 +60,8 @@ const binding = defineUI(model, {
 });
 
 export { model };
-export const sourceMarker =
-  "selected-disease-gene-b09:crispr-bacterium:e87977797048bf809aa58a41d6dc746c59d6d5e0ba94957db2996815725f4813";
-export const ui = { ...binding, model, sourceMarker };
+
+export const ui = { ...binding, model };
 
 type UIObservation = Observation<typeof model>;
 
@@ -75,7 +74,7 @@ function guideAndSpacerSequencesSeries(
       points: stats
         .histogram(state.guideSequences, {
           edges: Array.from(
-            { length: state.parameters.maxVirusTypes + 1 },
+            { length: state.parameters.maxVirusTypeCount + 1 },
             (_, i) => i - 0.5,
           ),
         })
@@ -86,7 +85,7 @@ function guideAndSpacerSequencesSeries(
       points: stats
         .histogram(state.array, {
           edges: Array.from(
-            { length: state.parameters.maxVirusTypes + 1 },
+            { length: state.parameters.maxVirusTypeCount + 1 },
             (_, i) => i - 0.5,
           ),
         })
@@ -102,7 +101,7 @@ function historySeries(state: UIObservation): readonly Series[] {
       color: "#35a85b",
       points: state.history.map((point) => ({
         x: point.tick,
-        y: Number(point.cas9),
+        y: Number(point.cas9Count),
       })),
     },
     {
@@ -110,7 +109,7 @@ function historySeries(state: UIObservation): readonly Series[] {
       color: "#2db5a4",
       points: state.history.map((point) => ({
         x: point.tick,
-        y: Number(point.guides),
+        y: Number(point.guideCount),
       })),
     },
     {
@@ -118,7 +117,7 @@ function historySeries(state: UIObservation): readonly Series[] {
       color: "#d18b34",
       points: state.history.map((point) => ({
         x: point.tick,
-        y: Number(point.dimers),
+        y: Number(point.dimerCount),
       })),
     },
     {
@@ -126,7 +125,7 @@ function historySeries(state: UIObservation): readonly Series[] {
       color: "#df4545",
       points: state.history.map((point) => ({
         x: point.tick,
-        y: Number(point.viruses),
+        y: Number(point.virusCount),
       })),
     },
   ];

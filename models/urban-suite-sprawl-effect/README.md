@@ -25,7 +25,7 @@ const observation = simulation.read();
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
 | `smoothness` | `15` | integer; ≥ 1; ≤ 20 |
 | `maxAttraction` | `15` | integer; ≥ 0; ≤ 30 |
-| `population` | `200` | integer; ≥ 1; ≤ 750 |
+| `personCount` | `200` | integer; ≥ 1; ≤ 750 |
 | `seekerSearchAngle` | `84` | integer; ≥ 1; ≤ 360 |
 | `seekerPatience` | `60` | integer; ≥ 0; ≤ 120 |
 | `waitBetweenSeeking` | `15` | integer; ≥ 5; ≤ 60 |

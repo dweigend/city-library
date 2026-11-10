@@ -21,13 +21,13 @@ export function resources(state: Wealth): SpatialData {
 }
 export function classes(state: SvelteObservation<typeof model>): readonly BarSeries[] {
   return [{ label: 'People', points: [
-    { x: 'Low', y: state.classes.low }, { x: 'Middle', y: state.classes.middle }, { x: 'High', y: state.classes.high },
+    { x: 'Low', y: state.classes.lowWealthPersonCount }, { x: 'Middle', y: state.classes.middleWealthPersonCount }, { x: 'High', y: state.classes.highWealthPersonCount },
   ] }];
 }
 export function entry(bind: typeof defineUI = defineUI) {
   return bind(model, {
-    setup: ['seed', 'people'],
-    monitors: [{ label: 'People', value: state => state.peopleCount }],
+    setup: ['seed', 'personCount'],
+    monitors: [{ label: 'People', value: state => state.personCount }],
     views: [
       { type: 'spatial', label: 'Resources and people', data: resources },
       { type: 'bar', label: 'Wealth classes', xAxis: { label: 'Class' }, yAxis: { label: 'People' }, series: classes },
@@ -35,7 +35,7 @@ export function entry(bind: typeof defineUI = defineUI) {
   });
 }
 export const ui = entry();
-const simulation = model.create({ seed: 3, people: 2 });
+const simulation = model.create({ seed: 3, personCount: 2 });
 const state: Wealth = simulation.read();
 const before = JSON.stringify(state);
 equal(grainColor(0), 'rgb(0,0,0)', 'Zero-grain color remains black');

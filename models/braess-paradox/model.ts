@@ -1,16 +1,16 @@
 /** NetLogo Braess' Paradox, Wilensky 2019; CC BY-NC-SA 3.0, see NOTICE.md. */
 import { Agent, Grid, Random, World, run, geometry } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface Parameters {
   seed: number;
   middleOn: boolean;
   spawnRate: number;
   smoothing: number;
   mode:
-    | "Best Known /w Random Deviation"
-    | "Empirical Analytical"
-    | "Probabilistic Greedy";
+    | "best-known-with-random-deviation"
+    | "empirical-analytical"
+    | "probabilistic-greedy";
   randomness: number;
 }
 export const inputs: Inputs<Parameters> = {
@@ -20,18 +20,18 @@ export const inputs: Inputs<Parameters> = {
   smoothing: { kind: "number", default: 10, min: 1, max: 10, integer: true },
   mode: {
     kind: "choice",
-    default: "Probabilistic Greedy",
+    default: "probabilistic-greedy",
     options: [
-      "Best Known /w Random Deviation",
-      "Empirical Analytical",
-      "Probabilistic Greedy",
+      "best-known-with-random-deviation",
+      "empirical-analytical",
+      "probabilistic-greedy",
     ],
   },
   randomness: { kind: "number", default: 16, min: 0, max: 100, integer: true },
 };
 type Commuter = Agent<{ birthTick: number; ticksHere: number; route: number }>;
 export function create(options: Partial<Parameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const space = { x: 49, y: 49, boundary: "hard" as const };
   const world = World.create(space, { random });
@@ -50,7 +50,7 @@ export function create(options: Partial<Parameters> = {}) {
   const commuters = () => world.agents as readonly Commuter[];
   const integer = (n: number) => Math.floor(random.number() * n);
   const shuffle = <T>(a: readonly T[]) =>
-    random.sample(a, { count: a.length, algorithm: "fisher-yates-descending" });
+    random.sample(a, { sampleCount: a.length, algorithm: "fisher-yates-descending" });
   const topLeft = grid.fieldAt({ x: -22, y: 22 })!;
   const topRight = grid.fieldAt({ x: 22, y: 22 })!;
   const bottomLeft = grid.fieldAt({ x: -22, y: -22 })!;
@@ -62,8 +62,8 @@ export function create(options: Partial<Parameters> = {}) {
   let spawnTime = 0;
   let middlePrev = settings.middleOn;
   let avg = 0;
-  let carsSpawned = 0;
-  let completed = 0;
+  let spawnedCarCount = 0;
+  let completedCarCount = 0;
   let topProb = 0;
   let bottomProb = 0;
   let middleProb = 0;
@@ -225,8 +225,8 @@ export function create(options: Partial<Parameters> = {}) {
     return integer(1000) < sigma * 1000 ? 0 : 1;
   }
   function newRoute() {
-    if (settings.mode === "Empirical Analytical") return analyticalRoute();
-    if (settings.mode === "Best Known /w Random Deviation")
+    if (settings.mode === "empirical-analytical") return analyticalRoute();
+    if (settings.mode === "best-known-with-random-deviation")
       return bestRandomRoute();
     return probabilisticGreedyRoute();
   }
@@ -248,7 +248,7 @@ export function create(options: Partial<Parameters> = {}) {
         towards: route === 0 || route === 2 ? topRight : bottomLeft,
       });
       integer(2); // source car/truck shape selection; presentation only
-      carsSpawned++;
+      spawnedCarCount++;
       spawnTime = 0;
     } else spawnTime++;
   }
@@ -263,7 +263,7 @@ export function create(options: Partial<Parameters> = {}) {
     if (agent.route === 0) top = smooth(top);
     else if (agent.route === 1) bottom = smooth(bottom);
     else middle = smooth(middle);
-    completed++;
+    completedCarCount++;
     agent.delete();
   }
   function commuterMove(agent: Commuter) {
@@ -323,15 +323,15 @@ export function create(options: Partial<Parameters> = {}) {
   setupRoads();
   record();
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) {
         run(world, go);
         record();
       }
     },
     setRules(value: Partial<Omit<Parameters, "seed">>) {
-      settings = parameters(inputs, { ...settings, ...value });
+      settings = parseParameters(inputs, { ...settings, ...value });
     },
     read() {
       return Object.freeze({
@@ -339,7 +339,7 @@ export function create(options: Partial<Parameters> = {}) {
         width: 49,
         height: 49,
         parameters: settings,
-        sourceMarker: "braess-paradox:source-v1",
+
         done: false,
         travelTime,
         top,
@@ -348,8 +348,8 @@ export function create(options: Partial<Parameters> = {}) {
         spawnTime,
         middlePrev,
         avg,
-        carsSpawned,
-        completed,
+        spawnedCarCount,
+        completedCarCount,
         topProb,
         bottomProb,
         middleProb,

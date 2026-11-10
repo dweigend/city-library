@@ -23,10 +23,10 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
-| `number` | `1500` | integer; ≥ 0; ≤ 2000 |
+| `fireflyCount` | `1500` | integer; ≥ 0; ≤ 2000 |
 | `flashLength` | `1` | integer; ≥ 1; ≤ 10 |
 | `cycleLength` | `10` | integer; ≥ 5; ≤ 100 |
-| `flashesToReset` | `1` | integer; ≥ 1; ≤ 3 |
+| `flashCountToReset` | `1` | integer; ≥ 1; ≤ 3 |
 | `strategy` | `"delay"` | `delay`, `advance` |
 | `showDarkFireflies` | `false` | boolean |
 

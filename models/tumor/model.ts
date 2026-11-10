@@ -1,7 +1,7 @@
 /** NetLogo Tumor (Wilensky, 1998). Complete notices: NOTICE.md. */
 import { Agent, Random, World, geometry, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 
 export interface TumorParameters {
   seed: number;
@@ -20,7 +20,7 @@ type Cell = Agent<{
   penDown: boolean;
 }>;
 export function create(options: Partial<TumorParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const space = { x: 103, y: 103, boundary: "hard" } as const;
   const world = World.create(space, { random });
@@ -118,7 +118,7 @@ export function create(options: Partial<TumorParameters> = {}) {
   }
   function go() {
     for (const cell of random.sample(cells(), {
-      count: cells().length,
+      sampleCount: cells().length,
       algorithm: "fisher-yates-descending",
     })) {
       cell.penDown = settings.leaveTrail;
@@ -129,9 +129,9 @@ export function create(options: Partial<TumorParameters> = {}) {
       death(cell);
     }
   }
-  function advance(count = 1) {
-    stepCount(count);
-    for (let index = 0; index < count; index++) {
+  function advance(stepCount = 1) {
+    validateStepCount(stepCount);
+    for (let index = 0; index < stepCount; index++) {
       // evaluate-params is after tick, so an emptied model completes one go.
       if (stopped) break;
       run(world, go);
@@ -157,7 +157,7 @@ export function create(options: Partial<TumorParameters> = {}) {
   function setParameters(update: Partial<Pick<TumorParameters, "leaveTrail">>) {
     if (Object.keys(update).some((key) => key !== "leaveTrail"))
       throw new TypeError("Only leaveTrail is live.");
-    settings = parameters(inputs, { ...settings, ...update });
+    settings = parseParameters(inputs, { ...settings, ...update });
   }
   function read() {
     return {

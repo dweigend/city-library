@@ -10,7 +10,7 @@ export const ui = defineUI(model, {
   live: {
     calculationMethod: {},
     dampingFactor: {},
-    numberOfSurfers: {},
+    surferCount: {},
     watchSurfers: {},
     showPageRanks: {},
   },
@@ -72,7 +72,7 @@ export const ui = defineUI(model, {
       type: "table",
       label: "Page visits",
       rows: (s) =>
-        s.pages.map((p) => ({ page: p.id, visits: p.visits, rank: p.rank })),
+        s.pages.map((p) => ({ page: p.id, visits: p.visitCount, rank: p.rank })),
     },
   ],
 });

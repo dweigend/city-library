@@ -2,7 +2,7 @@ import { defineUI, type Observation, type SpatialData } from "../../ui/index.ts"
 
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: ["seed", "numberOfMammoths", "numberOfHumans"],
+  setup: ["seed", "mammothCount", "humanCount"],
   change: (instance, changes) => instance.setParameters(changes),
   live: {
     mammothBirthRate: {},
@@ -21,8 +21,8 @@ export const ui = defineUI(model, {
     { label: "Years", value: (s) => s.years },
     { label: "Mammoths", value: (s) => s.mammoths.length },
     { label: "Humans", value: (s) => s.humans.length },
-    { label: "Hunting deaths", value: (s) => s.mammothsKilledByHumans },
-    { label: "Climate deaths", value: (s) => s.mammothsKilledByClimateChange },
+    { label: "Hunting deaths", value: (s) => s.humanKilledMammothCount },
+    { label: "Climate deaths", value: (s) => s.climateKilledMammothCount },
   ],
   views: [
     {
@@ -34,9 +34,9 @@ export const ui = defineUI(model, {
       type: "line",
       label: "Populations",
       series: (s) =>
-        (["mammoths", "humans"] as const).map((key) => ({
-          label: key,
-          color: key === "mammoths" ? "#8c541f" : "#b8a600",
+        (["mammothCount", "humanCount"] as const).map((key) => ({
+          label: key === "mammothCount" ? "Mammoths" : "Humans",
+          color: key === "mammothCount" ? "#8c541f" : "#b8a600",
           points: s.history.map((p) => ({ x: p.tick, y: p[key] })),
         })),
     },

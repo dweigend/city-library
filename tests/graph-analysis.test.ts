@@ -89,12 +89,12 @@ test("spectral scores satisfy independent rank-one eigenpair and PageRank balanc
     const result = graph.analyze({ measure: "eigenvector", weight: edge => edge.weight, tolerance: 1e-13 });
     for (const node of nodes) expect(result.get(node)!).toBeCloseTo((node.index + 1) / Math.sqrt(14), 11);
     expect([...result.values()].reduce((sum, value) => sum + value * value, 0)).toBeCloseTo(1, 14);
-    expect(() => graph.analyze({ measure: "eigenvector", weight: edge => edge.weight, tolerance: 1e-13, maxIterations: 1 })).toThrow();
+    expect(() => graph.analyze({ measure: "eigenvector", weight: edge => edge.weight, tolerance: 1e-13, maxIterationCount: 1 })).toThrow();
     for (const edge of graph.edges) edge.weight = (edge.to.index + 1) * 2 ** 1022;
-    const ranks = graph.analyze({ measure: "pageRank", weight: edge => edge.weight, damping: 0.5, tolerance: 1e-13, maxIterations: 2 });
+    const ranks = graph.analyze({ measure: "page-rank", weight: edge => edge.weight, damping: 0.5, tolerance: 1e-13, maxIterationCount: 2 });
     for (const [index, expected] of [1 / 4, 1 / 3, 5 / 12].entries()) expect(ranks.get(nodes[index]!)!).toBeCloseTo(expected, 14);
     expect([...ranks.values()].reduce((a, b) => a + b, 0)).toBeCloseTo(1, 14);
-    expect(() => graph.analyze({ measure: "pageRank", weight: edge => edge.weight, damping: 0.5, tolerance: 1e-13, maxIterations: 1 })).toThrow();
+    expect(() => graph.analyze({ measure: "page-rank", weight: edge => edge.weight, damping: 0.5, tolerance: 1e-13, maxIterationCount: 1 })).toThrow();
   }
 });
 
@@ -105,7 +105,7 @@ test("all five measures capture once, allow nested observations and preserve can
   for (const node of [a, b, c]) graph.nodes.add(node);
   const edges = [graph.edges.add({ from: a, to: b }), graph.edges.add({ from: b, to: c })];
   const state = random.state;
-  const measures = ["degree", "closeness", "betweenness", "eigenvector", "pageRank"] as const;
+  const measures = ["degree", "closeness", "betweenness", "eigenvector", "page-rank"] as const;
   const snapshots = [];
   for (const measure of measures) {
     const seen: typeof edges = [];
@@ -135,10 +135,10 @@ test("all five measures capture once, allow nested observations and preserve can
 test("measure-specific own-data validation executes before callbacks even on empty graphs", () => {
   const allowed = {
     degree: ["direction", "normalized", "weight"], closeness: ["direction", "disconnected", "cost"],
-    betweenness: ["normalized", "cost"], eigenvector: ["weight", "tolerance", "maxIterations"],
-    pageRank: ["weight", "damping", "tolerance", "maxIterations"],
+    betweenness: ["normalized", "cost"], eigenvector: ["weight", "tolerance", "maxIterationCount"],
+    "page-rank": ["weight", "damping", "tolerance", "maxIterationCount"],
   } as const;
-  const keys = ["direction", "normalized", "disconnected", "cost", "weight", "damping", "tolerance", "maxIterations", "unknown"];
+  const keys = ["direction", "normalized", "disconnected", "cost", "weight", "damping", "tolerance", "maxIterationCount", "unknown"];
   for (const populated of [false, true]) {
     const graph = Graph.create(); const a = graph.nodes.add({}), b = graph.nodes.add({});
     graph.edges.add({ from: a, to: b });
@@ -158,13 +158,13 @@ test("measure-specific own-data validation executes before callbacks even on emp
     expect(() => graph.analyze({ measure: "degree", normalized: 1 as never })).toThrow(TypeError);
     expect(() => graph.analyze({ measure: "closeness", direction: "all" })).toThrow(TypeError);
     expect(() => graph.analyze({ measure: "closeness", disconnected: null as never })).toThrow(TypeError);
-    for (const measure of ["eigenvector", "pageRank"] as const) {
+    for (const measure of ["eigenvector", "page-rank"] as const) {
       for (const value of [NaN, Infinity, "1", null]) {
         expect(() => graph.analyze({ measure, tolerance: value as never })).toThrow(TypeError);
-        expect(() => graph.analyze({ measure, maxIterations: value as never })).toThrow(TypeError);
+        expect(() => graph.analyze({ measure, maxIterationCount: value as never })).toThrow(TypeError);
       }
       for (const value of [0, -1]) expect(() => graph.analyze({ measure, tolerance: value })).toThrow(RangeError);
-      for (const value of [0, -1, 0.5]) expect(() => graph.analyze({ measure, maxIterations: value })).toThrow(RangeError);
+      for (const value of [0, -1, 0.5]) expect(() => graph.analyze({ measure, maxIterationCount: value })).toThrow(RangeError);
     }
   }
 });
@@ -173,7 +173,7 @@ test("callback exceptions retain identity, malformed values reject and weights r
   const graph = Graph.create<object, { value: number }>({ edgeState: { value: 1 } });
   const a = graph.nodes.add({}), b = graph.nodes.add({});
   const edge = graph.edges.add({ from: a, to: b });
-  for (const measure of ["degree", "closeness", "betweenness", "eigenvector", "pageRank"] as const) {
+  for (const measure of ["degree", "closeness", "betweenness", "eigenvector", "page-rank"] as const) {
     const positive = measure === "closeness" || measure === "betweenness";
     const query = (callback: (current: typeof edge) => number) => graph.analyze({ measure, ...(positive ? { cost: callback } : { weight: callback }) });
     for (const invalid of [NaN, Infinity, -Infinity, null, undefined, "1", 1n, Promise.resolve(1), { then() {} }])
@@ -195,16 +195,16 @@ test("loop incidences, edgeless distinctions and wholly-undirected normalization
   const graph = Graph.create({ selfLoops: true });
   const a = graph.nodes.add({}), b = graph.nodes.add({});
   expect([...graph.analyze({ measure: "eigenvector" }).values()]).toEqual([0, 0]);
-  expect([...graph.analyze({ measure: "pageRank" }).values()]).toEqual([0.5, 0.5]);
+  expect([...graph.analyze({ measure: "page-rank" }).values()]).toEqual([0.5, 0.5]);
   graph.edges.add({ from: a, to: a }); graph.edges.add({ from: a, to: b });
   expect([...graph.analyze({ measure: "degree" }).values()]).toEqual([3, 1]);
   const eigenvector = graph.analyze({ measure: "eigenvector", tolerance: 1e-13 });
   expect(eigenvector.get(a)!).toBeCloseTo(Math.cos(Math.PI / 8), 11);
   expect(eigenvector.get(b)!).toBeCloseTo(Math.sin(Math.PI / 8), 11);
-  const zero = graph.analyze({ measure: "eigenvector", weight: () => 0, tolerance: 1e-13, maxIterations: 1 });
+  const zero = graph.analyze({ measure: "eigenvector", weight: () => 0, tolerance: 1e-13, maxIterationCount: 1 });
   for (const value of zero.values()) expect(value).toBeCloseTo(1 / Math.sqrt(2), 14);
-  const rank = graph.analyze({ measure: "pageRank", damping: 0.5, tolerance: 1e-13 });
+  const rank = graph.analyze({ measure: "page-rank", damping: 0.5, tolerance: 1e-13 });
   expect(rank.get(a)!).toBeCloseTo(9 / 14, 12); expect(rank.get(b)!).toBeCloseTo(5 / 14, 12);
-  for (const measure of ["degree", "closeness", "betweenness", "eigenvector", "pageRank"] as const)
+  for (const measure of ["degree", "closeness", "betweenness", "eigenvector", "page-rank"] as const)
     expect(Graph.create().analyze({ measure }).size).toBe(0);
 });

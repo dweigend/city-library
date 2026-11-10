@@ -4,14 +4,14 @@ import { Random, stats, type Summary } from "city-library";
 test("population and sample summaries preserve median, ties and undefined small-sample spread", () => {
   const values = Object.freeze([9, 1, 2, 2, 6]);
   const population: Summary = stats.describe(values);
-  expect(population).toEqual({ count: 5, sum: 20, min: 1, max: 9, mean: 4, median: 2, variance: 9.2, standardDeviation: Math.sqrt(9.2) });
+  expect(population).toEqual({ valueCount: 5, sum: 20, min: 1, max: 9, mean: 4, median: 2, variance: 9.2, standardDeviation: Math.sqrt(9.2) });
   expect(stats.describe(values, { sample: true }).variance).toBe(11.5);
   expect(values).toEqual([9, 1, 2, 2, 6]);
   expect(Object.isFrozen(population)).toBe(true);
   expect(stats.describe([-4, 0, 2, 8]).median).toBe(1);
-  expect(stats.describe([7], { sample: true })).toEqual({ count: 1, sum: 7, min: 7, max: 7, mean: 7, median: 7, variance: undefined, standardDeviation: undefined });
+  expect(stats.describe([7], { sample: true })).toEqual({ valueCount: 1, sum: 7, min: 7, max: 7, mean: 7, median: 7, variance: undefined, standardDeviation: undefined });
   expect(stats.describe([7]).standardDeviation).toBe(0);
-  expect(stats.describe([])).toEqual({ count: 0, sum: 0, min: undefined, max: undefined, mean: undefined, median: undefined, variance: undefined, standardDeviation: undefined });
+  expect(stats.describe([])).toEqual({ valueCount: 0, sum: 0, min: undefined, max: undefined, mean: undefined, median: undefined, variance: undefined, standardDeviation: undefined });
 });
 
 test("large common offsets retain centered spread and affine measurement properties", () => {
@@ -26,7 +26,7 @@ test("large common offsets retain centered spread and affine measurement propert
   expect(scaled.variance).toBe(22.5);
   // This size also rejects spread-argument implementations of min/max.
   const many = stats.describe(Array<number>(200_000).fill(3));
-  expect(many).toEqual({ count: 200_000, sum: 600_000, min: 3, max: 3, mean: 3, median: 3, variance: 0, standardDeviation: 0 });
+  expect(many).toEqual({ valueCount: 200_000, sum: 600_000, min: 3, max: 3, mean: 3, median: 3, variance: 0, standardDeviation: 0 });
 });
 
 test("integer multiset permutations retain summaries and satisfy the pairwise variance identity", () => {

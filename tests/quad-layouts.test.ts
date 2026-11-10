@@ -102,7 +102,7 @@ describe("finite quadrilateral public contract", () => {
       const midpoint = (a: XY, b: XY): XY => [(a[0] + b[0]) / 2, (a[1] + b[1]) / 2];
       face.forEach((corner, index) => expected.push(polygon([corner, midpoint(corner, face[(index + 1) % face.length]!), center, midpoint(face[(index + face.length - 1) % face.length]!, corner)])));
     }
-    const layout = topology.quadrilaterals({ rings: 1, random: Random.create({ seed: 1 }) });
+    const layout = topology.quadrilaterals({ ringCount: 1, random: Random.create({ seed: 1 }) });
     expect(layout.cells).toHaveLength(14);
     const remaining = expected.map(canonicalVertices);
     for (const shape of shapes(layout)) {
@@ -112,19 +112,19 @@ describe("finite quadrilateral public contract", () => {
       remaining.splice(index, 1);
     }
     expect(remaining).toHaveLength(0);
-    expect(topology.quadrilaterals({ rings: 1, random: Random.create({ seed: 0 }) }).cells).toHaveLength(12);
+    expect(topology.quadrilaterals({ ringCount: 1, random: Random.create({ seed: 0 }) }).cells).toHaveLength(12);
   });
 
   test("every supported radius preserves analytic hex area, exact edge ownership and budgets", () => {
-    for (let rings = 1; rings <= 7; rings++) {
-      const random = Random.create({ seed: rings }), continuation = random.copy();
-      const layout = topology.quadrilaterals({ rings, edgeLength: .7, random });
-      for (let draw = 0; draw < 9 * rings ** 2 - 3 * rings - 1; draw++) continuation.raw({ kind: "double" });
+    for (let ringCount = 1; ringCount <= 7; ringCount++) {
+      const random = Random.create({ seed: ringCount }), continuation = random.copy();
+      const layout = topology.quadrilaterals({ ringCount, edgeLength: .7, random });
+      for (let draw = 0; draw < 9 * ringCount ** 2 - 3 * ringCount - 1; draw++) continuation.raw({ kind: "double" });
       expect(random.state).toEqual(continuation.state);
-      expect(layout.cells.length).toBeLessThanOrEqual(18 * rings ** 2);
+      expect(layout.cells.length).toBeLessThanOrEqual(18 * ringCount ** 2);
       expect(layout.cells.length * 5).toBeLessThanOrEqual(8192);
-      expect(area(layout)).toBeCloseTo(3 * Math.sqrt(3) / 2 * (rings * .7) ** 2, 10);
-      expect([...edges(layout).values()].filter(edge => edge.owners.length === 1)).toHaveLength(12 * rings);
+      expect(area(layout)).toBeCloseTo(3 * Math.sqrt(3) / 2 * (ringCount * .7) ** 2, 10);
+      expect([...edges(layout).values()].filter(edge => edge.owners.length === 1)).toHaveLength(12 * ringCount);
       for (const shape of shapes(layout)) {
         const ring = shape.coordinates[0]!;
         expect(ring).toHaveLength(5);
@@ -138,32 +138,32 @@ describe("finite quadrilateral public contract", () => {
   test("malformed options and unsupported magnitudes do not inspect accessors or consume RNG", () => {
     const random = Random.create({ seed: 37 }), before = random.state;
     const invalid: unknown[] = [
-      { rings: 0, random }, { rings: 8, random }, { rings: 1.5, random }, { rings: NaN, random },
-      { rings: 1, edgeLength: 0, random }, { rings: 1, edgeLength: Infinity, random },
-      { rings: 1, edgeLength: 2 ** -401, random }, { rings: 7, edgeLength: 1e6, random },
-      { rings: 1, random, boundary: {} }, { rings: 1, random, relaxationIterations: 1 },
-      { rings: 1, random, pointSpacing: 1 }, { rings: 1, random: {} },
-      { rings: 1, random, edgeLength: undefined }, { rings: undefined, random },
-      { rings: 1, random, [Symbol("unknown")]: 1 },
+      { ringCount: 0, random }, { ringCount: 8, random }, { ringCount: 1.5, random }, { ringCount: NaN, random },
+      { ringCount: 1, edgeLength: 0, random }, { ringCount: 1, edgeLength: Infinity, random },
+      { ringCount: 1, edgeLength: 2 ** -401, random }, { ringCount: 7, edgeLength: 1e6, random },
+      { ringCount: 1, random, boundary: {} }, { ringCount: 1, random, relaxationIterationCount: 1 },
+      { ringCount: 1, random, pointSpacing: 1 }, { ringCount: 1, random: {} },
+      { ringCount: 1, random, edgeLength: undefined }, { ringCount: undefined, random },
+      { ringCount: 1, random, [Symbol("unknown")]: 1 },
     ];
     let inspected = 0;
-    invalid.push(Object.defineProperty({ random }, "rings", { get() { inspected++; return 1; } }));
-    invalid.push(Object.defineProperty({ rings: 1, random }, "edgeLength", { get() { inspected++; return 1; } }));
+    invalid.push(Object.defineProperty({ random }, "ringCount", { get() { inspected++; return 1; } }));
+    invalid.push(Object.defineProperty({ ringCount: 1, random }, "edgeLength", { get() { inspected++; return 1; } }));
     for (const options of invalid) {
       expect(() => topology.quadrilaterals(options as Parameters<typeof topology.quadrilaterals>[0])).toThrow();
       expect(random.state).toEqual(before);
     }
     expect(inspected).toBe(0);
-    expect(() => Reflect.apply(topology.quadrilaterals, undefined, [{ rings: 1, random }, {}])).toThrow(TypeError);
+    expect(() => Reflect.apply(topology.quadrilaterals, undefined, [{ ringCount: 1, random }, {}])).toThrow(TypeError);
     expect(random.state).toEqual(before);
   });
 
   test("admitted length extremes preserve units without display normalization or underflow", () => {
     for (const edgeLength of [2 ** -400, 1e6]) {
-      const layout = topology.quadrilaterals({ rings: 1, edgeLength, random: Random.create({ seed: 7 }) });
+      const layout = topology.quadrilaterals({ ringCount: 1, edgeLength, random: Random.create({ seed: 7 }) });
       expect(layout.cells).toHaveLength(14);
       expect(area(layout) / edgeLength ** 2).toBeCloseTo(3 * Math.sqrt(3) / 2, 12);
-      expect(topology.relax({ layout, method: "squareTarget", iterations: 0 }).cells).toEqual(layout.cells);
+      expect(topology.relax({ layout, method: "square-target", iterationCount: 0 }).cells).toEqual(layout.cells);
       assertConforming(layout);
     }
   });
@@ -171,7 +171,7 @@ describe("finite quadrilateral public contract", () => {
   test("rounded source coordinates beyond the existing magnitude cap reject before pairing", () => {
     const random = Random.create({ seed: 7 }), before = random.state;
     expect(7 * (1e6 / 7)).toBeGreaterThan(1e6);
-    expect(() => topology.quadrilaterals({ rings: 7, edgeLength: 1e6 / 7, random })).toThrow(RangeError);
+    expect(() => topology.quadrilaterals({ ringCount: 7, edgeLength: 1e6 / 7, random })).toThrow(RangeError);
     expect(random.state).toEqual(before);
   });
 
@@ -179,19 +179,19 @@ describe("finite quadrilateral public contract", () => {
     const random = Random.create({ seed: 11 });
     random.number({ distribution: "normal" });
     const saved = random.state, twin = random.copy();
-    const first = topology.quadrilaterals({ rings: 3, random });
-    expect(shapes(first)).toEqual(shapes(topology.quadrilaterals({ rings: 3, random: twin })));
+    const first = topology.quadrilaterals({ ringCount: 3, random });
+    expect(shapes(first)).toEqual(shapes(topology.quadrilaterals({ ringCount: 3, random: twin })));
     expect(random.state).toEqual(twin.state);
     const afterGeneration = random.state;
-    topology.relax({ layout: first, method: "squareTarget", iterations: 2 });
+    topology.relax({ layout: first, method: "square-target", iterationCount: 2 });
     expect(random.state).toEqual(afterGeneration);
     random.state = saved;
     random.raw({ kind: "double" });
-    const advanced = topology.quadrilaterals({ rings: 3, random });
+    const advanced = topology.quadrilaterals({ ringCount: 3, random });
     expect(shapes(advanced)).not.toEqual(shapes(first));
     const replay = Random.create();
     replay.state = saved;
-    expect(shapes(topology.quadrilaterals({ rings: 3, random: replay }))).toEqual(shapes(first));
+    expect(shapes(topology.quadrilaterals({ ringCount: 3, random: replay }))).toEqual(shapes(first));
   });
 });
 
@@ -199,8 +199,8 @@ describe("square-target revisions and guarded global steps", () => {
   test("rotated and translated exact square fixed points retain detached revisions", () => {
     const raw = topology.fromPolygons({ polygons: [polygon([[3, 6], [7, 3], [10, 7], [6, 10]])] });
     const snapshot = raw.polygon({ cell: 0 });
-    for (const iterations of [0, 1, 256]) {
-      const revised = topology.relax({ layout: raw, method: "squareTarget", iterations });
+    for (const iterationCount of [0, 1, 256]) {
+      const revised = topology.relax({ layout: raw, method: "square-target", iterationCount });
       expect(revised).not.toBe(raw);
       expect(revised.polygon({ cell: 0 })).not.toBe(snapshot);
       expect(shapes(revised)).toEqual([snapshot]);
@@ -220,7 +220,7 @@ describe("square-target revisions and guarded global steps", () => {
       polygons.push(polygon([points[lower]!, points[lower + 1]!, points[lower + 5]!, points[lower + 4]!]));
     }
     const raw = topology.fromPolygons({ polygons }), expected = firstStepOracle(raw);
-    const revised = topology.relax({ layout: raw, method: "squareTarget", iterations: 1 });
+    const revised = topology.relax({ layout: raw, method: "square-target", iterationCount: 1 });
     for (const cell of raw.cells) {
       const expectedCorners = raw.polygon({ cell }).coordinates[0]!.slice(0, 4).map(point => expected.get(coordinateKey(point))!).toSorted((a, b) => a[0] - b[0] || a[1] - b[1]);
       const actualCorners = canonicalVertices(revised.polygon({ cell }));
@@ -243,7 +243,7 @@ describe("square-target revisions and guarded global steps", () => {
       return polygon(cell % 2 ? cyclic.toReversed() : cyclic);
     });
     const equivalent = topology.fromPolygons({ polygons: variants });
-    expect(shapes(topology.relax({ layout: equivalent, method: "squareTarget", iterations: 1 }))).toEqual(shapes(revised));
+    expect(shapes(topology.relax({ layout: equivalent, method: "square-target", iterationCount: 1 }))).toEqual(shapes(revised));
     assertConforming(revised);
   });
 
@@ -251,7 +251,7 @@ describe("square-target revisions and guarded global steps", () => {
     const raw = patchFromPoints(halvingPoints), expected = firstStepOracle(raw, .25).get(coordinateKey(halvingPoints[4]!))!;
     expect(expected[0]).toBeCloseTo(1.248546875, 13);
     expect(expected[1]).toBeCloseTo(1.6424375, 13);
-    const revised = topology.relax({ layout: raw, method: "squareTarget", iterations: 1 });
+    const revised = topology.relax({ layout: raw, method: "square-target", iterationCount: 1 });
     expect(interiorPoint(revised)[0]).toBeCloseTo(expected[0], 13);
     expect(interiorPoint(revised)[1]).toBeCloseTo(expected[1], 13);
     expect(shapes(raw)).toEqual(shapes(patchFromPoints(halvingPoints)));
@@ -262,7 +262,7 @@ describe("square-target revisions and guarded global steps", () => {
     const points = [...halvingPoints];
     points[4] = [1.304019824210452, 1.5675690077264486];
     const raw = patchFromPoints(points), before = shapes(raw), neighbors = raw.neighbors({ cell: 0 });
-    expect(() => topology.relax({ layout: raw, method: "squareTarget", iterations: 1 })).toThrow(RangeError);
+    expect(() => topology.relax({ layout: raw, method: "square-target", iterationCount: 1 })).toThrow(RangeError);
     expect(shapes(raw)).toEqual(before);
     expect(raw.neighbors({ cell: 0 })).toBe(neighbors);
   });
@@ -280,7 +280,7 @@ describe("square-target revisions and guarded global steps", () => {
     // point has force (-2**-49,0), so the displacement -2**-53 rounds away at x=2.
     // Its force is nonzero; further halving cannot produce representable motion.
     expect(points[4]![0] - 2 ** -53).toBe(points[4]![0]);
-    expect(() => topology.relax({ layout: raw, method: "squareTarget", iterations: 1 })).toThrow(RangeError);
+    expect(() => topology.relax({ layout: raw, method: "square-target", iterationCount: 1 })).toThrow(RangeError);
     expect(shapes(raw)).toEqual(before);
   });
 
@@ -288,25 +288,25 @@ describe("square-target revisions and guarded global steps", () => {
     const triangle = topology.fromPolygons({ polygons: [polygon([[0, 0], [2, 0], [0, 2]])] });
     const concave = topology.fromPolygons({ polygons: [polygon([[0, 0], [2, 0], [.5, .5], [0, 2]])] });
     const narrow = topology.fromPolygons({ polygons: [polygon([[0, 0], [1, 0], [1, 1e-13], [0, 1e-13]])] });
-    for (const layout of [triangle, concave, narrow]) expect(() => topology.relax({ layout, method: "squareTarget", iterations: 0 })).toThrow(RangeError);
-    const layout = topology.square({ columns: 1, rows: 1 });
-    for (const iterations of [-1, .5, 257, Infinity, NaN]) expect(() => topology.relax({ layout, method: "squareTarget", iterations })).toThrow(RangeError);
+    for (const layout of [triangle, concave, narrow]) expect(() => topology.relax({ layout, method: "square-target", iterationCount: 0 })).toThrow(RangeError);
+    const layout = topology.square({ columnCount: 1, rowCount: 1 });
+    for (const iterationCount of [-1, .5, 257, Infinity, NaN]) expect(() => topology.relax({ layout, method: "square-target", iterationCount })).toThrow(RangeError);
     for (const options of [
-      { layout, method: "lloyd", iterations: 0 },
-      { layout, method: "squareTarget", iterations: 0, random: Random.create() },
-      { layout, method: "squareTarget", iterations: 0, relaxationIterations: 1 },
-      { layout, method: "squareTarget", iterations: undefined },
-      { layout: { ...layout }, method: "squareTarget", iterations: 0 },
+      { layout, method: "lloyd", iterationCount: 0 },
+      { layout, method: "square-target", iterationCount: 0, random: Random.create() },
+      { layout, method: "square-target", iterationCount: 0, relaxationIterationCount: 1 },
+      { layout, method: "square-target", iterationCount: undefined },
+      { layout: { ...layout }, method: "square-target", iterationCount: 0 },
     ]) expect(() => topology.relax(options as Parameters<typeof topology.relax>[0])).toThrow(TypeError);
-    expect(() => Reflect.apply(topology.relax, undefined, [{ layout, method: "squareTarget", iterations: 0 }, {}])).toThrow(TypeError);
+    expect(() => Reflect.apply(topology.relax, undefined, [{ layout, method: "square-target", iterationCount: 0 }, {}])).toThrow(TypeError);
   });
 
   test("disconnected components, gaps and a hole keep disjoint global geometry after relaxation", () => {
-    const original = topology.square({ columns: 3, rows: 3 });
+    const original = topology.square({ columnCount: 3, rowCount: 3 });
     const outer = original.cells.filter(cell => cell !== 4).map(cell => original.polygon({ cell }));
     const isolated = polygon([[8, 1], [9, 1], [9, 2], [8, 2]]);
     const raw = topology.fromPolygons({ polygons: [...outer, isolated] });
-    const revised = topology.relax({ layout: raw, method: "squareTarget", iterations: 8 });
+    const revised = topology.relax({ layout: raw, method: "square-target", iterationCount: 8 });
     expect(revised.cellAt({ position: { x: 1.5, y: 1.5 } })).toBeUndefined();
     expect(revised.cellAt({ position: { x: 5, y: 1.5 } })).toBeUndefined();
     expect(area(revised)).toBe(9);
@@ -314,7 +314,7 @@ describe("square-target revisions and guarded global steps", () => {
   });
 
   test("corresponding layouts compose with independent Grid and Field state identities", () => {
-    const raw = patchFromPoints(halvingPoints), revised = topology.relax({ layout: raw, method: "squareTarget", iterations: 1 });
+    const raw = patchFromPoints(halvingPoints), revised = topology.relax({ layout: raw, method: "square-target", iterationCount: 1 });
     const before = Grid.create({ layout: raw, state: { population: 0, density: 1 } });
     before.fields[1]!.population = 23;
     const after = Grid.create({ layout: revised, state: { population: 0, density: 1 } });

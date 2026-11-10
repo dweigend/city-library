@@ -23,9 +23,9 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer |
-| `initialBacteria` | `50` | integer; ≥ 0; ≤ 100 |
-| `initialViruses` | `250` | integer; ≥ 0; ≤ 1000 |
-| `maxVirusTypes` | `50` | integer; ≥ 1; ≤ 100 |
+| `initialBacteriumCount` | `50` | integer; ≥ 0; ≤ 100 |
+| `initialVirusCount` | `250` | integer; ≥ 0; ≤ 1000 |
+| `maxVirusTypeCount` | `50` | integer; ≥ 1; ≤ 100 |
 | `infectionChance` | `5` | number; ≥ 0; ≤ 10 |
 | `spacerLossChance` | `1` | number; ≥ 0; ≤ 2 |
 | `crispr` | `true` | boolean |

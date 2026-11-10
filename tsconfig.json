@@ -42,12 +42,11 @@
   },
   "include": [
     "index.ts",
-    "src/**/*.ts",
+    "library/**/*.ts",
     "ui/**/*.ts",
     "ui/**/*.svelte",
     "models/**/*.ts",
     "tests/**/*.ts",
-    "scripts/**/*.ts",
     "vite.config.ts"
   ],
   "exclude": [

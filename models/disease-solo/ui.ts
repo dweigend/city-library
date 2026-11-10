@@ -48,7 +48,7 @@ const binding = defineUI(model, {
           color: "#df4545",
           points: state.history.map((point) => ({
             x: point.tick,
-            y: Number(point.sick),
+            y: Number(point.sickPersonCount),
           })),
         },
       ],
@@ -57,6 +57,5 @@ const binding = defineUI(model, {
 });
 
 export { model };
-export const sourceMarker =
-  "selected-disease-gene-b09:disease-solo:f3d15df285ed35bcba2a6b3a718acf63de1589c8be099b44c2b6f1743b701a97";
-export const ui = { ...binding, model, sourceMarker };
+
+export const ui = { ...binding, model };

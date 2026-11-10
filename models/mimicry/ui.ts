@@ -45,9 +45,9 @@ export const ui = defineUI(model, {
       type: "line",
       label: "Butterfly populations",
       series: (s) =>
-        (["monarchs", "viceroys"] as const).map((key) => ({
-          label: key === "monarchs" ? "Monarchs" : "Viceroys",
-          color: key === "monarchs" ? "#d73027" : "#4575b4",
+        (["monarchCount", "viceroyCount"] as const).map((key) => ({
+          label: key === "monarchCount" ? "Monarchs" : "Viceroys",
+          color: key === "monarchCount" ? "#d73027" : "#4575b4",
           points: s.history.map((p) => ({ x: p.tick, y: p[key] })),
         })),
     },

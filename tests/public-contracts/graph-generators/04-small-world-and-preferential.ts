@@ -9,7 +9,7 @@ const small = Graph.create<Node>();
 const nodes = Array.from({ length: 4 }, (_, index) => small.nodes.add({ index }));
 const random = Random.create({ seed: 1 }), control = random.copy();
 for (let draw = 0; draw < 8; draw++) control.number();
-const rewired = small.generate({ kind: "small-world", nodes, neighbors: 2, probability: 1, random });
+const rewired = small.generate({ kind: "small-world", nodes, neighborCount: 2, probability: 1, random });
 assert.deepEqual(pairs(rewired), [[0, 2], [1, 3], [2, 1], [3, 2]]);
 assert.deepEqual(random.state, control.state);
 assert.equal(rewired.length, 4);
@@ -20,7 +20,7 @@ for (const [count, probability] of [[4, 0], [3, 1]] as const) {
   const members = Array.from({ length: count }, (_, index) => graph.nodes.add({ index }));
   const rng = Random.create({ seed: 42 }), expectedRng = rng.copy();
   for (let draw = 0; draw < count; draw++) expectedRng.number();
-  const result = graph.generate({ kind: "small-world", nodes: members, neighbors: 2, probability, random: rng });
+  const result = graph.generate({ kind: "small-world", nodes: members, neighborCount: 2, probability, random: rng });
   assert.deepEqual(pairs(result), count === 4 ? [[0, 1], [1, 2], [2, 3], [3, 0]] : [[0, 1], [1, 2], [2, 0]]);
   assert.deepEqual(rng.state, expectedRng.state); // No eligible endpoint in K3: no selection draw.
 }
@@ -35,7 +35,7 @@ assert.deepEqual(members.map(node => preferential.neighbors(node).length), [3, 5
 const invalid = Graph.create<Node>();
 const invalidNodes = Array.from({ length: 4 }, (_, index) => invalid.nodes.add({ index }));
 const invalidRandom = Random.create({ seed: 91 }), before = invalidRandom.state;
-for (const neighbors of [0, 1, 3, 4, 2.5]) assert.throws(() => invalid.generate({ kind: "small-world", nodes: invalidNodes, neighbors, probability: 1, random: invalidRandom }));
+for (const neighbors of [0, 1, 3, 4, 2.5]) assert.throws(() => invalid.generate({ kind: "small-world", nodes: invalidNodes, neighborCount: neighbors, probability: 1, random: invalidRandom }));
 for (const edgesPerNode of [0, 4, 1.5]) assert.throws(() => invalid.generate({ kind: "preferential", nodes: invalidNodes, edgesPerNode, random: invalidRandom }));
 assert.throws(() => invalid.generate({ kind: "small-world", nodes: invalidNodes, neighbors: 2, probability: 1, random: invalidRandom, directed: undefined } as never));
 assert.throws(() => invalid.generate({ kind: "preferential", nodes: invalidNodes, edgesPerNode: 1, random: invalidRandom, directed: true } as never));

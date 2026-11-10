@@ -1,5 +1,5 @@
 import type { Definition } from '../models/definition.ts';
-import type { ChangeUISpec, KeyedLive, LegacyLiveField, LiveChanges, ModelInstance, SetupField, Snapshot, UISpec } from './definition.ts';
+import type { ChangeUISpec, KeyedLive, LiveField, LiveChanges, ModelInstance, SetupField, Snapshot, UISpec } from './definition.ts';
 import type { Descriptor } from './inputs.ts';
 
 export type ControlValue = string | number | boolean;
@@ -15,7 +15,7 @@ interface RuntimeMonitor<S> {
 }
 export type RuntimeSpec<P extends object, M extends ModelInstance> = Omit<AuthoringSpec<P, M>, 'monitors' | 'live' | 'change'> & {
   readonly change?: (model: M, changes: LiveChanges<P>) => void;
-  readonly live?: readonly LegacyLiveField<P, M>[] | KeyedLive<P, M, true>;
+  readonly live?: readonly LiveField<P, M>[] | KeyedLive<P, M, true>;
   readonly monitors?: readonly RuntimeMonitor<Snapshot<M>>[];
 };
 
@@ -32,7 +32,7 @@ export type MonitorSpec<P extends object, M extends ModelInstance, T extends rea
 
 export type NormalizedSpec<P extends object, M extends ModelInstance> = Omit<RuntimeSpec<P, M>, 'setup' | 'live'> & {
   readonly setup: readonly SetupField<P>[];
-  readonly live: readonly LegacyLiveField<P, M>[];
+  readonly live: readonly LiveField<P, M>[];
 };
 
 /** Descriptor decoding guards host values; scientific/refined type validation stays in actions. */
@@ -63,7 +63,7 @@ export function normalizeAuthoring<P extends object, M extends ModelInstance>(de
   };
   const keyed = spec.live !== undefined && !Array.isArray(spec.live);
   if (spec.change !== undefined && typeof spec.change !== 'function') throw new TypeError('Change must be a function.');
-  if (Array.isArray(spec.live) && spec.change !== undefined) throw new TypeError('Legacy live arrays cannot use change.');
+  if (Array.isArray(spec.live) && spec.change !== undefined) throw new TypeError('Live field arrays cannot use change.');
   const entries = keyed
     ? Object.entries(spec.live!).map(([field, binding]) => ({ ...binding, field }))
     : spec.live ?? [];
