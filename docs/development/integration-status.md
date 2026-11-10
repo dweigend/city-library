@@ -60,3 +60,13 @@ PR64 supplies a first-model rain-barrel tutorial, concepts and an updated networ
 ## Verification limits
 
 Executed: fetch, GitHub open-issue enumeration, PR64 merge-state lookup, open-PR enumeration (none), all eight worktree ancestry/status inspections and source-document inspection. Runtime, browser and scientific acceptance were not rerun for this Markdown inventory. Existing issue/checkpoint counts are recorded evidence, not newly executed model tests.
+
+## Current top-level threads
+
+T3 listed 61 top-level threads (subagents excluded), 58 settled and these three unsettled. Completed run status does not mean the assignment is accepted.
+
+| Thread | Run status | Responsibility |
+| --- | --- | --- |
+| `mcp:launch:2b4da6a9160c6a7ba2be04a8f1973235540df28119a0d53585d6c815730464a9` | running | This scoped inventory |
+| `790dbcd4-6c0d-439a-9672-12d3d32607f2` | completed | Exclusive model/visualization assignment, unsettled |
+| `9a6bd2ea-1e40-4fe6-97d2-3aa0a72f4708` | completed | Integration observation, unsettled |
