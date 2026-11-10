@@ -1,6 +1,6 @@
 # Graph generators
 
-Graph generators make repeatable starting topologies for an experiment. This contract covers the existing `Graph.generate` and `GeneratorOptions` API for eleven kinds: path, cycle, star, wheel, complete, tree, lattice, random, smallWorld, preferential and geometric. The public examples in `examples/graph-generators-proposal/` assert ordering, draw schedules and failure behavior.
+Graph generators make repeatable starting topologies for an experiment. This contract covers the existing `Graph.generate` and `GeneratorOptions` API for eleven kinds: path, cycle, star, wheel, complete, tree, lattice, random, smallWorld, preferential and geometric. The public examples in `examples/graph-generators/` assert ordering, draw schedules and failure behavior.
 
 ## Ordering, validation and publication
 

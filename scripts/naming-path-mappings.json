@@ -42,7 +42,9 @@
     "tests/a2a-boundaries.test.ts": "tests/agent-selection-boundaries.test.ts",
     "tests/mesa-social-visuals.test.ts": "tests/social-projection.test.ts",
     "tests/a5a-boundaries.test.ts": "tests/study-execution-boundaries.test.ts",
-    "examples/ui-authoring/05-independent-actions-and-legacy.ts": "examples/ui-authoring/05-independent-actions-and-scalar-setters.ts"
+    "examples/ui-authoring/05-independent-actions-and-legacy.ts": "examples/ui-authoring/05-independent-actions-and-scalar-setters.ts",
+    "examples/ui-authoring-next/05-independent-mounts-and-legacy.ts": "examples/ui-composition/05-independent-mounts-and-scalar-setters.ts",
+    "examples/ui-composition/05-independent-mounts-and-legacy.ts": "examples/ui-composition/05-independent-mounts-and-scalar-setters.ts"
   },
   "modelEvidenceKeys": {
     "description": "Map immutable historical evidence keys to current public model keys before comparison. Preserve evidence bytes and asserted values.",

@@ -87,7 +87,7 @@ Each ticket, queue entry and store occupancy slot registers its own deletion par
 ## Observations, trace data and random draws
 
 ```ts
-TimeWeighted.add({ at?: number, value: number }): TimeWeighted
+TimeWeighted.create({ at?: number, value: number }): TimeWeighted
 weighted.set({ at: number, value: number }): void
 weighted.read({ until: number }): { duration: number; integral: number; mean: number | undefined }
 EventTrace.add<T>({ capacity: number }): EventTrace<T>

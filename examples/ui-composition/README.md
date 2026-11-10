@@ -12,7 +12,7 @@ The [UI reference](../../docs/ui/api-reference.md) defines the supported API; [P
 | `02-readable-observation-projections.ts` | `Observation<typeof model>` from both public entrypoints, unchanged RGB anchors and real Wealth class totals; pure projections preserve observation/RNG | Named spatial/category projections render; canonical population and accessible category text remain visible |
 | `03-namespaced-selection.ts` | Real Wealth observation adapter deliberately shares a source ID between a sampled agent/cell; namespaces resolve kinds and reject missing IDs | Two actual canvas views select equal source IDs without ambiguity; explicit model action distinguishes kinds; leaving the sampled projection disables stale selection; restart clears it |
 | `04-formatter-errors-and-recovery.ts` | Real Voting advancement retains a numeric scientific tick | Formatter errors reach the existing host error path; pending setup edits preserve primary error; restart recovers |
-| `05-independent-mounts-and-legacy.ts` | Independent real Voting instances and RNG, existing extracted `UISpec`/legacy live syntax | Two mounts stay independent; disposing one does not alter the other; stale button does not affect another owner |
+| `05-independent-mounts-and-scalar-setters.ts` | Independent real Voting instances and RNG, existing extracted `UISpec`/legacy live syntax | Two mounts stay independent; disposing one does not alter the other; stale button does not affect another owner |
 
 `authoring.types.ts` is compile-only. It checks incorrect scalar/union formatters, both hosts, extracted specs, invalid observation inputs, concrete observation members and compatible string/null selection. `assertions.ts` only reuses accessible real-DOM queries and assertions, plus a monitor query. It never supplies a replacement DOM, simulation or runtime introspection API.
 
@@ -35,13 +35,13 @@ The model observation remains inferred. The formatter's explicit scalar annotati
 Run the public tasks:
 
 ```sh
-bun examples/ui-authoring-next/01-typed-monitor-formatters.ts
-bun examples/ui-authoring-next/02-readable-observation-projections.ts
-bun examples/ui-authoring-next/03-namespaced-selection.ts
-bun examples/ui-authoring-next/04-formatter-errors-and-recovery.ts
-bun examples/ui-authoring-next/05-independent-mounts-and-legacy.ts
+bun examples/ui-composition/01-typed-monitor-formatters.ts
+bun examples/ui-composition/02-readable-observation-projections.ts
+bun examples/ui-composition/03-namespaced-selection.ts
+bun examples/ui-composition/04-formatter-errors-and-recovery.ts
+bun examples/ui-composition/05-independent-mounts-and-scalar-setters.ts
 bun run typecheck
-sha256sum -c examples/ui-authoring-next/SHA256SUMS
+sha256sum -c examples/ui-composition/SHA256SUMS
 ```
 
 `SHA256SUMS` protects the five scripts, assertion helper, browser harness, type contracts and shared root tsconfig. Implementations must preserve their asserted expectations.

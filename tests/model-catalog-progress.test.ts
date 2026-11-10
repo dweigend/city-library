@@ -19,10 +19,10 @@ test("milestones cannot claim browser/runtime or research completion without the
     const row = clone();
     row.stages.implemented.done = false;
     for (const candidate of stages) if (candidate !== stage && candidate !== "selected") row.stages[candidate].done = false;
-    row.stages[stage] = { done: true, evidence: ["docs/development/netlogo-model-acceptance.md"] };
+    row.stages[stage] = { done: true, evidence: ["docs/development/model-acceptance.md"] };
     expect(() => validateProgressRow(row)).toThrow(/requires implementation/);
   }
   const research = clone();
-  research.stages["research-verified"] = { done: true, evidence: ["docs/development/netlogo-model-acceptance.md"] };
+  research.stages["research-verified"] = { done: true, evidence: ["docs/development/model-acceptance.md"] };
   expect(() => validateProgressRow(research)).toThrow(/reserved research tree/);
 });

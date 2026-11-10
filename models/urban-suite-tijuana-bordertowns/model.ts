@@ -1,5 +1,5 @@
 /** Headless adaptation of Wilensky (2007), CC BY-NC-SA 3.0; see NOTICE.md.
- * Explicit target schedule: legacy-shuffled asks, integer birth headings, omitted
+ * Explicit target schedule: fisher-yates-descendingd asks, integer birth headings, omitted
  * overwritten default-color draws; CLEAR/display are RNG neutral. */
 import { Agent, Grid, Random, World, geometry, stats } from "city-library";
 import type { RandomState, Field, Position } from "city-library";

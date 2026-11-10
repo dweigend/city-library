@@ -14,7 +14,7 @@ Check the API table before relying on a proposed operation. These priorities als
 
 ## Using the contract
 
-The Svelte UI implements the shared authoring API. Start with the [five authoring examples](../../examples/ui-authoring/README.md), then the [formatter and observation examples](../../examples/ui-authoring-next/README.md). Keyed live controls, flat grouping, monitor formatters and categorical/labelled charts are implemented in the Svelte UI.
+The Svelte UI implements the shared authoring API. Start with the [five authoring examples](../../examples/ui-authoring/README.md), then the [formatter and observation examples](../../examples/ui-composition/README.md). Keyed live controls, flat grouping, monitor formatters and categorical/labelled charts are implemented in the Svelte UI.
 
 Use `Observation<typeof model>` for named projections. Annotate scalar formatter parameters when you need their concrete type; automatic scalar-specific inference for unannotated formatters is not promised. Namespace projected entity IDs when different kinds share a source ID. The [reference](api-reference.md) explains these rules in detail.
 

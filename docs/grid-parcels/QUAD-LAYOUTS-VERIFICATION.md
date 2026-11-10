@@ -57,7 +57,7 @@ Coordinator checks on 8 November 2026, Bun 1.4.2 and Node 26.8.2:
 | --- | --- |
 | `bun run typecheck:townscaper` | Passed, including mixed named-variable option and regular-only Grid negative type cases. |
 | `bun run examples:townscaper` | All five frozen public scripts passed unchanged. |
-| `bun test tests/townscaper-grid.test.ts tests/grid-parcels-topology.test.ts tests/grid-parcels-grid.test.ts` | 27 tests passed, 31815 expectations. |
+| `bun test tests/quad-layouts.test.ts tests/grid-parcels-topology.test.ts tests/grid-parcels-grid.test.ts` | 27 tests passed, 31815 expectations. |
 | `bun run check` | Exit 0: complete TypeScript/Svelte checking, 619 tests / 183339 expectations across 73 files, all 241 registered public scripts, library bundle/declarations and packed consumers. |
 | Packed consumer within `bun run check` | Bun, Node ESM and ambient-free strict TypeScript passed, exercising both new APIs, RNG purity, area, revision/incidence identity, explicit Field copy and mixed options. |
 | `bun run build:ui:svelte` | Exit 0; existing chunk-size warning remains. No UI source changed. |

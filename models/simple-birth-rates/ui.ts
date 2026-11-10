@@ -19,16 +19,16 @@ export const ui = defineUI(model, {
   },
   actions: [
     {
-      label: "Run experiment",
-      run: (m) => m.experimentStep(),
+      label: "Advance population",
+      run: (m) => m.advanceUntilRestart(),
       repeat: {
         label: "Repeat experiment",
         intervalMs: 100,
       },
     },
     {
-      label: "Setup experiment",
-      run: (m) => m.setupExperiment(),
+      label: "Initialize population",
+      run: (m) => m.initializePopulation(),
     },
   ],
   monitors: [

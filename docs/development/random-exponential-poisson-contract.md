@@ -1,6 +1,6 @@
 # Exponential and Poisson draws
 
-Exponential and Poisson draws use the same explicit random stream as the rest of a model. This contract defines the two existing `random.number` overloads for the standard Mulberry profile, including their exact draw schedules. Public examples in `examples/random-exponential-poisson-proposal/` assert the draw schedule and continuation behavior.
+Exponential and Poisson draws use the same explicit random stream as the rest of a model. This contract defines the two existing `random.number` overloads for the standard Mulberry profile, including their exact draw schedules. Public examples in `examples/random-distributions/` assert the draw schedule and continuation behavior.
 
 ## Scope and shared owner
 

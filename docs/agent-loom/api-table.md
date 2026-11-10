@@ -274,7 +274,7 @@ Evaluate a synchronous report for one or more World members under explicit sched
 ### world.report
 
 ```ts
-world.report<T extends WorldMember,R>(source: readonly T[] | { kind: "agents" | "fields" | "edges"; breed?: string }, report: (context: ActivationContext<T>) => R,
+world.report<T extends WorldMember,R>(source: readonly T[] | { kind: "agents" | "fields" | "edges"; group?: string }, report: (context: ActivationContext<T>) => R,
   options?: { order?: "fixed" | "shuffle" | "priority" | "unsupported-interleaved-activation"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; groups?: ReadonlyMap<WorldMember,string>; groupOrder?: readonly string[] }): readonly (R | undefined)[]
 ```
 
@@ -333,10 +333,10 @@ Agent, Field or Edge identity eligible for explicit World activation.
 
 ```ts
 type ActivationSource<T extends WorldMember> = T | readonly T[]
-  | { readonly kind: "agents" | "fields" | "edges"; readonly breed?: string };
+  | { readonly kind: "agents" | "fields" | "edges"; readonly group?: string };
 ```
 
-One member, a captured member list or an explicit kind/breed selector.
+One member, a captured member list or an explicit kind/group selector.
 
 [Details](api-reference.md#activation-contracts)
 
@@ -2236,7 +2236,7 @@ Versioned RNG continuation containing algorithm, seed, internal words and Gaussi
 ### Input.add
 
 ```ts
-Input.add(): Input
+Input.create(): Input
 ```
 
 Create an independent Input with no property bindings.

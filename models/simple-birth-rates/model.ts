@@ -80,7 +80,7 @@ export function create(options: Partial<Parameters> = {}) {
     );
     if (history.length > 1001) history.splice(1, 1);
   }
-  function setupExperiment() {
+  function initializePopulation() {
     for (const a of [...population()]) a.delete();
     for (let i = 0; i < settings.carryingCapacity; i++)
       world.add(
@@ -144,22 +144,22 @@ export function create(options: Partial<Parameters> = {}) {
       record();
     }
   }
-  function experimentStep() {
+  function advanceUntilRestart() {
     advance();
     if (counts().redCount === 0) {
       output.push(`red extinct after ${world.tick.value} generations`);
-      setupExperiment();
+      initializePopulation();
     }
     if (counts().blueCount === 0) {
       output.push(`blue extinct after ${world.tick.value} generations`);
-      setupExperiment();
+      initializePopulation();
     }
   }
-  setupExperiment();
+  initializePopulation();
   return {
     advance,
-    experimentStep,
-    setupExperiment,
+    advanceUntilRestart,
+    initializePopulation,
     setRules(rules: Partial<Omit<Parameters, "seed">>) {
       if (
         Reflect.ownKeys(rules).some(

@@ -109,7 +109,7 @@ describe("Tijuana source boundaries and canonical observations", () => {
     ).toBe(5);
   });
 
-  test("new second-to-third breed participates in the later ask, with no recursive same-ask activation", () => {
+  test("new second-to-third group participates in the later ask, with no recursive same-ask activation", () => {
     const model = create();
     const { blockSize: _block, tooClose: _close, ...base } = firstBuilder(0, 7);
     const second = {
@@ -303,7 +303,7 @@ describe("Tijuana source boundaries and canonical observations", () => {
     expect(model.read().agents).toHaveLength(0);
   });
 
-  test("unknown, accessor, sparse, mismatched random and breed-specific fixture values fail atomically", () => {
+  test("unknown, accessor, sparse, mismatched random and group-specific fixture values fail atomically", () => {
     const model = create();
     model.setScenario(scene(model));
     const before = semantic(model);

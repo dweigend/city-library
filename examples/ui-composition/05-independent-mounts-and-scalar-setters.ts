@@ -4,7 +4,7 @@ import { assert, equal, button, monitor, settle } from './assertions.ts';
 
 type Instance = ReturnType<typeof model.create>;
 /** Existing extracted UISpec syntax with a broad, safe formatter stays compatible. */
-export const legacySpec = {
+export const scalarSetterSpec = {
   setup: ['seed'],
   live: [{ field: 'changeVote', value: (state: Observation<typeof model>) => state.parameters.changeVote,
     set: (instance: Instance, value: string | number | boolean) => instance.setRules({ changeVote: Boolean(value) }) }],
@@ -12,7 +12,7 @@ export const legacySpec = {
     format: (value: string | number) => String(value) }],
   views: [],
 } satisfies UISpec<VotingParameters, Instance>;
-export const ui = defineUI(model, legacySpec);
+export const ui = defineUI(model, scalarSetterSpec);
 const first = model.create({ width: 5, height: 5, seed: 23 });
 const second = model.create({ width: 5, height: 5, seed: 23 });
 const secondBefore = JSON.stringify(second.read());
@@ -28,8 +28,8 @@ export async function browserChecks(container: HTMLElement, bind: typeof defineU
   const tracked = { ...model, create(options?: Parameters<typeof model.create>[0]) {
     const actual = model.create(options); instances.push(actual); return actual;
   } };
-  const first = bind(tracked, legacySpec).mount(left);
-  const second = bind(tracked, legacySpec).mount(right);
+  const first = bind(tracked, scalarSetterSpec).mount(left);
+  const second = bind(tracked, scalarSetterSpec).mount(right);
   try {
     await settle(container);
     button(left, 'Setup').click(); button(right, 'Setup').click(); await settle(container);

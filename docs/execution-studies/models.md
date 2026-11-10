@@ -37,4 +37,4 @@ All implementation code is original to this repository. No numerical coefficient
 
 The existing `discoverEntries` function in `scripts/agent-lab.ts` discovers paired directories automatically and is reused by the Vite host. These ten entries require no special shell/session case or modification of `models/catalog/progress.json`. Titles, descriptions and source/limitation information identify them as illustrative examples. The upstream model selection/count stays unchanged.
 
-Library public examples must be frozen before dependent model runtime is written. Model mechanism assertions belong in `tests/mesa-models.test.ts`. Required runtime, package, browser and independent screenshot evidence is recorded separately by the implementation coordinator; none is claimed by this preparation document.
+Library public examples must be frozen before dependent model runtime is written. Model mechanism assertions belong in `tests/spatial-models.test.ts`. Required runtime, package, browser and independent screenshot evidence is recorded separately by the implementation coordinator; none is claimed by this preparation document.

@@ -10,7 +10,7 @@ test("birth source odd-capacity split, empty go and experiment restart", () => {
   expect(m.read().blueCount).toBe(1);
   m.advance(4);
   expect(m.read().tick).toBe(4);
-  m.experimentStep();
+  m.advanceUntilRestart();
   expect(m.read().tick).toBe(0);
   expect(m.read().output).toEqual(["red extinct after 5 generations"]);
   expect(m.read().blueCount).toBe(1);

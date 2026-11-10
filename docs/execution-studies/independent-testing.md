@@ -4,7 +4,7 @@ This pass tested the merged Mesa and Salabim mechanisms through the public `city
 
 ## Public adversarial checks
 
-`tests/mesa-integration.test.ts` adds eight behavioral tests, with 41 assertions:
+`tests/domain-integration.test.ts` adds eight behavioral tests, with 41 assertions:
 
 - Independent outstanding Resource tickets veto activation death before World or Graph membership changes. Releasing one of two tickets is insufficient; cancelling the final ticket permits normal coordinated deletion.
 - A mixed Agent/Grid/Graph/Agenda attachment batch with a late foreign Agenda rejects before attaching any local entry. Successful attachment retains canonical identities and immutable membership snapshots.
@@ -15,11 +15,11 @@ This pass tested the merged Mesa and Salabim mechanisms through the public `city
 - A bounded zero-delay event chain uses the existing adapter-stopped result. Partial event effects do not add a completed interval or force a terminal measurement of aborted state.
 - Explicit History recording rejects tied times even after eviction; measurement and recording neither consume Random nor advance World time.
 
-Executed `bun test tests/mesa-integration.test.ts`: 8 passed, 0 failed, 41 assertions.
+Executed `bun test tests/domain-integration.test.ts`: 8 passed, 0 failed, 41 assertions.
 
 ## Project checks
 
-- First `bun run check`: failed after a successful complete typecheck (Svelte: 0 errors, 0 warnings). Unit suite: 674 passed, 1 failed, 183,624 assertions. `tests/a2a-boundaries.test.ts` still classified the newly supported valid gamma parameters `{distribution:"gamma", shape:1, rate:1}` as invalid. The failure was reported to the coordinator without editing the baseline test or weakening its no-draw assertion. Examples/build/consumer were not reached by this chained run.
+- First `bun run check`: failed after a successful complete typecheck (Svelte: 0 errors, 0 warnings). Unit suite: 674 passed, 1 failed, 183,624 assertions. `tests/agent-selection-boundaries.test.ts` still classified the newly supported valid gamma parameters `{distribution:"gamma", shape:1, rate:1}` as invalid. The failure was reported to the coordinator without editing the baseline test or weakening its no-draw assertion. Examples/build/consumer were not reached by this chained run.
 - `bun run build`: passed, including declaration generation.
 - First separate `bun run consumer`: Bun and Node ESM execution passed; ambient-free packed TypeScript failed with TS2367 because a prior guard narrowed `scheduled.energy` to literal 3 and TypeScript did not infer the later two-phase callback mutation before comparing it to 6. The coordinator owns the consumer script and received the finding.
 - `CITY_LIBRARY_UI_RUNTIME=svelte bun run build:ui:svelte`: passed. Vite reported its chunk-size advisory for an approximately 652 kB parameter chunk; this is a warning, not a build failure.

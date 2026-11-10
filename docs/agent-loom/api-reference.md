@@ -27,7 +27,8 @@ These meanings apply throughout the public API. Ordinary model properties remain
 | `value` | Read one current principal value, where a dedicated result or state object needs it. | `world.tick.value`; `graph.flow(options).value`. Model properties such as energy stay direct. `random.number()` generates a new number. |
 | `advance` | Move a temporal process forward. Its receiver defines the effects. | `world.tick.advance(amount)` changes only the counter. `agenda.advance({until,maxEvents})` processes events up to a target and returns them. |
 | `reset` | Restore the receiver's specified initial state. | `world.tick.reset()` restores its value to 0. |
-| `add` | Create an object or add an element to its receiver. | `Agent.create()`, `world.add(component)`. |
+| `create` | Construct a new object. | `Agent.create()`. |
+| `add` | Join an existing owner or collection. | `world.add(component)`. |
 | `delete` | Remove the specified element. On a container, omitting the element removes all contents and keeps the container. On an individual object, delete that object. | `edge.delete()` removes one edge; `history.delete()` and `graph.delete()` empty their containers. `agent.delete()` and `edge.delete()` delete those objects. `world.delete(component)` removes membership, preserving the component; its component argument remains required. |
 | `set` | Assign a specified value through a managed operation. | `input.set(object,property,value)`. Ordinary model data uses direct assignment. |
 | `copy` | Create a new object with the receiver's documented copying semantics. | `agent.copy()`, `graph.copy()`, `random.copy()`. A Graph copy has independent edges and retains its original node identities. |
@@ -299,7 +300,7 @@ Loading issues fresh opaque framework IDs and preserves explicitly captured mode
 ```ts
 type WorldMember = Agent | Field | Edge;
 type ActivationSource<T extends WorldMember> = T | readonly T[]
-  | { readonly kind: "agents" | "fields" | "edges"; readonly breed?: string };
+  | { readonly kind: "agents" | "fields" | "edges"; readonly group?: string };
 interface ActivationContext<T extends WorldMember> {
   readonly world: World; readonly self: T;
   readonly caller: WorldMember | undefined;
@@ -309,7 +310,7 @@ world.activate<T extends WorldMember>(source: ActivationSource<T>, action: (cont
   options?: { order?: "fixed" | "shuffle" | "priority" | "unsupported-interleaved-activation"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; groups?: ReadonlyMap<WorldMember,string>; groupOrder?: readonly string[] }): void
 world.report<T extends WorldMember,R>(source: T, report: (context: ActivationContext<T>) => R,
   options?: { order?: "fixed" | "shuffle" | "priority" | "unsupported-interleaved-activation"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; groups?: ReadonlyMap<WorldMember,string>; groupOrder?: readonly string[] }): R | undefined
-world.report<T extends WorldMember,R>(source: readonly T[] | { kind: "agents" | "fields" | "edges"; breed?: string }, report: (context: ActivationContext<T>) => R,
+world.report<T extends WorldMember,R>(source: readonly T[] | { kind: "agents" | "fields" | "edges"; group?: string }, report: (context: ActivationContext<T>) => R,
   options?: { order?: "fixed" | "shuffle" | "priority" | "unsupported-interleaved-activation"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; groups?: ReadonlyMap<WorldMember,string>; groupOrder?: readonly string[] }): readonly (R | undefined)[]
 world.select<T extends WorldMember>(source: ActivationSource<T>, predicate: (context: ActivationContext<T>) => boolean,
   options?: { caller?: ActivationContext<WorldMember>; groups?: ReadonlyMap<WorldMember,string> }): readonly T[]
@@ -327,11 +328,11 @@ order defaults shuffle: capture and identity-deduplicate at entry, run a complet
 
 Births during callbacks never join an invocation. select never shuffles: visit entry membership in deterministic source order, evaluate Boolean predicates on still-live members, retain original references still alive after true. Nonboolean (including death-unwound undefined) rejects without undoing earlier effects. A predicate may deliberately mutate/draw, so select with a callback is not automatically a pure query.
 
-The undelivered interleaved activation target requires a separately specified random stream, explicit XY members, and compatible contexts. Global agents are sorted by ascending numeric compatibility IDs, fields by descending Y then ascending X, and edges by canonical numeric endpoint IDs then breed declaration order; captured arrays retain captured order. Implement forward lazy selection: at position i draw Java nextInt(n-i) when at least two remain, swap the chosen remaining item into i, then prefetch the following item before invoking the current callback.
+The undelivered interleaved activation target requires a separately specified random stream, explicit XY members, and compatible contexts. Global agents are sorted by ascending numeric compatibility IDs, fields by descending Y then ascending X, and edges by canonical numeric endpoint IDs then group declaration order; captured arrays retain captured order. Implement forward lazy selection: at position i draw Java nextInt(n-i) when at least two remain, swap the chosen remaining item into i, then prefetch the following item before invoking the current callback.
 
-Captured/field sources filter dead values while prefetching; tree-like global-agent/edge/breed sources defer that dead check until traversal. This prefetch timing is observable when callbacks draw or kill later members. A singleton direct member draws no traversal RNG. Only observer calls may activate the special global agents/fields selectors; report permits those selectors from nested contexts. Declaration-ordered group selectors retain declaration provenance, never silently becoming a captured array.
+Captured/field sources filter dead values while prefetching; tree-like global-agent/edge/group sources defer that dead check until traversal. This prefetch timing is observable when callbacks draw or kill later members. A singleton direct member draws no traversal RNG. Only observer calls may activate the special global agents/fields selectors; report permits those selectors from nested contexts. Declaration-ordered group selectors retain declaration provenance, never silently becoming a captured array.
 
-Core IDs are opaque strings and cannot supply native numeric ordering: for global agents/edges supply ids as a same-World identity-to-unique-nonnegative-safe-integer Map; breed selectors use breeds and groupOrder (distinct declared names) to recover model-owned role membership/order. Global field ordering needs coordinates only. Validate the complete mappings and ownership before drawing; absent required numeric IDs, unknown breed names, duplicate IDs or a foreign map key reject. Captured arrays already retain their own order and may omit those maps.
+Core IDs are opaque strings and cannot supply native numeric ordering: for global agents/edges supply ids as a same-World identity-to-unique-nonnegative-safe-integer Map; group selectors use groups and groupOrder (distinct declared names) to recover model-owned role membership/order. Global field ordering needs coordinates only. Validate the complete mappings and ownership before drawing; absent required numeric IDs, unknown group names, duplicate IDs or a foreign map key reject. Captured arrays already retain their own order and may omit those maps.
 
 Imported versioned conversion metadata can provide these maps explicitly; no random or ID-allocation inference occurs.
 
@@ -1445,7 +1446,7 @@ Invalid parameters never consume draws. Every rejection loop has a 1,000,000-att
 ### Expose existing properties
 
 ```ts
-Input.add(): Input
+Input.create(): Input
 input.add(object: object, property: string, constraints?: { min?: number; max?: number; step?: number }): void
 input.set(object: object, property: string, value: number | string | boolean): void
 input.delete(object: object, property: string): void
@@ -1467,7 +1468,7 @@ Independent `Input` starts with no bindings and binds existing number/string/boo
 
 **Behavior and errors**
 
-`Input.add()` returns an empty independent Input. input.add requires an existing writable own data property of type finite number, string or boolean, and snapshots its scalar type and constraints without changing the property. Numeric min/max are finite inclusive bounds with min ≤ max. Step is positive finite, anchored at min or zero, with tolerance 1e−9 × max(1,abs(quotient)). Omit min/max/step for no constraint. Numeric constraints on strings/booleans reject. Add validates the current value; a constraint violation rejects before registering.
+`Input.create()` returns an empty independent Input. input.add requires an existing writable own data property of type finite number, string or boolean, and snapshots its scalar type and constraints without changing the property. Numeric min/max are finite inclusive bounds with min ≤ max. Step is positive finite, anchored at min or zero, with tolerance 1e−9 × max(1,abs(quotient)). Omit min/max/step for no constraint. Numeric constraints on strings/booleans reject. Add validates the current value; a constraint violation rejects before registering.
 
 Repeating the same object/property/type and normalized constraints is a no-op; different constraints reject until explicitly deleted. A property removed or changed to another type by direct model code causes subsequent input.set to reject, preserving the property value.
 
@@ -2634,9 +2635,9 @@ Agenda events are ordered by at, priority and sequence; event IDs and sequences 
 
 A handle's localId may name an event deleted since the handle was issued; restoring it preserves the documented no-op deletion behavior, but it must be a prior allocated ID of the correct owner. An arbitrary forged ID is invalid.
 
-The compatibility object contains validated versioned-import provenance, not a model declaration API. New models store their ordinary Map/record breed metadata in explicitly captured extra state. The compatibility object is null when no imported compatibility declarations exist; otherwise it is the exact inline schema above. Each membership triple contains Agent/Edge reference, declared breed name (empty string denotes the unbred base population) and nonnegative safe integer numeric compatibility ID.
+The compatibility object contains validated versioned-import provenance, not a model declaration API. New models store their ordinary Map/record group metadata in explicitly captured extra state. The compatibility object is null when no imported compatibility declarations exist; otherwise it is the exact inline schema above. Each membership triple contains Agent/Edge reference, declared group name (empty string denotes the unbred base population) and nonnegative safe integer numeric compatibility ID.
 
-IDs are unique within turtles or links, counters exceed every historical assigned ID, and membership endpoints resolve inside the captured World/registered graphs. Own-variable and breed names are unique nonempty strings under compatibility declaration rules. Variables themselves remain direct state; no dynamically scoped activation frame, myself reference, running callback or local-randomness scope can be captured. Save during those scopes rejects. Restoration preserves declarations, numeric ordering IDs and future allocation counters for explicitly rebound TS procedures, never external engine code.
+IDs are unique within turtles or links, counters exceed every historical assigned ID, and membership endpoints resolve inside the captured World/registered graphs. Own-variable and group names are unique nonempty strings under compatibility declaration rules. Variables themselves remain direct state; no dynamically scoped activation frame, myself reference, running callback or local-randomness scope can be captured. Save during those scopes rejects. Restoration preserves declarations, numeric ordering IDs and future allocation counters for explicitly rebound TS procedures, never external engine code.
 
 <a id="limits-api"></a>
 
