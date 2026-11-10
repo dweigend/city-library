@@ -21,7 +21,7 @@ The core and shared UI are usable, with 125 models toward a fixed selection of 2
 From the repository root, use Bun 1.4.2 and start Agent Lab:
 
 ```sh
-bun install --frozen-lockfile
+bun install
 bun run dev
 ```
 
