@@ -3,7 +3,7 @@
  */
 import { Agent, Grid, Random, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface VantsParameters {
   width: number;
   height: number;
@@ -23,7 +23,7 @@ export const inputs: Inputs<VantsParameters> = {
   vantCount: { kind: "number", default: 1, min: 1, max: 16, integer: true },
 };
 export function create(options: Partial<VantsParameters> = {}) {
-  const settings = parameters(inputs, options);
+  const settings = parseParameters(inputs, options);
   if (settings.width % 2 !== 1 || settings.height % 2 !== 1)
     throw new RangeError("Vants source coordinates require odd dimensions.");
   const random = Random.create({ seed: settings.seed });
@@ -77,12 +77,12 @@ export function create(options: Partial<VantsParameters> = {}) {
     }
   }
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) run(world, goForward);
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) run(world, goForward);
     },
     reverse(count = 1) {
-      stepCount(count);
+      validateStepCount(count);
       for (let i = 0; i < count; i++) run(world, goReverse);
     },
     read() {

@@ -1,7 +1,7 @@
 /** Disease Solo (Wilensky, 2005). Complete original notices: NOTICE.md. */
 import { Agent, Grid, Random, World, geometry, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 
 export interface DiseaseParameters {
   seed: number;
@@ -21,7 +21,7 @@ export const inputs: Inputs<DiseaseParameters> = {
 };
 type Person = Agent<{ group: "android" | "user"; infected: boolean }>;
 export function create(options: Partial<DiseaseParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const space = { x: 21, y: 25, boundary: "hard" } as const;
   const world = World.create(space, { random });
@@ -31,12 +31,12 @@ export function create(options: Partial<DiseaseParameters> = {}) {
   let runNumber = 1;
   let delay = 0;
   let stopped = false;
-  const history: { tick: number; sick: number; run: number }[] = [];
+  const history: { tick: number; sickPersonCount: number; run: number }[] = [];
   const all = () => world.agents as readonly Person[];
   const androids = () => all().filter((person) => person.group === "android");
   const shuffled = (people: readonly Person[]) =>
     random.sample(people, {
-      count: people.length,
+      sampleCount: people.length,
       algorithm: "fisher-yates-descending",
     });
   const integer = (upper: number) =>
@@ -157,7 +157,7 @@ export function create(options: Partial<DiseaseParameters> = {}) {
     }
   }
   function record() {
-    history.push({ tick: world.tick.value, sick: sickCount, run: runNumber });
+    history.push({ tick: world.tick.value, sickPersonCount: sickCount, run: runNumber });
     if (history.length > 2001) history.shift();
   }
   function go() {
@@ -180,9 +180,9 @@ export function create(options: Partial<DiseaseParameters> = {}) {
     );
     record();
   }
-  function advance(count = 1) {
-    stepCount(count);
-    for (let index = 0; index < count && !stopped; index++) go();
+  function advance(stepCount = 1) {
+    validateStepCount(stepCount);
+    for (let index = 0; index < stepCount && !stopped; index++) go();
   }
   function setParameters(
     update: Partial<Omit<DiseaseParameters, "seed" | "androidCount">>,
@@ -191,7 +191,7 @@ export function create(options: Partial<DiseaseParameters> = {}) {
       Object.keys(update).some((key) => key === "seed" || key === "androidCount")
     )
       throw new TypeError("Setup parameters require a new model.");
-    settings = parameters(inputs, { ...settings, ...update });
+    settings = parseParameters(inputs, { ...settings, ...update });
   }
   function read() {
     return {

@@ -1,6 +1,6 @@
 # Coding standards
 
-These rules apply to library code, model scripts, UI, examples and tests. Use Minimum Sufficient Architecture: the smallest understandable design that fully solves the actual problem. Follow the [architecture and domain boundaries](DESIGN.md), [public specification](agent-loom/README.md), [UI contract](ui/README.md) and [delivery gates](../PLAN.md) alongside these standards.
+These rules apply to library code, model scripts, UI, examples and tests. Use Minimum Sufficient Architecture: the smallest understandable design that fully solves the actual problem. Follow the [architecture and domain boundaries](ARCHITECTURE.md), [public specification](agent-loom/README.md), [UI contract](ui/README.md) and [delivery gates](../PLAN.md) alongside these standards.
 
 ## Priorities
 
@@ -25,7 +25,7 @@ Validate external inputs at boundaries. Avoid repeated internal validation of al
 
 Give each domain fact one owner. Derive values instead of storing redundant state. Avoid unnecessary mutation; local mutation and state-owning simulation kernels remain valid when clear and encapsulated. Calculations should be pure where practical. Make state changes, I/O, logging, async ordering and failures explicit; do not hide dependencies in globals or service locators or silently suppress errors.
 
-Prefer functions. Use classes for real identity, encapsulated state or lifecycle needs; preserve existing accepted methods and authoring contracts. Separate UI, domain logic, orchestration and I/O according to DESIGN. Public domain capabilities must be usable headlessly; private implementation helpers need not become exports. UI changes model state only through defined actions.
+Prefer functions. Use classes for real identity, encapsulated state or lifecycle needs; preserve existing accepted methods and authoring contracts. Separate UI, domain logic, orchestration and I/O according to the [architecture](ARCHITECTURE.md#layers-and-implementation-boundaries). Public domain capabilities must be usable headlessly; private implementation helpers need not become exports. UI changes model state only through defined actions.
 
 Keep domain kernels, algorithms and variants distinct. Put types with their semantic owner. Avoid catch-all utils/helpers/manager modules, universal registries, unnecessary factories/interfaces and speculative configuration. Abstract only when it reduces concrete duplication of domain logic, complexity or coupling. Similar code alone does not justify generalization. Consider existing capabilities before adding code or dependencies; optimize after measurement.
 

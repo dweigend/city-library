@@ -5,7 +5,7 @@
  */
 import { Agent, Graph, Random, World, run, stats } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 
 export interface AttachmentParameters {
   seed: number;
@@ -20,7 +20,7 @@ export const inputs: Inputs<AttachmentParameters> = {
   },
 };
 export function create(options: Partial<AttachmentParameters> = {}) {
-  const settings = parameters(inputs, options);
+  const settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const world = World.create({ random });
   const graph = Graph.create<Agent<{ label: string }>>();
@@ -33,8 +33,8 @@ export function create(options: Partial<AttachmentParameters> = {}) {
   graph.edges.add({ from: addNode(), to: addNode() });
   let latestEdgeId = [...graph.edges][0]!.id;
   return {
-    advance(count = 1) {
-      stepCount(count);
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
       run(
         world,
         () => {
@@ -43,7 +43,7 @@ export function create(options: Partial<AttachmentParameters> = {}) {
           const added = graph.edges.add({ from: addNode(), to: partner });
           latestEdgeId = added.id;
         },
-        count,
+        stepCount,
       );
     },
     read() {

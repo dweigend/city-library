@@ -18,10 +18,10 @@ describe("DES causal execution through public imports", () => {
     const agenda = Agenda.create<string>();
     for (const [priority, data] of [[1, "last"], [-2, "first"], [-2, "second"]] as const)
       agenda.add({ at: 0.5, priority, data });
-    expect(agenda.advance({ until: 9, maxEvents: 2 }).map(event => event.data)).toEqual(["first", "second"]);
+    expect(agenda.advance({ until: 9, maxEventCount: 2 }).map(event => event.data)).toEqual(["first", "second"]);
     expect(agenda.time).toBe(0.5);
     expect(agenda.size).toBe(1);
-    expect(agenda.advance({ until: 9, maxEvents: 1 }).map(event => event.data)).toEqual(["last"]);
+    expect(agenda.advance({ until: 9, maxEventCount: 1 }).map(event => event.data)).toEqual(["last"]);
     expect(agenda.time).toBe(9);
   });
 
@@ -43,7 +43,7 @@ describe("DES causal execution through public imports", () => {
     const agenda = Agenda.create<number>();
     agenda.add({ at: 2, data: 1 });
     for (const until of [-1, NaN, Infinity]) expect(() => agenda.next({ until })).toThrow();
-    for (const maxEvents of [0, -1, 0.5, Infinity]) expect(() => agenda.advance({ until: 3, maxEvents })).toThrow();
+    for (const maxEventCount of [0, -1, 0.5, Infinity]) expect(() => agenda.advance({ until: 3, maxEventCount })).toThrow();
     expect(() => agenda.add({ at: 1, data: 2, priority: 0.5 })).toThrow();
     expect(agenda.time).toBe(0);
     expect(agenda.size).toBe(1);

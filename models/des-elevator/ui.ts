@@ -3,15 +3,15 @@ import type { Observation, SpatialAgent, SpatialData } from "../../ui/index.ts";
 import { model } from "./model.ts";
 
 export const ui = defineUI(model, {
-  setup: ["floors", "elevators", "capacity", "travelTime", "doorTime", "transferTime", "initialPassengers", "arrivalInterval", "arrivalLimit"],
+  setup: ["floorCount", "elevatorCount", "capacity", "travelTimeSeconds", "doorTimeSeconds", "transferTimeSeconds", "initialPassengerCount", "arrivalIntervalSeconds", "arrivalCountLimit"],
   actions: [{ label: "Add passenger", run: instance => instance.addPassenger() }],
   monitors: [
     { label: "Time (s)", value: state => state.time },
-    { label: "Waiting", value: state => state.waiting },
-    { label: "Riding", value: state => state.riding },
-    { label: "Arrived", value: state => state.arrived },
-    { label: "Mean wait (s)", value: state => state.meanWait, format: (value: number) => value.toFixed(1) },
-    { label: "Mean ride (s)", value: state => state.meanRide, format: (value: number) => value.toFixed(1) },
+    { label: "Waiting", value: state => state.waitingPassengerCount },
+    { label: "Riding", value: state => state.ridingPassengerCount },
+    { label: "Arrived", value: state => state.arrivedPassengerCount },
+    { label: "Mean wait (s)", value: state => state.meanWaitSeconds, format: (value: number) => value.toFixed(1) },
+    { label: "Mean ride (s)", value: state => state.meanRideSeconds, format: (value: number) => value.toFixed(1) },
   ],
   views: [
     { type: "spatial", label: "Elevators", data: elevatorScene },
@@ -24,7 +24,7 @@ export function elevatorScene(state: Observation<typeof model>): SpatialData {
   const columns = Math.max(6, Math.min(20, Math.ceil(Math.sqrt(longestLine) * 2)));
   const queueRows = Math.ceil(longestLine / columns);
   const floorGap = Math.max(1.5, queueRows * 0.6 + 0.6);
-  const floorSpan = (state.parameters.floors - 1) * floorGap;
+  const floorSpan = (state.parameters.floorCount - 1) * floorGap;
   const width = columns * 0.35 + state.cars.length * 2.8 + 4;
   const height = floorSpan + floorGap * 1.4;
   const left = -width / 2;
@@ -32,9 +32,9 @@ export function elevatorScene(state: Observation<typeof model>): SpatialData {
   const carLeft = queueLeft + columns * 0.35 + 1.8;
   const floorY = (floor: number) => floor * floorGap - floorSpan / 2;
   const dotSize = longestLine > 20 ? 2 : longestLine > 10 ? 4 : 6;
-  const riderSize = state.parameters.floors > 8 || longestLine > 20 ? 3 : 6;
+  const riderSize = state.parameters.floorCount > 8 || longestLine > 20 ? 3 : 6;
   const agents: SpatialAgent[] = [];
-  const labels = Array.from({ length: state.parameters.floors }, (_, floor) => ({
+  const labels = Array.from({ length: state.parameters.floorCount }, (_, floor) => ({
     x: left + 0.4, y: floorY(floor), text: String(floor),
   }));
   const segments = labels.map((_, floor) => ({
@@ -75,7 +75,7 @@ export function elevatorScene(state: Observation<typeof model>): SpatialData {
     });
   });
   return { width, height, agents, segments, labels, showLabels: false,
-    description: `${state.parameters.floors} floors, ${state.cars.length} cars with ${state.parameters.capacity} slots each. ${state.waiting} amber floor dots waiting, ${state.riding} teal cabin dots riding, ${state.arrived} passengers have arrived and left the scene. Triangles indicate requested and car directions. Diagram coordinates; time ${state.time} seconds.` };
+    description: `${state.parameters.floorCount} floors, ${state.cars.length} cars with ${state.parameters.capacity} slots each. ${state.waitingPassengerCount} amber floor dots waiting, ${state.ridingPassengerCount} teal cabin dots riding, ${state.arrivedPassengerCount} passengers have arrived and left the scene. Triangles indicate requested and car directions. Diagram coordinates; time ${state.time} seconds.` };
 }
 
 /** Times are seconds; a dash replaces the model's -1 for "not yet" (boarded, arrived, car). */

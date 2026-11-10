@@ -1,7 +1,7 @@
 /** NetLogo Prisoner's Dilemma Basic (Wilensky, 2002), CC BY-NC-SA 3.0; see NOTICE.md. */
 import { Agent, Random, World } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface BasicParameters {
   youSilent: boolean;
   partnerSilent: boolean;
@@ -51,7 +51,7 @@ export function sentence(youSilent: boolean, partnerSilent: boolean) {
       };
 }
 export function create(options: Partial<BasicParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed }),
     world = World.create({ random });
   const prisoner = Agent.create({
@@ -62,7 +62,7 @@ export function create(options: Partial<BasicParameters> = {}) {
   });
   world.add(prisoner);
   // Native model has no ticks. Host rounds count answers only and never imply an iterated strategy.
-  let rounds = 0;
+  let roundCount = 0;
   function setup() {
     prisoner.partnerIsSilent = settings.partnerSilenceKnown
       ? settings.partnerSilent
@@ -77,27 +77,27 @@ export function create(options: Partial<BasicParameters> = {}) {
     prisoner.years = result.years;
     prisoner.face = result.face;
     prisoner.message = result.message;
-    rounds++;
+    roundCount++;
   }
   setup();
   return {
     setup() {
       setup();
-      rounds = 0;
+      roundCount = 0;
     },
     answer,
     setRules(changes: Partial<Omit<BasicParameters, "seed">>) {
-      settings = parameters(inputs, { ...settings, ...changes });
+      settings = parseParameters(inputs, { ...settings, ...changes });
     },
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) answer();
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) answer();
     },
     read() {
       return Object.freeze({
-        sourceMarker: "prisoners-dilemma-basic:source-v1",
-        tick: rounds,
-        rounds,
+
+        tick: roundCount,
+        roundCount: roundCount,
         nativeTick: null,
         parameters: settings,
         partnerIsSilent: prisoner.partnerIsSilent,

@@ -1,7 +1,7 @@
 /** Hjorth, Head & Wilensky (2014), CC BY-NC-SA 3.0. */
 import { Agent, Random, World, run, geometry, stats } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface ClusteringParameters {
   seed: number;
   clusterCount: number;
@@ -33,7 +33,7 @@ export const centroidColors = [
   136, 126, 116, 106, 96, 86, 76, 66, 56, 46, 36, 26, 16, 6,
 ] as const;
 export function create(options: Partial<ClusteringParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   if (settings.dataPointCount <= settings.centroidCount)
     throw new RangeError("Data points must exceed centroids.");
   const random = Random.create({ seed: settings.seed }),
@@ -118,14 +118,14 @@ export function create(options: Partial<ClusteringParameters> = {}) {
   }
   function assignClusters() {
     for (const p of random.sample(points, {
-      count: points.length,
+      sampleCount: points.length,
       algorithm: "fisher-yates-descending",
     }))
       p.cluster = closestCentroid(p).index;
   }
   function updateClusters() {
     for (const c of random.sample(centroids, {
-      count: centroids.length,
+      sampleCount: centroids.length,
       algorithm: "fisher-yates-descending",
     })) {
       const own = points.filter((p) => p.cluster === c.index);
@@ -226,9 +226,9 @@ export function create(options: Partial<ClusteringParameters> = {}) {
   }
   resetCentroids();
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) {
         if (!anyCentroidsMoved) break;
         run(world, () => {
           anyCentroidsMoved = false;
@@ -251,7 +251,7 @@ export function create(options: Partial<ClusteringParameters> = {}) {
         )
       )
         throw new TypeError("Setup-only parameter.");
-      settings = parameters(inputs, { ...settings, ...changes });
+      settings = parseParameters(inputs, { ...settings, ...changes });
     },
     read() {
       return {

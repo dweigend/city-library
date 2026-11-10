@@ -6,7 +6,7 @@ import { model } from "./model.ts";
 const numbers = new Intl.NumberFormat("en", { maximumFractionDigits: 3 });
 
 const binding = defineUI(model, {
-  setup: ["seed", "initialBacteria", "initialViruses", "maxVirusTypes"],
+  setup: ["seed", "initialBacteriumCount", "initialVirusCount", "maxVirusTypeCount"],
   change: (instance, changes) => instance.setParameters(changes),
   live: {
     infectionChance: {},
@@ -89,9 +89,8 @@ const binding = defineUI(model, {
 });
 
 export { model };
-export const sourceMarker =
-  "selected-disease-gene-b09:crispr-ecosystem:9414dea313e5f6f7c4496014ef1638d42d020ce84220e4c0a00ea8b1bf1bdec9";
-export const ui = { ...binding, model, sourceMarker };
+
+export const ui = { ...binding, model };
 
 type UIObservation = Observation<typeof model>;
 
@@ -153,7 +152,7 @@ function sequenceHistogramSeries(state: UIObservation): readonly BarSeries[] {
       points: stats
         .histogram(state.virusSequences, {
           edges: Array.from(
-            { length: state.parameters.maxVirusTypes + 1 },
+            { length: state.parameters.maxVirusTypeCount + 1 },
             (_, i) => i - 0.5,
           ),
         })
@@ -164,7 +163,7 @@ function sequenceHistogramSeries(state: UIObservation): readonly BarSeries[] {
       points: stats
         .histogram(state.arraySequences, {
           edges: Array.from(
-            { length: state.parameters.maxVirusTypes + 1 },
+            { length: state.parameters.maxVirusTypeCount + 1 },
             (_, i) => i - 0.5,
           ),
         })
@@ -198,7 +197,7 @@ function historySeries(state: UIObservation): readonly Series[] {
       color: "#db9a35",
       points: state.history.map((point) => ({
         x: point.tick,
-        y: Number(point.bacteria),
+        y: Number(point.bacteriumCount),
       })),
     },
     {
@@ -206,7 +205,7 @@ function historySeries(state: UIObservation): readonly Series[] {
       color: "#9272b8",
       points: state.history.map((point) => ({
         x: point.tick,
-        y: Number(point.viruses),
+        y: Number(point.virusCount),
       })),
     },
   ];

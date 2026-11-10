@@ -1,8 +1,8 @@
 /** Wilensky (1997), CC BY-NC-SA 3.0; see NOTICE.md. */
 import { Agent, Grid, Random, World } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
-export const sourceMarker = "B08-peppered-moths-native-composition-v1";
+import { parseParameters, validateStepCount } from "../parameters.ts";
+
 export interface Parameters {
   seed: number;
   mothCount: number;
@@ -21,7 +21,7 @@ export const inputs: Inputs<Parameters> = {
 };
 type Moth = Agent<{ color: number; age: number }>;
 export function create(options: Partial<Parameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const world = World.create({ x: 33, y: 41, boundary: "wrap" }, { random });
   const grid = Grid.create(world.space!, { state: { color: 9 } });
@@ -142,12 +142,12 @@ export function create(options: Partial<Parameters> = {}) {
     )
       moth.delete();
   }
-  function advance(count = 1) {
-    stepCount(count);
-    for (let i = 0; i < count; i++) {
+  function advance(stepCount = 1) {
+    validateStepCount(stepCount);
+    for (let i = 0; i < stepCount; i++) {
       const old = population();
       for (const moth of random.sample(old, {
-        count: old.length,
+        sampleCount: old.length,
         algorithm: "fisher-yates-descending",
       })) {
         mothsMate(moth);
@@ -164,7 +164,7 @@ export function create(options: Partial<Parameters> = {}) {
   function read() {
     const current = history.at(-1)!;
     return {
-      sourceMarker,
+
       tick: world.tick.value,
       width: 33,
       height: 41,
@@ -206,7 +206,7 @@ export function create(options: Partial<Parameters> = {}) {
     mothsGrimReaper,
     mothsGetEaten,
     setParameters(update: Partial<Omit<Parameters, "seed">>) {
-      settings = parameters(inputs, { ...settings, ...update });
+      settings = parseParameters(inputs, { ...settings, ...update });
     },
   };
 }

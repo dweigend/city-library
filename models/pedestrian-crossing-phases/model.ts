@@ -1,25 +1,25 @@
 /** Original signal/cohort teaching rule, not a traffic-safety model. One step is one minute. */
 import { Agent, World, run, twoPhase, measurements, storage } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface CrossingParameters {
-  pedestrians: number;
+  pedestrianCount: number;
   greenMinutes: number;
 }
 export const inputs: Inputs<CrossingParameters> = {
-  pedestrians: { kind: "number", default: 8, min: 1, max: 40, integer: true },
+  pedestrianCount: { kind: "number", default: 8, min: 1, max: 40, integer: true },
   greenMinutes: { kind: "number", default: 2, min: 1, max: 4, integer: true },
 };
 export function create(options: Partial<CrossingParameters> = {}) {
-  const settings = parameters(inputs, options);
+  const settings = parseParameters(inputs, options);
   const world = World.create();
-  const walkers = Array.from({ length: settings.pedestrians }, (_, index) => world.add(Agent.create({
+  const walkers = Array.from({ length: settings.pedestrianCount }, (_, index) => world.add(Agent.create({
     label: `Walker ${index + 1}`, stage: "waiting" as "waiting" | "crossing" | "arrived",
   })));
   const measure = measurements.define((people: typeof walkers) => ({
-    waiting: people.filter(person => person.stage === "waiting").length,
-    crossing: people.filter(person => person.stage === "crossing").length,
-    arrived: people.filter(person => person.stage === "arrived").length,
+    waitingPedestrianCount: people.filter(person => person.stage === "waiting").length,
+    crossingPedestrianCount: people.filter(person => person.stage === "crossing").length,
+    arrivedPedestrianCount: people.filter(person => person.stage === "arrived").length,
   }));
   const history = storage.history({ capacity: 120 });
   function record() {
@@ -49,9 +49,9 @@ export function create(options: Partial<CrossingParameters> = {}) {
   }
   record();
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let index = 0; index < count; index += 1) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let index = 0; index < stepCount; index += 1) {
         if (walkers.every(person => person.stage === "arrived")) break;
         run(world, step);
         record();

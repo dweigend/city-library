@@ -1,7 +1,7 @@
 /** Mitchell, Tisue & Wilensky (2012), CC0; exact source and attribution adjacent. */
 import { Agent, Grid, Random, World, run, stats } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export const actions = [
   "move-north",
   "move-east",
@@ -16,7 +16,7 @@ export interface RobbyParameters {
   seed: number;
   populationSize: number;
   mutationRate: number;
-  numberOfGenerations: number;
+  generationCount: number;
 }
 export const inputs: Inputs<RobbyParameters> = {
   seed: { kind: "number", default: 1, integer: true },
@@ -29,7 +29,7 @@ export const inputs: Inputs<RobbyParameters> = {
     integer: true,
   },
   mutationRate: { kind: "number", default: 0.01, min: 0, max: 1, step: 0.001 },
-  numberOfGenerations: {
+  generationCount: {
     kind: "number",
     default: 100,
     min: 1,
@@ -83,7 +83,7 @@ export interface TrialInput {
   score?: number;
 }
 export function create(options: Partial<RobbyParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed }),
     world = World.create({ x: 10, y: 10, boundary: "hard" }, { random }),
     grid = Grid.create(
@@ -146,7 +146,7 @@ export function create(options: Partial<RobbyParameters> = {}) {
   }
   function distributeCans() {
     for (const f of random.sample(fields, {
-      count: fields.length,
+      sampleCount: fields.length,
       algorithm: "fisher-yates-descending",
     })) {
       f.can = random.number() < 0.5;
@@ -259,7 +259,7 @@ export function create(options: Partial<RobbyParameters> = {}) {
     const old = [...population],
       children: typeof population = [];
     const select = () => {
-      const sampled = random.sample(old, { count: 15 });
+      const sampled = random.sample(old, { sampleCount: 15 });
       const max = Math.max(...sampled.map((p) => p.fitness)),
         ties = sampled.filter((p) => p.fitness === max);
       return ties[Math.floor(random.number() * ties.length)]!;
@@ -273,7 +273,7 @@ export function create(options: Partial<RobbyParameters> = {}) {
     for (const p of old) p.delete();
     population = children;
     for (const p of random.sample(population, {
-      count: population.length,
+      sampleCount: population.length,
       algorithm: "fisher-yates-descending",
     }))
       mutate(p);
@@ -379,10 +379,10 @@ export function create(options: Partial<RobbyParameters> = {}) {
   calculatePopulationFitnesses();
   reportBest();
   return {
-    advance(count = 1) {
-      stepCount(count);
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
       fixtureTrial = false;
-      for (let i = 0; i < count; i++) {
+      for (let i = 0; i < stepCount; i++) {
         run(world, () => {
           createNextGeneration();
           calculatePopulationFitnesses();
@@ -391,7 +391,7 @@ export function create(options: Partial<RobbyParameters> = {}) {
       }
     },
     advanceToLimit() {
-      if (world.tick.value < settings.numberOfGenerations) {
+      if (world.tick.value < settings.generationCount) {
         run(world, () => {
           createNextGeneration();
           calculatePopulationFitnesses();
@@ -414,13 +414,13 @@ export function create(options: Partial<RobbyParameters> = {}) {
       if (
         Reflect.ownKeys(changes).some(
           (k) =>
-            !["populationSize", "mutationRate", "numberOfGenerations"].includes(
+            !["populationSize", "mutationRate", "generationCount"].includes(
               String(k),
             ),
         )
       )
         throw new TypeError("Setup-only parameter.");
-      settings = parameters(inputs, { ...settings, ...changes });
+      settings = parseParameters(inputs, { ...settings, ...changes });
     },
     read() {
       const best = displayBest?.alive ? displayBest : population[0]!;

@@ -1,7 +1,7 @@
 /** Original synthetic heat-index rule; index units are not Celsius. */
 import { Grid, World, run, twoPhase, measurements, storage } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface HeatParameters {
   width: number;
   shadeCooling: number;
@@ -11,7 +11,7 @@ export const inputs: Inputs<HeatParameters> = {
   shadeCooling: { kind: "number", default: 0.5, min: 0, max: 2, step: 0.1 },
 };
 export function create(options: Partial<HeatParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const world = World.create();
   const grid = Grid.create({ x: settings.width, y: settings.width, boundary: "hard" }, { state: { heatIndex: 30, shaded: false } });
   world.add(grid);
@@ -21,7 +21,7 @@ export function create(options: Partial<HeatParameters> = {}) {
   });
   const measure = measurements.define((fields: typeof grid.fields) => ({
     meanHeat: fields.reduce((sum, field) => sum + field.heatIndex, 0) / fields.length,
-    shadedFields: fields.filter(field => field.shaded).length,
+    shadedFieldCount: fields.filter(field => field.shaded).length,
   }));
   const exchangeFraction = 0.2;
   const history = storage.history({ capacity: 120 });
@@ -45,15 +45,15 @@ export function create(options: Partial<HeatParameters> = {}) {
   }
   record();
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let index = 0; index < count; index += 1) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let index = 0; index < stepCount; index += 1) {
         run(world, step);
         record();
       }
     },
     setShadeCooling(value: number) {
-      settings = parameters(inputs, { ...settings, shadeCooling: value });
+      settings = parseParameters(inputs, { ...settings, shadeCooling: value });
     },
     read() {
       return Object.freeze({

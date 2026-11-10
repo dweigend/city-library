@@ -12,7 +12,7 @@ import { create as plants } from "../models/invasive-plants/model.ts";
 
 describe("selected ecology collective source mechanisms", () => {
   test("Ants source dimensions, nest and delayed departure", () => {
-    const model = ants({ population: 2, seed: 9 });
+    const model = ants({ antCount: 2, seed: 9 });
     const initial = model.read();
     expect(initial.cells).toHaveLength(71 * 71);
     expect(initial.cells.filter((c) => c.nest)).toHaveLength(69);
@@ -74,7 +74,7 @@ describe("selected ecology collective source mechanisms", () => {
     expect(() =>
       averageHeadingTowardsFlockmates(Agent.create(), [Agent.create()]),
     ).toThrow(RangeError);
-    const model = flocking({ population: 5, vision: 0, seed: 8 });
+    const model = flocking({ birdCount: 5, vision: 0, seed: 8 });
     const headings = model.read().birds.map((b) => b.heading);
     model.advance(10);
     expect(model.read().birds.map((b) => b.heading)).toEqual(headings);
@@ -90,18 +90,18 @@ describe("selected ecology collective source mechanisms", () => {
   });
   test("Firefly strategy fields are captured at setup; cycle equality is live", () => {
     const delay = fireflies({
-      number: 1,
+      fireflyCount: 1,
       cycleLength: 10,
       strategy: "delay",
-      flashesToReset: 3,
+      flashCountToReset: 3,
     });
     expect(delay.read().fireflies[0]!.window).toBe(-1);
     expect(delay.read().fireflies[0]!.resetLevel).toBe(1);
     const advance = fireflies({
-      number: 1,
+      fireflyCount: 1,
       cycleLength: 10,
       strategy: "advance",
-      flashesToReset: 3,
+      flashCountToReset: 3,
     });
     expect(advance.read().fireflies[0]!.window).toBe(2);
     expect(advance.read().fireflies[0]!.resetLevel).toBe(0);
@@ -111,7 +111,7 @@ describe("selected ecology collective source mechanisms", () => {
     advance.setRules({ strategy: "delay", flashLength: 4 });
     expect(advance.read().fireflies[0]!.threshold).toBe(1);
     expect(advance.read().fireflies[0]!.resetLevel).toBe(0);
-    const empty = fireflies({ number: 0 });
+    const empty = fireflies({ fireflyCount: 0 });
     empty.advance(3);
     expect(empty.read().tick).toBe(3);
   });
@@ -214,10 +214,10 @@ describe("selected ecology collective source mechanisms", () => {
   });
   test("All five models return detached, pure measurements", () => {
     for (const model of [
-      ants({ population: 1 }),
+      ants({ antCount: 1 }),
       heatbugs({ bugCount: 1 }),
-      flocking({ population: 1 }),
-      fireflies({ number: 1 }),
+      flocking({ birdCount: 1 }),
+      fireflies({ fireflyCount: 1 }),
       plants({ initialDensity: 0 }),
     ]) {
       const before = model.read();

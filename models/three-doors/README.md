@@ -1,12 +1,19 @@
 # Three Doors
 
-Contestants choose a door, observe the host reveal an unchosen losing door, and retain or switch their choice. The host's constrained information and reveal rule are essential to the Monty Hall comparison.
+Should you switch doors in the Monty Hall game? A prize hides behind one of three doors. Each contestant picks a door, the host, who knows where the prize is, opens another door without the prize, and the contestant then stays or switches. Each contestant switches with a personal tendency; with `gradation` off, contestants either always or never switch.
+
+Probability theory says switching wins two thirds of the time. The race lets you watch whether the switchers pull ahead.
+
+Things to try:
+
+- Run with `gradation` off and compare the win counts of switchers and stayers.
+- Switch on `gradation`. How does the win rate depend on the tendency to switch?
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Three Doors`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Choose **Three Doors** in [Agent Lab](../../ui/agent-lab/README.md).
 
-Headless, from a script in the repository root:
+From a script in the repository root:
 
 ```ts
 import { create } from "./models/three-doors/model.ts";
@@ -18,26 +25,26 @@ const observation = simulation.read();
 
 ## Parameters
 
-`create(options)` accepts these input keys. The [UI binding](ui.ts) distinguishes setup controls from live changes; [model.ts](model.ts) defines additional validation.
+`create(options)` accepts these inputs. [ui.ts](ui.ts) decides which are setup controls and which can change during a run; [model.ts](model.ts) adds further validation.
 
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
-| `number` | `300` | integer; ≥ 1; ≤ 1000 |
+| `contestantCount` | `300` | integer; ≥ 1; ≤ 1000 |
 | `gradation` | `false` | boolean |
 
 ## Actions and observations
 
-Use `advance(...)` for progress and `read()` for observations; the model defines how work advances its tick.
+Call `advance()` with an optional step count to run the model; the model defines how a step advances its tick. Call `read()` for a detached snapshot.
 
-Additional instance accessors: `world`. See [model.ts](model.ts) for the returned live references.
+Live references: `world`. [model.ts](model.ts) describes what they return.
 
 Model-specific `read()` fields include `racers`.
 
-The [UI binding](ui.ts) presents `Racers`, `Tick`, `State`, `Race`, `Switching and wins`.
+## Sources and limits
 
-## Sources and acceptance
+Adapted from the NetLogo *Three Doors* model by Wilensky (1998). Attribution and license are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+The host's knowledge and reveal rule are essential; if the host opened doors at random, the comparison would differ. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 
-[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `three-doors` and links any shared checks.
+[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) records the acceptance stages for `three-doors`.

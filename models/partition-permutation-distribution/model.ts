@@ -1,7 +1,7 @@
 /** Partition Permutation Distribution, Wilensky (2004), CC BY-NC-SA 3.0. See NOTICE.md. */
 import { Random, World, stats } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface Parameters {
   seed: number;
   targetTotal: number;
@@ -34,11 +34,11 @@ function plotHistogram(values: readonly number[]) {
   return Object.freeze(h.counts.map((y, x) => Object.freeze({ x, y })));
 }
 export function create(options: Partial<Parameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const world = World.create({ random });
-  let successes = 0,
-    seriesTrials = 0,
+  let successCount = 0,
+    seriesTrialCount = 0,
     addend: number | string = 0;
   let short: number[] = [],
     previous: number[] = [];
@@ -58,22 +58,22 @@ export function create(options: Partial<Parameters> = {}) {
       short.push(addend);
       ribbon.push({ value: addend, color: Math.floor(random.number() * 14) });
     }
-    seriesTrials++;
+    seriesTrialCount++;
     all.push(addend);
   }
   function finishUp() {
     if (short.reduce((a, b) => a + b, 0) === settings.targetTotal) {
-      series.push(seriesTrials);
-      seriesTrials = 0;
+      series.push(seriesTrialCount);
+      seriesTrialCount = 0;
       previous = short;
       short = [];
       addend = "-";
-      successes++;
+      successCount++;
       ribbon = [];
     }
   }
   function go() {
-    if (successes >= settings.successCount) return;
+    if (successCount >= settings.successCount) return;
     randomGuessAndUpdateTotal();
     world.tick.advance();
     finishUp();
@@ -82,9 +82,9 @@ export function create(options: Partial<Parameters> = {}) {
     get world() {
       return world;
     },
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count && successes < settings.successCount; i++) go();
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount && successCount < settings.successCount; i++) go();
     },
     setRules(
       change: Partial<
@@ -97,14 +97,14 @@ export function create(options: Partial<Parameters> = {}) {
         >
       >,
     ) {
-      settings = parameters(inputs, { ...settings, ...change });
+      settings = parseParameters(inputs, { ...settings, ...change });
     },
     read() {
       return Object.freeze({
         tick: world.tick.value,
         parameters: settings,
-        successes,
-        seriesTrials,
+        successCount: successCount,
+        seriesTrialCount: seriesTrialCount,
         addend,
         current: Object.freeze([...short]),
         previous: Object.freeze([...previous]),
@@ -114,7 +114,7 @@ export function create(options: Partial<Parameters> = {}) {
         addendHistogram: plotHistogram(all),
         seriesHistogram: plotHistogram(series),
         runningTotal: short.reduce((a, b) => a + b, 0),
-        done: successes >= settings.successCount,
+        done: successCount >= settings.successCount,
         randomState: random.state,
       });
     },

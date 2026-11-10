@@ -1,12 +1,19 @@
 # Shepherds
 
-Shepherds find sheep, pick them up, seek herds and release them after the source-specific delay. The carrying and search phases make this a local coordination example rather than optimal herd routing.
+Can collectors gather moving objects into one herd using only local rules? Shepherds wander until they find a sheep, carry it and drop it near other sheep. Unlike the chips in Termites, the sheep keep moving on their own at `sheepSpeed`, which constantly works against the herding.
+
+The balance between shepherds and wandering sheep decides whether herds form and how long they last.
+
+Things to try:
+
+- Raise `sheepSpeed` step by step. Can the shepherds still keep herds together?
+- Compare a few shepherds with many shepherds at the same `sheepCount`.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Shepherds`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Choose **Shepherds** in [Agent Lab](../../ui/agent-lab/README.md).
 
-Headless, from a script in the repository root:
+From a script in the repository root:
 
 ```ts
 import { create } from "./models/shepherds/model.ts";
@@ -18,7 +25,7 @@ const observation = simulation.read();
 
 ## Parameters
 
-`create(options)` accepts these input keys. The [UI binding](ui.ts) distinguishes setup controls from live changes; [model.ts](model.ts) defines additional validation.
+`create(options)` accepts these inputs. [ui.ts](ui.ts) decides which are setup controls and which can change during a run; [model.ts](model.ts) adds further validation.
 
 | Input | Default | Declared values |
 | --- | --- | --- |
@@ -29,16 +36,16 @@ const observation = simulation.read();
 
 ## Actions and observations
 
-Use `advance(...)` for progress and `read()` for observations; the model defines how work advances its tick.
+Call `advance()` with an optional step count to run the model; the model defines how a step advances its tick. Call `read()` for a detached snapshot.
 
-Other instance procedures: `setRules`. See their typed arguments in [model.ts](model.ts).
+Other actions: `setRules`. Their typed arguments are in [model.ts](model.ts).
 
 Model-specific `read()` fields include `herdingEfficiency`, `sheeplessNeighborhoods`, `sheep`, `shepherds`, `cells`.
 
-The [UI binding](ui.ts) presents `Tick`, `Current efficiency (%)`, `Carried sheep`, `Sheep and shepherds`, `Herding efficiency`, `efficiency`.
+## Sources and limits
 
-## Sources and acceptance
+Adapted from the NetLogo *Shepherds* model by Wilensky (1998). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+Real herding does not involve carrying animals; this is an abstract experiment in clustering mobile objects, not a model of livestock management. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 
-[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `shepherds` and links any shared checks.
+[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) records the acceptance stages for `shepherds`.

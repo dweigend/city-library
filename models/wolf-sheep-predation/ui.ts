@@ -2,7 +2,7 @@ import { defineUI, type Observation, type SpatialData, type Series } from "../..
 
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: ["seed", "mode", "initialSheep", "initialWolves"],
+  setup: ["seed", "mode", "initialSheepCount", "initialWolfCount"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/WolfSheepPredation",
     label: "Source attribution · Uri Wilensky · CC BY-NC-SA 3.0",
@@ -28,13 +28,13 @@ export const ui = defineUI(model, {
   },
   monitors: [
     { label: "Tick", value: (state) => state.tick },
-    { label: "Sheep", value: (state) => state.counts.sheep },
-    { label: "Wolves", value: (state) => state.counts.wolves },
+    { label: "Sheep", value: (state) => state.counts.sheepCount },
+    { label: "Wolves", value: (state) => state.counts.wolfCount },
     {
       label: "Grass / 4",
       value: (state) =>
         state.parameters.mode === "sheep-wolves-grass"
-          ? state.counts.grass / 4
+          ? state.counts.grassFieldCount / 4
           : "—",
       format: (value: number | string) =>
         typeof value === "number" ? value.toFixed(0) : value,
@@ -98,7 +98,7 @@ function populationsSeries(state: UIObservation): readonly Series[] {
       color: "#e58032",
       points: state.history.map((point) => ({
         x: point.tick,
-        y: point.sheep,
+        y: point.sheepCount,
       })),
     },
     {
@@ -106,7 +106,7 @@ function populationsSeries(state: UIObservation): readonly Series[] {
       color: "currentColor",
       points: state.history.map((point) => ({
         x: point.tick,
-        y: point.wolves,
+        y: point.wolfCount,
       })),
     },
     ...(state.history.some((point) => point.grassAvailable)
@@ -118,7 +118,7 @@ function populationsSeries(state: UIObservation): readonly Series[] {
               .filter((point) => point.grassAvailable)
               .map((point) => ({
                 x: point.tick,
-                y: point.grass / 4,
+                y: point.grassFieldCount / 4,
               })),
           },
         ]

@@ -1,18 +1,18 @@
 /** Synthetic civic office. Time is minutes; no calibrated demand is claimed. */
 import { Agenda, Resource } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 
-export interface OfficeParameters { residents: number; clerks: number; serviceMinutes: number }
+export interface OfficeParameters { residentCount: number; clerkCount: number; serviceMinutes: number }
 export const inputs: Inputs<OfficeParameters> = {
-  residents: { kind: "number", default: 3, min: 0, max: 100, integer: true },
-  clerks: { kind: "number", default: 1, min: 1, max: 10, integer: true },
+  residentCount: { kind: "number", default: 3, min: 0, max: 100, integer: true },
+  clerkCount: { kind: "number", default: 1, min: 1, max: 10, integer: true },
   serviceMinutes: { kind: "number", default: 2, min: 1, max: 20, integer: true },
 };
 export function create(options: Partial<OfficeParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const agenda = Agenda.create<{ resident: number }>();
-  const desks = Resource.create<number>({ capacity: settings.clerks });
+  const desks = Resource.create<number>({ capacity: settings.clerkCount });
   const residents: { number: number; arrived: number; started?: number; completed?: number; ticket: ReturnType<typeof desks.request> }[] = [];
   const history: { x: number; y: number }[] = [];
   function startGranted() {
@@ -31,19 +31,19 @@ export function create(options: Partial<OfficeParameters> = {}) {
     history.push({ x: agenda.time, y: desks.waiting.length });
     if (history.length > 1000) history.shift();
   }
-  for (let index = 0; index < settings.residents; index += 1) addResident();
+  for (let index = 0; index < settings.residentCount; index += 1) addResident();
   record();
   return {
     addResident,
     setClerks(clerks: number) {
-      const next = parameters(inputs, { ...settings, clerks });
+      const next = parseParameters(inputs, { ...settings, clerkCount: clerks });
       desks.setCapacity(clerks, { occupied: "retain" });
       settings = next;
       startGranted();
     },
-    advance(count = 1) {
-      stepCount(count);
-      for (let step = 0; step < count; step += 1) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let step = 0; step < stepCount; step += 1) {
         const until = agenda.time + 1;
         for (let events = 0; ; events += 1) {
           if (events >= 10_000) throw new RangeError("Office event budget exhausted.");
@@ -60,10 +60,10 @@ export function create(options: Partial<OfficeParameters> = {}) {
     read() {
       const completed = residents.filter((resident) => resident.completed !== undefined);
       return {
-        tick: agenda.time, parameters: { ...settings }, waiting: desks.waiting.length,
+        tick: agenda.time, parameters: { ...settings }, waitingResidentCount: desks.waiting.length,
         waitingResidents: desks.waiting.map((request) => request.owner),
-        busy: desks.used, completed: completed.length,
-        totalWait: residents.reduce((sum, resident) => sum + (resident.started === undefined ? agenda.time : resident.started) - resident.arrived, 0),
+        busyClerkCount: desks.used, completedResidentCount: completed.length,
+        totalWaitMinutes: residents.reduce((sum, resident) => sum + (resident.started === undefined ? agenda.time : resident.started) - resident.arrived, 0),
         residents: residents.map((resident) => ({ number: resident.number, arrived: resident.arrived, started: resident.started ?? -1, completed: resident.completed ?? -1, status: resident.ticket.status })),
         history: history.map((point) => ({ ...point })),
       };

@@ -1,11 +1,11 @@
 /** NetLogo GenEvo 1 Genetic Switch. See source.nlogox and NOTICE.md. */
 import { Agent, Grid, Random, World, geometry, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface SwitchParameters {
   seed: number;
-  lacINumber: number;
-  rnapNumber: number;
+  lacICount: number;
+  rnapCount: number;
   lactose: boolean;
   glucose: boolean;
   levelSpace: boolean;
@@ -17,8 +17,8 @@ export interface SwitchParameters {
 }
 export const inputs: Inputs<SwitchParameters> = {
   seed: { kind: "number", default: 1, integer: true },
-  lacINumber: { kind: "number", default: 25, min: 1, max: 50, integer: true },
-  rnapNumber: { kind: "number", default: 25, min: 0, max: 50, integer: true },
+  lacICount: { kind: "number", default: 25, min: 1, max: 50, integer: true },
+  rnapCount: { kind: "number", default: 25, min: 0, max: 50, integer: true },
   lactose: { kind: "boolean", default: false },
   glucose: { kind: "boolean", default: true },
   levelSpace: { kind: "boolean", default: false },
@@ -48,7 +48,7 @@ interface MoleculeData {
 }
 type Molecule = Agent<MoleculeData>;
 export function create(options: Partial<SwitchParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const space = { x: 121, y: 67, boundary: "wrap" } as const;
   const world = World.create(space, { random });
@@ -57,7 +57,7 @@ export function create(options: Partial<SwitchParameters> = {}) {
   let who = 0;
   let energy = 1000;
   let initialEnergy = 1000;
-  let divisionNumber = 0;
+  let divisionCount = 0;
   let cellDivisionTime = 0;
   let ticksAtStartOfCellDivision = 0;
   let inhibited = false;
@@ -67,9 +67,9 @@ export function create(options: Partial<SwitchParameters> = {}) {
   const history: {
     tick: number;
     energy: number;
-    lacZ: number;
-    lacY: number;
-    divisions: number;
+    lacZCount: number;
+    lacYCount: number;
+    divisionCount: number;
     cellDivisionTime: number;
   }[] = [];
   const all = () => world.agents as readonly Molecule[];
@@ -77,7 +77,7 @@ export function create(options: Partial<SwitchParameters> = {}) {
     all().filter((p) => p.group === kind);
   const shuffled = (values: readonly Molecule[]) =>
     random.sample(values, {
-      count: values.length,
+      sampleCount: values.length,
       algorithm: "fisher-yates-descending",
     });
   const cellWall = (x: number, y: number) =>
@@ -184,7 +184,7 @@ export function create(options: Partial<SwitchParameters> = {}) {
     const outside = group("lactose").filter((p) => !p.inside);
     if (outside.length > upperLimit)
       for (const p of random.sample(outside, {
-        count: outside.length - upperLimit,
+        sampleCount: outside.length - upperLimit,
       }))
         p.delete();
     else
@@ -195,9 +195,9 @@ export function create(options: Partial<SwitchParameters> = {}) {
     history.push({
       tick: world.tick.value,
       energy,
-      lacZ: group("lacZ").length,
-      lacY: group("lacY").length,
-      divisions: divisionNumber,
+      lacZCount: group("lacZ").length,
+      lacYCount: group("lacY").length,
+      divisionCount: divisionCount,
       cellDivisionTime,
     });
   }
@@ -207,7 +207,7 @@ export function create(options: Partial<SwitchParameters> = {}) {
     who = 0;
     initialEnergy = 1000;
     energy = initialEnergy;
-    divisionNumber = 0;
+    divisionCount = 0;
     cellDivisionTime = 0;
     ticksAtStartOfCellDivision = 0;
     inhibited = false;
@@ -215,16 +215,16 @@ export function create(options: Partial<SwitchParameters> = {}) {
     message = "";
     history.length = 0;
     drawCell();
-    for (let i = 0; i < settings.lacINumber; i++) addMolecule("lacI");
-    for (let i = 0; i < settings.rnapNumber; i++) addMolecule("rnap");
+    for (let i = 0; i < settings.lacICount; i++) addMolecule("lacI");
+    for (let i = 0; i < settings.rnapCount; i++) addMolecule("rnap");
     if (!settings.levelSpace && settings.lactose) updateLactose();
     record();
   }
   function reset() {
-    settings = parameters(inputs, {
+    settings = parseParameters(inputs, {
       ...settings,
-      lacINumber: 25,
-      rnapNumber: 25,
+      lacICount: 25,
+      rnapCount: 25,
       lacIBondLeakage: 0.02,
       lacILactoseBindingChance: 0.99991,
       lacILactoseSeparationChance: 0.001,
@@ -281,7 +281,7 @@ export function create(options: Partial<SwitchParameters> = {}) {
           freeLactose.length > 0 &&
           random.number() < settings.lacILactoseBindingChance
         ) {
-          const partner = random.sample(freeLactose, { count: 1 })[0]!;
+          const partner = random.sample(freeLactose, { sampleCount: 1 })[0]!;
           p.partner = partner;
           partner.partner = p;
           dissociateFromOperator(p);
@@ -385,18 +385,18 @@ export function create(options: Partial<SwitchParameters> = {}) {
     );
     for (const collection of [freeInside, group("lacY"), group("lacZ")])
       for (const p of random.sample(collection, {
-        count: Math.round(collection.length / 2),
+        sampleCount: Math.round(collection.length / 2),
       }))
         p.delete();
     const pumps = grid.fields.filter((f) => f.pump);
     for (const f of random.sample(pumps, {
-      count: Math.round(pumps.length / 2),
+      sampleCount: Math.round(pumps.length / 2),
     })) {
       f.pump = false;
       f.color = cellColor;
     }
     energy /= 2;
-    divisionNumber++;
+    divisionCount++;
     cellDivisionTime = world.tick.value - ticksAtStartOfCellDivision;
     ticksAtStartOfCellDivision = world.tick.value;
   }
@@ -421,9 +421,9 @@ export function create(options: Partial<SwitchParameters> = {}) {
     }
     showSwitchColor();
   }
-  function advance(count = 1) {
-    stepCount(count);
-    for (let i = 0; i < count; i++) {
+  function advance(stepCount = 1) {
+    validateStepCount(stepCount);
+    for (let i = 0; i < stepCount; i++) {
       if (stopped) break;
       // A source STOP after energy exhaustion retains phase mutations and does not tick.
       go();
@@ -435,7 +435,7 @@ export function create(options: Partial<SwitchParameters> = {}) {
   function setParameters(update: Partial<Omit<SwitchParameters, "seed">>) {
     if (Object.hasOwn(update, "seed"))
       throw new TypeError("Seed is setup-only.");
-    settings = parameters(inputs, { ...settings, ...update });
+    settings = parseParameters(inputs, { ...settings, ...update });
   }
   function setInitialVariables(values: readonly (number | boolean | string)[]) {
     if (values.length < 10)
@@ -446,7 +446,7 @@ export function create(options: Partial<SwitchParameters> = {}) {
         throw new TypeError("Expected finite handoff number.");
       return value;
     };
-    settings = parameters(inputs, {
+    settings = parseParameters(inputs, {
       ...settings,
       levelSpace: true,
       lactose: Boolean(values[8]),
@@ -456,7 +456,7 @@ export function create(options: Partial<SwitchParameters> = {}) {
     initialEnergy = numberAt(1);
     energy = initialEnergy;
     const wall = grid.fields.filter((f) => cellWall(f.x, f.y));
-    for (const f of random.sample(wall, { count: Math.round(numberAt(3)) })) {
+    for (const f of random.sample(wall, { sampleCount: Math.round(numberAt(3)) })) {
       f.pump = true;
       f.color = "#e96767";
     }
@@ -464,7 +464,7 @@ export function create(options: Partial<SwitchParameters> = {}) {
     for (let i = 0; i < numberAt(4); i++) addMolecule("lacZ");
     for (let i = 0; i < numberAt(6); i++) addMolecule("lactose");
     for (const p of random.sample(group("lacI"), {
-      count: Math.round(numberAt(5)),
+      sampleCount: Math.round(numberAt(5)),
     })) {
       const partner = addMolecule("lactose");
       partner.move({ to: p });
@@ -493,7 +493,7 @@ export function create(options: Partial<SwitchParameters> = {}) {
       parameters: { ...settings },
       energy,
       initialEnergy,
-      divisionNumber,
+      divisionCount: divisionCount,
       cellDivisionTime,
       inhibited,
       lacZCount: group("lacZ").length,

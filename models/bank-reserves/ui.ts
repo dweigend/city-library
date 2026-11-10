@@ -2,7 +2,7 @@ import { defineUI, type Observation, type Series } from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: ["people", "seed"],
+  setup: ["personCount", "seed"],
   live: {
     reserves: {
       set: (m, value) => m.setRules({ reserves: value }),
@@ -22,9 +22,9 @@ export const ui = defineUI(model, {
     { label: "Money total", value: (s) => s.moneyTotal, format: (value: number) => value.toFixed(2) },
     { label: "Bank reserves", value: (s) => s.bankReserves, format: (value: number) => value.toFixed(2) },
     { label: "Bank to loan", value: (s) => s.bankToLoan, format: (value: number) => value.toFixed(2) },
-    { label: "Rich", value: (s) => s.rich },
-    { label: "Middle class", value: (s) => s.middleClass },
-    { label: "Poor", value: (s) => s.poor },
+    { label: "Rich", value: (s) => s.richPersonCount },
+    { label: "Middle class", value: (s) => s.middleClassPersonCount },
+    { label: "Poor", value: (s) => s.poorPersonCount },
   ],
   views: [
     {
@@ -92,17 +92,17 @@ function incomeDistributionSeries(s: UIObservation): readonly Series[] {
     {
       label: "Rich",
       color: "#38a339",
-      points: s.history.map((p) => ({ x: p.tick, y: p.rich })),
+      points: s.history.map((p) => ({ x: p.tick, y: p.richPersonCount })),
     },
     {
       label: "Middle",
       color: "#8d8d8d",
-      points: s.history.map((p) => ({ x: p.tick, y: p.middleClass })),
+      points: s.history.map((p) => ({ x: p.tick, y: p.middleClassPersonCount })),
     },
     {
       label: "Poor",
       color: "#d43b36",
-      points: s.history.map((p) => ({ x: p.tick, y: p.poor })),
+      points: s.history.map((p) => ({ x: p.tick, y: p.poorPersonCount })),
     },
   ];
 }

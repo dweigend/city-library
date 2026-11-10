@@ -1,12 +1,17 @@
 # Ethnocentrism
 
-Agents cooperate differently with same- and different-group neighbors, then reproduce with inheritance and mutation alongside immigration. Payoffs and group labels are stipulated local rules rather than a causal explanation of human identity.
+Can favoring your own group evolve from local competition? Agents carry a group color and two inherited choices: whether to help neighbors of the same color and whether to help others. Helping costs the giver `costOfGiving` and benefits the receiver `gainOfReceiving`, which raises its chance to reproduce. Offspring inherit color and choices with `mutationRate`, immigrants arrive each step, and agents die with `deathRate`.
+
+Things to try:
+
+- Follow the four strategy shares over time with the defaults.
+- Raise `costOfGiving`. Does any kind of helping survive?
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Ethnocentrism`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Choose **Ethnocentrism** in [Agent Lab](../../ui/agent-lab/README.md).
 
-Headless, from a script in the repository root:
+From a script in the repository root:
 
 ```ts
 import { create } from "./models/ethnocentrism/model.ts";
@@ -18,13 +23,13 @@ const observation = simulation.read();
 
 ## Parameters
 
-`create(options)` accepts these input keys. The [UI binding](ui.ts) distinguishes setup controls from live changes; [model.ts](model.ts) defines additional validation.
+`create(options)` accepts these inputs. [ui.ts](ui.ts) decides which are setup controls and which can change during a run; [model.ts](model.ts) adds further validation.
 
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
 | `setup` | `"empty"` | `empty`, `full` |
-| `immigrantsPerDay` | `1` | integer; ≥ 0; ≤ 100 |
+| `immigrantCountPerDay` | `1` | integer; ≥ 0; ≤ 100 |
 | `initialPtr` | `0.12` | number; ≥ 0; ≤ 1 |
 | `costOfGiving` | `0.01` | number; ≥ 0; ≤ 1 |
 | `gainOfReceiving` | `0.03` | number; ≥ 0; ≤ 1 |
@@ -35,16 +40,16 @@ const observation = simulation.read();
 
 ## Actions and observations
 
-Use `advance(...)` for progress and `read()` for observations; the model defines how work advances its tick.
+Call `advance()` with an optional step count to run the model; the model defines how a step advances its tick. Call `read()` for a detached snapshot.
 
-Other instance procedures: `setupEmpty`, `setupFull`, `setParameters`. See their typed arguments in [model.ts](model.ts).
+Other actions: `setupEmpty`, `setupFull`, `setParameters`. Their typed arguments are in [model.ts](model.ts).
 
 Model-specific `read()` fields include `agents`, `turn`, `cumulative`, `turnRatios`, `cumulativeRatios`, `last100Ratios`, `genotypes`, `genotypeMean`, `genotypePercent`, `last100`.
 
-The [UI binding](ui.ts) presents `Initial population`, `Initial reproduction probability`, `Immigrant cooperation with same tag`, `Immigrant cooperation with different tag`, `Setup empty`, `Setup full`, `Tick`, `Population`, `Encounters`, `Cooperation` and further views or controls.
+## Sources and limits
 
-## Sources and acceptance
+Adapted from the NetLogo *Ethnocentrism* model (© 2003 Uri Wilensky). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+Payoffs and group labels are stipulated rules, not an explanation of human identity. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 
-[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `ethnocentrism` and links any shared checks.
+[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) records the acceptance stages for `ethnocentrism`.

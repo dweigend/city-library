@@ -3,7 +3,7 @@ import { stats } from "city-library";
 const edges = [0, 1, 2];
 const result = stats.histogram([], { edges });
 edges[1] = 0.5;
-assert.deepEqual(result, { edges: [0, 1, 2], counts: [0, 0], underflow: 0, overflow: 0 });
+assert.deepEqual(result, { edges: [0, 1, 2], counts: [0, 0], underflowValueCount: 0, overflowValueCount: 0 });
 const wealth = [9, 0, 0];
 const sorted = [...wealth].sort((a, b) => a - b);
 const total = sorted.reduce((sum, value) => sum + value, 0);

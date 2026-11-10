@@ -18,7 +18,7 @@ export const ui = defineUI(model, {
   },
   monitors: [
     { label: "Tick", value: (s) => s.tick },
-    { label: "Successes", value: (s) => s.successes },
+    { label: "Successes", value: (s) => s.successCount },
     { label: "Running total", value: (s) => s.runningTotal },
     { label: "Previous addends", value: (s) => s.previous.join(" + ") },
     { label: "Addend", value: (s) => s.addend },

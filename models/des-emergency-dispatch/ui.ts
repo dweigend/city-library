@@ -3,12 +3,12 @@ import { model } from "./model.ts";
 import { scene } from "./scene.ts";
 export const ui = defineUI(model, {
   setup: ["serviceMinutes"],
-  live: { responders: { set: (instance, value) => instance.setResponders(value) } },
+  live: { responderCount: { set: (instance, value) => instance.setResponders(value) } },
   monitors: [
     { label: "Time (min)", value: (state) => state.time },
-    { label: "Busy teams", value: (state) => state.busy },
-    { label: "Waiting calls", value: (state) => state.waiting },
-    { label: "Completed", value: (state) => state.completed },
+    { label: "Busy teams", value: (state) => state.busyResponderCount },
+    { label: "Waiting calls", value: (state) => state.waitingCallCount },
+    { label: "Completed", value: (state) => state.completedCallCount },
   ],
   views: [
     { type: "spatial", label: "Response assignments", data: scene },

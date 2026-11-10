@@ -145,11 +145,11 @@ test("zero count still preflights every weight exactly once but consumes no draw
   const random = Random.create();
   const calls: number[] = [];
   const before = random.state;
-  assert.deepEqual(random.sample([1, 2, 3], { count: 0, weight: (value) => { calls.push(value); return value; } }), []);
+  assert.deepEqual(random.sample([1, 2, 3], { sampleCount: 0, weight: (value) => { calls.push(value); return value; } }), []);
   assert.deepEqual(calls, [1, 2, 3]);
   assert.deepEqual(random.state, before);
-  unchanged(random, () => random.sample([1, 2], { count: 0, weight: () => NaN }));
-  assert.deepEqual(random.sample([1, 2], { count: 3, replace: true, weight: () => 0 }), []);
+  unchanged(random, () => random.sample([1, 2], { sampleCount: 0, weight: () => NaN }));
+  assert.deepEqual(random.sample([1, 2], { sampleCount: 3, replace: true, weight: () => 0 }), []);
   assert.deepEqual(random.state, before);
 });
 
@@ -158,7 +158,7 @@ test("sampling treats repeated references as positions and source order is stabl
   const other = {};
   const source = [shared, shared, other];
   const random = Random.create();
-  const selected = random.sample(source, { count: 9 });
+  const selected = random.sample(source, { sampleCount: 9 });
   assert.equal(selected.length, 3);
   assert.equal(selected.filter((value) => value === shared).length, 2);
   assert.equal(selected.filter((value) => value === other).length, 1);
@@ -166,19 +166,19 @@ test("sampling treats repeated references as positions and source order is stabl
   const reference = Random.create();
   reference.number(); reference.number(); reference.number();
   assert.deepEqual(random.state, reference.state);
-  assert.deepEqual(Random.create().sample(["a", "b", "c"], { count: 4, replace: true }), ["b", "a", "b", "c"]);
-  assert.deepEqual(Random.create().sample(["a", "b", "c"], { count: 4, replace: true, order: "source" }), ["a", "b", "b", "c"]);
+  assert.deepEqual(Random.create().sample(["a", "b", "c"], { sampleCount: 4, replace: true }), ["b", "a", "b", "c"]);
+  assert.deepEqual(Random.create().sample(["a", "b", "c"], { sampleCount: 4, replace: true, order: "source" }), ["a", "b", "b", "c"]);
 });
 
-test("singleton selection and explicit legacy shuffle have distinct schedules", () => {
+test("singleton selection and explicit full shuffle have distinct schedules", () => {
   const single = Random.create();
   assert.deepEqual(single.sample(["only"]), ["only"]);
   assert.equal(single.number(), secondDraw);
-  const legacy = Random.create();
-  assert.deepEqual(legacy.sample(["only"], { count: 1, algorithm: "fisher-yates-descending" }), ["only"]);
-  assert.equal(legacy.number(), firstDraw);
+  const fullShuffleRandom = Random.create();
+  assert.deepEqual(fullShuffleRandom.sample(["only"], { sampleCount: 1, algorithm: "fisher-yates-descending" }), ["only"]);
+  assert.equal(fullShuffleRandom.number(), firstDraw);
   const empty = Random.create();
-  assert.deepEqual(empty.sample([], { count: 0, algorithm: "fisher-yates-descending" }), []);
+  assert.deepEqual(empty.sample([], { sampleCount: 0, algorithm: "fisher-yates-descending" }), []);
   assert.equal(empty.number(), firstDraw);
   for (const options of [
     { count: 2, algorithm: "fisher-yates-descending" },
@@ -189,10 +189,10 @@ test("singleton selection and explicit legacy shuffle have distinct schedules", 
     const random = Random.create();
     unchanged(random, () => random.sample([1, 2, 3], options as never));
   }
-  const before = legacy.state;
-  assert.throws(() => legacy.sample([1, 2], { count: 2, algorithm: "fisher-yates-descending", order: "draw" }));
-  assert.throws(() => legacy.sample([1, 2], { count: 1, algorithm: "fisher-yates-descending" }));
-  assert.deepEqual(legacy.state, before);
+  const before = fullShuffleRandom.state;
+  assert.throws(() => fullShuffleRandom.sample([1, 2], { sampleCount: 2, algorithm: "fisher-yates-descending", order: "draw" }));
+  assert.throws(() => fullShuffleRandom.sample([1, 2], { sampleCount: 1, algorithm: "fisher-yates-descending" }));
+  assert.deepEqual(fullShuffleRandom.state, before);
 });
 
 test("unsupported profiles distributions and raw branches do not draw", () => {

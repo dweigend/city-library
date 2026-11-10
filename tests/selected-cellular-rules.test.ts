@@ -179,23 +179,23 @@ describe("selected cellular source rules", () => {
     m.beginBrush({ x: 0, y: 0 });
     m.moveBrush({ x: 1, y: 0 });
     m.endBrush();
-    expect(m.read().counts.refractory).toBe(2);
+    expect(m.read().counts.refractoryFieldCount).toBe(2);
     m.beginBrush({ x: 0, y: 0 });
     m.moveBrush({ x: 1, y: 0 });
     m.endBrush();
-    expect(m.read().counts.refractory).toBe(0);
+    expect(m.read().counts.refractoryFieldCount).toBe(0);
     expect(m.read().tick).toBe(0);
   });
   test("cyclic source presets and both radius geometries are distinct", () => {
-    expect(cyclicOffsets(2, "Moore")).toHaveLength(24);
-    expect(cyclicOffsets(2, "von Neumann")).toHaveLength(12);
+    expect(cyclicOffsets(2, "moore")).toHaveLength(24);
+    expect(cyclicOffsets(2, "von-neumann")).toHaveLength(12);
     expect(Object.keys(presets)).toHaveLength(20);
-    const m = cyclic({ width: 9, height: 9, preset: "diamond spirals" });
+    const m = cyclic({ width: 9, height: 9, preset: "diamond-spirals" });
     expect(m.read().parameters).toMatchObject({
       radius: 1,
       threshold: 1,
       stateCount: 14,
-      neighborhood: "von Neumann",
+      neighborhood: "von-neumann",
     });
     expect(m.read().colorList).toHaveLength(14);
   });

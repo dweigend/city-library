@@ -1,12 +1,17 @@
 # Random Combinations and Permutations
 
-Repeated random draws are compared with a user-selected pattern either with or without regard to order. Ordered permutations and unordered combinations are distinct events and have different matching frequencies.
+Does order matter when you guess a random pattern? You choose a target pattern of colors or dice faces. The model then draws random patterns and counts two kinds of matches: exact matches in the same order (permutations) and matches with the same elements in any order (combinations).
+
+Things to try:
+
+- Use dice with a target of two different faces. How do the two match counts compare?
+- Choose a target with repeated faces. What happens to the ratio between the two counts?
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Random Combinations and Permutations`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Choose **Random Combinations and Permutations** in [Agent Lab](../../ui/agent-lab/README.md).
 
-Headless, from a script in the repository root:
+From a script in the repository root:
 
 ```ts
 import { create } from "./models/random-combinations-and-permutations/model.ts";
@@ -18,14 +23,14 @@ const observation = simulation.read();
 
 ## Parameters
 
-`create(options)` accepts these input keys. The [UI binding](ui.ts) distinguishes setup controls from live changes; [model.ts](model.ts) defines additional validation.
+`create(options)` accepts these inputs. [ui.ts](ui.ts) decides which are setup controls and which can change during a run; [model.ts](model.ts) adds further validation.
 
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer |
 | `width` | `3` | integer; ≥ 1; ≤ 5 |
 | `height` | `1` | integer; ≥ 1; ≤ 2 |
-| `choices` | `2` | integer; ≥ 2; ≤ 6 |
+| `choiceCount` | `2` | integer; ≥ 2; ≤ 6 |
 | `dice` | `true` | boolean |
 | `singleSuccess` | `false` | boolean |
 | `analysisType` | `"both"` | `combination`, `permutations`, `both` |
@@ -34,18 +39,18 @@ const observation = simulation.read();
 
 ## Actions and observations
 
-Use `advance(...)` for progress and `read()` for observations; the model defines how work advances its tick.
+Call `advance()` with an optional step count to run the model; the model defines how a step advances its tick. Call `read()` for a detached snapshot.
 
-Other instance procedures: `createCombi`, `finishCombi`, `assignColorOrImage`, `selectAt`, `hideReveal`, `setRules`. See their typed arguments in [model.ts](model.ts).
+Other actions: `createCombi`, `finishCombi`, `assignColorOrImage`, `selectAt`, `hideReveal`, `setRules`. Their typed arguments are in [model.ts](model.ts).
 
-Additional instance accessors: `world`. See [model.ts](model.ts) for the returned live references.
+Live references: `world`. [model.ts](model.ts) describes what they return.
 
-Model-specific `read()` fields include `squares`, `distributionSeries`, `original`, `guesses`, `exists`, `abortCreate`, `hidden`, `creating`, `countSteps`, `countCombiSuccesses`, `countPermisSuccesses`, `samplesCounter`, `attempts`, `allCombiMatch`, `allPermisMatch`, `instructions`, `choiceCounts`, `combiSamples`, `permisSamples`, `combiMean`, `permisMean`, `ratio`.
+Model-specific `read()` fields include `squares`, `distributionSeries`, `original`, `guesses`, `exists`, `abortCreate`, `hidden`, `creating`, `stepCount`, `combinationSuccessCount`, `permutationSuccessCount`, `samplesCounter`, `attemptCount`, `allCombiMatch`, `allPermisMatch`, `instructions`, `choiceCounts`, `combiSamples`, `permisSamples`, `combiMean`, `permisMean`, `ratio`.
 
-The [UI binding](ui.ts) presents `Create Combi`, `Finish Combi`, `Hide / Reveal`, `Search attempts`, `Steps in sample`, `Samples`, `Combination successes`, `Permutation successes`, `Mean combination`, `Mean permutations` and further views or controls.
+## Sources and limits
 
-## Sources and acceptance
+Adapted from the NetLogo *Random Combinations and Permutations* model by Abrahamson and Wilensky (2004). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+Ordered and unordered matches are different events; the counts estimate their probabilities from a finite sample. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 
-[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `random-combinations-and-permutations` and links any shared checks.
+[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) records the acceptance stages for `random-combinations-and-permutations`.

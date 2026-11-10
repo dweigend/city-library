@@ -7,9 +7,9 @@ export const ui = defineUI(model, {
     { field: "femaleGenotype", label: "Female parent genotype" },
   ],
   live: {
-    numberOfOffspring: {
+    offspringCount: {
       label: "Offspring per trial",
-      set: (m, v) => m.setParameters({ numberOfOffspring: v }),
+      set: (m, v) => m.setParameters({ offspringCount: v }),
     },
   },
   actions: [
@@ -29,8 +29,8 @@ export const ui = defineUI(model, {
   complete: (s) => s.done,
   monitors: [
     { label: "Trial", value: (s) => s.trialNumber },
-    { label: "Dark offspring", value: (s) => s.numberOfDarkOffspring },
-    { label: "Light offspring", value: (s) => s.numberOfLightOffspring },
+    { label: "Dark offspring", value: (s) => s.darkOffspringCount },
+    { label: "Light offspring", value: (s) => s.lightOffspringCount },
     { label: "Dark ratio", value: (s) => s.darkRatioValue, format: (value: number | string) => (typeof value === "number" ? value.toFixed(2) : value) },
     { label: "Light ratio", value: (s) => s.lightRatioValue },
     { label: "Genotype", value: (s) => s.selectedGenotype ?? "Select a mouse" },

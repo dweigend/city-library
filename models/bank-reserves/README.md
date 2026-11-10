@@ -1,12 +1,17 @@
 # Bank Reserves
 
-Payments, personal balance-book settlement and the bank balance sheet occupy separate phases. Reserve requirements constrain the stipulated lending mechanism; these rules are not an empirical account of modern bank credit creation.
+How does a reserve requirement limit lending? People make random payments, then settle with one bank: they deposit surplus cash, withdraw savings or borrow when short. The bank may lend only what exceeds the required `reserves` share of deposits. The model tracks deposits, loans, reserves and the resulting money supply, along with wealth classes.
+
+Things to try:
+
+- Set `reserves` to 100 and then to a low value. Compare the money supply.
+- Follow `bankToLoan` over time. When does the bank run out of lendable money?
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Bank Reserves`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Choose **Bank Reserves** in [Agent Lab](../../ui/agent-lab/README.md).
 
-Headless, from a script in the repository root:
+From a script in the repository root:
 
 ```ts
 import { create } from "./models/bank-reserves/model.ts";
@@ -18,26 +23,26 @@ const observation = simulation.read();
 
 ## Parameters
 
-`create(options)` accepts these input keys. The [UI binding](ui.ts) distinguishes setup controls from live changes; [model.ts](model.ts) defines additional validation.
+`create(options)` accepts these inputs. [ui.ts](ui.ts) decides which are setup controls and which can change during a run; [model.ts](model.ts) adds further validation.
 
 | Input | Default | Declared values |
 | --- | --- | --- |
-| `people` | `57` | integer; ≥ 0; ≤ 200 |
+| `personCount` | `57` | integer; ≥ 0; ≤ 200 |
 | `reserves` | `52` | number; ≥ 0; ≤ 100 |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
 
 ## Actions and observations
 
-Use `advance(...)` for progress and `read()` for observations; the model defines how work advances its tick.
+Call `advance()` with an optional step count to run the model; the model defines how a step advances its tick. Call `read()` for a detached snapshot.
 
-Other instance procedures: `setup`, `depositToSavings`, `withdrawFromSavings`, `takeOutLoan`, `repayLoan`, `balanceBooks`, `bankBalanceSheet`, `pollClass`, `updateAppearance`, `doBusiness`, `setRules`, `setAccounts`. See their typed arguments in [model.ts](model.ts).
+Other actions: `setup`, `depositToSavings`, `withdrawFromSavings`, `takeOutLoan`, `repayLoan`, `balanceBooks`, `bankBalanceSheet`, `pollClass`, `updateAppearance`, `doBusiness`, `setRules`, `setAccounts`. Their typed arguments are in [model.ts](model.ts).
 
-Model-specific `read()` fields include `phase`, `bankDeposits`, `bankLoans`, `bankReserves`, `bankToLoan`, `rich`, `poor`, `middleClass`, `meanWealth`, `people`, `wealthHistogram`, `histogramRange`.
+Model-specific `read()` fields include `phase`, `bankDeposits`, `bankLoans`, `bankReserves`, `bankToLoan`, `richPersonCount`, `poorPersonCount`, `middleClassPersonCount`, `meanWealth`, `people`, `wealthHistogram`, `histogramRange`.
 
-The [UI binding](ui.ts) presents `Mean wealth`, `Tick`, `Next phase`, `Savings total`, `Wallets total`, `Loans total`, `Money total`, `Bank reserves`, `Bank to loan`, `Rich` and further views or controls.
+## Sources and limits
 
-## Sources and acceptance
+Adapted from the NetLogo *Bank Reserves* model by Wilensky (1998). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+Reserve requirements here drive a stipulated lending mechanism; this is not an empirical account of how modern banks create credit. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 
-The [catalog ledger](../catalog/progress.json) owns acceptance stages for `bank-reserves` and links the retained checks.
+The [catalog ledger](../catalog/progress.json) records the acceptance stages for `bank-reserves`.

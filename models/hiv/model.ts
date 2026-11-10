@@ -1,10 +1,10 @@
 /** HIV (Wilensky, 1997). Toy transmission mechanism, not health guidance. See NOTICE.md. */
 import { Agent, Grid, Random, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface HIVParameters {
   seed: number;
-  initialPeople: number;
+  initialPersonCount: number;
   averageCommitment: number;
   averageCouplingTendency: number;
   averageCondomUse: number;
@@ -12,7 +12,7 @@ export interface HIVParameters {
 }
 export const inputs: Inputs<HIVParameters> = {
   seed: { kind: "number", default: 1, integer: true },
-  initialPeople: {
+  initialPersonCount: {
     kind: "number",
     default: 300,
     min: 50,
@@ -40,7 +40,7 @@ interface PersonState {
 }
 type Person = Agent<PersonState>;
 export function create(options: Partial<HIVParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   let checked = settings;
   const random = Random.create({ seed: settings.seed });
   const space = { x: 25, y: 25, boundary: "wrap" } as const;
@@ -52,14 +52,14 @@ export function create(options: Partial<HIVParameters> = {}) {
   let stopped = false;
   const history: {
     tick: number;
-    infected: number;
-    known: number;
-    coupled: number;
+    infectedPersonCount: number;
+    diagnosedPersonCount: number;
+    coupledPersonCount: number;
   }[] = [];
   const all = () => world.agents as readonly Person[];
   const shuffled = (people: readonly Person[]) =>
     random.sample(people, {
-      count: people.length,
+      sampleCount: people.length,
       algorithm: "fisher-yates-descending",
     });
   function randomNear(center: number) {
@@ -80,12 +80,12 @@ export function create(options: Partial<HIVParameters> = {}) {
     person.testFrequency = randomNear(settings.averageTestFrequency);
   }
   function setupPeople() {
-    for (let who = 0; who < settings.initialPeople; who++) {
+    for (let who = 0; who < settings.initialPersonCount; who++) {
       const person = world.add(
         Agent.create<PersonState>(
           {
             who,
-            infected: who < settings.initialPeople * 0.025,
+            infected: who < settings.initialPersonCount * 0.025,
             known: false,
             infectionLength: 0,
             coupled: false,
@@ -197,10 +197,10 @@ export function create(options: Partial<HIVParameters> = {}) {
   function record() {
     history.push({
       tick: world.tick.value,
-      infected: percentInfected(),
-      known:
+      infectedPersonCount: percentInfected(),
+      diagnosedPersonCount:
         (all().filter((person) => person.known).length / all().length) * 100,
-      coupled: all().filter((person) => person.coupled).length,
+      coupledPersonCount: all().filter((person) => person.coupled).length,
     });
     if (history.length > 2001) history.shift();
   }
@@ -233,20 +233,20 @@ export function create(options: Partial<HIVParameters> = {}) {
     );
     record();
   }
-  function advance(count = 1) {
-    stepCount(count);
-    for (let index = 0; index < count && !stopped; index++) go();
+  function advance(stepCount = 1) {
+    validateStepCount(stepCount);
+    for (let index = 0; index < stepCount && !stopped; index++) go();
   }
   function setParameters(
-    update: Partial<Omit<HIVParameters, "seed" | "initialPeople">>,
+    update: Partial<Omit<HIVParameters, "seed" | "initialPersonCount">>,
   ) {
     if (
       Object.keys(update).some(
-        (key) => key === "seed" || key === "initialPeople",
+        (key) => key === "seed" || key === "initialPersonCount",
       )
     )
       throw new TypeError("Setup parameters require a new model.");
-    settings = parameters(inputs, { ...settings, ...update });
+    settings = parseParameters(inputs, { ...settings, ...update });
   }
   function read() {
     return {

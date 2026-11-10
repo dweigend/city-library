@@ -3,7 +3,7 @@ import { defineUI, type Observation, type SpatialData, type Series } from "../..
 import { model } from "./model.ts";
 
 const binding = defineUI(model, {
-  setup: ["seed", "initialChloroplasts", "initialCarbonDioxide"],
+  setup: ["seed", "initialChloroplastCount", "initialCarbonDioxideCount"],
   change: (instance, changes) => instance.setParameters(changes),
   live: {
     waterflowThroughLeaf: {},
@@ -18,9 +18,9 @@ const binding = defineUI(model, {
   },
   monitors: [
     { label: "Tick", value: (state) => state.tick },
-    { label: "CO2", value: (state) => state.carbonDioxide },
-    { label: "O2", value: (state) => state.oxygen },
-    { label: "Glucose produced", value: (state) => state.glucoseProduced },
+    { label: "CO2", value: (state) => state.carbonDioxideCount },
+    { label: "O2", value: (state) => state.oxygenCount },
+    { label: "Glucose produced", value: (state) => state.producedGlucoseCount },
   ],
   views: [
     {
@@ -37,9 +37,8 @@ const binding = defineUI(model, {
 });
 
 export { model };
-export const sourceMarker =
-  "selected-biology-b07:chloroplasts-and-food:7c1ca18d90bd70a969ec8722fb056cafeea758c898a39efbaada099aa5e28f66";
-export const ui = { ...binding, model, sourceMarker };
+
+export const ui = { ...binding, model };
 
 type UIObservation = Observation<typeof model>;
 
@@ -64,21 +63,21 @@ function moleculesSeries(state: UIObservation): readonly Series[] {
       label: "CO2",
       color: "#222222",
       points: state.history.flatMap((point) => [
-        { x: point.tick, y: point.carbonDioxide },
+        { x: point.tick, y: point.carbonDioxideCount },
       ]),
     },
     {
       label: "O2",
       color: "#df4545",
       points: state.history.flatMap((point) => [
-        { x: point.tick, y: point.oxygen },
+        { x: point.tick, y: point.oxygenCount },
       ]),
     },
     {
       label: "Glucose produced",
       color: "#b67b37",
       points: state.history.flatMap((point) => [
-        { x: point.tick, y: point.glucoseProduced },
+        { x: point.tick, y: point.producedGlucoseCount },
       ]),
     },
   ];

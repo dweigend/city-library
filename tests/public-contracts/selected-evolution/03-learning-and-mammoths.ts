@@ -23,20 +23,20 @@ assert.equal(initial.tick, 0);
 assert.deepEqual(b.read(), after);
 
 // Native map import supplies domain land; it is not a decorative approximation.
-const m = mammoths({ seed: 32, numberOfMammoths: 10, numberOfHumans: 0, climateChangeDecayChance: 100, mammothBirthRate: 0 });
+const m = mammoths({ seed: 32, mammothCount: 10, humanCount: 0, climateChangeDecayChance: 100, mammothBirthRate: 0 });
 const setup = m.read();
 assert.equal(setup.mammoths.length, 10);
 assert.equal(setup.humans.length, 0);
 assert.ok(setup.cells.some(cell => cell.terrain === 'land'));
 assert.ok(setup.cells.some(cell => cell.terrain === 'ocean'));
-assert.equal(setup.mammothsKilledByHumans, 0);
-assert.equal(setup.mammothsKilledByClimateChange, 0);
+assert.equal(setup.humanKilledMammothCount, 0);
+assert.equal(setup.climateKilledMammothCount, 0);
 m.advance();
 assert.equal(m.read().tick, 1);
 assert.ok(m.read().cells.every(cell => cell.terrain !== 'land'));
-assert.equal(m.read().mammothsKilledByHumans, 0);
+assert.equal(m.read().humanKilledMammothCount, 0);
 assert.equal(setup.tick, 0);
-const empty = mammoths({ numberOfMammoths: 0, numberOfHumans: 0 });
+const empty = mammoths({ mammothCount: 0, humanCount: 0 });
 empty.advance();
 assert.equal(empty.read().tick, 1); // source does not stop at extinction
 console.log('fitness threshold, populations and imported terrain/climate passed');

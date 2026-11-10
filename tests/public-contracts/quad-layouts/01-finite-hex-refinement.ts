@@ -2,9 +2,9 @@ import assert from "node:assert/strict";
 import { geometry, Random, topology, type Layout, type PlanarXY } from "city-library";
 
 // Lengths use local XY units. Generation and scaling use independent streams.
-const small = topology.quadrilaterals({ rings: 1, random: Random.create({ seed: 7 }) });
-const large = topology.quadrilaterals({ rings: 3, random: Random.create({ seed: 7 }) });
-const scaled = topology.quadrilaterals({ rings: 3, edgeLength: 2, random: Random.create({ seed: 7 }) });
+const small = topology.quadrilaterals({ ringCount: 1, random: Random.create({ seed: 7 }) });
+const large = topology.quadrilaterals({ ringCount: 3, random: Random.create({ seed: 7 }) });
+const scaled = topology.quadrilaterals({ ringCount: 3, edgeLength: 2, random: Random.create({ seed: 7 }) });
 
 console.log({ smallCells: small.cells.length, largeCells: large.cells.length });
 
@@ -39,7 +39,7 @@ for (const corners of [triangle, rhombus]) {
 function vertices(points: readonly PlanarXY[]): string {
   return JSON.stringify([...points].sort(([ax, ay], [bx, by]) => ax - bx || ay - by));
 }
-function assertConformingHex(layout: Layout, rings: number): void {
+function assertConformingHex(layout: Layout, ringCount: number): void {
   const edges = new Map<string, number[]>();
   const points = new Set<string>();
   let area = 0;
@@ -57,8 +57,8 @@ function assertConformingHex(layout: Layout, rings: number): void {
       edges.set(key, owners);
     }
   }
-  assert.ok(Math.abs(area - 3 * Math.sqrt(3) * rings ** 2 / 2) < 1e-10);
-  assert.equal([...edges.values()].filter(owners => owners.length === 1).length, 12 * rings);
+  assert.ok(Math.abs(area - 3 * Math.sqrt(3) * ringCount ** 2 / 2) < 1e-10);
+  assert.equal([...edges.values()].filter(owners => owners.length === 1).length, 12 * ringCount);
   assert.equal(points.size - edges.size + layout.cells.length, 1);
   for (const owners of edges.values()) {
     assert.ok(owners.length === 1 || owners.length === 2);

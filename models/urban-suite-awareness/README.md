@@ -1,12 +1,17 @@
 # Civic Awareness Spread
 
-People gain awareness through information centers and informed contacts, lose it through disuse and can become activists. Awareness points and thresholds are invented operational measures rather than observed attitudes.
+How does awareness of an issue spread and fade? People move around. They gain awareness points at information centers and from aware people they meet, and lose them when they go without contact for long (`nonUsageLimit`). Highly aware people become activists and open new centers.
+
+Things to try:
+
+- Lower `centerCount`. Does awareness die out?
+- Raise `nonUsageLimit` and compare the share of activists.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Civic Awareness Spread`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Choose **Civic Awareness Spread** in [Agent Lab](../../ui/agent-lab/README.md).
 
-Headless, from a script in the repository root:
+From a script in the repository root:
 
 ```ts
 import { create } from "./models/urban-suite-awareness/model.ts";
@@ -18,27 +23,27 @@ const observation = simulation.read();
 
 ## Parameters
 
-`create(options)` accepts these input keys. The [UI binding](ui.ts) distinguishes setup controls from live changes; [model.ts](model.ts) defines additional validation.
+`create(options)` accepts these inputs. [ui.ts](ui.ts) decides which are setup controls and which can change during a run; [model.ts](model.ts) adds further validation.
 
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
-| `people` | `60` | integer; ≥ 0; ≤ 300 |
-| `centers` | `20` | integer; ≥ 0; ≤ 100 |
+| `personCount` | `60` | integer; ≥ 0; ≤ 300 |
+| `centerCount` | `20` | integer; ≥ 0; ≤ 100 |
 | `nonUsageLimit` | `100` | integer; ≥ 0; ≤ 500 |
 
 ## Actions and observations
 
-Use `advance(...)` for progress and `read()` for observations; the model defines how work advances its tick.
+Call `advance()` with an optional step count to run the model; the model defines how a step advances its tick. Call `read()` for a detached snapshot.
 
-Other instance procedures: `setRules`, `setPeople`, `setCenters`, `placeCenter`. See their typed arguments in [model.ts](model.ts).
+Other actions: `setRules`, `setPeople`, `setCenters`, `placeCenter`. Their typed arguments are in [model.ts](model.ts).
 
 Model-specific `read()` fields include `people`, `cells`, `counts`, `meanAwareness`, `meanNonUsage`.
 
-The [UI binding](ui.ts) presents `Non-usage limit`, `Tick`, `Unaware`, `Aware`, `Well-informed`, `Activists`, `Centers`, `Mean awareness`, `Mean non-usage`, `Selected` and further views or controls.
+## Sources and limits
 
-## Sources and acceptance
+Adapted from the NetLogo *Urban Suite - Awareness* model by Felsen and Wilensky (2007). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+Awareness points and thresholds are invented measures, not observed attitudes. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 
-The [catalog ledger](../catalog/progress.json) owns acceptance stages for `urban-suite-awareness` and links the retained checks.
+The [catalog ledger](../catalog/progress.json) records the acceptance stages for `urban-suite-awareness`.

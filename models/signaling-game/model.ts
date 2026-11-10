@@ -1,11 +1,11 @@
 /** Source: Wilensky (2016), CC BY-NC-SA 3.0; exact source and attribution beside this file. */
 import { Random, World, run } from 'city-library';
 import type { Definition, Inputs } from '../definition.ts';
-import { parameters, stepCount } from '../parameters.ts';
+import { parseParameters, validateStepCount } from '../parameters.ts';
 export interface SignalingParameters {
   seed: number;
-  numberOfStates: number;
-  numberOfSignals: number;
+  stateCount: number;
+  signalCount: number;
   printProbabilities: boolean;
 }
 export const inputs: Inputs<SignalingParameters> = {
@@ -16,19 +16,19 @@ export const inputs: Inputs<SignalingParameters> = {
     max: 4294967295,
     integer: true,
   },
-  numberOfStates: { kind: 'number', default: 2, min: 2, max: 8, integer: true },
-  numberOfSignals: { kind: 'number', default: 2, min: 2, max: 8, integer: true },
+  stateCount: { kind: 'number', default: 2, min: 2, max: 8, integer: true },
+  signalCount: { kind: 'number', default: 2, min: 2, max: 8, integer: true },
   printProbabilities: { kind: 'boolean', default: true },
 };
 export function create(options: Partial<SignalingParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed }),
     world = World.create({ random });
-  const senderUrns = Array.from({ length: settings.numberOfStates }, () =>
-    Array<number>(settings.numberOfSignals).fill(1),
+  const senderUrns = Array.from({ length: settings.stateCount }, () =>
+    Array<number>(settings.signalCount).fill(1),
   );
-  const receiverUrns = Array.from({ length: settings.numberOfSignals }, () =>
-    Array<number>(settings.numberOfStates).fill(1),
+  const receiverUrns = Array.from({ length: settings.signalCount }, () =>
+    Array<number>(settings.stateCount).fill(1),
   );
   let timesCorrect = 0,
     stopped = false,
@@ -60,7 +60,7 @@ export function create(options: Partial<SignalingParameters> = {}) {
         (total, row, s) =>
           total + row.reduce((sum, v, g) => sum + v * receive[g]![s]!, 0),
         0,
-      ) / settings.numberOfStates
+      ) / settings.stateCount
     );
   }
   function pick(row: readonly number[]) {
@@ -88,10 +88,10 @@ export function create(options: Partial<SignalingParameters> = {}) {
           format([rowLabels[i]! + ' :', ...row.map((p) => p * 100)]),
         ),
       ].join('\n');
-    const states = Array.from({ length: settings.numberOfStates }, (_, i) =>
+    const states = Array.from({ length: settings.stateCount }, (_, i) =>
         String.fromCharCode(65 + i),
       ),
-      signals = Array.from({ length: settings.numberOfSignals }, (_, i) => String(i));
+      signals = Array.from({ length: settings.signalCount }, (_, i) => String(i));
     output =
       'Sender probabilities:\n' +
       table(states, signals, senderUrns) +
@@ -113,17 +113,17 @@ export function create(options: Partial<SignalingParameters> = {}) {
   }
   record();
   return {
-    advance(count = 1) {
-      stepCount(count);
-      if (count === 0) return;
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      if (stepCount === 0) return;
       stopped = false;
-      for (let i = 0; i < count; i++) {
+      for (let i = 0; i < stepCount; i++) {
         if (probability() > 0.99) {
           stopped = true;
           break;
         }
         run(world, () => {
-          const state = Math.floor(random.number() * settings.numberOfStates),
+          const state = Math.floor(random.number() * settings.stateCount),
             signal = pick(senderUrns[state]!),
             guess = pick(receiverUrns[signal]!);
           const correct = guess === state;
@@ -142,10 +142,10 @@ export function create(options: Partial<SignalingParameters> = {}) {
       return print();
     },
     setParameters(p: Partial<Pick<SignalingParameters, 'printProbabilities'>>) {
-      parameters(inputs, p);
+      parseParameters(inputs, p);
       if (Reflect.ownKeys(p).some((k) => k !== 'printProbabilities'))
         throw new TypeError('Only printing is live.');
-      settings = parameters(inputs, { ...settings, ...p });
+      settings = parseParameters(inputs, { ...settings, ...p });
     },
     read() {
       return Object.freeze({

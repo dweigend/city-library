@@ -1,12 +1,12 @@
 /** Repressilator 1D (Wilensky, 2020). Source phases retained; see NOTICE.md. */
 import { Agent, Grid, Random, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface RepressilatorParameters {
   seed: number;
-  initialTF0s: number;
-  initialTF1s: number;
-  initialTF2s: number;
+  initialTf0Count: number;
+  initialTf1Count: number;
+  initialTf2Count: number;
   tfsPerMRNA: number;
   maxTFSynergy: number;
   mrnaDecayProb: number;
@@ -19,9 +19,9 @@ export interface RepressilatorParameters {
 }
 export const inputs: Inputs<RepressilatorParameters> = {
   seed: { kind: "number", default: 1, integer: true },
-  initialTF0s: { kind: "number", default: 0, min: 0, max: 200, integer: true },
-  initialTF1s: { kind: "number", default: 0, min: 0, max: 200, integer: true },
-  initialTF2s: { kind: "number", default: 0, min: 0, max: 200, integer: true },
+  initialTf0Count: { kind: "number", default: 0, min: 0, max: 200, integer: true },
+  initialTf1Count: { kind: "number", default: 0, min: 0, max: 200, integer: true },
+  initialTf2Count: { kind: "number", default: 0, min: 0, max: 200, integer: true },
   tfsPerMRNA: { kind: "number", default: 2, min: 0, max: 10 },
   maxTFSynergy: { kind: "number", default: 4, min: 0, max: 4 },
   mrnaDecayProb: { kind: "number", default: 0.25, min: 0, max: 1 },
@@ -41,7 +41,7 @@ type Molecule = Agent<{
   boundToSignal: boolean;
 }>;
 export function create(options: Partial<RepressilatorParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const space = { x: 3, y: 1, boundary: "wrap" } as const;
   const world = World.create(space, { random });
@@ -81,7 +81,7 @@ export function create(options: Partial<RepressilatorParameters> = {}) {
   const mrnas = () => molecules().filter((agent) => agent.group === "mrna");
   const shuffled = <T>(values: readonly T[]) =>
     random.sample(values, {
-      count: values.length,
+      sampleCount: values.length,
       algorithm: "fisher-yates-descending",
     });
   const integer = (upper: number) =>
@@ -353,25 +353,25 @@ export function create(options: Partial<RepressilatorParameters> = {}) {
     );
     record();
   }
-  function advance(count = 1) {
-    stepCount(count);
-    for (let index = 0; index < count; index++) go();
+  function advance(stepCount = 1) {
+    validateStepCount(stepCount);
+    for (let index = 0; index < stepCount; index++) go();
   }
   function setParameters(
     update: Partial<
       Omit<
         RepressilatorParameters,
-        "seed" | "initialTF0s" | "initialTF1s" | "initialTF2s"
+        "seed" | "initialTf0Count" | "initialTf1Count" | "initialTf2Count"
       >
     >,
   ) {
     if (
       Object.keys(update).some((key) =>
-        ["seed", "initialTF0s", "initialTF1s", "initialTF2s"].includes(key),
+        ["seed", "initialTf0Count", "initialTf1Count", "initialTf2Count"].includes(key),
       )
     )
       throw new TypeError("Setup parameters require a new model.");
-    settings = parameters(inputs, { ...settings, ...update });
+    settings = parseParameters(inputs, { ...settings, ...update });
   }
   function read() {
     return {
@@ -437,9 +437,9 @@ export function create(options: Partial<RepressilatorParameters> = {}) {
     };
   }
   for (const [geneId, count] of [
-    settings.initialTF0s,
-    settings.initialTF1s,
-    settings.initialTF2s,
+    settings.initialTf0Count,
+    settings.initialTf1Count,
+    settings.initialTf2Count,
   ].entries())
     for (let index = 0; index < count; index++)
       initializeTF(geneId, geneId - 1, 0);

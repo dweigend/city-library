@@ -2,7 +2,7 @@ import type { Definition } from "../models/definition.ts";
 
 export interface ModelInstance {
   read(): unknown;
-  advance(steps?: number): void;
+  advance(stepCount?: number): void;
   dispose?(): void;
 }
 export type Snapshot<M extends ModelInstance> = ReturnType<M["read"]>;
@@ -165,7 +165,7 @@ export interface SetupField<P extends object> {
   readonly label?: string;
   readonly widget?: "number" | "range" | "select" | "checkbox" | "text";
 }
-export interface LegacyLiveField<P extends object, M extends ModelInstance> {
+export interface LiveField<P extends object, M extends ModelInstance> {
   readonly field: Extract<keyof P, string>;
   readonly label?: string;
   readonly widget?: "color";
@@ -216,7 +216,7 @@ interface UISpecBase<P extends object, M extends ModelInstance> {
 /** Existing authoring form remains interface-extensible for downstream consumers. */
 export interface UISpec<P extends object, M extends ModelInstance> extends UISpecBase<P, M> {
   readonly change?: undefined;
-  readonly live?: readonly LegacyLiveField<P, M>[] | KeyedLive<P, M>;
+  readonly live?: readonly LiveField<P, M>[] | KeyedLive<P, M>;
 }
 
 /** The same flat declaration with an explicit default write for keyed live fields. */

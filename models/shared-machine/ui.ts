@@ -5,10 +5,9 @@ export const ui = defineUI(model, {
   views: [
     { type: "bar", label: "Material", yAxis: { unit: "units" }, series: state => [
       { label: "Units", points: [
-        { x: "Stock", y: state.inventory },
-        { x: "Free", y: state.available },
-        { x: "Used", y: state.consumed },
-        { x: "Done", y: state.completed },
+        { x: "Stock", y: state.inventoryUnitCount },
+        { x: "Free", y: state.availableUnitCount },
+        { x: "Used", y: state.consumedUnitCount },
       ] },
     ] },
   ],
@@ -28,10 +27,10 @@ export const ui = defineUI(model, {
     { label: "Time (h)", value: state => state.tick },
     { label: "Phase", value: state => state.phase },
     { label: "Occupant", value: state => state.occupant ?? "None" },
-    { label: "Inventory", value: state => state.inventory },
-    { label: "Available", value: state => state.available },
-    { label: "Consumed", value: state => state.consumed },
+    { label: "Inventory", value: state => state.inventoryUnitCount },
+    { label: "Available", value: state => state.availableUnitCount },
+    { label: "Consumed", value: state => state.consumedUnitCount },
     { label: "Repair ready at (h)", value: state => state.readyAt },
-    { label: "Completed", value: state => state.completed },
+    { label: "Completed", value: state => state.completedJobCount },
   ],
 });

@@ -1,12 +1,17 @@
 # Mandelbrot Set
 
-Moving agents distribute complex-number iteration work across fields and record escape behavior. The finite iteration limit and sampling grid determine the image; undecided points are not a proof of set membership.
+How does a simple rule draw an endlessly detailed boundary? Every point c of the complex plane is tested by repeating z → z² + c from z = 0. Points whose values escape quickly are colored by how fast they escape; points that stay bounded within the iteration limit belong to the dark shape. Here, moving worker agents share the computation: each worker iterates the field it stands on, then hops on (`throw`).
+
+Things to try:
+
+- Change `agentCount` and compare how quickly the image fills in.
+- Change `scaleFactor` to zoom and rebuild the plane.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Mandelbrot Set`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Choose **Mandelbrot Set** in [Agent Lab](../../ui/agent-lab/README.md).
 
-Headless, from a script in the repository root:
+From a script in the repository root:
 
 ```ts
 import { create } from "./models/mandelbrot/model.ts";
@@ -16,11 +21,11 @@ simulation.advance(1);
 const observation = simulation.read();
 ```
 
-Setup creates workers and the initial complex plane, not a finished image. Each `advance(1)` performs one worker sweep and advances the tick; only occupied eligible fields receive complex iterations. Several workers can update the same field in a sweep, so ticks, `iterations` and `computedFields` measure different work. Run has no automatic full-image completion gate; pause manually. Change `scaleFactor` through setup to rebuild the plane; `Hide agents` only hides workers.
+Setup creates workers and the initial complex plane, not a finished image. Each `advance(1)` performs one worker sweep and advances the tick; only occupied eligible fields receive complex iterations. Several workers can update the same field in a sweep, so ticks, `iterationCount` and `computedFieldCount` measure different work. Run has no automatic full-image completion gate; pause manually. Change `scaleFactor` through setup to rebuild the plane; `Hide agents` only hides workers.
 
 ## Parameters
 
-`create(options)` accepts these input keys. The [UI binding](ui.ts) distinguishes setup controls from live changes; [model.ts](model.ts) defines additional validation.
+`create(options)` accepts these inputs. [ui.ts](ui.ts) decides which are setup controls and which can change during a run; [model.ts](model.ts) adds further validation.
 
 | Input | Default | Declared values |
 | --- | --- | --- |
@@ -31,18 +36,18 @@ Setup creates workers and the initial complex plane, not a finished image. Each 
 
 ## Actions and observations
 
-Use `advance(...)` for progress and `read()` for observations; the model defines how work advances its tick.
+Call `advance()` with an optional step count to run the model; the model defines how a step advances its tick. Call `read()` for a detached snapshot.
 
-Other instance procedures: `hideAgents`, `setRules`. See their typed arguments in [model.ts](model.ts).
+Other actions: `hideAgents`, `setRules`. Their typed arguments are in [model.ts](model.ts).
 
-Additional instance accessors: `world`, `grid`. See [model.ts](model.ts) for the returned live references.
+Live references: `world`, `grid`. [model.ts](model.ts) describes what they return.
 
-Model-specific `read()` fields include `setupScale`, `maxIterations`, `fields`, `agents`, `computedFields`, `iterations`.
+Model-specific `read()` fields include `setupScale`, `maxIterationCount`, `fields`, `agents`, `computedFieldCount`, `iterationCount`.
 
-The [UI binding](ui.ts) presents `Number of agents`, `Hide agents`, `Tick`, `Computed fields`, `Total iterations`, `Mandelbrot`.
+## Sources and limits
 
-## Sources and acceptance
+Adapted from the NetLogo *Mandelbrot* model by Wilensky (1997). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+The finite iteration limit and grid decide the image; a point that has not escaped yet is not proven to belong to the set. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 
-[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `mandelbrot` and links any shared checks.
+[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) records the acceptance stages for `mandelbrot`.

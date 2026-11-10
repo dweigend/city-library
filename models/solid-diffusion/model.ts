@@ -1,7 +1,7 @@
 /** NetLogo Solid Diffusion, Wilensky (2007), CC BY-NC-SA 3.0; see NOTICE.md. */
 import { Agent, Grid, Random, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface SolidParameters {
   width: number;
   height: number;
@@ -14,7 +14,7 @@ export const inputs: Inputs<SolidParameters> = {
 };
 type Color = "green" | "blue";
 export function create(options: Partial<SolidParameters> = {}) {
-  const settings = parameters(inputs, options);
+  const settings = parseParameters(inputs, options);
   if (settings.width % 2 !== 1 || settings.height % 2 !== 1)
     throw new RangeError("Use odd lattice dimensions.");
   const random = Random.create({ seed: settings.seed }),
@@ -84,16 +84,16 @@ export function create(options: Partial<SolidParameters> = {}) {
   function go() {
     const vacancies = fields.filter((f) => grid.agentsAt(f).length === 0);
     for (const f of random.sample(vacancies, {
-      count: vacancies.length,
+      sampleCount: vacancies.length,
       algorithm: "fisher-yates-descending",
     }))
       moveAtomToHere(f.x, f.y);
   }
   setup();
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) {
         run(world, go);
         record();
       }
@@ -126,9 +126,9 @@ export function create(options: Partial<SolidParameters> = {}) {
         const x = i - (settings.width - 1) / 2;
         return Object.freeze({
           x,
-          greens: current.filter((a) => a.x === x && a.color === "green")
+          greenParticleCount: current.filter((a) => a.x === x && a.color === "green")
             .length,
-          blues: current.filter((a) => a.x === x && a.color === "blue").length,
+          blueParticleCount: current.filter((a) => a.x === x && a.color === "blue").length,
         });
       });
       return Object.freeze({
@@ -141,7 +141,7 @@ export function create(options: Partial<SolidParameters> = {}) {
             Object.freeze({ id: a.id, x: a.x, y: a.y, color: a.color }),
           ),
         ),
-        vacancies: fields.length - current.length,
+        vacancyCount: fields.length - current.length,
         maxDiffusionDistance: distanceSquared(),
         columns: Object.freeze(columns),
         history: Object.freeze(history.map((p) => Object.freeze({ ...p }))),

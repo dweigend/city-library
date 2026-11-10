@@ -52,7 +52,7 @@ export const ui = defineUI(model, {
     },
     {
       type: "line",
-      label: "Best found",
+      label: "best-found",
       series: (s) => [
         {
           label: "Best value",
@@ -78,18 +78,18 @@ function searchLandscapeData(s: UIObservation): SpatialData {
         size: 7,
         shape: "triangle" as const,
       })),
-      ...(s.parameters.highlightMode === "None"
+      ...(s.parameters.highlightMode === "none"
         ? []
         : [
             {
               id: "highlight",
               selectable: false,
               x:
-                s.parameters.highlightMode === "True best"
+                s.parameters.highlightMode === "true-best"
                   ? s.trueBest.x
                   : s.globalBestX,
               y:
-                s.parameters.highlightMode === "True best"
+                s.parameters.highlightMode === "true-best"
                   ? s.trueBest.y
                   : s.globalBestY,
               color: "#30b7dd",

@@ -31,7 +31,7 @@ describe("public collection diagrams", () => {
       expect(scene.agents.length).toBeLessThanOrEqual(32);
       if (used! > capacity!) expect(scene.description).toContain("excess");
     }
-    const count = collectionDiagram([{ id: "count", label: "Count", kind: "count", count: Number.MAX_SAFE_INTEGER }]);
+    const count = collectionDiagram([{ id: "count", label: "Count", kind: "count", itemCount: Number.MAX_SAFE_INTEGER }]);
     expect(count.description).toContain(String(Number.MAX_SAFE_INTEGER));
     expect(count.agents).toEqual([]);
     expect(collectionDiagram([])).toEqual({ width: 1, height: 1, agents: [], labels: [], showLabels: false, description: "No collections" });
@@ -48,15 +48,15 @@ describe("public collection diagrams", () => {
 
   test("invalid ranges, combinations, duplicate identities and unknown fields reject", () => {
     for (const count of [-1, 0.1, Infinity, NaN, Number.MAX_SAFE_INTEGER + 1])
-      expect(() => collectionDiagram([{ id: "n", label: "Count", kind: "count", count }])).toThrow(RangeError);
-    const invalid: unknown[] = [null, {}, [null], [{ id: "n", label: "Count", kind: "count", count: "1" }],
-      [{ id: "n", label: "Count", kind: "count", count: 1, items: undefined }],
+      expect(() => collectionDiagram([{ id: "n", label: "Count", kind: "count", itemCount: count }])).toThrow(RangeError);
+    const invalid: unknown[] = [null, {}, [null], [{ id: "n", label: "Count", kind: "count", itemCount: "1" }],
+      [{ id: "n", label: "Count", kind: "count", itemCount: 1, items: undefined }],
       [{ id: "n", label: "Items", kind: "items", items: [], order: "fifo" }],
       [{ id: "n", label: "Items", kind: "items", items: [{ id: "i", shape: "hexagon" }] }],
       [{ id: "n", label: "Items", kind: "items", items: [], x: 1 }],
       [{ id: "n", label: "Capacity", kind: "capacity", used: 0, capacity: 0, unit: "" }]];
     for (const value of invalid) expect(() => collectionDiagram(value as never)).toThrow(TypeError);
-    expect(() => collectionDiagram([{ id: "same", label: "One", kind: "count", count: 1 }, { id: "same", label: "Two", kind: "count", count: 2 }])).toThrow(RangeError);
+    expect(() => collectionDiagram([{ id: "same", label: "One", kind: "count", itemCount: 1 }, { id: "same", label: "Two", kind: "count", itemCount: 2 }])).toThrow(RangeError);
     expect(() => selectable([{ id: "one", label: "One", kind: "items", items: [{ id: "same" }] }, { id: "two", label: "Two", kind: "items", items: [{ id: "same" }] }])).toThrow(RangeError);
     const capacity: CollectionRow = { id: "capacity", label: "Capacity", kind: "capacity", used: 1, capacity: 2, unit: "units" };
     const collision = collectionDiagram([capacity]).agents[0]!.id;
@@ -65,10 +65,10 @@ describe("public collection diagrams", () => {
 
   test("accessors never run, even inherited fields or array decorations", () => {
     let reads = 0;
-    const getter = { get id() { reads++; return "id"; }, label: "Count", kind: "count", count: 1 };
+    const getter = { get id() { reads++; return "id"; }, label: "Count", kind: "count", itemCount: 1 };
     expect(() => collectionDiagram([getter] as never)).toThrow(TypeError);
     const inherited = Object.create({ get id() { reads++; return "id"; } });
-    Object.assign(inherited, { label: "Count", kind: "count", count: 1 });
+    Object.assign(inherited, { label: "Count", kind: "count", itemCount: 1 });
     expect(() => collectionDiagram([inherited] as never)).toThrow(TypeError);
     const input: unknown[] = [];
     Object.defineProperty(input, "0", { get() { reads++; return getter; } });

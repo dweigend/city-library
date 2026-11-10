@@ -33,9 +33,8 @@ const binding = defineUI(model, {
 });
 
 export { model };
-export const sourceMarker =
-  "selected-biology-b07:sunflower-emergent:0e0e3d39384a9b2cde33f248f46c0711cf2f7742f39405dc0907485ab1a67cd8";
-export const ui = { ...binding, model, sourceMarker };
+
+export const ui = { ...binding, model };
 
 /**
  * The pattern grows outward from the centre over hundreds of ticks. The view frames the

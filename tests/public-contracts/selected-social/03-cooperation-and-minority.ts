@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { create as ethnicity } from '../../../models/ethnocentrism/model.ts';
 import { create as minority } from '../../../models/minority-game/model.ts';
-const society = ethnicity({ setup: 'full', immigrantsPerDay: 0, initialPtr: 0, costOfGiving: 0, gainOfReceiving: 0,
+const society = ethnicity({ setup: 'full', immigrantCountPerDay: 0, initialPtr: 0, costOfGiving: 0, gainOfReceiving: 0,
   deathRate: 0, mutationRate: 0, immigrantChanceCooperateWithSame: 1, immigrantChanceCooperateWithDifferent: 1 });
 assert.equal(society.read().agents.length, 2601);
 society.advance();
@@ -11,7 +11,7 @@ assert.equal(society.read().agents.length, 2601);
 society.setParameters({ deathRate: 1 }); society.advance(); assert.equal(society.read().agents.length, 0);
 society.advance(); assert.equal(society.read().turn.meet, 0); assert.equal(society.read().tick, 3);
 society.setupEmpty(); assert.equal(society.read().tick, 0); assert.equal(society.read().agents.length, 0);
-const game = minority({ number: 11, memory: 2, strategiesPerAgent: 3 });
+const game = minority({ playerCount: 11, memory: 2, strategiesPerAgent: 3 });
 const previous = game.read(); game.advance(); const current = game.read();
 assert.equal(current.history, (previous.history * 2 + previous.minority) % 4);
 for (const a of current.agents) {

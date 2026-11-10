@@ -5,8 +5,8 @@ export const ui = defineUI(model, {
   setup: [
     "seed",
     "tradePrecision",
-    "honestTraders",
-    "cunningTraders",
+    "honestTraderCount",
+    "cunningTraderCount",
     "initialCash",
     "initialTokens",
     "initialBelief",

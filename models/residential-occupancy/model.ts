@@ -1,16 +1,16 @@
 /** Original dwelling-slot reservation example. Eligibility edges are not occupancy. */
 import { Agent, Graph, Resource, World, run, measurements, storage } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
-export interface OccupancyParameters { applicants: number; slots: number }
+import { parseParameters, validateStepCount } from "../parameters.ts";
+export interface OccupancyParameters { applicantCount: number; slotCount: number }
 export const inputs: Inputs<OccupancyParameters> = {
-  applicants: { kind: "number", default: 8, min: 1, max: 40, integer: true },
-  slots: { kind: "number", default: 3, min: 1, max: 20, integer: true },
+  applicantCount: { kind: "number", default: 8, min: 1, max: 40, integer: true },
+  slotCount: { kind: "number", default: 3, min: 1, max: 20, integer: true },
 };
 export function create(options: Partial<OccupancyParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const world = World.create();
-  const applicants = Array.from({ length: settings.applicants }, (_, index) => world.add(Agent.create({ label: `Household ${index + 1}` })));
+  const applicants = Array.from({ length: settings.applicantCount }, (_, index) => world.add(Agent.create({ label: `Household ${index + 1}` })));
   const building = { id: "building", label: "Dwelling slots" };
   const eligibility = Graph.create<(typeof applicants)[number] | typeof building>();
   eligibility.nodes.add(building);
@@ -19,12 +19,12 @@ export function create(options: Partial<OccupancyParameters> = {}) {
     eligibility.edges.add({ from: applicant, to: building });
   }
   // Resource tickets are the sole authority for waiting, granted and released allocations.
-  const housing = Resource.create<(typeof applicants)[number]>({ capacity: settings.slots, policy: "fifo" });
+  const housing = Resource.create<(typeof applicants)[number]>({ capacity: settings.slotCount, policy: "fifo" });
   const tickets = applicants.map(owner => housing.request({ owner }));
   const measure = measurements.define((resource: typeof housing) => ({
-    occupied: resource.used,
-    available: resource.available,
-    waiting: resource.waiting.length,
+    occupiedSlotCount: resource.used,
+    availableSlotCount: resource.available,
+    waitingHouseholdCount: resource.waiting.length,
   }));
   const history = storage.history({ capacity: 120 });
   function record() {
@@ -45,9 +45,9 @@ export function create(options: Partial<OccupancyParameters> = {}) {
   }
   record();
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let index = 0; index < count; index += 1) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let index = 0; index < stepCount; index += 1) {
         if (tickets.every(ticket => ticket.status === "released")) {
           break;
         }
@@ -57,8 +57,8 @@ export function create(options: Partial<OccupancyParameters> = {}) {
     },
     moveOut,
     setSlots(value: number) {
-      const next = parameters(inputs, { ...settings, slots: value });
-      housing.setCapacity(next.slots);
+      const next = parseParameters(inputs, { ...settings, slotCount: value });
+      housing.setCapacity(next.slotCount);
       settings = next;
     },
     read() {

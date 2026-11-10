@@ -4,9 +4,9 @@ import { scene } from "./scene.ts";
 export const ui = defineUI(model, {
   monitors: [
     { label: "Time (min)", value: (state) => state.time },
-    { label: "Remaining load", value: (state) => state.remaining },
-    { label: "On truck", value: (state) => state.carried },
-    { label: "Delivered", value: (state) => state.delivered },
+    { label: "Remaining load", value: (state) => state.remainingWasteUnitCount },
+    { label: "On truck", value: (state) => state.carriedWasteUnitCount },
+    { label: "Delivered", value: (state) => state.deliveredWasteUnitCount },
   ],
   views: [
     { type: "spatial", label: "Collection patches and truck", data: scene },

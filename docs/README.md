@@ -1,28 +1,54 @@
 # Documentation
 
-Start with a model, change something and see what happens. These guides take you from running a model to writing your own with City Library’s modular parts.
+Start with a model, change something and see what happens. These pages take you from running a model to writing your own with City Library's modular parts. If you are new, read the [project README](../README.md) first.
 
-## Find your way
+## New here
 
-| What you want to do | Read this |
-| --- | --- |
-| Understand the project | [City Library](../README.md) |
-| Run a model | [Agent Lab](../ui/agent-lab/README.md) |
-| Write a model and connect its UI | [Model authoring](development/model-authoring.md) |
-| Compose event-driven city models | [DES capabilities](development/des-feature-matrix.md) and [ten examples](development/des-examples.md) |
-| Look up UI bindings | [UI API](ui/README.md) |
-| Understand ownership and dependencies | [Architecture](ARCHITECTURE.md) |
-| Apply system-wide names | [Naming conventions](NAMING_CONVENTIONS.md) |
-| Work on the interface | [UI design](DESIGN.md) |
-| Look up the headless target API | [Agent Loom](agent-loom/README.md) |
-| Check delivery scope and remaining work | [Work plan](../PLAN.md) |
+- [Your first model](first-model.md): write a small model, run it headless and step through it in Agent Lab.
+- [Run Agent Lab](../ui/agent-lab/README.md): choose a model, press Setup and step through it.
+- [Concepts](concepts.md): headless models, one state owner, steps and ticks, explicit randomness.
+- [Explore the models](../models/README.md): every model by topic.
 
-## Contracts and sources
+## Build
 
-The API specifications include planned operations. Check their status notes, current public exports and runnable examples before using them.
+- [Write a model and connect its UI](development/model-authoring.md)
+- [Compose event-driven city models](development/des-feature-matrix.md), with [ten worked examples](development/des-examples.md)
+- [Measurements, studies and event-driven city models](execution-studies/STATUS.md)
 
-Adapted models retain their [reference sources](development/model-reference-sources.md). The [model acceptance rules](development/model-acceptance.md) distinguish headless tests, source comparisons, browser behavior and independent review.
+## Look up
 
-[Source records](../models/catalog/research/README.md) describe model assumptions and provenance. [Model acceptance ledger](../models/catalog/progress.json) supports model-level verification. Use these records to inspect a source or validate a claim; the guides and specifications describe the current system and its next goals.
+- [What works today](development/coverage.md): available library operations and open gaps.
+- [UI API](ui/README.md): `defineUI`, controls, monitors and views.
+- [Agent Loom specification](agent-loom/README.md): the full target API for the headless core, including planned operations.
+- [Grids, layouts and parcels](grid-parcels/STATUS.md), their [target catalogue](grid-parcels/API.md) and the [finite quad contract](grid-parcels/QUAD-LAYOUTS-CONTRACT.md). That contract preserves historical signatures; the [current naming map](grid-parcels/STATUS.md) gives the executable calls.
 
-For [planar layouts and parcels](grid-parcels/API.md), consult the [implementation ledger](grid-parcels/STATUS.md) and [finite quad contract](grid-parcels/QUAD-LAYOUTS-CONTRACT.md). The [city authoring plan](development/example-first/PLAN.md) separates working scripts from unmet targets.
+The specifications include planned operations. Check [what works today](development/coverage.md), the public exports and the runnable examples before relying on one.
+
+## Understand
+
+- [Architecture](ARCHITECTURE.md): ownership, dependencies, module layout, time and randomness.
+- [Domain and time semantics](agent-loom/terminology.md): distinctions that names must preserve.
+- [UI design](DESIGN.md): what the interface is for and its binding rules.
+- [Network visualization](decisions/network-visualization.md): why Agent Lab renders graphs the way it does.
+
+## Contribute
+
+- [Work plan](../PLAN.md): next work, review policy and the example-first gate.
+- [Coding standards](CODING_STANDARDS.md) and [naming conventions](NAMING_CONVENTIONS.md).
+- [Git delivery workflow](development/git-workflow.md).
+- [Checks and development records](development/README.md): commands, target checks and where records live.
+- [Models and public contract tests](development/examples-migration.md): where contract scripts and unmet targets live.
+- [City authoring extension plan](development/example-first/PLAN.md) and [research integration guide](development/example-first/RESEARCH-INTEGRATION.md): active requirements for extending the city scripts.
+- [Discrete-event composition contract](development/des-contract.md). The [Mesa/Salabim integration contracts](../CROSS-TRACK-CONTRACTS.md) still carry binding DES semantics alongside their integration history.
+- [Model acceptance](development/model-acceptance.md): the gates a selected model passes, from source audit to independent review.
+
+Library contracts are linked from [what works today](development/coverage.md), UI contracts from the [UI API](ui/README.md) and model-group contracts from the [model catalog](../models/catalog/README.md).
+
+## Sources and evidence
+
+These are records. Use them to trace a source or check a claim; the pages above describe the current system.
+
+- [Model catalog](../models/catalog/README.md): selection, source snapshots, the acceptance ledger and shared acceptance records.
+- [Model sources and scientific context](../models/catalog/research/README.md): research dossiers and publications.
+- [Model reference sources](development/model-reference-sources.md): pinned sources behind adapted models.
+- [UI acceptance record](../ui/agent-lab/acceptance/README.md): browser checks for the shared UI.

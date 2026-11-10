@@ -1,18 +1,18 @@
 /** Original synthetic runoff/retention balance; no hydraulic or drainage-design claim. */
 import { Grid, World, run, continuous, measurements, storage } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface StormwaterParameters { rainMmPerHour: number; capacityM3: number }
 export const inputs: Inputs<StormwaterParameters> = {
   rainMmPerHour: { kind: "number", default: 20, min: 0, max: 50, integer: true },
   capacityM3: { kind: "number", default: 3, min: 1, max: 10, integer: true },
 };
 export function create(options: Partial<StormwaterParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const world = World.create();
   const catchment = Grid.create({ x: 3, y: 3, boundary: "hard" }, { state: { areaM2: 10, runoffShare: 0.5 } });
   world.add(catchment);
-  const state = { storedM3: 0, inflowM3: 0, dischargedM3: 0, overflowM3: 0, capacityCrossings: 0 };
+  const state = { storedM3: 0, inflowM3: 0, dischargedM3: 0, overflowM3: 0, capacityCrossingCount: 0 };
   let lastCrossingHour: number | undefined;
   const measure = measurements.define((values: typeof state) => ({ ...values }));
   const cubicMetersPerMillimeterSquareMeter = 0.001;
@@ -28,7 +28,7 @@ export function create(options: Partial<StormwaterParameters> = {}) {
     const unconstrainedVolumeM3 = continuous.linear({ value: state.storedM3, rate: inflow - drainageM3, duration: 1 });
     const crossing = continuous.crossing({ from: state.storedM3, to: unconstrainedVolumeM3, threshold: settings.capacityM3, duration: 1, direction: "rising" });
     if (crossing) {
-      state.capacityCrossings += 1;
+      state.capacityCrossingCount += 1;
       lastCrossingHour = world.tick.value + crossing.elapsed;
     }
     state.inflowM3 += inflow;
@@ -38,15 +38,15 @@ export function create(options: Partial<StormwaterParameters> = {}) {
   }
   record();
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let index = 0; index < count; index += 1) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let index = 0; index < stepCount; index += 1) {
         run(world, step);
         record();
       }
     },
     setRain(value: number) {
-      settings = parameters(inputs, { ...settings, rainMmPerHour: value });
+      settings = parseParameters(inputs, { ...settings, rainMmPerHour: value });
     },
     read() {
       const samples = history.samples;

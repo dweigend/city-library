@@ -41,20 +41,20 @@ test("Life gesture retains paint/erase latch until release, without time or RNG"
   m.beginBrush({ x: 0, y: 0 });
   m.moveBrush({ x: 1, y: 0 });
   m.endBrush();
-  expect(m.read().counts.living).toBe(2);
+  expect(m.read().counts.livingFieldCount).toBe(2);
   m.beginBrush({ x: 1, y: 0 });
   m.moveBrush({ x: 0, y: 0 });
   m.moveBrush({ x: -1, y: 0 });
   m.endBrush();
-  expect(m.read().counts.living).toBe(0);
+  expect(m.read().counts.livingFieldCount).toBe(0);
   m.moveBrush({ x: 2, y: 0 });
-  expect(m.read().counts.living).toBe(0);
+  expect(m.read().counts.livingFieldCount).toBe(0);
   expect(m.read().tick).toBe(0);
   expect(m.read().history.length).toBe(1);
   expect(m.read().randomState).toEqual(rng);
   m.setDrawing(false);
   m.beginBrush({ x: 0, y: 0 });
-  expect(m.read().counts.living).toBe(0);
+  expect(m.read().counts.livingFieldCount).toBe(0);
 });
 
 test("Life palette changes affect births/deaths only until explicit recolor", () => {
@@ -112,9 +112,9 @@ test("Fire hard boundaries, unconditional ignition and complete fade", () => {
   const m = fire({ width: 5, height: 3, density: 0 });
   m.setForest(m.read().cells.map((c) => c.x === 2));
   m.advance(100);
-  expect(m.read().counts).toEqual({ trees: 3, fires: 0, embers: 0 });
+  expect(m.read().counts).toEqual({ treeCount: 3, fireCount: 0, emberCount: 0 });
   expect(m.read().tick).toBe(12);
-  expect(m.read().burnedTrees).toBe(0);
+  expect(m.read().burnedTreeCount).toBe(0);
   expect(
     m
       .read()

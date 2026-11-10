@@ -2,7 +2,7 @@ import { defineUI, indexedColor, type Observation, type SpatialData } from "../.
 
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: ["seed", "number", "colors"],
+  setup: ["seed", "agentCount", "colorCount"],
   actions: [
     { label: "Setup preserving walls", run: (m) => m.setup() },
     {

@@ -8,7 +8,7 @@ function fixture(count: number, parallel = false) {
   return { graph, nodes };
 }
 
-test("legacy native-kind unions and narrowed tree branching keep their public TypeScript syntax", () => {
+test("native-kind unions and narrowed tree branching keep their public TypeScript syntax", () => {
   function options(kind: "path" | "cycle" | "star" | "wheel" | "complete" | "tree", nodes: readonly { index: number }[]): GeneratorOptions<{ index: number }> {
     return { kind, nodes, directed: true };
   }
@@ -125,7 +125,7 @@ test("WS front-cursor rejection preserves saturated K3, singleton trials, k0 and
         if (candidate === desired) { buffer = [...prefix, ...remaining]; break; }
       }
     }
-    const result = graph.generate({ kind: "small-world", profile, nodes, neighborsPerSide: 1, probability: 1, directed, random });
+    const result = graph.generate({ kind: "small-world", profile, nodes, neighborCountPerSide: 1, probability: 1, directed, random });
     expect(result.map(edge => [edge.from.index, edge.to.index])).toEqual([[0, 1], [1, 2], [2, 0]]);
     expect(random.state).toEqual(control.state);
     if (seed === 1) expect(singletonTrials).toBeGreaterThan(0);
@@ -133,12 +133,12 @@ test("WS front-cursor rejection preserves saturated K3, singleton trials, k0 and
   for (const count of [1, 2, 200]) {
     const { graph, nodes } = fixture(count), random = Random.create({ seed: 4 });
     random.number({ distribution: "normal" }); const before = random.state;
-    expect(graph.generate({ kind: "small-world", profile, nodes, neighborsPerSide: 0, probability: 1, random })).toEqual([]);
+    expect(graph.generate({ kind: "small-world", profile, nodes, neighborCountPerSide: 0, probability: 1, random })).toEqual([]);
     expect(random.state).toEqual(before);
   }
   const { graph, nodes } = fixture(7), random = Random.create({ seed: 9 }), control = random.copy();
   for (let draw = 0; draw < 14; draw++) control.number();
-  expect(graph.generate({ kind: "small-world", profile, nodes, neighborsPerSide: 2, probability: 0, random }).length).toBe(14);
+  expect(graph.generate({ kind: "small-world", profile, nodes, neighborCountPerSide: 2, probability: 0, random }).length).toBe(14);
   expect(random.state).toEqual(control.state);
 });
 
@@ -165,7 +165,7 @@ test("closed profile schemas and scalar domains reject before draws, including o
     { ...valid, random: { number() { reads++; return 0; } } },
     { ...valid, nodes: [nodes[0], nodes[0]] }, { ...valid, nodes: [{}, ...nodes.slice(1)] },
     { kind: "path", profile, nodes }, { kind: "star", profile, nodes }, { kind: "random", profile, nodes, probability: 0, random },
-    { kind: "small-world", profile, nodes, neighbors: 2, neighborsPerSide: 1, probability: 0, random },
+    { kind: "small-world", profile, nodes, neighbors: 2, neighborCountPerSide: 1, probability: 0, random },
     { kind: "wheel", profile, nodes, random: undefined }, { kind: "preferential", nodes, edgesPerNode: 1, directed: undefined, random },
     { kind: "small-world", nodes, neighbors: 2, probability: 0, directed: undefined, random },
     { kind: "path", nodes, branching: undefined }, { kind: "wheel", nodes, spokes: undefined },
@@ -173,9 +173,9 @@ test("closed profile schemas and scalar domains reject before draws, including o
   ]) expect(() => graph.generate(options as never)).toThrow(TypeError);
   for (const value of [NaN, Infinity, -Infinity, "1", null]) {
     expect(() => graph.generate({ ...valid, clusteringExponent: value } as never)).toThrow(TypeError);
-    expect(() => graph.generate({ kind: "small-world", profile, nodes, neighborsPerSide: value as number, probability: 0, random })).toThrow(TypeError);
+    expect(() => graph.generate({ kind: "small-world", profile, nodes, neighborCountPerSide: value as number, probability: 0, random })).toThrow(TypeError);
   }
-  for (const value of [-1, 0.5]) expect(() => graph.generate({ kind: "small-world", profile, nodes, neighborsPerSide: value, probability: 0, random })).toThrow(RangeError);
+  for (const value of [-1, 0.5]) expect(() => graph.generate({ kind: "small-world", profile, nodes, neighborCountPerSide: value, probability: 0, random })).toThrow(RangeError);
   expect(() => graph.generate({ ...valid, shape: [1, 6] } as never)).toThrow(RangeError);
   expect(() => graph.generate({ ...valid, clusteringExponent: -1 } as never)).toThrow(RangeError);
   expect(reads).toBe(0); expect(random.state).toEqual(before); expect(graph.edges.size).toBe(0);
@@ -205,7 +205,7 @@ test("profile operations preserve canonical lifecycle, defaults and World/RNG se
   const nodes = Array.from({ length: 4 }, (_, index) => world.add(Agent.create({ index })));
   const graph = Graph.create<typeof nodes[number]>(); nodes.forEach(node => graph.nodes.add(node));
   const before = worldRandom.state;
-  const edges = graph.generate({ kind: "small-world", profile, nodes, neighborsPerSide: 1, probability: 0, directed: true, random: Random.create({ seed: 1 }) });
+  const edges = graph.generate({ kind: "small-world", profile, nodes, neighborCountPerSide: 1, probability: 0, directed: true, random: Random.create({ seed: 1 }) });
   expect(Object.isFrozen(edges)).toBe(true); expect(edges[0]!.from).toBe(nodes[0]!);
   nodes[1]!.delete(); expect(graph.nodes.size).toBe(3); expect(edges[0]!.alive).toBe(false);
   expect(world.tick.value).toBe(0); expect(worldRandom.state).toEqual(before);
@@ -218,12 +218,12 @@ test("profile operations preserve canonical lifecycle, defaults and World/RNG se
 
 test("known profile caps preflight; practical PA, WS and Kleinberg batches use actual owner publication", () => {
   const large = fixture(2002), random = Random.create({ seed: 1 }), before = random.state;
-  expect(() => large.graph.generate({ kind: "small-world", profile, nodes: large.nodes, neighborsPerSide: 500, probability: 0, random })).toThrow(RangeError);
+  expect(() => large.graph.generate({ kind: "small-world", profile, nodes: large.nodes, neighborCountPerSide: 500, probability: 0, random })).toThrow(RangeError);
   expect(() => large.graph.generate({ kind: "preferential", profile, nodes: large.nodes, edgesPerNode: 1000, random })).toThrow(RangeError);
   expect(random.state).toEqual(before); expect(large.graph.edges.size).toBe(0);
   const pa = fixture(10000), ws = fixture(10000), kleinberg = fixture(400);
   expect(pa.graph.generate({ kind: "preferential", profile, nodes: pa.nodes, edgesPerNode: 2, directed: true, random: Random.create({ seed: 7 }) }).length).toBe(19997);
-  expect(ws.graph.generate({ kind: "small-world", profile, nodes: ws.nodes, neighborsPerSide: 2, probability: 0, random: Random.create({ seed: 7 }) }).length).toBe(20000);
+  expect(ws.graph.generate({ kind: "small-world", profile, nodes: ws.nodes, neighborCountPerSide: 2, probability: 0, random: Random.create({ seed: 7 }) }).length).toBe(20000);
   const edges = kleinberg.graph.generate({ kind: "kleinberg", profile, nodes: kleinberg.nodes, shape: [20, 20], clusteringExponent: 2, wrap: true, random: Random.create({ seed: 7 }) });
   expect(edges.length).toBeGreaterThanOrEqual(800); expect(edges.length).toBeLessThanOrEqual(1200);
   expect(kleinberg.graph.edges.size).toBe(edges.length);

@@ -2,7 +2,7 @@
 import { Agent, Grid, Random, World, geometry, run } from "city-library";
 import type { Field } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 
 export interface TrafficIntersectionParameters {
   seed: number;
@@ -31,7 +31,7 @@ type Light = Agent<{ kind: "light"; color: "red" | "green" | "yellow" }>;
 type Accident = Agent<{ kind: "accident"; clearIn: number }>;
 
 export function create(options: Partial<TrafficIntersectionParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const space = { x: 35, y: 35, boundary: "hard" } as const;
   const world = World.create(space, { random });
@@ -50,10 +50,10 @@ export function create(options: Partial<TrafficIntersectionParameters> = {}) {
   let ticksAtLastChange = 0;
   const history: {
     tick: number;
-    waiting: number;
-    waitingNorth: number;
-    waitingEast: number;
-    accidents: number;
+    waitingCarCount: number;
+    waitingNorthCarCount: number;
+    waitingEastCarCount: number;
+    accidentCount: number;
   }[] = [];
   world.add(
     Agent.create(
@@ -130,7 +130,7 @@ export function create(options: Partial<TrafficIntersectionParameters> = {}) {
   function checkForCollisions() {
     const existing = accidents();
     for (const accident of random.sample(existing, {
-      count: existing.length,
+      sampleCount: existing.length,
       algorithm: "fisher-yates-descending",
     })) {
       accident.clearIn--;
@@ -162,7 +162,7 @@ export function create(options: Partial<TrafficIntersectionParameters> = {}) {
       return;
     const color = random.sample(
       ["#d33d3d", "#335dd9", "#d8bb25", "#be4cd2", "#f19a26", "#43a4b9"],
-      { count: 1 },
+      { sampleCount: 1 },
     )[0]!;
     const car = Agent.create(
       { kind: "car" as const, speed: 0, color },
@@ -191,7 +191,7 @@ export function create(options: Partial<TrafficIntersectionParameters> = {}) {
   function go() {
     const active = cars();
     for (const car of random.sample(active, {
-      count: active.length,
+      sampleCount: active.length,
       algorithm: "fisher-yates-descending",
     }))
       move(car);
@@ -209,27 +209,27 @@ export function create(options: Partial<TrafficIntersectionParameters> = {}) {
     const waiting = cars().filter((car) => car.speed === 0);
     history.push({
       tick: world.tick.value,
-      waiting: waiting.length,
-      waitingNorth: waiting.filter((car) => car.heading === 0).length,
-      waitingEast: waiting.filter((car) => car.heading === 90).length,
-      accidents: accidents().length,
+      waitingCarCount: waiting.length,
+      waitingNorthCarCount: waiting.filter((car) => car.heading === 0).length,
+      waitingEastCarCount: waiting.filter((car) => car.heading === 90).length,
+      accidentCount: accidents().length,
     });
     if (history.length > 1001) history.splice(1, 1);
   }
-  function step(count = 1) {
-    stepCount(count);
-    for (let index = 0; index < count; index++) {
+  function step(stepCount = 1) {
+    validateStepCount(stepCount);
+    for (let index = 0; index < stepCount; index++) {
       run(world, go);
       record();
     }
-    return count;
+    return stepCount;
   }
   function setParameters(
     update: Partial<Omit<TrafficIntersectionParameters, "seed">>,
   ) {
     if (Object.keys(update).includes("seed"))
       throw new TypeError("Seed is setup-only.");
-    settings = parameters(inputs, { ...settings, ...update });
+    settings = parseParameters(inputs, { ...settings, ...update });
   }
   function snapshot() {
     return {

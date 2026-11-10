@@ -2,18 +2,18 @@
 import { Agent, Grid, Random, World, run } from "city-library";
 import type { Position } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 
 export interface TrafficLanesParameters {
   seed: number;
-  numberOfCars: number;
+  carCount: number;
   acceleration: number;
   deceleration: number;
   maxPatience: number;
 }
 export const inputs: Inputs<TrafficLanesParameters> = {
   seed: { kind: "number", default: 1, integer: true },
-  numberOfCars: { kind: "number", default: 40, min: 1, max: 82, integer: true },
+  carCount: { kind: "number", default: 40, min: 1, max: 82, integer: true },
   acceleration: { kind: "number", default: 0.005, min: 0.001, max: 0.01 },
   deceleration: { kind: "number", default: 0.02, min: 0.01, max: 0.1 },
   maxPatience: { kind: "number", default: 50, min: 1, max: 100, integer: true },
@@ -35,12 +35,12 @@ interface Sample {
   minPatience: number;
   maxPatience: number;
   selectedPatience: number;
-  lane1: number;
-  lane2: number;
+  lane1CarCount: number;
+  lane2CarCount: number;
 }
 
 export function create(options: Partial<TrafficLanesParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const space = { x: 41, y: 17, boundary: { x: "wrap", y: "hard" } } as const;
   const world = World.create(space, { random });
@@ -52,7 +52,7 @@ export function create(options: Partial<TrafficLanesParameters> = {}) {
   let perspective: "normal" | "watch" | "follow" = "normal";
   const history: Sample[] = [];
   function choose<T>(values: readonly T[]) {
-    return random.sample(values, { count: Math.min(1, values.length) })[0];
+    return random.sample(values, { sampleCount: Math.min(1, values.length) })[0];
   }
   function drawRoad() {
     for (const field of grid.fields) {
@@ -67,7 +67,7 @@ export function create(options: Partial<TrafficLanesParameters> = {}) {
     const roadFields = grid.fields.filter((field) =>
       lanes.includes(field.y as 1 | -1),
     );
-    while (cars().length < settings.numberOfCars) {
+    while (cars().length < settings.carCount) {
       const free = roadFields.filter(
         (field) => grid.agentsAt(field).length === 0,
       );
@@ -84,10 +84,10 @@ export function create(options: Partial<TrafficLanesParameters> = {}) {
       );
       world.add(car);
     }
-    const excess = cars().length - settings.numberOfCars;
+    const excess = cars().length - settings.carCount;
     if (excess > 0) {
       const candidates = cars().filter((car) => car !== selectedCar);
-      for (const car of random.sample(candidates, { count: excess }))
+      for (const car of random.sample(candidates, { sampleCount: excess }))
         car.delete();
     }
   }
@@ -154,19 +154,19 @@ export function create(options: Partial<TrafficLanesParameters> = {}) {
   function go() {
     createOrRemoveCars();
     for (const car of random.sample(cars(), {
-      count: cars().length,
+      sampleCount: cars().length,
       algorithm: "fisher-yates-descending",
     }))
       moveForward(car);
     const impatient = cars().filter((car) => car.patience <= 0);
     for (const car of random.sample(impatient, {
-      count: impatient.length,
+      sampleCount: impatient.length,
       algorithm: "fisher-yates-descending",
     }))
       chooseNewLane(car);
     const changing = cars().filter((car) => car.y !== car.targetLane);
     for (const car of random.sample(changing, {
-      count: changing.length,
+      sampleCount: changing.length,
       algorithm: "fisher-yates-descending",
     }))
       moveToTargetLane(car);
@@ -201,25 +201,25 @@ export function create(options: Partial<TrafficLanesParameters> = {}) {
       minPatience: Math.min(...patience),
       maxPatience: Math.max(...patience),
       selectedPatience: selectedCar!.patience,
-      lane1: cars().filter((car) => Math.round(car.y) === 1).length,
-      lane2: cars().filter((car) => Math.round(car.y) === -1).length,
+      lane1CarCount: cars().filter((car) => Math.round(car.y) === 1).length,
+      lane2CarCount: cars().filter((car) => Math.round(car.y) === -1).length,
     });
     if (history.length > 1001) history.splice(1, 1);
   }
-  function step(count = 1) {
-    stepCount(count);
-    for (let index = 0; index < count; index++) {
+  function step(stepCount = 1) {
+    validateStepCount(stepCount);
+    for (let index = 0; index < stepCount; index++) {
       run(world, go);
       record();
     }
-    return count;
+    return stepCount;
   }
   function setParameters(
     update: Partial<Omit<TrafficLanesParameters, "seed">>,
   ) {
     if (Object.keys(update).includes("seed"))
       throw new TypeError("Seed is setup-only.");
-    settings = parameters(inputs, { ...settings, ...update });
+    settings = parseParameters(inputs, { ...settings, ...update });
   }
   function snapshot() {
     return {

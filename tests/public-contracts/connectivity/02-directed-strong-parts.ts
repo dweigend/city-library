@@ -6,8 +6,8 @@ for(const [from,to] of [[a,b],[b,a],[b,c]])graph.edges.add({from:from!,to:to!,di
 assert.deepEqual(graph.components(),[[a,b,c],[d]]);
 assert.deepEqual(graph.components({mode:"strong"}),[[a,b],[c],[d]]);
 for(const [from,to] of [[c,d],[d,c]])graph.edges.add({from:from!,to:to!,directed:true});
-assert.equal(graph.connected(),true);
-assert.equal(graph.connected({mode:"strong"}),false);
+assert.equal(graph.isConnected(),true);
+assert.equal(graph.isConnected({mode:"strong"}),false);
 graph.edges.add({from:c!,to:a!,directed:true});
 assert.deepEqual(graph.components({mode:"strong"}),[[a,b,c,d]]);
-assert.equal(graph.connected({mode:"strong"}),true);
+assert.equal(graph.isConnected({mode:"strong"}),true);

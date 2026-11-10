@@ -9,7 +9,7 @@ export const ui = defineUI(model, {
   },
   change: (instance, changes) => instance.setRules(changes),
   live: {
-    maxParticles: {},
+    maxParticleCount: {},
     wiggleAngle: {},
     useWholeWorld: {},
   },

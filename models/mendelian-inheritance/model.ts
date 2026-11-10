@@ -1,14 +1,14 @@
 /** NetLogo Mendelian Inheritance, Wilensky (2020), CC BY-NC-SA 3.0; see NOTICE.md. */
 import { Agent, Grid, Random, World } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
-export const sourceMarker = "b08-mendelian-inheritance-source-composition-v1";
+import { parseParameters, validateStepCount } from "../parameters.ts";
+
 export type Genotype = "AA" | "Aa" | "aA" | "aa";
 export interface Parameters {
   seed: number;
   maleGenotype: "AA" | "Aa" | "aa";
   femaleGenotype: "AA" | "Aa" | "aa";
-  numberOfOffspring: number;
+  offspringCount: number;
 }
 export const inputs: Inputs<Parameters> = {
   seed: {
@@ -24,7 +24,7 @@ export const inputs: Inputs<Parameters> = {
     default: "Aa",
     options: ["AA", "Aa", "aa"],
   },
-  numberOfOffspring: {
+  offspringCount: {
     kind: "number",
     default: 6,
     min: 0,
@@ -34,7 +34,7 @@ export const inputs: Inputs<Parameters> = {
 };
 type Mouse = Agent<{ genotype: Genotype; generation: string; sex: string }>;
 export function create(options: Partial<Parameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const space = { x: 33, y: 33, boundary: "hard" as const };
   const world = World.create(space, { random });
@@ -43,10 +43,10 @@ export function create(options: Partial<Parameters> = {}) {
   let parent1: Mouse;
   let parent2: Mouse;
   let trialNumber = 0;
-  let numberOfDarkOffspring = 0;
-  let numberOfLightOffspring = 0;
-  let previousNumberOfDarkOffspring = 0;
-  let previousNumberOfLightOffspring = 0;
+  let darkOffspringCount = 0;
+  let lightOffspringCount = 0;
+  let previousDarkOffspringCount = 0;
+  let previousLightOffspringCount = 0;
   let selectedGenotype: string | null = null;
   let message = "";
   const mice = () => world.agents as readonly Mouse[];
@@ -54,10 +54,10 @@ export function create(options: Partial<Parameters> = {}) {
     world.delete(mice());
     world.tick.reset();
     trialNumber = 0;
-    numberOfDarkOffspring = 0;
-    numberOfLightOffspring = 0;
-    previousNumberOfDarkOffspring = 0;
-    previousNumberOfLightOffspring = 0;
+    darkOffspringCount = 0;
+    lightOffspringCount = 0;
+    previousDarkOffspringCount = 0;
+    previousLightOffspringCount = 0;
     selectedGenotype = null;
     message = "";
     parent1 = Agent.create(
@@ -100,7 +100,7 @@ export function create(options: Partial<Parameters> = {}) {
       return;
     }
     message = "";
-    for (let n = 0; n < settings.numberOfOffspring; n++) {
+    for (let n = 0; n < settings.offspringCount; n++) {
       const maleGamete = random.sample([...parent1.genotype])[0]!;
       const femaleGamete = random.sample([...parent2.genotype])[0]!;
       const mouse = Agent.create({
@@ -112,19 +112,19 @@ export function create(options: Partial<Parameters> = {}) {
       setLocation(mouse);
     }
     trialNumber++;
-    numberOfDarkOffspring =
-      previousNumberOfDarkOffspring +
+    darkOffspringCount =
+      previousDarkOffspringCount +
       mice().filter((a) => a.generation === "F1" && a.genotype.includes("A"))
         .length;
-    numberOfLightOffspring =
-      previousNumberOfLightOffspring +
+    lightOffspringCount =
+      previousLightOffspringCount +
       mice().filter((a) => a.generation === "F1" && !a.genotype.includes("A"))
         .length;
     world.tick.advance();
   }
   function clearF1Generation() {
-    previousNumberOfDarkOffspring = numberOfDarkOffspring;
-    previousNumberOfLightOffspring = numberOfLightOffspring;
+    previousDarkOffspringCount = darkOffspringCount;
+    previousLightOffspringCount = lightOffspringCount;
     world.delete(mice().filter((a) => a.y <= 1));
   }
   function displayGenotype(id: string | null) {
@@ -134,9 +134,9 @@ export function create(options: Partial<Parameters> = {}) {
     return selectedGenotype;
   }
   function read() {
-    const both = numberOfDarkOffspring > 0 && numberOfLightOffspring > 0;
+    const both = darkOffspringCount > 0 && lightOffspringCount > 0;
     return {
-      sourceMarker,
+
       parameters: { ...settings },
       randomState: random.state,
       width: 33,
@@ -152,12 +152,12 @@ export function create(options: Partial<Parameters> = {}) {
         sex: a.sex,
         dark: a.genotype.includes("A"),
       })),
-      numberOfDarkOffspring,
-      numberOfLightOffspring,
-      previousNumberOfDarkOffspring,
-      previousNumberOfLightOffspring,
+      darkOffspringCount: darkOffspringCount,
+      lightOffspringCount: lightOffspringCount,
+      previousDarkOffspringCount: previousDarkOffspringCount,
+      previousLightOffspringCount: previousLightOffspringCount,
       darkRatioValue: both
-        ? numberOfDarkOffspring / numberOfLightOffspring
+        ? darkOffspringCount / lightOffspringCount
         : "N/A",
       lightRatioValue: both ? "1" : "N/A",
       selectedGenotype,
@@ -166,11 +166,11 @@ export function create(options: Partial<Parameters> = {}) {
     };
   }
   function setParameters(change: Partial<Parameters>) {
-    settings = parameters(inputs, { ...settings, ...change });
+    settings = parseParameters(inputs, { ...settings, ...change });
   }
-  function advance(steps = 1) {
-    stepCount(steps);
-    for (let n = 0; n < steps; n++) {
+  function advance(stepCount = 1) {
+    validateStepCount(stepCount);
+    for (let n = 0; n < stepCount; n++) {
       if (mice().length > 50) break;
       makeF1Generation();
     }

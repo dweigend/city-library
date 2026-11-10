@@ -1,12 +1,17 @@
 # Muscle Development
 
-Lifting, sleep and simplified hormonal responses change modeled muscle through time. The hormone variables are explanatory abstractions and do not define a personalized training prescription.
+How do training rhythm and sleep shape muscle growth? Each day the simulated person may lift weights (`lift`, `intensity`, `daysBetweenWorkouts`) and sleeps for `hoursOfSleep`. Lifting and sleep shift two simplified hormone levels, one that breaks muscle down and one that builds it up, and muscle fibers grow or shrink with their balance.
+
+Things to try:
+
+- Halve `hoursOfSleep` and compare muscle mass after the same number of steps.
+- Change `daysBetweenWorkouts`. Is there a rhythm that works better under these rules?
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Muscle Development`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Choose **Muscle Development** in [Agent Lab](../../ui/agent-lab/README.md).
 
-Headless, from a script in the repository root:
+From a script in the repository root:
 
 ```ts
 import { create } from "./models/muscle-development/model.ts";
@@ -18,7 +23,7 @@ const observation = simulation.read();
 
 ## Parameters
 
-`create(options)` accepts these input keys. The [UI binding](ui.ts) distinguishes setup controls from live changes; [model.ts](model.ts) defines additional validation.
+`create(options)` accepts these inputs. [ui.ts](ui.ts) decides which are setup controls and which can change during a run; [model.ts](model.ts) adds further validation.
 
 | Input | Default | Declared values |
 | --- | --- | --- |
@@ -27,20 +32,20 @@ const observation = simulation.read();
 | `hoursOfSleep` | `8` | number; ≥ 0; ≤ 12 |
 | `intensity` | `95` | number; ≥ 50; ≤ 100 |
 | `lift` | `true` | boolean |
-| `slowTwitchFibers` | `50` | number; ≥ 0; ≤ 100 |
+| `slowTwitchFiberPercent` | `50` | number; ≥ 0; ≤ 100 |
 
 ## Actions and observations
 
-Use `advance(...)` for progress and `read()` for observations; the model defines how work advances its tick.
+Call `advance()` with an optional step count to run the model; the model defines how a step advances its tick. Call `read()` for a detached snapshot.
 
-Other instance procedures: `setParameters`, `newMuscleFibers`, `regulateHormones`, `regulateMuscleFibers`, `performDailyActivity`, `liftWeights`, `sleep`, `grow`, `developMuscle`, `go`. See their typed arguments in [model.ts](model.ts).
+Other actions: `setParameters`, `newMuscleFibers`, `regulateHormones`, `regulateMuscleFibers`, `performDailyActivity`, `liftWeights`, `sleep`, `grow`, `developMuscle`, `go`. Their typed arguments are in [model.ts](model.ts).
 
 Model-specific `read()` fields include `muscleMass`, `fibers`, `cells`.
 
-The [UI binding](ui.ts) presents `Tick`, `Muscle mass`, `Muscle Development`, `Muscle development`, `Mass / 100`, `Hormones`, `Anabolic`, `Catabolic`.
+## Sources and limits
 
-## Sources and acceptance
+Adapted from the NetLogo *Muscle Development* model by Wilensky (2002). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+The hormone variables are explanatory abstractions, and research questions the simple link between circulating hormones and muscle growth. The model is not a training prescription. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 
-[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `muscle-development` and links any shared checks.
+[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) records the acceptance stages for `muscle-development`.

@@ -79,11 +79,11 @@ describe("explicit live-change default", () => {
     expect(normalized.live[1]!.value(instance.read())).toBe(false);
   });
 
-  test("legacy arrays require their own setter and cannot acquire a common default", () => {
-    const legacy = [{ field: "amount" as const, value: (state: ReturnType<ReturnType<typeof create>["read"]>) => state.parameters.amount,
+  test("array fields require their own setter and cannot acquire a common default", () => {
+    const arrayFields = [{ field: "amount" as const, value: (state: ReturnType<ReturnType<typeof create>["read"]>) => state.parameters.amount,
       set: (instance: ReturnType<typeof create>, value: string | number | boolean) => instance.apply({ amount: Number(value) }) }];
-    expect(() => normalizeAuthoring(definition, { change() {}, live: legacy, views: [] })).toThrow(TypeError);
-    const old = normalizeAuthoring(definition, { live: legacy, views: [] });
+    expect(() => normalizeAuthoring(definition, { change() {}, live: arrayFields, views: [] })).toThrow(TypeError);
+    const old = normalizeAuthoring(definition, { live: arrayFields, views: [] });
     const instance = create(); old.live[0]!.set(instance, 5);
     expect(instance.read().parameters.amount).toBe(5);
     expect(() => normalizeAuthoring(definition, { live: { amount: {} }, views: [] })).toThrow("Missing setter for amount");

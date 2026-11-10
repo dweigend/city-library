@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
 import { Random, World } from "city-library";
-import { exponentialDraw } from "../src/random/distributions/exponential.ts";
-import { poissonDraw, logFactorial } from "../src/random/distributions/poisson.ts";
+import { exponentialDraw } from "../library/random/distributions/exponential.ts";
+import { poissonDraw, logFactorial } from "../library/random/distributions/poisson.ts";
 
 function supplied(values: readonly number[]) {
   let count = 0;

@@ -1,14 +1,14 @@
 /** NetLogo Interstitial Diffusion (Wilensky, 2025), CC BY-NC-SA 3.0; see NOTICE.md. */
 import { Agent, Grid, Random, World, run, geometry } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export type GoMode = "simulate" | "draw-profile";
 export interface InterstitialParameters {
   width: number;
   height: number;
   seed: number;
   initialBulkConcentration: number;
-  initialColumnsPopulated: number;
+  initialPopulatedColumnCount: number;
   maxTicks: number;
   constantLeftSurface: boolean;
   leftSurfaceConcentration: number;
@@ -27,7 +27,7 @@ export const inputs: Inputs<InterstitialParameters> = {
     integer: true,
   },
   initialBulkConcentration: { kind: "number", default: 0.8, min: 0, max: 1 },
-  initialColumnsPopulated: {
+  initialPopulatedColumnCount: {
     kind: "number",
     default: 10,
     min: 0,
@@ -46,7 +46,7 @@ export const inputs: Inputs<InterstitialParameters> = {
   },
 };
 export function create(options: Partial<InterstitialParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   if (settings.width % 2 !== 1 || settings.height % 2 !== 1)
     throw new RangeError("Use odd cell dimensions for integer native fields.");
   const random = Random.create({ seed: settings.seed });
@@ -109,7 +109,7 @@ export function create(options: Partial<InterstitialParameters> = {}) {
   }
   function setSurface(index: number, concentration: number) {
     for (const field of random.sample(columns[index]!, {
-      count: settings.height,
+      sampleCount: settings.height,
       algorithm: "fisher-yates-descending",
     })) {
       world.delete(grid.agentsAt(field));
@@ -125,10 +125,10 @@ export function create(options: Partial<InterstitialParameters> = {}) {
   function setup() {
     world.delete(world.agents);
     const initialSites = grid.fields.filter(
-      (f) => f.x <= minX + settings.initialColumnsPopulated,
+      (f) => f.x <= minX + settings.initialPopulatedColumnCount,
     );
     for (const field of random.sample(initialSites, {
-      count: initialSites.length,
+      sampleCount: initialSites.length,
       algorithm: "fisher-yates-descending",
     }))
       if (random.number() < settings.initialBulkConcentration)
@@ -164,7 +164,7 @@ export function create(options: Partial<InterstitialParameters> = {}) {
     if (world.tick.value === 0) latticeVisible = true;
     const population = world.agents;
     for (const atom of random.sample(population, {
-      count: population.length,
+      sampleCount: population.length,
       algorithm: "fisher-yates-descending",
     }))
       randomWalk(atom.id);
@@ -176,7 +176,7 @@ export function create(options: Partial<InterstitialParameters> = {}) {
     run(world, simulateAtoms);
     record();
   }
-  function done() {
+  function isComplete() {
     return (
       settings.goMode === "simulate" && world.tick.value >= settings.maxTicks
     );
@@ -196,7 +196,7 @@ export function create(options: Partial<InterstitialParameters> = {}) {
     for (const field of fields) world.delete(grid.agentsAt(field));
     // up-to-n-of truncates its nonnegative requested count to an integer.
     for (const field of random.sample(fields, {
-      count: Math.floor(settings.height * value),
+      sampleCount: Math.floor(settings.height * value),
     }))
       createDAtom(field);
   }
@@ -266,7 +266,7 @@ export function create(options: Partial<InterstitialParameters> = {}) {
         ].includes(key)
       )
         throw new TypeError("Only live interstitial rules may change.");
-    settings = parameters(inputs, { ...settings, ...changes });
+    settings = parseParameters(inputs, { ...settings, ...changes });
   }
   setup();
   return {
@@ -283,9 +283,9 @@ export function create(options: Partial<InterstitialParameters> = {}) {
     toggleLattice() {
       latticeVisible = !latticeVisible;
     },
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count && !done(); i++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount && !isComplete(); i++) {
         if (settings.goMode === "draw-profile") {
           latticeVisible = false;
           world.tick.reset();
@@ -302,7 +302,7 @@ export function create(options: Partial<InterstitialParameters> = {}) {
         width: settings.width,
         height: settings.height,
         parameters: settings,
-        done: done(),
+        done: isComplete(),
         latticeVisible,
         cells: Object.freeze(
           grid.fields.map((f) => Object.freeze({ id: f.id, x: f.x, y: f.y })),

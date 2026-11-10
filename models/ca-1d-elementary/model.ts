@@ -1,7 +1,7 @@
 /** Adapted from Wilensky (1998), CC BY-NC-SA 3.0; exact source/notices adjacent. */
 import { Grid, Random, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface ElementaryParameters {
   width: number;
   height: number;
@@ -73,7 +73,7 @@ export function listRules(rule: number) {
   );
 }
 export function create(options: Partial<ElementaryParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   if (settings.width % 2 !== 1 || settings.height % 2 !== 1)
     throw new RangeError("Use odd centered dimensions.");
   const { width, height } = settings,
@@ -143,9 +143,9 @@ export function create(options: Partial<ElementaryParameters> = {}) {
   }
   initialize();
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) {
         if (rulesShown) {
           done = true;
           break;
@@ -165,12 +165,12 @@ export function create(options: Partial<ElementaryParameters> = {}) {
       }
     },
     setupSingle() {
-      settings = parameters(inputs, { ...settings, initialization: "single" });
+      settings = parseParameters(inputs, { ...settings, initialization: "single" });
       initialize();
       world.tick.reset();
     },
     setupRandom() {
-      settings = parameters(inputs, { ...settings, initialization: "random" });
+      settings = parseParameters(inputs, { ...settings, initialization: "random" });
       initialize();
       world.tick.reset();
     },
@@ -187,7 +187,7 @@ export function create(options: Partial<ElementaryParameters> = {}) {
         >
       >,
     ) {
-      parameters(inputs, field);
+      parseParameters(inputs, field);
       const allowed = [
         "rule",
         "autoContinue",
@@ -201,13 +201,13 @@ export function create(options: Partial<ElementaryParameters> = {}) {
         )
       )
         throw new TypeError("Unknown live rule.");
-      settings = parameters(inputs, { ...settings, ...field });
+      settings = parseParameters(inputs, { ...settings, ...field });
     },
     setRuleBit(pattern: Pattern, on: boolean) {
       const bit = patterns.indexOf(pattern);
       if (bit < 0 || typeof on !== "boolean")
         throw new TypeError("Expected a rule pattern and boolean.");
-      settings = parameters(inputs, {
+      settings = parseParameters(inputs, {
         ...settings,
         rule: on ? settings.rule | (1 << bit) : settings.rule & ~(1 << bit),
       });

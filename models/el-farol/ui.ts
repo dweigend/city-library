@@ -4,7 +4,7 @@ import { model } from "./model.ts";
 export const ui = defineUI(model, {
   setup: [
     "memorySize",
-    { field: "numberStrategies", label: "Number of strategies" },
+    { field: "strategyCount", label: "Number of strategies" },
     "seed",
   ],
   live: {

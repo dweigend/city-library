@@ -1,10 +1,10 @@
 /** NetLogo Ants, Wilensky (1997), CC BY-NC-SA 3.0; source.nlogox and NOTICE.md pin provenance. */
 import { Agent, Grid, Random, World, run, geometry } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface AntsParameters {
   seed: number;
-  population: number;
+  antCount: number;
   diffusionRate: number;
   evaporationRate: number;
 }
@@ -16,7 +16,7 @@ export const inputs: Inputs<AntsParameters> = {
     max: 4294967295,
     integer: true,
   },
-  population: { kind: "number", default: 125, min: 0, max: 200, integer: true },
+  antCount: { kind: "number", default: 125, min: 0, max: 200, integer: true },
   diffusionRate: {
     kind: "number",
     default: 50,
@@ -34,7 +34,7 @@ export const inputs: Inputs<AntsParameters> = {
 };
 type Ant = Agent<{ who: number; carrying: boolean }>;
 export function create(options: Partial<AntsParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const width = 71,
     height = 71;
@@ -56,7 +56,7 @@ export function create(options: Partial<AntsParameters> = {}) {
   );
   world.add(grid);
   const ants = () => world.agents as readonly Ant[];
-  for (let who = 0; who < settings.population; who++)
+  for (let who = 0; who < settings.antCount; who++)
     world.add(
       Agent.create(
         { who, carrying: false },
@@ -118,7 +118,7 @@ export function create(options: Partial<AntsParameters> = {}) {
   }
   function go() {
     for (const ant of random.sample(ants(), {
-      count: ants().length,
+      sampleCount: ants().length,
       algorithm: "fisher-yates-descending",
     })) {
       if (ant.who >= world.tick.value) continue;
@@ -162,9 +162,9 @@ export function create(options: Partial<AntsParameters> = {}) {
   }
   record();
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) {
         run(world, go);
         record();
       }
@@ -184,7 +184,7 @@ export function create(options: Partial<AntsParameters> = {}) {
         )
       )
         throw new TypeError("Supply only live rule data.");
-      settings = parameters(inputs, { ...settings, ...rules });
+      settings = parseParameters(inputs, { ...settings, ...rules });
     },
     read() {
       return Object.freeze({

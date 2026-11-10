@@ -18,13 +18,13 @@ assert.equal(model.read().tick, 0); assert.deepEqual(model.read().randomState, s
 const afterDisplay = semantic(model); model.read(); model.read(); assert.deepEqual(semantic(model), afterDisplay);
 
 model.setScenario(scene(model, {
-  rules: { visualUpdate: "units with no water" },
+  rules: { visualUpdate: "units-with-no-water" },
   agents: [service(), job(), migrant("migrant", 2, 0, 0)],
   field: (x, y) => field({ colorNumber: 42, water: x === 2 && y === 0 ? 2 : 10 }),
 }));
 model.updateDisplay();
 assert.equal(cell(model, 0, 0).colorNumber, 67); assert.equal(cell(model, 2, 0).colorNumber, 42);
-model.setRules({ visualUpdate: "units with no electricity" }); model.updateDisplay();
+model.setRules({ visualUpdate: "units-with-no-electricity" }); model.updateDisplay();
 assert.equal(cell(model, 0, 0).colorNumber, 127); assert.equal(cell(model, 2, 0).colorNumber, 42);
 
 const intervention = create();
@@ -35,7 +35,7 @@ intervention.setScenario(scene(intervention, {
 }));
 const ids = intervention.read().cells.map(item => item.id);
 intervention.addNode({ x: 0, y: 0 });
-assert.equal(intervention.read().counts.nodes, 1); assert.equal(intervention.read().tick, 0);
+assert.equal(intervention.read().counts.nodeCount, 1); assert.equal(intervention.read().tick, 0);
 near(cell(intervention, 0, 0).landValue, 0.6); // center unconditional even on industrial cache
 assert.equal(cell(intervention, 1, 0).landValue, 0); // surrounding industrial cache excluded
 near(cell(intervention, 2, 0).landValue, 0.45);

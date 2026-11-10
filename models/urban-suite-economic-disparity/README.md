@@ -1,12 +1,17 @@
 # Rich and Poor Residential Choice
 
-Rich and poor entrants search using different utilities and alter nearby price and quality; services can move or disappear. Binary incomes and the assumed attraction of jobs to valuable land are propositions rather than calibrated urban laws.
+Do rich and poor households sort into different parts of a city? Every step, new rich and poor residents arrive and test `testCount` sites. Poor residents weigh price more (`poorPricePriority`), rich residents weigh quality (`richQualityPriority`). Where they settle, they change local price and quality, and jobs move toward valuable land. Residents leave with `deathRate`.
+
+Things to try:
+
+- Set both priorities to 0. Does the city still separate?
+- Increase `maxJobCount` and follow where jobs settle.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Rich and Poor Residential Choice`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Choose **Rich and Poor Residential Choice** in [Agent Lab](../../ui/agent-lab/README.md).
 
-Headless, from a script in the repository root:
+From a script in the repository root:
 
 ```ts
 import { create } from "./models/urban-suite-economic-disparity/model.ts";
@@ -18,32 +23,32 @@ const observation = simulation.read();
 
 ## Parameters
 
-`create(options)` accepts these input keys. The [UI binding](ui.ts) distinguishes setup controls from live changes; [model.ts](model.ts) defines additional validation.
+`create(options)` accepts these inputs. [ui.ts](ui.ts) decides which are setup controls and which can change during a run; [model.ts](model.ts) adds further validation.
 
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
-| `numberOfTests` | `15` | integer; ≥ 0; ≤ 30 |
+| `testCount` | `15` | integer; ≥ 0; ≤ 30 |
 | `residentsPerJob` | `100` | integer; ≥ 0; ≤ 500 |
-| `poorPerStep` | `5` | integer; ≥ 0; ≤ 15 |
-| `richPerStep` | `5` | integer; ≥ 0; ≤ 15 |
+| `poorPersonCountPerStep` | `5` | integer; ≥ 0; ≤ 15 |
+| `richPersonCountPerStep` | `5` | integer; ≥ 0; ≤ 15 |
 | `poorPricePriority` | `0` | number; ≥ -1; ≤ 1 |
 | `richQualityPriority` | `0` | number; ≥ -1; ≤ 1 |
-| `maxJobs` | `10` | integer; ≥ 5; ≤ 20 |
+| `maxJobCount` | `10` | integer; ≥ 5; ≤ 20 |
 | `deathRate` | `4` | integer; ≥ 0; ≤ 15 |
 
 ## Actions and observations
 
-Use `advance(...)` for progress and `read()` for observations; the model defines how work advances its tick.
+Call `advance()` with an optional step count to run the model; the model defines how a step advances its tick. Call `read()` for a detached snapshot.
 
-Other instance procedures: `setRules`, `setViewMode`, `setAgents`, `setLand`. See their typed arguments in [model.ts](model.ts).
+Other actions: `setRules`, `setViewMode`, `setAgents`, `setLand`. Their typed arguments are in [model.ts](model.ts).
 
 Model-specific `read()` fields include `counter`, `viewMode`, `agents`, `cells`, `counts`, `medianTravelDistance`, `utilityRanges`.
 
-The [UI binding](ui.ts) presents `Quality`, `Price`, `Distance`, `Poor utility`, `Rich utility`, `Location tests`, `Poor births per step`, `Rich births per step`, `Maximum jobs`, `Oldest residents removed` and further views or controls.
+## Sources and limits
 
-## Sources and acceptance
+Adapted from the NetLogo *Urban Suite - Economic Disparity* model by Felsen and Wilensky (2007). Attribution and license are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+Two income levels and the assumed pull of jobs toward valuable land are propositions, not calibrated urban laws. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 
-The [catalog ledger](../catalog/progress.json) owns acceptance stages for `urban-suite-economic-disparity` and links the retained checks.
+The [catalog ledger](../catalog/progress.json) records the acceptance stages for `urban-suite-economic-disparity`.

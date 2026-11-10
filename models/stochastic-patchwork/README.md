@@ -1,12 +1,17 @@
 # Stochastic Patchwork
 
-Independent colored fields create a population from which sample means are recorded. Population colors, sample size and the finite recording window distinguish the data distribution from the distribution of means.
+How much does the share of a color in a sample vary? Every cell in a square block of `blockSide` × `blockSide` cells gets the target color with `targetPercent` probability. Each step recolors the block and records the share of target-colored cells. The histogram of these shares shows how much samples of that size scatter around the target.
+
+Things to try:
+
+- Change `blockSide` and compare the width of the histogram.
+- Set `targetPercent` near 0 or 100. Does the histogram change shape?
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Stochastic Patchwork`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Choose **Stochastic Patchwork** in [Agent Lab](../../ui/agent-lab/README.md).
 
-Headless, from a script in the repository root:
+From a script in the repository root:
 
 ```ts
 import { create } from "./models/stochastic-patchwork/model.ts";
@@ -18,7 +23,7 @@ const observation = simulation.read();
 
 ## Parameters
 
-`create(options)` accepts these input keys. The [UI binding](ui.ts) distinguishes setup controls from live changes; [model.ts](model.ts) defines additional validation.
+`create(options)` accepts these inputs. [ui.ts](ui.ts) decides which are setup controls and which can change during a run; [model.ts](model.ts) adds further validation.
 
 | Input | Default | Declared values |
 | --- | --- | --- |
@@ -28,18 +33,18 @@ const observation = simulation.read();
 
 ## Actions and observations
 
-Use `advance(...)` for progress and `read()` for observations; the model defines how work advances its tick.
+Call `advance()` with an optional step count to run the model; the model defines how a step advances its tick. Call `read()` for a detached snapshot.
 
-Other instance procedures: `setRules`. See their typed arguments in [model.ts](model.ts).
+Other actions: `setRules`. Their typed arguments are in [model.ts](model.ts).
 
-Additional instance accessors: `world`, `grid`. See [model.ts](model.ts) for the returned live references.
+Live references: `world`, `grid`. [model.ts](model.ts) describes what they return.
 
 Model-specific `read()` fields include `targetCount`, `cells`, `samples`, `histogram`.
 
-The [UI binding](ui.ts) presents `Target color (%)`, `Tick`, `Target color`, `Patchwork`, `Color distribution`, `Occurrences`.
+## Sources and limits
 
-## Sources and acceptance
+Adapted from the NetLogo *Stochastic Patchwork* model by Abrahamson and Wilensky (2004). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+The finite recording window distinguishes the recorded shares from the theoretical distribution of sample proportions. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 
-The [catalog ledger](../catalog/progress.json) owns acceptance stages for `stochastic-patchwork` and links the retained checks.
+The [catalog ledger](../catalog/progress.json) records the acceptance stages for `stochastic-patchwork`.

@@ -1,8 +1,8 @@
 /** Wilensky (2023), CC BY-NC-SA 3.0; see NOTICE.md. */
 import { Agent, Random, World, stats } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
-export const sourceMarker = "B08-baldwin-effect-native-composition-v1";
+import { parseParameters, validateStepCount } from "../parameters.ts";
+
 export type Allele = 0 | 1 | "x";
 export function fitnessOf(
   phenotype: readonly number[],
@@ -36,7 +36,7 @@ export const inputs: Inputs<Parameters> = {
   mutationRate: { kind: "number", default: 5, min: 0, max: 10 },
   smoothness: { kind: "number", default: 0.15, min: 0, max: 1 },
 };
-type LearnerGroup = "nonLearner" | "randomLearner" | "smartLearner";
+type LearnerGroup = "non-learner" | "random-learner" | "smart-learner";
 type Learner = Agent<{
   group: LearnerGroup;
   genotype: Allele[];
@@ -44,15 +44,15 @@ type Learner = Agent<{
   fitness: number;
 }>;
 export function create(options: Partial<Parameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const world = World.create({ random });
   let targetPhenotype: number[] = [];
   const history: {
     tick: number;
-    nonLearners: number;
-    randomLearners: number;
-    smartLearners: number;
+    nonLearnerCount: number;
+    randomLearnerCount: number;
+    smartLearnerCount: number;
     nonPlasticity: number;
     randomPlasticity: number;
     smartPlasticity: number;
@@ -86,7 +86,7 @@ export function create(options: Partial<Parameters> = {}) {
   }
   function updatePosition(a: Learner) {
     const offset =
-      a.group === "nonLearner" ? -28 : a.group === "smartLearner" ? 28 : 0;
+      a.group === "non-learner" ? -28 : a.group === "smart-learner" ? 28 : 0;
     a.move({
       to: {
         x: offset + (correctAlleleFrequency(a) - 0.5) * 20,
@@ -104,28 +104,28 @@ export function create(options: Partial<Parameters> = {}) {
   function record() {
     history.push({
       tick: world.tick.value,
-      nonLearners: population("nonLearner").length,
-      randomLearners: population("randomLearner").length,
-      smartLearners: population("smartLearner").length,
-      nonPlasticity: meanPlasticity("nonLearner"),
-      randomPlasticity: meanPlasticity("randomLearner"),
-      smartPlasticity: meanPlasticity("smartLearner"),
+      nonLearnerCount: population("non-learner").length,
+      randomLearnerCount: population("random-learner").length,
+      smartLearnerCount: population("smart-learner").length,
+      nonPlasticity: meanPlasticity("non-learner"),
+      randomPlasticity: meanPlasticity("random-learner"),
+      smartPlasticity: meanPlasticity("smart-learner"),
       nonCorrect: stats.describe(
-        population("nonLearner").map((a) => correctAlleleFrequency(a) * 100),
+        population("non-learner").map((a) => correctAlleleFrequency(a) * 100),
       ).mean,
       randomCorrect: stats.describe(
-        population("randomLearner").map((a) => correctAlleleFrequency(a) * 100),
+        population("random-learner").map((a) => correctAlleleFrequency(a) * 100),
       ).mean,
       smartCorrect: stats.describe(
-        population("smartLearner").map((a) => correctAlleleFrequency(a) * 100),
+        population("smart-learner").map((a) => correctAlleleFrequency(a) * 100),
       ).mean,
-      nonFitness: stats.describe(population("nonLearner").map((a) => a.fitness))
+      nonFitness: stats.describe(population("non-learner").map((a) => a.fitness))
         .mean,
       randomFitness: stats.describe(
-        population("randomLearner").map((a) => a.fitness),
+        population("random-learner").map((a) => a.fitness),
       ).mean,
       smartFitness: stats.describe(
-        population("smartLearner").map((a) => a.fitness),
+        population("smart-learner").map((a) => a.fitness),
       ).mean,
     });
     if (history.length > 1001) history.splice(1, 1);
@@ -140,18 +140,18 @@ export function create(options: Partial<Parameters> = {}) {
       () => random.sample([0, 1])[0]!,
     );
     for (const group of [
-      "randomLearner",
-      "nonLearner",
-      "smartLearner",
+      "random-learner",
+      "non-learner",
+      "smart-learner",
     ] as const) {
       for (let i = 0; i < settings.populationSize; i++) {
         const produced = produceGene();
         const genotype =
-          group === "nonLearner"
+          group === "non-learner"
             ? (initPhenotype(produced) as Allele[])
             : produced;
         const phenotype =
-          group === "nonLearner"
+          group === "non-learner"
             ? ([...genotype] as number[])
             : initPhenotype(genotype);
         const a = Agent.create({
@@ -230,7 +230,7 @@ export function create(options: Partial<Parameters> = {}) {
   function select(group: LearnerGroup) {
     const members = population(group);
     const shuffled = random.sample(members, {
-      count: members.length,
+      sampleCount: members.length,
       algorithm: "fisher-yates-descending",
     });
     shuffled.sort((a, b) => a.fitness - b.fitness);
@@ -241,20 +241,20 @@ export function create(options: Partial<Parameters> = {}) {
     for (let i = 0; i < Math.floor(settings.populationSize * 0.2); i++) {
       const members = population(group);
       const tournament = random.sample(members, {
-        count: Math.floor(settings.populationSize * 0.3),
+        sampleCount: Math.floor(settings.populationSize * 0.3),
       });
       if (tournament.length < 2)
         throw new RangeError(
           "Weighted selection requires two tournament members.",
         );
       const selected = random.sample(tournament, {
-        count: 2,
+        sampleCount: 2,
         weight: (a) => a.fitness,
       });
       if (selected.length < 2) {
         const remaining = tournament.filter((a) => !selected.includes(a));
         selected.push(
-          ...random.sample(remaining, { count: 2 - selected.length }),
+          ...random.sample(remaining, { sampleCount: 2 - selected.length }),
         );
       }
       const [left, right] = selected;
@@ -265,7 +265,7 @@ export function create(options: Partial<Parameters> = {}) {
         random.number() > settings.mutationRate / 1000
           ? gene
           : random.sample(
-              group === "nonLearner"
+              group === "non-learner"
                 ? ([0, 1] as Allele[])
                 : ([0, 1, "x"] as Allele[]),
             )[0]!,
@@ -279,21 +279,21 @@ export function create(options: Partial<Parameters> = {}) {
       updatePosition(child);
     }
   }
-  function advance(count = 1) {
-    stepCount(count);
-    for (let i = 0; i < count; i++) {
+  function advance(stepCount = 1) {
+    validateStepCount(stepCount);
+    for (let i = 0; i < stepCount; i++) {
       for (const group of [
-        "randomLearner",
-        "smartLearner",
-        "nonLearner",
+        "random-learner",
+        "smart-learner",
+        "non-learner",
       ] as const) {
         const members = population(group);
         for (const a of random.sample(members, {
-          count: members.length,
+          sampleCount: members.length,
           algorithm: "fisher-yates-descending",
         })) {
-          if (group === "randomLearner") randomLearn(a);
-          else if (group === "smartLearner") smartLearn(a);
+          if (group === "random-learner") randomLearn(a);
+          else if (group === "smart-learner") smartLearn(a);
           else {
             a.fitness = fitnessOf(
               a.phenotype,
@@ -325,15 +325,15 @@ export function create(options: Partial<Parameters> = {}) {
         correctAlleleFrequency: correctAlleleFrequency(a),
       }));
     return {
-      sourceMarker,
+
       tick: world.tick.value,
       width: 81,
       height: 111,
       parameters: settings,
       targetPhenotype: [...targetPhenotype],
-      nonLearners: snapshots("nonLearner"),
-      randomLearners: snapshots("randomLearner"),
-      smartLearners: snapshots("smartLearner"),
+      nonLearners: snapshots("non-learner"),
+      randomLearners: snapshots("random-learner"),
+      smartLearners: snapshots("smart-learner"),
       history: history.map((p) => ({ ...p })),
       randomState: random.state,
     };
@@ -350,7 +350,7 @@ export function create(options: Partial<Parameters> = {}) {
     select,
     reproduce,
     setParameters(update: Partial<Omit<Parameters, "seed">>) {
-      settings = parameters(inputs, { ...settings, ...update });
+      settings = parseParameters(inputs, { ...settings, ...update });
     },
   };
 }

@@ -1,12 +1,19 @@
 # Simple Birth Rates
 
-Birth and death draws change finite populations according to the selected fertility experiment. Extinction and demographic sampling remain possible even when an average-rate calculation suggests growth.
+How much does a small difference in fertility matter in a population with limited room? Red and blue individuals reproduce according to `redFertility` and `blueFertility`. Whenever the population exceeds `carryingCapacity`, every individual faces the same chance of dying, sized so that the population drops back to about that limit.
+
+The question is how reliably the more fertile color takes over. In a finite population chance plays a part too, so a single run does not show a fixed outcome.
+
+Things to try:
+
+- Set `redFertility` one step above `blueFertility` and run several seeds. How many steps until one color disappears?
+- Lower `carryingCapacity`. Does chance decide the winner more often in a small population?
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Simple Birth Rates`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Choose **Simple Birth Rates** in [Agent Lab](../../ui/agent-lab/README.md).
 
-Headless, from a script in the repository root:
+From a script in the repository root:
 
 ```ts
 import { create } from "./models/simple-birth-rates/model.ts";
@@ -18,7 +25,7 @@ const observation = simulation.read();
 
 ## Parameters
 
-`create(options)` accepts these input keys. The [UI binding](ui.ts) distinguishes setup controls from live changes; [model.ts](model.ts) defines additional validation.
+`create(options)` accepts these inputs. [ui.ts](ui.ts) decides which are setup controls and which can change during a run; [model.ts](model.ts) adds further validation.
 
 | Input | Default | Declared values |
 | --- | --- | --- |
@@ -29,16 +36,16 @@ const observation = simulation.read();
 
 ## Actions and observations
 
-Use `advance(...)` for progress and `read()` for observations; the model defines how work advances its tick.
+Call `advance()` with an optional step count to run the model; the model defines how a step advances its tick. Call `read()` for a detached snapshot.
 
-Other instance procedures: `advanceUntilRestart`, `initializePopulation`, `setRules`. See their typed arguments in [model.ts](model.ts).
+Other actions: `advanceUntilRestart`, `initializePopulation`, `setRules`. Their typed arguments are in [model.ts](model.ts).
 
 Model-specific `read()` fields include `agents`, `output`.
 
-The [UI binding](ui.ts) presents `Advance population`, `Repeat experiment`, `Initialize population`, `Generation`, `Reds`, `Blues`, `Population`, `Populations`, `Experiment output`.
+## Sources and limits
 
-## Sources and acceptance
+Adapted from the NetLogo *Simple Birth Rates* model by Wilensky (1997). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+Colors are inherited types, not genes, and removal ignores age or condition. The model compares reproduction and random sampling; it is not a calibrated demographic forecast. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 
-[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `simple-birth-rates` and links any shared checks.
+[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) records the acceptance stages for `simple-birth-rates`.

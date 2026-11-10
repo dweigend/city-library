@@ -5,8 +5,8 @@ import { model } from "./model.ts";
 export const ui = defineUI(model, {
   setup: [
     "seed",
-    { field: "initialPopulation", label: "Initial people" },
-    "powerPlants",
+    { field: "initialPersonCount", label: "Initial people" },
+    "powerPlantCount",
   ],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/UrbanSuite-Pollution",
@@ -21,9 +21,9 @@ export const ui = defineUI(model, {
   },
   monitors: [
     { label: "Tick", value: (state) => state.tick },
-    { label: "People", value: (state) => state.counts.people },
-    { label: "Trees", value: (state) => state.counts.trees },
-    { label: "Power plants", value: (state) => state.counts.powerPlants },
+    { label: "People", value: (state) => state.counts.personCount },
+    { label: "Trees", value: (state) => state.counts.treeCount },
+    { label: "Power plants", value: (state) => state.counts.powerPlantCount },
     {
       label: "Total pollution",
       value: (state) => state.totalPollution,
@@ -92,7 +92,7 @@ function worldStatusCountsAndTotalPollutionSeries(
       color: "#777777",
       points: state.history.map((point) => ({
         x: point.tick,
-        y: point.people,
+        y: point.personCount,
       })),
     },
     {
@@ -100,7 +100,7 @@ function worldStatusCountsAndTotalPollutionSeries(
       color: "#26733b",
       points: state.history.map((point) => ({
         x: point.tick,
-        y: point.trees,
+        y: point.treeCount,
       })),
     },
     {

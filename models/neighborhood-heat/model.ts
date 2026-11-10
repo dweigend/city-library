@@ -1,6 +1,6 @@
 import { Grid, World, run } from "city-library";
 import type { Definition } from "../definition.ts";
-import { stepCount } from "../parameters.ts";
+import { validateStepCount } from "../parameters.ts";
 
 /** Equal capacities and a closed boundary preserve the temperature sum. */
 export function create() {
@@ -24,9 +24,9 @@ export function create() {
 
   return {
     grid, world, center, initialState, totalTemperature,
-    advance(count = 1) {
-      stepCount(count);
-      run(world, spreadHeat, count);
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      run(world, spreadHeat, stepCount);
     },
     read() {
       return {

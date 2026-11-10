@@ -1,12 +1,17 @@
 # Iterated Prisoner's Dilemma
 
-Two strategies repeatedly choose cooperation or defection, retain memory and accumulate payoffs. The selected strategy pair and finite horizon determine the comparison; success against one opponent is not universal dominance.
+Can cooperation last when the same two players meet again and again? Two players repeat the prisoner's dilemma. Each follows a strategy, for example `cooperate`, `defect`, `act-randomly` or `tit-for-tat`, and some strategies react to the opponent's earlier moves. Payoffs accumulate over the rounds.
+
+Things to try:
+
+- Play `tit-for-tat` against `act-randomly`, then against `defect`. Compare the scores.
+- Let two reacting strategies play each other. Does cooperation hold?
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Iterated Prisoner's Dilemma`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Choose **Iterated Prisoner's Dilemma** in [Agent Lab](../../ui/agent-lab/README.md).
 
-Headless, from a script in the repository root:
+From a script in the repository root:
 
 ```ts
 import { create } from "./models/prisoners-dilemma-two-person-iterated/model.ts";
@@ -18,7 +23,7 @@ const observation = simulation.read();
 
 ## Parameters
 
-`create(options)` accepts these input keys. The [UI binding](ui.ts) distinguishes setup controls from live changes; [model.ts](model.ts) defines additional validation.
+`create(options)` accepts these inputs. [ui.ts](ui.ts) decides which are setup controls and which can change during a run; [model.ts](model.ts) adds further validation.
 
 | Input | Default | Declared values |
 | --- | --- | --- |
@@ -30,16 +35,16 @@ const observation = simulation.read();
 
 ## Actions and observations
 
-Use `advance(...)` for progress and `read()` for observations; the model defines how work advances its tick.
+Call `advance()` with an optional step count to run the model; the model defines how a step advances its tick. Call `read()` for a detached snapshot.
 
-Other instance procedures: `setup`, `play`, `playARound`, `prepareNextRound`, `setRules`. See their typed arguments in [model.ts](model.ts).
+Other actions: `setup`, `play`, `playARound`, `prepareNextRound`, `setRules`. Their typed arguments are in [model.ts](model.ts).
 
 Model-specific `read()` fields include `human`, `computer`, `hiddenStrategy`, `output`.
 
-The [UI binding](ui.ts) presents `Play once`, `Round`, `Human score`, `Computer score`, `Players`, `Average score (includes initial 3)`, `Human`, `Computer`, `History`.
+## Sources and limits
 
-## Sources and acceptance
+Adapted from the NetLogo *Prisoner's Dilemma Two Person Iterated* model by Wilensky (2002). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+The result depends on the chosen pair and the number of rounds; beating one opponent is not general dominance. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 
-The [catalog ledger](../catalog/progress.json) owns acceptance stages for `prisoners-dilemma-two-person-iterated` and links the retained checks.
+The [catalog ledger](../catalog/progress.json) records the acceptance stages for `prisoners-dilemma-two-person-iterated`.

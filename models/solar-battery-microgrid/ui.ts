@@ -2,7 +2,7 @@ import { defineUI, indexedColor, type Observation, type SpatialData } from "../.
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
   monitors: [{ label: "Hour", value: state => state.tick }, { label: "Stored (kWh)", value: state => state.energyKwh },
-    { label: "Grid import (kWh)", value: state => state.importedKwh }, { label: "Reserve crossings", value: state => state.reserveCrossings },
+    { label: "Grid import (kWh)", value: state => state.importedKwh }, { label: "Reserve crossings", value: state => state.reserveCrossingCount },
     { label: "Last crossing (h)", value: state => state.lastCrossingHour },
     { label: "Flow interval", value: state => state.tick === 0 ? "Initial rates" : `${state.tick - 1}–${state.tick} h` }],
   views: [

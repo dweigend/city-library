@@ -17,7 +17,7 @@ export function officeScene(state: Observation<typeof model>): SpatialData {
     },
     {
       id: "clerks", label: "Clerk capacity", kind: "capacity", color: scientificPalette.neutral,
-      used: state.busy, capacity: state.parameters.clerks, unit: "seats",
+      used: state.busyClerkCount, capacity: state.parameters.clerkCount, unit: "seats",
     },
     {
       id: "completed", label: "Completed residents", kind: "items", color: scientificPalette.completed,

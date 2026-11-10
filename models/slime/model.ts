@@ -1,11 +1,11 @@
 /** NetLogo Slime, Wilensky (1997). See source.nlogox and NOTICE.md. */
 import { Agent, Grid, Random, World, stats, geometry, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 
 export interface SlimeParameters {
   seed: number;
-  population: number;
+  agentCount: number;
   sniffThreshold: number;
   sniffAngle: number;
   wiggleAngle: number;
@@ -13,7 +13,7 @@ export interface SlimeParameters {
 }
 export const inputs: Inputs<SlimeParameters> = {
   seed: { kind: "number", default: 1, integer: true },
-  population: {
+  agentCount: {
     kind: "number",
     default: 400,
     min: 1,
@@ -28,18 +28,18 @@ export const inputs: Inputs<SlimeParameters> = {
 
 type Slime = Agent<{ who: number }>;
 export function create(options: Partial<SlimeParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const space = { x: 81, y: 81, boundary: "wrap" } as const;
   const world = World.create(space, { random });
   const grid = Grid.create(space, { state: { chemical: 0 } });
   world.add(grid);
-  const population = () => world.agents as readonly Slime[];
+  const agents = () => world.agents as readonly Slime[];
 
   function setup() {
-    world.delete(population());
+    world.delete(agents());
     for (const field of grid.fields) field.chemical = 0;
-    for (let who = 0; who < settings.population; who++) {
+    for (let who = 0; who < settings.agentCount; who++) {
       world.add(
         Agent.create(
           { who },
@@ -76,8 +76,8 @@ export function create(options: Partial<SlimeParameters> = {}) {
   }
 
   function go() {
-    for (const slime of random.sample(population(), {
-      count: population().length,
+    for (const slime of random.sample(agents(), {
+      sampleCount: agents().length,
       algorithm: "fisher-yates-descending",
     })) {
       if (grid.fieldAt(slime)!.chemical > settings.sniffThreshold)
@@ -94,13 +94,13 @@ export function create(options: Partial<SlimeParameters> = {}) {
     for (const field of grid.fields) field.chemical *= 0.9;
   }
 
-  function advance(count = 1) {
-    stepCount(count);
-    for (let index = 0; index < count; index++) run(world, go);
+  function advance(stepCount = 1) {
+    validateStepCount(stepCount);
+    for (let index = 0; index < stepCount; index++) run(world, go);
   }
 
   function setParameters(
-    update: Partial<Omit<SlimeParameters, "seed" | "population">>,
+    update: Partial<Omit<SlimeParameters, "seed" | "agentCount">>,
   ) {
     if (
       Object.keys(update).some(
@@ -114,7 +114,7 @@ export function create(options: Partial<SlimeParameters> = {}) {
       )
     )
       throw new TypeError("Only live parameters may change.");
-    settings = parameters(inputs, { ...settings, ...update });
+    settings = parseParameters(inputs, { ...settings, ...update });
   }
 
   function read() {
@@ -132,7 +132,7 @@ export function create(options: Partial<SlimeParameters> = {}) {
         chemical: field.chemical,
         color: `rgb(0 ${Math.round(Math.max(0, Math.min(1, (field.chemical - 0.1) / 2.9)) * 230)} 0)`,
       })),
-      agents: population().map((slime) => ({
+      agents: agents().map((slime) => ({
         id: slime.id,
         who: slime.who,
         x: slime.x,

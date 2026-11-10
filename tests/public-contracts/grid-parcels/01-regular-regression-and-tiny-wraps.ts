@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { Grid, topology } from "city-library";
 
 // The new topology entry must coexist with the original regular-grid contract.
-assert.equal(topology.square({ columns: 1, rows: 1 }).cells.length, 1);
+assert.equal(topology.square({ columnCount: 1, rowCount: 1 }).cells.length, 1);
 const regular = Grid.create({ x: 3, y: 3 }, { state: { temperature: 0 } });
 const center = regular.fields[4]!;
 assert.equal(regular.cellSize, 1);

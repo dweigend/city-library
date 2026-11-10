@@ -5,20 +5,20 @@
  */
 import { Agent, Grid, Random, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 
 export interface PollutionParameters {
   seed: number;
-  initialPopulation: number;
-  powerPlants: number;
+  initialPersonCount: number;
+  powerPlantCount: number;
   birthRate: number;
   plantingRate: number;
   pollutingRate: number;
 }
 export const inputs: Inputs<PollutionParameters> = {
   seed: { kind: "number", default: 1, min: -2147483648, max: 4294967295, integer: true },
-  initialPopulation: { kind: "number", default: 30, min: 0, max: 100, step: 10, integer: true },
-  powerPlants: { kind: "number", default: 2, min: 0, max: 20, integer: true },
+  initialPersonCount: { kind: "number", default: 30, min: 0, max: 100, step: 10, integer: true },
+  powerPlantCount: { kind: "number", default: 2, min: 0, max: 20, integer: true },
   birthRate: { kind: "number", default: 0.10, min: 0, max: 0.20, step: 0.01 },
   plantingRate: { kind: "number", default: 0.05, min: 0, max: 0.10, step: 0.01 },
   pollutingRate: { kind: "number", default: 3, min: 0, max: 5, integer: true },
@@ -27,10 +27,10 @@ export interface PollutionIndividualInput { readonly x: number; readonly y: numb
 export interface EnvironmentInput { readonly pollution: number; readonly powerPlant: boolean }
 type Individual = Agent<{ kind: "person" | "tree"; health: number }>;
 type LiveRules = Pick<PollutionParameters, "birthRate" | "plantingRate" | "pollutingRate">;
-interface PollutionSample { readonly tick: number; readonly people: number; readonly trees: number; readonly powerPlants: number; readonly totalPollution: number }
+interface PollutionSample { readonly tick: number; readonly personCount: number; readonly treeCount: number; readonly powerPlantCount: number; readonly totalPollution: number }
 
 export function create(options: Partial<PollutionParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const width = 71, height = 63;
   const random = Random.create({ seed: settings.seed });
   const world = World.create({ x: width, y: height, boundary: "wrap" }, { random });
@@ -44,14 +44,14 @@ export function create(options: Partial<PollutionParameters> = {}) {
   const integer = (upper: number) => Math.floor(random.number() * upper);
   // Uniform Fisher-Yates on full ask snapshots; no source RNG equivalence implied.
   function activation<T>(snapshot: readonly T[]) {
-    return random.sample(snapshot, { count: snapshot.length, algorithm: "fisher-yates-descending" });
+    return random.sample(snapshot, { sampleCount: snapshot.length, algorithm: "fisher-yates-descending" });
   }
   function pollute() {
     for (const field of fields) if (field.powerPlant) field.pollution = settings.pollutingRate;
   }
   function measurement() {
     return {
-      counts: { people: people().length, trees: trees().length, powerPlants: fields.filter(field => field.powerPlant).length },
+      counts: { personCount: people().length, treeCount: trees().length, powerPlantCount: fields.filter(field => field.powerPlant).length },
       totalPollution: fields.reduce((sum, field) => sum + field.pollution, 0),
     };
   }
@@ -105,9 +105,9 @@ export function create(options: Partial<PollutionParameters> = {}) {
     for (const tree of activation(trees())) { cleanup(tree); maybeDie(tree); }
   }
 
-  for (const field of random.sample(fields, { count: settings.powerPlants })) field.powerPlant = true;
+  for (const field of random.sample(fields, { sampleCount: settings.powerPlantCount })) field.powerPlant = true;
   pollute();
-  for (let i = 0; i < settings.initialPopulation; i++) {
+  for (let i = 0; i < settings.initialPersonCount; i++) {
     const heading = integer(360), x = integer(width) - 35, y = integer(height) - 31;
     world.add(Agent.create({ kind: "person", health: 5 } as { kind: "person" | "tree"; health: number }, { position: { x, y }, orientation: { heading } }));
   }
@@ -136,9 +136,9 @@ export function create(options: Partial<PollutionParameters> = {}) {
     return Object.freeze({ id: individual.id, x: individual.x, y: individual.y, heading: individual.heading, health: individual.health });
   }
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) {
         if (people().length === 0) break;
         run(world, go); record();
       }
@@ -147,7 +147,7 @@ export function create(options: Partial<PollutionParameters> = {}) {
       if (typeof rules !== "object" || rules === null || ![Object.prototype, null].includes(Object.getPrototypeOf(rules)) ||
         Reflect.ownKeys(rules).some(key => typeof key !== "string" || !["birthRate", "plantingRate", "pollutingRate"].includes(key) || !("value" in Object.getOwnPropertyDescriptor(rules, key)!)))
         throw new TypeError("Supply only live pollution rule data.");
-      settings = parameters(inputs, { ...settings, ...rules });
+      settings = parseParameters(inputs, { ...settings, ...rules });
       record();
     },
     setPeople(values: readonly PollutionIndividualInput[]) { replaceIndividuals("person", values); },
@@ -177,7 +177,7 @@ export function create(options: Partial<PollutionParameters> = {}) {
         people: Object.freeze(people().map(observeIndividual)), trees: Object.freeze(trees().map(observeIndividual)),
         cells: Object.freeze(fields.map(field => Object.freeze({ id: field.id, x: field.x, y: field.y, pollution: field.pollution, powerPlant: field.powerPlant }))),
         counts: Object.freeze(observed.counts), totalPollution: observed.totalPollution,
-        history: Object.freeze([...history]), randomState: random.state, done: observed.counts.people === 0,
+        history: Object.freeze([...history]), randomState: random.state, done: observed.counts.personCount === 0,
       });
     },
   };

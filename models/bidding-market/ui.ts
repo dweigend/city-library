@@ -29,7 +29,7 @@ export const ui = defineUI(model, {
   },
   monitors: [
     { label: "Tick", value: (s) => s.tick },
-    { label: "Sales", value: (s) => s.totalSales },
+    { label: "Sales", value: (s) => s.saleCount },
     { label: "Average price", value: (s) => s.averagePrice },
     {
       label: "Money taken (%)",
@@ -78,11 +78,8 @@ export const ui = defineUI(model, {
       type: "line",
       label: "Items",
       series: (s) =>
-        (["itemsForSale", "wantToBuy", "totalSales"] as const).map((key) => ({
-          label: key
-            .replace(/^(asking|willing)/, "")
-            .replace(/([a-z])([A-Z])/g, "$1 $2")
-            .replace(/^./, (value) => value.toUpperCase()),
+        (["saleItemCount", "desiredItemCount", "saleCount"] as const).map((key) => ({
+          label: key === "saleItemCount" ? "For sale" : key === "desiredItemCount" ? "Wanted" : "Sold",
           points: s.history.map((h) => ({ x: h.tick, y: h[key] })),
         })),
     },
@@ -113,15 +110,15 @@ function buyersAndSellersData(s: UIObservation): SpatialData {
     agents: [
       ...s.sellers.map((t) => ({
         ...t,
-        color: t.itemsForSale > 0 ? "#447abd" : "#666666",
-        label: String(t.itemsForSale),
-        size: 5 + Math.sqrt(t.itemsForSale),
+        color: t.saleItemCount > 0 ? "#447abd" : "#666666",
+        label: String(t.saleItemCount),
+        size: 5 + Math.sqrt(t.saleItemCount),
       })),
       ...s.buyers.map((t) => ({
         ...t,
-        color: t.wantToBuy > 0 ? "#cb7641" : "#666666",
-        label: String(t.wantToBuy),
-        size: 5 + Math.sqrt(t.bought),
+        color: t.desiredItemCount > 0 ? "#cb7641" : "#666666",
+        label: String(t.desiredItemCount),
+        size: 5 + Math.sqrt(t.purchasedItemCount),
       })),
     ],
     segments: s.edges.map((l) => ({

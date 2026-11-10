@@ -1,12 +1,17 @@
 # Party
 
-People compare the fraction of the other sex in their group with a tolerance and move between group sites when unhappy. The male/female labels and this one preference rule are source assumptions rather than a measured model of real social preferences.
+Can a party sort itself into single-sex groups even if everyone tolerates a mixed group? Guests stand in `groupCount` groups. A guest is uncomfortable when the share of the other sex in their group exceeds `tolerance` percent and then moves to another group. The model counts how many groups end up single-sex.
+
+Things to try:
+
+- Raise `tolerance` step by step. How many single-sex groups remain?
+- Change `groupCount` with the same tolerance.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Party`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Choose **Party** in [Agent Lab](../../ui/agent-lab/README.md).
 
-Headless, from a script in the repository root:
+From a script in the repository root:
 
 ```ts
 import { create } from "./models/party/model.ts";
@@ -18,27 +23,27 @@ const observation = simulation.read();
 
 ## Parameters
 
-`create(options)` accepts these input keys. The [UI binding](ui.ts) distinguishes setup controls from live changes; [model.ts](model.ts) defines additional validation.
+`create(options)` accepts these inputs. [ui.ts](ui.ts) decides which are setup controls and which can change during a run; [model.ts](model.ts) adds further validation.
 
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
-| `number` | `70` | integer; ≥ 0; ≤ 300 |
+| `personCount` | `70` | integer; ≥ 0; ≤ 300 |
 | `groupCount` | `10` | integer; ≥ 5; ≤ 20 |
 | `tolerance` | `25` | number; ≥ 0; ≤ 99 |
 
 ## Actions and observations
 
-Use `advance(...)` for progress and `read()` for observations; the model defines how work advances its tick.
+Call `advance()` with an optional step count to run the model; the model defines how a step advances its tick. Call `read()` for a detached snapshot.
 
-Other instance procedures: `setParameters`, `setGroups`. See their typed arguments in [model.ts](model.ts).
+Other actions: `setParameters`, `setGroups`. Their typed arguments are in [model.ts](model.ts).
 
 Model-specific `read()` fields include `people`, `groups`.
 
-The [UI binding](ui.ts) presents `People`, `Groups`, `Opposite-sex tolerance (%)`, `Tick`, `Happy`, `Single-sex groups`, `Party groups`, `Person`, `Number happy`.
+## Sources and limits
 
-## Sources and acceptance
+Adapted from the NetLogo *Party* model (© 1997 Uri Wilensky). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+The two labels and one tolerance rule are assumptions from the source, not a measured model of social preferences. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 
-[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `party` and links any shared checks.
+[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) records the acceptance stages for `party`.

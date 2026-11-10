@@ -3,7 +3,7 @@ import { model } from "./model.ts";
 
 export const ui = defineUI(model, {
   live: { influence: { set: (instance, value) => instance.setInfluence(value) } },
-  monitors: [{ label: "Tick", value: state => state.tick }, { label: "Recycling households", value: state => state.adopters }],
+  monitors: [{ label: "Tick", value: state => state.tick }, { label: "Recycling households", value: state => state.adopterCount }],
   views: [
     { type: "network", label: "Peer adoption · green recycling, orange waiting", nodes: recyclingNodes, edges: state => state.edges },
     { type: "inspector", label: "Household", value: (state, selected) => {

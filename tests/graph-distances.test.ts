@@ -27,7 +27,7 @@ test("all algorithms agree with independent Floyd–Warshall on mixed multigraph
     const finitePairs = oracle.flatMap((row, from) => row.filter((value, to) => from !== to && Number.isFinite(value)));
     const eccentricities = oracle.map((row, from) => Math.max(0, ...row.filter((value, to) => from !== to && Number.isFinite(value))));
     const summary = graph.distanceSummary({ cost: edge => edge.weight });
-    expect(summary.reachablePairs).toBe(finitePairs.length);
+    expect(summary.reachablePairCount).toBe(finitePairs.length);
     expect(summary.mean).toBe(finitePairs.length ? finitePairs.reduce((a, b) => a + b, 0) / finitePairs.length : undefined);
     expect(summary.radius).toBe(Math.min(...eccentricities));
     expect(summary.diameter).toBe(Math.max(...eccentricities));
@@ -197,7 +197,7 @@ test("pure public observations preserve World/RNG authority and independent inst
   expect(a.energy).toBe(1); expect(b.energy).toBe(2);
   const independent = Graph.create<typeof a>();
   independent.nodes.add(a);
-  expect(independent.distanceSummary().reachablePairs).toBe(0);
+  expect(independent.distanceSummary().reachablePairCount).toBe(0);
   graph.delete();
   expect(independent.distances({ from: a })).toEqual(new Map([[a, 0]]));
   expect(a.alive).toBe(true);

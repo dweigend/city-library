@@ -1,12 +1,19 @@
 # Wolf Sheep Predation
 
-Wolves eat sheep and spend energy; the optional grass variant also gives sheep renewable food and energy costs. Local reproduction and movement can create population feedback without being identical to aggregate predator–prey equations.
+Can predators and prey keep each other in check when every animal follows only a few local rules? Sheep and wolves wander and reproduce with a fixed chance per step. Wolves spend energy every step and gain it by eating sheep they meet; a wolf without energy dies. In the `sheep-wolves-grass` mode, sheep spend energy too and must eat grass, which grows back `grassRegrowth` steps after being eaten. In the simpler `sheep-wolves` mode, sheep need no food.
+
+Population curves can rise and fall in linked waves, but they come from individual encounters, not from the classic predator–prey equations.
+
+Things to try:
+
+- Compare the two `mode` values with the same seed. Which one keeps both species alive longer?
+- Change `grassRegrowth` in the grass mode and follow the sheep and wolf counts. How does the timing of the waves shift?
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Wolf Sheep Predation`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Choose **Wolf Sheep Predation** in [Agent Lab](../../ui/agent-lab/README.md).
 
-Headless, from a script in the repository root:
+From a script in the repository root:
 
 ```ts
 import { create } from "./models/wolf-sheep-predation/model.ts";
@@ -18,14 +25,14 @@ const observation = simulation.read();
 
 ## Parameters
 
-`create(options)` accepts these input keys. The [UI binding](ui.ts) distinguishes setup controls from live changes; [model.ts](model.ts) defines additional validation.
+`create(options)` accepts these inputs. [ui.ts](ui.ts) decides which are setup controls and which can change during a run; [model.ts](model.ts) adds further validation.
 
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
 | `mode` | `"sheep-wolves"` | `sheep-wolves`, `sheep-wolves-grass` |
-| `initialSheep` | `100` | integer; ≥ 0; ≤ 250 |
-| `initialWolves` | `50` | integer; ≥ 0; ≤ 250 |
+| `initialSheepCount` | `100` | integer; ≥ 0; ≤ 250 |
+| `initialWolfCount` | `50` | integer; ≥ 0; ≤ 250 |
 | `sheepGain` | `4` | integer; ≥ 0; ≤ 50 |
 | `wolfGain` | `20` | integer; ≥ 0; ≤ 100 |
 | `sheepReproduce` | `4` | integer; ≥ 1; ≤ 20 |
@@ -34,16 +41,16 @@ const observation = simulation.read();
 
 ## Actions and observations
 
-Use `advance(...)` for progress and `read()` for observations; the model defines how work advances its tick.
+Call `advance()` with an optional step count to run the model; the model defines how a step advances its tick. Call `read()` for a detached snapshot.
 
-Other instance procedures: `setRules`. See their typed arguments in [model.ts](model.ts).
+Other actions: `setRules`. Their typed arguments are in [model.ts](model.ts).
 
 Model-specific `read()` fields include `counts`, `agents`, `cells`, `stopReason`.
 
-The [UI binding](ui.ts) presents `Sheep food gain`, `Wolf food gain`, `Sheep reproduction (%)`, `Wolf reproduction (%)`, `Tick`, `Sheep`, `Wolves`, `Grass / 4`, `Selected`, `Animals and grass` and further views or controls.
+## Sources and limits
 
-## Sources and acceptance
+Adapted from the NetLogo *Wolf Sheep Predation* model by Wilensky (1997). Attribution and adaptation notes are in the comments of [model.ts](model.ts) and the retained source notices; the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
 
-Attribution and rights: [adaptation comments](model.ts) and the retained source notices. Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+Random movement, fixed reproduction chances and simple energy budgets stand in for real animal behavior. The model shows what these rules can produce; it does not predict real populations. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 
-[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `wolf-sheep-predation` and links any shared checks.
+[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) records the acceptance stages for `wolf-sheep-predation`.

@@ -1,7 +1,7 @@
 /** Martin & Wilensky (2021), CC BY-NC-SA 3.0; native order and source defects preserved. */
 import { Agent, Grid, Random, World, run, geometry, stats } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export type MachineKind =
   | "cutter"
   | "stitcher"
@@ -12,7 +12,7 @@ export type MachineKind =
 export type FactoryKind = MachineKind | "robot" | "order";
 export interface FactoryParameters {
   seed: number;
-  numberOfRobots: number;
+  robotCount: number;
   fullCharge: number;
   justInTimeSupplyRobot: number;
   showAgentName: boolean;
@@ -20,7 +20,7 @@ export interface FactoryParameters {
 }
 export const inputs: Inputs<FactoryParameters> = {
   seed: { kind: "number", default: 1, integer: true },
-  numberOfRobots: {
+  robotCount: {
     kind: "number",
     default: 5,
     min: 3,
@@ -37,7 +37,7 @@ interface EntityState {
   kind: FactoryKind;
   product: number;
   supply: number;
-  agentsPresent: number;
+  presentAgentCount: number;
   energy: number;
   laden: boolean;
   destination: Entity | null;
@@ -60,7 +60,7 @@ export interface EntitySnapshot {
   heading: number;
   product: number;
   supply: number;
-  agentsPresent: number;
+  presentAgentCount: number;
   energy: number;
   laden: boolean;
   destination: number | null;
@@ -75,7 +75,7 @@ export interface EntitySnapshot {
   penDown: boolean;
 }
 export function create(options: Partial<FactoryParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const space = { x: 33, y: 33, boundary: "hard" as const },
     random = Random.create({ seed: settings.seed }),
     world = World.create(space, { random }),
@@ -97,13 +97,13 @@ export function create(options: Partial<FactoryParameters> = {}) {
   }[] = [];
   const history: {
     tick: number;
-    idle: number;
-    orders: number;
-    deluxe: number;
-    standard: number;
-    cutters: number;
-    stitchers: number;
-    finishers: number;
+    idleRobotCount: number;
+    orderCount: number;
+    deluxeOrderCount: number;
+    standardOrderCount: number;
+    cutterCount: number;
+    stitcherCount: number;
+    finisherCount: number;
     dock: number;
     stored: number;
   }[] = [];
@@ -120,7 +120,7 @@ export function create(options: Partial<FactoryParameters> = {}) {
           kind,
           product: 0,
           supply: 0,
-          agentsPresent: 0,
+          presentAgentCount: 0,
           energy: 0,
           laden: false,
           destination: null,
@@ -147,7 +147,7 @@ export function create(options: Partial<FactoryParameters> = {}) {
   const of = (kind: FactoryKind) => entities.filter((a) => a.kind === kind);
   const shuffle = (items: readonly Entity[]) =>
     random.sample(items, {
-      count: items.length,
+      sampleCount: items.length,
       algorithm: "fisher-yates-descending",
     });
   function one(items: readonly Entity[]) {
@@ -299,7 +299,7 @@ export function create(options: Partial<FactoryParameters> = {}) {
     return Math.min(
       ...entities
         .filter((a) => a.kind !== "robot")
-        .map((a) => a.agentsPresent),
+        .map((a) => a.presentAgentCount),
     );
   }
   function recharge() {
@@ -317,7 +317,7 @@ export function create(options: Partial<FactoryParameters> = {}) {
           if (random.number() < 0.5) {
             const need = robotSupplyNeed();
             r.destination = one(
-              entities.filter((a) => a.agentsPresent === need),
+              entities.filter((a) => a.presentAgentCount === need),
             );
           } else r.destination = one(of("loading-dock"));
         }
@@ -349,7 +349,7 @@ export function create(options: Partial<FactoryParameters> = {}) {
           make("order", d.x, d.y, {
             product: d.product,
             supply: d.supply,
-            agentsPresent: d.agentsPresent,
+            presentAgentCount: d.presentAgentCount,
             typeOfOrder: Math.floor(random.number() * 2),
             penDown: d.penDown,
           });
@@ -360,7 +360,7 @@ export function create(options: Partial<FactoryParameters> = {}) {
       const robots = of("robot");
       if (robots.length < 3)
         throw new Error("Native n-of 3 exceeds robot count.");
-      for (const r of shuffle(random.sample(robots, { count: 3 })))
+      for (const r of shuffle(random.sample(robots, { sampleCount: 3 })))
         r.destination = one(of("loading-dock"));
     }
   }
@@ -374,16 +374,16 @@ export function create(options: Partial<FactoryParameters> = {}) {
       orders = of("order");
     history.push({
       tick: world.tick.value,
-      idle:
+      idleRobotCount:
         world.tick.value > 0
           ? of("robot").reduce((s, r) => s + r.idleness, 0) / world.tick.value
           : 0,
-      orders: orders.length,
-      deluxe: orders.filter((o) => o.typeOfOrder === 1).length,
-      standard: orders.filter((o) => o.typeOfOrder === 0).length,
-      cutters: sum("cutter"),
-      stitchers: sum("stitcher"),
-      finishers: sum("finisher"),
+      orderCount: orders.length,
+      deluxeOrderCount: orders.filter((o) => o.typeOfOrder === 1).length,
+      standardOrderCount: orders.filter((o) => o.typeOfOrder === 0).length,
+      cutterCount: sum("cutter"),
+      stitcherCount: sum("stitcher"),
+      finisherCount: sum("finisher"),
       dock: sum("loading-dock"),
       stored: sum("storage"),
     });
@@ -398,7 +398,7 @@ export function create(options: Partial<FactoryParameters> = {}) {
       heading: a.heading,
       product: a.product,
       supply: a.supply,
-      agentsPresent: a.agentsPresent,
+      presentAgentCount: a.presentAgentCount,
       energy: a.energy,
       laden: a.laden,
       destination: a.destination?.alive ? a.destination.sourceId : null,
@@ -444,7 +444,7 @@ export function create(options: Partial<FactoryParameters> = {}) {
           p.heading,
           p.product,
           p.supply,
-          p.agentsPresent,
+          p.presentAgentCount,
           p.energy,
           p.idleness,
           p.deluxeLevel,
@@ -459,7 +459,7 @@ export function create(options: Partial<FactoryParameters> = {}) {
         [
           p.product,
           p.supply,
-          p.agentsPresent,
+          p.presentAgentCount,
           p.idleness,
           p.buildCounter,
           p.queuedSupply,
@@ -483,7 +483,7 @@ export function create(options: Partial<FactoryParameters> = {}) {
       a.rotate(p.heading - a.heading);
       a.product = p.product;
       a.supply = p.supply;
-      a.agentsPresent = p.agentsPresent;
+      a.presentAgentCount = p.presentAgentCount;
       a.energy = p.energy;
       a.laden = p.laden;
       a.destination =
@@ -511,16 +511,16 @@ export function create(options: Partial<FactoryParameters> = {}) {
   make("storage", -6, 4);
   make("robot-room", -11, -7);
   const dock = make("loading-dock", 13, 4, { supply: 10 });
-  for (let i = 0; i < settings.numberOfRobots; i++)
+  for (let i = 0; i < settings.robotCount; i++)
     make("robot", random.number() * 33 - 16.5, random.number() * 33 - 16.5, {
       energy: settings.fullCharge,
       destination: dock,
     });
   record();
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) {
         try {
           run(world, () => {
             makeGarments();
@@ -531,7 +531,7 @@ export function create(options: Partial<FactoryParameters> = {}) {
             shiftChange();
             labelAgents();
             for (const a of shuffle(entities)) {
-              a.agentsPresent = here(a).length;
+              a.presentAgentCount = here(a).length;
               a.penDown = settings.makeTrails;
             }
             if (trails.length > 20000) trails.splice(0, trails.length - 20000);
@@ -570,7 +570,7 @@ export function create(options: Partial<FactoryParameters> = {}) {
         )
       )
         throw new TypeError("Setup-only parameter.");
-      settings = parameters(inputs, { ...settings, ...changes });
+      settings = parseParameters(inputs, { ...settings, ...changes });
     },
     read() {
       const robots = of("robot").map(snapshot),
@@ -588,8 +588,8 @@ export function create(options: Partial<FactoryParameters> = {}) {
         orders,
         diagnostic,
         randomState: random.state,
-        newSheets: of("loading-dock").reduce((s, a) => s + a.supply, 0),
-        productsReady: of("storage").reduce((s, a) => s + a.supply, 0),
+        newSheetCount: of("loading-dock").reduce((s, a) => s + a.supply, 0),
+        readyProductCount: of("storage").reduce((s, a) => s + a.supply, 0),
         idlePerTick:
           world.tick.value > 0
             ? robots.reduce((s, a) => s + a.idleness, 0) / world.tick.value

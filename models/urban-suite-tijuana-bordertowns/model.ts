@@ -4,18 +4,18 @@
 import { Agent, Grid, Random, World, geometry, stats } from "city-library";
 import type { RandomState, Field, Position } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 
 export type VisualUpdate =
   | "off"
   | "elevation"
-  | "land value gradient"
+  | "land-value-gradient"
   | "colonias"
-  | "units with no water"
-  | "units with no electricity";
+  | "units-with-no-water"
+  | "units-with-no-electricity";
 export interface TijuanaRules {
-  maquiladoras: number;
-  serviceCenters: number;
+  maquiladoraCount: number;
+  serviceCenterCount: number;
   migrationTicks: number;
   crossingTicks: number;
   buildingTicks: number;
@@ -134,13 +134,13 @@ export class TijuanaRuntimeError extends Error {
 }
 export interface ActionResult {
   status: "noop" | "guarded" | "advanced" | "ready";
-  completed: number;
+  completedStepCount: number;
   message?: string;
 }
 export interface TijuanaModel {
   clear(): void;
-  advanceCityscape(count?: number): ActionResult;
-  advance(count?: number): ActionResult;
+  advanceCityscape(stepCount?: number): ActionResult;
+  advance(stepCount?: number): ActionResult;
   setRules(rules: Partial<TijuanaRules>): void;
   updateDisplay(): void;
   addNode(position: { x: number; y: number }): void;
@@ -199,14 +199,14 @@ export type TijuanaAgentRead =
         works: 0 | readonly AgentReference[];
       }>);
 export type TijuanaCounts = Readonly<{
-  serviceCenters: number;
-  employmentCenters: number;
-  firstBuilders: number;
-  secondBuilders: number;
-  thirdBuilders: number;
-  migrants: number;
-  rings: number;
-  nodes: number;
+  serviceCenterCount: number;
+  employmentCenterCount: number;
+  firstBuilderCount: number;
+  secondBuilderCount: number;
+  thirdBuilderCount: number;
+  migrantCount: number;
+  ringCount: number;
+  nodeCount: number;
 }>;
 export type ReporterReason = "empty-subset" | "zero-denominator" | null;
 export type TijuanaReports = Readonly<{
@@ -276,8 +276,8 @@ export const inputs: Inputs<TijuanaParameters> = freeze({
     max: 4294967295,
     integer: true,
   },
-  maquiladoras: { kind: "number", default: 8, min: 1, max: 8, integer: true },
-  serviceCenters: { kind: "number", default: 3, min: 1, max: 3, integer: true },
+  maquiladoraCount: { kind: "number", default: 8, min: 1, max: 8, integer: true },
+  serviceCenterCount: { kind: "number", default: 3, min: 1, max: 3, integer: true },
   migrationTicks: {
     kind: "number",
     default: 3,
@@ -315,10 +315,10 @@ export const inputs: Inputs<TijuanaParameters> = freeze({
     options: [
       "off",
       "elevation",
-      "land value gradient",
+      "land-value-gradient",
       "colonias",
-      "units with no water",
-      "units with no electricity",
+      "units-with-no-water",
+      "units-with-no-electricity",
     ],
   },
   colorCode: { kind: "boolean", default: true },
@@ -456,20 +456,20 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
   // Public story: clear → advanceCityscape until ready → advance household/city dynamics.
   // Each requested call advances Tick before its procedure, including documented failures.
   // Rules, display refresh, node insertion and scenario loading are explicit interventions.
-  function advance(action: "cityscape" | "go", count = 1): ActionResult {
-    stepCount(count);
-    if (count === 0) return { status: "noop", completed: 0 };
+  function advance(action: "cityscape" | "go", stepCount = 1): ActionResult {
+    validateStepCount(stepCount);
+    if (stepCount === 0) return { status: "noop", completedStepCount: 0 };
     if ((action === "cityscape") === globals.setupDone)
       return {
         status: "guarded",
-        completed: 0,
+        completedStepCount: 0,
         message:
           action === "cityscape"
             ? "Cityscape setup is already completed."
             : "Cityscape setup is not completed.",
       };
-    let completed = 0;
-    for (let i = 0; i < count; i++) {
+    let completedStepCount = 0;
+    for (let i = 0; i < stepCount; i++) {
       boundary(action, () => {
         const tickBefore = world.tick.value;
         world.tick.advance();
@@ -487,15 +487,15 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
         if (history.length > 1001) history.splice(1, 1);
         lastFailure = null;
       });
-      completed++;
+      completedStepCount++;
       if (action === "cityscape" && globals.setupDone)
-        return { status: "ready", completed };
+        return { status: "ready", completedStepCount };
     }
-    return { status: "advanced", completed };
+    return { status: "advanced", completedStepCount };
   }
 
   // One factory owns globals and observations; World/Grid own canonical agents and fields.
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const space = { x: 171, y: 115, boundary: "hard" as const };
   const random = Random.create({ seed: settings.seed });
   const world = World.create(space, { random });
@@ -516,7 +516,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
   const group = (kind: Kind) => all().filter((a) => a.kind === kind);
   const ask = <T>(items: readonly T[], action: (item: T) => void) => {
     for (const item of random.sample(items, {
-      count: items.length,
+      sampleCount: items.length,
       algorithm: "fisher-yates-descending",
     }))
       if (
@@ -526,7 +526,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
         action(item);
   };
   const one = <T>(items: readonly T[]): T | undefined =>
-    items.length ? random.sample(items, { count: 1 })[0] : undefined;
+    items.length ? random.sample(items, { sampleCount: 1 })[0] : undefined;
   function required<T>(value: T | undefined, operation: string): T {
     if (value === undefined)
       throw new TijuanaRuntimeError(
@@ -582,7 +582,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
         "sample-shortage",
         `n-of ${count}: only ${items.length} candidates`,
       );
-    return random.sample(items, { count: Math.trunc(count) });
+    return random.sample(items, { sampleCount: Math.trunc(count) });
   }
   function mean(values: number[], operation: string) {
     if (!values.length)
@@ -735,12 +735,12 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
         if (typeof a.origin === "string") a.colorNumber = colors[a.origin];
       } else if (expansion || a.shape === "circle")
         a.colorNumber =
-          !expansion && settings.visualUpdate === "land value gradient"
+          !expansion && settings.visualUpdate === "land-value-gradient"
             ? 9.9
             : 0;
     }
   }
-  function updateDisplayImpl() {
+  function updateDisplayState() {
     for (const f of fields) {
       switch (settings.visualUpdate) {
         case "off":
@@ -749,13 +749,13 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
         case "elevation":
           f.colorNumber = f.elevation + 50;
           break;
-        case "land value gradient":
+        case "land-value-gradient":
           f.colorNumber = f.landValue;
           break;
-        case "units with no water":
+        case "units-with-no-water":
           if (f.water === 10 && at(f, "migrant").length) f.colorNumber = 67;
           break;
-        case "units with no electricity":
+        case "units-with-no-electricity":
           if (f.electricity === 1 && at(f, "migrant").length)
             f.colorNumber = 127;
           break;
@@ -811,7 +811,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
     ask(
       sample(
         fields.filter((f) => Math.abs(f.x) < 65 && Math.abs(f.y) < 37),
-        settings.serviceCenters,
+        settings.serviceCenterCount,
       ),
       (f) => {
         for (const p of [f, ...neighbors.get(f)!])
@@ -845,7 +845,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
         (b) => (b.origin = { kind: "services", agents: [s] }),
       ),
     );
-    if (settings.serviceCenters > 1)
+    if (settings.serviceCenterCount > 1)
       ask(group("service-center"), (s) => {
         const b = required(
           one(
@@ -981,11 +981,11 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
         roads.some((p) => distance(f, p) < 6) &&
         !roads.some((p) => distance(f, p) < 3),
     );
-    if (candidates.length < settings.maquiladoras)
+    if (candidates.length < settings.maquiladoraCount)
       warnings.push(
         "Warning: unable to create all employment centers, insufficient candidate fields.",
       );
-    batch("employment-center", settings.maquiladoras, { x: 0, y: 0 }, (a) => {
+    batch("employment-center", settings.maquiladoraCount, { x: 0, y: 0 }, (a) => {
       Object.assign(a, {
         shape: "factory",
         label: "",
@@ -1036,7 +1036,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
     globals.marginalValue = globals.values;
     globals.marginalWeight = globals.weights;
     ask(group("third-builder"), (a) => a.delete());
-    if (settings.serviceCenters > 1)
+    if (settings.serviceCenterCount > 1)
       ask(
         group("service-center"),
         (a) => (a.size = Math.max(2, round(here(a).landValue - 3))),
@@ -1374,7 +1374,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
       group("migrant").map((a) => a.livingExpenses),
       "go max costs",
     );
-    updateDisplayImpl();
+    updateDisplayState();
     ask(group("migrant"), (a) => {
       a.savings = precision(a.savings, 2);
       a.livingExpenses = precision(a.livingExpenses, 2);
@@ -1426,14 +1426,14 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
   }
   function counts(): TijuanaCounts {
     return {
-      serviceCenters: group("service-center").length,
-      employmentCenters: group("employment-center").length,
-      firstBuilders: group("first-builder").length,
-      secondBuilders: group("second-builder").length,
-      thirdBuilders: group("third-builder").length,
-      migrants: group("migrant").length,
-      rings: group("ring").length,
-      nodes: group("node").length,
+      serviceCenterCount: group("service-center").length,
+      employmentCenterCount: group("employment-center").length,
+      firstBuilderCount: group("first-builder").length,
+      secondBuilderCount: group("second-builder").length,
+      thirdBuilderCount: group("third-builder").length,
+      migrantCount: group("migrant").length,
+      ringCount: group("ring").length,
+      nodeCount: group("node").length,
     };
   }
   const seedMigrants = () =>
@@ -1470,7 +1470,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
   function setRules(rules: Partial<TijuanaRules>) {
     if (rules && typeof rules === "object" && Object.hasOwn(rules, "seed"))
       throw new TypeError("seed is factory configuration");
-    settings = parameters(inputs, {
+    settings = parseParameters(inputs, {
       ...settings,
       ...validatedRules(rules, false),
     });
@@ -1526,7 +1526,7 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
       throw new TypeError("Invalid scenario mode");
     natural(scenario.tick);
     natural(scenario.nextBirthOrdinal);
-    const nextSettings = parameters(inputs, {
+    const nextSettings = parseParameters(inputs, {
       seed: settings.seed,
       ...validatedRules(scenario.parameters, true),
     });
@@ -1982,10 +1982,10 @@ export function create(options: Partial<TijuanaParameters> = {}): TijuanaModel {
   }
   return {
     clear,
-    advanceCityscape: (count = 1) => advance("cityscape", count),
-    advance: (count = 1) => advance("go", count),
+    advanceCityscape: (stepCount = 1) => advance("cityscape", stepCount),
+    advance: (stepCount = 1) => advance("go", stepCount),
     setRules,
-    updateDisplay: () => boundary("update-display", updateDisplayImpl),
+    updateDisplay: () => boundary("update-display", updateDisplayState),
     addNode,
     setScenario,
     read,

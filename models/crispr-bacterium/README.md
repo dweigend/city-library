@@ -1,12 +1,17 @@
 # CRISPR Bacterium
 
-Molecules move inside a cell, guide RNA and Cas complexes recognize targets, and transcription and degradation compete with viral invasion. Spacer acquisition and explicit infection actions make this a mechanistic teaching example rather than a quantitative molecular simulator.
+How can a bacterium remember viruses it has met? Inside one cell, a CRISPR array stores short viral sequences called spacers. RNA polymerase transcribes guide RNAs from the array, guide RNAs combine with Cas proteins, and these complexes search the cell for matching viral DNA to cut. New spacers can be added when the cell survives an infection. `infect`, `randomInfection` and `commonInfection` start infections on purpose.
+
+Things to try:
+
+- Infect the cell repeatedly with the same virus (`commonInfection`). Does the cell respond faster later?
+- Lower `crisprFunction` and compare the outcome of an infection.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `CRISPR Bacterium`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Choose **CRISPR Bacterium** in [Agent Lab](../../ui/agent-lab/README.md).
 
-Headless, from a script in the repository root:
+From a script in the repository root:
 
 ```ts
 import { create } from "./models/crispr-bacterium/model.ts";
@@ -18,13 +23,13 @@ const observation = simulation.read();
 
 ## Parameters
 
-`create(options)` accepts these input keys. The [UI binding](ui.ts) distinguishes setup controls from live changes; [model.ts](model.ts) defines additional validation.
+`create(options)` accepts these inputs. [ui.ts](ui.ts) decides which are setup controls and which can change during a run; [model.ts](model.ts) adds further validation.
 
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer |
 | `initialArraySize` | `15` | integer; ≥ 1; ≤ 30 |
-| `maxVirusTypes` | `30` | integer; ≥ 1; ≤ 100 |
+| `maxVirusTypeCount` | `30` | integer; ≥ 1; ≤ 100 |
 | `guideUnbindChance` | `5` | number; ≥ 0; ≤ 10 |
 | `processivity` | `80` | number; ≥ 0; ≤ 100 |
 | `crisprFunction` | `20` | number; ≥ 0; ≤ 100 |
@@ -32,16 +37,16 @@ const observation = simulation.read();
 
 ## Actions and observations
 
-Use `advance(...)` for progress and `read()` for observations; the model defines how work advances its tick.
+Call `advance()` with an optional step count to run the model; the model defines how a step advances its tick. Call `read()` for a detached snapshot.
 
-Other instance procedures: `go`, `setParameters`, `infect`, `randomInfection`, `commonInfection`, `transcribe`, `goRNAPs`, `goCas9s`, `goGuideRNAs`, `goCasDimers`, `goViruses`, `move`, `wallAhead`, `degrade`, `infected`, `dnaFields`, `updateLabels`. See their typed arguments in [model.ts](model.ts).
+Other actions: `go`, `setParameters`, `infect`, `randomInfection`, `commonInfection`, `transcribe`, `goRNAPs`, `goCas9s`, `goGuideRNAs`, `goCasDimers`, `goViruses`, `move`, `wallAhead`, `degrade`, `infected`, `dnaFields`, `updateLabels`. Their typed arguments are in [model.ts](model.ts).
 
 Model-specific `read()` fields include `array`, `virusEvent`, `infected`, `followingId`, `rnapCount`, `cas9Count`, `guideCount`, `dimerCount`, `virusCount`, `agents`, `cells`, `edges`, `guideSequences`.
 
-The [UI binding](ui.ts) presents `Common infection`, `Random infection`, `Tick`, `RNAP`, `Cas9`, `Guides`, `Viruses`, `Event`, `CRISPR Bacterium`, `Guide and spacer sequences` and further views or controls.
+## Sources and limits
 
-## Sources and acceptance
+Adapted from the NetLogo *CRISPR Bacterium* model by Woods and Wilensky (2019). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+Molecular machinery is compressed into moving agents and fixed chances. The model teaches the mechanism; it is not a quantitative molecular simulation. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 
-[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `crispr-bacterium` and links any shared checks.
+[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) records the acceptance stages for `crispr-bacterium`.

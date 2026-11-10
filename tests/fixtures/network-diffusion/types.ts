@@ -5,29 +5,29 @@ export type DiffusionTopology = "communities" | "ring" | "hub";
 export type ContactKind = "contact" | "bridge";
 
 export interface NetworkDiffusionOptions {
-  count?: number;
+  agentCount?: number;
   seed?: number;
   transmission?: number;
-  activeTicks?: number;
+  activeDurationTicks?: number;
   topology?: DiffusionTopology;
-  bridges?: boolean;
+  hasBridges?: boolean;
 }
 export type DiffusionParameters = Readonly<Required<NetworkDiffusionOptions>>;
 export interface DiffusionAgentState {
   label: string;
   community: number;
   state: DiffusionState;
-  activeAge: number;
+  activeAgeTicks: number;
 }
 export type DiffusionAgent = Agent<DiffusionAgentState>;
-export interface DiffusionCounts { readonly unaware: number; readonly active: number; readonly settled: number }
+export interface DiffusionCounts { readonly unawareAgentCount: number; readonly activeAgentCount: number; readonly settledAgentCount: number }
 export interface DiffusionHistoryPoint extends DiffusionCounts { readonly tick: number }
 export interface DiffusionAgentObservation {
   readonly id: string;
   readonly label: string;
   readonly community: number;
   readonly state: DiffusionState;
-  readonly activeAge: number;
+  readonly activeAgeTicks: number;
   readonly degree: number;
   readonly alive: boolean;
   readonly attached: boolean;
@@ -54,14 +54,14 @@ export interface NetworkDiffusionSnapshot {
   readonly tick: number;
   readonly agentCount: number;
   readonly state: DiffusionState;
-  readonly activeAge: number;
+  readonly activeAgeTicks: number;
   readonly degree: number;
   readonly community: number;
   readonly parameters: DiffusionParameters;
   readonly counts: DiffusionCounts;
   readonly contactCount: number;
-  readonly newActivations: number;
-  readonly done: boolean;
+  readonly newActivationCount: number;
+  readonly isComplete: boolean;
   readonly randomState: RandomState;
   readonly agents: readonly DiffusionAgentObservation[];
   readonly edges: readonly DiffusionEdgeObservation[];

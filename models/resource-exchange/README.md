@@ -1,11 +1,46 @@
-# Resource exchange
+# Resource Exchange
 
-Each step samples two distinct registered agents. An agent with positive energy transfers one unit to the receiver. Sampling uses a model-owned seeded random stream; reading or selecting an agent does not advance time or consume randomness.
+What happens to a shared quantity when random pairs keep passing it on? Each step picks two different agents at random. If the first has energy left, it gives one unit to the second. Total energy among registered agents stays the same; only its distribution changes.
 
-`model.ts` owns initialization, transfers, membership and detached observations. `ui.ts` binds setup controls and energy views to those public actions. Import `create` for headless runs, or open Resource exchange in Agent Lab. `createExchangeModel` remains available for existing consumers.
+Randomness comes from the model's own seeded stream. Reading the model or selecting an agent does not advance time or use up random numbers. It is an illustrative mechanism, not a calibrated economic model.
 
-Defaults are 24 agents, ten energy units each and seed 1. Count must be 2–200, initial energy 0–1,000,000 and seed a signed or unsigned 32-bit integer. Total energy is conserved among registered agents during transfers; detaching or deleting an agent changes the registered population. Copying creates a detached agent and does not add it to the running world.
+## Use
 
-This is an illustrative mechanism, not a calibrated economic model. The intentional `failStep` action demonstrates that failed execution retains transfer effects without advancing the tick; the UI does not expose this diagnostic action.
+Choose **Resource Exchange** in [Agent Lab](../../ui/agent-lab/README.md).
 
-Run `bun tests/public-contracts/a2a/05-resource-exchange.ts` and `bun test tests/agent-lab-model.test.ts` for seeded replay, independent instances, lifecycle and observation checks.
+From a script in the repository root:
+
+```ts
+import { create } from "./models/resource-exchange/model.ts";
+
+const exchange = create({ count: 24, initialEnergy: 10, seed: 1 });
+exchange.advance(1);
+const { totalEnergy, minimumEnergy, maximumEnergy } = exchange.read();
+```
+
+`createExchangeModel` is the same function as `create` and remains available for existing consumers.
+
+## Parameters
+
+| Input | Default | Declared values |
+| --- | --- | --- |
+| `count` | `24` | integer; ≥ 2; ≤ 200 |
+| `initialEnergy` | `10` | integer; ≥ 0; ≤ 1000000 |
+| `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
+
+## Actions and observations
+
+Besides `advance()` and `read()`, the instance offers `select`, `copy`, `toggleMembership` and `delete`. Detaching or deleting an agent changes the registered population. A copy is a detached agent and does not join the running world.
+
+`failStep` deliberately fails during a step: the transfer it already made remains, but the tick does not advance. The Lab does not expose this diagnostic action.
+
+`read()` reports the selected agent's state plus `tick`, `agentCount`, `totalEnergy`, `minimumEnergy`, `maximumEnergy`, `lastInteractionIds` and `agents`.
+
+## Checks
+
+The public contract script [05-resource-exchange.ts](../../tests/public-contracts/agent-selection/05-resource-exchange.ts) and [agent-lab-model.test.ts](../../tests/agent-lab-model.test.ts) cover seeded replay, independent instances, lifecycle and observation:
+
+```sh
+bun tests/public-contracts/agent-selection/05-resource-exchange.ts
+bun test tests/agent-lab-model.test.ts
+```

@@ -36,8 +36,8 @@ const binding = defineUI(model, {
       value: (s) => s.meanState,
       format: (value: number) => value.toFixed(4),
     },
-    { label: "Grammar 0", value: (s) => s.grammar0 },
-    { label: "Grammar 1", value: (s) => s.grammar1 },
+    { label: "Grammar 0", value: (s) => s.grammar0SpeakerCount },
+    { label: "Grammar 1", value: (s) => s.grammar1SpeakerCount },
   ],
   views: [
     {
@@ -83,11 +83,10 @@ const binding = defineUI(model, {
 });
 
 export { model };
-export const sourceMarker =
-  "selected-social-b02:language-change:99f71d55846902f726fdbe73059d852e9b8510a9102a3524dad3f625d8763e9f";
+
 
 /** Public headless definition and provenance remain inspectable in the loaded binding. */
-export const ui = { ...binding, model, sourceMarker };
+export const ui = { ...binding, model };
 
 function grammarColor(state: number): string {
   const red = Math.round(70 + 155 * state);

@@ -4,7 +4,7 @@ import { join, resolve } from "node:path";
 const directory = await mkdtemp(join(tmpdir(), "city-library-consumer-"));
 async function command(args: string[], cwd: string) {
   const process = Bun.spawn(args, { cwd, stdout: "inherit", stderr: "inherit" });
-  if (await process.exited !== 0) throw new Error(`Consumer command failed: ${args.join(" ")}`);
+  if (await process.exited !== 0) throw new Error(`Consumer command failedRunCount: ${args.join(" ")}`);
 }
 try {
   await mkdir(join(directory, "package"));
@@ -14,7 +14,7 @@ try {
   if (!archive) throw new Error("Package archive missing.");
   await writeFile(join(directory, "package.json"), JSON.stringify({ private: true, type: "module", dependencies: { "city-library": `file:./package/${archive}` } }));
   await command(["bun", "install", "--ignore-scripts"], directory);
-  await writeFile(join(directory, "consumer.ts"), `import {Agent,World,Random,Graph,run} from 'city-library';\nconst person=Agent.create({energy:10});const world=World.create();world.add(person);run(world,()=>{person.energy-=1},5);if(person.energy!==5||world.tick.value!==5)throw Error('consumer mismatch');const random=Random.create({seed:1});const saved=random.state;const picked=random.sample([person],{count:1});if(picked[0]!==person)throw Error('identity mismatch');random.state=saved;const copy=random.copy();if(random.number({min:0,max:10,integer:true})!==Math.floor(copy.number()*10))throw Error('uniform mismatch');const before=random.state;if(random.local(()=>random.number())!==random.copy().number())throw Error('local mismatch');if(JSON.stringify(random.state)!==JSON.stringify(before))throw Error('local mutated continuation');const graph=Graph.create();const neighbor={label:'other'};graph.nodes.add(person);graph.nodes.add(neighbor);const edge=graph.edges.add({from:person,to:neighbor});if(graph.neighbors(person)[0]!==neighbor)throw Error('graph identity mismatch');const holder=Agent.create({graph,edge});if(holder.copy().edge!==edge)throw Error('graph state copy mismatch');person.delete();if(graph.hasNode(person)||edge.alive)throw Error('graph lifecycle mismatch');\n`);
+  await writeFile(join(directory, "consumer.ts"), `import {Agent,World,Random,Graph,run} from 'city-library';\nconst person=Agent.create({energy:10});const world=World.create();world.add(person);run(world,()=>{person.energy-=1},5);if(person.energy!==5||world.tick.value!==5)throw Error('consumer mismatch');const random=Random.create({seed:1});const saved=random.state;const picked=random.sample([person],{sampleCount:1});if(picked[0]!==person)throw Error('identity mismatch');random.state=saved;const copy=random.copy();if(random.number({min:0,max:10,integer:true})!==Math.floor(copy.number()*10))throw Error('uniform mismatch');const before=random.state;if(random.local(()=>random.number())!==random.copy().number())throw Error('local mismatch');if(JSON.stringify(random.state)!==JSON.stringify(before))throw Error('local mutated continuation');const graph=Graph.create();const neighbor={label:'other'};graph.nodes.add(person);graph.nodes.add(neighbor);const edge=graph.edges.add({from:person,to:neighbor});if(graph.neighbors(person)[0]!==neighbor)throw Error('graph identity mismatch');const holder=Agent.create({graph,edge});if(holder.copy().edge!==edge)throw Error('graph state copy mismatch');person.delete();if(graph.hasNode(person)||edge.alive)throw Error('graph lifecycle mismatch');\n`);
   await writeFile(join(directory, "consumer.ts"), `
 import {Grid,stats,geometry} from 'city-library';
 const spatial=World.create({x:3,y:3,boundary:'wrap'});
@@ -47,7 +47,7 @@ const ca=components.nodes.add({label:'a'}),cb=components.nodes.add({label:'b'}),
 components.edges.add({from:ca,to:cb,directed:true});
 components.edges.add({from:cb,to:ca,directed:true});
 components.edges.add({from:cb,to:cc,directed:true});
-if(!components.connected()||components.connected({mode:'strong'}))throw Error('packed connectivity mismatch');
+if(!components.isConnected()||components.isConnected({mode:'strong'}))throw Error('packed connectivity mismatch');
 const parts=components.components({mode:'strong'});
 if(parts.length!==2||parts[0][0]!==ca||parts[0][1]!==cb||parts[1][0]!==cc||!Object.isFrozen(parts[0]))throw Error('packed canonical component mismatch');
 const blocks=Graph.create({parallel:true,selfLoops:true});
@@ -56,7 +56,7 @@ blocks.edges.add({from:ca,to:cb});blocks.edges.add({from:cb,to:cc});
 if(blocks.components({mode:'biconnected'}).length!==2)throw Error('packed biconnected mismatch');
 if(components.distances({from:ca}).get(cc)!==2||components.allDistances().get(cb)?.get(ca)!==1)throw Error('packed directed distances mismatch');
 const distanceSummary=components.distanceSummary();
-if(distanceSummary.reachablePairs!==4||distanceSummary.mean!==1.25||distanceSummary.diameter!==2||distanceSummary.radius!==0)throw Error('packed distance summary mismatch');
+if(distanceSummary.reachablePairCount!==4||distanceSummary.mean!==1.25||distanceSummary.diameter!==2||distanceSummary.radius!==0)throw Error('packed distance summary mismatch');
 const signedGraph=Graph.create({edgeState:{weight:2}});
 const signedA=signedGraph.nodes.add({}),signedB=signedGraph.nodes.add({}),signedC=signedGraph.nodes.add({});
 signedGraph.edges.add({from:signedA,to:signedB,directed:true});signedGraph.edges.add({from:signedB,to:signedC,directed:true,state:{weight:-3}});
@@ -79,7 +79,7 @@ if(analysisGraph.analyze({measure:'closeness'}).get(analysisA)!==1)throw Error('
 if(analysisGraph.analyze({measure:'betweenness'}).get(analysisA)!==0)throw Error('packed betweenness mismatch');
 const packedEigen=analysisGraph.analyze({measure:'eigenvector'}).get(analysisA);
 if(packedEigen===undefined||Math.abs(packedEigen-1/Math.sqrt(2))>1e-10)throw Error('packed eigenvector mismatch');
-const packedRank=analysisGraph.analyze({measure:'pageRank'}).get(analysisA);
+const packedRank=analysisGraph.analyze({measure:'page-rank'}).get(analysisA);
 if(packedRank===undefined||Math.abs(packedRank-0.5)>1e-10)throw Error('packed PageRank mismatch');
 const generatedGraph=Graph.create();
 const generatedNodes=Array.from({length:3},()=>generatedGraph.nodes.add({}));
@@ -105,13 +105,13 @@ const packedNwEdges=packedNwGraph.generate({kind:'kleinberg',profile:'ordered-to
 if(packedNwEdges.length!==7||packedNwEdges[4].from!==packedNwNodes[1]||packedNwEdges[4].to!==packedNwNodes[0])throw Error('packed pinned topology variant mismatch');
 
 import {topology,type Layout} from 'city-library';
-const packedLayout:Layout=topology.square({columns:2,rows:1});
+const packedLayout:Layout=topology.square({columnCount:2,rowCount:1});
 const packedLayoutGrid=Grid.create({layout:packedLayout,state:{temperature:1}});
 packedLayoutGrid.fields[0]!.temperature=3;
 if(packedLayoutGrid.neighbors(packedLayoutGrid.fields[0]!)[0]!==packedLayoutGrid.fields[1])throw Error('packed layout neighbors mismatch');
 if(packedLayoutGrid.fields[1]!.temperature!==1||packedLayoutGrid.fields[0]!.grid!==packedLayoutGrid)throw Error('packed canonical layout Field mismatch');
 if('space' in packedLayoutGrid||'cellSize' in packedLayoutGrid||'diffuse' in packedLayoutGrid)throw Error('packed layout capabilities mismatch');
-const packedHex=topology.hex({columns:3,rows:3});
+const packedHex=topology.hex({columnCount:3,rowCount:3});
 if(packedHex.neighbors({cell:4}).length!==6)throw Error('packed hex adjacency mismatch');
 const packedImported=topology.fromPolygons({polygons:packedLayout.cells.map(cell=>packedLayout.polygon({cell}))});
 if(packedImported.cellAt({position:{x:1,y:0.5}})!==0)throw Error('packed layout tie mismatch');
@@ -128,13 +128,13 @@ packedWalker.move({to:{x:1.5,y:0.5}});
 if(packedLayoutGrid.agentsAt(packedLayoutGrid.fields[0]!).length!==0||packedLayoutGrid.agentsAt(packedLayoutGrid.fields[1]!)[0]!==packedWalker)throw Error('packed layout movement mismatch');
 
 const quadRandom=Random.create({seed:7});
-const rawQuads=topology.quadrilaterals({rings:3,random:quadRandom});
+const rawQuads=topology.quadrilaterals({ringCount:3,random:quadRandom});
 const quadContinuation=JSON.stringify(quadRandom.state);
 if(rawQuads.cells.length!==122)throw Error('packed finite quad count mismatch');
 const quadArea=rawQuads.cells.reduce((sum,cell)=>sum+geometry.area({shape:rawQuads.polygon({cell})}),0);
 if(Math.abs(quadArea-27*Math.sqrt(3)/2)>1e-10)throw Error('packed hex area mismatch');
-const revisedQuads=topology.relax({layout:rawQuads,method:'squareTarget',iterations:4});
-const zeroQuads=topology.relax({layout:rawQuads,method:'squareTarget',iterations:0});
+const revisedQuads=topology.relax({layout:rawQuads,method:'square-target',iterationCount:4});
+const zeroQuads=topology.relax({layout:rawQuads,method:'square-target',iterationCount:0});
 if(revisedQuads===rawQuads||zeroQuads===rawQuads||zeroQuads.polygon({cell:0})===rawQuads.polygon({cell:0}))throw Error('packed quad revision identity mismatch');
 if(JSON.stringify(quadRandom.state)!==quadContinuation)throw Error('packed relaxation consumed random stream');
 for(const cell of rawQuads.cells){
@@ -158,21 +158,21 @@ void summaryTypeContract;
 `);
   await writeFile(join(directory, "grid-parcel-types.ts"), `import {Grid,World,Random,topology,type Layout,type LayoutGrid,type LayoutField,type PlanarGeometry} from 'city-library';
 function layoutTypeContract(){
-const layout:Layout=topology.hex({columns:2,rows:2});
+const layout:Layout=topology.hex({columnCount:2,rowCount:2});
 const grid:LayoutGrid<{temperature:number}>=Grid.create({layout,state:{temperature:1}});
 const field:LayoutField<{temperature:number}>=World.create().add(grid).fields[0]!;
 field.temperature=2;
 const owner:LayoutGrid<{temperature:number}>=field.grid;
 const shape:PlanarGeometry=layout.polygon({cell:0});
-const quads:Layout=topology.quadrilaterals({rings:1,random:Random.create({seed:7})});
-const revised:Layout=topology.relax({layout:quads,method:'squareTarget',iterations:0});
-const mixedFinite={rings:1,boundary:shape,random:Random.create({seed:7})};
+const quads:Layout=topology.quadrilaterals({ringCount:1,random:Random.create({seed:7})});
+const revised:Layout=topology.relax({layout:quads,method:'square-target',iterationCount:0});
+const mixedFinite={ringCount:1,boundary:shape,random:Random.create({seed:7})};
 // @ts-expect-error Finite and arbitrary-boundary options cannot be mixed through a variable.
 topology.quadrilaterals(mixedFinite);
 // @ts-expect-error The finite method requires an explicit canonical stream.
-topology.quadrilaterals({rings:1});
+topology.quadrilaterals({ringCount:1});
 // @ts-expect-error Lloyd remains a research contract.
-topology.relax({layout:revised,method:'lloyd',iterations:1});
+topology.relax({layout:revised,method:'lloyd',iterationCount:1});
 // @ts-expect-error Layout Grids do not have a uniform cell size.
 grid.cellSize;
 // @ts-expect-error Layout Grids do not have regular diffusion.
@@ -237,7 +237,7 @@ twoPhase([scheduled],{compute:member=>member.energy*2,commit:(member,value)=>{me
 if(numeric.read(scheduled).energy!==6)throw Error('packed two-phase mismatch');
 if(continuous.crossing({from:0,to:4,threshold:2,duration:2})?.elapsed!==1)throw Error('packed crossing mismatch');
 const planned=studies.replicate(studies.design({axes:[{name:'demand',values:[1,2]}]}),[1]);
-const study=studies.run({plan:planned,steps:2,create:()=>({world:World.create(),step(){}}),measure:()=>({value:2})});
+const study=studies.run({plan:planned,stepCount:2,create:()=>({world:World.create(),step(){}}),measure:()=>({value:2})});
 if(study.outcomes.length!==2||studies.summarize(study,entry=>entry.samples.at(-1)?.measurement.value)[0]?.mean!==2)throw Error('packed study mismatch');
 `, { flag: "a" });
   await command(["bun", "consumer.ts"], directory);

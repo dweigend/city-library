@@ -5,18 +5,18 @@
  */
 import { Agent, Grid, Random, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 
 export interface AwarenessParameters {
   seed: number;
-  people: number;
-  centers: number;
+  personCount: number;
+  centerCount: number;
   nonUsageLimit: number;
 }
 export const inputs: Inputs<AwarenessParameters> = {
   seed: { kind: "number", default: 1, min: -2147483648, max: 4294967295, integer: true },
-  people: { kind: "number", default: 60, min: 0, max: 300, step: 10, integer: true },
-  centers: { kind: "number", default: 20, min: 0, max: 100, step: 5, integer: true },
+  personCount: { kind: "number", default: 60, min: 0, max: 300, step: 10, integer: true },
+  centerCount: { kind: "number", default: 20, min: 0, max: 100, step: 5, integer: true },
   nonUsageLimit: { kind: "number", default: 100, min: 0, max: 500, step: 5, integer: true },
 };
 export type CenterKind = "original" | "created";
@@ -25,17 +25,17 @@ export interface CenterInput { readonly x: number; readonly y: number; readonly 
 type Person = Agent<{ awareness: number }>;
 interface AwarenessSample {
   readonly tick: number;
-  readonly activists: number;
-  readonly wellInformed: number;
-  readonly aware: number;
-  readonly unaware: number;
-  readonly centers: number;
+  readonly activistCount: number;
+  readonly wellInformedPersonCount: number;
+  readonly awarePersonCount: number;
+  readonly unawarePersonCount: number;
+  readonly centerCount: number;
   readonly meanAwareness: number | null;
   readonly meanNonUsage: number | null;
 }
 
 export function create(options: Partial<AwarenessParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const width = 37, height = 38;
   const random = Random.create({ seed: settings.seed });
   const world = World.create({ x: width, y: height, boundary: "wrap" }, { random });
@@ -48,10 +48,10 @@ export function create(options: Partial<AwarenessParameters> = {}) {
   // Full activation snapshots use the public uniform Fisher-Yates variant.
   // Mulberry/order differ from source model; rendering-only asks consume no draws.
   function activation<T>(snapshot: readonly T[]) {
-    return random.sample(snapshot, { count: snapshot.length, algorithm: "fisher-yates-descending" });
+    return random.sample(snapshot, { sampleCount: snapshot.length, algorithm: "fisher-yates-descending" });
   }
   function initializePeople() {
-    for (let i = 0; i < settings.people; i++) {
+    for (let i = 0; i < settings.personCount; i++) {
       const heading = integer(360);
       const x = random.number() * width - width / 2;
       const y = random.number() * height - height / 2;
@@ -60,20 +60,20 @@ export function create(options: Partial<AwarenessParameters> = {}) {
   }
   function measurement() {
     const population = people();
-    const counts = { activists: 0, wellInformed: 0, aware: 0, unaware: 0, centers: 0 };
+    const counts = { activistCount: 0, wellInformedPersonCount: 0, awarePersonCount: 0, unawarePersonCount: 0, centerCount: 0 };
     let awareness = 0, nonUsage = 0;
     for (const person of population) {
       awareness += person.awareness;
-      if (person.awareness >= 15) counts.activists++;
-      else if (person.awareness >= 10) counts.wellInformed++;
-      else if (person.awareness >= 5) counts.aware++;
-      else counts.unaware++;
+      if (person.awareness >= 15) counts.activistCount++;
+      else if (person.awareness >= 10) counts.wellInformedPersonCount++;
+      else if (person.awareness >= 5) counts.awarePersonCount++;
+      else counts.unawarePersonCount++;
     }
-    for (const field of fields) if (field.center !== null) { counts.centers++; nonUsage += field.nonUsage; }
+    for (const field of fields) if (field.center !== null) { counts.centerCount++; nonUsage += field.nonUsage; }
     return {
       counts,
       meanAwareness: population.length ? awareness / population.length : null,
-      meanNonUsage: counts.centers ? nonUsage / counts.centers : null,
+      meanNonUsage: counts.centerCount ? nonUsage / counts.centerCount : null,
     };
   }
   function record() {
@@ -126,7 +126,7 @@ export function create(options: Partial<AwarenessParameters> = {}) {
   function go() { wander(); experienceCenters(); informOthers(); clampAwareness(); createCenters(); expireCenters(); }
 
   initializePeople();
-  for (const field of random.sample(fields, { count: settings.centers })) field.center = "original";
+  for (const field of random.sample(fields, { sampleCount: settings.centerCount })) field.center = "original";
   record();
 
   function centerAt(value: unknown) {
@@ -140,15 +140,15 @@ export function create(options: Partial<AwarenessParameters> = {}) {
     return field;
   }
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) { run(world, go); record(); }
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) { run(world, go); record(); }
     },
     setRules(rules: Partial<Pick<AwarenessParameters, "nonUsageLimit">>) {
       if (typeof rules !== "object" || rules === null || ![Object.prototype, null].includes(Object.getPrototypeOf(rules)) ||
         Reflect.ownKeys(rules).some(key => key !== "nonUsageLimit" || !("value" in Object.getOwnPropertyDescriptor(rules, key)!)))
         throw new TypeError("Supply only the live nonUsageLimit rule as data.");
-      settings = parameters(inputs, { ...settings, ...rules });
+      settings = parseParameters(inputs, { ...settings, ...rules });
       record();
     },
     setPeople(values: readonly AwarenessPersonInput[]) {

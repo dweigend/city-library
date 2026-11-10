@@ -1,6 +1,6 @@
 import { describe, expect, test } from "bun:test";
 import type { SpatialAgent, SpatialData } from "../ui/definition.ts";
-import { canvasPoint, hitSceneSymbol, symbolDimensions, symbolRotation, validateBufferDimensions, validateCanvasGeometry } from "../ui/views/spatial-geometry.ts";
+import { canvasPoint, isPointInSceneSymbol, symbolDimensions, symbolRotation, validateBufferDimensions, validateCanvasGeometry } from "../ui/views/spatial-geometry.ts";
 
 // Fixed geometry fixtures specify actual painted bounds, not a second renderer.
 const scene = { width: 100, height: 50 };
@@ -17,23 +17,23 @@ describe("flat scene geometry", () => {
   test("subpixel CSS symbols use the painted two-buffer-pixel minimum", () => {
     const dot: SpatialAgent = { id: "dot", x: 0, y: 0, size: 0.1 };
     for (const ratio of [1, 2]) {
-      expect(hitSceneSymbol(dot, 0.24, 0, scene, buffer, ratio)).toBe(true);
-      expect(hitSceneSymbol(dot, 0.26, 0, scene, buffer, ratio)).toBe(false);
+      expect(isPointInSceneSymbol(dot, 0.24, 0, scene, buffer, ratio)).toBe(true);
+      expect(isPointInSceneSymbol(dot, 0.26, 0, scene, buffer, ratio)).toBe(false);
     }
   });
   test("rectangle rotation and nonuniform rounded buffers match painted axes", () => {
     const rotated = { ...rectangle, heading: 90 };
-    expect(hitSceneSymbol(rotated, 0, 4.9, scene, buffer, 1)).toBe(true);
-    expect(hitSceneSymbol(rotated, 0, 5.1, scene, buffer, 1)).toBe(false);
+    expect(isPointInSceneSymbol(rotated, 0, 4.9, scene, buffer, 1)).toBe(true);
+    expect(isPointInSceneSymbol(rotated, 0, 5.1, scene, buffer, 1)).toBe(false);
     const rounded = { width: 401, height: 199 };
-    expect(hitSceneSymbol(rectangle, 4.99, 1.99, scene, rounded, 1)).toBe(true);
-    expect(hitSceneSymbol(rectangle, 5.01, 0, scene, rounded, 1)).toBe(false);
+    expect(isPointInSceneSymbol(rectangle, 4.99, 1.99, scene, rounded, 1)).toBe(true);
+    expect(isPointInSceneSymbol(rectangle, 5.01, 0, scene, rounded, 1)).toBe(false);
   });
   test("triangle and diamond picking exclude unpainted bounding-box corners", () => {
     const marker: SpatialAgent = { id: "direction", x: 0, y: 0, size: 20, shape: "triangle" };
-    expect(hitSceneSymbol(marker, 0, 2.4, scene, buffer, 1)).toBe(true);
-    expect(hitSceneSymbol(marker, 1.7, 2.4, scene, buffer, 1)).toBe(false);
-    expect(hitSceneSymbol({ ...marker, shape: "diamond" }, 2, 2, scene, buffer, 1)).toBe(false);
+    expect(isPointInSceneSymbol(marker, 0, 2.4, scene, buffer, 1)).toBe(true);
+    expect(isPointInSceneSymbol(marker, 1.7, 2.4, scene, buffer, 1)).toBe(false);
+    expect(isPointInSceneSymbol({ ...marker, shape: "diamond" }, 2, 2, scene, buffer, 1)).toBe(false);
   });
   test("finite scene inputs cannot publish overflowing canvas transformations", () => {
     const data: SpatialData = { width: 1, height: 1, agents: [{ id: "far", x: Number.MAX_VALUE, y: 0 }] };

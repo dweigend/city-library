@@ -1,7 +1,7 @@
 /** NetLogo Heatbugs, Wilensky (2004), CC BY-NC-SA 3.0. See source.nlogox/NOTICE.md. */
 import { Agent, Grid, Random, World, run, stats } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface HeatbugsParameters {
   seed: number;
   bugCount: number;
@@ -72,7 +72,7 @@ type Bug = Agent<{
   unhappiness: number;
 }>;
 export function create(options: Partial<HeatbugsParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const width = 100,
     height = 100;
@@ -92,7 +92,7 @@ export function create(options: Partial<HeatbugsParameters> = {}) {
   const integer = (n: number) =>
     Math.sign(n) * Math.floor(random.number() * Math.abs(n));
   const pick = <T>(a: readonly T[]) =>
-    random.sample(a, { count: Math.min(1, a.length) })[0];
+    random.sample(a, { sampleCount: Math.min(1, a.length) })[0];
   function meanUnhappiness() {
     const values = bugs().map((b) => b.unhappiness);
     return values.length ? stats.describe(values).mean! : null;
@@ -104,7 +104,7 @@ export function create(options: Partial<HeatbugsParameters> = {}) {
     if (history.length > 1001) history.splice(1, 1);
   }
   for (const field of random.sample(grid.fields, {
-    count: settings.bugCount,
+    sampleCount: settings.bugCount,
   })) {
     const bug = Agent.create(
       {
@@ -162,9 +162,9 @@ export function create(options: Partial<HeatbugsParameters> = {}) {
   }
   record();
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count && bugs().length; i++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount && bugs().length; i++) {
         run(world, () => {
           grid.diffuse("temp", {
             rate: settings.diffusionRate,
@@ -172,7 +172,7 @@ export function create(options: Partial<HeatbugsParameters> = {}) {
           });
           for (const f of grid.fields) f.temp *= 1 - settings.evaporationRate;
           for (const b of random.sample(bugs(), {
-            count: bugs().length,
+            sampleCount: bugs().length,
             algorithm: "fisher-yates-descending",
           }))
             step(b);
@@ -201,7 +201,7 @@ export function create(options: Partial<HeatbugsParameters> = {}) {
         )
       )
         throw new TypeError("Supply only live rule data.");
-      settings = parameters(inputs, { ...settings, ...rules });
+      settings = parseParameters(inputs, { ...settings, ...rules });
     },
     deepFreeze() {
       for (const f of grid.fields) f.temp = 0;

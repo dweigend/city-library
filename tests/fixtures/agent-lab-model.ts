@@ -50,9 +50,9 @@ export function createTestModel(initialEnergy = 10) {
       if (!agent) throw new RangeError("Select an agent from this test model.");
       selected = agent;
     },
-    advance(steps: number) {
+    advance(stepCount: number) {
       requireAttachedAgent();
-      run(world, step, steps);
+      run(world, step, stepCount);
     },
     toggleMembership() {
       if (!selected.alive) throw new Error("A deleted agent cannot be attached.");

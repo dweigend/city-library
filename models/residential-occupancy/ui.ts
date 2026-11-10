@@ -3,10 +3,10 @@ import { model } from "./model.ts";
 
 export const ui = defineUI(model, {
   complete: state => state.done,
-  live: { slots: { label: "Dwelling slots", set: (instance, value) => instance.setSlots(value) } },
-  actions: [{ label: "Move out first household", run: instance => instance.moveOut(), enabled: state => state.occupied > 0 }],
-  monitors: [{ label: "Day", value: state => state.tick }, { label: "Occupied", value: state => state.occupied },
-    { label: "Available", value: state => state.available }, { label: "Waiting", value: state => state.waiting }],
+  live: { slotCount: { label: "Dwelling slots", set: (instance, value) => instance.setSlots(value) } },
+  actions: [{ label: "Move out first household", run: instance => instance.moveOut(), enabled: state => state.occupiedSlotCount > 0 }],
+  monitors: [{ label: "Day", value: state => state.tick }, { label: "Occupied", value: state => state.occupiedSlotCount },
+    { label: "Available", value: state => state.availableSlotCount }, { label: "Waiting", value: state => state.waitingHouseholdCount }],
   views: [
     { type: "spatial", label: "Housing · orange waiting, blue housed, gray moved out (schematic)", data: housingData },
     { type: "inspector", label: "Household", value: (state, selected) => {
@@ -14,7 +14,7 @@ export const ui = defineUI(model, {
       return household ? { household: household.label, reservation: household.reservation } : undefined;
     } },
     { type: "line", label: "Occupancy", xAxis: { unit: "day" }, yAxis: { label: "Households" },
-      series: state => ["occupied", "waiting"].map(key => ({ label: key, points: state.history.map(sample => ({ x: sample.tick, y: sample.values[key]! })) })) },
+      series: state => ["occupiedSlotCount", "waitingHouseholdCount"].map(key => ({ label: ({"occupiedSlotCount": "Occupied", "availableSlotCount": "Available", "waitingHouseholdCount": "Waiting"})[key]!, points: state.history.map(sample => ({ x: sample.tick, y: sample.values[key]! })) })) },
   ],
 });
 
@@ -34,16 +34,16 @@ const RESIDENT_MOVED_OUT_COLOR = indexedColor(5);
 
 /** Slots and status queues are schematic presentation positions, not dwelling identities. */
 export function housingData(state: HousingObservation): SpatialData {
-  const rows = Math.ceil(Math.max(state.parameters.slots, state.households.length) / SLOT_COLUMNS);
+  const rows = Math.ceil(Math.max(state.parameters.slotCount, state.households.length) / SLOT_COLUMNS);
   const height = Math.max(8, rows * SLOT_SPACING + 2);
   const slotPosition = (index: number) => ({
     x: -SLOT_SPACING + (index % SLOT_COLUMNS) * SLOT_SPACING,
     y: height / 2 - SLOT_SPACING - Math.floor(index / SLOT_COLUMNS) * SLOT_SPACING,
   });
-  const cells = Array.from({ length: state.parameters.slots }, (_, index) => ({
+  const cells = Array.from({ length: state.parameters.slotCount }, (_, index) => ({
     id: `view:slot:${index}`,
     ...slotPosition(index),
-    color: index < state.occupied ? SLOT_OCCUPIED_COLOR : SLOT_AVAILABLE_COLOR,
+    color: index < state.occupiedSlotCount ? SLOT_OCCUPIED_COLOR : SLOT_AVAILABLE_COLOR,
   }));
   const statusCounts = { waiting: 0, granted: 0, released: 0, cancelled: 0 };
   const agents = state.households.map((household, index) => {

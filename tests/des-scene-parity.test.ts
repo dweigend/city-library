@@ -69,23 +69,23 @@ function exercise<State>(instance: { read(): State; advance(count?: number): voi
 
 describe("independent public scene parity", () => {
   test("all service scenes preserve complete entity populations and semantic states", () => {
-    exercise(office({ residents: 100, clerks: 10 }), officeScene, (state, scene) => {
+    exercise(office({ residentCount: 100, clerkCount: 10 }), officeScene, (state, scene) => {
       expect(count(scene, "resident:")).toBe(state.residents.length);
       const capacity = scene.agents.filter(agent => agent.selectable === false);
-      expect(capacity).toHaveLength(Math.max(state.busy, state.parameters.clerks));
-      expect(capacity.filter(agent => agent.filled !== false)).toHaveLength(state.busy);
-      expect(scene.description).toContain(`Clerk capacity: ${state.busy} of ${state.parameters.clerks} seats`);
+      expect(capacity).toHaveLength(Math.max(state.busyClerkCount, state.parameters.clerkCount));
+      expect(capacity.filter(agent => agent.filled !== false)).toHaveLength(state.busyClerkCount);
+      expect(scene.description).toContain(`Clerk capacity: ${state.busyClerkCount} of ${state.parameters.clerkCount} seats`);
       expect(scene.agents.filter(agent => agent.color === scientificPalette.waiting).map(agent => agent.id))
         .toEqual(state.waitingResidents.map(number => `resident:${number}`));
-      expect(scene.agents.filter(agent => agent.color === scientificPalette.waiting)).toHaveLength(state.waiting);
-      expect(scene.agents.filter(agent => agent.color === scientificPalette.active)).toHaveLength(state.busy);
+      expect(scene.agents.filter(agent => agent.color === scientificPalette.waiting)).toHaveLength(state.waitingResidentCount);
+      expect(scene.agents.filter(agent => agent.color === scientificPalette.active)).toHaveLength(state.busyClerkCount);
     });
-    exercise(charging({ vehicles: 100, chargers: 10 }), chargingScene, (state, scene) => {
+    exercise(charging({ vehicleCount: 100, chargerCount: 10 }), chargingScene, (state, scene) => {
       expect(count(scene, "vehicle:")).toBe(state.vehicles.length);
       const capacity = scene.agents.filter(agent => agent.selectable === false);
-      expect(capacity).toHaveLength(Math.max(state.active, state.parameters.chargers));
-      expect(capacity.filter(agent => agent.filled !== false)).toHaveLength(state.active);
-      expect(scene.description).toContain(`Charger capacity: ${state.active} of ${state.parameters.chargers} vehicles`);
+      expect(capacity).toHaveLength(Math.max(state.activeVehicleCount, state.parameters.chargerCount));
+      expect(capacity.filter(agent => agent.filled !== false)).toHaveLength(state.activeVehicleCount);
+      expect(scene.description).toContain(`Charger capacity: ${state.activeVehicleCount} of ${state.parameters.chargerCount} vehicles`);
       expect(scene.agents.filter(agent => agent.color === scientificPalette.waiting).map(agent => agent.id))
         .toEqual(state.waitingVehicles.map(number => `vehicle:${number}`));
       for (const vehicle of state.vehicles) {
@@ -94,83 +94,83 @@ describe("independent public scene parity", () => {
         expect(scene.agents.find(agent => agent.id === `vehicle:${vehicle.number}`)!.color).toBe(color);
       }
     });
-    exercise(buffer({ lots: 100, capacity: 20 }), bufferScene, (state, scene) => {
-      expect(count(scene, "crate:")).toBe(state.produced);
+    exercise(buffer({ lotCount: 100, capacity: 20 }), bufferScene, (state, scene) => {
+      expect(count(scene, "crate:")).toBe(state.producedLotCount);
       const capacity = scene.agents.filter(agent => agent.selectable === false);
       expect(capacity).toHaveLength(state.parameters.capacity);
-      expect(capacity.filter(agent => agent.filled !== false)).toHaveLength(state.stored);
-      expect(scene.description).toContain(`Store capacity: ${state.stored} of ${state.parameters.capacity} crates`);
-      expect(scene.agents.filter(agent => agent.color === scientificPalette.waiting)).toHaveLength(state.blocked);
-      expect(scene.agents.filter(agent => agent.color === scientificPalette.active)).toHaveLength(state.stored);
+      expect(capacity.filter(agent => agent.filled !== false)).toHaveLength(state.storedLotCount);
+      expect(scene.description).toContain(`Store capacity: ${state.storedLotCount} of ${state.parameters.capacity} crates`);
+      expect(scene.agents.filter(agent => agent.color === scientificPalette.waiting)).toHaveLength(state.blockedLotCount);
+      expect(scene.agents.filter(agent => agent.color === scientificPalette.active)).toHaveLength(state.storedLotCount);
     }, 100);
   });
 
   test("transport scenes preserve observed topology and all finite vehicles and parcels", () => {
-    exercise(buses({ buses: 30, berths: 5 }), busScene, (state, scene) => {
+    exercise(buses({ busCount: 30, berthCount: 5 }), busScene, (state, scene) => {
       expect(count(scene, "bus:")).toBe(state.buses.length);
-      expect(count(scene, "berth:")).toBe(state.parameters.berths);
+      expect(count(scene, "berth:")).toBe(state.parameters.berthCount);
       expect(scene.segments).toHaveLength(state.edges.length);
-      expect(scene.agents.filter(agent => agent.color === scientificPalette.waiting)).toHaveLength(state.waiting);
-      expect(scene.agents.filter(agent => agent.color === scientificPalette.completed)).toHaveLength(state.departed);
+      expect(scene.agents.filter(agent => agent.color === scientificPalette.waiting)).toHaveLength(state.waitingBusCount);
+      expect(scene.agents.filter(agent => agent.color === scientificPalette.completed)).toHaveLength(state.departedBusCount);
     });
-    exercise(parcels({ parcels: 30, depotCapacity: 10 }), parcelScene, (state, scene) => {
+    exercise(parcels({ parcelCount: 30, depotCapacity: 10 }), parcelScene, (state, scene) => {
       expect(count(scene, "parcel:")).toBe(state.parcels.length);
       expect(count(scene, "slot:")).toBe(state.parameters.depotCapacity);
       expect(scene.segments).toHaveLength(state.edges.length);
-      expect(scene.agents.find(agent => agent.id === "van")!.color).toBe(state.vanBusy ? scientificPalette.active : scientificPalette.neutral);
-      expect(scene.agents.filter(agent => agent.id.startsWith("parcel:") && agent.color === scientificPalette.completed)).toHaveLength(state.delivered);
+      expect(scene.agents.find(agent => agent.id === "van")!.color).toBe(state.busyVanCount ? scientificPalette.active : scientificPalette.neutral);
+      expect(scene.agents.filter(agent => agent.id.startsWith("parcel:") && agent.color === scientificPalette.completed)).toHaveLength(state.deliveredParcelCount);
     }, 100);
   });
 
   test("spatial services show actual units, conserved bike stock and assigned teams", () => {
     exercise(waste({ loadCapacity: 12 }), wasteScene, (state, scene) => {
-      expect(count(scene, "waste:")).toBe(state.remaining);
-      expect(filled(scene, "load:")).toBe(state.carried);
+      expect(count(scene, "waste:")).toBe(state.remainingWasteUnitCount);
+      expect(filled(scene, "load:")).toBe(state.carriedWasteUnitCount);
       expect(count(scene, "load:")).toBe(state.parameters.loadCapacity);
       for (const field of state.fields) expect(count(scene, `waste:${field.id}:`)).toBe(field.waste);
     });
-    exercise(dispatch({ responders: 3 }), dispatchScene, (state, scene) => {
+    exercise(dispatch({ responderCount: 3 }), dispatchScene, (state, scene) => {
       expect(count(scene, "call:")).toBe(state.calls.length);
-      expect(count(scene, "team:")).toBe(state.busy);
-      expect(count(scene, "idle-team:") + count(scene, "team:")).toBe(state.parameters.responders);
+      expect(count(scene, "team:")).toBe(state.busyResponderCount);
+      expect(count(scene, "idle-team:") + count(scene, "team:")).toBe(state.parameters.responderCount);
       expect(scene.segments).toHaveLength(state.edges.length);
     });
-    exercise(bikes({ targetBikes: 6, truckCapacity: 6 }), bikeScene, (state, scene) => {
-      expect(filled(scene, "bike-slot:") + count(scene, "cargo:")).toBe(state.totalBikes);
-      expect(count(scene, "cargo:")).toBe(state.inTransit);
+    exercise(bikes({ targetBikeCount: 6, truckCapacity: 6 }), bikeScene, (state, scene) => {
+      expect(filled(scene, "bike-slot:") + count(scene, "cargo:")).toBe(state.totalBikeCount);
+      expect(count(scene, "cargo:")).toBe(state.inTransitBikeCount);
       for (const station of state.stations) {
         expect(count(scene, `bike-slot:${station.id}:`)).toBe(station.capacity);
-        expect(filled(scene, `bike-slot:${station.id}:`)).toBe(station.bikes);
+        expect(filled(scene, `bike-slot:${station.id}:`)).toBe(station.bikeCount);
       }
     });
-    exercise(water({ supplyUnits: 12 }), waterScene, (state, scene) => {
+    exercise(water({ supplyUnitCount: 12 }), waterScene, (state, scene) => {
       expect(count(scene, "allocation:")).toBe(state.supplied + state.unmet);
       expect(filled(scene, "allocation:")).toBe(state.supplied);
       expect(scene.description).toContain("No hydraulic flow");
       for (const district of state.districts) expect(filled(scene, `allocation:${district.id}:`)).toBe(district.supplied);
     });
-    exercise(maintenance({ repairTeams: 3 }), maintenanceScene, (state, scene) => {
+    exercise(maintenance({ repairTeamCount: 3 }), maintenanceScene, (state, scene) => {
       for (const machine of state.machines) {
         const glyph = scene.agents.find(agent => agent.id === machine.id)!;
         expect(glyph.shape).toBe("rectangle");
         expect(glyph.color).toBe(machine.status === "operational" ? scientificPalette.completed : machine.status === "repairing" ? scientificPalette.active : scientificPalette.waiting);
       }
-      expect(count(scene, "crew:")).toBe(state.busy);
-      expect(count(scene, "idle-crew:") + count(scene, "crew:")).toBe(state.parameters.repairTeams);
+      expect(count(scene, "crew:")).toBe(state.busyRepairTeamCount);
+      expect(count(scene, "idle-crew:") + count(scene, "crew:")).toBe(state.parameters.repairTeamCount);
     });
   });
 
   test("maximum elevator scene draws each actual waiting or riding person once and each capacity once", () => {
-    const instance = elevator({ floors: 12, elevators: 4, capacity: 8, initialPassengers: 100,
-      arrivalInterval: 1, arrivalLimit: 100, doorTime: 0, transferTime: 0 });
+    const instance = elevator({ floorCount: 12, elevatorCount: 4, capacity: 8, initialPassengerCount: 100,
+      arrivalIntervalSeconds: 1, arrivalCountLimit: 100, doorTimeSeconds: 0, transferTimeSeconds: 0 });
     exercise(instance, elevatorScene, (state, scene) => {
       const drawnPassengers = scene.agents.filter(agent => state.passengers.some(person => person.id === agent.id));
-      expect(drawnPassengers).toHaveLength(state.waiting + state.riding);
-      expect(drawnPassengers.filter(agent => agent.color === scientificPalette.waiting)).toHaveLength(state.waiting);
-      expect(drawnPassengers.filter(agent => agent.color === scientificPalette.active)).toHaveLength(state.riding);
+      expect(drawnPassengers).toHaveLength(state.waitingPassengerCount + state.ridingPassengerCount);
+      expect(drawnPassengers.filter(agent => agent.color === scientificPalette.waiting)).toHaveLength(state.waitingPassengerCount);
+      expect(drawnPassengers.filter(agent => agent.color === scientificPalette.active)).toHaveLength(state.ridingPassengerCount);
       expect(count(scene, "shaft:")).toBe(state.cars.length);
       for (const car of state.cars) expect(scene.agents.filter(agent => agent.id === car.id)).toHaveLength(1);
-      expect(scene.segments).toHaveLength(state.parameters.floors);
+      expect(scene.segments).toHaveLength(state.parameters.floorCount);
       expect(count(scene, "call:")).toBe(state.floorQueues.filter(queue => queue.passengers.length > 0).length);
     }, 200);
     instance.dispose();

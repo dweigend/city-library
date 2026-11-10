@@ -12,7 +12,7 @@ These five examples bind model inputs, actions, observations and charts without 
 | `04-groups-format-and-categories.ts` | Wealth: numeric Gini stays numeric; separate formatting; named class bars preserve class total and RNG | Accessible flat groups; nonadjacent same-group fields; formatted monitor; category and axis/unit text |
 | `05-independent-actions-and-legacy.ts` | Wealth: explicit one-step action and rule change leave second instance/RNG unchanged; legacy setter remains accepted | Two independent mounts; explicit empty setup; legacy duplicate setup/live behavior; disposed action isolation |
 
-`assertions.ts` queries and acts on a real DOM using real model factories, without private runtime imports or test-only public introspection APIs. `authoring.types.ts` adds negative compile-only cases. Exported `browserChecks(container)` functions check setup, normalization and grouping; Bun does not execute them.
+`assertions.ts` queries and acts on a real DOM using real model factories, without private runtime imports or test-only public introspection APIs. `authoring-types.ts` adds negative compile-only cases. Exported `browserChecks(container)` functions check setup, normalization and grouping; Bun does not execute them.
 
 ## Run the examples
 

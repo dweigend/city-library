@@ -37,8 +37,8 @@ export const ui = defineUI(model, {
   },
   change: (instance, changes) => instance.setRules(changes),
   live: {
-    maquiladoras: {},
-    serviceCenters: {},
+    maquiladoraCount: {},
+    serviceCenterCount: {},
     migrationTicks: {},
     crossingTicks: {},
     buildingTicks: {},
@@ -72,11 +72,11 @@ export const ui = defineUI(model, {
       format: (value: number) => value.toFixed(1),
     },
     { label: "Crossed", value: (s) => s.globals.crossed },
-    { label: "Irregular settlers", value: (s) => s.counts.migrants },
+    { label: "Irregular settlers", value: (s) => s.counts.migrantCount },
     {
       label: "Builders (1 / 2 / 3)",
       value: (s) =>
-        `${s.counts.firstBuilders} / ${s.counts.secondBuilders} / ${s.counts.thirdBuilders}`,
+        `${s.counts.firstBuilderCount} / ${s.counts.secondBuilderCount} / ${s.counts.thirdBuilderCount}`,
     },
     {
       label: "Savings",

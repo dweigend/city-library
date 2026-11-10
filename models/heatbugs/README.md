@@ -1,12 +1,19 @@
 # Heatbugs
 
-Bugs seek preferred temperatures while avoiding occupied cells, emit heat and experience diffusion. Unhappiness measures deviation from an assigned ideal, not an independently observed biological welfare measure.
+How do individual temperature preferences shape where agents gather? Each bug has an ideal temperature and gives off heat. Heat spreads to neighboring cells and slowly escapes. A bug that is too warm or too cold moves to the best free neighboring cell, and with `randomMoveChance` it sometimes moves at random instead.
+
+Because the bugs warm their own surroundings, they can end up gathering in clusters or keeping their distance.
+
+Things to try:
+
+- Narrow the range between `minIdealTemp` and `maxIdealTemp`. How does the unhappiness measure change?
+- Use `deepFreeze` or `heatUp` during a run and watch how the bugs respond.
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Heatbugs`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Choose **Heatbugs** in [Agent Lab](../../ui/agent-lab/README.md).
 
-Headless, from a script in the repository root:
+From a script in the repository root:
 
 ```ts
 import { create } from "./models/heatbugs/model.ts";
@@ -18,7 +25,7 @@ const observation = simulation.read();
 
 ## Parameters
 
-`create(options)` accepts these input keys. The [UI binding](ui.ts) distinguishes setup controls from live changes; [model.ts](model.ts) defines additional validation.
+`create(options)` accepts these inputs. [ui.ts](ui.ts) decides which are setup controls and which can change during a run; [model.ts](model.ts) adds further validation.
 
 | Input | Default | Declared values |
 | --- | --- | --- |
@@ -34,16 +41,16 @@ const observation = simulation.read();
 
 ## Actions and observations
 
-Use `advance(...)` for progress and `read()` for observations; the model defines how work advances its tick.
+Call `advance()` with an optional step count to run the model; the model defines how a step advances its tick. Call `read()` for a detached snapshot.
 
-Other instance procedures: `setRules`, `deepFreeze`, `heatUp`, `setColorMode`, `watch`. See their typed arguments in [model.ts](model.ts).
+Other actions: `setRules`, `deepFreeze`, `heatUp`, `setColorMode`, `watch`. Their typed arguments are in [model.ts](model.ts).
 
 Model-specific `read()` fields include `colorByUnhappiness`, `watched`, `meanUnhappiness`, `maxUnhappiness`, `bugs`, `cells`.
 
-The [UI binding](ui.ts) presents `Max ideal temperature`, `Min ideal temperature`, `Random move chance (%)`, `Deep freeze`, `Heat up`, `Ideal temperature`, `Happiness`, `Watch happiest`, `Watch saddest`, `Reset perspective` and further views or controls.
+## Sources and limits
 
-## Sources and acceptance
+Adapted from the NetLogo *Heatbugs* model by Wilensky (2004). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+Unhappiness is the distance from an assigned ideal, not a biological welfare measure, and heat units are not calibrated. The rules come from an artificial-life benchmark, not from insect thermoregulation. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 
-[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `heatbugs` and links any shared checks.
+[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) records the acceptance stages for `heatbugs`.

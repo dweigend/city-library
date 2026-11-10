@@ -1,11 +1,11 @@
 /** NetLogo Ethnocentrism (2003), Uri Wilensky, CC BY-NC-SA 3.0; see NOTICE.md. */
 import { Agent, Grid, Random, World, run } from 'city-library';
 import type { Definition, Inputs } from '../definition.ts';
-import { parameters, stepCount } from '../parameters.ts';
+import { parseParameters, validateStepCount } from '../parameters.ts';
 export interface EthnocentrismParameters {
   seed: number;
   setup: 'empty' | 'full';
-  immigrantsPerDay: number;
+  immigrantCountPerDay: number;
   initialPtr: number;
   costOfGiving: number;
   gainOfReceiving: number;
@@ -23,7 +23,7 @@ export const inputs: Inputs<EthnocentrismParameters> = {
     integer: true,
   },
   setup: { kind: 'choice', default: 'empty', options: ['empty', 'full'] },
-  immigrantsPerDay: {
+  immigrantCountPerDay: {
     kind: 'number',
     default: 1,
     min: 0,
@@ -64,7 +64,7 @@ interface Encounters {
   defOther: number;
 }
 export function create(options: Partial<EthnocentrismParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed }),
     world = World.create({ x: 51, y: 51, boundary: 'wrap' }, { random }),
     grid = Grid.create({ x: 51, y: 51, boundary: 'wrap' });
@@ -101,7 +101,7 @@ export function create(options: Partial<EthnocentrismParameters> = {}) {
   }
   const history: Readonly<{
     tick: number;
-    population: number;
+    personCount: number;
     cc: number;
     cd: number;
     dc: number;
@@ -111,7 +111,7 @@ export function create(options: Partial<EthnocentrismParameters> = {}) {
     history.push(
       Object.freeze({
         tick: world.tick.value,
-        population: agents().length,
+        personCount: agents().length,
         ...genotypes(),
       }),
     );
@@ -143,7 +143,7 @@ export function create(options: Partial<EthnocentrismParameters> = {}) {
     history.length = 0;
     if (full)
       for (const f of random.sample(grid.fields, {
-        count: grid.fields.length,
+        sampleCount: grid.fields.length,
         algorithm: 'fisher-yates-descending',
       }))
         immigrant(f);
@@ -160,26 +160,26 @@ export function create(options: Partial<EthnocentrismParameters> = {}) {
     });
   }
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) {
         run(world, () => {
           turn = emptyStats();
           const empty = grid.fields.filter((f) => !grid.agentsAt(f).length);
           for (const f of random.sample(empty, {
-            count: Math.min(settings.immigrantsPerDay, empty.length),
+            sampleCount: Math.min(settings.immigrantCountPerDay, empty.length),
           }))
             immigrant(f);
           for (const a of agents()) a.ptr = settings.initialPtr;
           for (const a of random.sample(agents(), {
-            count: agents().length,
+            sampleCount: agents().length,
             algorithm: 'fisher-yates-descending',
           })) {
             const ns = neighborhoods
               .get(grid.fieldAt(a)!)!
               .flatMap((f) => grid.agentsAt(f) as readonly Person[]);
             for (const b of random.sample(ns, {
-              count: ns.length,
+              sampleCount: ns.length,
               algorithm: 'fisher-yates-descending',
             })) {
               turn.meet++;
@@ -209,7 +209,7 @@ export function create(options: Partial<EthnocentrismParameters> = {}) {
             }
           }
           const parents = random.sample(agents(), {
-            count: agents().length,
+            sampleCount: agents().length,
             algorithm: 'fisher-yates-descending',
           });
           for (const a of parents)
@@ -234,7 +234,7 @@ export function create(options: Partial<EthnocentrismParameters> = {}) {
               }
             }
           for (const a of random.sample(agents(), {
-            count: agents().length,
+            sampleCount: agents().length,
             algorithm: 'fisher-yates-descending',
           }))
             if (random.number() < settings.deathRate) a.delete();
@@ -272,7 +272,7 @@ export function create(options: Partial<EthnocentrismParameters> = {}) {
         )
       )
         throw new TypeError('Supply only live parameter data.');
-      settings = parameters(inputs, { ...settings, ...values });
+      settings = parseParameters(inputs, { ...settings, ...values });
     },
     read() {
       const totals = last100.reduce(

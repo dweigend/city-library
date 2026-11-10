@@ -1,12 +1,17 @@
 # Basic Epidemic
 
-Moving susceptible people can become infected and later recover in a closed population. Reported epidemic counts and R0 use the model's own infection history; they are not fitted estimates for a named disease.
+How does a rare infection spread through a population that is fully susceptible? People move around. An infected person can infect a susceptible neighbor with `infectionChance`, and after about `averageRecoveryTime` an infected person recovers with `recoveryChance`. Recovered people stay immune. The population is closed: nobody is born, dies or leaves. The model reports infected and cured counts and estimates R0 from its own infection history.
+
+Things to try:
+
+- Lower `infectionChance` and compare the peak of infected people.
+- Change `initialPersonCount` at the same chances. How does density change the course?
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Basic Epidemic`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Choose **Basic Epidemic** in [Agent Lab](../../ui/agent-lab/README.md).
 
-Headless, from a script in the repository root:
+From a script in the repository root:
 
 ```ts
 import { create } from "./models/epidem-basic/model.ts";
@@ -18,28 +23,28 @@ const observation = simulation.read();
 
 ## Parameters
 
-`create(options)` accepts these input keys. The [UI binding](ui.ts) distinguishes setup controls from live changes; [model.ts](model.ts) defines additional validation.
+`create(options)` accepts these inputs. [ui.ts](ui.ts) decides which are setup controls and which can change during a run; [model.ts](model.ts) adds further validation.
 
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer |
-| `initialPeople` | `100` | integer; ≥ 50; ≤ 400 |
+| `initialPersonCount` | `100` | integer; ≥ 50; ≤ 400 |
 | `infectionChance` | `30` | number; ≥ 0; ≤ 100 |
 | `recoveryChance` | `60` | number; ≥ 0; ≤ 100 |
 | `averageRecoveryTime` | `210` | number; ≥ 0; ≤ 300 |
 
 ## Actions and observations
 
-Use `advance(...)` for progress and `read()` for observations; the model defines how work advances its tick.
+Call `advance()` with an optional step count to run the model; the model defines how a step advances its tick. Call `read()` for a detached snapshot.
 
-Other instance procedures: `setup`, `setupPeople`, `move`, `clearCount`, `infect`, `maybeRecover`, `calculateR0`, `go`, `setParameters`. See their typed arguments in [model.ts](model.ts).
+Other actions: `setup`, `setupPeople`, `move`, `clearCount`, `infect`, `maybeRecover`, `calculateR0`, `go`, `setParameters`. Their typed arguments are in [model.ts](model.ts).
 
-Model-specific `read()` fields include `betaN`, `gamma`, `r0`, `nbInfectedPrevious`, `infectedCount`, `curedCount`, `cells`, `agents`.
+Model-specific `read()` fields include `betaN`, `gamma`, `r0`, `previousNewlyInfectedPersonCount`, `infectedCount`, `curedCount`, `cells`, `agents`.
 
-The [UI binding](ui.ts) presents `Tick`, `Infected`, `Recovered`, `R0`, `Infection rate`, `Recovery rate`, `Basic Epidemic`, `History`.
+## Sources and limits
 
-## Sources and acceptance
+Adapted from the NetLogo *epiDEM Basic* model by Yang and Wilensky (2011). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+The counts and R0 come from this model's random encounters. They are not estimates for a real disease. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 
-[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `epidem-basic` and links any shared checks.
+[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) records the acceptance stages for `epidem-basic`.

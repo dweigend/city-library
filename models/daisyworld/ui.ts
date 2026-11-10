@@ -2,7 +2,7 @@ import { defineUI, indexedColor, type Observation, type SpatialData } from "../.
 
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: ["seed", "startBlacks", "startWhites"],
+  setup: ["seed", "initialBlackDaisyCount", "initialWhiteDaisyCount"],
   change: (instance, changes) => instance.setRules(changes),
   live: {
     scenario: {},
@@ -91,8 +91,8 @@ export const ui = defineUI(model, {
       type: "line",
       label: "Population",
       series: (s) =>
-        (["black", "white"] as const).map((key) => ({
-          label: key,
+        (["blackDaisyCount", "whiteDaisyCount"] as const).map((key) => ({
+          label: key === "blackDaisyCount" ? "Black" : "White",
           points: s.history.map((p) => ({
             x: p.tick,
             y: p[key],

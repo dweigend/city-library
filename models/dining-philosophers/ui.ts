@@ -15,9 +15,9 @@ export const ui = defineUI(model, {
   },
   monitors: [
     { label: "Tick", value: (s) => s.tick },
-    { label: "Thinking", value: (s) => s.thinking },
-    { label: "Hungry", value: (s) => s.hungry },
-    { label: "Eating", value: (s) => s.eating },
+    { label: "Thinking", value: (s) => s.thinkingPhilosopherCount },
+    { label: "Hungry", value: (s) => s.hungryPhilosopherCount },
+    { label: "Eating", value: (s) => s.eatingPhilosopherCount },
   ],
   views: [
     {
@@ -32,7 +32,7 @@ export const ui = defineUI(model, {
         {
           label: "Consumed",
           color: "#3975bc",
-          points: s.philosophers.map((p) => ({ x: p.id, y: p.totalEaten })),
+          points: s.philosophers.map((p) => ({ x: p.id, y: p.mealCount })),
         },
       ],
     },
@@ -68,9 +68,9 @@ function tableData(s: UIObservation): SpatialData {
         heading: p.heading,
         label: String(p.id),
         color:
-          p.state === "THINKING"
+          p.state === "thinking"
             ? "#3975bc"
-            : p.state === "HUNGRY"
+            : p.state === "hungry"
               ? "#d74343"
               : "#47a66a",
         size: 25,
@@ -93,17 +93,17 @@ function resourceAllocationSeries(s: UIObservation): readonly Series[] {
     {
       label: "Thinking",
       color: "#3975bc",
-      points: s.history.map((h) => ({ x: h.tick, y: h.thinking })),
+      points: s.history.map((h) => ({ x: h.tick, y: h.thinkingPhilosopherCount })),
     },
     {
       label: "Hungry",
       color: "#d74343",
-      points: s.history.map((h) => ({ x: h.tick, y: h.hungry })),
+      points: s.history.map((h) => ({ x: h.tick, y: h.hungryPhilosopherCount })),
     },
     {
       label: "Eating",
       color: "#47a66a",
-      points: s.history.map((h) => ({ x: h.tick, y: h.eating })),
+      points: s.history.map((h) => ({ x: h.tick, y: h.eatingPhilosopherCount })),
     },
   ];
 }

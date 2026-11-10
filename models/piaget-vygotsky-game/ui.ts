@@ -2,22 +2,22 @@ import { defineUI, indexedColor, type Observation, type SpatialData } from "../.
 
 import { model, type Strategy } from "./model.ts";
 const colors: Record<Strategy, string> = {
-  Random: "#399557",
-  Piagetian: "#3675db",
-  Vygotskiian: "#d83838",
-  "P-V": "#858585",
+  random: "#399557",
+  piagetian: "#3675db",
+  vygotskiian: "#d83838",
+  "piaget-vygotsky": "#858585",
 };
 const binding = defineUI(model, {
-  setup: ["seed", { field: "numberOfPlayers", label: "Players" }],
+  setup: ["seed", { field: "playerCount", label: "Players" }],
   change: (instance, changes) => instance.setParameters(changes),
   live: {
     strategy: {},
-    attemptsPerRun: {},
+    attemptCountPerRun: {},
     randomizeStrategyEachRun: {},
     stopAfterEachRun: {},
     trails: {},
     zpd: {},
-    vygotskiianNeighbors: {},
+    vygotskiianNeighborCount: {},
     moveError: {},
   },
   source: {
@@ -30,7 +30,7 @@ const binding = defineUI(model, {
   ],
   monitors: [
     { label: "Tick", value: (s) => s.tick },
-    { label: "Attempt", value: (s) => s.attempts },
+    { label: "Attempt", value: (s) => s.attemptCount },
     { label: "Strategy", value: (s) => s.strategy },
     {
       label: "Mean distance",
@@ -48,7 +48,7 @@ const binding = defineUI(model, {
       type: "line",
       label: "Average distance from target",
       series: (s) =>
-        (["Random", "Piagetian", "Vygotskiian", "P-V"] as const).map(
+        (["random", "piagetian", "vygotskiian", "piaget-vygotsky"] as const).map(
           (strategy) => ({
             label: strategy,
             color: colors[strategy],
@@ -77,11 +77,10 @@ const binding = defineUI(model, {
 });
 
 export { model };
-export const sourceMarker =
-  "selected-social-b02:piaget-vygotsky-game:f0020ad932d3667cc9e5b710018366515484172bd10814aa4b1f2575f2db84c1";
+
 
 /** Public headless definition and provenance remain inspectable in the loaded binding. */
-export const ui = { ...binding, model, sourceMarker };
+export const ui = { ...binding, model };
 
 type UIObservation = Observation<typeof model>;
 

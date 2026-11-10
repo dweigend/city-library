@@ -148,7 +148,7 @@ test("summary sums published distances exactly, independent of summand order and
       graph.edges.add({ from, to, directed: true, state: { cost } });
     }
     const summary = graph.distanceSummary({ cost: edge => edge.cost });
-    expect(summary.reachablePairs).toBe(3);
+    expect(summary.reachablePairCount).toBe(3);
     expect(summary.mean).toBe(weights[0] === Number.MIN_VALUE ? 4 * Number.MIN_VALUE / 3 : (2 ** 53 + 2) / 3);
   }
   for (const tail of [1, 2 ** 970]) {

@@ -145,11 +145,11 @@
           </Table.Body>
         </Table.Root>
       </div>
-      {#if visible.paged}
+      {#if visible.isPaged}
         <div class="model-view-actions" data-pagination>
-          <Button variant="outline" size="sm" disabled={!visible.previous} onclick={() => page--}>Previous rows</Button>
+          <Button variant="outline" size="sm" disabled={!visible.hasPreviousPage} onclick={() => page--}>Previous rows</Button>
           <output aria-label="Visible rows">{visible.range}</output>
-          <Button variant="outline" size="sm" disabled={!visible.next} onclick={() => page++}>Next rows</Button>
+          <Button variant="outline" size="sm" disabled={!visible.hasNextPage} onclick={() => page++}>Next rows</Button>
         </div>
       {:else if rows.length === 0}<p>No rows</p>{/if}
     {:else if view.type === "inspector" && inspected}

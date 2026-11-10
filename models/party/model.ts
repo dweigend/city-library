@@ -1,10 +1,10 @@
 /** NetLogo Party (1997), Uri Wilensky, CC BY-NC-SA 3.0; see NOTICE.md. */
 import { Agent, Grid, Random, World, run } from 'city-library';
 import type { Definition, Inputs } from '../definition.ts';
-import { parameters, stepCount } from '../parameters.ts';
+import { parseParameters, validateStepCount } from '../parameters.ts';
 export interface PartyParameters {
   seed: number;
-  number: number;
+  personCount: number;
   groupCount: number;
   tolerance: number;
 }
@@ -16,7 +16,7 @@ export const inputs: Inputs<PartyParameters> = {
     max: 4294967295,
     integer: true,
   },
-  number: { kind: 'number', default: 70, min: 0, max: 300, integer: true },
+  personCount: { kind: 'number', default: 70, min: 0, max: 300, integer: true },
   groupCount: { kind: 'number', default: 10, min: 5, max: 20, integer: true },
   tolerance: { kind: 'number', default: 25, min: 0, max: 99 },
 };
@@ -27,7 +27,7 @@ type Person = Agent<{
   happy: boolean;
 }>;
 export function create(options: Partial<PartyParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed }),
     world = World.create(
       { x: 82, y: 111, boundary: { x: 'wrap', y: 'hard' } },
@@ -55,7 +55,7 @@ export function create(options: Partial<PartyParameters> = {}) {
   }
   function spread() {
     for (const a of random.sample(people(), {
-      count: people().length,
+      sampleCount: people().length,
       algorithm: 'fisher-yates-descending',
     })) {
       a.rotate({ towards: { x: a.x, y: a.y + (a.sex === 'female' ? -1 : 1) } });
@@ -74,35 +74,35 @@ export function create(options: Partial<PartyParameters> = {}) {
   const history: Readonly<{
     tick: number;
     happyCount: number;
-    boringGroups: number;
+    singleSexGroupCount: number;
   }>[] = [];
   function groupsNow() {
     return sites.map((f, index) => {
       const group = people().filter((a) => a.group === index),
-        male = group.filter((a) => a.sex === 'male').length;
+        maleCount = group.filter((a) => a.sex === 'male').length;
       return Object.freeze({
         id: f.id,
         index,
         x: f.x - 39.5,
         y: 0,
-        count: group.length,
-        male,
-        female: group.length - male,
-        boring: group.length > 0 && (male === 0 || male === group.length),
+        personCount: group.length,
+        maleCount: maleCount,
+        femaleCount: group.length - maleCount,
+        boring: group.length > 0 && (maleCount === 0 || maleCount === group.length),
       });
     });
   }
   function countsNow() {
     return {
       happyCount: people().filter((a) => a.happy).length,
-      boringGroups: groupsNow().filter((g) => g.boring).length,
+      singleSexGroupCount: groupsNow().filter((g) => g.boring).length,
     };
   }
   function record() {
     history.push(Object.freeze({ tick: world.tick.value, ...countsNow() }));
     if (history.length > 1001) history.splice(1, 1);
   }
-  for (let who = 0; who < settings.number; who++) {
+  for (let who = 0; who < settings.personCount; who++) {
     const group = Math.floor(random.number() * sites.length),
       f = sites[group]!;
     world.add(
@@ -121,10 +121,10 @@ export function create(options: Partial<PartyParameters> = {}) {
   spread();
   record();
   return {
-    advance(count = 1) {
-      stepCount(count);
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
       stopped = false;
-      for (let i = 0; i < count; i++) {
+      for (let i = 0; i < stepCount; i++) {
         if (people().every((a) => a.happy)) {
           stopped = true;
           break;
@@ -133,7 +133,7 @@ export function create(options: Partial<PartyParameters> = {}) {
           for (const a of people()) a.move({ to: sites[a.group]! });
           happiness();
           for (const a of random.sample(people(), {
-            count: people().length,
+            sampleCount: people().length,
             algorithm: 'fisher-yates-descending',
           }))
             if (!a.happy) {
@@ -145,7 +145,7 @@ export function create(options: Partial<PartyParameters> = {}) {
           let malcontents = people().filter((a) => !sites.includes(grid.fieldAt(a)!));
           while (malcontents.length) {
             for (const a of random.sample(malcontents, {
-              count: malcontents.length,
+              sampleCount: malcontents.length,
               algorithm: 'fisher-yates-descending',
             }))
               a.move(1);
@@ -169,7 +169,7 @@ export function create(options: Partial<PartyParameters> = {}) {
         )
       )
         throw new TypeError('Supply only tolerance data.');
-      settings = parameters(inputs, { ...settings, ...values });
+      settings = parseParameters(inputs, { ...settings, ...values });
       stopped = false;
     },
     setGroups(groups: readonly (readonly ('male' | 'female')[])[]) {

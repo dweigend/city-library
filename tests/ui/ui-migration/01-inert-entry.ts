@@ -4,7 +4,7 @@ import { model } from "../../../models/virus-on-a-network/model.ts";
 
 let creations = 0;
 const entry = defineUI({ ...model, create: options => { creations++; return model.create(options); } }, {
-  setup: [{ field: "numberOfNodes", label: "Nodes" }],
+  setup: [{ field: "nodeCount", label: "Nodes" }],
   monitors: [{ label: "Tick", value: state => state.tick }],
   views: [],
 });

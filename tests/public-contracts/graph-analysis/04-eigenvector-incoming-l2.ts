@@ -14,11 +14,11 @@ const seen: Edge<Node, { weight: number }>[] = [];
 // Incoming A=[[0,.5],[2,0]], principal right vector is (1,2)/sqrt5.
 // (A+I) maps the uniform start onto that vector in one update; second update
 // meets iterate-difference stopping, not merely the eigen-equation residual.
-const result = graph.analyze({ measure: "eigenvector", weight: (edge: Edge<Node, { weight: number }>) => { seen.push(edge); return edge.weight; }, tolerance: 1e-12, maxIterations: 2 });
+const result = graph.analyze({ measure: "eigenvector", weight: (edge: Edge<Node, { weight: number }>) => { seen.push(edge); return edge.weight; }, tolerance: 1e-12, maxIterationCount: 2 });
 assert.deepEqual(seen, edges); assert.deepEqual([...result.keys()], [a, b]);
 close(result.get(a), 1 / Math.sqrt(5)); close(result.get(b), 2 / Math.sqrt(5));
 close([...result.values()].reduce((sum, value) => sum + value * value, 0), 1);
-assert.throws(() => graph.analyze({ measure: "eigenvector", weight: (edge: Edge<Node, { weight: number }>) => edge.weight, tolerance: 1e-12, maxIterations: 1 }), Error);
+assert.throws(() => graph.analyze({ measure: "eigenvector", weight: (edge: Edge<Node, { weight: number }>) => edge.weight, tolerance: 1e-12, maxIterationCount: 1 }), Error);
 const star = Graph.create<Node>(); const center = star.nodes.add({ name: "center" });
 const leaves = Array.from({ length: 4 }, (_, i) => star.nodes.add({ name: `leaf${i}` }));
 for (const leaf of leaves) star.edges.add({ from: center, to: leaf });
@@ -27,7 +27,7 @@ close(nativeTopologyScores.get(center), 1 / Math.sqrt(2));
 for (const leaf of leaves) close(nativeTopologyScores.get(leaf), 1 / (2 * Math.sqrt(2)));
 // Source Star5 uses center1/leaf.5; normalize by L2 to compare this connected fixture.
 const isolate = star.nodes.add({ name: "isolate" });
-const scores = star.analyze({ measure: "eigenvector", tolerance: 1e-12, maxIterations: 1000 });
+const scores = star.analyze({ measure: "eigenvector", tolerance: 1e-12, maxIterationCount: 1000 });
 close(scores.get(center), 1 / Math.sqrt(2)); for (const leaf of leaves) close(scores.get(leaf), 1 / (2 * Math.sqrt(2)));
 close(scores.get(isolate), 0); // Global L2 dominant component, unlike observed Web isolate score1.
 const emptyEdges = Graph.create<Node>(); const lonely = emptyEdges.nodes.add({ name: "lonely" });
@@ -35,14 +35,14 @@ assert.equal(emptyEdges.analyze({ measure: "eigenvector" }).get(lonely), 0);
 assert.equal(Graph.create().analyze({ measure: "eigenvector" }).size, 0);
 // Root provisional closure: "edgeless" means zero structural edges. Existing edges with all
 // zero weights have A=0, so (A+I) leaves the equal unit-L2 start unchanged.
-const zero = graph.analyze({ measure: "eigenvector", weight: () => 0, tolerance: 1e-12, maxIterations: 1 });
+const zero = graph.analyze({ measure: "eigenvector", weight: () => 0, tolerance: 1e-12, maxIterationCount: 1 });
 close(zero.get(a), 1 / Math.sqrt(2)); close(zero.get(b), 1 / Math.sqrt(2));
 for (const field of ["direction", "normalized", "disconnected", "cost", "damping"]) {
   assert.throws(() => graph.analyze({ measure: "eigenvector", [field]: field === "cost" ? () => 1 : 1 } as never), TypeError);
   assert.throws(() => graph.analyze({ measure: "eigenvector", [field]: undefined } as never), TypeError);
 }
 for (const tolerance of [0, -1, NaN, Infinity]) assert.throws(() => graph.analyze({ measure: "eigenvector", tolerance }));
-for (const maxIterations of [0, -1, 1.5, Infinity, NaN]) assert.throws(() => graph.analyze({ measure: "eigenvector", maxIterations }));
+for (const maxIterationCount of [0, -1, 1.5, Infinity, NaN]) assert.throws(() => graph.analyze({ measure: "eigenvector", maxIterationCount }));
 assert.throws(() => graph.analyze({ measure: "eigenvector", weight: () => -1 }), RangeError);
 assert.throws(() => graph.analyze({ measure: "eigenvector", weight: () => NaN }), TypeError);
 let invocations = 0;
@@ -64,7 +64,7 @@ const ea = enormous.nodes.add({ name: "ea" }), eb = enormous.nodes.add({ name: "
 for (let copy = 0; copy < 2; copy++) {
   enormous.edges.add({ from: ea, to: eb, directed: true }); enormous.edges.add({ from: eb, to: ea, directed: true });
 }
-const hugeScores = enormous.analyze({ measure: "eigenvector", weight: (edge: Edge<Node, { weight: number }>) => edge.weight, tolerance: 1e-12, maxIterations: 1 });
+const hugeScores = enormous.analyze({ measure: "eigenvector", weight: (edge: Edge<Node, { weight: number }>) => edge.weight, tolerance: 1e-12, maxIterationCount: 1 });
 close(hugeScores.get(ea), 1 / Math.sqrt(2)); close(hugeScores.get(eb), 1 / Math.sqrt(2));
 // Scaling onlyA then addingI changes the specified iteration and wrongly converges
 // here. Scaling the entire(A+I) preserves its near-bipartite oscillation at this
@@ -73,14 +73,14 @@ const oscillating = Graph.create<Node, { weight: number }>({ edgeState: { weight
 const xa = oscillating.nodes.add({ name: "xa" }), xb = oscillating.nodes.add({ name: "xb" });
 oscillating.edges.add({ from: xa, to: xb, directed: true, state: { weight: 1e300 } });
 oscillating.edges.add({ from: xb, to: xa, directed: true, state: { weight: 2.5e299 } });
-assert.throws(() => oscillating.analyze({ measure: "eigenvector", weight: (edge: Edge<Node, { weight: number }>) => edge.weight, tolerance: 1e-12, maxIterations: 100 }), Error);
+assert.throws(() => oscillating.analyze({ measure: "eigenvector", weight: (edge: Edge<Node, { weight: number }>) => edge.weight, tolerance: 1e-12, maxIterationCount: 100 }), Error);
 // Preserve parallel contributions before operator scaling: independently
 // rounding each tiny weight/MAX ratio would yield3MIN instead of the final2MIN.
 const tiny = Graph.create<Node, { weight: number }>({ parallel: true, selfLoops: true, edgeState: { weight: 2 ** -51 } });
 const tinyA = tiny.nodes.add({ name: "dominant" }), tinyB = tiny.nodes.add({ name: "tiny" });
 tiny.edges.add({ from: tinyA, to: tinyA, directed: true, state: { weight: Number.MAX_VALUE } });
 for (let copy = 0; copy < 3; copy++) tiny.edges.add({ from: tinyA, to: tinyB, directed: true });
-const tinyScores = tiny.analyze({ measure: "eigenvector", weight: (edge: Edge<Node, { weight: number }>) => edge.weight, tolerance: 1e-12, maxIterations: 2 });
+const tinyScores = tiny.analyze({ measure: "eigenvector", weight: (edge: Edge<Node, { weight: number }>) => edge.weight, tolerance: 1e-12, maxIterationCount: 2 });
 assert.equal(tinyScores.get(tinyA), 1);
 assert.equal(tinyScores.get(tinyB), 2 * Number.MIN_VALUE);
 console.log("analysis proposal04: incoming weighted L2 eigenvector, convergence and edgeless distinction");

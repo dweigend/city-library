@@ -107,22 +107,22 @@ function populationBySexSeries(s: UIObservation): readonly Series[] {
     {
       label: "Males",
       color: "#3bb34b",
-      points: s.history.map((p) => ({ x: p.tick, y: p.males })),
+      points: s.history.map((p) => ({ x: p.tick, y: p.maleCount })),
     },
     {
       label: "Females",
       color: "#428bd0",
-      points: s.history.map((p) => ({ x: p.tick, y: p.females })),
+      points: s.history.map((p) => ({ x: p.tick, y: p.femaleCount })),
     },
     {
       label: "Carrying",
       color: "#f6a130",
-      points: s.history.map((p) => ({ x: p.tick, y: p.pregnant })),
+      points: s.history.map((p) => ({ x: p.tick, y: p.pregnantFemaleCount })),
     },
     {
       label: "Not carrying",
       color: "#5555a0",
-      points: s.history.map((p) => ({ x: p.tick, y: p.nonPregnant })),
+      points: s.history.map((p) => ({ x: p.tick, y: p.nonPregnantFemaleCount })),
     },
   ];
 }

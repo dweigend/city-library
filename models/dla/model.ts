@@ -1,12 +1,12 @@
 /** NetLogo DLA (Wilensky, 1997), CC BY-NC-SA 3.0; see NOTICE.md. */
 import { Agent, Grid, Random, World, run, geometry } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface DLAParameters {
   width: number;
   height: number;
   seed: number;
-  maxParticles: number;
+  maxParticleCount: number;
   wiggleAngle: number;
   useWholeWorld: boolean;
 }
@@ -20,7 +20,7 @@ export const inputs: Inputs<DLAParameters> = {
     max: 4294967295,
     integer: true,
   },
-  maxParticles: {
+  maxParticleCount: {
     kind: "number",
     default: 100,
     min: 1,
@@ -31,7 +31,7 @@ export const inputs: Inputs<DLAParameters> = {
   useWholeWorld: { kind: "boolean", default: true },
 };
 export function create(options: Partial<DLAParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   if (
     settings.width % 2 !== 1 ||
     settings.height % 2 !== 1 ||
@@ -52,16 +52,16 @@ export function create(options: Partial<DLAParameters> = {}) {
   const history: Readonly<{
     tick: number;
     radius: number;
-    occupied: number;
-    walkers: number;
+    occupiedFieldCount: number;
+    walkerCount: number;
   }>[] = [];
   function record() {
     history.push(
       Object.freeze({
         tick: world.tick.value,
         radius,
-        occupied: grid.fields.filter((f) => f.occupied).length,
-        walkers: world.agents.length,
+        occupiedFieldCount: grid.fields.filter((f) => f.occupied).length,
+        walkerCount: world.agents.length,
       }),
     );
     if (history.length > 1001) history.splice(1, 1);
@@ -109,13 +109,13 @@ export function create(options: Partial<DLAParameters> = {}) {
   }
   function go() {
     while (
-      world.agents.length < settings.maxParticles &&
+      world.agents.length < settings.maxParticleCount &&
       world.agents.length < world.tick.value
     )
       makeNewAgent();
     const walkers = world.agents;
     for (const agent of random.sample(walkers, {
-      count: walkers.length,
+      sampleCount: walkers.length,
       algorithm: "fisher-yates-descending",
     })) {
       wander(agent.id);
@@ -136,18 +136,18 @@ export function create(options: Partial<DLAParameters> = {}) {
         agent.delete();
     }
   }
-  function done() {
+  function isComplete() {
     return radius >= maxPxcor - 3;
   }
   function setRules(
     changes: Partial<
-      Pick<DLAParameters, "maxParticles" | "wiggleAngle" | "useWholeWorld">
+      Pick<DLAParameters, "maxParticleCount" | "wiggleAngle" | "useWholeWorld">
     >,
   ) {
     for (const key of Object.keys(changes))
-      if (!["maxParticles", "wiggleAngle", "useWholeWorld"].includes(key))
+      if (!["maxParticleCount", "wiggleAngle", "useWholeWorld"].includes(key))
         throw new TypeError("Only DLA live rules may change.");
-    settings = parameters(inputs, { ...settings, ...changes });
+    settings = parseParameters(inputs, { ...settings, ...changes });
   }
   setup();
   return {
@@ -155,9 +155,9 @@ export function create(options: Partial<DLAParameters> = {}) {
     makeNewAgent,
     wander,
     setRules,
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count && !done(); i++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount && !isComplete(); i++) {
         run(world, go);
         record();
       }
@@ -169,7 +169,7 @@ export function create(options: Partial<DLAParameters> = {}) {
         height: settings.height,
         parameters: settings,
         radius,
-        done: done(),
+        done: isComplete(),
         cells: Object.freeze(
           grid.fields.map((f) =>
             Object.freeze({ id: f.id, x: f.x, y: f.y, occupied: f.occupied }),

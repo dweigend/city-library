@@ -2,12 +2,12 @@
 import { Agent, Grid, Random, World, geometry } from "city-library";
 import terrain from "./data/terrain.json";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
-export const sourceMarker = "B08-mammoths-native-mask-composition-v1";
+import { parseParameters, validateStepCount } from "../parameters.ts";
+
 export interface Parameters {
   seed: number;
-  numberOfMammoths: number;
-  numberOfHumans: number;
+  mammothCount: number;
+  humanCount: number;
   mammothBirthRate: number;
   humanBirthRate: number;
   mammothSpeed: number;
@@ -17,14 +17,14 @@ export interface Parameters {
 }
 export const inputs: Inputs<Parameters> = {
   seed: { kind: "number", default: 1, integer: true },
-  numberOfMammoths: {
+  mammothCount: {
     kind: "number",
     default: 900,
     min: 0,
     max: 2000,
     integer: true,
   },
-  numberOfHumans: {
+  humanCount: {
     kind: "number",
     default: 50,
     min: 0,
@@ -50,7 +50,7 @@ type Resident = Agent<{
 }>;
 type Terrain = "land" | "ocean" | "changed";
 export function create(options: Partial<Parameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   // source model centers0..96 become City Library centers-48..48; no runtime image conversion.
   const world = World.create({ x: 97, y: 97, boundary: "hard" }, { random });
@@ -58,12 +58,12 @@ export function create(options: Partial<Parameters> = {}) {
     state: { terrain: "ocean" as Terrain },
   });
   world.add(grid);
-  let mammothsKilledByHumans = 0;
-  let mammothsKilledByClimateChange = 0;
+  let humanKilledMammothCount = 0;
+  let climateKilledMammothCount = 0;
   const history: {
     tick: number;
-    mammoths: number;
-    humans: number;
+    mammothCount: number;
+    humanCount: number;
     hunting: number;
     climate: number;
   }[] = [];
@@ -74,10 +74,10 @@ export function create(options: Partial<Parameters> = {}) {
   function record() {
     history.push({
       tick: world.tick.value,
-      mammoths: population("mammoth").length,
-      humans: population("human").length,
-      hunting: mammothsKilledByHumans,
-      climate: mammothsKilledByClimateChange,
+      mammothCount: population("mammoth").length,
+      humanCount: population("human").length,
+      hunting: humanKilledMammothCount,
+      climate: climateKilledMammothCount,
     });
     if (history.length > 1001) history.splice(1, 1);
   }
@@ -86,16 +86,16 @@ export function create(options: Partial<Parameters> = {}) {
     world.tick.reset();
     random.reseed(settings.seed);
     history.length = 0;
-    mammothsKilledByHumans = 0;
-    mammothsKilledByClimateChange = 0;
+    humanKilledMammothCount = 0;
+    climateKilledMammothCount = 0;
     for (const field of grid.fields)
       field.terrain =
         terrain.rows[field.y + 48]![field.x + 48] === "1" ? "land" : "ocean";
     for (const group of ["mammoth", "human"] as const) {
       const count =
         group === "mammoth"
-          ? settings.numberOfMammoths
-          : settings.numberOfHumans;
+          ? settings.mammothCount
+          : settings.humanCount;
       const eligible = grid.fields.filter(
         (field) =>
           field.terrain === "land" &&
@@ -128,7 +128,7 @@ export function create(options: Partial<Parameters> = {}) {
     }
     record();
   }
-  function landAhead(resident: Resident, distance: number): boolean {
+  function hasLandAhead(resident: Resident, distance: number): boolean {
     const forward = geometry.direction({ heading: resident.heading });
     const field = grid.fieldAt({
       x: resident.x + distance * forward.x,
@@ -141,7 +141,7 @@ export function create(options: Partial<Parameters> = {}) {
     resident.rotate(-random.number({ max: 30, integer: true }));
     const turn = random.sample([-10, 10])[0]!;
     let attempts = 0;
-    while (!landAhead(resident, distance)) {
+    while (!hasLandAhead(resident, distance)) {
       resident.rotate(turn);
       // The original loops forever if no direction can reach land. Expose a bounded error.
       if (++attempts >= 36)
@@ -174,7 +174,7 @@ export function create(options: Partial<Parameters> = {}) {
   function climateChange() {
     const land = grid.fields.filter((field) => field.terrain === "land");
     for (const field of random.sample(land, {
-      count: land.length,
+      sampleCount: land.length,
       algorithm: "fisher-yates-descending",
     })) {
       if (random.number() * 100 < settings.climateChangeDecayChance)
@@ -184,7 +184,7 @@ export function create(options: Partial<Parameters> = {}) {
   function mammothsAct() {
     const mammoths = population("mammoth");
     for (const mammoth of random.sample(mammoths, {
-      count: mammoths.length,
+      sampleCount: mammoths.length,
       algorithm: "fisher-yates-descending",
     })) {
       move(mammoth, settings.mammothSpeed);
@@ -194,7 +194,7 @@ export function create(options: Partial<Parameters> = {}) {
   function humansAct() {
     const humans = population("human");
     for (const human of random.sample(humans, {
-      count: humans.length,
+      sampleCount: humans.length,
       algorithm: "fisher-yates-descending",
     })) {
       const nearby = human.neighbors({
@@ -209,7 +209,7 @@ export function create(options: Partial<Parameters> = {}) {
       if (!human.settled) {
         if (nearby.length) {
           const shuffled = random.sample(nearby, {
-            count: nearby.length,
+            sampleCount: nearby.length,
             algorithm: "fisher-yates-descending",
           });
           shuffled.sort((a, b) => human.distanceTo(a) - human.distanceTo(b));
@@ -228,7 +228,7 @@ export function create(options: Partial<Parameters> = {}) {
         }
         if (r < 3 + settings.oddsOfKilling) {
           random.sample(mammothsHere)[0]!.delete();
-          mammothsKilledByHumans++;
+          humanKilledMammothCount++;
         }
       }
       reproduce(human, 12 * 12, settings.humanBirthRate);
@@ -238,7 +238,7 @@ export function create(options: Partial<Parameters> = {}) {
     for (const group of ["human", "mammoth"] as const) {
       const members = population(group);
       for (const resident of random.sample(members, {
-        count: members.length,
+        sampleCount: members.length,
         algorithm: "fisher-yates-descending",
       })) {
         if (
@@ -260,7 +260,7 @@ export function create(options: Partial<Parameters> = {}) {
           grid.fieldAt(resident)!.terrain === "changed" &&
           random.number() * 100 < 5
         ) {
-          mammothsKilledByClimateChange++;
+          climateKilledMammothCount++;
           resident.delete();
           continue;
         }
@@ -268,9 +268,9 @@ export function create(options: Partial<Parameters> = {}) {
       }
     }
   }
-  function advance(count = 1) {
-    stepCount(count);
-    for (let i = 0; i < count; i++) {
+  function advance(stepCount = 1) {
+    validateStepCount(stepCount);
+    for (let i = 0; i < stepCount; i++) {
       climateChange();
       mammothsAct();
       humansAct();
@@ -293,14 +293,14 @@ export function create(options: Partial<Parameters> = {}) {
       group: a.group,
     }));
     return {
-      sourceMarker,
+
       tick: world.tick.value,
       width: 97,
       height: 97,
       years: world.tick.value / 12,
       parameters: settings,
-      mammothsKilledByHumans,
-      mammothsKilledByClimateChange,
+      humanKilledMammothCount: humanKilledMammothCount,
+      climateKilledMammothCount: climateKilledMammothCount,
       mammoths: agents.filter((a) => a.group === "mammoth"),
       humans: agents.filter((a) => a.group === "human"),
       cells: grid.fields.map((field) => ({
@@ -320,7 +320,7 @@ export function create(options: Partial<Parameters> = {}) {
     setup,
     advance,
     read,
-    landAhead,
+    hasLandAhead,
     move,
     reproduce,
     density,
@@ -330,10 +330,10 @@ export function create(options: Partial<Parameters> = {}) {
     dieNaturally,
     setParameters(
       update: Partial<
-        Omit<Parameters, "seed" | "numberOfMammoths" | "numberOfHumans">
+        Omit<Parameters, "seed" | "mammothCount" | "humanCount">
       >,
     ) {
-      settings = parameters(inputs, { ...settings, ...update });
+      settings = parseParameters(inputs, { ...settings, ...update });
     },
   };
 }

@@ -1,8 +1,8 @@
 /** Wilensky (2023), CC BY-NC-SA 3.0; see NOTICE.md. */
 import { Agent, Grid, Random, World, stats } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
-export const sourceMarker = "B08-anisogamy-native-composition-v1";
+import { parseParameters, validateStepCount } from "../parameters.ts";
+
 export function gameteDiameter(mass: number): number {
   return 2 * Math.sqrt(mass / Math.PI);
 }
@@ -11,7 +11,7 @@ export function tickAdvanceAmount(diameters: readonly number[]): number {
 }
 export interface Parameters {
   seed: number;
-  maxAdults: number;
+  maxAdultCount: number;
   worldSize: number;
   zygoteFitnessThreshold: number;
   gameteFitnessThreshold: number;
@@ -21,7 +21,7 @@ export interface Parameters {
 }
 export const inputs: Inputs<Parameters> = {
   seed: { kind: "number", default: 1, integer: true },
-  maxAdults: { kind: "number", default: 100, min: 10, max: 500, integer: true },
+  maxAdultCount: { kind: "number", default: 100, min: 10, max: 500, integer: true },
   worldSize: { kind: "number", default: 65, min: 1, max: 97, integer: true },
   zygoteFitnessThreshold: { kind: "number", default: 0.45, min: 0, max: 0.5 },
   gameteFitnessThreshold: { kind: "number", default: 0, min: 0, max: 0.51 },
@@ -39,7 +39,7 @@ type Organism = Agent<{
   incubationTime: number;
 }>;
 export function create(options: Partial<Parameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   let world = World.create(
     { x: settings.worldSize, y: settings.worldSize, boundary: "wrap" },
@@ -49,13 +49,13 @@ export function create(options: Partial<Parameters> = {}) {
   world.add(grid);
   const history: {
     tick: number;
-    adults: number;
-    gametes: number;
-    zygotes: number;
-    blueAdults: number;
-    redAdults: number;
-    blueGametes: number;
-    redGametes: number;
+    adultCount: number;
+    gameteCount: number;
+    zygoteCount: number;
+    blueAdultCount: number;
+    redAdultCount: number;
+    blueGameteCount: number;
+    redGameteCount: number;
     blueMeanTrait: number | undefined;
     redMeanTrait: number | undefined;
   }[] = [];
@@ -68,16 +68,16 @@ export function create(options: Partial<Parameters> = {}) {
   function record() {
     history.push({
       tick: world.tick.value,
-      adults: population("adult").length,
-      gametes: population("gamete").length,
-      zygotes: population("zygote").length,
-      blueAdults: population("adult").filter((a) => a.matingTypeTrait === 105)
+      adultCount: population("adult").length,
+      gameteCount: population("gamete").length,
+      zygoteCount: population("zygote").length,
+      blueAdultCount: population("adult").filter((a) => a.matingTypeTrait === 105)
         .length,
-      redAdults: population("adult").filter((a) => a.matingTypeTrait === 15)
+      redAdultCount: population("adult").filter((a) => a.matingTypeTrait === 15)
         .length,
-      blueGametes: population("gamete").filter((a) => a.matingTypeTrait === 105)
+      blueGameteCount: population("gamete").filter((a) => a.matingTypeTrait === 105)
         .length,
-      redGametes: population("gamete").filter((a) => a.matingTypeTrait === 15)
+      redGameteCount: population("gamete").filter((a) => a.matingTypeTrait === 15)
         .length,
       blueMeanTrait: stats.describe(
         population("adult")
@@ -108,14 +108,14 @@ export function create(options: Partial<Parameters> = {}) {
     wholeTick = false;
     history.length = 0;
     for (const field of random.sample(grid.fields, {
-      count: grid.fields.length,
+      sampleCount: grid.fields.length,
       algorithm: "fisher-yates-descending",
     })) {
       field.color = 89 + random.number() - random.number() * 2;
     }
     for (let i = 0; i < 10; i++)
       grid.diffuse("color", { rate: 0.5, neighborhood: "moore" });
-    for (let i = 0; i < settings.maxAdults; i++) {
+    for (let i = 0; i < settings.maxAdultCount; i++) {
       // Native create-agents draws a default color and heading before its shuffled body.
       random.number({ max: 14, integer: true });
       world.add(
@@ -139,7 +139,7 @@ export function create(options: Partial<Parameters> = {}) {
     }
     const adults = population("adult");
     for (const adult of random.sample(adults, {
-      count: adults.length,
+      sampleCount: adults.length,
       algorithm: "fisher-yates-descending",
     })) {
       adult.move({
@@ -196,9 +196,9 @@ export function create(options: Partial<Parameters> = {}) {
   }
   function enforceCarryingCapacity() {
     const adults = population("adult");
-    if (adults.length > settings.maxAdults) {
+    if (adults.length > settings.maxAdultCount) {
       for (const adult of random.sample(adults, {
-        count: adults.length - settings.maxAdults,
+        sampleCount: adults.length - settings.maxAdultCount,
       }))
         adult.delete();
     }
@@ -234,15 +234,15 @@ export function create(options: Partial<Parameters> = {}) {
     partner.delete();
     gamete.delete();
   }
-  function advance(count = 1) {
-    stepCount(count);
-    for (let i = 0; i < count; i++) {
+  function advance(stepCount = 1) {
+    validateStepCount(stepCount);
+    for (let i = 0; i < stepCount; i++) {
       wholeTick =
         Math.floor(world.tick.value) > Math.floor(world.tick.value - delta);
       if (wholeTick) {
         const adults = population("adult");
         for (const adult of random.sample(adults, {
-          count: adults.length,
+          sampleCount: adults.length,
           algorithm: "fisher-yates-descending",
         })) {
           adult.rotate(random.number() * 360 - adult.heading);
@@ -253,7 +253,7 @@ export function create(options: Partial<Parameters> = {}) {
         }
         const zygotes = population("zygote");
         for (const zygote of random.sample(zygotes, {
-          count: zygotes.length,
+          sampleCount: zygotes.length,
           algorithm: "fisher-yates-descending",
         })) {
           zygote.incubationTime--;
@@ -265,7 +265,7 @@ export function create(options: Partial<Parameters> = {}) {
         delta = tickAdvanceAmount(population("gamete").map((a) => a.size));
       const gametes = population("gamete");
       for (const gamete of random.sample(gametes, {
-        count: gametes.length,
+        sampleCount: gametes.length,
         algorithm: "fisher-yates-descending",
       })) {
         if (!gamete.alive) continue;
@@ -299,7 +299,7 @@ export function create(options: Partial<Parameters> = {}) {
       incubationTime: a.incubationTime,
     }));
     return {
-      sourceMarker,
+
       tick: world.tick.value,
       width: world.space!.x,
       height: world.space!.y,
@@ -335,12 +335,12 @@ export function create(options: Partial<Parameters> = {}) {
     };
   }
   function setParameters(update: Partial<Omit<Parameters, "seed">>) {
-    settings = parameters(inputs, { ...settings, ...update });
+    settings = parseParameters(inputs, { ...settings, ...update });
   }
   function restoreDefaultParameters() {
     setParameters({
       worldSize: 65,
-      maxAdults: 100,
+      maxAdultCount: 100,
       zygoteFitnessThreshold: 0.45,
       gameteFitnessThreshold: 0.01,
       mutationSigma: 0.025,

@@ -13,7 +13,7 @@ test("similarity is weighted by neighbor links, and threshold uses occupied neig
   expect(state.percentSimilar).toBe(100 * 4 / 6);
   expect(state.percentSimilar).not.toBe(62.5);
   expect(state.residents.map(({ happy }) => happy)).toEqual([true, true, false, false]);
-  expect(state.counts.unhappy).toBe(2);
+  expect(state.counts.unhappyPersonCount).toBe(2);
 });
 
 test("Moore neighborhoods wrap across both edges and isolated residents are happy", () => {
@@ -24,7 +24,7 @@ test("Moore neighborhoods wrap across both edges and isolated residents are happ
     { x: 0, y: 0, group: "orange" },
   ]);
   const state = model.read();
-  expect(state.residents.map(({ similarNearby, otherNearby }) => [similarNearby, otherNearby]))
+  expect(state.residents.map(({ similarNeighborCount, otherNeighborCount }) => [similarNeighborCount, otherNeighborCount]))
     .toEqual([[1, 0], [1, 0], [0, 0]]);
   expect(state.residents.every(({ happy }) => happy)).toBe(true);
   const rng = state.randomState;
@@ -42,7 +42,7 @@ test("full unhappy grid reports no-vacancy without moving or consuming RNG", () 
   })));
   const before = model.read();
   expect(before.stopReason).toBe("no-vacancy");
-  expect(before.counts.unhappy).toBe(9);
+  expect(before.counts.unhappyPersonCount).toBe(9);
   model.advance(10);
   expect(model.read()).toEqual(before);
   model.setRules({ similarWanted: 0 });
@@ -61,10 +61,10 @@ test("live threshold intervention restarts a stable state and records one sample
   const state = model.read();
   expect(state.tick).toBe(1);
   expect(state.history.map(({ tick }) => tick)).toEqual([0, 1]);
-  expect(state.history.at(-1)?.unhappy).toBe(state.counts.unhappy);
+  expect(state.history.at(-1)?.unhappyPersonCount).toBe(state.counts.unhappyPersonCount);
   model.setRules({ similarWanted: 0 });
   expect(model.read().history.map(({ tick }) => tick)).toEqual([0, 1]);
-  expect(model.read().history.at(-1)?.unhappy).toBe(0);
+  expect(model.read().history.at(-1)?.unhappyPersonCount).toBe(0);
 });
 
 test("random-walk relocation is repeatable and keeps canonical identities and exclusive cells", () => {
@@ -79,7 +79,7 @@ test("random-walk relocation is repeatable and keeps canonical identities and ex
   expect(state.residents.map(({ x, y, group, happy }) => [x, y, group, happy]))
     .toEqual(second.read().residents.map(({ x, y, group, happy }) => [x, y, group, happy]));
   expect(state.randomState).toEqual(second.read().randomState);
-  expect(new Set(state.residents.map(({ x, y }) => `${x},${y}`)).size).toBe(state.counts.population);
+  expect(new Set(state.residents.map(({ x, y }) => `${x},${y}`)).size).toBe(state.counts.personCount);
   expect(state.residents.every(({ x, y }) => Number.isInteger(x) && Number.isInteger(y))).toBe(true);
 });
 

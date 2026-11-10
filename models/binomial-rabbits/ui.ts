@@ -3,7 +3,7 @@ import { model } from "./model.ts";
 export const ui = defineUI(model, {
   setup: [
     "seed",
-    { field: "number", label: "Rabbits" },
+    { field: "rabbitCount", label: "Rabbits" },
     { field: "hop1", label: "Hop 1" },
     { field: "ratio1", label: "Ratio 1" },
     { field: "hop2", label: "Hop 2" },
@@ -13,8 +13,8 @@ export const ui = defineUI(model, {
   ],
   complete: (s) => s.done,
   live: {
-    hops: {
-      set: (m, v) => m.setRules({ hops: v }),
+    hopCount: {
+      set: (m, v) => m.setRules({ hopCount: v }),
     },
     xScaling: {
       set: (m, v) => m.setRules({ xScaling: v }),

@@ -20,10 +20,10 @@ export const ui = defineUI(model, {
 type State = Observation<typeof model>;
 function householdsData(state: State): SpatialData {
   // A display arrangement of identical aggregate loads, not physical house locations.
-  const columns = Math.min(maximumHouseColumns, state.parameters.households);
-  const rows = Math.ceil(state.parameters.households / columns);
+  const columns = Math.min(maximumHouseColumns, state.parameters.householdCount);
+  const rows = Math.ceil(state.parameters.householdCount / columns);
   const loadFraction = (state.householdDemandKw - state.householdBaseKw) / (state.householdPeakKw - state.householdBaseKw);
-  const homes = Array.from({ length: state.parameters.households }, (_, index) => ({
+  const homes = Array.from({ length: state.parameters.householdCount }, (_, index) => ({
     id: `household:${index}`, x: index % columns - (columns - 1) / 2,
     y: (rows - 1) / 2 - Math.floor(index / columns),
     color: loadFraction > 0 ? applianceLoadColor : baseLoadColor, size: baseLoadSize + applianceLoadSize * loadFraction,

@@ -9,7 +9,7 @@ export const ui = defineUI(model, {
   },
   monitors: [
     { label: "Tick", value: (s) => s.tick },
-    { label: "Vacancies", value: (s) => s.vacancies },
+    { label: "Vacancies", value: (s) => s.vacancyCount },
     {
       label: "Max diffusion distance squared",
       value: (s) => s.maxDiffusionDistance ?? "Undefined",
@@ -58,12 +58,12 @@ function atomsByColumnSeries(s: UIObservation): readonly Series[] {
     {
       label: "Greens",
       color: "#38a339",
-      points: s.columns.map((c) => ({ x: c.x, y: c.greens })),
+      points: s.columns.map((c) => ({ x: c.x, y: c.greenParticleCount })),
     },
     {
       label: "Blues",
       color: "#315bd5",
-      points: s.columns.map((c) => ({ x: c.x, y: c.blues })),
+      points: s.columns.map((c) => ({ x: c.x, y: c.blueParticleCount })),
     },
   ];
 }

@@ -35,7 +35,7 @@ const scores = star.analyze({ measure: "closeness" }); close(scores.get(center),
 for (const leaf of leaves) close(scores.get(leaf), 4 / 7);
 assert.throws(() => graph.analyze({ measure: "closeness", direction: "all" }), TypeError);
 assert.throws(() => graph.analyze({ measure: "closeness", disconnected: "reject" } as never), TypeError);
-for (const field of ["normalized", "weight", "damping", "tolerance", "maxIterations"]) {
+for (const field of ["normalized", "weight", "damping", "tolerance", "maxIterationCount"]) {
   assert.throws(() => graph.analyze({ measure: "closeness", [field]: field === "weight" ? () => 1 : 1 } as never), TypeError);
   assert.throws(() => graph.analyze({ measure: "closeness", [field]: undefined } as never), TypeError);
 }

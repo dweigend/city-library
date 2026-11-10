@@ -5,7 +5,7 @@ const binding = defineUI(model, {
   setup: [
     "seed",
     { field: "consumerCount", label: "Consumers" },
-    { field: "avgConnections", label: "Average connections" },
+    { field: "meanConnectionCount", label: "Average connections" },
     { field: "initialOrangePercent", label: "Initial orange (%)" },
   ],
   source: {
@@ -89,11 +89,10 @@ const binding = defineUI(model, {
 });
 
 export { model };
-export const sourceMarker =
-  "selected-social-b02:consumer-choice:b8973c79622215eee5fb4aa29abf5c92cd80480b1d1c81c7d5c8d5b569d15236";
+
 
 /** Public headless definition and provenance remain inspectable in the loaded binding. */
-export const ui = { ...binding, model, sourceMarker };
+export const ui = { ...binding, model };
 
 type UIObservation = Observation<typeof model>;
 

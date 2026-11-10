@@ -79,25 +79,25 @@ test("sampling preflight preserves stream on invalid weights and source errors",
   const random = Random.create();
   const before = random.state;
   let calls = 0;
-  assert.deepEqual(random.sample([1, 2, 3], { count: 0, weight(value) { calls++; return value; } }), []);
+  assert.deepEqual(random.sample([1, 2, 3], { sampleCount: 0, weight(value) { calls++; return value; } }), []);
   assert.equal(calls, 3);
   function* broken() { yield 1; throw new Error("source failed"); }
   assert.throws(() => random.sample(broken()));
   assert.throws(() => random.sample([1, 2], { weight: () => Number.MAX_VALUE }));
   assert.throws(() => random.sample([1, 2], { weight: () => -1 }));
-  assert.throws(() => random.sample([1], { count: 0, weight: () => NaN }));
+  assert.throws(() => random.sample([1], { sampleCount: 0, weight: () => NaN }));
   assert.throws(() => random.sample([1], { weight() { throw new Error("weight failed"); } }));
   assert.throws(() => random.sample(42 as never));
-  assert.throws(() => random.sample([1], { count: Number.MAX_SAFE_INTEGER + 1 }));
+  assert.throws(() => random.sample([1], { sampleCount: Number.MAX_SAFE_INTEGER + 1 }));
   assert.deepEqual(random.state, before);
 });
 
 test("sampling preserves duplicate positions and tiny positive weights", () => {
   const person = Agent.create();
-  assert.deepEqual(Random.create().sample([person, person], { count: 4 }), [person, person]);
+  assert.deepEqual(Random.create().sample([person, person], { sampleCount: 4 }), [person, person]);
   const source = [{ weight: Number.MAX_VALUE }, { weight: Number.MIN_VALUE }];
-  assert.deepEqual(Random.create().sample(source, { count: 2, weight: (entry) => entry.weight }), source);
-  const tiny = Random.create().sample(["a", "b"], { count: 2, weight: () => Number.MIN_VALUE });
+  assert.deepEqual(Random.create().sample(source, { sampleCount: 2, weight: (entry) => entry.weight }), source);
+  const tiny = Random.create().sample(["a", "b"], { sampleCount: 2, weight: () => Number.MIN_VALUE });
   assert.equal(tiny.length, 2);
   assert.equal(new Set(tiny).size, 2);
 });
@@ -112,7 +112,7 @@ test("sampling acquires and invokes a source iterator exactly once", () => {
       return function* () { calls++; yield "a"; yield "b"; };
     },
   }) as Iterable<string>;
-  const chosen = Random.create().sample(source, { count: 2, order: "source" });
+  const chosen = Random.create().sample(source, { sampleCount: 2, order: "source" });
   assert.deepEqual(chosen, ["a", "b"]);
   assert.equal(reads, 1);
   assert.equal(calls, 1);
@@ -123,8 +123,8 @@ test("source ordering with replacement remains the same draw schedule", () => {
   const first = Random.create();
   const second = Random.create();
   const source = ["a", "b", "c"];
-  const draw = first.sample(source, { replace: true, count: 10 });
-  const ordered = second.sample(source, { replace: true, count: 10, order: "source" });
+  const draw = first.sample(source, { replace: true, sampleCount: 10 });
+  const ordered = second.sample(source, { replace: true, sampleCount: 10, order: "source" });
   assert.deepEqual(ordered, [...draw].sort());
   assert.deepEqual(first.state, second.state);
   assert.deepEqual(source, ["a", "b", "c"]);

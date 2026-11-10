@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test";
 import { Agent, Graph, Random, World } from "city-library";
 
-function connectedMask(adjacency: readonly (readonly boolean[])[], mask: number): boolean {
+function isMaskConnected(adjacency: readonly (readonly boolean[])[], mask: number): boolean {
   if (mask === 0) return true;
   let first = 0;
   while (!(mask & (1 << first))) first++;
@@ -25,10 +25,10 @@ function connectedMask(adjacency: readonly (readonly boolean[])[], mask: number)
 function blockOracle(adjacency: readonly (readonly boolean[])[]): number[][] {
   const valid: number[] = [];
   for (let mask = 1; mask < 1 << adjacency.length; mask++) {
-    if (!connectedMask(adjacency, mask)) continue;
+    if (!isMaskConnected(adjacency, mask)) continue;
     let survivesCuts = true;
     for (let cut = 0; cut < adjacency.length; cut++)
-      if ((mask & (1 << cut)) && !connectedMask(adjacency, mask & ~(1 << cut))) survivesCuts = false;
+      if ((mask & (1 << cut)) && !isMaskConnected(adjacency, mask & ~(1 << cut))) survivesCuts = false;
     if (survivesCuts) valid.push(mask);
   }
   return valid.filter(mask => !valid.some(other => other !== mask && (mask & other) === mask))
@@ -54,7 +54,7 @@ test("biconnected vertex blocks match cut-definition oracle for all five-node si
       if (edge % 3 === 0) graph.edges.add({ from: nodes[to]!, to: nodes[from]! });
     });
     expect(graph.components({ mode: "biconnected" }).map(part => part.map(node => node.index))).toEqual(blockOracle(adjacency));
-    expect(graph.connected()).toBe(connectedMask(adjacency, 31));
+    expect(graph.isConnected()).toBe(isMaskConnected(adjacency, 31));
   }
 });
 
@@ -82,7 +82,7 @@ test("strong components match independent mutual-reachability oracle on directed
       for (const node of part) remaining.delete(node);
     }
     expect(graph.components({ mode: "strong" }).map(part => part.map(node => node.index))).toEqual(expected);
-    expect(graph.connected({ mode: "strong" })).toBe(expected.length === 1);
+    expect(graph.isConnected({ mode: "strong" })).toBe(expected.length === 1);
   }
 });
 
@@ -93,13 +93,13 @@ test("connectivity options reject malformed data without invoking accessors or m
   let reads = 0;
   for (const invalid of [null, [], new Date(), { mode: "unknown" }, { mode: null }, { mode: 0 }, { extra: 1 }, { [Symbol()]: 1 }, { get mode() { reads++; return "weak"; } }]) {
     expect(() => graph.components(invalid as never)).toThrow(TypeError);
-    expect(() => graph.connected(invalid as never)).toThrow(TypeError);
+    expect(() => graph.isConnected(invalid as never)).toThrow(TypeError);
   }
   expect(reads).toBe(0);
   expect(() => graph.components({ mode: "biconnected" })).toThrow(TypeError);
-  expect(() => graph.connected({ mode: "biconnected" as never })).toThrow(TypeError);
+  expect(() => graph.isConnected({ mode: "biconnected" as never })).toThrow(TypeError);
   expect(graph.components()).toEqual([[node]]);
-  expect(graph.connected()).toBe(true);
+  expect(graph.isConnected()).toBe(true);
   expect(graph.edges.has(edge)).toBe(true);
   expect(graph.edges.size).toBe(1);
 });
@@ -131,7 +131,7 @@ test("iterative connectivity handles a long chain without depending on call-stac
   const graph = Graph.create<{ index: number }>({ parallel: true });
   const nodes = Array.from({ length: 12000 }, (_, index) => graph.nodes.add({ index }));
   for (let index = 1; index < nodes.length; index++) graph.edges.add({ from: nodes[index - 1]!, to: nodes[index]! });
-  expect(graph.connected()).toBe(true);
+  expect(graph.isConnected()).toBe(true);
   expect(graph.components({ mode: "strong" })[0]).toEqual(nodes);
   const blocks = graph.components({ mode: "biconnected" });
   expect(blocks).toHaveLength(nodes.length - 1);

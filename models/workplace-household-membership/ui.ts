@@ -5,8 +5,8 @@ export const ui = defineUI(model, {
   actions: [{ label: "Reassign first resident", run: instance => instance.reassign(0) }],
   monitors: [
     { label: "Tick", value: state => state.tick },
-    { label: "Memberships", value: state => state.memberships },
-    { label: "Workplace A", value: state => state.workplaceA },
+    { label: "Memberships", value: state => state.membershipCount },
+    { label: "Workplace A", value: state => state.workplaceAMemberCount },
   ],
   views: [
     {

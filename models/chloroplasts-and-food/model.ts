@@ -1,12 +1,12 @@
 /** NetLogo Chloroplasts and Food (Novak, Penuel and Wilensky, 2016). See NOTICE.md. */
 import { Agent, Graph, Grid, Random, World, geometry, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 
 export interface ChloroplastParameters {
   seed: number;
-  initialChloroplasts: number;
-  initialCarbonDioxide: number;
+  initialChloroplastCount: number;
+  initialCarbonDioxideCount: number;
   waterflowThroughLeaf: number;
   intensityOfLight: number;
   autoStop: boolean;
@@ -14,14 +14,14 @@ export interface ChloroplastParameters {
 }
 export const inputs: Inputs<ChloroplastParameters> = {
   seed: { kind: "number", default: 1, integer: true },
-  initialChloroplasts: {
+  initialChloroplastCount: {
     kind: "number",
     default: 3,
     min: 0,
     max: 6,
     integer: true,
   },
-  initialCarbonDioxide: {
+  initialCarbonDioxideCount: {
     kind: "number",
     default: 100,
     min: 0,
@@ -52,7 +52,7 @@ type Molecule = Agent<{
   hidden: boolean;
 }>;
 export function create(options: Partial<ChloroplastParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const space = { x: 28, y: 19, boundary: "wrap" } as const;
   const world = World.create(space, { random });
@@ -60,21 +60,21 @@ export function create(options: Partial<ChloroplastParameters> = {}) {
   world.add(grid);
   const flowEdges = Graph.create<Molecule>();
   let nextWho = 0;
-  let glucoseProduced = 0;
-  let carbonDioxide = 0;
-  let oxygen = 0;
+  let producedGlucoseCount = 0;
+  let carbonDioxideCount = 0;
+  let oxygenCount = 0;
   const history: {
     tick: number;
-    carbonDioxide: number;
-    oxygen: number;
-    glucoseProduced: number;
+    carbonDioxideCount: number;
+    oxygenCount: number;
+    producedGlucoseCount: number;
   }[] = [];
   const all = () => world.agents as readonly Molecule[];
   const ofGroup = (group: AgentGroup) =>
     all().filter((molecule) => molecule.group === group);
   const shuffled = (source: readonly Molecule[]) =>
     random.sample(source, {
-      count: source.length,
+      sampleCount: source.length,
       algorithm: "fisher-yates-descending",
     });
 
@@ -119,8 +119,8 @@ export function create(options: Partial<ChloroplastParameters> = {}) {
 
   function makeInitialChloroplasts() {
     const offset = random.number({ min: 0, max: 360, integer: true });
-    const divider = 360 / settings.initialChloroplasts;
-    for (let index = 0; index < settings.initialChloroplasts; index++) {
+    const divider = 360 / settings.initialChloroplastCount;
+    for (let index = 0; index < settings.initialChloroplastCount; index++) {
       const jitterBound = Math.ceil(divider / 3);
       const heading =
         offset +
@@ -151,16 +151,16 @@ export function create(options: Partial<ChloroplastParameters> = {}) {
     world.delete(all());
     flowEdges.delete();
     nextWho = 0;
-    glucoseProduced = 0;
+    producedGlucoseCount = 0;
     makeSystemBoundary();
-    for (let index = 0; index < settings.initialCarbonDioxide; index++) {
+    for (let index = 0; index < settings.initialCarbonDioxideCount; index++) {
       createMolecule(
         "co2",
         -10 + random.number() * 20,
         random.number({ min: 0, max: 20, integer: true }),
       );
     }
-    if (settings.initialChloroplasts > 0) makeInitialChloroplasts();
+    if (settings.initialChloroplastCount > 0) makeInitialChloroplasts();
     const flow = createMolecule("flow", 0, 0, 90);
     flow.hidden = true;
     flowEdges.nodes.add(flow);
@@ -262,7 +262,7 @@ export function create(options: Partial<ChloroplastParameters> = {}) {
         !otherCharged &&
         both.length === 2
       ) {
-        for (const water of random.sample(waters, { count: 2 })) water.delete();
+        for (const water of random.sample(waters, { sampleCount: 2 })) water.delete();
         const gas = createMolecule("o2", site.x + 4.5, site.y);
         gas.hidden = site.hidden;
         site.hidden = false;
@@ -296,7 +296,7 @@ export function create(options: Partial<ChloroplastParameters> = {}) {
       });
       if (carbonDioxides.length < 2) continue;
       const otherSite = both.find((other) => other !== site)!;
-      const chosen = random.sample(carbonDioxides, { count: 2 });
+      const chosen = random.sample(carbonDioxides, { sampleCount: 2 });
       for (const [index, carbon] of chosen.entries()) {
         const destination = index === 0 ? site : otherSite;
         carbon.rotate(destination.heading - carbon.heading);
@@ -331,7 +331,7 @@ export function create(options: Partial<ChloroplastParameters> = {}) {
         to: sugar,
         directed: true,
       });
-      glucoseProduced++;
+      producedGlucoseCount++;
       for (const site of ofGroup("atp").filter(
         (site) => site.chloroplastId === chloroplast.id,
       )) {
@@ -342,8 +342,8 @@ export function create(options: Partial<ChloroplastParameters> = {}) {
   }
 
   function updateCounts() {
-    carbonDioxide = ofGroup("co2").length;
-    oxygen = ofGroup("o2").length;
+    carbonDioxideCount = ofGroup("co2").length;
+    oxygenCount = ofGroup("o2").length;
   }
   function go() {
     for (const molecule of all().filter((molecule) =>
@@ -365,15 +365,15 @@ export function create(options: Partial<ChloroplastParameters> = {}) {
   function record() {
     history.push({
       tick: world.tick.value,
-      carbonDioxide,
-      oxygen,
-      glucoseProduced,
+      carbonDioxideCount: carbonDioxideCount,
+      oxygenCount: oxygenCount,
+      producedGlucoseCount: producedGlucoseCount,
     });
     if (history.length > 2001) history.splice(1, 1);
   }
-  function advance(count = 1) {
-    stepCount(count);
-    for (let index = 0; index < count; index++) {
+  function advance(stepCount = 1) {
+    validateStepCount(stepCount);
+    for (let index = 0; index < stepCount; index++) {
       if (settings.autoStop && world.tick.value >= settings.stopAt) break;
       run(world, go);
       record();
@@ -399,7 +399,7 @@ export function create(options: Partial<ChloroplastParameters> = {}) {
       )
     )
       throw new TypeError("Only live parameters may change.");
-    settings = parameters(inputs, { ...settings, ...update });
+    settings = parseParameters(inputs, { ...settings, ...update });
   }
   function read() {
     const agents = all().map((molecule) => ({
@@ -432,9 +432,9 @@ export function create(options: Partial<ChloroplastParameters> = {}) {
       height: 19,
       parameters: { ...settings },
       stopped: settings.autoStop && world.tick.value >= settings.stopAt,
-      carbonDioxide,
-      oxygen,
-      glucoseProduced,
+      carbonDioxideCount: carbonDioxideCount,
+      oxygenCount: oxygenCount,
+      producedGlucoseCount: producedGlucoseCount,
       agents,
       flowEdges: [...flowEdges.edges].map((edge) => ({
         id: edge.id,

@@ -43,9 +43,8 @@ const binding = defineUI(model, {
 });
 
 export { model };
-export const sourceMarker =
-  "selected-transport-b04:paths:89f74e30ca5a70a0fc139e99c6e2ea62e9509ce1c8c76bc8cffa154cf3cd75d0";
-export const ui = { ...binding, model, sourceMarker };
+
+export const ui = { ...binding, model };
 
 type UIObservation = Observation<typeof model>;
 

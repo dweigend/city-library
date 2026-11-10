@@ -1,18 +1,16 @@
 # System architecture
 
-The [naming migration contracts](../PLAN.md#naming-migration-contracts) authorize only their recorded naming changes as an exception to API-name preservation rules in this document, including static factory names and target study entries. Preserve behavior, assertions, identity, ordering and random sequences; migrate consumers together.
-
 A model should remain understandable when you remove its UI. City Library therefore keeps domain rules, state and execution in a headless library. Applications read observations and call public actions; they do not become a second model.
 
 A graph can work without coordinates, a field calculation without agents, and a generator without a running world. The caller chooses how to combine them.
 
-This document defines the required architecture, including parts still to be built. [PLAN](../PLAN.md) tracks available capabilities and next goals; the [Agent Loom specification](agent-loom/README.md) defines detailed target contracts. The current public package exposes its root entry only.
+This document defines the required architecture, including parts still to be built. [Coverage](development/coverage.md) lists what works today, [PLAN](../PLAN.md) sets the next goals and the [Agent Loom specification](agent-loom/README.md) defines detailed target contracts. The current public package exposes its root entry only.
 
-Use the system-wide [naming conventions](NAMING_CONVENTIONS.md) for domains, public contracts and module names.
+Use the system-wide [naming conventions](NAMING_CONVENTIONS.md) for domains, public contracts and module names. The [naming migration contracts](../PLAN.md#naming-migration-contracts) authorize only their recorded naming changes as an exception to API-name preservation rules in this document, including static factory names and target study entries. Preserve behavior, assertions, identity, ordering and random sequences; migrate consumers together.
 
 ## Reading this document
 
-Start with [model authoring](development/model-authoring.md) for a runnable introduction. This document covers [domain ownership](#binding-architecture-rules), [module layout](#binding-domain-layout-and-extension-rules), [public contracts](#dependency-and-public-contract-rules) and [time, randomness and observations](#time-randomness-and-observation). [UI design](DESIGN.md) and the [UI specification](ui/README.md) own presentation and author-facing bindings.
+For a short overview, read [concepts](concepts.md); for a runnable introduction, start with [model authoring](development/model-authoring.md). This document covers [domain ownership](#binding-architecture-rules), [module layout](#binding-domain-layout-and-extension-rules), [public contracts](#dependency-and-public-contract-rules) and [time, randomness and observations](#time-randomness-and-observation). [UI design](DESIGN.md) and the [UI specification](ui/README.md) own presentation and author-facing bindings.
 
 ## Binding architecture rules
 
@@ -78,14 +76,16 @@ For every implementation slice, verify public headless access, dependency direct
 
 ## Binding domain layout and extension rules
 
+The [repository structure convention](NAMING_CONVENTIONS.md#repository-structure) places headless source under `library/`. Development tools under `library/development/` are outside the runtime domain dependency graph.
+
 Organize source by domain. The [API specification](agent-loom/README.md) defines public operations; the layout below defines their boundaries. A directory does not imply a working public export.
 
-The regular Grid diffusion calculation is implemented in `src/grid/algorithms/diffusion.ts`; Grid retains input validation and state commit.
+The regular Grid diffusion calculation is implemented in `library/grid/algorithms/diffusion.ts`; Grid retains input validation and state commit.
 
 The tree below defines intended domain boundaries and planned responsibilities, not the current filesystem inventory. Create a directory only with its first working slice; do not retain empty directories or `.gitkeep` scaffolding. Planned filenames are not a complete list of existing modules. Add each domain's `index.ts` with its first working public capability. The root `index.ts` exports Agent, World, run, Random, Graph, Grid, topology, stats and geometry, plus the bounded expansion values measurements, storage, studies, twoPhase, continuous, Agenda, ServiceQueue, Resource, Store, Signal, EventTrace and TimeWeighted. The [expansion inventory](execution-studies/STATUS.md) records delivered subsets, decisions and separate acceptance evidence. Public types include Tick, RandomState, Edge, GeneratorOptions, Field, Layout, BoundarySegment, LayoutGrid, LayoutField, Space, Position, Vector, Orientation, Histogram, Summary, Bounds and the planar geometry/data types listed in that entry. Current Graph methods include membership, connectivity, distances, analysis, generation and copy; stats exposes histogram, gini and describe. These exports cover part of the graph, geometry, statistics and Agent Loom contracts. Consult the public entry and executable examples for exact supported options; planned directories establish no additional exports.
 
 ```text
-src/
+library/
 ├── agent/
 │   ├── agent.ts
 │   ├── state.ts
@@ -194,9 +194,8 @@ The original Agent Loom phase-one Grid remains square/cubic with `faces | moore`
 
 Treat topology as immutable for a delivered slice unless that slice explicitly defines topology mutation and revision/invalidated-cache behavior. A cached neighborhood must never silently outlive the topology it represents. Respect the extension boundary now, but establish a broader shared topology interface through real variants rather than speculative universal capabilities.
 
-The [finite quadrilateral extension](grid-parcels/QUAD-LAYOUTS-CONTRACT.md) uses
-these same Layout/Polygon/Random contracts. Generation returns an unrelaxed
-hexagonal patch; `squareTarget` relaxation is a separate pure operation returning
+The [finite quadrilateral extension](grid-parcels/QUAD-LAYOUTS-CONTRACT.md) preserves frozen historical signatures; the [current naming map](grid-parcels/STATUS.md) defines executable calls. It uses these same Layout/Polygon/Random contracts. Generation returns an unrelaxed
+hexagonal patch; `square-target` relaxation is a separate pure operation returning
 a fresh immutable Layout, including zero iterations. It preserves local cell
 correspondence and incidence while keeping exposed boundaries fixed. Each Grid
 still owns its own Fields; state transfer is explicit caller policy. The internal
@@ -298,7 +297,7 @@ Runtime and distribution choices remain implementation decisions only where the 
 
 ## Authoring vocabulary and canonical state
 
-Use ordinary TypeScript, direct typed properties, native arrays/sets/maps and explicit composition. Reference examples use `Agent.create(...)`, `World.create(...)`, `world.add(...)` and `run(world, step, steps)`. Model values remain `agent.energy`, not a generic `.value` wrapper. Use `Position` and `Space`, not parallel public `Like`/`Context` synonyms. Native array queries remain the ordinary selection path; specialized World activation is an explicit advanced scheduling operation.
+Use ordinary TypeScript, direct typed properties, native arrays/sets/maps and explicit composition. Reference examples use `Agent.create(...)`, `World.create(...)`, `world.add(...)` and `run(world, step, stepCount)`. Model values remain `agent.energy`, not a generic `.value` wrapper. Use `Position` and `Space`, not parallel public `Like`/`Context` synonyms. Native array queries remain the ordinary selection path; specialized World activation is an explicit advanced scheduling operation.
 
 Creation/copy semantics and later assignments are distinct. The reference clones supported initial custom data but retains framework references; later assignments use ordinary TypeScript reference semantics. An agent copy is detached; a graph copy owns independent edges while retaining node identities. Do not promise a deep model clone from the word `copy` alone. Reserved built-in keys, supported data and failures need delivered contracts.
 
@@ -368,4 +367,4 @@ These gates define evidence requirements without claiming completion. Use these 
 - **Shared lifecycle:** define the private coordination contract for identity, state copying, coupled movement and membership before implementing those interactions. Keep one owner and acyclic dependencies.
 - **Further topology:** the [grid/parcel phase](grid-parcels/STATUS.md#bounded-layout-contract) freezes finite planar hexagonal/layout semantics. Wrapping layouts, irregular diffusion, volume layouts and their storage representations require later explicit contracts. Preserve original square/cubic behavior.
 
-The [work plan](../PLAN.md) tracks available capabilities and next goals; the [specification overview](agent-loom/README.md) identifies the API source.
+The [work plan](../PLAN.md) tracks next goals and [coverage](development/coverage.md) tracks available capabilities; the [specification overview](agent-loom/README.md) identifies the API source.

@@ -7,8 +7,8 @@ const original = topology.fromPolygons({ polygons });
 
 const relaxed = topology.relax({
   layout: original,
-  method: "squareTarget",
-  iterations: 1,
+  method: "square-target",
+  iterationCount: 1,
 });
 
 console.log(relaxed.polygon({ cell: 0 }));
@@ -28,13 +28,13 @@ const alternate = polygons.map(shape => {
   const points = shape.coordinates[0]!;
   return close([points[2]!, points[1]!, points[0]!, points[3]!]);
 });
-const equivalent = topology.relax({ layout: topology.fromPolygons({ polygons: alternate }), method: "squareTarget", iterations: 1 });
+const equivalent = topology.relax({ layout: topology.fromPolygons({ polygons: alternate }), method: "square-target", iterationCount: 1 });
 for (const cell of relaxed.cells) assert.deepEqual(vertexSet(equivalent.polygon({ cell })), vertexSet(relaxed.polygon({ cell })));
 
 // Four rotated squares have a movable shared interior vertex. Their fixed point
 // is nonvacuous: unlike a lone square, not every vertex is pinned by boundary.
 const rotatedSquares = squarePatch([1, 1]).map(rotate);
-const stationary = topology.relax({ layout: topology.fromPolygons({ polygons: rotatedSquares }), method: "squareTarget", iterations: 8 });
+const stationary = topology.relax({ layout: topology.fromPolygons({ polygons: rotatedSquares }), method: "square-target", iterationCount: 8 });
 for (const cell of stationary.cells) assert.deepEqual(vertexSet(stationary.polygon({ cell })), vertexSet(rotatedSquares[cell]!));
 assert.deepEqual(relaxed.cells, original.cells);
 assert.notEqual(relaxed, original);

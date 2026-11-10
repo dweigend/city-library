@@ -19,7 +19,7 @@ import { Random } from "city-library";
 
 describe("selected economics source-specific banks and games", () => {
   test("Cash Flow preserves signed negative-availability loans, rather than silently clamping", () => {
-    const model = cashFlow({ people: 0, reserves: 0 });
+    const model = cashFlow({ personCount: 0, reserves: 0 });
     model.setAccounts([
       { x: 0, y: 0, wallet: -5, savings: 0, loans: 20 },
       { x: 1, y: 1, wallet: 0, savings: 10, loans: 0 },
@@ -36,7 +36,7 @@ describe("selected economics source-specific banks and games", () => {
     expect(after.moneyTotal - after.loansTotal).toBe(identity);
   });
   test("partial repayment withdraws then repays the wallet, and report reads do not mutate state", () => {
-    const model = cashFlow({ people: 0 });
+    const model = cashFlow({ personCount: 0 });
     model.setAccounts([{ x: 0, y: 0, wallet: 0, savings: 3, loans: 5 }]);
     model.balanceBooks(model.read().people[0]!.id);
     expect(model.read().people[0]).toMatchObject({
@@ -49,7 +49,7 @@ describe("selected economics source-specific banks and games", () => {
     expect(Object.isFrozen(a.people[0])).toBe(true);
   });
   test("Bank Reserves phases and sticky colors retain source distinctions", () => {
-    const model = reserves({ people: 0 });
+    const model = reserves({ personCount: 0 });
     model.setAccounts([{ x: 0, y: 0, wallet: 0, savings: 11, loans: 0 }]);
     const id = model.read().people[0]!.id;
     model.updateAppearance(id);
@@ -70,14 +70,14 @@ describe("selected economics source-specific banks and games", () => {
     expect(
       cash.read().people.every((p) => p.wallet === 0 || p.wallet === 10),
     ).toBe(true);
-    expect(cash.read().middleClass).toBe(473);
+    expect(cash.read().middleClassPersonCount).toBe(473);
     expect(bank.read().people.length).toBe(57);
     expect(
       bank.read().people.every((p) => p.wallet >= 1 && p.wallet <= 10),
     ).toBe(true);
-    expect(bank.read().middleClass).toBe(0);
+    expect(bank.read().middleClassPersonCount).toBe(0);
     bank.advance();
-    expect(bank.read().middleClass).toBe(57);
+    expect(bank.read().middleClassPersonCount).toBe(57);
     expect(bank.read().wealthHistogram.every((p) => p.y === 0)).toBe(true);
   });
   test("one-shot outcome action always reinitializes choices and uses no native clock", () => {
@@ -92,7 +92,7 @@ describe("selected economics source-specific banks and games", () => {
     model.answer();
     expect(model.read().years).toBe(5);
     expect(model.read().nativeTick).toBeNull();
-    expect(model.read().rounds).toBe(2);
+    expect(model.read().roundCount).toBe(2);
   });
   test("iterated payoffs and strategy memories preserve delayed retaliation", () => {
     expect([

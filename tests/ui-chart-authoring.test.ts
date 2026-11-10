@@ -54,7 +54,7 @@ describe("chart authoring data and geometry", () => {
     expect(Number.isFinite(geometry.y(0))).toBe(true);
   });
 
-  test("numeric legacy bars retain coordinates, repeated positions and finite filtering", () => {
+  test("numeric-coordinate bars retain coordinates, repeated positions and finite filtering", () => {
     const source = [
       { label: "Numeric", points: [{ x: -2, y: -3 }, { x: 8, y: 5 }, { x: 8, y: 2 }, { x: NaN, y: 4 }, { x: 1, y: Infinity }] },
     ];

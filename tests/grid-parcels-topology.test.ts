@@ -4,7 +4,7 @@ const rectangle = (x: number, y: number, width = 1, height = 1): PlanarPolygon =
 
 describe("detached conforming topology", () => {
   test("square keys, sizes, ties, adjacency and deep immutability", () => {
-    const layout = topology.square({columns:3,rows:2,cellSize:2});
+    const layout = topology.square({columnCount:3,rowCount:2,cellSize:2});
     expect(layout.cells).toEqual([0,1,2,3,4,5]);
     expect(layout.neighbors({cell:1})).toEqual([0,2,4]);
     expect(layout.cellAt({position:{x:2,y:2}})).toBe(0);
@@ -18,7 +18,7 @@ describe("detached conforming topology", () => {
   });
   test("both hex orientations have complete exact reciprocal edges", () => {
     for (const orientation of ["pointy","flat"] as const) {
-      const layout = topology.hex({columns:4,rows:4,cellRadius:0.7,orientation});
+      const layout = topology.hex({columnCount:4,rowCount:4,cellRadius:0.7,orientation});
       expect(layout.neighbors({cell:0})).toEqual([1,4]);
       expect(layout.neighbors({cell:5})).toHaveLength(6);
       for (const cell of layout.cells) for (const neighbor of layout.neighbors({cell})) {
@@ -71,12 +71,12 @@ describe("detached conforming topology", () => {
     expect(layout.sharedBoundary({firstCell:0,secondCell:1})).toHaveLength(2);
   });
   test("bounds and malformed arguments reject without coercion", () => {
-    expect(() => topology.square({columns:1025,rows:1})).toThrow(RangeError);
-    expect(topology.square({columns:32,rows:32}).cells).toHaveLength(1024);
-    expect(() => topology.square({columns:1.5,rows:1})).toThrow(RangeError);
-    expect(() => topology.hex({columns:1,rows:1,orientation:"invalid" as "flat"})).toThrow(TypeError);
+    expect(() => topology.square({columnCount:1025,rowCount:1})).toThrow(RangeError);
+    expect(topology.square({columnCount:32,rowCount:32}).cells).toHaveLength(1024);
+    expect(() => topology.square({columnCount:1.5,rowCount:1})).toThrow(RangeError);
+    expect(() => topology.hex({columnCount:1,rowCount:1,orientation:"invalid" as "flat"})).toThrow(TypeError);
     expect(() => topology.fromPolygons({polygons:[rectangle(1e6,0)]})).toThrow(RangeError);
-    const layout=topology.square({columns:1,rows:1});
+    const layout=topology.square({columnCount:1,rowCount:1});
     expect(() => layout.polygon({cell:-1})).toThrow(RangeError);
     expect(() => layout.cellAt({position:{x:0,y:0,z:1}})).toThrow(TypeError);
   });

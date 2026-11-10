@@ -4,22 +4,22 @@
  */
 import { Agent, Grid, Random, World, geometry, run, stats } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 
 export interface EconomicParameters {
-  seed: number; numberOfTests: number; residentsPerJob: number;
-  poorPerStep: number; richPerStep: number; poorPricePriority: number;
-  richQualityPriority: number; maxJobs: number; deathRate: number;
+  seed: number; testCount: number; residentsPerJob: number;
+  poorPersonCountPerStep: number; richPersonCountPerStep: number; poorPricePriority: number;
+  richQualityPriority: number; maxJobCount: number; deathRate: number;
 }
 export const inputs: Inputs<EconomicParameters> = {
   seed: { kind: "number", default: 1, min: -2147483648, max: 4294967295, integer: true },
-  numberOfTests: { kind: "number", default: 15, min: 0, max: 30, integer: true },
+  testCount: { kind: "number", default: 15, min: 0, max: 30, integer: true },
   residentsPerJob: { kind: "number", default: 100, min: 0, max: 500, step: 10, integer: true },
-  poorPerStep: { kind: "number", default: 5, min: 0, max: 15, integer: true },
-  richPerStep: { kind: "number", default: 5, min: 0, max: 15, integer: true },
+  poorPersonCountPerStep: { kind: "number", default: 5, min: 0, max: 15, integer: true },
+  richPersonCountPerStep: { kind: "number", default: 5, min: 0, max: 15, integer: true },
   poorPricePriority: { kind: "number", default: 0, min: -1, max: 1, step: 0.1 },
   richQualityPriority: { kind: "number", default: 0, min: -1, max: 1, step: 0.1 },
-  maxJobs: { kind: "number", default: 10, min: 5, max: 20, integer: true },
+  maxJobCount: { kind: "number", default: 10, min: 5, max: 20, integer: true },
   deathRate: { kind: "number", default: 4, min: 0, max: 15, integer: true },
 };
 export type EconomicKind = "rich" | "poor" | "job";
@@ -29,12 +29,12 @@ export interface EconomicLandInput { readonly price: number; readonly quality: n
 type Resident = Agent<{ kind: EconomicKind; utility: number }>;
 type LiveRules = Omit<EconomicParameters, "seed">;
 interface EconomicSample {
-  readonly tick: number; readonly rich: number; readonly poor: number; readonly jobs: number;
+  readonly tick: number; readonly richPersonCount: number; readonly poorPersonCount: number; readonly jobCount: number;
   readonly richMedianTravelDistance: number | undefined; readonly poorMedianTravelDistance: number | undefined;
 }
 
 export function create(options: Partial<EconomicParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const width = 89, height = 89;
   const space = { x: width, y: height, boundary: "hard" as const };
   const random = Random.create({ seed: settings.seed });
@@ -44,12 +44,12 @@ export function create(options: Partial<EconomicParameters> = {}) {
   const fields = grid.fields;
   let counter = 0;
   let viewMode: EconomicView = "quality";
-  let utilityRanges: Readonly<{ minPoor: number; maxPoor: number; minRich: number; maxRich: number }> = Object.freeze({ minPoor: 0, maxPoor: 0, minRich: 0, maxRich: 0 });
+  let utilityRanges: Readonly<{ minPoorPersonCount: number; maxPoorPersonCount: number; minRichPersonCount: number; maxRichPersonCount: number }> = Object.freeze({ minPoorPersonCount: 0, maxPoorPersonCount: 0, minRichPersonCount: 0, maxRichPersonCount: 0 });
   const history: Readonly<EconomicSample>[] = [];
   const residents = () => world.agents as readonly Resident[];
   const group = (kind: EconomicKind) => residents().filter(person => person.kind === kind);
   function activation<T>(snapshot: readonly T[]) {
-    return random.sample(snapshot, { count: snapshot.length, algorithm: "fisher-yates-descending" });
+    return random.sample(snapshot, { sampleCount: snapshot.length, algorithm: "fisher-yates-descending" });
   }
   function createResident(kind: EconomicKind, x = 0, y = 0, utility = 0) {
     const person = Agent.create({ kind, utility }, { position: { x, y } });
@@ -87,7 +87,7 @@ export function create(options: Partial<EconomicParameters> = {}) {
     }
   }
   function evaluateLocation(person: Resident) {
-    const candidates = random.sample(fields, { count: settings.numberOfTests }).filter(field => grid.agentsAt(field).length === 0);
+    const candidates = random.sample(fields, { sampleCount: settings.testCount }).filter(field => grid.agentsAt(field).length === 0);
     // Native STOP returns from evaluate-* only; the caller still affects land.
     if (!candidates.length) return;
     const score = person.kind === "poor" ? poorUtility : person.kind === "rich" ? richUtility : (field: typeof fields[number]) => field.price;
@@ -120,7 +120,7 @@ export function create(options: Partial<EconomicParameters> = {}) {
   function updateView() {
     if (viewMode === "poor-utility" || viewMode === "rich-utility") {
       const poor = stats.describe(fields.map(poorUtility)), rich = stats.describe(fields.map(richUtility));
-      utilityRanges = Object.freeze({ minPoor: poor.min!, maxPoor: poor.max!, minRich: rich.min!, maxRich: rich.max! });
+      utilityRanges = Object.freeze({ minPoorPersonCount: poor.min!, maxPoorPersonCount: poor.max!, minRichPersonCount: rich.min!, maxRichPersonCount: rich.max! });
     }
     for (const field of fields) {
       let base: number, fraction: number;
@@ -129,8 +129,8 @@ export function create(options: Partial<EconomicParameters> = {}) {
       else if (viewMode === "dist") { base = 100; fraction = (field.sdDistance - 0.45 * (44 * 1.414)) / ((0.05 - 0.45) * (44 * 1.414)); }
       else {
         const poor = viewMode === "poor-utility";
-        const min = Math.log(poor ? utilityRanges.minPoor : utilityRanges.minRich);
-        const max = Math.log(poor ? utilityRanges.maxPoor : utilityRanges.maxRich);
+        const min = Math.log(poor ? utilityRanges.minPoorPersonCount : utilityRanges.minRichPersonCount);
+        const max = Math.log(poor ? utilityRanges.maxPoorPersonCount : utilityRanges.maxRichPersonCount);
         const value = Math.log(poor ? poorUtility(field) : richUtility(field));
         base = poor ? 90 : 130;
         // Native equal-domain scale-color: at/below the bound is dark.
@@ -143,7 +143,7 @@ export function create(options: Partial<EconomicParameters> = {}) {
     const rich = group("rich"), poor = group("poor"), jobs = group("job");
     // Empty class median is unavailable (undefined), never a fabricated zero.
     const medianTravelDistance = { rich: stats.describe(rich.map(nearestJobDistance)).median, poor: stats.describe(poor.map(nearestJobDistance)).median };
-    return { counts: { rich: rich.length, poor: poor.length, jobs: jobs.length }, medianTravelDistance };
+    return { counts: { richPersonCount: rich.length, poorPersonCount: poor.length, jobCount: jobs.length }, medianTravelDistance };
   }
   function record() {
     const measured = measurements();
@@ -152,11 +152,11 @@ export function create(options: Partial<EconomicParameters> = {}) {
     if (history.length > 1001) history.splice(1, 1);
   }
   function go() {
-    locateResidents("poor", settings.poorPerStep); locateResidents("rich", settings.richPerStep);
+    locateResidents("poor", settings.poorPersonCountPerStep); locateResidents("rich", settings.richPersonCountPerStep);
     if (counter > settings.residentsPerJob) { locateService(); counter = 0; }
     if (group("rich").length >= 20) removeOldest("rich", settings.deathRate);
     if (group("poor").length >= 20) removeOldest("poor", settings.deathRate);
-    if (group("job").length >= settings.maxJobs) { removeOldest("job", 1); refreshJobDistances(0.01); }
+    if (group("job").length >= settings.maxJobCount) { removeOldest("job", 1); refreshJobDistances(0.01); }
     updateView();
   }
   createResident("job"); refreshJobDistances(0);
@@ -170,10 +170,10 @@ export function create(options: Partial<EconomicParameters> = {}) {
   }
   updateView(); record();
   return {
-    advance(count = 1) { stepCount(count); for (let i = 0; i < count; i++) { run(world, go); record(); } },
+    advance(stepCount = 1) { validateStepCount(stepCount); for (let i = 0; i < stepCount; i++) { run(world, go); record(); } },
     setRules(rules: Partial<LiveRules>) {
       if (typeof rules !== "object" || rules === null || ![Object.prototype, null].includes(Object.getPrototypeOf(rules)) || Reflect.ownKeys(rules).some(key => typeof key !== "string" || key === "seed" || !Object.hasOwn(inputs, key) || !("value" in Object.getOwnPropertyDescriptor(rules, key)!))) throw new TypeError("Supply only live Economic rule data.");
-      settings = parameters(inputs, { ...settings, ...rules }); record();
+      settings = parseParameters(inputs, { ...settings, ...rules }); record();
     },
     setViewMode(mode: EconomicView) {
       if (!["quality", "price", "dist", "poor-utility", "rich-utility"].includes(mode)) throw new TypeError("Unknown Economic view.");

@@ -2,7 +2,7 @@
 import { Agent, Grid, Random, World, geometry, run } from "city-library";
 import type { Field, Position } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 
 export interface TrafficParameters {
   seed: number;
@@ -76,17 +76,17 @@ export function create(options: Partial<TrafficParameters> = {}) {
       watched.label = watched.goal === watched.house ? "house" : "work";
     nextPhase();
   }
-  function step(count = 1) {
-    stepCount(count);
-    for (let index = 0; index < count; index++) {
+  function step(stepCount = 1) {
+    validateStepCount(stepCount);
+    for (let index = 0; index < stepCount; index++) {
       run(world, go);
       record();
     }
-    return count;
+    return stepCount;
   }
 
   // This factory owns rules, signals and history; World/Grid own live agents and fields.
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const world = World.create({ x: 37, y: 37, boundary: "wrap" }, { random });
   const grid = Grid.create(
@@ -110,7 +110,7 @@ export function create(options: Partial<TrafficParameters> = {}) {
   const fieldId = (field: ModelField) => `${field.x},${field.y}`;
   const carId = (car: Car) => `car-${car.who}`;
   const shuffled = <T>(items: readonly T[]) =>
-    random.sample(items, { count: items.length });
+    random.sample(items, { sampleCount: items.length });
   const choose = <T>(items: readonly T[]): T => {
     if (!items.length)
       throw new Error("The original model requested one-of an empty agentset.");
@@ -170,7 +170,7 @@ export function create(options: Partial<TrafficParameters> = {}) {
   function setupSignals() {
     for (const field of shuffled(intersections)) setSignalColors(field);
     grid.fieldAt({ x: current.x - 1, y: current.y + 1 })!.label = "current";
-    settings = parameters(inputs, {
+    settings = parseParameters(inputs, {
       ...settings,
       currentPhase: current.phase,
       currentAuto: current.auto,
@@ -332,7 +332,7 @@ export function create(options: Partial<TrafficParameters> = {}) {
     updateCurrent();
     grid.fieldAt({ x: current.x - 1, y: current.y + 1 })!.label = "";
     current = selected;
-    settings = parameters(inputs, {
+    settings = parseParameters(inputs, {
       ...settings,
       currentPhase: current.phase,
       currentAuto: current.auto,
@@ -379,7 +379,7 @@ export function create(options: Partial<TrafficParameters> = {}) {
         "Seed, grid dimensions and population are setup-only.",
       );
     }
-    settings = parameters(inputs, { ...settings, ...values });
+    settings = parseParameters(inputs, { ...settings, ...values });
   }
   function snapshot() {
     return {

@@ -17,7 +17,7 @@ export const ui = defineUI(model, {
       label: "Rewire a link",
       repeat: { label: "Keep rewiring", intervalMs: 200 },
       run: (instance) => instance.rewire(),
-      enabled: (state) => state.counts.activeEdges > 0,
+      enabled: (state) => state.counts.activeEdgeCount > 0,
     },
   ],
   live: {
@@ -28,8 +28,8 @@ export const ui = defineUI(model, {
   },
   monitors: [
     { label: "Tick", value: (state) => state.tick },
-    { label: "Nodes", value: (state) => state.counts.nodes },
-    { label: "Active edges", value: (state) => state.counts.activeEdges },
+    { label: "Nodes", value: (state) => state.counts.nodeCount },
+    { label: "Active edges", value: (state) => state.counts.activeEdgeCount },
     { label: "Total value", value: (state) => state.totalValue.toPrecision(6) },
     { label: "Max flow", value: (state) => state.maxFlow.toPrecision(4) },
     { label: "Mean flow", value: (state) => state.meanFlow.toPrecision(4) },

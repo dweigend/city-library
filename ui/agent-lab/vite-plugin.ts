@@ -29,7 +29,7 @@ export function agentLabCatalog(root: string): Plugin {
         response.setHeader("Cache-Control", "no-store");
         response.end(version);
       });
-      const sourceRoots = ["ui", "models", "src"].map((path) =>
+      const sourceRoots = ["ui", "models", "library"].map((path) =>
         `${normalizePath(resolve(root, path))}/`,
       );
       server.watcher.add(sourceRoots.map((path) => path.slice(0, -1)));

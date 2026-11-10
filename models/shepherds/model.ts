@@ -1,7 +1,7 @@
 /** NetLogo Shepherds (Wilensky, 1998), CC BY-NC-SA 3.0; see NOTICE.md. */
 import { Agent, Grid, Random, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface Parameters {
   seed: number;
   sheepCount: number;
@@ -48,7 +48,7 @@ type Shepherd = Agent<{
   foundHerd: boolean;
 }>;
 export function create(options: Partial<Parameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({
     seed: settings.seed,
   });
@@ -63,12 +63,12 @@ export function create(options: Partial<Parameters> = {}) {
   const grid = Grid.create(space, {
     state: {
       green: 0,
-      sheepNearby: 0,
+      nearbySheepCount: 0,
     },
   });
   world.add(grid);
   for (const f of random.sample(grid.fields, {
-    count: grid.fields.length,
+    sampleCount: grid.fields.length,
     algorithm: "fisher-yates-descending",
   }))
     f.green = 55 + random.number() * 0.8 - 0.4;
@@ -117,14 +117,14 @@ export function create(options: Partial<Parameters> = {}) {
     efficiency: number;
   }[] = [];
   let herdingEfficiency = 0,
-    sheeplessNeighborhoods = 0;
+    sheeplessNeighborhoodCount = 0;
   function record() {
     if (world.tick.value % 50 !== 0) return;
     let empty = 0;
-    sheeplessNeighborhoods = 0;
+    sheeplessNeighborhoodCount = 0;
     const all = sheep();
     for (const f of grid.fields) {
-      f.sheepNearby = grid
+      f.nearbySheepCount = grid
         .neighbors(f, {
           neighborhood: "moore",
         })
@@ -136,7 +136,7 @@ export function create(options: Partial<Parameters> = {}) {
             }).length,
           0,
         );
-      if (f.sheepNearby === 0) sheeplessNeighborhoods++;
+      if (f.nearbySheepCount === 0) sheeplessNeighborhoodCount++;
       if (
         grid.agentsAt(f, {
           source: all,
@@ -144,7 +144,7 @@ export function create(options: Partial<Parameters> = {}) {
       )
         empty++;
     }
-    herdingEfficiency = (sheeplessNeighborhoods / empty) * 100;
+    herdingEfficiency = (sheeplessNeighborhoodCount / empty) * 100;
     history.push(
       Object.freeze({
         tick: world.tick.value,
@@ -161,7 +161,7 @@ export function create(options: Partial<Parameters> = {}) {
   function rules() {
     const old = shepherds();
     for (const s of random.sample(old, {
-      count: old.length,
+      sampleCount: old.length,
       algorithm: "fisher-yates-descending",
     })) {
       const here = () =>
@@ -196,7 +196,7 @@ export function create(options: Partial<Parameters> = {}) {
     }
     const moving = sheep().filter((a) => !a.hidden);
     for (const a of random.sample(moving, {
-      count: moving.length,
+      sampleCount: moving.length,
       algorithm: "fisher-yates-descending",
     })) {
       wiggle(a);
@@ -205,9 +205,9 @@ export function create(options: Partial<Parameters> = {}) {
   }
   record();
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) {
         run(world, rules);
         record();
       }
@@ -215,7 +215,7 @@ export function create(options: Partial<Parameters> = {}) {
     setRules(rules: Partial<Pick<Parameters, "sheepSpeed">>) {
       if (Reflect.ownKeys(rules).some((k) => k !== "sheepSpeed"))
         throw new TypeError("Unknown live rule.");
-      settings = parameters(inputs, {
+      settings = parseParameters(inputs, {
         ...settings,
         ...rules,
       });
@@ -227,7 +227,7 @@ export function create(options: Partial<Parameters> = {}) {
         height: 51,
         parameters: settings,
         herdingEfficiency,
-        sheeplessNeighborhoods,
+        sheeplessNeighborhoods: sheeplessNeighborhoodCount,
         sheep: Object.freeze(
           sheep().map((a) =>
             Object.freeze({
@@ -258,7 +258,7 @@ export function create(options: Partial<Parameters> = {}) {
               x: f.x,
               y: f.y,
               green: f.green,
-              sheepNearby: f.sheepNearby,
+              nearbySheepCount: f.nearbySheepCount,
             }),
           ),
         ),

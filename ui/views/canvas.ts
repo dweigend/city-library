@@ -1,7 +1,7 @@
 import type { RendererOptions } from "./appearance.ts";
 import { validateCanvasData } from "./spatial-data.ts";
-import { canvasPoint, hitSceneSymbol, symbolDiameter, symbolDimensions, symbolRotation, validateBufferDimensions, validateCanvasGeometry } from "./spatial-geometry.ts";
-import { symbolPath } from "./spatial-symbols.ts";
+import { canvasPoint, isPointInSceneSymbol, symbolDiameter, symbolDimensions, symbolRotation, validateBufferDimensions, validateCanvasGeometry } from "./spatial-geometry.ts";
+import { traceSymbolPath } from "./spatial-symbols.ts";
 import type {
   Cell,
   GridData,
@@ -87,7 +87,7 @@ export function mountCanvas(
         ctx.translate(x, y);
         ctx.rotate(symbolRotation(agent));
         ctx.fillStyle = agent.color ?? theme?.foreground ?? "#fff";
-        symbolPath(ctx, agent, width, height);
+        traceSymbolPath(ctx, agent, width, height);
         if (agent.filled !== false) ctx.fill();
         if ((agent.filled === false || agent.stroke !== undefined) && (agent.strokeWidth ?? 1) > 0) {
           ctx.strokeStyle = agent.stroke ?? theme?.foreground ?? "#fff";
@@ -172,10 +172,10 @@ export function mountCanvas(
       ((event.clientY - rect.top) / rect.height) * data.height;
     if (!drawingEnabled && "agents" in data) {
       // Passenger dots drawn over cabin/slot rectangles remain selectable.
-      // Scenes with only legacy symbols retain their original nearest behavior.
+      // Scenes with only circular symbols retain their original nearest behavior.
       const hasDiagramShapes = data.agents.some(agent => agent.shape === "rectangle" || agent.shape === "diamond");
       const shaped = hasDiagramShapes ? [...data.agents].reverse().find(agent =>
-        agent.selectable !== false && hitSceneSymbol(agent, x, y, data, canvas, Math.min(devicePixelRatio, 2))) : undefined;
+        agent.selectable !== false && isPointInSceneSymbol(agent, x, y, data, canvas, Math.min(devicePixelRatio, 2))) : undefined;
       if (shaped) { select(shaped.id); return; }
       if (!hasDiagramShapes) {
         const nearest = data.agents.filter(agent => agent.selectable !== false).sort(

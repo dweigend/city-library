@@ -1,5 +1,21 @@
 # Household Budget
 
-One household starts with 1000 balance units. Each month adds external income 2400 and deducts rent 900. Twelve steps yield 19000. This is an open flow model, not a closed-economy conservation claim.
+How does a steady monthly surplus add up over a year? One household starts with a balance of 1000 units, earns 2400 and pays 900 rent every month. Each step settles one month, so the balance grows by 1500 per step and reaches 1000 + 12 × 1500 = 19000 after twelve steps.
 
-The headless [model](model.ts) owns state and actions; the shared Lab [UI](ui.ts) binds those actions and observations. Run `bun run dev`, select this model and use Setup. Original City Library teaching composition; no upstream scientific-equivalence claim.
+Income and rent come from outside the model, and paid rent leaves it. This is an open flow, not a closed economy that conserves money. It is an original City Library teaching model with no upstream source to match.
+
+## Use
+
+Choose **Household Budget** in [Agent Lab](../../ui/agent-lab/README.md); the monitors show month, balance, income and rent. The model has no inputs.
+
+From a script in the repository root:
+
+```ts
+import { create } from "./models/household-budget/model.ts";
+
+const budget = create();
+budget.advance(12);
+console.log(budget.read()); // { tick: 12, balance: 19000, income: 2400, rent: 900 }
+```
+
+[model.ts](model.ts) owns the state and the `advance(months)` action; [ui.ts](ui.ts) binds it to the Lab. The public contract script [01-household-budget.ts](../../tests/public-contracts/city-simulation/01-household-budget.ts) asserts the twelve-month result.

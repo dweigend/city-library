@@ -1,17 +1,17 @@
 import assert from 'node:assert/strict';
 import { create as development } from '../../../models/piaget-vygotsky-game/model.ts';
 import { create as heroes } from '../../../models/heroes-and-cowards/model.ts';
-const learners = development({ numberOfPlayers: 10, strategy: 'Piagetian', randomizeStrategyEachRun: false,
-  moveError: 0, attemptsPerRun: 2, stopAfterEachRun: true });
+const learners = development({ playerCount: 10, strategy: 'piagetian', randomizeStrategyEachRun: false,
+  moveError: 0, attemptCountPerRun: 2, stopAfterEachRun: true });
 learners.advance(); const first = learners.read();
-assert.equal(first.attempts, 1); assert.equal(first.results.Piagetian.length, 1);
-assert.equal(first.results.Piagetian[0], first.players.reduce((s,p)=>s+p.score,0)/10);
-assert.ok(first.players.every(p => p.bestScore === p.score && p.maxMoves === p.bestMaxMoves));
+assert.equal(first.attemptCount, 1); assert.equal(first.results.piagetian.length, 1);
+assert.equal(first.results.piagetian[0], first.players.reduce((s,p)=>s+p.score,0)/10);
+assert.ok(first.players.every(p => p.bestScore === p.score && p.maxMoveCount === p.bestMaxMoveCount));
 learners.advance(5); const second = learners.read();
-assert.equal(second.tick, 2); assert.equal(second.attempts, 2); assert.equal(second.stopped, true);
+assert.equal(second.tick, 2); assert.equal(second.attemptCount, 2); assert.equal(second.stopped, true);
 assert.deepEqual(second.players.map(p=>p.score),first.players.map(p=>p.score));
-learners.advance(); assert.equal(learners.read().attempts, 1); assert.equal(learners.read().tick, 3);
-const crowd = heroes({ number: 3, personalities: 'brave' });
+learners.advance(); assert.equal(learners.read().attemptCount, 1); assert.equal(learners.read().tick, 3);
+const crowd = heroes({ personCount: 3, personalities: 'brave' });
 // Extrapolation puts a coward left of its friend, away from its enemy.
 const actors = [
   { x:0, y:0, personality:'cowardly' as const, friend:1, enemy:2 },

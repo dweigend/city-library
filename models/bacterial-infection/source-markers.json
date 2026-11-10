@@ -1,0 +1,21 @@
+{
+  "model": "bacterial-infection",
+  "markers": [
+    {
+      "sourceMarker": "b08-bacterial-infection-source-composition-v1",
+      "originalLocations": [
+        {
+          "path": "models/bacterial-infection/model.ts",
+          "line": 6,
+          "kind": "model-export"
+        },
+        {
+          "path": "models/bacterial-infection/model.ts",
+          "line": 385,
+          "kind": "observation-shorthand",
+          "reference": "sourceMarker"
+        }
+      ]
+    }
+  ]
+}

@@ -1,29 +1,29 @@
 /** Adapted from Wilensky (2025), CC BY-NC-SA 3.0; exact source/notices adjacent. */
 import { Grid, Random, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
-export type Neighborhood = "Moore" | "von Neumann";
+import { parseParameters, validateStepCount } from "../parameters.ts";
+export type Neighborhood = "moore" | "von-neumann";
 export const presets = {
-  "133": [1, 3, 3, "Moore"],
-  "3-color bootstrap": [2, 11, 3, "Moore"],
-  amoeba: [3, 10, 2, "von Neumann"],
-  "black and white": [3, 23, 2, "von Neumann"],
-  "diamond spirals": [1, 1, 14, "von Neumann"],
-  cubism: [2, 5, 3, "von Neumann"],
-  "cyclic spirals": [3, 5, 8, "Moore"],
-  "fossil debris": [2, 9, 4, "Moore"],
-  macaroni: [2, 4, 5, "Moore"],
-  multistrands: [5, 15, 6, "Moore"],
-  "percolation mix": [5, 10, 8, "Moore"],
-  "weak spirals": [4, 9, 7, "Moore"],
-  "Greenberg–Hastings": [3, 5, 8, "Moore"],
-  imperfect: [1, 2, 4, "Moore"],
-  "lava lamp": [2, 10, 3, "Moore"],
-  maps: [2, 3, 5, "von Neumann"],
-  perfect: [1, 3, 4, "Moore"],
-  "squarish spirals": [2, 2, 6, "von Neumann"],
-  stripes: [3, 4, 5, "von Neumann"],
-  "turbulent phase": [2, 5, 8, "Moore"],
+  "133": [1, 3, 3, "moore"],
+  "3-color-bootstrap": [2, 11, 3, "moore"],
+  amoeba: [3, 10, 2, "von-neumann"],
+  "black-and-white": [3, 23, 2, "von-neumann"],
+  "diamond-spirals": [1, 1, 14, "von-neumann"],
+  cubism: [2, 5, 3, "von-neumann"],
+  "cyclic-spirals": [3, 5, 8, "moore"],
+  "fossil-debris": [2, 9, 4, "moore"],
+  macaroni: [2, 4, 5, "moore"],
+  multistrands: [5, 15, 6, "moore"],
+  "percolation-mix": [5, 10, 8, "moore"],
+  "weak-spirals": [4, 9, 7, "moore"],
+  "greenberg-hastings": [3, 5, 8, "moore"],
+  imperfect: [1, 2, 4, "moore"],
+  "lava-lamp": [2, 10, 3, "moore"],
+  maps: [2, 3, 5, "von-neumann"],
+  perfect: [1, 3, 4, "moore"],
+  "squarish-spirals": [2, 2, 6, "von-neumann"],
+  stripes: [3, 4, 5, "von-neumann"],
+  "turbulent-phase": [2, 5, 8, "moore"],
 } as const;
 export type Preset = "none" | "custom" | keyof typeof presets;
 export interface CyclicParameters {
@@ -57,8 +57,8 @@ export const inputs: Inputs<CyclicParameters> = {
   },
   neighborhood: {
     kind: "choice",
-    default: "Moore",
-    options: ["Moore", "von Neumann"],
+    default: "moore",
+    options: ["moore", "von-neumann"],
   },
   radius: { kind: "number", default: 3, min: 1, max: 6, integer: true },
   stateCount: { kind: "number", default: 3, min: 2, max: 14, integer: true },
@@ -69,7 +69,7 @@ export function cyclicOffsets(radius: number, neighborhood: Neighborhood) {
     !Number.isSafeInteger(radius) ||
     radius < 1 ||
     radius > 6 ||
-    !["Moore", "von Neumann"].includes(neighborhood)
+    !["moore", "von-neumann"].includes(neighborhood)
   )
     throw new RangeError("Invalid cyclic neighborhood.");
   const offsets: { x: number; y: number }[] = [];
@@ -77,7 +77,7 @@ export function cyclicOffsets(radius: number, neighborhood: Neighborhood) {
     for (let x = -radius; x <= radius; x++)
       if (
         (x !== 0 || y !== 0) &&
-        (neighborhood === "Moore" || Math.abs(x) + Math.abs(y) <= radius)
+        (neighborhood === "moore" || Math.abs(x) + Math.abs(y) <= radius)
       )
         offsets.push(Object.freeze({ x, y }));
   return Object.freeze(offsets);
@@ -103,13 +103,13 @@ export function cyclicTransition(
   return successors >= threshold ? (state + 1) % stateCount : state;
 }
 export function create(options: Partial<CyclicParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   if (settings.width % 2 !== 1 || settings.height % 2 !== 1)
     throw new RangeError("Use odd centered dimensions.");
   if (settings.preset !== "none" && settings.preset !== "custom") {
     const [radius, threshold, stateCount, neighborhood] =
       presets[settings.preset];
-    settings = parameters(inputs, {
+    settings = parseParameters(inputs, {
       ...settings,
       radius,
       threshold,
@@ -127,7 +127,7 @@ export function create(options: Partial<CyclicParameters> = {}) {
     random.sample(
       // Actual source runtime `show base-colors`, verified in original Chromium.
       [5, 15, 25, 35, 45, 55, 65, 75, 85, 95, 105, 115, 125, 135],
-      { count: settings.stateCount, order: "source" },
+      { sampleCount: settings.stateCount, order: "source" },
     ),
   );
   const offsets = cyclicOffsets(settings.radius, settings.neighborhood);
@@ -154,12 +154,12 @@ export function create(options: Partial<CyclicParameters> = {}) {
     });
   }
   return {
-    advance(count = 1) {
-      stepCount(count);
-      run(world, go, count);
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      run(world, go, stepCount);
     },
     setThreshold(threshold: number) {
-      settings = parameters(inputs, { ...settings, threshold });
+      settings = parseParameters(inputs, { ...settings, threshold });
     },
     setCells(values: readonly number[]) {
       if (

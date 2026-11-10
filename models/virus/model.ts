@@ -1,10 +1,10 @@
 /** Biology Virus (Wilensky, 1998), distinct from Virus on a Network. See NOTICE.md. */
 import { Agent, Grid, Random, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface VirusParameters {
   seed: number;
-  numberPeople: number;
+  personCount: number;
   infectiousness: number;
   chanceRecover: number;
   duration: number;
@@ -12,7 +12,7 @@ export interface VirusParameters {
 }
 export const inputs: Inputs<VirusParameters> = {
   seed: { kind: "number", default: 1, integer: true },
-  numberPeople: {
+  personCount: {
     kind: "number",
     default: 150,
     min: 10,
@@ -35,7 +35,7 @@ type Person = Agent<{
   age: number;
 }>;
 export function create(options: Partial<VirusParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const space = { x: 35, y: 35, boundary: "wrap" } as const;
   const world = World.create(space, { random });
@@ -49,14 +49,14 @@ export function create(options: Partial<VirusParameters> = {}) {
   let percentImmune = 0;
   const history: {
     tick: number;
-    population: number;
-    infected: number;
-    immune: number;
+    personCount: number;
+    infectedPersonCount: number;
+    immunePersonCount: number;
   }[] = [];
   const all = () => world.agents as readonly Person[];
   const shuffled = (people: readonly Person[]) =>
     random.sample(people, {
-      count: people.length,
+      sampleCount: people.length,
       algorithm: "fisher-yates-descending",
     });
   const integer = (upper: number) =>
@@ -79,7 +79,7 @@ export function create(options: Partial<VirusParameters> = {}) {
     return person.remainingImmunity > 0;
   }
   function setupAgents() {
-    for (let index = 0; index < settings.numberPeople; index++) {
+    for (let index = 0; index < settings.personCount; index++) {
       world.add(
         Agent.create(
           {
@@ -98,7 +98,7 @@ export function create(options: Partial<VirusParameters> = {}) {
         ),
       );
     }
-    for (const person of random.sample(all(), { count: 10 })) getSick(person);
+    for (const person of random.sample(all(), { sampleCount: 10 })) getSick(person);
   }
   function updateGlobalVariables() {
     if (all().length) {
@@ -162,9 +162,9 @@ export function create(options: Partial<VirusParameters> = {}) {
   function record() {
     history.push({
       tick: world.tick.value,
-      population: all().length,
-      infected: percentInfected,
-      immune: percentImmune,
+      personCount: all().length,
+      infectedPersonCount: percentInfected,
+      immunePersonCount: percentImmune,
     });
     if (history.length > 2001) history.shift();
   }
@@ -187,20 +187,20 @@ export function create(options: Partial<VirusParameters> = {}) {
     );
     record();
   }
-  function advance(count = 1) {
-    stepCount(count);
-    for (let index = 0; index < count; index++) go();
+  function advance(stepCount = 1) {
+    validateStepCount(stepCount);
+    for (let index = 0; index < stepCount; index++) go();
   }
   function setParameters(
-    update: Partial<Omit<VirusParameters, "seed" | "numberPeople">>,
+    update: Partial<Omit<VirusParameters, "seed" | "personCount">>,
   ) {
     if (
       Object.keys(update).some(
-        (key) => key === "seed" || key === "numberPeople",
+        (key) => key === "seed" || key === "personCount",
       )
     )
       throw new TypeError("Setup parameters require a new model.");
-    settings = parameters(inputs, { ...settings, ...update });
+    settings = parseParameters(inputs, { ...settings, ...update });
   }
   function read() {
     return {

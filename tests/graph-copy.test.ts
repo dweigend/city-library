@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test";
 import { Agent, Graph, Random, World } from "city-library";
-import { frameworkRecord } from "../src/agent/lifecycle.ts";
+import { frameworkRecord } from "../library/agent/lifecycle.ts";
 
 const participants = (node: object) => frameworkRecord(node)!.deletionParticipants.size;
 

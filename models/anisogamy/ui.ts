@@ -6,7 +6,7 @@ export const ui = defineUI(model, {
   change: (instance, changes) => instance.setParameters(changes),
   live: {
     worldSize: {},
-    maxAdults: {},
+    maxAdultCount: {},
     zygoteFitnessThreshold: {},
     gameteFitnessThreshold: {},
     mutationSigma: {},
@@ -41,9 +41,9 @@ export const ui = defineUI(model, {
       type: "line",
       label: "Adult mating types",
       series: (s) =>
-        (["blueAdults", "redAdults"] as const).map((key) => ({
+        (["blueAdultCount", "redAdultCount"] as const).map((key) => ({
           label: key.startsWith("blue") ? "Blue" : "Red",
-          color: key === "blueAdults" ? "#4575b4" : "#d73027",
+          color: key === "blueAdultCount" ? "#4575b4" : "#d73027",
           points: s.history.map((p) => ({ x: p.tick, y: p[key] })),
         })),
     },
@@ -51,9 +51,9 @@ export const ui = defineUI(model, {
       type: "line",
       label: "Gamete mating types",
       series: (s) =>
-        (["blueGametes", "redGametes"] as const).map((key) => ({
+        (["blueGameteCount", "redGameteCount"] as const).map((key) => ({
           label: key.startsWith("blue") ? "Blue" : "Red",
-          color: key === "blueGametes" ? "#4575b4" : "#d73027",
+          color: key === "blueGameteCount" ? "#4575b4" : "#d73027",
           points: s.history.map((p) => ({ x: p.tick, y: p[key] })),
         })),
     },

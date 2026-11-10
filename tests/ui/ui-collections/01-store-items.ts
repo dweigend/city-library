@@ -8,7 +8,7 @@ export function scene(state: Observation<typeof model>): SpatialData {
       items: state.blockedCrates.map(crate => ({ id: `crate:${crate.crate}` })) },
     { id: 'stored', label: 'Stored crates', kind: 'items', order: 'supplied', color: scientificPalette.active,
       items: state.crates.map(crate => ({ id: `crate:${crate.crate}` })) },
-    { id: 'capacity', label: 'Store capacity', kind: 'capacity', used: state.stored, capacity: state.parameters.capacity, unit: 'crates' },
+    { id: 'capacity', label: 'Store capacity', kind: 'capacity', used: state.storedLotCount, capacity: state.parameters.capacity, unit: 'crates' },
     { id: 'collected', label: 'Collected crates', kind: 'items', color: scientificPalette.completed,
       items: state.deliveries.map(crate => ({ id: `crate:${crate.crate}` })) },
   ]);

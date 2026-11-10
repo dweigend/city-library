@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { create as travel } from "../../../models/epidem-travel-and-control/model.ts";
 import { create as synthesis, mrnaStringFromDNAString, complementaryMRNABase, whichProteinForThisCodon } from "../../../models/dna-protein-synthesis/model.ts";
 
-const controls = travel({ seed: 51, initialPeople: 100, initialAmbulance: 2, infectionChance: 0, recoveryChance: 100, averageRecoveryTime: 1, inoculationChance: 50 });
+const controls = travel({ seed: 51, initialPersonCount: 100, initialAmbulanceCount: 2, infectionChance: 0, recoveryChance: 100, averageRecoveryTime: 1, inoculationChance: 50 });
 assert.equal(controls.read().agents.length, 102);
 assert.equal(controls.read().agents.filter(agent => agent.ambulance).length, 2);
 assert.ok(controls.read().agents.filter(agent => !agent.ambulance && !agent.infected).some(agent => agent.inoculated));
@@ -16,7 +16,7 @@ assert.equal(controls.read().tick, tick);
 assert.equal(mrnaStringFromDNAString("ATGC"), "UACG");
 assert.equal(complementaryMRNABase("U"), "A");
 assert.equal(whichProteinForThisCodon("AUG"), "Met");
-const dna = synthesis({ seed: 52, initialDNAString: "1 short gene" });
+const dna = synthesis({ seed: 52, initialDNAString: "one-short-gene" });
 assert.equal(dna.read().originalDNAString, "ATTATGTGGTAG");
 assert.equal(dna.read().originalGenes.length, 1);
 assert.equal(dna.read().originalGenes[0]!.code, "ATGTGG");

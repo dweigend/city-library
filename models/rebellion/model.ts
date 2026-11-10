@@ -1,7 +1,7 @@
 /** NetLogo Rebellion (2004), Uri Wilensky, CC BY-NC-SA 3.0; see NOTICE.md. */
 import { Agent, Grid, Random, World, run, geometry } from 'city-library';
 import type { Definition, Inputs } from '../definition.ts';
-import { parameters, stepCount } from '../parameters.ts';
+import { parseParameters, validateStepCount } from '../parameters.ts';
 export interface RebellionParameters {
   seed: number;
   initialCopDensity: number;
@@ -10,7 +10,7 @@ export interface RebellionParameters {
   governmentLegitimacy: number;
   maxJailTerm: number;
   movement: boolean;
-  visualization: '2D' | '3D';
+  visualization: '2d' | '3d';
 }
 export const inputs: Inputs<RebellionParameters> = {
   seed: {
@@ -26,7 +26,7 @@ export const inputs: Inputs<RebellionParameters> = {
   governmentLegitimacy: { kind: 'number', default: 0.82, min: 0, max: 1 },
   maxJailTerm: { kind: 'number', default: 30, min: 0, max: 50, integer: true },
   movement: { kind: 'boolean', default: true },
-  visualization: { kind: 'choice', default: '2D', options: ['2D', '3D'] },
+  visualization: { kind: 'choice', default: '2d', options: ['2d', '3d'] },
 };
 type Citizen = Agent<{
   who: number;
@@ -37,7 +37,7 @@ type Citizen = Agent<{
   jailTerm: number;
 }>;
 export function create(options: Partial<RebellionParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   if (settings.initialCopDensity + settings.initialAgentDensity > 100)
     throw new RangeError('Initial densities must sum to at most100%.');
   const random = Random.create({ seed: settings.seed }),
@@ -116,12 +116,12 @@ export function create(options: Partial<RebellionParameters> = {}) {
   }
   record();
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) {
         run(world, () => {
           for (const a of random.sample(agents(), {
-            count: agents().length,
+            sampleCount: agents().length,
             algorithm: 'fisher-yates-descending',
           })) {
             if (a.kind === 'cop' || a.jailTerm === 0) {
@@ -191,7 +191,7 @@ export function create(options: Partial<RebellionParameters> = {}) {
         )
       )
         throw new TypeError('Supply only live parameter data.');
-      settings = parameters(inputs, { ...settings, ...values });
+      settings = parseParameters(inputs, { ...settings, ...values });
     },
     watchOne() {
       const people = agents().filter((a) => a.kind === 'citizen');
@@ -200,7 +200,7 @@ export function create(options: Partial<RebellionParameters> = {}) {
           (best, a) => (!best || a.hardship > best.hardship ? a : best),
           undefined,
         )?.id ?? null;
-      settings = parameters(inputs, { ...settings, visualization: '3D' });
+      settings = parseParameters(inputs, { ...settings, visualization: '3d' });
     },
     read() {
       return Object.freeze({

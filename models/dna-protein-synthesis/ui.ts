@@ -103,6 +103,5 @@ const binding = defineUI(model, {
 });
 
 export { model };
-export const sourceMarker =
-  "selected-disease-gene-b09:dna-protein-synthesis:189eda6e21a0408e290f1afb5781ddae936f819ed8917788a683dcaf7d661301";
-export const ui = { ...binding, model, sourceMarker };
+
+export const ui = { ...binding, model };

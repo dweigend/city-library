@@ -1,12 +1,17 @@
 # Stochastic Cellular Automaton
 
-The eight binary neighborhoods each select a Bernoulli activation probability for the next row. Zero and one give deterministic transitions; intermediate probabilities change trajectories even with the same starting field.
+What changes when a cellular rule involves chance? As in the elementary one-dimensional automata, each cell's next value depends on itself and its two neighbors. Here each of the eight neighborhoods (`OOO` … `III`) has its own probability of producing a 1. Values of 0 and 100 make that case deterministic. Each generation is drawn as a new row.
+
+Things to try:
+
+- Load the prepared settings with `example` and compare.
+- Set all probabilities to 50. Is the picture distinguishable from noise?
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `Stochastic Cellular Automaton`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Choose **Stochastic Cellular Automaton** in [Agent Lab](../../ui/agent-lab/README.md).
 
-Headless, from a script in the repository root:
+From a script in the repository root:
 
 ```ts
 import { create } from "./models/ca-stochastic/model.ts";
@@ -20,7 +25,7 @@ Each progress step writes a sampled generation into the next row. Continue (`con
 
 ## Parameters
 
-`create(options)` accepts these input keys. The [UI binding](ui.ts) distinguishes setup controls from live changes; [model.ts](model.ts) defines additional validation.
+`create(options)` accepts these inputs. [ui.ts](ui.ts) decides which are setup controls and which can change during a run; [model.ts](model.ts) adds further validation.
 
 | Input | Default | Declared values |
 | --- | --- | --- |
@@ -45,16 +50,16 @@ Each progress step writes a sampled generation into the next row. Continue (`con
 
 ## Actions and observations
 
-Use `advance(...)` for progress and `read()` for observations; the model defines how work advances its tick.
+Call `advance()` with an optional step count to run the model; the model defines how a step advances its tick. Call `read()` for a detached snapshot.
 
-Other instance procedures: `setupRandom`, `continueRun`, `setRules`, `setupExample`. See their typed arguments in [model.ts](model.ts).
+Other actions: `setupRandom`, `continueRun`, `setRules`, `setupExample`. Their typed arguments are in [model.ts](model.ts).
 
 Model-specific `read()` fields include `row`, `absorbing`, `probabilities`, `entropy`, `cells`.
 
-The [UI binding](ui.ts) presents `Setup random`, `Setup example`, `Continue`, `Tick`, `Row`, `Metric entropy`, `Topological entropy`, `Rows`, `Entropy`, `Topological` and further views or controls.
+## Sources and limits
 
-## Sources and acceptance
+Adapted from the NetLogo *CA Stochastic* model by Wilensky (2003). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+The space-time picture shows one random realization; another seed gives another picture. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 
-[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `ca-stochastic` and links any shared checks.
+[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) records the acceptance stages for `ca-stochastic`.

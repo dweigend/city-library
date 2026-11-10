@@ -5,9 +5,9 @@ import { create as buses } from "../../../models/des-bus-interchange/model.ts";
 const interchange = buses();
 assert.equal(interchange.read().travelMinutes, 5);
 interchange.advance(5);
-assert.equal(interchange.read().waiting, 1);
+assert.equal(interchange.read().waitingBusCount, 1);
 interchange.advance(4);
-assert.deepEqual(interchange.read().buses.map((bus) => bus.departed), [7, 9]);
+assert.deepEqual(interchange.read().buses.map((bus) => bus.departedAtMinutes), [7, 9]);
 assert.equal(interchange.read().tick, 9);
 assert.equal(interchange.read().time, 9);
 

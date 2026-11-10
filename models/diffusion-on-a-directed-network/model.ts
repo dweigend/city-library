@@ -6,7 +6,7 @@
 import { Agent, Graph, Grid, Random, World, run, stats } from "city-library";
 import type { Edge } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 
 export interface DiffusionParameters { seed: number; gridSize: number; edgeChance: number; diffusionRate: number }
 export const inputs: Inputs<DiffusionParameters> = {
@@ -22,7 +22,7 @@ type DiffusionEdge = Edge<DiffusionNode, FlowState>;
 interface DiffusionSample { readonly tick: number; readonly totalValue: number; readonly maxValue: number }
 
 export function create(options: Partial<DiffusionParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const world = World.create({ x: 21, y: 21 }, { random });
   const grid = Grid.create({ x: settings.gridSize, y: settings.gridSize });
@@ -89,15 +89,15 @@ export function create(options: Partial<DiffusionParameters> = {}) {
   updateFlowReporters();
   record();
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let index = 0; index < count; index++) { run(world, diffuseValues); record(); }
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let index = 0; index < stepCount; index++) { run(world, diffuseValues); record(); }
     },
     setRules(rules: Partial<Pick<DiffusionParameters, "diffusionRate">>) {
       if (typeof rules !== "object" || rules === null || ![Object.prototype, null].includes(Object.getPrototypeOf(rules)) ||
         Reflect.ownKeys(rules).some(key => key !== "diffusionRate" || !("value" in Object.getOwnPropertyDescriptor(rules, key)!)))
         throw new TypeError("Supply only the live diffusionRate data property.");
-      settings = parameters(inputs, { ...settings, ...rules });
+      settings = parseParameters(inputs, { ...settings, ...rules });
       record();
     },
     rewire() {
@@ -153,7 +153,7 @@ export function create(options: Partial<DiffusionParameters> = {}) {
         tick: world.tick.value, parameters: settings,
         nodes: Object.freeze(nodes.map(node => Object.freeze({ id: node.id, index: node.index, x: node.x, y: node.y, value: node.value }))),
         edges: Object.freeze([...graph.edges].map(edge => Object.freeze({ id: edge.id, from: edge.from.id, to: edge.to.id, fromIndex: edge.from.index, toIndex: edge.to.index, active: edge.active, currentFlow: edge.currentFlow }))),
-        counts: Object.freeze({ nodes: nodes.length, candidateEdges: graph.edges.size, activeEdges: [...graph.edges].filter(edge => edge.active).length }),
+        counts: Object.freeze({ nodeCount: nodes.length, candidateEdgeCount: graph.edges.size, activeEdgeCount: [...graph.edges].filter(edge => edge.active).length }),
         ...measurement, maxFlow, meanFlow, histogram,
         history: Object.freeze([...history]), randomState: random.state, done: false as const,
       });

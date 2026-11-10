@@ -13,4 +13,4 @@ assert.equal(plan.length, 8);
 assert.equal(plan[3]!.id, "run-1-1");
 assert.equal(plan[3]!.scenarioId, "scenario-1");
 assert.throws(() => studies.replicate(scenarios, [11, 11]), RangeError);
-assert.throws(() => studies.design({ axes: [{ name: "x", values: [1, 2] }], maxScenarios: 1 }), RangeError);
+assert.throws(() => studies.design({ axes: [{ name: "x", values: [1, 2] }], maxScenarioCount: 1 }), RangeError);

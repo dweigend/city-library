@@ -1,8 +1,8 @@
 # Activation and continuous progression
 
-This phase implements the existing World activation contract first. The ordinary scheduling extension adds `order: "fixed"` and `order: "priority"` beside the specified default `"shuffle"`. Priority accepts a pure synchronous `priority(member)` callback; lower finite numbers run first, with source order resolving ties. Priorities are captured before actions. Fixed order consumes no randomness. All variants capture unique entry membership, exclude births, skip dead members, validate ownership at visit, and never advance tick.
+City Library implements the specified World activation contract. Its scheduling extension adds `order: "fixed"` and `order: "priority"` beside the specified default `"shuffle"`. Priority accepts a pure synchronous `priority(member)` callback; lower finite numbers run first, with source order resolving ties. Priorities are captured before actions. Fixed order consumes no randomness. All variants capture unique entry membership, exclude births, skip dead members, validate ownership at visit, and never advance tick.
 
-`world.activate`, `world.report`, and `world.select` preserve scoped self/caller/death semantics. The pinned NetLogo scheduling variant requires its separately specified MT Random implementation; a Mulberry stream rejects rather than pretending to be compatible. Activation implementation belongs under `src/world/activation`, following the binding domain layout.
+`world.activate`, `world.report`, and `world.select` preserve scoped self/caller/death semantics. The pinned NetLogo scheduling variant requires its separately specified MT Random implementation; a Mulberry stream rejects rather than pretending to be compatible. Activation implementation belongs under `library/world/activation`, following the binding domain layout.
 
 `twoPhase(source, { compute, commit })` captures unique original references, computes every proposal before the first commit, and commits in captured order. Compute and commit are synchronous. A failed compute performs no library commits; callbacks remain responsible for their own effects. A failed commit retains earlier commits. It has no clock, scheduler, membership owner, rollback, or implicit Random. Models should compute detached proposals and keep compute pure.
 
@@ -10,7 +10,7 @@ This phase implements the existing World activation contract first. The ordinary
 
 Stopping, step budgets, and outcome reasons use the existing `studies.run` contract. No competing runner is added. World tick, Agenda time and elapsed physical duration remain distinct. Groups use caller objects as Graph nodes, graph edges for membership, and frozen native snapshots of neighbors; no parallel group registry is needed.
 
-The five public scripts in `tests/public-contracts/model-dynamics` are the phase acceptance contract. They cover deterministic activation/lifecycle, seeded scheduling, two-phase updates, linear thresholds, and Graph membership combined with study stopping. Runtime implementation must preserve these assertions.
+The five public scripts in `tests/public-contracts/model-dynamics` are the acceptance contract for these capabilities. They cover deterministic activation/lifecycle, seeded scheduling, two-phase updates, linear thresholds, and Graph membership combined with study stopping. Runtime implementation must preserve these assertions.
 
 ## Agenda membership
 

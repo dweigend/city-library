@@ -10,7 +10,7 @@ const captured=graph.components();
 assert.equal(captured[0]![0],a);
 a.energy=5;
 assert.equal(captured[0]![0]!.energy,5);
-for(let i=0;i<10;i++)assert.equal(graph.connected(),true);
+for(let i=0;i<10;i++)assert.equal(graph.isConnected(),true);
 assert.deepEqual(random.state,state);
 assert.equal(world.tick.value,0);
 edge.delete();

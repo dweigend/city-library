@@ -62,6 +62,5 @@ const binding = defineUI(model, {
 });
 
 export { model };
-export const sourceMarker =
-  "selected-biology-b07:tumor:f47f5edc51141c107582ae5b30d23f613cbef305f6b2cb6bbea13c46298f0630";
-export const ui = { ...binding, model, sourceMarker };
+
+export const ui = { ...binding, model };

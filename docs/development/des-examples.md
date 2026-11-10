@@ -1,12 +1,10 @@
 # Ten discrete-event city examples
 
-These are original synthetic teaching scenarios, not calibrated city forecasts or Salabim ports. The model owns execution and observations. Each `ui.ts` binds canonical inputs, public actions and detached observations through `defineUI`; the existing Agent Lab discovers every `models/<slug>/{model,ui}.ts` pair automatically. No registry or custom renderer is needed.
+Ten small city scenarios show what the [discrete-event capabilities](des-feature-matrix.md) can do. They are original synthetic teaching examples, not calibrated city forecasts or Salabim ports. Each model owns its execution and observations; its `ui.ts` binds canonical inputs, public actions and detached observations through `defineUI`. Agent Lab discovers every `models/<slug>/{model,ui}.ts` pair automatically, so no registry or custom renderer is needed.
 
-## Delivery gate
+## The ten scenarios
 
-Freeze the five phase-A scripts and five phase-B scripts, paired models and UI declarations before DES runtime implementation. Accepted public calls and asserted values are contracts. Implementation fixes must not weaken them. The core's five capability examples are a separate API gate. Passing headless assertions does not establish scientific validation or browser acceptance.
-
-Phase A has three examples focused on the new detached capabilities, followed by two compositions with existing Agent, World and Graph APIs. Phase B contributes five further compositions. Together they provide exactly three focused and seven combined models, with different mechanisms rather than ten parameterizations of one queue.
+Three focused models exercise the detached event capabilities on their own; seven combine them with Agent, World, Graph or Grid. Each uses a different mechanism rather than ten parameterizations of one queue. The ten asserted scripts in `tests/public-contracts/des-models` fix the public calls and expected values below; phase A (`01`–`05`) and phase B (`06`–`10`), with their paired models and UI declarations, are frozen before DES runtime implementation. Accepted public calls and asserted values are contracts: implementation fixes must not weaken them. The five core capability examples in `tests/public-contracts/des` are a separate API gate. Passing headless assertions does not establish scientific validation or browser acceptance.
 
 | Phase | Slug | Mechanism and public actions | Units and deterministic acceptance | UI evidence needed |
 | --- | --- | --- | --- | --- |
@@ -21,8 +19,6 @@ Phase A has three examples focused on the new detached capabilities, followed by
 | B, combined | `des-water-allocation` | Neighborhood Grid and finite water allocation with explicit unmet demand | Allocation units and minutes; no hydraulic, pressure or water-quality claims. Six delivered plus six unmet; added supply fulfills total demand 12 | Add supply action and neighborhood allocation ledger |
 | B, combined | `des-machine-maintenance` | Spatial machine Agents, crew Resource, failures and delayed repairs | Synthetic minutes, explicit working/failed/repair states; at minute 10 two repairs complete and mean availability is 0.5 | Spatial machines, live repair-team capacity, uptime and repair ledger |
 
-The ten asserted scripts under `tests/public-contracts/des-models` define the exact fixtures for both phases.
-
 ## Common acceptance
 
 All ten factories are inert on import and independent on creation. Setup validates canonical descriptors. `advance` rejects negative or nonintegral counts. Model steps explicitly drain causal Agenda events within a finite event budget; no Promise, wall-clock timer or automatic World ticking performs a simulated wait. Reads return detached data without consuming randomness or advancing clocks. Resource and Store kernels own occupancy and waiting; model ledgers describe scientific milestones rather than reimplementing allocation.
@@ -33,4 +29,4 @@ Browser verification must cover Setup, step, Run/Pause, model switching and each
 
 ## Authoring
 
-Model state and observations belong to the headless implementation. Follow the [coding standards](../CODING_STANDARDS.md), [model authoring guide](model-authoring.md) and shared [UI contract](../ui/README.md). UI declarations reuse the existing components and tokens.
+Model state and observations belong to the headless implementation. Follow the [coding standards](../CODING_STANDARDS.md), [model authoring guide](model-authoring.md) and shared [UI contract](../ui/README.md). UI declarations reuse the existing components and tokens. Executed checks and review results are recorded in the [integration evidence](des-integration-evidence.md).

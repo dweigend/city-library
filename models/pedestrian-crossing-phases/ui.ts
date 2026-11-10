@@ -4,11 +4,11 @@ import { model } from "./model.ts";
 export const ui = defineUI(model, {
   complete: state => state.done,
   monitors: [{ label: "Minute", value: state => state.tick }, { label: "Signal", value: state => state.signal },
-    { label: "Waiting", value: state => state.waiting }, { label: "Crossing", value: state => state.crossing }, { label: "Arrived", value: state => state.arrived }],
+    { label: "Waiting", value: state => state.waitingPedestrianCount }, { label: "Crossing", value: state => state.crossingPedestrianCount }, { label: "Arrived", value: state => state.arrivedPedestrianCount }],
   views: [
     { type: "spatial", label: "Crossing · waiting → crosswalk → arrived (schematic)", data: crossingData },
     { type: "line", label: "Cohort", xAxis: { unit: "min" }, yAxis: { label: "People" },
-      series: state => ["waiting", "crossing", "arrived"].map(key => ({ label: key, points: state.history.map(sample => ({ x: sample.tick, y: sample.values[key]! })) })) },
+      series: state => ["waitingPedestrianCount", "crossingPedestrianCount", "arrivedPedestrianCount"].map(key => ({ label: ({"waitingPedestrianCount": "Waiting", "crossingPedestrianCount": "Crossing", "arrivedPedestrianCount": "Arrived"})[key]!, points: state.history.map(sample => ({ x: sample.tick, y: sample.values[key]! })) })) },
   ],
 });
 

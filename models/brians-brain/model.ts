@@ -1,7 +1,7 @@
 /** Adapted from Wilensky (2002), CC BY-NC-SA 3.0; exact source/notices adjacent. */
 import { Grid, Random, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface BrainParameters {
   width: number;
   height: number;
@@ -39,7 +39,7 @@ export function brainTransition(state: number, firingNeighbors: number) {
   return state === 1 ? 2 : state === 2 ? 0 : firingNeighbors === 2 ? 1 : 0;
 }
 export function create(options: Partial<BrainParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   if (settings.width % 2 !== 1 || settings.height % 2 !== 1)
     throw new RangeError("Use odd centered dimensions.");
   const { width, height } = settings,
@@ -79,9 +79,9 @@ export function create(options: Partial<BrainParameters> = {}) {
   }
   setup(settings.initialization);
   return {
-    advance(count = 1) {
-      stepCount(count);
-      run(world, go, count);
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      run(world, go, stepCount);
     },
     setupBlank() {
       setup("blank");
@@ -90,7 +90,7 @@ export function create(options: Partial<BrainParameters> = {}) {
       setup("random");
     },
     setInitialDensity(initialDensity: number) {
-      settings = parameters(inputs, { ...settings, initialDensity });
+      settings = parseParameters(inputs, { ...settings, initialDensity });
     },
     setCells(values: readonly number[]) {
       if (
@@ -142,9 +142,9 @@ export function create(options: Partial<BrainParameters> = {}) {
         parameters: settings,
         randomState: random.state,
         counts: Object.freeze({
-          firing: grid.fields.filter((f) => f.state === 1).length,
-          refractory: grid.fields.filter((f) => f.state === 2).length,
-          off: grid.fields.filter((f) => f.state === 0).length,
+          firingFieldCount: grid.fields.filter((f) => f.state === 1).length,
+          refractoryFieldCount: grid.fields.filter((f) => f.state === 2).length,
+          inactiveFieldCount: grid.fields.filter((f) => f.state === 0).length,
         }),
         cells: Object.freeze(
           grid.fields.map((f) =>

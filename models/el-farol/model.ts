@@ -1,16 +1,16 @@
 /** NetLogo El Farol (Rand & Wilensky, 2007), CC BY-NC-SA 3.0; see NOTICE.md. */
 import { Agent, Grid, Random, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface ElFarolParameters {
   memorySize: number;
-  numberStrategies: number;
+  strategyCount: number;
   overcrowdingThreshold: number;
   seed: number;
 }
 export const inputs: Inputs<ElFarolParameters> = {
   memorySize: { kind: "number", default: 5, min: 1, max: 10, integer: true },
-  numberStrategies: {
+  strategyCount: {
     kind: "number",
     default: 10,
     min: 1,
@@ -96,7 +96,7 @@ export interface Patron {
   scores: readonly number[];
 }
 export function create(options: Partial<ElFarolParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const space = { x: 35, y: 35, boundary: "wrap" as const };
   const world = World.create(space, { random }),
@@ -166,7 +166,7 @@ export function create(options: Partial<ElFarolParameters> = {}) {
       world.add(p);
       moveToEmptyOneOf(p.id, "home");
       p.strategies = Array.from(
-        { length: settings.numberStrategies },
+        { length: settings.strategyCount },
         randomStrategy,
       );
       updateStrategies(p.id);
@@ -177,7 +177,7 @@ export function create(options: Partial<ElFarolParameters> = {}) {
   function go() {
     crowded = false;
     for (const p of random.sample(people(), {
-      count: people().length,
+      sampleCount: people().length,
       algorithm: "fisher-yates-descending",
     })) {
       p.prediction = predictAttendance(
@@ -187,7 +187,7 @@ export function create(options: Partial<ElFarolParameters> = {}) {
       p.attend = p.prediction <= settings.overcrowdingThreshold;
     }
     for (const p of random.sample(people(), {
-      count: people().length,
+      sampleCount: people().length,
       algorithm: "fisher-yates-descending",
     }))
       moveToEmptyOneOf(p.id, p.attend ? "bar" : "home");
@@ -199,7 +199,7 @@ export function create(options: Partial<ElFarolParameters> = {}) {
     history.unshift(attendance);
     history.pop();
     for (const p of random.sample(people(), {
-      count: people().length,
+      sampleCount: people().length,
       algorithm: "fisher-yates-descending",
     }))
       updateStrategies(p.id);
@@ -213,18 +213,18 @@ export function create(options: Partial<ElFarolParameters> = {}) {
     setRules(
       changes: Partial<Pick<ElFarolParameters, "overcrowdingThreshold">>,
     ) {
-      settings = parameters(inputs, { ...settings, ...changes });
+      settings = parseParameters(inputs, { ...settings, ...changes });
     },
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) {
         run(world, go);
         record();
       }
     },
     read() {
       return Object.freeze({
-        sourceMarker: "el-farol:source-v1",
+
         tick: world.tick.value,
         width: 35,
         height: 35,

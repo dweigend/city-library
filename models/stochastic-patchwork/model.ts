@@ -1,7 +1,7 @@
 /** NetLogo Stochastic Patchwork, Abrahamson and Wilensky (2004), CC BY-NC-SA 3.0. */
 import { Grid, Random, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface Parameters {
   seed: number;
   blockSide: number;
@@ -32,7 +32,7 @@ export const inputs: Inputs<Parameters> = {
   },
 };
 export function create(options: Partial<Parameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const world = World.create({ x: 21, y: 21, boundary: "wrap" }, { random });
   const grid = Grid.create(
@@ -52,7 +52,7 @@ export function create(options: Partial<Parameters> = {}) {
     histogram = new Map<number, number>();
   function go() {
     for (const field of random.sample(block, {
-      count: block.length,
+      sampleCount: block.length,
       algorithm: "fisher-yates-descending",
     })) {
       field.target = random.number() * 100 < settings.targetPercent;
@@ -70,12 +70,12 @@ export function create(options: Partial<Parameters> = {}) {
     get grid() {
       return grid;
     },
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) run(world, go);
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) run(world, go);
     },
     setRules(change: Partial<Pick<Parameters, "targetPercent">>) {
-      settings = parameters(inputs, { ...settings, ...change });
+      settings = parseParameters(inputs, { ...settings, ...change });
     },
     read() {
       return Object.freeze({

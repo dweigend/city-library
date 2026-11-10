@@ -5,8 +5,8 @@ const layout = distortedPatch([1.177, 1.739]);
 
 const safeStep = topology.relax({
   layout,
-  method: "squareTarget",
-  iterations: 1,
+  method: "square-target",
+  iterationCount: 1,
 });
 
 console.log(safeStep.polygon({ cell: 0 }));
@@ -27,30 +27,30 @@ for (const point of oldRing) {
 // Failure must not publish a partial result or change old polygon snapshots.
 const exhausted = distortedPatch([1.304019824210452, 1.5675690077264486]);
 const beforeFailure = exhausted.cells.map(cell => exhausted.polygon({ cell }));
-assert.throws(() => topology.relax({ layout: exhausted, method: "squareTarget", iterations: 1 }), RangeError);
+assert.throws(() => topology.relax({ layout: exhausted, method: "square-target", iterationCount: 1 }), RangeError);
 assert.deepEqual(exhausted.cells.map(cell => exhausted.polygon({ cell })), beforeFailure);
 
 const random = Random.create({ seed: 7 });
 const initial = random.state;
 for (const options of [
-  { rings: 0, random }, { rings: 8, random }, { rings: 1.5, random },
-  { rings: 1, edgeLength: 0, random }, { rings: 1, edgeLength: 2 ** -401, random },
-  { rings: 3, edgeLength: 1e6, random }, { rings: 1, edgeLength: Infinity, random },
-  { rings: 1, edgeLength: undefined, random }, { rings: 1, random: {} },
-  { rings: 1, boundary: {}, random }, { rings: 1, pointSpacing: 1, random },
-  { rings: 1, relaxationIterations: 2, random },
+  { ringCount: 0, random }, { ringCount: 8, random }, { ringCount: 1.5, random },
+  { ringCount: 1, edgeLength: 0, random }, { ringCount: 1, edgeLength: 2 ** -401, random },
+  { ringCount: 3, edgeLength: 1e6, random }, { ringCount: 1, edgeLength: Infinity, random },
+  { ringCount: 1, edgeLength: undefined, random }, { ringCount: 1, random: {} },
+  { ringCount: 1, boundary: {}, random }, { ringCount: 1, pointSpacing: 1, random },
+  { ringCount: 1, relaxationIterationCount: 2, random },
 ]) {
   assert.throws(() => topology.quadrilaterals(options as never));
   assert.deepEqual(random.state, initial);
 }
-const source = topology.square({ columns: 2, rows: 2 });
+const source = topology.square({ columnCount: 2, rowCount: 2 });
 for (const options of [
-  { layout: source, method: "squareTarget", iterations: -1 },
-  { layout: source, method: "squareTarget", iterations: 257 },
-  { layout: source, method: "squareTarget", iterations: 0.5 },
-  { layout: source, method: "lloyd", iterations: 1 },
-  { layout: source, method: "squareTarget", iterations: 1, random },
-  { layout: source, method: "squareTarget", iterations: 1, strength: 0.5 },
+  { layout: source, method: "square-target", iterationCount: -1 },
+  { layout: source, method: "square-target", iterationCount: 257 },
+  { layout: source, method: "square-target", iterationCount: 0.5 },
+  { layout: source, method: "lloyd", iterationCount: 1 },
+  { layout: source, method: "square-target", iterationCount: 1, random },
+  { layout: source, method: "square-target", iterationCount: 1, strength: 0.5 },
 ]) assert.throws(() => topology.relax(options as never));
 
 const triangle = shape([[0, 0], [2, 0], [0, 2]]);
@@ -59,7 +59,7 @@ const nearDegenerate = shape([[0, 0], [1, 0], [1, 1e-14], [0, 1e-14]]);
 for (const polygon of [triangle, concave, nearDegenerate]) {
   const unsupported = topology.fromPolygons({ polygons: [polygon] });
   const before = unsupported.polygon({ cell: 0 });
-  assert.throws(() => topology.relax({ layout: unsupported, method: "squareTarget", iterations: 0 }), RangeError);
+  assert.throws(() => topology.relax({ layout: unsupported, method: "square-target", iterationCount: 0 }), RangeError);
   assert.deepEqual(unsupported.polygon({ cell: 0 }), before);
 }
 // Importer constraints are separate from square-target constraints.

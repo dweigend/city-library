@@ -1,11 +1,11 @@
 /** Jager & Wang (2024), NetLogo Consumer Choice; CC BY-NC-SA 3.0, see NOTICE.md. */
 import { Agent, Graph, Random, World, run } from 'city-library';
 import type { Definition, Inputs } from '../definition.ts';
-import { parameters, stepCount } from '../parameters.ts';
+import { parseParameters, validateStepCount } from '../parameters.ts';
 export interface ConsumerChoiceParameters {
   seed: number;
   consumerCount: number;
-  avgConnections: number;
+  meanConnectionCount: number;
   initialOrangePercent: number;
   normInfluence: number;
   informationExchange: number;
@@ -28,7 +28,7 @@ export const inputs: Inputs<ConsumerChoiceParameters> = {
     max: 1000,
     integer: true,
   },
-  avgConnections: {
+  meanConnectionCount: {
     kind: 'number',
     default: 5,
     min: 0,
@@ -58,9 +58,9 @@ type Live = Pick<
   | 'qualityBlue'
 >;
 export function create(options: Partial<ConsumerChoiceParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   if (
-    Math.ceil((settings.avgConnections * settings.consumerCount) / 2) >
+    Math.ceil((settings.meanConnectionCount * settings.consumerCount) / 2) >
     (settings.consumerCount * (settings.consumerCount - 1)) / 2
   )
     throw new RangeError('Requested connections exceed the complete graph.');
@@ -94,7 +94,7 @@ export function create(options: Partial<ConsumerChoiceParameters> = {}) {
     consumers.push(a);
     graph.nodes.add(a);
   }
-  const target = (settings.avgConnections * settings.consumerCount) / 2;
+  const target = (settings.meanConnectionCount * settings.consumerCount) / 2;
   while (graph.edges.size < target) {
     const a = random.sample(consumers)[0]!;
     const candidates = consumers.filter((b) => b !== a && !graph.hasEdge(a, b));
@@ -133,12 +133,12 @@ export function create(options: Partial<ConsumerChoiceParameters> = {}) {
   }
   record();
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let n = 0; n < count; n++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let n = 0; n < stepCount; n++) {
         run(world, () => {
           for (const a of random.sample(consumers, {
-            count: consumers.length,
+            sampleCount: consumers.length,
             algorithm: 'fisher-yates-descending',
           })) {
             if (random.number() < a.satisfaction[a.choice]!) {
@@ -149,7 +149,7 @@ export function create(options: Partial<ConsumerChoiceParameters> = {}) {
             a.satisfaction = satisfaction(a.choice);
           }
           for (const a of random.sample(consumers, {
-            count: consumers.length,
+            sampleCount: consumers.length,
             algorithm: 'fisher-yates-descending',
           })) {
             const neighbors = graph.neighbors(a);
@@ -194,7 +194,7 @@ export function create(options: Partial<ConsumerChoiceParameters> = {}) {
         )
       )
         throw new TypeError('Supply only live parameter data.');
-      settings = parameters(inputs, { ...settings, ...values });
+      settings = parseParameters(inputs, { ...settings, ...values });
     },
     read() {
       return Object.freeze({

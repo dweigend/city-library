@@ -1,12 +1,12 @@
 /** NetLogo GenDrift T interact, Wilensky (1997), CC BY-NC-SA 3.0; see NOTICE.md. */
 import { Agent, Grid, Random, World, geometry, stats } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
-export const sourceMarker = "b08-gendrift-t-interact-source-composition-v1";
+import { parseParameters, validateStepCount } from "../parameters.ts";
+
 export interface Parameters {
   seed: number;
-  number: number;
-  colors: number;
+  agentCount: number;
+  colorCount: number;
 }
 export const inputs: Inputs<Parameters> = {
   seed: {
@@ -16,13 +16,13 @@ export const inputs: Inputs<Parameters> = {
     min: -2147483648,
     max: 4294967295,
   },
-  number: { kind: "number", default: 300, min: 1, max: 1000, integer: true },
-  colors: { kind: "number", default: 5, min: 2, max: 10, integer: true },
+  agentCount: { kind: "number", default: 300, min: 1, max: 1000, integer: true },
+  colorCount: { kind: "number", default: 5, min: 2, max: 10, integer: true },
 };
 type ModelAgent = Agent<{ colorNumber: number }>;
 const sourceColors = [5, 15, 25, 35, 45, 55, 65, 85, 95, 125];
 export function create(options: Partial<Parameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const space = { x: 35, y: 35, boundary: "wrap" as const };
   const world = World.create(space, { random });
@@ -60,12 +60,12 @@ export function create(options: Partial<Parameters> = {}) {
     world.delete(agents());
     world.tick.reset();
     history.length = 0;
-    for (let n = 0; n < settings.number; n++) {
+    for (let n = 0; n < settings.agentCount; n++) {
       const agent = Agent.create(
         {
           colorNumber:
             sourceColors[
-              random.number({ min: 0, max: settings.colors, integer: true })
+              random.number({ min: 0, max: settings.colorCount, integer: true })
             ]!,
         },
         {
@@ -130,13 +130,13 @@ export function create(options: Partial<Parameters> = {}) {
     if (wallMode === "place") placeWall(row);
     else removeWall(row);
   }
-  function advance(steps = 1) {
-    stepCount(steps);
-    for (let n = 0; n < steps; n++) {
+  function advance(stepCount = 1) {
+    validateStepCount(stepCount);
+    for (let n = 0; n < stepCount; n++) {
       if (stats.describe(agents().map((a) => a.colorNumber)).variance === 0)
         break;
       for (const agent of random.sample(agents(), {
-        count: agents().length,
+        sampleCount: agents().length,
         algorithm: "fisher-yates-descending",
       })) {
         agent.rotate(
@@ -166,7 +166,7 @@ export function create(options: Partial<Parameters> = {}) {
   }
   function read() {
     return {
-      sourceMarker,
+
       parameters: { ...settings },
       randomState: random.state,
       width: 35,
@@ -192,7 +192,7 @@ export function create(options: Partial<Parameters> = {}) {
     };
   }
   function setParameters(change: Partial<Parameters>) {
-    settings = parameters(inputs, { ...settings, ...change });
+    settings = parseParameters(inputs, { ...settings, ...change });
   }
   setup();
   return {

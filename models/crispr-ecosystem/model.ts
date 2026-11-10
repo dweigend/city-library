@@ -1,12 +1,12 @@
 /** NetLogo CRISPR Ecosystem. Source-specific defense and resource equations. */
 import { Agent, Grid, Random, World, stats, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface EcosystemParameters {
   seed: number;
-  initialBacteria: number;
-  initialViruses: number;
-  maxVirusTypes: number;
+  initialBacteriumCount: number;
+  initialVirusCount: number;
+  maxVirusTypeCount: number;
   infectionChance: number;
   spacerLossChance: number;
   crispr: boolean;
@@ -14,21 +14,21 @@ export interface EcosystemParameters {
 }
 export const inputs: Inputs<EcosystemParameters> = {
   seed: { kind: "number", default: 1, integer: true },
-  initialBacteria: {
+  initialBacteriumCount: {
     kind: "number",
     default: 50,
     min: 0,
     max: 100,
     integer: true,
   },
-  initialViruses: {
+  initialVirusCount: {
     kind: "number",
     default: 250,
     min: 0,
     max: 1000,
     integer: true,
   },
-  maxVirusTypes: {
+  maxVirusTypeCount: {
     kind: "number",
     default: 50,
     min: 1,
@@ -48,7 +48,7 @@ type Organism = Agent<{
   sequence: number;
 }>;
 export function create(options: Partial<EcosystemParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const space = { x: 33, y: 33, boundary: "wrap" } as const;
   const world = World.create(space, { random });
@@ -65,8 +65,8 @@ export function create(options: Partial<EcosystemParameters> = {}) {
   }[] = [];
   const history: {
     tick: number;
-    bacteria: number;
-    viruses: number;
+    bacteriumCount: number;
+    virusCount: number;
     relativeAbundance: { sequence: number; percentage: number }[];
     focalVirusPercent: number;
     focalArrayPercent: number;
@@ -76,7 +76,7 @@ export function create(options: Partial<EcosystemParameters> = {}) {
   const viruses = () => all().filter((p) => p.group === "virus");
   const shuffled = (values: readonly Organism[]) =>
     random.sample(values, {
-      count: values.length,
+      sampleCount: values.length,
       algorithm: "fisher-yates-descending",
     });
   function randomPosition(p: Organism) {
@@ -103,16 +103,16 @@ export function create(options: Partial<EcosystemParameters> = {}) {
       field.foodEnergy = 50;
       field.countdown = 0;
     }
-    for (let i = 0; i < settings.initialBacteria; i++)
+    for (let i = 0; i < settings.initialBacteriumCount; i++)
       addOrganism(
         "bacterium",
         random.number({ distribution: "normal", mean: 50, deviation: 10 }),
       );
-    for (let i = 0; i < settings.initialViruses; i++)
+    for (let i = 0; i < settings.initialVirusCount; i++)
       addOrganism(
         "virus",
         0,
-        random.number({ min: 0, max: settings.maxVirusTypes, integer: true }),
+        random.number({ min: 0, max: settings.maxVirusTypeCount, integer: true }),
       );
   }
   function focalVirusPercent() {
@@ -159,8 +159,8 @@ export function create(options: Partial<EcosystemParameters> = {}) {
     });
     history.push({
       tick,
-      bacteria: bacteria().length,
-      viruses: viruses().length,
+      bacteriumCount: bacteria().length,
+      virusCount: viruses().length,
       focalVirusPercent: focalVirusPercent(),
       focalArrayPercent: focalArrayPercent(),
       relativeAbundance: [...virusHistory].map((sequence) => ({
@@ -239,7 +239,7 @@ export function create(options: Partial<EcosystemParameters> = {}) {
     if (random.number() < 0.05)
       p.sequence = random.number({
         min: 0,
-        max: settings.maxVirusTypes,
+        max: settings.maxVirusTypeCount,
         integer: true,
       });
     for (let i = 0; i < 19; i++)
@@ -261,7 +261,7 @@ export function create(options: Partial<EcosystemParameters> = {}) {
       (b) => grid.fieldAt(b) === grid.fieldAt(p),
     );
     if (targets.length === 0) return;
-    const target = random.sample(targets, { count: 1 })[0]!;
+    const target = random.sample(targets, { sampleCount: 1 })[0]!;
     if (random.number() * 100 >= settings.infectionChance) return;
     const roll = random.number() * 100;
     if (!settings.crispr) {
@@ -313,9 +313,9 @@ export function create(options: Partial<EcosystemParameters> = {}) {
     replenishFood();
     updateVirusPlot();
   }
-  function advance(count = 1) {
-    stepCount(count);
-    for (let i = 0; i < count; i++) {
+  function advance(stepCount = 1) {
+    validateStepCount(stepCount);
+    for (let i = 0; i < stepCount; i++) {
       if (bacteria().length === 0 || viruses().length === 0) {
         stopped = true;
         break;
@@ -326,16 +326,16 @@ export function create(options: Partial<EcosystemParameters> = {}) {
   }
   function setParameters(
     update: Partial<
-      Omit<EcosystemParameters, "seed" | "initialBacteria" | "initialViruses">
+      Omit<EcosystemParameters, "seed" | "initialBacteriumCount" | "initialVirusCount">
     >,
   ) {
     if (
       Object.keys(update).some((k) =>
-        ["seed", "initialBacteria", "initialViruses"].includes(k),
+        ["seed", "initialBacteriumCount", "initialVirusCount"].includes(k),
       )
     )
       throw new TypeError("Setup parameters are immutable.");
-    settings = parameters(inputs, { ...settings, ...update });
+    settings = parseParameters(inputs, { ...settings, ...update });
   }
   function read() {
     return {

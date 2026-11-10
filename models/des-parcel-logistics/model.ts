@@ -2,11 +2,11 @@
 import { Agent, Agenda, Graph, Resource, Store, World, run } from "city-library";
 import type { ResourceRequest } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 
-export interface ParcelParameters { parcels: number; depotCapacity: number; loadingMinutes: number }
+export interface ParcelParameters { parcelCount: number; depotCapacity: number; loadingMinutes: number }
 export const inputs: Inputs<ParcelParameters> = {
-  parcels: { kind: "number", default: 2, min: 0, max: 30, integer: true },
+  parcelCount: { kind: "number", default: 2, min: 0, max: 30, integer: true },
   depotCapacity: { kind: "number", default: 1, min: 1, max: 10, integer: true },
   loadingMinutes: { kind: "number", default: 1, min: 1, max: 10, integer: true },
 };
@@ -20,7 +20,7 @@ interface ParcelJourney {
   ticket?: ResourceRequest<Parcel>;
 }
 export function create(options: Partial<ParcelParameters> = {}) {
-  const settings = parameters(inputs, options);
+  const settings = parseParameters(inputs, options);
   const world = World.create();
   const agenda = Agenda.create<{ kind: "deliver" | "return"; parcel: number }>();
   const graph = Graph.create<{ id: string; label: string }, { minutes: number }>({ edgeState: { minutes: 1 } });
@@ -52,11 +52,11 @@ export function create(options: Partial<ParcelParameters> = {}) {
     buffer.put(agent);
     dispatch();
   }
-  for (let index = 0; index < settings.parcels; index += 1) addParcel();
+  for (let index = 0; index < settings.parcelCount; index += 1) addParcel();
   return {
     addParcel,
-    advance(count = 1) {
-      stepCount(count);
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
       run(world, () => {
         const until = agenda.time + 1;
         for (let events = 0; ; events += 1) {
@@ -75,14 +75,14 @@ export function create(options: Partial<ParcelParameters> = {}) {
         }
         history.push({ x: agenda.time, y: parcels.filter((parcel) => parcel.delivered !== undefined).length });
         if (history.length > 1000) history.shift();
-      }, count);
+      }, stepCount);
     },
     read() {
       return {
         tick: world.tick.value, time: agenda.time, parameters: { ...settings },
-        queued: buffer.items.length, blocked: buffer.waitingPuts.length, vanBusy: van.used,
-        delivered: parcels.filter((parcel) => parcel.delivered !== undefined).length,
-        parcels: parcels.map((parcel) => ({ number: parcel.agent.number, destination: parcel.agent.destination, routeMinutes: parcel.minutes, dispatched: parcel.dispatched ?? -1, delivered: parcel.delivered ?? -1, returned: parcel.returned ?? -1 })),
+        queuedParcelCount: buffer.items.length, blockedParcelCount: buffer.waitingPuts.length, busyVanCount: van.used,
+        deliveredParcelCount: parcels.filter((parcel) => parcel.delivered !== undefined).length,
+        parcels: parcels.map((parcel) => ({ number: parcel.agent.number, destination: parcel.agent.destination, routeMinutes: parcel.minutes, dispatched: parcel.dispatched ?? -1, deliveredAtMinutes: parcel.delivered ?? -1, returned: parcel.returned ?? -1 })),
         queuedParcels: buffer.items.map((parcel) => parcel.number),
         blockedParcels: buffer.waitingPuts.map((request) => request.value.number),
         nodes: [...graph.nodes].map((node) => ({ ...node })),

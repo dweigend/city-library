@@ -38,6 +38,5 @@ const binding = defineUI(model, {
 });
 
 export { model };
-export const sourceMarker =
-  "selected-biology-b07:honeycomb:812353ef075700900bccf35cc7587137a46fb6c9d3c8a17464790669a72124db";
-export const ui = { ...binding, model, sourceMarker };
+
+export const ui = { ...binding, model };

@@ -5,7 +5,7 @@
  */
 import { Grid, Random, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 
 export interface FeedbackParameters { seed: number; alpha: number; mooreNeighborhood: boolean }
 export const inputs: Inputs<FeedbackParameters> = {
@@ -16,7 +16,7 @@ export const inputs: Inputs<FeedbackParameters> = {
 interface FeedbackSample { readonly tick: number; readonly totalActivity: number; readonly maxActivity: number }
 
 export function create(options: Partial<FeedbackParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const width = 21, height = 21;
   const random = Random.create({ seed: settings.seed });
   const world = World.create({ x: width, y: height, boundary: "wrap" }, { random });
@@ -50,15 +50,15 @@ export function create(options: Partial<FeedbackParameters> = {}) {
   }
   record();
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) { run(world, amplifyAndNormalize); record(); }
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) { run(world, amplifyAndNormalize); record(); }
     },
     setRules(rules: Partial<Pick<FeedbackParameters, "alpha" | "mooreNeighborhood">>) {
       if (typeof rules !== "object" || rules === null || ![Object.prototype, null].includes(Object.getPrototypeOf(rules)) ||
         Reflect.ownKeys(rules).some(key => typeof key !== "string" || !["alpha", "mooreNeighborhood"].includes(key) || !("value" in Object.getOwnPropertyDescriptor(rules, key)!)))
         throw new TypeError("Supply only live feedback rule data.");
-      settings = parameters(inputs, { ...settings, ...rules });
+      settings = parseParameters(inputs, { ...settings, ...rules });
       record();
     },
     setActivities(values: readonly number[]) {

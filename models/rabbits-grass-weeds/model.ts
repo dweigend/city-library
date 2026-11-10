@@ -1,10 +1,10 @@
 /** NetLogo Rabbits Grass Weeds (Wilensky, 2001), CC BY-NC-SA 3.0; see NOTICE.md. */
 import { Agent, Grid, Random, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface Parameters {
   seed: number;
-  number: number;
+  rabbitCount: number;
   birthThreshold: number;
   weedEnergy: number;
   weedsGrowRate: number;
@@ -19,7 +19,7 @@ export const inputs: Inputs<Parameters> = {
     max: 4294967295,
     integer: true,
   },
-  number: {
+  rabbitCount: {
     kind: "number",
     default: 150,
     min: 0,
@@ -66,7 +66,7 @@ type Rabbit = Agent<{
   energy: number;
 }>;
 export function create(options: Partial<Parameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({
     seed: settings.seed,
   });
@@ -87,13 +87,13 @@ export function create(options: Partial<Parameters> = {}) {
   const population = () => world.agents as readonly Rabbit[];
   const history: {
     tick: number;
-    rabbits: number;
-    grass: number;
-    weeds: number;
+    rabbitCount: number;
+    grassFieldCount: number;
+    weedFieldCount: number;
   }[] = [];
   function grow() {
     for (const f of random.sample(grid.fields, {
-      count: grid.fields.length,
+      sampleCount: grid.fields.length,
       algorithm: "fisher-yates-descending",
     }))
       if (f.cover === "empty") {
@@ -105,15 +105,15 @@ export function create(options: Partial<Parameters> = {}) {
     history.push(
       Object.freeze({
         tick: world.tick.value,
-        rabbits: population().length,
-        grass: grid.fields.filter((f) => f.cover === "grass").length / 4,
-        weeds: grid.fields.filter((f) => f.cover === "weeds").length / 4,
+        rabbitCount: population().length,
+        grassFieldCount: grid.fields.filter((f) => f.cover === "grass").length / 4,
+        weedFieldCount: grid.fields.filter((f) => f.cover === "weeds").length / 4,
       }),
     );
     if (history.length > 1001) history.splice(1, 1);
   }
   grow();
-  for (let i = 0; i < settings.number; i++)
+  for (let i = 0; i < settings.rabbitCount; i++)
     world.add(
       Agent.create(
         {
@@ -135,7 +135,7 @@ export function create(options: Partial<Parameters> = {}) {
     grow();
     const old = population();
     for (const a of random.sample(old, {
-      count: old.length,
+      sampleCount: old.length,
       algorithm: "fisher-yates-descending",
     })) {
       a.rotate(Math.floor(random.number() * 50));
@@ -161,15 +161,15 @@ export function create(options: Partial<Parameters> = {}) {
     }
   }
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) {
         if (population().length === 0) break;
         run(world, rules);
         record();
       }
     },
-    setRules(rules: Partial<Omit<Parameters, "seed" | "number">>) {
+    setRules(rules: Partial<Omit<Parameters, "seed" | "rabbitCount">>) {
       if (
         Reflect.ownKeys(rules).some(
           (k) =>
@@ -183,7 +183,7 @@ export function create(options: Partial<Parameters> = {}) {
         )
       )
         throw new TypeError("Unknown live rule.");
-      settings = parameters(inputs, {
+      settings = parseParameters(inputs, {
         ...settings,
         ...rules,
       });

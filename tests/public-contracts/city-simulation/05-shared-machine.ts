@@ -69,35 +69,35 @@ assert.equal(secondStarted, true);
 assert.equal(secondCompleted, true);
 assert.deepEqual(untouchedOtherWorkshop, untouched);
 assert.deepEqual(reservation, {
-  tick: 0, inventory: 2, available: 1, consumed: 0,
-  phase: "reserved", occupant: "A", readyAt: 0, completed: 0,
+  tick: 0, inventoryUnitCount: 2, availableUnitCount: 1, consumedUnitCount: 0,
+  phase: "reserved", occupant: "A", readyAt: 0, completedJobCount: 0,
 });
 assert.deepEqual(started, {
-  tick: 0, inventory: 1, available: 1, consumed: 1,
-  phase: "running", occupant: "A", readyAt: 0, completed: 0,
+  tick: 0, inventoryUnitCount: 1, availableUnitCount: 1, consumedUnitCount: 1,
+  phase: "running", occupant: "A", readyAt: 0, completedJobCount: 0,
 });
 assert.deepEqual(failed, {
-  tick: 1, inventory: 1, available: 1, consumed: 1,
-  phase: "repair", occupant: null, readyAt: 2, completed: 0,
+  tick: 1, inventoryUnitCount: 1, availableUnitCount: 1, consumedUnitCount: 1,
+  phase: "repair", occupant: null, readyAt: 2, completedJobCount: 0,
 });
 assert.deepEqual(final, {
-  tick: 3, inventory: 0, available: 0, consumed: 2,
-  phase: "idle", occupant: null, readyAt: 2, completed: 1,
+  tick: 3, inventoryUnitCount: 0, availableUnitCount: 0, consumedUnitCount: 2,
+  phase: "idle", occupant: null, readyAt: 2, completedJobCount: 1,
 });
 assert.equal(repairedFirst.machine, machineIdentity);
 assert.notEqual(repairedFirst.machine, requestedFirst.machine);
 assert.deepEqual(observe(repairedFirst), final);
 assert.deepEqual(observe(repairedFirst), final);
-assert.equal(requestedFirst.inventory.quantity, 1);
-assert.equal(requestedFirst.inventory.consumed, 1);
-assert.equal(requestedFirst.machine.completed, 0);
+assert.equal(requestedFirst.inventory.unitCount, 1);
+assert.equal(requestedFirst.inventory.consumedUnitCount, 1);
+assert.equal(requestedFirst.machine.completedJobCount, 0);
 
 for (const model of [repairedFirst, requestedFirst, cancelled]) assertBalance(model);
 
 function assertBalance(model: Workshop) {
   const result = observe(model);
 
-  assert.equal(result.inventory + result.consumed, 2);
-  assert.ok(result.available >= 0 && result.available <= result.inventory);
+  assert.equal(result.inventoryUnitCount + result.consumedUnitCount, 2);
+  assert.ok(result.availableUnitCount >= 0 && result.availableUnitCount <= result.inventoryUnitCount);
   assert.equal(result.occupant !== null, result.phase === "reserved" || result.phase === "running");
 }

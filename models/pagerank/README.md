@@ -1,12 +1,17 @@
 # PageRank
 
-Rank is redistributed along directed links while a separate random surfer accumulates visit counts. Damping and dangling-node treatment shape the result; a short stochastic visit history need not equal the rank vector.
+How can links decide which pages matter? Pages and directed links form a small web (`networkChoice`). PageRank can be computed in two ways (`calculationMethod`): rank flows along links in repeated rounds (diffusion), or random surfers follow links and occasionally jump to a random page. `dampingFactor` is the chance to follow a link instead of jumping.
+
+Things to try:
+
+- Compare both methods on the same network. How close are the results after many steps?
+- Lower `dampingFactor`. Do the ranks become more equal?
 
 ## Use
 
-Run `bun run dev` from the repository root, open http://localhost:3101 and choose `PageRank`. Press Setup, then Step or Run/Pause. See [Lab usage](../../ui/agent-lab/README.md) for host options.
+Choose **PageRank** in [Agent Lab](../../ui/agent-lab/README.md).
 
-Headless, from a script in the repository root:
+From a script in the repository root:
 
 ```ts
 import { create } from "./models/pagerank/model.ts";
@@ -18,30 +23,30 @@ const observation = simulation.read();
 
 ## Parameters
 
-`create(options)` accepts these input keys. The [UI binding](ui.ts) distinguishes setup controls from live changes; [model.ts](model.ts) defines additional validation.
+`create(options)` accepts these inputs. [ui.ts](ui.ts) decides which are setup controls and which can change during a run; [model.ts](model.ts) adds further validation.
 
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
-| `networkChoice` | `"Example 1"` | `Example 1`, `Example 2`, `Preferential Attachment` |
+| `networkChoice` | `"example-1"` | `example-1`, `example-2`, `preferential-attachment` |
 | `calculationMethod` | `"random-surfer"` | `diffusion`, `random-surfer` |
 | `dampingFactor` | `0.85` | number; ≥ 0; ≤ 1 |
-| `numberOfSurfers` | `5` | integer; ≥ 1; ≤ 100 |
+| `surferCount` | `5` | integer; ≥ 1; ≤ 100 |
 | `watchSurfers` | `true` | boolean |
 | `showPageRanks` | `true` | boolean |
 
 ## Actions and observations
 
-Use `advance(...)` for progress and `read()` for observations; the model defines how work advances its tick.
+Call `advance()` with an optional step count to run the model; the model defines how a step advances its tick. Call `read()` for a detached snapshot.
 
-Other instance procedures: `diffuse`, `surf`, `globals`, `setParameters`, `setScenario`. See their typed arguments in [model.ts](model.ts).
+Other actions: `diffuse`, `surf`, `globals`, `setParameters`, `setScenario`. Their typed arguments are in [model.ts](model.ts).
 
 Model-specific `read()` fields include `pages`, `edges`, `surfers`.
 
-The [UI binding](ui.ts) presents `Network`, `Tick`, `Total rank`, `Maximum rank`, `Surfers`, `Pages and edges`, `${p.id}${s.parameters.showPageRanks ? `, `Current ranks`, `PageRank`, `Page visits`.
+## Sources and limits
 
-## Sources and acceptance
+Adapted from the NetLogo *PageRank* model by Stonedahl and Wilensky (2009). Attribution and license are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
 
-Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
+A short surfer history need not match the rank vector, and the treatment of pages without outgoing links shapes the result. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 
-[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `pagerank` and links any shared checks.
+[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) records the acceptance stages for `pagerank`.

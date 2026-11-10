@@ -14,13 +14,21 @@ Check the API table before relying on a proposed operation. These priorities als
 
 ## Using the contract
 
-The Svelte UI implements the shared authoring API. Start with the [five authoring examples](../../tests/ui/ui-authoring/README.md), then the [formatter and observation examples](../../tests/ui/ui-composition/README.md). Keyed live controls, explicit common change actions, flat grouping, monitor formatters, categorical/labelled charts, collection diagrams and complete table paging use the same Svelte implementation. `ui/svelte/index.ts` is an import-compatibility alias for `ui/index.ts`, not another host. See the [integration record](../development/pr-main-integration.md) for validation scope.
+The Svelte UI implements the shared authoring API. Start with the [five authoring examples](../../tests/ui/ui-authoring/README.md), then the [formatter and observation examples](../../tests/ui/ui-composition/README.md). Keyed live controls, explicit common change actions, flat grouping, monitor formatters, categorical/labelled charts, collection diagrams and complete table paging use the same Svelte implementation. `ui/svelte/index.ts` is an import-compatibility alias for `ui/index.ts`, not another host. Browser checks and their limits are recorded in the [UI acceptance record](../../ui/agent-lab/acceptance/README.md).
 
 Use `Observation<typeof model>` for named projections. Annotate scalar formatter parameters when you need their concrete type; automatic scalar-specific inference for unannotated formatters is not promised. Namespace projected entity IDs when different kinds share a source ID. The [reference](api-reference.md) explains these rules in detail.
 
 Models own domain state, validation and model time; the UI owns presentation and host scheduling. Internal components and DOM structure are not extension points. The headless package does not export UI code. [Architecture](../ARCHITECTURE.md), [design](../DESIGN.md) and [terminology](../agent-loom/terminology.md) define the shared boundaries; [PLAN](../../PLAN.md) records remaining acceptance work.
 
 Record documentation/implementation gaps and fix the implementation against the accepted contract. Do not silently change examples or claim a target is delivered. New runtime slices follow the [example-first delivery gate](../../PLAN.md#example-first-delivery-gate), including four or five asserted public scripts before implementation, relevant type/behavior checks and real-browser acceptance for affected flows. API changes require an explicit design decision; substantive changes to accepted example syntax require user agreement.
+
+## Binding UI contracts
+
+These contracts define shared UI behavior in detail:
+
+- [UI authoring contract](../development/ui-authoring-contract.md) and [UI authoring decisions](../development/universal-ui-decisions.md): setup controls, live actions, groups, monitors and charts in one flat `defineUI(model, spec)` description.
+- [Directed networks and repeated actions](../development/network-ui-contract.md) and the [network visualization decision](../decisions/network-visualization.md).
+- [Spatial traces](../development/spatial-segment-contract.md), [observed numeric colors](../development/indexed-palette-ui-contract.md), [grid drawing and color controls](../development/grid-interaction-contract.md) and [urban presentation controls](../development/urban-ui-contract.md).
 
 ## Related documentation
 

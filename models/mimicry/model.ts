@@ -1,10 +1,10 @@
 /** Wilensky (1997), CC BY-NC-SA 3.0. See NOTICE.md and source.nlogox. */
 import { Agent, Grid, Random, World, stats } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
-export const sourceMarker = "B08-mimicry-native-composition-v1";
+import { parseParameters, validateStepCount } from "../parameters.ts";
+
 export type Memory = readonly (readonly [number, number])[];
-export function colorInMemory(memory: Memory, color: number): boolean {
+export function isColorInMemory(memory: Memory, color: number): boolean {
   return memory.some((entry) => entry[0] === color);
 }
 export function rememberColor(
@@ -52,15 +52,15 @@ type Butterfly = Agent<{
   memory: [number, number][];
 }>;
 export function create(options: Partial<Parameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const world = World.create({ x: 41, y: 41, boundary: "wrap" }, { random });
   const grid = Grid.create(world.space!);
   world.add(grid);
   const history: {
     tick: number;
-    monarchs: number;
-    viceroys: number;
+    monarchCount: number;
+    viceroyCount: number;
     monarchMeanColor: number | undefined;
     viceroyMeanColor: number | undefined;
   }[] = [];
@@ -100,8 +100,8 @@ export function create(options: Partial<Parameters> = {}) {
   function record() {
     history.push({
       tick: world.tick.value,
-      monarchs: population("monarch").length,
-      viceroys: population("viceroy").length,
+      monarchCount: population("monarch").length,
+      viceroyCount: population("viceroy").length,
       monarchMeanColor: stats.describe(
         population("monarch").map((a) => a.color),
       ).mean,
@@ -113,7 +113,7 @@ export function create(options: Partial<Parameters> = {}) {
   }
   function birdsMove() {
     for (const bird of random.sample(population("bird"), {
-      count: population("bird").length,
+      sampleCount: population("bird").length,
       algorithm: "fisher-yates-descending",
     })) {
       bird.rotate(
@@ -125,7 +125,7 @@ export function create(options: Partial<Parameters> = {}) {
   function butterfliesMove() {
     const butterflies = population().filter((a) => a.group !== "bird");
     for (const butterfly of random.sample(butterflies, {
-      count: butterflies.length,
+      sampleCount: butterflies.length,
       algorithm: "fisher-yates-descending",
     })) {
       butterfly.rotate(random.number({ max: 100, integer: true }));
@@ -136,13 +136,13 @@ export function create(options: Partial<Parameters> = {}) {
   function butterfliesGetEaten() {
     const butterflies = population().filter((a) => a.group !== "bird");
     for (const butterfly of random.sample(butterflies, {
-      count: butterflies.length,
+      sampleCount: butterflies.length,
       algorithm: "fisher-yates-descending",
     })) {
       const field = grid.fieldAt(butterfly)!;
       const birds = grid.agentsAt(field, { source: population("bird") });
       const bird = random.sample(birds)[0];
-      if (bird && !colorInMemory(bird.memory, butterfly.color)) {
+      if (bird && !isColorInMemory(bird.memory, butterfly.color)) {
         if (butterfly.group === "monarch")
           bird.memory = rememberColor(
             bird.memory,
@@ -156,7 +156,7 @@ export function create(options: Partial<Parameters> = {}) {
   function birdsForget() {
     const birds = population("bird");
     for (const bird of random.sample(birds, {
-      count: birds.length,
+      sampleCount: birds.length,
       algorithm: "fisher-yates-descending",
     }))
       bird.memory = forgetColors(bird.memory, settings.memoryDuration);
@@ -164,7 +164,7 @@ export function create(options: Partial<Parameters> = {}) {
   function butterfliesReproduce() {
     const butterflies = population().filter((a) => a.group !== "bird");
     for (const butterfly of random.sample(butterflies, {
-      count: butterflies.length,
+      sampleCount: butterflies.length,
       algorithm: "fisher-yates-descending",
     })) {
       const count = population(butterfly.group).length;
@@ -180,9 +180,9 @@ export function create(options: Partial<Parameters> = {}) {
       }
     }
   }
-  function advance(count = 1) {
-    stepCount(count);
-    for (let i = 0; i < count; i++) {
+  function advance(stepCount = 1) {
+    validateStepCount(stepCount);
+    for (let i = 0; i < stepCount; i++) {
       birdsMove();
       butterfliesMove();
       butterfliesGetEaten();
@@ -203,7 +203,7 @@ export function create(options: Partial<Parameters> = {}) {
       memory: a.memory.map((entry) => [...entry] as [number, number]),
     }));
     return {
-      sourceMarker,
+
       tick: world.tick.value,
       width: 41,
       height: 41,
@@ -228,7 +228,7 @@ export function create(options: Partial<Parameters> = {}) {
     birdsForget,
     butterfliesReproduce,
     setParameters(update: Partial<Omit<Parameters, "seed">>) {
-      settings = parameters(inputs, { ...settings, ...update });
+      settings = parseParameters(inputs, { ...settings, ...update });
     },
   };
 }

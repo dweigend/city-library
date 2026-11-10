@@ -4,7 +4,7 @@
  */
 import { Grid, Random, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface LifeParameters {
   width: number;
   height: number;
@@ -34,7 +34,7 @@ export const inputs: Inputs<LifeParameters> = {
   background: { kind: "text", default: "#d2ece4" },
 };
 export function create(options: Partial<LifeParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   function validateColors(colors: { foreground: string; background: string }) {
     if (
       ![colors.foreground, colors.background].every((color) =>
@@ -55,17 +55,17 @@ export function create(options: Partial<LifeParameters> = {}) {
   const neighbors = fields.map((field) => grid.neighbors(field));
   let drawing = false;
   let brush: boolean | null = null;
-  const history: Readonly<{ tick: number; living: number; density: number }>[] =
+  const history: Readonly<{ tick: number; livingFieldCount: number; density: number }>[] =
     [];
   function livingCount() {
     return fields.reduce((sum, field) => sum + Number(field.living), 0);
   }
   function record() {
-    const living = livingCount();
+    const livingFieldCount = livingCount();
     const point = Object.freeze({
       tick: world.tick.value,
-      living,
-      density: living / fields.length,
+      livingFieldCount: livingFieldCount,
+      density: livingFieldCount / fields.length,
     });
     if (history.at(-1)?.tick === point.tick)
       history[history.length - 1] = point;
@@ -121,9 +121,9 @@ export function create(options: Partial<LifeParameters> = {}) {
     );
   record();
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) {
         run(world, nextGeneration);
         record();
       }
@@ -176,7 +176,7 @@ export function create(options: Partial<LifeParameters> = {}) {
         )
       )
         throw new TypeError("Supply foreground/background data values.");
-      const next = parameters(inputs, { ...settings, ...colors });
+      const next = parseParameters(inputs, { ...settings, ...colors });
       validateColors(next);
       settings = next;
     },
@@ -184,7 +184,7 @@ export function create(options: Partial<LifeParameters> = {}) {
       for (const field of fields) setLiving(field, field.living);
     },
     read() {
-      const living = livingCount();
+      const livingFieldCount = livingCount();
       return Object.freeze({
         tick: world.tick.value,
         width: settings.width,
@@ -201,8 +201,8 @@ export function create(options: Partial<LifeParameters> = {}) {
             }),
           ),
         ),
-        counts: Object.freeze({ living, dead: fields.length - living }),
-        density: living / fields.length,
+        counts: Object.freeze({ livingFieldCount: livingFieldCount, deadFieldCount: fields.length - livingFieldCount }),
+        density: livingFieldCount / fields.length,
         done: false,
         drawing,
         brush,

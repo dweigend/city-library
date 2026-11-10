@@ -21,8 +21,8 @@ export const ui = defineUI(model, {
   },
   monitors: [
     { label: "Tick", value: (state) => state.tick },
-    { label: "Residents", value: (state) => state.counts.population },
-    { label: "Unhappy", value: (state) => state.counts.unhappy },
+    { label: "Residents", value: (state) => state.counts.personCount },
+    { label: "Unhappy", value: (state) => state.counts.unhappyPersonCount },
     {
       label: "Unhappy (%)",
       value: (state) => state.percentUnhappy,
@@ -87,7 +87,7 @@ export const ui = defineUI(model, {
           color: "#d97719",
           points: state.history.map((point) => ({
             x: point.tick,
-            y: point.unhappy,
+            y: point.unhappyPersonCount,
           })),
         },
       ],

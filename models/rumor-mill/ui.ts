@@ -105,11 +105,10 @@ const binding = defineUI(model, {
 });
 
 export { model };
-export const sourceMarker =
-  "selected-social-b02:rumor-mill:4807e040a21562f9feaa2bf5a99c6819f26918b0cd76e0460af802d980521b63";
+
 
 /** Public headless definition and provenance remain inspectable in the loaded binding. */
-export const ui = { ...binding, model, sourceMarker };
+export const ui = { ...binding, model };
 
 type UIObservation = Observation<typeof model>;
 

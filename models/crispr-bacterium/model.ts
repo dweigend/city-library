@@ -1,11 +1,11 @@
 /** CRISPR Bacterium (Wilensky, 2019). Complete notices: NOTICE.md. */
 import { Agent, Graph, Grid, Random, World, geometry, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface CRISPRParameters {
   seed: number;
   initialArraySize: number;
-  maxVirusTypes: number;
+  maxVirusTypeCount: number;
   guideUnbindChance: number;
   processivity: number;
   crisprFunction: number;
@@ -20,7 +20,7 @@ export const inputs: Inputs<CRISPRParameters> = {
     max: 30,
     integer: true,
   },
-  maxVirusTypes: {
+  maxVirusTypeCount: {
     kind: "number",
     default: 30,
     min: 1,
@@ -41,7 +41,7 @@ type Molecule = Agent<{
   genomeBound: boolean;
 }>;
 export function create(options: Partial<CRISPRParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const space = { x: 33, y: 17, boundary: "hard" } as const;
   const world = World.create(space, { random });
@@ -74,18 +74,18 @@ export function create(options: Partial<CRISPRParameters> = {}) {
   let followingId: string | null = null;
   const history: {
     tick: number;
-    cas9: number;
-    guides: number;
-    dimers: number;
-    viruses: number;
-    spacers: number;
+    cas9Count: number;
+    guideCount: number;
+    dimerCount: number;
+    virusCount: number;
+    spacerCount: number;
   }[] = [];
   const all = () => world.agents as readonly Molecule[];
   const group = (kind: AgentGroup) =>
     all().filter((molecule) => molecule.group === kind);
   const shuffled = (molecules: readonly Molecule[]) =>
     random.sample(molecules, {
-      count: molecules.length,
+      sampleCount: molecules.length,
       algorithm: "fisher-yates-descending",
     });
   const integer = (upper: number) =>
@@ -306,7 +306,7 @@ export function create(options: Partial<CRISPRParameters> = {}) {
     virusEvent = `Virus ${sequence} invaded the cell.`;
   }
   function randomInfection() {
-    infect(integer(settings.maxVirusTypes));
+    infect(integer(settings.maxVirusTypeCount));
   }
   function commonInfection() {
     const counts = [...new Set(array)]
@@ -337,11 +337,11 @@ export function create(options: Partial<CRISPRParameters> = {}) {
   function record() {
     history.push({
       tick: world.tick.value,
-      cas9: group("cas9").length,
-      guides: group("guide").length,
-      dimers: group("dimer").length,
-      viruses: group("virus").length,
-      spacers: array.length,
+      cas9Count: group("cas9").length,
+      guideCount: group("guide").length,
+      dimerCount: group("dimer").length,
+      virusCount: group("virus").length,
+      spacerCount: array.length,
     });
     if (history.length > 2001) history.shift();
   }
@@ -365,9 +365,9 @@ export function create(options: Partial<CRISPRParameters> = {}) {
     );
     record();
   }
-  function advance(count = 1) {
-    stepCount(count);
-    for (let index = 0; index < count && !stopped; index++) go();
+  function advance(stepCount = 1) {
+    validateStepCount(stepCount);
+    for (let index = 0; index < stepCount && !stopped; index++) go();
   }
   function setParameters(
     update: Partial<Omit<CRISPRParameters, "seed" | "initialArraySize">>,
@@ -378,7 +378,7 @@ export function create(options: Partial<CRISPRParameters> = {}) {
       )
     )
       throw new TypeError("Setup parameters require a new model.");
-    settings = parameters(inputs, { ...settings, ...update });
+    settings = parseParameters(inputs, { ...settings, ...update });
   }
   function read() {
     const color = {
@@ -447,7 +447,7 @@ export function create(options: Partial<CRISPRParameters> = {}) {
     };
   }
   array = Array.from({ length: settings.initialArraySize }, () =>
-    integer(settings.maxVirusTypes),
+    integer(settings.maxVirusTypeCount),
   );
   for (let index = 0; index < 25; index++) addMolecule("rnap");
   for (const polymerase of shuffled(group("rnap")))

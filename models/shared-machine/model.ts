@@ -1,6 +1,6 @@
 import { Agent, World } from "city-library";
 import type { Definition } from "../definition.ts";
-import { stepCount } from "../parameters.ts";
+import { validateStepCount } from "../parameters.ts";
 
 export type User = "A" | "B";
 export type Phase = "idle" | "reserved" | "running" | "repair";
@@ -8,10 +8,10 @@ export type Workshop = ReturnType<typeof createWorkshop>;
 
 export function createWorkshop() {
   const world = World.create();
-  const inventory = Agent.create({ quantity: 2, consumed: 0 });
+  const inventory = Agent.create({ unitCount: 2, consumedUnitCount: 0 });
   const machine = Agent.create<{
-    phase: Phase; occupant: User | null; readyAt: number; completed: number;
-  }>({ phase: "idle", occupant: null, readyAt: 0, completed: 0 });
+    phase: Phase; occupant: User | null; readyAt: number; completedJobCount: number;
+  }>({ phase: "idle", occupant: null, readyAt: 0, completedJobCount: 0 });
 
   world.add(inventory);
   world.add(machine);
@@ -20,7 +20,7 @@ export function createWorkshop() {
 }
 
 export function reserve(model: Workshop, user: User) {
-  if (model.machine.phase !== "idle" || model.inventory.quantity < 1) return false;
+  if (model.machine.phase !== "idle" || model.inventory.unitCount < 1) return false;
 
   model.machine.phase = "reserved";
   model.machine.occupant = user;
@@ -30,10 +30,10 @@ export function reserve(model: Workshop, user: User) {
 
 export function start(model: Workshop, user: User) {
   if (model.machine.phase !== "reserved" || model.machine.occupant !== user) return false;
-  if (model.inventory.quantity < 1) return false;
+  if (model.inventory.unitCount < 1) return false;
 
-  model.inventory.quantity -= 1;
-  model.inventory.consumed += 1;
+  model.inventory.unitCount -= 1;
+  model.inventory.consumedUnitCount += 1;
   model.machine.phase = "running";
 
   return true;
@@ -70,7 +70,7 @@ export function repair(model: Workshop) {
 export function complete(model: Workshop, user: User) {
   if (model.machine.phase !== "running" || model.machine.occupant !== user) return false;
 
-  model.machine.completed += 1;
+  model.machine.completedJobCount += 1;
   model.machine.phase = "idle";
   model.machine.occupant = null;
 
@@ -82,13 +82,13 @@ export function observe(model: Workshop) {
 
   return {
     tick: model.world.tick.value,
-    inventory: model.inventory.quantity,
-    available: model.inventory.quantity - reserved,
-    consumed: model.inventory.consumed,
+    inventoryUnitCount: model.inventory.unitCount,
+    availableUnitCount: model.inventory.unitCount - reserved,
+    consumedUnitCount: model.inventory.consumedUnitCount,
     phase: model.machine.phase,
     occupant: model.machine.occupant,
     readyAt: model.machine.readyAt,
-    completed: model.machine.completed,
+    completedJobCount: model.machine.completedJobCount,
   };
 }
 
@@ -101,9 +101,9 @@ export function create() {
     fail: () => fail(state, 1),
     repair: () => repair(state),
     complete: (user: User) => complete(state, user),
-    advance(count = 1) {
-      stepCount(count);
-      state.world.tick.advance(count);
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      state.world.tick.advance(stepCount);
     },
     read() { return observe(state); },
   };

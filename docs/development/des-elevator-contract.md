@@ -18,18 +18,18 @@ The add action defaults to floor 0 → top floor and returns a model-local passe
 
 | Parameter | Default | Domain / unit |
 | --- | --- | --- |
-| floors | 6 | Integer 2–12; floors numbered 0 through floors−1 |
-| elevators | 2 | Integer 1–4; cars initially at floor 0 |
+| floorCount | 6 | Integer 2–12; floors numbered 0 through floors−1 |
+| elevatorCount | 2 | Integer 1–4; cars initially at floor 0 |
 | capacity | 4 | Integer 1–8 passenger slots per car |
-| travelTime | 2 | Integer 1–10 seconds per adjacent-floor move |
-| doorTime | 1 | Integer 0–5 seconds for opening and separately closing |
-| transferTime | 1 | Integer 0–5 seconds per passenger board/alight |
-| initialPassengers | 6 | Integer 0–100, deterministic initial demand |
-| arrivalInterval | 0 | Integer 0–60 seconds; zero disables scheduled arrivals |
+| travelTimeSeconds | 2 | Integer 1–10 seconds per adjacent-floor move |
+| doorTimeSeconds | 1 | Integer 0–5 seconds for opening and separately closing |
+| transferTimeSeconds | 1 | Integer 0–5 seconds per passenger board/alight |
+| initialPassengerCount | 6 | Integer 0–100, deterministic initial demand |
+| arrivalIntervalSeconds | 0 | Integer 0–60 seconds; zero disables scheduled arrivals |
 | arrivalLimit | 0 | Integer 0–100 further arrivals; positive limit requires positive interval |
-| maxEventsPerStep | 1000 | Integer 1–100000, local Agenda safety bound; hidden from ordinary UI setup |
+| maxEventCountPerStep | 1000 | Integer 1–100000, local Agenda safety bound; hidden from ordinary UI setup |
 
-There is no hidden random stream or calibrated arrival process. For initial passenger index `i` starting at zero, even indices originate at 0 and go to `1 + i % (floors−1)`; odd indices originate at the top and go to `i % (floors−1)`. Scheduled arrivals continue this sequence at `arrivalInterval`, `2 × arrivalInterval`, …, up to `arrivalLimit`. Model-local passenger numbers follow actual admission order, including explicit actions.
+There is no hidden random stream or calibrated arrival process. For initial passenger index `i` starting at zero, even indices originate at 0 and go to `1 + i % (floorCount−1)`; odd indices originate at the top and go to `i % (floorCount−1)`. Scheduled arrivals continue this sequence at `arrivalIntervalSeconds`, `2 × arrivalIntervalSeconds`, …, up to `arrivalLimit`. Model-local passenger numbers follow actual admission order, including explicit actions.
 
 ## Dispatch and capacity ownership
 
@@ -45,13 +45,13 @@ Idle cars have no repeated polling event. Adding demand explicitly schedules a w
 
 ## Time, observations and failure
 
-One successful `advance(1)` invokes one World procedure and drains Agenda through one further simulated second. Agenda time and World tick are separate values, exposed as `time` and `tick`. Events at the horizon are dispatched before the step completes, including bounded zero-delay chains. Every dispatched event counts toward `maxEventsPerStep`. Exhaustion throws before another extraction, keeps prior effects/pending work, and does not advance World tick for that failed step; the bound is conservative when an exact-budget final event would require a further empty probe. This is not a competing global run-budget API.
+One successful `advance(1)` invokes one World procedure and drains Agenda through one further simulated second. Agenda time and World tick are separate values, exposed as `time` and `tick`. Events at the horizon are dispatched before the step completes, including bounded zero-delay chains. Every dispatched event counts toward `maxEventCountPerStep`. Exhaustion throws before another extraction, keeps prior effects/pending work, and does not advance World tick for that failed step; the bound is conservative when an exact-budget final event would require a further empty probe. This is not a competing global run-budget API.
 
-Wait is requested → boarding completion; ride is boarding completion → alighting completion, including travel, door and intervening service time. `meanWait` covers boarded passengers; `meanRide` and `meanSystem` cover completed passengers only, with zero returned before the respective first observation. These finite-run means are descriptive, not steady-state estimators.
+Wait is requested → boarding completion; ride is boarding completion → alighting completion, including travel, door and intervening service time. `meanWaitSeconds` covers boarded passengers; `meanRideSeconds` and `meanSystemSeconds` cover completed passengers only, with zero returned before the respective first observation. These finite-run means are descriptive, not steady-state estimators.
 
-Read returns detached arrays/records: `parameters`, `tick`, `time`, `created`, `waiting`, `riding`, `arrived`, `generated`, `meanWait`, `meanRide`, `meanSystem`; `cars` with id/number/floor/direction/status/used/capacity/passenger numbers; `passengers` with id/number/from/to/requested/boarded/arrived/car/status; and `floorQueues` with floor/direction/passenger numbers. Missing boarded/arrived/car use −1; status is waiting/riding/arrived. It also exposes `pendingEvents` for bounded-execution diagnostics. Reads do not dispatch, tick, mutate queues or draw randomness. Counts obey created = waiting + riding + arrived and every car used ≤ capacity.
+Read returns detached arrays/records: `parameters`, `tick`, `time`, `createdPassengerCount`, `waitingPassengerCount`, `ridingPassengerCount`, `arrivedPassengerCount`, `generatedPassengerCount`, `meanWaitSeconds`, `meanRideSeconds`, `meanSystemSeconds`; `cars` with id/number/floor/direction/status/used/capacity/passenger numbers; `passengers` with id/number/from/to/requested/boarded/arrived/car/status; and `floorQueues` with floor/direction/passenger numbers. Missing boarded/arrived/car use −1; status is waiting/riding/arrived. It also exposes `pendingEventCount` for bounded-execution diagnostics. Reads do not dispatch, tick, mutate queues or draw randomness. Counts obey `createdPassengerCount = waitingPassengerCount + ridingPassengerCount + arrivedPassengerCount` and every car used ≤ capacity.
 
-Disposal cancels pending events, releases car claims, empties queues and removes owned Agents. It is idempotent. Subsequent writes and advances reject; `read()` returns a detached historical final observation with `pendingEvents: 0`, rather than a claim that its displayed passengers remain active Resource occupants.
+Disposal cancels pending events, releases car claims, empties queues and removes owned Agents. It is idempotent. Subsequent writes and advances reject; `read()` returns a detached historical final observation with `pendingEventCount: 0`, rather than a claim that its displayed passengers remain active Resource occupants.
 
 The UI uses diagram floor/cabin coordinates derived from these observations, not domain travel interpolation or another clock. Cabin dots must equal actual riding membership. Generated mockup count mistakes are not assertions.
 

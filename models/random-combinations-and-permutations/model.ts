@@ -1,12 +1,12 @@
 /** Random Combinations and Permutations, Wilensky (2004), CC BY-NC-SA 3.0. See NOTICE.md. */
 import { Random, World, stats } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface Parameters {
   seed: number;
   width: number;
   height: number;
-  choices: number;
+  choiceCount: number;
   dice: boolean;
   singleSuccess: boolean;
   analysisType: "combination" | "permutations" | "both";
@@ -17,7 +17,7 @@ export const inputs: Inputs<Parameters> = {
   seed: { kind: "number", default: 1, integer: true },
   width: { kind: "number", default: 3, min: 1, max: 5, integer: true },
   height: { kind: "number", default: 1, min: 1, max: 2, integer: true },
-  choices: { kind: "number", default: 2, min: 2, max: 6, integer: true },
+  choiceCount: { kind: "number", default: 2, min: 2, max: 6, integer: true },
   dice: { kind: "boolean", default: true },
   singleSuccess: { kind: "boolean", default: false },
   analysisType: {
@@ -46,7 +46,7 @@ function plotHistogram(values: readonly number[]) {
   return Object.freeze(h.counts.map((y, x) => Object.freeze({ x, y })));
 }
 export function create(options: Partial<Parameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const world = World.create({ random });
   const original: (number | null)[] = Array(
@@ -57,11 +57,11 @@ export function create(options: Partial<Parameters> = {}) {
     abortCreate = false,
     hidden = false,
     creating = false,
-    countSteps = 0,
-    countCombiSuccesses = 0,
-    countPermisSuccesses = 0,
+    stepCount = 0,
+    combinationSuccessCount = 0,
+    permutationSuccessCount = 0,
     samplesCounter = 0,
-    attempts = 0,
+    attemptCount = 0,
     done = false,
     allCombiMatch = false,
     allPermisMatch = false;
@@ -83,7 +83,7 @@ export function create(options: Partial<Parameters> = {}) {
       throw new RangeError("Select a square in the combination.");
     if (!creating || abortCreate) return;
     const before = original[index];
-    original[index] = before === null ? 0 : (before! + 1) % settings.choices;
+    original[index] = before === null ? 0 : (before! + 1) % settings.choiceCount;
   }
   function selectAt(x: number, y: number) {
     const left = -(Math.ceil(settings.width / 2) - 1),
@@ -95,13 +95,13 @@ export function create(options: Partial<Parameters> = {}) {
   }
   function howManyOfEachChoice(values: readonly (number | null)[]) {
     return Array.from(
-      { length: settings.choices },
+      { length: settings.choiceCount },
       (_, value) => values.filter((x) => x === value).length,
     );
   }
   function guess() {
     for (let i = 0; i < guesses.length; i++)
-      guesses[i] = Math.floor(random.number() * settings.choices);
+      guesses[i] = Math.floor(random.number() * settings.choiceCount);
   }
   function check() {
     allCombiMatch = guesses.every((v, i) => v === original[i]);
@@ -110,19 +110,19 @@ export function create(options: Partial<Parameters> = {}) {
     allPermisMatch = a.every((n, i) => n === b[i]);
   }
   function littleSetup() {
-    countSteps = 0;
-    countCombiSuccesses = 0;
-    countPermisSuccesses = 0;
+    stepCount = 0;
+    combinationSuccessCount = 0;
+    permutationSuccessCount = 0;
     combiSamples.length = 0;
     permisSamples.length = 0;
   }
   function plotSample() {
     samplesCounter++;
-    combiSamples.unshift(countCombiSuccesses);
-    permisSamples.unshift(countPermisSuccesses);
-    countSteps = 0;
-    countCombiSuccesses = 0;
-    countPermisSuccesses = 0;
+    combiSamples.unshift(combinationSuccessCount);
+    permisSamples.unshift(permutationSuccessCount);
+    stepCount = 0;
+    combinationSuccessCount = 0;
+    permutationSuccessCount = 0;
   }
   function searchCombi() {
     creating = false;
@@ -141,21 +141,21 @@ export function create(options: Partial<Parameters> = {}) {
       "The program guesses combinations randomly and tracks matches.";
     guess();
     check();
-    countSteps++;
-    attempts++;
-    if (allCombiMatch) countCombiSuccesses++;
-    if (allPermisMatch) countPermisSuccesses++;
+    stepCount++;
+    attemptCount++;
+    if (allCombiMatch) combinationSuccessCount++;
+    if (allPermisMatch) permutationSuccessCount++;
     if (
       settings.singleSuccess &&
       ((settings.analysisType !== "permutations" && allCombiMatch) ||
         (settings.analysisType !== "combination" && allPermisMatch))
     ) {
-      instructions = `Congratulations! You discovered ${allCombiMatch ? "the hidden combination" : "a permutation"} in ${combiSamples.length * settings.sampleSize + countSteps} steps. Set up and try again.`;
+      instructions = `Congratulations! You discovered ${allCombiMatch ? "the hidden combination" : "a permutation"} in ${combiSamples.length * settings.sampleSize + stepCount} steps. Set up and try again.`;
       littleSetup();
       done = true;
       return;
     }
-    if (countSteps === settings.sampleSize) plotSample();
+    if (stepCount === settings.sampleSize) plotSample();
   }
   function hideReveal() {
     if (!exists) {
@@ -168,9 +168,9 @@ export function create(options: Partial<Parameters> = {}) {
     get world() {
       return world;
     },
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count && !done; i++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount && !done; i++) {
         searchCombi();
         if (!abortCreate) break;
       }
@@ -188,7 +188,7 @@ export function create(options: Partial<Parameters> = {}) {
         >
       >,
     ) {
-      settings = parameters(inputs, { ...settings, ...change });
+      settings = parseParameters(inputs, { ...settings, ...change });
     },
     read() {
       const mean = (a: readonly number[]) =>
@@ -247,11 +247,11 @@ export function create(options: Partial<Parameters> = {}) {
         abortCreate,
         hidden,
         creating,
-        countSteps,
-        countCombiSuccesses,
-        countPermisSuccesses,
+        stepCount: stepCount,
+        combinationSuccessCount: combinationSuccessCount,
+        permutationSuccessCount: permutationSuccessCount,
         samplesCounter,
-        attempts,
+        attemptCount: attemptCount,
         done,
         allCombiMatch,
         allPermisMatch,

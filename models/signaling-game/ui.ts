@@ -3,8 +3,8 @@ import { model } from "./model.ts";
 const binding = defineUI(model, {
   setup: [
     "seed",
-    { field: "numberOfStates", label: "States" },
-    { field: "numberOfSignals", label: "Signals" },
+    { field: "stateCount", label: "States" },
+    { field: "signalCount", label: "Signals" },
   ],
   live: {
     printProbabilities: {
@@ -45,14 +45,14 @@ const binding = defineUI(model, {
       type: "network",
       label: "Current signal",
       nodes: (s) => [
-        ...Array.from({ length: s.parameters.numberOfStates }, (_, i) => ({
+        ...Array.from({ length: s.parameters.stateCount }, (_, i) => ({
           id: `state-${i}`,
           label: String.fromCharCode(65 + i),
           color: s.lastRound?.state === i ? "#56b9e9" : "#267194",
           size: 22,
           position: { x: i * 75, y: 0 },
         })),
-        ...Array.from({ length: s.parameters.numberOfSignals }, (_, i) => ({
+        ...Array.from({ length: s.parameters.signalCount }, (_, i) => ({
           id: `signal-${i}`,
           label: String(i),
           color: s.lastRound?.signal === i ? "#e658c8" : "#8e3a7f",
@@ -151,8 +151,7 @@ const binding = defineUI(model, {
 });
 
 export { model };
-export const sourceMarker =
-  "selected-social-b02:signaling-game:399be72f527afb3d0e9ba27969d1a25e8a94364358aca2e707f0b01f24009bf5";
+
 
 /** Public headless definition and provenance remain inspectable in the loaded binding. */
-export const ui = { ...binding, model, sourceMarker };
+export const ui = { ...binding, model };

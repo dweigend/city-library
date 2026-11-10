@@ -1,24 +1,24 @@
 /** Adapted from NetLogo Traffic Basic (Wilensky, 1997); see NOTICE.md. */
 import { Agent, Grid, Random, World, geometry, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 
 export interface TrafficBasicParameters {
   seed: number;
-  numberOfCars: number;
+  carCount: number;
   acceleration: number;
   deceleration: number;
 }
 export const inputs: Inputs<TrafficBasicParameters> = {
   seed: { kind: "number", default: 1, integer: true },
-  numberOfCars: { kind: "number", default: 20, min: 1, max: 51, integer: true },
+  carCount: { kind: "number", default: 20, min: 1, max: 51, integer: true },
   acceleration: { kind: "number", default: 0.0045, min: 0, max: 0.0099 },
   deceleration: { kind: "number", default: 0.026, min: 0, max: 0.099 },
 };
 type Car = Agent<{ speed: number }>;
 
 export function create(options: Partial<TrafficBasicParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const space = { x: 51, y: 9, boundary: { x: "wrap", y: "hard" } } as const;
   const world = World.create(space, { random });
@@ -33,7 +33,7 @@ export function create(options: Partial<TrafficBasicParameters> = {}) {
   }[] = [];
 
   function setupCars() {
-    for (let index = 0; index < settings.numberOfCars; index++) {
+    for (let index = 0; index < settings.carCount; index++) {
       const car = Agent.create(
         { speed: 0.1 + random.number() * 0.9 },
         {
@@ -46,7 +46,7 @@ export function create(options: Partial<TrafficBasicParameters> = {}) {
     }
   }
   setupCars();
-  const sampleCar = random.sample(cars(), { count: 1 })[0]!;
+  const sampleCar = random.sample(cars(), { sampleCount: 1 })[0]!;
 
   function slowDownCar(car: Car, carAhead: Car) {
     car.speed = carAhead.speed - settings.deceleration;
@@ -56,7 +56,7 @@ export function create(options: Partial<TrafficBasicParameters> = {}) {
   }
   function go() {
     for (const car of random.sample(cars(), {
-      count: cars().length,
+      sampleCount: cars().length,
       algorithm: "fisher-yates-descending",
     })) {
       const positionAhead = geometry.normalize(
@@ -67,7 +67,7 @@ export function create(options: Partial<TrafficBasicParameters> = {}) {
         source: cars(),
       });
       const carAhead = random.sample(ahead, {
-        count: Math.min(1, ahead.length),
+        sampleCount: Math.min(1, ahead.length),
       })[0];
       if (carAhead) slowDownCar(car, carAhead);
       else speedUpCar(car);
@@ -85,13 +85,13 @@ export function create(options: Partial<TrafficBasicParameters> = {}) {
     });
     if (history.length > 1001) history.splice(1, 1);
   }
-  function step(count = 1) {
-    stepCount(count);
-    for (let index = 0; index < count; index++) {
+  function step(stepCount = 1) {
+    validateStepCount(stepCount);
+    for (let index = 0; index < stepCount; index++) {
       run(world, go);
       record();
     }
-    return count;
+    return stepCount;
   }
   function setParameters(
     update: Partial<
@@ -104,7 +104,7 @@ export function create(options: Partial<TrafficBasicParameters> = {}) {
       )
     )
       throw new TypeError("Only live parameters may change.");
-    settings = parameters(inputs, { ...settings, ...update });
+    settings = parseParameters(inputs, { ...settings, ...update });
   }
   function snapshot() {
     return {

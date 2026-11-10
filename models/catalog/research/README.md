@@ -22,4 +22,4 @@ python models/catalog/research/validate.py
 
 It validates the selection, dossier structure, citations, retained evidence, source XML and hashes, then regenerates the [index](INDEX.md) and [machine-readable status](status.json). A complete record needs three distinct model-relevant publications, retained primary metadata and no unresolved gaps. Unverified entries remain incomplete.
 
-The validator checks local records. Updating scientific claims or bibliography requires checking the relevant sources; a successful local run does not replace that work. Implementation acceptance follows the separate [model acceptance rules](../../../docs/development/netlogo-model-acceptance.md).
+The validator checks local records. Updating scientific claims or bibliography requires checking the relevant sources; a successful local run does not replace that work. Implementation acceptance follows the separate [model acceptance rules](../../../docs/development/model-acceptance.md).

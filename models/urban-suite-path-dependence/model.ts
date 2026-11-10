@@ -5,28 +5,28 @@
  */
 import { Agent, Grid, Random, World, run, stats } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 
 export interface PathParameters {
-  seed: number; initialFirms: number; distribute: boolean;
-  regionSize: number; increasingReturns: number; attempts: number; birth: boolean;
+  seed: number; initialFirmCount: number; distribute: boolean;
+  regionSize: number; increasingReturns: number; attemptCount: number; birth: boolean;
 }
 export const inputs: Inputs<PathParameters> = {
   seed: { kind: "number", default: 1, min: -2147483648, max: 4294967295, integer: true },
-  initialFirms: { kind: "number", default: 200, min: 0, max: 1000, integer: true },
+  initialFirmCount: { kind: "number", default: 200, min: 0, max: 1000, integer: true },
   distribute: { kind: "boolean", default: false },
   regionSize: { kind: "number", default: 0, min: 0, max: 5, integer: true },
   increasingReturns: { kind: "number", default: 0.5, min: 0, max: 1, step: 0.01 },
-  attempts: { kind: "number", default: 1, min: 1, max: 20, integer: true },
+  attemptCount: { kind: "number", default: 1, min: 1, max: 20, integer: true },
   birth: { kind: "boolean", default: false },
 };
 export interface FirmInput { readonly x: number; readonly y: number; readonly heading: number; readonly movedIn: boolean }
 type Firm = Agent<{ movedIn: boolean }>;
-type LiveRules = Pick<PathParameters, "regionSize" | "increasingReturns" | "attempts" | "birth">;
-interface PathSample { readonly tick: number; readonly firms: number; readonly settled: number; readonly searching: number; readonly largestPopulation: number }
+type LiveRules = Pick<PathParameters, "regionSize" | "increasingReturns" | "attemptCount" | "birth">;
+interface PathSample { readonly tick: number; readonly firmCount: number; readonly settledFirmCount: number; readonly searchingFirmCount: number; readonly largestFirmCount: number }
 
 export function create(options: Partial<PathParameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const width = 11, height = 11;
   const random = Random.create({ seed: settings.seed });
   const world = World.create({ x: width, y: height, boundary: "wrap" }, { random });
@@ -36,9 +36,9 @@ export function create(options: Partial<PathParameters> = {}) {
   const firms = () => world.agents as readonly Firm[];
   const warnings: string[] = [];
   const history: Readonly<PathSample>[] = [];
-  let largestPopulation = 0;
+  let largestFirmCount = 0;
   const integer = (upper: number) => Math.floor(random.number() * upper);
-  const activation = <T>(snapshot: readonly T[]) => random.sample(snapshot, { count: snapshot.length, algorithm: "fisher-yates-descending" });
+  const activation = <T>(snapshot: readonly T[]) => random.sample(snapshot, { sampleCount: snapshot.length, algorithm: "fisher-yates-descending" });
 
   function regionalPopulation(at: { readonly x: number; readonly y: number }) {
     // Source movement remains on exact field centers. At radius0 the public
@@ -47,15 +47,15 @@ export function create(options: Partial<PathParameters> = {}) {
     return firms().filter(firm => firm.distanceTo(at, { space: world.space }) <= settings.regionSize).length;
   }
   function updateLargestPopulation() {
-    largestPopulation = Math.max(...fields.map(field => regionalPopulation(field)));
+    largestFirmCount = Math.max(...fields.map(field => regionalPopulation(field)));
   }
   function counts() {
     const all = firms();
-    const settled = all.filter(firm => firm.movedIn).length;
-    return { firms: all.length, settled, searching: all.length - settled };
+    const settledFirmCount = all.filter(firm => firm.movedIn).length;
+    return { firmCount: all.length, settledFirmCount: settledFirmCount, searchingFirmCount: all.length - settledFirmCount };
   }
   function record() {
-    const sample = Object.freeze({ tick: world.tick.value, ...counts(), largestPopulation });
+    const sample = Object.freeze({ tick: world.tick.value, ...counts(), largestFirmCount: largestFirmCount });
     if (history.at(-1)?.tick === sample.tick) history[history.length - 1] = sample;
     else history.push(sample);
     if (history.length > 1001) history.splice(1, 1);
@@ -67,7 +67,7 @@ export function create(options: Partial<PathParameters> = {}) {
   }
   function suitability(firm: Firm) {
     const quality = grid.fieldAt(firm)!.quality;
-    return quality * (1 - settings.increasingReturns) + settings.increasingReturns * (regionalPopulation(firm) / largestPopulation);
+    return quality * (1 - settings.increasingReturns) + settings.increasingReturns * (regionalPopulation(firm) / largestFirmCount);
   }
   function wander(firm: Firm) {
     firm.rotate(integer(2) * 90);
@@ -77,7 +77,7 @@ export function create(options: Partial<PathParameters> = {}) {
     firm.move({ to: grid.fieldAt(firm)! });
   }
   function search(firm: Firm) {
-    for (let attempt = 0; attempt < settings.attempts; attempt++) {
+    for (let attempt = 0; attempt < settings.attemptCount; attempt++) {
       wander(firm);
       if (random.number() < suitability(firm)) firm.movedIn = true;
       // A later failure does not undo an earlier success. Never break early.
@@ -85,7 +85,7 @@ export function create(options: Partial<PathParameters> = {}) {
   }
   function go() {
     if (settings.birth) {
-      const parent = random.sample(firms(), { count: 1 })[0]!;
+      const parent = random.sample(firms(), { sampleCount: 1 })[0]!;
       const child = parent.copy();
       child.movedIn = false;
       child.rotate(integer(4) * 90 - child.heading);
@@ -99,12 +99,12 @@ export function create(options: Partial<PathParameters> = {}) {
   }
 
   if (settings.distribute) {
-    if (settings.initialFirms > fields.length) {
+    if (settings.initialFirmCount > fields.length) {
       // The first source repeat fills all fields; subsequent empty repeats do nothing.
       for (const field of activation(fields)) immigrate(field);
     } else warnings.push("Can't distribute, fewer fields than people.");
   } else {
-    for (let i = 0; i < settings.initialFirms; i++) {
+    for (let i = 0; i < settings.initialFirmCount; i++) {
       const heading = integer(4) * 90;
       const x = integer(width) - 5, y = integer(height) - 5;
       world.add(Agent.create({ movedIn: false }, { position: { x, y }, orientation: { heading } }));
@@ -115,18 +115,18 @@ export function create(options: Partial<PathParameters> = {}) {
   record();
 
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) {
         if (settings.birth && firms().length === 0) throw new RangeError("Cannot birth a firm without an existing parent.");
         run(world, go); record();
       }
     },
     setRules(rules: Partial<LiveRules>) {
       if (typeof rules !== "object" || rules === null || ![Object.prototype, null].includes(Object.getPrototypeOf(rules)) ||
-        Reflect.ownKeys(rules).some(key => typeof key !== "string" || !["regionSize", "increasingReturns", "attempts", "birth"].includes(key) || !("value" in Object.getOwnPropertyDescriptor(rules, key)!)))
+        Reflect.ownKeys(rules).some(key => typeof key !== "string" || !["regionSize", "increasingReturns", "attemptCount", "birth"].includes(key) || !("value" in Object.getOwnPropertyDescriptor(rules, key)!)))
         throw new TypeError("Supply only live path-dependence rule data.");
-      settings = parameters(inputs, { ...settings, ...rules });
+      settings = parseParameters(inputs, { ...settings, ...rules });
       record(); // source largest-population is refreshed at the next go, not a slider edit
     },
     disturb() { for (const firm of firms()) firm.movedIn = false; record(); },
@@ -161,15 +161,15 @@ export function create(options: Partial<PathParameters> = {}) {
       updateLargestPopulation(); record();
     },
     read() {
-      const cells = fields.map(field => Object.freeze({ id: field.id, x: field.x, y: field.y, quality: field.quality, occupants: grid.agentsAt(field).length }));
-      const maximumOccupants = Math.max(...cells.map(cell => cell.occupants));
-      const upper = 1 + maximumOccupants;
-      const histogram = stats.histogram(cells.filter(cell => cell.occupants > 0).map(cell => cell.occupants), { edges: Array.from({ length: 11 }, (_, i) => upper * i / 10) });
+      const cells = fields.map(field => Object.freeze({ id: field.id, x: field.x, y: field.y, quality: field.quality, occupantCount: grid.agentsAt(field).length }));
+      const maxOccupantCount = Math.max(...cells.map(cell => cell.occupantCount));
+      const upper = 1 + maxOccupantCount;
+      const histogram = stats.histogram(cells.filter(cell => cell.occupantCount > 0).map(cell => cell.occupantCount), { edges: Array.from({ length: 11 }, (_, i) => upper * i / 10) });
       return Object.freeze({
         tick: world.tick.value, width, height, parameters: settings, cells: Object.freeze(cells),
         firms: Object.freeze(firms().map(firm => Object.freeze({ id: firm.id, x: firm.x, y: firm.y, heading: firm.heading, movedIn: firm.movedIn }))),
-        counts: Object.freeze(counts()), largestPopulation, maximumOccupants,
-        winningAreas: Object.freeze(cells.filter(cell => cell.occupants === maximumOccupants)),
+        counts: Object.freeze(counts()), largestFirmCount: largestFirmCount, maxOccupantCount: maxOccupantCount,
+        winningAreas: Object.freeze(cells.filter(cell => cell.occupantCount === maxOccupantCount)),
         histogram, warnings: Object.freeze([...warnings]), history: Object.freeze([...history]), randomState: random.state, done: false as const,
       });
     },

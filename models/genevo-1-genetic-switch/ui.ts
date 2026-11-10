@@ -3,7 +3,7 @@ import { defineUI, type Observation, type Series } from "../../ui/index.ts";
 import { model } from "./model.ts";
 
 const binding = defineUI(model, {
-  setup: ["seed", "lacINumber", "rnapNumber"],
+  setup: ["seed", "lacICount", "rnapCount"],
   change: (instance, changes) => instance.setParameters(changes),
   live: {
     lactose: {},
@@ -27,7 +27,7 @@ const binding = defineUI(model, {
     { label: "LacZ", value: (state) => state.lacZCount },
     { label: "LacY", value: (state) => state.lacYCount },
     { label: "Message", value: (state) => state.message },
-    { label: "Divisions", value: (state) => state.divisionNumber },
+    { label: "Divisions", value: (state) => state.divisionCount },
   ],
   views: [
     {
@@ -51,9 +51,8 @@ const binding = defineUI(model, {
 });
 
 export { model };
-export const sourceMarker =
-  "selected-disease-gene-b09:genevo-1-genetic-switch:6f46710d78daad311551c2ee934317d98ef52ad92779b8312ba66dcd4c7d330e";
-export const ui = { ...binding, model, sourceMarker };
+
+export const ui = { ...binding, model };
 
 type UIObservation = Observation<typeof model>;
 
@@ -72,7 +71,7 @@ function historySeries(state: UIObservation): readonly Series[] {
       color: "#df4545",
       points: state.history.map((point) => ({
         x: point.tick,
-        y: Number(point.lacZ),
+        y: Number(point.lacZCount),
       })),
     },
   ];

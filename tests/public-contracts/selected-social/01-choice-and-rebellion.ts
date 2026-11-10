@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { create as choice } from '../../../models/consumer-choice/model.ts';
 import { create as rebellion } from '../../../models/rebellion/model.ts';
 // Dissatisfaction followed by certain exploration switches every consumer.
-const market = choice({ consumerCount: 10, avgConnections: 0, initialOrangePercent: 100,
+const market = choice({ consumerCount: 10, meanConnectionCount: 0, initialOrangePercent: 100,
   qualityOrange: 0, qualityBlue: 0, exploration: 1, normInfluence: 0, informationExchange: 0 });
 assert.equal(market.read().orangeCount, 10);
 market.advance();

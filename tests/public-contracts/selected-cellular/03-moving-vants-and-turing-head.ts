@@ -8,7 +8,7 @@ v.reverse(25);
 assert.equal(v.read().tick, 50);
 assert.deepEqual(v.read().cells.map(c => c.on), initial.cells.map(c => c.on));
 assert.deepEqual(v.read().agents.map(a => [a.x, a.y, a.heading]), initial.agents.map(a => [a.x, a.y, a.heading]));
-const t = turing({ width: 9, height: 9, heads: 1, seed: 1 });
+const t = turing({ width: 9, height: 9, headCount: 1, seed: 1 });
 t.setRules([[1, 90, true], [0, 0, false], [0, 0, false], [0, 0, false]]);
 t.advance();
 assert.equal(t.read().tick, 1);

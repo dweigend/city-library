@@ -11,7 +11,7 @@ const random = first.world.random.state;
 first.setParameters({ firstPassengerCost: prior.parameters.firstPassengerCost + 1 });
 const changed = first.read();
 assert.equal(changed.tick, prior.tick);
-assert.equal(changed.occupiedCabs, prior.occupiedCabs);
+assert.equal(changed.occupiedCabCount, prior.occupiedCabCount);
 assert.equal(changed.totalIncome, prior.totalIncome);
 assert.equal(typeof changed.totalIncome, "number");
 assert.deepEqual(first.world.random.state, random);

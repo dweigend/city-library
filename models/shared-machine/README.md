@@ -1,5 +1,26 @@
 # Shared Machine
 
-Two material units and one machine illustrate reservation, consumption, cancellation, failure and repair. Reserve and start a named job explicitly. Failure consumes no extra material and does not refund its input; one hour of repair must elapse before Repair succeeds. Step advances one hour without automatically retrying rejected requests. Completing a running job releases occupancy. Operation order remains model policy.
+How do reservation, failure and repair interact when two users share one machine? A workshop holds two units of material and one machine. User A or B reserves the machine, starts a job, which consumes one unit, and completes it. A reservation can be cancelled before the start. A running job can fail: the machine goes into repair, no extra material is consumed and the used unit is not refunded, and repair succeeds only after one hour has passed.
 
-The headless [model](model.ts) owns state and actions; the shared Lab [UI](ui.ts) binds those actions and observations. Run `bun run dev`, select this model and use Setup. Original City Library teaching composition; no upstream scientific-equivalence claim.
+Each step advances the clock by one hour. Steps never retry rejected requests; the order of operations is up to you. It is an original City Library teaching model.
+
+## Use
+
+Choose **Shared Machine** in [Agent Lab](../../ui/agent-lab/README.md) and use the reserve, start, cancel, fail, repair and complete actions.
+
+From a script in the repository root:
+
+```ts
+import { create } from "./models/shared-machine/model.ts";
+
+const workshop = create();
+workshop.reserve("A");
+workshop.start("A");
+workshop.fail();
+workshop.repair();   // false: the hour has not passed yet
+workshop.advance(1);
+workshop.repair();   // true
+console.log(workshop.read()); // phase "idle", inventoryUnitCount 1, consumedUnitCount 1
+```
+
+Every action returns `true` when it was applied and `false` when it was rejected without changes. [model.ts](model.ts) also exports the same operations as standalone functions. The public contract script [05-shared-machine.ts](../../tests/public-contracts/city-simulation/05-shared-machine.ts) asserts the reservation, failure and repair rules.

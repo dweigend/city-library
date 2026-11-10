@@ -25,7 +25,7 @@ These meanings apply throughout the public API. Ordinary model properties remain
 | Word | Meaning | API use |
 | --- | --- | --- |
 | `value` | Read one current principal value, where a dedicated result or state object needs it. | `world.tick.value`; `graph.flow(options).value`. Model properties such as energy stay direct. `random.number()` generates a new number. |
-| `advance` | Move a temporal process forward. Its receiver defines the effects. | `world.tick.advance(amount)` changes only the counter. `agenda.advance({until,maxEvents})` processes events up to a target and returns them. |
+| `advance` | Move a temporal process forward. Its receiver defines the effects. | `world.tick.advance(amount)` changes only the counter. `agenda.advance({until,maxEventCount})` processes events up to a target and returns them. |
 | `reset` | Restore the receiver's specified initial state. | `world.tick.reset()` restores its value to 0. |
 | `create` | Construct a new object. | `Agent.create()`. |
 | `add` | Join an existing owner or collection. | `world.add(component)`. |
@@ -235,14 +235,14 @@ A World without space imposes neither a shared dimension nor spatial boundaries:
 
 ```ts
 run<R>(world: World, step: (() => R) &
-  ([Extract<R, PromiseLike<unknown>>] extends [never] ? unknown : never), steps?: number): void
+  ([Extract<R, PromiseLike<unknown>>] extends [never] ? unknown : never), stepCount?: number): void
 ```
 
 Import `run` from agent-loom. It invokes the supplied synchronous step function, then advances the supplied `World`’s time. It is the single public entry for advancing model steps; no parallel world.run or script alias is proposed. It does not activate agents automatically.
 
 | Input | Default / required value | Meaning |
 | --- | --- | --- |
-| `steps` | 1 | Nonnegative integer count; 0 runs no rules. |
+| `stepCount` | 1 | Nonnegative integer count; 0 runs no rules. |
 | `world` | Required `World` | Explicit context whose tick value advances; no global current `World`. |
 | `step` | Required synchronous function | The model chooses which collections/actions run and in what order. Named functions are the documentation style; inline callbacks are also valid TypeScript. |
 
@@ -264,7 +264,7 @@ world.add<T extends Component>(component: T): T
 world.add<T extends Component>(components: Iterable<T>): readonly T[]
 world.delete(component: Component | Iterable<Component>): void
 run<R>(world: World, step: (() => R) &
-  ([Extract<R, PromiseLike<unknown>>] extends [never] ? unknown : never), steps?: number): void
+  ([Extract<R, PromiseLike<unknown>>] extends [never] ? unknown : never), stepCount?: number): void
 ```
 
 **Behavior and errors**
@@ -755,14 +755,14 @@ reachable is the breadth-first node sequence without the starting node. directio
 graph.components(options?: {
   mode?: "weak" | "strong" | "biconnected"
 }): readonly (readonly N[])[]
-graph.connected(options?: { mode?: "weak" | "strong" }): boolean
+graph.isConnected(options?: { mode?: "weak" | "strong" }): boolean
 graph.bridges(): readonly Edge<N, E>[]
 graph.articulations(): readonly N[]
 ```
 
 **Behavior and errors**
 
-components defaults weak: treat all directions as undirected and return disjoint components, including isolated nodes. strong follows actual directions (an undirected edge supplies two arcs). Each component contains nodes in original insertion order, and components are ordered by their first inserted node. Empty graph yields an empty array. connected defaults weak and is true for zero or one node; otherwise it tests whether components contains one part. This empty-graph convention is explicit and need not match every external library.
+components defaults weak: treat all directions as undirected and return disjoint components, including isolated nodes. strong follows actual directions (an undirected edge supplies two arcs). Each component contains nodes in original insertion order, and components are ordered by their first inserted node. Empty graph yields an empty array. isConnected defaults weak and is true for zero or one node; otherwise it tests whether components contains one part. This empty-graph convention is explicit and need not match every external library.
 
 biconnected, bridges and articulations require every edge undirected; directed/mixed input throws. Parallel edges and loops are accepted. Biconnected parts are maximal vertex sets without an articulation splitting the part; an isolated vertex is returned as a singleton and a single bridge edge as a two-node part. Parts may overlap at articulations. bridges returns edges whose deletion increases weak component count; parallel alternatives prevent a bridge and loops are never bridges. articulations returns nodes whose deletion increases weak component count. Results preserve original insertion order (parts use the same first-node ordering). These are pure snapshots, not deletions.
 
@@ -820,21 +820,21 @@ A route path exists only when every traversed edge has compatible, continuous ge
 
 ```ts
 graph.routes(options: {
-  from: N; to: N; limit: number; maxEdges?: number;
+  from: N; to: N; limit: number; maxEdgeCount?: number;
   cost?: (edge: Edge<N, E>) => number
 }): readonly Route<N, E>[]
 graph.distanceSummary(options?: {
   cost?: (edge: Edge<N, E>) => number;
   disconnected?: "reachable" | "reject"
 }): { mean?: number; diameter?: number; radius?: number;
-       eccentricity: ReadonlyMap<N, number>; reachablePairs: number }
+       eccentricity: ReadonlyMap<N, number>; reachablePairCount: number }
 ```
 
 **Behavior and errors**
 
-routes requires member endpoints and a positive integer limit, at most 100000. maxEdges defaults max(0,node count−1) and is an integer in [0,node count−1]. Enumerate vertex-simple routes, preserving distinct parallel-edge alternatives, sorted by total cost then lexicographic edge insertion indices. Cost defaults 1 and must be finite nonnegative. Same-node returns only the empty route if within the limit; loops cannot appear in a vertex-simple route. Return at most limit frozen routes; fewer means enumeration exhausted. No mutation or randomness occurs. Invalid inputs throw before enumeration.
+routes requires member endpoints and a positive integer limit, at most 100000. maxEdgeCount defaults max(0,node count−1) and is an integer in [0,node count−1]. Enumerate vertex-simple routes, preserving distinct parallel-edge alternatives, sorted by total cost then lexicographic edge insertion indices. Cost defaults 1 and must be finite nonnegative. Same-node returns only the empty route if within the limit; loops cannot appear in a vertex-simple route. Return at most limit frozen routes; fewer means enumeration exhausted. No mutation or randomness occurs. Invalid inputs throw before enumeration.
 
-distanceSummary uses nonnegative costs and ordered distinct reachable pairs. disconnected defaults reachable: missing pairs are excluded from mean; each node eccentricity is its largest finite outgoing distance (0 for no reachable peer), diameter is the maximum eccentricity, and radius the minimum. reachablePairs counts ordered pairs, so undirected pairs count twice. On an empty graph all scalar summaries are absent and the map empty; a singleton has mean absent, diameter/radius 0. reject throws when any distinct pair is unreachable. Incoming summaries use a reverse view.
+distanceSummary uses nonnegative costs and ordered distinct reachable pairs. disconnected defaults reachable: missing pairs are excluded from mean; each node eccentricity is its largest finite outgoing distance (0 for no reachable peer), diameter is the maximum eccentricity, and radius the minimum. reachablePairCount counts ordered pairs, so undirected pairs count twice. On an empty graph all scalar summaries are absent and the map empty; a singleton has mean absent, diameter/radius 0. reject throws when any distinct pair is unreachable. Incoming summaries use a reverse view.
 
 <a id="graph-centrality-extended"></a>
 
@@ -842,26 +842,26 @@ distanceSummary uses nonnegative costs and ordered distinct reachable pairs. dis
 
 ```ts
 graph.analyze(options: {
-  measure: "degree" | "closeness" | "betweenness" | "eigenvector" | "pageRank";
+  measure: "degree" | "closeness" | "betweenness" | "eigenvector" | "page-rank";
   direction?: "out" | "in" | "all"; normalized?: boolean;
   disconnected?: "reachable" | "discount";
   cost?: (edge: Edge<N, E>) => number;
   weight?: (edge: Edge<N, E>) => number;
-  damping?: number; tolerance?: number; maxIterations?: number
+  damping?: number; tolerance?: number; maxIterationCount?: number
 }): ReadonlyMap<N, number>
 ```
 
 **Behavior and errors**
 
-This replaces the bounded analysis candidate with exact target behavior. All results are pure insertion-ordered maps containing every node. degree accepts parallel edges and loops; direction defaults out, undirected edges contribute one at each endpoint for all three directions and an undirected loop contributes two; directed loops count once in each in/out and twice in all. Unnormalized degree is incidence count, or incidence-weight sum when weight is supplied; finite nonnegative weights are evaluated once per edge. normalized defaults false and divides by max(1,n−1), intentionally allowing multigraph/loop scores above one. It rejects cost, disconnected, damping, tolerance and maxIterations.
+This replaces the bounded analysis candidate with exact target behavior. All results are pure insertion-ordered maps containing every node. degree accepts parallel edges and loops; direction defaults out, undirected edges contribute one at each endpoint for all three directions and an undirected loop contributes two; directed loops count once in each in/out and twice in all. Unnormalized degree is incidence count, or incidence-weight sum when weight is supplied; finite nonnegative weights are evaluated once per edge. normalized defaults false and divides by max(1,n−1), intentionally allowing multigraph/loop scores above one. It rejects cost, disconnected, damping, tolerance and maxIterationCount.
 
 closeness permits direction out (default) or in, never all. It uses actual directed paths and optionally strictly positive cost; weight and iteration options reject. For r reachable other nodes and finite distance sum s, reachable returns r/s or 0 when r=0; discount multiplies by r/max(1,n−1). disconnected defaults reachable. normalized is rejected because the formula already normalizes by reachable count. Loops do not shorten a positive path; the cheapest parallel edge determines distance.
 
 betweenness sums the fraction of shortest vertex-simple paths through each non-endpoint node over ordered source/target pairs, halving for wholly undirected graphs. An explicit cost must be strictly positive, ensuring finitely countable shortest paths; parallel-edge paths count separately. Mixed directions are accepted as arcs. normalized defaults false; true divides by (n−1)(n−2) for directed/mixed and half that for wholly undirected, or returns zeros for n&lt;3. Direction/disconnected/weight/iteration settings reject.
 
-eigenvector uses incoming weighted adjacency (undirected edges supply both arcs), allows parallel sums, and defaults weight 1, tolerance 1e−9, maxIterations 1000. Weights must be finite nonnegative. Start at equal positive unit-L2 values; iterate (A+I), L2-normalizing each step, stopping when L1 change ≤ n×tolerance. Return zeros for an edgeless nonempty graph; otherwise failure to converge throws Error, never an apparently valid partial vector. direction, normalized, disconnected, cost and damping reject.
+eigenvector uses incoming weighted adjacency (undirected edges supply both arcs), allows parallel sums, and defaults weight 1, tolerance 1e−9, maxIterationCount 1000. Weights must be finite nonnegative. Start at equal positive unit-L2 values; iterate (A+I), L2-normalizing each step, stopping when L1 change ≤ n×tolerance. Return zeros for an edgeless nonempty graph; otherwise failure to converge throws Error, never an apparently valid partial vector. direction, normalized, disconnected, cost and damping reject.
 
-pageRank uses outgoing transition weights; defaults damping 0.85 in (0,1), tolerance 1e−9 and maxIterations 1000. Sum parallel weights, ignore zero transition weights, distribute dangling mass uniformly, and teleport uniformly across all nodes. Start uniformly; stop when L1 difference ≤ n×tolerance. Return scores summing to 1 (empty map for zero nodes); nonconvergence throws. direction, normalized, disconnected and cost reject. tolerance must be finite positive and maxIterations a positive integer. No ranking consumes random draws. The selected spectral/ranking models correspond to common centrality families; this is not a promise of every centrality variant.
+page-rank uses outgoing transition weights; defaults damping 0.85 in (0,1), tolerance 1e−9 and maxIterationCount 1000. Sum parallel weights, ignore zero transition weights, distribute dangling mass uniformly, and teleport uniformly across all nodes. Start uniformly; stop when L1 difference ≤ n×tolerance. Return scores summing to 1 (empty map for zero nodes); nonconvergence throws. direction, normalized, disconnected and cost reject. tolerance must be finite positive and maxIterationCount a positive integer. No ranking consumes random draws. The selected spectral/ranking models correspond to common centrality families; this is not a promise of every centrality variant.
 
 <a id="graph-clustering"></a>
 
@@ -886,10 +886,10 @@ Optional weight is a synchronous pure callback evaluated once per edge and must 
 
 ```ts
 graph.communities(options?: {
-  method?: "greedy" | "louvain" | "labelPropagation";
+  method?: "greedy" | "louvain" | "label-propagation";
   weight?: (edge: Edge<N, E>) => number;
   resolution?: number; random?: Random;
-  maxIterations?: number; tolerance?: number
+  maxIterationCount?: number; tolerance?: number
 }): readonly (readonly N[])[]
 graph.modularity(partition: readonly (readonly N[])[], options?: {
   weight?: (edge: Edge<N, E>) => number; resolution?: number
@@ -902,9 +902,9 @@ These methods require undirected edges; parallel weights are summed and loops co
 
 communities defaults greedy. Start singleton communities; repeatedly merge the pair with largest strictly positive modularity gain until none exists; ties choose earliest original node indices. tolerance defaults 1e−9 and compares gains against that threshold. louvain starts singleton groups at each coarsened level, repeatedly moves one node to a neighbor community with greatest positive gain, then coarsens after a converged pass.
 
-An explicit random is required for louvain and labelPropagation; each pass shuffles current nodes once using that generator. louvain retains the best partition, stops when full-level gain ≤tolerance, and expands coarsened nodes back to original identities. labelPropagation initializes each node with its insertion index label and, in shuffled passes, adopts the most incident-weight-supported neighbor label; tied maxima are sampled once uniformly using random. Isolated nodes retain their label; zero-weight edges provide no support.
+An explicit random is required for louvain and label-propagation; each pass shuffles current nodes once using that generator. louvain retains the best partition, stops when full-level gain ≤tolerance, and expands coarsened nodes back to original identities. label-propagation initializes each node with its insertion index label and, in shuffled passes, adopts the most incident-weight-supported neighbor label; tied maxima are sampled once uniformly using random. Isolated nodes retain their label; zero-weight edges provide no support.
 
-maxIterations defaults 1000 and bounds total passes (greedy counts merges). If not converged within the bound, throw Error; do not return a silently incomplete partition. Greedy rejects random; labelPropagation rejects resolution and tolerance because it has no modularity objective. Every successful result is ordered by first original member and contains node insertion order within each group; no graph mutation occurs. These are heuristic partitions, not guaranteed global optima. The interface selects a few practical models from community algorithms, including the NW Louvain use case.
+maxIterationCount defaults 1000 and bounds total passes (greedy counts merges). If not converged within the bound, throw Error; do not return a silently incomplete partition. Greedy rejects random; label-propagation rejects resolution and tolerance because it has no modularity objective. Every successful result is ordered by first original member and contains node insertion order within each group; no graph mutation occurs. These are heuristic partitions, not guaranteed global optima. The interface selects a few practical models from community algorithms, including the NW Louvain use case.
 
 <a id="graph-cliques"></a>
 
@@ -971,18 +971,18 @@ Return selected original edge identities in selection order, with one minimum sp
 ```ts
 graph.flow(options: {
   from: N; to: N; capacity: (edge: Edge<N, E>) => number;
-  tolerance?: number; maxAugmentations?: number
+  tolerance?: number; maxAugmentationCount?: number
 }): { value: number; flowByEdge: ReadonlyMap<Edge<N, E>, number>;
        sourceSide: readonly N[]; sinkSide: readonly N[] }
 ```
 
 **Behavior and errors**
 
-Require distinct member endpoints and exclusively directed edges. Parallel arcs are supported; loops carry zero flow. capacity is required, pure, evaluated once per edge, finite and nonnegative in caller-defined units. tolerance defaults 1e−12 absolute capacity units and must be finite positive; maxAugmentations defaults 1000000 and must be a positive integer. Return a numerically bounded flow and corresponding cut: sourceSide is residual-reachable from from, sinkSide the remaining members.
+Require distinct member endpoints and exclusively directed edges. Parallel arcs are supported; loops carry zero flow. capacity is required, pure, evaluated once per edge, finite and nonnegative in caller-defined units. tolerance defaults 1e−12 absolute capacity units and must be finite positive; maxAugmentationCount defaults 1000000 and must be a positive integer. Return a numerically bounded flow and corresponding cut: sourceSide is residual-reachable from from, sinkSide the remaining members.
 
 Every edge appears in the map; reported values are clamped to [0,capacity], and nonterminal conservation error is at most tolerance times incident edge count. Residual arcs at or below tolerance are treated as saturated, and source/sink reachability uses this same threshold. The cut-capacity minus flow-value gap is at most tolerance times edge count plus accumulated IEEE-754 rounding error; no exact real-arithmetic optimality is claimed. Resolve augmenting paths breadth-first in edge insertion order; antiparallel edges keep separate residual identities.
 
-Stop when no above-tolerance augmenting path remains; exceeding maxAugmentations or overflowing any finite residual/total throws RangeError without a partial result. Unreachable destination returns value 0. The operation returns measurements only, never changes edge properties or models queues/congestion. Undefined/infinite capacities are rejected.
+Stop when no above-tolerance augmenting path remains; exceeding maxAugmentationCount or overflowing any finite residual/total throws RangeError without a partial result. Unreachable destination returns value 0. The operation returns measurements only, never changes edge properties or models queues/congestion. Undefined/infinite capacities are rejected.
 
 <a id="graph-generate"></a>
 
@@ -998,9 +998,9 @@ type GeneratorOptions<N> =
       wrap?: boolean; directed?: boolean }
   | { kind: "random"; nodes: readonly N[]; probability: number;
       directed?: boolean; random: Random }
-  | { kind: "small-world"; nodes: readonly N[]; neighbors: number;
+  | { kind: "small-world"; nodes: readonly N[]; neighborCount: number;
       probability: number; random: Random }
-  | { kind: "preferential"; nodes: readonly N[]; links: number;
+  | { kind: "preferential"; nodes: readonly N[]; edgesPerNode: number;
       random: Random }
   | { kind: "geometric"; nodes: readonly N[];
       position: (node: N) => Position; radius: number; space?: Space }
@@ -1016,11 +1016,11 @@ For path connect consecutive nodes; cycle adds last-to-first (0/1 nodes produce 
 
 tree uses node 0 as root and joins each later node i to parent floor((i−1)/branching); branching defaults 2 and must be a positive integer. directed defaults false; true points parent to child. Empty input is a valid empty forest. lattice requires a nonempty shape of 1, 2 or 3 positive integer axis lengths whose product equals nodes.length; flatten with x fastest, then y, then z. Connect face-adjacent axis cells, wrap defaults false, duplicate/loop neighbor pairs collapsed. directed defaults false; true directs positive-axis steps including wrap seams. Existing Graph representation must permit any antiparallel directed pairs. This is topology, not a Grid or World-space constructor.
 
-random tests every unordered pair (or distinct ordered pair when directed) in lexicographic node index order, consuming one uniform number per candidate, and adds it when draw &lt; probability. probability is finite in [0,1]; even endpoints 0/1 consume the scheduled draws. small-world is undirected Watts–Strogatz: require n≥3, even integer neighbors in [2,n−1] and probability in [0,1]. Start an n-node ring connected neighbors/2 forward and backward; examine each original clockwise edge in source/offset order, draw once to decide rewiring, then uniformly sample an eligible nonself/nonneighbor endpoint if one exists.
+random tests every unordered pair (or distinct ordered pair when directed) in lexicographic node index order, consuming one uniform number per candidate, and adds it when draw &lt; probability. probability is finite in [0,1]; even endpoints 0/1 consume the scheduled draws. small-world is undirected Watts–Strogatz: require n≥3, even integer neighborCount in [2,n−1] and probability in [0,1]. Start an n-node ring connected neighborCount/2 forward and backward; examine each original clockwise edge in source/offset order, draw once to decide rewiring, then uniformly sample an eligible nonself/nonneighbor endpoint if one exists.
 
 Keep the original edge if none is eligible. A successful rewire preserves source and edge count. The supplied Random is the only stream used.
 
-preferential requires integer links in [1,n−1]; begin a complete undirected graph on the first links+1 nodes, then visit remaining nodes in order. For each new node choose links distinct previous nodes by degree-proportional sampling without replacement, updating the temporary degree after the batch selection; candidate degree zero has zero mass. Consume one uniform draw per choice with a stable cumulative-degree scan. geometric is undirected, evaluates position once per node in order, requires finite homogeneous XY or XYZ positions, radius finite nonnegative, and optional normalized dimension-compatible space.
+preferential requires integer edgesPerNode in [1,n−1]; begin a complete undirected graph on the first edgesPerNode+1 nodes, then visit remaining nodes in order. For each new node choose edgesPerNode distinct previous nodes by degree-proportional sampling without replacement, updating the temporary degree after the batch selection; candidate degree zero has zero mass. Consume one uniform draw per choice with a stable cumulative-degree scan. geometric is undirected, evaluates position once per node in order, requires finite homogeneous XY or XYZ positions, radius finite nonnegative, and optional normalized dimension-compatible space.
 
 Join each unordered pair with topology-aware distance ≤radius. With no space use ordinary Euclidean coordinates; no World-space inference occurs. These construction rules select common graph generator families rather than all named graph catalogs.
 
@@ -1102,7 +1102,7 @@ type LayoutOptions<N> =
   | { kind: "circle"; radius?: number; center?: Position }
   | { kind: "radial"; root: N; spacing?: number; center?: Position }
   | { kind: "spring"; initial: ReadonlyMap<N, Position>;
-      iterations?: number; length?: number; step?: number }
+      iterationCount?: number; length?: number; step?: number }
   | { kind: "tutte"; boundary: readonly N[];
       positions: readonly Position[] }
 ```
@@ -1115,7 +1115,7 @@ For circle/radial/spring, directed input is treated as undirected adjacency, par
 
 circle defaults radius 10 world units and center {x:0,y:0}; radius is finite nonnegative, center finite. Place n nodes in insertion order at angle 2πi/n with first on +Y and clockwise increasing angles. radial requires root; center defaults {x:0,y:0} and must be finite, spacing defaults 1 finite positive. Place the primary root at center. Breadth-first undirected levels receive concentric radii depth×spacing; place each level independently in insertion order with the same angular rule. Disconnected components use their earliest inserted node as a local root and appear after the primary component at nonoverlapping +X offsets equal to twice the preceding and following component maximal radii plus spacing.
 
-spring requires one finite initial XY point per current node, no extra/omitted identities. iterations defaults 100 nonnegative integer, length defaults 1 positive finite, step defaults 0.01 positive finite. Each iteration simultaneously evaluates Hooke attraction (distance−length) on each unique adjacency and inverse-square repulsion length²/max(distance²,1e−12) on every unordered node pair; unit vectors use current displacement, with coincident pairs separated along +X for the earlier insertion index and −X for the later one. Sum forces then apply step×force to every point together. Every intermediate must remain finite or RangeError is thrown; no partial result is returned. No convergence or physical equilibrium guarantee is implied.
+spring requires one finite initial XY point per current node, no extra/omitted identities. iterationCount defaults 100 nonnegative integer, length defaults 1 positive finite, step defaults 0.01 positive finite. Each iteration simultaneously evaluates Hooke attraction (distance−length) on each unique adjacency and inverse-square repulsion length²/max(distance²,1e−12) on every unordered node pair; unit vectors use current displacement, with coincident pairs separated along +X for the earlier insertion index and −X for the later one. Sum forces then apply step×force to every point together. Every intermediate must remain finite or RangeError is thrown; no partial result is returned. No convergence or physical equilibrium guarantee is implied.
 
 tutte requires distinct boundary members and an equally long position array with at least 3 finite points forming a strictly convex polygon in supplied order; the graph must be simple undirected and each unpinned component must connect to a boundary node. Solve each unpinned vertex as the arithmetic mean of its neighbors with boundary positions fixed. A singular system or nonfinite solution throws. This is a barycentric placement contract, not a claim that arbitrary nonplanar input becomes a planar embedding. It preserves the ordinary model use of external engine layout operations while rendering remains an independent consumer.
 
@@ -1321,18 +1321,18 @@ Uniform, integer and distribution draws are variants of one idea.
 ### One population-selection operation
 
 ```ts
-random.sample<T>(source: Iterable<T>, options?: { count?: number; replace?: boolean; weight?: (value: T) => number }): T[]
+random.sample<T>(source: Iterable<T>, options?: { sampleCount?: number; replace?: boolean; weight?: (value: T) => number }): T[]
 ```
 
 Select members, choose by weights or generate a random order using the same operation.
 
 | Input | Default / required value | Meaning |
 | --- | --- | --- |
-| `count` | 1 | Nonnegative integer; without replacement return at most the available positive-weight members. Full population size gives a random permutation. |
+| `sampleCount` | 1 | Nonnegative integer; without replacement return at most the available positive-weight members. Full population size gives a random permutation. |
 | `replace` | false | With replacement, an eligible member may occur more than once. |
 | `weight` | Equal weight 1 | Pure callback yielding finite nonnegative weights. Zero-weight members are ineligible; recompute probabilities over remaining members when not replacing. |
 
-**Result and effects:** Return original references in draw order; never mutate source. Empty/all-zero sources or count 0 return [] without a draw; singleton positive selection consumes a draw. A seeded draw is an explicit action, unlike sorting/filtering. Exact old full-shuffle draw counts are not retained by implication.
+**Result and effects:** Return original references in draw order; never mutate source. Empty/all-zero sources or sampleCount 0 return [] without a draw; singleton positive selection consumes a draw. A seeded draw is an explicit action, unlike sorting/filtering. Exact old full-shuffle draw counts are not retained by implication.
 
 <a id="random-continuation"></a>
 
@@ -1392,14 +1392,14 @@ For the Mulberry profile, bound is unsupported. For the MT profile, default unif
 
 ```ts
 random.sample<T>(source: Iterable<T>, options?: {
-  count?: number; replace?: boolean; weight?: (value: T) => number;
+  sampleCount?: number; replace?: boolean; weight?: (value: T) => number;
   order?: "draw" | "source"; algorithm?: "fisher-yates-descending";
 }): T[]
 ```
 
 **Behavior and errors**
 
-Consume source into a finite ordered array without deduplicating entries; repeated references are distinct positions. Defaults count 1, replace false, equal weight 1, order draw. Evaluate weight exactly once per entry before sampling; require a finite nonnegative value, finite total and a pure synchronous callback. Invalid count/weight or thrown evaluation leaves the stream unchanged. Count is a nonnegative safe integer. Without replacement stop at min(count,positive-weight entry count); with replacement take count draws if any eligible entry exists. Count zero/empty/all-zero returns [] without drawing.
+Consume source into a finite ordered array without deduplicating entries; repeated references are distinct positions. Defaults sampleCount 1, replace false, equal weight 1, order draw. Evaluate weight exactly once per entry before sampling; require a finite nonnegative value, finite total and a pure synchronous callback. Invalid sampleCount/weight or thrown evaluation leaves the stream unchanged. Count is a nonnegative safe integer. Without replacement stop at min(sampleCount,positive-weight entry count); with replacement take sampleCount draws if any eligible entry exists. Count zero/empty/all-zero returns [] without drawing.
 
 Each actual selection consumes one double, including a singleton, chooses by cumulative weight and removes the selected position for no replacement. Use the final positive position for a rounding remainder. Return original values, never mutate source. Order source sorts selected positions back into original order after drawing, retaining draw order among repeated selections of one position. It is not external engine ask.
 
@@ -1495,7 +1495,7 @@ stats.describe(values: Iterable<number>, options?: { sample?: boolean }): Summar
 
 Combine count, sum, extrema, mean, median and spread in one pure report.
 
-**Result and effects:** Return `count`,`sum`,`min`,`max`,`mean`,`median`,`variance`,`standardDeviation`. Empty `count`/`sum` are 0, other results undefined; sample spread is undefined with fewer than 2 values. Input order/data are unchanged; reject nonfinite input or arithmetic overflow.
+**Result and effects:** Return `valueCount`,`sum`,`min`,`max`,`mean`,`median`,`variance`,`standardDeviation`. Empty `valueCount`/`sum` are 0, other results undefined; sample spread is undefined with fewer than 2 values. Input order/data are unchanged; reject nonfinite input or arithmetic overflow.
 
 <a id="histogram"></a>
 
@@ -1533,17 +1533,17 @@ stats.alignment(headings: Iterable<number>): number
 ### Pure measurements
 
 ```ts
-type Summary = { readonly count:number; readonly sum:number;
+type Summary = { readonly valueCount:number; readonly sum:number;
   readonly min:number|undefined; readonly max:number|undefined;
   readonly mean:number|undefined; readonly median:number|undefined;
   readonly variance:number|undefined; readonly standardDeviation:number|undefined };
 type Histogram = { readonly edges:readonly number[]; readonly counts:readonly number[];
-  readonly underflow:number; readonly overflow:number };
+  readonly underflowValueCount:number; readonly overflowValueCount:number };
 ```
 
 **Behavior and errors**
 
-`stats.describe` consumes a finite iterable once and requires finite numbers. It returns count, sum, min, max, mean, median, variance and standardDeviation. Median sorts a detached copy and averages the middle pair for even n. Population variance divides squared deviations by n; sample true uses n−1. Empty count/sum = 0, remaining fields undefined; sample spread is undefined at n &lt; 2. Reject overflow; never change input order. `stats.histogram` requires at least two strictly increasing finite edges and finite values; returns {edges,counts,underflow,overflow}, copying edges.
+`stats.describe` consumes a finite iterable once and requires finite numbers. It returns valueCount, sum, min, max, mean, median, variance and standardDeviation. Median sorts a detached copy and averages the middle pair for even n. Population variance divides squared deviations by n; sample true uses n−1. Empty valueCount/sum = 0, remaining fields undefined; sample spread is undefined at n &lt; 2. Reject overflow; never change input order. `stats.histogram` requires at least two strictly increasing finite edges and finite values; returns {edges,counts,underflowValueCount,overflowValueCount}, copying edges.
 
 Bins include their lower bound, exclude upper except the final inclusive maximum. Empty values yields zero counts. `stats.gini` accepts finite nonnegative holdings, returns population sum-of-absolute-differences/(2n sum), zero for empty or all-zero. `stats.alignment` accepts at most 10000 finite headings from a finite iterable in [0,360), returns magnitude of mean heading unit vectors, zero for empty; clamp only floating overshoot to [0,1]. All reject nonfinite arithmetic and have no RNG, World, recorder or renderer effect.
 
@@ -1651,7 +1651,7 @@ agenda.time: number // readonly
 agenda.size: number // readonly; pending event count
 agenda.add(options: { at: number; data: E; priority?: number }): EventHandle<E>
 agenda.delete(handle: EventHandle<E>): void
-agenda.advance(options: { until: number; maxEvents?: number }): readonly Event<E>[]
+agenda.advance(options: { until: number; maxEventCount?: number }): readonly Event<E>[]
 agenda.next(options: { until: number }): Event<E> | undefined
 type EventHandle<E> = { readonly id: string; readonly agenda: Agenda<E> };
 type Event<E> = { readonly id: string; readonly at: number; readonly priority: number; readonly sequence: number; readonly data: E };
@@ -1662,7 +1662,7 @@ type Event<E> = { readonly id: string; readonly at: number; readonly priority: n
 | `at / data` | Required model time and cloneable event data | `at` ≥ `agenda.time`; no callback serialization. |
 | `priority` | 0 | Signed safe integer; lower number first at equal time; insertion order resolves remaining ties. |
 | `until` | Required finite time ≥ current `agenda.time` | Model chooses how this time relates to `World` ticks. |
-| `maxEvents` | 1000 | Positive integer budget. If due events remain, stop at last dispatched time; otherwise advance to `until`. |
+| `maxEventCount` | 1000 | Positive integer budget. If due events remain, stop at last dispatched time; otherwise advance to `until`. |
 
 **Behavior and errors**
 
@@ -1681,9 +1681,9 @@ The delivered additive `next({until})` removes at most one due event. On success
 ### Design and replication
 
 ```ts
-studies.design(input: { constants?: StudyParameters; axes: readonly StudyAxis[]; maxScenarios?: number }): readonly StudyScenario[]
-studies.design<Parameters extends StudyParameters>(input: { defaults: Parameters; axes: readonly StudyAxisFor<Parameters>[]; maxScenarios?: number }): readonly StudyScenario<StudyParameterValues<Parameters>>[]
-studies.replicate<Parameters>(scenarios: readonly StudyScenario<Parameters>[], seeds: readonly number[], options?: { maxRuns?: number }): readonly PlannedRun<Parameters>[]
+studies.design(input: { constants?: StudyParameters; axes: readonly StudyAxis[]; maxScenarioCount?: number }): readonly StudyScenario[]
+studies.design<Parameters extends StudyParameters>(input: { defaults: Parameters; axes: readonly StudyAxisFor<Parameters>[]; maxScenarioCount?: number }): readonly StudyScenario<StudyParameterValues<Parameters>>[]
+studies.replicate<Parameters>(scenarios: readonly StudyScenario<Parameters>[], seeds: readonly number[], options?: { maxRunCount?: number }): readonly PlannedRun<Parameters>[]
 studies.summarize<Parameters,Measurements>(result: StudyResult<Parameters,Measurements>, select: (outcome: StudyOutcome<Parameters,Measurements>) => number | undefined): readonly ReplicationSummary[]
 ```
 
@@ -1704,20 +1704,20 @@ type StudyPlan<Parameters> =
   | { readonly plan: readonly PlannedRun<Parameters>[]; readonly parameters?: never; readonly seeds?: never };
 type StudyOptions<Parameters,Model extends StudyModel,Measurements> = StudyPlan<Parameters> & {
   create(parameters: Parameters, seed: number, run: PlannedRun<Parameters>): Model;
-  readonly steps: number;
+  readonly stepCount: number;
   measure(model: Model): Measurements;
-  readonly every?: number;
+  readonly sampleIntervalSteps?: number;
   readonly sampleInitial?: boolean;
   readonly sampleFinal?: boolean;
-  sampleWhen?(model: Model, completedSteps: number): boolean;
-  stopWhen?(model: Model, completedSteps: number): boolean;
+  sampleWhen?(model: Model, completedStepCount: number): boolean;
+  stopWhen?(model: Model, completedStepCount: number): boolean;
   readonly onError?: "stop" | "continue";
   before?(plan: readonly PlannedRun<Parameters>[]):void;
   after?(result:StudyResult<Parameters,Measurements>):void;
-  readonly pause?: { when(model:Model,completedSteps:number):boolean; save(model:Model):Snapshot<unknown,unknown> };
+  readonly pause?: { when(model:Model,completedStepCount:number):boolean; save(model:Model):Snapshot<unknown,unknown> };
   readonly provenance?: Readonly<Record<string,string>>;
-  readonly maxTotalSteps?: number;
-  readonly maxTotalSamples?: number;
+  readonly maxTotalStepCount?: number;
+  readonly maxTotalSampleCount?: number;
   readonly host?: { advance(model: Model): void | "stopped" };
 };
 studies.run<Parameters,Model extends StudyModel,Measurements>(options: StudyOptions<Parameters,Model,Measurements> & {pause?:never}): StudyResult<Parameters,Measurements>
@@ -1738,7 +1738,7 @@ The optional host.advance is an execution seam for existing host consumers, neve
 
 dispose runs exactly once after a successfully returned create, including failures, never after failed creation. A disposal failure makes success/stopped failed; if there was a primary failure retain cleanupError separately. onError continue records failure and proceeds; stop records all remaining plan identities as skipped/fail-fast without creating them. Preflight throws TypeError/RangeError before running; lifecycle exceptions become named phase diagnostics. Earlier callback effects/RNG draws are never rolled back.
 
-Return every planned identity once, in input order, with detached samples, actual completedSteps and explicit completed/horizon, stopped/stop-condition or adapter-stopped, failed/error, skipped/fail-fast unions. Runner observations are cloneable, not universally JSON-safe. Model procedures must not tick in addition to the runner.
+Return every planned identity once, in input order, with detached samples, actual completedStepCount and explicit completed/horizon, stopped/stop-condition or adapter-stopped, failed/error, skipped/fail-fast unions. Runner observations are cloneable, not universally JSON-safe. Model procedures must not tick in addition to the runner.
 
 <a id="study-worker-contract"></a>
 
@@ -1748,8 +1748,8 @@ Return every planned identity once, in input order, with detached samples, actua
 studies.run<Parameters extends StudyParameters,Measurements>(options: {
   plan: readonly PlannedRun<Parameters>[];
   executor: { moduleUrl: string; exportName: string; sha256: string; config?: NodeStudyConfig };
-  steps: number; every?: number; sampleInitial?: boolean; sampleFinal?: boolean;
-  provenance?: Readonly<Record<string,string>>; maxTotalSteps?: number; maxTotalSamples?: number;
+  stepCount: number; sampleIntervalSteps?: number; sampleInitial?: boolean; sampleFinal?: boolean;
+  provenance?: Readonly<Record<string,string>>; maxTotalStepCount?: number; maxTotalSampleCount?: number;
   timeoutMs: number; concurrency?: number; signal?: StudyCancellationSignal;
 }): Promise<NodeStudyResult<Parameters,Measurements>>
 type WorkerStudyProvider<Parameters,Model extends StudyModel,Measurements> = (config: NodeStudyConfig) =>
@@ -1762,7 +1762,7 @@ This overload is exported as studies from the explicit same-package host subpath
 
 The provider constructs the same create/model/measure callbacks inside each worker. Its per-run source callbacks are never serialized. Worker parameter plans use bounded finite scalar StudyParameters. timeoutMs is integer [1,3600000] wall-clock milliseconds, distinct from model ticks; concurrency defaults 1 and is integer [1,16]. Each worker executes one whole run with onError continue. Cancellation prevents new starts, terminates active workers and removes host listeners.
 
-Results remain in plan order: actual serial outcome, not-started/cancelled with completedSteps 0, or transport-error setup/timeout/cancelled/worker-error/protocol with completedSteps null. Parent validates messages before publication. Workers are trusted execution, not a sandbox. Invalid registrations/plans reject before execution; per-run transport errors remain explicit outcomes.
+Results remain in plan order: actual serial outcome, not-started/cancelled with completedStepCount 0, or transport-error setup/timeout/cancelled/worker-error/protocol with completedStepCount null. Parent validates messages before publication. Workers are trusted execution, not a sandbox. Invalid registrations/plans reject before execution; per-run transport errors remain explicit outcomes.
 
 <a id="study-behaviorspace-contract"></a>
 
@@ -1814,11 +1814,11 @@ studies.resume<Parameters,Model extends StudyModel,Measurements>(checkpoint: Stu
   create(parameters:Parameters,seed:number,run:PlannedRun<Parameters>):Model;
   load(snapshot: WorldSnapshot<unknown> | BundleSnapshot<unknown>, run:PlannedRun<Parameters>):Model;
   measure(model:Model):Measurements;
-  sampleWhen?(model:Model,completedSteps:number):boolean;
-  stopWhen?(model:Model,completedSteps:number):boolean;
+  sampleWhen?(model:Model,completedStepCount:number):boolean;
+  stopWhen?(model:Model,completedStepCount:number):boolean;
   after?(result:StudyResult<Parameters,Measurements>):void;
   host?:{ advance(model:Model):void | "stopped" };
-  pause?:{ when(model:Model,completedSteps:number):boolean; save(model:Model):Snapshot<unknown,unknown> };
+  pause?:{ when(model:Model,completedStepCount:number):boolean; save(model:Model):Snapshot<unknown,unknown> };
 }): StudyResult<Parameters,Measurements> | StudyCheckpoint<Parameters,Measurements>
 ```
 
@@ -1826,15 +1826,15 @@ studies.resume<Parameters,Model extends StudyModel,Measurements>(checkpoint: Stu
 interface StudyCheckpoint<Parameters,Measurements> {
   readonly framework: "agent-loom-study"; readonly version: 1; readonly kind: "paused";
   readonly plan: readonly PlannedRun<Parameters>[];
-  readonly policy: { readonly steps:number; readonly every:number; readonly sampleInitial:boolean;
+  readonly policy: { readonly stepCount:number; readonly sampleIntervalSteps:number; readonly sampleInitial:boolean;
     readonly sampleFinal:boolean; readonly onError:"stop"|"continue";
-    readonly maxTotalSteps:number; readonly maxTotalSamples:number;
+    readonly maxTotalStepCount:number; readonly maxTotalSampleCount:number;
     readonly provenance:Readonly<Record<string,string>> };
   readonly cursor: number;
   readonly outcomes: readonly StudyOutcome<Parameters,Measurements>[];
   readonly active: { readonly run:PlannedRun<Parameters>; readonly snapshot:unknown;
-    readonly completedSteps:number; readonly samples:readonly StudySample<Measurements>[] };
-  readonly consumedSteps:number; readonly consumedSamples:number;
+    readonly completedStepCount:number; readonly samples:readonly StudySample<Measurements>[] };
+  readonly consumedStepCount:number; readonly consumedSampleCount:number;
   readonly beforeCompleted:boolean; readonly afterCompleted:false;
 }
 storage.encode(checkpoint: StudyCheckpoint<unknown,unknown>, options:{format:"study-json"}):string
@@ -1928,10 +1928,10 @@ export type CandidateLoss = {
 
 export type CandidateScore<Parameters> = {
 	readonly candidate: StudyScenario<Parameters>;
-	readonly requested: number;
-	readonly valid: number;
-	readonly failed: number;
-	readonly sampleSd: number | null;
+	readonly requestedRunCount: number;
+	readonly validRunCount: number;
+	readonly failedRunCount: number;
+	readonly sampleStandardDeviation: number | null;
 	readonly losses: readonly CandidateLoss[];
 } & (
 	| {
@@ -2006,7 +2006,7 @@ export type NodeStudyOutcome<Parameters, Measurements> =
 			readonly run: PlannedRun<Parameters>;
 			readonly kind: "not-started";
 			readonly reason: "cancelled";
-			readonly completedSteps: 0;
+			readonly completedStepCount: 0;
 	  }
 	| {
 			readonly run: PlannedRun<Parameters>;
@@ -2017,7 +2017,7 @@ export type NodeStudyOutcome<Parameters, Measurements> =
 				| "cancelled"
 				| "worker-error"
 				| "protocol";
-			readonly completedSteps: null;
+			readonly completedStepCount: null;
 			readonly error: { readonly name: string; readonly message: string };
 	  };
 
@@ -2111,7 +2111,7 @@ export type StudyTerminal =
 
 export type StudyOutcome<Parameters, Measurements> = StudyTerminal & {
 	readonly run: PlannedRun<Parameters>;
-	readonly completedSteps: number;
+	readonly completedStepCount: number;
 	readonly samples: readonly StudySample<Measurements>[];
 };
 
@@ -2125,15 +2125,15 @@ export interface StudyResult<Parameters, Measurements> {
 export interface ReplicationSummary {
 	readonly scenarioId: string;
 	readonly scenarioIndex: number;
-	readonly requested: number;
-	readonly completed: number;
-	readonly stopped: number;
-	readonly failed: number;
-	readonly skipped: number;
-	readonly valid: number;
-	readonly missing: number;
+	readonly requestedRunCount: number;
+	readonly completedRunCount: number;
+	readonly stoppedRunCount: number;
+	readonly failedRunCount: number;
+	readonly skippedRunCount: number;
+	readonly validRunCount: number;
+	readonly missingRunCount: number;
 	readonly mean: number | null;
-	readonly sampleSd: number | null;
+	readonly sampleStandardDeviation: number | null;
 	readonly values: readonly {
 		readonly runId: string;
 		readonly seed: number;
@@ -2509,11 +2509,11 @@ type WorldRecord = {
   tick: number; space: (Space & Required<Pick<Space, "dimensions" | "boundary">>) | null; random: Ref;
   components: readonly Ref[]; compatibility: null | {
     profile: "mt-word-stream/1"; agentOwn: readonly string[]; edgeOwn: readonly string[];
-    turtleBreeds: readonly { name: string; own: readonly string[] }[];
-    linkBreeds: readonly { name: string; direction: "directed" | "undirected"; own: readonly string[] }[];
-    turtleMembership: readonly (readonly [Ref,string,number])[];
-    linkMembership: readonly (readonly [Ref,string,number])[];
-    nextTurtleId: number; nextLinkId: number;
+    agentGroups: readonly { name: string; own: readonly string[] }[];
+    edgeGroups: readonly { name: string; direction: "directed" | "undirected"; own: readonly string[] }[];
+    agentMembership: readonly (readonly [Ref,string,number])[];
+    edgeMembership: readonly (readonly [Ref,string,number])[];
+    nextAgentId: number; nextEdgeId: number;
   };
 };
 type AgentRecord = {
@@ -2637,7 +2637,7 @@ A handle's localId may name an event deleted since the handle was issued; restor
 
 The compatibility object contains validated versioned-import provenance, not a model declaration API. New models store their ordinary Map/record group metadata in explicitly captured extra state. The compatibility object is null when no imported compatibility declarations exist; otherwise it is the exact inline schema above. Each membership triple contains Agent/Edge reference, declared group name (empty string denotes the unbred base population) and nonnegative safe integer numeric compatibility ID.
 
-IDs are unique within turtles or links, counters exceed every historical assigned ID, and membership endpoints resolve inside the captured World/registered graphs. Own-variable and group names are unique nonempty strings under compatibility declaration rules. Variables themselves remain direct state; no dynamically scoped activation frame, myself reference, running callback or local-randomness scope can be captured. Save during those scopes rejects. Restoration preserves declarations, numeric ordering IDs and future allocation counters for explicitly rebound TS procedures, never external engine code.
+IDs are unique within agents or edges, counters exceed every historical assigned ID, and membership endpoints resolve inside the captured World/registered graphs. Own-variable and group names are unique nonempty strings under compatibility declaration rules. Variables themselves remain direct state; no dynamically scoped activation frame, myself reference, running callback or local-randomness scope can be captured. Save during those scopes rejects. Restoration preserves declarations, numeric ordering IDs and future allocation counters for explicitly rebound TS procedures, never external engine code.
 
 <a id="limits-api"></a>
 
@@ -2662,8 +2662,8 @@ limits.studyXml = {
   studies: 100, metrics: 32, sourceLength: 65536
 };
 limits.study = {
-  axes: 32, parameters: 128, name: 128, string: 65536, scenarios: 10000,
-  runs: 10000, steps: 1000000, totalSteps: 10000000, totalSamples: 1000000
+  axisCount: 32, parameterCount: 128, nameLength: 128, stringLength: 65536, scenarioCount: 10000,
+  runCount: 10000, stepCount: 1000000, totalStepCount: 10000000, totalSampleCount: 1000000
 };
 ```
 

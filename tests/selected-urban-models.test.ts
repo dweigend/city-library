@@ -5,17 +5,17 @@ import { create as pollution } from "../models/urban-suite-pollution/model.ts";
 import { create as recycling } from "../models/urban-suite-recycling/model.ts";
 
 test("Awareness freezes senders but reselects recipients and excludes transient negative awareness", () => {
-  const model = awareness({ people: 0, centers: 0 });
+  const model = awareness({ personCount: 0, centerCount: 0 });
   model.setPeople([11, 10, 1, 0].map(value => ({ x: 0, y: -0.5, heading: 0, awareness: value })));
   model.advance();
   // After black-land losses only the first person sends. The second reaches10,
   // but cannot send in this phase; the fourth's temporary−1 excludes it.
   expect(model.read().people.map(person => person.awareness)).toEqual([10, 10, 1, 0]);
-  expect(model.read().counts).toEqual({ activists: 0, wellInformed: 2, aware: 0, unaware: 2, centers: 0 });
+  expect(model.read().counts).toEqual({ activistCount: 0, wellInformedPersonCount: 2, awarePersonCount: 0, unawarePersonCount: 2, centerCount: 0 });
 });
 
 test("Awareness uses the even-height half-cell torus and moves before changing heading", () => {
-  const model = awareness({ people: 0, centers: 0 });
+  const model = awareness({ personCount: 0, centerCount: 0 });
   model.setPeople([{ x: 0, y: 18.75, heading: 0, awareness: 0 }]);
   model.setCenters([{ x: 0, y: -18.5, kind: "original", nonUsage: 100 }]);
   model.advance();
@@ -29,10 +29,10 @@ test("Awareness uses the even-height half-cell torus and moves before changing h
 });
 
 test("Awareness center expiry is strict, painting retains age and empty means are explicit", () => {
-  const model = awareness({ people: 0, centers: 0, nonUsageLimit: 5 });
+  const model = awareness({ personCount: 0, centerCount: 0, nonUsageLimit: 5 });
   model.setCenters([{ x: 0, y: 0.5, kind: "created", nonUsage: 4 }]);
   model.advance();
-  expect(model.read().counts.centers).toBe(1);
+  expect(model.read().counts.centerCount).toBe(1);
   expect(model.read().meanNonUsage).toBe(5);
   const rng = model.read().randomState;
   model.placeCenter({ x: 0, y: 0.5 });
@@ -47,12 +47,12 @@ test("Awareness center expiry is strict, painting retains age and empty means ar
 test("Pollution new people wait until next tick, while newly planted trees immediately clean", () => {
   // Independent Mulberry draws from seed13 are .5663,.3601,.07059,.04817:
   // two turns, successful birth<.2, successful planting<.1.
-  const model = pollution({ seed: 13, initialPopulation: 0, powerPlants: 0, birthRate: 0.2, plantingRate: 0.1 });
+  const model = pollution({ seed: 13, initialPersonCount: 0, powerPlantCount: 0, birthRate: 0.2, plantingRate: 0.1 });
   model.setPeople([{ x: 0, y: 0, heading: 0, health: 5 }]);
   model.setEnvironment(model.read().cells.map(() => ({ pollution: 0.5, powerPlant: false })));
   model.advance();
   const observed = model.read();
-  expect(observed.counts).toEqual({ people: 2, trees: 1, powerPlants: 0 });
+  expect(observed.counts).toEqual({ personCount: 2, treeCount: 1, powerPlantCount: 0 });
   expect(observed.people.map(person => person.health)).toEqual([4.9, 5]);
   expect(observed.trees[0]!.health).toBe(4.9);
   expect(observed.people[0]!.x).toBe(observed.people[1]!.x);
@@ -64,27 +64,27 @@ test("Pollution new people wait until next tick, while newly planted trees immed
 
 test("Pollution strict exposure and health thresholds preserve whole-person ordering", () => {
   for (const [concentration, expected] of [[0.5, 0.9], [0.500001, 0.8499999]] as const) {
-    const model = pollution({ initialPopulation: 0, powerPlants: 0, birthRate: 0, plantingRate: 0 });
+    const model = pollution({ initialPersonCount: 0, powerPlantCount: 0, birthRate: 0, plantingRate: 0 });
     model.setPeople([{ x: 0, y: 0, heading: 0, health: 1 }]);
     model.setEnvironment(model.read().cells.map(() => ({ pollution: concentration, powerPlant: false })));
     model.advance();
     expect(model.read().people[0]!.health).toBeCloseTo(expected, 12);
   }
   // Same successful-birth seed as above; health after walking is4, so no birth.
-  const threshold = pollution({ seed: 13, initialPopulation: 0, powerPlants: 0, birthRate: 0.2, plantingRate: 0 });
+  const threshold = pollution({ seed: 13, initialPersonCount: 0, powerPlantCount: 0, birthRate: 0.2, plantingRate: 0 });
   threshold.setPeople([{ x: 0, y: 0, heading: 0, health: 4.1 }]);
   threshold.advance();
-  expect(threshold.read().counts.people).toBe(1);
+  expect(threshold.read().counts.personCount).toBe(1);
 });
 
 test("Pollution deaths still allow planting and final-tick cleanup, then preflight freezes everything", () => {
   // Seed2149: third draw .2414, so use seed13's third .07059 for planting
   // after birth is skipped because the parent health has already expired.
-  const model = pollution({ seed: 13, initialPopulation: 0, powerPlants: 0, plantingRate: 0.1 });
+  const model = pollution({ seed: 13, initialPersonCount: 0, powerPlantCount: 0, plantingRate: 0.1 });
   model.setPeople([{ x: 0, y: 0, heading: 0, health: 0.1 }]);
   model.setEnvironment(model.read().cells.map(() => ({ pollution: 0.5, powerPlant: false })));
   model.advance();
-  expect(model.read().counts).toEqual({ people: 0, trees: 1, powerPlants: 0 });
+  expect(model.read().counts).toEqual({ personCount: 0, treeCount: 1, powerPlantCount: 0 });
   expect(model.read().trees[0]!.health).toBe(4.9);
   expect(model.read().tick).toBe(1);
   const final = model.read();
@@ -93,7 +93,7 @@ test("Pollution deaths still allow planting and final-tick cleanup, then preflig
 });
 
 test("Pollution Moore diffusion wraps an impulse and live plant rates wait for the next plant phase", () => {
-  const model = pollution({ initialPopulation: 0, powerPlants: 0, birthRate: 0, plantingRate: 0 });
+  const model = pollution({ initialPersonCount: 0, powerPlantCount: 0, birthRate: 0, plantingRate: 0 });
   model.setPeople([{ x: 10, y: 10, heading: 0, health: 5 }]);
   model.setEnvironment(model.read().cells.map(field => ({ pollution: field.x === 35 && field.y === 31 ? 8 : 0, powerPlant: false })));
   model.advance();
@@ -156,7 +156,7 @@ test("Recycling seeking crosses the torus, harvests origin first and refuses ove
 });
 
 test("Urban models isolate pure detached observations and retain setup plus the latest1000 ticks", () => {
-  for (const model of [awareness({ people: 0, centers: 0 }), recycling({ recyclerCount: 0, wastefulCount: 0 })]) {
+  for (const model of [awareness({ personCount: 0, centerCount: 0 }), recycling({ recyclerCount: 0, wastefulCount: 0 })]) {
     const before = model.read();
     expect(model.read()).toEqual(before);
     expect(Object.isFrozen(before.cells[0])).toBe(true);

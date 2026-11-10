@@ -1,16 +1,16 @@
 /** Readable NetLogo Hotelling's Law composition; Wilensky 2009, CC BY-NC-SA 3.0. */
 import { Agent, Grid, Random, World, run } from "city-library";
 import type { Definition, Inputs } from "../definition.ts";
-import { parameters, stepCount } from "../parameters.ts";
+import { parseParameters, validateStepCount } from "../parameters.ts";
 export interface Parameters {
   seed: number;
-  numberOfStores: number;
+  storeCount: number;
   layout: "plane" | "line";
   rules: "normal" | "moving-only" | "pricing-only";
 }
 export const inputs: Inputs<Parameters> = {
   seed: { kind: "number", default: 1, integer: true },
-  numberOfStores: {
+  storeCount: {
     kind: "number",
     default: 3,
     min: 2,
@@ -26,7 +26,7 @@ export const inputs: Inputs<Parameters> = {
 };
 type Store = Agent<{ price: number; areaCount: number; color: number }>;
 export function create(options: Partial<Parameters> = {}) {
-  let settings = parameters(inputs, options);
+  let settings = parseParameters(inputs, options);
   const random = Random.create({ seed: settings.seed }),
     space = { x: 41, y: 41, boundary: "hard" as const },
     world = World.create(space, { random }),
@@ -41,7 +41,7 @@ export function create(options: Partial<Parameters> = {}) {
     stores: { id: string; price: number; areaCount: number; revenue: number }[];
   }[] = [];
   const shuffle = <T>(a: readonly T[]) =>
-    random.sample(a, { count: a.length, algorithm: "fisher-yates-descending" });
+    random.sample(a, { sampleCount: a.length, algorithm: "fisher-yates-descending" });
   function chooseStoreAt(x: number, y: number) {
     let best = Infinity;
     let candidates: Store[] = [];
@@ -98,7 +98,7 @@ export function create(options: Partial<Parameters> = {}) {
   }
   for (const color of random.sample(
     [5, 15, 25, 35, 45, 55, 65, 75, 85, 95, 105, 115, 125, 135],
-    { count: settings.numberOfStores },
+    { sampleCount: settings.storeCount },
   )) {
     const f = random.sample(consumers)[0]!;
     world.add(Agent.create({ price: 10, areaCount: 0, color }, { position: f }));
@@ -151,15 +151,15 @@ export function create(options: Partial<Parameters> = {}) {
     recalculateArea();
   }
   return {
-    advance(count = 1) {
-      stepCount(count);
-      for (let i = 0; i < count; i++) {
+    advance(stepCount = 1) {
+      validateStepCount(stepCount);
+      for (let i = 0; i < stepCount; i++) {
         run(world, go);
         record();
       }
     },
     setRules(value: Pick<Partial<Parameters>, "rules">) {
-      settings = parameters(inputs, { ...settings, ...value });
+      settings = parseParameters(inputs, { ...settings, ...value });
     },
     chooseStoreAt(x: number, y: number) {
       const s = chooseStoreAt(x, y);
@@ -172,7 +172,7 @@ export function create(options: Partial<Parameters> = {}) {
         height: 41,
         parameters: settings,
         done: false,
-        sourceMarker: "hotellings-law:source-v1",
+
         stores: Object.freeze(
           stores().map((s) =>
             Object.freeze({
