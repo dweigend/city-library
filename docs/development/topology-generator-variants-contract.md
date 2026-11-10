@@ -1,10 +1,10 @@
-# NetLogo Web topology profile
+# Ordered topology generation
 
-Some studies need the topology rules of a particular NetLogo Web edition rather than a generic graph with the same name. The opt-in `profile:"nw-web-topology/1"` on `Graph.generate` identifies that pinned protocol. It covers topology only: it does not promise NetLogo random-stream, agent-birth, layout or full-model compatibility. The five frozen scenarios and their independent topology/draw oracles define the comparison.
+The delivered `profile:"ordered-topology/1"` selects the ordering, validation and random-draw rules defined below. It does not establish any model or stream equivalence.
 
 ## Public vocabulary, edition and ownership
 
-Use opt-in **profile:"nw-web-topology/1"** on `Graph.generate`. This names a pinned TOPOLOGY protocol, not NetLogo engine/MT/birth/layout/full-model compatibility. Edition1 is based on actual served functions and pinned Tortoise6168dd20/Galapagos90be931 in the source audit. No automatic upstream tracking. New branches:
+Use opt-in **profile:"ordered-topology/1"** on `Graph.generate`. This selects the explicit topology rules below. Source provenance is retained in the dedicated source audit. New branches:
 
 - kind:"kleinberg", required profile, nodes, shape:[columns,rows], clusteringExponent, random; optional wrap/directed false.
 - kind:"preferential", required profile, nodes, edgesPerNode, random; optional directed false.

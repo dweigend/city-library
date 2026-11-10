@@ -1,5 +1,7 @@
 # Agent Loom API inventory
 
+Availability: static factories use `Type.create`. Delivered streams support only `mulberry32`; `mt-word-stream/1` is an undelivered target whose seed, distribution and continuation contract still requires resolution, not an algorithm-equivalence claim. `unsupported-interleaved-activation` always throws. The snapshot, declaration-limit and finite-study XML formats below are undelivered targets; their naming changes do not migrate stored bytes or publish codecs. Original representation provenance belongs in dedicated source records.
+
 Use this inventory to find an operation, read its signature and follow the link to its full contract.
 
 > **Target specification.** These 309 operation/type entries define the required core API across 16 areas. Implementation status is tracked in [PLAN](../../PLAN.md) and the [coverage inventory](../development/coverage.md). An entry here does not mean the operation is available.
@@ -245,7 +247,7 @@ Run synchronous model updates; steps defaults to 1. Each successful callback add
 
 ```ts
 world.activate<T extends WorldMember>(source: ActivationSource<T>, action: (context: ActivationContext<T>) => unknown,
-  options?: { order?: "fixed" | "shuffle" | "priority" | "netlogo-7.0.0"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; breeds?: ReadonlyMap<WorldMember,string>; groupOrder?: readonly string[] }): void
+  options?: { order?: "fixed" | "shuffle" | "priority" | "unsupported-interleaved-activation"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; groups?: ReadonlyMap<WorldMember,string>; groupOrder?: readonly string[] }): void
 ```
 
 Invoke a synchronous action for selected World members under explicit scheduling and scoped self/caller contexts. Never adds ticks.
@@ -259,7 +261,7 @@ Invoke a synchronous action for selected World members under explicit scheduling
 
 ```ts
 world.report<T extends WorldMember,R>(source: T, report: (context: ActivationContext<T>) => R,
-  options?: { order?: "fixed" | "shuffle" | "priority" | "netlogo-7.0.0"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; breeds?: ReadonlyMap<WorldMember,string>; groupOrder?: readonly string[] }): R | undefined
+  options?: { order?: "fixed" | "shuffle" | "priority" | "unsupported-interleaved-activation"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; groups?: ReadonlyMap<WorldMember,string>; groupOrder?: readonly string[] }): R | undefined
 ```
 
 Evaluate a synchronous report for one or more World members under explicit scheduling and scoped contexts. Never adds ticks.
@@ -273,7 +275,7 @@ Evaluate a synchronous report for one or more World members under explicit sched
 
 ```ts
 world.report<T extends WorldMember,R>(source: readonly T[] | { kind: "agents" | "fields" | "edges"; breed?: string }, report: (context: ActivationContext<T>) => R,
-  options?: { order?: "fixed" | "shuffle" | "priority" | "netlogo-7.0.0"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; breeds?: ReadonlyMap<WorldMember,string>; groupOrder?: readonly string[] }): readonly (R | undefined)[]
+  options?: { order?: "fixed" | "shuffle" | "priority" | "unsupported-interleaved-activation"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; groups?: ReadonlyMap<WorldMember,string>; groupOrder?: readonly string[] }): readonly (R | undefined)[]
 ```
 
 Evaluate a synchronous report for one or more World members under explicit scheduling and scoped contexts. Never adds ticks.
@@ -287,7 +289,7 @@ Evaluate a synchronous report for one or more World members under explicit sched
 
 ```ts
 world.select<T extends WorldMember>(source: ActivationSource<T>, predicate: (context: ActivationContext<T>) => boolean,
-  options?: { caller?: ActivationContext<WorldMember>; breeds?: ReadonlyMap<WorldMember,string> }): readonly T[]
+  options?: { caller?: ActivationContext<WorldMember>; groups?: ReadonlyMap<WorldMember,string> }): readonly T[]
 ```
 
 Evaluate the scoped predicate deterministically in captured source order and return matching member identities. Selection never shuffles and has no order option; it never adds ticks.
@@ -1959,10 +1961,10 @@ Graph-owned connection between node identities N with directly writable typed pr
 ### Random.create
 
 ```ts
-Random.create(options?: { seed?: number | "random"; algorithm?: "mulberry32" | "netlogo-7.0.0" }): Random
+Random.create(options?: { seed?: number | "random"; algorithm?: "mulberry32" | "mt-word-stream/1" }): Random
 ```
 
-Create an independent Random; seed defaults to 1 and algorithm to mulberry32. Seed random obtains host entropy without drawing from a model stream; netlogo-7.0.0 explicitly selects the pinned MT profile.
+Create an independent Random; seed defaults to 1 and algorithm to mulberry32. Seed random obtains host entropy without drawing from a model stream; mt-word-stream/1 explicitly selects the pinned MT profile.
 
 [Details](api-reference.md#random-add)
 
@@ -1972,10 +1974,10 @@ Create an independent Random; seed defaults to 1 and algorithm to mulberry32. Se
 ### random.algorithm
 
 ```ts
-random.algorithm: "mulberry32" | "netlogo-7.0.0"
+random.algorithm: "mulberry32" | "mt-word-stream/1"
 ```
 
-Read-only selected stream profile. The NetLogo profile pins the documented compatibility algorithm and distribution semantics.
+Read-only selected stream profile. The target MT profile pins the documented compatibility algorithm and distribution semantics.
 
 [Details](api-reference.md#complete-random-general)
 
@@ -2091,11 +2093,11 @@ Pinned-MT uniform draw using a finite signed bound; unsupported by Mulberry. Flo
 ```ts
 random.sample<T>(source: Iterable<T>, options?: {
   count?: number; replace?: boolean; weight?: (value: T) => number;
-  order?: "draw" | "source"; compatibility?: "legacy-shuffle";
+  order?: "draw" | "source"; algorithm?: "fisher-yates-descending";
 }): T[]
 ```
 
-Perform weighted selection in draw/source order or an explicitly requested legacy full-shuffle schedule. Actual selections consume the configured stream and retain original source values.
+Perform weighted selection in draw/source order or an explicitly requested versioned full-shuffle schedule. Actual selections consume the configured stream and retain original source values.
 
 [Details](api-reference.md#complete-sampling)
 
@@ -2160,7 +2162,7 @@ Run synchronous work with temporary randomness and restore the prior stream in f
 random.raw(options: { kind: "int32" }): number
 ```
 
-Draw a signed 32-bit integer from one raw MT word. Requires the netlogo-7.0.0 profile.
+Draw a signed 32-bit integer from one raw MT word. Requires the mt-word-stream/1 profile.
 
 [Details](api-reference.md#complete-random-general)
 
@@ -2173,7 +2175,7 @@ Draw a signed 32-bit integer from one raw MT word. Requires the netlogo-7.0.0 pr
 random.raw(options: { kind: "int31", bound: number }): number
 ```
 
-Draw an integer in [0,bound) using the pinned bounded-int rejection schedule; bound is a positive integer at most 2³¹−1. Requires the netlogo-7.0.0 profile.
+Draw an integer in [0,bound) using the pinned bounded-int rejection schedule; bound is a positive integer at most 2³¹−1. Requires the mt-word-stream/1 profile.
 
 [Details](api-reference.md#complete-random-general)
 
@@ -2186,7 +2188,7 @@ Draw an integer in [0,bound) using the pinned bounded-int rejection schedule; bo
 random.raw(options: { kind: "int64", bound?: bigint }): bigint
 ```
 
-Draw a signed 64-bit bigint from two MT words, or a bigint in [0,bound) when a bound in [1,2⁶³−1] is supplied. Requires the netlogo-7.0.0 profile.
+Draw a signed 64-bit bigint from two MT words, or a bigint in [0,bound) when a bound in [1,2⁶³−1] is supplied. Requires the mt-word-stream/1 profile.
 
 [Details](api-reference.md#complete-random-general)
 
@@ -2199,7 +2201,7 @@ Draw a signed 64-bit bigint from two MT words, or a bigint in [0,bound) when a b
 random.raw(options: { kind: "double" | "gaussian" }): number
 ```
 
-Draw a double in [0,1) from the selected profile, or a cached/polar Gaussian from the netlogo-7.0.0 profile. These operations advance only the Random stream.
+Draw a double in [0,1) from the selected profile, or a cached/polar Gaussian from the mt-word-stream/1 profile. These operations advance only the Random stream.
 
 [Details](api-reference.md#complete-random-general)
 
@@ -2210,12 +2212,12 @@ Draw a double in [0,1) from the selected profile, or a cached/polar Gaussian fro
 
 ```ts
 type RandomState = {
-  readonly algorithm: "mulberry32" | "netlogo-7.0.0";
+  readonly algorithm: "mulberry32" | "mt-word-stream/1";
   readonly seed: number;
   readonly continuation:
     | { readonly algorithm: "mulberry32"; readonly revision: "agent-loom-random/1";
         readonly word: number; readonly gaussian: number | null }
-    | { readonly algorithm: "netlogo-7.0.0"; readonly revision: 2;
+    | { readonly algorithm: "mt-word-stream/1"; readonly revision: 2;
         readonly words: readonly number[]; readonly index: number; readonly gaussian: number | null };
 };
 ```
@@ -3100,7 +3102,7 @@ Declared variable name with bounded source-literal values for explicit caller de
 ```ts
 export interface StudySpec {
 	readonly version: 1 | 2;
-	readonly dialect: "netlogo-7.0.4-finite-v2" | "netlogo-7.0.0-finite-v1";
+	readonly dialect: "finite-study-xml/2" | "finite-study-xml/1";
 	readonly name: string;
 	readonly repetitions: number;
 	readonly runMetricsEveryStep: boolean;
@@ -3951,7 +3953,7 @@ Decode the explicit graph format to validated detached GraphData with unknown mo
 ### storage.decode
 
 ```ts
-storage.decode(text: string, options: { format: "behaviorspace" }): readonly StudySpec[]
+storage.decode(text: string, options: { format: "finite-study-xml" }): readonly StudySpec[]
 ```
 
 Validate and decode the explicit named format or synchronous Format adapter. Returns its documented data type; decoded custom model values remain untrusted until validated.
@@ -3990,7 +3992,7 @@ Validate and decode the explicit named format or synchronous Format adapter. Ret
 ### storage.decode
 
 ```ts
-storage.decode(data: unknown, options: { format: "legacy-world-data"; valueCodecs?: readonly ValueCodec[] }): WorldSnapshot<unknown>
+storage.decode(data: unknown, options: { format: "model-world-data"; valueCodecs?: readonly ValueCodec[] }): WorldSnapshot<unknown>
 ```
 
 Validate the supported old in-memory model-state schema and convert it to a WorldSnapshot; optional value codecs adapt unsupported ordinary payload values. Nonempty presentation sections reject.
@@ -4003,10 +4005,10 @@ Validate the supported old in-memory model-state schema and convert it to a Worl
 ### storage.decode
 
 ```ts
-storage.decode(text:string, options:{format:"legacy-network-json"}):LegacyNetworkData
+storage.decode(text:string, options:{format:"simple-network-json"}):SimpleNetworkData
 ```
 
-Decode the explicitly selected legacy simple-network data or JSON format into validated detached canonical nodes and edges; no live Graph is created.
+Decode the explicitly selected versioned simple-network data or JSON format into validated detached canonical nodes and edges; no live Graph is created.
 
 [Details](api-reference.md#public-resource-limits)
 
@@ -4016,10 +4018,10 @@ Decode the explicitly selected legacy simple-network data or JSON format into va
 ### storage.decode
 
 ```ts
-storage.decode(data:unknown, options:{format:"legacy-network-data"}):LegacyNetworkData
+storage.decode(data:unknown, options:{format:"simple-network-data"}):SimpleNetworkData
 ```
 
-Decode the explicitly selected legacy simple-network data or JSON format into validated detached canonical nodes and edges; no live Graph is created.
+Decode the explicitly selected versioned simple-network data or JSON format into validated detached canonical nodes and edges; no live Graph is created.
 
 [Details](api-reference.md#public-resource-limits)
 
@@ -4055,7 +4057,7 @@ Encode supported planar GeoJSON geometry/features. Coordinate-system labels are 
 ### storage.encode
 
 ```ts
-storage.encode(value: readonly StudySpec[], options: { format: "behaviorspace" }): string
+storage.encode(value: readonly StudySpec[], options: { format: "finite-study-xml" }): string
 ```
 
 Encode the declarative Study plan as escaped XML without translating TypeScript callbacks into source commands.
@@ -4068,7 +4070,7 @@ Encode the declarative Study plan as escaped XML without translating TypeScript 
 ### storage.decode
 
 ```ts
-storage.decode(text: string, options: { format: "legacy-world-json" }): WorldSnapshot<unknown>
+storage.decode(text: string, options: { format: "model-world-json" }): WorldSnapshot<unknown>
 ```
 
 Validate and convert the supported old model-only world JSON schema to a WorldSnapshot. Nonempty presentation sections reject; decoded custom state remains unknown.
@@ -4201,16 +4203,16 @@ Bounded independent measurement container. Explicit add records observations; sa
 
 [Details](api-reference.md#history)
 
-<a id="type-legacy-network-data"></a>
+<a id="type-simple-network-data"></a>
 <a id="api-379"></a>
 
-### LegacyNetworkData
+### SimpleNetworkData
 
 ```ts
-interface LegacyNetworkData { readonly directed:boolean; readonly nodes:readonly string[]; readonly edges:readonly {readonly from:string;readonly to:string}[] }
+interface SimpleNetworkData { readonly directed:boolean; readonly nodes:readonly string[]; readonly edges:readonly {readonly from:string;readonly to:string}[] }
 ```
 
-Detached canonical legacy simple-network data containing direction, node IDs and endpoint pairs.
+Detached canonical versioned simple-network data containing direction, node IDs and endpoint pairs.
 
 [Details](api-reference.md#public-resource-limits)
 
@@ -4294,7 +4296,7 @@ type WorldRecord = {
   id: string; kind: "world"; revision: 1; modelId: string;
   tick: number; space: (Space & Required<Pick<Space, "dimensions" | "boundary">>) | null; random: Ref;
   components: readonly Ref[]; compatibility: null | {
-    profile: "netlogo-7.0.0"; turtleOwn: readonly string[]; linkOwn: readonly string[];
+    profile: "mt-word-stream/1"; agentOwn: readonly string[]; edgeOwn: readonly string[];
     turtleBreeds: readonly { name: string; own: readonly string[] }[];
     linkBreeds: readonly { name: string; direction: "directed" | "undirected"; own: readonly string[] }[];
     turtleMembership: readonly (readonly [Ref,string,number])[];
@@ -4517,10 +4519,10 @@ Optional adapter for otherwise unsupported application values inside snapshots; 
 <a id="limits-netlogo"></a>
 <a id="api-378"></a>
 
-### limits.netlogo
+### limits.declarations
 
 ```ts
-limits.netlogo = {
+limits.declarations = {
   declarations: 1000, creation: 1000000, valueDepth: 32, valueNodes: 100000,
   randomIterations: 1000000
 };
@@ -4547,25 +4549,25 @@ Read deeply frozen planar GeoJSON limits for text size, feature/coordinate count
 [Details](api-reference.md#public-resource-limits)
 
 <a id="limits-compatibility-network"></a>
-<a id="api-378-compatibilityNetwork"></a>
+<a id="api-378-simpleNetwork"></a>
 
-### limits.compatibilityNetwork
+### limits.simpleNetwork
 
 ```ts
-limits.compatibilityNetwork = { nodes: 1024, edges: 32768, idLength: 256 };
+limits.simpleNetwork = { nodes: 1024, edges: 32768, idLength: 256 };
 ```
 
-Read deeply frozen limits for the explicit legacy simple-network import profile; these do not cap general live Graph models.
+Read deeply frozen limits for the explicit versioned simple-network import profile; these do not cap general live Graph models.
 
 [Details](api-reference.md#public-resource-limits)
 
 <a id="limits-behaviorspace"></a>
 <a id="api-378-behaviorspace"></a>
 
-### limits.behaviorspace
+### limits.studyXml
 
 ```ts
-limits.behaviorspace = {
+limits.studyXml = {
   textBytes: 1048576, depth: 8, elements: 20000, entityReferences: 100000,
   studies: 100, metrics: 32, sourceLength: 65536
 };
@@ -4698,4 +4700,4 @@ Finite x/y coordinates with optional z; the operation’s spatial context determ
 
 ## Additive ordinary tools
 
-The root exports `measurements`, `twoPhase` and `continuous` add pure measurement projection, a synchronous compute/commit barrier and linear threshold calculations. World activation also accepts fixed and stable priority ordering. Their [reference contracts](api-reference.md#additive-measurement-and-update-tools) and [frozen examples](../execution-studies/STATUS.md) supplement the original operation inventory; they do not imply complete continuation or NetLogo compatibility.
+The root exports `measurements`, `twoPhase` and `continuous` add pure measurement projection, a synchronous compute/commit barrier and linear threshold calculations. World activation also accepts fixed and stable priority ordering. Their [reference contracts](api-reference.md#additive-measurement-and-update-tools) and [frozen examples](../execution-studies/STATUS.md) supplement the original operation inventory; they do not imply complete continuation or external engine compatibility.

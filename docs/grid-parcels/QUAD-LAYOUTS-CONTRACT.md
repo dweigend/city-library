@@ -3,7 +3,7 @@
 Status: E3 example-first contract, frozen before runtime on 8 November 2026
 after independent Gemini 4 Argon design approval. Runtime at `6726d7e` passed
 fresh independent runtime review and the complete target checks recorded in
-[verification](TOWNSCAPER-VERIFICATION.md). The first PR implements only
+[verification](QUAD-LAYOUTS-VERIFICATION.md). The first PR implements only
 these two additions to the existing public root `topology` object:
 
 ```ts
