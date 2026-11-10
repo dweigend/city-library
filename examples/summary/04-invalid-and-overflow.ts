@@ -1,6 +1,6 @@
 import { strict as assert } from "node:assert";
 import { stats, Random } from "city-library";
-const random = Random.add({ seed: 19 });
+const random = Random.create({ seed: 19 });
 const state = random.state;
 for (const values of [[NaN], [Infinity], [Number.MAX_VALUE, Number.MAX_VALUE], [Number.MAX_VALUE, -Number.MAX_VALUE]]) assert.throws(() => stats.describe(values));
 assert.throws(() => stats.describe([1], { sample: "yes" } as unknown as { sample: boolean }));

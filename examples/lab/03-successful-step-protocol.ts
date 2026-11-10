@@ -2,8 +2,8 @@ import assert from "node:assert/strict";
 import { Agent, World, run } from "city-library";
 
 // Ordinary author composition using public runtime functions, not a mock runtime.
-const world = World.add();
-const agent = Agent.add({ remaining: 3 });
+const world = World.create();
+const agent = Agent.create({ remaining: 3 });
 world.add(agent);
 const history = [{ tick: 0, remaining: agent.remaining }];
 function advance(count: number) {
@@ -23,8 +23,8 @@ advance(1);
 assert.equal(world.tick.value, 3);
 assert.equal(history.length, 4);
 
-const failed = World.add();
-const state = Agent.add({ value: 0 });
+const failed = World.create();
+const state = Agent.create({ value: 0 });
 failed.add(state);
 assert.throws(() => run(failed, () => { state.value += 1; throw new Error("Rule failure"); }));
 assert.equal(state.value, 1);

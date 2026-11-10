@@ -21,9 +21,9 @@ export function createExchangeModel(options: ExchangeOptions = {}) {
     throw new RangeError("Seed must be a signed or unsigned 32-bit integer.");
   }
 
-  const random = Random.add({ seed });
-  const world = World.add({ random });
-  const agents = Array.from({ length: count }, (_, index) => Agent.add({
+  const random = Random.create({ seed });
+  const world = World.create({ random });
+  const agents = Array.from({ length: count }, (_, index) => Agent.create({
     label: `Agent ${index + 1}`,
     energy: initialEnergy,
     sent: 0,

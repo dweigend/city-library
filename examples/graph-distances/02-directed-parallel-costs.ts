@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { Graph } from "../../index.ts";
-const graph = Graph.add<{ id: string }, { weight: number }>({ parallel: true, edgeState: { weight: 1 } });
+const graph = Graph.create<{ id: string }, { weight: number }>({ parallel: true, edgeState: { weight: 1 } });
 const a = graph.nodes.add({ id: "a" }), b = graph.nodes.add({ id: "b" }), c = graph.nodes.add({ id: "c" });
 graph.edges.add({ from: a, to: b, directed: true, key: "expensive", state: { weight: 3 } });
 const cheap = graph.edges.add({ from: a, to: b, directed: true, key: "cheap", state: { weight: 0 } });

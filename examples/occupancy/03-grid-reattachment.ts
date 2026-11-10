@@ -1,10 +1,10 @@
 import assert from "node:assert/strict";
 import { Agent, Grid, World } from "city-library";
-const first=World.add({x:5,y:5});
-const second=World.add({x:5,y:5});
-const grid=first.add(Grid.add({x:5,y:5}));
-const a=first.add(Agent.add());
-const b=second.add(Agent.add());
+const first=World.create({x:5,y:5});
+const second=World.create({x:5,y:5});
+const grid=first.add(Grid.create({x:5,y:5}));
+const a=first.add(Agent.create());
+const b=second.add(Agent.create());
 const cell=grid.fieldAt(a)!;
 assert.deepEqual(grid.agentsAt(cell),[a]);
 first.delete(grid);

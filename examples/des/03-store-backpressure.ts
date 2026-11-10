@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { Agent, Store } from "city-library";
 
-const depot = Store.add<string>({ capacity: 1 });
+const depot = Store.create<string>({ capacity: 1 });
 const first = depot.put("bread");
 const second = depot.put("vegetables");
 const third = depot.put("medicine");
@@ -28,12 +28,12 @@ assert.equal(laterConsumer.status, "cancelled");
 assert.equal(depot.waitingGets.length, 0);
 assert.equal(depot.waitingPuts.length, 0);
 
-const rider = Agent.add({ cargo: 1 });
-const shelter = Store.add<typeof rider>({ capacity: 1 });
+const rider = Agent.create({ cargo: 1 });
+const shelter = Store.create<typeof rider>({ capacity: 1 });
 shelter.put(rider);
 assert.throws(() => rider.delete());
 assert.equal(shelter.take(), rider);
 rider.delete();
 assert.throws(() => shelter.put(rider));
-assert.throws(() => Store.add({ capacity: 0 }));
+assert.throws(() => Store.create({ capacity: 0 }));
 console.log("DES bounded producer/consumer FIFO, cancellation and canonical store identity passed");

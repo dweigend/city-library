@@ -1,8 +1,8 @@
 import assert from "node:assert/strict";
 import { Agent, World, run } from "city-library";
 
-const world = World.add({ x: 10, y: 10, boundary: "wrap" });
-const parent = Agent.add({ energy: 8 }, { position: { x: 2, y: 1 }, orientation: { heading: 90 } });
+const world = World.create({ x: 10, y: 10, boundary: "wrap" });
+const parent = Agent.create({ energy: 8 }, { position: { x: 2, y: 1 }, orientation: { heading: 90 } });
 world.add(parent);
 const birth = parent.copy();
 assert.equal(birth.world, undefined);

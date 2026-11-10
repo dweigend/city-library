@@ -1,8 +1,8 @@
 import assert from "node:assert/strict";
 import { Agent, Grid, Random, World, geometry, type Bounds } from "../../index.ts";
-const random=Random.add({seed:4}),world=World.add({x:10,y:10,boundary:"hard"},{random});
-const person=world.add(Agent.add({name:"resident"},{position:{x:2,y:-1}}));
-const grid=Grid.add({x:10,y:10,boundary:"hard"},{state:{heat:0}});world.add(grid);
+const random=Random.create({seed:4}),world=World.create({x:10,y:10,boundary:"hard"},{random});
+const person=world.add(Agent.create({name:"resident"},{position:{x:2,y:-1}}));
+const grid=Grid.create({x:10,y:10,boundary:"hard"},{state:{heat:0}});world.add(grid);
 const field=grid.fieldAt({x:1.5,y:-.5})!;
 const from:Bounds=[-5,5,-5,5],to:Bounds=[0,100,0,100],before=random.state;
 const mapped=geometry.map(person,{from,to});

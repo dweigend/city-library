@@ -175,7 +175,7 @@ describe("Tijuana source boundaries and canonical observations", () => {
       }),
     );
     const before = model.read();
-    const reference = Random.add({ seed: 1 });
+    const reference = Random.create({ seed: 1 });
     reference.state = before.randomState;
     reference.number({ distribution: "normal", mean: 100, deviation: 10 });
     // F=round(5*.7/6)=1, request.2 from empty candidates must not truncate to0.
@@ -187,7 +187,7 @@ describe("Tijuana source boundaries and canonical observations", () => {
   });
 
   test("negative topography radius preserves the native self-plus-Moore candidate boundary", () => {
-    const random = Random.add({ seed: 1 });
+    const random = Random.create({ seed: 1 });
     // Real cached companion reached by425933 public draws; no fabricated normal.
     for (let i = 0; i < 425933; i++)
       random.number({ distribution: "normal", mean: 0, deviation: 1 });
@@ -214,7 +214,7 @@ describe("Tijuana source boundaries and canonical observations", () => {
   test("modulo-zero retains road writes and real preceding public draws", () => {
     // Reproducible public continuation, never an injected Gaussian/cache value.
     // Each preparation group is two real normals with one real selection between.
-    const random = Random.add({ seed: 1 });
+    const random = Random.create({ seed: 1 });
     for (let i = 0; i < 37800; i++) {
       random.number({ distribution: "normal", mean: 100, deviation: 10 });
       random.sample([1]);
@@ -330,7 +330,7 @@ describe("Tijuana source boundaries and canonical observations", () => {
     const sparse = scene(model);
     delete (sparse.agents as unknown[])[1];
     const random = scene(model);
-    (random as { randomState: unknown }).randomState = Random.add({
+    (random as { randomState: unknown }).randomState = Random.create({
       seed: 2,
     }).state;
     const invalidRef = scene(model, {

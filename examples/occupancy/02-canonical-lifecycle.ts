@@ -1,8 +1,8 @@
 import assert from "node:assert/strict";
 import { Agent, Grid, World } from "city-library";
-const world=World.add({x:5,y:5});
-const grid=world.add(Grid.add({x:5,y:5}));
-const a=world.add(Agent.add({energy:4}));
+const world=World.create({x:5,y:5});
+const grid=world.add(Grid.create({x:5,y:5}));
+const a=world.add(Agent.create({energy:4}));
 const cell=grid.fieldAt(a)!;
 const old=grid.agentsAt(cell);
 const b=a.copy();

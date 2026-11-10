@@ -1,9 +1,9 @@
 import assert from "node:assert/strict";
 import { Agent, Grid, World } from "city-library";
-const world=World.add({x:5,y:5,boundary:"wrap"});
-const grid=world.add(Grid.add({x:5,y:5,boundary:"wrap"}));
-const a=world.add(Agent.add({name:"first"}));
-const b=world.add(Agent.add({name:"second"}));
+const world=World.create({x:5,y:5,boundary:"wrap"});
+const grid=world.add(Grid.create({x:5,y:5,boundary:"wrap"}));
+const a=world.add(Agent.create({name:"first"}));
+const b=world.add(Agent.create({name:"second"}));
 const home=grid.fieldAt(a)!;
 assert.deepEqual(grid.agentsAt(home),[a,b]);
 a.move({to:{x:1,y:0}});

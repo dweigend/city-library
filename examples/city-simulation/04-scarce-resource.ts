@@ -61,9 +61,9 @@ type Allocation = ReturnType<typeof createAllocation>;
 type Applicant = Allocation["alice"];
 
 function createAllocation() {
-  const inventory = Agent.add({ quantity: 1 });
-  const alice = Agent.add({ name: "A", received: 0, eligible: true });
-  const bob = Agent.add({ name: "B", received: 0, eligible: true });
+  const inventory = Agent.create({ quantity: 1 });
+  const alice = Agent.create({ name: "A", received: 0, eligible: true });
+  const bob = Agent.create({ name: "B", received: 0, eligible: true });
 
   return { inventory, alice, bob };
 }

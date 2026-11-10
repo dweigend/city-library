@@ -1,0 +1,14 @@
+import assert from "node:assert/strict";
+import { Agent, Agenda, Graph, Grid, World } from "city-library";
+const world = World.create();
+const agent = Agent.create();
+const agenda = Agenda.create();
+const graph = Graph.create();
+const grid = Grid.create({ x: 2, y: 2 });
+const attached = world.add([agent, agenda, graph, grid, agenda]);
+assert.deepEqual(attached, [agent, agenda, graph, grid]);
+assert.equal(world.agents[0], agent);
+assert.equal(world.agendas[0], agenda);
+assert.equal(world.graphs[0], graph);
+assert.equal(world.grids[0], grid);
+assert.equal(world.tick.value, 0);

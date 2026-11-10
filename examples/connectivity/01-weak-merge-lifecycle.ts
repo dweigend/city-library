@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { Graph } from "city-library";
-const graph=Graph.add<{name:string}>();
+const graph=Graph.create<{name:string}>();
 const [a,b,c,d]=["a","b","c","d"].map(name=>graph.nodes.add({name}));
 graph.edges.add({from:a!,to:b!});
 graph.edges.add({from:c!,to:d!});

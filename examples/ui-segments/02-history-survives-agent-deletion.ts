@@ -1,8 +1,8 @@
 import { strict as assert } from "node:assert";
 import { Agent, World } from "../../index.ts";
 import type { SpatialData, SpatialSegment } from "../../ui/index.ts";
-const world = World.add({ x: 10, y: 10 });
-const agent = world.add(Agent.add({}, { position: { x: 0, y: -2 } }));
+const world = World.create({ x: 10, y: 10 });
+const agent = world.add(Agent.create({}, { position: { x: 0, y: -2 } }));
 const strokes: readonly SpatialSegment[] = Object.freeze([
   Object.freeze({ from: Object.freeze({ x: 0, y: -2 }), to: Object.freeze({ x: 0, y: 2 }), width: 1.5 }),
 ]);

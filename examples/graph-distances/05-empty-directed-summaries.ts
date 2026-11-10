@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { Graph } from "../../index.ts";
-const graph = Graph.add<{ id: string }>();
+const graph = Graph.create<{ id: string }>();
 const empty = graph.distanceSummary();
 assert.equal(empty.mean, undefined); assert.equal(empty.radius, undefined); assert.equal(empty.diameter, undefined);
 assert.equal(empty.eccentricity.size, 0); assert.equal(empty.reachablePairs, 0);

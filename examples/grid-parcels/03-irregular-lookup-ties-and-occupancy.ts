@@ -23,12 +23,12 @@ assert.equal(Object.isFrozen(layout.polygon({ cell: first! }).coordinates[0]![0]
 polygons[0] = polygons[2]!;
 assert.deepEqual(layout.polygon({ cell: first! }), snapshot[0]);
 
-const grid = Grid.add({ layout, state: { temperature: 12 } });
-const agent = Agent.add({ name: "walker" }, { position: { x: 1.5, y: 1 } });
+const grid = Grid.create({ layout, state: { temperature: 12 } });
+const agent = Agent.create({ name: "walker" }, { position: { x: 1.5, y: 1 } });
 assert.equal(grid.fieldAt(agent), grid.fields[0]);
 assert.deepEqual(grid.agentsAt(grid.fields[0]!, { source: [agent, agent] }), [agent]);
 assert.throws(() => grid.agentsAt(grid.fields[0]!), TypeError);
-const world = World.add();
+const world = World.create();
 world.add(grid);
 world.add(agent);
 assert.deepEqual(grid.agentsAt(grid.fields[0]!), [agent]);

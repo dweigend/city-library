@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { Graph } from "../../index.ts";
 for(const signed of [false,true]) {
  for(const reversed of [false,true]) {
-  const graph=Graph.add<{i:number},{cost:number}>({edgeState:{cost:1}});
+  const graph=Graph.create<{i:number},{cost:number}>({edgeState:{cost:1}});
   const nodes=Array.from({length:7},(_,i)=>graph.nodes.add({i}));
   const specs:{a:number;b:number;cost:number}[]=[];
   for(let a=0;a<7;a++)for(let b=a+1;b<7;b++) {

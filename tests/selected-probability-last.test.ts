@@ -368,7 +368,7 @@ test("Mandelbrot preflight relocates at clipped and exact-positive-edge source e
     const agent = m.world.agents[0]!;
     agent.move({ to: { x, y: 0 } });
     agent.rotate({ towards: { x: x + 1, y: 0 } });
-    const expected = Random.add({ seed: 17 });
+    const expected = Random.create({ seed: 17 });
     expected.state = m.read().randomState;
     const nextX = expected.number() * 301 - 150.5,
       nextY = expected.number() * 301 - 150.5;
@@ -384,7 +384,7 @@ test("Mandelbrot preflight rejects a negative epsilon escape without the former 
   const agent = m.world.agents[0]!;
   agent.move({ to: { x: -149.50000000005, y: 0 } });
   agent.rotate({ towards: { x: -150.50000000005, y: 0 } });
-  const expected = Random.add({ seed: 17 });
+  const expected = Random.create({ seed: 17 });
   expected.state = m.read().randomState;
   const nextX = expected.number() * 301 - 150.5;
   const nextY = expected.number() * 301 - 150.5;
@@ -406,7 +406,7 @@ test("Mandelbrot preflight accepts each exact negative endpoint without relocati
     agent.rotate({
       towards: axis === "x" ? { x: -150.5, y: 0 } : { x: 0, y: -150.5 },
     });
-    const expected = Random.add({ seed: 17 });
+    const expected = Random.create({ seed: 17 });
     expected.state = m.read().randomState;
     // With one turtle, only wiggle draws: no shuffle draw or random relocation.
     expected.number();

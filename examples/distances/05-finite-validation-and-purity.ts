@@ -1,6 +1,6 @@
 import { strict as assert } from "node:assert";
 import { Random, geometry } from "city-library";
-const random = Random.add({ seed: 13 }), before = random.state;
+const random = Random.create({ seed: 13 }), before = random.state;
 const a = Object.freeze({ x: 0, y: 0 }), b = Object.freeze({ x: 1e308, y: 1e308 });
 const space = { x: 10, y: 10 };
 assert.equal(geometry.distance(a, b, { space }), Math.hypot(1e308, 1e308));

@@ -1,8 +1,8 @@
 import assert from "node:assert/strict";
 import { Agent, Resource, ServiceQueue } from "city-library";
 
-const first = Agent.add({ name: "First resident" });
-const second = Agent.add({ name: "Second resident" });
+const first = Agent.create({ name: "First resident" });
+const second = Agent.create({ name: "Second resident" });
 const queue = ServiceQueue.add<typeof first>({ policy: "priority" });
 queue.add(first, { priority: 2 });
 queue.add(second, { priority: -1 });

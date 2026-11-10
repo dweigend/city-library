@@ -1,10 +1,10 @@
 import { strict as assert } from "node:assert";
 import { Random, type RandomState } from "city-library";
-const random = Random.add({ seed: 1 });
+const random = Random.create({ seed: 1 });
 random.number({ distribution: "normal" });
 const checkpoint = random.state;
 assert.notEqual(checkpoint.continuation.gaussian, null);
-const copy = random.copy(), restored = Random.add({ seed: 9 });
+const copy = random.copy(), restored = Random.create({ seed: 9 });
 restored.state = JSON.parse(JSON.stringify(checkpoint)) as RandomState;
 const word = checkpoint.continuation.word;
 const next = random.number({ distribution: "normal", mean: 7, deviation: 3 });

@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { Graph } from "../../index.ts";
-const graph = Graph.add<{ id: number }>();
+const graph = Graph.create<{ id: number }>();
 const nodes = Array.from({ length: 100 }, (_, id) => graph.nodes.add({ id }));
 for (let i = 0; i < nodes.length; i++) graph.edges.add({ from: nodes[i]!, to: nodes[(i + 1) % nodes.length]! });
 const summary = graph.distanceSummary();
