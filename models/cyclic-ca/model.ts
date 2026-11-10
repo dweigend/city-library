@@ -125,7 +125,7 @@ export function create(options: Partial<CyclicParameters> = {}) {
   world.add(grid);
   const colorList = Object.freeze(
     random.sample(
-      // Actual NetLogo Web `show base-colors`, verified in original Chromium.
+      // Actual source runtime `show base-colors`, verified in original Chromium.
       [5, 15, 25, 35, 45, 55, 65, 75, 85, 95, 105, 115, 125, 135],
       { count: settings.stateCount, order: "source" },
     ),

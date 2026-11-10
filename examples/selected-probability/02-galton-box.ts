@@ -15,6 +15,6 @@ for (const create of [first, second]) {
   assert.throws(() => a.advance(-1), RangeError);
   assert.deepEqual(b.read(), before);
 }
-const experiment = first({ seed: 17 });
-experiment.advance();
-assert.equal(experiment.read().tick, 1);
+const model = first({ seed: 17 });
+model.advance();
+assert.equal(model.read().tick, 1);

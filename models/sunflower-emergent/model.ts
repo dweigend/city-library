@@ -38,7 +38,7 @@ export function create(options: Partial<SunflowerParameters> = {}) {
     );
   let temporaryParticleCount = 0;
   let stopped = false;
-  // NetLogo tick occurs while the temporary candidates are still visible.
+  // source model tick occurs while the temporary candidates are still visible.
   // Retain that exact detached view frame without retaining a second live population.
   let tempFrame: {
     id: string;

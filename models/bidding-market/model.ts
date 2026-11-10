@@ -96,7 +96,7 @@ export function create(options: Partial<Parameters> = {}) {
       ? 1 + integer(n)
       : 1 + Math.floor(-(n / 2) * Math.log(1 - random.number()));
   };
-  // NetLogo random rounds a positive fractional bound upward before its integer draw.
+  // source model random rounds a positive fractional bound upward before its integer draw.
   const initial = (n: number) =>
     n === 0 ? 0 : round(n / 2 + integer(Math.ceil(n / 2)));
   const behavior = (b: Behavior): Exclude<Behavior, "mix of all"> =>

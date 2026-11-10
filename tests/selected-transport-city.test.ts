@@ -140,7 +140,7 @@ describe("selected city traffic public contracts", () => {
 
   test("source zero-length green control raises an explicit error without completing tick", () => {
     const model = taxi({ lengthOfGreenLight: 0 });
-    expect(() => model.step()).toThrow("modulo by zero");
+    expect(() => model.step()).toThrow("Green-light duration must be greater than zero.");
     expect(model.snapshot().tick).toBe(0);
   });
 

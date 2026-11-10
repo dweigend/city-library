@@ -33,7 +33,7 @@ Follow the [coding standards](CODING_STANDARDS.md) and these rules for public UI
 - **Customize at the affected entry:** a special label or presentation belongs directly beside its binding.
 - **Place functions for readability:** keep short projections inline; give longer functions descriptive names and place them below the UI description.
 
-The [UI reference](ui/api-reference.md) defines the implemented readable-authoring contract. Legacy declarations remain compatibility syntax. Future extensions still need the example-first gate; preserve accepted examples, headless contracts and the single domain-state owner. UI changes state only through public model actions.
+The [UI reference](ui/api-reference.md) defines the implemented readable-authoring contract. Array control declarations remain supported syntax. Future extensions still need the example-first gate; preserve accepted examples, headless contracts and the single domain-state owner. UI changes state only through public model actions.
 
 ## Binding UI API documentation
 

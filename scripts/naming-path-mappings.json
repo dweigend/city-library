@@ -41,7 +41,8 @@
     "tests/a2a-runtime.test.ts": "tests/agent-selection-runtime.test.ts",
     "tests/a2a-boundaries.test.ts": "tests/agent-selection-boundaries.test.ts",
     "tests/mesa-social-visuals.test.ts": "tests/social-projection.test.ts",
-    "tests/a5a-boundaries.test.ts": "tests/study-execution-boundaries.test.ts"
+    "tests/a5a-boundaries.test.ts": "tests/study-execution-boundaries.test.ts",
+    "examples/ui-authoring/05-independent-actions-and-legacy.ts": "examples/ui-authoring/05-independent-actions-and-scalar-setters.ts"
   },
   "modelEvidenceKeys": {
     "description": "Map immutable historical evidence keys to current public model keys before comparison. Preserve evidence bytes and asserted values.",
@@ -87,5 +88,6 @@
       "numWastefuls": "wastefulCount",
       "numWater": "waterCount"
     }
-  }
+  },
+  "modelEvidenceKeysStatus": "Documentation of historical-to-current keys; consumers must opt in explicitly. This list does not establish executed evidence comparison."
 }

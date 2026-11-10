@@ -11,12 +11,12 @@ export const spec = {
   views: [],
 } as const satisfies UISpec<WealthParameters, Instance>;
 export const ui = defineUI(model, spec);
-export const legacySpec = {
+export const scalarSetterSpec = {
   live: [{ field: 'growthAmount', value: state => state.parameters.growthAmount,
     set: (instance, value) => instance.setRules({ growthAmount: Number(value) }) }],
   views: [],
 } as const satisfies UISpec<WealthParameters, Instance>;
-export const legacyUI = defineUI(model, legacySpec);
+export const scalarSetterUI = defineUI(model, scalarSetterSpec);
 const first = model.create({ people: 2, seed: 41 });
 const second = model.create({ people: 2, seed: 41 });
 const secondBefore = second.read();
@@ -26,7 +26,7 @@ equal(first.read().tick, 1, 'Explicit action advances one real interval');
 equal(first.read().parameters.growthAmount, 7, 'Canonical keyed action is applied');
 equal(second.read().tick, secondBefore.tick, 'Other instance time remains independent');
 equal(second.read().randomState, secondBefore.randomState, 'Other instance RNG remains independent');
-legacySpec.live[0].set(second, 5);
+scalarSetterSpec.live[0].set(second, 5);
 equal(second.read().parameters.growthAmount, 5, 'Legacy scalar-union setter remains accepted');
 
 export async function browserChecks(container: HTMLElement, bind: typeof defineUI = defineUI) {
@@ -39,7 +39,7 @@ export async function browserChecks(container: HTMLElement, bind: typeof defineU
     const actual = model.create(options); browserInstances.push(actual); return actual;
   } };
   const browserUI = bind(tracked, spec);
-  const mounted = [browserUI.mount(left), browserUI.mount(right), bind(model, legacySpec).mount(old)];
+  const mounted = [browserUI.mount(left), browserUI.mount(right), bind(model, scalarSetterSpec).mount(old)];
   try {
     await settle(container);
     equal(labels(left, Object.keys(model.inputs)), ['Growth Amount'], 'Explicit empty setup leaves only live controls');

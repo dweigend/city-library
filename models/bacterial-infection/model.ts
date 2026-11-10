@@ -258,7 +258,7 @@ export function create(options: Partial<Parameters> = {}) {
   function bacteriaDeath(agent: Bacteria) {
     // is-field-set? on the single source field is false: no explicit reservation clear.
     agent.delete();
-    // NetLogo dead agent references compare as nobody; availability uses .alive above.
+    // source model dead agent references compare as nobody; availability uses .alive above.
   }
   function doseRegion(region: Region, dosage?: number) {
     if (region !== "A" && region !== "B")

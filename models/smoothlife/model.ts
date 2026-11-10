@@ -237,7 +237,7 @@ export function create(options: Partial<SmoothLifeParameters> = {}) {
       exactField(point);
       if (drawing) paint(point);
     },
-    /** Detached replacement for the desktop transition plot, disabled in NetLogo Web. */
+    /** Detached replacement for the desktop transition plot, disabled in source runtime. */
     visualizeTransition(resolution = 20) {
       if (
         !Number.isSafeInteger(resolution) ||

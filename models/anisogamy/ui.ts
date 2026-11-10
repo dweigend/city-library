@@ -35,7 +35,7 @@ export const ui = defineUI(model, {
   complete: (s) => s.done,
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Evolution/Anisogamy.nlogox",
-    label: "NetLogo Anisogamy · Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Anisogamy · Wilensky · CC BY-NC-SA 3.0",
   },
   monitors: [
     { label: "Tick", value: (s) => s.tick },

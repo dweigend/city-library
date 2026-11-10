@@ -69,7 +69,7 @@ export function create(options: Partial<CrystalParameters> = {}) {
     frozenCount = 0;
     tempRange =
       (settings.initMetalTemp - settings.meltingTemp) / (colors.length - 1);
-    // NetLogo sprout gives each atom a random integer heading at creation.
+    // source model sprout gives each atom a random integer heading at creation.
     const sites = grid.fields.filter((f) =>
       settings.circle
         ? Math.hypot(f.x, f.y) < settings.width / 2

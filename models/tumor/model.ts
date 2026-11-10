@@ -87,7 +87,7 @@ export function create(options: Partial<TumorParameters> = {}) {
   }
   function moveTransitionalCells(cell: Cell) {
     if (cell.stem) return;
-    // Preserve source age-dependent shade as a detached NetLogo color below.
+    // Preserve source age-dependent shade as a detached source model color below.
     cell.color = cell.age < 20 ? "#d84b4b" : "#f3dcdc";
     forwardCell(cell, 1);
     if (cell.age < 6) {

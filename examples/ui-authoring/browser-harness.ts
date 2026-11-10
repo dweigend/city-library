@@ -8,7 +8,7 @@ export async function runBrowserChecks(container: HTMLElement, host: 'legacy' | 
     import('./02-ordered-setup-and-numeric-live.ts'),
     import('./03-alternate-observation.ts'),
     import('./04-groups-format-and-categories.ts'),
-    import('./05-independent-actions-and-legacy.ts'),
+    import('./05-independent-actions-and-scalar-setters.ts'),
   ]);
   for (const example of examples) {
     const fixture = container.ownerDocument.createElement('section');

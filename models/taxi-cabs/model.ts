@@ -304,7 +304,7 @@ export function create(options: Partial<TaxiParameters> = {}) {
     changeTrafficLightColors();
     if (settings.lengthOfGreenLight === 0)
       throw new RangeError(
-        "NetLogo source modulo by zero: length-of-green-light = 0.",
+        "Green-light duration must be greater than zero.",
       );
     if (world.tick.value % settings.lengthOfGreenLight === 0) {
       rowGreen = !rowGreen;
@@ -582,7 +582,7 @@ export function create(options: Partial<TaxiParameters> = {}) {
     cab.destinationX2 = 0;
     cab.destinationY = 0;
     cab.destinationY2 = 0;
-    // NetLogo assigns numeric zero to these flags; false preserves subsequent conditional meaning.
+    // source model assigns numeric zero to these flags; false preserves subsequent conditional meaning.
     cab.pickupOnHorizontal = false;
     cab.pickupOnVertical = false;
   }

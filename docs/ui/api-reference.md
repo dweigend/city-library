@@ -1,6 +1,6 @@
 # UI API reference
 
-Use `defineUI` to describe what an experiment shows and which model actions its controls call. The model remains responsible for state, validation and time. This reference covers each part of that declaration.
+Use `defineUI` to describe what a model shows and which model actions its controls call. The model remains responsible for state, validation and time. This reference covers each part of that declaration.
 
 ## Status
 
@@ -90,7 +90,7 @@ A text getter supports `(value: string) => ...`. `defineUI` rejects incompatible
 
 The public `Monitor<S, V>` type describes an extracted record with observation `S` and scalar `V`. For example, use `satisfies Monitor<Observation<typeof model>, number>` on a standalone numeric monitor. Existing `UISpec<P, M>` retains its broad compatibility formatter context; an extracted scalar-specific spec can keep its own annotations and be passed directly to `defineUI` without that broad annotation.
 
-Changing display precision belongs in `format`; it must not round or overwrite scientific values. Preserve existing units, unavailable-value text and trailing-zero behavior when migrating an experiment.
+Changing display precision belongs in `format`; it must not round or overwrite scientific values. Preserve existing units, unavailable-value text and trailing-zero behavior when migrating a model.
 
 ## Views
 
@@ -138,7 +138,7 @@ When a toggle is supplied it begins off for each mounted instance; without a tog
 
 ## Palette
 
-Experimental export `indexedColor(color: number): string` converts finite numeric NetLogo colors using the observed official tenth-color bins. Values wrap modulo 140 and select the lower tenth bin. Nonnumeric values throw `TypeError`; nonfinite values throw `RangeError`. Use it for compatibility presentation, not as a second scientific state variable. This export is absent from the main baseline.
+Experimental export `indexedColor(color: number): string` converts finite numeric indexed palette colors using the observed official tenth-color bins. Values wrap modulo 140 and select the lower tenth bin. Nonnumeric values throw `TypeError`; nonfinite values throw `RangeError`. Use it for compatibility presentation, not as a second scientific state variable. This export is absent from the main baseline.
 
 ## Lifecycle
 

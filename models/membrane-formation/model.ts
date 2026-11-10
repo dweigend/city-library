@@ -110,7 +110,7 @@ export function create(options: Partial<MembraneParameters> = {}) {
     const oils = molecules().filter((molecule) => molecule.group === "oil");
     return stats.describe(
       oils.map((oil) => {
-        // NetLogo in-radius includes self. Its denominator excludes only the linked partner.
+        // source model in-radius includes self. Its denominator excludes only the linked partner.
         const neighbors = [
           oil,
           ...oil.neighbors({ radius: 4, source: molecules() }),

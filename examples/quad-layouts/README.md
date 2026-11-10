@@ -1,12 +1,6 @@
 # Finite quadrilateral topology examples
 
-Status: E3 public scripts frozen before runtime, 8 November 2026. Independent
-Gemini 4 Argon design and runtime reviews approved this bounded slice; all five
-scripts pass unchanged and are included in the standard example/typecheck gates.
-These replace the earlier stopped, unagreed drafts. The accepted E0 scripts and
-all previously frozen examples remain unchanged. The five scripts use public
-root imports, a flat author workflow and appended acceptance assertions; focused
-behavior/type tests supply the wider numerical/topological edge cases.
+Five asserted public scripts cover finite quad generation, relaxation, validation, continuation and explicit Grid composition. Run `bun run examples:quad-layouts` to execute this capability gate.
 
 | Script | Author task and independent acceptance |
 | --- | --- |
@@ -16,17 +10,17 @@ behavior/type tests supply the wider numerical/topological edge cases.
 | `04-continuation-and-revisions.ts` | Replay an explicit RNG continuation, distinguish an advanced stream, verify 71 draws for radius 3, and obtain fresh immutable zero/positive revisions with preserved key/incidence correspondence and old snapshots. |
 | `05-explicit-grid-state-copy.ts` | Build two detached Grids and explicitly copy selected population values between corresponding cells; verify distinct Grid/Field identities and independent state. |
 
-The [phase contract](../../docs/grid-parcels/TOWNSCAPER-CONTRACT.md) fixes
+The [capability contract](../../docs/grid-parcels/QUAD-LAYOUTS-CONTRACT.md) fixes
 numerical bounds, exact enumeration/draw order, square-target forces, global
-halving and all failure/ownership semantics. `tests/townscaper-grid-types.ts`
+halving and all failure/ownership semantics. `tests/quad-layouts-types.ts`
 rejects mixed literal and named-variable options and regular-only LayoutGrid
 capabilities. No private imports, mocks, empty runtime stubs or disabled
 assertions are permitted. Missing-export failures are expected before runtime.
 
 The [design review](../../docs/grid-parcels/TOWNSCAPER-DESIGN-REVIEW.md) approves
-the example-first checkpoint. `SHA256SUMS` pins the five scripts before runtime.
+the example-first checkpoint. `SHA256SUMS` records the original scripts; the [naming receipt](../../scripts/naming-integrity-receipt.json) maps original and current paths and hashes.
 The separate [runtime review](../../docs/grid-parcels/TOWNSCAPER-RUNTIME-REVIEW.md)
-and [verification](../../docs/grid-parcels/TOWNSCAPER-VERIFICATION.md) record
+and [verification](../../docs/grid-parcels/QUAD-LAYOUTS-VERIFICATION.md) record
 the implemented scope and complete checks.
 The slice does not deliver arbitrary-domain quad meshing, Lloyd, dual mapping,
 seamless chunks, architecture solving or the remaining parcel catalogue.

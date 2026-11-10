@@ -48,7 +48,7 @@ export function create(options: Partial<Parameters> = {}) {
   const fields = grid.fields;
   type Rabbit = Agent<{ displayId: string; total: number; step: number }>;
   const rabbits = () => world.agents as readonly Rabbit[];
-  // NetLogo's y=0..44 is translated to the library's centered y=-22..22.
+  // source model's y=0..44 is translated to the library's centered y=-22..22.
   // Unwrapped displacement is a scientific scalar; Agent.move owns its wrapped position.
   for (let i = 0; i < settings.number; i++)
     world.add(

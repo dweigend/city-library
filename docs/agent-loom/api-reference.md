@@ -1806,7 +1806,7 @@ Issuance/type errors throw TypeError, budget/domain violations RangeError, run/o
 
 <a id="study-boundaries-contract"></a>
 
-### Whole-study hooks, subexperiments and continuation
+### Whole-study hooks, substudies and continuation
 
 ```ts
 studies.resume<Parameters,Model extends StudyModel,Measurements>(checkpoint: StudyCheckpoint<Parameters,Measurements>, callbacks: {
@@ -1844,7 +1844,7 @@ storage.decode(text:string, options:{format:"study-json"}):StudyCheckpoint<unkno
 
 before executes once after plan/budget validation and before the first model allocation. after executes once on terminal completion (including failed runs) if before succeeded, with detached results; never on a pause. Both use the synchronous/thenable rules. A failed before starts no model and returns every run as skipped/before-error with a studyError phase before; a failed after retains all outcomes and adds studyError phase after. Neither error silently discards results. Whole-study hooks are distinct from per-run create/dispose; resume never repeats successful before or a completed after.
 
-Separate Study subexperiments concatenate independently expanded Cartesian blocks, preserving block order and IDs; they are not globally cross-multiplied. Scenario indices and IDs remain unique across concatenated blocks. Conditional metrics use the same sampleWhen at initial/scheduled samples, with the documented explicit sampleFinal override. Pre/post labels bind to before/after callbacks rather than executed source. Replication statistics use studies.summarize; list-valued observations remain detached lists with preserved order and missing values.
+Separate Study substudies concatenate independently expanded Cartesian blocks, preserving block order and IDs; they are not globally cross-multiplied. Scenario indices and IDs remain unique across concatenated blocks. Conditional metrics use the same sampleWhen at initial/scheduled samples, with the documented explicit sampleFinal override. Pre/post labels bind to before/after callbacks rather than executed source. Replication statistics use studies.summarize; list-valued observations remain detached lists with preserved order and missing values.
 
 Pause checks occur only after initial sampling/stop and after successful-step sampling/stop, never inside a step or ahead of a terminal stop/horizon. save must declare all required World/component roots and custom model continuation through storage.save; functions are excluded. Its checkpoint must have rootKind world or bundle. A data-only Snapshot is rejected before issuing a study checkpoint: selected measurements alone cannot resume a model. The resume load callback continues to accept only WorldSnapshot or BundleSnapshot. Validate/encode the snapshot and checkpoint before issuing the checkpoint, then dispose the live instance once.
 
@@ -1884,8 +1884,8 @@ export interface StudySpec {
 	readonly metrics: readonly string[];
 	readonly axes: readonly StudyAxis[];
 	readonly originalXml: string;
- readonly subexperiments?:readonly { readonly axes:readonly StudyAxis[] }[];
- readonly preExperiment?:string; readonly postExperiment?:string;
+ readonly substudies?:readonly { readonly axes:readonly StudyAxis[] }[];
+ readonly beforeStudy?:string; readonly afterStudy?:string;
 }
 
 export type StudyMeasurement = Readonly<Record<string, StudyScalar>>;
@@ -2150,8 +2150,8 @@ interface StudyBindings<Model extends StudyModel> {
  readonly metrics: readonly { readonly source:string; report(model:Model):StudyScalar }[];
  readonly exitCondition?:{ readonly source:string; test(model:Model):boolean };
  readonly runMetricsCondition?:{ readonly source:string; test(model:Model):boolean };
- readonly preExperiment?:{ readonly source:string; run(plan:readonly PlannedRun<StudyParameters>[]):void };
- readonly postExperiment?:{ readonly source:string; run(result:StudyResult<StudyParameters,Readonly<Record<string,StudyScalar>>>):void };
+ readonly beforeStudy?:{ readonly source:string; run(plan:readonly PlannedRun<StudyParameters>[]):void };
+ readonly afterStudy?:{ readonly source:string; run(result:StudyResult<StudyParameters,Readonly<Record<string,StudyScalar>>>):void };
  readonly provenance?:Readonly<Record<string,string>>;
 }
 interface BoundStudy<Model extends StudyModel> {
@@ -2430,7 +2430,7 @@ Default validation limits are 32 MiB UTF-8 text, nesting depth 128, 1000000 reco
 
 Unknown framework/version/algorithm, dangling reference, excessive resources and malformed values reject; no partial fallback. Errors include a stable data path and reason, without claiming every model's scientific validity. A world discriminator validates built-in structure only: restored model state remains unknown until caller checks. Bundle names and extra state remain unknown. No unchecked generic decode overload restores trust erased by serialization.
 
-Legacy world V1–V4 and RNG state V1/V2 are separate from the target envelope. Import model data explicitly through `storage.decode(text,{format:"model-world-json"})`, or `storage.decode(data,{format:"model-world-data"})` for in-memory V1 structured-cloneable payloads that are not universally JSON-safe. Both validate the supported model-only subset of the old schemas, preserve XYZ, declared variable/reference graphs and MT Gaussian continuation where present, and return a target WorldSnapshot&lt;unknown&gt;.
+World snapshot versions 1–4 and RNG state V1/V2 are separate from the target envelope. Import model data explicitly through `storage.decode(text,{format:"model-world-json"})`, or `storage.decode(data,{format:"model-world-data"})` for in-memory V1 structured-cloneable payloads that are not universally JSON-safe. Both validate the supported model-only subset of the old schemas, preserve XYZ, declared variable/reference graphs and MT Gaussian continuation where present, and return a target WorldSnapshot&lt;unknown&gt;.
 
 Nonempty versioned presentation sections and built-in appearance fields are unsupported and reject instead of being silently discarded; callers must explicitly remove those sections and fields before import. Application-defined properties named color, shape or similar remain ordinary supported model state and must not be stripped. V1 and V2 are physical XY envelopes, V3 retains the same model geometry, and V4 is explicitly dimension 3; none is a external engine export-world file. Reject unsupported version/dimension combinations. Nested MT RNG-state version 1 is accepted only with empty Gaussian cache; nested MT version 2 carries the cache.
 

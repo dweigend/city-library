@@ -685,7 +685,7 @@ export function create(options: Partial<DNAParameters> = {}) {
   }
   function makeDuplicateDNAString() {
     const available = originalDNAString.length - settings.nucleotidesAffected;
-    // NetLogo random with zero produces zero; negative arguments produce non-positive values.
+    // source model random with zero produces zero; negative arguments produce non-positive values.
     const target =
       available === 0
         ? 0

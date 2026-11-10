@@ -10,7 +10,7 @@ These five examples bind model inputs, actions, observations and charts without 
 | `02-ordered-setup-and-numeric-live.ts` | Wealth: numeric action updates growth to 6 without stepping | String setup selection and local label override; numeric input action; implicit getter refresh |
 | `03-alternate-observation.ts` | Voting through an observation-only adapter: explicit getter reports true after real action | Missing parameters convention uses explicit getter; boolean control sends boolean |
 | `04-groups-format-and-categories.ts` | Wealth: numeric Gini stays numeric; separate formatting; named class bars preserve class total and RNG | Accessible flat groups; nonadjacent same-group fields; formatted monitor; category and axis/unit text |
-| `05-independent-actions-and-legacy.ts` | Wealth: explicit one-step action and rule change leave second instance/RNG unchanged; legacy setter remains accepted | Two independent mounts; explicit empty setup; legacy duplicate setup/live behavior; disposed action isolation |
+| `05-independent-actions-and-scalar-setters.ts` | Wealth: explicit one-step action and rule change leave second instance/RNG unchanged; legacy setter remains accepted | Two independent mounts; explicit empty setup; legacy duplicate setup/live behavior; disposed action isolation |
 
 `assertions.ts` queries and acts on a real DOM using real model factories, without private runtime imports or test-only public introspection APIs. `authoring.types.ts` adds negative compile-only cases. Exported `browserChecks(container)` functions check setup, normalization and grouping; Bun does not execute them.
 
@@ -21,7 +21,7 @@ bun examples/ui-authoring/01-defaults-and-inert-entry.ts
 bun examples/ui-authoring/02-ordered-setup-and-numeric-live.ts
 bun examples/ui-authoring/03-alternate-observation.ts
 bun examples/ui-authoring/04-groups-format-and-categories.ts
-bun examples/ui-authoring/05-independent-actions-and-legacy.ts
+bun examples/ui-authoring/05-independent-actions-and-scalar-setters.ts
 sha256sum -c examples/ui-authoring/SHA256SUMS
 ```
 

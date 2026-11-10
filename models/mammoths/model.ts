@@ -52,7 +52,7 @@ type Terrain = "land" | "ocean" | "changed";
 export function create(options: Partial<Parameters> = {}) {
   let settings = parameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
-  // NetLogo centers0..96 become City Library centers-48..48; no runtime image conversion.
+  // source model centers0..96 become City Library centers-48..48; no runtime image conversion.
   const world = World.create({ x: 97, y: 97, boundary: "hard" }, { random });
   const grid = Grid.create(world.space!, {
     state: { terrain: "ocean" as Terrain },

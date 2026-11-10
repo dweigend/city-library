@@ -210,7 +210,7 @@ solver, and the older arbitrary-domain/Lloyd proposals remain research.
 
 ## One library, independent capabilities
 
-City Library is one engine organized into six areas: Simulation, Spatial Structures, Graphs, Generation, City Models, and Data & Experiments. Agent Loom supplies the design lineage for reusable modeling capabilities across these areas, not a separate product, import requirement or second engine. Its execution concepts belong to Simulation; its grid, graph and data contracts inform the corresponding areas. No consumer must initialize World or load every capability.
+City Library is one engine organized into six areas: Simulation, Spatial Structures, Graphs, Generation, City Models, and Data & Studies. Agent Loom supplies the design lineage for reusable modeling capabilities across these areas, not a separate product, import requirement or second engine. Its execution concepts belong to Simulation; its grid, graph and data contracts inform the corresponding areas. No consumer must initialize World or load every capability.
 
 The six areas own the following responsibilities:
 
@@ -221,7 +221,7 @@ The six areas own the following responsibilities:
 | Graphs | Graphs, nodes, edges, traversal/routing, network generation and analysis | Supports non-spatial use; topology does not guarantee access, path geometry or domain flow |
 | Generation | Terrain, streets, parcels, zoning, buildings, assemblies and planning/feasibility variants | Produces descriptions; no implicit residents, traffic or supply state |
 | City Models | Traffic, households, allocation, economy, decisions and supply | Owns domain policies, units and mutable quantities; reuses generic structures |
-| Data & Experiments | Parameters/Input, measurements, statistics, History, studies and one storage area | Shares model values explicitly; loading is a write and measurements are not model continuation |
+| Data & Studies | Parameters/Input, measurements, statistics, History, studies and one storage area | Shares model values explicitly; loading is a write and measurements are not model continuation |
 
 The following roles describe composition size and usage, not additional top-level areas:
 

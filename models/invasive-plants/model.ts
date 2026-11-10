@@ -171,7 +171,7 @@ export function create(options: Partial<InvasivePlantsParameters> = {}) {
       seed.hidden = !settings.showSeeds;
       let remaining = random.number() * settings.spreadDistance;
       const direction = geometry.direction({ heading: seed.heading });
-      // NetLogo forward performs full unit moves followed by a fractional
+      // source model forward performs full unit moves followed by a fractional
       // remainder. A blocked unit stops this seed, retaining prior progress.
       while (remaining > 0) {
         const distance = Math.min(1, remaining);

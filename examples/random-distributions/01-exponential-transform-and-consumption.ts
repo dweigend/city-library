@@ -1,4 +1,4 @@
-// PROPOSAL ONLY: standard Mulberry profile; no native NetLogo bit-parity claim.
+// Exponential transform and explicit random draw consumption.
 import assert from "node:assert/strict";
 import { Random } from "city-library";
 for (const mean of [Number.MIN_VALUE, 1, 2 / Math.LN2, 10, Number.MAX_VALUE]) {

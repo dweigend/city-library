@@ -25,7 +25,7 @@ export const ui = defineUI(model, {
   },
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Evolution/Mammoths.nlogox",
-    label: "NetLogo Mammoths · Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Mammoths · Wilensky · CC BY-NC-SA 3.0",
   },
   monitors: [
     { label: "Months", value: (s) => s.tick },

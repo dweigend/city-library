@@ -44,7 +44,7 @@
     "consumer": "bun tests/package-consumer.ts",
     "check": "bun run typecheck && bun run test && bun run examples && bun run build && bun run consumer",
     "check:ui:svelte": "bun run --cwd ui/agent-lab check",
-    "examples:quad-layouts": "bun examples/run.ts --townscaper",
+    "examples:quad-layouts": "bun examples/run.ts --quad-layouts",
     "typecheck:quad-layouts": "bun run typecheck",
     "examples:city": "bun examples/run.ts --city",
     "examples:city:targets": "bun examples/run.ts --city --targets",

@@ -43,7 +43,7 @@ type Bird = Agent<{
   flockmateIds: string[];
   nearestNeighbor: string | null;
 }>;
-/** NetLogo subtract-headings uses the clockwise +180 tie. */
+/** source model subtract-headings uses the clockwise +180 tie. */
 export function headingDifference(target: number, current: number) {
   if (![target, current].every(Number.isFinite))
     throw new RangeError("Headings must be finite.");

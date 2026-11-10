@@ -171,7 +171,7 @@ export function create(options: Partial<BloodSugarParameters> = {}) {
   }
 
   function addGlucose() {
-    // Chromium NetLogo Web creates 412 for 7000/17 (nearest integer).
+    // Chromium source runtime creates 412 for 7000/17 (nearest integer).
     createSignals("glucose", mealSize / mealLength);
     eatTime--;
     if (eatTime < 1) eating = false;

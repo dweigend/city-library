@@ -2967,7 +2967,7 @@ Available from agent-loom/studies/node. Execute whole independent runs in native
 
 [Details](api-reference.md#study-worker-contract)
 
-<a id="type-experiment-model"></a>
+<a id="type-study-model"></a>
 <a id="api-258"></a>
 
 ### StudyModel
@@ -2980,7 +2980,7 @@ Ordinary model object with its World, synchronous step procedure and optional cl
 
 [Details](api-reference.md#study-options-contract)
 
-<a id="type-experiment-plan"></a>
+<a id="type-study-plan"></a>
 <a id="api-259"></a>
 
 ### StudyPlan
@@ -2995,7 +2995,7 @@ Either a parameter/seed Cartesian plan or an explicit ordered run plan; the two 
 
 [Details](api-reference.md#study-options-contract)
 
-<a id="type-experiment-options"></a>
+<a id="type-study-options"></a>
 <a id="api-260"></a>
 
 ### StudyOptions
@@ -3114,8 +3114,8 @@ export interface StudySpec {
 	readonly metrics: readonly string[];
 	readonly axes: readonly StudyAxis[];
 	readonly originalXml: string;
- readonly subexperiments?:readonly { readonly axes:readonly StudyAxis[] }[];
- readonly preExperiment?:string; readonly postExperiment?:string;
+ readonly substudies?:readonly { readonly axes:readonly StudyAxis[] }[];
+ readonly beforeStudy?:string; readonly afterStudy?:string;
 }
 ```
 
@@ -3711,8 +3711,8 @@ interface StudyBindings<Model extends StudyModel> {
  readonly metrics: readonly { readonly source:string; report(model:Model):StudyScalar }[];
  readonly exitCondition?:{ readonly source:string; test(model:Model):boolean };
  readonly runMetricsCondition?:{ readonly source:string; test(model:Model):boolean };
- readonly preExperiment?:{ readonly source:string; run(plan:readonly PlannedRun<StudyParameters>[]):void };
- readonly postExperiment?:{ readonly source:string; run(result:StudyResult<StudyParameters,Readonly<Record<string,StudyScalar>>>):void };
+ readonly beforeStudy?:{ readonly source:string; run(plan:readonly PlannedRun<StudyParameters>[]):void };
+ readonly afterStudy?:{ readonly source:string; run(result:StudyResult<StudyParameters,Readonly<Record<string,StudyScalar>>>):void };
  readonly provenance?:Readonly<Record<string,string>>;
 }
 ```
@@ -4516,7 +4516,7 @@ Optional adapter for otherwise unsupported application values inside snapshots; 
 
 ## limits
 
-<a id="limits-netlogo"></a>
+<a id="limits-stream-profile"></a>
 <a id="api-378"></a>
 
 ### limits.declarations

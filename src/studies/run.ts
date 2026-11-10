@@ -66,7 +66,7 @@ function execute<Parameters, Model extends StudyModel, Measurements>(
   try {
     model = synchronous(options.create(cloneData(identity.parameters), identity.seed, cloneData(identity)));
     created = true;
-    if (model === null || typeof model !== "object") throw new TypeError("create must return an StudyModel.");
+    if (model === null || typeof model !== "object") throw new TypeError("create must return a StudyModel.");
     worldClock(model.world);
     callback(model.step, "Model step");
     if (model.dispose !== undefined) callback(model.dispose, "Model dispose");

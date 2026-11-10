@@ -50,7 +50,7 @@ export function create(options: Partial<Parameters> = {}) {
     const space = settings.diminishingSampleSpace
       ? settings.targetTotal - total
       : settings.targetTotal;
-    // NetLogo random accepts negative bounds: integers toward zero, excluding
+    // source model random accepts negative bounds: integers toward zero, excluding
     // the bound itself. Live target changes can make the remaining gap <= 0.
     const draw = Math.floor(random.number() * Math.abs(space));
     addend = 1 + (space < 0 ? -draw : draw);

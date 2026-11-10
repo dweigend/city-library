@@ -46,7 +46,7 @@ export function create(options: Partial<AwarenessParameters> = {}) {
   const people = () => world.agents as readonly Person[];
   const integer = (upper: number) => Math.floor(random.number() * upper);
   // Full activation snapshots use the public uniform Fisher-Yates variant.
-  // Mulberry/order differ from NetLogo; rendering-only asks consume no draws.
+  // Mulberry/order differ from source model; rendering-only asks consume no draws.
   function activation<T>(snapshot: readonly T[]) {
     return random.sample(snapshot, { count: snapshot.length, algorithm: "fisher-yates-descending" });
   }
