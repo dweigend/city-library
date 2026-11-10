@@ -124,7 +124,7 @@ export function create(options: Partial<SwitchParameters> = {}) {
   }
   function addMolecule(kind: Molecule["group"], inside = true) {
     const p: Molecule = world.add(
-      Agent.add<MoleculeData>(
+      Agent.create<MoleculeData>(
         {
           who: who++,
           group: kind,

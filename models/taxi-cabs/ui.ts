@@ -306,7 +306,7 @@ export const ui = defineUI(model, {
   },
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Taxi%20Cabs.nlogox",
-    label: "Original NetLogo model · Dongping and Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Dongping and Wilensky · CC BY-NC-SA 3.0",
   },
   monitors: [
     { label: "Tick", value: (state) => state.tick },

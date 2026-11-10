@@ -23,7 +23,7 @@ const binding = defineUI(model, {
   },
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/IABM%20Textbook/chapter%205/Traffic%20Grid%20Goal.nlogox",
-    label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Wilensky · CC BY-NC-SA 3.0",
   },
   drawing: {
     toggleLabel: "Select intersection",

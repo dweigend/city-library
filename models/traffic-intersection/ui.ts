@@ -32,7 +32,7 @@ const binding = defineUI(model, {
   },
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Unverified/Traffic%20Intersection.nlogox",
-    label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Wilensky · CC BY-NC-SA 3.0",
   },
   actions: [{ label: "Switch", run: (instance) => instance.changeToYellow() }],
   monitors: [

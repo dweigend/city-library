@@ -5,7 +5,7 @@ export const ui = defineUI(model, {
   setup: ["seed", "population"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/Ants",
-    label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Wilensky · CC BY-NC-SA 3.0",
   },
   live: {
     diffusionRate: {

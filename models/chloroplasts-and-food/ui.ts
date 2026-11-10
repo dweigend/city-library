@@ -23,7 +23,7 @@ const binding = defineUI(model, {
   complete: (state) => state.stopped,
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Chloroplasts%20and%20Food.nlogox",
-    label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Wilensky · CC BY-NC-SA 3.0",
   },
   monitors: [
     { label: "Tick", value: (state) => state.tick },

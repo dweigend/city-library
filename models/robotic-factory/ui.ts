@@ -22,7 +22,7 @@ export const ui = defineUI(model, {
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/RoboticFactory",
     label:
-      "Original NetLogo model \u00B7 Martin and Wilensky \u00B7 CC BY-NC-SA 3.0",
+      "Source attribution \u00B7 Martin and Wilensky \u00B7 CC BY-NC-SA 3.0",
   },
   live: {
     fullCharge: {

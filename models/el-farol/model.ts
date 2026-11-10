@@ -102,7 +102,7 @@ export function create(options: Partial<ElFarolParameters> = {}) {
   const world = World.create(space, { random }),
     grid = Grid.create(space);
   world.add(grid);
-  type Person = ReturnType<typeof Agent.add<Patron>>;
+  type Person = ReturnType<typeof Agent.create<Patron>>;
   const people = () => world.agents as readonly Person[];
   const homes = grid.fields.filter((p) => p.y < 0 || (p.x < 0 && p.y >= 0));
   const bar = grid.fields.filter((p) => p.x > 0 && p.y > 0);
@@ -156,7 +156,7 @@ export function create(options: Partial<ElFarolParameters> = {}) {
       history.push(random.number({ max: 100, integer: true }));
     attendance = history[0]!;
     for (let i = 0; i < 100; i++) {
-      const p = Agent.add<Patron>({
+      const p = Agent.create<Patron>({
         strategies: [],
         bestStrategy: 0,
         attend: false,

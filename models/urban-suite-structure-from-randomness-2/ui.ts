@@ -6,7 +6,7 @@ export const ui = defineUI(model, {
   setup: ["seed"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/UrbanSuite-StructurefromRandomness2",
-    label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Wilensky · CC BY-NC-SA 3.0",
   },
   live: {
     threshold: {

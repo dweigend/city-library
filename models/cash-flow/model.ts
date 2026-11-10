@@ -44,7 +44,7 @@ export function create(options: Partial<BankParameters> = {}) {
   const world = World.create(space, { random });
   const grid = Grid.create(space);
   world.add(grid);
-  type Person = ReturnType<typeof Agent.add<Account>>;
+  type Person = ReturnType<typeof Agent.create<Account>>;
   const people = () => world.agents as readonly Person[];
   let bankDeposits = 0,
     bankLoans = 0,
@@ -200,7 +200,7 @@ export function create(options: Partial<BankParameters> = {}) {
     histogramRange = [min, min < max ? max : min + 1];
   }
   function addPerson(f: AccountFixture) {
-    const p = Agent.add<Account>(
+    const p = Agent.create<Account>(
       {
         wallet: f.wallet,
         savings: f.savings,

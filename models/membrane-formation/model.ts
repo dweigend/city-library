@@ -26,7 +26,7 @@ export function create(options: Partial<MembraneParameters> = {}) {
   let settings = parameters(inputs, options);
   const random = Random.create({ seed: settings.seed });
   const world = World.create({ x: 51, y: 51, boundary: "wrap" }, { random });
-  const graph = Graph.add<Molecule>();
+  const graph = Graph.create<Molecule>();
   const molecules = () => world.agents as readonly Molecule[];
   const history: { tick: number; hydrophobicIsolation: number }[] = [];
 

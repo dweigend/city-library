@@ -36,9 +36,9 @@ export const inputs: Inputs<Parameters> = {
   mutationRate: { kind: "number", default: 5, min: 0, max: 10 },
   smoothness: { kind: "number", default: 0.15, min: 0, max: 1 },
 };
-type Breed = "nonLearner" | "randomLearner" | "smartLearner";
+type LearnerGroup = "nonLearner" | "randomLearner" | "smartLearner";
 type Learner = Agent<{
-  group: Breed;
+  group: LearnerGroup;
   genotype: Allele[];
   phenotype: number[];
   fitness: number;
@@ -63,7 +63,7 @@ export function create(options: Partial<Parameters> = {}) {
     randomFitness: number | undefined;
     smartFitness: number | undefined;
   }[] = [];
-  const population = (group: Breed) =>
+  const population = (group: LearnerGroup) =>
     (world.agents as readonly Learner[]).filter((a) => a.group === group);
   function produceGene(): Allele[] {
     return Array.from({ length: settings.geneLength }, () =>
@@ -94,11 +94,11 @@ export function create(options: Partial<Parameters> = {}) {
       },
     });
   }
-  function meanPlasticity(group: Breed): number {
-    const group = population(group);
-    return group.length
-      ? group.reduce((sum, a) => sum + plasticityFrequency(a) * 100, 0) /
-          group.length
+  function meanPlasticity(group: LearnerGroup): number {
+    const members = population(group);
+    return members.length
+      ? members.reduce((sum, a) => sum + plasticityFrequency(a) * 100, 0) /
+          members.length
       : 0;
   }
   function record() {
@@ -227,25 +227,25 @@ export function create(options: Partial<Parameters> = {}) {
     a.fitness = total / settings.trialCount;
     updatePosition(a);
   }
-  function select(group: Breed) {
-    const group = population(group);
-    const shuffled = random.sample(group, {
-      count: group.length,
+  function select(group: LearnerGroup) {
+    const members = population(group);
+    const shuffled = random.sample(members, {
+      count: members.length,
       algorithm: "fisher-yates-descending",
     });
     shuffled.sort((a, b) => a.fitness - b.fitness);
     for (const a of shuffled.slice(0, Math.ceil(settings.populationSize * 0.2)))
       a.delete();
   }
-  function reproduce(group: Breed) {
+  function reproduce(group: LearnerGroup) {
     for (let i = 0; i < Math.floor(settings.populationSize * 0.2); i++) {
-      const group = population(group);
-      const tournament = random.sample(group, {
+      const members = population(group);
+      const tournament = random.sample(members, {
         count: Math.floor(settings.populationSize * 0.3),
       });
       if (tournament.length < 2)
         throw new RangeError(
-          "Source weighted-n-of requires two tournament members.",
+          "Weighted selection requires two tournament members.",
         );
       const selected = random.sample(tournament, {
         count: 2,
@@ -287,9 +287,9 @@ export function create(options: Partial<Parameters> = {}) {
         "smartLearner",
         "nonLearner",
       ] as const) {
-        const group = population(group);
-        for (const a of random.sample(group, {
-          count: group.length,
+        const members = population(group);
+        for (const a of random.sample(members, {
+          count: members.length,
           algorithm: "fisher-yates-descending",
         })) {
           if (group === "randomLearner") randomLearn(a);
@@ -312,7 +312,7 @@ export function create(options: Partial<Parameters> = {}) {
     }
   }
   function read() {
-    const snapshots = (group: Breed) =>
+    const snapshots = (group: LearnerGroup) =>
       population(group).map((a) => ({
         id: a.id,
         x: a.x,

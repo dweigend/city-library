@@ -17,11 +17,11 @@ export function create(options: Partial<MaintenanceParameters> = {}) {
   const world = World.create();
   const machines = Array.from({ length: 3 }, (_, index) => Agent.create({ number: index + 1, operational: true, repairs: 0 }, { position: { x: index * 3 - 3, y: 0 } }));
   world.add(machines);
-  const teams = Resource.add<typeof machines[number]>({ capacity: settings.repairTeams });
-  const agenda = Agenda.add<{ kind: "failure" | "repair"; machine: number }>();
+  const teams = Resource.create<typeof machines[number]>({ capacity: settings.repairTeams });
+  const agenda = Agenda.create<{ kind: "failure" | "repair"; machine: number }>();
   const requests = new Map<number, { ticket: ReturnType<typeof teams.request>; started: boolean }>();
   const uptime = machines.map(() => TimeWeighted.create({ value: 1 }));
-  const trace = EventTrace.add<{ machine: number; kind: string }>({ capacity: 100 });
+  const trace = EventTrace.create<{ machine: number; kind: string }>({ capacity: 100 });
   machines.forEach((machine, index) => agenda.add({ at: index + 2, data: { kind: "failure", machine: machine.number } }));
   function startRepairs() {
     for (const [number, request] of requests) {

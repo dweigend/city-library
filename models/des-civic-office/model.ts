@@ -11,8 +11,8 @@ export const inputs: Inputs<OfficeParameters> = {
 };
 export function create(options: Partial<OfficeParameters> = {}) {
   let settings = parameters(inputs, options);
-  const agenda = Agenda.add<{ resident: number }>();
-  const desks = Resource.add<number>({ capacity: settings.clerks });
+  const agenda = Agenda.create<{ resident: number }>();
+  const desks = Resource.create<number>({ capacity: settings.clerks });
   const residents: { number: number; arrived: number; started?: number; completed?: number; ticket: ReturnType<typeof desks.request> }[] = [];
   const history: { x: number; y: number }[] = [];
   function startGranted() {

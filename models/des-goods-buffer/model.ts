@@ -11,8 +11,8 @@ export const inputs: Inputs<BufferParameters> = {
 };
 export function create(options: Partial<BufferParameters> = {}) {
   const settings = parameters(inputs, options);
-  const agenda = Agenda.add<{ kind: "produce" | "collect" }>();
-  const store = Store.add<{ crate: number; produced: number }>({ capacity: settings.capacity });
+  const agenda = Agenda.create<{ kind: "produce" | "collect" }>();
+  const store = Store.create<{ crate: number; produced: number }>({ capacity: settings.capacity });
   let produced = 0;
   const collected: { crate: number; produced: number; collected: number }[] = [];
   const history: { x: number; y: number }[] = [{ x: 0, y: 0 }];

@@ -114,7 +114,7 @@ export function create(options: Partial<FactoryParameters> = {}) {
     initial: Partial<EntityState> = {},
   ) {
     const a = world.add(
-      Agent.add<EntityState>(
+      Agent.create<EntityState>(
         {
           sourceId: nextId++,
           kind,

@@ -236,9 +236,9 @@ export function create(options: Partial<Parameters> = {}) {
   }
   function dieNaturally() {
     for (const group of ["human", "mammoth"] as const) {
-      const group = population(group);
-      for (const resident of random.sample(group, {
-        count: group.length,
+      const members = population(group);
+      for (const resident of random.sample(members, {
+        count: members.length,
         algorithm: "fisher-yates-descending",
       })) {
         if (

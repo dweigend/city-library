@@ -14,7 +14,7 @@ export const ui = defineUI(model, {
   },
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/IABM%20Textbook/chapter%203/El%20Farol%20Extensions/El%20Farol.nlogox",
-    label: "Original NetLogo model · Rand & Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Rand & Wilensky · CC BY-NC-SA 3.0",
   },
   monitors: [
     { label: "Week", value: (s) => s.tick },

@@ -12,8 +12,8 @@ export const inputs: Inputs<BusParameters> = {
 export function create(options: Partial<BusParameters> = {}) {
   let settings = parameters(inputs, options);
   const world = World.create();
-  const agenda = Agenda.add<{ kind: "arrive" | "depart"; bus: number }>();
-  const graph = Graph.add<{ id: string; label: string }, { minutes: number }>({ edgeState: { minutes: 1 } });
+  const agenda = Agenda.create<{ kind: "arrive" | "depart"; bus: number }>();
+  const graph = Graph.create<{ id: string; label: string }, { minutes: number }>({ edgeState: { minutes: 1 } });
   const origin = graph.nodes.add({ id: "stop:origin", label: "District" });
   const junction = graph.nodes.add({ id: "stop:junction", label: "Junction" });
   const interchange = graph.nodes.add({ id: "stop:interchange", label: "Interchange" });
@@ -21,7 +21,7 @@ export function create(options: Partial<BusParameters> = {}) {
   graph.edges.add({ from: junction, to: interchange, state: { minutes: 3 } });
   graph.edges.add({ from: origin, to: interchange, state: { minutes: 8 } });
   const travelMinutes = graph.distances({ from: origin, cost: (edge) => edge.minutes }).get(interchange)!;
-  const berths = Resource.add<Agent<{ number: number }>>({ capacity: settings.berths });
+  const berths = Resource.create<Agent<{ number: number }>>({ capacity: settings.berths });
   const buses: { agent: Agent<{ number: number }>; arrived?: number; started?: number; departed?: number; ticket?: ReturnType<typeof berths.request> }[] = [];
   const history: { x: number; y: number }[] = [{ x: 0, y: 0 }];
   function addBus() {

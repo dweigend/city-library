@@ -6,7 +6,7 @@ export const ui = defineUI(model, {
   setup: ["seed"],
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Curricular%20Models/Urban%20Suite/Urban%20Suite%20-%20Tijuana%20Bordertowns.nlogox",
-    label: "Original NetLogo model · Uri Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Uri Wilensky · CC BY-NC-SA 3.0",
   },
   // The shared GO controls are available only after the source setup phase.
   complete: (state) => !state.setupDone,

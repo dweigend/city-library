@@ -27,7 +27,7 @@ export const ui = defineUI(model, {
   },
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Evolution/Sex%20Ratio%20Equilibrium.nlogox",
-    label: "NetLogo original · Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Wilensky · CC BY-NC-SA 3.0",
   },
   complete: (s) => s.done,
   monitors: [

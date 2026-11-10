@@ -26,7 +26,7 @@ export function create(options: Partial<SolidParameters> = {}) {
     world = World.create(space, { random }),
     grid = Grid.create(space);
   world.add(grid);
-  type Atom = ReturnType<typeof Agent.add<{ color: Color }>>;
+  type Atom = ReturnType<typeof Agent.create<{ color: Color }>>;
   const fields = grid.fields,
     history: { tick: number; distanceSquared: number | null }[] = [];
   function atoms() {

@@ -5,7 +5,7 @@ export const ui = defineUI(model, {
   setup: ["width", "height", "seed"],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/SolidDiffusion",
-    label: "Original NetLogo model · Uri Wilensky · CC BY-NC-SA 3.0",
+    label: "Source attribution · Uri Wilensky · CC BY-NC-SA 3.0",
   },
   monitors: [
     { label: "Tick", value: (s) => s.tick },

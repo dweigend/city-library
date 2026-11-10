@@ -67,7 +67,7 @@ export function create(options: Partial<TravelParameters> = {}) {
   const space = { x: 25, y: 25, boundary: "hard" } as const;
   const world = World.create(space, { random });
   const grid = Grid.create(space, { state: { color: "#111111" } });
-  const graph = Graph.add<Person>();
+  const graph = Graph.create<Person>();
   world.add(grid);
   let stopped = false;
   let betaN = 0;
