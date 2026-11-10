@@ -1,13 +1,13 @@
 import { run as runWorld } from "../world/index.ts";
 import { worldClock } from "../world/world.ts";
-import type { ExperimentModel, ExperimentOptions, PlannedRun, StudyError, StudyOutcome, StudyPhase, StudyResult, StudySample, StudyTerminal } from "./types.ts";
+import type { StudyModel, StudyOptions, PlannedRun, StudyError, StudyOutcome, StudyPhase, StudyResult, StudySample, StudyTerminal } from "./types.ts";
 import { replicate } from "./design.ts";
 import { callback, cloneData, integer, name, studyLimits, synchronous, validateOptions } from "./validation.ts";
 
 function errorDetails(error: unknown): { name: string; message: string } {
   return error instanceof Error ? { name: error.name, message: error.message } : { name: "Error", message: String(error) };
 }
-function copyPlan<Parameters>(options: Pick<ExperimentOptions<Parameters, ExperimentModel, unknown>, "parameters" | "seeds" | "plan">): readonly PlannedRun<Parameters>[] {
+function copyPlan<Parameters>(options: Pick<StudyOptions<Parameters, StudyModel, unknown>, "parameters" | "seeds" | "plan">): readonly PlannedRun<Parameters>[] {
   if (options.plan === undefined) {
     if (!Array.isArray(options.parameters)) throw new TypeError("Study parameters must be an array.");
     return replicate(options.parameters.map((parameters, index) => ({ id: `scenario-${index}`, index, parameters })), options.seeds!);
@@ -42,8 +42,8 @@ function booleanResult(value: unknown): boolean {
   return value;
 }
 
-function execute<Parameters, Model extends ExperimentModel, Measurements>(
-  identity: PlannedRun<Parameters>, options: ExperimentOptions<Parameters, Model, Measurements>, every: number,
+function execute<Parameters, Model extends StudyModel, Measurements>(
+  identity: PlannedRun<Parameters>, options: StudyOptions<Parameters, Model, Measurements>, every: number,
 ): StudyOutcome<Parameters, Measurements> {
   let phase: StudyPhase = "create";
   let model: Model | undefined;
@@ -66,7 +66,7 @@ function execute<Parameters, Model extends ExperimentModel, Measurements>(
   try {
     model = synchronous(options.create(cloneData(identity.parameters), identity.seed, cloneData(identity)));
     created = true;
-    if (model === null || typeof model !== "object") throw new TypeError("create must return an ExperimentModel.");
+    if (model === null || typeof model !== "object") throw new TypeError("create must return an StudyModel.");
     worldClock(model.world);
     callback(model.step, "Model step");
     if (model.dispose !== undefined) callback(model.dispose, "Model dispose");
@@ -102,7 +102,7 @@ function execute<Parameters, Model extends ExperimentModel, Measurements>(
   return Object.freeze({ ...terminal, run: identity, completedSteps, samples: Object.freeze(samples) });
 }
 
-export function run<Parameters, Model extends ExperimentModel, Measurements>(options: ExperimentOptions<Parameters, Model, Measurements>): StudyResult<Parameters, Measurements> {
+export function run<Parameters, Model extends StudyModel, Measurements>(options: StudyOptions<Parameters, Model, Measurements>): StudyResult<Parameters, Measurements> {
   validateOptions(options, ["parameters", "seeds", "plan", "create", "steps", "measure", "every", "sampleInitial", "sampleFinal", "sampleWhen", "stopWhen", "onError", "before", "after", "provenance", "maxTotalSteps", "maxTotalSamples", "host"]);
   callback(options.create, "create"); callback(options.measure, "measure");
   for (const key of ["sampleWhen", "stopWhen", "before", "after"] as const)

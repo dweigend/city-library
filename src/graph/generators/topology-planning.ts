@@ -1,9 +1,9 @@
-import type { GeneratorConfig } from "./options.ts";
+import type { GeneratorSpec } from "./options.ts";
 import type { Connection } from "./planning.ts";
 import { edgeLimit } from "./validation.ts";
 
 /** Edition 1 is topology only; births/layout/native RNG/blocks never run here. */
-export function planNwTopology<N>(config: GeneratorConfig<N>): Connection[] {
+export function planTopology<N>(config: GeneratorSpec<N>): Connection[] {
   const count = config.nodes.length;
   const result: Connection[] = [];
   function add(from: number, to: number) {
@@ -51,19 +51,19 @@ export function planNwTopology<N>(config: GeneratorConfig<N>): Connection[] {
       }
     }
   } else if (config.kind === "preferential") {
-    for (let from = 0; from <= config.links; from++) for (let to = from + 1; to <= config.links; to++) add(from, to);
-    for (let node = config.links + 1; node < count; node++) {
+    for (let from = 0; from <= config.edgesPerNode; from++) for (let to = from + 1; to <= config.edgesPerNode; to++) add(from, to);
+    for (let node = config.edgesPerNode + 1; node < count; node++) {
       const poolSize = result.length;
       const selected = new Set<number>();
       const targets: number[] = [];
-      while (targets.length < config.links) {
+      while (targets.length < config.edgesPerNode) {
         const link = result[Math.floor(config.random!.number() * poolSize)]!;
         const target = config.random!.number() < 0.5 ? link[0] : link[1];
         if (!selected.has(target)) { selected.add(target); targets.push(target); }
       }
       for (const target of targets) add(node, target);
     }
-  } else if (config.kind === "smallWorld") {
+  } else if (config.kind === "small-world") {
     const adjacency = Array.from({ length: count }, () => new Set<number>());
     for (let from = 0; from < count; from++) for (let offset = 1; offset <= config.neighbors; offset++) {
       const to = (from + offset) % count;

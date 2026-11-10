@@ -20,9 +20,9 @@ interface AgentMembers<S extends object> extends SpatialMethods {
   delete(): void;
 }
 export type Agent<S extends object = {}> = S & AgentMembers<S>;
-function add(): Agent<{}>;
-function add<S extends object>(state: S, options?: SpatialOptions): Agent<S>;
-function add<S extends object>(
+function create(): Agent<{}>;
+function create<S extends object>(state: S, options?: SpatialOptions): Agent<S>;
+function create<S extends object>(
   state?: S,
   options: SpatialOptions = {},
 ): Agent<S> {
@@ -30,7 +30,7 @@ function add<S extends object>(
     arguments.length > 2 ||
     (arguments.length > 1 && arguments[1] === undefined)
   )
-    throw new TypeError("Agent.add accepts state and spatial options.");
+    throw new TypeError("Agent.create accepts state and spatial options.");
   const opts = validateOptions(options, [
     "position",
     "orientation",
@@ -65,7 +65,7 @@ function add<S extends object>(
             Object.getOwnPropertyDescriptor(agent, key)!,
           );
         }
-        return add(state, {
+        return create(state, {
           position: spatial.position(),
           orientation: spatial.orientation(),
         });
@@ -87,4 +87,4 @@ function add<S extends object>(
   Object.defineProperties(agent, properties);
   return agent;
 }
-export const Agent = Object.freeze({ add });
+export const Agent = Object.freeze({ create });
