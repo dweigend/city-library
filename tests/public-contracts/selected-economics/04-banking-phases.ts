@@ -1,0 +1,21 @@
+import assert from "node:assert/strict";
+import { create as cashFlow } from "../../../models/cash-flow/model.ts";
+import { create as reserves } from "../../../models/bank-reserves/model.ts";
+const c = cashFlow({ people: 1, reserves: 21, seed: 1 });
+const cw = c.read().walletsTotal;
+assert.ok(cw === 0 || cw === 10); assert.equal(c.read().savingsTotal, 0);
+c.advance(); const cs = c.read();
+assert.equal(cs.tick, 1); assert.equal(cs.walletsTotal, 0); assert.equal(cs.savingsTotal, cw);
+assert.equal(cs.bankDeposits, cw); assert.equal(cs.bankReserves, cw * .21);
+assert.equal(cs.bankToLoan, cw - cw * .21); assert.equal(cs.moneyTotal - cs.loansTotal, cw);
+const b = reserves({ people: 1, reserves: 52, seed: 1 });
+const bw = b.read().walletsTotal; assert.ok(bw >= 1 && bw <= 10);
+b.advance(); assert.equal(b.read().walletsTotal, bw); assert.equal(b.read().savingsTotal, 0);
+b.advance(); assert.equal(b.read().walletsTotal, 0); assert.equal(b.read().savingsTotal, bw);
+assert.equal(b.read().bankDeposits, 0); // bank sheet is a separate third phase
+b.advance(); const bs = b.read(); assert.equal(bs.tick, 3); assert.equal(bs.bankDeposits, bw);
+assert.equal(bs.bankReserves, bw * .52); assert.equal(bs.bankToLoan, bw - bw * .52);
+assert.equal(bs.moneyTotal - bs.loansTotal, bw);
+const empty = reserves({ people: 0 }); empty.advance(3);
+assert.equal(empty.read().tick, 3); assert.equal(empty.read().moneyTotal, 0);
+console.log("banking-phases: one-cycle versus three-phase balance sheets and source monetary identity");

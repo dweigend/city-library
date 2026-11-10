@@ -782,8 +782,260 @@
       "originalSha256": "ff46d354986d65d2c141278a2ab7c5b900ea7c6bd738ebdc193d92cc9e2477b3",
       "migratedSha256": "e6dee58746e6938abb14c69f5cc8e2fe7f25625cba290fdddff6e4512b0853a5",
       "change": "experiments/ -> models/ in import paths only"
+    },
+    {
+      "manifest": null,
+      "file": "examples/ui-des-scenes/02-bounded-slots.ts",
+      "originalSha256": "3d3804a62cc9b431b643e71d6ac1287b8b2bbbb4266eaecfb40873d689645c93",
+      "migratedSha256": "9262d1bc20113879bc960efb8f7b8195b053835e2817fab779bde8d2ec2d698c",
+      "change": "Relative import paths only: experiments/ -> models/; assertions, callbacks and expected values unchanged.",
+      "integrationMain": "429fd627724b0db9fff4da9c81d45ebde4e07fbc",
+      "originalRevision": "754e4cc0bb1afb5b417aeda1d918d3b654c8c85f"
+    },
+    {
+      "manifest": null,
+      "file": "examples/ui-des-scenes/01-residents-and-clerks.ts",
+      "originalSha256": "b09987912fcb68b64def3397337f7c8e370a99fb644f9d5a5eaa80a01852109f",
+      "migratedSha256": "8e2ac94f13de343b893f092d216d08cab52584c27c11946a78129978a9769094",
+      "change": "Relative import paths only: experiments/ -> models/; assertions, callbacks and expected values unchanged.",
+      "integrationMain": "429fd627724b0db9fff4da9c81d45ebde4e07fbc",
+      "originalRevision": "754e4cc0bb1afb5b417aeda1d918d3b654c8c85f"
+    },
+    {
+      "manifest": null,
+      "file": "examples/des-elevator/05-validation-arrivals-and-budget.ts",
+      "originalSha256": "fc3f75c3107b4ad150e0831ce202ef3be2e738497833981418ce02b95fd3f7e3",
+      "migratedSha256": "18b328e0981649b9173fc265e17731ab3b4934d45b1940670e09966d9c8b99c4",
+      "change": "Relative import paths only: experiments/ -> models/; assertions, callbacks and expected values unchanged.",
+      "integrationMain": "429fd627724b0db9fff4da9c81d45ebde4e07fbc",
+      "originalRevision": "754e4cc0bb1afb5b417aeda1d918d3b654c8c85f"
+    },
+    {
+      "manifest": null,
+      "file": "examples/des-elevator/03-alight-before-board.ts",
+      "originalSha256": "fb2ea55413d36aebdbdc1353b441e624071cdd0894a338d975fc3d9388daf68b",
+      "migratedSha256": "b965daed4cb011e5d621bfe374b8edc50c63a233f572a1ce8954067f6311ae62",
+      "change": "Relative import paths only: experiments/ -> models/; assertions, callbacks and expected values unchanged.",
+      "integrationMain": "429fd627724b0db9fff4da9c81d45ebde4e07fbc",
+      "originalRevision": "754e4cc0bb1afb5b417aeda1d918d3b654c8c85f"
+    },
+    {
+      "manifest": null,
+      "file": "examples/des-elevator/01-single-trip.ts",
+      "originalSha256": "94709ae8f58269e09710f608f7c1389d09a8af8d80eb4dcbc2f27248f3300a4f",
+      "migratedSha256": "88fa46c92013e81d011f5ed54ee1e1ff35446aae8b4da98e2c958578471b94c9",
+      "change": "Relative import paths only: experiments/ -> models/; assertions, callbacks and expected values unchanged.",
+      "integrationMain": "429fd627724b0db9fff4da9c81d45ebde4e07fbc",
+      "originalRevision": "754e4cc0bb1afb5b417aeda1d918d3b654c8c85f"
+    },
+    {
+      "manifest": null,
+      "file": "examples/des-elevator/02-full-call-persists.ts",
+      "originalSha256": "38d37e20b04559106cf21c09327446953bbd52cc1a7646e52313074708894a5b",
+      "migratedSha256": "6440917110e063205ffecdf8eab2690ef2c0285636d90bd5bdc133e2c30cf47d",
+      "change": "Relative import paths only: experiments/ -> models/; assertions, callbacks and expected values unchanged.",
+      "integrationMain": "429fd627724b0db9fff4da9c81d45ebde4e07fbc",
+      "originalRevision": "754e4cc0bb1afb5b417aeda1d918d3b654c8c85f"
+    },
+    {
+      "manifest": null,
+      "file": "examples/des-elevator/04-multiple-cars-and-oldest-call.ts",
+      "originalSha256": "99bf5104b35db11c8b9289778009a5ab0d5702e631be4cf5f7bf1c95d0ddef4e",
+      "migratedSha256": "b03d2af8304f5dbec21ca2d282afad83d622b64a51b28f67396505af6b344aa6",
+      "change": "Relative import paths only: experiments/ -> models/; assertions, callbacks and expected values unchanged.",
+      "integrationMain": "429fd627724b0db9fff4da9c81d45ebde4e07fbc",
+      "originalRevision": "754e4cc0bb1afb5b417aeda1d918d3b654c8c85f"
+    },
+    {
+      "manifest": "examples/ui-collections/SHA256SUMS",
+      "file": "examples/ui-collections/02-priority-and-retained-capacity.ts",
+      "originalSha256": "e7c76373fad7da29e1243bca5c246f5ab4c485b9e48d9b5018c5dfaa7120ce84",
+      "migratedSha256": "b84773fff62e239359e810ebb16a8619e045cff588bb16089f12d0fcf6ab9b28",
+      "change": "Relative import paths only: experiments/ -> models/; assertions, callbacks and expected values unchanged.",
+      "integrationMain": "429fd627724b0db9fff4da9c81d45ebde4e07fbc",
+      "originalRevision": "754e4cc0bb1afb5b417aeda1d918d3b654c8c85f"
+    },
+    {
+      "manifest": "examples/ui-collections/SHA256SUMS",
+      "file": "examples/ui-collections/01-store-items.ts",
+      "originalSha256": "54453730a101f11aff7ecf2c41437283fe479666d07ba47bf9399b5ccf135e5f",
+      "migratedSha256": "2544b095871639e6f33351711aa31d88b78e8a775f847d433f39fbafcec55a07",
+      "change": "Relative import paths only: experiments/ -> models/; assertions, callbacks and expected values unchanged.",
+      "integrationMain": "429fd627724b0db9fff4da9c81d45ebde4e07fbc",
+      "originalRevision": "754e4cc0bb1afb5b417aeda1d918d3b654c8c85f"
+    },
+    {
+      "manifest": "examples/ui-live-changes/SHA256SUMS",
+      "file": "examples/ui-live-changes/02-binding-override.ts",
+      "originalSha256": "780755b2afa23e61a7c21a311c24bd1d032cd503179d99027ebb8468d470747b",
+      "migratedSha256": "704275eb1949896ae98766a7ade996393beb94af8aed361c640f409ca7995b1b",
+      "change": "Relative import paths only: experiments/ -> models/; assertions, callbacks and expected values unchanged.",
+      "integrationMain": "429fd627724b0db9fff4da9c81d45ebde4e07fbc",
+      "originalRevision": "754e4cc0bb1afb5b417aeda1d918d3b654c8c85f"
+    },
+    {
+      "manifest": "examples/ui-live-changes/SHA256SUMS",
+      "file": "examples/ui-live-changes/03-groups-labels-enabled.ts",
+      "originalSha256": "5ab54a9e2ab7604cab5bcf2ceb5012941cd2e1cae5a9915b51153b4c8783266e",
+      "migratedSha256": "0ac3f6ab338c2e6b00b9c76b36438481749edd70084ff320ab8a2a1bb51ecc67",
+      "change": "Relative import paths only: experiments/ -> models/; assertions, callbacks and expected values unchanged.",
+      "integrationMain": "429fd627724b0db9fff4da9c81d45ebde4e07fbc",
+      "originalRevision": "754e4cc0bb1afb5b417aeda1d918d3b654c8c85f"
+    },
+    {
+      "manifest": "examples/ui-live-changes/SHA256SUMS",
+      "file": "examples/ui-live-changes/05-stable-chart-colors.ts",
+      "originalSha256": "158f1aea55184f96fc99f209df52ae471f105b6a1992f4af9bfc97d6bf3d9bbe",
+      "migratedSha256": "aea636c88107f5593bc6a5407ec5a56da95fadf80ee479e3ff79cc66a4595afd",
+      "change": "Relative import paths only: experiments/ -> models/; assertions, callbacks and expected values unchanged.",
+      "integrationMain": "429fd627724b0db9fff4da9c81d45ebde4e07fbc",
+      "originalRevision": "754e4cc0bb1afb5b417aeda1d918d3b654c8c85f"
+    },
+    {
+      "manifest": "examples/ui-live-changes/SHA256SUMS",
+      "file": "examples/ui-live-changes/04-drafts-errors-and-legacy.ts",
+      "originalSha256": "2b6201d5b7593211e6eee40d90f85ebb85a7b4a5fac0876e9fd271b495cf0c55",
+      "migratedSha256": "9bb475dcb6c3e392cd3df1fbaae5ccfea2b573b2a7816e322e27d90c4e11d6bd",
+      "change": "Relative import paths only: experiments/ -> models/; assertions, callbacks and expected values unchanged.",
+      "integrationMain": "429fd627724b0db9fff4da9c81d45ebde4e07fbc",
+      "originalRevision": "754e4cc0bb1afb5b417aeda1d918d3b654c8c85f"
+    },
+    {
+      "manifest": "examples/ui-live-changes/SHA256SUMS",
+      "file": "examples/ui-live-changes/01-shared-change.ts",
+      "originalSha256": "b4d015708317cd37e61d5697b6e50577e2d8991849d763c7f4d4690bbe0d2d55",
+      "migratedSha256": "e7f513f07c8c6a18bddf51fa4eefc975945666b7f9f04569650fcb8428e5f694",
+      "change": "Relative import paths only: experiments/ -> models/; assertions, callbacks and expected values unchanged.",
+      "integrationMain": "429fd627724b0db9fff4da9c81d45ebde4e07fbc",
+      "originalRevision": "754e4cc0bb1afb5b417aeda1d918d3b654c8c85f"
+    },
+    {
+      "manifest": null,
+      "file": "tests/universal-ui-adversarial.test.ts",
+      "originalSha256": "bbc67ceed6be812aa4a9d829a3e2faf79afefe93bd4c0337ccb6a1f68eaec1b4",
+      "migratedSha256": "b2433cbb63c034c7f26ebe904e0b08132ed2810b8478c8c84f8fa0f89360b764",
+      "change": "Relative import paths only: experiments/ -> models/; assertions, callbacks and expected values unchanged.",
+      "integrationMain": "429fd627724b0db9fff4da9c81d45ebde4e07fbc",
+      "originalRevision": "754e4cc0bb1afb5b417aeda1d918d3b654c8c85f"
+    },
+    {
+      "manifest": null,
+      "file": "tests/des-scenes-a.test.ts",
+      "originalSha256": "6930ce619e7474fc3b93183eb2655f36db9d12085b01d9722b4a586d7b1acfb1",
+      "migratedSha256": "4e313bf1f4c4bf52a1d1a0615fedf60758e00352e42978d50c4a88ccbd7ee838",
+      "change": "Relative import paths only: experiments/ -> models/; assertions, callbacks and expected values unchanged.",
+      "integrationMain": "429fd627724b0db9fff4da9c81d45ebde4e07fbc",
+      "originalRevision": "754e4cc0bb1afb5b417aeda1d918d3b654c8c85f"
+    },
+    {
+      "manifest": null,
+      "file": "tests/des-elevator-adversarial.test.ts",
+      "originalSha256": "ed22fbc8132ee0ab99651ef66b135282955f2709dae54569f7aa7827fced1bb4",
+      "migratedSha256": "635dabbac1d33bb9b39818c20d22811fabad7afa3e4f1124596a57924b5734bc",
+      "change": "Relative import paths only: experiments/ -> models/; assertions, callbacks and expected values unchanged.",
+      "integrationMain": "429fd627724b0db9fff4da9c81d45ebde4e07fbc",
+      "originalRevision": "754e4cc0bb1afb5b417aeda1d918d3b654c8c85f"
+    },
+    {
+      "manifest": null,
+      "file": "tests/des-scene-parity.test.ts",
+      "originalSha256": "d290fff0baef633a88ec155b015cda0cdf7837648bd56a758a78f134bb312fa6",
+      "migratedSha256": "7ebf247ae81db19d821630446eba02309e91aa6d135cb3a1fe1694f9bf2b24b5",
+      "change": "Relative import paths only: experiments/ -> models/; assertions, callbacks and expected values unchanged.",
+      "integrationMain": "429fd627724b0db9fff4da9c81d45ebde4e07fbc",
+      "originalRevision": "754e4cc0bb1afb5b417aeda1d918d3b654c8c85f"
+    },
+    {
+      "manifest": null,
+      "file": "tests/universal-live-changes.test.ts",
+      "originalSha256": "f6da88ef0ec2e533ca260dd3bc3eba6cc98f9e65e935058c6bfd5ed2268bcf69",
+      "migratedSha256": "3b929cfe990829df62c71aea8f7e12f1c5af750ba0f3878452f4674758d92fdb",
+      "change": "Relative import paths only: experiments/ -> models/; assertions, callbacks and expected values unchanged.",
+      "integrationMain": "429fd627724b0db9fff4da9c81d45ebde4e07fbc",
+      "originalRevision": "754e4cc0bb1afb5b417aeda1d918d3b654c8c85f"
+    },
+    {
+      "manifest": null,
+      "file": "tests/des-scenes-b.test.ts",
+      "originalSha256": "7c269cb8240cff6aea957a8bbb9634eedc2a836f51b210aedcf2ac475d999363",
+      "migratedSha256": "78ff04824ce996c7eaa5cbe094fe2810cafee7229af25c8d0796eeb0fb3fbc47",
+      "change": "Relative import paths only: experiments/ -> models/; assertions, callbacks and expected values unchanged.",
+      "integrationMain": "429fd627724b0db9fff4da9c81d45ebde4e07fbc",
+      "originalRevision": "754e4cc0bb1afb5b417aeda1d918d3b654c8c85f"
+    },
+    {
+      "manifest": null,
+      "file": "tests/universal-live-changes.types.ts",
+      "originalSha256": "0e6dce14232bc654f487a667c016ebde427c6730e50614c92dd8aa31691c8f32",
+      "migratedSha256": "3d568e3217098f3b36f234b66d7ad609efa3c1f7d04bcc1413e981c160eb76a1",
+      "change": "Relative import paths only: experiments/ -> models/; assertions, callbacks and expected values unchanged.",
+      "integrationMain": "429fd627724b0db9fff4da9c81d45ebde4e07fbc",
+      "originalRevision": "754e4cc0bb1afb5b417aeda1d918d3b654c8c85f"
+    },
+    {
+      "manifest": "examples/ui-live-changes/SHA256SUMS",
+      "file": "examples/ui-live-changes/README.md",
+      "originalSha256": "da4446331c12997a6a4b5c5a09530ee4a9d381035478b28b2faa10467ef3dc86",
+      "migratedSha256": "c6c4fef764f81222e14f4e82cd96bc614483e26e27068ca69e41e257f4712d0f",
+      "change": "Current commands/docs follow unified main configuration and one Svelte implementation; historical red-gate evidence pinned to754e4cc.",
+      "integrationMain": "429fd627724b0db9fff4da9c81d45ebde4e07fbc",
+      "originalRevision": "754e4cc0bb1afb5b417aeda1d918d3b654c8c85f"
+    },
+    {
+      "manifest": "examples/ui-live-changes/SHA256SUMS",
+      "file": "examples/ui-live-changes/tsconfig.json",
+      "originalSha256": "cd63c7a666a40526fe0b238ffd64e5b88a880506a9bfbaeada621617efdc26d8",
+      "migratedSha256": null,
+      "change": "Retired redundant local config extending deleted tsconfig.ui-examples.json; root consolidated tsconfig includes all scripts and negative fixtures.",
+      "integrationMain": "429fd627724b0db9fff4da9c81d45ebde4e07fbc",
+      "originalRevision": "754e4cc0bb1afb5b417aeda1d918d3b654c8c85f"
+    },
+    {
+      "manifest": null,
+      "file": "examples/ui-live-changes/initial-typecheck.log",
+      "originalSha256": "4dc25d1b7c1dd30bab480ef92d7a4e1e1363336bb1c6f3bd5d9b7e0698da762d",
+      "migratedSha256": null,
+      "change": "Detailed initial diagnostic transcript archived locally; versioned README pins immutable original754e4cc evidence.",
+      "integrationMain": "429fd627724b0db9fff4da9c81d45ebde4e07fbc",
+      "originalRevision": "754e4cc0bb1afb5b417aeda1d918d3b654c8c85f"
+    },
+    {
+      "manifest": "examples/ui-collections/SHA256SUMS",
+      "file": "examples/ui-collections/README.md",
+      "originalSha256": "cbfba38a618a4b4391821595cd611ce4786d566de53759b32e55813daa76a5e4",
+      "migratedSha256": "44746139527110258fdf5e83759342396f037c38d8fb3e74bf486e755f9b476c",
+      "change": "Current commands/docs follow unified main configuration and one Svelte implementation; historical red-gate evidence pinned to754e4cc.",
+      "integrationMain": "429fd627724b0db9fff4da9c81d45ebde4e07fbc",
+      "originalRevision": "754e4cc0bb1afb5b417aeda1d918d3b654c8c85f"
+    },
+    {
+      "manifest": "examples/ui-collections/SHA256SUMS",
+      "file": "examples/ui-collections/tsconfig.json",
+      "originalSha256": "cd63c7a666a40526fe0b238ffd64e5b88a880506a9bfbaeada621617efdc26d8",
+      "migratedSha256": null,
+      "change": "Retired redundant local config extending deleted tsconfig.ui-examples.json; root consolidated tsconfig includes all scripts and negative fixtures.",
+      "integrationMain": "429fd627724b0db9fff4da9c81d45ebde4e07fbc",
+      "originalRevision": "754e4cc0bb1afb5b417aeda1d918d3b654c8c85f"
+    },
+    {
+      "manifest": null,
+      "file": "examples/ui-collections/initial-runtime.log",
+      "originalSha256": "e6da4f194915986f215d03489dfa7e0aca7c39b120ed7c3be583a06045f6cb5e",
+      "migratedSha256": null,
+      "change": "Detailed initial diagnostic transcript archived locally; versioned README pins immutable original754e4cc evidence.",
+      "integrationMain": "429fd627724b0db9fff4da9c81d45ebde4e07fbc",
+      "originalRevision": "754e4cc0bb1afb5b417aeda1d918d3b654c8c85f"
+    },
+    {
+      "manifest": null,
+      "file": "examples/ui-collections/initial-typecheck.log",
+      "originalSha256": "a971a8f1dc48d65cfc1bfd94bd593fe4dcf97111f8f202ddd96a058b6e996d08",
+      "migratedSha256": null,
+      "change": "Detailed initial diagnostic transcript archived locally; versioned README pins immutable original754e4cc evidence.",
+      "integrationMain": "429fd627724b0db9fff4da9c81d45ebde4e07fbc",
+      "originalRevision": "754e4cc0bb1afb5b417aeda1d918d3b654c8c85f"
     }
   ],
   "unresolved": [],
-  "scope": "Mechanical repository path migration only. Original manifest hashes are retained here. baselineManifestMismatch identifies entries already stale against the base file; no assertion changes were made in this migration."
+  "scope": "Mechanical repository path migration only. Original manifest hashes are retained here. baselineManifestMismatch identifies entries already stale against the base file; no assertion changes were made in this migration. New feature records separately identify the original feature revision, integration main, import-only updates and explicit retired redundant config/log artifacts."
 }

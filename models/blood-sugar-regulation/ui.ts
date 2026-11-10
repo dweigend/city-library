@@ -4,23 +4,12 @@ import { model } from "./model.ts";
 
 const binding = defineUI(model, {
   setup: ["seed"],
+  change: (instance, changes) => instance.setParameters(changes),
   live: {
-    metabolicRate: {
-      set: (instance, value) =>
-        instance.setParameters({ metabolicRate: value }),
-    },
-    glucoseSensitivity: {
-      set: (instance, value) =>
-        instance.setParameters({ glucoseSensitivity: value }),
-    },
-    insulinSensitivity: {
-      set: (instance, value) =>
-        instance.setParameters({ insulinSensitivity: value }),
-    },
-    glucagonSensitivity: {
-      set: (instance, value) =>
-        instance.setParameters({ glucagonSensitivity: value }),
-    },
+    metabolicRate: {},
+    glucoseSensitivity: {},
+    insulinSensitivity: {},
+    glucagonSensitivity: {},
   },
   actions: [
     { label: "Eat", run: (instance) => instance.eat() },

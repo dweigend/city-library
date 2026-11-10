@@ -45,4 +45,4 @@ The [UI binding](ui.ts) presents `Tick`, `Particles`, `Temporary candidates`, `S
 
 Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained NetLogo source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
 
-[Local evidence](evidence/) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `sunflower-emergent` and links any shared checks.
+[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `sunflower-emergent` and links any shared checks.

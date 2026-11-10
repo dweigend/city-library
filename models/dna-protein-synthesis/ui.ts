@@ -3,17 +3,11 @@ import { model } from "./model.ts";
 
 const binding = defineUI(model, {
   setup: ["seed", "initialDNAString", "userCreatedCode"],
+  change: (instance, changes) => instance.setParameters(changes),
   live: {
-    nucleotidesAffected: {
-      set: (instance, value) =>
-        instance.setParameters({ nucleotidesAffected: value }),
-    },
-    mutationType: {
-      set: (instance, value) => instance.setParameters({ mutationType: value }),
-    },
-    showGenes: {
-      set: (instance, value) => instance.setParameters({ showGenes: value }),
-    },
+    nucleotidesAffected: {},
+    mutationType: {},
+    showGenes: {},
   },
   actions: [
     {

@@ -44,7 +44,7 @@ The focused tests verify actual centered field geometry and detached snapshots; 
 - `python3 /tmp/mesa-visual-independent/compare.py`: all ten baseline/trajectory/read/projection comparisons passed at the six requested boundaries, with no ID normalization.
 - `bun run typecheck`: passed all configured TypeScript projects and Svelte checks; Svelte reported 0 errors and 0 warnings.
 - `bun test tests/mesa-heat-visual.test.ts tests/mesa-resource-visuals.test.ts tests/mesa-social-visuals.test.ts tests/mesa-models.test.ts tests/mesa-occupancy.test.ts tests/mesa-integration.test.ts`: **43 tests passed, 0 failed, 403 assertions**.
-- Each unchanged script in `examples/mesa-measurements`, `examples/mesa-dynamics` and `examples/mesa-attachment` executed through Bun: **all 14 public scripts passed**.
+- Each unchanged script in `tests/public-contracts/mesa-measurements`, `tests/public-contracts/mesa-dynamics` and `tests/public-contracts/mesa-attachment` executed through Bun: **all 14 public scripts passed**.
 - `CITY_LIBRARY_UI_RUNTIME=svelte bun run build:ui:svelte`: passed in 1.85 seconds, then passed again in1.42 seconds after the late Zoning panel/caption change. The existing chunk-size advisory remains; it is not a build failure.
 - A direct import/source scan found no UI/browser dependencies in the ten headless model files. UI imports were also executed in the fresh Bun comparison processes without DOM globals.
 

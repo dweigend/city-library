@@ -6,22 +6,13 @@ export const ui = defineUI(model, {
     url: "https://ccl.northwestern.edu/netlogo/models/PageRank",
     label: "Stonedahl & Wilensky · CC BY-NC-SA 3.0",
   },
+  change: (instance, changes) => instance.setParameters(changes),
   live: {
-    calculationMethod: {
-      set: (m, v) => m.setParameters({ calculationMethod: v }),
-    },
-    dampingFactor: {
-      set: (m, v) => m.setParameters({ dampingFactor: v }),
-    },
-    numberOfSurfers: {
-      set: (m, v) => m.setParameters({ numberOfSurfers: v }),
-    },
-    watchSurfers: {
-      set: (m, v) => m.setParameters({ watchSurfers: v }),
-    },
-    showPageRanks: {
-      set: (m, v) => m.setParameters({ showPageRanks: v }),
-    },
+    calculationMethod: {},
+    dampingFactor: {},
+    numberOfSurfers: {},
+    watchSurfers: {},
+    showPageRanks: {},
   },
   monitors: [
     { label: "Tick", value: (s) => s.tick },

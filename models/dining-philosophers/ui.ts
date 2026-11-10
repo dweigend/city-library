@@ -7,16 +7,11 @@ export const ui = defineUI(model, {
     url: "https://ccl.northwestern.edu/netlogo/models/DiningPhilosophers",
     label: "Wilensky · CC BY-NC-SA 3.0",
   },
+  change: (instance, changes) => instance.setParameters(changes),
   live: {
-    hungryChance: {
-      set: (m, v) => m.setParameters({ hungryChance: v }),
-    },
-    fullChance: {
-      set: (m, v) => m.setParameters({ fullChance: v }),
-    },
-    cooperation: {
-      set: (m, v) => m.setParameters({ cooperation: v }),
-    },
+    hungryChance: {},
+    fullChance: {},
+    cooperation: {},
   },
   monitors: [
     { label: "Tick", value: (s) => s.tick },

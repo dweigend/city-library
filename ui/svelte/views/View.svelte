@@ -8,6 +8,7 @@
   import type { DrawingIntent, Inspector, NetworkNode, View as ViewSpec } from "../../definition.ts";
   import { mountCanvas } from "../../views/canvas.ts";
   import { mountNetwork } from "../../views/network.ts";
+  import { tablePage } from "../../views/table-page.ts";
   import { mountChart } from "../../views/chart.ts";
   import { readRendererTheme } from "./theme.ts";
   import "./views.css";
@@ -36,6 +37,8 @@
   let labels = $state(false);
   let rows = $state<readonly Readonly<Record<string, string | number | boolean>>[]>([]);
   let inspected = $state<Readonly<Record<string, string | number | boolean>>>();
+  let page = $state(0);
+  const visible = $derived(tablePage(rows, page));
   const columns = $derived(Object.keys(rows[0] ?? {}));
   const items = $derived(nodes.map((node, index) => ({ value: node.id, label: node.label ?? `Node ${index + 1}` })));
 
@@ -92,7 +95,11 @@
         const data = current.data(value);
         labelControl = data.showLabels === undefined && data.agents.some(agent => Boolean(agent.label));
       }
-      if (current.type === "table") rows = current.rows(value).slice(0, 200);
+      if (current.type === "table") {
+        const projectedRows = current.rows(value);
+        page = tablePage(projectedRows, untrack(() => page)).page;
+        rows = projectedRows;
+      }
       if (current.type === "inspector") inspected = current.value(value, id);
       untrack(() => mounted?.update(value, id, enabled));
     } catch (error) { untrack(() => onerror(error)); }
@@ -131,11 +138,18 @@
           {#each columns as key (key)}<Table.Head>{key}</Table.Head>{/each}
         </Table.Row></Table.Header>
         <Table.Body>
-          {#each rows as row}<Table.Row>
+          {#each visible.rows as row}<Table.Row>
             {#each columns as key (key)}<Table.Cell>{String(row[key] ?? "")}</Table.Cell>{/each}
           </Table.Row>{/each}
         </Table.Body>
       </Table.Root>
+      {#if visible.paged}
+        <div class="model-view-actions" data-pagination>
+          <Button variant="outline" size="sm" disabled={!visible.previous} onclick={() => page--}>Previous rows</Button>
+          <output aria-label="Visible rows">{visible.range}</output>
+          <Button variant="outline" size="sm" disabled={!visible.next} onclick={() => page++}>Next rows</Button>
+        </div>
+      {:else if rows.length === 0}<p>No rows</p>{/if}
     {:else if view.type === "inspector" && inspected}
       <dl class="model-inspector">
         {#each Object.entries(inspected) as [key, value] (key)}<dt>{key}</dt><dd>{String(value)}</dd>{/each}

@@ -6,45 +6,18 @@ const numbers = new Intl.NumberFormat("en", { maximumFractionDigits: 3 });
 
 const binding = defineUI(model, {
   setup: ["seed", "initialPeople", "initialAmbulance"],
+  change: (instance, changes) => instance.setParameters(changes),
   live: {
-    infectionChance: {
-      set: (instance, value) =>
-        instance.setParameters({ infectionChance: value }),
-    },
-    recoveryChance: {
-      set: (instance, value) =>
-        instance.setParameters({ recoveryChance: value }),
-    },
-    averageRecoveryTime: {
-      set: (instance, value) =>
-        instance.setParameters({ averageRecoveryTime: value }),
-    },
-    averageIsolationTendency: {
-      set: (instance, value) =>
-        instance.setParameters({ averageIsolationTendency: value }),
-    },
-    inoculationChance: {
-      set: (instance, value) =>
-        instance.setParameters({ inoculationChance: value }),
-    },
-    averageHospitalGoingTendency: {
-      set: (instance, value) =>
-        instance.setParameters({ averageHospitalGoingTendency: value }),
-    },
-    intraMobility: {
-      set: (instance, value) =>
-        instance.setParameters({ intraMobility: value }),
-    },
-    travelTendency: {
-      set: (instance, value) =>
-        instance.setParameters({ travelTendency: value }),
-    },
-    edges: {
-      set: (instance, value) => instance.setParameters({ edges: value }),
-    },
-    travel: {
-      set: (instance, value) => instance.setParameters({ travel: value }),
-    },
+    infectionChance: {},
+    recoveryChance: {},
+    averageRecoveryTime: {},
+    averageIsolationTendency: {},
+    inoculationChance: {},
+    averageHospitalGoingTendency: {},
+    intraMobility: {},
+    travelTendency: {},
+    edges: {},
+    travel: {},
   },
   actions: [],
   complete: (state) => state.stopped,

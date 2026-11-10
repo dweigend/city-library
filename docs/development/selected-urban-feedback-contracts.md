@@ -111,7 +111,7 @@ Use the shared headless/source-timed approach: canonical Field numeric colorNumb
 
 ## Public examples
 
-Public examples under `examples/selected-urban-feedback/` use public model entries, assertions and detached observations.
+Public examples under `tests/public-contracts/selected-urban-feedback/` use public model entries, assertions and detached observations.
 
 1. Positive powers/global normalization: exact .25²,.5²,1² with max normalization; descending distribution; alpha1 stable state still ticks; no runtime scientific RNG.
 2. Moore wrap: single corner impulse spreads into exactlynine normalized unit cells across both toroidal boundaries; total9 demonstrates nonconserved normalization.

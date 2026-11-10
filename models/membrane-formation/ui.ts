@@ -3,22 +3,12 @@ import { model } from "./model.ts";
 
 const binding = defineUI(model, {
   setup: ["seed", "numWater", "numLipids"],
+  change: (instance, changes) => instance.setParameters(changes),
   live: {
-    waterWaterForce: {
-      set: (instance, value) =>
-        instance.setParameters({ waterWaterForce: value }),
-    },
-    waterOilForce: {
-      set: (instance, value) =>
-        instance.setParameters({ waterOilForce: value }),
-    },
-    tooCloseForce: {
-      set: (instance, value) =>
-        instance.setParameters({ tooCloseForce: value }),
-    },
-    randomForce: {
-      set: (instance, value) => instance.setParameters({ randomForce: value }),
-    },
+    waterWaterForce: {},
+    waterOilForce: {},
+    tooCloseForce: {},
+    randomForce: {},
   },
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Membrane%20Formation.nlogox",

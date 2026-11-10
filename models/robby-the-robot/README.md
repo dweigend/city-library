@@ -41,4 +41,4 @@ The [UI binding](ui.ts) presents `Next population`, `Mutation probability`, `Gen
 
 Attribution and rights: [NOTICE.md](NOTICE.md). Baseline: [retained NetLogo source](source.nlogox). [Research and publication references](research.json) describe source-level scientific context, not empirical validation of this implementation.
 
-[Local evidence](evidence/) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `robby-the-robot` and links any shared checks.
+[Local evidence](evidence) holds model-specific records. The [catalog ledger](../catalog/progress.json) owns acceptance stages for `robby-the-robot` and links any shared checks.

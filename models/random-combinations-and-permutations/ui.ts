@@ -16,19 +16,12 @@ export const ui = defineUI(model, {
     label: "Wilensky (2004) · CC BY-NC-SA 3.0",
   },
   complete: (s) => s.done,
+  change: (instance, changes) => instance.setRules(changes),
   live: {
-    singleSuccess: {
-      set: (m, v) => m.setRules({ singleSuccess: v }),
-    },
-    analysisType: {
-      set: (m, v) => m.setRules({ analysisType: v }),
-    },
-    bars: {
-      set: (m, v) => m.setRules({ bars: v }),
-    },
-    sampleSize: {
-      set: (m, v) => m.setRules({ sampleSize: v }),
-    },
+    singleSuccess: {},
+    analysisType: {},
+    bars: {},
+    sampleSize: {},
   },
   actions: [
     {

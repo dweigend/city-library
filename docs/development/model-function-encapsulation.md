@@ -8,7 +8,7 @@ Taxi and both Traffic factories show `go` and `step` first. Their callers use `s
 
 `read`/`snapshot` expose `occupiedCabs` and `totalIncome`. These derive from canonical cab vacancy/completed-income values using the existing UI aggregation equations. They are not separately stored counters, predictions or new income rules. UI monitors consume these reporters.
 
-[Public model-consumer examples](../../examples/model-authoring/README.md) assert consistency with cab/history records, observation purity, detachment, rule edits, instance isolation and replay/accounting.
+[Public model-consumer examples](../../tests/public-contracts/model-authoring/README.md) assert consistency with cab/history records, observation purity, detachment, rule edits, instance isolation and replay/accounting.
 
 ## Tijuana procedure matrix
 

@@ -20,9 +20,9 @@ for contrasting models, subject to the plan's generalization gate.
 
 ## Target verification
 
-- `bun run examples:city`: passed all four ready scripts with assertions.
+- `bun run contracts:city`: passed all four ready scripts with assertions.
 - `bun run typecheck:city`: passed.
-- `bun run examples:city:targets`: exit 1 at the unchanged absent corridor after
+- `bun run contracts:city:targets`: exit 1 at the unchanged absent corridor after
   all four ready scripts run.
 - `bun run typecheck:city:targets`: exit 1 for the same three missing geometric
   methods and five downstream implicit-any diagnostics.

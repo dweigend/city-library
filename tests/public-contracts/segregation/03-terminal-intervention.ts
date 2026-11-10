@@ -1,0 +1,18 @@
+import assert from "node:assert/strict";
+import { create } from "../../../models/segregation/model.ts";
+const m = create({width:5,height:5,similarWanted:0});
+m.setResidents([{x:0,y:0,group:"blue"},{x:1,y:0,group:"orange"}]);
+assert.equal(m.read().done,true);
+const rng = m.read().randomState;
+m.advance(10);
+assert.equal(m.read().tick,0);
+assert.deepEqual(m.read().randomState,rng);
+m.setRules({similarWanted:100});
+assert.equal(m.read().done,false);
+assert.equal(m.read().counts.unhappy,2);
+m.advance();
+assert.equal(m.read().tick,1);
+m.setResidents([]);
+assert.equal(m.read().percentSimilar,0);
+assert.equal(m.read().percentUnhappy,0);
+assert.equal(m.read().done,true);

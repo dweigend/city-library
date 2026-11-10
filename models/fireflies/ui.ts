@@ -7,22 +7,13 @@ export const ui = defineUI(model, {
     url: "https://ccl.northwestern.edu/netlogo/models/Fireflies",
     label: "Original NetLogo model · Wilensky · CC BY-NC-SA 3.0",
   },
+  change: (instance, changes) => instance.setRules(changes),
   live: {
-    strategy: {
-      set: (m, v) => m.setRules({ strategy: v }),
-    },
-    flashLength: {
-      set: (m, v) => m.setRules({ flashLength: v }),
-    },
-    cycleLength: {
-      set: (m, v) => m.setRules({ cycleLength: v }),
-    },
-    flashesToReset: {
-      set: (m, v) => m.setRules({ flashesToReset: v }),
-    },
-    showDarkFireflies: {
-      set: (m, v) => m.setRules({ showDarkFireflies: v }),
-    },
+    strategy: {},
+    flashLength: {},
+    cycleLength: {},
+    flashesToReset: {},
+    showDarkFireflies: {},
   },
   monitors: [
     { label: "Tick", value: (s) => s.tick },

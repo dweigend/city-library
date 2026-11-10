@@ -1,0 +1,23 @@
+import assert from "node:assert/strict";
+import { create } from "../../../models/des-elevator/model.ts";
+
+const elevator = create({ floors: 3, elevators: 1, capacity: 1, travelTime: 1, doorTime: 1, transferTime: 1, initialPassengers: 0 });
+assert.equal(elevator.addPassenger(0, 2), 1);
+assert.equal(elevator.read().tick, 0);
+assert.equal(elevator.read().waiting, 1);
+elevator.advance(2);
+assert.equal(elevator.read().passengers[0]!.boarded, 2);
+assert.equal(elevator.read().riding, 1);
+assert.equal(elevator.read().cars[0]!.used, 1);
+elevator.advance(5);
+const delivered = elevator.read();
+assert.equal(delivered.passengers[0]!.arrived, 7);
+assert.equal(delivered.arrived, 1);
+assert.equal(delivered.waiting + delivered.riding, 0);
+assert.equal(delivered.meanWait, 2);
+assert.equal(delivered.meanRide, 5);
+assert.equal(delivered.meanSystem, 7);
+elevator.advance();
+assert.equal(elevator.read().cars[0]!.status, "idle");
+assert.equal(elevator.read().time, 8);
+assert.equal(elevator.read().tick, 8);

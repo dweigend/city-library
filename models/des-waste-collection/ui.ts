@@ -1,5 +1,6 @@
 import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
+import { scene } from "./scene.ts";
 export const ui = defineUI(model, {
   monitors: [
     { label: "Time (min)", value: (state) => state.time },
@@ -8,10 +9,7 @@ export const ui = defineUI(model, {
     { label: "Delivered", value: (state) => state.delivered },
   ],
   views: [
-    { type: "spatial", label: "Collection sites and truck", data: (state) => ({ width: 6, height: 4, agents: [
-      ...state.fields.map((field) => ({ id: field.id, x: field.x, y: field.y, label: String(field.waste) })),
-      { ...state.truck, label: `Truck: ${state.carried}`, shape: "triangle" },
-    ] }) },
+    { type: "spatial", label: "Collection patches and truck", data: scene },
     { type: "line", label: "Depot deliveries", xAxis: { unit: "min" }, yAxis: { unit: "load units" }, series: (state) => [{ label: "Delivered", points: state.history }] },
   ],
 });

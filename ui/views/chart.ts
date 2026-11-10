@@ -94,6 +94,9 @@ export function mountChart<M extends Mode = "line">(
   let viewportHeight = intrinsicHeight;
   let lastData: ReturnType<typeof prepareChartData> | undefined;
   let disposed = false;
+  // Color identity belongs to this mounted view, never to model state.
+  const seriesSlots = new Map<string, number>();
+  let nextSeriesSlot = 0;
   svg.setAttribute("viewBox", `0 0 ${viewportWidth} ${viewportHeight}`);
   svg.setAttribute("role", "img");
   container.append(svg);
@@ -137,8 +140,17 @@ export function mountChart<M extends Mode = "line">(
         text(yAxis, 14, center, "middle").setAttribute("transform", `rotate(-90 14 ${center})`);
       }
       const palette = options.theme?.().series ?? ["#287e9b", "#b45309", "#4c8b54", "#9759a2"];
+      const labelCounts = new Map<string, number>();
+      for (const line of data.series) labelCounts.set(line.label, (labelCounts.get(line.label) ?? 0) + 1);
       data.series.forEach((line, index) => {
-        const color = line.color ?? palette[index % palette.length]!;
+        let slot = index;
+        if (labelCounts.get(line.label) === 1) {
+          const existing = seriesSlots.get(line.label);
+          slot = existing ?? Math.max(nextSeriesSlot, index);
+          if (existing === undefined) seriesSlots.set(line.label, slot);
+        }
+        nextSeriesSlot = Math.max(nextSeriesSlot, slot + 1);
+        const color = line.color ?? palette[slot % palette.length]!;
         if (mode === "line") {
           const path = document.createElementNS(ns, "path");
           path.setAttribute("d", line.points.map((point, i) => `${i ? "L" : "M"}${geometry.x(point.x)},${geometry.y(point.y)}`).join(" "));

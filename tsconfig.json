@@ -46,7 +46,6 @@
     "ui/**/*.ts",
     "ui/**/*.svelte",
     "models/**/*.ts",
-    "examples/**/*.ts",
     "tests/**/*.ts",
     "scripts/**/*.ts",
     "vite.config.ts"
@@ -55,7 +54,6 @@
     "node_modules",
     "dist",
     "agent-lab-output",
-    "examples/city-simulation/03-generative-quarter.ts",
-    "examples/giant-component/**/*.ts"
+    "tests/targets/**/*.ts"
   ]
 }

@@ -102,13 +102,13 @@ No headless contract gap is identified. Host work remains: shared grid view must
 
 ## Public acceptance examples
 
-All scripts use only each public model entry, ordinary assertions and detached observations; none imports private runtime, mocks, transcompiled NetLogo or disables checks. [SHA256SUMS](../../examples/selected-urban/SHA256SUMS) records the required example content.
+All scripts use only each public model entry, ordinary assertions and detached observations; none imports private runtime, mocks, transcompiled NetLogo or disables checks. [SHA256SUMS](../../tests/public-contracts/selected-urban/SHA256SUMS) records the required example content.
 
-1. [Awareness contact/expiry](../../examples/selected-urban/01-awareness-contact-and-expiry.ts): movement-before-contact, dynamic recipient exclusion at10, strict center expiry, stale age when painting, repeated activist creation, empty means and nonterminal empty population.
-2. [Pollution phases/stop](../../examples/selected-urban/02-pollution-phases-and-stop.ts): exact Moore impulse8 -> local1.6/neighbors0.8 followed by dying-tree cleanup -> total3; fixed plant reset -> totals3 then5.4; extinction step ticks, later steps freeze.
-3. [Recycling order/energy](../../examples/selected-urban/03-recycling-order-and-energy.ts): recycler restores before wasteful consumes shared patch, costs before movement, zero-energy survival, no automatic population terminal.
-4. [Defaults/isolation/validation](../../examples/selected-urban/04-defaults-isolation-and-validation.ts): exact source dimensions/counts/initial totals, independent instances, detached frozen snapshots and atomic rejection of malformed fixtures/out-of-step rules.
-5. [Live seeking/cap](../../examples/selected-urban/05-live-seeking-and-cap.ts): seek new neighbor, process origin before movement, live cap does not rewrite state immediately, refuse over-cap harvest then clamp after moving.
+1. [Awareness contact/expiry](../../tests/public-contracts/selected-urban/01-awareness-contact-and-expiry.ts): movement-before-contact, dynamic recipient exclusion at10, strict center expiry, stale age when painting, repeated activist creation, empty means and nonterminal empty population.
+2. [Pollution phases/stop](../../tests/public-contracts/selected-urban/02-pollution-phases-and-stop.ts): exact Moore impulse8 -> local1.6/neighbors0.8 followed by dying-tree cleanup -> total3; fixed plant reset -> totals3 then5.4; extinction step ticks, later steps freeze.
+3. [Recycling order/energy](../../tests/public-contracts/selected-urban/03-recycling-order-and-energy.ts): recycler restores before wasteful consumes shared patch, costs before movement, zero-energy survival, no automatic population terminal.
+4. [Defaults/isolation/validation](../../tests/public-contracts/selected-urban/04-defaults-isolation-and-validation.ts): exact source dimensions/counts/initial totals, independent instances, detached frozen snapshots and atomic rejection of malformed fixtures/out-of-step rules.
+5. [Live seeking/cap](../../tests/public-contracts/selected-urban/05-live-seeking-and-cap.ts): seek new neighbor, process origin before movement, live cap does not rewrite state immediately, refuse over-cap harvest then clamp after moving.
 
 Additional behavior tests must cover wrap boundaries, strict exposure0.5/birth>4, new births excluded but new trees included, threshold-receiver transient negatives, exact stale ages, over-cap gates, regeneration quantization, repeated centers, no-RNG observations and zero-step/invalid counts. Five scripts deliberately do not exhaust these edge cases.
 

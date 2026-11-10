@@ -3,25 +3,14 @@ import { defineUI, type Observation, type SpatialData } from "../../ui/index.ts"
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
   setup: ["seed", "numberOfMammoths", "numberOfHumans"],
+  change: (instance, changes) => instance.setParameters(changes),
   live: {
-    mammothBirthRate: {
-      set: (m, value) => m.setParameters({ mammothBirthRate: value }),
-    },
-    humanBirthRate: {
-      set: (m, value) => m.setParameters({ humanBirthRate: value }),
-    },
-    mammothSpeed: {
-      set: (m, value) => m.setParameters({ mammothSpeed: value }),
-    },
-    humanSpeed: {
-      set: (m, value) => m.setParameters({ humanSpeed: value }),
-    },
-    oddsOfKilling: {
-      set: (m, value) => m.setParameters({ oddsOfKilling: value }),
-    },
-    climateChangeDecayChance: {
-      set: (m, value) => m.setParameters({ climateChangeDecayChance: value }),
-    },
+    mammothBirthRate: {},
+    humanBirthRate: {},
+    mammothSpeed: {},
+    humanSpeed: {},
+    oddsOfKilling: {},
+    climateChangeDecayChance: {},
   },
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Biology/Evolution/Mammoths.nlogox",

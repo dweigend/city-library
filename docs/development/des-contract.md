@@ -101,4 +101,4 @@ Reuse existing explicit Random uniform, normal, exponential and Poisson distribu
 
 ## Example gates and status
 
-The five scripts in `examples/des/` freeze: causal/tied/budgeted Agenda; resource and queue conservation/lifecycle; store producer-consumer backpressure; explicit state/process/timeouts; time-weighted samples/trace and Random continuation. They use public root imports, assert expected results and initially failed because exports did not yet exist. No mock runtime or disabled assertions are permitted. Ten real model/UI pairs are specified separately in the city-example acceptance document.
+The five scripts in `tests/public-contracts/des/` freeze: causal/tied/budgeted Agenda; resource and queue conservation/lifecycle; store producer-consumer backpressure; explicit state/process/timeouts; time-weighted samples/trace and Random continuation. They use public root imports, assert expected results and initially failed because exports did not yet exist. No mock runtime or disabled assertions are permitted. Ten real model/UI pairs are specified separately in the city-example acceptance document.

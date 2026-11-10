@@ -12,28 +12,19 @@ export const ui = defineUI(model, {
     url: "https://ccl.northwestern.edu/netlogo/models/UrbanSuite-Recycling",
     label: "Original NetLogo model · Felsen and Wilensky · CC BY-NC-SA 3.0",
   },
+  change: (instance, changes) => instance.setRules(changes),
   live: {
     maxStoredEnergy: {
       label: "Maximum energy",
-      set: (instance, value) => instance.setRules({ maxStoredEnergy: value }),
     },
     recyclingWasteCost: {
       label: "Waste recycling cost",
-      set: (instance, value) =>
-        instance.setRules({ recyclingWasteCost: value }),
     },
-    resourceRegeneration: {
-      set: (instance, value) =>
-        instance.setRules({ resourceRegeneration: value }),
-    },
+    resourceRegeneration: {},
     agentsSeekResources: {
       label: "Seek resources",
-      set: (instance, value) =>
-        instance.setRules({ agentsSeekResources: value }),
     },
-    showEnergy: {
-      set: (instance, value) => instance.setRules({ showEnergy: value }),
-    },
+    showEnergy: {},
   },
   monitors: [
     { label: "Tick", value: (state) => state.tick },

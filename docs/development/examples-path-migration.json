@@ -1,0 +1,3557 @@
+{
+  "base": "fe367f231528b78121fafae683a422e840e9a055",
+  "records": [
+    {
+      "source": "examples/a1/01-energy-model.ts",
+      "destination": "tests/public-contracts/a1/01-energy-model.ts",
+      "originalSha256": "78505ddc96116086f3483fcc775eed38012507223560c3297e08878e32b5e629",
+      "assertions": 5,
+      "role": "public-contract",
+      "migratedSha256": "78505ddc96116086f3483fcc775eed38012507223560c3297e08878e32b5e629",
+      "migratedAssertions": 5,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/a1/02-independent-worlds.ts",
+      "destination": "tests/public-contracts/a1/02-independent-worlds.ts",
+      "originalSha256": "305c55532bc43d8700809979dd6270a4e25376b767865fc01d04e867c83cc7ea",
+      "assertions": 11,
+      "role": "public-contract",
+      "migratedSha256": "305c55532bc43d8700809979dd6270a4e25376b767865fc01d04e867c83cc7ea",
+      "migratedAssertions": 11,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/a1/03-membership-lifecycle.ts",
+      "destination": "tests/public-contracts/a1/03-membership-lifecycle.ts",
+      "originalSha256": "792cc60a787d7becf1ae576bcca1000b48662965f9ec7a5fb1461307558955dd",
+      "assertions": 20,
+      "role": "public-contract",
+      "migratedSha256": "792cc60a787d7becf1ae576bcca1000b48662965f9ec7a5fb1461307558955dd",
+      "migratedAssertions": 20,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/a1/04-copy-and-custom-state.ts",
+      "destination": "tests/public-contracts/a1/04-copy-and-custom-state.ts",
+      "originalSha256": "196bb60aa44dc28ee32dc6791238c4697199101f94af757c16bdafc27acaf90a",
+      "assertions": 23,
+      "role": "public-contract",
+      "migratedSha256": "196bb60aa44dc28ee32dc6791238c4697199101f94af757c16bdafc27acaf90a",
+      "migratedAssertions": 23,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/a1/05-execution-errors.ts",
+      "destination": "tests/public-contracts/a1/05-execution-errors.ts",
+      "originalSha256": "3dc95126b5640b9d1727bf14dfec85ffc016482b73e9f33909697b246ebdf437",
+      "assertions": 13,
+      "role": "public-contract",
+      "migratedSha256": "3dc95126b5640b9d1727bf14dfec85ffc016482b73e9f33909697b246ebdf437",
+      "migratedAssertions": 13,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/a2a/01-seeded-draws.ts",
+      "destination": "tests/public-contracts/a2a/01-seeded-draws.ts",
+      "originalSha256": "92ba7a4d03fcd4208d54d814bf34ce2e2213de19054f4ccf1b866baf9041828d",
+      "assertions": 6,
+      "role": "public-contract",
+      "migratedSha256": "92ba7a4d03fcd4208d54d814bf34ce2e2213de19054f4ccf1b866baf9041828d",
+      "migratedAssertions": 6,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/a2a/02-population-selection.ts",
+      "destination": "tests/public-contracts/a2a/02-population-selection.ts",
+      "originalSha256": "076c3d8dd85a4d7e64f744bc049220f99f5904b64c62ab5c4cdb12c945b5fb85",
+      "assertions": 13,
+      "role": "public-contract",
+      "migratedSha256": "076c3d8dd85a4d7e64f744bc049220f99f5904b64c62ab5c4cdb12c945b5fb85",
+      "migratedAssertions": 13,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/a2a/03-stream-continuation.ts",
+      "destination": "tests/public-contracts/a2a/03-stream-continuation.ts",
+      "originalSha256": "db743a593fae2896f9f1ec12c28213acf85d5359519bf8c16f5cbaea5467bb03",
+      "assertions": 17,
+      "role": "public-contract",
+      "migratedSha256": "db743a593fae2896f9f1ec12c28213acf85d5359519bf8c16f5cbaea5467bb03",
+      "migratedAssertions": 17,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/a2a/04-local-randomness.ts",
+      "destination": "tests/public-contracts/a2a/04-local-randomness.ts",
+      "originalSha256": "7d6c04c980717005624fd42b8f1b7876eee24b27ca5f9d0412a8f3318061d239",
+      "assertions": 11,
+      "role": "public-contract",
+      "migratedSha256": "7d6c04c980717005624fd42b8f1b7876eee24b27ca5f9d0412a8f3318061d239",
+      "migratedAssertions": 11,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/a2a/05-resource-exchange.ts",
+      "destination": "tests/public-contracts/a2a/05-resource-exchange.ts",
+      "originalSha256": "8aba1c3f0e7f155c3cce4c19a3ee7ed541154af2d43ec4b7b3f1226252ef9a9d",
+      "assertions": 16,
+      "role": "public-contract",
+      "migratedSha256": "19261361d695345707724231fb4e99da11d1108d2a1c08d5e3aae0f333d7246e",
+      "migratedAssertions": 16,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/a5a/01-structure-and-identity.ts",
+      "destination": "tests/public-contracts/a5a/01-structure-and-identity.ts",
+      "originalSha256": "9eff1e2c27cd6162940bd2c90efde00cde6e25290f5bbdd715728e95aeb1e908",
+      "assertions": 31,
+      "role": "public-contract",
+      "migratedSha256": "9eff1e2c27cd6162940bd2c90efde00cde6e25290f5bbdd715728e95aeb1e908",
+      "migratedAssertions": 31,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/a5a/02-direction-and-representation.ts",
+      "destination": "tests/public-contracts/a5a/02-direction-and-representation.ts",
+      "originalSha256": "41a25de79f0df79b7c94815ae225020320a4a64cc2ffad95a687ba2170d765c6",
+      "assertions": 18,
+      "role": "public-contract",
+      "migratedSha256": "41a25de79f0df79b7c94815ae225020320a4a64cc2ffad95a687ba2170d765c6",
+      "migratedAssertions": 18,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/a5a/03-lifecycle-and-state.ts",
+      "destination": "tests/public-contracts/a5a/03-lifecycle-and-state.ts",
+      "originalSha256": "f2533274c6efdf09429feb77206d9a28345c93060ab85853e653c1185d4f9b81",
+      "assertions": 33,
+      "role": "public-contract",
+      "migratedSha256": "f2533274c6efdf09429feb77206d9a28345c93060ab85853e653c1185d4f9b81",
+      "migratedAssertions": 33,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/a5a/04-synchronous-diffusion.ts",
+      "destination": "tests/public-contracts/a5a/04-synchronous-diffusion.ts",
+      "originalSha256": "e4d4c09da36b14d8131e5be9fe49488269477187aedf1b50c9a082f3b7498560",
+      "assertions": 9,
+      "role": "public-contract",
+      "migratedSha256": "e4d4c09da36b14d8131e5be9fe49488269477187aedf1b50c9a082f3b7498560",
+      "migratedAssertions": 9,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/a5a/05-bridges-change-outcomes.ts",
+      "destination": "tests/public-contracts/a5a/05-bridges-change-outcomes.ts",
+      "originalSha256": "1eb7a2f3c5e3e011b35ca76b0461ce21321b0d5db6cc2411ebe40b005a2bbd64",
+      "assertions": 16,
+      "role": "public-contract",
+      "migratedSha256": "1eb7a2f3c5e3e011b35ca76b0461ce21321b0d5db6cc2411ebe40b005a2bbd64",
+      "migratedAssertions": 16,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/affine-map/01-uniform-centered.ts",
+      "destination": "tests/public-contracts/affine-map/01-uniform-centered.ts",
+      "originalSha256": "b588524e4ca94fbd72ebbf1e4da98f140a43ff55df0fdf0af807b4a6c354f451",
+      "assertions": 5,
+      "role": "public-contract",
+      "migratedSha256": "e43c6d1ef8332915db74510522fe07a66291e2b6664b2fb1b4128ecc07ffa299",
+      "migratedAssertions": 5,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/affine-map/02-source-gis-envelopes.ts",
+      "destination": "tests/public-contracts/affine-map/02-source-gis-envelopes.ts",
+      "originalSha256": "f880c6e1ca495df9691e7cb1f2f53fe92316bae6dd754961f8a2d847aafee3b7",
+      "assertions": 5,
+      "role": "public-contract",
+      "migratedSha256": "175b0d5b22cbcbe7715053bc62e5a962ef7ffb139c679dcff407fdebde29cad5",
+      "migratedAssertions": 5,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/affine-map/03-unclipped-and-round-trip.ts",
+      "destination": "tests/public-contracts/affine-map/03-unclipped-and-round-trip.ts",
+      "originalSha256": "f59c0d0a9d8de83c5a9ea8396889ab41b1c16f1aeb1f9a15da562cb22b9b317f",
+      "assertions": 4,
+      "role": "public-contract",
+      "migratedSha256": "9f43a61987559a9355ec36c396cf14de6c310b13e10774f575a3ba655a662146",
+      "migratedAssertions": 4,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/affine-map/04-validation-and-domain.ts",
+      "destination": "tests/public-contracts/affine-map/04-validation-and-domain.ts",
+      "originalSha256": "d95aa5a3403ea8ee690d450540a6700bab88aab116553521cbf7314442ec1fdd",
+      "assertions": 9,
+      "role": "public-contract",
+      "migratedSha256": "49c95061fc1584424eff8c4fd8f28f27bca55f245899873c6c366bd9d9af1e45",
+      "migratedAssertions": 9,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/affine-map/05-canonical-positions-and-purity.ts",
+      "destination": "tests/public-contracts/affine-map/05-canonical-positions-and-purity.ts",
+      "originalSha256": "a2841dc0795c67ff8282da388b61508fd5f18175b8c7fa13261aab7714993076",
+      "assertions": 12,
+      "role": "public-contract",
+      "migratedSha256": "e1dc1fadb7686aa218102a6601e0b71826a8112dfa4291548f8e21a3979a31cf",
+      "migratedAssertions": 12,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/affine-map/SHA256SUMS",
+      "destination": "tests/public-contracts/affine-map/SHA256SUMS",
+      "originalSha256": "5407e87f2fdcbea74ae99a220fa7185db19b5b6c44f4a8df46e3ecc76dc322a6",
+      "assertions": 0,
+      "role": "historical-manifest",
+      "migratedSha256": "5407e87f2fdcbea74ae99a220fa7185db19b5b6c44f4a8df46e3ecc76dc322a6",
+      "migratedAssertions": 0,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/city-simulation/01-household-budget.ts",
+      "destination": "tests/public-contracts/city-simulation/01-household-budget.ts",
+      "originalSha256": "1fb7e692f5639944bd7e8cf6766b8bb0bd7681a2ac996ab31b75ffff44b5b3c6",
+      "assertions": 5,
+      "role": "public-contract",
+      "migratedSha256": "2e1a270c948837c3cf5807b5202f9038fc3d30689224c964b7878c8976b3533e",
+      "migratedAssertions": 5,
+      "change": "User-authorized extraction to canonical model.ts/ui.ts; retain all assertions and expected results."
+    },
+    {
+      "source": "examples/city-simulation/02-neighborhood-heat.ts",
+      "destination": "tests/public-contracts/city-simulation/02-neighborhood-heat.ts",
+      "originalSha256": "69ed6bc02128dc0f396fde7a002c5113767ebf10359036126d46be5364d43090",
+      "assertions": 8,
+      "role": "public-contract",
+      "migratedSha256": "1622b6e5c343913974fb408628c176d71ddeb580de8dbe5c1836f0a7d663b00f",
+      "migratedAssertions": 8,
+      "change": "User-authorized extraction to canonical model.ts/ui.ts; retain all assertions and expected results."
+    },
+    {
+      "source": "examples/city-simulation/03-generative-quarter.ts",
+      "destination": "tests/targets/city-simulation/03-generative-quarter.ts",
+      "originalSha256": "02b8e7a1fc79bbd252bfe488e89d99235c860156a1511d670224ad2a0f45e674",
+      "assertions": 10,
+      "role": "target",
+      "migratedSha256": "02b8e7a1fc79bbd252bfe488e89d99235c860156a1511d670224ad2a0f45e674",
+      "migratedAssertions": 10,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/city-simulation/04-scarce-resource.ts",
+      "destination": "tests/public-contracts/city-simulation/04-scarce-resource.ts",
+      "originalSha256": "9d709b2867369297a030d9418600f44d1170930ca86eaa89281314d911a252f3",
+      "assertions": 18,
+      "role": "public-contract",
+      "migratedSha256": "ec503266d8f9b3fc500a530a28852bda670e487328be599ae725afe2209d8eef",
+      "migratedAssertions": 18,
+      "change": "User-authorized extraction to canonical model.ts/ui.ts; retain all assertions and expected results."
+    },
+    {
+      "source": "examples/city-simulation/05-shared-machine.ts",
+      "destination": "tests/public-contracts/city-simulation/05-shared-machine.ts",
+      "originalSha256": "501d50c6685fb2ea9e1977b6d1a8b74c2573fcb0925ce0c90cb24935bf31dbfa",
+      "assertions": 35,
+      "role": "public-contract",
+      "migratedSha256": "628ad207214a7e4d5b82d61cd8edfb2ca1e4e96d3531e12efe8bcde7c9612352",
+      "migratedAssertions": 35,
+      "change": "User-authorized extraction to canonical model.ts/ui.ts; retain all assertions and expected results."
+    },
+    {
+      "source": "examples/city-simulation/README.md",
+      "destination": "tests/public-contracts/city-simulation/README.md",
+      "originalSha256": "1a659fd3beafc1ee1107a72c8054d4e5b77eb06f98dd834a1d2647cf77c2bacd",
+      "assertions": 0,
+      "role": "public-contract",
+      "migratedSha256": "849a670f80a8a66908ac0a0d64e88d1ba768585ff1ce65e076d5be2ec79b51ee",
+      "migratedAssertions": 0,
+      "change": "Rebased local links and commands; documents canonical model ownership after model extraction."
+    },
+    {
+      "source": "examples/connectivity/01-weak-merge-lifecycle.ts",
+      "destination": "tests/public-contracts/connectivity/01-weak-merge-lifecycle.ts",
+      "originalSha256": "78d3fee4b5d9811d1b67f728937c9ecdf3f2be0bfb864872a4d689707562fcaa",
+      "assertions": 7,
+      "role": "public-contract",
+      "migratedSha256": "78d3fee4b5d9811d1b67f728937c9ecdf3f2be0bfb864872a4d689707562fcaa",
+      "migratedAssertions": 7,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/connectivity/02-directed-strong-parts.ts",
+      "destination": "tests/public-contracts/connectivity/02-directed-strong-parts.ts",
+      "originalSha256": "ba3b33ee787757df2802b800bbb7eae2b6b9719840597d151dbe0e6606e34ebd",
+      "assertions": 6,
+      "role": "public-contract",
+      "migratedSha256": "ba3b33ee787757df2802b800bbb7eae2b6b9719840597d151dbe0e6606e34ebd",
+      "migratedAssertions": 6,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/connectivity/03-biconnected-overlap.ts",
+      "destination": "tests/public-contracts/connectivity/03-biconnected-overlap.ts",
+      "originalSha256": "cb890692f1e787640f9a005a108088e43f5de7ae07321a12db1a012324c48798",
+      "assertions": 4,
+      "role": "public-contract",
+      "migratedSha256": "cb890692f1e787640f9a005a108088e43f5de7ae07321a12db1a012324c48798",
+      "migratedAssertions": 4,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/connectivity/04-empty-and-invalid.ts",
+      "destination": "tests/public-contracts/connectivity/04-empty-and-invalid.ts",
+      "originalSha256": "aab73e994fa08c6e1cdb168a351a368a9a67a71d1c633765633bda5cd32131d3",
+      "assertions": 10,
+      "role": "public-contract",
+      "migratedSha256": "aab73e994fa08c6e1cdb168a351a368a9a67a71d1c633765633bda5cd32131d3",
+      "migratedAssertions": 10,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/connectivity/05-canonical-pure-observation.ts",
+      "destination": "tests/public-contracts/connectivity/05-canonical-pure-observation.ts",
+      "originalSha256": "748c16bb6b91ab44a647b799c54ea7b6c11c7558f2779ba1ac3889d0b01d7760",
+      "assertions": 9,
+      "role": "public-contract",
+      "migratedSha256": "748c16bb6b91ab44a647b799c54ea7b6c11c7558f2779ba1ac3889d0b01d7760",
+      "migratedAssertions": 9,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/connectivity/SHA256SUMS",
+      "destination": "tests/public-contracts/connectivity/SHA256SUMS",
+      "originalSha256": "57c595ad7379368696804b80c0beb01f8fecc5a585703c1de2fe7085f937a7e2",
+      "assertions": 0,
+      "role": "historical-manifest",
+      "migratedSha256": "57c595ad7379368696804b80c0beb01f8fecc5a585703c1de2fe7085f937a7e2",
+      "migratedAssertions": 0,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/des-elevator/01-single-trip.ts",
+      "destination": "tests/public-contracts/des-elevator/01-single-trip.ts",
+      "originalSha256": "88fa46c92013e81d011f5ed54ee1e1ff35446aae8b4da98e2c958578471b94c9",
+      "assertions": 15,
+      "role": "public-contract",
+      "migratedSha256": "c449b88de2e2ffc6e13574bc008a4308ac75b437c5d9d7a60d585e08aeeaa686",
+      "migratedAssertions": 15,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/des-elevator/02-full-call-persists.ts",
+      "destination": "tests/public-contracts/des-elevator/02-full-call-persists.ts",
+      "originalSha256": "6440917110e063205ffecdf8eab2690ef2c0285636d90bd5bdc133e2c30cf47d",
+      "assertions": 11,
+      "role": "public-contract",
+      "migratedSha256": "c2dca5cd82fa24a57e72c43b9dcc499cd7b954e5aacb84be6b2ed2286538657e",
+      "migratedAssertions": 11,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/des-elevator/03-alight-before-board.ts",
+      "destination": "tests/public-contracts/des-elevator/03-alight-before-board.ts",
+      "originalSha256": "b965daed4cb011e5d621bfe374b8edc50c63a233f572a1ce8954067f6311ae62",
+      "assertions": 10,
+      "role": "public-contract",
+      "migratedSha256": "78f264d744d496b5169de5bf8f73e173566b5da3a53fe091b5d666d6d21eff61",
+      "migratedAssertions": 10,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/des-elevator/04-multiple-cars-and-oldest-call.ts",
+      "destination": "tests/public-contracts/des-elevator/04-multiple-cars-and-oldest-call.ts",
+      "originalSha256": "b03d2af8304f5dbec21ca2d282afad83d622b64a51b28f67396505af6b344aa6",
+      "assertions": 7,
+      "role": "public-contract",
+      "migratedSha256": "ac39aa4102f2af68fa94634f50c1bc10592ee23f161837377225df5f114151c9",
+      "migratedAssertions": 7,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/des-elevator/05-validation-arrivals-and-budget.ts",
+      "destination": "tests/public-contracts/des-elevator/05-validation-arrivals-and-budget.ts",
+      "originalSha256": "18b328e0981649b9173fc265e17731ab3b4934d45b1940670e09966d9c8b99c4",
+      "assertions": 21,
+      "role": "public-contract",
+      "migratedSha256": "3de8a41b14e5bf008efdbf1142f7a1aca9ae4ef827f82bfba7ca3289047ab9aa",
+      "migratedAssertions": 21,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/des-models/01-civic-office.ts",
+      "destination": "tests/public-contracts/des-models/01-civic-office.ts",
+      "originalSha256": "68b63d3a60a18017ca48b5e3e06751c3e50f25eda9eacbb95a0a7043d1bdd91f",
+      "assertions": 6,
+      "role": "public-contract",
+      "migratedSha256": "c5c3d1a0f9269106e290b73e5eb99fa763d1fc382f2b7700f0d8aa7a5d502bf5",
+      "migratedAssertions": 6,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/des-models/02-ev-charging.ts",
+      "destination": "tests/public-contracts/des-models/02-ev-charging.ts",
+      "originalSha256": "ae595308992104af3e025f97002ecb63869ab593111daae058fad567d73a14c0",
+      "assertions": 6,
+      "role": "public-contract",
+      "migratedSha256": "774ed8313dd2bf73e2ea7fc21c548b68b6558aafc8fce3b19c1c0dd9e858259f",
+      "migratedAssertions": 6,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/des-models/03-goods-buffer.ts",
+      "destination": "tests/public-contracts/des-models/03-goods-buffer.ts",
+      "originalSha256": "d64a311206544473047995920eb44ebf84b536175430544145330ac777adac85",
+      "assertions": 8,
+      "role": "public-contract",
+      "migratedSha256": "04fcf8e838aa216db30490b286a43b5517a6054c2f7b30631f9a3af3d9072238",
+      "migratedAssertions": 8,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/des-models/04-bus-interchange.ts",
+      "destination": "tests/public-contracts/des-models/04-bus-interchange.ts",
+      "originalSha256": "83fc6b19d97d2aaa9c78ad28054df94870cccaa92b205df1ac4490e917c5b6be",
+      "assertions": 7,
+      "role": "public-contract",
+      "migratedSha256": "4e4e42b9adf81c1c8fe9dadc016ea1544ae5a703b65bcde4b00c563634bd8ec4",
+      "migratedAssertions": 7,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/des-models/05-parcel-logistics.ts",
+      "destination": "tests/public-contracts/des-models/05-parcel-logistics.ts",
+      "originalSha256": "d1b66fd22257c50083d5e7b77033f7f147b654ae31c75536bc4bee4cb95fd19d",
+      "assertions": 6,
+      "role": "public-contract",
+      "migratedSha256": "c37d5112f29107e4854072ebe3b97837a059a20d17030287c6c7152295da7001",
+      "migratedAssertions": 6,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/des-models/06-waste-collection.ts",
+      "destination": "tests/public-contracts/des-models/06-waste-collection.ts",
+      "originalSha256": "2639690167c849e1a1c855f401f28b4a6e6fefab3aa6c255b42e17ac191a6968",
+      "assertions": 15,
+      "role": "public-contract",
+      "migratedSha256": "420476eaf2b8660fc01c112c8c8c82dd47d1a8ef91ca463ccf19919aeb01282a",
+      "migratedAssertions": 15,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/des-models/07-emergency-dispatch.ts",
+      "destination": "tests/public-contracts/des-models/07-emergency-dispatch.ts",
+      "originalSha256": "8c44aa3a9e11df0b83096b086df7277a7e994cf839b645ae57f7a5f338862c5c",
+      "assertions": 15,
+      "role": "public-contract",
+      "migratedSha256": "40db76bde50634304ddeaff4738979aae21949fefe5dc90112c603ec29ee303c",
+      "migratedAssertions": 15,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/des-models/08-bike-redistribution.ts",
+      "destination": "tests/public-contracts/des-models/08-bike-redistribution.ts",
+      "originalSha256": "6231911fc84bcbb3bcafdc5a5160f522fb6436cbf8661c00c4944dd63f8c3926",
+      "assertions": 13,
+      "role": "public-contract",
+      "migratedSha256": "64d6071d453b23ab9aca40384bf015b8aa600c6b3bcbd220c1e17a44b7b49d18",
+      "migratedAssertions": 13,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/des-models/09-water-allocation.ts",
+      "destination": "tests/public-contracts/des-models/09-water-allocation.ts",
+      "originalSha256": "e68cc333bc2be99ae08dbfa74abadb12739b83366fa671f6fbefca9148e945ec",
+      "assertions": 16,
+      "role": "public-contract",
+      "migratedSha256": "87d338bdf120c6d52565e1d37969903c99a70c212a872d13af298d535261b046",
+      "migratedAssertions": 16,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/des-models/10-machine-maintenance.ts",
+      "destination": "tests/public-contracts/des-models/10-machine-maintenance.ts",
+      "originalSha256": "ddbaada8bbc57ca80cdad52ff34da1950b79c93201860c879b0184f86432fcb8",
+      "assertions": 17,
+      "role": "public-contract",
+      "migratedSha256": "b0476b654a21238c07b1751ca0bb6e6e7da18e2b9bff7d7f1f844d2011e729d5",
+      "migratedAssertions": 17,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/des-models/phase-a.ts",
+      "destination": "tests/public-contracts/des-models/phase-a.ts",
+      "originalSha256": "12e02118cd20de9003044337dd59b1af4814f4b3bfc3c19d64d023ff0b3d592a",
+      "assertions": 0,
+      "role": "public-contract",
+      "migratedSha256": "12e02118cd20de9003044337dd59b1af4814f4b3bfc3c19d64d023ff0b3d592a",
+      "migratedAssertions": 0,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/des/01-causal-agenda.ts",
+      "destination": "tests/public-contracts/des/01-causal-agenda.ts",
+      "originalSha256": "1559d67a32bcb875d2d4907d96349a6e773836a57c5bebbfea1f78d108e534fe",
+      "assertions": 23,
+      "role": "public-contract",
+      "migratedSha256": "1559d67a32bcb875d2d4907d96349a6e773836a57c5bebbfea1f78d108e534fe",
+      "migratedAssertions": 23,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/des/02-queues-and-resources.ts",
+      "destination": "tests/public-contracts/des/02-queues-and-resources.ts",
+      "originalSha256": "e074f86b213359e8ec1908f1f09fbe42418d57f09ce7cd340ef27707f5993c49",
+      "assertions": 23,
+      "role": "public-contract",
+      "migratedSha256": "e074f86b213359e8ec1908f1f09fbe42418d57f09ce7cd340ef27707f5993c49",
+      "migratedAssertions": 23,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/des/03-store-backpressure.ts",
+      "destination": "tests/public-contracts/des/03-store-backpressure.ts",
+      "originalSha256": "7b93018ec828acc4482ddd490467edcddffae112a42979398ac7ac7d9fe83b22",
+      "assertions": 21,
+      "role": "public-contract",
+      "migratedSha256": "7b93018ec828acc4482ddd490467edcddffae112a42979398ac7ac7d9fe83b22",
+      "migratedAssertions": 21,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/des/04-state-process-and-timeout.ts",
+      "destination": "tests/public-contracts/des/04-state-process-and-timeout.ts",
+      "originalSha256": "83c86b20cdec23950f0b9caf3139c5946e3fa19523ce5fe1ec2212590a62d1a2",
+      "assertions": 21,
+      "role": "public-contract",
+      "migratedSha256": "83c86b20cdec23950f0b9caf3139c5946e3fa19523ce5fe1ec2212590a62d1a2",
+      "migratedAssertions": 21,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/des/05-observation-trace-and-random.ts",
+      "destination": "tests/public-contracts/des/05-observation-trace-and-random.ts",
+      "originalSha256": "00680b8f8c994d2550f46026b1bb4142971df9bbe22d8db0fcd9e123ac6edf78",
+      "assertions": 17,
+      "role": "public-contract",
+      "migratedSha256": "00680b8f8c994d2550f46026b1bb4142971df9bbe22d8db0fcd9e123ac6edf78",
+      "migratedAssertions": 17,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/distances/01-unbounded-measurement.ts",
+      "destination": "tests/public-contracts/distances/01-unbounded-measurement.ts",
+      "originalSha256": "a9ba521c9672f6ea5d74a1c0ad605a0f6aa24f4179dc2f3781755a799196ab4a",
+      "assertions": 3,
+      "role": "public-contract",
+      "migratedSha256": "a9ba521c9672f6ea5d74a1c0ad605a0f6aa24f4179dc2f3781755a799196ab4a",
+      "migratedAssertions": 3,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/distances/02-mixed-wrapping.ts",
+      "destination": "tests/public-contracts/distances/02-mixed-wrapping.ts",
+      "originalSha256": "9b94f857295d7c97ec3d6dae41e41c556a899f55d9e81e1d4bdd263a7b0e2d67",
+      "assertions": 3,
+      "role": "public-contract",
+      "migratedSha256": "9b94f857295d7c97ec3d6dae41e41c556a899f55d9e81e1d4bdd263a7b0e2d67",
+      "migratedAssertions": 3,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/distances/03-xyz-and-dimension-errors.ts",
+      "destination": "tests/public-contracts/distances/03-xyz-and-dimension-errors.ts",
+      "originalSha256": "e413d46b9946e181036dc38a64c5ce8c7f85e542a31dd31d112b287afbcc1815",
+      "assertions": 3,
+      "role": "public-contract",
+      "migratedSha256": "e413d46b9946e181036dc38a64c5ce8c7f85e542a31dd31d112b287afbcc1815",
+      "migratedAssertions": 3,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/distances/04-canonical-field-proximity.ts",
+      "destination": "tests/public-contracts/distances/04-canonical-field-proximity.ts",
+      "originalSha256": "29a553b9b207de0d35b22211d68d05810106c9d8fab2eb81d4973512aff7acd6",
+      "assertions": 5,
+      "role": "public-contract",
+      "migratedSha256": "29a553b9b207de0d35b22211d68d05810106c9d8fab2eb81d4973512aff7acd6",
+      "migratedAssertions": 5,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/distances/05-finite-validation-and-purity.ts",
+      "destination": "tests/public-contracts/distances/05-finite-validation-and-purity.ts",
+      "originalSha256": "51ccbe40e6c54966f59b036445b14bd5188c93b3f8738b476b3e758408daec72",
+      "assertions": 7,
+      "role": "public-contract",
+      "migratedSha256": "51ccbe40e6c54966f59b036445b14bd5188c93b3f8738b476b3e758408daec72",
+      "migratedAssertions": 7,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/distances/SHA256SUMS",
+      "destination": "tests/public-contracts/distances/SHA256SUMS",
+      "originalSha256": "613316e9cc9f89937139d2b65fe972b080aa46715c990170cf753f71cd6b50d0",
+      "assertions": 0,
+      "role": "historical-manifest",
+      "migratedSha256": "613316e9cc9f89937139d2b65fe972b080aa46715c990170cf753f71cd6b50d0",
+      "migratedAssertions": 0,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/giant-component/01-default-setup.ts",
+      "destination": "tests/targets/giant-component/01-default-setup.ts",
+      "originalSha256": "02e60addf2f38698faa29469ee32811a5654fb4803d2a680f16f3230d7ca39c3",
+      "assertions": 9,
+      "role": "target",
+      "migratedSha256": "389fb27ad3b4f8fc34d8d571d9067aac5c98ebd93cc22eff5188387ca290cdc3",
+      "migratedAssertions": 9,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/giant-component/02-complete-two-node.ts",
+      "destination": "tests/targets/giant-component/02-complete-two-node.ts",
+      "originalSha256": "0de8f04141bbdb7d42b64b4351c5742dd5ef4346cc09e826bca329a6caa829d9",
+      "assertions": 9,
+      "role": "target",
+      "migratedSha256": "f738e9ae3e56ad41da66ce48f05f0adbbab1608a183ec10b12eaa90208265ede",
+      "migratedAssertions": 9,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/giant-component/03-connected-is-not-terminal.ts",
+      "destination": "tests/targets/giant-component/03-connected-is-not-terminal.ts",
+      "originalSha256": "984aaffa5b57af52150e85615143e67f101d713268fdb2f6a520d3b55d65ddd1",
+      "assertions": 7,
+      "role": "target",
+      "migratedSha256": "75eedbea154dded4f2ea4b7b794af4241c5ca340341c5647c9d2cca0dc57a67e",
+      "migratedAssertions": 7,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/giant-component/04-repeatability-and-observation.ts",
+      "destination": "tests/targets/giant-component/04-repeatability-and-observation.ts",
+      "originalSha256": "8c0f1a0714c608b55ad4d5179ced4149a097f5be3bde69e02b1ab2ffbcb0d1e8",
+      "assertions": 12,
+      "role": "target",
+      "migratedSha256": "9e922c0dd1795d6dd2ff948bfbfc48b0a73b3596415802157b89391b89b63ac9",
+      "migratedAssertions": 12,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/giant-component/SHA256SUMS",
+      "destination": "tests/targets/giant-component/SHA256SUMS",
+      "originalSha256": "8a73a234b4969e16c02d3d68c1bb0351f945f7882aa53c8fc68d418671292491",
+      "assertions": 0,
+      "role": "target",
+      "migratedSha256": "8a73a234b4969e16c02d3d68c1bb0351f945f7882aa53c8fc68d418671292491",
+      "migratedAssertions": 0,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/graph-copy-proposal/01-membership-selection-and-order.ts",
+      "destination": "tests/public-contracts/graph-copy-proposal/01-membership-selection-and-order.ts",
+      "originalSha256": "69a42cd826cf4d801e346fa222149eaa5e6d3d721a13a28cc7a4ff21d69a9f08",
+      "assertions": 27,
+      "role": "public-contract",
+      "migratedSha256": "69a42cd826cf4d801e346fa222149eaa5e6d3d721a13a28cc7a4ff21d69a9f08",
+      "migratedAssertions": 27,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/graph-copy-proposal/02-direction-loops-and-parallel-identity.ts",
+      "destination": "tests/public-contracts/graph-copy-proposal/02-direction-loops-and-parallel-identity.ts",
+      "originalSha256": "c9d62e2106c9568e71febe7e14a528fd9a138d4f47071954857e5dfcda3e96c9",
+      "assertions": 24,
+      "role": "public-contract",
+      "migratedSha256": "c9d62e2106c9568e71febe7e14a528fd9a138d4f47071954857e5dfcda3e96c9",
+      "migratedAssertions": 24,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/graph-copy-proposal/03-deep-state-defaults-and-framework-references.ts",
+      "destination": "tests/public-contracts/graph-copy-proposal/03-deep-state-defaults-and-framework-references.ts",
+      "originalSha256": "cb0a60e80904bea26f4eed225fc3e8a6cc5d8aab35e24028c5bbf1a2e0a93568",
+      "assertions": 31,
+      "role": "public-contract",
+      "migratedSha256": "cb0a60e80904bea26f4eed225fc3e8a6cc5d8aab35e24028c5bbf1a2e0a93568",
+      "migratedAssertions": 31,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/graph-copy-proposal/04-agent-lifecycle-and-owner-atomicity.ts",
+      "destination": "tests/public-contracts/graph-copy-proposal/04-agent-lifecycle-and-owner-atomicity.ts",
+      "originalSha256": "7d24afe4aca67658ea372a28a6b6428b1ecb338eedcd92e610cb4917a7241727",
+      "assertions": 39,
+      "role": "public-contract",
+      "migratedSha256": "7d24afe4aca67658ea372a28a6b6428b1ecb338eedcd92e610cb4917a7241727",
+      "migratedAssertions": 39,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/graph-copy-proposal/05-strict-options-and-independent-current-graph.ts",
+      "destination": "tests/public-contracts/graph-copy-proposal/05-strict-options-and-independent-current-graph.ts",
+      "originalSha256": "f5d74950cea4239a13af1cc71e77328fac2bb6317f4607c2715dda762be51412",
+      "assertions": 28,
+      "role": "public-contract",
+      "migratedSha256": "f5d74950cea4239a13af1cc71e77328fac2bb6317f4607c2715dda762be51412",
+      "migratedAssertions": 28,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/graph-distance-precision/01-large-prefixes.ts",
+      "destination": "tests/public-contracts/graph-distance-precision/01-large-prefixes.ts",
+      "originalSha256": "7898f290bbf7caff4b99c3ef8cae8c5eaecc5f8e8906e6f31c1516ce4d21bd60",
+      "assertions": 5,
+      "role": "public-contract",
+      "migratedSha256": "d4fc355cd7dcde72d43c59d86799c9ce799f00ec7f3573bda825533cb0305032",
+      "migratedAssertions": 5,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/graph-distance-precision/02-hidden-negative-cycles.ts",
+      "destination": "tests/public-contracts/graph-distance-precision/02-hidden-negative-cycles.ts",
+      "originalSha256": "05a534d7312bb4e0c09202c3ce0ae82966dc99f4fd206a108023fb7b4480cec7",
+      "assertions": 5,
+      "role": "public-contract",
+      "migratedSha256": "52e0d28aaeb22ebb7325558827d95c86417429d014726dd138ae125259ff2ef6",
+      "migratedAssertions": 5,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/graph-distance-precision/03-cancellation-and-overflow.ts",
+      "destination": "tests/public-contracts/graph-distance-precision/03-cancellation-and-overflow.ts",
+      "originalSha256": "f275563b7781289408ce2419fa5040a16122267db90395d0945b6844972e765e",
+      "assertions": 3,
+      "role": "public-contract",
+      "migratedSha256": "9bc6efd6a7afee3b1da7f4158eee9c61506ce4c2e265058fd96e9e9cff88107d",
+      "migratedAssertions": 3,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/graph-distance-precision/04-summary-and-callbacks.ts",
+      "destination": "tests/public-contracts/graph-distance-precision/04-summary-and-callbacks.ts",
+      "originalSha256": "a6503bb429219787cce70672b07161d4ceb88415ed3329ddfabaefe9dd00dfff",
+      "assertions": 10,
+      "role": "public-contract",
+      "migratedSha256": "28970905952d2ca9390d262075b7a98206164357a8bcc52d3e287c1af8f9b49e",
+      "migratedAssertions": 10,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/graph-distance-precision/05-independent-integer-oracle.ts",
+      "destination": "tests/public-contracts/graph-distance-precision/05-independent-integer-oracle.ts",
+      "originalSha256": "f9b5f28f8e226243d79ff1c6f56024bd03acb4f3fca2ac1f2aa265f74fafb37d",
+      "assertions": 2,
+      "role": "public-contract",
+      "migratedSha256": "df6bbdbae995133f6908c33ea92b1462e60fc4e690c1340142d18a35e01b698d",
+      "migratedAssertions": 2,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/graph-distance-precision/SHA256SUMS",
+      "destination": "tests/public-contracts/graph-distance-precision/SHA256SUMS",
+      "originalSha256": "a801b8589ebb427e9dae765f7dc7aeab80944af9ce2ab960648c6bf067d975b1",
+      "assertions": 0,
+      "role": "historical-manifest",
+      "migratedSha256": "a801b8589ebb427e9dae765f7dc7aeab80944af9ce2ab960648c6bf067d975b1",
+      "migratedAssertions": 0,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/graph-distances/01-native-ring-summary.ts",
+      "destination": "tests/public-contracts/graph-distances/01-native-ring-summary.ts",
+      "originalSha256": "976775a6bdcf4b661848dacb2beaaec48c429c0bc67f9b2b229dd9ab8134f07e",
+      "assertions": 12,
+      "role": "public-contract",
+      "migratedSha256": "d8854fdeb3e05f6fbd01c52b9edee8f8b6c808a6a1300af55b14fe2a68cbda53",
+      "migratedAssertions": 12,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/graph-distances/02-directed-parallel-costs.ts",
+      "destination": "tests/public-contracts/graph-distances/02-directed-parallel-costs.ts",
+      "originalSha256": "c8564acc674b0fa76f8ffdb9dc7f810046accf488a6506235c8858b368778176",
+      "assertions": 9,
+      "role": "public-contract",
+      "migratedSha256": "c811ffcddc24d8a7e2e923a96358e03e4027b4932bcfd1137e07f67f55fc6232",
+      "migratedAssertions": 9,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/graph-distances/03-signed-and-negative-cycles.ts",
+      "destination": "tests/public-contracts/graph-distances/03-signed-and-negative-cycles.ts",
+      "originalSha256": "a41c7dd98a122bce394b06842d34240c24f8e8f89b731dc2e13a719de2c323a6",
+      "assertions": 7,
+      "role": "public-contract",
+      "migratedSha256": "0916fd5447e802adaaaa701dd196082cace2f61fe4951803099c4e817a883815",
+      "migratedAssertions": 7,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/graph-distances/04-callback-validation-and-purity.ts",
+      "destination": "tests/public-contracts/graph-distances/04-callback-validation-and-purity.ts",
+      "originalSha256": "1eb03a0c13f416482b4ba583dd5a44221d7ef2fa8e67931a3fb80af7e4f5739f",
+      "assertions": 12,
+      "role": "public-contract",
+      "migratedSha256": "3a95ef12edcb017cd5ccdb184da56e82670f91738270175072c4777f028738fc",
+      "migratedAssertions": 12,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/graph-distances/05-empty-directed-summaries.ts",
+      "destination": "tests/public-contracts/graph-distances/05-empty-directed-summaries.ts",
+      "originalSha256": "21f7975a6f64ac0264b2a2c6181ebbd0ab5a4f3f9a01b28ce43c39268620ee62",
+      "assertions": 22,
+      "role": "public-contract",
+      "migratedSha256": "d53c3e6317892912ff3cec3ddca35d7aa921192793b856ea8e7a2b3a3e20504c",
+      "migratedAssertions": 22,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/graph-distances/SHA256SUMS",
+      "destination": "tests/public-contracts/graph-distances/SHA256SUMS",
+      "originalSha256": "949a8cb7b5282c3bcfdc4e71576d39401756c2b9e773cfa97f5a70d82131a3d8",
+      "assertions": 0,
+      "role": "historical-manifest",
+      "migratedSha256": "949a8cb7b5282c3bcfdc4e71576d39401756c2b9e773cfa97f5a70d82131a3d8",
+      "migratedAssertions": 0,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/graph-generators-proposal/01-ordered-native-families.ts",
+      "destination": "tests/public-contracts/graph-generators-proposal/01-ordered-native-families.ts",
+      "originalSha256": "02c2a44439cb142610f7a1e3beefd8b3e27a2063ec5c37ad31cf692ff9d97e04",
+      "assertions": 22,
+      "role": "public-contract",
+      "migratedSha256": "02c2a44439cb142610f7a1e3beefd8b3e27a2063ec5c37ad31cf692ff9d97e04",
+      "migratedAssertions": 22,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/graph-generators-proposal/02-tree-and-lattice-topology.ts",
+      "destination": "tests/public-contracts/graph-generators-proposal/02-tree-and-lattice-topology.ts",
+      "originalSha256": "786350f75d8348bc5fa67be22201afaed56b08d1fceca6c84a394109d79b7ec5",
+      "assertions": 12,
+      "role": "public-contract",
+      "migratedSha256": "786350f75d8348bc5fa67be22201afaed56b08d1fceca6c84a394109d79b7ec5",
+      "migratedAssertions": 12,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/graph-generators-proposal/03-random-pair-order-and-stream.ts",
+      "destination": "tests/public-contracts/graph-generators-proposal/03-random-pair-order-and-stream.ts",
+      "originalSha256": "e0294380a5ff1059077d44c3417328d0ba41f30ba22e8d82f31bcbdee43c484b",
+      "assertions": 15,
+      "role": "public-contract",
+      "migratedSha256": "e0294380a5ff1059077d44c3417328d0ba41f30ba22e8d82f31bcbdee43c484b",
+      "migratedAssertions": 15,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/graph-generators-proposal/04-small-world-and-preferential.ts",
+      "destination": "tests/public-contracts/graph-generators-proposal/04-small-world-and-preferential.ts",
+      "originalSha256": "5254fe7b2dafdd42c2c75d1bee243a41c59ea6d9dbd5a8d2e37e088a34cb1a56",
+      "assertions": 16,
+      "role": "public-contract",
+      "migratedSha256": "5254fe7b2dafdd42c2c75d1bee243a41c59ea6d9dbd5a8d2e37e088a34cb1a56",
+      "migratedAssertions": 16,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/graph-generators-proposal/05-geometric-atomicity-and-lifecycle.ts",
+      "destination": "tests/public-contracts/graph-generators-proposal/05-geometric-atomicity-and-lifecycle.ts",
+      "originalSha256": "339470c089bd518a4b693f36a09f919b7d2591810e4384ee18bdcade88a798f6",
+      "assertions": 45,
+      "role": "public-contract",
+      "migratedSha256": "339470c089bd518a4b693f36a09f919b7d2591810e4384ee18bdcade88a798f6",
+      "migratedAssertions": 45,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/graph-generators-proposal/SHA256SUMS",
+      "destination": "tests/public-contracts/graph-generators-proposal/SHA256SUMS",
+      "originalSha256": "143c732bfd59acb3337e875acc456daec18455a9fc8d10ce19b8b64534d533b4",
+      "assertions": 0,
+      "role": "historical-manifest",
+      "migratedSha256": "143c732bfd59acb3337e875acc456daec18455a9fc8d10ce19b8b64534d533b4",
+      "migratedAssertions": 0,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/grid-parcels/01-regular-regression-and-tiny-wraps.ts",
+      "destination": "tests/public-contracts/grid-parcels/01-regular-regression-and-tiny-wraps.ts",
+      "originalSha256": "a4ed842a5e55fc54da04390cfee772bc0af57da8f6209063c69a03842b20bdd0",
+      "assertions": 14,
+      "role": "public-contract",
+      "migratedSha256": "a4ed842a5e55fc54da04390cfee772bc0af57da8f6209063c69a03842b20bdd0",
+      "migratedAssertions": 14,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/grid-parcels/02-square-and-hex-field-rule.ts",
+      "destination": "tests/public-contracts/grid-parcels/02-square-and-hex-field-rule.ts",
+      "originalSha256": "895e5b8163f7d66be252bcd311bc71dbabfa74383db763f86c86b090e57805dc",
+      "assertions": 17,
+      "role": "public-contract",
+      "migratedSha256": "895e5b8163f7d66be252bcd311bc71dbabfa74383db763f86c86b090e57805dc",
+      "migratedAssertions": 17,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/grid-parcels/03-irregular-lookup-ties-and-occupancy.ts",
+      "destination": "tests/public-contracts/grid-parcels/03-irregular-lookup-ties-and-occupancy.ts",
+      "originalSha256": "3ca98a044afeb1c0231c06807009b98fe7bfd218ad8710072e2c2793d950bf8e",
+      "assertions": 22,
+      "role": "public-contract",
+      "migratedSha256": "3ca98a044afeb1c0231c06807009b98fe7bfd218ad8710072e2c2793d950bf8e",
+      "migratedAssertions": 22,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/grid-parcels/04-merge-and-source-provenance.ts",
+      "destination": "tests/public-contracts/grid-parcels/04-merge-and-source-provenance.ts",
+      "originalSha256": "345eacb87ac21404f08cc7b05db57948938d3f17683a7d36577cd2cacac311cf",
+      "assertions": 16,
+      "role": "public-contract",
+      "migratedSha256": "345eacb87ac21404f08cc7b05db57948938d3f17683a7d36577cd2cacac311cf",
+      "migratedAssertions": 16,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/grid-parcels/05-convex-split-and-rejections.ts",
+      "destination": "tests/public-contracts/grid-parcels/05-convex-split-and-rejections.ts",
+      "originalSha256": "afdfbb7192042e37a9fd3581dc4b44ad205f24109fb34b9cd58b2e7715c65c0a",
+      "assertions": 18,
+      "role": "public-contract",
+      "migratedSha256": "afdfbb7192042e37a9fd3581dc4b44ad205f24109fb34b9cd58b2e7715c65c0a",
+      "migratedAssertions": 18,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/grid-parcels/SHA256SUMS",
+      "destination": "tests/public-contracts/grid-parcels/SHA256SUMS",
+      "originalSha256": "b0daea7bb4452cf62794beda670924cdaf233b4d453ca1ef82a240d2bc54ac8e",
+      "assertions": 0,
+      "role": "historical-manifest",
+      "migratedSha256": "b0daea7bb4452cf62794beda670924cdaf233b4d453ca1ef82a240d2bc54ac8e",
+      "migratedAssertions": 0,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/grid/01-field-identities.ts",
+      "destination": "tests/public-contracts/grid/01-field-identities.ts",
+      "originalSha256": "a1e08ece48cc60031223e2bfe96d445e51b0788e8ba88eb2879a842230192184",
+      "assertions": 7,
+      "role": "public-contract",
+      "migratedSha256": "a1e08ece48cc60031223e2bfe96d445e51b0788e8ba88eb2879a842230192184",
+      "migratedAssertions": 7,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/grid/02-neighborhood-and-wrapping.ts",
+      "destination": "tests/public-contracts/grid/02-neighborhood-and-wrapping.ts",
+      "originalSha256": "76183d924a08de8ee08158b7d98cb2adcaa4fa2aeedf1b96ff51056672973b12",
+      "assertions": 8,
+      "role": "public-contract",
+      "migratedSha256": "76183d924a08de8ee08158b7d98cb2adcaa4fa2aeedf1b96ff51056672973b12",
+      "migratedAssertions": 8,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/grid/03-synchronous-diffusion.ts",
+      "destination": "tests/public-contracts/grid/03-synchronous-diffusion.ts",
+      "originalSha256": "31c15ff43e5726334d06f4452dd0fa7189e5f182b5bcd4940be9ad8888fe6b61",
+      "assertions": 5,
+      "role": "public-contract",
+      "migratedSha256": "31c15ff43e5726334d06f4452dd0fa7189e5f182b5bcd4940be9ad8888fe6b61",
+      "migratedAssertions": 5,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/grid/04-canonical-occupancy.ts",
+      "destination": "tests/public-contracts/grid/04-canonical-occupancy.ts",
+      "originalSha256": "2f4a891690f92cea99ded2b4abc750cdfcc64e09ff2e7cfb5aaeeb050e4e2543",
+      "assertions": 4,
+      "role": "public-contract",
+      "migratedSha256": "2f4a891690f92cea99ded2b4abc750cdfcc64e09ff2e7cfb5aaeeb050e4e2543",
+      "migratedAssertions": 4,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/grid/05-synchronous-vote-composition.ts",
+      "destination": "tests/public-contracts/grid/05-synchronous-vote-composition.ts",
+      "originalSha256": "7a4469f83b8a8ec1c35ab25c870de5182e93df46ae468acf4fdb456803d1f28c",
+      "assertions": 3,
+      "role": "public-contract",
+      "migratedSha256": "7a4469f83b8a8ec1c35ab25c870de5182e93df46ae468acf4fdb456803d1f28c",
+      "migratedAssertions": 3,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/lab/01-headless-network-entry.ts",
+      "destination": "tests/public-contracts/lab/01-headless-network-entry.ts",
+      "originalSha256": "44bf529d887552ba2ec55da86172a6782cc88e8da00a2bf3b217e64c3d624436",
+      "assertions": 14,
+      "role": "public-contract",
+      "migratedSha256": "e54a05fa13202a954c672359ed806fff62613ed97b9cefb0cdb2fab1317d0aea",
+      "migratedAssertions": 14,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/lab/02-detached-observations.ts",
+      "destination": "tests/public-contracts/lab/02-detached-observations.ts",
+      "originalSha256": "d9000f3e419da2da911dda0209cedf3e6fc1417cecf2f3f3fb3a43831b7c2f0a",
+      "assertions": 8,
+      "role": "public-contract",
+      "migratedSha256": "9aba738b390b2a33f4f42fe5079265d46bb96d3b9a045002eb29e62431b68977",
+      "migratedAssertions": 8,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/lab/03-successful-step-protocol.ts",
+      "destination": "tests/public-contracts/lab/03-successful-step-protocol.ts",
+      "originalSha256": "4c6d56d33d63fbbf401a938a65fdde0cdbd9bd9b8f222b5b3bd1543daa4e39a2",
+      "assertions": 10,
+      "role": "public-contract",
+      "migratedSha256": "4c6d56d33d63fbbf401a938a65fdde0cdbd9bd9b8f222b5b3bd1543daa4e39a2",
+      "migratedAssertions": 10,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/lab/04-voting-interventions-and-stop.ts",
+      "destination": "tests/public-contracts/lab/04-voting-interventions-and-stop.ts",
+      "originalSha256": "e3d03de77b40aa72a9575bb0aa755c307cfe1db9dac19e32c14df852e0967261",
+      "assertions": 14,
+      "role": "public-contract",
+      "migratedSha256": "b243f9547c1f45677af5026ac1688556d8c905a791c6a6d9f9c4abd2438f9c9d",
+      "migratedAssertions": 14,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/lab/05-synchronous-voting-and-rules.ts",
+      "destination": "tests/public-contracts/lab/05-synchronous-voting-and-rules.ts",
+      "originalSha256": "4f28b96d07f247f738439714b263ad3c0c139d06969fa993ba534dd445cd276d",
+      "assertions": 13,
+      "role": "public-contract",
+      "migratedSha256": "5a7903e7a8a939e429114bec65921c3baa43f83d3917aac360a55b3cdbf40911",
+      "migratedAssertions": 13,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/mesa-attachment/01-identity-and-clocks.ts",
+      "destination": "tests/public-contracts/mesa-attachment/01-identity-and-clocks.ts",
+      "originalSha256": "d0281a35a4a2a3d7fa8b8740f04da70489bacf3861122bd320bb1244f8fb6ae5",
+      "assertions": 6,
+      "role": "public-contract",
+      "migratedSha256": "d0281a35a4a2a3d7fa8b8740f04da70489bacf3861122bd320bb1244f8fb6ae5",
+      "migratedAssertions": 6,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/mesa-attachment/02-mixed-batch.ts",
+      "destination": "tests/public-contracts/mesa-attachment/02-mixed-batch.ts",
+      "originalSha256": "05af0b30cb4d82f243d03245854a6f87bfeb14ec5909612239f00dba2b15a568",
+      "assertions": 6,
+      "role": "public-contract",
+      "migratedSha256": "05af0b30cb4d82f243d03245854a6f87bfeb14ec5909612239f00dba2b15a568",
+      "migratedAssertions": 6,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/mesa-attachment/03-conflict-atomicity.ts",
+      "destination": "tests/public-contracts/mesa-attachment/03-conflict-atomicity.ts",
+      "originalSha256": "d1f23b269385b642bf7daeacb13a335b5093cae2be3635331454df9733cdf63b",
+      "assertions": 6,
+      "role": "public-contract",
+      "migratedSha256": "d1f23b269385b642bf7daeacb13a335b5093cae2be3635331454df9733cdf63b",
+      "migratedAssertions": 6,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/mesa-attachment/04-detach-snapshots.ts",
+      "destination": "tests/public-contracts/mesa-attachment/04-detach-snapshots.ts",
+      "originalSha256": "9a7d36582c5951ef454b07296947915f2a5a245bff14eae21dd6222332a9f067",
+      "assertions": 6,
+      "role": "public-contract",
+      "migratedSha256": "9a7d36582c5951ef454b07296947915f2a5a245bff14eae21dd6222332a9f067",
+      "migratedAssertions": 6,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/mesa-dynamics/01-fixed-lifecycle.ts",
+      "destination": "tests/public-contracts/mesa-dynamics/01-fixed-lifecycle.ts",
+      "originalSha256": "a7b496b41d12f7c9865115609a698b9fb1166091118030f17ef50316dbd390f3",
+      "assertions": 5,
+      "role": "public-contract",
+      "migratedSha256": "a7b496b41d12f7c9865115609a698b9fb1166091118030f17ef50316dbd390f3",
+      "migratedAssertions": 5,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/mesa-dynamics/02-priority-and-random.ts",
+      "destination": "tests/public-contracts/mesa-dynamics/02-priority-and-random.ts",
+      "originalSha256": "4489a0ef8b247caefe4ebc3dc9c69e214963b96170d1b0ddf9f4e4f3b71bdc74",
+      "assertions": 4,
+      "role": "public-contract",
+      "migratedSha256": "4489a0ef8b247caefe4ebc3dc9c69e214963b96170d1b0ddf9f4e4f3b71bdc74",
+      "migratedAssertions": 4,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/mesa-dynamics/03-two-phase.ts",
+      "destination": "tests/public-contracts/mesa-dynamics/03-two-phase.ts",
+      "originalSha256": "2fadd16081f806329be13a21910414638839ac5086dfbb7fac65e0609f6574cd",
+      "assertions": 3,
+      "role": "public-contract",
+      "migratedSha256": "2fadd16081f806329be13a21910414638839ac5086dfbb7fac65e0609f6574cd",
+      "migratedAssertions": 3,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/mesa-dynamics/04-linear-thresholds.ts",
+      "destination": "tests/public-contracts/mesa-dynamics/04-linear-thresholds.ts",
+      "originalSha256": "f2b2341e0f576af0952aa2658e746cd54b90921f8e75687be4c9fd02a8994618",
+      "assertions": 6,
+      "role": "public-contract",
+      "migratedSha256": "f2b2341e0f576af0952aa2658e746cd54b90921f8e75687be4c9fd02a8994618",
+      "migratedAssertions": 6,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/mesa-dynamics/05-graph-membership.ts",
+      "destination": "tests/public-contracts/mesa-dynamics/05-graph-membership.ts",
+      "originalSha256": "f0cef3545cc172b2daa08d49bad15c5909f25744d4533261743427052d7b944a",
+      "assertions": 7,
+      "role": "public-contract",
+      "migratedSha256": "f0cef3545cc172b2daa08d49bad15c5909f25744d4533261743427052d7b944a",
+      "migratedAssertions": 7,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/mesa-measurements/01-shared-measurement.ts",
+      "destination": "tests/public-contracts/mesa-measurements/01-shared-measurement.ts",
+      "originalSha256": "9040f4282fc71380f5901c8ec26e8d15d5581c3c0e3ee53c423f866266101c52",
+      "assertions": 3,
+      "role": "public-contract",
+      "migratedSha256": "9040f4282fc71380f5901c8ec26e8d15d5581c3c0e3ee53c423f866266101c52",
+      "migratedAssertions": 3,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/mesa-measurements/02-explicit-bounded-history.ts",
+      "destination": "tests/public-contracts/mesa-measurements/02-explicit-bounded-history.ts",
+      "originalSha256": "a290481f158eb30db52db2141d4898c072ae6ed2385dfcd526225c9e81fa2bf0",
+      "assertions": 5,
+      "role": "public-contract",
+      "migratedSha256": "a290481f158eb30db52db2141d4898c072ae6ed2385dfcd526225c9e81fa2bf0",
+      "migratedAssertions": 5,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/mesa-measurements/03-scenarios-and-replications.ts",
+      "destination": "tests/public-contracts/mesa-measurements/03-scenarios-and-replications.ts",
+      "originalSha256": "8f6016b278565cbd6d13f26e20492d69aa30fadc2e28d3cc5335cf5ccd9ab3f7",
+      "assertions": 6,
+      "role": "public-contract",
+      "migratedSha256": "8f6016b278565cbd6d13f26e20492d69aa30fadc2e28d3cc5335cf5ccd9ab3f7",
+      "migratedAssertions": 6,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/mesa-measurements/04-run-stop-and-summary.ts",
+      "destination": "tests/public-contracts/mesa-measurements/04-run-stop-and-summary.ts",
+      "originalSha256": "2a6a21bf3b8db12b7de69d14ad22b77ac883764e756be8ea1603aa084d7b782a",
+      "assertions": 5,
+      "role": "public-contract",
+      "migratedSha256": "2a6a21bf3b8db12b7de69d14ad22b77ac883764e756be8ea1603aa084d7b782a",
+      "migratedAssertions": 5,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/mesa-measurements/05-failure-and-budget.ts",
+      "destination": "tests/public-contracts/mesa-measurements/05-failure-and-budget.ts",
+      "originalSha256": "64e99c19a60a71930f452df02e49fbced119d28b83bb3a4a2519a3fe0eb9ae05",
+      "assertions": 6,
+      "role": "public-contract",
+      "migratedSha256": "64e99c19a60a71930f452df02e49fbced119d28b83bb3a4a2519a3fe0eb9ae05",
+      "migratedAssertions": 6,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/model-authoring/01-taxi-reporters.ts",
+      "destination": "tests/public-contracts/model-authoring/01-taxi-reporters.ts",
+      "originalSha256": "4d4c05e964a2369d5a84ea815c1adae301ff7c0bd2f1bdf7f22465f18f1bf399",
+      "assertions": 5,
+      "role": "public-contract",
+      "migratedSha256": "e5907b2bcbb3abc00f0aef829996e4dec4921a3252500f13b7b30e750adef660",
+      "migratedAssertions": 5,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/model-authoring/02-taxi-observation-purity.ts",
+      "destination": "tests/public-contracts/model-authoring/02-taxi-observation-purity.ts",
+      "originalSha256": "48b35b25dda15efa00ce6eb640b2320486ead9e5b56f125121ca85957866e394",
+      "assertions": 8,
+      "role": "public-contract",
+      "migratedSha256": "0241afac8c2f5b3f75d9c386ac4ac87718fc2dc7495212e90923927470251aae",
+      "migratedAssertions": 8,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/model-authoring/03-taxi-intervention-isolation.ts",
+      "destination": "tests/public-contracts/model-authoring/03-taxi-intervention-isolation.ts",
+      "originalSha256": "f4b6f27c995d3183116eb9bb7bd6e2a5a2653dc830c0f46af7a14b1578b950ce",
+      "assertions": 7,
+      "role": "public-contract",
+      "migratedSha256": "c4317809578599d505c4028c4a31f3ab8768bb3fcfd42cae9962ea1a8d3e543c",
+      "migratedAssertions": 7,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/model-authoring/04-taxi-replay-accounting.ts",
+      "destination": "tests/public-contracts/model-authoring/04-taxi-replay-accounting.ts",
+      "originalSha256": "07e5bd9f0721b13b5286649980cd8d92d0ba42441299b605aad29ebdceb8e562",
+      "assertions": 9,
+      "role": "public-contract",
+      "migratedSha256": "cd83d33fb16737c84ffcd3879e6087ee621f79b05ecb3311c50865261946263f",
+      "migratedAssertions": 9,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/model-authoring/README.md",
+      "destination": "tests/public-contracts/model-authoring/README.md",
+      "originalSha256": "68ed0feeb91df141646f1f169baad2f5fae5f40ebb6924e121865fc1bd498ba1",
+      "assertions": 0,
+      "role": "public-contract",
+      "migratedSha256": "6b4a89328c3d64315dcc971085ac89258d8dbc66ad1abd81263dcd14f0f14828",
+      "migratedAssertions": 0,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/model-authoring/SHA256SUMS",
+      "destination": "tests/public-contracts/model-authoring/SHA256SUMS",
+      "originalSha256": "80cb1978ad06c7ffb2fcaf0f91e6fc5960244d7ec725b0953bda1f49f5cf8a6a",
+      "assertions": 0,
+      "role": "historical-manifest",
+      "migratedSha256": "80cb1978ad06c7ffb2fcaf0f91e6fc5960244d7ec725b0953bda1f49f5cf8a6a",
+      "migratedAssertions": 0,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/models/exchange.ts",
+      "destination": "models/resource-exchange/model.ts",
+      "originalSha256": "98453a90c0b87cb2933ac907911d4cc8b724bc1844da112851489f2921990820",
+      "assertions": 0,
+      "role": "model",
+      "migratedSha256": "b442ea0d1086c4bdf303f3d4ad17beb844aa619fe34f694f5ac19d94e5094d5a",
+      "migratedAssertions": 0,
+      "change": "Relocate canonical model; add model definition metadata and create alias without changing existing actions."
+    },
+    {
+      "source": "examples/netlogo-grid-batch/01-life-synchronous-blinker.ts",
+      "destination": "tests/public-contracts/netlogo-grid-batch/01-life-synchronous-blinker.ts",
+      "originalSha256": "56e6381b3983b00cd08f98081804a511fcd62c702c85c631bf91ef5e262cb0ce",
+      "assertions": 9,
+      "role": "public-contract",
+      "migratedSha256": "470cd4e5e249116f8211d47024b72b60d9c8456742a94cebd5b01b4ca9586041",
+      "migratedAssertions": 9,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/netlogo-grid-batch/02-fire-front-and-embers.ts",
+      "destination": "tests/public-contracts/netlogo-grid-batch/02-fire-front-and-embers.ts",
+      "originalSha256": "c8031a898e4e30c562702874012290f804daec5bacdae2a37c442f27b5305054",
+      "assertions": 14,
+      "role": "public-contract",
+      "migratedSha256": "6e250bc898e632804cc1d1276ccb00bb8ccbe3bf6b3acc4f2cb8bbbbc812978e",
+      "migratedAssertions": 14,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/netlogo-grid-batch/03-percolation-stop-and-wrap.ts",
+      "destination": "tests/public-contracts/netlogo-grid-batch/03-percolation-stop-and-wrap.ts",
+      "originalSha256": "879a9a573dd01188d0eaf56acc708f1da60eb7827005edd0e3aeefb508726d28",
+      "assertions": 14,
+      "role": "public-contract",
+      "migratedSha256": "0d9800014f0ab52f8ac5f098a9448758c1f730af4585bef6e0505d49d7d37611",
+      "migratedAssertions": 14,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/netlogo-grid-batch/04-atomic-inputs-and-drawing.ts",
+      "destination": "tests/public-contracts/netlogo-grid-batch/04-atomic-inputs-and-drawing.ts",
+      "originalSha256": "4f6766b5bcbc9195d9150c5fa606c32336e51ae53cbdaaaf1e488096d8a18684",
+      "assertions": 16,
+      "role": "public-contract",
+      "migratedSha256": "bf65f3b151ea65a073d482665016393e4ee357c2f697b51da6f7578dc4060f46",
+      "migratedAssertions": 16,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/netlogo-grid-batch/05-defaults-and-isolation.ts",
+      "destination": "tests/public-contracts/netlogo-grid-batch/05-defaults-and-isolation.ts",
+      "originalSha256": "c741717c03e59ce1db64f362aa6bb06d1c6cfca60ca191c0547a19c3130ff915",
+      "assertions": 20,
+      "role": "public-contract",
+      "migratedSha256": "80d94b153e45182357024c1a822c6099098e3cb10765d6658d015b3562e89f47",
+      "migratedAssertions": 20,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/netlogo-grid-batch/SHA256SUMS",
+      "destination": "tests/public-contracts/netlogo-grid-batch/SHA256SUMS",
+      "originalSha256": "78b2b4b741ec84d980c7ff9121878b730cd3446c042922c1668bc83dbb0a9214",
+      "assertions": 0,
+      "role": "historical-manifest",
+      "migratedSha256": "78b2b4b741ec84d980c7ff9121878b730cd3446c042922c1668bc83dbb0a9214",
+      "migratedAssertions": 0,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/network-analysis-proposal/01-degree-incidence-and-options.ts",
+      "destination": "tests/public-contracts/network-analysis-proposal/01-degree-incidence-and-options.ts",
+      "originalSha256": "4e81103e37eb63d086c44e89ac0319128b06435014621542fb4b0696f6c4bde1",
+      "assertions": 43,
+      "role": "public-contract",
+      "migratedSha256": "4e81103e37eb63d086c44e89ac0319128b06435014621542fb4b0696f6c4bde1",
+      "migratedAssertions": 43,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/network-analysis-proposal/02-closeness-directed-costs.ts",
+      "destination": "tests/public-contracts/network-analysis-proposal/02-closeness-directed-costs.ts",
+      "originalSha256": "5fa3bb83d30002c548b73a97a7694406fbd3fade1d6c1876198225c15ee1a58e",
+      "assertions": 21,
+      "role": "public-contract",
+      "migratedSha256": "5fa3bb83d30002c548b73a97a7694406fbd3fade1d6c1876198225c15ee1a58e",
+      "migratedAssertions": 21,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/network-analysis-proposal/03-betweenness-parallel-paths.ts",
+      "destination": "tests/public-contracts/network-analysis-proposal/03-betweenness-parallel-paths.ts",
+      "originalSha256": "1de4220393262dcd9bcb5ac95dad4198c357a57a6a7bf273d07528393b971cf5",
+      "assertions": 14,
+      "role": "public-contract",
+      "migratedSha256": "1de4220393262dcd9bcb5ac95dad4198c357a57a6a7bf273d07528393b971cf5",
+      "migratedAssertions": 14,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/network-analysis-proposal/04-eigenvector-incoming-l2.ts",
+      "destination": "tests/public-contracts/network-analysis-proposal/04-eigenvector-incoming-l2.ts",
+      "originalSha256": "9916a1a3f50863cb7f686c568cff950d432c72d3fe310c4e25ea1df3941a059b",
+      "assertions": 20,
+      "role": "public-contract",
+      "migratedSha256": "9916a1a3f50863cb7f686c568cff950d432c72d3fe310c4e25ea1df3941a059b",
+      "migratedAssertions": 20,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/network-analysis-proposal/05-pagerank-stationary-and-errors.ts",
+      "destination": "tests/public-contracts/network-analysis-proposal/05-pagerank-stationary-and-errors.ts",
+      "originalSha256": "a9fd775e7f22cd86d19921283c9e977f764808a09281f360adef13e36a4c96db",
+      "assertions": 17,
+      "role": "public-contract",
+      "migratedSha256": "a9fd775e7f22cd86d19921283c9e977f764808a09281f360adef13e36a4c96db",
+      "migratedAssertions": 17,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/network-analysis-proposal/SHA256SUMS",
+      "destination": "tests/public-contracts/network-analysis-proposal/SHA256SUMS",
+      "originalSha256": "facd35e0cce438f417bcf8f7bbe8e1b36304b0ad5fa3956857b7ada3ad640063",
+      "assertions": 0,
+      "role": "historical-manifest",
+      "migratedSha256": "facd35e0cce438f417bcf8f7bbe8e1b36304b0ad5fa3956857b7ada3ad640063",
+      "migratedAssertions": 0,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/normal/01-affine-normal.ts",
+      "destination": "tests/public-contracts/normal/01-affine-normal.ts",
+      "originalSha256": "cb4329ce75bbdeb258a34fb1a5e28f34c2a45662b21f995dc5c709ccf8a78b5e",
+      "assertions": 3,
+      "role": "public-contract",
+      "migratedSha256": "cb4329ce75bbdeb258a34fb1a5e28f34c2a45662b21f995dc5c709ccf8a78b5e",
+      "migratedAssertions": 3,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/normal/02-cache-and-continuation.ts",
+      "destination": "tests/public-contracts/normal/02-cache-and-continuation.ts",
+      "originalSha256": "086576f9012d8f805ea8904e4fb067dc4c31da91bd8038ce316f6933c6237038",
+      "assertions": 6,
+      "role": "public-contract",
+      "migratedSha256": "086576f9012d8f805ea8904e4fb067dc4c31da91bd8038ce316f6933c6237038",
+      "migratedAssertions": 6,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/normal/03-zero-and-validation.ts",
+      "destination": "tests/public-contracts/normal/03-zero-and-validation.ts",
+      "originalSha256": "67557f05b160ba36171f7e0e82934cf5a84adc5c644c14b8d1d2d844fcc2f48c",
+      "assertions": 7,
+      "role": "public-contract",
+      "migratedSha256": "67557f05b160ba36171f7e0e82934cf5a84adc5c644c14b8d1d2d844fcc2f48c",
+      "migratedAssertions": 7,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/normal/04-local-and-reseed.ts",
+      "destination": "tests/public-contracts/normal/04-local-and-reseed.ts",
+      "originalSha256": "39ae24e87beaca23b3ae017fdaf243815b0d2427080d81c78c29e0c302e7ef3b",
+      "assertions": 5,
+      "role": "public-contract",
+      "migratedSha256": "39ae24e87beaca23b3ae017fdaf243815b0d2427080d81c78c29e0c302e7ef3b",
+      "migratedAssertions": 5,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/normal/05-overflow-and-existing-uniform.ts",
+      "destination": "tests/public-contracts/normal/05-overflow-and-existing-uniform.ts",
+      "originalSha256": "adedb6aca17172ab7459fd8928402f3caa6fb2dcf89ebb14f8cb0ddd290aa4a0",
+      "assertions": 5,
+      "role": "public-contract",
+      "migratedSha256": "adedb6aca17172ab7459fd8928402f3caa6fb2dcf89ebb14f8cb0ddd290aa4a0",
+      "migratedAssertions": 5,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/normal/SHA256SUMS",
+      "destination": "tests/public-contracts/normal/SHA256SUMS",
+      "originalSha256": "bbe1c6994007dc39ed99f66b2368b62d0d5e37e3b8a571d755f6c5acbff262a4",
+      "assertions": 0,
+      "role": "historical-manifest",
+      "migratedSha256": "bbe1c6994007dc39ed99f66b2368b62d0d5e37e3b8a571d755f6c5acbff262a4",
+      "migratedAssertions": 0,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/nw-generator-variants-proposal/01-kleinberg-law-and-attempts.ts",
+      "destination": "tests/public-contracts/nw-generator-variants-proposal/01-kleinberg-law-and-attempts.ts",
+      "originalSha256": "9acd94cd482fea5a30ddf2477edaf252fe3861805fc3a473d59431bd34ac8253",
+      "assertions": 13,
+      "role": "public-contract",
+      "migratedSha256": "9acd94cd482fea5a30ddf2477edaf252fe3861805fc3a473d59431bd34ac8253",
+      "migratedAssertions": 13,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/nw-generator-variants-proposal/02-preferential-link-end-protocol.ts",
+      "destination": "tests/public-contracts/nw-generator-variants-proposal/02-preferential-link-end-protocol.ts",
+      "originalSha256": "846274169c06998b51a147b57536ba8288f2c8a17eecf04fb4b367658f99b2e9",
+      "assertions": 12,
+      "role": "public-contract",
+      "migratedSha256": "846274169c06998b51a147b57536ba8288f2c8a17eecf04fb4b367658f99b2e9",
+      "migratedAssertions": 12,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/nw-generator-variants-proposal/03-watts-strogatz-old-target-and-domains.ts",
+      "destination": "tests/public-contracts/nw-generator-variants-proposal/03-watts-strogatz-old-target-and-domains.ts",
+      "originalSha256": "0166e9f914d15ad769dab8978ebe265f00a02bc2836c6531aa2af00d38ecd980",
+      "assertions": 18,
+      "role": "public-contract",
+      "migratedSha256": "0166e9f914d15ad769dab8978ebe265f00a02bc2836c6531aa2af00d38ecd980",
+      "migratedAssertions": 18,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/nw-generator-variants-proposal/04-orientation-hub-and-lattice-seams.ts",
+      "destination": "tests/public-contracts/nw-generator-variants-proposal/04-orientation-hub-and-lattice-seams.ts",
+      "originalSha256": "8362a2c33a6b8e722ef76b7130d0a90b3931a1ab2910863ed383aef02fa5e840",
+      "assertions": 10,
+      "role": "public-contract",
+      "migratedSha256": "8362a2c33a6b8e722ef76b7130d0a90b3931a1ab2910863ed383aef02fa5e840",
+      "migratedAssertions": 10,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/nw-generator-variants-proposal/05-model-actions-and-rng-boundaries.ts",
+      "destination": "tests/public-contracts/nw-generator-variants-proposal/05-model-actions-and-rng-boundaries.ts",
+      "originalSha256": "6d93822de9bc5e2756bc9688902c45807ea4ef3e0ca9383a8e8821429c680039",
+      "assertions": 29,
+      "role": "public-contract",
+      "migratedSha256": "6d93822de9bc5e2756bc9688902c45807ea4ef3e0ca9383a8e8821429c680039",
+      "migratedAssertions": 29,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/occupancy/01-live-movement-order.ts",
+      "destination": "tests/public-contracts/occupancy/01-live-movement-order.ts",
+      "originalSha256": "6057aa9708fba65a5cda048b76e7f27e45dba636503eaaa8b19368deae4550a3",
+      "assertions": 5,
+      "role": "public-contract",
+      "migratedSha256": "6057aa9708fba65a5cda048b76e7f27e45dba636503eaaa8b19368deae4550a3",
+      "migratedAssertions": 5,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/occupancy/02-canonical-lifecycle.ts",
+      "destination": "tests/public-contracts/occupancy/02-canonical-lifecycle.ts",
+      "originalSha256": "5aad29e9f04f30fa352fb01a95baec036140b492c51cde6a7d27015dc8480027",
+      "assertions": 9,
+      "role": "public-contract",
+      "migratedSha256": "5aad29e9f04f30fa352fb01a95baec036140b492c51cde6a7d27015dc8480027",
+      "migratedAssertions": 9,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/occupancy/03-grid-reattachment.ts",
+      "destination": "tests/public-contracts/occupancy/03-grid-reattachment.ts",
+      "originalSha256": "97d95e1f418192034df1c7a1ac92ec6e9be983d1a75c3ef0808591de8b7b7f89",
+      "assertions": 6,
+      "role": "public-contract",
+      "migratedSha256": "97d95e1f418192034df1c7a1ac92ec6e9be983d1a75c3ef0808591de8b7b7f89",
+      "migratedAssertions": 6,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/occupancy/04-source-and-boundaries.ts",
+      "destination": "tests/public-contracts/occupancy/04-source-and-boundaries.ts",
+      "originalSha256": "bc33caa38dfb4898ee06701f81e75cb91626d6eab957db37f43d2832d8cef715",
+      "assertions": 7,
+      "role": "public-contract",
+      "migratedSha256": "bc33caa38dfb4898ee06701f81e75cb91626d6eab957db37f43d2832d8cef715",
+      "migratedAssertions": 7,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/occupancy/05-observation-purity.ts",
+      "destination": "tests/public-contracts/occupancy/05-observation-purity.ts",
+      "originalSha256": "336b10f45983a31db70dd0e424a5af924940779589e9403fa985821471614fa3",
+      "assertions": 8,
+      "role": "public-contract",
+      "migratedSha256": "336b10f45983a31db70dd0e424a5af924940779589e9403fa985821471614fa3",
+      "migratedAssertions": 8,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/occupancy/SHA256SUMS",
+      "destination": "tests/public-contracts/occupancy/SHA256SUMS",
+      "originalSha256": "8de1d87a861c4b35a95350a985ed2c2372d3cefe45e20448bd44bb5cb80c403b",
+      "assertions": 0,
+      "role": "historical-manifest",
+      "migratedSha256": "8de1d87a861c4b35a95350a985ed2c2372d3cefe45e20448bd44bb5cb80c403b",
+      "migratedAssertions": 0,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/planar-geometry-proposal/01-shell-hole-and-topology.ts",
+      "destination": "tests/public-contracts/planar-geometry-proposal/01-shell-hole-and-topology.ts",
+      "originalSha256": "178b838b1ca5fb19939da8fdd0921ea905e2d15417094268266a903691b6eeec",
+      "assertions": 13,
+      "role": "public-contract",
+      "migratedSha256": "178b838b1ca5fb19939da8fdd0921ea905e2d15417094268266a903691b6eeec",
+      "migratedAssertions": 13,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/planar-geometry-proposal/02-feature-collection-bounds.ts",
+      "destination": "tests/public-contracts/planar-geometry-proposal/02-feature-collection-bounds.ts",
+      "originalSha256": "160766856fbeeb7a2f1c2873db6307a19113193aab363b3a1412efae1a4c9fbd",
+      "assertions": 19,
+      "role": "public-contract",
+      "migratedSha256": "160766856fbeeb7a2f1c2873db6307a19113193aab363b3a1412efae1a4c9fbd",
+      "migratedAssertions": 19,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/planar-geometry-proposal/03-mapping-and-gis-extents.ts",
+      "destination": "tests/public-contracts/planar-geometry-proposal/03-mapping-and-gis-extents.ts",
+      "originalSha256": "504ad483c7cb83d390468508df035003f812861e0daeb8c5939669655e8501ae",
+      "assertions": 22,
+      "role": "public-contract",
+      "migratedSha256": "504ad483c7cb83d390468508df035003f812861e0daeb8c5939669655e8501ae",
+      "migratedAssertions": 22,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/planar-geometry-proposal/04-shape-data-and-purity.ts",
+      "destination": "tests/public-contracts/planar-geometry-proposal/04-shape-data-and-purity.ts",
+      "originalSha256": "59a5c0835d7c7cc1c4b2a6755f7e08e2eca9aa215d2b1fe8b43b5c1c97cfb82b",
+      "assertions": 33,
+      "role": "public-contract",
+      "migratedSha256": "59a5c0835d7c7cc1c4b2a6755f7e08e2eca9aa215d2b1fe8b43b5c1c97cfb82b",
+      "migratedAssertions": 33,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/planar-geometry-proposal/05-proposed-resource-boundaries.ts",
+      "destination": "tests/public-contracts/planar-geometry-proposal/05-proposed-resource-boundaries.ts",
+      "originalSha256": "fd0d66f01541dd4abb90e1681f8bebf45317c59f551a4422f49e8cac8fb961f9",
+      "assertions": 13,
+      "role": "public-contract",
+      "migratedSha256": "fd0d66f01541dd4abb90e1681f8bebf45317c59f551a4422f49e8cac8fb961f9",
+      "migratedAssertions": 13,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/planar-geometry-proposal/post-advisory-source-fixtures.json",
+      "destination": "tests/public-contracts/planar-geometry-proposal/post-advisory-source-fixtures.json",
+      "originalSha256": "eec136a3ccb5e721e830e42b6cae25af4e54e60f22418765de9e63b04dd0e62b",
+      "assertions": 0,
+      "role": "public-contract",
+      "migratedSha256": "eec136a3ccb5e721e830e42b6cae25af4e54e60f22418765de9e63b04dd0e62b",
+      "migratedAssertions": 0,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/planar-geometry-proposal/source-fixtures.json",
+      "destination": "tests/public-contracts/planar-geometry-proposal/source-fixtures.json",
+      "originalSha256": "11cb552fa17eb125bc19df51fa13d57e3bbb73a2d76263bc9b5ebc43b26a1a48",
+      "assertions": 0,
+      "role": "public-contract",
+      "migratedSha256": "11cb552fa17eb125bc19df51fa13d57e3bbb73a2d76263bc9b5ebc43b26a1a48",
+      "migratedAssertions": 0,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/probes/01-forward-vectors.ts",
+      "destination": "tests/public-contracts/probes/01-forward-vectors.ts",
+      "originalSha256": "ad84861a27af71fb43d8bed953419777449d6f97b2294b7097a173acc2d78546",
+      "assertions": 3,
+      "role": "public-contract",
+      "migratedSha256": "ad84861a27af71fb43d8bed953419777449d6f97b2294b7097a173acc2d78546",
+      "migratedAssertions": 3,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/probes/02-wrap-and-hard-endpoints.ts",
+      "destination": "tests/public-contracts/probes/02-wrap-and-hard-endpoints.ts",
+      "originalSha256": "a5a954e84263595a4bc98f99cb5441693d096a1d9404e2e06d78afd560ee74c7",
+      "assertions": 4,
+      "role": "public-contract",
+      "migratedSha256": "a5a954e84263595a4bc98f99cb5441693d096a1d9404e2e06d78afd560ee74c7",
+      "migratedAssertions": 4,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/probes/03-three-dimensional-context.ts",
+      "destination": "tests/public-contracts/probes/03-three-dimensional-context.ts",
+      "originalSha256": "73bfffb8f370a1fa488c0d640dc5cfcf0d8d5b118f7a29c4a1bf8938b0237645",
+      "assertions": 4,
+      "role": "public-contract",
+      "migratedSha256": "73bfffb8f370a1fa488c0d640dc5cfcf0d8d5b118f7a29c4a1bf8938b0237645",
+      "migratedAssertions": 4,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/probes/04-nonmutating-agent-sensor.ts",
+      "destination": "tests/public-contracts/probes/04-nonmutating-agent-sensor.ts",
+      "originalSha256": "4188d4fdcc77874c21879c6069c46c32a9aedf9087de8296a7b0266bc1a89ce7",
+      "assertions": 5,
+      "role": "public-contract",
+      "migratedSha256": "4188d4fdcc77874c21879c6069c46c32a9aedf9087de8296a7b0266bc1a89ce7",
+      "migratedAssertions": 5,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/probes/05-validation-and-detachment.ts",
+      "destination": "tests/public-contracts/probes/05-validation-and-detachment.ts",
+      "originalSha256": "599865dc633a75b6240455e5d753ab4b9cb3949a716a77a9fc7d1decef8f4304",
+      "assertions": 9,
+      "role": "public-contract",
+      "migratedSha256": "599865dc633a75b6240455e5d753ab4b9cb3949a716a77a9fc7d1decef8f4304",
+      "migratedAssertions": 9,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/probes/SHA256SUMS",
+      "destination": "tests/public-contracts/probes/SHA256SUMS",
+      "originalSha256": "77cc98d52e5c1a4b07f1269f28083d7b813166311b991d10435b708e31fb140c",
+      "assertions": 0,
+      "role": "historical-manifest",
+      "migratedSha256": "77cc98d52e5c1a4b07f1269f28083d7b813166311b991d10435b708e31fb140c",
+      "migratedAssertions": 0,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/random-exponential-poisson-proposal/01-exponential-transform-and-consumption.ts",
+      "destination": "tests/public-contracts/random-exponential-poisson-proposal/01-exponential-transform-and-consumption.ts",
+      "originalSha256": "55f9e6d4a6077bf759c701912fde413529b54f4d0f85412769b2884ad2764238",
+      "assertions": 14,
+      "role": "public-contract",
+      "migratedSha256": "55f9e6d4a6077bf759c701912fde413529b54f4d0f85412769b2884ad2764238",
+      "migratedAssertions": 14,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/random-exponential-poisson-proposal/02-poisson-product-branch.ts",
+      "destination": "tests/public-contracts/random-exponential-poisson-proposal/02-poisson-product-branch.ts",
+      "originalSha256": "bc5459ab72e433aa1a82ff4501ca36b8e72a76da6a2702b473277b883da3eb2f",
+      "assertions": 10,
+      "role": "public-contract",
+      "migratedSha256": "bc5459ab72e433aa1a82ff4501ca36b8e72a76da6a2702b473277b883da3eb2f",
+      "migratedAssertions": 10,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/random-exponential-poisson-proposal/03-poisson-high-mean-and-continuation.ts",
+      "destination": "tests/public-contracts/random-exponential-poisson-proposal/03-poisson-high-mean-and-continuation.ts",
+      "originalSha256": "ace37ed9714c1c92771b08c65df1254747265730c399b121845513f1a93cb902",
+      "assertions": 9,
+      "role": "public-contract",
+      "migratedSha256": "ace37ed9714c1c92771b08c65df1254747265730c399b121845513f1a93cb902",
+      "migratedAssertions": 9,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/random-exponential-poisson-proposal/04-validation-cache-and-local-stream.ts",
+      "destination": "tests/public-contracts/random-exponential-poisson-proposal/04-validation-cache-and-local-stream.ts",
+      "originalSha256": "1130fbbf31b0f12eb18d4acf1daeccdeeb3e88565058ef1dfdf021bc7a4e604f",
+      "assertions": 22,
+      "role": "public-contract",
+      "migratedSha256": "1130fbbf31b0f12eb18d4acf1daeccdeeb3e88565058ef1dfdf021bc7a4e604f",
+      "migratedAssertions": 22,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/random-exponential-poisson-proposal/05-blood-sugar-parameter-scenario.ts",
+      "destination": "tests/public-contracts/random-exponential-poisson-proposal/05-blood-sugar-parameter-scenario.ts",
+      "originalSha256": "256a7c6a1e3730ba3a26ca0c74cf46e83819bd55179b356b72052f8330370d06",
+      "assertions": 12,
+      "role": "public-contract",
+      "migratedSha256": "256a7c6a1e3730ba3a26ca0c74cf46e83819bd55179b356b72052f8330370d06",
+      "migratedAssertions": 12,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/run.ts",
+      "destination": "scripts/public-contracts.ts",
+      "originalSha256": "93e8d591ebb83c376d48293461a37850ec10b5daf3ff8d3c692f988e2c5a7d93",
+      "assertions": 0,
+      "role": "runner",
+      "migratedSha256": "c0d7cd11d9fc747ee600751513862d4913dcdd09ba7cbcba7a962b9f876c1841",
+      "migratedAssertions": 0,
+      "change": "Replace runner with supported/target contract discovery."
+    },
+    {
+      "source": "examples/segregation/01-setup.ts",
+      "destination": "tests/public-contracts/segregation/01-setup.ts",
+      "originalSha256": "51efa2c6f282af10c457d26fbc16527673275f8052a4d099c0fa9695a38a5f35",
+      "assertions": 8,
+      "role": "public-contract",
+      "migratedSha256": "b145c845f3cd3689c9c2dbe91d6d8efde378ee3384f2f6deecd73df130543ec0",
+      "migratedAssertions": 8,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/segregation/02-neighbor-metrics.ts",
+      "destination": "tests/public-contracts/segregation/02-neighbor-metrics.ts",
+      "originalSha256": "29bf4e178d518b5f66a88fbef4d4b4702d9eb1f009f81779b519c577d7efffff",
+      "assertions": 5,
+      "role": "public-contract",
+      "migratedSha256": "e7018aef5f3abd2897c65111b6913fa216c7fc256ef1ec4f338a2bb5e6aed90b",
+      "migratedAssertions": 5,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/segregation/03-terminal-intervention.ts",
+      "destination": "tests/public-contracts/segregation/03-terminal-intervention.ts",
+      "originalSha256": "14ce803a37b5f3c25bfffd43e88e22302e2dcd60b9910296c810d3dd3c3effa2",
+      "assertions": 9,
+      "role": "public-contract",
+      "migratedSha256": "f58349a3a44bad33aee13fef4d118346e313c87ad26bf27278f4ef511f1a1e08",
+      "migratedAssertions": 9,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/segregation/04-movement.ts",
+      "destination": "tests/public-contracts/segregation/04-movement.ts",
+      "originalSha256": "ad75e533a6a1eb8b15e50bf90ed3097dfd01abab254581eb8bbc8bb610b50f74",
+      "assertions": 6,
+      "role": "public-contract",
+      "migratedSha256": "fafbcce42233a4d1ec41c0c3a2198ad32f29d4fc1fb112355f926c612edac4f0",
+      "migratedAssertions": 6,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/segregation/05-validation-purity.ts",
+      "destination": "tests/public-contracts/segregation/05-validation-purity.ts",
+      "originalSha256": "ad8fb48fdd926e768a984fe2a92a1c9ca4b4801d2cebba9ea7c46259d0679119",
+      "assertions": 9,
+      "role": "public-contract",
+      "migratedSha256": "6975ea8ab399dc22e5e0ba7baaacf5d8fa1d57bad3cb282979238fc9520028bf",
+      "migratedAssertions": 9,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/segregation/SHA256SUMS",
+      "destination": "tests/public-contracts/segregation/SHA256SUMS",
+      "originalSha256": "9efe8e9e12e0b0109830c90fafbe4c73fb6f3dcc6ee1e370c4883cc80a732499",
+      "assertions": 0,
+      "role": "historical-manifest",
+      "migratedSha256": "9efe8e9e12e0b0109830c90fafbe4c73fb6f3dcc6ee1e370c4883cc80a732499",
+      "migratedAssertions": 0,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/selected-biology/01-photosynthesis-and-signaling.ts",
+      "destination": "tests/public-contracts/selected-biology/01-photosynthesis-and-signaling.ts",
+      "originalSha256": "6f9c82f4394117ea1a1934e4691b7041e7c750e49ae5142f592fb04eac8b0ba4",
+      "assertions": 16,
+      "role": "public-contract",
+      "migratedSha256": "75cc6bcd71dd088844070432a987833c9ee422be5784c717419bc5a0cde4a933",
+      "migratedAssertions": 16,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-biology/02-patterns-and-construction.ts",
+      "destination": "tests/public-contracts/selected-biology/02-patterns-and-construction.ts",
+      "originalSha256": "186ff6a03d9e89238706731de0c1ea16cd865de84447a6d7416921177cbc1350",
+      "assertions": 15,
+      "role": "public-contract",
+      "migratedSha256": "d9641aed9f85fb1f02ddf480c892e295b8ae44bf4d230b4851af73aff51c6d67",
+      "migratedAssertions": 15,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-biology/03-homeostasis-and-exercise.ts",
+      "destination": "tests/public-contracts/selected-biology/03-homeostasis-and-exercise.ts",
+      "originalSha256": "72a0c4e8c4657a799db253c80a33fc679e4e018a8a918bf99e1e0f44c34ee7d5",
+      "assertions": 16,
+      "role": "public-contract",
+      "migratedSha256": "492b4da342dde23ef78c25b9d879387677cf88569562014c73aee4f9f3eccfd6",
+      "migratedAssertions": 16,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-biology/04-season-and-self-assembly.ts",
+      "destination": "tests/public-contracts/selected-biology/04-season-and-self-assembly.ts",
+      "originalSha256": "a1091225d57f52d976c566379059634dea9f55b7f2142495b5e1f1e65d0a8c32",
+      "assertions": 15,
+      "role": "public-contract",
+      "migratedSha256": "9fb0bda1f40453741e1279a270eecda337250fee8c673f3079796e7378e0f908",
+      "migratedAssertions": 15,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-biology/05-phyllotaxis-and-turnover.ts",
+      "destination": "tests/public-contracts/selected-biology/05-phyllotaxis-and-turnover.ts",
+      "originalSha256": "714f4cfce95c0a1658c0bc94740a496e27d929d5e7193999847eedc49169af98",
+      "assertions": 18,
+      "role": "public-contract",
+      "migratedSha256": "238b645a4624965ad18a09dff80e49c97fa23053cc37a706de9fdf9a4599eb21",
+      "migratedAssertions": 18,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-cellular/01-smoothlife-normalized-disk-and-annulus.ts",
+      "destination": "tests/public-contracts/selected-cellular/01-smoothlife-normalized-disk-and-annulus.ts",
+      "originalSha256": "345d888af934f05c1f894c550002d95e08387ae5f29f13b5901f3e21ca09b19a",
+      "assertions": 5,
+      "role": "public-contract",
+      "migratedSha256": "57a174eff09043c473677830b27a1aea739e04a8ea753d4dc255d7d10b73b859",
+      "migratedAssertions": 5,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-cellular/02-hex-single-activation-and-stop.ts",
+      "destination": "tests/public-contracts/selected-cellular/02-hex-single-activation-and-stop.ts",
+      "originalSha256": "04140a9e7afcd4f72234600541c99ef5d48c7e0083bdab8507f709ae10a40328",
+      "assertions": 7,
+      "role": "public-contract",
+      "migratedSha256": "6d9d8d24cf7d7eff445a19cced195eddd45b17163f41e25a151a6e63b50de730",
+      "migratedAssertions": 7,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-cellular/03-moving-vants-and-turing-head.ts",
+      "destination": "tests/public-contracts/selected-cellular/03-moving-vants-and-turing-head.ts",
+      "originalSha256": "ece9795f16f2747a9f441a5bba775b86920d1f900aa3f75dbc6bba0df170d52c",
+      "assertions": 9,
+      "role": "public-contract",
+      "migratedSha256": "027a3e4dd22149fa4bbd067fe1ede3caf1b948ef52f0d64b14e940259d2208cd",
+      "migratedAssertions": 9,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-cellular/04-elementary-and-continuous-rows.ts",
+      "destination": "tests/public-contracts/selected-cellular/04-elementary-and-continuous-rows.ts",
+      "originalSha256": "cc257a2e787e5189533379238361a49bdbb77d67300f7522d31df3d0d5925ad8",
+      "assertions": 6,
+      "role": "public-contract",
+      "migratedSha256": "0b56969fc4c81d932cbe0fdfaddbfdd9e6da2f740746bc961e073c3e675915fd",
+      "migratedAssertions": 6,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-cellular/05-refractory-cycle-and-stochastic-extremes.ts",
+      "destination": "tests/public-contracts/selected-cellular/05-refractory-cycle-and-stochastic-extremes.ts",
+      "originalSha256": "4af59e8e33f53fb10a3951b9a3e5263a9db1e5b631d8747b9b3424f96130c41c",
+      "assertions": 8,
+      "role": "public-contract",
+      "migratedSha256": "4853c44453696149322f3db55f168f34b09663e4539bf41f1d9b15d34f5e67d5",
+      "migratedAssertions": 8,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-cellular/SHA256SUMS",
+      "destination": "tests/public-contracts/selected-cellular/SHA256SUMS",
+      "originalSha256": "03d022b3152f1ac733ffcfcb25cc851d8a81ab864320543c81b75ca42c0437c4",
+      "assertions": 0,
+      "role": "historical-manifest",
+      "migratedSha256": "03d022b3152f1ac733ffcfcb25cc851d8a81ab864320543c81b75ca42c0437c4",
+      "migratedAssertions": 0,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/selected-computing/01-neural-learning.ts",
+      "destination": "tests/public-contracts/selected-computing/01-neural-learning.ts",
+      "originalSha256": "b5bc10a43845f9d07d72890ca71ba888f081e9e8099d88520a0ed8514674d6a8",
+      "assertions": 22,
+      "role": "public-contract",
+      "migratedSha256": "20c4172281ff16c8349dc433330c60f77cf2a380bd9d11480f471526398b4eab",
+      "migratedAssertions": 22,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-computing/02-resources-and-ranking.ts",
+      "destination": "tests/public-contracts/selected-computing/02-resources-and-ranking.ts",
+      "originalSha256": "b707b44b02f2fd545cd1b83bd73577283e8079a0e437728aec14a50589c5adf7",
+      "assertions": 19,
+      "role": "public-contract",
+      "migratedSha256": "e0ac60816eb8d4102edad51abb1dd4ce20c8725cd136e730e39c299c88b772a3",
+      "migratedAssertions": 19,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-computing/03-genetic-strategies.ts",
+      "destination": "tests/public-contracts/selected-computing/03-genetic-strategies.ts",
+      "originalSha256": "21248e9eb401f92e2fc96d63a46f8a62712a964d4c9244a40ed27791c0a1f774",
+      "assertions": 21,
+      "role": "public-contract",
+      "migratedSha256": "5c46ebe1479a7cbf6d2c1b57ddbce6ab141fd2ae212321248c1e4a09c8a43e41",
+      "migratedAssertions": 21,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-computing/04-swarm-and-clustering.ts",
+      "destination": "tests/public-contracts/selected-computing/04-swarm-and-clustering.ts",
+      "originalSha256": "826d1fd397ed5ae62e194623bbe69b969f5964807c1b422449a868b570202752",
+      "assertions": 19,
+      "role": "public-contract",
+      "migratedSha256": "4f7f980f8d81385088ab48f8e2d050782de53b3475a7184589813f697a77735c",
+      "migratedAssertions": 19,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-computing/05-annealing-and-factory.ts",
+      "destination": "tests/public-contracts/selected-computing/05-annealing-and-factory.ts",
+      "originalSha256": "dd14a29c996504a40a255e8260a9db551097c4405ee6a9cadec2364648cffc56",
+      "assertions": 22,
+      "role": "public-contract",
+      "migratedSha256": "adca2f3c4d786349c36a833b23575ca7ff7d540157aa319089c2b6149824a99a",
+      "migratedAssertions": 22,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-computing/SHA256SUMS",
+      "destination": "tests/public-contracts/selected-computing/SHA256SUMS",
+      "originalSha256": "d99f4f5ba9ee5db6c8ccb1c50bb6b5b2c73070c61e955024266621bcf8c9c112",
+      "assertions": 0,
+      "role": "historical-manifest",
+      "migratedSha256": "d99f4f5ba9ee5db6c8ccb1c50bb6b5b2c73070c61e955024266621bcf8c9c112",
+      "migratedAssertions": 0,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/selected-disease-gene/01-contact-and-immunity.ts",
+      "destination": "tests/public-contracts/selected-disease-gene/01-contact-and-immunity.ts",
+      "originalSha256": "07931cc751adca00efb77eb6a3734a19c2311735a1e3b3274e041e8a24e2400b",
+      "assertions": 18,
+      "role": "public-contract",
+      "migratedSha256": "a9d436bbd514082b162c5f71c05c9ec9e104bb060922f1fbb5b486e5b3f670c3",
+      "migratedAssertions": 18,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-disease-gene/02-coupling-and-recovery.ts",
+      "destination": "tests/public-contracts/selected-disease-gene/02-coupling-and-recovery.ts",
+      "originalSha256": "a2eb59a4142c530a5a51edc33559ab09f19e1347ec4c9def447edc160308ce23",
+      "assertions": 13,
+      "role": "public-contract",
+      "migratedSha256": "7a5b3f58470dcb54bf97f01a7de0abfe06ae04f51c64fd0bb546317a1342d7e3",
+      "migratedAssertions": 13,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-disease-gene/03-regulation-and-energy.ts",
+      "destination": "tests/public-contracts/selected-disease-gene/03-regulation-and-energy.ts",
+      "originalSha256": "0f5915adeef6acd6db1ad55b96f8e3b3ad3e1e673a8ea2d4c235a79ab01a5e2e",
+      "assertions": 15,
+      "role": "public-contract",
+      "migratedSha256": "f6f3f3f7e44d37e905a41df3c3cc538011ab069d44a0673328f2e1c020b39657",
+      "migratedAssertions": 15,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-disease-gene/04-crispr-defense-and-ecology.ts",
+      "destination": "tests/public-contracts/selected-disease-gene/04-crispr-defense-and-ecology.ts",
+      "originalSha256": "da2ef0c7fd9bdddb66897f1955ff07987e431171910346e02ef465d2a4c52ee9",
+      "assertions": 16,
+      "role": "public-contract",
+      "migratedSha256": "81dabeeeccd00364178ebf426e0ae32f071654870a01a68f2a62506bbcf4ab4d",
+      "migratedAssertions": 16,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-disease-gene/05-control-and-protein-synthesis.ts",
+      "destination": "tests/public-contracts/selected-disease-gene/05-control-and-protein-synthesis.ts",
+      "originalSha256": "bfc2215c7aba95a89a95c7619c7cb750eb1809248419e636755f8ae2f17422c2",
+      "assertions": 18,
+      "role": "public-contract",
+      "migratedSha256": "7f3a944e38bc67906b6651a3c0424cb68673d4dc03245153490b6bb605d6137e",
+      "migratedAssertions": 18,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-ecology/01-birth-and-temperature.ts",
+      "destination": "tests/public-contracts/selected-ecology/01-birth-and-temperature.ts",
+      "originalSha256": "c2f47d0319b9ba335957b0c9215853bb385838f48e130f5eda205dfdab589589",
+      "assertions": 10,
+      "role": "public-contract",
+      "migratedSha256": "0b163d38e4c7c0c18ec8e21cf82643e56bfcf0f90839054f32b39d553a62d9da",
+      "migratedAssertions": 10,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-ecology/02-transport-and-herding.ts",
+      "destination": "tests/public-contracts/selected-ecology/02-transport-and-herding.ts",
+      "originalSha256": "206255268372bbc16d4ff76e4c7f775b12a89cf76743432e37694d8cc17ff639",
+      "assertions": 9,
+      "role": "public-contract",
+      "migratedSha256": "96e86535917a11230aa2faa511e8788aae2d9cea94b62c5805babf91ad5ac8af",
+      "migratedAssertions": 9,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-ecology/03-resources-and-invasion.ts",
+      "destination": "tests/public-contracts/selected-ecology/03-resources-and-invasion.ts",
+      "originalSha256": "763f7068c7321c5129738c5961b56df1bedd169480007a4705f053278d1c2187",
+      "assertions": 10,
+      "role": "public-contract",
+      "migratedSha256": "613c7571bf193fc96f8525b14b9bcc22a1a72bb99ae754ec60e7d8465af0836d",
+      "migratedAssertions": 10,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-ecology/04-foraging-and-heat.ts",
+      "destination": "tests/public-contracts/selected-ecology/04-foraging-and-heat.ts",
+      "originalSha256": "6a78936b15418b4567f1bf9edf631407466e9adb52e5b4a2e5e7442a60723f0c",
+      "assertions": 12,
+      "role": "public-contract",
+      "migratedSha256": "d19006755b289ca772647ee531b1a0215ac4757f09b5f04cf3e6c521dec1d30f",
+      "migratedAssertions": 12,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-ecology/05-flocking-and-flashes.ts",
+      "destination": "tests/public-contracts/selected-ecology/05-flocking-and-flashes.ts",
+      "originalSha256": "ce5d9030687fe678e54b7a91b5de3bac773f54f3499d655a1185838042c1b1aa",
+      "assertions": 9,
+      "role": "public-contract",
+      "migratedSha256": "bfbc712f5424bfbee1d045ee4e7227a0fa594ab67e892268d6a35be43d86c5a1",
+      "migratedAssertions": 9,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-ecology/SHA256SUMS",
+      "destination": "tests/public-contracts/selected-ecology/SHA256SUMS",
+      "originalSha256": "9e9ce576a1e206ac442add47d5c7fdc33e0efeb92c4093adb6e2967f1cf9088a",
+      "assertions": 0,
+      "role": "historical-manifest",
+      "migratedSha256": "9e9ce576a1e206ac442add47d5c7fdc33e0efeb92c4093adb6e2967f1cf9088a",
+      "migratedAssertions": 0,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/selected-economics/01-foraging-and-attendance.ts",
+      "destination": "tests/public-contracts/selected-economics/01-foraging-and-attendance.ts",
+      "originalSha256": "e7b52ec1edbfacf0aa6d5c4fe99bf30c2bd113789cb1709fd5af52021d7c68ea",
+      "assertions": 19,
+      "role": "public-contract",
+      "migratedSha256": "f433e1878c71b6da983c2c76e24a738186d4d5962d5e580e48e2269afc16c277",
+      "migratedAssertions": 19,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-economics/02-exchange-markets.ts",
+      "destination": "tests/public-contracts/selected-economics/02-exchange-markets.ts",
+      "originalSha256": "635c3303063389dbd29b06f6b6a20c0b7edba4097b58e108aee508a7706a43c2",
+      "assertions": 13,
+      "role": "public-contract",
+      "migratedSha256": "d09d8eb92d3d8d1c630a8c4d71556af89ac10e60acda42fe0aefe145e998e70b",
+      "migratedAssertions": 13,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-economics/03-location-and-traffic.ts",
+      "destination": "tests/public-contracts/selected-economics/03-location-and-traffic.ts",
+      "originalSha256": "0cf05330d5bed964029cb774091af10ac8f0c2c265aa6c11a0a80ce04892c81e",
+      "assertions": 15,
+      "role": "public-contract",
+      "migratedSha256": "98f400155a722a8cb18f8c62ccce43417b0b04cbcb9752a687ed8515c7853b48",
+      "migratedAssertions": 15,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-economics/04-banking-phases.ts",
+      "destination": "tests/public-contracts/selected-economics/04-banking-phases.ts",
+      "originalSha256": "3440ddda863306404f7b9fa0f329d6956104a0fada75fb67010ab29e1e1956d3",
+      "assertions": 22,
+      "role": "public-contract",
+      "migratedSha256": "c665ff0613dc0b8cea3968230204b20b2070126b66f3ff219317d5a6abf06306",
+      "migratedAssertions": 22,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-economics/05-prisoner-games.ts",
+      "destination": "tests/public-contracts/selected-economics/05-prisoner-games.ts",
+      "originalSha256": "186ad7de3124a80cf3ae0ab72986cd3eacfa52991305b058ee648edf1c6e667a",
+      "assertions": 19,
+      "role": "public-contract",
+      "migratedSha256": "a587440be6d723f7b1bdd1290acc8a5db2989d71d9a650d4cb5ca0c66e1b2cee",
+      "migratedAssertions": 19,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-evolution/01-memory-and-pollution.ts",
+      "destination": "tests/public-contracts/selected-evolution/01-memory-and-pollution.ts",
+      "originalSha256": "e743b8fcc97b9c129a2652166ed7f4f0262d0a5192ce24984fc1ae6757fada17",
+      "assertions": 23,
+      "role": "public-contract",
+      "migratedSha256": "11668b142d33ea418f7178e29350a9119659587822812f49e9df754032fec9df",
+      "migratedAssertions": 23,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-evolution/02-gametes-and-sex-ratio.ts",
+      "destination": "tests/public-contracts/selected-evolution/02-gametes-and-sex-ratio.ts",
+      "originalSha256": "8caf82020f4662aee0d605387dc5d6f9d4106ca8e1731dca4d74b4d46821a11b",
+      "assertions": 20,
+      "role": "public-contract",
+      "migratedSha256": "325175670345a7d595249a0b4cb0c28fb97df95061e8cd890b6311dce75a8e0d",
+      "migratedAssertions": 20,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-evolution/03-learning-and-mammoths.ts",
+      "destination": "tests/public-contracts/selected-evolution/03-learning-and-mammoths.ts",
+      "originalSha256": "8e560f320f0f1468dcdbf2031820e91b9baca9d79ad5578a303b6e1c58b3c9c4",
+      "assertions": 24,
+      "role": "public-contract",
+      "migratedSha256": "12e4b36165f8c0bd7dc95a63613fb890202f1c4c7120c6c88a9badf69497eecf",
+      "migratedAssertions": 24,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-evolution/04-infection-and-vision.ts",
+      "destination": "tests/public-contracts/selected-evolution/04-infection-and-vision.ts",
+      "originalSha256": "003ec5a71830778c1733da777ab03a69c2469a4f55a0e422dcc1eea722fc75d9",
+      "assertions": 23,
+      "role": "public-contract",
+      "migratedSha256": "a342a3501233f5c05cad047cddaf70dc36e8060e200ee2517edc4d9aa30f2b7c",
+      "migratedAssertions": 23,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-evolution/05-drift-and-inheritance.ts",
+      "destination": "tests/public-contracts/selected-evolution/05-drift-and-inheritance.ts",
+      "originalSha256": "b80a932ad4262d17cc305c602fdc3e32d7a8b470e26fdc747c7d64771a4f248b",
+      "assertions": 22,
+      "role": "public-contract",
+      "migratedSha256": "696922ea013744f4ccdb0354e0365bef997b8fc65570aeb960183c66a70a21fb",
+      "migratedAssertions": 22,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-evolution/SHA256SUMS",
+      "destination": "tests/public-contracts/selected-evolution/SHA256SUMS",
+      "originalSha256": "6b1467ce2dec003518f7b73ca37e6bf6dc1544aa68960272ce82970e39c7be41",
+      "assertions": 0,
+      "role": "historical-manifest",
+      "migratedSha256": "6b1467ce2dec003518f7b73ca37e6bf6dc1544aa68960272ce82970e39c7be41",
+      "migratedAssertions": 0,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/selected-materials/01-sandpile-ising.ts",
+      "destination": "tests/public-contracts/selected-materials/01-sandpile-ising.ts",
+      "originalSha256": "c7b110625b373181b1596777d3ca330a2825633d5b8f1a1a4b2a3bb4355c6c74",
+      "assertions": 22,
+      "role": "public-contract",
+      "migratedSha256": "fd5f52cce2d89fecc8dbe4091cac2a4a4128fe16388b0fd2c1fc5a81127da931",
+      "migratedAssertions": 22,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-materials/02-sand.ts",
+      "destination": "tests/public-contracts/selected-materials/02-sand.ts",
+      "originalSha256": "520cc1b926138bfa2ad835fdb092155002f56828cb30523a6d85bd637484ba86",
+      "assertions": 11,
+      "role": "public-contract",
+      "migratedSha256": "a1d6a414030155b0d5bb2d8abb10fdaf458abb8528ef210147641c73acfbe1b1",
+      "migratedAssertions": 11,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-materials/03-atomic-diffusion.ts",
+      "destination": "tests/public-contracts/selected-materials/03-atomic-diffusion.ts",
+      "originalSha256": "3c0eca9b665426fbbe1f6b2dc53b31c4569ddf1105adaa6569b6d4e295a749e4",
+      "assertions": 17,
+      "role": "public-contract",
+      "migratedSha256": "7aaf8286c70d4d795ffb69f328e4241622486a7162b8598c25e4b408f37bcab1",
+      "migratedAssertions": 17,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-materials/04-thermal-phases.ts",
+      "destination": "tests/public-contracts/selected-materials/04-thermal-phases.ts",
+      "originalSha256": "cca4953ad57101c23cb0aca50affcdc8907f5bb7db08b0411808a741d206accd",
+      "assertions": 12,
+      "role": "public-contract",
+      "migratedSha256": "72a0fc83bf4482507633764d0087631c4dd5eed1732cbf3e571a52af73f7175d",
+      "migratedAssertions": 12,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-materials/05-dla.ts",
+      "destination": "tests/public-contracts/selected-materials/05-dla.ts",
+      "originalSha256": "9cdb3a6ba2b6c7f9c5bff4c4d6b036a40d3795c19906aef7c583e3f2f4ae25c7",
+      "assertions": 13,
+      "role": "public-contract",
+      "migratedSha256": "c9e6350aaccbfb75220bf4039f288985f07939c799e71f37c644a2747dee3727",
+      "migratedAssertions": 13,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-network/01-directed-staging.ts",
+      "destination": "tests/public-contracts/selected-network/01-directed-staging.ts",
+      "originalSha256": "702b85287a3f3ddffbccb45ae27da2b8ba35ed7dbe15908d8cce8023e9bb2b7e",
+      "assertions": 7,
+      "role": "public-contract",
+      "migratedSha256": "d1f63a4a0a8d3dab9f2bc33bc0970e65d05e7ec083d998107d8cfa03096634a4",
+      "migratedAssertions": 7,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-network/02-rewire-and-no-links.ts",
+      "destination": "tests/public-contracts/selected-network/02-rewire-and-no-links.ts",
+      "originalSha256": "d35195eb8df43d477013f4173b859abda2badb7e78eb0a75bac8f0fa3deda9fc",
+      "assertions": 9,
+      "role": "public-contract",
+      "migratedSha256": "57266963f3793874dab01a55837189f7c8b59bb60c2b7a562abfb0ca4832a935",
+      "migratedAssertions": 9,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-network/03-virus-phase-and-stop.ts",
+      "destination": "tests/public-contracts/selected-network/03-virus-phase-and-stop.ts",
+      "originalSha256": "52da7ee289e9e99d07013222bc3c3953d907fbeaba42de0fab1179cd4c526245",
+      "assertions": 9,
+      "role": "public-contract",
+      "migratedSha256": "1704a9b37657cf7b930e1c5542f8ca0ac5c2db834d9f5ebefed52168be021a10",
+      "migratedAssertions": 9,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-network/04-atomic-fixtures.ts",
+      "destination": "tests/public-contracts/selected-network/04-atomic-fixtures.ts",
+      "originalSha256": "a01c40932fdf7f0796569ae4427d1bce16189dba3505f85faf2eaf883eb20dff",
+      "assertions": 11,
+      "role": "public-contract",
+      "migratedSha256": "af17ee93effbc79b7a3ca7128531bdd18696d9b0f95b2ccc78cfe3dc2a9dbe26",
+      "migratedAssertions": 11,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-network/05-defaults-and-isolation.ts",
+      "destination": "tests/public-contracts/selected-network/05-defaults-and-isolation.ts",
+      "originalSha256": "26e2d5fe92d878119052275a16eb35e1f7111e8667429fbcb5b0a4863231b4d5",
+      "assertions": 20,
+      "role": "public-contract",
+      "migratedSha256": "3c3d2cffec56ff8fc55e9b201886ff6596940a24b11f70e8bd3927d50c04f58c",
+      "migratedAssertions": 20,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-network/SHA256SUMS",
+      "destination": "tests/public-contracts/selected-network/SHA256SUMS",
+      "originalSha256": "88d30adf371b4977d4652e4be3ce09bd70c88bca78b74d277255682c3f6c404f",
+      "assertions": 0,
+      "role": "historical-manifest",
+      "migratedSha256": "88d30adf371b4977d4652e4be3ce09bd70c88bca78b74d277255682c3f6c404f",
+      "migratedAssertions": 0,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/selected-probability/01-birthdays.ts",
+      "destination": "tests/public-contracts/selected-probability/01-birthdays.ts",
+      "originalSha256": "c46b91d2e74424efcc4ea52b7c153f236dcd93bebc724dfcef3e8f8c4d4759f1",
+      "assertions": 7,
+      "role": "public-contract",
+      "migratedSha256": "c6c9d7afdd05be6cd0a619ba60e85c66df44f628c559764b9a0fb11ac090c254",
+      "migratedAssertions": 7,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-probability/02-galton-box.ts",
+      "destination": "tests/public-contracts/selected-probability/02-galton-box.ts",
+      "originalSha256": "c045436ec6af27a2dbc60c97a1dee6fc23e931a10c74e6dd27e40838244a828c",
+      "assertions": 7,
+      "role": "public-contract",
+      "migratedSha256": "5fb24466810e08a64deb346bb90b4373a9182bce0d7da982de50ecb6af24f43b",
+      "migratedAssertions": 7,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-probability/03-binomial-rabbits.ts",
+      "destination": "tests/public-contracts/selected-probability/03-binomial-rabbits.ts",
+      "originalSha256": "b719a08b1669d5c0c77a1d663804a15a588364afbbd6bdaf251dd02bc462287a",
+      "assertions": 7,
+      "role": "public-contract",
+      "migratedSha256": "34d1607b4ba0051cf395d46af4dff3a4fdf7a1633be210e374b30ce3825c4b0f",
+      "migratedAssertions": 7,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-probability/04-three-doors.ts",
+      "destination": "tests/public-contracts/selected-probability/04-three-doors.ts",
+      "originalSha256": "d5d2df123a09570026221c64b6caf33322ee6838cabf98161624c6855545bcbe",
+      "assertions": 7,
+      "role": "public-contract",
+      "migratedSha256": "eb854d2140c116d88bc53836ca54959d16c718eaa78f04f2ff928a4da9e0ba85",
+      "migratedAssertions": 7,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-probability/05-stochastic-patchwork.ts",
+      "destination": "tests/public-contracts/selected-probability/05-stochastic-patchwork.ts",
+      "originalSha256": "69c18be670727ab45fa0cb57c2e696f4e531abf86d9adad3352cad92aa7b842a",
+      "assertions": 7,
+      "role": "public-contract",
+      "migratedSha256": "c79cb985e684870d847280d596a0214df96189f4a92a50e68718149c7060ce76",
+      "migratedAssertions": 7,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-probability/SHA256SUMS",
+      "destination": "tests/public-contracts/selected-probability/SHA256SUMS",
+      "originalSha256": "9d076df491b569d74416646f96f1ae5bb236f48000105dd9fc4defcb5d0af348",
+      "assertions": 0,
+      "role": "historical-manifest",
+      "migratedSha256": "9d076df491b569d74416646f96f1ae5bb236f48000105dd9fc4defcb5d0af348",
+      "migratedAssertions": 0,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/selected-social/01-choice-and-rebellion.ts",
+      "destination": "tests/public-contracts/selected-social/01-choice-and-rebellion.ts",
+      "originalSha256": "038810b6fa82cd59c1cbbf452e28cf3b217bcce89c05338ec0d0417ce42de6b3",
+      "assertions": 16,
+      "role": "public-contract",
+      "migratedSha256": "9f16974a163be0bbafd4503b532a11434291ffb9ab4a8858f67d3ec45443d5e3",
+      "migratedAssertions": 16,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-social/02-language-and-party.ts",
+      "destination": "tests/public-contracts/selected-social/02-language-and-party.ts",
+      "originalSha256": "db5cc7aedd5e4db79772d71bdedde245cf5777b68b667e51a6bdf4d17648b3ab",
+      "assertions": 18,
+      "role": "public-contract",
+      "migratedSha256": "234bc1693bce16d006c1fe3814213c9dfaf3a1e2dfd1adf6de4ba8641486445f",
+      "migratedAssertions": 18,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-social/03-cooperation-and-minority.ts",
+      "destination": "tests/public-contracts/selected-social/03-cooperation-and-minority.ts",
+      "originalSha256": "61191e9085c3237428c84572b72ea65d794b2be84f1bb576b15cd57934953f72",
+      "assertions": 16,
+      "role": "public-contract",
+      "migratedSha256": "570d7f52504a18ba47e0ec7a359ea7ecd13165b9699af87f74f518cf6403d649",
+      "migratedAssertions": 16,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-social/04-rumors-and-signals.ts",
+      "destination": "tests/public-contracts/selected-social/04-rumors-and-signals.ts",
+      "originalSha256": "e9d8b10b5db09277d35f43a41c706b74132b520ebd4f95f6415cb9adb41f98da",
+      "assertions": 20,
+      "role": "public-contract",
+      "migratedSha256": "f73c72aefd2a1e83e9219bdf44e4073a64bb2be31de4a1c69f69b93e40059984",
+      "migratedAssertions": 20,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-social/05-development-and-personalities.ts",
+      "destination": "tests/public-contracts/selected-social/05-development-and-personalities.ts",
+      "originalSha256": "e6dee58746e6938abb14c69f5cc8e2fe7f25625cba290fdddff6e4512b0853a5",
+      "assertions": 18,
+      "role": "public-contract",
+      "migratedSha256": "54bc0844605c49d4504878057f8a112fb5a6249248d7bcd8bc4e68ecccacaed2",
+      "migratedAssertions": 18,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-tijuana/01-natural-cityscape-and-replay.ts",
+      "destination": "tests/public-contracts/selected-tijuana/01-natural-cityscape-and-replay.ts",
+      "originalSha256": "a71d1cfeb010f93c4691474656e27d916284c39cee9521dcb2556c9a27aae6f2",
+      "assertions": 37,
+      "role": "public-contract",
+      "migratedSha256": "c4b6709c8991be87868234b62636132258f78e6b283e7c428499c6926f72e808",
+      "migratedAssertions": 37,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-tijuana/02-final-seed-economics-and-reset.ts",
+      "destination": "tests/public-contracts/selected-tijuana/02-final-seed-economics-and-reset.ts",
+      "originalSha256": "85c779e001b7ce45e9c9e6f283024a116ef6840012ac2e11cd3f44362b3f5393",
+      "assertions": 20,
+      "role": "public-contract",
+      "migratedSha256": "22014d6920f90a1a3d484a1ad4608735140014949661136ddda53929450e5e89",
+      "migratedAssertions": 20,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-tijuana/03-migration-crossing-and-partial-errors.ts",
+      "destination": "tests/public-contracts/selected-tijuana/03-migration-crossing-and-partial-errors.ts",
+      "originalSha256": "9ceb64448d2a91b8d6e8bf8718c821a8ac8d5ac956160311db2f5e467d1f650e",
+      "assertions": 31,
+      "role": "public-contract",
+      "migratedSha256": "07b9c435c9bc4df56af89c4f6a72c859a95cd22887a10b173c66ae4a0e295595",
+      "migratedAssertions": 31,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-tijuana/04-domain-display-and-node-intervention.ts",
+      "destination": "tests/public-contracts/selected-tijuana/04-domain-display-and-node-intervention.ts",
+      "originalSha256": "25f4106065428b748527632761cc88232c4a41477fea502dfd5ee3d337c1fc71",
+      "assertions": 28,
+      "role": "public-contract",
+      "migratedSha256": "ef0fe18d4214c6059699a448a5eee1a9ae8bf3015dae03f4e7882304072c2d81",
+      "migratedAssertions": 28,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-tijuana/05-growth-reports-and-delayed-errors.ts",
+      "destination": "tests/public-contracts/selected-tijuana/05-growth-reports-and-delayed-errors.ts",
+      "originalSha256": "c5f55b066af995dad01c0667098d3bf7ff9058a4e39ce528417dcad64d325c12",
+      "assertions": 51,
+      "role": "public-contract",
+      "migratedSha256": "98eed9eacd12e70ecfb78c836733d6d4b7823b775f2337b32fc162c2a0ed7ae4",
+      "migratedAssertions": 51,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-tijuana/SHA256SUMS",
+      "destination": "tests/public-contracts/selected-tijuana/SHA256SUMS",
+      "originalSha256": "145127b78448c14b958c0c86004f7ebb131cebaba8e2c7c91cd79e232e7f8005",
+      "assertions": 0,
+      "role": "historical-manifest",
+      "migratedSha256": "145127b78448c14b958c0c86004f7ebb131cebaba8e2c7c91cd79e232e7f8005",
+      "migratedAssertions": 0,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/selected-tijuana/scenario.ts",
+      "destination": "tests/public-contracts/selected-tijuana/scenario.ts",
+      "originalSha256": "ed14e079f347fc0ef398158c3b924621b17fff001f46e5a567a9a24f988b477d",
+      "assertions": 0,
+      "role": "public-contract",
+      "migratedSha256": "88ca9276dc609f0e3c861a4242a36a09e96fd31bccf57bb238941bbbc5fe42df",
+      "migratedAssertions": 0,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-transport/01-paths.ts",
+      "destination": "tests/public-contracts/selected-transport/01-paths.ts",
+      "originalSha256": "f344e26331e51399bcf668d6b778ecdbfae682e6fb6073654e04dae6208e8cdd",
+      "assertions": 11,
+      "role": "public-contract",
+      "migratedSha256": "ad8b8598f9b4d343677b403829597c62e8d982de56a79d77ba1321c66f2f1b4f",
+      "migratedAssertions": 11,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-transport/02-basic-and-lanes.ts",
+      "destination": "tests/public-contracts/selected-transport/02-basic-and-lanes.ts",
+      "originalSha256": "17a9cdeccd88e3df9d490fdd6fa41fd9680905701f20c197042c92824612fbd9",
+      "assertions": 10,
+      "role": "public-contract",
+      "migratedSha256": "6f9979292121a45f02247e5768aafcecbfe1900a7a77f3f893adc65e91901c16",
+      "migratedAssertions": 10,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-transport/03-grid-signals.ts",
+      "destination": "tests/public-contracts/selected-transport/03-grid-signals.ts",
+      "originalSha256": "60c7d941b9bef13b36baa131580070a1ccdbe51b6c465527871fff3bf8313e1d",
+      "assertions": 11,
+      "role": "public-contract",
+      "migratedSha256": "6835d47d1ba402d7531a1b8298202b3f17989c9e99c079e06338b4fbf54d75b7",
+      "migratedAssertions": 11,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-transport/04-intersection-and-goals.ts",
+      "destination": "tests/public-contracts/selected-transport/04-intersection-and-goals.ts",
+      "originalSha256": "40087639f913f6bdd7fc2cb838ef604ef705232eebdfe47256d70da106661e25",
+      "assertions": 12,
+      "role": "public-contract",
+      "migratedSha256": "e3050d0960c107a2d2d98370f7183d53cbfe36fd6d50dd7b7c1065472d7885bc",
+      "migratedAssertions": 12,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-transport/05-taxi-service.ts",
+      "destination": "tests/public-contracts/selected-transport/05-taxi-service.ts",
+      "originalSha256": "ecc87850c3bf133ac4b718b4dbb5505d96935dd3a5d93d76628cd1802bae883a",
+      "assertions": 12,
+      "role": "public-contract",
+      "migratedSha256": "7b8d5e0ff93c5ef71bb2f4d7cd5cbe6e04eec2d1dc18fe6f60ee44330930ca3a",
+      "migratedAssertions": 12,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-urban-feedback/01-positive-powers-and-normalization.ts",
+      "destination": "tests/public-contracts/selected-urban-feedback/01-positive-powers-and-normalization.ts",
+      "originalSha256": "94f83c56c3a29ff5c5215ee88ad2ce6da2bc3bc8bd06241263ca84786a495f8e",
+      "assertions": 13,
+      "role": "public-contract",
+      "migratedSha256": "d2d600809fe0d59b3ec799807cb23b68f0fae33e9504e81743bee15ef39797fc",
+      "migratedAssertions": 13,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-urban-feedback/02-positive-moore-wrap.ts",
+      "destination": "tests/public-contracts/selected-urban-feedback/02-positive-moore-wrap.ts",
+      "originalSha256": "20152872e1379af816fd29755247e607fb751f70b95d08b6f0db53af56460804",
+      "assertions": 7,
+      "role": "public-contract",
+      "migratedSha256": "4564c89878d354d35daf8af6471c004aef9c45ec7a62bdd48f46a7fa732ec24a",
+      "migratedAssertions": 7,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-urban-feedback/03-path-source-setup-and-disturb.ts",
+      "destination": "tests/public-contracts/selected-urban-feedback/03-path-source-setup-and-disturb.ts",
+      "originalSha256": "49939cb89b7c5d42cc4314e5cedbb0d883dae4e5bac52bc1c1b300256e98111c",
+      "assertions": 16,
+      "role": "public-contract",
+      "migratedSha256": "f6cf3ce8da4c1c0ea5bc613fc8d80e9e8c23d042fe89337facfdb705ea553010",
+      "migratedAssertions": 16,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-urban-feedback/04-cells-snapshot-and-strict-age.ts",
+      "destination": "tests/public-contracts/selected-urban-feedback/04-cells-snapshot-and-strict-age.ts",
+      "originalSha256": "ca69104391706789708f20bdea1ced2ea54b5d04a0dd2a5f7d77ffc472cc65a6",
+      "assertions": 20,
+      "role": "public-contract",
+      "migratedSha256": "9bf39776e63ef1c269bafee36809cdf84bb142b962b1650c48e1bfb45f4ce316",
+      "migratedAssertions": 20,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-urban-feedback/05-defaults-isolation-and-atomic-fixtures.ts",
+      "destination": "tests/public-contracts/selected-urban-feedback/05-defaults-isolation-and-atomic-fixtures.ts",
+      "originalSha256": "e24fe5206297d09f54850cb0e3b9fa33d0a993f76f51ebda460f83f0620c9a52",
+      "assertions": 16,
+      "role": "public-contract",
+      "migratedSha256": "44b1516a5b37381ee68daee4cd1e3cdc73e18d7daa6029c29a264e944a196b73",
+      "migratedAssertions": 16,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-urban-feedback/SHA256SUMS",
+      "destination": "tests/public-contracts/selected-urban-feedback/SHA256SUMS",
+      "originalSha256": "195c49e50a10f0f7ce85c9bb58484755e1f7e6dc1dcb80c571dd00dd5dba62b4",
+      "assertions": 0,
+      "role": "historical-manifest",
+      "migratedSha256": "195c49e50a10f0f7ce85c9bb58484755e1f7e6dc1dcb80c571dd00dd5dba62b4",
+      "migratedAssertions": 0,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/selected-urban-remaining/01-structure-one-impulse-and-noise.ts",
+      "destination": "tests/public-contracts/selected-urban-remaining/01-structure-one-impulse-and-noise.ts",
+      "originalSha256": "8cb75fe0b60cd2db1123201805eb43e675bca553bc4029e011b5299d67fa217e",
+      "assertions": 11,
+      "role": "public-contract",
+      "migratedSha256": "3b13d0fa6fbc883dd4e05a96dbdda4e77100ef3ba52b11399795d82dcafbe7b8",
+      "migratedAssertions": 11,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-urban-remaining/02-structure-two-sticky-activation.ts",
+      "destination": "tests/public-contracts/selected-urban-remaining/02-structure-two-sticky-activation.ts",
+      "originalSha256": "046d0cf63781d7ba7e3d07cc5f6b40938f7acabc29169017388ef32c3d0c7456",
+      "assertions": 10,
+      "role": "public-contract",
+      "migratedSha256": "1fa3c9b1ca281b9d86638c66a90344b71c6847bdc508ff8a12ef085bc1b0dd5f",
+      "migratedAssertions": 10,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-urban-remaining/03-sprawl-conversion-and-cached-threshold.ts",
+      "destination": "tests/public-contracts/selected-urban-remaining/03-sprawl-conversion-and-cached-threshold.ts",
+      "originalSha256": "8cba99c9f94f4ba3535098e35a7daf1a59f501472706397dc54f7308afa77eae",
+      "assertions": 14,
+      "role": "public-contract",
+      "migratedSha256": "768f91a78790e77804e3e53d1f89c777042fc24f9abe0d755d324b6f572078db",
+      "migratedAssertions": 14,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-urban-remaining/04-economic-oldest-removal-and-median.ts",
+      "destination": "tests/public-contracts/selected-urban-remaining/04-economic-oldest-removal-and-median.ts",
+      "originalSha256": "243985fb8b1d664e821ca6352b885c70859544c5fb95ce1c6a9605da255094c2",
+      "assertions": 7,
+      "role": "public-contract",
+      "migratedSha256": "d3c598b973bd4a751a1c46dcad95c0a0ec4c3d134a45b6ad498a4c76608670ea",
+      "migratedAssertions": 7,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-urban-remaining/05-defaults-isolation-and-preflight.ts",
+      "destination": "tests/public-contracts/selected-urban-remaining/05-defaults-isolation-and-preflight.ts",
+      "originalSha256": "fdcf6e3e355099184d1f901fbfb930230a463cdd823fcf9f84516a5f6059639f",
+      "assertions": 12,
+      "role": "public-contract",
+      "migratedSha256": "82b9d38e42b85178c762f3867cc07fa6c1447c9ad016b83933c19d76402d4e24",
+      "migratedAssertions": 12,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-urban-remaining/SHA256SUMS",
+      "destination": "tests/public-contracts/selected-urban-remaining/SHA256SUMS",
+      "originalSha256": "5ddea4afdafbea49c194c5bda77e7db50f01815b99cd11a0e60a2530c54c9d71",
+      "assertions": 0,
+      "role": "historical-manifest",
+      "migratedSha256": "5ddea4afdafbea49c194c5bda77e7db50f01815b99cd11a0e60a2530c54c9d71",
+      "migratedAssertions": 0,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/selected-urban/01-awareness-contact-and-expiry.ts",
+      "destination": "tests/public-contracts/selected-urban/01-awareness-contact-and-expiry.ts",
+      "originalSha256": "a67e817389981735bd932782cf32c9b72b6d81a2aa8af3fee7cad1efb1003b90",
+      "assertions": 13,
+      "role": "public-contract",
+      "migratedSha256": "3d38e88cf50ebeee6fad5c43adc7805d5e4a8480813636cf24033cfe8a0b8353",
+      "migratedAssertions": 13,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-urban/02-pollution-phases-and-stop.ts",
+      "destination": "tests/public-contracts/selected-urban/02-pollution-phases-and-stop.ts",
+      "originalSha256": "d92c874ac1a75b1bdb3b02db319785d050d7d30ca291bde73603513b59371b16",
+      "assertions": 7,
+      "role": "public-contract",
+      "migratedSha256": "bf88bc851d1d97e2c851a3ff66036b4ecccd8c73fb05ba96ad97a91fa05de627",
+      "migratedAssertions": 7,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-urban/03-recycling-order-and-energy.ts",
+      "destination": "tests/public-contracts/selected-urban/03-recycling-order-and-energy.ts",
+      "originalSha256": "21478f27ca5d4137124f0126be7bc48359cb990da9bda69a8d696c4a3bae7612",
+      "assertions": 9,
+      "role": "public-contract",
+      "migratedSha256": "ef5ec1006592b0e48d436417f3a4ad96397e52e7869d12c7e6732f2b84619358",
+      "migratedAssertions": 9,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-urban/04-defaults-isolation-and-validation.ts",
+      "destination": "tests/public-contracts/selected-urban/04-defaults-isolation-and-validation.ts",
+      "originalSha256": "aebba32bce8fb0906ecce943f9964a4c7833376064db6eccbe0f6f04b228bca2",
+      "assertions": 17,
+      "role": "public-contract",
+      "migratedSha256": "9424e4b4fe1861673d4ba84c78884b4e86cc5f93671fc602ee46fb4409fa6a5b",
+      "migratedAssertions": 17,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-urban/05-live-seeking-and-cap.ts",
+      "destination": "tests/public-contracts/selected-urban/05-live-seeking-and-cap.ts",
+      "originalSha256": "e3443e4c63752b0e94489d298aeacda08d7ba512a53d34104a10d21416be4afe",
+      "assertions": 9,
+      "role": "public-contract",
+      "migratedSha256": "968d03d58116e932549cb58b7cb5e053663b2c3ed89a8b6e02f5d26156f92d90",
+      "migratedAssertions": 9,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/selected-urban/SHA256SUMS",
+      "destination": "tests/public-contracts/selected-urban/SHA256SUMS",
+      "originalSha256": "ca7c9475e355dea036b15310439be1df1cded6d98db1e4451b9e90c2791aa2f2",
+      "assertions": 0,
+      "role": "historical-manifest",
+      "migratedSha256": "ca7c9475e355dea036b15310439be1df1cded6d98db1e4451b9e90c2791aa2f2",
+      "migratedAssertions": 0,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/spatial/01-independent-space.ts",
+      "destination": "tests/public-contracts/spatial/01-independent-space.ts",
+      "originalSha256": "78abf14fc012ed6ce6ee9183592c5b807be4000bf73c1b1694254d66947a77ee",
+      "assertions": 7,
+      "role": "public-contract",
+      "migratedSha256": "78abf14fc012ed6ce6ee9183592c5b807be4000bf73c1b1694254d66947a77ee",
+      "migratedAssertions": 7,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/spatial/02-movement-and-boundaries.ts",
+      "destination": "tests/public-contracts/spatial/02-movement-and-boundaries.ts",
+      "originalSha256": "15abd0abee24744d9e62a5284767ac92601ae6019b5dfbcd9bf59c7bedcc584a",
+      "assertions": 8,
+      "role": "public-contract",
+      "migratedSha256": "15abd0abee24744d9e62a5284767ac92601ae6019b5dfbcd9bf59c7bedcc584a",
+      "migratedAssertions": 8,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/spatial/03-perception.ts",
+      "destination": "tests/public-contracts/spatial/03-perception.ts",
+      "originalSha256": "6228351f62f48082db8af48e2513e316a67007a501d0455aa600252ea8ac9bb0",
+      "assertions": 7,
+      "role": "public-contract",
+      "migratedSha256": "6228351f62f48082db8af48e2513e316a67007a501d0455aa600252ea8ac9bb0",
+      "migratedAssertions": 7,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/spatial/04-copy-and-lifecycle.ts",
+      "destination": "tests/public-contracts/spatial/04-copy-and-lifecycle.ts",
+      "originalSha256": "d76ce0e12bcf66b0ef3f32b3bba66b0fa4f1ca296af10441790609496b96e01b",
+      "assertions": 10,
+      "role": "public-contract",
+      "migratedSha256": "d76ce0e12bcf66b0ef3f32b3bba66b0fa4f1ca296af10441790609496b96e01b",
+      "migratedAssertions": 10,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/spatial/05-context-and-observation.ts",
+      "destination": "tests/public-contracts/spatial/05-context-and-observation.ts",
+      "originalSha256": "bcc44122de94d43ead20a6b9ca7ee76018a21c98a67a5d94b7f7589a4d1fb6d1",
+      "assertions": 6,
+      "role": "public-contract",
+      "migratedSha256": "bcc44122de94d43ead20a6b9ca7ee76018a21c98a67a5d94b7f7589a4d1fb6d1",
+      "migratedAssertions": 6,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/stats/01-histogram-boundaries.ts",
+      "destination": "tests/public-contracts/stats/01-histogram-boundaries.ts",
+      "originalSha256": "b7360e47930a2b093a72c3220a9e258679a1bbf7fc317598f783be29e78644a0",
+      "assertions": 3,
+      "role": "public-contract",
+      "migratedSha256": "b7360e47930a2b093a72c3220a9e258679a1bbf7fc317598f783be29e78644a0",
+      "migratedAssertions": 3,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/stats/02-gini-known-values.ts",
+      "destination": "tests/public-contracts/stats/02-gini-known-values.ts",
+      "originalSha256": "0cf8f657c71bf4b5af404fce39b94ded2203b1e59772119138b688e86b51ddb0",
+      "assertions": 5,
+      "role": "public-contract",
+      "migratedSha256": "0cf8f657c71bf4b5af404fce39b94ded2203b1e59772119138b688e86b51ddb0",
+      "migratedAssertions": 5,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/stats/03-invalid-measurements.ts",
+      "destination": "tests/public-contracts/stats/03-invalid-measurements.ts",
+      "originalSha256": "8250eef5072eed56a55f4434c5d7507e0aad7f7f3feb320b6f2018f7ef45dbd6",
+      "assertions": 4,
+      "role": "public-contract",
+      "migratedSha256": "8250eef5072eed56a55f4434c5d7507e0aad7f7f3feb320b6f2018f7ef45dbd6",
+      "migratedAssertions": 4,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/stats/04-independent-observation.ts",
+      "destination": "tests/public-contracts/stats/04-independent-observation.ts",
+      "originalSha256": "a0d8a7f89e7b92ccae877d03255e94762f44673712f62bdb270f7902d06eb4db",
+      "assertions": 4,
+      "role": "public-contract",
+      "migratedSha256": "a0d8a7f89e7b92ccae877d03255e94762f44673712f62bdb270f7902d06eb4db",
+      "migratedAssertions": 4,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/stats/05-detached-distributions.ts",
+      "destination": "tests/public-contracts/stats/05-detached-distributions.ts",
+      "originalSha256": "ac4a29561fde13ee318e3aa15d847cd7333ac1fb9b81b7e4f65e0ae1cea99b5e",
+      "assertions": 3,
+      "role": "public-contract",
+      "migratedSha256": "ac4a29561fde13ee318e3aa15d847cd7333ac1fb9b81b7e4f65e0ae1cea99b5e",
+      "migratedAssertions": 3,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/stats/README.md",
+      "destination": "tests/public-contracts/stats/README.md",
+      "originalSha256": "949edb9e2c33a032c2b54519a4a26ef875a7fe979b23a9028e2fe789ce264960",
+      "assertions": 0,
+      "role": "public-contract",
+      "migratedSha256": "46ca20ebf3811722fb550b535327e7e18ce85db15d71d593d126337921f09686",
+      "migratedAssertions": 0,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/summary/01-population-and-median.ts",
+      "destination": "tests/public-contracts/summary/01-population-and-median.ts",
+      "originalSha256": "9e770e7b8516f87d7ece86747dd4b733831dfe56d215eb67c9b02ba82bded98a",
+      "assertions": 3,
+      "role": "public-contract",
+      "migratedSha256": "9e770e7b8516f87d7ece86747dd4b733831dfe56d215eb67c9b02ba82bded98a",
+      "migratedAssertions": 3,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/summary/02-sample-and-empty.ts",
+      "destination": "tests/public-contracts/summary/02-sample-and-empty.ts",
+      "originalSha256": "02e703bf04a8945d304477152c27365ee31cde114d8abdd746fdbb783cadb043",
+      "assertions": 6,
+      "role": "public-contract",
+      "migratedSha256": "02e703bf04a8945d304477152c27365ee31cde114d8abdd746fdbb783cadb043",
+      "migratedAssertions": 6,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/summary/03-single-pass-and-detachment.ts",
+      "destination": "tests/public-contracts/summary/03-single-pass-and-detachment.ts",
+      "originalSha256": "6b3cd6f0e5efd3c7ea31a64811e97d50ee7570d97c245577711b786394ac29c8",
+      "assertions": 4,
+      "role": "public-contract",
+      "migratedSha256": "6b3cd6f0e5efd3c7ea31a64811e97d50ee7570d97c245577711b786394ac29c8",
+      "migratedAssertions": 4,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/summary/04-invalid-and-overflow.ts",
+      "destination": "tests/public-contracts/summary/04-invalid-and-overflow.ts",
+      "originalSha256": "7b4af61264989022c38f029b06c394da4f7b7d24325b1d5b8308e3786ce527b2",
+      "assertions": 6,
+      "role": "public-contract",
+      "migratedSha256": "7b4af61264989022c38f029b06c394da4f7b7d24325b1d5b8308e3786ce527b2",
+      "migratedAssertions": 6,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/summary/05-domain-report-composition.ts",
+      "destination": "tests/public-contracts/summary/05-domain-report-composition.ts",
+      "originalSha256": "4cf8523e7d179b45afd970d4157a4b6cceb46ed251154238862635c30fc6c93d",
+      "assertions": 5,
+      "role": "public-contract",
+      "migratedSha256": "4cf8523e7d179b45afd970d4157a4b6cceb46ed251154238862635c30fc6c93d",
+      "migratedAssertions": 5,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/summary/SHA256SUMS",
+      "destination": "tests/public-contracts/summary/SHA256SUMS",
+      "originalSha256": "bbad6e140efda0902d8e3474b40b8bef879b209251dc0058a659480314eac5b0",
+      "assertions": 0,
+      "role": "historical-manifest",
+      "migratedSha256": "bbad6e140efda0902d8e3474b40b8bef879b209251dc0058a659480314eac5b0",
+      "migratedAssertions": 0,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/townscaper-grid/01-finite-hex-refinement.ts",
+      "destination": "tests/public-contracts/townscaper-grid/01-finite-hex-refinement.ts",
+      "originalSha256": "821cbc010ad33dd728e520527a6b4ba2b0f9331e2a44b88cbf3374b4e1f0f614",
+      "assertions": 14,
+      "role": "public-contract",
+      "migratedSha256": "821cbc010ad33dd728e520527a6b4ba2b0f9331e2a44b88cbf3374b4e1f0f614",
+      "migratedAssertions": 14,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/townscaper-grid/02-square-target-first-step.ts",
+      "destination": "tests/public-contracts/townscaper-grid/02-square-target-first-step.ts",
+      "originalSha256": "0b5d50ce73b98051739055970f510a39596ce3056e385a4c2d6ad53c31df43fe",
+      "assertions": 7,
+      "role": "public-contract",
+      "migratedSha256": "0b5d50ce73b98051739055970f510a39596ce3056e385a4c2d6ad53c31df43fe",
+      "migratedAssertions": 7,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/townscaper-grid/03-validation-and-failure.ts",
+      "destination": "tests/public-contracts/townscaper-grid/03-validation-and-failure.ts",
+      "originalSha256": "15e62ce1e1f6ce9e915f7623112267493776747666a1605ce4833aea7a01ffad",
+      "assertions": 12,
+      "role": "public-contract",
+      "migratedSha256": "15e62ce1e1f6ce9e915f7623112267493776747666a1605ce4833aea7a01ffad",
+      "migratedAssertions": 12,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/townscaper-grid/04-continuation-and-revisions.ts",
+      "destination": "tests/public-contracts/townscaper-grid/04-continuation-and-revisions.ts",
+      "originalSha256": "c3cd55c2e8d24a6e0536361130cf42e30b8690d245b4e7e6626eca435d0fcb7e",
+      "assertions": 17,
+      "role": "public-contract",
+      "migratedSha256": "c3cd55c2e8d24a6e0536361130cf42e30b8690d245b4e7e6626eca435d0fcb7e",
+      "migratedAssertions": 17,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/townscaper-grid/05-explicit-grid-state-copy.ts",
+      "destination": "tests/public-contracts/townscaper-grid/05-explicit-grid-state-copy.ts",
+      "originalSha256": "8ef7af0f6c0eb98e96f7fdee34aae31a340e367d0377196bbbff4b027760e4d6",
+      "assertions": 17,
+      "role": "public-contract",
+      "migratedSha256": "8ef7af0f6c0eb98e96f7fdee34aae31a340e367d0377196bbbff4b027760e4d6",
+      "migratedAssertions": 17,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/townscaper-grid/README.md",
+      "destination": "tests/public-contracts/townscaper-grid/README.md",
+      "originalSha256": "067c36e039688be9c04736c12408b62db00285ad2b24849a1ad26ae879bcdaae",
+      "assertions": 0,
+      "role": "public-contract",
+      "migratedSha256": "c62c271a07eae78b9b971d9f273bd011b7dfcda8562fb9a472101a709824fb45",
+      "migratedAssertions": 0,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/townscaper-grid/SHA256SUMS",
+      "destination": "tests/public-contracts/townscaper-grid/SHA256SUMS",
+      "originalSha256": "47640c04278a3f5ad4a82acb0d125566177934682c8e15f41a34570ca174f251",
+      "assertions": 0,
+      "role": "historical-manifest",
+      "migratedSha256": "47640c04278a3f5ad4a82acb0d125566177934682c8e15f41a34570ca174f251",
+      "migratedAssertions": 0,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/ui-authoring-next/01-typed-monitor-formatters.ts",
+      "destination": "tests/ui/ui-authoring-next/01-typed-monitor-formatters.ts",
+      "originalSha256": "07da7b81adc7c36b763c63ed088180f9fafeb9904ae83ebcc4d6eb11c601987c",
+      "assertions": 2,
+      "role": "ui-contract",
+      "migratedSha256": "3ebce3351e0e3ff9973e8113626c6991633a3ffef5e131eda7e78e9e2ed281a7",
+      "migratedAssertions": 2,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-authoring-next/02-readable-observation-projections.ts",
+      "destination": "tests/ui/ui-authoring-next/02-readable-observation-projections.ts",
+      "originalSha256": "c139edf7072201c957a59091402e8f4930555bafc7f466001ccd844d2c155215",
+      "assertions": 2,
+      "role": "ui-contract",
+      "migratedSha256": "5f957bdda4c6feb92853a9492733227dd99b6bc90b58009e62cb835acf0415c8",
+      "migratedAssertions": 2,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-authoring-next/03-namespaced-selection.ts",
+      "destination": "tests/ui/ui-authoring-next/03-namespaced-selection.ts",
+      "originalSha256": "bbb248e7a1d04ba3fe4efc1c1ce4a076a2c1daa893189e4c846838d6ff72767e",
+      "assertions": 7,
+      "role": "ui-contract",
+      "migratedSha256": "ce0a523ca48a0e7ee904020eb3a1e55ff3b181ea9d7a3a83a08c3afc523b986e",
+      "migratedAssertions": 7,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-authoring-next/04-formatter-errors-and-recovery.ts",
+      "destination": "tests/ui/ui-authoring-next/04-formatter-errors-and-recovery.ts",
+      "originalSha256": "371e835ffe0f856bbdebc2235ac1374d6d3f8f879861cfa82d8e55d780e94d88",
+      "assertions": 3,
+      "role": "ui-contract",
+      "migratedSha256": "cbc85434a183092dfd00ebacde64f62d73cf3c02b21c1546eda882f897d54f23",
+      "migratedAssertions": 3,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-authoring-next/05-independent-mounts-and-legacy.ts",
+      "destination": "tests/ui/ui-authoring-next/05-independent-mounts-and-legacy.ts",
+      "originalSha256": "da778eeb91fbf684f23e843fb25c3ad8be50a2283bafb1bd1d108b0f7e9c9155",
+      "assertions": 1,
+      "role": "ui-contract",
+      "migratedSha256": "d6c999cdf299001214aeb0ee623b35c865b88e7a8a6060d16b19f89edf6b8512",
+      "migratedAssertions": 1,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-authoring-next/README.md",
+      "destination": "tests/ui/ui-authoring-next/README.md",
+      "originalSha256": "9315e1779162abdbf3e8f61fcfb2602aa3ee6e3130206e8817398c3c655ba63c",
+      "assertions": 0,
+      "role": "ui-contract",
+      "migratedSha256": "636cfe48e4633a5571de3122f6dced49ab606cd9a3d18df918b457e414bf90ec",
+      "migratedAssertions": 0,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-authoring-next/SHA256SUMS",
+      "destination": "tests/ui/ui-authoring-next/SHA256SUMS",
+      "originalSha256": "5f1feb66d2855578cefccf496ea7ce72604bc26f308106cfd4b727322d8134b1",
+      "assertions": 0,
+      "role": "historical-manifest",
+      "migratedSha256": "5f1feb66d2855578cefccf496ea7ce72604bc26f308106cfd4b727322d8134b1",
+      "migratedAssertions": 0,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/ui-authoring-next/assertions.ts",
+      "destination": "tests/ui/ui-authoring-next/assertions.ts",
+      "originalSha256": "7ddbb193b06ce6ddf8f866fef30e28ae606197cb8a8adcc16d005a576c85bcbc",
+      "assertions": 0,
+      "role": "ui-contract",
+      "migratedSha256": "7ddbb193b06ce6ddf8f866fef30e28ae606197cb8a8adcc16d005a576c85bcbc",
+      "migratedAssertions": 0,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/ui-authoring-next/authoring.types.ts",
+      "destination": "tests/ui/ui-authoring-next/authoring.types.ts",
+      "originalSha256": "5675c663780aac20abfe6a42c39e89143922708ab52d1baf794e80b85a74b35c",
+      "assertions": 0,
+      "role": "ui-contract",
+      "migratedSha256": "0fc112cf50f96f85a0a5a3e0cbf757a614bf7d1a98b879f741a8cac12fef4e1b",
+      "migratedAssertions": 0,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-authoring-next/browser-harness.ts",
+      "destination": "tests/ui/ui-authoring-next/browser-harness.ts",
+      "originalSha256": "943a798bd41faa0aeebb42aef13d0b07570570b5d86318b436850e4828f99aad",
+      "assertions": 0,
+      "role": "ui-contract",
+      "migratedSha256": "32505ceddcbcd2ed438a786d157297d6c52c640baf5a56cbc12f6c3f551e110b",
+      "migratedAssertions": 0,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-authoring/01-defaults-and-inert-entry.ts",
+      "destination": "tests/ui/ui-authoring/01-defaults-and-inert-entry.ts",
+      "originalSha256": "8a4337f24d27dc5716a00cb9eb0124388478153a9e86adcb23e0c9368afa6c11",
+      "assertions": 1,
+      "role": "ui-contract",
+      "migratedSha256": "c93c0113b5de4f075b1faffe94d55d108290e53080555c5fcc4fa93a1861802d",
+      "migratedAssertions": 1,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-authoring/02-ordered-setup-and-numeric-live.ts",
+      "destination": "tests/ui/ui-authoring/02-ordered-setup-and-numeric-live.ts",
+      "originalSha256": "75d66d2d966777423366590049d8356412f99ec0aae15c171941c10fba64b6b3",
+      "assertions": 0,
+      "role": "ui-contract",
+      "migratedSha256": "273a3e2e83e6902ddbfa7a823f48c1dfc8a40a8e60e9c595d3757d81f545827c",
+      "migratedAssertions": 0,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-authoring/03-alternate-observation.ts",
+      "destination": "tests/ui/ui-authoring/03-alternate-observation.ts",
+      "originalSha256": "7688b811827724cc829cf878a86fbd1a8339552007bc86660634a8419d4ac11e",
+      "assertions": 1,
+      "role": "ui-contract",
+      "migratedSha256": "d9cd2b1070df86fb0db104c8fd308223577d96e66edba906cfc39867f7920018",
+      "migratedAssertions": 1,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-authoring/04-groups-format-and-categories.ts",
+      "destination": "tests/ui/ui-authoring/04-groups-format-and-categories.ts",
+      "originalSha256": "783fcc38037df6cde7bfb2cc0f4f9eec4189a36bb1fcf2da757afe0516755cd6",
+      "assertions": 5,
+      "role": "ui-contract",
+      "migratedSha256": "0b876f87457011fab1d760a157469357f42fda351089c19858878ec50059223e",
+      "migratedAssertions": 5,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-authoring/05-independent-actions-and-legacy.ts",
+      "destination": "tests/ui/ui-authoring/05-independent-actions-and-legacy.ts",
+      "originalSha256": "bcfc0bebf8810edbeab677d182edb3a408e769a9907c2b282b049e173119a843",
+      "assertions": 1,
+      "role": "ui-contract",
+      "migratedSha256": "316286e5f157d36f4f2f36c259fc1f07f480a73b1e783da464c6170e9babe8c8",
+      "migratedAssertions": 1,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-authoring/README.md",
+      "destination": "tests/ui/ui-authoring/README.md",
+      "originalSha256": "6a5d426de8d5cda1734abe18e053da9574c444fe3c82a851f4856fa943d9800f",
+      "assertions": 0,
+      "role": "ui-contract",
+      "migratedSha256": "0f6d9e8fc3c61b307ee33c90d32cdff346dbb7fa4a58a9d25ea3ea643f5677ea",
+      "migratedAssertions": 0,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-authoring/SHA256SUMS",
+      "destination": "tests/ui/ui-authoring/SHA256SUMS",
+      "originalSha256": "c795bd241a568a138e0563ca1b8364c8c0f8d804f98e18fda25b3c3612438288",
+      "assertions": 0,
+      "role": "historical-manifest",
+      "migratedSha256": "c795bd241a568a138e0563ca1b8364c8c0f8d804f98e18fda25b3c3612438288",
+      "migratedAssertions": 0,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/ui-authoring/assertions.ts",
+      "destination": "tests/ui/ui-authoring/assertions.ts",
+      "originalSha256": "0eff67ed97fd44529b50422bbc27db16eb61c6fb8d236898f59dbef3d3da34f1",
+      "assertions": 7,
+      "role": "ui-contract",
+      "migratedSha256": "0eff67ed97fd44529b50422bbc27db16eb61c6fb8d236898f59dbef3d3da34f1",
+      "migratedAssertions": 7,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/ui-authoring/authoring.types.ts",
+      "destination": "tests/ui/ui-authoring/authoring.types.ts",
+      "originalSha256": "fb3efedfe4f5c7fcc9bbaa47c870a110eeddc197d5bf4fa62b65da38ca58701f",
+      "assertions": 0,
+      "role": "ui-contract",
+      "migratedSha256": "da695a8c4b011c2d1b4729dd290a9e7145de9723b5d024b825a8e9892117951e",
+      "migratedAssertions": 0,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-authoring/browser-harness.ts",
+      "destination": "tests/ui/ui-authoring/browser-harness.ts",
+      "originalSha256": "7b2102eea99b62097de11cdb70fd88294fe3a68924100782f0068345e5ff4642",
+      "assertions": 0,
+      "role": "ui-contract",
+      "migratedSha256": "7007eda48e551be7899cbb0fedf218ef4af4a556b42a3a412b6d8253a9b4c82c",
+      "migratedAssertions": 0,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-authoring/refreeze-headless.log",
+      "destination": "tests/ui/ui-authoring/refreeze-headless.log",
+      "originalSha256": "5392c802645b73cc32d14de4365049d9acc2f3e143a021870a554c6c77e1184e",
+      "assertions": 0,
+      "role": "ui-contract",
+      "migratedSha256": "5392c802645b73cc32d14de4365049d9acc2f3e143a021870a554c6c77e1184e",
+      "migratedAssertions": 0,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/ui-authoring/refreeze-initial-typecheck.log",
+      "destination": "tests/ui/ui-authoring/refreeze-initial-typecheck.log",
+      "originalSha256": "c0d2fe22c0f323b4a4d6769d13d015e6cc3bac7c7a29780fdbd6d2e072625b68",
+      "assertions": 0,
+      "role": "ui-contract",
+      "migratedSha256": "c0d2fe22c0f323b4a4d6769d13d015e6cc3bac7c7a29780fdbd6d2e072625b68",
+      "migratedAssertions": 0,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/ui-collections/01-store-items.ts",
+      "destination": "tests/ui/ui-collections/01-store-items.ts",
+      "originalSha256": "2544b095871639e6f33351711aa31d88b78e8a775f847d433f39fbafcec55a07",
+      "assertions": 5,
+      "role": "ui-contract",
+      "migratedSha256": "39f67eae1b09e496488cf1d150aba3d7ef3f92ceb3cd7e5bdd60e0017879b4f3",
+      "migratedAssertions": 5,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-collections/02-priority-and-retained-capacity.ts",
+      "destination": "tests/ui/ui-collections/02-priority-and-retained-capacity.ts",
+      "originalSha256": "b84773fff62e239359e810ebb16a8619e045cff588bb16089f12d0fcf6ab9b28",
+      "assertions": 4,
+      "role": "ui-contract",
+      "migratedSha256": "4bdf263d5676723027bcf092f07908378dd150eab4fb4c8babd1f0f7a1407fe8",
+      "migratedAssertions": 4,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-collections/03-counts-defaults-and-errors.ts",
+      "destination": "tests/ui/ui-collections/03-counts-defaults-and-errors.ts",
+      "originalSha256": "1b8f380db5de6af3e63d86512121cb17effd34f6bc0e88d99ce3608479766a59",
+      "assertions": 8,
+      "role": "ui-contract",
+      "migratedSha256": "b52133a9744c2d736bcd0130fbc95be8219f32ac4714754dbd2132e68b93d3dd",
+      "migratedAssertions": 8,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-collections/04-selection-and-lifecycle.ts",
+      "destination": "tests/ui/ui-collections/04-selection-and-lifecycle.ts",
+      "originalSha256": "c5ce4bef7fe94633de7e3cb2779a76a2f74f49b5dc3610828636adb4997557da",
+      "assertions": 6,
+      "role": "ui-contract",
+      "migratedSha256": "a503e0d01580722dddd3365fc0e414f5aad0a85fbe5710b5c4242195d74a2022",
+      "migratedAssertions": 6,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-collections/05-complete-table-inspection.ts",
+      "destination": "tests/ui/ui-collections/05-complete-table-inspection.ts",
+      "originalSha256": "20d2aba930a86b0e7c905909ae7f2525351cb38b0bc57605d4f0c24b82461a5b",
+      "assertions": 9,
+      "role": "ui-contract",
+      "migratedSha256": "0b4f650563050c28a02542a7c8faad9ca090856a1744a484a345869b1f83e0da",
+      "migratedAssertions": 9,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-collections/README.md",
+      "destination": "tests/ui/ui-collections/README.md",
+      "originalSha256": "44746139527110258fdf5e83759342396f037c38d8fb3e74bf486e755f9b476c",
+      "assertions": 0,
+      "role": "ui-contract",
+      "migratedSha256": "4ced96011d77f4ca4dd831477d09f6667b860ef71eeeb604ba47d0cc3aed5bf8",
+      "migratedAssertions": 0,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-collections/SHA256SUMS",
+      "destination": "tests/ui/ui-collections/SHA256SUMS",
+      "originalSha256": "963e0b78d179829eddcea1dec196261aec0cd0bebadfbfb9b1dd64669ca1a63c",
+      "assertions": 0,
+      "role": "historical-manifest",
+      "migratedSha256": "963e0b78d179829eddcea1dec196261aec0cd0bebadfbfb9b1dd64669ca1a63c",
+      "migratedAssertions": 0,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/ui-collections/authoring.types.ts",
+      "destination": "tests/ui/ui-collections/authoring.types.ts",
+      "originalSha256": "54c0f73a86cf7e4e56c00f477fb809b5cb81ccec40f8681a7c8132829c2d07e4",
+      "assertions": 0,
+      "role": "ui-contract",
+      "migratedSha256": "87398ba78b8ba3694d8b0a917b40658802710505ad0a36a86562f43dbb60106d",
+      "migratedAssertions": 0,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-color/01-source-anchors.ts",
+      "destination": "tests/ui/ui-color/01-source-anchors.ts",
+      "originalSha256": "5895ea8d6cd1116dbbb9ac58155903dc9690560d98ff59e82e81b35367d4233b",
+      "assertions": 1,
+      "role": "ui-contract",
+      "migratedSha256": "e5b184887609053e676b1219254b41985552039c0f14a7db3307bebe873aa336",
+      "migratedAssertions": 1,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-color/02-floor-quantization.ts",
+      "destination": "tests/ui/ui-color/02-floor-quantization.ts",
+      "originalSha256": "cc755da5ba08e78b996fb602ab23b1979afb7223bd56308b766f45c0fb51b62e",
+      "assertions": 4,
+      "role": "ui-contract",
+      "migratedSha256": "182f9bea71aadcfcbff35d6074d88ac7d0d7431116bb07005bd74e147d68a021",
+      "migratedAssertions": 4,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-color/03-source-cycle-wrap.ts",
+      "destination": "tests/ui/ui-color/03-source-cycle-wrap.ts",
+      "originalSha256": "b392b49eec29dcf078a07f4460549bf180ed67c5dfb2f40129674258b4bd0243",
+      "assertions": 5,
+      "role": "ui-contract",
+      "migratedSha256": "81e8c4008c969e488225174e828e093546b675b743296a7ab573342c79d20721",
+      "migratedAssertions": 5,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-color/04-detached-field-projection.ts",
+      "destination": "tests/ui/ui-color/04-detached-field-projection.ts",
+      "originalSha256": "6387291f2d6a2e03d9a9c87614c73c125db501c095e488f4dc5f142c7c418a7f",
+      "assertions": 3,
+      "role": "ui-contract",
+      "migratedSha256": "f33b343119e61c2ac47f397d0f07f549d3e57056fe885bbb35e1f055380bec26",
+      "migratedAssertions": 3,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-color/05-invalid-and-large-inputs.ts",
+      "destination": "tests/ui/ui-color/05-invalid-and-large-inputs.ts",
+      "originalSha256": "635d6f81afe1c9f89272ac042563546f5ce6ce84512565216aba5a41921e6258",
+      "assertions": 4,
+      "role": "ui-contract",
+      "migratedSha256": "e06f18b7541acf2f6fcf728e8abb352a9f39e725f5b4c2c1084446c1f7b7cff1",
+      "migratedAssertions": 4,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-color/SHA256SUMS",
+      "destination": "tests/ui/ui-color/SHA256SUMS",
+      "originalSha256": "e117ddfecda2bfd4f2442668e022351e95623fe0e68644ed01c02c60c17df825",
+      "assertions": 0,
+      "role": "historical-manifest",
+      "migratedSha256": "e117ddfecda2bfd4f2442668e022351e95623fe0e68644ed01c02c60c17df825",
+      "migratedAssertions": 0,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/ui-des-scenes/01-residents-and-clerks.ts",
+      "destination": "tests/ui/ui-des-scenes/01-residents-and-clerks.ts",
+      "originalSha256": "8e2ac94f13de343b893f092d216d08cab52584c27c11946a78129978a9769094",
+      "assertions": 7,
+      "role": "ui-contract",
+      "migratedSha256": "b6ed9e19a8b88993bdba6cf274f7100b7d36f339e75088ecba5a7882bffec10b",
+      "migratedAssertions": 7,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-des-scenes/02-bounded-slots.ts",
+      "destination": "tests/ui/ui-des-scenes/02-bounded-slots.ts",
+      "originalSha256": "9262d1bc20113879bc960efb8f7b8195b053835e2817fab779bde8d2ec2d698c",
+      "assertions": 8,
+      "role": "ui-contract",
+      "migratedSha256": "c1b591db6ac66bbf802261c2ebdfe758b5a8685f07aea3289059f5709a43c750",
+      "migratedAssertions": 8,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-des-scenes/03-labels-and-legacy-defaults.ts",
+      "destination": "tests/ui/ui-des-scenes/03-labels-and-legacy-defaults.ts",
+      "originalSha256": "032830e5a325d863f58ffce564be68f44a16800547d8c9e5e38ab9e332dc3012",
+      "assertions": 7,
+      "role": "ui-contract",
+      "migratedSha256": "fa5248134a2c62e2558b467fbcedc78247dfad353d419063a1ab5c02daeff7ff",
+      "migratedAssertions": 7,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-des-scenes/04-browser-validation.ts",
+      "destination": "tests/ui/ui-des-scenes/04-browser-validation.ts",
+      "originalSha256": "1d1eff5033ee1708dd3a2811ce7fd412248014491a10dde471e0dea9df9000fb",
+      "assertions": 1,
+      "role": "ui-contract",
+      "migratedSha256": "f9949042d09800979f8affa286234456ba1e63aa04088082109591001471e9fd",
+      "migratedAssertions": 1,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-des-scenes/05-picking-and-disposal.ts",
+      "destination": "tests/ui/ui-des-scenes/05-picking-and-disposal.ts",
+      "originalSha256": "d5b0938e37e13c31da5c68f4637e6a242a7660e2cc203966f091abccb5fa82d7",
+      "assertions": 4,
+      "role": "ui-contract",
+      "migratedSha256": "e423d0d7a4713e5341b6ec04e94e1ea763b11caf9b78d4bcc576532f2da565cb",
+      "migratedAssertions": 4,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-live-changes/01-shared-change.ts",
+      "destination": "tests/ui/ui-live-changes/01-shared-change.ts",
+      "originalSha256": "e7f513f07c8c6a18bddf51fa4eefc975945666b7f9f04569650fcb8428e5f694",
+      "assertions": 1,
+      "role": "ui-contract",
+      "migratedSha256": "5fdeccfd136886d5c61cd12ef993a2bcd2ecdf38e700132dd707ca783f797dcd",
+      "migratedAssertions": 1,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-live-changes/02-binding-override.ts",
+      "destination": "tests/ui/ui-live-changes/02-binding-override.ts",
+      "originalSha256": "704275eb1949896ae98766a7ade996393beb94af8aed361c640f409ca7995b1b",
+      "assertions": 1,
+      "role": "ui-contract",
+      "migratedSha256": "990ae5306adcd811221f8c68d72d9d5d868f1c4b5769b15365b210e9a1503a9c",
+      "migratedAssertions": 1,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-live-changes/03-groups-labels-enabled.ts",
+      "destination": "tests/ui/ui-live-changes/03-groups-labels-enabled.ts",
+      "originalSha256": "0ac3f6ab338c2e6b00b9c76b36438481749edd70084ff320ab8a2a1bb51ecc67",
+      "assertions": 1,
+      "role": "ui-contract",
+      "migratedSha256": "e5ed1e01062febdb4e1250d7b1634e2fc00118cfa61b35e2a67a33e4d404a3d6",
+      "migratedAssertions": 1,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-live-changes/04-drafts-errors-and-legacy.ts",
+      "destination": "tests/ui/ui-live-changes/04-drafts-errors-and-legacy.ts",
+      "originalSha256": "9bb475dcb6c3e392cd3df1fbaae5ccfea2b573b2a7816e322e27d90c4e11d6bd",
+      "assertions": 3,
+      "role": "ui-contract",
+      "migratedSha256": "6dff22a08a99a2da44defba5500c618efe0d6b32327b28073da2b0e4d2507ab1",
+      "migratedAssertions": 3,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-live-changes/05-stable-chart-colors.ts",
+      "destination": "tests/ui/ui-live-changes/05-stable-chart-colors.ts",
+      "originalSha256": "aea636c88107f5593bc6a5407ec5a56da95fadf80ee479e3ff79cc66a4595afd",
+      "assertions": 1,
+      "role": "ui-contract",
+      "migratedSha256": "a047f82d00e60cfc3820425a584aadc3b0fb44e82898216744b50dfc04627a79",
+      "migratedAssertions": 1,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-live-changes/README.md",
+      "destination": "tests/ui/ui-live-changes/README.md",
+      "originalSha256": "c6c4fef764f81222e14f4e82cd96bc614483e26e27068ca69e41e257f4712d0f",
+      "assertions": 0,
+      "role": "ui-contract",
+      "migratedSha256": "089d5a9a3b39a2c0144c590d90f79edfda685b1de68e68fb4102e688b13a72f8",
+      "migratedAssertions": 0,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-live-changes/SHA256SUMS",
+      "destination": "tests/ui/ui-live-changes/SHA256SUMS",
+      "originalSha256": "c78eaa09e5a6f665b5a038967a1cd2db1ef7d94fc245b9d51e86fa09fb235c5b",
+      "assertions": 0,
+      "role": "historical-manifest",
+      "migratedSha256": "c78eaa09e5a6f665b5a038967a1cd2db1ef7d94fc245b9d51e86fa09fb235c5b",
+      "migratedAssertions": 0,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/ui-live-changes/authoring.types.ts",
+      "destination": "tests/ui/ui-live-changes/authoring.types.ts",
+      "originalSha256": "83d5b3eadab298f8a01605a316ed69887e6d36718d8bcc6640dd77a858b26ee6",
+      "assertions": 0,
+      "role": "ui-contract",
+      "migratedSha256": "d769b83eb656626c5496c9f885bb4aef9d89c53431d270c6ee5147a6a0f454b4",
+      "migratedAssertions": 0,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-migration/01-inert-entry.ts",
+      "destination": "tests/ui/ui-migration/01-inert-entry.ts",
+      "originalSha256": "8d1d1ceb5a5cd8749ed77cfef72aefa887364496b9321015f1dc6884ef221775",
+      "assertions": 3,
+      "role": "ui-contract",
+      "migratedSha256": "075bfea17e6fcdac1a2464906876610f05df4b87248086672e91591ef9e3eab4",
+      "migratedAssertions": 3,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-migration/02-setup-draft.ts",
+      "destination": "tests/ui/ui-migration/02-setup-draft.ts",
+      "originalSha256": "614a33285f197dde3ad7f6b8514b61541b8d7b101601b9651e79cf6396045fb3",
+      "assertions": 3,
+      "role": "ui-contract",
+      "migratedSha256": "d3ba40f9f32911f26798499c1d5a88f1ca915efdf8f7bc78b83caa4a528d6d91",
+      "migratedAssertions": 3,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-migration/03-actions-and-live-rules.ts",
+      "destination": "tests/ui/ui-migration/03-actions-and-live-rules.ts",
+      "originalSha256": "b5307da0ce3ee6f1f87bccda184b049ab3c169ed41f15bfe74168582666075ab",
+      "assertions": 3,
+      "role": "ui-contract",
+      "migratedSha256": "0b27a0813730364bdb1dec541809fa8f7bb8f22ead3cded692e7f9fdea7cffa8",
+      "migratedAssertions": 3,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-migration/04-observation-views.ts",
+      "destination": "tests/ui/ui-migration/04-observation-views.ts",
+      "originalSha256": "9518a0d0fbd31b90098ba6687610efa0213e0c41deed2ce2235ec705c740c8e1",
+      "assertions": 6,
+      "role": "ui-contract",
+      "migratedSha256": "543502e95f01011c11ce0f85aa66dedcf69f1d7bda7845956910d2dc498c30e7",
+      "migratedAssertions": 6,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-migration/05-invalid-rule-and-instance-isolation.ts",
+      "destination": "tests/ui/ui-migration/05-invalid-rule-and-instance-isolation.ts",
+      "originalSha256": "3f32f8bcbd4400e99620ff0619038fcb8a9a2b9c2f6b72346376eda40563640e",
+      "assertions": 4,
+      "role": "ui-contract",
+      "migratedSha256": "793620cb1c4b155a72a58713496128eb11e3eea36af3436b4924cd2cb91d4c80",
+      "migratedAssertions": 4,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-migration/SHA256SUMS",
+      "destination": "tests/ui/ui-migration/SHA256SUMS",
+      "originalSha256": "4e9735b8e88f30ac748e69bd91ba4cac0a0a1025f792d563e17e68370c8caae3",
+      "assertions": 0,
+      "role": "historical-manifest",
+      "migratedSha256": "4e9735b8e88f30ac748e69bd91ba4cac0a0a1025f792d563e17e68370c8caae3",
+      "migratedAssertions": 0,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    },
+    {
+      "source": "examples/ui-segments/01-canonical-agent-movement.ts",
+      "destination": "tests/ui/ui-segments/01-canonical-agent-movement.ts",
+      "originalSha256": "a271441d75aa4ec4371770002fa05c679248f0d34ec69243889700a6ba339df1",
+      "assertions": 4,
+      "role": "ui-contract",
+      "migratedSha256": "32a3df2f7018f4c930fdf63334b62f1faa7a20a80e969176c4b2fa48d324cb35",
+      "migratedAssertions": 4,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-segments/02-history-survives-agent-deletion.ts",
+      "destination": "tests/ui/ui-segments/02-history-survives-agent-deletion.ts",
+      "originalSha256": "e153e49f2a60a223833318c838db812b3c7af40748571a0fdf161c15614df7ef",
+      "assertions": 4,
+      "role": "ui-contract",
+      "migratedSha256": "3463d5b13daf8e8e48fa695525c815783a18f8a5503681c5b92ce55dd0fa0829",
+      "migratedAssertions": 4,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-segments/03-source-palette-and-pixel-widths.ts",
+      "destination": "tests/ui/ui-segments/03-source-palette-and-pixel-widths.ts",
+      "originalSha256": "d988a9734a3023c515f466ddb26699bb86aeead58007c0786dbcfa3a358b680f",
+      "assertions": 4,
+      "role": "ui-contract",
+      "migratedSha256": "493b6329fbd8f6cc005702bcee189e537a0062430ae1c851a2942d1945cdc71e",
+      "migratedAssertions": 4,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-segments/04-cells-segments-and-agents.ts",
+      "destination": "tests/ui/ui-segments/04-cells-segments-and-agents.ts",
+      "originalSha256": "d9fa1b81f7923bfa07d52740b6789fbbb20be2b75886514221f3b1041d1f6bb3",
+      "assertions": 4,
+      "role": "ui-contract",
+      "migratedSha256": "50f6d6d76e3c1f2730fc84f9f2f119591d7be5960e1e572c406291db0b28cd7d",
+      "migratedAssertions": 4,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-segments/05-optional-empty-and-zero-width.ts",
+      "destination": "tests/ui/ui-segments/05-optional-empty-and-zero-width.ts",
+      "originalSha256": "4901037261835534e985f619f18ac687c6f1674675b1e84c4640d6fbfc823765",
+      "assertions": 4,
+      "role": "ui-contract",
+      "migratedSha256": "44293bd5b8bdcaa5f6777c318c5f55f69e983f531bbab3954689b8b3ce3efa57",
+      "migratedAssertions": 4,
+      "change": "Rebase imports, local documentation links or command paths; preserve assertions."
+    },
+    {
+      "source": "examples/ui-segments/SHA256SUMS",
+      "destination": "tests/ui/ui-segments/SHA256SUMS",
+      "originalSha256": "88f8c2b755e24bbf3727b68c228895cf3a023a046fa7fe3c6bdc649f243828bc",
+      "assertions": 0,
+      "role": "historical-manifest",
+      "migratedSha256": "88f8c2b755e24bbf3727b68c228895cf3a023a046fa7fe3c6bdc649f243828bc",
+      "migratedAssertions": 0,
+      "change": "Byte-identical relocation; historical manifest paths resolve through this receipt."
+    }
+  ],
+  "baseline": "Initial full check could not start before dependencies were installed (svelte-check missing). Supported script baseline was interrupted during the expensive Tijuana contract after preceding groups passed; no complete baseline claim. Dedicated target checks are verified after migration.",
+  "history": "The base commit retains every original file byte. SHA256SUMS files are relocated byte-identically; their old names and hashes remain historical, resolved by this manifest rather than rewritten."
+}

@@ -1,6 +1,6 @@
 /** Execute the unchanged frozen Muscle tail separately after Blood's blocked assertion. */
 import { resolve } from "node:path";
-const path = "examples/selected-biology/03-homeostasis-and-exercise.ts";
+const path = "tests/public-contracts/selected-biology/03-homeostasis-and-exercise.ts";
 const source = await Bun.file(path).text();
 const start = source.indexOf("const tissue = muscle(");
 if (start < 0) throw new Error("Frozen Muscle section is missing.");

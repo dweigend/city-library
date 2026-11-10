@@ -9,31 +9,16 @@ const colors: Record<Strategy, string> = {
 };
 const binding = defineUI(model, {
   setup: ["seed", { field: "numberOfPlayers", label: "Players" }],
+  change: (instance, changes) => instance.setParameters(changes),
   live: {
-    strategy: {
-      set: (m, v) => m.setParameters({ strategy: v }),
-    },
-    attemptsPerRun: {
-      set: (m, v) => m.setParameters({ attemptsPerRun: v }),
-    },
-    randomizeStrategyEachRun: {
-      set: (m, v) => m.setParameters({ randomizeStrategyEachRun: v }),
-    },
-    stopAfterEachRun: {
-      set: (m, v) => m.setParameters({ stopAfterEachRun: v }),
-    },
-    trails: {
-      set: (m, v) => m.setParameters({ trails: v }),
-    },
-    zpd: {
-      set: (m, v) => m.setParameters({ zpd: v }),
-    },
-    vygotskiianNeighbors: {
-      set: (m, v) => m.setParameters({ vygotskiianNeighbors: v }),
-    },
-    moveError: {
-      set: (m, v) => m.setParameters({ moveError: v }),
-    },
+    strategy: {},
+    attemptsPerRun: {},
+    randomizeStrategyEachRun: {},
+    stopAfterEachRun: {},
+    trails: {},
+    zpd: {},
+    vygotskiianNeighbors: {},
+    moveError: {},
   },
   source: {
     url: "https://www.netlogoweb.org/launch#https://www.netlogoweb.org/assets/modelslib/Sample%20Models/Psychology/Piaget-Vygotsky%20Game.nlogox",
