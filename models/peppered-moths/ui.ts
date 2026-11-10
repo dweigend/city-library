@@ -1,11 +1,11 @@
-import { defineUI, netLogoColor, type Observation, type Series } from "../../ui/index.ts";
+import { defineUI, indexedColor, type Observation, type Series } from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
   setup: ["seed"],
   live: {
-    numMoths: {
-      set: (m, value) => m.setParameters({ numMoths: value }),
+    mothCount: {
+      set: (m, value) => m.setParameters({ mothCount: value }),
     },
     speed: {
       set: (m, value) => m.setParameters({ speed: value }),
@@ -42,10 +42,10 @@ export const ui = defineUI(model, {
       data: (s) => ({
         width: s.width,
         height: s.height,
-        cells: s.cells.map((c) => ({ ...c, color: netLogoColor(c.color) })),
+        cells: s.cells.map((c) => ({ ...c, color: indexedColor(c.color) })),
         agents: s.moths.map((a) => ({
           ...a,
-          color: netLogoColor(a.color),
+          color: indexedColor(a.color),
           size: 6,
         })),
       }),

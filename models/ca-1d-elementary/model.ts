@@ -79,14 +79,14 @@ export function create(options: Partial<ElementaryParameters> = {}) {
   const { width, height } = settings,
     top = (height - 1) / 2,
     bottom = -top;
-  const random = Random.add({ seed: settings.seed }),
+  const random = Random.create({ seed: settings.seed }),
     space = {
       x: width,
       y: height,
       boundary: { x: "wrap", y: "hard" } as const,
     };
-  const world = World.add(space, { random }),
-    grid = Grid.add(space, { state: { on: false, colorNumber: 0 } });
+  const world = World.create(space, { random }),
+    grid = Grid.create(space, { state: { on: false, colorNumber: 0 } });
   world.add(grid);
   let row = top,
     gone = false,

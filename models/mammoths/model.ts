@@ -44,17 +44,17 @@ export const inputs: Inputs<Parameters> = {
   },
 };
 type Resident = Agent<{
-  breed: "mammoth" | "human";
+  group: "mammoth" | "human";
   age: number;
   settled: boolean;
 }>;
 type Terrain = "land" | "ocean" | "changed";
 export function create(options: Partial<Parameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   // NetLogo centers0..96 become City Library centers-48..48; no runtime image conversion.
-  const world = World.add({ x: 97, y: 97, boundary: "hard" }, { random });
-  const grid = Grid.add(world.space!, {
+  const world = World.create({ x: 97, y: 97, boundary: "hard" }, { random });
+  const grid = Grid.create(world.space!, {
     state: { terrain: "ocean" as Terrain },
   });
   world.add(grid);
@@ -67,9 +67,9 @@ export function create(options: Partial<Parameters> = {}) {
     hunting: number;
     climate: number;
   }[] = [];
-  const population = (breed?: Resident["breed"]) =>
+  const population = (group?: Resident["group"]) =>
     (world.agents as readonly Resident[]).filter(
-      (a) => breed === undefined || a.breed === breed,
+      (a) => group === undefined || a.group === group,
     );
   function record() {
     history.push({
@@ -91,24 +91,24 @@ export function create(options: Partial<Parameters> = {}) {
     for (const field of grid.fields)
       field.terrain =
         terrain.rows[field.y + 48]![field.x + 48] === "1" ? "land" : "ocean";
-    for (const breed of ["mammoth", "human"] as const) {
+    for (const group of ["mammoth", "human"] as const) {
       const count =
-        breed === "mammoth"
+        group === "mammoth"
           ? settings.numberOfMammoths
           : settings.numberOfHumans;
       const eligible = grid.fields.filter(
         (field) =>
           field.terrain === "land" &&
-          (breed === "mammoth" || field.x + 48 <= 10),
+          (group === "mammoth" || field.x + 48 <= 10),
       );
       for (let i = 0; i < count; i++) {
         const field = random.sample(eligible)[0]!;
         world.add(
-          Agent.add(
+          Agent.create(
             {
-              breed,
+              group,
               age: random.number({
-                max: (breed === "mammoth" ? 30 : 50) * 12,
+                max: (group === "mammoth" ? 30 : 50) * 12,
                 integer: true,
               }),
               settled: false,
@@ -117,7 +117,7 @@ export function create(options: Partial<Parameters> = {}) {
               position: { x: field.x, y: field.y },
               orientation: {
                 heading:
-                  breed === "human"
+                  group === "human"
                     ? -5 + random.number({ max: 10, integer: true })
                     : random.number({ max: 360, integer: true }),
               },
@@ -159,14 +159,14 @@ export function create(options: Partial<Parameters> = {}) {
       const child = resident.copy();
       world.add(child);
       child.age = 0;
-      if (child.breed === "human") child.settled = false;
+      if (child.group === "human") child.settled = false;
     }
   }
   function density(resident: Resident): number {
     const here = grid.fieldAt(resident)!;
     const fields = [here, ...grid.neighbors(here, { neighborhood: "moore" })];
     return (
-      population(resident.breed).filter((a) =>
+      population(resident.group).filter((a) =>
         fields.includes(grid.fieldAt(a)!),
       ).length / 9
     );
@@ -235,28 +235,28 @@ export function create(options: Partial<Parameters> = {}) {
     }
   }
   function dieNaturally() {
-    for (const breed of ["human", "mammoth"] as const) {
-      const group = population(breed);
+    for (const group of ["human", "mammoth"] as const) {
+      const group = population(group);
       for (const resident of random.sample(group, {
         count: group.length,
         compatibility: "legacy-shuffle",
       })) {
         if (
-          resident.age > (breed === "human" ? 50 : 30) * 12 &&
+          resident.age > (group === "human" ? 50 : 30) * 12 &&
           random.number() * 100 < 5
         ) {
           resident.delete();
           continue;
         }
         if (
-          density(resident) > (breed === "human" ? 0.75 : 0.5) &&
+          density(resident) > (group === "human" ? 0.75 : 0.5) &&
           random.number() * 100 < 5
         ) {
           resident.delete();
           continue;
         }
         if (
-          breed === "mammoth" &&
+          group === "mammoth" &&
           grid.fieldAt(resident)!.terrain === "changed" &&
           random.number() * 100 < 5
         ) {
@@ -290,7 +290,7 @@ export function create(options: Partial<Parameters> = {}) {
       heading: a.heading,
       age: a.age,
       settled: a.settled,
-      breed: a.breed,
+      group: a.group,
     }));
     return {
       sourceMarker,
@@ -301,8 +301,8 @@ export function create(options: Partial<Parameters> = {}) {
       parameters: settings,
       mammothsKilledByHumans,
       mammothsKilledByClimateChange,
-      mammoths: agents.filter((a) => a.breed === "mammoth"),
-      humans: agents.filter((a) => a.breed === "human"),
+      mammoths: agents.filter((a) => a.group === "mammoth"),
+      humans: agents.filter((a) => a.group === "human"),
       cells: grid.fields.map((field) => ({
         id: field.id,
         x: field.x,

@@ -23,8 +23,8 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
-| `numRecyclers` | `25` | integer; ≥ 0; ≤ 50 |
-| `numWastefuls` | `25` | integer; ≥ 0; ≤ 50 |
+| `recyclerCount` | `25` | integer; ≥ 0; ≤ 50 |
+| `wastefulCount` | `25` | integer; ≥ 0; ≤ 50 |
 | `maxStoredEnergy` | `50` | integer; ≥ 10; ≤ 100 |
 | `recyclingWasteCost` | `0.5` | number; ≥ 0; ≤ 2 |
 | `resourceRegeneration` | `25` | integer; ≥ 0; ≤ 100 |

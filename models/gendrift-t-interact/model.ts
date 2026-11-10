@@ -23,20 +23,20 @@ type ModelAgent = Agent<{ colorNumber: number }>;
 const sourceColors = [5, 15, 25, 35, 45, 55, 65, 85, 95, 125];
 export function create(options: Partial<Parameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const space = { x: 35, y: 35, boundary: "wrap" as const };
-  const world = World.add(space, { random });
-  const grid = Grid.add(space, { state: { wall: false } });
+  const world = World.create(space, { random });
+  const grid = Grid.create(space, { state: { wall: false } });
   world.add(grid);
   const agents = () => world.agents as readonly ModelAgent[];
   let maxPercent = 0;
   let wallMode: "place" | "remove" = "place";
   const history: { tick: number; counts: number[] }[] = [];
   function moveOffWall(agent: ModelAgent) {
-    // Source walks random neighboring patches until a black patch is reached.
+    // Source walks random neighboring fields until a black field is reached.
     if (!grid.fields.some((f) => !f.wall))
       throw new RangeError(
-        "No open patch: source move-off-wall would not terminate.",
+        "No open field: source move-off-wall would not terminate.",
       );
     while (grid.fieldAt(agent)!.wall) {
       const field = random.sample(
@@ -47,8 +47,8 @@ export function create(options: Partial<Parameters> = {}) {
   }
   function makeAgent(colorNumber: number, x: number, y: number, heading = 0) {
     if (!sourceColors.includes(colorNumber))
-      throw new RangeError("Unknown source turtle color.");
-    const agent = Agent.add(
+      throw new RangeError("Unknown source agent color.");
+    const agent = Agent.create(
       { colorNumber },
       { position: { x, y }, orientation: { heading } },
     );
@@ -61,7 +61,7 @@ export function create(options: Partial<Parameters> = {}) {
     world.tick.reset();
     history.length = 0;
     for (let n = 0; n < settings.number; n++) {
-      const agent = Agent.add(
+      const agent = Agent.create(
         {
           colorNumber:
             sourceColors[

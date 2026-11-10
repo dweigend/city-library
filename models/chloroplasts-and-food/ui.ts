@@ -61,7 +61,7 @@ function chloroplastsAndFoodData(state: UIObservation): SpatialData {
       .map((agent) => ({
         ...agent,
         size:
-          agent.breed === "chloroplast" ? 70 : agent.breed === "photon" ? 4 : 7,
+          agent.group === "chloroplast" ? 70 : agent.group === "photon" ? 4 : 7,
       })),
     cells: state.cells,
   };

@@ -26,10 +26,10 @@ The catalog discovers paired `models/<slug>/model.ts` and `ui.ts` files. Reading
 
 Follow [model authoring](../../docs/development/model-authoring.md) for a real example. A headless `model.ts` exports metadata, canonical input descriptors and a factory. Its instance exposes explicit actions and detached observations. A separate `ui.ts` imports `defineUI` from the public repository UI entry and binds those operations to controls and views.
 
-Use the [public UI contract](../../docs/ui/README.md). Setup-string and keyed-live forms are implemented and exercised through public examples in the Svelte UI. Shared infrastructure owns rendering and cleanup; experiment files do not access host DOM or private Svelte components. Taxi uses the same public control groups as other experiments.
+Use the [public UI contract](../../docs/ui/README.md). Setup-string and keyed-live forms are implemented and exercised through public examples in the Svelte UI. Shared infrastructure owns rendering and cleanup; experiment files do not access host DOM or private Svelte components. Taxi uses the same public control groups as other studies.
 
 ## Verification
 
 Run `bun run check` and the relevant UI build from the root. UI changes also require actual browser interaction and independent screenshot review under the [UI design rules](../../docs/DESIGN.md). A source review does not establish visual acceptance.
 
-The [work plan](../../PLAN.md) tracks open work, and [reference sources](../../docs/development/netlogo-reference-sources.md) describe model provenance. The core package excludes UI, reference archives and adapted experiments.
+The [work plan](../../PLAN.md) tracks open work, and [reference sources](../../docs/development/netlogo-reference-sources.md) describe model provenance. The core package excludes UI, reference archives and adapted studies.

@@ -39,10 +39,10 @@ export interface AccountFixture {
 }
 export function create(options: Partial<BankParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const space = { x: 17, y: 17, boundary: "wrap" as const };
-  const world = World.add(space, { random });
-  const grid = Grid.add(space);
+  const world = World.create(space, { random });
+  const grid = Grid.create(space);
   world.add(grid);
   type Person = ReturnType<typeof Agent.add<Account>>;
   const people = () => world.agents as readonly Person[];

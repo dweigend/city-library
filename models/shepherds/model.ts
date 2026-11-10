@@ -4,8 +4,8 @@ import type { Definition, Inputs } from "../definition.ts";
 import { parameters, stepCount } from "../parameters.ts";
 export interface Parameters {
   seed: number;
-  numSheep: number;
-  numShepherds: number;
+  sheepCount: number;
+  shepherdCount: number;
   sheepSpeed: number;
 }
 export const inputs: Inputs<Parameters> = {
@@ -16,14 +16,14 @@ export const inputs: Inputs<Parameters> = {
     max: 4294967295,
     integer: true,
   },
-  numSheep: {
+  sheepCount: {
     kind: "number",
     default: 150,
     min: 0,
     max: 500,
     integer: true,
   },
-  numShepherds: {
+  shepherdCount: {
     kind: "number",
     default: 30,
     min: 0,
@@ -49,7 +49,7 @@ type Shepherd = Agent<{
 }>;
 export function create(options: Partial<Parameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({
+  const random = Random.create({
     seed: settings.seed,
   });
   const space = {
@@ -57,10 +57,10 @@ export function create(options: Partial<Parameters> = {}) {
     y: 51,
     boundary: "wrap" as const,
   };
-  const world = World.add(space, {
+  const world = World.create(space, {
     random,
   });
-  const grid = Grid.add(space, {
+  const grid = Grid.create(space, {
     state: {
       green: 0,
       sheepNearby: 0,
@@ -91,9 +91,9 @@ export function create(options: Partial<Parameters> = {}) {
       },
     };
   }
-  for (let i = 0; i < settings.numSheep; i++)
+  for (let i = 0; i < settings.sheepCount; i++)
     world.add(
-      Agent.add(
+      Agent.create(
         {
           kind: "sheep" as const,
           hidden: false,
@@ -101,9 +101,9 @@ export function create(options: Partial<Parameters> = {}) {
         location(),
       ),
     );
-  for (let i = 0; i < settings.numShepherds; i++)
+  for (let i = 0; i < settings.shepherdCount; i++)
     world.add(
-      Agent.add(
+      Agent.create(
         {
           kind: "shepherd" as const,
           carriedSheep: null as Sheep | null,

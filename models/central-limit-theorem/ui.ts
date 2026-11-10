@@ -40,7 +40,7 @@ export const ui = defineUI(model, {
   monitors: [
     { label: "Tick", value: (s) => s.tick },
     { label: "Population", value: (s) => s.population },
-    { label: "Samples", value: (s) => s.numSamples },
+    { label: "Samples", value: (s) => s.sampleCount },
     {
       label: "Expected value",
       value: (s) => s.expectedValue ?? "N/A",

@@ -21,7 +21,7 @@ export const demandMeasurement = measurements.define((state: DemandState) => ({
 }));
 export function create(options: Partial<EnergyParameters> = {}) {
   let settings = parameters(inputs, options);
-  const world = World.add();
+  const world = World.create();
   const baseHouseholdKw = 0.3;
   const applianceHouseholdKw = 0.9;
   const loads = { demandKw: settings.households * baseHouseholdKw, energyKwh: 0 };

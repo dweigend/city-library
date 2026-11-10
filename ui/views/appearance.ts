@@ -1,6 +1,6 @@
 import type { AxisSpec } from "../definition.ts";
 
-/** Optional host-owned presentation; omitted options preserve legacy rendering. */
+/** Optional host-owned presentation; omitted options preserve default rendering. */
 export interface RendererTheme {
   readonly background: string;
   readonly foreground: string;

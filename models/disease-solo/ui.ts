@@ -2,7 +2,7 @@ import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 
 const binding = defineUI(model, {
-  setup: ["seed", "numAndroids"],
+  setup: ["seed", "androidCount"],
   live: {
     infectionChance: {
       set: (instance, value) =>
@@ -34,7 +34,7 @@ const binding = defineUI(model, {
   },
   monitors: [
     { label: "Tick", value: (state) => state.tick },
-    { label: "Sick", value: (state) => state.numSick },
+    { label: "Sick", value: (state) => state.sickCount },
     { label: "Run", value: (state) => state.runNumber },
   ],
   views: [

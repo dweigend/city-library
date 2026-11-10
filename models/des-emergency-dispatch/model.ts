@@ -9,8 +9,8 @@ export const inputs: Inputs<DispatchParameters> = {
 };
 export function create(options: Partial<DispatchParameters> = {}) {
   let settings = parameters(inputs, options);
-  const world = World.add();
-  const sites = ["Station", "Market", "School", "Hospital"].map((label, index) => Agent.add({ label }, { position: { x: index * 2 - 3, y: 0 } }));
+  const world = World.create();
+  const sites = ["Station", "Market", "School", "Hospital"].map((label, index) => Agent.create({ label }, { position: { x: index * 2 - 3, y: 0 } }));
   world.add(sites);
   const graph = Graph.add<typeof sites[number]>();
   for (const site of sites) graph.nodes.add(site);

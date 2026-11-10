@@ -74,17 +74,17 @@ export function averageHeadingTowardsFlockmates(
 }
 export function create(options: Partial<FlockingParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const width = 71,
     height = 71;
-  const world = World.add(
+  const world = World.create(
     { x: width, y: height, boundary: "wrap" },
     { random },
   );
   const birds = () => world.agents as readonly Bird[];
   for (let i = 0; i < settings.population; i++)
     world.add(
-      Agent.add(
+      Agent.create(
         {
           shade: Math.floor(random.number() * 7),
           flockmateIds: [] as string[],

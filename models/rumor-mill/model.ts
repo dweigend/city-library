@@ -23,9 +23,9 @@ export const inputs: Inputs<RumorParameters> = {
 };
 export function create(options: Partial<RumorParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
-  const world = World.add({ random });
-  const grid = Grid.add(
+  const random = Random.create({ seed: settings.seed });
+  const world = World.create({ random });
+  const grid = Grid.create(
     { x: 101, y: 101, boundary: 'wrap' },
     { state: { timesHeard: 0, firstHeard: -1 } },
   );
@@ -127,7 +127,7 @@ export function create(options: Partial<RumorParameters> = {}) {
             !('value' in Object.getOwnPropertyDescriptor(p, k)!),
         )
       )
-        throw new TypeError('Supply a patch coordinate.');
+        throw new TypeError('Supply a field coordinate.');
       if (
         !Number.isInteger(p.x) ||
         !Number.isInteger(p.y) ||

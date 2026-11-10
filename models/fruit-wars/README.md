@@ -39,7 +39,7 @@ Use `advance(...)` for progress and `read()` for observations; the model defines
 
 Other instance procedures: `growFruitBushes`, `setRules`. See their typed arguments in [model.ts](model.ts).
 
-Model-specific `read()` fields include `murderCount`, `starvationCount`, `ageDeathCount`, `deathCount`, `totalForaged`, `numForages`, `totalPopulation`, `averagePopulation`, `avgForage`, `aggressionHistograms`, `foragers`, `bushes`, `deaths`.
+Model-specific `read()` fields include `murderCount`, `starvationCount`, `ageDeathCount`, `deathCount`, `totalForaged`, `forageCount`, `totalPopulation`, `averagePopulation`, `avgForage`, `aggressionHistograms`, `foragers`, `bushes`, `deaths`.
 
 The [UI binding](ui.ts) presents `Initial bushes`, `Mutation rate (%)`, `Maximum age`, `Bush growth chance (%)`, `Tick`, `Population`, `Average population`, `Average forage`, `Murders`, `Starvation deaths` and further views or controls.
 

@@ -12,8 +12,8 @@ export const inputs: Inputs<HeatParameters> = {
 };
 export function create(options: Partial<HeatParameters> = {}) {
   let settings = parameters(inputs, options);
-  const world = World.add();
-  const grid = Grid.add({ x: settings.width, y: settings.width, boundary: "hard" }, { state: { heatIndex: 30, shaded: false } });
+  const world = World.create();
+  const grid = Grid.create({ x: settings.width, y: settings.width, boundary: "hard" }, { state: { heatIndex: 30, shaded: false } });
   world.add(grid);
   grid.fields.forEach((field, index) => {
     const isWesternHalf = index % settings.width < settings.width / 2;

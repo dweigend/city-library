@@ -5,7 +5,7 @@ import { parameters, stepCount } from "../parameters.ts";
 
 export interface DiseaseParameters {
   seed: number;
-  numAndroids: number;
+  androidCount: number;
   infectionChance: number;
   stepSize: number;
   chase: boolean;
@@ -13,27 +13,27 @@ export interface DiseaseParameters {
 }
 export const inputs: Inputs<DiseaseParameters> = {
   seed: { kind: "number", default: 1, integer: true },
-  numAndroids: { kind: "number", default: 60, min: 1, max: 300, integer: true },
+  androidCount: { kind: "number", default: 60, min: 1, max: 300, integer: true },
   infectionChance: { kind: "number", default: 100, min: 0, max: 100 },
   stepSize: { kind: "number", default: 1, min: 1, max: 5, integer: true },
   chase: { kind: "boolean", default: false },
   avoid: { kind: "boolean", default: false },
 };
-type Person = Agent<{ breed: "android" | "user"; infected: boolean }>;
+type Person = Agent<{ group: "android" | "user"; infected: boolean }>;
 export function create(options: Partial<DiseaseParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const space = { x: 21, y: 25, boundary: "hard" } as const;
-  const world = World.add(space, { random });
-  const grid = Grid.add(space);
+  const world = World.create(space, { random });
+  const grid = Grid.create(space);
   world.add(grid);
-  let numSick = 0;
+  let sickCount = 0;
   let runNumber = 1;
   let delay = 0;
   let stopped = false;
   const history: { tick: number; sick: number; run: number }[] = [];
   const all = () => world.agents as readonly Person[];
-  const androids = () => all().filter((person) => person.breed === "android");
+  const androids = () => all().filter((person) => person.group === "android");
   const shuffled = (people: readonly Person[]) =>
     random.sample(people, {
       count: people.length,
@@ -62,10 +62,10 @@ export function create(options: Partial<DiseaseParameters> = {}) {
     }
   }
   function createSomeAndroids() {
-    for (let index = 0; index < settings.numAndroids; index++) {
+    for (let index = 0; index < settings.androidCount; index++) {
       const person = world.add(
-        Agent.add(
-          { breed: "android" as const, infected: false },
+        Agent.create(
+          { group: "android" as const, infected: false },
           {
             position: { x: integer(21) - 10, y: integer(25) - 12 },
             orientation: { heading: integer(4) * 90 },
@@ -77,15 +77,15 @@ export function create(options: Partial<DiseaseParameters> = {}) {
   }
   function createUser() {
     return world.add(
-      Agent.add(
-        { breed: "user" as const, infected: false },
+      Agent.create(
+        { group: "user" as const, infected: false },
         { position: { x: 0, y: 0 }, orientation: { heading: integer(4) * 90 } },
       ),
     );
   }
   function setupWorld() {
     for (const person of all()) person.delete();
-    numSick = 0;
+    sickCount = 0;
     delay = 0;
     stopped = false;
     createSomeAndroids();
@@ -151,17 +151,17 @@ export function create(options: Partial<DiseaseParameters> = {}) {
   function move(newHeading: number) {
     if (!Number.isFinite(newHeading))
       throw new RangeError("Heading must be finite.");
-    for (const person of all().filter((person) => person.breed === "user")) {
+    for (const person of all().filter((person) => person.group === "user")) {
       person.rotate(newHeading - person.heading);
       forward(person, settings.stepSize);
     }
   }
   function record() {
-    history.push({ tick: world.tick.value, sick: numSick, run: runNumber });
+    history.push({ tick: world.tick.value, sick: sickCount, run: runNumber });
     if (history.length > 2001) history.shift();
   }
   function go() {
-    if (numSick === all().length) delay++;
+    if (sickCount === all().length) delay++;
     if (delay > 50) {
       stopped = true;
       return;
@@ -174,7 +174,7 @@ export function create(options: Partial<DiseaseParameters> = {}) {
           all().filter((person) => person.infected),
         ))
           spreadDisease(person);
-        numSick = all().filter((person) => person.infected).length;
+        sickCount = all().filter((person) => person.infected).length;
       },
       1,
     );
@@ -185,10 +185,10 @@ export function create(options: Partial<DiseaseParameters> = {}) {
     for (let index = 0; index < count && !stopped; index++) go();
   }
   function setParameters(
-    update: Partial<Omit<DiseaseParameters, "seed" | "numAndroids">>,
+    update: Partial<Omit<DiseaseParameters, "seed" | "androidCount">>,
   ) {
     if (
-      Object.keys(update).some((key) => key === "seed" || key === "numAndroids")
+      Object.keys(update).some((key) => key === "seed" || key === "androidCount")
     )
       throw new TypeError("Setup parameters require a new model.");
     settings = parameters(inputs, { ...settings, ...update });
@@ -199,23 +199,23 @@ export function create(options: Partial<DiseaseParameters> = {}) {
       width: 21,
       height: 25,
       parameters: { ...settings },
-      numSick,
+      sickCount,
       runNumber,
       delay,
       stopped,
       agents: all().map((person) => ({
         id: person.id,
-        breed: person.breed,
+        group: person.group,
         infected: person.infected,
         x: person.x,
         y: person.y,
         heading: person.heading,
         color: person.infected
           ? "#e43838"
-          : person.breed === "user"
+          : person.group === "user"
             ? "#58b8ed"
             : "#888888",
-        size: person.breed === "user" ? 1.5 : 1,
+        size: person.group === "user" ? 1.5 : 1,
       })),
       history: history.map((point) => ({ ...point })),
     };

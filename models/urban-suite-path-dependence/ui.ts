@@ -1,6 +1,6 @@
 import {
   defineUI,
-  netLogoColor,
+  indexedColor,
   type Observation,
   type SpatialData,
   type BarSeries,
@@ -84,7 +84,7 @@ function firmsAndFieldQualityData(state: UIObservation): SpatialData {
       id: cell.id,
       x: cell.x,
       y: cell.y,
-      color: netLogoColor(cell.quality * 10 + 50),
+      color: indexedColor(cell.quality * 10 + 50),
     })),
     // Fixed symbols and numeric inspection replace the source's relative-size glyphs.
     agents: state.firms.map((firm) => ({

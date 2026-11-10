@@ -18,9 +18,9 @@ interface StructureSample { readonly tick: number; readonly totalActivity: numbe
 export function create(options: Partial<StructureParameters> = {}) {
   let settings = parameters(inputs, options);
   const width = 130, height = 130;
-  const random = Random.add({ seed: settings.seed });
-  const world = World.add({ x: width, y: height, boundary: "wrap" }, { random });
-  const grid = Grid.add({ x: width, y: height, boundary: "wrap" }, { state: { activity: 0, newActivity: 0, colorNumber: 0 } });
+  const random = Random.create({ seed: settings.seed });
+  const world = World.create({ x: width, y: height, boundary: "wrap" }, { random });
+  const grid = Grid.create({ x: width, y: height, boundary: "wrap" }, { state: { activity: 0, newActivity: 0, colorNumber: 0 } });
   world.add(grid);
   const fields = grid.fields;
   // Immutable canonical-neighbor projections; the Grid remains the topology owner.

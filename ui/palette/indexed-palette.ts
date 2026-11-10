@@ -4,7 +4,7 @@
  * Compact RGB-table SHA256: dd6b11aff79adac02a0d6c933b450b143a451d0c13cfb727ea9c35fc0e6364eb
  * Index i corresponds to floor(10 * wrapped numeric color). No interpolation.
  */
-export const observedNetLogoColors: readonly string[] = Object.freeze([
+export const indexedPalette: readonly string[] = Object.freeze([
   "#000000", "#060606", "#090909", "#0c0c0c", "#0f0f0f", "#111111", "#141414", "#171717", "#1a1a1a", "#1c1c1c",
   "#1f1f1f", "#222222", "#252525", "#282828", "#2a2a2a", "#2d2d2d", "#303030", "#333333", "#353535", "#383838",
   "#3b3b3b", "#3e3e3e", "#414141", "#434343", "#464646", "#494949", "#4c4c4c", "#4e4e4e", "#515151", "#545454",

@@ -1,4 +1,4 @@
-import { defineUI, netLogoColor, type Observation, type SpatialData } from "../../ui/index.ts";
+import { defineUI, indexedColor, type Observation, type SpatialData } from "../../ui/index.ts";
 import { model } from "./model.ts";
 
 export const ui = defineUI(model, {
@@ -26,11 +26,11 @@ const WAITING_LANE_X = -6.7;
 const MOVED_OUT_LANE_X = 6.2;
 const QUEUE_COLUMN_SPACING = 0.7;
 const QUEUE_ROW_SPACING = 0.55;
-const SLOT_OCCUPIED_COLOR = netLogoColor(57);
-const SLOT_AVAILABLE_COLOR = netLogoColor(8);
-const RESIDENT_HOUSED_COLOR = netLogoColor(105);
-const RESIDENT_WAITING_COLOR = netLogoColor(25);
-const RESIDENT_MOVED_OUT_COLOR = netLogoColor(5);
+const SLOT_OCCUPIED_COLOR = indexedColor(57);
+const SLOT_AVAILABLE_COLOR = indexedColor(8);
+const RESIDENT_HOUSED_COLOR = indexedColor(105);
+const RESIDENT_WAITING_COLOR = indexedColor(25);
+const RESIDENT_MOVED_OUT_COLOR = indexedColor(5);
 
 /** Slots and status queues are schematic presentation positions, not dwelling identities. */
 export function housingData(state: HousingObservation): SpatialData {

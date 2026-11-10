@@ -1,4 +1,4 @@
-import { defineUI, netLogoColor } from "../../ui/index.ts";
+import { defineUI, indexedColor } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
   setup: [
@@ -8,7 +8,7 @@ export const ui = defineUI(model, {
     "preset",
     "neighborhood",
     "radius",
-    "numStates",
+    "stateCount",
   ],
   source: {
     url: "https://ccl.northwestern.edu/netlogo/models/CyclicCA",
@@ -22,7 +22,7 @@ export const ui = defineUI(model, {
   monitors: [
     { label: "Tick", value: (s) => s.tick },
     { label: "Neighbors", value: (s) => s.neighborCount },
-    { label: "States", value: (s) => s.parameters.numStates },
+    { label: "States", value: (s) => s.parameters.stateCount },
     { label: "Threshold", value: (s) => s.parameters.threshold },
     { label: "Status", value: (s) => s.warning },
   ],
@@ -35,7 +35,7 @@ export const ui = defineUI(model, {
         height: s.height,
         cells: s.cells.map((c) => ({
           ...c,
-          color: netLogoColor(c.colorNumber),
+          color: indexedColor(c.colorNumber),
         })),
       }),
     },

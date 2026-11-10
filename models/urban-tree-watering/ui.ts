@@ -1,4 +1,4 @@
-import { defineUI, netLogoColor, type Observation, type SpatialData } from "../../ui/index.ts";
+import { defineUI, indexedColor, type Observation, type SpatialData } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
   live: { dailyLiters: { label: "Daily water (L)", set: (instance, value) => instance.setDailyLiters(value) } },
@@ -19,11 +19,11 @@ type State = Observation<typeof model>;
 const TRUNK_TOP_OFFSET = -0.25;
 const TRUNK_BOTTOM_OFFSET = -0.8;
 const TRUNK_WIDTH = 3;
-const TRUNK_COLOR = netLogoColor(35);
-const WATER_MARKER_COLOR = netLogoColor(105);
+const TRUNK_COLOR = indexedColor(35);
+const WATER_MARKER_COLOR = indexedColor(105);
 const WATER_MARKER_HEADING = 180;
-const DRY_COLOR = netLogoColor(15);
-const MOIST_COLOR = netLogoColor(55);
+const DRY_COLOR = indexedColor(15);
+const MOIST_COLOR = indexedColor(55);
 
 export function treesData(state: State): SpatialData {
   // Planting rows are a stable display layout; the model has no geographic tree positions.

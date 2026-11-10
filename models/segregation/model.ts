@@ -44,10 +44,10 @@ interface Measurement {
 
 export function create(options: Partial<SegregationParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const space = { x: settings.width, y: settings.height, boundary: "wrap" as const };
-  const world = World.add(space, { random });
-  const grid = Grid.add(space);
+  const world = World.create(space, { random });
+  const grid = Grid.create(space);
   world.add(grid);
   const fields = grid.fields;
   const history: Readonly<Measurement>[] = [];
@@ -56,7 +56,7 @@ export function create(options: Partial<SegregationParameters> = {}) {
     return [...world.agents] as Resident[];
   }
   function addResident(input: ResidentInput, heading: number) {
-    world.add(Agent.add({
+    world.add(Agent.create({
       group: input.group,
       happy: true,
       similarNearby: 0,

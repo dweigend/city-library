@@ -9,8 +9,8 @@ export const inputs: Inputs<StormwaterParameters> = {
 };
 export function create(options: Partial<StormwaterParameters> = {}) {
   let settings = parameters(inputs, options);
-  const world = World.add();
-  const catchment = Grid.add({ x: 3, y: 3, boundary: "hard" }, { state: { areaM2: 10, runoffShare: 0.5 } });
+  const world = World.create();
+  const catchment = Grid.create({ x: 3, y: 3, boundary: "hard" }, { state: { areaM2: 10, runoffShare: 0.5 } });
   world.add(catchment);
   const state = { storedM3: 0, inflowM3: 0, dischargedM3: 0, overflowM3: 0, capacityCrossings: 0 };
   let lastCrossingHour: number | undefined;

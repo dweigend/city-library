@@ -34,12 +34,12 @@ export const inputs: Inputs<Parameters> = {
 };
 export function create(options: Partial<Parameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
-  const world = World.add(
+  const random = Random.create({ seed: settings.seed });
+  const world = World.create(
     { x: 45, y: 45, boundary: { x: "wrap", y: "hard" } },
     { random },
   );
-  const grid = Grid.add(
+  const grid = Grid.create(
     { x: 45, y: 45, boundary: { x: "wrap", y: "hard" } },
     { state: { agentQuant: 0 } },
   );
@@ -52,7 +52,7 @@ export function create(options: Partial<Parameters> = {}) {
   // Unwrapped displacement is a scientific scalar; Agent.move owns its wrapped position.
   for (let i = 0; i < settings.number; i++)
     world.add(
-      Agent.add(
+      Agent.create(
         { displayId: `rabbit-${i}`, total: 0, step: 0 },
         { position: { x: 0, y: -22 } },
       ),

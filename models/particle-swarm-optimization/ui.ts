@@ -1,4 +1,4 @@
-import { defineUI, netLogoColor, type Observation, type SpatialData } from "../../ui/index.ts";
+import { defineUI, indexedColor, type Observation, type SpatialData } from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
@@ -74,7 +74,7 @@ function searchLandscapeData(s: UIObservation): SpatialData {
   return {
     width: s.width,
     height: s.height,
-    cells: s.cells.map((f) => ({ ...f, color: netLogoColor(9.9 * f.val) })),
+    cells: s.cells.map((f) => ({ ...f, color: indexedColor(9.9 * f.val) })),
     segments: s.trails.map((t) => ({ ...t, color: "#dfae55", width: 1 })),
     agents: [
       ...s.particles.map((p) => ({

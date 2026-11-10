@@ -23,14 +23,14 @@ interface DiffusionSample { readonly tick: number; readonly totalValue: number; 
 
 export function create(options: Partial<DiffusionParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
-  const world = World.add({ x: 21, y: 21 }, { random });
-  const grid = Grid.add({ x: settings.gridSize, y: settings.gridSize });
+  const random = Random.create({ seed: settings.seed });
+  const world = World.create({ x: 21, y: 21 }, { random });
+  const grid = Grid.create({ x: settings.gridSize, y: settings.gridSize });
   const fields = grid.fields;
   const graph = Graph.add<DiffusionNode, FlowState>({ edgeState: { active: false, currentFlow: 0 } });
   const nodes = fields.map((field, index) => {
     const scale = 9 / ((settings.gridSize - 1) / 2);
-    const node = world.add(Agent.add({ index, value: 1 }, { position: { x: field.x * scale, y: field.y * scale } }));
+    const node = world.add(Agent.create({ index, value: 1 }, { position: { x: field.x * scale, y: field.y * scale } }));
     graph.nodes.add(node);
     return node;
   });

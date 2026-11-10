@@ -37,7 +37,7 @@ Use `advance(...)` for progress and `read()` for observations; the model defines
 
 Other instance procedures: `setup`, `coolAgents`, `rotate`, `recolor`, `setColor`, `setRules`. See their typed arguments in [model.ts](model.ts).
 
-Model-specific `read()` fields include `tempRange`, `averageMetalTemp`, `numFrozen`, `atoms`, `histogram`.
+Model-specific `read()` fields include `tempRange`, `averageMetalTemp`, `frozenCount`, `atoms`, `histogram`.
 
 The [UI binding](ui.ts) presents `Metal width`, `Metal height`, `Initial metal temperature`, `Tick`, `Average metal temperature`, `Source frozen count`, `Metal atoms`, `Temperatures`, `${Math.round(bin.lower)}–${Math.round(bin.upper)}`, `Number solidified` and further views or controls.
 

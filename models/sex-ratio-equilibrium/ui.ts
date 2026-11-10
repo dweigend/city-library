@@ -148,8 +148,8 @@ function selectedIndividualInspector(
         maleChildChance: a.maleChildChance,
         carrying: a.carrying,
         gestation: a.gestation,
-        partners: a.numOfExes,
-        children: a.numOfChildren,
+        partners: a.formerPartnerCount,
+        children: a.childCount,
       }
     : undefined;
 }

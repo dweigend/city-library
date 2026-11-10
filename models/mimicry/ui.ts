@@ -1,4 +1,4 @@
-import { defineUI, netLogoColor, type Observation } from "../../ui/index.ts";
+import { defineUI, indexedColor, type Observation } from "../../ui/index.ts";
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
   setup: ["seed"],
@@ -39,10 +39,10 @@ export const ui = defineUI(model, {
         height: s.height,
         agents: [...s.monarchs, ...s.viceroys, ...s.birds].map((a) => ({
           ...a,
-          color: a.breed === "bird" ? "#666666" : netLogoColor(a.color),
-          size: a.breed === "bird" ? 7 : 5,
+          color: a.group === "bird" ? "#666666" : indexedColor(a.color),
+          size: a.group === "bird" ? 7 : 5,
           shape:
-            a.breed === "bird" ? ("triangle" as const) : ("circle" as const),
+            a.group === "bird" ? ("triangle" as const) : ("circle" as const),
         })),
       }),
     },
@@ -76,7 +76,7 @@ export const ui = defineUI(model, {
           (a) => a.id === id,
         );
         return a
-          ? { breed: a.breed, color: a.color, memory: JSON.stringify(a.memory) }
+          ? { group: a.group, color: a.color, memory: JSON.stringify(a.memory) }
           : undefined;
       },
     },

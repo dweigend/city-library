@@ -37,7 +37,7 @@ Use `advance(...)` for progress and `read()` for observations; the model defines
 
 Other instance procedures: `setParameters`, `potentialEnergy`, `createParticle`, `go`. See their typed arguments in [model.ts](model.ts).
 
-Model-specific `read()` fields include `numTempParticles`, `particles`, `temporaryParticles`.
+Model-specific `read()` fields include `temporaryParticleCount`, `particles`, `temporaryParticles`.
 
 The [UI binding](ui.ts) presents `Tick`, `Particles`, `Temporary candidates`, `Sunflower Emergent`.
 

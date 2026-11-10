@@ -98,7 +98,7 @@ function residentInspector(
   const a = [...s.mammoths, ...s.humans].find((a) => a.id === id);
   return a
     ? {
-        breed: a.breed,
+        group: a.group,
         ageMonths: a.age,
         settled: a.settled,
         sourceX: a.originalX,

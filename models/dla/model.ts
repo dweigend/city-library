@@ -38,14 +38,14 @@ export function create(options: Partial<DLAParameters> = {}) {
     settings.width !== settings.height
   )
     throw new RangeError("DLA uses an odd square native world.");
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const space = {
     x: settings.width,
     y: settings.height,
     boundary: "hard" as const,
   };
-  const world = World.add(space, { random });
-  const grid = Grid.add(space, { state: { occupied: false } });
+  const world = World.create(space, { random });
+  const grid = Grid.create(space, { state: { occupied: false } });
   world.add(grid);
   let radius = 0;
   const maxPxcor = (settings.width - 1) / 2;
@@ -77,7 +77,7 @@ export function create(options: Partial<DLAParameters> = {}) {
   }
   function makeNewAgent() {
     const agent = world.add(
-      Agent.add(
+      Agent.create(
         {},
         {
           position: { x: 0, y: 0 },

@@ -23,10 +23,10 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer |
-| `numPop` | `200` | integer; ≥ 1; ≤ 500 |
+| `populationSize` | `200` | integer; ≥ 1; ≤ 500 |
 | `geneLength` | `30` | integer; ≥ 1; ≤ 100 |
 | `plasticity` | `0.5` | number; ≥ 0; ≤ 1 |
-| `numTrials` | `20` | integer; ≥ 1; ≤ 100 |
+| `trialCount` | `20` | integer; ≥ 1; ≤ 100 |
 | `mutationRate` | `5` | number; ≥ 0; ≤ 10 |
 | `smoothness` | `0.15` | number; ≥ 0; ≤ 1 |
 

@@ -28,7 +28,7 @@ const observation = simulation.read();
 | `preset` | `"none"` | 22 named choices; see `inputs.preset` |
 | `neighborhood` | `"Moore"` | `Moore`, `von Neumann` |
 | `radius` | `3` | integer; ≥ 1; ≤ 6 |
-| `numStates` | `3` | integer; ≥ 2; ≤ 14 |
+| `stateCount` | `3` | integer; ≥ 2; ≤ 14 |
 | `threshold` | `3` | integer; ≥ 1; ≤ 168 |
 
 ## Actions and observations

@@ -44,9 +44,9 @@ export function create(options: Partial<LifeParameters> = {}) {
       throw new RangeError("Use six-digit hex colors.");
   }
   validateColors(settings);
-  const random = Random.add({ seed: settings.seed });
-  const world = World.add({ random });
-  const grid = Grid.add(
+  const random = Random.create({ seed: settings.seed });
+  const world = World.create({ random });
+  const grid = Grid.create(
     { x: settings.width, y: settings.height, boundary: "wrap" },
     { state: { living: false, color: settings.background } },
   );

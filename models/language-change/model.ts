@@ -4,7 +4,7 @@ import type { Definition, Inputs } from '../definition.ts';
 import { parameters, stepCount } from '../parameters.ts';
 export interface LanguageChangeParameters {
   seed: number;
-  numNodes: number;
+  nodeCount: number;
   percentGrammar1: number;
   updateAlgorithm: 'individual' | 'threshold' | 'reward';
   thresholdVal: number;
@@ -20,7 +20,7 @@ export const inputs: Inputs<LanguageChangeParameters> = {
     max: 4294967295,
     integer: true,
   },
-  numNodes: { kind: 'number', default: 100, min: 2, max: 100, integer: true },
+  nodeCount: { kind: 'number', default: 100, min: 2, max: 100, integer: true },
   percentGrammar1: { kind: 'number', default: 60, min: 0, max: 100 },
   updateAlgorithm: {
     kind: 'choice',
@@ -40,14 +40,14 @@ type Node = Agent<{
 }>;
 export function create(options: Partial<LanguageChangeParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed }),
-    world = World.add({ x: 91, y: 91, boundary: 'hard' }, { random }),
+  const random = Random.create({ seed: settings.seed }),
+    world = World.create({ x: 91, y: 91, boundary: 'hard' }, { random }),
     graph = Graph.add<Node>();
   const nodes: Node[] = [];
-  for (let who = 0; who < settings.numNodes; who++) {
+  for (let who = 0; who < settings.nodeCount; who++) {
     const heading = random.number() * 360;
     const a = world.add(
-      Agent.add(
+      Agent.create(
         { who, state: 0, origState: 0, spokenState: 0 },
         {
           orientation: { heading },
@@ -64,7 +64,7 @@ export function create(options: Partial<LanguageChangeParameters> = {}) {
   function distribute() {
     for (const a of nodes) a.state = 0;
     for (const a of random.sample(nodes, {
-      count: Math.floor((settings.percentGrammar1 / 100) * settings.numNodes),
+      count: Math.floor((settings.percentGrammar1 / 100) * settings.nodeCount),
     }))
       a.state = 1;
     for (const a of nodes) {
@@ -162,7 +162,7 @@ export function create(options: Partial<LanguageChangeParameters> = {}) {
       record();
     },
     setParameters(
-      values: Partial<Omit<LanguageChangeParameters, 'seed' | 'numNodes'>>,
+      values: Partial<Omit<LanguageChangeParameters, 'seed' | 'nodeCount'>>,
     ) {
       if (
         typeof values !== 'object' ||

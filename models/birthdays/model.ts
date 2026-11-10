@@ -19,8 +19,8 @@ export function makeMonth(month: string, length: number) {
 }
 export function create(options: Partial<Parameters> = {}) {
   const settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
-  const world = World.add(
+  const random = Random.create({ seed: settings.seed });
+  const world = World.create(
     { x: 9, y: 23, boundary: { x: "hard", y: "wrap" } },
     { random },
   );
@@ -54,7 +54,7 @@ export function create(options: Partial<Parameters> = {}) {
     for (let i = 0; i < 23; i++) {
       const birthday = Math.floor(random.number() * days.length);
       world.add(
-        Agent.add(
+        Agent.create(
           {
             displayId: `person-${i}`,
             birthday,

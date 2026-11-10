@@ -42,16 +42,16 @@ function plotHistogram(values: readonly number[]) {
 }
 export function create(options: Partial<Parameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
-  const grid = Grid.add(
+  const random = Random.create({ seed: settings.seed });
+  const grid = Grid.create(
     { x: 15, y: 15, boundary: "wrap" },
     { state: { value: -1, selected: 0 } },
   );
-  const world = World.add(grid.space, { random });
+  const world = World.create(grid.space, { random });
   world.add(grid);
   // Canonical Field references in the original print-out order, never tile copies.
   const tiles = [...grid.fields].sort((a, b) => a.x - b.x || a.y - b.y);
-  const walker = world.add(Agent.add({}));
+  const walker = world.add(Agent.create({}));
   let visible = !settings.blackOut || settings.setupApart;
   const totals: number[] = [0],
     values: number[] = [];

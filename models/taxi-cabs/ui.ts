@@ -3,7 +3,7 @@ import { stats } from "city-library";
 
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: ["seed", "numTaxicab"],
+  setup: ["seed", "taxicabCount"],
   live: {
     lengthOfGreenLight: {
       set: (instance, value) =>

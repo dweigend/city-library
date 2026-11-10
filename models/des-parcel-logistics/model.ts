@@ -21,7 +21,7 @@ interface ParcelJourney {
 }
 export function create(options: Partial<ParcelParameters> = {}) {
   const settings = parameters(inputs, options);
-  const world = World.add();
+  const world = World.create();
   const agenda = Agenda.add<{ kind: "deliver" | "return"; parcel: number }>();
   const graph = Graph.add<{ id: string; label: string }, { minutes: number }>({ edgeState: { minutes: 1 } });
   const depot = graph.nodes.add({ id: "place:depot", label: "Depot" });
@@ -47,7 +47,7 @@ export function create(options: Partial<ParcelParameters> = {}) {
   function addParcel() {
     const number = parcels.length + 1;
     const destination = number % 2 === 1 ? east : west;
-    const agent = world.add(Agent.add({ number, destination: destination.label }));
+    const agent = world.add(Agent.create({ number, destination: destination.label }));
     parcels.push({ agent, minutes: distances.get(destination)! });
     buffer.put(agent);
     dispatch();

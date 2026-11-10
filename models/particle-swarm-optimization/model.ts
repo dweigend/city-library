@@ -61,15 +61,15 @@ export function create(options: Partial<SwarmParameters> = {}) {
   let settings = parameters(inputs, options);
   const { width, height } = settings,
     space = { x: width, y: height, boundary: "wrap" as const },
-    random = Random.add({ seed: settings.seed }),
-    world = World.add(space, { random });
-  const grid = Grid.add(space, { state: { val: 0 } });
+    random = Random.create({ seed: settings.seed }),
+    world = World.create(space, { random });
+  const grid = Grid.create(space, { state: { val: 0 } });
   world.add(grid);
   const fields = grid.fields;
   let nextId = 0;
   function particle(p: ParticleInput) {
     return world.add(
-      Agent.add(
+      Agent.create(
         {
           sourceId: nextId++,
           vx: p.vx,

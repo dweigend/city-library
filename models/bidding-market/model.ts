@@ -76,8 +76,8 @@ type Buyer = Agent<{
 }>;
 export function create(options: Partial<Parameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed }),
-    world = World.add({ x: 29, y: 29, boundary: "hard" }, { random });
+  const random = Random.create({ seed: settings.seed }),
+    world = World.create({ x: 29, y: 29, boundary: "hard" }, { random });
   const integer = (n: number) => Math.floor(random.number() * n),
     round = (n: number) => Math.round(n * 100) / 100;
   const sellers = () =>
@@ -111,7 +111,7 @@ export function create(options: Partial<Parameters> = {}) {
     const a = (index * 2 * Math.PI) / 50,
       items = amount(settings.supplyDistribution, settings.supplyAmount);
     world.add(
-      Agent.add(
+      Agent.create(
         {
           kind: "seller" as const,
           index,
@@ -130,7 +130,7 @@ export function create(options: Partial<Parameters> = {}) {
     const a = (index * 2 * Math.PI) / 50,
       want = amount(settings.demandDistribution, settings.demandAmount);
     world.add(
-      Agent.add(
+      Agent.create(
         {
           kind: "buyer" as const,
           index,

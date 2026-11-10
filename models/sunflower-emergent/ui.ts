@@ -35,7 +35,7 @@ const binding = defineUI(model, {
   monitors: [
     { label: "Tick", value: (state) => state.tick },
     { label: "Particles", value: (state) => state.particles.length },
-    { label: "Temporary candidates", value: (state) => state.numTempParticles },
+    { label: "Temporary candidates", value: (state) => state.temporaryParticleCount },
   ],
   views: [
     {

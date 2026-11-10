@@ -5,7 +5,7 @@ import { parameters, stepCount } from "../parameters.ts";
 export const sourceMarker = "B08-peppered-moths-native-composition-v1";
 export interface Parameters {
   seed: number;
-  numMoths: number;
+  mothCount: number;
   speed: number;
   mutation: number;
   selection: number;
@@ -13,7 +13,7 @@ export interface Parameters {
 }
 export const inputs: Inputs<Parameters> = {
   seed: { kind: "number", default: 1, integer: true },
-  numMoths: { kind: "number", default: 100, min: 0, max: 200, integer: true },
+  mothCount: { kind: "number", default: 100, min: 0, max: 200, integer: true },
   speed: { kind: "number", default: 41, min: 1, max: 100 },
   mutation: { kind: "number", default: 15, min: 0, max: 100 },
   selection: { kind: "number", default: 50, min: 0, max: 100 },
@@ -22,9 +22,9 @@ export const inputs: Inputs<Parameters> = {
 type Moth = Agent<{ color: number; age: number }>;
 export function create(options: Partial<Parameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
-  const world = World.add({ x: 33, y: 41, boundary: "wrap" }, { random });
-  const grid = Grid.add(world.space!, { state: { color: 9 } });
+  const random = Random.create({ seed: settings.seed });
+  const world = World.create({ x: 33, y: 41, boundary: "wrap" }, { random });
+  const grid = Grid.create(world.space!, { state: { color: 9 } });
   world.add(grid);
   let darkness = 0;
   let darkening = true;
@@ -65,7 +65,7 @@ export function create(options: Partial<Parameters> = {}) {
       dark,
       medium: population().length - light - dark,
       darkness,
-      pollution: (((4 * settings.numMoths) / 3) * darkness) / 8,
+      pollution: (((4 * settings.mothCount) / 3) * darkness) / 8,
     });
     if (history.length > 1001) history.splice(1, 1);
   }
@@ -77,9 +77,9 @@ export function create(options: Partial<Parameters> = {}) {
     darkening = true;
     updateEnvironment();
     history.length = 0;
-    for (let i = 0; i < settings.numMoths; i++) {
+    for (let i = 0; i < settings.mothCount; i++) {
       world.add(
-        Agent.add(
+        Agent.create(
           {
             color: random.number({ min: 1, max: 10, integer: true }),
             age: random.number({ max: 3, integer: true }),
@@ -130,7 +130,7 @@ export function create(options: Partial<Parameters> = {}) {
       return;
     }
     if (
-      population().length > 4 * settings.numMoths &&
+      population().length > 4 * settings.mothCount &&
       random.number({ max: 2, integer: true }) === 0
     )
       moth.delete();

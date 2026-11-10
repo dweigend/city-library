@@ -35,10 +35,10 @@ type Building = Agent<{ kind: "building" }>;
 
 export function create(options: Partial<PathsParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const space = { x: 101, y: 101, boundary: "wrap" } as const;
-  const world = World.add(space, { random });
-  const grid = Grid.add(space, { state: { popularity: 0, route: false } });
+  const world = World.create(space, { random });
+  const grid = Grid.create(space, { state: { popularity: 0, route: false } });
   world.add(grid);
   const walkers = () =>
     world.agents.filter(
@@ -56,7 +56,7 @@ export function create(options: Partial<PathsParameters> = {}) {
   }
   for (let index = 0; index < settings.walkerCount; index++) {
     const goal = choose(grid.fields);
-    const walker = Agent.add(
+    const walker = Agent.create(
       { kind: "walker" as const, goal: null as unknown as ModelField },
       {
         position: {
@@ -79,7 +79,7 @@ export function create(options: Partial<PathsParameters> = {}) {
     if (nearby.length) {
       for (const building of nearby) building.delete();
     } else {
-      world.add(Agent.add({ kind: "building" as const }, { position: field }));
+      world.add(Agent.create({ kind: "building" as const }, { position: field }));
     }
   }
   function becomeMorePopular(field: ModelField) {
@@ -95,7 +95,7 @@ export function create(options: Partial<PathsParameters> = {}) {
         geometry.distance(field, destination, { space }) < distanceToGoal - 1,
     );
     if (candidates.length === 0) return destination;
-    // In the original patch task, [distance self] is zero for every candidate.
+    // In the original field task, [distance self] is zero for every candidate.
     // Preserve that all-way tie instead of silently replacing self with myself.
     return choose(candidates);
   }

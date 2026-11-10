@@ -34,7 +34,7 @@ export const inputs: Inputs<CRISPRParameters> = {
 };
 type Breed = "rnap" | "cas9" | "guide" | "dimer" | "virus";
 type Molecule = Agent<{
-  breed: Breed;
+  group: Breed;
   sequence: number;
   bound: boolean;
   onDNA: boolean;
@@ -42,10 +42,10 @@ type Molecule = Agent<{
 }>;
 export function create(options: Partial<CRISPRParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const space = { x: 33, y: 17, boundary: "hard" } as const;
-  const world = World.add(space, { random });
-  const grid = Grid.add(space, {
+  const world = World.create(space, { random });
+  const grid = Grid.create(space, {
     state: {
       region: "cytoplasm" as
         | "cytoplasm"
@@ -81,8 +81,8 @@ export function create(options: Partial<CRISPRParameters> = {}) {
     spacers: number;
   }[] = [];
   const all = () => world.agents as readonly Molecule[];
-  const breed = (kind: Breed) =>
-    all().filter((molecule) => molecule.breed === kind);
+  const group = (kind: Breed) =>
+    all().filter((molecule) => molecule.group === kind);
   const shuffled = (molecules: readonly Molecule[]) =>
     random.sample(molecules, {
       count: molecules.length,
@@ -105,9 +105,9 @@ export function create(options: Partial<CRISPRParameters> = {}) {
     heading = integer(360),
   ) {
     const molecule = world.add(
-      Agent.add(
+      Agent.create(
         {
-          breed: kind,
+          group: kind,
           sequence,
           bound: false,
           onDNA: false,
@@ -190,11 +190,11 @@ export function create(options: Partial<CRISPRParameters> = {}) {
   }
   function goCas9s(cas9: Molecule) {
     if (cas9.bound) {
-      const virusesHere = breed("virus").filter(
+      const virusesHere = group("virus").filter(
         (virus) => grid.fieldAt(virus) === grid.fieldAt(cas9),
       );
       if (virusesHere.some((virus) => !virus.bound)) {
-        // Native eligibility tests unbound existence, then samples all viruses on the patch.
+        // Native eligibility tests unbound existence, then samples all viruses on the field.
         const virus = random.sample(virusesHere)[0]!;
         const guide = bonds.neighbors(cas9)[0];
         if (!guide) throw new Error("Source bound Cas9 has no guide partner.");
@@ -217,7 +217,7 @@ export function create(options: Partial<CRISPRParameters> = {}) {
     move(cas9);
     if (!cas9.bound) {
       const guide = random.sample(
-        breed("guide").filter(
+        group("guide").filter(
           (guide) => !guide.bound && grid.fieldAt(guide) === grid.fieldAt(cas9),
         ),
       )[0];
@@ -248,7 +248,7 @@ export function create(options: Partial<CRISPRParameters> = {}) {
     } else {
       move(dimer);
       const virus = random.sample(
-        breed("virus").filter(
+        group("virus").filter(
           (virus) =>
             !virus.bound && grid.fieldAt(virus) === grid.fieldAt(dimer),
         ),
@@ -284,16 +284,16 @@ export function create(options: Partial<CRISPRParameters> = {}) {
   function degrade() {
     for (const molecule of shuffled(
       all().filter(
-        (molecule) => molecule.breed === "cas9" || molecule.breed === "guide",
+        (molecule) => molecule.group === "cas9" || molecule.group === "guide",
       ),
     ))
       if (random.number() * 100 < 0.05) degradeMolecule(molecule);
-    for (const virus of shuffled(breed("virus")))
+    for (const virus of shuffled(group("virus")))
       if (random.number() * 100 < 0.5) {
         virusEvent = `Virus ${virus.sequence} was degraded by innate resistance.`;
         degradeMolecule(virus);
       }
-    for (const dimer of shuffled(breed("dimer")))
+    for (const dimer of shuffled(group("dimer")))
       if (random.number() * 100 < 0.2) degradeMolecule(dimer);
     if (random.number() * 100 < 0.001 && array.length)
       array.splice(integer(array.length), 1);
@@ -312,7 +312,7 @@ export function create(options: Partial<CRISPRParameters> = {}) {
     const counts = [...new Set(array)]
       .map((sequence) => ({
         sequence,
-        count: breed("guide").filter((guide) => guide.sequence === sequence)
+        count: group("guide").filter((guide) => guide.sequence === sequence)
           .length,
       }))
       .sort((a, b) => b.count - a.count);
@@ -329,7 +329,7 @@ export function create(options: Partial<CRISPRParameters> = {}) {
     infect(choice.sequence);
   }
   function infected() {
-    return breed("virus").some((virus) => virus.genomeBound);
+    return group("virus").some((virus) => virus.genomeBound);
   }
   function updateLabels() {
     return settings.labels;
@@ -337,10 +337,10 @@ export function create(options: Partial<CRISPRParameters> = {}) {
   function record() {
     history.push({
       tick: world.tick.value,
-      cas9: breed("cas9").length,
-      guides: breed("guide").length,
-      dimers: breed("dimer").length,
-      viruses: breed("virus").length,
+      cas9: group("cas9").length,
+      guides: group("guide").length,
+      dimers: group("dimer").length,
+      viruses: group("virus").length,
       spacers: array.length,
     });
     if (history.length > 2001) history.shift();
@@ -354,11 +354,11 @@ export function create(options: Partial<CRISPRParameters> = {}) {
     run(
       world,
       () => {
-        for (const molecule of shuffled(breed("rnap"))) goRNAPs(molecule);
-        for (const molecule of shuffled(breed("cas9"))) goCas9s(molecule);
-        for (const molecule of shuffled(breed("guide"))) goGuideRNAs(molecule);
-        for (const molecule of shuffled(breed("dimer"))) goCasDimers(molecule);
-        for (const molecule of shuffled(breed("virus"))) goViruses(molecule);
+        for (const molecule of shuffled(group("rnap"))) goRNAPs(molecule);
+        for (const molecule of shuffled(group("cas9"))) goCas9s(molecule);
+        for (const molecule of shuffled(group("guide"))) goGuideRNAs(molecule);
+        for (const molecule of shuffled(group("dimer"))) goCasDimers(molecule);
+        for (const molecule of shuffled(group("virus"))) goViruses(molecule);
         degrade();
       },
       1,
@@ -398,14 +398,14 @@ export function create(options: Partial<CRISPRParameters> = {}) {
       stopped,
       infected: infected(),
       followingId,
-      rnapCount: breed("rnap").length,
-      cas9Count: breed("cas9").length,
-      guideCount: breed("guide").length,
-      dimerCount: breed("dimer").length,
-      virusCount: breed("virus").length,
+      rnapCount: group("rnap").length,
+      cas9Count: group("cas9").length,
+      guideCount: group("guide").length,
+      dimerCount: group("dimer").length,
+      virusCount: group("virus").length,
       agents: all().map((molecule) => ({
         id: molecule.id,
-        breed: molecule.breed,
+        group: molecule.group,
         x: molecule.x,
         y: molecule.y,
         heading: molecule.heading,
@@ -413,11 +413,11 @@ export function create(options: Partial<CRISPRParameters> = {}) {
         bound: molecule.bound,
         onDNA: molecule.onDNA,
         genomeBound: molecule.genomeBound,
-        color: color[molecule.breed],
+        color: color[molecule.group],
         size: 1,
         label:
           settings.labels &&
-          (molecule.breed === "guide" || molecule.breed === "virus")
+          (molecule.group === "guide" || molecule.group === "virus")
             ? String(molecule.sequence)
             : "",
       })),
@@ -442,7 +442,7 @@ export function create(options: Partial<CRISPRParameters> = {}) {
         from: edge.from.id,
         to: edge.to.id,
       })),
-      guideSequences: breed("guide").map((guide) => guide.sequence),
+      guideSequences: group("guide").map((guide) => guide.sequence),
       history: history.map((point) => ({ ...point })),
     };
   }
@@ -450,7 +450,7 @@ export function create(options: Partial<CRISPRParameters> = {}) {
     integer(settings.maxVirusTypes),
   );
   for (let index = 0; index < 25; index++) addMolecule("rnap");
-  for (const polymerase of shuffled(breed("rnap")))
+  for (const polymerase of shuffled(group("rnap")))
     for (let index = 0; index < 5; index++)
       if (random.number() * 100 < settings.crisprFunction)
         transcribe(polymerase);

@@ -41,10 +41,10 @@ interface Sample {
 
 export function create(options: Partial<TrafficLanesParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const space = { x: 41, y: 17, boundary: { x: "wrap", y: "hard" } } as const;
-  const world = World.add(space, { random });
-  const grid = Grid.add(space, { state: { color: "#4ba322" } });
+  const world = World.create(space, { random });
+  const grid = Grid.create(space, { state: { color: "#4ba322" } });
   world.add(grid);
   const lanes = [1, -1] as const;
   const cars = () => world.agents as readonly Car[];
@@ -72,7 +72,7 @@ export function create(options: Partial<TrafficLanesParameters> = {}) {
         (field) => grid.agentsAt(field).length === 0,
       );
       const field = choose(free)!;
-      const car = Agent.add(
+      const car = Agent.create(
         {
           speed: 0.5,
           topSpeed: 0.5 + random.number() * 0.5,

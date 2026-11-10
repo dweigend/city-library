@@ -6,8 +6,8 @@ export type {
   UISpec,
   View,
   ModelInstance,
-  NetworkNode,
-  NetworkEdge,
+  GraphNodeData,
+  GraphEdgeData,
   GridData,
   SpatialData,
   SpatialSegment,
@@ -18,4 +18,4 @@ export type {
   SpatialAgent,
   Inspector,
 } from "./definition.ts";
-export { netLogoColor } from "./palette/netlogo-color.ts";
+export { indexedColor } from "./palette/indexed-color.ts";

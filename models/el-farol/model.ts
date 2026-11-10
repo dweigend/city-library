@@ -97,10 +97,10 @@ export interface Patron {
 }
 export function create(options: Partial<ElFarolParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const space = { x: 35, y: 35, boundary: "wrap" as const };
-  const world = World.add(space, { random }),
-    grid = Grid.add(space);
+  const world = World.create(space, { random }),
+    grid = Grid.create(space);
   world.add(grid);
   type Person = ReturnType<typeof Agent.add<Patron>>;
   const people = () => world.agents as readonly Person[];

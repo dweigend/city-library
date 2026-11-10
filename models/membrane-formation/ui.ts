@@ -2,7 +2,7 @@ import { defineUI } from "../../ui/index.ts";
 import { model } from "./model.ts";
 
 const binding = defineUI(model, {
-  setup: ["seed", "numWater", "numLipids"],
+  setup: ["seed", "waterCount", "lipidCount"],
   live: {
     waterWaterForce: {
       set: (instance, value) =>

@@ -47,15 +47,15 @@ export const inputs: Inputs<Parameters> = {
   memorySize: { kind: "number", default: 3, min: 0, max: 10, integer: true },
 };
 type Butterfly = Agent<{
-  breed: "monarch" | "viceroy" | "bird";
+  group: "monarch" | "viceroy" | "bird";
   color: number;
   memory: [number, number][];
 }>;
 export function create(options: Partial<Parameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
-  const world = World.add({ x: 41, y: 41, boundary: "wrap" }, { random });
-  const grid = Grid.add(world.space!);
+  const random = Random.create({ seed: settings.seed });
+  const world = World.create({ x: 41, y: 41, boundary: "wrap" }, { random });
+  const grid = Grid.create(world.space!);
   world.add(grid);
   const history: {
     tick: number;
@@ -64,23 +64,23 @@ export function create(options: Partial<Parameters> = {}) {
     monarchMeanColor: number | undefined;
     viceroyMeanColor: number | undefined;
   }[] = [];
-  function population(breed?: Butterfly["breed"]) {
+  function population(group?: Butterfly["group"]) {
     const all = world.agents as readonly Butterfly[];
-    return breed === undefined ? all : all.filter((a) => a.breed === breed);
+    return group === undefined ? all : all.filter((a) => a.group === group);
   }
   function setup() {
     world.delete(world.agents);
     world.tick.reset();
     random.reseed(settings.seed);
-    for (const [breed, count, color] of [
+    for (const [group, count, color] of [
       ["bird", 75, 0],
       ["monarch", 225, 15],
       ["viceroy", 225, 105],
     ] as const) {
       for (let i = 0; i < count; i++) {
         world.add(
-          Agent.add(
-            { breed, color, memory: [] as [number, number][] },
+          Agent.create(
+            { group, color, memory: [] as [number, number][] },
             {
               position: {
                 x: random.number() * 41 - 20.5,
@@ -123,7 +123,7 @@ export function create(options: Partial<Parameters> = {}) {
     }
   }
   function butterfliesMove() {
-    const butterflies = population().filter((a) => a.breed !== "bird");
+    const butterflies = population().filter((a) => a.group !== "bird");
     for (const butterfly of random.sample(butterflies, {
       count: butterflies.length,
       compatibility: "legacy-shuffle",
@@ -134,7 +134,7 @@ export function create(options: Partial<Parameters> = {}) {
     }
   }
   function butterfliesGetEaten() {
-    const butterflies = population().filter((a) => a.breed !== "bird");
+    const butterflies = population().filter((a) => a.group !== "bird");
     for (const butterfly of random.sample(butterflies, {
       count: butterflies.length,
       compatibility: "legacy-shuffle",
@@ -143,7 +143,7 @@ export function create(options: Partial<Parameters> = {}) {
       const birds = grid.agentsAt(field, { source: population("bird") });
       const bird = random.sample(birds)[0];
       if (bird && !colorInMemory(bird.memory, butterfly.color)) {
-        if (butterfly.breed === "monarch")
+        if (butterfly.group === "monarch")
           bird.memory = rememberColor(
             bird.memory,
             butterfly.color,
@@ -162,12 +162,12 @@ export function create(options: Partial<Parameters> = {}) {
       bird.memory = forgetColors(bird.memory, settings.memoryDuration);
   }
   function butterfliesReproduce() {
-    const butterflies = population().filter((a) => a.breed !== "bird");
+    const butterflies = population().filter((a) => a.group !== "bird");
     for (const butterfly of random.sample(butterflies, {
       count: butterflies.length,
       compatibility: "legacy-shuffle",
     })) {
-      const count = population(butterfly.breed).length;
+      const count = population(butterfly.group).length;
       if (
         random.number({ max: count, integer: true }) < 225 - count &&
         random.number() * 100 < 4
@@ -199,7 +199,7 @@ export function create(options: Partial<Parameters> = {}) {
       y: a.y,
       heading: a.heading,
       color: a.color,
-      breed: a.breed,
+      group: a.group,
       memory: a.memory.map((entry) => [...entry] as [number, number]),
     }));
     return {
@@ -210,9 +210,9 @@ export function create(options: Partial<Parameters> = {}) {
       parameters: settings,
       monarchColor: stats.describe(population("monarch").map((a) => a.color)),
       viceroyColor: stats.describe(population("viceroy").map((a) => a.color)),
-      birds: snapshots.filter((a) => a.breed === "bird"),
-      monarchs: snapshots.filter((a) => a.breed === "monarch"),
-      viceroys: snapshots.filter((a) => a.breed === "viceroy"),
+      birds: snapshots.filter((a) => a.group === "bird"),
+      monarchs: snapshots.filter((a) => a.group === "monarch"),
+      viceroys: snapshots.filter((a) => a.group === "viceroy"),
       history: history.map((p) => ({ ...p })),
       randomState: random.state,
     };

@@ -9,8 +9,8 @@ export const inputs: Inputs<OccupancyParameters> = {
 };
 export function create(options: Partial<OccupancyParameters> = {}) {
   let settings = parameters(inputs, options);
-  const world = World.add();
-  const applicants = Array.from({ length: settings.applicants }, (_, index) => world.add(Agent.add({ label: `Household ${index + 1}` })));
+  const world = World.create();
+  const applicants = Array.from({ length: settings.applicants }, (_, index) => world.add(Agent.create({ label: `Household ${index + 1}` })));
   const building = { id: "building", label: "Dwelling slots" };
   const eligibility = Graph.add<(typeof applicants)[number] | typeof building>();
   eligibility.nodes.add(building);

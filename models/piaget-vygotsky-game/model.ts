@@ -62,9 +62,9 @@ type Player = Agent<{
 }>;
 export function create(options: Partial<DevelopmentParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed }),
-    world = World.add({ x: 121, y: 51, boundary: 'hard' }, { random });
-  const grid = Grid.add(
+  const random = Random.create({ seed: settings.seed }),
+    world = World.create({ x: 121, y: 51, boundary: 'hard' }, { random });
+  const grid = Grid.create(
     { x: 121, y: 51, boundary: 'hard' },
     { state: { trailColor: 0 } },
   );
@@ -86,7 +86,7 @@ export function create(options: Partial<DevelopmentParameters> = {}) {
   }>[] = [];
   for (let who = 0; who < settings.numberOfPlayers; who++)
     world.add(
-      Agent.add(
+      Agent.create(
         {
           who,
           color: 5 + 10 * Math.floor(random.number() * 14) + 0.1,

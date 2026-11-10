@@ -139,7 +139,7 @@ export function whichProteinForThisCodon(codon: string): string {
 }
 interface MoleculeData {
   who: number;
-  breed:
+  group:
     | "gene"
     | "nucleotide"
     | "promoter"
@@ -192,10 +192,10 @@ const instructions = [
 ] as const;
 export function create(options: Partial<DNAParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const space = { x: 31, y: 16, boundary: "wrap" } as const;
-  const world = World.add(space, { random });
-  const grid = Grid.add(space);
+  const world = World.create(space, { random });
+  const grid = Grid.create(space);
   const backbones = Graph.add<Molecule>();
   world.add(grid);
   let who = 0;
@@ -213,9 +213,9 @@ export function create(options: Partial<DNAParameters> = {}) {
     duplicateProteins: number;
   }[] = [];
   const all = () => world.agents as readonly Molecule[];
-  const molecules = (kind: Molecule["breed"], strand?: Strand) =>
+  const molecules = (kind: Molecule["group"], strand?: Strand) =>
     all().filter(
-      (p) => p.breed === kind && (strand === undefined || p.strand === strand),
+      (p) => p.group === kind && (strand === undefined || p.strand === strand),
     );
   const shuffled = (values: readonly Molecule[]) =>
     random.sample(values, {
@@ -225,7 +225,7 @@ export function create(options: Partial<DNAParameters> = {}) {
   const yDNA = (strand: Strand) => (strand === "original" ? 1 : -2);
   const yRibosome = (strand: Strand) => (strand === "original" ? 4 : -7);
   function addMolecule(
-    breed: Molecule["breed"],
+    group: Molecule["group"],
     strand: Strand,
     geneNumber = 0,
     x = 0,
@@ -237,7 +237,7 @@ export function create(options: Partial<DNAParameters> = {}) {
       Agent.add<MoleculeData>(
         {
           who: who++,
-          breed,
+          group,
           strand,
           geneNumber,
           code: "",
@@ -441,7 +441,7 @@ export function create(options: Partial<DNAParameters> = {}) {
     for (const p of all().filter(
       (p) =>
         p.strand === strand &&
-        ["gene", "nucleotide", "promoter", "terminator"].includes(p.breed),
+        ["gene", "nucleotide", "promoter", "terminator"].includes(p.group),
     ))
       p.move({ to: { x: p.x, y: yDNA(strand) + 0.5 } });
   }
@@ -452,7 +452,7 @@ export function create(options: Partial<DNAParameters> = {}) {
   function hideGenes(strand: Strand) {
     for (const p of all().filter(
       (p) =>
-        p.strand === strand && ["promoter", "terminator"].includes(p.breed),
+        p.strand === strand && ["promoter", "terminator"].includes(p.group),
     )) {
       p.hidden = true;
       for (const q of backbones.neighbors(p, { direction: "out" }))
@@ -462,27 +462,27 @@ export function create(options: Partial<DNAParameters> = {}) {
   function hideMRNA(strand: Strand) {
     for (const p of all().filter(
       (p) =>
-        p.strand === strand && ["mrna", "mrna-nucleotide"].includes(p.breed),
+        p.strand === strand && ["mrna", "mrna-nucleotide"].includes(p.group),
     )) {
       p.hidden = true;
       for (const q of backbones.neighbors(p, { direction: "out" }))
-        if (q.breed === "tag") q.hidden = true;
+        if (q.group === "tag") q.hidden = true;
     }
   }
   function hideTRNA(strand: Strand) {
     for (const p of all().filter(
       (p) =>
         p.strand === strand &&
-        ["trna", "trna-nucleotide", "amino-acid"].includes(p.breed),
+        ["trna", "trna-nucleotide", "amino-acid"].includes(p.group),
     )) {
       p.hidden = true;
       for (const q of backbones.neighbors(p, { direction: "out" }))
-        if (q.breed === "tag") q.hidden = true;
+        if (q.group === "tag") q.hidden = true;
     }
   }
   function visualizeAllGenes() {
     for (const p of all().filter((p) =>
-      ["promoter", "terminator"].includes(p.breed),
+      ["promoter", "terminator"].includes(p.group),
     )) {
       p.hidden = !settings.showGenes;
       for (const q of backbones.neighbors(p, { direction: "out" }))
@@ -572,7 +572,7 @@ export function create(options: Partial<DNAParameters> = {}) {
         for (const q of backbones.neighbors(trna, { direction: "out" })) {
           if (trna.geneNumber === geneNumber) {
             make = true;
-            q.hidden = q.breed !== "amino-acid";
+            q.hidden = q.group !== "amino-acid";
             for (const tag of backbones.neighbors(q, { direction: "out" }))
               tag.hidden = q.hidden;
           } else {
@@ -727,7 +727,7 @@ export function create(options: Partial<DNAParameters> = {}) {
   function replicateDNA() {
     // Source retains existing proteins; duplicate molecular structures and tags are removed.
     for (const p of all().filter(
-      (p) => p.strand === "duplicate" && p.breed !== "protein",
+      (p) => p.strand === "duplicate" && p.group !== "protein",
     ))
       p.delete();
     makeDuplicateDNAString();
@@ -805,7 +805,7 @@ export function create(options: Partial<DNAParameters> = {}) {
     return {
       id: p.id,
       who: p.who,
-      breed: p.breed,
+      group: p.group,
       strand: p.strand,
       geneNumber: p.geneNumber,
       code: p.code,
@@ -821,7 +821,7 @@ export function create(options: Partial<DNAParameters> = {}) {
       y: p.y,
       heading: p.heading,
       color: p.color,
-      size: p.breed === "tag" ? 0 : 4,
+      size: p.group === "tag" ? 0 : 4,
     };
   }
   function read() {

@@ -36,10 +36,10 @@ type Person = Agent<{
 }>;
 export function create(options: Partial<VirusParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const space = { x: 35, y: 35, boundary: "wrap" } as const;
-  const world = World.add(space, { random });
-  const grid = Grid.add(space);
+  const world = World.create(space, { random });
+  const grid = Grid.create(space);
   world.add(grid);
   const lifespan = 2600;
   const carryingCapacity = 300;
@@ -81,7 +81,7 @@ export function create(options: Partial<VirusParameters> = {}) {
   function setupAgents() {
     for (let index = 0; index < settings.numberPeople; index++) {
       world.add(
-        Agent.add(
+        Agent.create(
           {
             sick: false,
             remainingImmunity: 0,
@@ -147,7 +147,7 @@ export function create(options: Partial<VirusParameters> = {}) {
       random.number() * 100 < chanceReproduce
     ) {
       const child = world.add(
-        Agent.add(
+        Agent.create(
           { sick: false, remainingImmunity: 0, sickTime: 0, age: 1 },
           {
             position: { x: person.x, y: person.y },
@@ -217,7 +217,7 @@ export function create(options: Partial<VirusParameters> = {}) {
       stopped: false,
       agents: all().map((person) => ({
         id: person.id,
-        breed: "person",
+        group: "person",
         x: person.x,
         y: person.y,
         heading: person.heading,

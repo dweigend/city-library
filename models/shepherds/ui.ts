@@ -1,8 +1,8 @@
-import { defineUI, netLogoColor, type Observation, type SpatialData } from "../../ui/index.ts";
+import { defineUI, indexedColor, type Observation, type SpatialData } from "../../ui/index.ts";
 
 import { model } from "./model.ts";
 export const ui = defineUI(model, {
-  setup: ["seed", "numSheep", "numShepherds"],
+  setup: ["seed", "sheepCount", "shepherdCount"],
   live: {
     sheepSpeed: {
       set: (m, v) => m.setRules({ sheepSpeed: v }),
@@ -58,7 +58,7 @@ function sheepAndShepherdsData(s: UIObservation): SpatialData {
     height: s.height,
     cells: s.cells.map((c) => ({
       ...c,
-      color: netLogoColor(c.green),
+      color: indexedColor(c.green),
     })),
     agents: [
       ...s.sheep

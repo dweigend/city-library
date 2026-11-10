@@ -23,8 +23,8 @@ const observation = simulation.read();
 | Input | Default | Declared values |
 | --- | --- | --- |
 | `seed` | `1` | integer; ≥ -2147483648; ≤ 4294967295 |
-| `numSheep` | `150` | integer; ≥ 0; ≤ 500 |
-| `numShepherds` | `30` | integer; ≥ 0; ≤ 100 |
+| `sheepCount` | `150` | integer; ≥ 0; ≤ 500 |
+| `shepherdCount` | `30` | integer; ≥ 0; ≤ 100 |
 | `sheepSpeed` | `0.02` | number; ≥ 0; ≤ 0.2 |
 
 ## Actions and observations

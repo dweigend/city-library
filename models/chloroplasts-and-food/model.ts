@@ -45,7 +45,7 @@ type Breed =
   | "flow";
 type Molecule = Agent<{
   who: number;
-  breed: Breed;
+  group: Breed;
   chloroplastId: string;
   pair: number;
   charged: boolean;
@@ -53,10 +53,10 @@ type Molecule = Agent<{
 }>;
 export function create(options: Partial<ChloroplastParameters> = {}) {
   let settings = parameters(inputs, options);
-  const random = Random.add({ seed: settings.seed });
+  const random = Random.create({ seed: settings.seed });
   const space = { x: 28, y: 19, boundary: "wrap" } as const;
-  const world = World.add(space, { random });
-  const grid = Grid.add(space, { state: { region: 0 } });
+  const world = World.create(space, { random });
+  const grid = Grid.create(space, { state: { region: 0 } });
   world.add(grid);
   const flowEdges = Graph.add<Molecule>();
   let nextWho = 0;
@@ -70,8 +70,8 @@ export function create(options: Partial<ChloroplastParameters> = {}) {
     glucoseProduced: number;
   }[] = [];
   const all = () => world.agents as readonly Molecule[];
-  const ofBreed = (breed: Breed) =>
-    all().filter((molecule) => molecule.breed === breed);
+  const ofBreed = (group: Breed) =>
+    all().filter((molecule) => molecule.group === group);
   const shuffled = (source: readonly Molecule[]) =>
     random.sample(source, {
       count: source.length,
@@ -79,16 +79,16 @@ export function create(options: Partial<ChloroplastParameters> = {}) {
     });
 
   function createMolecule(
-    breed: Breed,
+    group: Breed,
     sourceX = 0,
     y = 0,
     heading = random.number({ min: 0, max: 360, integer: true }),
   ) {
     return world.add(
-      Agent.add(
+      Agent.create(
         {
           who: nextWho++,
-          breed,
+          group,
           chloroplastId: "",
           pair: 0,
           charged: false,
@@ -215,7 +215,7 @@ export function create(options: Partial<ChloroplastParameters> = {}) {
     }
     for (const molecule of shuffled(
       all().filter(
-        (molecule) => molecule.breed === "water" || molecule.breed === "sugar",
+        (molecule) => molecule.group === "water" || molecule.group === "sugar",
       ),
     )) {
       molecule.move(0.04);
@@ -227,7 +227,7 @@ export function create(options: Partial<ChloroplastParameters> = {}) {
   function doGasFlow() {
     for (const molecule of shuffled(
       all().filter(
-        (molecule) => molecule.breed === "co2" || molecule.breed === "o2",
+        (molecule) => molecule.group === "co2" || molecule.group === "o2",
       ),
     )) {
       molecule.move(0.04);
@@ -301,7 +301,7 @@ export function create(options: Partial<ChloroplastParameters> = {}) {
         const destination = index === 0 ? site : otherSite;
         carbon.rotate(destination.heading - carbon.heading);
         carbon.move({ to: { x: destination.x, y: destination.y } });
-        carbon.breed = "carbon";
+        carbon.group = "carbon";
         carbon.chloroplastId = site.chloroplastId;
       }
       createMolecule("o2", site.x + 4.5, site.y);
@@ -347,7 +347,7 @@ export function create(options: Partial<ChloroplastParameters> = {}) {
   }
   function go() {
     for (const molecule of all().filter((molecule) =>
-      ["co2", "o2", "water", "sugar", "photon"].includes(molecule.breed),
+      ["co2", "o2", "water", "sugar", "photon"].includes(molecule.group),
     ))
       molecule.hidden = grid.fieldAt(molecule)!.region !== 4;
     doPhotonFlow();
@@ -405,7 +405,7 @@ export function create(options: Partial<ChloroplastParameters> = {}) {
     const agents = all().map((molecule) => ({
       id: molecule.id,
       who: molecule.who,
-      breed: molecule.breed,
+      group: molecule.group,
       x: molecule.x,
       y: molecule.y,
       heading: molecule.heading,
@@ -414,15 +414,15 @@ export function create(options: Partial<ChloroplastParameters> = {}) {
       chloroplastId: molecule.chloroplastId,
       pair: molecule.pair,
       color:
-        molecule.breed === "chloroplast"
+        molecule.group === "chloroplast"
           ? "#00c800"
-          : molecule.breed === "photon"
+          : molecule.group === "photon"
             ? "#ffe45e"
-            : molecule.breed === "o2"
+            : molecule.group === "o2"
               ? "#ef4545"
-              : molecule.breed === "water"
+              : molecule.group === "water"
                 ? "#6cc0ff"
-                : molecule.breed === "atp"
+                : molecule.group === "atp"
                   ? "#ffb649"
                   : "#222222",
     }));
@@ -442,9 +442,9 @@ export function create(options: Partial<ChloroplastParameters> = {}) {
         to: edge.to.id,
       })),
       chloroplasts: agents.filter(
-        (molecule) => molecule.breed === "chloroplast",
+        (molecule) => molecule.group === "chloroplast",
       ),
-      atpSites: agents.filter((molecule) => molecule.breed === "atp"),
+      atpSites: agents.filter((molecule) => molecule.group === "atp"),
       cells: grid.fields.map((field) => ({
         id: field.id,
         x: field.x,

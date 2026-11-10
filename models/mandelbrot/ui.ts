@@ -4,7 +4,7 @@ import { model } from "./model.ts";
 export const ui = defineUI(model, {
   setup: [
     "seed",
-    { field: "numAgents", label: "Number of agents" },
+    { field: "agentCount", label: "Number of agents" },
     "scaleFactor",
   ],
   source: {
