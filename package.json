@@ -42,7 +42,7 @@
     "build": "bun build index.ts --target browser --format esm --outdir dist && bun library/development/typescript.ts declarations",
     "consumer": "bun tests/package-consumer.ts",
     "check": "bun run typecheck && bun run test && bun run check:migration && bun run contracts && bun run build && bun run consumer",
-    "check:ui:svelte": "bun run --cwd ui/agent-lab check",
+    "check:ui:svelte": "bun run --cwd ui/model-lab check",
     "typecheck:quad-layouts": "bun run typecheck",
     "typecheck:city": "bun run typecheck",
     "typecheck:city:targets": "bun library/development/typescript.ts city-targets",
@@ -59,6 +59,6 @@
     "check:migration": "bun tests/check-examples-migration.ts"
   },
   "workspaces": [
-    "ui/agent-lab"
+    "ui/model-lab"
   ]
 }

@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { createTestModel } from "./fixtures/agent-lab-model.ts";
+import { createTestModel } from "./fixtures/model-lab-model.ts";
 import { createExchangeModel } from "../models/resource-exchange/model.ts";
 
 describe("Headless model actions", () => {
@@ -102,7 +102,7 @@ describe("Headless model actions", () => {
 });
 
 
-describe("Agent Lab exchange scenario", () => {
+describe("Model Lab exchange scenario", () => {
   test("same setup and seed replay the same conserved population dynamics", () => {
     const first = createExchangeModel({ count: 24, initialEnergy: 10, seed: 1 });
     const replay = createExchangeModel({ count: 24, initialEnergy: 10, seed: 1 });

@@ -6,9 +6,9 @@ export interface TraceEvent<T> {
 }
 /** Bounded observation log; the oldest event is dropped beyond capacity. */
 export interface EventTrace<T> {
-  /** Records a detached copy of `value`; `at` must be finite and nondecreasing from 0. */
-  record(event: { at: number; value: T }): void;
-  /** Returns detached copies in recording order. */
+  /** Adds a detached copy of `value`; `at` must be finite and nondecreasing from 0. */
+  add(event: { at: number; value: T }): void;
+  /** Returns detached copies in insertion order. */
   read(): readonly TraceEvent<T>[];
 }
 
@@ -22,8 +22,8 @@ function create<T>(options: { capacity: number }): EventTrace<T> {
   const events: TraceEvent<T>[] = [];
   let lastTime = 0;
   return Object.freeze({
-    record(event: { at: number; value: T }): void {
-      if (arguments.length !== 1) throw new TypeError("EventTrace.record requires one event record.");
+    add(event: { at: number; value: T }): void {
+      if (arguments.length !== 1) throw new TypeError("EventTrace.add requires one event record.");
       const record = validateOptions(event, ["at", "value"]);
       const at = record.at;
       if (typeof at !== "number") throw new TypeError("EventTrace time must be a number.");

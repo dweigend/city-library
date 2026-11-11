@@ -1,6 +1,6 @@
 # Integrate research through the accepted author scripts
 
-The accepted scripts lead library development. Mesa and circular-economy research provide questions and contrasting cases for these scripts; they do not create a second implementation roadmap. The [example-first plan](PLAN.md) owns sequence and acceptance. [Architecture](../../ARCHITECTURE.md) and the Agent Loom reference retain their binding contracts.
+The accepted scripts lead library development. Mesa and circular-economy research provide questions and contrasting cases for these scripts; they do not create a second implementation roadmap. The [example-first plan](PLAN.md) owns sequence and acceptance. [Architecture](../../ARCHITECTURE.md) and the [API specification](../../agent-loom/README.md) retain their binding contracts.
 
 Four scripts run with delivered APIs: household budget, neighborhood heat, scarce resource and shared machine. The generative quarter remains an unmet geometry target. See the [example index](../../../tests/public-contracts/city-simulation/README.md) for commands and acceptance.
 

@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **CRISPR Bacterium** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **CRISPR Bacterium** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

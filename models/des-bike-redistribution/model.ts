@@ -20,7 +20,7 @@ export function create(options: Partial<BikeParameters> = {}) {
   const distance = graph.distances({ from: stations[0]! });
   const stationCapacity = 18;
   const inventory = stations.map(() => Store.create<{ number: number }>({ capacity: stationCapacity }));
-  for (let number = 1; number <= settings.targetBikeCount * 3; number++) inventory[0]!.put({ number });
+  for (let number = 1; number <= settings.targetBikeCount * 3; number++) inventory[0]!.add({ number });
   const agenda = Agenda.create<{ kind: "load" | "deliver"; destination: number }>();
   let cargo: { number: number }[] = [];
   let deliveredBikeCount = 0;
@@ -56,7 +56,7 @@ export function create(options: Partial<BikeParameters> = {}) {
             const destination = event.data.destination;
             truck.move({ to: { x: stations[destination]!.x, y: stations[destination]!.y } });
             for (const bike of cargo) {
-              if (inventory[destination]!.put(bike).status !== "stored") throw new Error("Station capacity violated.");
+              if (inventory[destination]!.add(bike).status !== "stored") throw new Error("Station capacity violated.");
             }
             deliveredBikeCount += cargo.length;
             trips.push({ destination: stations[destination]!.label, quantity: cargo.length, arrived: agenda.time });

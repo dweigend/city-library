@@ -1,5 +1,5 @@
 /** Browser queries and assertions only; no replacement model or simulated DOM. */
-export { assert, equal, button, control, changeInput, changeNumber, settle } from '../ui-authoring/assertions.ts';
+export { assert, equal, button, control, changeInput, changeNumber, settle, stepOnce } from '../ui-authoring/assertions.ts';
 
 export function monitor(root: HTMLElement, label: string): string {
   const title = [...root.querySelectorAll('dt')].find(item => item.textContent?.trim() === label);
@@ -7,7 +7,7 @@ export function monitor(root: HTMLElement, label: string): string {
   return title.nextElementSibling?.textContent?.trim() ?? '';
 }
 
-/** Both hosts submit the same setup form; their visible restart labels may differ. */
+/** Submits the setup form; its visible label is Reload or Reload with changes. */
 export function restart(root: HTMLElement): void {
   const submit = root.querySelector<HTMLButtonElement>('button[type="submit"]');
   if (!submit) throw new Error('Missing setup submit button');

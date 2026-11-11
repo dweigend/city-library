@@ -10,7 +10,7 @@ not runtime implementation or acceptance. The complete original package and its
 [original transfer and rights record](https://github.com/dweigend/city-library/blob/cc6d5c3136c07cda94d5a4449b6e384c435f6ad4/docs/grid-parcels/TOWNSCAPER-RECEIPT.md),
 [original package checksums](https://github.com/dweigend/city-library/blob/cc6d5c3136c07cda94d5a4449b6e384c435f6ad4/docs/grid-parcels/TOWNSCAPER-PACKAGE-SHA256SUMS).
 
-Use the [current API](API.md), [finite-topology contract](TOWNSCAPER-CONTRACT.md)
+Use the [current API](API.md), [finite-topology contract](QUAD-LAYOUTS-CONTRACT.md)
 and [status](STATUS.md) for delivered behavior and remaining work. The historical
 49-row catalogue, 58 signature sections and 27 type/result rows remain design
 requirements, not delivered exports. Their numerical and dependency decisions

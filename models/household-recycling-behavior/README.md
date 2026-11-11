@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Household Recycling Behavior** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Household Recycling Behavior** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

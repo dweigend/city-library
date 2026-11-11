@@ -9,7 +9,7 @@ function rectangle(x: number, y: number, width: number, height: number): PlanarP
 }
 const area = (shape: PlanarPolygon) => geometry.area({ shape });
 
-describe("bounded parcel geometry", () => {
+describe("bounded polygon geometry", () => {
   test("net area is stable under translation and winding, and includes holes", () => {
     const translated = rectangle(999_999, 999_999, 0.001, 0.002);
     const width = translated.coordinates[0]![1]![0] - translated.coordinates[0]![0]![0];

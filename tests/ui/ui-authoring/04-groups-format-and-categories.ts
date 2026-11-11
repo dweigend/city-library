@@ -56,7 +56,7 @@ export async function browserChecks(container: HTMLElement, bind: typeof defineU
     equal(groups.map(group => group.querySelector('legend')?.textContent?.trim()), ['Resources', 'Lifespan'], 'Flat groups appear at first occurrence');
     equal(labels(groups[0]!, Object.keys(model.inputs)), ['Growth Amount', 'Growth Interval'], 'Non-adjacent members share one group in authored order');
     equal(labels(groups[1]!, Object.keys(model.inputs)), ['Min Life'], 'Second group retains its member');
-    button(container, 'Setup').click(); await settle(container);
+    button(container, 'Reload').click(); await settle(container);
     const formatted = container.querySelector('dd')?.textContent?.trim() ?? '';
     assert(/^0\.\d{3}$/.test(formatted), 'Mounted monitor applies the formatter');
     const chart = container.querySelector('svg[role="img"]');

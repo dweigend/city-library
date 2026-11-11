@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Robby the Robot** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Robby the Robot** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

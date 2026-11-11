@@ -11,7 +11,7 @@ Things to try:
 
 ## Use
 
-Choose **Sex Ratio Equilibrium** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Sex Ratio Equilibrium** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

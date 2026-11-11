@@ -1,6 +1,6 @@
 # Your first model
 
-In this tutorial you build a small model from scratch, run it in the terminal and then open it in Agent Lab. It takes three short files and no browser code.
+In this tutorial you build a small model from scratch, run it in the terminal and then open it in Model Lab. It takes three short files and no browser code.
 
 The model is a rain barrel behind a house:
 
@@ -87,7 +87,7 @@ export const model = {
 
 What the parts do:
 
-- `inputs` describes the three numbers you can choose before a run: their defaults and allowed ranges. Agent Lab turns them into setup fields.
+- `inputs` describes the three numbers you can choose before a run: their defaults and allowed ranges. Model Lab turns them into setup fields.
 - `create` builds one independent model instance. `parseParameters` checks your options against `inputs` and rejects anything outside the ranges.
 - The barrel is an `Agent` that lives in a `World`. `run(world, passDay)` performs one step and advances `world.tick` by one when the step succeeds. One tick is one day here.
 - `advance` and `waterGarden` are the model's public actions; they are the only way to change it.
@@ -167,7 +167,7 @@ export const ui = defineUI(model, {
 });
 ```
 
-This file only declares what Agent Lab should show: a button that calls `waterGarden`, three monitors and a line chart of the stored water. The setup fields come from `inputs` automatically. Agent Lab supplies Setup, stepping and Run/Pause; the model keeps all state and rules.
+This file only declares what Model Lab should show: a button that calls `waterGarden`, three monitors and a line chart of the stored water. The setup fields come from `inputs` automatically. Model Lab supplies Setup, stepping and Run/Pause; the model keeps all state and rules.
 
 Check the types of the whole project, including your new files:
 
@@ -177,9 +177,9 @@ bun run typecheck
 
 The last line contains `0 ERRORS`.
 
-## 4. Open it in Agent Lab
+## 4. Open it in Model Lab
 
-Agent Lab finds every folder directly under `models/` that contains both `model.ts` and `ui.ts`; you do not register the model anywhere. The folder name becomes the address, so it must be a lowercase slug such as `rain-barrel`.
+Model Lab finds every folder directly under `models/` that contains both `model.ts` and `ui.ts`; you do not register the model anywhere. The folder name becomes the address, so it must be a lowercase slug such as `rain-barrel`.
 
 With all three files in place, start the Lab:
 
@@ -189,11 +189,10 @@ bun run dev
 
 Open <http://localhost:3101/?model=rain-barrel>, or choose **Rain Barrel** from the model list. Then:
 
-1. Press **Setup**. The monitors show Day 0, Stored (L) 0 and Overflow (L) 0.
-2. Press **10 steps**. Day 10, Stored (L) 100; the chart rises.
-3. Press **Run**, wait until the day counter passes 20, then press **Pause**. From day 20 on the line stays flat at 200 and Overflow grows instead.
-4. Press **Water the garden**. Stored drops by 50 liters.
-5. Set **Rain Liters Per Day** to 10. The Setup button now reads **Restart with changes**. Press it, then **10 steps**: the barrel stays empty.
+1. The model initializes when it opens. The monitors show Day 0, Stored (L) 0 and Overflow (L) 0.
+2. Press **Run**. The chart rises; at Day 10, Stored (L) reads 100. Wait until the day counter passes 20, then press **Pause**. From day 20 on the line stays flat at 200 and Overflow grows instead.
+3. Press **Water the garden**. Stored drops by 50 liters.
+4. Set **Rain Liters Per Day** to 10. The **Reload** button now reads **Reload with changes**. Press it, then **Run**: the barrel stays empty.
 
 On a narrow screen, the setup fields and **Water the garden** sit under **Parameters**. If the Lab was already running when you created the files, stop it and start it again.
 
@@ -211,6 +210,6 @@ rm -r models/rain-barrel
 
 - [Concepts](concepts.md) explains state ownership, steps and ticks, and explicit randomness in a few paragraphs.
 - [Write a model](development/model-authoring.md) walks through a larger model and lists what a model added to this repository needs.
-- [Agent Lab](../ui/agent-lab/README.md) explains the controls and server options.
+- [Model Lab](../ui/model-lab/README.md) explains the controls and server options.
 - [The UI contract](ui/README.md) and its [reference](ui/api-reference.md) list every view type, monitor and control you can declare.
 - [Architecture](ARCHITECTURE.md) explains why models and UI stay separate.

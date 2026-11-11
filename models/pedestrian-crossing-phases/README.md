@@ -8,7 +8,7 @@ Things to try:
 
 ## Use
 
-Choose **Pedestrian Crossing Phases** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Pedestrian Crossing Phases** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

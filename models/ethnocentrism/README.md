@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Ethnocentrism** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Ethnocentrism** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

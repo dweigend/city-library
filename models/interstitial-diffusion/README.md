@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Interstitial Diffusion** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Interstitial Diffusion** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

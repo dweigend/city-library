@@ -10,7 +10,7 @@ Things to try:
 
 ## Use
 
-Choose **Emergency Dispatch** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Emergency Dispatch** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

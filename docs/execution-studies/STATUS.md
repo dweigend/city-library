@@ -25,6 +25,6 @@ The [ten measurement/activation scenarios](models.md) and [ten discrete-event sc
 
 ## Verification and limits
 
-`bun run check` runs strict types, tests, the migration receipt check, numbered public examples, build and packed consumers. `bun run build:ui` builds the single Svelte host. The [shared UI acceptance record](../../ui/agent-lab/acceptance/README.md) identifies its checked states and limits. Model-specific [browser evidence](browser-verification.md) remains scoped to the implementation recorded there; moving files or passing shell checks does not create new browser or scientific approval.
+`bun run check` runs strict types, tests, the migration receipt check, numbered public examples, build and packed consumers. `bun run build:ui` builds the single Svelte host. The [shared UI acceptance record](../../ui/model-lab/acceptance/README.md) identifies its checked states and limits. Model-specific [browser evidence](browser-verification.md) remains scoped to the implementation recorded there; moving files or passing shell checks does not create new browser or scientific approval.
 
 Serial studies and bounded history do not provide worker transport, snapshot continuation or pause/resume. Fixed/shuffle/priority activation does not imply full NetLogo compatibility. Stochastic examples, queue policies and city quantities remain synthetic assumptions; empirical validation and broader API/catalog coverage stay open in [PLAN](../../PLAN.md).

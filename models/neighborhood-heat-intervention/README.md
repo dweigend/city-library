@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Neighborhood Heat Intervention** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Neighborhood Heat Intervention** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

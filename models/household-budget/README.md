@@ -6,7 +6,7 @@ Income and rent come from outside the model, and paid rent leaves it. This is an
 
 ## Use
 
-Choose **Household Budget** in [Agent Lab](../../ui/agent-lab/README.md); the monitors show month, balance, income and rent. The model has no inputs.
+Choose **Household Budget** in [Model Lab](../../ui/model-lab/README.md); the monitors show month, balance, income and rent. The model has no inputs.
 
 From a script in the repository root:
 

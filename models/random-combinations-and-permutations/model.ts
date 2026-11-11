@@ -133,7 +133,7 @@ export function create(options: Partial<Parameters> = {}) {
     }
     if (!exists) {
       instructions =
-        "Please work this way: press Setup, and then Create Combi.";
+        "Please work this way: press Reload, and then Create Combi.";
       return;
     }
     abortCreate = true;

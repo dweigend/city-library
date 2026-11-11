@@ -14,7 +14,7 @@ The five [binding UI authoring rules](../DESIGN.md#binding-ui-authoring-rules) g
 2. The model owns scientific state, validation, defaults and actions. The UI reads observations and invokes public actions; it never duplicates scientific rules or mutates observations.
 3. Model input descriptors supply defaults, numeric limits, granularity and choices. The shared host supplies typography, theme, spacing, layout, accessible controls and renderer styling.
 4. Customization belongs next to the affected binding and is optional. Do not require renderer selection, DOM work, lifecycle plumbing or style configuration for a normal model.
-5. Follow [Agent Loom terminology](../agent-loom/terminology.md). Domain `Field` and detached UI `Cell`/`cells` have different responsibilities. A step invokes a model procedure; tick is model time; host cadence is neither.
+5. Follow the [domain and time semantics](../agent-loom/terminology.md). Domain `Field` and detached UI `Cell`/`cells` have different responsibilities. A step invokes a model procedure; tick is model time; host cadence is neither.
 
 ## Define UI
 
@@ -39,7 +39,7 @@ export const ui = defineUI(model, {
 
 `Definition<P, M>` supplies `title`, optional `description`, canonical `inputs` and `create(parameters)`. Inputs are descriptors for number, boolean, choice or text, each with `default`; numbers may specify `min`, `max`, `step`, `integer`, and choices specify `options`. This is the model definition contract, not the future live-property core `Input` API.
 
-`M` implements `read(): unknown`, `advance(steps?: number): void` and optionally `dispose(): void`. Callback observations are inferred from `read()`. Import the public type `Observation<typeof model>` for a named projection, or `Observation<Instance>` when an instance type is already available. The public UI entry and its secondary import export the same alias; it creates no wrapper or new state. The factory and actions own runtime validation, including cross-field constraints. UI constraints complement that validation. Observers and rendering projections must be side-effect-free and must not advance model time or consume model randomness.
+`M` implements `read(): unknown`, `advance(stepCount?: number): void` and optionally `dispose(): void`. Callback observations are inferred from `read()`. Import the public type `Observation<typeof model>` for a named projection, or `Observation<Instance>` when an instance type is already available. The public UI entry and its secondary import export the same alias; it creates no wrapper or new state. The factory and actions own runtime validation, including cross-field constraints. UI constraints complement that validation. Observers and rendering projections must be side-effect-free and must not advance model time or consume model randomness.
 
 ## Setup
 
@@ -47,7 +47,7 @@ export const ui = defineUI(model, {
 
 The descriptor chooses checkbox, select, number or text and supplies bounds and choices. A range override changes numeric presentation, not the field's meaning. Numeric step defaults to 1 for integers and `any` otherwise. Labels split camel case and capitalize the initial letter.
 
-Setup edits remain pending until Setup/Restart. Where a field explicitly appears in setup and live, each control has its own presentation draft. A setup edit changes neither the live display nor the active model. The live draft wins when the next model is created, regardless of edit order. No second scientific state owner is introduced.
+Setup edits remain pending until **Reload** (shown as **Reload with changes** while edits are pending) re-runs setup. Model Lab runs setup once automatically when a model opens. Where a field explicitly appears in setup and live, each control has its own presentation draft. A setup edit changes neither the live display nor the active model. The live draft wins when the next model is created, regardless of edit order. No second scientific state owner is introduced.
 
 ## Live
 

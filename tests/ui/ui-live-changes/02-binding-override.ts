@@ -23,7 +23,7 @@ export async function browserChecks(container: HTMLElement, bind: typeof defineU
   const tracked = { ...model, create: (options?: Partial<VirusParameters>) => model.create({ personCount: 10, ...options }) };
   const mounted = bind(tracked, { ...spec, change(instance, changes) { defaults++; instance.setParameters(changes); } }).mount(container);
   try {
-    await settle(container); button(container, 'Setup').click(); await settle(container);
+    await settle(container); button(container, 'Reload').click(); await settle(container);
     changeNumber(container, 'Duration override', 12); await settle(container);
     equal(defaults, 0, 'An explicit setter has precedence over change');
     equal((control(container, 'Duration override') as HTMLInputElement).value, '13', 'Canonical transformed value is reread');

@@ -2,7 +2,6 @@ import type { Agenda } from "../agenda/index.ts";
 import type { Graph } from "../graph/graph.ts";
 import {
   activate,
-  report,
   select,
   type ActivationContext,
   type ActivationOptions,
@@ -51,23 +50,26 @@ export interface World {
   readonly grids: readonly (Grid | LayoutGrid)[];
   readonly graphs: readonly Graph[];
   readonly agendas: readonly Agenda[];
-  /** Invokes `action` once per living owned member; order defaults to "shuffle". */
-  activate<T extends WorldMember>(
-    source: ActivationSource<T>,
-    action: (context: ActivationContext<T>) => unknown,
-    options?: ActivationOptions<T>,
-  ): void;
-  /** Like `activate`, but returns each callback result; skipped members yield undefined. */
-  report<T extends WorldMember, R>(
+  /**
+   * Invokes `callback` once per living owned member; order defaults to "shuffle".
+   * Returns the callback result for a single member, or a frozen array of results
+   * in activation order; skipped and dying members yield undefined.
+   */
+  activate<T extends WorldMember, R>(
     source: T,
     callback: (context: ActivationContext<T>) => R,
     options?: ActivationOptions<T>,
   ): R | undefined;
-  report<T extends WorldMember, R>(
+  activate<T extends WorldMember, R>(
     source: readonly T[] | { kind: "agents" | "fields" | "edges"; group?: string },
     callback: (context: ActivationContext<T>) => R,
     options?: ActivationOptions<T>,
   ): readonly (R | undefined)[];
+  activate<T extends WorldMember, R>(
+    source: ActivationSource<T>,
+    callback: (context: ActivationContext<T>) => R,
+    options?: ActivationOptions<T>,
+  ): R | undefined | readonly (R | undefined)[];
   /** Returns living members whose boolean predicate is true, in source order without shuffling. */
   select<T extends WorldMember>(
     source: ActivationSource<T>,
@@ -284,12 +286,9 @@ function create(
     get grids() { return membersOfKind<Grid | LayoutGrid>("grid"); },
     get graphs() { return membersOfKind<Graph>("graph"); },
     get agendas() { return membersOfKind<Agenda>("agenda"); },
-    activate(source, action, options) {
-      activate(world, source, action, options);
-    },
-    report(source, callback, options) {
-      // One implementation serves both overloads; the source form selects the result shape.
-      return report(world, source, callback, options) as never;
+    activate(source, callback, options) {
+      // One implementation serves all overloads; the source form selects the result shape.
+      return activate(world, source, callback, options) as never;
     },
     select(source, predicate, options) {
       return select(world, source, predicate, options);

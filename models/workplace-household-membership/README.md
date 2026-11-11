@@ -4,7 +4,7 @@ How do you keep track of who lives where and works where? Residents, households 
 
 ## Use
 
-Choose **Workplace and Household Membership** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Workplace and Household Membership** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

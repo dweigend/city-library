@@ -57,3 +57,36 @@ export async function settle(root: HTMLElement): Promise<void> {
   await new Promise<void>(resolve => view.requestAnimationFrame(() => resolve()));
   await Promise.resolve();
 }
+
+function tickMonitor(root: HTMLElement): string | undefined {
+  const title = [...root.querySelectorAll('dt')].find(item => item.textContent?.trim() === 'Tick');
+  return title?.nextElementSibling?.textContent?.trim();
+}
+
+/** Advances exactly one model step through the public Run and Pause controls.
+ * Playback advances one step per timer task (at least 50 ms apart) and renders that step in the
+ * same task's microtasks. The observer clicks Pause in that task, before another step can run.
+ * The fixture's rendered Tick monitor must then show exactly one more step, unless the step
+ * failed: a failing step stops playback itself and shows an error alert. */
+export async function stepOnce(root: HTMLElement): Promise<void> {
+  const view = root.ownerDocument.defaultView;
+  const results = root.querySelector<HTMLElement>('section[aria-label="Model results"]');
+  const before = tickMonitor(root);
+  if (!view || !results || before === undefined) throw new Error('stepOnce requires a mounted Workbench with a Tick monitor');
+  button(root, 'Run').click();
+  // The Run click renders in microtasks; a zero-delay task runs before the first playback interval.
+  await new Promise(resolve => view.setTimeout(resolve, 0));
+  await new Promise<void>((resolve, reject) => {
+    const timeout = view.setTimeout(() => { observer.disconnect(); reject(new Error('Run did not advance the model')); }, 5000);
+    const observer = new MutationObserver(() => {
+      observer.disconnect(); view.clearTimeout(timeout);
+      [...root.querySelectorAll<HTMLButtonElement>('button')].find(item => item.textContent?.trim() === 'Pause')?.click();
+      resolve();
+    });
+    observer.observe(results, { subtree: true, childList: true, characterData: true, attributes: true });
+  });
+  await settle(root);
+  const after = tickMonitor(root);
+  if (after === undefined && root.querySelector('[role="alert"]')) return;
+  equal(Number(after), Number(before) + 1, 'Run and Pause advance exactly one step');
+}

@@ -11,7 +11,7 @@ Things to try:
 
 ## Use
 
-Choose **Elevator Service** in [Agent Lab](../../ui/agent-lab/README.md). **Add passenger** calls `addPassenger(from?, to?)`, which defaults to the ground and top floors.
+Choose **Elevator Service** in [Model Lab](../../ui/model-lab/README.md). **Add passenger** calls `addPassenger(from?, to?)`, which defaults to the ground and top floors.
 
 From a script in the repository root:
 

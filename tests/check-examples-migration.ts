@@ -5,10 +5,18 @@ import receipt from "../docs/development/examples-path-migration.json";
 if (existsSync("examples")) throw new Error("The retired examples directory must not exist.");
 import namingIntegration from "../docs/development/main-naming-integration-receipt.json";
 import namingCompletion from "../docs/development/naming-completion-receipt.json";
+import vocabularyMigration from "../docs/development/vocabulary-migration-receipt.json";
+import labControlsMigration from "../docs/development/lab-controls-migration-receipt.json";
 const completionBySource = new Map(namingCompletion.records.map(record => [record.source, record]));
 if (completionBySource.size !== namingCompletion.records.length) throw new Error("Duplicate naming completion source.");
 const usedCompletions = new Set<string>();
 const integrationBySource = new Map(namingIntegration.records.map(record => [record.source, record]));
+const vocabularyBySource = new Map(vocabularyMigration.records.map(record => [record.source, record]));
+if (vocabularyBySource.size !== vocabularyMigration.records.length) throw new Error("Duplicate vocabulary migration source.");
+const usedVocabulary = new Set<string>();
+const labControlsBySource = new Map(labControlsMigration.records.map(record => [record.source, record]));
+if (labControlsBySource.size !== labControlsMigration.records.length) throw new Error("Duplicate Lab controls migration source.");
+const usedLabControls = new Set<string>();
 
 const sources = new Set<string>();
 const destinations = new Set<string>();
@@ -30,10 +38,28 @@ for (const record of receipt.records) {
     }
     usedCompletions.add(historicalDestination);
   }
-  const destination = completion?.destination ?? historicalDestination;
+  const completedDestination = completion?.destination ?? historicalDestination;
+  const completedDigest = completion?.destinationSha256 ?? priorDigest;
+  const vocabulary = vocabularyBySource.get(completedDestination);
+  if (vocabulary) {
+    if (vocabulary.sourceSha256 !== completedDigest || vocabulary.assertions !== record.assertions) {
+      throw new Error(`Vocabulary migration source mismatch: ${completedDestination}`);
+    }
+    usedVocabulary.add(completedDestination);
+  }
+  const vocabularyDestination = vocabulary?.destination ?? completedDestination;
+  const vocabularyDigest = vocabulary?.destinationSha256 ?? completedDigest;
+  const labControls = labControlsBySource.get(vocabularyDestination);
+  if (labControls) {
+    if (labControls.sourceSha256 !== vocabularyDigest || labControls.assertions !== record.assertions) {
+      throw new Error(`Lab controls migration source mismatch: ${vocabularyDestination}`);
+    }
+    usedLabControls.add(vocabularyDestination);
+  }
+  const destination = labControls?.destination ?? vocabularyDestination;
   const content = readFileSync(destination);
   const digest = createHash("sha256").update(content).digest("hex");
-  if (digest !== (completion?.destinationSha256 ?? priorDigest)) throw new Error(`Migration hash mismatch: ${record.destination}`);
+  if (digest !== (labControls?.destinationSha256 ?? vocabularyDigest)) throw new Error(`Migration hash mismatch: ${record.destination}`);
   const count = [...content.toString().matchAll(/\b(?:assert|expect)\s*[.(]/g)].length;
   if (count !== record.assertions || count !== record.migratedAssertions) {
     throw new Error(`Assertions changed: ${record.destination}`);
@@ -46,6 +72,8 @@ for (const record of receipt.records) {
 console.log(`Migration receipt passed: ${sources.size} files, ${assertions} assertion calls; historical manifests unchanged.`);
 
 if (usedCompletions.size !== completionBySource.size) throw new Error("Unmatched naming completion record.");
+if (usedVocabulary.size !== vocabularyBySource.size) throw new Error("Unmatched vocabulary migration record.");
+if (usedLabControls.size !== labControlsBySource.size) throw new Error("Unmatched Lab controls migration record.");
 
 for (const sourceRecord of namingCompletion.names.provenance.sourceRecords) {
   const content = readFileSync(sourceRecord.path);

@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **DNA Protein Synthesis** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **DNA Protein Synthesis** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

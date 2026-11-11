@@ -1,6 +1,6 @@
 import { defineUI } from '../../../ui/index.ts';
 import { model } from '../../../models/voting/model.ts';
-import { assert, equal, button, monitor, settle } from './assertions.ts';
+import { assert, equal, button, monitor, settle, stepOnce } from './assertions.ts';
 
 /** Scalar annotations select the matching monitor contract; genuine unions still narrow. */
 export function entry(bind: typeof defineUI = defineUI) {
@@ -28,11 +28,11 @@ export async function browserChecks(container: HTMLElement, bind: typeof defineU
   const mounted = entry(bind).mount(container);
   try {
     await settle(container);
-    button(container, 'Setup').click(); await settle(container);
+    button(container, 'Reload').click(); await settle(container);
     equal(monitor(container, 'Tick'), '0.00', 'Number formatter receives a number');
     assert(['RUNNING', 'DONE'].includes(monitor(container, 'Phase')), 'Text formatter receives text');
     equal(monitor(container, 'Mixed'), '0.0', 'Union formatter narrows numeric branch');
-    button(container, '1 step').click(); await settle(container);
+    await stepOnce(container);
     equal(monitor(container, 'Tick'), '1.00', 'Typed formatter refreshes after a real step');
   } finally { mounted.dispose(); }
 }

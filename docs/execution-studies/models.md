@@ -35,6 +35,6 @@ All implementation code is original to this repository. No numerical coefficient
 
 ## Discovery and checks
 
-Agent Lab discovers these folders through `discoverEntries` in `ui/agent-lab/discovery.ts`, like every other model; no special case and no change to `models/catalog/progress.json` is needed. Titles, descriptions and source/limitation notes mark them as illustrative examples, and the upstream model selection and its count stay unchanged.
+Model Lab discovers these folders through `discoverEntries` in `ui/model-lab/discovery.ts`, like every other model; no special case and no change to `models/catalog/progress.json` is needed. Titles, descriptions and source/limitation notes mark them as illustrative examples, and the upstream model selection and its count stay unchanged.
 
 Library public examples must be frozen before dependent model runtime is written. Model mechanism tests live mainly in `tests/spatial-models.test.ts`; residential occupancy is tested in `tests/model-occupancy.test.ts`. [Browser evidence](browser-verification.md) is recorded separately and applies only to the implementation it names.

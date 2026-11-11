@@ -2,14 +2,14 @@ import { resolve } from "node:path";
 import { normalizePath, type Plugin } from "vite";
 import { createCatalogModule, discoverEntries } from "./discovery.ts";
 
-const moduleId = "agent-lab-catalog";
+const moduleId = "model-lab-catalog";
 const resolvedId = `\0${moduleId}`;
 
 /** Adapt existing discovery to Vite without creating or importing model instances. */
-export function agentLabCatalog(root: string): Plugin {
+export function modelLabCatalog(root: string): Plugin {
   let version = String(Date.now());
   return {
-    name: "agent-lab-catalog",
+    name: "model-lab-catalog",
     enforce: "pre",
     resolveId(id) {
       if (id === moduleId) return resolvedId;

@@ -6,7 +6,7 @@ It is an original City Library teaching model about allocation, not a scheduling
 
 ## Use
 
-Choose **Scarce Resource** in [Agent Lab](../../ui/agent-lab/README.md) and use the allocation actions. Setup creates a fresh allocation.
+Choose **Scarce Resource** in [Model Lab](../../ui/model-lab/README.md) and use the allocation actions. Setup creates a fresh allocation.
 
 From a script in the repository root:
 

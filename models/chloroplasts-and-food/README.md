@@ -11,7 +11,7 @@ Things to try:
 
 ## Use
 
-Choose **Chloroplasts and Food** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Chloroplasts and Food** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

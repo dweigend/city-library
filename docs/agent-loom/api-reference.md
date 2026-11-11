@@ -1,10 +1,10 @@
-# Agent Loom API reference
+# City Library API reference
 
 Availability: static factories use `Type.create`. Delivered streams support only `mulberry32`; `mt-word-stream/1` is an undelivered target whose seed, distribution and continuation contract still requires resolution, not an algorithm-equivalence claim. `unsupported-interleaved-activation` always throws. The snapshot, declaration-limit and finite-study XML formats below are undelivered targets; their naming changes do not migrate stored bytes or publish codecs. Original representation provenance belongs in dedicated source records.
 
-This reference defines how the Agent Loom API should behave: inputs, results, mutations, validation and errors. Use it when writing or extending a model.
+This reference defines how the City Library API should behave: inputs, results, mutations, validation and errors. Use it when writing or extending a model.
 
-> **Target specification.** The signatures and examples define the required core API. Only the subsets recorded in [PLAN](../../PLAN.md) and the [coverage inventory](../development/coverage.md) are implemented. Check public exports and runnable examples before using an operation.
+> **Target specification.** The signatures and examples define the required API. Only the subsets recorded in [PLAN](../../PLAN.md) and the [coverage inventory](../development/coverage.md) are implemented, and each [inventory](api-table.md) entry states its status: delivered, target or planned. Check public exports and runnable examples before using an operation. UI authoring details live in the [UI API reference](../ui/api-reference.md).
 
 [Overview](README.md) · [API inventory](api-table.md)
 
@@ -12,7 +12,7 @@ The `agent-loom` import paths are specification names. Their mapping to City Lib
 
 ## Contents
 
-[Vocabulary](#vocabulary) · [Exports and shared types](#exports) · [World](#world-api) · [Agent](#agent-api) · [Grid](#grid-api) · [Field](#field-api) · [Graph](#graph-api) · [Node](#node-api) · [Edge](#edge-api) · [Random](#random-api) · [Input](#input-api) · [stats](#stats-api) · [geometry](#geometry-api) · [Agenda](#agenda-api) · [studies](#studies-api) · [storage](#storage-api) · [limits](#limits-api)
+[Vocabulary](#vocabulary) · [Exports and shared types](#exports) · [World](#world-api) · [Agent](#agent-api) · [Grid](#grid-api) · [Field](#field-api) · [Graph](#graph-api) · [Node](#node-api) · [Edge](#edge-api) · [Random](#random-api) · [Input](#input-api) · [stats](#stats-api) · [geometry](#geometry-api) · [Agenda](#agenda-api) · [studies](#studies-api) · [storage](#storage-api) · [limits](#limits-api) · [Additive measurement and update tools](#additive-measurement-and-update-tools) · [City systems](#city-systems)
 
 <a id="main"></a>
 
@@ -144,6 +144,22 @@ Deletion removes incident edges and node membership in every graph retaining tha
 
 These synchronous value functions validate all inputs and return detached data. They never attach components, mutate caller data, advance clocks or use hidden randomness. Shape failures throw TypeError; out-of-domain quantities and nonfinite intermediate results throw RangeError. No option is implicit except the defaults explicitly stated below. Monetary and capacity arithmetic uses safe integers; spatial and time units are selected consistently by the model.
 
+<a id="command-result"></a>
+
+### Rule results
+
+```ts
+type CommandResult =
+  | { readonly ok: true }
+  | { readonly ok: false; readonly reason: string };
+```
+
+**Status: planned.** A proposed addition; it must pass the [example-first gate](../../PLAN.md#example-first-delivery-gate) before implementation.
+
+**Behavior and errors**
+
+Actions that check a rule return CommandResult. A refused action returns `{ ok: false, reason }` with a stable kebab-case reason code and changes nothing, including Random state. Misuse still throws: TypeError for a wrong type, shape or unknown option, RangeError for an out-of-range value, both before any change. The type is declared structurally, so a module or system can declare the same shape without importing it. Source: [layers and API, game contract 1](../evolution/layers-and-api.md#game-contracts).
+
 <a id="world-api"></a>
 
 ## World
@@ -195,7 +211,7 @@ interface Tick {
 | `world.tick.advance(amount)` | amount = 1 | Increase the value by a finite nonnegative amount. Zero leaves it unchanged. Returns void. |
 | `world.tick.reset()` | No arguments | Set the value to 0. Returns void. |
 
-`run(world, step, steps)` increases `world.tick.value` by 1 after each successful step. A failed step does not increase it. Model step rules do not advance the same clock themselves.
+`run(world, step, stepCount)` increases `world.tick.value` by 1 after each successful step. A failed step does not increase it. Model step rules do not advance the same clock themselves.
 
 **Behavior and errors**
 
@@ -246,7 +262,7 @@ Import `run` from agent-loom. It invokes the supplied synchronous step function,
 | `world` | Required `World` | Explicit context whose tick value advances; no global current `World`. |
 | `step` | Required synchronous function | The model chooses which collections/actions run and in what order. Named functions are the documentation style; inline callbacks are also valid TypeScript. |
 
-**Result and effects:** Validate `World`, callable step and a finite nonnegative integer steps before execution. Each successful step increases `world.tick.value` by 1. Then consumers may observe. If a step throws, propagate and stop: prior mutations remain, a failed step leaves `world.tick.value` unchanged, no rollback. Individual actions do not advance time. Async callbacks are unsupported: run does not await them. A Promise/thenable result is rejected before advancing the tick value; already-started asynchronous work cannot be cancelled or rolled back by this check.
+**Result and effects:** Validate `World`, callable step and a finite nonnegative integer steps before execution. Each successful step increases `world.tick.value` by 1. Then consumers may read. If a step throws, propagate and stop: prior mutations remain, a failed step leaves `world.tick.value` unchanged, no rollback. Individual actions do not advance time. Async callbacks are unsupported: run does not await them. A Promise/thenable result is rejected before advancing the tick value; already-started asynchronous work cannot be cancelled or rolled back by this check.
 
 The [execution contract](#complete-membership) specifies inferred return-type rejection and the runtime boundary; a void annotation alone cannot exclude async functions. Use normal async/await to prepare data before synchronous model execution. `world.tick.value` is finite nonnegative model time, with no built-in seconds conversion; `world.tick.advance` and `world.tick.reset` are explicit clock-only operations outside run.
 
@@ -306,12 +322,12 @@ interface ActivationContext<T extends WorldMember> {
   readonly caller: WorldMember | undefined;
   die(): never;
 }
-world.activate<T extends WorldMember>(source: ActivationSource<T>, action: (context: ActivationContext<T>) => unknown,
-  options?: { order?: "fixed" | "shuffle" | "priority" | "unsupported-interleaved-activation"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; groups?: ReadonlyMap<WorldMember,string>; groupOrder?: readonly string[] }): void
-world.report<T extends WorldMember,R>(source: T, report: (context: ActivationContext<T>) => R,
+world.activate<T extends WorldMember,R>(source: T, callback: (context: ActivationContext<T>) => R,
   options?: { order?: "fixed" | "shuffle" | "priority" | "unsupported-interleaved-activation"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; groups?: ReadonlyMap<WorldMember,string>; groupOrder?: readonly string[] }): R | undefined
-world.report<T extends WorldMember,R>(source: readonly T[] | { kind: "agents" | "fields" | "edges"; group?: string }, report: (context: ActivationContext<T>) => R,
+world.activate<T extends WorldMember,R>(source: readonly T[] | { kind: "agents" | "fields" | "edges"; group?: string }, callback: (context: ActivationContext<T>) => R,
   options?: { order?: "fixed" | "shuffle" | "priority" | "unsupported-interleaved-activation"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; groups?: ReadonlyMap<WorldMember,string>; groupOrder?: readonly string[] }): readonly (R | undefined)[]
+world.activate<T extends WorldMember,R>(source: ActivationSource<T>, callback: (context: ActivationContext<T>) => R,
+  options?: { order?: "fixed" | "shuffle" | "priority" | "unsupported-interleaved-activation"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; groups?: ReadonlyMap<WorldMember,string>; groupOrder?: readonly string[] }): R | undefined | readonly (R | undefined)[]
 world.select<T extends WorldMember>(source: ActivationSource<T>, predicate: (context: ActivationContext<T>) => boolean,
   options?: { caller?: ActivationContext<WorldMember>; groups?: ReadonlyMap<WorldMember,string> }): readonly T[]
 ```
@@ -330,7 +346,7 @@ Births during callbacks never join an invocation. select never shuffles: visit e
 
 The undelivered interleaved activation target requires a separately specified random stream, explicit XY members, and compatible contexts. Global agents are sorted by ascending numeric compatibility IDs, fields by descending Y then ascending X, and edges by canonical numeric endpoint IDs then group declaration order; captured arrays retain captured order. Implement forward lazy selection: at position i draw Java nextInt(n-i) when at least two remain, swap the chosen remaining item into i, then prefetch the following item before invoking the current callback.
 
-Captured/field sources filter dead values while prefetching; tree-like global-agent/edge/group sources defer that dead check until traversal. This prefetch timing is observable when callbacks draw or kill later members. A singleton direct member draws no traversal RNG. Only observer calls may activate the special global agents/fields selectors; report permits those selectors from nested contexts. Declaration-ordered group selectors retain declaration provenance, never silently becoming a captured array.
+Captured/field sources filter dead values while prefetching; tree-like global-agent/edge/group sources defer that dead check until traversal. This prefetch timing is observable when callbacks draw or kill later members. A singleton direct member draws no traversal RNG. Delivered `activate` accepts the special global agents/fields selectors in nested calls, as both former methods (`activate` and `report`) did before they were merged. Whether the undelivered interleaved target limits them to observer calls is an [open decision](api-table.md#open-decisions). Declaration-ordered group selectors retain declaration provenance, never silently becoming a captured array.
 
 Core IDs are opaque strings and cannot supply native numeric ordering: for global agents/edges supply ids as a same-World identity-to-unique-nonnegative-safe-integer Map; group selectors use groups and groupOrder (distinct declared names) to recover model-owned role membership/order. Global field ordering needs coordinates only. Validate the complete mappings and ownership before drawing; absent required numeric IDs, unknown group names, duplicate IDs or a foreign map key reject. Captured arrays already retain their own order and may omit those maps.
 
@@ -599,6 +615,53 @@ The omitted source uses this Grid's attached World agents and rejects for a deta
 
 Rate zero validates but changes nothing. Overflow rejects with no field changes. No evaporation, tick or random draw occurs.
 
+<a id="grid-numeric-layers"></a>
+
+### Numeric layers
+
+```ts
+grid.layer(options?: { initial?: number }): NumericLayer<F>
+interface NumericLayer<F extends object = {}> {
+  readonly values: Float64Array; // grid.fields order
+  get(field: Field<F>): number;
+  set(field: Field<F>, value: number): void;
+}
+```
+
+**Status: planned.** A proposed addition; it must pass the [example-first gate](../../PLAN.md#example-first-delivery-gate) before implementation.
+
+| Input | Default / required value | Meaning |
+| --- | --- | --- |
+| `initial` | 0 | Finite starting value of every field. |
+
+**Behavior and errors**
+
+A layer stores one number per field in a typed array, separate from field state, so large maps need no object per value. `values` is the live backing array in `grid.fields` order; direct writes are allowed for fast loops and must stay finite. `get` and `set` throw TypeError for a field of another grid and RangeError for a nonfinite value. Layers are not World members, do not join field state and consume no randomness. Source: [principles](../evolution/principles.md) and roadmap order 3.
+
+<a id="grid-flood-fill"></a>
+
+### Flood fill
+
+```ts
+grid.reachable(options: {
+  from: Field<F>;
+  canEnter?: (field: Field<F>) => boolean;
+  neighborhood?: "faces" | "moore";
+}): readonly Field<F>[]
+```
+
+**Status: planned.** A proposed addition; it must pass the [example-first gate](../../PLAN.md#example-first-delivery-gate) before implementation.
+
+| Input | Default / required value | Meaning |
+| --- | --- | --- |
+| `from` | Required member field | Start field; it is not part of the result, as in `graph.reachable`. |
+| `canEnter` | Every field may be entered | A field that returns false is neither returned nor expanded. |
+| `neighborhood` | "faces" | Same neighbor definition and boundary rules as `grid.neighbors`. |
+
+**Behavior and errors**
+
+Breadth-first order; neighbors of one field are visited in `grid.neighbors` order. Each field appears once. A nonmember `from` throws TypeError. The callback must not change the grid; no randomness is consumed. Source: roadmap order 3, "a flood fill finds an enclosed area".
+
 <a id="field-api"></a>
 
 ## Field
@@ -706,9 +769,9 @@ graph.copy(options?: {
 type ReadonlyGraph<N extends object, E extends object> = Pick<Graph<N, E>,
   "hasNode" | "hasEdge" | "neighbors" | "traverse" | "reachable" |
   "components" | "connected" | "bridges" | "articulations" |
-  "findRoute" | "distances" | "allDistances" | "routes" | "distanceSummary" |
+  "route" | "distances" | "allDistances" | "routes" | "distanceSummary" |
   "analyze" | "triangles" | "clustering" | "communities" | "modularity" |
-  "cliques" | "bipartition" | "matching" | "findCycle" | "topological" |
+  "cliques" | "bipartition" | "matching" | "cycle" | "topological" |
   "transitive" | "isTree" | "spanningTree" | "flow" | "layout" |
   "matrix" | "toData" | "copy" | "view"> & {
   readonly parallel: boolean; readonly selfLoops: boolean;
@@ -790,7 +853,7 @@ A zero-edge route has nodes [from], edges [], cost 0 and no path; it does not in
 ### Weighted and signed routing
 
 ```ts
-graph.findRoute(options: {
+graph.route(options: {
   from: N; to: N; cost?: (edge: Edge<N, E>) => number;
   algorithm?: "auto" | "breadth" | "dijkstra" | "bellman-ford"
 }): Route<N, E> | undefined
@@ -810,7 +873,7 @@ from/to must be graph members; cost defaults one per edge. algorithm defaults au
 
 Purity is a caller obligation: detected structural graph mutation and returned thenables reject; arbitrary direct model-state writes cannot be automatically audited or rolled back. Such side effects violate the pure-callback precondition and remain caller-owned. A reachable negative cycle throws RangeError; an undirected negative edge necessarily creates such a cycle. allDistances detects negative cycles reachable from any source. Unreachable negative cycles do not invalidate an unrelated single-source result, although all supplied costs still require valid numbers.
 
-Routes use actual traversal direction, preserving the chosen parallel edge; equal costs choose the lexicographically earliest sequence of edge insertion indices among minimum-cost simple routes. A same-node query returns zero edges and zero cost unless its reachable negative cycle makes the problem unbounded. findRoute returns undefined when unreachable; distances omits unreachable nodes and includes its source at zero; allDistances includes every node as a source in node insertion order, even isolated nodes.
+Routes use actual traversal direction, preserving the chosen parallel edge; equal costs choose the lexicographically earliest sequence of edge insertion indices among minimum-cost simple routes. A same-node query returns zero edges and zero cost unless its reachable negative cycle makes the problem unbounded. route returns undefined when unreachable; distances omits unreachable nodes and includes its source at zero; allDistances includes every node as a source in node insertion order, even isolated nodes.
 
 A route path exists only when every traversed edge has compatible, continuous geometry; undirected/reversed segments are reversed and common endpoint positions are included once. The query does not cache mutable model weights across calls. See the official weighted-path distinctions.
 
@@ -929,7 +992,7 @@ bipartition treats directions as undirected and ignores parallel multiplicity; a
 ### Cycles and directed acyclic structure
 
 ```ts
-graph.findCycle(options?: {
+graph.cycle(options?: {
   direction?: "original" | "undirected"
 }): readonly Edge<N, E>[] | undefined
 graph.topological(): readonly N[]
@@ -940,7 +1003,7 @@ graph.transitive(options: {
 
 **Behavior and errors**
 
-findCycle defaults original; directed edges follow their direction and undirected edges can be traversed both ways without treating one undirected edge alone as a cycle. A loop is a cycle of length 1; two distinct parallel undirected edges form a length-2 cycle. Undirected direction ignores directedness. Return the first depth-first cycle found in node/edge insertion order, in contiguous traversal order; undefined means acyclic. No RNG or mutation occurs.
+cycle defaults original; directed edges follow their direction and undirected edges can be traversed both ways without treating one undirected edge alone as a cycle. A loop is a cycle of length 1; two distinct parallel undirected edges form a length-2 cycle. Undirected direction ignores directedness. Return the first depth-first cycle found in node/edge insertion order, in contiguous traversal order; undefined means acyclic. No RNG or mutation occurs.
 
 topological requires all edges directed and no cycle, otherwise throws. Return stable Kahn order, resolving zero-indegree candidates by node insertion index. Parallel arcs each count toward indegree; deleting their contribution during the query does not mutate the graph. Empty graph returns an empty array. This result orders ordinary model callbacks; it is not a second scheduler.
 
@@ -1084,9 +1147,9 @@ These synchronous codecs process strings only; filesystem/network access uses or
 
 The parser forbids DTD/entities/external resources and duplicate IDs; encoding writes an explicit directed flag on every edge, which validly overrides the graph's default direction when decoding mixed graphs. Geometry is encoded only as a namespaced JSON string validated to the path schema. Unknown foreign GraphML keys are returned as model data with unknown values after scalar parsing.
 
-Agent Loom writes a graph-level data key named agent-loom.metadata with a JSON string containing {schema:"agent-loom.graph-metadata",version:1,parallel,selfLoops,edgeDefaults}; default state is a scalar-attribute record under the same restrictions as edge state. Missing metadata on foreign GraphML derives parallel/selfLoops from actual edges and uses edgeDefaults {}. Unknown or malformed declared metadata rejects.
+The encoder writes a graph-level data key named agent-loom.metadata with a JSON string containing {schema:"agent-loom.graph-metadata",version:1,parallel,selfLoops,edgeDefaults}; default state is a scalar-attribute record under the same restrictions as edge state. Missing metadata on foreign GraphML derives parallel/selfLoops from actual edges and uses edgeDefaults {}. Unknown or malformed declared metadata rejects.
 
-edge-list is the explicit Agent Loom UTF-8 TSV dialect: a header "# agent-loom-edge-list 1", a graph line "graph&lt;TAB&gt;parallel&lt;TAB&gt;selfLoops&lt;TAB&gt;JSON-edgeDefaults", node lines "node&lt;TAB&gt;JSON-string-id&lt;TAB&gt;JSON-state", and edge lines "edge&lt;TAB&gt;JSON-from&lt;TAB&gt;JSON-to&lt;TAB&gt;boolean-directed&lt;TAB&gt;JSON-key-or-null&lt;TAB&gt;JSON-state&lt;TAB&gt;JSON-path-or-null". JSON strings escape control characters; literal tabs/newlines inside fields are invalid. This preserves isolated nodes and edge identities, unlike an unlabeled two-column list. Decoding never guesses a delimiter or external dialect.
+edge-list is the library's explicit UTF-8 TSV dialect: a header "# agent-loom-edge-list 1", a graph line "graph&lt;TAB&gt;parallel&lt;TAB&gt;selfLoops&lt;TAB&gt;JSON-edgeDefaults", node lines "node&lt;TAB&gt;JSON-string-id&lt;TAB&gt;JSON-state", and edge lines "edge&lt;TAB&gt;JSON-from&lt;TAB&gt;JSON-to&lt;TAB&gt;boolean-directed&lt;TAB&gt;JSON-key-or-null&lt;TAB&gt;JSON-state&lt;TAB&gt;JSON-path-or-null". JSON strings escape control characters; literal tabs/newlines inside fields are invalid. This preserves isolated nodes and edge identities, unlike an unlabeled two-column list. Decoding never guesses a delimiter or external dialect.
 
 adjacency-matrix is JSON {schema:"agent-loom.matrix",version:1,nodes:[string IDs],directed:boolean,values:number[][]}. Encoding rejects mixed directions and parallel edges rather than silently losing them, and uses edge.weight when it is a finite nonzero number, otherwise rejects; absent edges are zero. Decoding validates square dimensions, unique IDs, finite values and symmetry when undirected, and creates plain nodes {id}, edge state {weight}, and edgeDefaults {weight:1}. Matrix encoding is intentionally a topology/weight interchange; other defaults are not preserved.
 
@@ -1118,6 +1181,31 @@ circle defaults radius 10 world units and center {x:0,y:0}; radius is finite non
 spring requires one finite initial XY point per current node, no extra/omitted identities. iterationCount defaults 100 nonnegative integer, length defaults 1 positive finite, step defaults 0.01 positive finite. Each iteration simultaneously evaluates Hooke attraction (distance−length) on each unique adjacency and inverse-square repulsion length²/max(distance²,1e−12) on every unordered node pair; unit vectors use current displacement, with coincident pairs separated along +X for the earlier insertion index and −X for the later one. Sum forces then apply step×force to every point together. Every intermediate must remain finite or RangeError is thrown; no partial result is returned. No convergence or physical equilibrium guarantee is implied.
 
 tutte requires distinct boundary members and an equally long position array with at least 3 finite points forming a strictly convex polygon in supplied order; the graph must be simple undirected and each unpinned component must connect to a boundary node. Solve each unpinned vertex as the arithmetic mean of its neighbors with boundary positions fixed. A singular system or nonfinite solution throws. This is a barycentric placement contract, not a claim that arbitrary nonplanar input becomes a planar embedding. It preserves the ordinary model use of external engine layout operations while rendering remains an independent consumer.
+
+<a id="graph-route-search-options"></a>
+
+### Route search options
+
+```ts
+graph.route(options: {
+  from: N; to: N;
+  cost?: (edge: Edge<N, E>) => number;
+  canUse?: (edge: Edge<N, E>) => boolean;
+  heuristic?: (node: N) => number;
+  algorithm?: "auto" | "breadth" | "dijkstra" | "bellman-ford"
+}): Route<N, E> | undefined
+```
+
+**Status: planned.** A proposed addition; it must pass the [example-first gate](../../PLAN.md#example-first-delivery-gate) before implementation.
+
+| Input | Default / required value | Meaning |
+| --- | --- | --- |
+| `canUse` | Every edge is usable | Called once per edge examined; a false result skips the edge as if absent. |
+| `heuristic` | None | Finite nonnegative admissible estimate of the remaining cost to `to`. It changes search order, never the result. |
+
+**Behavior and errors**
+
+These options extend the target `graph.route` contract; there is no second route API. With a heuristic, the result equals the Dijkstra result for the same cost and canUse. A heuristic requires nonnegative edge costs. Unreachable targets return undefined. Callbacks must not change the graph; no randomness is consumed. Equal-cost tie order must be frozen by examples before implementation. Source: [roadmap](../evolution/roadmap.md) order 3, "a route avoids a blocked edge".
 
 <a id="node-api"></a>
 
@@ -1734,7 +1822,7 @@ steps is a required nonnegative integer &lt;= 1,000,000. every defaults 1, sampl
 
 The observer must not mutate or draw. sampleFinal forces an unsampled terminal completed count even when sampleWhen would filter it, with no duplicate sample at that count. Callbacks cannot return thenables or be declared async/generators; those declarations reject before execution, while thenables reject after their effects.
 
-The optional host.advance is an execution seam for existing host consumers, never another model declaration: it replaces exactly one step invocation and must not also tick. It may call a previously supplied callback and return stopped after an aborted partial interval. In that case stop with adapter-stopped, add no tick/completed count and do not force a final observation of the aborted state. Normal authored models omit host and express ordinary termination with stopWhen. This preserves imported callback lifecycle semantics while keeping run(world, step, steps) and model.step void and synchronous.
+The optional host.advance is an execution seam for existing host consumers, never another model declaration: it replaces exactly one step invocation and must not also tick. It may call a previously supplied callback and return stopped after an aborted partial interval. In that case stop with adapter-stopped, add no tick/completed count and do not force a final observation of the aborted state. Normal authored models omit host and express ordinary termination with stopWhen. This preserves imported callback lifecycle semantics while keeping run(world, step, stepCount) and model.step void and synchronous.
 
 dispose runs exactly once after a successfully returned create, including failures, never after failed creation. A disposal failure makes success/stopped failed; if there was a primary failure retain cleanupError separately. onError continue records failure and proceeds; stop records all remaining plan identities as skipped/fail-fast without creating them. Preflight throws TypeError/RangeError before running; lifecycle exceptions become named phase diagnostics. Earlier callback effects/RNG draws are never rolled back.
 
@@ -1867,8 +1955,8 @@ The checkpoint envelope validates framework-owned structure, not arbitrary param
 type WidenStudyScalar<Value extends StudyScalar> = Value extends number ? number : Value extends boolean ? boolean : string;
 declare const selectionMeasurement: unique symbol;
 export interface StudyAxis {
-	readonly variable: string;
-	readonly values: readonly string[];
+	readonly name: string;
+	readonly values: readonly StudyScalar[];
 }
 
 export interface StudySpec {
@@ -2145,10 +2233,10 @@ export interface ReplicationSummary {
 
 interface StudyBindings<Model extends StudyModel> {
  readonly seeds: readonly number[];
- decodeLiteral(source:string, variable:string): StudyScalar;
+ decodeLiteral(source:string, name:string): StudyScalar;
  readonly setup: { readonly source:string; create(parameters:StudyParameters,seed:number,run:PlannedRun<StudyParameters>):Model };
  readonly go: { readonly source:string };
- readonly metrics: readonly { readonly source:string; report(model:Model):StudyScalar }[];
+ readonly metrics: readonly { readonly source:string; read(model:Model):StudyScalar }[];
  readonly exitCondition?:{ readonly source:string; test(model:Model):boolean };
  readonly runMetricsCondition?:{ readonly source:string; test(model:Model):boolean };
  readonly beforeStudy?:{ readonly source:string; run(plan:readonly PlannedRun<StudyParameters>[]):void };
@@ -2639,6 +2727,20 @@ The compatibility object contains validated versioned-import provenance, not a m
 
 IDs are unique within agents or edges, counters exceed every historical assigned ID, and membership endpoints resolve inside the captured World/registered graphs. Own-variable and group names are unique nonempty strings under compatibility declaration rules. Variables themselves remain direct state; no dynamically scoped activation frame, myself reference, running callback or local-randomness scope can be captured. Save during those scopes rejects. Restoration preserves declarations, numeric ordering IDs and future allocation counters for explicitly rebound TS procedures, never external engine code.
 
+<a id="storage-state-hash"></a>
+
+### State hash
+
+```ts
+storage.hash(snapshot: Snapshot<unknown, unknown>): string
+```
+
+**Status: planned.** A proposed addition; it must pass the [example-first gate](../../PLAN.md#example-first-delivery-gate) before implementation.
+
+**Behavior and errors**
+
+Return a canonical hash of a library-created Snapshot. Snapshots of equal supported state give equal hashes. The function is pure, changes no model state and consumes no randomness. It depends on the target `storage.save`. The hash is for determinism checks such as "save, load, then the same hash", not for security. Source: roadmap order 7.
+
 <a id="limits-api"></a>
 
 ## limits
@@ -2707,3 +2809,105 @@ Measurements call a pure synchronous projection once, validate an own finite num
 Continuous tools require finite values and finite nonnegative duration. The caller declares quantity/time units. Linear progression evaluates `value + rate * duration` in that order and rejects nonfinite results. Crossing assumes a linear segment, uses strict start/inclusive end and returns no crossing for zero duration or constant segments. Interpolation uses scaled IEEE-754 arithmetic, not mathematical exactness; the endpoint returns exactly duration, interior results can underflow to zero, and no epsilon is invented. The result is finite within the interval. Planning absolute Agenda events remains explicit; validate additions, and cancel/recompute predictions when an intervening event changes a rate. See [the frozen decisions and examples](../execution-studies/dynamics.md).
 
 History normally records `world.tick.value`. Any deliberately selected alternative axis must be named and used consistently for that series. Equal-time Agenda measurements require aggregation before History insertion or a separate EventTrace; no implicit conversion or extra tick occurs.
+
+<a id="city-systems"></a>
+
+## City systems
+
+City systems are a separate layer on top of the core. Each subsystem folder under `library-city/` imports only `"city-library"`, never another city system, and receives its dependencies as options. Rules are game-like: capacity counters with saturating responses, sums per network component and integer money, never physics or real units. One tick per game day is a system convention, not a core guarantee. The model calls each system explicitly in its `advance()`; that call order is the system order. All entries below are planned.
+
+<a id="budget"></a>
+
+### Budget
+
+```ts
+Budget.create(options?: { money?: number }): Budget
+budget.money: number // readonly integer
+budget.transfer(options: { to: Budget; amount: number }): CommandResult
+```
+
+**Status: planned.** A proposed addition; it must pass the [example-first gate](../../PLAN.md#example-first-delivery-gate) before implementation.
+
+| Input | Default / required value | Meaning |
+| --- | --- | --- |
+| `money` | 0 | Safe integer starting balance. |
+| `to / amount` | Required other Budget and positive safe integer | Receiving budget and amount moved. |
+
+**Behavior and errors**
+
+`transfer` moves the whole amount or nothing. A shortfall returns `{ ok: false, reason: "insufficient-money" }` and changes neither balance. A non-integer or nonpositive amount throws RangeError; a `to` that is not another Budget throws TypeError. A Budget works with any agents, not only inside a city. Source: roadmap order 5, "a failed transfer leaves all balances unchanged".
+
+```ts
+const city = Budget.create({ money: 500 });
+const household = Budget.create();
+city.transfer({ to: household, amount: 200 }); // { ok: true }
+city.transfer({ to: household, amount: 900 }); // { ok: false, reason: "insufficient-money" }
+```
+
+<a id="energy-supply"></a>
+
+### EnergySupply
+
+```ts
+EnergySupply.create<N extends object>(options: {
+  network: Graph<N>;
+  production?: (node: N) => number;
+  demand?: (node: N) => number;
+}): EnergySupply<N>
+energySupply.advance(): void
+energySupply.isSupplied(node: N): boolean
+energySupply.read(): {
+  readonly components: readonly {
+    readonly nodeCount: number;
+    readonly production: number;
+    readonly demand: number;
+    readonly servedShare: number;
+  }[];
+}
+```
+
+**Status: planned.** A proposed addition; it must pass the [example-first gate](../../PLAN.md#example-first-delivery-gate) before implementation.
+
+| Input | Default / required value | Meaning |
+| --- | --- | --- |
+| `network` | Required existing Graph | The only required option; the system does not own or change it. |
+| `production / demand` | 0 per node | Finite nonnegative abstract units per tick; other values throw RangeError during `advance`. |
+
+**Behavior and errors**
+
+`advance` reads the current graph, groups nodes into weakly connected components and sums production and demand per component. Components share no capacity. `isSupplied` is true when the node's component produced at least its demand in the last advance, and false before the first advance; a nonmember node throws TypeError. `servedShare` is `min(1, production / demand)`, and 1 without demand. Components appear in the order of their first node in graph node order. The observation is detached JSON-serializable data. Deterministic; no randomness. Source: roadmap order 4, "two supply networks share no capacity".
+
+<a id="public-transport"></a>
+
+### PublicTransport
+
+```ts
+PublicTransport.create<N extends object, E extends object>(options: {
+  network: Graph<N, E>;
+  capacity?: (edge: Edge<N, E>) => number;
+  scale?: number;
+}): PublicTransport<N, E>
+publicTransport.advance(options: { trips: readonly { from: N; to: N; count: number }[] }): void
+publicTransport.read(): {
+  readonly edges: readonly {
+    readonly edgeId: string;
+    readonly load: number;
+    readonly capacity: number;
+    readonly congestion: number;
+  }[];
+  readonly unroutedTripCount: number;
+}
+```
+
+**Status: planned.** A proposed addition; it must pass the [example-first gate](../../PLAN.md#example-first-delivery-gate) before implementation.
+
+| Input | Default / required value | Meaning |
+| --- | --- | --- |
+| `network` | Required existing Graph | Routes use the target `graph.route` with its default cost. |
+| `capacity` | 100 trips per tick per edge | Finite positive capacity. |
+| `scale` | 1 | Positive safe integer; the largest cohort weight, fixed at setup. |
+| `trips` | Required | Each group has member nodes and a nonnegative safe integer `count`. |
+
+**Behavior and errors**
+
+Each `advance` starts from zero load. It splits every trip group into cohorts of weight `scale`; the last cohort carries the remainder. It routes each cohort once and adds its weight to the load of every edge on the route. Trips without a route add to `unroutedTripCount`; they are never dropped silently. `congestion` is `min(1, load / capacity)`, an explainable capacity counter rather than a traffic model; it does not feed back into routing in this first slice. Edges appear in graph edge order. The same scenario at `scale: 1` and `scale: 50` must show the same trend. No randomness is consumed. Source: roadmap order 6 and [cohort agents](../evolution/layers-and-api.md#cohort-agents).

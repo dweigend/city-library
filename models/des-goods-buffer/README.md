@@ -11,7 +11,7 @@ Things to try:
 
 ## Use
 
-Choose **Urban Goods Buffer** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Urban Goods Buffer** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

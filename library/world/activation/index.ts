@@ -121,20 +121,7 @@ function invoke<T extends WorldMember, R>(
     frame.active = false;
   }
 }
-export function activate<T extends WorldMember>(
-  world: World,
-  source: ActivationSource<T>,
-  action: (context: ActivationContext<T>) => unknown,
-  options: ActivationOptions<T> = {},
-): void {
-  requireCallback(action);
-  const caller = callerIdentity(world, options.caller);
-  const members = ordered(world, sourceMembers(world, source, options.groups), options);
-  for (const member of members) {
-    if (isLivingOwnedMember(world, member)) invoke(world, member, caller, action);
-  }
-}
-export function report<T extends WorldMember, R>(
+export function activate<T extends WorldMember, R>(
   world: World,
   source: ActivationSource<T>,
   callback: (context: ActivationContext<T>) => R,

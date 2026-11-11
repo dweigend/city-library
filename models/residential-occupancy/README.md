@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Residential Occupancy** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Residential Occupancy** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

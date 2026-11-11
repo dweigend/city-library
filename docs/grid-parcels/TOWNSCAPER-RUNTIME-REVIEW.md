@@ -6,10 +6,10 @@
 - **Branch / Head Commit:** `feat/townscaper-grid` at `6726d7e627de11d2c01d727eb5e704035aee1f44`
 - **Pre-Runtime Freeze Baseline:** `9fca840935cbc152e8faef4cddf877347568261a` (`2df94d1` accepted `E0` checkpoint + reviewed `E3` contract/examples/archive freeze)
 - **Reviewed Diff (`9fca840..6726d7e`):**
-  - Runtime: [`src/grid/topology/index.ts`](../../src/grid/topology/index.ts), [`src/grid/topology/quad-validation.ts`](../../src/grid/topology/quad-validation.ts), [`src/grid/topology/quadrilaterals.ts`](../../src/grid/topology/quadrilaterals.ts), [`src/grid/topology/relax.ts`](../../src/grid/topology/relax.ts)
+  - Runtime: [`src/grid/topology/index.ts`](../../library/grid/topology/index.ts), [`src/grid/topology/quad-validation.ts`](../../library/grid/topology/quad-validation.ts), [`src/grid/topology/quadrilaterals.ts`](../../library/grid/topology/quadrilaterals.ts), [`src/grid/topology/relax.ts`](../../library/grid/topology/relax.ts)
   - Public example registration & dev typecheck: [`scripts/examples.ts`](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/scripts/examples.ts), [`tsconfig.dev.json`](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/tsconfig.dev.json)
-  - Focused tests & type checks: [`tests/townscaper-grid.test.ts`](../../tests/townscaper-grid.test.ts), [`tests/townscaper-grid-types.ts`](../../tests/townscaper-grid-types.ts), [`scripts/consumer.ts`](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/scripts/consumer.ts)
-  - Contract & boundary notes: [`docs/grid-parcels/TOWNSCAPER-CONTRACT.md`](TOWNSCAPER-CONTRACT.md), [`docs/grid-parcels/TOWNSCAPER-REVIEW-RESPONSES.md`](TOWNSCAPER-REVIEW-RESPONSES.md), [`docs/grid-parcels/TOWNSCAPER-VERIFICATION.md`](TOWNSCAPER-VERIFICATION.md)
+  - Focused tests & type checks: [`tests/townscaper-grid.test.ts`](../../tests/quad-layouts.test.ts), [`tests/townscaper-grid-types.ts`](../../tests/quad-layouts-types.ts), [`scripts/consumer.ts`](https://github.com/dweigend/city-library/blob/23693e90e199512faf68a04c9a2198b9eb50463b/scripts/consumer.ts)
+  - Contract & boundary notes: [`docs/grid-parcels/TOWNSCAPER-CONTRACT.md`](QUAD-LAYOUTS-CONTRACT.md), [`docs/grid-parcels/TOWNSCAPER-REVIEW-RESPONSES.md`](TOWNSCAPER-REVIEW-RESPONSES.md), [`docs/grid-parcels/TOWNSCAPER-VERIFICATION.md`](QUAD-LAYOUTS-VERIFICATION.md)
 
 ---
 
@@ -51,7 +51,7 @@ All commands below were executed directly in `/home/david/.t3/worktrees/city-lib
 
 ## 3. Detailed Technical Audit of Runtime Implementation
 
-### 3.1 `topology.quadrilaterals` ([`src/grid/topology/quadrilaterals.ts`](../../src/grid/topology/quadrilaterals.ts))
+### 3.1 `topology.quadrilaterals` ([`src/grid/topology/quadrilaterals.ts`](../../library/grid/topology/quadrilaterals.ts))
 
 1. **Boundary & Option Validation Before RNG:**
    - Checks `arguments.length !== 1` (`TypeError`), validates plain options record via `validateOptions(options, ["rings", "edgeLength", "random"])` (rejecting non-plain objects, symbol keys, accessors, and unknown/research keys `boundary`, `pointSpacing`, `relaxationIterations` with `TypeError` before inspecting getters), and explicitly rejects any own property with value `undefined` (`Object.values(values).some(value => value === undefined)` -> `TypeError`).
@@ -71,7 +71,7 @@ All commands below were executed directly in `/home/david/.t3/worktrees/city-lib
    - Caches undirected source-edge midpoints by `edgeKey(first, second)` as exact `[(a[0] + b[0]) / 2, (a[1] + b[1]) / 2]` tuples so adjacent refined quads share identical binary64 midpoint coordinates.
    - Emits `[corner, nextEdgeMidpoint, center, previousEdgeMidpoint]` for each corner in canonical face order, rotates each child quad to its lexicographically smallest `(x, y)` start (`canonicalStart`), checks strict CCW convexity via exact `orient(...) > 0`, and validates the complete output layout via `createLayout(polygons, true)`.
 
-### 3.2 `topology.relax` & Validation ([`src/grid/topology/relax.ts`](../../src/grid/topology/relax.ts), [`src/grid/topology/quad-validation.ts`](../../src/grid/topology/quad-validation.ts))
+### 3.2 `topology.relax` & Validation ([`src/grid/topology/relax.ts`](../../library/grid/topology/relax.ts), [`src/grid/topology/quad-validation.ts`](../../library/grid/topology/quad-validation.ts))
 
 1. **Boundary Validation & Capability Checks:**
    - Checks `arguments.length !== 1` (`TypeError`), `validateOptions(options, ["layout", "method", "iterations"])` (`TypeError` on unknown/symbol/accessor/mixed keys such as `random`, `strength`, `relaxationIterations`), and rejects explicit `undefined` values (`TypeError`).
@@ -95,7 +95,7 @@ All commands below were executed directly in `/home/david/.t3/worktrees/city-lib
 
 ## 4. Architecture, Coding Standards & Provenance Compliance
 
-- **Architecture & Domain Boundaries ([`docs/ARCHITECTURE.md`](../ARCHITECTURE.md), [`docs/CODING_STANDARDS.md`](file:///home/david/Projekte/city-library/docs/CODING_STANDARDS.md)):**
+- **Architecture & Domain Boundaries ([`docs/ARCHITECTURE.md`](../ARCHITECTURE.md), [`docs/CODING_STANDARDS.md`](../CODING_STANDARDS.md)):**
   - All 4 touched runtime files live in `src/grid/topology/` and depend only on existing internal contracts (`../../agent/state.ts`, `../../geometry/space.ts`, `../../geometry/planar/{parcel-input,predicates,types,validation}.ts`, `../../random/random.ts`, `./layout.ts`).
   - Zero imports of `World`, `Agent`, `Grid`, UI/Svelte/Three.js, Node host modules, or external geometry libraries.
   - Functions are small, cohesive, and pure/headless; each file has a single clear responsibility (`quadrilaterals.ts`: 140 lines; `relax.ts`: 140 lines; `quad-validation.ts`: 58 lines; `index.ts`: 42 lines).

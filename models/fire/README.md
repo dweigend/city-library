@@ -11,7 +11,7 @@ Things to try:
 
 ## Use
 
-Choose **Forest Fire** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Forest Fire** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

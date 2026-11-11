@@ -33,7 +33,7 @@ equal(scene(actual.read()).agents.filter(agent => agent.selectable !== false).ma
 export async function browserChecks(container: HTMLElement, bind: typeof defineUI = defineUI) {
   const mounted = bind(model, spec).mount(container);
   try {
-    await settle(container); button(container, 'Setup').click(); await settle(container);
+    await settle(container); button(container, 'Reload').click(); await settle(container);
     button(container, 'Produce crate').click(); await settle(container);
     assert(container.querySelector('canvas')?.getAttribute('aria-label')?.includes('crates'), 'Actual shared canvas exposes the capacity unit');
     assert(!container.querySelector('[role="alert"]'), 'Existing spatial host accepts the public pure projection');

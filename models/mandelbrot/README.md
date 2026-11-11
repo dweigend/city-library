@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Mandelbrot Set** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Mandelbrot Set** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

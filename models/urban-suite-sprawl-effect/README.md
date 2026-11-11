@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Urban Sprawl** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Urban Sprawl** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

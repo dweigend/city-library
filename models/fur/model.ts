@@ -99,7 +99,7 @@ export function create(options: Partial<FurParameters> = {}) {
       );
       if (outer.length === 0)
         throw new RangeError(
-          "Source outer ellipse ring is empty; reset the sliders and press Setup again.",
+          "Source outer ellipse ring is empty; reset the sliders and press Reload again.",
         );
       neighborhoods.set(field, { inner, outer });
     }

@@ -6,7 +6,7 @@ These five examples bind model inputs, actions, observations and charts without 
 
 | Script | Real model and asserted headless result | Additional real-browser contract |
 | --- | --- | --- |
-| `01-defaults-and-inert-entry.ts` | Voting: inert declaration; typed boolean action preserves tick and RNG | Omitted setup excludes keyed live fields; descriptor defaults and authored order; no creation until Setup |
+| `01-defaults-and-inert-entry.ts` | Voting: inert declaration; typed boolean action preserves tick and RNG | Omitted setup excludes keyed live fields; descriptor defaults and authored order; one creation on open, one more per Reload |
 | `02-ordered-setup-and-numeric-live.ts` | Wealth: numeric action updates growth to 6 without stepping | String setup selection and local label override; numeric input action; implicit getter refresh |
 | `03-alternate-observation.ts` | Voting through an observation-only adapter: explicit getter reports true after real action | Missing parameters convention uses explicit getter; boolean control sends boolean |
 | `04-groups-format-and-categories.ts` | Wealth: numeric Gini stays numeric; separate formatting; named class bars preserve class total and RNG | Accessible flat groups; nonadjacent same-group fields; formatted monitor; category and axis/unit text |
