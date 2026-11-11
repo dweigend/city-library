@@ -1,0 +1,30 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-economy/model.ts";
+
+const instance = model.create();
+instance.advance();
+let state = instance.read();
+assert.equal(state.tick, 1);
+assert.deepEqual([state.plannedDemand, state.jobCount, state.employedCount, state.vacancyCount], [40, 4, 4, 0]);
+assert.deepEqual([state.payroll, state.consumption, state.revenue, state.nextDemand], [40, 20, 60, 60]);
+assert.deepEqual(state.households.map(item => item.employerId), ["firm:1", "firm:1", "firm:2", "firm:2", null, null, null, null]);
+assert.deepEqual(state.firms.map(item => item.balance), [110, 110]);
+assert.deepEqual([state.householdCash, state.firmCash, state.totalCash], [180, 220, 400]);
+instance.advance();
+state = instance.read();
+assert.deepEqual([state.plannedDemand, state.jobCount, state.employedCount, state.vacancyCount], [60, 6, 6, 0]);
+assert.deepEqual([state.payroll, state.consumption, state.revenue, state.nextDemand], [60, 30, 70, 70]);
+assert.deepEqual(state.households.map(item => item.employerId), ["firm:1", "firm:1", "firm:2", "firm:2", "firm:1", "firm:2", null, null]);
+assert.deepEqual(state.firms.map(item => item.balance), [115, 115]);
+assert.deepEqual([state.householdCash, state.firmCash, state.totalCash], [210, 230, 440]);
+for (let index = 0; index < 24; index += 1) {
+  instance.advance();
+  const current = instance.read();
+  assert.equal(current.jobCount, current.employedCount + current.vacancyCount);
+  assert.equal(current.parameters.householdCount, current.employedCount + current.unemployedCount);
+  assert.equal(current.totalCash, 360 + current.tick * 40);
+  assert.equal(current.firms.reduce((sum, firm) => sum + firm.employeeCount, 0), current.employedCount);
+}
+const shortage = model.create({ householdCount: 2, externalDemand: 80 });
+shortage.advance();
+assert.deepEqual([shortage.read().jobCount, shortage.read().employedCount, shortage.read().vacancyCount], [8, 2, 6]);

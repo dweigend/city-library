@@ -1,0 +1,20 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-water/model.ts";
+const instance = model.create();
+const state = instance.read();
+assert.equal(model.title, "Water and Wastewater");
+assert.deepEqual(state.parameters, {
+  reservoirCapacityM3: 1000, initialStoredM3: 600, inflowM3PerDay: 100,
+  demandM3PerDay: 200, conservationShare: 0, wastewaterShare: 0.8,
+  treatmentCapacityM3PerDay: 120,
+});
+assert.equal(state.tick, 0);
+assert.equal(state.storedM3, 600);
+assert.equal(state.suppliedM3, 0);
+assert.equal(state.shortageM3, 0);
+assert.equal(state.balanceErrorM3, 0);
+assert.equal(state.history.length, 1);
+assert.equal(state.history[0]?.tick, 0);
+instance.advance(0);
+assert.deepEqual(instance.read(), state);
+console.log("city-water setup passed");

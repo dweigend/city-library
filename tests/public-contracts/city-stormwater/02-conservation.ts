@@ -1,0 +1,22 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-stormwater/model.ts";
+
+const close = (actual: number, expected: number) => assert.ok(Math.abs(actual - expected) < 1e-4, `${actual} != ${expected}`);
+const instance = model.create();
+instance.advance();
+let state = instance.read();
+close(state.intervalRainM3, 40);
+close(state.intervalRunoffM3, 28);
+close(state.intervalDischargedM3, 4);
+close(state.storedM3, 24);
+assert.equal(state.intervalOverflowM3, 0);
+instance.advance(2);
+close(instance.read().intervalOverflowM3, 20.1);
+instance.advance(21);
+state = instance.read();
+close(state.overflowM3, 20.1);
+close(state.runoffM3, 92.1);
+close(state.percolatedM3, 27.9);
+assert.equal(state.storedM3, 0);
+for (const sample of state.history) assert.ok(Math.abs(sample.values.balanceErrorM3!) < 1e-9);
+console.log("city-stormwater storm balance passed");

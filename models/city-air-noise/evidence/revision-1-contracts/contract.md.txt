@@ -1,0 +1,53 @@
+# Air and Noise Exposure contract
+
+Frozen before runtime implementation on 2026-11-10. The four scripts in `tests/public-contracts/city-air-noise/` define the public acceptance assertions. This is an original synthetic teaching model, not an adaptation or a calibrated city forecast.
+
+## Inputs and ownership
+
+`model.create(options?)` and exported `create(options?)` accept `Partial<AirNoiseParameters>`. Canonical exported `inputs` use public model `Inputs`/`Definition` and `parseParameters`.
+
+| Input | Default | Range | Meaning |
+| --- | --- | --- | --- |
+| trafficVehiclesPerHour | 60 | 0–6000, finite | Expected vehicles/hour at **each** of two sources; fractional flow allowed |
+| transportFraction | 0.5 | 0–1, finite | Fraction moved one 100 m box downstream per minute |
+| decayFraction | 0.25 | 0–1, finite | Fraction of transported mass removed per minute |
+
+There is no randomness, seed, wall clock, I/O or import-time initialization. A private World owns tick; a private 3×1 Grid owns mass and receptor integrals. One tick is one minute. `advance(steps = 1)` validates an integer 0–1,000,000 before mutation. `setTraffic(value)` validates against the same inputs and changes current flow without advancing time or changing historical samples, mass or cumulative exposure. Invalid setup, steps and actions throw before mutation. Unknown setup keys and nonnumeric inputs are rejected.
+
+## Physical quantities and exact rules
+
+Three well-mixed boxes have centers `(0,0)`, `(100,0)`, `(200,0)` m and volume 1000 m³ each (100×10×1 m). Two synthetic traffic point sources at `(0,-10)` and `(0,10)` m each represent a 100 m road segment. Each vehicle deposits 1000 µg of one unspecified inert pollutant directly in the first box; this synthetic emission factor has no fleet calibration. Default emissions are `2 × 60/60 × 1000 = 2000 µg/min`. No background pollutant enters.
+
+Each step, in order:
+
+1. Add this minute's emissions to box 0.
+2. Simultaneously move fraction `f` of each pre-transport box mass to the next box. Box 2's outgoing mass exits permanently; no inflow enters from upstream. Remaining fraction stays. There is no diffusion or wrap.
+3. Remove fraction `d` of each post-transport mass. This is a discrete removal fraction, not a continuous decay constant.
+4. Integrate each final concentration over one minute using a right-endpoint rectangle; integrate the current constant sound intensity over 60 seconds. Advance World tick, then record History.
+
+At default settings the mass vectors in µg are `[0,0,0]`, `[750,750,0]`, `[1031.25,1312.5,281.25]` at minutes 0, 1, 2. Concentrations divide by 1000 m³. At minute 1 cumulative emission=2000 µg, decay=500 µg, outflow=0 µg. At minute 2 these are 4000, 1375, 0 µg and total retained=2625 µg. At minute 3 outflow becomes 140.625 µg. Always `emitted = retained + decayed + exited` within relative tolerance 1e-10.
+
+Each road has a synthetic 60 dB sound level at 10 m with flow 60 vehicles/hour. For receptor-source distance `r`, relative intensity is `(traffic/60) × 10^6 × (10/r)^2`. Add both source intensities and a constant 40 dB background intensity `10^4`, then compute `10 log10(sum)` dB re 10⁻¹² W/m². Independent incoherent point sources, free-field inverse-square spreading and unweighted sound are assumptions: these are not dBA, Lden, line-source propagation, instantaneous vehicle pass-bys or health indicators. Background keeps zero-traffic levels finite at exactly 40 dB. The first receptor has `10 log10(2010000)` dB at setup; its intensity is `2.01e-6 W/m²`, and one minute's sound exposure is `0.0001206 J/m²`. Sound has no propagation delay or memory; pollutant does. No barriers, reflections, meteorology, chemistry, terrain, breathing rate, population or regulatory thresholds are modeled.
+
+After one default minute followed by zero traffic and another minute, retained masses are `[281.25,562.5,281.25]` µg. Integrated concentrations are `[1.03125,1.3125,0.28125]` µg·min/m³. Noise becomes 40 dB immediately when flow changes.
+
+## Public observations
+
+`read()` returns detached frozen records: tick, parameters, emission rate (µg/min), cumulative emitted/decayed/exited mass (µg), retained mass (µg), mean concentration (µg/m³), maximum receptor noise (dB), `receptors` in upstream-to-downstream order with stable local IDs `receptor:0` through `receptor:2`, physical coordinates, mass, concentration, concentration integral, sound level, intensity and energy exposure. `sources` give stable IDs and physical coordinates. Repeated reads have no effects. Observations do not resume a model.
+
+History uses public `storage.history({ capacity: 240 })`: initial sample and one sample after every completed minute, strictly increasing ticks; oldest samples are evicted. Values are mean concentration and maximum noise. A live traffic edit leaves the last completed-minute sample unchanged; the next step records the new flow's result.
+
+## Reuse and provenance
+
+Inspected repository revision: `42a289785ee3c9879800d2dd7e8532d04032a7ab`.
+
+| Exact candidate | Decision |
+| --- | --- |
+| `models/neighborhood-heat/model.ts`: public Grid, World, run | Reuse these public kernels for canonical fields and time. Its heat-specific diffusion and exposed mutable state are unsuitable for directed pollutant transport. |
+| Public `Grid.diffuse` / `library/grid/algorithms/diffusion.ts` | Reject for this mechanism: symmetric neighbor sharing differs from one-way transport with explicit outflow. Implement three-box mass balance locally; no new generic library API. |
+| `models/residential-occupancy/model.ts`: `storage.history`, parseParameters, validateStepCount | Reuse bounded detached samples, canonical parameter validation and step validation. No resource-allocation logic needed. |
+| Public `continuous.linear` | Not needed: this contract uses exact discrete fractions, not continuous-time integration. |
+| `models/neighborhood-heat/ui.ts`: defineUI, indexedColor, spatial labels | Reuse public shared projection patterns and indexed palette. Add existing line/table views; no custom Svelte or CSS. |
+| External physics/dispersion package versus focused TypeScript | No external package selected: three finite boxes and explicit `Math.log10` intensity aggregation need no solver or dependency. No external code or dataset is copied; no new third-party notice is required. |
+
+No coupling to other city models. Scientific validation and browser/independent screenshot acceptance remain separate from executable mathematical assertions.

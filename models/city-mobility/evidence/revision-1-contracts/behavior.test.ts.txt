@@ -1,0 +1,49 @@
+import { expect, test } from "bun:test";
+import { model } from "../../../models/city-mobility/model.ts";
+
+test("capacity and conservation hold through repeated mixed departures", () => {
+  const instance = model.create({ initialTrips: 20, carCapacity: 3 });
+  for (let minute = 0; minute < 30; minute++) {
+    instance.setCarPenalty(minute % 2 === 0 ? 0 : 2);
+    instance.dispatchTrips(3);
+    instance.advance();
+    const state = instance.read();
+    expect(state.completedTrips + state.waitingTrips + state.movingTrips).toBe(state.tripCount);
+    expect(state.trips.reduce((sum, trip) => sum + trip.waitingMinutes, 0)).toBe(state.totalWaitingMinutes);
+    for (const link of state.links) {
+      expect(link.used).toBeLessThanOrEqual(link.capacity);
+      expect(link.used).toBe(state.trips.filter(trip => trip.currentLink === link.id && trip.status === "moving").length);
+      expect(link.waiting).toBe(state.trips.filter(trip => trip.currentLink === link.id && trip.status === "waiting").length);
+    }
+  }
+  instance.advance(100);
+  expect(instance.read().completedTrips).toBe(110);
+});
+
+test("mutating detached nested observations cannot change the model", () => {
+  const instance = model.create();
+  const snapshot = instance.read();
+  snapshot.parameters.carPenalty = 10;
+  snapshot.nodes[0]!.label = "Changed";
+  snapshot.links[0]!.used = 999;
+  snapshot.trips[0]!.route[0] = "Changed";
+  snapshot.trips[0]!.waitingMinutes = 999;
+  const current = instance.read();
+  expect(current.parameters.carPenalty).toBe(0);
+  expect(current.nodes[0]!.label).toBe("Home");
+  expect(current.links[0]!.used).toBe(1);
+  expect(current.trips[0]!.route[0]).toBe("home-junction");
+  expect(current.trips[0]!.waitingMinutes).toBe(0);
+});
+
+test("history retains 500 steps and actions do not replace existing samples", () => {
+  const instance = model.create({ initialTrips: 0 });
+  instance.dispatchTrips(1);
+  expect(instance.read().history[0]!.values.tripCount).toBe(0);
+  instance.advance(501);
+  const state = instance.read();
+  expect(state.history.length).toBe(500);
+  expect(state.history[0]!.tick).toBe(2);
+  expect(state.history.at(-1)!.tick).toBe(501);
+  expect(state.completedTrips).toBe(1);
+});

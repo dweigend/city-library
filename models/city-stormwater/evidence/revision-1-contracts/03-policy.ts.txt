@@ -1,0 +1,24 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-stormwater/model.ts";
+
+const baseline = model.create();
+const improved = model.create();
+baseline.advance();
+improved.advance();
+improved.setInfiltration(20);
+assert.equal(improved.read().tick, 1);
+assert.equal(improved.read().infiltratedM3, 1);
+baseline.advance();
+improved.advance();
+assert.equal(baseline.read().overflowM3, 3);
+assert.equal(improved.read().overflowM3, 2);
+assert.equal(improved.read().infiltratedM3, 3);
+improved.setRain(0);
+improved.advance(4);
+const dry = improved.read();
+assert.equal(dry.tick, 6);
+assert.equal(dry.storedM3, 0);
+assert.equal(dry.rainM3, 8);
+assert.equal(dry.dischargedM3, 3);
+assert.equal(dry.overflowM3, 2);
+assert.equal(dry.balanceErrorM3, 0);

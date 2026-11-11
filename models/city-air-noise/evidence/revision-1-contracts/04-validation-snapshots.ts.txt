@@ -1,0 +1,38 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-air-noise/model.ts";
+
+for (const trafficVehiclesPerHour of [-1, 6001, NaN, Infinity]) {
+  assert.throws(() => model.create({ trafficVehiclesPerHour }));
+}
+assert.throws(() => model.create({ transportFraction: 1.01 }));
+assert.throws(() => model.create({ decayFraction: -0.1 }));
+// @ts-expect-error Runtime boundaries reject unknown setup fields.
+assert.throws(() => model.create({ unexpected: 1 }));
+// @ts-expect-error Runtime boundaries reject text instead of numbers.
+assert.throws(() => model.create({ trafficVehiclesPerHour: "60" }));
+const first = model.create();
+const second = model.create();
+const initial = first.read();
+for (const steps of [-1, 0.5, Infinity, 1000001]) assert.throws(() => first.advance(steps));
+for (const value of [-1, NaN, 6001]) assert.throws(() => first.setTraffic(value));
+assert.deepEqual(first.read(), initial);
+assert.notEqual(first.read().receptors, initial.receptors);
+assert.throws(() => { Reflect.set(initial.receptors[0]!, "massMicrograms", 99) || assert.fail("Snapshot is mutable"); });
+assert.equal(first.read().retainedMassMicrograms, 0);
+first.advance(12);
+assert.equal(second.read().tick, 0);
+for (let minute = 0; minute < 12; minute += 1) second.advance();
+assert.deepEqual(first.read(), second.read());
+assert.equal(initial.tick, 0);
+const stagnant = model.create({ transportFraction: 0, decayFraction: 0 });
+stagnant.advance(2);
+assert.deepEqual(stagnant.read().receptors.map(receptor => receptor.massMicrograms), [4000, 0, 0]);
+const flush = model.create({ transportFraction: 1, decayFraction: 0 });
+flush.advance(3);
+assert.deepEqual(flush.read().receptors.map(receptor => receptor.massMicrograms), [0, 2000, 2000]);
+assert.equal(flush.read().exitedMassMicrograms, 2000);
+const removal = model.create({ decayFraction: 1 });
+removal.advance();
+assert.equal(removal.read().retainedMassMicrograms, 0);
+assert.equal(removal.read().decayedMassMicrograms, 2000);
+console.log("city-air-noise validation and snapshots: passed");

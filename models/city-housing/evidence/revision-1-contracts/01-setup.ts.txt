@@ -1,0 +1,21 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-housing/model.ts";
+
+const instance = model.create();
+const state = instance.read();
+assert.equal(model.title, "Housing Market");
+assert.equal(state.tick, 0);
+assert.equal(state.rent, 600);
+assert.equal(state.homeCount, 3);
+assert.equal(state.housedHouseholdCount, 3);
+assert.equal(state.unhousedHouseholdCount, 1);
+assert.equal(state.vacantHomeCount, 0);
+assert.equal(state.displacedHouseholdCount, 0);
+assert.equal(state.builtThisStepCount, 0);
+assert.deepEqual(state.households.map(household => household.bid), [300, 600, 900, 1200]);
+assert.deepEqual(state.households.map(household => household.homeId), [null, "home-3", "home-2", "home-1"]);
+assert.deepEqual(state.households.map(household => household.status), ["unhoused", "housed", "housed", "housed"]);
+assert.equal(state.history.length, 1);
+assert.equal(state.history[0]!.tick, 0);
+instance.advance(0);
+assert.deepEqual(instance.read(), state);

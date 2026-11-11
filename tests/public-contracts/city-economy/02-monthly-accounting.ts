@@ -1,0 +1,21 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-economy/model.ts";
+
+const instance = model.create();
+instance.advance();
+let state = instance.read();
+assert.equal(state.orders, 150);
+assert.equal(state.desiredJobCount, 15);
+assert.equal(state.employedCount, 15);
+assert.equal(state.sales, 150);
+assert.equal(state.lostOrders, 0);
+assert.equal(state.externalInflow, 90);
+assert.equal(state.payroll, 150);
+assert.equal(state.localSpending, 60);
+instance.advance(23);
+state = instance.read();
+assert.equal(state.employedCount, 15);
+assert.equal(state.cumulativeExternalInflow, 24 * 90);
+for (const sample of state.history) assert.ok(Math.abs(sample.values.moneyBalanceError!) < 1e-9);
+assert.equal(state.firms.reduce((sum, firm) => sum + firm.employeeCount, 0), state.employedCount);
+console.log("city-economy monthly accounting passed");

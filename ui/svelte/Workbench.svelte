@@ -40,17 +40,19 @@
         {#each session.setup as parameter (parameter.field)}
           <ParameterField {parameter} value={snapshot.draft[parameter.field]!} pending={snapshot.pending.includes(parameter.field)} error={snapshot.fieldErrors[parameter.field]} onchange={value => session.setDraft(parameter.field, value)} />
         {/each}
-        {#each session.liveGroups as group}
-          {#if group.label !== undefined}
-            <Field.Set><Field.Legend>{group.label}</Field.Legend><Field.Group>
-              {#each group.fields as parameter (parameter.field)}{@render liveControl(parameter)}{/each}
-            </Field.Group></Field.Set>
-          {:else}
-            {#each group.fields as parameter (parameter.field)}{@render liveControl(parameter)}{/each}
-          {/if}
-        {/each}
       </Field.Group>
     </form>
+    <Field.Group>
+      {#each session.liveGroups as group}
+        {#if group.label !== undefined}
+          <Field.Set><Field.Legend>{group.label}</Field.Legend><Field.Group>
+            {#each group.fields as parameter (parameter.field)}{@render liveControl(parameter)}{/each}
+          </Field.Group></Field.Set>
+        {:else}
+          {#each group.fields as parameter (parameter.field)}{@render liveControl(parameter)}{/each}
+        {/if}
+      {/each}
+    </Field.Group>
     {#if session.actions.length || session.drawingLabel}
       <div class="lab-model-actions" role="group" aria-label="Model actions">
         {#each session.actions as action, index}

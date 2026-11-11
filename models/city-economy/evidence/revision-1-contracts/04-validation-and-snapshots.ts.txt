@@ -1,0 +1,35 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-economy/model.ts";
+
+for (const options of [{ householdCount: 0 }, { firmCount: 1.5 }, { wage: NaN }, { spendingFraction: 1.1 }, { externalDemand: -1 }]) {
+  assert.throws(() => model.create(options), RangeError);
+}
+// @ts-expect-error Runtime rejects unknown public options.
+assert.throws(() => model.create({ mystery: 1 }), TypeError);
+// @ts-expect-error Runtime validates primitive types.
+assert.throws(() => model.create({ wage: "10" }), TypeError);
+const first = model.create();
+const second = model.create();
+const initial = first.read();
+assert.notEqual(initial.households, first.read().households);
+assert.notEqual(initial.households[0], first.read().households[0]);
+assert.notEqual(initial.firms[0], first.read().firms[0]);
+for (const value of [-1, 0.5, Infinity, 1_000_001]) {
+  assert.throws(() => first.advance(value), RangeError);
+  assert.deepEqual(first.read(), initial);
+}
+for (const value of [-1, NaN, 1001]) {
+  assert.throws(() => first.setExternalDemand(value), RangeError);
+  assert.deepEqual(first.read(), initial);
+}
+first.advance(12);
+for (let index = 0; index < 12; index += 1) second.advance();
+assert.deepEqual(first.read(), second.read());
+assert.equal(initial.tick, 0);
+assert.equal(initial.households[0]!.balance, 20);
+assert.equal(initial.firms[0]!.jobCount, 2);
+assert.equal(initial.history.length, 1);
+assert.equal(model.create().read().tick, 0);
+first.advance(120);
+assert.equal(first.read().history.length, 120);
+assert.equal(first.read().history[0]!.tick, 13);

@@ -1,0 +1,54 @@
+# Municipal Finance contract
+
+Frozen before runtime implementation. The four scripts in `tests/public-contracts/city-finance/` assert setup, accounting, live policy, and validation/detachment. Their hashes are in `evidence/frozen-contracts.sha256`.
+
+## Mechanism and units
+
+One step is one year; setup is year 0. Money uses abstract currency units (CU). Tax base is a constant annual taxable amount, tax rate a fraction, service cost and maintenance budget CU/year. Replacement value and backlog use CU of repair work; one CU of spending repairs one CU of backlog. Condition is the dimensionless fraction `1 - backlog / replacementValue`. No spatial topology, stochasticity, inflation, interest, population growth, endogenous tax response or interaction with other models is assumed.
+
+| Input | Default | Allowed finite range |
+| --- | ---: | --- |
+| initialCash | 100 CU | 0–1,000,000,000 |
+| taxBase | 10,000 CU/year | 0–1,000,000,000 |
+| taxRate | 0.1 | 0–1 |
+| serviceCost | 800 CU/year | 0–1,000,000,000 |
+| maintenanceBudget | 150 CU/year | 0–1,000,000,000 |
+| replacementValue | 10,000 CU | 1–1,000,000,000 |
+| annualWear | 200 CU/year | 0–1,000,000,000 |
+| initialBacklog | 2,000 CU | 0–replacementValue |
+
+No input quantization is imposed. Unknown keys, nonnumeric values, non-record options and accessor properties fail through the shared parser. Range violations throw RangeError; malformed input throws TypeError. `advance(steps = 1)` accepts integers 0–1,000,000 using `validateStepCount`; 0 is inert.
+
+Each year, in order:
+
+1. Collect `taxBase * taxRate` and pay all mandatory service cost. Cash may become negative: negative cash represents cumulative borrowing without interest or a borrowing ceiling.
+2. Add wear `min(annualWear, replacementValue - backlog)`. Work cannot exceed total replacement value; wear beyond complete deterioration is discarded.
+3. Spend `min(maintenanceBudget, backlogAfterWear, max(0, cashAfterServices))` on repair. Maintenance cannot borrow. It includes current-year wear and old backlog, with no separate priority categories.
+4. Subtract repair spending from cash and backlog; advance World tick by one.
+
+Year-zero flows and cumulative flows are zero. The observations include parameters, tick, cash, backlog, condition, latest taxRevenue/serviceSpending/maintenanceSpending/wear and their cumulative totals. Accounting identities are `cash = initialCash + cumulativeTaxRevenue - cumulativeServiceSpending - cumulativeMaintenanceSpending` and `backlog = initialBacklog + cumulativeWear - cumulativeMaintenanceSpending` (floating-point tolerance for fractional inputs). No separate debt or redundant condition state is stored.
+
+Defaults produce year 1 cash 150, backlog 2050, condition 0.795; year 2 cash 200, backlog 2100, condition 0.79. Tax revenue is 1000/year, service spending 800/year, maintenance 150/year and wear 200/year. With maintenanceBudget 400 before year 1, only 300 is affordable: cash 0, backlog 1900, condition 0.81. Changing taxRate to 0.12 then funds 400 repairs in year 2: cash 0, backlog 1700, condition 0.83.
+
+## Ownership and public actions
+
+`model.create(options)` creates an independent owner. `setPolicy(changes)` accepts only taxRate and maintenanceBudget, validates the entire change before applying it, changes no time or recorded flows, and affects the next year. Empty changes are inert. Setup-only fields cannot change through this action. `read()` returns detached frozen observations, including a detached parameter record. Imports perform no setup, I/O, timers or random draws. The mechanism is deterministic and needs no seed.
+
+## Reuse and provenance
+
+Inspected repository revision: `42a289785ee3c9879800d2dd7e8532d04032a7ab`. This is an original illustrative accounting mechanism, not a transfer or calibrated municipal forecasting model. No external model code, datasets or scientific equivalence claims are used.
+
+| Exact candidate | Decision |
+| --- | --- |
+| Public `World.create`, `run` from `city-library` | Reuse the existing clock and synchronous execution; no new scheduler. |
+| `models/definition.ts` Definition/Inputs and `models/parameters.ts` parseParameters/validateStepCount | Reuse canonical authoring, numeric validation and step bounds. |
+| `models/household-budget/model.ts` create/settleMonth | Its open-flow accounting is a useful comparison; do not copy its live household/world exposure or fixed monthly mechanism. Municipal wear, constrained repairs and policy validation need local rules. |
+| `models/shared-machine/model.ts` | Machine reservation, operation and timed repair are a different mechanism; no machine lifecycle or replacement action is needed here. |
+| Public `Resource`, `Store`, `Agenda` | Capacity reservation, discrete items and event scheduling do not express an aggregate annual fiscal balance; avoid inventing resource requests or events. |
+| Public `storage.history({ capacity: 120 })` and shared UI line `series` projection | Reuse bounded model-owned history of cash, backlog and condition; project explicit points through the existing UI contract. |
+| `ui/index.ts` defineUI and indexedColor | Reuse existing controls, numeric monitors, line and bar views and central palette. No custom Svelte, styling, DSL or package APIs. |
+| External accounting/finance dependency | Not needed for bounded illustrative arithmetic; use a small local mechanism with visible equations. |
+
+History retains the latest 120 annual samples, including setup until it ages out, with cash/backlog/condition numeric values. Live changes do not add duplicate-time samples. History snapshots are detached; cumulative accounting is independent of retained history.
+
+The UI uses annual fiscal flows and time series. A network or map would invent geography absent from this aggregate contract, so neither is included. Browser and independent screenshot acceptance remain pending central coordination.

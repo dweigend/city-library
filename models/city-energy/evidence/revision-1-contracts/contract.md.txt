@@ -1,0 +1,55 @@
+# Urban Energy Supply contract
+
+Frozen before runtime implementation: four public scripts in `tests/public-contracts/city-energy/`, with SHA-256 hashes alongside them. They specify setup, hand-calculated dispatch and balance, network intervention, validation, deterministic batching and independent observations. No assertions may be weakened to fit runtime behavior.
+
+## Scope and units
+
+An original synthetic teaching model of one aggregate urban electricity bus and one independent district-heat connection. One step settles one hour, then increments the World tick. Setup is tick 0, with zero interval flows, `intervalHour: null`, battery initial inventory and one history sample. The first step settles hour 0. Hours repeat modulo 24. Hours 6–17 inclusive are daytime. Electricity demand is 10 kW by day and 6 kW otherwise; heat demand is 2 kW by day and 4 kW otherwise. Both multiply by `demandScale`. Solar produces its full capacity by day and zero otherwise. Wind output is constant. No random draws or seed are needed.
+
+Power is kW; inventory and completed hourly flows are kWh. The interval is exactly one hour, so their numerical values coincide. `tick` is elapsed hours; `intervalHour` labels the last completed interval. Charts use interval end ticks. `read()` and actions do not advance time. Old interval flows retain their original meaning after a policy change.
+
+| Input | Default | Allowed range |
+| --- | ---: | --- |
+| solarCapacityKw | 12 | 0–1000 |
+| windOutputKw | 2 | 0–1000 |
+| batteryCapacityKwh | 8 | 0–1000 |
+| initialBatteryKwh | 4 | 0–batteryCapacityKwh |
+| batteryPowerKw | 2 | 0–1000 |
+| electricityNetworkCapacityKw | 6 | 0–1000 |
+| heatNetworkCapacityKw | 3 | 0–1000 |
+| demandScale | 1 | 0–10 |
+
+All inputs are finite numbers with continuous values. Unknown fields/types fail through `parseParameters`; out-of-range numbers and invalid initial storage throw `RangeError`. `advance` accepts integer counts 0–1,000,000 through `validateStepCount`. The public `setNetworkCapacity(changes)` accepts only either/both network-capacity fields, validates the entire change before mutation, and changes dispatch starting with the next interval. Invalid changes preserve state. No battery-capacity mutation or reconstruction API is promised.
+
+## Ordering and conservation
+
+1. Compute demand and renewables for the starting hour.
+2. Use renewables directly for electricity demand.
+3. Discharge the battery into the residual demand, bounded by inventory and power; import residual demand up to electricity-network capacity; report unmet demand.
+4. Charge only from renewable surplus, bounded by empty capacity and power; curtail the remaining surplus. Never charge and discharge simultaneously, import to charge, or export.
+5. Supply heat up to heat-network capacity and report remaining heat unmet. Electricity and heat are separate carriers; no conversion or heat storage occurs.
+6. Accumulate unmet energy, increment tick, and record the completed flow and inventory in shared bounded History (169 samples including setup until it rolls out).
+
+Lossless battery: `storedAfter = storedBefore + charge - discharge`.
+Electric balance residual: `renewable + discharge + network + unmet - demand - charge - curtailed = 0`.
+Heat balance residual: `heatNetwork + heatUnmet - heatDemand = 0`.
+Unmet energy is accounting slack, not generated energy. Floating-point residuals can have roundoff for fractional inputs.
+
+Defaults: first hour demand electricity 6, heat 4; renewables 2; discharge 2; electricity import 2; heat supply 3; electricity unmet 0; heat unmet 1; storage ends at 2. Second hour storage ends at 0; third hour electricity imports 4. At hour 6 electricity demand is 10, renewables 14, charging 2, curtailment 2, heat unmet 0. With both networks disabled, the first three hours leave 8 kWh electricity and 12 kWh heat unmet; setting capacities to 4/4 leaves those totals unchanged and serves the next hour completely.
+
+`read()` returns detached frozen parameters, flow, history and scalar inventory/totals; no mutable model owners escape. `done` is always false. History is a bounded observation buffer, not a continuation format.
+
+## Reuse and provenance
+
+| Exact candidate | Decision |
+| --- | --- |
+| `models/household-energy-demand/model.ts` | Reuse its public World/run hourly convention and bounded History pattern; do not copy its appliance-shifting rule or couple to its state. This model has separate supply dispatch. |
+| `models/neighborhood-heat/model.ts` | Heat diffusion is a spatial index process, not district-heat energy dispatch. Not reused as a heat-supply algorithm. |
+| `models/scarce-resource/model.ts` | Discrete applicant allocation does not express divisible hourly energy. Not reused. |
+| Public `Store.create` | FIFO discrete-item storage with waiting producers/consumers; not a scalar kWh inventory. Quantizing energy into items would change the continuous input contract. Keep one scalar battery inventory in the model. |
+| Public `Resource.create` | Occupancy/request capacity is not throughput or stored energy. No second queue/execution mechanism is needed. |
+| Public `World.create`, `run`, `storage.history` | Reused unchanged for the authoritative clock, step execution and bounded detached samples. |
+| Existing `Definition`, `Inputs`, `parseParameters`, `validateStepCount`, `defineUI`, `indexedColor` | Reused unchanged for canonical defaults/validation and shared UI authoring/rendering. |
+| External energy libraries | No dependency added: a single-bus hourly merit order needs simple bounded arithmetic, not an optimizer or power-flow solver. |
+
+Source baseline: repository revision recorded in `evidence/checks.md`. All demand profiles, capacity defaults and dispatch rules are authored for this example. No external model or dataset is copied, and no external notice is required. This is neither an empirical forecast nor AC power-flow, district thermal hydraulics, cost optimization or comprehensive scientific validation. Network capacities describe two aggregate import connections, without internal line constraints, losses or geographic layout.

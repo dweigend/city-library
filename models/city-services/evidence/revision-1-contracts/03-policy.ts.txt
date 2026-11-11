@@ -1,0 +1,29 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-services/model.ts";
+
+const instance = model.create();
+instance.advance();
+instance.setCapacityPerFacility(2);
+assert.equal(instance.read().tick, 1);
+assert.equal(instance.read().servedCount, 6); // Last completed day is retained.
+assert.equal(instance.read().parameters.capacityPerFacility, 2);
+assert.ok(instance.read().facilities.every(facility => facility.capacity === 1));
+instance.advance();
+assert.equal(instance.read().servedCount, 12);
+assert.equal(instance.read().unmetCount, 0);
+assert.ok(Math.abs(instance.read().totalDistanceKm - 3 * (2 + 2 * Math.SQRT2)) < 1e-12);
+instance.setMaxDistanceKm(1);
+instance.advance();
+assert.equal(instance.read().servedCount, 6);
+assert.equal(instance.read().unmetCount, 6);
+assert.equal(instance.read().meanDistanceKm, 1);
+assert.equal(instance.read().requests.filter(request => request.status === "distance").length, 6);
+instance.setCapacityPerFacility(0);
+instance.advance();
+assert.equal(instance.read().servedCount, 0);
+assert.equal(instance.read().unmetCount, 12);
+assert.equal(instance.read().meanDistanceKm, 0);
+assert.equal(instance.read().totalDistanceKm, 0);
+assert.equal(instance.read().totalServedCount, 24);
+assert.equal(instance.read().totalUnmetCount, 24);
+console.log("city-services policy: passed");

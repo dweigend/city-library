@@ -1,0 +1,4552 @@
+{
+ "captured": "2026-11-10",
+ "browser": "headless Chromium via playwright-core 1.64.1 (local Bun cache), device scale factor 1",
+ "server": "Agent Lab dev server localhost:3101 from this worktree",
+ "folder": "ui/agent-lab/acceptance/screenshots/city-models/revision-2-visual-fixes/",
+ "note": "Author evidence, not independent approval. 'figure' is the index of the figure captured alone; null means the viewport image.",
+ "runs": [
+  {
+   "run": "city-population-default-desktop-light",
+   "model": "city-population",
+   "scenario": "default",
+   "policy": "defaults",
+   "clock": "year 10",
+   "viewport": "1366x768",
+   "theme": "light",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "advance": "10 steps",
+     "times": 1
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Year: 10 | Residents: 961 | Households: 321 | Aged 65+ (%): 17.1 | Pending pulse: 0 | Accounting error: 0",
+   "figures": [
+    "Age structure · residents by 5-year band",
+    "Annual flows · residents per completed year (bars start at zero)",
+    "Residents and household demand",
+    "Anonymous households by size"
+   ],
+   "files": [
+    {
+     "file": "city-population-default-desktop-light.png",
+     "figure": null
+    },
+    {
+     "file": "city-population-default-desktop-light-element-0.png",
+     "figure": 0
+    },
+    {
+     "file": "city-population-default-desktop-light-element-1.png",
+     "figure": 1
+    },
+    {
+     "file": "city-population-default-desktop-light-element-2.png",
+     "figure": 2
+    },
+    {
+     "file": "city-population-default-desktop-light-element-3.png",
+     "figure": 3
+    }
+   ]
+  },
+  {
+   "run": "city-population-default-narrow-dark",
+   "model": "city-population",
+   "scenario": "default",
+   "policy": "defaults",
+   "clock": "year 10",
+   "viewport": "390x844",
+   "theme": "dark",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "advance": "10 steps",
+     "times": 1
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Year: 10 | Residents: 961 | Households: 321 | Aged 65+ (%): 17.1 | Pending pulse: 0 | Accounting error: 0",
+   "figures": [
+    "Age structure · residents by 5-year band",
+    "Annual flows · residents per completed year (bars start at zero)",
+    "Residents and household demand",
+    "Anonymous households by size"
+   ],
+   "files": [
+    {
+     "file": "city-population-default-narrow-dark.png",
+     "figure": null
+    },
+    {
+     "file": "city-population-default-narrow-dark-element-0.png",
+     "figure": 0
+    }
+   ]
+  },
+  {
+   "run": "city-population-intervention-desktop-dark",
+   "model": "city-population",
+   "scenario": "intervention",
+   "policy": "pulse of 100 immigrants aged 25 scheduled at setup",
+   "clock": "year 10",
+   "viewport": "1366x768",
+   "theme": "dark",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "click": "Schedule pulse of 100 immigrants aged 25"
+    },
+    {
+     "advance": "10 steps",
+     "times": 1
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Year: 10 | Residents: 1109 | Households: 370 | Aged 65+ (%): 14.8 | Pending pulse: 0 | Accounting error: 0",
+   "figures": [
+    "Age structure · residents by 5-year band",
+    "Annual flows · residents per completed year (bars start at zero)",
+    "Residents and household demand",
+    "Anonymous households by size"
+   ],
+   "files": [
+    {
+     "file": "city-population-intervention-desktop-dark.png",
+     "figure": null
+    },
+    {
+     "file": "city-population-intervention-desktop-dark-element-0.png",
+     "figure": 0
+    },
+    {
+     "file": "city-population-intervention-desktop-dark-element-1.png",
+     "figure": 1
+    },
+    {
+     "file": "city-population-intervention-desktop-dark-element-2.png",
+     "figure": 2
+    },
+    {
+     "file": "city-population-intervention-desktop-dark-element-3.png",
+     "figure": 3
+    }
+   ]
+  },
+  {
+   "run": "city-population-intervention-narrow-light",
+   "model": "city-population",
+   "scenario": "intervention",
+   "policy": "pulse of 100 immigrants aged 25 scheduled at setup",
+   "clock": "year 10",
+   "viewport": "390x844",
+   "theme": "light",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "click": "Schedule pulse of 100 immigrants aged 25"
+    },
+    {
+     "advance": "10 steps",
+     "times": 1
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Year: 10 | Residents: 1109 | Households: 370 | Aged 65+ (%): 14.8 | Pending pulse: 0 | Accounting error: 0",
+   "figures": [
+    "Age structure · residents by 5-year band",
+    "Annual flows · residents per completed year (bars start at zero)",
+    "Residents and household demand",
+    "Anonymous households by size"
+   ],
+   "files": [
+    {
+     "file": "city-population-intervention-narrow-light.png",
+     "figure": null
+    },
+    {
+     "file": "city-population-intervention-narrow-light-element-0.png",
+     "figure": 0
+    }
+   ]
+  },
+  {
+   "run": "city-housing-default-desktop-light",
+   "model": "city-housing",
+   "scenario": "default",
+   "policy": "allowance 0",
+   "clock": "month 20",
+   "viewport": "1366x768",
+   "theme": "light",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "advance": "10 steps",
+     "times": 2
+    },
+    {
+     "keys": [
+      "Home"
+     ]
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Month: 20 | Rent (currency/month): 731.86 | Housed: 16 | Searching: 8 | Displaced this month: 0 | Vacant homes: 2 | Under construction: 0",
+   "figures": [
+    "Homes and searching households · fill = tenant income: orange low, blue middle, ",
+    "Bids and posted rent by household income · both axes in currency/month",
+    "Housed households by income group",
+    "Posted rent · currency/month",
+    "Selected home or household"
+   ],
+   "files": [
+    {
+     "file": "city-housing-default-desktop-light.png",
+     "figure": null
+    },
+    {
+     "file": "city-housing-default-desktop-light-element-0.png",
+     "figure": 0
+    },
+    {
+     "file": "city-housing-default-desktop-light-element-1.png",
+     "figure": 1
+    },
+    {
+     "file": "city-housing-default-desktop-light-element-2.png",
+     "figure": 2
+    },
+    {
+     "file": "city-housing-default-desktop-light-element-3.png",
+     "figure": 3
+    },
+    {
+     "file": "city-housing-default-desktop-light-element-4.png",
+     "figure": 4
+    }
+   ]
+  },
+  {
+   "run": "city-housing-default-narrow-dark",
+   "model": "city-housing",
+   "scenario": "default",
+   "policy": "allowance 0",
+   "clock": "month 20",
+   "viewport": "390x844",
+   "theme": "dark",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "advance": "10 steps",
+     "times": 2
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Month: 20 | Rent (currency/month): 731.86 | Housed: 16 | Searching: 8 | Displaced this month: 0 | Vacant homes: 2 | Under construction: 0",
+   "figures": [
+    "Homes and searching households · fill = tenant income: orange low, blue middle, ",
+    "Bids and posted rent by household income · both axes in currency/month",
+    "Housed households by income group",
+    "Posted rent · currency/month"
+   ],
+   "files": [
+    {
+     "file": "city-housing-default-narrow-dark.png",
+     "figure": null
+    },
+    {
+     "file": "city-housing-default-narrow-dark-element-0.png",
+     "figure": 0
+    }
+   ]
+  },
+  {
+   "run": "city-housing-intervention-desktop-dark",
+   "model": "city-housing",
+   "scenario": "intervention",
+   "policy": "allowance 400",
+   "clock": "month 20",
+   "viewport": "1366x768",
+   "theme": "dark",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "fill": {
+      "label": "Allowance for low incomes (currency/month)",
+      "value": 400
+     }
+    },
+    {
+     "advance": "10 steps",
+     "times": 2
+    },
+    {
+     "keys": [
+      "Home"
+     ]
+    }
+   ],
+   "typedInputs": [
+    {
+     "label": "Allowance for low incomes (currency/month)",
+     "typed": "400",
+     "shown": "400",
+     "invalid": "false"
+    }
+   ],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Month: 20 | Rent (currency/month): 899.81 | Housed: 18 | Searching: 6 | Displaced this month: 0 | Vacant homes: 0 | Under construction: 0",
+   "figures": [
+    "Homes and searching households · fill = tenant income: orange low, blue middle, ",
+    "Bids and posted rent by household income · both axes in currency/month",
+    "Housed households by income group",
+    "Posted rent · currency/month",
+    "Selected home or household"
+   ],
+   "files": [
+    {
+     "file": "city-housing-intervention-desktop-dark.png",
+     "figure": null
+    },
+    {
+     "file": "city-housing-intervention-desktop-dark-element-0.png",
+     "figure": 0
+    },
+    {
+     "file": "city-housing-intervention-desktop-dark-element-1.png",
+     "figure": 1
+    },
+    {
+     "file": "city-housing-intervention-desktop-dark-element-2.png",
+     "figure": 2
+    },
+    {
+     "file": "city-housing-intervention-desktop-dark-element-3.png",
+     "figure": 3
+    },
+    {
+     "file": "city-housing-intervention-desktop-dark-element-4.png",
+     "figure": 4
+    }
+   ]
+  },
+  {
+   "run": "city-housing-intervention-narrow-light",
+   "model": "city-housing",
+   "scenario": "intervention",
+   "policy": "allowance 400",
+   "clock": "month 20",
+   "viewport": "390x844",
+   "theme": "light",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "fill": {
+      "label": "Allowance for low incomes (currency/month)",
+      "value": 400
+     }
+    },
+    {
+     "advance": "10 steps",
+     "times": 2
+    }
+   ],
+   "typedInputs": [
+    {
+     "label": "Allowance for low incomes (currency/month)",
+     "typed": "400",
+     "shown": "400",
+     "invalid": "false"
+    }
+   ],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Month: 20 | Rent (currency/month): 899.81 | Housed: 18 | Searching: 6 | Displaced this month: 0 | Vacant homes: 0 | Under construction: 0",
+   "figures": [
+    "Homes and searching households · fill = tenant income: orange low, blue middle, ",
+    "Bids and posted rent by household income · both axes in currency/month",
+    "Housed households by income group",
+    "Posted rent · currency/month"
+   ],
+   "files": [
+    {
+     "file": "city-housing-intervention-narrow-light.png",
+     "figure": null
+    },
+    {
+     "file": "city-housing-intervention-narrow-light-element-0.png",
+     "figure": 0
+    }
+   ]
+  },
+  {
+   "run": "city-land-use-default-desktop-light",
+   "model": "city-land-use",
+   "scenario": "default",
+   "policy": "compact, no protection",
+   "clock": "year 16",
+   "viewport": "1366x768",
+   "theme": "light",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "advance": "10 steps",
+     "times": 1
+    },
+    {
+     "advance": "1 step",
+     "times": 6
+    },
+    {
+     "keys": [
+      "Home"
+     ]
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Year: 16 | Converted this year: 0 | Protected (ha): 0 | Largest green patch (ha): 10 | Green patches: 2 | Urban edge (km): 1.8 | Unmet demand (ha): 0",
+   "figures": [
+    "Parcels · orange residential, blue commercial, green open land · white outline p",
+    "Open land and its largest connected patch",
+    "Built area",
+    "Urban edge · boundary between built and open land",
+    "Selected parcel"
+   ],
+   "files": [
+    {
+     "file": "city-land-use-default-desktop-light.png",
+     "figure": null
+    },
+    {
+     "file": "city-land-use-default-desktop-light-element-0.png",
+     "figure": 0
+    },
+    {
+     "file": "city-land-use-default-desktop-light-element-1.png",
+     "figure": 1
+    },
+    {
+     "file": "city-land-use-default-desktop-light-element-2.png",
+     "figure": 2
+    },
+    {
+     "file": "city-land-use-default-desktop-light-element-3.png",
+     "figure": 3
+    },
+    {
+     "file": "city-land-use-default-desktop-light-element-4.png",
+     "figure": 4
+    }
+   ]
+  },
+  {
+   "run": "city-land-use-default-narrow-dark",
+   "model": "city-land-use",
+   "scenario": "default",
+   "policy": "compact, no protection",
+   "clock": "year 16",
+   "viewport": "390x844",
+   "theme": "dark",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "advance": "10 steps",
+     "times": 1
+    },
+    {
+     "advance": "1 step",
+     "times": 6
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Year: 16 | Converted this year: 0 | Protected (ha): 0 | Largest green patch (ha): 10 | Green patches: 2 | Urban edge (km): 1.8 | Unmet demand (ha): 0",
+   "figures": [
+    "Parcels · orange residential, blue commercial, green open land · white outline p",
+    "Open land and its largest connected patch",
+    "Built area",
+    "Urban edge · boundary between built and open land"
+   ],
+   "files": [
+    {
+     "file": "city-land-use-default-narrow-dark.png",
+     "figure": null
+    },
+    {
+     "file": "city-land-use-default-narrow-dark-element-0.png",
+     "figure": 0
+    }
+   ]
+  },
+  {
+   "run": "city-land-use-intervention-desktop-dark",
+   "model": "city-land-use",
+   "scenario": "intervention",
+   "policy": "dispersed, no protection (one factor)",
+   "clock": "year 16",
+   "viewport": "1366x768",
+   "theme": "dark",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "select": {
+      "label": "Growth pattern",
+      "value": "dispersed"
+     }
+    },
+    {
+     "advance": "10 steps",
+     "times": 1
+    },
+    {
+     "advance": "1 step",
+     "times": 6
+    },
+    {
+     "keys": [
+      "Home"
+     ]
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Year: 16 | Converted this year: 0 | Protected (ha): 0 | Largest green patch (ha): 4 | Green patches: 10 | Urban edge (km): 4.9 | Unmet demand (ha): 0",
+   "figures": [
+    "Parcels · orange residential, blue commercial, green open land · white outline p",
+    "Open land and its largest connected patch",
+    "Built area",
+    "Urban edge · boundary between built and open land",
+    "Selected parcel"
+   ],
+   "files": [
+    {
+     "file": "city-land-use-intervention-desktop-dark.png",
+     "figure": null
+    },
+    {
+     "file": "city-land-use-intervention-desktop-dark-element-0.png",
+     "figure": 0
+    },
+    {
+     "file": "city-land-use-intervention-desktop-dark-element-1.png",
+     "figure": 1
+    },
+    {
+     "file": "city-land-use-intervention-desktop-dark-element-2.png",
+     "figure": 2
+    },
+    {
+     "file": "city-land-use-intervention-desktop-dark-element-3.png",
+     "figure": 3
+    },
+    {
+     "file": "city-land-use-intervention-desktop-dark-element-4.png",
+     "figure": 4
+    }
+   ]
+  },
+  {
+   "run": "city-land-use-intervention-narrow-light",
+   "model": "city-land-use",
+   "scenario": "intervention",
+   "policy": "dispersed, no protection (one factor)",
+   "clock": "year 16",
+   "viewport": "390x844",
+   "theme": "light",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "select": {
+      "label": "Growth pattern",
+      "value": "dispersed"
+     }
+    },
+    {
+     "advance": "10 steps",
+     "times": 1
+    },
+    {
+     "advance": "1 step",
+     "times": 6
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Year: 16 | Converted this year: 0 | Protected (ha): 0 | Largest green patch (ha): 4 | Green patches: 10 | Urban edge (km): 4.9 | Unmet demand (ha): 0",
+   "figures": [
+    "Parcels · orange residential, blue commercial, green open land · white outline p",
+    "Open land and its largest connected patch",
+    "Built area",
+    "Urban edge · boundary between built and open land"
+   ],
+   "files": [
+    {
+     "file": "city-land-use-intervention-narrow-light.png",
+     "figure": null
+    },
+    {
+     "file": "city-land-use-intervention-narrow-light-element-0.png",
+     "figure": 0
+    }
+   ]
+  },
+  {
+   "run": "city-daily-activities-default-desktop-light",
+   "model": "city-daily-activities",
+   "scenario": "default",
+   "policy": "central services, close 18:00, no remote work",
+   "clock": "day 1 20:00",
+   "viewport": "1366x768",
+   "theme": "light",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "advance": "10 steps",
+     "times": 8
+    },
+    {
+     "keys": [
+      "Home"
+     ]
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Clock: Day 1 · 20:00 | Traveling now: 0 | Trips today: 30 | Travel today (person h): 12 | Errands done today: 6 | Errands missed today: 0",
+   "figures": [
+    "Town · Far, Middle, Near = home neighborhoods · circles adults, triangles childr",
+    "Errands of adults today · done, still planned, missed",
+    "Where residents are · 15-minute clock",
+    "Person-hours today by activity",
+    "Selected resident's day"
+   ],
+   "files": [
+    {
+     "file": "city-daily-activities-default-desktop-light.png",
+     "figure": null
+    },
+    {
+     "file": "city-daily-activities-default-desktop-light-element-0.png",
+     "figure": 0
+    },
+    {
+     "file": "city-daily-activities-default-desktop-light-element-1.png",
+     "figure": 1
+    },
+    {
+     "file": "city-daily-activities-default-desktop-light-element-2.png",
+     "figure": 2
+    },
+    {
+     "file": "city-daily-activities-default-desktop-light-element-3.png",
+     "figure": 3
+    },
+    {
+     "file": "city-daily-activities-default-desktop-light-element-4.png",
+     "figure": 4
+    }
+   ]
+  },
+  {
+   "run": "city-daily-activities-default-narrow-dark",
+   "model": "city-daily-activities",
+   "scenario": "default",
+   "policy": "central services, close 18:00, no remote work",
+   "clock": "day 1 20:00",
+   "viewport": "390x844",
+   "theme": "dark",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "advance": "10 steps",
+     "times": 8
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Clock: Day 1 · 20:00 | Traveling now: 0 | Trips today: 30 | Travel today (person h): 12 | Errands done today: 6 | Errands missed today: 0",
+   "figures": [
+    "Town · Far, Middle, Near = home neighborhoods · circles adults, triangles childr",
+    "Errands of adults today · done, still planned, missed",
+    "Where residents are · 15-minute clock",
+    "Person-hours today by activity"
+   ],
+   "files": [
+    {
+     "file": "city-daily-activities-default-narrow-dark.png",
+     "figure": null
+    },
+    {
+     "file": "city-daily-activities-default-narrow-dark-element-0.png",
+     "figure": 0
+    }
+   ]
+  },
+  {
+   "run": "city-daily-activities-intervention-desktop-dark",
+   "model": "city-daily-activities",
+   "scenario": "intervention",
+   "policy": "remote work and local shops set at tick 0, close 18:00",
+   "clock": "day 1 20:00",
+   "viewport": "1366x768",
+   "theme": "dark",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "check": "Remote work (applies next day)"
+    },
+    {
+     "select": {
+      "label": "Services used (applies next day)",
+      "value": "local"
+     }
+    },
+    {
+     "advance": "10 steps",
+     "times": 8
+    },
+    {
+     "keys": [
+      "Home"
+     ]
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Clock: Day 1 · 20:00 | Traveling now: 0 | Trips today: 24 | Travel today (person h): 7 | Errands done today: 6 | Errands missed today: 0",
+   "figures": [
+    "Town · Far, Middle, Near = home neighborhoods · circles adults, triangles childr",
+    "Errands of adults today · done, still planned, missed",
+    "Where residents are · 15-minute clock",
+    "Person-hours today by activity",
+    "Selected resident's day"
+   ],
+   "files": [
+    {
+     "file": "city-daily-activities-intervention-desktop-dark.png",
+     "figure": null
+    },
+    {
+     "file": "city-daily-activities-intervention-desktop-dark-element-0.png",
+     "figure": 0
+    },
+    {
+     "file": "city-daily-activities-intervention-desktop-dark-element-1.png",
+     "figure": 1
+    },
+    {
+     "file": "city-daily-activities-intervention-desktop-dark-element-2.png",
+     "figure": 2
+    },
+    {
+     "file": "city-daily-activities-intervention-desktop-dark-element-3.png",
+     "figure": 3
+    },
+    {
+     "file": "city-daily-activities-intervention-desktop-dark-element-4.png",
+     "figure": 4
+    }
+   ]
+  },
+  {
+   "run": "city-daily-activities-intervention-narrow-light",
+   "model": "city-daily-activities",
+   "scenario": "intervention",
+   "policy": "remote work and local shops set at tick 0, close 18:00",
+   "clock": "day 1 20:00",
+   "viewport": "390x844",
+   "theme": "light",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "check": "Remote work (applies next day)"
+    },
+    {
+     "select": {
+      "label": "Services used (applies next day)",
+      "value": "local"
+     }
+    },
+    {
+     "advance": "10 steps",
+     "times": 8
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Clock: Day 1 · 20:00 | Traveling now: 0 | Trips today: 24 | Travel today (person h): 7 | Errands done today: 6 | Errands missed today: 0",
+   "figures": [
+    "Town · Far, Middle, Near = home neighborhoods · circles adults, triangles childr",
+    "Errands of adults today · done, still planned, missed",
+    "Where residents are · 15-minute clock",
+    "Person-hours today by activity"
+   ],
+   "files": [
+    {
+     "file": "city-daily-activities-intervention-narrow-light.png",
+     "figure": null
+    },
+    {
+     "file": "city-daily-activities-intervention-narrow-light-element-0.png",
+     "figure": 0
+    }
+   ]
+  },
+  {
+   "run": "city-mobility-default-desktop-light",
+   "model": "city-mobility",
+   "scenario": "default",
+   "policy": "capacity 5",
+   "clock": "minute 20",
+   "viewport": "1366x768",
+   "theme": "light",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "advance": "10 steps",
+     "times": 2
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Minute: 20 | Car share (%): 57 | Queued cars: 5 | Mean trip (min): 12.3 | Waiting (person-min): 132 | Main road now (min): 16.0",
+   "figures": [
+    "Morning commute · orange main road, yellow bypass, blue walk/cycle · pale triang",
+    "Departures by choice · cumulative",
+    "Cars waiting in queues",
+    "Completed trip times by mode · shown once trips have arrived"
+   ],
+   "files": [
+    {
+     "file": "city-mobility-default-desktop-light.png",
+     "figure": null
+    },
+    {
+     "file": "city-mobility-default-desktop-light-element-0.png",
+     "figure": 0
+    },
+    {
+     "file": "city-mobility-default-desktop-light-element-1.png",
+     "figure": 1
+    },
+    {
+     "file": "city-mobility-default-desktop-light-element-2.png",
+     "figure": 2
+    },
+    {
+     "file": "city-mobility-default-desktop-light-element-3.png",
+     "figure": 3
+    }
+   ]
+  },
+  {
+   "run": "city-mobility-default-narrow-dark",
+   "model": "city-mobility",
+   "scenario": "default",
+   "policy": "capacity 5",
+   "clock": "minute 20",
+   "viewport": "390x844",
+   "theme": "dark",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "advance": "10 steps",
+     "times": 2
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Minute: 20 | Car share (%): 57 | Queued cars: 5 | Mean trip (min): 12.3 | Waiting (person-min): 132 | Main road now (min): 16.0",
+   "figures": [
+    "Morning commute · orange main road, yellow bypass, blue walk/cycle · pale triang",
+    "Departures by choice · cumulative",
+    "Cars waiting in queues",
+    "Completed trip times by mode · shown once trips have arrived"
+   ],
+   "files": [
+    {
+     "file": "city-mobility-default-narrow-dark.png",
+     "figure": null
+    },
+    {
+     "file": "city-mobility-default-narrow-dark-element-0.png",
+     "figure": 0
+    }
+   ]
+  },
+  {
+   "run": "city-mobility-intervention-desktop-dark",
+   "model": "city-mobility",
+   "scenario": "intervention",
+   "policy": "main road capacity 10",
+   "clock": "minute 20",
+   "viewport": "1366x768",
+   "theme": "dark",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "fill": {
+      "label": "Main road capacity (vehicles per link)",
+      "value": 10
+     }
+    },
+    {
+     "advance": "10 steps",
+     "times": 2
+    }
+   ],
+   "typedInputs": [
+    {
+     "label": "Main road capacity (vehicles per link)",
+     "typed": "10",
+     "shown": "10",
+     "invalid": "false"
+    }
+   ],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Minute: 20 | Car share (%): 100 | Queued cars: 12 | Mean trip (min): 11.2 | Waiting (person-min): 134 | Main road now (min): 17.0",
+   "figures": [
+    "Morning commute · orange main road, yellow bypass, blue walk/cycle · pale triang",
+    "Departures by choice · cumulative",
+    "Cars waiting in queues",
+    "Completed trip times by mode · shown once trips have arrived"
+   ],
+   "files": [
+    {
+     "file": "city-mobility-intervention-desktop-dark.png",
+     "figure": null
+    },
+    {
+     "file": "city-mobility-intervention-desktop-dark-element-0.png",
+     "figure": 0
+    },
+    {
+     "file": "city-mobility-intervention-desktop-dark-element-1.png",
+     "figure": 1
+    },
+    {
+     "file": "city-mobility-intervention-desktop-dark-element-2.png",
+     "figure": 2
+    },
+    {
+     "file": "city-mobility-intervention-desktop-dark-element-3.png",
+     "figure": 3
+    }
+   ]
+  },
+  {
+   "run": "city-mobility-intervention-narrow-light",
+   "model": "city-mobility",
+   "scenario": "intervention",
+   "policy": "main road capacity 10",
+   "clock": "minute 20",
+   "viewport": "390x844",
+   "theme": "light",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "fill": {
+      "label": "Main road capacity (vehicles per link)",
+      "value": 10
+     }
+    },
+    {
+     "advance": "10 steps",
+     "times": 2
+    }
+   ],
+   "typedInputs": [
+    {
+     "label": "Main road capacity (vehicles per link)",
+     "typed": "10",
+     "shown": "10",
+     "invalid": "false"
+    }
+   ],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Minute: 20 | Car share (%): 100 | Queued cars: 12 | Mean trip (min): 11.2 | Waiting (person-min): 134 | Main road now (min): 17.0",
+   "figures": [
+    "Morning commute · orange main road, yellow bypass, blue walk/cycle · pale triang",
+    "Departures by choice · cumulative",
+    "Cars waiting in queues",
+    "Completed trip times by mode · shown once trips have arrived"
+   ],
+   "files": [
+    {
+     "file": "city-mobility-intervention-narrow-light.png",
+     "figure": null
+    },
+    {
+     "file": "city-mobility-intervention-narrow-light-element-0.png",
+     "figure": 0
+    }
+   ]
+  },
+  {
+   "run": "city-economy-default-desktop-light",
+   "model": "city-economy",
+   "scenario": "default",
+   "policy": "outside orders 30 for months 1-6 then 90, hiring 1",
+   "clock": "month 8",
+   "viewport": "1366x768",
+   "theme": "light",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "fill": {
+      "label": "Outside orders (currency/month)",
+      "value": 30
+     }
+    },
+    {
+     "advance": "1 step",
+     "times": 6
+    },
+    {
+     "fill": {
+      "label": "Outside orders (currency/month)",
+      "value": 90
+     }
+    },
+    {
+     "advance": "1 step",
+     "times": 2
+    },
+    {
+     "keys": [
+      "Home"
+     ]
+    }
+   ],
+   "typedInputs": [
+    {
+     "label": "Outside orders (currency/month)",
+     "typed": "30",
+     "shown": "30",
+     "invalid": "false"
+    },
+    {
+     "label": "Outside orders (currency/month)",
+     "typed": "90",
+     "shown": "90",
+     "invalid": "false"
+    }
+   ],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Month: 8 | Employed: 11 | Open vacancies: 1 | Orders / month: 122 | Lost orders / month: 12 | Lost orders total: 46",
+   "figures": [
+    "Firms and households · filled slots are jobs, amber outlines open vacancies · ho",
+    "Employment and desired jobs · employed drawn on top; where only blue shows, both",
+    "Hiring gap · open vacancies (desired − employed) at the end of each month",
+    "Orders, sales and lost orders · per completed month (where orders and sales coin",
+    "Selected firm or household"
+   ],
+   "files": [
+    {
+     "file": "city-economy-default-desktop-light.png",
+     "figure": null
+    },
+    {
+     "file": "city-economy-default-desktop-light-element-0.png",
+     "figure": 0
+    },
+    {
+     "file": "city-economy-default-desktop-light-element-1.png",
+     "figure": 1
+    },
+    {
+     "file": "city-economy-default-desktop-light-element-2.png",
+     "figure": 2
+    },
+    {
+     "file": "city-economy-default-desktop-light-element-3.png",
+     "figure": 3
+    },
+    {
+     "file": "city-economy-default-desktop-light-element-4.png",
+     "figure": 4
+    }
+   ]
+  },
+  {
+   "run": "city-economy-default-narrow-dark",
+   "model": "city-economy",
+   "scenario": "default",
+   "policy": "outside orders 30 for months 1-6 then 90, hiring 1",
+   "clock": "month 8",
+   "viewport": "390x844",
+   "theme": "dark",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "fill": {
+      "label": "Outside orders (currency/month)",
+      "value": 30
+     }
+    },
+    {
+     "advance": "1 step",
+     "times": 6
+    },
+    {
+     "fill": {
+      "label": "Outside orders (currency/month)",
+      "value": 90
+     }
+    },
+    {
+     "advance": "1 step",
+     "times": 2
+    }
+   ],
+   "typedInputs": [
+    {
+     "label": "Outside orders (currency/month)",
+     "typed": "30",
+     "shown": "30",
+     "invalid": "false"
+    },
+    {
+     "label": "Outside orders (currency/month)",
+     "typed": "90",
+     "shown": "90",
+     "invalid": "false"
+    }
+   ],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Month: 8 | Employed: 11 | Open vacancies: 1 | Orders / month: 122 | Lost orders / month: 12 | Lost orders total: 46",
+   "figures": [
+    "Firms and households · filled slots are jobs, amber outlines open vacancies · ho",
+    "Employment and desired jobs · employed drawn on top; where only blue shows, both",
+    "Hiring gap · open vacancies (desired − employed) at the end of each month",
+    "Orders, sales and lost orders · per completed month (where orders and sales coin"
+   ],
+   "files": [
+    {
+     "file": "city-economy-default-narrow-dark.png",
+     "figure": null
+    },
+    {
+     "file": "city-economy-default-narrow-dark-element-0.png",
+     "figure": 0
+    }
+   ]
+  },
+  {
+   "run": "city-economy-intervention-desktop-dark",
+   "model": "city-economy",
+   "scenario": "intervention",
+   "policy": "same demand path, hiring limit 10",
+   "clock": "month 8",
+   "viewport": "1366x768",
+   "theme": "dark",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "fill": {
+      "label": "Hires per firm per month",
+      "value": 10
+     }
+    },
+    {
+     "fill": {
+      "label": "Outside orders (currency/month)",
+      "value": 30
+     }
+    },
+    {
+     "advance": "1 step",
+     "times": 6
+    },
+    {
+     "fill": {
+      "label": "Outside orders (currency/month)",
+      "value": 90
+     }
+    },
+    {
+     "advance": "1 step",
+     "times": 2
+    },
+    {
+     "keys": [
+      "Home"
+     ]
+    }
+   ],
+   "typedInputs": [
+    {
+     "label": "Hires per firm per month",
+     "typed": "10",
+     "shown": "10",
+     "invalid": "false"
+    },
+    {
+     "label": "Outside orders (currency/month)",
+     "typed": "30",
+     "shown": "30",
+     "invalid": "false"
+    },
+    {
+     "label": "Outside orders (currency/month)",
+     "typed": "90",
+     "shown": "90",
+     "invalid": "false"
+    }
+   ],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Month: 8 | Employed: 13 | Open vacancies: 0 | Orders / month: 134 | Lost orders / month: 4 | Lost orders total: 8",
+   "figures": [
+    "Firms and households · filled slots are jobs, amber outlines open vacancies · ho",
+    "Employment and desired jobs · employed drawn on top; where only blue shows, both",
+    "Hiring gap · open vacancies (desired − employed) at the end of each month",
+    "Orders, sales and lost orders · per completed month (where orders and sales coin",
+    "Selected firm or household"
+   ],
+   "files": [
+    {
+     "file": "city-economy-intervention-desktop-dark.png",
+     "figure": null
+    },
+    {
+     "file": "city-economy-intervention-desktop-dark-element-0.png",
+     "figure": 0
+    },
+    {
+     "file": "city-economy-intervention-desktop-dark-element-1.png",
+     "figure": 1
+    },
+    {
+     "file": "city-economy-intervention-desktop-dark-element-2.png",
+     "figure": 2
+    },
+    {
+     "file": "city-economy-intervention-desktop-dark-element-3.png",
+     "figure": 3
+    },
+    {
+     "file": "city-economy-intervention-desktop-dark-element-4.png",
+     "figure": 4
+    }
+   ]
+  },
+  {
+   "run": "city-economy-intervention-narrow-light",
+   "model": "city-economy",
+   "scenario": "intervention",
+   "policy": "same demand path, hiring limit 10",
+   "clock": "month 8",
+   "viewport": "390x844",
+   "theme": "light",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "fill": {
+      "label": "Hires per firm per month",
+      "value": 10
+     }
+    },
+    {
+     "fill": {
+      "label": "Outside orders (currency/month)",
+      "value": 30
+     }
+    },
+    {
+     "advance": "1 step",
+     "times": 6
+    },
+    {
+     "fill": {
+      "label": "Outside orders (currency/month)",
+      "value": 90
+     }
+    },
+    {
+     "advance": "1 step",
+     "times": 2
+    }
+   ],
+   "typedInputs": [
+    {
+     "label": "Hires per firm per month",
+     "typed": "10",
+     "shown": "10",
+     "invalid": "false"
+    },
+    {
+     "label": "Outside orders (currency/month)",
+     "typed": "30",
+     "shown": "30",
+     "invalid": "false"
+    },
+    {
+     "label": "Outside orders (currency/month)",
+     "typed": "90",
+     "shown": "90",
+     "invalid": "false"
+    }
+   ],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Month: 8 | Employed: 13 | Open vacancies: 0 | Orders / month: 134 | Lost orders / month: 4 | Lost orders total: 8",
+   "figures": [
+    "Firms and households · filled slots are jobs, amber outlines open vacancies · ho",
+    "Employment and desired jobs · employed drawn on top; where only blue shows, both",
+    "Hiring gap · open vacancies (desired − employed) at the end of each month",
+    "Orders, sales and lost orders · per completed month (where orders and sales coin"
+   ],
+   "files": [
+    {
+     "file": "city-economy-intervention-narrow-light.png",
+     "figure": null
+    },
+    {
+     "file": "city-economy-intervention-narrow-light-element-0.png",
+     "figure": 0
+    }
+   ]
+  },
+  {
+   "run": "city-services-default-desktop-light",
+   "model": "city-services",
+   "scenario": "default",
+   "policy": "central layout",
+   "clock": "day 2",
+   "viewport": "1366x768",
+   "theme": "light",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "advance": "1 step",
+     "times": 2
+    },
+    {
+     "keys": [
+      "Home"
+     ]
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Day: 2 | Served today: 24 | Full: 0 | Too far: 24 | Households with no service: 8 | Mean trip (km): 1.46",
+   "figures": [
+    "Access map · household color = services received (red 0 → green 3) · diamond: a ",
+    "Households by services received today · bar colors match the map",
+    "Daily requests by outcome · bars side by side per completed day",
+    "Household access"
+   ],
+   "files": [
+    {
+     "file": "city-services-default-desktop-light.png",
+     "figure": null
+    },
+    {
+     "file": "city-services-default-desktop-light-element-0.png",
+     "figure": 0
+    },
+    {
+     "file": "city-services-default-desktop-light-element-1.png",
+     "figure": 1
+    },
+    {
+     "file": "city-services-default-desktop-light-element-2.png",
+     "figure": 2
+    },
+    {
+     "file": "city-services-default-desktop-light-element-3.png",
+     "figure": 3
+    }
+   ]
+  },
+  {
+   "run": "city-services-default-narrow-dark",
+   "model": "city-services",
+   "scenario": "default",
+   "policy": "central layout",
+   "clock": "day 2",
+   "viewport": "390x844",
+   "theme": "dark",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "advance": "1 step",
+     "times": 2
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Day: 2 | Served today: 24 | Full: 0 | Too far: 24 | Households with no service: 8 | Mean trip (km): 1.46",
+   "figures": [
+    "Access map · household color = services received (red 0 → green 3) · diamond: a ",
+    "Households by services received today · bar colors match the map",
+    "Daily requests by outcome · bars side by side per completed day"
+   ],
+   "files": [
+    {
+     "file": "city-services-default-narrow-dark.png",
+     "figure": null
+    },
+    {
+     "file": "city-services-default-narrow-dark-element-0.png",
+     "figure": 0
+    }
+   ]
+  },
+  {
+   "run": "city-services-intervention-desktop-dark",
+   "model": "city-services",
+   "scenario": "intervention",
+   "policy": "distributed layout",
+   "clock": "day 2",
+   "viewport": "1366x768",
+   "theme": "dark",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "select": {
+      "label": "Facility layout (next day)",
+      "value": "distributed"
+     }
+    },
+    {
+     "advance": "1 step",
+     "times": 2
+    },
+    {
+     "keys": [
+      "Home"
+     ]
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Day: 2 | Served today: 36 | Full: 12 | Too far: 0 | Households with no service: 4 | Mean trip (km): 1.35",
+   "figures": [
+    "Access map · household color = services received (red 0 → green 3) · diamond: a ",
+    "Households by services received today · bar colors match the map",
+    "Daily requests by outcome · bars side by side per completed day",
+    "Household access"
+   ],
+   "files": [
+    {
+     "file": "city-services-intervention-desktop-dark.png",
+     "figure": null
+    },
+    {
+     "file": "city-services-intervention-desktop-dark-element-0.png",
+     "figure": 0
+    },
+    {
+     "file": "city-services-intervention-desktop-dark-element-1.png",
+     "figure": 1
+    },
+    {
+     "file": "city-services-intervention-desktop-dark-element-2.png",
+     "figure": 2
+    },
+    {
+     "file": "city-services-intervention-desktop-dark-element-3.png",
+     "figure": 3
+    }
+   ]
+  },
+  {
+   "run": "city-services-intervention-narrow-light",
+   "model": "city-services",
+   "scenario": "intervention",
+   "policy": "distributed layout",
+   "clock": "day 2",
+   "viewport": "390x844",
+   "theme": "light",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "select": {
+      "label": "Facility layout (next day)",
+      "value": "distributed"
+     }
+    },
+    {
+     "advance": "1 step",
+     "times": 2
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Day: 2 | Served today: 36 | Full: 12 | Too far: 0 | Households with no service: 4 | Mean trip (km): 1.35",
+   "figures": [
+    "Access map · household color = services received (red 0 → green 3) · diamond: a ",
+    "Households by services received today · bar colors match the map",
+    "Daily requests by outcome · bars side by side per completed day"
+   ],
+   "files": [
+    {
+     "file": "city-services-intervention-narrow-light.png",
+     "figure": null
+    },
+    {
+     "file": "city-services-intervention-narrow-light-element-0.png",
+     "figure": 0
+    }
+   ]
+  },
+  {
+   "run": "city-energy-default-desktop-light",
+   "model": "city-energy",
+   "scenario": "default",
+   "policy": "flexible share 0",
+   "clock": "day 2 18:00-19:00",
+   "viewport": "1366x768",
+   "theme": "light",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "advance": "10 steps",
+     "times": 4
+    },
+    {
+     "advance": "1 step",
+     "times": 3
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Clock: Day 2 · 18:00–19:00 | Stored at end of hour (kWh): 0.0 | Unmet today (kWh): 1.0 | Curtailed today (kWh): 39.2 | Unmet last full day (kWh): 11.0",
+   "figures": [
+    "Energy in the last completed hour (kWh) · numbers on lines = energy moved · line",
+    "Electricity balance of the last completed hour (kWh)",
+    "Hourly electricity · energy in each completed hour",
+    "Battery charge (+) and discharge (−) in each completed hour",
+    "Battery stored energy · stock at the end of each hour",
+    "Daily electricity totals"
+   ],
+   "files": [
+    {
+     "file": "city-energy-default-desktop-light.png",
+     "figure": null
+    },
+    {
+     "file": "city-energy-default-desktop-light-element-0.png",
+     "figure": 0
+    },
+    {
+     "file": "city-energy-default-desktop-light-element-1.png",
+     "figure": 1
+    },
+    {
+     "file": "city-energy-default-desktop-light-element-2.png",
+     "figure": 2
+    },
+    {
+     "file": "city-energy-default-desktop-light-element-3.png",
+     "figure": 3
+    },
+    {
+     "file": "city-energy-default-desktop-light-element-4.png",
+     "figure": 4
+    },
+    {
+     "file": "city-energy-default-desktop-light-element-5.png",
+     "figure": 5
+    }
+   ]
+  },
+  {
+   "run": "city-energy-default-narrow-dark",
+   "model": "city-energy",
+   "scenario": "default",
+   "policy": "flexible share 0",
+   "clock": "day 2 18:00-19:00",
+   "viewport": "390x844",
+   "theme": "dark",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "advance": "10 steps",
+     "times": 4
+    },
+    {
+     "advance": "1 step",
+     "times": 3
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Clock: Day 2 · 18:00–19:00 | Stored at end of hour (kWh): 0.0 | Unmet today (kWh): 1.0 | Curtailed today (kWh): 39.2 | Unmet last full day (kWh): 11.0",
+   "figures": [
+    "Energy in the last completed hour (kWh) · numbers on lines = energy moved · line",
+    "Electricity balance of the last completed hour (kWh)",
+    "Hourly electricity · energy in each completed hour",
+    "Battery charge (+) and discharge (−) in each completed hour",
+    "Battery stored energy · stock at the end of each hour",
+    "Daily electricity totals"
+   ],
+   "files": [
+    {
+     "file": "city-energy-default-narrow-dark.png",
+     "figure": null
+    },
+    {
+     "file": "city-energy-default-narrow-dark-element-0.png",
+     "figure": 0
+    }
+   ]
+  },
+  {
+   "run": "city-energy-intervention-desktop-dark",
+   "model": "city-energy",
+   "scenario": "intervention",
+   "policy": "flexible share 0.5",
+   "clock": "day 2 18:00-19:00",
+   "viewport": "1366x768",
+   "theme": "dark",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "fill": {
+      "label": "Evening demand moved to midday (share)",
+      "value": 0.5
+     }
+    },
+    {
+     "advance": "10 steps",
+     "times": 4
+    },
+    {
+     "advance": "1 step",
+     "times": 3
+    }
+   ],
+   "typedInputs": [
+    {
+     "label": "Evening demand moved to midday (share)",
+     "typed": "0.5",
+     "shown": "0.5",
+     "invalid": "false"
+    }
+   ],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Clock: Day 2 · 18:00–19:00 | Stored at end of hour (kWh): 1.6 | Unmet today (kWh): 0.0 | Curtailed today (kWh): 15.2 | Unmet last full day (kWh): 0.0",
+   "figures": [
+    "Energy in the last completed hour (kWh) · numbers on lines = energy moved · line",
+    "Electricity balance of the last completed hour (kWh)",
+    "Hourly electricity · energy in each completed hour",
+    "Battery charge (+) and discharge (−) in each completed hour",
+    "Battery stored energy · stock at the end of each hour",
+    "Daily electricity totals"
+   ],
+   "files": [
+    {
+     "file": "city-energy-intervention-desktop-dark.png",
+     "figure": null
+    },
+    {
+     "file": "city-energy-intervention-desktop-dark-element-0.png",
+     "figure": 0
+    },
+    {
+     "file": "city-energy-intervention-desktop-dark-element-1.png",
+     "figure": 1
+    },
+    {
+     "file": "city-energy-intervention-desktop-dark-element-2.png",
+     "figure": 2
+    },
+    {
+     "file": "city-energy-intervention-desktop-dark-element-3.png",
+     "figure": 3
+    },
+    {
+     "file": "city-energy-intervention-desktop-dark-element-4.png",
+     "figure": 4
+    },
+    {
+     "file": "city-energy-intervention-desktop-dark-element-5.png",
+     "figure": 5
+    }
+   ]
+  },
+  {
+   "run": "city-energy-intervention-narrow-light",
+   "model": "city-energy",
+   "scenario": "intervention",
+   "policy": "flexible share 0.5",
+   "clock": "day 2 18:00-19:00",
+   "viewport": "390x844",
+   "theme": "light",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "fill": {
+      "label": "Evening demand moved to midday (share)",
+      "value": 0.5
+     }
+    },
+    {
+     "advance": "10 steps",
+     "times": 4
+    },
+    {
+     "advance": "1 step",
+     "times": 3
+    }
+   ],
+   "typedInputs": [
+    {
+     "label": "Evening demand moved to midday (share)",
+     "typed": "0.5",
+     "shown": "0.5",
+     "invalid": "false"
+    }
+   ],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Clock: Day 2 · 18:00–19:00 | Stored at end of hour (kWh): 1.6 | Unmet today (kWh): 0.0 | Curtailed today (kWh): 15.2 | Unmet last full day (kWh): 0.0",
+   "figures": [
+    "Energy in the last completed hour (kWh) · numbers on lines = energy moved · line",
+    "Electricity balance of the last completed hour (kWh)",
+    "Hourly electricity · energy in each completed hour",
+    "Battery charge (+) and discharge (−) in each completed hour",
+    "Battery stored energy · stock at the end of each hour",
+    "Daily electricity totals"
+   ],
+   "files": [
+    {
+     "file": "city-energy-intervention-narrow-light.png",
+     "figure": null
+    },
+    {
+     "file": "city-energy-intervention-narrow-light-element-0.png",
+     "figure": 0
+    }
+   ]
+  },
+  {
+   "run": "city-water-default-desktop-light",
+   "model": "city-water",
+   "scenario": "default",
+   "policy": "trigger 1, cut 0 (rule off)",
+   "clock": "day 80",
+   "viewport": "1366x768",
+   "theme": "light",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "advance": "10 steps",
+     "times": 8
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Day: 80 | Reservoir (m³): 0.0 | Savings rule tomorrow: Off (cut 0) | Shortage total (m³): 1200.0 | Worst day cut (%): 80 | Days with a demand cut: 0 | Balance residual (m³): ≈ 0 (< 1e-6)",
+   "figures": [
+    "Water path on the last completed day (m³/day) · line width ∝ volume · amber line",
+    "Reservoir storage and savings trigger (trigger shown while a cut is set)",
+    "Daily demand and who carries the deficit · per completed day"
+   ],
+   "files": [
+    {
+     "file": "city-water-default-desktop-light.png",
+     "figure": null
+    },
+    {
+     "file": "city-water-default-desktop-light-element-0.png",
+     "figure": 0
+    },
+    {
+     "file": "city-water-default-desktop-light-element-1.png",
+     "figure": 1
+    },
+    {
+     "file": "city-water-default-desktop-light-element-2.png",
+     "figure": 2
+    }
+   ]
+  },
+  {
+   "run": "city-water-default-narrow-dark",
+   "model": "city-water",
+   "scenario": "default",
+   "policy": "trigger 1, cut 0 (rule off)",
+   "clock": "day 80",
+   "viewport": "390x844",
+   "theme": "dark",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "advance": "10 steps",
+     "times": 8
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Day: 80 | Reservoir (m³): 0.0 | Savings rule tomorrow: Off (cut 0) | Shortage total (m³): 1200.0 | Worst day cut (%): 80 | Days with a demand cut: 0 | Balance residual (m³): ≈ 0 (< 1e-6)",
+   "figures": [
+    "Water path on the last completed day (m³/day) · line width ∝ volume · amber line",
+    "Reservoir storage and savings trigger (trigger shown while a cut is set)",
+    "Daily demand and who carries the deficit · per completed day"
+   ],
+   "files": [
+    {
+     "file": "city-water-default-narrow-dark.png",
+     "figure": null
+    },
+    {
+     "file": "city-water-default-narrow-dark-element-0.png",
+     "figure": 0
+    }
+   ]
+  },
+  {
+   "run": "city-water-intervention-desktop-dark",
+   "model": "city-water",
+   "scenario": "intervention",
+   "policy": "trigger 0.6, cut 0.15",
+   "clock": "day 80",
+   "viewport": "1366x768",
+   "theme": "dark",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "fill": {
+      "label": "Save when storage is below (fraction)",
+      "value": 0.6
+     }
+    },
+    {
+     "fill": {
+      "label": "Demand cut while saving (share)",
+      "value": 0.15
+     }
+    },
+    {
+     "advance": "10 steps",
+     "times": 8
+    }
+   ],
+   "typedInputs": [
+    {
+     "label": "Save when storage is below (fraction)",
+     "typed": "0.6",
+     "shown": "0.6",
+     "invalid": "false"
+    },
+    {
+     "label": "Demand cut while saving (share)",
+     "typed": "0.15",
+     "shown": "0.15",
+     "invalid": "false"
+    }
+   ],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Day: 80 | Reservoir (m³): 120.0 | Savings rule tomorrow: Cutting demand | Shortage total (m³): 0.0 | Worst day cut (%): 15 | Days with a demand cut: 44 | Balance residual (m³): ≈ 0 (< 1e-6)",
+   "figures": [
+    "Water path on the last completed day (m³/day) · line width ∝ volume · amber line",
+    "Reservoir storage and savings trigger (trigger shown while a cut is set)",
+    "Daily demand and who carries the deficit · per completed day"
+   ],
+   "files": [
+    {
+     "file": "city-water-intervention-desktop-dark.png",
+     "figure": null
+    },
+    {
+     "file": "city-water-intervention-desktop-dark-element-0.png",
+     "figure": 0
+    },
+    {
+     "file": "city-water-intervention-desktop-dark-element-1.png",
+     "figure": 1
+    },
+    {
+     "file": "city-water-intervention-desktop-dark-element-2.png",
+     "figure": 2
+    }
+   ]
+  },
+  {
+   "run": "city-water-intervention-narrow-light",
+   "model": "city-water",
+   "scenario": "intervention",
+   "policy": "trigger 0.6, cut 0.15",
+   "clock": "day 80",
+   "viewport": "390x844",
+   "theme": "light",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "fill": {
+      "label": "Save when storage is below (fraction)",
+      "value": 0.6
+     }
+    },
+    {
+     "fill": {
+      "label": "Demand cut while saving (share)",
+      "value": 0.15
+     }
+    },
+    {
+     "advance": "10 steps",
+     "times": 8
+    }
+   ],
+   "typedInputs": [
+    {
+     "label": "Save when storage is below (fraction)",
+     "typed": "0.6",
+     "shown": "0.6",
+     "invalid": "false"
+    },
+    {
+     "label": "Demand cut while saving (share)",
+     "typed": "0.15",
+     "shown": "0.15",
+     "invalid": "false"
+    }
+   ],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Day: 80 | Reservoir (m³): 120.0 | Savings rule tomorrow: Cutting demand | Shortage total (m³): 0.0 | Worst day cut (%): 15 | Days with a demand cut: 44 | Balance residual (m³): ≈ 0 (< 1e-6)",
+   "figures": [
+    "Water path on the last completed day (m³/day) · line width ∝ volume · amber line",
+    "Reservoir storage and savings trigger (trigger shown while a cut is set)",
+    "Daily demand and who carries the deficit · per completed day"
+   ],
+   "files": [
+    {
+     "file": "city-water-intervention-narrow-light.png",
+     "figure": null
+    },
+    {
+     "file": "city-water-intervention-narrow-light-element-0.png",
+     "figure": 0
+    }
+   ]
+  },
+  {
+   "run": "city-stormwater-default-desktop-light",
+   "model": "city-stormwater",
+   "scenario": "default",
+   "policy": "single storm, infiltration 6 mm/h, basin 60 m³",
+   "clock": "hour 10",
+   "viewport": "1366x768",
+   "theme": "light",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "advance": "1 step",
+     "times": 10
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Hour: 10 | Raining next hour: No | Basin (m³): 32.0 | Overflow total (m³): 20.1 | Soil water (m³): 7.9",
+   "figures": [
+    "Catchment in the last hour · gray sealed (share above each plot), green pervious",
+    "Hydrograph · m³ in each completed hour",
+    "Water held back · basin and soil",
+    "Cumulative water balance"
+   ],
+   "files": [
+    {
+     "file": "city-stormwater-default-desktop-light.png",
+     "figure": null
+    },
+    {
+     "file": "city-stormwater-default-desktop-light-element-0.png",
+     "figure": 0
+    },
+    {
+     "file": "city-stormwater-default-desktop-light-element-1.png",
+     "figure": 1
+    },
+    {
+     "file": "city-stormwater-default-desktop-light-element-2.png",
+     "figure": 2
+    },
+    {
+     "file": "city-stormwater-default-desktop-light-element-3.png",
+     "figure": 3
+    }
+   ]
+  },
+  {
+   "run": "city-stormwater-default-narrow-dark",
+   "model": "city-stormwater",
+   "scenario": "default",
+   "policy": "single storm, infiltration 6 mm/h, basin 60 m³",
+   "clock": "hour 10",
+   "viewport": "390x844",
+   "theme": "dark",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "advance": "1 step",
+     "times": 10
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Hour: 10 | Raining next hour: No | Basin (m³): 32.0 | Overflow total (m³): 20.1 | Soil water (m³): 7.9",
+   "figures": [
+    "Catchment in the last hour · gray sealed (share above each plot), green pervious",
+    "Hydrograph · m³ in each completed hour",
+    "Water held back · basin and soil",
+    "Cumulative water balance"
+   ],
+   "files": [
+    {
+     "file": "city-stormwater-default-narrow-dark.png",
+     "figure": null
+    },
+    {
+     "file": "city-stormwater-default-narrow-dark-element-0.png",
+     "figure": 0
+    }
+   ]
+  },
+  {
+   "run": "city-stormwater-intervention-desktop-dark",
+   "model": "city-stormwater",
+   "scenario": "intervention",
+   "policy": "double storm",
+   "clock": "hour 10",
+   "viewport": "1366x768",
+   "theme": "dark",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "select": {
+      "label": "Storms",
+      "value": "double"
+     }
+    },
+    {
+     "advance": "1 step",
+     "times": 10
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Hour: 10 | Raining next hour: Yes | Basin (m³): 60.0 | Overflow total (m³): 57.2 | Soil water (m³): 22.8",
+   "figures": [
+    "Catchment in the last hour · gray sealed (share above each plot), green pervious",
+    "Hydrograph · m³ in each completed hour",
+    "Water held back · basin and soil",
+    "Cumulative water balance"
+   ],
+   "files": [
+    {
+     "file": "city-stormwater-intervention-desktop-dark.png",
+     "figure": null
+    },
+    {
+     "file": "city-stormwater-intervention-desktop-dark-element-0.png",
+     "figure": 0
+    },
+    {
+     "file": "city-stormwater-intervention-desktop-dark-element-1.png",
+     "figure": 1
+    },
+    {
+     "file": "city-stormwater-intervention-desktop-dark-element-2.png",
+     "figure": 2
+    },
+    {
+     "file": "city-stormwater-intervention-desktop-dark-element-3.png",
+     "figure": 3
+    }
+   ]
+  },
+  {
+   "run": "city-stormwater-intervention-narrow-light",
+   "model": "city-stormwater",
+   "scenario": "intervention",
+   "policy": "double storm",
+   "clock": "hour 10",
+   "viewport": "390x844",
+   "theme": "light",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "select": {
+      "label": "Storms",
+      "value": "double"
+     }
+    },
+    {
+     "advance": "1 step",
+     "times": 10
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Hour: 10 | Raining next hour: Yes | Basin (m³): 60.0 | Overflow total (m³): 57.2 | Soil water (m³): 22.8",
+   "figures": [
+    "Catchment in the last hour · gray sealed (share above each plot), green pervious",
+    "Hydrograph · m³ in each completed hour",
+    "Water held back · basin and soil",
+    "Cumulative water balance"
+   ],
+   "files": [
+    {
+     "file": "city-stormwater-intervention-narrow-light.png",
+     "figure": null
+    },
+    {
+     "file": "city-stormwater-intervention-narrow-light-element-0.png",
+     "figure": 0
+    }
+   ]
+  },
+  {
+   "run": "city-heat-default-desktop-light",
+   "model": "city-heat",
+   "scenario": "default",
+   "policy": "shade 0, watering 0.5",
+   "clock": "day 2 16:00",
+   "viewport": "1366x768",
+   "theme": "light",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "advance": "10 steps",
+     "times": 4
+    },
+    {
+     "keys": [
+      "Home"
+     ]
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Clock: Day 2 · 16:00 | Sun last hour (W/m²): 487 | Air last hour (°C): 31.0 | Sealed − planted (K): 3.3 | Cooling water (kg): 490 | Budget residual (J): ≈ 0 (< 1e-6)",
+   "figures": [
+    "Surface temperature · fixed scale 15–50 °C, darker cooler, paler hotter · second",
+    "Surface and air temperature",
+    "Cooling water used · cumulative",
+    "Block budget in the last hour"
+   ],
+   "files": [
+    {
+     "file": "city-heat-default-desktop-light.png",
+     "figure": null
+    },
+    {
+     "file": "city-heat-default-desktop-light-element-0.png",
+     "figure": 0
+    },
+    {
+     "file": "city-heat-default-desktop-light-element-1.png",
+     "figure": 1
+    },
+    {
+     "file": "city-heat-default-desktop-light-element-2.png",
+     "figure": 2
+    },
+    {
+     "file": "city-heat-default-desktop-light-element-3.png",
+     "figure": 3
+    }
+   ]
+  },
+  {
+   "run": "city-heat-default-narrow-dark",
+   "model": "city-heat",
+   "scenario": "default",
+   "policy": "shade 0, watering 0.5",
+   "clock": "day 2 16:00",
+   "viewport": "390x844",
+   "theme": "dark",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "advance": "10 steps",
+     "times": 4
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Clock: Day 2 · 16:00 | Sun last hour (W/m²): 487 | Air last hour (°C): 31.0 | Sealed − planted (K): 3.3 | Cooling water (kg): 490 | Budget residual (J): ≈ 0 (< 1e-6)",
+   "figures": [
+    "Surface temperature · fixed scale 15–50 °C, darker cooler, paler hotter · second",
+    "Surface and air temperature",
+    "Cooling water used · cumulative"
+   ],
+   "files": [
+    {
+     "file": "city-heat-default-narrow-dark.png",
+     "figure": null
+    },
+    {
+     "file": "city-heat-default-narrow-dark-element-0.png",
+     "figure": 0
+    }
+   ]
+  },
+  {
+   "run": "city-heat-intervention-desktop-dark",
+   "model": "city-heat",
+   "scenario": "intervention",
+   "policy": "shade 0.4",
+   "clock": "day 2 16:00",
+   "viewport": "1366x768",
+   "theme": "dark",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "fill": {
+      "label": "Shade (share of sunlight blocked)",
+      "value": 0.4
+     }
+    },
+    {
+     "advance": "10 steps",
+     "times": 4
+    },
+    {
+     "keys": [
+      "Home"
+     ]
+    }
+   ],
+   "typedInputs": [
+    {
+     "label": "Shade (share of sunlight blocked)",
+     "typed": "0.4",
+     "shown": "0.4",
+     "invalid": "false"
+    }
+   ],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Clock: Day 2 · 16:00 | Sun last hour (W/m²): 487 | Air last hour (°C): 31.0 | Sealed − planted (K): 3.3 | Cooling water (kg): 490 | Budget residual (J): ≈ 0 (< 1e-6)",
+   "figures": [
+    "Surface temperature · fixed scale 15–50 °C, darker cooler, paler hotter · second",
+    "Surface and air temperature",
+    "Cooling water used · cumulative",
+    "Block budget in the last hour"
+   ],
+   "files": [
+    {
+     "file": "city-heat-intervention-desktop-dark.png",
+     "figure": null
+    },
+    {
+     "file": "city-heat-intervention-desktop-dark-element-0.png",
+     "figure": 0
+    },
+    {
+     "file": "city-heat-intervention-desktop-dark-element-1.png",
+     "figure": 1
+    },
+    {
+     "file": "city-heat-intervention-desktop-dark-element-2.png",
+     "figure": 2
+    },
+    {
+     "file": "city-heat-intervention-desktop-dark-element-3.png",
+     "figure": 3
+    }
+   ]
+  },
+  {
+   "run": "city-heat-intervention-narrow-light",
+   "model": "city-heat",
+   "scenario": "intervention",
+   "policy": "shade 0.4",
+   "clock": "day 2 16:00",
+   "viewport": "390x844",
+   "theme": "light",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "fill": {
+      "label": "Shade (share of sunlight blocked)",
+      "value": 0.4
+     }
+    },
+    {
+     "advance": "10 steps",
+     "times": 4
+    }
+   ],
+   "typedInputs": [
+    {
+     "label": "Shade (share of sunlight blocked)",
+     "typed": "0.4",
+     "shown": "0.4",
+     "invalid": "false"
+    }
+   ],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Clock: Day 2 · 16:00 | Sun last hour (W/m²): 487 | Air last hour (°C): 31.0 | Sealed − planted (K): 3.3 | Cooling water (kg): 490 | Budget residual (J): ≈ 0 (< 1e-6)",
+   "figures": [
+    "Surface temperature · fixed scale 15–50 °C, darker cooler, paler hotter · second",
+    "Surface and air temperature",
+    "Cooling water used · cumulative"
+   ],
+   "files": [
+    {
+     "file": "city-heat-intervention-narrow-light.png",
+     "figure": null
+    },
+    {
+     "file": "city-heat-intervention-narrow-light-element-0.png",
+     "figure": 0
+    }
+   ]
+  },
+  {
+   "run": "city-air-noise-default-desktop-light",
+   "model": "city-air-noise",
+   "scenario": "default",
+   "policy": "ventilation default",
+   "clock": "minute 60",
+   "viewport": "1366x768",
+   "theme": "light",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "advance": "10 steps",
+     "times": 6
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Minute: 60 | Corridor mean (µg/m³): 7.13 | Hotspot (µg/m³): 15.60 | Hotspot at (m): 250 | Loudest receptor (dB): 70.0",
+   "figures": [
+    "Street corridor · box shade = air in µg/m³ (fixed 0–20, dark clean, paler more p",
+    "Air along the corridor",
+    "Noise along the corridor",
+    "Corridor mean versus hotspot and far end",
+    "Receptor exposure since setup"
+   ],
+   "files": [
+    {
+     "file": "city-air-noise-default-desktop-light.png",
+     "figure": null
+    },
+    {
+     "file": "city-air-noise-default-desktop-light-element-0.png",
+     "figure": 0
+    },
+    {
+     "file": "city-air-noise-default-desktop-light-element-1.png",
+     "figure": 1
+    },
+    {
+     "file": "city-air-noise-default-desktop-light-element-2.png",
+     "figure": 2
+    },
+    {
+     "file": "city-air-noise-default-desktop-light-element-3.png",
+     "figure": 3
+    },
+    {
+     "file": "city-air-noise-default-desktop-light-element-4.png",
+     "figure": 4
+    }
+   ]
+  },
+  {
+   "run": "city-air-noise-default-narrow-dark",
+   "model": "city-air-noise",
+   "scenario": "default",
+   "policy": "ventilation default",
+   "clock": "minute 60",
+   "viewport": "390x844",
+   "theme": "dark",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "advance": "10 steps",
+     "times": 6
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Minute: 60 | Corridor mean (µg/m³): 7.13 | Hotspot (µg/m³): 15.60 | Hotspot at (m): 250 | Loudest receptor (dB): 70.0",
+   "figures": [
+    "Street corridor · box shade = air in µg/m³ (fixed 0–20, dark clean, paler more p",
+    "Air along the corridor",
+    "Noise along the corridor",
+    "Corridor mean versus hotspot and far end",
+    "Receptor exposure since setup"
+   ],
+   "files": [
+    {
+     "file": "city-air-noise-default-narrow-dark.png",
+     "figure": null
+    },
+    {
+     "file": "city-air-noise-default-narrow-dark-element-0.png",
+     "figure": 0
+    }
+   ]
+  },
+  {
+   "run": "city-air-noise-intervention-desktop-dark",
+   "model": "city-air-noise",
+   "scenario": "intervention",
+   "policy": "ventilation 0.8",
+   "clock": "minute 60",
+   "viewport": "1366x768",
+   "theme": "dark",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "fill": {
+      "label": "Ventilation (share moved downwind / min)",
+      "value": 0.8
+     }
+    },
+    {
+     "advance": "10 steps",
+     "times": 6
+    }
+   ],
+   "typedInputs": [
+    {
+     "label": "Ventilation (share moved downwind / min)",
+     "typed": "0.8",
+     "shown": "0.8",
+     "invalid": "false"
+    }
+   ],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Minute: 60 | Corridor mean (µg/m³): 6.44 | Hotspot (µg/m³): 14.17 | Hotspot at (m): 350 | Loudest receptor (dB): 70.0",
+   "figures": [
+    "Street corridor · box shade = air in µg/m³ (fixed 0–20, dark clean, paler more p",
+    "Air along the corridor",
+    "Noise along the corridor",
+    "Corridor mean versus hotspot and far end",
+    "Receptor exposure since setup"
+   ],
+   "files": [
+    {
+     "file": "city-air-noise-intervention-desktop-dark.png",
+     "figure": null
+    },
+    {
+     "file": "city-air-noise-intervention-desktop-dark-element-0.png",
+     "figure": 0
+    },
+    {
+     "file": "city-air-noise-intervention-desktop-dark-element-1.png",
+     "figure": 1
+    },
+    {
+     "file": "city-air-noise-intervention-desktop-dark-element-2.png",
+     "figure": 2
+    },
+    {
+     "file": "city-air-noise-intervention-desktop-dark-element-3.png",
+     "figure": 3
+    },
+    {
+     "file": "city-air-noise-intervention-desktop-dark-element-4.png",
+     "figure": 4
+    }
+   ]
+  },
+  {
+   "run": "city-air-noise-intervention-narrow-light",
+   "model": "city-air-noise",
+   "scenario": "intervention",
+   "policy": "ventilation 0.8",
+   "clock": "minute 60",
+   "viewport": "390x844",
+   "theme": "light",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "fill": {
+      "label": "Ventilation (share moved downwind / min)",
+      "value": 0.8
+     }
+    },
+    {
+     "advance": "10 steps",
+     "times": 6
+    }
+   ],
+   "typedInputs": [
+    {
+     "label": "Ventilation (share moved downwind / min)",
+     "typed": "0.8",
+     "shown": "0.8",
+     "invalid": "false"
+    }
+   ],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Minute: 60 | Corridor mean (µg/m³): 6.44 | Hotspot (µg/m³): 14.17 | Hotspot at (m): 350 | Loudest receptor (dB): 70.0",
+   "figures": [
+    "Street corridor · box shade = air in µg/m³ (fixed 0–20, dark clean, paler more p",
+    "Air along the corridor",
+    "Noise along the corridor",
+    "Corridor mean versus hotspot and far end",
+    "Receptor exposure since setup"
+   ],
+   "files": [
+    {
+     "file": "city-air-noise-intervention-narrow-light.png",
+     "figure": null
+    },
+    {
+     "file": "city-air-noise-intervention-narrow-light-element-0.png",
+     "figure": 0
+    }
+   ]
+  },
+  {
+   "run": "city-biodiversity-default-desktop-light",
+   "model": "city-biodiversity",
+   "scenario": "default",
+   "policy": "no restoration, bridge present",
+   "clock": "year 10",
+   "viewport": "1366x768",
+   "theme": "light",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "advance": "10 steps",
+     "times": 1
+    },
+    {
+     "keys": [
+      "Home"
+     ]
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Year: 10 | Mean occupancy: 0.486 | East occupancy: 0.270 | Occupied area (ha, expected): 9.45",
+   "figures": [
+    "Habitat patches on a km map · size = area, fill shade = expected occupancy (pale",
+    "Expected occupancy by region",
+    "Occupancy by patch",
+    "Selected patch"
+   ],
+   "files": [
+    {
+     "file": "city-biodiversity-default-desktop-light.png",
+     "figure": null
+    },
+    {
+     "file": "city-biodiversity-default-desktop-light-element-0.png",
+     "figure": 0
+    },
+    {
+     "file": "city-biodiversity-default-desktop-light-element-1.png",
+     "figure": 1
+    },
+    {
+     "file": "city-biodiversity-default-desktop-light-element-2.png",
+     "figure": 2
+    },
+    {
+     "file": "city-biodiversity-default-desktop-light-element-3.png",
+     "figure": 3
+    }
+   ]
+  },
+  {
+   "run": "city-biodiversity-default-narrow-dark",
+   "model": "city-biodiversity",
+   "scenario": "default",
+   "policy": "no restoration, bridge present",
+   "clock": "year 10",
+   "viewport": "390x844",
+   "theme": "dark",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "advance": "10 steps",
+     "times": 1
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Year: 10 | Mean occupancy: 0.486 | East occupancy: 0.270 | Occupied area (ha, expected): 9.45",
+   "figures": [
+    "Habitat patches on a km map · size = area, fill shade = expected occupancy (pale",
+    "Expected occupancy by region",
+    "Occupancy by patch"
+   ],
+   "files": [
+    {
+     "file": "city-biodiversity-default-narrow-dark.png",
+     "figure": null
+    },
+    {
+     "file": "city-biodiversity-default-narrow-dark-element-0.png",
+     "figure": 0
+    }
+   ]
+  },
+  {
+   "run": "city-biodiversity-intervention-desktop-dark",
+   "model": "city-biodiversity",
+   "scenario": "intervention",
+   "policy": "stepping stone only (one factor)",
+   "clock": "year 10",
+   "viewport": "1366x768",
+   "theme": "dark",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "select": {
+      "label": "Extra hectare of habitat",
+      "value": "stepping-stone"
+     }
+    },
+    {
+     "advance": "10 steps",
+     "times": 1
+    },
+    {
+     "keys": [
+      "Home"
+     ]
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Year: 10 | Mean occupancy: 0.525 | East occupancy: 0.373 | Occupied area (ha, expected): 10.35",
+   "figures": [
+    "Habitat patches on a km map · size = area, fill shade = expected occupancy (pale",
+    "Expected occupancy by region",
+    "Occupancy by patch",
+    "Selected patch"
+   ],
+   "files": [
+    {
+     "file": "city-biodiversity-intervention-desktop-dark.png",
+     "figure": null
+    },
+    {
+     "file": "city-biodiversity-intervention-desktop-dark-element-0.png",
+     "figure": 0
+    },
+    {
+     "file": "city-biodiversity-intervention-desktop-dark-element-1.png",
+     "figure": 1
+    },
+    {
+     "file": "city-biodiversity-intervention-desktop-dark-element-2.png",
+     "figure": 2
+    },
+    {
+     "file": "city-biodiversity-intervention-desktop-dark-element-3.png",
+     "figure": 3
+    }
+   ]
+  },
+  {
+   "run": "city-biodiversity-intervention-narrow-light",
+   "model": "city-biodiversity",
+   "scenario": "intervention",
+   "policy": "stepping stone only (one factor)",
+   "clock": "year 10",
+   "viewport": "390x844",
+   "theme": "light",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "select": {
+      "label": "Extra hectare of habitat",
+      "value": "stepping-stone"
+     }
+    },
+    {
+     "advance": "10 steps",
+     "times": 1
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Year: 10 | Mean occupancy: 0.525 | East occupancy: 0.373 | Occupied area (ha, expected): 10.35",
+   "figures": [
+    "Habitat patches on a km map · size = area, fill shade = expected occupancy (pale",
+    "Expected occupancy by region",
+    "Occupancy by patch"
+   ],
+   "files": [
+    {
+     "file": "city-biodiversity-intervention-narrow-light.png",
+     "figure": null
+    },
+    {
+     "file": "city-biodiversity-intervention-narrow-light-element-0.png",
+     "figure": 0
+    }
+   ]
+  },
+  {
+   "run": "city-materials-default-desktop-light",
+   "model": "city-materials",
+   "scenario": "default",
+   "policy": "collection 120",
+   "clock": "day 15",
+   "viewport": "1366x768",
+   "theme": "light",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "advance": "1 step",
+     "times": 15
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Day: 15 | Festival tomorrow: No | Uncollected (kg): 650 | Peak backlog (kg): 650 | Streets clear again on day: Not yet | Balance error (kg): ≈ 0 (< 1e-6)",
+   "figures": [
+    "Material flows on the last completed day (kg/day) · line width ∝ flow · the bin ",
+    "Uncollected waste · stock",
+    "Daily flows · per completed day",
+    "Where collected waste went · since setup"
+   ],
+   "files": [
+    {
+     "file": "city-materials-default-desktop-light.png",
+     "figure": null
+    },
+    {
+     "file": "city-materials-default-desktop-light-element-0.png",
+     "figure": 0
+    },
+    {
+     "file": "city-materials-default-desktop-light-element-1.png",
+     "figure": 1
+    },
+    {
+     "file": "city-materials-default-desktop-light-element-2.png",
+     "figure": 2
+    },
+    {
+     "file": "city-materials-default-desktop-light-element-3.png",
+     "figure": 3
+    }
+   ]
+  },
+  {
+   "run": "city-materials-default-narrow-dark",
+   "model": "city-materials",
+   "scenario": "default",
+   "policy": "collection 120",
+   "clock": "day 15",
+   "viewport": "390x844",
+   "theme": "dark",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "advance": "1 step",
+     "times": 15
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Day: 15 | Festival tomorrow: No | Uncollected (kg): 650 | Peak backlog (kg): 650 | Streets clear again on day: Not yet | Balance error (kg): ≈ 0 (< 1e-6)",
+   "figures": [
+    "Material flows on the last completed day (kg/day) · line width ∝ flow · the bin ",
+    "Uncollected waste · stock",
+    "Daily flows · per completed day",
+    "Where collected waste went · since setup"
+   ],
+   "files": [
+    {
+     "file": "city-materials-default-narrow-dark.png",
+     "figure": null
+    },
+    {
+     "file": "city-materials-default-narrow-dark-element-0.png",
+     "figure": 0
+    }
+   ]
+  },
+  {
+   "run": "city-materials-intervention-desktop-dark",
+   "model": "city-materials",
+   "scenario": "intervention",
+   "policy": "collection 160",
+   "clock": "day 15",
+   "viewport": "1366x768",
+   "theme": "dark",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "fill": {
+      "label": "Collection capacity (kg/day)",
+      "value": 160
+     }
+    },
+    {
+     "advance": "1 step",
+     "times": 15
+    }
+   ],
+   "typedInputs": [
+    {
+     "label": "Collection capacity (kg/day)",
+     "typed": "160",
+     "shown": "160",
+     "invalid": "false"
+    }
+   ],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Day: 15 | Festival tomorrow: No | Uncollected (kg): 450 | Peak backlog (kg): 450 | Streets clear again on day: Not yet | Balance error (kg): ≈ 0 (< 1e-6)",
+   "figures": [
+    "Material flows on the last completed day (kg/day) · line width ∝ flow · the bin ",
+    "Uncollected waste · stock",
+    "Daily flows · per completed day",
+    "Where collected waste went · since setup"
+   ],
+   "files": [
+    {
+     "file": "city-materials-intervention-desktop-dark.png",
+     "figure": null
+    },
+    {
+     "file": "city-materials-intervention-desktop-dark-element-0.png",
+     "figure": 0
+    },
+    {
+     "file": "city-materials-intervention-desktop-dark-element-1.png",
+     "figure": 1
+    },
+    {
+     "file": "city-materials-intervention-desktop-dark-element-2.png",
+     "figure": 2
+    },
+    {
+     "file": "city-materials-intervention-desktop-dark-element-3.png",
+     "figure": 3
+    }
+   ]
+  },
+  {
+   "run": "city-materials-intervention-narrow-light",
+   "model": "city-materials",
+   "scenario": "intervention",
+   "policy": "collection 160",
+   "clock": "day 15",
+   "viewport": "390x844",
+   "theme": "light",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "fill": {
+      "label": "Collection capacity (kg/day)",
+      "value": 160
+     }
+    },
+    {
+     "advance": "1 step",
+     "times": 15
+    }
+   ],
+   "typedInputs": [
+    {
+     "label": "Collection capacity (kg/day)",
+     "typed": "160",
+     "shown": "160",
+     "invalid": "false"
+    }
+   ],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Day: 15 | Festival tomorrow: No | Uncollected (kg): 450 | Peak backlog (kg): 450 | Streets clear again on day: Not yet | Balance error (kg): ≈ 0 (< 1e-6)",
+   "figures": [
+    "Material flows on the last completed day (kg/day) · line width ∝ flow · the bin ",
+    "Uncollected waste · stock",
+    "Daily flows · per completed day",
+    "Where collected waste went · since setup"
+   ],
+   "files": [
+    {
+     "file": "city-materials-intervention-narrow-light.png",
+     "figure": null
+    },
+    {
+     "file": "city-materials-intervention-narrow-light-element-0.png",
+     "figure": 0
+    }
+   ]
+  },
+  {
+   "run": "city-finance-default-desktop-light",
+   "model": "city-finance",
+   "scenario": "default",
+   "policy": "worst first",
+   "clock": "year 20",
+   "viewport": "1366x768",
+   "theme": "light",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "advance": "10 steps",
+     "times": 2
+    },
+    {
+     "keys": [
+      "Home"
+     ]
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Year: 20 | Cash (CU): 2100 | Repair backlog (CU): 20100 | Mean condition: 0.162 | Assets below 0.4: 12 | Maintenance spent (CU, total): 10000",
+   "figures": [
+    "Asset inventory · green bar = condition (value below) · red outline: below 0.4, ",
+    "Cash and repair backlog",
+    "Mean asset condition",
+    "Last year's flows",
+    "Selected asset"
+   ],
+   "files": [
+    {
+     "file": "city-finance-default-desktop-light.png",
+     "figure": null
+    },
+    {
+     "file": "city-finance-default-desktop-light-element-0.png",
+     "figure": 0
+    },
+    {
+     "file": "city-finance-default-desktop-light-element-1.png",
+     "figure": 1
+    },
+    {
+     "file": "city-finance-default-desktop-light-element-2.png",
+     "figure": 2
+    },
+    {
+     "file": "city-finance-default-desktop-light-element-3.png",
+     "figure": 3
+    },
+    {
+     "file": "city-finance-default-desktop-light-element-4.png",
+     "figure": 4
+    }
+   ]
+  },
+  {
+   "run": "city-finance-default-narrow-dark",
+   "model": "city-finance",
+   "scenario": "default",
+   "policy": "worst first",
+   "clock": "year 20",
+   "viewport": "390x844",
+   "theme": "dark",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "advance": "10 steps",
+     "times": 2
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Year: 20 | Cash (CU): 2100 | Repair backlog (CU): 20100 | Mean condition: 0.162 | Assets below 0.4: 12 | Maintenance spent (CU, total): 10000",
+   "figures": [
+    "Asset inventory · green bar = condition (value below) · red outline: below 0.4, ",
+    "Cash and repair backlog",
+    "Mean asset condition",
+    "Last year's flows"
+   ],
+   "files": [
+    {
+     "file": "city-finance-default-narrow-dark.png",
+     "figure": null
+    },
+    {
+     "file": "city-finance-default-narrow-dark-element-0.png",
+     "figure": 0
+    }
+   ]
+  },
+  {
+   "run": "city-finance-intervention-desktop-dark",
+   "model": "city-finance",
+   "scenario": "intervention",
+   "policy": "preventive",
+   "clock": "year 20",
+   "viewport": "1366x768",
+   "theme": "dark",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "select": {
+      "label": "Repair order",
+      "value": "preventive"
+     }
+    },
+    {
+     "advance": "10 steps",
+     "times": 2
+    },
+    {
+     "keys": [
+      "Home"
+     ]
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Year: 20 | Cash (CU): 2100 | Repair backlog (CU): 7000 | Mean condition: 0.629 | Assets below 0.4: 3 | Maintenance spent (CU, total): 10000",
+   "figures": [
+    "Asset inventory · green bar = condition (value below) · red outline: below 0.4, ",
+    "Cash and repair backlog",
+    "Mean asset condition",
+    "Last year's flows",
+    "Selected asset"
+   ],
+   "files": [
+    {
+     "file": "city-finance-intervention-desktop-dark.png",
+     "figure": null
+    },
+    {
+     "file": "city-finance-intervention-desktop-dark-element-0.png",
+     "figure": 0
+    },
+    {
+     "file": "city-finance-intervention-desktop-dark-element-1.png",
+     "figure": 1
+    },
+    {
+     "file": "city-finance-intervention-desktop-dark-element-2.png",
+     "figure": 2
+    },
+    {
+     "file": "city-finance-intervention-desktop-dark-element-3.png",
+     "figure": 3
+    },
+    {
+     "file": "city-finance-intervention-desktop-dark-element-4.png",
+     "figure": 4
+    }
+   ]
+  },
+  {
+   "run": "city-finance-intervention-narrow-light",
+   "model": "city-finance",
+   "scenario": "intervention",
+   "policy": "preventive",
+   "clock": "year 20",
+   "viewport": "390x844",
+   "theme": "light",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "select": {
+      "label": "Repair order",
+      "value": "preventive"
+     }
+    },
+    {
+     "advance": "10 steps",
+     "times": 2
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Year: 20 | Cash (CU): 2100 | Repair backlog (CU): 7000 | Mean condition: 0.629 | Assets below 0.4: 3 | Maintenance spent (CU, total): 10000",
+   "figures": [
+    "Asset inventory · green bar = condition (value below) · red outline: below 0.4, ",
+    "Cash and repair backlog",
+    "Mean asset condition",
+    "Last year's flows"
+   ],
+   "files": [
+    {
+     "file": "city-finance-intervention-narrow-light.png",
+     "figure": null
+    },
+    {
+     "file": "city-finance-intervention-narrow-light-element-0.png",
+     "figure": 0
+    }
+   ]
+  },
+  {
+   "run": "city-population-million-desktop-dark",
+   "model": "city-population",
+   "scenario": "large valid input",
+   "policy": "initial population 1,000,000",
+   "clock": "year 20",
+   "viewport": "1366x768",
+   "theme": "dark",
+   "steps": [
+    {
+     "fill": {
+      "label": "Initial Population",
+      "value": 1000000
+     }
+    },
+    {
+     "click": "Setup"
+    },
+    {
+     "advance": "10 steps",
+     "times": 2
+    }
+   ],
+   "typedInputs": [
+    {
+     "label": "Initial Population",
+     "typed": "1000000",
+     "shown": "1000000",
+     "invalid": "false"
+    }
+   ],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Year: 20 | Residents: 750122 | Households: 250041 | Aged 65+ (%): 16.6 | Pending pulse: 0 | Accounting error: 0",
+   "figures": [
+    "Age structure · residents by 5-year band",
+    "Annual flows · residents per completed year (bars start at zero)",
+    "Residents and household demand",
+    "Anonymous households by size"
+   ],
+   "files": [
+    {
+     "file": "city-population-million-desktop-dark.png",
+     "figure": null
+    },
+    {
+     "file": "city-population-million-desktop-dark-element-0.png",
+     "figure": 0
+    },
+    {
+     "file": "city-population-million-desktop-dark-element-1.png",
+     "figure": 1
+    }
+   ]
+  },
+  {
+   "run": "city-housing-construction-desktop-light",
+   "model": "city-housing",
+   "scenario": "construction and displacement",
+   "policy": "allowance 400, 3 public homes commissioned in month 21",
+   "clock": "month 21",
+   "viewport": "1366x768",
+   "theme": "light",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "fill": {
+      "label": "Allowance for low incomes (currency/month)",
+      "value": 400
+     }
+    },
+    {
+     "advance": "10 steps",
+     "times": 2
+    },
+    {
+     "click": "Commission 3 public homes"
+    },
+    {
+     "advance": "1 step",
+     "times": 1
+    }
+   ],
+   "typedInputs": [
+    {
+     "label": "Allowance for low incomes (currency/month)",
+     "typed": "400",
+     "shown": "400",
+     "invalid": "false"
+    }
+   ],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Month: 21 | Rent (currency/month): 904.31 | Housed: 17 | Searching: 7 | Displaced this month: 1 | Vacant homes: 1 | Under construction: 3",
+   "figures": [
+    "Homes and searching households · fill = tenant income: orange low, blue middle, ",
+    "Bids and posted rent by household income · both axes in currency/month",
+    "Housed households by income group",
+    "Posted rent · currency/month"
+   ],
+   "files": [
+    {
+     "file": "city-housing-construction-desktop-light-element-0.png",
+     "figure": 0
+    }
+   ]
+  },
+  {
+   "run": "city-housing-construction-narrow-dark",
+   "model": "city-housing",
+   "scenario": "construction and displacement",
+   "policy": "allowance 400, 3 public homes commissioned in month 21",
+   "clock": "month 21",
+   "viewport": "390x844",
+   "theme": "dark",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "fill": {
+      "label": "Allowance for low incomes (currency/month)",
+      "value": 400
+     }
+    },
+    {
+     "advance": "10 steps",
+     "times": 2
+    },
+    {
+     "click": "Commission 3 public homes"
+    },
+    {
+     "advance": "1 step",
+     "times": 1
+    }
+   ],
+   "typedInputs": [
+    {
+     "label": "Allowance for low incomes (currency/month)",
+     "typed": "400",
+     "shown": "400",
+     "invalid": "false"
+    }
+   ],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Month: 21 | Rent (currency/month): 904.31 | Housed: 17 | Searching: 7 | Displaced this month: 1 | Vacant homes: 1 | Under construction: 3",
+   "figures": [
+    "Homes and searching households · fill = tenant income: orange low, blue middle, ",
+    "Bids and posted rent by household income · both axes in currency/month",
+    "Housed households by income group",
+    "Posted rent · currency/month"
+   ],
+   "files": [
+    {
+     "file": "city-housing-construction-narrow-dark-element-0.png",
+     "figure": 0
+    }
+   ]
+  },
+  {
+   "run": "city-land-use-corridor-desktop-dark",
+   "model": "city-land-use",
+   "scenario": "counterfactual",
+   "policy": "compact with green corridor protected (one factor)",
+   "clock": "year 16",
+   "viewport": "1366x768",
+   "theme": "dark",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "click": "Protect green corridor (6 ha)"
+    },
+    {
+     "advance": "10 steps",
+     "times": 1
+    },
+    {
+     "advance": "1 step",
+     "times": 6
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Year: 16 | Converted this year: 0 | Protected (ha): 6 | Largest green patch (ha): 11 | Green patches: 2 | Urban edge (km): 1.6 | Unmet demand (ha): 0",
+   "figures": [
+    "Parcels · orange residential, blue commercial, green open land · white outline p",
+    "Open land and its largest connected patch",
+    "Built area",
+    "Urban edge · boundary between built and open land"
+   ],
+   "files": [
+    {
+     "file": "city-land-use-corridor-desktop-dark-element-0.png",
+     "figure": 0
+    },
+    {
+     "file": "city-land-use-corridor-desktop-dark-element-1.png",
+     "figure": 1
+    },
+    {
+     "file": "city-land-use-corridor-desktop-dark-element-3.png",
+     "figure": 3
+    }
+   ]
+  },
+  {
+   "run": "city-land-use-combined-desktop-light",
+   "model": "city-land-use",
+   "scenario": "combination (two factors, labelled)",
+   "policy": "dispersed growth and green corridor protected",
+   "clock": "year 16",
+   "viewport": "1366x768",
+   "theme": "light",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "select": {
+      "label": "Growth pattern",
+      "value": "dispersed"
+     }
+    },
+    {
+     "click": "Protect green corridor (6 ha)"
+    },
+    {
+     "advance": "10 steps",
+     "times": 1
+    },
+    {
+     "advance": "1 step",
+     "times": 6
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Year: 16 | Converted this year: 0 | Protected (ha): 6 | Largest green patch (ha): 11 | Green patches: 7 | Urban edge (km): 4.4 | Unmet demand (ha): 0",
+   "figures": [
+    "Parcels · orange residential, blue commercial, green open land · white outline p",
+    "Open land and its largest connected patch",
+    "Built area",
+    "Urban edge · boundary between built and open land"
+   ],
+   "files": [
+    {
+     "file": "city-land-use-combined-desktop-light-element-0.png",
+     "figure": 0
+    }
+   ]
+  },
+  {
+   "run": "city-land-use-change-year-narrow-light",
+   "model": "city-land-use",
+   "scenario": "change year",
+   "policy": "compact, no protection",
+   "clock": "year 5",
+   "viewport": "390x844",
+   "theme": "light",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "advance": "1 step",
+     "times": 5
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Year: 5 | Converted this year: 2 | Protected (ha): 0 | Largest green patch (ha): 32 | Green patches: 1 | Urban edge (km): 1.6 | Unmet demand (ha): 14",
+   "figures": [
+    "Parcels · orange residential, blue commercial, green open land · white outline p",
+    "Open land and its largest connected patch",
+    "Built area",
+    "Urban edge · boundary between built and open land"
+   ],
+   "files": [
+    {
+     "file": "city-land-use-change-year-narrow-light-element-0.png",
+     "figure": 0
+    }
+   ]
+  },
+  {
+   "run": "city-daily-activities-early-close-desktop-light",
+   "model": "city-daily-activities",
+   "scenario": "counterfactual",
+   "policy": "services close 17:00 set at tick 0",
+   "clock": "day 1 20:00",
+   "viewport": "1366x768",
+   "theme": "light",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "fill": {
+      "label": "Services close at (hour, next day)",
+      "value": 17
+     }
+    },
+    {
+     "advance": "10 steps",
+     "times": 8
+    },
+    {
+     "keys": [
+      "Home"
+     ]
+    }
+   ],
+   "typedInputs": [
+    {
+     "label": "Services close at (hour, next day)",
+     "typed": "17",
+     "shown": "17",
+     "invalid": "false"
+    }
+   ],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Clock: Day 1 · 20:00 | Traveling now: 0 | Trips today: 24 | Travel today (person h): 10 | Errands done today: 0 | Errands missed today: 6",
+   "figures": [
+    "Town · Far, Middle, Near = home neighborhoods · circles adults, triangles childr",
+    "Errands of adults today · done, still planned, missed",
+    "Where residents are · 15-minute clock",
+    "Person-hours today by activity",
+    "Selected resident's day"
+   ],
+   "files": [
+    {
+     "file": "city-daily-activities-early-close-desktop-light.png",
+     "figure": null
+    },
+    {
+     "file": "city-daily-activities-early-close-desktop-light-element-0.png",
+     "figure": 0
+    },
+    {
+     "file": "city-daily-activities-early-close-desktop-light-element-1.png",
+     "figure": 1
+    },
+    {
+     "file": "city-daily-activities-early-close-desktop-light-element-4.png",
+     "figure": 4
+    }
+   ]
+  },
+  {
+   "run": "city-daily-activities-early-close-narrow-dark",
+   "model": "city-daily-activities",
+   "scenario": "counterfactual",
+   "policy": "services close 17:00 set at tick 0",
+   "clock": "day 1 20:00",
+   "viewport": "390x844",
+   "theme": "dark",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "fill": {
+      "label": "Services close at (hour, next day)",
+      "value": 17
+     }
+    },
+    {
+     "advance": "10 steps",
+     "times": 8
+    }
+   ],
+   "typedInputs": [
+    {
+     "label": "Services close at (hour, next day)",
+     "typed": "17",
+     "shown": "17",
+     "invalid": "false"
+    }
+   ],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Clock: Day 1 · 20:00 | Traveling now: 0 | Trips today: 24 | Travel today (person h): 10 | Errands done today: 0 | Errands missed today: 6",
+   "figures": [
+    "Town · Far, Middle, Near = home neighborhoods · circles adults, triangles childr",
+    "Errands of adults today · done, still planned, missed",
+    "Where residents are · 15-minute clock",
+    "Person-hours today by activity"
+   ],
+   "files": [
+    {
+     "file": "city-daily-activities-early-close-narrow-dark-element-0.png",
+     "figure": 0
+    },
+    {
+     "file": "city-daily-activities-early-close-narrow-dark-element-1.png",
+     "figure": 1
+    }
+   ]
+  },
+  {
+   "run": "city-daily-activities-commute-narrow-light",
+   "model": "city-daily-activities",
+   "scenario": "travelers in motion",
+   "policy": "defaults",
+   "clock": "day 1 07:45",
+   "viewport": "390x844",
+   "theme": "light",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "advance": "10 steps",
+     "times": 3
+    },
+    {
+     "advance": "1 step",
+     "times": 1
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Clock: Day 1 · 07:45 | Traveling now: 12 | Trips today: 0 | Travel today (person h): 2 | Errands done today: 0 | Errands missed today: 0",
+   "figures": [
+    "Town · Far, Middle, Near = home neighborhoods · circles adults, triangles childr",
+    "Errands of adults today · done, still planned, missed",
+    "Where residents are · 15-minute clock",
+    "Person-hours today by activity"
+   ],
+   "files": [
+    {
+     "file": "city-daily-activities-commute-narrow-light-element-0.png",
+     "figure": 0
+    }
+   ]
+  },
+  {
+   "run": "city-mobility-1000-trips-narrow-dark",
+   "model": "city-mobility",
+   "scenario": "large valid input",
+   "policy": "1000 initial trips",
+   "clock": "minute 30",
+   "viewport": "390x844",
+   "theme": "dark",
+   "steps": [
+    {
+     "fill": {
+      "label": "Initial Trips",
+      "value": 1000
+     }
+    },
+    {
+     "click": "Setup"
+    },
+    {
+     "advance": "10 steps",
+     "times": 3
+    }
+   ],
+   "typedInputs": [
+    {
+     "label": "Initial Trips",
+     "typed": "1000",
+     "shown": "1000",
+     "invalid": "false"
+    }
+   ],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Minute: 30 | Car share (%): 4 | Queued cars: 3 | Mean trip (min): 17.9 | Waiting (person-min): 365 | Main road now (min): 14.0",
+   "figures": [
+    "Morning commute · orange main road, yellow bypass, blue walk/cycle · pale triang",
+    "Departures by choice · cumulative",
+    "Cars waiting in queues",
+    "Completed trip times by mode · shown once trips have arrived"
+   ],
+   "files": [
+    {
+     "file": "city-mobility-1000-trips-narrow-dark-element-0.png",
+     "figure": 0
+    },
+    {
+     "file": "city-mobility-1000-trips-narrow-dark-element-1.png",
+     "figure": 1
+    },
+    {
+     "file": "city-mobility-1000-trips-narrow-dark-element-2.png",
+     "figure": 2
+    },
+    {
+     "file": "city-mobility-1000-trips-narrow-dark-element-3.png",
+     "figure": 3
+    }
+   ]
+  },
+  {
+   "run": "city-mobility-1000-trips-desktop-light",
+   "model": "city-mobility",
+   "scenario": "large valid input",
+   "policy": "1000 initial trips",
+   "clock": "minute 30",
+   "viewport": "1366x768",
+   "theme": "light",
+   "steps": [
+    {
+     "fill": {
+      "label": "Initial Trips",
+      "value": 1000
+     }
+    },
+    {
+     "click": "Setup"
+    },
+    {
+     "advance": "10 steps",
+     "times": 3
+    }
+   ],
+   "typedInputs": [
+    {
+     "label": "Initial Trips",
+     "typed": "1000",
+     "shown": "1000",
+     "invalid": "false"
+    }
+   ],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Minute: 30 | Car share (%): 4 | Queued cars: 3 | Mean trip (min): 17.9 | Waiting (person-min): 365 | Main road now (min): 14.0",
+   "figures": [
+    "Morning commute · orange main road, yellow bypass, blue walk/cycle · pale triang",
+    "Departures by choice · cumulative",
+    "Cars waiting in queues",
+    "Completed trip times by mode · shown once trips have arrived"
+   ],
+   "files": [
+    {
+     "file": "city-mobility-1000-trips-desktop-light-element-0.png",
+     "figure": 0
+    },
+    {
+     "file": "city-mobility-1000-trips-desktop-light-element-3.png",
+     "figure": 3
+    }
+   ]
+  },
+  {
+   "run": "city-energy-charging-desktop-light",
+   "model": "city-energy",
+   "scenario": "battery charging hour",
+   "policy": "flexible share 0",
+   "clock": "day 2 09:00-10:00",
+   "viewport": "1366x768",
+   "theme": "light",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "advance": "10 steps",
+     "times": 3
+    },
+    {
+     "advance": "1 step",
+     "times": 4
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Clock: Day 2 · 09:00–10:00 | Stored at end of hour (kWh): 6.3 | Unmet today (kWh): 0.0 | Curtailed today (kWh): 1.5 | Unmet last full day (kWh): 11.0",
+   "figures": [
+    "Energy in the last completed hour (kWh) · numbers on lines = energy moved · line",
+    "Electricity balance of the last completed hour (kWh)",
+    "Hourly electricity · energy in each completed hour",
+    "Battery charge (+) and discharge (−) in each completed hour",
+    "Battery stored energy · stock at the end of each hour",
+    "Daily electricity totals"
+   ],
+   "files": [
+    {
+     "file": "city-energy-charging-desktop-light-element-0.png",
+     "figure": 0
+    },
+    {
+     "file": "city-energy-charging-desktop-light-element-1.png",
+     "figure": 1
+    }
+   ]
+  },
+  {
+   "run": "city-mobility-queue-overflow-desktop-dark",
+   "model": "city-mobility",
+   "scenario": "queue overflow",
+   "policy": "walking path 30 min (valid maximum), capacity 5",
+   "clock": "minute 12",
+   "viewport": "1366x768",
+   "theme": "dark",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "fill": {
+      "label": "Walking/cycling path (min)",
+      "value": 30
+     }
+    },
+    {
+     "advance": "10 steps",
+     "times": 1
+    },
+    {
+     "advance": "1 step",
+     "times": 2
+    }
+   ],
+   "typedInputs": [
+    {
+     "label": "Walking/cycling path (min)",
+     "typed": "30",
+     "shown": "30",
+     "invalid": "false"
+    }
+   ],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Minute: 12 | Car share (%): 100 | Queued cars: 18 | Mean trip (min): 10.0 | Waiting (person-min): 106 | Main road now (min): 27.0",
+   "figures": [
+    "Morning commute · orange main road, yellow bypass, blue walk/cycle · pale triang",
+    "Departures by choice · cumulative",
+    "Cars waiting in queues",
+    "Completed trip times by mode · shown once trips have arrived"
+   ],
+   "files": [
+    {
+     "file": "city-mobility-queue-overflow-desktop-dark-element-0.png",
+     "figure": 0
+    }
+   ]
+  },
+  {
+   "run": "city-mobility-queue-overflow-narrow-light",
+   "model": "city-mobility",
+   "scenario": "queue overflow",
+   "policy": "walking path 30 min (valid maximum), capacity 5",
+   "clock": "minute 12",
+   "viewport": "390x844",
+   "theme": "light",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "fill": {
+      "label": "Walking/cycling path (min)",
+      "value": 30
+     }
+    },
+    {
+     "advance": "10 steps",
+     "times": 1
+    },
+    {
+     "advance": "1 step",
+     "times": 2
+    }
+   ],
+   "typedInputs": [
+    {
+     "label": "Walking/cycling path (min)",
+     "typed": "30",
+     "shown": "30",
+     "invalid": "false"
+    }
+   ],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Minute: 12 | Car share (%): 100 | Queued cars: 18 | Mean trip (min): 10.0 | Waiting (person-min): 106 | Main road now (min): 27.0",
+   "figures": [
+    "Morning commute · orange main road, yellow bypass, blue walk/cycle · pale triang",
+    "Departures by choice · cumulative",
+    "Cars waiting in queues",
+    "Completed trip times by mode · shown once trips have arrived"
+   ],
+   "files": [
+    {
+     "file": "city-mobility-queue-overflow-narrow-light-element-0.png",
+     "figure": 0
+    }
+   ]
+  },
+  {
+   "run": "city-housing-bids-narrow-dark",
+   "model": "city-housing",
+   "scenario": "supporting chart",
+   "policy": "allowance 0",
+   "clock": "month 20",
+   "viewport": "390x844",
+   "theme": "dark",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "advance": "10 steps",
+     "times": 2
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Month: 20 | Rent (currency/month): 731.86 | Housed: 16 | Searching: 8 | Displaced this month: 0 | Vacant homes: 2 | Under construction: 0",
+   "figures": [
+    "Homes and searching households · fill = tenant income: orange low, blue middle, ",
+    "Bids and posted rent by household income · both axes in currency/month",
+    "Housed households by income group",
+    "Posted rent · currency/month"
+   ],
+   "files": [
+    {
+     "file": "city-housing-bids-narrow-dark-element-1.png",
+     "figure": 1
+    }
+   ]
+  },
+  {
+   "run": "city-water-early-savings-narrow-dark",
+   "model": "city-water",
+   "scenario": "intervention trigger line",
+   "policy": "trigger 0.6, cut 0.15",
+   "clock": "day 80",
+   "viewport": "390x844",
+   "theme": "dark",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "fill": {
+      "label": "Save when storage is below (fraction)",
+      "value": 0.6
+     }
+    },
+    {
+     "fill": {
+      "label": "Demand cut while saving (share)",
+      "value": 0.15
+     }
+    },
+    {
+     "advance": "10 steps",
+     "times": 8
+    }
+   ],
+   "typedInputs": [
+    {
+     "label": "Save when storage is below (fraction)",
+     "typed": "0.6",
+     "shown": "0.6",
+     "invalid": "false"
+    },
+    {
+     "label": "Demand cut while saving (share)",
+     "typed": "0.15",
+     "shown": "0.15",
+     "invalid": "false"
+    }
+   ],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Day: 80 | Reservoir (m³): 120.0 | Savings rule tomorrow: Cutting demand | Shortage total (m³): 0.0 | Worst day cut (%): 15 | Days with a demand cut: 44 | Balance residual (m³): ≈ 0 (< 1e-6)",
+   "figures": [
+    "Water path on the last completed day (m³/day) · line width ∝ volume · amber line",
+    "Reservoir storage and savings trigger (trigger shown while a cut is set)",
+    "Daily demand and who carries the deficit · per completed day"
+   ],
+   "files": [
+    {
+     "file": "city-water-early-savings-narrow-dark-element-1.png",
+     "figure": 1
+    }
+   ]
+  },
+  {
+   "run": "city-stormwater-infiltration-desktop-light",
+   "model": "city-stormwater",
+   "scenario": "counterfactual",
+   "policy": "single storm, infiltration 12 mm/h (one factor)",
+   "clock": "hour 10",
+   "viewport": "1366x768",
+   "theme": "light",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "fill": {
+      "label": "Infiltration of dry soil (mm/h)",
+      "value": 12
+     }
+    },
+    {
+     "advance": "1 step",
+     "times": 10
+    }
+   ],
+   "typedInputs": [
+    {
+     "label": "Infiltration of dry soil (mm/h)",
+     "typed": "12",
+     "shown": "12",
+     "invalid": "false"
+    }
+   ],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Hour: 10 | Raining next hour: No | Basin (m³): 32.0 | Overflow total (m³): 8.3 | Soil water (m³): 19.7",
+   "figures": [
+    "Catchment in the last hour · gray sealed (share above each plot), green pervious",
+    "Hydrograph · m³ in each completed hour",
+    "Water held back · basin and soil",
+    "Cumulative water balance"
+   ],
+   "files": [
+    {
+     "file": "city-stormwater-infiltration-desktop-light-element-0.png",
+     "figure": 0
+    },
+    {
+     "file": "city-stormwater-infiltration-desktop-light-element-1.png",
+     "figure": 1
+    },
+    {
+     "file": "city-stormwater-infiltration-desktop-light-element-3.png",
+     "figure": 3
+    }
+   ]
+  },
+  {
+   "run": "city-stormwater-retention-desktop-dark",
+   "model": "city-stormwater",
+   "scenario": "counterfactual",
+   "policy": "single storm, basin 120 m³ (one factor)",
+   "clock": "hour 10",
+   "viewport": "1366x768",
+   "theme": "dark",
+   "steps": [
+    {
+     "fill": {
+      "label": "Basin volume (m³)",
+      "value": 120
+     }
+    },
+    {
+     "click": "Setup"
+    },
+    {
+     "advance": "1 step",
+     "times": 10
+    }
+   ],
+   "typedInputs": [
+    {
+     "label": "Basin volume (m³)",
+     "typed": "120",
+     "shown": "120",
+     "invalid": "false"
+    }
+   ],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Hour: 10 | Raining next hour: No | Basin (m³): 52.1 | Overflow total (m³): 0.0 | Soil water (m³): 7.9",
+   "figures": [
+    "Catchment in the last hour · gray sealed (share above each plot), green pervious",
+    "Hydrograph · m³ in each completed hour",
+    "Water held back · basin and soil",
+    "Cumulative water balance"
+   ],
+   "files": [
+    {
+     "file": "city-stormwater-retention-desktop-dark-element-0.png",
+     "figure": 0
+    },
+    {
+     "file": "city-stormwater-retention-desktop-dark-element-1.png",
+     "figure": 1
+    },
+    {
+     "file": "city-stormwater-retention-desktop-dark-element-3.png",
+     "figure": 3
+    }
+   ]
+  },
+  {
+   "run": "city-stormwater-table-narrow-dark",
+   "model": "city-stormwater",
+   "scenario": "table",
+   "policy": "single storm",
+   "clock": "hour 10",
+   "viewport": "390x844",
+   "theme": "dark",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "advance": "1 step",
+     "times": 10
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Hour: 10 | Raining next hour: No | Basin (m³): 32.0 | Overflow total (m³): 20.1 | Soil water (m³): 7.9",
+   "figures": [
+    "Catchment in the last hour · gray sealed (share above each plot), green pervious",
+    "Hydrograph · m³ in each completed hour",
+    "Water held back · basin and soil",
+    "Cumulative water balance"
+   ],
+   "files": [
+    {
+     "file": "city-stormwater-table-narrow-dark-element-3.png",
+     "figure": 3
+    },
+    {
+     "file": "city-stormwater-table-narrow-dark-table-right-3.png",
+     "figure": 3,
+     "tableScroll": null
+    }
+   ]
+  },
+  {
+   "run": "city-heat-night-default-desktop-light",
+   "model": "city-heat",
+   "scenario": "night counterfactual",
+   "policy": "shade 0",
+   "clock": "day 2 04:00",
+   "viewport": "1366x768",
+   "theme": "light",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "advance": "10 steps",
+     "times": 2
+    },
+    {
+     "advance": "1 step",
+     "times": 8
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Clock: Day 2 · 04:00 | Sun last hour (W/m²): 0 | Air last hour (°C): 21.0 | Sealed − planted (K): 4.5 | Cooling water (kg): 253 | Budget residual (J): ≈ 0 (< 1e-6)",
+   "figures": [
+    "Surface temperature · fixed scale 15–50 °C, darker cooler, paler hotter · second",
+    "Surface and air temperature",
+    "Cooling water used · cumulative"
+   ],
+   "files": [
+    {
+     "file": "city-heat-night-default-desktop-light-element-0.png",
+     "figure": 0
+    },
+    {
+     "file": "city-heat-night-default-desktop-light-element-1.png",
+     "figure": 1
+    }
+   ]
+  },
+  {
+   "run": "city-heat-night-shade-desktop-dark",
+   "model": "city-heat",
+   "scenario": "night counterfactual",
+   "policy": "shade 0.4",
+   "clock": "day 2 04:00",
+   "viewport": "1366x768",
+   "theme": "dark",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "fill": {
+      "label": "Shade (share of sunlight blocked)",
+      "value": 0.4
+     }
+    },
+    {
+     "advance": "10 steps",
+     "times": 2
+    },
+    {
+     "advance": "1 step",
+     "times": 8
+    }
+   ],
+   "typedInputs": [
+    {
+     "label": "Shade (share of sunlight blocked)",
+     "typed": "0.4",
+     "shown": "0.4",
+     "invalid": "false"
+    }
+   ],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Clock: Day 2 · 04:00 | Sun last hour (W/m²): 0 | Air last hour (°C): 21.0 | Sealed − planted (K): 3.3 | Cooling water (kg): 253 | Budget residual (J): ≈ 0 (< 1e-6)",
+   "figures": [
+    "Surface temperature · fixed scale 15–50 °C, darker cooler, paler hotter · second",
+    "Surface and air temperature",
+    "Cooling water used · cumulative"
+   ],
+   "files": [
+    {
+     "file": "city-heat-night-shade-desktop-dark-element-0.png",
+     "figure": 0
+    },
+    {
+     "file": "city-heat-night-shade-desktop-dark-element-1.png",
+     "figure": 1
+    }
+   ]
+  },
+  {
+   "run": "city-air-noise-table-narrow-light",
+   "model": "city-air-noise",
+   "scenario": "table",
+   "policy": "ventilation default",
+   "clock": "minute 60",
+   "viewport": "390x844",
+   "theme": "light",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "advance": "10 steps",
+     "times": 6
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Minute: 60 | Corridor mean (µg/m³): 7.13 | Hotspot (µg/m³): 15.60 | Hotspot at (m): 250 | Loudest receptor (dB): 70.0",
+   "figures": [
+    "Street corridor · box shade = air in µg/m³ (fixed 0–20, dark clean, paler more p",
+    "Air along the corridor",
+    "Noise along the corridor",
+    "Corridor mean versus hotspot and far end",
+    "Receptor exposure since setup"
+   ],
+   "files": [
+    {
+     "file": "city-air-noise-table-narrow-light-element-4.png",
+     "figure": 4
+    },
+    {
+     "file": "city-air-noise-table-narrow-light-table-right-4.png",
+     "figure": 4,
+     "tableScroll": null
+    }
+   ]
+  },
+  {
+   "run": "city-biodiversity-enlarge-east-desktop-dark",
+   "model": "city-biodiversity",
+   "scenario": "counterfactual",
+   "policy": "enlarge east patch only (one factor)",
+   "clock": "year 10",
+   "viewport": "1366x768",
+   "theme": "dark",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "select": {
+      "label": "Extra hectare of habitat",
+      "value": "enlarge-east"
+     }
+    },
+    {
+     "advance": "10 steps",
+     "times": 1
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Year: 10 | Mean occupancy: 0.524 | East occupancy: 0.356 | Occupied area (ha, expected): 10.14",
+   "figures": [
+    "Habitat patches on a km map · size = area, fill shade = expected occupancy (pale",
+    "Expected occupancy by region",
+    "Occupancy by patch"
+   ],
+   "files": [
+    {
+     "file": "city-biodiversity-enlarge-east-desktop-dark-element-0.png",
+     "figure": 0
+    },
+    {
+     "file": "city-biodiversity-enlarge-east-desktop-dark-element-1.png",
+     "figure": 1
+    }
+   ]
+  },
+  {
+   "run": "city-biodiversity-bridge-removed-desktop-light",
+   "model": "city-biodiversity",
+   "scenario": "counterfactual",
+   "policy": "bridge patch removed only (one factor)",
+   "clock": "year 10",
+   "viewport": "1366x768",
+   "theme": "light",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "click": "Remove or restore the bridge patch"
+    },
+    {
+     "advance": "10 steps",
+     "times": 1
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Year: 10 | Mean occupancy: 0.451 | East occupancy: 0.209 | Occupied area (ha, expected): 8.65",
+   "figures": [
+    "Habitat patches on a km map · size = area, fill shade = expected occupancy (pale",
+    "Expected occupancy by region",
+    "Occupancy by patch"
+   ],
+   "files": [
+    {
+     "file": "city-biodiversity-bridge-removed-desktop-light-element-0.png",
+     "figure": 0
+    },
+    {
+     "file": "city-biodiversity-bridge-removed-desktop-light-element-1.png",
+     "figure": 1
+    }
+   ]
+  },
+  {
+   "run": "city-biodiversity-combined-desktop-dark",
+   "model": "city-biodiversity",
+   "scenario": "combination (two factors, labelled)",
+   "policy": "stepping stone and bridge removed",
+   "clock": "year 10",
+   "viewport": "1366x768",
+   "theme": "dark",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "select": {
+      "label": "Extra hectare of habitat",
+      "value": "stepping-stone"
+     }
+    },
+    {
+     "click": "Remove or restore the bridge patch"
+    },
+    {
+     "advance": "10 steps",
+     "times": 1
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Year: 10 | Mean occupancy: 0.488 | East occupancy: 0.319 | Occupied area (ha, expected): 9.46",
+   "figures": [
+    "Habitat patches on a km map · size = area, fill shade = expected occupancy (pale",
+    "Expected occupancy by region",
+    "Occupancy by patch"
+   ],
+   "files": [
+    {
+     "file": "city-biodiversity-combined-desktop-dark-element-0.png",
+     "figure": 0
+    }
+   ]
+  },
+  {
+   "run": "city-materials-large-desktop-light",
+   "model": "city-materials",
+   "scenario": "large valid input",
+   "policy": "normal waste 1,000,000 kg/day",
+   "clock": "day 10",
+   "viewport": "1366x768",
+   "theme": "light",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "fill": {
+      "label": "Normal waste (kg/day)",
+      "value": 1000000
+     }
+    },
+    {
+     "advance": "10 steps",
+     "times": 1
+    }
+   ],
+   "typedInputs": [
+    {
+     "label": "Normal waste (kg/day)",
+     "typed": "1000000",
+     "shown": "1000000",
+     "invalid": "false"
+    }
+   ],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Day: 10 | Festival tomorrow: Yes | Uncollected (kg): 9998800 | Peak backlog (kg): 9998800 | Streets clear again on day: Not yet | Balance error (kg): ≈ 0 (< 1e-6)",
+   "figures": [
+    "Material flows on the last completed day (kg/day) · line width ∝ flow · the bin ",
+    "Uncollected waste · stock",
+    "Daily flows · per completed day",
+    "Where collected waste went · since setup"
+   ],
+   "files": [
+    {
+     "file": "city-materials-large-desktop-light-element-0.png",
+     "figure": 0
+    },
+    {
+     "file": "city-materials-large-desktop-light-element-1.png",
+     "figure": 1
+    },
+    {
+     "file": "city-materials-large-desktop-light-element-2.png",
+     "figure": 2
+    }
+   ]
+  },
+  {
+   "run": "city-finance-table-narrow-light",
+   "model": "city-finance",
+   "scenario": "table",
+   "policy": "worst first",
+   "clock": "year 20",
+   "viewport": "390x844",
+   "theme": "light",
+   "steps": [
+    {
+     "click": "Setup"
+    },
+    {
+     "advance": "10 steps",
+     "times": 2
+    }
+   ],
+   "typedInputs": [],
+   "documentOverflowPx": 0,
+   "pageErrors": [],
+   "monitors": "Year: 20 | Cash (CU): 2100 | Repair backlog (CU): 20100 | Mean condition: 0.162 | Assets below 0.4: 12 | Maintenance spent (CU, total): 10000",
+   "figures": [
+    "Asset inventory · green bar = condition (value below) · red outline: below 0.4, ",
+    "Cash and repair backlog",
+    "Mean asset condition",
+    "Last year's flows"
+   ],
+   "files": [
+    {
+     "file": "city-finance-table-narrow-light-element-3.png",
+     "figure": 3
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,22 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-heat/model.ts";
+
+const instance = model.create();
+const state = instance.read();
+assert.equal(model.title, "Urban Heat");
+assert.deepEqual(state.parameters, {
+  airTemperatureC: 30, initialTemperatureC: 30, solarFluxWm2: 600,
+  shadeFraction: 0.25, waterAvailability: 0.5,
+});
+assert.equal(state.tick, 0);
+assert.equal(state.meanTemperatureC, 30);
+assert.equal(state.storedEnergyJ, 0);
+assert.equal(state.cumulativeNetEnergyJ, 0);
+assert.equal(state.history.length, 1);
+assert.deepEqual(state.blocks.map(block => [block.id, block.sealedFraction, block.temperatureC]), [
+  ["block-0", 1, 30], ["block-1", 0.5, 30], ["block-2", 0, 30],
+]);
+assert.equal(state.blocks.length, 3);
+instance.advance(0);
+assert.deepEqual(instance.read(), state);
+console.log("city-heat setup passed");

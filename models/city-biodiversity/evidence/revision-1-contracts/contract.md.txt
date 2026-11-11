@@ -1,0 +1,62 @@
+# Urban Habitat Connectivity contract
+
+This original, deterministic teaching model tracks occupancy of one hypothetical species on three equal-area habitat patches. Occupancy is a continuous probability/expected occupied fraction, not an animal count or a realized presence/absence state. No external model is reproduced. Parameters are synthetic; no city data or scientific calibration is claimed.
+
+## Frozen public examples
+
+The four scripts in `tests/public-contracts/city-biodiversity/` were written before runtime implementation. Their assertions are frozen: setup; hand-calculated first steps and occupancy balance; live habitat/corridor policy; validation, determinism and detached observations. Operation IDs are the four script basenames. Numeric comparisons use absolute tolerance 1e-12.
+
+## Inputs and state
+
+All inputs are finite numbers in [0, 1], without enforced slider increments.
+
+| Input | Default | Meaning |
+| --- | --- | --- |
+| initialOccupancy | 1 | West patch's initial occupancy; middle/east start at zero |
+| vegetationQuality | 0.5 | Uniform dimensionless vegetation quality q |
+| dispersalRate | 0.4 | Maximum annual colonization probability c |
+| extinctionRate | 0.2 | Maximum annual extinction probability e |
+| permeability | 1 | Dimensionless corridor transmission multiplier k |
+
+Setup creates patches west, middle, east in that order, and undirected corridors west–middle, middle–east in that order. Patches have equal notional area; edges have no geographic distance. No wrapping, outside immigration, population growth, abundance or competing species. There are no random draws or seed because the update is deterministic.
+
+One successful `advance()` invokes one synchronous annual step and advances World tick by one year. `advance(stepCount)` accepts safe integers from 0 through 1,000,000; zero does nothing. Model creation and reads do not advance time. The host playback speed has no scientific meaning.
+
+For each patch, use all occupancies at the start of the year:
+
+- Dispersal pressure = k × arithmetic mean of adjacent patch occupancies. An endpoint has one neighbor and the middle has two. This averages source availability; it does not conserve migrants or sum animal flows.
+- Colonization gain = (1 − p) × c × q × pressure.
+- Extinction loss = p × e × (1 − q).
+- Next occupancy = p + gain − loss.
+
+Compute all patches before committing any result, using graph neighbor insertion order. Since gain ≤ 1 − p and loss ≤ p, occupancy stays in [0, 1] analytically. A final clamp to [0, 1] protects floating-point endpoints. Total occupancy is not conserved: next total = previous total + total gain − total loss, within floating-point tolerance.
+
+Defaults yield [1, 0, 0] at year 0; [0.9, 0.1, 0] at year 1 with gain/loss 0.1/0.1; [0.812, 0.171, 0.02] at year 2 with gain/loss 0.103/0.1 and total 1.003. Mean occupancy is total / 3. Setting quality to 1 at year 0 yields [1, 0.2, 0] after one step with no extinction. Setting permeability to 0 yields [0.9, 0, 0]. An initially empty landscape remains empty.
+
+## Public actions and observations
+
+`model.create(options?)` and exported `create(options?)` validate with the shared `parseParameters`. Unknown keys, invalid primitive types and non-plain options throw TypeError; out-of-range or nonfinite numbers throw RangeError. The shared parser treats undefined descriptor values as defaults.
+
+`setVegetationQuality(value)` and `setPermeability(value)` validate through the canonical descriptors before changing settings. They affect the next step, retain current occupancy, tick and history, and are available headlessly. An invalid action preserves all state. Explicit undefined follows the parser's default behavior. No setup-only parameter is writable through these actions.
+
+`read()` returns detached frozen records: tick, parameters, patches (stable domain IDs, label, current occupancy and quality, last-step colonizationGain/extinctionLoss), corridors, total/mean occupancy, total last-step gains/losses, and history. Last-step flows start at zero and remain unchanged by live actions; they describe the preceding annual update, not a prediction under newly changed rules. Patch and edge ordering is stable. Edges have stable endpoint-derived IDs independent of process-global library identities.
+
+History uses public `storage.history({ capacity: 120 })`, records year 0 and each completed year, and retains the latest 120 samples oldest first. It stores mean occupancy only. Live edits do not rewrite or add past samples. Importing model/UI modules performs no setup, I/O, DOM work or scheduling.
+
+## Reuse and provenance
+
+Inspected checkout revision is recorded in `evidence/checks.md`.
+
+| Exact candidate | Decision |
+| --- | --- |
+| `models/preferential-attachment/model.ts`: Graph, World/run, Definition and parameter parsing | Reuse the public graph/clock pattern with plain canonical patch objects; no Agent is needed for fixed aggregate patches. Do not copy its stochastic attachment mechanism or third-party attribution. |
+| `models/neighborhood-heat-intervention/model.ts`: twoPhase and storage.history | Reuse public two-phase compute/commit and bounded history. Heat exchange/diffusion conserves a different quantity and cannot represent colonization/extinction. |
+| `models/neighborhood-heat/model.ts`: Grid.diffuse | Reject diffusion: occupancy probabilities are local demographic states, not a conserved scalar field. The corridor chain belongs in Graph. |
+| `city-library` public Graph.neighbors, World/run, twoPhase, storage.history | Selected existing primitives; no new library API or execution/state owner. Graph owns topology, patch objects own occupancy, World owns time, History owns detached measurements. |
+| External ecology packages or reference-model transfer | No dependency or copied model. Four elementary recurrence terms need no separate package. This is an original illustrative rule, not a fitted metapopulation model. |
+
+The UI uses only existing `defineUI(model, spec)`, indexedColor, network, line and inspector contracts. Labels and numeric occupancy supplement the fixed indexed palette. Scientific aggregates and history stay in model.ts. No custom Svelte, CSS, renderer, DSL or dependency is introduced.
+
+## Acceptance boundary
+
+Executable checks demonstrate the stated synthetic mechanism only. Required real-browser interactions, desktop/narrow light/dark screenshots, independent screenshot review and substantial independent review are pending central coordination. Shell checks cannot establish UI acceptance. No other new model is coupled to this one.

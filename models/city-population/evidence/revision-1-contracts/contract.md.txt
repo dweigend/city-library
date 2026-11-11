@@ -1,0 +1,54 @@
+# Population and Households contract
+
+Frozen before runtime implementation on 2026-11-10. The four scripts in `tests/public-contracts/city-population/` define setup, first-step accounting, live policy, and validation/snapshot behavior. They use the public model definition without private imports or mocks.
+
+## Inputs and time
+
+| Input | Default | Bounds | Meaning |
+| --- | --- | --- | --- |
+| initialPopulation | 1000 | integer 0–1000000 | Residents at setup |
+| birthRate | 0.1 | 0–0.2 | Births per beginning-of-year resident aged 20–39 per year |
+| deathRate | 0.1 | 0–1 | Uniform annual fraction, floored separately in each cohort |
+| annualMigration | 10 | integer −1000–1000 | Requested net residents per year |
+| migrationLimit | 5 | integer 0–1000 | Absolute annual migration bound |
+| householdSize | 3 | integer 1–6 | Maximum residents per synthetic household |
+
+One advance step is one year; tick begins at zero. Setup distributes residents equally over ages 0–99, with remainder residents assigned from age zero upward. The open age-100+ cohort starts empty. No random draws, timers, I/O, or initialization at import occur.
+
+## Annual ordering
+
+1. Compute births as floor(sum of beginning-of-year cohorts 20–39 × birthRate). This is an abstract fertility exposure across all residents, without sex or partnership attributes.
+2. In each beginning-of-year cohort, remove floor(residentCount × deathRate), then age survivors by one year. Ages 99 and 100+ merge into 100+. No survivor disappears at the age boundary.
+3. Add births to age zero; newborns do not face mortality that year.
+4. Clamp annualMigration to ±migrationLimit. Add immigrants at age 25. Remove emigrants oldest first, bounded by the surviving population plus births; no cohort becomes negative.
+5. Re-form anonymous households: fill groups up to householdSize, then one remainder group if needed. Every resident belongs to exactly one aggregate household. Record positive/negative change in household count as formed/dissolved households. These are net counts, not identity tracking.
+6. Advance tick and record a sample. Retain the latest 120 samples, including setup when within that window.
+
+`setPolicy(changes)` accepts only birthRate, deathRate, annualMigration, migrationLimit and householdSize. It validates the complete prospective policy before assignment and leaves time, cohorts, households and history unchanged. The policy takes effect next year. Unknown/setup-only keys throw TypeError; numeric range/nonfinite/fractional integer errors throw RangeError. `advance` uses shared validateStepCount. A year exceeding safe integer population accounting throws before its demographic commit; earlier completed years remain committed.
+
+Observations are detached and frozen, including cohorts, household-size bins, parameters and history. `accountingError` is current population minus initial population plus cumulative signed demographic flows: P − (P₀ + cumulativeBirthCount − cumulativeDeathCount + cumulativeNetMigration). Household accounting separately sums size × householdCount. All scientific quantities are computed in model.ts.
+
+## Exact assertions
+
+Default setup: 1000 residents, 10 in each age 0–99, zero at 100+, 334 households (333 size-three and one size-one), zero flows. Year one: births 20, deaths 100, migration +5, population 925, age-zero 20, age-25 14, age-100+ 9, 309 households, 25 net dissolutions. Year two: births 18, deaths 3, migration +5, population 945, age-one 18, age-100+ 18, 315 households, six net formations.
+
+Policy script: 100 initial residents with no births/deaths; migration −100 bounded to −7 leaves 93, oldest-first ages 94–100 emptied and age 93 retained, 47 households at size two. Removing the migration bound to 1000 empties the remaining 93 residents next year. Immigration +11 bounded to +4 then creates four age-25 residents and two households.
+
+## Reuse and provenance
+
+Original synthetic teaching model; no third-party model source or empirical calibration is transferred. Source checkout examined: `42a289785ee3c9879800d2dd7e8532d04032a7ab`.
+
+| Exact candidate | Decision |
+| --- | --- |
+| `city-library`: World.create / run | Reuse annual tick ownership and public execution. No per-resident Agent allocation is necessary for aggregate cohorts. |
+| `city-library`: storage.history | Reuse bounded detached numeric samples; no custom history buffer. |
+| `city-library`: measurements.define | Reuse numeric observation definition for population/households and accounting. |
+| `models/parameters.ts`: parseParameters / validateStepCount | Reuse canonical descriptors and step validation. Explicit policy-key allowlist rejects setup changes. |
+| `models/workplace-household-membership/model.ts` | Its Graph represents individual memberships and workplaces, not age counts or formation; reuse its headless/public-observation pattern only. No copied graph mechanism. |
+| `models/neighborhood-heat-intervention/model.ts` | Reuse explicit live-action and model-owned history pattern; Grid/twoPhase heat transport does not express demographics. |
+| `ui/index.ts`: defineUI / indexedColor | Reuse controls, bar/line plots and numeric monitors; no custom Svelte or styling. |
+| External demographic package / focused local arithmetic | No new dependency: 101 integer cohorts and anonymous packing need only small visible arithmetic rules. This is not a demographic projection engine. |
+
+There is no meaningful physical/network geometry in these aggregate inputs. Age-cohort and household-size bar plots show the actual structure rather than inventing residences or ties. Rates are illustrative and intentionally uncalibrated; flooring can suppress small-cohort flows. Households have no adult head, kinship, identity, housing capacity or persistent membership. Repacking represents a bounded formation mechanism, not measured household behavior. Coupling to other city models is outside this contract.
+
+Browser interaction, desktop/narrow light/dark screenshots and independent screenshot/design reviews remain pending central coordination. Headless assertions cannot establish UI acceptance or scientific validity.

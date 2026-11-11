@@ -1,0 +1,28 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-housing/model.ts";
+
+const instance = model.create();
+instance.advance();
+const before = instance.read();
+instance.setHousingAllowance(300);
+const changed = instance.read();
+assert.equal(changed.tick, 1);
+assert.equal(changed.parameters.housingAllowance, 300);
+assert.equal(changed.households[0]!.bid, 600);
+assert.deepEqual(changed.households.map(household => household.homeId), before.households.map(household => household.homeId));
+assert.deepEqual(changed.history, before.history);
+instance.advance();
+const after = instance.read();
+assert.equal(after.housedHouseholdCount, 4);
+assert.equal(after.unhousedHouseholdCount, 0);
+assert.equal(after.vacantHomeCount, 0);
+assert.ok(Math.abs(after.rent - 599.625) < 1e-9);
+assert.equal(after.displacedHouseholdCount, 0);
+
+const stopped = model.create({ maxHomeCount: 3 });
+stopped.advance();
+assert.equal(stopped.read().builtThisStepCount, 0);
+assert.equal(stopped.read().homeCount, 3);
+const disabled = model.create({ constructionLimit: 0 });
+disabled.advance();
+assert.equal(disabled.read().homeCount, 3);

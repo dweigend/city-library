@@ -1,0 +1,42 @@
+# Land Use Change contract
+
+Four public assertion scripts in `tests/public-contracts/city-land-use/` are frozen before runtime implementation. Their expected values and public syntax are the implementation gate.
+
+This original synthetic model has twelve one-hectare parcels on a hard-boundary 4 × 3 grid. Grid order is x fastest, then y. Stable model-local IDs are `parcel:0` through `parcel:11`. Initially parcels 0–3 are residential, 4–5 commercial and 6–11 green. Parcels 10 and 11 are protected. No randomness, external data or scientific calibration is used.
+
+| Input | Default | Range / unit |
+| --- | --- | --- |
+| residentialDemand | 6 | Integer 0–12 parcels (ha) |
+| commercialDemand | 3 | Integer 0–12 parcels (ha) |
+| conversionLimit | 2 | Integer 0–12 conversions per year |
+
+The two demands must sum to at most twelve. Green's target is the remaining area. One step is one year; tick starts at zero and advances even when no conversion is possible. Each conversion slot recomputes counts, chooses the largest positive target deficit (ties: residential, commercial, green), and converts the earliest unprotected parcel whose current use exceeds its target. If no eligible donor exists, the step stops converting. Parcels are never created, deleted, split or resized. Protection prevents every use change, including restoration. No neighborhood effect is implied by the map.
+
+Default counts `(residential, commercial, green)` are `(4,2,6)` at setup, `(6,2,4)` at year 1 and `(6,3,3)` at year 2. Year 1 converts parcels 6 and 7; year 2 converts parcel 8. Every observation sums to 12 ha. History includes setup and post-step samples, retaining the latest 121 samples. Interventions do not add history samples or advance time.
+
+`setDemand(changes)` accepts only partial residential/commercial demand data, validates the merged demand atomically, and preserves unspecified values. `setProtection(id, isProtected)` validates a known string ID and a boolean, and changes protection immediately. Both actions return void. Rejected input leaves state unchanged. `advance(stepCount = 1)` uses shared validation (integer 0–1,000,000). `read()` returns detached frozen parameters, parcels, area metrics, unmet residential/commercial demand, last-step conversion count and history. Reads consume no randomness and have no effects. Old snapshots never change. There is no terminal flag: future policies can change a settled allocation.
+
+## Reuse and provenance
+
+| Exact candidate | Decision |
+| --- | --- |
+| Public `Grid.create`, `World.create`, `run` from `city-library` | Reuse canonical parcel fields, membership and tick; no custom spatial topology or second clock. |
+| Public `storage.history` | Reuse bounded detached numeric samples; no custom history buffer. |
+| `models/definition.ts` and `models/parameters.ts` | Reuse Definition/Inputs and authoritative parseParameters/validateStepCount. |
+| `models/zoning-scenario-comparison/model.ts` | Compare parcel subject matter; its stochastic cap study has no live use conversion, so do not copy its domain mechanism. |
+| `models/stormwater-retention/model.ts` | Reuse the public grid/clock/history composition pattern; water balance is not a land allocation rule. |
+| `models/urban-suite-sprawl-effect/model.ts` | Different adapted urban mechanism and source terms; no code or scientific rules copied. |
+| `defineUI`, `indexedColor` from `ui/index.ts` | Reuse shared controls, spatial view, inspector, charts and central indexed palette. No custom Svelte or CSS. |
+
+The demand rule and defaults are original illustrative assumptions, not an adaptation of a published land-use model. No prediction, land-market equilibrium, zoning compliance, ecological quality or geographic validity is claimed. Demand is an exogenous target, not population or price. Protected uses can make targets infeasible; unmet demand remains explicit. Independent review and browser acceptance are separate pending gates.
+
+Reuse inspection baseline: `42a289785ee3c9879800d2dd7e8532d04032a7ab`. Polygon merge/split and external GIS packages are unnecessary for fixed equal-area cells; no dependency or library API was added. This implementation does not copy adapted reference-model code and introduces no source-specific third-party notices.
+
+Frozen script SHA-256 values (recorded before model.ts existed and checked unchanged after execution):
+
+```text
+2a9ae859249f6b931bf3c85121c1e1217842661ef3c99bb58fb4a85a50fbbe36  01-setup.ts
+31c9e65c8cba4c669d2f210f16f43df990b02f8a378ab28f5a83899e3a2ec63c  02-conservation.ts
+0384ad7a4fcdcef54c426f71f09c80ab9a375576382508e537f2316342768f25  03-policy.ts
+fe4e04064450971c90a7eab0134639032214efdce7f156bd4a706c7c03ea0baa  04-validation-snapshots.ts
+```

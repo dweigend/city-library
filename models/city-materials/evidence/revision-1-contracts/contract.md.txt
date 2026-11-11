@@ -1,0 +1,53 @@
+# Urban Material Cycles contract
+
+This original teaching model tracks a single aggregate waste stream. The four public scripts in `tests/public-contracts/city-materials/` were written and frozen before runtime implementation. They import the public model definition; no private state or mocks are used.
+
+## Inputs and time
+
+| Input | Default | Unit | Bounds | Live |
+| --- | ---: | --- | --- | --- |
+| wasteGeneration | 100 | kg/day | 0–1,000,000 | No |
+| collectionCapacity | 80 | kg/day | 0–1,000,000 | Yes |
+| reuseFraction | 0.25 | fraction of collected mass | 0–1 | Yes |
+| recyclingFraction | 0.5 | fraction remaining after reuse | 0–1 | Yes |
+| initialUncollected | 20 | kg | 0–1,000,000 | No |
+
+All inputs are finite real numbers. One step is one day; setup is tick zero with zero flows/totals and the initial uncollected stock. No stochastic mechanism or seed is needed. `advance(stepCount = 1)` accepts safe integers from 0 through 1,000,000. There is no automatic stop.
+
+## Daily ordering and accounting
+
+1. Add the day's generation to uncollected material.
+2. Collect the minimum of available material and collection capacity.
+3. Reuse `collected * reuseFraction`.
+4. Recycle `(collected - reused) * recyclingFraction`.
+5. Dispose of `collected - reused - recycled`; leave the uncollected stock for tomorrow.
+6. Advance the World tick and record the observation.
+
+Generation is an external inflow; reuse, recycling and disposal are terminal outflows across this model's boundary, not material returned as waste on a later day. Treatment has no separate capacity, delay or losses. Collection has no routing, geography, prioritization or composition. Mass is divisible kg, with ordinary floating-point arithmetic and no rounding. Conservation is `initialUncollected + totals.generated = uncollected + totals.reused + totals.recycled + totals.disposed`; `balanceError` is left minus right. For nonbinary fractions compare with floating-point tolerance.
+
+Default day 1: available 120, collected 80, reused 20, recycled 30, disposed 30, uncollected 40 kg. Day 2: uncollected 60; cumulative generation 200, reuse 40, recycling 60, disposal 60 kg. After day 2, change capacity to 140, reuse to 0.5 and recycling to 1: day 3 collects 140, reuses 70, recycles 70, disposes zero and leaves 20 kg. Totals are generation 300, reuse 110, recycling 130 and disposal 60 kg.
+
+## Public boundary
+
+`model.create(options)` and exported `create(options)` validate through shared `Inputs` and `parseParameters`. `setPolicy(changes)` accepts only plain own-data records containing any subset of the three live keys. Unknown keys/accessors fail with TypeError; invalid numeric ranges fail with RangeError. Validation is atomic. An action changes parameters immediately, without advancing time, rewriting flows or adding a history sample. Empty changes are allowed. Setup-only fields cannot be changed live.
+
+`read()` returns detached frozen parameters, last-day `flows`, cumulative `totals`, `uncollected`, `balanceError`, `tick`, and shared History samples. Reads have no side effects. History retains the latest 366 samples, including setup until evicted, in increasing tick order. Independent instances share no state. Model/UI imports create no instance, timers or I/O.
+
+## Reuse and provenance
+
+Compared at repository revision `42a289785ee3c9879800d2dd7e8532d04032a7ab`:
+
+| Candidate | Decision |
+| --- | --- |
+| `World`, `run` from `city-library` | Reuse daily execution/tick; no second clock. |
+| `storage.history` from `city-library` | Reuse bounded detached measurement history; no custom ring buffer. |
+| `models/parameters.ts`, `models/definition.ts` | Reuse canonical validation and plain public Definition/Inputs. |
+| `models/household-budget/model.ts` | Reference for a small original stock/flow model; do not copy its exposed mutable state. |
+| `models/scarce-resource/model.ts` | Compare bounded transfer mechanism; discrete applicant allocation does not fit divisible aggregate waste. |
+| `models/urban-suite-recycling/model.ts` | Reject direct reuse: stochastic land/resource/energy behavior and CC BY-NC-SA source adaptation do not describe kg conservation or collection limits. No source code or assets transferred. |
+| `Resource`, `Store`, `ServiceQueue` | Reject for this slice: asynchronous discrete requests and queue ownership add machinery without a treatment queue or facility service time. |
+| `Graph`, `Grid` | No domain topology is required; the UI's process network is a flow schematic, not a road network or spatial simulation. |
+| Shared `defineUI`, `indexedColor` | Reuse controls, process network, charts and central scientific palette; no custom components or CSS. |
+| External libraries | No dependency needed for five scalar flows and conservation arithmetic. |
+
+The mechanism and numbers are original illustrative assumptions. This is not an adaptation, calibrated municipal forecast or independently validated scientific model. No new library API or model coupling is introduced.

@@ -1,0 +1,28 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-materials/model.ts";
+
+const close = (actual: number, expected: number) => assert.ok(Math.abs(actual - expected) < 1e-9, `${actual} != ${expected}`);
+const instance = model.create();
+instance.advance();
+let state = instance.read();
+close(state.flows.generated, 100);
+close(state.flows.collected, 100);
+close(state.flows.reused, 10);
+close(state.flows.recycled, 36);
+close(state.flows.disposed, 54);
+assert.equal(state.uncollected, 0);
+instance.advance(14);
+state = instance.read();
+assert.equal(state.flows.generated, 250);
+close(state.uncollected, 650);
+instance.advance(45);
+state = instance.read();
+assert.equal(state.peakBacklog, 650);
+assert.equal(state.peakBacklogDay, 15);
+assert.equal(state.clearedDay, 48);
+close(state.totals.generated, 6750);
+close(state.totals.reused, 675);
+close(state.totals.recycled, 2430);
+close(state.totals.disposed, 3645);
+for (const sample of state.history) assert.ok(Math.abs(sample.values.balanceError!) < 1e-9);
+console.log("city-materials pulse balance passed");

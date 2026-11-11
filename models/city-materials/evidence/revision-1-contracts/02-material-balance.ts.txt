@@ -1,0 +1,25 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-materials/model.ts";
+
+const instance = model.create();
+instance.advance();
+let state = instance.read();
+assert.equal(state.tick, 1);
+assert.equal(state.uncollected, 40);
+assert.deepEqual(state.flows, { generated: 100, collected: 80, reused: 20, recycled: 30, disposed: 30 });
+assert.deepEqual(state.totals, { generated: 100, reused: 20, recycled: 30, disposed: 30 });
+instance.advance();
+state = instance.read();
+assert.equal(state.tick, 2);
+assert.equal(state.uncollected, 60);
+assert.deepEqual(state.totals, { generated: 200, reused: 40, recycled: 60, disposed: 60 });
+assert.deepEqual(state.history.map(sample => sample.tick), [0, 1, 2]);
+for (let day = 0; day < 50; day++) {
+  instance.advance();
+  const observed = instance.read();
+  assert.equal(observed.balanceError, 0);
+  assert.equal(20 + observed.totals.generated,
+    observed.uncollected + observed.totals.reused + observed.totals.recycled + observed.totals.disposed);
+  assert.equal(observed.flows.collected, observed.flows.reused + observed.flows.recycled + observed.flows.disposed);
+}
+console.log("city-materials balance passed");

@@ -1,0 +1,14 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-daily-activities/model.ts";
+const instance = model.create();
+const state = instance.read();
+assert.deepEqual(state.parameters, { householdCount: 2, remoteWork: false });
+assert.equal(state.tick, 0);
+assert.equal(state.hourOfDay, 0);
+assert.equal(state.residentCount, 4);
+assert.equal(state.atHomeCount, 4);
+assert.equal(state.tripCount, 0);
+assert.equal(state.accountedPersonHours, 0);
+assert.deepEqual(state.residents.map(person => person.id), ["0:adult", "0:child", "1:adult", "1:child"]);
+assert.equal(state.history.length, 1);
+console.log("daily activities setup passed");

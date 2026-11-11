@@ -1,0 +1,20 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-heat/model.ts";
+
+const temperatures = (state: ReturnType<ReturnType<typeof model.create>["read"]>) => state.blocks.map(block => Number(block.temperatureC.toFixed(2)));
+const instance = model.create();
+instance.advance(28);
+let state = instance.read();
+assert.equal(state.clockHour, 4);
+assert.deepEqual(temperatures(state), [30.37, 28.52, 25.89]);
+assert.equal(state.solarNowWm2, 0);
+instance.advance(12);
+state = instance.read();
+assert.deepEqual(temperatures(state), [41.33, 39.74, 38.08]);
+assert.ok(state.blocks[0]!.absorbedSolarWm2 > state.blocks[2]!.absorbedSolarWm2);
+assert.ok(state.blocks[2]!.evapotranspirationWm2 > 0);
+assert.equal(state.blocks[0]!.evapotranspirationWm2, 0);
+for (const sample of state.history) assert.ok(Math.abs(sample.values.balanceResidualJ!) < 1e-3);
+instance.advance(8);
+assert.ok(Math.abs(instance.read().irrigationWaterKg - 506.58) < 0.01);
+console.log("city-heat day and night budget passed");

@@ -1,0 +1,21 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-air-noise/model.ts";
+
+const instance = model.create();
+const state = instance.read();
+assert.equal(state.tick, 0);
+assert.deepEqual(state.parameters, { trafficVehiclesPerHour: 60, transportFraction: 0.5, decayFraction: 0.25 });
+assert.equal(state.emissionMicrogramsPerMinute, 2000);
+assert.equal(state.retainedMassMicrograms, 0);
+assert.deepEqual(state.receptors.map(receptor => receptor.id), ["receptor:0", "receptor:1", "receptor:2"]);
+assert.deepEqual(state.receptors.map(receptor => receptor.xMeters), [0, 100, 200]);
+assert.equal(state.sources.length, 2);
+assert.ok(Math.abs(state.maximumNoiseDecibels - 10 * Math.log10(2010000)) < 1e-10);
+assert.ok(state.receptors[0]!.noiseDecibels > state.receptors[1]!.noiseDecibels);
+assert.ok(state.receptors[1]!.noiseDecibels > state.receptors[2]!.noiseDecibels);
+assert.deepEqual(state.receptors.map(receptor => receptor.concentrationExposureMicrogramMinutesPerCubicMeter), [0, 0, 0]);
+assert.equal(state.history.length, 1);
+assert.deepEqual(instance.read(), state);
+instance.advance(0);
+assert.deepEqual(instance.read(), state);
+console.log("city-air-noise setup: passed");

@@ -1,0 +1,26 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-economy/model.ts";
+
+const instance = model.create();
+instance.advance();
+const before = instance.read();
+instance.setExternalDemand(0);
+let state = instance.read();
+assert.equal(state.tick, 1);
+assert.equal(state.nextDemand, 20);
+assert.equal(state.totalCash, before.totalCash);
+assert.deepEqual(state.households, before.households);
+assert.deepEqual(state.history, before.history);
+instance.advance();
+state = instance.read();
+assert.deepEqual([state.plannedDemand, state.jobCount, state.employedCount, state.payroll, state.consumption], [20, 2, 2, 20, 10]);
+assert.deepEqual(state.households.map(item => item.employerId), ["firm:1", null, "firm:2", null, null, null, null, null]);
+assert.equal(state.totalCash, 400);
+instance.advance();
+state = instance.read();
+assert.deepEqual([state.jobCount, state.employedCount, state.payroll, state.consumption, state.nextDemand], [0, 0, 0, 0, 0]);
+assert.equal(state.totalCash, 400);
+instance.setExternalDemand(80);
+instance.advance();
+assert.deepEqual([instance.read().jobCount, instance.read().employedCount, instance.read().vacancyCount], [8, 8, 0]);
+assert.equal(instance.read().totalCash, 480);

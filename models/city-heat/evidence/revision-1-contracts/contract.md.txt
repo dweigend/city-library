@@ -1,0 +1,59 @@
+# Urban Heat contract
+
+Original synthetic teaching model. This contract and four executable scripts were written before `model.ts`; their asserted expectations are frozen. No empirical calibration or physical equivalence is claimed.
+
+## Setup and public boundary
+
+`model.create(options?)` creates three independent equal-area blocks on a hard-boundary 3×1 Grid. West-to-east order is sealed, mixed and planted, with sealed fractions 1, 0.5 and 0. Each block is 100 m² and has effective areal heat capacity 360,000 J/(m² K). Initial temperatures are equal. Stable public IDs are `block-0`, `block-1`, `block-2`, independent of process-global Grid identity. Grid fields alone own temperatures and completed-interval fluxes; World owns tick. No agents, neighboring exchange, stochastic draws or implicit timers are used.
+
+| Input | Default | Allowed values | Unit |
+| --- | --- | --- | --- |
+| airTemperatureC | 30 | −20…45 | °C |
+| initialTemperatureC | 30 | −20…60 | °C |
+| solarFluxWm2 | 600 | 0…1000 | W/m² |
+| shadeFraction | 0.25 | 0…1 | fraction |
+| waterAvailability | 0.5 | 0…1 | fraction |
+
+Numeric inputs accept finite values throughout their ranges without imposed granularity. Setup rejects unknown keys and nonnumeric inputs through `parseParameters`. Imports allocate no model state or UI session.
+
+## Hourly update and budget
+
+`advance(steps = 1)` accepts integer counts 0…1,000,000 through `validateStepCount`. Each successful step represents exactly 3,600 seconds and advances World tick once. For every block, use the temperature at the start of the interval:
+
+- Absorptivity = `0.6 + 0.2 * sealedFraction`.
+- Absorbed solar flux = `solarFluxWm2 * absorptivity * (1 - shadeFraction)`.
+- Evapotranspiration flux = `100 * (1 - sealedFraction) * waterAvailability` W/m².
+- Sensible heat loss = `20 * (temperatureC - airTemperatureC)` W/m²; negative means heat enters from air.
+- Net flux = absorbed solar − evapotranspiration − sensible loss.
+- Next temperature = old temperature + net flux × 3,600 / 360,000.
+
+Fluxes are evaluated explicitly, then temperatures are updated. Blocks have no coupling, so traversal order cannot affect results. Shade reduces solar input only; evapotranspiration assumes constant externally replenished water and is independent of shade. Constant forcing persists across all hours; there is no fabricated day/night cycle.
+
+The update equals `0.8 * oldTemperature + 0.2 * equilibriumTemperature`. Allowed forcing puts equilibrium in [−25, 85] °C. Initial temperatures also lie in this interval, so every hourly result stays bounded without clipping. This is a numerical property of this synthetic rule, not a physiological or meteorological limit.
+
+Completed-interval `netEnergyJ` sums net flux × seconds × area across blocks. `cumulativeNetEnergyJ` accumulates those intervals. `storedEnergyJ` is total heat relative to setup temperature: capacity × area × sum of temperature changes. `balanceResidualJ` is stored minus cumulative net energy; floating-point tolerance is 0.01 J for the checked long runs. This is an open energy budget, not a closed temperature-conservation model. Setup fluxes and both accumulated energies are zero.
+
+Default first-hour temperatures: [33.6, 32.9, 32.2] °C; absorbed fluxes [360, 315, 270], evaporation [0, 25, 50], sensible losses [0, 0, 0] W/m²; stored energy 313,200,000 J. Second-hour temperatures: [36.48, 35.22, 33.96]; sensible losses [72, 58, 44]; net energy 250,560,000 J; stored energy 563,760,000 J.
+
+## Policy and observation
+
+`setPolicy({ shadeFraction?, waterAvailability? })` validates the entire plain data record before changing either value. Unknown keys, explicit undefined, accessors and nonrecords throw TypeError; nonfinite or out-of-range numeric values throw RangeError. Empty changes do nothing. Setup-only inputs cannot be changed by this action. Policy changes neither tick nor temperatures nor history. Completed fluxes continue to describe the previous interval until the next advance.
+
+At full shade and water availability 1, first-hour temperatures are [30, 29.5, 29]. Turning water availability to zero then gives [30, 29.6, 29.2]. Failed changes and step counts leave state unchanged.
+
+`read()` returns detached block records, canonical parameter values, mean temperature, completed-interval energy, accumulated energy and budget residual. History uses public `storage.history`, holds setup plus the last 168 hourly samples (169 maximum), oldest first, and records block and mean temperatures after tick increments. Reads never advance time. Frozen parameter/history values may reject writes; changes to block snapshots cannot affect the instance. Identical inputs and actions give identical observations; no seed is needed.
+
+## Reuse and provenance
+
+Inspected repository revision: `42a289785ee3c9879800d2dd7e8532d04032a7ab`.
+
+| Exact candidate | Decision |
+| --- | --- |
+| `models/neighborhood-heat/model.ts`: `Grid.diffuse` | Closed diffusion conserves a temperature sum; it cannot express this open surface budget. Reuse the public Grid topology and World execution pattern, not its equation. |
+| `models/neighborhood-heat-intervention/model.ts`: `twoPhase`, `measurements.define`, `storage.history` | Neighbor exchange and abstract heat-index cooling have different semantics. No coupled update requires twoPhase; use storage.history directly for bounded scientific history. |
+| `models/household-energy-demand/model.ts`: `run`, `parseParameters`, `validateStepCount` | Reuse hourly run/record ordering and canonical validation through existing public contracts. No demand equations are transferred. |
+| Public `continuous.linear` | Reuse for explicit temperature integration with rate in °C/s and duration in seconds. It supplies validated linear arithmetic, not heat physics. |
+| External ODE or climate libraries | No package is required for three independent fixed-step linear balances; adding a solver or dependency would add scope without improving this teaching contract. |
+| Focused original rule | New model-local absorptivity, prescribed evaporation and sensible-exchange equations, constants and synthetic three-block layout; no copied external source or adapted third-party model. |
+
+The UI uses existing `defineUI(model, spec)`, keyed live setters, spatial cells, line series, numeric monitors and the central indexed palette. No custom Svelte, CSS, shared API or package changes are required. Browser evidence and independent screenshot review remain separate acceptance gates.

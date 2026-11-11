@@ -1,0 +1,44 @@
+# Neighborhood Services contract
+
+Frozen before runtime implementation on 2026-11-10. The four numbered scripts in `tests/public-contracts/city-services/` are the executable public contract. Assertions stay fixed after this gate.
+
+## Mechanism and units
+
+This original synthetic model asks how finite daily capacity and an inclusive distance cutoff affect access. Four households have stable domain IDs `household:1` through `household:4`, at (0,1), (1,1), (2,1), (3,1) km. Each demands one school place, one clinic visit and one shop visit per model day. These are illustrative daily service units, not people, enrollment or clinical appointments with duration. School, clinic and shop each have a west facility at (0,0) and an east facility at (3,0). They are co-located service hubs. Space is planar, hard-boundary, nonwrapping; distance is straight-line km, not road distance.
+
+`capacityPerFacility` defaults to 1, integer 0–4 service units/facility/day. `maxDistanceKm` defaults to 1.5, finite 0–10 km. Setup has tick 0, six unused facilities, four households, no evaluated requests and zero daily/cumulative demand, served, unmet and distances. History includes the zero setup sample. Each successful step is one day, with fresh capacity and twelve new requests. Demand never carries over. `advance(0)` changes nothing. No randomness or seed is needed.
+
+Process kinds school, clinic, shop, then households 1–4. Choose the nearest facility of that kind with positive remaining capacity inside the cutoff; distance ties use west before east. A failed request is `distance` if no facility is within range (regardless of capacity), otherwise `capacity`. A served request has `status: served`, facility ID and actual distance; unmet requests have null facility ID and null distance. Requests remain in kind/household order. This fixed priority can systematically disadvantage later households; it is not an optimal or equitable assignment solver.
+
+Daily conservation: served + unmet = demand = 12 after a step. Facility used never exceeds capacity. Per-kind served equals its two facility uses. `totalDistanceKm` sums distances of served requests for the last day; `meanDistanceKm` divides by served, or is zero when none served. These names do not imply cumulative distance. `totalDemandCount`, `totalServedCount` and `totalUnmetCount` are cumulative across days. History retains the latest 120 samples, recording daily demand, served, unmet and mean distance after every day.
+
+## Frozen expected values
+
+Default first day: for each kind, households 1 and 3 receive west and east respectively; 2 and 4 are unmet due to capacity. Served = 6, unmet = 6, total distance = 3(1 + √2) km, mean = (1 + √2)/2 km. Repeated days have the same outcomes; day 3 cumulative demand/served/unmet = 36/18/18.
+
+`setCapacityPerFacility(2)` validates immediately but affects the next day. Last-day requests, facility capacity/usage, metrics and history remain intact; `parameters` shows the next-day policy. The following day serves all twelve with total distance 3(2 + 2√2) km. Then `setMaxDistanceKm(1)` serves only households 1 and 4 for every kind: served/unmet 6/6 and mean 1 km. Setting capacity to zero on the following day serves none: 0/12 and zero distance. Across those four days cumulative served/unmet = 24/24.
+
+Public actions are these two setters and `advance(stepCount = 1)`. Invalid policies throw through canonical parameter validation before mutation; unknown options and wrong types throw TypeError, invalid finite/range/integer values throw RangeError. Step count must be an integer from 0 to 1,000,000. Each instance owns its World, parameters, allocations and History. `read()` is inert and returns detached data throughout; snapshots never expose Resource tickets or live objects. Domain IDs are instance-local, deterministic strings. No import starts a model, timer or I/O.
+
+## Reuse and provenance
+
+Inspected checkout revision: `42a289785ee3c9879800d2dd7e8532d04032a7ab`.
+
+| Exact candidate | Decision and adaptation |
+| --- | --- |
+| `city-library` World.create / run | Reuse the single tick owner; a daily procedure is one run callback. No second clock. |
+| `city-library` geometry.distance | Reuse Euclidean geometry with explicit hard-boundary Space. Do not implement distance again. |
+| `city-library` Resource.create / request / available / used / release | Reuse counted capacity for each daily facility; request only when available, so no queues/backlog are created. Copy daily results and release all granted tickets after allocation. |
+| `city-library` storage.history | Reuse bounded, detached scientific samples, capacity 120. |
+| `models/urban-tree-watering/model.ts` | Reuse the public authoring pattern: Definition/Inputs, parseParameters, validateStepCount, World/run and History. Its drought allocation and stochastic setup do not express service access; do not copy them. |
+| `models/des-elevator/model.ts` | Resource use is a suitable capacity example. Agenda, ServiceQueue, physical motion and passenger state are unnecessary for daily access allocation. |
+| Graph routing / Grid / Agent / Random | Not used: no road topology, cell process, moving agents or stochastic rule in this slice. Typed fixed household records suffice. |
+| External allocation packages | No dependency added. Six facilities and twelve unit requests need only a small nearest-available rule; no global optimization is claimed. |
+
+This is an original City Library teaching mechanism, not an adaptation of a third-party scientific model. No transferred code, dataset, empirical calibration or equivalence claim. Existing public APIs and authoring patterns retain their repository provenance. No new library API, DSL, styling, Svelte component or dependency is introduced.
+
+## UI and limits
+
+The shared UI shows geographic household/hub positions and served connections, daily served/unmet and mean distance history, facility usage, and numeric monitors. Domain calculations remain headless. Scientific colors use the central indexed palette. Two live controls call the validated actions; they apply on the next day.
+
+No networks, travel times, socioeconomic variation, catchment boundaries, recurring enrollment, facility siting, demand growth or persistent waiting is modeled. School, clinic and shop demand use the same deliberately simplified rule. Technical assertions do not establish scientific validity. Browser interaction checks, desktop/narrow light/dark screenshots and independent screenshot review are pending central coordination; UI acceptance remains open.

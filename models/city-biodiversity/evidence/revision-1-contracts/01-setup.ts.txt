@@ -1,0 +1,23 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-biodiversity/model.ts";
+
+assert.equal(model.title, "Urban Habitat Connectivity");
+const instance = model.create();
+const state = instance.read();
+assert.equal(state.tick, 0);
+assert.deepEqual(state.parameters, {
+  initialOccupancy: 1, vegetationQuality: 0.5, dispersalRate: 0.4,
+  extinctionRate: 0.2, permeability: 1,
+});
+assert.deepEqual(state.patches.map(patch => patch.id), ["west", "middle", "east"]);
+assert.deepEqual(state.patches.map(patch => patch.occupancy), [1, 0, 0]);
+assert.deepEqual(state.edges.map(edge => [edge.from, edge.to]), [["west", "middle"], ["middle", "east"]]);
+assert.equal(state.totalOccupancy, 1);
+assert.equal(state.meanOccupancy, 1 / 3);
+assert.equal(state.colonizationGain, 0);
+assert.equal(state.extinctionLoss, 0);
+assert.equal(state.history.length, 1);
+assert.equal(state.history[0]?.tick, 0);
+instance.advance(0);
+assert.deepEqual(instance.read(), state);
+console.log("city-biodiversity setup passed");

@@ -1,0 +1,36 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-materials/model.ts";
+
+assert.throws(() => model.create({ wasteGeneration: -1 }), RangeError);
+assert.throws(() => model.create({ reuseFraction: 1.1 }), RangeError);
+assert.throws(() => model.create({ collectionCapacity: NaN }), RangeError);
+assert.throws(() => model.create({ unknown: 1 } as never), TypeError);
+const first = model.create();
+const second = model.create();
+const snapshot = first.read();
+for (const stepCount of [-1, 0.5, Infinity, 1_000_001]) {
+  assert.throws(() => first.advance(stepCount), RangeError);
+}
+assert.throws(() => first.setPolicy({ wasteGeneration: 2 } as never), TypeError);
+assert.throws(() => first.setPolicy({ collectionCapacity: 140, reuseFraction: -1 }), RangeError);
+assert.throws(() => first.setPolicy({ get reuseFraction(): number { throw Error("getter executed"); } }), TypeError);
+assert.deepEqual(first.read(), snapshot);
+first.advance(10);
+second.advance(10);
+assert.deepEqual(first.read(), second.read());
+assert.equal(snapshot.tick, 0);
+assert.equal(snapshot.uncollected, 20);
+assert.equal(snapshot.history.length, 1);
+assert.ok(Object.isFrozen(snapshot));
+assert.ok(Object.isFrozen(snapshot.parameters));
+assert.ok(Object.isFrozen(snapshot.totals));
+assert.ok(Object.isFrozen(snapshot.flows));
+assert.ok(Object.isFrozen(snapshot.history[0]!.values));
+first.setPolicy({ collectionCapacity: 0 });
+first.advance();
+assert.equal(second.read().tick, 10);
+assert.equal(second.read().parameters.collectionCapacity, 80);
+second.advance(400);
+assert.equal(second.read().history.length, 366);
+assert.equal(second.read().history[0]!.tick, 45);
+console.log("city-materials validation and observations passed");

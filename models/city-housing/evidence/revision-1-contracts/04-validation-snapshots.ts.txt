@@ -1,0 +1,36 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-housing/model.ts";
+
+assert.throws(() => model.create({ householdCount: 0 }), RangeError);
+assert.throws(() => model.create({ initialHomeCount: 4, maxHomeCount: 3 }), RangeError);
+assert.throws(() => model.create({ rentAdjustmentRate: NaN }), RangeError);
+assert.throws(() => model.create({ housingAllowance: Infinity }), RangeError);
+assert.throws(() => model.create({ constructionLimit: 0.5 }), RangeError);
+assert.throws(() => model.create({ unknown: 1 } as never), TypeError);
+const first = model.create();
+const second = model.create();
+const snapshot = first.read();
+for (const invalid of [-1, 0.5, NaN, Infinity, 1_000_001]) {
+  assert.throws(() => first.advance(invalid), RangeError);
+  assert.deepEqual(first.read(), snapshot);
+}
+for (const invalid of [-1, NaN, Infinity, 5001]) {
+  assert.throws(() => first.setHousingAllowance(invalid), RangeError);
+  assert.deepEqual(first.read(), snapshot);
+}
+const detached = first.read();
+assert.notEqual(detached.households, snapshot.households);
+assert.notEqual(detached.households[0], snapshot.households[0]);
+assert.notEqual(detached.homes, snapshot.homes);
+assert.notEqual(detached.history[0], snapshot.history[0]);
+assert.equal(Reflect.set(detached.households[0]!, "homeId", "home-1"), false);
+assert.equal(Reflect.set(detached.homes[0]!, "id", "changed"), false);
+assert.equal(Reflect.set(detached.parameters, "housingAllowance", 400), false);
+assert.deepEqual(first.read(), snapshot);
+first.advance(10);
+assert.deepEqual(second.read(), snapshot);
+second.advance(10);
+assert.deepEqual(first.read(), second.read());
+assert.equal(snapshot.tick, 0);
+assert.equal(snapshot.homeCount, 3);
+assert.equal(snapshot.history.length, 1);

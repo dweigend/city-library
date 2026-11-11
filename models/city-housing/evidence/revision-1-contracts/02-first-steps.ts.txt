@@ -1,0 +1,38 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-housing/model.ts";
+
+const instance = model.create();
+instance.advance();
+let state = instance.read();
+assert.equal(state.tick, 1);
+assert.ok(Math.abs(state.rent - 615) < 1e-9);
+assert.equal(state.homeCount, 4);
+assert.equal(state.housedHouseholdCount, 2);
+assert.equal(state.unhousedHouseholdCount, 2);
+assert.equal(state.vacantHomeCount, 2);
+assert.equal(state.displacedThisStepCount, 1);
+assert.equal(state.displacedHouseholdCount, 1);
+assert.equal(state.households[1]!.status, "displaced");
+assert.equal(state.builtThisStepCount, 1);
+instance.advance();
+state = instance.read();
+assert.ok(Math.abs(state.rent - 599.625) < 1e-9);
+assert.equal(state.homeCount, 4);
+assert.equal(state.housedHouseholdCount, 3);
+assert.equal(state.vacantHomeCount, 1);
+assert.equal(state.unhousedHouseholdCount, 1);
+assert.equal(state.displacedThisStepCount, 0);
+assert.equal(state.displacedHouseholdCount, 0);
+assert.equal(state.builtThisStepCount, 0);
+for (let month = 0; month < 240; month += 1) {
+  state = instance.read();
+  assert.equal(state.housedHouseholdCount + state.unhousedHouseholdCount, state.parameters.householdCount);
+  assert.equal(state.housedHouseholdCount + state.vacantHomeCount, state.homeCount);
+  const occupied = state.households.flatMap(household => household.homeId === null ? [] : [household.homeId]);
+  assert.equal(new Set(occupied).size, occupied.length);
+  assert.ok(state.homeCount <= state.parameters.maxHomeCount);
+  assert.ok(state.builtThisStepCount <= state.parameters.constructionLimit);
+  assert.ok(state.households.every(household => household.homeId === null || household.bid >= state.rent));
+  instance.advance();
+}
+assert.equal(instance.read().history.length, 120);

@@ -1,0 +1,22 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-heat/model.ts";
+
+const control = model.create();
+const shaded = model.create();
+shaded.setPolicy({ shadeFraction: 1, waterAvailability: 1 });
+assert.equal(shaded.read().tick, 0);
+assert.equal(shaded.read().history.length, 1);
+assert.deepEqual(shaded.read().blocks.map(block => block.temperatureC), [30, 30, 30]);
+shaded.advance();
+assert.deepEqual(shaded.read().blocks.map(block => block.temperatureC), [30, 29.5, 29]);
+assert.equal(shaded.read().parameters.shadeFraction, 1);
+control.advance();
+assert.ok(shaded.read().meanTemperatureC < control.read().meanTemperatureC);
+const before = shaded.read();
+assert.throws(() => shaded.setPolicy({ shadeFraction: 0, waterAvailability: 2 }), RangeError);
+assert.deepEqual(shaded.read(), before);
+shaded.setPolicy({ waterAvailability: 0 });
+shaded.advance();
+assert.deepEqual(shaded.read().blocks.map(block => block.temperatureC), [30, 29.6, 29.2]);
+assert.ok(Math.abs(shaded.read().balanceResidualJ) < 1e-5);
+console.log("city-heat policy passed");
