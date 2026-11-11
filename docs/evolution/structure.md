@@ -1,6 +1,8 @@
 # Repository structure
 
-Status: **accepted by the owner on 2026-11-11** as the target structure. No files have moved yet; the migration order below applies. Independent analyses by Opus 5.5 and GPT-6 Astra informed this page, and both reached the same core result.
+Status: **accepted by the owner on 2026-11-11** as the target structure. No files have moved yet; the [migration order](#migration-order) applies. The final section, [analyses compared](#analyses-compared), is the record of how the decision was reached. Terms follow the [status legend](README.md#status-legend).
+
+This page owns folders, import rules and the migration order. Independent analyses by Opus 5.5 and GPT-6 Astra informed it, and both reached the same core result. The conceptual layers that these folders hold are described in [layers and API](layers-and-api.md#layers); the design principles are in [principles](principles.md).
 
 ## Principles behind the structure
 
@@ -99,9 +101,11 @@ The city subsystem names are examples of expected subsystems. Each one appears o
 5. Split out `polygon-layout`, and move the cross-domain adapters (grid occupancy, layout merge, studies).
 6. Rename and move folders last: `library/` → `library-core/`, `ui/` → `ui-web/`. Update consumers and path records together.
 
-The NetLogo archive decision ([refactoring](refactoring.md)) should come before folder moves, so that frozen evidence is not churned twice.
+The NetLogo archive decision ([refactoring](refactoring.md#options-for-the-historical-material), [open question 1](roadmap.md#open-questions)) should come before folder moves, so that frozen evidence is not churned twice.
 
 ## Analyses compared
+
+Record of the analyses behind the accepted decision.
 
 | Question | Opus 5.5 | GPT-6 Astra | Decision |
 |---|---|---|---|

@@ -1,6 +1,6 @@
 # Cherry-picks from city_game
 
-Status: brainstorming input. On 2026-11-10 a research thread (GPT 6.1 Sol with subagents) read the local `city_game` repository without changing it. Prototypes were read, not re-run. Maturity describes the source state; it does not approve anything for adoption.
+Status: **input**. Terms follow the [status legend](README.md#status-legend). On 2026-11-10 a research thread (GPT 6.1 Sol with subagents) read the local `city_game` repository without changing it. Prototypes were read, not re-run. Maturity describes the source state; it does not approve anything for adoption.
 
 city-library is the base. `city_game` mostly holds experiments in generative architecture and serves only as a quarry for single ideas. Every pick must be adapted to the [principles](principles.md); no prototype is ported as a template.
 
@@ -57,7 +57,15 @@ The 27 planned experiments and 4 drafts in the `city_game` catalog have descript
 
 ## Open questions from the research
 
-1. Are clusters only design groups of buildings, or do they also carry shared services and game rules?
-2. Should replacing an occupied object be rejected by default at first, or does the first game already need explicit relocation?
-3. Do the order matcher and transfers belong in the first economy capability, or are a budget and simple resource flows enough?
-4. Which generator results need persistent identity, and which stay descriptions that can be recomputed at any time?
+The four questions this research raised are now part of the single list in the [roadmap](roadmap.md#open-questions), as questions 11 to 14: clusters and their rules, replacing occupied objects, the scope of the first economy capability, and persistent identity of generator results.
+
+## Related decisions in the API specification
+
+Some picks touch choices the [API specification](../agent-loom/api-table.md#open-decisions) has already defaulted:
+
+| Pick | Specification default |
+| --- | --- |
+| Selection weights without randomness | No new API: `random.sample(source, { weight })` draws by weight; weight derivation stays a plain function in the system ("Selection weights"). |
+| Supply per connected component | Planned as the `EnergySupply` city system. |
+| Atomic transfer sequence | Planned `Budget` with integer money. |
+| Planned projects, visible blocking reasons | Roads, zones and growth are not proposed yet; no subsystem folder exists ("Roads, zones and growth"). |

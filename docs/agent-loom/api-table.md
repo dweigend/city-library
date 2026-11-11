@@ -7620,7 +7620,7 @@ These choices need an owner decision. Entries in this inventory apply the defaul
 | Question | Default applied here | Alternative |
 | --- | --- | --- |
 | Observation method | Library objects use `observe()`; the model contract keeps `read()` until a recorded naming migration. | Migrate `ModelInstance.read` to `observe` now, together with every model and `defineUI`. |
-| Factory style for systems | City systems use `Name.create(options)`, for example `Budget.create`. | The `createRoads` / `createBudget` style of the [layers-and-api](../evolution/layers-and-api.md) sketch. |
+| Factory style for systems | City systems use `Name.create(options)`, for example `Budget.create`. | Free factory functions such as `createRoads` / `createBudget`; the [principles](../evolution/principles.md) record this style as superseded. |
 | Parcel vocabulary | `ParcelShape` stays as delivered. | A neutral rename such as `PolygonShape` (roadmap order 2), migrated with all consumers. |
 | Home of Input and limits | Both areas keep `Target: open`. | Input bindings in `world-composition`; limits split per owning module. |
 | Topology ownership | Square and cubic grids stay in `grid`; finite layouts and `topology` belong to `polygon-layout`. | Keep all topology in `grid` and accept the geometry ↔ grid link. |

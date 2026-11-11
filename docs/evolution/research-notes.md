@@ -1,6 +1,6 @@
 # Research notes
 
-Status: brainstorming input. A small research agent collected these notes on 2026-11-10 from web search results. Most details come from search snippets, not from the full pages, and are **unverified**. Check them before relying on them.
+Status: **input**, unverified. Terms follow the [status legend](README.md#status-legend). A small research agent collected these notes on 2026-11-10 from web search results. Most details come from search snippets, not from the full pages, and are **unverified**. Check them before relying on them.
 
 ## Existing engines and cores
 
