@@ -1,6 +1,6 @@
 # What works today
 
-This page is the starting point for checking whether a library operation is available. It is not a separate source of truth: an operation counts as available only when its public export, exact contract, asserted public example and an executed check agree. The [package entry](../../index.ts) lists the exports, and the [Agent Loom specification](../agent-loom/README.md) defines the broader target. A target signature is not a promise that the operation is available today.
+This page is the starting point for checking whether a library operation is available. It is not a separate source of truth: an operation counts as available only when its public export, exact contract, asserted public example and an executed check agree. The [package entry](../../index.ts) lists the exports, and the [API specification](../agent-loom/README.md) defines the broader target. A target signature is not a promise that the operation is available today.
 
 Three other questions have their own owners. UI availability comes from `ui/index.ts` and the [UI contract](../ui/README.md), not from the root export. Model acceptance is tracked in the [catalog ledger](../../models/catalog/progress.json). Library availability and scientific validation of a model are different axes.
 
@@ -26,7 +26,7 @@ Run `bun run check` to verify configured types, tests, public examples, build an
 
 ## Required target
 
-The specification covers 309 operation/type entries across 16 reference areas. Every target entry needs a public export, explicit behavior contract, executable public example and relevant verification before it can be called complete. Existing capability-level coverage does not establish full Agent Loom parity.
+The specification covers 309 operation/type entries across 16 reference areas. Every target entry needs a public export, explicit behavior contract, executable public example and relevant verification before it can be called complete. Existing capability-level coverage does not establish full core parity.
 
 Broader requirements include complete compatibility profiles, paths and routing variants, generic Input, advanced study binding/transport/continuation, codecs and supported complete-state continuation. Bounded History and serial studies do not imply those broader capabilities. Check the public exports and operation reference when defining the next capability; do not infer missing operations from directory scaffolding or mark an entire reference area complete from one implementation.
 

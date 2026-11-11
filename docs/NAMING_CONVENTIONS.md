@@ -14,11 +14,13 @@ Migrate a public name together with its callers, exports, documentation and chec
 
 Write repository content, identifiers, UI labels and commits in English. Discussions may use German. Prefer an established domain word over an abbreviation or a generic infrastructure name. A resident or vehicle is more expressive than a generic agent when the model supplies that meaning. Preserve established scientific concepts and algorithm names.
 
+Do not coin proper names for parts of the system; name a part after what it is or does. City Library names the project; its parts are the core, city systems, models, studies and the UI. "Agent Loom" was a working title for the core: current documentation says core, while historical records, frozen evidence and serialized identifiers keep the old name. Agent Lab remains the browser application's visible label and folder name until a descriptive replacement is decided together with its UI and code.
+
 | Meaning | Canonical name |
 | --- | --- |
 | Overall project and package | City Library; `city-library` |
-| Headless modeling core | Agent Loom |
-| Browser interface | Agent Lab |
+| Headless modeling core | core |
+| Browser application that runs models | Agent Lab (current UI label) |
 | Executable domain model | model |
 | Parameterized series of model runs | study |
 | One execution within a study | run |
@@ -35,8 +37,8 @@ Write repository content, identifiers, UI labels and commits in English. Discuss
 | One model procedure invocation | step |
 | World-owned model time | tick; `world.tick.value` |
 | Event queue and its distinct time cursor | `Agenda`, agenda time |
-| Host scheduling callback | frame or callback |
-| Initial model creation | setup or initialization |
+| Host scheduling callback | host callback; an animation frame is one kind |
+| Initial model creation | setup |
 | Detached model data read | observation; `observe()` where defined |
 | Execution classification across member kinds | group |
 | Numeric scientific color scale | indexed palette |
@@ -51,6 +53,7 @@ Use network for scientific subject matter when appropriate; use Graph for the AP
 | breed for general execution classification | group |
 | experiment for model selection or the study API | model or study according to the task |
 | opaque phase codes and source-project abbreviations | the actual capability |
+| Agent Loom or another coined name for the headless core | core |
 | `numAgents` and other `num*` count keys | `agentCount` and the corresponding singular noun plus `Count` |
 
 ## Spelling and structure
@@ -84,7 +87,7 @@ Use a few top-level folders named for their responsibility. Keep source directly
 | `library-city/<subsystem>/` | — | City subsystems; each imports only `"city-library"`, never another subsystem. |
 | `library-generative-design/` | — | Later; headless generative design, a separate track importing only `"city-library"`. |
 | `models/<slug>/` | `models/<slug>/` | Flat; executable models, their UI descriptions and source and evidence records, each covering one small test case. |
-| `ui-web/` | `ui/` | Shared presentation components, the Agent Lab browser host and later game UI. |
+| `ui-web/` | `ui/` | Shared presentation components, Agent Lab and later game UI. |
 | `ui-3d/` | — | Later; Three.js presentation using only public APIs. |
 | `tests/` | `tests/` | Flat, plus `public-contracts/`, `ui/` and `targets/`; `import-boundaries.test.ts` and `duplicated-helpers.test.ts` check the structure. |
 | `docs/` | `docs/` | Unchanged. |
@@ -93,9 +96,9 @@ Current folders:
 
 | Folder | Responsibility |
 | --- | --- |
-| `library/` | Headless City Library modules, grouped by domain. Agent Loom is the modeling core within this library. |
+| `library/` | Headless City Library modules, grouped by domain; the core lives here. |
 | `models/` | Executable models, their UI descriptions and model-specific source and evidence records. |
-| `ui/` | Shared presentation components and the Agent Lab browser host. |
+| `ui/` | Shared presentation components and Agent Lab. |
 | `tests/` | Automated checks, public contract scripts and unmet target fixtures. |
 | `docs/` | Guides, binding contracts and development evidence. |
 

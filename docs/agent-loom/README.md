@@ -1,6 +1,6 @@
 # City Library API specification
 
-This specification covers the whole City Library API. Agent Loom is its headless modeling core: agents, worlds, spatial operations, graphs, randomness, events, studies and storage. Further areas cover the remaining core exports, city systems, UI authoring and the model contract.
+This specification covers the whole City Library API. Its headless core provides agents, worlds, spatial operations, graphs, randomness, events, studies and storage. Further areas cover the remaining core exports, city systems, UI authoring and the model contract.
 
 Describe individuals, their space and their interactions without choosing a renderer. Use the parts separately: a graph does not need a World, and an agent model does not need a grid.
 
@@ -16,7 +16,7 @@ This specification is the target: it defines the required API, including much th
 
 ## Read the API
 
-- [API inventory](api-table.md): all 450 operation/type entries in 25 areas (293 delivered, 141 target, 16 planned), with exact signatures, compact contracts, a status per entry, a target folder per area and the [open decisions](api-table.md#open-decisions). The original 309 Agent Loom entries keep their numbers; the three formerly unanchored headings are now anchored, and new entries are `api-380` to `api-517`.
+- [API inventory](api-table.md): all 450 operation/type entries in 25 areas (293 delivered, 141 target, 16 planned), with exact signatures, compact contracts, a status per entry, a target folder per area and the [open decisions](api-table.md#open-decisions). The original 309 core entries keep their numbers; the three formerly unanchored headings are now anchored, and new entries are `api-380` to `api-517`.
 - [API reference](api-reference.md): detailed behavior, defaults, validation, errors and examples.
 - [UI API](../ui/README.md): the detailed owner of the UI authoring contract; the inventory links its UI IDs.
 - [Architecture](../ARCHITECTURE.md): state ownership, dependencies, domain layout and extension rules.
@@ -54,4 +54,4 @@ Examples retain the specification's `agent-loom`, `agent-loom/storage` and `agen
 
 The specification originates from [city_game at revision 08b3efb](https://github.com/dweigend/city_game/tree/08b3efb66d0f93d023f0b1deb762578552f7b819/docs/agent-loom). This Markdown specification is the maintained source.
 
-The folder name `docs/agent-loom` is historical: it now holds the specification of the whole City Library, not only the Agent Loom core. It is kept so that existing links stay valid.
+The folder name `docs/agent-loom` is historical: it now holds the specification of the whole City Library, not only the core. It is kept so that existing links stay valid; earlier records call the core "Agent Loom".

@@ -34,4 +34,4 @@ These contracts define shared UI behavior in detail:
 
 - [Agent Lab](../../ui/agent-lab/README.md): run the application and add an entry.
 - [Write a model](../development/model-authoring.md): connect headless behavior to observations and actions.
-- [Agent Loom](../agent-loom/README.md): the headless domain contract.
+- [API specification](../agent-loom/README.md): the headless domain contract.

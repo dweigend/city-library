@@ -14,7 +14,7 @@ The five [binding UI authoring rules](../DESIGN.md#binding-ui-authoring-rules) g
 2. The model owns scientific state, validation, defaults and actions. The UI reads observations and invokes public actions; it never duplicates scientific rules or mutates observations.
 3. Model input descriptors supply defaults, numeric limits, granularity and choices. The shared host supplies typography, theme, spacing, layout, accessible controls and renderer styling.
 4. Customization belongs next to the affected binding and is optional. Do not require renderer selection, DOM work, lifecycle plumbing or style configuration for a normal model.
-5. Follow [Agent Loom terminology](../agent-loom/terminology.md). Domain `Field` and detached UI `Cell`/`cells` have different responsibilities. A step invokes a model procedure; tick is model time; host cadence is neither.
+5. Follow the [domain and time semantics](../agent-loom/terminology.md). Domain `Field` and detached UI `Cell`/`cells` have different responsibilities. A step invokes a model procedure; tick is model time; host cadence is neither.
 
 ## Define UI
 

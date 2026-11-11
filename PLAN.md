@@ -91,7 +91,7 @@ Every substantial slice also reviews the [architecture rules](docs/ARCHITECTURE.
 
 ## Six work areas
 
-Six work areas divide responsibilities without requiring separate packages or directory layers. Agent Loom defines their general modeling contracts. Graphs work independently of spatial coordinates, grids and World.
+Six work areas divide responsibilities without requiring separate packages or directory layers. The core defines their general modeling contracts. Graphs work independently of spatial coordinates, grids and World.
 
 The table describes target scope and ownership, including capabilities still to be built. Named acceptance goals keep each area small enough to verify independently.
 
@@ -167,7 +167,7 @@ Rendering, materials, symbols, cameras, widgets, picking, browser editors and pr
 
 The first-generator contract and city-domain admission/replacement remain later slice decisions. Numerical precision, coordinate conversion, packaging, runtime support, rights/notices and continuation details require explicit decisions only where the binding target leaves them unspecified; specified contracts remain mandatory. Geometric capabilities may use declared abstract units; city-domain admission must make metric conversion explicit. Shared infrastructure requires a concrete use case.
 
-The [Markdown API specification](docs/agent-loom/README.md) defines the required core scope: all 309 operation/type entries across 16 reference areas, including behavior profiles, codecs, advanced algorithms, limits and shared types. Completion requires a delivered public export, contract, executable example and target evidence for each entry. Deferred operations remain open; exclusions or scope changes require an explicit recorded decision. The regular Agent Loom Grid contract remains square/cubic. Finite hexagonal layouts and layout-backed Grids are available through the additive topology API; broader hexagonal behavior remains outside that regular Grid contract. Track implementation status against public examples and behavior checks, not source-project results.
+The [Markdown API specification](docs/agent-loom/README.md) defines the required core scope: all 309 operation/type entries across 16 reference areas, including behavior profiles, codecs, advanced algorithms, limits and shared types. Completion requires a delivered public export, contract, executable example and target evidence for each entry. Deferred operations remain open; exclusions or scope changes require an explicit recorded decision. The core's regular Grid contract remains square/cubic. Finite hexagonal layouts and layout-backed Grids are available through the additive topology API; broader hexagonal behavior remains outside that regular Grid contract. Track implementation status against public examples and behavior checks, not source-project results.
 
 The UI contract has no readiness state for playback. `complete` means a finished run, so models whose playback needs a prior user action (Central Limit Theorem, Random Combinations and Permutations) or never acts (Scarce Resource) keep Run enabled; their monitors and action buttons show the next step. A separate readiness predicate needs an example-first decision before use.
 

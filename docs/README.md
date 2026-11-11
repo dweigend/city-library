@@ -19,7 +19,7 @@ Start with a model, change something and see what happens. These pages take you 
 
 - [What works today](development/coverage.md): available library operations and open gaps.
 - [UI API](ui/README.md): `defineUI`, controls, monitors and views.
-- [API specification](agent-loom/README.md): the whole City Library API, with the Agent Loom core, city systems, UI authoring and the model contract; every entry is marked delivered, target or planned.
+- [API specification](agent-loom/README.md): the whole City Library API, with the core, city systems, UI authoring and the model contract; every entry is marked delivered, target or planned.
 - [Grids, layouts and parcels](grid-parcels/STATUS.md), their [target catalogue](grid-parcels/API.md) and the [finite quad contract](grid-parcels/QUAD-LAYOUTS-CONTRACT.md). That contract preserves historical signatures; the [current naming map](grid-parcels/STATUS.md) gives the executable calls.
 
 The specifications include planned operations. Check [what works today](development/coverage.md), the public exports and the runnable examples before relying on one.

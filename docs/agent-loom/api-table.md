@@ -4,7 +4,7 @@ Availability: static factories use `Type.create`. Delivered streams support only
 
 Use this inventory to find an operation, read its signature and follow the link to its full contract.
 
-> **Specification of the whole City Library.** These 450 operation/type entries in 25 areas define the public API: the Agent Loom modeling core, further delivered core exports, planned core additions, city systems, UI authoring and the model contract. Implementation status is tracked in [PLAN](../../PLAN.md) and the [coverage inventory](../development/coverage.md). Only a `delivered` entry is available.
+> **Specification of the whole City Library.** These 450 operation/type entries in 25 areas define the public API: the original modeling core, further delivered core exports, planned core additions, city systems, UI authoring and the model contract. Implementation status is tracked in [PLAN](../../PLAN.md) and the [coverage inventory](../development/coverage.md). Only a `delivered` entry is available.
 
 **Status.** Every entry states one status:
 
@@ -5685,7 +5685,7 @@ storage.encode(graph: Graph, options: {
 }): string
 ```
 
-Encode the explicitly selected graph text format. graph-json preserves JSON-safe GraphData; GraphML preserves supported scalar attributes and declared topology metadata. edge-list is the versioned Agent Loom UTF-8 TSV dialect with JSON-escaped fields, not a guessed two-column format. adjacency-matrix rejects mixed directions and parallel edges, requires finite nonzero edge.weight, and loses other node/edge state; zero denotes no edge. No file access.
+Encode the explicitly selected graph text format. graph-json preserves JSON-safe GraphData; GraphML preserves supported scalar attributes and declared topology metadata. edge-list is the library's versioned UTF-8 TSV dialect with JSON-escaped fields, not a guessed two-column format. adjacency-matrix rejects mixed directions and parallel edges, requires finite nonzero edge.weight, and loses other node/edge state; zero denotes no edge. No file access.
 
 [Details](api-reference.md#graph-interchange)
 
@@ -5702,7 +5702,7 @@ storage.decode(text: string, options: {
 }): GraphData<unknown, unknown>
 ```
 
-Decode the explicit graph format to validated detached GraphData with unknown model values. graph-json uses its versioned envelope; GraphML rejects DTDs/entities and unsupported nested attributes. edge-list requires the versioned Agent Loom TSV header and complete graph/node/edge records. adjacency-matrix validates square shape, IDs, finite entries and undirected symmetry, reconstructing nodes by ID and nonzero weight edges rather than arbitrary model state. No file access.
+Decode the explicit graph format to validated detached GraphData with unknown model values. graph-json uses its versioned envelope; GraphML rejects DTDs/entities and unsupported nested attributes. edge-list requires the library's versioned TSV header and complete graph/node/edge records. adjacency-matrix validates square shape, IDs, finite entries and undirected symmetry, reconstructing nodes by ID and nonzero weight edges rather than arbitrary model state. No file access.
 
 [Details](api-reference.md#graph-interchange)
 

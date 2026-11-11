@@ -12,7 +12,7 @@ TypeScript brings these studies to the web, with an ecosystem of useful game lib
 
 A short script should be enough to get an idea running. Small, independent building blocks provide useful defaults and room to make something your own.
 
-Agent Loom provides the headless modeling core. Agent Lab adds browser controls and views; the same model also runs in a script. Applying its results to a real city still requires evidence.
+A headless core holds the model logic. Agent Lab adds browser controls and views; the same model also runs in a script. Applying its results to a real city still requires evidence.
 
 The core and the shared UI are usable today, and the [models](models/README.md) range from adapted NetLogo classics to small original city models. The full specification and the scientific model comparisons are unfinished, and the package is not published. [What works today](docs/development/coverage.md) lists the available operations; [the work plan](PLAN.md) shows what comes next.
 

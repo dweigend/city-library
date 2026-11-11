@@ -37,4 +37,4 @@ The library grows in layers. The core holds neutral building blocks such as agen
 
 ## Available and planned
 
-The [Agent Loom specification](agent-loom/README.md) describes the full target API, including much that is not built yet. A library operation is available when the root package exports it and an asserted public example exercises it; UI features come from the separate `ui/index.ts` entry. Even then, its contract defines which options are supported. [Coverage](development/coverage.md) lists what works today and what is still open.
+The [API specification](agent-loom/README.md) describes the full target API, including much that is not built yet. A library operation is available when the root package exports it and an asserted public example exercises it; UI features come from the separate `ui/index.ts` entry. Even then, its contract defines which options are supported. [Coverage](development/coverage.md) lists what works today and what is still open.
