@@ -1,0 +1,35 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-finance/model.ts";
+
+for (const options of [{ taxRate: -0.1 }, { taxRate: 1.1 }, { annualWear: NaN }, { replacementValue: 0 }, { initialBacklog: 10001 }]) {
+  assert.throws(() => model.create(options), RangeError);
+}
+assert.throws(() => model.create({ unknown: 1 } as never), TypeError);
+assert.throws(() => model.create({ taxBase: "100" } as never), TypeError);
+const left = model.create();
+const right = model.create();
+const before = left.read();
+for (const changes of [{ taxRate: NaN }, { maintenanceBudget: -1 }, { taxRate: 0.2, maintenanceBudget: Infinity }]) {
+  assert.throws(() => left.setPolicy(changes), RangeError);
+  assert.deepEqual(left.read(), before);
+}
+assert.throws(() => left.setPolicy({ serviceCost: 0 } as never), TypeError);
+assert.throws(() => left.setPolicy(null as never), TypeError);
+for (const steps of [-1, 0.5, NaN, 1000001]) assert.throws(() => left.advance(steps), RangeError);
+assert.deepEqual(left.read(), before);
+left.advance(10);
+for (let year = 0; year < 10; year += 1) right.advance();
+assert.deepEqual(left.read(), right.read());
+assert.equal(before.tick, 0);
+assert.equal(before.parameters.taxRate, 0.1);
+assert.equal(before.cash, 100);
+const snapshot = left.read();
+try { Object.assign(snapshot.parameters, { taxRate: 0.9 }); } catch { /* Frozen snapshots may reject writes. */ }
+try { Object.assign(snapshot, { cash: 123 }); } catch { /* Frozen snapshots may reject writes. */ }
+assert.equal(left.read().parameters.taxRate, 0.1);
+assert.equal(left.read().cash, 600);
+left.setPolicy({ taxRate: 0.2 });
+assert.equal(right.read().parameters.taxRate, 0.1);
+assert.equal(before.parameters.taxRate, 0.1);
+assert.equal(snapshot.parameters.taxRate, 0.1);
+console.log("city-finance validation and snapshots passed");

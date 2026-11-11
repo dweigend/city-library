@@ -1,0 +1,19 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-materials/model.ts";
+
+const instance = model.create();
+const state = instance.read();
+assert.equal(model.title, "Urban Material Cycles");
+assert.deepEqual(state.parameters, {
+  wasteGeneration: 100, collectionCapacity: 80, reuseFraction: 0.25,
+  recyclingFraction: 0.5, initialUncollected: 20,
+});
+assert.equal(state.tick, 0);
+assert.equal(state.uncollected, 20);
+assert.deepEqual(state.flows, { generated: 0, collected: 0, reused: 0, recycled: 0, disposed: 0 });
+assert.deepEqual(state.totals, { generated: 0, reused: 0, recycled: 0, disposed: 0 });
+assert.equal(state.balanceError, 0);
+assert.equal(state.history.length, 1);
+instance.advance(0);
+assert.deepEqual(instance.read(), state);
+console.log("city-materials setup passed");

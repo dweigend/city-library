@@ -9,7 +9,7 @@ Runnable implementations live directly under `models/<slug>/`, each with its own
 - `sources.ts` captures source identity and verifies pinned catalog records. Use `bun models/catalog/sources.ts verify` from the repository root with the captured `.cache/netlogo-catalog` source cache present; `verify --remote` instead checks the recorded immutable source URLs over the network. Neither command advances delivery stages.
 - `progress.ts` validates selection membership and evidence-backed stages. Run `bun models/catalog/progress.ts verify` or `bun models/catalog/progress.ts report`.
 - `selection/` and `pinned/` preserve binding selection and source snapshots. Recorded checksums identify the consulted bytes.
-- [Research](research/README.md) owns the selected-model bibliography, shared publication snapshots and offline validator. Implemented models own their individual `research.json` files.
+- [Scientific sources](../../docs/scientific-sources.md) is the maintained reader bibliography and maps sources to implemented code. The [research records](research/README.md) preserve the selected-model dossiers, shared publication snapshots and offline validator; implemented models own their individual `research.json` records.
 - [Acceptance records](acceptance/README.md) retain checks that cover several catalog models once. Model-specific probes and screenshots live with the owning model.
 - `record-paths.json` resolves immutable research/source references and frozen selection-manifest paths, preserving original SHA-256 values. Acceptance reports link directly to their current owner or a pinned Git revision. It preserves provenance without changing acceptance stages.
 

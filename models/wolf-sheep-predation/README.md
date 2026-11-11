@@ -49,7 +49,7 @@ Model-specific `read()` fields include `counts`, `agents`, `cells`, `stopReason`
 
 ## Sources and limits
 
-Adapted from the NetLogo *Wolf Sheep Predation* model by Wilensky (1997). Attribution and adaptation notes are in the comments of [model.ts](model.ts) and the retained source notices; the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
+Adapted from the NetLogo *Wolf Sheep Predation* model by Wilensky (1997). Attribution and adaptation notes are in the comments of [model.ts](model.ts) and the retained source notices; the [retained source](source.nlogox) keeps the original. The [scientific sources dossier](../../docs/scientific-sources.md) connects the scientific background to model files. The retained research record documents source identity and access limits; it does not validate this implementation.
 
 Random movement, fixed reproduction chances and simple energy budgets stand in for real animal behavior. The model shows what these rules can produce; it does not predict real populations. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 

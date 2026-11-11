@@ -1,0 +1,17 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-land-use/model.ts";
+const instance = model.create();
+const state = instance.read();
+assert.equal(model.title, "Land Use Change");
+assert.deepEqual(state.parameters, { residentialDemand: 6, commercialDemand: 3, conversionLimit: 2 });
+assert.equal(state.tick, 0);
+assert.equal(state.parcels.length, 12);
+assert.deepEqual(state.parcels.map(parcel => parcel.id), Array.from({ length: 12 }, (_, index) => `parcel:${index}`));
+assert.deepEqual(state.parcels.map(parcel => parcel.use), ["residential", "residential", "residential", "residential", "commercial", "commercial", "green", "green", "green", "green", "green", "green"]);
+assert.deepEqual(state.parcels.filter(parcel => parcel.isProtected).map(parcel => parcel.id), ["parcel:10", "parcel:11"]);
+assert.equal(state.totalAreaHa, 12);
+assert.equal(state.protectedAreaHa, 2);
+assert.equal(state.history.length, 1);
+assert.equal(state.history[0]?.tick, 0);
+assert.equal(state.convertedParcelCount, 0);
+console.log("city-land-use setup passed");

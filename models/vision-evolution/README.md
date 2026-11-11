@@ -48,7 +48,7 @@ Model-specific `read()` fields include `fish`, `food`, `cells`, `eyeSizeHistogra
 
 ## Sources and limits
 
-Adapted from the NetLogo *Vision Evolution* model by Gurkan, Head, Woods and Wilensky (2018). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
+Adapted from the NetLogo *Vision Evolution* model by Gurkan, Head, Woods and Wilensky (2018). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. The [scientific sources dossier](../../docs/scientific-sources.md) connects the scientific background to model files. The retained research record documents source identity and access limits; it does not validate this implementation.
 
 The model tests a specific hypothesis in a constructed environment. It does not reconstruct a fossil lineage or show that vision caused the move to land. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 

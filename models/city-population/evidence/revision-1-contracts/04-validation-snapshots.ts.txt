@@ -1,0 +1,29 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-population/model.ts";
+
+for (const options of [{ initialPopulation: -1 }, { birthRate: NaN }, { deathRate: 1.1 }, { householdSize: 1.5 }, { migrationLimit: -1 }]) {
+  assert.throws(() => model.create(options), RangeError);
+}
+assert.throws(() => model.create({ unknown: 1 } as never), TypeError);
+const first = model.create();
+const second = model.create();
+const snapshot = first.read();
+for (const steps of [-1, 1.5, Infinity, 1_000_001]) assert.throws(() => first.advance(steps), RangeError);
+assert.throws(() => first.setPolicy({ annualMigration: 20, householdSize: 0 }), RangeError);
+assert.throws(() => first.setPolicy({ initialPopulation: 20 } as never), TypeError);
+assert.deepEqual(first.read(), snapshot);
+try { (snapshot.cohorts[0] as { residentCount: number }).residentCount = 999; } catch { /* Frozen is allowed. */ }
+try { (snapshot.parameters as { birthRate: number }).birthRate = 1; } catch { /* Frozen is allowed. */ }
+assert.equal(first.read().populationCount, 1000);
+assert.equal(first.read().cohorts[0]!.residentCount, 10);
+assert.equal(first.read().parameters.birthRate, 0.1);
+first.advance(20);
+for (let year = 0; year < 20; year += 1) second.advance();
+assert.deepEqual(first.read(), second.read());
+assert.equal(snapshot.tick, 0);
+assert.equal(snapshot.history.length, 1);
+const before = first.read();
+first.advance(0);
+assert.deepEqual(first.read(), before);
+assert.equal(model.create().read().tick, 0);
+console.log("city-population validation and independent snapshots passed");

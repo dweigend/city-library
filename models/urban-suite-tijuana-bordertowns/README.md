@@ -56,7 +56,7 @@ The [model contract](contract.md) defines the procedures and their boundary beha
 
 ## Sources and limits
 
-Adapted from the NetLogo *Urban Suite - Tijuana Bordertowns* model by De Leon, Felsen and Wilensky (2007). Attribution and license are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
+Adapted from the NetLogo *Urban Suite - Tijuana Bordertowns* model by De Leon, Felsen and Wilensky (2007). Attribution and license are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. The [scientific sources dossier](../../docs/scientific-sources.md) connects the scientific background to model files. The retained research record documents source identity and access limits; it does not validate this implementation.
 
 The rules form a teaching scenario about a border town, not a forecast for present-day Tijuana. Setup duration and success are not guaranteed by a seed. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 

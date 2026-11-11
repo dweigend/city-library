@@ -1,0 +1,45 @@
+# Urban Stormwater contract
+
+The four scripts in `tests/public-contracts/city-stormwater/` were written and frozen before `model.ts`. They specify setup, hand-calculated balances, a live infiltration intervention, and validation/reproducibility/detached reads. Assertions must remain unchanged during implementation.
+
+## Public boundary
+
+`model.create(options?)` creates an independent instance with `advance(steps = 1)`, `read()`, `setRain(mmPerHour)` and `setInfiltration(mmPerHour)`. Definitions and imports are inert. Actions validate before mutation, do not advance time and apply to the next step. Invalid values throw through `parseParameters`; invalid counts throw through `validateStepCount`. Counts range from 0 to 1,000,000 inclusive. Unknown options fail. Reads return detached observations; no public Grid or World mutation is exposed.
+
+| Parameter | Default | Inclusive bounds | Unit |
+| --- | --- | --- | --- |
+| rainMmPerHour | 20 | 0–100 | mm/h |
+| infiltrationMmPerHour | 10 | 0–100 | mm/h on pervious area |
+| retentionCapacityM3 | 2 | 0–100 | m³ |
+| outletM3PerHour | 0.5 | 0–10 | m³/h |
+
+All parameters accept finite continuous numbers. Capacity and outlet are setup-only. Time starts at tick 0; one step is exactly one hour. Run length is unbounded; history retains the latest 120 hourly samples including setup until evicted. Cumulative quantities retain all steps. No random draws or seed are needed.
+
+## Mechanism and expected results
+
+Two adjacent schematic Grid fields represent 100 m² each. `plot:sealed` has impervious share 0.8; `plot:green` has share 0.2. Plot order is sealed then green. Area geometry is schematic, not a terrain elevation or hydraulic route.
+
+For each plot in order: rain volume = rain × area / 1000; infiltration = min(rain, infiltration capacity) × area × (1 − impervious share) / 1000; runoff = rain volume − infiltration. All runoff reaches one initially empty basin in the same hour. Then discharge = min(outlet rate, prior storage + runoff); overflow = max(0, remaining volume − capacity); storage = remaining volume − overflow. Discharge precedes the capacity clamp, so same-hour inflow can leave through the outlet even with zero storage capacity. Rain and infiltration are constant within a step. There is no soil saturation, infiltration from stored basin water, evaporation, pipe routing, travel time or groundwater return.
+
+At defaults, each hour supplies 4 m³ of rain, 1 m³ infiltration and 3 m³ runoff (1.8 and 1.2 per plot). Hour 1 ends with storage 2, discharge 0.5 and overflow 0.5 m³. Hour 2 totals: rain 8, infiltration 2, runoff 6, discharge 1, overflow 3, storage 2 m³. Increasing infiltration to 20 mm/h after hour 1 changes hour 2 runoff to 2 m³, cumulative infiltration to 3 and cumulative overflow to 2 m³. Turning rain off then drains the remaining 2 m³ in four hours; cumulative discharge becomes 3 m³.
+
+The cumulative identity is rain = infiltration + storage + discharge + overflow. Runoff = storage + discharge + overflow; runoff is an intermediate transfer and is not counted twice. `balanceErrorM3` is the signed rain-minus-sinks residual. Floating comparisons use 1e-10 tolerance for these bounded test runs. Instantaneous plot runoff and aggregate interval outputs describe the latest completed hour and are zero at setup. Live edits leave these historical quantities unchanged.
+
+## Reuse and provenance
+
+Original synthetic teaching model; no external model, data, scientific calibration or copied third-party implementation. Inspected local candidates at repository revision `42a289785ee3c9879800d2dd7e8532d04032a7ab`:
+
+| Candidate | Decision |
+| --- | --- |
+| `models/stormwater-retention/model.ts` | Closest mechanism: reuse the public World/run, Grid and bounded storage.history composition pattern. Its fixed runoff coefficient omits explicit infiltration; its continuous crossing diagnostic is unnecessary here. No code transfer or claim of equivalence. |
+| `models/neighborhood-heat-intervention/model.ts` | Reuse descriptor validation and detached grid observation pattern; heat exchange/twoPhase is unrelated to a lumped hourly basin. |
+| `models/household-budget/model.ts` | Confirms simple one-procedure World stepping; household Agent identity does not help water accounting. |
+| Public `continuous.linear` / `continuous.crossing` | Not selected: exact bounded hourly volume arithmetic needs neither interpolation nor crossing-time claims. |
+| Public Graph / Store / Resource | Not selected: no routing choice, queued items or resource admission exists in this slice. |
+| External hydrology libraries | Not selected: no new dependencies are authorized and a transparent mass balance is the intended scope. |
+
+Public `Grid`, `World`, `run` and `storage.history` come only from `city-library`. Definition/Inputs and canonical validation come from their existing model authoring entries. No new library API, DSL, styling or dependency is introduced. Existing shared `defineUI`, spatial primitives, charts and indexed palette provide presentation. Numeric scientific quantities, including residuals and basin fill fraction, belong in the model.
+
+## Acceptance limits
+
+Executable examples establish the declared arithmetic, not scientific or engineering validity. Browser interactions, desktop/narrow light/dark screenshots and independent screenshot review remain pending central coordination. No UI acceptance is claimed.

@@ -1,0 +1,23 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-population/model.ts";
+
+const instance = model.create();
+const state = instance.read();
+assert.equal(state.tick, 0);
+assert.deepEqual(state.parameters, {
+  initialPopulation: 1000, birthRate: 0.1, deathRate: 0.1,
+  annualMigration: 10, migrationLimit: 5, householdSize: 3,
+});
+assert.equal(state.populationCount, 1000);
+assert.equal(state.cohorts.length, 101);
+assert.ok(state.cohorts.slice(0, 100).every(cohort => cohort.residentCount === 10));
+assert.equal(state.cohorts[100]!.residentCount, 0);
+assert.equal(state.householdCount, 334);
+assert.equal(state.householdsBySize.find(group => group.size === 3)!.householdCount, 333);
+assert.equal(state.householdsBySize.find(group => group.size === 1)!.householdCount, 1);
+assert.equal(state.accountingError, 0);
+assert.equal(state.history.length, 1);
+assert.equal(state.birthCount, 0);
+assert.equal(state.deathCount, 0);
+assert.equal(state.netMigration, 0);
+console.log("city-population setup passed");

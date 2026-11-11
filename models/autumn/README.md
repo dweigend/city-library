@@ -49,7 +49,7 @@ Model-specific `read()` fields include `leaves`, `deadLeaves`, `raindrops`, `sun
 
 ## Sources and limits
 
-Adapted from the NetLogo *Autumn* model by Wilensky (2005). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
+Adapted from the NetLogo *Autumn* model by Wilensky (2005). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. The [scientific sources dossier](../../docs/scientific-sources.md) connects the scientific background to model files. The retained research record documents source identity and access limits; it does not validate this implementation.
 
 Pigment levels and weather responses are illustrative quantities. The colors summarize chemistry; they do not forecast leaf fall for a real tree or species. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 

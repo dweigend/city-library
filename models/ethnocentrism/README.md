@@ -48,7 +48,7 @@ Model-specific `read()` fields include `agents`, `turn`, `cumulative`, `turnRati
 
 ## Sources and limits
 
-Adapted from the NetLogo *Ethnocentrism* model (© 2003 Uri Wilensky). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
+Adapted from the NetLogo *Ethnocentrism* model (© 2003 Uri Wilensky). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. The [scientific sources dossier](../../docs/scientific-sources.md) connects the scientific background to model files. The retained research record documents source identity and access limits; it does not validate this implementation.
 
 Payoffs and group labels are stipulated rules, not an explanation of human identity. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 

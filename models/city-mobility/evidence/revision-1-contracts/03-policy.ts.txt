@@ -1,0 +1,24 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-mobility/model.ts";
+
+const instance = model.create({ initialTrips: 1 });
+instance.setCarPenalty(2);
+instance.dispatchTrips(2);
+let state = instance.read();
+assert.equal(state.tick, 0);
+assert.equal(state.parameters.carPenalty, 2);
+assert.deepEqual(state.trips.map(trip => trip.mode), ["car", "walk", "walk"]);
+assert.deepEqual(state.trips[1]!.route, ["walking-path"]);
+instance.advance(3);
+state = instance.read();
+assert.deepEqual(state.trips.map(trip => trip.completedAt), [2, 3, 3]);
+assert.equal(state.completedTrips, 3);
+assert.equal(state.totalWaitingMinutes, 0);
+assert.equal(state.meanCompletedTravelMinutes, 8 / 3);
+const tie = model.create({ initialTrips: 1, carPenalty: 1 });
+assert.equal(tie.read().trips[0]!.mode, "car");
+const wider = model.create({ carCapacity: 2 });
+wider.advance(3);
+assert.deepEqual(wider.read().trips.map(trip => trip.completedAt), [2, 2, 3, 3]);
+assert.equal(wider.read().totalWaitingMinutes, 2);
+console.log("city-mobility policy passed");

@@ -40,7 +40,7 @@ Model-specific `read()` fields include `cells`.
 
 ## Sources and limits
 
-Adapted from the NetLogo *Urban Suite - Structure from Randomness 2* model by Wilensky (2007). Attribution and license are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
+Adapted from the NetLogo *Urban Suite - Structure from Randomness 2* model by Wilensky (2007). Attribution and license are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. The [scientific sources dossier](../../docs/scientific-sources.md) connects the scientific background to model files. The retained research record documents source identity and access limits; it does not validate this implementation.
 
 The active state and the changing potential are separate quantities. There are no buildings or budgets in this model. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 

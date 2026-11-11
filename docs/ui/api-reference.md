@@ -128,6 +128,8 @@ Experimental additions: `showLabels` controls label visibility when supplied; om
 
 `SpatialAgent.selectable` defaults to true. Explicit false excludes a symbol from pointer/nearest and keyboard selection; annotations remain nonselectable. It does not create domain identity or change drawing actions on Grid cells.
 
+Spatial selection is an additional dashed neutral frame outside the symbol. It preserves the symbol's fill and semantic outline, so selecting a poor asset, vacant job or building under construction does not change its displayed state. Pointer and keyboard selection use the same frame.
+
 Rectangles may supply positive finite `extent: { width, height }` in diagram units instead of CSS-pixel `size`; other shapes cannot use extent. `filled` defaults to true. Optional `stroke` and nonnegative finite `strokeWidth` add an outline; `filled: false` supports empty resource slots. Coordinates and headings must be finite, and derived geometry must remain finite before a new projection is published. Canvas buffer dimensions must fit positive unsigned 32-bit integers, preventing DOM conversion from wrapping an extreme aspect ratio to zero. This representability check is not a guarantee of browser-specific maximum allocation capacity. Invalid updates preserve the previous valid projection.
 
 Optional `labels: readonly { x, y, text }[]` supplies nonselectable diagram annotations in the shared font and foreground. Optional nonempty `description` supplies the canvas accessible name and fallback text; authors should summarize the actual counts and states. Omission retains the legacy count description. Labels, segments and layout coordinates do not create domain entities.

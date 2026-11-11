@@ -1,0 +1,24 @@
+import assert from "node:assert/strict";
+import { model, inputs } from "../../../models/city-finance/model.ts";
+
+const instance = model.create();
+const state = instance.read();
+assert.equal(model.title, "Municipal Finance");
+assert.deepEqual(state.parameters, {
+  initialCash: 100, taxBase: 10000, taxRate: 0.1, serviceCost: 800,
+  maintenanceBudget: 150, replacementValue: 10000, annualWear: 200, initialBacklog: 2000,
+});
+assert.equal(inputs.taxRate.default, 0.1);
+assert.equal(state.tick, 0);
+assert.equal(state.cash, 100);
+assert.equal(state.backlog, 2000);
+assert.equal(state.condition, 0.8);
+assert.equal(state.taxRevenue, 0);
+assert.equal(state.serviceSpending, 0);
+assert.equal(state.maintenanceSpending, 0);
+assert.equal(state.cumulativeTaxRevenue, 0);
+assert.equal(state.cumulativeServiceSpending, 0);
+assert.equal(state.cumulativeMaintenanceSpending, 0);
+instance.advance(0);
+assert.deepEqual(instance.read(), state);
+console.log("city-finance setup passed");

@@ -1,0 +1,74 @@
+# Housing Market contract
+
+This original, deterministic teaching model explores posted rents, household bids, vacancy feedback and bounded construction. It is not calibrated to a city. No external model code, dataset or scientific price equation is transferred.
+
+## Frozen public examples
+
+The four scripts in `tests/public-contracts/city-housing/` were written before runtime implementation. They freeze setup, hand-calculated first steps and conservation, a live allowance intervention, and validation/determinism/detached snapshots. They import the public model definition; runtime library dependencies use only `city-library`.
+
+## Inputs and units
+
+One tick is one synthetic month. Money is abstract currency units per month; no inflation, rounding to cents, savings, tax or payments are simulated. Counts are integers. All numeric inputs must be finite. Descriptor bounds are inclusive; unknown keys and wrong primitive types fail with `TypeError`; invalid numeric ranges, noninteger counts and cross-field constraints fail with `RangeError` before state changes.
+
+| Input | Default | Bounds | Meaning |
+| --- | ---: | --- | --- |
+| householdCount | 4 | 1–40 integer | Fixed demand; each household wants one home |
+| initialHomeCount | 3 | 1–40 integer | Initial identical homes |
+| maxHomeCount | 5 | 1–60 integer | Stock ceiling, at least initialHomeCount |
+| initialRent | 600 | 100–5000 | Uniform posted monthly rent |
+| housingAllowance | 0 | 0–5000 | Monthly addition to every household's bid; live |
+| rentAdjustmentRate | 0.1 | 0–1 | Vacancy response multiplier |
+| targetVacancyRate | 0.25 | 0–1 | Desired fraction of homes vacant |
+| constructionRent | 600 | 100–5000 | Minimum posted rent that triggers construction |
+| constructionLimit | 1 | 0–10 integer | Maximum new homes each month |
+
+Household i (one-based) has fixed income `1000 * i`. Its reservation bid is `0.3 * income + housingAllowance`. This is an affordability budget, not a cash transfer or a clearing auction bid. Homes and households have model-local stable IDs `home-i` and `household-i`. Observations list them in ascending creation order.
+
+## Setup and month ordering
+
+Setup allocates the lowest-numbered vacant home to each affordable household, in descending bid order, breaking equal bids by ascending household ID number. Bid equality with rent is affordable. There is no incumbent priority during setup. Setup records month 0; it neither adjusts rent nor constructs homes. Unassigned households start `unhoused`.
+
+Each month:
+
+1. Calculate opening vacancy as vacant homes / existing homes.
+2. Set `rent = clamp(rent * (1 + rentAdjustmentRate * (targetVacancyRate - openingVacancy)), 100, 5000)`.
+3. Release incumbent homes whose household bid is strictly below the new rent. Record these events in `displacedThisStepCount`. Affordable incumbents keep their home.
+4. Allocate vacant homes to unassigned affordable households in descending bid/ascending ID order. A household remains `displaced` while unassigned after ever having a home; otherwise it is `unhoused`. Both statuses count in `unhousedHouseholdCount`.
+5. If rent is at least constructionRent, build `min(constructionLimit, unhousedHouseholdCount, maxHomeCount - homeCount)` homes. Otherwise build zero. New homes are vacant and become eligible for allocation next month. This stylized developer rule responds to total unmet demand, including unaffordable demand; it can produce vacant homes alongside homelessness.
+6. Advance the World tick once and record measurements. History retains the latest 120 samples, including setup until evicted.
+
+There are no moves between affordable occupied homes, arrivals, exits, demolition, locations, quality differences, credit, land markets, construction costs, waiting lists or stochastic draws. No seed is needed. A collection diagram shows allocations and unmet demand without implying geographic positions.
+
+## Exact default expectations
+
+Setup bids are `[300, 600, 900, 1200]`; household home IDs are `[null, home-3, home-2, home-1]`. Month 1 has opening vacancy 0, rent 615, household 2 displaced, 2 housed, 2 unhoused, 1 built, stock 4 and 2 vacancies. Month 2 has opening vacancy 1/2, rent 599.625, household 2 rehoused, 3 housed, 1 unhoused, 0 built, stock 4 and 1 vacancy. Floating price assertions allow absolute error below 1e-9.
+
+Setting allowance to 300 after month 1 changes bids immediately but keeps allocations, tick and historical samples unchanged. Month 2 then houses all four at rent 599.625 with no vacancies. Policy is applied at the next month, without retroactively changing history.
+
+## Public actions and observations
+
+`model.create(options?)` / `create(options?)` produces an independent instance. `advance(steps = 1)` accepts integers 0–1,000,000 through validateStepCount; zero is inert. `setHousingAllowance(value)` validates against the canonical descriptor and changes only that live policy. Invalid actions leave the instance unchanged. Imports create no instance, timer, I/O or random stream.
+
+`read()` returns frozen, detached households (income, bid, homeId, status), homes (id, occupantId derived from household assignments), canonical frozen parameters, tick, current rent and derived counts: homeCount, housedHouseholdCount, unhousedHouseholdCount, vacantHomeCount, vacancyRate, displacedHouseholdCount, displacedThisStepCount and builtThisStepCount. It also returns bounded measurement history and `done: false`. Read does not allocate, advance or consume randomness. Household homeId is the sole assignment owner; home occupantId is derived only for observations.
+
+For every observation: housed + unhoused = householdCount; housed + vacant = homeCount; no home has more than one household; stock never exceeds maxHomeCount. After setup and each completed month, every housed bid covers rent. A live allowance reduction changes bids immediately; newly unaffordable incumbents remain until the next monthly displacement rule. Current displaced households are a subset of all unhoused households, distinct from displacement events during the last step.
+
+## Reuse and provenance
+
+Compared at repository revision `42a289785ee3c9879800d2dd7e8532d04032a7ab`:
+
+| Exact candidate | Decision and adaptation |
+| --- | --- |
+| Public World.create / run | Reuse the existing synchronous clock; one monthly rule per successful run; no second tick owner. |
+| Public storage.history | Reuse capacity 120, immutable detached samples and eviction; no custom history buffer. |
+| Public measurements.define | Reuse finite numeric observation validation for monthly indicators. |
+| models/parameters.ts and models/definition.ts | Reuse parseParameters, validateStepCount, Definition and Inputs without new authoring syntax. |
+| models/workplace-household-membership/model.ts | Reuse the plain factory/action/observation pattern. Its Graph memberships are not a housing allocator, so transfer no allocation rule. |
+| models/scarce-resource/model.ts | Compare transferOne: useful one-unit conservation example, but fixed named applicants and caller-selected transfer do not express rent/retention; write the bounded model-specific rule. |
+| models/bidding-market/model.ts | Compare changePrice and buyer/seller mechanism: goods, cash exchange and stochastic matching differ; copy no code or source-specific rules. Its external source terms do not become this model's provenance. |
+| Public Resource / Store / ServiceQueue | Compare capacity and queues: homes are persistent identified assignments with budget priority, not timed service requests or consumable items. Avoid a second occupancy owner or an artificial event queue. |
+| Public Agent / Graph / Grid / Random | No movement, spatial topology, graph algorithm or stochastic mechanism is required; plain owned household records suffice. |
+| Public UI defineUI / collectionDiagram / indexedColor | Reuse host controls, exact collection identities, central palette, charts and monitors. No custom Svelte, CSS or geographic layout. |
+| External market/ABM packages | No dependency needed for this bounded deterministic mechanism; none added. |
+
+No new library API or package entry is introduced. This is mechanism verification, not empirical or comprehensive scientific validation. Browser interaction checks, desktop/narrow light/dark screenshots and independent screenshot/design review remain centrally coordinated and pending.

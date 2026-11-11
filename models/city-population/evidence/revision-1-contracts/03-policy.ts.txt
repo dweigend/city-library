@@ -1,0 +1,27 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-population/model.ts";
+
+const instance = model.create({ initialPopulation: 100, birthRate: 0, deathRate: 0 });
+instance.setPolicy({ annualMigration: -100, migrationLimit: 7, householdSize: 2 });
+assert.equal(instance.read().tick, 0);
+assert.equal(instance.read().populationCount, 100);
+assert.equal(instance.read().householdCount, 34); // Setup still uses size 3 until the next year.
+instance.advance();
+const state = instance.read();
+assert.equal(state.netMigration, -7);
+assert.equal(state.populationCount, 93);
+assert.equal(state.cohorts[99]!.residentCount, 0);
+assert.equal(state.cohorts[93]!.residentCount, 1);
+assert.equal(state.householdCount, 47);
+assert.equal(state.formedHouseholdCount, 13);
+instance.setPolicy({ migrationLimit: 1000 });
+instance.advance();
+assert.equal(instance.read().populationCount, 0);
+assert.equal(instance.read().netMigration, -93);
+assert.equal(instance.read().householdCount, 0);
+instance.setPolicy({ annualMigration: 11, migrationLimit: 4 });
+instance.advance();
+assert.equal(instance.read().populationCount, 4);
+assert.equal(instance.read().cohorts[25]!.residentCount, 4);
+assert.equal(instance.read().householdCount, 2);
+console.log("city-population live policy passed");

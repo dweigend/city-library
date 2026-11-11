@@ -1,0 +1,24 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-mobility/model.ts";
+
+const instance = model.create();
+instance.advance();
+let state = instance.read();
+assert.deepEqual([state.tick, state.completedTrips, state.movingTrips, state.waitingTrips, state.totalWaitingMinutes], [1, 0, 2, 2, 3]);
+instance.advance();
+state = instance.read();
+assert.deepEqual([state.completedTrips, state.movingTrips, state.waitingTrips, state.totalWaitingMinutes], [1, 2, 1, 5]);
+instance.advance(3);
+state = instance.read();
+assert.equal(state.tick, 5);
+assert.deepEqual(state.trips.map(trip => trip.completedAt), [2, 3, 4, 5]);
+assert.deepEqual(state.trips.map(trip => trip.waitingMinutes), [0, 1, 2, 3]);
+assert.equal(state.completedTrips, 4);
+assert.equal(state.meanCompletedWaitingMinutes, 1.5);
+assert.equal(state.meanCompletedTravelMinutes, 3.5);
+assert.equal(state.totalWaitingMinutes, 6);
+for (const sample of state.history) {
+  assert.equal(sample.values.completedTrips! + sample.values.movingTrips! + sample.values.waitingTrips!, 4);
+}
+for (const link of state.links) assert.ok(link.used <= link.capacity);
+console.log("city-mobility first steps passed");

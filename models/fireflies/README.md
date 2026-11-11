@@ -47,7 +47,7 @@ Model-specific `read()` fields include `flashingCount`, `fireflies`.
 
 ## Sources and limits
 
-Adapted from the NetLogo *Fireflies* model by Wilensky (1997). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
+Adapted from the NetLogo *Fireflies* model by Wilensky (1997). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. The [scientific sources dossier](../../docs/scientific-sources.md) connects the scientific background to model files. The retained research record documents source identity and access limits; it does not validate this implementation.
 
 Discrete counters and simple perception stand in for real signal recognition and measured light responses. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 

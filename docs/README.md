@@ -51,6 +51,7 @@ Library contracts are linked from [what works today](development/coverage.md), U
 These are records. Use them to trace a source or check a claim; the pages above describe the current system.
 
 - [Model catalog](../models/catalog/README.md): selection, source snapshots, the acceptance ledger and shared acceptance records.
+- [Scientific sources](scientific-sources.md): research and reference sources mapped to implemented code, with concrete simplifications and limits.
 - [Model sources and scientific context](../models/catalog/research/README.md): research dossiers and publications.
 - [Model reference sources](development/model-reference-sources.md): pinned sources behind adapted models.
 - [UI acceptance record](../ui/model-lab/acceptance/README.md): browser checks for the shared UI.

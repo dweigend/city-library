@@ -1,0 +1,22 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-energy/model.ts";
+
+assert.throws(() => model.create({ initialBatteryKwh: 9 }), RangeError);
+for (const options of [{ solarCapacityKw: -1 }, { flexibleShare: 0.6 }, { demandScale: 11 }]) assert.throws(() => model.create(options), RangeError);
+assert.throws(() => model.create({ gasKw: 1 } as never), TypeError);
+const instance = model.create();
+const snapshot = instance.read();
+assert.throws(() => instance.setFlexibleShare(undefined as never), TypeError);
+assert.throws(() => instance.setFlexibleShare(0.7), RangeError);
+assert.throws(() => instance.setNetworkCapacity({ electricityNetworkCapacityKw: 7, heatNetworkCapacityKw: undefined }), TypeError);
+assert.throws(() => instance.setNetworkCapacity({ electricityNetworkCapacityKw: -1 }), RangeError);
+assert.throws(() => instance.setNetworkCapacity({ solarCapacityKw: 3 } as never), TypeError);
+for (const steps of [-1, 0.5, 1_000_001]) assert.throws(() => instance.advance(steps), RangeError);
+assert.deepEqual(instance.read(), snapshot);
+const first = model.create({ solarCapacityKw: 30 });
+const second = model.create({ solarCapacityKw: 30 });
+first.advance(50);
+for (let hour = 0; hour < 50; hour += 1) second.advance();
+assert.deepEqual(first.read(), second.read());
+assert.ok(Object.isFrozen(snapshot.flow));
+console.log("city-energy validation and isolation passed");

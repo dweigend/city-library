@@ -1,0 +1,25 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-biodiversity/model.ts";
+
+const instance = model.create();
+function close(actual: number, expected: number) {
+  assert.ok(Math.abs(actual - expected) < 1e-12, `${actual} != ${expected}`);
+}
+instance.advance();
+let state = instance.read();
+assert.equal(state.tick, 1);
+state.patches.forEach((patch, index) => close(patch.occupancy, [0.9, 0.1, 0][index]!));
+close(state.colonizationGain, 0.1);
+close(state.extinctionLoss, 0.1);
+close(state.totalOccupancy, 1);
+instance.advance();
+state = instance.read();
+assert.equal(state.tick, 2);
+state.patches.forEach((patch, index) => close(patch.occupancy, [0.812, 0.171, 0.02][index]!));
+close(state.colonizationGain, 0.103);
+close(state.extinctionLoss, 0.1);
+close(state.totalOccupancy, 1.003);
+close(state.totalOccupancy, 1 + state.colonizationGain - state.extinctionLoss);
+assert.deepEqual(state.history.map(sample => sample.tick), [0, 1, 2]);
+close(state.history[2]!.values.meanOccupancy!, 1.003 / 3);
+console.log("city-biodiversity first steps passed");

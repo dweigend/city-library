@@ -1,0 +1,72 @@
+import { describe, expect, test } from "bun:test";
+import { model } from "../../../models/city-materials/model.ts";
+
+describe("urban material cycles boundaries", () => {
+  test("zero collection retains every kilogram", () => {
+    const instance = model.create({ collectionCapacity: 0, initialUncollected: 20 });
+    instance.advance(3);
+    const state = instance.read();
+    expect(state.uncollected).toBe(320);
+    expect(state.clearedDay).toBe(null);
+    expect(state.flows.collected).toBe(0);
+    expect(state.totals.disposed).toBe(0);
+    expect(state.balanceError).toBe(0);
+  });
+
+  test("collection cannot exceed available mass; reuse precedes recycling", () => {
+    const instance = model.create({ initialUncollected: 0, collectionCapacity: 1000, reuseFraction: 1, recyclingFraction: 1 });
+    instance.advance();
+    const state = instance.read();
+    expect(state.flows).toEqual({ generated: 100, collected: 100, reused: 100, recycled: 0, disposed: 0 });
+    expect(state.uncollected).toBe(0);
+    expect(state.balanceError).toBe(0);
+  });
+
+  test("no recovery sends collected material to disposal", () => {
+    const instance = model.create({ reuseFraction: 0, recyclingFraction: 0 });
+    instance.advance();
+    expect(instance.read().flows.disposed).toBe(100);
+    expect(instance.read().balanceError).toBe(0);
+  });
+
+  test("the pulse adds waste only on its days", () => {
+    const instance = model.create({ pulseStartDay: 2, pulseDays: 2, pulseExtraKg: 7 });
+    const generated: number[] = [];
+    for (let day = 0; day < 5; day += 1) {
+      instance.advance();
+      generated.push(instance.read().flows.generated);
+    }
+    expect(generated).toEqual([100, 100, 107, 107, 100]);
+  });
+
+  test("an empty system remains empty", () => {
+    const instance = model.create({ wasteGeneration: 0, initialUncollected: 0, pulseExtraKg: 0 });
+    instance.advance(100);
+    expect(instance.read().uncollected).toBe(0);
+    expect(instance.read().totals.generated).toBe(0);
+    expect(instance.read().balanceError).toBe(0);
+  });
+
+  test("fractional mass is nonnegative and conserved within roundoff", () => {
+    const instance = model.create({ wasteGeneration: 0.3, initialUncollected: 0.7, collectionCapacity: 0.4, reuseFraction: 0.17, recyclingFraction: 0.63 });
+    for (let day = 0; day < 1000; day++) {
+      instance.advance();
+      const state = instance.read();
+      expect(Math.abs(state.balanceError)).toBeLessThan(1e-8);
+      expect(state.uncollected).toBeGreaterThanOrEqual(0);
+      for (const amount of Object.values(state.flows)) expect(amount).toBeGreaterThanOrEqual(0);
+    }
+  });
+
+  test("invalid plain-data policies reject without invoking getters or mutating", () => {
+    const instance = model.create();
+    const before = instance.read();
+    let getterCalled = false;
+    expect(() => instance.setPolicy({ get reuseFraction() { getterCalled = true; return 0.5; } })).toThrow(TypeError);
+    expect(getterCalled).toBe(false);
+    expect(() => instance.setPolicy(null as never)).toThrow(TypeError);
+    expect(() => instance.setPolicy({ collectionCapacity: 4, recyclingFraction: Infinity })).toThrow(RangeError);
+    expect(() => instance.setPolicy({ [Symbol("policy")]: 1 } as never)).toThrow(TypeError);
+    expect(instance.read()).toEqual(before);
+  });
+});

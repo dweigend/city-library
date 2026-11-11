@@ -1,0 +1,31 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-daily-activities/model.ts";
+
+const instance = model.create();
+instance.advance(29);
+const departing = instance.read();
+assert.equal(departing.clock, "Day 1 · 07:15");
+assert.deepEqual(departing.residents.filter(resident => resident.activity === "travel").map(resident => resident.id).sort(), ["2:adult", "5:adult"]);
+instance.advance();
+const commute = instance.read();
+assert.equal(commute.residents.filter(resident => resident.activity === "travel" && resident.role === "adult").length, 4);
+assert.equal(commute.residents.filter(resident => resident.activity === "travel" && resident.role === "child").length, 2);
+const farAdult = commute.residents.find(resident => resident.id === "2:adult")!;
+assert.ok(farAdult.x > -5 && farAdult.x < 2); // Interpolated along the commute.
+instance.advance(66);
+const day = instance.read();
+assert.equal(day.tick, 96);
+assert.equal(day.tripCount, 30);
+assert.equal(day.today.tripCount, 30);
+assert.equal(day.today.errandCount, 6);
+assert.equal(day.today.missedErrandCount, 0);
+assert.equal(day.personHours.travel, 12);
+assert.equal(day.accountedPersonHours, 288);
+assert.equal(day.personHours.work, 48);
+assert.equal(day.personHours.school, 36);
+assert.equal(day.personHours.services, 6);
+assert.equal(day.residents.every(resident => resident.activity === "home"), true);
+instance.advance(96);
+assert.equal(instance.read().tripCount, 60);
+assert.equal(instance.read().accountedPersonHours, 576);
+console.log("city-daily-activities person-hours and trips passed");

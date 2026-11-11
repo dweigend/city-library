@@ -55,7 +55,7 @@ Model-specific `read()` fields include `minutes`, `hours`, `days`, `antibioticFl
 
 ## Sources and limits
 
-Adapted from the NetLogo *Bacterial Infection* model by Novak, Quigley and Wilensky (2016). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
+Adapted from the NetLogo *Bacterial Infection* model by Novak, Quigley and Wilensky (2016). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. The [scientific sources dossier](../../docs/scientific-sources.md) connects the scientific background to model files. The retained research record documents source identity and access limits; it does not validate this implementation.
 
 Pore count is a teaching stand-in for resistance, and the model is not calibrated to any pathogen, drug or dosing regimen. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 

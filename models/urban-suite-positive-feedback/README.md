@@ -41,7 +41,7 @@ Model-specific `read()` fields include `cells`, `activityDistribution`.
 
 ## Sources and limits
 
-Adapted from the NetLogo *Urban Suite - Positive Feedback* model by Wilensky (2007). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
+Adapted from the NetLogo *Urban Suite - Positive Feedback* model by Wilensky (2007). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. The [scientific sources dossier](../../docs/scientific-sources.md) connects the scientific background to model files. The retained research record documents source identity and access limits; it does not validate this implementation.
 
 Normalization keeps only relative comparisons; nothing like a population or a budget is conserved. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 

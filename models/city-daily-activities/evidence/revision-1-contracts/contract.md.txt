@@ -1,0 +1,39 @@
+# Daily Activities contract
+
+Frozen before runtime implementation on 2026-11-10. The four scripts in `tests/public-contracts/city-daily-activities/` define setup, hand-calculated accounting, intervention and validation/snapshot behavior. Their SHA256SUMS file records the frozen bytes.
+
+## Mechanism and public boundary
+
+`model.create(options?)`, also exported as `create`, returns `advance(steps = 1)`, `read()` and `setRemoteWork(boolean)`. Inputs: `householdCount` defaults to 2, integer 1–50; `remoteWork` defaults to false. There is no randomness or seed. Imports perform no setup or I/O.
+
+Each household contains one adult then one child, ordered by ascending zero-based household index, with IDs `index:adult` and `index:child`. All start at home at midnight. Each `advance` step covers [tick, tick + 1) hours, with hour of day tick modulo 24. Every day repeats, with no weekends. Tick is elapsed hours, not host frames.
+
+The child's desired destination is school at hours 7–13 inclusive, otherwise home. The adult's desired destination is work at hours 8–15 inclusive (home under remote work), services at 16–17, otherwise home. If the desired destination differs from the current location, the entire hour is travel, and arrival and one completed trip are recorded at its end. Otherwise the hour accrues to the current location. There is no simultaneous activity and travel accounting. Thus a school departure at 07:00 arrives at 08:00; the school activity lasts 08:00–14:00. Every pair of locations is directly reachable in one hour. Services represents a generic daily errand, with no queues or capacity constraints.
+
+`setRemoteWork` validates a boolean before mutation. It changes only the policy, takes no time and affects destination choice next step. Enabling it while at work causes a trip home next hour. It does not cancel school or service visits. Invalid setup, action and step count fail before mutation through canonical parameter/step validation. Steps are integers 0–1,000,000. Unknown options fail.
+
+`read` returns detached parameters, resident records, cumulative `personHours` by home/work/school/services/travel, counts at each location, total `tripCount`, `accountedPersonHours`, elapsed tick, hour of day and a bounded 169-sample history including tick zero. Residents show end-of-hour locations; no resident remains in transit at observation boundaries. History samples store cumulative trips and travel person-hours. Earlier observations do not change when the model advances.
+
+## Exact expected values
+
+For one household, first hour: home 2 person-hours, no trips. At tick 8 the child is at school and one trip is complete. At tick 9: home 15, school 1, travel 2; work and services zero. After 24 hours: home 29, work 7, school 6, services 1, travel 5 person-hours; five trips, both residents home. Their sum is 48 = 2 residents × 24 hours. Remote work enabled at tick 8 gives home 37, work 0, school 6, services 1, travel 4 and four trips at tick 24. Turning it off then gives nine cumulative trips at tick 48. Two default households scale all counts and person-hours by two.
+
+## Reuse and provenance
+
+Base revision: `42a289785ee3c9879800d2dd7e8532d04032a7ab`. This is an original synthetic teaching model, not an adaptation or a calibrated travel-demand model; no external source code or dataset is copied.
+
+| Exact candidate | Decision |
+| --- | --- |
+| Public `World.create` and `run` from `city-library` | Reuse the existing model clock and step execution, rather than implementing another scheduler. |
+| Public `storage.history` | Reuse bounded detached numeric samples rather than implementing a history buffer. |
+| `models/parameters.ts`: `parseParameters`, `validateStepCount` | Reuse canonical setup/action and step validation; no new DSL. |
+| `models/household-budget/model.ts` | Reuse the plain Definition/headless factory pattern; its monthly monetary flow does not represent travel. |
+| `models/solar-battery-microgrid/model.ts` | Reuse hourly World/run/history composition; its energy equations and stochastic phase are unsuitable for fixed household schedules. |
+| Public `Agent` | Not needed: residents are private fixed records, with no movement, activation or lifecycle API requirements. |
+| Public `Graph`, `Agenda`, `TimeWeighted` | Not needed for complete one-hour direct trips at fixed hourly boundaries. A routing graph or continuous event clock would add unsupported road/capacity detail. |
+| Public `defineUI`, `indexedColor` | Reuse network, line charts, controls and monitors with the shared indexed palette; no Svelte or CSS additions. |
+| External scheduling/travel libraries | No dependency needed for the fixed four-location schedule. |
+
+## Limits and acceptance
+
+The network view shows aggregate end-of-hour occupancy and possible direct links, not geography or traffic routes. One-hour travel is a coarse assumption independent of distance and household size. There is no household escorting, destination choice, unmet demand, congestion, weekend calendar or empirical validation. Do not couple this model to other new models yet. Browser interactions, desktop/narrow light/dark screenshots and independent screenshot review remain pending central coordination.

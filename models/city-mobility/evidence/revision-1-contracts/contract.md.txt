@@ -1,0 +1,50 @@
+# Urban Mobility contract
+
+Frozen before runtime implementation on 2026-11-10. The four scripts in `tests/public-contracts/city-mobility/` define setup, hand calculations, interventions and validation/snapshot behavior. Their expectations must remain unchanged.
+
+## Inputs and public actions
+
+| Input | Default | Bounds | Meaning |
+| --- | --- | --- | --- |
+| initialTrips | 4 | integer 0–1000 | Trips dispatched at time zero |
+| carCapacity | 1 | integer 1–20 | Concurrent travelers per car link |
+| carPenalty | 0 | finite 0–10 | Generalized minutes added once to car mode choice |
+
+`create(options?)` and `model.create(options?)` return the same headless contract. `advance(steps = 1)` accepts integer 0–1,000,000 through `validateStepCount`. `setCarPenalty(value)` validates through canonical descriptors, changes only future departures and does not advance time. `dispatchTrips(count)` accepts a positive safe integer, with at most 1000 lifetime trips; invalid calls leave state unchanged. No stochastic choices or seed are needed. Imports are inert.
+
+## Network, units and ordering
+
+One tick is one minute. All trips go from Home to Jobs. Directed car links, inserted in order, are Home→Junction (1 minute), Junction→Jobs (1), Home→Jobs (4). The separate directed walking link Home→Jobs takes 3 minutes. Each car link uses a FIFO `Resource` with `carCapacity`; the walking link has 1000 slots, sufficient for the lifetime trip bound. Travelers occupy their current link until its traversal ends. They release that slot before requesting the next link. There is no downstream blocking or intersection conflict rule.
+
+Routing uses public `Graph.allDistances` with positive traversal costs. A route follows the first outgoing edge satisfying the shortest-distance equation; insertion order breaks equal route ties. Car therefore takes the two-link route, never its four-minute bypass. Mode choice compares free-flow route minutes plus the car penalty; car wins a tie. Expected queues do not influence choice. Routes and modes are fixed at dispatch.
+
+At setup, dispatch trip IDs `trip-1` onward in order and start granted requests at minute 0. Each step: count one waiting minute for each currently waiting ticket; finish all traversals due at the next minute in trip order, releasing slots and requesting next links; then start every newly granted ticket in trip order at that next minute. A newly admitted traversal cannot finish in the same step. Completed trips remain in observations. `advance` continues time even when no trips remain active. Live dispatch starts granted requests at the current minute.
+
+At minute 0, default completed/moving/waiting = 0/1/3. At minute 1 = 0/2/2, cumulative waiting = 3. At minute 2 = 1/2/1, cumulative waiting = 5. Final completion times are [2,3,4,5], individual waiting minutes [0,1,2,3], cumulative waiting 6, mean completed waiting 1.5 and mean completed door-to-door travel 3.5 minutes. With capacity 2 completion times are [2,2,3,3] and waiting totals 2. With one initial car trip, penalty 2 and two further trips at time zero, modes are [car,walk,walk], completion times [2,3,3], waiting 0 and mean travel 8/3. Penalty 1 ties and chooses car.
+
+## Observations
+
+`read()` returns detached parameters, nodes, links, trips and bounded history. Link observations include mode, traversal minutes, capacity, used and waiting counts. Trip observations include mode, route IDs, current link ID or null, status, departure/completion minutes and accumulated waiting minutes. No resource handles or graph identities escape. Counts satisfy `tripCount = completedTrips + movingTrips + waitingTrips`; every occupied link respects its capacity. Completed mean waiting and travel are zero before any completion. Travel includes waiting. Total waiting includes all trips, including unfinished trips.
+
+History records numeric counts and cumulative waiting at setup and after every step, retaining the last 500 samples through public `storage.history`. Live actions change current observations immediately and are reflected in the next step's history sample; they do not overwrite a sample at the same tick. Observations are data, not continuation checkpoints.
+
+## Reuse and provenance
+
+Original synthetic teaching model; no external model or dataset is copied. Repository baseline: `git rev-parse HEAD` recorded in evidence. Exact candidates inspected:
+
+| Candidate | Decision |
+| --- | --- |
+| `Graph.create`, `Graph.allDistances` from `city-library` | Reuse topology and weighted shortest distances from each node; local route reconstruction is necessary because no public path-returning API exists. No new shortest-path algorithm. `Graph.distances` and `Graph.edges.between` were inspected but are unnecessary for reconstructing this fixed graph from all-pairs distances. |
+| `Resource.create`, `request`, `release` | Reuse FIFO capacity and tickets on every link; do not create a second queue or occupancy counter. |
+| `ServiceQueue.create` | Inspected; Resource already supplies admission and FIFO, so a second queue would duplicate ownership. |
+| `World.create`, `run` | Reuse step/tick execution, mapping one tick explicitly to one minute. |
+| `Agenda.create` | Inspected public event scheduler; integer fixed traversal durations fit World steps without a second clock/event queue. |
+| `storage.history` | Reuse bounded samples and detached copies. |
+| `models/preferential-attachment/model.ts` | Reuse public model-definition and graph authoring pattern, not its random growth rule or attributed source material. |
+| `models/household-budget/model.ts`, `models/shared-machine/model.ts` | Inspect original headless examples; neither expresses multimodal routing/queued links. New local trip orchestration is needed. |
+| `models/neighborhood-heat-intervention/ui.ts` | Reuse declarative live binding, indexed palette and history projection pattern; no heat calculation or custom drawing copied. |
+| External routing/traffic packages | No dependency needed for four fixed links and existing weighted graph/capacity APIs; none imported or transferred. |
+
+## Limits and acceptance
+
+Illustrative transport graph, not calibrated traffic or behavioral science. No geographic scale, vehicle dynamics, car occupancy, transit, congestion-dependent routing, spillback, return trips or external demand stream. Completed waiting is subject to completion bias while queues remain. Walking capacity represents unconstrained walking only within the 1000-trip bound. UI uses shared network, line charts and numeric monitors only. Browser interactions, desktop/narrow light/dark screenshots and independent screenshot review are centrally coordinated and pending. Technical checks do not imply UI or scientific acceptance.

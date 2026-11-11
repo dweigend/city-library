@@ -44,7 +44,7 @@ Model-specific `read()` fields include `monarchColor`, `viceroyColor`, `birds`, 
 
 ## Sources and limits
 
-Adapted from the NetLogo *Mimicry* model by Wilensky (1997). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
+Adapted from the NetLogo *Mimicry* model by Wilensky (1997). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. The [scientific sources dossier](../../docs/scientific-sources.md) connects the scientific background to model files. The retained research record documents source identity and access limits; it does not validate this implementation.
 
 Bird memory and the color space are simplified. The model illustrates selection through predator learning, not the history of a particular pair of species. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 

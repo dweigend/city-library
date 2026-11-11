@@ -1,0 +1,28 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-heat/model.ts";
+
+const instance = model.create();
+const close = (actual: number, expected: number) => assert.ok(Math.abs(actual - expected) < 1e-8, `${actual} != ${expected}`);
+instance.advance();
+let state = instance.read();
+assert.equal(state.tick, 1);
+state.blocks.forEach((block, index) => {
+  close(block.temperatureC, [33.6, 32.9, 32.2][index]!);
+  close(block.absorbedSolarWm2, [360, 315, 270][index]!);
+  close(block.evapotranspirationWm2, [0, 25, 50][index]!);
+  close(block.sensibleLossWm2, 0);
+});
+close(state.meanTemperatureC, 32.9);
+assert.ok(Math.abs(state.storedEnergyJ - 313_200_000) < 1e-5);
+assert.ok(Math.abs(state.storedEnergyJ - state.cumulativeNetEnergyJ) < 1e-5);
+instance.advance();
+state = instance.read();
+state.blocks.forEach((block, index) => {
+  close(block.temperatureC, [36.48, 35.22, 33.96][index]!);
+  close(block.sensibleLossWm2, [72, 58, 44][index]!);
+});
+assert.ok(Math.abs(state.netEnergyJ - 250_560_000) < 1e-5);
+assert.ok(Math.abs(state.storedEnergyJ - 563_760_000) < 1e-5);
+assert.ok(Math.abs(state.balanceResidualJ) < 1e-5);
+assert.deepEqual(state.history.map(sample => sample.tick), [0, 1, 2]);
+console.log("city-heat hourly budget passed");

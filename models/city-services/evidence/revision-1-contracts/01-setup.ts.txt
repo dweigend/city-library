@@ -1,0 +1,28 @@
+import assert from "node:assert/strict";
+import { model, inputs } from "../../../models/city-services/model.ts";
+
+assert.equal(model.title, "Neighborhood Services");
+assert.equal(inputs.capacityPerFacility.default, 1);
+assert.equal(inputs.maxDistanceKm.default, 1.5);
+const instance = model.create();
+const state = instance.read();
+assert.equal(state.tick, 0);
+assert.equal(state.households.length, 4);
+assert.deepEqual(state.households.map(home => [home.id, home.x, home.y]), [
+  ["household:1", 0, 1], ["household:2", 1, 1],
+  ["household:3", 2, 1], ["household:4", 3, 1],
+]);
+assert.equal(state.facilities.length, 6);
+assert.deepEqual(state.facilities.map(facility => facility.id), [
+  "school:west", "school:east", "clinic:west", "clinic:east", "shop:west", "shop:east",
+]);
+assert.equal(state.demandCount, 0);
+assert.equal(state.servedCount, 0);
+assert.equal(state.unmetCount, 0);
+assert.equal(state.meanDistanceKm, 0);
+assert.deepEqual(state.requests, []);
+assert.equal(state.history.length, 1);
+assert.equal(state.totalServedCount, 0);
+instance.advance(0);
+assert.deepEqual(instance.read(), state);
+console.log("city-services setup: passed");

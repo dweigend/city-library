@@ -1,0 +1,30 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-stormwater/model.ts";
+
+for (const options of [ { rainMmPerHour: -1 }, { rainMmPerHour: NaN }, { infiltrationMmPerHour: Infinity },
+  { retentionCapacityM3: -1 }, { outletM3PerHour: -1 } ]) assert.throws(() => model.create(options), RangeError);
+assert.throws(() => model.create({ unknown: 1 } as never), TypeError);
+const first = model.create();
+const second = model.create();
+const initial = first.read();
+for (const steps of [-1, 0.5, NaN, 1_000_001]) assert.throws(() => first.advance(steps), RangeError);
+assert.throws(() => first.setRain(-1), RangeError);
+assert.throws(() => first.setInfiltration(NaN), RangeError);
+assert.deepEqual(first.read(), initial);
+first.advance(8);
+second.advance(3);
+second.advance(5);
+assert.deepEqual(first.read(), second.read());
+assert.equal(initial.tick, 0);
+assert.equal(initial.plots[0]!.intervalRunoffM3, 0);
+assert.equal(initial.history.length, 1);
+const detached = structuredClone(first.read());
+detached.plots[0]!.intervalRunoffM3 = 999;
+assert.notEqual(first.read().plots[0]!.intervalRunoffM3, 999);
+first.setRain(0);
+assert.equal(second.read().parameters.rainMmPerHour, 20);
+const noRetention = model.create({ retentionCapacityM3: 0, outletM3PerHour: 0, infiltrationMmPerHour: 0 });
+noRetention.advance();
+assert.equal(noRetention.read().overflowM3, 4);
+assert.equal(noRetention.read().storedM3, 0);
+assert.equal(noRetention.read().balanceErrorM3, 0);

@@ -1,0 +1,51 @@
+# Urban Employment contract
+
+The four scripts in `tests/public-contracts/city-economy/` were written and frozen before `model.ts`. `SHA256SUMS` records their original bytes. They cover setup, hand-calculated monthly flows and conservation, a live demand intervention, validation, deterministic independent runs and detached observations.
+
+## Inputs and units
+
+| Input | Default | Allowed values | Meaning |
+| --- | --- | --- | --- |
+| householdCount | 8 | integers 1–100 | One potential worker per household |
+| firmCount | 2 | integers 1–10 | Identical firms |
+| wage | 10 | integers 1–100 | Currency units per worker per month |
+| spendingFraction | 0.5 | 0–1 in increments of 0.1 | Fraction of this month's wages spent |
+| externalDemand | 40 | integers 0–1000 | External purchases, currency units per month |
+
+Tick zero is setup. One successful step is one month. Setup gives each household 20 currency units and no employer, each firm 100 currency units and two vacant jobs. All flow totals and planned demand start at zero. History includes setup and retains the latest 120 monthly samples. No random stream or seed is needed: ordering is fully deterministic. Imports perform no setup, I/O, scheduling or DOM work.
+
+## Monthly order
+
+1. Planned demand is current external demand plus last month's household consumption. Divide equally among firms. Each firm's new job count is `min(100, floor(plannedDemand / firmCount / 10))`. Ten currency units of expected monthly sales support one planned job; the cap is 100 jobs per firm.
+2. All firms downsize first. Retain the earliest households in ascending household order up to the new job count. Release the rest.
+3. In ascending firm order, fill vacancies from unemployed households in ascending household order. A household has at most one employer. There are no skills, search frictions, commuting distances or job-switching preferences.
+4. Firms pay every matched worker the common wage. Households spend `wage * spendingFraction`, retaining the remainder. Unemployed households neither earn nor spend. Household savings are not a source of consumption here.
+5. Realized sales are external purchases plus current consumption, shared equally among firms regardless of employment. Firm balances change by sales minus payroll. Negative balances represent unrestricted overdrafts; solvency never blocks payroll. Demand plans are expectations, not productive capacity constraints or output inventories.
+6. Advance tick once, then record measurements. The next demand forecast uses the just-completed consumption.
+
+Employer references on households are the sole employment owner. Firm employee/vacancy counts, network edges and aggregate measurements are derived. Public IDs `household:1` and `firm:1` follow local setup order and remain stable; underlying Agent IDs are not part of observations. No coupling to other models exists.
+
+## Assertions and public actions
+
+`create(options?)`, also exposed as `model.create`, validates canonical public `Inputs` with `parseParameters`. `advance(count = 1)` uses `validateStepCount` (integer 0–1,000,000). `setExternalDemand(value)` accepts the same descriptor range, changes policy immediately without advancing time or rewriting history, and affects the next month. Invalid calls throw before mutation. Unknown options and wrong primitive types throw `TypeError`; invalid numeric ranges throw `RangeError`.
+
+`read()` returns frozen detached records, arrays, parameters and history. It exposes households (ID, employer ID, balance), firms (ID, balance, job/employee/vacancy counts), tick, canonical parameters, plannedDemand, nextDemand, payroll, consumption, revenue, employedCount, unemployedCount, jobCount, vacancyCount, householdCash, firmCash, totalCash, history and `done: false`. These are observations, not a persistence or continuation format.
+
+Default month 1: planned demand 40, jobs/employed 4, vacancies 0, payroll 40, consumption 20, revenue/next demand 60. Households 1–2 join firm 1; 3–4 join firm 2. Household cash is 180, firm cash 220, total cash 400. Month 2: planned demand 60, jobs/employed 6, payroll 60, consumption 30, revenue/next demand 70; households 5 and 6 join firms 1 and 2. Firm balances are 115 each; total cash is 440. At all times, jobs = employed + vacancies and households = employed + unemployed. Each month's total cash increase equals external purchases (within floating-point tolerance for fractional cases).
+
+Setting external demand to zero after month 1 leaves current employment and cash unchanged. Month 2 retains households 1 and 3, pays 20 and consumes 10. Month 3 has zero jobs and payroll. Cash stays 400. Restoring external demand to 80 then creates eight filled jobs and total cash 480. With two households and external demand 80, the first month has eight jobs, two employed and six vacancies.
+
+## Reuse and provenance
+
+This is an original synthetic teaching mechanism, not a port, calibrated labor-market model or claim about a real city. No external model code, formulas, data or media were transferred. Local candidates were inspected at repository revision `42a289785ee3c9879800d2dd7e8532d04032a7ab`.
+
+| Exact candidate | Decision |
+| --- | --- |
+| `models/household-budget/model.ts`: `Agent.create`, `World.create`, `run` | Reuse these public primitives; replace its single exogenous household income with explicit firm–household payroll transfers. Do not import its mutable public household/world. |
+| `models/neighborhood-heat-intervention/model.ts`: `Inputs`, `parseParameters`, `validateStepCount`, `storage.history` | Reuse descriptor validation, step validation and bounded detached history patterns. Do not reuse heat dynamics, Grid or `twoPhase`; employment phases use explicit ordered loops. |
+| `models/preferential-attachment/model.ts`: `Graph`, `Random` | Considered and omitted: household employer references already own matching, so a stored Graph would duplicate employment; deterministic matching needs no Random. Project the employment network from observations. |
+| `city-library`: `Resource`, `ServiceQueue`, `Agenda` | Considered and omitted: there are no waiting requests, asynchronous service or event-time semantics. Jobs are an explicit monthly integer target. |
+| External libraries versus focused local rule | No dependency adds value for this bounded arithmetic mechanism. Keep hiring, accounting and forecast rules visible in `model.ts`; add no library API or DSL. |
+| Shared `defineUI(model, spec)`, `indexedColor` | Reuse public network, line charts, inspector and monitors; no Svelte, DOM, layout engine or styling is added. |
+
+Browser interaction checks, desktop/narrow light/dark screenshots, independent screenshot inspection and substantial-design review remain centrally coordinated acceptance work. Passing the scripts establishes only the declared synthetic rules.

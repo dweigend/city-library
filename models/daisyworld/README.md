@@ -51,7 +51,7 @@ Model-specific `read()` fields include `globalTemperature`, `blackCount`, `white
 
 ## Sources and limits
 
-Adapted from the NetLogo *Daisyworld* model by Novak and Wilensky (2006). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
+Adapted from the NetLogo *Daisyworld* model by Novak and Wilensky (2006). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. The [scientific sources dossier](../../docs/scientific-sources.md) connects the scientific background to model files. The retained research record documents source identity and access limits; it does not validate this implementation.
 
 Two daisy types, a stylized growth curve and a simple energy balance are deliberate reductions. A temperature plateau here shows that the feedback is possible under these rules, not that Earth's climate regulates itself. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 

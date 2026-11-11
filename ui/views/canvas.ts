@@ -95,8 +95,16 @@ export function mountCanvas(
           ctx.stroke();
         }
         if (agent.id === selected) {
-          ctx.strokeStyle = theme?.selected ?? "#fbbf24";
-          ctx.lineWidth = 2;
+          // Selection adds a neutral frame; never repaint a model's semantic outline.
+          const gap = ((agent.strokeWidth ?? 1) / 2 + 4) * ratio;
+          ctx.beginPath();
+          ctx.rect(-width / 2 - gap, -height / 2 - gap, width + 2 * gap, height + 2 * gap);
+          ctx.strokeStyle = theme?.background ?? "#151515";
+          ctx.lineWidth = 4 * ratio;
+          ctx.stroke();
+          ctx.setLineDash([3 * ratio, 3 * ratio]);
+          ctx.strokeStyle = theme?.foreground ?? "#fff";
+          ctx.lineWidth = 1.5 * ratio;
           ctx.stroke();
         }
         ctx.restore();

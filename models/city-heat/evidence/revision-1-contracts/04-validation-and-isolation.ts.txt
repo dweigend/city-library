@@ -1,0 +1,36 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-heat/model.ts";
+
+for (const options of [
+  { shadeFraction: -0.1 }, { waterAvailability: 1.1 }, { solarFluxWm2: Infinity },
+  { initialTemperatureC: 61 }, { airTemperatureC: -21 },
+]) assert.throws(() => model.create(options), RangeError);
+assert.throws(() => model.create({ unknown: 1 } as never), TypeError);
+const first = model.create();
+const second = model.create();
+const snapshot = first.read();
+for (const count of [-1, 0.5, NaN, 1_000_001]) assert.throws(() => first.advance(count), RangeError);
+assert.deepEqual(first.read(), snapshot);
+assert.throws(() => first.setPolicy({ solarFluxWm2: 0 } as never), TypeError);
+assert.throws(() => first.setPolicy({ shadeFraction: undefined } as never), TypeError);
+assert.throws(() => first.setPolicy(null as never), TypeError);
+first.advance(200);
+for (let index = 0; index < 200; index += 1) second.advance();
+assert.deepEqual(first.read(), second.read());
+assert.equal(snapshot.tick, 0);
+assert.equal(snapshot.blocks[0]!.temperatureC, 30);
+assert.equal(snapshot.history.length, 1);
+assert.equal(first.read().history.length, 169);
+assert.equal(first.read().history[0]!.tick, 32);
+// Mutating a detached observation may throw if frozen, but cannot alter the model.
+try { snapshot.blocks[0]!.temperatureC = 999; } catch {}
+assert.notEqual(first.read().blocks[0]!.temperatureC, 999);
+for (const airTemperatureC of [-20, 45]) {
+  for (const solarFluxWm2 of [0, 1000]) {
+    const instance = model.create({ airTemperatureC, solarFluxWm2, waterAvailability: 1, shadeFraction: 0 });
+    instance.advance(1000);
+    assert.ok(instance.read().blocks.every(block => block.temperatureC >= -25 && block.temperatureC <= 85));
+    assert.ok(Math.abs(instance.read().balanceResidualJ) < 0.01);
+  }
+}
+console.log("city-heat validation and isolation passed");

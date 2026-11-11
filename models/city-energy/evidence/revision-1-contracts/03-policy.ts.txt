@@ -1,0 +1,18 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-energy/model.ts";
+const instance = model.create({ electricityNetworkCapacityKw: 0, heatNetworkCapacityKw: 0 });
+instance.advance(3);
+assert.equal(instance.read().flow.electricityUnmetKwh, 4);
+assert.equal(instance.read().totalElectricityUnmetKwh, 8);
+assert.equal(instance.read().totalHeatUnmetKwh, 12);
+const before = instance.read();
+instance.setNetworkCapacity({ electricityNetworkCapacityKw: 4, heatNetworkCapacityKw: 4 });
+assert.equal(instance.read().tick, before.tick);
+assert.deepEqual(instance.read().flow, before.flow);
+assert.deepEqual(instance.read().history, before.history);
+instance.advance();
+assert.equal(instance.read().flow.electricityUnmetKwh, 0);
+assert.equal(instance.read().flow.heatUnmetKwh, 0);
+assert.equal(instance.read().totalElectricityUnmetKwh, 8);
+assert.equal(instance.read().totalHeatUnmetKwh, 12);
+console.log("city-energy policy passed");

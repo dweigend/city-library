@@ -47,7 +47,7 @@ Model-specific `read()` fields include `personCount`, `totalWealth`, `classes`, 
 
 ## Sources and limits
 
-Adapted from the NetLogo *Wealth Distribution* model by Wilensky (1998). Attribution and adaptation notes are in the comments of [model.ts](model.ts) and the retained source notices; the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
+Adapted from the NetLogo *Wealth Distribution* model by Wilensky (1998). Attribution and adaptation notes are in the comments of [model.ts](model.ts) and the retained source notices; the [retained source](source.nlogox) keeps the original. The [scientific sources dossier](../../docs/scientific-sources.md) connects the scientific background to model files. The retained research record documents source identity and access limits; it does not validate this implementation.
 
 Grain holdings stand in for wealth. Wages, inherited capital and finance are not part of the model. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 

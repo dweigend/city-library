@@ -1,0 +1,28 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-economy/model.ts";
+
+const instance = model.create();
+const state = instance.read();
+assert.equal(model.title, "Urban Employment");
+assert.deepEqual(state.parameters, {
+  householdCount: 8, firmCount: 2, wage: 10, spendingFraction: 0.5, externalDemand: 40,
+});
+assert.equal(state.tick, 0);
+assert.equal(state.households.length, 8);
+assert.equal(state.firms.length, 2);
+assert.equal(state.employedCount, 0);
+assert.equal(state.unemployedCount, 8);
+assert.equal(state.jobCount, 4);
+assert.equal(state.vacancyCount, 4);
+assert.equal(state.payroll, 0);
+assert.equal(state.consumption, 0);
+assert.equal(state.revenue, 0);
+assert.equal(state.nextDemand, 40);
+assert.equal(state.householdCash, 160);
+assert.equal(state.firmCash, 200);
+assert.equal(state.totalCash, 360);
+assert.equal(state.history.length, 1);
+assert.equal(state.history[0]!.tick, 0);
+assert.deepEqual(state.households.map(item => item.id), Array.from({ length: 8 }, (_, index) => `household:${index + 1}`));
+instance.advance(0);
+assert.deepEqual(instance.read(), state);

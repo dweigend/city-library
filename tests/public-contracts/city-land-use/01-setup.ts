@@ -1,0 +1,20 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-land-use/model.ts";
+
+const state = model.create().read();
+assert.equal(state.tick, 0);
+assert.deepEqual(state.parameters, { residentialDemand: 24, commercialDemand: 6, conversionLimit: 2, growthPattern: "compact" });
+assert.equal(state.parcels.length, 48);
+assert.equal(state.totalAreaHa, 48);
+assert.equal(state.residentialAreaHa, 4);
+assert.equal(state.commercialAreaHa, 2);
+assert.equal(state.greenAreaHa, 42);
+assert.equal(state.protectedAreaHa, 0);
+assert.equal(state.largestGreenPatchHa, 42);
+assert.equal(state.greenPatchCount, 1);
+assert.ok(Math.abs(state.urbanEdgeKm - 1.0) < 1e-9);
+assert.deepEqual(state.parcels[18], { id: "parcel:18", column: 2, row: 2, x: -1.5, y: -0.5, use: "residential", isProtected: false, changedThisYear: false, areaHa: 1 });
+assert.equal(state.parcels[20]!.use, "commercial");
+assert.equal(state.unmetResidentialDemand, 20);
+assert.equal(state.history.length, 1);
+console.log("city-land-use setup passed");

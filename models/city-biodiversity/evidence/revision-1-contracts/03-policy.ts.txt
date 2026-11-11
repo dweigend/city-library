@@ -1,0 +1,26 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-biodiversity/model.ts";
+
+const restored = model.create();
+const baseline = model.create();
+const before = restored.read();
+restored.setVegetationQuality(1);
+assert.equal(restored.read().tick, 0);
+assert.deepEqual(restored.read().patches.map(patch => patch.occupancy), [1, 0, 0]);
+assert.deepEqual(restored.read().history, before.history);
+assert.equal(restored.read().parameters.vegetationQuality, 1);
+restored.advance();
+baseline.advance();
+assert.deepEqual(restored.read().patches.map(patch => patch.occupancy), [1, 0.2, 0]);
+assert.ok(restored.read().meanOccupancy > baseline.read().meanOccupancy);
+assert.equal(restored.read().extinctionLoss, 0);
+const isolated = model.create();
+isolated.setPermeability(0);
+isolated.advance();
+assert.deepEqual(isolated.read().patches.map(patch => patch.occupancy), [0.9, 0, 0]);
+assert.equal(isolated.read().colonizationGain, 0);
+isolated.setPermeability(1);
+isolated.advance();
+assert.ok(isolated.read().patches[1]!.occupancy > 0);
+assert.deepEqual(before.patches.map(patch => patch.quality), [0.5, 0.5, 0.5]);
+console.log("city-biodiversity policy passed");

@@ -47,7 +47,7 @@ Model-specific `read()` fields include `rabbits`, `cells`.
 
 ## Sources and limits
 
-Adapted from the NetLogo *Rabbits Grass Weeds* model by Wilensky (2001). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
+Adapted from the NetLogo *Rabbits Grass Weeds* model by Wilensky (2001). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. The [scientific sources dossier](../../docs/scientific-sources.md) connects the scientific background to model files. The retained research record documents source identity and access limits; it does not validate this implementation.
 
 Random movement and cell-level eating replace plant physiology, age structure and real feeding behavior. Population curves show consequences of the energy assumptions, not predictions for a real habitat. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 

@@ -1,0 +1,41 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-biodiversity/model.ts";
+
+for (const field of Object.keys(model.inputs)) {
+  for (const value of [-0.1, 1.1, NaN, Infinity]) {
+    assert.throws(() => model.create({ [field]: value }), RangeError);
+  }
+  assert.throws(() => model.create({ [field]: "invalid" } as never), TypeError);
+}
+assert.throws(() => model.create({ unknown: 1 } as never), TypeError);
+assert.throws(() => model.create(null as never), TypeError);
+const a = model.create();
+const b = model.create();
+const snapshot = a.read();
+assert.notEqual(a.read().patches, snapshot.patches);
+assert.notEqual(a.read().patches[0], snapshot.patches[0]);
+assert.ok(Object.isFrozen(snapshot.patches[0]));
+for (const invalid of [-1, 0.5, NaN, Infinity, 1_000_001]) {
+  assert.throws(() => a.advance(invalid), RangeError);
+}
+assert.throws(() => a.setVegetationQuality(NaN), RangeError);
+assert.throws(() => a.setVegetationQuality(2), RangeError);
+assert.throws(() => a.setVegetationQuality("bad" as never), TypeError);
+assert.throws(() => a.setPermeability(-1), RangeError);
+assert.throws(() => a.setPermeability(null as never), TypeError);
+assert.deepEqual(a.read(), snapshot);
+a.advance(100);
+for (let index = 0; index < 100; index += 1) b.advance();
+assert.deepEqual(a.read(), b.read());
+assert.equal(snapshot.tick, 0);
+assert.deepEqual(snapshot.patches.map(patch => patch.occupancy), [1, 0, 0]);
+a.setVegetationQuality(0);
+assert.equal(b.read().parameters.vegetationQuality, 0.5);
+const extreme = model.create({ vegetationQuality: 1, dispersalRate: 1, extinctionRate: 1 });
+extreme.advance(500);
+assert.equal(extreme.read().history.length, 120);
+for (const patch of extreme.read().patches) assert.ok(patch.occupancy >= 0 && patch.occupancy <= 1);
+const empty = model.create({ initialOccupancy: 0 });
+empty.advance(20);
+assert.equal(empty.read().totalOccupancy, 0);
+console.log("city-biodiversity validation and snapshots passed");

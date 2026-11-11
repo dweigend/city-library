@@ -1,0 +1,57 @@
+# Water and Wastewater contract
+
+The four public assertion scripts in `tests/public-contracts/city-water/` were written and frozen before `model.ts`. They cover setup, hand-calculated balances, live policy intervention, and validation/determinism/detached observations. Their expectations are binding.
+
+## Inputs and units
+
+| Input | Default | Bounds | Meaning |
+| --- | ---: | --- | --- |
+| reservoirCapacityM3 | 1000 | 1–1,000,000 | Reservoir volume in m³ |
+| initialStoredM3 | 600 | 0–1,000,000, at most capacity | Initial water in m³ |
+| inflowM3PerDay | 100 | 0–1,000,000 | Constant daily inflow |
+| demandM3PerDay | 200 | 0–1,000,000 | Unrestricted daily demand |
+| conservationShare | 0 | 0–1 | Fraction of unrestricted demand avoided |
+| wastewaterShare | 0.8 | 0–1 | Fraction of supplied water entering treatment |
+| treatmentCapacityM3PerDay | 120 | 0–1,000,000 | Daily wastewater treatment limit |
+
+All inputs are finite continuous numbers; there is no random stream or seed. Setup is tick 0, with zero completed-day flows and cumulative totals, initial storage and one history sample. One successful step is one day; `advance(0)` does nothing. `advance` accepts integers 0–1,000,000 via shared validation.
+
+## Ordered daily mechanism
+
+1. Add inflow to yesterday's reservoir stock, spill excess above capacity immediately.
+2. Set demand to `demandM3PerDay * (1 - conservationShare)`.
+3. Supply the smaller of demand and retained stock. Report the remainder as shortage; avoided demand is not shortage.
+4. Send `suppliedM3 * wastewaterShare` to treatment. The remainder is consumptive use leaving the modeled system.
+5. Treat up to daily capacity; discharge all excess untreated that day. Neither effluent returns to the reservoir; no wastewater backlog exists.
+6. Update cumulative volumes, advance tick through `run`, and record the completed day.
+
+Every flow ending in `M3` is a volume for the last completed day; `total*` fields are lifetime cumulative volumes. The balance residual is `initialStored + totalInflow - stored - totalSpill - totalConsumed - totalTreated - totalUntreated`. Wastewater and supply are internal transfers and must not be double-counted. Numerical tolerance is 1e-9 m³ in the frozen examples; long fractional runs may accumulate floating-point error.
+
+Default day 1: stock 500, demand/supply 200, shortage/spill 0, wastewater 160, consumed 40, treated 120, untreated 40 m³. Day 2: stock 400; cumulative inflow 200, supply 400, consumed 80, treated 240, untreated 80 m³. Starting at 50 with no inflow supplies 50, leaves shortage 150 and stock 0. Starting full with inflow 300 spills 300 before supplying 200, leaving stock 800.
+
+After default day 1, setting conservation to 0.5, treatment capacity to 200 and inflow to 0 changes no tick, stock or history. The next day demands/supplies 100, leaves stock 400, treats all 80 m³ wastewater and discharges none untreated. Cumulative inflow/supply/treated are 100/300/200.
+
+## Public ownership and failures
+
+`model`, `inputs`, `create` and `WaterParameters` are public model exports. Instances expose `advance`, `read`, `setConservationShare`, `setTreatmentCapacity` and `setInflow`. Setters validate before replacing parameters, change only future days, and do not record history or advance time. Invalid setup, live values or step counts throw before mutation. Unknown setup keys and wrong primitive types throw TypeError; finite/range/cross-field/step-count failures throw RangeError. Passing undefined for an optional factory field uses its default, as defined by `parseParameters`.
+
+A closure owns all domain state. `World` owns tick; the UI owns no water state. Observations and parameters are frozen detached records; history supplies frozen detached samples, oldest first, capped at 366 samples including setup until evicted. Reads do not mutate or advance anything. Instances are independent and deterministic. Lifetime totals survive history eviction.
+
+## Reuse and provenance
+
+Original synthetic teaching model, authored here; no external source model, dataset, calibration or copied scientific implementation. All numerical defaults are invented scenario choices. Inspected local source revision: `42a289785ee3c9879800d2dd7e8532d04032a7ab`.
+
+| Exact candidate | Decision and adaptation |
+| --- | --- |
+| `World.create`, `run` from `city-library` | Reuse existing execution and tick ownership; no second scheduler. |
+| `storage.history` from `city-library` | Reuse bounded detached measurement history with capacity 366. |
+| `measurements.define` from `city-library` | Reuse finite numeric snapshot validation for daily/cumulative measures. |
+| `Resource.create` | Not used: integer held/released capacity with queues does not represent fractional daily water throughput. |
+| `Store.create` | Not used: FIFO item capacity does not represent continuous volume. |
+| `continuous.linear` | Not needed: explicit ordered bounded daily transfers are direct arithmetic, not continuous interpolation. |
+| `models/stormwater-retention/model.ts` | Reuse its public execution/history pattern conceptually; do not reuse hourly catchment, grid, threshold crossings or retention defaults. |
+| `models/household-energy-demand/model.ts` | Reuse thin setup/live-action pattern; demand here is constant daily volume, not hourly power. |
+| `defineUI`, `indexedColor` | Reuse shared controls, directed network and time-series views; no custom markup/styles. |
+| External hydrology libraries | No dependency added: a hydraulic solver would need geometry, pressures and calibration outside this volume-balance contract. |
+
+The directed network is a schematic process diagram, not geographic infrastructure. No coupling to other models, water quality, leakage, rainfall variability, aquifer, pumping, travel time or scientific validation is claimed. Shell evidence and pending browser acceptance are recorded separately in `evidence/checks.md`.

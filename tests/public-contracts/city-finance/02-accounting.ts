@@ -1,0 +1,26 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-finance/model.ts";
+
+const r = (value: number, digits = 4) => Number(value.toFixed(digits));
+const instance = model.create();
+instance.advance();
+let state = instance.read();
+assert.equal(state.taxRevenue, 1000);
+assert.equal(state.serviceSpending, 400);
+assert.equal(state.maintenanceSpending, 500);
+assert.equal(state.cash, 200);
+assert.equal(r(state.backlog, 2), 3650);
+assert.equal(r(state.meanCondition), 0.6958);
+assert.equal(r(state.wearConditionPoints, 6), 0.6);
+instance.advance(9);
+state = instance.read();
+assert.equal(r(state.backlog, 2), 9200);
+assert.equal(r(state.meanCondition), 0.4542);
+assert.equal(state.poorAssetCount, 4);
+instance.advance(20);
+state = instance.read();
+assert.equal(r(state.meanCondition), 0.0629);
+assert.equal(state.poorAssetCount, 12);
+assert.equal(state.cumulativeMaintenanceSpending, 15000);
+for (const sample of state.history) assert.ok(Math.abs(sample.values.cashBalanceError!) < 1e-6);
+console.log("city-finance annual accounting passed");

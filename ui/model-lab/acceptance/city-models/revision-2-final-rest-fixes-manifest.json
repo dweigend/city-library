@@ -1,0 +1,328 @@
+{
+  "date": "2026-11-10",
+  "method": "T3 preview with real clicks, typing, Tab and Home; own tab closed. CSS sizes390x844/1366x768, light/dark appearance. Frames settled with two requestAnimationFrames in later captures. Screenshots are unedited viewport captures, DPR2. These are author checks, not independent approval.",
+  "selectionPixelCheck": {
+    "before": {
+      "toolIcon": {
+        "_tag": "website",
+        "pageUrl": "http://localhost:3101/?model=city-finance"
+      },
+      "value": {
+        "redPixels": 47216,
+        "clock": "Year\n20\nCash (CU)\n2100\nRepair backlog (CU)\n20100\nMean condition\n0.162\nAssets below 0.4\n12\nMaintenance spent (CU, total)\n10000\nPaused\nAsset inventory \u00b7 green bar = condition (value below) \u00b7 red outline: below 0.4, repairs cost double \u00b7 amber bar above: repaired this year (CU spent)\nCash and repair backlog\n0\n5000\n10000\n15000\n20000\n25000\n0\n5\n10\n15\n20\n"
+      }
+    },
+    "after": {
+      "toolIcon": {
+        "_tag": "website",
+        "pageUrl": "http://localhost:3101/?model=city-finance"
+      },
+      "value": {
+        "redPixels": 47216,
+        "clock": "Year\n20\nCash (CU)\n2100\nRepair backlog (CU)\n20100\nMean condition\n0.162\nAssets below 0.4\n12\nMaintenance spent (CU, total)\n10000\nPaused\nAsset inventory \u00b7 green bar = condition (value below) \u00b7 red outline: below 0.4, repairs cost double \u00b7 amber bar above: repaired this year (CU spent)\nCash and repair backlog\n0\n5000\n10000\n15000\n20000\n25000\n0\n5\n10\n15\n20\n"
+      }
+    }
+  },
+  "screenshots": [
+    {
+      "name": "energy-charging-narrow-light",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3jz2k-a78f0239.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/energy-charging-narrow-light.png"
+    },
+    {
+      "name": "energy-charging-narrow-dark",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3jz5g-09be6c6d.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/energy-charging-narrow-dark.png"
+    },
+    {
+      "name": "energy-charging-desktop-light",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3jzd4-d444d50e.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/energy-charging-desktop-light.png"
+    },
+    {
+      "name": "energy-charging-desktop-dark",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3jzje-831e0135.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/energy-charging-desktop-dark.png"
+    },
+    {
+      "name": "energy-discharge-narrow-light",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3noft-08504828.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/energy-discharge-narrow-light.png"
+    },
+    {
+      "name": "energy-discharge-narrow-dark",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3nojz-63346991.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/energy-discharge-narrow-dark.png"
+    },
+    {
+      "name": "energy-discharge-desktop-light",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3notn-6a269a7b.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/energy-discharge-desktop-light.png"
+    },
+    {
+      "name": "energy-discharge-desktop-dark",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3np1g-ccb6516d.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/energy-discharge-desktop-dark.png"
+    },
+    {
+      "name": "finance-selected-narrow-light",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3mokl-68e5058c.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/finance-selected-narrow-light.png"
+    },
+    {
+      "name": "finance-selected-narrow-dark",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3moo9-4bdfa4fb.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/finance-selected-narrow-dark.png"
+    },
+    {
+      "name": "finance-selected-desktop-light",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3mow5-517ab646.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/finance-selected-desktop-light.png"
+    },
+    {
+      "name": "finance-selected-desktop-dark",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3mp3i-414d71d0.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/finance-selected-desktop-dark.png"
+    },
+    {
+      "name": "housing-selected-narrow-light",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3kdee-3a9e3954.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/housing-selected-narrow-light.png"
+    },
+    {
+      "name": "housing-selected-narrow-dark",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3kdi6-f2d04cdf.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/housing-selected-narrow-dark.png"
+    },
+    {
+      "name": "housing-selected-desktop-light",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3kdpd-48633c77.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/housing-selected-desktop-light.png"
+    },
+    {
+      "name": "housing-selected-desktop-dark",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3kdvh-c7c63f4a.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/housing-selected-desktop-dark.png"
+    },
+    {
+      "name": "economy-selected-narrow-light",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3keef-e612ff78.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/economy-selected-narrow-light.png"
+    },
+    {
+      "name": "economy-selected-narrow-dark",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3kehk-4b94ad80.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/economy-selected-narrow-dark.png"
+    },
+    {
+      "name": "economy-selected-desktop-light",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3keoj-f2423c1f.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/economy-selected-desktop-light.png"
+    },
+    {
+      "name": "economy-selected-desktop-dark",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3keu9-fcff9233.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/economy-selected-desktop-dark.png"
+    },
+    {
+      "name": "mobility-default-narrow-light",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3kwad-990ab68f.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/mobility-default-narrow-light.png"
+    },
+    {
+      "name": "mobility-default-narrow-dark",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3kwei-9e51d557.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/mobility-default-narrow-dark.png"
+    },
+    {
+      "name": "mobility-default-desktop-light",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3kwmc-cfab3ac6.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/mobility-default-desktop-light.png"
+    },
+    {
+      "name": "mobility-default-desktop-dark",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3kwtx-a6bce51f.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/mobility-default-desktop-dark.png"
+    },
+    {
+      "name": "mobility-overflow-narrow-light",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3linv-8c72b754.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/mobility-overflow-narrow-light.png"
+    },
+    {
+      "name": "mobility-overflow-narrow-dark",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3lis1-93555a4e.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/mobility-overflow-narrow-dark.png"
+    },
+    {
+      "name": "mobility-overflow-desktop-light",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3lizy-00f66339.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/mobility-overflow-desktop-light.png"
+    },
+    {
+      "name": "mobility-overflow-desktop-dark",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3lj6p-207b05b7.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/mobility-overflow-desktop-dark.png"
+    },
+    {
+      "name": "materials-default-narrow-light",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3ljwc-53b583b6.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/materials-default-narrow-light.png"
+    },
+    {
+      "name": "materials-default-narrow-dark",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3lk0g-69009ae1.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/materials-default-narrow-dark.png"
+    },
+    {
+      "name": "materials-default-desktop-light",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3lk8p-341d058f.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/materials-default-desktop-light.png"
+    },
+    {
+      "name": "materials-default-desktop-dark",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3lkgb-224c36d4.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/materials-default-desktop-dark.png"
+    },
+    {
+      "name": "water-default-narrow-light",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3llb8-d19904da.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/water-default-narrow-light.png"
+    },
+    {
+      "name": "water-default-narrow-dark",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3llex-019fba9d.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/water-default-narrow-dark.png"
+    },
+    {
+      "name": "water-default-desktop-light",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3llms-ea95255d.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/water-default-desktop-light.png"
+    },
+    {
+      "name": "water-default-desktop-dark",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3lltv-ebe0f083.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/water-default-desktop-dark.png"
+    },
+    {
+      "name": "water-saving-narrow-light",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3m1cs-3269809f.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/water-saving-narrow-light.png"
+    },
+    {
+      "name": "water-saving-narrow-dark",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3m1gp-862cb17c.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/water-saving-narrow-dark.png"
+    },
+    {
+      "name": "water-saving-desktop-light",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3m1pc-b858b62d.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/water-saving-desktop-light.png"
+    },
+    {
+      "name": "water-saving-desktop-dark",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3m1x6-9cbdc7d7.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/water-saving-desktop-dark.png"
+    },
+    {
+      "name": "daily-cannot-fit-0230-narrow-light",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3m2fx-a81650cb.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/daily-cannot-fit-0230-narrow-light.png"
+    },
+    {
+      "name": "daily-cannot-fit-0230-narrow-dark",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3m2k1-d731814b.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/daily-cannot-fit-0230-narrow-dark.png"
+    },
+    {
+      "name": "daily-cannot-fit-0230-desktop-light",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3m2rc-a8ca2e39.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/daily-cannot-fit-0230-desktop-light.png"
+    },
+    {
+      "name": "daily-cannot-fit-0230-desktop-dark",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3m2xo-e9f99fd2.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/daily-cannot-fit-0230-desktop-dark.png"
+    },
+    {
+      "name": "daily-cannot-fit-2000-narrow-light",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3m3hz-eca3f5cd.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/daily-cannot-fit-2000-narrow-light.png"
+    },
+    {
+      "name": "daily-cannot-fit-2000-narrow-dark",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3m3m0-a514a5dc.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/daily-cannot-fit-2000-narrow-dark.png"
+    },
+    {
+      "name": "daily-cannot-fit-2000-desktop-light",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3m3t7-aa021bbd.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/daily-cannot-fit-2000-desktop-light.png"
+    },
+    {
+      "name": "daily-cannot-fit-2000-desktop-dark",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3m3zo-bd6c2b2f.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/daily-cannot-fit-2000-desktop-dark.png"
+    },
+    {
+      "name": "materials-capacity160-narrow-light",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3mpx8-ce5b7c4f.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/materials-capacity160-narrow-light.png"
+    },
+    {
+      "name": "materials-capacity160-narrow-dark",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3mq1e-15fda762.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/materials-capacity160-narrow-dark.png"
+    },
+    {
+      "name": "materials-capacity160-desktop-light",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3mq9u-516eea81.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/materials-capacity160-desktop-light.png"
+    },
+    {
+      "name": "materials-capacity160-desktop-dark",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3mqh4-641d7e0c.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/materials-capacity160-desktop-dark.png"
+    },
+    {
+      "name": "city-population-units-narrow-light",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3okad-c242b949.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/city-population-units-narrow-light.png"
+    },
+    {
+      "name": "city-population-units-narrow-dark",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3okez-bee69ea0.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/city-population-units-narrow-dark.png"
+    },
+    {
+      "name": "city-population-units-desktop-light",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3oko0-7ea64eb2.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/city-population-units-desktop-light.png"
+    },
+    {
+      "name": "city-population-units-desktop-dark",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3okxg-3709ff2d.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/city-population-units-desktop-dark.png"
+    },
+    {
+      "name": "city-biodiversity-units-narrow-light",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3olcv-45c4f2ef.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/city-biodiversity-units-narrow-light.png"
+    },
+    {
+      "name": "city-biodiversity-units-narrow-dark",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3olh0-e3a31fa0.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/city-biodiversity-units-narrow-dark.png"
+    },
+    {
+      "name": "city-biodiversity-units-desktop-light",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3olp4-c67ff09f.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/city-biodiversity-units-desktop-light.png"
+    },
+    {
+      "name": "city-biodiversity-units-desktop-dark",
+      "path": "local capture (not tracked): browser-screenshot-localhost-mwb3olwu-175282a2.png",
+      "file": "ui/model-lab/acceptance/screenshots/city-models/revision-2-final-rest-fixes/city-biodiversity-units-desktop-dark.png"
+    }
+  ]
+}

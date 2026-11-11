@@ -51,7 +51,7 @@ Model-specific `read()` fields include `residents`, `counts`, `percentSimilar`, 
 
 ## Sources and limits
 
-Adapted from Uri Wilensky's NetLogo *Segregation* model (1997). Attribution, license and the list of changes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
+Adapted from Uri Wilensky's NetLogo *Segregation* model (1997). Attribution, license and the list of changes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. The [scientific sources dossier](../../docs/scientific-sources.md) connects the scientific background to model files. The retained research record documents source identity and access limits; it does not validate this implementation.
 
 The model is a thought experiment. Two groups, free relocation and a fixed contentment rule leave out housing costs, discrimination and institutions, so a separated final pattern shows what the stated local rule can produce, not why real cities are segregated. Seeded runs differ from NetLogo because the random generator differs.
 

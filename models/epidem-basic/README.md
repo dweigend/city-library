@@ -43,7 +43,7 @@ Model-specific `read()` fields include `betaN`, `gamma`, `r0`, `previousNewlyInf
 
 ## Sources and limits
 
-Adapted from the NetLogo *epiDEM Basic* model by Yang and Wilensky (2011). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
+Adapted from the NetLogo *epiDEM Basic* model by Yang and Wilensky (2011). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. The [scientific sources dossier](../../docs/scientific-sources.md) connects the scientific background to model files. The retained research record documents source identity and access limits; it does not validate this implementation.
 
 The counts and R0 come from this model's random encounters. They are not estimates for a real disease. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 

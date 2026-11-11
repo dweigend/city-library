@@ -1,0 +1,32 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-mobility/model.ts";
+
+for (const options of [{ initialTrips: -1 }, { initialTrips: 1001 }, { carCapacity: 0 }, { carCapacity: 1.5 }, { carPenalty: NaN }, { carPenalty: 11 }]) {
+  assert.throws(() => model.create(options), RangeError);
+}
+assert.throws(() => model.create({ unknown: 1 } as never), TypeError);
+const first = model.create();
+const second = model.create();
+const before = first.read();
+for (const steps of [-1, 0.5, Infinity]) assert.throws(() => first.advance(steps), RangeError);
+for (const count of [0, -1, 0.5, 1001]) assert.throws(() => first.dispatchTrips(count), RangeError);
+for (const penalty of [-1, NaN, 11]) assert.throws(() => first.setCarPenalty(penalty), RangeError);
+assert.deepEqual(first.read(), before);
+assert.notStrictEqual(first.read().trips, before.trips);
+assert.notStrictEqual(first.read().trips[0]!.route, before.trips[0]!.route);
+assert.notStrictEqual(first.read().history[0]!.values, before.history[0]!.values);
+first.advance(5);
+assert.equal(before.completedTrips, 0);
+assert.equal(second.read().tick, 0);
+second.advance(5);
+assert.deepEqual(first.read(), second.read());
+const empty = model.create({ initialTrips: 0 });
+empty.advance(2);
+assert.equal(empty.read().meanCompletedWaitingMinutes, 0);
+assert.equal(empty.read().meanCompletedTravelMinutes, 0);
+assert.equal(empty.read().tripCount, 0);
+const full = model.create({ initialTrips: 1000 });
+const fullBefore = full.read();
+assert.throws(() => full.dispatchTrips(1), RangeError);
+assert.deepEqual(full.read(), fullBefore);
+console.log("city-mobility validation and snapshots passed");

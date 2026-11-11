@@ -45,7 +45,7 @@ Model-specific `read()` fields include `cells`, `firms`, `counts`, `largestFirmC
 
 ## Sources and limits
 
-Adapted from the NetLogo *Urban Suite - Path Dependence* model by Rand and Wilensky (2007). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
+Adapted from the NetLogo *Urban Suite - Path Dependence* model by Rand and Wilensky (2007). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. The [scientific sources dossier](../../docs/scientific-sources.md) connects the scientific background to model files. The retained research record documents source identity and access limits; it does not validate this implementation.
 
 One run cannot tell how often lock-in happens; that needs many runs. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 

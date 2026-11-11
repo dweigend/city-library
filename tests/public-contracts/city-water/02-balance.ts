@@ -1,0 +1,25 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-water/model.ts";
+
+const instance = model.create();
+instance.advance();
+let state = instance.read();
+assert.equal(state.inflowM3, 220);
+assert.equal(state.suppliedM3, 200);
+assert.equal(state.storedM3, 8020);
+assert.equal(state.wastewaterM3, 160);
+assert.equal(state.treatedM3, 120);
+assert.equal(state.untreatedM3, 40);
+assert.equal(state.consumedM3, 40);
+instance.advance(29);
+assert.equal(instance.read().storedM3, 6800);
+assert.equal(instance.read().inflowM3, 40);
+instance.advance(90);
+state = instance.read();
+assert.equal(state.totalShortageM3, 1200);
+assert.equal(state.shortageDayCount, 8);
+assert.equal(state.worstDayShortageM3, 160);
+assert.equal(state.worstDayCutShare, 0.8);
+assert.equal(state.storedM3, 800);
+for (const sample of state.history) assert.ok(Math.abs(sample.values.balanceErrorM3!) < 1e-6);
+console.log("city-water dry spell balance passed");

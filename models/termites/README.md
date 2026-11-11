@@ -43,7 +43,7 @@ Model-specific `read()` fields include `work`, `chipCount`, `carryingCount`, `te
 
 ## Sources and limits
 
-Adapted from the NetLogo *Termites* model by Wilensky (1997). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
+Adapted from the NetLogo *Termites* model by Wilensky (1997). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. The [scientific sources dossier](../../docs/scientific-sources.md) connects the scientific background to model files. The retained research record documents source identity and access limits; it does not validate this implementation.
 
 The rules abstract picking up and dropping; they are not an account of real termite building. Pile formation shows decentralized coordination under these rules, with no guarantee of convergence within a given time. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 

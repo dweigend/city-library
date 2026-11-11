@@ -1,0 +1,21 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-services/model.ts";
+
+const close = (actual: number, expected: number) => assert.ok(Math.abs(actual - expected) < 1e-6, `${actual} != ${expected}`);
+const instance = model.create();
+instance.advance();
+const state = instance.read();
+assert.equal(state.requests.length, 48);
+assert.equal(state.servedCount, 24);
+assert.equal(state.fullCount, 0);
+assert.equal(state.tooFarCount, 24);
+assert.equal(state.unservedHouseholdCount, 8);
+assert.deepEqual(state.households.filter(household => household.servedCount === 0).map(household => household.x).sort(), [-3, -3, -3, -3, 3, 3, 3, 3]);
+assert.deepEqual(state.householdsByServedCount, [8, 0, 0, 8]);
+close(state.meanDistanceKm, 1.460405);
+close(state.maximumDistanceKm, 1.802776);
+assert.ok(state.facilities.every(facility => facility.used === 8));
+instance.advance(9);
+assert.equal(instance.read().totalServedCount, 240);
+assert.equal(instance.read().history.filter(sample => sample.tick > 0).every(sample => sample.values.servedCount === 24), true);
+console.log("city-services daily allocation passed");

@@ -45,7 +45,7 @@ Model-specific `read()` fields include `epochError`, `activations`, `errors`, `w
 
 ## Sources and limits
 
-Adapted from the NetLogo *Artificial Neural Net - Multilayer* model by Rand and Wilensky (2006). Attribution and license are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
+Adapted from the NetLogo *Artificial Neural Net - Multilayer* model by Rand and Wilensky (2006). Attribution and license are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. The [scientific sources dossier](../../docs/scientific-sources.md) connects the scientific background to model files. The retained research record documents source identity and access limits; it does not validate this implementation.
 
 Training error and a direct `test` are different observations. Fitting four examples does not show generalization. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 

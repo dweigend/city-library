@@ -1,0 +1,33 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-services/model.ts";
+
+assert.throws(() => model.create({ capacityPerFacility: -1 }), RangeError);
+assert.throws(() => model.create({ capacityPerFacility: 1.5 }), RangeError);
+assert.throws(() => model.create({ maxDistanceKm: NaN }), RangeError);
+assert.throws(() => model.create({ maxDistanceKm: 11 }), RangeError);
+assert.throws(() => model.create({ unknown: 1 } as never), TypeError);
+const first = model.create();
+const second = model.create();
+first.advance(3);
+second.advance(3);
+assert.deepEqual(first.read(), second.read());
+const snapshot = first.read();
+assert.throws(() => first.advance(-1), RangeError);
+assert.throws(() => first.advance(0.5), RangeError);
+assert.throws(() => first.setCapacityPerFacility(Infinity), RangeError);
+assert.throws(() => first.setMaxDistanceKm(-1), RangeError);
+assert.deepEqual(first.read(), snapshot);
+// Detached does not require mutable snapshots; mutation may be rejected.
+try { Object.assign(snapshot.households[0]!, { x: 99 }); } catch {}
+try { Object.assign(snapshot.facilities[0]!, { used: 99 }); } catch {}
+try { Object.assign(snapshot.requests[0]!, { status: "distance" }); } catch {}
+try { Object.assign(snapshot.parameters, { maxDistanceKm: 99 }); } catch {}
+assert.deepEqual(first.read(), second.read());
+first.setCapacityPerFacility(2);
+first.advance();
+assert.equal(snapshot.tick, 3);
+assert.equal(snapshot.history.length, 4);
+assert.equal(second.read().tick, 3);
+assert.equal(second.read().parameters.capacityPerFacility, 1);
+assert.equal(first.read().servedCount, 12);
+console.log("city-services validation and snapshots: passed");

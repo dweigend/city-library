@@ -1,0 +1,28 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-air-noise/model.ts";
+
+const instance = model.create();
+instance.advance();
+let state = instance.read();
+assert.equal(state.tick, 1);
+assert.deepEqual(state.receptors.map(receptor => receptor.massMicrograms), [750, 750, 0]);
+assert.deepEqual(state.receptors.map(receptor => receptor.concentrationMicrogramsPerCubicMeter), [0.75, 0.75, 0]);
+assert.equal(state.emittedMassMicrograms, 2000);
+assert.equal(state.decayedMassMicrograms, 500);
+assert.equal(state.exitedMassMicrograms, 0);
+assert.ok(Math.abs(state.receptors[0]!.noiseExposureJoulesPerSquareMeter - 0.0001206) < 1e-14);
+instance.advance();
+state = instance.read();
+assert.deepEqual(state.receptors.map(receptor => receptor.massMicrograms), [1031.25, 1312.5, 281.25]);
+assert.equal(state.retainedMassMicrograms, 2625);
+assert.equal(state.decayedMassMicrograms, 1375);
+assert.equal(state.meanConcentrationMicrogramsPerCubicMeter, 0.875);
+instance.advance();
+assert.equal(instance.read().exitedMassMicrograms, 140.625);
+instance.advance(297);
+state = instance.read();
+assert.ok(Math.abs(state.emittedMassMicrograms - state.retainedMassMicrograms - state.decayedMassMicrograms - state.exitedMassMicrograms) < state.emittedMassMicrograms * 1e-10);
+assert.equal(state.history.length, 240);
+assert.equal(state.history[0]!.tick, 61);
+assert.equal(state.history.at(-1)!.tick, 300);
+console.log("city-air-noise mass balance: passed");

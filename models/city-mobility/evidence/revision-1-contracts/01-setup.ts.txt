@@ -1,0 +1,18 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-mobility/model.ts";
+
+const state = model.create().read();
+assert.equal(model.title, "Urban Mobility");
+assert.deepEqual(state.parameters, { initialTrips: 4, carCapacity: 1, carPenalty: 0 });
+assert.equal(state.tick, 0);
+assert.equal(state.tripCount, 4);
+assert.equal(state.completedTrips, 0);
+assert.equal(state.waitingTrips, 3);
+assert.equal(state.movingTrips, 1);
+assert.equal(state.nodes.length, 3);
+assert.equal(state.links.length, 4);
+assert.deepEqual(state.trips.map(trip => trip.mode), ["car", "car", "car", "car"]);
+assert.deepEqual(state.trips[0]!.route, ["home-junction", "junction-jobs"]);
+assert.equal(state.totalWaitingMinutes, 0);
+assert.equal(state.history.length, 1);
+console.log("city-mobility setup passed");

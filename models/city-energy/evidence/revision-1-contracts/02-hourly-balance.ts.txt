@@ -1,0 +1,37 @@
+import assert from "node:assert/strict";
+import { model } from "../../../models/city-energy/model.ts";
+const instance = model.create();
+instance.advance();
+assert.deepEqual(instance.read().flow, {
+  electricityDemandKwh: 6, heatDemandKwh: 4, renewableKwh: 2,
+  batteryChargeKwh: 0, batteryDischargeKwh: 2, electricityNetworkKwh: 2,
+  heatNetworkKwh: 3, electricityUnmetKwh: 0, heatUnmetKwh: 1, curtailedKwh: 0,
+  electricityBalanceKwh: 0, heatBalanceKwh: 0,
+});
+assert.equal(instance.read().intervalHour, 0);
+assert.equal(instance.read().batteryKwh, 2);
+instance.advance();
+assert.equal(instance.read().batteryKwh, 0);
+instance.advance();
+assert.equal(instance.read().flow.electricityNetworkKwh, 4);
+instance.advance(4);
+assert.equal(instance.read().intervalHour, 6);
+assert.equal(instance.read().flow.electricityDemandKwh, 10);
+assert.equal(instance.read().flow.renewableKwh, 14);
+assert.equal(instance.read().flow.batteryChargeKwh, 2);
+assert.equal(instance.read().flow.curtailedKwh, 2);
+assert.equal(instance.read().flow.heatUnmetKwh, 0);
+for (let hour = 7; hour < 72; hour += 1) {
+  const before = instance.read().batteryKwh;
+  instance.advance();
+  const state = instance.read();
+  const flow = state.flow;
+  assert.equal(state.batteryKwh, before + flow.batteryChargeKwh - flow.batteryDischargeKwh);
+  assert.ok(state.batteryKwh >= 0 && state.batteryKwh <= 8);
+  assert.equal(flow.electricityBalanceKwh, 0);
+  assert.equal(flow.heatBalanceKwh, 0);
+  assert.ok(flow.electricityNetworkKwh <= 6 && flow.heatNetworkKwh <= 3);
+  assert.ok(flow.batteryChargeKwh <= 2 && flow.batteryDischargeKwh <= 2);
+  assert.ok(flow.batteryChargeKwh === 0 || flow.batteryDischargeKwh === 0);
+}
+console.log("city-energy hourly balance passed");
