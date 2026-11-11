@@ -14,7 +14,7 @@ This inventory and the [UI API reference](api-reference.md) form the binding UI 
 | --- | --- | --- | --- | --- |
 | UI-001 | `defineUI<P extends object, M extends ModelInstance>(definition: Definition<P,M>, spec: UISpec<P,M>): BoundEntry` | Public runtime entry from `ui/index.ts`; infer concrete model types. Does not create the model at import. | Supported | [Entry](api-reference.md#define-ui) |
 | UI-002 | `UISpec<P,M>` | Ordinary object; only `views` is required. No renderer configuration or layout tree required. | Supported | [Principles](api-reference.md#principles) |
-| UI-003 | `ModelInstance` | `read(): unknown`, `advance(steps?: number): void`, `dispose?(): void`; concrete `read` return type supplies `S`. | Supported | [Model](api-reference.md#model) |
+| UI-003 | `ModelInstance` | `read(): unknown`, `advance(stepCount?: number): void`, `dispose?(): void`; concrete `read` return type supplies `S`. | Supported | [Model](api-reference.md#model) |
 | UI-004 | `BoundEntry` | `title: string`, `description?: string`, `mount(container: HTMLElement): { dispose(): void; pause?(): void }`. Mounted handle belongs to host integration. | Supported | [Lifecycle](api-reference.md#lifecycle) |
 | UI-005 | `Definition<P,M>` | Headless companion from `models/definition.ts`: `title`, `description?`, `inputs: Inputs<P>`, `create(options?: Partial<P>): M`. Not re-exported by `ui/index.ts`. | Supported | [Model](api-reference.md#model) |
 | UI-006 | `Input<T>`, `Inputs<P>` | Number: `kind`, `default`, optional `min/max/step/integer`; boolean: `kind/default`; choice: `kind/default/options`; text: `kind/default`. Canonical defaults and validation belong to model. | Supported | [Model](api-reference.md#model) |
