@@ -18,10 +18,10 @@ Status: set by the owner on 2026-11-10 and 2026-11-11. The simplification rules 
 
 ## Consequences
 
-- **Dependencies are function arguments.** A system receives what it needs, for example `createRoads({ map })`. This is type-safe, needs no registry and makes isolated tests trivial: pass something else.
+- **Dependencies are function arguments.** A system receives what it needs, for example `Roads.create({ map })`. This is type-safe, needs no registry and makes isolated tests trivial: pass something else.
 - **The system order is visible.** It is the order of calls in a model's `advance()`, not a hidden scheduler.
 - **One option pattern everywhere:**
-  - `createX(options?)`, with every option optional and a playable default;
+  - `Name.create(options?)` for objects that own state, plain functions for pure calculations; every option optional with a playable default;
   - nested options for finer control;
   - a function as the escape hatch, for example `cost: (edge) => …`.
 - **The core gets only neutral building blocks** that several systems need, such as route search on `Graph`, numeric layers over a grid, and later snapshots and change tracking. Names stay neutral.

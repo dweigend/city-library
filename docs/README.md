@@ -19,6 +19,7 @@ Start with a model, change something and see what happens. These pages take you 
 
 - [What works today](development/coverage.md): available library operations and open gaps.
 - [UI API](ui/README.md): `defineUI`, controls, monitors and views.
+- [API reference (HTML)](api-reference.html): one page for the whole system, ordered by the target structure; every entry is marked delivered, specified or planned.
 - [Agent Loom specification](agent-loom/README.md): the full target API for the headless core, including planned operations.
 - [Grids, layouts and parcels](grid-parcels/STATUS.md), their [target catalogue](grid-parcels/API.md) and the [finite quad contract](grid-parcels/QUAD-LAYOUTS-CONTRACT.md). That contract preserves historical signatures; the [current naming map](grid-parcels/STATUS.md) gives the executable calls.
 

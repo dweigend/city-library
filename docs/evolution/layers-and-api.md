@@ -23,17 +23,17 @@ Standard TypeScript, plain functions and options objects with defaults. A model 
 
 ```ts
 import { Random } from "city-library";                       // core, neutral
-import { createTileMap, createRoads } from "city-library/city";
-import { createBudget } from "city-library/economy";
+import { TileMap, Roads } from "city-library/city";
+import { Budget } from "city-library/economy";
 
 export const model = {
   title: "Little Town",
   inputs: { seed: 7, taxRate: 0.09 },
   create(input) {
     const random = Random.create({ seed: input.seed });
-    const map    = createTileMap({ size: 32 });
-    const roads  = createRoads({ map });                       // defaults
-    const budget = createBudget({ money: 20_000, taxRate: input.taxRate });
+    const map    = TileMap.create({ size: 32 });
+    const roads  = Roads.create({ map });                      // defaults
+    const budget = Budget.create({ money: 20_000, taxRate: input.taxRate });
 
     return {
       buildRoad: (from, to) => roads.build(from, to),          // action
@@ -65,7 +65,7 @@ Player input should become plain, serializable objects, so that replays and save
 Agent-based modeling stays the conceptual basis, without the cost of one object per person. A **cohort agent** carries a weight: how many people, trips or households it represents. There is one rule and one code path; only the resolution changes.
 
 ```ts
-const traffic = createTraffic({ roads, scale: 100 });
+const traffic = Traffic.create({ roads, scale: 100 });
 // scale 1   → each person is one agent (true ABM, small maps)
 // scale 100 → one agent stands for 100 commuters (large city, fast)
 ```
