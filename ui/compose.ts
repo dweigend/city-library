@@ -47,6 +47,7 @@ export function defineUI<P extends object, M extends ModelInstance>(definition: 
       try { component = mount(Workbench, { target: container, props: { session } }); flushSync(); }
       catch (error) { session.dispose(); throw error; }
       let disposed = false;
+      queueMicrotask(() => { if (!disposed) session.initialize(); });
       return {
         pause: session.pause,
         dispose() {
