@@ -9,7 +9,7 @@ This page owns folders, import rules and the migration order. Independent analys
 - **The core is autonomous.** No core module imports another core module, not even for types. Each module provides basic functions on its own.
 - **One aggregating folder.** Shared semantics that cannot be duplicated without breaking invariants live in exactly one place, `world-composition/`. Examples are canonical identity, deletion propagation, World membership and the tick. Further aggregating code is avoided.
 - **Autonomy over sharing.** Prefer a little more readable code to links between modules, because links make maintenance hard. Only small, stable helpers may be duplicated.
-- **Systems build on the core.** City subsystems and generative design import only the public core entry, never each other.
+- **Systems build on the core.** City systems and generative design import only the public core entry, never each other.
 - **No folders in advance.** A folder is created with its first working slice. There are no tiers, no mirrored test or docs trees and no empty placeholders.
 
 ## Target tree
@@ -37,9 +37,9 @@ library-core/                            autonomous: NO module imports another
 │                                        grid occupancy, studies
 └── development/                         build tools, not runtime code
 
-library-city/                            created with the first subsystem
-├── economy/                             each subsystem imports only "city-library",
-├── energy-supply/                       never another subsystem
+library-city/                            created with the first city system
+├── economy/                             each city system imports only "city-library",
+├── energy-supply/                       never another city system
 ├── public-transport/
 ├── pedestrians/
 ├── material-cycles/
@@ -57,7 +57,7 @@ docs/
 
 **Folder names in the core** match their public export: `agent`, `grid`, `graph`, `agenda` and so on. Only new folders without an API name of their own get longer, descriptive names: `polygon-layout`, `measurement-and-history` and `world-composition`.
 
-The city subsystem names are examples of expected subsystems. Each one appears only with its first working slice.
+The subsystem folder names are examples of expected city systems. Each one appears only with its first working slice.
 
 ## Import rules
 

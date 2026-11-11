@@ -2,7 +2,7 @@
 
 Status: **proposal**. This page holds proposals, not delivered APIs. Names in sketches are placeholders until example scripts freeze them. The binding inventory with statuses delivered, target and planned is the [API specification](../agent-loom/api-table.md); where a sketch here and the specification differ, the specification's current default applies and the difference is one of its [open decisions](../agent-loom/api-table.md#open-decisions).
 
-This page owns the layer model, the script style and the engine contracts. The design principles behind them are in [principles](principles.md); folders and import rules are in the accepted [structure](structure.md).
+This page owns the layer model, the script style and the game contracts. The design principles behind them are in [principles](principles.md); folders and import rules are in the accepted [structure](structure.md).
 
 ## Layers
 
@@ -18,7 +18,7 @@ Core                 neutral building blocks: agents, world, random, grid, graph
 | Layer | Target folder ([structure](structure.md#target-tree)) | Imports ([rules](structure.md#import-rules)) |
 | --- | --- | --- |
 | Core | `library-core/<module>/`, aggregated by `world-composition/` | Only its own files |
-| City systems | `library-city/<subsystem>/` | Only `"city-library"`, never another subsystem |
+| City systems | `library-city/<subsystem>/` | Only `"city-library"`, never another city system |
 | Models and games | `models/<slug>/`, later game code | Everything public |
 | Presentation | `ui-web/`, later `ui-3d/` | Only public APIs |
 
@@ -44,10 +44,9 @@ export const model = {
     const budget = Budget.create({ money: 20_000, taxRate: input.taxRate });
 
     return {
-      buildRoad: (from, to) => roads.build(from, to),          // action
+      addRoad: (from, to) => roads.add(from, to),              // action
       advance(stepCount = 1) {
         for (let i = 0; i < stepCount; i++) {
-          roads.update();
           budget.collect({ residents: map.count("residential") });
         }
       },
@@ -58,7 +57,7 @@ export const model = {
 ```
 
 - City system factories use `Name.create(options)`, as in the specification's planned `Budget.create`.
-- The model contract keeps `read()`. Library objects expose `observe()` for detached observations. Migrating `read` to `observe` is an [open decision](../agent-loom/api-table.md#open-decisions).
+- Every read uses `read()`, in the model contract and on library objects; it returns detached observation data (settled 2026-11-11 in the [naming conventions](../NAMING_CONVENTIONS.md#operations)).
 - `ui.ts` stays as it is today: `defineUI(model, …)` with controls, monitors and views.
 
 ### Progressive disclosure
@@ -68,7 +67,7 @@ export const model = {
 
 ### Commands
 
-Player input should become plain, serializable objects, so that replays and saved games are possible. A suggested pattern is typed methods on handles that create such objects internally. For example, `roads.build(from, to)` records `{ type: "road.build", from, to }`. The specification currently plans only `CommandResult` and keeps actions as typed model methods; see the "Command data" row of its [open decisions](../agent-loom/api-table.md#open-decisions) and [open question 5](roadmap.md#open-questions).
+Player input should become plain, serializable objects, so that replays and saved games are possible. A suggested pattern is typed methods on handles that create such objects internally. For example, `roads.add(from, to)` creates `{ type: "road.add", from, to }`. The specification currently plans only `CommandResult` and keeps actions as typed model methods; see the "Command data" row of its [open decisions](../agent-loom/api-table.md#open-decisions) and [open question 5](roadmap.md#open-questions).
 
 ## Model and UI split
 
@@ -119,7 +118,9 @@ Limits that keep it simple:
 
 The weight is an ordinary property inside a system. The core needs no cohort concept.
 
-## Engine contracts for games
+<a id="engine-contracts-for-games"></a>
+
+## Game contracts
 
 Ranked by necessity for a first game slice. All names are neutral and none are delivered.
 

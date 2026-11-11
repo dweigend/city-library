@@ -71,7 +71,7 @@ The repository groups files by responsibility. The tree below is the [accepted t
 
 ```text
 library-core/               Autonomous headless core modules; world-composition/ is the only aggregating folder
-library-city/<subsystem>/   City subsystems such as economy or energy supply, each created with its first working slice
+library-city/<subsystem>/   City systems such as economy or energy supply, each created with its first working slice
 library-generative-design/  Separate generative 3D design track (later)
 ui-web/                     Today's ui/: shared UI and the Agent Lab host, later also game UI components
 ui-3d/                      Three.js presentation (later)

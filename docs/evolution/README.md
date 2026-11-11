@@ -1,10 +1,10 @@
 # Evolution: refactoring and further development
 
-This folder plans how City Library grows from a modeling core into a headless construction kit for city simulations and city-builder games. Only the parts marked **accepted** or **set by owner** are decisions. Everything else is a proposal or an input. [Architecture](../ARCHITECTURE.md), [PLAN](../../PLAN.md) and the other binding documents stay authoritative until a proposal is accepted through an explicit owner decision.
+This folder plans how City Library grows from a modeling core into a headless library for city simulations and city-builder games. Only the parts marked **accepted** or **set by owner** are decisions. Everything else is a proposal or an input. [Architecture](../ARCHITECTURE.md), [PLAN](../../PLAN.md) and the other binding documents stay authoritative until a proposal is accepted through an explicit owner decision.
 
 ## Goal
 
-City Library becomes a headless construction kit for **city simulations and city-builder games**, made for developers:
+City Library becomes a headless library for **city simulations and city-builder games**, made for developers:
 
 - a neutral core for agent-based modeling;
 - city systems, such as economy or energy supply, built on top of the core;
@@ -28,7 +28,7 @@ Every page states its status in its first lines. Where a page mixes statuses, ea
 | Page | Owns | Status |
 | --- | --- | --- |
 | [Principles](principles.md) | Design principles, their consequences, simplification and growth rules, the model pattern, non-goals | Principles set by owner; rules proposal |
-| [Layers and API](layers-and-api.md) | Layer model, script style, model/UI split, cohort agents, engine contracts for games | Proposal |
+| [Layers and API](layers-and-api.md) | Layer model, script style, model/UI split, cohort agents, game contracts | Proposal |
 | [Structure](structure.md) | Target repository structure, import rules, duplication rule, migration order | **Accepted 2026-11-11** |
 | [Roadmap](roadmap.md) | Phase sequence, work items, existing experiments, **the one list of open questions** | Sequence set by owner; rest proposal |
 | [Refactoring](refactoring.md) | Removing the NetLogo/Mesa/Salabim history, neutral core naming, lighter process, work at risk | Proposal; inventory is input |
@@ -46,9 +46,10 @@ All binding decisions recorded in this folder, in date order.
 | 2026-11-10 and 2026-11-11 | Principles 1–11 (the record does not split them by date) | [Principles](principles.md#the-principles) |
 | 2026-11-10 | Phase sequence: library logic first, city library step by step, then games and 3D; generative design as a separate track | [Roadmap](roadmap.md#phase-sequence) |
 | 2026-11-11 | Target repository structure, import rules, duplication rule and migration order | [Structure](structure.md) |
-| 2026-11-11 | Terminology: the headless core is called "core"; no coined proper names; Agent Lab keeps its name until a replacement is decided | [Naming conventions](../NAMING_CONVENTIONS.md#language-and-vocabulary) |
+| 2026-11-11 | Terminology: the headless core is called "core"; no coined proper names; the browser host becomes Model Lab, renamed in a later slice | [Naming conventions](../NAMING_CONVENTIONS.md#language-and-vocabulary) |
+| 2026-11-11 | Canonical verb vocabulary (one universal verb per kind of operation) and four public renames: Store, `EventTrace.add`, `activate` returning results, `PlanarPolygonShape` | [Naming conventions](../NAMING_CONVENTIONS.md#operations), [PLAN](../../PLAN.md#naming-migration-contracts) |
 
-The API specification applies two defaults that this folder follows: city system factories use `Name.create(options)`, and library objects use `observe()` while the model contract keeps `read()`. Both remain listed as [open decisions](../agent-loom/api-table.md#open-decisions) with their alternatives.
+City system factories use `Name.create(options)`, and every read uses `read()`. Both are settled in the specification's [open decisions](../agent-loom/api-table.md#open-decisions).
 
 ## Terminology
 

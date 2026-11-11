@@ -76,7 +76,7 @@ export function create(options: Partial<MaintenanceParameters> = {}) {
           const machine = machines[index]!;
           if (event.data.kind === "failure") failMachine(index);
           else completeRepair(index);
-          trace.record({ at: agenda.time, value: { machine: machine.number, kind: event.data.kind } });
+          trace.add({ at: agenda.time, value: { machine: machine.number, kind: event.data.kind } });
           startRepairs();
         }
       }, stepCount);

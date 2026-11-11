@@ -1,0 +1,35 @@
+{
+  "description": "Owner-approved vocabulary migration (consolidation plan step 7): Store add/request/cancel, EventTrace.add, world.activate returning callback results, and neutral polygon names in planar geometry. Frozen public scripts change only renamed identifiers; their assertion counts are unchanged. Earlier receipts remain unchanged.",
+  "names": {
+    "Store.put": "Store.add",
+    "Store.get": "Store.request",
+    "Store.cancelPut": "Store.cancel",
+    "Store.cancelGet": "Store.cancel",
+    "Store.waitingPuts": "Store.waitingAdditions",
+    "Store.waitingGets": "Store.waitingRequests",
+    "PutRequest": "StoreAddition",
+    "PutStatus": "StoreAdditionStatus",
+    "GetRequest": "StoreRequest",
+    "GetStatus": "StoreRequestStatus",
+    "EventTrace.record": "EventTrace.add",
+    "World.report": "World.activate",
+    "ParcelShape": "PlanarPolygonShape",
+    "library/geometry/planar/parcel-input.ts": "library/geometry/planar/polygon-input.ts"
+  },
+  "records": [
+    {
+      "source": "tests/public-contracts/des/03-store-backpressure.ts",
+      "destination": "tests/public-contracts/des/03-store-backpressure.ts",
+      "sourceSha256": "74f95672a156d266418534328f780e9f1523e03112b7f351536bbf3721f0c368",
+      "destinationSha256": "2740a4ba5dffb0185a2989ec9223bfbfcecb624d59810c688058fbcd07ea2518",
+      "assertions": 21
+    },
+    {
+      "source": "tests/public-contracts/des/05-observation-trace-and-random.ts",
+      "destination": "tests/public-contracts/des/05-observation-trace-and-random.ts",
+      "sourceSha256": "5c1c2aa8245c42f0d16483addc5f25841829de7667be4cade03c733999a7649f",
+      "destinationSha256": "4e6acb7976d8f6dd17a7a40b2eb9331db252dff3c1810ca72c4e90627a72e17c",
+      "assertions": 17
+    }
+  ]
+}

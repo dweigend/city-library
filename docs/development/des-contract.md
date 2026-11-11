@@ -17,13 +17,13 @@ All public Agenda arguments validate before mutation. Missing/non-record options
 ## Service queue and resources
 
 ```ts
-ServiceQueue.add<T>({ policy?: "fifo" | "priority" }): ServiceQueue<T>
+ServiceQueue.create<T>({ policy?: "fifo" | "priority" }): ServiceQueue<T>
 queue.add(value: T, options?: { priority?: number }): QueueHandle<T>
 queue.take(): T | undefined
 queue.delete(handle: QueueHandle<T>): void
 queue.entries: readonly T[]
 
-Resource.add<T>({ capacity: number, policy?: "fifo" | "priority" }): Resource<T>
+Resource.create<T>({ capacity: number, policy?: "fifo" | "priority" }): Resource<T>
 resource.request({ owner: T, units?: number, priority?: number }): ResourceRequest<T>
 resource.release(ticket: ResourceRequest<T>): void
 resource.cancel(ticket: ResourceRequest<T>): void
@@ -45,25 +45,24 @@ Queue entries retain canonical references. `entries` is an ordered readonly arra
 ## Bounded stores
 
 ```ts
-Store.add<T>({ capacity: number }): Store<T>
-store.put(value: T): PutRequest<T>
-store.get(): GetRequest<T>
+Store.create<T>({ capacity: number }): Store<T>
+store.add(value: T): StoreAddition<T>
+store.request(): StoreRequest<T>
 store.take(): T | undefined
-store.cancelPut(ticket: PutRequest<T>): void
-store.cancelGet(ticket: GetRequest<T>): void
+store.cancel(ticket: StoreAddition<T> | StoreRequest<T>): void
 store.items: readonly T[]
-store.waitingPuts: readonly PutRequest<T>[]
-store.waitingGets: readonly GetRequest<T>[]
+store.waitingAdditions: readonly StoreAddition<T>[]
+store.waitingRequests: readonly StoreRequest<T>[]
 ```
 
-Capacity is a positive safe integer. Items retain canonical references. Both waiting producer and waiting consumer queues use FIFO; no arrival bypasses an older waiter. Put tickets expose `id`, `value`, `status: "waiting" | "stored" | "cancelled"`; stored means the put completed, including direct handoff. Get tickets expose `id`, `value: T | undefined`, `status: "waiting" | "received" | "cancelled"`; inspect status to distinguish an undefined payload from no result. A producer waits when full. A consumer waits when empty. Available items synchronously satisfy consumers, then freed slots admit producers, with direct FIFO handoff where possible. `take` is a nonwaiting get and returns undefined when empty; use `get` for undefined-valued payloads. No hidden event or callback is generated.
+Capacity is a positive safe integer. Items retain canonical references. Both waiting producer and waiting consumer queues use FIFO; no arrival bypasses an older waiter. Addition tickets (`StoreAddition<T>`) expose `id`, `value`, `status: StoreAdditionStatus` (`"waiting" | "stored" | "cancelled"`); stored means the addition completed, including direct handoff. Request tickets (`StoreRequest<T>`) expose `id`, `value: T | undefined`, `status: StoreRequestStatus` (`"waiting" | "received" | "cancelled"`); the two ticket types stay separate because only a request can lack a value. inspect status to distinguish an undefined payload from no result. A producer waits when full. A consumer waits when empty. Available items synchronously satisfy consumers, then freed slots admit producers, with direct FIFO handoff where possible. `take` is a nonwaiting request and returns undefined when empty; use `request` for undefined-valued payloads. `cancel` withdraws a waiting ticket of either kind; finished tickets are ignored and foreign tickets reject. No hidden event or callback is generated.
 
 Cancel affects only waiting tickets and otherwise is a no-op. It never undoes a completed transfer. Foreign or forged tickets reject. Snapshots do not expose writable store membership.
 
 ## State conditions, process interaction and timeouts
 
 ```ts
-Signal.add<T>(value: T): Signal<T>
+Signal.create<T>(value: T): Signal<T>
 signal.value: T
 signal.set(value: T): void
 signal.wait(predicate: (value: T) => boolean): WaitRequest
@@ -80,9 +79,9 @@ Timeouts are ordinary typed Agenda events that cancel waiting resource/store/sig
 
 ## Canonical identity and deletion
 
-Agent references remain the original living objects; no DES wrapper becomes another Agent identity. Queue entries, waiting/granted resource owners, stored or waiting-producer Agent values register deletion participants with existing Agent lifecycle coordination. Deletion rejects atomically while participation remains. Taking/deleting queue entries, consuming store items, and releasing/cancelling requests remove their participation. A completed get ticket is a historical caller-held reference, not ongoing occupancy. Detached ordinary records are allowed as owners/values and have no Agent deletion hook. Dead Agents reject on admission. World detachment alone neither releases resources nor cancels requests. The caller performs its explicit domain cleanup before deleting an Agent.
+Agent references remain the original living objects; no DES wrapper becomes another Agent identity. Queue entries, waiting/granted resource owners, stored or waiting-producer Agent values register deletion participants with existing Agent lifecycle coordination. Deletion rejects atomically while participation remains. Taking/deleting queue entries, consuming store items, and releasing/cancelling requests remove their participation. A completed request ticket is a historical caller-held reference, not ongoing occupancy. Detached ordinary records are allowed as owners/values and have no Agent deletion hook. Dead Agents reject on admission. World detachment alone neither releases resources nor cancels requests. The caller performs its explicit domain cleanup before deleting an Agent.
 
-Each ticket, queue entry and store occupancy slot registers its own deletion participant, including repeated references to the same Agent in one container. Removing one participation never unregisters another. Pending put participation transfers to its stored slot until consumption; completed direct handoff leaves no store occupancy. Independent containers retain their independent hooks.
+Each ticket, queue entry and store occupancy slot registers its own deletion participant, including repeated references to the same Agent in one container. Removing one participation never unregisters another. Pending addition participation transfers to its stored slot until consumption; completed direct handoff leaves no store occupancy. Independent containers retain their independent hooks.
 
 ## Observations, trace data and random draws
 
@@ -90,8 +89,8 @@ Each ticket, queue entry and store occupancy slot registers its own deletion par
 TimeWeighted.create({ at?: number, value: number }): TimeWeighted
 weighted.set({ at: number, value: number }): void
 weighted.read({ until: number }): { duration: number; integral: number; mean: number | undefined }
-EventTrace.add<T>({ capacity: number }): EventTrace<T>
-trace.record({ at: number, value: T }): void
+EventTrace.create<T>({ capacity: number }): EventTrace<T>
+trace.add({ at: number, value: T }): void
 trace.read(): readonly { readonly at: number; readonly value: T }[]
 ```
 

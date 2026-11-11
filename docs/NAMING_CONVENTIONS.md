@@ -14,14 +14,21 @@ Migrate a public name together with its callers, exports, documentation and chec
 
 Write repository content, identifiers, UI labels and commits in English. Discussions may use German. Prefer an established domain word over an abbreviation or a generic infrastructure name. A resident or vehicle is more expressive than a generic agent when the model supplies that meaning. Preserve established scientific concepts and algorithm names.
 
-Do not coin proper names for parts of the system; name a part after what it is or does. City Library names the project; its parts are the core, city systems, models, studies and the UI. "Agent Loom" was a working title for the core: current documentation says core, while historical records, frozen evidence and serialized identifiers keep the old name. Agent Lab remains the browser application's visible label and folder name until a descriptive replacement is decided together with its UI and code.
+Do not coin proper names for parts of the system; name a part after what it is or does. City Library names the project; its parts are named in the table below. "Agent Loom" was a working title for the core: current documentation says core, while historical records, frozen evidence and serialized identifiers keep the old name.
+
+| System part | Term | Do not use |
+| --- | --- | --- |
+| The neutral headless foundation | core | Agent Loom, engine, framework |
+| A domain capability built on the core, such as economy | city system | kit, plugin, mod (as an API concept), subsystem as a public concept; "subsystem folder" may describe the folder |
+| An executable `model.ts` with its `ui.ts` | model | experiment as a type name |
+| Code organisation | module | — |
+| The browser host for models | Model Lab (currently labelled Agent Lab) | Agent Lab in current documentation once the rename is done |
+
+Model Lab is decided (2026-11-11). The rename of `ui/agent-lab/`, the UI title, error texts and current documentation is a separate follow-up slice; until it lands, the current label and folder stay Agent Lab.
 
 | Meaning | Canonical name |
 | --- | --- |
 | Overall project and package | City Library; `city-library` |
-| Headless modeling core | core |
-| Browser application that runs models | Agent Lab (current UI label) |
-| Executable domain model | model |
 | Parameterized series of model runs | study |
 | One execution within a study | run |
 | Model individual | `Agent`, agent |
@@ -39,7 +46,7 @@ Do not coin proper names for parts of the system; name a part after what it is o
 | Event queue and its distinct time cursor | `Agenda`, agenda time |
 | Host scheduling callback | host callback; an animation frame is one kind |
 | Initial model creation | setup |
-| Detached model data read | observation; `observe()` where defined |
+| Detached model data | observation; returned by `read()` |
 | Execution classification across member kinds | group |
 | Numeric scientific color scale | indexed palette |
 | Partial property update | changes |
@@ -53,14 +60,13 @@ Use network for scientific subject matter when appropriate; use Graph for the AP
 | breed for general execution classification | group |
 | experiment for model selection or the study API | model or study according to the task |
 | opaque phase codes and source-project abbreviations | the actual capability |
-| Agent Loom or another coined name for the headless core | core |
 | `numAgents` and other `num*` count keys | `agentCount` and the corresponding singular noun plus `Count` |
 
 ## Spelling and structure
 
 | Element | Convention | Example |
 | --- | --- | --- |
-| Variables, properties, parameters, functions and methods | `camelCase` | `agentCount`, `observe`, `addEdge` |
+| Variables, properties, parameters, functions and methods | `camelCase` | `agentCount`, `read`, `addEdge` |
 | Types, interfaces, classes and component symbols | `PascalCase` | `StudySpec`, `GraphView` |
 | Ordinary modules, folders and model slugs | `kebab-case` | `indexed-palette.ts`, `traffic-basic` |
 | Svelte component files | `PascalCase.svelte` | `GraphView.svelte` |
@@ -84,7 +90,7 @@ Use a few top-level folders named for their responsibility. Keep source directly
 | --- | --- | --- |
 | `library-core/<module>/` | `library/<module>/` | Autonomous headless modules; no module imports another core module. Folder names match their public export; only folders without an API name of their own use descriptive names. |
 | `library-core/world-composition/` | `library/world/`, `library/studies/` | The only aggregating folder: identity and lifecycle, supported state copying, World, activation, run/tick, grid occupancy and studies. |
-| `library-city/<subsystem>/` | — | City subsystems; each imports only `"city-library"`, never another subsystem. |
+| `library-city/<subsystem>/` | — | City systems, one subsystem folder each; each imports only `"city-library"`, never another city system. |
 | `library-generative-design/` | — | Later; headless generative design, a separate track importing only `"city-library"`. |
 | `models/<slug>/` | `models/<slug>/` | Flat; executable models, their UI descriptions and source and evidence records, each covering one small test case. |
 | `ui-web/` | `ui/` | Shared presentation components, Agent Lab and later game UI. |
@@ -118,25 +124,32 @@ Use `id` within its unambiguous owner and qualify references such as `agentId`. 
 
 ## Operations
 
-| Verb | Meaning |
-| --- | --- |
-| `create` | Construct a new value or object; state whether it also joins an owner. |
-| `add` | Join an existing owner or collection. |
-| `delete` | Remove membership or terminate an owned entity according to its lifecycle contract. |
-| `get` | Retrieve a value according to its documented absence/error contract. |
-| `find` | Search for a matching value; absence is an expected outcome. |
-| `set` | Assign the named value or property. |
-| `update` | Apply an explicit change to an existing value. |
-| `clear` | Empty the named collection or owned contents. |
-| `reset` | Restore a documented initial condition; never imply reconstruction without a reset contract. |
-| `observe` | Read detached model observations without changing model state. |
-| `compute` | Derive a result without changing caller-visible state; choose a mutation verb for an operation that changes state. |
-| `validate` / `parse` | Check an input contract / interpret a representation. |
-| `encode` / `decode` | Convert to / from a declared representation. |
+Use the universal, unopinionated verb. Each kind of operation has exactly one verb; small nuances between functions do not get their own verbs. The table is the canonical verb vocabulary (decided 2026-11-11).
 
-Static factories migrate from `Type.add(...)` to `Type.create(...)`; instance `world.add(component)` retains its membership meaning. This is a coordinated public-contract naming change, with no change to construction or registration behavior.
+| Kind of operation | Verb | Do not use | Rule |
+| --- | --- | --- | --- |
+| Construct | `create` | make, new*, build, free `createX` | `Name.create(options)` builds and never adds membership. |
+| Insert into an owner or collection | `add` | put, insert, attach, register, admit, join, record, push (in the API) | Any membership change or append, including one that may wait. |
+| Remove or empty | `delete` | remove, detach, clear, dispose, destroy | Removes one member; called with no argument on a container, it empties the container. |
+| Take out and return | `take` | pop, dequeue, get | Removes the next item and returns it immediately. |
+| Read state | `read` | observe, get, report, snapshot (as a verb) | Returns data without changing anything. "Observation" stays the data noun. |
+| Write a value | `set` | update, assign, put | Replaces a value, such as `set` or `setCapacity`. |
+| Ticket that may wait | `request` | acquire, get, put | Returns a ticket with a status. |
+| Withdraw a ticket | `cancel` | cancelPut, cancelGet, abort | One verb for every ticket type. |
+| End a grant | `release` | free, return | Only for granted resource units. |
+| Wait for a condition | `wait` | await*, notify, listen | Only on `Signal`. |
+| Act on members | `activate` | ask, report, forEach (in the API) | Runs a callback for each member and returns the results. |
+| Filter members | `select` | find, query, filter, with, search | A predicate goes in, members come out. |
+| Random draw | `sample` | pick, choose | Uses up draws from an explicit `Random`. |
+| Move time | `advance` | step or tick as verbs | Only `tick` and `Agenda` advance. A model's `advance(stepCount)` runs steps; it is the delivered model contract. |
+| Execute a model | `run` | start, play, simulate | `run` is the driver; `step` and `tick` stay nouns. |
+| Start and restore | `setup`, `reset` | init, initialize | `setup` is the start procedure; `reset` is a defined restore. |
+| Spatial change | `move`, `rotate` | place, setPosition, jump | Position is a property; movement is a verb. |
+| Computed results | nouns | get*, find*, compute* | Such as `neighbors`, `distances` or `route`. |
 
-Prefer a precise domain verb when it says more, such as `diffuse`, `route` or `advance`. Keep public commands and their UI actions semantically aligned. Labels use short ordinary English, such as “Add agent” and “Run”; accessible names preserve the same action and subject. Do not force getters, setters or wrappers around every property to satisfy a naming pattern.
+Static factories migrate from `Type.add(...)` to `Type.create(...)`; instance `world.add(component)` retains its membership meaning. Representation boundaries keep `validate`/`parse` and `encode`/`decode`. A domain verb such as `diffuse` names only an operation that no kind above covers. Forbidden words remain usable as nouns and in prose that does not name an operation; native platform APIs keep their own spelling.
+
+Keep public commands and their UI actions semantically aligned. Labels use short ordinary English, such as “Add agent” and “Run”; accessible names preserve the same action and subject. Do not force getters, setters or wrappers around every property to satisfy a naming pattern.
 
 ## Types and state
 

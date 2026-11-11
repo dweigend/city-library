@@ -11,11 +11,11 @@ assert.throws(() => occupied.set({ at: 4, value: 0 }));
 assert.equal(TimeWeighted.create({ value: 3 }).read({ until: 0 }).mean, undefined);
 
 const trace = EventTrace.create<{ kind: string; customer: number }>({ capacity: 2 });
-trace.record({ at: 1, value: { kind: "arrival", customer: 1 } });
-trace.record({ at: 2, value: { kind: "service", customer: 1 } });
-trace.record({ at: 2, value: { kind: "arrival", customer: 2 } });
+trace.add({ at: 1, value: { kind: "arrival", customer: 1 } });
+trace.add({ at: 2, value: { kind: "service", customer: 1 } });
+trace.add({ at: 2, value: { kind: "arrival", customer: 2 } });
 assert.deepEqual(trace.read().map(sample => sample.value.kind), ["service", "arrival"]);
-assert.throws(() => trace.record({ at: 1, value: { kind: "past", customer: 3 } }));
+assert.throws(() => trace.add({ at: 1, value: { kind: "past", customer: 3 } }));
 
 const random = Random.create({ seed: 17 });
 const before = random.state;

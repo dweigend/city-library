@@ -4,7 +4,7 @@ Availability: static factories use `Type.create`. Delivered streams support only
 
 Use this inventory to find an operation, read its signature and follow the link to its full contract.
 
-> **Specification of the whole City Library.** These 450 operation/type entries in 25 areas define the public API: the original modeling core, further delivered core exports, planned core additions, city systems, UI authoring and the model contract. Implementation status is tracked in [PLAN](../../PLAN.md) and the [coverage inventory](../development/coverage.md). Only a `delivered` entry is available.
+> **Specification of the whole City Library.** These 449 operation/type entries in 25 areas define the public API: the original modeling core, further delivered core exports, planned core additions, city systems, UI authoring and the model contract. Implementation status is tracked in [PLAN](../../PLAN.md) and the [coverage inventory](../development/coverage.md). Only a `delivered` entry is available.
 
 **Status.** Every entry states one status:
 
@@ -14,7 +14,7 @@ Use this inventory to find an operation, read its signature and follow the link 
 
 **Target.** The line under each area heading names its folder in the accepted [target structure](../evolution/structure.md). No files have moved yet; public names stay unchanged when they do.
 
-The first 16 areas hold the original 309 anchored entries and three additive headings, now anchored as `api-random-number-additive`, `api-agenda-size` and `api-agenda-next`. Entries added to cover the whole system are numbered `api-380` to `api-517` in document order; existing numbers and anchors are unchanged. [Open decisions](#open-decisions) lists unresolved choices and known inconsistencies.
+The first 16 areas hold the original 309 anchored entries and three additive headings, now anchored as `api-random-number-additive`, `api-agenda-size` and `api-agenda-next`. Entries added to cover the whole system are numbered `api-380` to `api-517` in document order; existing numbers and anchors are unchanged. Since the 2026-11-11 naming migration, `store.cancel` carries both `api-439` and `api-440`. [Open decisions](#open-decisions) lists unresolved choices and known inconsistencies.
 
 [Overview](README.md) · [Detailed reference and examples](api-reference.md)
 
@@ -294,43 +294,43 @@ Run synchronous model updates; stepCount defaults to 1. Each successful callback
 Status: delivered
 
 ```ts
-world.activate<T extends WorldMember>(source: ActivationSource<T>, action: (context: ActivationContext<T>) => unknown,
-  options?: { order?: "fixed" | "shuffle" | "priority" | "unsupported-interleaved-activation"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; groups?: ReadonlyMap<WorldMember,string>; groupOrder?: readonly string[] }): void
+world.activate<T extends WorldMember,R>(source: ActivationSource<T>, callback: (context: ActivationContext<T>) => R,
+  options?: { order?: "fixed" | "shuffle" | "priority" | "unsupported-interleaved-activation"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; groups?: ReadonlyMap<WorldMember,string>; groupOrder?: readonly string[] }): R | undefined | readonly (R | undefined)[]
 ```
 
-Invoke a synchronous action for selected World members under explicit scheduling and scoped self/caller contexts. Never adds ticks.
+Run a synchronous callback for selected World members under explicit scheduling and scoped self/caller contexts and return the results: one result for a single member, otherwise a frozen array in activation order. Skipped and dying members yield undefined. Never adds ticks.
 
 [Details](api-reference.md#activation-contracts)
 
 <a id="world-report"></a>
 <a id="api-26"></a>
 
-### world.report
+### world.activate
 
 Status: delivered
 
 ```ts
-world.report<T extends WorldMember,R>(source: T, report: (context: ActivationContext<T>) => R,
+world.activate<T extends WorldMember,R>(source: T, callback: (context: ActivationContext<T>) => R,
   options?: { order?: "fixed" | "shuffle" | "priority" | "unsupported-interleaved-activation"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; groups?: ReadonlyMap<WorldMember,string>; groupOrder?: readonly string[] }): R | undefined
 ```
 
-Evaluate a synchronous report for one or more World members under explicit scheduling and scoped contexts. Never adds ticks.
+Run a synchronous callback for one World member under explicit scheduling and scoped contexts and return its result; a skipped or dying member yields undefined. Never adds ticks.
 
 [Details](api-reference.md#activation-contracts)
 
 <a id="world-report-2"></a>
 <a id="api-27"></a>
 
-### world.report
+### world.activate
 
 Status: delivered
 
 ```ts
-world.report<T extends WorldMember,R>(source: readonly T[] | { kind: "agents" | "fields" | "edges"; group?: string }, report: (context: ActivationContext<T>) => R,
+world.activate<T extends WorldMember,R>(source: readonly T[] | { kind: "agents" | "fields" | "edges"; group?: string }, callback: (context: ActivationContext<T>) => R,
   options?: { order?: "fixed" | "shuffle" | "priority" | "unsupported-interleaved-activation"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; groups?: ReadonlyMap<WorldMember,string>; groupOrder?: readonly string[] }): readonly (R | undefined)[]
 ```
 
-Evaluate a synchronous report for one or more World members under explicit scheduling and scoped contexts. Never adds ticks.
+Run a synchronous callback for each selected World member under explicit scheduling and scoped contexts and return a frozen array of results in activation order; skipped and dying members yield undefined. Never adds ticks.
 
 [Details](api-reference.md#activation-contracts)
 
@@ -452,7 +452,7 @@ interface ActivationOptions<T extends WorldMember = WorldMember> {
 }
 ```
 
-Named options record of world.activate, report and select. order defaults to "shuffle"; "unsupported-interleaved-activation" always throws.
+Named options record of world.activate and select. order defaults to "shuffle"; "unsupported-interleaved-activation" always throws.
 
 [Details](api-reference.md#activation-contracts)
 
@@ -620,10 +620,10 @@ Read-only orientation in degrees; changed through rotate. Heading is clockwise f
 Status: delivered
 
 ```ts
-agent.pitch: number
+agent.pitch: number | undefined
 ```
 
-Read-only orientation in degrees; changed through rotate. Pitch and roll apply only to XYZ agents.
+Read-only orientation in degrees; changed through rotate. Pitch and roll apply only to XYZ agents and are undefined for XY agents.
 
 [Details](api-reference.md#complete-spatial)
 
@@ -635,10 +635,10 @@ Read-only orientation in degrees; changed through rotate. Pitch and roll apply o
 Status: delivered
 
 ```ts
-agent.roll: number
+agent.roll: number | undefined
 ```
 
-Read-only orientation in degrees; changed through rotate. Pitch and roll apply only to XYZ agents.
+Read-only orientation in degrees; changed through rotate. Pitch and roll apply only to XYZ agents and are undefined for XY agents.
 
 [Details](api-reference.md#complete-spatial)
 
@@ -1329,7 +1329,7 @@ Field<F>
 
 Grid-owned field identity with immutable cell coordinates and directly writable typed properties F. Uses the supported-data and copying rules of `Agent<S>`; each field starts with an independent data copy. Reserved root names: id, grid, x, y, z.
 
-[Details](api-reference.md#field-state)~~
+[Details](api-reference.md#field-state)
 
 <a id="area-graph-and-edge"></a>
 
@@ -1570,12 +1570,12 @@ Find articulation node identities in an undirected graph.
 <a id="graph-find-route"></a>
 <a id="api-96"></a>
 
-### graph.findRoute
+### graph.route
 
 Status: target
 
 ```ts
-graph.findRoute(options: {
+graph.route(options: {
   from: N; to: N; cost?: (edge: Edge<N, E>) => number;
   algorithm?: "auto" | "breadth" | "dijkstra" | "bellman-ford"
 }): Route<N, E> | undefined
@@ -1799,12 +1799,12 @@ Return maximum-cardinality bipartite matching edges; deterministic tie order fol
 <a id="graph-find-cycle"></a>
 <a id="api-109"></a>
 
-### graph.findCycle
+### graph.cycle
 
 Status: target
 
 ```ts
-graph.findCycle(options?: {
+graph.cycle(options?: {
   direction?: "original" | "undirected"
 }): readonly Edge<N, E>[] | undefined
 ```
@@ -2005,9 +2005,9 @@ Status: target
 type ReadonlyGraph<N extends object, E extends object> = Pick<Graph<N, E>,
   "hasNode" | "hasEdge" | "neighbors" | "traverse" | "reachable" |
   "components" | "connected" | "bridges" | "articulations" |
-  "findRoute" | "distances" | "allDistances" | "routes" | "distanceSummary" |
+  "route" | "distances" | "allDistances" | "routes" | "distanceSummary" |
   "analyze" | "triangles" | "clustering" | "communities" | "modularity" |
-  "cliques" | "bipartition" | "matching" | "findCycle" | "topological" |
+  "cliques" | "bipartition" | "matching" | "cycle" | "topological" |
   "transitive" | "isTree" | "spanningTree" | "flow" | "layout" |
   "matrix" | "toData" | "copy" | "view"> & {
   readonly parallel: boolean; readonly selfLoops: boolean;
@@ -2128,12 +2128,12 @@ Topology and lifecycle owner for canonical object nodes and Edges. Collections i
 <a id="graph-find-route-options"></a>
 <a id="api-396"></a>
 
-### graph.findRoute
+### graph.route
 
 Status: planned
 
 ```ts
-graph.findRoute(options: {
+graph.route(options: {
   from: N; to: N;
   cost?: (edge: Edge<N, E>) => number;
   canUse?: (edge: Edge<N, E>) => boolean;
@@ -2142,7 +2142,7 @@ graph.findRoute(options: {
 }): Route<N, E> | undefined
 ```
 
-Planned canUse and heuristic options for the target graph.findRoute (api-96), not a second route API. canUse skips edges (default: every edge is usable); an admissible heuristic gives goal-directed search with the Dijkstra result. Unreachable targets return undefined; no randomness.
+Planned canUse and heuristic options for the target graph.route (api-96), not a second route API. canUse skips edges (default: every edge is usable); an admissible heuristic gives goal-directed search with the Dijkstra result. Unreachable targets return undefined; no randomness.
 
 [Details](api-reference.md#graph-route-search-options)
 
@@ -2865,7 +2865,7 @@ Target: open; the accepted tree has no Input module (see [open decisions](#open-
 <a id="input-add"></a>
 <a id="api-157"></a>
 
-### Input.add
+### Input.create
 
 Status: target
 
@@ -3440,7 +3440,7 @@ Detached planar features accompanied by explicit coordinate-reference-system and
 Status: delivered
 
 ```ts
-geometry.area(options: { shape: ParcelShape }): number
+geometry.area(options: { shape: PlanarPolygonShape }): number
 ```
 
 Return the net planar area, independent of winding; holes subtract and components add.
@@ -3480,15 +3480,15 @@ Cut a convex hole-free polygon once along an infinite line. "ok" returns two par
 <a id="type-parcel-shape"></a>
 <a id="api-406"></a>
 
-### ParcelShape
+### PlanarPolygonShape
 
 Status: delivered
 
 ```ts
-type ParcelShape = PlanarPolygon | Extract<PlanarGeometry, { type: "MultiPolygon" }>;
+type PlanarPolygonShape = PlanarPolygon | Extract<PlanarGeometry, { type: "MultiPolygon" }>;
 ```
 
-A polygon or multipolygon accepted by geometry.area. The delivered name is frozen; a neutral rename is an open decision.
+A polygon or multipolygon accepted by geometry.area. Formerly `ParcelShape` (renamed 2026-11-11).
 
 [Details](../grid-parcels/API.md#geometry-measurements)
 
@@ -3703,15 +3703,15 @@ Create a bounded trace; capacity must be a positive safe integer. Beyond capacit
 <a id="event-trace-record"></a>
 <a id="api-411"></a>
 
-### eventTrace.record
+### eventTrace.add
 
 Status: delivered
 
 ```ts
-eventTrace.record(event: { at: number; value: T }): void
+eventTrace.add(event: { at: number; value: T }): void
 ```
 
-Record a detached copy of value; `at` must be finite and nondecreasing from 0.
+Add a detached copy of value; `at` must be finite and nondecreasing from 0.
 
 [Details](../development/des-contract.md#observations-trace-data-and-random-draws)
 
@@ -3726,7 +3726,7 @@ Status: delivered
 eventTrace.read(): readonly TraceEvent<T>[]
 ```
 
-Return detached copies in recording order.
+Return detached copies in the order they were added.
 
 [Details](../development/des-contract.md#observations-trace-data-and-random-draws)
 
@@ -3741,7 +3741,7 @@ Status: delivered
 EventTrace<T>
 ```
 
-Bounded event diagnostics, separate from History; recording is explicit.
+Bounded event diagnostics, separate from History; adding events is explicit.
 
 [Details](../development/des-contract.md#observations-trace-data-and-random-draws)
 
@@ -4083,27 +4083,27 @@ Create a bounded first-in, first-out store; capacity is required.
 <a id="store-put"></a>
 <a id="api-436"></a>
 
-### store.put
+### store.add
 
 Status: delivered
 
 ```ts
-store.put(value: T): PutRequest<T>
+store.add(value: T): StoreAddition<T>
 ```
 
-Store value when capacity allows; otherwise the producer waits.
+Add value when capacity allows; otherwise the producer waits.
 
 [Details](../development/des-contract.md#bounded-stores)
 
 <a id="store-get"></a>
 <a id="api-437"></a>
 
-### store.get
+### store.request
 
 Status: delivered
 
 ```ts
-store.get(): GetRequest<T>
+store.request(): StoreRequest<T>
 ```
 
 Receive the oldest available value, or wait for one.
@@ -4127,31 +4127,18 @@ Receive a stored item immediately; undefined when none is stored.
 
 <a id="store-cancel-put"></a>
 <a id="api-439"></a>
-
-### store.cancelPut
-
-Status: delivered
-
-```ts
-store.cancelPut(ticket: PutRequest<T>): void
-```
-
-Withdraw a waiting producer; finished requests are ignored.
-
-[Details](../development/des-contract.md#bounded-stores)
-
 <a id="store-cancel-get"></a>
 <a id="api-440"></a>
 
-### store.cancelGet
+### store.cancel
 
 Status: delivered
 
 ```ts
-store.cancelGet(ticket: GetRequest<T>): void
+store.cancel(ticket: StoreAddition<T> | StoreRequest<T>): void
 ```
 
-Withdraw a waiting consumer; finished requests are ignored.
+Withdraw a waiting producer or consumer; finished tickets are ignored and a ticket issued by another store throws `TypeError`.
 
 [Details](../development/des-contract.md#bounded-stores)
 
@@ -4173,12 +4160,12 @@ Stored values, oldest first.
 <a id="store-waiting-puts"></a>
 <a id="api-442"></a>
 
-### store.waitingPuts
+### store.waitingAdditions
 
 Status: delivered
 
 ```ts
-store.waitingPuts: readonly PutRequest<T>[] // readonly
+store.waitingAdditions: readonly StoreAddition<T>[] // readonly
 ```
 
 Producers waiting for space.
@@ -4188,12 +4175,12 @@ Producers waiting for space.
 <a id="store-waiting-gets"></a>
 <a id="api-443"></a>
 
-### store.waitingGets
+### store.waitingRequests
 
 Status: delivered
 
 ```ts
-store.waitingGets: readonly GetRequest<T>[] // readonly
+store.waitingRequests: readonly StoreRequest<T>[] // readonly
 ```
 
 Consumers waiting for an item.
@@ -4218,60 +4205,60 @@ Bounded FIFO store with waiting producers and consumers. Waiting consumers recei
 <a id="type-put-request"></a>
 <a id="api-445"></a>
 
-### PutRequest
+### StoreAddition
 
 Status: delivered
 
 ```ts
-interface PutRequest<T> { readonly id: string; readonly value: T; readonly status: PutStatus }
+interface StoreAddition<T> { readonly id: string; readonly value: T; readonly status: StoreAdditionStatus }
 ```
 
-A producer's request and its status.
+A producer's ticket and its status. It stays separate from StoreRequest because it always carries its value and ends `stored`.
 
 [Details](../development/des-contract.md#bounded-stores)
 
 <a id="type-get-request"></a>
 <a id="api-446"></a>
 
-### GetRequest
+### StoreRequest
 
 Status: delivered
 
 ```ts
-interface GetRequest<T> { readonly id: string; readonly value: T | undefined; readonly status: GetStatus }
+interface StoreRequest<T> { readonly id: string; readonly value: T | undefined; readonly status: StoreRequestStatus }
 ```
 
-A consumer's request; value is set once received.
+A consumer's ticket; value is set once received.
 
 [Details](../development/des-contract.md#bounded-stores)
 
 <a id="type-put-status"></a>
 <a id="api-447"></a>
 
-### PutStatus
+### StoreAdditionStatus
 
 Status: delivered
 
 ```ts
-type PutStatus = "waiting" | "stored" | "cancelled";
+type StoreAdditionStatus = "waiting" | "stored" | "cancelled";
 ```
 
-Life cycle of a put request.
+Life cycle of a store addition.
 
 [Details](../development/des-contract.md#bounded-stores)
 
 <a id="type-get-status"></a>
 <a id="api-448"></a>
 
-### GetStatus
+### StoreRequestStatus
 
 Status: delivered
 
 ```ts
-type GetStatus = "waiting" | "received" | "cancelled";
+type StoreRequestStatus = "waiting" | "received" | "cancelled";
 ```
 
-Life cycle of a get request.
+Life cycle of a store request.
 
 [Details](../development/des-contract.md#bounded-stores)
 
@@ -4744,16 +4731,16 @@ Map a scalar literal type to its corresponding number, boolean or string value t
 
 ### StudyAxis
 
-Status: target
+Status: delivered
 
 ```ts
 export interface StudyAxis {
-	readonly variable: string;
-	readonly values: readonly string[];
+	readonly name: string;
+	readonly values: readonly StudyScalar[];
 }
 ```
 
-Declared variable name with bounded source-literal values for explicit caller decoding.
+The delivered StudyAxis ([api-294](#api-294)), used by the finite-study plan: an axis parsed from XML keeps its bounded source literals as string values for explicit caller decoding.
 
 [Details](api-reference.md#study-contracts-general)
 
@@ -5430,10 +5417,10 @@ Status: target
 ```ts
 interface StudyBindings<Model extends StudyModel> {
  readonly seeds: readonly number[];
- decodeLiteral(source:string, variable:string): StudyScalar;
+ decodeLiteral(source:string, name:string): StudyScalar;
  readonly setup: { readonly source:string; create(parameters:StudyParameters,seed:number,run:PlannedRun<StudyParameters>):Model };
  readonly go: { readonly source:string };
- readonly metrics: readonly { readonly source:string; report(model:Model):StudyScalar }[];
+ readonly metrics: readonly { readonly source:string; read(model:Model):StudyScalar }[];
  readonly exitCondition?:{ readonly source:string; test(model:Model):boolean };
  readonly runMetricsCondition?:{ readonly source:string; test(model:Model):boolean };
  readonly beforeStudy?:{ readonly source:string; run(plan:readonly PlannedRun<StudyParameters>[]):void };
@@ -7039,12 +7026,12 @@ Return true when the node's component produced at least its demand in the last a
 <a id="energy-supply-observe"></a>
 <a id="api-484"></a>
 
-### energySupply.observe
+### energySupply.read
 
 Status: planned
 
 ```ts
-energySupply.observe(): {
+energySupply.read(): {
   readonly components: readonly {
     readonly nodeCount: number;
     readonly production: number;
@@ -7098,19 +7085,19 @@ publicTransport.advance(options: {
 }): void
 ```
 
-Split each trip group into integer-weight cohorts, route them with graph.findRoute and add each weight to the load of every edge on the route. Unreachable trips are counted, never dropped silently. Depends on the target graph.findRoute.
+Split each trip group into integer-weight cohorts, route them with graph.route and add each weight to the load of every edge on the route. Unreachable trips are counted, never dropped silently. Depends on the target graph.route.
 
 [Details](api-reference.md#public-transport)
 
 <a id="public-transport-observe"></a>
 <a id="api-487"></a>
 
-### publicTransport.observe
+### publicTransport.read
 
 Status: planned
 
 ```ts
-publicTransport.observe(): {
+publicTransport.read(): {
   readonly edges: readonly {
     readonly edgeId: string;
     readonly load: number;
@@ -7529,7 +7516,7 @@ One identified item in a collection row. See [UI-082](../ui/api-table.md).
 
 Target: `models/<slug>/model.ts` + `ui.ts`.
 
-Every model is a flat folder with two files. `model.ts` exports `model`, a headless `Definition<P, M>` with title, description, inputs and create; it imports only public APIs and contains no UI, DOM or framework code. `ui.ts` exports `ui`, a `BoundEntry` from `defineUI`: short, declarative bindings of inputs, actions, observations and views. `read()` stays the model observation method until a recorded naming migration; library objects use `observe()`. A step is one procedure invocation; tick is model time; a host frame is neither.
+Every model is a flat folder with two files. `model.ts` exports `model`, a headless `Definition<P, M>` with title, description, inputs and create; it imports only public APIs and contains no UI, DOM or framework code. `ui.ts` exports `ui`, a `BoundEntry` from `defineUI`: short, declarative bindings of inputs, actions, observations and views. `read()` returns the model observation; library objects use `read()` as well. A step is one procedure invocation; tick is model time; a host frame is neither.
 
 <a id="type-model-instance"></a>
 <a id="api-514"></a>
@@ -7615,28 +7602,29 @@ One input descriptor per parameter key. Implemented in `models/definition.ts`, n
 
 ## Open decisions
 
-These choices need an owner decision. Entries in this inventory apply the default; the alternative remains possible.
+These choices need an owner decision. Entries in this inventory apply the default; the alternative remains possible. Rows marked settled record the decision and have no alternative left.
 
 | Question | Default applied here | Alternative |
 | --- | --- | --- |
-| Observation method | Library objects use `observe()`; the model contract keeps `read()` until a recorded naming migration. | Migrate `ModelInstance.read` to `observe` now, together with every model and `defineUI`. |
-| Factory style for systems | City systems use `Name.create(options)`, for example `Budget.create`. | Free factory functions such as `createRoads` / `createBudget`; the [principles](../evolution/principles.md) record this style as superseded. |
-| Parcel vocabulary | `ParcelShape` stays as delivered. | A neutral rename such as `PolygonShape` (roadmap order 2), migrated with all consumers. |
+| Observation method | **Settled 2026-11-11:** every read uses `read()`, on library objects and in the model contract; `observe()` is not used. "Observation" stays the data noun. | — |
+| Factory style for systems | **Settled 2026-11-11:** city systems use `Name.create(options)`, for example `Budget.create`; free factory functions are superseded by the [principles](../evolution/principles.md). | — |
+| Parcel vocabulary | **Settled 2026-11-11:** `ParcelShape` migrates to `PlanarPolygonShape` with all consumers, as recorded in the [naming migration contracts](../../PLAN.md#naming-migration-contracts). | — |
 | Home of Input and limits | Both areas keep `Target: open`. | Input bindings in `world-composition`; limits split per owning module. |
-| Topology ownership | Square and cubic grids stay in `grid`; finite layouts and `topology` belong to `polygon-layout`. | Keep all topology in `grid` and accept the geometry ↔ grid link. |
+| Topology ownership | **Settled by the [accepted structure](../evolution/structure.md):** square and cubic grids stay in `grid`; finite layouts and `topology` belong to `polygon-layout`. Core modules never import each other. | — |
 | Layout-backed `Grid.create` | Listed under Grid; it consumes a `polygon-layout` Layout. | Move the layout overload to `world-composition` as an adapter, or declare Layout structurally in `grid`. The autonomy rule forbids a direct import either way. |
 | Entry count | One entry per `###` heading; overloads count separately. | Count distinct names (overload families) instead. |
-| Package home of `Definition`, `Input` and `Inputs` | `target`: they live in `models/definition.ts`, which no public entry exports. | Export them from `ui/index.ts` or the root, as UI-005 and UI-006 call them Supported. |
+| Package home of `Definition`, `Input` and `Inputs` | `target`: they live in `models/definition.ts`, which no public entry exports. | Export them from `ui/index.ts` or the root. |
 | Command data | Only `CommandResult` is planned; actions stay typed model methods. | Typed command objects `{ type, … }` plus a model `apply(command)` for replays. |
 | Package entries for systems | None; systems import the root `"city-library"`. | Subpaths such as `city-library/economy`, or separate packages (roadmap open question 3). |
-| Route search precision | `findRoute` gets `canUse` and `heuristic` with numeric costs. | Keep exact bigint costs as in the delivered distance algorithms, at a speed cost. |
+| Route search precision | `route` gets `canUse` and `heuristic` with numeric costs. | Keep exact bigint costs as in the delivered distance algorithms, at a speed cost. |
 | Selection weights | No new API: `random.sample(source, { weight })` already draws by weight; weight derivation stays a plain function in the system. | A planned pure `random.weights` that consumes no draws. |
 | Snapshot and hash owner | `storage.hash` is planned next to the target `storage.save`. | `world-composition` owns snapshots and hashes, because complete state spans modules. |
 | Cohort remainders | Deterministic: the last cohort of a trip group carries the remainder. | Distribute remainders with the system's own Random stream. |
-| Roads, zones and growth | Not proposed: roadmap order 4 names them, but the target structure has no matching subsystem folder. | Add a subsystem such as `library-city/land-use` with the first working slice. |
+| Roads, zones and growth | Not proposed: roadmap order 4 names them, but the target structure has no matching subsystem folder. | Add a city system such as `library-city/land-use` with the first working slice. |
 | `grid.reachable` neighborhood | Defaults to `"faces"`, like `grid.diffuse`. | Default to `"moore"`, like `grid.neighbors`. |
 | Option convention and frozen signatures | The "every option optional" convention applies to new API; delivered positional or required arguments (`Agent.create(state, options)`, `Store.create({ capacity })`) stay frozen. | Add option-only overloads in a naming migration. |
-| Change feed | Not proposed yet (layers-and-api engine contract 3). | A revision counter on observations once a renderer needs it. |
+| Global selectors in nested `activate` | Delivered: `activate` accepts the global agents/fields selectors in nested calls, as both former methods (`activate` and `report`) did before the 2026-11-11 merge; there is no runtime change. Open: whether the undelivered interleaved target restricts them to observer calls. | Keep the delivered behaviour; decide the restriction only with the interleaved target. |
+| Change feed | Not proposed yet ([game contract 3](../evolution/layers-and-api.md#game-contracts)). | A revision counter on observations once a renderer needs it. |
 
 Pedestrians, material cycles, politics and library-generative-design have no entries: the [target structure](../evolution/structure.md) names their folders, but no first capability is defined yet.
 
@@ -7644,13 +7632,12 @@ Pedestrians, material cycles, politics and library-generative-design have no ent
 
 ### Known inconsistencies
 
-These differences were found while checking the specification against `index.ts`, `ui/index.ts` and the [UI contract](../ui/api-table.md). None is resolved here.
+These differences were found while checking the specification against `index.ts`, `ui/index.ts` and the [UI contract](../ui/api-table.md). Entries marked resolved were settled on 2026-11-11; the others remain open.
 
-- `Definition`, `Input` and `Inputs` (UI-005, UI-006) and `DrawingIntent` (UI-061) are marked Supported in the UI contract, but no public entry exports these named types.
-- `StudyAxis` has two incompatible forms under one name: [api-277](#api-277) (`variable` with source-literal string values, for study data binding) and [api-294](#api-294) (`name` with scalar values, for study design). The delivered export is the api-294 form.
-- `agent.pitch` and `agent.roll` ([api-57](#api-57), [api-58](#api-58)) are typed `number`; the source declares `number | undefined`, and they apply only to XYZ agents.
-- The [api-157](#api-157) heading reads `Input.add`, while its signature is `Input.create`, as the static-factory rule requires.
+- Resolved: `Definition`, `Input` and `Inputs` (UI-005, UI-006) and `DrawingIntent` (UI-061) are not exported, so the UI contract marks them target. Their package home stays open (see above).
+- Resolved: `StudyAxis` had two incompatible forms under one name. Both [api-277](#api-277) and [api-294](#api-294) now follow the delivered export (`name` with scalar values).
+- Resolved: `agent.pitch` and `agent.roll` ([api-57](#api-57), [api-58](#api-58)) now follow the source type `number | undefined`; they apply only to XYZ agents.
+- Resolved: the [api-157](#api-157) heading now reads `Input.create`, matching its signature and the static-factory rule.
 - [api-1](#api-1) lists `Input` and `limits` as package exports; the delivered root `city-library` exports neither, and the `agent-loom` package paths remain unresolved.
 - UI-001 shows one `defineUI` signature; the source declares four overloads.
 - 57 delivered entries in the first 16 areas differ in spelling from their source declaration (parameter names, aliases, defaults or overload split); [coverage](../development/coverage.md) owns that comparison.
-- The [Field](#api-4) entry's details link ends with a stray `~~`.

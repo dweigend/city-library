@@ -16,7 +16,7 @@ This specification is the target: it defines the required API, including much th
 
 ## Read the API
 
-- [API inventory](api-table.md): all 450 operation/type entries in 25 areas (293 delivered, 141 target, 16 planned), with exact signatures, compact contracts, a status per entry, a target folder per area and the [open decisions](api-table.md#open-decisions). The original 309 core entries keep their numbers; the three formerly unanchored headings are now anchored, and new entries are `api-380` to `api-517`.
+- [API inventory](api-table.md): all 449 operation/type entries in 25 areas (293 delivered, 140 target, 16 planned), with exact signatures, compact contracts, a status per entry, a target folder per area and the [open decisions](api-table.md#open-decisions). The original 309 core entries keep their numbers; the three formerly unanchored headings are now anchored, and new entries are `api-380` to `api-517`.
 - [API reference](api-reference.md): detailed behavior, defaults, validation, errors and examples.
 - [UI API](../ui/README.md): the detailed owner of the UI authoring contract; the inventory links its UI IDs.
 - [Architecture](../ARCHITECTURE.md): state ownership, dependencies, domain layout and extension rules.

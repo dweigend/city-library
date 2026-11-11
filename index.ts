@@ -29,10 +29,10 @@ export type { QueueHandle, QueuePolicy } from "./library/agenda/service-queue.ts
 export { Resource } from "./library/agenda/resource.ts";
 export type { ResourceRequest, ResourceStatus } from "./library/agenda/resource.ts";
 export { Store } from "./library/agenda/store.ts";
-export type { PutRequest, GetRequest, PutStatus, GetStatus } from "./library/agenda/store.ts";
+export type { StoreAddition, StoreRequest, StoreAdditionStatus, StoreRequestStatus } from "./library/agenda/store.ts";
 export { Signal } from "./library/agenda/signal.ts";
 export type { WaitRequest, WaitStatus } from "./library/agenda/signal.ts";
-export type { Bounds, PlanarXY, PlanarPolygon, PlanarGeometry, PlanarJson, PlanarFeature, PlanarDataset, ParcelShape, MergeResult, SplitResult } from "./library/geometry/index.ts";
+export type { Bounds, PlanarXY, PlanarPolygon, PlanarGeometry, PlanarJson, PlanarFeature, PlanarDataset, PlanarPolygonShape, MergeResult, SplitResult } from "./library/geometry/index.ts";
 export { measurements } from "./library/measurement/index.ts";
 export type { Measurement } from "./library/measurement/index.ts";
 export { storage } from "./library/storage/index.ts";

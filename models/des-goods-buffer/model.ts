@@ -18,7 +18,7 @@ export function create(options: Partial<BufferParameters> = {}) {
   const history: { x: number; y: number }[] = [{ x: 0, y: 0 }];
   function produce() {
     producedLotCount += 1;
-    store.put({ crate: producedLotCount, producedAtMinutes: agenda.time });
+    store.add({ crate: producedLotCount, producedAtMinutes: agenda.time });
   }
   function collect() {
     const crate = store.take();
@@ -48,9 +48,9 @@ export function create(options: Partial<BufferParameters> = {}) {
     read() {
       return {
         tick: agenda.time, parameters: { ...settings }, producedLotCount: producedLotCount, storedLotCount: store.items.length,
-        blockedLotCount: store.waitingPuts.length, collectedLotCount: collected.length,
+        blockedLotCount: store.waitingAdditions.length, collectedLotCount: collected.length,
         crates: store.items.map((crate) => ({ ...crate })),
-        blockedCrates: store.waitingPuts.map((request) => ({ ...request.value })),
+        blockedCrates: store.waitingAdditions.map((request) => ({ ...request.value })),
         deliveries: collected.map((crate) => ({ ...crate })),
         history: history.map((point) => ({ ...point })),
       };

@@ -23,7 +23,7 @@ Proposal. Order 1 and 2 are independent of the rest and can run in parallel. The
 | --- | --- | --- | --- | --- |
 | 0 | Decide the direction | Accept the [principles](principles.md); update ARCHITECTURE and PLAN to the layer model and the phase sequence | — | Partly done: principles set; PLAN records the sequence; ARCHITECTURE, PLAN and [concepts](../concepts.md) record the structure and layers |
 | 1 | Clean up history | Archive the NetLogo material ([option A](refactoring.md#options-for-the-historical-material)); amend the source-record rule; fix the stale targets and CI trigger; settle licensing | — | Open; see [refactoring](refactoring.md) |
-| 2 | Neutral core | Rename Parcel → polygon; decide the package entries for systems | Existing assertions keep passing under the new names | Open; both are specification [open decisions](../agent-loom/api-table.md#open-decisions) |
+| 2 | Neutral core | Rename Parcel → polygon; decide the package entries for systems | Existing assertions keep passing under the new names | Parcel → polygon decided 2026-11-11 as `PlanarPolygonShape`; package entries remain a specification [open decision](../agent-loom/api-table.md#open-decisions) |
 | 3 | Sharpen the core | Route search on `Graph`, numeric layers over grids, neutral flood fill and reachability, selection weights that consume no randomness, as concrete needs appear | A route avoids a blocked edge; a flood fill finds an enclosed area; weights stay stable for the same inputs | Specified as target/planned entries; selection weights currently need no new API |
 | 4 | First city capabilities | Roads as a graph, zones, growth with visible blocking reasons, capacity allocation with a visible remainder, supply per connected component | Growth is blocked without road access and explains why; two supply networks share no capacity; unassigned households are reported | Supply planned as `EnergySupply`; roads, zones and growth have no subsystem folder yet |
 | 5 | First economy capabilities | Budget with integer money, atomic transfers, simple resource flows; later an order matcher | A failed transfer leaves all balances unchanged; bankruptcy after three negative months | Budget planned as `Budget` |
@@ -49,7 +49,7 @@ Input. These models can serve as test beds for the new systems:
 
 ## Open questions
 
-The single list for the evolution pages. Q1–Q10 keep their original numbers because other documents cite them; numbers are identifiers, not priorities. API-level choices are not repeated here: the specification lists 18 [open decisions](../agent-loom/api-table.md#open-decisions) with the default it applies and the alternative.
+The single list for the evolution pages. Q1–Q10 keep their original numbers because other documents cite them; numbers are identifiers, not priorities. API-level choices are not repeated here: the specification lists its [open decisions](../agent-loom/api-table.md#open-decisions) with the default it applies and the alternative, and marks the settled ones.
 
 ### Direction and history
 
@@ -77,7 +77,7 @@ The single list for the evolution pages. Q1–Q10 keep their original numbers be
 ### Models and UI
 
 - **Q7.** How much of Agent Lab and `defineUI` must change when city experiments need map views, such as tile layers or road overlays?
-- **Q19.** Should Agent Lab be renamed to a descriptive name such as "Model Lab"? The [naming conventions](../NAMING_CONVENTIONS.md#language-and-vocabulary) keep "Agent Lab" until a replacement is decided together with its UI and code.
+- **Q19.** ~~Should Agent Lab be renamed to a descriptive name such as "Model Lab"?~~ **Resolved** (2026-11-11): the browser host becomes Model Lab. The rename of folder, UI title, error texts and documentation is a separate follow-up slice; see the [naming conventions](../NAMING_CONVENTIONS.md#language-and-vocabulary).
 - **Q20.** Should the live-action rule of the 15 models (explicit `undefined` throws) become the rule for all models? See [rules learned in review](principles.md#rules-learned-in-review).
 
 ### Generative design

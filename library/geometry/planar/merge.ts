@@ -3,13 +3,13 @@ import { createLayout, requireLayout, type Layout } from "../../grid/topology/la
 import { array } from "./validation.ts";
 import {
   freezePolygon,
-  maximumParcelPositions,
-  maximumParcelRingPositions,
+  maximumPolygonPositions,
+  maximumPolygonRingPositions,
   polygonArea,
   polygonPositionCount,
   readPolygon,
   signedRingArea,
-} from "./parcel-input.ts";
+} from "./polygon-input.ts";
 import type { PlanarPolygon, PlanarXY } from "./types.ts";
 
 export type MergeResult =
@@ -35,7 +35,7 @@ export function merge(options: MergeOptions): MergeResult {
   let positionCount = 0;
   for (const shape of rawShapes) {
     positionCount += polygonPositionCount(shape);
-    if (positionCount > maximumParcelPositions) throw new RangeError("Merge position budget exceeded.");
+    if (positionCount > maximumPolygonPositions) throw new RangeError("Merge position budget exceeded.");
   }
   const shapes = rawShapes.map(readPolygon);
   // Validate all inputs and measurable area before reporting support limitations.
@@ -76,7 +76,7 @@ export function merge(options: MergeOptions): MergeResult {
     return reject("failed", "Merged boundary did not close.");
   }
   if (visited.size !== segments.size) return reject("unsupported", "Merge would produce disconnected components or holes.");
-  if (ring.length > maximumParcelRingPositions) return reject("unsupported", "Merged boundary exceeds 128 positions.");
+  if (ring.length > maximumPolygonRingPositions) return reject("unsupported", "Merged boundary exceeds 128 positions.");
 
   let shape: PlanarPolygon;
   try {

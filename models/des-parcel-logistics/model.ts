@@ -49,7 +49,7 @@ export function create(options: Partial<ParcelParameters> = {}) {
     const destination = number % 2 === 1 ? east : west;
     const agent = world.add(Agent.create({ number, destination: destination.label }));
     parcels.push({ agent, minutes: distances.get(destination)! });
-    buffer.put(agent);
+    buffer.add(agent);
     dispatch();
   }
   for (let index = 0; index < settings.parcelCount; index += 1) addParcel();
@@ -80,11 +80,11 @@ export function create(options: Partial<ParcelParameters> = {}) {
     read() {
       return {
         tick: world.tick.value, time: agenda.time, parameters: { ...settings },
-        queuedParcelCount: buffer.items.length, blockedParcelCount: buffer.waitingPuts.length, busyVanCount: van.used,
+        queuedParcelCount: buffer.items.length, blockedParcelCount: buffer.waitingAdditions.length, busyVanCount: van.used,
         deliveredParcelCount: parcels.filter((parcel) => parcel.delivered !== undefined).length,
         parcels: parcels.map((parcel) => ({ number: parcel.agent.number, destination: parcel.agent.destination, routeMinutes: parcel.minutes, dispatched: parcel.dispatched ?? -1, deliveredAtMinutes: parcel.delivered ?? -1, returned: parcel.returned ?? -1 })),
         queuedParcels: buffer.items.map((parcel) => parcel.number),
-        blockedParcels: buffer.waitingPuts.map((request) => request.value.number),
+        blockedParcels: buffer.waitingAdditions.map((request) => request.value.number),
         nodes: [...graph.nodes].map((node) => ({ ...node })),
         edges: [...graph.edges].map((edge) => ({ id: edge.id, from: edge.from.id, to: edge.to.id })),
         edgeCosts: [...graph.edges].map((edge) => ({ id: edge.id, minutes: edge.minutes })),

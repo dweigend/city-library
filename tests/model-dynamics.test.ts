@@ -25,13 +25,13 @@ describe("World activation", () => {
     expect(called).toBe(false);
     expect(world.random.state).toEqual(before);
   });
-  test("select is deterministic and report retains dead entry positions", () => {
+  test("select is deterministic and activate results retain dead entry positions", () => {
     const world = World.create();
     const a = world.add(Agent.create({ value: 1 }));
     const b = world.add(Agent.create({ value: 2 }));
     expect(world.select([a, b], ({ self }) => self.value > 1)).toEqual([b]);
     b.delete();
-    expect(world.report([a, b], ({ self }) => self.value, { order: "fixed" })).toEqual([1, undefined]);
+    expect(world.activate([a, b], ({ self }) => self.value, { order: "fixed" })).toEqual([1, undefined]);
     expect(() => world.select(a, () => undefined as unknown as boolean)).toThrow(TypeError);
   });
   test("foreign membership fails at visit after preceding effects", () => {

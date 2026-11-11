@@ -58,9 +58,9 @@ Most of the repository is parity and evidence material, roughly 60 of 85 MB:
 
 Under the principle that the core says nothing about applications:
 
-- **Parcel → polygon.** `ParcelShape` is exported from `index.ts`, with internals in `library/geometry/planar/parcel-input.ts`, `merge.ts`, `split.ts`, `area.ts` and `validation.ts`. A neutral candidate is `PolygonShape`. This is a public rename and needs a naming-migration decision; the specification lists it as "Parcel vocabulary" in its [open decisions](../agent-loom/api-table.md#open-decisions).
-- **Package name.** `city-library` names the whole construction kit. The core entry should stay application-neutral, as the [naming conventions](../NAMING_CONVENTIONS.md#language-and-vocabulary) now require: the core is called "core". (Historical note: the specification first used the working title "Agent Loom" for it; that name survives only in the folder `docs/agent-loom/`, historical records and frozen evidence.) Candidate split: the root entry is the core, and systems get subpaths. The specification currently applies "no entries; systems import the root"; see [open question 3](roadmap.md#open-questions).
-- **Source-flavored names** such as `activate`/`report`/`select` and the Salabim-style classes are neutral enough to keep. They should be reviewed only in the context of a concrete system.
+- **Parcel → polygon.** Decided 2026-11-11: `ParcelShape` becomes `PlanarPolygonShape` and the internal parcel-input naming becomes polygon naming, as recorded in the [naming migration contracts](../../PLAN.md#naming-migration-contracts).
+- **Package name.** `city-library` names the whole library. The core entry should stay application-neutral, as the [naming conventions](../NAMING_CONVENTIONS.md#language-and-vocabulary) now require: the core is called "core". (Historical note: the specification first used the working title "Agent Loom" for it; that name survives only in the folder `docs/agent-loom/`, historical records and frozen evidence.) Candidate split: the root entry is the core, and systems get subpaths. The specification currently applies "no entries; systems import the root"; see [open question 3](roadmap.md#open-questions).
+- **Source-flavored names** such as `activate`/`select` and the Salabim-style classes are neutral enough to keep; `report` was folded into `activate` on 2026-11-11. Other names should be reviewed only in the context of a concrete system.
 
 ## Lighter process
 
