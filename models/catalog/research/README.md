@@ -1,12 +1,12 @@
 # Model sources and scientific context
 
-Each selected model has a short explanation of its scientific question, its assumptions and limits, and three relevant publications. Use the [model index](INDEX.md) to find a model, then follow its source snapshot and publication records.
+The [scientific source dossier](../../../docs/scientific-sources.md) is the maintained reader bibliography and connects relevant sources to implemented code. The records in this folder and under implemented models preserve the selected models' source provenance, scientific framing, publication metadata and verification evidence. `INDEX.md` is regenerated from those records for integrity and record lookup; it is not a second maintained bibliography.
 
 The collection covers the [selected 200 models](selection.json). A complete literature record establishes source identity and bibliographic checks. It does not establish empirical validity, runtime equivalence or implementation acceptance.
 
-## Read a model record
+## Inspect a model record
 
-Each implemented model owns its authoritative `models/<slug>/research.json` dossier. Selected models that have not been implemented retain their `<slug>.json` dossier in this catalog research folder. It contains the model identity, English explanation, source provenance, publications and unresolved gaps. Original NetLogo sources and model-specific bibliographic records live with their model. Bibliographic snapshots shared by multiple dossiers have one owner in `sources/`. The [record path map](../record-paths.json) resolves original paths inside immutable dossiers and records their checksums.
+Each implemented model owns its validated `models/<slug>/research.json` record. Selected models that have not been implemented retain their `<slug>.json` record in this catalog research folder. These records contain model identity, scientific framing, source provenance, publications and unresolved gaps; they remain the versioned evidence required by catalog validation. The [scientific source dossier](../../../docs/scientific-sources.md) owns reader-facing source-to-code explanations. Original NetLogo sources and model-specific bibliographic records live with their model. Shared bibliographic snapshots have one owner in `sources/`. The [record path map](../record-paths.json) resolves original paths inside immutable records and records their checksums.
 
 Each publication records its authors, title, year, venue, DOI or stable URL, relevance to the model, and the evidence consulted. Metadata checks establish bibliographic identity; they do not imply full-text access. Author names and initials follow the cited primary record. A missing DOI means that none is confirmed in that record.
 

@@ -11,7 +11,7 @@ Each year the city collects taxes, pays for services, and lets every asset wear 
 
 The cost rule makes the difference: repairing an asset that has fallen below 0.4 costs twice as much per condition point. The backlog is what it would cost to restore every asset to perfect condition under that rule.
 
-Madanat and Ben-Akiva (1994) show that the timing of inspection and repair, given deterioration, decides the lifetime cost of infrastructure. This model has no inspection and no hidden condition; it only shows the consequence of the timing rule.
+Repair timing changes asset wear and budget use in this deterministic teaching rule. The model has no inspection or hidden condition and does not optimize lifetime cost. The [scientific source dossier](../../docs/scientific-sources.md) records the research comparison and limits.
 
 ```ts
 import { model } from "./model.ts";

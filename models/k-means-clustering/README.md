@@ -42,7 +42,7 @@ Model-specific `read()` fields include `anyCentroidsMoved`, `diagnostic`, `point
 
 ## Sources and limits
 
-Adapted from the NetLogo *K-Means Clustering* model by Hjorth, Head and Wilensky (2014). Attribution and license are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
+Adapted from the NetLogo *K-Means Clustering* model by Hjorth, Head and Wilensky (2014). Attribution and license are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. The [scientific sources dossier](../../docs/scientific-sources.md) connects the scientific background to model files. The retained research record documents source identity and access limits; it does not validate this implementation.
 
 Data generation and initialization belong to the example. A clean partition is not evidence that the groups exist in real data. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 

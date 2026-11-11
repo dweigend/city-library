@@ -39,7 +39,7 @@ Model-specific `read()` fields include `nodeCount`, `edgeCount`, `nodes`, `edges
 
 ## Sources and limits
 
-Adapted from the NetLogo *Preferential Attachment* model by Wilensky (2005). Attribution and adaptation notes are in the comments of [model.ts](model.ts) and the retained source notices; the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
+Adapted from the NetLogo *Preferential Attachment* model by Wilensky (2005). Attribution and adaptation notes are in the comments of [model.ts](model.ts) and the retained source notices; the [retained source](source.nlogox) keeps the original. The [scientific sources dossier](../../docs/scientific-sources.md) connects the scientific background to model files. The retained research record documents source identity and access limits; it does not validate this implementation.
 
 A finite degree distribution illustrates cumulative attachment. It does not show that any real network grew by this mechanism. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 

@@ -44,7 +44,7 @@ Model-specific `read()` fields include `infectionChance`, `symptomsShow`, `perce
 
 ## Sources and limits
 
-Adapted from the NetLogo *HIV* model by Wilensky (1997). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
+Adapted from the NetLogo *HIV* model by Wilensky (1997). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. The [scientific sources dossier](../../docs/scientific-sources.md) connects the scientific background to model files. The retained research record documents source identity and access limits; it does not validate this implementation.
 
 Infection and symptoms are simplified, the population is closed, and the model does not estimate any individual's medical risk. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 

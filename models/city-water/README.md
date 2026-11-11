@@ -11,7 +11,7 @@ The reservoir holds 10 000 m³ and starts at 8000 m³. Normally 220 m³ flow in 
 3. The reservoir supplies what is asked for, as far as it has water. The rest is **shortage**.
 4. 80 % of supplied water returns as wastewater. The treatment plant handles up to its capacity; the rest leaves untreated. Treated water does not return to the reservoir.
 
-Draper and Lund (2004) analyze "hedging": giving up some water now to keep it for later demand. Here the rule is a simple, visible trigger with a known dry spell, not an optimal policy.
+The model uses a visible storage trigger during a known dry spell; it does not optimize a hedging policy. The [scientific source dossier](../../docs/scientific-sources.md) records the research comparison and limits.
 
 ```ts
 import { model } from "./model.ts";

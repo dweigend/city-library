@@ -11,7 +11,7 @@ Targets say how many hectares should be residential and commercial; the rest sta
 
 Protected parcels never change. You can protect a connected green corridor, six scattered parcels of the same total area, or single parcels.
 
-Batty and Xie (*From Cells to Cities*, 1994) show how local cell rules shape whole cities. Here demand still decides *how much* land changes; only the location choice is local. That split is our teaching simplification, not their cellular automaton.
+Demand decides how much land changes; neighbor scores decide where it changes. This split is an original teaching simplification. The [scientific sources dossier](../../docs/scientific-sources.md) records the reference and adaptation limits.
 
 ```ts
 import { model } from "./model.ts";

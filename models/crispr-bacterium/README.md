@@ -45,7 +45,7 @@ Model-specific `read()` fields include `array`, `virusEvent`, `infected`, `follo
 
 ## Sources and limits
 
-Adapted from the NetLogo *CRISPR Bacterium* model by Woods and Wilensky (2019). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
+Adapted from the NetLogo *CRISPR Bacterium* model by Woods and Wilensky (2019). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. The [scientific sources dossier](../../docs/scientific-sources.md) connects the scientific background to model files. The retained research record documents source identity and access limits; it does not validate this implementation.
 
 Molecular machinery is compressed into moving agents and fixed chances. The model teaches the mechanism; it is not a quantitative molecular simulation. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 

@@ -11,7 +11,7 @@ A sealed, a mixed and a planted block, each 100 m². Sun rises at 06:00 and peak
 - **exchanges heat with the air** in proportion to the temperature difference,
 - and stores the remainder. Sealed blocks have twice the heat capacity of planted ones, so they warm and cool more slowly.
 
-Oke (*The Energetic Basis of the Urban Heat Island*, 1982) explains urban warmth through exactly this energy balance, including heat stored by day and released at night. Here it runs as one explicit budget per block. Surface temperature is not air temperature or comfort.
+Each block has an explicit energy budget, including heat stored by day and released at night. Surface temperature is not air temperature or comfort. The [scientific sources dossier](../../docs/scientific-sources.md) records the reference and adaptation limits.
 
 ```ts
 import { model } from "./model.ts";

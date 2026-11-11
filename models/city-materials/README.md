@@ -6,7 +6,7 @@ A festival week leaves the city with far more waste than usual. Will a better re
 
 Every day the city produces 100 kg of waste, plus 150 kg extra on each of five festival days. Collection takes at most 120 kg a day from everything waiting. Of what is collected, a share is reused, a share of the rest recycled, and the remainder disposed. Whatever is not collected stays in the city as uncollected stock.
 
-Kennedy, Cuddihy and Engel-Yan (*The Changing Metabolism of Cities*, 2007) describe cities through material flows and the stocks that build up inside them. This model has one stock and five flows, with a mass balance you can check every day.
+This model represents material accounting with one stock and five flows, with a mass balance you can check every day. The [scientific sources dossier](../../docs/scientific-sources.md) records the reference and adaptation limits.
 
 ```ts
 import { model } from "./model.ts";

@@ -8,7 +8,7 @@ Sixteen households on a 4 × 4 grid (2 km apart horizontally, 1 km vertically) e
 
 For each service, the closest households claim first. Each takes the nearest facility within the trip limit that still has room. Requests end as **served**, **full** (a facility was in reach but full) or **too far** (nothing in reach).
 
-Luo and Wang (2003) measure accessibility with exactly these two ingredients, distance limits and competition for limited supply, in the two-step floating catchment method. This model allocates with them rather than computing their ratio.
+This model uses distance limits and competition for finite supply, but does not compute the two-step floating catchment ratio. The [scientific source dossier](../../docs/scientific-sources.md) records the comparison and its limits.
 
 ```ts
 import { model } from "./model.ts";

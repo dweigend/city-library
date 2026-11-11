@@ -12,7 +12,7 @@ Households live in three neighborhoods: near, middle and far from work. Each has
 
 Travel takes the straight-line distance at 12 km/h, rounded up to whole 15-minute slots. Every slot adds a quarter person-hour to home, work, school, services or travel.
 
-These are the three constraints Hägerstrand described in *What About People in Regional Science?* (1970): travel takes time (capability), activities need people at the same place (coupling), and facilities have opening hours (authority). The model uses them with fixed schedules; it does not compute space-time prisms.
+The model applies fixed travel-time, co-presence and opening-hour constraints; it does not compute space-time prisms. The [scientific source dossier](../../docs/scientific-sources.md) records the research connection and limit.
 
 ```ts
 import { model } from "./model.ts";

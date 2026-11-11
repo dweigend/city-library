@@ -12,7 +12,7 @@ Twenty-four households earn from 1000 to 5600 per month, split into low, middle 
 4. Searching households with bid ≥ rent move into vacant homes, highest bid first.
 5. If rent reaches the construction threshold, the market starts one new home. Construction takes three months; you can also commission public homes.
 
-Rosenthal (American Economic Review, 2014) shows how private housing changes occupants over time and can become affordable to lower incomes ("filtering"). This model has no building ages or quality. What it shares with that idea is price-led access: added supply lowers rent until lower bids reach it. That is a consequence of these rules, not an estimate.
+This model has no building ages or quality. Added supply lowers rent until lower bids reach it under these local rules; this is a synthetic price-led access mechanism, not an empirical estimate. The [scientific sources dossier](../../docs/scientific-sources.md) records the reference and adaptation limits.
 
 ```ts
 import { model } from "./model.ts";

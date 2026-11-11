@@ -47,7 +47,7 @@ Model-specific `read()` fields include `years`, `humanKilledMammothCount`, `clim
 
 ## Sources and limits
 
-Adapted from the NetLogo *Mammoths* model by Wilensky (1997). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
+Adapted from the NetLogo *Mammoths* model by Wilensky (1997). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. The [scientific sources dossier](../../docs/scientific-sources.md) connects the scientific background to model files. The retained research record documents source identity and access limits; it does not validate this implementation.
 
 Hunting and climate are stylized scenario mechanisms. Extinction in one run does not settle their historical contribution. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 

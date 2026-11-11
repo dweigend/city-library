@@ -51,7 +51,7 @@ Model-specific `read()` fields include `aggregateInfestation`, `seeds`, `cells`,
 
 ## Sources and limits
 
-Adapted from the NetLogo *Invasive Plants* model by Mongkhonvanit and Wilensky (2025). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
+Adapted from the NetLogo *Invasive Plants* model by Mongkhonvanit and Wilensky (2025). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. The [scientific sources dossier](../../docs/scientific-sources.md) connects the scientific background to model files. The retained research record documents source identity and access limits; it does not validate this implementation.
 
 Infestation is an abstract scale, not a measured density, and the model leaves out individual seeds, crop economics and chemical transport. Comparing treatments shows consequences of the chosen rules, not field effectiveness or pesticide safety. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 

@@ -14,7 +14,7 @@ For the first 60 minutes, three people leave Home for Jobs every minute. They ha
 
 Each traveler estimates every route as its travel time plus the queue ahead divided by the link's throughput, adds `carPenalty` to the car options, and takes the cheapest. Cars wait in first-in-first-out queues when a link is full. Later travelers see the queues that earlier ones created, so demand spreads itself over the routes.
 
-Braess and colleagues (*On a Paradox of Traffic Planning*, 1968/2005) showed that individually sensible route choices need not give the best total. This model only borrows the idea that people react to congestion. It does not show a Braess paradox.
+Travelers react to congestion through the local route-cost rules. This model does not demonstrate a Braess paradox. The [scientific sources dossier](../../docs/scientific-sources.md) records the reference and adaptation limits.
 
 ```ts
 import { model } from "./model.ts";

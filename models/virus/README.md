@@ -44,7 +44,7 @@ Model-specific `read()` fields include `percentInfected`, `percentImmune`, `life
 
 ## Sources and limits
 
-Adapted from the NetLogo *Virus* model by Wilensky (1998). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
+Adapted from the NetLogo *Virus* model by Wilensky (1998). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. The [scientific sources dossier](../../docs/scientific-sources.md) connects the scientific background to model files. The retained research record documents source identity and access limits; it does not validate this implementation.
 
 Contact comes from random movement, not a measured social network, and the model does not forecast a real virus. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 

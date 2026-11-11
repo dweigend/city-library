@@ -11,7 +11,7 @@ Seven habitat patches differ in size and position. Every year, each patch:
 
 Occupancy here is the expected share of time a patch is occupied, a probability between 0 and 1, not a count of individuals or observed extinctions.
 
-Hanski (*Metapopulation Dynamics*, Nature 1998) describes how patch area, isolation and recolonization decide whether species persist in fragmented landscapes. This model uses those relationships in a deterministic teaching form.
+Patch area, isolation and recolonization influence occupancy through deterministic teaching rules. The [scientific sources dossier](../../docs/scientific-sources.md) records the reference and adaptation limits.
 
 ```ts
 import { model } from "./model.ts";

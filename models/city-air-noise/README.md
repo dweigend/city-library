@@ -8,7 +8,7 @@ Eight well-mixed air boxes line up downwind. Traffic on the street boxes (100–
 
 Sound works differently: each street box acts as a point source whose energy falls with the square of distance. Sources and background add as energies, so twice the traffic gives +3 dB, not twice the decibels.
 
-Berkowicz's street pollution model (OSPM, 2000) and the EU noise method CNOSSOS-EU (2012) are the references for these two ideas: transport and exchange decide where pollution ends up, and sound levels combine in energy. This model uses the ideas in a tiny form; it is not OSPM or CNOSSOS.
+The pollution rules simplify transport and exchange; the noise rules add sound energies with simplified distance attenuation. The model does not implement OSPM or CNOSSOS. The [scientific source dossier](../../docs/scientific-sources.md) records those comparisons and limits.
 
 ```ts
 import { model } from "./model.ts";

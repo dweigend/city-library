@@ -45,7 +45,7 @@ Model-specific `read()` fields include `pages`, `edges`, `surfers`.
 
 ## Sources and limits
 
-Adapted from the NetLogo *PageRank* model by Stonedahl and Wilensky (2009). Attribution and license are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
+Adapted from the NetLogo *PageRank* model by Stonedahl and Wilensky (2009). Attribution and license are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. The [scientific sources dossier](../../docs/scientific-sources.md) connects the scientific background to model files. The retained research record documents source identity and access limits; it does not validate this implementation.
 
 A short surfer history need not match the rank vector, and the treatment of pages without outgoing links shapes the result. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 

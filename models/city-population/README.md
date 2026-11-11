@@ -12,7 +12,7 @@ The city keeps one count per age from 0 to 100+. Each year:
 4. Net migration enters at age 25 or leaves from the oldest cohorts. A scheduled immigration pulse adds a one-time group of 25-year-olds.
 5. Residents are packed into anonymous households of at most `householdSize`.
 
-The age logic follows Leslie's cohort projection (Biometrika, 1945): today's age structure decides tomorrow's flows. Births and deaths are whole people. The model rounds the city-wide expected total down and carries the fraction to next year, then spreads the deaths over cohorts by largest remainder. That way a cohort of five residents still loses people at 10 % mortality. This rounding rule is a design choice of this model, not part of Leslie's work.
+Today’s age structure determines later births and deaths, counted as whole people. The model rounds the city-wide expected total down and carries the fraction to next year, then allocates deaths over cohorts by largest remainder. A cohort of five can therefore lose residents at 10 % mortality. This integer allocation is an original numerical design choice. The [scientific sources dossier](../../docs/scientific-sources.md) records the reference and adaptation limits.
 
 ```ts
 import { model } from "./model.ts";

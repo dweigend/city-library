@@ -12,7 +12,7 @@ Solar output follows a half-sine from 06:00 to 18:00; wind adds a constant 2 kW.
 
 District heat is a separate system with its own demand and network limit. Shifting a share of evening demand moves that share of each hour 17–20 to hours 11–14; the daily total stays the same.
 
-Denholm and Margolis (NREL, 2016) found that the value of storage at high solar shares depends on when the sun shines and on other flexibility. This neighborhood shows the same timing problem in miniature; their California numbers do not transfer.
+Storage value depends on generation timing and other flexibility. The neighborhood uses synthetic daily profiles; regional capacity estimates do not transfer. The [scientific sources dossier](../../docs/scientific-sources.md) records the reference and adaptation limits.
 
 ```ts
 import { model } from "./model.ts";

@@ -10,7 +10,7 @@ Two 2000 m² plots drain to one basin: a sealed plot (80 % impervious) and a gre
 2. Pervious ground soaks up rain into a 20 mm soil store. The wetter the soil, the less it takes; it drains 1 mm per hour into deep ground.
 3. Runoff fills the basin. The outlet releases at most 4 m³ per hour; whatever does not fit in the basin overflows.
 
-These are the ideas of the US EPA Storm Water Management Model (SWMM): impervious and pervious runoff, infiltration that declines as soil fills, and storage with a throttled outlet. Here they run in a two-plot teaching form; SWMM's equations are not reproduced.
+Impervious and pervious runoff, declining infiltration as soil fills, and storage with a throttled outlet run in a two-plot teaching form; SWMM equations are not reproduced. The [scientific sources dossier](../../docs/scientific-sources.md) records the reference and adaptation limits.
 
 ```ts
 import { model } from "./model.ts";

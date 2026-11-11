@@ -13,7 +13,7 @@ Thirty households and three firms. Each month:
 
 Total cash only changes by what outside customers pay, so the money balance can be checked every month.
 
-Gualdi, Tarzia, Zamponi and Bouchaud (*Tipping Points in Macroeconomic Agent-Based Models*, 2015) show how hiring and firing rules plus demand feedback can produce very different employment regimes. This city keeps only one loop and one asymmetry. It shows a multiplier and a slow recovery, not a tipping point.
+One demand-feedback loop and asymmetric employment adjustment produce a multiplier and slow recovery. This model does not establish a tipping point. The [scientific sources dossier](../../docs/scientific-sources.md) records the reference and adaptation limits.
 
 ```ts
 import { model } from "./model.ts";

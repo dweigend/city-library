@@ -44,7 +44,7 @@ Model-specific `read()` fields include `ants`, `cells`, `foodByPile`.
 
 ## Sources and limits
 
-Adapted from the NetLogo *Ants* model by Wilensky (1997). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. [research.json](research.json) collects the scientific background and publications; it describes the source model's context, not a validation of this implementation.
+Adapted from the NetLogo *Ants* model by Wilensky (1997). Attribution, license and adaptation notes are in [NOTICE.md](NOTICE.md); the [retained source](source.nlogox) keeps the original. The [scientific sources dossier](../../docs/scientific-sources.md) connects the scientific background to model files. The retained research record documents source identity and access limits; it does not validate this implementation.
 
 The model has no route memory, central allocation or species-specific sensing. Efficient-looking trails show what local feedback can produce, not global optimality or a quantitative match to a real colony. Seeded runs do not reproduce NetLogo runs, because the random generators differ.
 
