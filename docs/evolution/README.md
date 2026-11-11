@@ -46,8 +46,11 @@ All binding decisions recorded in this folder, in date order.
 | 2026-11-10 and 2026-11-11 | Principles 1–11 (the record does not split them by date) | [Principles](principles.md#the-principles) |
 | 2026-11-10 | Phase sequence: library logic first, city library step by step, then games and 3D; generative design as a separate track | [Roadmap](roadmap.md#phase-sequence) |
 | 2026-11-11 | Target repository structure, import rules, duplication rule and migration order | [Structure](structure.md) |
-| 2026-11-11 | Terminology: the headless core is called "core"; no coined proper names; the browser host becomes Model Lab, renamed in a later slice | [Naming conventions](../NAMING_CONVENTIONS.md#language-and-vocabulary) |
+| 2026-11-11 | Terminology: the headless core is called "core"; no coined proper names; the browser host is renamed Model Lab | [Naming conventions](../NAMING_CONVENTIONS.md#language-and-vocabulary) |
 | 2026-11-11 | Canonical verb vocabulary (one universal verb per kind of operation) and four public renames: Store, `EventTrace.add`, `activate` returning results, `PlanarPolygonShape` | [Naming conventions](../NAMING_CONVENTIONS.md#operations), [PLAN](../../PLAN.md#naming-migration-contracts) |
+| 2026-11-11 | Model Lab controls: no step buttons, automatic initialization on open, Setup labelled "Reload" (re-runs setup; not a source reload) | [Roadmap](roadmap.md#decisions-settled-on-2026-11-11) |
+| 2026-11-11 | One central three-column scientific source dossier replaces scattered literature pages; legal notices, receipts and contracts stay; Q1 and Q2 stay open | [Roadmap](roadmap.md#decisions-settled-on-2026-11-11) |
+| 2026-11-11 | Working branches: `main` plus `develop` | [Roadmap](roadmap.md#decisions-settled-on-2026-11-11) |
 
 City system factories use `Name.create(options)`, and every read uses `read()`. Both are settled in the specification's [open decisions](../agent-loom/api-table.md#open-decisions).
 

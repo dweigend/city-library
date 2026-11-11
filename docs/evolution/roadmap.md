@@ -47,44 +47,60 @@ Input. These models can serve as test beds for the new systems:
   - They are **not coupled**: 15 separate models are not one city simulation, and they share no city state.
   - There is no accessibility audit yet. Minor display limits remain, such as overlapping zero series and decimal separators.
 
+## Decisions settled on 2026-11-11
+
+- **Model Lab controls (owner):**
+  - the 1/10/100 step buttons are removed and the UI stays minimal;
+  - a model loads and initializes automatically when it opens;
+  - the Setup button is labelled **Reload**.
+
+  Reload re-runs `setup` with the current setup values. It is not a source reload; reloading changed source code stays a separate host feature. The model contract keeps `setup` as the canonical term.
+- **Scientific sources (owner, assigned):** one central three-column dossier, `docs/scientific-sources.md`:
+  1. paper link;
+  2. principle in brief;
+  3. links to the files where the system applies it.
+
+  It replaces the scattered scientific literature pages. No second source list is maintained. Legal notices, licence texts, receipts and contracts are not literature pages; they stay or are migrated traceably. This decision does **not** settle Q1 or Q2.
+- **Working branch:** `main` plus one working branch, `develop`.
+
 ## Open questions
 
-The single list for the evolution pages. Q1–Q10 keep their original numbers because other documents cite them; numbers are identifiers, not priorities. API-level choices are not repeated here: the specification lists its [open decisions](../agent-loom/api-table.md#open-decisions) with the default it applies and the alternative, and marks the settled ones.
+The single list for the evolution pages. Everything marked *parked* is deliberately open for later: the first city capability and its extraction from the models, coupling, package subpaths, commands and replays, snapshot and hash, the change feed, cohort remainders, the global `undefined` rule and the other API slicing questions. No owner decision is needed for the current delivery. Q1–Q10 keep their original numbers because other documents cite them; numbers are identifiers, not priorities. API-level choices are not repeated here: the specification lists its [open decisions](../agent-loom/api-table.md#open-decisions) with the default it applies and the alternative, and marks the settled ones.
 
 ### Direction and history
 
-- **Q1.** Which archive option for the historical material: A, B or C, or a combination? A + C is proposed; see [refactoring](refactoring.md#options-for-the-historical-material).
-- **Q2.** How to handle licensing, and whether to add a root license.
-- **Q8.** Which parts of the existing process stay mandatory for city systems? See [lighter process](refactoring.md#lighter-process).
-- **Q15.** When is the uncommitted city-models work secured, and how is it merged with this branch? See [work at risk](refactoring.md#work-at-risk).
+- **Q1.** *Parked.* Which archive option for the historical material: A, B or C, or a combination? A + C is proposed; see [refactoring](refactoring.md#options-for-the-historical-material).
+- **Q2.** *Parked.* How to handle licensing, and whether to add a root license. No licence has been chosen; NetLogo models are not removed. The scientific dossier does not change these legal obligations.
+- **Q8.** *Parked.* Which parts of the existing process stay mandatory for city systems? See [lighter process](refactoring.md#lighter-process).
+- **Q15.** ~~When is the uncommitted city-models work secured?~~ **Resolved** (2026-11-11): committed locally as `2d27a2b3`; it merges after this branch, adopting the new vocabulary and Model Lab paths.
 
 ### Package and API
 
-- **Q3.** Package entries: subpaths such as `city-library/city`, or separate packages? The specification applies "no entries; systems import the root" ("Package entries for systems").
-- **Q5.** Command pattern: typed handle methods that record plain command objects? How do commands map onto `model.ts` actions? The specification plans only `CommandResult` ("Command data").
-- **Q16.** Which remainder rule do cohort agents use? Three variants are listed under [cohort agents](layers-and-api.md#cohort-agents); the specification applies "last cohort carries the remainder" ("Cohort remainders").
+- **Q3.** *Parked.* Package entries: subpaths such as `city-library/city`, or separate packages? The specification applies "no entries; systems import the root" ("Package entries for systems").
+- **Q5.** *Parked.* Command pattern: typed handle methods that record plain command objects? How do commands map onto `model.ts` actions? The specification plans only `CommandResult` ("Command data").
+- **Q16.** *Parked.* Which remainder rule do cohort agents use? Three variants are listed under [cohort agents](layers-and-api.md#cohort-agents); the specification applies "last cohort carries the remainder" ("Cohort remainders").
 
 ### City and economy systems
 
-- **Q4.** Does the economy system work without the city system, using any agents? The specification's planned `Budget` assumes yes: it "works with any agents, not only inside a city".
-- **Q6.** Tick semantics for city systems: is one tick one game day by default? [Simplification rule 3](principles.md#simplification-rules) proposes yes.
-- **Q11.** Are clusters only design groups of buildings, or do they also carry shared services and game rules? (from [cherry-picks](cherry-picks.md))
-- **Q12.** Should replacing an occupied object be rejected by default at first, or does the first game already need explicit relocation? (from cherry-picks)
-- **Q13.** Do the order matcher and transfers belong in the first economy capability, or are a budget and simple resource flows enough? (from cherry-picks)
-- **Q17.** How do the 15 city teaching models relate to the phases: are they phase-1 experiments, phase-2 test beds for city systems, or both? Which of their mechanisms, if any, become system capabilities?
-- **Q18.** When and how are separate models coupled into one city simulation with shared city state?
+- **Q4.** *Parked.* Does the economy system work without the city system, using any agents? The specification's planned `Budget` assumes yes: it "works with any agents, not only inside a city".
+- **Q6.** *Parked.* Tick semantics for city systems: is one tick one game day by default? [Simplification rule 3](principles.md#simplification-rules) proposes yes.
+- **Q11.** *Parked.* Are clusters only design groups of buildings, or do they also carry shared services and game rules? (from [cherry-picks](cherry-picks.md))
+- **Q12.** *Parked.* Should replacing an occupied object be rejected by default at first, or does the first game already need explicit relocation? (from cherry-picks)
+- **Q13.** *Parked.* Do the order matcher and transfers belong in the first economy capability, or are a budget and simple resource flows enough? (from cherry-picks)
+- **Q17.** *Parked.* How do the 15 city teaching models relate to the phases: are they phase-1 experiments, phase-2 test beds for city systems, or both? Which of their mechanisms, if any, become system capabilities?
+- **Q18.** *Parked.* When and how are separate models coupled into one city simulation with shared city state?
 
 ### Models and UI
 
-- **Q7.** How much of Model Lab and `defineUI` must change when city experiments need map views, such as tile layers or road overlays?
+- **Q7.** *Parked.* How much of Model Lab and `defineUI` must change when city experiments need map views, such as tile layers or road overlays?
 - **Q19.** ~~Should Agent Lab be renamed to a descriptive name such as "Model Lab"?~~ **Resolved** (2026-11-11): the browser host is now Model Lab, including its folder, UI title, error texts and documentation; see the [naming conventions](../NAMING_CONVENTIONS.md#language-and-vocabulary).
-- **Q20.** Should the live-action rule of the 15 models (explicit `undefined` throws) become the rule for all models? See [rules learned in review](principles.md#rules-learned-in-review).
+- **Q20.** *Parked.* Should the live-action rule of the 15 models (explicit `undefined` throws) become the rule for all models? See [rules learned in review](principles.md#rules-learned-in-review).
 
 ### Generative design
 
-- **Q9.** **Generation inside the library:** PLAN currently holds a Generation area (house, quarter, corridor/subtraction/subdivision; rows 5 and 8). Does planar parcel and quarter generation stay in the library, or does it move to the separate generative-design track? Which neutral geometry stays in the core?
+- **Q9.** *Parked.* **Generation inside the library:** PLAN currently holds a Generation area (house, quarter, corridor/subtraction/subdivision; rows 5 and 8). Does planar parcel and quarter generation stay in the library, or does it move to the separate generative-design track? Which neutral geometry stays in the core?
 - **Q10.** ~~Where does the generative-design track live: its own repository, its own package, or `city_game`?~~ **Resolved** by the accepted [structure](structure.md) (2026-11-11): `library-generative-design/` in this repository, importing only `"city-library"`. PLAN records the same.
-- **Q14.** Which generator results need persistent identity, and which stay descriptions that can be recomputed at any time? (from cherry-picks)
+- **Q14.** *Parked.* Which generator results need persistent identity, and which stay descriptions that can be recomputed at any time? (from cherry-picks)
 
 ## Guiding questions from old branches (input)
 
