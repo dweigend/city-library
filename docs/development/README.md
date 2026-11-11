@@ -31,7 +31,7 @@ Do not replace versioned contracts or provenance with links into a local archive
 
 ## Historical paths
 
-Frozen review records, receipts, hash-pinned files such as [tests/public-contracts/quad-layouts/README.md](../../tests/public-contracts/quad-layouts/README.md) and pinned revision URLs keep the paths they recorded. Read them with this map; [document-path-migration.json](document-path-migration.json) is the machine-readable part used by the catalog ledger.
+Frozen review records, receipts and pinned revision URLs keep the paths they recorded. Read them with this map; [document-path-migration.json](document-path-migration.json) is the machine-readable part used by the catalog ledger.
 
 | Historical path | Current document |
 | --- | --- |

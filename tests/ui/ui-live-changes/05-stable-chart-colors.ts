@@ -8,6 +8,7 @@ function create() {
 }
 export const model: Definition<{}, ReturnType<typeof create>> = { title: 'Stable series identity', inputs: {}, create };
 export const spec = {
+  monitors: [{ label: 'Tick', value: (state: { phase: number }) => state.phase }],
   views: [{ type: 'line' as const, label: 'Conditional series', series: (state: { phase: number }) => {
     const first = { label: 'A', points: [{ x: 0, y: 1 }, { x: 1, y: 2 }] };
     const second = { label: 'B', points: [{ x: 0, y: 2 }, { x: 1, y: 3 }] };

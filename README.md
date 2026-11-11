@@ -40,7 +40,7 @@ See [Lab usage](ui/model-lab/README.md) for configuration and for loading source
 
 ## How the system works
 
-The system grows in layers. Arrows mean "imports"; every dependency points down to the public core. Dashed boxes do not exist yet.
+The system grows in layers. Each arrow points from a layer to what it depends on: an unlabelled arrow means "imports", and the "hosts" arrow means Model Lab loads and runs models in the browser. Every dependency points down to the public core. Dashed boxes are future layers that do not exist yet: game prototypes, ui-3d, city systems and generative design.
 
 ```mermaid
 flowchart TD

@@ -18,7 +18,7 @@ The license names Ruud van der Ham, copyright 2016. This work studies the mechan
 
 The plain example generates journeys with distinct origin/destination floors. Arrivals enter a floor queue and register a floor/direction request; idle cars wake. Cars start at floor zero, alight before boarding, travel one floor at a time and seek an oldest directional request when empty. Defaults are three cars, capacity four, floors 0–15, movement duration 10, and door/transfer durations 3. Its `3600 / load` interarrival calculation suggests seconds if load denotes passengers/hour; that unit interpretation is an inference, not empirical calibration. [Pinned plain sample](https://raw.githubusercontent.com/salabim/salabim/99bc8b2213d66a7287f04952cabc1fb9aa6c369d/sample%20models/Elevator.py).
 
-The animated sample uses the same broad queue/dispatch mechanism and adds floor lines, direction indicators, cabin/queue rendering and sliders. Its displayed car position interpolates between discrete floor events. Topology/capacity slider changes restart the model through the host loop. Desktop rendering, video, global sliders and implicit restart are host-specific mechanisms, not requirements for Model Lab. The `n_0` generator correctly selects `load_n_0` in this version. [Pinned animated sample](https://raw.githubusercontent.com/salabim/salabim/99bc8b2213d66a7287f04952cabc1fb9aa6c369d/sample%20models/Elevator%20animated.py).
+The animated sample uses the same broad queue/dispatch mechanism and adds floor lines, direction indicators, cabin/queue rendering and sliders. Its displayed car position interpolates between discrete floor events. Topology/capacity slider changes restart the model through the host loop. Desktop rendering, video, global sliders and implicit restart are host-specific mechanisms, not requirements for Agent Lab. The `n_0` generator correctly selects `load_n_0` in this version. [Pinned animated sample](https://raw.githubusercontent.com/salabim/salabim/99bc8b2213d66a7287f04952cabc1fb9aa6c369d/sample%20models/Elevator%20animated.py).
 
 ## Transfer cautions found in source
 
@@ -59,7 +59,7 @@ An M/M/1 stationary formula is not an appropriate elevator acceptance oracle: th
 
 ## Selected image and state parity
 
-The researcher opened the actual selected `11-elevator.png`. It supplies a simple visual vocabulary: flat floor lines, outlined shafts/cabins, passenger dots and directional marks. Its controls and oversized title are not a replacement for Model Lab.
+The researcher opened the actual selected `11-elevator.png`. It supplies a simple visual vocabulary: flat floor lines, outlined shafts/cabins, passenger dots and directional marks. Its controls and oversized title are not a replacement for Agent Lab.
 
 The image shows four dots in each of two cabins, while its Riding monitor says five. Its floor waiting dots total ten. Therefore it cannot define a valid simulation fixture. Draw exactly the passengers supplied by the current observation; a full cabin at capacity four must never depict a fifth passenger, and empty slots must agree with Resource availability. Floor-direction marks represent actual pending queues, not decorative arrows. Diagram coordinates can describe an elevation without pretending to be physical World positions.
 

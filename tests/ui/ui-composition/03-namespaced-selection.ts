@@ -41,7 +41,7 @@ function fields(state: State): GridData {
 export function entry(bind: typeof defineUI = defineUI) {
   return bind(model, {
     setup: ['seed'],
-    monitors: [{ label: 'Growth amount', value: state => state.parameters.growthAmount }],
+    monitors: [{ label: 'Tick', value: state => state.tick }, { label: 'Growth amount', value: state => state.parameters.growthAmount }],
     actions: [{
       label: 'Apply selected', enabled: (state, selected) => inspect(state, selected) !== undefined,
       run(instance, selected) {

@@ -16,7 +16,7 @@ behavior/type tests supply the wider numerical/topological edge cases.
 | `04-continuation-and-revisions.ts` | Replay an explicit RNG continuation, distinguish an advanced stream, verify 71 draws for radius 3, and obtain fresh immutable zero/positive revisions with preserved key/incidence correspondence and old snapshots. |
 | `05-explicit-grid-state-copy.ts` | Build two detached Grids and explicitly copy selected population values between corresponding cells; verify distinct Grid/Field identities and independent state. |
 
-The [phase contract](../../../docs/grid-parcels/TOWNSCAPER-CONTRACT.md) fixes
+The [phase contract](../../../docs/grid-parcels/QUAD-LAYOUTS-CONTRACT.md) fixes
 numerical bounds, exact enumeration/draw order, square-target forces, global
 halving and all failure/ownership semantics. `tests/townscaper-grid-types.ts`
 rejects mixed literal and named-variable options and regular-only LayoutGrid
@@ -26,7 +26,7 @@ assertions are permitted. Missing-export failures are expected before runtime.
 The [design review](../../../docs/grid-parcels/TOWNSCAPER-DESIGN-REVIEW.md) approves
 the example-first checkpoint. `SHA256SUMS` pins the five scripts before runtime.
 The separate [runtime review](../../../docs/grid-parcels/TOWNSCAPER-RUNTIME-REVIEW.md)
-and [verification](../../../docs/grid-parcels/TOWNSCAPER-VERIFICATION.md) record
+and [verification](../../../docs/grid-parcels/QUAD-LAYOUTS-VERIFICATION.md) record
 the implemented scope and complete checks.
 The slice does not deliver arbitrary-domain quad meshing, Lloyd, dual mapping,
 seamless chunks, architecture solving or the remaining parcel catalogue.

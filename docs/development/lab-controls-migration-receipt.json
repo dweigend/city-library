@@ -1,5 +1,5 @@
 {
-  "description": "Owner-approved Model Lab controls migration (2026-11-11): Model Lab initializes a model when it opens, the Setup button reads Reload (Reload with changes while setup edits are pending) and the 1/10/100 step buttons are removed. Frozen browser checks click Reload instead of Setup, rely on the automatic initialization instead of a first Setup click, and advance one step through Run and Pause (stepOnce) instead of the removed step buttons. Assertion counts are unchanged. Earlier receipts remain unchanged.",
+  "description": "Owner-approved Model Lab controls migration (2026-11-11): Model Lab initializes a model when it opens, the Setup button reads Reload (Reload with changes while setup edits are pending) and the 1/10/100 step buttons are removed. Frozen browser checks click Reload instead of Setup, rely on the automatic initialization instead of a first Setup click, and advance one step through Run and Pause (stepOnce) instead of the removed step buttons. stepOnce pauses in the same task as the first rendered step and requires the rendered Tick monitor to advance by exactly one, so the two fixtures that step without one gain a Tick monitor. The quad-layouts README links its contract and verification to the retained QUAD-LAYOUTS documents instead of the removed TOWNSCAPER stubs. Assertion counts are unchanged. Earlier receipts remain unchanged.",
   "records": [
     {
       "source": "tests/ui/ui-authoring/01-defaults-and-inert-entry.ts",
@@ -47,7 +47,7 @@
       "source": "tests/ui/ui-authoring/assertions.ts",
       "destination": "tests/ui/ui-authoring/assertions.ts",
       "sourceSha256": "e1e5e2f3f9b6f626cdbbd2ff013df237f9e4d9df19e52fcd4768e1f34dad21c2",
-      "destinationSha256": "434b4eaab2a7ddacaa9ddbb8ceef53dee2aad4cd8b8d077eceae3f369924910d",
+      "destinationSha256": "63d50f9e1cedfdffbbe41532e36cf582e536d22cdad2887e2731e55ae5f667b2",
       "assertions": 7
     },
     {
@@ -103,7 +103,7 @@
       "source": "tests/ui/ui-composition/03-namespaced-selection.ts",
       "destination": "tests/ui/ui-composition/03-namespaced-selection.ts",
       "sourceSha256": "16b4e34fbb76a9fd9addf0cf524f5e9664712cfdd4825398d31f19351a70ed25",
-      "destinationSha256": "880824d9ff1bd27dc4a704866eed080a515a7d61b0a667f25b319be98b99960f",
+      "destinationSha256": "461b6dc778be69cd1d2a94fce28c88047de711a54066a4c7a0e5dd5dd88d443d",
       "assertions": 7
     },
     {
@@ -173,8 +173,15 @@
       "source": "tests/ui/ui-live-changes/05-stable-chart-colors.ts",
       "destination": "tests/ui/ui-live-changes/05-stable-chart-colors.ts",
       "sourceSha256": "a047f82d00e60cfc3820425a584aadc3b0fb44e82898216744b50dfc04627a79",
-      "destinationSha256": "90d5e5858256747e4f9acb04879b129c943491ad44b800b140d24cd749bc36ac",
+      "destinationSha256": "6fab59ad64788f28009dedb7c9d3127ca7d22c77e9d2ba1c5d0a6a735a71bff8",
       "assertions": 1
+    },
+    {
+      "source": "tests/public-contracts/quad-layouts/README.md",
+      "destination": "tests/public-contracts/quad-layouts/README.md",
+      "sourceSha256": "c62c271a07eae78b9b971d9f273bd011b7dfcda8562fb9a472101a709824fb45",
+      "destinationSha256": "c3ef9c480e52ca35e16d5d901b7b1bded0a24e5686d4287cab5cb2c32b85889e",
+      "assertions": 0
     }
   ]
 }
