@@ -54,15 +54,15 @@ Applied frontend-design, frontend-design-shadcn-svelte, shadcn-svelte, write-doc
 
 Playwright Chromium: Setup, 1 step and 10 steps reached tick 11. A live control was edited through the rendered UI and the resulting observation was inspected: An initial carPenalty=20 input was outside the declared maximum 10 and therefore did not apply to the domain. Dispatching four additional trips still completed eight car trips; this was not evidence of a walking-mode intervention. A valid carPenalty=5 intervention was subsequently checked, as recorded below.
 
-Retained screenshot set: `ui/agent-lab/acceptance/screenshots/city-models/city-mobility-{desktop,narrow}-{light,dark}.png`. Independent findings and later author corrections remain separate from independent approval in the central acceptance records.
+Retained screenshot set: `ui/model-lab/acceptance/screenshots/city-models/city-mobility-{desktop,narrow}-{light,dark}.png`. Independent findings and later author corrections remain separate from independent approval in the central acceptance records.
 
 ## Independent acceptance completed
 
-Antigravity gemini-3.8-flash approved the bounded domain implementation, public contracts and scientific limitations. Independent screenshot inspection and the final UI reapproval closed the presentation findings. See the [retained final review](../../../ui/agent-lab/acceptance/city-models/final-independent-review.md) and [coordinator responses](../../../ui/agent-lab/acceptance/city-models/review-responses.md). This is teaching-model acceptance, not empirical validation or a coupled-city contract.
+Antigravity gemini-3.8-flash approved the bounded domain implementation, public contracts and scientific limitations. Independent screenshot inspection and the final UI reapproval closed the presentation findings. See the [retained final review](../../../ui/model-lab/acceptance/city-models/final-independent-review.md) and [coordinator responses](../../../ui/model-lab/acceptance/city-models/review-responses.md). This is teaching-model acceptance, not empirical validation or a coupled-city contract.
 
 ## Revision 2 (2026-11-10)
 
-The user authorized a research-led rework of all fifteen models after the [Opus 5.5 review](../../../ui/agent-lab/acceptance/city-models/opus-5-5-review.md). The research basis is the [research brief](../../../docs/development/city-model-research.md). This revision was implemented by Claude Opus 5.5 in the shared checkout; independent review and acceptance are open (see the [central status](../../../docs/development/city-simulation-models.md#current-revision-status)).
+The user authorized a research-led rework of all fifteen models after the [Opus 5.5 review](../../../ui/model-lab/acceptance/city-models/opus-5-5-review.md). The research basis is the [research brief](../../../docs/development/city-model-research.md). This revision was implemented by Claude Opus 5.5 in the shared checkout; independent review and acceptance are open (see the [central status](../../../docs/development/city-simulation-models.md#current-revision-status)).
 
 ### What changed and why
 
@@ -93,4 +93,4 @@ There is no freeze commit; these hashes and timestamps were recorded by the impl
 7ce4d97d81b52670ce332237e1efb8055d9baf9027c5b8f4b0c68fabba9a4aed  tests/public-contracts/city-mobility/04-validation-snapshots.ts
 ```
 
-Shell, browser and review results for this revision are recorded centrally in the [city model status](../../../docs/development/city-simulation-models.md#current-revision-status) and the [browser acceptance record](../../../ui/agent-lab/acceptance/city-models/README.md).
+Shell, browser and review results for this revision are recorded centrally in the [city model status](../../../docs/development/city-simulation-models.md#current-revision-status) and the [browser acceptance record](../../../ui/model-lab/acceptance/city-models/README.md).

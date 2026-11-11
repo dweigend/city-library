@@ -43,15 +43,15 @@ Independent screenshot review is running. Live-policy interaction checks and fin
 
 Playwright Chromium: Setup, 1 step and 10 steps reached tick 11. A live control was edited through the rendered UI and the resulting observation was inspected: residentialDemand=0 advanced one year with two conversions. Keyboard Home selected parcel:0; Toggle parcel protection increased protected area from 2 to 3 ha without advancing time, and the inspector showed Protected. Run then Pause returned to Paused.
 
-Retained screenshot set: `ui/agent-lab/acceptance/screenshots/city-models/city-land-use-{desktop,narrow}-{light,dark}.png`. Independent findings and later author corrections remain separate from independent approval in the central acceptance records.
+Retained screenshot set: `ui/model-lab/acceptance/screenshots/city-models/city-land-use-{desktop,narrow}-{light,dark}.png`. Independent findings and later author corrections remain separate from independent approval in the central acceptance records.
 
 ## Independent acceptance completed
 
-Antigravity gemini-3.8-flash approved the bounded domain implementation, public contracts and scientific limitations. Independent screenshot inspection and the final UI reapproval closed the presentation findings. See the [retained final review](../../../ui/agent-lab/acceptance/city-models/final-independent-review.md) and [coordinator responses](../../../ui/agent-lab/acceptance/city-models/review-responses.md). This is teaching-model acceptance, not empirical validation or a coupled-city contract.
+Antigravity gemini-3.8-flash approved the bounded domain implementation, public contracts and scientific limitations. Independent screenshot inspection and the final UI reapproval closed the presentation findings. See the [retained final review](../../../ui/model-lab/acceptance/city-models/final-independent-review.md) and [coordinator responses](../../../ui/model-lab/acceptance/city-models/review-responses.md). This is teaching-model acceptance, not empirical validation or a coupled-city contract.
 
 ## Revision 2 (2026-11-10)
 
-The user authorized a research-led rework of all fifteen models after the [Opus 5.5 review](../../../ui/agent-lab/acceptance/city-models/opus-5-5-review.md). The research basis is the [research brief](../../../docs/development/city-model-research.md). This revision was implemented by Claude Opus 5.5 in the shared checkout; independent review and acceptance are open (see the [central status](../../../docs/development/city-simulation-models.md#current-revision-status)).
+The user authorized a research-led rework of all fifteen models after the [Opus 5.5 review](../../../ui/model-lab/acceptance/city-models/opus-5-5-review.md). The research basis is the [research brief](../../../docs/development/city-model-research.md). This revision was implemented by Claude Opus 5.5 in the shared checkout; independent review and acceptance are open (see the [central status](../../../docs/development/city-simulation-models.md#current-revision-status)).
 
 ### What changed and why
 
@@ -82,4 +82,4 @@ fa301bbac9ebcd10c723fdb9e4bc9453dedb83414fbea7b80b5e05d5dc6496ec  tests/public-c
 9345eed21d8063dfbfbdaa6afc6e0a7d4e704568f82f68e7f2edc32219897a4d  tests/public-contracts/city-land-use/04-validation-snapshots.ts
 ```
 
-Shell, browser and review results for this revision are recorded centrally in the [city model status](../../../docs/development/city-simulation-models.md#current-revision-status) and the [browser acceptance record](../../../ui/agent-lab/acceptance/city-models/README.md).
+Shell, browser and review results for this revision are recorded centrally in the [city model status](../../../docs/development/city-simulation-models.md#current-revision-status) and the [browser acceptance record](../../../ui/model-lab/acceptance/city-models/README.md).
