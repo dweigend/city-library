@@ -25,20 +25,20 @@ All ten entries were initialized, advanced with 1 step, resized four times, run 
 | Household Recycling Behavior | 2 | 2 | 0 / 0 / 0 |
 | Workplace and Household Membership | 2 | 2 | 0 / 0 / 0 |
 
-Raw results: [flows.json](../../../../../../../../tmp/mesa-resize-recheck/flows.json). These entries use tables, charts and networks rather than the changed spatial canvas; their repeated flows establish the requested integration regression check.
+Raw results: `/tmp/mesa-resize-recheck/flows.json`. These entries use tables, charts and networks rather than the changed spatial canvas; their repeated flows establish the requested integration regression check.
 
 ## Spatial reproduction and new images
 
 The earlier coordinator reproduction observed five ResizeObserver undelivered-notification window errors in DES Machine Maintenance during Setup and alternating resizes. After the real fix, the worker initialized that spatial entry with the explicit listeners already installed, advanced ten steps, enabled Labels, and performed four alternating narrow/desktop resizes. The complete observed arrays remained empty. Stable canvas buffers were 732×293 pixels at narrow CSS 390×844 and 2044×818 at desktop CSS 1366×768, both DPR 2. The renderer remained visible and usable.
 
-Four fresh, unique settled images were captured after the fix and supplied to the separate independent actual-image reviewer. [Image manifest](../../../../../../../../tmp/mesa-resize-recheck/images.json):
+Four fresh, unique settled images were captured after the fix and supplied to the separate independent actual-image reviewer. Image manifest (`/tmp/mesa-resize-recheck/images.json`):
 
 | View | Light | Dark |
 | --- | --- | --- |
-| Desktop | [PNG](../../../../../userdata/browser-artifacts/browser-screenshot-localhost-mw92aiv9-dee99c8c.png) | [PNG](../../../../../userdata/browser-artifacts/browser-screenshot-localhost-mw92ajf5-d1c8ed22.png) |
-| Narrow | [PNG](../../../../../userdata/browser-artifacts/browser-screenshot-localhost-mw92ajwf-d80c3f13.png) | [PNG](../../../../../userdata/browser-artifacts/browser-screenshot-localhost-mw92akdi-04656503.png) |
+| Desktop | `browser-screenshot-localhost-mw92aiv9-dee99c8c.png` | `browser-screenshot-localhost-mw92ajf5-d1c8ed22.png` |
+| Narrow | `browser-screenshot-localhost-mw92ajwf-d80c3f13.png` | `browser-screenshot-localhost-mw92akdi-04656503.png` |
 
-Raw spatial listener result: [maintenance.json](../../../../../../../../tmp/mesa-resize-recheck/maintenance.json). The earlier forty-four final Mesa images were preserved unchanged.
+Raw spatial listener result: `/tmp/mesa-resize-recheck/maintenance.json`. The earlier forty-four final Mesa images were preserved unchanged.
 
 ## Coalescing and disposal probe
 
@@ -46,7 +46,7 @@ A separate deterministic instrumentation probe wrapped browser requestAnimationF
 
 The worker then used the public catalog to switch DES Machine Maintenance to Household Energy Demand. Disposal called cancelAnimationFrame for handle 9000001; the held queue became empty, the old canvas was detached, and the new entry showed Setup to begin with no old monitors. The probe deliberately invoked the captured cancelled callback once afterward to simulate a late-delivery race. It produced zero observed clearRect calls on the detached canvas and left its buffer dimensions unchanged at 2044×818. The runtime error arrays remained empty. All instrumented functions were restored afterward.
 
-Raw probe result: [disposal.json](../../../../../../../../tmp/mesa-resize-recheck/disposal.json). This is an explicitly instrumented lifecycle test, not a claim that the browser naturally delivered a cancelled frame. It tests the pending-frame cancellation and disposed guard through ordinary model teardown, without importing private implementation functions.
+Raw probe result: `/tmp/mesa-resize-recheck/disposal.json`. This is an explicitly instrumented lifecycle test, not a claim that the browser naturally delivered a cancelled frame. It tests the pending-frame cancellation and disposed guard through ordinary model teardown, without importing private implementation functions.
 
 ## Limits and handoff
 

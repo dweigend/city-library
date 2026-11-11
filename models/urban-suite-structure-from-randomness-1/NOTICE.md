@@ -36,4 +36,4 @@ To inquire about commercial licenses for either NetLogo or specific models from 
 
 ## Current status
 
-Source/API audit and proposed public examples only. No runtime, browser equivalence or independent approval. Complete original Procedures/Widgets/Info/shapes are preserved in XML. [Audit](../../docs/development/selected-urban-remaining-contracts.md); [existing research dossier](research.json). No new literature research.
+Source/API audit and proposed public examples only. No runtime, browser equivalence or independent approval. Complete original Procedures/Widgets/Info/shapes are preserved in XML. [Audit](../../docs/development/urban-structure-and-economy-contracts.md); [existing research dossier](research.json). No new literature research.

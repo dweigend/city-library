@@ -28,3 +28,18 @@ Detailed agent handoffs, command transcripts, browser logs and screenshots are l
 The pinned reference sources, notices and reference-comparison records under `models/catalog/reference-sources/` remain versioned provenance. Target UI screenshots are disposable verification artifacts.
 
 Do not replace versioned contracts or provenance with links into a local archive. Record relevant checks, dates, scope, findings and unresolved limits in a short portable summary. New check results must come from executed checks; documentation cleanup does not revalidate historical runtime behavior.
+
+## Historical paths
+
+Frozen review records, receipts, hash-pinned files such as [tests/public-contracts/quad-layouts/README.md](../../tests/public-contracts/quad-layouts/README.md) and pinned revision URLs keep the paths they recorded. Read them with this map; [document-path-migration.json](document-path-migration.json) is the machine-readable part used by the catalog ledger.
+
+| Historical path | Current document |
+| --- | --- |
+| `docs/grid-parcels/TOWNSCAPER-CONTRACT.md` | [QUAD-LAYOUTS-CONTRACT.md](../grid-parcels/QUAD-LAYOUTS-CONTRACT.md) |
+| `docs/grid-parcels/TOWNSCAPER-VERIFICATION.md` | [QUAD-LAYOUTS-VERIFICATION.md](../grid-parcels/QUAD-LAYOUTS-VERIFICATION.md) |
+| `docs/development/netlogo-model-acceptance.md` | [model-acceptance.md](model-acceptance.md) |
+| `docs/mesa-expansion/` | [docs/execution-studies/](../execution-studies/STATUS.md) |
+| `src/grid/topology/` | [library/grid/topology/](../../library/grid/topology/index.ts) |
+| `tests/townscaper-grid.test.ts`, `tests/townscaper-grid-types.ts` | [quad-layouts.test.ts](../../tests/quad-layouts.test.ts), [quad-layouts-types.ts](../../tests/quad-layouts-types.ts) |
+
+The finished working pages `docs/development/continuation-plan.md`, `docs/development/integration-status.md` and `docs/evolution/consolidation-plan.md` were removed; their last text is in Git at revision `e60294d1`. Screenshot and `/tmp/` paths in the execution-study browser records name local capture files that were never tracked.

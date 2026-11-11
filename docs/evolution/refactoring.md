@@ -109,4 +109,4 @@ Other worktrees listed in the survey are integrated into `main`. The local main 
 - 15 separate models are not a coupled city.
 - Evidence from their revision 2 travels together with its limits. Revision 1 recorded no pre-implementation hashes for air and noise.
 
-Securing this work is [open question 15](roadmap.md#open-questions). [docs/development/integration-status.md](../development/integration-status.md) gives earlier criteria for open evidence and API coverage; it is a historical snapshot.
+Securing this work is [open question 15](roadmap.md#open-questions).
