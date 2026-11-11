@@ -13,7 +13,9 @@ City Library becomes a headless construction kit for **city simulations and city
 | [Principles](principles.md) | Design principles set by the owner, and what follows from them |
 | [Layers and API](layers-and-api.md) | Core → systems → models; the script style; cohort agents; engine contracts for games |
 | [Refactoring](refactoring.md) | Removing NetLogo/Mesa/Salabim history, neutral core naming, lighter process |
-| [Roadmap](roadmap.md) | Proposed slices and open questions |
+| [Structure](structure.md) | Accepted target repository structure, import rules and migration order |
+| [Roadmap](roadmap.md) | Phase sequence, work items and open questions |
+| [Cherry-picks](cherry-picks.md) | Single ideas from the `city_game` repository, grouped by phase and track |
 | [Research notes](research-notes.md) | Existing city-builder and urban simulation engines, and typical subsystems |
 
 ## Session record

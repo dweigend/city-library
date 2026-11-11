@@ -12,6 +12,9 @@ Status: brainstorming. The owner set these principles on 2026-11-10. They are ca
 6. **Games, not realism.** Simulations are always strongly simplified. Playability and explainability matter more than accuracy.
 7. **Strong encapsulation.** Every module works on its own and can be tested and replaced on its own.
 8. **A construction kit that keeps growing.** A few high-level calls are enough for a small simulation or a whole game. Developers can drop to lower layers for single parts without rewriting everything.
+9. **Logic first, games later.** The library and its logic come first. Experiments in the test UI each cover one small test case, like today's models. Game prototypes and 3D graphics follow only once a basic set of logic exists. See the [roadmap](roadmap.md).
+10. **Generative design is a separate track.** Generative 3D design logic, such as architecture, building families and quarters, is developed separately from the simulation library.
+11. **city-library is the base.** The `city_game` repository serves only for cherry-picking single ideas; see [cherry-picks](cherry-picks.md).
 
 ## Consequences
 
