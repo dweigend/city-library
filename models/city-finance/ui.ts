@@ -76,7 +76,7 @@ function inventoryScene(state: State): SpatialData {
         color: repairedColor, selectable: false });
       labels.push({ x, y: y + 0.82, text: `+${asset.repairedThisYear.toFixed(0)}` });
     }
-    labels.push({ x, y: y - 0.68, text: asset.condition.toFixed(3) });
+    labels.push({ x, y: y - 0.82, text: asset.condition.toFixed(3) });
   });
   labels.push({ x: 0, y: 2.45, text: `Cash ${state.cash.toFixed(0)} CU · backlog ${state.backlog.toFixed(0)} CU` });
   const repaired = state.assets.filter(asset => asset.repairedThisYear > 0);
