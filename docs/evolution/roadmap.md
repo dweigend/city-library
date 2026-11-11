@@ -1,6 +1,6 @@
 # Roadmap
 
-Status: brainstorming. None of these steps is approved. Every library expansion follows the example-first gate: freeze 4–5 asserted public scripts before any runtime work.
+Status: the phase sequence was set by the owner; the work items and their order are proposals, not approved. Every library expansion follows the example-first gate: freeze 4–5 asserted public scripts before any runtime work.
 
 ## Sequence set by the owner (2026-11-10)
 

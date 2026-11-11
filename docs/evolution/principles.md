@@ -1,6 +1,6 @@
 # Principles
 
-Status: brainstorming. The owner set these principles on 2026-11-10. They are candidates for a binding decision.
+Status: set by the owner on 2026-11-10 and 2026-11-11. The simplification rules and the overrides table below remain proposals.
 
 ## The principles
 

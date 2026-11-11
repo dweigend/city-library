@@ -27,7 +27,7 @@ Give each domain fact one owner. Derive values instead of storing redundant stat
 
 Prefer functions. Use classes for real identity, encapsulated state or lifecycle needs; preserve existing accepted methods and authoring contracts. Separate UI, domain logic, orchestration and I/O according to the [architecture](ARCHITECTURE.md#layers-and-implementation-boundaries). Public domain capabilities must be usable headlessly; private implementation helpers need not become exports. UI changes model state only through defined actions.
 
-Keep domain kernels, algorithms and variants distinct. Put types with their semantic owner. Avoid catch-all utils/helpers/manager modules, universal registries, unnecessary factories/interfaces and speculative configuration. Abstract only when it reduces concrete duplication of domain logic, complexity or coupling. Similar code alone does not justify generalization. Consider existing capabilities before adding code or dependencies; optimize after measurement.
+Keep domain kernels, algorithms and variants distinct. Put types with their semantic owner. Avoid catch-all utils/helpers/manager modules, universal registries, unnecessary factories/interfaces and speculative configuration. Abstract only when it reduces concrete duplication of domain logic, complexity or coupling. Similar code alone does not justify generalization. Between autonomous core modules, prefer a small registered copy of a stable helper over a shared import; complex semantics stay single-owned (see the [duplication rule](evolution/structure.md#duplication-rule)). Consider existing capabilities before adding code or dependencies; optimize after measurement.
 
 ## Model scripts as examples
 

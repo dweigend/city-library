@@ -10,6 +10,17 @@ Implementation, scientific comparison and independent acceptance are separate re
 
 Use [public exports](index.ts) and asserted examples to check a particular operation. The Svelte UI is the single supported runtime, and all model entries use the shared [UI contract](docs/ui/README.md) without a model-specific fallback. Browser checks for the shared UI and their limits are in the [UI acceptance record](ui/agent-lab/acceptance/README.md); execution and study capabilities are in [execution and studies](docs/execution-studies/STATUS.md).
 
+## Accepted direction and target structure
+
+The owner set the development sequence in the [roadmap](docs/evolution/roadmap.md):
+
+1. Library logic first. Models in Agent Lab each cover one small test case of a library capability.
+2. Build the city library step by step, sharpening the core where needed.
+3. Then game prototypes and 3D presentation.
+4. Generative 3D design runs as a separate track in the same repository.
+
+The [target structure](docs/evolution/structure.md), accepted on 2026-11-11, places autonomous core modules in `library-core/` (with `world-composition/` as the only aggregating folder), city subsystems in `library-city/<subsystem>/`, generative design in `library-generative-design/`, today's `ui/` in `ui-web/`, later Three.js presentation in `ui-3d/`, and keeps `models/` and `tests/` flat. No files have moved yet; current paths stay valid until its migration order is carried out, and no listed folder implies delivered functionality. The rows below, their gates and the review policy remain in force. How rows 3 and 4 relate to this sequence stays open until the NetLogo archive decision in [refactoring](docs/evolution/refactoring.md).
+
 ## Remaining migration sequence
 
 The [examples directory migration](https://github.com/dweigend/city-library/issues/58) removed `examples/`: canonical models were reused, public API assertions and unmet targets moved to explicit test fixtures, and the migration receipt records every former file and its destination. `bun run contracts` replaces the example runner; dedicated target commands remain separate. See [models and public contract tests](docs/development/examples-migration.md).
@@ -44,7 +55,7 @@ Follow the central [naming conventions](docs/NAMING_CONVENTIONS.md) for the nami
 
 ### Repository structure simplification
 
-The [repository structure convention](docs/NAMING_CONVENTIONS.md#repository-structure) owns placement rules. Headless modules live in `library/`, checks in `tests/`, build tools in `library/development/` and migration evidence in `docs/development/`. The README shows the current layout. Package imports remain rooted at `city-library`; old paths resolve through explicit mappings while immutable receipts and evidence retain their original bytes. The naming contracts below govern coordinated API and consumer changes beyond this directory relocation.
+The [repository structure convention](docs/NAMING_CONVENTIONS.md#repository-structure) owns placement rules. Headless modules live in `library/`, checks in `tests/`, build tools in `library/development/` and migration evidence in `docs/development/`. The README shows the accepted [target structure](docs/evolution/structure.md); these current paths stay valid until its migration. Package imports remain rooted at `city-library`; old paths resolve through explicit mappings while immutable receipts and evidence retain their original bytes. The naming contracts below govern coordinated API and consumer changes beyond this directory relocation.
 
 ### Naming migration contracts
 

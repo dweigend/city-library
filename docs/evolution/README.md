@@ -1,6 +1,6 @@
 # Evolution: refactoring and further development
 
-Status: **brainstorming**. These pages collect ideas and proposals from the planning session of 2026-11-10. They are not binding. [Architecture](../ARCHITECTURE.md), [PLAN](../../PLAN.md) and the other binding documents stay authoritative until a proposal is accepted through an explicit decision.
+Status: mixed. [Structure](structure.md) was accepted by the owner on 2026-11-11, and the [principles](principles.md) and the phase sequence in the [roadmap](roadmap.md) were set by the owner. Everything else collects ideas and proposals from the planning sessions of 2026-11-10 and 2026-11-11 and is not binding. [Architecture](../ARCHITECTURE.md), [PLAN](../../PLAN.md) and the other binding documents stay authoritative until a proposal is accepted through an explicit decision.
 
 ## Goal
 

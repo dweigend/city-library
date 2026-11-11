@@ -67,18 +67,23 @@ This is a composition map, not a required startup sequence. A graph needs no coo
 
 ## Repository structure
 
-The repository groups files by responsibility:
+The repository groups files by responsibility. The tree below is the [accepted target structure](docs/evolution/structure.md). No files have moved yet: today's paths stay valid until the migration, and `library/` and `ui/` keep their current names until then.
 
 ```text
-library/   Headless domain modules, including Agent Loom
-models/    Executable models and their source records
-ui/        Shared UI and the Agent Lab host
-tests/     Behavior checks and public contract scripts
-docs/      Guides, contracts and development evidence
-index.ts   Public package entry
+library-core/               Autonomous headless core modules; world-composition/ is the only aggregating folder
+library-city/<subsystem>/   City subsystems such as economy or energy supply, each created with its first working slice
+library-generative-design/  Separate generative 3D design track (later)
+ui-web/                     Today's ui/: shared UI and the Agent Lab host, later also game UI components
+ui-3d/                      Three.js presentation (later)
+models/                     Flat model folders; each covers one small test case
+tests/                      Behavior checks and public contract scripts
+docs/                       Guides, contracts and development evidence
+index.ts                    Public package entry
 ```
 
-Library build tools live in `library/development/`, executable checks in `tests/` and migration evidence in `docs/development/`. Required configuration stays at the root.
+Library logic comes first, then the city library grows step by step, followed by game prototypes and 3D; generative design is a separate track. The [roadmap](docs/evolution/roadmap.md) records this sequence.
+
+Today, library build tools live in `library/development/`, executable checks in `tests/` and migration evidence in `docs/development/`. Required configuration stays at the root.
 
 The [naming conventions](docs/NAMING_CONVENTIONS.md#repository-structure) define placement rules; [architecture](docs/ARCHITECTURE.md#binding-domain-layout-and-extension-rules) defines domain boundaries. No additional package layer or nested `src/` folder is needed.
 

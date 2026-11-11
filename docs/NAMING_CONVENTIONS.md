@@ -73,7 +73,23 @@ Name files and directories after a capability or domain responsibility. Avoid op
 
 ## Repository structure
 
-Use a few top-level folders named for their responsibility. Keep source directly inside its owning area; do not add a second `src/` layer, a package hierarchy or a folder merely to hold one file. Create folders only for working content.
+Use a few top-level folders named for their responsibility. Keep source directly inside its owning area; do not add a second `src/` layer, nested packages, tiers or a folder merely to hold one file. Create folders only for working content.
+
+**Target structure (accepted 2026-11-11, not yet migrated).** The [accepted repository structure](evolution/structure.md) replaces the current folders below. No files have moved yet; current paths stay valid until the [migration order](evolution/structure.md#migration-order) renames them, and a target folder appears only with its first working slice.
+
+| Target folder | Today | Responsibility |
+| --- | --- | --- |
+| `library-core/<module>/` | `library/<module>/` | Autonomous headless modules; no module imports another core module. Folder names match their public export; only folders without an API name of their own use descriptive names. |
+| `library-core/world-composition/` | `library/world/`, `library/studies/` | The only aggregating folder: identity and lifecycle, supported state copying, World, activation, run/tick, grid occupancy and studies. |
+| `library-city/<subsystem>/` | — | City subsystems; each imports only `"city-library"`, never another subsystem. |
+| `library-generative-design/` | — | Later; headless generative design, a separate track importing only `"city-library"`. |
+| `models/<slug>/` | `models/<slug>/` | Flat; executable models, their UI descriptions and source and evidence records, each covering one small test case. |
+| `ui-web/` | `ui/` | Shared presentation components, the Agent Lab browser host and later game UI. |
+| `ui-3d/` | — | Later; Three.js presentation using only public APIs. |
+| `tests/` | `tests/` | Flat, plus `public-contracts/`, `ui/` and `targets/`; `import-boundaries.test.ts` and `duplicated-helpers.test.ts` check the structure. |
+| `docs/` | `docs/` | Unchanged. |
+
+Current folders:
 
 | Folder | Responsibility |
 | --- | --- |
@@ -83,11 +99,11 @@ Use a few top-level folders named for their responsibility. Keep source directly
 | `tests/` | Automated checks, public contract scripts and unmet target fixtures. |
 | `docs/` | Guides, binding contracts and development evidence. |
 
-Place a development tool with the area it supports: library build and declaration tools belong in `library/development/`; test runners belong in `tests/`. Keep migration receipts and path mappings in `docs/development/`, preserving immutable evidence bytes. Do not collect unrelated tools and evidence under a top-level `scripts/` folder. Use an existing evidence folder before creating another one.
+Place a development tool with the area it supports: library build and declaration tools belong in `library/development/` (target: `library-core/development/`); test runners belong in `tests/`. Keep migration receipts and path mappings in `docs/development/`, preserving immutable evidence bytes. Do not collect unrelated tools and evidence under a top-level `scripts/` folder. Use an existing evidence folder before creating another one.
 
 Keep the public package entry `index.ts` and required tool configuration at the root. Folder moves do not introduce package subpaths or rename public APIs. Update imports, build inputs, package contents, checks and current documentation together; map historical paths without rewriting frozen evidence.
 
-This layout applies to the whole repository. The central [README](../README.md#repository-structure) shows the orientation tree; [architecture](ARCHITECTURE.md#binding-domain-layout-and-extension-rules) owns domain boundaries below `library/`.
+This layout applies to the whole repository. The central [README](../README.md#repository-structure) shows the orientation tree; [architecture](ARCHITECTURE.md#binding-domain-layout-and-extension-rules) owns domain boundaries below `library/` and its target `library-core/`.
 
 ## Objects, collections and values
 

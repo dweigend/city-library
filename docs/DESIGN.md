@@ -6,6 +6,8 @@ Shared components and defaults keep each model declaration short. [Architecture]
 
 Use the system-wide [naming conventions](NAMING_CONVENTIONS.md) for component names, UI actions and model vocabulary.
 
+In the accepted [target structure](evolution/structure.md), today's `ui/` becomes `ui-web/`, which will later also hold game UI components. A later `ui-3d/` will hold Three.js presentation. Both follow the binding rules below; no files have moved yet.
+
 ## Binding UI system rules
 
 Use this system across all Svelte components, models and screens. [PLAN](../PLAN.md) tracks remaining UI work.

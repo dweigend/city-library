@@ -27,6 +27,7 @@ The specifications include planned operations. Check [what works today](developm
 ## Understand
 
 - [Architecture](ARCHITECTURE.md): ownership, dependencies, module layout, time and randomness.
+- [Target structure](evolution/structure.md): accepted target folders, import rules and migration order; files have not moved yet.
 - [Domain and time semantics](agent-loom/terminology.md): distinctions that names must preserve.
 - [UI design](DESIGN.md): what the interface is for and its binding rules.
 - [Network visualization](decisions/network-visualization.md): why Agent Lab renders graphs the way it does.
@@ -34,7 +35,7 @@ The specifications include planned operations. Check [what works today](developm
 ## Contribute
 
 - [Work plan](../PLAN.md): next work, review policy and the example-first gate.
-- [Evolution](evolution/README.md): non-binding brainstorming on refactoring and further development toward city systems and games.
+- [Evolution](evolution/README.md): the accepted [target structure](evolution/structure.md), the owner's [development sequence](evolution/roadmap.md), and non-binding brainstorming on refactoring and further development toward city systems and games.
 - [Coding standards](CODING_STANDARDS.md) and [naming conventions](NAMING_CONVENTIONS.md).
 - [Git delivery workflow](development/git-workflow.md).
 - [Checks and development records](development/README.md): commands, target checks and where records live.

@@ -78,14 +78,16 @@ For every implementation slice, verify public headless access, dependency direct
 
 The [repository structure convention](NAMING_CONVENTIONS.md#repository-structure) places headless source under `library/`. Development tools under `library/development/` are outside the runtime domain dependency graph.
 
+**Target structure (accepted 2026-11-11, not yet migrated).** The [accepted repository structure](evolution/structure.md) moves the headless core to `library-core/`, adds `library-city/<subsystem>/` and later `library-generative-design/`, and renames `ui/` to `ui-web/`; `ui-3d/` follows later. Development tools move with the core to `library-core/development/`. No files have moved yet. Current paths, including those below, stay valid until the [migration order](evolution/structure.md#migration-order) reaches the corresponding step; the target layout establishes no delivered functionality or exports.
+
 Organize source by domain. The [API specification](agent-loom/README.md) defines public operations; the layout below defines their boundaries. A directory does not imply a working public export.
 
 The regular Grid diffusion calculation is implemented in `library/grid/algorithms/diffusion.ts`; Grid retains input validation and state commit.
 
-The tree below defines intended domain boundaries and planned responsibilities, not the current filesystem inventory. Create a directory only with its first working slice; do not retain empty directories or `.gitkeep` scaffolding. Planned filenames are not a complete list of existing modules. Add each domain's `index.ts` with its first working public capability. The root `index.ts` exports Agent, World, run, Random, Graph, Grid, topology, stats and geometry, plus the bounded expansion values measurements, storage, studies, twoPhase, continuous, Agenda, ServiceQueue, Resource, Store, Signal, EventTrace and TimeWeighted. The [expansion inventory](execution-studies/STATUS.md) records delivered subsets, decisions and separate acceptance evidence. Public types include Tick, RandomState, Edge, GeneratorOptions, Field, Layout, BoundarySegment, LayoutGrid, LayoutField, Space, Position, Vector, Orientation, Histogram, Summary, Bounds and the planar geometry/data types listed in that entry. Current Graph methods include membership, connectivity, distances, analysis, generation and copy; stats exposes histogram, gini and describe. These exports cover part of the graph, geometry, statistics and Agent Loom contracts. Consult the public entry and executable examples for exact supported options; planned directories establish no additional exports.
+The tree below defines intended target domain boundaries and planned responsibilities, not the current filesystem inventory. It shows the target folder names; until migration the core lives under `library/`, World and studies under `library/world/` and `library/studies/`, and storage under `library/storage/` and `library/measurement/`. Core folder names match their public export; only folders without an API name of their own (`polygon-layout`, `measurement-and-history`, `world-composition`) use descriptive names. Create a directory only with its first working slice; do not retain empty directories or `.gitkeep` scaffolding. Planned filenames are not a complete list of existing modules. Add each domain's `index.ts` with its first working public capability. The root `index.ts` exports Agent, World, run, Random, Graph, Grid, topology, stats and geometry, plus the bounded expansion values measurements, storage, studies, twoPhase, continuous, Agenda, ServiceQueue, Resource, Store, Signal, EventTrace and TimeWeighted. The [expansion inventory](execution-studies/STATUS.md) records delivered subsets, decisions and separate acceptance evidence. Public types include Tick, RandomState, Edge, GeneratorOptions, Field, Layout, BoundarySegment, LayoutGrid, LayoutField, Space, Position, Vector, Orientation, Histogram, Summary, Bounds and the planar geometry/data types listed in that entry. Current Graph methods include membership, connectivity, distances, analysis, generation and copy; stats exposes histogram, gini and describe. These exports cover part of the graph, geometry, statistics and Agent Loom contracts. Consult the public entry and executable examples for exact supported options; planned directories establish no additional exports.
 
 ```text
-library/
+library-core/                   # Autonomous: no core module imports another
 ├── agent/
 │   ├── agent.ts
 │   ├── state.ts
@@ -94,21 +96,16 @@ library/
 │   ├── perception.ts
 │   ├── path.ts
 │   └── gradient.ts
-├── world/
-│   ├── world.ts
-│   ├── membership.ts
-│   ├── tick.ts
-│   ├── run.ts
-│   └── activation/             # Activation, reporting, selection and compatibility
 ├── grid/
 │   ├── grid.ts
 │   ├── field.ts
-│   ├── occupancy.ts
 │   ├── topology/
-│   │   ├── orthogonal.ts       # Square/cubic topology
-│   │   └── hexagonal.ts        # Future hexagonal extension
+│   │   └── orthogonal.ts       # Square/cubic topology
 │   └── algorithms/
 │       └── diffusion.ts
+├── polygon-layout/             # Planar polygons and layout topology
+│   ├── polygon.ts              # Today geometry/planar
+│   └── hexagonal.ts            # Today grid/topology layouts
 ├── graph/
 │   ├── graph.ts
 │   ├── nodes.ts
@@ -136,7 +133,6 @@ library/
 │   ├── orientation.ts
 │   ├── distance.ts
 │   ├── neighborhood.ts
-│   ├── polygon.ts
 │   ├── path.ts
 │   └── bounds.ts
 ├── random/
@@ -146,28 +142,46 @@ library/
 │   ├── sampling.ts
 │   └── continuation.ts
 ├── agenda/
+├── continuous/
+├── execution/
 ├── input/
 ├── stats/
-├── studies/
-│   ├── design.ts
-│   ├── replication.ts
-│   ├── run.ts
-│   ├── summarize.ts
-│   ├── calibration/
-│   ├── continuation.ts
-│   ├── study-xml.ts
-│   └── node/                   # Separate host entry and worker implementation
-├── storage/
+├── measurement-and-history/    # Today measurement/ + storage/
 │   ├── snapshot.ts
 │   ├── validation.ts
 │   ├── history.ts
 │   ├── wire/
 │   ├── value-codec.ts
 │   └── formats/
-└── limits/
+├── limits/
+├── world-composition/          # The only aggregating folder
+│   ├── lifecycle.ts            # Identity, lifecycle and supported state copying
+│   ├── world.ts
+│   ├── membership.ts
+│   ├── tick.ts
+│   ├── run.ts
+│   ├── activation/             # Activation, reporting, selection and compatibility
+│   ├── occupancy.ts            # Grid occupancy over canonical agents
+│   └── studies/
+│       ├── design.ts
+│       ├── replication.ts
+│       ├── run.ts
+│       ├── summarize.ts
+│       ├── calibration/
+│       ├── continuation.ts
+│       ├── study-xml.ts
+│       └── node/               # Separate host entry and worker implementation
+└── development/                # Build tools, not runtime code
 
+library-city/<subsystem>/       # Created with the first subsystem; imports only "city-library"
+library-generative-design/      # Later; headless; imports only "city-library"
+ui-web/                         # Today ui/
+ui-3d/                          # Later; Three.js presentation
+models/<slug>/                  # Flat; model.ts and ui.ts
 index.ts                        # Existing public root entry
-tests/                          # Domain contract and integration tests
+tests/                          # Flat domain contract and integration tests
+tests/import-boundaries.test.ts # Enforces the import rules
+tests/duplicated-helpers.test.ts # Conformance cases for registered helper copies
 tests/public-contracts/         # Executable public API contracts
 tests/ui/                       # Public UI consumer fixtures
 tests/targets/                  # Unmet public contracts
@@ -180,15 +194,16 @@ Keep these domain and extension boundaries when files are delivered. Split or co
 
 - Keep each domain's state-owning kernel small. Put calculations, graph algorithm families, generators and layouts in focused functions. Existing method contracts such as `graph.findRoute(...)` delegate to these implementations without changing the binding authoring API.
 - Use ordinary functions, direct typed data and explicit composition. Define small, task-specific contracts for topologies, random algorithms, generators and codecs. Variants must be replaceable through those contracts without rebuilding the whole domain. Do not require a global plugin registry, a universal manager or a deep inheritance hierarchy.
-- Keep types with their semantic owner and export only the agreed public surface. `Field` belongs to Grid; node membership and `Edge` belong to Graph; `History` belongs to Storage. Nodes remain the caller's original objects, not instances of a new mandatory Node base class. Avoid catch-all `core/`, `utils/` and global `types/` modules.
-- Keep dependencies directed and acyclic. Detached Graph, Grid and Random work without World; their optional World participation uses focused private lifecycle contracts. Do not make World the owner of all identity, cloning or algorithm infrastructure merely to share code.
-- Define a single responsible internal protocol for shared identity, supported state copying and cross-domain lifecycle before implementing those interactions. Agent movement, edge ties and World membership must coordinate canonical objects through that protocol; separate registries or copied ownership state must not compete. Common mechanics must not require reciprocal runtime imports.
+- Keep types with their semantic owner and export only the agreed public surface. `Field` belongs to Grid; node membership and `Edge` belong to Graph; `History` belongs to Storage. Nodes remain the caller's original objects, not instances of a new mandatory Node base class. Avoid catch-all `core/`, `utils/` and global `types/` modules; the top-level `library-core/` area is not such a module.
+- Keep core modules autonomous. No core module imports another core module, not even for types; coordinate types are declared structurally where needed. `world-composition/` is the only aggregating folder and may import core modules; the root `index.ts` exports the composed `Agent`, `Grid` and `Graph`. Detached Graph, Grid and Random work without World; their optional World participation uses narrow capabilities, such as identity or deletion participation, passed in by `world-composition`. Do not introduce a universal services object, and do not move algorithm infrastructure into `world-composition` merely to share code.
+- Copy only small, stable helpers, such as option validation and finite-number checks. Each copy carries an identifier and passes the shared conformance cases in `tests/duplicated-helpers.test.ts`. Complex semantics, including supported state copying, identity and geometric predicates, stay single-owned.
+- Define a single responsible internal protocol in `world-composition` for shared identity, supported state copying and cross-domain lifecycle before implementing those interactions. Agent movement, edge ties and World membership must coordinate canonical objects through that protocol; separate registries or copied ownership state must not compete. Common mechanics must not require reciprocal runtime imports.
 
 ### Topology as an extension boundary
 
 Grid topology is distinct from Field state, occupancy queries and update algorithms. Its contract must specify cell identification, supported dimensions, cell-center geometry, position-to-cell mapping, neighborhood enumeration and order, boundary handling and any topology-specific weights. Grid owns stable Field identities; each Field owns its values. Occupancy remains a query over canonical agents.
 
-Diffusion consumes the declared neighbors and applicable weights rather than calculating square-grid offsets itself. Its update rule still defines ordering, units, supported topologies and conservation tolerance. A reusable neighborhood algorithm does not establish a physical process or prove that identical weights are valid on every topology. Pure `geometry.neighbors` and orthogonal Grid neighborhoods must share the required square/cubic semantics rather than duplicating conflicting offset or boundary rules.
+Diffusion consumes the declared neighbors and applicable weights rather than calculating square-grid offsets itself. Its update rule still defines ordering, units, supported topologies and conservation tolerance. A reusable neighborhood algorithm does not establish a physical process or prove that identical weights are valid on every topology. Pure `geometry.neighbors` and orthogonal Grid neighborhoods must share the required square/cubic semantics rather than duplicating conflicting offset or boundary rules; a copy across autonomous modules is allowed only as a registered helper checked by `tests/duplicated-helpers.test.ts`.
 
 The original Agent Loom phase-one Grid remains square/cubic with `faces | moore` neighborhoods and its recorded defaults. The additive [grid/parcel phase](grid-parcels/STATUS.md#bounded-layout-contract) defines detached square, hexagonal and authored planar layouts and `Grid.create({ layout, state })`. Layout-backed Grids have their own accurate capability type: shared-edge neighbors and polygon lookup, without regular `Space`, `cellSize` or diffusion. The bounded layout contract freezes hex radius, orientation, finite boundaries and deterministic edge ties. This extension preserves the original regular Grid contract; it does not introduce arbitrary-layout diffusion or volume topology.
 
@@ -287,7 +302,7 @@ Architectural style that changes geometry belongs here: roof shape, facade openi
 
 General capabilities must not import city domains, kits or UI. Domains depend on selected general contracts; cross-domain relationships use explicit data/references and a composition that coordinates them. For example, mobility consumes destinations chosen by a household policy; it does not import that policy while the policy imports traffic. Kits depend on public general/domain operations; neither layer depends back on kits. Application and host adapters sit outside these boundaries.
 
-Keep the implementation graph acyclic as capabilities arrive. World registration and component lifecycle need a single internal ownership implementation, not reciprocal module imports or parallel identity registries. Co-locate tightly coupled lifecycle mechanics within the binding domain boundaries where necessary; keep detached algorithms independently callable. Private helper splits may evolve as described in the binding layout; no public registration protocol is required.
+Keep the implementation graph acyclic as capabilities arrive. In the [target structure](evolution/structure.md#import-rules), core modules import only their own files, `world-composition` and `index.ts` import core modules, city subsystems and generative design import only `"city-library"` and never each other, and UI imports only public APIs; `tests/import-boundaries.test.ts` enforces these rules. World registration and component lifecycle need a single internal ownership implementation in `world-composition`, not reciprocal module imports or parallel identity registries. Co-locate tightly coupled lifecycle mechanics within the binding domain boundaries where necessary; keep detached algorithms independently callable. Private helper splits may evolve as described in the binding layout; no public registration protocol is required.
 
 Public entry points must be deliberate. Kits, applications and other domains use accepted public contracts, never deep imports into private helpers or source checkout paths. Shared types belong with the capability that defines their semantics. Do not collect unrelated types and algorithms in an all-purpose `utils` or `core` dependency.
 
@@ -364,7 +379,7 @@ These gates define evidence requirements without claiming completion. Use these 
 ## Open contracts
 
 - **Package entries:** the specification uses `agent-loom`, `agent-loom/storage` and `agent-loom/studies/node`. The root mapping to `city-library` is already decided and used by public examples. Storage and Node experiment subpath mappings remain open before their delivery; the current package exposes only its root. Preserve specified serialization identifiers separately from package naming.
-- **Shared lifecycle:** define the private coordination contract for identity, state copying, coupled movement and membership before implementing those interactions. Keep one owner and acyclic dependencies.
+- **Shared lifecycle:** define the private coordination contract for identity, state copying, coupled movement and membership before implementing those interactions. Keep one owner in `world-composition` and autonomous core modules.
 - **Further topology:** the [grid/parcel phase](grid-parcels/STATUS.md#bounded-layout-contract) freezes finite planar hexagonal/layout semantics. Wrapping layouts, irregular diffusion, volume layouts and their storage representations require later explicit contracts. Preserve original square/cubic behavior.
 
 The [work plan](../PLAN.md) tracks next goals and [coverage](development/coverage.md) tracks available capabilities; the [specification overview](agent-loom/README.md) identifies the API source.
