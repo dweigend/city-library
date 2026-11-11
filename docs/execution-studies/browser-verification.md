@@ -1,6 +1,6 @@
 # Mesa browser verification
 
-Real browser checks ran on 2026-11-09 against the Svelte Agent Lab at port 3191 in an independently opened T3 server Chrome tab. The browser worker owned only this report. No model, UI, shared CSS, dependencies or source contracts were changed by this worker.
+Real browser checks ran on 2026-11-09 against the Svelte Model Lab at port 3191 in an independently opened T3 server Chrome tab. The browser worker owned only this report. No model, UI, shared CSS, dependencies or source contracts were changed by this worker.
 
 ## Tools and capture conditions
 

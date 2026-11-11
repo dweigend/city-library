@@ -1,6 +1,6 @@
 # Your first model
 
-In this tutorial you build a small model from scratch, run it in the terminal and then open it in Agent Lab. It takes three short files and no browser code.
+In this tutorial you build a small model from scratch, run it in the terminal and then open it in Model Lab. It takes three short files and no browser code.
 
 The model is a rain barrel behind a house:
 
@@ -87,7 +87,7 @@ export const model = {
 
 What the parts do:
 
-- `inputs` describes the three numbers you can choose before a run: their defaults and allowed ranges. Agent Lab turns them into setup fields.
+- `inputs` describes the three numbers you can choose before a run: their defaults and allowed ranges. Model Lab turns them into setup fields.
 - `create` builds one independent model instance. `parseParameters` checks your options against `inputs` and rejects anything outside the ranges.
 - The barrel is an `Agent` that lives in a `World`. `run(world, passDay)` performs one step and advances `world.tick` by one when the step succeeds. One tick is one day here.
 - `advance` and `waterGarden` are the model's public actions; they are the only way to change it.
@@ -167,7 +167,7 @@ export const ui = defineUI(model, {
 });
 ```
 
-This file only declares what Agent Lab should show: a button that calls `waterGarden`, three monitors and a line chart of the stored water. The setup fields come from `inputs` automatically. Agent Lab supplies Setup, stepping and Run/Pause; the model keeps all state and rules.
+This file only declares what Model Lab should show: a button that calls `waterGarden`, three monitors and a line chart of the stored water. The setup fields come from `inputs` automatically. Model Lab supplies Setup, stepping and Run/Pause; the model keeps all state and rules.
 
 Check the types of the whole project, including your new files:
 
@@ -177,9 +177,9 @@ bun run typecheck
 
 The last line contains `0 ERRORS`.
 
-## 4. Open it in Agent Lab
+## 4. Open it in Model Lab
 
-Agent Lab finds every folder directly under `models/` that contains both `model.ts` and `ui.ts`; you do not register the model anywhere. The folder name becomes the address, so it must be a lowercase slug such as `rain-barrel`.
+Model Lab finds every folder directly under `models/` that contains both `model.ts` and `ui.ts`; you do not register the model anywhere. The folder name becomes the address, so it must be a lowercase slug such as `rain-barrel`.
 
 With all three files in place, start the Lab:
 
@@ -211,6 +211,6 @@ rm -r models/rain-barrel
 
 - [Concepts](concepts.md) explains state ownership, steps and ticks, and explicit randomness in a few paragraphs.
 - [Write a model](development/model-authoring.md) walks through a larger model and lists what a model added to this repository needs.
-- [Agent Lab](../ui/agent-lab/README.md) explains the controls and server options.
+- [Model Lab](../ui/model-lab/README.md) explains the controls and server options.
 - [The UI contract](ui/README.md) and its [reference](ui/api-reference.md) list every view type, monitor and control you can declare.
 - [Architecture](ARCHITECTURE.md) explains why models and UI stay separate.

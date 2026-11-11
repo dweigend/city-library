@@ -6,7 +6,7 @@ Randomness comes from the model's own seeded stream. Reading the model or select
 
 ## Use
 
-Choose **Resource Exchange** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Resource Exchange** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 
@@ -38,9 +38,9 @@ Besides `advance()` and `read()`, the instance offers `select`, `copy`, `toggleM
 
 ## Checks
 
-The public contract script [05-resource-exchange.ts](../../tests/public-contracts/agent-selection/05-resource-exchange.ts) and [agent-lab-model.test.ts](../../tests/agent-lab-model.test.ts) cover seeded replay, independent instances, lifecycle and observation:
+The public contract script [05-resource-exchange.ts](../../tests/public-contracts/agent-selection/05-resource-exchange.ts) and [model-lab-model.test.ts](../../tests/model-lab-model.test.ts) cover seeded replay, independent instances, lifecycle and observation:
 
 ```sh
 bun tests/public-contracts/agent-selection/05-resource-exchange.ts
-bun test tests/agent-lab-model.test.ts
+bun test tests/model-lab-model.test.ts
 ```

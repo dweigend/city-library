@@ -1,6 +1,6 @@
-# Agent Lab
+# Model Lab
 
-Agent Lab runs City Library models in the browser. Choose a model, set its parameters and watch what happens. The model owns state, validation and time; the Lab supplies controls, playback, selection and rendering.
+Model Lab runs City Library models in the browser. Choose a model, set its parameters and watch what happens. The model owns state, validation and time; the Lab supplies controls, playback, selection and rendering.
 
 ## Start it
 
@@ -31,4 +31,4 @@ To add your own model, start with [Your first model](../../docs/first-model.md),
 
 Run `bun run check` and `bun run build:ui` from the root. A change to the Lab or to a model's UI also needs real browser interaction and independent screenshot review under the [UI design rules](../../docs/DESIGN.md); reading the source does not establish visual acceptance.
 
-The [shared acceptance record](acceptance/README.md) lists the checked Lab states and limits. [Reference sources](../../docs/development/model-reference-sources.md) record model provenance. The `city-library` package itself excludes the Lab, reference archives and adapted models.
+The [shared acceptance record](acceptance/README.md) lists the checked Lab states and limits. Model Lab was earlier called Agent Lab: historical records keep that name and the path `ui/agent-lab/`, which maps to `ui/model-lab/`; the `agent-lab-*` acceptance files keep their original names and bytes. [Reference sources](../../docs/development/model-reference-sources.md) record model provenance. The `city-library` package itself excludes the Lab, reference archives and adapted models.

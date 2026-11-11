@@ -1,6 +1,6 @@
 # Explore the models
 
-Each folder here is a runnable model. Open it in Agent Lab with `bun run dev`, or import its `model.ts` in a script: the model works without the UI.
+Each folder here is a runnable model. Open it in Model Lab with `bun run dev`, or import its `model.ts` in a script: the model works without the UI.
 
 There are two kinds of model:
 
@@ -15,7 +15,7 @@ A model that runs and passes its checks is not thereby scientifically validated.
 | --- | --- |
 | `README.md` | What the model explores and how to use it |
 | `model.ts` | Headless model: inputs, state, rules and observations |
-| `ui.ts` | Agent Lab description: controls, monitors and views |
+| `ui.ts` | Model Lab description: controls, monitors and views |
 | `NOTICE.md` | Attribution and license terms of the adapted source, where present |
 | `source.nlogox` or `original.nlogox` | Pinned original NetLogo source, where present |
 | `research.json` | Scientific framing and publications |

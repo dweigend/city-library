@@ -10,7 +10,7 @@ Things to try:
 
 ## Use
 
-Choose **Machine Maintenance** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Machine Maintenance** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

@@ -11,7 +11,7 @@ Things to try:
 
 ## Use
 
-Choose **Structure from Random Averaging** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Structure from Random Averaging** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

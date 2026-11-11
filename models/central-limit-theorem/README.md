@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Central Limit Theorem** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Central Limit Theorem** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

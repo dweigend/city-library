@@ -11,7 +11,7 @@ Things to try:
 
 ## Use
 
-Choose **Parcel Logistics** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Parcel Logistics** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

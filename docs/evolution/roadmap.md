@@ -10,7 +10,7 @@ Set by owner, 2026-11-10. PLAN records it under "Accepted direction and target s
 
 | Phase | Focus | Result |
 | --- | --- | --- |
-| 1. Library logic and experiments | Headless logic comes first. The test UI (Agent Lab) is used to build further experiments. | Each experiment is a `model.ts` + `ui.ts` pair, like today's models, and covers **one small test case** of a library capability. |
+| 1. Library logic and experiments | Headless logic comes first. The test UI (Model Lab) is used to build further experiments. | Each experiment is a `model.ts` + `ui.ts` pair, like today's models, and covers **one small test case** of a library capability. |
 | 2. Build the city library step by step | Improve, sharpen and, where needed, extend the core. Add city and economy systems one capability at a time. | A basic set of tested logic: core plus first systems, each proven by small experiments. |
 | 3. First game prototypes | Only after phase 2 has a basic set: first game prototypes and first 3D graphics. | Games consume the library through public APIs; rendering stays outside the library. |
 | Separate track: generative 3D design | Generative architecture and design logic, such as buildings, clusters, quarters and envelopes, is developed **separately**, so that everything stays clearly separated. | Its own development line. It may use the neutral core, but it is not part of the simulation logic. The accepted [structure](structure.md#target-tree) places it in `library-generative-design/` in this repository. |
@@ -42,7 +42,7 @@ Input. These models can serve as test beds for the new systems:
   - `household-budget` for the economy system;
   - `neighborhood-heat` for fields;
   - `zoning-scenario-comparison` for zones.
-- **15 city teaching models** in the worktree branch `t3/city-simulation-models`, built 2026-11-10/11. They cover population, housing, land use, daily activities, mobility, employment, services, energy, water, stormwater, heat, air and noise, biodiversity, material cycles and municipal finance. Each has a headless model, an Agent Lab UI and four frozen public contract scripts. They follow the [model pattern](principles.md#model-pattern).
+- **15 city teaching models** in the worktree branch `t3/city-simulation-models`, built 2026-11-10/11. They cover population, housing, land use, daily activities, mobility, employment, services, energy, water, stormwater, heat, air and noise, biodiversity, material cycles and municipal finance. Each has a headless model, an Model Lab UI and four frozen public contract scripts. They follow the [model pattern](principles.md#model-pattern).
   - They are **uncommitted**; see [work at risk](refactoring.md#work-at-risk).
   - They are **not coupled**: 15 separate models are not one city simulation, and they share no city state.
   - There is no accessibility audit yet. Minor display limits remain, such as overlapping zero series and decimal separators.
@@ -76,8 +76,8 @@ The single list for the evolution pages. Q1–Q10 keep their original numbers be
 
 ### Models and UI
 
-- **Q7.** How much of Agent Lab and `defineUI` must change when city experiments need map views, such as tile layers or road overlays?
-- **Q19.** ~~Should Agent Lab be renamed to a descriptive name such as "Model Lab"?~~ **Resolved** (2026-11-11): the browser host becomes Model Lab. The rename of folder, UI title, error texts and documentation is a separate follow-up slice; see the [naming conventions](../NAMING_CONVENTIONS.md#language-and-vocabulary).
+- **Q7.** How much of Model Lab and `defineUI` must change when city experiments need map views, such as tile layers or road overlays?
+- **Q19.** ~~Should Agent Lab be renamed to a descriptive name such as "Model Lab"?~~ **Resolved** (2026-11-11): the browser host is now Model Lab, including its folder, UI title, error texts and documentation; see the [naming conventions](../NAMING_CONVENTIONS.md#language-and-vocabulary).
 - **Q20.** Should the live-action rule of the 15 models (explicit `undefined` throws) become the rule for all models? See [rules learned in review](principles.md#rules-learned-in-review).
 
 ### Generative design

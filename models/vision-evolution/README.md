@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Vision Evolution** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Vision Evolution** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

@@ -1,6 +1,6 @@
 # Ten discrete-event city examples
 
-Ten small city scenarios show what the [discrete-event capabilities](des-feature-matrix.md) can do. They are original synthetic teaching examples, not calibrated city forecasts or Salabim ports. Each model owns its execution and observations; its `ui.ts` binds canonical inputs, public actions and detached observations through `defineUI`. Agent Lab discovers every `models/<slug>/{model,ui}.ts` pair automatically, so no registry or custom renderer is needed.
+Ten small city scenarios show what the [discrete-event capabilities](des-feature-matrix.md) can do. They are original synthetic teaching examples, not calibrated city forecasts or Salabim ports. Each model owns its execution and observations; its `ui.ts` binds canonical inputs, public actions and detached observations through `defineUI`. Model Lab discovers every `models/<slug>/{model,ui}.ts` pair automatically, so no registry or custom renderer is needed.
 
 ## The ten scenarios
 

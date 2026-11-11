@@ -11,7 +11,7 @@ Things to try:
 
 ## Use
 
-Choose **Membrane Formation** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Membrane Formation** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

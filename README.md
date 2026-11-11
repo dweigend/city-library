@@ -12,13 +12,13 @@ TypeScript brings these studies to the web, with an ecosystem of useful game lib
 
 A short script should be enough to get an idea running. Small, independent building blocks provide useful defaults and room to make something your own.
 
-A headless core holds the model logic. Agent Lab adds browser controls and views; the same model also runs in a script. Applying its results to a real city still requires evidence.
+A headless core holds the model logic. Model Lab adds browser controls and views; the same model also runs in a script. Applying its results to a real city still requires evidence.
 
 The core and the shared UI are usable today, and the [models](models/README.md) range from adapted NetLogo classics to small original city models. The full specification and the scientific model comparisons are unfinished, and the package is not published. [What works today](docs/development/coverage.md) lists the available operations; [the work plan](PLAN.md) shows what comes next.
 
 ## Run the Lab
 
-From the repository root, use Bun 1.4.2 and start Agent Lab:
+From the repository root, use Bun 1.4.2 and start Model Lab:
 
 ```sh
 bun install
@@ -27,11 +27,11 @@ bun run dev
 
 Open http://localhost:3101. Choose a model, set its initial values and press Setup. Advance one step at a time or use Run/Pause. Live controls call model actions; setup controls prepare the next initialization.
 
-See [Lab usage](ui/agent-lab/README.md) for configuration and explicit source reloads.
+See [Lab usage](ui/model-lab/README.md) for configuration and explicit source reloads.
 
 ## Write and explore
 
-- [Your first model](docs/first-model.md): build a small model, run it from a script and open it in Agent Lab.
+- [Your first model](docs/first-model.md): build a small model, run it from a script and open it in Model Lab.
 - [Explore the models](models/README.md): every model by topic, with its sources and limits.
 - [Concepts](docs/concepts.md): the few ideas behind a headless model and its UI.
 - [Write a model](docs/development/model-authoring.md): follow a real headless model and its UI binding.
@@ -73,7 +73,7 @@ The repository groups files by responsibility. The tree below is the [accepted t
 library-core/               Autonomous headless core modules; world-composition/ is the only aggregating folder
 library-city/<subsystem>/   City systems such as economy or energy supply, each created with its first working slice
 library-generative-design/  Separate generative 3D design track (later)
-ui-web/                     Today's ui/: shared UI and the Agent Lab host, later also game UI components
+ui-web/                     Today's ui/: shared UI and the Model Lab host, later also game UI components
 ui-3d/                      Three.js presentation (later)
 models/                     Flat model folders; each covers one small test case
 tests/                      Behavior checks and public contract scripts

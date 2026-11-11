@@ -11,7 +11,7 @@ Things to try:
 
 ## Use
 
-Choose **Blood Sugar Regulation** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Blood Sugar Regulation** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

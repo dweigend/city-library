@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Binomial Rabbits** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Binomial Rabbits** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

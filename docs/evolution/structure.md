@@ -46,7 +46,7 @@ library-city/                            created with the first city system
 └── politics/
 
 library-generative-design/               later; headless; imports only "city-library"
-ui-web/                                  today's ui/: components, views, Agent Lab, later game UI
+ui-web/                                  today's ui/: components, views, Model Lab, later game UI
 ui-3d/                                   later; Three.js presentation
 models/<slug>/model.ts + ui.ts           flat; each model covers one small test case
 tests/                                   flat + public-contracts/ ui/ targets/

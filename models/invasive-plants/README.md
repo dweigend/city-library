@@ -11,7 +11,7 @@ Things to try:
 
 ## Use
 
-Choose **Invasive Plants** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Invasive Plants** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

@@ -1,6 +1,6 @@
 # Salabim concepts: sources and validation
 
-City Library can reuse discrete-event modeling concepts while keeping Agent Loom's public TypeScript objects, explicit execution and separate Agent Lab. This research record defines useful transfers and their scientific limits. It does not establish implementation acceptance or whole-Salabim parity.
+City Library can reuse discrete-event modeling concepts while keeping Agent Loom's public TypeScript objects, explicit execution and separate Model Lab. This research record defines useful transfers and their scientific limits. It does not establish implementation acceptance or whole-Salabim parity.
 
 ## Source provenance
 
@@ -30,7 +30,7 @@ Status here describes the inspected baseline and integration intent. **Pending**
 | [State](https://salabim.org/manual/State.html) | Explicit condition values, waits and timeout/cancellation outcomes | Pending. Upstream has scalar, expression and function tests, including OR/AND combinations; arbitrary evaluated expression strings are unsupported. |
 | [Monitor](https://salabim.org/manual/Monitor.html) | Separate event samples and time-weighted levels; explicit observation | Pending. Generic numeric monitoring is useful; automatic collection, all weighted quantiles, pandas/Matplotlib adapters and upstream histogram formats are not implied. |
 | [Distributions](https://salabim.org/manual/Distributions.html) | Reuse explicit Random; add only distributions needed by accepted author tasks | Uniform/normal/exponential/Poisson exist at baseline. Further distributions pending. No Python RNG sequence compatibility, implicit global stream or wall-clock reseeding. |
-| [Overview: animation and video](https://salabim.org/manual/Overview.html) | Agent Lab observations, controls and charts | Host-specific. Python Tkinter/OpenGL, desktop animation, real-time pacing and video production unsupported by headless core. |
+| [Overview: animation and video](https://salabim.org/manual/Overview.html) | Model Lab observations, controls and charts | Host-specific. Python Tkinter/OpenGL, desktop animation, real-time pacing and video production unsupported by headless core. |
 | Trace in pinned [source](https://github.com/salabim/salabim/blob/99bc8b2213d66a7287f04952cabc1fb9aa6c369d/salabim/salabim.py) | Bounded inspectable event/process outcome data | Pending. No automatic console output or claim of byte-identical upstream traces. |
 | Complete continuation | Capture the full supported state and future behavior only through a separately specified format | Unsupported in this integration unless an executable full-state contract is delivered. Random state alone is insufficient. |
 

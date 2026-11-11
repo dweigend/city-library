@@ -4,7 +4,7 @@ node_modules
 # output
 out
 dist
-agent-lab-output
+model-lab-output
 *.tgz
 
 # code coverage
@@ -36,7 +36,7 @@ report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
 
 # Local development logs and browser captures
 /.local/development-archive/
-/docs/development/agent-lab-screenshots/
+/docs/development/model-lab-screenshots/
 
 # Local Codex configuration
 /.codex/

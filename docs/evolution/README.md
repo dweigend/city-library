@@ -53,7 +53,7 @@ City system factories use `Name.create(options)`, and every read uses `read()`. 
 
 ## Terminology
 
-These pages follow the [naming conventions](../NAMING_CONVENTIONS.md). The headless modeling core is the **core**. "Agent Loom" was its earlier working title; it survives only in the folder name `docs/agent-loom/`, in historical records and in frozen evidence. **Agent Lab** is the browser application's current name; a descriptive rename, for example "Model Lab", is an [open question](roadmap.md#open-questions).
+These pages follow the [naming conventions](../NAMING_CONVENTIONS.md). The headless modeling core is the **core**. "Agent Loom" was its earlier working title; it survives only in the folder name `docs/agent-loom/`, in historical records and in frozen evidence. **Model Lab** is the browser application; historical records keep its earlier name "Agent Lab".
 
 ## Session record (input)
 

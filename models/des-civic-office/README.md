@@ -11,7 +11,7 @@ Things to try:
 
 ## Use
 
-Choose **Civic Office Queue** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Civic Office Queue** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

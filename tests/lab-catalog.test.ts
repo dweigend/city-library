@@ -2,7 +2,7 @@ import { expect, test } from "bun:test";
 import {
   createCatalogLoader,
   type CatalogEntry,
-} from "../ui/agent-lab/catalog.ts";
+} from "../ui/model-lab/catalog.ts";
 
 test("a stale catalog load cannot replace a newer selection", async () => {
   const opened: string[] = [];

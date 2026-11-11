@@ -22,9 +22,9 @@ Do not coin proper names for parts of the system; name a part after what it is o
 | A domain capability built on the core, such as economy | city system | kit, plugin, mod (as an API concept), subsystem as a public concept; "subsystem folder" may describe the folder |
 | An executable `model.ts` with its `ui.ts` | model | experiment as a type name |
 | Code organisation | module | — |
-| The browser host for models | Model Lab (currently labelled Agent Lab) | Agent Lab in current documentation once the rename is done |
+| The browser host for models | Model Lab | Agent Lab |
 
-Model Lab is decided (2026-11-11). The rename of `ui/agent-lab/`, the UI title, error texts and current documentation is a separate follow-up slice; until it lands, the current label and folder stay Agent Lab.
+Historical records and frozen evidence keep the earlier name "Agent Lab" and the path `ui/agent-lab/`, which now is `ui/model-lab/`.
 
 | Meaning | Canonical name |
 | --- | --- |
@@ -93,7 +93,7 @@ Use a few top-level folders named for their responsibility. Keep source directly
 | `library-city/<subsystem>/` | — | City systems, one subsystem folder each; each imports only `"city-library"`, never another city system. |
 | `library-generative-design/` | — | Later; headless generative design, a separate track importing only `"city-library"`. |
 | `models/<slug>/` | `models/<slug>/` | Flat; executable models, their UI descriptions and source and evidence records, each covering one small test case. |
-| `ui-web/` | `ui/` | Shared presentation components, Agent Lab and later game UI. |
+| `ui-web/` | `ui/` | Shared presentation components, Model Lab and later game UI. |
 | `ui-3d/` | — | Later; Three.js presentation using only public APIs. |
 | `tests/` | `tests/` | Flat, plus `public-contracts/`, `ui/` and `targets/`; `import-boundaries.test.ts` and `duplicated-helpers.test.ts` check the structure. |
 | `docs/` | `docs/` | Unchanged. |
@@ -104,7 +104,7 @@ Current folders:
 | --- | --- |
 | `library/` | Headless City Library modules, grouped by domain; the core lives here. |
 | `models/` | Executable models, their UI descriptions and model-specific source and evidence records. |
-| `ui/` | Shared presentation components and Agent Lab. |
+| `ui/` | Shared presentation components and Model Lab. |
 | `tests/` | Automated checks, public contract scripts and unmet target fixtures. |
 | `docs/` | Guides, binding contracts and development evidence. |
 

@@ -5,8 +5,8 @@
   import { Button } from "$lib/components/ui/button/index.js";
   import * as Select from "$lib/components/ui/select/index.js";
   import type { BoundEntry } from "../definition.ts";
-  import type { CatalogEntry } from "../agent-lab/catalog.ts";
-  import { createCatalogLoader } from "../agent-lab/catalog.ts";
+  import type { CatalogEntry } from "../model-lab/catalog.ts";
+  import { createCatalogLoader } from "../model-lab/catalog.ts";
   let { entries, version }: { entries: readonly CatalogEntry<BoundEntry>[]; version: string } = $props();
   let host: HTMLElement;
   let selected = $state("");
@@ -48,7 +48,7 @@
 <a class="lab-skip" href="#model-content">Skip to model</a>
 <main class="lab-shell">
   <header class="lab-header">
-    <h1>Agent Lab</h1>
+    <h1>Model Lab</h1>
     <div class="lab-chooser">
       <Input type="search" aria-label="Find model" placeholder="Find model" value={filter} oninput={(event) => filter = event.currentTarget.value} />
       <Select.Root type="single" {items} value={selected} onValueChange={open}>

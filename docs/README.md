@@ -4,8 +4,8 @@ Start with a model, change something and see what happens. These pages take you 
 
 ## New here
 
-- [Your first model](first-model.md): write a small model, run it headless and step through it in Agent Lab.
-- [Run Agent Lab](../ui/agent-lab/README.md): choose a model, press Setup and step through it.
+- [Your first model](first-model.md): write a small model, run it headless and step through it in Model Lab.
+- [Run Model Lab](../ui/model-lab/README.md): choose a model, press Setup and step through it.
 - [Concepts](concepts.md): headless models, one state owner, steps and ticks, explicit randomness.
 - [Explore the models](../models/README.md): every model by topic.
 
@@ -30,7 +30,7 @@ The specifications include planned operations. Check [what works today](developm
 - [Target structure](evolution/structure.md): accepted target folders, import rules and migration order; files have not moved yet.
 - [Domain and time semantics](agent-loom/terminology.md): distinctions that names must preserve.
 - [UI design](DESIGN.md): what the interface is for and its binding rules.
-- [Network visualization](decisions/network-visualization.md): why Agent Lab renders graphs the way it does.
+- [Network visualization](decisions/network-visualization.md): why Model Lab renders graphs the way it does.
 
 ## Contribute
 
@@ -53,4 +53,4 @@ These are records. Use them to trace a source or check a claim; the pages above 
 - [Model catalog](../models/catalog/README.md): selection, source snapshots, the acceptance ledger and shared acceptance records.
 - [Model sources and scientific context](../models/catalog/research/README.md): research dossiers and publications.
 - [Model reference sources](development/model-reference-sources.md): pinned sources behind adapted models.
-- [UI acceptance record](../ui/agent-lab/acceptance/README.md): browser checks for the shared UI.
+- [UI acceptance record](../ui/model-lab/acceptance/README.md): browser checks for the shared UI.

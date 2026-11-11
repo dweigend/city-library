@@ -1,6 +1,6 @@
 # UI design
 
-Agent Lab should help you ask a question, change a parameter and see what happened. The interface should leave room for the model, while keeping controls and scientific meaning clear.
+Model Lab should help you ask a question, change a parameter and see what happened. The interface should leave room for the model, while keeping controls and scientific meaning clear.
 
 Shared components and defaults keep each model declaration short. [Architecture](ARCHITECTURE.md) covers ownership and dependencies; [PLAN](../PLAN.md) tracks unfinished work.
 

@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Heroes and Cowards** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Heroes and Cowards** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

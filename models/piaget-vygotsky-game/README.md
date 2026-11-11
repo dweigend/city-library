@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Piaget-Vygotsky Game** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Piaget-Vygotsky Game** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

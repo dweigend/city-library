@@ -12,7 +12,7 @@ Run these from the repository root:
 | `bun run check` | Regular gate: types, tests, migration integrity, public contracts, library build and packed consumer |
 | `bun run build` | Headless package and declarations |
 | `bun run consumer` | Packed package with Bun, Node ESM and an ambient-free TypeScript consumer |
-| `bun run build:ui` | Agent Lab production build |
+| `bun run build:ui` | Model Lab production build |
 | `bun models/catalog/progress.ts verify` | Model catalog ledger |
 
 Two frozen targets stay outside the green gate on purpose: the generative-quarter script needs corridor, subtraction and subdivision APIs, and Giant Component needs its model implementation. `bun run typecheck:city:targets` and `bun run typecheck:giant-component:targets` expose those missing contracts; `bun run typecheck:targets` requires both to pass. Keep their asserted scripts unchanged while implementing the missing capabilities.

@@ -11,7 +11,7 @@ Things to try:
 
 ## Use
 
-Choose **Slime Mold Aggregation** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Slime Mold Aggregation** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

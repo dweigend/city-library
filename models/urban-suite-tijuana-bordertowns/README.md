@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Border Town Settlement** in [Agent Lab](../../ui/agent-lab/README.md). Setup creates a cleared instance. Build the city with Cityscape step, 100 cityscape calls, or Cityscape continue / Keep building. Use Step or Run/Pause only when the Phase monitor becomes `ready`; the shared GO controls are guarded until then.
+Choose **Border Town Settlement** in [Model Lab](../../ui/model-lab/README.md). Setup creates a cleared instance. Build the city with Cityscape step, 100 cityscape calls, or Cityscape continue / Keep building. Use Step or Run/Pause only when the Phase monitor becomes `ready`; the shared GO controls are guarded until then.
 
 From a script in the repository root:
 

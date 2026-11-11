@@ -8,13 +8,13 @@ The headless core and the shared Svelte UI are usable. Models live under `models
 
 Implementation, scientific comparison and independent acceptance are separate requirements. A working setup or passing test does not establish scientific equivalence or complete accessibility. Relocating files or rebasing imports preserves executable assertions and does not advance scientific acceptance stages; the [path migration receipt](docs/development/model-path-migration.json) keeps previous and current frozen-file hashes, including ten manifest discrepancies already present at its base revision.
 
-Use [public exports](index.ts) and asserted examples to check a particular operation. The Svelte UI is the single supported runtime, and all model entries use the shared [UI contract](docs/ui/README.md) without a model-specific fallback. Browser checks for the shared UI and their limits are in the [UI acceptance record](ui/agent-lab/acceptance/README.md); execution and study capabilities are in [execution and studies](docs/execution-studies/STATUS.md).
+Use [public exports](index.ts) and asserted examples to check a particular operation. The Svelte UI is the single supported runtime, and all model entries use the shared [UI contract](docs/ui/README.md) without a model-specific fallback. Browser checks for the shared UI and their limits are in the [UI acceptance record](ui/model-lab/acceptance/README.md); execution and study capabilities are in [execution and studies](docs/execution-studies/STATUS.md).
 
 ## Accepted direction and target structure
 
 The owner set the development sequence in the [roadmap](docs/evolution/roadmap.md):
 
-1. Library logic first. Models in Agent Lab each cover one small test case of a library capability.
+1. Library logic first. Models in Model Lab each cover one small test case of a library capability.
 2. Build the city library step by step, sharpening the core where needed.
 3. Then game prototypes and 3D presentation.
 4. Generative 3D design runs as a separate track in the same repository.
