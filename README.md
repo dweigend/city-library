@@ -25,9 +25,9 @@ bun install
 bun run dev
 ```
 
-Open http://localhost:3101. Choose a model, set its initial values and press Setup. Advance one step at a time or use Run/Pause. Live controls call model actions; setup controls prepare the next initialization.
+Open http://localhost:3101 and choose a model. It loads and initializes with its default inputs. **Run**/**Pause** advances it, **Speed** sets how often the Lab steps, and live **Parameters** call model actions. Change setup values and press **Reload** to initialize again.
 
-See [Lab usage](ui/model-lab/README.md) for configuration and explicit source reloads.
+See [Lab usage](ui/model-lab/README.md) for configuration and for loading source updates (**Update Lab**).
 
 ## Write and explore
 
@@ -38,59 +38,66 @@ See [Lab usage](ui/model-lab/README.md) for configuration and explicit source re
 - [Documentation](docs/README.md): guides, references, contracts and evidence.
 - [Work plan](PLAN.md): current priorities and acceptance gates.
 
-## How the pieces fit
+## How the system works
+
+The system grows in layers. Arrows mean "imports"; every dependency points down to the public core. Dashed boxes do not exist yet.
 
 ```mermaid
 flowchart TD
-    Tools["Focused tools<br/>Geometry · Random · Graphs · Fields"]
-    Generators["Independent generators<br/>Terrain · Layouts · Buildings"]
-    Models["Simulation and domain models<br/>Agents · Mobility · Economy · Supply"]
-    Kits["Composable kits<br/>Reusable combinations with replaceable parts"]
-    Scripts["Your TypeScript scripts"]
-    Data["Public model data and geometric results"]
-    Apps["Your application<br/>2D · 3D · UI · Export · Analysis"]
+    Lab["Model Lab<br/>browser host"]
+    Games["Game prototypes"]
+    Models["Models<br/>model.ts + ui.ts"]
+    UI3D["ui-3d<br/>Three.js presentation"]
+    City["City systems<br/>economy, energy supply, …"]
+    Design["Generative design<br/>separate track"]
+    Core["Core<br/>autonomous modules + world-composition"]
 
-    Tools --> Generators
-    Tools --> Models
-    Generators --> Kits
-    Models --> Kits
-    Scripts --> Generators
-    Scripts --> Models
-    Scripts --> Kits
-    Generators --> Data
-    Models --> Data
-    Kits --> Data
-    Data --> Apps
+    Lab -->|hosts| Models
+    Games --> City
+    Games --> UI3D
+    UI3D --> Design
+    Models --> City
+    Models --> Core
+    City --> Core
+    Design --> Core
+
+    classDef later stroke-dasharray: 5 5
+    class Games,UI3D,City,Design later
 ```
 
-This is a composition map, not a required startup sequence. A graph needs no coordinates, an agent model needs no grid, and a building generator need not create residents. Broader building generation and city-domain models remain delivery goals.
+| Layer | Today | Target folder | May import | State |
+| --- | --- | --- | --- | --- |
+| Core | `library/` | `library-core/<module>/` | Only its own files; `world-composition/` alone aggregates modules | Usable |
+| City systems | — | `library-city/<system>/` | Only `"city-library"`, never another city system | None delivered |
+| Models | `models/<slug>/` | unchanged | Everything public | Usable; each covers one small test case |
+| Model Lab | `ui/`, host in `ui/model-lab/` | `ui-web/` | Only public APIs | Usable |
+| Game prototypes | — | later | Everything public | After a basic set of city systems |
+| Generative design | — | `library-generative-design/` | Only `"city-library"` | Separate track, later |
+| 3D presentation | — | `ui-3d/` | Public APIs, generative design descriptions, `three` | Later |
+
+**How a model runs.** `model.ts` is headless: `create(inputs)` returns an instance that owns all model state and exposes actions such as `advance(stepCount?)`. `ui.ts` declares controls, monitors and views with `defineUI(model, …)`. The UI changes state only through those actions and reads detached observations through `read()`; changing an observation never changes the model. The same `model.ts` runs in a script, a test or Model Lab.
+
+The core names no application: a graph needs no coordinates, an agent model needs no grid. City systems add domain vocabulary with simplified, game-like rules. [Concepts](docs/concepts.md) explains these ideas; [principles](docs/evolution/principles.md) and the [roadmap](docs/evolution/roadmap.md#phase-sequence) record the direction and its order: core logic first, then city systems, then game prototypes and 3D.
 
 ## Repository structure
 
-The repository groups files by responsibility. The tree below is the [accepted target structure](docs/evolution/structure.md). No files have moved yet: today's paths stay valid until the migration, and `library/` and `ui/` keep their current names until then.
+The repository groups files by responsibility. The [accepted target structure](docs/evolution/structure.md) renames and splits folders later; no files have moved yet, so today's paths stay valid.
 
 ```text
-library-core/               Autonomous headless core modules; world-composition/ is the only aggregating folder
-library-city/<subsystem>/   City systems such as economy or energy supply, each created with its first working slice
-library-generative-design/  Separate generative 3D design track (later)
-ui-web/                     Today's ui/: shared UI and the Model Lab host, later also game UI components
-ui-3d/                      Three.js presentation (later)
-models/                     Flat model folders; each covers one small test case
-tests/                      Behavior checks and public contract scripts
-docs/                       Guides, contracts and development evidence
-index.ts                    Public package entry
+library/            Headless core modules; build tools in library/development/  → library-core/
+ui/                 Shared UI components; Model Lab in ui/model-lab/            → ui-web/
+models/<slug>/      Flat model folders, model.ts + ui.ts each
+tests/              Behavior checks and public contract scripts
+docs/               Guides, contracts and development evidence
+index.ts            Public package entry
 ```
 
-Library logic comes first, then the city library grows step by step, followed by game prototypes and 3D; generative design is a separate track. The [roadmap](docs/evolution/roadmap.md) records this sequence.
-
-Today, library build tools live in `library/development/`, executable checks in `tests/` and migration evidence in `docs/development/`. Required configuration stays at the root.
-
-The [naming conventions](docs/NAMING_CONVENTIONS.md#repository-structure) define placement rules; [architecture](docs/ARCHITECTURE.md#binding-domain-layout-and-extension-rules) defines domain boundaries. No additional package layer or nested `src/` folder is needed.
+Target-only folders (`library-city/`, `library-generative-design/`, `ui-3d/`) are created with their first working slice. The [naming conventions](docs/NAMING_CONVENTIONS.md#repository-structure) define placement rules; [architecture](docs/ARCHITECTURE.md#binding-domain-layout-and-extension-rules) defines domain boundaries; the [import rules](docs/evolution/structure.md#import-rules) define what each target folder may import.
 
 ## Development
 
 `bun run check` runs TypeScript/Svelte checks, tests, public examples, the library build and a packed Bun/Node/TypeScript consumer. The consumer requires Node 26.8.2. `bun run build:ui` builds the Vite host.
 
-Keep model state under one owner, use public actions for changes and keep rendering outside the headless library. New capabilities start with asserted public examples. [Architecture](docs/ARCHITECTURE.md), [naming conventions](docs/NAMING_CONVENTIONS.md) and [UI design](docs/DESIGN.md) define the binding rules; the [contributor section](docs/README.md#contribute) lists the rest.
+New capabilities start with asserted public examples. [Architecture](docs/ARCHITECTURE.md), [naming conventions](docs/NAMING_CONVENTIONS.md) and [UI design](docs/DESIGN.md) define the binding rules; the [contributor section](docs/README.md#contribute) lists the rest.
 
 This repository does not currently include a root license file. Source-specific terms are recorded in the notices.
