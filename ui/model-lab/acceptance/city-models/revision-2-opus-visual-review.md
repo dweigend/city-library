@@ -1,7 +1,7 @@
 # Unabhängige visuelle Prüfung – Revision 2 der fünfzehn Stadtmodelle (Opus 5.5)
 
 Prüfer: frische Claude-Opus-5.5-Instanz, nicht der Implementierer. Datum 2026-11-10. Nur Prüfung: keine Repository-Änderungen, keine Commits, keine Kind-Agenten.
-Scope: `/home/david/.t3/worktrees/city-library/t3-ad043594-efa84c79fbccafc6`, Branch `t3/city-simulation-models` (neue Dateien nicht versioniert).
+Scope: repository worktree (local, not tracked), Branch `t3/city-simulation-models` (neue Dateien nicht versioniert).
 
 Gelesen: `docs/DESIGN.md`, `docs/development/city-simulation-models.md`, `docs/development/city-model-research.md`, `ui/agent-lab/acceptance/city-models/README.md` (Abschnitt Revision 2), `revision-2-author-responses.md`, `revision-2-host-enter.md`, `revision-2-host-enter-results.json`, `git diff ui/svelte/Workbench.svelte` sowie die betroffenen `models/city-*/ui.ts`-Stellen (gezielt, nicht vollständig). Die genannten Skills (frontend-design, shadcn-svelte, web-design-guidelines) sind in dieser Sitzung **nicht** als aufrufbare Skills verfügbar. Ich habe stattdessen DESIGN.md und die allgemeinen Grundsätze für Diagramme und Web-Interfaces angewandt; ein Fetch der Guidelines fand nicht statt.
 

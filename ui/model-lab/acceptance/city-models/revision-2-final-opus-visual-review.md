@@ -1,7 +1,7 @@
 # Independent final visual review – Revision 2 visual fixes (15 city models)
 
 Reviewer: a fresh Claude Opus 5.5 instance acting as a review subagent. It is not the implementer. Date: 2026-11-10.
-Worktree: `/home/david/.t3/worktrees/city-library/t3-ad043594-efa84c79fbccafc6`, branch `t3/city-simulation-models` (uncommitted shared files).
+Worktree: repository worktree (local, not tracked), branch `t3/city-simulation-models` (uncommitted shared files).
 
 **Read-only review.** No repository files were changed and nothing was committed. No subagents or delegations were used. This is the only report, and it is saved in `/tmp`. Discussion is in German, as `AGENTS.md` requires; the report language follows the brief.
 
@@ -14,10 +14,10 @@ Prior reports (`revision-2-opus-visual-review.md`, `revision-2-gemini-mechanism-
 - `AGENTS.md` (worktree), the previous independent visual review `ui/agent-lab/acceptance/city-models/revision-2-opus-visual-review.md`, and the author responses `revision-2-visual-fixes.md`, including the "Open limits" section.
 - The manifest `revision-2-visual-fixes-manifest.json`. A script checked it: 87 runs, 276 file entries, all unique, exactly matching the 276 PNGs in the folder. There are no extra or missing files.
 - Skills read as actual files:
-  - `/home/david/.codex/skills/frontend-design/SKILL.md`
-  - `/home/david/.codex/skills/frontend-design-shadcn-svelte/SKILL.md`
-  - `/home/david/.codex/skills/shadcn-svelte/SKILL.md` (first 60 lines, the rules section)
-  - `/home/david/.codex/skills/web-design-guidelines/SKILL.md`
+  - local skill `frontend-design`
+  - local skill `frontend-design-shadcn-svelte`
+  - local skill `shadcn-svelte` (first 60 lines, the rules section)
+  - local skill `web-design-guidelines`
   - The Vercel guideline source was fetched read-only (`raw.githubusercontent.com/vercel-labs/web-interface-guidelines/main/command.md`, 191 lines) into my scratchpad.
   - Applied criteria: legible labels at every viewport, no overflow, state not by color alone, sensible number formats, and theme parity. This is **not** a full Vercel or accessibility audit.
 - Targeted source checks:

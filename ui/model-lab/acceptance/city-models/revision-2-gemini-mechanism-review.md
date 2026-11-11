@@ -2,7 +2,7 @@
 
 **Datum:** 2026-11-10  
 **Branch:** `t3/city-simulation-models`  
-**Worktree:** `/home/david/.t3/worktrees/city-library/t3-ad043594-efa84c79fbccafc6`  
+**Worktree:** repository worktree (local, not tracked)  
 **Modus:** Streng read-only (keine Codeänderungen, keine Repository-Edits, keine Subagenten).  
 **Gegenstand:** Unabhängiger Review von Revision 2 aller 15 City-Modelle mit Fokus auf wissenschaftlich-didaktische Übertragung, Modellmechanismen, Verhaltenskorrektheit, numerische Belastbarkeit der README-Experimente, UI/Host-Kopplung und Evidenz-Ehrlichkeit.
 

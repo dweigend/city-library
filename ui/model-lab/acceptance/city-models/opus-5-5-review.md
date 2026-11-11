@@ -164,7 +164,7 @@ Kein Finding, aber erwähnenswert: Spatial-Canvases sind auch im Light-Theme dun
 - Dark-Theme live im Browser.
 - Tastatur- und Assistive-Technologie-Abläufe.
 - Alle Contract-Texte Wort für Wort.
-- `/tmp/city-models-report.html` und `/home/david/.local/share/city-models-report/index.html` nicht geöffnet. Deren Aussagen zu Screenshots und Codeauszügen sind ungeprüft.
+- `/tmp/city-models-report.html` und `city-models-report/index.html` (local capture, not tracked) nicht geöffnet. Deren Aussagen zu Screenshots und Codeauszügen sind ungeprüft.
 - Vollständiges `bun run check` (Migration, Library-Build, Consumer) nicht ausgeführt. `bun tests/public-contracts.ts` lief separat: **352 Skripte bestanden**, Exit 0.
 
 ## 6. Ausgeführte Befehle (Auszug)

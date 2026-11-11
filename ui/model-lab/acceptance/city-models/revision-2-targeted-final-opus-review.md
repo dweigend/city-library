@@ -4,7 +4,7 @@ Datum: 2026-11-10. Worktree `t3-ad043594-efa84c79fbccafc6`, Branch `t3/city-simu
 
 ## Grundlage
 
-- Gelesen habe ich `AGENTS.md`, `docs/DESIGN.md` und die Skills `frontend-design`, `frontend-design-shadcn-svelte`, `shadcn-svelte` und `web-design-guidelines` aus `/home/david/.codex/skills/`.
+- Gelesen habe ich `AGENTS.md`, `docs/DESIGN.md` und die Skills `frontend-design`, `frontend-design-shadcn-svelte`, `shadcn-svelte` und `web-design-guidelines` (local skills).
 - Die Vercel-Richtlinien habe ich frisch von `raw.githubusercontent.com/vercel-labs/web-interface-guidelines/main/command.md` geladen (191 Zeilen). Geprüft habe ich nur die betroffenen Punkte: Fokus, Lesbarkeit, Kontrast der Themes, Einheiten und Inhalte, die in schmalen Layouts eingeschlossen bleiben. Das ist kein vollständiger Accessibility-Audit.
 - Gelesen habe ich außerdem:
   - `revision-2-final-rest-fixes.md` und das Manifest `revision-2-final-rest-fixes-manifest.json` (60 Einträge),

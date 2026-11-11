@@ -30,7 +30,7 @@ python3 - <<'PY'
 import json, pathlib, subprocess, tempfile
 root = pathlib.Path.cwd()
 files = [root / 'models/city-daily-activities/model.ts', root / 'models/city-daily-activities/model.test.ts', *sorted(root.glob('tests/public-contracts/city-daily-activities/*.ts'))]
-config = {'extends': str(root / 'tsconfig.json'), 'compilerOptions': {'types': ['bun'], 'typeRoots': ['/home/david/Projekte/city-library/node_modules/@types']}, 'files': [str(path) for path in files], 'include': [], 'exclude': []}
+config = {'extends': str(root / 'tsconfig.json'), 'compilerOptions': {'types': ['bun'], 'typeRoots': ['<main project checkout>/node_modules/@types']}, 'files': [str(path) for path in files], 'include': [], 'exclude': []}
 with tempfile.TemporaryDirectory(prefix='daily-activities-typecheck-') as directory:
     path = pathlib.Path(directory) / 'tsconfig.json'
     path.write_text(json.dumps(config))

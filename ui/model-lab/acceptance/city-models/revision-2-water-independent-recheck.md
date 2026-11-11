@@ -3,7 +3,7 @@
 **Datum:** 2026-11-10  
 **Reviewer:** Unabhängiger Sub-Agent (Antigravity / `gemini-3.8-flash`)  
 **Gegenstand:** Nachträgliche Vertrags- und Modelländerung in `models/city-water/model.ts` (`isSaving` erfordert `conservationShare > 0`), Validierung der Randbedingungen, historische Evidenz-Integrität sowie Überprüfung der Koordinator-Präzisierungen (F1 Services, F2 Economy, Heat Shade-Night).  
-**Worktree:** `/home/david/.t3/worktrees/city-library/t3-ad043594-efa84c79fbccafc6` (`t3/city-simulation-models`)  
+**Worktree:** repository worktree (local, not tracked) (`t3/city-simulation-models`)  
 **Modus:** READ-ONLY Review (Keine Änderungen am Repository, keine Commits, keine Subagenten).
 
 ---
