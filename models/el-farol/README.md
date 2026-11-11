@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **El Farol Bar** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **El Farol Bar** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Traffic on One Lane** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Traffic on One Lane** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

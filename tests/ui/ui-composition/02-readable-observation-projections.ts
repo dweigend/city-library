@@ -48,7 +48,7 @@ export async function browserChecks(container: HTMLElement, bind: typeof defineU
   const mounted = entry(bind).mount(container);
   try {
     await settle(container);
-    button(container, 'Setup').click(); await settle(container);
+    button(container, 'Reload').click(); await settle(container);
     equal(monitor(container, 'People'), '250', 'Public observation alias adds no wrapper or population');
     assert(container.querySelector('canvas'), 'Named spatial projection renders');
     const chart = container.querySelector('svg[role="img"]');

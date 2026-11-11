@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Civic Awareness Spread** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Civic Awareness Spread** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

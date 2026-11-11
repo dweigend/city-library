@@ -1,7 +1,7 @@
 import { finite } from "../space.ts";
 import { classify, hasSegmentContact, isEqualPoint, isOnSegment, orient, point, type Point } from "./predicates.ts";
 
-/** Containment accepts larger coordinates than parcel operations but bounds its exact work. */
+/** Containment accepts larger coordinates than polygon operations but bounds its exact work. */
 export const containmentLimits = Object.freeze({ positions: 2048, magnitude: 1e9 });
 
 /** Requires a plain object or null-prototype record. */

@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Heat Diffusion** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Heat Diffusion** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

@@ -16,7 +16,7 @@ Things to try:
 
 ## Use
 
-Choose **Segregation** in [Agent Lab](../../ui/agent-lab/README.md). Select a resident to inspect its neighborhood.
+Choose **Segregation** in [Model Lab](../../ui/model-lab/README.md). Select a resident to inspect its neighborhood.
 
 From a script in the repository root:
 

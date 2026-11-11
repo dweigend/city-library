@@ -28,14 +28,14 @@ export async function browserChecks(container: HTMLElement, bind: typeof defineU
   const mounted = browserUI.mount(container);
   try {
     await settle(container);
-    equal(creations, 0, 'Mount must not create the model');
+    equal(creations, 1, 'Opening the model creates exactly one real instance');
     equal(labels(container, Object.keys(model.inputs)), ['Width', 'Height', 'Seed', 'Change Vote', 'Award Close Calls To Loser'], 'Implicit setup excludes keyed live fields and preserves descriptor/key order');
     equal(labels(container, Object.keys(model.inputs)).length, 5, 'Each descriptor field renders once; playback labels are excluded');
     const width = control(container, 'Width');
     assert(width instanceof HTMLInputElement, 'Width is a numeric input');
     equal(width.value, String(model.inputs.width.default), 'Descriptor supplies setup default');
-    button(container, 'Setup').click(); await settle(container);
-    equal(creations, 1, 'Setup creates exactly one real instance');
+    button(container, 'Reload').click(); await settle(container);
+    equal(creations, 2, 'Reload creates exactly one new real instance');
     equal(container.querySelector('dd')?.textContent?.trim(), '0', 'Initial tick monitor');
   } finally { mounted.dispose(); }
 }

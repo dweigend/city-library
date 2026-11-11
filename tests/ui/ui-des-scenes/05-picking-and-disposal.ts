@@ -1,5 +1,5 @@
 import { defineUI, scientificPalette, type SpatialData } from "../../../ui/index.ts";
-import { assert, equal, button, settle } from "../ui-authoring/assertions.ts";
+import { assert, equal, settle } from "../ui-authoring/assertions.ts";
 
 export const scene: SpatialData = {
   width: 10, height: 6, showLabels: false,
@@ -25,8 +25,6 @@ export async function browserChecks(container: HTMLElement, bind: typeof defineU
     { type: "inspector", label: "Selected", value: (_state, selected) => selected ? { selected } : undefined },
   ] });
   const mounted = entry.mount(container);
-  await settle(container);
-  button(container, "Setup").click();
   await settle(container); await settle(container);
   const canvas = container.querySelector("canvas");
   assert(canvas, "Scene renders an actual canvas");

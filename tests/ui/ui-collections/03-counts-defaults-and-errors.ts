@@ -45,7 +45,7 @@ rejects([{ id: 'capacity', label: 'Capacity', kind: 'capacity', used: 1, capacit
 export async function browserChecks(container: HTMLElement, bind: typeof defineUI = defineUI) {
   const mounted = bind(model, { views: [{ type: 'spatial', label: 'Distinct quantities', data: state => state }] }).mount(container);
   try {
-    await settle(container); button(container, 'Setup').click(); await settle(container);
+    await settle(container); button(container, 'Reload').click(); await settle(container);
     const canvas = container.querySelector('canvas'); assert(canvas, 'The common spatial renderer mounts');
     canvas.dispatchEvent(new KeyboardEvent('keydown', { key: 'Home', bubbles: true })); await settle(container);
     assert(canvas.getAttribute('aria-label')?.includes('resident:7'), 'Keyboard selection skips all count/capacity decorations');

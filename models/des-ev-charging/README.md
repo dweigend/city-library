@@ -11,7 +11,7 @@ Things to try:
 
 ## Use
 
-Choose **EV Charging Queue** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **EV Charging Queue** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

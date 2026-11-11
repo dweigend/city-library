@@ -27,7 +27,7 @@ export async function browserChecks(container: HTMLElement, bind: typeof defineU
     const mounted = entry.mount(container);
     try {
       await settle(container);
-      button(container, "Setup").click();
+      button(container, "Reload").click();
       await settle(container); await settle(container);
       assert(container.querySelector('[role="alert"]')?.textContent?.trim(), "Malformed scenes must report an accessible error");
     } finally { mounted.dispose(); }

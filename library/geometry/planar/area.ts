@@ -1,8 +1,8 @@
 import { validateOptions } from "../../agent/state.ts";
-import { polygonArea, readShape, type ParcelShape } from "./parcel-input.ts";
+import { polygonArea, readShape, type PlanarPolygonShape } from "./polygon-input.ts";
 
 /** Net area, independent of winding; holes subtract and components add. */
-export function area(options: { shape: ParcelShape }): number {
+export function area(options: { shape: PlanarPolygonShape }): number {
   const input = validateOptions(options, ["shape"]);
   const shape = readShape(input.shape);
   if (shape.type === "Polygon") return polygonArea(shape);

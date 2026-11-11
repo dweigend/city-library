@@ -5,8 +5,8 @@
   import { Button } from "$lib/components/ui/button/index.js";
   import * as Select from "$lib/components/ui/select/index.js";
   import type { BoundEntry } from "../definition.ts";
-  import type { CatalogEntry } from "../agent-lab/catalog.ts";
-  import { createCatalogLoader } from "../agent-lab/catalog.ts";
+  import type { CatalogEntry } from "../model-lab/catalog.ts";
+  import { createCatalogLoader } from "../model-lab/catalog.ts";
   let { entries, version }: { entries: readonly CatalogEntry<BoundEntry>[]; version: string } = $props();
   let host: HTMLElement;
   let selected = $state("");
@@ -48,7 +48,7 @@
 <a class="lab-skip" href="#model-content">Skip to model</a>
 <main class="lab-shell">
   <header class="lab-header">
-    <h1>Agent Lab</h1>
+    <h1>Model Lab</h1>
     <div class="lab-chooser">
       <Input type="search" aria-label="Find model" placeholder="Find model" value={filter} oninput={(event) => filter = event.currentTarget.value} />
       <Select.Root type="single" {items} value={selected} onValueChange={open}>
@@ -56,7 +56,7 @@
         <Select.Content><Select.Group>{#each items as item (item.value)}<Select.Item value={item.value} label={item.label}>{item.label}</Select.Item>{/each}</Select.Group></Select.Content>
       </Select.Root>
     </div>
-    {#if hasUpdates}<Button variant="outline" onclick={() => location.reload()}>Reload updates</Button>{/if}
+    {#if hasUpdates}<Button variant="outline" onclick={() => location.reload()}>Update Lab</Button>{/if}
   </header>
   {#if error}<p role="alert" class="lab-error">{error}</p>{/if}
   <span class="sr-only" role="status" aria-live="polite">{loading ? "Loading model" : ""}</span>

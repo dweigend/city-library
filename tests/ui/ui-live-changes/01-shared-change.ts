@@ -33,7 +33,7 @@ export async function browserChecks(container: HTMLElement, bind: typeof defineU
   try {
     await settle(container);
     equal(calls, [], 'An inert declaration invokes no change action');
-    button(container, 'Setup').click(); await settle(container);
+    button(container, 'Reload').click(); await settle(container);
     changeNumber(container, 'Sheep food gain', 7); await settle(container);
     equal(calls, [{ sheepGain: 7 }], 'The default write receives exactly one decoded own-key change');
     equal(container.querySelector('dd')?.textContent?.trim(), '7', 'Implicit parameter getter refreshes');

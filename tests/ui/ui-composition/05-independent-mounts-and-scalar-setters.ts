@@ -1,6 +1,6 @@
 import { defineUI, type UISpec, type Observation } from '../../../ui/index.ts';
 import { model, type VotingParameters } from '../../../models/voting/model.ts';
-import { assert, equal, button, monitor, settle } from './assertions.ts';
+import { assert, equal, button, monitor, settle, stepOnce } from './assertions.ts';
 
 type Instance = ReturnType<typeof model.create>;
 /** Existing extracted UISpec syntax with a broad, safe formatter stays compatible. */
@@ -32,11 +32,10 @@ export async function browserChecks(container: HTMLElement, bind: typeof defineU
   const second = bind(tracked, arraySpec).mount(right);
   try {
     await settle(container);
-    button(left, 'Setup').click(); button(right, 'Setup').click(); await settle(container);
-    button(left, '1 step').click(); await settle(container);
+    await stepOnce(left);
     equal(monitor(left, 'Tick'), '1', 'First mounted model advances');
     equal(monitor(right, 'Tick'), '0', 'Independent mounted model stays unchanged');
-    const stale = button(left, '1 step');
+    const stale = button(left, 'Run');
     const disposedBefore = JSON.stringify(instances[0]!.read());
     first.dispose();
     stale.click(); await settle(container);

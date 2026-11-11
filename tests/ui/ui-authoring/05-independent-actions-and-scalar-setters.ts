@@ -44,7 +44,6 @@ export async function browserChecks(container: HTMLElement, bind: typeof defineU
     await settle(container);
     equal(labels(left, Object.keys(model.inputs)), ['Growth Amount'], 'Explicit empty setup leaves only live controls');
     equal(labels(old, Object.keys(model.inputs)).filter(label => label === 'Growth Amount').length, 2, 'Array-field omitted setup preserves duplicate live/setup behavior');
-    button(left, 'Setup').click(); await settle(container); button(right, 'Setup').click(); await settle(container);
     const action = button(left, 'One interval'); action.click(); await settle(container);
     equal(left.querySelector('dd')?.textContent?.trim(), '1', 'Mounted action advances only its model');
     equal(right.querySelector('dd')?.textContent?.trim(), '0', 'Second mounted entry remains independent');

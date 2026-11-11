@@ -6,7 +6,7 @@ Each step advances the clock by one hour. Steps never retry rejected requests; t
 
 ## Use
 
-Choose **Shared Machine** in [Agent Lab](../../ui/agent-lab/README.md) and use the reserve, start, cancel, fail, repair and complete actions.
+Choose **Shared Machine** in [Model Lab](../../ui/model-lab/README.md) and use the reserve, start, cancel, fail, repair and complete actions.
 
 From a script in the repository root:
 

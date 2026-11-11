@@ -35,7 +35,7 @@ export async function browserChecks(container: HTMLElement, bind: typeof defineU
   const mounted = bind(alternate, spec).mount(container);
   try {
     await settle(container);
-    button(container, 'Setup').click(); await settle(container);
+    button(container, 'Reload').click(); await settle(container);
     equal(container.querySelector('dd')?.textContent?.trim(), 'false', 'Explicit getter initializes the control/monitor');
     control(container, 'Change Vote').click(); await settle(container);
     equal(container.querySelector('dd')?.textContent?.trim(), 'true', 'Boolean control invokes the explicit action with boolean value');
@@ -60,7 +60,6 @@ export async function precedenceBrowserChecks(container: HTMLElement, bind: type
   const mounted = bind(model, precedenceSpec).mount(container);
   try {
     await settle(container);
-    button(container, 'Setup').click(); await settle(container);
     const input = control(container, 'Change Vote');
     const checked = () => input instanceof HTMLInputElement ? input.checked : input.getAttribute('aria-checked') === 'true';
     equal(checked(), true, 'Explicit getter takes precedence over canonical false');

@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Zoning Scenario Comparison** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Zoning Scenario Comparison** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

@@ -11,7 +11,7 @@ Things to try:
 
 ## Use
 
-Choose **Sunflower Spirals** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Sunflower Spirals** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

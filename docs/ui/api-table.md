@@ -4,7 +4,7 @@ This inventory and the [UI API reference](api-reference.md) form the binding UI 
 
 ## Status and notation
 
-`Supported` means a repository contract available in the Svelte host. `Required` means a binding design rule; `Planned` means a candidate that needs a defined contract before use. [PLAN](../../PLAN.md) tracks remaining acceptance work. Source presence alone does not establish scientific or independent acceptance.
+`Supported` means a repository contract available in the Svelte host. `Required` means a binding design rule; `Planned` means a candidate that needs a defined contract before use. `Target` means a specified contract whose named type no public entry exports yet; do not import it. [PLAN](../../PLAN.md) tracks remaining acceptance work. Source presence alone does not establish scientific or independent acceptance.
 
 `P` is the model parameter object; `K = Extract<keyof P, string>`; `M` is its concrete instance; `S = ReturnType<M["read"]>`; `Scalar = string \| number \| boolean`; `Row = Readonly<Record<string, Scalar>>`. `?` marks optional properties. All declaration arrays and observation data are readonly. IDs below remain stable when availability changes. Each row links to its detailed contract.
 
@@ -14,10 +14,10 @@ This inventory and the [UI API reference](api-reference.md) form the binding UI 
 | --- | --- | --- | --- | --- |
 | UI-001 | `defineUI<P extends object, M extends ModelInstance>(definition: Definition<P,M>, spec: UISpec<P,M>): BoundEntry` | Public runtime entry from `ui/index.ts`; infer concrete model types. Does not create the model at import. | Supported | [Entry](api-reference.md#define-ui) |
 | UI-002 | `UISpec<P,M>` | Ordinary object; only `views` is required. No renderer configuration or layout tree required. | Supported | [Principles](api-reference.md#principles) |
-| UI-003 | `ModelInstance` | `read(): unknown`, `advance(steps?: number): void`, `dispose?(): void`; concrete `read` return type supplies `S`. | Supported | [Model](api-reference.md#model) |
+| UI-003 | `ModelInstance` | `read(): unknown`, `advance(stepCount?: number): void`, `dispose?(): void`; concrete `read` return type supplies `S`. | Supported | [Model](api-reference.md#model) |
 | UI-004 | `BoundEntry` | `title: string`, `description?: string`, `mount(container: HTMLElement): { dispose(): void; pause?(): void }`. Mounted handle belongs to host integration. | Supported | [Lifecycle](api-reference.md#lifecycle) |
-| UI-005 | `Definition<P,M>` | Headless companion from `models/definition.ts`: `title`, `description?`, `inputs: Inputs<P>`, `create(options?: Partial<P>): M`. Not re-exported by `ui/index.ts`. | Supported | [Model](api-reference.md#model) |
-| UI-006 | `Input<T>`, `Inputs<P>` | Number: `kind`, `default`, optional `min/max/step/integer`; boolean: `kind/default`; choice: `kind/default/options`; text: `kind/default`. Canonical defaults and validation belong to model. | Supported | [Model](api-reference.md#model) |
+| UI-005 | `Definition<P,M>` | Headless companion from `models/definition.ts`: `title`, `description?`, `inputs: Inputs<P>`, `create(options?: Partial<P>): M`. Not exported by `ui/index.ts` or the root; package home open. | Target | [Model](api-reference.md#model) |
+| UI-006 | `Input<T>`, `Inputs<P>` | Number: `kind`, `default`, optional `min/max/step/integer`; boolean: `kind/default`; choice: `kind/default/options`; text: `kind/default`. Canonical defaults and validation belong to model. Not exported; package home open. | Target | [Model](api-reference.md#model) |
 
 ## Controls and observations
 
@@ -32,7 +32,7 @@ This inventory and the [UI API reference](api-reference.md) form the binding UI 
 | UI-016 | `actions?: readonly Action[]` | Omission gives no model-specific action buttons. Host setup/playback controls are separate. | Supported | [Actions](api-reference.md#actions) |
 | UI-017 | Action `{ label: string; run: (model: M, selected: string \| null) => void; enabled?: (state: S, selected: string \| null) => boolean; pressed?: (state: S) => boolean }` | `label/run` required; enabled defaults true after setup. Omitted `pressed` means ordinary action, not a toggle binding. Selection is presentation-owned. | Supported | [Actions](api-reference.md#actions) |
 | UI-018 | Action `repeat?: { label: string; intervalMs: number }` | Both nested properties required when present. Omission gives no repeat control. Independent host cadence, never model time. | Supported | [Actions](api-reference.md#actions) |
-| UI-019 | `monitors?: readonly { label: string; value: (state: S) => string \| number }[]` | Omission gives no monitors; callbacks observe, do not advance model/time/RNG. | Supported | [Monitors](api-reference.md#monitors) |
+| UI-019 | `monitors?: readonly { label: string; value: (state: S) => string \| number }[]` | Omission gives no monitors; callbacks only read, do not advance model/time/RNG. | Supported | [Monitors](api-reference.md#monitors) |
 | UI-020 | `complete?: (state: S) => boolean` | Omission means false; completion is explicit model observation, not guessed from data. | Supported | [Lifecycle](api-reference.md#lifecycle) |
 | UI-021 | `source?: { url: string; label: string }` | Both properties required when supplied; omission gives no source link. | Supported | [Entry](api-reference.md#define-ui) |
 
@@ -75,7 +75,7 @@ Every view requires `type` and `label`; labels are currently explicit. All callb
 | ID | API / signature | Defaults and ownership | Scope | Reference |
 | --- | --- | --- | --- | --- |
 | UI-060 | `drawing?: { toggleLabel?: string; enabled: (state: S) => boolean; intent: (model: M, intent: DrawingIntent) => void }` | Omitted means no drawing binding; explicit enable predicate and model action required. Optional toggle starts off per mounted instance. Without toggle label, predicate alone gates drawing. | Supported | [Drawing](api-reference.md#drawing) |
-| UI-061 | `DrawingIntent` | `{ phase: "begin" \| "move"; position: { x: number; y: number } }` or `{ phase: "end"; position?: never }`; named type not re-exported by UI entry. | Supported | [Drawing](api-reference.md#drawing) |
+| UI-061 | `DrawingIntent` | `{ phase: "begin" \| "move"; position: { x: number; y: number } }` or `{ phase: "end"; position?: never }`; the host supports the intent, but the UI entry does not export the named type. | Target | [Drawing](api-reference.md#drawing) |
 | UI-062 | `indexedColor(color: number): string` | Public experimental helper; finite numeric colors wrap modulo 140 and select observed tenth-color bins. Non-number throws TypeError; nonfinite number throws RangeError. | Supported | [Palette](api-reference.md#palette) |
 | UI-063 | `scientificPalette` | Shared readonly neutral/waiting/active/completed/unavailable presentation colors; shape/text must also convey state. | Supported | [Palette](api-reference.md#palette) |
 

@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Game of Life** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Game of Life** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

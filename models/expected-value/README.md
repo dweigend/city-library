@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Expected Value** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Expected Value** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

@@ -11,7 +11,7 @@ Things to try:
 
 ## Use
 
-Choose **Preferential Attachment** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Preferential Attachment** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

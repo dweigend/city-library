@@ -9,7 +9,7 @@ import { merge } from "./planar/merge.ts";
 import { split } from "./planar/split.ts";
 export type { PlanarXY, PlanarPolygon, PlanarGeometry, PlanarJson, PlanarFeature, PlanarDataset } from "./planar/types.ts";
 export type { Bounds } from "./mapping.ts";
-export type { ParcelShape } from "./planar/parcel-input.ts";
+export type { PlanarPolygonShape } from "./planar/polygon-input.ts";
 export type { MergeResult } from "./planar/merge.ts";
 export type { SplitResult } from "./planar/split.ts";
 

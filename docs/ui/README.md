@@ -14,7 +14,7 @@ Check the API table before relying on a proposed operation. These priorities als
 
 ## Using the contract
 
-The Svelte UI implements the shared authoring API. Start with the [five authoring examples](../../tests/ui/ui-authoring/README.md), then the [formatter and observation examples](../../tests/ui/ui-composition/README.md). Keyed live controls, explicit common change actions, flat grouping, monitor formatters, categorical/labelled charts, collection diagrams and complete table paging use the same Svelte implementation. `ui/svelte/index.ts` is an import-compatibility alias for `ui/index.ts`, not another host. Browser checks and their limits are recorded in the [UI acceptance record](../../ui/agent-lab/acceptance/README.md).
+The Svelte UI implements the shared authoring API. Start with the [five authoring examples](../../tests/ui/ui-authoring/README.md), then the [formatter and observation examples](../../tests/ui/ui-composition/README.md). Keyed live controls, explicit common change actions, flat grouping, monitor formatters, categorical/labelled charts, collection diagrams and complete table paging use the same Svelte implementation. `ui/svelte/index.ts` is an import-compatibility alias for `ui/index.ts`, not another host. Browser checks and their limits are recorded in the [UI acceptance record](../../ui/model-lab/acceptance/README.md).
 
 Use `Observation<typeof model>` for named projections. Annotate scalar formatter parameters when you need their concrete type; automatic scalar-specific inference for unannotated formatters is not promised. Namespace projected entity IDs when different kinds share a source ID. The [reference](api-reference.md) explains these rules in detail.
 
@@ -32,6 +32,6 @@ These contracts define shared UI behavior in detail:
 
 ## Related documentation
 
-- [Agent Lab](../../ui/agent-lab/README.md): run the application and add an entry.
+- [Model Lab](../../ui/model-lab/README.md): run the application and add an entry.
 - [Write a model](../development/model-authoring.md): connect headless behavior to observations and actions.
-- [Agent Loom](../agent-loom/README.md): the headless domain contract.
+- [API specification](../agent-loom/README.md): the headless domain contract.

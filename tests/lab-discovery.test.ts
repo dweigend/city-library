@@ -2,10 +2,10 @@ import { expect, test } from "bun:test";
 import { mkdtemp, mkdir, writeFile, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { discoverEntries } from "../ui/agent-lab/discovery.ts";
+import { discoverEntries } from "../ui/model-lab/discovery.ts";
 
 test("catalog discovers only entry candidates and reports incomplete pairs without invoking factories", async () => {
-  const root = await mkdtemp(join(tmpdir(), "agent-lab-catalog-"));
+  const root = await mkdtemp(join(tmpdir(), "model-lab-catalog-"));
   try {
     for (const folder of ["working", "partial", "assets", "bad-model"])
       await mkdir(join(root, folder));

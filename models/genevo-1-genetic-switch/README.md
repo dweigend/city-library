@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Lac Operon Genetic Switch** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Lac Operon Genetic Switch** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

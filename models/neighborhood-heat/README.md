@@ -6,7 +6,7 @@ After one step the center is back at 20 and its four direct neighbors are at 22;
 
 ## Use
 
-Choose **Neighborhood Heat** in [Agent Lab](../../ui/agent-lab/README.md). The model has no inputs.
+Choose **Neighborhood Heat** in [Model Lab](../../ui/model-lab/README.md). The model has no inputs.
 
 From a script in the repository root:
 

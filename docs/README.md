@@ -4,8 +4,8 @@ Start with a model, change something and see what happens. These pages take you 
 
 ## New here
 
-- [Your first model](first-model.md): write a small model, run it headless and step through it in Agent Lab.
-- [Run Agent Lab](../ui/agent-lab/README.md): choose a model, press Setup and step through it.
+- [Your first model](first-model.md): write a small model, run it headless and step through it in Model Lab.
+- [Run Model Lab](../ui/model-lab/README.md): choose a model, run it and change its parameters.
 - [Concepts](concepts.md): headless models, one state owner, steps and ticks, explicit randomness.
 - [Explore the models](../models/README.md): every model by topic.
 
@@ -19,7 +19,7 @@ Start with a model, change something and see what happens. These pages take you 
 
 - [What works today](development/coverage.md): available library operations and open gaps.
 - [UI API](ui/README.md): `defineUI`, controls, monitors and views.
-- [Agent Loom specification](agent-loom/README.md): the full target API for the headless core, including planned operations.
+- [API specification](agent-loom/README.md): the whole City Library API, with the core, city systems, UI authoring and the model contract; every entry is marked delivered, target or planned.
 - [Grids, layouts and parcels](grid-parcels/STATUS.md), their [target catalogue](grid-parcels/API.md) and the [finite quad contract](grid-parcels/QUAD-LAYOUTS-CONTRACT.md). That contract preserves historical signatures; the [current naming map](grid-parcels/STATUS.md) gives the executable calls.
 
 The specifications include planned operations. Check [what works today](development/coverage.md), the public exports and the runnable examples before relying on one.
@@ -27,13 +27,15 @@ The specifications include planned operations. Check [what works today](developm
 ## Understand
 
 - [Architecture](ARCHITECTURE.md): ownership, dependencies, module layout, time and randomness.
+- [Target structure](evolution/structure.md): accepted target folders, import rules and migration order; files have not moved yet.
 - [Domain and time semantics](agent-loom/terminology.md): distinctions that names must preserve.
 - [UI design](DESIGN.md): what the interface is for and its binding rules.
-- [Network visualization](decisions/network-visualization.md): why Agent Lab renders graphs the way it does.
+- [Network visualization](decisions/network-visualization.md): why Model Lab renders graphs the way it does.
 
 ## Contribute
 
 - [Work plan](../PLAN.md): next work, review policy and the example-first gate.
+- [Evolution](evolution/README.md): the accepted [target structure](evolution/structure.md), the owner's [development sequence](evolution/roadmap.md), and non-binding brainstorming on refactoring and further development toward city systems and games.
 - [Coding standards](CODING_STANDARDS.md) and [naming conventions](NAMING_CONVENTIONS.md).
 - [Git delivery workflow](development/git-workflow.md).
 - [Checks and development records](development/README.md): commands, target checks and where records live.
@@ -50,6 +52,6 @@ These are records. Use them to trace a source or check a claim; the pages above 
 
 - [Model catalog](../models/catalog/README.md): selection, source snapshots, the acceptance ledger and shared acceptance records.
 - [Scientific sources](scientific-sources.md): research and reference sources mapped to implemented code, with concrete simplifications and limits.
-- [Model research records](../models/catalog/research/README.md): preserved source provenance, publication verification and immutable selected-model records.
-- [Model reference source audit](development/model-reference-sources.md): pinned NetLogo bytes, licenses, widget comparisons and model-specific transfer contracts.
-- [UI acceptance record](../ui/agent-lab/acceptance/README.md): browser checks for the shared UI.
+- [Model sources and scientific context](../models/catalog/research/README.md): research dossiers and publications.
+- [Model reference sources](development/model-reference-sources.md): pinned sources behind adapted models.
+- [UI acceptance record](../ui/model-lab/acceptance/README.md): browser checks for the shared UI.

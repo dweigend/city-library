@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Ising Model** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Ising Model** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

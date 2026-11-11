@@ -207,8 +207,8 @@ let blockedDeletion=false;try{packedOwner.delete()}catch{blockedDeletion=true}
 if(!blockedDeletion)throw Error('packed resource lifecycle');
 packedResource.cancel(waiting);packedOwner.delete();
 const packedStore=Store.create<number>({capacity:1});
-packedStore.put(1);const blockedPut=packedStore.put(2);
-if(String(blockedPut.status)!=='waiting'||packedStore.take()!==1||String(blockedPut.status)!=='stored'||packedStore.get().value!==2)throw Error('packed store backpressure');
+packedStore.add(1);const blockedPut=packedStore.add(2);
+if(String(blockedPut.status)!=='waiting'||packedStore.take()!==1||String(blockedPut.status)!=='stored'||packedStore.request().value!==2)throw Error('packed store backpressure');
 const packedQueue=ServiceQueue.create<number>({policy:'priority'});
 packedQueue.add(1,{priority:2});packedQueue.add(2,{priority:-1});
 if(packedQueue.take()!==2)throw Error('packed queue policy');
@@ -216,7 +216,7 @@ const packedSignal=Signal.create(false);const condition=packedSignal.wait(value=
 if(condition.status!=='satisfied')throw Error('packed condition');
 const weighted=TimeWeighted.create({value:0});weighted.set({at:2,value:3});
 if(weighted.read({until:5}).integral!==9)throw Error('packed time weighting');
-const packedTrace=EventTrace.create<{kind:string}>({capacity:2});packedTrace.record({at:1,value:{kind:'a'}});packedTrace.record({at:1,value:{kind:'b'}});
+const packedTrace=EventTrace.create<{kind:string}>({capacity:2});packedTrace.add({at:1,value:{kind:'a'}});packedTrace.add({at:1,value:{kind:'b'}});
 if(packedTrace.read().length!==2)throw Error('packed equal-time event trace');
 const gammaRandom=Random.create({seed:5});const gammaCopy=gammaRandom.copy();
 if(gammaRandom.number({distribution:'gamma',shape:.7,rate:2})!==gammaCopy.number({distribution:'gamma',shape:.7,rate:2}))throw Error('packed gamma continuation');

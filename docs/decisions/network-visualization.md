@@ -1,6 +1,6 @@
 # Network visualization
 
-Agent Lab uses Cytoscape.js for its network view. It is a presentation dependency: City Library owns topology, identity, measurements and model time. The view projects detached observations, supports inspection and keeps layout separate from scientific coordinates.
+Model Lab uses Cytoscape.js for its network view. It is a presentation dependency: City Library owns topology, identity, measurements and model time. The view projects detached observations, supports inspection and keeps layout separate from scientific coordinates.
 
 ## Current choice
 

@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **K-Means Clustering** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **K-Means Clustering** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

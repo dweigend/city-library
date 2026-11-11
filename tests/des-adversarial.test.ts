@@ -230,28 +230,28 @@ describe("single-owner queue, capacity and lifecycle contracts", () => {
 });
 
 describe("bounded producer-consumer transfer", () => {
-  test("undefined is a completed payload when get status is received", () => {
+  test("undefined is a completed payload when request status is received", () => {
     const store = Store.create<undefined>({ capacity: 1 });
-    const consumer = store.get();
+    const consumer = store.request();
     expect(consumer.status).toBe("waiting");
-    const producer = store.put(undefined);
+    const producer = store.add(undefined);
     expect(producer.status).toBe("stored");
     expect(consumer.status).toBe("received");
     expect(consumer.value).toBeUndefined();
     expect(store.items).toEqual([]);
-    store.cancelGet(consumer);
-    store.cancelPut(producer);
+    store.cancel(consumer);
+    store.cancel(producer);
     expect(consumer.status).toBe("received");
     expect(producer.status).toBe("stored");
   });
 
   test("waiting producer cancellation preserves FIFO and never removes a completed item", () => {
     const store = Store.create<string>({ capacity: 1 });
-    const first = store.put("first");
-    const cancelled = store.put("cancelled");
-    const next = store.put("next");
-    store.cancelPut(cancelled);
-    store.cancelPut(first);
+    const first = store.add("first");
+    const cancelled = store.add("cancelled");
+    const next = store.add("next");
+    store.cancel(cancelled);
+    store.cancel(first);
     expect(store.take()).toBe("first");
     expect(next.status).toBe("stored");
     expect(store.take()).toBe("next");
@@ -260,12 +260,12 @@ describe("bounded producer-consumer transfer", () => {
 
   test("waiting consumer cancellation preserves FIFO and receiver provenance", () => {
     const store = Store.create<string>({ capacity: 1 });
-    const cancelled = store.get();
-    const next = store.get();
-    expect(() => store.cancelGet({ ...next })).toThrow();
-    expect(() => Store.create<string>({ capacity: 1 }).cancelGet(next)).toThrow();
-    store.cancelGet(cancelled);
-    store.put("next");
+    const cancelled = store.request();
+    const next = store.request();
+    expect(() => store.cancel({ ...next })).toThrow();
+    expect(() => Store.create<string>({ capacity: 1 }).cancel(next)).toThrow();
+    store.cancel(cancelled);
+    store.add("next");
     expect(cancelled.status).toBe("cancelled");
     expect(next.status).toBe("received");
     expect(next.value).toBe("next");
@@ -275,22 +275,22 @@ describe("bounded producer-consumer transfer", () => {
     const first = Agent.create({ number: 1 });
     const second = Agent.create({ number: 2 });
     const store = Store.create<typeof first>({ capacity: 1 });
-    store.put(first);
-    const blocked = store.put(second);
+    store.add(first);
+    const blocked = store.add(second);
     expect(() => first.delete()).toThrow();
     expect(() => second.delete()).toThrow();
-    store.cancelPut(blocked);
+    store.cancel(blocked);
     second.delete();
     expect(store.take()).toBe(first);
     first.delete();
-    expect(() => store.put(first)).toThrow();
+    expect(() => store.add(first)).toThrow();
   });
 
   test("duplicate stored and blocked Agent values protect until the final consumption", () => {
     const item = Agent.create({ number: 1 });
     const store = Store.create<typeof item>({ capacity: 1 });
-    store.put(item);
-    const blocked = store.put(item);
+    store.add(item);
+    const blocked = store.add(item);
     expect(store.take()).toBe(item);
     expect(blocked.status).toBe("stored");
     expect(() => item.delete()).toThrow();
@@ -366,16 +366,16 @@ describe("explicit conditions and observation", () => {
   test("event diagnostics permit equal timestamps and detach insertion and read data", () => {
     const trace = EventTrace.create<{ nested: { count: number } }>({ capacity: 2 });
     const value = { nested: { count: 1 } };
-    trace.record({ at: 1, value });
+    trace.add({ at: 1, value });
     value.nested.count = 99;
     const snapshot = trace.read();
     expect(snapshot[0]?.value.nested.count).toBe(1);
     Reflect.set(snapshot[0]!.value.nested, "count", 88);
     expect(trace.read()[0]?.value.nested.count).toBe(1);
-    trace.record({ at: 1, value: { nested: { count: 2 } } });
-    trace.record({ at: 2, value: { nested: { count: 3 } } });
+    trace.add({ at: 1, value: { nested: { count: 2 } } });
+    trace.add({ at: 2, value: { nested: { count: 3 } } });
     expect(trace.read().map(event => event.value.nested.count)).toEqual([2, 3]);
-    expect(() => trace.record({ at: 1, value })).toThrow();
+    expect(() => trace.add({ at: 1, value })).toThrow();
     expect(trace.read().map(event => event.at)).toEqual([1, 2]);
   });
 });

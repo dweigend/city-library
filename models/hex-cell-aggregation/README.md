@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Hex Cell Aggregation** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Hex Cell Aggregation** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

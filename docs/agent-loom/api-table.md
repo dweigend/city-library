@@ -1,10 +1,20 @@
-# Agent Loom API inventory
+# City Library API inventory
 
 Availability: static factories use `Type.create`. Delivered streams support only `mulberry32`; `mt-word-stream/1` is an undelivered target whose seed, distribution and continuation contract still requires resolution, not an algorithm-equivalence claim. `unsupported-interleaved-activation` always throws. The snapshot, declaration-limit and finite-study XML formats below are undelivered targets; their naming changes do not migrate stored bytes or publish codecs. Original representation provenance belongs in dedicated source records.
 
 Use this inventory to find an operation, read its signature and follow the link to its full contract.
 
-> **Target specification.** These 309 operation/type entries define the required core API across 16 areas. Implementation status is tracked in [PLAN](../../PLAN.md) and the [coverage inventory](../development/coverage.md). An entry here does not mean the operation is available.
+> **Specification of the whole City Library.** These 449 operation/type entries in 25 areas define the public API: the original modeling core, further delivered core exports, planned core additions, city systems, UI authoring and the model contract. Implementation status is tracked in [PLAN](../../PLAN.md) and the [coverage inventory](../development/coverage.md). Only a `delivered` entry is available.
+
+**Status.** Every entry states one status:
+
+- `delivered`: exported today by `index.ts` (headless package) or `ui/index.ts` (UI authoring). This is not a parity or acceptance claim; where the source spelling differs from the signature here, [coverage](../development/coverage.md) tracks the comparison.
+- `target`: a specified contract without a public export. Do not call it.
+- `planned`: a proposed addition justified by [evolution](../evolution/README.md) or a clear system need. It is not an accepted contract and must pass the [example-first gate](../../PLAN.md#example-first-delivery-gate) before implementation.
+
+**Target.** The line under each area heading names its folder in the accepted [target structure](../evolution/structure.md). No files have moved yet; public names stay unchanged when they do.
+
+The first 16 areas hold the original 309 anchored entries and three additive headings, now anchored as `api-random-number-additive`, `api-agenda-size` and `api-agenda-next`. Entries added to cover the whole system are numbered `api-380` to `api-517` in document order; existing numbers and anchors are unchanged. Since the 2026-11-11 naming migration, `store.cancel` carries both `api-439` and `api-440`. [Open decisions](#open-decisions) lists unresolved choices and known inconsistencies.
 
 [Overview](README.md) · [Detailed reference and examples](api-reference.md)
 
@@ -12,16 +22,20 @@ Each entry lists its exact signature, compact contract and detailed reference. O
 
 ## Contents
 
-[World](#area-world) · [Agent](#area-agent) · [Grid](#area-grid) · [Field](#area-field) · [Graph](#area-graph) · [Node](#area-node) · [Edge](#area-edge) · [Random](#area-random) · [Input](#area-input) · [stats](#area-stats) · [geometry](#area-geometry) · [Agenda](#area-agenda) · [studies](#area-studies) · [storage](#area-storage) · [limits](#area-limits) · [Exports and shared types](#area-exports-and-shared-types)
+[World](#area-world) · [Agent](#area-agent) · [Grid](#area-grid) · [Field](#area-field) · [Graph](#area-graph) · [Node](#area-node) · [Edge](#area-edge) · [Random](#area-random) · [Input](#area-input) · [stats](#area-stats) · [geometry](#area-geometry) · [Agenda](#area-agenda) · [studies](#area-studies) · [storage](#area-storage) · [limits](#area-limits) · [Exports and shared types](#area-exports-and-shared-types) · [topology](#area-topology) · [continuous](#area-continuous) · [twoPhase](#area-two-phase) · [measurements](#area-measurements) · [Budget](#area-budget) · [EnergySupply](#area-energy-supply) · [PublicTransport](#area-public-transport) · [UI authoring](#area-ui-authoring) · [Model contract](#area-model-contract) · [Open decisions](#open-decisions)
 
 <a id="area-world"></a>
 
 ## World
 
+Target: `library-core/world-composition`.
+
 <a id="world-add"></a>
 <a id="api-12"></a>
 
 ### World.create
+
+Status: delivered
 
 ```ts
 World.create(options?: { random?: Random }): World
@@ -36,6 +50,8 @@ Create an independent World without a spatial context; supply an optional shared
 
 ### World.create
 
+Status: delivered
+
 ```ts
 World.create(space: Space, options?: { boundary?: Space["boundary"]; random?: Random }): World
 ```
@@ -48,6 +64,8 @@ Create an independent World with the supplied immutable spatial context, optiona
 <a id="api-11"></a>
 
 ### world.space
+
+Status: delivered
 
 ```ts
 world.space: (Space & Required<Pick<Space, "dimensions" | "boundary">>) | undefined
@@ -62,6 +80,8 @@ Read the immutable normalized spatial context, or undefined for a World without 
 
 ### world.random
 
+Status: delivered
+
 ```ts
 world.random: Random
 ```
@@ -74,6 +94,8 @@ Read-only Random reference selected at World construction; the default is an ind
 <a id="api-16"></a>
 
 ### world.tick
+
+Status: delivered
 
 ```ts
 world.tick: Tick // readonly; owned by this World
@@ -88,6 +110,8 @@ Read the World-owned Tick. Its reference is fixed; value changes only through ad
 
 ### world.tick.value
 
+Status: delivered
+
 ```ts
 world.tick.value: number
 ```
@@ -100,6 +124,8 @@ Read the finite nonnegative clock value; default 0. Fractional values are allowe
 <a id="api-31"></a>
 
 ### world.tick.advance
+
+Status: delivered
 
 ```ts
 world.tick.advance(amount?: number): void
@@ -114,6 +140,8 @@ Advance the clock by amount. Default: 1. Requires a finite nonnegative amount an
 
 ### world.tick.reset
 
+Status: delivered
+
 ```ts
 world.tick.reset(): void
 ```
@@ -126,6 +154,8 @@ Set only the clock value to 0. Requires an idle World; model state, Agenda, Hist
 <a id="api-18"></a>
 
 ### world.agents
+
+Status: delivered
 
 ```ts
 world.agents: readonly Agent[]
@@ -140,6 +170,8 @@ Read an insertion-order snapshot of registered Agent identities.
 
 ### world.grids
 
+Status: delivered
+
 ```ts
 world.grids: readonly Grid[]
 ```
@@ -152,6 +184,8 @@ Read an insertion-order snapshot of registered Grid identities.
 <a id="api-20"></a>
 
 ### world.graphs
+
+Status: delivered
 
 ```ts
 world.graphs: readonly Graph[]
@@ -166,6 +200,8 @@ Read an insertion-order snapshot of registered Graph identities.
 
 ### world.inputs
 
+Status: target
+
 ```ts
 world.inputs: readonly Input[]
 ```
@@ -178,6 +214,8 @@ Read an insertion-order snapshot of registered Input identities.
 <a id="api-22"></a>
 
 ### world.agendas
+
+Status: delivered
 
 ```ts
 world.agendas: readonly Agenda[]
@@ -192,6 +230,8 @@ Read an insertion-order snapshot of registered Agenda identities.
 
 ### world.add
 
+Status: delivered
+
 ```ts
 world.add<T extends Component>(component: T): T
 ```
@@ -204,6 +244,8 @@ Attach existing components; return the original component or a normalized batch 
 <a id="api-15"></a>
 
 ### world.add
+
+Status: delivered
 
 ```ts
 world.add<T extends Component>(components: Iterable<T>): readonly T[]
@@ -218,6 +260,8 @@ Attach existing components; return the original component or a normalized batch 
 
 ### world.delete
 
+Status: delivered
+
 ```ts
 world.delete(component: Component | Iterable<Component>): void
 ```
@@ -231,12 +275,14 @@ Detach registered components without deleting them. Missing unowned components a
 
 ### run
 
+Status: delivered
+
 ```ts
 run<R>(world: World, step: (() => R) &
   ([Extract<R, PromiseLike<unknown>>] extends [never] ? unknown : never), stepCount?: number): void
 ```
 
-Run synchronous model updates; steps defaults to 1. Each successful callback adds 1 to world.tick.value; failed callbacks retain prior effects and add no tick.
+Run synchronous model updates; stepCount defaults to 1. Each successful callback adds 1 to world.tick.value; failed callbacks retain prior effects and add no tick.
 
 [Details](api-reference.md#complete-membership)
 
@@ -245,40 +291,46 @@ Run synchronous model updates; steps defaults to 1. Each successful callback add
 
 ### world.activate
 
+Status: delivered
+
 ```ts
-world.activate<T extends WorldMember>(source: ActivationSource<T>, action: (context: ActivationContext<T>) => unknown,
-  options?: { order?: "fixed" | "shuffle" | "priority" | "unsupported-interleaved-activation"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; groups?: ReadonlyMap<WorldMember,string>; groupOrder?: readonly string[] }): void
+world.activate<T extends WorldMember,R>(source: ActivationSource<T>, callback: (context: ActivationContext<T>) => R,
+  options?: { order?: "fixed" | "shuffle" | "priority" | "unsupported-interleaved-activation"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; groups?: ReadonlyMap<WorldMember,string>; groupOrder?: readonly string[] }): R | undefined | readonly (R | undefined)[]
 ```
 
-Invoke a synchronous action for selected World members under explicit scheduling and scoped self/caller contexts. Never adds ticks.
+Run a synchronous callback for selected World members under explicit scheduling and scoped self/caller contexts and return the results: one result for a single member, otherwise a frozen array in activation order. Skipped and dying members yield undefined. Never adds ticks.
 
 [Details](api-reference.md#activation-contracts)
 
 <a id="world-report"></a>
 <a id="api-26"></a>
 
-### world.report
+### world.activate
+
+Status: delivered
 
 ```ts
-world.report<T extends WorldMember,R>(source: T, report: (context: ActivationContext<T>) => R,
+world.activate<T extends WorldMember,R>(source: T, callback: (context: ActivationContext<T>) => R,
   options?: { order?: "fixed" | "shuffle" | "priority" | "unsupported-interleaved-activation"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; groups?: ReadonlyMap<WorldMember,string>; groupOrder?: readonly string[] }): R | undefined
 ```
 
-Evaluate a synchronous report for one or more World members under explicit scheduling and scoped contexts. Never adds ticks.
+Run a synchronous callback for one World member under explicit scheduling and scoped contexts and return its result; a skipped or dying member yields undefined. Never adds ticks.
 
 [Details](api-reference.md#activation-contracts)
 
 <a id="world-report-2"></a>
 <a id="api-27"></a>
 
-### world.report
+### world.activate
+
+Status: delivered
 
 ```ts
-world.report<T extends WorldMember,R>(source: readonly T[] | { kind: "agents" | "fields" | "edges"; group?: string }, report: (context: ActivationContext<T>) => R,
+world.activate<T extends WorldMember,R>(source: readonly T[] | { kind: "agents" | "fields" | "edges"; group?: string }, callback: (context: ActivationContext<T>) => R,
   options?: { order?: "fixed" | "shuffle" | "priority" | "unsupported-interleaved-activation"; priority?: (member: T) => number; caller?: ActivationContext<WorldMember>; ids?: ReadonlyMap<WorldMember,number>; groups?: ReadonlyMap<WorldMember,string>; groupOrder?: readonly string[] }): readonly (R | undefined)[]
 ```
 
-Evaluate a synchronous report for one or more World members under explicit scheduling and scoped contexts. Never adds ticks.
+Run a synchronous callback for each selected World member under explicit scheduling and scoped contexts and return a frozen array of results in activation order; skipped and dying members yield undefined. Never adds ticks.
 
 [Details](api-reference.md#activation-contracts)
 
@@ -286,6 +338,8 @@ Evaluate a synchronous report for one or more World members under explicit sched
 <a id="api-28"></a>
 
 ### world.select
+
+Status: delivered
 
 ```ts
 world.select<T extends WorldMember>(source: ActivationSource<T>, predicate: (context: ActivationContext<T>) => boolean,
@@ -300,6 +354,8 @@ Evaluate the scoped predicate deterministically in captured source order and ret
 <a id="api-17"></a>
 
 ### Tick
+
+Status: delivered
 
 ```ts
 interface Tick {
@@ -318,6 +374,8 @@ World-owned model clock with a read-only numeric value and explicit advance/rese
 
 ### WorldMember
 
+Status: delivered
+
 ```ts
 type WorldMember = Agent | Field | Edge;
 ```
@@ -330,6 +388,8 @@ Agent, Field or Edge identity eligible for explicit World activation.
 <a id="api-319"></a>
 
 ### ActivationSource
+
+Status: delivered
 
 ```ts
 type ActivationSource<T extends WorldMember> = T | readonly T[]
@@ -345,6 +405,8 @@ One member, a captured member list or an explicit kind/group selector.
 
 ### ActivationContext
 
+Status: delivered
+
 ```ts
 interface ActivationContext<T extends WorldMember> {
   readonly world: World; readonly self: T;
@@ -357,14 +419,55 @@ Scoped World/self/caller identities with die terminating the active frame after 
 
 [Details](api-reference.md#activation-contracts)
 
+<a id="type-world"></a>
+<a id="api-380"></a>
+
+### World
+
+Status: delivered
+
+```ts
+World
+```
+
+Owner of step time, shared randomness and component membership. Membership collections are frozen insertion-order snapshots of the original component references, not live views.
+
+[Details](api-reference.md#complete-membership)
+
+<a id="type-activation-options"></a>
+<a id="api-381"></a>
+
+### ActivationOptions
+
+Status: delivered
+
+```ts
+interface ActivationOptions<T extends WorldMember = WorldMember> {
+  order?: "fixed" | "shuffle" | "priority" | "unsupported-interleaved-activation";
+  priority?: (member: T) => number;
+  caller?: ActivationContext<WorldMember>;
+  ids?: ReadonlyMap<WorldMember, number>;
+  groups?: ReadonlyMap<WorldMember, string>;
+  groupOrder?: readonly string[];
+}
+```
+
+Named options record of world.activate and select. order defaults to "shuffle"; "unsupported-interleaved-activation" always throws.
+
+[Details](api-reference.md#activation-contracts)
+
 <a id="area-agent"></a>
 
 ## Agent
+
+Target: `library-core/agent`; the public Agent is composed in `library-core/world-composition`.
 
 <a id="agent-add"></a>
 <a id="api-37"></a>
 
 ### Agent.create
+
+Status: delivered
 
 ```ts
 Agent.create(): Agent<{}>
@@ -379,6 +482,8 @@ Create a detached living XY agent at the origin, with heading 0 and empty custom
 
 ### Agent.create
 
+Status: delivered
+
 ```ts
 Agent.create<S extends object>(state: S, options?: { position?: Position; orientation?: Partial<Orientation> }): Agent<S>
 ```
@@ -391,6 +496,8 @@ Create a living independent XY or XYZ agent with directly typed custom propertie
 <a id="api-33"></a>
 
 ### agent.copy
+
+Status: delivered
 
 ```ts
 agent.copy(): Agent<S>
@@ -405,6 +512,8 @@ Create a detached living agent with an independent copy of custom data, position
 
 ### agent.alive
 
+Status: delivered
+
 ```ts
 agent.alive: boolean // readonly
 ```
@@ -417,6 +526,8 @@ Read whether this agent is living. Deletion is idempotent; a deleted agent retai
 <a id="api-35"></a>
 
 ### agent.id
+
+Status: delivered
 
 ```ts
 agent.id: string // readonly
@@ -431,6 +542,8 @@ Read the immutable opaque process-local identity; loading assigns a fresh identi
 
 ### agent.world
 
+Status: delivered
+
 ```ts
 agent.world: World | undefined // readonly
 ```
@@ -443,6 +556,8 @@ Read the owning World, or undefined for a detached agent.
 <a id="api-53"></a>
 
 ### agent.x
+
+Status: delivered
 
 ```ts
 agent.x: number
@@ -457,6 +572,8 @@ Read-only spatial coordinate in world units; changed through move.
 
 ### agent.y
 
+Status: delivered
+
 ```ts
 agent.y: number
 ```
@@ -469,6 +586,8 @@ Read-only spatial coordinate in world units; changed through move.
 <a id="api-55"></a>
 
 ### agent.z
+
+Status: delivered
 
 ```ts
 agent.z: number | undefined
@@ -483,6 +602,8 @@ Read-only spatial coordinate present for XYZ agents; XY agents have no z coordin
 
 ### agent.heading
 
+Status: delivered
+
 ```ts
 agent.heading: number
 ```
@@ -496,11 +617,13 @@ Read-only orientation in degrees; changed through rotate. Heading is clockwise f
 
 ### agent.pitch
 
+Status: delivered
+
 ```ts
-agent.pitch: number
+agent.pitch: number | undefined
 ```
 
-Read-only orientation in degrees; changed through rotate. Pitch and roll apply only to XYZ agents.
+Read-only orientation in degrees; changed through rotate. Pitch and roll apply only to XYZ agents and are undefined for XY agents.
 
 [Details](api-reference.md#complete-spatial)
 
@@ -509,11 +632,13 @@ Read-only orientation in degrees; changed through rotate. Pitch and roll apply o
 
 ### agent.roll
 
+Status: delivered
+
 ```ts
-agent.roll: number
+agent.roll: number | undefined
 ```
 
-Read-only orientation in degrees; changed through rotate. Pitch and roll apply only to XYZ agents.
+Read-only orientation in degrees; changed through rotate. Pitch and roll apply only to XYZ agents and are undefined for XY agents.
 
 [Details](api-reference.md#complete-spatial)
 
@@ -521,6 +646,8 @@ Read-only orientation in degrees; changed through rotate. Pitch and roll apply o
 <a id="api-40"></a>
 
 ### agent.move
+
+Status: delivered
 
 ```ts
 agent.move(distance?: number, options?: { space?: Space }): void
@@ -535,6 +662,8 @@ Move a signed distance along current orientation; distance defaults to 1. Apply 
 
 ### agent.move
 
+Status: delivered
+
 ```ts
 agent.move(options: { by: Vector; space?: Space }): void
 ```
@@ -547,6 +676,8 @@ Displace the agent by the supplied coordinate-axis vector while preserving orien
 <a id="api-42"></a>
 
 ### agent.move
+
+Status: delivered
 
 ```ts
 agent.move(options: { to: Position; space?: Space }): void
@@ -561,6 +692,8 @@ Place the agent at compatible target coordinates while preserving orientation; r
 
 ### agent.move
 
+Status: target
+
 ```ts
 agent.move(options: { path: readonly Position[]; distance?: number; space?: Space }): boolean
 ```
@@ -573,6 +706,8 @@ Advance along the supplied nonempty path with per-agent continuation; return tru
 <a id="api-44"></a>
 
 ### agent.rotate
+
+Status: delivered
 
 ```ts
 agent.rotate(angle?: number, options?: { axis?: "x" | "y" | "z" }): void
@@ -587,6 +722,8 @@ Change local orientation by an angle or face compatible target coordinates while
 
 ### agent.rotate
 
+Status: delivered
+
 ```ts
 agent.rotate(options: { towards: Position; space?: Space }): void
 ```
@@ -599,6 +736,8 @@ Change local orientation by an angle or face compatible target coordinates while
 <a id="api-46"></a>
 
 ### agent.distanceTo
+
+Status: delivered
 
 ```ts
 agent.distanceTo(target: Position, options?: { space?: Space }): number
@@ -613,6 +752,8 @@ Measure distance to a compatible position using active space and wrapped shortes
 
 ### agent.neighbors
 
+Status: delivered
+
 ```ts
 agent.neighbors<T extends Agent>(options: { source: Iterable<T>; radius?: number; angle?: number; space?: Space }): readonly T[]
 ```
@@ -626,6 +767,8 @@ Return original neighboring Agent identities from the supplied source, excluding
 
 ### agent.neighbors
 
+Status: delivered
+
 ```ts
 agent.neighbors(options?: { radius?: number; angle?: number; space?: Space }): readonly Agent[]
 ```
@@ -638,6 +781,8 @@ Return registered neighboring World agents, excluding self; radius defaults to 1
 <a id="api-49"></a>
 
 ### agent.directionTo
+
+Status: delivered
 
 ```ts
 agent.directionTo(target: Position, options?: { space?: Space }):
@@ -653,6 +798,8 @@ Return a detached bearing toward compatible target coordinates; coincident coord
 
 ### agent.canMove
 
+Status: target
+
 ```ts
 agent.canMove(distance?: number, options?: { space?: Space }): boolean
 ```
@@ -665,6 +812,8 @@ Test legality of the entire proposed step, including tied descendants. Does not 
 <a id="api-52"></a>
 
 ### agent.gradient
+
+Status: target
 
 ```ts
 agent.gradient<S extends object>(options: {
@@ -683,6 +832,8 @@ Return a neighboring Field with a strictly better numeric value for property, wi
 
 ### agent.delete
 
+Status: delivered
+
 ```ts
 agent.delete(): void
 ```
@@ -696,6 +847,8 @@ Idempotently delete the agent and remove World registration, incident graph memb
 
 ### Agent
 
+Status: delivered
+
 ```ts
 Agent<S>
 ```
@@ -708,6 +861,8 @@ Agent identity with directly typed custom properties S and the documented spatia
 <a id="api-51"></a>
 
 ### NumericFields
+
+Status: target
 
 ```ts
 type NumericFields<S> = Pick<S, {
@@ -725,10 +880,14 @@ Retain only the number-valued properties of S as a record type for gradient inpu
 
 ## Grid
 
+Target: `library-core/grid`; grid occupancy moves to `library-core/world-composition`.
+
 <a id="grid-add"></a>
 <a id="api-62"></a>
 
 ### Grid.create
+
+Status: delivered
 
 ```ts
 Grid.create<F extends object>(space: Space, options: { state: F; cellSize?: number; boundary?: Space["boundary"] }): Grid<F>
@@ -743,6 +902,8 @@ Create an independent regular square or cubic Grid with immutable normalized spa
 
 ### Grid.create
 
+Status: delivered
+
 ```ts
 Grid.create(space?: Space, options?: { cellSize?: number; boundary?: Space["boundary"] }): Grid<{}>
 ```
@@ -755,6 +916,8 @@ Create an independent Grid; omitted space defaults to 40×40 XY, cellSize to 1 a
 <a id="api-59"></a>
 
 ### grid.space
+
+Status: delivered
 
 ```ts
 grid.space: Space & Required<Pick<Space, "dimensions" | "boundary">>
@@ -769,6 +932,8 @@ Read the immutable normalized grid extents, derived dimension and effective boun
 
 ### grid.cellSize
 
+Status: delivered
+
 ```ts
 grid.cellSize: number
 ```
@@ -781,6 +946,8 @@ Positive finite cell spacing supplied at construction; defaults to 1. Every exte
 <a id="api-73"></a>
 
 ### grid.fields
+
+Status: delivered
 
 ```ts
 grid.fields: readonly Field<F>[]
@@ -795,6 +962,8 @@ Read-only array snapshot of the original fields in x-fastest order; custom field
 
 ### grid.fieldAt
 
+Status: delivered
+
 ```ts
 grid.fieldAt(position: Position): Field<F> | undefined
 ```
@@ -807,6 +976,8 @@ Return the field containing compatible coordinates, or undefined outside hard bo
 <a id="api-65"></a>
 
 ### grid.neighbors
+
+Status: delivered
 
 ```ts
 grid.neighbors(field: Field<F>, options?: { neighborhood?: "moore" | "faces" }): readonly Field<F>[]
@@ -821,6 +992,8 @@ Return neighboring fields in lexicographic offset order, then normalize wrapping
 
 ### grid.agentsAt
 
+Status: delivered
+
 ```ts
 grid.agentsAt<T extends Agent>(field: Field<F>, options: { source: Iterable<T> }): readonly T[]
 ```
@@ -833,6 +1006,8 @@ Return original Agent identities currently occupying the field, from an explicit
 <a id="api-67"></a>
 
 ### grid.agentsAt
+
+Status: delivered
 
 ```ts
 grid.agentsAt(field: Field<F>): readonly Agent[]
@@ -847,6 +1022,8 @@ Return original Agent identities currently occupying the field, from an explicit
 
 ### grid.diffuse
 
+Status: delivered
+
 ```ts
 grid.diffuse(property: Extract<keyof NumericFields<F>, string>, options?: { rate?: number; neighborhood?: "moore" | "faces" }): void
 ```
@@ -855,14 +1032,221 @@ Simultaneously diffuse a numeric field with rate default 0.25 and neighborhood d
 
 [Details](api-reference.md#diffusion)
 
+<a id="grid-add-layout"></a>
+<a id="api-382"></a>
+
+### Grid.create
+
+Status: delivered
+
+```ts
+Grid.create<F extends object>(options: { layout: Layout; state: F }): LayoutGrid<F>
+```
+
+Create a detached LayoutGrid with one Field per layout cell, each starting with an independent copy of state. The square/cubic Grid contract does not apply.
+
+[Details](../grid-parcels/API.md#agent-loom-connection)
+
+<a id="type-grid"></a>
+<a id="api-383"></a>
+
+### Grid
+
+Status: delivered
+
+```ts
+Grid<F>
+```
+
+Regular centered XY or XYZ cells over a Space; Fields are canonical identities owned by this Grid.
+
+[Details](api-reference.md#complete-grid-contract)
+
+<a id="type-layout-grid"></a>
+<a id="api-384"></a>
+
+### LayoutGrid
+
+Status: delivered
+
+```ts
+LayoutGrid<F>
+```
+
+Immutable layout topology with canonical mutable Fields; no regular diffusion contract.
+
+[Details](../grid-parcels/API.md#agent-loom-connection)
+
+<a id="layout-grid-layout"></a>
+<a id="api-385"></a>
+
+### layoutGrid.layout
+
+Status: delivered
+
+```ts
+layoutGrid.layout: Layout // readonly
+```
+
+The immutable Layout this grid was created from.
+
+[Details](../grid-parcels/API.md#agent-loom-connection)
+
+<a id="layout-grid-fields"></a>
+<a id="api-386"></a>
+
+### layoutGrid.fields
+
+Status: delivered
+
+```ts
+layoutGrid.fields: readonly LayoutField<F>[]
+```
+
+Detached array with one Field per layout cell, in cell order.
+
+[Details](../grid-parcels/API.md#agent-loom-connection)
+
+<a id="layout-grid-field-at"></a>
+<a id="api-387"></a>
+
+### layoutGrid.fieldAt
+
+Status: delivered
+
+```ts
+layoutGrid.fieldAt(position: Position): LayoutField<F> | undefined
+```
+
+Return the Field whose cell contains the XY position, or undefined outside the layout.
+
+[Details](../grid-parcels/API.md#agent-loom-connection)
+
+<a id="layout-grid-neighbors"></a>
+<a id="api-388"></a>
+
+### layoutGrid.neighbors
+
+Status: delivered
+
+```ts
+layoutGrid.neighbors(field: LayoutField<F>): readonly LayoutField<F>[]
+```
+
+Return the Fields of cells that share a boundary edge, in ascending cell order.
+
+[Details](../grid-parcels/API.md#agent-loom-connection)
+
+<a id="layout-grid-agents-at"></a>
+<a id="api-389"></a>
+
+### layoutGrid.agentsAt
+
+Status: delivered
+
+```ts
+layoutGrid.agentsAt<T extends Agent>(field: LayoutField<F>, options: { source: Iterable<T> }): readonly T[]
+```
+
+Return living Agents of an explicit source located in the Field, in first-seen order.
+
+[Details](../grid-parcels/API.md#agent-loom-connection)
+
+<a id="layout-grid-agents-at-2"></a>
+<a id="api-390"></a>
+
+### layoutGrid.agentsAt
+
+Status: delivered
+
+```ts
+layoutGrid.agentsAt(field: LayoutField<F>): readonly Agent[]
+```
+
+Return Agents of the attached World located in the Field, in admission order.
+
+[Details](../grid-parcels/API.md#agent-loom-connection)
+
+<a id="type-layout-field"></a>
+<a id="api-391"></a>
+
+### LayoutField
+
+Status: delivered
+
+```ts
+type LayoutField<F extends object = {}> = Field<F, LayoutGrid<F>>;
+```
+
+A Field owned by a LayoutGrid.
+
+[Details](../grid-parcels/API.md#agent-loom-connection)
+
+<a id="grid-layer"></a>
+<a id="api-392"></a>
+
+### grid.layer
+
+Status: planned
+
+```ts
+grid.layer(options?: { initial?: number }): NumericLayer<F>
+```
+
+Create one number per field, stored in a typed array in grid.fields order; initial defaults to 0. A layer is separate from field state and consumes no randomness.
+
+[Details](api-reference.md#grid-numeric-layers)
+
+<a id="type-numeric-layer"></a>
+<a id="api-393"></a>
+
+### NumericLayer
+
+Status: planned
+
+```ts
+interface NumericLayer<F extends object = {}> {
+  readonly values: Float64Array; // grid.fields order
+  get(field: Field<F>): number;
+  set(field: Field<F>, value: number): void;
+}
+```
+
+values is the live backing array for fast loops. get and set throw TypeError for a field of another grid and RangeError for a nonfinite value.
+
+[Details](api-reference.md#grid-numeric-layers)
+
+<a id="grid-reachable"></a>
+<a id="api-394"></a>
+
+### grid.reachable
+
+Status: planned
+
+```ts
+grid.reachable(options: {
+  from: Field<F>;
+  canEnter?: (field: Field<F>) => boolean;
+  neighborhood?: "faces" | "moore";
+}): readonly Field<F>[]
+```
+
+Flood fill: return fields reachable from `from` through neighbors that canEnter accepts (default: all), excluding `from` as graph.reachable does. Breadth-first order, ties in field order; neighborhood defaults to "faces"; no randomness.
+
+[Details](api-reference.md#grid-flood-fill)
+
 <a id="area-field"></a>
 
 ## Field
+
+Target: `library-core/grid`.
 
 <a id="field-id"></a>
 <a id="api-60"></a>
 
 ### field.id
+
+Status: delivered
 
 ```ts
 field.id: string // readonly
@@ -877,6 +1261,8 @@ Read the immutable opaque identity of the field.
 
 ### field.grid
 
+Status: delivered
+
 ```ts
 field.grid: Grid<F> // readonly
 ```
@@ -889,6 +1275,8 @@ Read the owning Grid; field membership is fixed by construction.
 <a id="api-69"></a>
 
 ### field.x
+
+Status: delivered
 
 ```ts
 field.x: number // readonly
@@ -903,6 +1291,8 @@ Immutable cell-center coordinate derived from the owning Grid and field index.
 
 ### field.y
 
+Status: delivered
+
 ```ts
 field.y: number // readonly
 ```
@@ -915,6 +1305,8 @@ Immutable cell-center coordinate derived from the owning Grid and field index.
 <a id="api-71"></a>
 
 ### field.z
+
+Status: delivered
 
 ```ts
 field.z: number | undefined // readonly
@@ -929,13 +1321,15 @@ Immutable cell-center z coordinate for XYZ grids; absent for XY grids.
 
 ### Field
 
+Status: delivered
+
 ```ts
 Field<F>
 ```
 
 Grid-owned field identity with immutable cell coordinates and directly writable typed properties F. Uses the supported-data and copying rules of `Agent<S>`; each field starts with an independent data copy. Reserved root names: id, grid, x, y, z.
 
-[Details](api-reference.md#field-state)~~
+[Details](api-reference.md#field-state)
 
 <a id="area-graph-and-edge"></a>
 
@@ -943,10 +1337,14 @@ Grid-owned field identity with immutable cell coordinates and directly writable 
 
 ## Graph
 
+Target: `library-core/graph`.
+
 <a id="graph-add"></a>
 <a id="api-78"></a>
 
 ### Graph.create
+
+Status: delivered
 
 ```ts
 Graph.create<N extends object = object>(options?: {
@@ -963,6 +1361,8 @@ Create a graph with optional parallel edges, self-loops and independently copied
 
 ### Graph.create
 
+Status: delivered
+
 ```ts
 Graph.create<N extends object = object, E extends object = {}>(options: {
   edgeState: E; parallel?: boolean; selfLoops?: boolean
@@ -978,6 +1378,8 @@ Create a graph with optional parallel edges, self-loops and independently copied
 
 ### graph.generate
 
+Status: delivered
+
 ```ts
 graph.generate(options: GeneratorOptions<N>): readonly Edge<N, E>[]
 ```
@@ -990,6 +1392,8 @@ Add a selected standard network structure among existing unique member nodes and
 <a id="api-131"></a>
 
 ### graph.parallel
+
+Status: delivered
 
 ```ts
 graph.parallel: boolean
@@ -1004,6 +1408,8 @@ Read-only creation policy; defaults to false. Enables separately keyed parallel 
 
 ### graph.selfLoops
 
+Status: delivered
+
 ```ts
 graph.selfLoops: boolean
 ```
@@ -1017,6 +1423,8 @@ Read-only creation policy; defaults to false. Allows edges whose endpoints are t
 
 ### graph.delete
 
+Status: delivered
+
 ```ts
 graph.delete(options?: { edgesOnly?: boolean }): void
 ```
@@ -1029,6 +1437,8 @@ Delete graph contents while preserving the graph and node objects. edgesOnly ret
 <a id="api-86"></a>
 
 ### graph.view
+
+Status: target
 
 ```ts
 graph.view(options?: {
@@ -1047,6 +1457,8 @@ Return a live structurally read-only filtered or directional view sharing the so
 
 ### graph.copy
 
+Status: delivered
+
 ```ts
 graph.copy(options?: {
   nodes?: readonly N[]; edges?: readonly Edge<N, E>[];
@@ -1062,6 +1474,8 @@ Create independent graph structure and copied edge data while retaining original
 <a id="api-89"></a>
 
 ### graph.traverse
+
+Status: target
 
 ```ts
 graph.traverse(options: {
@@ -1079,6 +1493,8 @@ Traverse each reachable node once in deterministic breadth/depth order, includin
 
 ### graph.reachable
 
+Status: target
+
 ```ts
 graph.reachable(options: {
   from: N; direction?: "out" | "in" | "all"; depth?: number
@@ -1093,6 +1509,8 @@ Return reachable node identities excluding the source, under explicit direction 
 <a id="api-91"></a>
 
 ### graph.components
+
+Status: delivered
 
 ```ts
 graph.components(options?: {
@@ -1109,6 +1527,8 @@ Return weak, strong or biconnected node components; biconnected analysis require
 
 ### graph.isConnected
 
+Status: delivered
+
 ```ts
 graph.isConnected(options?: { mode?: "weak" | "strong" }): boolean
 ```
@@ -1121,6 +1541,8 @@ Test connectivity in weak or strong mode without mutating the graph.
 <a id="api-93"></a>
 
 ### graph.bridges
+
+Status: target
 
 ```ts
 graph.bridges(): readonly Edge<N, E>[]
@@ -1135,6 +1557,8 @@ Find bridge edges in an undirected graph.
 
 ### graph.articulations
 
+Status: target
+
 ```ts
 graph.articulations(): readonly N[]
 ```
@@ -1146,10 +1570,12 @@ Find articulation node identities in an undirected graph.
 <a id="graph-find-route"></a>
 <a id="api-96"></a>
 
-### graph.findRoute
+### graph.route
+
+Status: target
 
 ```ts
-graph.findRoute(options: {
+graph.route(options: {
   from: N; to: N; cost?: (edge: Edge<N, E>) => number;
   algorithm?: "auto" | "breadth" | "dijkstra" | "bellman-ford"
 }): Route<N, E> | undefined
@@ -1163,6 +1589,8 @@ Return a minimum-cost route, or undefined when the target is unreachable; releva
 <a id="api-97"></a>
 
 ### graph.distances
+
+Status: delivered
 
 ```ts
 graph.distances(options: {
@@ -1180,6 +1608,8 @@ Return shortest costs from one source to reachable nodes; unreachable nodes are 
 
 ### graph.allDistances
 
+Status: delivered
+
 ```ts
 graph.allDistances(options?: {
   cost?: (edge: Edge<N, E>) => number;
@@ -1195,6 +1625,8 @@ Return shortest-cost maps for all node sources; unreachable targets are omitted 
 <a id="api-99"></a>
 
 ### graph.routes
+
+Status: target
 
 ```ts
 graph.routes(options: {
@@ -1212,6 +1644,8 @@ Enumerate a bounded number of vertex-simple routes between endpoints; parallel-e
 
 ### graph.distanceSummary
 
+Status: delivered
+
 ```ts
 graph.distanceSummary(options?: {
   cost?: (edge: Edge<N, E>) => number;
@@ -1228,6 +1662,8 @@ Summarize nonnegative shortest-path distances as mean, diameter, radius, eccentr
 <a id="api-101"></a>
 
 ### graph.analyze
+
+Status: delivered
 
 ```ts
 graph.analyze(options: {
@@ -1249,6 +1685,8 @@ Compute the selected degree, closeness, betweenness, eigenvector or PageRank nod
 
 ### graph.triangles
 
+Status: target
+
 ```ts
 graph.triangles(): readonly (readonly [N, N, N])[]
 ```
@@ -1261,6 +1699,8 @@ Return each triangle once on a simple undirected loop-free graph.
 <a id="api-103"></a>
 
 ### graph.clustering
+
+Status: target
 
 ```ts
 graph.clustering(options?: {
@@ -1276,6 +1716,8 @@ Return local and mean clustering plus transitivity for a simple undirected loop-
 <a id="api-104"></a>
 
 ### graph.communities
+
+Status: target
 
 ```ts
 graph.communities(options?: {
@@ -1295,6 +1737,8 @@ Return an undirected community partition; Louvain and label propagation require 
 
 ### graph.modularity
 
+Status: target
+
 ```ts
 graph.modularity(partition: readonly (readonly N[])[], options?: {
   weight?: (edge: Edge<N, E>) => number; resolution?: number
@@ -1310,6 +1754,8 @@ Evaluate a complete node partition using explicit resolution and optional nonneg
 
 ### graph.cliques
 
+Status: target
+
 ```ts
 graph.cliques(options: { limit: number; minSize?: number }): readonly (readonly N[])[]
 ```
@@ -1322,6 +1768,8 @@ Return maximal cliques within the result limit. Default minSize: 1. Requires sim
 <a id="api-107"></a>
 
 ### graph.bipartition
+
+Status: target
 
 ```ts
 graph.bipartition(): { left: readonly N[]; right: readonly N[] } | undefined
@@ -1336,6 +1784,8 @@ Return left/right node partitions, or undefined when the graph is not bipartite.
 
 ### graph.matching
 
+Status: target
+
 ```ts
 graph.matching(options?: {
   left?: readonly N[]
@@ -1349,10 +1799,12 @@ Return maximum-cardinality bipartite matching edges; deterministic tie order fol
 <a id="graph-find-cycle"></a>
 <a id="api-109"></a>
 
-### graph.findCycle
+### graph.cycle
+
+Status: target
 
 ```ts
-graph.findCycle(options?: {
+graph.cycle(options?: {
   direction?: "original" | "undirected"
 }): readonly Edge<N, E>[] | undefined
 ```
@@ -1366,6 +1818,8 @@ Return a deterministic cycle as original edge identities, or undefined when none
 
 ### graph.topological
 
+Status: target
+
 ```ts
 graph.topological(): readonly N[]
 ```
@@ -1378,6 +1832,8 @@ Return a stable topological node ordering; cyclic or unsupported input rejects.
 <a id="api-111"></a>
 
 ### graph.transitive
+
+Status: target
 
 ```ts
 graph.transitive(options: {
@@ -1394,6 +1850,8 @@ Create a transitive closure or reduction for a supported directed acyclic graph,
 
 ### graph.isTree
 
+Status: target
+
 ```ts
 graph.isTree(options?: { forest?: boolean }): boolean
 ```
@@ -1406,6 +1864,8 @@ Test whether an undirected graph is a tree, or a forest when requested.
 <a id="api-113"></a>
 
 ### graph.spanningTree
+
+Status: target
 
 ```ts
 graph.spanningTree(options?: {
@@ -1422,6 +1882,8 @@ Return minimum spanning edges in stable Kruskal order; signed finite costs are a
 <a id="api-114"></a>
 
 ### graph.flow
+
+Status: target
 
 ```ts
 graph.flow(options: {
@@ -1440,6 +1902,8 @@ Return total value, flowByEdge and the residual source/sink cut partitions witho
 
 ### graph.toData
 
+Status: target
+
 ```ts
 graph.toData(options?: { nodeId?: (node: N) => string }): GraphData<N, E>
 ```
@@ -1453,6 +1917,8 @@ Return detached portable node/edge data, graph policies and edge defaults, using
 
 ### Graph.fromData
 
+Status: target
+
 ```ts
 Graph.fromData(data: unknown): Graph<Record<string, unknown>, Record<string, unknown>>
 ```
@@ -1465,6 +1931,8 @@ Validate detached graph data and create a graph with plain record state whose fi
 <a id="api-119"></a>
 
 ### Graph.fromData
+
+Status: target
 
 ```ts
 Graph.fromData<N extends object, E extends object>(data: unknown, options: {
@@ -1482,6 +1950,8 @@ Validate detached graph data through the supplied node and edge-state callbacks 
 
 ### graph.matrix
 
+Status: target
+
 ```ts
 graph.matrix(options?: {
   weight?: (edge: Edge<N, E>) => number
@@ -1496,6 +1966,8 @@ Return a dense weighted adjacency matrix and node ordering; parallel arc weights
 <a id="api-122"></a>
 
 ### Graph.fromMatrix
+
+Status: target
 
 ```ts
 Graph.fromMatrix<N extends object>(data: {
@@ -1512,6 +1984,8 @@ Validate a square matrix and create weighted edges for nonzero entries; undirect
 
 ### graph.layout
 
+Status: target
+
 ```ts
 graph.layout(options: LayoutOptions<N>): ReadonlyMap<N, Position>
 ```
@@ -1525,13 +1999,15 @@ Compute detached planar positions using circle, radial, spring or Tutte placemen
 
 ### ReadonlyGraph
 
+Status: target
+
 ```ts
 type ReadonlyGraph<N extends object, E extends object> = Pick<Graph<N, E>,
   "hasNode" | "hasEdge" | "neighbors" | "traverse" | "reachable" |
   "components" | "connected" | "bridges" | "articulations" |
-  "findRoute" | "distances" | "allDistances" | "routes" | "distanceSummary" |
+  "route" | "distances" | "allDistances" | "routes" | "distanceSummary" |
   "analyze" | "triangles" | "clustering" | "communities" | "modularity" |
-  "cliques" | "bipartition" | "matching" | "findCycle" | "topological" |
+  "cliques" | "bipartition" | "matching" | "cycle" | "topological" |
   "transitive" | "isTree" | "spanningTree" | "flow" | "layout" |
   "matrix" | "toData" | "copy" | "view"> & {
   readonly parallel: boolean; readonly selfLoops: boolean;
@@ -1548,6 +2024,8 @@ Structurally read-only graph view exposing shared original identities and the li
 <a id="api-95"></a>
 
 ### Route
+
+Status: target
 
 ```ts
 type Route<N extends object,E extends object> = {
@@ -1566,6 +2044,8 @@ Frozen route result with original node/edge identities, captured cost and option
 <a id="api-116"></a>
 
 ### GeneratorOptions
+
+Status: delivered
 
 ```ts
 type GeneratorOptions<N> =
@@ -1593,6 +2073,8 @@ Discriminated options for the supported deterministic and random network generat
 
 ### GraphData
 
+Status: target
+
 ```ts
 type GraphData<NodeState, EdgeState> = {
   schema: "agent-loom.graph"; version: 1;
@@ -1612,6 +2094,8 @@ Versioned detached graph structure with node state, edge state, representation p
 
 ### LayoutOptions
 
+Status: target
+
 ```ts
 type LayoutOptions<N> =
   | { kind: "circle"; radius?: number; center?: Position }
@@ -1626,14 +2110,54 @@ Discriminated options for pure circle, radial, spring or Tutte coordinate placem
 
 [Details](api-reference.md#graph-layout)
 
+<a id="type-graph"></a>
+<a id="api-395"></a>
+
+### Graph
+
+Status: delivered
+
+```ts
+Graph<N, E>
+```
+
+Topology and lifecycle owner for canonical object nodes and Edges. Collections iterate in insertion order; structural changes during an active iteration or query callback throw. Query results are detached.
+
+[Details](api-reference.md#graph-representations)
+
+<a id="graph-find-route-options"></a>
+<a id="api-396"></a>
+
+### graph.route
+
+Status: planned
+
+```ts
+graph.route(options: {
+  from: N; to: N;
+  cost?: (edge: Edge<N, E>) => number;
+  canUse?: (edge: Edge<N, E>) => boolean;
+  heuristic?: (node: N) => number;
+  algorithm?: "auto" | "breadth" | "dijkstra" | "bellman-ford"
+}): Route<N, E> | undefined
+```
+
+Planned canUse and heuristic options for the target graph.route (api-96), not a second route API. canUse skips edges (default: every edge is usable); an admissible heuristic gives goal-directed search with the Dijkstra result. Unreachable targets return undefined; no randomness.
+
+[Details](api-reference.md#graph-route-search-options)
+
 <a id="area-node"></a>
 
 ## Node
+
+Target: `library-core/graph`.
 
 <a id="graph-nodes-add"></a>
 <a id="api-127"></a>
 
 ### graph.nodes.add
+
+Status: delivered
 
 ```ts
 graph.nodes.add(node: N): N
@@ -1648,6 +2172,8 @@ Add an existing node identity to this graph; graph attachment does not attach it
 
 ### graph.nodes.size
 
+Status: delivered
+
 ```ts
 graph.nodes.size: number
 ```
@@ -1660,6 +2186,8 @@ Read the current number of graph node identities.
 <a id="api-129"></a>
 
 ### graph.nodes[Symbol.iterator]
+
+Status: delivered
 
 ```ts
 graph.nodes[Symbol.iterator](): Iterator<N>
@@ -1674,6 +2202,8 @@ Iterate current nodes in stable insertion order. Mutation during a collection it
 
 ### graph.hasNode
 
+Status: delivered
+
 ```ts
 graph.hasNode(node: N): boolean
 ```
@@ -1686,6 +2216,8 @@ Check whether the supplied object identity belongs to the graph.
 <a id="api-77"></a>
 
 ### graph.neighbors
+
+Status: delivered
 
 ```ts
 graph.neighbors(node: N, options?: { direction?: "out" | "in" | "all" }): readonly N[]
@@ -1700,6 +2232,8 @@ Return unique adjacent node identities in stable node order; direction defaults 
 
 ### graph.nodes.delete
 
+Status: delivered
+
 ```ts
 graph.nodes.delete(node: N): void
 ```
@@ -1712,10 +2246,14 @@ Remove membership and incident edges in this graph only; absent membership delet
 
 ## Edge
 
+Target: `library-core/graph`; Agent ties need `library-core/world-composition`.
+
 <a id="graph-edges-add"></a>
 <a id="api-80"></a>
 
 ### graph.edges.add
+
+Status: delivered
 
 ```ts
 graph.edges.add(options: {
@@ -1733,6 +2271,8 @@ Create or reuse an edge between existing graph nodes; directed defaults to false
 
 ### edge.id
 
+Status: delivered
+
 ```ts
 edge.id: string // readonly
 ```
@@ -1745,6 +2285,8 @@ Read the immutable opaque process-local edge identity; loading assigns a fresh i
 <a id="api-edge-graph"></a>
 
 ### edge.graph
+
+Status: delivered
 
 ```ts
 edge.graph: Graph<N, E> // readonly
@@ -1759,6 +2301,8 @@ Read the immutable owning Graph reference, including after edge deletion.
 
 ### edge.alive
 
+Status: delivered
+
 ```ts
 edge.alive: boolean // readonly
 ```
@@ -1771,6 +2315,8 @@ Read edge lifecycle state; starts true and becomes false on direct, graph or end
 <a id="api-133"></a>
 
 ### edge.from
+
+Status: delivered
 
 ```ts
 edge.from: N
@@ -1785,6 +2331,8 @@ Read the stored endpoint identity. For tied Agent edges, from is the parent and 
 
 ### edge.to
 
+Status: delivered
+
 ```ts
 edge.to: N
 ```
@@ -1797,6 +2345,8 @@ Read the stored endpoint identity. For tied Agent edges, from is the parent and 
 <a id="api-135"></a>
 
 ### edge.directed
+
+Status: delivered
 
 ```ts
 edge.directed: boolean
@@ -1811,6 +2361,8 @@ Read the stored per-edge traversal direction flag; defaults to false. Graph has 
 
 ### edge.key
 
+Status: delivered
+
 ```ts
 edge.key: string | undefined
 ```
@@ -1823,6 +2375,8 @@ Immutable graph-scoped key for a parallel edge; simple edges have no key. Deleti
 <a id="api-137"></a>
 
 ### edge.path
+
+Status: delivered
 
 ```ts
 edge.path: readonly Position[] | undefined
@@ -1837,6 +2391,8 @@ Read the optional stored path geometry. Its coordinate dimension must match its 
 
 ### edge.tieMode
 
+Status: target
+
 ```ts
 edge.tieMode: "none" | "free" | "fixed"
 ```
@@ -1849,6 +2405,8 @@ Read the current motion-coupling mode; new edges default to none. Configure it w
 <a id="api-82"></a>
 
 ### graph.edges.size
+
+Status: delivered
 
 ```ts
 graph.edges.size: number
@@ -1863,6 +2421,8 @@ Read the current number of graph edge identities.
 
 ### graph.edges.has
 
+Status: delivered
+
 ```ts
 graph.edges.has(edge: Edge<N, E>): boolean
 ```
@@ -1875,6 +2435,8 @@ Check current membership of this exact edge identity.
 <a id="api-84"></a>
 
 ### graph.edges.between
+
+Status: delivered
 
 ```ts
 graph.edges.between(from: N, to: N, options?: {
@@ -1891,6 +2453,8 @@ Read matching edge identities between endpoints under the requested direction.
 
 ### graph.hasEdge
 
+Status: delivered
+
 ```ts
 graph.hasEdge(from: N, to: N): boolean
 ```
@@ -1903,6 +2467,8 @@ Check whether a connection exists under the graph’s endpoint/direction rules.
 <a id="api-130"></a>
 
 ### graph.edges[Symbol.iterator]
+
+Status: delivered
 
 ```ts
 graph.edges[Symbol.iterator](): Iterator<Edge<N, E>>
@@ -1917,6 +2483,8 @@ Iterate current edges in stable insertion order. Mutation during a collection it
 
 ### edge.tie
 
+Status: target
+
 ```ts
 edge.tie(mode?: "none" | "free" | "fixed"): void
 ```
@@ -1929,6 +2497,8 @@ Configure parent-to-child Agent motion through this edge; tie() defaults to fixe
 <a id="api-74"></a>
 
 ### edge.delete
+
+Status: delivered
 
 ```ts
 edge.delete(): void
@@ -1943,6 +2513,8 @@ Idempotently delete this edge and its tie relation while preserving endpoint obj
 
 ### Edge
 
+Status: delivered
+
 ```ts
 Edge<N, E>
 ```
@@ -1955,10 +2527,14 @@ Graph-owned connection between node identities N with directly writable typed pr
 
 ## Random
 
+Target: `library-core/random`.
+
 <a id="random-add"></a>
 <a id="api-138"></a>
 
 ### Random.create
+
+Status: delivered
 
 ```ts
 Random.create(options?: { seed?: number | "random"; algorithm?: "mulberry32" | "mt-word-stream/1" }): Random
@@ -1973,6 +2549,8 @@ Create an independent Random; seed defaults to 1 and algorithm to mulberry32. Se
 
 ### random.algorithm
 
+Status: delivered
+
 ```ts
 random.algorithm: "mulberry32" | "mt-word-stream/1"
 ```
@@ -1985,6 +2563,8 @@ Read-only selected stream profile. The target MT profile pins the documented com
 <a id="api-156"></a>
 
 ### random.seed
+
+Status: delivered
 
 ```ts
 random.seed: number
@@ -1999,6 +2579,8 @@ Read the actual numeric initial/reseed metadata, including the seed selected by 
 
 ### random.number
 
+Status: delivered
+
 ```ts
 random.number(): number
 ```
@@ -2011,6 +2593,8 @@ Draw a uniform real value in [0,1) from the selected stream.
 <a id="api-142"></a>
 
 ### random.number
+
+Status: delivered
 
 ```ts
 random.number(options: { distribution?: "uniform", min?: number, max?: number, integer?: boolean }): number
@@ -2025,6 +2609,8 @@ Draw a uniform real or integer value; defaults are min 0, max 1 and integer fals
 
 ### random.number
 
+Status: delivered
+
 ```ts
 random.number(options: { distribution: "normal", mean?: number, deviation?: number }): number
 ```
@@ -2037,6 +2623,8 @@ Draw a normal value with mean default 0 and deviation default 1. Gaussian-cache 
 <a id="api-144"></a>
 
 ### random.number
+
+Status: delivered
 
 ```ts
 random.number(options: { distribution: "exponential" | "poisson", mean?: number }): number
@@ -2051,6 +2639,8 @@ Draw an exponential or Poisson value with mean default 1. Accepted signed means 
 
 ### random.number
 
+Status: delivered
+
 ```ts
 random.number(options: { distribution: "gamma", shape: number, rate: number }): number
 ```
@@ -2060,8 +2650,11 @@ Draw a gamma value using positive finite shape and rate; mean equals shape/rate.
 [Details](api-reference.md#complete-distributions)
 
 <a id="random-number-additive-distributions"></a>
+<a id="api-random-number-additive"></a>
 
 ### Additive random.number variants
+
+Status: delivered
 
 ```ts
 random.number(options: { distribution: "bernoulli", probability: number }): number
@@ -2077,6 +2670,8 @@ Bernoulli returns numeric 0 or 1 for finite probability in [0,1]. Triangular req
 
 ### random.number
 
+Status: target
+
 ```ts
 random.number(options: { distribution?: "uniform", bound: number, integer?: boolean }): number
 ```
@@ -2089,6 +2684,8 @@ Pinned-MT uniform draw using a finite signed bound; unsupported by Mulberry. Flo
 <a id="api-147"></a>
 
 ### random.sample
+
+Status: delivered
 
 ```ts
 random.sample<T>(source: Iterable<T>, options?: {
@@ -2106,6 +2703,8 @@ Perform weighted selection in draw/source order or an explicitly requested versi
 
 ### random.state
 
+Status: delivered
+
 ```ts
 random.state: RandomState // read/write validated continuation
 ```
@@ -2118,6 +2717,8 @@ Read a detached deeply frozen continuation, or assign a validated matching conti
 <a id="api-148"></a>
 
 ### random.reseed
+
+Status: delivered
 
 ```ts
 random.reseed(seed: number): void
@@ -2132,6 +2733,8 @@ Replace the stream continuation and discard its Gaussian cache using the supplie
 
 ### random.copy
 
+Status: delivered
+
 ```ts
 random.copy(): Random
 ```
@@ -2144,6 +2747,8 @@ Create an independent exact continuation including any cached Gaussian; consumes
 <a id="api-150"></a>
 
 ### random.local
+
+Status: delivered
 
 ```ts
 random.local<R>(action: () => R): R
@@ -2158,6 +2763,8 @@ Run synchronous work with temporary randomness and restore the prior stream in f
 
 ### random.raw
 
+Status: target
+
 ```ts
 random.raw(options: { kind: "int32" }): number
 ```
@@ -2170,6 +2777,8 @@ Draw a signed 32-bit integer from one raw MT word. Requires the mt-word-stream/1
 <a id="api-152"></a>
 
 ### random.raw
+
+Status: target
 
 ```ts
 random.raw(options: { kind: "int31", bound: number }): number
@@ -2184,6 +2793,8 @@ Draw an integer in [0,bound) using the pinned bounded-int rejection schedule; bo
 
 ### random.raw
 
+Status: target
+
 ```ts
 random.raw(options: { kind: "int64", bound?: bigint }): bigint
 ```
@@ -2197,6 +2808,8 @@ Draw a signed 64-bit bigint from two MT words, or a bigint in [0,bound) when a b
 
 ### random.raw
 
+Status: delivered
+
 ```ts
 random.raw(options: { kind: "double" | "gaussian" }): number
 ```
@@ -2209,6 +2822,8 @@ Draw a double in [0,1) from the selected profile, or a cached/polar Gaussian fro
 <a id="api-139"></a>
 
 ### RandomState
+
+Status: delivered
 
 ```ts
 type RandomState = {
@@ -2226,14 +2841,33 @@ Versioned RNG continuation containing algorithm, seed, internal words and Gaussi
 
 [Details](api-reference.md#random-continuation)
 
+<a id="type-random"></a>
+<a id="api-397"></a>
+
+### Random
+
+Status: delivered
+
+```ts
+Random
+```
+
+A seeded stream; the same seed and operation order reproduce the same draws. Delivered streams use mulberry32.
+
+[Details](api-reference.md#complete-random-general)
+
 <a id="area-input"></a>
 
 ## Input
 
+Target: open; the accepted tree has no Input module (see [open decisions](#open-decisions)).
+
 <a id="input-add"></a>
 <a id="api-157"></a>
 
-### Input.add
+### Input.create
+
+Status: target
 
 ```ts
 Input.create(): Input
@@ -2248,6 +2882,8 @@ Create an independent Input with no property bindings.
 
 ### input.bindings
 
+Status: target
+
 ```ts
 input.bindings: readonly { object: object; property: string; type: "number" | "string" | "boolean"; min?: number; max?: number; step?: number }[]
 ```
@@ -2260,6 +2896,8 @@ Read-only insertion-order array of frozen binding descriptors retaining original
 <a id="api-158"></a>
 
 ### input.add
+
+Status: target
 
 ```ts
 input.add(object: object, property: string, constraints?: { min?: number; max?: number; step?: number }): void
@@ -2274,6 +2912,8 @@ Expose an existing finite number, string or boolean property with optional numer
 
 ### input.set
 
+Status: target
+
 ```ts
 input.set(object: object, property: string, value: number | string | boolean): void
 ```
@@ -2287,6 +2927,8 @@ Validate the bound type, range and step before assigning once. Invalid values pr
 
 ### input.delete
 
+Status: target
+
 ```ts
 input.delete(object: object, property: string): void
 ```
@@ -2299,10 +2941,14 @@ Remove a property binding without changing its model value; absent bindings are 
 
 ## stats
 
+Target: `library-core/stats`.
+
 <a id="stats-describe"></a>
 <a id="api-162"></a>
 
 ### stats.describe
+
+Status: delivered
 
 ```ts
 stats.describe(values: Iterable<number>, options?: { sample?: boolean }): Summary
@@ -2317,6 +2963,8 @@ Return count, sum, extrema, mean, median, variance and standard deviation withou
 
 ### stats.histogram
 
+Status: delivered
+
 ```ts
 stats.histogram(values: Iterable<number>, options: { edges: readonly number[] }): Histogram
 ```
@@ -2329,6 +2977,8 @@ Count finite values against explicit increasing bin edges and report underflow/o
 <a id="api-164"></a>
 
 ### stats.gini
+
+Status: delivered
 
 ```ts
 stats.gini(values: Iterable<number>): number
@@ -2343,6 +2993,8 @@ Return finite-population inequality for nonnegative holdings. Empty or all-zero 
 
 ### stats.alignment
 
+Status: target
+
 ```ts
 stats.alignment(headings: Iterable<number>): number
 ```
@@ -2355,6 +3007,8 @@ Return the magnitude of the mean heading unit vector in [0,1]. Empty input retur
 <a id="api-166"></a>
 
 ### Summary
+
+Status: delivered
 
 ```ts
 type Summary = { readonly valueCount:number; readonly sum:number;
@@ -2372,6 +3026,8 @@ Detached numeric summary; empty input has valueCount/sum zero and unavailable ex
 
 ### Histogram
 
+Status: delivered
+
 ```ts
 type Histogram = { readonly edges:readonly number[]; readonly counts:readonly number[];
   readonly underflowValueCount:number; readonly overflowValueCount:number };
@@ -2381,14 +3037,97 @@ Detached bin edges and counts with explicit underflow and overflow totals.
 
 [Details](api-reference.md#complete-statistics)
 
+<a id="time-weighted-add"></a>
+<a id="api-398"></a>
+
+### TimeWeighted.create
+
+Status: delivered
+
+```ts
+TimeWeighted.create(options: { at?: number; value: number }): TimeWeighted
+```
+
+Start a time-weighted level at `at` (default 0) holding value. Times are finite and nonnegative.
+
+[Details](../development/des-contract.md#observations-trace-data-and-random-draws)
+
+<a id="time-weighted-set"></a>
+<a id="api-399"></a>
+
+### timeWeighted.set
+
+Status: delivered
+
+```ts
+timeWeighted.set(sample: { at: number; value: number }): void
+```
+
+Close the current interval at a nondecreasing `at` and hold value from then on.
+
+[Details](../development/des-contract.md#observations-trace-data-and-random-draws)
+
+<a id="time-weighted-read"></a>
+<a id="api-400"></a>
+
+### timeWeighted.read
+
+Status: delivered
+
+```ts
+timeWeighted.read(options: { until: number }): TimeWeightedSummary
+```
+
+Return duration, integral and mean from the start time until `until` without changing state; mean is undefined for zero duration.
+
+[Details](../development/des-contract.md#observations-trace-data-and-random-draws)
+
+<a id="type-time-weighted"></a>
+<a id="api-401"></a>
+
+### TimeWeighted
+
+Status: delivered
+
+```ts
+TimeWeighted
+```
+
+Integrates a right-continuous piecewise-constant value over nondecreasing explicit time.
+
+[Details](../development/des-contract.md#observations-trace-data-and-random-draws)
+
+<a id="type-time-weighted-summary"></a>
+<a id="api-402"></a>
+
+### TimeWeightedSummary
+
+Status: delivered
+
+```ts
+interface TimeWeightedSummary {
+  readonly duration: number;
+  readonly integral: number;
+  readonly mean: number | undefined;
+}
+```
+
+Duration, integral and mean of a TimeWeighted read; mean is undefined for zero duration.
+
+[Details](../development/des-contract.md#observations-trace-data-and-random-draws)
+
 <a id="area-geometry"></a>
 
 ## geometry
+
+Target: `library-core/geometry`; planar polygon operations and types move to `library-core/polygon-layout`.
 
 <a id="geometry-contains"></a>
 <a id="api-177"></a>
 
 ### geometry.contains
+
+Status: delivered
 
 ```ts
 geometry.contains(polygon:PlanarPolygon,point:{x:number;y:number},options?:{boundary?:"include"|"exclude"}):boolean
@@ -2403,6 +3142,8 @@ Test whether a planar polygon contains a point, honoring holes and the explicit 
 
 ### geometry.normalize
 
+Status: delivered
+
 ```ts
 geometry.normalize(point:Position, options:{space:Space; endpoints?:"closed"|"half-open"}):Position | undefined
 ```
@@ -2415,6 +3156,8 @@ Return detached coordinates normalized to the supplied spatial boundaries, or un
 <a id="api-179"></a>
 
 ### geometry.displacement
+
+Status: target
 
 ```ts
 geometry.displacement(from:Position,to:Position,options:{space:Space;wrap?:boolean}):Position
@@ -2429,6 +3172,8 @@ Return the coordinate displacement between compatible positions; wrapping uses t
 
 ### geometry.distance
 
+Status: delivered
+
 ```ts
 geometry.distance(from:Position,to:Position,options:{space:Space;wrap?:boolean}):number
 ```
@@ -2441,6 +3186,8 @@ Return Euclidean distance using the selected spatial displacement and optional w
 <a id="api-181"></a>
 
 ### geometry.bearing
+
+Status: target
 
 ```ts
 geometry.bearing(from:Position,to:Position,options:{space:Space;wrap?:boolean}):
@@ -2456,6 +3203,8 @@ Return planar heading or XYZ heading/pitch toward a compatible position; coincid
 
 ### geometry.neighbors
 
+Status: target
+
 ```ts
 geometry.neighbors(cell:Position,options:{space:Space;cellSize?:number;neighborhood?:"moore"|"faces"}):readonly Position[]
 ```
@@ -2468,6 +3217,8 @@ Return detached adjacent cell-center positions using Moore or face adjacency and
 <a id="api-183"></a>
 
 ### geometry.direction
+
+Status: delivered
 
 ```ts
 geometry.direction(orientation:Orientation):Position
@@ -2482,6 +3233,8 @@ Convert orientation angles to a detached unit forward vector without creating or
 
 ### geometry.rotate
 
+Status: target
+
 ```ts
 geometry.rotate(orientation:Orientation,options:{angle:number;axis?:"x"|"y"|"z"}):Orientation
 ```
@@ -2495,6 +3248,8 @@ Return a detached orientation after an explicit local-axis turn or facing a targ
 
 ### geometry.rotate
 
+Status: target
+
 ```ts
 geometry.rotate(orientation:Orientation,options:{towards:Position;from:Position;space:Space;wrap?:boolean;roll?:"preserve"|"zero"}):Orientation
 ```
@@ -2507,6 +3262,8 @@ Return a detached orientation after an explicit local-axis turn or facing a targ
 <a id="api-186"></a>
 
 ### geometry.splitPath
+
+Status: target
 
 ```ts
 geometry.splitPath(from:{x:number;y:number},to:{x:number;y:number},options:{space:Space;mode?:"clip"|"reject"}):
@@ -2522,6 +3279,8 @@ Return detached planar path pieces split at wrap seams or clipped/rejected at ha
 
 ### geometry.bounds
 
+Status: delivered
+
 ```ts
 geometry.bounds(features:PlanarDataset | readonly PlanarFeature[]):Bounds | undefined
 ```
@@ -2534,6 +3293,8 @@ Return planar feature bounds, or undefined when there are no non-null coordinate
 <a id="api-188"></a>
 
 ### geometry.map
+
+Status: delivered
 
 ```ts
 geometry.map(point:{x:number;y:number},options:{from:Bounds;to:Bounds;mode?:"uniform-centered"|"independent-axes"}):{readonly x:number;readonly y:number}
@@ -2548,6 +3309,8 @@ Map planar coordinates between explicit bounds with uniform centered or independ
 
 ### Orientation
 
+Status: delivered
+
 ```ts
 type Orientation = { readonly heading:number; readonly pitch?:number; readonly roll?:number };
 ```
@@ -2560,6 +3323,8 @@ Heading and optional pitch/roll in degrees, using the library’s documented loc
 <a id="api-170"></a>
 
 ### Bounds
+
+Status: delivered
 
 ```ts
 type Bounds = readonly [number,number,number,number]; // minX,maxX,minY,maxY
@@ -2574,6 +3339,8 @@ Planar coordinate envelope ordered as minimum x, maximum x, minimum y, maximum y
 
 ### PlanarXY
 
+Status: delivered
+
 ```ts
 type PlanarXY = readonly [number,number];
 ```
@@ -2587,6 +3354,8 @@ Finite planar coordinate pair ordered as x, y.
 
 ### PlanarPolygon
 
+Status: delivered
+
 ```ts
 type PlanarPolygon = {readonly type:"Polygon";readonly coordinates:readonly (readonly PlanarXY[])[]};
 ```
@@ -2599,6 +3368,8 @@ Planar polygon rings: exterior first, followed by holes, with explicit repeated 
 <a id="api-173"></a>
 
 ### PlanarGeometry
+
+Status: delivered
 
 ```ts
 type PlanarGeometry =
@@ -2619,6 +3390,8 @@ Supported planar GeoJSON geometry variants, including nested geometry collection
 
 ### PlanarJson
 
+Status: delivered
+
 ```ts
 type PlanarJson = null | boolean | number | string | readonly PlanarJson[] | {readonly [key:string]:PlanarJson};
 ```
@@ -2631,6 +3404,8 @@ JSON-compatible feature property values; numeric values must be finite.
 <a id="api-175"></a>
 
 ### PlanarFeature
+
+Status: delivered
 
 ```ts
 interface PlanarFeature {readonly type:"Feature";readonly id?:string|number;
@@ -2646,6 +3421,8 @@ GeoJSON feature with optional ID, nullable planar geometry and nullable ordinary
 
 ### PlanarDataset
 
+Status: delivered
+
 ```ts
 interface PlanarDataset {readonly features:readonly PlanarFeature[];
  readonly coordinateSystem:{readonly crs:string;readonly units:string}}
@@ -2655,14 +3432,115 @@ Detached planar features accompanied by explicit coordinate-reference-system and
 
 [Details](api-reference.md#pure-spatial-contracts)
 
+<a id="geometry-area"></a>
+<a id="api-403"></a>
+
+### geometry.area
+
+Status: delivered
+
+```ts
+geometry.area(options: { shape: PlanarPolygonShape }): number
+```
+
+Return the net planar area, independent of winding; holes subtract and components add.
+
+[Details](../grid-parcels/API.md#geometry-measurements)
+
+<a id="geometry-merge"></a>
+<a id="api-404"></a>
+
+### geometry.merge
+
+Status: delivered
+
+```ts
+geometry.merge(options: { shapes: readonly PlanarPolygon[] } | { layout: Layout; cells: readonly number[] }): MergeResult
+```
+
+Merge explicit shapes or unique layout cells by full-edge cancellation into one conforming connected simple polygon; never a Boolean solver. Invalid input throws; unmergeable input returns "unsupported" or "failed" with the original shapes.
+
+[Details](../grid-parcels/API.md#geometry-changes)
+
+<a id="geometry-split"></a>
+<a id="api-405"></a>
+
+### geometry.split
+
+Status: delivered
+
+```ts
+geometry.split(options: { shape: PlanarPolygon; point: Position; direction: Vector; minimumArea?: number }): SplitResult
+```
+
+Cut a convex hole-free polygon once along an infinite line. "ok" returns two parts, left of direction first; every other status returns the original shape with one diagnostic. minimumArea defaults to 0.
+
+[Details](../grid-parcels/API.md#geometry-changes)
+
+<a id="type-parcel-shape"></a>
+<a id="api-406"></a>
+
+### PlanarPolygonShape
+
+Status: delivered
+
+```ts
+type PlanarPolygonShape = PlanarPolygon | Extract<PlanarGeometry, { type: "MultiPolygon" }>;
+```
+
+A polygon or multipolygon accepted by geometry.area. Formerly `ParcelShape` (renamed 2026-11-11).
+
+[Details](../grid-parcels/API.md#geometry-measurements)
+
+<a id="type-merge-result"></a>
+<a id="api-407"></a>
+
+### MergeResult
+
+Status: delivered
+
+```ts
+type MergeResult =
+  | { readonly status: "ok"; readonly shape: PlanarPolygon; readonly sourceCells: readonly number[] }
+  | { readonly status: "unsupported" | "failed"; readonly remainingShapes: readonly PlanarPolygon[];
+      readonly sourceCells: readonly number[]; readonly diagnostics: readonly string[] };
+```
+
+Result of geometry.merge: one merged polygon, or the remaining shapes with diagnostics.
+
+[Details](../grid-parcels/API.md#geometry-changes)
+
+<a id="type-split-result"></a>
+<a id="api-408"></a>
+
+### SplitResult
+
+Status: delivered
+
+```ts
+interface SplitResult {
+  readonly status: "ok" | "unchanged" | "unsupported" | "failed";
+  readonly parts: readonly PlanarPolygon[];
+  readonly diagnostics: readonly string[];
+}
+```
+
+Result of geometry.split with status, parts and diagnostics.
+
+[Details](../grid-parcels/API.md#geometry-changes)
+
 <a id="area-agenda"></a>
 
 ## Agenda
+
+Target: `library-core/agenda`.
 
 <a id="agenda-add"></a>
 <a id="api-189"></a>
 
 ### Agenda.create
+
+Status: delivered
 
 ```ts
 Agenda.create<E = unknown>(): Agenda<E>
@@ -2677,6 +3555,8 @@ Store timed event data and return due events in time, priority and insertion ord
 
 ### agenda.time
 
+Status: delivered
+
 ```ts
 agenda.time: number
 ```
@@ -2686,8 +3566,11 @@ Read the current agenda time, starting at 0. advance changes only this time; it 
 [Details](api-reference.md#agenda)
 
 <a id="agenda-size"></a>
+<a id="api-agenda-size"></a>
 
 ### agenda.size
+
+Status: delivered
 
 ```ts
 agenda.size: number // readonly
@@ -2702,6 +3585,8 @@ Read the pending-event count without advancing any clock or dispatching work. Th
 
 ### agenda.add
 
+Status: delivered
+
 ```ts
 agenda.add(options: { at: number; data: E; priority?: number }): EventHandle<E>
 ```
@@ -2714,6 +3599,8 @@ Queue plain event data at at ≥ agenda.time; priority defaults to 0, with lower
 <a id="api-191"></a>
 
 ### agenda.delete
+
+Status: delivered
 
 ```ts
 agenda.delete(handle: EventHandle<E>): void
@@ -2728,6 +3615,8 @@ Cancel this Agenda’s issued event handle; deleting an already absent event is 
 
 ### agenda.advance
 
+Status: delivered
+
 ```ts
 agenda.advance(options: { until: number; maxEventCount?: number }): readonly Event<E>[]
 ```
@@ -2737,8 +3626,11 @@ Return detached due events in time/priority/sequence order; maxEventCount defaul
 [Details](api-reference.md#agenda)
 
 <a id="agenda-next"></a>
+<a id="api-agenda-next"></a>
 
 ### agenda.next
+
+Status: delivered
 
 ```ts
 agenda.next(options: { until: number }): Event<E> | undefined
@@ -2753,6 +3645,8 @@ Extract at most one due event. Success leaves Agenda time at event.at even for t
 
 ### EventHandle
 
+Status: delivered
+
 ```ts
 type EventHandle<E> = { readonly id: string; readonly agenda: Agenda<E> };
 ```
@@ -2766,6 +3660,8 @@ Opaque issued cancellation identity tied to one Agenda; foreign or forged handle
 
 ### Event
 
+Status: delivered
+
 ```ts
 type Event<E> = { readonly id: string; readonly at: number; readonly priority: number; readonly sequence: number; readonly data: E };
 ```
@@ -2774,14 +3670,730 @@ Detached scheduled event data with identity, time, priority and insertion sequen
 
 [Details](api-reference.md#agenda)
 
+<a id="type-agenda"></a>
+<a id="api-409"></a>
+
+### Agenda
+
+Status: delivered
+
+```ts
+Agenda<E>
+```
+
+Event queue with its own time cursor, independent of World tick. Events are ordered by at, then lower priority, then insertion order.
+
+[Details](api-reference.md#agenda)
+
+<a id="event-trace-add"></a>
+<a id="api-410"></a>
+
+### EventTrace.create
+
+Status: delivered
+
+```ts
+EventTrace.create<T>(options: { capacity: number }): EventTrace<T>
+```
+
+Create a bounded trace; capacity must be a positive safe integer. Beyond capacity the oldest event is dropped.
+
+[Details](../development/des-contract.md#observations-trace-data-and-random-draws)
+
+<a id="event-trace-record"></a>
+<a id="api-411"></a>
+
+### eventTrace.add
+
+Status: delivered
+
+```ts
+eventTrace.add(event: { at: number; value: T }): void
+```
+
+Add a detached copy of value; `at` must be finite and nondecreasing from 0.
+
+[Details](../development/des-contract.md#observations-trace-data-and-random-draws)
+
+<a id="event-trace-read"></a>
+<a id="api-412"></a>
+
+### eventTrace.read
+
+Status: delivered
+
+```ts
+eventTrace.read(): readonly TraceEvent<T>[]
+```
+
+Return detached copies in the order they were added.
+
+[Details](../development/des-contract.md#observations-trace-data-and-random-draws)
+
+<a id="type-event-trace"></a>
+<a id="api-413"></a>
+
+### EventTrace
+
+Status: delivered
+
+```ts
+EventTrace<T>
+```
+
+Bounded event diagnostics, separate from History; adding events is explicit.
+
+[Details](../development/des-contract.md#observations-trace-data-and-random-draws)
+
+<a id="type-trace-event"></a>
+<a id="api-414"></a>
+
+### TraceEvent
+
+Status: delivered
+
+```ts
+interface TraceEvent<T> { readonly at: number; readonly value: T }
+```
+
+One recorded trace entry.
+
+[Details](../development/des-contract.md#observations-trace-data-and-random-draws)
+
+<a id="service-queue-add-queue"></a>
+<a id="api-415"></a>
+
+### ServiceQueue.create
+
+Status: delivered
+
+```ts
+ServiceQueue.create<T>(options?: { policy?: QueuePolicy }): ServiceQueue<T>
+```
+
+Create an empty waiting line; policy defaults to "fifo". "priority" serves lower priority values first and keeps ties stable.
+
+[Details](../development/des-contract.md#service-queue-and-resources)
+
+<a id="service-queue-add"></a>
+<a id="api-416"></a>
+
+### serviceQueue.add
+
+Status: delivered
+
+```ts
+serviceQueue.add(value: T, options?: { priority?: number }): QueueHandle<T>
+```
+
+Enqueue value; priority defaults to 0.
+
+[Details](../development/des-contract.md#service-queue-and-resources)
+
+<a id="service-queue-take"></a>
+<a id="api-417"></a>
+
+### serviceQueue.take
+
+Status: delivered
+
+```ts
+serviceQueue.take(): T | undefined
+```
+
+Remove and return the first value; undefined when empty.
+
+[Details](../development/des-contract.md#service-queue-and-resources)
+
+<a id="service-queue-delete"></a>
+<a id="api-418"></a>
+
+### serviceQueue.delete
+
+Status: delivered
+
+```ts
+serviceQueue.delete(handle: QueueHandle<T>): void
+```
+
+Remove a queued value; an already removed value is a no-op.
+
+[Details](../development/des-contract.md#service-queue-and-resources)
+
+<a id="service-queue-entries"></a>
+<a id="api-419"></a>
+
+### serviceQueue.entries
+
+Status: delivered
+
+```ts
+serviceQueue.entries: readonly T[] // readonly
+```
+
+Queued values in service order.
+
+[Details](../development/des-contract.md#service-queue-and-resources)
+
+<a id="type-service-queue"></a>
+<a id="api-420"></a>
+
+### ServiceQueue
+
+Status: delivered
+
+```ts
+ServiceQueue<T>
+```
+
+Waiting line; the "priority" policy serves lower priority first, stable for ties.
+
+[Details](../development/des-contract.md#service-queue-and-resources)
+
+<a id="type-queue-handle"></a>
+<a id="api-421"></a>
+
+### QueueHandle
+
+Status: delivered
+
+```ts
+interface QueueHandle<T> { readonly id: string; readonly value: T }
+```
+
+Handle for deleting a queued value.
+
+[Details](../development/des-contract.md#service-queue-and-resources)
+
+<a id="type-queue-policy"></a>
+<a id="api-422"></a>
+
+### QueuePolicy
+
+Status: delivered
+
+```ts
+type QueuePolicy = "fifo" | "priority";
+```
+
+Service order of a ServiceQueue or Resource.
+
+[Details](../development/des-contract.md#service-queue-and-resources)
+
+<a id="resource-add"></a>
+<a id="api-423"></a>
+
+### Resource.create
+
+Status: delivered
+
+```ts
+Resource.create<T>(options: { capacity: number; policy?: QueuePolicy }): Resource<T>
+```
+
+Create a resource with a positive unit capacity; waiting requests use policy (default "fifo").
+
+[Details](../development/des-contract.md#service-queue-and-resources)
+
+<a id="resource-request"></a>
+<a id="api-424"></a>
+
+### resource.request
+
+Status: delivered
+
+```ts
+resource.request(options: { owner: T; units?: number; priority?: number }): ResourceRequest<T>
+```
+
+Request units (default 1, at most current capacity); grant immediately when admissible, otherwise wait.
+
+[Details](../development/des-contract.md#service-queue-and-resources)
+
+<a id="resource-release"></a>
+<a id="api-425"></a>
+
+### resource.release
+
+Status: delivered
+
+```ts
+resource.release(ticket: ResourceRequest<T>): void
+```
+
+Return granted units; releasing again is a no-op.
+
+[Details](../development/des-contract.md#service-queue-and-resources)
+
+<a id="resource-cancel"></a>
+<a id="api-426"></a>
+
+### resource.cancel
+
+Status: delivered
+
+```ts
+resource.cancel(ticket: ResourceRequest<T>): void
+```
+
+Withdraw a waiting or granted request; finished requests are ignored.
+
+[Details](../development/des-contract.md#service-queue-and-resources)
+
+<a id="resource-set-capacity"></a>
+<a id="api-427"></a>
+
+### resource.setCapacity
+
+Status: delivered
+
+```ts
+resource.setCapacity(capacity: number, options?: { occupied?: "reject" | "retain" }): void
+```
+
+Change capacity. "reject" (default) refuses to shrink below used units; "retain" keeps current holders.
+
+[Details](../development/des-contract.md#service-queue-and-resources)
+
+<a id="resource-capacity"></a>
+<a id="api-428"></a>
+
+### resource.capacity
+
+Status: delivered
+
+```ts
+resource.capacity: number // readonly
+```
+
+Current unit capacity.
+
+[Details](../development/des-contract.md#service-queue-and-resources)
+
+<a id="resource-used"></a>
+<a id="api-429"></a>
+
+### resource.used
+
+Status: delivered
+
+```ts
+resource.used: number // readonly
+```
+
+Units currently granted.
+
+[Details](../development/des-contract.md#service-queue-and-resources)
+
+<a id="resource-available"></a>
+<a id="api-430"></a>
+
+### resource.available
+
+Status: delivered
+
+```ts
+resource.available: number // readonly
+```
+
+Capacity minus used units.
+
+[Details](../development/des-contract.md#service-queue-and-resources)
+
+<a id="resource-waiting"></a>
+<a id="api-431"></a>
+
+### resource.waiting
+
+Status: delivered
+
+```ts
+resource.waiting: readonly ResourceRequest<T>[] // readonly
+```
+
+Waiting requests in service order.
+
+[Details](../development/des-contract.md#service-queue-and-resources)
+
+<a id="type-resource"></a>
+<a id="api-432"></a>
+
+### Resource
+
+Status: delivered
+
+```ts
+Resource<T>
+```
+
+Counted capacity with a waiting line. Admission is head-of-line; the "priority" policy orders waiters by lower priority first, stable for ties, and never preempts holders.
+
+[Details](../development/des-contract.md#service-queue-and-resources)
+
+<a id="type-resource-request"></a>
+<a id="api-433"></a>
+
+### ResourceRequest
+
+Status: delivered
+
+```ts
+interface ResourceRequest<T> {
+  readonly id: string;
+  readonly owner: T;
+  readonly units: number;
+  readonly status: ResourceStatus;
+}
+```
+
+A resource request with its owner, units and status.
+
+[Details](../development/des-contract.md#service-queue-and-resources)
+
+<a id="type-resource-status"></a>
+<a id="api-434"></a>
+
+### ResourceStatus
+
+Status: delivered
+
+```ts
+type ResourceStatus = "waiting" | "granted" | "released" | "cancelled";
+```
+
+Life cycle of a resource request.
+
+[Details](../development/des-contract.md#service-queue-and-resources)
+
+<a id="store-add"></a>
+<a id="api-435"></a>
+
+### Store.create
+
+Status: delivered
+
+```ts
+Store.create<T>(options: { capacity: number }): Store<T>
+```
+
+Create a bounded first-in, first-out store; capacity is required.
+
+[Details](../development/des-contract.md#bounded-stores)
+
+<a id="store-put"></a>
+<a id="api-436"></a>
+
+### store.add
+
+Status: delivered
+
+```ts
+store.add(value: T): StoreAddition<T>
+```
+
+Add value when capacity allows; otherwise the producer waits.
+
+[Details](../development/des-contract.md#bounded-stores)
+
+<a id="store-get"></a>
+<a id="api-437"></a>
+
+### store.request
+
+Status: delivered
+
+```ts
+store.request(): StoreRequest<T>
+```
+
+Receive the oldest available value, or wait for one.
+
+[Details](../development/des-contract.md#bounded-stores)
+
+<a id="store-take"></a>
+<a id="api-438"></a>
+
+### store.take
+
+Status: delivered
+
+```ts
+store.take(): T | undefined
+```
+
+Receive a stored item immediately; undefined when none is stored.
+
+[Details](../development/des-contract.md#bounded-stores)
+
+<a id="store-cancel-put"></a>
+<a id="api-439"></a>
+<a id="store-cancel-get"></a>
+<a id="api-440"></a>
+
+### store.cancel
+
+Status: delivered
+
+```ts
+store.cancel(ticket: StoreAddition<T> | StoreRequest<T>): void
+```
+
+Withdraw a waiting producer or consumer; finished tickets are ignored and a ticket issued by another store throws `TypeError`.
+
+[Details](../development/des-contract.md#bounded-stores)
+
+<a id="store-items"></a>
+<a id="api-441"></a>
+
+### store.items
+
+Status: delivered
+
+```ts
+store.items: readonly T[] // readonly
+```
+
+Stored values, oldest first.
+
+[Details](../development/des-contract.md#bounded-stores)
+
+<a id="store-waiting-puts"></a>
+<a id="api-442"></a>
+
+### store.waitingAdditions
+
+Status: delivered
+
+```ts
+store.waitingAdditions: readonly StoreAddition<T>[] // readonly
+```
+
+Producers waiting for space.
+
+[Details](../development/des-contract.md#bounded-stores)
+
+<a id="store-waiting-gets"></a>
+<a id="api-443"></a>
+
+### store.waitingRequests
+
+Status: delivered
+
+```ts
+store.waitingRequests: readonly StoreRequest<T>[] // readonly
+```
+
+Consumers waiting for an item.
+
+[Details](../development/des-contract.md#bounded-stores)
+
+<a id="type-store"></a>
+<a id="api-444"></a>
+
+### Store
+
+Status: delivered
+
+```ts
+Store<T>
+```
+
+Bounded FIFO store with waiting producers and consumers. Waiting consumers receive stored items first, then values of waiting producers.
+
+[Details](../development/des-contract.md#bounded-stores)
+
+<a id="type-put-request"></a>
+<a id="api-445"></a>
+
+### StoreAddition
+
+Status: delivered
+
+```ts
+interface StoreAddition<T> { readonly id: string; readonly value: T; readonly status: StoreAdditionStatus }
+```
+
+A producer's ticket and its status. It stays separate from StoreRequest because it always carries its value and ends `stored`.
+
+[Details](../development/des-contract.md#bounded-stores)
+
+<a id="type-get-request"></a>
+<a id="api-446"></a>
+
+### StoreRequest
+
+Status: delivered
+
+```ts
+interface StoreRequest<T> { readonly id: string; readonly value: T | undefined; readonly status: StoreRequestStatus }
+```
+
+A consumer's ticket; value is set once received.
+
+[Details](../development/des-contract.md#bounded-stores)
+
+<a id="type-put-status"></a>
+<a id="api-447"></a>
+
+### StoreAdditionStatus
+
+Status: delivered
+
+```ts
+type StoreAdditionStatus = "waiting" | "stored" | "cancelled";
+```
+
+Life cycle of a store addition.
+
+[Details](../development/des-contract.md#bounded-stores)
+
+<a id="type-get-status"></a>
+<a id="api-448"></a>
+
+### StoreRequestStatus
+
+Status: delivered
+
+```ts
+type StoreRequestStatus = "waiting" | "received" | "cancelled";
+```
+
+Life cycle of a store request.
+
+[Details](../development/des-contract.md#bounded-stores)
+
+<a id="signal-add"></a>
+<a id="api-449"></a>
+
+### Signal.create
+
+Status: delivered
+
+```ts
+Signal.create<T>(initial: T): Signal<T>
+```
+
+Create a signal holding initial.
+
+[Details](../development/des-contract.md#state-conditions-process-interaction-and-timeouts)
+
+<a id="signal-value"></a>
+<a id="api-450"></a>
+
+### signal.value
+
+Status: delivered
+
+```ts
+signal.value: T // readonly
+```
+
+Current value.
+
+[Details](../development/des-contract.md#state-conditions-process-interaction-and-timeouts)
+
+<a id="signal-set"></a>
+<a id="api-451"></a>
+
+### signal.set
+
+Status: delivered
+
+```ts
+signal.set(value: T): void
+```
+
+Evaluate every waiting predicate against value before committing. A throwing predicate leaves value and waits unchanged.
+
+[Details](../development/des-contract.md#state-conditions-process-interaction-and-timeouts)
+
+<a id="signal-wait"></a>
+<a id="api-452"></a>
+
+### signal.wait
+
+Status: delivered
+
+```ts
+signal.wait(predicate: (value: T) => boolean): WaitRequest
+```
+
+Return a satisfied request if predicate already holds; otherwise wait.
+
+[Details](../development/des-contract.md#state-conditions-process-interaction-and-timeouts)
+
+<a id="signal-cancel"></a>
+<a id="api-453"></a>
+
+### signal.cancel
+
+Status: delivered
+
+```ts
+signal.cancel(ticket: WaitRequest): void
+```
+
+Cancel a waiting request; finished requests are ignored.
+
+[Details](../development/des-contract.md#state-conditions-process-interaction-and-timeouts)
+
+<a id="type-signal"></a>
+<a id="api-454"></a>
+
+### Signal
+
+Status: delivered
+
+```ts
+Signal<T>
+```
+
+Observable value with predicate waits; predicates must not call set, wait or cancel.
+
+[Details](../development/des-contract.md#state-conditions-process-interaction-and-timeouts)
+
+<a id="type-wait-request"></a>
+<a id="api-455"></a>
+
+### WaitRequest
+
+Status: delivered
+
+```ts
+interface WaitRequest { readonly id: string; readonly status: WaitStatus }
+```
+
+A wait on a signal predicate and its status.
+
+[Details](../development/des-contract.md#state-conditions-process-interaction-and-timeouts)
+
+<a id="type-wait-status"></a>
+<a id="api-456"></a>
+
+### WaitStatus
+
+Status: delivered
+
+```ts
+type WaitStatus = "waiting" | "satisfied" | "cancelled";
+```
+
+Life cycle of a wait request.
+
+[Details](../development/des-contract.md#state-conditions-process-interaction-and-timeouts)
+
 <a id="area-studies"></a>
 
 ## studies
+
+Target: `library-core/world-composition`.
 
 <a id="studies-design"></a>
 <a id="api-263"></a>
 
 ### studies.design
+
+Status: delivered
 
 ```ts
 studies.design(input: { constants?: StudyParameters; axes: readonly StudyAxis[]; maxScenarioCount?: number }): readonly StudyScenario[]
@@ -2796,6 +4408,8 @@ Expand a bounded Cartesian parameter design into ordered scenarios without runni
 
 ### studies.design
 
+Status: delivered
+
 ```ts
 studies.design<Parameters extends StudyParameters>(input: { defaults: Parameters; axes: readonly StudyAxisFor<Parameters>[]; maxScenarioCount?: number }): readonly StudyScenario<StudyParameterValues<Parameters>>[]
 ```
@@ -2808,6 +4422,8 @@ Expand a bounded Cartesian parameter design into ordered scenarios without runni
 <a id="api-265"></a>
 
 ### studies.replicate
+
+Status: delivered
 
 ```ts
 studies.replicate<Parameters>(scenarios: readonly StudyScenario<Parameters>[], seeds: readonly number[], options?: { maxRunCount?: number }): readonly PlannedRun<Parameters>[]
@@ -2822,6 +4438,8 @@ Expand ordered scenarios over explicit seeds into a bounded whole-run plan witho
 
 ### studies.run
 
+Status: delivered
+
 ```ts
 studies.run<Parameters,Model extends StudyModel,Measurements>(options: StudyOptions<Parameters,Model,Measurements> & {pause?:never}): StudyResult<Parameters,Measurements>
 ```
@@ -2834,6 +4452,8 @@ Run the finite study and return its terminal outcomes. Pausing is not accepted b
 <a id="api-262"></a>
 
 ### studies.run
+
+Status: target
 
 ```ts
 studies.run<Parameters,Model extends StudyModel,Measurements>(options: StudyOptions<Parameters,Model,Measurements> & Required<Pick<StudyOptions<Parameters,Model,Measurements>,"pause">>): StudyResult<Parameters,Measurements> | StudyCheckpoint<Parameters,Measurements>
@@ -2848,6 +4468,8 @@ Run the finite study with an explicit boundary-pause policy. Return terminal out
 
 ### studies.summarize
 
+Status: delivered
+
 ```ts
 studies.summarize<Parameters,Measurements>(result: StudyResult<Parameters,Measurements>, select: (outcome: StudyOutcome<Parameters,Measurements>) => number | undefined): readonly ReplicationSummary[]
 ```
@@ -2860,6 +4482,8 @@ Summarize an explicit numeric selection from per-run outcomes, keeping missing/f
 <a id="api-269"></a>
 
 ### studies.bind
+
+Status: target
 
 ```ts
 studies.bind<Model extends StudyModel>(spec: StudySpec, bindings: StudyBindings<Model>): BoundStudy<Model>
@@ -2874,6 +4498,8 @@ Bind recognized Study source labels to explicit TypeScript callbacks and a finit
 
 ### studies.run
 
+Status: target
+
 ```ts
 studies.run<Model extends StudyModel>(bound: BoundStudy<Model>): StudyResult<StudyParameters,Readonly<Record<string,StudyScalar>>>
 ```
@@ -2886,6 +4512,8 @@ Execute the validated bound Study plan using its explicitly supplied model callb
 <a id="api-271"></a>
 
 ### studies.evaluate
+
+Status: target
 
 ```ts
 studies.evaluate<Parameters,Model extends StudyModel,Measurements>(input:
@@ -2903,6 +4531,8 @@ Evaluate a finite candidate grid against explicit observations, objective and se
 
 ### studies.select
 
+Status: target
+
 ```ts
 studies.select<Parameters,Measurements>(evaluation: CandidateEvaluation<Parameters,Measurements>, options: { maxMeanLossDelta: number }): CandidateSelection<Parameters,Measurements>
 ```
@@ -2915,6 +4545,8 @@ Select eligible candidates within the supplied mean-loss difference of the best 
 <a id="api-273"></a>
 
 ### studies.holdout
+
+Status: target
 
 ```ts
 studies.holdout<Parameters,Model extends StudyModel,Measurements>(selection: CandidateSelection<Parameters,Measurements>, input:
@@ -2930,6 +4562,8 @@ Evaluate a fixed candidate selection using disjoint held-out seeds and observati
 <a id="api-274"></a>
 
 ### studies.resume
+
+Status: target
 
 ```ts
 studies.resume<Parameters,Model extends StudyModel,Measurements>(checkpoint: StudyCheckpoint<Parameters,Measurements>, callbacks: {
@@ -2953,6 +4587,8 @@ Continue a validated paused study after explicitly rebinding callbacks, preservi
 
 ### studies.run
 
+Status: target
+
 ```ts
 studies.run<Parameters extends StudyParameters,Measurements>(options: {
   plan: readonly PlannedRun<Parameters>[];
@@ -2972,6 +4608,8 @@ Available from agent-loom/studies/node. Execute whole independent runs in native
 
 ### StudyModel
 
+Status: delivered
+
 ```ts
 interface StudyModel { readonly world: World; step(): void; dispose?(): void }
 ```
@@ -2984,6 +4622,8 @@ Ordinary model object with its World, synchronous step procedure and optional cl
 <a id="api-259"></a>
 
 ### StudyPlan
+
+Status: delivered
 
 ```ts
 type StudyPlan<Parameters> =
@@ -2999,6 +4639,8 @@ Either a parameter/seed Cartesian plan or an explicit ordered run plan; the two 
 <a id="api-260"></a>
 
 ### StudyOptions
+
+Status: delivered
 
 ```ts
 type StudyOptions<Parameters,Model extends StudyModel,Measurements> = StudyPlan<Parameters> & {
@@ -3030,6 +4672,8 @@ Model factory, finite plan, horizon, measurement/sampling policies and optional 
 
 ### WorkerStudyProvider
 
+Status: target
+
 ```ts
 type WorkerStudyProvider<Parameters,Model extends StudyModel,Measurements> = (config: NodeStudyConfig) =>
   Pick<StudyOptions<Parameters,Model,Measurements>,"create" | "measure" | "sampleWhen" | "stopWhen" | "host">;
@@ -3043,6 +4687,8 @@ Synchronous Node worker provider factory that turns validated transport configur
 <a id="api-275"></a>
 
 ### StudyCheckpoint
+
+Status: target
 
 ```ts
 interface StudyCheckpoint<Parameters,Measurements> {
@@ -3070,6 +4716,8 @@ Versioned paused-study data retaining plan, policies, outcomes, samples and save
 
 ### WidenStudyScalar
 
+Status: target
+
 ```ts
 type WidenStudyScalar<Value extends StudyScalar> = Value extends number ? number : Value extends boolean ? boolean : string;
 ```
@@ -3083,14 +4731,16 @@ Map a scalar literal type to its corresponding number, boolean or string value t
 
 ### StudyAxis
 
+Status: delivered
+
 ```ts
 export interface StudyAxis {
-	readonly variable: string;
-	readonly values: readonly string[];
+	readonly name: string;
+	readonly values: readonly StudyScalar[];
 }
 ```
 
-Declared variable name with bounded source-literal values for explicit caller decoding.
+The delivered StudyAxis ([api-294](#api-294)), used by the finite-study plan: an axis parsed from XML keeps its bounded source literals as string values for explicit caller decoding.
 
 [Details](api-reference.md#study-contracts-general)
 
@@ -3098,6 +4748,8 @@ Declared variable name with bounded source-literal values for explicit caller de
 <a id="api-278"></a>
 
 ### StudySpec
+
+Status: target
 
 ```ts
 export interface StudySpec {
@@ -3128,6 +4780,8 @@ Versioned finite Study plan retaining source labels, parameter axes, repetition 
 
 ### StudyMeasurement
 
+Status: target
+
 ```ts
 export type StudyMeasurement = Readonly<Record<string, StudyScalar>>;
 ```
@@ -3140,6 +4794,8 @@ Read-only named scalar measurements emitted by a bound Study study.
 <a id="api-280"></a>
 
 ### CandidateObjective
+
+Status: target
 
 ```ts
 export interface CandidateObjective<Parameters, Measurements> {
@@ -3159,6 +4815,8 @@ Objective identity, training-data identity, observation identities and a synchro
 
 ### CalibrationManifest
 
+Status: target
+
 ```ts
 export interface CalibrationManifest {
 	readonly id: string;
@@ -3175,6 +4833,8 @@ Objective/data/observation identities retained as calibration provenance.
 <a id="api-282"></a>
 
 ### CandidateLoss
+
+Status: target
 
 ```ts
 export type CandidateLoss = {
@@ -3209,6 +4869,8 @@ Per-run valid loss or explicit unavailable result with its failure information.
 
 ### CandidateScore
 
+Status: target
+
 ```ts
 export type CandidateScore<Parameters> = {
 	readonly candidate: StudyScenario<Parameters>;
@@ -3238,6 +4900,8 @@ Candidate counts and losses with an eligible numeric mean or an explicit ineligi
 
 ### CandidateEvaluation
 
+Status: target
+
 ```ts
 export interface CandidateEvaluation<Parameters, Measurements> {
 	readonly version: 1;
@@ -3260,6 +4924,8 @@ Versioned training/holdout evaluation with provenance, seeds, scores and eligibi
 
 ### selectionMeasurement
 
+Status: target
+
 ```ts
 declare const selectionMeasurement: unique symbol;
 ```
@@ -3272,6 +4938,8 @@ Type-level identity brand used by CandidateSelection to preserve its measurement
 <a id="api-285"></a>
 
 ### CandidateSelection
+
+Status: target
 
 ```ts
 export interface CandidateSelection<Parameters, Measurements> {
@@ -3293,6 +4961,8 @@ Fixed candidate set and loss-difference rule, retaining objective/training ident
 
 ### CandidateHoldout
 
+Status: target
+
 ```ts
 export interface CandidateHoldout<Parameters, Measurements> {
 	readonly version: 1;
@@ -3310,6 +4980,8 @@ Fixed selection together with its separate training and held-out evaluations.
 <a id="api-287"></a>
 
 ### NodeStudyConfig
+
+Status: target
 
 ```ts
 export type NodeStudyConfig =
@@ -3330,6 +5002,8 @@ Finite JSON-like configuration transported to a trusted Node study provider; no 
 
 ### NodeStudyRegistration
 
+Status: target
+
 ```ts
 export interface NodeStudyRegistration {
 	readonly moduleUrl: string;
@@ -3347,6 +5021,8 @@ Trusted provider module/export identity, SHA-256 digest and optional transport c
 <a id="api-289"></a>
 
 ### StudyCancellationSignal
+
+Status: target
 
 ```ts
 export interface StudyCancellationSignal {
@@ -3368,6 +5044,8 @@ Abort-compatible host signal used to cancel whole-run worker execution.
 <a id="api-290"></a>
 
 ### NodeStudyOutcome
+
+Status: target
 
 ```ts
 export type NodeStudyOutcome<Parameters, Measurements> =
@@ -3405,6 +5083,8 @@ Completed worker outcome, cancelled-before-start record or explicit transport fa
 
 ### NodeStudyResult
 
+Status: target
+
 ```ts
 export interface NodeStudyResult<Parameters, Measurements> {
 	readonly version: 1;
@@ -3422,6 +5102,8 @@ Versioned plan-order worker outcomes and provenance.
 
 ### StudyScalar
 
+Status: delivered
+
 ```ts
 export type StudyScalar = number | boolean | string;
 ```
@@ -3435,6 +5117,8 @@ Number, boolean or string parameter/measurement value, validated by its study co
 
 ### StudyParameters
 
+Status: delivered
+
 ```ts
 export type StudyParameters = Readonly<Record<string, StudyScalar>>;
 ```
@@ -3447,6 +5131,8 @@ Read-only named scalar parameter settings for a study scenario.
 <a id="api-294"></a>
 
 ### StudyAxis
+
+Status: delivered
 
 ```ts
 export interface StudyAxis {
@@ -3464,6 +5150,8 @@ Named parameter axis with its explicitly ordered scalar values.
 
 ### StudyParameterValues
 
+Status: delivered
+
 ```ts
 export type StudyParameterValues<Parameters extends StudyParameters> = {
 	readonly [Key in keyof Parameters]: WidenStudyScalar<Parameters[Key]>;
@@ -3478,6 +5166,8 @@ Map each declared parameter to its widened scalar value type.
 <a id="api-296"></a>
 
 ### StudyAxisFor
+
+Status: delivered
 
 ```ts
 export type StudyAxisFor<Parameters extends StudyParameters> = {
@@ -3497,6 +5187,8 @@ Key-specific parameter axis whose values retain the selected parameter’s scala
 
 ### StudyScenario
 
+Status: delivered
+
 ```ts
 export interface StudyScenario<Parameters = StudyParameters> {
 	readonly id: string;
@@ -3513,6 +5205,8 @@ Scenario identity, index and model parameter settings before replication.
 <a id="api-298"></a>
 
 ### PlannedRun
+
+Status: delivered
 
 ```ts
 export interface PlannedRun<Parameters = StudyParameters> {
@@ -3534,6 +5228,8 @@ Run/scenario identities, replication index, explicit seed and parameter settings
 
 ### StudySample
 
+Status: delivered
+
 ```ts
 export interface StudySample<Measurements> {
 	readonly step: number;
@@ -3549,6 +5245,8 @@ Measurement captured at an explicit completed-step index.
 <a id="api-300"></a>
 
 ### StudyPhase
+
+Status: delivered
 
 ```ts
 export type StudyPhase =
@@ -3569,6 +5267,8 @@ Lifecycle phase used to locate a study failure or continuation operation.
 
 ### StudyError
 
+Status: delivered
+
 ```ts
 export interface StudyError {
 	readonly phase: StudyPhase;
@@ -3586,6 +5286,8 @@ Study failure phase with bounded error name and message data.
 
 ### StudyStatus
 
+Status: delivered
+
 ```ts
 export type StudyStatus = "completed" | "stopped" | "failed" | "skipped";
 ```
@@ -3598,6 +5300,8 @@ Completed, stopped, failed or skipped terminal run status.
 <a id="api-303"></a>
 
 ### StudyTerminal
+
+Status: delivered
 
 ```ts
 export type StudyTerminal =
@@ -3636,6 +5340,8 @@ Discriminated terminal status with its supported reason and error/cleanup fields
 
 ### StudyOutcome
 
+Status: delivered
+
 ```ts
 export type StudyOutcome<Parameters, Measurements> = StudyTerminal & {
 	readonly run: PlannedRun<Parameters>;
@@ -3652,6 +5358,8 @@ Terminal run status plus plan identity, completed-step count and retained sample
 <a id="api-305"></a>
 
 ### StudyResult
+
+Status: delivered
 
 ```ts
 export interface StudyResult<Parameters, Measurements> {
@@ -3670,6 +5378,8 @@ Versioned ordered run outcomes, provenance and optional whole-study hook error.
 <a id="api-306"></a>
 
 ### ReplicationSummary
+
+Status: delivered
 
 ```ts
 export interface ReplicationSummary {
@@ -3702,13 +5412,15 @@ Per-scenario outcome counts, valid numeric values, mean and sample standard devi
 
 ### StudyBindings
 
+Status: target
+
 ```ts
 interface StudyBindings<Model extends StudyModel> {
  readonly seeds: readonly number[];
- decodeLiteral(source:string, variable:string): StudyScalar;
+ decodeLiteral(source:string, name:string): StudyScalar;
  readonly setup: { readonly source:string; create(parameters:StudyParameters,seed:number,run:PlannedRun<StudyParameters>):Model };
  readonly go: { readonly source:string };
- readonly metrics: readonly { readonly source:string; report(model:Model):StudyScalar }[];
+ readonly metrics: readonly { readonly source:string; read(model:Model):StudyScalar }[];
  readonly exitCondition?:{ readonly source:string; test(model:Model):boolean };
  readonly runMetricsCondition?:{ readonly source:string; test(model:Model):boolean };
  readonly beforeStudy?:{ readonly source:string; run(plan:readonly PlannedRun<StudyParameters>[]):void };
@@ -3726,6 +5438,8 @@ Explicit source-label bindings to model creation, measurement, stopping and stud
 
 ### BoundStudy
 
+Status: target
+
 ```ts
 interface BoundStudy<Model extends StudyModel> {
  readonly spec:StudySpec;
@@ -3742,10 +5456,14 @@ Validated Study specification, materialized run plan and ordinary experiment opt
 
 ## storage
 
+Target: `library-core/measurement-and-history`.
+
 <a id="storage-save"></a>
 <a id="api-326"></a>
 
 ### storage.save
+
+Status: target
 
 ```ts
 storage.save<V>(value: V): Snapshot<V, {}>
@@ -3760,6 +5478,8 @@ Save exactly the supplied supported value and optional extra state as an indepen
 
 ### storage.save
 
+Status: target
+
 ```ts
 storage.save<V>(value: V, options: { valueCodecs: readonly ValueCodec[] }): Snapshot<V, {}>
 ```
@@ -3773,6 +5493,8 @@ Save exactly the supplied supported value and optional extra state as an indepen
 
 ### storage.save
 
+Status: target
+
 ```ts
 storage.save<V,S>(value: V, options: { state: S; valueCodecs?: readonly ValueCodec[] }): Snapshot<V,S>
 ```
@@ -3785,6 +5507,8 @@ Save exactly the supplied supported value and optional extra state as an indepen
 <a id="api-366"></a>
 
 ### storage.load
+
+Status: target
 
 ```ts
 storage.load<V,S>(snapshot: Snapshot<V,S>, options?: {
@@ -3801,6 +5525,8 @@ Load the selected saved value and extra state into fresh supported objects. Neve
 
 ### storage.encode
 
+Status: target
+
 ```ts
 storage.encode<V, S>(snapshot: Snapshot<V, S>, options: { format: "snapshot-json" }): string
 ```
@@ -3813,6 +5539,8 @@ Convert the supplied value to the explicit named format or synchronous Format ad
 <a id="api-342"></a>
 
 ### storage.decode
+
+Status: target
 
 ```ts
 storage.decode(text: string, options: { format: "snapshot-json"; limits?: DecodeLimits }):
@@ -3828,6 +5556,8 @@ Validate and decode the explicit named format or synchronous Format adapter. Ret
 
 ### storage.encode
 
+Status: target
+
 ```ts
 storage.encode<Value, Encoded extends string | Uint8Array>(value: Value, options: { format: Format<Value, Encoded> }): Encoded
 ```
@@ -3840,6 +5570,8 @@ Convert the supplied value to the explicit named format or synchronous Format ad
 <a id="api-336"></a>
 
 ### storage.decode
+
+Status: target
 
 ```ts
 storage.decode<Value, Encoded extends string | Uint8Array>(data: Encoded, options: {
@@ -3856,6 +5588,8 @@ Validate and decode the explicit named format or synchronous Format adapter. Ret
 
 ### storage.history
 
+Status: delivered
+
 ```ts
 storage.history(options?: { capacity?: number }): History
 ```
@@ -3868,6 +5602,8 @@ Create an independent bounded numeric measurement history; capacity defaults to 
 <a id="api-340"></a>
 
 ### history.samples
+
+Status: delivered
 
 ```ts
 history.samples: readonly Sample[]
@@ -3882,6 +5618,8 @@ Read a detached chronological read-only snapshot of retained samples.
 
 ### history.add
 
+Status: delivered
+
 ```ts
 history.add(sample: { tick: number; values: Readonly<Record<string, number>> }): void
 ```
@@ -3894,6 +5632,8 @@ Record a detached finite numeric sample. Ticks strictly increase; the first samp
 <a id="api-341"></a>
 
 ### history.delete
+
+Status: delivered
 
 ```ts
 history.delete(): void
@@ -3908,6 +5648,8 @@ Empty samples, metric keys and last-tick marker while retaining capacity. The ne
 
 ### storage.is
 
+Status: target
+
 ```ts
 storage.is<K extends keyof StoredKinds>(value: unknown, kind: K): value is StoredKinds[K]
 ```
@@ -3921,6 +5663,8 @@ Check the library-issued identity kind of a component or event handle and narrow
 
 ### storage.encode
 
+Status: target
+
 ```ts
 storage.encode(graph: Graph, options: {
   format: "graph-json" | "graphml" | "edge-list" | "adjacency-matrix";
@@ -3928,7 +5672,7 @@ storage.encode(graph: Graph, options: {
 }): string
 ```
 
-Encode the explicitly selected graph text format. graph-json preserves JSON-safe GraphData; GraphML preserves supported scalar attributes and declared topology metadata. edge-list is the versioned Agent Loom UTF-8 TSV dialect with JSON-escaped fields, not a guessed two-column format. adjacency-matrix rejects mixed directions and parallel edges, requires finite nonzero edge.weight, and loses other node/edge state; zero denotes no edge. No file access.
+Encode the explicitly selected graph text format. graph-json preserves JSON-safe GraphData; GraphML preserves supported scalar attributes and declared topology metadata. edge-list is the library's versioned UTF-8 TSV dialect with JSON-escaped fields, not a guessed two-column format. adjacency-matrix rejects mixed directions and parallel edges, requires finite nonzero edge.weight, and loses other node/edge state; zero denotes no edge. No file access.
 
 [Details](api-reference.md#graph-interchange)
 
@@ -3937,13 +5681,15 @@ Encode the explicitly selected graph text format. graph-json preserves JSON-safe
 
 ### storage.decode
 
+Status: target
+
 ```ts
 storage.decode(text: string, options: {
   format: "graph-json" | "graphml" | "edge-list" | "adjacency-matrix"
 }): GraphData<unknown, unknown>
 ```
 
-Decode the explicit graph format to validated detached GraphData with unknown model values. graph-json uses its versioned envelope; GraphML rejects DTDs/entities and unsupported nested attributes. edge-list requires the versioned Agent Loom TSV header and complete graph/node/edge records. adjacency-matrix validates square shape, IDs, finite entries and undirected symmetry, reconstructing nodes by ID and nonzero weight edges rather than arbitrary model state. No file access.
+Decode the explicit graph format to validated detached GraphData with unknown model values. graph-json uses its versioned envelope; GraphML rejects DTDs/entities and unsupported nested attributes. edge-list requires the library's versioned TSV header and complete graph/node/edge records. adjacency-matrix validates square shape, IDs, finite entries and undirected symmetry, reconstructing nodes by ID and nonzero weight edges rather than arbitrary model state. No file access.
 
 [Details](api-reference.md#graph-interchange)
 
@@ -3951,6 +5697,8 @@ Decode the explicit graph format to validated detached GraphData with unknown mo
 <a id="api-323"></a>
 
 ### storage.decode
+
+Status: target
 
 ```ts
 storage.decode(text: string, options: { format: "finite-study-xml" }): readonly StudySpec[]
@@ -3965,6 +5713,8 @@ Validate and decode the explicit named format or synchronous Format adapter. Ret
 
 ### storage.encode
 
+Status: target
+
 ```ts
 storage.encode(checkpoint: StudyCheckpoint<unknown,unknown>, options:{format:"study-json"}):string
 ```
@@ -3977,6 +5727,8 @@ Convert the supplied value to the explicit named format or synchronous Format ad
 <a id="api-325"></a>
 
 ### storage.decode
+
+Status: target
 
 ```ts
 storage.decode(text:string, options:{format:"study-json"}):StudyCheckpoint<unknown,unknown>
@@ -3991,6 +5743,8 @@ Validate and decode the explicit named format or synchronous Format adapter. Ret
 
 ### storage.decode
 
+Status: target
+
 ```ts
 storage.decode(data: unknown, options: { format: "model-world-data"; valueCodecs?: readonly ValueCodec[] }): WorldSnapshot<unknown>
 ```
@@ -4003,6 +5757,8 @@ Validate the supported old in-memory model-state schema and convert it to a Worl
 <a id="api-367"></a>
 
 ### storage.decode
+
+Status: target
 
 ```ts
 storage.decode(text:string, options:{format:"simple-network-json"}):SimpleNetworkData
@@ -4017,6 +5773,8 @@ Decode the explicitly selected versioned simple-network data or JSON format into
 
 ### storage.decode
 
+Status: target
+
 ```ts
 storage.decode(data:unknown, options:{format:"simple-network-data"}):SimpleNetworkData
 ```
@@ -4029,6 +5787,8 @@ Decode the explicitly selected versioned simple-network data or JSON format into
 <a id="api-369"></a>
 
 ### storage.decode
+
+Status: target
 
 ```ts
 storage.decode(text: string, options: { format: "geojson"; coordinateSystem: { crs: string; units: string } }): PlanarDataset
@@ -4043,6 +5803,8 @@ Decode validated planar GeoJSON into detached features and mandatory explicit CR
 
 ### storage.encode
 
+Status: target
+
 ```ts
 storage.encode(value: PlanarGeometry | PlanarFeature | PlanarDataset | readonly PlanarFeature[], options: { format: "geojson" }): string
 ```
@@ -4055,6 +5817,8 @@ Encode supported planar GeoJSON geometry/features. Coordinate-system labels are 
 <a id="api-371"></a>
 
 ### storage.encode
+
+Status: target
 
 ```ts
 storage.encode(value: readonly StudySpec[], options: { format: "finite-study-xml" }): string
@@ -4069,6 +5833,8 @@ Encode the declarative Study plan as escaped XML without translating TypeScript 
 
 ### storage.decode
 
+Status: target
+
 ```ts
 storage.decode(text: string, options: { format: "model-world-json" }): WorldSnapshot<unknown>
 ```
@@ -4082,6 +5848,8 @@ Validate and convert the supported old model-only world JSON schema to a WorldSn
 
 ### DataSnapshot
 
+Status: target
+
 ```ts
 type DataSnapshot<S = unknown> = Snapshot<unknown, S> & { readonly rootKind: "data" };
 ```
@@ -4094,6 +5862,8 @@ Opaque data-only Snapshot with rootKind data; loading creates supported data wit
 <a id="api-334"></a>
 
 ### Format
+
+Status: target
 
 ```ts
 interface Format<Value, Encoded extends string | Uint8Array> {
@@ -4113,6 +5883,8 @@ Explicit synchronous ordinary-data encoder/decoder with an adapter identity and 
 
 ### DecodeLimits
 
+Status: target
+
 ```ts
 type DecodeLimits = { bytes?: number; depth?: number; records?: number; references?: number; items?: number };
 ```
@@ -4125,6 +5897,8 @@ Caller-selected caps for encoded bytes and decoded depth, records, references an
 <a id="api-344"></a>
 
 ### StoredKinds
+
+Status: target
 
 ```ts
 type StoredKinds = {
@@ -4143,6 +5917,8 @@ Mapping from supported library identity-kind labels to their base framework type
 
 ### Snapshot
 
+Status: target
+
 ```ts
 Snapshot<V, S>
 ```
@@ -4155,6 +5931,8 @@ Opaque library-produced snapshot retaining inferred root V and extra-state S typ
 <a id="api-374"></a>
 
 ### WorldSnapshot
+
+Status: target
 
 ```ts
 WorldSnapshot<S>
@@ -4169,6 +5947,8 @@ WorldSnapshot<S>
 
 ### BundleSnapshot
 
+Status: target
+
 ```ts
 BundleSnapshot<S>
 ```
@@ -4181,6 +5961,8 @@ BundleSnapshot<S>
 <a id="api-376"></a>
 
 ### Sample
+
+Status: delivered
 
 ```ts
 Sample
@@ -4195,6 +5977,8 @@ Detached observation containing a finite nonnegative numeric tick and a record o
 
 ### History
 
+Status: delivered
+
 ```ts
 History
 ```
@@ -4208,6 +5992,8 @@ Bounded independent measurement container. Explicit add records observations; sa
 
 ### SimpleNetworkData
 
+Status: target
+
 ```ts
 interface SimpleNetworkData { readonly directed:boolean; readonly nodes:readonly string[]; readonly edges:readonly {readonly from:string;readonly to:string}[] }
 ```
@@ -4220,6 +6006,8 @@ Detached canonical versioned simple-network data containing direction, node IDs 
 <a id="api-346"></a>
 
 ### WireValue
+
+Status: target
 
 ```ts
 type WireValue = null | boolean | string | number
@@ -4238,6 +6026,8 @@ Snapshot scalar value or tagged undefined, bigint, negative-zero or record refer
 
 ### Ref
 
+Status: target
+
 ```ts
 type Ref = { tag: "ref"; id: string };
 ```
@@ -4250,6 +6040,8 @@ Reference to another record identity inside one validated snapshot graph.
 <a id="api-348"></a>
 
 ### WireEnvelope
+
+Status: target
 
 ```ts
 type WireEnvelope = {
@@ -4266,6 +6058,8 @@ Versioned snapshot root discriminator, root value, extra state and complete reco
 <a id="api-349"></a>
 
 ### WireRecord
+
+Status: target
 
 ```ts
 type WireRecord =
@@ -4291,6 +6085,8 @@ Closed union of supported ordinary-data, framework, handle and extension snapsho
 
 ### WorldRecord
 
+Status: target
+
 ```ts
 type WorldRecord = {
   id: string; kind: "world"; revision: 1; modelId: string;
@@ -4315,6 +6111,8 @@ Stored clock, optional normalized space, RNG reference, component membership and
 
 ### AgentRecord
 
+Status: target
+
 ```ts
 type AgentRecord = {
   id: string; kind: "agent"; revision: 1; modelId: string;
@@ -4337,6 +6135,8 @@ Stored identity, spatial basis, custom state and optional path continuation; con
 
 ### GridRecord
 
+Status: target
+
 ```ts
 type GridRecord = {
   id: string; kind: "grid"; revision: 1; modelId: string;
@@ -4353,6 +6153,8 @@ Stored normalized grid space, cell spacing and complete ordered field references
 
 ### FieldRecord
 
+Status: target
+
 ```ts
 type FieldRecord = {
   id: string; kind: "field"; revision: 1; modelId: string;
@@ -4368,6 +6170,8 @@ Stored owning grid/index and custom state; coordinates derive from the grid.
 <a id="api-354"></a>
 
 ### GraphRecord
+
+Status: target
 
 ```ts
 type GraphRecord = {
@@ -4386,6 +6190,8 @@ Stored graph policies, key counter, node/edge membership and default edge-state 
 
 ### EdgeRecord
 
+Status: target
+
 ```ts
 type EdgeRecord = {
   id: string; kind: "edge"; revision: 1; modelId: string;
@@ -4403,6 +6209,8 @@ Stored owning graph, endpoints, direction, key, custom state, optional geometry 
 
 ### RandomRecord
 
+Status: target
+
 ```ts
 type RandomRecord = RandomState & { id: string; kind: "random"; revision: 1 };
 ```
@@ -4415,6 +6223,8 @@ Stored versioned RNG continuation with snapshot record identity.
 <a id="api-357"></a>
 
 ### InputRecord
+
+Status: target
 
 ```ts
 type InputRecord = {
@@ -4432,6 +6242,8 @@ Stored property bindings with target references, scalar kinds and optional numer
 <a id="api-358"></a>
 
 ### AgendaRecord
+
+Status: target
 
 ```ts
 type AgendaRecord = {
@@ -4451,6 +6263,8 @@ Stored event time, insertion counter and ordered pending event data.
 
 ### HistoryRecord
 
+Status: target
+
 ```ts
 type HistoryRecord = {
   id: string; kind: "history"; revision: 1; capacity: number;
@@ -4468,6 +6282,8 @@ Stored capacity, metric keys, last accepted tick and retained numeric samples.
 
 ### HandleRecord
 
+Status: target
+
 ```ts
 type HandleRecord = {
   id: string; kind: "handle"; revision: 1;
@@ -4484,6 +6300,8 @@ Stored Agenda-event handle with owner reference and previously issued local even
 
 ### ExtensionRecord
 
+Status: target
+
 ```ts
 type ExtensionRecord = {
   id: string; kind: "extension"; codec: string; version: number; payload: WireValue;
@@ -4499,6 +6317,8 @@ Stored application-value payload identified by codec name and version.
 
 ### ValueCodec
 
+Status: target
+
 ```ts
 type ValueCodec = {
   id: string; version: number;
@@ -4512,14 +6332,33 @@ Optional adapter for otherwise unsupported application values inside snapshots; 
 
 [Details](api-reference.md#snapshot-wire-schema)
 
+<a id="storage-hash"></a>
+<a id="api-457"></a>
+
+### storage.hash
+
+Status: planned
+
+```ts
+storage.hash(snapshot: Snapshot<unknown, unknown>): string
+```
+
+Return a canonical hash of a Snapshot: equal supported state gives an equal hash. Pure; consumes no randomness. Depends on the target storage.save.
+
+[Details](api-reference.md#storage-state-hash)
+
 <a id="area-limits"></a>
 
 ## limits
+
+Target: open; limits split per owning module or stay together (see [open decisions](#open-decisions)).
 
 <a id="limits-stream-profile"></a>
 <a id="api-378"></a>
 
 ### limits.declarations
+
+Status: target
 
 ```ts
 limits.declarations = {
@@ -4537,6 +6376,8 @@ Read deeply frozen compatibility limits for declarations, creation, value traver
 
 ### limits.geojson
 
+Status: target
+
 ```ts
 limits.geojson = {
   textBytes: 8388608, features: 10000, positions: 100000, polygonPositions: 2048,
@@ -4553,6 +6394,8 @@ Read deeply frozen planar GeoJSON limits for text size, feature/coordinate count
 
 ### limits.simpleNetwork
 
+Status: target
+
 ```ts
 limits.simpleNetwork = { nodes: 1024, edges: 32768, idLength: 256 };
 ```
@@ -4565,6 +6408,8 @@ Read deeply frozen limits for the explicit versioned simple-network import profi
 <a id="api-378-behaviorspace"></a>
 
 ### limits.studyXml
+
+Status: target
 
 ```ts
 limits.studyXml = {
@@ -4582,6 +6427,8 @@ Read deeply frozen bounds for declarative Study XML parsing, studies, metrics an
 
 ### limits.study
 
+Status: target
+
 ```ts
 limits.study = {
   axisCount: 32, parameterCount: 128, nameLength: 128, stringLength: 65536, scenarioCount: 10000,
@@ -4597,10 +6444,14 @@ Read deeply frozen finite-study bounds for parameter axes, scenarios, runs, comp
 
 ## Exports and shared types
 
+Target: package root `index.ts`; shared coordinate types are declared structurally where needed.
+
 <a id="exports-agent-loom"></a>
 <a id="api-1"></a>
 
 ### agent-loom
+
+Status: target
 
 ```ts
 agent-loom
@@ -4615,6 +6466,8 @@ Exports Agent, Grid, Graph, Input, Random, World, run, Agenda, stats, geometry, 
 
 ### agent-loom/storage
 
+Status: target
+
 ```ts
 agent-loom/storage
 ```
@@ -4628,6 +6481,8 @@ Exports storage and the associated persistence types; file/database access remai
 
 ### agent-loom/studies/node
 
+Status: target
+
 ```ts
 agent-loom/studies/node
 ```
@@ -4640,6 +6495,8 @@ Exports studies with the native Node worker overload and the serial study contra
 <a id="api-2"></a>
 
 ### Space
+
+Status: delivered
 
 ```ts
 interface Space {
@@ -4664,6 +6521,8 @@ Centered finite XY or XYZ extents with optional dimension and boundary inputs; r
 
 ### Vector
 
+Status: delivered
+
 ```ts
 type Vector = { readonly x?: number; readonly y?: number; readonly z?: number };
 ```
@@ -4676,6 +6535,8 @@ Structural x/y/z displacement data. Supported omitted components mean zero; supp
 <a id="api-7"></a>
 
 ### Component
+
+Status: target
 
 ```ts
 type Component = Agent | Grid | Graph | Input | Agenda;
@@ -4690,6 +6551,8 @@ World membership accepts Agent, Grid, Graph, Input or Agenda. Each component has
 
 ### Position
 
+Status: delivered
+
 ```ts
 type Position = { readonly x:number; readonly y:number; readonly z?:number };
 ```
@@ -4698,6 +6561,1083 @@ Finite x/y coordinates with optional z; the operation’s spatial context determ
 
 [Details](api-reference.md#pure-spatial-contracts)
 
+<a id="type-command-result"></a>
+<a id="api-458"></a>
+
+### CommandResult
+
+Status: planned
+
+```ts
+type CommandResult =
+  | { readonly ok: true }
+  | { readonly ok: false; readonly reason: string }; // reason: stable kebab-case code
+```
+
+Return type of a rule-checked action. A rejection changes nothing, including Random state. Declared structurally, so a module does not need to import it.
+
+[Details](api-reference.md#command-result)
+
 ## Additive ordinary tools
 
 The root exports `measurements`, `twoPhase` and `continuous` add pure measurement projection, a synchronous compute/commit barrier and linear threshold calculations. World activation also accepts fixed and stable priority ordering. Their [reference contracts](api-reference.md#additive-measurement-and-update-tools) and [frozen examples](../execution-studies/STATUS.md) supplement the original operation inventory; they do not imply complete continuation or external engine compatibility.
+
+<a id="area-topology"></a>
+
+## topology
+
+Target: `library-core/polygon-layout` (today `library/grid/topology/`).
+
+Finite planar layouts: square, hexagonal, authored and quadrilateral cells with explicit neighbor and boundary queries. Layout-backed grids are listed under [Grid](#area-grid); planar measurements and edits under [geometry](#area-geometry).
+
+<a id="topology-square"></a>
+<a id="api-459"></a>
+
+### topology.square
+
+Status: delivered
+
+```ts
+topology.square(options: { columnCount: number; rowCount: number; cellSize?: number }): Layout
+```
+
+Create row-major square cells from the origin; cellSize defaults to 1.
+
+[Details](../grid-parcels/API.md#topology-generation)
+
+<a id="topology-hex"></a>
+<a id="api-460"></a>
+
+### topology.hex
+
+Status: delivered
+
+```ts
+topology.hex(options: { columnCount: number; rowCount: number; cellRadius?: number; orientation?: "pointy" | "flat" }): Layout
+```
+
+Create row-major hexagonal cells; cellRadius defaults to 1 and orientation to "pointy".
+
+[Details](../grid-parcels/API.md#topology-generation)
+
+<a id="topology-from-polygons"></a>
+<a id="api-461"></a>
+
+### topology.fromPolygons
+
+Status: delivered
+
+```ts
+topology.fromPolygons(options: { polygons: readonly PlanarPolygon[] }): Layout
+```
+
+Create a layout from authored conforming polygons; overlaps and nonconforming contacts reject.
+
+[Details](../grid-parcels/API.md#topology-generation)
+
+<a id="topology-quadrilaterals"></a>
+<a id="api-462"></a>
+
+### topology.quadrilaterals
+
+Status: delivered
+
+```ts
+topology.quadrilaterals(options: { ringCount: number; edgeLength?: number; random: Random }): Layout
+```
+
+Pair triangles of a finite hexagonal patch, then refine every cell into three or four quads. ringCount is an integer in 1..7; edgeLength defaults to 1; the supplied Random drives pairing.
+
+[Details](../grid-parcels/API.md#topology-generation)
+
+<a id="topology-relax"></a>
+<a id="api-463"></a>
+
+### topology.relax
+
+Status: delivered
+
+```ts
+topology.relax(options: { layout: Layout; method: "square-target"; iterationCount: number }): Layout
+```
+
+Apply synchronous square-target forces and return a fresh immutable layout; the input layout is unchanged.
+
+[Details](../grid-parcels/API.md#topology-generation)
+
+<a id="type-layout"></a>
+<a id="api-464"></a>
+
+### Layout
+
+Status: delivered
+
+```ts
+Layout
+```
+
+Detached immutable finite XY topology. Cell keys have meaning only within their layout.
+
+[Details](../grid-parcels/API.md#layout-queries)
+
+<a id="layout-cells"></a>
+<a id="api-465"></a>
+
+### layout.cells
+
+Status: delivered
+
+```ts
+layout.cells: readonly number[] // readonly
+```
+
+Cell keys 0..n-1 in polygon order.
+
+[Details](../grid-parcels/API.md#layout-queries)
+
+<a id="layout-polygon"></a>
+<a id="api-466"></a>
+
+### layout.polygon
+
+Status: delivered
+
+```ts
+layout.polygon(options: { cell: number }): PlanarPolygon
+```
+
+Return the frozen hole-free polygon of one cell.
+
+[Details](../grid-parcels/API.md#layout-queries)
+
+<a id="layout-neighbors"></a>
+<a id="api-467"></a>
+
+### layout.neighbors
+
+Status: delivered
+
+```ts
+layout.neighbors(options: { cell: number }): readonly number[]
+```
+
+Return cells sharing at least one complete boundary edge, ascending.
+
+[Details](../grid-parcels/API.md#layout-queries)
+
+<a id="layout-cell-at"></a>
+<a id="api-468"></a>
+
+### layout.cellAt
+
+Status: delivered
+
+```ts
+layout.cellAt(options: { position: Position }): number | undefined
+```
+
+Return the first cell, in key order, whose closed polygon contains the position.
+
+[Details](../grid-parcels/API.md#layout-queries)
+
+<a id="layout-shared-boundary"></a>
+<a id="api-469"></a>
+
+### layout.sharedBoundary
+
+Status: delivered
+
+```ts
+layout.sharedBoundary(options: { firstCell: number; secondCell: number }): readonly BoundarySegment[]
+```
+
+Return shared edges in the first cell's ring order; empty for non-neighbors.
+
+[Details](../grid-parcels/API.md#layout-queries)
+
+<a id="type-boundary-segment"></a>
+<a id="api-470"></a>
+
+### BoundarySegment
+
+Status: delivered
+
+```ts
+type BoundarySegment = readonly [PlanarXY, PlanarXY];
+```
+
+One shared boundary edge between two layout cells.
+
+[Details](../grid-parcels/API.md#layout-queries)
+
+<a id="area-continuous"></a>
+
+## continuous
+
+Target: `library-core/continuous`.
+
+Pure linear progression and threshold-crossing calculations between explicit events.
+
+<a id="continuous-linear"></a>
+<a id="api-471"></a>
+
+### continuous.linear
+
+Status: delivered
+
+```ts
+continuous.linear(input: { value: number; rate: number; duration: number }): number
+```
+
+Return value + rate * duration for finite inputs and a finite nonnegative duration; nonfinite results reject.
+
+[Details](api-reference.md#additive-measurement-and-update-tools)
+
+<a id="continuous-crossing"></a>
+<a id="api-472"></a>
+
+### continuous.crossing
+
+Status: delivered
+
+```ts
+continuous.crossing(input: {
+  from: number; to: number; threshold: number; duration: number;
+  direction?: CrossingDirection | "either"
+}): ThresholdCrossing | undefined
+```
+
+Return where a linear change from `from` to `to` over duration reaches threshold, or undefined for zero duration, no crossing or another direction (default "either"). The endpoint returns exactly duration.
+
+[Details](api-reference.md#additive-measurement-and-update-tools)
+
+<a id="type-crossing-direction"></a>
+<a id="api-473"></a>
+
+### CrossingDirection
+
+Status: delivered
+
+```ts
+type CrossingDirection = "rising" | "falling";
+```
+
+Direction of a threshold crossing.
+
+[Details](api-reference.md#additive-measurement-and-update-tools)
+
+<a id="type-threshold-crossing"></a>
+<a id="api-474"></a>
+
+### ThresholdCrossing
+
+Status: delivered
+
+```ts
+interface ThresholdCrossing {
+  readonly elapsed: number;
+  readonly value: number;
+  readonly direction: CrossingDirection;
+}
+```
+
+When, at which value and in which direction a linear change crosses a threshold.
+
+[Details](api-reference.md#additive-measurement-and-update-tools)
+
+<a id="area-two-phase"></a>
+
+## twoPhase
+
+Target: `library-core/execution`.
+
+A synchronous compute-then-commit barrier for simultaneous updates.
+
+<a id="two-phase"></a>
+<a id="api-475"></a>
+
+### twoPhase
+
+Status: delivered
+
+```ts
+twoPhase<T, Proposal>(source: Iterable<T>, actions: {
+  compute(member: T): Proposal;
+  commit(member: T, proposal: Proposal): unknown;
+}): void
+```
+
+Compute every proposal before committing any. Members are deduplicated by identity and visited in source order in both phases; no clock advances. A failure stops without rollback.
+
+[Details](api-reference.md#additive-measurement-and-update-tools)
+
+<a id="area-measurements"></a>
+
+## measurements
+
+Target: `library-core/measurement-and-history`.
+
+Reusable pure projections of model state into finite numeric records. Bounded History is listed under [storage](#area-storage).
+
+<a id="measurements-define"></a>
+<a id="api-476"></a>
+
+### measurements.define
+
+Status: delivered
+
+```ts
+measurements.define<Model, Values extends Readonly<Record<string, number>>>(
+  project: (model: Model) => Values,
+): Measurement<Model, Values>
+```
+
+Wrap a synchronous projection; each read calls it once and returns a frozen copy of its finite numeric own data.
+
+[Details](api-reference.md#additive-measurement-and-update-tools)
+
+<a id="type-measurement"></a>
+<a id="api-477"></a>
+
+### Measurement
+
+Status: delivered
+
+```ts
+interface Measurement<Model, Values extends Readonly<Record<string, number>>> {
+  read(model: Model): Readonly<Values>;
+}
+```
+
+A reusable projection created by measurements.define. It owns no model state or sampling schedule.
+
+[Details](api-reference.md#additive-measurement-and-update-tools)
+
+<a id="area-budget"></a>
+
+## Budget
+
+Target: `library-city/economy`.
+
+Budgets with integer money and atomic transfers. A Budget works with any agents, not only inside a city.
+
+<a id="budget-add"></a>
+<a id="api-478"></a>
+
+### Budget.create
+
+Status: planned
+
+```ts
+Budget.create(options?: { money?: number }): Budget
+```
+
+Create a budget; money defaults to 0 and must be a safe integer (RangeError otherwise).
+
+[Details](api-reference.md#budget)
+
+<a id="budget-money"></a>
+<a id="api-479"></a>
+
+### budget.money
+
+Status: planned
+
+```ts
+budget.money: number // readonly integer
+```
+
+Current balance; changes only through transfer.
+
+[Details](api-reference.md#budget)
+
+<a id="budget-transfer"></a>
+<a id="api-480"></a>
+
+### budget.transfer
+
+Status: planned
+
+```ts
+budget.transfer(options: { to: Budget; amount: number }): CommandResult
+```
+
+Move a positive integer amount atomically. A shortfall returns `{ ok: false, reason: "insufficient-money" }` and changes neither balance; a non-integer or nonpositive amount throws RangeError.
+
+[Details](api-reference.md#budget)
+
+<a id="area-energy-supply"></a>
+
+## EnergySupply
+
+Target: `library-city/energy-supply`.
+
+Supply per connected component of a network: connected consumers share limited production. Being connected and being supplied are different statements.
+
+<a id="energy-supply-add"></a>
+<a id="api-481"></a>
+
+### EnergySupply.create
+
+Status: planned
+
+```ts
+EnergySupply.create<N extends object>(options: {
+  network: Graph<N>;
+  production?: (node: N) => number; // default 0
+  demand?: (node: N) => number;     // default 0
+}): EnergySupply<N>
+```
+
+Bind the rule to an existing graph; nothing is computed until advance. Amounts are abstract units per tick and must be finite and nonnegative.
+
+[Details](api-reference.md#energy-supply)
+
+<a id="energy-supply-advance"></a>
+<a id="api-482"></a>
+
+### energySupply.advance
+
+Status: planned
+
+```ts
+energySupply.advance(): void
+```
+
+Recompute production and demand per weakly connected component from the current graph. Deterministic; consumes no randomness.
+
+[Details](api-reference.md#energy-supply)
+
+<a id="energy-supply-is-supplied"></a>
+<a id="api-483"></a>
+
+### energySupply.isSupplied
+
+Status: planned
+
+```ts
+energySupply.isSupplied(node: N): boolean
+```
+
+Return true when the node's component produced at least its demand in the last advance.
+
+[Details](api-reference.md#energy-supply)
+
+<a id="energy-supply-observe"></a>
+<a id="api-484"></a>
+
+### energySupply.read
+
+Status: planned
+
+```ts
+energySupply.read(): {
+  readonly components: readonly {
+    readonly nodeCount: number;
+    readonly production: number;
+    readonly demand: number;
+    readonly servedShare: number; // min(1, production / demand); 1 without demand
+  }[];
+}
+```
+
+Return a detached, JSON-serializable observation in component order; changes nothing.
+
+[Details](api-reference.md#energy-supply)
+
+<a id="area-public-transport"></a>
+
+## PublicTransport
+
+Target: `library-city/public-transport`.
+
+Trip cohorts travel over a network with edge capacities; load and congestion are capacity counters. A cohort's weight is an ordinary property of this system, not a core concept.
+
+<a id="public-transport-add"></a>
+<a id="api-485"></a>
+
+### PublicTransport.create
+
+Status: planned
+
+```ts
+PublicTransport.create<N extends object, E extends object>(options: {
+  network: Graph<N, E>;
+  capacity?: (edge: Edge<N, E>) => number; // default 100 trips per tick
+  scale?: number;                          // default 1; fixed at setup
+}): PublicTransport<N, E>
+```
+
+Bind the system to a network. scale is the largest cohort weight: 1 moves every trip as its own cohort, 100 groups up to 100 trips. A non-integer or nonpositive scale throws RangeError.
+
+[Details](api-reference.md#public-transport)
+
+<a id="public-transport-advance"></a>
+<a id="api-486"></a>
+
+### publicTransport.advance
+
+Status: planned
+
+```ts
+publicTransport.advance(options: {
+  trips: readonly { from: N; to: N; count: number }[];
+}): void
+```
+
+Split each trip group into integer-weight cohorts, route them with graph.route and add each weight to the load of every edge on the route. Unreachable trips are counted, never dropped silently. Depends on the target graph.route.
+
+[Details](api-reference.md#public-transport)
+
+<a id="public-transport-observe"></a>
+<a id="api-487"></a>
+
+### publicTransport.read
+
+Status: planned
+
+```ts
+publicTransport.read(): {
+  readonly edges: readonly {
+    readonly edgeId: string;
+    readonly load: number;
+    readonly capacity: number;
+    readonly congestion: number; // min(1, load / capacity)
+  }[];
+  readonly unroutedTripCount: number;
+}
+```
+
+Return a detached, JSON-serializable observation in graph edge order; changes nothing.
+
+[Details](api-reference.md#public-transport)
+
+<a id="area-ui-authoring"></a>
+
+## UI authoring
+
+Target: `ui-web` (today `ui/`, entry `ui/index.ts`).
+
+A separate presentation API, not part of the headless package. The [UI API inventory](../ui/api-table.md) and [UI API reference](../ui/api-reference.md) remain the detailed owners; each entry names its UI IDs instead of repeating the contract. The model owns state, validation and time; the UI reads observations and changes state only through model actions.
+
+<a id="define-ui"></a>
+<a id="api-488"></a>
+
+### defineUI
+
+Status: delivered
+
+```ts
+defineUI<P extends object, M extends ModelInstance>(definition: Definition<P, M>, spec: UISpec<P, M>): BoundEntry
+```
+
+Bind a model definition to one flat UI description without creating the model at import. The source declares four overloads for UISpec, ChangeUISpec and monitor-typed specs. See [UI-001](../ui/api-table.md), [UI-070](../ui/api-table.md).
+
+[Details](../ui/api-reference.md#define-ui)
+
+<a id="type-ui-spec"></a>
+<a id="api-489"></a>
+
+### UISpec
+
+Status: delivered
+
+```ts
+UISpec<P, M>
+```
+
+The flat authoring description: setup, live, actions, monitors, completion, source, drawing and the required views. See [UI-002](../ui/api-table.md), [UI-010](../ui/api-table.md), [UI-013](../ui/api-table.md), [UI-016](../ui/api-table.md), [UI-019](../ui/api-table.md), [UI-020](../ui/api-table.md), [UI-021](../ui/api-table.md), [UI-030](../ui/api-table.md), [UI-060](../ui/api-table.md).
+
+[Details](../ui/api-reference.md#principles)
+
+<a id="type-change-ui-spec"></a>
+<a id="api-490"></a>
+
+### ChangeUISpec
+
+Status: delivered
+
+```ts
+ChangeUISpec<P, M>
+```
+
+The same flat description with an explicit default write for keyed live fields. See [UI-081](../ui/api-table.md).
+
+[Details](../ui/api-reference.md#live)
+
+<a id="type-live-changes"></a>
+<a id="api-491"></a>
+
+### LiveChanges
+
+Status: delivered
+
+```ts
+type LiveChanges<P extends object> = Partial<P>;
+```
+
+One decoded parameter change passed to a default live write. See [UI-081](../ui/api-table.md).
+
+[Details](../ui/api-reference.md#live)
+
+<a id="type-bound-entry"></a>
+<a id="api-492"></a>
+
+### BoundEntry
+
+Status: delivered
+
+```ts
+BoundEntry
+```
+
+A model bound to its UI description: title, optional description and mount. See [UI-004](../ui/api-table.md).
+
+[Details](../ui/api-reference.md#lifecycle)
+
+<a id="type-observation"></a>
+<a id="api-493"></a>
+
+### Observation
+
+Status: delivered
+
+```ts
+Observation<T>
+```
+
+The detached observation type inferred from a model definition or instance. See [UI-078](../ui/api-table.md).
+
+[Details](../ui/api-reference.md#model)
+
+<a id="type-monitor"></a>
+<a id="api-494"></a>
+
+### Monitor
+
+Status: delivered
+
+```ts
+Monitor<S, V>
+```
+
+An extracted monitor with observation S and scalar V; a formatter accepts only the paired getter result. See [UI-019](../ui/api-table.md), [UI-077](../ui/api-table.md), [UI-079](../ui/api-table.md).
+
+[Details](../ui/api-reference.md#monitors)
+
+<a id="type-view"></a>
+<a id="api-495"></a>
+
+### View
+
+Status: delivered
+
+```ts
+View<S>
+```
+
+The view union: network, grid, spatial, line, bar, scatter and table. See [UI-031](../ui/api-table.md), [UI-032](../ui/api-table.md), [UI-033](../ui/api-table.md), [UI-034](../ui/api-table.md), [UI-035](../ui/api-table.md).
+
+[Details](../ui/api-reference.md#views)
+
+<a id="type-inspector"></a>
+<a id="api-496"></a>
+
+### Inspector
+
+Status: delivered
+
+```ts
+Inspector<S>
+```
+
+A view that shows one row for the current selection. See [UI-036](../ui/api-table.md), [UI-080](../ui/api-table.md).
+
+[Details](../ui/api-reference.md#inspector)
+
+<a id="type-graph-node-data"></a>
+<a id="api-497"></a>
+
+### GraphNodeData
+
+Status: delivered
+
+```ts
+GraphNodeData
+```
+
+A detached node for network and spatial views. See [UI-040](../ui/api-table.md), [UI-041](../ui/api-table.md).
+
+[Details](../ui/api-reference.md#network)
+
+<a id="type-graph-edge-data"></a>
+<a id="api-498"></a>
+
+### GraphEdgeData
+
+Status: delivered
+
+```ts
+GraphEdgeData
+```
+
+A detached edge for network views. See [UI-042](../ui/api-table.md), [UI-043](../ui/api-table.md).
+
+[Details](../ui/api-reference.md#network)
+
+<a id="type-cell"></a>
+<a id="api-499"></a>
+
+### Cell
+
+Status: delivered
+
+```ts
+Cell
+```
+
+A rendered cell record; presentation data, not a domain Field. See [UI-044](../ui/api-table.md).
+
+[Details](../ui/api-reference.md#grid)
+
+<a id="type-grid-data"></a>
+<a id="api-500"></a>
+
+### GridData
+
+Status: delivered
+
+```ts
+GridData
+```
+
+Rectangular rendered cells for the grid view. See [UI-045](../ui/api-table.md).
+
+[Details](../ui/api-reference.md#grid)
+
+<a id="type-spatial-agent"></a>
+<a id="api-501"></a>
+
+### SpatialAgent
+
+Status: delivered
+
+```ts
+SpatialAgent
+```
+
+A positioned symbol in the spatial view. See [UI-046](../ui/api-table.md), [UI-052](../ui/api-table.md), [UI-083](../ui/api-table.md).
+
+[Details](../ui/api-reference.md#spatial)
+
+<a id="type-spatial-data"></a>
+<a id="api-502"></a>
+
+### SpatialData
+
+Status: delivered
+
+```ts
+SpatialData
+```
+
+Agents, optional cell backdrop, segments and labels for the spatial view. See [UI-047](../ui/api-table.md), [UI-048](../ui/api-table.md), [UI-049](../ui/api-table.md), [UI-054](../ui/api-table.md).
+
+[Details](../ui/api-reference.md#spatial)
+
+<a id="type-spatial-segment"></a>
+<a id="api-503"></a>
+
+### SpatialSegment
+
+Status: delivered
+
+```ts
+SpatialSegment
+```
+
+A stroke between two world positions. See [UI-050](../ui/api-table.md).
+
+[Details](../ui/api-reference.md#spatial)
+
+<a id="type-spatial-label"></a>
+<a id="api-504"></a>
+
+### SpatialLabel
+
+Status: delivered
+
+```ts
+SpatialLabel
+```
+
+A nonselectable text annotation. See [UI-053](../ui/api-table.md).
+
+[Details](../ui/api-reference.md#spatial)
+
+<a id="type-series"></a>
+<a id="api-505"></a>
+
+### Series
+
+Status: delivered
+
+```ts
+Series
+```
+
+A labeled series of numeric points for line and scatter charts. See [UI-051](../ui/api-table.md).
+
+[Details](../ui/api-reference.md#charts)
+
+<a id="type-bar-series"></a>
+<a id="api-506"></a>
+
+### BarSeries
+
+Status: delivered
+
+```ts
+BarSeries
+```
+
+A labeled bar series with categorical or numeric x values. See [UI-075](../ui/api-table.md).
+
+[Details](../ui/api-reference.md#charts)
+
+<a id="type-axis-spec"></a>
+<a id="api-507"></a>
+
+### AxisSpec
+
+Status: delivered
+
+```ts
+AxisSpec
+```
+
+Optional chart axis label and unit. See [UI-076](../ui/api-table.md).
+
+[Details](../ui/api-reference.md#charts)
+
+<a id="type-drawing-intent"></a>
+<a id="api-508"></a>
+
+### DrawingIntent
+
+Status: target
+
+```ts
+DrawingIntent
+```
+
+Pointer intent passed to `UISpec.drawing.intent`. Supported by the host, but `ui/index.ts` does not export the named type. See [UI-061](../ui/api-table.md).
+
+[Details](../ui/api-reference.md#drawing)
+
+<a id="indexed-color"></a>
+<a id="api-509"></a>
+
+### indexedColor
+
+Status: delivered
+
+```ts
+indexedColor(color: number): string
+```
+
+Convert a finite indexed numeric color to a presentation color. See [UI-062](../ui/api-table.md).
+
+[Details](../ui/api-reference.md#palette)
+
+<a id="scientific-palette"></a>
+<a id="api-510"></a>
+
+### scientificPalette
+
+Status: delivered
+
+```ts
+scientificPalette: Readonly<{ neutral: string; waiting: string; active: string; completed: string; unavailable: string }>
+```
+
+Shared readonly presentation colors for scientific state categories. See [UI-063](../ui/api-table.md).
+
+[Details](../ui/api-reference.md#palette)
+
+<a id="collection-diagram"></a>
+<a id="api-511"></a>
+
+### collectionDiagram
+
+Status: delivered
+
+```ts
+collectionDiagram(rows: readonly CollectionRow[]): SpatialData
+```
+
+Pure layout of detached collections into spatial view data; coordinates are diagram units. See [UI-082](../ui/api-table.md).
+
+[Details](../ui/api-reference.md#collection-diagrams)
+
+<a id="type-collection-row"></a>
+<a id="api-512"></a>
+
+### CollectionRow
+
+Status: delivered
+
+```ts
+CollectionRow
+```
+
+One collection-diagram row: identified items, an anonymous count or used units of a capacity. See [UI-082](../ui/api-table.md).
+
+[Details](../ui/api-reference.md#collection-diagrams)
+
+<a id="type-collection-item"></a>
+<a id="api-513"></a>
+
+### CollectionItem
+
+Status: delivered
+
+```ts
+CollectionItem
+```
+
+One identified item in a collection row. See [UI-082](../ui/api-table.md).
+
+[Details](../ui/api-reference.md#collection-diagrams)
+
+<a id="area-model-contract"></a>
+
+## Model contract
+
+Target: `models/<slug>/model.ts` + `ui.ts`.
+
+Every model is a flat folder with two files. `model.ts` exports `model`, a headless `Definition<P, M>` with title, description, inputs and create; it imports only public APIs and contains no UI, DOM or framework code. `ui.ts` exports `ui`, a `BoundEntry` from `defineUI`: short, declarative bindings of inputs, actions, observations and views. `read()` returns the model observation; library objects use `read()` as well. A step is one procedure invocation; tick is model time; a host frame is neither.
+
+<a id="type-model-instance"></a>
+<a id="api-514"></a>
+
+### ModelInstance
+
+Status: delivered
+
+```ts
+interface ModelInstance {
+  read(): unknown;
+  advance(stepCount?: number): void;
+  dispose?(): void;
+}
+```
+
+The minimum instance shape the UI host uses: read returns detached observation data, advance runs procedure steps, dispose is optional. Exported by `ui/index.ts`. See [UI-003](../ui/api-table.md).
+
+[Details](../ui/api-reference.md#model)
+
+<a id="type-definition"></a>
+<a id="api-515"></a>
+
+### Definition
+
+Status: target
+
+```ts
+interface Definition<P extends object, M> {
+  readonly title: string;
+  readonly description?: string;
+  readonly inputs: Inputs<P>;
+  readonly create: (options?: Partial<P>) => M;
+}
+```
+
+Headless model description with canonical input descriptors and create. Implemented in `models/definition.ts` and used by every model, but exported by no public entry. See [UI-005](../ui/api-table.md).
+
+[Details](../ui/api-reference.md#model)
+
+<a id="type-input-descriptor"></a>
+<a id="api-516"></a>
+
+### Input
+
+Status: target
+
+```ts
+type Input<T> = [T] extends [number] ? {
+  readonly kind: "number"; readonly default: T;
+  readonly min?: number; readonly max?: number; readonly step?: number; readonly integer?: boolean;
+} : [T] extends [boolean] ? {
+  readonly kind: "boolean"; readonly default: T;
+} : [T] extends [string] ? {
+  readonly kind: "choice"; readonly default: T; readonly options: readonly T[];
+} | {
+  readonly kind: "text"; readonly default: T;
+} : never;
+```
+
+Descriptor for one model input with a playable default. It describes a setup value; it is not the headless [Input](#area-input) binding object. Implemented in `models/definition.ts`, not exported. See [UI-006](../ui/api-table.md).
+
+[Details](../ui/api-reference.md#model)
+
+<a id="type-inputs"></a>
+<a id="api-517"></a>
+
+### Inputs
+
+Status: target
+
+```ts
+type Inputs<P extends object> = {
+  readonly [K in keyof P]-?: Input<Exclude<P[K], undefined>>;
+};
+```
+
+One input descriptor per parameter key. Implemented in `models/definition.ts`, not exported. See [UI-006](../ui/api-table.md).
+
+[Details](../ui/api-reference.md#model)
+
+<a id="open-decisions"></a>
+
+## Open decisions
+
+These choices need an owner decision. Entries in this inventory apply the default; the alternative remains possible. Rows marked settled record the decision and have no alternative left.
+
+| Question | Default applied here | Alternative |
+| --- | --- | --- |
+| Observation method | **Settled 2026-11-11:** every read uses `read()`, on library objects and in the model contract; `observe()` is not used. "Observation" stays the data noun. | — |
+| Factory style for systems | **Settled 2026-11-11:** city systems use `Name.create(options)`, for example `Budget.create`; free factory functions are superseded by the [principles](../evolution/principles.md). | — |
+| Parcel vocabulary | **Settled 2026-11-11:** `ParcelShape` migrates to `PlanarPolygonShape` with all consumers, as recorded in the [naming migration contracts](../../PLAN.md#naming-migration-contracts). | — |
+| Home of Input and limits | Both areas keep `Target: open`. | Input bindings in `world-composition`; limits split per owning module. |
+| Topology ownership | **Settled by the [accepted structure](../evolution/structure.md):** square and cubic grids stay in `grid`; finite layouts and `topology` belong to `polygon-layout`. Core modules never import each other. | — |
+| Layout-backed `Grid.create` | Listed under Grid; it consumes a `polygon-layout` Layout. | Move the layout overload to `world-composition` as an adapter, or declare Layout structurally in `grid`. The autonomy rule forbids a direct import either way. |
+| Entry count | One entry per `###` heading; overloads count separately. | Count distinct names (overload families) instead. |
+| Package home of `Definition`, `Input` and `Inputs` | `target`: they live in `models/definition.ts`, which no public entry exports. | Export them from `ui/index.ts` or the root. |
+| Command data | Only `CommandResult` is planned; actions stay typed model methods. | Typed command objects `{ type, … }` plus a model `apply(command)` for replays. |
+| Package entries for systems | None; systems import the root `"city-library"`. | Subpaths such as `city-library/economy`, or separate packages (roadmap open question 3). |
+| Route search precision | `route` gets `canUse` and `heuristic` with numeric costs. | Keep exact bigint costs as in the delivered distance algorithms, at a speed cost. |
+| Selection weights | No new API: `random.sample(source, { weight })` already draws by weight; weight derivation stays a plain function in the system. | A planned pure `random.weights` that consumes no draws. |
+| Snapshot and hash owner | `storage.hash` is planned next to the target `storage.save`. | `world-composition` owns snapshots and hashes, because complete state spans modules. |
+| Cohort remainders | Deterministic: the last cohort of a trip group carries the remainder. | Distribute remainders with the system's own Random stream. |
+| Roads, zones and growth | Not proposed: roadmap order 4 names them, but the target structure has no matching subsystem folder. | Add a city system such as `library-city/land-use` with the first working slice. |
+| `grid.reachable` neighborhood | Defaults to `"faces"`, like `grid.diffuse`. | Default to `"moore"`, like `grid.neighbors`. |
+| Option convention and frozen signatures | The "every option optional" convention applies to new API; delivered positional or required arguments (`Agent.create(state, options)`, `Store.create({ capacity })`) stay frozen. | Add option-only overloads in a naming migration. |
+| Global selectors in nested `activate` | Delivered: `activate` accepts the global agents/fields selectors in nested calls, as both former methods (`activate` and `report`) did before the 2026-11-11 merge; there is no runtime change. Open: whether the undelivered interleaved target restricts them to observer calls. | Keep the delivered behaviour; decide the restriction only with the interleaved target. |
+| Change feed | Not proposed yet ([game contract 3](../evolution/layers-and-api.md#game-contracts)). | A revision counter on observations once a renderer needs it. |
+
+Pedestrians, material cycles, politics and library-generative-design have no entries: the [target structure](../evolution/structure.md) names their folders, but no first capability is defined yet.
+
+<a id="known-inconsistencies"></a>
+
+### Known inconsistencies
+
+These differences were found while checking the specification against `index.ts`, `ui/index.ts` and the [UI contract](../ui/api-table.md). Entries marked resolved were settled on 2026-11-11; the others remain open.
+
+- Resolved: `Definition`, `Input` and `Inputs` (UI-005, UI-006) and `DrawingIntent` (UI-061) are not exported, so the UI contract marks them target. Their package home stays open (see above).
+- Resolved: `StudyAxis` had two incompatible forms under one name. Both [api-277](#api-277) and [api-294](#api-294) now follow the delivered export (`name` with scalar values).
+- Resolved: `agent.pitch` and `agent.roll` ([api-57](#api-57), [api-58](#api-58)) now follow the source type `number | undefined`; they apply only to XYZ agents.
+- Resolved: the [api-157](#api-157) heading now reads `Input.create`, matching its signature and the static-factory rule.
+- [api-1](#api-1) lists `Input` and `limits` as package exports; the delivered root `city-library` exports neither, and the `agent-loom` package paths remain unresolved.
+- UI-001 shows one `defineUI` signature; the source declares four overloads.
+- 57 delivered entries in the first 16 areas differ in spelling from their source declaration (parameter names, aliases, defaults or overload split); [coverage](../development/coverage.md) owns that comparison.

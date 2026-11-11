@@ -23,11 +23,13 @@ Pin and archive the exact served NetLogo model, SHA-256, upstream revision and c
 3. Setup-only/live parameter effects, relevant drawing/actions and validation/adaptations.
 4. Boundaries, terminal conditions, preflight versus completed-step stops and tick accounting.
 5. Reporter/plot meaning, units, current distributions versus histories, missing/zero quantities and measurement purity.
-6. Relevant interactive behavior: Setup/Reset, Step, Play/Pause and model-specific controls present in each system.
+6. Relevant interactive behavior: Setup/Reset, Step, Play/Pause and model-specific controls present in each system. Model Lab maps setup to **Reload** and has no step buttons; compare stepping through **Run**/**Pause** and headless `advance(stepCount)`.
 
 Run the concrete original in real Chromium as well as the City Library target. Capture paired reference/target setup and progressed screenshots at declared settings and actual observed ticks, plus appropriate desktop/mobile target states and interactions. State each actual viewport/version/source hash/seed policy. Reports must contain observed results, comparison conclusions, explicit differences, console/runtime errors and any checks that could not run. Store final reports and small targeted image evidence in Git, not only temporary paths. Source snapshots and procedure reading complement executed browser evidence; they do not replace it.
 
 Pixel equivalence is not required. Different UI, improved interaction and architecture are encouraged while preserving functional meaning. Every material functional deviation needs its reason and evidence. Deterministic equations and invariants should be tested exactly where possible. Different RNG algorithms/call order imply different stochastic trajectories; compare appropriate mechanisms/invariants and justified outcomes, never invent seed identity. Scientific distribution equivalence needs an actual justified study if claimed.
+
+Same-tick comparisons no longer use target step buttons; Model Lab removed **1 step**, **10 steps** and **100 steps** on 2026-11-11. Compare exact tick counts headlessly: create the target with the declared setup values, call `advance(stepCount)` and read the observation. For browser images at a declared tick, press **Run** and **Pause** once the Tick monitor reaches it; at the lowest **Speed** frames are 500 ms apart, and `stepOnce` in `tests/ui/ui-authoring/assertions.ts` shows the one-step pattern. Record the observed tick, not the intended one. Earlier reports that used the native target step buttons remain valid records of their snapshot; that method is superseded for new evidence.
 
 If the reference cannot run, record the concrete error/environment and leave baseline-compared pending. If target browser automation cannot run, record the blocker and leave browser-verified pending. Complex selected models remain scope; no generic replacement simulation, stub, silent omission or source-only acceptance.
 

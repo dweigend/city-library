@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Stormwater Retention** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Stormwater Retention** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

@@ -1,0 +1,187 @@
+{
+  "description": "Owner-approved Model Lab controls migration (2026-11-11): Model Lab initializes a model when it opens, the Setup button reads Reload (Reload with changes while setup edits are pending) and the 1/10/100 step buttons are removed. Frozen browser checks click Reload instead of Setup, rely on the automatic initialization instead of a first Setup click, and advance one step through Run and Pause (stepOnce) instead of the removed step buttons. stepOnce pauses in the same task as the first rendered step and requires the rendered Tick monitor to advance by exactly one, so the two fixtures that step without one gain a Tick monitor. The quad-layouts README links its contract and verification to the retained QUAD-LAYOUTS documents instead of the removed TOWNSCAPER stubs. Assertion counts are unchanged. Earlier receipts remain unchanged.",
+  "records": [
+    {
+      "source": "tests/ui/ui-authoring/01-defaults-and-inert-entry.ts",
+      "destination": "tests/ui/ui-authoring/01-defaults-and-inert-entry.ts",
+      "sourceSha256": "c93c0113b5de4f075b1faffe94d55d108290e53080555c5fcc4fa93a1861802d",
+      "destinationSha256": "2ebe5e91f0a63f88952ce4110c669a8844a3f3ed53c068b29335ae356335abb7",
+      "assertions": 1
+    },
+    {
+      "source": "tests/ui/ui-authoring/02-ordered-setup-and-numeric-live.ts",
+      "destination": "tests/ui/ui-authoring/02-ordered-setup-and-numeric-live.ts",
+      "sourceSha256": "4e92752915e8f2d9c584947f13a61275cf7258fbe81161504cc3bce477b7fffb",
+      "destinationSha256": "e03689c1877b8117abac1fa847205cdaf6b2cb3e04b89284bc5653aa01b32dcc",
+      "assertions": 0
+    },
+    {
+      "source": "tests/ui/ui-authoring/03-alternate-observation.ts",
+      "destination": "tests/ui/ui-authoring/03-alternate-observation.ts",
+      "sourceSha256": "d9cd2b1070df86fb0db104c8fd308223577d96e66edba906cfc39867f7920018",
+      "destinationSha256": "838e36d9341e77ef4753016e90d61241eb3f59c797babeec19d0de6604e7553e",
+      "assertions": 1
+    },
+    {
+      "source": "tests/ui/ui-authoring/04-groups-format-and-categories.ts",
+      "destination": "tests/ui/ui-authoring/04-groups-format-and-categories.ts",
+      "sourceSha256": "d3a6753d40d2d5406dedf7e0b2b65a403e0589aa91d964d21779d10afc3c5439",
+      "destinationSha256": "f48a2bc01ba84086b525ac1ed5101f553eb8767a0972c2c0f14a18c43bbb331d",
+      "assertions": 5
+    },
+    {
+      "source": "tests/ui/ui-authoring/05-independent-actions-and-scalar-setters.ts",
+      "destination": "tests/ui/ui-authoring/05-independent-actions-and-scalar-setters.ts",
+      "sourceSha256": "02945d3367e006ed4b3d6800969ab5867834321a4c59e4a637e565fa2d1a4380",
+      "destinationSha256": "7e7d4914659b3c6aaf2014197919f22fd88d302a6d506b3096f74c8e536b768f",
+      "assertions": 1
+    },
+    {
+      "source": "tests/ui/ui-authoring/README.md",
+      "destination": "tests/ui/ui-authoring/README.md",
+      "sourceSha256": "339b805e44079b3a66006a70979a619c3308ff578788e9c388e6f5b46b35fbd2",
+      "destinationSha256": "c6e5bb808d5c2d9ffe92d1a5728be3177b3ed6cadf68663d6390fe93db7af145",
+      "assertions": 0
+    },
+    {
+      "source": "tests/ui/ui-authoring/assertions.ts",
+      "destination": "tests/ui/ui-authoring/assertions.ts",
+      "sourceSha256": "e1e5e2f3f9b6f626cdbbd2ff013df237f9e4d9df19e52fcd4768e1f34dad21c2",
+      "destinationSha256": "63d50f9e1cedfdffbbe41532e36cf582e536d22cdad2887e2731e55ae5f667b2",
+      "assertions": 7
+    },
+    {
+      "source": "tests/ui/ui-collections/01-store-items.ts",
+      "destination": "tests/ui/ui-collections/01-store-items.ts",
+      "sourceSha256": "c400855d8727fb2ff845adbe63e19000cd6e18b3779f384a48cb9aba67c99b9b",
+      "destinationSha256": "5c6036cf9e917655a809c714a004a25854b0e3f58590f7c818f85c50335bda1b",
+      "assertions": 5
+    },
+    {
+      "source": "tests/ui/ui-collections/02-priority-and-retained-capacity.ts",
+      "destination": "tests/ui/ui-collections/02-priority-and-retained-capacity.ts",
+      "sourceSha256": "a1b6aa0d57f5c735366c948e39843d0e038004eef2aa5fb38a22964ffb497bc7",
+      "destinationSha256": "3cd61bd39c4eaa0f26aec9f4e8a2781acc92e570db1a92bac79412f62303d5d4",
+      "assertions": 4
+    },
+    {
+      "source": "tests/ui/ui-collections/03-counts-defaults-and-errors.ts",
+      "destination": "tests/ui/ui-collections/03-counts-defaults-and-errors.ts",
+      "sourceSha256": "985736418e66c0d7fd260bc6c156fcc3e5b9d840c3bd14d5e1d28cf08ca8a646",
+      "destinationSha256": "fddae2fb18b25226fd7f77697a8b439d10a684b2fce2601b34095882c8b525ce",
+      "assertions": 8
+    },
+    {
+      "source": "tests/ui/ui-collections/04-selection-and-lifecycle.ts",
+      "destination": "tests/ui/ui-collections/04-selection-and-lifecycle.ts",
+      "sourceSha256": "33338668f965d3330caf1b0c41d0042329ce4fb945d6bccdc0d05849e2043dc0",
+      "destinationSha256": "94f494a078d2383ef737949c5a6098c19e25f17cfb5284b769b1927ad7433b9b",
+      "assertions": 6
+    },
+    {
+      "source": "tests/ui/ui-collections/05-complete-table-inspection.ts",
+      "destination": "tests/ui/ui-collections/05-complete-table-inspection.ts",
+      "sourceSha256": "0b4f650563050c28a02542a7c8faad9ca090856a1744a484a345869b1f83e0da",
+      "destinationSha256": "16327d8daae231d1c1dc31658bbe1c24a4e0af97caf53391b626ef1cf633ccc5",
+      "assertions": 9
+    },
+    {
+      "source": "tests/ui/ui-composition/01-typed-monitor-formatters.ts",
+      "destination": "tests/ui/ui-composition/01-typed-monitor-formatters.ts",
+      "sourceSha256": "3ebce3351e0e3ff9973e8113626c6991633a3ffef5e131eda7e78e9e2ed281a7",
+      "destinationSha256": "208cb06765ac512460452a31fadf31e38f9a557c8a58ebb99f0465811743a243",
+      "assertions": 2
+    },
+    {
+      "source": "tests/ui/ui-composition/02-readable-observation-projections.ts",
+      "destination": "tests/ui/ui-composition/02-readable-observation-projections.ts",
+      "sourceSha256": "21017c7f5d632b6612210a2c1eeb289cf9afac6464159c9a43079d55c44ebc57",
+      "destinationSha256": "401cacd5ad8bdcab967e87fb5bf80df421370b636a74b989ff6531966b3bf23b",
+      "assertions": 2
+    },
+    {
+      "source": "tests/ui/ui-composition/03-namespaced-selection.ts",
+      "destination": "tests/ui/ui-composition/03-namespaced-selection.ts",
+      "sourceSha256": "16b4e34fbb76a9fd9addf0cf524f5e9664712cfdd4825398d31f19351a70ed25",
+      "destinationSha256": "461b6dc778be69cd1d2a94fce28c88047de711a54066a4c7a0e5dd5dd88d443d",
+      "assertions": 7
+    },
+    {
+      "source": "tests/ui/ui-composition/04-formatter-errors-and-recovery.ts",
+      "destination": "tests/ui/ui-composition/04-formatter-errors-and-recovery.ts",
+      "sourceSha256": "cbc85434a183092dfd00ebacde64f62d73cf3c02b21c1546eda882f897d54f23",
+      "destinationSha256": "746bf4b9b147b22068f59c6bfebea2b7151360fd6b499fae2c5ef600e3e56998",
+      "assertions": 3
+    },
+    {
+      "source": "tests/ui/ui-composition/05-independent-mounts-and-scalar-setters.ts",
+      "destination": "tests/ui/ui-composition/05-independent-mounts-and-scalar-setters.ts",
+      "sourceSha256": "2edf9f2fad182db976db47cc6ddd418ea333eeeef35418c476b416b4e3d157d6",
+      "destinationSha256": "0759371d8508000fdb7b6194749e26ae1c9fb66f1cdc63367bb43fd3def7454b",
+      "assertions": 1
+    },
+    {
+      "source": "tests/ui/ui-composition/assertions.ts",
+      "destination": "tests/ui/ui-composition/assertions.ts",
+      "sourceSha256": "7ddbb193b06ce6ddf8f866fef30e28ae606197cb8a8adcc16d005a576c85bcbc",
+      "destinationSha256": "d28db1fb54725ac7ad2a76347420a7fde223e2349eddfa2b59c79d423d8fa343",
+      "assertions": 0
+    },
+    {
+      "source": "tests/ui/ui-des-scenes/04-browser-validation.ts",
+      "destination": "tests/ui/ui-des-scenes/04-browser-validation.ts",
+      "sourceSha256": "f9949042d09800979f8affa286234456ba1e63aa04088082109591001471e9fd",
+      "destinationSha256": "62c5ced5c13a37a08c45a6400291fa4456fe6f09f75db6116e8288f4af458602",
+      "assertions": 1
+    },
+    {
+      "source": "tests/ui/ui-des-scenes/05-picking-and-disposal.ts",
+      "destination": "tests/ui/ui-des-scenes/05-picking-and-disposal.ts",
+      "sourceSha256": "e423d0d7a4713e5341b6ec04e94e1ea763b11caf9b78d4bcc576532f2da565cb",
+      "destinationSha256": "1c0ac52df6f5d0b391f3fdfd8be2744ca2293513222d970302db31dd39a6048e",
+      "assertions": 4
+    },
+    {
+      "source": "tests/ui/ui-live-changes/01-shared-change.ts",
+      "destination": "tests/ui/ui-live-changes/01-shared-change.ts",
+      "sourceSha256": "28b61eee3da754ef072709cde2bc4e60daff1c9017e78b99b4e0a5341df6b409",
+      "destinationSha256": "b680fdf63d96529bed65d35ce8d1ea0a603733308d41ec5783282f6369d20f41",
+      "assertions": 1
+    },
+    {
+      "source": "tests/ui/ui-live-changes/02-binding-override.ts",
+      "destination": "tests/ui/ui-live-changes/02-binding-override.ts",
+      "sourceSha256": "850ab20f06560c4486f355b63740bf98af4f5dcf57bd47e5ed11d4596fdd5d1d",
+      "destinationSha256": "0151c66e93fcf7a009c2e7cb02ce31cfa30c5919a59a741336da0c7a7bc3b4b7",
+      "assertions": 1
+    },
+    {
+      "source": "tests/ui/ui-live-changes/03-groups-labels-enabled.ts",
+      "destination": "tests/ui/ui-live-changes/03-groups-labels-enabled.ts",
+      "sourceSha256": "3555097a5ac10660a9ca27cfb9b38eb6e6cad47ce68da66e26e9c55c53f26901",
+      "destinationSha256": "4a094234c0be41347f7735cf58f13f4da2dabcb689db9736ab4352ebae87428e",
+      "assertions": 1
+    },
+    {
+      "source": "tests/ui/ui-live-changes/04-drafts-errors-and-array-fields.ts",
+      "destination": "tests/ui/ui-live-changes/04-drafts-errors-and-array-fields.ts",
+      "sourceSha256": "6dff22a08a99a2da44defba5500c618efe0d6b32327b28073da2b0e4d2507ab1",
+      "destinationSha256": "3ab55332b7c31b3435670ecc7019acd7cc782b76eec76c26e2207c946ab5d9ae",
+      "assertions": 3
+    },
+    {
+      "source": "tests/ui/ui-live-changes/05-stable-chart-colors.ts",
+      "destination": "tests/ui/ui-live-changes/05-stable-chart-colors.ts",
+      "sourceSha256": "a047f82d00e60cfc3820425a584aadc3b0fb44e82898216744b50dfc04627a79",
+      "destinationSha256": "6fab59ad64788f28009dedb7c9d3127ca7d22c77e9d2ba1c5d0a6a735a71bff8",
+      "assertions": 1
+    },
+    {
+      "source": "tests/public-contracts/quad-layouts/README.md",
+      "destination": "tests/public-contracts/quad-layouts/README.md",
+      "sourceSha256": "c62c271a07eae78b9b971d9f273bd011b7dfcda8562fb9a472101a709824fb45",
+      "destinationSha256": "c3ef9c480e52ca35e16d5d901b7b1bded0a24e5686d4287cab5cb2c32b85889e",
+      "assertions": 0
+    }
+  ]
+}

@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Prisoner's Dilemma** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Prisoner's Dilemma** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

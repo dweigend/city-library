@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Percolation** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Percolation** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

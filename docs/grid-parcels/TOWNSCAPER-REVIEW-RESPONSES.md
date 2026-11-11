@@ -25,7 +25,7 @@ Fresh independent Antigravity `gemini-4-argon` runtime review of
 The reviewer independently ran focused behavior/type/public-example checks and
 verified all four manifests. Design notes F1 and F2 are implemented and closed.
 The coordinator's complete check and Svelte build are recorded separately in
-[verification](TOWNSCAPER-VERIFICATION.md). No runtime changed after that approval.
+[verification](QUAD-LAYOUTS-VERIFICATION.md). No runtime changed after that approval.
 The coordinator made review-report file links repository-relative for GitHub;
 the findings, verification claims and verdicts are unchanged.
 

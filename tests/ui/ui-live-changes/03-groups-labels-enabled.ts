@@ -25,7 +25,7 @@ export async function browserChecks(container: HTMLElement, bind: typeof defineU
   try {
     await settle(container);
     equal([...container.querySelectorAll('fieldset')].map(field => field.querySelector('legend')?.textContent?.trim()), ['AM', 'Timing'], 'Groups preserve first declaration order');
-    button(container, 'Setup').click(); await settle(container);
+    button(container, 'Reload').click(); await settle(container);
     changeNumber(container, 'CBD to CBD AM', 0.5); await settle(container);
     equal((control(container, 'CBD to CBD AM') as HTMLInputElement).value, '0.5', 'Implicit getter supports exact demand keys');
     changeNumber(container, 'Waiting mean', 0); await settle(container);

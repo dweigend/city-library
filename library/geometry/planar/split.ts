@@ -1,7 +1,7 @@
 import { validateOptions } from "../../agent/state.ts";
 import { finite, position, type Position, type Vector } from "../space.ts";
 import { orient, point } from "./predicates.ts";
-import { freezePolygon, polygonArea, readPolygon } from "./parcel-input.ts";
+import { freezePolygon, polygonArea, readPolygon } from "./polygon-input.ts";
 import type { PlanarPolygon, PlanarXY } from "./types.ts";
 
 export interface SplitResult {

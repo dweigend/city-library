@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Particle Swarm Optimization** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Particle Swarm Optimization** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

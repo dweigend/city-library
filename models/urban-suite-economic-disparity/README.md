@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Rich and Poor Residential Choice** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Rich and Poor Residential Choice** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

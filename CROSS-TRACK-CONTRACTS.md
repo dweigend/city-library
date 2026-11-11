@@ -7,7 +7,7 @@ The coordination-only commit is `91e4c11`. The public-example freeze commits are
 ## Status and ownership
 
 
-The original coordination commit preceded example freeze and runtime. At baseline the public exports were Agent, World, run, Random, Graph, Grid, topology, stats and geometry and their existing types, with no Agenda, History, Resource or Process export. The current signatures below are frozen and implemented; the current integration status above identifies the commits. Implementation and passing target checks remain separate from final independent acceptance.
+The original coordination commit preceded example freeze and runtime. At baseline the public exports were Agent, World, run, Random, Graph, Grid, topology, stats and geometry and their existing types, with no Agenda, History, Resource or Process export. The current signatures below are frozen and implemented; the current integration status above identifies the commits. Implementation and passing target checks remain separate from final independent acceptance. Later recorded naming migrations renamed several of these signatures (static `Type.add` → `Type.create`; Store `put`/`get`/`cancelPut`/`cancelGet`/`waitingPuts`/`waitingGets` → `add`/`request`/`cancel`/`waitingAdditions`/`waitingRequests`; `EventTrace.record` → `add`); the [API specification](docs/agent-loom/api-table.md) and [DES contract](docs/development/des-contract.md) hold the current names, and [PLAN](PLAN.md#naming-migration-contracts) records the migrations.
 
 | Owner | Scope |
 | --- | --- |

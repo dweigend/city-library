@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Solar Battery Microgrid** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Solar Battery Microgrid** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

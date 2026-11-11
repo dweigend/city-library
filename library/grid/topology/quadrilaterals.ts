@@ -1,6 +1,6 @@
 import { validateOptions } from "../../agent/state.ts";
 import { finite } from "../../geometry/space.ts";
-import { polygonArea } from "../../geometry/planar/parcel-input.ts";
+import { polygonArea } from "../../geometry/planar/polygon-input.ts";
 import { orient, point } from "../../geometry/planar/predicates.ts";
 import type { PlanarPolygon, PlanarXY } from "../../geometry/planar/types.ts";
 import { isRandom, type Random } from "../../random/random.ts";

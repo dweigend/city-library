@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Structure from Random Thresholds** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Structure from Random Thresholds** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 

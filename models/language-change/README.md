@@ -9,7 +9,7 @@ Things to try:
 
 ## Use
 
-Choose **Language Change** in [Agent Lab](../../ui/agent-lab/README.md).
+Choose **Language Change** in [Model Lab](../../ui/model-lab/README.md).
 
 From a script in the repository root:
 
