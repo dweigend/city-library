@@ -31,7 +31,7 @@ function ordinals(root: HTMLElement) {
 export async function browserChecks(container: HTMLElement, bind: typeof defineUI = defineUI) {
   const mounted = bind(model, spec).mount(container);
   try {
-    await settle(container); button(container, 'Setup').click(); await settle(container);
+    await settle(container); button(container, 'Reload').click(); await settle(container);
     assert(container.textContent?.includes('1–200 of 401'), 'First page reports its visible range and total');
     equal(ordinals(container).length, 200, 'Existing 200-row first page remains bounded');
     paging(container, 'Next rows').click(); await settle(container);
@@ -43,7 +43,7 @@ export async function browserChecks(container: HTMLElement, bind: typeof defineU
     button(container, 'Keep two').click(); await settle(container);
     equal(ordinals(container).length, 2, 'Shrinking rows clamps paging to the valid first page');
     assert(ordinals(container)[0]?.includes('item:1'), 'Clamping never invents a replacement identity');
-    button(container, 'Setup').click(); await settle(container);
+    button(container, 'Reload').click(); await settle(container);
     assert(container.textContent?.includes('1–200 of 401'), 'Setup resets paging');
     button(container, 'Empty').click(); await settle(container);
     equal(ordinals(container).length, 0, 'Empty data invents no rows');

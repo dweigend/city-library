@@ -1,6 +1,6 @@
 import { defineUI } from '../../../ui/index.ts';
 import { model } from '../../../models/voting/model.ts';
-import { assert, equal, button, changeNumber, restart, monitor, settle } from './assertions.ts';
+import { assert, equal, button, changeNumber, restart, monitor, settle, stepOnce } from './assertions.ts';
 
 const message = 'Deliberate presentation failure after stepping';
 export function entry(bind: typeof defineUI = defineUI) {
@@ -25,9 +25,9 @@ export async function browserChecks(container: HTMLElement, bind: typeof defineU
   const mounted = entry(bind).mount(container);
   try {
     await settle(container);
-    button(container, 'Setup').click(); await settle(container);
+    button(container, 'Reload').click(); await settle(container);
     equal(monitor(container, 'Tick'), '0.00', 'Initial formatted state');
-    button(container, '1 step').click(); await settle(container);
+    await stepOnce(container);
     assert(container.textContent?.includes(message), 'Formatter error reaches the host error path');
     changeNumber(container, 'Seed', 19); await settle(container);
     assert(container.textContent?.includes(message), 'Pending edit preserves primary error');

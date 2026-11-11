@@ -178,6 +178,8 @@ The [Markdown API specification](docs/agent-loom/README.md) defines the required
 
 The UI contract has no readiness state for playback. `complete` means a finished run, so models whose playback needs a prior user action (Central Limit Theorem, Random Combinations and Permutations) or never acts (Scarce Resource) keep Run enabled; their monitors and action buttons show the next step. A separate readiness predicate needs an example-first decision before use.
 
+Model Lab controls follow the owner decision of 2026-11-11: a model initializes when it opens, **Reload** re-runs setup (**Reload with changes** while setup edits are pending), and **Run**/**Pause**, **Speed** and **Parameters** remain; the 1/10/100 step buttons are gone. Frozen browser checks use automatic initialization, **Reload** and a one-step Run/Pause helper; the [Lab controls receipt](docs/development/lab-controls-migration-receipt.json) records their changed hashes. Same-tick comparisons follow [model acceptance](docs/development/model-acceptance.md). Unresolved: Reload passes the displayed live value into setup, so a live binding whose getter inverts the canonical value flips on each re-initialization (`precedenceSpec` in `tests/ui/ui-authoring/03-alternate-observation.ts`); deciding whether Reload should use canonical values needs an example-first decision.
+
 ## Code quality
 
 Follow the [coding standards](docs/CODING_STANDARDS.md) for library and readable reference scripts. Configure focused Biome commands as separate future tooling work; no Biome checks are configured or claimed.

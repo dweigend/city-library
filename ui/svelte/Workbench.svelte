@@ -26,7 +26,7 @@
 
 <div class="lab-workbench">
   <div class="lab-transport" role="group" aria-label="Simulation controls">
-    <Button type="submit" form={formId} variant="outline">{snapshot.pending.length ? "Restart with changes" : "Setup"}</Button>
+    <Button type="submit" form={formId} variant="outline">{snapshot.pending.length ? "Reload with changes" : "Reload"}</Button>
     <Button onclick={() => session.run()} disabled={!snapshot.initialized || snapshot.complete} aria-pressed={snapshot.running}>{snapshot.running ? "Pause" : "Run"}</Button>
     <div class="lab-speed"><span id={speedId}>Speed</span><Slider type="single" min={1} max={10} step={1} value={snapshot.speed} aria-labelledby={speedId} onValueChange={value => session.setSpeed(value)} /></div>
     <Button variant="ghost" aria-expanded={parametersOpen} onclick={() => parametersOpen = !parametersOpen}>Parameters <ChevronDown data-icon="inline-end" aria-hidden="true" /></Button>

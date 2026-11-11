@@ -57,3 +57,17 @@ export async function settle(root: HTMLElement): Promise<void> {
   await new Promise<void>(resolve => view.requestAnimationFrame(() => resolve()));
   await Promise.resolve();
 }
+
+/** Advances exactly one model step through the public Run and Pause controls.
+ * Playback frames are at least 50 ms apart, so the first visible change is one step. */
+export async function stepOnce(root: HTMLElement): Promise<void> {
+  button(root, 'Run').click(); await settle(root);
+  const before = root.innerHTML;
+  for (let frame = 0; root.innerHTML === before; frame++) {
+    if (frame > 120) throw new Error('Run did not advance the model');
+    await settle(root);
+  }
+  // A failing step stops playback itself; only a running session shows Pause.
+  [...root.querySelectorAll<HTMLButtonElement>('button')].find(item => item.textContent?.trim() === 'Pause')?.click();
+  await settle(root);
+}

@@ -33,11 +33,11 @@ export async function browserChecks(container: HTMLElement, bind: typeof defineU
   const mounted = bind(model, { ...spec, change(instance, changes) { calls++; instance.setAmount(changes); } }).mount(container);
   try {
     await settle(container); changeNumber(container, 'Amount', 4); await settle(container);
-    equal(calls, 0, 'Before Setup a live edit changes only the initialization draft');
-    button(container, 'Setup').click(); await settle(container);
-    equal(container.querySelector('dd')?.textContent?.trim(), '4', 'Setup consumes the live draft');
+    equal(calls, 1, 'The automatically initialized model receives the live edit through its action');
+    button(container, 'Reload').click(); await settle(container);
+    equal(container.querySelector('dd')?.textContent?.trim(), '4', 'Reload consumes the current live value');
     changeNumber(container, 'Amount', 13); await settle(container);
-    equal(calls, 1, 'The decoded rejected edit invokes the action exactly once');
+    equal(calls, 2, 'The decoded rejected edit invokes the action exactly once');
     assert(container.querySelector('[role="alert"]')?.textContent?.includes('Thirteen'), 'Action failure is accessible');
     equal(container.querySelector('dd')?.textContent?.trim(), '4', 'Rejected model action leaves this fixture unchanged');
   } finally { mounted.dispose(); }
@@ -49,6 +49,6 @@ export async function browserChecks(container: HTMLElement, bind: typeof defineU
     setup: [], live: [{ field: 'amount', value: state => state.parameters.amount,
       set: (instance, value) => instance.setAmount({ amount: Number(value) }) }], views: [],
   }).mount(container);
-  try { await settle(container); button(container, 'Setup').click(); await settle(container); changeNumber(container, 'Amount', 6); await settle(container); }
+  try { await settle(container); changeNumber(container, 'Amount', 6); await settle(container); }
   finally { old.dispose(); }
 }

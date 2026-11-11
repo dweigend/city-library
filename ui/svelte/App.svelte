@@ -56,7 +56,7 @@
         <Select.Content><Select.Group>{#each items as item (item.value)}<Select.Item value={item.value} label={item.label}>{item.label}</Select.Item>{/each}</Select.Group></Select.Content>
       </Select.Root>
     </div>
-    {#if hasUpdates}<Button variant="outline" onclick={() => location.reload()}>Reload updates</Button>{/if}
+    {#if hasUpdates}<Button variant="outline" onclick={() => location.reload()}>Update Lab</Button>{/if}
   </header>
   {#if error}<p role="alert" class="lab-error">{error}</p>{/if}
   <span class="sr-only" role="status" aria-live="polite">{loading ? "Loading model" : ""}</span>

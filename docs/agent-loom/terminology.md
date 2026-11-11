@@ -6,7 +6,7 @@ The system-wide [naming conventions](../NAMING_CONVENTIONS.md) own canonical voc
 
 A step is one synchronous model procedure invocation. A successful `run(world, step, stepCount)` step increases the World tick by one; a failed step does not. Tick may also be advanced explicitly and may be fractional. Therefore tick and step are different concepts. The `stepCount` argument counts procedure invocations.
 
-The UI's “1 step”, “10 steps” and “100 steps” actions describe procedure invocations; its Tick monitor describes model time. Input-control `step` describes numeric granularity. A host frame or callback schedules execution and does not itself establish a model-time unit.
+Each Model Lab Run frame is one procedure invocation; its Tick monitor describes model time. The “Reload” button re-runs `setup`. Input-control `step` describes numeric granularity. A host frame or callback schedules execution and does not itself establish a model-time unit.
 
 Agenda owns a separate event-time cursor. Advancing or resetting World tick does not implicitly advance or rewind Agenda. A composition must define any mapping between these times.
 

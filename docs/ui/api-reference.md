@@ -47,7 +47,7 @@ export const ui = defineUI(model, {
 
 The descriptor chooses checkbox, select, number or text and supplies bounds and choices. A range override changes numeric presentation, not the field's meaning. Numeric step defaults to 1 for integers and `any` otherwise. Labels split camel case and capitalize the initial letter.
 
-Setup edits remain pending until Setup/Restart. Where a field explicitly appears in setup and live, each control has its own presentation draft. A setup edit changes neither the live display nor the active model. The live draft wins when the next model is created, regardless of edit order. No second scientific state owner is introduced.
+Setup edits remain pending until **Reload** (shown as **Reload with changes** while edits are pending) re-runs setup. Model Lab runs setup once automatically when a model opens. Where a field explicitly appears in setup and live, each control has its own presentation draft. A setup edit changes neither the live display nor the active model. The live draft wins when the next model is created, regardless of edit order. No second scientific state owner is introduced.
 
 ## Live
 

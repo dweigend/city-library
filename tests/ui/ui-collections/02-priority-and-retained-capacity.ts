@@ -39,7 +39,7 @@ equal(civic.read().waitingResidents, [3], 'Waiting owners are detached snapshots
 export async function browserChecks(container: HTMLElement, bind: typeof defineUI = defineUI) {
   const mounted = bind(office, { views: [{ type: 'spatial', label: 'Retained service', data: officeScene }] }).mount(container);
   try {
-    await settle(container); button(container, 'Setup').click(); await settle(container);
+    await settle(container); button(container, 'Reload').click(); await settle(container);
     assert(container.querySelector('canvas')?.getAttribute('aria-label')?.includes('seats'), 'The common canvas retains explicit capacity units');
   } finally { mounted.dispose(); }
 }

@@ -31,7 +31,7 @@ export default defineConfig({
     host: process.env.CITY_LIBRARY_UI_HOST ?? "127.0.0.1",
     port: Number(portText),
     strictPort: true,
-    // Reload is an explicit user action; HMR must not reset an active model.
+    // Loading source updates is an explicit user action (Update Lab); HMR must not reset an active model.
     hmr: false,
     fs: { allow: [root] },
   },

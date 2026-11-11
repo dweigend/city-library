@@ -19,7 +19,7 @@ Two consequences follow:
 
 ## Steps and ticks
 
-A step is one call of the model procedure. A tick is model time, owned by World. `run(world, step, stepCount)` calls the procedure up to `stepCount` times and adds one tick for each successful call. A failing call stops the run, adds no tick and does not roll back earlier changes. Ticks can also be advanced explicitly, by fractional amounts. So "10 steps" in Model Lab means ten procedure calls, while the Tick monitor shows model time.
+A step is one call of the model procedure. A tick is model time, owned by World. `run(world, step, stepCount)` calls the procedure up to `stepCount` times and adds one tick for each successful call. A failing call stops the run, adds no tick and does not roll back earlier changes. Ticks can also be advanced explicitly, by fractional amounts. So each Run frame in Model Lab is one procedure call, while the Tick monitor shows model time.
 
 Event-driven models use an Agenda, which keeps its own event time. Advancing or resetting the World tick does not move the Agenda; a model that uses both defines how they map.
 

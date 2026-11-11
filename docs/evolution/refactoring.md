@@ -89,7 +89,7 @@ Input: read-only worktree survey of 2026-11-11 against the local `origin/main` (
 | Rank | Work | Where | Risk |
 | --- | --- | --- | --- |
 | 1 | 15 city teaching models, their tests, UI evidence and research documents: **764 uncommitted files** | Worktree branch `t3/city-simulation-models` | Highest: nothing is committed or merged |
-| 2 | 2 uncommitted UI files (automatic session initialization, removed manual step buttons) | Worktree branch `t3/tailscale-remote-server` | Uncommitted |
+| 2 | 2 uncommitted UI files (automatic session initialization, removed manual step buttons) | Worktree branch `t3/tailscale-remote-server` | Resolved: committed there and carried into this branch on 2026-11-11 |
 | 3 | Unpushed documentation commits, including these evolution pages | This branch, `t3/explore-city-library` | Unpushed |
 | 4 | Unpublished commits on `docs/example-first-contracts`, `docs/model-research-integration` and `t3/repair-browser-evidence-doc` | Branches without a worktree, 219–518 commits behind | Unpublished, stale base |
 

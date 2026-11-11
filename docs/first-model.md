@@ -189,11 +189,10 @@ bun run dev
 
 Open <http://localhost:3101/?model=rain-barrel>, or choose **Rain Barrel** from the model list. Then:
 
-1. Press **Setup**. The monitors show Day 0, Stored (L) 0 and Overflow (L) 0.
-2. Press **10 steps**. Day 10, Stored (L) 100; the chart rises.
-3. Press **Run**, wait until the day counter passes 20, then press **Pause**. From day 20 on the line stays flat at 200 and Overflow grows instead.
-4. Press **Water the garden**. Stored drops by 50 liters.
-5. Set **Rain Liters Per Day** to 10. The Setup button now reads **Restart with changes**. Press it, then **10 steps**: the barrel stays empty.
+1. The model initializes when it opens. The monitors show Day 0, Stored (L) 0 and Overflow (L) 0.
+2. Press **Run**. The chart rises; at Day 10, Stored (L) reads 100. Wait until the day counter passes 20, then press **Pause**. From day 20 on the line stays flat at 200 and Overflow grows instead.
+3. Press **Water the garden**. Stored drops by 50 liters.
+4. Set **Rain Liters Per Day** to 10. The **Reload** button now reads **Reload with changes**. Press it, then **Run**: the barrel stays empty.
 
 On a narrow screen, the setup fields and **Water the garden** sit under **Parameters**. If the Lab was already running when you created the files, stop it and start it again.
 

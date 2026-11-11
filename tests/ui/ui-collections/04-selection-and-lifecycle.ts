@@ -22,7 +22,7 @@ export async function browserChecks(container: HTMLElement, bind: typeof defineU
     { type: 'inspector', label: 'Selected identity', value: (_state, selected) => selected ? { selected } : undefined },
   ] }).mount(container);
   try {
-    await settle(container); button(container, 'Setup').click(); await settle(container);
+    await settle(container); button(container, 'Reload').click(); await settle(container);
     const canvas = container.querySelector('canvas'); assert(canvas, 'An actual canvas is mounted');
     const bounds = canvas.getBoundingClientRect();
     canvas.dispatchEvent(new MouseEvent('click', { bubbles: true, clientX: bounds.left + bounds.width / 2, clientY: bounds.top + bounds.height / 2 }));
@@ -44,7 +44,7 @@ export async function browserChecks(container: HTMLElement, bind: typeof defineU
   const circularScene = { ...scene, agents: [{ id: 'near', x: 0, y: 0, size: 2 }, { id: 'ignored', x: 1, y: 0, size: 2, selectable: false }] };
   const old = bind({ ...model, create: () => ({ read: () => circularScene, advance() {} }) }, { views: [{ type: 'spatial', label: 'Circular nearest', data: state => state }] }).mount(container);
   try {
-    await settle(container); button(container, 'Setup').click(); await settle(container);
+    await settle(container); button(container, 'Reload').click(); await settle(container);
     const canvas = container.querySelector('canvas'); assert(canvas, 'Circular symbols use the same renderer');
     canvas.dispatchEvent(new KeyboardEvent('keydown', { key: 'End', bubbles: true })); await settle(container);
     assert(canvas.getAttribute('aria-label')?.includes('near'), 'Circular nearest/keyboard compatibility excludes explicitly ignored symbols');

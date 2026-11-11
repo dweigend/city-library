@@ -1,6 +1,6 @@
 import { defineUI } from '../../../ui/index.ts';
 import type { Definition } from '../../../models/definition.ts';
-import { assert, equal, button, settle } from '../ui-authoring/assertions.ts';
+import { assert, equal, button, settle, stepOnce } from '../ui-authoring/assertions.ts';
 
 function create() {
   let phase = 0;
@@ -26,17 +26,17 @@ export async function browserChecks(container: HTMLElement, bind: typeof defineU
   const mounted = bind(model, spec).mount(container);
   const colors = () => [...container.querySelectorAll('svg[role="img"] path[stroke-width="2"]')].map(path => path.getAttribute('stroke'));
   try {
-    await settle(container); button(container, 'Setup').click(); await settle(container);
+    await settle(container); button(container, 'Reload').click(); await settle(container);
     const initial = colors(); equal(initial.length, 3, 'Three data paths render');
     assert(initial[0] !== initial[1], 'Distinct default series use distinct initial palette slots');
     equal(initial[2], '#123456', 'Explicit scientific color takes precedence');
-    button(container, '1 step').click(); await settle(container);
+    await stepOnce(container);
     equal(colors(), [initial[1], '#123456'], 'Filtering A preserves B color');
-    button(container, '1 step').click(); await settle(container);
+    await stepOnce(container);
     equal(colors(), [initial[1], initial[0], '#123456'], 'Reordering retains unique-label color identity');
-    button(container, '1 step').click(); await settle(container);
+    await stepOnce(container);
     equal(colors(), initial.slice(0, 2), 'Duplicate labels retain positional compatibility fallback');
-    button(container, 'Setup').click(); await settle(container);
-    equal(colors(), initial, 'Setup recreates the chart color lifetime');
+    button(container, 'Reload').click(); await settle(container);
+    equal(colors(), initial, 'Reload recreates the chart color lifetime');
   } finally { mounted.dispose(); }
 }

@@ -149,7 +149,7 @@ Use the universal, unopinionated verb. Each kind of operation has exactly one ve
 
 Static factories migrate from `Type.add(...)` to `Type.create(...)`; instance `world.add(component)` retains its membership meaning. Representation boundaries keep `validate`/`parse` and `encode`/`decode`. A domain verb such as `diffuse` names only an operation that no kind above covers. Forbidden words remain usable as nouns and in prose that does not name an operation; native platform APIs keep their own spelling.
 
-Keep public commands and their UI actions semantically aligned. Labels use short ordinary English, such as “Add agent” and “Run”; accessible names preserve the same action and subject. Do not force getters, setters or wrappers around every property to satisfy a naming pattern.
+Keep public commands and their UI actions semantically aligned. Labels use short ordinary English, such as “Add agent” and “Run”; accessible names preserve the same action and subject. The Model Lab button label “Reload” means re-running `setup` with the current values; the model contract and API keep `setup`. Do not force getters, setters or wrappers around every property to satisfy a naming pattern.
 
 ## Types and state
 

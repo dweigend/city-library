@@ -20,6 +20,7 @@
 @media (max-width: 760px) {
   .lab-workbench { grid-template-columns: minmax(0, 1fr); gap: 1rem; }
   .lab-transport { gap: .5rem; }
+  .lab-speed { margin-inline: 0 .5rem; }
   .lab-transport > button:last-child { display: inline-flex; }
   .lab-parameters { display: none; }
   .lab-parameters[data-open="true"] { display: grid; }

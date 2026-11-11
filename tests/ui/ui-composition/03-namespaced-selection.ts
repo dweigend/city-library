@@ -1,6 +1,6 @@
 import { defineUI, type Observation, type SpatialData, type GridData } from '../../../ui/index.ts';
 import { model as wealth } from '../../../models/wealth-distribution/model.ts';
-import { assert, equal, button, restart, monitor, settle } from './assertions.ts';
+import { assert, equal, button, restart, monitor, settle, stepOnce } from './assertions.ts';
 
 /** Observation-only adapter exposes a deliberate cross-kind source-ID collision.
  * Scientific state, lifecycle, RNG and actions remain in the actual Wealth model. */
@@ -73,7 +73,7 @@ export async function browserChecks(container: HTMLElement, bind: typeof defineU
   const mounted = entry(bind).mount(container);
   try {
     await settle(container);
-    button(container, 'Setup').click(); await settle(container);
+    button(container, 'Reload').click(); await settle(container);
     const apply = button(container, 'Apply selected');
     assert(apply.disabled, 'Action starts unavailable without selection');
     const canvases = [...container.querySelectorAll('canvas')];
@@ -89,7 +89,7 @@ export async function browserChecks(container: HTMLElement, bind: typeof defineU
     assert(canvases.every(canvas => canvas.getAttribute('aria-label')?.endsWith(` Selected ${sharedId}`)), 'The same selected field is shared across both views');
     apply.click(); await settle(container);
     equal(monitor(container, 'Growth amount'), '7', 'Selected cell invokes the other explicit model action');
-    button(container, '1 step').click(); await settle(container);
+    await stepOnce(container);
     assert(apply.disabled, 'An item leaving the projection leaves stale selection disabled');
     restart(container); await settle(container);
     assert(apply.disabled, 'Restart clears selection');

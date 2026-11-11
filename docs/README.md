@@ -5,7 +5,7 @@ Start with a model, change something and see what happens. These pages take you 
 ## New here
 
 - [Your first model](first-model.md): write a small model, run it headless and step through it in Model Lab.
-- [Run Model Lab](../ui/model-lab/README.md): choose a model, press Setup and step through it.
+- [Run Model Lab](../ui/model-lab/README.md): choose a model, run it and change its parameters.
 - [Concepts](concepts.md): headless models, one state owner, steps and ticks, explicit randomness.
 - [Explore the models](../models/README.md): every model by topic.
 
