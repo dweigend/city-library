@@ -100,4 +100,11 @@ Target-only folders (`library-city/`, `library-generative-design/`, `ui-3d/`) ar
 
 New capabilities start with asserted public examples. [Architecture](docs/ARCHITECTURE.md), [naming conventions](docs/NAMING_CONVENTIONS.md) and [UI design](docs/DESIGN.md) define the binding rules; the [contributor section](docs/README.md#contribute) lists the rest.
 
-This repository does not currently include a root license file. Source-specific terms are recorded in the notices.
+## License
+
+Original code (source, scripts and configuration) is licensed under [MIT](LICENSE).
+Original texts, images and other content are licensed under [CC BY-NC 4.0](LICENSE-CONTENT.md).
+Third-party sources, adapted model rules and datasets retain their source-specific terms;
+see the models' `NOTICE.md` files and retained source notices. The
+[GIS data audit](models/catalog/acceptance/gis-data-audit.md) records separate dataset
+conditions and unresolved rights.
